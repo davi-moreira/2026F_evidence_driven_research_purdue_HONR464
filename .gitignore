@@ -31,7 +31,9 @@ env/
 Thumbs.db
 
 # Admin (keep out of public repo)
+_adm/
 _adm_stuff/
+_references/
 _announcements/
 _grades/
 _grade/
