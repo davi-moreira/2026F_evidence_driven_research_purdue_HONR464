@@ -21,8 +21,8 @@ with appropriate uncertainty and limitations, and communicate results effectivel
 in **written AND oral** formats.
 
 - **Instructor:** Professor Davi Moreira
-- **Repository:** https://github.com/davi-moreira/2026F_evidence_based_research_purdue_HONR464
-- **Website:** https://davi-moreira.github.io/2026F_evidence_based_research_purdue_HONR464/
+- **Repository:** https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464
+- **Website:** https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/
 - **Deployment:** Quarto → `docs/` → GitHub Pages
 
 ## See Also (Reference Files)

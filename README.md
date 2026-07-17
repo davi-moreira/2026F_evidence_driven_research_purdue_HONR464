@@ -4,8 +4,8 @@ Course materials for **HONR 46400: Evidence-Driven Research**, a semester-long
 Honors College seminar at Purdue University (Fall 2026, Mon/Wed/Fri, in person),
 taught by **Professor Davi Moreira**.
 
-- **Website:** https://davi-moreira.github.io/2026F_evidence_based_research_purdue_HONR464/
-- **Repository:** https://github.com/davi-moreira/2026F_evidence_based_research_purdue_HONR464
+- **Website:** https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/
+- **Repository:** https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464
 
 ## What this course is
 

@@ -1,7 +1,7 @@
 # HONR 46400 "Evidence-Driven Research" — New-Course Setup Guide
 
 This guide sets up the new course repo at
-`/Users/dcordeir/Dropbox/academic/cursos/cursos-davi/evidence_based_research/2026F_evidence_based_research_purdue_HONR464`,
+`/Users/dcordeir/Dropbox/academic/cursos/cursos-davi/evidence_based_research/2026F_evidence_driven_research_purdue_HONR464`,
 seeded from the **infrastructure** of
 `2026Summer_predictive_analytics_purdue_MGMT474` but with the quantitative
 **content spine deliberately left behind**.
@@ -40,7 +40,7 @@ discipline of not letting the ML payload or stale logs ride along in the seed.
 
 ## Prerequisites / environment facts (verified 2026-07-16)
 
-- Target dir **already exists and is empty**: `…/evidence_based_research/2026F_evidence_based_research_purdue_HONR464/` — seeding into it is safe.
+- Target dir **already exists and is empty**: `…/evidence_based_research/2026F_evidence_driven_research_purdue_HONR464/` — seeding into it is safe.
 - **`gh` token is expired.** `gh auth status` reports the keyring token invalid for `davi-moreira`. **Run `gh auth refresh -h github.com` before Step 4** or the repo-create will fail.
 - Quarto present at `/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto` (v1.9.36).
 - Git identity set (Davi Moreira / davi.moreira@gmail.com); GitHub user `davi-moreira`.
@@ -60,7 +60,7 @@ are no "prune the notebooks afterward" steps.
 
 ```bash
 SRC="/Users/dcordeir/Dropbox/academic/cursos/cursos-davi/predictive_analytics/2026Summer_predictive_analytics_purdue_MGMT474"
-DEST="/Users/dcordeir/Dropbox/academic/cursos/cursos-davi/evidence_based_research/2026F_evidence_based_research_purdue_HONR464"
+DEST="/Users/dcordeir/Dropbox/academic/cursos/cursos-davi/evidence_based_research/2026F_evidence_driven_research_purdue_HONR464"
 
 mkdir -p "$DEST"
 
@@ -182,7 +182,7 @@ cd "$DEST"
 gh auth refresh -h github.com          # token is expired — do this first
 
 # Preferred (adjust --public/--private per decision):
-gh repo create 2026F_evidence_based_research_purdue_HONR464 \
+gh repo create 2026F_evidence_driven_research_purdue_HONR464 \
   --public --source=. --remote=origin --push \
   --description "HONR 46400: Evidence-Driven Research — Purdue Honors College, Fall 2026"
 ```
@@ -190,7 +190,7 @@ gh repo create 2026F_evidence_based_research_purdue_HONR464 \
 Manual fallback (create empty repo in the web UI first, then):
 
 ```bash
-git remote add origin https://github.com/davi-moreira/2026F_evidence_based_research_purdue_HONR464.git
+git remote add origin https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464.git
 git push -u origin main
 ```
 
