@@ -1,0 +1,39 @@
+/* CSS styles for hyperlinks */
+a {
+  color: #8e6f3e !important; /* Regular link color with !important */
+  text-decoration: none; /* Optional: Remove underline */
+}
+
+a:hover {
+  color: #6e5630 !important; /* Optional: Different color when hovering with !important */
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* CSS styles */
+code {
+  color: #041E42;
+}
+
+/* CSS class for the quarto-sidebar */
+#quarto-sidebar {
+  background-color: #CFB991; /* Change this to your desired color */
+  /* Other styles */
+}
+
+/* Bold every entry in the left sidebar menu */
+#quarto-sidebar .sidebar-item-text,
+#quarto-sidebar .menu-text {
+  font-weight: 700 !important;
+}
+
+/* Standard "Open in Colab" badge in the Schedule Notebook column.
+   Sized to 25px (30% smaller than the prior 36px) for a balanced
+   click target without dominating the row. max-width: none overrides
+   the Bootstrap "img { max-width: 100% }" rule, which would otherwise
+   squeeze the width and distort the badge's 117:20 aspect ratio. */
+img[src*="colab-badge"] {
+  height: 25px !important;
+  width: auto !important;
+  max-width: none !important;
+  vertical-align: middle;
+}
