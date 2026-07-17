@@ -1,0 +1,35 @@
+# IMPORTANT REFERENCE: https://www.youtube.com/watch?v=uimdXPZc40I&list=PLkrJrLs7xfbXcEKhTCKRSr2VXH4yiBeXo&index=4
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+
+
+website:
+  title: "HONR 46400: Evidence-Driven Research (Fall 2026)"
+  sidebar:
+    background: primary
+    # logo: "images/honr_464_logo.png"   # add a HONR 46400 logo asset, then uncomment
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/davi-moreira/2026F_evidence_based_research_purdue_HONR464
+        text: GitHub
+    style: docked
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: schedule.qmd
+        text: Schedule and Material
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual

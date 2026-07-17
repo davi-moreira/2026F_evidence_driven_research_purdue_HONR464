@@ -1,0 +1,45 @@
+---
+title: "Schedule and Material"
+author: "Davi Moreira"
+editor: visual
+---
+
+```{=html}
+<style>
+  .overflow-table { font-size: 0.85rem; width: 100%; line-height: 1.2; }
+  .overflow-table th, .overflow-table td {
+    padding: 0.3rem; text-align: left; word-wrap: break-word; vertical-align: top;
+  }
+  .overflow-table th:nth-child(1), .overflow-table td:nth-child(1) { width: 6%; }
+  .overflow-table th:nth-child(2), .overflow-table td:nth-child(2) { width: 10%; }
+  .below-table { font-size: 0.85rem; line-height: 1.2; margin-top: 1rem; }
+</style>
+```
+
+# Course Schedule
+
+> **Placeholder.** The full Fall 2026 **Monday / Wednesday / Friday** sequence is
+> designed in the curriculum-planning session, anchored to the official Purdue
+> Fall 2026 academic calendar and the Fall Undergraduate Research Conference
+> poster date. The table harness below is kept from the course infrastructure;
+> each row maps to one class session or unit. Colab badges are optional — added
+> only when a light activity notebook backs the session.
+
+::: overflow-table
+
+| Week | Date | Topic | Session | Activity | Deliverable | Materials |
+|------|------|-------|---------|----------|-------------|-----------|
+| 1 | TBD | Launchpad: course map, tools, and the Ask → Verify → Document AI policy | Session 00 | *TBD* | Readiness check | Brightspace orientation |
+| 1 | TBD | From curiosity to a research gap | Session 01 | *TBD* | — | *TBD* |
+| … | … | *(remaining sessions designed in the curriculum session)* | | | | |
+
+:::
+
+::: below-table
+
+## Core Course References
+
+- *Research-methods and evidence-appraisal readings — curated list added during
+  curriculum design.*
+
+:::

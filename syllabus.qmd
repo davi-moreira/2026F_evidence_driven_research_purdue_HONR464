@@ -1,0 +1,132 @@
+---
+title: "Syllabus"
+subtitle: "HONR 46400: Evidence-Driven Research — Honors College, Purdue University (Fall 2026)"
+author: "Davi Moreira"
+editor: visual
+---
+
+<br>
+
+<center>
+
+*IMPORTANT*
+
+*This document does not replace the official syllabus in the course Brightspace page. It is subject to change.*
+
+</center>
+
+<br>
+
+## Course Description and Objectives
+
+<!-- Duplicated from index.qmd — keep the two in sync on every edit. -->
+
+This Honors seminar teaches you to turn curiosity into credible, evidence-based insight — **no strong background in quantitative methods or computing required**. You will learn to identify meaningful gaps in a chosen field, translate a gap into a well-scoped research problem, formulate answerable research questions, choose and justify an appropriate method family (description, statistical inference, predictive modeling, and/or causal reasoning) at a **conceptual** level, and use computational tools and AI to locate sources, operationalize concepts, analyze evidence, verify results, and document decisions responsibly. You will finish able to design and defend a rigorous research approach, interpret findings with appropriate uncertainty and limitations, and communicate results in **written and oral** formats.
+
+**Course Website**: [https://davi-moreira.github.io/2026F_evidence_based_research_purdue_HONR464/](https://davi-moreira.github.io/2026F_evidence_based_research_purdue_HONR464/){target="_blank"}
+
+## Instructor
+
+### Instructor: [Professor Davi Moreira](https://davi-moreira.github.io)
+
+-   Email: [dcordeir\@purdue.edu](mailto:dcordeir@purdue.edu)
+-   Class meetings: **Monday / Wednesday / Friday** — in person (time and room on Brightspace)
+-   Office Hours: see the Course Brightspace Page, or by appointment.
+
+> **Note:** Email responses are typically within 24 business hours. If you do not receive a response by the 24-hour mark, please email me again.
+
+## Learning Outcomes
+
+<!-- Duplicated from index.qmd — keep in sync. -->
+
+By the conclusion of this course, you will be able to:
+
+1.  **Identify a gap and scope a problem.**
+2.  **Formulate answerable research questions.**
+3.  **Select and justify a method family conceptually** (description, statistical inference, predictive modeling, causal reasoning).
+4.  **Locate, appraise, and analyze evidence responsibly with AI**, verifying results and documenting decisions.
+5.  **Interpret and communicate with uncertainty** — in written and oral formats.
+
+## Course Materials
+
+-   **Readings:** A curated set of research-methods and evidence-appraisal readings posted on Brightspace (no single required textbook; no quantitative prerequisite).
+-   **Computing (Required):** A laptop or desktop with internet access and a modern web browser; activities run in [Google Colab](https://colab.research.google.com/){target="_blank"}.
+-   **AI Tools:** A general-purpose AI assistant (e.g., Google Gemini / Microsoft Copilot) used under the course's **Ask → Verify → Document** policy.
+
+### Course Infra-structure
+
+**Brightspace:** The Course Brightspace Page <https://purdue.brightspace.com/> should be checked on a regular basis for announcements and course material.
+
+## Assessments
+
+<!-- TODO (curriculum session): confirm final weights and instruments with the professor.
+     The Daniels School GPA-3.3 grading cap from the source course is intentionally
+     REMOVED here — verify the Honors College grading policy before publishing. -->
+
+The weights below are a **provisional starting proposal** and will be finalized before the term begins. The course is built around a semester-long **research project** carried through four milestones, ending in a **written report and an oral defense**.
+
+| **Assessment**                                                              | **Weight** |
+|-----------------------------------------------------------------------------|-----------:|
+| Participation & in-class engagement                                         |        10% |
+| Reading / concept checks (short quizzes or reflections)                     |        15% |
+| Research Project — Milestone 1 (Gap + Research Question)                     |        10% |
+| Research Project — Milestone 2 (Sources + Operationalization)               |        15% |
+| Research Project — Milestone 3 (Method Justification + Analysis + Verify)   |        15% |
+| Research Project — Milestone 4 (Written Report)                             |        20% |
+| Oral Defense (individual/group presentation)                                |        10% |
+| Intra-group Peer Evaluation                                                 |         5% |
+
+### The Research Project (the course spine)
+
+Working individually or in small groups, you will carry one research question across the semester through four milestones — (1) gap & question, (2) sources & operationalization, (3) conceptual method-family justification, analysis & verification, and (4) a written report plus an **oral defense** — with a confidential intra-group peer evaluation. Presenting a poster at the **Fall 2026 Purdue Undergraduate Research Conference** is strongly encouraged; Professor Moreira is happy to serve as faculty mentor. Milestone instructions and rubrics are posted on Brightspace. Additional information about Purdue undergraduate research conferences: <https://www.purdue.edu/undergrad-research/conferences/index.php>{target="_blank"}.
+
+### Grade Challenges
+
+Students who wish to challenge a grade must do so **within 3 calendar days** of the grade's release. An exception applies for the last week of class, when assignments must be challenged **within 1 calendar day** to ensure timely computation of final course grades. Grade challenges must be grounded in legitimate disputes over research-methods principles or grading accuracy. Challenges based on post-hoc legalistic arguments or subjective dissatisfaction will not be considered.
+
+To challenge an assignment score:
+
+1.  **Review posted solutions / rubrics** thoroughly.
+2.  If you still believe an error has been made, email the instructor with:
+    -   Course name, section, and date/time
+    -   Your name and Student ID
+    -   Assignment number / title
+    -   Specific deduction being challenged
+    -   Reason for the challenge, with reference to the solutions or grading rubric
+
+> *Grades will not be discussed in class — before, during, or after class. Please use office hours for questions related to course content or assignment clarification. After the challenge period, all grades are final and cannot be revised further for purposes of calculating final course grades.*
+
+## Course Policies and Additional Details
+
+### AI Policy
+
+I encourage you to use AI tools you believe will enhance your individual or group learning. This course explicitly teaches **responsible, documented AI use** under the **Ask → Verify → Document** discipline. Be aware of the following guidelines:
+
+-   **Verify everything.** AI tools routinely fabricate citations, sources, and facts. Every claim and every source you submit must be independently located and confirmed to exist and to say what you claim it says. Any errors or omissions from your use of an AI tool are your responsibility.
+-   **Document your use.** Include a short disclosure with any deliverable stating which AI tool you used, for what task, and how you verified its output. Undisclosed or unverified AI output is an academic-integrity violation.
+-   **Use AI to support your learning** — ask for explanations, examples, or critiques; do not simply ask for finished answers you cannot defend.
+-   Low-effort prompts produce low-quality output. Refine your prompts using the course concepts.
+-   You are **not permitted to use AI tools during any closed assessment** where its use is prohibited.
+
+### Netiquette Guidelines
+
+-   Be respectful and clear in communication; contribute constructively to in-class discussion and peer critique.
+-   In any online session, join with your full name and mute when not speaking.
+
+### Accessibility, Accommodations, and Student Well-Being
+
+-   **Accessibility.** Purdue University strives to make learning experiences as accessible as possible. If you anticipate or experience physical or academic barriers based on disability, please let me know so we can discuss options. You are also encouraged to contact the **Disability Resource Center**: [drc\@purdue.edu](mailto:drc@purdue.edu) or 765-494-1247.
+-   **CAPS.** Purdue University is committed to advancing student mental health and well-being. If you or someone you know is feeling overwhelmed, depressed, or in need of support, services are available. Contact **Counseling and Psychological Services (CAPS)** at 765-494-6995 and <http://www.purdue.edu/caps/>{target="_blank"} during and after hours, on weekends and holidays, or through counselors located in the Purdue University Student Health Center (PUSH) during business hours.
+-   **Basic Needs Security.** Contact ODOS if you are facing food or housing insecurity; no appointment needed.
+-   **Non-Discrimination Statement.** Please refer to the Nondiscrimination Statement on Brightspace.
+-   **Emergency Situations.** Please refer to the Emergency Preparedness page on Brightspace.
+
+### Additional Information
+
+Refer to Brightspace for deadlines, academic integrity policies, accommodations, CAPS information, and non-discrimination statements. Registrar add/drop/modify deadlines: <http://www.purdue.edu/Registrar/>{target="_blank"}.
+
+### Subject to Change Policy
+
+While I will try to adhere to the course schedule as much as possible, I also want to adapt to your learning pace and style. The syllabus and course plan may change during the term.
+
+## [Schedule](./schedule.qmd)
