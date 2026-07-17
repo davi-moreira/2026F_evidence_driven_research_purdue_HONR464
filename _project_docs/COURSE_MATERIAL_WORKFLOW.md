@@ -1,3 +1,10 @@
+> ⚠️ **SEEDED FROM MGMT474 — NOT YET ADAPTED FOR HONR 46400.**
+> This pipeline still assumes ML notebooks, recorded micro-videos, the CV-first audit,
+> and references deleted files (`audit_cv_first.py`, `MGMT47400_Online4Week_Plan`).
+> **Do not follow it verbatim.** For an in-person MWF research course the video/NotebookLM
+> phases collapse and the CV-first gate is gone. Adapt during curriculum work — see
+> `NEW_COURSE_SETUP.md` and the "Adapt seeded `_project_docs`" task on the course board.
+
 # Course Material Production Workflow (per notebook)
 
 The end-to-end pipeline for producing **one notebook's full set of course materials**: the Jupyter notebook, the recorded videos, the Brightspace page, the NotebookLM concept videos, and the quizzes. It generalizes the sequence used to build **NB19** and refined across NB01–NB18. Run it once per notebook (`nbNN`).

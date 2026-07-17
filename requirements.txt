@@ -1,0 +1,19 @@
+# Python dependencies for HONR 46400 course-ops scripts.
+#
+# The early-use scripts are stdlib-only and need NOTHING here:
+#   scripts/voice_check_guides.py, scripts/qa_format.py
+#
+# The packages below are needed only for specific, later scripts:
+
+numpy     # scripts/audit_answer_length.py  (MC option-length parity gate)
+scipy     # scripts/audit_answer_length.py  (hypothesis test)
+jupyter   # scripts/sync_instructor_md.sh -> jupyter-nbconvert (NotebookLM markdown sync)
+
+# System (non-pip) tools some scripts shell out to:
+#   poppler -> pdfinfo / pdftotext, used by scripts/analyze_course_eval.py (end of term)
+#              macOS: brew install poppler
+#
+# Suggested setup (creates the .venv that sync_instructor_md.sh looks for):
+#   python3 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements.txt

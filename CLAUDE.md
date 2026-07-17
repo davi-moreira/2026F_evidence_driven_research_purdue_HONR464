@@ -62,7 +62,7 @@ never TO the instructor.
 
 ```bash
 grep -iE '\bstudents?\b|\bthe instructor\b|on camera|speaking prompt' activities/actNN_*_student.ipynb   # expect 0 hits
-python scripts/voice_check_guides.py session_guides/NN_session_guide.md
+python3 scripts/voice_check_guides.py session_guides/NN_session_guide.md
 ```
 
 ---
@@ -96,7 +96,7 @@ course. Every empirical claim in any student-facing or deliverable material must
    operationalization, which method family, and *why*.
 
 ```bash
-python scripts/audit_sources.py activities/actNN_*_student.ipynb   # (to create) flags uncited claims, dead links, hallucinated-citation patterns
+python3 scripts/audit_sources.py activities/actNN_*_student.ipynb   # (to create) flags uncited claims, dead links, hallucinated-citation patterns
 ```
 
 ---
@@ -176,7 +176,7 @@ longest option's length; the correct option is strictly longest in ≤ 40% of a
 bank's questions; distractors carry equally-elaborated but flawed rationale.
 
 ```bash
-python scripts/audit_answer_length.py --file <path-to-csv>   # PASS required before import
+python3 scripts/audit_answer_length.py --file <path-to-csv>   # PASS required before import
 ```
 
 If the course assesses only via written/oral deliverables + rubrics, this rule and

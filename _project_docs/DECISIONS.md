@@ -1,3 +1,9 @@
+> ⚠️ **SEEDED FROM MGMT474 — NOT YET ADAPTED FOR HONR 46400.**
+> Several decisions below are machine-learning-specific (60/20/20 split, `RANDOM_SEED=474`,
+> CV-first / `audit_cv_first.py`, Colab+Gemini stack) and do **not** apply to this course.
+> **Do not treat these as authoritative HONR 46400 conventions yet.** Adapt during curriculum
+> work — see `NEW_COURSE_SETUP.md` (gap list) and the "Adapt seeded `_project_docs`" task.
+
 # Course Design Decisions
 
 This document records design decisions made during course development and the reasoning behind them. Decisions here are **load-bearing** — changing them requires deliberate review, not casual edits. New AI assistants and contributors should read this to understand WHY conventions exist before proposing changes.

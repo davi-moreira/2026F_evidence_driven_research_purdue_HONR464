@@ -3,7 +3,7 @@
 #
 # Usage:
 #   scripts/sync_instructor_md.sh                       # convert all instructor notebooks
-#   scripts/sync_instructor_md.sh notebooks/nb09_*.ipynb # convert one (or several)
+#   scripts/sync_instructor_md.sh activities/act09_*.ipynb # convert one (or several)
 #
 # Output: _notebook_lm/<basename>.md  (+ <basename>_files/ for embedded images)
 #
@@ -29,7 +29,7 @@ if [[ $# -gt 0 ]]; then
   TARGETS=("$@")
 else
   shopt -s nullglob
-  TARGETS=(notebooks/*_instructor.ipynb)
+  TARGETS=(activities/*_instructor.ipynb)
 fi
 
 if [[ ${#TARGETS[@]} -eq 0 ]]; then

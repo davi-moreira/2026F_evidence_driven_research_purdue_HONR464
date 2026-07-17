@@ -1,3 +1,9 @@
+> ⚠️ **SEEDED FROM MGMT474 — PARTIALLY APPLICABLE.**
+> The **infrastructure** sections (Quarto render fails, GitHub Pages stale, git push
+> rejected, leaked solutions) are still valid for this repo. The **ML sections**
+> (CV-first / `audit_cv_first.py`, which was deleted) are obsolete. Adapt during
+> curriculum work — see the "Adapt seeded `_project_docs`" task on the course board.
+
 # Troubleshooting
 
 Common issues encountered while developing or deploying course materials, with proven solutions.

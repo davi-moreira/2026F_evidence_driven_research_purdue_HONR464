@@ -1,3 +1,10 @@
+> ⚠️ **SEEDED FROM MGMT474 — NOT YET ADAPTED FOR HONR 46400.**
+> This template was carried over from the source Predictive-Analytics course and still
+> describes machine-learning notebooks (`RANDOM_SEED`, 60/20/20 splits, ISLP bibliography,
+> `nb01_eda_splits`). **Do not treat it as the canonical HONR 46400 activity template yet.**
+> Adapt it during curriculum work — see `NEW_COURSE_SETUP.md` (gap list) and the
+> "Adapt seeded `_project_docs`" task on the course board.
+
 # Notebook Structure Template
 
 > **Canonical reference:** `notebooks/nb01_eda_splits_student.ipynb` is the reference implementation. When creating or updating notebooks, match its header format, section organization, and conventions exactly. This file documents what nb01 demonstrates.
