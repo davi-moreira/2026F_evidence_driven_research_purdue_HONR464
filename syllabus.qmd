@@ -49,7 +49,7 @@ By the conclusion of this course, you will be able to:
 
 ## Course Materials
 
--   **Readings:** A curated set of research-methods and evidence-appraisal readings posted on Brightspace (no single required textbook; no quantitative prerequisite).
+-   **Readings:** The course's primary text is **Blair, Coppock & Humphreys (2023), *Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign*** (Princeton University Press) — read **free online** at [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}; no purchase required. Chapters are read conceptually (no quantitative prerequisite), on the light cadence in the course schedule. Optional companion: Bergstrom & West, *Calling Bullshit* (public case studies at [callingbullshit.org](https://callingbullshit.org/){target="_blank"}). Any additional readings are posted on Brightspace.
 -   **Computing (Required):** A laptop or desktop with internet access and a modern web browser; activities run in [Google Colab](https://colab.research.google.com/){target="_blank"}.
 -   **AI Tools:** A general-purpose AI assistant (e.g., Google Gemini / Microsoft Copilot) used under the course's **Ask → Verify → Document** policy.
 
@@ -59,26 +59,55 @@ By the conclusion of this course, you will be able to:
 
 ## Assessments
 
-<!-- TODO (curriculum session): confirm final weights and instruments with the professor.
-     The Daniels School GPA-3.3 grading cap from the source course is intentionally
-     REMOVED here — verify the Honors College grading policy before publishing. -->
+<!-- Weights reconciled in the Fall 2026 build — see planning/ASSESSMENT_ARCHITECTURE.md.
+     The Daniels School GPA-3.3 grading cap does NOT apply (Honors College course);
+     final confirmation with the Honors College is tracked on the course board. -->
 
-The weights below are a **provisional starting proposal** and will be finalized before the term begins. The course is built around a semester-long **research project** carried through four milestones, ending in a **written report and an oral defense**.
+There is **no conventional midterm or final exam**. The course assesses the
+research chain itself: a semester-long **individual research project** carried
+through milestones M00–M23, presented publicly at the **Purdue Fall
+Undergraduate Research Expo (Tuesday, November 17 — required)**, and closed
+with an oral **Evidence Defense** and a reproducible **final research
+dossier**. Grading rewards correctness, transparency, reproducibility,
+approach-alignment, and responsible interpretation — never coding elegance
+(no computing background is assumed; all code is provided).
 
-| **Assessment**                                                              | **Weight** |
-|-----------------------------------------------------------------------------|-----------:|
-| Participation & in-class engagement                                         |        10% |
-| Reading / concept checks (short quizzes or reflections)                     |        15% |
-| Research Project — Milestone 1 (Gap + Research Question)                     |        10% |
-| Research Project — Milestone 2 (Sources + Operationalization)               |        15% |
-| Research Project — Milestone 3 (Method Justification + Analysis + Verify)   |        15% |
-| Research Project — Milestone 4 (Written Report)                             |        20% |
-| Oral Defense (individual/group presentation)                                |        10% |
-| Intra-group Peer Evaluation                                                 |         5% |
+| **Assessment component**                                        | **Weight** |
+|-----------------------------------------------------------------|-----------:|
+| Daily notebook preparation & engagement (incl. Claim Tickets)   |        15% |
+| Milestone development, presentations & revisions (M00–M09, M13–M15, M17–M18) |        30% |
+| URC poster & presentation (M10–M12, M16)                        |        20% |
+| Post-conference final research dossier (M19–M21, M23)           |        20% |
+| Evidence Defense & course synthesis (M22 + final-week synthesis) |         5% |
+| Claim analyses & concept checks (incl. the async claim-diagnosis module) |        10% |
+
+**Revision policy:** feedback returns within 3 days of each milestone; most
+milestones accept a revised version within 7 days of feedback for up to half
+the lost points (the revising is part of the craft being graded). Terminal
+artifacts — the final poster (Nov 6), the Expo presentation (Nov 17), the
+Evidence Defense (Dec 7/9), and the final dossier (Dec 11) — have no
+post-hoc revision: the deadline governs.
+
+**Late policy:** −10% per day, up to 3 days, then not accepted (documented
+emergencies handled individually per Purdue policy).
+
+**Grading scale:** A ≥ 93, A− ≥ 90, B+ ≥ 87, B ≥ 83, B− ≥ 80, C+ ≥ 77,
+C ≥ 73, C− ≥ 70, D ≥ 60, F < 60 (no curve).
 
 ### The Research Project (the course spine)
 
-Working individually or in small groups, you will carry one research question across the semester through four milestones — (1) gap & question, (2) sources & operationalization, (3) conceptual method-family justification, analysis & verification, and (4) a written report plus an **oral defense** — with a confidential intra-group peer evaluation. Presenting a poster at the **Fall 2026 Purdue Undergraduate Research Conference** is strongly encouraged; Professor Moreira is happy to serve as faculty mentor. Milestone instructions and rubrics are posted on Brightspace. Additional information about Purdue undergraduate research conferences: <https://www.purdue.edu/undergrad-research/conferences/index.php>{target="_blank"}.
+You will carry **one individual research question** across the whole semester:
+from curiosity to gap to answerable question (Aug–Sep), through a full research
+design declared piece by piece — model, inquiry, measurement, data strategy,
+answer strategy — then stress-tested by simulation, piloted, and redesigned
+(Oct), to a poster presented at the **Purdue Fall Undergraduate Research Expo
+(Tue Nov 17, required — the course's public milestone M16)**, and finally to a
+reproducible research dossier defended orally in December. Every milestone
+follows a **develop in class → present → submit → revise** cadence, so no
+deliverable is ever built alone or at the last minute. Milestone instructions
+and rubrics are posted on Brightspace, one page per milestone (M00–M23).
+Additional information about Purdue undergraduate research conferences:
+<https://www.purdue.edu/undergrad-research/conferences/index.php>{target="_blank"}.
 
 ### Grade Challenges
 

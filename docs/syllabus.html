@@ -237,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="course-materials" class="level2">
 <h2 class="anchored" data-anchor-id="course-materials">Course Materials</h2>
 <ul>
-<li><strong>Readings:</strong> A curated set of research-methods and evidence-appraisal readings posted on Brightspace (no single required textbook; no quantitative prerequisite).</li>
+<li><strong>Readings:</strong> The course’s primary text is <strong>Blair, Coppock &amp; Humphreys (2023), <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em></strong> (Princeton University Press) — read <strong>free online</strong> at <a href="https://book.declaredesign.org/" target="_blank">book.declaredesign.org</a>; no purchase required. Chapters are read conceptually (no quantitative prerequisite), on the light cadence in the course schedule. Optional companion: Bergstrom &amp; West, <em>Calling Bullshit</em> (public case studies at <a href="https://callingbullshit.org/" target="_blank">callingbullshit.org</a>). Any additional readings are posted on Brightspace.</li>
 <li><strong>Computing (Required):</strong> A laptop or desktop with internet access and a modern web browser; activities run in <a href="https://colab.research.google.com/" target="_blank">Google Colab</a>.</li>
 <li><strong>AI Tools:</strong> A general-purpose AI assistant (e.g., Google Gemini / Microsoft Copilot) used under the course’s <strong>Ask → Verify → Document</strong> policy.</li>
 </ul>
@@ -248,59 +248,54 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="assessments" class="level2">
 <h2 class="anchored" data-anchor-id="assessments">Assessments</h2>
-<!-- TODO (curriculum session): confirm final weights and instruments with the professor.
-     The Daniels School GPA-3.3 grading cap from the source course is intentionally
-     REMOVED here — verify the Honors College grading policy before publishing. -->
-<p>The weights below are a <strong>provisional starting proposal</strong> and will be finalized before the term begins. The course is built around a semester-long <strong>research project</strong> carried through four milestones, ending in a <strong>written report and an oral defense</strong>.</p>
+<!-- Weights reconciled in the Fall 2026 build — see planning/ASSESSMENT_ARCHITECTURE.md.
+     The Daniels School GPA-3.3 grading cap does NOT apply (Honors College course);
+     final confirmation with the Honors College is tracked on the course board. -->
+<p>There is <strong>no conventional midterm or final exam</strong>. The course assesses the research chain itself: a semester-long <strong>individual research project</strong> carried through milestones M00–M23, presented publicly at the <strong>Purdue Fall Undergraduate Research Expo (Tuesday, November 17 — required)</strong>, and closed with an oral <strong>Evidence Defense</strong> and a reproducible <strong>final research dossier</strong>. Grading rewards correctness, transparency, reproducibility, approach-alignment, and responsible interpretation — never coding elegance (no computing background is assumed; all code is provided).</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 86%">
-<col style="width: 13%">
+<col style="width: 84%">
+<col style="width: 15%">
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Assessment</strong></th>
+<th><strong>Assessment component</strong></th>
 <th style="text-align: right;"><strong>Weight</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Participation &amp; in-class engagement</td>
-<td style="text-align: right;">10%</td>
+<td>Daily notebook preparation &amp; engagement (incl.&nbsp;Claim Tickets)</td>
+<td style="text-align: right;">15%</td>
 </tr>
 <tr class="even">
-<td>Reading / concept checks (short quizzes or reflections)</td>
-<td style="text-align: right;">15%</td>
+<td>Milestone development, presentations &amp; revisions (M00–M09, M13–M15, M17–M18)</td>
+<td style="text-align: right;">30%</td>
 </tr>
 <tr class="odd">
-<td>Research Project — Milestone 1 (Gap + Research Question)</td>
-<td style="text-align: right;">10%</td>
+<td>URC poster &amp; presentation (M10–M12, M16)</td>
+<td style="text-align: right;">20%</td>
 </tr>
 <tr class="even">
-<td>Research Project — Milestone 2 (Sources + Operationalization)</td>
-<td style="text-align: right;">15%</td>
-</tr>
-<tr class="odd">
-<td>Research Project — Milestone 3 (Method Justification + Analysis + Verify)</td>
-<td style="text-align: right;">15%</td>
-</tr>
-<tr class="even">
-<td>Research Project — Milestone 4 (Written Report)</td>
+<td>Post-conference final research dossier (M19–M21, M23)</td>
 <td style="text-align: right;">20%</td>
 </tr>
 <tr class="odd">
-<td>Oral Defense (individual/group presentation)</td>
-<td style="text-align: right;">10%</td>
+<td>Evidence Defense &amp; course synthesis (M22 + final-week synthesis)</td>
+<td style="text-align: right;">5%</td>
 </tr>
 <tr class="even">
-<td>Intra-group Peer Evaluation</td>
-<td style="text-align: right;">5%</td>
+<td>Claim analyses &amp; concept checks (incl.&nbsp;the async claim-diagnosis module)</td>
+<td style="text-align: right;">10%</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Revision policy:</strong> feedback returns within 3 days of each milestone; most milestones accept a revised version within 7 days of feedback for up to half the lost points (the revising is part of the craft being graded). Terminal artifacts — the final poster (Nov 6), the Expo presentation (Nov 17), the Evidence Defense (Dec 7/9), and the final dossier (Dec 11) — have no post-hoc revision: the deadline governs.</p>
+<p><strong>Late policy:</strong> −10% per day, up to 3 days, then not accepted (documented emergencies handled individually per Purdue policy).</p>
+<p><strong>Grading scale:</strong> A ≥ 93, A− ≥ 90, B+ ≥ 87, B ≥ 83, B− ≥ 80, C+ ≥ 77, C ≥ 73, C− ≥ 70, D ≥ 60, F &lt; 60 (no curve).</p>
 <section id="the-research-project-the-course-spine" class="level3">
 <h3 class="anchored" data-anchor-id="the-research-project-the-course-spine">The Research Project (the course spine)</h3>
-<p>Working individually or in small groups, you will carry one research question across the semester through four milestones — (1) gap &amp; question, (2) sources &amp; operationalization, (3) conceptual method-family justification, analysis &amp; verification, and (4) a written report plus an <strong>oral defense</strong> — with a confidential intra-group peer evaluation. Presenting a poster at the <strong>Fall 2026 Purdue Undergraduate Research Conference</strong> is strongly encouraged; Professor Moreira is happy to serve as faculty mentor. Milestone instructions and rubrics are posted on Brightspace. Additional information about Purdue undergraduate research conferences: <a href="https://www.purdue.edu/undergrad-research/conferences/index.php" target="_blank">https://www.purdue.edu/undergrad-research/conferences/index.php</a>.</p>
+<p>You will carry <strong>one individual research question</strong> across the whole semester: from curiosity to gap to answerable question (Aug–Sep), through a full research design declared piece by piece — model, inquiry, measurement, data strategy, answer strategy — then stress-tested by simulation, piloted, and redesigned (Oct), to a poster presented at the <strong>Purdue Fall Undergraduate Research Expo (Tue Nov 17, required — the course’s public milestone M16)</strong>, and finally to a reproducible research dossier defended orally in December. Every milestone follows a <strong>develop in class → present → submit → revise</strong> cadence, so no deliverable is ever built alone or at the last minute. Milestone instructions and rubrics are posted on Brightspace, one page per milestone (M00–M23). Additional information about Purdue undergraduate research conferences: <a href="https://www.purdue.edu/undergrad-research/conferences/index.php" target="_blank">https://www.purdue.edu/undergrad-research/conferences/index.php</a>.</p>
 </section>
 <section id="grade-challenges" class="level3">
 <h3 class="anchored" data-anchor-id="grade-challenges">Grade Challenges</h3>

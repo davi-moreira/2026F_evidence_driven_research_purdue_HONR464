@@ -93,8 +93,9 @@ def main() -> None:
                         str(instr)], check=True)
         subprocess.run([sys.executable, str(REPO / "scripts" / "validate_notebooks.py"),
                         f"nb{n:02d}"], check=True)
-    subprocess.run([sys.executable,
-                    str(REPO / "scripts" / "update_schedule_badges.py")], check=True)
+    if "--no-badges" not in sys.argv:
+        subprocess.run([sys.executable,
+                        str(REPO / "scripts" / "update_schedule_badges.py")], check=True)
 
 
 if __name__ == "__main__":
