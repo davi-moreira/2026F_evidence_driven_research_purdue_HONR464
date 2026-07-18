@@ -141,3 +141,31 @@ the recommended instructor review sequence. THE BUILD IS CONCLUDED.
 ## Open external unknowns (non-blocking)
 - URC abstract deadline = **TBD** → internal completion gate M20 (2026-10-09).
 - Honors grading policy (#4), class time/room (#13), logo (#11) — tracked, not blocking.
+
+---
+
+## Post-build revision pass (2026-07-18, instructor-directed)
+
+Instructor review directives applied on top of the concluded build:
+
+- [x] **nb00 fix:** coffee-study output contradicted its answer key at seed 464
+      (+0.26 realized vs "~+3" narrated) → retuned to effect=8/sd=6 (+6.35).
+- [x] **nb00 intro:** "Meet Your Professor" section (bio, World Bank M&E,
+      Palmeiras, Olinda carnival + NYT links, personal photos) from the QM670
+      ch.1 slides; MIDA master map added to the semester overview.
+- [x] **MGMT474 frame adopted course-wide:** 💡 Gemini Prompt (+After-running-
+      verify) before every substantive code chunk; ≥3 "A question that often
+      comes up here" blocks per notebook; question-guided sections. Template
+      §7/7b/7c + validator enforce it.
+- [x] **Figure library:** notebooks/figures/ — 35 figures, every one visually
+      inspected before captioning: personal photos, QM670 conceptual diagrams,
+      RDSS replication-archive figures (PDF→PNG; embedding them is an explicit
+      instructor decision superseding SOURCE_AUDIT §8's re-implement-only
+      default), MGMT474 data-ink demo. Assignments + attributions in
+      notebooks/figures/README.md.
+- [x] **nb14:** MGMT474 nb17 data-communication lecture ported (six principles,
+      data-ink live demo, eleven-section research-poster architecture) — taught
+      M29 (Nov 2), before the Nov 6 poster submission.
+- [ ] nb01–nb13, nb15–nb19: enrichment fanned out to 5 agents (Gemini prompts,
+      Q&A top-up, assigned figures, guiding questions); central QA → rebuild →
+      push on completion.
