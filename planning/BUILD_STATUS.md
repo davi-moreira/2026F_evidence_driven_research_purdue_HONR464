@@ -112,11 +112,17 @@ not-permitted named in every meeting. See `course_config.yaml`.
       future edits; committed artifact = student notebook only).
 - [x] `nb00` (M1) + `nb01` (M2–M4) — gold standards; executed, validated,
       pushed; badges live on the schedule page.
-- [ ] nb02–nb19: fanned out to authoring agents in waves against the template +
-      exemplars + MEETING_SCHEDULE rows; each is centrally QA'd, built, and
-      pushed per topic. Canonical shared world for nb04/nb09/nb10/nb11 =
-      make_world(n,effect=2.0,noise=2.0) mentoring-program world (belonging
-      0–100, TRUE_ATE ≈ 2.0).
+- [x] Wave 1 (nb02–nb07): published — 8/20 badges live. Canonical shared world
+      for nb04/nb09/nb10/nb11 pinned to the CONSTANT-EFFECT form
+      (Y1 = Y0 + effect exactly; TRUE_ATE = 2.0; heterogeneity taught via Q&A) —
+      nb04 was surgically converted after an agent shipped the independent-noise
+      variant; wave-2 builds assume the constant form.
+- [ ] Waves 2–3 (nb08–nb19): six agents running (D: nb08–09, E: nb10–11,
+      F: nb12–13, G: nb14–15, H: nb16–17, I: nb18–19); central QA → rebuild →
+      render → push per batch.
+- ⚠️ Note: the personal `settings.local.json` session-autocommit Stop hook fires
+      in subagent sessions too — it once pushed a held schedule.qmd (fixed).
+      Keep the tracked tree clean while agents run.
 
 **Phase E — project system: IN PROGRESS**
 - [x] Exemplar `_research_project/2026Fall/milestone_01_research_question_pitch.md`
