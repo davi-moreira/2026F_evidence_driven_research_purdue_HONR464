@@ -4,18 +4,44 @@
 then `CLAUDE.md`, `course_config.yaml`, `planning/COURSE_MASTER_PLAN.md`,
 `planning/SOURCE_AUDIT.md`, and `NEW_COURSE_SETUP.md`, and resume at "Next actions".
 
-Last updated: 2026-07-18 (BUILD CONCLUDED) · Tracker: private repo issue **#15** (`…-HONR464-tasks`).
+Last updated: 2026-07-18, session end (build + revision pass COMPLETE; review-support phase) · Tracker: private repo issue **#15** (`…-HONR464-tasks`).
 
 ---
 
-## Bootstrap prompt (paste after `/clear`, on the Fable model)
+## Bootstrap prompt (paste after `/clear` — REVIEW-SUPPORT PHASE)
 
-> Continue the autonomous build of HONR 46400 (Evidence-Driven Research, Fall 2026).
-> Read `planning/BUILD_STATUS.md`, `CLAUDE.md`, `course_config.yaml`,
-> `planning/COURSE_MASTER_PLAN.md`, `planning/SOURCE_AUDIT.md`, and `NEW_COURSE_SETUP.md`.
-> The plan, scope decisions, and calendar are already locked and on disk. Resume the
-> A–F build at the "Next actions" list in BUILD_STATUS, running autonomously; I'll
-> review at the end. Update BUILD_STATUS after each artifact.
+> The HONR 46400 Fall 2026 build is COMPLETE (Phases A–F + the instructor-directed
+> revision pass — see planning/BUILD_STATUS.md end section + planning/FINAL_REPORT.md).
+> Read `planning/BUILD_STATUS.md` and `CLAUDE.md` (v2.0 — the as-built workflows).
+> I am reviewing the notebooks badge-by-badge on the live schedule page. When I name
+> a notebook + change: edit its cell source in `_production_kit/nb_sources/nbNN_*.py`,
+> run `.venv/bin/python scripts/nbbuild.py nbNN`, verify all checks pass, then
+> render → commit (by name) → push per the Commit-AND-Render rule.
+
+---
+
+## HOW TO RESUME (state as of 2026-07-18, session end)
+
+- **Everything is built, validated, and pushed**; the tree is clean; 20/20 Colab
+  badges live at https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/schedule.html
+- **Edit cycle for review fixes:** cell sources in `_production_kit/nb_sources/`
+  (gitignored) → `.venv/bin/python scripts/nbbuild.py nbNN` (builds instructor,
+  executes, strips student, validates, refreshes badges) → commit the student
+  .ipynb + schedule.qmd + docs/ by name → push. NEVER edit .ipynb files directly.
+- **Validators** (all green at session end): validate_notebooks / voice_lint /
+  audit_sources / validate_coverage / validate_milestones / update_schedule_badges
+  --check. Frame minimums enforced: ≥3 Gemini prompts + ≥3 Q&As per notebook.
+- **Figure library:** notebooks/figures/ (35 files; README = inspected captions +
+  attribution lines). Add new figures ONLY after visual inspection.
+- **Open items needing the professor** (also in FINAL_REPORT §3): URC abstract
+  deadline (external, TBD), class time/room, Honors grading confirmation, logo,
+  Brightspace replication, poster print logistics.
+- **Queued parallel project (NOT started):** `translation/TRANSLATION_BUILD_PROMPT.md`
+  — the declarepy R→Python parity build, to run on its own `declarepy` branch.
+- **Gotcha:** the personal settings.local.json session-autocommit Stop hook fires
+  in every Claude session here (incl. subagents) and pushes tracked changes at
+  turn end — keep the tracked tree clean while agents run.
+- Tracker: private issue #15 has per-phase + revision-pass summaries.
 
 ---
 
