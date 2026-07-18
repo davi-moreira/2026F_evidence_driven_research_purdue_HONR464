@@ -29,18 +29,23 @@ in **written AND oral** formats.
 
 | File | When to read | Status |
 |---|---|---|
-| `_project_docs/ACTIVITY_TEMPLATE.md` | Creating/restructuring a student activity — full section skeleton | ✓ seeded (renamed from NOTEBOOK_TEMPLATE.md) |
+| `_project_docs/ACTIVITY_TEMPLATE.md` | Creating/restructuring a topic notebook — the full, machine-validated template | ✓ canonical (Fall 2026 build) |
 | `_project_docs/DECISIONS.md` | Before proposing changes to conventions (deliverable formats, AI-tool stack, sourcing standards) | ✓ seeded (adapt) |
 | `_project_docs/TROUBLESHOOTING.md` | Render fails, Pages stale, git push rejected, leaked solutions | ✓ seeded |
-| `_project_docs/COURSE_MATERIAL_WORKFLOW.md` | Producing one unit end-to-end (activity → session plan → Brightspace page → quiz) | ✓ seeded (adapt for MWF/in-person) |
-| `_project_docs/HONR464_Semester_Plan_2026Fall.md` | Master course plan — source of truth for sequencing | ⬜ **to create** (curriculum session) |
+| `_project_docs/COURSE_MATERIAL_WORKFLOW.md` | Producing one unit end-to-end (notebook → session plan → Brightspace page) | ✓ seeded (adapt for MWF/in-person) |
+| `planning/COURSE_MASTER_PLAN.md` | Master course plan — source of truth for sequencing (+ `planning/BUILD_STATUS.md` for build state) | ✓ built |
+| `planning/MEETING_SCHEDULE.md` | Per-meeting detail (44 × 32 columns; generated from `scripts/schedule_data/`) | ✓ built |
 | `CONVERSATION_LOG.md` | Project history and prior decisions | ✓ fresh |
+| `scripts/voice_lint_notebooks.py` | Voice gate for student notebooks (also a PostToolUse hook) | ✓ built |
 | `scripts/voice_check_guides.py` | Before every session-guide edit | ✓ seeded (repointed) |
-| `scripts/audit_answer_length.py` | Before importing any MC quiz CSV (only if MC banks are used) | ✓ seeded (optional) |
-| `scripts/audit_sources.py` | Before shipping any activity with empirical claims (citation-integrity gate) | ⬜ **to create** |
+| `scripts/audit_answer_length.py` | Before importing any MC quiz CSV (only if MC banks are used) | ✓ seeded (dormant) |
+| `scripts/audit_sources.py` | Before shipping any notebook with citations (citation-integrity gate) | ✓ built |
+| `scripts/nbbuild.py` | Build one topic notebook end-to-end (source → execute → strip → validate → badge) | ✓ built |
 
-**Canonical activity reference:** `activities/act01_*_student.ipynb` — match its
-formatting exactly (once the first activity exists).
+**Canonical notebook reference:** `notebooks/student/nb01_curiosity_to_question_student.ipynb`
+— match its formatting exactly. Cell sources live in gitignored
+`_production_kit/nb_sources/nbNN_<slug>.py`; edit the source, then rebuild with
+`.venv/bin/python scripts/nbbuild.py nbNN`.
 
 ---
 
@@ -61,7 +66,7 @@ never TO the instructor.
    inside blockquote read-aloud scripts (`> *"..."*`).
 
 ```bash
-grep -iE '\bstudents?\b|\bthe instructor\b|on camera|speaking prompt' activities/actNN_*_student.ipynb   # expect 0 hits
+.venv/bin/python scripts/voice_lint_notebooks.py                      # all student notebooks; expect ✓ clean
 python3 scripts/voice_check_guides.py session_guides/NN_session_guide.md
 ```
 
@@ -96,7 +101,7 @@ course. Every empirical claim in any student-facing or deliverable material must
    operationalization, which method family, and *why*.
 
 ```bash
-python3 scripts/audit_sources.py activities/actNN_*_student.ipynb   # (to create) flags uncited claims, dead links, hallucinated-citation patterns
+.venv/bin/python scripts/audit_sources.py   # all student notebooks: URL allowlist, verified-citation registry, planted-fake containment
 ```
 
 ---
@@ -131,17 +136,25 @@ and method. A results statement with no uncertainty/limitations framing is a def
 
 ---
 
-## 🚨 CRITICAL WORKFLOW — Instructor-First Activity Editing  *(KEEP — "notebook"→"activity")*
+## 🚨 CRITICAL WORKFLOW — Instructor-First Notebook Editing
 
-ALWAYS edit `activities/actNN_*_instructor.ipynb` FIRST, then generate the student
-file by stripping every cell whose source contains `INSTRUCTOR SOLUTION`.
+ALWAYS edit the cell source `_production_kit/nb_sources/nbNN_<slug>.py` (gitignored)
+FIRST, then rebuild: `.venv/bin/python scripts/nbbuild.py nbNN` — this regenerates
+`notebooks/instructor/nbNN_*_instructor.ipynb`, executes it with nbclient,
+generates the student file by stripping every cell containing `INSTRUCTOR
+SOLUTION`, runs the template/voice validators, and refreshes the schedule badge.
+(Direct edits to an instructor .ipynb without a source rebuild will be lost.)
 
 - Markers (unchanged so audits keep working): `### INSTRUCTOR SOLUTION — Exercise N`,
   `# INSTRUCTOR SOLUTION`, `<!-- INSTRUCTOR SOLUTION -->`.
 - Student placeholders: `### YOUR ANSWER HERE:` (text) / `# YOUR SOLUTION HERE`.
-- The "solution" is now a **model exemplar** (a well-appraised source, a well-scoped
+- The "solution" is a **model exemplar** (a well-appraised source, a well-scoped
   question, a worked method-justification), not working ML code.
-- Only `*_student.ipynb` is committed; instructor files are gitignored.
+- Only `notebooks/student/*_student.ipynb` is committed; instructor notebooks and
+  `_production_kit/` sources are gitignored.
+- Schedule badges key off **git-tracked** student files only
+  (`scripts/update_schedule_badges.py`) — stage the student notebook before
+  regenerating badges when publishing a new topic.
 
 ---
 
@@ -149,7 +162,8 @@ file by stripping every cell whose source contains `INSTRUCTOR SOLUTION`.
 
 Every time an activity is updated: (1) update its session guide
 (`session_guides/NN_session_guide.md`, gitignored) and (2) if significant, update
-the sequencing rationale in `_project_docs/HONR464_Semester_Plan_2026Fall.md`.
+the sequencing rationale in `planning/COURSE_MASTER_PLAN.md` (and the affected
+rows in `scripts/schedule_data/` → rebuild `planning/MEETING_SCHEDULE.{csv,md}`).
 
 ---
 
@@ -192,19 +206,22 @@ its script are dormant but harmless.
 | Tildes in markdown cells | Always escape: `\~30 sources`, `(\~0.5)` |
 | Emoji vocabulary | `✓` success, `⚠️` warning, `📝` exercise, `💡` insight |
 
-> `RANDOM_SEED = 474` and the 60/20/20 split from the source course are **dropped** —
-> there is no model fitting here. Reintroduce a seed only if some later unit adds
-> light reproducible computation.
+> The source course's `RANDOM_SEED = 474` and 60/20/20 split are **dropped**. This
+> course uses **`SEED = 464`** (the course number) via `np.random.default_rng(SEED)`
+> in every notebook's setup cell; all simulations are deterministic. No seaborn.
 
 ## Naming and Commit Conventions  *(KEEP)*
 
-- Student activities (committed): `actNN_topic_student.ipynb`
-- Instructor activities (gitignored): `actNN_topic_instructor.ipynb`
+- Student notebooks (committed): `notebooks/student/nbNN_topic_student.ipynb`
+- Instructor notebooks (gitignored): `notebooks/instructor/nbNN_topic_instructor.ipynb`
+- Cell sources (gitignored, canonical for editing): `_production_kit/nb_sources/nbNN_topic.py`
 - Commit messages: `<type>: <subject>` (feat|fix|docs|chore|build|refactor) with a
   trailing `Co-Authored-By:` line. Stage specific files — never `git add .`.
 
 ---
 
-**Version:** 1.0 — seeded from 2026Summer_predictive_analytics_MGMT474 infra; quant
-content spine replaced with the evidence-driven-research spine.
+**Version:** 2.0 — Fall 2026 course fully built (planning suite, 20 topic
+notebooks nb00–nb19, milestones M00–M23, project protocols, validators); paths
+and workflows updated to the as-built system. (1.0 = seeded from
+2026Summer_predictive_analytics_MGMT474 infra.)
 **Maintained by:** Professor Davi Moreira + AI Assistants

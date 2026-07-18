@@ -29,6 +29,7 @@ def convert(instr_path: Path) -> Path:
         if c.cell_type == "code":
             c.outputs = []
             c.execution_count = None
+        c.metadata.pop("execution", None)  # strip run timestamps: stable diffs
     nb.cells = kept
 
     out = (REPO / "notebooks" / "student" /

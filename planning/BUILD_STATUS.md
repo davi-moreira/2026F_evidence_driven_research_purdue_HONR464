@@ -4,7 +4,7 @@
 then `CLAUDE.md`, `course_config.yaml`, `planning/COURSE_MASTER_PLAN.md`,
 `planning/SOURCE_AUDIT.md`, and `NEW_COURSE_SETUP.md`, and resume at "Next actions".
 
-Last updated: 2026-07-17 · Tracker: private repo issue **#15** (`…-HONR464-tasks`).
+Last updated: 2026-07-18 (BUILD CONCLUDED) · Tracker: private repo issue **#15** (`…-HONR464-tasks`).
 
 ---
 
@@ -105,7 +105,7 @@ not-permitted named in every meeting. See `course_config.yaml`.
       semantic differences, roadmap, validation protocol+ledger).
 - [x] `schedule.qmd` regenerated: real 44-row table, badges auto-appear per topic.
 
-**Phase D — notebooks: IN PROGRESS**
+**Phase D — notebooks: ✅ COMPLETE (2026-07-18)** — 20/20 published, badges live.
 - [x] Build pipeline: `scripts/nbbuild.py` (source module → instructor .ipynb →
       nbclient execute → student strip → validate → badge). Cell sources live in
       gitignored `_production_kit/nb_sources/nbNN_<slug>.py` (kept local for
@@ -117,24 +117,26 @@ not-permitted named in every meeting. See `course_config.yaml`.
       (Y1 = Y0 + effect exactly; TRUE_ATE = 2.0; heterogeneity taught via Q&A) —
       nb04 was surgically converted after an agent shipped the independent-noise
       variant; wave-2 builds assume the constant form.
-- [ ] Waves 2–3 (nb08–nb19): six agents running (D: nb08–09, E: nb10–11,
-      F: nb12–13, G: nb14–15, H: nb16–17, I: nb18–19); central QA → rebuild →
-      render → push per batch.
+- [x] Waves 2–3 (nb08–nb19): built by six agents, centrally QA'd (canonical
+      world verified in nb09–nb11; foos_etal/cliningsmith numbers independently
+      recomputed), rebuilt, published.
 - ⚠️ Note: the personal `settings.local.json` session-autocommit Stop hook fires
       in subagent sessions too — it once pushed a held schedule.qmd (fixed).
       Keep the tracked tree clean while agents run.
 
-**Phase E — project system: IN PROGRESS**
+**Phase E — project system: ✅ COMPLETE (2026-07-18)**
 - [x] Exemplar `_research_project/2026Fall/milestone_01_research_question_pitch.md`
       (pattern: About → Submit → Purpose → Components → Expectations → Rubric
       100pt 4-band → Penalties → Pitfalls → prev/next).
-- [ ] Milestones 00, 02–23 fanned out to 4 agents; `project/` 13-doc protocol
-      suite (poster/conference/final_dossier) to a 5th.
+- [x] All 24 milestone docs published; `project/` 13-doc protocol suite published.
 - [x] `syllabus.qmd` Assessments reconciled (15/30/20/20/5/10; individual mode;
       terminal-artifact policy; grading scale); index/README updated; pushed.
 
-**Phase F — final audit:** execute notebooks, run all validators, quality-gate checklist,
-`quarto render` + commit `docs/`, risk log.
+**Phase F — final audit: ✅ COMPLETE (2026-07-18)** — execute-all sweep (20/20,
+exit 0), full validator battery green, brief quality gates verified, citation
+audit clean, CLAUDE.md updated to the as-built system (v2.0), VALIDATION_REPORT
+ledger flipped to ✅. **See `planning/FINAL_REPORT.md`** for results, risks, and
+the recommended instructor review sequence. THE BUILD IS CONCLUDED.
 
 ## Open external unknowns (non-blocking)
 - URC abstract deadline = **TBD** → internal completion gate M20 (2026-10-09).

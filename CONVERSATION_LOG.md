@@ -43,3 +43,17 @@ Research" (Purdue Honors College, Fall 2026, Mon/Wed/Fri, in person).
 Fall 2026 calendar + URC poster date, class time/room, Brightspace granularity,
 assessment weights, Honors grading policy, brand logo. Curriculum (the full
 semester plan + activities + milestone content) is designed in the next session.
+
+## 2026-07-17/18 — Full course build (Phases B–F concluded)
+
+Autonomous build session (Fable), continuing the locked Phase A plan. Delivered:
+the 44×32 meeting schedule + 7 planning docs; the technical foundation
+(notebook template, nbbuild pipeline, validators, hooks, 5 rdss datasets,
+translation/ suite); all 20 topic notebooks nb00–nb19 (instructor-first,
+executed, stripped, validated, Colab-badged); all 24 milestone docs M00–M23 +
+13 project protocols; reconciled syllabus (15/30/20/20/5/10, individual mode);
+Phase F audit (all validators + execute-all sweep green). Notable decisions:
+canonical constant-effect simulation world (TRUE_ATE = 2.0) shared by
+nb04/09/10/11; badges keyed to git-tracked student files; milestone M07 is
+two-part (abstract gate Oct 9 / declaration Oct 16); M16 = the URC Expo itself.
+See planning/FINAL_REPORT.md. Build state: planning/BUILD_STATUS.md.
