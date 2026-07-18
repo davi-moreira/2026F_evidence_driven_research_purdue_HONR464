@@ -840,8 +840,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "A hostile reader walked my poster and the headline survived — here are the three hits and my three fixes."
 - **Claim NOT permitted:** Shipping a draft no adversarial eye has touched (peer-review is the course's quality gate, not a courtesy).
 - **RDSS reading:** (fresh unit)
-- **Calling Bullshit (optional):** optional: the honest-viz checklist from M14 rides again
-- **Other material:** nb14 §3 red-team protocol (Colab); draft posters on screens
+- **Other material:** nb14 §3 red-team protocol (Colab); draft posters on screens; the M14 honest-viz checklist rides again
 - **Provenance:** fresh (red-team protocol) + M14 honest-viz checklist | poster unit | adversarial review protocol | fresh
 - **Concepts:** red-team review; claim-boundary audit; figure-honesty audit; read-path audit; revision triage
 - **Python dependency:** none
@@ -993,7 +992,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 (embedded) the visitor role card: ask at least one question from each of the five types across your visits.
 - **Discussion prompt:** (post-simulation, 2 min) One thing you saw a classmate do that you're stealing for tomorrow.
 - **Project connection:** M15 readiness audit signed — the last gate before the real URC Expo tomorrow (Nov 17).
-- **Milestone developed:** M15 — Dress Rehearsal + Readiness Audit (completed TODAY)
+- **Milestone developed:** M15 — Dress Rehearsal + Readiness Audit (completed TODAY) → M16 — URC Expo Presentation (tomorrow)
 - **Milestone work time:** 40 min (simulation) + 4 min (audit)
 - **Milestone presentation/review:** the full-dress simulation IS the presentation/review
 - **Student prep:** Poster ready (printed or presentable); both pitches cold; question bank internalized.

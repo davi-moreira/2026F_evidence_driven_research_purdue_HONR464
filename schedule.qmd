@@ -10,36 +10,97 @@ editor: visual
   .overflow-table th, .overflow-table td {
     padding: 0.3rem; text-align: left; word-wrap: break-word; vertical-align: top;
   }
-  .overflow-table th:nth-child(1), .overflow-table td:nth-child(1) { width: 6%; }
-  .overflow-table th:nth-child(2), .overflow-table td:nth-child(2) { width: 10%; }
+  .overflow-table th:nth-child(1), .overflow-table td:nth-child(1) { width: 4%; }
+  .overflow-table th:nth-child(2), .overflow-table td:nth-child(2) { width: 9%; }
+  .overflow-table th:nth-child(5), .overflow-table td:nth-child(5) { width: 12%; }
   .below-table { font-size: 0.85rem; line-height: 1.2; margin-top: 1rem; }
 </style>
 ```
 
 # Course Schedule
 
-> **Placeholder.** The full Fall 2026 **Monday / Wednesday / Friday** sequence is
-> designed in the curriculum-planning session, anchored to the official Purdue
-> Fall 2026 academic calendar and the Fall Undergraduate Research Conference
-> poster date. The table harness below is kept from the course infrastructure;
-> each row maps to one class session or unit. Colab badges are optional — added
-> only when a light activity notebook backs the session.
+Forty-four Monday/Wednesday/Friday meetings (42 in person, 2 asynchronous
+online), one notebook per topic. Open each notebook in Colab from its badge;
+milestone instructions and rubrics are on Brightspace.
+
 
 ::: overflow-table
 
-| Week | Date | Topic | Session | Activity | Deliverable | Materials |
-|------|------|-------|---------|----------|-------------|-----------|
-| 1 | TBD | Launchpad: course map, tools, and the Ask → Verify → Document AI policy | Session 00 | *TBD* | Readiness check | Brightspace orientation |
-| 1 | TBD | From curiosity to a research gap | Session 01 | *TBD* | — | *TBD* |
-| … | … | *(remaining sessions designed in the curriculum session)* | | | | |
+| # | Date | Topic | Notebook | Milestone | Materials |
+|---|------|-------|----------|-----------|-----------|
+| | | **Phase 1 — Curiosity, gaps, answerable questions** | | | |
+| 1 | Mon Aug 24 | Launchpad: How do we know? Course map, Colab, and the Ask → Verify → Document policy | *nb00 (coming)* | M00 | RDSS ch. 1 (Preface) + ch. 2 'What is a research design?' — skim before Wednesday |
+| 2 | Wed Aug 26 | From curiosity to a topic worth studying | *nb01 (coming)* | M00 → M01 | RDSS ch. 2 'What is a research design?' |
+| 3 | Fri Aug 28 | Gaps: what is actually missing from what we know? | *nb01 (coming)* | M01 | RDSS ch. 3 'Research design principles' |
+| 4 | Mon Aug 31 | From problem to an answerable question | *nb01 (coming)* | M01 | RDSS ch. 4 'Getting started' |
+| 5 | Wed Sep 2 | The four approaches I: description and inference | *nb02 (coming)* | M01 | RDSS ch. 7 'Defining the inquiry' |
+| 6 | Fri Sep 4 | The four approaches II: prediction and causation — and the M01 pitches | *nb02 (coming)* | M01 | RDSS ch. 7 (continued) + Part III opener<br>*+ optional CB case* |
+| | | **Phase 2 — Literature, model, inquiry, measurement** | | | |
+| 7 | Wed Sep 9 | Finding real sources: search, appraisal, and the AI hallucination problem | *nb03 (coming)* | M02 | RDSS ch. 4 'Getting started' |
+| 8 | Fri Sep 11 | The claim map: what a field asserts, on what evidence — and where your gap sits | *nb03 (coming)* | M02 | RDSS ch. 4 |
+| 9 | Mon Sep 14 | Model (MIDA I): the world your question lives in — potential outcomes and DAGs | *nb04 (coming)* | M03 | RDSS ch. 6 'Specifying the model' |
+| 10 | Wed Sep 16 | Inquiry (MIDA I): the exact quantity you seek — and the M03 declarations | *nb04 (coming)* | M03 | RDSS ch. 7 'Defining the inquiry'; declaration_7.1 |
+| 11 | Fri Sep 18 | Measurement I: from concept to construct to indicator | *nb05 (coming)* | M04 | RDSS ch. 8 'Crafting a data strategy' — measurement sections |
+| 12 | Mon Sep 21 | Measurement II: error, and what bad measures do to good questions | *nb05 (coming)* | M04 | RDSS ch. 8 measurement sections |
+| 13 | Wed Sep 23 | Description deep dive I: honest summaries of real data | *nb06 (coming)* | M04 → M05 | RDSS ch. 15 'Observational: descriptive' |
+| 14 | Fri Sep 25 | Description deep dive II: visualization that tells the truth — and the M04 walkthroughs | *nb06 (coming)* | M04 | RDSS ch. 15<br>*+ optional CB case* |
+| | | **Phase 3 — Data & answer strategies** | | | |
+| 15 | Mon Sep 28 | Data strategy I (MIDA II): sampling — who gets into your data? | *nb07 (coming)* | M05 | RDSS ch. 8 'Crafting a data strategy' §8.1 sampling; declaration_2.1 |
+| 16 | Wed Sep 30 | Data strategy II: assignment, feasibility, and the ethics checkpoint | *nb07 (coming)* | M05 | RDSS ch. 8 §assignment sections |
+| 17 | Fri Oct 2 | **ASYNC** — Diagnose a misleading claim (and preview the answer strategy) | *nb08 (coming)* | M05 | RDSS ch. 9 'Choosing an answer strategy' — opening sections<br>*+ optional CB case* |
+| 18 | Mon Oct 5 | Answer strategy I (MIDA III): estimators — how data become an answer | *nb09 (coming)* | M05 | RDSS ch. 9 'Choosing an answer strategy'; declaration_9.1 |
+| 19 | Wed Oct 7 | Answer strategy II: regression as an estimator (not an oracle) | *nb09 (coming)* | M06 | RDSS ch. 9 regression/estimator sections |
+| 20 | Fri Oct 9 | Inference deep dive I: uncertainty — and the URC abstract gate | *nb10 (coming)* | M07 | RDSS ch. 9–10 uncertainty sections |
+| 21 | Wed Oct 14 | Inference deep dive II: generalization and the association-is-not-causation boundary | *nb10 (coming)* | M06 | RDSS ch. 15–16<br>*+ optional CB case* |
+| 22 | Fri Oct 16 | Inference deep dive III: power — and assembling the full design declaration | *nb10 (coming)* | M07 | RDSS ch. 10 'Diagnosing designs' §power; problem set 1 |
+| | | **Phase 4 — Pilot, diagnosis, redesign** | | | |
+| 23 | Mon Oct 19 | The diagnosis engine I: declare your design in code and interrogate it | *nb11 (coming)* | M08 | RDSS ch. 10 'Diagnosing designs'; declaration_10.1; ch. 13 'Designing in code' |
+| 24 | Wed Oct 21 | The diagnosis engine II: redesign — fix it before you run it | *nb11 (coming)* | M08 | RDSS ch. 11 'Redesigning'; declaration_11.1 |
+| 25 | Fri Oct 23 | Prediction deep dive I: target, baseline, split — forecasting without fooling yourself | *nb12 (coming)* | M09 | —<br>*+ optional CB case* |
+| 26 | Mon Oct 26 | Prediction deep dive II: leakage, and why performance is not understanding | *nb12 (coming)* | M09 | —<br>*+ optional CB case* |
+| 27 | Wed Oct 28 | Causal reasoning deep dive I: counterfactuals, experiments, and what randomization buys | *nb13 (coming)* | M09 | RDSS ch. 18 'Experimental: causal'; declaration_18.1 |
+| 28 | Fri Oct 30 | Causal reasoning deep dive II: causal claims without experiments — and the M09 pilot walkthroughs | *nb13 (coming)* | M09 | RDSS ch. 16 'Observational: causal' — DiD/RDD/IV intuition sections |
+| | | **Phase 5 — Poster construction & submission** | | | |
+| 29 | Mon Nov 2 | Poster I: storyboard — one claim, one hierarchy of evidence | *nb14 (coming)* | M10 | — |
+| 30 | Wed Nov 4 | Poster II: draft + red-team — attack your own poster before strangers do | *nb14 (coming)* | M11 | — |
+| 31 | Fri Nov 6 | Poster III: final production and SUBMISSION — the deadline is today | *nb14 (coming)* | M12 | — |
+| | | **Phase 6 — Conference preparation** | | | |
+| 32 | Mon Nov 9 | Delivery I: the 1-minute and 3-minute pitch architectures | *nb15 (coming)* | M13 | — |
+| 33 | Wed Nov 11 | Delivery II: uncertainty and limitations, spoken like a scientist | *nb15 (coming)* | M13 (submitted tonight) → M14 | — |
+| 34 | Fri Nov 13 | Delivery III: hard questions — building and drilling your question bank | *nb15 (coming)* | M14 | — |
+| 35 | Mon Nov 16 | Dress rehearsal: the full URC simulation — readiness audited | *nb15 (coming)* | M15 | — |
+| — | Tue Nov 17 | **🎓 Purdue Fall Undergraduate Research Expo — REQUIRED poster presentation (M16)** | | M16 | URC Expo |
+| | | **Phase 7 — Reflection, feedback, redesign** | | | |
+| 36 | Wed Nov 18 | Conference debrief: what the audience taught you | *nb16 (coming)* | M17 | — |
+| 37 | Fri Nov 20 | Feedback → redesign: if you ran it again, what would you change — and what do you change NOW? | *nb16 (coming)* | M18 | RDSS ch. 11 'Redesigning' |
+| 38 | Mon Nov 23 | **ASYNC** — Poster-to-Dossier module: robustness, sensitivity, and the claim ledger | *nb17 (coming)* | M19 | RDSS ch. 22 'Realization' — reporting what actually happened |
+| | | **Phase 8 — Reproducibility, brief, Evidence Defense** | | | |
+| 39 | Mon Nov 30 | Reproducibility I: could a stranger rebuild your findings from what you hand them? | *nb18 (coming)* | M20 | RDSS ch. 21 'Planning' + ch. 22 'Realization' |
+| 40 | Wed Dec 2 | Reproducibility II: sign-off — and the research brief begins | *nb18 (coming)* | M20 (submitted TONIGHT) → M21 | RDSS ch. 22 (continued) + ch. 23 'Integration' opening |
+| 41 | Fri Dec 4 | The research brief workshop — and staging the Evidence Defense | *nb19 (coming)* | M21 | — |
+| 42 | Mon Dec 7 | Evidence Defense I: defend your claims, your choices, and your verification | *nb19 (coming)* | M22 | — |
+| 43 | Wed Dec 9 | Evidence Defense II: the remaining defenses — and the dossier's final checklist | *nb19 (coming)* | M22 | — |
+| 44 | Fri Dec 11 | Synthesis: the four approaches, one semester, and what a defensible claim is | *nb19 (coming)* | M23 | RDSS ch. 24 'Epilogue' |
 
 :::
 
 ::: below-table
 
+**Key dates:** URC abstract internal gate **Fri Oct 9** · Final poster
+**Fri Nov 6** · **Purdue Fall Undergraduate Research Expo: Tue Nov 17**
+(required poster presentation) · Evidence Defenses **Dec 7 & 9** · Final
+dossier **Fri Dec 11**. No class: Sep 7 (Labor Day), Oct 12 (October Break),
+Nov 25/27 (Thanksgiving). Async-online meetings: Oct 2 and Nov 23.
+
 ## Core Course References
 
-- *Research-methods and evidence-appraisal readings — curated list added during
-  curriculum design.*
+- **Blair, G., Coppock, A., & Humphreys, M.** (2023). *Research Design in the
+  Social Sciences: Declaration, Diagnosis, and Redesign*. Princeton University
+  Press. Read free online: [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}.
+- **Bergstrom, C. T., & West, J. D.** (2020). *Calling Bullshit: The Art of
+  Skepticism in a Data-Driven World* — optional companion; public case studies
+  at [callingbullshit.org](https://callingbullshit.org/){target="_blank"}.
+- Course datasets ship from the MIT-licensed `rdss` package (see
+  [`notebooks/data/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/notebooks/data){target="_blank"}).
 
 :::

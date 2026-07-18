@@ -84,14 +84,26 @@ not-permitted named in every meeting. See `course_config.yaml`.
 - Repo-local `.venv` created (python 3.13 + numpy/pandas/matplotlib/scipy/
   statsmodels/sklearn/networkx/nbclient/nbformat/nbconvert) for notebook validation.
 
-**Phase C — technical foundation:**
-- [ ] Adapt notebook template (strip ML-isms from `_project_docs/ACTIVITY_TEMPLATE.md`).
-- [ ] `.claude/settings.json` hooks: instructor→md sync + **schedule badge updater**
-      (`scripts/update_schedule_badges.py`); adapt QM670 `commit_push_reminder` + voice-lint.
-- [ ] `translation/` 6 docs (R_TO_PYTHON_INVENTORY, PARITY_MATRIX.csv, API_MAPPING,
-      SEMANTIC_DIFFERENCES, TRANSLATION_ROADMAP, VALIDATION_REPORT) — parallel-project framing.
-- [ ] Ship 5 datasets to `notebooks/data/` as CSV (from RDSS replication, MIT + attribution).
-- [ ] Metadata/active-learning/provenance validator scripts.
+**Phase C — technical foundation: ✅ COMPLETE (2026-07-17)**
+- [x] `_project_docs/ACTIVITY_TEMPLATE.md` rewritten as the canonical HONR 46400
+      notebook template (approach/claim-boundary block, 7 required active moves
+      with exact heading markers, Ask→Verify→Document block, Claim Ticket,
+      instructor-marker conventions, seed 464, no seaborn).
+- [x] Hooks: `.claude/settings.json` = instructor→md sync (repointed to
+      `notebooks/instructor/`) + badge-updater/voice-lint PostToolUse + adapted
+      QM670 `commit_push_reminder` Stop hook (`.claude/hooks/`).
+- [x] `scripts/`: `make_student.py` (marker strip + verify),
+      `update_schedule_badges.py` (regenerates schedule.qmd from
+      MEETING_SCHEDULE.csv; badges appear when student files exist),
+      `notebooks_map.py` (slug/title registry), `voice_lint_notebooks.py`,
+      `validate_notebooks.py` (template gate), `validate_coverage.py`
+      (meetings↔notebooks/readings/datasets/provenance — PASS at --plan),
+      `validate_milestones.py` (M00–M23 dates/anchors — PASS).
+- [x] 5 datasets shipped to `notebooks/data/` (byte-identical rdss CSVs, MIT,
+      attribution README; fairfax shapefile deliberately not shipped).
+- [x] `translation/` 6 docs (inventory, parity matrix CSV, API mapping,
+      semantic differences, roadmap, validation protocol+ledger).
+- [x] `schedule.qmd` regenerated: real 44-row table, badges auto-appear per topic.
 
 **Phase D — notebooks:** gold-standard `nb00` + `nb01` (instructor→student), then
 fan out nb02–nb19 (workflow) against the template + master-plan rows; validate with nbclient.

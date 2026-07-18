@@ -29,7 +29,7 @@ if [[ $# -gt 0 ]]; then
   TARGETS=("$@")
 else
   shopt -s nullglob
-  TARGETS=(activities/*_instructor.ipynb)
+  TARGETS=(notebooks/instructor/*_instructor.ipynb)
 fi
 
 if [[ ${#TARGETS[@]} -eq 0 ]]; then

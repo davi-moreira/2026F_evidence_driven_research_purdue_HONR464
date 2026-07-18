@@ -56,7 +56,7 @@ MEETINGS_P4 = [
         "practice": "📝 (embedded) the visitor role card: ask at least one question from each of the five types across your visits.",
         "discussion_prompt": "(post-simulation, 2 min) One thing you saw a classmate do that you're stealing for tomorrow.",
         "project_connection": "M15 readiness audit signed — the last gate before the real URC Expo tomorrow (Nov 17).",
-        "milestone_developed": "M15 — Dress Rehearsal + Readiness Audit (completed TODAY)",
+        "milestone_developed": "M15 — Dress Rehearsal + Readiness Audit (completed TODAY) → M16 — URC Expo Presentation (tomorrow)",
         "milestone_work_time": "40 min (simulation) + 4 min (audit)",
         "milestone_presentation_review": "the full-dress simulation IS the presentation/review",
         "student_prep": "Poster ready (printed or presentable); both pitches cold; question bank internalized.",
