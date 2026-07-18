@@ -73,6 +73,15 @@ def check_student(path: Path) -> list[str]:
         if not pat.search(text):
             errs.append(f"missing required move: {name}")
 
+    n_gem = text.count("💡 **Gemini Prompt")
+    if n_gem < 3:
+        errs.append(f"only {n_gem} Gemini Prompt block(s) — frame requires ≥3 "
+                    f"(one before every substantive code chunk)")
+    n_qa = text.count("A question that often comes up here")
+    if n_qa < 3:
+        errs.append(f"only {n_qa} 'A question that often comes up here' "
+                    f"block(s) — frame requires ≥3")
+
     if "SEED = 464" not in code:
         errs.append("setup cell missing SEED = 464")
     if "seaborn" in text or re.search(r"\bimport sns\b|\bsns\.", code):

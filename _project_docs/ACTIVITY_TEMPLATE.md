@@ -132,19 +132,42 @@ Pacing rule (brief): direct exposition ≤8 min per segment, <15 min total per
 meeting; ≥70% of class time active. Multi-meeting notebooks mark meeting
 boundaries with a horizontal rule + `*(Meeting M# picks up here.)*`.
 
-### 7. AI prompt + verification block (Ask → Verify → Document)
+### 7. Gemini prompt + verification block (Ask → Verify → Document) — before EVERY substantive code chunk
 
-AI prompts are scripts the student copies into their AI tool — written exactly
-as a student would type them (second person never breaks):
+The MGMT474 frame: **every substantive code cell is preceded by a Gemini
+prompt** (the setup cell and trivial one-line prints are exempt). Prompts are
+scripts the reader copies into Google Gemini — written exactly as they would
+type them (second person never breaks). Each notebook carries **≥3** (machine-
+checked); prompts may also precede written/analysis tasks, MGMT474-style:
 
 ```markdown
-> 💡 **AI Prompt (copy into your AI assistant):** "[prompt text]"
+> 💡 **Gemini Prompt:** "[prompt text — explain / critique / extend the next cell]"
 >
 > **After running, verify (the responsible-AI habit):**
 > - [ ] Every source the AI cited exists — you retrieved it yourself.
-> - [ ] [task-specific fact-check]
+> - [ ] [task-specific fact-check against the cell's actual output]
 > - [ ] Log this use in your AI ledger: tool, task, verification.
 ```
+
+### 7b. Question-driven frame + Q&A density (machine-checked)
+
+Sections are **guided by questions**: every `## N.` content section either has
+a question-phrased title or opens with a bold **Guiding question:** line
+echoing the schedule's driving/secondary questions. Every notebook carries
+**≥3** inline Q&A blocks (`> **A question that often comes up here:** …`).
+
+### 7c. Figures
+
+External figures live in `notebooks/figures/` (committed; see its README for
+the inspected-and-attributed inventory) and embed Colab-compatibly:
+
+```markdown
+<center><img src="https://raw.githubusercontent.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/main/notebooks/figures/FILE" width="70%"/></center>
+
+*Caption in one sentence. (Attribution line from notebooks/figures/README.md.)*
+```
+
+Never embed a figure you have not looked at; never caption beyond what it shows.
 
 ### 8. Instructor-solution cells (stripped from the student file)
 
