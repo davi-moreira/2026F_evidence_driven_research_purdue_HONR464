@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import csv
 import re
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -25,6 +26,15 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
 from notebooks_map import NOTEBOOKS, colab_badge, student_filename  # noqa: E402
+
+
+def tracked_students() -> set[str]:
+    """Student notebooks known to git (staged or committed) — a badge may only
+    point at a notebook that will exist on GitHub, never at local-only WIP."""
+    out = subprocess.run(
+        ["git", "ls-files", "--cached", "notebooks/student/"],
+        cwd=REPO, capture_output=True, text=True)
+    return {Path(p).name for p in out.stdout.split()}
 
 SCHEDULE_CSV = REPO / "planning" / "MEETING_SCHEDULE.csv"
 OUT = REPO / "schedule.qmd"
@@ -94,6 +104,7 @@ def build() -> str:
     with open(SCHEDULE_CSV, newline="") as f:
         rows = list(csv.DictReader(f))
 
+    tracked = tracked_students()
     lines = [HEADER, "::: overflow-table\n"]
     lines.append("| # | Date | Topic | Notebook | Milestone | Materials |")
     lines.append("|---|------|-------|----------|-----------|-----------|")
@@ -108,8 +119,8 @@ def build() -> str:
         n = nb_for(r["other_material"])
         badge = ""
         if n is not None:
-            exists = (REPO / "notebooks" / "student" / student_filename(n)).exists()
-            badge = colab_badge(n) if exists else f"*nb{n:02d} (coming)*"
+            badge = (colab_badge(n) if student_filename(n) in tracked
+                     else f"*nb{n:02d} (coming)*")
 
         title = r["title"]
         if r["modality"] == "async-online":
@@ -154,11 +165,9 @@ def main() -> None:
         print("✓ schedule.qmd up to date")
         return
     OUT.write_text(content)
-    built = sum(
-        1 for n in NOTEBOOKS
-        if (REPO / "notebooks" / "student" / student_filename(n)).exists()
-    )
-    print(f"✓ schedule.qmd regenerated — {built}/20 notebook badges live")
+    tracked = tracked_students()
+    built = sum(1 for n in NOTEBOOKS if student_filename(n) in tracked)
+    print(f"✓ schedule.qmd regenerated — {built}/20 notebook badges live (git-tracked only)")
 
 
 if __name__ == "__main__":
