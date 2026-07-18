@@ -105,11 +105,27 @@ not-permitted named in every meeting. See `course_config.yaml`.
       semantic differences, roadmap, validation protocol+ledger).
 - [x] `schedule.qmd` regenerated: real 44-row table, badges auto-appear per topic.
 
-**Phase D — notebooks:** gold-standard `nb00` + `nb01` (instructor→student), then
-fan out nb02–nb19 (workflow) against the template + master-plan rows; validate with nbclient.
+**Phase D — notebooks: IN PROGRESS**
+- [x] Build pipeline: `scripts/nbbuild.py` (source module → instructor .ipynb →
+      nbclient execute → student strip → validate → badge). Cell sources live in
+      gitignored `_production_kit/nb_sources/nbNN_<slug>.py` (kept local for
+      future edits; committed artifact = student notebook only).
+- [x] `nb00` (M1) + `nb01` (M2–M4) — gold standards; executed, validated,
+      pushed; badges live on the schedule page.
+- [ ] nb02–nb19: fanned out to authoring agents in waves against the template +
+      exemplars + MEETING_SCHEDULE rows; each is centrally QA'd, built, and
+      pushed per topic. Canonical shared world for nb04/nb09/nb10/nb11 =
+      make_world(n,effect=2.0,noise=2.0) mentoring-program world (belonging
+      0–100, TRUE_ATE ≈ 2.0).
 
-**Phase E — project system:** ~22 milestone md (M00–M23) + poster/conference/dossier
-protocols + rubrics.
+**Phase E — project system: IN PROGRESS**
+- [x] Exemplar `_research_project/2026Fall/milestone_01_research_question_pitch.md`
+      (pattern: About → Submit → Purpose → Components → Expectations → Rubric
+      100pt 4-band → Penalties → Pitfalls → prev/next).
+- [ ] Milestones 00, 02–23 fanned out to 4 agents; `project/` 13-doc protocol
+      suite (poster/conference/final_dossier) to a 5th.
+- [x] `syllabus.qmd` Assessments reconciled (15/30/20/20/5/10; individual mode;
+      terminal-artifact policy; grading scale); index/README updated; pushed.
 
 **Phase F — final audit:** execute notebooks, run all validators, quality-gate checklist,
 `quarto render` + commit `docs/`, risk log.
