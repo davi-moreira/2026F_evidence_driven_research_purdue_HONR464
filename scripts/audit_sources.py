@@ -38,6 +38,8 @@ ALLOWED_DOMAINS = {
     "purdue.edu", "www.purdue.edu",  # university pages (IRB, URC)
     "scholar.google.com",          # verification workflow pointer
     "gemini.google.com",           # AI-tool pointer (syllabus stack)
+    "www.nytimes.com",             # nb00: Olinda carnival coverage (professor's own slide links)
+    "blogs.worldbank.org",         # nb00: professor's World Bank work
 }
 
 # Works verified real during the build (each was independently confirmed to
