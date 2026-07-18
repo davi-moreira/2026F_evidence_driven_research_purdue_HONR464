@@ -166,6 +166,8 @@ Instructor review directives applied on top of the concluded build:
 - [x] **nb14:** MGMT474 nb17 data-communication lecture ported (six principles,
       data-ink live demo, eleven-section research-poster architecture) — taught
       M29 (Nov 2), before the Nov 6 poster submission.
-- [ ] nb01–nb13, nb15–nb19: enrichment fanned out to 5 agents (Gemini prompts,
-      Q&A top-up, assigned figures, guiding questions); central QA → rebuild →
-      push on completion.
+- [x] nb01–nb13, nb15–nb19: enriched by 5 agents, centrally QA'd, rebuilt, and
+      published. Final sweep (2026-07-18): all validators green; course totals
+      **84 Gemini prompts** and **69 Q&A blocks** across the 20 notebooks;
+      31 figure placements. REVISION PASS COMPLETE — badge-by-badge review is
+      now the professor's; fixes on call.
