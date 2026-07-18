@@ -28,10 +28,13 @@ Reference material (read in place, NEVER modify or copy the private archive):
 1. Create the project OUTSIDE the course repo. Suggested sibling path (adjust if you prefer):
    `/Users/dcordeir/Dropbox/academic/cursos/cursos-davi/evidence_based_research/declarepy`
    (so `$COURSE` is reachable as `../2026F_evidence_driven_research_purdue_HONR464`).
-2. `git init` + `git branch -M main`. Create a **PRIVATE** GitHub repo (working name):
-   `gh repo create davi-moreira/declarepy --private --source=. --remote=origin` (push later).
-   *(`declarepy` is a working name; confirm the final PUBLIC name with the DeclareDesign
-   authors before any release — T5. Private dev under this name is fine.)*
+2. `git init` + `git branch -M main`. Create a **PUBLIC** GitHub repo:
+   `gh repo create davi-moreira/declarepy --public --source=. --remote=origin` (push later).
+   *(Per the professor's decision the repo is public as `davi-moreira/declarepy`. Because it
+   is public from the first commit, keep it release-quality from day one: a real README, MIT
+   LICENSE + attribution, and NO private material — it only READS the course repo's `_adm/`
+   archive, never copies it. Still coordinate the PyPI/distribution package name with the
+   DeclareDesign authors before publishing a release — T5.)*
 3. Copy the six `$COURSE/translation/*` spec docs (+ this prompt) into the new repo's
    `docs/spec/` as its planning home, and add a top-level `README.md` and `LICENSE` (MIT,
    attribution to Blair, Coppock & Humphreys; note `randomizr`/`estimatr` upstream licenses).
@@ -59,8 +62,10 @@ book's published/reference outputs within tolerance.
    the VALIDATION_REPORT protocol before it is marked validated.
 4. **MIT + attribution** throughout; carry a LICENSE/citation notice to Blair, Coppock &
    Humphreys and note upstream `randomizr`/`estimatr` licenses.
-5. **Confirm the public name** (`declarepy` is a working name) with the DeclareDesign
-   authors before any PyPI/release naming (T5).
+5. **Public repo, release-quality hygiene.** The repo is public as `davi-moreira/declarepy`
+   (professor's decision) — never commit the private `_adm/` archive or any course-repo
+   content; ship only MIT-licensed datasets with attribution. Coordinate the PyPI/
+   distribution package name with the DeclareDesign authors before a release (T5).
 
 ## ENVIRONMENT
 - **R is available locally** (`/usr/local/bin/Rscript`). Use it to generate **reference
