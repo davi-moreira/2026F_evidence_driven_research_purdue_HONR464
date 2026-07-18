@@ -1,0 +1,107 @@
+# course_config.yaml — machine-readable spine for HONR 46400 (Fall 2026)
+# Source of truth for validators, notebook headers, and the schedule generator.
+# Human narrative lives in planning/COURSE_MASTER_PLAN.md; dates are verified by
+# scripts/validate_calendar.py. Keep this file and that script in agreement.
+
+course:
+  number: "HONR 46400"
+  title: "Evidence-Driven Research"
+  subtitle: "From Curiosity to Defensible Claims"
+  term: "2026-fall"
+  institution: "Purdue University Honors College"
+  instructor: "Professor Davi Moreira"
+  meeting_pattern: "MWF"
+  meeting_minutes: 50
+  modality: "in-person (2 async-online meetings)"
+  repo: "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
+  website: "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/"
+  enrollment: 5
+  project_mode: "individual"   # 5 students, 5 individual projects, 5 posters
+
+calendar:
+  first_class: "2026-08-24"
+  last_class: "2026-12-11"
+  total_meetings: 44
+  in_person: 42
+  async_meetings: ["2026-10-02", "2026-11-23"]
+  no_class: ["2026-09-07", "2026-10-12", "2026-11-25", "2026-11-27"]
+  events:
+    urc_expo: "2026-11-17"          # Tuesday — REQUIRED poster presentation
+    poster_deadline: "2026-11-06"   # final poster production + submission
+    urc_abstract_deadline: "TBD"    # external; internal completion gate = 2026-10-09 (M20)
+
+# The four quantitative approaches — the recurring, operational spine.
+approaches:
+  description:
+    can_establish: "what is observed in the data at hand; patterns, distributions, differences"
+    cannot_establish: "generalization beyond the sample; causal effects"
+    deep_dive_notebook: "nb06"
+  inference:
+    label: "statistical / observational inference"
+    can_establish: "estimates about a population/process with quantified uncertainty"
+    cannot_establish: "a causal effect (association is not causation)"
+    deep_dive_notebook: "nb10"
+  prediction:
+    label: "predictive modeling"
+    can_establish: "out-of-sample forecasts for new observations, with a baseline + metric"
+    cannot_establish: "explanation or causation; performance != understanding"
+    deep_dive_notebook: "nb12"
+  causal:
+    label: "causal reasoning"
+    can_establish: "an effect of an intervention under a stated identification argument"
+    cannot_establish: "effects when identification assumptions fail or no design supplies leverage"
+    deep_dive_notebook: "nb13"
+
+# The course operating system (Blair/Coppock/Humphreys declaration→diagnosis→redesign,
+# expressed as a recurring student loop).
+operating_system:
+  workflow: [CURIOSITY, GAP, PROBLEM, QUESTION, APPROACH, MODEL, INQUIRY, MEASUREMENT,
+             DATA_STRATEGY, ANSWER_STRATEGY, DECLARATION, DIAGNOSIS, REDESIGN,
+             ANALYSIS, CLAIM, COMMUNICATION, REFLECTION, REVISION]
+  student_loop: [ASK, DEFINE, CLASSIFY, MATCH, DECLARE, BUILD, DIAGNOSE, REDESIGN,
+                 VERIFY, CLAIM, COMMUNICATE, REVISE]
+
+# Source-of-truth materials (see planning/SOURCE_AUDIT.md for the full inventory).
+sources:
+  primary_book:
+    key: "RDSS"
+    citation: "Blair, Coppock & Humphreys (2023). Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign. Princeton University Press."
+    local_root: "_adm/_references/book/"
+    r_package: "rdss"           # CRAN v1.0.14, MIT license; wraps DeclareDesign
+    license: "MIT"
+  secondary_book:
+    key: "CB"
+    citation: "Bergstrom & West (2020). Calling Bullshit: The Art of Skepticism in a Data-Driven World."
+    local: false
+    use: "optional / parallel; light discussion; public callingbullshit.org where used"
+  datasets:            # from rdss / RDSS replication (MIT); shipped as CSV under notebooks/data/
+    - bonilla_tillery
+    - cliningsmith_etal
+    - foos_etal
+    - la_voter_file
+    - lapop_brazil
+
+# AI-use policy (assessed habit).
+ai_policy:
+  principle: "AI MAY PROPOSE. THE RESEARCHER MUST VERIFY. THE EVIDENCE MUST SUPPORT."
+  ledger_required: true
+  discipline: "Ask -> Verify -> Document"
+
+# Notebook conventions (adapted from MGMT474; ML-isms removed).
+notebooks:
+  layout: "notebooks/{student,instructor,shared}/"
+  naming: "nbNN_topic_{student,instructor}.ipynb"   # one notebook per TOPIC
+  count_planned: 20                                  # nb00..nb19
+  platform: "Google Colab"
+  python: "3.11"
+  libraries: [numpy, pandas, matplotlib, scipy, statsmodels, scikit-learn, networkx]
+  no_seaborn: true
+  random_seed: 464           # course number; deterministic where light computation appears
+  instructor_marker: "INSTRUCTOR SOLUTION"
+  committed: "student only (instructor gitignored)"
+
+emoji:
+  success: "✓"
+  warning: "⚠️"
+  exercise: "📝"
+  insight: "💡"
