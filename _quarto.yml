@@ -10,7 +10,7 @@ website:
   title: "HONR 46400: Evidence-Driven Research (Fall 2026)"
   sidebar:
     background: primary
-    # logo: "images/honr_464_logo.png"   # add a HONR 46400 logo asset, then uncomment
+    logo: "images/honr_464_logo.png"
     pinned: true
     align: center
     tools:
