@@ -76,7 +76,7 @@ Mapped in `translation/API_MAPPING.md`; Python targets = numpy/pandas/scipy/stat
 
 | Dataset | Rows/theme | Course use |
 |---|---|---|
-| `lapop_brazil.csv` | survey (AmericasBarometer, Brazil) | description, measurement, inference |
+| `lapop_brazil.csv` | survey (AmericasBarometer, Brazil) | description, measurement, generalization |
 | `la_voter_file.csv` | voter records | description, sampling, selection |
 | `foos_etal.csv` | experiment replication | causal (experiments) |
 | `cliningsmith_etal.csv` | experiment replication | causal |
