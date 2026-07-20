@@ -1,0 +1,81 @@
+---
+title: "Material"
+author: "Davi Moreira"
+editor: visual
+page-layout: full
+toc: false
+---
+
+```{=html}
+<style>
+  .overflow-table { font-size: 0.85rem; width: 100%; line-height: 1.25; }
+  .overflow-table th, .overflow-table td {
+    padding: 0.35rem; text-align: left; word-wrap: break-word; vertical-align: top;
+  }
+  .overflow-table th:nth-child(1), .overflow-table td:nth-child(1) { width: 34%; }
+  .overflow-table th:nth-child(2), .overflow-table td:nth-child(2) { width: 12%; }
+  .overflow-table th:nth-child(3), .overflow-table td:nth-child(3) { width: 18%; }
+  .overflow-table th:nth-child(4), .overflow-table td:nth-child(4) { width: 16%; }
+  .below-table { font-size: 0.85rem; line-height: 1.3; margin-top: 1rem; }
+</style>
+```
+
+# Course Material
+
+One notebook per topic, listed in course order. Open a notebook in Colab from
+its badge (no installation needed), download every dataset the course uses in
+one bundle, and find the week-by-week calendar on the [Schedule](schedule.qmd)
+page. Milestone instructions and rubrics are on Brightspace.
+
+::: overflow-table
+
+| Topic | Sessions | Notebook | Data | Readings |
+|-------|----------|----------|------|----------|
+| **Phase 1 — Curiosity, gaps, answerable questions** | | | | |
+| **Topic 00 · Launchpad: How do we know? Colab + Ask → Verify → Document** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb00_launchpad_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 1, 2 |
+| **Topic 01 · Curiosity → gap → problem → answerable question** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_curiosity_to_question_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 2, 3, 4 |
+| **Phase 2 — Compass, sources, model & measurement** | | | | |
+| **Topic 02 · The inquiry compass: classify the question by kind + reach** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_four_approaches_student.ipynb){target="_blank"} | `lapop_brazil.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 7<br>*+ optional CB case* |
+| **Topic 03 · Real sources, citation integrity, and the claim map** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_sources_claims_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 4 |
+| **Topic 04 · Model & Inquiry (MIDA I): worlds, potential outcomes, DAGs** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_model_inquiry_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 6, 7 |
+| **Topic 05 · Measurement & operationalization: concept → construct → indicator** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_measurement_student.ipynb){target="_blank"} | `bonilla_tillery.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 8 |
+| **Phase 3 — Data & answer strategies** | | | | |
+| **Topic 06 · Description deep dive: honest summaries & visualization** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_description_student.ipynb){target="_blank"} | `lapop_brazil.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 15<br>*+ optional CB case* |
+| **Topic 07 · Data strategy (MIDA II): sampling, assignment, ethics** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_data_strategy_student.ipynb){target="_blank"} | `la_voter_file.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 8 |
+| **Topic 08 · Async module: diagnose a misleading claim (milestone work day)** | async module | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_async_claim_diagnosis_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 9<br>*+ optional CB case* |
+| **Topic 09 · Answer strategy (MIDA III): estimators & regression** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_answer_strategy_student.ipynb){target="_blank"} | `lapop_brazil.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 9 |
+| **Topic 10 · Generalization deep dive: uncertainty, reach, power** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_inference_student.ipynb){target="_blank"} | `lapop_brazil.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 9, 15, 10<br>*+ optional CB case* |
+| **Phase 4 — Pilot, diagnosis, redesign** | | | | |
+| **Topic 11 · Declare → Diagnose → Redesign: the design engine** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_declare_diagnose_redesign_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 10, 13, 11 |
+| **Topic 12 · Prediction deep dive: target, baseline, split, metric, leakage** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_prediction_student.ipynb){target="_blank"} | `la_voter_file.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 15, 9, 10<br>*+ optional CB case* |
+| **Topic 13 · Causal reasoning deep dive: counterfactuals & identification** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_causal_student.ipynb){target="_blank"} | `cliningsmith_etal.csv`<br>`foos_etal.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 18, 16 |
+| **Phase 5 — Poster construction & submission** | | | | |
+| **Topic 14 · Poster: storyboard, red-team, final production** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_poster_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | — |
+| **Phase 6 — Conference preparation** | | | | |
+| **Topic 15 · Communicating evidence: pitches, uncertainty, rehearsal** | 3 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_communicating_evidence_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 10 |
+| **Phase 7 — Reflection, feedback, redesign** | | | | |
+| **Topic 16 · Conference debrief → feedback-to-redesign** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_debrief_redesign_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 11 |
+| **Topic 17 · Async module: poster-to-dossier — sensitivity & claim ledger** | async module | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb17_async_poster_to_dossier_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 22 |
+| **Phase 8 — Reproducibility, brief, Evidence Defense** | | | | |
+| **Topic 18 · Reproducibility audit + research brief** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb18_reproducibility_brief_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 21, 22, 23 |
+| **Topic 19 · Evidence Defense + synthesis** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb19_evidence_defense_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 24 |
+
+:::
+::: below-table
+
+The **Data** column links the **course datasets (.zip)** — every dataset used
+across the notebooks, in one download. Notebooks also load the same files
+automatically from the course repository, so the bundle is your offline copy.
+
+## Core Course References
+
+- **Blair, G., Coppock, A., & Humphreys, M.** (2023). *Research Design in the
+  Social Sciences: Declaration, Diagnosis, and Redesign*. Princeton University
+  Press. Read free online: [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}.
+- **Bergstrom, C. T., & West, J. D.** (2020). *Calling Bullshit: The Art of
+  Skepticism in a Data-Driven World* — optional companion; public case studies
+  at [callingbullshit.org](https://callingbullshit.org/){target="_blank"}.
+- Course datasets ship from the MIT-licensed `rdss` package (see
+  [`notebooks/data/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/notebooks/data){target="_blank"}).
+
+:::

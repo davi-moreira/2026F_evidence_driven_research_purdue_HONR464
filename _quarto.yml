@@ -4,6 +4,11 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+  resources:
+    - "notebooks/data/honr46400_datasets.zip"
+  # Encrypt the rendered instructor page (courtesy lock; the private repo +
+  # GitHub auth is the real protection). Runs after every `quarto render`.
+  post-render: .venv/bin/python scripts/protect_instructor_page.py
 
 
 website:
@@ -23,8 +28,12 @@ website:
         text: Home
       - href: syllabus.qmd
         text: Syllabus
+      - href: material.qmd
+        text: Material
       - href: schedule.qmd
-        text: Schedule and Material
+        text: Schedule
+      - href: instructor.qmd
+        text: Instructor
 
 format:
   html:

@@ -71,6 +71,9 @@ session_guides/
 # Instructor production templates (local only)
 _production_kit/
 
+# Local clone of the private instructor repo (synced by scripts/sync_instructor_repo.sh)
+_instructor_repo/
+
 # Activity datasets (downloaded locally; link externally instead of committing)
 activities/data/
 
@@ -83,6 +86,8 @@ brightspace/
 
 # Large files (exclude from repo, link instead)
 *.zip
+# ... except the student-facing dataset bundle (D15; scripts/make_dataset_zip.py)
+!notebooks/data/honr46400_datasets.zip
 *.mp4
 *.mp3
 *.m4a
