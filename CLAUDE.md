@@ -173,8 +173,10 @@ Notebooks and session guides carry **no calendar dates, no day-of-month, no
 "Meeting M#" references**. Position is expressed only as explicit lecture labels:
 
 - Notebook header: `**Topic NN · N lecture(s)**` (single-lecture topics say
-  `1 lecture`). Multi-lecture notebooks mark internal boundaries with a
-  horizontal rule + `*(Lecture i of N starts here.)*`.
+  `1 lecture`). Multi-lecture notebooks open EACH lecture with an explicit
+  heading cell — `# Lecture 1`, `# Lecture 2`, … — placed right before that
+  lecture's first content section (later lectures after a horizontal rule).
+  Never the old italic `*(Lecture i of N starts here.)*` marker.
 - Session guides head each meeting section `## Lecture i of N — <title>`,
   `## Studio Friday — <title>`, or `## Async module — <title>`.
 - Labels are **derived mechanically** from `lecture_labels()` in

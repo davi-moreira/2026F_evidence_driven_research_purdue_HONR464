@@ -149,9 +149,10 @@ exit ticket inside the module flow):
 | Exit ticket | `### 🎟️ Claim Ticket` | the closing claim-boundary exit ticket (numbered #NN per meeting) |
 
 Pacing rule (brief): direct exposition ≤8 min per segment, <15 min total per
-lecture; ≥70% of class time active. Multi-lecture notebooks mark lecture
-boundaries with a horizontal rule + `*(Lecture i of N starts here.)*` — never
-meeting numbers, never dates.
+lecture; ≥70% of class time active. Multi-lecture notebooks open each lecture
+with an explicit `# Lecture N` heading cell (Lecture 1 right before section
+`## 1.`; later lectures after a horizontal rule) — never meeting numbers,
+never dates, never italic boundary markers.
 
 ### 7. Gemini prompt + verification block (Ask → Verify → Document) — before EVERY substantive code chunk
 
