@@ -51,7 +51,7 @@ matters and cut what doesn't — including things you worked hard for.
 ### 1. The headline claim (≤ 15 words, inside your compass position's boundary)
 
 The one sentence a 90-second reader must leave with. It must be **worded to
-match your declared compass position's claim boundary** (CLAUDE.md Method-Selection
+match your declared compass position's claim boundary** (CLAUDE.md Inquiry-Declaration
 rule): a descriptive project describes, an associational project associates, and
 only an identified causal design says *cause*. The reader will never see your
 caveats footnote, so the boundary has to live in the headline itself.

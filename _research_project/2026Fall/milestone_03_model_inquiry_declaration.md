@@ -119,7 +119,7 @@ unseen cases), or Causal reasoning (causal); the **kind + reach** checkboxes tha
 place it; why that position fits, **naming one neighboring position and why it is
 *not* the fit**; what your answer **will** and **will not** be able to establish;
 at least three limitations with how you will probe or bound each; and what you
-would do if the position turns out wrong. This is the Method-Selection
+would do if the position turns out wrong. This is the Inquiry-Declaration
 Justification rule in writing — a method choice with no stated justification or
 limitation is incomplete.
 

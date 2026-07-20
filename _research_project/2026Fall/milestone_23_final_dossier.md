@@ -57,7 +57,7 @@ The dossier carries the whole chain in order — each part already built at its
 milestone, now finalized and reconciled with everything the defense taught you:
 
 - **Question + Inquiry Declaration (final form)** — the research question and
-  the compass position(s) it demands, with the method-selection
+  the compass position(s) it demands, with the inquiry-declaration
   justification (why this compass position, what it can and cannot establish, its
   limitations).
 - **Verified source map** — the literature/claim map with every source real and

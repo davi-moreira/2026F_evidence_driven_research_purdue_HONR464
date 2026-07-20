@@ -78,13 +78,13 @@ Assemble the four MIDA letters on one page, each in a short block:
 - **Answer strategy** — the estimator, uncertainty plan, and boundary-safe
   result sentence from M06.
 
-### Component C — method-selection justification (inside the declaration)
+### Component C — inquiry-declaration justification (inside the declaration)
 
 State, at a conceptual level, for the compass position you declared: **(1) why it
 fits** your question, **(2) what it can and cannot establish**, and **(3) its key
 limitations and sources of uncertainty**. A method choice with no stated
 justification or limitation is incomplete — this is the course's
-Method-Selection rule, and it is graded here.
+Inquiry-Declaration rule, and it is graded here.
 
 ### Component D — AI-use disclosure block (required on every deliverable)
 
@@ -118,7 +118,7 @@ counts twice when the milestone bucket is aggregated.*
 |---|---|---|---|---|
 | **Abstract quality & uncertainty language** (25) | 150–250 words; gap→question→design→finding arc clear to a stranger; uncertainty woven in (22–25) | Complete and clear; uncertainty language thin or bolted on (18–21) | Over/under length, or the arc is hard to follow (11–17) | Bare certainty, causal overclaim, or missing the gate (0–10) |
 | **Declaration completeness** (25) | All four MIDA blocks present and substantive on one page (22–25) | Four blocks present; one thin (18–21) | A block missing or only gestured at (11–17) | Two or more blocks missing (0–10) |
-| **Method-selection justification** (20) | Why-it-fits, can/cannot, and limitations all stated at a conceptual level (18–20) | Two of the three stated well (14–17) | Justification asserted without the can/cannot or limitations (8–13) | No justification (0–7) |
+| **Inquiry-declaration justification** (20) | Why-it-fits, can/cannot, and limitations all stated at a conceptual level (18–20) | Two of the three stated well (14–17) | Justification asserted without the can/cannot or limitations (8–13) | No justification (0–7) |
 | **MIDA internal consistency** (10) | Answer strategy targets the declared inquiry; data strategy supports it; no contradictions across blocks (9–10) | Mostly consistent; one seam (7–8) | A real mismatch between two blocks (4–6) | Blocks describe different projects (0–3) |
 | **Workshop & assembly engagement** (10) | Active in the abstract swap and assembly consults; feedback visibly used (9–10) | Participated; light incorporation (7–8) | Present but disengaged (4–6) | Absent without arrangement (0–3) |
 | **Craft, gate compliance & disclosure** (10) | Both files on-format, on-time; abstract met the Oct 9 gate; disclosure on both (9–10) | Minor format lapses (7–8) | Missing a disclosure or a section (4–6) | Missed the abstract gate, or missing disclosure (0–3) |
