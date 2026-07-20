@@ -64,8 +64,8 @@ Last updated: 2026-07-18, session end (build + revision pass COMPLETE; review-su
 
 **Conventions:** Colab, Python 3.11; libs numpy/pandas/matplotlib/scipy/statsmodels/
 scikit-learn/networkx; **no seaborn**; seed `464`; instructor marker `INSTRUCTOR
-SOLUTION`; escape `\$` and `\~` in markdown. Four approaches + claim-permitted/
-not-permitted named in every meeting. See `course_config.yaml`.
+SOLUTION`; escape `\$` and `\~` in markdown. The inquiry compass (four positions)
++ claim-permitted/not-permitted named in every meeting. See `course_config.yaml`.
 
 **Reference repos:** `…/predictive_analytics/2026Summer_predictive_analytics_purdue_MGMT474`
 (notebooks + `_final_project` md + `.claude` instructor-sync hook) and
@@ -80,7 +80,7 @@ not-permitted named in every meeting. See `course_config.yaml`.
 - [x] `scripts/validate_calendar.py` — verifies 44 meetings (42 in-person + 2 async);
       emits `planning/CALENDAR_BACKBONE.csv`. **Exit 0, verified.**
 - [x] `course_config.yaml` — machine-readable spine.
-- [x] `planning/COURSE_MASTER_PLAN.md` — arc, 4 approaches, 20 topic-notebook map
+- [x] `planning/COURSE_MASTER_PLAN.md` — arc, the inquiry compass, 20 topic-notebook map
       (nb00–nb19) with meeting spans + milestone alignment + provenance.
 - [x] `planning/SOURCE_AUDIT.md` — Phase A deliverable.
 - [x] Scaffold dirs: `notebooks/{student,instructor,shared,data,figures}`, `planning/`,
@@ -94,11 +94,11 @@ not-permitted named in every meeting. See `course_config.yaml`.
       `scripts/build_meeting_schedule.py` from `scripts/schedule_data/` (validated
       against CALENDAR_BACKBONE; RDSS chapters verified against
       book.declaredesign.org + local replication files — the book skips ch.14/20).
-- [x] `planning/QUANTITATIVE_APPROACH_MAP.md` + `planning/COURSE_DESCRIPTION_ALIGNMENT.md`.
+- [x] `planning/INQUIRY_MAP.md` + `planning/COURSE_DESCRIPTION_ALIGNMENT.md`.
 - [x] `planning/READING_MAP.md`, `planning/PROJECT_MILESTONES.md`,
       `planning/MILESTONE_PRESENTATION_MAP.md`, `planning/ASSESSMENT_ARCHITECTURE.md`,
       `planning/COURSE_DEPENDENCY_MAP.md`.
-- [x] `project/templates/QUANTITATIVE_APPROACH_DECLARATION.md`.
+- [x] `project/templates/INQUIRY_DECLARATION.md`.
 
 **Key Phase B decisions (documented assumptions):**
 - Milestone system pinned as M00–M23 (24 IDs; M16 = URC Expo event itself); full
@@ -112,7 +112,7 @@ not-permitted named in every meeting. See `course_config.yaml`.
 
 **Phase C — technical foundation: ✅ COMPLETE (2026-07-17)**
 - [x] `_project_docs/ACTIVITY_TEMPLATE.md` rewritten as the canonical HONR 46400
-      notebook template (approach/claim-boundary block, 7 required active moves
+      notebook template (compass/claim-boundary block, 7 required active moves
       with exact heading markers, Ask→Verify→Document block, Claim Ticket,
       instructor-marker conventions, seed 464, no seaborn).
 - [x] Hooks: `.claude/settings.json` = instructor→md sync (repointed to
@@ -197,3 +197,11 @@ Instructor review directives applied on top of the concluded build:
       **84 Gemini prompts** and **69 Q&A blocks** across the 20 notebooks;
       31 figure placements. REVISION PASS COMPLETE — badge-by-badge review is
       now the professor's; fixes on call.
+- [x] **Taxonomy adoption (2026-07-19):** the four-approach classification was
+      rebranded to the **inquiry compass** (RDSS ch.7 — kind × reach), with four
+      compass positions: Description (nb06), Generalization (nb10, renaming the old
+      "statistical/observational inference"), Prediction (nb12), Causal reasoning
+      (nb13). `QUANTITATIVE_APPROACH_MAP.md` → `INQUIRY_MAP.md`;
+      `QUANTITATIVE_APPROACH_DECLARATION.md` → `INQUIRY_DECLARATION.md`; CLAUDE.md
+      "Method-Selection Justification" → "Inquiry-Declaration Justification".
+      Planning + project docs relabeled to the compass vocabulary.

@@ -37,7 +37,7 @@ project's standing responsible-AI rule — see the rubric's verification row.)*
 
 Everything the semester built points here: not a document, but a **defense**.
 For ten minutes you stand behind your **claims, your choices, and your
-verification** — why this approach, why this data, why you believe the number —
+verification** — why this compass position, why this data, why you believe the number —
 and for five minutes the class and Professor Moreira **cross-examine** any of
 it. A cross-examiner may open your claim ledger to any row, point at any
 decision, and ask how you verified any result. This is the moment the course's
@@ -56,7 +56,7 @@ how far your evidence reaches.
 You present and defend three things, in your own structure:
 
 - **Your claims** — what you found, each stated at its real boundary.
-- **Your choices** — why this approach, this data strategy, this measurement,
+- **Your choices** — why this compass position, this data strategy, this measurement,
   this analysis; what each can and cannot establish.
 - **Your verification** — how you know each headline result is real (recomputed,
   cross-checked, reproduced by a partner at M20).
@@ -113,7 +113,7 @@ free-riding in the audience is a miss.
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
 | **Command of the claim ledger** (25) | Fluent across claims, choices, and verification; finds any row instantly and defends it (22–25) | Solid command; a slow moment or two (18–21) | Knows the headline but fumbles the underlying rows (11–17) | Cannot connect claims to evidence when asked (0–10) |
-| **Boundary discipline under pressure** (20) | Holds every claim exactly at its approach's boundary, even when pushed (18–20) | Mostly disciplined; one claim drifts under pressure (14–17) | Overclaims when pressed; boundaries soften (8–13) | Claims routinely exceed what the evidence supports (0–7) |
+| **Boundary discipline under pressure** (20) | Holds every claim exactly at its compass position's boundary, even when pushed (18–20) | Mostly disciplined; one claim drifts under pressure (14–17) | Overclaims when pressed; boundaries soften (8–13) | Claims routinely exceed what the evidence supports (0–7) |
 | **Graceful concession** (20) | Concedes precisely where the ledger says concede, without collapse or defensiveness (18–20) | Concedes, a bit reluctantly or late (14–17) | Resists conceding clear limits (9–13) | Defends the indefensible, or concedes everything (0–8) |
 | **Verification & AI accountability** (15) | Shows how each result was verified; owns the verification fully — never blames the tool (13–15) | Verification shown; ownership slightly thin (10–12) | Verification vague or partly outsourced (6–9) | Blames the AI tool, or cannot show verification (0–5) |
 | **Cross-examination citizenship** (10) | On both days, asks sharp, ledger-grounded questions of peers (9–10) | Asks the required questions, competently (7–8) | Asks vague or minimal questions (4–6) | Free-rides; asks nothing ledger-grounded (0–3) |

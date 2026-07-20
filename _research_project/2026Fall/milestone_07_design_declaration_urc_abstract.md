@@ -42,7 +42,7 @@ project's first public commitment — 150–250 words a stranger could read and
 understand, already carrying uncertainty in its language because your findings
 will. Part B, the **full design declaration**, distills M03 through M06 onto a
 single page: Model, Inquiry, Data strategy, Answer strategy, coherent and
-consistent, plus the justification for the approach family you chose. Together
+consistent, plus the justification for the compass position you chose. Together
 they are the blueprint every later milestone builds on — the diagnosis (M08),
 the pilot (M09), and the poster (M10–M12) all read back to this page.
 
@@ -51,7 +51,7 @@ the pilot (M09), and the poster (M10–M12) all read back to this page.
 ### Part A — the URC abstract (150–250 words)
 
 A single self-contained paragraph (or two) that moves through: the **motivation
-and gap**, the **research question**, the **approach and design** in one phrase,
+and gap**, the **research question**, the **compass position and design** in one phrase,
 what the project **will show**, and — woven in, not appended — **uncertainty-
 aware language**. The reader who sees only your abstract should come away knowing
 what you are asking, how you are answering it, and how much to believe you.
@@ -80,7 +80,7 @@ Assemble the four MIDA letters on one page, each in a short block:
 
 ### Component C — method-selection justification (inside the declaration)
 
-State, at a conceptual level, for the approach family you declared: **(1) why it
+State, at a conceptual level, for the compass position you declared: **(1) why it
 fits** your question, **(2) what it can and cannot establish**, and **(3) its key
 limitations and sources of uncertainty**. A method choice with no stated
 justification or limitation is incomplete — this is the course's
@@ -103,7 +103,7 @@ declaration.
 | **Abstract length** | 150–250 words (PDF) |
 | **Declaration length** | One page (PDF), all four MIDA blocks + justification |
 | **Presentation** | Abstract workshop (partner swap + uncertainty-language checklist) at M20, Oct 9; assembly consults at M22, Oct 16 — both count toward the grade |
-| **Style** | Abstract: flowing prose, no jargon a first-year could not follow. Declaration: compact blocks; every claim inside its approach's boundary |
+| **Style** | Abstract: flowing prose, no jargon a first-year could not follow. Declaration: compact blocks; every claim inside its compass position's boundary |
 | **Filenames** | `lastname_m07_abstract.pdf` and `lastname_m07_declaration.pdf` |
 | **Location** | Brightspace → Assignments → M07 |
 
@@ -149,7 +149,7 @@ within 7 days of feedback recovers up to half the lost points.
 2. **The declaration that contradicts itself.** A causal inquiry up top and an
    association-only estimator below. Read the four blocks as one argument before
    you submit.
-3. **Justification without limits.** Saying why your approach fits but never what
+3. **Justification without limits.** Saying why your compass position fits but never what
    it *cannot* establish. The limitation is half the justification.
 4. **Missing the gate.** Treating Oct 9 as soft because the external URC date is
    TBD. The internal gate binds; the abstract is not revisable.

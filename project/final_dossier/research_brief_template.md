@@ -38,7 +38,7 @@ QUESTION:  __________________________________________________
 FINDING (with uncertainty on the page):
   ___________________________________________________________
   ___________________________________________________________
-  (the claim inside its approach boundary + its bound, in the same breath)
+  (the claim inside its compass-position boundary + its bound, in the same breath)
 
 IMPLICATION:  _______________________________________________
   (what the reader can do / conclude — sized to the evidence, not beyond)

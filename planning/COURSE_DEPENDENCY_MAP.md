@@ -8,7 +8,7 @@ skill chains that make resequencing dangerous. Use before proposing ANY reorder.
 ```mermaid
 graph TD
     nb00[nb00 Launchpad] --> nb01[nb01 Question]
-    nb01 --> nb02[nb02 Four Approaches]
+    nb01 --> nb02[nb02 Inquiry Compass]
     nb02 --> nb03[nb03 Sources & Claim Map]
     nb02 --> nb04[nb04 Model & Inquiry]
     nb03 --> nb04
@@ -18,7 +18,7 @@ graph TD
     nb07 --> nb08[nb08 ASYNC Claim Diagnosis]
     nb07 --> nb09[nb09 Answer Strategy]
     nb08 --> nb09
-    nb09 --> nb10[nb10 INFERENCE deep dive]
+    nb09 --> nb10[nb10 GENERALIZATION deep dive]
     nb10 --> nb11[nb11 Declare-Diagnose-Redesign]
     nb11 --> nb12[nb12 PREDICTION deep dive]
     nb04 --> nb13[nb13 CAUSAL deep dive]
@@ -35,7 +35,7 @@ graph TD
 ## Load-bearing skill chains (do not break)
 
 1. **The classification chain:** nb02 (the skill) → every later notebook's
-   approach header → M03 declaration → M09 branch choice → nb17 branch choice →
+   compass header → M03 declaration → M09 branch choice → nb17 branch choice →
    the defense. nb02 cannot move later than M6 without stranding everything.
 2. **The MIDA assembly chain:** nb04 (M+I) → nb05/nb07 (D: measurement,
    sampling, assignment) → nb09 (A) → M07 full declaration (M22 meeting).
@@ -59,7 +59,7 @@ graph TD
 | Milestone | Requires (inputs) | Produces (consumed by) |
 |---|---|---|
 | M00 | nb00 | curiosity → M01 |
-| M01 | M00, nb01–nb02 | question + approach candidate → M02, M03 |
+| M01 | M00, nb01–nb02 | question + compass-position candidate → M02, M03 |
 | M02 | M01, nb03 | verified sources + gap placement → M03, poster refs |
 | M03 | M01–M02, nb04 | model + inquiry → M07 |
 | M04 | M03, nb05–nb06 | indicators + error analysis → M05, M07 |

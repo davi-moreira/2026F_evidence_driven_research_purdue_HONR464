@@ -5,7 +5,7 @@ Checks every STUDENT notebook in notebooks/student/ against the canonical
 template (_project_docs/ACTIVITY_TEMPLATE.md):
 
   * kernel metadata (python3), non-trivial cell count
-  * the Approach & Claim Boundary block (approach emphasis + PERMITS/NOT rows)
+  * the Inquiry & Claim Boundary block (inquiry emphasis + PERMITS/NOT rows)
   * a provenance line + the Sources & Provenance section
   * the seven active-learning moves (Pause & Predict, Run-the-Study/Hands-On,
     Make a Design Choice, Practice, Reading the Evidence, Project Transfer,
@@ -56,10 +56,10 @@ def check_student(path: Path) -> list[str]:
     if len(nb.cells) < 10:
         errs.append(f"only {len(nb.cells)} cells — template requires a full notebook")
 
-    if "## 🧭 Approach & Claim Boundary" not in text:
-        errs.append("missing Approach & Claim Boundary block")
-    if "**Approach emphasis:**" not in text:
-        errs.append("missing approach-emphasis line")
+    if "## 🧭 Inquiry & Claim Boundary" not in text:
+        errs.append("missing Inquiry & Claim Boundary block")
+    if "**Inquiry emphasis:**" not in text:
+        errs.append("missing inquiry-emphasis line")
     if "PERMITS" not in text or "NOT permit" not in text:
         errs.append("missing claim-permitted / claim-not-permitted rows")
     if not re.search(r"\*?Provenance:", text):

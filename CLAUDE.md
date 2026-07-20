@@ -11,9 +11,10 @@ seminar (Fall 2026, meeting **Mon/Wed/Fri, in person**) for Purdue's Honors
 College. The course teaches honors students — **without assuming a strong
 quantitative or computing background** — to turn curiosity into credible,
 evidence-based insight: identify meaningful gaps in a chosen field, translate gaps
-into well-scoped research problems, formulate answerable research questions, select
-and justify an appropriate quantitative method **family** (description, statistical
-inference, predictive modeling, and/or causal reasoning) at a **conceptual** level,
+into well-scoped research problems, formulate answerable research questions,
+classify each question on the **inquiry compass** — its **kind** (descriptive vs
+causal, RDSS ch. 7) and its **reach** (the data at hand / a population beyond the
+data / cases not yet seen) — justify the classification at a **conceptual** level,
 and use computational tools + AI to locate sources, operationalize concepts,
 analyze evidence, verify results, and document decisions responsibly. Students
 finish able to design and defend a rigorous research approach, interpret findings
@@ -106,13 +107,23 @@ course. Every empirical claim in any student-facing or deliverable material must
 
 ---
 
-## 🚨 CRITICAL RULE — Method-Selection Justification  *(NEW)*
+## 🚨 CRITICAL RULE — Inquiry-Declaration Justification  *(REPLACES Method-Selection; taxonomy adopted from RDSS 2026-07-19)*
 
-Whenever a student picks a method family (description / statistical inference /
-predictive modeling / causal reasoning), the activity or milestone must state, **at
-a conceptual level**: (1) why that family fits the question, (2) what it can and
-cannot establish, and (3) its key limitations and sources of uncertainty. A method
-choice with no stated justification or limitation is incomplete.
+The course uses the book's taxonomy, not a four-family grid: every research
+question is classified by **kind** (descriptive / causal inquiry, RDSS ch. 7) and
+**reach** (data at hand / population / unseen cases), giving four named compass
+positions — Description (nb06), Generalization (nb10), Prediction (nb12, the
+course-authored "Observational: predictive" library entry), Causal reasoning
+(nb13) — with MIDA + diagnosis as cross-cutting machinery. Whenever a student
+declares a position, the activity or milestone must state, **at a conceptual
+level**: (1) why that kind and reach fit the question's words, (2) what crossing
+licenses the design holds (sampling → population; prediction-time honesty +
+held-out check → unseen; assignment/identification → causal) and hence what the
+answer can and cannot establish, and (3) key limitations and sources of
+uncertainty. A declaration with no stated justification or limitation is
+incomplete. Canonical reference: `planning/INQUIRY_MAP.md`; machine-readable
+core: `course_config.yaml` `inquiry_framework:`; student template:
+`project/templates/INQUIRY_DECLARATION.md`.
 
 ---
 
@@ -220,8 +231,10 @@ its script are dormant but harmless.
 
 ---
 
-**Version:** 2.0 — Fall 2026 course fully built (planning suite, 20 topic
-notebooks nb00–nb19, milestones M00–M23, project protocols, validators); paths
-and workflows updated to the as-built system. (1.0 = seeded from
-2026Summer_predictive_analytics_MGMT474 infra.)
+**Version:** 3.0 — RDSS taxonomy adopted outright (2026-07-19): the four-approach
+grid is retired in favor of the inquiry compass (kind × reach + MIDA machinery);
+see `planning/INQUIRY_MAP.md` and DECISIONS.md. (2.0 = Fall 2026 course fully
+built: planning suite, 20 topic notebooks nb00–nb19, milestones M00–M23, project
+protocols, validators. 1.0 = seeded from 2026Summer_predictive_analytics_MGMT474
+infra.)
 **Maintained by:** Professor Davi Moreira + AI Assistants

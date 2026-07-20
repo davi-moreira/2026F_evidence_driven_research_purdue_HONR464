@@ -56,9 +56,9 @@ them to reach your conclusions.
 The dossier carries the whole chain in order — each part already built at its
 milestone, now finalized and reconciled with everything the defense taught you:
 
-- **Question + approach declaration (final form)** — the research question and
-  the quantitative approach(es) it demands, with the method-selection
-  justification (why this family, what it can and cannot establish, its
+- **Question + Inquiry Declaration (final form)** — the research question and
+  the compass position(s) it demands, with the method-selection
+  justification (why this compass position, what it can and cannot establish, its
   limitations).
 - **Verified source map** — the literature/claim map with every source real and
   retrievable (M02).
@@ -66,7 +66,7 @@ milestone, now finalized and reconciled with everything the defense taught you:
 - **Diagnosis + redesign history** — the design diagnosis (M08) and the
   feedback-to-redesign plan (M18), including what you changed and what you
   wouldn't.
-- **Pilot + sensitivity analyses** — the pilot (M09) and the approach-branched
+- **Pilot + sensitivity analyses** — the pilot (M09) and the compass-branched
   sensitivity checks (M19), with what moved.
 - **The poster** — as presented at the Expo (M12/M16).
 - **The conference record + redesign plan** — the coded reflection (M17) and the
@@ -110,7 +110,7 @@ should be true before you submit:
   reproducible computation** — no unverifiable or hallucinated citations.
 - [ ] **Every headline result records how it was verified** (recomputed,
   cross-checked, or partner-reproduced).
-- [ ] **The approach is justified** — why this family, what it can/cannot
+- [ ] **The compass position is justified** — why this compass position, what it can/cannot
   establish, its limitations.
 - [ ] **Uncertainty and limitations appear throughout**, not just in a closing
   paragraph.
@@ -152,7 +152,7 @@ violation.
 | **Claim ledger as spine** (25) | Complete and reconciled; every claim has a row, every row appears in the prose (22–25) | Mostly reconciled; a few unmatched rows or claims (18–21) | Ledger partial or disconnected from the prose (11–17) | No ledger, or a claim list with no evidence/boundary (0–10) |
 | **Evidence integrity & verification** (20) | Every claim traces to a real source or reproducible computation; verification recorded throughout (18–20) | Traceable and verified with minor gaps (14–17) | Verification uneven; a source or two unretrievable (8–13) | Unverifiable or hallucinated citations present (0–7) |
 | **Uncertainty & limitations** (15) | Stated throughout, calibrated — neither hidden nor spiraling (13–15) | Present, occasionally soft (10–12) | Confined to a closing paragraph (6–9) | Absent; the dossier overclaims certainty (0–5) |
-| **Approach alignment & method justification** (10) | Approach justified; every claim stays inside its boundary (9–10) | Justified; one boundary loose (7–8) | Justification thin or a boundary breached (4–6) | Approach unjustified or contradicted (0–3) |
+| **Compass alignment & method justification** (10) | Compass position justified; every claim stays inside its boundary (9–10) | Justified; one boundary loose (7–8) | Justification thin or a boundary breached (4–6) | Compass position unjustified or contradicted (0–3) |
 | **Craft & communication** (10) | Assembled, on-format, on-time; notebook runs; complete disclosure block (9–10) | Minor lapses (7–8) | Disorganized or missing pieces (4–6) | Missing disclosure block or notebook (0–3) |
 
 **No revision.** M23 is **terminal** — there is no post-hoc revision or

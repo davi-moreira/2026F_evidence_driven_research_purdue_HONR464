@@ -35,8 +35,8 @@ here is the **estimand → estimator → estimate** triad: the quantity you want
 the recipe you will run, and the dish that recipe produces. A number with no
 named procedure behind it ("the analysis shows…") is not an answer strategy. By
 the end you will have written the sentence that reports your future result —
-*before you have it* — worded so that it cannot say more than your approach
-permits.
+*before you have it* — worded so that it cannot say more than your compass
+position permits.
 
 ## Components
 
@@ -56,9 +56,9 @@ State all three for your project, in order:
 ### 2. The concrete procedure (≈1 paragraph)
 
 Name the procedure precisely enough that someone else could run it. Pick the
-form your **declared approach** requires — for example:
+form your **declared compass position** requires — for example:
 
-- **Inference / causal:** difference-in-means between two groups, or an
+- **Generalization / causal:** difference-in-means between two groups, or an
   **adjusted regression with HC2 robust standard errors**, naming the outcome,
   the key regressor, and the two honest covariates you will adjust for.
 - **Prediction:** a **baseline-vs-model comparison** on held-out data, naming
@@ -85,10 +85,10 @@ uncertainty deleted is certainty invented.
 ### 4. The pre-written result sentence, inside the boundary (1–2 sentences)
 
 Write the sentence you will use to report your finding, with a blank where the
-number goes, worded so it stays **inside your approach's claim boundary**:
+number goes, worded so it stays **inside your compass position's claim boundary**:
 
 - Description: "In these data, ___% of ___ show ___."
-- Inference: "In the population my frame reaches, ___ and ___ are associated by
+- Generalization: "In the population my frame reaches, ___ and ___ are associated by
   ___ (95% interval ___), adjusting for ___."
 - Prediction: "On held-out cases, my model beats the baseline by ___ on ___."
 - Causal: "Under [stated, checked identification], the effect of ___ on ___ is
@@ -125,9 +125,9 @@ academic-integrity violation.
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
 | **Triad correctness** (25) | Estimand, estimator, estimate each named and mutually consistent; the estimator genuinely targets the declared estimand (22–25) | All three present; the link between estimand and estimator slightly loose (18–21) | One element missing or mislabeled (11–17) | Estimator does not target the inquiry, or the triad is absent (0–10) |
-| **Procedure concreteness** (20) | Procedure named precisely enough to reproduce, and it fits the declared approach (18–20) | Procedure named but under-specified in one respect (14–17) | Vague ("run a regression") with no outcome/regressor/metric named (8–13) | No named procedure (0–7) |
+| **Procedure concreteness** (20) | Procedure named precisely enough to reproduce, and it fits the declared compass position (18–20) | Procedure named but under-specified in one respect (14–17) | Vague ("run a regression") with no outcome/regressor/metric named (8–13) | No named procedure (0–7) |
 | **Uncertainty plan** (15) | Source of uncertainty named and a concrete method to express it (13–15) | Plan present but generic (10–12) | Uncertainty mentioned, no method (5–9) | No uncertainty plan (0–4) |
-| **Boundary-safe result sentence** (20) | Pre-written sentence sits exactly inside the approach's boundary; verb matches the design (18–20) | Inside the boundary with one soft word to tighten (14–17) | One claim-boundary violation (the silent upgrade) (8–13) | Causal or population claim the design cannot buy (0–7) |
+| **Boundary-safe result sentence** (20) | Pre-written sentence sits exactly inside the compass position's boundary; verb matches the design (18–20) | Inside the boundary with one soft word to tighten (14–17) | One claim-boundary violation (the silent upgrade) (8–13) | Causal or population claim the design cannot buy (0–7) |
 | **Clinic engagement & revision** (10) | Ran the claim-anatomy checklist on own work; consult and proof-read feedback visibly incorporated (9–10) | Participated; light incorporation (7–8) | Present but disengaged (4–6) | Absent without arrangement (0–3) |
 | **Craft & disclosure** (10) | On-format, on-time, complete AI-disclosure block (9–10) | Minor format lapses (7–8) | Missing components or sloppy citations (4–6) | Missing disclosure block (0–3) |
 
@@ -138,7 +138,7 @@ of feedback recovers up to half the lost points.
 
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
-- A result sentence that claims outside its approach's boundary (association
+- A result sentence that claims outside its compass position's boundary (association
   reported as effect, sample reported as population): the Boundary criterion
   scores Beginning (0–7) regardless of the rest.
 - Any cited source or dataset that turns out not to exist or not to say what you

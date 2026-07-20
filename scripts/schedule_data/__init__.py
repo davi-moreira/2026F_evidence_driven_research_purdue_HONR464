@@ -19,7 +19,7 @@ MEETINGS = MEETINGS_P1 + MEETINGS_P2 + MEETINGS_P3 + MEETINGS_P4
 
 COLUMNS = [
     "meeting", "date", "day", "modality", "unit", "title",
-    "driving_question", "secondary_questions", "approach",
+    "driving_question", "secondary_questions", "inquiry",
     "claim_permitted", "claim_not_permitted",
     "rdss_reading", "cb_reading", "other_material", "provenance",
     "concepts", "python_r_dependency", "dataset_simulation",

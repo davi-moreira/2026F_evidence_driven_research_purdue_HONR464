@@ -57,7 +57,7 @@ A written script for the 60-second version, following the architecture: a
 **hook** that earns attention, the **claim**, the **boundary** that keeps the
 claim honest, and an **invitation** to look closer. **Mark the boundary
 sentence** in the script — the exact words that hold the claim inside your
-approach. That sentence is the one you rehearse until it is automatic, because it
+compass position. That sentence is the one you rehearse until it is automatic, because it
 is the one pressure will try to drop.
 
 - ✓ **Spoken claim that matches the poster:** *"In my sample of 812 commuters,

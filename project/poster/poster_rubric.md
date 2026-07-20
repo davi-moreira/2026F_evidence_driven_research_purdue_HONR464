@@ -7,13 +7,13 @@ the five rows instantiate the shared rubric DNA in
 
 The poster earns points for what a 90-second stranger can defensibly take away —
 never for decoration. The five rows map to the course's standing virtues:
-approach alignment, evidence integrity, uncertainty, verification, and craft.
+compass alignment, evidence integrity, uncertainty, verification, and craft.
 
 ## Grading rubric
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Headline claim boundary** (25) | Headline ≤ 15 words, unmistakably inside the declared approach; no reader could overclaim from it (22–25) | Inside the boundary; one word or phrase slightly loose but repairable (18–21) | Claim drifts toward a stronger approach (association read as cause; sample read as population) (11–17) | Headline outruns the pilot; a causal or generalized claim the design cannot license (0–10) |
+| **Headline claim boundary** (25) | Headline ≤ 15 words, unmistakably inside the declared compass position; no reader could overclaim from it (22–25) | Inside the boundary; one word or phrase slightly loose but repairable (18–21) | Claim drifts toward a stronger compass position (association read as cause; sample read as population) (11–17) | Headline outruns the pilot; a causal or generalized claim the design cannot license (0–10) |
 | **Evidence hierarchy & figure honesty** (25) | Three ranked blocks, strongest in the top-center slot; every figure honest (axes, bins, scale) and its impression matches its number (22–25) | Hierarchy clear; one figure choice defensible but not ideal (18–21) | Flat hierarchy or a figure whose impression overstates the data (11–17) | No hierarchy, or a figure that misleads (truncated axis inflating a difference) (0–10) |
 | **Uncertainty & limitations on the page** (20) | Uncertainty line visible without leaning in; the key limitation stated as expertise, in the claim's eye-span (18–20) | Uncertainty present but placed where a fast reader might miss it (14–17) | Uncertainty only in a footnote or caption a 90-second reader won't reach (8–13) | No visible uncertainty or limitation — the overclaiming-certainty defect (0–7) |
 | **Traceability & reproducibility** (20) | Every number traces to a shown notebook cell; a partner verified one on Nov 6 (18–20) | All numbers trace; verification light but real (14–17) | A number cannot be located quickly; provenance shaky (8–13) | A number that does not trace to any cell — fails the evidence-integrity gate (0–7) |
@@ -22,7 +22,7 @@ approach alignment, evidence integrity, uncertainty, verification, and craft.
 ## How the rows are enforced
 
 - **Headline claim boundary** — checked at the storyboard (M29), red-teamed
-  (M30), and re-verified against your approach declaration at production (M31).
+  (M30), and re-verified against your inquiry declaration at production (M31).
 - **Traceability** — the pair spot-check on Nov 6 is the live enforcement; an
   untraceable number caps this row at Beginning regardless of the rest, the
   Evidence-Integrity rule with teeth (mirrors the M01 sourcing penalty).
@@ -52,7 +52,7 @@ the poster rewards exactly what every milestone rewards:
 
 | Poster row | Rubric-DNA virtue |
 |---|---|
-| Headline claim boundary | Approach alignment |
+| Headline claim boundary | Compass alignment |
 | Evidence hierarchy & figure honesty | Evidence integrity |
 | Uncertainty & limitations on the page | Uncertainty & limitations |
 | Traceability & reproducibility | Verification |

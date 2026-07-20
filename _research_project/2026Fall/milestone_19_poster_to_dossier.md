@@ -29,7 +29,7 @@ Due: **Monday, November 30, 11:59 PM.**
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m19_dossier_core.pdf`** | Your two sensitivity checks, the claim ledger, and the methods+findings skeleton, plus your AI-use disclosure block. |
-| 2 | **Updated notebook** (`.ipynb`) | nb17 with your approach-branch sensitivity cells executed on your own pilot. |
+| 2 | **Updated notebook** (`.ipynb`) | nb17 with your compass-branch sensitivity cells executed on your own pilot. |
 
 *(You also make one async-board post and one reply — see Component 4.)*
 
@@ -52,15 +52,15 @@ Defense.
 
 ## Components
 
-### 1. Two approach-appropriate sensitivity checks (run on your own pilot)
+### 1. Two compass-appropriate sensitivity checks (run on your own pilot)
 
-Run **two** sensitivity checks that match your declared approach's branch. Do
+Run **two** sensitivity checks that match your declared compass position's branch. Do
 them on **your own pilot data**, and record what moved and what didn't:
 
 - **Description** — recompute a headline summary under an **alternative summary
   or binning** (mean vs median; a different bin cut; including vs excluding an
   ambiguous category). Does the pattern survive the choice?
-- **Inference** — probe an **alternative specification** and a **non-response /
+- **Generalization** — probe an **alternative specification** and a **non-response /
   missingness** scenario. Does the estimate — and its uncertainty — hold?
 - **Prediction** — perturb the **train/test split** (a different seed or fold)
   and swap the **metric**. Does the out-of-sample story survive?
@@ -79,7 +79,7 @@ honestly:
 
 | Column | What goes here |
 |---|---|
-| **Claim** | The statement, worded to its real boundary (units, scope, approach) |
+| **Claim** | The statement, worded to its real boundary (units, scope, compass position) |
 | **Evidence** | Where it comes from — the specific cell/table/output |
 | **Verification** | How you checked it (recomputed, cross-checked, triangulated) |
 | **Boundary** | What the claim does **not** say (no generalization/causation it can't support) |
@@ -103,8 +103,8 @@ This row would not survive the Evidence Defense — fix it here.
 ### 3. The methods + findings skeleton (drafted from the ledger)
 
 Draft the **skeleton** of the dossier's methods and findings sections, built
-directly from the ledger rows. Methods says what you did and why (approach,
-data, key decisions); findings reports each surviving claim at its real
+directly from the ledger rows. Methods says what you did and why (compass
+position, data, key decisions); findings reports each surviving claim at its real
 boundary. A methods section is not a methods *memory* — it records decisions so
 a stranger could follow them, not just what you happened to remember.
 
@@ -128,7 +128,7 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Length** | PDF: two sensitivity checks (what moved) + the claim-ledger table + the methods/findings skeleton, plus the disclosure block |
-| **Notebook** | nb17 with your approach-branch cells executed; outputs visible |
+| **Notebook** | nb17 with your compass-branch cells executed; outputs visible |
 | **Board** | One fragile-row post + one shoring reply (checked for completion) |
 | **Style** | The ledger is a real table; every "survived sensitivity?" verdict is backed by a check you actually ran |
 | **Filenames** | `lastname_m19_dossier_core.pdf` + updated `.ipynb` |
@@ -140,7 +140,7 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Approach alignment** (20) | Both checks are the right ones for the declared approach's branch and stay inside its claim boundary (18–20) | Checks fit the approach; one boundary loosely held (14–17) | One check mismatched to the approach (8–13) | Checks unrelated to the approach, or approach ignored (0–7) |
+| **Compass alignment** (20) | Both checks are the right ones for the declared compass position's branch and stay inside its claim boundary (18–20) | Checks fit the compass position; one boundary loosely held (14–17) | One check mismatched to the compass position (8–13) | Checks unrelated to the compass position, or compass position ignored (0–7) |
 | **Sensitivity execution & evidence integrity** (25) | Both checks run on the real pilot; what moved is recorded; claims re-verified, not ported (22–25) | Checks run; recording of movement thin in places (18–21) | One check run, or results asserted without output (11–17) | Checks not actually run, or poster numbers copied unverified (0–10) |
 | **Claim ledger completeness & honesty** (25) | Every poster claim has a row; all five columns filled; boundaries and fragility honest (22–25) | Most claims laddered; a column occasionally thin (18–21) | Ledger partial or boundaries missing on key rows (11–17) | No ledger, or a table of claims with no verification/boundary (0–10) |
 | **Methods/findings skeleton & uncertainty** (15) | Skeleton built from the ledger; findings carry their uncertainty and boundary (13–15) | Skeleton present; uncertainty lightly carried (10–12) | Skeleton is a claims restatement without decisions (6–9) | Missing, or contradicts the ledger (0–5) |

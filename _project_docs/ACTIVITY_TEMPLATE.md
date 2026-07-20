@@ -32,16 +32,19 @@ file by stripping every cell whose source contains `INSTRUCTOR SOLUTION`
 ---
 ```
 
-### 2. Approach & Claim Boundary block (markdown) — REQUIRED, machine-checked
+### 2. Inquiry & Claim Boundary block (markdown) — REQUIRED, machine-checked
 
-The course's operational spine. Every notebook states, up front, which of the
-four approaches it emphasizes and the claim boundary it patrols:
+The course's operational spine (the inquiry compass — `planning/INQUIRY_MAP.md`).
+Every notebook states, up front, which compass position(s) it emphasizes — kind
+(descriptive/causal) and reach (data at hand / population / unseen cases) — and
+the claim boundary it patrols:
 
 ```markdown
-## 🧭 Approach & Claim Boundary
+## 🧭 Inquiry & Claim Boundary
 
-**Approach emphasis:** [description | statistical/observational inference |
-predictive modeling | causal reasoning | all (framing/diagnosis/communication)]
+**Inquiry emphasis:** [description (descriptive · data at hand) |
+generalization (descriptive · population) | prediction (descriptive · unseen
+cases) | causal reasoning | all positions (framing/diagnosis/communication)]
 
 | | |
 |---|---|

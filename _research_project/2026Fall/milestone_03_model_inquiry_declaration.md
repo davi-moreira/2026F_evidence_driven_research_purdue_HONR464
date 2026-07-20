@@ -20,7 +20,7 @@ day).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m03_declaration.pdf`** | The world/model in prose, your 3–5 node DAG, the inquiry stated in words *and* as a quantity, your responses to at least two clarifying questions, and your first completed **Quantitative Approach Declaration** (attached as part of the PDF or as an appendix). Includes the AI-use disclosure block. |
+| 1 | **`lastname_m03_declaration.pdf`** | The world/model in prose, your 3–5 node DAG, the inquiry stated in words *and* as a quantity, your responses to at least two clarifying questions, and your first completed **Inquiry Declaration** (attached as part of the PDF or as an appendix). Includes the AI-use disclosure block. |
 
 ---
 
@@ -34,9 +34,9 @@ you are after — the number or pattern a genie would hand you if it knew the
 truth. Declaring the inquiry *before* any data arrive is what protects you from
 inquiry shopping later. On Wednesday you deliver a 3-minute declaration; each
 listener writes you one clarifying question, and you revise from at least two of
-them. Alongside the declaration you complete the **Quantitative Approach
-Declaration** template (`project/templates/QUANTITATIVE_APPROACH_DECLARATION.md`)
-— the standing document that answers "why THIS approach?" and travels with your
+them. Alongside the declaration you complete the **Inquiry Declaration**
+template (`project/templates/INQUIRY_DECLARATION.md`)
+— the standing document that answers "why THIS compass position?" and travels with your
 project through M07, M09, and the final dossier.
 
 ## Components
@@ -109,17 +109,19 @@ or explains your choice. Show the before-and-after: "A listener asked whether
 'belonging' meant social or academic belonging; I now specify social belonging,
 which narrows my outcome and my later measurement."
 
-### 5. Completed Quantitative Approach Declaration (attached)
+### 5. Completed Inquiry Declaration (attached)
 
-Complete the template at `project/templates/QUANTITATIVE_APPROACH_DECLARATION.md`
+Complete the template at `project/templates/INQUIRY_DECLARATION.md`
 and attach it as part of this PDF or as an appendix. It requires: your question's
-exact wording; your **primary approach** (description / statistical inference /
-predictive modeling / causal reasoning); why that approach fits, **naming one
-neighboring approach and why it is *not* the fit**; what your answer **will** and
-**will not** be able to establish; at least three limitations with how you will
-probe or bound each; and what you would do if the approach turns out wrong. This
-is the Method-Selection Justification rule in writing — a method choice with no
-stated justification or limitation is incomplete.
+exact wording; your **primary compass position** — Description (descriptive · data
+at hand), Generalization (descriptive · population), Prediction (descriptive ·
+unseen cases), or Causal reasoning (causal); the **kind + reach** checkboxes that
+place it; why that position fits, **naming one neighboring position and why it is
+*not* the fit**; what your answer **will** and **will not** be able to establish;
+at least three limitations with how you will probe or bound each; and what you
+would do if the position turns out wrong. This is the Method-Selection
+Justification rule in writing — a method choice with no stated justification or
+limitation is incomplete.
 
 ### 6. AI-use disclosure block (required on every deliverable)
 
@@ -133,7 +135,7 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 
 | Item | Specification |
 |---|---|
-| **Length** | Declaration (1–2 pages) + DAG image + completed approach-declaration template |
+| **Length** | Declaration (1–2 pages) + DAG image + completed Inquiry Declaration template |
 | **Presentation** | 3-minute declaration in class Wednesday Sep 16; one clarifying question per listener; revised from ≥2 — part of the grade |
 | **Style** | Clear prose; readable DAG; inquiry stated both in words and as a quantity |
 | **Filename** | `lastname_m03_declaration.pdf` |
@@ -147,12 +149,12 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 |---|---|---|---|---|
 | **Model / world & DAG** (25) | Prose world and 3–5 node DAG are coherent; each arrow names a defensible mechanism; the third variable is not hidden (22–25) | World and DAG present; a node or arrow under-argued (18–21) | DAG too sparse or too tangled; mechanisms unstated (11–17) | One-arrow "model," or DAG that smuggles in an unstated world (0–10) |
 | **Inquiry precision** (25) | Stated in plain words *and* as a quantity; unmistakably declared before data (22–25) | Both forms present; the quantity slightly loose (18–21) | Only one form, or the quantity is vague (11–17) | No defined quantity, or inquiry chosen post-hoc (0–10) |
-| **Approach declaration** (25) | Template complete; fit argued from the question's words; road-not-taken named; ≥3 real limitations with probes (22–25) | Complete and reasonable; justification generic or limitations thin (18–21) | Approach asserted; no road-not-taken or no real limitations (11–17) | Missing template or approach contradicts the question (0–10) |
+| **Inquiry Declaration** (25) | Template complete; fit argued from the question's words; road-not-taken named; ≥3 real limitations with probes (22–25) | Complete and reasonable; justification generic or limitations thin (18–21) | Compass position asserted; no road-not-taken or no real limitations (11–17) | Missing template or compass position contradicts the question (0–10) |
 | **Declaration delivery & clarifying-question incorporation** (15) | Within time, clear arc; ≥2 clarifying questions genuinely incorporated with before/after (13–15) | Delivered; questions noted but lightly used (10–12) | Over time or fewer than two questions incorporated (6–9) | Not delivered without arrangement (0–5) |
 | **Craft & disclosure** (10) | On-format, on-time, complete AI-disclosure block (9–10) | Minor format lapses (7–8) | Missing pieces or sloppy attachment (4–6) | Missing disclosure block (0–3) |
 
 **Revision:** eligible under the standing policy — a revised PDF within 7 days
-of feedback recovers up to half the lost points. Keep the approach-declaration
+of feedback recovers up to half the lost points. Keep the Inquiry Declaration
 template current; it is re-submitted, updated, inside later milestones.
 
 ## Penalties
@@ -177,9 +179,9 @@ template current; it is re-submitted, updated, inside later milestones.
    to know if mentoring helps" is not an inquiry until it is also "the average
    difference in belonging between mentored and unmentored individuals." Both
    forms are required.
-4. **An approach with no road-not-taken.** The strongest declarations say why the
-   *neighboring* approach is wrong for this question. Claiming "causal" without
-   arguing why it is not merely "descriptive" leaves the choice unearned.
+4. **A compass position with no road-not-taken.** The strongest declarations say
+   why the *neighboring* position is wrong for this question. Claiming "causal"
+   without arguing why it is not merely "descriptive" leaves the choice unearned.
 5. **Limitations that could belong to any project.** "Small sample" and "more data
    would help" are not limitations of *your* design. Name the confounder your DAG
    exposes, the measurement error your outcome invites, the frame your units miss.

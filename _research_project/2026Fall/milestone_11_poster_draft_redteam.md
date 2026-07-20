@@ -44,7 +44,7 @@ public embarrassment**. In class you run the four-audit protocol against two
 posters, and two reviewers run it against yours. The four audits are the four
 ways a poster fails:
 
-1. **Claim boundary** — does any claim outrun the approach's evidence?
+1. **Claim boundary** — does any claim outrun the compass position's evidence?
 2. **Figure honesty** — does any figure's visual impression say more than the numbers?
 3. **Read path** — can a stranger find the headline in 90 seconds?
 4. **Uncertainty** — is it visible, or hidden?
@@ -121,7 +121,7 @@ an undisclosed AI contribution is an academic-integrity violation.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Draft completeness & approach alignment** (20) | Every section populated, real pilot figures, headline inside the boundary (18–20) | Complete with one thin section or one soft claim (14–17) | Partial draft or a boundary slip (8–13) | Skeletal, or a claim well outside the approach (0–7) |
+| **Draft completeness & compass alignment** (20) | Every section populated, real pilot figures, headline inside the boundary (18–20) | Complete with one thin section or one soft claim (14–17) | Partial draft or a boundary slip (8–13) | Skeletal, or a claim well outside the compass position (0–7) |
 | **Figure honesty & evidence integrity** (20) | Every figure's impression matches its numbers; every number traces to pilot output (18–20) | Honest figures, one caption thin on provenance (14–17) | A figure whose visual overstates the data (8–13) | A figure or number with no real backing (0–7) |
 | **Revision triage** (20) | Hits ranked with reasons, top fix applied and clearly described, rest planned (18–20) | Ranked and fixed, reasoning light (14–17) | Hits listed without ranking or fix (8–13) | Reviewers' hits dismissed or ignored (0–7) |
 | **Red-team citizenship** (20) | Two rigorous audits given: located, specific, actionable hits under all four audits (18–20) | Two audits given, mostly specific (14–17) | Vague or incomplete audits (8–13) | Audits not given, or empty ("looks good") (0–7) |

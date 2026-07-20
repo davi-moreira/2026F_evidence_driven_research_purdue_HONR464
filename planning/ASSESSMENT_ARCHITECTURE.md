@@ -3,7 +3,7 @@
 Reconciled weights for `syllabus.qmd` (replaces the seeded 8-row provisional
 table). Philosophy from the brief: **no conventional midterm or final exam** —
 the course assesses the research chain itself. Grading rewards correctness,
-transparency, reproducibility, approach-alignment, and responsible
+transparency, reproducibility, compass-alignment, and responsible
 interpretation — **never coding elegance** (the course assumes no computing
 background; all machinery is provided).
 
@@ -43,8 +43,9 @@ presenting is graded where it happens, not as a separate ledger.
 Every milestone rubric in `_research_project/2026Fall/` draws its criteria rows
 from this fixed menu, so the same virtues are rewarded all semester:
 
-1. **Approach alignment** — the work matches the declared approach and stays
-   inside its claim boundary (CLAUDE.md Method-Selection rule).
+1. **Compass alignment** — the work matches the declared compass position and
+   stays inside its claim boundary (CLAUDE.md Inquiry-Declaration Justification
+   rule).
 2. **Evidence integrity** — every empirical claim traces to a real, retrievable
    source or a reproducible computation (CLAUDE.md Evidence-Integrity rule).
 3. **Verification** — the deliverable records how outputs were cross-checked;

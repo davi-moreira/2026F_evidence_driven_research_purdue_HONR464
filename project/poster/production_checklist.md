@@ -9,8 +9,8 @@ Quality bar: [poster_rubric.md](poster_rubric.md).*
 
 On Nov 17 a live audience stands in front of this poster, not a draft reader. The
 production sprint converts your triaged draft into a print-ready file where every
-number traces to a notebook cell and every claim sits inside your approach's
-boundary. "I'll fix it after submission" is the one move this session exists to
+number traces to a notebook cell and every claim sits inside your compass
+position's boundary. "I'll fix it after submission" is the one move this session exists to
 prevent.
 
 ## Materials

@@ -57,3 +57,58 @@ canonical constant-effect simulation world (TRUE_ATE = 2.0) shared by
 nb04/09/10/11; badges keyed to git-tracked student files; milestone M07 is
 two-part (abstract gate Oct 9 / declaration Oct 16); M16 = the URC Expo itself.
 See planning/FINAL_REPORT.md. Build state: planning/BUILD_STATUS.md.
+
+---
+
+## 2026-07-19 — Session: Adopt the RDSS taxonomy (the inquiry compass) + session guides
+
+**Goal:** Replace the four-approach grid with the textbook's own taxonomy end to
+end, embed the EDA and prediction improvements that fall out of it, and generate
+per-notebook session guides for every MWF meeting.
+
+**What happened:**
+- **Taxonomy adopted outright** (Decision 12 in `_project_docs/DECISIONS.md`):
+  every question is classified by **kind** (descriptive vs causal, RDSS ch. 7) ×
+  **reach** (data at hand / population / unseen cases) — "the inquiry compass."
+  Old families map to named positions: description→nb06, statistical inference→
+  **generalization** (nb10), predictive modeling→prediction (nb12), causal→nb13.
+  Overclaims are **compass crossings without a license** (silent upgrade /
+  leakage / after-therefore-because — each licensed by a design element, proven
+  by diagnosis).
+- **Machine layer:** `course_config.yaml` `approaches:` → `inquiry_framework:`
+  (kinds, reaches, positions, crossings, EDA homes); schedule column `approach`
+  → `inquiry` (all 44 rows relabeled); `validate_notebooks.py` now requires
+  `## 🧭 Inquiry & Claim Boundary` + `**Inquiry emphasis:**`;
+  `ACTIVITY_TEMPLATE.md` §2 updated; `notebooks_map.py` titles updated.
+- **Planning layer:** `QUANTITATIVE_APPROACH_MAP.md` → **`INQUIRY_MAP.md`**
+  (canonical compass reference, rewritten); `COURSE_MASTER_PLAN.md` §2 rewritten
+  (+ stale RDSS chapter refs corrected: nb04→ch.6–7, nb07→ch.8, nb09→ch.9,
+  nb06→ch.15, etc.); `PROJECT_MILESTONES.md`, assessment/dependency/reading
+  maps, milestone briefs (`_research_project/2026Fall/`), poster/conference/
+  dossier protocols swept; template `QUANTITATIVE_APPROACH_DECLARATION.md` →
+  **`INQUIRY_DECLARATION.md`** (kind/reach checkboxes + crossing-licenses table);
+  syllabus/index/schedule qmd updated (meeting titles M5–M6, M20–M22, M44).
+- **Notebooks (all 20 rebuilt via nbbuild; validators + voice lint green):**
+  nb02 rewritten as the compass skill (kind + reach drills; MIDA figure 2.1
+  embedded); nb04 gained **EDA upstream** (explore lapop to calibrate M /
+  surface candidate I); nb06 gained the **explore → declare → confirm loop**
+  anchor (split-half explore-then-confirm demo); nb09 gained the **§9.1.3
+  whole-procedure rule** (spec-shopping false-positive simulation); nb10
+  reframed as the **Generalization deep dive** (descriptive inquiries with
+  population estimands; silent upgrade = the named reach crossing); nb12
+  reframed as the course-authored design-library entry **"Observational:
+  predictive"** in declare-diagnose-redesign format (leakage = D-violation;
+  held-out metric = diagnosand; baseline = redesign; MIDA figure embedded);
+  nb13 relabeled + SATE/PATE reach note; nb17 gained ch. 22 **pivot flags +
+  reconciliation** in the claim ledger; nb08/nb19 + all remaining notebooks
+  relabeled to compass vocabulary.
+- **Session guides built:** new tracked generator
+  `scripts/build_session_guides.py` produces `session_guides/NN_session_guide.md`
+  per notebook (all 20 guides / 44 meetings) from `MEETING_SCHEDULE.csv`:
+  compass cheat sheet, per-meeting run-of-show table, read-alouds
+  (voice-checked), hands-on/practice, milestone moment, prep, risks, exit
+  ticket. Regenerate after any schedule edit.
+- Figures README updated (fig 2.1 now also in nb02/nb12); notebook filenames
+  (e.g. `nb02_four_approaches*`) deliberately kept for link stability.
+
+**Decisions:** see Decision 12 (`_project_docs/DECISIONS.md`).

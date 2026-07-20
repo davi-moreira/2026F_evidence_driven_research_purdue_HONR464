@@ -48,10 +48,10 @@ matters and cut what doesn't — including things you worked hard for.
 
 ## Components
 
-### 1. The headline claim (≤ 15 words, inside your approach's boundary)
+### 1. The headline claim (≤ 15 words, inside your compass position's boundary)
 
 The one sentence a 90-second reader must leave with. It must be **worded to
-match your declared approach's claim boundary** (CLAUDE.md Method-Selection
+match your declared compass position's claim boundary** (CLAUDE.md Method-Selection
 rule): a descriptive project describes, an associational project associates, and
 only an identified causal design says *cause*. The reader will never see your
 caveats footnote, so the boundary has to live in the headline itself.
@@ -100,7 +100,7 @@ an undisclosed AI contribution is an academic-integrity violation.
 |---|---|
 | **Length** | 1 page (PDF): the storyboard grid + the disclosure block |
 | **Pitch** | 90 seconds, delivered in class Monday Nov 2 — part of the grade |
-| **Headline** | ≤ 15 words, inside your approach's boundary |
+| **Headline** | ≤ 15 words, inside your compass position's boundary |
 | **Filename** | `lastname_m10_storyboard.pdf` |
 | **Location** | Brightspace → Assignments → M10 |
 
@@ -110,7 +110,7 @@ an undisclosed AI contribution is an academic-integrity violation.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Headline claim & approach alignment** (25) | ≤15 words, sits exactly inside the approach's boundary, survives a 90-second read (22–25) | Inside the boundary with one soft word, or slightly long (18–21) | Claim present but boundary fuzzy or over-length (11–17) | Headline outruns the evidence (a causal word on an associational pilot) (0–10) |
+| **Headline claim & compass alignment** (25) | ≤15 words, sits exactly inside the compass position's boundary, survives a 90-second read (22–25) | Inside the boundary with one soft word, or slightly long (18–21) | Claim present but boundary fuzzy or over-length (11–17) | Headline outruns the evidence (a causal word on an associational pilot) (0–10) |
 | **Evidence hierarchy & integrity** (25) | Three blocks, ranked with a stated reason each, every one traceable to a pilot output (22–25) | Three blocks ranked; one rank thinly justified (18–21) | Blocks listed without a ranking argument (11–17) | Fewer than three, or a block not backed by real pilot output (0–10) |
 | **Uncertainty on the read path** (15) | Uncertainty line is present, correct, and placed where the 90-second reader meets it (13–15) | Present and correct but placed off the main path (10–12) | Vague or generic uncertainty ("results may vary") (6–9) | Missing (0–5) |
 | **Storyboard craft, pitch & feedback** (20) | Read path is unambiguous; 90-second pitch lands; lost-point marks visibly incorporated (18–20) | Clear grid, minor pitch overrun, some feedback folded in (14–17) | Path unclear or pitch over time; feedback ignored (8–13) | No usable read path or pitch not delivered (0–7) |

@@ -156,3 +156,49 @@ This document records design decisions made during course development and the re
 **Exceptions:** none. Numeric/label options satisfy the band by formatting all options in the same shape (e.g., `k = 2` / `k = 100`).
 
 **Implication:** Before importing any quiz/exam CSV to Brightspace, run `python scripts/audit_answer_length.py --file <csv>` — PASS is mandatory. Authoring spec: `scripts/_distractor_rewrite_instructions.md`; per-bank rules embedded in `_quizzes/2026Summer/quiz_generation_plan.md` §4.5 and `_midterm_exam/2026Summer/midterm_generation_plan.md` §5.6. All 48 quiz CSVs and 14 midterm case CSVs were rewritten to this standard on 2026-06-12.
+
+---
+
+## Decision 12: Adopt the RDSS Taxonomy Outright — the Inquiry Compass (2026-07-19)
+
+**Decision:** Retire the four-approach grid (description / statistical inference /
+predictive modeling / causal reasoning) as the course's classification scheme and
+adopt the book's own taxonomy: every research question is classified by **kind**
+(descriptive vs causal inquiry, RDSS ch. 7) and **reach** (the data at hand / a
+population beyond the data / cases not yet seen) — branded in course materials as
+the **inquiry compass**. The four deep-dive modules survive as named compass
+positions: Description (nb06, descriptive · data at hand), **Generalization**
+(nb10, descriptive · population — renames "statistical/observational inference"),
+Prediction (nb12, descriptive · unseen cases), Causal reasoning (nb13, causal
+kind). MIDA + diagnosis remain the cross-cutting machinery.
+
+**Rationale:**
+- The old grid stood *beside* the textbook's taxonomy: students read RDSS ch. 7's
+  two-family split while the course taught four families, with no student-facing
+  reconciliation. Deriving the positions from kind × reach makes the course and
+  its book one system.
+- The claim-boundary drills survive stronger: every overclaim is now a **compass
+  crossing without its license** — sample→population licensed by a sampling data
+  strategy (violation: the silent upgrade), observed→unseen licensed by
+  prediction-time honesty + held-out diagnosands (violation: leakage),
+  descriptive→causal licensed by assignment/identification (violations:
+  after-therefore-because, design mimicry). "You buy kind and reach with your
+  data strategy, and you prove the purchase with diagnosis."
+- Prediction gets an honest textbook home: nb12 authors the design-library entry
+  RDSS stops short of — "Observational: predictive" — in the book's own
+  declare-diagnose-redesign format (I = target for unseen units; leakage = a
+  data-strategy violation; held-out performance = a diagnosand; baseline
+  comparison = redesign).
+- EDA is taught as the **explore → declare → confirm loop**, not a topic:
+  upstream M-calibration (nb04), the named anchor (nb06), the §9.1.3
+  whole-procedure rule (nb09), and ch. 22 pivoting/reconciliation (nb17).
+
+**Implication:** `course_config.yaml` now carries `inquiry_framework:` (replacing
+`approaches:`); `planning/INQUIRY_MAP.md` (renamed from QUANTITATIVE_APPROACH_MAP)
+is canonical; the notebook template block is `## 🧭 Inquiry & Claim Boundary` with
+`**Inquiry emphasis:**` (validator updated); the schedule column is `inquiry`
+(renamed from `approach`); the student template is
+`project/templates/INQUIRY_DECLARATION.md` with kind/reach checkboxes and a
+crossing-licenses table; the CLAUDE.md critical rule is "Inquiry-Declaration
+Justification". Notebook filenames (e.g., `nb02_four_approaches*`) were kept for
+link stability — display titles changed everywhere.

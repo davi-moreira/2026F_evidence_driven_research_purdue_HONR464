@@ -30,32 +30,70 @@ calendar:
     poster_deadline: "2026-11-06"   # final poster production + submission
     urc_abstract_deadline: "TBD"    # external; internal completion gate = 2026-10-09 (M20)
 
-# The four quantitative approaches — the recurring, operational spine.
-approaches:
-  description:
-    can_establish: "what is observed in the data at hand; patterns, distributions, differences"
-    cannot_establish: "generalization beyond the sample; causal effects"
-    deep_dive_notebook: "nb06"
-  inference:
-    label: "statistical / observational inference"
-    can_establish: "estimates about a population/process with quantified uncertainty"
-    cannot_establish: "a causal effect (association is not causation)"
-    deep_dive_notebook: "nb10"
-  prediction:
-    label: "predictive modeling"
-    can_establish: "out-of-sample forecasts for new observations, with a baseline + metric"
-    cannot_establish: "explanation or causation; performance != understanding"
-    deep_dive_notebook: "nb12"
-  causal:
-    label: "causal reasoning"
-    can_establish: "an effect of an intervention under a stated identification argument"
-    cannot_establish: "effects when identification assumptions fail or no design supplies leverage"
-    deep_dive_notebook: "nb13"
+# The inquiry compass — the course's operational spine, native to RDSS ch. 7.
+# Classify every research question twice: by KIND (descriptive vs causal) and by
+# REACH (data at hand / a population beyond the data / cases not yet seen).
+# Four named compass positions keep one deep-dive notebook each; CROSSINGS
+# between positions are licensed by design elements (D, A) and proven by
+# diagnosis — every overclaim in the wild is a crossing without its license.
+inquiry_framework:
+  kinds:
+    descriptive: "asks what the world is or was — no counterfactual contrast required"
+    causal: "asks what would differ under an intervention — a counterfactual contrast"
+  reaches:
+    sample: "the data at hand — the units actually observed"
+    population: "a population beyond the data — the units the sampling frame reaches"
+    unseen: "cases not yet seen — future or out-of-sample units"
+  positions:
+    description:
+      kind: "descriptive"
+      reach: "sample"
+      can_establish: "what is observed in the data at hand; patterns, distributions, differences"
+      cannot_establish: "reach beyond these units; causal effects"
+      deep_dive_notebook: "nb06"
+    generalization:
+      label: "generalization (statistical/observational inference)"
+      kind: "descriptive"
+      reach: "population"
+      can_establish: "estimates about a population with quantified uncertainty, for the frame the sampling design reaches"
+      cannot_establish: "a causal effect (association is not causation); reach past the frame"
+      deep_dive_notebook: "nb10"
+    prediction:
+      label: "prediction (descriptive inquiries about unseen cases)"
+      kind: "descriptive"
+      reach: "unseen"
+      can_establish: "out-of-sample forecasts for new observations, against a stated baseline + metric"
+      cannot_establish: "explanation or causation; performance != understanding"
+      deep_dive_notebook: "nb12"
+      note: "RDSS's design library stops at ch. 18; the course authors the missing entry 'Observational: predictive' in the book's own declare-diagnose-redesign format"
+    causal:
+      label: "causal reasoning"
+      kind: "causal"
+      reach: "sample or population (identification licenses the kind-crossing; sampling licenses reach)"
+      can_establish: "an effect of an intervention under a stated identification argument"
+      cannot_establish: "effects when identification assumptions fail or no design supplies leverage"
+      deep_dive_notebook: "nb13"
+  crossings:
+    sample_to_population:
+      license: "a sampling data strategy (RDSS ch. 8) + an uncertainty-bearing answer strategy (ch. 9) + diagnosis (ch. 10)"
+      violation: "the silent upgrade"
+    observed_to_unseen:
+      license: "a prediction-time-honest data strategy (no leakage) + held-out diagnosands + a baseline comparison under redesign"
+      violation: "leakage; assuming tomorrow resembles the training data"
+    descriptive_to_causal:
+      license: "an assignment strategy (RDSS ch. 8, 18) or a defended observational identification argument (ch. 16)"
+      violation: "after-therefore-because; design mimicry"
+  eda:
+    role: "not a compass position — the explore -> declare -> confirm loop"
+    upstream: "nb04 (explore to calibrate M and discover candidate I)"
+    anchor: "nb06 (the loop taught by name)"
+    answer_strategy: "nb09 (RDSS ch. 9.1.3 — declare the whole procedure)"
+    pivoting: "nb17 (RDSS ch. 22 — pivot + reconciliation)"
 
 # The course operating system (Blair/Coppock/Humphreys declaration→diagnosis→redesign,
 # expressed as a recurring student loop).
 operating_system:
-  workflow: [CURIOSITY, GAP, PROBLEM, QUESTION, APPROACH, MODEL, INQUIRY, MEASUREMENT,
+  workflow: [CURIOSITY, GAP, PROBLEM, QUESTION, COMPASS, MODEL, INQUIRY, MEASUREMENT,
              DATA_STRATEGY, ANSWER_STRATEGY, DECLARATION, DIAGNOSIS, REDESIGN,
              ANALYSIS, CLAIM, COMMUNICATION, REFLECTION, REVISION]
   student_loop: [ASK, DEFINE, CLASSIFY, MATCH, DECLARE, BUILD, DIAGNOSE, REDESIGN,

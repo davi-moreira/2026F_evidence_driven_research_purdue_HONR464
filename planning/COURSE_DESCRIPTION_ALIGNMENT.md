@@ -9,8 +9,8 @@ incomplete; if an artifact serves no clause, it needs a justification.
 > insight — no strong background in quantitative methods or computing required.
 > You will learn to identify meaningful gaps in a chosen field, translate a gap
 > into a well-scoped research problem, formulate answerable research questions,
-> choose and justify an appropriate method family (description, statistical
-> inference, predictive modeling, and/or causal reasoning) at a conceptual level,
+> choose and justify an appropriate position on the inquiry compass (description,
+> generalization, prediction, and/or causal reasoning) at a conceptual level,
 > and use computational tools and AI to locate sources, operationalize concepts,
 > analyze evidence, verify results, and document decisions responsibly. You will
 > finish able to design and defend a rigorous research approach, interpret
@@ -24,10 +24,10 @@ incomplete; if an artifact serves no clause, it needs a justification.
 | 3 | "identify meaningful gaps in a chosen field" | M3 (gap typology), M7–M8 (literature) | nb01 §3, nb03 | RDSS ch. 3–4 | M01 (gap), M02 (claim map with placed gap) | milestone bucket (30%) |
 | 4 | "translate a gap into a well-scoped research problem" | M3–M4 | nb01 §3–4 | RDSS ch. 4 | M01 | milestone bucket |
 | 5 | "formulate answerable research questions" | M4 (answerability rubric) | nb01 §4 | RDSS ch. 4 | M01, refined through M03 | milestone bucket |
-| 6 | "choose and justify an appropriate method family … at a conceptual level" | M5–M6 (the skill), deep dives M13–M14, M20–M22, M25–M26, M27–M28 | nb02; nb06, nb10, nb12, nb13 | RDSS ch. 7, 15–18 | M03 (approach declaration), M09 (approach-specific pilot), the `QUANTITATIVE_APPROACH_DECLARATION` template | milestone bucket + defense |
+| 6 | "choose and justify an appropriate position on the inquiry compass … at a conceptual level" | M5–M6 (the skill), deep dives M13–M14, M20–M22, M25–M26, M27–M28 | nb02; nb06, nb10, nb12, nb13 | RDSS ch. 7, 15–18 | M03 (inquiry declaration), M09 (compass-branched pilot), the `INQUIRY_DECLARATION` template | milestone bucket + defense |
 | 7 | "use computational tools and AI to locate sources" | M7 (AI-assisted search + hallucination catch) | nb03 | fresh + RDSS ch. 4 | M02 | milestone bucket + AI-ledger habit |
 | 8 | "operationalize concepts" | M11–M12 (concept→construct→indicator) | nb05 | RDSS ch. 8 (measurement) | M04 | milestone bucket |
-| 9 | "analyze evidence" | M13–M28 (description → inference → prediction → causal; the pilot) | nb06–nb13 | RDSS ch. 8–11, 15–18 | M05–M09 | milestone bucket |
+| 9 | "analyze evidence" | M13–M28 (description → generalization → prediction → causal; the pilot) | nb06–nb13 | RDSS ch. 8–11, 15–18 | M05–M09 | milestone bucket |
 | 10 | "verify results" | every notebook's "After running, verify" blocks; M17 recompute; M39–M40 reproduction exchange | all; esp. nb08, nb18 | RDSS ch. 21–22 | M09 (verification log), M19 (sensitivity), M20 (reproducibility audit with partner sign-off) | dossier bucket (20%) + engagement |
 | 11 | "document decisions responsibly" | decision logs + AI-use ledger, introduced M1, finalized M39 | nb00 (ledger start), nb18 | RDSS ch. 21 | every milestone carries a decision/disclosure block; M20, M23 | dossier bucket |
 | 12 | "design and defend a rigorous research approach" | M22 (full declaration), M23–M24 (diagnose/redesign), M42–M43 (Evidence Defense) | nb10, nb11, nb19 | RDSS ch. 10–11 | M07, M08, M22 | defense component (5%) + milestone bucket |

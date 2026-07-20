@@ -115,11 +115,13 @@ the CSVs with an attribution note (see §8).
 - **Calling Bullshit materials** — absent. Mitigation: optional/light use from public
   callingbullshit.org; flag each CB touch as external provenance.
 - **Confirmed URC abstract deadline** — TBD; internal gate M20 (Oct 9).
-- **Prediction source** — RDSS barely covers prediction; built fresh in `nb12`.
+- **Prediction source** — RDSS stops short of a prediction entry in its design
+  library; `nb12` authors the missing **"Observational: predictive"** entry in the
+  book's own declare–diagnose–redesign format (still fresh scikit-learn content).
 
 ## 10. Which materials drive each unit
 See the notebook table in `COURSE_MASTER_PLAN.md` §5 (per-notebook provenance column)
-and `MEETING_SCHEDULE` (per-meeting). Description/inference/causal draw on RDSS +
+and `MEETING_SCHEDULE` (per-meeting). Description/generalization/causal draw on RDSS +
 `rdss` datasets; prediction is fresh scikit-learn; communication/poster/dossier are
 fresh; declaration→diagnosis→redesign draws on the declaration/diagnosis R files.
 
@@ -135,4 +137,4 @@ transformation ∈ { adapted | translated | extended | newly-constructed-from-so
 Example: `provenance: declaration_18.1.R | RDSS ch.18 | declaration_18.1 (two-arm trial) |
 translated (R→Python, DeclareDesign→numpy sim)`. Empirical claims trace to a real,
 retrievable source; results are verified before reported; decisions (which source,
-which operationalization, which approach, and *why*) are documented, not just outcomes.
+which operationalization, which compass position, and *why*) are documented, not just outcomes.

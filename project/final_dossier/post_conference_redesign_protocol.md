@@ -17,7 +17,7 @@ in the study you'd run again.
 ## Materials
 
 - Your coded conference tally (M17 output).
-- Your design declaration (`project/templates/QUANTITATIVE_APPROACH_DECLARATION.md`)
+- Your inquiry declaration (`project/templates/INQUIRY_DECLARATION.md`)
   and your DAG / inquiry from nb11.
 - The M18 redesign-plan template.
 

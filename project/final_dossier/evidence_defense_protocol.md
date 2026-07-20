@@ -10,8 +10,8 @@ due Fri Dec 11.*
 ## Purpose
 
 Under cross-examination, does your evidence hold? The defense is your claim
-ledger, performed: you defend not just WHAT you claim but WHY your approach,
-data, and checks license it — and you concede gracefully where the ledger says
+ledger, performed: you defend not just WHAT you claim but WHY your compass
+position, data, and checks license it — and you concede gracefully where the ledger says
 concede. The room is rigorous, respectful, and ledger-grounded. The ledger is
 your shield; it is also the standard you are held to.
 
@@ -26,7 +26,7 @@ your shield; it is also the standard you are held to.
 Ten minutes, three movements — in this order:
 
 1. **Claims (\~3 min)** — your headline claim and its boundary: what you assert, and the exact edge you stop at.
-2. **Choices (\~4 min)** — why this approach, this data strategy, this operationalization; the road taken and the road not taken (MIDA).
+2. **Choices (\~4 min)** — why this compass position, this data strategy, this operationalization; the road taken and the road not taken (MIDA).
 3. **Verification (\~3 min)** — how you checked: sensitivity survival, the signed reproduction, sources confirmed real. Verification is the spine, not an afterthought.
 
 ## The 5-minute cross-examination norms
@@ -113,7 +113,7 @@ its spine** — every number traces.
 ```
 FINAL DOSSIER CHECKLIST — M23         Name: __________  Date: Dec 9
 
-  ☐ Question & approach in FINAL form (declaration current, boundary stated)
+  ☐ Question & inquiry in FINAL form (declaration current, boundary stated)
   ☐ Verified source map (every source real, retrieved, and cited)
   ☐ Design declaration (M/I/D/A, with the road not taken)
   ☐ Diagnosis + redesign history (feedback → MIDA, NOW vs NEXT)

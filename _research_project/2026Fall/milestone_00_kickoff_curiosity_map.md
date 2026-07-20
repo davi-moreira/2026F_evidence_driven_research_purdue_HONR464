@@ -162,4 +162,4 @@ next week rather than points to reclaim.
 *This is the first milestone — the research project begins here. Next:
 [M01 — Research Question Pitch](milestone_01_research_question_pitch.md) —
 you funnel one of these three curiosities into a single answerable question with
-a candidate approach.*
+a candidate compass position.*

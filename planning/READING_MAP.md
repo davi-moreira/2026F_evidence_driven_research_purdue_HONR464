@@ -80,7 +80,7 @@ Assignments below say "skim" or "read" deliberately.
 | M6 | Criminal machine learning | prediction ≠ understanding |
 | M14 | Misleading axes | honest visualization |
 | M17 (async) | student's choice from the CB case-study index | claim diagnosis practice |
-| M21 | Correlation ≠ causation | the inference boundary |
+| M21 | Correlation ≠ causation | the descriptive → causal boundary |
 | M25–M26 | Big-data / algorithm hubris; machine bias | prediction's limits |
 
 Rule (locked): CB is optional garnish, never a spine; every CB discussion ends

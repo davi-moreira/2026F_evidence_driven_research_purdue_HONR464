@@ -27,9 +27,9 @@ Due: **Friday, September 4, 11:59 PM** (you present in class that day).
 
 This milestone turns your M00 Curiosity Map into the sentence that will govern
 your semester: an **answerable research question**, anchored in a **bounded
-gap**, with a first hypothesis about which of the four quantitative approaches
-it demands. You also deliver it aloud — a 2-minute pitch to the class, who
-will vote on the approach your question seems to want (nb02's classification
+gap**, with a first hypothesis about where it sits on the inquiry compass
+(kind + reach). You also deliver it aloud — a 2-minute pitch to the class, who
+will vote on the compass position your question seems to want (nb02's classification
 skill, applied to you). Nothing here is final: M03 will re-declare the
 question with full Model & Inquiry machinery. What is graded is the quality of
 the *current* commitment, not clairvoyance.
@@ -56,10 +56,11 @@ The question in its best current form, followed by your own scoring against
 the four answerability marks — **units, outcome, comparison, scope** — with
 one line each saying where the mark is met or still weak.
 
-### 4. The approach hunch (≈1 paragraph)
+### 4. The compass hunch (≈1 paragraph)
 
-Which of the four approaches (description / statistical inference /
-predictive modeling / causal reasoning) you SUSPECT your question wants, and
+Which of the four compass positions — Description (descriptive · data at hand),
+Generalization (descriptive · population), Prediction (descriptive · unseen
+cases), or Causal reasoning (causal) — you SUSPECT your question wants, and
 why — plus the class's Friday vote if it differed from your hunch, and your
 response to the difference.
 
@@ -89,7 +90,7 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 |---|---|---|---|---|
 | **Question answerability** (30) | All four marks visibly met; the question can be *wrong* (26–30) | Three marks met; one repairable weakness, honestly flagged (21–25) | Question present but two or more marks missing or fuzzy (13–20) | Topic or values question posed as a research question (0–12) |
 | **Gap quality & integrity** (25) | Bounded claim, correctly typed, grounded in retrieved real sources (22–25) | Bounded and typed; sourcing thin but real (18–21) | Absolute-absence claim, or type misfits the evidence (11–17) | No gap argument, or an unverifiable/unretrievable source (0–10) |
-| **Approach reasoning** (20) | Hunch defended by pointing at the question's own words; engages the class vote thoughtfully (18–20) | Reasonable hunch with generic defense (14–17) | Hunch asserted without reasoning (9–13) | Missing or contradicts the question outright (0–8) |
+| **Compass reasoning** (20) | Hunch defended by pointing at the question's own words; engages the class vote thoughtfully (18–20) | Reasonable hunch with generic defense (14–17) | Hunch asserted without reasoning (9–13) | Missing or contradicts the question outright (0–8) |
 | **Pitch delivery & feedback incorporation** (15) | Within time, clear arc, revision notes show the feedback landed (13–15) | Delivered with minor overruns or loose structure (10–12) | Read verbatim / well over time / feedback ignored (6–9) | Not delivered without arrangement (0–5) |
 | **Craft & disclosure** (10) | On-format, on-time, complete AI-disclosure block (9–10) | Minor format lapses (7–8) | Missing components or sloppy citations (4–6) | Missing disclosure block (0–3) |
 

@@ -75,7 +75,7 @@ def main() -> None:
     labels = {
         "driving_question": "Driving question",
         "secondary_questions": "Secondary questions",
-        "approach": "Approach",
+        "inquiry": "Inquiry",
         "claim_permitted": "Claim PERMITTED",
         "claim_not_permitted": "Claim NOT permitted",
         "rdss_reading": "RDSS reading",

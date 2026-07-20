@@ -10,13 +10,13 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** How do we come to know something well enough to defend it?
 - **Secondary questions:** What will you build this semester? What does the AI policy require of every deliverable? How does a notebook-driven MWF seminar work?
-- **Approach:** all (framing)
+- **Inquiry:** all positions (framing)
 - **Claim PERMITTED:** "I can state what evidence WOULD be needed to support a claim" — the course's opening move.
 - **Claim NOT permitted:** Any empirical claim without a stated evidence base — including claims an AI tool produced.
 - **RDSS reading:** RDSS ch. 1 (Preface) + ch. 2 'What is a research design?' — skim before Wednesday (book.declaredesign.org)
 - **Other material:** nb00 (Colab); course website; syllabus; Brightspace orientation
 - **Provenance:** brief §3 + RDSS ch.2 | course framing | MIDA overview (concept only) | newly-constructed-from-source-concept
-- **Concepts:** evidence-driven research; the four approaches (preview); MIDA (preview); Ask → Verify → Document; claim ledger
+- **Concepts:** evidence-driven research; the inquiry compass (preview); MIDA (preview); Ask → Verify → Document; claim ledger
 - **Python dependency:** Colab basics only (run a cell, save a copy)
 - **Dataset / simulation:** none (one toy claim-check cell)
 - **50-minute dynamic:** 0–5 welcome + names + one-line curiosities; 5–13 the course promise: from curiosity to a defensible claim (map on board); 13–20 live demo: an AI tool fabricates a citation, we catch it (Ask → Verify → Document); 20–35 hands-on: open nb00 in Colab, run the readiness cells, save a copy to Drive; 35–45 pair task: swap one claim you believe and name the evidence behind it; 45–50 M00 kickoff brief + Claim Ticket exit.
@@ -38,7 +38,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** What makes a curiosity worth a semester of your life?
 - **Secondary questions:** How do researchers move from 'interesting' to 'studyable'? What is the difference between a topic and a question?
-- **Approach:** all (framing)
+- **Inquiry:** all positions (framing)
 - **Claim PERMITTED:** "This topic is studyable because evidence about it can, in principle, be gathered."
 - **Claim NOT permitted:** "My topic matters, so any question about it is a research question." (Topics are not questions.)
 - **RDSS reading:** RDSS ch. 2 'What is a research design?' (book.declaredesign.org)
@@ -66,7 +66,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** How do you find the hole in a field's knowledge — and how do you know it is real?
 - **Secondary questions:** What kinds of gaps exist (evidence, population, measurement, method, contradiction)? How is a gap different from 'nobody has done exactly this'?
-- **Approach:** all (framing)
+- **Inquiry:** all positions (framing)
 - **Claim PERMITTED:** "Based on the sources I examined, X has not been established for population/context Y" — a bounded gap claim.
 - **Claim NOT permitted:** "Nothing is known about my topic." (An absolute absence claim you cannot verify.)
 - **RDSS reading:** RDSS ch. 3 'Research design principles' (book.declaredesign.org)
@@ -94,7 +94,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** What separates a question evidence can answer from one it cannot?
 - **Secondary questions:** What are the marks of answerability (defined units, defined comparison, observable outcomes, bounded scope)? How specific is too specific?
-- **Approach:** all (framing)
+- **Inquiry:** all positions (framing)
 - **Claim PERMITTED:** "My question names its units, outcome, comparison, and scope — evidence could in principle answer it."
 - **Claim NOT permitted:** "Is X good or bad?" posed as a research question (a values question is not answerable by evidence alone).
 - **RDSS reading:** RDSS ch. 4 'Getting started' (book.declaredesign.org)
@@ -118,62 +118,62 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Instructor prep:** Select 4 sample questions spanning the rubric failure modes; prep the live-upgrade example.
 - **Risks / contingency:** Questions converge on unmeasurable outcomes → pull the measurement-preview card forward from nb05 and flag it as coming attractions.
 
-### M5 — Wed 2026-09-02 (in-person) — The four approaches I: description and inference
+### M5 — Wed 2026-09-02 (in-person) — The inquiry compass I: descriptive inquiries — description and generalization
 
 - **Driving question:** What kind of answer does your question actually ask for?
 - **Secondary questions:** What can a description establish, and where does it stop? What does it mean to generalize with uncertainty?
-- **Approach:** description + inference (the classification skill)
-- **Claim PERMITTED:** Description: "in these data, X." Inference: "in the population, plausibly X, with stated uncertainty."
+- **Inquiry:** description + generalization (the compass skill)
+- **Claim PERMITTED:** Description: "in these data, X." Generalization: "in the population my frame reaches, plausibly X, with stated uncertainty."
 - **Claim NOT permitted:** Treating a pattern in the data at hand as if it automatically holds beyond the sample — or as if it were causal.
 - **RDSS reading:** RDSS ch. 7 'Defining the inquiry' (descriptive vs causal inquiries; book.declaredesign.org)
 - **Other material:** nb02 §1–2 (Colab)
-- **Provenance:** RDSS ch.7 | descriptive inquiries vs causal inquiries | classification recast as the 4-approach skill | extended
-- **Concepts:** approach classification; sample vs population; descriptive inquiry; uncertainty (preview); claim boundaries
+- **Provenance:** RDSS ch.7 | descriptive inquiries vs causal inquiries | classification recast as the compass skill (kind × reach) | extended
+- **Concepts:** compass classification (kind × reach); sample vs population; descriptive inquiry; uncertainty (preview); claim boundaries
 - **Python dependency:** pandas (read a CSV, value_counts, mean) — first real code
 - **Dataset / simulation:** lapop_brazil.csv (first look: one variable, sample vs population framing)
-- **50-minute dynamic:** 0–5 pitch-prep pulse check + one Claim Ticket callback; 5–13 mini-lesson: the 2×2 of the four approaches, today the left column (description, inference); 13–25 hands-on: in nb02 compute one honest descriptive summary of lapop_brazil and write its claim; 25–33 pause-and-predict: will the sample pattern hold in the population? students commit in writing before the discussion; 33–43 classification drill rounds 1–2: sort question cards into description vs inference; 43–48 project transfer: which column does YOUR question live in (so far)?; 48–50 exit ticket.
+- **50-minute dynamic:** 0–5 pitch-prep pulse check + one Claim Ticket callback; 5–13 mini-lesson: the compass — kind (descriptive vs causal) × reach (data at hand / population / unseen); today the descriptive kind at two reaches (description, generalization); 13–25 hands-on: in nb02 compute one honest descriptive summary of lapop_brazil and write its claim; 25–33 pause-and-predict: will the sample pattern hold in the population? students commit in writing before the discussion; 33–43 classification drill rounds 1–2: sort question cards by reach — the data at hand vs a population; 43–48 project transfer: where on the compass does YOUR question live (so far)?; 48–50 exit ticket.
 - **Hands-on activity:** Compute a descriptive summary of one lapop_brazil variable in nb02 and write the exact claim it permits.
-- **Practice:** 📝 nb02 practice: 8 question cards, sort into description vs inference and name the giveaway word in each.
+- **Practice:** 📝 nb02 practice: 8 question cards, sort by reach (data at hand vs population) and name the giveaway word in each.
 - **Discussion prompt:** Why is 'most people in this survey…' a different claim from 'most Brazilians…'? What would license the second?
 - **Project connection:** First-pass classification of each student's own M01 question.
-- **Milestone developed:** M01 — Research Question Pitch (approach candidate added)
-- **Milestone work time:** 5 min (classify own question + note the approach in the pitch draft)
+- **Milestone developed:** M01 — Research Question Pitch (compass candidate added)
+- **Milestone work time:** 5 min (classify own question by kind + reach; note it in the pitch draft)
 - **Milestone presentation/review:** none (drill + prep day)
 - **Student prep:** M01 pitch drafted; laptop ready for first real pandas work.
 - **Student artifact:** One executed descriptive summary + a committed pre-run prediction in nb02
-- **Exit ticket:** Claim Ticket #5: my question is (for now) a ___ question, because the answer it wants is ___.
+- **Exit ticket:** Claim Ticket #5: my question is (for now) a ___ inquiry reaching ___, because the answer it wants is ___.
 - **Homework / next milestone:** Rehearse the 2-minute M01 pitch for Friday; finish nb02 §1–2 cells if not done in class.
 - **Instructor prep:** Print two rounds of question cards; verify lapop_brazil.csv loads from the repo raw URL in Colab.
 - **Risks / contingency:** pandas friction dominates → shrink the hands-on to the provided one-liner cells and move the second drill round to Friday.
 
-### M6 — Fri 2026-09-04 (in-person) — The four approaches II: prediction and causation — and the M01 pitches
+### M6 — Fri 2026-09-04 (in-person) — The inquiry compass II: prediction, causal inquiries — and the M01 pitches
 
 - **Driving question:** Is your question asking to forecast the future, or to change it?
 - **Secondary questions:** Why does predicting well not require understanding? Why does 'what if we intervened?' demand a different kind of evidence entirely?
-- **Approach:** prediction + causal (the classification skill)
+- **Inquiry:** prediction + causal (the compass skill)
 - **Claim PERMITTED:** Prediction: "for new cases, expect Ŷ, judged against a baseline." Causal: "the intervention changes Y under a stated identification argument."
 - **Claim NOT permitted:** "The model predicts well, so X causes Y" — or any causal claim with no identification argument.
 - **RDSS reading:** RDSS ch. 7 (continued) + Part III opener (design library: observational/experimental × descriptive/causal)
 - **Calling Bullshit (optional):** optional: callingbullshit.org 'Criminal machine learning' case study (prediction ≠ understanding)
 - **Other material:** nb02 §3–4 (Colab)
 - **Provenance:** RDSS ch.7 + Part III framing | inquiry types | prediction column built fresh (RDSS treats it lightly) | extended
-- **Concepts:** prediction vs explanation; baseline; counterfactuals (first exposure); identification (first exposure); the full 4-approach map
+- **Concepts:** prediction vs explanation; baseline; counterfactuals (first exposure); identification (first exposure); the full compass (kind × reach)
 - **Python dependency:** none new (one provided demo cell)
 - **Dataset / simulation:** 10-row toy forecast demo (inline, seeded)
-- **50-minute dynamic:** 0–4 settle + pitch order draw; 4–12 mini-lesson: the right column of the 2×2 (prediction, causal) with the criminal-ML cautionary case; 12–20 classification drill round 3: all four approaches now in play; 20–42 M01 PITCHES: five 2-minute pitches, each followed by 2 minutes of structured class response (the approach the class thinks the question wants + one risk); 42–48 self-revision: annotate your pitch with what you heard; 48–50 exit ticket + M01 submission reminder.
-- **Hands-on activity:** Classification drill with all four approaches; live approach-vote after each pitch.
-- **Practice:** 📝 nb02 practice: for 4 questions, name the approach AND the claim that would overreach it.
+- **50-minute dynamic:** 0–4 settle + pitch order draw; 4–12 mini-lesson: the remaining compass positions — prediction (descriptive · unseen cases) and the causal kind — with the criminal-ML cautionary case; 12–20 classification drill round 3: the whole compass now in play; 20–42 M01 PITCHES: five 2-minute pitches, each followed by 2 minutes of structured class response (the compass position the class thinks the question wants + one risk); 42–48 self-revision: annotate your pitch with what you heard; 48–50 exit ticket + M01 submission reminder.
+- **Hands-on activity:** Classification drill across the whole compass; live compass-vote after each pitch.
+- **Practice:** 📝 nb02 practice: for 4 questions, name the kind + reach AND the claim that would overreach it.
 - **Discussion prompt:** A model forecasts campus course demand almost perfectly. What can the registrar do with that — and what can't they conclude?
-- **Project connection:** Every project question gets a class-voted approach hypothesis to test against the coming units.
+- **Project connection:** Every project question gets a class-voted compass hypothesis (kind + reach) to test against the coming units.
 - **Milestone developed:** M01 — Research Question Pitch (presented + submitted)
 - **Milestone work time:** 6 min (post-pitch self-revision)
-- **Milestone presentation/review:** M01 presented: 2-minute pitch + structured class approach-vote and risk feedback
+- **Milestone presentation/review:** M01 presented: 2-minute pitch + structured class compass-vote and risk feedback
 - **Student prep:** 2-minute M01 pitch rehearsed; nb02 §1–2 complete.
 - **Student artifact:** Delivered pitch + annotated revision notes
-- **Exit ticket:** Claim Ticket #6: the approach my classmates voted for my question, and whether I agree (one reason).
-- **Homework / next milestone:** Submit M01 (pitch deck/notes + question + gap + candidate approach) tonight 11:59 PM. Read RDSS ch. 4 §literature; next week: sources and citation integrity.
-- **Instructor prep:** Timer + pitch rubric sheets; queue the optional CB case link; prepare approach-vote cards.
-- **Risks / contingency:** Pitches run long → cap responses at one strength + the approach vote; move risk feedback to written notes passed to the presenter.
+- **Exit ticket:** Claim Ticket #6: the compass position my classmates voted for my question, and whether I agree (one reason).
+- **Homework / next milestone:** Submit M01 (pitch deck/notes + question + gap + candidate compass position) tonight 11:59 PM. Read RDSS ch. 4 §literature; next week: sources and citation integrity.
+- **Instructor prep:** Timer + pitch rubric sheets; queue the optional CB case link; prepare compass-vote cards.
+- **Risks / contingency:** Pitches run long → cap responses at one strength + the compass vote; move risk feedback to written notes passed to the presenter.
 
 ## Phase 2 — Literature, model, inquiry, measurement
 
@@ -181,7 +181,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** How do you find what is actually known — and how do you know a citation is real?
 - **Secondary questions:** Where do scholarly claims live (journals, working papers, reports, data)? How does AI-assisted search fail, and how do you catch it?
-- **Approach:** description + inference (appraising evidence claims)
+- **Inquiry:** description + generalization (appraising evidence claims)
 - **Claim PERMITTED:** "Source S exists, I retrieved it, and it claims X on the basis of evidence E."
 - **Claim NOT permitted:** Citing any source you have not personally retrieved and checked — however plausible the AI's summary of it sounds.
 - **RDSS reading:** RDSS ch. 4 'Getting started' (situating a design in a literature)
@@ -209,7 +209,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Can you draw the argument of a literature — claims, evidence, and the hole your project fills?
 - **Secondary questions:** How do you extract a source's central claim and evidence type? What does disagreement between sources look like on a map?
-- **Approach:** description + inference (mapping evidence claims)
+- **Inquiry:** description + generalization (mapping evidence claims)
 - **Claim PERMITTED:** "Across my verified sources, claims cluster as A vs B, and none address C — my gap."
 - **Claim NOT permitted:** "The literature proves…" (a map of claims is not itself proof, and unread sources count for nothing).
 - **RDSS reading:** RDSS ch. 4 (continued)
@@ -237,16 +237,16 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** What must the world be like for your question to have an answer?
 - **Secondary questions:** What is a model in the MIDA sense? What are potential outcomes? How does a DAG say 'I believe X could affect Y'?
-- **Approach:** causal + inference (model-building)
+- **Inquiry:** causal + generalization (model-building)
 - **Claim PERMITTED:** "Under my stated model of the world, the quantity I want exists and is defined."
 - **Claim NOT permitted:** Any claim that smuggles in a model you never stated ("the effect of X" with no world in which X varies).
 - **RDSS reading:** RDSS ch. 6 'Specifying the model' (book.declaredesign.org)
 - **Other material:** nb04 §1–2 (Colab); make_dag_df utility (translated)
 - **Provenance:** RDSS ch.6 + utilities/make_dag_df.R | specifying the model | potential outcomes + DAG helper | translated (R→Python)
-- **Concepts:** MIDA: Model; possible worlds; potential outcomes Y(1), Y(0); DAG nodes/edges; what a model commits you to
+- **Concepts:** MIDA: Model; possible worlds; potential outcomes Y(1), Y(0); DAG nodes/edges; what a model commits you to; EDA upstream — exploring real data to calibrate the model and surface candidate inquiries
 - **Python dependency:** numpy (simulate a tiny world), networkx (draw a 3-node DAG from an edge list)
 - **Dataset / simulation:** inline simulated world (seeded, 100 units, one cause one outcome)
-- **50-minute dynamic:** 0–5 weekend-reading pulse + one M02 map highlight; 5–13 mini-lesson: a model is a claim about how the world could be — potential outcomes on the board with a 4-unit toy; 13–20 pause-and-predict: in the toy world, can we ever see both Y(1) and Y(0) for one unit? commit before reveal; 20–33 hands-on: nb04 simulate the world, reveal one potential outcome per unit, feel the fundamental problem; 33–43 DAG lab: draw YOUR project's 3-node DAG (cause, outcome, one lurking third variable); 43–48 pair swap: challenge one arrow in your partner's DAG; 48–50 exit ticket.
+- **50-minute dynamic:** 0–5 weekend-reading pulse + one M02 map highlight; 5–13 mini-lesson: a model is a claim about how the world could be — potential outcomes on the board with a 4-unit toy; 13–20 pause-and-predict: in the toy world, can we ever see both Y(1) and Y(0) for one unit? commit before reveal; 20–33 hands-on: nb04 first explore lapop_brazil for two minutes to give the model real-world ranges (EDA as M-calibration, named), then simulate the world, reveal one potential outcome per unit, feel the fundamental problem; 33–43 DAG lab: draw YOUR project's 3-node DAG (cause, outcome, one lurking third variable); 43–48 pair swap: challenge one arrow in your partner's DAG; 48–50 exit ticket.
 - **Hands-on activity:** Simulate a 100-unit world with both potential outcomes, then reveal only one per unit — the fundamental problem of causal inference, executed.
 - **Practice:** 📝 nb04 practice: for 3 scenarios, write the potential-outcomes pair the question implicitly compares.
 - **Discussion prompt:** Your DAG has an arrow your partner's doesn't. What evidence — even in principle — could settle whose world is closer to true?
@@ -265,7 +265,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** If a genie handed you the truth, what NUMBER or PATTERN would it hand you?
 - **Secondary questions:** What is an inquiry/estimand? How do descriptive and causal inquiries differ? Why must the inquiry be defined before data arrive?
-- **Approach:** causal + inference (estimand thinking)
+- **Inquiry:** causal + generalization (estimand thinking)
 - **Claim PERMITTED:** "My inquiry is [quantity], defined over [units/world] — stated before seeing outcome data."
 - **Claim NOT permitted:** Choosing the quantity AFTER browsing results (inquiry shopping), then presenting it as the question you always had.
 - **RDSS reading:** RDSS ch. 7 'Defining the inquiry' (book.declaredesign.org); declaration_7.1
@@ -293,7 +293,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** How does an abstract idea become a number without losing its soul?
 - **Secondary questions:** What are concept, construct, indicator? What are validity and reliability, intuitively? Where does measurement live inside MIDA?
-- **Approach:** description + inference (measurement)
+- **Inquiry:** description + generalization (measurement)
 - **Claim PERMITTED:** "Indicator I measures construct C for concept X, and here is why the mapping is defensible."
 - **Claim NOT permitted:** "My variable measures happiness" (naming a column after a concept does not make it the concept).
 - **RDSS reading:** RDSS ch. 8 'Crafting a data strategy' — measurement sections (book.declaredesign.org)
@@ -321,7 +321,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** What happens to your answer when your measure is a little bit wrong?
 - **Secondary questions:** What do random vs systematic measurement error do differently? How do you argue a measure is good enough?
-- **Approach:** description + inference (measurement)
+- **Inquiry:** description + generalization (measurement)
 - **Claim PERMITTED:** "With measurement error of the kind I simulated, my conclusion would move by roughly this much."
 - **Claim NOT permitted:** "My measure is imperfect, so nothing can be learned" — or its twin, "the measure is what it is, so ignore the error."
 - **RDSS reading:** RDSS ch. 8 measurement sections (continued)
@@ -349,16 +349,16 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** What is actually IN your data — and how do you summarize it without lying?
 - **Secondary questions:** Which summary fits which variable type? What do distributions show that averages hide? What is a descriptive inquiry, formally?
-- **Approach:** DESCRIPTION (deep dive)
+- **Inquiry:** DESCRIPTION — descriptive · data at hand (deep dive)
 - **Claim PERMITTED:** "In these 10,000 resampled LAPOP Brazil interviews, X% report Y; the distribution looks like Z."
 - **Claim NOT permitted:** "Brazilians believe Y" (generalization) or "Y because of Z" (causation) — description stops at the data's edge.
 - **RDSS reading:** RDSS ch. 15 'Observational: descriptive' (book.declaredesign.org)
 - **Other material:** nb06 §1–2 (Colab)
 - **Provenance:** RDSS ch.15 + rdss lapop_brazil | observational descriptive designs | dataset shipped as CSV (MIT, attributed); 10k resample caveat taught | adapted
-- **Concepts:** variable types; distributions; center + spread; group summaries; the descriptive claim boundary; the lapop_brazil resampling caveat
+- **Concepts:** variable types; distributions; center + spread; group summaries; the descriptive claim boundary; the explore → declare → confirm loop (EDA anchor — an exploratory finding is not yet a confirmed claim); the lapop_brazil resampling caveat
 - **Python dependency:** pandas (describe, groupby), matplotlib (hist, bar)
 - **Dataset / simulation:** lapop_brazil.csv (10,000-row resample — planning use only, taught as a provenance lesson)
-- **50-minute dynamic:** 0–5 M04 pulse + why description comes first among the four; 5–12 mini-lesson: summaries as compressions that must not distort — one variable summarized three ways; 12–18 pause-and-predict: sketch the shape of the trust-in-government distribution before plotting; 18–33 hands-on: nb06 explore lapop_brazil — types, distributions, one group comparison; 33–41 claim clinic: write 3 descriptive claims from your output, then tighten each to exactly what the data permit; 41–47 project transfer: what would an honest descriptive table of YOUR future data contain?; 47–50 exit ticket.
+- **50-minute dynamic:** 0–5 M04 pulse + why description comes first on the compass; 5–12 mini-lesson: summaries as compressions that must not distort — one variable summarized three ways; 12–18 pause-and-predict: sketch the shape of the trust-in-government distribution before plotting; 18–33 hands-on: nb06 explore lapop_brazil — types, distributions, one group comparison — then name the loop just performed: explore → declare → confirm, and mark which findings are still exploratory; 33–41 claim clinic: write 3 descriptive claims from your output, then tighten each to exactly what the data permit; 41–47 project transfer: what would an honest descriptive table of YOUR future data contain?; 47–50 exit ticket.
 - **Hands-on activity:** Explore lapop_brazil: variable types, distributions, one honest group comparison — and state each result's claim.
 - **Practice:** 📝 nb06 practice: three flawed descriptive claims about lapop_brazil — repair each to what the data actually permit.
 - **Discussion prompt:** The file is a 10,000-row RESAMPLE of the real survey. What is it good for, and what would be dishonest to do with it?
@@ -377,7 +377,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** When does a chart clarify, and when does it deceive?
 - **Secondary questions:** What are the classic distortions (truncated axes, cherry-picked bins, 3-D junk)? What makes a visualization defensible?
-- **Approach:** DESCRIPTION (deep dive)
+- **Inquiry:** DESCRIPTION — descriptive · data at hand (deep dive)
 - **Claim PERMITTED:** "This chart shows the pattern AND its context (scale, base, missing cases) — a reader could re-draw it from my description."
 - **Claim NOT permitted:** A chart whose visual impression says more than the numbers do (the impression IS a claim, and it must be permitted too).
 - **RDSS reading:** RDSS ch. 15 (continued; descriptive design figures)
@@ -408,7 +408,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Who is in your data, who is not, and who decided?
 - **Secondary questions:** What is a sampling procedure? What do random and convenience samples each license? What is selection, and why is it the quiet killer of claims?
-- **Approach:** inference (data strategy)
+- **Inquiry:** generalization (data strategy)
 - **Claim PERMITTED:** "My data strategy samples [units] by [procedure], so results speak to [population] with stated uncertainty."
 - **Claim NOT permitted:** Convenience-sample results narrated as population facts ("students in my dorm" ≠ "college students").
 - **RDSS reading:** RDSS ch. 8 'Crafting a data strategy' §8.1 sampling (book.declaredesign.org); declaration_2.1
@@ -436,7 +436,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** If your design touches people, what do you owe them?
 - **Secondary questions:** What is treatment assignment (vs sampling)? What makes a design feasible for ONE undergraduate semester? What ethical review does student research need?
-- **Approach:** causal + inference (data strategy)
+- **Inquiry:** causal + generalization (data strategy)
 - **Claim PERMITTED:** "My design is feasible by [date] with [resources], and its human-subjects footprint is [none / minimal-risk, handled by X]."
 - **Claim NOT permitted:** "It's just a class project, so ethics review doesn't apply" — or a design whose data cannot exist by November.
 - **RDSS reading:** RDSS ch. 8 §assignment sections (book.declaredesign.org)
@@ -463,20 +463,20 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 ### M17 — Fri 2026-10-02 (async-online) — ASYNC — Diagnose a misleading claim (and preview the answer strategy)
 
 - **Driving question:** A published claim crossed your feed. How do you take it apart — kindly, and with evidence?
-- **Secondary questions:** Which of the four approaches was the claim using? What would the claim need to be true? What can still be learned from a flawed study?
-- **Approach:** inference (claim diagnosis)
+- **Secondary questions:** Where on the compass was the claim operating — what kind, what reach? What would the claim need to be true? What can still be learned from a flawed study?
+- **Inquiry:** generalization (claim diagnosis)
 - **Claim PERMITTED:** "The claim as stated needs [design]; the study ran [design]; therefore what stands is the weaker claim X."
 - **Claim NOT permitted:** Reflexive debunking ("this study is trash") with no statement of what evidence WOULD settle the question.
 - **RDSS reading:** RDSS ch. 9 'Choosing an answer strategy' — opening sections (preview for Monday)
 - **Calling Bullshit (optional):** optional: one callingbullshit.org case study of your choice (linked menu in nb08)
 - **Other material:** nb08 — fully self-contained async module (Colab)
-- **Provenance:** brief §12 P3 + fresh claim-diagnosis protocol; optional CB public cases | async module | 4-approach diagnosis worksheet | newly-constructed-from-source-concept
-- **Concepts:** claim anatomy (claim/evidence/warrant); approach classification in the wild; charitable reconstruction; the diagnosis habit
+- **Provenance:** brief §12 P3 + fresh claim-diagnosis protocol; optional CB public cases | async module | compass diagnosis worksheet | newly-constructed-from-source-concept
+- **Concepts:** claim anatomy (claim/evidence/warrant); compass classification in the wild; charitable reconstruction; the diagnosis habit
 - **Python dependency:** pandas (one small recompute of the claim's own numbers)
 - **Dataset / simulation:** embedded mini-table reproducing the case's published numbers
-- **50-minute dynamic:** ASYNC (~50 min self-paced): 0–8 watch/read the case setup in nb08; 8–15 classify the claim's approach and write the claim it NEEDED to make vs the claim it MADE; 15–30 recompute the case's central number from its own table, check the arithmetic and the framing; 30–42 write the structured diagnosis (what stands, what falls, what evidence would settle it); 42–50 answer-strategy preview cells + submit the module artifact.
+- **50-minute dynamic:** ASYNC (~50 min self-paced): 0–8 watch/read the case setup in nb08; 8–15 place the claim on the compass (kind + reach) and write the claim it NEEDED to make vs the claim it MADE; 15–30 recompute the case's central number from its own table, check the arithmetic and the framing; 30–42 write the structured diagnosis (what stands, what falls, what evidence would settle it); 42–50 answer-strategy preview cells + submit the module artifact.
 - **Hands-on activity:** Recompute a published claim's central number from its own data table; verify or correct it.
-- **Practice:** 📝 nb08 practice: classify 3 headlines by approach and by the claim each would be permitted to make.
+- **Practice:** 📝 nb08 practice: classify 3 headlines by kind + reach and by the claim each would be permitted to make.
 - **Discussion prompt:** (async board post) Post your diagnosis's single most surprising line; reply to one classmate's with a steel-man.
 - **Project connection:** The diagnosis protocol practiced here is exactly what M08 will do to YOUR OWN design.
 - **Milestone developed:** M05 — Data Strategy (async development: full draft assembled)
@@ -493,16 +493,16 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** By what exact procedure will your data be turned into your answer?
 - **Secondary questions:** What is an estimator vs an estimate vs an estimand? Why is difference-in-means an answer strategy? What makes a strategy match an inquiry?
-- **Approach:** inference + causal (answer strategy)
+- **Inquiry:** generalization + causal (answer strategy)
 - **Claim PERMITTED:** "My answer strategy is [procedure]; applied to my data it yields [estimate] of my declared inquiry."
 - **Claim NOT permitted:** Reporting a number with no named procedure behind it ("the analysis shows…" — WHICH analysis?).
 - **RDSS reading:** RDSS ch. 9 'Choosing an answer strategy' (book.declaredesign.org); declaration_9.1
 - **Other material:** nb09 §1–2 (Colab); M05 feedback returned
 - **Provenance:** RDSS ch.9 + declaration_9.1.R | choosing an answer strategy | estimator declaration translated | translated (R→Python)
-- **Concepts:** estimand / estimator / estimate triad; difference-in-means; matching strategy to inquiry; A of MIDA begins
+- **Concepts:** estimand / estimator / estimate triad; difference-in-means; matching strategy to inquiry; A of MIDA begins; the answer strategy is the WHOLE procedure (RDSS §9.1.3 — exploration that influenced the choice is part of A)
 - **Python dependency:** numpy/pandas (hand-rolled difference-in-means on simulated data)
 - **Dataset / simulation:** inline simulated experiment (seed 464) with known truth from the nb04 world
-- **50-minute dynamic:** 0–5 async-week debrief: best diagnosis lines read aloud; 5–13 mini-lesson: the triad (estimand/estimator/estimate) — the genie's number, the recipe, the dish; 13–20 pause-and-predict: our recipe on 500 simulated units — how close to the hidden truth will it land? commit; 20–34 hands-on: nb09 compute difference-in-means by hand-rolled pandas, unhide the nb04 truth, measure the miss; 34–44 M05 mini-presentations: each student states sampling + assignment in 90 seconds, class names the matching answer strategy; 44–48 revise M05 from what you heard; 48–50 exit ticket.
+- **50-minute dynamic:** 0–5 async-week debrief: best diagnosis lines read aloud; 5–13 mini-lesson: the triad (estimand/estimator/estimate) — the genie's number, the recipe, the dish; 13–20 pause-and-predict: our recipe on 500 simulated units — how close to the hidden truth will it land? commit; 20–34 hands-on: nb09 compute difference-in-means by hand-rolled pandas, unhide the nb04 truth, measure the miss; 34–44 M05 mini-presentations: each student states sampling + assignment in 90 seconds, class names the matching answer strategy (and whether any exploratory peeking must be declared inside it); 44–48 revise M05 from what you heard; 48–50 exit ticket.
 - **Hands-on activity:** Hand-roll difference-in-means on a simulated experiment, then reveal the true estimand and measure your estimator's miss.
 - **Practice:** 📝 nb09 practice: pair 4 inquiries with the answer strategy each demands; flag the one mismatch.
 - **Discussion prompt:** Two different estimators give two different answers on the same data. What does that mean — and what does it NOT mean?
@@ -521,13 +521,13 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** What is regression actually doing for you — and what is it quietly assuming?
 - **Secondary questions:** How is regression 'difference-in-means with adjustment'? What do coefficients mean under a descriptive vs causal reading? What are robust standard errors, intuitively?
-- **Approach:** inference + causal (answer strategy)
+- **Inquiry:** generalization + causal (answer strategy)
 - **Claim PERMITTED:** "Adjusting for the variables I named, the association between X and Y is [estimate ± uncertainty]."
 - **Claim NOT permitted:** Reading a regression coefficient as a causal effect because covariates were 'controlled for.'
 - **RDSS reading:** RDSS ch. 9 regression/estimator sections (book.declaredesign.org)
 - **Other material:** nb09 §3–4 (Colab); statsmodels docs (linked)
 - **Provenance:** RDSS ch.9 (lm_robust workflow) | answer strategies | estimatr::lm_robust → statsmodels OLS + HC2 | translated (R→Python)
-- **Concepts:** regression as adjusted comparison; coefficient readings by approach; robust (HC2) standard errors; 'controlling for' ≠ identifying
+- **Concepts:** regression as adjusted comparison; coefficient readings by compass position; robust (HC2) standard errors; 'controlling for' ≠ identifying
 - **Python dependency:** statsmodels (OLS with HC2 robust SEs), pandas
 - **Dataset / simulation:** lapop_brazil.csv (one adjusted association, descriptive reading)
 - **50-minute dynamic:** 0–5 M05 final-call + triad flash quiz; 5–13 mini-lesson: regression rebuilt from difference-in-means, one adjustment at a time on the board; 13–27 hands-on: nb09 fit the same model twice (classical vs robust SEs), read the coefficient aloud in DESCRIPTIVE language, then write the forbidden causal sentence and cross it out; 27–37 lab: sketch the regression YOUR project would run (outcome, key regressor, 2 honest covariates) in the M06 template; 37–46 peer check: partner reads your coefficient sentence — is it inside the claim boundary?; 46–50 exit ticket.
@@ -540,16 +540,16 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Milestone presentation/review:** peer boundary-check of the coefficient sentence
 - **Student prep:** M05 final due tonight 11:59 PM; RDSS ch. 9 regression sections read.
 - **Student artifact:** Twice-fit model output + crossed-out forbidden sentence + own M06 sketch
-- **Exit ticket:** Claim Ticket #19: my coefficient sentence, worded inside the boundary of my approach.
+- **Exit ticket:** Claim Ticket #19: my coefficient sentence, worded inside my compass position's boundary.
 - **Homework / next milestone:** Draft the URC abstract (150–250 words) using the abstract template — internal gate FRIDAY Oct 9. M06 continues Monday.
 - **Instructor prep:** Pre-fit the lapop model; prepare the board build-up from difference-in-means; abstract template posted.
 - **Risks / contingency:** statsmodels output overwhelms → nb09 wraps the fit in a helper that prints only the three numbers that matter today.
 
-### M20 — Fri 2026-10-09 (in-person) — Inference deep dive I: uncertainty — and the URC abstract gate
+### M20 — Fri 2026-10-09 (in-person) — Generalization deep dive I: uncertainty — and the URC abstract gate
 
 - **Driving question:** How wrong could you be, and can you say so with a straight face?
 - **Secondary questions:** Where does sampling variability come from? What does a confidence interval actually promise? Why must the abstract already carry uncertainty language?
-- **Approach:** INFERENCE (deep dive)
+- **Inquiry:** GENERALIZATION — descriptive · population (deep dive)
 - **Claim PERMITTED:** "My estimate is X; under my design, estimates this far from truth happen rarely — here is the interval."
 - **Claim NOT permitted:** A bare point estimate narrated as the truth ("the effect IS 4.2") — uncertainty deleted is certainty invented.
 - **RDSS reading:** RDSS ch. 9–10 uncertainty sections (book.declaredesign.org)
@@ -573,11 +573,11 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Instructor prep:** Abstract checklist copies; confirm the URC submission mechanics/deadline status (external date still TBD — internal gate binds today).
 - **Risks / contingency:** External URC portal/deadline shifts → internal gate stands regardless; abstracts are submitted to Brightspace and forwarded when the portal opens.
 
-### M21 — Wed 2026-10-14 (in-person) — Inference deep dive II: generalization and the association-is-not-causation boundary
+### M21 — Wed 2026-10-14 (in-person) — Generalization deep dive II: how far the answer reaches — and the association-is-not-causation boundary
 
 - **Driving question:** Your sample shows a pattern. To whom does it apply — and what may you NOT say about why?
 - **Secondary questions:** What breaks generalization (selection, attrition, non-response)? Why does adjusting not equal identifying? What does an honest inferential claim look like end-to-end?
-- **Approach:** INFERENCE (deep dive)
+- **Inquiry:** GENERALIZATION — descriptive · population (deep dive)
 - **Claim PERMITTED:** "In the population my frame reaches, X and Y are associated by [estimate ± interval], robust to [checks]."
 - **Claim NOT permitted:** The silent upgrade: association → 'link' → 'impact' → 'effect' across paragraphs — each word a claim your design didn't buy.
 - **RDSS reading:** RDSS ch. 15–16 (observational descriptive → causal boundary; book.declaredesign.org)
@@ -602,11 +602,11 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Instructor prep:** Real-headline ladder example; consult order; check M06 drafts midweek.
 - **Risks / contingency:** Post-break fog → open with the 3-minute whole-course-so-far recap slide before the mini-lesson.
 
-### M22 — Fri 2026-10-16 (in-person) — Inference deep dive III: power — and assembling the full design declaration
+### M22 — Fri 2026-10-16 (in-person) — Generalization deep dive III: power — and assembling the full design declaration
 
 - **Driving question:** Could your design even detect the thing you are looking for?
 - **Secondary questions:** What is statistical power, by simulation? What kills power (n, noise, effect size)? What does a complete MIDA declaration look like on one page?
-- **Approach:** INFERENCE (deep dive)
+- **Inquiry:** GENERALIZATION — descriptive · population (deep dive)
 - **Claim PERMITTED:** "At my n and plausible effect sizes, my design finds a real effect [P]% of the time — I checked before collecting data."
 - **Claim NOT permitted:** "We found nothing, so there is nothing" from a design that could barely have found anything (absence of evidence, underpowered edition).
 - **RDSS reading:** RDSS ch. 10 'Diagnosing designs' §power (book.declaredesign.org); problem set 1 (concepts)
@@ -636,7 +636,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Before trusting your study, can you simulate it — and catch it failing?
 - **Secondary questions:** What are diagnosands (bias, power, coverage)? How does declare→diagnose work as a loop? Why simulate a study you haven't run?
-- **Approach:** all (diagnosis engine)
+- **Inquiry:** all positions (diagnosis engine)
 - **Claim PERMITTED:** "Simulated 1,000 times, my design shows bias ≈ B and power ≈ P for my inquiry — measured, not assumed."
 - **Claim NOT permitted:** "My design is fine" as a feeling. Untested designs have undiagnosed diseases.
 - **RDSS reading:** RDSS ch. 10 'Diagnosing designs' (book.declaredesign.org); declaration_10.1; ch. 13 'Designing in code'
@@ -664,7 +664,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Your diagnosis found a weakness. What is the CHEAPEST change that fixes it?
 - **Secondary questions:** What can you redesign (n, measures, assignment, estimator)? How do you compare designs on a diagnosand? When is a question itself the thing to redesign?
-- **Approach:** all (diagnosis engine)
+- **Inquiry:** all positions (diagnosis engine)
 - **Claim PERMITTED:** "Redesign R raises power from P1 to P2 at cost C — I compared designs, not vibes."
 - **Claim NOT permitted:** Changing the QUESTION to whatever the weak design can answer, silently (that is a new declaration, not a redesign).
 - **RDSS reading:** RDSS ch. 11 'Redesigning' (book.declaredesign.org); declaration_11.1
@@ -692,22 +692,22 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Can you forecast new cases better than the dumbest honest rule?
 - **Secondary questions:** What is a prediction target? Why must a baseline come first? Why hold out data you never touch?
-- **Approach:** PREDICTION (deep dive)
+- **Inquiry:** PREDICTION — descriptive · unseen cases (deep dive)
 - **Claim PERMITTED:** "On held-out cases, my model beats the baseline by [margin] on [metric]."
 - **Claim NOT permitted:** Any performance number computed on data the model already saw — and any 'the model shows X matters' explanation talk.
-- **RDSS reading:** (RDSS treats prediction lightly — this unit is built fresh; ch. 9 answer-strategy framing carries over)
+- **RDSS reading:** RDSS Part III stops before prediction (ch. 15–18) — nb12 authors the missing library entry 'Observational: predictive' in the book's own declare-diagnose-redesign format; ch. 9 §9.1.3 (the answer strategy is the whole procedure) + ch. 10 diagnosand logic carry over (book.declaredesign.org)
 - **Calling Bullshit (optional):** optional: callingbullshit.org — big-data/algorithm hubris case
 - **Other material:** nb12 §1–2 (Colab); scikit-learn (linked docs)
-- **Provenance:** fresh (scikit-learn) | prediction unit | target/baseline/split/metric protocol | fresh
-- **Concepts:** prediction target; baseline rule; train/test split; metric choice; out-of-sample honesty
+- **Provenance:** fresh (scikit-learn) | prediction unit declared MIDA-style as the course-authored 'Observational: predictive' library entry | target/baseline/split/metric protocol | fresh
+- **Concepts:** prediction as MIDA — I: target for unseen units, D: prediction-time information, A: learner + baseline, diagnosis: held-out performance; baseline rule; train/test split; metric choice; out-of-sample honesty
 - **Python dependency:** scikit-learn (train_test_split, DummyClassifier, LogisticRegression), pandas
 - **Dataset / simulation:** la_voter_file.csv (predict turnout from voter-file fields)
-- **50-minute dynamic:** 0–5 M08 submission check + why prediction is its own column (recall the 2×2); 5–13 mini-lesson: the prediction contract — target, baseline, split, metric, in that order; 13–20 pause-and-predict: what accuracy does the always-votes baseline get on this file? commit; 20–35 hands-on: nb12 build the baseline, beat (or fail to beat) it with a simple model, all scoring on held-out rows; 35–45 lab: IF your project has a predictive angle, define its target+baseline+metric; if not, write why prediction is the wrong column for your question (both are M09 prep); 45–50 exit ticket.
+- **50-minute dynamic:** 0–5 M08 submission check + why prediction is a descriptive inquiry about unseen cases (recall the compass); 5–13 mini-lesson: the prediction contract — target, baseline, split, metric, in that order; 13–20 pause-and-predict: what accuracy does the always-votes baseline get on this file? commit; 20–35 hands-on: nb12 build the baseline, beat (or fail to beat) it with a simple model, all scoring on held-out rows; 35–45 lab: IF your project has a predictive angle, define its target+baseline+metric; if not, write why prediction is the wrong column for your question (both are M09 prep); 45–50 exit ticket.
 - **Hands-on activity:** Score a dumb baseline honestly on held-out data, then try to beat it — and feel how hard honest beats easy.
 - **Practice:** 📝 nb12 practice: choose the right metric for 3 targets (rare event, balanced classes, costly false negatives) and defend each.
 - **Discussion prompt:** The baseline got 78% and the fancy model got 80%. Write the honest headline — then the dishonest one you almost wrote.
 - **Project connection:** M09 pilot prep: each project confirms or rules out its predictive component with reasons.
-- **Milestone developed:** M09 — Pilot Analysis (approach-specific)
+- **Milestone developed:** M09 — Pilot Analysis (compass-branched)
 - **Milestone work time:** 10 min (own prediction-angle decision memo)
 - **Milestone presentation/review:** none
 - **Student prep:** M08 due tonight 11:59 PM; nothing else new.
@@ -721,22 +721,22 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Your model scores brilliantly. What are the two most likely explanations — and why is 'it understands the world' third?
 - **Secondary questions:** What is leakage and how does it sneak in? Why do good predictors make bad explainers? What does prediction contribute to a research argument?
-- **Approach:** PREDICTION (deep dive)
+- **Inquiry:** PREDICTION — descriptive · unseen cases (deep dive)
 - **Claim PERMITTED:** "My model forecasts held-out cases at [level]; I checked the features for leakage; I make no causal reading of its weights."
 - **Claim NOT permitted:** "The model's top feature is X, so X drives the outcome" — importance is not explanation, and leakage fakes importance.
 - **RDSS reading:** (fresh unit continues)
 - **Calling Bullshit (optional):** optional: callingbullshit.org — machine-bias / algorithm case
 - **Other material:** nb12 §3–4 (Colab)
 - **Provenance:** fresh (scikit-learn) | prediction unit | leakage demonstration built for the course | fresh
-- **Concepts:** leakage (target proxies, post-outcome features); the performance-understanding gap; prediction's honest role in research
+- **Concepts:** leakage as a data-strategy violation (information D cannot supply at prediction time — target proxies, post-outcome features); the performance-understanding gap; prediction's honest role in research
 - **Python dependency:** scikit-learn, pandas (leaky vs clean feature sets)
 - **Dataset / simulation:** la_voter_file.csv with one deliberately leaky feature engineered in
-- **50-minute dynamic:** 0–5 recap bet: guess the leaky feature hiding in today's feature list; 5–12 mini-lesson: leakage taxonomy with two war stories; 12–27 hands-on: nb12 train on the leaky set (spectacular score), find the leak, retrain clean (honest score), write the delta; 27–36 pause-and-reflect: what SHOULD a researcher do with a great predictor (triage, targeting, hypothesis generation — not explanation); 36–46 M09 studio: pilot-analysis plans drafted, approach branch confirmed (rotating consults); 46–50 exit ticket.
+- **50-minute dynamic:** 0–5 recap bet: guess the leaky feature hiding in today's feature list; 5–12 mini-lesson: leakage taxonomy with two war stories — each leak named as a data-strategy violation (information unavailable at prediction time); 12–27 hands-on: nb12 train on the leaky set (spectacular score), find the leak, retrain clean (honest score), write the delta; 27–36 pause-and-reflect: what SHOULD a researcher do with a great predictor (triage, targeting, hypothesis generation — not explanation); 36–46 M09 studio: pilot-analysis plans drafted, compass branch confirmed (rotating consults); 46–50 exit ticket.
 - **Hands-on activity:** Train on a leaky feature set, catch the leak, retrain clean, and report both numbers side by side.
 - **Practice:** 📝 nb12 practice: 4 features for predicting hospital readmission — rank by leakage risk and justify.
 - **Discussion prompt:** An algorithm predicts who will miss probation appointments. List one legitimate use and one illegitimate use of exactly the same scores.
-- **Project connection:** M09 pilot plans locked: every student knows which approach branch their pilot runs.
-- **Milestone developed:** M09 — Pilot Analysis (approach-specific)
+- **Project connection:** M09 pilot plans locked: every student knows which compass branch their pilot runs.
+- **Milestone developed:** M09 — Pilot Analysis (compass-branched)
 - **Milestone work time:** 10 min (pilot plan studio + consults)
 - **Milestone presentation/review:** rotating instructor consults
 - **Student prep:** nb12 §1–2 complete; prediction-angle memo from Friday.
@@ -750,7 +750,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** What would have happened WITHOUT the intervention — and how can anyone know?
 - **Secondary questions:** Why is the counterfactual the heart of every causal claim? What exactly does randomization solve? What is an identification argument?
-- **Approach:** CAUSAL (deep dive)
+- **Inquiry:** CAUSAL — causal kind (deep dive)
 - **Claim PERMITTED:** "Because assignment was randomized (checked), the difference in outcomes estimates the causal effect, with stated uncertainty."
 - **Claim NOT permitted:** A causal claim whose counterfactual is imagined rather than identified ("they improved after the program, so the program worked").
 - **RDSS reading:** RDSS ch. 18 'Experimental: causal' (book.declaredesign.org); declaration_18.1 (two-arm trial)
@@ -764,7 +764,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 nb13 practice: 3 claims — write the counterfactual each silently asserts, then grade its plausibility.
 - **Discussion prompt:** 'The patients who took the drug did better.' Give the two non-causal stories, then say what randomization would have done to them.
 - **Project connection:** Every project writes its identification paragraph — or its honest absence.
-- **Milestone developed:** M09 — Pilot Analysis (approach-specific)
+- **Milestone developed:** M09 — Pilot Analysis (compass-branched)
 - **Milestone work time:** 10 min (own identification paragraph)
 - **Milestone presentation/review:** none
 - **Student prep:** RDSS ch. 16 opener + declaration_18.1 context skimmed; pilot plan locked.
@@ -778,7 +778,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** When you cannot randomize, what earns you the word 'because'?
 - **Secondary questions:** What leverage do DiD, RDD, and IV each exploit (intuition only)? What assumptions does each buy its identification with? How do you present a pilot honestly?
-- **Approach:** CAUSAL (deep dive)
+- **Inquiry:** CAUSAL — causal kind (deep dive)
 - **Claim PERMITTED:** "Under [parallel trends / threshold locality / instrument validity — stated and probed], the estimate carries a causal reading."
 - **Claim NOT permitted:** Design-mimicry: DiD/RDD/IV vocabulary decorating a comparison whose assumptions were never argued.
 - **RDSS reading:** RDSS ch. 16 'Observational: causal' (book.declaredesign.org) — DiD/RDD/IV intuition sections
@@ -808,8 +808,8 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** If a stranger reads your poster for 90 seconds, what ONE defensible claim must survive?
 - **Secondary questions:** What is an evidence hierarchy on a poster? What earns the top-center slot? How does uncertainty live on a poster without killing it?
-- **Approach:** all (communication)
-- **Claim PERMITTED:** The poster's headline claim, worded to match its approach's boundary — description as description, association as association.
+- **Inquiry:** all positions (communication)
+- **Claim PERMITTED:** The poster's headline claim, worded to match its compass position's boundary — description as description, association as association.
 - **Claim NOT permitted:** A headline that outruns the pilot's evidence (the 90-second reader will never see your caveats footnote).
 - **RDSS reading:** (fresh unit; RDSS figure style referenced for honest graphics)
 - **Other material:** nb14 §1–2 (Colab); URC poster specs; storyboard template
@@ -827,7 +827,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Milestone presentation/review:** M10 presented: 90-second storyboard pitches with lost-point marking
 - **Student prep:** M09 submitted; best figure + headline claim in hand.
 - **Student artifact:** Completed storyboard grid + pitch + revision marks
-- **Exit ticket:** Claim Ticket #29: my headline claim, ≤15 words, inside my approach's boundary.
+- **Exit ticket:** Claim Ticket #29: my headline claim, ≤15 words, inside my compass position's boundary.
 - **Homework / next milestone:** Submit M10 tonight 11:59 PM; build the full draft poster for Wednesday's red-team (any tool: PowerPoint/Canva/Quarto).
 - **Instructor prep:** Two example posters chosen; storyboard grids printed; URC spec sheet distributed.
 - **Risks / contingency:** Pilot results too thin for a poster → the storyboard pivots to 'design + preliminary evidence' framing (explicitly legitimate for URC undergraduate posters).
@@ -836,7 +836,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Where does your draft overclaim, underexplain, or lose the reader — and who will find it first?
 - **Secondary questions:** What does a red-team review look for (claim boundary, figure honesty, read path, uncertainty)? How do you take a hit and revise?
-- **Approach:** all (communication)
+- **Inquiry:** all positions (communication)
 - **Claim PERMITTED:** "A hostile reader walked my poster and the headline survived — here are the three hits and my three fixes."
 - **Claim NOT permitted:** Shipping a draft no adversarial eye has touched (peer-review is the course's quality gate, not a courtesy).
 - **RDSS reading:** (fresh unit)
@@ -864,8 +864,8 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Is every claim on this poster one you can defend to a stranger on Nov 17?
 - **Secondary questions:** Does the final pass the four audits? Are figures reproducible from your notebook? Is the file print-ready to URC spec?
-- **Approach:** all (communication)
-- **Claim PERMITTED:** "Submitted: every number on this poster traces to a cell in my notebook, and every claim sits inside my approach's boundary."
+- **Inquiry:** all positions (communication)
+- **Claim PERMITTED:** "Submitted: every number on this poster traces to a cell in my notebook, and every claim sits inside my compass position's boundary."
 - **Claim NOT permitted:** "I'll fix it after submission." (There is no after — Nov 17 is a live audience, not a draft reader.)
 - **RDSS reading:** (fresh unit)
 - **Other material:** nb14 §4 final checklist (Colab); URC submission portal/instructions
@@ -894,7 +894,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** A visitor stops at your poster. What do your first 60 seconds do?
 - **Secondary questions:** How do the 1-min and 3-min versions differ in job (hook vs walk)? Where does the claim boundary live in spoken form? What does a confident 'we don't know yet' sound like?
-- **Approach:** all (communication)
+- **Inquiry:** all positions (communication)
 - **Claim PERMITTED:** Spoken claims that match the poster's written boundary — the pitch may compress evidence, never inflate it.
 - **Claim NOT permitted:** The excited-mouth upgrade: saying 'causes' at the poster after writing 'is associated with' on it.
 - **RDSS reading:** (fresh unit)
@@ -922,7 +922,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Can you state what your study CANNOT show — and make it sound like strength?
 - **Secondary questions:** Why do limitations spoken first-person build credibility? What is the uncertainty-limitations-next-step (ULN) move? How do you avoid the apology spiral?
-- **Approach:** all (communication)
+- **Inquiry:** all positions (communication)
 - **Claim PERMITTED:** "This is an association in a convenience frame; it cannot establish X; the design that could is Y" — limitation as expertise.
 - **Claim NOT permitted:** Either failure mode: hiding limitations, or drowning in them ("this is probably all wrong") — both misstate the evidence.
 - **RDSS reading:** (fresh unit; RDSS ch. 10 diagnosands vocabulary echoes in spoken form)
@@ -950,7 +950,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** What is the hardest fair question a stranger could ask at your poster — and what will you say?
 - **Secondary questions:** What question types recur (method, alternative explanation, so-what, generalization, AI-use)? What does a good 'I don't know' contain? When do you defend vs concede?
-- **Approach:** all (communication)
+- **Inquiry:** all positions (communication)
 - **Claim PERMITTED:** "I don't know — but here is what I do know that bears on it, and here is how one would find out."
 - **Claim NOT permitted:** Bluffing an answer you don't have (the one move that can destroy a presenter's credibility entirely).
 - **RDSS reading:** (fresh unit)
@@ -978,7 +978,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Tomorrow is the real thing. Is every piece — poster, pitch, ULN, question bank, logistics — actually ready?
 - **Secondary questions:** Does the full 3-minute walk land inside time? Do transitions between pitch and Q&A feel natural? Is the logistics checklist (location, time, dress, materials) complete?
-- **Approach:** all (communication)
+- **Inquiry:** all positions (communication)
 - **Claim PERMITTED:** "Readiness audit passed: rehearsed twice, question bank drilled, logistics confirmed — signed."
 - **Claim NOT permitted:** "I'll wing it tomorrow." (Rehearsal is the difference between nerves and panic.)
 - **RDSS reading:** (none — rehearsal day)
@@ -1008,7 +1008,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** What did strangers' questions reveal about your project that friends' questions never could?
 - **Secondary questions:** Which questions recurred? Where did the pitch work and where did it wobble? What feedback is signal vs noise?
-- **Approach:** all (reflection)
+- **Inquiry:** all positions (reflection)
 - **Claim PERMITTED:** "The audience data says: X landed, Y confused, Z was asked three times — here is what that evidences about my project."
 - **Claim NOT permitted:** Treating applause as validation of the CLAIMS (a warm reception measures communication, not truth).
 - **RDSS reading:** (none — debrief day)
@@ -1036,7 +1036,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Given everything the audience and the semester taught you, what is the honest redesign of your study?
 - **Secondary questions:** Which feedback maps to which MIDA letter? What is worth changing in the two weeks that remain vs in the imagined next study? How does redesign differ from regret?
-- **Approach:** all (diagnosis + redesign, applied to one's own project)
+- **Inquiry:** all positions (diagnosis + redesign, applied to one's own project)
 - **Claim PERMITTED:** "Feedback item F implicates my [M/I/D/A]; the redesign is R; diagnosed benefit: better [diagnosand]."
 - **Claim NOT permitted:** A redesign wish-list with no mapping to the design ("more data, more time" is a lament, not a redesign).
 - **RDSS reading:** RDSS ch. 11 'Redesigning' (revisited, now with real audience data)
@@ -1063,18 +1063,18 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 ### M38 — Mon 2026-11-23 (async-online) — ASYNC — Poster-to-Dossier module: robustness, sensitivity, and the claim ledger
 
 - **Driving question:** Your poster compressed the truth. The dossier must carry ALL of it — what does that require?
-- **Secondary questions:** What is a robustness/sensitivity check for YOUR approach? What is a claim ledger and why does every claim get a row? How does a methods section differ from a methods memory?
-- **Approach:** project-specific (each student works in their own approach's branch)
+- **Secondary questions:** What is a robustness/sensitivity check for YOUR compass position? What is a claim ledger and why does every claim get a row? How does a methods section differ from a methods memory?
+- **Inquiry:** project-specific (each project runs in its own compass position's branch)
 - **Claim PERMITTED:** "Claim C survives sensitivity checks S1–S2; its ledger row records claim, evidence, check, boundary."
 - **Claim NOT permitted:** Porting poster claims into the dossier WITHOUT re-verification (the dossier's standard is higher, not equal).
 - **RDSS reading:** RDSS ch. 22 'Realization' (book.declaredesign.org) — reporting what actually happened
 - **Other material:** nb17 — fully self-contained async module (Colab); claim-ledger template; M19 spec
-- **Provenance:** brief §10 M19 + RDSS ch.22 | realization/reporting | claim-ledger method + approach-branched sensitivity menu | newly-constructed-from-source-concept
-- **Concepts:** robustness/sensitivity by approach (description: alternative summaries/bins; inference: specification + non-response probes; prediction: split/metric perturbation; causal: assumption probes); the claim ledger; methods-section discipline
-- **Python dependency:** pandas/numpy (rerun own pilot under perturbations — approach-branched cells)
+- **Provenance:** brief §10 M19 + RDSS ch.22 | realization/reporting | claim-ledger method + compass-branched sensitivity menu | newly-constructed-from-source-concept
+- **Concepts:** robustness/sensitivity by compass position (description: alternative summaries/bins; generalization: specification + non-response probes; prediction: split/metric perturbation; causal: assumption probes); the claim ledger; methods-section discipline
+- **Python dependency:** pandas/numpy (rerun own pilot under perturbations — compass-branched cells)
 - **Dataset / simulation:** each student's own project data/pilot
-- **50-minute dynamic:** ASYNC (~50 min self-paced): 0–8 module orientation + choose your approach branch; 8–25 run the branch's two sensitivity checks on your own pilot, record what moved; 25–38 build your claim ledger (every poster claim gets a row: claim, evidence, verification, boundary, survived-sensitivity?); 38–48 draft the dossier's methods+findings skeleton from the ledger; 48–50 submit checkpoint + (async board) post your ledger's most fragile row.
-- **Hands-on activity:** Run two approach-appropriate sensitivity checks on your own pilot and build the claim ledger from the results.
+- **50-minute dynamic:** ASYNC (~50 min self-paced): 0–8 module orientation + choose your compass branch; 8–25 run the branch's two sensitivity checks on your own pilot, record what moved; 25–38 build your claim ledger (every poster claim gets a row: claim, evidence, verification, boundary, survived-sensitivity?) — flag any row born from an unplanned pattern as a PIVOT needing its own declaration (RDSS ch. 22 reconciliation); 38–48 draft the dossier's methods+findings skeleton from the ledger; 48–50 submit checkpoint + (async board) post your ledger's most fragile row.
+- **Hands-on activity:** Run two position-appropriate sensitivity checks on your own pilot and build the claim ledger from the results.
 - **Practice:** 📝 nb17 practice: one sample fragile claim — write its ledger row honestly, then its dossier sentence.
 - **Discussion prompt:** (async board) Your most fragile ledger row: post it, and reply to one classmate with a check that could shore theirs up.
 - **Project connection:** M19 = the dossier's analytical core; every December artifact builds on this module's output.
@@ -1085,7 +1085,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Student artifact:** Sensitivity outputs + claim ledger + methods/findings skeleton (due Nov 30)
 - **Exit ticket:** (embedded) Claim Ticket #38: my most fragile claim and what the sensitivity check did to it.
 - **Homework / next milestone:** Happy Thanksgiving. M19 artifact due Mon Nov 30, 11:59 PM (class resumes in person that day: reproducibility).
-- **Instructor prep:** Verify all four approach branches run end-to-end unattended; seed the board; holiday-proof the deadlines in Brightspace.
+- **Instructor prep:** Verify all four compass branches run end-to-end unattended; seed the board; holiday-proof the deadlines in Brightspace.
 - **Risks / contingency:** Holiday-week attrition → module is doable in one sitting, deadline is AFTER break, and Wednesday-before-break reminder goes out with a progress checkpoint.
 
 ## Phase 8 — Reproducibility, brief, Evidence Defense
@@ -1094,7 +1094,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** If you vanished today, could a competent stranger reproduce every number in your dossier?
 - **Secondary questions:** What belongs in a reproducibility package (data provenance, environment, seed, decision log)? What is the AI-use ledger's role? Where do projects usually break?
-- **Approach:** all (reproducibility)
+- **Inquiry:** all positions (reproducibility)
 - **Claim PERMITTED:** "A classmate reproduced my headline number from my package alone — verified [date], discrepancies: none/listed."
 - **Claim NOT permitted:** "It works on my machine" — reproducibility claimed but never exercised by another human.
 - **RDSS reading:** RDSS ch. 21 'Planning' + ch. 22 'Realization' (reproducibility threads; book.declaredesign.org)
@@ -1122,7 +1122,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Reproduction verified — now can you say what it all means on ONE page, to a decision-maker?
 - **Secondary questions:** What does a reproduction sign-off attest? What is a research brief (vs an abstract, vs a poster)? Who is your brief's reader and what do they need?
-- **Approach:** all (reproducibility → communication)
+- **Inquiry:** all positions (reproducibility → communication)
 - **Claim PERMITTED:** "Reproduction verified by [name] on [date]" — and, in the brief: claims sized for a reader who will never see the appendix.
 - **Claim NOT permitted:** A brief that quietly restores the caveats-free claims the ledger already disciplined (the brief compresses, never un-verifies).
 - **RDSS reading:** RDSS ch. 22 (continued) + ch. 23 'Integration' opening (book.declaredesign.org)
@@ -1150,7 +1150,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Does your one page do justice to fourteen weeks — and can you now defend it out loud?
 - **Secondary questions:** Where does the brief still overclaim or underclaim? What is the Evidence Defense format? What gets defended (the claims, the choices, the verification)?
-- **Approach:** all (communication)
+- **Inquiry:** all positions (communication)
 - **Claim PERMITTED:** "Every sentence on this page traces to a ledger row" — the brief as the dossier's honest ambassador.
 - **Claim NOT permitted:** Brief-polish that drifts from the ledger (if the wording upgrades the claim, the ledger must be upgraded first — with evidence).
 - **RDSS reading:** (none new — workshop day)
@@ -1177,8 +1177,8 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 ### M42 — Mon 2026-12-07 (in-person) — Evidence Defense I: defend your claims, your choices, and your verification
 
 - **Driving question:** Under cross-examination, does your evidence hold?
-- **Secondary questions:** Can you defend not just WHAT you claim but WHY your approach, data, and checks license it? Can you concede gracefully where the ledger says concede?
-- **Approach:** all (synthesis — each defense exercises its project's approaches)
+- **Secondary questions:** Can you defend not just WHAT you claim but WHY your design, data, and checks license it? Can you concede gracefully where the ledger says concede?
+- **Inquiry:** all positions (synthesis — each defense exercises its project's compass positions)
 - **Claim PERMITTED:** Exactly what each defender's claim ledger permits — the defense IS the boundary, performed.
 - **Claim NOT permitted:** New claims invented under pressure; concessions retracted without evidence; blame shifted to the AI tool (the researcher verified, or didn't).
 - **RDSS reading:** (none — defense day)
@@ -1206,7 +1206,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 
 - **Driving question:** Same standard, remaining defenders: does the evidence hold?
 - **Secondary questions:** What did two days of cross-examination reveal about what 'defensible' means? What remains between each dossier and Friday's submission?
-- **Approach:** all (synthesis)
+- **Inquiry:** all positions (synthesis)
 - **Claim PERMITTED:** As Monday — each defender's ledger, performed. Plus: "my dossier checklist has N open items and a plan for each."
 - **Claim NOT permitted:** As Monday. Plus: declaring the dossier done without running its final checklist.
 - **RDSS reading:** (none — defense day)
@@ -1230,21 +1230,21 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Instructor prep:** Rubrics; redo slot if invoked; compile the strongest-defenses board list for Friday.
 - **Risks / contingency:** Checklist reveals a structural gap (e.g., missing sign-off) → triage in class; office hours Thursday held open as the safety valve.
 
-### M44 — Fri 2026-12-11 (in-person) — Synthesis: the four approaches, one semester, and what a defensible claim is
+### M44 — Fri 2026-12-11 (in-person) — Synthesis: the inquiry compass, one semester, and what a defensible claim is
 
 - **Driving question:** You began with a curiosity. You end with a defended, reproducible, honestly-bounded claim. What do you now know about knowing?
-- **Secondary questions:** How do the four approaches divide the world of questions? What will you do differently the next time a confident claim crosses your feed — or leaves your mouth?
-- **Approach:** all (synthesis)
-- **Claim PERMITTED:** "I can classify a question, match it to an approach, state what the answer can and cannot establish, and verify before I believe." — the course's exit claim.
+- **Secondary questions:** How do kind and reach divide the world of questions? What will you do differently the next time a confident claim crosses your feed — or leaves your mouth?
+- **Inquiry:** all positions (synthesis)
+- **Claim PERMITTED:** "I can classify a question by kind and reach, match it to a design, state what the answer can and cannot establish, and verify before I believe." — the course's exit claim.
 - **Claim NOT permitted:** "Now I know the truth about my topic." (You know something better: exactly how much you know, and how you'd learn more.)
 - **RDSS reading:** RDSS ch. 24 'Epilogue' (book.declaredesign.org)
 - **Other material:** nb19 §4 synthesis (Colab); course-reflection survey
-- **Provenance:** brief §12 P8 + RDSS ch.24 | synthesis | four-approach retrospective + exit claim | newly-constructed-from-source-concept
-- **Concepts:** the four approaches as a permanent lens; the claim ledger as a life habit; verification as identity; what transfers beyond research
+- **Provenance:** brief §12 P8 + RDSS ch.24 | synthesis | compass retrospective + exit claim | newly-constructed-from-source-concept
+- **Concepts:** the inquiry compass as a permanent lens; the claim ledger as a life habit; verification as identity; what transfers beyond research
 - **Python dependency:** none
 - **Dataset / simulation:** the class's own 44-meeting claim-ticket archive (aggregated, anonymous)
-- **50-minute dynamic:** 0–5 the strongest-defenses list from Wednesday, read back; 5–15 synthesis exercise: the SAME question analyzed all four ways on the board, one student leading each approach — the course's signature skill, performed jointly; 15–25 claim-ticket archaeology: revisit YOUR Claim Ticket #1 vs #43 — write the two-sentence 'how my standards changed'; 25–35 round: each student reads their two sentences + names the habit they're keeping; 35–43 M23 submission ceremony (dossiers in, confirmed on screen) + course reflection survey; 43–50 instructor's closing: what you now owe the world as people who know how knowing works — and goodbyes.
-- **Hands-on activity:** Analyze one shared question through all four approaches jointly; excavate your own first-vs-last Claim Tickets.
+- **50-minute dynamic:** 0–5 the strongest-defenses list from Wednesday, read back; 5–15 synthesis exercise: the SAME question analyzed from every compass position on the board, one student leading each position — the course's signature skill, performed jointly; 15–25 claim-ticket archaeology: revisit YOUR Claim Ticket #1 vs #43 — write the two-sentence 'how my standards changed'; 25–35 round: each student reads their two sentences + names the habit they're keeping; 35–43 M23 submission ceremony (dossiers in, confirmed on screen) + course reflection survey; 43–50 instructor's closing: what you now owe the world as people who know how knowing works — and goodbyes.
+- **Hands-on activity:** Analyze one shared question through every compass position jointly; excavate your own first-vs-last Claim Tickets.
 - **Practice:** 📝 (retrospective) the exit self-assessment: classify, match, bound, verify — rate yourself then vs now.
 - **Discussion prompt:** What claim did you believe in August that you would now demand evidence for — and what evidence would satisfy you?
 - **Project connection:** M23 Final Dossier submitted — the semester's complete, reproducible, defended research artifact.

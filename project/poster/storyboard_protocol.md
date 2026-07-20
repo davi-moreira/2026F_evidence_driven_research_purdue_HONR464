@@ -16,8 +16,8 @@ expensive to change in production week.
 
 - The storyboard grid (one printed sheet per person — the template below).
 - Your M09 pilot outputs: every table, figure, and number you produced.
-- Your approach declaration (`project/templates/QUANTITATIVE_APPROACH_DECLARATION.md`),
-  open to §4–5 (what your approach can and cannot establish).
+- Your inquiry declaration (`project/templates/INQUIRY_DECLARATION.md`),
+  open to §4–5 (what your compass position can and cannot establish).
 - A pen for you; a second colored pen for whoever reads your read-path.
 
 ## The storyboard grid
@@ -26,7 +26,7 @@ Fill every box. Nothing goes on the poster that is not decided here first.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ HEADLINE CLAIM  (≤ 15 words, inside your approach's boundary)  │
+│ HEADLINE CLAIM  (≤ 15 words, inside your position's boundary)  │
 │   ________________________________________________________    │
 ├───────────────┬───────────────┬───────────────────────────────┤
 │ EVIDENCE #1   │ EVIDENCE #2   │ EVIDENCE #3                   │
@@ -41,8 +41,8 @@ Fill every box. Nothing goes on the poster that is not decided here first.
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**Headline claim rule.** ≤ 15 words, and worded to match your approach's claim
-boundary exactly — description stays "in these data", association stays
+**Headline claim rule.** ≤ 15 words, and worded to match your compass position's
+claim boundary exactly — description stays "in these data", association stays
 "is associated with", never "causes". If the headline outruns your pilot, the
 90-second reader will believe the overclaim, because they never reach the fine
 print. This is the single most common poster failure.
@@ -80,7 +80,7 @@ grids. Professor Moreira times the 90-second rounds and distributes example post
 
 ## Quality checklist (self-check before submitting)
 
-- ☐ Headline claim ≤ 15 words and inside my approach's boundary (no causal word on a non-causal design).
+- ☐ Headline claim ≤ 15 words and inside my compass position's boundary (no causal word on a non-causal design).
 - ☐ Exactly three evidence blocks, ranked, strongest in the top-center slot.
 - ☐ Two weakest pilot outputs cut, not hidden.
 - ☐ Uncertainty line present and legible without leaning in.

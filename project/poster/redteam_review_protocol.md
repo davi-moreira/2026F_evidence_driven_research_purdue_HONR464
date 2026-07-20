@@ -21,7 +21,7 @@ red-teamed by two — then triage your hits and fix the worst one before you lea
 ## The four audits (what every reviewer runs)
 
 **1. Claim-boundary audit.**
-- ☐ Does the headline claim stay inside the poster's declared approach (description / inference / prediction / causal)?
+- ☐ Does the headline claim stay inside the poster's declared compass position (Description / Generalization / Prediction / Causal)?
 - ☐ Any causal verb ("causes", "improves", "drives") on a non-causal design?
 - ☐ Does any sentence generalize past the sampling frame without saying so?
 - ☐ Could a 90-second reader walk away believing more than the evidence licenses?
@@ -49,7 +49,7 @@ red-teamed by two — then triage your hits and fix the worst one before you lea
 RED-TEAM AUDIT SLIP
 Poster author: __________________   Reviewer: __________________
 
-Approach declared on poster: [ ] description [ ] inference [ ] prediction [ ] causal
+Compass position declared on poster: [ ] Description [ ] Generalization [ ] Prediction [ ] Causal
 
 AUDIT            PASS/HIT   Strongest single hit (be specific)
 Claim boundary   [ ]/[ ]    _______________________________________

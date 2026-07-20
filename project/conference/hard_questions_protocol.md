@@ -24,7 +24,7 @@ credibility entirely.
 
 | Type | What it probes | Example a stranger might ask |
 |---|---|---|
-| **Method** | Whether your approach can bear the claim | "Why is a description enough here — didn't you need a comparison group?" |
+| **Method** | Whether your compass position can bear the claim | "Why is a description enough here — didn't you need a comparison group?" |
 | **Alternative explanation** | A rival cause of your pattern | "Couldn't selection into your sample produce this on its own?" |
 | **So-what** | Why the finding matters | "Suppose you're right — what changes because of it?" |
 | **Generalization** | How far the claim travels | "Does this hold beyond the people in your sample?" |

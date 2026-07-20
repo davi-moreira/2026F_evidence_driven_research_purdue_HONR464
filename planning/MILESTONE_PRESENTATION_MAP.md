@@ -13,7 +13,7 @@ feedback for up to half the lost points).
 | ID | Presentation format (audience action) | dev | pres | due | rev |
 |---|---|---|---|---|---|
 | M00 | **30-second curiosity pitch** — class gives one strength + one question each | M1 | M2 | Aug 26 | folds into M01 |
-| M01 | **2-minute question pitch** — class votes the approach + names one risk | M2–M5 | M6 | Sep 4 | eligible; feedback feeds M03 |
+| M01 | **2-minute question pitch** — class votes the compass position + names one risk | M2–M5 | M6 | Sep 4 | eligible; feedback feeds M03 |
 | M02 | **Gallery walk** — claim maps on screens; sticky-note challenges; one challenge incorporated live | M7–M8 | M8 | Sep 11 | eligible |
 | M03 | **3-minute declaration** — listeners each write one clarifying question; declaration revised from them | M9–M10 | M10 | Sep 16 | eligible |
 | M04 | **3-minute measurement walkthrough** — listeners file two-line reviews (best rung / weakest rung) | M11–M14 | M14 | Sep 25 | eligible |

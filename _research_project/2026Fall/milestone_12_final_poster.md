@@ -45,7 +45,7 @@ verify that every claim on the board is one you can defend to a stranger.
 
 The verification bar is specific and non-negotiable: **every number on the
 poster traces to a cell in your notebook**, every claim sits inside your
-approach's boundary, the uncertainty is visible on the poster itself, and the
+compass position's boundary, the uncertainty is visible on the poster itself, and the
 four red-team audits pass. You sign a checklist attesting to this. There is no
 "I'll fix it after submission" — after this is the Expo.
 
@@ -72,9 +72,9 @@ in principle you must be able to demonstrate any of them.
   carried over from an old draft you have since changed. If you can't find the
   cell, the number cannot go on the poster.
 
-### 3. Claim boundary — every claim inside the approach
+### 3. Claim boundary — every claim inside the compass position
 
-Re-check every claim against your declared approach. A descriptive poster
+Re-check every claim against your declared compass position. A descriptive poster
 describes; an associational poster associates; only an identified causal design
 says *cause*. The headline especially: the 90-second reader inherits whatever
 the headline claims.
@@ -126,7 +126,7 @@ AI contribution is an academic-integrity violation.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Approach alignment & claim boundary** (20) | Every claim, headline included, sits inside the approach's boundary (18–20) | Inside the boundary with one soft word (14–17) | A claim drifts past the evidence (8–13) | Headline or central claim outruns the approach (0–7) |
+| **Compass alignment & claim boundary** (20) | Every claim, headline included, sits inside the compass position's boundary (18–20) | Inside the boundary with one soft word (14–17) | A claim drifts past the evidence (8–13) | Headline or central claim outruns the compass position (0–7) |
 | **Number-to-notebook traceability & evidence integrity** (25) | Every number traces to a cell; the in-class trace is clean (22–25) | Traceable with one number needing a hunt (18–21) | Some numbers not readily traceable (11–17) | A number with no notebook source (0–10) |
 | **Uncertainty on the poster** (15) | Uncertainty is present, correct, and on the read path (13–15) | Present and correct, placement off-path (10–12) | Vague or generic (6–9) | Absent from the poster (0–5) |
 | **Figure honesty & four-audit pass** (15) | All four audits pass; every figure's impression matches its numbers (13–15) | Passes with one minor figure caveat (10–12) | One audit fails (a distorting axis, a broken read path) (6–9) | Multiple audits fail (0–5) |

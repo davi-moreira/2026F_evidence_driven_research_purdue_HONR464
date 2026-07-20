@@ -10,7 +10,7 @@ so the schedule generator, badge updater, and validators agree.
 NOTEBOOKS = {
     0:  ("nb00_launchpad", "Launchpad: How do we know? Colab + Ask → Verify → Document"),
     1:  ("nb01_curiosity_to_question", "Curiosity → gap → problem → answerable question"),
-    2:  ("nb02_four_approaches", "The four approaches: classify the question"),
+    2:  ("nb02_four_approaches", "The inquiry compass: classify the question by kind + reach"),
     3:  ("nb03_sources_claims", "Real sources, citation integrity, and the claim map"),
     4:  ("nb04_model_inquiry", "Model & Inquiry (MIDA I): worlds, potential outcomes, DAGs"),
     5:  ("nb05_measurement", "Measurement & operationalization: concept → construct → indicator"),
@@ -18,7 +18,7 @@ NOTEBOOKS = {
     7:  ("nb07_data_strategy", "Data strategy (MIDA II): sampling, assignment, ethics"),
     8:  ("nb08_async_claim_diagnosis", "Async: diagnose a misleading claim"),
     9:  ("nb09_answer_strategy", "Answer strategy (MIDA III): estimators & regression"),
-    10: ("nb10_inference", "Inference deep dive: uncertainty, generalization, power"),
+    10: ("nb10_inference", "Generalization deep dive: uncertainty, reach, power"),
     11: ("nb11_declare_diagnose_redesign", "Declare → Diagnose → Redesign: the design engine"),
     12: ("nb12_prediction", "Prediction deep dive: target, baseline, split, metric, leakage"),
     13: ("nb13_causal", "Causal reasoning deep dive: counterfactuals & identification"),

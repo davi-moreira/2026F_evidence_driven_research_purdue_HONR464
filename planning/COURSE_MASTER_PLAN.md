@@ -35,24 +35,37 @@ sourced from public callingbullshit.org where used. Never a disconnected book cl
 never reflexive cynicism — every "bullshit check" ends by asking *what can still be
 learned and what evidence would be needed.*
 
-## 2. The four approaches (explicit, recurring, operational)
+## 2. The inquiry compass (explicit, recurring, operational — RDSS-native)
 
-Every meeting names the approach(es) it emphasizes, the **claim it permits**, and the
-**claim it does not permit**. The signature course skill is *classifying a question*
-into one (or a justified combination) of:
+*(Taxonomy adopted outright from RDSS on 2026-07-19 — see DECISIONS.md and
+`planning/INQUIRY_MAP.md`, the canonical reference.)* Every meeting names the
+compass position(s) it emphasizes, the **claim it permits**, and the **claim it
+does not permit**. The signature course skill is *classifying a question* by two
+RDSS ch. 7 questions — its **kind** (descriptive vs causal: does answering need a
+counterfactual contrast?) and its **reach** (the data at hand / a population
+beyond the data / cases not yet seen) — yielding four named compass positions:
 
-| Approach | Asks | Permits | Does **not** permit | Deep-dive |
+| Position (kind · reach) | Asks | Permits | Does **not** permit | Deep-dive |
 |---|---|---|---|---|
-| **Description** | what is observed here? | statements about the data at hand | generalization; causation | `nb06` |
-| **Statistical/observational inference** | what generalizes, with how much uncertainty? | population/process estimates + uncertainty | causation from association | `nb10` |
-| **Predictive modeling** | can we forecast new cases? | out-of-sample performance vs. a baseline | explanation; causation | `nb12` |
-| **Causal reasoning** | what if we intervened? | an effect under a stated identification argument | effects when identification fails | `nb13` |
+| **Description** (descriptive · data at hand) | what is observed here? | statements about these units | any wider reach; causation | `nb06` |
+| **Generalization** (descriptive · population) | what holds beyond the sample, with how much uncertainty? | population estimates + uncertainty, for the frame the sampling design reaches | causation from association; reach past the frame | `nb10` |
+| **Prediction** (descriptive · unseen cases) | can we forecast new cases? | out-of-sample performance vs. a baseline | explanation; causation | `nb12` |
+| **Causal reasoning** (causal kind) | what if we intervened? | an effect under a stated identification argument | effects when identification fails | `nb13` |
 
-RDSS covers description, inference, and causal designs richly; **prediction is built
-fresher** (scikit-learn: target, baseline, train/test split, metric, leakage,
-out-of-sample) because the book barely treats it. `nb02` teaches the classification
-skill up front; `nb11` teaches the declare→diagnose→redesign engine that stress-tests
-any of the four.
+Every overclaim is a **compass crossing without its license**: sample→population
+is licensed by a sampling data strategy (ch. 8) + uncertainty machinery (ch. 9–10)
+— its violation is the *silent upgrade*; observed→unseen is licensed by a
+prediction-time-honest data strategy + held-out diagnosands — its violation is
+*leakage*; descriptive→causal is licensed by assignment or identification
+(ch. 8, 16, 18) — its violations are *after-therefore-because* and *design
+mimicry*. RDSS's design library (ch. 15–18) covers the descriptive and causal
+kinds richly; **nb12 authors the missing entry, "Observational: predictive," in
+the book's own declare-diagnose-redesign format** (scikit-learn: target, baseline,
+train/test split, metric, leakage). EDA is not a compass position — it is the
+**explore → declare → confirm loop** (upstream in nb04, anchored by name in nb06,
+declared inside A per ch. 9.1.3 in nb09, pivoted per ch. 22 in nb17). `nb02`
+teaches the compass up front; `nb11` teaches the declare→diagnose→redesign engine
+that stress-tests any position.
 
 ## 3. The operating loop (every notebook, every milestone)
 
@@ -66,10 +79,10 @@ CLAIM → COMMUNICATE → REVISE.` Recurring notebook moves: **Pause & Predict**
 
 | Phase | Meetings | Dates | Focus | Project outcomes |
 |---|---|---|---|---|
-| **1 — Curiosity, gaps, answerable questions** | M1–M6 | Aug 24–Sep 4 | How do we know? topic vs gap vs question; classify the approach | Curiosity Map; question pitch; candidate gaps/questions |
-| **2 — Literature, model, inquiry, measurement** | M7–M14 | Sep 9–Sep 25 | establish the gap; MIDA Model+Inquiry; operationalization | literature/claim map; question+approach declaration; construct/measurement map |
-| **3 — Data & answer strategies** | M15–M22 | Sep 28–Oct 16 | data strategy (sampling/assignment); answer strategy; inference; feasibility/ethics | design declaration; URC abstract; data-access + ethics checkpoint |
-| **4 — Pilot, diagnosis, redesign** | M23–M28 | Oct 19–Oct 30 | declare→diagnose→redesign; prediction; causal; verification | executable pilot; approach-specific diagnosis; redesign memo |
+| **1 — Curiosity, gaps, answerable questions** | M1–M6 | Aug 24–Sep 4 | How do we know? topic vs gap vs question; classify with the compass (kind + reach) | Curiosity Map; question pitch; candidate gaps/questions |
+| **2 — Literature, model, inquiry, measurement** | M7–M14 | Sep 9–Sep 25 | establish the gap; MIDA Model+Inquiry; operationalization | literature/claim map; question + inquiry declaration; construct/measurement map |
+| **3 — Data & answer strategies** | M15–M22 | Sep 28–Oct 16 | data strategy (sampling/assignment); answer strategy; generalization; feasibility/ethics | design declaration; URC abstract; data-access + ethics checkpoint |
+| **4 — Pilot, diagnosis, redesign** | M23–M28 | Oct 19–Oct 30 | declare→diagnose→redesign; prediction; causal; verification | executable pilot; compass-branched diagnosis; redesign memo |
 | **5 — Poster construction & submission** | M29–M31 | Nov 2–Nov 6 | storyboard → draft → **final poster** (production, not buffer) | approved, submitted poster (**Nov 6 = M31**) |
 | **6 — Conference preparation** | M32–M35 | Nov 9–Nov 16 | 1-/3-min delivery; uncertainty & limitations; dress rehearsal | rehearsed presentation; readiness audit |
 | **7 — Reflection, feedback, redesign** | M36–M38 | Nov 18–Nov 23 | debrief; feedback→redesign; (async) poster→dossier module | reflection; redesign plan; dossier draft |
@@ -88,31 +101,31 @@ defended decision, ≥1 practice item, ≥1 interpretation task, ≥1 milestone/
 transfer, and a Claim-Ticket exit. Direct exposition ≤8 min/segment, <15 min/meeting;
 ≥70% active time.
 
-| NB | Topic | Meetings | Approach emphasis | Milestone developed | Primary provenance |
+| NB | Topic | Meetings | Inquiry emphasis | Milestone developed | Primary provenance |
 |---|---|---|---|---|---|
-| `nb00` | Launchpad: *How do we know?* course map, Colab, Ask→Verify→Document | M1 | all (framing) | M00 kickoff | brief §3; RDSS ch.1 (concept) |
-| `nb01` | Curiosity → gap → problem → **answerable question** | M2–M4 | all (framing) | M00→M01 | RDSS ch.2–3; brief §12 P1 |
-| `nb02` | **The four approaches** — classify the question | M5–M6 | all (the skill) | M01 | RDSS ch.4; brief §2 |
-| `nb03` | Establishing the gap: source-finding, **citation integrity**, AI hallucination check; claim map | M7–M8 | description/inference | M02 | fresh + AI policy; RDSS ch.6 |
-| `nb04` | **Model & Inquiry** (MIDA I): worlds, potential outcomes, estimands; DAG intro | M9–M10 | causal/inference | M03 | RDSS ch.7–9; `declaration_*`; `make_dag_df` |
-| `nb05` | **Measurement & operationalization**: concept→construct→indicator | M11–M12 | description/inference | M04 | RDSS ch.8; fresh |
-| `nb06` | **Description** (deep dive): distributions, summaries, honest visualization; boundaries | M13–M14 | **description** | M04→M05 | RDSS ch.5,9; `lapop_brazil`, `la_voter_file` |
-| `nb07` | **Data strategy** (MIDA II): sampling & assignment; selection; who's missing | M15–M16 | inference/causal | M05 | RDSS ch.9–12; `declaration_2.1/9.1` |
-| `nb08` | **Async (Oct 2):** diagnose a misleading claim + answer-strategy preview | M17 | inference | M05 (dev) | brief §12 P3; optional CB case |
-| `nb09` | **Answer strategy** (MIDA III): estimators, difference-in-means, regression | M18–M19 | inference/causal | M05→M06 | RDSS ch.13–15; `estimatr`/`lm_robust` |
-| `nb10` | **Statistical/observational inference** (deep dive): uncertainty, generalization, assoc≠cause | M20–M22 | **inference** | M06→M07 | RDSS ch.9–15; problem-set 1 |
-| `nb11` | **Declare → Diagnose → Redesign** engine: power, bias, coverage; redesign | M23–M24 | all (diagnosis) | M08 | RDSS ch.10–13; `diagnose_design`, `redesign` |
-| `nb12` | **Prediction** (deep dive): target, baseline, train/test, metric, leakage | M25–M26 | **prediction** | M08→M09 | fresh scikit-learn; optional CB algorithms |
-| `nb13` | **Causal reasoning** (deep dive): counterfactuals, identification, DAGs; DiD/RDD/IV intuition | M27–M28 | **causal** | M09 | RDSS ch.16–19; `declaration_18.1` |
-| `nb14` | **Poster storyboard & evidence hierarchy**; honest visualization; claim calibration | M29–M31 | all | M10→M11→M12 | brief §12 P5; RDSS figures; optional CB rebuild-graph |
-| `nb15` | **Communicating evidence**: 1-/3-min pitch, uncertainty & limitations, hard questions, rehearsal | M32–M35 | all | M13→M14→M15 | brief §12 P6 |
-| `nb16` | **Conference debrief → feedback-to-redesign** | M36–M37 | all | M17→M18 | brief §12 P7 |
-| `nb17` | **Async (Nov 23):** Poster-to-Dossier module — robustness/sensitivity, claim ledger, methods/findings | M38 | project-specific | M19 | brief §10 M19 |
-| `nb18` | **Reproducibility audit + research brief** | M39–M41 | all | M20→M21 | brief §12 P8; RDSS ch.23 |
-| `nb19` | **Evidence Defense + synthesis** of the four approaches; *what is a defensible claim* | M42–M44 | all | M22→M23 | brief §12 P8 |
+| `nb00` | Launchpad: *How do we know?* course map, Colab, Ask→Verify→Document | M1 | all positions (framing) | M00 kickoff | brief §3; RDSS ch.1 (concept) |
+| `nb01` | Curiosity → gap → problem → **answerable question** | M2–M4 | all positions (framing) | M00→M01 | RDSS ch.2–3; brief §12 P1 |
+| `nb02` | **The inquiry compass** — classify the question by kind + reach | M5–M6 | all positions (the skill) | M01 | RDSS ch.7 + Part III framing; brief §2 |
+| `nb03` | Establishing the gap: source-finding, **citation integrity**, AI hallucination check; claim map | M7–M8 | description/generalization | M02 | fresh + AI policy; RDSS ch.4 §literature |
+| `nb04` | **Model & Inquiry** (MIDA I): worlds, potential outcomes, estimands; DAG intro; EDA upstream (explore to calibrate M) | M9–M10 | causal/generalization | M03 | RDSS ch.6–7; `declaration_*`; `make_dag_df` |
+| `nb05` | **Measurement & operationalization**: concept→construct→indicator | M11–M12 | description/generalization | M04 | RDSS ch.8 §measurement; fresh |
+| `nb06` | **Description** (deep dive): distributions, summaries, honest visualization; the explore→declare→confirm loop (EDA anchor) | M13–M14 | **description** | M04→M05 | RDSS ch.15; `lapop_brazil`, `la_voter_file` |
+| `nb07` | **Data strategy** (MIDA II): sampling & assignment; selection; who's missing | M15–M16 | generalization/causal | M05 | RDSS ch.8; `declaration_2.1/9.1` |
+| `nb08` | **Async (Oct 2):** diagnose a misleading claim + answer-strategy preview | M17 | generalization | M05 (dev) | brief §12 P3; optional CB case |
+| `nb09` | **Answer strategy** (MIDA III): estimators, difference-in-means, regression; the whole-procedure rule (§9.1.3) | M18–M19 | generalization/causal | M05→M06 | RDSS ch.9; `estimatr`/`lm_robust` |
+| `nb10` | **Generalization** (deep dive): uncertainty, reach, power, assoc≠cause | M20–M22 | **generalization** | M06→M07 | RDSS ch.9–10; problem-set 1 |
+| `nb11` | **Declare → Diagnose → Redesign** engine: power, bias, coverage; redesign | M23–M24 | all positions (diagnosis) | M08 | RDSS ch.10–11, 13; `diagnose_design`, `redesign` |
+| `nb12` | **Prediction** (deep dive): the course-authored 'Observational: predictive' library entry — target, baseline, train/test, metric, leakage as a D-violation | M25–M26 | **prediction** | M08→M09 | fresh scikit-learn (RDSS Part III format); optional CB algorithms |
+| `nb13` | **Causal reasoning** (deep dive): counterfactuals, identification, DAGs; DiD/RDD/IV intuition | M27–M28 | **causal** | M09 | RDSS ch.16, 18; `declaration_18.1` |
+| `nb14` | **Poster storyboard & evidence hierarchy**; honest visualization; claim calibration | M29–M31 | all positions | M10→M11→M12 | brief §12 P5; RDSS figures; optional CB rebuild-graph |
+| `nb15` | **Communicating evidence**: 1-/3-min pitch, uncertainty & limitations, hard questions, rehearsal | M32–M35 | all positions | M13→M14→M15 | brief §12 P6 |
+| `nb16` | **Conference debrief → feedback-to-redesign** | M36–M37 | all positions | M17→M18 | brief §12 P7 |
+| `nb17` | **Async (Nov 23):** Poster-to-Dossier module — robustness/sensitivity, claim ledger, pivots (ch. 22) | M38 | project-specific | M19 | brief §10 M19; RDSS ch.22 |
+| `nb18` | **Reproducibility audit + research brief** | M39–M41 | all positions | M20→M21 | brief §12 P8; RDSS ch.21–23 |
+| `nb19` | **Evidence Defense + synthesis** on the compass; *what is a defensible claim* | M42–M44 | all positions | M22→M23 | brief §12 P8; RDSS ch.24 |
 
-20 notebooks (nb00–nb19). Each of the four approaches has a dedicated deep-dive
-(nb06/nb10/nb12/nb13); nb02 teaches classification; nb11 teaches the diagnosis engine.
+20 notebooks (nb00–nb19). Each compass position has a dedicated deep-dive
+(nb06/nb10/nb12/nb13); nb02 teaches the compass; nb11 teaches the diagnosis engine.
 
 ## 6. Project-studio cadence (protected in-class development)
 
@@ -152,7 +165,7 @@ Aligned to the brief's philosophy (no conventional midterm/final exam):
 | Evidence Defense & course synthesis | 5% |
 | Calling Bullshit claim analyses (optional/light) + concept checks | 10% |
 
-Grading rewards correctness, transparency, reproducibility, approach-alignment, and
+Grading rewards correctness, transparency, reproducibility, compass-alignment, and
 responsible interpretation — **not** coding elegance. Reconciled with the current
 `syllabus.qmd` provisional weights during Phase B.
 

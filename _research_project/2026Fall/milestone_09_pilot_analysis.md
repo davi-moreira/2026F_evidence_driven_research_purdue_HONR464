@@ -30,9 +30,9 @@ and you owe answers **before the poster**.
 
 This is the milestone where you stop declaring and diagnosing and actually
 **run the analysis** — on real data (or your simulated world), producing your
-project's first genuine evidence. It is deliberately **branched by approach**:
-the pilot you run is the one your declared approach demands, and the standard you
-are held to is that branch's standard. Whatever branch you are in, two things are
+project's first genuine evidence. It is deliberately **branched by compass
+position**: the pilot you run is the one your declared compass position demands,
+and the standard you are held to is that branch's standard. Whatever branch you are in, two things are
 non-negotiable and shared across all of them: **every number in your write-up
 traces to a cell in your notebook**, and you keep a **verification log** of how
 you cross-checked your own outputs. A result you cannot regenerate, or cannot say
@@ -60,7 +60,7 @@ how you checked, is not yet a result.
 
 ### Your branch's analysis
 
-Run **the branch your declared approach requires.** Each branch has its own
+Run **the branch your declared compass position requires.** Each branch has its own
 deliverable and its own standard.
 
 **Description branch.** Honest summary tables and distributions of the **actual
@@ -70,7 +70,7 @@ data**, with every claim bounded to the data at hand.
 - *Non-example:* "Brazilians trust the courts more than the police" — a
   generalization the description cannot buy.
 
-**Inference branch.** An **estimate + an uncertainty interval + a generalization
+**Generalization branch.** An **estimate + an uncertainty interval + a generalization
 argument** bounded by your sampling frame.
 - *Example:* a mean or adjusted association from a `la_voter_file` sample,
   reported with a 95% interval and a sentence on which population the frame
@@ -131,7 +131,7 @@ descriptive table). Say in one line why the combination is warranted.
 | Branch | Exemplary (27–30) | Proficient (21–26) | Developing (12–20) | Beginning (0–11) |
 |---|---|---|---|---|
 | **Description** | Honest tables + distributions of the real data; every claim bounded to the data at hand | Tables present; one claim reaches past the data | Summary present but distributions or bounding missing | Generalizes beyond the sample as if descriptive = population |
-| **Inference** | Estimate + interval + a generalization argument bounded by the frame | Estimate + interval; generalization loosely bounded | Estimate present; interval or frame argument missing | Bare estimate narrated as truth for everyone |
+| **Generalization** | Estimate + interval + a generalization argument bounded by the frame | Estimate + interval; generalization loosely bounded | Estimate present; interval or frame argument missing | Bare estimate narrated as truth for everyone |
 | **Prediction** | Baseline + model + held-out comparison + a real leakage check | All present; leakage check cursory | Model beats baseline but scoring or leakage check is off | In-sample score, or leakage uncaught, or importance read as cause |
 | **Causal** | Identification argument + effect estimate + one assumption probe (or honest association-only + the identifying design sketched) | Argument + estimate; probe or sketch thin | Estimate present; identification asserted, not argued | Design-mimicry: causal vocabulary, no argued assumptions |
 

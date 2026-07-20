@@ -29,8 +29,8 @@ https://raw.githubusercontent.com/davi-moreira/2026F_evidence_driven_research_pu
 | davi_moreira_photo.jpg | nb00 | the professor |
 | palmeiras_logo.png / palmeiras_stadium.jpg | nb00 | Palmeiras (instructor's passion) |
 | carnaval_olinda.jpg | nb00 | Olinda carnival (instructor's passion) |
-| rdss_fig_2_1.png | nb00, nb19 | the MIDA map: M·I·D·A, theoretical/empirical, reality/simulation |
-| random_assignment_sampling.png | nb02 | 2×2: random sampling × random assignment → generalizability × causation |
+| rdss_fig_2_1.png | nb00, nb02, nb12, nb19 | the MIDA map: M·I·D·A, theoretical/empirical, reality/simulation (nb02: compass→MIDA preview; nb12: declaring the predictive design) |
+| random_assignment_sampling.png | nb02 | random sampling × random assignment → generalizability × causation (the compass's crossing licenses) |
 | rdss_fig_5_1.png | nb04 | the MIDA map (returns for M+I) — same diagram as 2.1 |
 | rdss_fig_6_1.png | nb04 | minimal DAG: Z→Y with unknown heterogeneity U |
 | rdss_fig_6_2.png | nb04 | DAG vocabulary: confounder, moderator, mediator, collider, instrument |
