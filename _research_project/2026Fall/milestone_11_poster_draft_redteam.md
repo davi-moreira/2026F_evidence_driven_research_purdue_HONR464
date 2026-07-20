@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -22,8 +23,8 @@ the course's quality gate, not a courtesy.
 
 ## What to Submit on Brightspace
 
-Due: **Wednesday, November 4, 11:59 PM** (the red-team review runs in class that
-day at M30).
+Due: **Wednesday, November 4, 11:59 PM** (the red-team review runs in
+Wednesday's class that same day, part of the poster sprint).
 
 | # | File | Description |
 |---|---|---|
@@ -110,7 +111,7 @@ an undisclosed AI contribution is an academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Contents** | Draft poster + two received audit slips + revision triage + disclosure block, one PDF |
-| **Review** | Two four-audit slips given in class Wednesday Nov 4 — your citizenship grade |
+| **Review** | Two four-audit slips given in Wednesday's class (Nov 4) — your citizenship grade |
 | **First fix** | At least the top-ranked hit applied and described |
 | **Filename** | `lastname_m11_draft.pdf` |
 | **Location** | Brightspace → Assignments → M11 |

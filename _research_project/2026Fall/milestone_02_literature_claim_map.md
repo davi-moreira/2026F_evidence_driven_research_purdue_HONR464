@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -15,8 +16,8 @@ and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, September 11, 11:59 PM** (you build and present it in class that
-day's gallery walk).
+Due: **Friday, September 11, 11:59 PM** (you present it in that day's
+Friday-studio gallery walk).
 
 | # | File | Description |
 |---|---|---|
@@ -31,9 +32,10 @@ milestone turns that toehold into a **map of what your field asserts and on what
 evidence** — and pins your gap to a spot on that map where no verified source
 already sits. The discipline that makes this milestone matter is **citation
 integrity**: every source on your ledger is one *you personally retrieved and
-read*, whose central claim you can state in your own words. In nb03 you already
-hunted down planted fabricated citations and learned the tells; here you turn
-that verification reflex on your own reading list. On Friday your map goes on a
+read*, whose central claim you can state in your own words. In nb03 you
+practiced verifying real citations end to end and learned the tells of
+fabricated ones; here you turn that verification reflex on your own reading
+list. At the Friday studio your map goes on a
 screen, the class circulates with sticky-note challenges, and you incorporate
 one challenge live. The map you leave with is the backbone M03 builds its model
 and inquiry on.
@@ -125,7 +127,7 @@ it yourself.
 | Item | Specification |
 |---|---|
 | **Length** | Ledger table + map image + short notes (typically 2–4 pages PDF) |
-| **Presentation** | Gallery walk in class Friday Sep 11 — presenting and incorporating a challenge is part of the grade |
+| **Presentation** | Gallery walk at the Friday studio (Sep 11) — presenting and incorporating a challenge is part of the grade |
 | **Style** | Legible map export; claims in your own words; citations retrievable |
 | **Filename** | `lastname_m02_claim_map.pdf` |
 | **Location** | Brightspace → Assignments → M02 |

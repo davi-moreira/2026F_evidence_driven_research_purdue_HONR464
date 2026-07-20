@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -15,7 +16,8 @@ and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, September 4, 11:59 PM** (you present in class that day).
+Due: **Friday, September 4, 11:59 PM** (you present at the Friday studio that
+day).
 
 | # | File | Description |
 |---|---|---|
@@ -28,9 +30,9 @@ Due: **Friday, September 4, 11:59 PM** (you present in class that day).
 This milestone turns your M00 Curiosity Map into the sentence that will govern
 your semester: an **answerable research question**, anchored in a **bounded
 gap**, with a first hypothesis about where it sits on the inquiry compass
-(kind + reach). You also deliver it aloud — a 2-minute pitch to the class, who
-will vote on the compass position your question seems to want (nb02's classification
-skill, applied to you). Nothing here is final: M03 will re-declare the
+(kind + reach). You also deliver it aloud — a 2-minute pitch at the Friday
+studio, where the class votes on the compass position your question seems to
+want (nb02's classification skill, applied to you). Nothing here is final: M03 will re-declare the
 question with full Model & Inquiry machinery. What is graded is the quality of
 the *current* commitment, not clairvoyance.
 
@@ -61,7 +63,7 @@ one line each saying where the mark is met or still weak.
 Which of the four compass positions — Description (descriptive · data at hand),
 Generalization (descriptive · population), Prediction (descriptive · unseen
 cases), or Causal reasoning (causal) — you SUSPECT your question wants, and
-why — plus the class's Friday vote if it differed from your hunch, and your
+why — plus the class's studio vote if it differed from your hunch, and your
 response to the difference.
 
 ### 5. AI-use disclosure block (required on every deliverable)
@@ -77,7 +79,7 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Length** | 1–2 pages (PDF), plus the disclosure block |
-| **Pitch** | 2 minutes, delivered in class Friday Sep 4 — part of the grade |
+| **Pitch** | 2 minutes, delivered at the Friday studio (Sep 4) — part of the grade |
 | **Style** | Clear prose; headings for the four components; citations retrievable |
 | **Filename** | `lastname_m01_pitch.pdf` |
 | **Location** | Brightspace → Assignments → M01 |

@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -21,8 +22,9 @@ to half the lost points).
 
 ## What to Submit on Brightspace
 
-Due: **Friday, November 13, 11:59 PM** (the hot seat runs in class that day at
-M34).
+Due: **Friday, November 13, 11:59 PM**. The instructor kicks this milestone
+off (together with M13) at the Friday production studio; the hot seat runs
+inside the Friday studio work block on the day it is due.
 
 | # | File | Description |
 |---|---|---|
@@ -110,7 +112,7 @@ document* — keep them distinct.)
 | **ULN statement** | Written in uncertainty → limitation → next step form; strength, not apology |
 | **Question bank** | 5 questions, one per type, each with an answer sketch |
 | **Honest don't-know** | At least one, in the full "here's what I do know / how one would find out" form |
-| **Hot seat** | 3 minutes of rapid class questions in class Friday Nov 13 |
+| **Hot seat** | 3 minutes of rapid class questions at the Friday studio, November 13 |
 | **Filename** | `lastname_m14_uln.pdf` |
 | **Location** | Brightspace → Assignments → M14 |
 

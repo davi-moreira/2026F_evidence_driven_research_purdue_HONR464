@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -22,8 +23,9 @@ not a reprint.
 
 ## What to Submit on Brightspace
 
-Due: **Monday, November 2, 11:59 PM** (you present the storyboard in class that
-day at M29).
+Due: **Monday, November 2, 11:59 PM** (the poster sprint runs in the Mon/Wed
+classes this week, so you present the storyboard in Monday's class that same
+day).
 
 | # | File | Description |
 |---|---|---|
@@ -99,7 +101,7 @@ an undisclosed AI contribution is an academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Length** | 1 page (PDF): the storyboard grid + the disclosure block |
-| **Pitch** | 90 seconds, delivered in class Monday Nov 2 — part of the grade |
+| **Pitch** | 90 seconds, delivered in Monday's class (Nov 2) — part of the grade |
 | **Headline** | ≤ 15 words, inside your compass position's boundary |
 | **Filename** | `lastname_m10_storyboard.pdf` |
 | **Location** | Brightspace → Assignments → M10 |

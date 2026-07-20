@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -15,9 +16,9 @@ and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, October 30, 11:59 PM**. You present a 4-minute walkthrough in
-class that same day (M28); each listener logs one verification question for you,
-and you owe answers **before the poster**.
+Due: **Friday, October 30, 11:59 PM**. You present a 4-minute walkthrough at
+the Friday studio that same day; each listener logs one verification question
+for you, and you owe answers **before the poster**.
 
 | # | File | Description |
 |---|---|---|
@@ -50,9 +51,9 @@ how you checked, is not yet a result.
 - **The verification log** (graded) — a short list: for each key result, how you
   cross-checked it (recomputed a second way, spot-checked rows by hand,
   triangulated against a known quantity, compared to the M08 diagnosis).
-- **The 4-minute walkthrough** (M28) — what you ran, what came out, what
-  surprised you; you collect one verification question per listener and answer
-  them before the poster.
+- **The 4-minute walkthrough** (at the Friday studio) — what you ran, what came
+  out, what surprised you; you collect one verification question per listener
+  and answer them before the poster.
 - **AI-use disclosure block** — which AI tool(s), for what task (locate sources /
   operationalize / draft / critique / none), and how you verified the output.
   "No AI used" is fine; an undisclosed AI contribution is an academic-integrity
@@ -108,7 +109,7 @@ descriptive table). Say in one line why the combination is warranted.
 | **Length** | 2–3 pages (PDF) + the notebook |
 | **Reproducibility** | Notebook runs top to bottom; randomness seeded; every PDF number traces to a cell |
 | **Verification** | A written log of how each key result was cross-checked — a graded component, not a formality |
-| **Presentation** | 4-minute pilot walkthrough Friday Oct 30; you collect and later answer one verification question per listener |
+| **Presentation** | 4-minute pilot walkthrough at the Friday studio (Oct 30); you collect and later answer one verification question per listener |
 | **Filenames** | `lastname_m09_pilot.pdf` and `lastname_m09_pilot.ipynb` |
 | **Location** | Brightspace → Assignments → M09 |
 

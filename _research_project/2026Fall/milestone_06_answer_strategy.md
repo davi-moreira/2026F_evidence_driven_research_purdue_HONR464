@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -15,9 +16,11 @@ and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Wednesday, October 14, 11:59 PM**. That same day (M21) is the in-class
-**clinic** where you run the claim-anatomy checklist on your own declaration
-with rotating consults and a pair proof-read — bring a near-final draft.
+Due: **Wednesday, October 14, 11:59 PM**, on Brightspace. The **clinic** comes
+first: at the Friday studio on **October 9**, you run the claim-anatomy
+checklist on your own declaration, with rotating consults and a pair
+proof-read. Bring a near-final draft to that studio, then polish and submit by
+Wednesday night.
 
 | # | File | Description |
 |---|---|---|
@@ -97,7 +100,7 @@ number goes, worded so it stays **inside your compass position's claim boundary*
 - **Non-example (crossed out for a reason).** "Adjusting for the covariates I
   named, X **causes** a ___ increase in Y." Reading a regression coefficient as
   a causal effect because covariates were "controlled for" is exactly the
-  overreach M19 had you cross out. Keep the verb inside what the design bought.
+  overreach nb09 had you cross out. Keep the verb inside what the design bought.
 
 ### 5. AI-use disclosure block (required on every deliverable)
 
@@ -113,7 +116,7 @@ academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Length** | 1–2 pages (PDF), plus the disclosure block |
-| **Clinic** | In-class claim-anatomy clinic Wednesday Oct 14 — bring a near-final draft; consult notes and your pair proof-read feed the grade |
+| **Clinic** | Claim-anatomy clinic at the Friday studio (Oct 9) — bring a near-final draft; consult notes and your pair proof-read feed the grade |
 | **Style** | Clear prose; a heading per component; the result sentence quoted exactly as you will use it |
 | **Filename** | `lastname_m06_answer_strategy.pdf` |
 | **Location** | Brightspace → Assignments → M06 |

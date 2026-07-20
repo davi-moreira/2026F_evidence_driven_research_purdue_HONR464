@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -19,8 +20,8 @@ This milestone has **two parts with two deadlines**:
 
 | # | File | Due | Note |
 |---|---|---|---|
-| 1 | **`lastname_m07_abstract.pdf`** | **Friday, October 9, 11:59 PM** | The URC abstract. Workshopped and submitted in class at M20. This is a **gate** — see below. |
-| 2 | **`lastname_m07_declaration.pdf`** | **Friday, October 16, 11:59 PM** | The one-page full design declaration. Assembled in class at M22. |
+| 1 | **`lastname_m07_abstract.pdf`** | **Friday, October 9, 11:59 PM** | The URC abstract. Workshopped and submitted at that day's Friday studio. This is a **gate** — see below. |
+| 2 | **`lastname_m07_declaration.pdf`** | **Friday, October 16, 11:59 PM** | The one-page full design declaration. Assembled with consults at that day's Friday studio. |
 
 > **This milestone is double-weighted** in the milestone grade bucket: it
 > carries both the abstract gate and the full MIDA declaration, so it counts as
@@ -64,7 +65,7 @@ what you are asking, how you are answering it, and how much to believe you.
   claim boundary are already in the prose.
 - **Non-example.** "This project proves that older Brazilians trust the
   government more." A bare, causal-sounding certainty — the exact "the effect IS
-  4.2" overclaim M20 rules out. The abstract inflates what the design can buy.
+  4.2" overclaim nb10 rules out. The abstract inflates what the design can buy.
 
 ### Part B — the full design declaration (one page)
 
@@ -102,7 +103,7 @@ declaration.
 |---|---|
 | **Abstract length** | 150–250 words (PDF) |
 | **Declaration length** | One page (PDF), all four MIDA blocks + justification |
-| **Presentation** | Abstract workshop (partner swap + uncertainty-language checklist) at M20, Oct 9; assembly consults at M22, Oct 16 — both count toward the grade |
+| **Presentation** | Abstract workshop (partner swap + uncertainty-language checklist) at the Friday studio, Oct 9; assembly consults at the Friday studio, Oct 16 — both count toward the grade |
 | **Style** | Abstract: flowing prose, no jargon a first-year could not follow. Declaration: compact blocks; every claim inside its compass position's boundary |
 | **Filenames** | `lastname_m07_abstract.pdf` and `lastname_m07_declaration.pdf` |
 | **Location** | Brightspace → Assignments → M07 |

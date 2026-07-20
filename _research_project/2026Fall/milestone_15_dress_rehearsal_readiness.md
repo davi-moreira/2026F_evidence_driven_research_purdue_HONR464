@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -20,9 +21,11 @@ milestone's weight**: it is a signed in-class audit, not a written artifact.
 
 ## What to Submit on Brightspace
 
-**No Brightspace upload.** This milestone is **completed in class on Monday,
-November 16 (M35)**. Your **signed readiness audit sheet** is collected at the
-end of the full URC simulation — that signed sheet is the entire submission. If
+**No Brightspace upload.** This milestone is kicked off at the Friday hot-seat
+studio and **completed in class on Monday, November 16** — the Expo is the next
+day, so the full URC simulation runs in Monday's class. Your **signed readiness
+audit sheet** is collected at the end of the simulation; that signed sheet is
+the entire submission. If
 Professor Moreira requests a scan for the record, name it `lastname_m15_readiness.pdf`;
 otherwise the paper sheet handed in at the end of class is what counts.
 
@@ -91,7 +94,7 @@ Ask → Verify → Document habit, kept alive even on an in-class milestone.
 
 | Item | Specification |
 |---|---|
-| **Deliverable** | The signed readiness audit sheet, completed in class M35 |
+| **Deliverable** | The signed readiness audit sheet, completed in Monday's class (November 16) |
 | **Rehearsal** | Two full simulation rounds, poster stood, pitches delivered |
 | **Logistics** | Time, place, dress, materials — written and confirmed |
 | **Backup** | A concrete print-failure plan |
@@ -114,7 +117,7 @@ graded.
 
 ## Penalties
 
-- **Absent from M35:** the rehearsal cannot be made up in the room it requires;
+- **Absent from Monday's class:** the rehearsal cannot be made up in the room it requires;
   documented emergencies are handled individually per Purdue policy (talk to me
   first), and an unexcused absence forfeits the rehearsal credit.
 - **Signing an untrue line:** attesting to a rehearsal round or a logistics fact

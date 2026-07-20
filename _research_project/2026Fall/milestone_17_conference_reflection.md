@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -19,8 +20,10 @@ weighted equally. It is **revision-eligible** under the standing policy.
 
 ## What to Submit on Brightspace
 
-Due: **Wednesday, November 18, 11:59 PM** (you code your data and read a
-partner's pattern in class that day).
+Due: **Wednesday, November 18, 11:59 PM**. You picked up the audience-coding
+sheet at the Friday hot-seat studio, before the Expo. In Wednesday's class, the
+day this is due, you tell your story round, code your data, and read a
+partner's pattern.
 
 | # | File | Description |
 |---|---|---|
@@ -104,7 +107,7 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Length** | The tally (table) + pattern + partner note + one reflection paragraph, plus the disclosure block — typically 1–2 pages |
-| **In-class work** | Story round + coding studio + pair pattern-reading (M36) — participation is part of the grade |
+| **In-class work** | Story round + coding + pair pattern-reading in Wednesday's class — participation is part of the grade |
 | **Style** | The tally is a real table with the three codes as columns; prose is honest, not performative |
 | **Filename** | `lastname_m17_reflection.pdf` |
 | **Location** | Brightspace → Assignments → M17 |

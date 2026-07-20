@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -15,8 +16,8 @@ and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Wednesday, September 16, 11:59 PM** (you declare it aloud in class that
-day).
+Due: **Friday, September 18, 11:59 PM** (you declare it aloud at the Friday
+studio that day).
 
 | # | File | Description |
 |---|---|---|
@@ -32,9 +33,9 @@ the world would have to be like for your question to have an answer, draw that
 world as a small **DAG** (Directed Acyclic Graph), and name the exact quantity
 you are after — the number or pattern a genie would hand you if it knew the
 truth. Declaring the inquiry *before* any data arrive is what protects you from
-inquiry shopping later. On Wednesday you deliver a 3-minute declaration; each
-listener writes you one clarifying question, and you revise from at least two of
-them. Alongside the declaration you complete the **Inquiry Declaration**
+inquiry shopping later. At the Friday studio you deliver a 3-minute declaration;
+each listener writes you one clarifying question, and you revise from at least
+two of them. Alongside the declaration you complete the **Inquiry Declaration**
 template (`project/templates/INQUIRY_DECLARATION.md`)
 — the standing document that answers "why THIS compass position?" and travels with your
 project through M07, M09, and the final dossier.
@@ -103,8 +104,8 @@ Declare it now, before data — that is the whole point.
 
 ### 4. Responses to at least two clarifying questions
 
-In class, each listener writes you one clarifying question. Choose **at least
-two**, and for each write a short response that either sharpens your declaration
+At the studio, each listener writes you one clarifying question. Choose **at
+least two**, and for each write a short response that either sharpens your declaration
 or explains your choice. Show the before-and-after: "A listener asked whether
 'belonging' meant social or academic belonging; I now specify social belonging,
 which narrows my outcome and my later measurement."
@@ -136,7 +137,7 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Length** | Declaration (1–2 pages) + DAG image + completed Inquiry Declaration template |
-| **Presentation** | 3-minute declaration in class Wednesday Sep 16; one clarifying question per listener; revised from ≥2 — part of the grade |
+| **Presentation** | 3-minute declaration at the Friday studio (Sep 18); one clarifying question per listener; revised from ≥2 — part of the grade |
 | **Style** | Clear prose; readable DAG; inquiry stated both in words and as a quantity |
 | **Filename** | `lastname_m03_declaration.pdf` |
 | **Location** | Brightspace → Assignments → M03 |

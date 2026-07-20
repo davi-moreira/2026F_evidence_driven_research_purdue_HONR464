@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -15,8 +16,11 @@ and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Wednesday, October 7, 11:59 PM**. You present a 90-second version in
-class on **Monday, October 5** (M18); the written document is what is graded.
+Due: **Friday, October 2, 11:59 PM**. That Friday is the course's async module:
+there is no class meeting, and you complete this milestone as part of the
+module. In place of a live pitch, you record a **90-second data-strategy
+statement** and post it to the Brightspace discussion board by the same
+deadline. The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
@@ -87,8 +91,8 @@ Score your design on the four feasibility questions, one honest line each:
 
 ### 4. Ethics paragraph — decision-tree outcome (≈1 paragraph)
 
-Walk the ethics decision tree from M16 and state your outcome: **secondary data
-/ survey / intervention**. Give the **minimal-risk reasoning** for your case.
+Walk the ethics decision tree from nb07 and state your outcome: **secondary
+data / survey / intervention**. Give the **minimal-risk reasoning** for your case.
 **Secondary data (already-collected, de-identified) is the honors-scale default
 for this course** — reach for it first. If your design is a survey or an
 intervention involving human subjects, state why it is minimal-risk and how
@@ -112,7 +116,7 @@ academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Length** | 1–2 pages (PDF), plus the disclosure block |
-| **Presentation** | 90-second data-strategy statement in class Monday Oct 5 — part of the grade; the class names the answer strategy your data strategy seems to want |
+| **Presentation** | 90-second recorded data-strategy statement, posted to the Brightspace discussion board by Friday Oct 2 — part of the grade; in the reply threads, classmates name the answer strategy your data strategy seems to want |
 | **Style** | Clear prose; a heading per section; any cited dataset or fact retrievable |
 | **Filename** | `lastname_m05_data_strategy.pdf` |
 | **Location** | Brightspace → Assignments → M05 |
@@ -126,7 +130,7 @@ academic-integrity violation.
 | **Sampling & selection clarity** (30) | Population, frame, and sample kept distinct with a named procedure; who-is-missed named and tied to the outcome (26–30) | All three named; who-is-missed noted but not connected to the outcome (21–25) | Frame and population blurred, or procedure unnamed (13–20) | Convenience sample narrated as a population fact (0–12) |
 | **Feasibility triage** (20) | All four lines answered concretely; a real by-when date; design buildable this semester (18–20) | Four lines answered; one optimistic or vague (14–17) | Two or more lines missing or hand-waved (8–13) | Design cannot produce data by November and this is not acknowledged (0–7) |
 | **Ethics reasoning** (25) | Correct decision-tree outcome with genuine minimal-risk reasoning; any IRB need already escalated and resolved (22–25) | Outcome stated with adequate reasoning; secondary-data default respected (18–21) | Outcome asserted without reasoning, or risk under-examined (11–17) | "Ethics doesn't apply," or an un-escalated design that needs IRB review (0–10) |
-| **Presentation & feedback** (15) | 90-second statement clear and on time; engaged the class's answer-strategy guess (13–15) | Delivered with minor overrun or loose structure (10–12) | Read verbatim, well over time, or feedback ignored (6–9) | Not delivered without arrangement (0–5) |
+| **Presentation & feedback** (15) | Recorded statement clear and on time; engaged the board's answer-strategy replies (13–15) | Posted with minor overrun or loose structure (10–12) | Read verbatim, well over time, or replies ignored (6–9) | Not posted without arrangement (0–5) |
 | **Craft & disclosure** (10) | On-format, on-time, complete AI-disclosure block (9–10) | Minor format lapses (7–8) | Missing sections or sloppy sourcing (4–6) | Missing disclosure block (0–3) |
 
 **Revision:** eligible under the standing policy — a revised PDF within 7 days

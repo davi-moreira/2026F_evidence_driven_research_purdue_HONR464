@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -19,8 +20,9 @@ weighted equally. It is **revision-eligible** under the standing policy.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, November 20, 11:59 PM** (you present a 2-minute redesign
-declaration in class that day).
+Due: **Friday, November 20, 11:59 PM**. This milestone is assigned in
+Wednesday's class, right after the conference debrief; you present a 2-minute
+redesign declaration at the Friday studio on the day it is due.
 
 | # | File | Description |
 |---|---|---|
@@ -106,7 +108,7 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Length** | 1–2 pages: three items × (feedback → MIDA letter → redesign → diagnosed benefit → NOW/NEXT), plus the disclosure block |
-| **Presentation** | 2-minute redesign declaration in class Friday Nov 20 (your #1 redesign, its letter, its diagnosed benefit) — part of the grade |
+| **Presentation** | 2-minute redesign declaration at the Friday studio, November 20 (your #1 redesign, its letter, its diagnosed benefit) — part of the grade |
 | **Style** | Each item is a compact, design-pointed entry; NOW items phrased as commitments |
 | **Filename** | `lastname_m18_redesign.pdf` |
 | **Location** | Brightspace → Assignments → M18 |

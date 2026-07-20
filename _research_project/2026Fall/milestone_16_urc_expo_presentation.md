@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -24,7 +25,9 @@ at the Expo *are* the grade, and there is no revision.
 **There is no file to upload for the presentation itself.** This milestone is a
 **live event**: the **Purdue Fall Undergraduate Research Expo, Tuesday,
 November 17**, at your assigned session. Your grade comes from Professor Moreira's
-**observation rubric**, scored at your poster during the session.
+**observation rubric**, scored at your poster during the session. Expo
+logistics (your session assignment, setup, and what to bring) are covered at
+the Friday hot-seat studio before the event.
 
 One thing you carry *out* of the Expo matters for the next milestone: **every
 audience question you were asked, captured.** Bring a way to note them — a

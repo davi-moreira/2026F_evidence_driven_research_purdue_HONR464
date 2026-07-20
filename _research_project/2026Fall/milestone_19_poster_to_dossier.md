@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -20,9 +21,11 @@ into M19 5%, M20 5%, M21 4%, and the M23 final dossier 6%). It is
 
 ## What to Submit on Brightspace
 
-This is the **async module** (async meeting **Mon Nov 23**; notebook **nb17** is
-fully self-contained). The deadline falls **after Thanksgiving** so the break is
-yours.
+This milestone is kicked off (together with M20) at the post-debrief Friday
+studio, November 20, then runs as the **async module**: there is no class meeting on Monday, November 23,
+and notebook **nb17** is fully self-contained. Your presentation venue is the
+async board (Component 4). The deadline falls **after Thanksgiving**, so the
+break is yours.
 
 Due: **Monday, November 30, 11:59 PM.**
 

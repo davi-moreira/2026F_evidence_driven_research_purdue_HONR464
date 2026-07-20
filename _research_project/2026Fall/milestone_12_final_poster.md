@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -22,8 +23,10 @@ the poster you submit is the poster strangers read on November 17.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, November 6, 11:59 PM** (production day is in class that day at
-M31 — you submit at the end of it).
+Due: **Friday, November 6, 11:59 PM**. This milestone was kicked off in
+Wednesday's red-team class, during the poster sprint. The Friday studio that
+day is the production block: the instructor opens it with the final checklist,
+you produce, and you submit at the end of the block.
 
 | # | File | Description |
 |---|---|---|
@@ -117,6 +120,7 @@ AI contribution is an academic-integrity violation.
 | **Traceability** | Every number traces to a notebook cell; one trace verified in class |
 | **Uncertainty** | Visible on the poster, on the read path — not a footnote |
 | **Checklist** | Signed final checklist included |
+| **Studio** | Final-checklist consults during the Friday production studio; submit at the end of the work block |
 | **Filename** | `lastname_m12_poster.pdf` |
 | **Location** | Brightspace → Assignments → M12 (and the URC channel) |
 

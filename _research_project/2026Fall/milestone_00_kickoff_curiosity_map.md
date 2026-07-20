@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -15,8 +16,8 @@ and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Wednesday, August 26, 11:59 PM** (you give a 30-second version aloud in
-class that same day).
+Due: **Friday, August 28, 11:59 PM** (you give a 30-second version aloud at the
+Friday studio that same day).
 
 | # | File | Description |
 |---|---|---|
@@ -35,7 +36,7 @@ Every defended claim in December started as a vague itch in August. This
 milestone catches three of your itches before they evaporate and gets your
 working environment (Colab, Brightspace, the AI-use ledger habit) running so
 that no later week is lost to setup. You will pitch one curiosity for 30 seconds
-in class on Wednesday; the class gives each pitch one genuine strength and one
+at the Friday studio; the class gives each pitch one genuine strength and one
 honest question. That feedback — and the two curiosities you did *not* pitch —
 becomes the raw material M01 narrows into a single answerable question. Breadth
 now buys you a good choice later, so resist the urge to pre-commit.
@@ -83,16 +84,16 @@ Open **nb00** in Colab, save a copy to your Drive, and run every readiness cell.
 Three of them end in a ✓ when your environment is ready (you can run a cell,
 the course data loads, and you have claimed your copy by name). Paste a single
 screenshot showing all three ✓ marks into your PDF. This is your proof that no
-later milestone will stall on setup. (nb00's fabricated-citation hunt is part
-of the notebook too — finish it; your first ledger row below likely comes from
-it.)
+later milestone will stall on setup. (nb00's citation-verification exercise is
+part of the notebook too — finish it; your first ledger row below likely comes
+from it.)
 
 ### 3. Your first AI-use ledger entry
 
 This is the first row of a ledger you keep all semester. Record which AI tool
-you used today (if any — running nb00 involves one deliberate encounter with a
-fabricated citation), for what task, and how you verified its output. "No AI
-used beyond nb00's demo" is a perfectly good entry. This same block satisfies
+you used today (if any — nb00 walks you through one deliberate
+verify-a-citation exercise), for what task, and how you verified its output.
+"No AI used beyond nb00's exercise" is a perfectly good entry. This same block satisfies
 the disclosure requirement below; from here on, every deliverable carries one.
 
 ### 4. AI-use disclosure block (required on every deliverable)
@@ -109,7 +110,7 @@ M00, Component 3 *is* this block — label it as the first ledger row.
 | Item | Specification |
 |---|---|
 | **Length** | 1–2 pages (PDF), including the screenshot and ledger row |
-| **Pitch** | 30 seconds, delivered in class Wednesday Aug 26 — part of the grade |
+| **Pitch** | 30 seconds, delivered at the Friday studio (Aug 28) — part of the grade |
 | **Style** | Plain prose; three clearly separated curiosities; readable screenshot |
 | **Filename** | `lastname_m00_curiosity_map.pdf` |
 | **Location** | Brightspace → Assignments → M00 |

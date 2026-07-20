@@ -7,13 +7,14 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
-The Evidence Defense is worth **4% of the course grade** (the M44 synthesis
-exercise and exit self-assessment add a final 1%, and your cross-examination
-questions also feed the engagement component). It is a **terminal performance**:
+The Evidence Defense is worth **4% of the course grade** (the last Friday
+studio's synthesis exercise and exit self-assessment add a final 1%, and your
+cross-examination questions also feed the engagement component). It is a **terminal performance**:
 there is **no post-hoc revision** — only the supported-walkthrough conversion
 and optional redo slot described below. The performance is the artifact; there
 is no separate PDF.
@@ -23,10 +24,12 @@ is no separate PDF.
 ## What to Submit on Brightspace
 
 **Nothing is uploaded for M22.** The **performance is the artifact**, supported
-live by your dossier draft and claim ledger. Slots are drawn at M41 (Fri Dec 4).
+live by your dossier draft and claim ledger. The defense is staged at the
+table-read Friday studio (December 4): the instructor presents the format and
+you draw your slot there.
 
-You defend in class on **Monday, December 7 (M42)** or **Wednesday, December 9
-(M43)** — your drawn slot. On both days, every non-defender cross-examines.
+You defend in class on **Monday, December 7** or **Wednesday, December 9** —
+your drawn slot. On both days, every non-defender cross-examines.
 
 *(Your AI-use disclosure lives in the supporting dossier draft, per the
 project's standing responsible-AI rule — see the rubric's verification row.)*

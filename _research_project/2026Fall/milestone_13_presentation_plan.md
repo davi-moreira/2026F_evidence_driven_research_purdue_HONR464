@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -21,8 +22,9 @@ points).
 
 ## What to Submit on Brightspace
 
-Due: **Wednesday, November 11, 11:59 PM** (delivery rounds run in class Monday
-Nov 9 at M32).
+Due: **Wednesday, November 11, 11:59 PM**. The instructor kicks this milestone
+off (together with M14) at the Friday production studio; your partner delivery
+rounds run in Monday's class, November 9.
 
 | # | File | Description |
 |---|---|---|

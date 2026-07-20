@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -20,8 +21,10 @@ standing policy, with residuals logged.
 
 ## What to Submit on Brightspace
 
-Due: **Wednesday, December 2, 11:59 PM** (developed across M39 Mon Nov 30 and
-M40 Wed Dec 2 — package studio plus two partner exchange rounds).
+Due: **Wednesday, December 2, 11:59 PM**. This milestone is kicked off
+(together with M19) at the post-debrief Friday studio, November 20; the two
+partner exchange rounds run in class on Monday, November 30 and Wednesday,
+December 2.
 
 | # | File | Description |
 |---|---|---|
@@ -66,13 +69,13 @@ Everything a stranger needs, and nothing they'd have to guess:
 
 Document both rounds:
 
-- **Round 1 (M39)** — your partner attempts your headline number from the
+- **Round 1 (Monday's class)** — your partner attempts your headline number from the
   package alone while you watch silently. Log **what broke** and in what order.
 - **The fixes** — what you changed in response to each breakage.
 
 ### 3. The signed reproduction attestation (or residuals log)
 
-From **Round 2 (M40)**, one of two honest outcomes:
+From **Round 2 (Wednesday's class)**, one of two honest outcomes:
 
 - **A signed attestation** — your partner re-runs the fixed package and it
   reproduces. Record it in their words, dated and specific.
@@ -105,7 +108,7 @@ full project scope; the PDF still carries the short block.)
 |---|---|
 | **Package** | Notebook passes restart-and-run-all; provenance, seed/environment, decision log, AI ledger all present |
 | **PDF** | Exchange record (round 1 breakage + fixes) + round-2 attestation or residuals log, plus the disclosure block |
-| **Exchange** | Both rounds performed in class (M39, M40) — participation is part of the grade |
+| **Exchange** | Both rounds performed in class (Monday and Wednesday) — participation is part of the grade |
 | **Style** | The attestation is specific and dated; the residuals log (if any) names causes, not just symptoms |
 | **Filenames** | `lastname_m20_repro.pdf` + the package (folder or zip) |
 | **Location** | Brightspace → Assignments → M20 |

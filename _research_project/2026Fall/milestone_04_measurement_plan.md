@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -15,7 +16,8 @@ and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, September 25, 11:59 PM** (you walk the class through it that day).
+Due: **Friday, September 25, 11:59 PM** (you walk the class through it at the
+Friday studio that day).
 
 | # | File | Description |
 |---|---|---|
@@ -33,9 +35,9 @@ make the leap from idea to number *visible and defensible*, propose at least two
 ways to measure your concept and say what each one misses, and confront what
 happens to your answer when the measure is a little bit wrong. That last part
 draws on nb05's error simulation, where you watched a small **bias** distort a
-conclusion more than a large amount of **noise**. On Friday you give a 3-minute
-walkthrough; each listener files a two-line review naming your **best rung** and
-your **weakest rung**, and you revise from them.
+conclusion more than a large amount of **noise**. At the Friday studio you give
+a 3-minute walkthrough; each listener files a two-line review naming your
+**best rung** and your **weakest rung**, and you revise from them.
 
 ## Components
 
@@ -117,7 +119,7 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Length** | Ladder + indicator comparison + threats + error paragraph (typically 2–3 pages PDF) |
-| **Presentation** | 3-minute walkthrough in class Friday Sep 25; two-line peer reviews (best rung / weakest rung) — part of the grade |
+| **Presentation** | 3-minute walkthrough at the Friday studio (Sep 25); two-line peer reviews (best rung / weakest rung) — part of the grade |
 | **Style** | Clear ladder; two genuinely different indicators; error paragraph tied to nb05's noise-vs-bias lesson |
 | **Filename** | `lastname_m04_measurement.pdf` |
 | **Location** | Brightspace → Assignments → M04 |

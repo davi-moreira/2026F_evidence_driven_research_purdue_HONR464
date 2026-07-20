@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -20,8 +21,10 @@ resubmission. It is the last artifact of the semester.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, December 11, 11:59 PM** (submission ceremony in class M44 that
-day; the checklist is run in class M43, Wed Dec 9, as your assembly guide).
+Due: **Friday, December 11, 11:59 PM**. The instructor walks the final-dossier
+checklist at the table-read Friday studio (December 4) as your assembly guide;
+the submission ceremony runs at the Friday studio on the day the dossier is
+due.
 
 | # | File | Description |
 |---|---|---|
@@ -100,8 +103,8 @@ row that can be revised later — it must be right now.
 
 ### 3. The final-dossier checklist (your assembly guide)
 
-Run this checklist (you first run it in class at M43) as you assemble. Every box
-should be true before you submit:
+Run this checklist (first walked at the table-read Friday studio) as you
+assemble. Every box should be true before you submit:
 
 - [ ] **Notebook runs clean** — restart-and-run-all, no manual steps (M20).
 - [ ] **Every claim in the prose has a ledger row**, and every ledger row appears
@@ -137,7 +140,7 @@ violation.
 |---|---|
 | **Contents** | The complete arc (Component 1), the complete claim ledger (Component 2), the checklist satisfied, the disclosure block |
 | **Notebook** | Finalized reproducibility package; passes restart-and-run-all |
-| **Ceremony** | Submission confirmed in class at M44 (Fri Dec 11); the 11:59 PM deadline governs the grade |
+| **Ceremony** | Submission confirmed at the Friday studio (December 11); the 11:59 PM deadline governs the grade |
 | **Style** | Ordered, reconciled, and self-contained — a stranger could reach your conclusions from it alone |
 | **Filenames** | `lastname_m23_dossier.pdf` + `lastname_m23_dossier.ipynb` (or a zip with both) |
 | **Location** | Brightspace → Assignments → M23 |
@@ -188,8 +191,8 @@ submit.
 5. **A resurrected caveat-free claim.** The brief disciplined it, the defense
    probed it — don't let it sneak back into the dossier clean. The ledger is the
    final check.
-6. **Waiting for the ceremony.** M44 confirms submission; it does not extend the
-   deadline. The 11:59 PM clock is the one that grades.
+6. **Waiting for the ceremony.** The Friday-studio ceremony confirms submission;
+   it does not extend the deadline. The 11:59 PM clock is the one that grades.
 
 ---
 

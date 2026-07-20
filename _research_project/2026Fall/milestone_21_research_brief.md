@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -20,8 +21,9 @@ standing policy.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, December 4, 11:59 PM** (drafted M40 Wed Dec 2, table-read in
-class M41 Fri Dec 4).
+Due: **Friday, December 4, 11:59 PM**. The instructor hands out the brief
+template in Wednesday's class; you draft from it, and the table read runs at
+the Friday studio on the day the brief is due.
 
 | # | File | Description |
 |---|---|---|
@@ -77,7 +79,7 @@ the sample boundary, and the uncertainty the ledger insists on. This is the
 
 ### 3. The table read: margin notes received + your revision
 
-At M41 all five briefs are read by everyone, each reader leaving two margin
+At the Friday studio's table read, all five briefs are read by everyone, each reader leaving two margin
 notes: the **sharpest sentence** and the **weakest claim**. Include the notes
 you received and your **revision** in response. If a reader flagged your weakest
 claim, the revision should show the ledger disciplining it — not cosmetic
@@ -96,7 +98,7 @@ entry; an undisclosed AI contribution is an academic-integrity violation.
 | Item | Specification |
 |---|---|
 | **Length** | **One page** for the brief itself (the margin notes + revision may follow on additional pages), plus the disclosure block |
-| **Table read** | All-read-all in class Fri Dec 4; you leave and receive margin notes — participation is part of the grade |
+| **Table read** | All-read-all at the Friday studio, December 4; you leave and receive margin notes — participation is part of the grade |
 | **Style** | Decision-maker plain language; uncertainty visible on the page; one honest figure |
 | **Filename** | `lastname_m21_brief.pdf` |
 | **Location** | Brightspace → Assignments → M21 |

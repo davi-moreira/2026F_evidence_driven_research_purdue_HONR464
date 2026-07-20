@@ -7,7 +7,8 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 M00–M23, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research dossier in December. Every milestone
-follows the same cadence: **develop in class → present → submit → revise**.
+follows the same cadence: **Friday-studio kickoff → develop → present → submit
+→ revise (where eligible)**.
 Milestone weights and the revision policy are in the syllabus; instructions
 and rubrics live one page per milestone, like this one.
 
@@ -15,8 +16,8 @@ and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, October 23, 11:59 PM**. You present a 60-second version in class
-on **Wednesday, October 21** (M24) — your weakness, your fix, your before/after
+Due: **Friday, October 23, 11:59 PM**. You present a 60-second version at the
+Friday studio that same day — your weakness, your fix, your before/after
 numbers.
 
 | # | File | Description |
@@ -101,7 +102,7 @@ academic-integrity violation.
 |---|---|
 | **Length** | 1–2 pages (PDF), tables included |
 | **Reproducibility** | Every diagnosand comes from a seeded run; the numbers in the PDF must match what the notebook produces |
-| **Presentation** | 60-second redesign pitch in class Wednesday Oct 21 — weakness, fix, before/after numbers; part of the grade |
+| **Presentation** | 60-second redesign pitch at the Friday studio (Oct 23) — weakness, fix, before/after numbers; part of the grade |
 | **Filename** | `lastname_m08_diagnosis.pdf` |
 | **Location** | Brightspace → Assignments → M08 |
 
