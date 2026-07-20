@@ -19,7 +19,9 @@ file by stripping every cell whose source contains `INSTRUCTOR SOLUTION`
 ### 1. Header (markdown)
 
 ```markdown
-# [Topic Title — no "Day N", no dates]
+# [Topic Title — no "Day N", no dates, no "Meeting M#"]
+
+**Topic NN · N lecture(s)**
 
 <hr>
 
@@ -31,6 +33,10 @@ file by stripping every cell whose source contains `INSTRUCTOR SOLUTION`
 
 ---
 ```
+
+The `**Topic NN · N lecture(s)**` line states how many Mon/Wed lectures the
+topic spans (async modules say `async module`). The count comes from
+`lecture_labels()` in `scripts/notebooks_map.py` — never hand-invent it.
 
 ### 2. Inquiry & Claim Boundary block (markdown) — REQUIRED, machine-checked
 
@@ -51,8 +57,8 @@ cases) | causal reasoning | all positions (framing/diagnosis/communication)]
 | **A claim this topic PERMITS** | "[exact claim template]" |
 | **A claim this topic does NOT permit** | "[exact overreach it forbids]" |
 
-**Where this sits in the course:** [one sentence: which meetings, which milestone
-it develops, what it builds on.]
+**Where this sits in the course:** [one sentence: which phase, which milestone
+it develops, what it builds on — no meeting numbers, no dates.]
 
 *Provenance: [source-file or "fresh"] | [chapter/section] | [item] | [transformation]*
 ```
@@ -104,8 +110,9 @@ notebooks that use them; every stochastic cell uses `rng` (or a seeded
 `train_test_split`); every data cell prints a `✓ Loaded …` confirmation with
 shape so students can self-check.
 
-### 5. Content sections (`## 1.`, `## 2.`, …) with the narrative pattern
+### 5. Content sections (`## 1.`, `## 2.`, …) — narrative pattern + undergraduate voice
 
+The narrative machinery (KEEP):
 - Open analytical sections with a **"Why This Matters"** cell voiced by a named
   research-world stakeholder (thesis advisor, journal reviewer, IRB reviewer,
   skeptical peer, policy stakeholder) whose concern is a direct quote.
@@ -113,6 +120,16 @@ shape so students can self-check.
 - Inline Q&A: `> **A question that often comes up here:** *"<q>"*` + one flowing
   paragraph.
 - One-sentence **section bridges** at each transition.
+
+The undergraduate voice (ENFORCED — CLAUDE.md "Undergraduate-Friendly Voice"):
+- **Em-dashes: ≤ 20 per notebook, ≤ 1 per markdown cell.** Prefer periods,
+  commas, and bold lead-ins (`**Why this matters:**`, `**The catch:**`).
+- **Every technical term**: bold term → one-sentence plain-language definition
+  → concrete example, before the term is used again.
+- **Short-to-medium sentences** (~12–25 words), one idea each, always `you`.
+- **No fourth-wall meta-references** ("fabricated for this exercise", "planted
+  for verification") and **no fabricated citations anywhere** — verification
+  exercises use real, retrievable sources.
 - Markdown hygiene: escape `\$` and `\~`; emoji vocabulary ✓ ⚠️ 📝 💡 only.
 
 ### 6. The seven required active-learning moves (machine-checked)
@@ -132,8 +149,9 @@ exit ticket inside the module flow):
 | Exit ticket | `### 🎟️ Claim Ticket` | the closing claim-boundary exit ticket (numbered #NN per meeting) |
 
 Pacing rule (brief): direct exposition ≤8 min per segment, <15 min total per
-meeting; ≥70% of class time active. Multi-meeting notebooks mark meeting
-boundaries with a horizontal rule + `*(Meeting M# picks up here.)*`.
+lecture; ≥70% of class time active. Multi-lecture notebooks mark lecture
+boundaries with a horizontal rule + `*(Lecture i of N starts here.)*` — never
+meeting numbers, never dates.
 
 ### 7. Gemini prompt + verification block (Ask → Verify → Document) — before EVERY substantive code chunk
 

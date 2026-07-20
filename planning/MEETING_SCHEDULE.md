@@ -9,17 +9,17 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 ### M1 — Mon 2026-08-24 (in-person) — Launchpad: How do we know? Course map, Colab, and the Ask → Verify → Document policy
 
 - **Driving question:** How do we come to know something well enough to defend it?
-- **Secondary questions:** What will you build this semester? What does the AI policy require of every deliverable? How does a notebook-driven MWF seminar work?
+- **Secondary questions:** What will you build this semester? What does the AI policy require of every deliverable? How does a lecture-plus-studio seminar week work?
 - **Inquiry:** all positions (framing)
 - **Claim PERMITTED:** "I can state what evidence WOULD be needed to support a claim" — the course's opening move.
 - **Claim NOT permitted:** Any empirical claim without a stated evidence base — including claims an AI tool produced.
 - **RDSS reading:** RDSS ch. 1 (Preface) + ch. 2 'What is a research design?' — skim before Wednesday (book.declaredesign.org)
 - **Other material:** nb00 (Colab); course website; syllabus; Brightspace orientation
 - **Provenance:** brief §3 + RDSS ch.2 | course framing | MIDA overview (concept only) | newly-constructed-from-source-concept
-- **Concepts:** evidence-driven research; the inquiry compass (preview); MIDA (preview); Ask → Verify → Document; claim ledger
+- **Concepts:** evidence-driven research; the inquiry compass (preview); MIDA (preview); Ask → Verify → Document; claim ledger; the weekly rhythm (lectures + Friday studio)
 - **Python dependency:** Colab basics only (run a cell, save a copy)
 - **Dataset / simulation:** none (one toy claim-check cell)
-- **50-minute dynamic:** 0–5 welcome + names + one-line curiosities; 5–13 the course promise: from curiosity to a defensible claim (map on board); 13–20 live demo: an AI tool fabricates a citation, we catch it (Ask → Verify → Document); 20–35 hands-on: open nb00 in Colab, run the readiness cells, save a copy to Drive; 35–45 pair task: swap one claim you believe and name the evidence behind it; 45–50 M00 kickoff brief + Claim Ticket exit.
+- **50-minute dynamic:** 0–5 welcome + names + one-line curiosities; 5–13 the course promise: from curiosity to a defensible claim (map on board, including the Friday-studio rhythm); 13–20 live demo: an AI tool fabricates a citation, we catch it (Ask → Verify → Document); 20–35 hands-on: open nb00 in Colab, run the readiness cells, save a copy to Drive; 35–45 pair task: swap one claim you believe and name the evidence behind it; 45–50 M00 kickoff brief + Claim Ticket exit.
 - **Hands-on activity:** Open nb00 in Colab, run all readiness cells, and catch the planted fabricated citation using the verification checklist.
 - **Practice:** 📝 nb00 practice: classify three everyday claims by the evidence that would be needed to support each.
 - **Discussion prompt:** What is something you believed that turned out to be wrong — and what evidence changed your mind?
@@ -30,65 +30,65 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Student prep:** Bring a laptop; be able to log into Google (Colab) and Brightspace.
 - **Student artifact:** Executed nb00 readiness cells + first Claim Ticket
 - **Exit ticket:** Claim Ticket #1: one claim you encountered this week + what evidence would be needed to defend it.
-- **Homework / next milestone:** Finish M00 (Curiosity Map: 3 curiosities + tool readiness screenshot) — due Wed Aug 26, 11:59 PM.
+- **Homework / next milestone:** Start M00 (Curiosity Map: 3 curiosities + tool readiness screenshot) — due at this Friday's studio, where you will pitch one curiosity in 30 seconds.
 - **Instructor prep:** Verify Colab loads nb00 from the public repo; test the planted-citation demo; print/roster the 5 students.
 - **Risks / contingency:** Colab/account issues → pair students on one laptop and finish readiness at home; keep the demo offline-safe (screenshots of the AI output as backup).
 
-### M2 — Wed 2026-08-26 (in-person) — From curiosity to a topic worth studying
+### M2 — Wed 2026-08-26 (in-person) — From curiosity to a topic, and the gap worth filling
 
-- **Driving question:** What makes a curiosity worth a semester of your life?
-- **Secondary questions:** How do researchers move from 'interesting' to 'studyable'? What is the difference between a topic and a question?
-- **Inquiry:** all positions (framing)
-- **Claim PERMITTED:** "This topic is studyable because evidence about it can, in principle, be gathered."
-- **Claim NOT permitted:** "My topic matters, so any question about it is a research question." (Topics are not questions.)
-- **RDSS reading:** RDSS ch. 2 'What is a research design?' (book.declaredesign.org)
-- **Other material:** nb01 §1–2 (Colab)
-- **Provenance:** RDSS ch.2 | research designs as declarable objects | concept adapted to honors non-quant audience | adapted
-- **Concepts:** curiosity vs topic vs question; studyability; the research pipeline; declared designs (first exposure)
-- **Python dependency:** none beyond running markdown/code cells (pandas preview optional)
-- **Dataset / simulation:** none
-- **50-minute dynamic:** 0–5 Claim Ticket callbacks (two students read theirs); 5–12 mini-lesson: curiosity → topic → question funnel; 12–17 model: instructor narrates own curiosity→question path; 17–30 M00 presentations: each student gives a 30-second curiosity pitch (5 × ~2.5 min with transitions); 30–42 workshop in nb01: apply the funnel to your strongest curiosity; 42–48 pairs exchange one 'so what?' challenge; 48–50 exit ticket.
-- **Hands-on activity:** nb01 funnel worksheet cells: write your curiosity, narrow to a topic, and draft the first candidate question.
-- **Practice:** 📝 nb01 practice: sort 6 given statements into curiosity / topic / question.
-- **Discussion prompt:** Whose 30-second pitch would you fund, and what single question would you ask them first?
-- **Project connection:** The curiosity pitched today becomes the field for the M01 research-question pitch.
-- **Milestone developed:** M00 → M01 — Research Question Pitch
-- **Milestone work time:** 13 min (presentations) + 12 min (funnel workshop on own project)
-- **Milestone presentation/review:** M00 presented: 30-second curiosity pitch, whole-class warm feedback (one strength + one question each)
-- **Student prep:** M00 Curiosity Map due tonight 11:59 PM; be ready to pitch one curiosity in 30 seconds.
-- **Student artifact:** Funnel worksheet cells completed for own project
-- **Exit ticket:** Claim Ticket #2: my strongest curiosity, restated as a topic, in one sentence.
-- **Homework / next milestone:** Read RDSS ch. 3; bring one published study (any format) touching your topic to Friday's class.
-- **Instructor prep:** Queue the pitch order; prepare warm-feedback norms poster; review submitted M00 maps before class.
-- **Risks / contingency:** A student has no viable curiosity → offer the curated fallback-topic menu (in the instructor notebook) and schedule an office-hours consult.
-
-### M3 — Fri 2026-08-28 (in-person) — Gaps: what is actually missing from what we know?
-
-- **Driving question:** How do you find the hole in a field's knowledge — and how do you know it is real?
-- **Secondary questions:** What kinds of gaps exist (evidence, population, measurement, method, contradiction)? How is a gap different from 'nobody has done exactly this'?
+- **Driving question:** What makes a curiosity worth a semester of your life, and where is the hole in what is known?
+- **Secondary questions:** How do researchers move from 'interesting' to 'studyable'? What is the difference between a topic and a question? What kinds of gaps exist (evidence, population, measurement, method, contradiction)?
 - **Inquiry:** all positions (framing)
 - **Claim PERMITTED:** "Based on the sources I examined, X has not been established for population/context Y" — a bounded gap claim.
 - **Claim NOT permitted:** "Nothing is known about my topic." (An absolute absence claim you cannot verify.)
-- **RDSS reading:** RDSS ch. 3 'Research design principles' (book.declaredesign.org)
-- **Other material:** nb01 §3 gap typology (Colab)
-- **Provenance:** fresh (gap typology) + RDSS ch.3 | design principles | principle framing | newly-constructed-from-source-concept
-- **Concepts:** gap typology: evidence gap, population gap, measurement gap, method gap, contradiction gap; bounded vs absolute absence claims
-- **Python dependency:** none (text/argument work in notebook cells)
-- **Dataset / simulation:** none
-- **50-minute dynamic:** 0–4 warm-up: name one thing your brought-in study does NOT answer; 4–12 mini-lesson: the five gap types with real examples; 12–24 hands-on: in nb01, classify the gap left by the study you brought (write the bounded gap claim); 24–34 gallery: each student states their gap type + bounded claim, class votes on the classification; 34–46 project work: draft 2 candidate gaps for your own topic; 46–50 exit ticket.
-- **Hands-on activity:** Classify the gap left by the study you brought and write it as a bounded gap claim in nb01.
-- **Practice:** 📝 nb01 practice: match 5 mini-abstracts to the gap type each leaves open.
-- **Discussion prompt:** When is 'nobody has studied this' a good sign — and when is it a warning sign?
-- **Project connection:** Candidate gaps drafted today feed directly into the M01 pitch (gap → problem → question).
-- **Milestone developed:** M01 — Research Question Pitch
-- **Milestone work time:** 12 min (candidate gaps for own topic)
-- **Milestone presentation/review:** informal: gap classification gallery with class voting
-- **Student prep:** Bring one published study touching your topic (from Wednesday's homework).
-- **Student artifact:** Two candidate bounded gap claims for own topic in nb01
-- **Exit ticket:** Claim Ticket #3: my best candidate gap, typed by kind, in one bounded sentence.
-- **Homework / next milestone:** Weekend: skim RDSS ch. 4; turn your best gap into one written problem statement (bring Monday).
-- **Instructor prep:** Prepare 5 mini-abstract cards for the matching practice; check every student brought a study (email reminder Thursday).
-- **Risks / contingency:** Students bring op-eds instead of studies → run the matching practice first and use its abstracts as shared material.
+- **RDSS reading:** RDSS ch. 2 'What is a research design?' + ch. 3 'Research design principles' (book.declaredesign.org)
+- **Other material:** nb01 §1–3 (Colab)
+- **Provenance:** RDSS ch.2–3 + fresh gap typology | research designs + design principles | funnel and gap typology for honors non-quant audience | extended
+- **Concepts:** curiosity vs topic vs question; studyability; the curiosity → topic → question funnel; gap typology: evidence, population, measurement, method, contradiction gaps; bounded vs absolute absence claims
+- **Python dependency:** none beyond running markdown/code cells
+- **Dataset / simulation:** none (five mini-abstract cards for gap matching)
+- **50-minute dynamic:** 0–5 Claim Ticket callbacks (two volunteers read theirs); 5–14 mini-lesson: the curiosity → topic → question funnel, with one worked path narrated start to finish; 14–22 hands-on: in nb01, write your curiosity, narrow it to a topic, and draft a first candidate question; 22–30 mini-lesson: the five gap types with real examples; 30–40 hands-on: match five mini-abstracts to the gap type each leaves open, then draft two candidate bounded gap claims for your own topic; 40–47 pairs exchange one 'so what?' challenge and one gap-type check; 47–50 exit ticket + reminder that M00 pitches happen at this Friday's studio.
+- **Hands-on activity:** Run your curiosity through the nb01 funnel (curiosity → topic → first question), then match five mini-abstracts to gap types and draft two bounded gap claims for your own topic.
+- **Practice:** 📝 nb01 practice: sort 6 given statements into curiosity / topic / question; then match 5 mini-abstracts to the gap type each leaves open.
+- **Discussion prompt:** When is 'nobody has studied this' a good sign, and when is it a warning sign?
+- **Project connection:** The funnel and the candidate gaps drafted today become the spine of the M00 pitch and the M01 research-question work.
+- **Milestone developed:** M00 — Kickoff: Curiosity Map + tool readiness (dev)
+- **Milestone work time:** 13 min (funnel + candidate gap claims on own project)
+- **Milestone presentation/review:** none (pitches at this Friday's studio)
+- **Student prep:** M00 in progress (Curiosity Map draft started); RDSS ch. 1–2 skimmed; laptop ready.
+- **Student artifact:** Funnel cells + two candidate bounded gap claims in nb01
+- **Exit ticket:** Claim Ticket #2: my strongest curiosity, restated as a topic, plus my best candidate gap in one bounded sentence.
+- **Homework / next milestone:** Finish M00 (Curiosity Map: 3 curiosities + tool readiness screenshot) and rehearse the 30-second curiosity pitch for this Friday's studio.
+- **Instructor prep:** Prepare 5 mini-abstract cards for the gap matching; queue the worked funnel example; review any M00 drafts that arrive early.
+- **Risks / contingency:** A student has no viable curiosity → offer the curated fallback-topic menu (in the instructor notebook) and schedule an office-hours consult.
+
+### M3 — Fri 2026-08-28 (in-person) — Studio Friday — Curiosity pitches: M00 due, M01 kickoff
+
+- **Driving question:** Can you pitch your curiosity in 30 seconds and leave with a research-question plan?
+- **Secondary questions:** What does a compelling curiosity pitch sound like? What does the M01 brief ask for, and how will it be graded?
+- **Inquiry:** all positions (studio)
+- **Claim PERMITTED:** "My curiosity narrows to topic T, and the gap I suspect is G" — the M00 pitch claim.
+- **Claim NOT permitted:** "My topic matters, so any question about it is a research question." (Topics are not questions.)
+- **RDSS reading:** (no new reading — studio Friday; bring your M00 Curiosity Map and pitch)
+- **Other material:** nb01 student notebook (curiosity → question) — recap reference (Colab); M01 Brightspace brief
+- **Provenance:** course design (studio format) | weekly Friday studio | recap + milestone brief + supervised work | newly-constructed-from-source-concept
+- **Concepts:** pitching a curiosity; warm feedback norms; the M01 deliverable (gap → problem → question); supervised project work
+- **Python dependency:** none new (own milestone work)
+- **Dataset / simulation:** student's own project materials
+- **50-minute dynamic:** 0–10 recap: the curiosity → topic → gap funnel in one pass; 10–20 milestone brief (Brightspace): present M01 deliverable + rubric; 20–50 studio work: 30-second curiosity pitches with one strength + one question each, then supervised M01 start (turn your best gap into a problem statement) with rotating consults.
+- **Hands-on activity:** Deliver the 30-second M00 curiosity pitch, then start M01: draft the problem statement your best gap points to.
+- **Practice:** 📝 studio log: record one decision you made about your project today and the reason behind it.
+- **Discussion prompt:** Whose 30-second pitch would you fund, and what single question would you ask them first?
+- **Project connection:** M00 closes today; the problem statement drafted in the work block opens the M01 pipeline.
+- **Milestone developed:** M00 — Kickoff: Curiosity Map + tool readiness (presented + due); M01 — Research Question Pitch (kickoff)
+- **Milestone work time:** 30 min studio block
+- **Milestone presentation/review:** M00 presented: 30-second curiosity pitch, whole-class warm feedback (one strength + one question each)
+- **Student prep:** M00 complete; 30-second pitch rehearsed; laptop ready.
+- **Student artifact:** Delivered pitch + a first M01 problem-statement draft
+- **Exit ticket:** Claim Ticket #3: my gap, restated as a problem statement, in one sentence.
+- **Homework / next milestone:** Submit M00 tonight (11:59 PM). Weekend: skim RDSS ch. 4; turn your best gap into one written problem statement (bring Monday).
+- **Instructor prep:** Queue the pitch order; warm-feedback norms poster; M01 Brightspace brief on screen; consult rotation list.
+- **Risks / contingency:** Pitches run long → cap feedback at one strength each and pass remaining questions as written notes; protect the supervised work block.
 
 ### M4 — Mon 2026-08-31 (in-person) — From problem to an answerable question
 
@@ -107,304 +107,248 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Hands-on activity:** Score 4 sample questions + your own on the answerability rubric in nb01; rewrite yours until it passes.
 - **Practice:** 📝 nb01 practice: rewrite 3 unanswerable questions (one normative, one boundless, one unit-free) into answerable form.
 - **Discussion prompt:** Which is the worse failure — a question too broad to answer, or one so narrow the answer is trivial?
-- **Project connection:** The question finalized today is the centerpiece of Friday's M01 pitch.
-- **Milestone developed:** M01 — Research Question Pitch
+- **Project connection:** The question finalized today is the centerpiece of this Friday's M01 pitch.
+- **Milestone developed:** M01 — Research Question Pitch (dev)
 - **Milestone work time:** 9 min (finalize own question wording)
 - **Milestone presentation/review:** peer clinic: partner rubric-scores your question
 - **Student prep:** Bring your written problem statement (weekend homework); RDSS ch. 4 skimmed.
 - **Student artifact:** Rubric-scored, revised research question in nb01
 - **Exit ticket:** Claim Ticket #4: my question, final wording, + the rubric criterion it is still weakest on.
-- **Homework / next milestone:** Draft the full M01 pitch (gap → problem → question, 2 minutes); pitch day is Friday Sep 4.
+- **Homework / next milestone:** Draft the full M01 pitch (gap → problem → question, 2 minutes); pitch day is this Friday's studio. Skim the opening of RDSS ch. 7 before Wednesday.
 - **Instructor prep:** Select 4 sample questions spanning the rubric failure modes; prep the live-upgrade example.
 - **Risks / contingency:** Questions converge on unmeasurable outcomes → pull the measurement-preview card forward from nb05 and flag it as coming attractions.
 
-### M5 — Wed 2026-09-02 (in-person) — The inquiry compass I: descriptive inquiries — description and generalization
+## Phase 2 — Compass, sources, model & measurement
+
+### M5 — Wed 2026-09-02 (in-person) — The inquiry compass: kind (descriptive vs causal) × reach (data, population, unseen)
 
 - **Driving question:** What kind of answer does your question actually ask for?
-- **Secondary questions:** What can a description establish, and where does it stop? What does it mean to generalize with uncertainty?
-- **Inquiry:** description + generalization (the compass skill)
-- **Claim PERMITTED:** Description: "in these data, X." Generalization: "in the population my frame reaches, plausibly X, with stated uncertainty."
-- **Claim NOT permitted:** Treating a pattern in the data at hand as if it automatically holds beyond the sample — or as if it were causal.
-- **RDSS reading:** RDSS ch. 7 'Defining the inquiry' (descriptive vs causal inquiries; book.declaredesign.org)
-- **Other material:** nb02 §1–2 (Colab)
-- **Provenance:** RDSS ch.7 | descriptive inquiries vs causal inquiries | classification recast as the compass skill (kind × reach) | extended
-- **Concepts:** compass classification (kind × reach); sample vs population; descriptive inquiry; uncertainty (preview); claim boundaries
+- **Secondary questions:** What can a description establish, and where does it stop? What licenses a claim about a population beyond the data? Why does predicting well not require understanding? Why does 'what if we intervened?' demand different evidence entirely?
+- **Inquiry:** all four compass positions (the compass skill)
+- **Claim PERMITTED:** Description: "in these data, X." Generalization: "in the population my frame reaches, plausibly X, with stated uncertainty." Prediction: "for new cases, expect Ŷ, judged against a baseline." Causal: "the intervention changes Y under a stated identification argument."
+- **Claim NOT permitted:** Treating a pattern in the data at hand as if it automatically holds beyond the sample, or as if it were causal; "the model predicts well, so X causes Y."
+- **RDSS reading:** RDSS ch. 7 'Defining the inquiry' (descriptive vs causal inquiries) + Part III opener (design library; book.declaredesign.org)
+- **Calling Bullshit (optional):** optional: callingbullshit.org 'Criminal machine learning' case study (prediction ≠ understanding)
+- **Other material:** nb02 §1–4 (Colab)
+- **Provenance:** RDSS ch.7 + Part III framing | descriptive vs causal inquiries | classification recast as the compass skill (kind × reach); prediction column built fresh | extended
+- **Concepts:** the compass: kind (descriptive vs causal) × reach (data at hand / population / unseen); four named positions: description, generalization, prediction, causal reasoning; baseline; counterfactuals (first exposure); identification (first exposure); claim boundaries
 - **Python dependency:** pandas (read a CSV, value_counts, mean) — first real code
 - **Dataset / simulation:** lapop_brazil.csv (first look: one variable, sample vs population framing)
-- **50-minute dynamic:** 0–5 pitch-prep pulse check + one Claim Ticket callback; 5–13 mini-lesson: the compass — kind (descriptive vs causal) × reach (data at hand / population / unseen); today the descriptive kind at two reaches (description, generalization); 13–25 hands-on: in nb02 compute one honest descriptive summary of lapop_brazil and write its claim; 25–33 pause-and-predict: will the sample pattern hold in the population? students commit in writing before the discussion; 33–43 classification drill rounds 1–2: sort question cards by reach — the data at hand vs a population; 43–48 project transfer: where on the compass does YOUR question live (so far)?; 48–50 exit ticket.
-- **Hands-on activity:** Compute a descriptive summary of one lapop_brazil variable in nb02 and write the exact claim it permits.
-- **Practice:** 📝 nb02 practice: 8 question cards, sort by reach (data at hand vs population) and name the giveaway word in each.
-- **Discussion prompt:** Why is 'most people in this survey…' a different claim from 'most Brazilians…'? What would license the second?
-- **Project connection:** First-pass classification of each student's own M01 question.
+- **50-minute dynamic:** 0–4 pitch-prep pulse check + one Claim Ticket callback; 4–16 mini-lesson: the compass, kind (descriptive vs causal) × reach (data at hand / population / unseen), and its four named positions with one example each; 16–28 hands-on: in nb02 compute one honest descriptive summary of lapop_brazil, write the exact claim it permits, then write the population claim that would OVERREACH it; 28–40 classification drill: sort question cards across the whole compass, naming the giveaway word in each; 40–46 project transfer: classify YOUR question by kind and reach and note the classification in your pitch draft; 46–50 exit ticket.
+- **Hands-on activity:** Compute a descriptive summary of one lapop_brazil variable, write the exact claim it permits, and drill the whole compass on question cards.
+- **Practice:** 📝 nb02 practice: for 8 question cards, name the kind + reach AND the claim that would overreach each.
+- **Discussion prompt:** Why is 'most people in this survey…' a different claim from 'most Brazilians…', and what would license the second?
+- **Project connection:** First-pass compass classification of each student's own M01 question, noted in the pitch draft.
 - **Milestone developed:** M01 — Research Question Pitch (compass candidate added)
-- **Milestone work time:** 5 min (classify own question by kind + reach; note it in the pitch draft)
-- **Milestone presentation/review:** none (drill + prep day)
-- **Student prep:** M01 pitch drafted; laptop ready for first real pandas work.
-- **Student artifact:** One executed descriptive summary + a committed pre-run prediction in nb02
+- **Milestone work time:** 6 min (classify own question by kind + reach; note it in the pitch draft)
+- **Milestone presentation/review:** none (drill + prep day; pitches at this Friday's studio)
+- **Student prep:** M01 pitch drafted; RDSS ch. 7 opening skimmed; laptop ready for first real pandas work.
+- **Student artifact:** One executed descriptive summary + own question classified by kind and reach in nb02
 - **Exit ticket:** Claim Ticket #5: my question is (for now) a ___ inquiry reaching ___, because the answer it wants is ___.
-- **Homework / next milestone:** Rehearse the 2-minute M01 pitch for Friday; finish nb02 §1–2 cells if not done in class.
-- **Instructor prep:** Print two rounds of question cards; verify lapop_brazil.csv loads from the repo raw URL in Colab.
-- **Risks / contingency:** pandas friction dominates → shrink the hands-on to the provided one-liner cells and move the second drill round to Friday.
+- **Homework / next milestone:** Rehearse the 2-minute M01 pitch for this Friday's studio; finish any nb02 cells not completed in class.
+- **Instructor prep:** Print question cards spanning all four compass positions; verify lapop_brazil.csv loads from the repo raw URL in Colab; queue the optional CB case link.
+- **Risks / contingency:** pandas friction dominates → shrink the hands-on to the provided one-liner cells and let the card drill carry the concept; unfinished cells complete as homework.
 
-### M6 — Fri 2026-09-04 (in-person) — The inquiry compass II: prediction, causal inquiries — and the M01 pitches
+### M6 — Fri 2026-09-04 (in-person) — Studio Friday — Question pitches: M01 due, M02 kickoff
 
-- **Driving question:** Is your question asking to forecast the future, or to change it?
-- **Secondary questions:** Why does predicting well not require understanding? Why does 'what if we intervened?' demand a different kind of evidence entirely?
-- **Inquiry:** prediction + causal (the compass skill)
-- **Claim PERMITTED:** Prediction: "for new cases, expect Ŷ, judged against a baseline." Causal: "the intervention changes Y under a stated identification argument."
-- **Claim NOT permitted:** "The model predicts well, so X causes Y" — or any causal claim with no identification argument.
-- **RDSS reading:** RDSS ch. 7 (continued) + Part III opener (design library: observational/experimental × descriptive/causal)
-- **Calling Bullshit (optional):** optional: callingbullshit.org 'Criminal machine learning' case study (prediction ≠ understanding)
-- **Other material:** nb02 §3–4 (Colab)
-- **Provenance:** RDSS ch.7 + Part III framing | inquiry types | prediction column built fresh (RDSS treats it lightly) | extended
-- **Concepts:** prediction vs explanation; baseline; counterfactuals (first exposure); identification (first exposure); the full compass (kind × reach)
-- **Python dependency:** none new (one provided demo cell)
-- **Dataset / simulation:** 10-row toy forecast demo (inline, seeded)
-- **50-minute dynamic:** 0–4 settle + pitch order draw; 4–12 mini-lesson: the remaining compass positions — prediction (descriptive · unseen cases) and the causal kind — with the criminal-ML cautionary case; 12–20 classification drill round 3: the whole compass now in play; 20–42 M01 PITCHES: five 2-minute pitches, each followed by 2 minutes of structured class response (the compass position the class thinks the question wants + one risk); 42–48 self-revision: annotate your pitch with what you heard; 48–50 exit ticket + M01 submission reminder.
-- **Hands-on activity:** Classification drill across the whole compass; live compass-vote after each pitch.
-- **Practice:** 📝 nb02 practice: for 4 questions, name the kind + reach AND the claim that would overreach it.
-- **Discussion prompt:** A model forecasts campus course demand almost perfectly. What can the registrar do with that — and what can't they conclude?
-- **Project connection:** Every project question gets a class-voted compass hypothesis (kind + reach) to test against the coming units.
-- **Milestone developed:** M01 — Research Question Pitch (presented + submitted)
-- **Milestone work time:** 6 min (post-pitch self-revision)
+- **Driving question:** Can you pitch your research question in 2 minutes and defend its compass position?
+- **Secondary questions:** What makes a pitch land? What does the M02 brief ask for (verified sources + claim map), and how will it be graded?
+- **Inquiry:** all four compass positions (studio)
+- **Claim PERMITTED:** "My question is Q, filling gap G, and the compass position it wants is P" — the M01 pitch claim.
+- **Claim NOT permitted:** A pitch whose compass position no listener can identify (if the class cannot place it, the question is not yet scoped).
+- **RDSS reading:** (no new reading — studio Friday; bring your rehearsed M01 pitch)
+- **Other material:** nb02 student notebook (the inquiry compass) — recap reference (Colab); M02 Brightspace brief
+- **Provenance:** course design (studio format) | weekly Friday studio | recap + milestone brief + pitch session | newly-constructed-from-source-concept
+- **Concepts:** pitch delivery; compass-vote as structured peer review; the M02 deliverable (verified source ledger + claim map)
+- **Python dependency:** none new (own milestone work)
+- **Dataset / simulation:** student's own project materials
+- **50-minute dynamic:** 0–10 recap: the compass (kind × reach) and its four positions in one pass; 10–20 milestone brief (Brightspace): present M02 deliverable + rubric; 20–50 studio work: 2-minute M01 pitches, each followed by a class compass-vote plus one named risk, then post-pitch self-revision notes with rotating consults.
+- **Hands-on activity:** Deliver the 2-minute M01 pitch; after each classmate's pitch, vote the compass position the question wants and name one risk.
+- **Practice:** 📝 studio log: record the compass position the class voted for your question and one revision you will make in response.
+- **Discussion prompt:** Which pitch today had the clearest compass position, and what wording made it so easy to place?
+- **Project connection:** Every project leaves with a class-voted compass hypothesis to test against the coming units; the source ledger assigned today feeds M02.
+- **Milestone developed:** M01 — Research Question Pitch (presented + due); M02 — Literature & Claim Map (kickoff)
+- **Milestone work time:** 30 min studio block
 - **Milestone presentation/review:** M01 presented: 2-minute pitch + structured class compass-vote and risk feedback
-- **Student prep:** 2-minute M01 pitch rehearsed; nb02 §1–2 complete.
+- **Student prep:** 2-minute M01 pitch rehearsed; nb02 cells complete.
 - **Student artifact:** Delivered pitch + annotated revision notes
 - **Exit ticket:** Claim Ticket #6: the compass position my classmates voted for my question, and whether I agree (one reason).
-- **Homework / next milestone:** Submit M01 (pitch deck/notes + question + gap + candidate compass position) tonight 11:59 PM. Read RDSS ch. 4 §literature; next week: sources and citation integrity.
-- **Instructor prep:** Timer + pitch rubric sheets; queue the optional CB case link; prepare compass-vote cards.
-- **Risks / contingency:** Pitches run long → cap responses at one strength + the compass vote; move risk feedback to written notes passed to the presenter.
+- **Homework / next milestone:** Submit M01 (pitch notes + question + gap + compass position) tonight (11:59 PM). Weekend: read RDSS ch. 4 on situating a design in a literature; confirm your Purdue Libraries login works before Wednesday.
+- **Instructor prep:** Timer + pitch rubric sheets; compass-vote cards; M02 Brightspace brief on screen; consult rotation list.
+- **Risks / contingency:** Pitches run long → cap responses at the compass vote plus one written risk passed to the presenter; protect the self-revision minutes.
 
-## Phase 2 — Literature, model, inquiry, measurement
+### M7 — Wed 2026-09-09 (in-person) — Sources with integrity: search, verify, and map what a field actually claims
 
-### M7 — Wed 2026-09-09 (in-person) — Finding real sources: search, appraisal, and the AI hallucination problem
-
-- **Driving question:** How do you find what is actually known — and how do you know a citation is real?
-- **Secondary questions:** Where do scholarly claims live (journals, working papers, reports, data)? How does AI-assisted search fail, and how do you catch it?
-- **Inquiry:** description + generalization (appraising evidence claims)
+- **Driving question:** How do you find what is actually known, verify it is real, and draw the argument of a literature?
+- **Secondary questions:** Where do scholarly claims live (journals, working papers, reports, data)? Why must every citation be retrieved and checked before it is used? How do you extract a source's central claim and place your gap on the map?
+- **Inquiry:** description + generalization (appraising and mapping evidence claims)
 - **Claim PERMITTED:** "Source S exists, I retrieved it, and it claims X on the basis of evidence E."
-- **Claim NOT permitted:** Citing any source you have not personally retrieved and checked — however plausible the AI's summary of it sounds.
-- **RDSS reading:** RDSS ch. 4 'Getting started' (situating a design in a literature)
-- **Other material:** nb03 §1–2 (Colab); Purdue Libraries database portal; Google Scholar
-- **Provenance:** fresh (AI-era source-finding workflow) + RDSS ch.4 | getting started | AI-policy instantiation | newly-constructed-from-source-concept
-- **Concepts:** source types + hierarchy; search strings; snowballing; hallucinated citations; the retrieval-verification loop
-- **Python dependency:** none (browser + notebook log cells)
-- **Dataset / simulation:** planted citation list (3 real, 2 fabricated) for the verification hunt
-- **50-minute dynamic:** 0–5 M01 feedback headlines returned; 5–12 mini-lesson: where claims live + the retrieval-verification loop; 12–27 hands-on hunt: nb03 gives 5 citations for a plausible topic — find the two fakes, log HOW you caught them; 27–35 debrief: what gave the fakes away; the verification checklist formalized; 35–47 project work: run one AI-assisted search + one database search for YOUR question, log both in the source ledger; 47–50 exit ticket.
-- **Hands-on activity:** Fabricated-citation hunt: verify 5 citations, catch the 2 fakes, document the tell in each.
+- **Claim NOT permitted:** Citing any source you have not personally retrieved and checked — however plausible an AI summary of it sounds.
+- **RDSS reading:** RDSS ch. 4 'Getting started' (situating a design in a literature; book.declaredesign.org)
+- **Other material:** nb03 §1–4 (Colab); Purdue Libraries database portal; Google Scholar
+- **Provenance:** fresh (AI-era source verification + claim-map method) + RDSS ch.4 | getting started | retrieval-verification loop + claim-map builder | newly-constructed-from-source-concept
+- **Concepts:** source types + hierarchy; search strings; snowballing; the retrieval-verification loop (every citation retrieved and checked); source ledger; claim extraction; evidence typing (descriptive/inferential/predictive/causal); agreement/contradiction edges; gap placement
+- **Python dependency:** provided networkx cell (fill a claims table; the graph draws itself)
+- **Dataset / simulation:** none (student-retrieved real sources; own source ledger)
+- **50-minute dynamic:** 0–5 M01 feedback headlines returned; 5–14 mini-lesson: where claims live + the retrieval-verification loop (retrieve it, confirm it exists, log how you checked); 14–28 hands-on: run one AI-assisted search and one database search for YOUR question, retrieve the sources they surface, verify each is real, and log citation, retrieval point, and central claim in the nb03 source ledger; 28–38 mini-lesson: from ledger to claim map, one worked example (claims, evidence types, agreement/contradiction edges, gap placement); 38–47 project work: start your claims table and place a provisional gap on the map; 47–50 exit ticket.
+- **Hands-on activity:** Run paired AI-assisted and database searches for your own question, verify that every source you keep is real and retrievable, and log each in the source ledger with its central claim.
 - **Practice:** 📝 nb03 practice: turn your research question into two search strings — one for a database, one for an AI tool — and predict how their failure modes will differ.
 - **Discussion prompt:** An AI summary cites a perfect-sounding study you cannot find. What are the three possible explanations, and what do you do next?
-- **Project connection:** The source ledger started today becomes the backbone of M02 (Literature & Claim Map).
-- **Milestone developed:** M02 — Literature & Claim Map
-- **Milestone work time:** 12 min (own-question searches + ledger start)
-- **Milestone presentation/review:** none (hunt debrief only)
-- **Student prep:** M01 submitted; Purdue Libraries login working.
-- **Student artifact:** Verification hunt log + source ledger with ≥2 verified entries
+- **Project connection:** The verified source ledger and claims table started today are the backbone of M02 (Literature & Claim Map), due at this Friday's studio.
+- **Milestone developed:** M02 — Literature & Claim Map (dev)
+- **Milestone work time:** 23 min (own-question searches + ledger + claims table)
+- **Milestone presentation/review:** none (gallery walk at this Friday's studio)
+- **Student prep:** M01 submitted; Purdue Libraries login working; laptop ready.
+- **Student artifact:** Source ledger with ≥2 verified entries + a started claims table in nb03
 - **Exit ticket:** Claim Ticket #7: one verified source for my question — full citation + where I retrieved it.
-- **Homework / next milestone:** Grow the source ledger to ≥6 verified sources before Friday; note each source's central claim.
-- **Instructor prep:** Refresh the planted-citation list (2 fabricated entries must remain plausible but unfindable); verify library portal access from a student view.
-- **Risks / contingency:** Library portal outage → Google Scholar + open-access fallbacks are pre-listed in nb03.
+- **Homework / next milestone:** Grow the source ledger to ≥6 verified sources, note each source's central claim, and build the claim map with your gap placed; M02 presents at this Friday's studio.
+- **Instructor prep:** Verify library portal access from a student view; queue the worked claim-map example; test the networkx graph cell in Colab.
+- **Risks / contingency:** Library portal outage → Google Scholar + open-access fallbacks are pre-listed in nb03; thin in-class search results → snowball from one seed source and finish the ledger as homework.
 
-### M8 — Fri 2026-09-11 (in-person) — The claim map: what a field asserts, on what evidence — and where your gap sits
+### M8 — Fri 2026-09-11 (in-person) — Studio Friday — Claim-map gallery: M02 due, M03 kickoff
 
-- **Driving question:** Can you draw the argument of a literature — claims, evidence, and the hole your project fills?
-- **Secondary questions:** How do you extract a source's central claim and evidence type? What does disagreement between sources look like on a map?
-- **Inquiry:** description + generalization (mapping evidence claims)
+- **Driving question:** Does your claim map survive a room full of readers, and is the gap you placed real?
+- **Secondary questions:** What does disagreement between sources look like on a map? What does the M03 brief ask for (model + inquiry declaration), and how will it be graded?
+- **Inquiry:** description + generalization (studio)
 - **Claim PERMITTED:** "Across my verified sources, claims cluster as A vs B, and none address C — my gap."
 - **Claim NOT permitted:** "The literature proves…" (a map of claims is not itself proof, and unread sources count for nothing).
-- **RDSS reading:** RDSS ch. 4 (continued)
-- **Other material:** nb03 §3–4 claim-map builder (Colab)
-- **Provenance:** fresh (claim-map method) | — | networkx-lite claim graph | newly-constructed-from-source-concept
-- **Concepts:** claim extraction; evidence typing (descriptive/inferential/predictive/causal); agreement/contradiction edges; gap placement
-- **Python dependency:** provided networkx cell (students fill a table; the graph draws itself)
-- **Dataset / simulation:** student source ledgers (own data)
-- **50-minute dynamic:** 0–5 ledger pulse check (count + best source aloud); 5–12 mini-lesson: from ledger to claim map, one worked example; 12–30 studio: build your claim map in nb03 (fill the claims table, run the graph cell, place your gap); 30–42 GALLERY WALK: maps on screens, class circulates with sticky-note questions (M02 review); 42–48 revise: incorporate one sticky-note challenge; 48–50 exit ticket + M02 submission reminder.
-- **Hands-on activity:** Build your own claim map from your verified ledger and place your gap on it.
-- **Practice:** 📝 nb03 practice: two sources disagree — list three design differences that could explain the contradiction without either being wrong.
+- **RDSS reading:** (no new reading — studio Friday; bring your finished claim map)
+- **Other material:** nb03 student notebook (sources + claim map) — recap reference (Colab); M03 Brightspace brief
+- **Provenance:** course design (studio format) | weekly Friday studio | recap + milestone brief + gallery walk | newly-constructed-from-source-concept
+- **Concepts:** gallery-walk peer review; sticky-note challenges; incorporating criticism; the M03 deliverable (model + inquiry declaration)
+- **Python dependency:** none new (own milestone work)
+- **Dataset / simulation:** student's own project materials (verified source ledgers)
+- **50-minute dynamic:** 0–10 recap: the retrieval-verification loop and the claim map in one pass; 10–20 milestone brief (Brightspace): present M03 deliverable + rubric; 20–50 studio work: claim-map gallery walk with sticky-note peer challenges, incorporate one challenge on the spot, then supervised M03 start (sketch your project's world) with rotating consults.
+- **Hands-on activity:** Walk the gallery: challenge two classmates' maps with sticky-note questions, then defend or revise your own gap placement.
+- **Practice:** 📝 studio log: record the sticky-note challenge you incorporated and what changed on your map because of it.
 - **Discussion prompt:** On your neighbor's map: is the gap they placed real, or does one of their own sources already cover it?
-- **Project connection:** The claim map IS the M02 deliverable; today is its build-and-review studio.
-- **Milestone developed:** M02 — Literature & Claim Map (presented + submitted)
-- **Milestone work time:** 18 min (studio build) + 6 min (revision)
+- **Project connection:** M02 closes today; the world-sketch from the work block seeds the M03 Model & Inquiry Declaration.
+- **Milestone developed:** M02 — Literature & Claim Map (presented + due); M03 — Model & Inquiry Declaration (kickoff)
+- **Milestone work time:** 30 min studio block
 - **Milestone presentation/review:** M02 presented: gallery walk with sticky-note peer challenges
-- **Student prep:** Source ledger with ≥6 verified sources (Wednesday's homework).
+- **Student prep:** Claim map built from ≥6 verified sources; ledger up to date; laptop ready.
 - **Student artifact:** Claim map with placed gap + one incorporated revision
 - **Exit ticket:** Claim Ticket #8: the strongest claim in my map that argues AGAINST my project's premise.
-- **Homework / next milestone:** Submit M02 tonight 11:59 PM. Weekend read: RDSS ch. 6 'Specifying the model' §opening — next week we build worlds.
-- **Instructor prep:** Worked claim-map example ready; sticky notes; check each ledger midweek and nudge thin ones.
-- **Risks / contingency:** Ledgers too thin for maps → pair students to co-map the stronger ledger, thin-ledger student owes the gap placement.
+- **Homework / next milestone:** Submit M02 tonight (11:59 PM). Weekend: read the opening of RDSS ch. 6 'Specifying the model'; Monday we build worlds.
+- **Instructor prep:** Sticky notes; screens arranged for the gallery; M03 Brightspace brief on screen; midweek ledger-check notes in hand.
+- **Risks / contingency:** Ledgers too thin for maps → pair students to co-map the stronger ledger; the thin-ledger student owes the gap placement and finishes their own map over the weekend.
 
-### M9 — Mon 2026-09-14 (in-person) — Model (MIDA I): the world your question lives in — potential outcomes and DAGs
+### M9 — Mon 2026-09-14 (in-person) — Model & Inquiry (MIDA I): the world your question lives in, and the exact quantity you seek
 
-- **Driving question:** What must the world be like for your question to have an answer?
-- **Secondary questions:** What is a model in the MIDA sense? What are potential outcomes? How does a DAG say 'I believe X could affect Y'?
-- **Inquiry:** causal + generalization (model-building)
-- **Claim PERMITTED:** "Under my stated model of the world, the quantity I want exists and is defined."
-- **Claim NOT permitted:** Any claim that smuggles in a model you never stated ("the effect of X" with no world in which X varies).
-- **RDSS reading:** RDSS ch. 6 'Specifying the model' (book.declaredesign.org)
-- **Other material:** nb04 §1–2 (Colab); make_dag_df utility (translated)
-- **Provenance:** RDSS ch.6 + utilities/make_dag_df.R | specifying the model | potential outcomes + DAG helper | translated (R→Python)
-- **Concepts:** MIDA: Model; possible worlds; potential outcomes Y(1), Y(0); DAG nodes/edges; what a model commits you to; EDA upstream — exploring real data to calibrate the model and surface candidate inquiries
-- **Python dependency:** numpy (simulate a tiny world), networkx (draw a 3-node DAG from an edge list)
-- **Dataset / simulation:** inline simulated world (seeded, 100 units, one cause one outcome)
-- **50-minute dynamic:** 0–5 weekend-reading pulse + one M02 map highlight; 5–13 mini-lesson: a model is a claim about how the world could be — potential outcomes on the board with a 4-unit toy; 13–20 pause-and-predict: in the toy world, can we ever see both Y(1) and Y(0) for one unit? commit before reveal; 20–33 hands-on: nb04 first explore lapop_brazil for two minutes to give the model real-world ranges (EDA as M-calibration, named), then simulate the world, reveal one potential outcome per unit, feel the fundamental problem; 33–43 DAG lab: draw YOUR project's 3-node DAG (cause, outcome, one lurking third variable); 43–48 pair swap: challenge one arrow in your partner's DAG; 48–50 exit ticket.
-- **Hands-on activity:** Simulate a 100-unit world with both potential outcomes, then reveal only one per unit — the fundamental problem of causal inference, executed.
-- **Practice:** 📝 nb04 practice: for 3 scenarios, write the potential-outcomes pair the question implicitly compares.
-- **Discussion prompt:** Your DAG has an arrow your partner's doesn't. What evidence — even in principle — could settle whose world is closer to true?
-- **Project connection:** Each student leaves with a first DAG of their own project's world — the seed of M03.
-- **Milestone developed:** M03 — Model & Inquiry Declaration
-- **Milestone work time:** 10 min (own-project DAG)
+- **Driving question:** What must the world be like for your question to have an answer — and if a genie handed you the truth, what NUMBER or PATTERN would it hand you?
+- **Secondary questions:** What is a model in the MIDA sense? What are potential outcomes, and how does a DAG say 'I believe X could affect Y'? What is an inquiry/estimand, and why must it be defined before data arrive?
+- **Inquiry:** causal + generalization (model-building and estimand thinking)
+- **Claim PERMITTED:** "Under my stated model of the world, my inquiry is [quantity], defined over [units] — stated before seeing outcome data."
+- **Claim NOT permitted:** Choosing the quantity AFTER browsing results (inquiry shopping), or any claim that smuggles in a model you never stated.
+- **RDSS reading:** RDSS ch. 6 'Specifying the model' + ch. 7 'Defining the inquiry' (book.declaredesign.org); declaration_7.1
+- **Other material:** nb04 §1–4 (Colab); make_dag_df utility (translated)
+- **Provenance:** RDSS ch.6–7 + declaration_7.1.R + utilities/make_dag_df.R | specifying the model + defining the inquiry | potential outcomes, DAG helper, inquiry declaration pattern | translated (R→Python)
+- **Concepts:** MIDA: Model + Inquiry; possible worlds; potential outcomes Y(1), Y(0); DAG nodes/edges; the genie test; inquiry/estimand; ATE vs share vs difference; inquiry precedes data; EDA upstream as model calibration (preview)
+- **Python dependency:** numpy (simulate a tiny world), networkx (draw a 3-node DAG), pandas (compute the true estimand)
+- **Dataset / simulation:** inline simulated world (seeded, 100 units, one cause one outcome; true ATE computed then hidden)
+- **50-minute dynamic:** 0–5 weekend-reading pulse + one M02 map highlight; 5–15 mini-lesson: a model is a claim about how the world could be (potential outcomes on the board with a 4-unit toy, the fundamental problem named); 15–24 mini-lesson: the genie test (inquiry as the quantity the genie would hand you, descriptive and causal versions, declared before data arrive); 24–36 hands-on: in nb04 simulate a 100-unit world, reveal only one potential outcome per unit, then compute the TRUE inquiry value and hide it (it becomes the answer key for later units); 36–46 project lab: draw YOUR project's 3-node DAG (cause, outcome, one lurking third variable) and write your inquiry in one sentence; 46–50 pair swap: challenge one arrow in your partner's DAG + exit ticket.
+- **Hands-on activity:** Simulate a world with both potential outcomes, reveal only one per unit, then compute the true estimand in a world you control and hide it as the future answer key.
+- **Practice:** 📝 nb04 practice: for 3 scenarios, write the potential-outcomes pair the question implicitly compares; for 2 more, write the inquiry in words AND as a formula over potential outcomes or population values.
+- **Discussion prompt:** Your DAG has an arrow your partner's doesn't. What evidence, even in principle, could settle whose world is closer to true?
+- **Project connection:** Each project leaves with a first DAG and a one-sentence inquiry — the two halves of the M03 declaration.
+- **Milestone developed:** M03 — Model & Inquiry Declaration (dev)
+- **Milestone work time:** 10 min (own-project DAG + inquiry sentence)
 - **Milestone presentation/review:** pair DAG challenge
 - **Student prep:** RDSS ch. 6 opening skimmed; M02 feedback reviewed.
-- **Student artifact:** Executed potential-outcomes simulation + own-project DAG
-- **Exit ticket:** Claim Ticket #9: one arrow in my DAG and the real-world mechanism it asserts.
-- **Homework / next milestone:** Read RDSS ch. 7 'Defining the inquiry'; refine your DAG with one more node if the world demands it.
-- **Instructor prep:** Board-ready 4-unit potential-outcomes table; test the networkx DAG cell renders in Colab.
-- **Risks / contingency:** Potential outcomes land abstract → fall back to the concrete scholarship-letter example scripted in the instructor notebook and re-run the toy table with student-suggested numbers.
+- **Student artifact:** Executed potential-outcomes simulation + own-project DAG + one-sentence inquiry
+- **Exit ticket:** Claim Ticket #9: my inquiry in ONE sentence a non-researcher could repeat back.
+- **Homework / next milestone:** Refine your DAG with one more node if the world demands it; read RDSS ch. 8 measurement sections before Wednesday; start drafting the 3-minute M03 declaration for this Friday's studio.
+- **Instructor prep:** Board-ready 4-unit potential-outcomes table; test the networkx DAG cell and the hidden-estimand cell mechanics in Colab.
+- **Risks / contingency:** Potential outcomes land abstract → fall back to the concrete scholarship-letter example scripted in the instructor notebook and re-run the toy table with numbers the class suggests.
 
-### M10 — Wed 2026-09-16 (in-person) — Inquiry (MIDA I): the exact quantity you seek — and the M03 declarations
+### M10 — Wed 2026-09-16 (in-person) — Measurement & operationalization: from concept to indicator, and what error does to answers
 
-- **Driving question:** If a genie handed you the truth, what NUMBER or PATTERN would it hand you?
-- **Secondary questions:** What is an inquiry/estimand? How do descriptive and causal inquiries differ? Why must the inquiry be defined before data arrive?
-- **Inquiry:** causal + generalization (estimand thinking)
-- **Claim PERMITTED:** "My inquiry is [quantity], defined over [units/world] — stated before seeing outcome data."
-- **Claim NOT permitted:** Choosing the quantity AFTER browsing results (inquiry shopping), then presenting it as the question you always had.
-- **RDSS reading:** RDSS ch. 7 'Defining the inquiry' (book.declaredesign.org); declaration_7.1
-- **Other material:** nb04 §3–4 (Colab)
-- **Provenance:** RDSS ch.7 + declaration_7.1.R | defining the inquiry | inquiry declaration pattern | translated (R→Python)
-- **Concepts:** inquiry/estimand; ATE vs share vs difference; inquiry precedes data; the M-I half of MIDA assembled
-- **Python dependency:** numpy/pandas (compute the true estimand inside the simulated world)
-- **Dataset / simulation:** inline simulated world from M9, extended (true ATE computed then hidden)
-- **50-minute dynamic:** 0–4 DAG refinements shared (two volunteers); 4–12 mini-lesson: the genie test — inquiry as the quantity the genie hands you, descriptive and causal versions; 12–22 hands-on: in nb04 compute the TRUE inquiry value inside the simulated world, then hide it (it becomes the answer key for later units); 22–40 M03 DECLARATIONS: each student delivers a 3-minute Model + Inquiry declaration (world, DAG, genie quantity), class writes one clarifying question each; 40–47 revise declaration from the questions received; 47–50 exit ticket + M03 submission reminder.
-- **Hands-on activity:** Compute the true estimand in a world you control, hide it, and understand it as the future answer key.
-- **Practice:** 📝 nb04 practice: for 4 questions, write the inquiry in words AND as a formula over potential outcomes or population values.
-- **Discussion prompt:** Why does declaring the inquiry BEFORE data protect you from yourself?
-- **Project connection:** M03 declared aloud today: each project now has a stated world + stated quantity.
-- **Milestone developed:** M03 — Model & Inquiry Declaration (presented + submitted)
-- **Milestone work time:** 18 min (declarations) + 7 min (revision)
-- **Milestone presentation/review:** M03 presented: 3-minute declaration + one clarifying question per listener
-- **Student prep:** RDSS ch. 7 read; own DAG refined; 3-minute declaration drafted.
-- **Student artifact:** Delivered M03 declaration + revision notes; executed true-estimand cell
-- **Exit ticket:** Claim Ticket #10: my inquiry in ONE sentence a non-researcher could repeat back.
-- **Homework / next milestone:** Submit M03 tonight 11:59 PM. Read RDSS ch. 8 §measurement before Friday.
-- **Instructor prep:** Timer; declaration order; clarifying-question norms card; verify the hidden-estimand cell mechanics.
-- **Risks / contingency:** Declarations exceed time → move the last student to Friday's opening and protect the revision block.
-
-### M11 — Fri 2026-09-18 (in-person) — Measurement I: from concept to construct to indicator
-
-- **Driving question:** How does an abstract idea become a number without losing its soul?
-- **Secondary questions:** What are concept, construct, indicator? What are validity and reliability, intuitively? Where does measurement live inside MIDA?
+- **Driving question:** How does an abstract idea become a number without losing its soul — and what happens when the number is a little bit wrong?
+- **Secondary questions:** What are concept, construct, indicator? What are validity and reliability, intuitively? What do random vs systematic measurement error do differently to a conclusion?
 - **Inquiry:** description + generalization (measurement)
-- **Claim PERMITTED:** "Indicator I measures construct C for concept X, and here is why the mapping is defensible."
-- **Claim NOT permitted:** "My variable measures happiness" (naming a column after a concept does not make it the concept).
+- **Claim PERMITTED:** "Indicator I measures construct C for concept X, the mapping is defensible, and error of the kind I simulated would move my conclusion by roughly this much."
+- **Claim NOT permitted:** "My variable measures happiness" (naming a column after a concept does not make it the concept) — and its twin, "my measure is imperfect, so nothing can be learned."
 - **RDSS reading:** RDSS ch. 8 'Crafting a data strategy' — measurement sections (book.declaredesign.org)
-- **Other material:** nb05 §1–2 (Colab)
-- **Provenance:** RDSS ch.8 (measurement within data strategy) + fresh concept→construct→indicator ladder | ch.8 | measurement framing | extended
-- **Concepts:** concept → construct → indicator ladder; validity; reliability; operationalization; measurement inside D of MIDA
-- **Python dependency:** pandas (inspect real survey items)
-- **Dataset / simulation:** bonilla_tillery.csv (survey-experiment items as measurement examples)
-- **50-minute dynamic:** 0–5 M03 submission debrief + inquiry restated from memory (spot check); 5–13 mini-lesson: the ladder, climbed twice (trust in government; food insecurity); 13–27 hands-on: open bonilla_tillery items in nb05 — which construct is each item reaching for? rate the reach; 27–38 lab: climb the ladder for YOUR project's key concept (draft 2 candidate indicators); 38–46 pair audit: partner attacks the weakest rung of your ladder; 46–50 exit ticket.
-- **Hands-on activity:** Rate real survey items on how well they reach their construct; climb the ladder for your own key concept.
-- **Practice:** 📝 nb05 practice: propose two DIFFERENT indicators for the same construct and state what each would miss.
+- **Other material:** nb05 §1–4 (Colab)
+- **Provenance:** RDSS ch.8 + fresh concept→construct→indicator ladder | measurement within data strategy | ladder framing + error simulation built on the concept | extended
+- **Concepts:** concept → construct → indicator ladder; validity; reliability; operationalization; random vs systematic error; attenuation intuition; robustness of a claim to error; measurement inside D of MIDA
+- **Python dependency:** pandas (inspect real survey items), numpy (inject seeded noise/bias), matplotlib (before/after picture)
+- **Dataset / simulation:** bonilla_tillery.csv (survey items as measurement examples) + inline error simulation (seed 464)
+- **50-minute dynamic:** 0–5 M03 declaration pulse + inquiry restated from memory (spot check); 5–14 mini-lesson: the ladder, climbed twice (trust in government, food insecurity), with validity and reliability named on each rung; 14–24 hands-on: open bonilla_tillery items in nb05 and rate which construct each item is reaching for; 24–34 hands-on: two ways to be wrong (noise vs bias): predict what added noise does to an observed group difference, run the nb05 error simulation, compare, then flip noise to bias and rerun; 34–45 project lab: climb the ladder for YOUR key concept (2 candidate indicators) and note which error type threatens you most; 45–50 exit ticket.
+- **Hands-on activity:** Rate real survey items on construct reach, then inject random and systematic error into a simulated indicator and watch what each does to the observed pattern.
+- **Practice:** 📝 nb05 practice: propose two DIFFERENT indicators for the same construct and state what each would miss; for each, call whether its main threat is noise or bias.
 - **Discussion prompt:** Give an example where a measure is highly reliable and badly invalid. Why is that combination so dangerous?
-- **Project connection:** The measurement ladder for each project's central concept starts here (M04).
-- **Milestone developed:** M04 — Measurement & Operationalization Plan
-- **Milestone work time:** 11 min (own-concept ladder)
-- **Milestone presentation/review:** pair audit of the ladder's weakest rung
-- **Student prep:** RDSS ch. 8 measurement sections skimmed; M03 submitted.
-- **Student artifact:** Rated item set + own-concept ladder draft with 2 candidate indicators
-- **Exit ticket:** Claim Ticket #11: my key concept, my best indicator, and the biggest thing it misses.
-- **Homework / next milestone:** Weekend: draft the full M04 plan (concept, construct, ≥2 indicators, validity threats); Monday we stress-test it with simulated measurement error.
-- **Instructor prep:** Select 4 bonilla_tillery items for the rating task; two ladder walk-throughs prepped.
-- **Risks / contingency:** Concepts too abstract to ladder in class → use the shared fallback concept (student stress) collectively, own ladders finish as homework.
+- **Project connection:** The ladder and error-threat note drafted today seed the M04 plan, which kicks off at this Friday's studio.
+- **Milestone developed:** M03 — Model & Inquiry Declaration (dev); M04 — Measurement & Operationalization Plan (seeded)
+- **Milestone work time:** 11 min (own-concept ladder + error-threat note)
+- **Milestone presentation/review:** none (declarations at this Friday's studio)
+- **Student prep:** RDSS ch. 8 measurement sections skimmed; M03 declaration drafting underway.
+- **Student artifact:** Rated item set + executed error simulation + own-concept ladder draft with 2 candidate indicators
+- **Exit ticket:** Claim Ticket #10: my key concept, my best indicator, the biggest thing it misses, and the error type that most threatens it.
+- **Homework / next milestone:** Finalize and rehearse the 3-minute M03 declaration (world, DAG, genie quantity) for this Friday's studio; finish nb05 cells.
+- **Instructor prep:** Select 4 bonilla_tillery items for the rating task; verify both simulation cells run under 5 seconds in Colab; queue the noise-vs-bias board picture.
+- **Risks / contingency:** Simulation intuition doesn't land → rerun with exaggerated parameters (huge bias) so the effect is unmissable, then dial back; concepts too abstract to ladder → climb the shared fallback concept (student stress) collectively.
 
-### M12 — Mon 2026-09-21 (in-person) — Measurement II: error, and what bad measures do to good questions
+### M11 — Fri 2026-09-18 (in-person) — Studio Friday — Model & Inquiry declarations: M03 due, M04 kickoff
 
-- **Driving question:** What happens to your answer when your measure is a little bit wrong?
-- **Secondary questions:** What do random vs systematic measurement error do differently? How do you argue a measure is good enough?
-- **Inquiry:** description + generalization (measurement)
-- **Claim PERMITTED:** "With measurement error of the kind I simulated, my conclusion would move by roughly this much."
-- **Claim NOT permitted:** "My measure is imperfect, so nothing can be learned" — or its twin, "the measure is what it is, so ignore the error."
-- **RDSS reading:** RDSS ch. 8 measurement sections (continued)
-- **Other material:** nb05 §3–4 (Colab)
-- **Provenance:** RDSS ch.8 | measurement within data strategy | error simulation newly built on the concept | newly-constructed-from-source-concept
-- **Concepts:** random vs systematic error; attenuation intuition; robustness of a claim to error; documenting measurement decisions
-- **Python dependency:** numpy (inject seeded noise/bias into a measure), matplotlib (before/after picture)
-- **Dataset / simulation:** inline simulation: true construct + noisy indicator (seed 464); bonilla_tillery items for realism
-- **50-minute dynamic:** 0–5 ladder headlines from the weekend M04 drafts; 5–12 mini-lesson: two ways to be wrong (noise vs bias) with one picture each; 12–20 pause-and-predict: we add noise to the indicator — what happens to the observed group difference? commit; 20–33 hands-on: run the nb05 error simulation, compare to your prediction, then flip noise→bias and rerun; 33–45 studio: write the measurement-error paragraph of YOUR M04 plan (which error type threatens you, and how much would it take to change your story); 45–50 exit ticket.
-- **Hands-on activity:** Inject random then systematic error into a simulated indicator and watch what each does to the observed pattern.
-- **Practice:** 📝 nb05 practice: for each of 3 measures, predict whether its main threat is noise or bias, and defend the call.
-- **Discussion prompt:** Bias of just 2 points in one direction beat noise of 10 points in our simulation. Why does that asymmetry matter for your project?
-- **Project connection:** The measurement-error paragraph drafted today completes each student's M04 plan.
-- **Milestone developed:** M04 — Measurement & Operationalization Plan
-- **Milestone work time:** 12 min (error paragraph for own plan)
-- **Milestone presentation/review:** none (studio day)
-- **Student prep:** Full M04 draft from the weekend; nb05 §1–2 complete.
-- **Student artifact:** Executed error simulation + own measurement-error paragraph
-- **Exit ticket:** Claim Ticket #12: the error type that most threatens my measure, and one design move that would reduce it.
-- **Homework / next milestone:** Polish M04 (present Friday, submit Friday night). Read RDSS ch. 15 opener on descriptive designs for Wednesday.
-- **Instructor prep:** Verify both simulation cells run < 5s in Colab; queue the noise-vs-bias board picture.
-- **Risks / contingency:** Simulation intuition doesn't land → rerun with exaggerated parameters (huge bias) so the effect is unmissable, then dial back.
-
-### M13 — Wed 2026-09-23 (in-person) — Description deep dive I: honest summaries of real data
-
-- **Driving question:** What is actually IN your data — and how do you summarize it without lying?
-- **Secondary questions:** Which summary fits which variable type? What do distributions show that averages hide? What is a descriptive inquiry, formally?
-- **Inquiry:** DESCRIPTION — descriptive · data at hand (deep dive)
-- **Claim PERMITTED:** "In these 10,000 resampled LAPOP Brazil interviews, X% report Y; the distribution looks like Z."
-- **Claim NOT permitted:** "Brazilians believe Y" (generalization) or "Y because of Z" (causation) — description stops at the data's edge.
-- **RDSS reading:** RDSS ch. 15 'Observational: descriptive' (book.declaredesign.org)
-- **Other material:** nb06 §1–2 (Colab)
-- **Provenance:** RDSS ch.15 + rdss lapop_brazil | observational descriptive designs | dataset shipped as CSV (MIT, attributed); 10k resample caveat taught | adapted
-- **Concepts:** variable types; distributions; center + spread; group summaries; the descriptive claim boundary; the explore → declare → confirm loop (EDA anchor — an exploratory finding is not yet a confirmed claim); the lapop_brazil resampling caveat
-- **Python dependency:** pandas (describe, groupby), matplotlib (hist, bar)
-- **Dataset / simulation:** lapop_brazil.csv (10,000-row resample — planning use only, taught as a provenance lesson)
-- **50-minute dynamic:** 0–5 M04 pulse + why description comes first on the compass; 5–12 mini-lesson: summaries as compressions that must not distort — one variable summarized three ways; 12–18 pause-and-predict: sketch the shape of the trust-in-government distribution before plotting; 18–33 hands-on: nb06 explore lapop_brazil — types, distributions, one group comparison — then name the loop just performed: explore → declare → confirm, and mark which findings are still exploratory; 33–41 claim clinic: write 3 descriptive claims from your output, then tighten each to exactly what the data permit; 41–47 project transfer: what would an honest descriptive table of YOUR future data contain?; 47–50 exit ticket.
-- **Hands-on activity:** Explore lapop_brazil: variable types, distributions, one honest group comparison — and state each result's claim.
-- **Practice:** 📝 nb06 practice: three flawed descriptive claims about lapop_brazil — repair each to what the data actually permit.
-- **Discussion prompt:** The file is a 10,000-row RESAMPLE of the real survey. What is it good for, and what would be dishonest to do with it?
-- **Project connection:** Each student drafts the skeleton of their project's future 'Table 1'.
-- **Milestone developed:** M04 → M05 — Data Strategy (transition)
-- **Milestone work time:** 6 min (own Table-1 skeleton)
-- **Milestone presentation/review:** none
-- **Student prep:** RDSS ch. 15 opener; M04 near-final (presents Friday).
-- **Student artifact:** Executed lapop_brazil exploration + 3 tightened descriptive claims
-- **Exit ticket:** Claim Ticket #13: my best descriptive claim from today's data, worded to stop exactly at the data's edge.
-- **Homework / next milestone:** Rehearse the 3-minute M04 walkthrough for Friday; finish nb06 §1–2.
-- **Instructor prep:** Confirm lapop_brazil.csv raw-URL load; pre-run the distribution shapes to anticipate the predict-then-plot reveals.
-- **Risks / contingency:** Dataset load fails in class → nb06 carries an inline fallback sample (500 rows embedded) so every cell still runs.
-
-### M14 — Fri 2026-09-25 (in-person) — Description deep dive II: visualization that tells the truth — and the M04 walkthroughs
-
-- **Driving question:** When does a chart clarify, and when does it deceive?
-- **Secondary questions:** What are the classic distortions (truncated axes, cherry-picked bins, 3-D junk)? What makes a visualization defensible?
-- **Inquiry:** DESCRIPTION — descriptive · data at hand (deep dive)
-- **Claim PERMITTED:** "This chart shows the pattern AND its context (scale, base, missing cases) — a reader could re-draw it from my description."
-- **Claim NOT permitted:** A chart whose visual impression says more than the numbers do (the impression IS a claim, and it must be permitted too).
-- **RDSS reading:** RDSS ch. 15 (continued; descriptive design figures)
-- **Calling Bullshit (optional):** optional: callingbullshit.org — misleading axes / dataviz tools case
-- **Other material:** nb06 §3–4 (Colab)
-- **Provenance:** RDSS ch.15 + fresh honest-viz checklist; optional CB public case | ch.15 | axis/bin distortion rebuilds | extended
-- **Concepts:** honest visualization checklist; axis/bin/aspect distortions; same-data-two-stories; visualization as claim-making
-- **Python dependency:** matplotlib (two versions of the same chart)
-- **Dataset / simulation:** lapop_brazil.csv (same variable, honest vs distorted renderings)
-- **50-minute dynamic:** 0–4 settle + walkthrough order; 4–10 mini-lesson: one dataset, two stories — the same lapop variable drawn honestly and deceptively; 10–20 hands-on: in nb06, un-distort a rigged chart (fix axis, bins, framing) and write what changed; 20–40 M04 WALKTHROUGHS: five 3-minute measurement-plan walkthroughs, listeners fill a two-line review (best rung / weakest rung); 40–47 revise plan from reviews; 47–50 exit ticket + M04 submission reminder.
-- **Hands-on activity:** Repair a deliberately distorted chart of lapop_brazil data and document each repair as a truth-telling decision.
-- **Practice:** 📝 nb06 practice: find (or recall) one real-world chart that overstates its data; name the distortion mechanism.
-- **Discussion prompt:** Is a technically-accurate but misleading chart a lie? Who is responsible — the maker or the reader?
-- **Project connection:** The honest-viz checklist becomes a standing rubric row for the poster (M10–M12).
-- **Milestone developed:** M04 — Measurement & Operationalization Plan (presented + submitted)
-- **Milestone work time:** 20 min (walkthroughs) + 7 min (revision)
-- **Milestone presentation/review:** M04 presented: 3-minute walkthrough + written two-line peer reviews
-- **Student prep:** M04 walkthrough rehearsed; nb06 §1–2 done.
-- **Student artifact:** Repaired chart + delivered walkthrough + revision notes
-- **Exit ticket:** Claim Ticket #14: one distortion I will actively avoid in my own project figures, and how.
-- **Homework / next milestone:** Submit M04 tonight 11:59 PM. Weekend read: RDSS ch. 8 'Crafting a data strategy' §sampling (8.1) — Monday we ask WHO gets into your data.
-- **Instructor prep:** Build the rigged chart variants; print two-line review slips; timer.
-- **Risks / contingency:** Walkthroughs overrun → reviews go silent-written-only and the revision block moves to homework.
+- **Driving question:** Can you declare your world, your DAG, and your genie quantity in 3 minutes — and take a question on each?
+- **Secondary questions:** What makes a declaration clear enough to challenge? What does the M04 brief ask for (measurement & operationalization plan), and how will it be graded?
+- **Inquiry:** causal + generalization (studio)
+- **Claim PERMITTED:** "My world is W, my DAG asserts A, and my inquiry is [quantity] — declared before data."
+- **Claim NOT permitted:** A declaration whose inquiry no listener can restate (if the class cannot repeat the quantity back, it is not yet declared).
+- **RDSS reading:** (no new reading — studio Friday; bring your rehearsed M03 declaration)
+- **Other material:** nb04 student notebook (model & inquiry) + nb05 student notebook (measurement) — recap reference (Colab); M04 Brightspace brief
+- **Provenance:** course design (studio format) | weekly Friday studio | recap + milestone brief + declaration session | newly-constructed-from-source-concept
+- **Concepts:** declaring in public; clarifying questions as peer review; the M04 deliverable (concept, construct, ≥2 indicators, validity threats, error paragraph)
+- **Python dependency:** none new (own milestone work)
+- **Dataset / simulation:** student's own project materials
+- **50-minute dynamic:** 0–10 recap: the M-I half of MIDA (world, potential outcomes, DAG, genie quantity) and the measurement ladder in one pass; 10–20 milestone brief (Brightspace): present M04 deliverable + rubric; 20–50 studio work: 3-minute M03 declarations with one clarifying question per listener, quick revision notes, then supervised M04 start (ladder + error paragraph for your key concept) with rotating consults.
+- **Hands-on activity:** Deliver the 3-minute M03 declaration (world, DAG, genie quantity), collect one clarifying question per listener, then start the M04 ladder for your own key concept.
+- **Practice:** 📝 studio log: record the clarifying question that stung most and how your declaration will change because of it.
+- **Discussion prompt:** Which declaration today could you repeat back word for word, and what made it so repeatable?
+- **Project connection:** M03 closes today; the ladder work in the studio block opens the M04 measurement plan.
+- **Milestone developed:** M03 — Model & Inquiry Declaration (presented + due); M04 — Measurement & Operationalization Plan (kickoff)
+- **Milestone work time:** 30 min studio block
+- **Milestone presentation/review:** M03 presented: 3-minute declaration + one clarifying question per listener
+- **Student prep:** 3-minute M03 declaration rehearsed; nb04 and nb05 cells complete.
+- **Student artifact:** Delivered declaration + revision notes + a started M04 ladder
+- **Exit ticket:** Claim Ticket #11: my inquiry, restated after feedback, in one sentence a non-researcher could repeat back.
+- **Homework / next milestone:** Submit M03 tonight (11:59 PM). Weekend: draft the full M04 plan (concept, construct, ≥2 indicators, validity threats, error paragraph); next week the description deep dive begins.
+- **Instructor prep:** Timer; declaration order; clarifying-question norms card; M04 Brightspace brief on screen; consult rotation list.
+- **Risks / contingency:** Declarations exceed time → move the final declaration to the top of the work block and protect the M04 start; questions drift into debate → enforce the one-clarifying-question norm.
 
 ## Phase 3 — Data & answer strategies
 
-### M15 — Mon 2026-09-28 (in-person) — Data strategy I (MIDA II): sampling — who gets into your data?
+### M12 — Mon 2026-09-21 (in-person) — Description deep dive: honest summaries and truthful charts (EDA anchor)
+
+- **Driving question:** What is actually IN your data, and how do you summarize and show it without lying?
+- **Secondary questions:** Which summary fits which variable type? What do distributions show that averages hide? When does a chart clarify, and when does it deceive?
+- **Inquiry:** DESCRIPTION — descriptive · data at hand (deep dive)
+- **Claim PERMITTED:** "In these 10,000 resampled LAPOP Brazil interviews, X% report Y; the distribution looks like Z; this chart shows the pattern AND its context."
+- **Claim NOT permitted:** "Brazilians believe Y" (generalization), "Y because of Z" (causation), or a chart whose visual impression says more than the numbers do — description stops at the data's edge, and the impression is a claim too.
+- **RDSS reading:** RDSS ch. 15 'Observational: descriptive' (book.declaredesign.org)
+- **Calling Bullshit (optional):** optional: callingbullshit.org misleading axes / dataviz tools case
+- **Other material:** nb06 student notebook (description deep dive), §1–4 (Colab)
+- **Provenance:** RDSS ch.15 + rdss lapop_brazil | observational descriptive designs + honest-viz checklist | dataset shipped as CSV (MIT, attributed) + axis/bin distortion rebuilds | adapted
+- **Concepts:** variable types; distributions; center + spread; group summaries; the descriptive claim boundary; the explore → declare → confirm loop (EDA anchor); honest visualization checklist; axis/bin distortions; the lapop_brazil resampling caveat
+- **Python dependency:** pandas (describe, groupby), matplotlib (hist, bar; honest vs distorted chart pair)
+- **Dataset / simulation:** lapop_brazil.csv (10,000-row resample — planning use only, taught as a provenance lesson)
+- **50-minute dynamic:** 0–5 why description comes first on the compass; 5–13 mini-lesson: summaries as compressions that must not distort (one variable summarized three ways, then the same variable drawn honestly and deceptively); 13–19 pause-and-predict: sketch the shape of the trust-in-government distribution before plotting; 19–33 hands-on: nb06 explore lapop_brazil (types, distributions, one group comparison), then un-distort a rigged chart and name the loop just performed: explore → declare → confirm; 33–42 claim clinic: write 3 descriptive claims from your output and tighten each to exactly what the data permit; 42–47 project transfer: sketch the honest 'Table 1' of your future data; 47–50 exit ticket.
+- **Hands-on activity:** Explore lapop_brazil (types, distributions, one honest group comparison), then repair a deliberately distorted chart of the same data and state each result's claim.
+- **Practice:** 📝 nb06 practice: repair three flawed descriptive claims about lapop_brazil, then name the distortion mechanism in one real-world chart you recall.
+- **Discussion prompt:** The file is a 10,000-row RESAMPLE of the real survey. What is it good for, and what would be dishonest to do with it?
+- **Project connection:** Today's Table-1 skeleton and honest-viz checklist feed the M04 plan, and the checklist becomes a standing rubric row for the poster.
+- **Milestone developed:** M04 — Measurement & Operationalization Plan
+- **Milestone work time:** 6 min (own Table-1 skeleton in the M04 plan)
+- **Milestone presentation/review:** none (lecture day)
+- **Student prep:** RDSS ch. 15 opener; M04 draft in progress (presents at this Friday's studio).
+- **Student artifact:** Executed lapop_brazil exploration + repaired chart + 3 tightened descriptive claims
+- **Exit ticket:** Claim Ticket #12: my best descriptive claim from today's data, worded to stop exactly at the data's edge.
+- **Homework / next milestone:** Finish nb06 and keep polishing M04. For Wednesday read RDSS ch. 8 §8.1 on sampling — WHO gets into your data.
+- **Instructor prep:** Confirm lapop_brazil.csv raw-URL load; build the rigged chart variant; pre-run the distribution shapes for the predict-then-plot reveal.
+- **Risks / contingency:** Dataset load fails in class → nb06 carries an inline fallback sample (500 rows embedded); arc runs long → the chart repair moves to homework.
+
+### M13 — Wed 2026-09-23 (in-person) — Data strategy I (MIDA II): sampling — who gets into your data?
 
 - **Driving question:** Who is in your data, who is not, and who decided?
 - **Secondary questions:** What is a sampling procedure? What do random and convenience samples each license? What is selection, and why is it the quiet killer of claims?
@@ -412,84 +356,83 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "My data strategy samples [units] by [procedure], so results speak to [population] with stated uncertainty."
 - **Claim NOT permitted:** Convenience-sample results narrated as population facts ("students in my dorm" ≠ "college students").
 - **RDSS reading:** RDSS ch. 8 'Crafting a data strategy' §8.1 sampling (book.declaredesign.org); declaration_2.1
-- **Other material:** nb07 §1–2 (Colab)
+- **Other material:** nb07 student notebook (data strategy), §1–2 (Colab)
 - **Provenance:** RDSS ch.8 §8.1 + declaration_2.1.R | sampling within data strategy | simple random sampling sim translated | translated (R→Python)
 - **Concepts:** sampling procedures (simple random, convenience); sampling frame; selection; representativeness; D of MIDA begins
 - **Python dependency:** numpy/pandas (draw repeated samples from la_voter_file; compare to frame)
 - **Dataset / simulation:** la_voter_file.csv (the frame) + seeded repeated sampling from it
-- **50-minute dynamic:** 0–5 weekend-reading pulse: what is a data strategy in one sentence?; 5–13 mini-lesson: the frame vs the sample vs the population, drawn as nested boxes; 13–20 pause-and-predict: 10 random samples of 100 voters — how much will their mean ages disagree? commit a range; 20–34 hands-on: nb07 draw the samples, plot the spread, then draw one CONVENIENCE sample (first 100 rows) and see the lie; 34–45 studio: draft the sampling paragraph of YOUR M05 data strategy (who, how, from what frame, who is missed); 45–50 exit ticket.
+- **50-minute dynamic:** 0–5 reading pulse: what is a data strategy in one sentence?; 5–13 mini-lesson: the frame vs the sample vs the population, drawn as nested boxes; 13–20 pause-and-predict: 10 random samples of 100 voters — how much will their mean ages disagree? commit a range; 20–34 hands-on: nb07 draw the samples, plot the spread, then draw one CONVENIENCE sample (first 100 rows) and see the lie; 34–45 transfer: draft the sampling paragraph your future M05 data strategy will need (who, how, from what frame, who is missed); 45–50 exit ticket.
 - **Hands-on activity:** Draw repeated random samples vs one convenience sample from a real voter file and compare what each would have you believe.
 - **Practice:** 📝 nb07 practice: for 3 studies, name the frame, the sample, and the population each claim silently invokes.
 - **Discussion prompt:** Your project's most convenient sample — who exactly does it exclude, and does the exclusion correlate with your outcome?
-- **Project connection:** The sampling paragraph drafted today anchors M05 (Data Strategy + Feasibility & Ethics).
-- **Milestone developed:** M05 — Data Strategy + Feasibility & Ethics Checkpoint
-- **Milestone work time:** 11 min (own sampling paragraph)
-- **Milestone presentation/review:** none (studio day)
-- **Student prep:** RDSS ch. 8 §8.1 read; M04 submitted.
+- **Project connection:** The sampling paragraph drafted today seeds M05 (Data Strategy + Feasibility & Ethics), which kicks off at this Friday's studio.
+- **Milestone developed:** M04 — Measurement & Operationalization Plan (final polish)
+- **Milestone work time:** 11 min (own sampling paragraph, banked for M05)
+- **Milestone presentation/review:** none (lecture day)
+- **Student prep:** RDSS ch. 8 §8.1 read; M04 near-final (presents this Friday).
 - **Student artifact:** Sampling-spread plot + convenience-sample comparison + own sampling paragraph
-- **Exit ticket:** Claim Ticket #15: the population my project claims to speak about, and the frame I can actually reach.
-- **Homework / next milestone:** Read RDSS ch. 8 §assignment sections; Wednesday: who gets the treatment, and ethics.
+- **Exit ticket:** Claim Ticket #13: the population my project claims to speak about, and the frame I can actually reach.
+- **Homework / next milestone:** Rehearse the 3-minute M04 walkthrough for this Friday's studio. For Monday read RDSS ch. 8 assignment sections: who gets the treatment, and ethics.
 - **Instructor prep:** Verify la_voter_file.csv loads; pre-seed the sampling cells so the spread picture is reliably instructive.
 - **Risks / contingency:** File too large/slow in Colab → nb07 subsamples on load (seeded) with the full-file path documented.
 
-### M16 — Wed 2026-09-30 (in-person) — Data strategy II: assignment, feasibility, and the ethics checkpoint
+### M14 — Fri 2026-09-25 (in-person) — Studio Friday — measurement walkthroughs: M04 presents, M05 kicks off
+
+- **Driving question:** Can you walk a skeptic through your measurement plan in three minutes, and defend every rung?
+- **Secondary questions:** What makes a measurement decision defensible out loud? What belongs in a data strategy, now that sampling is on the table?
+- **Inquiry:** description + generalization (measurement into data strategy)
+- **Claim PERMITTED:** "I measure [construct] with [indicator] because [reason], and here is what each rung of the ladder costs me."
+- **Claim NOT permitted:** "The measure is standard, so it needs no defense" — every operationalization is a decision someone can question.
+- **RDSS reading:** (no new reading — studio Friday; bring your M04 walkthrough and nb07 notes)
+- **Other material:** nb07 student notebook (data strategy: sampling) for the recap, with nb06 (description); M05 Brightspace brief
+- **Provenance:** course studio protocol + M04/M05 Brightspace briefs | studio Friday | 3-minute walkthrough + two-line peer review slips | newly-constructed-from-source-concept
+- **Concepts:** defending measurement decisions aloud; two-line peer review; the data-strategy frame (sampling recap); milestone hand-off (M04 → M05)
+- **Python dependency:** none required (walkthroughs + paper reviews; nb07 open for reference)
+- **Dataset / simulation:** student's own project data plans (no shared dataset today)
+- **50-minute dynamic:** 0–10 recap: description stops at the data's edge, and sampling decides whose data you even have; 10–20 milestone brief (Brightspace): present M05 deliverable + rubric; 20–50 studio work: five 3-minute M04 walkthroughs with two-line peer reviews (best rung / weakest rung), then start the M05 sampling paragraph with rotating consults.
+- **Hands-on activity:** Deliver a 3-minute M04 walkthrough, collect two-line reviews, and open your M05 data strategy with the sampling paragraph.
+- **Practice:** 📝 while listening: for each walkthrough, note the best rung and the weakest rung of the measurement ladder you heard.
+- **Discussion prompt:** Which measurement decision you heard today would you steal for your own project, and why?
+- **Project connection:** M04 presents and submits; M05 (Data Strategy + Feasibility & Ethics) kicks off from its Brightspace brief.
+- **Milestone developed:** M04 — Measurement & Operationalization Plan (presented + submitted); M05 — Data Strategy + Feasibility & Ethics (kickoff)
+- **Milestone work time:** 30 min studio block (walkthroughs + M05 start)
+- **Milestone presentation/review:** M04 presented: 3-minute walkthrough + written two-line peer reviews
+- **Student prep:** M04 walkthrough rehearsed; nb06 complete; nb07 sampling sections done.
+- **Student artifact:** Delivered walkthrough + two-line reviews given/received + M05 sampling paragraph started
+- **Exit ticket:** Claim Ticket #14: one measurement decision I heard today that I will steal, and one review line I will act on.
+- **Homework / next milestone:** Submit M04 tonight on Brightspace. For Monday read RDSS ch. 8 assignment sections; M05 development continues.
+- **Instructor prep:** Print two-line review slips; queue the M05 Brightspace brief; timer; consult order.
+- **Risks / contingency:** Walkthroughs overrun → reviews go silent-written-only and the M05 start moves to homework.
+
+### M15 — Mon 2026-09-28 (in-person) — Data strategy II: assignment, feasibility, and the ethics checkpoint
 
 - **Driving question:** If your design touches people, what do you owe them?
 - **Secondary questions:** What is treatment assignment (vs sampling)? What makes a design feasible for ONE undergraduate semester? What ethical review does student research need?
 - **Inquiry:** causal + generalization (data strategy)
-- **Claim PERMITTED:** "My design is feasible by [date] with [resources], and its human-subjects footprint is [none / minimal-risk, handled by X]."
-- **Claim NOT permitted:** "It's just a class project, so ethics review doesn't apply" — or a design whose data cannot exist by November.
+- **Claim PERMITTED:** "My design is feasible this semester with [resources], and its human-subjects footprint is [none / minimal-risk, handled by X]."
+- **Claim NOT permitted:** "It's just a class project, so ethics review doesn't apply" — or a design whose data cannot exist before the poster deadline.
 - **RDSS reading:** RDSS ch. 8 §assignment sections (book.declaredesign.org)
-- **Other material:** nb07 §3–4 (Colab); Purdue IRB student-research guidance (linked)
+- **Other material:** nb07 student notebook (data strategy), §3–4 (Colab); Purdue IRB student-research guidance (linked)
 - **Provenance:** RDSS ch.8 §assignment + fresh feasibility/ethics checkpoint | ch.8 | assignment sim + honors-scale feasibility rubric | extended
 - **Concepts:** random assignment vs random sampling (the two randomizations); feasibility triage; minimal risk; secondary data as the honors-scale default
 - **Python dependency:** numpy (complete random assignment demo)
-- **Dataset / simulation:** inline 100-unit assignment simulation (seed 464)
-- **50-minute dynamic:** 0–5 recap duel: sampling vs assignment — two students each explain one, class spots the difference; 5–12 mini-lesson: the two randomizations do different jobs (who we SEE vs what they GET); 12–22 hands-on: nb07 assign treatment three ways (coin flips, complete, none) and check balance; 22–30 feasibility triage: score YOUR design on the 4-question feasibility rubric (data by when? skills? cost? consent?); 30–42 ethics checkpoint: walk the decision tree (secondary data / surveys / interventions) and write your project's ethics paragraph; 42–48 rotating consults: instructor visits each student while others finish M05 sections; 48–50 exit ticket.
+- **Dataset / simulation:** inline simulation: 100-unit assignment demo (seed 464)
+- **50-minute dynamic:** 0–5 recap duel: sampling vs assignment, two volunteers each explain one and the class spots the difference; 5–12 mini-lesson: the two randomizations do different jobs (who we SEE vs what they GET); 12–22 hands-on: nb07 assign treatment three ways (coin flips, complete, none) and check balance; 22–30 feasibility triage: score YOUR design on the 4-question feasibility rubric (data by when? skills? cost? consent?); 30–42 ethics checkpoint: walk the decision tree (secondary data / surveys / interventions) and write your project's ethics paragraph; 42–48 rotating consults while M05 sections wrap; 48–50 exit ticket.
 - **Hands-on activity:** Run three assignment procedures on the same 100 units and check covariate balance under each.
 - **Practice:** 📝 nb07 practice: two randomizations quiz — for 4 designs, which randomization (if either) is present, and what does it buy?
 - **Discussion prompt:** A classmate wants to test whether skipping breakfast hurts exam scores — on friends. Walk the ethics tree together: what changes the answer?
-- **Project connection:** Feasibility + ethics paragraphs complete the M05 draft; async M17 stress-tests it.
+- **Project connection:** Feasibility + ethics paragraphs complete the M05 draft; this Friday's async module stress-tests it and submits it.
 - **Milestone developed:** M05 — Data Strategy + Feasibility & Ethics Checkpoint
 - **Milestone work time:** 20 min (feasibility triage + ethics paragraph + consults)
 - **Milestone presentation/review:** rotating instructor consults (5 × ~2 min)
-- **Student prep:** RDSS ch. 8 assignment sections; sampling paragraph from Monday.
+- **Student prep:** RDSS ch. 8 assignment sections; sampling paragraph from last Friday's studio.
 - **Student artifact:** Balance-check output + feasibility score + ethics paragraph
-- **Exit ticket:** Claim Ticket #16: my project's ethics classification and the one feasibility risk that most worries me.
-- **Homework / next milestone:** Friday is ASYNC (nb08): complete the misleading-claim diagnosis module by Sunday 11:59 PM. M05 full draft due with it.
+- **Exit ticket:** Claim Ticket #15: my project's ethics classification and the one feasibility risk that most worries me.
+- **Homework / next milestone:** For Wednesday read RDSS ch. 9 opening: how data become an answer. Keep assembling M05 — it completes and submits with this Friday's async module.
 - **Instructor prep:** Update the IRB-guidance links; prepare the feasibility rubric; plan consult order.
 - **Risks / contingency:** A project genuinely needs IRB review → escalate to office hours immediately and pre-plan the secondary-data pivot.
 
-### M17 — Fri 2026-10-02 (async-online) — ASYNC — Diagnose a misleading claim (and preview the answer strategy)
-
-- **Driving question:** A published claim crossed your feed. How do you take it apart — kindly, and with evidence?
-- **Secondary questions:** Where on the compass was the claim operating — what kind, what reach? What would the claim need to be true? What can still be learned from a flawed study?
-- **Inquiry:** generalization (claim diagnosis)
-- **Claim PERMITTED:** "The claim as stated needs [design]; the study ran [design]; therefore what stands is the weaker claim X."
-- **Claim NOT permitted:** Reflexive debunking ("this study is trash") with no statement of what evidence WOULD settle the question.
-- **RDSS reading:** RDSS ch. 9 'Choosing an answer strategy' — opening sections (preview for Monday)
-- **Calling Bullshit (optional):** optional: one callingbullshit.org case study of your choice (linked menu in nb08)
-- **Other material:** nb08 — fully self-contained async module (Colab)
-- **Provenance:** brief §12 P3 + fresh claim-diagnosis protocol; optional CB public cases | async module | compass diagnosis worksheet | newly-constructed-from-source-concept
-- **Concepts:** claim anatomy (claim/evidence/warrant); compass classification in the wild; charitable reconstruction; the diagnosis habit
-- **Python dependency:** pandas (one small recompute of the claim's own numbers)
-- **Dataset / simulation:** embedded mini-table reproducing the case's published numbers
-- **50-minute dynamic:** ASYNC (~50 min self-paced): 0–8 watch/read the case setup in nb08; 8–15 place the claim on the compass (kind + reach) and write the claim it NEEDED to make vs the claim it MADE; 15–30 recompute the case's central number from its own table, check the arithmetic and the framing; 30–42 write the structured diagnosis (what stands, what falls, what evidence would settle it); 42–50 answer-strategy preview cells + submit the module artifact.
-- **Hands-on activity:** Recompute a published claim's central number from its own data table; verify or correct it.
-- **Practice:** 📝 nb08 practice: classify 3 headlines by kind + reach and by the claim each would be permitted to make.
-- **Discussion prompt:** (async board post) Post your diagnosis's single most surprising line; reply to one classmate's with a steel-man.
-- **Project connection:** The diagnosis protocol practiced here is exactly what M08 will do to YOUR OWN design.
-- **Milestone developed:** M05 — Data Strategy (async development: full draft assembled)
-- **Milestone work time:** module includes a 10-min M05 assembly block (sampling + assignment + feasibility + ethics into one document)
-- **Milestone presentation/review:** async board: one steel-man reply to a classmate's diagnosis
-- **Student prep:** nb07 complete; M05 sections drafted M15–M16.
-- **Student artifact:** Completed nb08 module: diagnosis memo + recompute cell + board post
-- **Exit ticket:** (embedded in module) Claim Ticket #17: the weaker-but-true claim the case study could honestly have made.
-- **Homework / next milestone:** Submit nb08 artifact + full M05 draft by Sunday 11:59 PM. Read RDSS ch. 9 opening for Monday.
-- **Instructor prep:** Final-check nb08 runs unattended end-to-end; seed the discussion board; confirm case links are live.
-- **Risks / contingency:** Students stuck alone → nb08 embeds hints behind expandable cells + office-hours booking link; the board is monitored Friday afternoon.
-
-### M18 — Mon 2026-10-05 (in-person) — Answer strategy I (MIDA III): estimators — how data become an answer
+### M16 — Wed 2026-09-30 (in-person) — Answer strategy I (MIDA III): estimators — how data become an answer
 
 - **Driving question:** By what exact procedure will your data be turned into your answer?
 - **Secondary questions:** What is an estimator vs an estimate vs an estimand? Why is difference-in-means an answer strategy? What makes a strategy match an inquiry?
@@ -497,27 +440,56 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "My answer strategy is [procedure]; applied to my data it yields [estimate] of my declared inquiry."
 - **Claim NOT permitted:** Reporting a number with no named procedure behind it ("the analysis shows…" — WHICH analysis?).
 - **RDSS reading:** RDSS ch. 9 'Choosing an answer strategy' (book.declaredesign.org); declaration_9.1
-- **Other material:** nb09 §1–2 (Colab); M05 feedback returned
+- **Other material:** nb09 student notebook (answer strategy), §1–2 (Colab)
 - **Provenance:** RDSS ch.9 + declaration_9.1.R | choosing an answer strategy | estimator declaration translated | translated (R→Python)
 - **Concepts:** estimand / estimator / estimate triad; difference-in-means; matching strategy to inquiry; A of MIDA begins; the answer strategy is the WHOLE procedure (RDSS §9.1.3 — exploration that influenced the choice is part of A)
 - **Python dependency:** numpy/pandas (hand-rolled difference-in-means on simulated data)
-- **Dataset / simulation:** inline simulated experiment (seed 464) with known truth from the nb04 world
-- **50-minute dynamic:** 0–5 async-week debrief: best diagnosis lines read aloud; 5–13 mini-lesson: the triad (estimand/estimator/estimate) — the genie's number, the recipe, the dish; 13–20 pause-and-predict: our recipe on 500 simulated units — how close to the hidden truth will it land? commit; 20–34 hands-on: nb09 compute difference-in-means by hand-rolled pandas, unhide the nb04 truth, measure the miss; 34–44 M05 mini-presentations: each student states sampling + assignment in 90 seconds, class names the matching answer strategy (and whether any exploratory peeking must be declared inside it); 44–48 revise M05 from what you heard; 48–50 exit ticket.
+- **Dataset / simulation:** inline simulation: seeded experiment (seed 464) with known truth from the nb04 world
+- **50-minute dynamic:** 0–5 recap: the two randomizations in one breath each, then the MIDA scoreboard (M, I, D declared, A begins today); 5–13 mini-lesson: the triad (estimand/estimator/estimate) — the genie's number, the recipe, the dish; 13–20 pause-and-predict: our recipe on 500 simulated units, how close to the hidden truth will it land? commit; 20–34 hands-on: nb09 compute difference-in-means by hand-rolled pandas, unhide the nb04 truth, measure the miss; 34–45 transfer: name the candidate answer strategy YOUR inquiry demands, note it in your M05 packet, and flag whether any exploratory peeking must be declared inside it; 45–50 exit ticket.
 - **Hands-on activity:** Hand-roll difference-in-means on a simulated experiment, then reveal the true estimand and measure your estimator's miss.
 - **Practice:** 📝 nb09 practice: pair 4 inquiries with the answer strategy each demands; flag the one mismatch.
 - **Discussion prompt:** Two different estimators give two different answers on the same data. What does that mean — and what does it NOT mean?
-- **Project connection:** Each project names its candidate answer strategy — the last MIDA letter falls into place.
-- **Milestone developed:** M05 — Data Strategy (presented) → M06 — Answer Strategy Declaration
-- **Milestone work time:** 10 min (mini-presentations) + 4 min (revision)
-- **Milestone presentation/review:** M05 presented: 90-second data-strategy statements + class strategy-matching
-- **Student prep:** nb08 + M05 draft submitted Sunday; RDSS ch. 9 opening read.
-- **Student artifact:** Executed estimator cells + M05 revision notes + candidate answer strategy named
-- **Exit ticket:** Claim Ticket #18: my inquiry, my candidate answer strategy, and why they match — one sentence each.
-- **Homework / next milestone:** Finalize M05 (submit Wed Oct 7, 11:59 PM). Read RDSS ch. 9 regression sections.
-- **Instructor prep:** Grade nb08 diagnoses over the weekend; select the best lines; verify the truth-unhiding mechanic.
+- **Project connection:** Each project names its candidate answer strategy — the last MIDA letter falls into place, and the note travels inside the M05 packet.
+- **Milestone developed:** M05 — Data Strategy + Feasibility & Ethics (development: answer-strategy note added)
+- **Milestone work time:** 11 min (candidate answer strategy noted in own M05 packet)
+- **Milestone presentation/review:** none (lecture day)
+- **Student prep:** RDSS ch. 9 opening read; feasibility + ethics paragraphs from Monday.
+- **Student artifact:** Executed estimator cells + candidate answer strategy named in the M05 packet
+- **Exit ticket:** Claim Ticket #16: my inquiry, my candidate answer strategy, and why they match — one sentence each.
+- **Homework / next milestone:** This Friday runs async: nb08 walks you from a published misleading claim to a diagnosis of your own data strategy, then M05 completes and submits by Friday night. Budget ~50 minutes.
+- **Instructor prep:** Verify the truth-unhiding mechanic; rehearse the cooking analogy; final-check that nb08 is ready to post.
 - **Risks / contingency:** The triad confuses → run the cooking analogy hard (recipe/dish/the-dish-the-genie-would-serve) and re-anchor each term to a cell in the notebook.
 
-### M19 — Wed 2026-10-07 (in-person) — Answer strategy II: regression as an estimator (not an oracle)
+### M17 — Fri 2026-10-02 (async-online) — ASYNC — Diagnose a misleading claim, then your own data strategy (M05 submits)
+
+- **Driving question:** A published claim crossed your feed. Can you take it apart with evidence — and does your own data strategy survive the same treatment?
+- **Secondary questions:** Where on the compass was the claim operating — what kind, what reach? What would the claim need to be true? Which of its failures could a skeptic find in your own design?
+- **Inquiry:** generalization (claim diagnosis)
+- **Claim PERMITTED:** "The claim as stated needs [design]; the study ran [design]; therefore what stands is the weaker claim X."
+- **Claim NOT permitted:** Reflexive debunking ("this study is trash") with no statement of what evidence WOULD settle the question.
+- **RDSS reading:** RDSS ch. 9 regression/estimator sections (book.declaredesign.org; read before Monday)
+- **Calling Bullshit (optional):** optional: one callingbullshit.org case study of your choice (linked menu in nb08)
+- **Other material:** nb08 — fully self-contained async module (Colab); M06 Brightspace brief (posted today)
+- **Provenance:** brief §12 P3 + fresh claim-diagnosis protocol; optional CB public cases | async module | compass diagnosis worksheet turned on the student's own M05 draft | extended
+- **Concepts:** claim anatomy (claim/evidence/warrant); compass classification in the wild; charitable reconstruction; self-diagnosis: turning the protocol on your own data strategy
+- **Python dependency:** pandas (one small recompute of the claim's own numbers)
+- **Dataset / simulation:** embedded mini-table reproducing the case's published numbers; student's own project data plans
+- **50-minute dynamic:** ASYNC (~50 min self-paced): 0–8 read the case setup in nb08; 8–15 place the claim on the compass (kind + reach) and write the claim it NEEDED to make vs the claim it MADE; 15–25 recompute the case's central number from its own table, check the arithmetic and the framing; 25–35 turn the same diagnosis on your own M05 draft (which of the case's failures could a skeptic find in your data strategy?) and patch the weakest paragraph; 35–47 M05 completion: assemble sampling + assignment + feasibility + ethics into the final document and record the 90-second data-strategy statement for the board; 47–50 submit M05 + the module artifact tonight.
+- **Hands-on activity:** Recompute a published claim's central number from its own data table, then run the same diagnosis checklist on your own M05 data strategy.
+- **Practice:** 📝 nb08 practice: classify 3 headlines by kind + reach and by the claim each would be permitted to make.
+- **Discussion prompt:** (async board post) Post your 90-second data-strategy statement and the most surprising line of your self-diagnosis; reply to one classmate with a steel-man.
+- **Project connection:** The diagnosis protocol lands on YOUR design for the first time — M08 will do this at full depth.
+- **Milestone developed:** M05 — Data Strategy + Feasibility & Ethics (submitted async); M06 — Answer Strategy Declaration (brief posted)
+- **Milestone work time:** module includes a 12-min M05 completion block + the recorded statement
+- **Milestone presentation/review:** async board: 90-second recorded data-strategy statement + one steel-man reply
+- **Student prep:** nb07 complete; M05 sections drafted; candidate answer strategy noted Wednesday.
+- **Student artifact:** Completed nb08 module: diagnosis memo + recompute cell + self-diagnosis patch + submitted M05 + board statement
+- **Exit ticket:** (embedded in module) Claim Ticket #17: the weakest paragraph in my own data strategy before today, and how I patched it.
+- **Homework / next milestone:** Submit M05 + the nb08 artifact by tonight. Read RDSS ch. 9 regression sections for Monday; the M06 brief is on Brightspace.
+- **Instructor prep:** Final-check nb08 runs unattended end-to-end; post the M06 brief; seed the discussion board; confirm case links are live.
+- **Risks / contingency:** A student stuck alone → nb08 embeds hints behind expandable cells + an office-hours booking link; the board is monitored through the afternoon.
+
+### M18 — Mon 2026-10-05 (in-person) — Answer strategy II: regression as an estimator (not an oracle)
 
 - **Driving question:** What is regression actually doing for you — and what is it quietly assuming?
 - **Secondary questions:** How is regression 'difference-in-means with adjustment'? What do coefficients mean under a descriptive vs causal reading? What are robust standard errors, intuitively?
@@ -525,110 +497,138 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "Adjusting for the variables I named, the association between X and Y is [estimate ± uncertainty]."
 - **Claim NOT permitted:** Reading a regression coefficient as a causal effect because covariates were 'controlled for.'
 - **RDSS reading:** RDSS ch. 9 regression/estimator sections (book.declaredesign.org)
-- **Other material:** nb09 §3–4 (Colab); statsmodels docs (linked)
+- **Other material:** nb09 student notebook (answer strategy), §3–4 (Colab); statsmodels docs (linked)
 - **Provenance:** RDSS ch.9 (lm_robust workflow) | answer strategies | estimatr::lm_robust → statsmodels OLS + HC2 | translated (R→Python)
 - **Concepts:** regression as adjusted comparison; coefficient readings by compass position; robust (HC2) standard errors; 'controlling for' ≠ identifying
 - **Python dependency:** statsmodels (OLS with HC2 robust SEs), pandas
 - **Dataset / simulation:** lapop_brazil.csv (one adjusted association, descriptive reading)
-- **50-minute dynamic:** 0–5 M05 final-call + triad flash quiz; 5–13 mini-lesson: regression rebuilt from difference-in-means, one adjustment at a time on the board; 13–27 hands-on: nb09 fit the same model twice (classical vs robust SEs), read the coefficient aloud in DESCRIPTIVE language, then write the forbidden causal sentence and cross it out; 27–37 lab: sketch the regression YOUR project would run (outcome, key regressor, 2 honest covariates) in the M06 template; 37–46 peer check: partner reads your coefficient sentence — is it inside the claim boundary?; 46–50 exit ticket.
+- **50-minute dynamic:** 0–5 async debrief: the sharpest self-diagnosis lines read aloud, then a triad flash quiz; 5–13 mini-lesson: regression rebuilt from difference-in-means, one adjustment at a time on the board; 13–27 hands-on: nb09 fit the same model twice (classical vs robust SEs), read the coefficient aloud in DESCRIPTIVE language, then write the forbidden causal sentence and cross it out; 27–37 lab: sketch the regression YOUR project would run (outcome, key regressor, 2 honest covariates) in the M06 template; 37–46 peer check: partner reads your coefficient sentence — is it inside the claim boundary?; 46–50 exit ticket.
 - **Hands-on activity:** Fit an adjusted association in lapop_brazil, read it strictly descriptively, and physically cross out the causal overread.
 - **Practice:** 📝 nb09 practice: 4 coefficient sentences — mark each as permitted (descriptive), permitted (causal, IF identified), or forbidden.
 - **Discussion prompt:** 'We controlled for everything we could think of.' Why is that sentence a confession, not a defense?
 - **Project connection:** Each project's M06 answer-strategy declaration takes concrete shape (model, estimator, uncertainty plan).
-- **Milestone developed:** M06 — Answer Strategy Declaration
+- **Milestone developed:** M06 — Answer Strategy Declaration; M07 — URC Abstract + Full Design Declaration (development)
 - **Milestone work time:** 10 min (own regression sketch in the M06 template)
 - **Milestone presentation/review:** peer boundary-check of the coefficient sentence
-- **Student prep:** M05 final due tonight 11:59 PM; RDSS ch. 9 regression sections read.
+- **Student prep:** M05 + nb08 submitted Friday; RDSS ch. 9 regression sections read.
 - **Student artifact:** Twice-fit model output + crossed-out forbidden sentence + own M06 sketch
-- **Exit ticket:** Claim Ticket #19: my coefficient sentence, worded inside my compass position's boundary.
-- **Homework / next milestone:** Draft the URC abstract (150–250 words) using the abstract template — internal gate FRIDAY Oct 9. M06 continues Monday.
-- **Instructor prep:** Pre-fit the lapop model; prepare the board build-up from difference-in-means; abstract template posted.
+- **Exit ticket:** Claim Ticket #18: my coefficient sentence, worded inside my compass position's boundary.
+- **Homework / next milestone:** Start the URC abstract (150–250 words) from the template — the internal gate is this Friday's studio. For Wednesday read RDSS ch. 9–10 uncertainty sections.
+- **Instructor prep:** Pre-fit the lapop model; prepare the board build-up from difference-in-means; post the abstract template.
 - **Risks / contingency:** statsmodels output overwhelms → nb09 wraps the fit in a helper that prints only the three numbers that matter today.
 
-### M20 — Fri 2026-10-09 (in-person) — Generalization deep dive I: uncertainty — and the URC abstract gate
+### M19 — Wed 2026-10-07 (in-person) — Generalization deep dive I: uncertainty, and how far the answer reaches
 
-- **Driving question:** How wrong could you be, and can you say so with a straight face?
-- **Secondary questions:** Where does sampling variability come from? What does a confidence interval actually promise? Why must the abstract already carry uncertainty language?
+- **Driving question:** How wrong could you be, and to whom does your answer even apply?
+- **Secondary questions:** Where does sampling variability come from? What does a confidence interval actually promise? What breaks generalization (selection, attrition, non-response)?
 - **Inquiry:** GENERALIZATION — descriptive · population (deep dive)
-- **Claim PERMITTED:** "My estimate is X; under my design, estimates this far from truth happen rarely — here is the interval."
-- **Claim NOT permitted:** A bare point estimate narrated as the truth ("the effect IS 4.2") — uncertainty deleted is certainty invented.
-- **RDSS reading:** RDSS ch. 9–10 uncertainty sections (book.declaredesign.org)
-- **Other material:** nb10 §1–2 (Colab); URC abstract template
-- **Provenance:** RDSS ch.9–10 | uncertainty via simulation | sampling-distribution sim built on the source concept | newly-constructed-from-source-concept
-- **Concepts:** sampling distribution (by simulation); standard error; confidence interval as a procedure property; uncertainty-first writing
-- **Python dependency:** numpy (replicate the design 1,000×), matplotlib (sampling distribution)
-- **Dataset / simulation:** seeded 1,000-replication simulation of each student's simplified design
-- **50-minute dynamic:** 0–5 abstract-gate roll call (drafts open on screens); 5–13 mini-lesson: run the SAME design 1,000 times — the histogram of answers IS your uncertainty; 13–20 pause-and-predict: will a sample of 400 halve the spread of a sample of 100? commit; 20–33 hands-on: nb10 replicate the design at n=100 vs n=400, compare spreads, extract the interval; 33–45 ABSTRACT WORKSHOP: apply the uncertainty-language checklist to your URC abstract, partner swap, final edits; 45–50 submit the abstract (internal gate) + exit ticket.
-- **Hands-on activity:** Replicate your simplified design 1,000 times at two sample sizes; watch uncertainty shrink by √n, not by wishing.
-- **Practice:** 📝 nb10 practice: rewrite 3 overcertain sentences into interval-bearing sentences without burying the finding.
+- **Claim PERMITTED:** "In the population my frame reaches, my estimate is X ± interval; estimates this far from truth happen rarely under my design."
+- **Claim NOT permitted:** A bare point estimate narrated as the truth for everyone everywhere — uncertainty deleted is certainty invented, and reach unexamined is reach overclaimed.
+- **RDSS reading:** RDSS ch. 9–10 uncertainty sections; ch. 15 on observational reach (book.declaredesign.org)
+- **Other material:** nb10 student notebook (generalization), §1–3 (Colab)
+- **Provenance:** RDSS ch.9–10 + rdss lapop_brazil | uncertainty + generalization threats | sampling-distribution sim + non-response stress-test built on source concepts | newly-constructed-from-source-concept
+- **Concepts:** sampling distribution (by simulation); standard error; confidence interval as a procedure property; generalization threats; non-response; uncertainty-first writing
+- **Python dependency:** numpy (replicate the design 1,000×), pandas (non-response filter), matplotlib (sampling distribution)
+- **Dataset / simulation:** seeded 1,000-replication simulation of each student's simplified design + lapop_brazil.csv with a seeded non-response filter
+- **50-minute dynamic:** 0–5 recap: the M06 sketch names the recipe, today asks how wrong the dish can be and who gets served; 5–13 mini-lesson: run the SAME design 1,000 times — the histogram of answers IS your uncertainty; 13–19 pause-and-predict: will a sample of 400 halve the spread of a sample of 100? commit; 19–31 hands-on: nb10 replicate the design at n=100 vs n=400, compare spreads, extract the interval; 31–37 second act, reach: delete the least-trusting 20% of respondents and watch the estimate move; 37–45 transfer: write your project's uncertainty-plus-reach sentence (estimate, interval, and the population the frame actually reaches); 45–50 exit ticket.
+- **Hands-on activity:** Replicate your simplified design 1,000 times at two sample sizes, then simulate non-response and measure how far it moves the estimate you would have reported.
+- **Practice:** 📝 nb10 practice: rewrite 3 overcertain sentences into interval-bearing sentences that also name the population they reach.
 - **Discussion prompt:** A reader skims only your abstract. What single uncertainty phrase most protects them from over-believing you?
-- **Project connection:** URC abstract (M07 part 1) clears its internal gate today — the project is now publicly committed.
-- **Milestone developed:** M07 — URC Abstract (internal gate TODAY) + Full Design Declaration
-- **Milestone work time:** 12 min (abstract workshop) + submission
-- **Milestone presentation/review:** partner abstract swap with uncertainty-language checklist
-- **Student prep:** URC abstract drafted (Wednesday's homework); nb09 complete.
-- **Student artifact:** Submitted URC abstract + two-sample-size uncertainty comparison
-- **Exit ticket:** Claim Ticket #20: my headline finding-to-be, stated WITH its uncertainty, in ≤25 words.
-- **Homework / next milestone:** Fall break Monday — no class. For Wed Oct 14: RDSS ch. 10 'Diagnosing designs' opening; M06 declaration due Wed night.
-- **Instructor prep:** Abstract checklist copies; confirm the URC submission mechanics/deadline status (external date still TBD — internal gate binds today).
-- **Risks / contingency:** External URC portal/deadline shifts → internal gate stands regardless; abstracts are submitted to Brightspace and forwarded when the portal opens.
+- **Project connection:** The uncertainty-plus-reach sentence drafted today goes straight into the URC abstract for this Friday's gate.
+- **Milestone developed:** M07 — URC Abstract + Full Design Declaration (development)
+- **Milestone work time:** 8 min (own uncertainty-plus-reach sentence for the abstract)
+- **Milestone presentation/review:** none (lecture day)
+- **Student prep:** RDSS ch. 9–10 uncertainty sections read; URC abstract drafting begun; nb09 complete.
+- **Student artifact:** Two-sample-size uncertainty comparison + non-response bias measurement + own uncertainty-plus-reach sentence
+- **Exit ticket:** Claim Ticket #19: my headline finding-to-be, stated WITH its uncertainty and its reach, in ≤25 words.
+- **Homework / next milestone:** Polish the URC abstract for this Friday's studio gate; bring your M06 draft for the clinic. No new reading.
+- **Instructor prep:** Pre-seed the replication cells; queue the non-response reveal; abstract checklist copies ready for Friday.
+- **Risks / contingency:** The two simulations crowd each other → the non-response act compresses to a demo and the notebook carries it for homework.
 
-### M21 — Wed 2026-10-14 (in-person) — Generalization deep dive II: how far the answer reaches — and the association-is-not-causation boundary
+### M20 — Fri 2026-10-09 (in-person) — Studio Friday — the URC abstract gate: workshop, M06 clinic, declaration assembly begins
 
-- **Driving question:** Your sample shows a pattern. To whom does it apply — and what may you NOT say about why?
-- **Secondary questions:** What breaks generalization (selection, attrition, non-response)? Why does adjusting not equal identifying? What does an honest inferential claim look like end-to-end?
-- **Inquiry:** GENERALIZATION — descriptive · population (deep dive)
-- **Claim PERMITTED:** "In the population my frame reaches, X and Y are associated by [estimate ± interval], robust to [checks]."
-- **Claim NOT permitted:** The silent upgrade: association → 'link' → 'impact' → 'effect' across paragraphs — each word a claim your design didn't buy.
-- **RDSS reading:** RDSS ch. 15–16 (observational descriptive → causal boundary; book.declaredesign.org)
-- **Calling Bullshit (optional):** optional: callingbullshit.org 'correlation ≠ causation' case
-- **Other material:** nb10 §3–4 (Colab)
-- **Provenance:** RDSS ch.15–16 + rdss lapop_brazil | observational designs | selection stress-test built fresh on the concept | extended
-- **Concepts:** generalization threats; non-response; the language ladder of overclaiming; end-to-end inferential claim anatomy
-- **Python dependency:** pandas/numpy (simulate non-response biasing the lapop estimate)
-- **Dataset / simulation:** lapop_brazil.csv + seeded non-response filter
-- **50-minute dynamic:** 0–5 fall-break re-entry + M06 status pulse; 5–12 mini-lesson: the language ladder of overclaiming, climbed on the board with a real headline; 12–19 pause-and-predict: delete the least-trusting 20% of respondents — which way does mean trust move? commit; 19–32 hands-on: nb10 apply the non-response filter, measure the bias, write the now-honest generalization sentence; 32–44 M06 clinic: apply the full claim-anatomy checklist to your own declaration, rotating instructor consults; 44–48 pair proof-read of each other's permitted/not-permitted lines; 48–50 exit ticket.
-- **Hands-on activity:** Simulate non-response in lapop_brazil and measure exactly how far it moves the estimate you would have reported.
-- **Practice:** 📝 nb10 practice: climb-down drill — take 3 overclaimed sentences down the ladder to what the design bought.
-- **Discussion prompt:** Find the exact sentence in a real abstract where association quietly became causation. What word did the smuggling?
-- **Project connection:** M06 declarations get their final clinic before tonight's deadline.
-- **Milestone developed:** M06 — Answer Strategy Declaration (submitted tonight)
-- **Milestone work time:** 12 min (M06 clinic with consults)
-- **Milestone presentation/review:** rotating instructor consults + pair proof-read
-- **Student prep:** M06 near-final; RDSS ch. 15–16 boundary sections skimmed.
-- **Student artifact:** Bias measurement + honest generalization sentence + final M06
-- **Exit ticket:** Claim Ticket #21: the word I am most tempted to smuggle into my claims, and its honest replacement.
-- **Homework / next milestone:** Submit M06 tonight 11:59 PM. Friday: assemble the FULL design declaration (M07 part 2) — bring all MIDA pieces.
-- **Instructor prep:** Real-headline ladder example; consult order; check M06 drafts midweek.
-- **Risks / contingency:** Post-break fog → open with the 3-minute whole-course-so-far recap slide before the mini-lesson.
+- **Driving question:** Is your abstract honest enough to submit — uncertainty, reach, and all?
+- **Secondary questions:** Does the abstract already carry uncertainty language? Is your answer strategy declared tightly enough to survive a clinic?
+- **Inquiry:** GENERALIZATION — descriptive · population (studio application)
+- **Claim PERMITTED:** "My abstract states the estimate, its uncertainty, and the population it reaches — a stranger could not over-believe it."
+- **Claim NOT permitted:** An abstract that promises what the design cannot deliver; polish is not a license to overclaim.
+- **RDSS reading:** (no new reading — studio Friday; bring your abstract draft and M06 draft)
+- **Other material:** nb10 student notebook (generalization) for the recap; URC abstract template; M06 clinic checklist; M07 declaration template
+- **Provenance:** course studio protocol + URC abstract template | studio Friday | abstract gate workshop + M06 clinic format | newly-constructed-from-source-concept
+- **Concepts:** uncertainty-language checklist; abstract as public commitment; claim-anatomy clinic; declaration assembly plan
+- **Python dependency:** none required (writing workshop; nb10 open for reference)
+- **Dataset / simulation:** student's own project data plans (no shared dataset today)
+- **50-minute dynamic:** 0–10 recap: uncertainty and reach in one line each, straight from this week's simulations; 10–20 milestone brief (Brightspace): present M07 full-declaration deliverable + rubric (the abstract gates it today); 20–50 studio work: abstract workshop with the uncertainty-language checklist and partner swap, abstracts submitted at the gate, then the M06 clinic with rotating consults, then declaration assembly opens from the one-page template.
+- **Hands-on activity:** Run the uncertainty-language checklist on your own abstract, swap with a partner, submit at the gate, then open the one-page declaration.
+- **Practice:** 📝 abstract drill: find the one sentence a skimming reader would over-believe, and defuse it.
+- **Discussion prompt:** Read your partner's abstract cold. What did you believe that the design cannot actually deliver?
+- **Project connection:** The URC abstract (M07 part 1) clears its internal gate today; the full declaration (M07 part 2) starts assembling; M06 gets its clinic before Wednesday night's deadline.
+- **Milestone developed:** M07 — URC Abstract (internal gate TODAY) + Full Design Declaration (assembly kickoff); M06 — Answer Strategy Declaration (clinic)
+- **Milestone work time:** 30 min studio block (workshop + clinic + assembly)
+- **Milestone presentation/review:** partner abstract swap with uncertainty-language checklist + rotating M06 consults
+- **Student prep:** URC abstract drafted; M06 draft in hand; nb10 uncertainty sections complete.
+- **Student artifact:** Submitted URC abstract + clinic-annotated M06 draft + declaration assembly started
+- **Exit ticket:** Claim Ticket #20: the single uncertainty phrase that now protects my abstract's reader.
+- **Homework / next milestone:** No class Monday (fall break). For Wednesday: finalize M06 (due that night on Brightspace) and read RDSS ch. 10 §power.
+- **Instructor prep:** Abstract checklist copies; confirm the URC submission mechanics (the internal gate binds today regardless of the external portal); consult order.
+- **Risks / contingency:** External URC portal shifts → the internal gate stands; abstracts go to Brightspace and are forwarded when the portal opens.
 
-### M22 — Fri 2026-10-16 (in-person) — Generalization deep dive III: power — and assembling the full design declaration
+### M21 — Wed 2026-10-14 (in-person) — Generalization deep dive II: power, and the association-is-not-causation boundary
 
-- **Driving question:** Could your design even detect the thing you are looking for?
-- **Secondary questions:** What is statistical power, by simulation? What kills power (n, noise, effect size)? What does a complete MIDA declaration look like on one page?
+- **Driving question:** Could your design even detect what you are looking for — and what may you still not say about why?
+- **Secondary questions:** What is statistical power, by simulation? What kills power (n, noise, effect size)? Why does adjusting not equal identifying?
 - **Inquiry:** GENERALIZATION — descriptive · population (deep dive)
 - **Claim PERMITTED:** "At my n and plausible effect sizes, my design finds a real effect [P]% of the time — I checked before collecting data."
-- **Claim NOT permitted:** "We found nothing, so there is nothing" from a design that could barely have found anything (absence of evidence, underpowered edition).
-- **RDSS reading:** RDSS ch. 10 'Diagnosing designs' §power (book.declaredesign.org); problem set 1 (concepts)
-- **Other material:** nb10 §5 (Colab); M07 one-page declaration template
-- **Provenance:** rdss-problem-set-1.Rmd + RDSS ch.10 | power analysis with design diagnosis | PS1 power simulation translated | translated (R→Python)
-- **Concepts:** power by simulation; the power triangle (n, noise, effect); minimum detectable effect intuition; the one-page MIDA declaration
+- **Claim NOT permitted:** The silent upgrade from association to 'link' to 'effect' across paragraphs, or "we found nothing, so there is nothing" from a design that could barely have found anything.
+- **RDSS reading:** RDSS ch. 10 'Diagnosing designs' §power; ch. 15–16 boundary sections (book.declaredesign.org); problem set 1 (concepts)
+- **Calling Bullshit (optional):** optional: callingbullshit.org 'correlation ≠ causation' case
+- **Other material:** nb10 student notebook (generalization), §4–5 (Colab)
+- **Provenance:** rdss-problem-set-1.Rmd + RDSS ch.10 + ch.15–16 | power + the causal boundary | PS1 power simulation translated + language-ladder drill | translated (R→Python)
+- **Concepts:** power by simulation; the power triangle (n, noise, effect); minimum detectable effect intuition; the language ladder of overclaiming; 'controlling for' is not identifying
 - **Python dependency:** numpy (power simulation loop), matplotlib (power curve)
-- **Dataset / simulation:** seeded power simulation over a grid of n and effect sizes
-- **50-minute dynamic:** 0–5 pop quiz: the four MIDA letters, each in five words; 5–12 mini-lesson: power as a batting average you compute BEFORE the season; 12–19 pause-and-predict: at n=50 and a small effect, how often does our design 'find it'? commit a percentage; 19–32 hands-on: nb10 run the power grid, find YOUR design's approximate power, locate the n that would double it; 32–45 DECLARATION ASSEMBLY: compile Model+Inquiry+Data+Answer into the one-page M07 declaration, rotating consults; 45–50 declarations submitted + exit ticket.
-- **Hands-on activity:** Run a power grid and locate your own design on it; find what change would most raise your power.
+- **Dataset / simulation:** inline simulation: seeded power grid over n and effect sizes
+- **50-minute dynamic:** 0–5 fall-break re-entry: the four MIDA letters, each in five words; 5–12 mini-lesson: power as a batting average you compute BEFORE the season; 12–19 pause-and-predict: at n=50 and a small effect, how often does our design 'find it'? commit a percentage; 19–31 hands-on: nb10 run the power grid, find YOUR design's approximate power, locate the n that would double it; 31–39 second act: the language ladder of overclaiming, climbed on the board with a real headline, then the climb-down drill; 39–46 transfer: mark your own declaration draft — which claims sit above what the design bought?; 46–50 exit ticket + M06 final call for tonight.
+- **Hands-on activity:** Run a power grid and locate your own design on it, then take 3 overclaimed sentences down the ladder to what the design bought.
 - **Practice:** 📝 nb10 practice: rank 4 design tweaks by how much each raises power, then verify by simulation.
 - **Discussion prompt:** Your power is 30%. Is running the study anyway unethical, merely risky, or defensible with the right framing?
-- **Project connection:** M07 (full design declaration) submits today — the complete MIDA blueprint every later milestone builds on.
-- **Milestone developed:** M07 — Full Design Declaration (submitted TODAY)
-- **Milestone work time:** 13 min (assembly + consults)
-- **Milestone presentation/review:** rotating instructor consults during assembly
-- **Student prep:** All MIDA pieces (M03–M06) at hand; RDSS ch. 10 §power skimmed.
-- **Student artifact:** Power-grid location for own design + submitted one-page M07 declaration
-- **Exit ticket:** Claim Ticket #22: my design's approximate power and the single change that would raise it most.
-- **Homework / next milestone:** Weekend: rest — the declaration is in. Monday begins the diagnosis engine (RDSS ch. 10 in full).
-- **Instructor prep:** Verify power-grid cells run <30s; print declaration templates; consult order.
-- **Risks / contingency:** Power simulation too slow live → pre-computed grid ships in the notebook, students interpolate their design instead of re-running.
+- **Project connection:** Power numbers and boundary-checked language flow into the full design declaration due this Friday; M06 submits tonight.
+- **Milestone developed:** M06 — Answer Strategy Declaration (due tonight on Brightspace); M07 — Full Design Declaration (development)
+- **Milestone work time:** 7 min (mark own declaration draft against the ladder)
+- **Milestone presentation/review:** none (lecture day; M06 final call)
+- **Student prep:** M06 near-final; RDSS ch. 10 §power skimmed.
+- **Student artifact:** Power-grid location for own design + ladder-marked declaration draft + final M06
+- **Exit ticket:** Claim Ticket #21: my design's approximate power, and the word I am most tempted to smuggle into my claims.
+- **Homework / next milestone:** Submit M06 tonight on Brightspace. For this Friday's studio bring ALL MIDA pieces — the full design declaration assembles and submits there.
+- **Instructor prep:** Verify power-grid cells run <30s; real-headline ladder example; check M06 drafts midweek.
+- **Risks / contingency:** Post-break fog → open with a 3-minute whole-course-so-far recap; power simulation too slow live → the pre-computed grid ships in the notebook.
+
+### M22 — Fri 2026-10-16 (in-person) — Studio Friday — full design declaration due: assembly consults, M08 kicks off
+
+- **Driving question:** Does your one-page declaration hold together as a single defensible design?
+- **Secondary questions:** Do the four MIDA letters agree with each other? What will the diagnosis engine do to this declaration next week?
+- **Inquiry:** full MIDA (studio assembly)
+- **Claim PERMITTED:** "My one page declares M, I, D, and A, and each letter is consistent with the other three."
+- **Claim NOT permitted:** A declaration whose letters quietly disagree (a population inquiry served by a convenience frame, a causal claim served by no assignment).
+- **RDSS reading:** (no new reading — studio Friday; bring all MIDA pieces and your declaration draft)
+- **Other material:** nb10 student notebook (generalization) for the recap; M07 one-page declaration template; M08 Brightspace brief
+- **Provenance:** course studio protocol + M07/M08 Brightspace briefs | studio Friday | declaration assembly consults + M08 kickoff | newly-constructed-from-source-concept
+- **Concepts:** the one-page MIDA declaration; internal-consistency check; hand-off to diagnosis (declare → diagnose → redesign preview)
+- **Python dependency:** none required (assembly + consults; nb10 open for reference)
+- **Dataset / simulation:** student's own project data plans (no shared dataset today)
+- **50-minute dynamic:** 0–10 recap: power and the causal boundary in one line each; 10–20 milestone brief (Brightspace): present M08 deliverable + rubric; 20–50 studio work: declaration assembly with rotating consults, internal-consistency partner check, declarations submitted by end of block.
+- **Hands-on activity:** Assemble Model + Inquiry + Data + Answer into the one-page declaration, pass the partner consistency check, and submit.
+- **Practice:** 📝 consistency drill: for your partner's declaration, find one place where two MIDA letters disagree, or certify that none do.
+- **Discussion prompt:** Which MIDA letter cost you the most sweat this week, and what finally settled it?
+- **Project connection:** M07 (full design declaration) submits today — the complete MIDA blueprint every later milestone builds on; M08 (diagnosis & redesign) kicks off.
+- **Milestone developed:** M07 — Full Design Declaration (due TODAY in studio); M08 — Design Diagnosis & Redesign Memo (kickoff)
+- **Milestone work time:** 30 min studio block (assembly + consults + submission)
+- **Milestone presentation/review:** rotating instructor consults + partner internal-consistency check
+- **Student prep:** All MIDA pieces (M03–M06) at hand; declaration draft from last Friday's assembly start.
+- **Student artifact:** Submitted one-page M07 declaration + partner consistency certificate
+- **Exit ticket:** Claim Ticket #22: the one sentence of my declaration I am proudest of, and the one I expect diagnosis to attack.
+- **Homework / next milestone:** Rest this weekend — the declaration is in. Monday begins the diagnosis engine: read RDSS ch. 10 'Diagnosing designs' in full.
+- **Instructor prep:** Print declaration templates; queue the M08 Brightspace brief; consult order.
+- **Risks / contingency:** Assembly overruns → the consistency check goes silent-written and submission extends to tonight on Brightspace.
 
 ## Phase 4 — Pilot, diagnosis, redesign
 
@@ -640,16 +640,16 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "Simulated 1,000 times, my design shows bias ≈ B and power ≈ P for my inquiry — measured, not assumed."
 - **Claim NOT permitted:** "My design is fine" as a feeling. Untested designs have undiagnosed diseases.
 - **RDSS reading:** RDSS ch. 10 'Diagnosing designs' (book.declaredesign.org); declaration_10.1; ch. 13 'Designing in code'
-- **Other material:** nb11 §1–2 (Colab)
+- **Other material:** nb11 student notebook (declare→diagnose), §1–2 (Colab)
 - **Provenance:** RDSS ch.10 + declaration_10.1.R + diagnosis_10.1.R | diagnosing designs | declare/diagnose loop translated to a compact Python helper | translated (R→Python)
 - **Concepts:** design declaration in code; diagnosands: bias, power, coverage; Monte-Carlo diagnosis; the declare→diagnose loop
 - **Python dependency:** numpy/pandas (the course's inline declare_design/diagnose helpers, introduced here)
-- **Dataset / simulation:** seeded Monte-Carlo diagnosis (1,000 runs) of a two-group design
-- **50-minute dynamic:** 0–5 M07 declarations returned with first-pass notes; 5–13 mini-lesson: the flight simulator argument — crash in simulation, not in the field; the three diagnosands; 13–20 pause-and-predict: our textbook design — biased or just noisy? commit before diagnosing; 20–35 hands-on: nb11 declare the design with the course helpers, run the 1,000-run diagnosis, read the diagnosand table; 35–46 lab: declare a SIMPLIFIED version of your own design (provided skeleton) and start its diagnosis; 46–50 exit ticket.
+- **Dataset / simulation:** inline simulation: seeded Monte-Carlo diagnosis (1,000 runs) of a two-group design
+- **50-minute dynamic:** 0–5 M07 declarations returned with first-pass notes; 5–13 mini-lesson: the flight simulator argument — crash in simulation, not in the field — then the three diagnosands; 13–20 pause-and-predict: our textbook design, biased or just noisy? commit before diagnosing; 20–35 hands-on: nb11 declare the design with the course helpers, run the 1,000-run diagnosis, read the diagnosand table; 35–46 lab: declare a SIMPLIFIED version of your own design (provided skeleton) and start its diagnosis; 46–50 exit ticket.
 - **Hands-on activity:** Declare a design in code, run a 1,000-replication diagnosis, and read bias/power/coverage off the result.
 - **Practice:** 📝 nb11 practice: match 3 sick designs to their diseases (bias / low power / bad coverage) from their diagnosand tables.
 - **Discussion prompt:** Pilots train in simulators because crashes are cheap there. What is the research equivalent of a simulator crash — and of a real one?
-- **Project connection:** Each student's simplified own-design declaration enters the diagnosis engine (M08 begins).
+- **Project connection:** Each project's simplified own-design declaration enters the diagnosis engine (M08 begins).
 - **Milestone developed:** M08 — Design Diagnosis & Redesign Memo
 - **Milestone work time:** 11 min (own-design declaration skeleton)
 - **Milestone presentation/review:** none (engine day)
@@ -668,138 +668,137 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "Redesign R raises power from P1 to P2 at cost C — I compared designs, not vibes."
 - **Claim NOT permitted:** Changing the QUESTION to whatever the weak design can answer, silently (that is a new declaration, not a redesign).
 - **RDSS reading:** RDSS ch. 11 'Redesigning' (book.declaredesign.org); declaration_11.1
-- **Other material:** nb11 §3–4 (Colab)
+- **Other material:** nb11 student notebook (redesign), §3–4 (Colab)
 - **Provenance:** RDSS ch.11 + declaration_11.1.R + diagnosis_11.x | redesigning | redesign-comparison loop translated | translated (R→Python)
 - **Concepts:** redesign levers; design comparison tables; cost-aware improvement; honest vs silent redesign
 - **Python dependency:** numpy/pandas (rerun diagnosis across parameter grids)
-- **Dataset / simulation:** seeded redesign grid over the M23 design + each student's own
-- **50-minute dynamic:** 0–5 diagnosand-table cold reads (two volunteers read a table aloud correctly); 5–12 mini-lesson: the four redesign levers, each with its price tag; 12–25 hands-on: nb11 rerun the textbook design across a redesign grid, build the comparison table, pick the cheapest fix; 25–40 M08 STUDIO: diagnose YOUR design, apply one redesign, record before/after diagnosands (rotating consults); 40–47 REDESIGN PITCHES: each student, 60 seconds — my weakness, my fix, my before/after numbers; 47–50 exit ticket.
+- **Dataset / simulation:** inline simulation: seeded redesign grid over the declared textbook design + each student's own
+- **50-minute dynamic:** 0–5 diagnosand-table cold reads (two volunteers read a table aloud correctly); 5–13 mini-lesson: the four redesign levers, each with its price tag; 13–28 hands-on: nb11 rerun the textbook design across a redesign grid, build the comparison table, pick the cheapest fix; 28–45 own-design block: diagnose YOUR design, apply one redesign, record before/after diagnosands (rotating consults); 45–50 exit ticket.
 - **Hands-on activity:** Build a redesign comparison table and defend the cheapest fix with before/after diagnosands.
 - **Practice:** 📝 nb11 practice: given a fixed budget, choose between doubling n and halving measurement noise — verify your choice by simulation.
 - **Discussion prompt:** When is shrinking your question the honest redesign — and how would a reader know you did it?
 - **Project connection:** M08 memo takes form: each project now has diagnosed numbers and one committed redesign.
-- **Milestone developed:** M08 — Design Diagnosis & Redesign Memo (presented; submit Fri Oct 23)
-- **Milestone work time:** 15 min (own diagnose + redesign studio)
-- **Milestone presentation/review:** M08 presented: 60-second redesign pitches with before/after diagnosands
+- **Milestone developed:** M08 — Design Diagnosis & Redesign Memo (pitched at this Friday's studio)
+- **Milestone work time:** 17 min (own diagnose + redesign block)
+- **Milestone presentation/review:** rotating instructor consults (the 60-second pitches happen at this Friday's studio)
 - **Student prep:** Own-design declaration cells complete (Monday's homework); RDSS ch. 11 read.
-- **Student artifact:** Own before/after diagnosand table + delivered redesign pitch
+- **Student artifact:** Own before/after diagnosand table + committed redesign
 - **Exit ticket:** Claim Ticket #24: my design's diagnosed weakness and the fix I committed to, with numbers.
-- **Homework / next milestone:** Write up and submit the M08 memo (diagnosis + redesign, with tables) by Fri Oct 23, 11:59 PM. Friday: prediction begins.
-- **Instructor prep:** Consult order; verify grid runs stay fast; timer for pitches.
+- **Homework / next milestone:** Write up the M08 memo (diagnosis + redesign, with tables); it is due at this Friday's studio, where you pitch it in 60 seconds.
+- **Instructor prep:** Consult order; verify grid runs stay fast; flag any design that resists the simple helpers for a pair-declare consult.
 - **Risks / contingency:** A student's design resists the simple helpers → instructor pair-declares it live in the consult; the memo may use the simplified stand-in with the simplification documented.
 
-### M25 — Fri 2026-10-23 (in-person) — Prediction deep dive I: target, baseline, split — forecasting without fooling yourself
+### M25 — Fri 2026-10-23 (in-person) — Studio Friday — redesign pitches: M08 due, the pilot phase begins
 
-- **Driving question:** Can you forecast new cases better than the dumbest honest rule?
-- **Secondary questions:** What is a prediction target? Why must a baseline come first? Why hold out data you never touch?
+- **Driving question:** Can you defend your redesign in 60 seconds, with before/after numbers?
+- **Secondary questions:** What makes a redesign pitch convincing? What does the M09 pilot ask of your compass branch? Where should your pilot start this weekend?
+- **Inquiry:** all positions (diagnosis engine → pilot)
+- **Claim PERMITTED:** "My design's weakness was W; redesign R fixes it, moving [diagnosand] from A to B — here are the numbers."
+- **Claim NOT permitted:** A pitch with no numbers: 'I made it better' is a feeling, not a diagnosis.
+- **RDSS reading:** (no new reading — studio Friday; bring your M08 memo and diagnosand tables)
+- **Other material:** nb11 student notebook (declare→diagnose→redesign) for the recap; M09 Brightspace brief; pitch timer
+- **Provenance:** RDSS ch.10–11 machinery + M09 Brightspace brief | studio Friday | 60-second pitch + kickoff protocol | fresh
+- **Concepts:** redesign pitching with numbers; the pilot as a dress rehearsal for the full analysis; compass-branched pilot plans
+- **Python dependency:** none required (diagnosis helpers stay open for consults)
+- **Dataset / simulation:** student's own project data (diagnosand tables from the week)
+- **50-minute dynamic:** 0–10 recap: the declare→diagnose→redesign loop in one pass — declare in code, read bias/power/coverage, buy the cheapest fix; 10–20 milestone brief (Brightspace): present M09 deliverable + rubric — a compass-branched pilot analysis with a verification log; 20–50 studio work: 60-second redesign pitches (my weakness, my fix, my before/after numbers) on a hard timer, then rotating consults to lock each pilot plan and submit M08 tonight.
+- **Hands-on activity:** Deliver your 60-second redesign pitch with before/after diagnosands, then lock your M09 pilot plan in a consult.
+- **Practice:** 📝 during consults: write the first cell your pilot notebook needs (data load or simulation seed) before you leave.
+- **Discussion prompt:** Which pitch you heard today bought the most improvement for the least cost — and what number convinced you?
+- **Project connection:** M08 submits tonight; every project leaves with a locked, compass-branched pilot plan for M09.
+- **Milestone developed:** M08 — Design Diagnosis & Redesign Memo (due tonight) → M09 — Pilot Analysis (kickoff)
+- **Milestone work time:** 30 min studio block
+- **Milestone presentation/review:** M08 presented: 60-second redesign pitches with before/after diagnosands
+- **Student prep:** M08 memo drafted; pitch rehearsed once; diagnosand tables at hand.
+- **Student artifact:** Delivered pitch + locked pilot plan + submitted M08
+- **Exit ticket:** Claim Ticket #25: my pilot's compass branch and the first output it must produce.
+- **Homework / next milestone:** Submit M08 tonight on Brightspace. Start the pilot this weekend; Monday is the prediction deep dive.
+- **Instructor prep:** Pitch timer; consult order; M09 brief staged on Brightspace; keep the diagnosis helpers loadable for consults.
+- **Risks / contingency:** Pitches run long → hard timer with a bell; overflow consults move to office hours. A memo isn't ready → the pitch still happens; the submission deadline is tonight, not the pitch.
+
+### M26 — Mon 2026-10-26 (in-person) — Prediction deep dive: target, baseline, split, metric — and the leaks that fake success
+
+- **Driving question:** Can you forecast new cases better than the dumbest honest rule — and would you notice if your score were fake?
+- **Secondary questions:** What is a prediction target? Why must a baseline come first? Why hold out data you never touch? How does leakage sneak in, and why do good predictors make bad explainers?
 - **Inquiry:** PREDICTION — descriptive · unseen cases (deep dive)
-- **Claim PERMITTED:** "On held-out cases, my model beats the baseline by [margin] on [metric]."
-- **Claim NOT permitted:** Any performance number computed on data the model already saw — and any 'the model shows X matters' explanation talk.
+- **Claim PERMITTED:** "On held-out cases, my model beats the baseline by [margin] on [metric]; I checked the features for leakage; I make no causal reading of its weights."
+- **Claim NOT permitted:** Any performance number computed on data the model already saw — and "the model's top feature is X, so X drives the outcome" (importance is not explanation, and leakage fakes importance).
 - **RDSS reading:** RDSS Part III stops before prediction (ch. 15–18) — nb12 authors the missing library entry 'Observational: predictive' in the book's own declare-diagnose-redesign format; ch. 9 §9.1.3 (the answer strategy is the whole procedure) + ch. 10 diagnosand logic carry over (book.declaredesign.org)
 - **Calling Bullshit (optional):** optional: callingbullshit.org — big-data/algorithm hubris case
-- **Other material:** nb12 §1–2 (Colab); scikit-learn (linked docs)
-- **Provenance:** fresh (scikit-learn) | prediction unit declared MIDA-style as the course-authored 'Observational: predictive' library entry | target/baseline/split/metric protocol | fresh
-- **Concepts:** prediction as MIDA — I: target for unseen units, D: prediction-time information, A: learner + baseline, diagnosis: held-out performance; baseline rule; train/test split; metric choice; out-of-sample honesty
+- **Other material:** nb12 student notebook (prediction deep dive, incl. leakage), §1–4 (Colab); scikit-learn (linked docs)
+- **Provenance:** fresh (scikit-learn) | prediction unit declared MIDA-style as the course-authored 'Observational: predictive' library entry | target/baseline/split/metric protocol + leakage demonstration | fresh
+- **Concepts:** prediction as MIDA — I: target for unseen units, D: prediction-time information, A: learner + baseline, diagnosis: held-out performance; baseline rule; train/test split; metric choice; leakage as a data-strategy violation; the performance-understanding gap
 - **Python dependency:** scikit-learn (train_test_split, DummyClassifier, LogisticRegression), pandas
-- **Dataset / simulation:** la_voter_file.csv (predict turnout from voter-file fields)
-- **50-minute dynamic:** 0–5 M08 submission check + why prediction is a descriptive inquiry about unseen cases (recall the compass); 5–13 mini-lesson: the prediction contract — target, baseline, split, metric, in that order; 13–20 pause-and-predict: what accuracy does the always-votes baseline get on this file? commit; 20–35 hands-on: nb12 build the baseline, beat (or fail to beat) it with a simple model, all scoring on held-out rows; 35–45 lab: IF your project has a predictive angle, define its target+baseline+metric; if not, write why prediction is the wrong column for your question (both are M09 prep); 45–50 exit ticket.
-- **Hands-on activity:** Score a dumb baseline honestly on held-out data, then try to beat it — and feel how hard honest beats easy.
-- **Practice:** 📝 nb12 practice: choose the right metric for 3 targets (rare event, balanced classes, costly false negatives) and defend each.
+- **Dataset / simulation:** la_voter_file.csv (predict turnout from voter-file fields; one deliberately leaky feature engineered in)
+- **50-minute dynamic:** 0–5 compass frame: prediction is a descriptive inquiry about unseen cases, plus a pilot check-in; 5–15 mini-lesson: the prediction contract — target, baseline, split, metric, in that order; 15–25 hands-on: nb12 score the always-votes baseline honestly on held-out rows, then try to beat it with a simple model; 25–35 hands-on: train on the leaky feature set (spectacular score), find the leak, retrain clean, write the delta; 35–45 lab: your project's prediction verdict — define target + baseline + metric, or write why prediction is the wrong column for your question (M09 prep either way); 45–50 exit ticket.
+- **Hands-on activity:** Beat (or fail to beat) an honest baseline on held-out data, then catch a planted leak and report the leaky-vs-clean numbers side by side.
+- **Practice:** 📝 nb12 practice (the depth lives in the notebook): choose the right metric for 3 targets (rare event, balanced classes, costly false negatives) and defend each; rank 4 hospital-readmission features by leakage risk.
 - **Discussion prompt:** The baseline got 78% and the fancy model got 80%. Write the honest headline — then the dishonest one you almost wrote.
-- **Project connection:** M09 pilot prep: each project confirms or rules out its predictive component with reasons.
+- **Project connection:** M09 pilots advance: each project confirms or rules out its predictive component with reasons, and names its nearest leakage risk.
 - **Milestone developed:** M09 — Pilot Analysis (compass-branched)
-- **Milestone work time:** 10 min (own prediction-angle decision memo)
-- **Milestone presentation/review:** none
-- **Student prep:** M08 due tonight 11:59 PM; nothing else new.
-- **Student artifact:** Baseline-vs-model held-out comparison + own prediction-angle memo
-- **Exit ticket:** Claim Ticket #25: my project's prediction verdict (has an angle / wrong column) in one defended sentence.
-- **Homework / next milestone:** Read the nb12 leakage preview cell; Monday: how prediction goes wrong (leakage) and prediction ≠ explanation.
-- **Instructor prep:** Verify la_voter_file predictive cells run fast; pre-compute the baseline so the reveal is snappy.
-- **Risks / contingency:** sklearn friction → all model code is provided; students only choose the target column and read outputs.
+- **Milestone work time:** 10 min (own prediction-angle verdict)
+- **Milestone presentation/review:** none (lecture day)
+- **Student prep:** Pilot started over the weekend; M08 feedback reviewed.
+- **Student artifact:** Baseline-vs-model held-out comparison + leaky-vs-clean delta + own prediction verdict
+- **Exit ticket:** Claim Ticket #26: my project's prediction verdict (has an angle / wrong column) and the leakage risk nearest my data.
+- **Homework / next milestone:** Finish nb12's practice cells; read the RDSS ch. 18 opener and skim the ch. 16 DiD/RDD intuition sections. Wednesday: causal reasoning.
+- **Instructor prep:** Verify la_voter_file predictive cells run fast; pre-compute the baseline so the reveal is snappy; engineer the leaky feature so discovery takes about ten minutes.
+- **Risks / contingency:** sklearn friction → all model code is provided; students only choose the target column and read outputs. Leak found too fast → the notebook's second, subtler temporal leak is the extension path.
 
-### M26 — Mon 2026-10-26 (in-person) — Prediction deep dive II: leakage, and why performance is not understanding
-
-- **Driving question:** Your model scores brilliantly. What are the two most likely explanations — and why is 'it understands the world' third?
-- **Secondary questions:** What is leakage and how does it sneak in? Why do good predictors make bad explainers? What does prediction contribute to a research argument?
-- **Inquiry:** PREDICTION — descriptive · unseen cases (deep dive)
-- **Claim PERMITTED:** "My model forecasts held-out cases at [level]; I checked the features for leakage; I make no causal reading of its weights."
-- **Claim NOT permitted:** "The model's top feature is X, so X drives the outcome" — importance is not explanation, and leakage fakes importance.
-- **RDSS reading:** (fresh unit continues)
-- **Calling Bullshit (optional):** optional: callingbullshit.org — machine-bias / algorithm case
-- **Other material:** nb12 §3–4 (Colab)
-- **Provenance:** fresh (scikit-learn) | prediction unit | leakage demonstration built for the course | fresh
-- **Concepts:** leakage as a data-strategy violation (information D cannot supply at prediction time — target proxies, post-outcome features); the performance-understanding gap; prediction's honest role in research
-- **Python dependency:** scikit-learn, pandas (leaky vs clean feature sets)
-- **Dataset / simulation:** la_voter_file.csv with one deliberately leaky feature engineered in
-- **50-minute dynamic:** 0–5 recap bet: guess the leaky feature hiding in today's feature list; 5–12 mini-lesson: leakage taxonomy with two war stories — each leak named as a data-strategy violation (information unavailable at prediction time); 12–27 hands-on: nb12 train on the leaky set (spectacular score), find the leak, retrain clean (honest score), write the delta; 27–36 pause-and-reflect: what SHOULD a researcher do with a great predictor (triage, targeting, hypothesis generation — not explanation); 36–46 M09 studio: pilot-analysis plans drafted, compass branch confirmed (rotating consults); 46–50 exit ticket.
-- **Hands-on activity:** Train on a leaky feature set, catch the leak, retrain clean, and report both numbers side by side.
-- **Practice:** 📝 nb12 practice: 4 features for predicting hospital readmission — rank by leakage risk and justify.
-- **Discussion prompt:** An algorithm predicts who will miss probation appointments. List one legitimate use and one illegitimate use of exactly the same scores.
-- **Project connection:** M09 pilot plans locked: every student knows which compass branch their pilot runs.
-- **Milestone developed:** M09 — Pilot Analysis (compass-branched)
-- **Milestone work time:** 10 min (pilot plan studio + consults)
-- **Milestone presentation/review:** rotating instructor consults
-- **Student prep:** nb12 §1–2 complete; prediction-angle memo from Friday.
-- **Student artifact:** Leaky-vs-clean comparison + locked pilot plan
-- **Exit ticket:** Claim Ticket #26: the leakage risk nearest MY project's data, and my check for it.
-- **Homework / next milestone:** Read RDSS ch. 16 opener + skim declaration_18.1 context; Wednesday: causal reasoning proper.
-- **Instructor prep:** Engineer the leaky feature so discovery is satisfying (findable in ~10 min); prep war stories.
-- **Risks / contingency:** Leak found too fast → the notebook's second, subtler leak (temporal) is the extension path.
-
-### M27 — Wed 2026-10-28 (in-person) — Causal reasoning deep dive I: counterfactuals, experiments, and what randomization buys
+### M27 — Wed 2026-10-28 (in-person) — Causal reasoning deep dive: counterfactuals, randomization, and what earns the word 'because'
 
 - **Driving question:** What would have happened WITHOUT the intervention — and how can anyone know?
-- **Secondary questions:** Why is the counterfactual the heart of every causal claim? What exactly does randomization solve? What is an identification argument?
+- **Secondary questions:** Why is the counterfactual the heart of every causal claim? What exactly does randomization solve? When you cannot randomize, what do DiD, RDD, and IV each exploit (intuition only)?
 - **Inquiry:** CAUSAL — causal kind (deep dive)
-- **Claim PERMITTED:** "Because assignment was randomized (checked), the difference in outcomes estimates the causal effect, with stated uncertainty."
-- **Claim NOT permitted:** A causal claim whose counterfactual is imagined rather than identified ("they improved after the program, so the program worked").
-- **RDSS reading:** RDSS ch. 18 'Experimental: causal' (book.declaredesign.org); declaration_18.1 (two-arm trial)
-- **Other material:** nb13 §1–2 (Colab)
-- **Provenance:** RDSS ch.18 + declaration_18.1.R + rdss foos_etal | experimental causal designs | two-arm trial translated; real GOTV experiment replicated descriptively | translated (R→Python)
-- **Concepts:** counterfactuals (return of Y(1),Y(0)); randomization as counterfactual-maker; identification argument; the two-arm trial
-- **Python dependency:** numpy/pandas (analyze the foos_etal experiment; difference-in-means + interval)
-- **Dataset / simulation:** foos_etal.csv (real get-out-the-vote field experiment, MIT-licensed replication data)
-- **50-minute dynamic:** 0–5 the 2×2 completed ceremonially — the last column's deep dive begins; 5–13 mini-lesson: the counterfactual problem and randomization's trick, replayed on the nb04 world; 13–20 pause-and-predict: in the real foos_etal experiment, did contact raise turnout? by how much? commit; 20–35 hands-on: nb13 analyze the real experiment — balance check, effect estimate, interval — then write its identification argument in 3 sentences; 35–45 lab: write YOUR project's identification paragraph (or the honest 'no identification available — my claim stops at association'); 45–50 exit ticket.
-- **Hands-on activity:** Analyze a real randomized field experiment end-to-end and write its 3-sentence identification argument.
-- **Practice:** 📝 nb13 practice: 3 claims — write the counterfactual each silently asserts, then grade its plausibility.
+- **Claim PERMITTED:** "Because assignment was randomized (checked), the difference in outcomes estimates the causal effect, with stated uncertainty" — or, without randomization, an identification argument stated and probed.
+- **Claim NOT permitted:** A causal claim whose counterfactual is imagined rather than identified, and design-mimicry: DiD/RDD/IV vocabulary decorating a comparison whose assumptions were never argued.
+- **RDSS reading:** RDSS ch. 18 'Experimental: causal' + ch. 16 'Observational: causal' DiD/RDD/IV intuition sections (book.declaredesign.org); declaration_18.1 (two-arm trial)
+- **Other material:** nb13 student notebook (causal reasoning deep dive), §1–4 (Colab)
+- **Provenance:** RDSS ch.18 + ch.16 + declaration_18.1.R + rdss foos_etal + cliningsmith_etal | experimental and observational causal designs | two-arm trial translated; DiD/RDD/IV as intuition pictures, no estimation machinery | translated (R→Python)
+- **Concepts:** counterfactuals (return of Y(1),Y(0)); randomization as counterfactual-maker; identification argument; the two-arm trial; DiD, RDD, IV as identification ARGUMENTS; assumption probing
+- **Python dependency:** numpy/pandas (difference-in-means + interval on foos_etal); matplotlib (picture-first DiD and RDD illustrations, provided)
+- **Dataset / simulation:** foos_etal.csv (real get-out-the-vote field experiment) + cliningsmith_etal.csv (natural-experiment flavor)
+- **50-minute dynamic:** 0–5 compass frame: the causal column's deep dive, and the counterfactual problem in one story; 5–15 mini-lesson: randomization's trick replayed on the nb04 world, then the identification argument as a genre; 15–27 hands-on: nb13 analyze the real foos_etal experiment — balance check, effect estimate, interval — and write its 3-sentence identification argument; 27–37 mini-lesson: three ways nature randomizes for you, one picture each (DiD's parallel lines, RDD's cliff, IV's nudge), assumptions named; 37–45 lab: write YOUR identification paragraph, or the honest 'no identification available — my claim stops at association' (M09 prep); 45–50 exit ticket.
+- **Hands-on activity:** Analyze a real randomized field experiment end-to-end, then match natural-experiment scenarios to the identification argument each would need.
+- **Practice:** 📝 nb13 practice (the depth lives in the notebook): write the counterfactual 3 claims silently assert and grade its plausibility; for each of DiD/RDD/IV, write the sentence a skeptic would attack first.
 - **Discussion prompt:** 'The patients who took the drug did better.' Give the two non-causal stories, then say what randomization would have done to them.
-- **Project connection:** Every project writes its identification paragraph — or its honest absence.
+- **Project connection:** Every project writes its identification paragraph — or its honest absence — before the pilot walkthroughs.
 - **Milestone developed:** M09 — Pilot Analysis (compass-branched)
-- **Milestone work time:** 10 min (own identification paragraph)
-- **Milestone presentation/review:** none
-- **Student prep:** RDSS ch. 16 opener + declaration_18.1 context skimmed; pilot plan locked.
+- **Milestone work time:** 8 min (own identification paragraph)
+- **Milestone presentation/review:** none (lecture day; walkthroughs at this Friday's studio)
+- **Student prep:** RDSS ch. 18 opener + ch. 16 intuition sections skimmed; pilot in progress.
 - **Student artifact:** Analyzed real experiment + own identification (or non-identification) paragraph
 - **Exit ticket:** Claim Ticket #27: my project's causal status in one sentence: identified by ___ / honestly not identified.
-- **Homework / next milestone:** Pilot analyses due FRIDAY (M09, walkthrough day). Read RDSS ch. 16 DiD/RDD intuition sections.
-- **Instructor prep:** Verify foos_etal loads + effect reproduces; prep the balance-check cell; office hours advertised for pilot crunch.
-- **Risks / contingency:** Pilot crunch panic → Friday's walkthrough accepts work-in-progress pilots; the submission deadline carries the polish.
+- **Homework / next milestone:** Pilot analyses due at this Friday's studio (M09 walkthrough day) — bring what runs, in any state of polish.
+- **Instructor prep:** Verify foos_etal loads + effect reproduces; check the three intuition pictures render cleanly; advertise office hours for the pilot crunch.
+- **Risks / contingency:** Pilot crunch panic → Friday's walkthrough accepts work-in-progress pilots; the submission deadline carries the polish. Content overruns → the DiD/RDD/IV block compresses to the three pictures; nb13 carries the depth.
 
-### M28 — Fri 2026-10-30 (in-person) — Causal reasoning deep dive II: causal claims without experiments — and the M09 pilot walkthroughs
+### M28 — Fri 2026-10-30 (in-person) — Studio Friday — pilot walkthroughs: M09 due, poster sprint previewed
 
-- **Driving question:** When you cannot randomize, what earns you the word 'because'?
-- **Secondary questions:** What leverage do DiD, RDD, and IV each exploit (intuition only)? What assumptions does each buy its identification with? How do you present a pilot honestly?
-- **Inquiry:** CAUSAL — causal kind (deep dive)
-- **Claim PERMITTED:** "Under [parallel trends / threshold locality / instrument validity — stated and probed], the estimate carries a causal reading."
-- **Claim NOT permitted:** Design-mimicry: DiD/RDD/IV vocabulary decorating a comparison whose assumptions were never argued.
-- **RDSS reading:** RDSS ch. 16 'Observational: causal' (book.declaredesign.org) — DiD/RDD/IV intuition sections
-- **Other material:** nb13 §3–4 (Colab); cliningsmith_etal.csv (natural-experiment flavor)
-- **Provenance:** RDSS ch.16 + rdss cliningsmith_etal | observational causal designs | DiD/RDD/IV intuition, no estimation machinery | adapted
-- **Concepts:** difference-in-differences, regression discontinuity, instrumental variables — as identification ARGUMENTS; assumption probing
-- **Python dependency:** pandas/matplotlib (picture-first DiD and RDD illustrations, provided)
-- **Dataset / simulation:** cliningsmith_etal.csv + two seeded illustrative simulations (parallel-trends world, threshold world)
-- **50-minute dynamic:** 0–5 settle + walkthrough order; 5–15 mini-lesson: three ways nature randomizes for you, one picture each (DiD's parallel lines, RDD's cliff, IV's nudge); 15–20 quick check: match 3 scenarios to their design; 20–42 M09 PILOT WALKTHROUGHS: five ~4-minute walkthroughs (what I ran, what came out, what surprised me), listeners log one verification question each; 42–48 revision notes + submission checklist; 48–50 exit ticket.
-- **Hands-on activity:** Match natural-experiment scenarios to their identification argument; probe one assumption per design.
-- **Practice:** 📝 nb13 practice: for each of DiD/RDD/IV, write the one sentence a skeptic would attack first.
+- **Driving question:** What did your pilot actually show — and can you say it honestly in four minutes?
+- **Secondary questions:** How do you present preliminary evidence without overclaiming? What verification question does your pilot most need? What will next week's poster sprint demand?
+- **Inquiry:** all positions (pilot evidence)
+- **Claim PERMITTED:** "Here is what I ran, what came out, and what surprised me — bounded by my compass position."
+- **Claim NOT permitted:** A walkthrough that hides the parts that failed; failure plus diagnosis is legitimate evidence here.
+- **RDSS reading:** (no new reading — studio Friday; bring your executed pilot)
+- **Other material:** nb13 student notebook (causal reasoning) for the recap; M10 Brightspace brief; URC poster specs (preview)
+- **Provenance:** week's nb12–nb13 material + M10 Brightspace brief | studio Friday | 4-minute walkthrough + verification-log protocol | fresh
+- **Concepts:** honest pilot presentation; verification questions; the poster sprint ahead (storyboard → draft + red-team → final production)
+- **Python dependency:** none required (walkthroughs run from executed notebooks)
+- **Dataset / simulation:** student's own project data (pilot outputs)
+- **50-minute dynamic:** 0–10 recap: the week in one pass — prediction's contract (target, baseline, split, metric, leakage) and causation's price (identification or honesty); 10–20 milestone brief (Brightspace): present M10 deliverable + rubric, plus the poster-sprint preview — storyboard, then draft + red-team, then final production, three deadlines in one week; 20–50 studio work: 4-minute pilot walkthroughs (what I ran, what came out, what surprised me), listeners log one verification question each, closing with the M09 submission checklist.
+- **Hands-on activity:** Deliver a 4-minute pilot walkthrough and log one verification question for every walkthrough you hear.
+- **Practice:** 📝 before leaving: take the verification question you received and write the check that will answer it.
 - **Discussion prompt:** On a classmate's pilot: what is the single verification step you most want them to run before believing their own output?
-- **Project connection:** M09 pilots presented and submitted — every project now has real preliminary evidence, honestly bounded.
-- **Milestone developed:** M09 — Pilot Analysis (presented + submitted TONIGHT)
-- **Milestone work time:** 22 min (walkthroughs) + 6 min (revision + checklist)
+- **Project connection:** M09 pilots presented and submitted — every project enters the poster sprint with real preliminary evidence, honestly bounded.
+- **Milestone developed:** M09 — Pilot Analysis (presented + due tonight) → M10 — Poster Storyboard (kickoff)
+- **Milestone work time:** 30 min studio block
 - **Milestone presentation/review:** M09 presented: 4-minute pilot walkthroughs + logged verification questions
 - **Student prep:** Pilot analysis executed (any state of polish); walkthrough rehearsed.
 - **Student artifact:** Delivered walkthrough + verification-question log + submitted M09
 - **Exit ticket:** Claim Ticket #28: the verification question a classmate asked me, and how I will answer it before the poster.
-- **Homework / next milestone:** Submit M09 tonight 11:59 PM. Monday: POSTER PHASE — bring your best figure and your headline claim.
-- **Instructor prep:** Timer; walkthrough rubric; check the three intuition pictures render cleanly; verify cliningsmith_etal loads.
+- **Homework / next milestone:** Submit M09 tonight on Brightspace. Monday the poster sprint begins — bring your best figure and your headline claim.
+- **Instructor prep:** Timer; walkthrough rubric; M10 brief + URC spec sheet ready; poster-sprint preview slide checked.
 - **Risks / contingency:** A pilot collapsed during the week → its walkthrough presents the failure + diagnosis (explicitly graded as legitimate); redesign happens in office hours.
 
 ## Phase 5 — Poster construction & submission
@@ -812,23 +811,23 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** The poster's headline claim, worded to match its compass position's boundary — description as description, association as association.
 - **Claim NOT permitted:** A headline that outruns the pilot's evidence (the 90-second reader will never see your caveats footnote).
 - **RDSS reading:** (fresh unit; RDSS figure style referenced for honest graphics)
-- **Other material:** nb14 §1–2 (Colab); URC poster specs; storyboard template
+- **Other material:** nb14 student notebook (poster construction), §1–2 (Colab); URC poster specs; storyboard template
 - **Provenance:** brief §12 P5 + fresh storyboard method + Purdue URC specs | poster unit | storyboard grid | fresh
 - **Concepts:** storyboarding; claim hierarchy; the 90-second read path; poster real estate economics; uncertainty placement
 - **Python dependency:** none required (figure polish optional, matplotlib)
-- **Dataset / simulation:** each student's own pilot outputs
-- **50-minute dynamic:** 0–5 poster-phase kickoff: the Nov 6 deadline is REAL (production, not buffer); 5–12 mini-lesson: the 90-second read path traced on two example posters (one strong, one lost); 12–30 studio: fill the storyboard grid — headline claim, 3 evidence blocks ranked, uncertainty line, read path arrows (M10); 30–42 STORYBOARD PITCHES: 90 seconds each — walk us down your read path; listeners mark where they got lost; 42–48 revise the grid from the lost-points; 48–50 exit ticket + M10 submission tonight.
+- **Dataset / simulation:** student's own project data (pilot outputs feeding the storyboard)
+- **50-minute dynamic:** 0–5 poster-sprint kickoff: this Friday's studio is the submission deadline — production, not buffer; 5–12 mini-lesson: the 90-second read path traced on two example posters (one strong, one lost); 12–30 studio: fill the storyboard grid — headline claim, 3 evidence blocks ranked, uncertainty line, read path arrows (M10); 30–42 STORYBOARD PITCHES: 90 seconds each — walk us down your read path while listeners mark where they got lost; 42–48 revise the grid from the lost-points; 48–50 exit ticket + M10 submission tonight.
 - **Hands-on activity:** Fill the storyboard grid for your own poster and walk a listener down its 90-second read path.
 - **Practice:** 📝 nb14 practice: rank your pilot's 5 outputs by evidence value for the headline claim; cut the bottom two.
 - **Discussion prompt:** What did the strong example poster REFUSE to include — and why did that refusal make it stronger?
 - **Project connection:** M10 storyboard submitted tonight; the draft build starts from it Wednesday.
-- **Milestone developed:** M10 — Poster Storyboard (presented + submitted TODAY)
+- **Milestone developed:** M10 — Poster Storyboard (presented + due tonight) → M11 — Poster Draft + Red-Team (launch)
 - **Milestone work time:** 18 min (grid studio) + 6 min (revision)
 - **Milestone presentation/review:** M10 presented: 90-second storyboard pitches with lost-point marking
 - **Student prep:** M09 submitted; best figure + headline claim in hand.
 - **Student artifact:** Completed storyboard grid + pitch + revision marks
 - **Exit ticket:** Claim Ticket #29: my headline claim, ≤15 words, inside my compass position's boundary.
-- **Homework / next milestone:** Submit M10 tonight 11:59 PM; build the full draft poster for Wednesday's red-team (any tool: PowerPoint/Canva/Quarto).
+- **Homework / next milestone:** Submit M10 tonight on Brightspace; build the full draft poster for Wednesday's red-team (any tool: PowerPoint/Canva/Quarto).
 - **Instructor prep:** Two example posters chosen; storyboard grids printed; URC spec sheet distributed.
 - **Risks / contingency:** Pilot results too thin for a poster → the storyboard pivots to 'design + preliminary evidence' framing (explicitly legitimate for URC undergraduate posters).
 
@@ -840,53 +839,53 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "A hostile reader walked my poster and the headline survived — here are the three hits and my three fixes."
 - **Claim NOT permitted:** Shipping a draft no adversarial eye has touched (peer-review is the course's quality gate, not a courtesy).
 - **RDSS reading:** (fresh unit)
-- **Other material:** nb14 §3 red-team protocol (Colab); draft posters on screens; the M14 honest-viz checklist rides again
-- **Provenance:** fresh (red-team protocol) + M14 honest-viz checklist | poster unit | adversarial review protocol | fresh
+- **Other material:** nb14 student notebook (poster construction), §3 red-team protocol (Colab); draft posters on screens; the honest-viz checklist from the description week rides again
+- **Provenance:** fresh (red-team protocol) + the course honest-viz checklist | poster unit | adversarial review protocol | fresh
 - **Concepts:** red-team review; claim-boundary audit; figure-honesty audit; read-path audit; revision triage
-- **Python dependency:** none
-- **Dataset / simulation:** each student's own draft poster
-- **50-minute dynamic:** 0–5 red-team norms: hard on the poster, warm on the person; roles assigned (each student red-teams two posters); 5–10 protocol walkthrough: the four audits with the scoring slip; 10–34 RED-TEAM ROUNDS: two 12-minute rounds — reviewer walks the poster with the audit slip while the author listens silently, then 2 minutes of author questions; 34–46 revision triage: authors rank their hits, fix the top one NOW, plan the rest; 46–50 exit ticket + M11 submission tonight (draft + received reviews + triage plan).
+- **Python dependency:** none required
+- **Dataset / simulation:** none (each student's own draft poster)
+- **50-minute dynamic:** 0–5 red-team norms: hard on the poster, warm on the person, roles assigned (everyone red-teams two posters); 5–10 protocol walkthrough: the four audits with the scoring slip; 10–34 RED-TEAM ROUNDS: two 12-minute rounds — reviewer walks the poster with the audit slip while the author listens silently, then 2 minutes of author questions; 34–46 revision triage: authors rank their hits, fix the top one NOW, plan the rest; 46–50 exit ticket + M11 submission tonight (draft + received reviews + triage plan).
 - **Hands-on activity:** Red-team two classmates' posters with the four-audit slip; triage and begin fixing your own hits.
 - **Practice:** 📝 nb14 practice: the four audits applied to a sample poster with 6 planted flaws — find at least 4.
 - **Discussion prompt:** Which audit found your poster's worst flaw — and why didn't YOU find it first?
-- **Project connection:** M11 (draft + red-team record) submits tonight; only production polish remains before Friday.
-- **Milestone developed:** M11 — Poster Draft + Red-Team Review (submitted TODAY)
+- **Project connection:** M11 (draft + red-team record) submits tonight; only production polish remains before this Friday's studio.
+- **Milestone developed:** M11 — Poster Draft + Red-Team Review (due tonight) → M12 — Final Poster (production this Friday)
 - **Milestone work time:** 24 min (red-team rounds) + 12 min (triage + first fix)
 - **Milestone presentation/review:** M11 review: structured red-team with written audit slips (this IS the presentation/review)
 - **Student prep:** Full draft poster ready on screen (Monday's homework).
 - **Student artifact:** Two completed audit slips given + own triage plan + first fix applied
 - **Exit ticket:** Claim Ticket #30: the hit I'm fixing first, and what the fixed version says instead.
-- **Homework / next milestone:** Apply the full triage plan; FINAL poster due Friday in class (production day) — submission Nov 6 is the real deadline.
-- **Instructor prep:** Print audit slips; assign the red-team rotation (5 students → each reviews 2, is reviewed by 2); sample flawed poster ready.
-- **Risks / contingency:** A draft doesn't exist by class → that student red-teams others (obligation stands) and enters Friday's production day with the storyboard + instructor triage instead.
+- **Homework / next milestone:** Submit M11 tonight on Brightspace; apply the full triage plan. The FINAL poster is due at this Friday's production studio — arrive with a print-ready file staged.
+- **Instructor prep:** Print audit slips; assign the red-team rotation (each reviews 2, is reviewed by 2); sample flawed poster ready.
+- **Risks / contingency:** A draft doesn't exist by class → that student red-teams others (obligation stands) and enters Friday's production studio with the storyboard + instructor triage instead.
 
-### M31 — Fri 2026-11-06 (in-person) — Poster III: final production and SUBMISSION — the deadline is today
+### M31 — Fri 2026-11-06 (in-person) — Studio Friday — final poster production and SUBMISSION: the deadline is today
 
-- **Driving question:** Is every claim on this poster one you can defend to a stranger on Nov 17?
+- **Driving question:** Is every claim on this poster one you can defend to a stranger at the Expo?
 - **Secondary questions:** Does the final pass the four audits? Are figures reproducible from your notebook? Is the file print-ready to URC spec?
 - **Inquiry:** all positions (communication)
 - **Claim PERMITTED:** "Submitted: every number on this poster traces to a cell in my notebook, and every claim sits inside my compass position's boundary."
-- **Claim NOT permitted:** "I'll fix it after submission." (There is no after — Nov 17 is a live audience, not a draft reader.)
-- **RDSS reading:** (fresh unit)
-- **Other material:** nb14 §4 final checklist (Colab); URC submission portal/instructions
+- **Claim NOT permitted:** "I'll fix it after submission." There is no after — the Expo is a live audience, not a draft reader.
+- **RDSS reading:** (no new reading — studio Friday; bring your print-ready poster file)
+- **Other material:** nb14 student notebook (poster construction), §4 final checklist (Colab); M13 + M14 Brightspace briefs; URC submission portal/instructions
 - **Provenance:** fresh + Purdue URC specs | poster unit | final production checklist | fresh
 - **Concepts:** production checklist; number-to-notebook traceability; print specs; submission hygiene
-- **Python dependency:** none (figure re-exports as needed)
-- **Dataset / simulation:** each student's own final poster
-- **50-minute dynamic:** 0–5 deadline briefing + checklist distributed; 5–35 PRODUCTION SPRINT: silent studio, instructor circulates on a fixed rotation (5 × ~5 min consults) running the final checklist on each poster; 35–45 traceability spot-check: for one number on your poster, show the notebook cell that produced it (pairs verify each other); 45–50 SUBMIT (Brightspace + URC channel as instructed) + exit ticket.
-- **Hands-on activity:** Final production sprint: run the checklist, verify one number's notebook traceability under a partner's eyes, submit.
+- **Python dependency:** none required (figure re-exports as needed)
+- **Dataset / simulation:** none (each student's own final poster)
+- **50-minute dynamic:** 0–10 recap: the poster week in one sprint — read path, four audits, triage — and the final checklist distributed; 10–20 milestone brief (Brightspace): present M13 + M14 deliverables + rubrics — the pitch scripts and the uncertainty-and-limitations statement that turn this poster into a performance; 20–50 studio work: silent PRODUCTION BLOCK with rotating final-checklist consults, pair traceability spot-check (one number on your poster shown to its notebook cell), then SUBMIT the final poster before you leave.
+- **Hands-on activity:** Run the final checklist, verify one number's notebook traceability under a partner's eyes, and submit the final poster.
 - **Practice:** 📝 (embedded in checklist) verify: fonts ≥ minimum size at print scale; every figure has its uncertainty or its caveat.
 - **Discussion prompt:** (brief, during consults) Which checklist line almost caught you?
 - **Project connection:** M12 FINAL POSTER submitted — the URC artifact is locked; everything after this is delivery and depth.
-- **Milestone developed:** M12 — Final Poster (SUBMITTED TODAY, Nov 6)
-- **Milestone work time:** 45 min (production + verification + submission)
+- **Milestone developed:** M12 — Final Poster (DUE TODAY) → M13 + M14 (kickoff)
+- **Milestone work time:** 30 min studio block (production sprint)
 - **Milestone presentation/review:** instructor final-checklist consults + pair traceability check
 - **Student prep:** Triage plan fully applied; print-ready file staged.
 - **Student artifact:** Submitted final poster + signed checklist + traceability verification
 - **Exit ticket:** Claim Ticket #31: one claim I softened before submission, and why the softer version is stronger.
-- **Homework / next milestone:** Rest this weekend. Monday: from poster to PERFORMANCE — the 1-minute and 3-minute pitches.
-- **Instructor prep:** Confirm submission mechanics (portal/print shop); consult rotation timer; backup printing plan.
-- **Risks / contingency:** Printing/portal failure → PDF submission to Brightspace timestamps the deadline; physical printing resolves next week (before Nov 17).
+- **Homework / next milestone:** Rest this weekend. Monday: from poster to PERFORMANCE — the 1-minute and 3-minute pitches (M13).
+- **Instructor prep:** Confirm submission mechanics (portal/print shop); consult rotation timer; backup printing plan; M13 + M14 briefs staged on Brightspace.
+- **Risks / contingency:** Printing/portal failure → PDF submission to Brightspace timestamps the deadline; physical printing resolves next week (before the Expo).
 
 ## Phase 6 — Conference preparation
 
@@ -898,15 +897,15 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** Spoken claims that match the poster's written boundary — the pitch may compress evidence, never inflate it.
 - **Claim NOT permitted:** The excited-mouth upgrade: saying 'causes' at the poster after writing 'is associated with' on it.
 - **RDSS reading:** (fresh unit)
-- **Other material:** nb15 §1–2 (Colab); pitch architecture templates
+- **Other material:** nb15 student notebook (conference delivery), §1–2 (Colab); pitch architecture templates
 - **Provenance:** brief §12 P6 + fresh pitch architectures | conference unit | 1-min hook / 3-min walk scripts | fresh
 - **Concepts:** pitch architecture (hook, claim, evidence, boundary, invitation); compression without inflation; spoken uncertainty
-- **Python dependency:** none
-- **Dataset / simulation:** each student's own poster
-- **50-minute dynamic:** 0–5 poster-phase debrief + what Nov 17 actually looks like (logistics); 5–13 mini-lesson: the two architectures, demonstrated live by the instructor on a past poster (once well, once inflated — spot the upgrade); 13–28 drafting studio: script your 1-minute hook using the template, mark the boundary sentence (M13); 28–42 FIRST DELIVERY ROUND: everyone delivers the 1-minute to a partner twice (swap roles), partner flags any spoken upgrade; 42–48 revise scripts; 48–50 exit ticket.
+- **Python dependency:** none required
+- **Dataset / simulation:** none (each student's own poster)
+- **50-minute dynamic:** 0–5 poster-sprint debrief + what Expo day actually looks like (logistics); 5–13 mini-lesson: the two architectures, demonstrated live on a past poster (once well, once inflated — spot the upgrade); 13–28 drafting studio: script your 1-minute hook using the template, mark the boundary sentence (M13); 28–42 FIRST DELIVERY ROUND: everyone delivers the 1-minute to a partner twice (swap roles), partner flags any spoken upgrade; 42–48 revise scripts; 48–50 exit ticket.
 - **Hands-on activity:** Script and twice-deliver your 1-minute pitch; catch your partner's spoken claim-upgrades.
 - **Practice:** 📝 nb15 practice: compress your 3 evidence blocks into one spoken sentence each — no inflation allowed.
-- **Discussion prompt:** Where in the instructor's inflated demo did the claim outrun the poster — what exact word did it?
+- **Discussion prompt:** Where in the inflated demo did the claim outrun the poster — what exact word did it?
 - **Project connection:** M13 presentation plan begins: the 1-minute script is its first component.
 - **Milestone developed:** M13 — Presentation Plan (1-min + 3-min)
 - **Milestone work time:** 15 min (scripting) + 14 min (delivery rounds)
@@ -914,8 +913,8 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Student prep:** Final poster content internalized; comfortable saying your headline claim aloud.
 - **Student artifact:** 1-minute script with marked boundary sentence + delivery feedback
 - **Exit ticket:** Claim Ticket #32: my boundary sentence, exactly as I will SAY it.
-- **Homework / next milestone:** Draft the 3-minute walk script; M13 (both scripts + poster-walk map) due Wed Nov 11, 11:59 PM.
-- **Instructor prep:** Rehearse the well/inflated demo pair; print architecture templates; confirm URC-day logistics to brief.
+- **Homework / next milestone:** Draft the 3-minute walk script; M13 (both scripts + poster-walk map) is due Wednesday night on Brightspace.
+- **Instructor prep:** Rehearse the well/inflated demo pair; print architecture templates; confirm Expo-day logistics to brief.
 - **Risks / contingency:** Stage fright surfaces → normalize with the two-attempt structure (everyone's first attempt is officially a draft) and offer office-hours solo rehearsal.
 
 ### M33 — Wed 2026-11-11 (in-person) — Delivery II: uncertainty and limitations, spoken like a scientist
@@ -926,52 +925,52 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "This is an association in a convenience frame; it cannot establish X; the design that could is Y" — limitation as expertise.
 - **Claim NOT permitted:** Either failure mode: hiding limitations, or drowning in them ("this is probably all wrong") — both misstate the evidence.
 - **RDSS reading:** (fresh unit; RDSS ch. 10 diagnosands vocabulary echoes in spoken form)
-- **Other material:** nb15 §3 (Colab); ULN move template; M13 due tonight
+- **Other material:** nb15 student notebook (conference delivery), §3 (Colab); ULN move template
 - **Provenance:** brief §12 P6 + fresh ULN protocol | conference unit | spoken-limitations discipline | fresh
 - **Concepts:** the ULN move (uncertainty → limitation → next step); credibility mechanics; the apology spiral and its antidote
-- **Python dependency:** none
-- **Dataset / simulation:** each student's own findings
-- **50-minute dynamic:** 0–5 1-minute pitch pulse (one volunteer, warm notes); 5–12 mini-lesson: the ULN move, demonstrated on three findings including a null; 12–24 writing studio: draft YOUR ULN paragraph (M14 core) — the honest limitation, said with a straight spine; 24–40 ULN ROUNDS: deliver your ULN to two successive partners; partners score on the strength-not-apology scale; 40–47 whole-group: the best ULN heard, re-delivered for the room; 47–50 exit ticket + M13 due tonight reminder.
+- **Python dependency:** none required
+- **Dataset / simulation:** none (each student's own findings, spoken)
+- **50-minute dynamic:** 0–5 1-minute pitch pulse (one volunteer, warm notes); 5–12 mini-lesson: the ULN move, demonstrated on three findings including a null; 12–24 writing studio: draft YOUR ULN paragraph (M14 core) — the honest limitation, said with a straight spine; 24–40 ULN ROUNDS: deliver your ULN to two successive partners, who score it on the strength-not-apology scale; 40–47 whole-group: the best ULN heard, re-delivered for the room; 47–50 exit ticket + M13 due tonight reminder.
 - **Hands-on activity:** Draft and twice-deliver your uncertainty-limitations-next-step paragraph; score partners on strength-not-apology.
 - **Practice:** 📝 nb15 practice: convert 3 apology-spiral sentences into ULN form.
 - **Discussion prompt:** Why does 'here is what this study cannot show' make an expert MORE believable, not less?
-- **Project connection:** M14 (uncertainty & limitations statement) drafts its spoken core; written form completes Friday.
-- **Milestone developed:** M13 (submitted tonight) → M14 — Uncertainty & Limitations Statement
+- **Project connection:** M14 (uncertainty & limitations statement) drafts its spoken core; the written form completes at this Friday's hot-seat studio.
+- **Milestone developed:** M13 — Presentation Plan (due tonight) → M14 — Uncertainty & Limitations + Question Bank
 - **Milestone work time:** 12 min (ULN drafting) + 16 min (delivery rounds)
 - **Milestone presentation/review:** ULN partner rounds with strength-not-apology scoring
-- **Student prep:** M13 scripts due tonight 11:59 PM; findings at hand.
+- **Student prep:** M13 scripts due tonight on Brightspace; findings at hand.
 - **Student artifact:** ULN paragraph + delivery scores
 - **Exit ticket:** Claim Ticket #33: my single most important limitation, stated in ULN form, ≤30 words.
-- **Homework / next milestone:** Write the full M14 statement (uncertainty + limitations + hard-question bank starts Friday); due Fri Nov 13, 11:59 PM.
+- **Homework / next milestone:** Submit M13 tonight on Brightspace. Write the full M14 statement (uncertainty + limitations + the hard-question bank); it is due at this Friday's hot-seat studio.
 - **Instructor prep:** Three ULN demos prepped (incl. the null finding); scoring slips printed.
 - **Risks / contingency:** ULNs collapse into apology → pause rounds, re-demo the spine posture, restart with the sentence stems on screen.
 
-### M34 — Fri 2026-11-13 (in-person) — Delivery III: hard questions — building and drilling your question bank
+### M34 — Fri 2026-11-13 (in-person) — Studio Friday — the hot seat: your question bank under live fire
 
-- **Driving question:** What is the hardest fair question a stranger could ask at your poster — and what will you say?
-- **Secondary questions:** What question types recur (method, alternative explanation, so-what, generalization, AI-use)? What does a good 'I don't know' contain? When do you defend vs concede?
+- **Driving question:** What is the hardest fair question a stranger could ask at your poster, and what will you say?
+- **Secondary questions:** What does a good 'I don't know' contain? When do you defend vs concede? What must be locked down before the Expo: location, timing, materials, and the coding sheet you will carry?
 - **Inquiry:** all positions (communication)
 - **Claim PERMITTED:** "I don't know — but here is what I do know that bears on it, and here is how one would find out."
 - **Claim NOT permitted:** Bluffing an answer you don't have (the one move that can destroy a presenter's credibility entirely).
-- **RDSS reading:** (fresh unit)
-- **Other material:** nb15 §4 (Colab); hard-question taxonomy; M14 due tonight
-- **Provenance:** brief §12 P6 + fresh question taxonomy | conference unit | Q&A drill protocol | fresh
-- **Concepts:** question taxonomy; the honest-don't-know formula; defend vs concede judgment; question banks as preparation
+- **RDSS reading:** (no new reading — studio Friday; bring your question bank and M14 draft)
+- **Other material:** nb15 student notebook (pitch & delivery) §4 hard-question taxonomy (Colab); Expo logistics sheet; audience-coding sheet (feeds M17); M14 due tonight
+- **Provenance:** brief §12 P6 + fresh question taxonomy | conference unit | hot-seat rounds as studio work block | fresh
+- **Concepts:** question taxonomy; the honest-don't-know formula; defend vs concede judgment; question banks as preparation; Expo logistics discipline
 - **Python dependency:** none
 - **Dataset / simulation:** each student's own project
-- **50-minute dynamic:** 0–5 ULN redux (one volunteer, cold); 5–12 mini-lesson: the five question types with a real example of each + the honest-don't-know formula; 12–24 bank-building studio: write the 5 hardest fair questions for YOUR poster, one per type, with answer sketches (M14 bank); 24–44 HOT-SEAT ROUNDS: each student takes 3 minutes of rapid questions from the class (drawn from their bank + surprises), instructor models one save; 44–48 bank revision from what the hot seat exposed; 48–50 exit ticket + M14 due tonight.
-- **Hands-on activity:** Build your 5-question bank, then survive a 3-minute hot seat on it in front of the class.
+- **50-minute dynamic:** 0–10 recap: the week's delivery arc in one line (pitch architecture, spoken uncertainty, and the honest-don't-know formula for hard questions); 10–20 milestone brief (Brightspace): present M15 (dress rehearsal + readiness audit), M16 (Expo presentation, required) and M17 (conference reflection) deliverables + rubrics, with Expo logistics and the audience-coding sheet each presenter will carry; 20–50 studio work: HOT-SEAT ROUNDS as the work block — 3 minutes of rapid questions per presenter drawn from their bank plus surprises, one modeled save, quick bank revision between rounds, and M14 submitted tonight.
+- **Hands-on activity:** Survive a 3-minute hot seat on your question bank in front of the class, then revise the bank from what the hot seat exposed.
 - **Practice:** 📝 nb15 practice: classify 6 sample audience questions by type; draft the don't-know answer for the worst one.
-- **Discussion prompt:** Which classmate's hot-seat save impressed you most — what exactly did they do?
-- **Project connection:** M14 completes tonight: statement + question bank = the intellectual armor for Nov 17.
-- **Milestone developed:** M14 — Uncertainty & Limitations Statement + Question Bank (submitted TONIGHT)
-- **Milestone work time:** 12 min (bank building) + 20 min (hot seats)
-- **Milestone presentation/review:** hot-seat rounds (this is the presentation/review)
-- **Student prep:** M14 statement drafted; poster content cold.
-- **Student artifact:** 5-question bank with answer sketches + hot-seat performance
-- **Exit ticket:** Claim Ticket #34: the question I most fear on Nov 17, and my first sentence in reply.
-- **Homework / next milestone:** Submit M14 tonight 11:59 PM. Monday: full dress rehearsal — bring the poster (printed or full-screen) and both pitches.
-- **Instructor prep:** Surprise-question deck per project; timer; model-save planned.
+- **Discussion prompt:** Which classmate's hot-seat save impressed you most, and what exactly did they do?
+- **Project connection:** M14 completes tonight: statement + question bank are the intellectual armor for the Expo; the coding sheet you leave with today captures the audience data M17 needs.
+- **Milestone developed:** M14 — Uncertainty & Limitations + Question Bank (due TONIGHT) → kickoff M15 + M16 + M17
+- **Milestone work time:** 30 min studio block (hot-seat rounds + bank revision)
+- **Milestone presentation/review:** hot-seat rounds (the work block IS the presentation/review)
+- **Student prep:** M14 statement and question bank drafted; poster content cold.
+- **Student artifact:** Revised 5-question bank + hot-seat performance + confirmed Expo logistics
+- **Exit ticket:** Claim Ticket #34: the question I most fear at the Expo, and my first sentence in reply.
+- **Homework / next milestone:** Submit M14 tonight 11:59 PM. Monday: full dress rehearsal — bring the poster (printed or full-screen) and both pitches; the Expo follows the day after that rehearsal.
+- **Instructor prep:** Surprise-question deck per project; timer; Expo logistics sheet and audience-coding sheets printed; M15/M16/M17 briefs staged on Brightspace.
 - **Risks / contingency:** Hot seats run hot emotionally → instructor interposes as question-asker-of-record and slows cadence; the drill's purpose (safety through practice) is renamed aloud.
 
 ### M35 — Mon 2026-11-16 (in-person) — Dress rehearsal: the full URC simulation — readiness audited
@@ -982,83 +981,83 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "Readiness audit passed: rehearsed twice, question bank drilled, logistics confirmed — signed."
 - **Claim NOT permitted:** "I'll wing it tomorrow." (Rehearsal is the difference between nerves and panic.)
 - **RDSS reading:** (none — rehearsal day)
-- **Other material:** nb15 §5 readiness audit (Colab); URC Expo logistics sheet
+- **Other material:** nb15 student notebook (pitch & delivery) §5 readiness audit (Colab); Expo logistics sheet
 - **Provenance:** brief §12 P6 + fresh readiness audit | conference unit | full-dress simulation protocol | fresh
 - **Concepts:** full-dress simulation; readiness auditing; pre-performance routine; logistics discipline
 - **Python dependency:** none
 - **Dataset / simulation:** each student's own complete conference package
-- **50-minute dynamic:** 0–4 rehearsal norms: run it like it's real, notes after not during; 4–44 FULL SIMULATION: two 20-minute stations rounds — in each round, 2–3 posters are 'live' with presenters standing them while the rest of class + instructor rotate as conference visitors (1-min pitches, 3-min walks, hard questions, ULN moments all get exercised); 44–48 readiness audit: sign the M15 checklist (rehearsed / drilled / logistics / materials); 48–50 final word + tomorrow's call time.
+- **50-minute dynamic:** 0–4 rehearsal norms: run it like it's real, notes after not during; 4–44 FULL SIMULATION: two 20-minute station rounds — in each round, 2–3 posters are 'live' with presenters standing them while the rest of class + instructor rotate as conference visitors (1-min pitches, 3-min walks, hard questions, ULN moments all get exercised); 44–48 readiness audit: sign the M15 checklist (rehearsed / drilled / logistics / materials); 48–50 final word + tomorrow's call time.
 - **Hands-on activity:** Stand your poster through a full simulated conference round; visit others as a critical-but-kind stranger.
 - **Practice:** 📝 (embedded) the visitor role card: ask at least one question from each of the five types across your visits.
 - **Discussion prompt:** (post-simulation, 2 min) One thing you saw a classmate do that you're stealing for tomorrow.
-- **Project connection:** M15 readiness audit signed — the last gate before the real URC Expo tomorrow (Nov 17).
+- **Project connection:** M15 readiness audit signed, the last gate before the real Expo tomorrow (the day after this dress rehearsal).
 - **Milestone developed:** M15 — Dress Rehearsal + Readiness Audit (completed TODAY) → M16 — URC Expo Presentation (tomorrow)
 - **Milestone work time:** 40 min (simulation) + 4 min (audit)
 - **Milestone presentation/review:** the full-dress simulation IS the presentation/review
 - **Student prep:** Poster ready (printed or presentable); both pitches cold; question bank internalized.
 - **Student artifact:** Signed readiness audit + rehearsal performance
 - **Exit ticket:** (on the audit sheet) The one thing I will do differently tomorrow because of today.
-- **Homework / next milestone:** URC EXPO TOMORROW (Tue Nov 17) — M16, required presentation. Wednesday: debrief; bring every question you were asked.
+- **Homework / next milestone:** THE EXPO IS TOMORROW — M16, the required presentation, the day after this dress rehearsal. Carry your coding sheet and capture every question you are asked; Wednesday is the debrief.
 - **Instructor prep:** Room setup for stations; visitor role cards; confirm Expo logistics (time/place/setup) and communicate call time.
-- **Risks / contingency:** A poster's print failed → present full-screen today; emergency print run resolved before Tuesday (backup plan pre-arranged).
+- **Risks / contingency:** A poster's print failed → present full-screen today; emergency print run resolved before the Expo (backup plan pre-arranged).
 
 ## Phase 7 — Reflection, feedback, redesign
 
-### M36 — Wed 2026-11-18 (in-person) — Conference debrief: what the audience taught you
+### M36 — Wed 2026-11-18 (in-person) — Conference debrief: what the audience taught you, and what you would redesign
 
 - **Driving question:** What did strangers' questions reveal about your project that friends' questions never could?
-- **Secondary questions:** Which questions recurred? Where did the pitch work and where did it wobble? What feedback is signal vs noise?
-- **Inquiry:** all positions (reflection)
-- **Claim PERMITTED:** "The audience data says: X landed, Y confused, Z was asked three times — here is what that evidences about my project."
-- **Claim NOT permitted:** Treating applause as validation of the CLAIMS (a warm reception measures communication, not truth).
-- **RDSS reading:** (none — debrief day)
-- **Other material:** nb16 §1–2 (Colab); M17 reflection template
-- **Provenance:** brief §12 P7 + fresh debrief protocol | reflection unit | audience-data analysis | fresh
-- **Concepts:** feedback as data; signal/noise triage; recurring-question analysis; the debrief discipline
+- **Secondary questions:** Which questions recurred? What feedback is signal vs noise? Which MIDA letter does each piece of real feedback implicate, and how does redesign differ from regret?
+- **Inquiry:** all positions (reflection + redesign, applied to one's own project)
+- **Claim PERMITTED:** "The audience data says: X landed, Y confused, Z was asked three times — and feedback item Z implicates my [M/I/D/A], so the redesign is R."
+- **Claim NOT permitted:** Treating applause as validation of the CLAIMS (a warm reception measures communication, not truth); a redesign wish-list with no mapping to the design.
+- **RDSS reading:** RDSS ch. 11 'Redesigning' (revisited, now with real audience data; book.declaredesign.org)
+- **Other material:** nb16 student notebook (debrief & redesign) §1–3 (Colab); M17 reflection template; M18 redesign-plan template
+- **Provenance:** RDSS ch.11 + brief §12 P7 | redesigning with realized feedback | audience-data coding + feedback-to-MIDA mapping | merged
+- **Concepts:** feedback as data; signal/noise triage; recurring-question analysis; feedback-to-MIDA mapping; now-vs-next triage; the debrief discipline
 - **Python dependency:** none (a provided tally cell if wanted)
 - **Dataset / simulation:** each student's collected conference questions/reactions
-- **50-minute dynamic:** 0–8 STORY ROUND: 90 seconds each — the single most surprising moment at your poster; 8–15 mini-lesson: feedback is data — code it like data (recurred? from whom? about claims or communication?); 15–32 coding studio: log every question you received into the nb16 tally (type, target, recurrence), find your pattern (M17 core); 32–44 pair analysis: swap tallies — what does your partner's pattern say that they can't see?; 44–48 reflection freewrite: the honest paragraph (what the conference changed in how I see my project); 48–50 exit ticket.
-- **Hands-on activity:** Code your conference questions like data and find the recurring pattern; read a partner's pattern back to them.
-- **Practice:** 📝 nb16 practice: classify 6 pieces of received feedback as claims-signal, communication-signal, or noise.
-- **Discussion prompt:** What question did you get that the class's hot seats never predicted — and why did we miss it?
-- **Project connection:** The coded audience data feeds M17 (reflection) tonight and M18 (redesign plan) Friday.
-- **Milestone developed:** M17 — Conference Reflection (submit tonight)
-- **Milestone work time:** 17 min (coding studio) + 12 min (pair analysis) + 4 min (freewrite)
-- **Milestone presentation/review:** story round + pair pattern-reading
-- **Student prep:** URC presented (M16 ✓); every question you were asked, captured.
-- **Student artifact:** Coded question tally + reflection paragraph (submitted as M17 tonight)
+- **50-minute dynamic:** 0–8 STORY ROUND: 90 seconds each, the single most surprising moment at your poster; 8–15 mini-lesson: feedback is data, so code it like data (recurred? from whom? about claims or communication?); 15–28 coding studio: log every question you received into the nb16 tally (type, target, recurrence) and find your pattern (M17 core); 28–38 mini-lesson: mapping feedback onto MIDA, three worked examples (a question about generalization → D, about mechanism → M, about so-what → I); 38–46 first map: sketch your top-3 feedback items onto letters as the starting point of M18; 46–50 exit ticket + M17 due tonight on Brightspace + M18 assigned.
+- **Hands-on activity:** Code your conference questions like data, find the recurring pattern, then map your top feedback items onto MIDA letters.
+- **Practice:** 📝 nb16 practice: classify 6 pieces of received feedback as claims-signal, communication-signal, or noise; for the top two, name the MIDA letter each implicates.
+- **Discussion prompt:** What question did you get that the class's hot seats never predicted, and why did we miss it?
+- **Project connection:** The coded audience data feeds M17 (reflection, due tonight on Brightspace) and seeds M18 (redesign plan), which is declared at Friday's studio.
+- **Milestone developed:** M17 — Conference Reflection (due TONIGHT) → M18 — Feedback-to-Redesign Plan (assigned)
+- **Milestone work time:** 13 min (coding studio) + 8 min (first MIDA map)
+- **Milestone presentation/review:** story round + tally pattern-reading
+- **Student prep:** Expo presented (M16 ✓); every question you were asked, captured on the coding sheet.
+- **Student artifact:** Coded question tally + reflection paragraph (submitted as M17 tonight) + first feedback-to-MIDA sketch
 - **Exit ticket:** Claim Ticket #36: the most repeated audience question, and what its repetition evidences.
-- **Homework / next milestone:** Submit M17 tonight 11:59 PM. Friday: feedback → redesign (bring your tally).
-- **Instructor prep:** Own observation notes from the Expo per student; tally template checked.
-- **Risks / contingency:** A student missed the Expo (illness/emergency) → the documented make-up presentation is scheduled (department session or recorded defense), debrief uses rehearsal data meanwhile.
+- **Homework / next milestone:** Submit M17 tonight on Brightspace, 11:59 PM. Friday's studio: M18 due with 2-minute redesign declarations — bring your tally and your letter map.
+- **Instructor prep:** Own observation notes from the Expo per student; tally template checked; three worked mapping examples; M18 brief staged.
+- **Risks / contingency:** A student missed the Expo (illness/emergency) → the documented make-up presentation is scheduled, and the debrief uses rehearsal data meanwhile. Post-conference deflation → the story round names it aloud as every researcher's post-conference dip.
 
-### M37 — Fri 2026-11-20 (in-person) — Feedback → redesign: if you ran it again, what would you change — and what do you change NOW?
+### M37 — Fri 2026-11-20 (in-person) — Studio Friday — redesign declared: feedback becomes the dossier work plan
 
 - **Driving question:** Given everything the audience and the semester taught you, what is the honest redesign of your study?
-- **Secondary questions:** Which feedback maps to which MIDA letter? What is worth changing in the two weeks that remain vs in the imagined next study? How does redesign differ from regret?
+- **Secondary questions:** What is worth changing in the weeks that remain vs in the imagined next study? What does a diagnosed benefit look like? How do the NOW items become the dossier task list?
 - **Inquiry:** all positions (diagnosis + redesign, applied to one's own project)
 - **Claim PERMITTED:** "Feedback item F implicates my [M/I/D/A]; the redesign is R; diagnosed benefit: better [diagnosand]."
 - **Claim NOT permitted:** A redesign wish-list with no mapping to the design ("more data, more time" is a lament, not a redesign).
-- **RDSS reading:** RDSS ch. 11 'Redesigning' (revisited, now with real audience data)
-- **Other material:** nb16 §3–4 (Colab); M18 redesign-plan template
-- **Provenance:** RDSS ch.11 + brief §12 P7 | redesigning with realized feedback | feedback→MIDA mapping protocol | extended
-- **Concepts:** feedback→MIDA mapping; now-vs-next triage; the redesign memo as scientific product; closing the declare→diagnose→redesign loop on oneself
+- **RDSS reading:** (no new reading — studio Friday; bring your feedback tally and M18 draft)
+- **Other material:** nb16 student notebook (debrief & redesign) §4 (Colab); M18 redesign-plan template; M19 + M20 specs
+- **Provenance:** brief §12 P7 + fresh studio protocol | reflection unit | redesign declarations as studio work block | fresh
+- **Concepts:** the redesign memo as scientific product; now-vs-next triage; closing the declare-diagnose-redesign loop on one's own project; the dossier task list
 - **Python dependency:** optional: rerun one diagnosis cell with post-conference parameters
 - **Dataset / simulation:** each student's coded tally + their nb11 design declaration
-- **50-minute dynamic:** 0–5 tally patterns recap (two headlines); 5–12 mini-lesson: mapping feedback onto MIDA — three worked examples (a question about generalization → D; about mechanism → M; about so-what → I); 12–30 redesign studio: map your top-3 feedback items to letters, propose the redesign for each, mark each NOW or NEXT (M18 core), rotating consults; 30–42 REDESIGN DECLARATIONS: 2 minutes each — my most important redesign, its letter, its diagnosed benefit; 42–48 lock the NOW items into your dossier task list; 48–50 exit ticket.
-- **Hands-on activity:** Map your three biggest feedback items onto MIDA letters and declare a redesign for each, triaged NOW vs NEXT.
+- **50-minute dynamic:** 0–10 recap: the debrief arc in one line (audience feedback coded as data, then mapped onto MIDA letters with a NOW-vs-NEXT triage); 10–20 milestone brief (Brightspace): present M19 (poster-to-dossier module) + M20 (reproducibility audit) deliverables + rubrics, and how Monday's async module fits before break; 20–50 studio work: REDESIGN DECLARATIONS, 2 minutes each (my most important redesign, its letter, its diagnosed benefit), then rotating consults to lock the NOW items into the dossier task list (M18 due tonight).
+- **Hands-on activity:** Declare your most important redesign in 2 minutes (letter, change, diagnosed benefit), then lock the NOW items into your dossier task list.
 - **Practice:** 📝 nb16 practice: 4 feedback quotes — name the MIDA letter each implicates before proposing anything.
 - **Discussion prompt:** Which is harder to admit: a data-strategy flaw (D) or a question that wasn't worth asking (I)? Why?
-- **Project connection:** M18 redesign plan submits tonight; its NOW items become the dossier work plan (M19+).
-- **Milestone developed:** M18 — Feedback-to-Redesign Plan (submitted TONIGHT)
-- **Milestone work time:** 18 min (studio + consults)
+- **Project connection:** M18 submits tonight; its NOW items become the dossier work plan that M19 (async module) and M20 (reproducibility audit) execute.
+- **Milestone developed:** M18 — Feedback-to-Redesign Plan (due TONIGHT) → kickoff M19 + M20
+- **Milestone work time:** 30 min studio block (declarations + consults)
 - **Milestone presentation/review:** M18 presented: 2-minute redesign declarations
-- **Student prep:** M17 submitted; coded tally in hand.
-- **Student artifact:** Feedback→MIDA map + triaged redesign plan (submitted tonight)
+- **Student prep:** M17 submitted; coded tally in hand; M18 draft ready to declare.
+- **Student artifact:** Feedback-to-MIDA map + triaged redesign plan (submitted tonight) + dossier task list
 - **Exit ticket:** Claim Ticket #37: my #1 redesign, its MIDA letter, and whether it is NOW or NEXT.
-- **Homework / next milestone:** Submit M18 tonight 11:59 PM. MONDAY IS ASYNC (nb17): the Poster-to-Dossier module — budget ~50 focused minutes before Thanksgiving; artifact due Mon Nov 30.
-- **Instructor prep:** Worked mapping examples; consult order; dossier task-list template staged for the async module.
-- **Risks / contingency:** Post-conference deflation → the mini-lesson opens by naming it (every researcher's post-conference dip) and the studio's small wins reset momentum.
+- **Homework / next milestone:** Submit M18 tonight 11:59 PM. MONDAY IS ASYNC (nb17): the poster-to-dossier module — budget about 50 focused minutes before break; the artifact is due the night class resumes in person.
+- **Instructor prep:** Consult order; M19 + M20 briefs staged on Brightspace; dossier task-list template staged for the async module.
+- **Risks / contingency:** Post-conference deflation → the recap opens by naming it (every researcher's post-conference dip) and the studio's small wins reset momentum.
 
 ### M38 — Mon 2026-11-23 (async-online) — ASYNC — Poster-to-Dossier module: robustness, sensitivity, and the claim ledger
 
@@ -1068,25 +1067,25 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "Claim C survives sensitivity checks S1–S2; its ledger row records claim, evidence, check, boundary."
 - **Claim NOT permitted:** Porting poster claims into the dossier WITHOUT re-verification (the dossier's standard is higher, not equal).
 - **RDSS reading:** RDSS ch. 22 'Realization' (book.declaredesign.org) — reporting what actually happened
-- **Other material:** nb17 — fully self-contained async module (Colab); claim-ledger template; M19 spec
+- **Other material:** nb17 student notebook — fully self-contained async module (Colab); claim-ledger template; M19 spec
 - **Provenance:** brief §10 M19 + RDSS ch.22 | realization/reporting | claim-ledger method + compass-branched sensitivity menu | newly-constructed-from-source-concept
 - **Concepts:** robustness/sensitivity by compass position (description: alternative summaries/bins; generalization: specification + non-response probes; prediction: split/metric perturbation; causal: assumption probes); the claim ledger; methods-section discipline
 - **Python dependency:** pandas/numpy (rerun own pilot under perturbations — compass-branched cells)
 - **Dataset / simulation:** each student's own project data/pilot
-- **50-minute dynamic:** ASYNC (~50 min self-paced): 0–8 module orientation + choose your compass branch; 8–25 run the branch's two sensitivity checks on your own pilot, record what moved; 25–38 build your claim ledger (every poster claim gets a row: claim, evidence, verification, boundary, survived-sensitivity?) — flag any row born from an unplanned pattern as a PIVOT needing its own declaration (RDSS ch. 22 reconciliation); 38–48 draft the dossier's methods+findings skeleton from the ledger; 48–50 submit checkpoint + (async board) post your ledger's most fragile row.
+- **50-minute dynamic:** ASYNC (~50 min self-paced): 0–8 module orientation + choose your compass branch; 8–25 run the branch's two sensitivity checks on your own pilot, record what moved; 25–38 build your claim ledger (every poster claim gets a row: claim, evidence, verification, boundary, survived-sensitivity?) and flag any row born from an unplanned pattern as a PIVOT needing its own declaration (RDSS ch. 22 reconciliation); 38–48 draft the dossier's methods+findings skeleton from the ledger; 48–50 submit checkpoint + (async board) post your ledger's most fragile row.
 - **Hands-on activity:** Run two position-appropriate sensitivity checks on your own pilot and build the claim ledger from the results.
 - **Practice:** 📝 nb17 practice: one sample fragile claim — write its ledger row honestly, then its dossier sentence.
 - **Discussion prompt:** (async board) Your most fragile ledger row: post it, and reply to one classmate with a check that could shore theirs up.
-- **Project connection:** M19 = the dossier's analytical core; every December artifact builds on this module's output.
-- **Milestone developed:** M19 — Poster-to-Dossier Module (artifact due Mon Nov 30)
+- **Project connection:** M19 = the dossier's analytical core; every remaining artifact builds on this module's output.
+- **Milestone developed:** M19 — Poster-to-Dossier Module (artifact due the night class resumes)
 - **Milestone work time:** the whole module is milestone work (~50 min)
 - **Milestone presentation/review:** async board: fragile-row post + one shoring reply
 - **Student prep:** M18 submitted; own pilot notebook runnable.
-- **Student artifact:** Sensitivity outputs + claim ledger + methods/findings skeleton (due Nov 30)
+- **Student artifact:** Sensitivity outputs + claim ledger + methods/findings skeleton (due the night class resumes)
 - **Exit ticket:** (embedded) Claim Ticket #38: my most fragile claim and what the sensitivity check did to it.
-- **Homework / next milestone:** Happy Thanksgiving. M19 artifact due Mon Nov 30, 11:59 PM (class resumes in person that day: reproducibility).
+- **Homework / next milestone:** Happy Thanksgiving. The M19 artifact is due 11:59 PM the night class resumes in person (reproducibility day).
 - **Instructor prep:** Verify all four compass branches run end-to-end unattended; seed the board; holiday-proof the deadlines in Brightspace.
-- **Risks / contingency:** Holiday-week attrition → module is doable in one sitting, deadline is AFTER break, and Wednesday-before-break reminder goes out with a progress checkpoint.
+- **Risks / contingency:** Holiday-week attrition → module is doable in one sitting, the deadline is AFTER break, and a before-break reminder goes out with a progress checkpoint.
 
 ## Phase 8 — Reproducibility, brief, Evidence Defense
 
@@ -1098,80 +1097,80 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "A classmate reproduced my headline number from my package alone — verified [date], discrepancies: none/listed."
 - **Claim NOT permitted:** "It works on my machine" — reproducibility claimed but never exercised by another human.
 - **RDSS reading:** RDSS ch. 21 'Planning' + ch. 22 'Realization' (reproducibility threads; book.declaredesign.org)
-- **Other material:** nb18 §1–2 (Colab); reproducibility-package checklist; M20 spec
+- **Other material:** nb18 student notebook (reproducibility & brief) §1–2 (Colab); reproducibility-package checklist; M20 spec
 - **Provenance:** brief §12 P8 + RDSS ch.21–22 | planning/realization | reproducibility-package protocol for Colab-scale projects | extended
 - **Concepts:** reproducibility package anatomy; data provenance statements; seed + environment discipline; the decision log; AI-use ledger finalization
 - **Python dependency:** own notebook hygiene (restart-and-run-all)
 - **Dataset / simulation:** each student's own project package
-- **50-minute dynamic:** 0–5 December map: three weeks, three artifacts (package, brief, defense) — then done; 5–12 mini-lesson: the package checklist walked on a real example, incl. where projects usually break (paths, seeds, undocumented by-hand steps); 12–30 package studio: assemble YOUR package — restart-and-run-all, fix breaks, write the provenance + decision log stubs (M20); 30–44 EXCHANGE ROUND 1: swap packages with a partner; partner attempts the headline-number reproduction cold while you watch silently; 44–48 log what broke; 48–50 exit ticket.
+- **50-minute dynamic:** 0–5 the final-stretch map: three artifacts remain (package, brief, defense), then done; 5–12 mini-lesson: the package checklist walked on a real example, incl. where projects usually break (paths, seeds, undocumented by-hand steps); 12–30 package studio: assemble YOUR package — restart-and-run-all, fix breaks, write the provenance + decision log stubs (M20); 30–44 EXCHANGE ROUND 1: swap packages with a partner, who attempts the headline-number reproduction cold while you watch silently; 44–48 log what broke; 48–50 exit ticket.
 - **Hands-on activity:** Restart-and-run-all your own notebook, then watch a partner try to reproduce your headline number from your package alone.
 - **Practice:** 📝 nb18 practice: 5 package sins (hard-coded path, missing seed, by-hand edit, undocumented exclusion, stale data) — find each in a sample package.
-- **Discussion prompt:** What broke first in the exchange — and would YOU have found it without a stranger's eyes?
+- **Discussion prompt:** What broke first in the exchange, and would YOU have found it without a stranger's eyes?
 - **Project connection:** M20 reproducibility audit is underway; the partner exchange completes Wednesday.
 - **Milestone developed:** M20 — Reproducibility Audit
 - **Milestone work time:** 18 min (package studio) + 14 min (exchange)
 - **Milestone presentation/review:** partner reproduction attempt (round 1)
-- **Student prep:** M19 artifact submitted tonight 11:59 PM; own notebook runnable.
+- **Student prep:** M19 artifact due tonight 11:59 PM; own notebook runnable.
 - **Student artifact:** Assembled package + exchange breakage log
 - **Exit ticket:** Claim Ticket #39: the first thing that broke when a stranger ran my work, and my fix.
-- **Homework / next milestone:** Fix everything the exchange exposed; Wednesday: exchange round 2 (verification sign-off) + the research brief begins. M20 due Wed Dec 2.
+- **Homework / next milestone:** Fix everything the exchange exposed; Wednesday: exchange round 2 (verification sign-off) + the research brief begins. M20 due Wednesday night.
 - **Instructor prep:** Sample sinful package built; pairing plan (rotate partners from red-team); checklist copies.
 - **Risks / contingency:** A package is unreproducible in class time → document the failure honestly (that log IS audit evidence) and schedule the re-exchange for Wednesday.
 
-### M40 — Wed 2026-12-02 (in-person) — Reproducibility II: sign-off — and the research brief begins
+### M40 — Wed 2026-12-02 (in-person) — Reproducibility II: sign-off, and the one-page research brief
 
 - **Driving question:** Reproduction verified — now can you say what it all means on ONE page, to a decision-maker?
-- **Secondary questions:** What does a reproduction sign-off attest? What is a research brief (vs an abstract, vs a poster)? Who is your brief's reader and what do they need?
+- **Secondary questions:** What does a reproduction sign-off attest? What is a research brief (vs an abstract, vs a poster)? Who is your brief's reader, and how does every sentence stay traceable to a ledger row?
 - **Inquiry:** all positions (reproducibility → communication)
-- **Claim PERMITTED:** "Reproduction verified by [name] on [date]" — and, in the brief: claims sized for a reader who will never see the appendix.
-- **Claim NOT permitted:** A brief that quietly restores the caveats-free claims the ledger already disciplined (the brief compresses, never un-verifies).
+- **Claim PERMITTED:** "Reproduction verified by [name] on [date]" — and, in the brief: claims sized for a reader who will never see the appendix, every sentence traceable to a ledger row.
+- **Claim NOT permitted:** A brief that quietly restores the caveats-free claims the ledger already disciplined (the brief compresses, never un-verifies; if the wording upgrades the claim, the ledger must be upgraded first, with evidence).
 - **RDSS reading:** RDSS ch. 22 (continued) + ch. 23 'Integration' opening (book.declaredesign.org)
-- **Other material:** nb18 §3 (Colab); research-brief template; M20 due tonight, M21 spec
-- **Provenance:** brief §12 P8 + RDSS ch.22–23 | realization/integration | one-page decision-maker brief format | extended
-- **Concepts:** reproduction sign-off; the research brief genre (reader, question, finding, uncertainty, implication, one figure); compression under verification constraints
+- **Other material:** nb18 student notebook (reproducibility & brief) §3 research-brief template (Colab); M20 due tonight; M21 spec
+- **Provenance:** brief §12 P8 + RDSS ch.22–23 | realization/integration | sign-off + one-page decision-maker brief format | merged
+- **Concepts:** reproduction sign-off; the research brief genre (reader, question, finding, uncertainty, implication, one figure); ledger-traceable writing; compression under verification constraints
 - **Python dependency:** none new (final figure export)
 - **Dataset / simulation:** each student's verified package + ledger
-- **50-minute dynamic:** 0–5 breakage-fix reports (round the room, one line each); 5–17 EXCHANGE ROUND 2: partner re-runs the fixed package and SIGNS the reproduction sign-off (or logs residuals) — M20 completes; 17–24 mini-lesson: the brief genre — one page, one reader, one figure, uncertainty on the page not in the appendix; 24–42 brief studio: draft your brief's four blocks (question/finding/uncertainty/implication) from the claim ledger, rotating consults; 42–48 read-aloud pairs: does your finding sentence survive being spoken?; 48–50 exit ticket + M20 due tonight.
+- **50-minute dynamic:** 0–5 breakage-fix reports (round the room, one line each); 5–17 EXCHANGE ROUND 2: partner re-runs the fixed package and SIGNS the reproduction sign-off, or logs residuals — M20 completes; 17–26 mini-lesson: the brief genre (one page, one reader, one figure, uncertainty on the page not in the appendix, every sentence traceable to a ledger row); 26–42 brief studio: draft the four blocks (question, finding, uncertainty, implication) from your claim ledger, rotating consults; 42–48 read-aloud pairs: does your finding sentence survive being spoken?; 48–50 exit ticket + M20 due tonight + M21 assigned.
 - **Hands-on activity:** Obtain a signed reproduction of your work from a partner, then draft the one-page brief from your verified ledger.
 - **Practice:** 📝 nb18 practice: compress a 3-sentence caveated finding into 1 sentence WITHOUT losing the caveat.
 - **Discussion prompt:** Your brief's reader has 90 seconds and decision power. What one uncertainty do they absolutely need on the page?
-- **Project connection:** M20 submits tonight with sign-off; M21 (brief) drafts today, workshops Friday.
-- **Milestone developed:** M20 (submitted TONIGHT) → M21 — Research Brief
-- **Milestone work time:** 12 min (sign-off exchange) + 18 min (brief studio)
+- **Project connection:** M20 submits tonight with sign-off; M21 (brief) drafts today and goes through the table read at Friday's studio.
+- **Milestone developed:** M20 — Reproducibility Audit (due TONIGHT) → M21 — Research Brief (assigned)
+- **Milestone work time:** 12 min (sign-off exchange) + 16 min (brief studio)
 - **Milestone presentation/review:** reproduction sign-off + read-aloud pairs
 - **Student prep:** Package fixes applied from Monday's log.
 - **Student artifact:** Signed reproduction attestation + brief draft (4 blocks)
 - **Exit ticket:** Claim Ticket #40: my finding sentence, as compressed for the brief — caveat intact.
-- **Homework / next milestone:** Submit M20 tonight 11:59 PM. Polish the full brief for Friday's workshop; M21 due Fri Dec 4.
+- **Homework / next milestone:** Submit M20 tonight 11:59 PM. Polish the full brief for Friday's studio table read; M21 due Friday.
 - **Instructor prep:** Sign-off forms; brief exemplar (one page, annotated); consult order.
 - **Risks / contingency:** Residual reproduction failures → the sign-off logs them as known residuals with cause; the audit grade weighs the honesty of the log, not just a clean pass.
 
-### M41 — Fri 2026-12-04 (in-person) — The research brief workshop — and staging the Evidence Defense
+### M41 — Fri 2026-12-04 (in-person) — Studio Friday — the table read: every brief read by every margin, the defense staged
 
 - **Driving question:** Does your one page do justice to fourteen weeks — and can you now defend it out loud?
 - **Secondary questions:** Where does the brief still overclaim or underclaim? What is the Evidence Defense format? What gets defended (the claims, the choices, the verification)?
 - **Inquiry:** all positions (communication)
 - **Claim PERMITTED:** "Every sentence on this page traces to a ledger row" — the brief as the dossier's honest ambassador.
-- **Claim NOT permitted:** Brief-polish that drifts from the ledger (if the wording upgrades the claim, the ledger must be upgraded first — with evidence).
-- **RDSS reading:** (none new — workshop day)
-- **Other material:** nb19 §1 defense format (Colab); M21 due tonight; defense schedule posted
-- **Provenance:** brief §12 P8 + fresh defense protocol | synthesis unit | Evidence Defense format | fresh
-- **Concepts:** ledger-traceable writing; the Evidence Defense format (10-min defense: claims, choices, verification + 5-min cross-examination); defense-order strategy
+- **Claim NOT permitted:** Brief-polish that drifts from the ledger (if the wording upgrades the claim, the ledger must be upgraded first, with evidence).
+- **RDSS reading:** (no new reading — studio Friday; bring your polished brief)
+- **Other material:** nb19 student notebook (defense & synthesis) §1 defense format (Colab); margin-note slips; M23 final-dossier checklist; M21 due tonight
+- **Provenance:** brief §12 P8 + fresh defense protocol | synthesis unit | table read as studio work block + defense staging | fresh
+- **Concepts:** ledger-traceable writing; the Evidence Defense format (10-min defense: claims, choices, verification + 5-min cross-examination); defense-order strategy; dossier completeness
 - **Python dependency:** none
 - **Dataset / simulation:** each student's brief + ledger
-- **50-minute dynamic:** 0–5 workshop norms + defense schedule draw (who defends Mon vs Wed); 5–22 BRIEF WORKSHOP: table read — each brief passes left, 3 minutes per read with the two-question margin note (sharpest sentence? weakest claim?), full rotation; 22–30 revise from margin notes; 30–40 mini-lesson: the Evidence Defense format walked on an example — what cross-examiners may probe (any ledger row, any decision, any verification); 40–48 defense prep: pick the 3 ledger rows you'd LEAST like probed and prep them first; 48–50 exit ticket + M21 due tonight.
-- **Hands-on activity:** Full-rotation table read of all five briefs with margin notes; revise; then prep your three weakest ledger rows for defense.
+- **50-minute dynamic:** 0–10 recap: the reproducibility arc in one line (package, stranger's reproduction, signed attestation, and a brief that compresses a verified ledger to one page); 10–20 milestone brief (Brightspace): present M22 (Evidence Defense) + M23 (final dossier) deliverables + rubrics — defense format walked (10-min defense + 5-min cross-examination), order draw for the two defense days, M23 final checklist handed out; 20–50 studio work: TABLE READ as the work block — each brief passes left, 3 minutes per read with the two-question margin note (sharpest sentence? weakest claim?), full rotation, then revise from margin notes and prep the 3 ledger rows you would least like probed (M21 due tonight).
+- **Hands-on activity:** Run the full-rotation table read with margin notes, revise your brief, then prep the three ledger rows you would least like probed.
 - **Practice:** 📝 nb19 practice: for one sample brief sentence, trace it to its ledger row — or catch that it can't be.
-- **Discussion prompt:** Which classmate's brief taught you a compression move — what was it?
-- **Project connection:** M21 submits tonight; defense prep begins for M22 (Mon/Wed defenses).
-- **Milestone developed:** M21 — Research Brief (submitted TONIGHT) → M22 — Evidence Defense (prep)
-- **Milestone work time:** 17 min (workshop) + 8 min (revision) + 8 min (defense prep)
+- **Discussion prompt:** Which classmate's brief taught you a compression move, and what was it?
+- **Project connection:** M21 submits tonight; the order draw and checklist launch M22 (defenses next week) and M23 (the final dossier).
+- **Milestone developed:** M21 — Research Brief (due TONIGHT) → kickoff M22 (staging + order draw) + M23 (checklist)
+- **Milestone work time:** 30 min studio block (table read + revision + defense prep)
 - **Milestone presentation/review:** table-read margin notes (all-read-all)
 - **Student prep:** Full brief polished from Wednesday's draft.
-- **Student artifact:** Margin-annotated brief + revision + weakest-rows prep sheet
+- **Student artifact:** Margin-annotated brief + revision + weakest-rows prep sheet + drawn defense slot
 - **Exit ticket:** Claim Ticket #41: the ledger row I least want probed Monday, and my first sentence about it.
-- **Homework / next milestone:** Submit M21 tonight 11:59 PM. Defense slots: Mon Dec 7 (2–3 students) and Wed Dec 9 (2–3 students) — full dossier draft supports you.
-- **Instructor prep:** Defense schedule; example defense walk; margin-note slips; cross-examination norms card.
+- **Homework / next milestone:** Submit M21 tonight 11:59 PM. Defenses run Monday and Wednesday next week in the drawn order; a full dossier draft supports you, and the final dossier lands at the end of that week.
+- **Instructor prep:** Defense schedule + order-draw slips; example defense walk; margin-note slips; cross-examination norms card; M22/M23 briefs staged on Brightspace.
 - **Risks / contingency:** Briefs arrive rough → the table read doubles as triage; roughest briefs get first office-hours slots before Monday.
 
 ### M42 — Mon 2026-12-07 (in-person) — Evidence Defense I: defend your claims, your choices, and your verification
@@ -1182,7 +1181,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** Exactly what each defender's claim ledger permits — the defense IS the boundary, performed.
 - **Claim NOT permitted:** New claims invented under pressure; concessions retracted without evidence; blame shifted to the AI tool (the researcher verified, or didn't).
 - **RDSS reading:** (none — defense day)
-- **Other material:** nb19 §2 (Colab); defense rubric; cross-examination norms
+- **Other material:** nb19 student notebook (defense & synthesis) §2 (Colab); defense rubric; cross-examination norms
 - **Provenance:** brief §12 P8 | synthesis unit | Evidence Defense session 1 | fresh
 - **Concepts:** claims-choices-verification defense; cross-examination; graceful concession; the ledger as shield
 - **Python dependency:** none (defender may open their notebook live if probed)
@@ -1198,7 +1197,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Student prep:** Defenders: full command of ledger + dossier draft. All: cross-examination questions prepared.
 - **Student artifact:** Delivered defense or logged cross-examination questions + self-assessment
 - **Exit ticket:** Claim Ticket #42: one probe from today I must answer inside my own dossier before Friday.
-- **Homework / next milestone:** Wednesday: remaining defenses. All: fold today's exposures into the dossier (due Fri Dec 11).
+- **Homework / next milestone:** Wednesday: remaining defenses. All: fold today's exposures into the dossier (due Friday).
 - **Instructor prep:** Rubrics per defender; timer; balance the cross-examination airtime; note dossier-relevant exposures per student.
 - **Risks / contingency:** A defense collapses → instructor converts to a supported walkthrough (rubric notes the support), student may elect a Wednesday redo slot.
 
@@ -1210,15 +1209,15 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** As Monday — each defender's ledger, performed. Plus: "my dossier checklist has N open items and a plan for each."
 - **Claim NOT permitted:** As Monday. Plus: declaring the dossier done without running its final checklist.
 - **RDSS reading:** (none — defense day)
-- **Other material:** nb19 §3 (Colab); defense rubric; final-dossier checklist (M23)
+- **Other material:** nb19 student notebook (defense & synthesis) §3 (Colab); defense rubric; final-dossier checklist (M23)
 - **Provenance:** brief §12 P8 | synthesis unit | Evidence Defense session 2 + dossier checklist | fresh
-- **Concepts:** as M42 + dossier completeness auditing
+- **Concepts:** as the first defense day + dossier completeness auditing
 - **Python dependency:** none
 - **Dataset / simulation:** defenders' own dossier materials
 - **50-minute dynamic:** 0–3 norms recap + order; 3–33 DEFENSES (remaining 2–3, same 10+5 format); 33–43 dossier checklist run: every student opens the M23 checklist against their draft, marks open items, writes the 48-hour plan; 43–48 cross-defense synthesis: what did the strongest defenses share? (board list, becomes Friday's opening); 48–50 exit ticket.
 - **Hands-on activity:** Defend or cross-examine; then run the final-dossier checklist against your own draft and commit a 48-hour plan.
 - **Practice:** 📝 (cross-examiner role continues) one claim, one choice, one verification probed.
-- **Discussion prompt:** Across all five defenses: what did the convincing ones share that the shaky moments lacked?
+- **Discussion prompt:** Across all the defenses: what did the convincing ones share that the shaky moments lacked?
 - **Project connection:** M22 completes; every student leaves with a concrete 48-hour path to the M23 submission.
 - **Milestone developed:** M22 — Evidence Defense (completed) → M23 — Final Dossier (checklist run)
 - **Milestone work time:** 30 min (defenses) + 10 min (checklist)
@@ -1226,34 +1225,34 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Student prep:** Defenders ready; all: dossier draft current.
 - **Student artifact:** Delivered defense/cross-examination + marked checklist + 48-hour plan
 - **Exit ticket:** Claim Ticket #43: my dossier's biggest open item and exactly when I will close it.
-- **Homework / next milestone:** Close the checklist. M23 FINAL DOSSIER due Fri Dec 11, 11:59 PM (submission in class Friday = synthesis + celebration).
+- **Homework / next milestone:** Close the checklist. The M23 FINAL DOSSIER is due Friday 11:59 PM; Friday's studio is the submission ceremony plus synthesis and celebration.
 - **Instructor prep:** Rubrics; redo slot if invoked; compile the strongest-defenses board list for Friday.
 - **Risks / contingency:** Checklist reveals a structural gap (e.g., missing sign-off) → triage in class; office hours Thursday held open as the safety valve.
 
-### M44 — Fri 2026-12-11 (in-person) — Synthesis: the inquiry compass, one semester, and what a defensible claim is
+### M44 — Fri 2026-12-11 (in-person) — Studio Friday — the ceremony: one semester on the compass, dossiers in
 
 - **Driving question:** You began with a curiosity. You end with a defended, reproducible, honestly-bounded claim. What do you now know about knowing?
 - **Secondary questions:** How do kind and reach divide the world of questions? What will you do differently the next time a confident claim crosses your feed — or leaves your mouth?
 - **Inquiry:** all positions (synthesis)
 - **Claim PERMITTED:** "I can classify a question by kind and reach, match it to a design, state what the answer can and cannot establish, and verify before I believe." — the course's exit claim.
 - **Claim NOT permitted:** "Now I know the truth about my topic." (You know something better: exactly how much you know, and how you'd learn more.)
-- **RDSS reading:** RDSS ch. 24 'Epilogue' (book.declaredesign.org)
-- **Other material:** nb19 §4 synthesis (Colab); course-reflection survey
-- **Provenance:** brief §12 P8 + RDSS ch.24 | synthesis | compass retrospective + exit claim | newly-constructed-from-source-concept
+- **RDSS reading:** (no new reading — studio Friday; RDSS ch. 24 'Epilogue' offered as a send-off, not required)
+- **Other material:** nb19 student notebook (defense & synthesis) §4 synthesis (Colab); course-reflection survey; M23 due tonight
+- **Provenance:** brief §12 P8 + RDSS ch.24 | synthesis | compass retrospective + exit claim + submission ceremony | newly-constructed-from-source-concept
 - **Concepts:** the inquiry compass as a permanent lens; the claim ledger as a life habit; verification as identity; what transfers beyond research
 - **Python dependency:** none
 - **Dataset / simulation:** the class's own 44-meeting claim-ticket archive (aggregated, anonymous)
-- **50-minute dynamic:** 0–5 the strongest-defenses list from Wednesday, read back; 5–15 synthesis exercise: the SAME question analyzed from every compass position on the board, one student leading each position — the course's signature skill, performed jointly; 15–25 claim-ticket archaeology: revisit YOUR Claim Ticket #1 vs #43 — write the two-sentence 'how my standards changed'; 25–35 round: each student reads their two sentences + names the habit they're keeping; 35–43 M23 submission ceremony (dossiers in, confirmed on screen) + course reflection survey; 43–50 instructor's closing: what you now owe the world as people who know how knowing works — and goodbyes.
+- **50-minute dynamic:** 0–10 recap: the whole semester on the compass in one pass (kind times reach, four named positions, MIDA as the machinery underneath, verification as the habit running through all of it) + the strongest-defenses list from Wednesday read back; 10–20 milestone brief (Brightspace): the M23 final checklist walked one last time — deliverable, rubric, and tonight's submission mechanics confirmed; 20–50 studio work: THE CEREMONY as the work block — the same question analyzed from every compass position on the board with one voice leading each, then claim-ticket archaeology (your first ticket against your latest, two sentences on how your standards changed) read in a round, then dossiers submitted and confirmed on screen, the reflection survey, and closing words with goodbyes.
 - **Hands-on activity:** Analyze one shared question through every compass position jointly; excavate your own first-vs-last Claim Tickets.
 - **Practice:** 📝 (retrospective) the exit self-assessment: classify, match, bound, verify — rate yourself then vs now.
-- **Discussion prompt:** What claim did you believe in August that you would now demand evidence for — and what evidence would satisfy you?
+- **Discussion prompt:** What claim did you believe at the start of the semester that you would now demand evidence for, and what evidence would satisfy you?
 - **Project connection:** M23 Final Dossier submitted — the semester's complete, reproducible, defended research artifact.
 - **Milestone developed:** M23 — Final Research Dossier + Claim Ledger (SUBMITTED TODAY)
-- **Milestone work time:** 8 min (submission ceremony)
-- **Milestone presentation/review:** first-vs-last claim-ticket round
-- **Student prep:** M23 complete (due tonight 11:59 PM; ceremony confirms in class).
+- **Milestone work time:** 30 min studio block (synthesis + submission ceremony)
+- **Milestone presentation/review:** first-vs-last claim-ticket round + submission ceremony
+- **Student prep:** M23 complete (due tonight 11:59 PM; the ceremony confirms in class).
 - **Student artifact:** Submitted dossier + exit self-assessment + reflection survey
 - **Exit ticket:** Claim Ticket #44 (the last): one claim I will carry carefully for the rest of my life, and the evidence I hold it on.
 - **Homework / next milestone:** None. It is done. (Grades follow the posted rubric timeline.)
 - **Instructor prep:** Aggregate the claim-ticket arc; the shared four-way question chosen; survey link live; celebration logistics.
-- **Risks / contingency:** A dossier misses the ceremony → the 11:59 PM deadline governs; late policy applies as published — the ceremony celebrates, the deadline grades.
+- **Risks / contingency:** A dossier misses the ceremony → the tonight deadline governs; late policy applies as published — the ceremony celebrates, the deadline grades.

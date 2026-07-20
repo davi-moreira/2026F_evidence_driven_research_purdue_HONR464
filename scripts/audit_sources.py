@@ -2,17 +2,18 @@
 """audit_sources.py — citation-integrity gate for student-facing notebooks.
 
 The course's evidence-integrity rule (CLAUDE.md): every citation in shipped
-material is real and retrievable; fabricated citations exist ONLY inside
-disclosed hunt exercises. This gate enforces the machine-checkable half:
+material is real and retrievable; fabricated citations are forbidden EVERYWHERE
+(Decision 16, 2026-07-20 — the planted-fake teaching device is retired;
+verification exercises use real sources). This gate enforces the
+machine-checkable half:
 
   1. External URL allowlist — every http(s) URL in a student notebook must be
      on the course's verified-domain allowlist (unknown domains fail).
   2. Verified-citation registry — "Author (Year)"-shaped citations must match
      the registry of works verified during the build (unknown ones fail until
      added here WITH a verification note).
-  3. Planted-fake containment — known planted fakes may appear only in
-     notebooks that disclose the plant ("are fabricated" / "fabricated for
-     this exercise" phrasing must appear in the same notebook).
+  3. Fake-citation blocklist — the names once used as planted fakes must never
+     appear in any student notebook, disclosed or not.
 
 Usage: python3 scripts/audit_sources.py [notebooks/student/nbNN_*.ipynb ...]
        (default: all student notebooks; exit non-zero on any violation)
@@ -56,11 +57,10 @@ VERIFIED = [
     r"Bonilla.{0,15}Tillery",                         # rdss replication dataset
 ]
 
-# Planted fakes (nb00 + nb03 hunts) — allowed ONLY with an in-notebook
-# disclosure that fakes were planted.
-PLANTED = ["Martinez, R., & Chen", "Thompson, K. E.", "Reynolds, D. M.",
+# Fake-citation blocklist (D16): these names were once planted fakes; they must
+# never appear in student material again, with or without disclosure.
+BLOCKED = ["Martinez, R., & Chen", "Thompson, K. E.", "Reynolds, D. M.",
            "Halvorsen, K."]
-DISCLOSURE = re.compile(r"fabricated|invented for this exercise", re.I)
 
 CITATION_SHAPE = re.compile(r"[A-Z][a-z]+, [A-Z]\.(?:[^(\n]{0,60})\((19|20)\d\d\)")
 
@@ -76,19 +76,19 @@ def audit(path: Path) -> list[str]:
         if host not in ALLOWED_DOMAINS:
             problems.append(f"unknown URL domain (verify + allowlist): {url}")
 
-    # 3. planted fakes containment
-    disclosed = bool(DISCLOSURE.search(text))
-    for fake in PLANTED:
-        if fake in text and not disclosed:
-            problems.append(f"planted fake {fake!r} without disclosure text")
+    # 3. fake-citation blocklist (no disclosure exemption — D16)
+    for fake in BLOCKED:
+        if fake in text:
+            problems.append(f"blocked fake citation {fake!r} (D16: fabricated "
+                            f"citations are forbidden everywhere)")
 
     # 2. citation registry
     for m in set(CITATION_SHAPE.findall(text)) and set(
             x.group(0) for x in CITATION_SHAPE.finditer(text)):
         if any(re.search(v, m) for v in VERIFIED):
             continue
-        if any(f.split(",")[0] in m for f in PLANTED):
-            continue  # handled above
+        if any(f.split(",")[0] in m for f in BLOCKED):
+            continue  # already reported by the blocklist check
         problems.append(f"citation not in verified registry: {m!r}")
 
     return problems

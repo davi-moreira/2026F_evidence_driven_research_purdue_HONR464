@@ -73,17 +73,34 @@ python3 scripts/voice_check_guides.py session_guides/NN_session_guide.md
 
 ---
 
-## 🚨 CRITICAL RULE — Narrative Polish Pattern (Named-Stakeholder Style)  *(KEEP — swap personas)*
+## 🚨 CRITICAL RULE — Undergraduate-Friendly Voice  *(2026-07-20 — supersedes "Narrative Polish Pattern"; see DECISIONS.md D14)*
 
-Every student-facing markdown cell follows the course narrative style:
-1. **"Why This Matters" cell** opened by a named research-world stakeholder whose
-   concern is a direct quote — a **thesis advisor**, **journal reviewer**, **IRB
-   reviewer**, **skeptical peer**, or **policy stakeholder**.
+Notebooks are read by honors undergraduates with **no quantitative background**.
+The narrative machinery stays; the prose must read like a person, not a model.
+
+**Keep (the pedagogy):**
+1. **"Why This Matters" cells** opened by a named research-world stakeholder
+   (thesis advisor, journal reviewer, IRB reviewer, skeptical peer, policy
+   stakeholder) whose concern is a direct quote.
 2. **Narrative prose over bullet lists** in "Reading the evidence" cells.
-3. **Inline Q&A blocks** with the grep-findable phrase **"A question that often
-   comes up here:"** — `> **A question that often comes up here:** *"<q>"* <one flowing paragraph>`.
-4. **Section bridges** naming each transition in one sentence.
-5. **Warm wrap-ups** ending with a bridge to the next activity.
+3. **Inline Q&A blocks**: `> **A question that often comes up here:** *"<q>"*` +
+   one flowing paragraph.
+4. **Section bridges** and **warm wrap-ups** with a bridge to the next activity.
+
+**Enforce (the voice — machine-checked by `scripts/voice_lint_notebooks.py`):**
+1. **Em-dash budget: ≤ 20 per notebook, ≤ 1 per markdown cell.** Prefer periods,
+   commas, and bold lead-ins (`**Why this matters:**`, `**The catch:**`) over
+   dash-chained clauses.
+2. **Every technical term is introduced as: bold term → one-sentence
+   plain-language definition → concrete example** before it is used again.
+   Never assume a student knows estimand, sampling frame, held-out, DAG, etc.
+3. **Short-to-medium sentences** (roughly 12–25 words). One idea per sentence.
+   Second person (`you`) throughout.
+4. **No fourth-wall meta-references.** Never tell the reader content was
+   "fabricated / planted / invented for this exercise" and never annotate
+   Sources sections with asides about the material's construction.
+5. **No fabricated citations anywhere** (see Evidence-Integrity rule below):
+   citation-verification skills are taught with real, retrievable sources only.
 
 ---
 
@@ -100,9 +117,12 @@ course. Every empirical claim in any student-facing or deliverable material must
    the output was cross-checked (recomputed, triangulated, or spot-checked).
 3. **Decisions are documented, not just outcomes** — which sources, which
    operationalization, which method family, and *why*.
+4. **No planted-fake citations, even as a teaching device** (D16, 2026-07-20).
+   Citation-verification exercises use real sources the student retrieves and
+   confirms. `scripts/audit_sources.py` hard-fails on any known fake name.
 
 ```bash
-.venv/bin/python scripts/audit_sources.py   # all student notebooks: URL allowlist, verified-citation registry, planted-fake containment
+.venv/bin/python scripts/audit_sources.py   # all student notebooks: URL allowlist, verified-citation registry, fake-citation blocklist
 ```
 
 ---
@@ -147,7 +167,61 @@ and method. A results statement with no uncertainty/limitations framing is a def
 
 ---
 
-## 🚨 CRITICAL WORKFLOW — Instructor-First Notebook Editing
+## 🚨 CRITICAL RULE — Lecture Labels, Never Dates  *(2026-07-20, D13)*
+
+Notebooks and session guides carry **no calendar dates, no day-of-month, no
+"Meeting M#" references**. Position is expressed only as explicit lecture labels:
+
+- Notebook header: `**Topic NN · N lecture(s)**` (single-lecture topics say
+  `1 lecture`). Multi-lecture notebooks mark internal boundaries with a
+  horizontal rule + `*(Lecture i of N starts here.)*`.
+- Session guides head each meeting section `## Lecture i of N — <title>`,
+  `## Studio Friday — <title>`, or `## Async module — <title>`.
+- Labels are **derived mechanically** from `lecture_labels()` in
+  `scripts/notebooks_map.py` (computed from `planning/MEETING_SCHEDULE.csv`) —
+  never hand-maintained. Dates live ONLY on the public `schedule.qmd` page and
+  in milestone briefs (`_research_project/2026Fall/`).
+
+---
+
+## 🚨 CRITICAL RULE — Friday Studio Format  *(2026-07-20, D13)*
+
+**No new topic content on Fridays.** Every Friday session is a studio:
+1. **≈10 min** — instructor recaps the week's topic (the compass position, the
+   claim boundary, the one thing to remember).
+2. **≈10 min** — instructor presents the next final-project milestone from its
+   Brightspace brief (generated from `_research_project/2026Fall/milestone_NN_*.md`).
+3. **≈30 min** — students work on the milestone and their research project;
+   instructor runs rotating consults.
+
+Late-semester performance Fridays (poster production, hot seat, table read,
+submission ceremony) keep their character as the work block inside this frame.
+Mon/Wed = lectures; the two async meetings are self-contained modules.
+
+---
+
+## 🚨 CRITICAL RULE — Dataset Distribution  *(2026-07-20, D15)*
+
+`notebooks/data/` is the **single canonical dataset folder**. Every dataset the
+course uses lives there, and all of them ship in one downloadable bundle,
+`notebooks/data/honr46400_datasets.zip`, linked from the Material and Schedule
+pages. Whenever a dataset is added or changed:
+
+```bash
+.venv/bin/python scripts/make_dataset_zip.py   # regenerate the bundle, then commit it
+```
+
+Notebooks keep loading data via `load_course_data()` (GitHub raw URL first,
+local fallback); the zip is the student-facing offline copy.
+
+---
+
+## 🚨 CRITICAL WORKFLOW — Instructor-First Notebook Editing  *(hard rule — no exceptions)*
+
+**ANY request to "work on a notebook" means: edit the instructor side first; the
+student notebook is only ever a mechanical, answer-stripped copy of it.** Never
+edit a `notebooks/student/*.ipynb` directly, and never let the student file
+drift from the instructor version.
 
 ALWAYS edit the cell source `_production_kit/nb_sources/nbNN_<slug>.py` (gitignored)
 FIRST, then rebuild: `.venv/bin/python scripts/nbbuild.py nbNN` — this regenerates
@@ -166,6 +240,13 @@ SOLUTION`, runs the template/voice validators, and refreshes the schedule badge.
 - Schedule badges key off **git-tracked** student files only
   (`scripts/update_schedule_badges.py`) — stage the student notebook before
   regenerating badges when publishing a new topic.
+- **After building, sync instructor material to the private repo:**
+  `scripts/sync_instructor_repo.sh` pushes `notebooks/instructor/`,
+  `session_guides/`, and `notebooks/data/` to the private GitHub repo
+  `davi-moreira/2026F_evidence_driven_research_purdue_HONR464_instructor`
+  (local clone in gitignored `_instructor_repo/`), which backs the
+  password-gated Instructor tab. The page gate (password `eureka`) is a
+  courtesy lock; the real protection is the private repo + GitHub auth.
 
 ---
 
@@ -191,6 +272,14 @@ git commit -m "feat: ..."
 git add docs/ && git commit -m "build: Render Quarto site"
 git push origin main
 ```
+
+Site pages: `index` / `syllabus` (hand-edited), `material.qmd` (generated by
+`scripts/build_material_page.py`), `schedule.qmd` (generated by
+`scripts/update_schedule_badges.py`), `instructor.qmd` (topic table of private-repo
+Colab badges). The render's `post-render` step runs
+`scripts/protect_instructor_page.py`, which encrypts `docs/instructor.html`
+client-side (password `eureka`) — never commit an unencrypted instructor page.
+Do not hand-edit generated pages; edit the generator or the schedule data.
 
 ---
 
@@ -231,10 +320,12 @@ its script are dormant but harmless.
 
 ---
 
-**Version:** 3.0 — RDSS taxonomy adopted outright (2026-07-19): the four-approach
-grid is retired in favor of the inquiry compass (kind × reach + MIDA machinery);
-see `planning/INQUIRY_MAP.md` and DECISIONS.md. (2.0 = Fall 2026 course fully
-built: planning suite, 20 topic notebooks nb00–nb19, milestones M00–M23, project
-protocols, validators. 1.0 = seeded from 2026Summer_predictive_analytics_MGMT474
-infra.)
+**Version:** 4.0 — Course redesign (2026-07-20, DECISIONS.md D13–D16): Friday
+studios + Phase 1–2 compression, undergraduate-friendly voice, lecture labels
+(never dates), Material/Schedule tab split, single dataset zip, password-gated
+Instructor tab backed by the private `_instructor` repo, fabricated citations
+removed course-wide. (3.0 = RDSS inquiry compass adopted, 2026-07-19; 2.0 =
+Fall 2026 course fully built: planning suite, 20 topic notebooks nb00–nb19,
+milestones M00–M23, project protocols, validators. 1.0 = seeded from
+2026Summer_predictive_analytics_MGMT474 infra.)
 **Maintained by:** Professor Davi Moreira + AI Assistants

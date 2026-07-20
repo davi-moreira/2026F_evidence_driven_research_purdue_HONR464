@@ -25,7 +25,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
-from notebooks_map import NOTEBOOKS, colab_badge, student_filename  # noqa: E402
+from notebooks_map import (NOTEBOOKS, colab_badge, student_filename,  # noqa: E402
+                           nb_of, session_kind, lecture_labels)
 
 
 def tracked_students() -> set[str]:
@@ -40,7 +41,7 @@ SCHEDULE_CSV = REPO / "planning" / "MEETING_SCHEDULE.csv"
 OUT = REPO / "schedule.qmd"
 
 HEADER = '''---
-title: "Schedule and Material"
+title: "Schedule"
 author: "Davi Moreira"
 editor: visual
 ---
@@ -61,8 +62,14 @@ editor: visual
 # Course Schedule
 
 Forty-four Monday/Wednesday/Friday meetings (42 in person, 2 asynchronous
-online), one notebook per topic. Open each notebook in Colab from its badge;
-milestone instructions and rubrics are on Brightspace.
+online). The weekly rhythm: **Monday and Wednesday are lectures** (new content,
+one notebook per topic), and **every Friday is a studio** — a quick recap of
+the week, the next project milestone presented, and the rest of the class spent
+working on your milestone and research project. Open each notebook in Colab
+from its badge; milestone instructions and rubrics are on Brightspace. Topic
+resources are also cataloged on the [Material](material.qmd) page, and every
+dataset the course uses is in the
+[course datasets (.zip)](notebooks/data/honr46400_datasets.zip) bundle.
 
 '''
 
@@ -90,11 +97,6 @@ Nov 25/27 (Thanksgiving). Async-online meetings: Oct 2 and Nov 23.
 '''
 
 
-def nb_for(other_material: str) -> int | None:
-    m = re.search(r"nb(\d\d)", other_material)
-    return int(m.group(1)) if m else None
-
-
 def pretty_date(iso: str, day: str) -> str:
     d = date.fromisoformat(iso)
     return f"{day} {d.strftime('%b %-d')}"
@@ -105,6 +107,7 @@ def build() -> str:
         rows = list(csv.DictReader(f))
 
     tracked = tracked_students()
+    labels = lecture_labels(rows)
     lines = [HEADER, "::: overflow-table\n"]
     lines.append("| # | Date | Topic | Notebook | Milestone | Materials |")
     lines.append("|---|------|-------|----------|-----------|-----------|")
@@ -116,7 +119,7 @@ def build() -> str:
             current_unit = unit
             lines.append(f"| | | **{unit}** | | | |")
 
-        n = nb_for(r["other_material"])
+        n = nb_of(r["other_material"])
         badge = ""
         if n is not None:
             badge = (colab_badge(n) if student_filename(n) in tracked
@@ -125,6 +128,10 @@ def build() -> str:
         title = r["title"]
         if r["modality"] == "async-online":
             title = f"**ASYNC** — {title.replace('ASYNC — ', '')}"
+        lab = labels.get(int(r["meeting"]))
+        if lab:
+            _nb, i, total = lab
+            title = f"{title} *(Lecture {i}/{total})*"
 
         mile = r["milestone_developed"]
         mile = re.sub(r" — [^|]*", "", mile)  # compact: IDs only on the site

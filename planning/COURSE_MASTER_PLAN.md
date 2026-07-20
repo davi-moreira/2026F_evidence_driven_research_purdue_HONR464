@@ -79,17 +79,26 @@ CLAIM → COMMUNICATE → REVISE.` Recurring notebook moves: **Pause & Predict**
 
 | Phase | Meetings | Dates | Focus | Project outcomes |
 |---|---|---|---|---|
-| **1 — Curiosity, gaps, answerable questions** | M1–M6 | Aug 24–Sep 4 | How do we know? topic vs gap vs question; classify with the compass (kind + reach) | Curiosity Map; question pitch; candidate gaps/questions |
-| **2 — Literature, model, inquiry, measurement** | M7–M14 | Sep 9–Sep 25 | establish the gap; MIDA Model+Inquiry; operationalization | literature/claim map; question + inquiry declaration; construct/measurement map |
-| **3 — Data & answer strategies** | M15–M22 | Sep 28–Oct 16 | data strategy (sampling/assignment); answer strategy; generalization; feasibility/ethics | design declaration; URC abstract; data-access + ethics checkpoint |
+| **1 — Curiosity, gaps, answerable questions** | M1–M4 | Aug 24–Aug 31 | How do we know? topic vs gap vs problem vs **answerable question** | Curiosity Map (M00); candidate gaps and questions |
+| **2 — Compass, sources, model & measurement** | M5–M11 | Sep 2–Sep 18 | classify with the compass (kind + reach); sources & citation integrity; MIDA Model + Inquiry; operationalization | question pitch (M01); literature/claim map (M02); Model & Inquiry Declaration (M03); measurement plan launched (M04) |
+| **3 — Data & answer strategies** | M12–M22 | Sep 21–Oct 16 | description deep dive; data strategy (sampling/assignment); answer strategy (estimators, regression); generalization, uncertainty, power; feasibility/ethics | measurement plan (M04); data strategy + ethics (M05); answer strategy (M06); URC abstract (gate) + full design declaration (M07) |
 | **4 — Pilot, diagnosis, redesign** | M23–M28 | Oct 19–Oct 30 | declare→diagnose→redesign; prediction; causal; verification | executable pilot; compass-branched diagnosis; redesign memo |
 | **5 — Poster construction & submission** | M29–M31 | Nov 2–Nov 6 | storyboard → draft → **final poster** (production, not buffer) | approved, submitted poster (**Nov 6 = M31**) |
 | **6 — Conference preparation** | M32–M35 | Nov 9–Nov 16 | 1-/3-min delivery; uncertainty & limitations; dress rehearsal | rehearsed presentation; readiness audit |
 | **7 — Reflection, feedback, redesign** | M36–M38 | Nov 18–Nov 23 | debrief; feedback→redesign; (async) poster→dossier module | reflection; redesign plan; dossier draft |
 | **8 — Reproducibility, brief, Evidence Defense** | M39–M44 | Nov 30–Dec 11 | reproducibility audit; research brief; **Evidence Defense**; synthesis | reproducible dossier; final claim ledger |
 
+**The studio-Friday rhythm.** Mondays and Wednesdays are lectures; every Friday is
+a **studio** that teaches nothing new: \~10 min recap of the week's topic, \~10 min
+the instructor presents the next milestone from its Brightspace brief (deliverable
++ rubric), \~30 min supervised milestone/project work with rotating consults.
+Phases 1–2 are compressed (P1 = M1–M4, P2 = M5–M11) so new lecture content ends
+**Wed Sep 16** (week 4) and the technical Phase 3 starts a week earlier, expanded
+to M12–M22. See §6 for the full weekly cadence.
+
 **URC Expo — Tue Nov 17** (between M35 and M36): required in-person poster presentation
-(not an MWF meeting). Async meetings: **M17 (Oct 2)** and **M38 (Nov 23)** are
+(not an MWF meeting). Async meetings: **M17 (Oct 2)** — nb08, a claim-diagnosis
+warm-up plus M05 completion — and **M38 (Nov 23)** — nb17, poster-to-dossier — are
 self-contained online modules with an assessable artifact each.
 
 ## 5. Topic notebooks (one per topic; each absorbs the meetings it needs)
@@ -101,54 +110,82 @@ defended decision, ≥1 practice item, ≥1 interpretation task, ≥1 milestone/
 transfer, and a Claim-Ticket exit. Direct exposition ≤8 min/segment, <15 min/meeting;
 ≥70% active time.
 
-| NB | Topic | Meetings | Inquiry emphasis | Milestone developed | Primary provenance |
+Meetings column: **L** = Mon/Wed lecture, **S** = Friday studio (recap + milestone
+work; no new content), **A** = async module. Lecture counts tally Mon/Wed lectures
+only; studios attach to the week's topic for recap.
+
+| NB | Topic | Meetings (L/S/A) | Inquiry emphasis | Milestone developed | Primary provenance |
 |---|---|---|---|---|---|
-| `nb00` | Launchpad: *How do we know?* course map, Colab, Ask→Verify→Document | M1 | all positions (framing) | M00 kickoff | brief §3; RDSS ch.1 (concept) |
-| `nb01` | Curiosity → gap → problem → **answerable question** | M2–M4 | all positions (framing) | M00→M01 | RDSS ch.2–3; brief §12 P1 |
-| `nb02` | **The inquiry compass** — classify the question by kind + reach | M5–M6 | all positions (the skill) | M01 | RDSS ch.7 + Part III framing; brief §2 |
-| `nb03` | Establishing the gap: source-finding, **citation integrity**, AI hallucination check; claim map | M7–M8 | description/generalization | M02 | fresh + AI policy; RDSS ch.4 §literature |
-| `nb04` | **Model & Inquiry** (MIDA I): worlds, potential outcomes, estimands; DAG intro; EDA upstream (explore to calibrate M) | M9–M10 | causal/generalization | M03 | RDSS ch.6–7; `declaration_*`; `make_dag_df` |
-| `nb05` | **Measurement & operationalization**: concept→construct→indicator | M11–M12 | description/generalization | M04 | RDSS ch.8 §measurement; fresh |
-| `nb06` | **Description** (deep dive): distributions, summaries, honest visualization; the explore→declare→confirm loop (EDA anchor) | M13–M14 | **description** | M04→M05 | RDSS ch.15; `lapop_brazil`, `la_voter_file` |
-| `nb07` | **Data strategy** (MIDA II): sampling & assignment; selection; who's missing | M15–M16 | generalization/causal | M05 | RDSS ch.8; `declaration_2.1/9.1` |
-| `nb08` | **Async (Oct 2):** diagnose a misleading claim + answer-strategy preview | M17 | generalization | M05 (dev) | brief §12 P3; optional CB case |
-| `nb09` | **Answer strategy** (MIDA III): estimators, difference-in-means, regression; the whole-procedure rule (§9.1.3) | M18–M19 | generalization/causal | M05→M06 | RDSS ch.9; `estimatr`/`lm_robust` |
-| `nb10` | **Generalization** (deep dive): uncertainty, reach, power, assoc≠cause | M20–M22 | **generalization** | M06→M07 | RDSS ch.9–10; problem-set 1 |
-| `nb11` | **Declare → Diagnose → Redesign** engine: power, bias, coverage; redesign | M23–M24 | all positions (diagnosis) | M08 | RDSS ch.10–11, 13; `diagnose_design`, `redesign` |
-| `nb12` | **Prediction** (deep dive): the course-authored 'Observational: predictive' library entry — target, baseline, train/test, metric, leakage as a D-violation | M25–M26 | **prediction** | M08→M09 | fresh scikit-learn (RDSS Part III format); optional CB algorithms |
-| `nb13` | **Causal reasoning** (deep dive): counterfactuals, identification, DAGs; DiD/RDD/IV intuition | M27–M28 | **causal** | M09 | RDSS ch.16, 18; `declaration_18.1` |
-| `nb14` | **Poster storyboard & evidence hierarchy**; honest visualization; claim calibration | M29–M31 | all positions | M10→M11→M12 | brief §12 P5; RDSS figures; optional CB rebuild-graph |
-| `nb15` | **Communicating evidence**: 1-/3-min pitch, uncertainty & limitations, hard questions, rehearsal | M32–M35 | all positions | M13→M14→M15 | brief §12 P6 |
-| `nb16` | **Conference debrief → feedback-to-redesign** | M36–M37 | all positions | M17→M18 | brief §12 P7 |
-| `nb17` | **Async (Nov 23):** Poster-to-Dossier module — robustness/sensitivity, claim ledger, pivots (ch. 22) | M38 | project-specific | M19 | brief §10 M19; RDSS ch.22 |
-| `nb18` | **Reproducibility audit + research brief** | M39–M41 | all positions | M20→M21 | brief §12 P8; RDSS ch.21–23 |
-| `nb19` | **Evidence Defense + synthesis** on the compass; *what is a defensible claim* | M42–M44 | all positions | M22→M23 | brief §12 P8; RDSS ch.24 |
+| `nb00` | Launchpad: *How do we know?* course map, Colab, Ask→Verify→Document | M1 (1 L) | all positions (framing) | M00 kickoff | brief §3; RDSS ch.1 (concept) |
+| `nb01` | Curiosity → gap → problem → **answerable question** | M2, M4 (2 L) + S M3 | all positions (framing) | M00→M01 | RDSS ch.2–3; brief §12 P1 |
+| `nb02` | **The inquiry compass** — classify the question by kind + reach | M5 (1 L) + S M6 | all positions (the skill) | M01→M02 | RDSS ch.7 + Part III framing; brief §2 |
+| `nb03` | Establishing the gap: source-finding, **citation integrity**, verifying real sources; claim map | M7 (1 L) + S M8 | description/generalization | M02→M03 | fresh + AI policy; RDSS ch.4 §literature |
+| `nb04` | **Model & Inquiry** (MIDA I): worlds, potential outcomes, estimands; DAG intro; EDA upstream (explore to calibrate M) | M9 (1 L) + S M11 (shared) | causal/generalization | M03 | RDSS ch.6–7; `declaration_*`; `make_dag_df` |
+| `nb05` | **Measurement & operationalization**: concept→construct→indicator | M10 (1 L) + S M11 (shared) | description/generalization | M03→M04 | RDSS ch.8 §measurement; fresh |
+| `nb06` | **Description** (deep dive): distributions, summaries, honest visualization; the explore→declare→confirm loop (EDA anchor) | M12 (1 L; recap at S M14) | **description** | M04 | RDSS ch.15; `lapop_brazil`, `la_voter_file` |
+| `nb07` | **Data strategy** (MIDA II): sampling & assignment; selection; who's missing | M13, M15 (2 L) + S M14 | generalization/causal | M04→M05 | RDSS ch.8; `declaration_2.1/9.1` |
+| `nb08` | **Async (Oct 2):** diagnose a misleading claim (claim-diagnosis warm-up) + M05 completion | M17 (A) | generalization | M05 due; M06 brief posted | brief §12 P3; optional CB case |
+| `nb09` | **Answer strategy** (MIDA III): estimators, difference-in-means, regression; the whole-procedure rule (§9.1.3) | M16, M18 (2 L) | generalization/causal | M05→M07 | RDSS ch.9; `estimatr`/`lm_robust` |
+| `nb10` | **Generalization** (deep dive): uncertainty, reach, power, assoc≠cause | M19, M21 (2 L) + S M20, M22 | **generalization** | M06→M08 | RDSS ch.9–10; problem-set 1 |
+| `nb11` | **Declare → Diagnose → Redesign** engine: power, bias, coverage; redesign | M23–M24 (2 L) + S M25 | all positions (diagnosis) | M08→M09 | RDSS ch.10–11, 13; `diagnose_design`, `redesign` |
+| `nb12` | **Prediction** (deep dive): the course-authored 'Observational: predictive' library entry — target, baseline, train/test, metric, leakage as a D-violation | M26 (1 L) | **prediction** | M09 | fresh scikit-learn (RDSS Part III format); optional CB algorithms |
+| `nb13` | **Causal reasoning** (deep dive): counterfactuals, identification, DAGs; DiD/RDD/IV intuition | M27 (1 L) + S M28 | **causal** | M09→M10 | RDSS ch.16, 18; `declaration_18.1` |
+| `nb14` | **Poster storyboard & evidence hierarchy**; honest visualization; claim calibration | M29–M30 (2 L) + S M31 | all positions | M10→M11→M12 | brief §12 P5; RDSS figures; optional CB rebuild-graph |
+| `nb15` | **Communicating evidence**: 1-/3-min pitch, uncertainty & limitations, hard questions, rehearsal | M32, M33, M35 (3 L) + S M34 | all positions | M13→M16 | brief §12 P6 |
+| `nb16` | **Conference debrief → feedback-to-redesign** | M36 (1 L) + S M37 | all positions | M17→M18 | brief §12 P7 |
+| `nb17` | **Async (Nov 23):** Poster-to-Dossier module — robustness/sensitivity, claim ledger, pivots (ch. 22) | M38 (A) | project-specific | M19 | brief §10 M19; RDSS ch.22 |
+| `nb18` | **Reproducibility audit + research brief** | M39–M40 (2 L) + S M41 | all positions | M20→M21 | brief §12 P8; RDSS ch.21–23 |
+| `nb19` | **Evidence Defense + synthesis** on the compass; *what is a defensible claim* | M42–M43 (2 L) + S M44 | all positions | M22→M23 | brief §12 P8; RDSS ch.24 |
 
-20 notebooks (nb00–nb19). Each compass position has a dedicated deep-dive
+20 notebooks (nb00–nb19); **28 Mon/Wed lectures + 14 Friday studios + 2 async
+modules = 44 meetings**. Each compass position has a dedicated deep-dive
 (nb06/nb10/nb12/nb13); nb02 teaches the compass; nb11 teaches the diagnosis engine.
+Note the deliberate interleave at M16–M18: nb09 L1 (estimators) precedes the nb08
+async module, so the M05-completion module no longer needs an answer-strategy
+preview.
 
-## 6. Project-studio cadence (protected in-class development)
+## 6. Weekly rhythm — Mon/Wed lectures, Friday studio (protected project time)
 
-- **M1–M11 (Aug 24–Sep 18):** ≥10–15 min project-transfer/milestone work most meetings.
-- **M12–M22 (Sep 21–Oct 16):** ≥1 substantial development block/week.
-- **M23–M28 (Oct 19–Oct 30):** ≥2 development/analysis blocks/week.
-- **M29–M31 (Nov 2–Nov 6):** poster production dominates.
-- **M32–M35 (Nov 9–Nov 16):** delivery, peer review, rehearsal dominate.
-- **M39–M44 (Nov 30–Dec 11):** revision, reproducibility, brief, Evidence Defense.
+The week has a fixed shape:
 
-Studio format (varied, not mechanical): status/blocker declaration → individual
-production with 5-min rotating instructor consultations → cross-disciplinary peer
-review → revision → submission check + next-action commitment. With 5 students, every
-studio includes short milestone presentations (2-min pitch / 3-min declaration /
-5-min walkthrough / storyboard pitch / claim defense).
+- **Mon/Wed — lectures** (28 across the semester). Each lecture ends with a short
+  (\~5 min) project-transfer moment tied to the milestone in development.
+- **Friday — studio** (14 across the semester; no new content). Fixed skeleton:
+  **0–10** recap of the week's topic; **10–20** the instructor presents the next
+  milestone from its **Brightspace brief** (deliverable + rubric, projected as
+  students will see it); **20–50** supervised milestone/project work with rotating
+  instructor consults. Most milestone due dates land on studio Fridays, and most
+  milestone presentations (pitches, gallery walks, walkthroughs, table reads)
+  happen inside the studio work block.
+- **Async modules** on the two async days — M17 (Fri Oct 2, nb08) and M38
+  (Mon Nov 23, nb17) — are self-contained, each with an assessable artifact;
+  M17 doubles as the M05 completion-and-submission day.
+
+**Why this rhythm.** (1) It protects weekly project time structurally: the studio
+block exists regardless of lecture load, instead of being scavenged from lecture
+minutes. (2) It makes milestone expectations explicit: every milestone is kicked
+off from its actual Brightspace brief in a dedicated 10-minute presentation, not
+improvised in passing. (3) Compressing Phases 1–2 (P1 = M1–M4, P2 = M5–M11) ends
+new lecture content on Wed Sep 16 (week 4), so the technical Phase 3 material
+arrives a week earlier and design work has more runway before the URC gate.
+
+Studio work blocks stay varied, not mechanical: status/blocker declaration →
+individual production with 5-min rotating instructor consultations →
+cross-disciplinary peer review → revision → submission check + next-action
+commitment. With 5 students, most studios include short milestone presentations
+(30-sec/2-min/3-min pitch, gallery walk, walkthrough, hot seat, table read); a few
+milestone presentations sit on Mon/Wed where hard dates force it (see
+`PROJECT_MILESTONES.md`).
 
 ## 7. Milestone system (markdown deliverables → Brightspace)
 
 Instructions + rubric per milestone in `_research_project/2026Fall/` (MGMT 474
 `_final_project` pattern). The brief's M00–M23 are preserved as graded, submittable
 milestones with **develop → present → submit → revise** cadence; each has ≥1 prior
-in-class development meeting and a presentation/review activity. Full development /
-presentation / submission / revision dates: `planning/MILESTONE_PRESENTATION_MAP.md`.
+in-class development meeting and a presentation/review activity, and each is kicked
+off from its Brightspace brief at a Friday studio (exceptions listed in
+`PROJECT_MILESTONES.md`). Full development / presentation / submission / revision
+dates: `planning/MILESTONE_PRESENTATION_MAP.md`.
 The five students each carry **one individual project** to a required URC poster
 (Nov 17) and a reproducible final dossier (Dec 11).
 

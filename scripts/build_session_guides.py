@@ -4,11 +4,16 @@ instructor from planning/MEETING_SCHEDULE.csv.
 
 One guide per topic notebook (session_guides/NN_session_guide.md, gitignored;
 this generator is tracked so the guides are always reproducible). Each guide
-covers every MWF meeting its notebook absorbs (parsed from the schedule's
-`other_material` column) and lays out, per meeting: the driving questions, the
+covers every session its notebook absorbs (parsed from the schedule's
+`other_material` column) and lays out, per session: the driving questions, the
 claim boundary, a minute-by-minute run of show (parsed from `minute_dynamic`),
 read-aloud openers, hands-on/practice moves, the milestone moment, instructor
 prep, risks, and the exit ticket.
+
+Sessions are labeled by kind (D13 — no dates, no meeting numbers anywhere):
+"Lecture i of N" (Mon/Wed content), "Studio Friday" (recap + milestone kickoff
++ project work), or "Async module". Labels come from lecture_labels() in
+notebooks_map.py; voice_check_guides.py fails any guide carrying a date.
 
 Voice rule: read-aloud blockquotes must speak TO the class (voice_check_guides.py
 audits every `> ` line). Any schedule text that mentions "students"/"the
@@ -26,7 +31,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 import sys
 sys.path.insert(0, str(REPO / "scripts"))
-from notebooks_map import NOTEBOOKS, student_filename  # noqa: E402
+from notebooks_map import (NOTEBOOKS, student_filename, nb_of as nb_of_material,  # noqa: E402
+                           session_kind, lecture_labels)
 
 SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.csv"
 OUT = REPO / "session_guides"
@@ -91,15 +97,30 @@ def run_of_show(minute_dynamic: str) -> list[str]:
 
 
 def nb_of(meeting: dict) -> int | None:
-    m = re.search(r"nb(\d\d)", meeting.get("other_material", ""))
-    return int(m.group(1)) if m else None
+    return nb_of_material(meeting.get("other_material", ""))
 
 
-def meeting_section(m: dict) -> str:
+def session_heading(m: dict, labels: dict[int, tuple[int, int, int]]) -> str:
+    kind = session_kind(m)
+    title = m["title"]
+    for prefix in ("Studio Friday — ", "ASYNC — "):
+        title = title.removeprefix(prefix)
+    if kind == "async":
+        return f"## Async module — {title}"
+    if kind == "studio":
+        return f"## Studio Friday — {title}"
+    lab = labels.get(int(m["meeting"]))
+    if lab:
+        _nb, i, n = lab
+        return f"## Lecture {i} of {n} — {title}"
+    return f"## Lecture — {title}"
+
+
+def meeting_section(m: dict, labels: dict[int, tuple[int, int, int]]) -> str:
     lines = []
-    lines.append(f"## Meeting M{m['meeting']} — {m['title']}")
+    lines.append(session_heading(m, labels))
     lines.append("")
-    lines.append(f"*{m['day']} {m['date']} · {m['modality']} · {m['unit']}*")
+    lines.append(f"*{m['modality']} · {m['unit']}*")
     lines.append("")
     lines.append(f"**Driving question:** {m['driving_question']}")
     if clean(m.get("secondary_questions")):
@@ -180,14 +201,24 @@ def main() -> None:
         if n is not None:
             by_nb.setdefault(n, []).append(m)
 
+    labels = lecture_labels(meetings)
+
     OUT.mkdir(exist_ok=True)
     for n, (slug, title) in sorted(NOTEBOOKS.items()):
         ms = by_nb.get(n, [])
         if not ms:
             continue
-        span = f"M{ms[0]['meeting']}" if len(ms) == 1 else \
-            f"M{ms[0]['meeting']}–M{ms[-1]['meeting']}"
-        dates = ", ".join(f"{m['day']} {m['date']}" for m in ms)
+        kinds = [session_kind(m) for m in ms]
+        parts = []
+        if kinds.count("lecture"):
+            c = kinds.count("lecture")
+            parts.append(f"{c} lecture{'s' if c > 1 else ''}")
+        if kinds.count("studio"):
+            c = kinds.count("studio")
+            parts.append(f"{c} studio Friday{'s' if c > 1 else ''}")
+        if kinds.count("async"):
+            parts.append("1 async module" if kinds.count("async") == 1
+                         else f"{kinds.count('async')} async modules")
         fname = student_filename(n)
         head = [
             f"# Session Guide — nb{n:02d} · {title}",
@@ -196,7 +227,7 @@ def main() -> None:
             f"`planning/MEETING_SCHEDULE.csv` — edit the schedule data and "
             f"regenerate; do not hand-edit. Gitignored; instructor-only.)*",
             "",
-            f"**Meetings:** {span} ({dates})",
+            f"**Sessions:** {' + '.join(parts)}",
             f"**Student notebook:** `notebooks/student/{fname}` · "
             f"[open in Colab]({COLAB.format(fname=fname)})",
             f"**Compass focus across the span:** "
@@ -208,10 +239,10 @@ def main() -> None:
             "---",
             "",
         ]
-        body = "\n---\n\n".join(meeting_section(m) for m in ms)
+        body = "\n---\n\n".join(meeting_section(m, labels) for m in ms)
         out = OUT / f"{n:02d}_session_guide.md"
         out.write_text("\n".join(head) + body)
-        print(f"✓ wrote {out.relative_to(REPO)} ({len(ms)} meeting(s))")
+        print(f"✓ wrote {out.relative_to(REPO)} ({len(ms)} session(s))")
 
     print(f"✓ {len(by_nb)} guides generated")
 
