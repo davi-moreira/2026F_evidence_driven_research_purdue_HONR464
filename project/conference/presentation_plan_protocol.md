@@ -15,7 +15,7 @@ claim.
 ## Materials
 
 - Your final poster (content internalized, headline claim sayable cold).
-- Your inquiry declaration §4–5 (the boundary you must not cross aloud).
+- Your inquiry declaration §5–6 (the boundary you must not cross aloud).
 - Your uncertainty line and the limitation you'll speak (feeds M14).
 - A partner and a timer for the delivery rounds.
 

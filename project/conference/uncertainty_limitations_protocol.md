@@ -16,7 +16,7 @@ rule); the ULN is how you honor that out loud.
 ## Materials
 
 - Your findings and your uncertainty line (from the poster).
-- The one limitation that most threatens your claim (from inquiry declaration §6).
+- The one limitation that most threatens your claim (from inquiry declaration §7).
 - A partner and the strength-not-apology scale (below).
 
 ## The ULN move (uncertainty → limitation → next step)
