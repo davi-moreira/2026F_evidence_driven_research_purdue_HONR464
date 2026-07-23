@@ -68,8 +68,8 @@ pathway**: one of the five design-library pathways for the Weeks 5–9 topics
 generalization (descriptive · population) | prediction (descriptive · unseen
 cases) | causal reasoning | all positions (framing/diagnosis/communication)]
 
-**Design pathway (Weeks 5–9 only):** [observational descriptive | observational
-causal | experimental descriptive | prediction | experimental causal]
+**Design pathway:** [observational descriptive | observational causal |
+experimental descriptive | prediction | experimental causal | cross-cutting]
 
 | | |
 |---|---|
