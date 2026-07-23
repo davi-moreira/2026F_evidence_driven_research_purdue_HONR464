@@ -373,7 +373,7 @@ asserts, by exact marker string:
 | 1 | Topic header | `**Topic NN · N lecture(s)**` or `**Topic NN · async module**` | =1, count matches `lecture_labels()` |
 | 2 | Colab badge | `colab.research.google.com/github/...nbNN_..._student.ipynb` | =1 |
 | 3 | Inquiry block | `## 🧭 Inquiry & Claim Boundary` with `**Inquiry emphasis:**`, `**Design pathway:**`, PERMITS + does-NOT-permit rows, `*Provenance:` | all present |
-| 4 | Objectives | `## Learning Objectives` | =1 |
+| 4 | Objectives | `By the end of this notebook, you will be able to:` | =1 |
 | 5 | Setup | `SEED = 464` + `default_rng`; `seaborn` absent notebook-wide | required |
 | 6 | Lecture heads | `# Lecture i` per schedule; one `### 🧩 Research Puzzle` per lecture (exempt: nb13) | exact |
 | 7 | Moves | `### 🔮 Pause & Predict`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Reading the Evidence`, `### 🎯 Project Transfer`, `### 🛡️ Exit Defense` | ≥1 each |

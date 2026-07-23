@@ -110,6 +110,14 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
         errs.append("missing Sources & Provenance section")
     if "By the end of this notebook" not in text:
         errs.append("missing learning objectives")
+    if not re.search(r"\*\*Topic \d", text):
+        errs.append("missing '**Topic NN · …**' header line")
+    if "colab.research.google.com/github/" not in text:
+        errs.append("missing Colab badge")
+    if not re.search(r"^\s*##[^\n]*Wrap-?Up", text, re.M | re.I):
+        errs.append("missing Wrap-Up section")
+    if "Thank you!" not in text:
+        errs.append("missing final thank-you cell")
 
     for name, pat in MOVES.items():
         if name == "Runnable activity" and nb_num in RUNNABLE_EXEMPT:
@@ -134,6 +142,9 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
     if n_gem < 3:
         errs.append(f"only {n_gem} Gemini Prompt block(s) — frame requires ≥3 "
                     f"(one before every substantive code chunk)")
+    if text.count("After running, verify") < n_gem:
+        errs.append("each Gemini Prompt must be followed by an "
+                    "'After running, verify' checklist")
     n_qa = text.count("A question that often comes up here")
     if n_qa < 3:
         errs.append(f"only {n_qa} 'A question that often comes up here' "
@@ -141,6 +152,8 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
 
     if "SEED = 464" not in code:
         errs.append("setup cell missing SEED = 464")
+    if "default_rng" not in code:
+        errs.append("setup cell missing np.random.default_rng(SEED)")
     if "seaborn" in text or re.search(r"\bimport sns\b|\bsns\.", code):
         errs.append("seaborn detected (forbidden)")
     if "INSTRUCTOR SOLUTION" in text:
