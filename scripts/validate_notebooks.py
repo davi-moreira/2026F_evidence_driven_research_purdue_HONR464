@@ -1,24 +1,34 @@
 #!/usr/bin/env python3
-"""validate_notebooks.py — template-conformance gate for the topic notebooks.
+"""validate_notebooks.py — template-conformance gate for the topic notebooks (v2).
 
-Checks every STUDENT notebook in notebooks/student/ against the canonical
-template (_project_docs/ACTIVITY_TEMPLATE.md):
+Validates the v2 weekly notebooks registered in scripts/notebooks_map.py against
+the canonical template (_project_docs/ACTIVITY_TEMPLATE.md). Only registered v2
+notebooks are checked; stale v1 files (different slugs) are ignored — the
+registry is the single source of truth.
+
+Every STUDENT notebook must carry:
 
   * kernel metadata (python3), non-trivial cell count
   * the Inquiry & Claim Boundary block (inquiry emphasis + PERMITS/NOT rows)
-  * a provenance line + the Sources & Provenance section
+  * a provenance line + the Sources & Provenance section + learning objectives
   * the seven active-learning moves (Pause & Predict, Run-the-Study/Hands-On,
     Make a Design Choice, Practice, Reading the Evidence, Project Transfer,
-    Claim Ticket)
+    Exit Defense — the v2 closing move that replaces the Claim Ticket)
+  * the SRL opener: one `### 🧩 Research Puzzle` per `# Lecture N` (async-only
+    modules are exempt)
+  * the five required AI-collaboration blocks (SDIIVDD): AI Research Partner
+    briefing, Modify the Prompt, Interrogate the Output, Human-Only Checkpoint,
+    AI Research Ledger
+  * ≥3 Gemini prompt blocks and ≥3 inline Q&A blocks
   * setup discipline: SEED = 464, no seaborn anywhere
   * no INSTRUCTOR SOLUTION marker in a student file
-  * markdown hygiene: no unescaped $<digit> / ~<digit>
+  * markdown hygiene: no unescaped $<digit>
   * voice rule (delegates to voice_lint_notebooks)
 
 And every INSTRUCTOR notebook: carries >= 1 INSTRUCTOR SOLUTION cell and its
 student counterpart exists.
 
-Usage: python3 scripts/validate_notebooks.py [nbNN ...]   (default: all)
+Usage: python3 scripts/validate_notebooks.py [nbNN ...]   (default: all registered)
 """
 from __future__ import annotations
 
@@ -32,19 +42,35 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
 from voice_lint_notebooks import lint_notebook  # noqa: E402
+from notebooks_map import NOTEBOOKS, student_filename, instructor_filename  # noqa: E402
 
+# Headings are matched by their name text at level-3, robust to emoji variation
+# (e.g. the 🧑‍⚖️ ZWJ sequence). The Runnable move keeps its emoji marker because
+# its wording varies ("Run the Study" / "Hands-On: …").
 MOVES = {
-    "Pause & Predict": re.compile(r"###\s*🔮\s*Pause & Predict"),
-    "Runnable activity": re.compile(r"###\s*🛠️"),
-    "Make a Design Choice": re.compile(r"###\s*⚖️\s*Make a Design Choice"),
-    "Practice": re.compile(r"###\s*📝\s*Practice"),
-    "Reading the Evidence": re.compile(r"###\s*🔍\s*Reading the Evidence"),
-    "Project Transfer": re.compile(r"###\s*🎯\s*Project Transfer"),
-    "Claim Ticket": re.compile(r"###\s*🎟️\s*Claim Ticket"),
+    "Pause & Predict": re.compile(r"^\s*###[^\n]*Pause & Predict", re.M),
+    "Runnable activity": re.compile(r"^\s*###\s*🛠️", re.M),
+    "Make a Design Choice": re.compile(r"^\s*###[^\n]*Make a Design Choice", re.M),
+    "Practice": re.compile(r"^\s*###[^\n]*Practice", re.M),
+    "Reading the Evidence": re.compile(r"^\s*###[^\n]*Reading the Evidence", re.M),
+    "Project Transfer": re.compile(r"^\s*###[^\n]*Project Transfer", re.M),
+    "Exit Defense": re.compile(r"^\s*###[^\n]*Exit Defense", re.M),
 }
 
+# The high-intensity AI-collaboration blocks (SDIIVDD); each required ≥1.
+AI_BLOCKS = {
+    "AI Research Partner briefing": re.compile(r"^\s*###[^\n]*AI Research Partner", re.M),
+    "Modify the Prompt": re.compile(r"^\s*###[^\n]*Modify the Prompt", re.M),
+    "Interrogate the Output": re.compile(r"^\s*###[^\n]*Interrogate the Output", re.M),
+    "Human-Only Checkpoint": re.compile(r"^\s*###[^\n]*Human-Only Checkpoint", re.M),
+    "AI Research Ledger": re.compile(r"^\s*###[^\n]*AI Research Ledger", re.M),
+}
 
-def check_student(path: Path) -> list[str]:
+PUZZLE_RE = re.compile(r"^\s*###[^\n]*Research Puzzle", re.M)
+LECTURE_RE = re.compile(r"^\s*#\s*Lecture\s+\d", re.M)
+
+
+def check_student(path: Path, is_async: bool) -> list[str]:
     nb = nbformat.read(path, as_version=4)
     text = "\n\n".join(c.source for c in nb.cells)
     code = "\n\n".join(c.source for c in nb.cells if c.cell_type == "code")
@@ -72,6 +98,19 @@ def check_student(path: Path) -> list[str]:
     for name, pat in MOVES.items():
         if not pat.search(text):
             errs.append(f"missing required move: {name}")
+
+    for name, pat in AI_BLOCKS.items():
+        if not pat.search(text):
+            errs.append(f"missing required AI-collaboration block: {name}")
+
+    # SRL opener: one Research Puzzle per lecture (async-only modules exempt).
+    n_puzzle = len(PUZZLE_RE.findall(text))
+    n_lecture = len(LECTURE_RE.findall(text))
+    if not is_async:
+        need = max(1, n_lecture)
+        if n_puzzle < need:
+            errs.append(f"only {n_puzzle} '🧩 Research Puzzle' opener(s) — need "
+                        f"{need} (one per lecture; {n_lecture} '# Lecture N' heading(s))")
 
     n_gem = text.count("💡 **Gemini Prompt")
     if n_gem < 3:
@@ -115,37 +154,55 @@ def check_instructor(path: Path) -> list[str]:
     return errs
 
 
+def _selected(only: set[str]) -> list[int]:
+    """Registered notebook numbers, optionally filtered by nbNN args."""
+    nums = sorted(NOTEBOOKS)
+    if only:
+        wanted = {int(m.group(1)) for o in only
+                  if (m := re.search(r"nb?0*(\d+)", o))}
+        nums = [n for n in nums if n in wanted]
+    return nums
+
+
 def main() -> None:
     only = set(sys.argv[1:])
-    students = sorted((REPO / "notebooks" / "student").glob("nb*_student.ipynb"))
-    instructors = sorted((REPO / "notebooks" / "instructor").glob("nb*_instructor.ipynb"))
-    if only:
-        students = [p for p in students if any(o in p.name for o in only)]
-        instructors = [p for p in instructors if any(o in p.name for o in only)]
-    if not students and not instructors:
-        print("validate_notebooks: no notebooks found yet")
-        return
+    student_dir = REPO / "notebooks" / "student"
+    instructor_dir = REPO / "notebooks" / "instructor"
 
+    checked_s = checked_i = 0
     failed = False
-    for p in students:
-        errs = check_student(p)
-        if errs:
-            failed = True
-            print(f"✗ {p.name}")
-            for e in errs:
-                print("    " + e)
-        else:
-            print(f"✓ {p.name}")
-    for p in instructors:
-        errs = check_instructor(p)
-        if errs:
-            failed = True
-            print(f"✗ {p.name}")
-            for e in errs:
-                print("    " + e)
+    for n in _selected(only):
+        title = NOTEBOOKS[n][1]
+        is_async = title.lower().startswith("async module")
+
+        sp = student_dir / student_filename(n)
+        if sp.exists():
+            checked_s += 1
+            errs = check_student(sp, is_async)
+            if errs:
+                failed = True
+                print(f"✗ {sp.name}")
+                for e in errs:
+                    print("    " + e)
+            else:
+                print(f"✓ {sp.name}")
+
+        ip = instructor_dir / instructor_filename(n)
+        if ip.exists():
+            checked_i += 1
+            errs = check_instructor(ip)
+            if errs:
+                failed = True
+                print(f"✗ {ip.name}")
+                for e in errs:
+                    print("    " + e)
+
+    if checked_s == 0 and checked_i == 0:
+        print("validate_notebooks: no registered v2 notebooks built yet")
+        return
     if failed:
         sys.exit(1)
-    print(f"✓ all checks passed ({len(students)} student, {len(instructors)} instructor)")
+    print(f"✓ all checks passed ({checked_s} student, {checked_i} instructor)")
 
 
 if __name__ == "__main__":
