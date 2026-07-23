@@ -325,6 +325,40 @@ Thank you!
 
 ---
 
+## Prototype lessons (P3 review) — binding for every notebook
+
+Encoded from `planning/QUALITY_REPORT_P3.md` after the Week-5 prototype review;
+the P4 scale inherits these as hard rules:
+
+1. **⏸ In-class demarcation (machine-checked):** every lecture carries exactly
+   one demarcation cell — `⏸ **You have reached the end of the in-class
+   block.**` + one sentence telling the reader to finish the rest before the
+   next lecture. The IN-CLASS portion above it must realistically fit the
+   22/23-minute investigation frame (puzzle + core concepts + ONE live Gemini
+   prompt + the central run + reading-the-evidence). ⚖️ Design Choice,
+   📝 Practice, and extra prompts live below the line as homework depth.
+2. **One live prompt per lecture:** exactly one Gemini prompt per lecture is
+   marked for in-class use; the others say "homework depth". Never three AI
+   round-trips inside one SRL block.
+3. **Prompt-sequence standard:** every Gemini prompt block = a one-line human
+   commitment cell above it → a delegable task (locate / list-to-verify /
+   red-team / explain-code-to-confirm), never re-explaining the notebook's own
+   prose → at least one follow-up or interrogation move → a verify checklist
+   that names the ai_error_taxonomy failure it counters and checks the cell's
+   actual printed numbers.
+4. **Predict-before-reveal, always:** every reveal (not just one) is gated by a
+   commit or 🔮 Pause & Predict; reveal prose never shares a cell with its
+   commit prompt.
+5. **Vocabulary continuity contract:** every term the week's milestone rubric
+   grades is taught in that week's notebook (bold → plain definition →
+   example) under the SAME name the brief uses.
+6. **Figure accessibility:** a one-line plain-language description under every
+   figure; no color-only encodings; never reuse the "error" hue for the
+   "truth" reference.
+7. **Edit-safe scaffolds:** any code cell the reader is told to modify keeps a
+   single source of truth for names/positions (derive everything downstream
+   from the variables being edited).
+
 ## Voice rules (CLAUDE.md critical rule — zero tolerance)
 
 Student-facing cells speak TO the reader (`you`), never ABOUT "students", never

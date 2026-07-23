@@ -140,6 +140,11 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
         if n_puzzle < need:
             errs.append(f"only {n_puzzle} '🧩 Research Puzzle' opener(s) — need "
                         f"{need} (one per lecture; {n_lecture} '# Lecture N' heading(s))")
+        # P3 lesson 1: one ⏸ in-class/homework demarcation cell per lecture.
+        n_pause = text.count("⏸")
+        if n_pause < need:
+            errs.append(f"only {n_pause} '⏸' in-class demarcation cell(s) — need "
+                        f"{need} (one per lecture; template 'Prototype lessons' §1)")
 
     n_gem = text.count("💡 **Gemini Prompt")
     if n_gem < 4:
