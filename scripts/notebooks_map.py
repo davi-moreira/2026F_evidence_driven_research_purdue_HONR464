@@ -46,8 +46,23 @@ REPO_SLUG = "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
 # no schedule badge, and no per-lecture structure. Built ad hoc as each milestone
 # package ships; not every id is present until P4 completes.
 MS_NOTEBOOKS = {
-    4: ("ms04_observational_descriptive_audit",
+    0:  ("ms00_research_ai_baseline", "M0 studio — research and AI baseline"),
+    1:  ("ms01_research_opportunity_landscape", "M1 studio — research opportunity landscape"),
+    2:  ("ms02_verified_evidence_map", "M2 studio — verified evidence and contribution map"),
+    3:  ("ms03_research_charter_mida", "M3 studio — research charter and MIDA declaration"),
+    4:  ("ms04_observational_descriptive_audit",
         "M4 studio — observational descriptive design audit"),
+    5:  ("ms05_causal_identification", "M5 studio — causal identification or boundary (async)"),
+    6:  ("ms06_experimental_measurement_protocol", "M6 studio — experimental measurement protocol + abstract gate"),
+    7:  ("ms07_declared_analysis_protocol", "M7 studio — declared analysis protocol"),
+    8:  ("ms08_minimum_viable_analysis", "M8 studio — minimum viable analysis"),
+    9:  ("ms09_poster_draft_research_audit", "M9 studio — poster draft 1 and research audit"),
+    10: ("ms10_final_poster_lock", "M10 studio — final poster lock (terminal)"),
+    11: ("ms11_presentation_package", "M11 studio — presentation package + mock symposium"),
+    12: ("ms12_conference_reflection", "M12 studio — conference reflection and criticism portfolio"),
+    13: ("ms13_replication_redteam", "M13 module — replication and red-team (async)"),
+    14: ("ms14_research_note_capsule", "M14 studio — research note and reproducibility capsule"),
+    15: ("ms15_final_chapter_portfolio", "M15 studio — final chapter, portfolio + ceremony (terminal)"),
 }
 
 
