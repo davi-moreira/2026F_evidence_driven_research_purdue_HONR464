@@ -10,10 +10,20 @@ quality bar: `planning/QUALITY_REPORT_P3.md`. v1 preserved at git tag
 `v1-compass-build`; v1 notebook sources archived in
 `_production_kit/nb_sources_v1/`.
 
+> ## ✅ v2 BUILD COMPLETE (2026-07-23)
+> All seven phases done: spine, resources, prototype (3-reviewer pass), 16
+> notebooks + 16 milestone packages, GenAI Studio suite, 37-chapter book, and
+> the Phase-7 cross-course + adversarial audit (0 critical) with Stage-8 fixes
+> applied and Stage-9 validation verified. Full battery green; site + book live;
+> instructor repo synced. Remaining items are instructor course-design decisions,
+> not defects — see `planning/FINAL_REPORT_V2.md` (Stage-8 outcomes + deferred
+> items). v1 preserved at tag `v1-compass-build`; v2 shipped at `v2-audit-shipped`.
+
 Last updated: 2026-07-23, after **Phase 4 COMPLETE** (all 16 notebooks + 16
 studios + 16 briefs built and gate-green; a second completion workflow ran
 14/14 agents clean after the rate limit reset). Adversarial verify pass on the
-15 workflow-built notebooks is RUNNING.
+15 workflow-built notebooks COMPLETE (15/15 clean). Phase 6 book + Phase 7 audit
++ Stage-8 fixes COMPLETE.
 
 ## DONE (committed + pushed + rendered + instructor-repo synced)
 

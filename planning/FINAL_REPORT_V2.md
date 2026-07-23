@@ -233,3 +233,76 @@ reconciliation pass in Stage-8.
 
 *Prepared by the Phase-7 lead reviewer, synthesizing 11 independent auditors.
 Companion: `planning/AUDIT_FIXLIST.md` (severity-ranked fix list driving Stage-8).*
+
+---
+
+## Stage-8 revision outcomes (2026-07-23)
+
+All **11 HIGH** findings and the load-bearing mediums are resolved; the full
+validator battery is green and the site + book re-rendered.
+
+**Fixed (committed):**
+- **H1/H2/H7/M-PE1/M-PE2** — the poster + conference protocol suite (9 docs) and
+  `MILESTONE_PRESENTATION_MAP.md` migrated off v1 M00–M23 to v2 M0–M15; every
+  dangling "Governs" link repointed to an existing brief; a single poster rubric
+  (milestone_10); an Accessibility audit added to the red-team protocol; the
+  schedule-data references corrected so the published schedule shows real
+  readings.
+- **H3** — the AI Research Ledger's 8th field is "responsible researcher" in the
+  syllabus, matching everywhere else.
+- **H4** — the four required GenAI Studio touchpoints (M5/M7/M9/M13) are now the
+  single required set; the M6/M8 briefs reframe their reviewer consult as
+  optional (Gemini or a Studio role), removing the contradiction.
+- **H5/H6** — the 7 book chapters' verification-guide links and the
+  `callingbullshit.org/tools` link (404) fixed; both now resolve.
+- **H8** — nb15 gains a six-level AI-capability-taxonomy cell (this week = level 4;
+  levels 5–6 named and marked as NOT used), closing the "agentic overreach" gap.
+- **H9/M-GO1** — `agent_role_cards.md` reconciled (all 13 roles are Studio custom
+  models; 8 also runnable as Gemini prompts); the multi-model lesson corrected to
+  point at nb09.
+- **M-C1/M-R1/M-R2/M-BA1** — INQUIRY_MAP pathway count; nb08 hidden-state; the
+  data-README course-use column; and `audit_sources.py` now gates the 37 book
+  chapters (blocklist).
+
+**Deferred to the instructor as course-design decisions (NOT changed
+unilaterally — they move validated calendar anchors or add scope):**
+- **H10 / M-F1 / M-F2 — end-of-term deadline density.** M13 (Sun Nov 29, over
+  Thanksgiving) → M14 (Fri Dec 4) → terminal M15 (Fri Dec 11) stack three heavy
+  deliverables with no slack. Options: push M14 to Mon Dec 7; make M13's red-team
+  optional; decouple the URC-abstract internal gate from the crowded Oct 9 studio;
+  designate one no-new-milestone consolidation studio (e.g. after the M8 peak).
+- **H11 — Week 9 peak.** nb08 (the most demanding notebook) coincides with M8
+  (first real computed estimate). Consider a fill-in-the-blank worked exemplar or
+  capping M8's first estimate to one number for causal/experimental projects.
+- **M-F3 — workload transparency.** Add a credit-hours + expected-weekly-hours
+  line to the syllabus and a one-line effort budget to each brief.
+- **M-SB1 — STEM-dataset concentration.** All five shipped datasets are
+  social/political science; the book teaches field-diverse examples but every
+  in-lab dataset is civic. Consider shipping ≥1 STEM teaching CSV (environmental
+  sensor / agronomy trial / materials) and routing 1–2 labs (nb04, nb08) to it,
+  or a one-sentence framing per `load_course_data` cell. (Own-field data enters
+  through each student's project.)
+
+The remaining LOW findings (18) are cosmetic polish batched for a future pass.
+
+## Stage-9 final validation — verified
+
+- Every class totals 50 planned minutes (session-guide generator asserts the sum;
+  regenerates clean). Mon/Wed run 4 sections with a central 22–23-min AI
+  investigation; every Mon/Wed from Week 2 is Student-Research-Lead-led (**25
+  slots, exactly 5 per student**).
+- Every notebook carries the machine-checked AI-intensity contract (≥4 Gemini
+  prompt sequences, prompt modification, output interrogation, Human-Only
+  Checkpoint, AI Research Ledger, Exit Defense) + a runnable/human-verification
+  step. All 16 executed clean and passed the adversarial verify pass.
+- Every Friday advances the project; poster locked **Fri Nov 6**; conference prep
+  precedes the **Tue Nov 17** Expo; **Wed Nov 18 is no class**; Thanksgiving work
+  is the async nb13/M13; post-conference work spans reflection (M12), replication
+  (M13), research note (M14), and the multi-agent chapter + portfolio (M15).
+- Book, site, notebooks, milestones, and rubrics are synchronized and gate-checked
+  (validate_book_sync, validate_coverage, validate_milestones, validate_notebooks,
+  voice_lint, audit_sources incl. the book). No hardcoded secrets; no substantive
+  placeholders. **0 critical findings.**
+
+**Status: the v2 course ecosystem is complete and internally consistent.** The
+deferred items above are the instructor's calls, not defects.
