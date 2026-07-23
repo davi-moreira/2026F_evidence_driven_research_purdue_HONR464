@@ -111,3 +111,7 @@ activities/*_files/
 ~$*
 
 **/*.quarto_ipynb
+
+# agent scratch files (number re-derivation during verify passes)
+scratch_*.py
+scratch_*.ipynb
