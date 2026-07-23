@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """validate_coverage.py — cross-artifact consistency gates.
 
-  1. Every meeting (44) names exactly one topic notebook, and every notebook
-     (nb00–nb19) is named by >= 1 meeting.
+  1. Every meeting (43) names exactly one topic notebook, and every notebook
+     (nb00–nb15) is named by >= 1 meeting.
   2. Every referenced notebook's STUDENT file exists (skippable pre-Phase-D
      with --plan, which only checks the mapping).
   3. Readings-vs-inventory: every RDSS chapter cited in the schedule is in the
@@ -33,7 +33,7 @@ DATA_DIR = REPO / "notebooks" / "data"
 VALID_CHAPTERS = set(range(1, 14)) | set(range(15, 20)) | {21, 22, 23, 24}
 SHIPPED = {"lapop_brazil", "la_voter_file", "foos_etal", "cliningsmith_etal",
            "bonilla_tillery"}
-DATASET_OK_WORDS = {"none", "inline", "simulat", "own", "toy", "planted",
+DATASET_OK_WORDS = {"none", "inline", "simulat", "own", "toy",
                     "embedded", "student", "mini-table", "each", "defenders",
                     "class", "archive", "package", "poster", "brief", "ledger",
                     "sample", "10-row", "citation list", "conference",
@@ -46,8 +46,8 @@ def main() -> None:
 
     with open(SCHEDULE, newline="") as f:
         rows = list(csv.DictReader(f))
-    if len(rows) != 44:
-        errs.append(f"schedule has {len(rows)} rows, expected 44")
+    if len(rows) != 43:
+        errs.append(f"schedule has {len(rows)} rows, expected 43")
 
     # 1 + 2: meeting <-> notebook mapping
     seen_nbs = set()
@@ -101,8 +101,9 @@ def main() -> None:
             print("  " + e)
         sys.exit(1)
     mode = "plan-level" if plan_only else "full (files on disk)"
-    print(f"✓ coverage clean — 44 meetings ↔ 20 notebooks, readings within the "
-          f"verified inventory, datasets shipped, provenance well-formed [{mode}]")
+    print(f"✓ coverage clean — 43 meetings ↔ {len(NOTEBOOKS)} notebooks, readings "
+          f"within the verified inventory, datasets shipped, provenance "
+          f"well-formed [{mode}]")
 
 
 if __name__ == "__main__":

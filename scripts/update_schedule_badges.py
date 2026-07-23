@@ -4,7 +4,7 @@ schedule, adding a Colab badge for every topic notebook whose STUDENT file
 exists in notebooks/student/.
 
 This is the single source of truth for the public schedule page: one row per
-MWF meeting (44 rows), grouped by course phase, generated from
+MWF meeting (43 rows), grouped by course week, generated from
 planning/MEETING_SCHEDULE.csv + scripts/notebooks_map.py. Badges appear
 automatically as each nbNN_*_student.ipynb is finalized — run this after
 generating a student notebook (also wired as a Claude Code PostToolUse hook).
@@ -155,7 +155,8 @@ def build() -> str:
         if r["meeting"] == "35":
             lines.append(
                 "| — | Tue Nov 17 | **🎓 Purdue Fall Undergraduate Research "
-                "Expo — REQUIRED poster presentation (M16)** | | M16 | URC Expo |"
+                "Expo — REQUIRED poster presentation (graded M12 component)** "
+                "| | M12 | URC Expo |"
             )
 
     lines.append("\n:::")
@@ -174,7 +175,8 @@ def main() -> None:
     OUT.write_text(content)
     tracked = tracked_students()
     built = sum(1 for n in NOTEBOOKS if student_filename(n) in tracked)
-    print(f"✓ schedule.qmd regenerated — {built}/20 notebook badges live (git-tracked only)")
+    print(f"✓ schedule.qmd regenerated — {built}/{len(NOTEBOOKS)} notebook "
+          f"badges live (git-tracked only)")
 
 
 if __name__ == "__main__":
