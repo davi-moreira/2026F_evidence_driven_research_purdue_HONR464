@@ -24,8 +24,9 @@ the checks live outside the model.
 **1. Confident fabrication.** The model invents something that does not exist and
 presents it with full confidence: a citation with real-sounding authors, a
 precise statistic, a function that was never in the library.
-- *Example:* asked for sources, it returns "Chen & Alvarez (2019), *Journal of
-  Educational Psychology*" for a paper that does not exist.
+- *Example:* asked for sources, it returns a citation with a plausible author
+  pairing, a recent year, and a real-sounding journal for a paper that does not
+  exist.
 - *Detect:* try to independently locate the exact thing. If you can't find it in
   seconds where it should live, treat it as fabricated until proven otherwise.
 - *Counter:* **primary-source reading** for citations and facts;
