@@ -174,7 +174,7 @@ settled it.
 The chapter's key result is that confidence never certifies truth: a winning number
 can be manufactured by searching, and a confident flag can be pure invention.
 Confirm it yourself with **simulation** (from the
-[verification guide](../../ai_resources/verification_guide.md)). Benchmark an
+[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)). Benchmark an
 unchanged build against an identical copy of itself, so the true difference is zero
 by construction, then slice the runs by input size and let a searcher report the
 best-looking slice. Watch a "speedup" appear from nothing. For the specific number,

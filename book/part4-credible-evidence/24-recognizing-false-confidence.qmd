@@ -145,7 +145,7 @@ reach, and both failures were invisible until you checked outside the model.
 
 The chapter's key result is that a confident summary's number can be flatly wrong.
 Confirm it yourself with **direct calculation** (from the
-[verification guide](../../ai_resources/verification_guide.md)): recompute the
+[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)): recompute the
 before-mean and the after-mean by hand, or with a second simple expression, and
 subtract. If the change you get differs from the AI's figure, the figure was never
 evidence. For extra assurance, use **alternative code**: compute the same difference a

@@ -1,9 +1,10 @@
 # The model-disagreement laboratory
 
-*A lesson protocol for GenAI Studio's multi-model comparison, used in Week 10's
-adversarial-review lecture (nb09) and again in Week 16 (nb15). You run the same
-prompt across two or more models, study where they disagree, and — the harder
-lesson — learn why their **agreement is not proof**.*
+*A lesson protocol for GenAI Studio's multi-model comparison. The lab runs in
+Week 10's adversarial-review lecture (nb09); it is an optional companion in Week
+16 (nb15) for anyone extending the correlated-error lesson into the final defense.
+You run the same prompt across two or more models, study where they disagree, and
+— the harder lesson — learn why their **agreement is not proof**.*
 
 The one-line takeaway: **disagreement is a flag to investigate; agreement is not a
 verdict.** Two models that were trained on overlapping data can be confidently
@@ -129,11 +130,13 @@ responsible researcher.
   Protocol A on a claim from your own project during the adversarial-review
   lecture, feeding the M9 research audit. Disagreement between models becomes a
   list of things to stress-test with the Robustness & Sensitivity Reviewer.
-- **Week 16 (nb15), "Managing multiple AI agents; the final defense."** You run all
-  three protocols as part of the AI-management capstone, and you name — in
-  taxonomy terms — why comparing models by hand (level 4) is not the same as
-  trusting an autonomous consensus (levels 5–6 the course does not use). The
-  correlated-error lesson is exactly what a defense examiner will press on.
+- **Week 16 (nb15), "Managing multiple AI agents; the final defense" — optional
+  companion.** nb15 does not run this lab, but the correlated-error lesson it
+  teaches is exactly what a defense examiner will press on. If you want extra
+  practice before the defense, rerun Protocol A on a live project claim and be
+  ready to name — in taxonomy terms — why comparing models by hand (level 4) is
+  not the same as trusting an autonomous consensus (levels 5–6 the course does
+  not use).
 
 ---
 

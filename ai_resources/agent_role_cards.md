@@ -10,12 +10,14 @@ to you. Full system prompts live in `genai_studio/roles/`, not here.*
 
 ## How to read a card
 
-Two homes for these roles. **GenAI Studio custom models** are the course's
-purpose-built reviewer bench, wired to the course knowledge base and used at
-graded milestone touchpoints. **Gemini prompted roles** you create yourself in
-Colab by pasting the role's briefing at the top of a chat. The card tags which is
-which. Every card ends with an **escalation line** because every role informs a
-decision that stays yours (see the
+**Every one of these thirteen roles is built as a GenAI Studio custom model** —
+the course's purpose-built reviewer bench, wired to the course knowledge base and
+shared to the course group. Five of them are **required graded touchpoints** (the
+M5, M7, M9, and M13 consults); each of those cards names its milestone. The other
+eight roles have **both homes**: they live as GenAI Studio custom models *and* you
+can run them as **Gemini-prompted roles** in Colab by pasting the role's briefing
+at the top of a chat. The card tags each role's home(s). Every card ends with an
+**escalation line** because every role informs a decision that stays yours (see the
 [human responsibility checklist](human_responsibility_checklist.md)).
 
 Whichever role you consult, the same discipline applies: verify what it returns
@@ -23,7 +25,7 @@ and log it in your [AI Research Ledger](ai_research_ledger_template.md).
 
 ---
 
-## Framing and question roles (Gemini prompted)
+## Framing and question roles (both homes)
 
 ### Socratic Research Tutor
 - **Purpose:** helps you think, by asking rather than answering. Turns your half-formed idea into a sharper question through guided questioning.
@@ -53,7 +55,7 @@ and log it in your [AI Research Ledger](ai_research_ledger_template.md).
 
 ## Design roles (RDSS library pathways)
 
-### MIDA Design Reviewer *(Gemini prompted)*
+### MIDA Design Reviewer *(both homes)*
 - **Purpose:** checks that your Model, Inquiry, Data strategy, and Answer strategy fit together and actually answer your question.
 - **When to consult:** at M3 and whenever a design element changes.
 - **Give it:** your four MIDA components and your question.
@@ -61,7 +63,7 @@ and log it in your [AI Research Ledger](ai_research_ledger_template.md).
 - **Blind spots:** can bless a tidy-looking design that cannot identify what it claims. Format neatness is not soundness.
 - **Escalation line:** this role must hand back to you when the design is declared. You own the design and its defense.
 
-### Observational Descriptive Auditor *(Gemini prompted)*
+### Observational Descriptive Auditor *(both homes)*
 - **Purpose:** for observational descriptive work (Week 5), audits sampling frame, measurement, and whether a descriptive claim stays descriptive.
 - **When to consult:** M4, when building an observational descriptive design.
 - **Give it:** your sampling frame, your measures, and your intended claim.
@@ -77,7 +79,7 @@ and log it in your [AI Research Ledger](ai_research_ledger_template.md).
 - **Blind spots:** can generate plausible-but-wrong threats, or miss one specific to your setting. A threat is a lead to check, not a verdict.
 - **Escalation line:** this role must hand back to you when you decide which claims the evidence justifies, and whether a causal claim survives.
 
-### Experimental Design Reviewer *(Gemini prompted)*
+### Experimental Design Reviewer *(both homes)*
 - **Purpose:** reviews experimental designs (descriptive or causal) for assignment, blocking, and whether the design supports the intended answer objective.
 - **When to consult:** Weeks 7 and 9, when building an experimental design.
 - **Give it:** your assignment procedure, arms, and the inquiry the experiment serves.
@@ -121,7 +123,7 @@ and log it in your [AI Research Ledger](ai_research_ledger_template.md).
 - **Blind spots:** cannot actually run the notebook; a clean-run claim still needs a real restart-and-run-all by a human.
 - **Escalation line:** this role must hand back to you when you sign an attestation. Only a human clean run justifies "it reproduces."
 
-### Research-Note Reviewer *(Gemini prompted)*
+### Research-Note Reviewer *(both homes)*
 - **Purpose:** reviews your research note and brief for claims that outrun their ledger and caveats dropped under polish.
 - **When to consult:** M14, when drafting the note and brief.
 - **Give it:** your draft and your claim ledger.
@@ -129,7 +131,7 @@ and log it in your [AI Research Ledger](ai_research_ledger_template.md).
 - **Blind spots:** may smooth your writing into a stronger claim than the evidence supports; watch for the very upgrade you asked it to catch.
 - **Escalation line:** this role must hand back to you when you decide the final wording of a claim and its stated uncertainty.
 
-### AI Research Team Orchestrator *(Gemini prompted)*
+### AI Research Team Orchestrator *(GenAI Studio custom model — level 4, Week 16 / M15)*
 - **Purpose:** helps you plan how to split a task across several roles, in what order, and how to reconcile their outputs. Used in Week 16.
 - **When to consult:** M15, when running multiple roles on one task.
 - **Give it:** the task, the roles available, and your dependency questions.
