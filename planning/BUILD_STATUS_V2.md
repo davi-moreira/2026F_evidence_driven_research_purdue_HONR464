@@ -10,21 +10,47 @@ quality bar: `planning/QUALITY_REPORT_P3.md`. v1 preserved at git tag
 `v1-compass-build`; v1 notebook sources archived in
 `_production_kit/nb_sources_v1/`.
 
-Last updated: 2026-07-23, after Phase 4 wave 1 + a manual recovery pass (the
-Phase-4 workflow hit the session rate limit ~40% through; completed agents'
-work was salvaged from disk).
+Last updated: 2026-07-23, after **Phase 4 COMPLETE** (all 16 notebooks + 16
+studios + 16 briefs built and gate-green; a second completion workflow ran
+14/14 agents clean after the rate limit reset). Adversarial verify pass on the
+15 workflow-built notebooks is RUNNING.
 
 ## DONE (committed + pushed + rendered + instructor-repo synced)
 
 - **Phases 0–3, 5:** full v2 spine, all governance docs, all resource suites
   (SRL 8 · AI 9 · reproducibility 8 · GenAI Studio 18), course-level docs,
   hardened `ACTIVITY_TEMPLATE` + validators + generators + msNN build pipeline,
-  GitHub Actions CI, and the **fully-verified Week-5 prototype** (nb04 + M4)
-  that survived a 3-reviewer adversarial pass (all 12 must-fixes applied).
-- **12 / 16 topic notebooks built + validated + badged live:** nb00, nb01,
-  nb04, nb05, nb06, nb07, nb08, nb09, nb11, nb12, nb13, nb14.
-- **7 / 16 milestone briefs:** M0, M1, M4, M5, M8, M12, M13.
-- **4 / 16 studio notebooks built:** ms00, ms01, ms04, ms12.
+  GitHub Actions CI, the **fully-verified Week-5 prototype** (nb04 + M4, 12
+  must-fixes applied), and **Phase 6 groundwork** (BOOK_MAP 37-ch manifest +
+  `validate_book_sync.py`).
+- **16 / 16 topic notebooks** built + executed + validated + badged live
+  (nb00–nb15); **16 / 16 studio notebooks** (ms00–ms15); **16 / 16 milestone
+  briefs** (M0–M15). Full battery green: validate_calendar / build_meeting_schedule
+  / validate_milestones / validate_coverage (full file-level) / validate_notebooks
+  / voice_lint / audit_sources.
+
+## IN PROGRESS
+
+- **Adversarial verify pass** (workflow) on the 15 notebooks that skipped the
+  nb04-grade quality gate (all except nb04): re-derive numbers vs executed
+  output, orphan-requirement check vs brief, prompt-quality audit, fix + rebuild.
+
+## REMAINING after verify
+
+- **Phase 6:** author the 37 book chapters (part-waves, gated by
+  `validate_book_sync.py`) into `book/`; add the Book tab to `_quarto.yml`;
+  render to `docs/book/`.
+- **Phase 7:** cross-course audit (progression, workload, deadlines, terminology,
+  links, citations, book↔notebook sync), a final adversarial "assume-failure"
+  review, the Stage-9 validation checklist, and `planning/FINAL_REPORT_V2.md`.
+
+## SUPERSEDED (historical — the first Phase-4 workflow's partial state)
+
+The section below documented the mid-build remainder after the rate-limited
+first workflow; it is now fully resolved (all artifacts built). Retained for
+history only.
+
+## REMAINING (the completion pass — needs agent capacity; session limit resets 12:20 ET)
 
 ## REMAINING (the completion pass — needs agent capacity; session limit resets 12:20 ET)
 
