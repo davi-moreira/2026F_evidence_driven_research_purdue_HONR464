@@ -1,0 +1,48 @@
+name: validate
+
+# Static QA battery for HONR 46400. These gates read the committed files (no
+# notebook execution, no Quarto render) so they run fast and need no kernel.
+# They mirror the local hooks so a contributor WITHOUT the hooks still cannot
+# merge a schedule/milestone/voice/citation regression. Notebook execution and
+# the Quarto render remain local (see CLAUDE.md "Commit AND Render").
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  static-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install static-check dependencies
+        run: pip install nbformat pyyaml
+
+      - name: Calendar backbone (43 = 41 in-person + 2 async)
+        run: python3 scripts/validate_calendar.py --emit-csv
+
+      - name: Meeting schedule builds against the backbone (43 x 34)
+        run: python3 scripts/build_meeting_schedule.py
+
+      - name: Milestone system consistent (M0-M15 anchors)
+        run: python3 scripts/validate_milestones.py
+
+      - name: Coverage mapping (meetings <-> notebooks <-> readings <-> datasets)
+        run: python3 scripts/validate_coverage.py --plan
+
+      - name: Notebook template conformance (registered v2 notebooks)
+        run: python3 scripts/validate_notebooks.py
+
+      - name: Undergraduate-voice lint (student notebooks)
+        run: python3 scripts/voice_lint_notebooks.py
+
+      - name: Citation-integrity audit
+        run: python3 scripts/audit_sources.py
