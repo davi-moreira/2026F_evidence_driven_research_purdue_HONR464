@@ -28,6 +28,8 @@ import csv
 import re
 from pathlib import Path
 
+import yaml
+
 REPO = Path(__file__).resolve().parent.parent
 import sys
 sys.path.insert(0, str(REPO / "scripts"))
@@ -36,6 +38,23 @@ from notebooks_map import (NOTEBOOKS, student_filename, nb_of as nb_of_material,
 
 SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.csv"
 OUT = REPO / "session_guides"
+
+# The fixed Student Research Lead / studio architectures (course_config srl:).
+# Mon/Wed lectures and Friday studios each run a 4-section, 50-minute shape.
+_CONFIG = yaml.safe_load((REPO / "course_config.yaml").read_text())
+_SRL = _CONFIG["srl"]
+_MEETING_MIN = _CONFIG["course"]["meeting_minutes"]
+SRL_SECTIONS = {
+    "Mon": _SRL["monday_sections"],
+    "Wed": _SRL["wednesday_sections"],
+    "Fri": _SRL["friday_sections"],
+}
+# 50-minute sum assertion — the fixed architecture must fill the whole period.
+for _day, _secs in SRL_SECTIONS.items():
+    _total = sum(s["min"] for s in _secs)
+    assert _total == _MEETING_MIN, (
+        f"{_day} SRL sections sum to {_total} min, expected {_MEETING_MIN}")
+FIRST_SRL_MEETING = _SRL["first_slot_meeting"]
 
 COLAB = ("https://colab.research.google.com/github/"
          "davi-moreira/2026F_evidence_driven_research_purdue_HONR464/"
@@ -51,8 +70,10 @@ COMPASS_CHEAT_SHEET = """\
   intervention change?*) — RDSS ch. 7.
 - **REACH** — the data at hand · a population beyond the data · cases not yet
   seen.
-- **Positions:** Description (nb06) · Generalization (nb10) · Prediction (nb12)
-  · Causal reasoning (nb13).
+- **Positions (classified in nb01):** Description · Generalization · Prediction
+  · Causal reasoning. Design pathways deep-dive in nb04–nb08 (observational
+  descriptive · observational causal · experimental descriptive · prediction ·
+  experimental causal).
 - **Crossings & licenses:** sample→population = sampling design + uncertainty
   (*silent upgrade* if unpaid) · observed→unseen = prediction-time honesty +
   held-out check (*leakage* if unpaid) · descriptive→causal = assignment /
@@ -100,6 +121,74 @@ def nb_of(meeting: dict) -> int | None:
     return nb_of_material(meeting.get("other_material", ""))
 
 
+def srl_ranges(day: str) -> list[tuple[str, int, int]]:
+    """(section name, start_min, end_min) for a Mon/Wed lecture or Fri studio."""
+    secs = SRL_SECTIONS.get(day, SRL_SECTIONS["Mon"])
+    out, t = [], 0
+    for s in secs:
+        out.append((s["name"], t, t + s["min"]))
+        t += s["min"]
+    return out
+
+
+def _seg_start(time_range: str) -> int | None:
+    m = re.match(r"\s*(\d+)", time_range or "")
+    return int(m.group(1)) if m else None
+
+
+def _bin_index(start: int | None, sections: list[tuple[str, int, int]]) -> int:
+    """Which canonical section a schedule segment starting at `start` belongs to."""
+    if start is None:
+        return 0
+    for i, (_n, s, e) in enumerate(sections):
+        if s <= start < e:
+            return i
+    return len(sections) - 1 if start >= sections[-1][2] else 0
+
+
+def render_run_of_show(m: dict, kind: str) -> list[str]:
+    """The 50-minute run of show.
+
+    Mon/Wed lectures and Friday studios render the fixed 4-section SRL
+    architecture from course_config, overlaying the schedule's per-meeting
+    `minute_dynamic` detail into each section by start-minute. Async modules
+    keep their free-form module flow.
+    """
+    lines = ["### Run of show (50 min)", ""]
+    if kind == "async":
+        lines += ["| Min | Segment |", "|---|---|"]
+        for t, seg in run_of_show(m.get("minute_dynamic", "")):
+            seg = seg.replace("|", "\\|")
+            lines.append(f"| {t} | {seg} |")
+        lines.append("")
+        return lines
+
+    sections = srl_ranges(m.get("day", "Mon"))
+    detail: dict[int, list[str]] = {i: [] for i in range(len(sections))}
+    for time_range, seg in run_of_show(m.get("minute_dynamic", "")):
+        detail[_bin_index(_seg_start(time_range), sections)].append(seg)
+
+    lines += ["| Min | SRL section | What happens |", "|---|---|---|"]
+    for i, (name, s, e) in enumerate(sections):
+        d = " ".join(detail[i]).replace("|", "\\|").strip()
+        lines.append(f"| {s}–{e} | **{name}** | {d} |")
+    lines.append("")
+    return lines
+
+
+def srl_banner(m: dict, kind: str) -> str | None:
+    """How the meeting is led — SRL for Mon/Wed lectures past the launch week."""
+    if kind != "lecture":
+        return None
+    if int(m["meeting"]) < FIRST_SRL_MEETING:
+        return ("**Led by:** instructor (launch week — the Student Research Lead "
+                "rotation begins the following week).")
+    return ("**Led by:** the day's **Student Research Lead** — a Socratic "
+            "investigation, not a summary. The lead opens the 🧩 Research Puzzle, "
+            "steers the AI research-partner investigation, and prompts peer "
+            "defense; the instructor formalizes and adjudicates.")
+
+
 def session_heading(m: dict, labels: dict[int, tuple[int, int, int]]) -> str:
     kind = session_kind(m)
     title = m["title"]
@@ -143,14 +232,16 @@ def meeting_section(m: dict, labels: dict[int, tuple[int, int, int]]) -> str:
     if clean(m.get("python_r_dependency")) and m["python_r_dependency"].lower() != "none":
         lines.append(f"**Computing:** {m['python_r_dependency']}")
     lines.append("")
-    lines.append("### Run of show (50 min)")
-    lines.append("")
-    lines.append("| Min | Segment |")
-    lines.append("|---|---|")
-    for t, seg in run_of_show(m["minute_dynamic"]):
-        seg = seg.replace("|", "\\|")
-        lines.append(f"| {t} | {seg} |")
-    lines.append("")
+    kind = session_kind(m)
+    banner = srl_banner(m, kind)
+    if banner:
+        lines.append(banner)
+        if clean(m.get("srl_slot")):
+            lines.append(f"**Lead slot:** {m['srl_slot']}")
+        if clean(m.get("srl_focus")):
+            lines.append(f"**Puzzle focus:** {m['srl_focus']}")
+        lines.append("")
+    lines.extend(render_run_of_show(m, kind))
     lines.append("### Read-alouds")
     lines.append("")
     lines.append("Discussion opener:")

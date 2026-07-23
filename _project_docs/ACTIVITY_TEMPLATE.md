@@ -194,6 +194,13 @@ below. The async-only module (nb13) embeds these inside its module flow.
 Pacing rule: direct exposition ≤8 min per segment, <15 min total per lecture;
 ≥70% of class time active.
 
+**Variants.** The communication/performance notebooks (nb10 poster criticism,
+nb11 delivery, nb12 conference) may satisfy the runnable move with structured
+criticism or delivery rounds instead of `### 🛠️ Run the Study` — the validator
+exempts exactly those three from the runnable-move check, nothing else. The
+async module (nb13) embeds all moves inside its self-paced flow and carries no
+`### 🧩 Research Puzzle` (there is no Student Research Lead online).
+
 ### 8. The high-intensity AI-collaboration blocks (machine-checked)
 
 AI is used constantly and under control. Each ordinary notebook carries **at
@@ -267,6 +274,13 @@ Defense #NN — write, in your own words:
 4. **AI check:** what I delegated, and how I verified it before trusting it.
 ```
 
+**Written vs spoken exits.** The Exit Defense is the notebook's WRITTEN closing
+block. The class ALSO keeps its spoken exit ritual, the **Claim Ticket** read
+aloud at the close of every meeting — that ritual lives in the session guides
+(the schedule's `exit_ticket` field), not in the notebook. When a run-of-show
+says "ledger + Claim Ticket", it means: complete the notebook's 📒 ledger row
+and 🛡️ Exit Defense, then the spoken Claim Ticket closes the room.
+
 ### 10. Instructor-solution cells (stripped from the student file)
 
 1. `### INSTRUCTOR SOLUTION — Exercise N` (markdown heading)
@@ -328,3 +342,55 @@ session guide.
 - After building, `scripts/update_schedule_badges.py` refreshes the Colab badge
   on `schedule.qmd` (also wired as a PostToolUse hook); sync instructor material
   with `scripts/sync_instructor_repo.sh`.
+
+## Milestone studio notebooks (msNN) — reduced required set
+
+Each milestone M0–M15 ships a light Friday studio notebook
+`notebooks/student/msNN_<slug>_student.ipynb` (instructor version gitignored,
+same markers). Required cells, in order — nothing else is mandatory:
+
+1. Header: title, `**Milestone MN · studio notebook**`, Colab badge.
+2. `## 🎯 Definition of Done` — the brief's definition of done + required
+   evidence, restated to the reader.
+3. `### 🤝 AI Research Partner` — what AI may help with in this sprint and what
+   you must decide yourself.
+4. `> 💡 **Gemini Prompt:**` (≥1) with the After-running-verify checklist —
+   the sprint's AI assist.
+5. `### 🗡️ Red-Team Exchange` — the peer + AI review protocol for this
+   milestone (what to attack, what to log).
+6. `### 📒 AI Research Ledger` — the sprint's ledger row(s).
+7. `### ✅ Submission Checklist` — the brief's checklist + dossier update line.
+
+## Validation rules — the machine-checked contract (validate_notebooks v2)
+
+For every ORDINARY topic notebook (nb00–nb15 except as noted), the validator
+asserts, by exact marker string:
+
+| # | Check | Marker / rule | Threshold |
+|---|---|---|---|
+| 1 | Topic header | `**Topic NN · N lecture(s)**` or `**Topic NN · async module**` | =1, count matches `lecture_labels()` |
+| 2 | Colab badge | `colab.research.google.com/github/...nbNN_..._student.ipynb` | =1 |
+| 3 | Inquiry block | `## 🧭 Inquiry & Claim Boundary` with `**Inquiry emphasis:**`, `**Design pathway:**`, PERMITS + does-NOT-permit rows, `*Provenance:` | all present |
+| 4 | Objectives | `## Learning Objectives` | =1 |
+| 5 | Setup | `SEED = 464` + `default_rng`; `seaborn` absent notebook-wide | required |
+| 6 | Lecture heads | `# Lecture i` per schedule; one `### 🧩 Research Puzzle` per lecture (exempt: nb13) | exact |
+| 7 | Moves | `### 🔮 Pause & Predict`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Reading the Evidence`, `### 🎯 Project Transfer`, `### 🛡️ Exit Defense` | ≥1 each |
+| 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Hands-On:` | ≥1 (exempt: nb10, nb11, nb12) |
+| 9 | Partner briefing | `### 🤝 AI Research Partner` | ≥1 |
+| 10 | Gemini prompts | `> 💡 **Gemini Prompt:**` each followed by `**After running, verify` | ≥3 |
+| 11 | Prompt modification | `### 🔁 Modify the Prompt` | ≥1 |
+| 12 | Interrogation | `### 🔬 Interrogate the Output` | ≥1 |
+| 13 | Human-only | `### 🧑‍⚖️ Human-Only Checkpoint` | ≥1 |
+| 14 | Ledger | `### 📒 AI Research Ledger` | ≥1 |
+| 15 | Q&A density | `> **A question that often comes up here:**` | ≥3 |
+| 16 | Wrap + sources | `## N. Wrap-Up`, `## N+1. Sources & Provenance`, final thank-you cell | present, ordered |
+| 17 | No leakage | `INSTRUCTOR SOLUTION` absent from the student file | =0 |
+
+For every MILESTONE STUDIO notebook (msNN): checks 2, 5 (if code present), plus
+`**Milestone MN · studio notebook**`, `## 🎯 Definition of Done`,
+`### 🤝 AI Research Partner`, ≥1 Gemini prompt+verify, `### 🗡️ Red-Team
+Exchange`, `### 📒 AI Research Ledger`, `### ✅ Submission Checklist`.
+
+Voice, dates, em-dash budget, and citation integrity are enforced separately by
+`voice_lint_notebooks.py` and `audit_sources.py`. The AI Research Ledger's
+CONTENT quality is graded by rubric, not machine-checked.

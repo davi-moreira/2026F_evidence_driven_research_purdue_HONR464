@@ -69,8 +69,22 @@ AI_BLOCKS = {
 PUZZLE_RE = re.compile(r"^\s*###[^\n]*Research Puzzle", re.M)
 LECTURE_RE = re.compile(r"^\s*#\s*Lecture\s+\d", re.M)
 
+# Communication/performance weeks satisfy the runnable move with structured
+# criticism or delivery rounds instead (template §7 Variants).
+RUNNABLE_EXEMPT = {10, 11, 12}
 
-def check_student(path: Path, is_async: bool) -> list[str]:
+# Milestone studio notebooks (msNN) — reduced required set (template, final §).
+MS_REQUIRED = {
+    "milestone header": re.compile(r"\*\*Milestone M\d{1,2} · studio notebook\*\*"),
+    "Definition of Done": re.compile(r"^\s*##[^\n]*Definition of Done", re.M),
+    "AI Research Partner briefing": re.compile(r"^\s*###[^\n]*AI Research Partner", re.M),
+    "Red-Team Exchange": re.compile(r"^\s*###[^\n]*Red-Team Exchange", re.M),
+    "AI Research Ledger": re.compile(r"^\s*###[^\n]*AI Research Ledger", re.M),
+    "Submission Checklist": re.compile(r"^\s*###[^\n]*Submission Checklist", re.M),
+}
+
+
+def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list[str]:
     nb = nbformat.read(path, as_version=4)
     text = "\n\n".join(c.source for c in nb.cells)
     code = "\n\n".join(c.source for c in nb.cells if c.cell_type == "code")
@@ -86,6 +100,8 @@ def check_student(path: Path, is_async: bool) -> list[str]:
         errs.append("missing Inquiry & Claim Boundary block")
     if "**Inquiry emphasis:**" not in text:
         errs.append("missing inquiry-emphasis line")
+    if "**Design pathway:**" not in text:
+        errs.append("missing design-pathway line (library pathway or 'cross-cutting')")
     if "PERMITS" not in text or "NOT permit" not in text:
         errs.append("missing claim-permitted / claim-not-permitted rows")
     if not re.search(r"\*?Provenance:", text):
@@ -96,6 +112,8 @@ def check_student(path: Path, is_async: bool) -> list[str]:
         errs.append("missing learning objectives")
 
     for name, pat in MOVES.items():
+        if name == "Runnable activity" and nb_num in RUNNABLE_EXEMPT:
+            continue
         if not pat.search(text):
             errs.append(f"missing required move: {name}")
 
@@ -159,7 +177,7 @@ def _selected(only: set[str]) -> list[int]:
     nums = sorted(NOTEBOOKS)
     if only:
         wanted = {int(m.group(1)) for o in only
-                  if (m := re.search(r"nb?0*(\d+)", o))}
+                  if (m := re.search(r"(?:nb)?0*(\d+)", o, re.I))}
         nums = [n for n in nums if n in wanted]
     return nums
 
@@ -178,7 +196,7 @@ def main() -> None:
         sp = student_dir / student_filename(n)
         if sp.exists():
             checked_s += 1
-            errs = check_student(sp, is_async)
+            errs = check_student(sp, is_async, nb_num=n)
             if errs:
                 failed = True
                 print(f"✗ {sp.name}")
@@ -197,12 +215,35 @@ def main() -> None:
                 for e in errs:
                     print("    " + e)
 
-    if checked_s == 0 and checked_i == 0:
+    # Milestone studio notebooks (msNN_*_student.ipynb): reduced required set.
+    checked_ms = 0
+    if not only:
+        for sp in sorted(student_dir.glob("ms*_student.ipynb")):
+            checked_ms += 1
+            nb = nbformat.read(sp, as_version=4)
+            text = "\n\n".join(c.source for c in nb.cells)
+            errs = [f"missing required studio block: {name}"
+                    for name, pat in MS_REQUIRED.items() if not pat.search(text)]
+            if text.count("💡 **Gemini Prompt") < 1:
+                errs.append("studio notebook needs ≥1 Gemini Prompt block")
+            if "INSTRUCTOR SOLUTION" in text:
+                errs.append("INSTRUCTOR SOLUTION marker leaked into student file")
+            errs += [f"voice: {p}" for p in lint_notebook(sp)]
+            if errs:
+                failed = True
+                print(f"✗ {sp.name}")
+                for e in errs:
+                    print("    " + e)
+            else:
+                print(f"✓ {sp.name}")
+
+    if checked_s == 0 and checked_i == 0 and checked_ms == 0:
         print("validate_notebooks: no registered v2 notebooks built yet")
         return
     if failed:
         sys.exit(1)
-    print(f"✓ all checks passed ({checked_s} student, {checked_i} instructor)")
+    print(f"✓ all checks passed ({checked_s} student, {checked_i} instructor, "
+          f"{checked_ms} studio)")
 
 
 if __name__ == "__main__":
