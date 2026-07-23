@@ -4,51 +4,171 @@ title: "7. Research Builds on Research"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_research_builds_on_research_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Given a source an AI tool or a search hands you, you
+> decide whether it counts as *verified* (retrieved and read by you). And given the
+> sources you have verified, you decide whether the gap you want to study is
+> *genuine* or is only the place where your search happened to stop.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+Picture the moment a **thesis advisor** hands your first draft back with one line
+circled: *"You cite six papers. Which did you actually read, and where is the hole you
+claim to fill?"* That question is the whole job. A literature built from
+confident-sounding summaries collapses the instant a reviewer opens one citation and
+finds it says something else, or finds it does not exist. This chapter's decision turns
+"I looked it up" into "I retrieved it, I read it, and I can show you the empty spot on
+the map."
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+A field is a **cumulative conversation**: a running argument where each study answers,
+extends, or challenges the ones before it. One lab measures a reaction rate, a second
+repeats it with a new catalyst, a third pools both. Your job is not to invent an island.
+It is to find the conversation your question belongs to and add one honest sentence.
+
+You run one habit on every source. The **retrieval-verification loop** has four steps:
+ask a tool for leads, retrieve the source yourself, verify it exists and says what was
+claimed, and document where you found it. A **lead** is a candidate you have not checked
+yet, such as a citation an AI hands you. It stays a lead until you retrieve and read it.
+
+From one verified source you grow the rest by **snowballing**: walking its links two
+ways. **Backward citation search** reads the source's own reference list for older work
+it built on. **Forward citation search** finds the newer papers that cite it. Two solid
+sources, snowballed both ways, quickly become ten.
+
+Snowballing lets you tell a real gap from a dead end. A **genuine gap** is a question
+your verified sources actually leave unanswered, confirmed by looking both ways. An
+**unfinished search** is one you simply stopped chasing. They feel identical from your
+desk, and only one is a contribution.
+
+You then arrange what you found as an **evidence map**: each verified source becomes one
+**claim node** (what it asserts, in one sentence), lines connect claims that agree or
+contradict, and one marked spot shows where no source reaches. That spot is your gap,
+honest only because every node around it is a source you opened.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+Say your curiosity is green chemistry. You have read that **silver nanoparticles**
+(specks of silver billionths of a meter across) can be made without harsh reagents by
+reducing silver ions with a mild acid. Your question: does **L-ascorbic acid** (ordinary
+vitamin C) reduce silver ions to nanoparticles at room temperature, and does more of it
+make the particles smaller?
+
+You ask an AI for the key studies. It returns a confident citation: a plausible author
+pair, a 2019 date, a journal called *Journal of Green Chemistry*. You go to read it, and
+the exact title returns nothing in your library portal, nothing on Google Scholar,
+nothing on the publisher's site. The journal does not exist; the real Royal Society of
+Chemistry title is simply *Green Chemistry*. The citation was fabricated.
+
+So you run the loop properly. You retrieve one real review of green nanoparticle
+synthesis, read it, and snowball. Its references point backward to the reduction
+chemistry it built on; its "Cited by" list points forward to recent ascorbic-acid
+studies. Within an hour your map holds a half-dozen real sources and a contradiction:
+one paper reports that more reductant yields smaller particles, another the opposite.
+That disagreement is the live edge of the field, and it tells you the question is
+unsettled.
+
+Now the decision that is yours. The broad question "can vitamin C make silver
+nanoparticles" is no gap: the field is enormous. But your narrow question, how particle
+size behaves across a specific concentration range where two real papers already
+disagree, may be genuine. You can defend it only because you retrieved the sources around
+it and they still leave it open.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb02 — Research builds on research: verified evidence + real gaps**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb02 — Research builds on research: verified evidence +
+real gaps**. Open it in Colab with the badge above and work the cells alongside this
+chapter. In the lab you watch a pile of fifteen AI citations collapse to the few that
+survive retrieval, build an evidence map in code, and run the retrieval-verification loop
+on your own claim.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt earns a better draft; none earns
+your trust.
+
+**Locate.** Ask for leads to chase, not a finished bibliography.
+
+```text
+Act as a literature scout in [your field]. My question is: [paste it].
+List the five published studies most relevant to it, each with authors,
+year, exact title, and venue, so I can retrieve and verify each myself.
+Only include work you are confident exists; mark anything uncertain.
+```
+
+*After running, verify:* retrieve every citation by searching its exact title in quotes
+before you believe it exists. Counters **confident fabrication** (a real-sounding
+citation for a paper that was never written).
+
+**List-to-verify (snowball).** Start from one source you have already read.
+
+```text
+Here is one source I have verified: [authors, year, exact title, venue].
+Name three older works from its reference list it likely built on, and
+three newer works that likely cite it, each with authors, year, title,
+and venue, plus one line on why it belongs on the chain.
+```
+
+*After running, verify:* cross-check the "backward" names against the seed's real
+reference list and retrieve the rest. A tidy chain can quietly omit the one contradicting
+study. Counters **illusion of completeness**.
+
+**Red-team.** Make the tool attack your gap, not flatter it.
+
+```text
+Here is my question and the gap I placed: [one or two sentences].
+Argue that this gap is NOT real. Name up to three published studies that
+may already answer it, with authors, year, title, and venue, and say what
+each would have to show to close it. Do not reassure me.
+```
+
+*After running, verify:* if it just agrees the gap is open and names nothing, push back
+and make it try to close the gap; then retrieve every study it names. Counters
+**sycophantic agreement**.
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Two decisions never leave your hands. Whether a source counts as **verified**: only
+reading it yourself settles that. And whether your **gap is real**: only retrieval that
+comes up empty earns the word. What your project may claim follows from those two. An AI
+can point; it cannot certify.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+The most common failure here is **citation hallucination**, the taxonomy's *confident
+fabrication*: the model invents a source and presents it with full confidence. In the
+worked example it gave you a plausible author pair, a 2019 date, and *Journal of Green
+Chemistry*. You caught it in a minute: you searched the exact title in quotes across your
+library portal and Google Scholar, found nothing, and noticed the journal does not exist.
+Fluent confidence is not evidence. If you cannot locate a source where it should live,
+treat it as fabricated until you prove otherwise.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+The key result of this chapter is a verdict: this source is verified, and this gap is (or
+is not) real. Verify it with **primary-source reading** (verification guide, method 4):
+find the actual source, open it, and read the line that supports the claim before you
+cite it. Do this for every source on your map, not a sample. For a gap you will defend
+out loud, add a second, independent check such as **peer reasoning**: walk your gap past
+a classmate, whose one question often exposes a source you skipped. Two independent checks
+that agree are far stronger than one.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter builds your **M2 verified evidence and contribution map**, the milestone you
+present as a gallery walk at Friday's studio. It puts the question and guessed gap from
+the previous chapter to the test of retrieval. Leave with four pieces drafted: a
+verified-source log (author, year, where you retrieved it, its claim in your words), an
+evidence map naming at least one contradiction, your gap placed honestly with its
+honesty-test sentence, and a one-sentence contribution line that stops where your
+retrieval stops. That map is the ground your later research charter stands on.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In one short paragraph, state your gap in a single sentence, then defend it. Name its
+**compass position** (description or generalization, the kinds of claim this evidence work
+supports). Say plainly whether the gap is confirmed by retrieval or is still an unfinished
+search. Then name your uncertainty: how many sources you have actually opened, and what
+your map cannot see. If you cannot yet write the honest boundary sentence, *"across the
+sources I retrieved and verified, none addresses my gap,"* say what retrieval it still
+owes. That is a finding, not a failure.

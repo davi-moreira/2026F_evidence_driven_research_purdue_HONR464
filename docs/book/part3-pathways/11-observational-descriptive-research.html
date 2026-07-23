@@ -456,27 +456,53 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Decide which group your observed data can honestly speak for, and draw the exact line past which a description of your sample is no longer allowed to become a claim about a wider population.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">11.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<p>Picture a policy stakeholder reading your report before deciding whether it applies to their city. Their first question is never about your math. It is: <em>“Which group did your procedure actually reach?”</em> A result that quietly describes one group while claiming to speak for another is the most common failure in observational work: an estimate that is precise, well-formatted, and about the wrong group. This chapter equips you to name the group your data reach, and to refuse the sentence that swaps it for a group your data never touched.</p>
 </section>
 <section id="the-concept" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">11.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p><strong>Observational descriptive research</strong> means you watch and record what is there without changing anyone’s experience, then summarize it. Example: you place air sensors in a set of rooms and report how often they read above a health threshold. You never assign a treatment, so this pathway can describe, and with care generalize, but it cannot by itself say one thing caused another.</p>
+<p>Four nested groups keep such a description honest. Picture four boxes, each smaller than the last.</p>
+<ul>
+<li><strong>Target population</strong>: everyone your question is about. Example: every part your factory will ever cast from a new alloy. This is the outermost box, the group you wish you could study.</li>
+<li><strong>Accessible population</strong>: the part of the target you could reach in principle, given time and cost. Example: the parts you can actually machine into test pieces this quarter.</li>
+<li><strong>Sampling frame</strong>: the concrete list you draw from. Example: the batch of test coupons sitting on the lab bench. Whatever is not on that list cannot be sampled.</li>
+<li><strong>Sample</strong>: the pieces you actually measure. The innermost box.</li>
+</ul>
+<p>A claim is honest only when the box it describes matches the box it names. Two processes decide how the boxes differ. <strong>Selection</strong> is any process that decides who lands in your data instead of chance alone. Example: a survey taken outside one dining hall selects for people who eat there at lunch. <strong>Nonresponse</strong> is the units you drew but who never gave you data. Example: of 500 people contacted, 300 reply, and the 200 silent ones are rarely a random slice. When either process relates to the very thing you are measuring, your summary drifts from the truth, and no amount of extra data pulls it back. Size shrinks the sample-to-sample wobble; it does nothing to a systematic tilt in who you reached.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">11.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>A materials lab tests a new aluminum alloy for its <strong>defect rate</strong>, meaning the fraction of parts with internal cracks or voids. Example: 2 cracked parts in 100 is a 2% defect rate. The lab casts a batch, cuts each casting into small <strong>test coupons</strong> (standard sample pieces sized for the scanner), polishes them, and scans each surviving coupon. The scan reports 2%, and the headline writes itself: <em>“the alloy has a 2% defect rate.”</em></p>
+<p>Now walk the boxes. The <strong>target population</strong> is every part that will be cast from this alloy in production. The <strong>sampling frame</strong> is the coupons that survived cutting and polishing intact, because only those reach the scanner. Here is the trap: the most defective coupons, the ones riddled with internal voids, are also the ones most likely to shatter during cutting. They removed themselves from the frame before anyone measured them. This is <strong>survivorship selection</strong>, a filter that keeps exactly the pieces least likely to show the problem you are counting. The surviving coupons are the sturdy end of the alloy, not a fair slice of it.</p>
+<p>So the 2% is honest about one box and dishonest about another. The licensed claim is: <em>“among coupons that survived preparation intact, the defect rate is 2%.”</em> The silent upgrade, the sentence to refuse, is: <em>“the alloy’s defect rate is 2%.”</em> The true production rate is almost certainly higher, because the worst pieces never reached the scan. That gap between the box you measured and the box you named is the subject of this chapter.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="11.4">
 <h2 data-number="11.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">11.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb04 — Observational descriptive research</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb04 — Observational descriptive research</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you treat a real voter file as a known world, draw random samples and one convenience channel from it, and watch the random draws cluster on the truth while the convenience channel misses the true mean age by nearly twelve years. Then you run a nonresponse stress test that shows a clean estimate drifting off the truth.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">11.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt below leaves the judgment with you and hands the AI only the legwork.</p>
+<p><strong>Locate.</strong> Find real methodological backing instead of trusting a paragraph.</p>
+<pre><code>Act as a research-methods assistant. List real, retrievable references on
+survivorship and nonresponse bias in observational studies. For each, give
+title, authors, year, and venue, and mark any you are not confident exist.</code></pre>
+<p>After running, verify by opening each source in a library database before you cite it. Counters <em>confident fabrication</em>: a fluent citation for a paper that does not exist looks identical to a real one until you try to retrieve it.</p>
+<p><strong>List-to-verify.</strong> Turn a vague worry into a checkable list of who drops out.</p>
+<pre><code>I am drawing a selection diagram for an observational study. My target
+population is [X], my frame is [Y], my sample is [Z]. List each group that
+drops out between target and sample, in a table, with whether their absence
+pushes my estimate up or down.</code></pre>
+<p>After running, verify by mapping each named group to one real step in your own diagram, and checking the one group you feared most is on the list. Counters <em>illusion of completeness</em>: a long, tidy list that quietly omits the group that matters most.</p>
+<p><strong>Red-team.</strong> Make the AI attack your boundary sentence instead of praising it.</p>
+<pre><code>Here is a boundary sentence I wrote: "[your sentence]". Act as a hostile peer
+reviewer. Name every place it over-reaches, under-states the bias, or hides the
+direction of the drift. Do not rewrite it for me.</code></pre>
+<p>After running, verify by checking each objection against your own numbers and pushing back if every objection is mild. Counters <em>sycophantic agreement</em>: an AI that calls your caveat “well-balanced” has reviewed your ego, not your evidence.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +513,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Three decisions stay yours alone. First, <strong>which population your project is really about</strong>: the AI does not know your question’s intent. Second, <strong>which frame you can honestly reach</strong>, and therefore the coverage gap you must disclose. Third, <strong>the boundary line itself</strong>: the exact sentence where your description stops and the population claim you refuse to make. You may ask an AI to attack that line, never to draw it for you.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="11.6">
 <h2 data-number="11.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">11.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You ask a chatbot: <em>“My scan of surviving coupons shows a 2% defect rate on a large batch. Can I report the alloy’s defect rate as 2%?”</em> It answers with full confidence: <em>“Yes. With a sample that large, your estimate is precise and reliable.”</em> This is wrong in two named ways at once. It commits a <strong>silent scope change</strong>, quietly upgrading “the surviving coupons” to “the alloy,” and it leans on the fallacy that a big sample cures a tilted one.</p>
+<p>You catch it because you wrote your own answer first, and yours named the frame: the coupons that survived preparation, not the alloy, so the swap is visible on sight. Then you check the mechanism against the data. The most defective coupons shattered during cutting, so missingness relates directly to the outcome you count. A larger batch of survivors only estimates the survivors’ defect rate more precisely. It never reaches the parts that broke.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="11.7">
 <h2 data-number="11.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">11.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>The chapter’s key result is a claim about <em>how a procedure behaves</em>: random draws from a frame cluster on its truth, while a convenience channel can miss it no matter how large it grows. The right check for a claim about a procedure is <strong>simulation</strong> (verification_guide method 2): build a world where you already know the answer, then see whether each sampling method recovers it. The lab does exactly this. You take a file whose true mean age you can read directly, draw ten random samples of 100, and confirm the ten means huddle in a tight band around the truth. Then you keep one convenience group and watch its mean land far outside that band. Because you set the true value yourself, any method that fails to recover it is exposed at once, with no AI sentence to trust.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="11.8">
 <h2 data-number="11.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">11.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter is the spine of your <strong>M4 observational descriptive design audit</strong>. For your own project you will write four pieces: the population, accessible population, frame, and sample stack, one line each; a selection diagram naming the one filter you most fear bends both who you reach and what you measure; a measurement note flagging the variable you most worry is missing not-at-random; and the two sentences M4 grades. The first is the population claim your frame licenses, stated with its uncertainty. The second is the silent upgrade your design forbids, written out so you can refuse it on sight. Draft all four yourself, then defend them at Friday’s studio.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="11.9">
 <h2 data-number="11.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">11.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In a few sentences of your own: name the exact group your evidence speaks for, state the one bounded claim you would put your name on, and write the boundary where your description stops. Then name the crossing a population claim would have to pay for in your design, whether you paid it, and the single largest source of uncertainty or coverage gap that remains. If you cannot yet write the population sentence honestly, say so plainly. That is a finding about your design, not a failure, and it names the crossing you still owe.</p>
 
 
 </section>

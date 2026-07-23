@@ -24,6 +24,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -456,27 +491,53 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Decide whether the way treatment was assigned in your study lets you read a plain difference in outcomes as a causal effect, and name exactly which quantity, and for whom, that difference estimates. You confirm the randomization and name the quantity yourself, and you never let a tool declare that your design proves cause.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">15.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“Everyone shows me the treated group did better. So did the patients who were healthier to begin with, or more organized, or younger. ‘Better after treatment’ is not ‘the treatment worked.’ Show me that chance, not the kind of patient, decided who got treated, and tell me exactly who your number speaks for.”</em> — a <strong>clinical-trial reviewer</strong>, reading a claim that a new reminder improved medication adherence</p>
+</blockquote>
+<p>This is the hardest claim you make in this course, a causal one. A tool can now clean your data, run the comparison, and hand you a confident number in seconds. That speed is the danger. If you paste back “the treatment worked,” you have signed your name to a claim you have not earned. The reviewer above does not care how fluent the output sounded. She cares how treatment was assigned and who the number describes. This chapter gives you the one move that earns the word <em>because</em>, and the discipline to say who it applies to.</p>
 </section>
 <section id="the-concept" class="level2" data-number="15.2">
 <h2 data-number="15.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">15.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>Start with a <strong>causal question</strong>, a question about what would change if you intervened rather than what merely goes together. Example: “does a text reminder <em>raise</em> the share of patients who refill on time?”, not “do patients who got reminders refill more?”</p>
+<p>For one unit, one patient, write two numbers. The <strong>potential outcome Y(1)</strong> is what that unit would show <em>with</em> the treatment. Example: whether Ms.&nbsp;R refills on time if she gets the texts. The <strong>potential outcome Y(0)</strong> is what the <em>same</em> unit would show <em>without</em> it. Example: whether that same Ms.&nbsp;R refills if she gets nothing. The causal effect for her is Y(1) minus Y(0). Now the rule that governs the whole field, the <strong>fundamental problem of causal inference</strong>: for any one unit you only ever see one of those two numbers. Ms.&nbsp;R was either texted or not, never both, so her individual effect is unrecoverable.</p>
+<p>So you give up the individual and chase the average. The <strong>average treatment effect (ATE)</strong> is the average of Y(1) minus Y(0) across all your units, the typical effect rather than any one unit’s. Example: on average, the reminder raised on-time refills by a few points. One move unlocks an honest estimate of it. <strong>Random assignment</strong> lets pure chance, a coin flip, decide which units get treated. Example: a computer flips a fair coin for each patient. Chance knows nothing about health or organization, so the two groups it builds are alike on average, and the untreated group’s outcome honestly stands in for what the treated group would have done untreated. That is what random assignment defeats: a <strong>confounder</strong>, a third trait that pushes on both who gets treated and the outcome. Example: more organized patients both refill anyway and are easier to enroll, so a reminder looks effective even when it did nothing. Randomizing breaks the link between any trait and who gets treated, and that broken link is the entire reason an experiment can say <em>because</em>.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="15.3">
 <h2 data-number="15.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">15.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You run a clinic and want to know whether a daily text-message reminder raises the share of hypertension patients who refill their blood-pressure prescription on time. You enroll 800 patients and let a computer flip a fair coin for each: 400 to the reminder arm (the treatment), 400 to a no-text control arm.</p>
+<p>For Ms.&nbsp;R, Y(1) is whether she refills if she gets the texts, and Y(0) is whether she refills if she gets nothing. You will only ever see one. Across all 800, you estimate the ATE as the difference in on-time refill rates between the arms. Say the reminder arm refills at 71 percent and the control arm at 62 percent, a 9-percentage-point gap. Because the coin, not the patient’s organization, sorted the arms, that 9 points is an honest estimate of the reminder’s average effect.</p>
+<p>Now the honesty test. Suppose the sickest patients in the reminder arm stopped answering follow-up and left the study. <strong>Attrition</strong> is units leaving before you measure the outcome. Example: the patients whose blood pressure was worst drop out of the arm you are studying. When who leaves is tied to the outcome, the patients who remain are no longer a fair comparison, and your 9-point gap now describes only patients healthy enough to stay, not everyone you enrolled. Attrition has two siblings the lab drills. <strong>Noncompliance</strong> is assigned units that never take the treatment, like patients who changed numbers and never got a text. <strong>Spillover</strong> is treatment reaching the control arm, like a texted patient reminding an untreated friend. Each one leaves the coin flip untouched and still changes which quantity your number describes. Naming that quantity is the decision this chapter equips.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="15.4">
 <h2 data-number="15.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">15.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb08 — Experimental causal research</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb08 — Experimental causal research</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you analyze a real get-out-the-vote field experiment, estimate the effect as a difference in means, and put a randomization-inference interval around it. Then you watch attrition, noncompliance, and spillover each bend a clean estimate, so you learn to name which quantity actually survives.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="15.5">
 <h2 data-number="15.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">15.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt below is a checkable job, not a request for a verdict.</p>
+<p><strong>Locate the standard tool.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Act <span class="im">as</span> a statistics assistant. I ran a two<span class="op">-</span>arm randomized trial <span class="kw">and</span> computed a</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>plain difference <span class="kw">in</span> on<span class="op">-</span>time refill rates between a reminder arm <span class="kw">and</span> a control arm.</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Before <span class="bu">any</span> code, name the standard way to attach a <span class="dv">95</span><span class="op">%</span> interval to a difference <span class="kw">in</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>two proportions, <span class="kw">and</span> one resampling alternative, citing where each <span class="kw">is</span> documented.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Only name methods you are confident exist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After running, verify: open the cited documentation and confirm the method and its formula exist as described. Counters <em>confident fabrication</em> (an invented method name arrives as confidently as a real one).</p>
+<p><strong>List the assumptions to verify.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Here <span class="kw">is</span> my analysis of a randomized reminder trial: [paste your cell]. List, <span class="im">as</span> a</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>table, every assumption my causal reading rests on: that assignment was truly</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>random, that no one dropped out <span class="kw">in</span> a way tied to the outcome, that the control arm</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>got no treatment. For each, say what I would check <span class="kw">in</span> my own data to confirm it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After running, verify: check each listed assumption against your actual design and retention numbers before you accept the causal reading. Counters <em>silent scope change</em> (an association quietly reported as a settled cause).</p>
+<p><strong>Red-team your effect.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>My claim: <span class="st">"the reminder raised on-time refills by 9 points."</span> Act <span class="im">as</span> a hostile</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>clinical<span class="op">-</span>trial reviewer. Name every way dropout, noncompliance, <span class="kw">or</span> spillover could</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>make this number describe a different group than everyone I enrolled. Do <span class="kw">not</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>rewrite the claim <span class="cf">for</span> me.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After running, verify: if it only praises the design, push back and demand the single worst threat, then test it against your retention by arm. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +548,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Three calls never leave your hands. You decide <strong>whether random assignment actually happened</strong> in your study, because a tool cannot see how you sorted the arms. You decide <strong>which quantity your number estimates and for whom</strong>, the effect for everyone enrolled or only the effect among those who stayed. And you decide <strong>whether the effect is large enough to act on</strong>, and whether it is even ethical to randomize real patients and withhold something from the control arm. You own the final sentence, its boundary, and its uncertainty.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="15.6">
 <h2 data-number="15.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">15.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your trial into the tool and it reports, with full confidence, “the reminder raised on-time refills by 12 points, and the effect is significant.” The code runs without a single error. Here is the trap. A third of the reminder arm, the patients whose blood pressure was worst, stopped answering follow-up and left the study, so the tool computed the gap among the patients who <em>stayed</em> and labeled it “the effect of the reminder.” That is a silent scope change. The number now describes only the healthier patients who remained, not everyone you enrolled, and dropping the worst cases pushed it up.</p>
+<p>You catch it by checking retention by arm, not by re-reading the fluent paragraph. When you see the reminder arm lost far more patients than the control arm, and the ones it lost were the sickest, you know the 12 points is the effect among stayers. A green check is not a correct result. You rewrite the sentence to name the group the number actually speaks for.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="15.7">
 <h2 data-number="15.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">15.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify the chapter’s key result, that the gap is more than chance, with two methods from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>. First, <strong>simulation</strong>: re-randomize. Shuffle the treatment labels thousands of times as if you re-ran the coin flips under the assumption that the reminder does nothing, recompute the gap each time, and see how rarely pure chance produces a gap as large as yours. This is <strong>randomization inference</strong>, asking how often chance alone would hand you a gap this big if the treatment truly did nothing, and it earns you an interval rather than assuming one from a formula. Second, <strong>alternative code</strong>: recompute the same difference a second way, filtering each arm by hand and subtracting the two refill rates, and confirm you land on the same number. Two independent roads to one answer is a verified result. Two roads to two answers means your pipeline, not the reminder, is what you measured.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="15.8">
 <h2 data-number="15.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">15.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter becomes your <strong>M8 minimum viable analysis</strong>, the first real estimate on your own question, which you pitch at this week’s Friday studio. Draft its spine: the potential outcomes Y(1) and Y(0) for one unit and which one your data will observe; the number M8 reports (a difference in means, or your pathway’s equivalent) and the interval you attach; whether your design is realistically powered for the effect you expect; the single threat nearest your design (attrition, noncompliance, spillover, or confounding if you are not randomizing); and one sentence naming exactly what your estimate means and for whom, plus the overclaim you forbid. Those five pieces are what you pitch in 60 seconds to a room of skeptics.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="15.9">
 <h2 data-number="15.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">15.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend the causal reading of one estimate from your own project. Name your treatment and your outcome, and state whether random assignment licenses reading your difference as a causal effect. Name the exact quantity your number estimates and for whom, for example “the effect among patients who complied,” not “the effect for everyone.” State the boundary, what a clean randomization does <em>not</em> rescue if attrition, noncompliance, or spillover struck. Close with your uncertainty: the width of your interval or the threat you most fear, and the one check you would run next to close it.</p>
 
 
 </section>

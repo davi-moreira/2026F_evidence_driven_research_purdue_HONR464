@@ -4,51 +4,170 @@ title: "30. Difficult Questions and Uncertainty"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_delivery_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** When a stranger at your poster asks the hardest fair
+> question, decide in advance how you will state your study's uncertainty and its
+> limits, and how you will answer without letting a single spoken word claim more
+> than your evidence supports. You prepare that answer; you never improvise it.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"When a presenter tells me, unprompted, exactly what their study can't show, I
+> trust everything else they said more. When they insist it's airtight, I start
+> looking for the crack myself."*
+> — a **policy stakeholder** who has heard a thousand poster pitches
+
+Your poster is finished and honest. The danger now is your own mouth. Under
+pressure, a nervous presenter does one of two things, and both misstate the
+evidence. One buries a real finding under apology. The other, caught in the
+moment, upgrades a careful "went together" into a confident "caused." The
+stakeholder above is not testing your confidence. She is testing whether you know
+where your claim stops. This chapter gives you the answer that survives her
+hardest question.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+The move that turns a limit into a strength has a name: the **ULN move**, a
+three-beat way to speak a boundary. It runs uncertainty, then limitation, then
+next step, and each beat is a term worth defining once.
+
+An **uncertainty statement** is a sentence saying how much your number could
+wobble, and why. Example: "with 812 people, my estimate could sit a few points
+higher or lower." A **limitation** is a true sentence about what your design
+cannot show. Example: "I measured that two things went together, so I cannot say
+one caused the other." A **next step** is the study that would resolve that
+limitation. Delivered together, ULN sounds like expertise, because you are naming
+the edge of your evidence on purpose.
+
+The failure ULN prevents is the **apology spiral**: burying a real, defensible
+finding under self-erasure like "honestly this is probably all wrong, my sample's
+tiny." The fix is to choose **precision**, naming the exact boundary, over
+**hedging**, vague self-protection that blurs where the claim stops. "This is one
+campus sample" is precision. "Sort of, take it with a grain of salt" is hedging.
+Precision informs the listener; hedging only protects you.
+
+The second instrument is the **question bank**: a short written list of the
+hardest fair questions a visitor could ask, each with a prepared answer. Five
+covers the space, one per recurring type (method, alternative explanation,
+so-what, generalization, AI-use). When you cannot fully answer one, you deliver an
+**honest don't-know**: an admission with content, naming what you cannot say, the
+thing you *can* stand on, and the method that would settle it.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You study human-computer interaction. From your app's usage logs you compared
+task-completion times for people who chose the compact toolbar against those who
+kept the expanded one. Compact users found the target page a median of six seconds
+faster. At the poster, a visitor asks the question you feared: "so the compact
+toolbar *causes* faster navigation?"
+
+Your study cannot say that. Users picked their own toolbar, so power users may
+have chosen compact and would have been fast with any layout. That self-selection
+is a **confound**, a third factor that shapes both the choice and the outcome. So
+you deliver the two-beat reply. First the truth: "I can't say it causes the speed,
+because compact users may already be power users." Then the interest: "the study
+that would answer you is randomly assigning the toolbar to new users, and that's
+what I'd run next." You refused the word "causes," and handed the visitor a real
+research question rather than a wall.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb11 — Poster delivery: pitches, uncertainty, difficult questions**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb11 — Poster delivery: pitches, uncertainty, and
+the questions you fear**. Open it in Colab with the badge above. There you run an
+apology-spiral detector that counts self-erasing words in three sample deliveries,
+then paste in your own uncertainty-and-limitations sentence and drive its flag
+count to zero. You also build your five-question bank and rehearse the causal reply
+against your own project.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt below is a checkable job,
+not a request for approval.
+
+**List your hardest questions, to verify against your own fear.**
+
+```text
+Play a skeptical but fair conference visitor. My project: "[one-paragraph summary
+of question, design, and headline finding]". Write the single hardest FAIR question
+for each type: method, alternative explanation, why-it-matters, generalization,
+AI-use. For each, flag whether an honest two-sentence answer exists.
+```
+After running, verify: compare the five against the one question you wrote down
+that you most dread. If it is missing, the set is not complete. Counters *illusion
+of completeness* (a tidy five that omits the exact question you fear).
+
+**Force the uncertainty into the open.**
+
+```text
+Here is my headline number and how I got it: "[paste]". Do not restate it.
+List what is missing before I can state its uncertainty honestly: the sample
+size, the source of wobble, and the one limitation a reviewer would raise first.
+```
+After running, verify: confirm each item against your own data before you speak
+it. Counters *missing uncertainty* (a clean number reported with no bound).
+
+**Red-team your reply.**
+
+```text
+Here is my two-sentence reply to "does it cause it?": "[paste]". Act as a hostile
+reviewer. Name every word that still claims more than an association supports.
+Do not rewrite it for me.
+```
+After running, verify: if it only praises the reply, push back and demand the
+single worst word. Counters *sycophantic agreement* (praise that reviews your ego,
+not your evidence).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three decisions never leave your hands: **which claim your evidence actually
+supports**, **where that claim must stop**, and **how you acknowledge its
+uncertainty and limitations**. The tool can draft a question or flag a word, but
+only you decide the compass position your design can bear and the one word you must
+refuse aloud. Your honest don't-know is yours to mean, not to recite.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste your limitation into an AI tool and ask it to "make this sound more
+confident for the poster." It returns a fluent, polished sentence: "The compact
+toolbar improves navigation speed, with strong results across users." It runs
+clean, it reads well, and it is wrong. The tool quietly swapped "was associated
+with faster times" for "improves," and "improves" is a causal verb your
+observational logs cannot support. This is a silent scope change dressed as
+helpful editing.
+
+You catch it by reading the AI's verb against your poster's headline, word for
+word. Your headline says "associated with." The rewrite says "improves." The kind
+of claim moved while the sentence got prettier. You keep your own verb, and log
+that the polish inflated the claim.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+The chapter's key spoken result is your uncertainty-and-limitations delivery, and
+you verify it two independent ways from the
+[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+First, **direct calculation**: recompute the detector's flag count by hand. Read
+your sentence aloud and tally every self-erasing word ("sorry," "just,"
+"probably," "I guess"). If your hand count matches the printed count, the number is
+trustworthy; if it disagrees, the harness measured something other than your words.
+Second, **peer reasoning**: say your boundary sentence to a classmate and ask,
+"does anything I said claim more than my design shows?" A zero flag count proves
+your spine was straight, but only a second human can confirm the boundary itself
+was the right one.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter completes the second half of your **M11 presentation package**, due at
+Friday's studio. You leave with three artifacts you drafted yourself and then
+stress-tested: a ULN paragraph pairing your most threatening limitation with its
+next step, a five-question bank marked "defend" or "concede," and one honest
+don't-know written in full form for the question you fear most. At the mock
+symposium you run all three under live fire, so the first stranger who asks "does
+it cause it?" meets a prepared answer, not a flinch.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend the answer you prepared. State your headline claim and
+its exact boundary, worded to stop where your evidence stops. Name the compass
+position your design supports and the one word you must refuse aloud to keep the
+claim honest. Give your uncertainty and limitation in ULN form, ending on the next
+step rather than the flaw. Close with the one question you still cannot fully
+answer, and the study you would run to close it.

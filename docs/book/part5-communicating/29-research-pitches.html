@@ -456,27 +456,64 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Decide how to turn your finished poster into spoken pitches, each sized to the seconds a listener gives you, so every version compresses the claim for speech without ever inflating it. You choose where the boundary sentence sits, and you refuse to let it move when the adrenaline speeds you up.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="29.1">
 <h2 data-number="29.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">29.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“I stop at maybe forty posters in an afternoon. What I remember is not the one with the most data. It is the one whose presenter told me, in one clean breath, exactly what they found and exactly where it stops. The ones who oversold lost me on the second sentence.”</em> — a <strong>skeptical peer</strong> working the room at a research expo</p>
+</blockquote>
+<p>A finished poster is silent. The moment a visitor stops, your voice takes over, and speaking is faster than reading, so you compress on the fly. That is where claims quietly grow. Under a little pressure, “was associated with” slides into “causes,” and “on data it never saw” drops out. The peer above is not testing your data. She is testing whether the sentence in your mouth still matches the sentence on your board. This chapter gives you a pitch you can say cold, under pressure, that never widens the claim your evidence earned.</p>
 </section>
 <section id="the-concept" class="level2" data-number="29.2">
 <h2 data-number="29.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">29.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>A <strong>pitch</strong> is a short, prepared spoken version of your project, built to fit a fixed slice of time. Example: the thirty seconds you give a visitor who pauses, and the guided tour you give the one who stays, are two pitches of different lengths.</p>
+<p>Every pitch shares one skeleton, the <strong>pitch architecture</strong>: the fixed set of beats each version moves through, which is hook, claim, evidence, boundary, invitation.</p>
+<ul>
+<li><strong>Hook</strong>: one sentence a stranger outside your field cares about. Example: “a help desk drowns in tickets every morning and cannot tell which will drag on.”</li>
+<li><strong>Claim</strong>: your headline, said plainly and inside its limits.</li>
+<li><strong>Evidence</strong>: the finding that earns the claim, one spoken sentence at a time.</li>
+<li><strong>Boundary sentence</strong>: one sentence naming what the claim does not show. This is the beat pressure will try to drop, so you rehearse it until it is reflex.</li>
+<li><strong>Invitation</strong>: a reason to look closer.</li>
+</ul>
+<p>The three layers are that one skeleton at three lengths: a <strong>30-second hook</strong> (hook, claim, boundary, invitation, with no evidence yet), a <strong>90-second walk</strong> (the hook plus two or three evidence beats), and a <strong>full pitch</strong> of three to five minutes. Deciding what goes in each length is the choice this chapter equips.</p>
+<p>One rule governs all three. <strong>Compression</strong> is a shorter version of a claim that keeps its boundary. Example: “on data the model had never seen, it flagged four of every five slow tickets” compresses to “on new tickets, it caught most of the slow ones.” <strong>Inflation</strong> is a version that quietly makes the claim bigger. Example: the same finding becomes “my model predicts which tickets will be slow.” One lost a detail; the other lost the truth. The failure to hunt is the <strong>excited-mouth upgrade</strong>: the moment your spoken verb outruns your written one and the boundary moves while nobody watches the words. Example: you wrote “is associated with” and your mouth says “causes.”</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="29.3">
 <h2 data-number="29.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">29.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You built a small machine-learning model for a campus help desk. A <strong>held-out set</strong> is a slice of your data the model never learned from, kept aside so its score is honest. Example: you trained on 4,000 past tickets and tested on 1,000 the model had never seen. On that held-out set, when the model flagged a ticket “slow,” it was right about 78% of the time. That right-when-it-flags rate has a name: <strong>precision</strong> is the share of a model’s flags that turn out correct. Your poster headline reads: “On held-out tickets, the model flagged slow ones with 78% precision.”</p>
+<p>Now you build the pitch on the architecture.</p>
+<ul>
+<li><strong>Hook:</strong> “A help desk drowns in tickets every morning and cannot tell which ones will drag on for days.”</li>
+<li><strong>Claim, compressed for speech:</strong> “On tickets it had never seen, my model flagged the slow ones, and when it raised a flag it was right about three times in four.”</li>
+<li><strong>Boundary sentence, the beat you rehearse to reflex:</strong> “That number is precision on a held-out slice, not overall accuracy, and the model still misses some slow tickets.”</li>
+<li><strong>Invitation:</strong> “The surprising part is which tickets fooled it. Want the walk?”</li>
+</ul>
+<p>Watch the two ways this goes wrong when you speak it. Drop the words “held-out” and you have claimed the model works on any ticket, which your test never showed. Swap “precision” for “accuracy” and you have quoted a number your poster does not report. Both are the excited-mouth upgrade, and both feel natural because the shorter sentence sounds cleaner. The fix is mechanical: mark the boundary sentence and say it at every length, even the 30-second one.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="29.4">
 <h2 data-number="29.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">29.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb11 — Poster delivery: pitches, uncertainty, difficult questions</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb11 — Poster delivery: pitches, uncertainty, and difficult questions</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you run a pacing calculator that turns a script’s word count into seconds of speech, so you can size each layer honestly, then draft and stress-test your own three pitch layers against the one rule.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="29.5">
 <h2 data-number="29.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">29.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own version first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
+<p><strong>Locate the jargon and translate it.</strong></p>
+<pre class="text"><code>Here is one sentence from my poster: "[paste it]". My headline claim and its
+boundary are: "[paste them]". List every word a curious stranger with no training
+in my field could not decode. Then give two plain rewrites a first-year in any
+major would follow, each keeping my claim exactly as narrow as it is now.</code></pre>
+<p>After running, verify: read each rewrite next to your boundary and reject any that dropped a qualifier like “held-out” or turned “flagged” into “predicts.” Counters <em>silent scope change</em> (a “plain” rewrite that quietly widens the claim while it simplifies).</p>
+<p><strong>List the words that inflate my claim.</strong></p>
+<pre class="text"><code>Here is my 30-second hook: "[paste it]". Here is my poster's boundary sentence:
+"[paste it]". Play a hurried visitor. List every word in the hook that says
+something bigger than the boundary allows. Rewrite nothing; just name the words.</code></pre>
+<p>After running, verify: if it flags nothing and calls the hook “strong,” push back and demand the single worst offender. Counters <em>sycophantic agreement</em> (praise reviews your ego, not your words).</p>
+<p><strong>Red-team the pitch as a hurried stranger.</strong></p>
+<pre class="text"><code>Play a skeptical conference visitor with thirty seconds of patience, from outside
+my field. Here is my full pitch: "[paste it]". Name the exact sentence where you
+lose interest or stop believing me, and the single place I promise more than I show.</code></pre>
+<p>After running, verify: check its answer against a real practice run with a friend, and ask it “what is the one thing you left out?” Counters <em>illusion of completeness</em> (a polished “it’s clear” that skips the moment a stranger actually drifts).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +524,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Three calls stay yours. You decide <strong>which claim your evidence actually supports</strong>, <strong>where the claim must stop</strong> (the exact boundary sentence), and <strong>whether a compressed sentence still says what the poster says</strong>. A tool can trim words and flag jargon. It cannot decide the shorter sentence is still true, and it will not be standing at the board when the stranger asks. You say the sentence. You own it.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="29.6">
 <h2 data-number="29.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">29.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your 90-second walk and ask a tool to compress it to a 30-second hook. Back comes a crisp, confident line: “My model predicts slow help-desk tickets 78% of the time.” It reads beautifully, and it is wrong twice. It dropped “held-out,” so it now claims the model works on any ticket, and it turned precision into a general “78% of the time,” a number your poster never reports. The sentence is shorter and smoother than yours, which is exactly the trap.</p>
+<p>You catch it by putting the compressed line next to your poster’s boundary sentence and reading them word for word. “Predicts … 78% of the time” does not match “precision on a held-out slice.” Then you say the line to a friend, who asks, “so it’s right 78% of the time on any ticket?” That question is the widened claim coming back at you. You keep your own boundary sentence and drop the tool’s version.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="29.7">
 <h2 data-number="29.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">29.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, that your compressed pitch still says what your poster says, with <strong>peer reasoning</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: say your 30-second hook once to a partner from outside your field, then have them repeat back, in their own words, your claim and its boundary. If what they repeat is bigger than your poster allows, the compression inflated, and the words they added tell you where. Add a second, independent check from a different family: run your script through the pacing cell in nb11 (<strong>direct calculation</strong> on the word count) to confirm it fits the clock without rushing. One check guards the claim, the other guards the clock.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="29.8">
 <h2 data-number="29.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">29.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter builds the first component of milestone <strong>M11</strong>, your presentation package: the three pitch layers plus the poster-walk map that says what your hand points at, beat by beat. Draft all three for the poster you already locked, mark the boundary sentence in each, and deliver the 30-second hook twice to a partner who flags every spoken upgrade. Those flags are your revision list. You drill the whole package Friday at the mock symposium, a full rehearsal in a safe room, and M11 is due that night.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="29.9">
 <h2 data-number="29.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">29.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend one pitch layer you built. Name the layer and the single boundary sentence you refuse to drop at any length. State the claim you can make aloud, compressed for speech, and show that it still sits inside your poster’s boundary. Close with your uncertainty: the one word your excited mouth is most likely to upgrade under pressure, and the check you will run to catch it.</p>
 
 
 </section>

@@ -4,51 +4,180 @@ title: "20. AI as Analytical Assistant"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_attack_the_analysis_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Decide which parts of your own analysis to hand an AI
+> tool as an analytical assistant, and how to verify every number it returns
+> against your data before you believe any of it. You own which checks count and
+> which flagged problems are real; the tool only does the labor you specify.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"I do not care that a model ran your robustness checks. I care which ones you
+> chose, which numbers you re-derived yourself, and which flags you confirmed
+> against the data. Show me that trail and I trust your judgment. Show me the
+> model's transcript and I trust neither."*
+> — a **reviewer for a human-computer interaction venue**, reading a usability
+> study's results section
+
+An AI tool can now write your analysis code, run a dozen robustness checks, and
+hand you a clean table in seconds. That speed is exactly why a loose habit is
+dangerous. Paste the table into your poster and you have signed your name to
+numbers you never checked. The reviewer above wants the short list of decisions
+that stayed yours. This chapter gives you the habit that survives her question.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+An **AI analytical assistant** is an AI tool you hand a well-specified analytical
+task, never your judgment. Example: you tell it "recompute this time gap after
+dropping the three most experienced users" and it writes and runs that one check.
+The task is checkable. The verdict is not its job.
+
+The unit you attack is your **headline estimate**, the single number that stands
+in for your whole finding. Example: "users of the new interface finished about 0.7
+standard deviations faster." Before you defend that number, you try to break it,
+and this is the labor you delegate.
+
+Two attacks do most of the work. A **robustness check** re-runs the same finding
+under a different but equally defensible choice and asks whether the answer holds.
+Example: you reported a mean completion time, so you also compute the median and
+check the story survives. A **placebo test** runs your exact analysis where the
+effect cannot exist and confirms it returns near zero. Example: you shuffle the
+"new interface / old interface" labels at random and check the fake gap collapses
+to nothing.
+
+Here is the division of labor. The assistant proposes checks, writes the code, and
+prints the numbers. You decide which checks count, and you verify every number
+before it reaches your claim. A tool that ran without an error has not proven its
+result is correct. You verify the number, not the paragraph about the number.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You are studying whether a **command palette** (a searchable menu you open with one
+keystroke) helps users format a document faster than the old nested menus. Your
+headline estimate: palette users finished about 0.7 standard deviations faster. You
+use an analytical assistant to attack it.
+
+**Delegate.** You ask the assistant to recompute the gap across a small grid: all
+participants versus dropping the three who had used a command palette before (the
+sample), mean versus median completion time (the measurement), and the raw gap
+versus one adjusted for each user's baseline typing speed (the specification).
+
+**Inspect and verify.** The assistant returns eight numbers. You do not trust them
+yet. You recompute two rows by hand with a second, simpler expression, and they
+match. The direction holds across all eight, and the magnitude ranges from about
+0.5 to 0.9 standard deviations. Your honest headline is a direction plus a range,
+not one flattering number.
+
+**Placebo and red-team.** You ask the assistant to shuffle the palette labels and
+re-run. The fake gap comes back near zero, so the machinery is not manufacturing
+your effect. Then you ask it, as a hostile reviewer, for the single worst flaw. It
+says with total confidence that experienced users drive the result. You already
+dropped them in the sample check and the gap held, so the data refute that flag.
+The flaw it missed is the one that matters: completion time is not user
+satisfaction, so your claim must stay about speed, not preference.
+
+The assistant did the arithmetic. You decided which checks counted and which flags
+the data confirmed.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb09 — Share the research + attack the analysis**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb09 — Share the research and attack the
+analysis**. Open it in Colab with the badge above and work the cells alongside this
+chapter. There you delegate a real robustness grid, a placebo test, and an
+influence check to an assistant, then adjudicate three confident AI reviewers
+against the data and watch two of their three flags dissolve the moment a check
+touches them.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own expectation first, then delegate. Each prompt is a checkable job,
+not a request for a verdict.
+
+**Propose the checks you might have missed.**
+
+```text
+Here is my robustness grid for one estimate: I vary the sample (all users /
+drop prior palette users), the measurement (mean / median time), and the
+specification (raw gap / typing-speed-adjusted). Act as a hostile reviewer.
+Name up to three additional, equally defensible checks I did NOT list, and
+for each say which direction you expect it to move the estimate.
+```
+After running, verify: check each proposal against your four handles and confirm
+you can actually compute it in your data. Counters *illusion of completeness* (a
+tidy grid that still omits the one check that would break the claim).
+
+**Delegate the computation, keep the numbers checkable.**
+
+```text
+Recompute my time gap under each row of this grid and return a table:
+row label, the gap, and the exact columns and filter used for that row.
+Do not summarize; show one number and its code path per row.
+```
+After running, verify: recompute two rows by hand with a second expression and
+confirm they match the table. Counters *plausible-but-wrong-method* (a row whose
+label and code quietly disagree).
+
+**Red-team the surviving claim.**
+
+```text
+Here is my claim: "the palette is about 0.7 SD faster." Act as a hostile
+reviewer of HCI studies. Name the single worst way this result could
+mislead, and the exact data check that would confirm or kill it. Do not
+rewrite my claim.
+```
+After running, verify: run the check it names, and treat the flaw as real only if
+your own output confirms it. Counters *sycophantic agreement* (praise that reviews
+your ego, not your evidence).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three calls never leave your hands. You decide **which checks count** for the claim
+you want to make, **which flagged problems the data actually confirm**, and **the
+final claim you defend**, with its boundary and its range. The assistant proposes
+and computes. The evidence decides, and you are the one who reads the evidence.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You hand an assistant your grid and it returns a polished eight-row table, every
+row near 0.7, and declares the result "fully robust." The run threw no error. Here
+is the trap: its "median" rows silently call the same mean function as the "mean"
+rows, so four of the eight numbers are duplicates wearing different labels. The
+table agrees with itself because it never varied the handle it claims to vary. This
+is the **illusion of completeness**, a thorough-looking output missing the one
+thing that matters, shading into **confident fabrication**, a number stated with
+certainty that never came from the code path it names.
+
+You catch it by recomputing one "median" row by hand. The true median gap is 0.55,
+not 0.70. The grid overstated how much your choices agreed. A green check is not a
+correct result.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify this chapter's key result, the surviving robustness of your headline gap,
+with **alternative code** from the [verification
+guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recompute the same gap a second way and compare. Filter each group by hand,
+subtract the two means yourself, and confirm you land on the assistant's number.
+Then add a second, independent road with a **falsification test**, the placebo:
+shuffle the group labels, re-run, and confirm the fake gap sits at zero. Two roads
+to one answer is a verified result. Two roads to two answers means you measured the
+assistant's code, not your effect.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter feeds your **M9 poster draft and research audit**, the graded record
+of how hard you tried to break your own claim and what survived. Take your own M8
+estimate, delegate its robustness grid and a placebo to an assistant, and verify
+every number before it enters the audit. For each AI use, record the task you
+delegated, the number the tool returned, the named check that earned your trust,
+and the one flag you caught the tool getting wrong. That verified trail, plus your
+surviving headline stated with its range, is what you walk a skeptic through at
+Friday's studio.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend one analytical task you handed an assistant. Name the
+check you delegated and the one number you re-derived yourself before you believed
+it. State the bounded claim you can now make, with its boundary (what the check
+does *not* establish) and its range (how far the estimate moved across your
+defensible choices). Close with your uncertainty: the one flaw no check could
+settle, and the verification you would run next to close it.

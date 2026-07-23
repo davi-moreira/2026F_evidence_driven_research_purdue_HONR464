@@ -456,27 +456,54 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> When you turn your poster into a written research note, decide which finding has earned the headline and exactly how big each claim is allowed to be given your evidence, then package the note so a stranger can rerun it and reach your number without you in the room.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="33.1">
 <h2 data-number="33.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">33.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“Show me your results in the order you trust them. If your flashiest number comes from one lucky run and it leads the paper, I already know how this review ends. I do not want your most surprising result first. I want your most defensible one.”</em> — a <strong>conference reviewer</strong>, on the first page of a systems paper they actually weigh</p>
+</blockquote>
+<p>On the poster you stood next to your work and filled the silences with your voice. The note has no you standing next to it. Every leap the poster let you imply, the prose now has to earn, in order, for a reader who will never hear you explain it. The reviewer above is not impressed by a big number. She is asking which finding you would still defend after the room empties, and whether she could rerun your work and watch the same number return. This chapter is how you answer both.</p>
 </section>
 <section id="the-concept" class="level2" data-number="33.2">
 <h2 data-number="33.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">33.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>A poster and a note make the same argument, but they carry it differently. <strong>Poster logic</strong> is communication built for a reader standing next to you, where a few boxes and your live voice share the work. Example: a Gap box that reads only “few benchmarks on cold-start latency” while you say the rest out loud. <strong>Paper logic</strong> is communication that must stand alone on the page, where every claim is argued in prose because you are not there to answer. Example: that same gap written as a paragraph naming what prior benchmarks covered, what they skipped, and why the missing piece matters. Turning one into the other is not adding words. It is making the reasoning visible.</p>
+<p>A note carries that reasoning on a backbone. The <strong>problem–gap–question spine</strong> is three linked pieces: the real trouble your work responds to, the specific thing prior retrievable work has not established, and the answerable question that closes exactly that gap. Example: services stall on the first request (problem); published latency studies time only warmed-up requests (gap); how much does an in-memory cache cut first-request time on this workload (question). The spine holds only when the gap is real, and a gap is real only when you show what is already known with <strong>evidence density</strong>, the share of a paragraph resting on sources a reader could open rather than bare assertion. Example: “as everyone knows” carries no density; a sentence resting on a benchmark a reader can rerun carries some.</p>
+<p>The back half of the note needs one more term. A <strong>results hierarchy</strong> is the order you present findings in, best-supported first and fragile last. Example: a median measured over a thousand runs leads; a single fast request waits at the back, labeled exploratory. Your limitations follow the same discipline, stated in proportion to what actually threatens the claim: “measured on a synthetic load, not production traffic,” not a generic “more research is needed.”</p>
+<p>Finally, a note a reader cannot rerun is half a claim. The other half is a <strong>reproducibility capsule</strong>, everything a stranger needs to rebuild your number and nothing they must guess: a notebook that passes <strong>restart-and-run-all</strong> (clear everything, run every cell top to bottom, and the headline number returns), pinned data and tool versions, a fixed seed, a decision log, and your AI-use ledger.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="33.3">
 <h2 data-number="33.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">33.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You benchmarked an in-memory cache for a small web service. Your poster had a box: “38% faster.” The note has to turn that box into a claim you can defend.</p>
+<p><strong>Rank the findings.</strong> Across a thousand requests from a seeded load generator, the median latency dropped about 38%, with a tight interval around it. You also noticed one cached request that returned almost instantly, a 95% drop. The surprising number is the single request; the defensible one is the median over a thousand runs. So the median leads, and the lone request goes to the back, labeled as one observation, not a result.</p>
+<p><strong>Size the claim.</strong> The honest headline reads: “on this synthetic workload, adding the cache cut median first-request latency by about 38% (interval attached); this is a measurement on generated load, not a guarantee for production traffic.” The inflated version you refuse: “the cache makes the service 38% faster.” That sentence drops the workload, drops the word median, and promises every user a speedup your bench never tested.</p>
+<p><strong>Package it.</strong> Your capsule pins the load generator’s seed, records the machine and library versions, logs that you excluded the warmup request and why, and passes restart-and-run-all so the 38% returns on a clean kernel. The note is now readable and runnable.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="33.4">
 <h2 data-number="33.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">33.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb14 — From poster to research note</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb14 — From poster to research note</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you score the evidence density of two paragraphs, build a results hierarchy by watching a tight interval earn the top while a forty-row interval waits at the back, and run an auditor that hunts the five ways a reproducibility capsule breaks.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="33.5">
 <h2 data-number="33.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">33.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
+<p><strong>Locate real sources for the gap.</strong></p>
+<pre class="text"><code>Act as a literature assistant in systems performance. List peer-reviewed or
+official sources that benchmark cache or cold-start latency, in a table with
+title, authors, venue, year, and one-line finding. Only include work you are
+confident exists; mark anything uncertain. Do not write my gap paragraph.</code></pre>
+<p>After running, verify: retrieve each source yourself before it enters the note; a source you cannot open in seconds is fabricated until proven otherwise. Counters <em>confident fabrication</em> (an invented citation arrives as confidently as a real one).</p>
+<p><strong>List every over-reach to verify.</strong></p>
+<pre class="text"><code>Here is my discussion paragraph and the cell that printed my median latency drop
+with its interval: [paste both]. List every sentence that claims more than the
+printout supports: a bigger number, a wider workload, or "faster for everyone"
+where I measured one synthetic load. List them; do not rewrite them.</code></pre>
+<p>After running, verify: check each flagged sentence against your printout and keep only edits that shrink a claim to fit the evidence. Counters <em>silent scope change</em> (a sharper sentence that upgrades “on this workload” to “for everyone” has quietly answered a different question).</p>
+<p><strong>Red-team the capsule.</strong></p>
+<pre class="text"><code>Here are the key lines of my reproducibility capsule: [paste them]. Playing a cold
+replicator who has only these lines, list every input, version, or by-hand step you
+would need to rerun my number and might not find here. Then name one problem this
+line-scan can never catch that only a person running it cold would hit.</code></pre>
+<p>After running, verify: match each gap against what you can actually see missing, and confirm the “cannot catch” problem is real by rereading your own lines. Counters <em>illusion of completeness</em> (a capsule can look complete and still omit the one input a stranger needs).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +514,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Three calls stay yours no matter how fluent the tool is. <strong>Which finding is your headline</strong>, <strong>how big that claim is allowed to be</strong>, and <strong>which sources are real</strong> are never delegated. An AI can sharpen a sentence, but a sharper sentence is not a bigger finding, and clean prose is exactly how an overclaim sneaks in. You own the words you put your name on, their boundary, and their uncertainty.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="33.6">
 <h2 data-number="33.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">33.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your discussion into Gemini and ask it to make the writing sharper. It hands back cleaner prose, and it runs through your spell-check without a flag. Buried in the polish, one sentence has changed size. Your original said “median first-request latency dropped about 38% on this synthetic workload.” The rewrite says “the cache makes the service roughly 38% faster.” The word median is gone, the workload boundary is gone, and a measurement on generated load now promises every user a speedup. The sentence reads better and claims more.</p>
+<p>You catch it by diffing the rewrite against your original sentence and against your printed benchmark. The number came from a median over a seeded load generator, not a mean, and not production traffic, so the general claim is not licensed. You keep the edits that clarify and reject the one that inflated. Fluent prose is not evidence. You verify the claim, not the polish.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="33.7">
 <h2 data-number="33.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">33.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, the headline speedup, with <strong>alternative code</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: recompute the median latency drop a second way, from the raw timings rather than the summarized table, and confirm the number and its interval match. Then verify the capsule with <strong>peer reasoning</strong>: hand it to a partner who reruns it cold with restart-and-run-all. If your number comes back on their machine, the capsule is runnable. If it does not, you measured your own memory, not a reproducible result.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="33.8">
 <h2 data-number="33.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">33.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter becomes your <strong>M14 research note and reproducibility capsule</strong>. Draft the problem–gap–question spine in prose with every claim sourced, order your findings into a results hierarchy with the defensible one leading, size your limitations to your evidence, and assemble the capsule so restart-and-run-all returns your headline. A partner table-reads the note and reruns the capsule at Friday’s studio, where M14 is due and M15, your final research chapter, begins. The note makes your work readable; the capsule makes it runnable.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="33.9">
 <h2 data-number="33.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">33.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend your research note. Name the finding you chose as the headline and why it, not a more surprising result, earned the top. State the bounded claim in one sentence, with its boundary (the workload, sample, or population it does not cover). Then state your uncertainty: your interval or the caveat that most threatens the number, and the one check a partner running your capsule cold would run next to test it.</p>
 
 
 </section>

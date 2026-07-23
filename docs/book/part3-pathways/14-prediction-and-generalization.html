@@ -456,27 +456,54 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Decide whether your question is truly a <em>prediction</em> about cases you have not yet seen, and if it is, commit in advance to a four-part forecasting contract (target, baseline, split, metric) plus a leakage check, so you can defend a modest honest score and say exactly where it stops generalizing.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">14.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<p>Picture a county public-health officer who must decide, each Friday, whether to post a swimming advisory at a lake. A vendor arrives with a model that flags harmful algal blooms “with 94% accuracy.”</p>
+<blockquote class="blockquote">
+<p><em>“Ninety-four percent compared to WHAT? Most weeks this lake is fine, so if I just say ‘no bloom’ every single week I am already right about eighty-five percent of the time. If your model cannot clearly beat that, and prove it did so on weeks it never studied, I am not closing a public beach on its say-so.”</em> — a public-health officer who has been burned by an impressive-sounding number</p>
+</blockquote>
+<p>That officer asks the two questions this chapter trains you to answer before you trust any forecast. Is it better than the dumbest honest rule, and was it earned on cases the model never saw? Get those wrong and you cry wolf or miss a real hazard.</p>
 </section>
 <section id="the-concept" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">14.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>A <strong>prediction</strong> is a best guess about a case whose outcome you cannot see yet. Example: forecasting whether a lake blooms next week, before next week exists. Prediction is descriptive, not causal. It forecasts <em>what</em> will happen, never <em>why</em>.</p>
+<p>What makes prediction its own question is its <strong>reach</strong>, the cases a claim is meant to cover. Prediction’s reach is <strong>unseen cases</strong>, units not in your data whose outcome is still unknown, such as next month’s samples. Its cousin is <strong>generalization</strong>, reach from your sample to a broader population, such as from the twelve lakes you measured to every lake in the watershed. Both go beyond the data in hand, and both are honest only when you can name the crossing that licenses them.</p>
+<p>A forecast earns trust under a four-part <strong>contract</strong>, in fixed order. The <strong>target</strong> is the one column you predict, for example <code>bloom_next_week</code>. The <strong>baseline</strong> is the dumbest honest rule you must beat, usually “always guess the most common answer”; if 85% of weeks have no bloom, that rule scores 85% for free, so 85% is the bar. The <strong>split</strong> divides rows into a training set the model learns from and a <strong>held-out set</strong>, rows kept back during training and used only as its exam, say a random quarter of the weeks. The <strong>metric</strong> is how you keep score, matched to the target; accuracy misleads when blooms are rare, so recall on the bloom class, the share of real blooms the model catches, often matters more.</p>
+<p>One trap sits above all others. <strong>Data leakage</strong> is a feature carrying information you would not have at the forecast moment, because its value is settled only at or after the outcome. Example: the toxin concentration measured <em>during</em> the bloom. A leaked feature inflates your score on today’s data and collapses on tomorrow’s, because it will not exist when you truly need the forecast.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">14.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>Suppose you want to warn swimmers a week ahead. Your <strong>target</strong> is <code>bloom_next_week</code>, one if the lake exceeds the advisory threshold and zero otherwise. Across three summers of weekly samples, 85% of weeks are clear, so your <strong>baseline</strong>, “always say no bloom,” scores 0.85 with no model at all.</p>
+<p>You keep features genuinely known a week early: water temperature, recent rainfall, upstream phosphorus load. You fit a logistic model (a standard yes-or-no classifier), <strong>split</strong> off a held-out quarter of the weeks, and score both only on those held-out weeks. The model lands around 0.88. That four-point edge feels small, and its smallness is the honest result: a modest true win beats a dramatic fake one.</p>
+<p>Then a well-meaning collaborator adds <code>chlorophyll_a</code>, the pigment reading. Held-out accuracy leaps to 0.97. Exciting, until you ask <em>when</em> chlorophyll is measured: during the very bloom you are forecasting. It is the outcome wearing a different label. Drop it, and the score falls back to 0.88. The timing test, not the accuracy, decides. And because you trained on one shallow lake, you name the boundary out loud: on a deep, cold reservoir the pattern may not hold, so the forecast does not yet generalize there.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="14.4">
 <h2 data-number="14.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">14.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb07 — Prediction: generalizing to unseen cases</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb07 — Prediction: generalizing to unseen cases</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you sign the four-part contract on a real dataset, score an honest baseline first, then <em>build a leak on purpose</em> so you feel a fake score climb and learn to hunt it by correlation and timing before you retrain clean.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">14.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Paste real output, never a number you remember.</p>
+<pre><code>Act as a Python tutor. Here is a cell that holds out 25% of my weekly
+lake samples, scores a majority-class baseline on them, then scores a
+logistic model on the SAME held-out weeks: [paste cell]. Explain, line
+by line, what the split does and why it must happen before any fitting.
+Then give me one independent way to confirm the held-out weeks were
+never in training.</code></pre>
+<p><em>After running, verify: read the baseline, model, and margin off your own printout and confirm the tool’s numbers match, not ones it guessed. Counters <strong>confident fabrication</strong>, a fluent walkthrough quoting a margin your code never produced.</em></p>
+<pre><code>Here is the outcome I want to predict and the moment I need the forecast:
+a bloom next week, decided by next week's samples. Here is my candidate
+feature list with when each value is recorded: [list]. For each feature,
+say whether its value is settled before, at, or after the outcome, and
+flag any that could not exist at prediction time.</code></pre>
+<p><em>After running, verify: re-derive the timing of the one feature it clears most confidently. If any feature is settled at or after the bloom, reject it whatever the tool says. Counters <strong>illusion of completeness</strong>, a tidy list omitting the one late-settled feature that dooms the forecast.</em></p>
+<pre><code>Act as a hostile reviewer. Attack this headline: "Our model forecasts
+blooms with 88% held-out accuracy." Name every reason a skeptic would
+distrust it, including the baseline it beat, the metric, and any hidden
+leak.</code></pre>
+<p><em>After running, verify: check each objection against your printout and keep the ones your numbers support. Counters <strong>sycophantic agreement</strong>, where an assistant primed to help praises a headline you wrote.</em></p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +514,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Four calls stay yours. <strong>The target</strong>: what you forecast and why it matters. <strong>The baseline</strong>: the honest rule the model must beat. <strong>The timing of every feature</strong>: whether a value would truly exist at the forecast moment, which only you, who knows your data’s timeline, can settle. And <strong>the verdict</strong> on whether your project should predict at all. A tool that has never seen your timeline cannot make these calls for you.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="14.6">
 <h2 data-number="14.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">14.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your feature list and ask an AI partner which features are safe to use. It answers with confidence: “<code>chlorophyll_a</code> is your strongest predictor, keep it.” The reasoning sounds airtight, because chlorophyll correlates almost perfectly with blooms. That near-perfect correlation is exactly the tell. This is the <strong>plausible-but-wrong-method</strong> failure: the tool ranked the feature on how well it <em>fits</em> the past, not on whether it could <em>exist in time</em> for a forecast. You catch it with one question statistics alone cannot answer. When is chlorophyll measured? During the bloom, so no forecast made a week earlier could have it. Drop it, watch the score fall back to 0.88, and keep the honest model.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="14.7">
 <h2 data-number="14.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">14.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify the chapter’s key result with a <strong>holdout sample</strong>, the verification-guide method for any fitted model: never report a score computed on rows the model trained on. Confirm the split is real by checking that no held-out week appears in the training set, a one-line <strong>direct calculation</strong> on the row indices. Then falsify the leak: refit with the suspect feature removed and confirm the score drops back to the honest held-out number. If pulling one feature collapses your accuracy, that feature was doing work a real forecast cannot.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="14.8">
 <h2 data-number="14.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">14.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter builds the spine of your <strong>M7 declared analysis protocol</strong>, the plan for how you will analyze your data, fixed before you touch it. Draft four pieces for your project: the prediction verdict (target, baseline, split, metric, in that order, or an honest “prediction is the wrong question, and here is why”), the feature most likely to leak with the timing check that rules it out, the honesty checks you will run before reporting, and a one-sentence claim boundary. The prediction-and-leakage auditor tests exactly these at Friday’s studio.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="14.9">
 <h2 data-number="14.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">14.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>State and defend the decision this chapter equips. Name your target and the baseline it must beat. State the compass position out loud: prediction, descriptive kind, unseen-cases reach, with no causal reading of any model weight. Then name the edge of what you can claim: your uncertainty (the spread you see when you repeat the held-out split several times, a check called cross-validation), your leakage risk, and the population where your forecast may stop generalizing. A forecast reported without its boundary and its uncertainty is not yet defensible.</p>
 
 
 </section>

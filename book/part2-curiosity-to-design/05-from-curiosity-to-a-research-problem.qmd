@@ -4,51 +4,185 @@ title: "5. From Curiosity to a Research Problem"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_curiosity_to_problem_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Which single research problem, out of everything your
+> curiosity could become, you will commit a term to. You state it as one
+> answerable question that names its units, its outcome, and the population it
+> speaks for, and you defend it as important, feasible, and genuinely new.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+Picture a research mentor reading your one-line pitch before your first meeting.
+She does not ask about your data or your software. She asks one thing: *"What,
+exactly, is the question?"* Her reason: *"I can tell in a paragraph whether someone
+knows what they are asking. If they do not, nothing downstream saves the project."*
+
+Everything you do later sits below this decision. A vague question makes every
+later choice arbitrary, because any data and any answer will seem to fit. A sharp
+question tells you what evidence you need and what would count as being wrong. Pick
+the problem well and the term has a spine. Pick it badly and no analysis will
+straighten it.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+Turning curiosity into a problem is a funnel with four stops. Each stop throws
+away vagueness the stop above it still allowed.
+
+- **Curiosity**: a felt interest with no edges yet. Example: *"why do some people
+  seem to get sick more during exam weeks?"* You cannot collect evidence on it,
+  because it never says who or what to look at.
+- **Topic**: a curiosity with edges, a territory someone could gather evidence
+  inside. Example: *"sleep and illness among residence-hall first-years."*
+- **Research problem**: one specific unknown inside that territory whose absence
+  matters. Example: *"we do not know whether short sleep during finals week goes
+  with more reported illness."*
+- **Answerable question**: the single sentence evidence can answer, and be wrong
+  about. Example: *"do first-years who sleep under six hours during finals report
+  more sick days than those who sleep seven or more?"*
+
+A good question also carries three things it must name, or you will not know what
+to record.
+
+- **Units of analysis**: the who or what each row of your evidence stands for.
+  Example: one student. If you cannot say what one unit is, you cannot count
+  anything.
+- **Target population**: the full group the question is really about, beyond the
+  handful you reach. Example: all residence-hall first-years, not only the twenty
+  you surveyed.
+- **Outcome**: the observable thing that varies, the quantity you actually record.
+  Example: the number of self-reported sick days. It must be measurable, even if
+  imperfectly.
+
+Finally, three tests decide whether a candidate problem is worth a term.
+**Importance** asks whether anyone beyond you would care about the answer.
+**Feasibility** asks whether you can get the evidence this term, with the access
+and time you have. **Contribution** asks whether the answer adds something not
+already settled, since a ten-minute search that finds it already known kills the
+contribution.
+
+Once you have a question, you will also classify what *kind* of answer it wants.
+That is the inquiry compass, and it is the whole job of the next chapter. For now,
+the work is the funnel.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+Start with a health curiosity: *"does moving more actually help you sleep?"* It is
+a real feeling, but you cannot study it, because it names no one and measures
+nothing. Give it edges and it becomes a **topic**: physical activity and sleep
+quality in undergraduates. Push further to a **research problem**: we do not know
+whether more daily walking goes with better-rated sleep among first-years living
+in residence halls. That points at one missing piece, not a whole subject.
+
+Now sharpen it into an **answerable question**: *"among residence-hall first-years,
+do those who average more than 8,000 steps a day report better sleep quality than
+those who average fewer than 4,000?"* The three carried terms snap into place. The
+**unit** is one first-year. The **outcome** is a sleep-quality rating, say a
+1-to-10 self-report you collect on a phone. The **population** is residence-hall
+first-years, not the whole campus.
+
+Now run the three tests. It clears **importance** (anyone advising sleep-deprived
+first-years wants the answer), **feasibility** (step counts and a nightly rating
+are both collectable in one term), and **contribution** (the activity-and-sleep
+link is studied broadly in adults but far less in this dorm-living, first-year
+group). The curiosity is now a problem you could defend.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb01 — From curiosity to a research problem: descriptive, predictive, causal**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb01 — From curiosity to a research problem:
+descriptive, predictive, causal**. Open it in Colab with the badge above and work
+the cells alongside this chapter. You will watch one curiosity sharpen the instant
+it touches real survey columns, then walk your own curiosity from your nb00 map
+down the funnel, draft two candidate problems, and defend the one you keep.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first. Only then open the tool, so its output has something
+of yours to disagree with.
+
+**Locate what is already known** (before you claim your problem is new):
+
+```
+Act as a research-scoping assistant. My topic is [your topic]. List what is
+already reasonably well established about it and where a genuine open question
+might remain. For every established fact, give one real, retrievable source I
+can open myself. Mark anything you are unsure exists.
+```
+
+*After running, verify:* open each source before you trust it. This counters
+**confident fabrication**, where a fluent answer cites a real-sounding study that
+does not exist.
+
+**Widen a curiosity into candidates you check:**
+
+```
+Here is my curiosity: [one sentence]. Produce five candidate research problems
+inside it. For each, name its units of analysis, its outcome, and its target
+population, in a table. Do not add any topic I did not mention.
+```
+
+*After running, verify:* check each row against the curiosity you actually wrote.
+This counters **silent scope change**, where the tool quietly answers a nearby
+question and hands it back as yours.
+
+**Red-team the problem you chose:**
+
+```
+Act as a hostile grant reviewer. Here is the research problem I want to commit a
+term to: [paste it]. Argue the strongest case that it is not worth doing. Attack
+it on importance, on feasibility, and on whether it adds anything new.
+```
+
+*After running, verify:* keep only the objections that survive your own reasoning.
+This counters **sycophantic agreement**, where a tool praises your idea because you
+proposed it.
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three calls stay yours alone. **Which problem** you commit a term to. **How you
+word** the question, including its units, outcome, and population. And the
+**judgment** on whether it is important and genuinely new. A tool can widen your
+options and attack your choice. It cannot make the choice, because only you carry
+the reasons you will have to defend at the studio.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You ask a tool to *"turn my curiosity about sleep and health into a research
+question."* It replies, with total confidence: *"Does blue-light exposure before
+bed reduce REM sleep in college undergraduates? Studies show blue light suppresses
+melatonin."* It sounds authoritative, and it is wrong for you.
+
+It fails in two ways. First, it silently changed your scope. You never chose blue
+light or REM sleep, yet the question now hangs on both. That is a
+**silent scope change**, and you catch it by reading the tool's units, outcome, and
+population against the ones you committed. Yours were steps and a sleep rating, not
+screens and REM. Second, the melatonin line is stated as settled fact with no
+source. Before repeating it, you find and open a real study yourself, and if you
+cannot, you treat it as **confident fabrication** and drop it.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+The key result of this chapter is a claim about your own question: that it is
+answerable and carries its three terms. Verify it with **peer reasoning**, method
+11 in the [verification guide](../../ai_resources/verification_guide.md). Hand your
+one-sentence question to a classmate who has never seen your project, and ask them
+to name, from that sentence alone, what one unit is, what you would record, and who
+the answer is about. If they name all three, your question holds. If they stall,
+the question is not yet answerable, and their confusion shows which term is still
+missing.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter builds the spine of milestone **M1, your research opportunity
+landscape**. Take the strongest curiosity from your nb00 map and walk it down the
+funnel: topic, research problem, then answerable question, naming its units,
+outcome, and population, and scoring it on importance, feasibility, and
+contribution. What you defend at the Friday studio is a problem you funneled and
+chose yourself, not a tool's suggestion.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In three or four sentences, state the one problem you are committing to as an
+answerable question, and defend it. Name the **boundary**: one thing this question
+will *not* let you claim, even if you answer it well. Name your **uncertainty**:
+the part of importance, feasibility, or contribution you are least sure of, and
+what evidence would settle it. A choice you can defend with its edge and its doubt
+named is a research problem. A choice without them is still a curiosity.

@@ -4,51 +4,158 @@ title: "9. Model, Inquiry, Data Strategy, and Answer Strategy"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_anatomy_of_design_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** You decide the four parts of your research design and
+> confirm they align: a model of the world, one named quantity you want out of it,
+> a plan for how the data arrive, and a plan for turning that data into your
+> quantity. This chapter equips you to write those four parts and defend that they
+> point at the same thing.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+Picture a data science lead reading your one-page design before you spend a
+semester on it. Her worry is simple: "Show me the exact number you are after, then
+show me that the way you collect and crunch the data can actually reach that
+number. If those two drift apart, every result you bring me is answering a
+question I never asked." A design that skips this step is not rigorous. It is a
+hope with good formatting. Getting the four parts to agree, on paper, before any
+data exist, is the cheapest quality check you will ever run.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+Every research design has the same four parts. The course calls them **MIDA**, one
+letter each.
+
+- **Model**: your written picture of how the world could work, meaning which
+  things exist and what could affect what. Example: "a listener's chance of
+  accepting a recommended song runs from 0 to 1, and a new recommender could nudge
+  it up."
+- **Inquiry**: the one exact quantity you want from that world, named before any
+  data arrive. Example: "the average lift in accept rate the new recommender
+  causes across listeners."
+- **Data strategy**: your plan for how the data come to exist, meaning who gets
+  sampled and who gets which condition. Example: "randomly send each session to
+  the old or new recommender, then log every accept."
+- **Answer strategy**: your plan for turning the data into an estimate of the
+  inquiry. Example: "accept rate in the new group minus accept rate in the old
+  group."
+
+The four are not a checklist you fill in any order. They must **align**, meaning
+your data and answer strategies actually reach the inquiry your model makes
+askable. Example of misalignment: a causal inquiry ("the lift the recommender
+*causes*") served by a data strategy that never randomizes who sees what can only
+show an **association**, meaning two things move together without proof that one
+caused the other. Naming the misalignment on paper is the whole job here.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+Take a music-streaming app testing whether a new autoplay recommender raises how
+often listeners keep the suggested track. Walk the four parts.
+
+The **model** says each listener has two possible accept rates, one under the old
+recommender and one under the new, and the new one could be higher, lower, or the
+same. The **inquiry** is the average difference between those two rates across all
+listeners, one number, causal in kind. The **data strategy** buckets each incoming
+session at random into old or new, so nothing about the listener decides which
+version they get. The **answer strategy** computes the accept rate in each bucket
+and subtracts.
+
+Now audit alignment. The inquiry asks for a caused difference. Random bucketing is
+what licenses that word, because it breaks any link between who the listener is and
+which version they see. So the four parts agree. Contrast a tempting shortcut:
+ship the new recommender to new users and compare them against existing users on
+the old one. That data strategy no longer aligns with a causal inquiry, because
+new and existing users differ in ways that also move accept rate. The honest claim
+collapses from "causes" to "is associated with." Same question, broken alignment.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb03 — The anatomy of a research design: MIDA + declare → diagnose → redesign**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb03 — The anatomy of a research design: MIDA +
+declare → diagnose → redesign**. Open it in Colab with the badge above and work
+the cells alongside this chapter. There you build a small simulated world, write
+its four MIDA parts, and watch what happens to your answer when a data strategy
+quietly stops matching the inquiry.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Write your own draft of each part first, then ask. Committing first gives the AI
+output something to disagree with.
+
+```
+Act as a research-design tutor. Here is my research question: [paste it].
+Draft the four MIDA parts as a labeled list — Model, Inquiry, Data strategy,
+Answer strategy. State the Inquiry as one exact quantity. Mark each part
+"confident" or "guessing." Do not smooth over gaps.
+```
+After running, verify: read the drafted Inquiry's words next to your question's
+words. Do the kind and reach match? This counters **silent scope change**, where
+the tool answers an easier, adjacent question than the one you asked.
+
+```
+Act as a hostile methodologist. Here are my four MIDA parts: [paste them].
+Name the single worst misalignment — a place where my data or answer strategy
+cannot reach my stated inquiry. Give one concrete way my design fails, not
+praise.
+```
+After running, verify: check the objection against your own alignment note. This
+counters **sycophantic agreement**, where the tool calls a design sound because
+you proposed it.
+
+```
+Find one real, published study that used a design like mine to answer a similar
+question. Give title, authors, year, and venue. If you are not confident it
+exists, say so instead of inventing one.
+```
+After running, verify: open a library database and locate the exact study before
+citing it. This counters **confident fabrication**, where the tool returns a
+plausible citation for a paper that does not exist.
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three choices stay yours. **Which world your question assumes** (the model, and so
+what could confound it). **Which single quantity you want** (the inquiry, named in
+your words, not the AI's paraphrase). **Whether your four parts align**, and
+therefore whether your claim boundary is *causes* or only *is associated with*. An
+AI can draft candidate parts. Deciding they agree, and owning the claim that
+follows, is research judgment you cannot hand off.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste your streaming question and ask for MIDA. The tool returns four
+confident, well-formatted parts and calls the design "rigorous." Read closely: it
+wrote the **data strategy** as "compare new users on the new recommender to
+existing users on the old one," and it kept the **inquiry** worded as a caused
+lift. That is two failures at once. The data strategy is **plausible-but-wrong**,
+because user tenure moves accept rate on its own, and the inquiry wording is a
+**silent scope change** from association to cause. You catch it two ways: set the
+inquiry's words beside the data strategy and ask whether randomization actually
+happened, then sketch the model as a diagram and look for an arrow from "user
+tenure" into both the version seen and the accept rate. That open arrow is the
+confounder the fluent draft never mentioned.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+The key result to verify is the alignment claim itself: that your four parts point
+at one quantity. Use **peer reasoning** from the verification guide. Explain your
+model, inquiry, data strategy, and answer strategy to a partner and ask them to
+name the part that does not reach the others. A second person's first question
+usually finds the drift you stopped seeing. For any design whose inquiry uses the
+word *causes*, add a second, independent check: draw the **causal diagram** and
+confirm no open backdoor path (a common cause of both treatment and outcome) is
+left standing. Two independent checks that agree are far stronger than one.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter is the spine of milestone **M3 — your research charter and MIDA
+declaration**. Bring your own project's question and write its four parts, then add
+one sentence naming which part you were least sure aligned and why. That alignment
+note becomes the claim boundary you defend in your charter, and it is the exact
+input chapter 10 builds on when you declare and diagnose the same design.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In three or four sentences, state your project's four MIDA parts, name the single
+quantity your inquiry targets, and declare your claim boundary: does your data
+strategy earn the word *causes*, or does it stop at *is associated with*? Then name
+the one part you are least confident aligns, and the uncertainty that would change
+your answer if it turned out otherwise. A declaration with no stated boundary and
+no stated uncertainty is incomplete.

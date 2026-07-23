@@ -4,51 +4,172 @@ title: "17. Data Provenance and Data Quality"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_research_builds_on_research_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** For every fact, measurement, or source your project
+> leans on, decide whether it is solid enough to build on. You make that call by
+> tracing the value back to where it was first measured (its provenance) and by
+> judging whether it was measured well, under the conditions your work needs (its
+> quality).
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+Picture a **thesis advisor**, the researcher who signs off on your project, reading
+the first draft of your background section:
+
+> *"You wrote that this solvent dissolves 13 grams per liter at room temperature.
+> Where did that number come from? Not which website copied it. Who actually put the
+> compound in water, weighed it, and at what temperature? Bring me the paper that
+> measured it, or take the number out."*
+
+A value with no traceable origin is a rumor with a decimal point. Precision is not the
+same as trust. This chapter trains you to stop treating a number or a citation as true
+because it arrived looking tidy, and to ask two questions of everything you borrow:
+where did it come from, and is it any good.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+**Data provenance** is the documented origin of a value and every hand it passed
+through before it reached you. Example: a solubility figure printed in your textbook,
+traced back through a 2010 review that quoted it to the lab paper that first measured
+it in 1968.
+
+That chain has two kinds of links. A **primary source** is the original report where a
+value was first measured. Example: the paper whose authors actually ran the experiment.
+A **secondary source** re-reports a value it did not measure. Example: a review or
+textbook that copies the primary paper's number. A value is only as trustworthy as the
+primary source at the end of its chain.
+
+**Data quality** is whether a value is fit for *your* specific use: real, measured
+rather than guessed, and obtained under the conditions your project needs. Example: a
+solubility measured at 25°C is high quality for a room-temperature question and the
+wrong value for a reaction you run at 60°C. A **mischaracterized value** is a real
+number attached to the wrong conditions or method. Example: a figure a model *computed*
+reported as if it were *measured*, or a 40°C reading cited as the 25°C value.
+
+You settle both questions with one habit, the **retrieval-verification loop**: **Ask**
+a tool to surface a value and its source, **Retrieve** the primary source yourself,
+**Verify** that it exists and reports that value under those conditions, and
+**Document** where you found it. A citation you have not opened is a lead, not a
+source, however confident the tool that handed it to you.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You are studying greener extraction methods and you need one number: how much caffeine
+dissolves in water at 25°C. You ask an AI assistant, and it answers instantly:
+"21.7 g/L at 25°C," with an author, a year, and a real-looking journal.
+
+You run the loop instead of copying the number. First, **provenance**. You search the
+exact title of that citation. If it resolves nowhere, the value is orphaned and you
+drop it. If the paper is real, you check whether it *measured* the solubility or merely
+quoted it from an older study, which sends you one link further back toward the primary
+paper that put caffeine in water and weighed what dissolved.
+
+Then, **quality**. You open the primary source and read the conditions line. Was it
+25°C, your temperature, or 40°C? Was the value measured on a balance or predicted by
+software? You cross-check the figure against an independent reference, the free NIST
+Chemistry WebBook (webbook.nist.gov) or PubChem, both of which cite their own sources.
+When your citation, the primary paper, and the reference database agree on the value
+and the temperature, the number has earned a place in your project. When they disagree,
+the disagreement *is* the finding: the literature is not settled, so you report a range
+rather than a false point.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb02 — Research builds on research: verified evidence + real gaps**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb02 — Research builds on research: verified evidence
++ real gaps**. Open it in Colab with the badge above and work the cells alongside this
+chapter. In the lab you run the retrieval-verification loop on a claim from your own
+project, watch a tidy pile of AI-suggested citations collapse to the few that survive
+retrieval, and follow citation chains backward and forward into an evidence map whose
+one empty square is a gap you can defend, because every source around it is one you
+opened yourself.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Each prompt is **commit-first**: write down the value or source you already believe,
+then let the tool disagree with something of yours.
+
+**Locate the primary source (delegable).**
+
+```text
+Act as a chemistry literature assistant. I have this value: [paste value, units,
+conditions]. Name the primary published source that FIRST measured it, with authors,
+year, exact title, journal, and the temperature and method reported. Only list work
+you are confident exists; mark anything uncertain, and flag whether each is a primary
+measurement or a secondary re-report.
+```
+
+After running, verify (counters *confident fabrication*): open every citation yourself
+before you trust it; a source you cannot retrieve is invented until it opens.
+
+**Turn borrowed numbers into a provenance table (delegable).**
+
+```text
+Here are five numbers my project borrows: [paste them]. For each, return a row with
+the value, its stated conditions (temperature, pressure, solvent), the primary source,
+and whether the value was measured or computed. Return it as a table so I can audit
+each row on its own.
+```
+
+After running, verify (counters *silent scope change*): read each row's conditions
+against the conditions your project actually needs; a value quietly measured at the
+wrong temperature can be handed to you as if it were yours.
+
+**Red-team the number you like (delegable).**
+
+```text
+I plan to build on this value: [paste value and source]. Act as a hostile reviewer
+and argue it is unreliable for a reaction run at [your conditions]: wrong temperature,
+computed not measured, or copied through a chain of reviews. Do not reassure me.
+```
+
+After running, verify (counters *sycophantic agreement*): if the reviewer only praises
+your number, push back and take its strongest objection to the primary source or your
+instructor rather than trusting easy approval.
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three calls stay yours. **Whether a value counts as verified** is settled by a source
+you opened, not by the tool's confidence. **Whether its measurement conditions fit
+your use** is a judgment about your specific reaction, and no lookup makes it. And
+**how much uncertainty you report** when your sources disagree is yours to state and
+defend, because your name goes on the claim the number supports.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You ask for the caffeine solubility and the tool returns "21.7 g/L at 25°C," with a
+citation to a real journal. Seven details look right, so it is tempting to paste it in.
+You open the primary paper instead, and the conditions line reads 40°C, not 25°C. The
+number is real. The temperature is wrong for your question, and the tool swapped it
+silently. You catch it two ways. You had written your own expectation first, so a value
+that sits oddly high for room temperature already looked suspect. Then you read the
+actual conditions line rather than the tool's summary of it, and the mismatch is plain.
+The value goes into your notes as a 40°C figure, and your 25°C question stays open.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+The key result here is a value with a claimed origin, so verify it with **primary-source
+reading**: find the paper that first measured the number and read the line that reports
+it and its conditions, not a summary of that line. Because a borrowed number reaches
+your poster and your defense, treat it as high-stakes and add a second, independent
+check, a **benchmark result**: compare the value against a known-good reference such as
+the NIST Chemistry WebBook. Two independent confirmations that agree guard against
+trusting a single source that quietly copied its number from somewhere else.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter sharpens your **M2 verified evidence and contribution map**, the milestone
+you present at Friday's studio. Every entry in your M2 source log already needs an
+author, a year, and where you retrieved it. Add two columns: whether the entry is a
+primary source or a secondary re-report, and the conditions or scope under which its
+central value holds. A log built this way lets a skeptic trace any number you use back
+to the bench where it was made, which is what makes your gap and your contribution line
+believable.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In a short paragraph, take one value your project depends on and defend building on it.
+Name the value and its conditions, name the primary source you traced it to and where
+you retrieved it, and state the boundary: under what conditions the value no longer
+applies to your work. Then give your uncertainty in one sentence, including whether any
+of your sources disagree on the number. If you cannot yet name the primary source behind
+a value you are using, say so plainly. That admission is a finding about the borrowed
+number you most need to check before Friday.

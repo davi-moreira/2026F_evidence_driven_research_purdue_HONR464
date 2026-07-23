@@ -456,27 +456,55 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> When your AI roles disagree, or when several of them agree, decide which of three things you are looking at (real disagreement, correlated error, or manufactured consensus) and decide the exact moment to take the call back into your own hands.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="36.1">
 <h2 data-number="36.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">36.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“Don’t tell me your reviewers agreed. Tell me whether they could have agreed for the same wrong reason. Agreement is the easiest thing in the world to manufacture, and the most dangerous to trust.”</em> — a <strong>skeptical peer</strong> at your practice defense</p>
+</blockquote>
+<p>By now you can run a small team of AI roles on your work. The seductive next thought is that a team is safer than one assistant, so three roles blessing your chapter must mean three confirmations. It does not. Three roles built the same way, reading the same draft with the same instructions, tend to make the same mistake, so their agreement is one error repeated three times. This chapter is about seeing through that, and about the moment you stop counting votes and decide for yourself.</p>
 </section>
 <section id="the-concept" class="level2" data-number="36.2">
 <h2 data-number="36.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">36.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>When your roles do not match, the first move is not to pick a winner. It is <strong>reconciling conflicting outputs</strong>: deciding what to believe by first diagnosing <em>why</em> the roles differ. Example: before you side with the reviewer over the methodologist, you ask what would make each of them right. There are three cases, and they call for opposite responses.</p>
+<p><strong>Real disagreement</strong> is when the roles genuinely read the evidence differently. Example: your reviewer calls a sentence clear and strong while your methodologist flags that same sentence as reaching past your data. This is the good case. The clash points straight at the claim you need to check.</p>
+<p><strong>Correlated error</strong> is when the roles agree, but on the same wrong assumption, so the agreement proves nothing. Example: three reviewers built from the same base model all miss the same flaw because they share the blind spot. The question to ask is simple: could they be wrong the <em>same</em> way? If yes, their consensus is one signal, not three.</p>
+<p><strong>False consensus</strong> is when the roles agree only because your prompt framed the task so they had to. Example: you ask “confirm my chapter is ready,” and every role obliges. You led all the witnesses. Reframe the ask neutrally and run it again.</p>
+<p>The tool that tells these apart is an <strong>independence check</strong>: a test that makes agreement worth more than a head-count, either an independent method you run yourself or a way you force two roles to be genuinely independent. Example: two roles bless a cited number, so you open the source and recompute it yourself before trusting either.</p>
+<p>Then comes the decision only you can make. <strong>Escalation to human judgment</strong> is the moment an AI output would <em>settle</em> rather than <em>inform</em> a decision that is yours, so you stop and decide it yourself. Example: a role proposes calling your result “causal,” which would settle your claim boundary, so it escalates to you. What you do at that moment is a <strong>human override</strong>: you take the pen back and make the call in your own words, backed by your own check, even when the roles agreed on something else. A decision that just counted the roles is not a decision. It is a vote, and votes among look-alike models are meaningless.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="36.3">
 <h2 data-number="36.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">36.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You measured the local acceleration of gravity, <strong>g</strong> (how fast a dropped object speeds up, about 9.81 meters per second squared at Earth’s surface), using a simple pendulum. You timed its swing, then used the small-angle formula g = 4π²L/T², where L is the length and T is the period. Your draft reports “g = 9.81 m/s², in excellent agreement with the accepted value.”</p>
+<p>You run three AI reviewer roles. All three return the same verdict: “Looks solid. Matches the textbook value.” Is that three confirmations?</p>
+<p>Diagnose before you celebrate. Every one of those roles already knows 9.81 is <em>the</em> answer, so each one pattern-matches your number to the known constant and blesses it without checking how you got there. That is <strong>correlated error</strong> wearing the mask of confirmation: they share one blind spot, the anchor to the famous value, and it hides your actual mistake. Your swing was wide, around 30 degrees, where the small-angle formula quietly breaks down, and you timed a single swing by hand, so reaction time alone is roughly a fifth of a second of noise. The tidy “9.81” was luck riding on an honest-looking method.</p>
+<p>This is where you <strong>escalate</strong>. The reviewers’ agreement would <em>settle</em> your headline claim, and that claim is yours, so you take the pen back. You recompute g from your raw timings yourself and carry the stopwatch error through the arithmetic, and the honest result is g = 9.7 ± 0.4 m/s². Consistent with 9.81, but nowhere near as precise as you wrote. You <strong>override</strong> three “looks great” verdicts and rewrite the claim with its real uncertainty. The roles counted the answer as correct. You checked whether it was earned.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="36.4">
 <h2 data-number="36.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">36.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb15 — Managing multiple AI agents + the final defense</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb15 — Managing multiple AI agents + the final defense</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you wire a worker-critic workflow on a real draft, then simulate two four-reviewer teams and watch a shared blind spot turn unanimous agreement into false confidence you can measure.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="36.5">
 <h2 data-number="36.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">36.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own diagnosis first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
+<p><strong>Locate the decisions that must escalate.</strong></p>
+<pre class="text"><code>Act as a research-integrity assistant. Here is my draft's headline claim and the three
+never-delegate decisions I think it contains: [paste]. Using standard research-defense
+criteria, list which decisions in this draft an AI output should never be allowed to
+settle, and which of my three I mislabeled. Do not settle any of them for me.</code></pre>
+<p>After running, verify: check its list against the escalation triggers you wrote yourself; a decision it omits is the one to guard hardest. Counters <em>illusion of completeness</em> (a tidy list that quietly drops the call that matters most).</p>
+<p><strong>List the agreements to verify.</strong></p>
+<pre class="text"><code>Here are three reviewer outputs on the same draft: [paste all three]. For each pair,
+name one specific way they could be wrong the SAME way: a shared assumption, a shared
+anchor, or a shared prompt. Rank the pairs from most to least likely to share a blind
+spot.</code></pre>
+<p>After running, verify: for the top pair, rerun one role with a different framing and different context and see whether the agreement survives. Counters <em>correlated errors across tools or roles</em> (agreement that is one flaw echoed back).</p>
+<p><strong>Red-team the consensus.</strong></p>
+<pre class="text"><code>Act as a hostile reviewer who believes my three roles only agreed because my prompt led
+them. Argue that their consensus is manufactured, name the leading words in my original
+ask, and give me a neutral rewrite. Do not reassure me.</code></pre>
+<p>After running, verify: if it cannot find a single leading word, push back and demand the worst one, then rerun the review neutrally. Counters <em>sycophantic agreement</em> (praise that rehearses your ego, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +515,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Which claims your chapter can defend, where each claim must stop, whether an agreement among your roles was ever independent, and the moment to escalate: those stay yours. No role decides its own trustworthiness, and no head-count of roles decides your claim boundary or your ethics. When an AI output would <em>settle</em> one of those rather than inform it, you stop and you decide.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="36.6">
 <h2 data-number="36.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">36.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You send your chapter to four AI roles and all four reply “no major problems.” It feels like overwhelming confirmation, and it is confidently wrong. The four share a base model and read the same draft with the same instructions, so they share a blind spot. Whenever your one real flaw falls inside that blind spot, all four miss it together. Their unanimous “fine” is close to a single voice, not four.</p>
+<p>You catch it by refusing to treat agreement as evidence. You run an independence check: re-read the flagged claim against your own inquiry declaration, or hand the draft to a role with a different framing and different context. In the lab you will see the size of this trap measured. Four correlated reviewers miss a real flaw about seven times as often as four independent ones, and piling on more correlated roles cannot close the gap.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="36.7">
 <h2 data-number="36.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">36.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify the chapter’s key result, the correlated team’s miss rate, with <strong>direct calculation</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: recompute the same quantity a second way and compare. Four independent reviewers, each catching a flaw half the time on its own, all miss only when every one misses at once: 0.5 × 0.5 × 0.5 × 0.5 = 0.0625, about the 6% the lab prints. The correlated team misses on the entire shared blind spot, 40% of chapters, plus the other 60% where each still misses on its own: 0.40 + 0.60 × 0.0625 = 0.4375, about the 43% the lab prints. Two roads, one answer. The gap between 6% and 44% is the whole argument, and now you hold it by hand, not on faith.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="36.8">
 <h2 data-number="36.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">36.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter builds two of the four parts of <strong>M15</strong>, your final research chapter and AI-management portfolio. The first is your <strong>conflict-and-override log</strong>: one real clash between your roles, your diagnosis (real disagreement, correlated error, or false consensus), and the override you made with the non-AI check that backed it. The second is your <strong>independence check</strong>: one place your roles agreed on something that mattered, and the independent test that made the agreement worth more than a head-count. Write both from your own project this week, so your portfolio shows not just that your roles agreed, but that you knew when their agreement was worth trusting.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="36.9">
 <h2 data-number="36.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">36.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend one moment you escalated. Name the AI agreement or conflict you faced and the diagnosis you made (real disagreement, correlated error, or false consensus). State the call you took back and the independent check that decided it, not the roles’ vote. Then name the boundary and the uncertainty: what your override established, what it did not, and the one blind spot your roles might still share that you have not yet ruled out.</p>
 
 
 </section>

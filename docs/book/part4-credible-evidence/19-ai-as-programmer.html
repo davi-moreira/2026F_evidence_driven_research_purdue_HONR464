@@ -456,27 +456,56 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> When you hand the writing of analysis code to an AI, you decide <strong>what quantity that code must compute and over which set of cases</strong>, then verify it computed <em>that</em> quantity before you believe the number. A cell that runs without an error is not a result you have earned.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="19.1">
 <h2 data-number="19.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">19.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“Do not read me the number. Tell me what set it was computed over. If the code only saw the buildings that already had sensors, you have not described the campus. You have described the sensors.”</em> — a <strong>facilities-safety reviewer</strong>, asked to act on an indoor-air-quality report</p>
+</blockquote>
+<p>An AI can write your analysis code in seconds, and it will run. That is exactly where the danger sits. The tool writes fluent code for the quantity it <em>thinks</em> you asked for, over whatever cases sit in the dataframe you handed it. Paste the printed number into your report and you have signed your name to a quantity you never checked, over a set you never chose. The reviewer above does not care that the code was clean. She cares what it counted, and over whom.</p>
 </section>
 <section id="the-concept" class="level2" data-number="19.2">
 <h2 data-number="19.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">19.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>The tool is the programmer. You are the researcher. Two decisions never move to the programmer’s side of the desk, and this chapter is about holding them.</p>
+<ul>
+<li><strong>Descriptive summary</strong>: a number or picture that reports what is actually in the cases you can see, such as a share, an average, or a full distribution. Example: the fraction of monitored rooms whose air crosses a health line.</li>
+<li><strong>Quantity of interest</strong>: the one exact number your code is supposed to produce, pinned down in words <em>before</em> you ask for any code. Example: “the share of academic buildings whose peak-hour CO₂ exceeds 1000 ppm.”</li>
+<li><strong>Frame</strong>: the concrete set of cases your data actually covers, which is often smaller than the group your question is about. Example: only the buildings that already have sensors bolted to a wall.</li>
+<li><strong>Convenience sample</strong>: a set of cases collected because they were easy to reach, not drawn to stand in for a population. Example: those sensored buildings, which tend to be the newest and best-ventilated on campus.</li>
+</ul>
+<p>Here is the trap the chapter closes. A tool can compute a flawless share over the wrong frame, and the code still finishes with a green check. <strong>A clean run is not a correct result</strong>: a cell can execute with no error and still compute a different number than your question needs. So you own two things the programmer cannot. First, you define the quantity of interest and the frame it runs over, in plain words, before you delegate. Second, you verify the returned code computed <em>that</em> quantity over <em>that</em> frame, not a plausible neighbor.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="19.3">
 <h2 data-number="19.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">19.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You want to describe indoor air quality across campus for the question <em>what share of academic buildings exceed the healthy CO₂ threshold during class hours?</em> You have a spreadsheet of sensor readings, and you ask an AI to write the Python that returns the share above 1000 ppm.</p>
+<p>It writes six clean lines. They run. The printout says <strong>6% of buildings exceed the threshold</strong>, and the temptation is to write “campus air is fine.” Instead you read what the code did, and two things jump out. The dataframe holds only the eight buildings that already carry permanent sensors, the newest and best ventilated on campus. That is a <strong>convenience sample</strong> standing in silently for the whole campus. The code also calls <code>.dropna()</code>, and the dropped rows are the readings where cheap sensors failed, clustered in the oldest, most crowded rooms. The 6% describes the best buildings with their worst rooms deleted.</p>
+<p>Re-anchor to your <strong>quantity of interest</strong>: the share over <em>all</em> academic buildings on the registrar’s list, peak-hour readings kept. Recompute over the full list, flag the failed-sensor rooms rather than dropping them, and the honest share is far higher. The tool wrote correct code for the wrong question. You did the research by deciding what the code was allowed to count.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="19.4">
 <h2 data-number="19.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">19.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb04 — Observational descriptive research</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb04 — Observational descriptive research</strong>. Open it in Colab with the badge above. There you hand cells to Gemini and make it earn your trust: you ask it to explain, line by line, why ten random samples huddle around a frame’s true mean while one convenience channel misses it by nearly twelve years, then confirm the range it quotes against the numbers your own cell actually printed. That gap between the tool’s fluent story and your printout is this chapter’s lesson, run live.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="19.5">
 <h2 data-number="19.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">19.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
+<p><strong>Locate the standard idiom.</strong></p>
+<pre class="text"><code>Act as a Python data assistant. I need the share of rows above a threshold,
+computed only over a subset I will name. Before any code, name the standard pandas
+idiom for a threshold share over a filtered subset and the exact argument that
+controls whether missing values are dropped. Only name functions you are sure exist.</code></pre>
+<p>After running, verify: open the pandas docs and confirm the method and that argument exist and default as described. Counters <em>confident fabrication</em> (an invented method or argument arrives as confidently as a real one).</p>
+<p><strong>Delegate, then demand the choices back as a table.</strong></p>
+<pre class="text"><code>Write code that returns the share of academic buildings whose peak-hour CO2 exceeds
+1000 ppm. Then return a table of every choice you made: which rows you kept, whether
+you dropped any and why, the exact set the share is computed over, and whether you
+reported a share or an average.</code></pre>
+<p>After running, verify: check the row count before and after the code, and confirm the set it computed over is the one your question names. Counters <em>silent scope change</em> (a share quietly computed over the sensored buildings, not the campus).</p>
+<p><strong>Red-team the number.</strong></p>
+<pre class="text"><code>Here is my claim: "6% of academic buildings exceed the CO2 threshold." Act as a
+hostile facilities reviewer. Name every way this code could have counted the wrong
+quantity or this share could mislead. Do not rewrite the claim for me.</code></pre>
+<p>After running, verify: if it only praises the number, push back and demand the single worst flaw. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +516,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>You define <strong>what quantity the code computes</strong> and <strong>which set of cases it runs over</strong>, and you decide <strong>what the number is allowed to claim</strong>. The tool can write the filter, the aggregation, and the plot, but it cannot decide that the sensored buildings speak for the campus, or that a share with the worst rooms dropped is honest. You own the final sentence, its frame, and its boundary.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="19.6">
 <h2 data-number="19.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">19.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You ask for the threshold share and the tool returns tidy code that prints, with full confidence, “<strong>6% of buildings exceed 1000 ppm — air quality is within norms.</strong>” The code has no error and reads beautifully. The trap is buried in two lines: the input dataframe was already limited to buildings with installed sensors, and a <code>.dropna()</code> silently removed the rooms where sensors failed. The share is real arithmetic over the wrong set.</p>
+<p>You catch it by reading the code, not its summary. Printing the dataframe’s shape shows eight buildings, not the campus. Printing the row count before and after <code>.dropna()</code> shows how many readings vanished, and inspecting which reveals the worst-ventilated rooms. Recomputing over the registrar’s full building list, failures flagged instead of dropped, collapses the reassuring 6%. A green check certified that the code ran, never that it answered your question.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="19.7">
 <h2 data-number="19.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">19.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, the threshold share, with <strong>alternative code</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: recompute the same quantity a different way and compare. If the tool used a filtered <code>.mean()</code> on a boolean mask, recount with a <code>groupby</code> over the same set and confirm the two shares match to the digit. Then catch the silent trap: print the dataframe’s shape and the row count before and after any drop, so a disappearing row cannot hide inside a clean number. Two roads to one share is a verified result. Two roads to two shares means the code, not the campus, is what you measured.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="19.8">
 <h2 data-number="19.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">19.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This is the code half of your <strong>M4 observational descriptive design audit</strong>. Before you delegate the code that produces any descriptive number for your project, write your quantity of interest and its frame in one sentence each, the way nb04 has you name the target population, accessible population, frame, and sample. Then verify the returned code computed that quantity over that frame, and record the row-count check that proved it in your AI Research Ledger: the task, the tool, the decision, the named check. That verified number is what your frame-and-sample stack rests on when you walk a skeptic through it at Friday’s studio.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="19.9">
 <h2 data-number="19.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">19.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend one descriptive number you delegated code to compute. Name the exact quantity of interest and the set of cases the code ran over. State the one verification that confirmed the code computed <em>that</em> quantity, not a neighbor. Give the boundary, what the number does not establish about the population beyond your frame, and close with your remaining uncertainty and the next check you would run to close it.</p>
 
 
 </section>

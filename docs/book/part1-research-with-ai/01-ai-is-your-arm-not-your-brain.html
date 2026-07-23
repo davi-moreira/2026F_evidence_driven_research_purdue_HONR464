@@ -456,27 +456,49 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> For every task in your research, you decide whether to hand it to an AI tool, and if you do, how you will confirm what it returns before you put your name on it. This chapter equips you to draw that line task by task and defend where you drew it.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">1.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<p>Picture a design review. A <strong>licensed professional engineer (PE)</strong> is an engineer legally authorized to approve a design, whose signature (their “stamp”) makes them personally answerable for it. Example: the PE who stamps a pedestrian bridge is who the public trusts if it fails.</p>
+<p>When a PE stamps your drawing, they are not saying the software ran without errors. They are saying, “I checked this, and I will answer for it.” That is the posture this course asks you to adopt on day one. An AI tool can fetch a property, draft a paragraph, or write working code in seconds, but it cannot stamp your work. You can. So the question that matters is not “what can the tool produce?” It is “what did I hand it, and how did I check what came back?”</p>
 </section>
 <section id="the-concept" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">1.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>The rule that names the chapter is <strong>AI as your arm, not your brain</strong>: the tool can reach, fetch, draft, and compute for you, but it does not get to decide what is true or what you claim. Example: you let it draft a summary of a datasheet, then confirm every number in that summary yourself.</p>
+<p>Two moves put the rule into practice. <strong>Delegation</strong> is handing a well-specified task to the tool, such as “find three candidate datasheets for this alloy.” <strong>Verification</strong> is an independent check, run by a method outside the model, that the result is actually true. Example: you open the manufacturer’s real datasheet and read the number yourself instead of trusting what the tool typed.</p>
+<p>Verification cannot be skipped because a wrong AI answer looks exactly like a right one. A <strong>hallucination</strong> is confident, polished output that is simply made up, such as a citation to a standard that does not exist. Example: a tool reports a fatigue limit and attributes it to “ASTM E-4471,” a number never published. Tone is identical for real and invented, so tone cannot be your filter. Retrievability is. A source is <strong>retrievable</strong> when you can open the actual document and confirm it, such as finding the real standard in the Purdue Libraries and reading the clause.</p>
+<p>Some judgments never get delegated. A <strong>never-delegate decision</strong> is a call that stays yours no matter how good the tool becomes: which question you pursue, what your evidence licenses, the ethics of the work, and how you state your uncertainty. Example: a tool may list candidate safety factors, but deciding which one your design requires is yours to own. The habit that ties this together is short: <strong>Ask, then Verify, then Document.</strong> Use the tool ambitiously, confirm every fact and number yourself, then log the tool, the task, and the check in a record that travels with your work.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">1.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You are an honors student sizing the arms of a small quadcopter drone printed from carbon-fiber-reinforced PLA, a common 3D-printing filament. Each arm is a thin beam, and if it flexes too much in flight the motors misalign. To size it you need the material’s <strong>flexural modulus</strong>, the number that says how stiff the material is in bending, where a higher value means the arm bends less under the same load.</p>
+<p>Sort the work. You can <em>delegate</em> locating candidate datasheets and listing the properties a beam-bending calculation needs. You <em>keep</em> three things: deciding that flexural modulus (not tensile strength) governs a stiffness problem, choosing the safety margin, and judging whether a source is authoritative. You ask Gemini for datasheets and it returns a filament with a flexural modulus of “roughly 4 gigapascals,” citing a manufacturer.</p>
+<p>Now verify. You open the manufacturer’s actual datasheet and read the flexural modulus line yourself. If it confirms the number, you log a verified input. If it shows a different value, or cannot be found at all, the number the tool handed you was never evidence. Either way, the arm rests on a number you retrieved, not one a model typed.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">1.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb00 — Research in the age of AI: your arm, your RA — not your brain</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb00, Research in the Age of AI: Your Arm, Your RA, Not Your Brain</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you run a small seeded simulation showing why how confident a source <em>sounds</em> tells you nothing about whether it is real, then take one topic you care about, ask an AI for scholarly sources, and verify each by retrieving it yourself.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">1.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt hands out a task you can check, with a verify note naming the failure it defends against.</p>
+<p><strong>Locate candidate sources (you verify each one).</strong></p>
+<pre class="text"><code>Act as a materials-research assistant. I need the flexural modulus of
+carbon-fiber-reinforced PLA filament. List 3 candidate manufacturer datasheets
+or standards, each with the exact document title and where it is published. Only
+include documents you are confident exist; mark anything uncertain.</code></pre>
+<p>After running, verify (counters <em>confident fabrication</em>): open each document yourself and read the number. A datasheet you cannot retrieve is invented until you find it.</p>
+<p><strong>Turn a decision into a checklist (you audit the list).</strong></p>
+<pre class="text"><code>For sizing a printed drone arm as a beam in bending, list every material and
+geometric property my deflection calculation needs. For each, say why it belongs
+and which single property most governs the result.</code></pre>
+<p>After running, verify (counters <em>illusion of completeness</em>): a long, tidy list can still omit the property that governs your design. Compare it against a checklist you wrote first, and confirm the governing property is really the one bending demands.</p>
+<p><strong>Red-team your own choice (you keep the decision).</strong></p>
+<pre class="text"><code>Here is my material and safety-factor choice for the drone arm: [paste it]. Act as
+a hostile design reviewer. Name every place the choice reaches past my evidence.
+Do not rewrite it for me; list the weaknesses.</code></pre>
+<p>After running, verify (counters <em>sycophantic agreement</em>): if every objection is mild or it calls your choice “well-balanced,” push back and ask for the single worst flaw.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +509,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>These stay yours, no matter how fluent the tool sounds. Deciding which property governs your design and what safety margin the part requires. Judging whether a source is authoritative enough to build on. Setting the claim you will defend and stating its uncertainty. The tool gathers options and drafts prose; choosing among them, and answering for the choice, is the researcher’s job.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">1.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You ask for the fatigue limit of your filament and a source. The tool returns a crisp value and attributes it to “ASTM D-7791, Table 3.” It reads like every real citation you have seen: a standards body, a document number, a table. It is fabricated, or the number is not on that page.</p>
+<p>Here is exactly how you catch it. You do not trust the citation as delivered. You search the standard in the Purdue Libraries and, if it opens, turn to the named table and read the line. If the standard does not exist, or has no such value, the confident citation collapses. Fabricated sources sound just as authoritative as real ones, so the only reliable filter is opening the document.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">1.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>The chapter’s key result is that polish does not predict truth. Confirm it yourself with <strong>primary-source reading</strong> (from the <a href="../../ai_resources/verification_guide.md">verification guide</a>): take a real list of citations an AI returns for a topic you know, search each exact title, and count how many actually open. The confident-sounding ones are not more likely to be real than the plain ones. For a number, add <strong>direct calculation</strong>: recompute the claimed value by hand from the datasheet and check it matches.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">1.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter launches milestone <strong>M0</strong>, your research-and-AI baseline, presented at Friday’s studio. Three moves carry over directly. Sort the tasks in your own project into safe-to-delegate, delegate-then-verify, and never-delegate, and say why for each. Run one live citation catch on your topic and record the verdict. Fill your first row in the AI Research Ledger, logging the task, the tool, your decision, and the verification method. That ledger row is the habit M0 installs.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="1.9">
 <h2 data-number="1.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">1.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In a short paragraph, state the delegation line you drew for one task in your own project: what you handed the tool, what you kept, and the exact check you ran on what came back. Then name its boundary and your uncertainty. What does your verified result <em>not</em> establish, and where are you most likely to over-trust the tool and stop checking? A decision with no stated boundary is not yet defended.</p>
 
 
 </section>

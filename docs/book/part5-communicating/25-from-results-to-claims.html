@@ -456,27 +456,54 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Decide the exact claim your results license: the one headline sentence you will print on your poster and defend out loud, worded so its verb stays inside your compass position, its uncertainty rides in the same eye-span, and every number and source behind it is backed. You choose the words and you lock them, and you never let a tool talk your claim past its boundary.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="25.1">
 <h2 data-number="25.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">25.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“At the health-sciences poster hall I point at one number and ask where it came from and what it lets you say. If the headline reads ‘lowers blood pressure’ but the study only watched who chose to walk, I stop reading. A claim that outruns its evidence tells me to distrust the whole board.”</em> — a <strong>research-integrity judge</strong> working a poster session</p>
+</blockquote>
+<p>A result is not yet a claim. Your analysis prints a number; your poster asserts a sentence. The gap between them is where most posters break, because the sentence almost always wants to say more than the number earned. The judge above is not testing your statistics. She is testing whether the words on your board match the evidence underneath them. This chapter is the habit that closes that gap before a stranger finds it open.</p>
 </section>
 <section id="the-concept" class="level2" data-number="25.2">
 <h2 data-number="25.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">25.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>Start with the two words this chapter lives between. A <strong>result</strong> is a number your analysis produced, such as a difference of 6 points between two group averages. A <strong>claim</strong> is a sentence you assert and will defend, such as “the walking group had lower blood pressure.” Turning the first into the second is a decision, not a formatting step, because you choose how much the sentence is allowed to say.</p>
+<p>Three ideas govern that choice.</p>
+<p>Your <strong>compass position</strong> is the kind and reach of the question your project answered: did you describe the cases you observed, or establish that one thing caused another? Example: if you watched who already chose to walk, you ran a descriptive comparison, not a causal test. Your <strong>claim boundary</strong> is the line between what your evidence licenses and what it does not, and it lives in the headline verb. Example: an observational project may write “was associated with lower,” never “lowered.” The verb is where a claim quietly crosses the line.</p>
+<p>The last idea is where the claim’s honesty becomes visible. <strong>Uncertainty in the same eye-span</strong> means the interval or caveat sits right beside the claim, not in a footnote. Example: “about 6 points lower (95% interval: 1 to 11)” printed under the headline, so a reader meets the doubt at the same moment as the number. A bound a reader has to hunt for is a bound doing hidden work.</p>
+<p>One more habit backs all of this. <strong>Traceability</strong> means every number on the poster walks back to the exact notebook cell that produced it. Example: the 6-point gap on your board points to the one line of code that computed it, and you can show that line when a judge asks. A number you cannot trace cannot go up.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="25.3">
 <h2 data-number="25.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">25.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>An honors student in nursing runs a small community pilot. Forty volunteers wear a step tracker for a month. Twenty walk at least 8,000 steps a day; twenty do not. Their average resting systolic blood pressure comes out at 128 in the active group and 134 in the less-active group, a 6-point gap.</p>
+<p>The result is that 6-point gap. The claim is the decision. The draft headline reads “Walking LOWERS blood pressure,” drawn as two bars on an axis that starts at 125, which makes the small gap look like a cliff, with the two groups told apart by red and green alone.</p>
+<p>Walk the decision. The compass position is descriptive: nobody was assigned to walk, so the active group may differ in age, diet, or baseline health. That means the verb “lowers” claims a crossing the design never paid for, and the honest verb is “was associated with lower.” The truncated axis has to drop to the full scale, so the 6-point gap reads as the modest difference it is. The 95% interval runs roughly 1 to 11 points, wide enough that the honest headline must carry it in the same eye-span. And each bar gets a direct value label, so a color-blind or screen-reader reader receives the number, not just the hue.</p>
+<p>The locked claim: “In this sample, more-active volunteers averaged about 6 points lower resting systolic blood pressure (95% interval: 1 to 11); this is an observed association, not evidence that walking caused the drop.” Same result, a claim that survives the judge.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="25.4">
 <h2 data-number="25.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">25.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb10 — Poster criticism + final poster lock</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb10 — Poster criticism + final poster lock</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you run a gallery-walk audit on one headline figure drawn two ways from the same numbers, rehearse a three-lens oral defense, and lock every number to its cell and every citation to a real source before the poster becomes final.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="25.5">
 <h2 data-number="25.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">25.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt is a checkable job, never a request for a verdict.</p>
+<p><strong>Locate the real source behind a health claim.</strong></p>
+<pre class="text"><code>Act as a literature assistant in public health. My poster claims regular walking
+is linked to lower blood pressure. Name up to three peer-reviewed sources or
+clinical guidelines that support this, with title, authors, year, and venue.
+Only list work you are confident exists; mark anything uncertain.</code></pre>
+<p>After running, verify: open each source in a library database and confirm it exists and says what you claim. Counters <em>confident fabrication</em> (an invented citation arrives as confidently as a real one).</p>
+<p><strong>Turn your result into a checklist of hard questions.</strong></p>
+<pre class="text"><code>Here is my headline claim: "[paste it]" and my compass position: "descriptive,
+observational." Generate the eight hardest questions a skeptic would ask, and mark
+which single audit each one belongs to: claim boundary, figure honesty,
+uncertainty, or accessibility.</code></pre>
+<p>After running, verify: map every question to an audit and check it against your printed numbers; a missing audit is a gap the tidy list hid. Counters <em>illusion of completeness</em> (a long, organized list that skips the one flaw that matters most).</p>
+<p><strong>Red-team the verb.</strong></p>
+<pre class="text"><code>Here is my written headline: "[paste it]." Act as a hostile reviewer and find every
+place the verb claims more than an observational design licenses. Do not rewrite it
+for me; list the exact words so I can fix them myself.</code></pre>
+<p>After running, verify: read each flagged word against your compass position and keep only the objections your design actually forces. Counters <em>silent scope change</em> (a claim quietly upgraded from association to cause).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +514,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Three calls stay yours. You choose the <strong>verb in your headline</strong>, the one word that fixes your claim boundary. You make the <strong>defend-or-concede call</strong> when a question pushes on that boundary out loud. And you make the <strong>lock decision</strong>: the judgment that every number is traced, every citation resolves, and the poster is ready to be final. A tool can draft questions and hunt sources, but it cannot decide what your evidence licenses or when your claim is earned.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="25.6">
 <h2 data-number="25.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">25.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your honest headline into a tool and ask it to make it “punchier for a poster.” It returns, with total confidence, “Walking Reduces Blood Pressure by 6 Points.” It reads beautifully and it is wrong. The tool upgraded your verb from an association to a cause and dropped your interval, a silent scope change dressed up as a copy edit.</p>
+<p>You catch it by comparing the new verb to your compass position. Your study never assigned anyone to walk, so “reduces” claims a crossing you did not pay for. You also notice the “6 points” now stands alone with no interval beside it. You revert to “was associated with about 6 points lower (95% interval: 1 to 11).” The fluent rewrite reviewed your poster’s style; only you can review its claim.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="25.7">
 <h2 data-number="25.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">25.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, the number behind the claim, with <strong>alternative code</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: recompute the group means and the gap a second way and confirm you get the same 6 points. Filter each group by hand and subtract, rather than trusting a single grouped call, then recompute the interval and check it still runs about 1 to 11. Two roads to one answer verifies the number. Then verify the verb with a <strong>causal diagram</strong>: sketch what could cause both walking and lower blood pressure, such as age or baseline fitness, and if that common cause is open, the honest verb stays “associated with,” not “lowered.”</p>
 </section>
 <section id="project-transfer" class="level2" data-number="25.8">
 <h2 data-number="25.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">25.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter is the engine of your <strong>M10 final poster lock</strong>. Take the one headline sentence your project’s results produced and run it through the decision here: fix the verb to your compass position, print the interval in the same eye-span, and trace every number on the board back to its cell. Cut any citation you cannot open yourself, and write the one-line AI-use disclosure that records what a tool did and how you checked it. The claim that survives this pass is the one you carry into M11 and say out loud at the Expo.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="25.9">
 <h2 data-number="25.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">25.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend your locked headline. State the claim exactly as it will appear on the poster, and name the compass position whose boundary its verb respects. Give the uncertainty that rides beside it, the interval or caveat a reader meets at the same moment as the number. Close with the one crossing your design did not license, the sentence a stranger might try to push you into that you will decline to say.</p>
 
 
 </section>

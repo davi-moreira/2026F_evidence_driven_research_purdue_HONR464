@@ -4,51 +4,214 @@ title: "12. Observational Causal Research"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_causal_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Decide whether your observational comparison has
+> earned the word *because* or must stop at *associated with*, and defend that
+> decision by naming the one confounder it turns on and the identification argument
+> (if any) that closes the back door.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+Picture a thesis advisor reading your first draft. You wrote, "the treated group did
+better, so the treatment worked." Her reply is the sentence you will hear for the
+rest of your research life: *"After is not because. Show me the world where they were
+not treated, or admit you are guessing."* Almost every question worth asking forbids
+the clean experiment. You cannot assign a person a disease, a country a war, or a
+wild animal a gut microbe. So the honest researcher's real craft is deciding, out
+loud and in writing, when an observed comparison is trustworthy enough to carry a
+cause. Get this wrong and a paper claims more than its data support. Get it right and
+a modest, bounded claim becomes credible.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+Start with the missing world.
+
+- **Counterfactual**: the outcome that would have happened under the choice that was
+  *not* made. Example: how long a coffee drinker would have lived *if she had not*
+  drunk coffee. You never see it, because she did drink coffee.
+
+A causal claim is a claim about a counterfactual. The trouble is a villain that
+hides inside almost every observational comparison.
+
+- **Confounder**: a third factor that pushes on *both* who gets the treatment and
+  the outcome. Example: a health-conscious lifestyle raises both the chance of a
+  daily coffee habit and lifespan, so coffee drinkers look longer-lived even if
+  coffee did nothing.
+
+You can draw the trouble. A **causal diagram** is a picture of arrows where each
+arrow means "this directly influences that." In it, the confounder creates a **back
+door**: a sneaky path linking treatment and outcome that runs *through* the
+confounder instead of through any real effect. A raw comparison sees both paths at
+once and blames the treatment for the confounder's work.
+
+Two moves close the back door without an experiment.
+
+- **Selection on observables**: identifying an effect by adjusting for every
+  confounder you can measure, so the treated and untreated match on all of them.
+  Example: compare coffee drinkers and non-drinkers *within* the same lifestyle
+  group. It works only for confounders you can actually see.
+- **Natural experiment**: a situation where a chance-like force outside anyone's
+  control decided who got treated, making assignment **as-if random** (credibly like
+  a coin flip). Example: a visa lottery decides who makes a trip, so winners and
+  losers differ only by luck.
+
+Whichever move you use, you owe a reader an **identification argument**: your written
+reason that the comparison recovers a real effect, resting on one **untestable
+assumption** the data can never confirm, only make plausible. When you cannot make
+that argument honestly, you have hit the **causal-language boundary**, the point past
+which your evidence stops earning *because* and must switch to *associated with*. The
+most common failure here has a name too. **Design mimicry** is borrowing the
+vocabulary ("natural experiment," "difference-in-differences") to decorate a
+comparison whose assumption was never argued. The word is not the argument.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+Bring this into a biology lab. You study wild-derived mice and notice a striking
+pattern: individuals whose gut carries a particular fiber-digesting bacterium are, on
+average, leaner than mice without it. The headline writes itself: "the microbe causes
+leanness." Would you stake a thesis on it?
+
+Draw three boxes first: *microbe*, *leanness*, and a third box for anything that could
+drive both. That third box fills in fast. Diet is a confounder. Mice that forage on
+high-fiber plants both harbor more of the fiber-digesting bacterium *and* stay leaner
+for reasons unrelated to the microbe. Diet points into both boxes, opening a back
+door, so a naive microbe-versus-no-microbe comparison mostly measures the *diet* gap
+and credits it to the bacterium. A colony of ten thousand mice would make that wrong
+number beautifully precise and no less wrong, because a larger sample shrinks noise,
+not confounding.
+
+Now the fix. If you *recorded* each mouse's diet, use selection on observables:
+compare carriers to non-carriers *within* the high-fiber group, then *within* the
+low-fiber group, and average the two honest within-diet differences. If the gap
+collapses toward zero, the microbe was mostly a passenger of diet. The catch is
+honest: this works only for the confounder you measured. If mice also differ in an
+unrecorded trait, say a temperament that drives both foraging and metabolism, that
+trait keeps the back door open and "we controlled for diet" is not identification.
+Then your defensible claim is that the microbe is *associated with* leanness, and the
+causal question waits for a real intervention, such as colonizing genetically
+identical, identically fed mice. That boundary is what this chapter teaches you to see
+and to say.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb05 — Observational causal research**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb05 — Observational causal research**. Open it in
+Colab with the badge above and work the cells alongside this chapter. In the lab you
+build a small world where *you* set coffee's true effect, plant a hidden confounder,
+and watch a naive comparison inflate a true +1.0 to about +3.1, then recover the
+truth by adjusting for the confounder you can see. You then analyze a *real* natural
+experiment, the Hajj visa lottery from Clingingsmith, Khwaja and Kremer (RDSS ch. 16),
+as a difference in means and state exactly what its as-if-random assignment lets you
+claim, and over whom.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first every time, then delegate.
+
+**Locate a real design (commit your own guess at the leverage first).**
+
+```
+Act as a research librarian in biology. Find peer-reviewed observational studies
+that used a natural experiment or a discontinuity to estimate the causal effect of
+a gut microbe on a host trait. For each: title, authors, year, venue, and the
+as-if-random source. Only include work you are confident exists; mark anything
+uncertain.
+```
+*After running, verify (counters **confident fabrication**): open each source and
+read the line yourself before citing it — primary-source reading. Cut any you cannot
+find.*
+
+**List the confounders to verify (commit your own list first).**
+
+```
+I claim a gut microbe causes leanness in wild mice. List traits that plausibly raise
+both microbe presence and leanness, in a table with the trait and the direction it
+would bias a naive comparison. Then, as a hostile reviewer, name the one trait you
+are most likely wrong to include and the important one you left out.
+```
+*After running, verify (counters **illusion of completeness**): compare the list to
+the one you committed first, and map each trait to a back-door path (trait → microbe,
+trait → leanness). A trait with only one arrow is not a confounder.*
+
+**Red-team the causal sentence you wrote (write the sentence yourself, do not let AI draft it).**
+
+```
+Here is a causal sentence I wrote: "[paste your sentence]." Act as a hostile peer
+reviewer. Name every place it over-reaches or claims more than my observational
+design identifies. Do not rewrite it for me; list the weaknesses so I fix them.
+```
+*After running, verify (counters **sycophantic agreement**): if the objections are
+all mild, push back — "assume the sentence is wrong; name the single worst flaw."
+Praise without an objection is a red flag, not a grade.*
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three decisions stay yours alone. **Whether your design identifies a causal effect**
+is a judgment about how treatment was really assigned, and only you know that. **Which
+confounder most threatens your comparison** turns on the mechanism, which a model
+cannot see in your data. And **whether your finding earns *because* or must stop at
+*associated with*** is the whole skill of the week. A tool will happily call your
+comparison a "natural experiment" because you typed the words. Earning *because* is
+your signature, not the model's.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste your mouse comparison into a chatbot and ask, "Is this a natural
+experiment, and can I say the microbe causes leanness?" It answers with a confident,
+well-formatted yes: your setup "resembles a natural experiment," the difference "can
+be read causally," the write-up "looks rigorous." This is two named failures at once:
+**plausible-but-wrong-method**, attaching a design label to a comparison whose key
+assumption plainly fails, and **silent scope change**, upgrading *associated with* to
+*because* while sounding like it settled the question. Fluency is not evidence. You
+catch it by refusing the label and asking the one question the model cannot answer for
+you: *how was treatment actually assigned?* No lottery, no cutoff, no outside force
+decided which mice carried the microbe. They sorted themselves by diet and behavior,
+so there is no as-if-random assignment, the back door stays open, and *because* is not
+earned. Say *associated with*, and log why.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify the chapter's key result with **simulation**, the method from the verification
+guide for checking how a *procedure* behaves rather than a fixed number. Build a world
+where you set the true effect yourself, so you know the right answer and can grade
+every method against it:
+
+```
+rng = np.random.default_rng(464)
+n = 4000
+lifestyle = rng.integers(0, 2, n)                       # the confounder you can see
+p = np.where(lifestyle == 1, 0.70, 0.30)                # health-conscious drink more
+coffee = rng.binomial(1, p)
+score = 2.0 * lifestyle + 1.0 * coffee + rng.normal(0, 1, n)  # TRUE effect = +1.0
+
+naive = score[coffee == 1].mean() - score[coffee == 0].mean()
+adj = np.mean([score[(coffee==1)&(lifestyle==g)].mean()
+             - score[(coffee==0)&(lifestyle==g)].mean() for g in (0, 1)])
+```
+
+The naive gap lands well above the +1.0 you planted; the within-lifestyle adjustment
+pulls it back near +1.0. That is confounding and its fix, in numbers you own. For the
+lab's real lottery result, add a second, independent method: **direct calculation**,
+hand-filtering winners and losers and subtracting their mean `views` yourself, rather
+than trusting one cell.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter is the spine of **milestone M5**, your causal identification strategy (or
+honest causal-language boundary), due at Friday's studio. Draft four pieces for your
+project: the causal question as a treatment and an outcome; a causal diagram naming
+the confounder you most fear; your leverage (selection on observables, a natural
+experiment, difference-in-differences, regression discontinuity, or instrumental
+variables) and the one untestable assumption it rests on, or the causal-language
+boundary if you have none; and one number you would recompute by a second route to
+check any collaborator's estimate. Write them so the required "Causal Identification
+Skeptic" review at the studio can find the exact assumption your claim depends on,
+because that is what it will attack first.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In one short paragraph, state your project's treatment and outcome, then declare the
+decision this chapter equips: does your design *identify* the causal effect, or does
+your claim stop at *associated with*? If you claim identification, name the argument
+and the one untestable assumption it rests on, and report the effect with its
+uncertainty. If you stop at association, name the unmeasured confounder you cannot rule
+out. Either way, state the boundary plainly: the one thing a skeptic could say that
+would move your claim from *because* back to *associated with*.

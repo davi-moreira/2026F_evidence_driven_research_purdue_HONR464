@@ -456,27 +456,53 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> For every part of your work an AI tool helped produce, decide exactly what you will personally stand behind as your own, and disclose plainly what the tool did and how you checked it. Your name on the work means you answer for it, whatever tool helped.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">4.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“When something in this paper turns out to be wrong, I do not ask which software wrote it. I ask whose name is on it. That person answers for every line.”</em> — a <strong>journal editor</strong>, to a first-time author</p>
+</blockquote>
+<p>You will finish this course with work that carries your name: a poster, a research note, a public defense. An AI tool may have helped you find sources, draft a paragraph, or compute a number. None of that moves the responsibility off you. The reviewer, the reader, and your future self all hold you, the named author, accountable. This chapter draws that line on purpose, before someone else draws it for you.</p>
 </section>
 <section id="the-concept" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">4.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p><strong>Intellectual ownership</strong> is being the author of, and answerable for, every claim that appears under your name, whatever tool helped produce it. Example: if an AI drafts your methods paragraph and it states that creek chloride exceeded a safety threshold, you own that sentence, and if it is wrong, the mistake is yours.</p>
+<p>Ownership rests on <strong>accountability</strong>, being the person who answers for the work’s correctness and integrity when it is questioned. Example: at your defense, when someone asks how you know a number, “the AI computed it” is not an answer. “I recomputed it from my own measurements, and here is the check” is.</p>
+<p>The habit that makes accountability visible is <strong>AI-use disclosure</strong>, a short, honest record of which AI tool did which task and how you verified its output. Example: “Gemini located candidate sources; I retrieved and confirmed each one in the library catalog.” Disclosure is not a confession. It protects you, because it shows exactly where your own judgment entered the work.</p>
+<p>Some calls never move to the tool at all. A <strong>never-delegate decision</strong> is a judgment that stays yours no matter how capable the tool becomes: which question you pursue, what your evidence licenses, the ethics of the study, and the decision to put your name on the work. Example: an AI can list candidate measures of water quality, but choosing the one you will defend is yours.</p>
+<p>Put together, the rule is simple. Use AI freely for reach and speed. Keep ownership, accountability, and honest disclosure for yourself.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">4.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>Picture a first-year honors project in environmental science. You are testing whether winter road salt raises <strong>chloride</strong>, a dissolved salt ion that harms freshwater life above certain levels, in a creek behind campus. You collect ten water samples and ask an AI tool to help write up the result.</p>
+<p>The tool returns a fluent paragraph: “Mean chloride was 310 mg/L, well above the U.S. EPA chronic aquatic-life criterion of 230 mg/L, so the creek is unsafe for aquatic life.” It reads like a finished result. Here is the ownership decision: which parts of that sentence will you personally stand behind?</p>
+<p>You split it into pieces you can own. The mean of your ten samples is a number you can recompute in a minute, so you do, and you get 297, not 310. The EPA criterion is a published value, so you open the EPA’s National Recommended Water Quality Criteria and confirm the real figure yourself rather than trust the tool’s number. The word “unsafe” claims something about the whole creek all winter, from ten samples on one day, so you narrow it to what your evidence licenses: elevated chloride in these samples, at this site, on this date.</p>
+<p>Now your disclosure writes itself: the tool drafted the paragraph, and you did the checking, retrieving, and rewriting that made the claim yours. You own the corrected sentence. You would not have owned the original.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">4.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb00 — Research in the age of AI: your arm, your RA — not your brain</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb00</strong>, “Research in the age of AI: your arm, your RA, not your brain.” Open it in Colab with the badge above. There you sort real research tasks by how safely they delegate, catch a live citation by retrieving it yourself, and fill your first AI Research Ledger row: the record that turns “I checked it” into something you can show.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">4.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt below hands the tool reach, not judgment.</p>
+<p><strong>Locate the real source.</strong></p>
+<pre><code>Act as a research assistant in environmental science. I need the current U.S. EPA
+aquatic-life criterion for chloride. Give the exact value, the document it comes
+from, and a link. Only state a figure you are confident is published; if you are
+unsure, say so and tell me where to look.</code></pre>
+<p>After running, verify: open the EPA document and read the figure yourself (primary-source reading). Counters <strong>confident fabrication</strong>, a number quoted with a made-up source.</p>
+<p><strong>List every claim to verify.</strong></p>
+<pre><code>Here is my draft results paragraph: [paste]. List every empirical claim in it as a
+table: the claim, the number or source it rests on, and whether that number came from
+my data or from you. Do not add any new claims.</code></pre>
+<p>After running, verify: check the table against your own list of what you actually measured. Counters <strong>illusion of completeness</strong>, a claim the draft slipped in that never shows up in the tool’s own accounting.</p>
+<p><strong>Red-team your ownership.</strong></p>
+<pre><code>Act as a hostile reviewer. Read my draft and name every sentence I could NOT defend
+myself if someone asked how I know it is true. Do not rewrite anything. List the weak
+spots.</code></pre>
+<p>After running, verify: for each flagged sentence, either produce your own check or cut the claim. Counters <strong>sycophantic agreement</strong>, praise that reviews your ego instead of your evidence.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +513,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>The tool may fetch, draft, and compute. It may never decide which claims you put your name on, whether your evidence supports a word like “unsafe,” the ethics of your sampling, how you state your uncertainty, or what your AI-use disclosure says. Authorship is a responsibility, not a task, and it does not transfer.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">4.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You ask the tool to write your AI-use disclosure for you. It produces a tidy, confident sentence: “AI was used only for minor language editing.” It sounds professional, and it is false. The tool actually drafted your entire results paragraph, including the 310 mg/L figure and the “unsafe” claim. Left unchecked, that disclosure understates the tool’s role and overstates your ownership, which is exactly the integrity problem disclosure exists to prevent.</p>
+<p>You catch it with a record the tool cannot see: your own AI Research Ledger. Lay the one-line disclosure next to your ledger rows and the mismatch is plain. The ledger says the tool drafted the analysis; the disclosure says it only edited language. You rewrite the disclosure to match what happened. The lesson is blunt: never let a tool describe its own role. You describe it, from your record.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">4.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, that a claim under your name is one you can defend, with <strong>primary-source reading</strong>, the method of finding the actual source and reading the relevant line yourself (see <code>ai_resources/verification_guide.md</code>). Take the EPA chloride figure the tool quoted, open the EPA’s criteria document, and confirm the number and its meaning with your own eyes. Pair it with <strong>direct calculation</strong>: recompute the mean of your samples and check it matches the draft. Two independent checks beat one, and each leaves a line for your ledger.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">4.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter launches milestone <strong>M0</strong>, your research-and-AI baseline, presented at Friday’s studio. Bring three things it asks for: two decisions you refuse to delegate on your own project, with one sentence each on why; your first AI Research Ledger row, honestly disclosing a real AI use and how you checked it; and one claim you can already defend, stated at the reach your evidence supports. Ownership is not a late-semester worry. It is the baseline you build everything else on.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="4.9">
 <h2 data-number="4.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">4.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four or five sentences, state the ownership decision for one piece of your own work. Name a claim you will put your name on. Give its boundary: what your evidence does not establish, and if the claim rests on a sample, say it is about that sample, not the world. Name one thing you do not yet know. Then disclose the AI’s role in one honest line, and name the check that lets you own the claim anyway.</p>
 
 
 </section>

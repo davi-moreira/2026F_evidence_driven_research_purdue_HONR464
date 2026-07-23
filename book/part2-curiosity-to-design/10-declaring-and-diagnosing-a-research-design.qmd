@@ -4,51 +4,172 @@ title: "10. Declaring and Diagnosing a Research Design"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_anatomy_of_design_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Whether your research design is strong enough to run,
+> decided by simulating it before you collect a single data point, reading how
+> often it lands on the truth, and naming the one change that most improves it.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+Picture a methodologist on your committee reading your plan. She asks one
+question: *"How often would this exact design catch the real effect if you ran it
+a thousand times?"* If your answer is "I never checked," she stops there. A design
+can read beautifully, with a sharp question and a clean comparison, and still come
+back "nothing here" nine times out of ten, or land confidently on the wrong
+number every time. This chapter lets you find that out cheaply, in simulation, so
+a semester you would have spent collecting doomed data goes instead to a design
+that can actually answer your question.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+In chapter 9 you built the four parts of a design. This chapter puts them to the
+test with a three-step loop the course borrows from its RDSS text (*Research
+Design in the Social Sciences: Declare, Diagnose, Redesign*).
+
+**Declare** means writing your four design parts as something a computer can
+run: a model that generates fake data, an inquiry it can compute on that fake
+data, a plan for sampling and assigning conditions, and a rule for turning data
+into an estimate. *Example:* code that invents 40 users, flips a coin to give each
+a new interface, and subtracts the two group averages.
+
+**Diagnose** means running that declared design many times on fresh simulated
+worlds and watching how its estimate behaves. *Example:* run the coin-flip study
+2,000 times and collect all 2,000 estimates. Three numbers summarize the pile.
+
+**Bias** is the average distance between your estimate and the truth across the
+runs; a design is unbiased when its estimates center on the true answer.
+*Example:* if the truth is 2 and your estimates average 2.0, bias is about zero.
+Bias is a systematic tilt, and more data never shrinks it.
+
+**Variance** is how much the estimate wobbles from one run to the next. *Example:*
+estimates swinging between -5 and +9 around a true value of 2 have high variance.
+More data *does* shrink this.
+
+**Power** is how often the design detects a real effect. *Example:* a design that
+finds the effect in 8 of 100 runs has 8% power, which is almost useless.
+
+**Redesign** means changing exactly one part in response to the diagnosis, then
+diagnosing again. Low power from high variance calls for more data. Bias calls for
+a different design, because size buys steadiness, not truth.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You are a **human-computer interaction** researcher asking whether an *inline
+validation hint*, a small message that appears as you type ("password needs a
+number") instead of only after you submit, helps people finish a signup form
+faster. Your outcome is seconds-to-complete. Your true effect, in the world you
+simulate, is that the hint shaves 8 seconds off.
+
+You **declare** it: build users whose baseline times vary a lot, because some read
+slowly and some race through; flip a coin to assign the hint version; subtract the
+two group averages. You **diagnose** a pilot of 12 users per version. The result
+is sobering. Bias is near zero, so the design aims true, but the spread is huge
+because per-person times vary so much, and power comes back under 10%. The design
+is honest and useless at once: it points at the 8-second gain on average and
+almost never gets close enough on any single run to prove it.
+
+Now **redesign**. Variance is the problem, so you raise the sample to 400 per
+version and diagnose again. Power jumps past 90% and the spread collapses toward
+the truth. That is variance cured by size. But run one more design as a warning:
+drop the coin flip and let tech-savvy users self-select into the new version.
+Savvy users finish faster anyway, so the hint gets credit for speed that
+savviness delivered. This confounded design is just as tight at 400 per version,
+yet it centers on a 14-second gain instead of 8, and no amount of extra data moves
+it. That gap names the last idea. A randomized design can **identify** the hint's
+effect, meaning pin the time gap on the hint and rule out other causes, while the
+confounded one shows only an **association**, where the two move together but a
+common cause could explain it.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb03 — The anatomy of a research design: MIDA + declare → diagnose → redesign**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb03 — The anatomy of a research design: MIDA +
+declare → diagnose → redesign**. Open it in Colab with the
+badge above and work the cells alongside this chapter. In the lab you declare the
+mentoring design in a few lines of Python, run it thousands of times to read its
+bias, variance, and power with your own eyes, then watch one redesign rescue a
+fair-but-powerless study while a confounded twin stays wrong at any sample size.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own expectation first, then delegate. Each prompt below leaves you a
+draft you still have to check.
+
+```text
+Act as a simulation assistant. Here is my declared design in words:
+[model, inquiry, data strategy, answer strategy]. Write the smallest Python
+that builds a world where I set the true effect, runs the design many times,
+and reports bias, variance, and power. List every assumption your code makes
+about my design that I did not state.
+```
+After running, verify (counters *plausible-but-wrong-method*): re-run it with the
+true effect set to zero and confirm it "detects" an effect only about as often as
+your significance threshold allows. A simulation that fires on a zero effect is
+declaring a different design than yours.
+
+```text
+Here is my diagnosed design and its numbers: [bias, variance, power]. List the
+threats to any conclusion from one run as a table: threat, whether it is a
+bias / variance / power problem, and the single redesign that reduces it most.
+```
+After running, verify (counters *illusion of completeness*): check the table
+against your own printed diagnosis. The killer your numbers already proved must be
+the top row; a tidy six-threat list that never names it missed the point.
+
+```text
+Argue against my claim that this design is strong enough to run. As a hostile
+methodologist, name the one diagnosand I am most likely fooling myself about,
+and the observation that would expose it.
+```
+After running, verify (counters *sycophantic agreement*): if it praises the design
+without a single objection, discard the answer and diagnose again yourself.
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three calls stay yours. **Which world your question assumes**, the model you
+declare, is a claim about reality no tool can make for you. **Which single quantity
+you name as your inquiry** decides what "success" even means. And **the honest call
+of whether to run a design your own diagnosis says is too weak** is a judgment you
+sign your name to. An AI can propose threats and draft simulation code, but it
+cannot decide that your under-powered study is worth a semester anyway.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste your confounded observational design and ask, "My estimate is noisy.
+What should I do?" The tool answers with confidence: "Recruit more participants to
+tighten your estimate." That sounds obviously right and is exactly wrong for your
+case. Your problem is **bias** from self-selection, not variance, and more data
+only makes a biased estimate a more *precise* wrong number. You catch it the way
+this chapter teaches: run the confounded design in simulation at a large sample
+and watch the estimates cluster tightly around 14 seconds when the truth is 8. The
+spread shrank; the error did not. That is the `plausible-but-wrong-method`
+failure, and your own diagnosis unmasks it.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+The method here is **simulation** (verification guide, method 2: reach for it when
+a claim is about how a procedure behaves, not a fixed number). Never trust an AI's
+"your design has about 80% power." Declare the design yourself, set a true effect
+you choose, run it a few thousand times, and read the power off your own pile of
+estimates. For any design that claims a *cause*, add an independent second check:
+**causal diagram** (method 8). Draw your model as a DAG and look for a common cause
+with an arrow into both your treatment and your outcome. If that backdoor is open,
+no power number rescues you, and your honest claim stops at "associated with."
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter carries you through the back half of **M3, your research charter and
+MIDA declaration**, the three-minute declaration you present at Friday's studio.
+Chapter 9 gave you the four parts; here you declare them as a runnable design,
+diagnose it for bias, variance, and power, and bring one named redesign. Your M3
+is graded on drawing the identify-versus-associate line for your own design, so
+the diagnosis you run this week is the evidence behind the boundary you will
+defend.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In five sentences, declare and defend one design for your project. State the
+single quantity you are after (your inquiry). Report the worst diagnosis number
+you can estimate, bias, variance, or power, and say what it does to your answer.
+Then make the honest call: run it, redesign first, or narrow the claim, and name
+the one change that would most improve it. Close with the boundary: does your
+design **identify** an effect or only show an **association**, and what remains
+uncertain even if everything goes right?

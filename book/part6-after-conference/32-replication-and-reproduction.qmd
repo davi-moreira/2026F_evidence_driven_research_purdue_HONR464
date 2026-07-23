@@ -4,51 +4,193 @@ title: "32. Replication and Reproduction"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_replication_redteam_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** You decide whether a peer's reported result actually
+> reproduces from the files they shipped, and then you rank the weaknesses you find
+> by how much each one threatens the headline claim, not by how easy each is to fix.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"I do not care that your figure is pretty or that the code ran on your laptop.
+> Hand me your files and let me get the same number back out. If I cannot, you do
+> not have a result yet. You have a story."*
+> — a **principal investigator** reading a first-year researcher's lab report
+
+In a working lab, a number nobody else can regenerate is a liability, not a
+finding. A poster can round, a caption can overstate, and a clean-looking notebook
+can still hide the one choice that holds the whole claim up. The reviewer above is
+applying the standard every result eventually meets. This chapter puts you on the
+reviewing side of that standard first, so you learn to see the cracks before someone
+finds them in your own work.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+Two words sound alike and mean different things. **Reproduction** is getting the
+same number from the *same* data and code a study shipped. Example: you open a
+classmate's notebook, run it top to bottom, and check that the same growth figure
+comes back. **Replication** is getting a similar result from a *new* study or new
+data. Example: a second lab runs its own experiment and sees the same effect. This
+chapter is about reproduction. You test the package, not the world.
+
+What you test is a **reproducibility package**: the full bundle a study ships so
+someone else can rebuild its numbers, meaning the data, the code, the run order,
+any random seed, and the write-up. The one figure the main claim rests on is the
+**headline number**. Example: "the supplement raised larval growth by 0.5 mm." You
+rebuild that first, using **restart-and-run-all**, which means clearing the
+notebook's memory and running every cell from the top with no manual fixes. If a
+number only appears when cells run out of order, it is not reproducible.
+
+A clean run proves the code executes. It never proves the write-up is true, so you
+run three audits on top of it. **Claims-vs-computation agreement** checks that
+every sentence the write-up asserts is backed by a number the code actually prints.
+An **alternative specification** is a different but equally defensible way to
+compute the same headline, to see whether the answer depends on an undisclosed
+choice. A **hidden assumption** is a claim the analysis quietly relies on and never
+states, which the result would collapse without. The most dangerous one in biology
+has a name: **pseudoreplication**, treating repeated measurements from the same
+animal, plate, or tank as independent data points when the real experimental unit
+is the animal, plate, or tank (Hurlbert, 1984).
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+A classmate's package tests whether a probiotic added to the water raises the body
+length of zebrafish larvae. Six tanks: three get the probiotic, three get plain
+water. Each tank holds about 40 larvae, and body length is recorded for every
+larva. The poster reads: **"The probiotic increased larval body length by 0.5 mm."**
+
+**Reproduce it.** You restart-and-run-all. The code loads the file, splits larvae
+by tank type, and differences the two group means. The number that comes back is
+**0.43 mm**, not 0.5. The package reproduces, which is a real success. But the
+write-up says 0.5 and the code says 0.43. That silent rounding is your first
+finding, and it earns you the right to push harder.
+
+**Change one defensible choice.** The package dropped larvae that died before the
+final measurement and never said so. Keep each dead larva's last recorded length
+instead, an equally defensible rule, and the gap slides to 0.31 mm. Neither number
+is a lie. The finding is that the headline moves on a choice the poster never
+disclosed, so the honest report is the range.
+
+**Test the hidden assumption.** The package reports its gap as if all 240 larvae
+were independent, producing a tight interval well above zero. They are not
+independent. The probiotic was assigned by tank, so larvae sharing a tank share
+water, food, and crowding. The real experimental unit is the tank, and there are
+only six. Recompute at the tank level, averaging each tank first and comparing three
+treated tanks against three controls, and the interval widens until its lower edge
+touches zero. The point estimate barely moved. The honest uncertainty around it
+exploded. That is pseudoreplication, and it is the weakness with teeth.
+
+**Rank by threat.** Pseudoreplication comes first, because it can dissolve the
+"clear effect" claim. The undisclosed survivor rule comes second, because it moves
+the number. The 0.43-reported-as-0.5 gap comes third: real, but the smallest threat
+to whether an effect exists.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb13 — Async module: replication + red-team of a peer's package**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb13 — Async module: replication and red-team of a
+peer's package**. Open it in Colab with the badge above. There you cold-reproduce a
+real field experiment's headline number from its files alone, then run the same
+three audits you just saw: you line each written claim against the output behind it,
+move the number with an undisclosed specification, and widen its interval by
+respecting the clustering the write-up ignored.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt is a checkable job, not a
+verdict you hand off.
+
+**Locate every missing input.**
+
+```text
+Act as a cold reproducibility auditor. Here is everything a peer's package
+shipped: [paste the README, the data description, the code, and the headline
+claim]. List every input or step a stranger needs and might not find: the data
+file and its version, the exact run order, any random seed, any hard-coded path.
+Put it in a table with the item, whether the package supplies it, and the cell
+where I should check.
+```
+After running, verify: map each item to a real cell, then ask "what is the single
+most important thing you left out?" Counters *illusion of completeness* (a tidy gap
+list can still omit the one missing pointer that blocks the whole run).
+
+**Walk the headline cell, then confirm it independently.**
+
+```text
+Here is the cell that computes the package's headline number: [paste the cell].
+Explain line by line what it computes, and name which printed value is the
+headline a reader should compare against the write-up. Then give me one
+independent way to confirm that value without rerunning this exact code.
+```
+After running, verify: confirm the value it names matches the number your run
+actually printed, then run its independent check yourself. Counters *confident
+fabrication* (a fluent walkthrough can describe a number the code never produced).
+
+**Red-team the hidden assumption.**
+
+```text
+This analysis treats every measured larva as an independent observation, though
+the probiotic was assigned by tank. Act as a hostile methods reviewer. Name the
+one assumption most likely to inflate the reported certainty, say what the honest
+experimental unit is, and do not reassure me the design is fine.
+```
+After running, verify: recompute the interval at the tank level yourself and see
+whether it reaches zero. Counters *plausible-but-wrong-method* (an
+independent-observations assumption on clustered data silently shrinks every
+interval).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+An AI tool cannot run the code, so it can never settle whether the number actually
+reproduced. Only your own restart-and-run-all does that. You also keep three
+judgments: **which weakness most threatens the claim**, **how you rank the
+recommendations**, and **the final verdict** on what the package can and cannot
+support. A tool proposes suspects. You decide which ones the evidence convicts.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste the whole package into a general AI tool and ask, "Does this study
+reproduce, and are its limitations complete?" It answers with total confidence:
+yes, the code runs, and the limitations paragraph looks thorough, covering sample
+size, measurement noise, and a call for future work. Every sentence is fluent. The
+tool never once flags that 240 larvae came from only six tanks. It has quietly
+mistaken a long list for a complete one.
+
+You catch it by refusing to grade the paragraph and grading the design instead. You
+ask what the experimental unit actually was, then recompute the interval at the tank
+level. When the lower bound drops to zero, the "clear effect" the tool endorsed
+turns out to rest on a certainty the data never earned. A green check and a polished
+paragraph are not a reproduced result. You verify the number and its match to the
+claim, never the confident story about them.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify this chapter's key result, the honest tank-level interval, with
+**alternative code** from the
+[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recompute the same quantity a different way and compare. Collapse each tank to its
+own mean length, giving six numbers, then difference the three treated tank means
+against the three control tank means. Confirm the point estimate matches your
+larva-level number and that the spread across six tanks is far wider than the spread
+the naive 240-point calculation implied. Back it with a **direct calculation**:
+average two tanks by hand from the raw rows and check your code returns the same two
+means. Two roads to one answer is a verified result. Two roads to two answers means
+you measured the pipeline, not the fish.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter becomes your **M13 Replication and Red-Team Report** on an assigned
+peer package. Draft its spine from your own run: a reproduction log (did
+restart-and-run-all succeed, what headline number did you get, did it match the
+write-up), a claim-to-output trace with every mismatch flagged, one alternative
+specification and one hidden assumption you tested, and prioritized recommendations
+ranked by threat to the claim. Post your single most-threatening weakness to the
+board with the one check that would settle it. The audit you run on a classmate here
+is the exact audit your own dossier has to survive when class resumes.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend your verdict on one package you audited. Name the headline
+number you reproduced and whether it matched the write-up. State the single weakness
+you ranked most threatening and the number or output that exposed it. Give the
+boundary: reproduction confirms the number regenerates, not that the science is
+right, and a red-team names risks it does not by itself resolve. Close with your
+uncertainty: the one check you could not finish, and the run you still owe before
+you would call the verdict final.

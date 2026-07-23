@@ -456,27 +456,47 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> When an AI tool hands you a fluent, confident finding, you decide whether its confidence counts as evidence (it never does) and exactly which independent check you run on the number underneath it before you repeat the claim as your own.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="24.1">
 <h2 data-number="24.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">24.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<p>Picture the officer who reviews grant reports for a watershed restoration program. Every year she reads summaries that announce success in polished, sure prose. Her standard is blunt: <em>“I don’t fund the sentence. I fund the number behind it. Show me the measurement, how you computed the change, and why the project gets the credit.”</em> A confident paragraph moves nobody who has read a hundred confident paragraphs. What moves her is a number you recomputed and can defend. An AI partner will write you a beautiful, sure-sounding finding in seconds. Your job is to treat that confidence as worth nothing until you have checked what sits under it.</p>
 </section>
 <section id="the-concept" class="level2" data-number="24.2">
 <h2 data-number="24.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">24.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>The trap has a name. <strong>False confidence</strong> is when fluent, detailed output makes you feel sure of something you never actually verified. Example: an AI summary reports that a stream cleanup “cut nitrate by roughly 40 percent,” and the crisp figure and smooth wording make the claim feel settled before you have looked at a single measurement.</p>
+<p>Two habits make the trap dangerous. <strong>Automation bias</strong> is the tendency to over-trust an automated system and stop checking, precisely because a machine produced the answer. Example: you would double-check a lab partner’s arithmetic, but you paste the AI’s percentage straight into your report because “the tool computed it.” <strong>Illusion of understanding</strong> is mistaking a smooth explanation for real comprehension. Example: you nod along as the AI walks you line by line through its calculation, then realize you could not defend the number to the watershed reviewer without rerunning it yourself.</p>
+<p>The rule that beats all three is short: <strong>verify the number, not the paragraph.</strong> <strong>Verification</strong> is an independent check, run by a method outside the model, that a result is actually true. Example: instead of trusting the AI’s “40 percent,” you recompute the average nitrate before and after the cleanup from the raw readings and see what the data really show. Code that runs without errors is not the same as code that is correct, and a summary that reads beautifully is not the same as a summary that is right.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="24.3">
 <h2 data-number="24.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">24.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You are studying a small stream where a <strong>riparian buffer</strong> (a strip of trees and grasses planted along a bank to filter runoff) was installed last year. You have weekly <strong>nitrate</strong> readings (nitrate is a nutrient from fertilizer that, in excess, fuels algae blooms and starves the water of oxygen), measured in milligrams per liter, for the year before planting and the year after.</p>
+<p>You ask an AI to summarize the dataset. It returns: <em>“The riparian buffer reduced average nitrate by about 40 percent, a clear environmental success.”</em> The sentence is fluent and sure. Here is where false confidence would win: you feel the relief of a clean result and reach to quote it.</p>
+<p>Instead you verify the number. You compute the mean nitrate for the “before” weeks and for the “after” weeks, then subtract. Suppose the before-mean is 8.1 mg/L and the after-mean is 6.9 mg/L. The real drop is 1.2 mg/L, about 15 percent, not 40. The confident summary overstated the change by more than double. A second problem also hid behind the polish: the readings come from one site with no comparison stream, so even the true 15 percent cannot be pinned on the buffer alone. A wet spring or a new practice upstream could move nitrate just as much. You keep the finding you can defend, “nitrate fell about 15 percent at this site over one year,” and you drop both the inflated figure and the word “success.”</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="24.4">
 <h2 data-number="24.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">24.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb00 — Research in the age of AI: your arm, your RA — not your brain</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb00, Research in the Age of AI: Your Arm, Your RA, Not Your Brain</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you run a small randomized study, meet a confident one-line summary that claims a large effect, and recompute the actual gap in the data to watch the summary overstate it. You then red-team a finding you wrote and catch an AI that praises your sentence instead of testing it.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="24.5">
 <h2 data-number="24.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">24.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own expectation first, then delegate. Each prompt hands out a task you can check, with a verify note naming the failure it defends against.</p>
+<p><strong>Point to the real number (you recompute it).</strong></p>
+<pre class="text"><code>Here is a cell that computes average nitrate before and after a buffer was
+installed and prints both means: [paste it]. Tell me which single printed number
+is the actual change, and state plainly whether a "40 percent reduction" summary
+is or is not that number. Do not rerun it; I will read my own output and compare.</code></pre>
+<p>After running, verify (counters <em>confident fabrication</em>): a fluent summary can state a number the data never produced. Read the two means your cell printed and compute the change yourself. If it does not match the AI’s figure, trust your printout.</p>
+<p><strong>Force the uncertainty out (you check the bound).</strong></p>
+<pre class="text"><code>For the before/after nitrate change in my data, rate how firm the estimate is.
+Give a plausible range, and name what drives the uncertainty: the sample size, the
+week-to-week scatter, and the lack of a comparison stream.</code></pre>
+<p>After running, verify (counters <em>missing uncertainty</em>): if a result arrives as a clean fact with no bound, assume the uncertainty was dropped, not that there was none. Confirm the range against the spread you can see in your own readings.</p>
+<p><strong>Red-team your finding (you keep the claim).</strong></p>
+<pre class="text"><code>Here is my finding: "[paste your sentence]." Act as a hostile watershed reviewer.
+Name every place it reaches past one site and one year of data. Do not rewrite it
+for me; list the weaknesses.</code></pre>
+<p>After running, verify (counters <em>sycophantic agreement</em>): if every objection is mild, or it calls your sentence “well-balanced,” push back and ask for the single worst flaw.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +507,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>These stay yours, no matter how sure the tool sounds. Deciding what claim the verified number actually supports, and how far that claim reaches. Judging whether your design lets you credit the buffer for the change, or only lets you report that nitrate fell. Stating the uncertainty and the limits in your own words. The tool can draft a summary; deciding whether that summary is true, and answering for it, is the researcher’s job.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="24.6">
 <h2 data-number="24.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">24.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You ask the AI to “summarize what this water-quality dataset shows,” and it hands back a confident paragraph ending in “a 40 percent reduction, a clear success.” Every part reads like a finding you could quote: a round figure, a firm verdict, no hedging.</p>
+<p>Here is exactly how you catch it. You do not repeat the paragraph. You compute the two group means from the raw readings and subtract, and the real change is about 15 percent, not 40. Then you ask what the design licenses: one site, no control stream, a single year, so even the honest 15 percent could come from the weather rather than the buffer. The confident summary failed twice, once on the number and once on the causal reach, and both failures were invisible until you checked outside the model.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="24.7">
 <h2 data-number="24.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">24.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>The chapter’s key result is that a confident summary’s number can be flatly wrong. Confirm it yourself with <strong>direct calculation</strong> (from the <a href="../../ai_resources/verification_guide.md">verification guide</a>): recompute the before-mean and the after-mean by hand, or with a second simple expression, and subtract. If the change you get differs from the AI’s figure, the figure was never evidence. For extra assurance, use <strong>alternative code</strong>: compute the same difference a second way, such as filtering each period separately and subtracting, and confirm both roads give one answer.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="24.8">
 <h2 data-number="24.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">24.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter feeds milestone <strong>M0</strong>, your research-and-AI baseline, presented at Friday’s studio. Two moves carry over. First, adopt a standing rule for your own project: no AI-reported number reaches your poster or brief until you have recomputed it by a second method. Second, log the catch in your AI Research Ledger, recording the task, the tool, your decision (kept the verified 15 percent, dropped the claimed 40), and the verification method (direct calculation). Then name, in your baseline, the one place you are most likely to let a confident answer past unchecked. That admission is where automation bias gets managed.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="24.9">
 <h2 data-number="24.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">24.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In a short paragraph, take one number an AI reported to you and state the claim you will defend after recomputing it: the bounded finding, in your own words. Then give its boundary and your uncertainty. What does the verified number <em>not</em> establish (does your design let you credit a cause, or only describe a change?), and where were you most tempted to trust the confident version without checking? A finding stated with no boundary and no uncertainty is the overclaiming-certainty defect, not a defense.</p>
 
 
 </section>

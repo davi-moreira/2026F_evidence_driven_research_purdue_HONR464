@@ -456,27 +456,60 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Decide whether your poster’s headline figure is <em>honest</em>: whether its visual impression matches its actual number, whether its uncertainty sits in the same glance as the claim, and whether every reader, including a color-blind or screen-reader reader, can receive it. You own the headline verb and the call that the picture never says more than the data.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="27.1">
 <h2 data-number="27.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">27.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“From four feet away I read one thing: does your tallest bar mean what it looks like it means? If your axis starts halfway up the scale, I have caught you before I read a word of your methods, and now I distrust the whole board.”</em> — a <strong>skeptical peer</strong> walking a poster session</p>
+</blockquote>
+<p>At a poster session a stranger gives you ninety seconds and one glance. The figure does most of the talking, and a figure can lie with true numbers. An axis that starts just below your data turns a rounding-error gap into a landslide. A reader who cannot tell your red bar from your green one receives no message at all. This chapter is the decision that keeps your strongest visual honest before it ever reaches the wall.</p>
 </section>
 <section id="the-concept" class="level2" data-number="27.2">
 <h2 data-number="27.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">27.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>The decision is one judgment made four ways, and each way has a name.</p>
+<ul>
+<li><strong>Headline claim.</strong> The one sentence you want a reader to leave with. Its verb carries the whole meaning. Example: “Catalyst B raised our yield” promises far more than “Catalyst B yielded slightly higher.”</li>
+<li><strong>Claim boundary.</strong> The line between what your evidence licenses and what it does not. Example: an observational comparison may say “is associated with,” never “causes.”</li>
+<li><strong>Compass position.</strong> The kind and reach of the question your project answered, which fixes what the headline is allowed to say. Example: a descriptive question about the batches you measured, not a causal claim about why.</li>
+<li><strong>Figure honesty.</strong> The rule that a figure’s picture cannot say more than its data. Example: if the real gap is three points, the bars should look about three points apart, not twice as tall.</li>
+<li><strong>Truncated axis.</strong> An axis that starts above the bottom of its scale instead of at the floor. Example: a yield axis running 70 to 76 instead of 0 to 100 magnifies a small difference into a cliff.</li>
+<li><strong>Uncertainty on the page.</strong> The interval or caveat printed in the same glance as the claim, not buried in a footnote. Example: a “±4 points” error bar drawn right on the headline figure.</li>
+<li><strong>Accessibility.</strong> Whether your message reaches readers who perceive differently. Example: a red-green bar pair carries nothing for a red-green color-blind reader, roughly 1 in 12 men.</li>
+<li><strong>Redundant encoding.</strong> Carrying the same distinction in more than one channel, so no single channel is load-bearing. Example: label each bar with its value and give each a pattern, so color becomes a bonus, not the only signal.</li>
+</ul>
+<p>A poster that fails any one of these overclaims, even when its numbers are exactly right.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="27.3">
 <h2 data-number="27.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">27.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You are presenting an organic-chemistry project comparing two catalysts for the same reaction. Across replicate runs, Catalyst A gives a mean percent yield of 71 and Catalyst B a mean of 74. The 95% interval on each mean is about ±4 percentage points, so the two intervals overlap. Your first draft draws a bar chart with the y-axis running 70 to 76, titles it “Catalyst B BOOSTS yield,” and colors the bars red and green.</p>
+<p>Now run the decision. <strong>Figure honesty:</strong> the real gap is 3 points, but on an axis floored at 70 the taller bar is drawn four times the height of the shorter one, so the picture claims a landslide the data never delivered. <strong>Uncertainty on the page:</strong> the intervals overlap, so a difference the figure sells as decisive might be noise, and nothing on the board shows it. <strong>Claim boundary:</strong> “BOOSTS” is a decisive, causal verb for a three-point, overlapping gap. <strong>Accessibility:</strong> told apart by red and green alone, the bars carry no information for a color-blind reader, and a screen reader reads no value off the image.</p>
+<p>The fixed figure keeps every number and changes only the honesty. You run the axis 0 to 100, print each mean as a label on its bar, draw the ±4-point interval on top, separate the bars with a color-blind-safe pair plus a hatch pattern, and soften the headline to “Catalyst B yielded about 3 points higher, within overlapping intervals.” Same data, a picture that now tells the truth.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="27.4">
 <h2 data-number="27.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">27.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb10 — Poster criticism + final poster lock</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb10 — Poster criticism + final poster lock</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you draw one headline figure two ways from the same numbers, watch a truncated axis inflate a small gap several times over, and run the four audits plus accessibility until each one names a located, fixable hit on the board.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="27.5">
 <h2 data-number="27.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">27.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own audit first, then delegate. Each prompt below is a checkable job, not a request for a verdict.</p>
+<p><strong>Locate the color-only channels.</strong></p>
+<pre class="text"><code>Here is the code that draws my poster's headline figure: [paste the cell].
+List every place this figure encodes a meaningful distinction using color.
+For each, tell me exactly what a red-green color-blind reader and a
+screen-reader user would fail to receive. Do not rewrite the figure.</code></pre>
+<p>After running, verify: render your figure and check each named channel against the picture you can see. Counters <em>plausible-but-wrong-method</em> (generic accessibility advice that does not match how your figure is actually drawn).</p>
+<p><strong>List the skeptic’s questions, then map them to audits.</strong></p>
+<pre class="text"><code>Act as a hostile poster reviewer. My headline figure is a bar chart of mean
+percent yield for two catalysts, y-axis 70 to 76, red versus green bars, no
+interval shown, titled "Catalyst B BOOSTS yield." Generate the six hardest
+questions you would ask, then name the one this figure cannot answer at all.</code></pre>
+<p>After running, verify: map each question to one audit (claim boundary, figure honesty, uncertainty, accessibility); an audit with no question is the gap, and the truncated axis had better appear. Counters <em>illusion of completeness</em> (a long, tidy list that quietly skips the flaw that matters most).</p>
+<p><strong>Red-team the headline verb.</strong></p>
+<pre class="text"><code>Here is my headline: "[paste it]" and my compass position: "[descriptive /
+associational / causal]". Act as a skeptical reviewer and find every word that
+claims more than that position licenses. List the exact words. Do not soften them.</code></pre>
+<p>After running, verify: if it praises the headline or finds nothing, push back and demand the single worst word, then check each flagged word against your interval. Counters <em>sycophantic agreement</em> (praise that reviews your nerve, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +520,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>The words of your headline and the verb that carries its boundary are yours. So is the judgment that the figure’s impression matches its number, the call that the uncertainty is visible in the same glance, and the decision that the poster is honest enough to lock. AI can generate the skeptic’s questions and scan your code for color-only channels. It cannot see your board, and it cannot decide the claim was earned. Those stay with you.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="27.6">
 <h2 data-number="27.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">27.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste the described figure and ask Gemini for the hardest reviewer questions. It returns a confident, well-organized list of six: sample size, replicate count, generalization to other substrates, temperature control, and two more. Every question is reasonable, and not one mentions the truncated axis, the single worst flaw on the board. The list looks complete, so it is tempting to trust it and move on.</p>
+<p>You catch it by mapping each returned question to an audit. Claim boundary, sampling, and methods all draw questions; figure honesty draws none. That empty row is the finding. You check the number your own cell printed, the exaggeration the floored axis creates, and you add the figure-honesty hit the tidy list skipped. Fluency is not completeness. The check lives in your own audit list, the one you wrote before you asked.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="27.7">
 <h2 data-number="27.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">27.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify the chapter’s key result, that the truncated axis inflates the gap, with <strong>direct calculation</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: recompute the numbers by hand and compare them to the picture. The honest ratio of the two bars is 74 to 71, about 1.04, a four-percent difference. On an axis floored at 70, the drawn heights are (74−70) to (71−70), which is 4 to 1. The figure makes Catalyst B’s bar look four times Catalyst A’s when the yields really differ by four percent, and the axis alone is doing that work. For a second road, redraw the same two means on a 0-to-100 axis (<strong>alternative code</strong>) and confirm the bars now look about as close as the numbers are.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="27.8">
 <h2 data-number="27.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">27.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter turns into the headline figure of your poster milestone. Your <strong>M9 poster draft</strong> carries a first version of that figure. Run the four audits plus accessibility on it now, log each located hit, and rebuild the figure honestly before the <strong>M10 final poster lock</strong>, where a number the picture overstates becomes a permanent, public claim you cannot patch after printing. The one figure you fix here is the one a stranger cannot break at the expo.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="27.9">
 <h2 data-number="27.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">27.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend your headline figure. State the bounded claim it makes and the verb that keeps it inside your compass position. Name what the figure does not establish: the overlap in the intervals, the difference that might be noise, the reach your design never bought. Say how the uncertainty rides in the same glance as the claim, and name the one reader your design still works to reach. Close with the single check that decided the figure was honest enough to lock: the number you recomputed, or the audit you could not make fail.</p>
 
 
 </section>

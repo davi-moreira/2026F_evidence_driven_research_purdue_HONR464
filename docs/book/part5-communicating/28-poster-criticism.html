@@ -456,27 +456,51 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Before your poster becomes permanent, you decide whether every claim on it is actually backed, or whether it still needs one more fix before you lock it. A backed poster keeps its headline inside its evidence, shows its uncertainty beside the claim, traces every number to a cell, and reaches every reader. This chapter equips you to run that audit as a hostile stranger would, then defend the lock call you make.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="28.1">
 <h2 data-number="28.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">28.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<p>Picture the last hour before a poster prints. A <strong>research-integrity judge</strong>, the person at a conference who probes whether a poster’s claims are actually backed, walks your row and stops at one number on your board. “Where did this come from?” If you can walk that judge to the exact line of code that produced it, the whole poster earns trust. If you answer “I think that came from the analysis somewhere,” the judge stops believing every other number too. Once the file goes to the printer you cannot patch it, so the honesty has to be built in before it leaves your hands. This chapter is the last audit between a draft poster and a permanent one.</p>
 </section>
 <section id="the-concept" class="level2" data-number="28.2">
 <h2 data-number="28.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">28.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>Three passes turn a fragile poster into one that survives a stranger, and each ends in a decision only you can make.</p>
+<p>The first pass is the <strong>gallery-walk audit</strong>, a structured walk where you stop at a poster and run the same fixed checklist instead of glancing and moving on. Four questions form its core. The claim-boundary audit asks whether the headline stays inside its evidence, where a <strong>claim boundary</strong> is the line between what your evidence licenses and what it does not, sitting in the headline verb: an observational field trial may say “is associated with,” never “causes.” The figure-honesty audit asks whether the picture matches the numbers, where <strong>figure honesty</strong> means a chart cannot say more than its data, so an axis starting just below the data draws a small gap as a canyon. The read-path audit asks whether a stranger finds the headline in ninety seconds. The uncertainty audit asks whether the interval sits beside the claim, not buried in a footnote. A fifth check, accessibility, asks whether every reader can receive the claim, and its fix has a name: <strong>redundant encoding</strong> means carrying a distinction in more than one channel, such as a value label plus a hatch pattern, so color is never the only signal a color-blind reader can lose.</p>
+<p>The second pass is the <strong>oral defense</strong>, the live conversation at your board where you answer questions you cannot edit afterward. Three lenses cover almost every hard question: an outsider testing whether your claim survives translation, a specialist probing a design choice, and a skeptic offering a rival explanation for the same evidence. The judgment underneath is <strong>defend-versus-concede</strong>: you defend when the objection asks for something your evidence already licenses, and you concede, narrowing the claim on the spot, when it asks for a crossing your design never paid for. Your <strong>compass position</strong>, the kind and reach of the question your project answered, tells you which call to make.</p>
+<p>The third pass is the lock. <strong>Claim-evidence traceability</strong> means every number on the poster traces to the exact cell that produced it, so you can show that line when a judge points at it. The <strong>terminal lock</strong> is the moment the poster becomes final and unchangeable, which is why the audit before it is the most consequential one you run all week.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="28.3">
 <h2 data-number="28.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">28.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>An honors agronomy poster carries the headline “Compost RAISES corn yield.” Its center figure is a bar chart of mean grain yield for plots that received a compost amendment against plots that did not, drawn as a red bar and a green bar. The means are 185 and 191 bushels per acre, a gap of 6. The y-axis starts at 180, and no interval is shown. The plots were not randomized; the farmer chose which fields got compost.</p>
+<p>Walk the gallery audit across it. The claim-boundary audit catches the verb first: “raises” is causal, but nothing was randomized, so a naturally richer field could have received both the compost and the higher yield. The honest headline is “compost is associated with about 6 more bushels per acre.” The figure-honesty audit catches the axis, floored at 180, which draws a 6-bushel gap several times taller than it truly is, so run it from 0. The uncertainty audit catches the missing interval: a 95% interval of roughly ±9 bushels per acre swamps a 6-bushel gap, so it has to ride beside the headline. The accessibility audit catches the red-green pair, which a reviewer who is red-green color-blind, roughly one man in twelve, cannot tell apart, so you add value labels and a hatch pattern.</p>
+<p>You cannot fix everything before printing, so you decide. The claim-boundary hit travels farthest, because a reviewer who catches one causal overreach distrusts the whole board, so you lock the associational verb first. That single decision, made by you and defended out loud, is the work of this chapter.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="28.4">
 <h2 data-number="28.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">28.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb10 — Poster criticism + final poster lock</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb10 — Poster criticism + final poster lock</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you draw one honest set of pilot numbers two ways and read the exaggeration factor your own cell prints, run the four audits plus accessibility on a sample poster, map the three defense lenses, and log the hits your own poster received into your M10 lock list.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="28.5">
 <h2 data-number="28.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">28.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own audit first, then delegate. Each prompt hands the tool a job you can check, with a verify note naming the failure it defends against.</p>
+<p><strong>Generate the hostile questions (you map each to an audit).</strong></p>
+<pre class="text"><code>Act as a hostile poster reviewer. My headline figure is a bar chart comparing
+mean corn yield for compost-amended versus control plots on a y-axis that starts
+at 180, titled "Compost RAISES corn yield," with no interval shown and the two
+bars told apart by red versus green only. Generate the six hardest skeptic
+questions you would ask, then name the single flaw this figure cannot answer.</code></pre>
+<p>After running, verify (counters <em>illusion of completeness</em>): map each question to one audit (claim boundary, figure honesty, read path, uncertainty, accessibility). An entire audit the tidy list skips is the gap. Then check the survivors against the real gap and exaggeration factor your own notebook cell printed.</p>
+<p><strong>List the color encodings to verify (you check against the rendered figure).</strong></p>
+<pre class="text"><code>Here is the code that draws my poster's headline figure: [paste the cell]. List
+every place it encodes a meaningful distinction with color, and for each, say what
+a red-green color-blind reader and a screen-reader user would fail to receive.
+Then propose one redundant encoding that carries the same distinction.</code></pre>
+<p>After running, verify (counters <em>plausible-but-wrong-method</em>): read each encoding it names against your rendered figure. Generic accessibility advice that does not match how your figure is actually drawn is wrong for your case, so trust the picture you can see, and re-render after applying one proposed fix.</p>
+<p><strong>Red-team your spoken answer (you keep the words).</strong></p>
+<pre class="text"><code>Here is my written headline: "[paste it]". Here is what I plan to say when a
+skeptic asks whether something else could explain it: "[paste it]". Find every
+place my spoken answer claims more than my written headline. Do not rewrite it;
+list the exact words.</code></pre>
+<p>After running, verify (counters <em>silent scope change</em>): read each flagged phrase next to your compass position. Keep every catch of a spoken “causes” your written poster never said, and reject any push to concede a point your design does license.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +511,27 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>These stay yours, however fluent the tool sounds. The words of your headline claim, and the verb that keeps it inside your compass position. The call, made out loud, to defend a point or concede it. And the decision that the poster is honest enough to lock. The tool can generate hard questions and scan a figure for color traps; deciding what your evidence licenses, and answering for it at the board, is yours.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="28.6">
 <h2 data-number="28.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">28.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You describe your compost figure to Gemini and ask for the hardest skeptic questions. Back comes a crisp six-item list: the sample size, the single growing season, the soil-test method, generalizability to other regions, cost, and the definition of “yield.” It reads as thorough, and the temptation is to treat the poster as fully audited.</p>
+<p>It is not. The list never mentions the truncated axis, and never mentions the red-green bars. Those are the two most concrete, most fixable flaws on the board, and the polished list quietly skipped both. This is the illusion of completeness: a long, organized answer that omits the thing that matters most.</p>
+<p>Here is how you catch it. You map each question to one audit. Four land on claim boundary and uncertainty, none on figure honesty, none on accessibility. Two whole audits are missing, which tells you the list is incomplete no matter how confident it reads. Then you check the survivors against the exaggeration factor your own notebook cell printed, and cut any question that assumes a gap other than the 6 bushels you computed. The completeness check is yours, not the tool’s.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="28.7">
 <h2 data-number="28.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">28.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>The chapter’s key result is that the same numbers drawn honestly tell a smaller story than the truncated chart does. Confirm it with <strong>direct calculation</strong> (from the <a href="../../ai_resources/verification_guide.md">verification guide</a>): recompute the yield gap by hand, 191 minus 185 is 6 bushels per acre, then recompute the truncated axis’s exaggeration factor, the taller bar’s height above the 180 floor divided by the shorter bar’s, and confirm the honest 0-to-full-scale chart shows a difference that is real but small. For the citation row of the lock, add <strong>primary-source reading</strong>: click each source your poster names, and confirm the work opens and says what your poster claims.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="28.8">
 <h2 data-number="28.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">28.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter develops and locks milestone <strong>M10, your final poster</strong>, and hands off to M11, where you deliver that poster out loud. Three moves carry over. Run the gallery-walk audit on your own poster and log every located hit, ranked by how far the error travels. Field the three-lens oral defense and list every claim it exposed as too strong, with the softer wording you will lock. Then make the lock call: trace every number to its cell, confirm every citation resolves, and write the AI-use disclosure block recording which tool did which task and how you checked it.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="28.9">
 <h2 data-number="28.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">28.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In a short paragraph, state your lock call for your own poster. Is it ready to be terminal, yes or no? Name your locked headline and the single verb that keeps it inside its compass position, and the uncertainty that rides in the same eye-span as the claim. Then name the boundary: which hit did you fix, which did you leave for later, and what does the locked poster still not establish? A lock call with no stated boundary and no uncertainty is not yet defended.</p>
 
 
 </section>

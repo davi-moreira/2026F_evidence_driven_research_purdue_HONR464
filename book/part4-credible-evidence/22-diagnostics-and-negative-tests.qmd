@@ -4,51 +4,179 @@ title: "22. Diagnostics and Negative Tests"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_attack_the_analysis_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Before you believe a result, decide which negative
+> test to run, a check aimed at a place where the answer must be zero, and read
+> what its outcome does and does not license. You pick the test, confirm it is
+> genuinely null, and defend only what a clean pass actually earns you.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"Before you tell me the extract works, show me the plate with no extract on it.
+> If the blank disk also cleared the bacteria, you have not discovered a drug. You
+> have discovered that your solvent is toxic."*
+> — a **microbiology lab advisor**, on the first plate she asks to see
+
+A striking result is the easiest thing in the world to produce by accident. Your
+procedure has many moving parts: how you handled the samples, how you measured, how
+you coded the groups. Any one of them can manufacture a signal that has nothing to do
+with the thing you set out to study. A negative test is how you find out whether the
+world produced your result or your own pipeline did. Skip it, and you may spend a
+semester defending an artifact.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+A **negative test** is a check that runs your exact analysis on a situation where the
+true answer has to be zero, so any signal it returns is coming from your procedure, not
+the phenomenon. Example: measuring your "effect" in a group that received no treatment
+at all. Because the honest answer there is zero, a non-zero reading exposes a flaw in
+your machinery. Three members of this family show up in almost every audit.
+
+- **Placebo test**: you replace the real cause with a fake one that cannot act, and
+  confirm the effect disappears. Example: swap the real treatment and control labels
+  for a coin flip, and check that the estimate collapses toward zero.
+- **Falsification test**: you check a consequence that must be false if your
+  explanation is right, and confirm it is false. Example: your compound can only act
+  after you add it, so a reading taken *before* you added it should show nothing.
+- **Negative control**: you point the same machinery at an outcome your cause could
+  not possibly touch. Example: an antibiotic should not change the diameter of the
+  agar dish, so a "shrinking dish" reading would mean the measurement, not the drug,
+  is talking.
+
+One term earns its own line. A **vehicle control** is the negative control matched to
+how you delivered the cause: the carrier with the active ingredient left out. Example:
+if you dissolved your extract in ethanol, the vehicle control is a disk soaked in
+ethanol alone. What every one of these tests hunts for is an **artifact**, a signal
+produced by your procedure rather than by the thing you study. Example: a clear ring
+caused by the solvent, not the extract.
+
+They share one move: aim the machinery where the answer must be zero, and make sure it
+says zero. Here is the boundary you must never blur. A passed negative test rules out
+**one specific artifact**. It does not prove your effect is real, and it never turns a
+correlation into a cause.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You are testing whether an extract from a medicinal plant kills a common bacterium.
+You soak a small paper disk in the extract, lay it on a lawn of bacteria growing on an
+agar plate, incubate overnight, and next morning measure the **zone of inhibition**,
+the clear ring where bacteria failed to grow around the disk. A wide ring looks like a
+real antibacterial effect, and it is tempting to write that down.
+
+Before you do, you run the negative test. You dissolved the extract in 70% ethanol, so
+your vehicle control is a disk soaked in 70% ethanol alone, placed on an identical
+plate and treated exactly the same way. If that disk leaves a bare, uninhibited lawn,
+the test passed: ethanol on its own did nothing, so the ring around your extract disk
+is not a solvent artifact, and your effect survives one specific worry. If the vehicle
+disk grows its own clear ring, the test failed. The ethanol is killing the bacteria,
+and you can no longer tell how much of the extract's ring is the extract and how much
+is the solvent. The finding is an artifact until you redo it at a lower concentration.
+
+Notice what a clean pass still does not buy you. It does not tell you the extract works
+inside a living animal, or which molecule is responsible. It ruled out one artifact and
+nothing more, and that modesty is the point.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb09 — Share the research + attack the analysis**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb09 — Share the research + attack the analysis**.
+Open it in Colab with the badge above and work the cells alongside this chapter.
+There you run a placebo test on a real survey estimate: you throw away the true
+grouping, replace it with a coin-flip label 500 times, and watch the fake gaps
+cluster tightly at zero while the real result sits far outside that cloud. Then a
+leave-one-out check shows you whether a single data point is quietly carrying the
+whole finding.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own expectation first, then delegate a checkable job. Never let the tool
+decide whether your control is valid.
+
+**Locate the standard control.**
+
+```text
+Act as a lab-methods assistant. I ran an antibiotic disk-diffusion assay with a
+plant extract dissolved in 70% ethanol. Before any advice, name the standard
+negative (vehicle) control for this assay and cite a protocol or textbook where it
+appears. Only name controls you are confident are standard practice.
+```
+After running, verify: open the cited protocol and confirm the control is real and
+standard before you use it. Counters *confident fabrication* (an invented "standard"
+control arrives as confidently as a real one).
+
+**List candidate negative tests, then verify each.**
+
+```text
+Here is my analysis: [one-sentence design, your cause, your outcome]. Propose three
+negative tests: a placebo label, a falsification outcome measured where the effect
+cannot yet exist, and a negative-control outcome my cause could not plausibly affect.
+For each, state the exact zero I should expect and what a non-zero result would mean.
+```
+After running, verify: for each test, confirm your cause genuinely *cannot* touch the
+negative control. A control your cause can affect is not null, and it fails silently.
+Counters *plausible-but-wrong-method* (a "negative control" that is not actually zero).
+
+**Red-team a clean pass.**
+
+```text
+Here is a negative test I ran and its result: [describe the control and its
+near-zero outcome]. Act as a hostile reviewer. Name every reason this test could
+read as zero for the WRONG reason: too few samples to detect anything, a control too
+weak to carry the artifact, a zero I would have gotten no matter what. Do not reassure me.
+```
+After running, verify: if it only praises the clean result, push back and demand the
+single way the test is uninformative. Counters *sycophantic agreement* (praise that
+reviews your relief, not your evidence).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+You decide **which negative test your design actually needs**, **whether the control
+is genuinely null** (a place your cause truly cannot reach), and **what a clean pass
+licenses you to claim**. A tool can list candidate controls, but only you know the
+mechanism well enough to certify that your cause cannot touch the one you chose. The
+judgment that a passed negative test rules out an artifact *without* proving your
+effect is real stays yours.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You ask an AI to design a negative control for your ethanol-based assay. It answers,
+with complete confidence, "use a disk soaked in sterile water." You run it, the water
+disk comes back perfectly clean, and the tidy conclusion writes itself: control passed,
+effect confirmed. Here is the trap. Water is not the vehicle you used. You delivered
+the extract in ethanol, so the artifact you needed to rule out is ethanol toxicity, and
+a water disk can never show it. The clean result ruled out nothing at all.
+
+You catch it with one question the tool never asked itself: *what artifact does this
+control actually rule out?* A valid vehicle control matches how you delivered the
+cause, solvent for solvent. The moment you see the mismatch you swap water for 70%
+ethanol and run the test that can genuinely fail. This is a *plausible-but-wrong-method*:
+the advice sounded like textbook practice and was wrong for your case.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify this chapter's key result, that a genuine negative test returns zero, with
+**simulation** from the
+[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+Build a dataset by hand where no effect exists: assign a fake label by coin flip and
+generate an outcome that ignores it entirely. Run your negative-test machinery on it.
+If the procedure is sound, the estimate comes back near zero, again and again across
+many random labels. If it returns a signal on data you built to hold none, the test
+itself is broken, not the world. A negative test you have confirmed returns zero on
+known-null data is one you can trust when it returns zero on your real data.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter adds one pre-listed check to your **M9 research audit**, the graded record
+of how hard you tried to break your own claim. Before you look at your result, write
+down one negative test your design calls for, name the exact zero you expect, and
+commit to reporting it whichever way it comes out. Run it, record what you got against
+what you predicted, and if the estimate moved, say by how much. That row, the negative
+test you chose plus the zero you expected plus the result, is one of the strongest
+lines you can walk a skeptic through at Friday's studio.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend the negative test you chose for your own result. Name the
+test and the exact zero you expected before you ran it. State what a clean pass
+licenses you to claim, and its boundary: the one artifact it rules out, and the causal
+or general claim it does *not* establish. Close with your uncertainty: whether the test
+was powerful enough to have caught the artifact if it were really there, and the one
+check you would run next.

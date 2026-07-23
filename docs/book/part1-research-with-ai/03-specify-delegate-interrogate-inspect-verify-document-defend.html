@@ -456,27 +456,65 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Before you hand any research task to an AI tool, decide how to route it through one seven-step protocol so the result comes back verifiable and defensible. You specify the work and defend the result yourself, and you never let the tool own those two ends.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">3.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“Show me the benchmark, not the number. I want to see what you timed, how many times you ran it, and what you compared it against. A speedup I cannot reproduce is a rumor.”</em> — a <strong>research-software reviewer</strong>, reading a claim that a new function is faster</p>
+</blockquote>
+<p>A tool can now write the code, run it, and hand you a tidy result in one breath. That is exactly why a loose habit is dangerous. If you paste the result straight into your work, you have imported a guess and signed your name to it. The reviewer above does not care how confident the output sounded. She cares what you set up, what you handed off, and how you checked it before you believed it. This chapter gives you the habit that survives that question.</p>
 </section>
 <section id="the-concept" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">3.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>The habit has a name you can spell: <strong>SDIIVDD</strong>, a seven-step protocol for handing work to an AI tool and getting back something you can defend. A <strong>protocol</strong> is just a fixed sequence of steps you run every time, so you never skip the check that matters. You met its three-word shorthand in Chapter 1, Ask then Verify then Document. SDIIVDD is the full version.</p>
+<p>The seven steps, each defined once with an example:</p>
+<ol type="1">
+<li><strong>Specify.</strong> Write down the exact task and your own expected answer <em>before</em> you ask. Example: “time two dedupe functions on 10,000 records; I expect the hash version to win by maybe 5x.”</li>
+<li><strong>Delegate.</strong> Hand the well-specified piece to the tool. To <strong>delegate</strong> is to assign a checkable chunk of work, not your judgment. Example: “write the timing harness for these two functions.”</li>
+<li><strong>Interrogate.</strong> Ask the draft what it assumes. Example: “does your timer include the setup cost, or only the lookup?”</li>
+<li><strong>Inspect.</strong> Read what the tool actually produced, not its summary of itself. Example: open the code and see which lines sit inside the timed block.</li>
+<li><strong>Verify.</strong> Confirm the result with a real, independent check before you trust it. Example: re-run the timing a different way and compare.</li>
+<li><strong>Document.</strong> Log the tool, the task, and how you checked, in a record that travels with your work.</li>
+<li><strong>Defend.</strong> State the result in your own words, with the tool out of the room.</li>
+</ol>
+<p>Two of these stay human no matter how good the tool gets. <strong>Never-delegate decisions</strong> are the calls you always own: what you are really asking, what counts as a fair test, and what your evidence licenses you to claim. Example: the tool can time your code, but only you decide the comparison was fair enough to report. Specify and Defend are the human bookends. Everything you hand off sits safely between them.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">3.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You are studying whether a hash-based deduplication function you asked an AI to write is genuinely faster than the simple version you trust. A <strong>benchmark</strong> is a controlled timing test that compares two implementations on the same input. Watch the protocol run.</p>
+<p><strong>Specify.</strong> You write your expectation first: “on 10,000 records, the hash version should be a few times faster, and it must return the exact same de-duplicated list.”</p>
+<p><strong>Delegate.</strong> You ask the tool to write <code>dedupe_fast()</code> and a harness that times both functions.</p>
+<p><strong>Interrogate.</strong> You ask, “what does your timer assume?” It admits it runs each function once.</p>
+<p><strong>Inspect.</strong> You read the harness. The slow function runs first, on a cold start, before the interpreter has warmed up. <strong>Warmup</strong> is the first run’s extra cost from loading and caching that a steady run does not pay. The harness charges that cost to the slow function alone.</p>
+<p><strong>Verify.</strong> You run each function five times, drop the first, and take the median. You also check that both return identical output.</p>
+<p><strong>Document.</strong> You log the prompt, the fix, and the verified numbers.</p>
+<p><strong>Defend.</strong> You write: “on this synthetic 10,000-record input, the hash version was about 6x faster and returned a byte-identical list. I have not tested real data or inputs full of near-duplicates.”</p>
+<p>The tool did the typing. You did the research.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">3.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb00 — Research in the age of AI: your arm, your RA — not your brain</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb00 — Research in the age of AI: your arm, your RA, not your brain</strong>. Open it in Colab with the badge above. There you run the protocol live: you catch a fabricated citation by retrieving it yourself, then catch a confident summary that overstates a number the data never held. Both are the Inspect and Verify steps under real pressure.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">3.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt below is a checkable job, not a request for a verdict.</p>
+<p><strong>Locate the standard tool.</strong></p>
+<pre class="text"><code>Act as a Python performance assistant. I want to time two functions fairly.
+Before any code, name the standard-library tool for timing repeated runs and its
+key arguments, citing the official docs section. Only name functions you are
+confident exist.</code></pre>
+<p>After running, verify: open the official docs and confirm the function and its defaults exist. Counters <em>confident fabrication</em> (an invented function name arrives as confidently as a real one).</p>
+<p><strong>Delegate, with a checklist to verify.</strong></p>
+<pre class="text"><code>Write a harness that benchmarks dedupe_slow and dedupe_fast on the same input.
+Then return a table of every assumption your timing makes: warmup, number of
+repeats, what sits inside the timed block, and how realistic the input is.</code></pre>
+<p>After running, verify: run both functions on one input and confirm identical output with a second, simpler check. Counters <em>plausible-but-wrong-method</em> (a timer that quietly compares unfair conditions).</p>
+<p><strong>Red-team your speedup.</strong></p>
+<pre class="text"><code>Here is my claim: "the hash version is about 6x faster on 10,000 records."
+Act as a hostile reviewer of research software. Name every way this benchmark
+could be unfair or this number could mislead. Do not rewrite the claim for me.</code></pre>
+<p>After running, verify: if it only praises the claim, push back and demand the single worst flaw. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +525,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Specify and Defend never leave your hands. You decide <strong>what question the benchmark answers</strong>, <strong>what counts as a fair comparison</strong>, and <strong>whether the synthetic input is honest</strong> for the claim you want to make. You own the final sentence, its boundary, and its uncertainty. The tool can time the code, but it cannot decide the test was fair or the claim was earned. Those are yours.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">3.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You ask for a benchmark and the tool reports, with total confidence, “the hash version is 50x faster.” The number is wrong, and the code that produced it runs without a single error. Here is the trap: the harness timed each function exactly once, and the slow function ran first, on a cold start, so it paid the entire warmup cost. The comparison charged one function for a setup both of them share.</p>
+<p>You catch it at Inspect and Verify. Reading the harness shows the single-run timing and the unlucky ordering. Re-running each function five times, dropping the first, and taking the median collapses the “50x” to about 6x. A green check is not a correct result. You verify the number, not the paragraph about the number.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="3.7">
 <h2 data-number="3.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">3.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, the speedup, with <strong>alternative code</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: recompute the same quantity a different way and compare. Time both functions again with a second mechanism, average several runs instead of taking one, and confirm the speedup holds. Then confirm correctness the same way: check that <code>dedupe_fast</code> and <code>dedupe_slow</code> return identical output on the same input, element by element. Two roads to one answer is a verified result. Two roads to two answers means the harness, not the function, is what you measured.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="3.8">
 <h2 data-number="3.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">3.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter turns into your <strong>M0 research-and-AI baseline</strong>, the course’s first milestone. The next time you delegate anything real on your own project, whether locating a source, drafting a rewrite, or running a small analysis, route it through all seven steps and record it as your first row in the AI Research Ledger: the task, the tool, your decision, and the named check that earned your trust. That row, plus the two decisions you refuse to delegate, is the spine of what you present at Friday’s studio.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="3.9">
 <h2 data-number="3.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">3.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend one task you ran through the protocol. Name the task you delegated and the one step where you caught something the tool got wrong or left out. State the bounded claim you can now make, with its boundary (what your check does <em>not</em> establish). Close with your uncertainty: the one thing you still do not know, and the verification you would run next to close it.</p>
 
 
 </section>

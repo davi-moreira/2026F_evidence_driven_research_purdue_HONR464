@@ -456,27 +456,50 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> You decide the four parts of your research design and confirm they align: a model of the world, one named quantity you want out of it, a plan for how the data arrive, and a plan for turning that data into your quantity. This chapter equips you to write those four parts and defend that they point at the same thing.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">9.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<p>Picture a data science lead reading your one-page design before you spend a semester on it. Her worry is simple: “Show me the exact number you are after, then show me that the way you collect and crunch the data can actually reach that number. If those two drift apart, every result you bring me is answering a question I never asked.” A design that skips this step is not rigorous. It is a hope with good formatting. Getting the four parts to agree, on paper, before any data exist, is the cheapest quality check you will ever run.</p>
 </section>
 <section id="the-concept" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">9.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>Every research design has the same four parts. The course calls them <strong>MIDA</strong>, one letter each.</p>
+<ul>
+<li><strong>Model</strong>: your written picture of how the world could work, meaning which things exist and what could affect what. Example: “a listener’s chance of accepting a recommended song runs from 0 to 1, and a new recommender could nudge it up.”</li>
+<li><strong>Inquiry</strong>: the one exact quantity you want from that world, named before any data arrive. Example: “the average lift in accept rate the new recommender causes across listeners.”</li>
+<li><strong>Data strategy</strong>: your plan for how the data come to exist, meaning who gets sampled and who gets which condition. Example: “randomly send each session to the old or new recommender, then log every accept.”</li>
+<li><strong>Answer strategy</strong>: your plan for turning the data into an estimate of the inquiry. Example: “accept rate in the new group minus accept rate in the old group.”</li>
+</ul>
+<p>The four are not a checklist you fill in any order. They must <strong>align</strong>, meaning your data and answer strategies actually reach the inquiry your model makes askable. Example of misalignment: a causal inquiry (“the lift the recommender <em>causes</em>”) served by a data strategy that never randomizes who sees what can only show an <strong>association</strong>, meaning two things move together without proof that one caused the other. Naming the misalignment on paper is the whole job here.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">9.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>Take a music-streaming app testing whether a new autoplay recommender raises how often listeners keep the suggested track. Walk the four parts.</p>
+<p>The <strong>model</strong> says each listener has two possible accept rates, one under the old recommender and one under the new, and the new one could be higher, lower, or the same. The <strong>inquiry</strong> is the average difference between those two rates across all listeners, one number, causal in kind. The <strong>data strategy</strong> buckets each incoming session at random into old or new, so nothing about the listener decides which version they get. The <strong>answer strategy</strong> computes the accept rate in each bucket and subtracts.</p>
+<p>Now audit alignment. The inquiry asks for a caused difference. Random bucketing is what licenses that word, because it breaks any link between who the listener is and which version they see. So the four parts agree. Contrast a tempting shortcut: ship the new recommender to new users and compare them against existing users on the old one. That data strategy no longer aligns with a causal inquiry, because new and existing users differ in ways that also move accept rate. The honest claim collapses from “causes” to “is associated with.” Same question, broken alignment.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">9.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb03 — The anatomy of a research design: MIDA + declare → diagnose → redesign</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb03 — The anatomy of a research design: MIDA + declare → diagnose → redesign</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you build a small simulated world, write its four MIDA parts, and watch what happens to your answer when a data strategy quietly stops matching the inquiry.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="9.5">
 <h2 data-number="9.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">9.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Write your own draft of each part first, then ask. Committing first gives the AI output something to disagree with.</p>
+<pre><code>Act as a research-design tutor. Here is my research question: [paste it].
+Draft the four MIDA parts as a labeled list — Model, Inquiry, Data strategy,
+Answer strategy. State the Inquiry as one exact quantity. Mark each part
+"confident" or "guessing." Do not smooth over gaps.</code></pre>
+<p>After running, verify: read the drafted Inquiry’s words next to your question’s words. Do the kind and reach match? This counters <strong>silent scope change</strong>, where the tool answers an easier, adjacent question than the one you asked.</p>
+<pre><code>Act as a hostile methodologist. Here are my four MIDA parts: [paste them].
+Name the single worst misalignment — a place where my data or answer strategy
+cannot reach my stated inquiry. Give one concrete way my design fails, not
+praise.</code></pre>
+<p>After running, verify: check the objection against your own alignment note. This counters <strong>sycophantic agreement</strong>, where the tool calls a design sound because you proposed it.</p>
+<pre><code>Find one real, published study that used a design like mine to answer a similar
+question. Give title, authors, year, and venue. If you are not confident it
+exists, say so instead of inventing one.</code></pre>
+<p>After running, verify: open a library database and locate the exact study before citing it. This counters <strong>confident fabrication</strong>, where the tool returns a plausible citation for a paper that does not exist.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +510,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Three choices stay yours. <strong>Which world your question assumes</strong> (the model, and so what could confound it). <strong>Which single quantity you want</strong> (the inquiry, named in your words, not the AI’s paraphrase). <strong>Whether your four parts align</strong>, and therefore whether your claim boundary is <em>causes</em> or only <em>is associated with</em>. An AI can draft candidate parts. Deciding they agree, and owning the claim that follows, is research judgment you cannot hand off.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">9.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your streaming question and ask for MIDA. The tool returns four confident, well-formatted parts and calls the design “rigorous.” Read closely: it wrote the <strong>data strategy</strong> as “compare new users on the new recommender to existing users on the old one,” and it kept the <strong>inquiry</strong> worded as a caused lift. That is two failures at once. The data strategy is <strong>plausible-but-wrong</strong>, because user tenure moves accept rate on its own, and the inquiry wording is a <strong>silent scope change</strong> from association to cause. You catch it two ways: set the inquiry’s words beside the data strategy and ask whether randomization actually happened, then sketch the model as a diagram and look for an arrow from “user tenure” into both the version seen and the accept rate. That open arrow is the confounder the fluent draft never mentioned.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="9.7">
 <h2 data-number="9.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">9.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>The key result to verify is the alignment claim itself: that your four parts point at one quantity. Use <strong>peer reasoning</strong> from the verification guide. Explain your model, inquiry, data strategy, and answer strategy to a partner and ask them to name the part that does not reach the others. A second person’s first question usually finds the drift you stopped seeing. For any design whose inquiry uses the word <em>causes</em>, add a second, independent check: draw the <strong>causal diagram</strong> and confirm no open backdoor path (a common cause of both treatment and outcome) is left standing. Two independent checks that agree are far stronger than one.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="9.8">
 <h2 data-number="9.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">9.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter is the spine of milestone <strong>M3 — your research charter and MIDA declaration</strong>. Bring your own project’s question and write its four parts, then add one sentence naming which part you were least sure aligned and why. That alignment note becomes the claim boundary you defend in your charter, and it is the exact input chapter 10 builds on when you declare and diagnose the same design.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="9.9">
 <h2 data-number="9.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">9.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In three or four sentences, state your project’s four MIDA parts, name the single quantity your inquiry targets, and declare your claim boundary: does your data strategy earn the word <em>causes</em>, or does it stop at <em>is associated with</em>? Then name the one part you are least confident aligns, and the uncertainty that would change your answer if it turned out otherwise. A declaration with no stated boundary and no stated uncertainty is incomplete.</p>
 
 
 </section>

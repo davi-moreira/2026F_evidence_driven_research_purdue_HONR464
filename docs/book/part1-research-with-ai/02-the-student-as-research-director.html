@@ -456,27 +456,58 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> For every task in your project, decide whether to hand it fully to your AI assistant, hand it over and then verify the result yourself, or keep it as a judgment only you may make. This chapter equips you to draw that line and defend where you drew it.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">2.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<p>Picture a <strong>principal investigator</strong>, the researcher who runs a lab and owns its scientific decisions, briefing a new lab member on the first day:</p>
+<blockquote class="blockquote">
+<p><em>“A research assistant here can run the assay, plot the readings, and format the table. What the assistant does not do is choose the question, decide what the readings mean, or sign the claim. That part is mine. Learn where that line sits, because it does not move just because the assistant got faster.”</em></p>
+</blockquote>
+<p>AI is the fastest research assistant you will ever direct. The risk is not that it does the routine work. The risk is letting it drift into the calls that make the work yours. Deciding, task by task, what you delegate is the first act of being a research director instead of a passenger.</p>
 </section>
 <section id="the-concept" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">2.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>A <strong>research director</strong> is the person who assigns each piece of work and stays accountable for the finished result. Example: you may ask a tool to draft your methods paragraph, but you are the one who signs it and answers for it. <strong>Delegation</strong> is handing a task to someone or something else to carry out, the way you might hand off formatting a messy table while keeping the reading of what the numbers mean.</p>
+<p>The core move of this chapter is a <strong>delegation triage</strong>, sorting each task into one of three buckets before you start.</p>
+<ul>
+<li><strong>Safe to delegate</strong>: low stakes and easy to check, so a wrong answer costs little. Example: rewording one survey item three ways.</li>
+<li><strong>Delegate then verify</strong>: fine to hand out, but you must confirm the result with a real check before you trust it. Example: asking the tool to locate a lab protocol, then opening the actual protocol to confirm it exists and says what the tool claimed.</li>
+<li><strong>Never delegate</strong>: a judgment that stays yours no matter how capable the tool becomes. Example: deciding whether your evidence actually supports the claim you want to make.</li>
+</ul>
+<p>A <strong>never-delegate decision</strong> is any call that defines the science itself: the question you pursue, the design and the people or samples it covers, what your measures mean, the ethics, the boundary of your claim, and the uncertainty you report. <strong>Verification</strong> is the step that earns trust: confirming a result yourself, by a named method, before you put your name on it.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">2.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>An honors biology student wonders whether a common food preservative, sodium benzoate, slows the growth of a harmless lab strain of <em>E. coli</em>. She measures growth by <strong>optical density</strong>, how cloudy a liquid culture gets as cells multiply, read on a plate reader as OD600. She is the director. The AI is her assistant. Here is her triage.</p>
+<p><strong>Safe to delegate.</strong> Reformatting three plates of raw OD600 numbers into one tidy table, and drafting a plain-language version of her methods paragraph. If a value lands in the wrong column, one glance catches it, so the stakes are low.</p>
+<p><strong>Delegate then verify.</strong> Locating a standard protocol for reading bacterial growth curves, and drafting the formula for <strong>doubling time</strong>, the hours a population takes to double in number. She hands these out, then confirms each: she opens the actual protocol, and she recomputes one doubling time by hand from two printed OD values.</p>
+<p><strong>Never delegate.</strong> Deciding that the concentrations she tests are biologically meaningful and safe, deciding whether a gap between the treated and untreated curves licenses the word “inhibits,” and stating how uncertain that conclusion is given three plates and one strain. No tool makes those calls. The moment she lets it, she becomes a reader of someone else’s guess.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">2.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb00 — Research in the age of AI: your arm, your RA — not your brain</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb00 — Research in the age of AI: your arm, your RA — not your brain</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. In the “safe to delegate, verify first, or never delegate” practice you sort five real research tasks into the three buckets and defend each call, and at the Human-Only Checkpoint you close the AI and name, for your own project, two decisions you will never hand over.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">2.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Each prompt below is <strong>commit-first</strong>: write your own answer before you open the tool, so its reply has something of yours to disagree with.</p>
+<p><strong>Locate a bench resource (delegable).</strong></p>
+<pre class="text"><code>Act as a lab-methods assistant in microbiology. I am measuring bacterial growth
+by optical density (OD600). List 3 published, retrievable protocols or textbook
+methods for reading a growth curve. For each, give authors or source, year, and
+where it appears. Only include work you are confident exists; mark anything
+uncertain. Then tell me which one to verify first.</code></pre>
+<p>After running, verify (counters <em>confident fabrication</em>): open each protocol yourself before you cite it; a source you cannot retrieve is invented until it opens.</p>
+<p><strong>Turn your triage into a checkable list.</strong></p>
+<pre class="text"><code>Here are eight tasks in my project: [paste your list]. For each, label it "safe to
+delegate," "delegate then verify," or "never delegate," and give a one-line reason.
+Return it as a table so I can audit each row on its own.</code></pre>
+<p>After running, verify (counters <em>illusion of completeness</em>): compare the table against the triage you wrote first and against the never-delegate checklist; a tidy table can quietly mis-file the one decision that mattered.</p>
+<p><strong>Red-team your own boundary.</strong></p>
+<pre class="text"><code>I marked this task "never delegate": [paste one task]. Act as a hostile reviewer
+and argue that it is actually safe to hand to an AI. Give your strongest case. Do
+not agree with me.</code></pre>
+<p>After running, verify (counters <em>sycophantic agreement</em>): if the reviewer folds and praises your call, push back and take its strongest objection to a classmate or your instructor rather than trusting the tool’s approval.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +518,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>The buckets themselves are yours to fill, and three calls never leave the “never delegate” bucket: <strong>which question your project pursues</strong>, <strong>whether your evidence supports the claim you want to make</strong>, and <strong>how much uncertainty you report</strong>. You may ask a tool to lay out options, but choosing among them, and answering for the choice, is the job that makes you the director.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">2.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your eight tasks in and ask the tool to sort them. Back comes a clean, confident table. Seven rows look right. But one reads: <em>“Decide whether the growth difference is biologically meaningful: delegate then verify, just apply the standard effect-size cutoff.”</em> It sounds authoritative, and it hides a scope change. A judgment about what counts as meaningful in your specific system has been swapped for a mechanical lookup, and the “standard cutoff” it names is one no source will confirm. You catch it two ways. You wrote your own triage before you asked, and your version had that row as never delegate, so the mismatch jumps out. Then you try to retrieve the “standard cutoff,” and nothing real supports it. The row goes back where it belongs.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">2.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>The key result of this chapter is a triage, which is a judgment, so verify it with <strong>peer reasoning</strong>: walk your three buckets past a classmate or the instructor and ask them to challenge any placement. A judgment that survives a skeptical second reader is far stronger than one you sorted alone. For any “delegate then verify” row that names a source, add <strong>primary-source reading</strong>: open the actual protocol or paper and confirm it says what the tool claimed.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="2.8">
 <h2 data-number="2.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">2.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter builds the spine of your <strong>M0 research-and-AI baseline</strong>, the milestone you present at Friday’s studio. M0 asks you to name two decisions in your own project that you will not delegate, and to say in one sentence each why each is yours to own. The triage you practice here is exactly that list, written for your topic instead of the <em>E. coli</em> example.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="2.9">
 <h2 data-number="2.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">2.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In a short paragraph, state your rule for a task you are unsure about, then defend it. Name the task, name the bucket you put it in, and give the check you would run if you delegated it. Then state the boundary: what would move it to a different bucket, and how confident you are that you drew the line in the right place. If you cannot yet name where you might over-trust the tool, say so plainly. That admission is itself a finding about the habit you most need to watch.</p>
 
 
 </section>

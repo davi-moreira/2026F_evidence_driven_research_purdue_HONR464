@@ -4,51 +4,173 @@ title: "19. AI as Programmer"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_observational_descriptive_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** When you hand the writing of analysis code to an AI,
+> you decide **what quantity that code must compute and over which set of cases**,
+> then verify it computed *that* quantity before you believe the number. A cell
+> that runs without an error is not a result you have earned.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"Do not read me the number. Tell me what set it was computed over. If the code
+> only saw the buildings that already had sensors, you have not described the
+> campus. You have described the sensors."*
+> — a **facilities-safety reviewer**, asked to act on an indoor-air-quality report
+
+An AI can write your analysis code in seconds, and it will run. That is exactly
+where the danger sits. The tool writes fluent code for the quantity it *thinks* you
+asked for, over whatever cases sit in the dataframe you handed it. Paste the printed
+number into your report and you have signed your name to a quantity you never
+checked, over a set you never chose. The reviewer above does not care that the code
+was clean. She cares what it counted, and over whom.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+The tool is the programmer. You are the researcher. Two decisions never move to the
+programmer's side of the desk, and this chapter is about holding them.
+
+- **Descriptive summary**: a number or picture that reports what is actually in the
+  cases you can see, such as a share, an average, or a full distribution. Example:
+  the fraction of monitored rooms whose air crosses a health line.
+- **Quantity of interest**: the one exact number your code is supposed to produce,
+  pinned down in words *before* you ask for any code. Example: "the share of
+  academic buildings whose peak-hour CO₂ exceeds 1000 ppm."
+- **Frame**: the concrete set of cases your data actually covers, which is often
+  smaller than the group your question is about. Example: only the buildings that
+  already have sensors bolted to a wall.
+- **Convenience sample**: a set of cases collected because they were easy to reach,
+  not drawn to stand in for a population. Example: those sensored buildings, which
+  tend to be the newest and best-ventilated on campus.
+
+Here is the trap the chapter closes. A tool can compute a flawless share over the
+wrong frame, and the code still finishes with a green check. **A clean run is not a
+correct result**: a cell can execute with no error and still compute a different
+number than your question needs. So you own two things the programmer cannot. First,
+you define the quantity of interest and the frame it runs over, in plain words, before
+you delegate. Second, you verify the returned code computed *that* quantity over
+*that* frame, not a plausible neighbor.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You want to describe indoor air quality across campus for the question *what share
+of academic buildings exceed the healthy CO₂ threshold during class hours?* You have
+a spreadsheet of sensor readings, and you ask an AI to write the Python that returns
+the share above 1000 ppm.
+
+It writes six clean lines. They run. The printout says **6% of buildings exceed the
+threshold**, and the temptation is to write "campus air is fine." Instead you read
+what the code did, and two things jump out. The dataframe holds only the eight
+buildings that already carry permanent sensors, the newest and best ventilated on
+campus. That is a **convenience sample** standing in silently for the whole campus.
+The code also calls `.dropna()`, and the dropped rows are the readings where cheap
+sensors failed, clustered in the oldest, most crowded rooms. The 6% describes the best
+buildings with their worst rooms deleted.
+
+Re-anchor to your **quantity of interest**: the share over *all* academic buildings on
+the registrar's list, peak-hour readings kept. Recompute over the full list, flag the
+failed-sensor rooms rather than dropping them, and the honest share is far higher. The
+tool wrote correct code for the wrong question. You did the research by deciding what
+the code was allowed to count.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb04 — Observational descriptive research**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb04 — Observational descriptive research**. Open it
+in Colab with the badge above. There you hand cells to Gemini and make it earn your
+trust: you ask it to explain, line by line, why ten random samples huddle around a
+frame's true mean while one convenience channel misses it by nearly twelve years,
+then confirm the range it quotes against the numbers your own cell actually printed.
+That gap between the tool's fluent story and your printout is this chapter's lesson,
+run live.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt is a checkable job, not a
+request for a verdict.
+
+**Locate the standard idiom.**
+
+```text
+Act as a Python data assistant. I need the share of rows above a threshold,
+computed only over a subset I will name. Before any code, name the standard pandas
+idiom for a threshold share over a filtered subset and the exact argument that
+controls whether missing values are dropped. Only name functions you are sure exist.
+```
+After running, verify: open the pandas docs and confirm the method and that argument
+exist and default as described. Counters *confident fabrication* (an invented method
+or argument arrives as confidently as a real one).
+
+**Delegate, then demand the choices back as a table.**
+
+```text
+Write code that returns the share of academic buildings whose peak-hour CO2 exceeds
+1000 ppm. Then return a table of every choice you made: which rows you kept, whether
+you dropped any and why, the exact set the share is computed over, and whether you
+reported a share or an average.
+```
+After running, verify: check the row count before and after the code, and confirm the
+set it computed over is the one your question names. Counters *silent scope change*
+(a share quietly computed over the sensored buildings, not the campus).
+
+**Red-team the number.**
+
+```text
+Here is my claim: "6% of academic buildings exceed the CO2 threshold." Act as a
+hostile facilities reviewer. Name every way this code could have counted the wrong
+quantity or this share could mislead. Do not rewrite the claim for me.
+```
+After running, verify: if it only praises the number, push back and demand the single
+worst flaw. Counters *sycophantic agreement* (praise that reviews your ego, not your
+evidence).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+You define **what quantity the code computes** and **which set of cases it runs
+over**, and you decide **what the number is allowed to claim**. The tool can write
+the filter, the aggregation, and the plot, but it cannot decide that the sensored
+buildings speak for the campus, or that a share with the worst rooms dropped is
+honest. You own the final sentence, its frame, and its boundary.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You ask for the threshold share and the tool returns tidy code that prints, with full
+confidence, "**6% of buildings exceed 1000 ppm — air quality is within norms.**" The
+code has no error and reads beautifully. The trap is buried in two lines: the input
+dataframe was already limited to buildings with installed sensors, and a `.dropna()`
+silently removed the rooms where sensors failed. The share is real arithmetic over the
+wrong set.
+
+You catch it by reading the code, not its summary. Printing the dataframe's shape
+shows eight buildings, not the campus. Printing the row count before and after
+`.dropna()` shows how many readings vanished, and inspecting which reveals the
+worst-ventilated rooms. Recomputing over the registrar's full building list, failures
+flagged instead of dropped, collapses the reassuring 6%. A green check certified that
+the code ran, never that it answered your question.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify this chapter's key result, the threshold share, with **alternative code** from
+the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recompute the same quantity a different way and compare. If the tool used a filtered
+`.mean()` on a boolean mask, recount with a `groupby` over the same set and confirm the
+two shares match to the digit. Then catch the silent trap: print the dataframe's shape
+and the row count before and after any drop, so a disappearing row cannot hide inside a
+clean number. Two roads to one share is a verified result. Two roads to two shares
+means the code, not the campus, is what you measured.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This is the code half of your **M4 observational descriptive design audit**. Before
+you delegate the code that produces any descriptive number for your project, write
+your quantity of interest and its frame in one sentence each, the way nb04 has you
+name the target population, accessible population, frame, and sample. Then verify the
+returned code computed that quantity over that frame, and record the row-count check
+that proved it in your AI Research Ledger: the task, the tool, the decision, the named
+check. That verified number is what your frame-and-sample stack rests on when you walk
+a skeptic through it at Friday's studio.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend one descriptive number you delegated code to compute. Name
+the exact quantity of interest and the set of cases the code ran over. State the one
+verification that confirmed the code computed *that* quantity, not a neighbor. Give the
+boundary, what the number does not establish about the population beyond your frame,
+and close with your remaining uncertainty and the next check you would run to close it.

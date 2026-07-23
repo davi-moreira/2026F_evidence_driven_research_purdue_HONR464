@@ -24,6 +24,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -456,27 +491,58 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Decide exactly what to disclose about every AI tool you used on your project (which tool, for which task, and how you checked its output), and record it so that when someone asks <em>“did you use AI, and how did you verify it?”</em> you can answer truthfully and point to a checkable record, not a memory.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="31.1">
 <h2 data-number="31.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">31.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“I am not going to penalize you for using an AI tool. I am going to penalize you for not being able to tell me where you used it and how you checked it. A result I cannot trace back to a source and a verification is a result I cannot trust.”</em> — a <strong>conference reviewer</strong>, standing at your poster and asking the AI-use question</p>
+</blockquote>
+<p>At the Expo, one of the five kinds of question a stranger can ask you is the AI-use question. Many journals and conferences now ask authors to state where and how AI tools were used, so this is not a classroom formality. If your only answer is “yes, a bit, and it seemed fine,” you have turned good work into an untrustable result on the spot. The disclosure is what keeps an honest use of AI honest under questioning.</p>
 </section>
 <section id="the-concept" class="level2" data-number="31.2">
 <h2 data-number="31.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">31.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p><strong>AI disclosure</strong> is a truthful statement of where and how you used an AI tool in your work. Example: “I used Gemini to draft the code that computed my safety factor, and I recomputed that number by hand before reporting it.” <strong>Research integrity</strong> is the practice of keeping your work honest and traceable, so a reader can see where each result came from and trust it. Example: a claim that names its source and its check has integrity; a claim that names neither does not.</p>
+<p>The tool that makes disclosure easy is the one you have kept all semester: the <strong>AI Research Ledger</strong>, a running table with one row per AI use, recording the task, the tool, your decision, and the verification method. A complete disclosure is not written from scratch at the end. It is read straight off your ledger.</p>
+<p>Three parts make a disclosure complete, and each maps to a ledger column: <strong>which tool</strong> you used, <strong>for which task</strong>, and <strong>how you verified</strong> the output. Drop any one and it fails. “I used AI” with no task is meaningless; a task with no verification is exactly the gap a reviewer is trained to find.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="31.3">
 <h2 data-number="31.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">31.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You are presenting a senior-design poster in mechanical engineering. Your bracket must hold a static design load, and your headline number is its <strong>safety factor</strong>, the ratio of the material’s strength to the stress your load actually puts on the part. A safety factor of 2.0 means the part can take twice the load before it yields.</p>
+<p>You used an AI tool twice: once to find the yield strength of 6061-T6 aluminum, once to write the short calculation that turns that strength and your load into a safety factor. Both are honest uses, and neither is safe until it is disclosed and verified.</p>
+<p>Your ledger already holds two rows. For the material property, the verification method is <strong>primary-source reading</strong>: you opened the alloy’s published datasheet and confirmed the yield strength the tool gave you. For the calculation, the method is <strong>alternative code</strong>, recomputing the same number a second way:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The number the AI code reported, recomputed by hand.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>yield_strength <span class="op">=</span> <span class="dv">276</span>      <span class="co"># MPa, confirmed against the 6061-T6 datasheet</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>applied_stress <span class="op">=</span> <span class="dv">131</span>      <span class="co"># MPa, from my load and cross-section</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>safety_factor  <span class="op">=</span> yield_strength <span class="op">/</span> applied_stress</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(safety_factor, <span class="dv">2</span>))   <span class="co"># 2.11 — matches the AI-generated cell</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>When the reviewer asks the AI-use question, you do not improvise. You read your two rows aloud: the tools, the tasks, and the two checks. The claim you defend is bounded. The safety factor is about 2.1 under this static load, with the strength confirmed against the datasheet and the arithmetic reproduced by hand. Its boundary is honest too: you modeled a single idealized load case, not fatigue and not stress concentration at the holes.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="31.4">
 <h2 data-number="31.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">31.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb12 — Final conference preparation, presentation + reflection</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb12 — Final conference preparation, presentation + reflection</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you code the AI-use questions you were asked as data and fill the AI Research Ledger that becomes the disclosure you defend. The final Exit Defense asks you to name what you delegated to Gemini and the specific check that decided whether you accepted, changed, or rejected it.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="31.5">
 <h2 data-number="31.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">31.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
+<p><strong>Locate the standard.</strong></p>
+<pre class="text"><code>Act as a research-integrity assistant. Name the elements a complete AI-use
+disclosure should contain for a student research poster, and cite one real,
+retrievable source such as a university research-integrity office or a major
+publisher's AI policy. Only name a source you are confident exists.</code></pre>
+<p>After running, verify: open the cited policy and confirm each named element is actually in it. Counters <em>confident fabrication</em> (an invented policy element arrives as confidently as a real one).</p>
+<p><strong>Turn notes into a disclosure table to verify.</strong></p>
+<pre class="text"><code>Here are my raw notes on every time I used an AI tool on this project: [paste].
+Build a table with columns tool, task, and verification method, one row per use.
+Do not invent a verification I did not mention. If a use has no check, leave that
+cell blank and flag the row.</code></pre>
+<p>After running, verify: match each row against your ledger; a verification filled in where your notes had none is fabricated, so cut it. Counters <em>illusion of completeness</em> (a tidy table that quietly reports checks you never ran).</p>
+<p><strong>Red-team your disclosure.</strong></p>
+<pre class="text"><code>Here is my drafted AI-use disclosure: [paste]. Act as a hostile reviewer who
+suspects I am hiding a use or overstating my checks. Name every place I claim a
+verification I have not shown, or omit a use a reviewer would expect. Do not
+rewrite it for me.</code></pre>
+<p>After running, verify: for each flagged line, produce the ledger row that backs it or delete the claim. Counters <em>sycophantic agreement</em> (a reviewer that praises your honesty instead of testing it).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +553,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>The honesty of the disclosure is yours alone. You decide <strong>which uses to disclose</strong> (including the one you would rather not mention), <strong>whether a verification you claim actually happened</strong>, and <strong>whether the final statement is true</strong>. A tool can format your ledger into a clean paragraph. It cannot know what you really did or certify that you checked it. Signing your name to a disclosure you cannot back is the integrity failure this chapter exists to prevent.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="31.6">
 <h2 data-number="31.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">31.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You ask a tool to “write my AI-use disclosure from these notes,” and it hands back a polished paragraph: <em>“All AI-generated outputs were independently verified against primary sources.”</em> It reads beautifully, and it is false. You verified the yield strength against the datasheet, but you never independently checked the load figure the same tool helped you estimate. The sentence upgraded one real check into a blanket claim of “all.”</p>
+<p>You catch it by reading the disclosure line by line against your ledger. Every sentence claiming a verification must point to a row that names that check. The word “all” has no such row, so it is fabricated and comes out. Your true disclosure is narrower and stronger: you name the two checks you ran and the one input you did not independently confirm. A confident paragraph is not a truthful one. You verify the disclosure against the record, not against how responsible it sounds.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="31.7">
 <h2 data-number="31.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">31.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, your finished disclosure, with <strong>peer reasoning</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>. Hand a partner your disclosure and your actual project, and ask one question: can you find an AI use I did not disclose, or a verification I claimed but cannot show? If they find one, your disclosure was incomplete, which is a finding, not a failure. For the engineering number itself, recompute the safety factor a second way, so the value you disclose survives two independent roads to the same answer.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="31.8">
 <h2 data-number="31.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">31.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter turns your AI Research Ledger into the disclosure you submit and defend with <strong>M12</strong>, your conference reflection and criticism portfolio. The ledger is a required part of that package: a missing ledger scores Craft 0 and the submission is returned unread. So read your finished ledger into a short, truthful AI-use statement, attach it to M12, and rehearse answering the Expo’s AI-use question straight from it. When a stranger asks how you checked your work, your answer is already written and already verified.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="31.9">
 <h2 data-number="31.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">31.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend your disclosure. Name one AI use on your project and the exact verification you ran on it. State the bounded claim your disclosure lets you make, with its boundary: what your check does <em>not</em> establish. Close with your uncertainty, the one AI-assisted input you have not yet independently confirmed and the check you would run next to close the gap.</p>
 
 
 </section>

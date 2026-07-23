@@ -4,51 +4,175 @@ title: "34. Open and Reusable Research Packages"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_poster_to_research_note_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Decide what goes into the reproducibility capsule that
+> ships with your research note, and defend the claim that a stranger can rerun your
+> work and get your numbers. You own what the package includes and whether "it
+> reproduces" is honest, and you never let a clean run stand in for a correct one.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"I don't want to hear that it runs on your laptop. Hand me the folder, let me
+> clear everything, and let me press run. If your headline number does not come back
+> on my machine, you do not have a result yet. You have a memory of one."*
+> — a **replication editor**, opening the folder attached to your submission
+
+A research note argues your claim in prose. The capsule proves the claim survives
+without you in the room. If the only place your analysis runs is the laptop where you
+built it, in the click-order you happen to remember, then no one can check you, and a
+result no one can check is a rumor with a chart. This chapter is how you package the
+work so the checking is easy, and how you stay honest about what "reproducible"
+really means.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+A **reproducibility capsule** is everything a stranger needs to rebuild your numbers
+and nothing they would have to guess. Example: a folder holding your notebook, your
+data, and a short record of every by-hand choice. It has five parts, each defined
+once.
+
+- A **runnable notebook** that passes **restart-and-run-all**, meaning you clear the
+  kernel and run every cell top to bottom with no memory of earlier clicks. Example:
+  Runtime, Restart and run all, and your headline number reappears.
+- A **data-provenance note**: where each dataset came from, its version, and how it
+  may be used. Example: the download URL, the date, and the licence.
+- A **fixed seed**, a starting number that makes every random step return the same
+  values on every run. Example: `SEED = 464` feeding each resample.
+- A **decision log**: the by-hand choices that shaped the result, each with its
+  reason. Example: every row you dropped, and why.
+- An **AI-use ledger**: every tool, its task, and how you verified its output.
+
+Capsules break in boringly predictable ways, which is good news, because a
+predictable failure is a catchable one. Named, they are **the five package sins**: a
+**hard-coded path** that exists only on your machine, a **missing seed** that moves
+every run, a **by-hand edit** no clean run reproduces, an **undocumented exclusion**
+with no logged reason, and **stale data** a reader cannot reobtain. The lab's auditor
+scans for all five. But hold onto the one line that carries the whole chapter: a
+capsule with zero flags is **runnable**, never proven **correct**. The scan gets you
+to the starting line. A person who reruns you cold is the race.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You measured nitrate, a nutrient that washes off farm fields into streams, at twelve
+monitoring sites in one watershed, and your headline is the share of samples above
+the U.S. EPA drinking-water limit of 10 mg/L. Watch the same analysis shipped two
+ways.
+
+The **sinful capsule** loads `~/Desktop/nitrate_clean.csv`, a file only your laptop
+has. It bootstraps a confidence interval for that share with no seed, so the interval
+shifts on every run. It patches one mislabeled site by hand in a cell no clean run
+repeats. It silently drops the below-detection-limit samples with no note on why. And
+its data was downloaded "sometime last spring" with no version. Five sins, and every
+one breaks the rerun.
+
+The **clean capsule** loads the same data through a shared URL, with the source,
+date, and licence in the provenance note. It fixes `SEED = 464` before the bootstrap.
+It records the one relabel in the decision log with its reason. It keeps the
+below-detection samples, or drops them by a logged, pre-declared rule. Now a stranger
+clears the kernel, runs top to bottom, and your share above 10 mg/L comes back. Same
+number, no guessing.
+
+Here is the honesty check the auditor cannot do for you. The clean capsule can still
+be *wrong*: your seed might be fixed on the wrong subset, or your detection-limit
+rule might be a bad rule cleanly logged. Runnable is not correct. That gap is exactly
+why your capsule is exercised by a partner, not only by a script.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb14 — From poster to research note**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb14 — From poster to research note**. Open it in
+Colab with the badge above. There you build `audit_capsule`, watch it flag all five
+sins in a deliberately broken package and none in a clean one, then paste your own
+capsule's key lines in and fix what it catches before Friday's studio.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt is a checkable job, not a
+verdict.
+
+**Locate the standard tool.**
+
+```text
+Act as a reproducibility assistant. Name the standard file and format for recording
+the exact package versions a notebook needs in order to rerun, and cite the official
+documentation. Only name tools you are confident exist.
+```
+
+After running, verify: open the official docs and confirm the file and its syntax
+exist. Counters *confident fabrication* (an invented tool name arrives as confidently
+as a real one).
+
+**List so you can verify (the cold replicator).**
+
+```text
+Here are the key lines of my capsule: [paste]. Playing a replicator who has only
+these lines and none of my memory, list every input, file, or by-hand step you would
+need to rerun my headline number and might not find here.
+```
+
+After running, verify: match each named gap against what your own `audit_capsule` run
+actually flagged, and drop any gap that maps to no real missing line. Counters
+*illusion of completeness* (a tidy capsule that looks whole while one input is
+missing).
+
+**Red-team the claim.**
+
+```text
+My claim is: "a stranger can rerun this capsule and get my number." Act as a hostile
+replication reviewer and name every way it could fail on a machine that is not mine.
+Do not fix it for me.
+```
+
+After running, verify: if it only reassures you, push back and demand the single
+worst failure. Counters *sycophantic agreement* (praise that reviews your ego, not
+your package).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+You decide **what goes in the capsule** and whether the sentence "this reproduces" is
+honest. The tool can list gaps and pin versions, but it cannot record your true data
+provenance, judge whether an exclusion's logged reason is a *good* reason, or certify
+that your analysis is correct rather than merely runnable. The name on the folder,
+and the claim that a stranger can trust it, are yours.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste your notebook into Gemini and ask, "will this run cold and produce my
+nitrate share?" It walks through every cell and answers, with total confidence,
+"Yes, this runs top to bottom cleanly and returns your headline number." It sounds
+like a green check. It is not. Gemini never executed anything. It read the code and
+narrated it. Cell 3 loads `~/Desktop/nitrate_clean.csv`, a path only your laptop has,
+and the fluent walkthrough described reading that file as if it were sitting there.
+
+You catch it the only way that counts: you actually run restart-and-run-all on a
+fresh kernel, ideally in Colab on a machine that is not yours. The `FileNotFoundError`
+appears on cell 3 in seconds. A narrated run is not a run. You verify the notebook by
+executing it, not by reading a paragraph about executing it.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify this chapter's key result, that your capsule reproduces, with a **benchmark
+result** from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+compare a fresh run against a previously verified value. Record your headline number
+from your own machine. Then clear the kernel and run all in a second environment, a
+classmate's laptop or a clean Colab session, and check that the number returns within
+rounding. A match means the capsule travels. A mismatch means something you carried
+by hand, a path, a seed, an unlogged edit, was doing quiet work you never packaged.
+Two machines, one number, is a reproduced result.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter builds the capsule half of your **M14 research note and reproducibility
+capsule**. Assemble the five parts for your own project, run `audit_capsule` on your
+key lines, and fix the first sin it flags. Then do the thing the script cannot: hand
+the folder to a partner at Friday's studio and have them clear the kernel and rerun
+it cold. The number they get, set next to the number you reported, is your
+reproducibility evidence, and their rerun is what turns "it runs for me" into a claim
+you can defend.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend your capsule. Name what you put in it and the one package
+sin you were most tempted to leave unfixed. State the bounded claim you can now make,
+"a stranger reran this and got my number," and its boundary: runnable is not correct,
+and reproduced on the machines you tried is not proof it runs everywhere. Close with
+your uncertainty: the one input or step a cold replicator might still trip on, and the
+check you would run next to close it.

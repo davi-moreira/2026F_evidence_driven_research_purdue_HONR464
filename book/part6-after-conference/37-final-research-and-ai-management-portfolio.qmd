@@ -4,51 +4,189 @@ title: "37. Final Research and AI-Management Portfolio"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_managing_ai_agents_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Decide which claims from a semester of AI-assisted work
+> you will stand behind at your public defense, and assemble the AI-management
+> portfolio that shows how you ran your AI team, what you kept in your own hands, and
+> how each surviving claim was checked.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"By the time you stand up to defend, I do not count your tools. I ask which claims
+> you are willing to be wrong about in public, and whether you can show me you checked
+> them yourself."*
+> — a **defense examiner**, on the day the portfolio is due
+
+You reach this chapter with a full project behind you and one thing left to do: gather
+it into something you can defend out loud. A semester of AI-assisted work leaves a trail
+of drafts, role outputs, and half-finished checks. Left in a pile, none of it is
+defensible. The examiner will not read the pile. She will ask which claims you own,
+where each stops, and how you know. This chapter is where you decide those answers on
+purpose, before the room decides them for you.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+Your final submission has two halves, and this chapter builds both.
+
+**A research portfolio** is the assembled body of your finished work: your claims, the
+evidence behind them, and the verification that makes each one defensible. Example: for
+a lab project it holds your headline result, the measurements behind it, and the check
+you ran to confirm the number is right.
+
+Alongside it sits **an AI-management portfolio**, the honest record of how you ran your
+AI team all semester: which tasks you delegated, where you took the decision back, and
+which calls you never handed to a tool. Example: it shows a reviewer role drafted your
+limitations, that you overrode it when it softened a claim you could not support, and
+that you alone chose the claim boundary.
+
+The decision that closes both is your **stopping rule**, a written statement of what
+"done" means, phrased around your own verified confidence rather than the tools'
+agreement. Example: "I stop when I can defend each surviving claim to a hostile reviewer
+with a check I ran myself." A stopping rule of "when the roles all agree" is a trap,
+because a team of look-alike tools can agree loudly and be wrong together.
+
+That trap has a name you will guard against: **false consensus**, agreement that exists
+only because the tools shared a blind spot or you asked a leading question. Example: you
+ask three reviewers to "confirm my chapter is ready," and all three oblige, so the
+chorus tells you nothing. The cure is **an independence check**, a step that makes
+agreement worth more than a head count: a check you run yourself, outside the tools.
+
+The whole thing ends in **the Evidence Defense**, a short public defense of your claims
+at their boundaries, followed by questions you cannot rehearse for. Example: you state
+what you found, name exactly what you do not claim, and answer each question from your
+own record.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+Picture an honors project in analytical chemistry. You measured how much acetic acid a
+bottle of vinegar contains, using **titration**, a lab method where you add a solution
+of known strength drop by drop until a reaction just finishes, revealing the unknown
+amount. Three runs gave an average of 4.9% acetic acid by mass. Now you choose the claim
+you will defend.
+
+You run three AI reviewer roles on your chapter draft. A reviewer role praises your
+headline sentence, "Vinegar contains 4.9% acetic acid." A diagnostician role flags the
+same sentence for reaching past your evidence: you measured one bottle three times, not
+vinegar in general. That disagreement is a gift, because it points straight at the
+boundary decision. You take the pen back and rewrite the claim to what your data hold:
+"This bottle, measured three times, averaged 4.9% acetic acid, with the runs spanning
+4.7% to 5.1%." The narrower sentence is the one you will defend.
+
+Then you run an independence check the tools cannot fake. The bottle's own label states
+5% acidity, so you compare your 4.9% against that value by hand. The two numbers land
+close, which is real reassurance because the label was never part of your AI workflow.
+Your stopping rule is now satisfied, so you stop. Into the AI-management portfolio go
+four things: the roles you ran, the reviewer-versus-diagnostician conflict and your
+override, this stopping rule, and the label comparison that made your reviewers'
+agreement worth more than a head count.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb15 — Managing multiple AI agents + the final defense**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb15 — Managing multiple AI agents + the final
+defense**. Open it in Colab with the badge above and work the cells alongside this
+chapter. There you wire a worker-critic team, run a seeded simulation showing four
+look-alike reviewers miss a real flaw far more often than four independent ones, then
+draft the four parts of your own M15 portfolio and stage your Evidence Defense.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt hands the tool reach, not the
+decision.
+
+**Locate the real benchmark.**
+
+```
+Act as a research assistant in analytical chemistry. I measured the acetic acid
+content of one vinegar sample. I want a published or label-stated reference value to
+compare against. Give the value, the exact source it comes from, and a link. Only
+state a figure you are confident is real; if you are unsure, say so and tell me where
+to look.
+```
+
+After running, verify: open the source or read the label yourself before you trust the
+number (primary-source reading). Counters **confident fabrication**, a reference value
+quoted with an invented source.
+
+**List every claim to verify.**
+
+```
+Here is my draft chapter: [paste]. List every empirical claim in it as a table: the
+claim, the number or measurement it rests on, and whether that claim stays inside my
+single sample or reaches past it. Do not add any new claims.
+```
+
+After running, verify: check the table against your own list of what you measured, and
+confirm nothing reaches past your data unmarked. Counters **illusion of completeness**,
+a tidy list that omits the one claim quietly overreaching.
+
+**Red-team the defense.**
+
+```
+Act as a hostile but fair cross-examiner at a research defense. Here is my headline
+claim, its boundary, and my two weakest verification steps: [paste]. Ask me the five
+hardest questions you can, each tied to a specific claim or check. Do not soften them,
+and do not answer them for me.
+```
+
+After running, verify: if every question is gentle or your claim is called
+"well-supported," push back and demand the weakest link. Counters **sycophantic
+agreement**, a partner that rehearses your ego instead of your defense.
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+The tools may draft, review, and surface hard questions. They may never decide which
+claims you put your name on, where a claim like "4.9% acetic acid" must stop, whether
+your reviewers were ever independent, what your stopping rule is, or a single word of
+the public defense. When agreeing roles bless a claim, deciding whether that agreement
+is real or just correlated is yours. So is the answer you give when the room asks how
+you know.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You send your finished chapter to three reviewer roles and ask each to "confirm it is
+ready to submit." All three return the same verdict: "Looks solid, no major problems."
+It feels like three confirmations. It is one. The three roles run on the same base
+model, you gave them the same leading prompt, and they share a blind spot: none flags
+that your headline number carries no uncertainty, no range across your titration runs.
+That is false consensus, and trusting it would send an overclaimed result into your
+defense.
+
+You catch it with a reframe and a check the tools cannot see. First you drop the leading
+ask and run a neutral one: "List the three weakest claims in this chapter and why." Now
+a role names the missing range. Then you leave the tools entirely and recompute the
+spread of your runs yourself, which hands you the 4.7% to 5.1% boundary the reviewers
+all skipped. The lesson is blunt: agreement is worth only the independence behind it.
+Count the checks you ran yourself, never the roles that nodded.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify this chapter's key result, that a claim in your portfolio is one you can defend,
+with **benchmark result**, the method of comparing your output against a known-good
+reference value (see `ai_resources/verification_guide.md`). Set your measured 4.9%
+against the label's stated 5% acidity and confirm they agree within your run-to-run
+spread. Because the label was never part of your AI workflow, this is a genuine
+independence check, not one tool grading another. Pair it with **peer reasoning**: walk
+your claim boundary past a classmate and see whether your reason for stopping at "this
+bottle" survives their first question. Two independent checks beat one, and each leaves
+a ledger line.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This last chapter delivers milestone **M15**: your final research chapter, your
+AI-management portfolio, and the Evidence Defense you perform this week. Bring four
+assembled parts and one staged defense. The four parts are the decomposition of AI roles
+you ran on your chapter, one real conflict-and-override with its non-AI check, your
+stopping rule and never-automate list, and one independence check that made an agreement
+worth more than a head count. The defense is three movements in order: your claim and
+its boundary, your central choice and the road you did not take, and the verification
+you lead with. Draft every piece yourself. A tool may critique it after, but the chapter
+and the defense you deliver have to be reasoned and owned by you.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In five or six sentences, close the course. State one claim from your own project that
+you will put your name on in the room. Give its boundary: name what your evidence does
+not establish, and if the claim rests on one sample, say so. Name one thing still
+uncertain and why. Then show your AI-management portfolio doing its job in one honest
+line: the place your roles agreed, the independent check that made the agreement real,
+and the one decision you refused to hand to any tool. That last line is what the
+examiner is listening for.

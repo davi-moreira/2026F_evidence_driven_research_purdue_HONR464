@@ -456,27 +456,60 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Before you look at a single result, decide the full set of robustness and sensitivity checks you will run on your headline estimate, and commit to reporting all of them. That order, list first and look second, is what separates a finding you can defend from a flattering number you went fishing for.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="21.1">
 <h2 data-number="21.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">21.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“Everyone shows me the version of the analysis that worked. I assume that one exists. My real question is what happened to all the reasonable versions you could have run instead, and whether you looked at them before or after you saw this answer.”</em> — a <strong>journal reviewer</strong>, opening the first serious read your work will get</p>
+</blockquote>
+<p>The reviewer is not accusing you of cheating. She is naming a plain fact about analysis. Almost every real estimate depends on choices you could have made differently, and any single choice can flatter the result. If you report only the version that worked, you have handed her a number with no way to tell a delicate truth from a lucky slice. This chapter gives you the habit that answers her before she has to ask.</p>
 </section>
 <section id="the-concept" class="level2" data-number="21.2">
 <h2 data-number="21.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">21.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>An <strong>estimate</strong> is not one number. It is one number that depends on several choices, and a critic attacks the choices. So you attack them first. Two named attacks do this work, and people mix them up constantly.</p>
+<p>A <strong>robustness check</strong> is re-running the same finding under a different but equally defensible choice, to see whether the answer stays. Example: you reported an average strength, so you also compute it after dropping the one specimen that failed at the grip, and confirm the story holds. A <strong>sensitivity check</strong>, which some fields call a <strong>sensitivity analysis</strong>, is deliberately changing an assumption to see how far the answer moves. Example: you assumed your load cell was calibrated, so you ask how much your result would shift if it were off by two percent.</p>
+<p>Both attacks aim at the same target, the <strong>headline estimate</strong>: the single number that stands in for your whole finding. You attack it from four handles, and any honest plan turns one or more of them. The <strong>sample</strong> is which data you keep. The <strong>measurement</strong> is how you turn a concept into a number. The <strong>specification</strong> is the bundle of modeling choices behind the estimate. The <strong>metric</strong> is the yardstick you report.</p>
+<p>Turning every handle at once and plotting the results gives a <strong>specification curve</strong>: a picture of one estimate under many defensible choices side by side. If the whole curve stays on one side of zero, your direction is robust. Its spread is your honest range.</p>
+<p>The danger has a name. <strong>Specification searching</strong>, whose everyday name is <strong>p-hacking</strong>, is running many analyses and reporting only the one that gave the result you wanted, without disclosing the search. Its opposite is <strong>pre-listed checks</strong>: writing down every check you will run, and committing to report all of them, before you see any result. Same code, same table, opposite integrity. The only difference is the order of looking and deciding.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="21.3">
 <h2 data-number="21.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">21.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>Your lab tests whether a new heat treatment raises the <strong>yield strength</strong> of a steel alloy, the stress at which the metal begins to deform permanently. Your headline: the treated bars yield about twelve percent higher than the untreated ones. Before you defend that number, you attack it across the four handles.</p>
+<ul>
+<li><strong>Sample.</strong> All bars, or all bars except the one that fractured inside the machine’s grip, which is a legitimate mechanical exclusion, not a convenient one.</li>
+<li><strong>Measurement.</strong> Yield read by the standard 0.2 percent offset method, or read at the upper yield point.</li>
+<li><strong>Specification.</strong> Force divided by the nominal cross-section, or divided by each bar’s actual machined area.</li>
+<li><strong>Metric.</strong> The gain in megapascals, or the gain as a percent.</li>
+</ul>
+<p>You pre-list all sixteen combinations, run them, and plot the specification curve. Every combination comes back positive: the treatment helps no matter which defensible choice you make. The magnitude ranges from about plus eight percent to plus fifteen percent. So the honest headline is not “twelve percent.” It is “higher yield in every specification we ran, by roughly eight to fifteen percent.” Then you run one more attack, a <strong>placebo test</strong>: you split bars that all got the <em>same</em> treatment into fake “A” and “B” groups and confirm the gap between them sits near zero. If identical bars showed a gap, your measurement, not the treatment, would be manufacturing it.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="21.4">
 <h2 data-number="21.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">21.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb09 — Share the research + attack the analysis</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb09 — Share the research + attack the analysis</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you rerun one headline gap across a pre-listed grid and read its specification curve, watch specification searching manufacture a “significant” result from data with no real effect, and run a placebo test and a leave-one-out influence check on seeded code so you feel the difference between a robust finding and a fragile one.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="21.5">
 <h2 data-number="21.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">21.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
+<p><strong>Locate the standard checks.</strong></p>
+<pre class="text"><code>Act as a methods assistant for a two-group strength comparison. Before any code,
+name the standard families of robustness and sensitivity checks for this design and
+the four things I can vary to stress the estimate. Cite a real methods reference you
+are confident exists; if you are unsure a source is real, say so.</code></pre>
+<p>After running, verify: open the reference and confirm the checks and the source exist. Counters <em>confident fabrication</em> (an invented method or citation arrives as confidently as a real one).</p>
+<p><strong>Delegate, with a list to verify.</strong></p>
+<pre class="text"><code>Here is my pre-listed robustness grid for one estimate: I vary the sample (all bars
+/ drop the grip failure), the measurement (0.2% offset / upper yield point), the
+specification (nominal / actual area), and the metric (MPa / percent). Name up to
+three additional, equally defensible specifications I did NOT list, and for each say
+which direction you expect it to push the estimate.</code></pre>
+<p>After running, verify: check each suggestion against the four handles and add only the ones you can actually run on your bars. Counters <em>illusion of completeness</em> (a tidy grid that quietly omits the one choice that would break the claim).</p>
+<p><strong>Red-team your range.</strong></p>
+<pre class="text"><code>Here is my claim: "higher yield in every specification we ran, by roughly 8 to 15
+percent." Act as a hostile reviewer of a materials study. Name the single worst way
+this could be specification searching rather than robustness, and the one check that
+would expose it. Do not rewrite the claim for me.</code></pre>
+<p>After running, verify: run the check it names against your own data; the flaw is real only if your numbers confirm it. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +520,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Three calls stay yours. You decide <strong>which checks you commit to before you look</strong>, <strong>which flagged issues the data actually confirms</strong>, and <strong>the final claim, with its range and its boundary, that you defend</strong>. A reviewer, human or AI, proposes. You verify against your bars, and the evidence decides.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="21.6">
 <h2 data-number="21.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">21.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your four-handle grid and ask an AI to write your robustness section. Back comes a long, well-organized passage that runs the sample handle, the specification handle, and the metric handle, and closes with “the twelve percent result is robust across all standard specifications.” It reads as thorough and complete. The trap is that it never listed the <strong>measurement</strong> handle, the 0.2 percent offset versus upper yield point, and that is precisely the choice that moves your estimate the most. The section looks exhaustive while omitting the one check a reviewer would reach for first.</p>
+<p>You catch it because you pre-listed all four handles yourself before opening the tool. Reading its section against your own list, you notice measurement is missing, run that comparison, and watch the estimate slide toward the low end of your range. A passage that looks complete is not the same as one that is complete. You check its list against yours, not against how finished it sounds.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="21.7">
 <h2 data-number="21.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">21.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, the specification curve, with <strong>alternative code</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: recompute one point of the curve a second, simpler way and compare. Take a single specification, filter the two groups by hand, subtract their mean strengths, and confirm the number matches what the automated grid printed. Two roads to one answer is a verified point. Then use a <strong>counterexample</strong> hunt on the whole curve: try to build one defensible specification that flips the sign. If you cannot find one after an honest search, your “direction is robust” claim has earned its place. If you can, that specification belongs in your report, not your recycling bin.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="21.8">
 <h2 data-number="21.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">21.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter turns into your <strong>M9 research audit and poster draft</strong>. Take the estimate you produced in M8 and write a short, pre-listed robustness plan for it: three checks, in order, chosen for the choices a hostile reviewer is most likely to attack, plus one placebo or leave-one-out check. Run all of them, report the whole picture, and record each as a row in your AI Research Ledger with the verification method that earned your trust. That pre-listed plan, and the range it produces, is the spine of what you defend at Friday’s studio.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="21.9">
 <h2 data-number="21.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">21.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend your robustness plan. State your headline as a direction plus a range, not a single number, and name the one check that would most likely have flipped it. State the boundary: name one thing a passed robustness plan does <strong>not</strong> establish, such as turning a correlation into a cause. Close with your uncertainty: the one specification you still are not sure about, and the check you would run next to settle it.</p>
 
 
 </section>

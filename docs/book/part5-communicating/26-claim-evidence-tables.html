@@ -456,27 +456,60 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> For every claim your poster makes, decide which exact piece of evidence backs it, where that evidence lives, and what it does not establish, and record all three in one row of a claim–evidence table before the poster is locked.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="26.1">
 <h2 data-number="26.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">26.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“I point at one number on your board and ask where it came from. Walk me to the line that made it and I trust the whole poster. Say ‘it’s in the analysis somewhere’ and I stop believing every other number up there.”</em> — a <strong>research-integrity judge</strong> working a poster hall</p>
+</blockquote>
+<p>A poster is a set of promises made in public. Each headline number, each figure, each cited fact is a claim a stranger can test in ninety seconds. The dangerous gap is between a claim you can <em>say</em> and a claim you can <em>back</em>. A claim–evidence table closes that gap on purpose, before anyone points a finger, so the honesty is built into the board and not patched under pressure.</p>
 </section>
 <section id="the-concept" class="level2" data-number="26.2">
 <h2 data-number="26.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">26.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>A <strong>claim–evidence table</strong> is a table with one row per claim, pairing each claim your poster makes with the specific evidence behind it. Example: a row that reads “Material B conducts heat about 1.4x faster than Material A” in the claim column, with the two measured conductivities in the evidence column.</p>
+<p>Four columns carry each row, and each is a term worth knowing.</p>
+<ul>
+<li><strong>Claim.</strong> The statement your poster asserts as true. Example: “our measured value of <em>g</em> is 9.79 m/s².”</li>
+<li><strong>Evidence.</strong> The exact result or source that backs the claim, with its uncertainty. Example: 30 timed swings giving a period of 2.007 s, and the interval ±0.06 m/s² around the estimate.</li>
+<li><strong>Trace.</strong> Where a number was actually produced, named precisely enough to open. A <strong>traceable number</strong> is one you can walk back to the notebook cell that computed it. Example: “cell 16, where <code>g = 4*pi**2*L / T**2</code> runs.” A number you cannot walk back, one typed from memory or rounded by hand, is an <strong>untraceable number</strong>, and it does not belong on the board.</li>
+<li><strong>Boundary.</strong> The <strong>claim boundary</strong> is the line between what the evidence licenses and what it does not. Example: “measured at one location, one pendulum length, timed by hand, so this is not the standard sea-level value.”</li>
+</ul>
+<p>Building the table is the graded skill. Once every claim has a filled row, an unbacked claim has nowhere to hide, because a blank cell is a visible hole.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="26.3">
 <h2 data-number="26.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">26.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You built a physics poster reporting a measurement of <em>g</em>, the acceleration due to gravity, from a simple pendulum. Your headline reads “we measured <em>g</em> = 9.79 m/s².” Before the file goes to the printer, you build the table.</p>
+<p><strong>Row 1 (the headline).</strong> Claim: “<em>g</em> = 9.79 ± 0.06 m/s².” Evidence: 30 timings of a 1.00 m pendulum, mean period 2.007 s, the spread of the 30 periods giving the interval. Trace: cell 16, the line <code>g = 4*pi**2*L / T**2</code>. Boundary: one location, one length, hand timing, so a reaction-time bias of order a tenth of a second is possible and the value is not claimed to be the accepted 9.81 m/s².</p>
+<p>Filling Row 1 forces one honest catch. You reach for the trace and find the number on your draft board reads 9.81, not 9.79. You had quietly written the textbook value instead of the one your cell printed. The table caught an untraceable number before a judge did.</p>
+<p><strong>Row 2 (a secondary claim).</strong> Claim: “the period barely changes with amplitude for small swings.” Evidence: periods measured at 5° and 15° differ by less than your timing spread. Trace: cell 18, the amplitude comparison. Boundary: only tested below 15°, so nothing is claimed about large swings.</p>
+<p>Two claims, two rows, every number walked back to a cell, every boundary written down. That table is the thing that lets your poster survive a pointed finger.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="26.4">
 <h2 data-number="26.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">26.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb10 — Poster criticism + final poster lock</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb10 — Poster criticism + final poster lock</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you run the final-lock audit on a real poster: you trace each number to the cell that produced it, confirm each citation resolves to a source you opened yourself, and turn loose claims into locked, backed rows.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="26.5">
 <h2 data-number="26.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">26.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own draft table first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
+<p><strong>Locate the source for a cited fact.</strong></p>
+<pre class="text"><code>Act as a physics reference assistant. I want to cite the accepted sea-level value
+of g. Name the value and one real, retrievable source that reports it, and give me
+enough detail to find it myself. If you are not confident a source exists, say so
+instead of guessing.</code></pre>
+<p>After running, verify: open the named source yourself and confirm it reports that value before it touches your poster. Counters <em>confident fabrication</em> (an invented citation arrives as confidently as a real one).</p>
+<p><strong>List every claim, so none is unbacked.</strong></p>
+<pre class="text"><code>Here is my poster text: [paste it]. List every distinct claim it makes, one per
+row. For each, name what evidence a reader would need to see to believe it. Do not
+judge whether my evidence is good; just surface every claim, including implicit
+ones.</code></pre>
+<p>After running, verify: check the list against your own table and add any claim you had not written a row for. Counters <em>illusion of completeness</em> (a tidy list that quietly skips the one claim with no evidence behind it).</p>
+<p><strong>Red-team the claim–evidence match.</strong></p>
+<pre class="text"><code>Here is one row of my claim-evidence table: claim "[paste]", evidence "[paste]".
+Act as a hostile reviewer. Tell me every way this evidence fails to license this
+claim, or claims more than it shows. Do not soften the claim for me; name the words
+that overreach.</code></pre>
+<p>After running, verify: read each objection against your boundary column and reject any that asks you to concede something your evidence does license. Counters <em>silent scope change</em> (evidence for an easier claim, dressed up as backing the hard one).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +520,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>The <strong>wording of each claim</strong>, the <strong>judgment that a piece of evidence actually backs it</strong>, and the <strong>boundary each claim carries</strong> stay yours. An AI can list claims and draft rows, but it cannot open your notebook cell to confirm a number is real, and it cannot decide the evidence is honest enough to print. The call that the table is complete and the poster is locked is yours to declare and defend.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="26.6">
 <h2 data-number="26.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">26.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your poster text and ask an AI tool to build the whole claim–evidence table for you. It returns a clean, complete grid, every cell filled, and the trace column reads confidently: “<em>g</em> value from cell 14.” You almost accept it. Then you open cell 14, and it computes the <em>period</em>, not <em>g</em>. The value you report is produced two cells later, in cell 16. The tool guessed a plausible cell number and filled it with full confidence, and its tidy finished table hid the wrong trace behind a polished look.</p>
+<p>You catch it by refusing to trust a trace you have not opened. Reading the actual cell, number in hand, is the whole discipline. A filled table is not a verified table.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="26.7">
 <h2 data-number="26.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">26.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, the table’s traceability, with two named methods from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>. For every traced number, use <strong>direct calculation</strong>: recompute the value a second, simpler way and confirm it matches the figure on the board, digit for digit. For every cited fact, use <strong>primary-source reading</strong>: open the source, find the line, and confirm it says what your poster claims. A number that survives an independent recomputation and a citation that resolves to a real page are backed. A mismatch on either is a finding, and the claim comes off the board until you fix it.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="26.8">
 <h2 data-number="26.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">26.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter is a graded piece of your <strong>M10 final poster lock</strong>. Build a claim–evidence table for your own poster: one row for every headline number and cited fact, each with its trace to a cell or source and its boundary written down. That table is what you carry into the gallery-walk audit and the oral defense, and it is the proof that your poster’s honesty was verified, not merely asserted.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="26.9">
 <h2 data-number="26.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">26.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend one row of your table. State the claim in the exact words that will appear on your board, and name the specific evidence that backs it. State its boundary: what this claim does <em>not</em> establish, and the compass position it speaks from. Close with its uncertainty: the interval or caveat that rides in the same eye-span as the claim, and the single check you ran to confirm the traced number is real.</p>
 
 
 </section>

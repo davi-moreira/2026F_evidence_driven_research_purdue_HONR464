@@ -4,51 +4,189 @@ title: "36. Conflicting Agents and Human Escalation"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_managing_ai_agents_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** When your AI roles disagree, or when several of them
+> agree, decide which of three things you are looking at (real disagreement,
+> correlated error, or manufactured consensus) and decide the exact moment to take
+> the call back into your own hands.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"Don't tell me your reviewers agreed. Tell me whether they could have agreed for
+> the same wrong reason. Agreement is the easiest thing in the world to manufacture,
+> and the most dangerous to trust."*
+> — a **skeptical peer** at your practice defense
+
+By now you can run a small team of AI roles on your work. The seductive next thought
+is that a team is safer than one assistant, so three roles blessing your chapter must
+mean three confirmations. It does not. Three roles built the same way, reading the
+same draft with the same instructions, tend to make the same mistake, so their
+agreement is one error repeated three times. This chapter is about seeing through
+that, and about the moment you stop counting votes and decide for yourself.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+When your roles do not match, the first move is not to pick a winner. It is
+**reconciling conflicting outputs**: deciding what to believe by first diagnosing
+*why* the roles differ. Example: before you side with the reviewer over the
+methodologist, you ask what would make each of them right. There are three cases, and
+they call for opposite responses.
+
+**Real disagreement** is when the roles genuinely read the evidence differently.
+Example: your reviewer calls a sentence clear and strong while your methodologist
+flags that same sentence as reaching past your data. This is the good case. The clash
+points straight at the claim you need to check.
+
+**Correlated error** is when the roles agree, but on the same wrong assumption, so
+the agreement proves nothing. Example: three reviewers built from the same base model
+all miss the same flaw because they share the blind spot. The question to ask is
+simple: could they be wrong the *same* way? If yes, their consensus is one signal,
+not three.
+
+**False consensus** is when the roles agree only because your prompt framed the task
+so they had to. Example: you ask "confirm my chapter is ready," and every role
+obliges. You led all the witnesses. Reframe the ask neutrally and run it again.
+
+The tool that tells these apart is an **independence check**: a test that makes
+agreement worth more than a head-count, either an independent method you run yourself
+or a way you force two roles to be genuinely independent. Example: two roles bless a
+cited number, so you open the source and recompute it yourself before trusting either.
+
+Then comes the decision only you can make. **Escalation to human judgment** is the
+moment an AI output would *settle* rather than *inform* a decision that is yours, so
+you stop and decide it yourself. Example: a role proposes calling your result
+"causal," which would settle your claim boundary, so it escalates to you. What you do
+at that moment is a **human override**: you take the pen back and make the call in
+your own words, backed by your own check, even when the roles agreed on something
+else. A decision that just counted the roles is not a decision. It is a vote, and
+votes among look-alike models are meaningless.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You measured the local acceleration of gravity, **g** (how fast a dropped object
+speeds up, about 9.81 meters per second squared at Earth's surface), using a simple
+pendulum. You timed its swing, then used the small-angle formula g = 4π²L/T², where L
+is the length and T is the period. Your draft reports "g = 9.81 m/s², in excellent
+agreement with the accepted value."
+
+You run three AI reviewer roles. All three return the same verdict: "Looks solid.
+Matches the textbook value." Is that three confirmations?
+
+Diagnose before you celebrate. Every one of those roles already knows 9.81 is *the*
+answer, so each one pattern-matches your number to the known constant and blesses it
+without checking how you got there. That is **correlated error** wearing the mask of
+confirmation: they share one blind spot, the anchor to the famous value, and it hides
+your actual mistake. Your swing was wide, around 30 degrees, where the small-angle
+formula quietly breaks down, and you timed a single swing by hand, so reaction time
+alone is roughly a fifth of a second of noise. The tidy "9.81" was luck riding on an
+honest-looking method.
+
+This is where you **escalate**. The reviewers' agreement would *settle* your headline
+claim, and that claim is yours, so you take the pen back. You recompute g from your
+raw timings yourself and carry the stopwatch error through the arithmetic, and the
+honest result is g = 9.7 ± 0.4 m/s². Consistent with 9.81, but nowhere near as precise
+as you wrote. You **override** three "looks great" verdicts and rewrite the claim with
+its real uncertainty. The roles counted the answer as correct. You checked whether it
+was earned.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb15 — Managing multiple AI agents + the final defense**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb15 — Managing multiple AI agents + the final
+defense**. Open it in Colab with the badge above and work the cells alongside this
+chapter. There you wire a worker-critic workflow on a real draft, then simulate two
+four-reviewer teams and watch a shared blind spot turn unanimous agreement into false
+confidence you can measure.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own diagnosis first, then delegate. Each prompt is a checkable job, not a
+request for a verdict.
+
+**Locate the decisions that must escalate.**
+
+```text
+Act as a research-integrity assistant. Here is my draft's headline claim and the three
+never-delegate decisions I think it contains: [paste]. Using standard research-defense
+criteria, list which decisions in this draft an AI output should never be allowed to
+settle, and which of my three I mislabeled. Do not settle any of them for me.
+```
+After running, verify: check its list against the escalation triggers you wrote
+yourself; a decision it omits is the one to guard hardest. Counters *illusion of
+completeness* (a tidy list that quietly drops the call that matters most).
+
+**List the agreements to verify.**
+
+```text
+Here are three reviewer outputs on the same draft: [paste all three]. For each pair,
+name one specific way they could be wrong the SAME way: a shared assumption, a shared
+anchor, or a shared prompt. Rank the pairs from most to least likely to share a blind
+spot.
+```
+After running, verify: for the top pair, rerun one role with a different framing and
+different context and see whether the agreement survives. Counters *correlated errors
+across tools or roles* (agreement that is one flaw echoed back).
+
+**Red-team the consensus.**
+
+```text
+Act as a hostile reviewer who believes my three roles only agreed because my prompt led
+them. Argue that their consensus is manufactured, name the leading words in my original
+ask, and give me a neutral rewrite. Do not reassure me.
+```
+After running, verify: if it cannot find a single leading word, push back and demand the
+worst one, then rerun the review neutrally. Counters *sycophantic agreement* (praise
+that rehearses your ego, not your evidence).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Which claims your chapter can defend, where each claim must stop, whether an agreement
+among your roles was ever independent, and the moment to escalate: those stay yours. No
+role decides its own trustworthiness, and no head-count of roles decides your claim
+boundary or your ethics. When an AI output would *settle* one of those rather than
+inform it, you stop and you decide.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You send your chapter to four AI roles and all four reply "no major problems." It feels
+like overwhelming confirmation, and it is confidently wrong. The four share a base model
+and read the same draft with the same instructions, so they share a blind spot.
+Whenever your one real flaw falls inside that blind spot, all four miss it together.
+Their unanimous "fine" is close to a single voice, not four.
+
+You catch it by refusing to treat agreement as evidence. You run an independence check:
+re-read the flagged claim against your own inquiry declaration, or hand the draft to a
+role with a different framing and different context. In the lab you will see the size of
+this trap measured. Four correlated reviewers miss a real flaw about seven times as
+often as four independent ones, and piling on more correlated roles cannot close the
+gap.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify the chapter's key result, the correlated team's miss rate, with **direct
+calculation** from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recompute the same quantity a second way and compare. Four independent reviewers, each
+catching a flaw half the time on its own, all miss only when every one misses at once:
+0.5 × 0.5 × 0.5 × 0.5 = 0.0625, about the 6% the lab prints. The correlated team misses
+on the entire shared blind spot, 40% of chapters, plus the other 60% where each still
+misses on its own: 0.40 + 0.60 × 0.0625 = 0.4375, about the 43% the lab prints. Two
+roads, one answer. The gap between 6% and 44% is the whole argument, and now you hold it
+by hand, not on faith.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter builds two of the four parts of **M15**, your final research chapter and
+AI-management portfolio. The first is your **conflict-and-override log**: one real clash
+between your roles, your diagnosis (real disagreement, correlated error, or false
+consensus), and the override you made with the non-AI check that backed it. The second
+is your **independence check**: one place your roles agreed on something that mattered,
+and the independent test that made the agreement worth more than a head-count. Write
+both from your own project this week, so your portfolio shows not just that your roles
+agreed, but that you knew when their agreement was worth trusting.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend one moment you escalated. Name the AI agreement or conflict
+you faced and the diagnosis you made (real disagreement, correlated error, or false
+consensus). State the call you took back and the independent check that decided it, not
+the roles' vote. Then name the boundary and the uncertainty: what your override
+established, what it did not, and the one blind spot your roles might still share that
+you have not yet ruled out.

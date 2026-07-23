@@ -455,27 +455,55 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Decide which claims from a semester of AI-assisted work you will stand behind at your public defense, and assemble the AI-management portfolio that shows how you ran your AI team, what you kept in your own hands, and how each surviving claim was checked.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="37.1">
 <h2 data-number="37.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">37.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“By the time you stand up to defend, I do not count your tools. I ask which claims you are willing to be wrong about in public, and whether you can show me you checked them yourself.”</em> — a <strong>defense examiner</strong>, on the day the portfolio is due</p>
+</blockquote>
+<p>You reach this chapter with a full project behind you and one thing left to do: gather it into something you can defend out loud. A semester of AI-assisted work leaves a trail of drafts, role outputs, and half-finished checks. Left in a pile, none of it is defensible. The examiner will not read the pile. She will ask which claims you own, where each stops, and how you know. This chapter is where you decide those answers on purpose, before the room decides them for you.</p>
 </section>
 <section id="the-concept" class="level2" data-number="37.2">
 <h2 data-number="37.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">37.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>Your final submission has two halves, and this chapter builds both.</p>
+<p><strong>A research portfolio</strong> is the assembled body of your finished work: your claims, the evidence behind them, and the verification that makes each one defensible. Example: for a lab project it holds your headline result, the measurements behind it, and the check you ran to confirm the number is right.</p>
+<p>Alongside it sits <strong>an AI-management portfolio</strong>, the honest record of how you ran your AI team all semester: which tasks you delegated, where you took the decision back, and which calls you never handed to a tool. Example: it shows a reviewer role drafted your limitations, that you overrode it when it softened a claim you could not support, and that you alone chose the claim boundary.</p>
+<p>The decision that closes both is your <strong>stopping rule</strong>, a written statement of what “done” means, phrased around your own verified confidence rather than the tools’ agreement. Example: “I stop when I can defend each surviving claim to a hostile reviewer with a check I ran myself.” A stopping rule of “when the roles all agree” is a trap, because a team of look-alike tools can agree loudly and be wrong together.</p>
+<p>That trap has a name you will guard against: <strong>false consensus</strong>, agreement that exists only because the tools shared a blind spot or you asked a leading question. Example: you ask three reviewers to “confirm my chapter is ready,” and all three oblige, so the chorus tells you nothing. The cure is <strong>an independence check</strong>, a step that makes agreement worth more than a head count: a check you run yourself, outside the tools.</p>
+<p>The whole thing ends in <strong>the Evidence Defense</strong>, a short public defense of your claims at their boundaries, followed by questions you cannot rehearse for. Example: you state what you found, name exactly what you do not claim, and answer each question from your own record.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="37.3">
 <h2 data-number="37.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">37.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>Picture an honors project in analytical chemistry. You measured how much acetic acid a bottle of vinegar contains, using <strong>titration</strong>, a lab method where you add a solution of known strength drop by drop until a reaction just finishes, revealing the unknown amount. Three runs gave an average of 4.9% acetic acid by mass. Now you choose the claim you will defend.</p>
+<p>You run three AI reviewer roles on your chapter draft. A reviewer role praises your headline sentence, “Vinegar contains 4.9% acetic acid.” A diagnostician role flags the same sentence for reaching past your evidence: you measured one bottle three times, not vinegar in general. That disagreement is a gift, because it points straight at the boundary decision. You take the pen back and rewrite the claim to what your data hold: “This bottle, measured three times, averaged 4.9% acetic acid, with the runs spanning 4.7% to 5.1%.” The narrower sentence is the one you will defend.</p>
+<p>Then you run an independence check the tools cannot fake. The bottle’s own label states 5% acidity, so you compare your 4.9% against that value by hand. The two numbers land close, which is real reassurance because the label was never part of your AI workflow. Your stopping rule is now satisfied, so you stop. Into the AI-management portfolio go four things: the roles you ran, the reviewer-versus-diagnostician conflict and your override, this stopping rule, and the label comparison that made your reviewers’ agreement worth more than a head count.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="37.4">
 <h2 data-number="37.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">37.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb15 — Managing multiple AI agents + the final defense</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb15 — Managing multiple AI agents + the final defense</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you wire a worker-critic team, run a seeded simulation showing four look-alike reviewers miss a real flaw far more often than four independent ones, then draft the four parts of your own M15 portfolio and stage your Evidence Defense.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="37.5">
 <h2 data-number="37.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">37.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt hands the tool reach, not the decision.</p>
+<p><strong>Locate the real benchmark.</strong></p>
+<pre><code>Act as a research assistant in analytical chemistry. I measured the acetic acid
+content of one vinegar sample. I want a published or label-stated reference value to
+compare against. Give the value, the exact source it comes from, and a link. Only
+state a figure you are confident is real; if you are unsure, say so and tell me where
+to look.</code></pre>
+<p>After running, verify: open the source or read the label yourself before you trust the number (primary-source reading). Counters <strong>confident fabrication</strong>, a reference value quoted with an invented source.</p>
+<p><strong>List every claim to verify.</strong></p>
+<pre><code>Here is my draft chapter: [paste]. List every empirical claim in it as a table: the
+claim, the number or measurement it rests on, and whether that claim stays inside my
+single sample or reaches past it. Do not add any new claims.</code></pre>
+<p>After running, verify: check the table against your own list of what you measured, and confirm nothing reaches past your data unmarked. Counters <strong>illusion of completeness</strong>, a tidy list that omits the one claim quietly overreaching.</p>
+<p><strong>Red-team the defense.</strong></p>
+<pre><code>Act as a hostile but fair cross-examiner at a research defense. Here is my headline
+claim, its boundary, and my two weakest verification steps: [paste]. Ask me the five
+hardest questions you can, each tied to a specific claim or check. Do not soften them,
+and do not answer them for me.</code></pre>
+<p>After running, verify: if every question is gentle or your claim is called “well-supported,” push back and demand the weakest link. Counters <strong>sycophantic agreement</strong>, a partner that rehearses your ego instead of your defense.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -486,25 +514,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>The tools may draft, review, and surface hard questions. They may never decide which claims you put your name on, where a claim like “4.9% acetic acid” must stop, whether your reviewers were ever independent, what your stopping rule is, or a single word of the public defense. When agreeing roles bless a claim, deciding whether that agreement is real or just correlated is yours. So is the answer you give when the room asks how you know.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="37.6">
 <h2 data-number="37.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">37.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You send your finished chapter to three reviewer roles and ask each to “confirm it is ready to submit.” All three return the same verdict: “Looks solid, no major problems.” It feels like three confirmations. It is one. The three roles run on the same base model, you gave them the same leading prompt, and they share a blind spot: none flags that your headline number carries no uncertainty, no range across your titration runs. That is false consensus, and trusting it would send an overclaimed result into your defense.</p>
+<p>You catch it with a reframe and a check the tools cannot see. First you drop the leading ask and run a neutral one: “List the three weakest claims in this chapter and why.” Now a role names the missing range. Then you leave the tools entirely and recompute the spread of your runs yourself, which hands you the 4.7% to 5.1% boundary the reviewers all skipped. The lesson is blunt: agreement is worth only the independence behind it. Count the checks you ran yourself, never the roles that nodded.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="37.7">
 <h2 data-number="37.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">37.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, that a claim in your portfolio is one you can defend, with <strong>benchmark result</strong>, the method of comparing your output against a known-good reference value (see <code>ai_resources/verification_guide.md</code>). Set your measured 4.9% against the label’s stated 5% acidity and confirm they agree within your run-to-run spread. Because the label was never part of your AI workflow, this is a genuine independence check, not one tool grading another. Pair it with <strong>peer reasoning</strong>: walk your claim boundary past a classmate and see whether your reason for stopping at “this bottle” survives their first question. Two independent checks beat one, and each leaves a ledger line.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="37.8">
 <h2 data-number="37.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">37.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This last chapter delivers milestone <strong>M15</strong>: your final research chapter, your AI-management portfolio, and the Evidence Defense you perform this week. Bring four assembled parts and one staged defense. The four parts are the decomposition of AI roles you ran on your chapter, one real conflict-and-override with its non-AI check, your stopping rule and never-automate list, and one independence check that made an agreement worth more than a head count. The defense is three movements in order: your claim and its boundary, your central choice and the road you did not take, and the verification you lead with. Draft every piece yourself. A tool may critique it after, but the chapter and the defense you deliver have to be reasoned and owned by you.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="37.9">
 <h2 data-number="37.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">37.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In five or six sentences, close the course. State one claim from your own project that you will put your name on in the room. Give its boundary: name what your evidence does not establish, and if the claim rests on one sample, say so. Name one thing still uncertain and why. Then show your AI-management portfolio doing its job in one honest line: the place your roles agreed, the independent check that made the agreement real, and the one decision you refused to hand to any tool. That last line is what the examiner is listening for.</p>
 
 
 </section>

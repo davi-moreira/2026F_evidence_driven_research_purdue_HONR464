@@ -456,27 +456,56 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Decide what goes into the reproducibility capsule that ships with your research note, and defend the claim that a stranger can rerun your work and get your numbers. You own what the package includes and whether “it reproduces” is honest, and you never let a clean run stand in for a correct one.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="34.1">
 <h2 data-number="34.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">34.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“I don’t want to hear that it runs on your laptop. Hand me the folder, let me clear everything, and let me press run. If your headline number does not come back on my machine, you do not have a result yet. You have a memory of one.”</em> — a <strong>replication editor</strong>, opening the folder attached to your submission</p>
+</blockquote>
+<p>A research note argues your claim in prose. The capsule proves the claim survives without you in the room. If the only place your analysis runs is the laptop where you built it, in the click-order you happen to remember, then no one can check you, and a result no one can check is a rumor with a chart. This chapter is how you package the work so the checking is easy, and how you stay honest about what “reproducible” really means.</p>
 </section>
 <section id="the-concept" class="level2" data-number="34.2">
 <h2 data-number="34.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">34.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>A <strong>reproducibility capsule</strong> is everything a stranger needs to rebuild your numbers and nothing they would have to guess. Example: a folder holding your notebook, your data, and a short record of every by-hand choice. It has five parts, each defined once.</p>
+<ul>
+<li>A <strong>runnable notebook</strong> that passes <strong>restart-and-run-all</strong>, meaning you clear the kernel and run every cell top to bottom with no memory of earlier clicks. Example: Runtime, Restart and run all, and your headline number reappears.</li>
+<li>A <strong>data-provenance note</strong>: where each dataset came from, its version, and how it may be used. Example: the download URL, the date, and the licence.</li>
+<li>A <strong>fixed seed</strong>, a starting number that makes every random step return the same values on every run. Example: <code>SEED = 464</code> feeding each resample.</li>
+<li>A <strong>decision log</strong>: the by-hand choices that shaped the result, each with its reason. Example: every row you dropped, and why.</li>
+<li>An <strong>AI-use ledger</strong>: every tool, its task, and how you verified its output.</li>
+</ul>
+<p>Capsules break in boringly predictable ways, which is good news, because a predictable failure is a catchable one. Named, they are <strong>the five package sins</strong>: a <strong>hard-coded path</strong> that exists only on your machine, a <strong>missing seed</strong> that moves every run, a <strong>by-hand edit</strong> no clean run reproduces, an <strong>undocumented exclusion</strong> with no logged reason, and <strong>stale data</strong> a reader cannot reobtain. The lab’s auditor scans for all five. But hold onto the one line that carries the whole chapter: a capsule with zero flags is <strong>runnable</strong>, never proven <strong>correct</strong>. The scan gets you to the starting line. A person who reruns you cold is the race.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="34.3">
 <h2 data-number="34.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">34.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You measured nitrate, a nutrient that washes off farm fields into streams, at twelve monitoring sites in one watershed, and your headline is the share of samples above the U.S. EPA drinking-water limit of 10 mg/L. Watch the same analysis shipped two ways.</p>
+<p>The <strong>sinful capsule</strong> loads <code>~/Desktop/nitrate_clean.csv</code>, a file only your laptop has. It bootstraps a confidence interval for that share with no seed, so the interval shifts on every run. It patches one mislabeled site by hand in a cell no clean run repeats. It silently drops the below-detection-limit samples with no note on why. And its data was downloaded “sometime last spring” with no version. Five sins, and every one breaks the rerun.</p>
+<p>The <strong>clean capsule</strong> loads the same data through a shared URL, with the source, date, and licence in the provenance note. It fixes <code>SEED = 464</code> before the bootstrap. It records the one relabel in the decision log with its reason. It keeps the below-detection samples, or drops them by a logged, pre-declared rule. Now a stranger clears the kernel, runs top to bottom, and your share above 10 mg/L comes back. Same number, no guessing.</p>
+<p>Here is the honesty check the auditor cannot do for you. The clean capsule can still be <em>wrong</em>: your seed might be fixed on the wrong subset, or your detection-limit rule might be a bad rule cleanly logged. Runnable is not correct. That gap is exactly why your capsule is exercised by a partner, not only by a script.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="34.4">
 <h2 data-number="34.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">34.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb14 — From poster to research note</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb14 — From poster to research note</strong>. Open it in Colab with the badge above. There you build <code>audit_capsule</code>, watch it flag all five sins in a deliberately broken package and none in a clean one, then paste your own capsule’s key lines in and fix what it catches before Friday’s studio.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="34.5">
 <h2 data-number="34.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">34.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt is a checkable job, not a verdict.</p>
+<p><strong>Locate the standard tool.</strong></p>
+<pre class="text"><code>Act as a reproducibility assistant. Name the standard file and format for recording
+the exact package versions a notebook needs in order to rerun, and cite the official
+documentation. Only name tools you are confident exist.</code></pre>
+<p>After running, verify: open the official docs and confirm the file and its syntax exist. Counters <em>confident fabrication</em> (an invented tool name arrives as confidently as a real one).</p>
+<p><strong>List so you can verify (the cold replicator).</strong></p>
+<pre class="text"><code>Here are the key lines of my capsule: [paste]. Playing a replicator who has only
+these lines and none of my memory, list every input, file, or by-hand step you would
+need to rerun my headline number and might not find here.</code></pre>
+<p>After running, verify: match each named gap against what your own <code>audit_capsule</code> run actually flagged, and drop any gap that maps to no real missing line. Counters <em>illusion of completeness</em> (a tidy capsule that looks whole while one input is missing).</p>
+<p><strong>Red-team the claim.</strong></p>
+<pre class="text"><code>My claim is: "a stranger can rerun this capsule and get my number." Act as a hostile
+replication reviewer and name every way it could fail on a machine that is not mine.
+Do not fix it for me.</code></pre>
+<p>After running, verify: if it only reassures you, push back and demand the single worst failure. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your package).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +516,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>You decide <strong>what goes in the capsule</strong> and whether the sentence “this reproduces” is honest. The tool can list gaps and pin versions, but it cannot record your true data provenance, judge whether an exclusion’s logged reason is a <em>good</em> reason, or certify that your analysis is correct rather than merely runnable. The name on the folder, and the claim that a stranger can trust it, are yours.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="34.6">
 <h2 data-number="34.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">34.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your notebook into Gemini and ask, “will this run cold and produce my nitrate share?” It walks through every cell and answers, with total confidence, “Yes, this runs top to bottom cleanly and returns your headline number.” It sounds like a green check. It is not. Gemini never executed anything. It read the code and narrated it. Cell 3 loads <code>~/Desktop/nitrate_clean.csv</code>, a path only your laptop has, and the fluent walkthrough described reading that file as if it were sitting there.</p>
+<p>You catch it the only way that counts: you actually run restart-and-run-all on a fresh kernel, ideally in Colab on a machine that is not yours. The <code>FileNotFoundError</code> appears on cell 3 in seconds. A narrated run is not a run. You verify the notebook by executing it, not by reading a paragraph about executing it.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="34.7">
 <h2 data-number="34.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">34.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, that your capsule reproduces, with a <strong>benchmark result</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: compare a fresh run against a previously verified value. Record your headline number from your own machine. Then clear the kernel and run all in a second environment, a classmate’s laptop or a clean Colab session, and check that the number returns within rounding. A match means the capsule travels. A mismatch means something you carried by hand, a path, a seed, an unlogged edit, was doing quiet work you never packaged. Two machines, one number, is a reproduced result.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="34.8">
 <h2 data-number="34.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">34.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter builds the capsule half of your <strong>M14 research note and reproducibility capsule</strong>. Assemble the five parts for your own project, run <code>audit_capsule</code> on your key lines, and fix the first sin it flags. Then do the thing the script cannot: hand the folder to a partner at Friday’s studio and have them clear the kernel and rerun it cold. The number they get, set next to the number you reported, is your reproducibility evidence, and their rerun is what turns “it runs for me” into a claim you can defend.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="34.9">
 <h2 data-number="34.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">34.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend your capsule. Name what you put in it and the one package sin you were most tempted to leave unfixed. State the bounded claim you can now make, “a stranger reran this and got my number,” and its boundary: runnable is not correct, and reproduced on the machines you tried is not proof it runs everywhere. Close with your uncertainty: the one input or step a cold replicator might still trip on, and the check you would run next to close it.</p>
 
 
 </section>

@@ -115,3 +115,7 @@ activities/*_files/
 # agent scratch files (number re-derivation during verify passes)
 scratch_*.py
 scratch_*.ipynb
+
+# Quarto book cache
+book/.quarto/
+book/_freeze/

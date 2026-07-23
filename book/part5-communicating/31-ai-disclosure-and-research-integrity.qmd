@@ -4,51 +4,173 @@ title: "31. AI Disclosure and Research Integrity"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_conference_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Decide exactly what to disclose about every AI tool you
+> used on your project (which tool, for which task, and how you checked its output),
+> and record it so that when someone asks *"did you use AI, and how did you verify
+> it?"* you can answer truthfully and point to a checkable record, not a memory.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"I am not going to penalize you for using an AI tool. I am going to penalize you
+> for not being able to tell me where you used it and how you checked it. A result I
+> cannot trace back to a source and a verification is a result I cannot trust."*
+> — a **conference reviewer**, standing at your poster and asking the AI-use question
+
+At the Expo, one of the five kinds of question a stranger can ask you is the AI-use
+question. Many journals and conferences now ask authors to state where and how AI
+tools were used, so this is not a classroom formality. If your only answer is "yes, a
+bit, and it seemed fine," you have turned good work into an untrustable result on the
+spot. The disclosure is what keeps an honest use of AI honest under questioning.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+**AI disclosure** is a truthful statement of where and how you used an AI tool in
+your work. Example: "I used Gemini to draft the code that computed my safety factor,
+and I recomputed that number by hand before reporting it." **Research integrity** is
+the practice of keeping your work honest and traceable, so a reader can see where each
+result came from and trust it. Example: a claim that names its source and its check
+has integrity; a claim that names neither does not.
+
+The tool that makes disclosure easy is the one you have kept all semester: the **AI
+Research Ledger**, a running table with one row per AI use, recording the task, the
+tool, your decision, and the verification method. A complete disclosure is not written
+from scratch at the end. It is read straight off your ledger.
+
+Three parts make a disclosure complete, and each maps to a ledger column: **which
+tool** you used, **for which task**, and **how you verified** the output. Drop any one
+and it fails. "I used AI" with no task is meaningless; a task with no verification is
+exactly the gap a reviewer is trained to find.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You are presenting a senior-design poster in mechanical engineering. Your bracket
+must hold a static design load, and your headline number is its **safety factor**,
+the ratio of the material's strength to the stress your load actually puts on the
+part. A safety factor of 2.0 means the part can take twice the load before it yields.
+
+You used an AI tool twice: once to find the yield strength of 6061-T6 aluminum, once
+to write the short calculation that turns that strength and your load into a safety
+factor. Both are honest uses, and neither is safe until it is disclosed and verified.
+
+Your ledger already holds two rows. For the material property, the verification method
+is **primary-source reading**: you opened the alloy's published datasheet and confirmed
+the yield strength the tool gave you. For the calculation, the method is **alternative
+code**, recomputing the same number a second way:
+
+```python
+# The number the AI code reported, recomputed by hand.
+yield_strength = 276      # MPa, confirmed against the 6061-T6 datasheet
+applied_stress = 131      # MPa, from my load and cross-section
+safety_factor  = yield_strength / applied_stress
+print(round(safety_factor, 2))   # 2.11 — matches the AI-generated cell
+```
+
+When the reviewer asks the AI-use question, you do not improvise. You read your two
+rows aloud: the tools, the tasks, and the two checks. The claim you defend is bounded.
+The safety factor is about 2.1 under this static load, with the strength confirmed
+against the datasheet and the arithmetic reproduced by hand. Its boundary is honest
+too: you modeled a single idealized load case, not fatigue and not stress
+concentration at the holes.
 
 ## The Colab laboratory
 
 This chapter's lab is notebook **nb12 — Final conference preparation, presentation + reflection**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+badge above and work the cells alongside this chapter. There you code the AI-use
+questions you were asked as data and fill the AI Research Ledger that becomes the
+disclosure you defend. The final Exit Defense asks you to name what you delegated to
+Gemini and the specific check that decided whether you accepted, changed, or rejected
+it.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt is a checkable job, not a
+request for a verdict.
+
+**Locate the standard.**
+
+```text
+Act as a research-integrity assistant. Name the elements a complete AI-use
+disclosure should contain for a student research poster, and cite one real,
+retrievable source such as a university research-integrity office or a major
+publisher's AI policy. Only name a source you are confident exists.
+```
+After running, verify: open the cited policy and confirm each named element is
+actually in it. Counters *confident fabrication* (an invented policy element arrives
+as confidently as a real one).
+
+**Turn notes into a disclosure table to verify.**
+
+```text
+Here are my raw notes on every time I used an AI tool on this project: [paste].
+Build a table with columns tool, task, and verification method, one row per use.
+Do not invent a verification I did not mention. If a use has no check, leave that
+cell blank and flag the row.
+```
+After running, verify: match each row against your ledger; a verification filled in
+where your notes had none is fabricated, so cut it. Counters *illusion of
+completeness* (a tidy table that quietly reports checks you never ran).
+
+**Red-team your disclosure.**
+
+```text
+Here is my drafted AI-use disclosure: [paste]. Act as a hostile reviewer who
+suspects I am hiding a use or overstating my checks. Name every place I claim a
+verification I have not shown, or omit a use a reviewer would expect. Do not
+rewrite it for me.
+```
+After running, verify: for each flagged line, produce the ledger row that backs it or
+delete the claim. Counters *sycophantic agreement* (a reviewer that praises your
+honesty instead of testing it).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+The honesty of the disclosure is yours alone. You decide **which uses to disclose**
+(including the one you would rather not mention), **whether a verification you claim
+actually happened**, and **whether the final statement is true**. A tool can format
+your ledger into a clean paragraph. It cannot know what you really did or certify that
+you checked it. Signing your name to a disclosure you cannot back is the integrity
+failure this chapter exists to prevent.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You ask a tool to "write my AI-use disclosure from these notes," and it hands back a
+polished paragraph: *"All AI-generated outputs were independently verified against
+primary sources."* It reads beautifully, and it is false. You verified the yield
+strength against the datasheet, but you never independently checked the load figure the
+same tool helped you estimate. The sentence upgraded one real check into a blanket
+claim of "all."
+
+You catch it by reading the disclosure line by line against your ledger. Every
+sentence claiming a verification must point to a row that names that check. The word
+"all" has no such row, so it is fabricated and comes out. Your true disclosure is
+narrower and stronger: you name the two checks you ran and the one input you did not
+independently confirm. A confident paragraph is not a truthful one. You verify the
+disclosure against the record, not against how responsible it sounds.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify this chapter's key result, your finished disclosure, with **peer reasoning**
+from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+Hand a partner your disclosure and your actual project, and ask one question: can you
+find an AI use I did not disclose, or a verification I claimed but cannot show? If they
+find one, your disclosure was incomplete, which is a finding, not a failure. For the
+engineering number itself, recompute the safety factor a second way, so the value you
+disclose survives two independent roads to the same answer.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter turns your AI Research Ledger into the disclosure you submit and defend
+with **M12**, your conference reflection and criticism portfolio. The ledger is a
+required part of that package: a missing ledger scores Craft 0 and the submission is
+returned unread. So read your finished ledger into a short, truthful AI-use statement,
+attach it to M12, and rehearse answering the Expo's AI-use question straight from it.
+When a stranger asks how you checked your work, your answer is already written and
+already verified.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend your disclosure. Name one AI use on your project and the
+exact verification you ran on it. State the bounded claim your disclosure lets you
+make, with its boundary: what your check does *not* establish. Close with your
+uncertainty, the one AI-assisted input you have not yet independently confirmed and
+the check you would run next to close the gap.

@@ -4,51 +4,202 @@ title: "23. AI as Adversarial Reviewer"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_attack_the_analysis_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** When an adversarial reviewer hands you a list of
+> flaws in your own analysis, you decide which flaws are real by running the single
+> data check that confirms or refutes each, instead of acting on whichever reviewer
+> sounds most certain. This chapter equips you to pre-commit your robustness checks,
+> verify every flag against your data, and defend the one bounded claim that
+> survives.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+Picture the review of a pull request that claims a speedup. A **staff engineer** is
+a senior developer whose sign-off lets your change ship to real users, and who
+answers for it when production tells a different story. Example: the engineer who
+approved your caching change is the one paged when latency climbs at 2 a.m. Their
+concern is blunt.
+
+> *"Do not tell me the numbers got better. Tell me which check you ran that would
+> have caught it if they hadn't. I trust the check, not the graph."*
+
+A confident benchmark, a fluent AI critique, and a clean-looking table can all be
+wrong in the same convincing way. The engineer is asking for what sounds least
+impressive and matters most: the check you committed to before you looked, and the
+flag you actually verified against the data.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+An **adversarial reviewer** is a reader whose job is to attack your result and find
+where it breaks, not to praise it. Example: a peer who tries to show your benchmark
+was luck rather than a real improvement. The reviewer can be a classmate, one AI
+tool, or a panel of models, and each fails in its own way.
+
+You defend a result by trying to break it first. A **robustness check** re-runs the
+same finding under a different but equally defensible choice and sees whether the
+answer holds. Example: you measured a speedup on one workload, so you also measure it
+on two other realistic workloads. A **placebo test** runs your exact procedure where
+the effect cannot exist and confirms it comes back near zero. Example: you benchmark
+an unchanged build against an identical copy of itself, and any "speedup" between
+them is your harness lying.
+
+The habit that keeps an attack honest is order. **Specification searching** means
+trying many versions of an analysis and reporting only the one that gave the answer
+you wanted, without disclosing the search. Its everyday name is **p-hacking**.
+Example: you benchmark ten input sizes and slide only the size where your change
+wins. The cure is a set of **pre-listed checks**, the full list you will run,
+committed to before you see any result. Example: you write down three workloads and
+one placebo, then run all four and report every number, including the ones that did
+not help.
+
+One more failure earns a name because AI reviewers make it constantly. **Correlated
+error** is two reviewers wrong in the same way, so their agreement is an echo, not a
+confirmation. Example: two AI models share a blind spot and both flag the same
+non-issue with equal confidence. Across all of this the rule is one sentence: a
+reviewer proposes a flaw, and the data decides whether it is real. Confidence, human
+or machine, tells you nothing about whether the flaw exists.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You added an in-memory cache to a web service, and your benchmark reports responses
+got faster. Before you defend that, you attack it. First, one term. **p95 latency**
+is the response time that 95 out of 100 requests come in under, a fairer summary than
+the average because it captures the slow tail your users actually feel. Example: a
+p95 of 210 milliseconds means only the slowest 5 percent took longer than that. Your
+headline is a p95 drop from 210 milliseconds to 140.
+
+You hand the result to three adversarial reviewers, and each names a different fatal
+flaw. The first says the win is driven by a single warm-up run where the cache was
+already full. The second says you cherry-picked the one request mix where caching
+helps. The third says you compared a fresh deploy against a tired one, so you
+measured the restart, not the cache. All three are confident, and all three
+disagree.
+
+You do not trust the loudest voice. You turn each flaw into a check. Leave-one-out
+drops the warm-up run and recomputes the p95: it barely moves, so the first flaw is
+refuted. Your pre-listed specification grid reruns the drop across three request
+mixes, and it holds in all three, so the second is refuted too. The placebo
+benchmarks the unchanged build against an identical copy of itself. A speedup between
+two identical builds would prove the third reviewer right, but it comes back near
+zero, so the machinery is clean.
+
+The two loudest flags dissolved the moment a check touched them. The flaw that
+survives is one no benchmark can remove and none of the three raised: this ran on
+your laptop, not on production hardware. So the honest claim is bounded. You measured
+a p95 improvement on these three workloads on this machine, not a guarantee for every
+endpoint your users hit.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb09 — Share the research + attack the analysis**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb09, Share the Research and Attack the Analysis**.
+Open it in Colab with the badge above and work the cells alongside this chapter. You
+rerun one estimate across a pre-listed grid of eight specifications, watch
+specification searching manufacture a significant result from pure noise, run a
+placebo and a leave-one-out influence check, then hand your analysis to a human, one
+AI, and a panel of AI models and adjudicate every flag they raise against the data.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own read of the result first, then let a reviewer attack it. Each prompt
+below hands out a task you can check, with a verify note naming the failure it
+defends against.
+
+**Red-team the result (you run the check it names).**
+
+```text
+Act as a hostile performance reviewer, not a cheerleader. Here is a one-paragraph
+summary of my benchmark and its headline claim: [paste your summary]. Name the
+single most serious flaw you can find, and state the exact measurement I could run
+that would confirm or refute it. Do not rewrite my benchmark and do not list more
+than one flaw.
+```
+
+After running, verify (counters *sycophantic agreement*): if it calls your setup
+"sound" or offers only mild praise, push back and ask for the worst problem assuming
+the result is fake. A flaw is real only once you run the named measurement and your
+own numbers confirm it.
+
+**List the specifications you left off (you audit the list).**
+
+```text
+Here is my pre-listed robustness grid for one benchmark result: I vary the workload
+mix, the input size, and whether the cache is pre-warmed. Name up to three
+additional, equally defensible specifications I did NOT list that could move the
+result, and for each say which direction you expect it to push.
+```
+
+After running, verify (counters *illusion of completeness*): a long, tidy grid can
+still omit the one setting that breaks the claim. Add and re-run the suggestions you
+can actually operationalize, and discard the rest.
+
+**Collapse the panel's flags (you keep the verdict).**
+
+```text
+Three reviewers each named one "most serious flaw" in my analysis: [A], [B], [C].
+For each, give the single data check that would confirm or refute it, in one line.
+Then tell me which two of the three are most likely the same underlying concern in
+different words, and which one is genuinely separate.
+```
+
+After running, verify (counters *correlated errors*): three reviewers echoing one
+blind spot can feel like three confirmations. Run each check against your own output
+before believing any flag, and treat unanimous agreement as a candidate to check,
+never as the check itself.
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+These stay yours, no matter how fluent the reviewer sounds. Which robustness checks
+you commit to before you look, because a check chosen after you see the result is
+not a check, it is a search. Which flagged flaws your data actually confirm, decided
+by the measurement and not by the confidence. Whether a flaw is a claim-boundary
+problem that no benchmark can fix and only a narrower claim can answer. And the one
+bounded result you will defend, with its uncertainty stated. A reviewer proposes;
+you verify, and the evidence decides.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste your benchmark summary into an AI reviewer, and it answers with total
+certainty: your speedup is an artifact of one warm-up run, drop that run and it
+vanishes. The claim is specific, mechanistic, and stated without a hedge. It reads
+exactly like a reviewer who has seen this mistake a hundred times.
+
+Here is how you catch it. You do not act on the verdict. You run the leave-one-out
+yourself, dropping the warm-up run and recomputing the p95. The improvement barely
+moves. The confident flaw was fabricated, a real-sounding mechanism bolted onto a
+problem your data do not have. Trust the certainty and you throw away a genuine
+result on a hunch. Pointing the check at your own numbers is the only thing that
+settled it.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+The chapter's key result is that confidence never certifies truth: a winning number
+can be manufactured by searching, and a confident flag can be pure invention.
+Confirm it yourself with **simulation** (from the
+[verification guide](../../ai_resources/verification_guide.md)). Benchmark an
+unchanged build against an identical copy of itself, so the true difference is zero
+by construction, then slice the runs by input size and let a searcher report the
+best-looking slice. Watch a "speedup" appear from nothing. For the specific number,
+add **alternative code**: recompute the same p95 a second way, sorting the raw
+samples and reading the 95th-percentile index directly, and confirm the two roads
+give one answer.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter feeds milestone **M9**, your poster draft and research audit, presented
+at Friday's studio. A **research audit** is the graded record of how hard you tried
+to break your own claim and what survived. Three moves carry over. Pre-list the
+three robustness or placebo checks you commit to for your own estimate, each tied to
+the reviewer attack it answers. Build a verified AI-review trail: every flaw a human
+or a model panel raised, marked confirmed or refuted by a data check, plus the most
+confident wrong flag you caught. Then state the one limitation no check could fix.
+Write it so a reader who has never seen your project could tell how far you pushed on
+your own number.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In a short paragraph, state the one bounded claim your analysis supports after you
+attacked it. Name the check you pre-listed, the flag you verified against the data,
+and whether you accepted, changed, or rejected what a reviewer returned. Then name
+its boundary and your uncertainty. Which reviewer flag did the data refute, and
+where is your claim a boundary problem that no further check can rescue? A result you
+have not tried to break, and a flaw you accepted without a check, are both
+undefended.

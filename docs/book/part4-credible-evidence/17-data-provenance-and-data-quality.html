@@ -456,27 +456,54 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> For every fact, measurement, or source your project leans on, decide whether it is solid enough to build on. You make that call by tracing the value back to where it was first measured (its provenance) and by judging whether it was measured well, under the conditions your work needs (its quality).</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="17.1">
 <h2 data-number="17.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">17.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<p>Picture a <strong>thesis advisor</strong>, the researcher who signs off on your project, reading the first draft of your background section:</p>
+<blockquote class="blockquote">
+<p><em>“You wrote that this solvent dissolves 13 grams per liter at room temperature. Where did that number come from? Not which website copied it. Who actually put the compound in water, weighed it, and at what temperature? Bring me the paper that measured it, or take the number out.”</em></p>
+</blockquote>
+<p>A value with no traceable origin is a rumor with a decimal point. Precision is not the same as trust. This chapter trains you to stop treating a number or a citation as true because it arrived looking tidy, and to ask two questions of everything you borrow: where did it come from, and is it any good.</p>
 </section>
 <section id="the-concept" class="level2" data-number="17.2">
 <h2 data-number="17.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">17.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p><strong>Data provenance</strong> is the documented origin of a value and every hand it passed through before it reached you. Example: a solubility figure printed in your textbook, traced back through a 2010 review that quoted it to the lab paper that first measured it in 1968.</p>
+<p>That chain has two kinds of links. A <strong>primary source</strong> is the original report where a value was first measured. Example: the paper whose authors actually ran the experiment. A <strong>secondary source</strong> re-reports a value it did not measure. Example: a review or textbook that copies the primary paper’s number. A value is only as trustworthy as the primary source at the end of its chain.</p>
+<p><strong>Data quality</strong> is whether a value is fit for <em>your</em> specific use: real, measured rather than guessed, and obtained under the conditions your project needs. Example: a solubility measured at 25°C is high quality for a room-temperature question and the wrong value for a reaction you run at 60°C. A <strong>mischaracterized value</strong> is a real number attached to the wrong conditions or method. Example: a figure a model <em>computed</em> reported as if it were <em>measured</em>, or a 40°C reading cited as the 25°C value.</p>
+<p>You settle both questions with one habit, the <strong>retrieval-verification loop</strong>: <strong>Ask</strong> a tool to surface a value and its source, <strong>Retrieve</strong> the primary source yourself, <strong>Verify</strong> that it exists and reports that value under those conditions, and <strong>Document</strong> where you found it. A citation you have not opened is a lead, not a source, however confident the tool that handed it to you.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="17.3">
 <h2 data-number="17.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">17.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You are studying greener extraction methods and you need one number: how much caffeine dissolves in water at 25°C. You ask an AI assistant, and it answers instantly: “21.7 g/L at 25°C,” with an author, a year, and a real-looking journal.</p>
+<p>You run the loop instead of copying the number. First, <strong>provenance</strong>. You search the exact title of that citation. If it resolves nowhere, the value is orphaned and you drop it. If the paper is real, you check whether it <em>measured</em> the solubility or merely quoted it from an older study, which sends you one link further back toward the primary paper that put caffeine in water and weighed what dissolved.</p>
+<p>Then, <strong>quality</strong>. You open the primary source and read the conditions line. Was it 25°C, your temperature, or 40°C? Was the value measured on a balance or predicted by software? You cross-check the figure against an independent reference, the free NIST Chemistry WebBook (webbook.nist.gov) or PubChem, both of which cite their own sources. When your citation, the primary paper, and the reference database agree on the value and the temperature, the number has earned a place in your project. When they disagree, the disagreement <em>is</em> the finding: the literature is not settled, so you report a range rather than a false point.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="17.4">
 <h2 data-number="17.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">17.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb02 — Research builds on research: verified evidence + real gaps</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb02 — Research builds on research: verified evidence + real gaps</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you run the retrieval-verification loop on a claim from your own project, watch a tidy pile of AI-suggested citations collapse to the few that survive retrieval, and follow citation chains backward and forward into an evidence map whose one empty square is a gap you can defend, because every source around it is one you opened yourself.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="17.5">
 <h2 data-number="17.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">17.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Each prompt is <strong>commit-first</strong>: write down the value or source you already believe, then let the tool disagree with something of yours.</p>
+<p><strong>Locate the primary source (delegable).</strong></p>
+<pre class="text"><code>Act as a chemistry literature assistant. I have this value: [paste value, units,
+conditions]. Name the primary published source that FIRST measured it, with authors,
+year, exact title, journal, and the temperature and method reported. Only list work
+you are confident exists; mark anything uncertain, and flag whether each is a primary
+measurement or a secondary re-report.</code></pre>
+<p>After running, verify (counters <em>confident fabrication</em>): open every citation yourself before you trust it; a source you cannot retrieve is invented until it opens.</p>
+<p><strong>Turn borrowed numbers into a provenance table (delegable).</strong></p>
+<pre class="text"><code>Here are five numbers my project borrows: [paste them]. For each, return a row with
+the value, its stated conditions (temperature, pressure, solvent), the primary source,
+and whether the value was measured or computed. Return it as a table so I can audit
+each row on its own.</code></pre>
+<p>After running, verify (counters <em>silent scope change</em>): read each row’s conditions against the conditions your project actually needs; a value quietly measured at the wrong temperature can be handed to you as if it were yours.</p>
+<p><strong>Red-team the number you like (delegable).</strong></p>
+<pre class="text"><code>I plan to build on this value: [paste value and source]. Act as a hostile reviewer
+and argue it is unreliable for a reaction run at [your conditions]: wrong temperature,
+computed not measured, or copied through a chain of reviews. Do not reassure me.</code></pre>
+<p>After running, verify (counters <em>sycophantic agreement</em>): if the reviewer only praises your number, push back and take its strongest objection to the primary source or your instructor rather than trusting easy approval.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +514,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Three calls stay yours. <strong>Whether a value counts as verified</strong> is settled by a source you opened, not by the tool’s confidence. <strong>Whether its measurement conditions fit your use</strong> is a judgment about your specific reaction, and no lookup makes it. And <strong>how much uncertainty you report</strong> when your sources disagree is yours to state and defend, because your name goes on the claim the number supports.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="17.6">
 <h2 data-number="17.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">17.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You ask for the caffeine solubility and the tool returns “21.7 g/L at 25°C,” with a citation to a real journal. Seven details look right, so it is tempting to paste it in. You open the primary paper instead, and the conditions line reads 40°C, not 25°C. The number is real. The temperature is wrong for your question, and the tool swapped it silently. You catch it two ways. You had written your own expectation first, so a value that sits oddly high for room temperature already looked suspect. Then you read the actual conditions line rather than the tool’s summary of it, and the mismatch is plain. The value goes into your notes as a 40°C figure, and your 25°C question stays open.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="17.7">
 <h2 data-number="17.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">17.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>The key result here is a value with a claimed origin, so verify it with <strong>primary-source reading</strong>: find the paper that first measured the number and read the line that reports it and its conditions, not a summary of that line. Because a borrowed number reaches your poster and your defense, treat it as high-stakes and add a second, independent check, a <strong>benchmark result</strong>: compare the value against a known-good reference such as the NIST Chemistry WebBook. Two independent confirmations that agree guard against trusting a single source that quietly copied its number from somewhere else.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="17.8">
 <h2 data-number="17.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">17.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter sharpens your <strong>M2 verified evidence and contribution map</strong>, the milestone you present at Friday’s studio. Every entry in your M2 source log already needs an author, a year, and where you retrieved it. Add two columns: whether the entry is a primary source or a secondary re-report, and the conditions or scope under which its central value holds. A log built this way lets a skeptic trace any number you use back to the bench where it was made, which is what makes your gap and your contribution line believable.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="17.9">
 <h2 data-number="17.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">17.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In a short paragraph, take one value your project depends on and defend building on it. Name the value and its conditions, name the primary source you traced it to and where you retrieved it, and state the boundary: under what conditions the value no longer applies to your work. Then give your uncertainty in one sentence, including whether any of your sources disagree on the number. If you cannot yet name the primary source behind a value you are using, say so plainly. That admission is a finding about the borrowed number you most need to check before Friday.</p>
 
 
 </section>

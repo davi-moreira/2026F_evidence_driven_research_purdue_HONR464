@@ -456,27 +456,49 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> You decide whether a design that assigns a stimulus at random is answering a <strong>descriptive</strong> question, measuring a latent characteristic that already exists, or a <strong>causal</strong> one, and you defend that classification and name the artifacts your measurement still has to rule out.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">13.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<p>Picture your research advisor stopping at one line of your methods page. “You randomized,” they say, “so you wrote <em>causes</em>. Show me the question first.” Random assignment feels causal by reflex, and that reflex is the trap this chapter defuses. The word that fixes the kind of a question is the <strong>question</strong>, not the <strong>procedure</strong>. Point a coin flip at “what would change if we deployed this?” and you have a causal study; point the same flip at “how much of this property sits in the world right now?” and you have a measurement. Mislabel the second as the first and you overclaim: you promise a lever your evidence never tested, and a careful reader stops trusting the rest of your work.</p>
 </section>
 <section id="the-concept" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">13.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p>Three terms carry the idea. Meet them one at a time.</p>
+<ul>
+<li><strong>Latent characteristic</strong>: a real property you cannot read off directly, so a design has to reveal it. Example: how much a search interface’s <em>position</em> pulls clicks, apart from how good each result is.</li>
+<li><strong>Controlled stimulus</strong>: a version of a prompt, item, or setting that you fix on purpose and assign by chance, so any difference in response pins to the version rather than to who received it. Example: the same result shown in slot 1 for some sessions and slot 5 for others, chosen at random.</li>
+<li><strong>Experiment as a measurement instrument</strong>: using randomly assigned controlled stimuli to expose a latent characteristic and report it as a plain description. The number you report is the <strong>estimand</strong>, the exact quantity the design is built to state, and here it describes the world as it stands.</li>
+</ul>
+<p>A measurement can be confident and still wrong, because the setup itself is one of the ingredients. Two artifacts do most of the damage. A <strong>demand effect</strong> is when the people being measured guess what you are looking for and drift toward it; example: users who notice they are in a study click more carefully than they would at home. An <strong>instrument effect</strong> is when the measuring device or wording moves the reading on its own; example: slot 1 renders a larger thumbnail, so the logger credits position with attention the picture earned. Both threaten <strong>construct validity</strong>, the degree to which your number estimates the concept you meant rather than something adjacent. Randomizing <em>who</em> sees what does nothing about a bias that hits every unit alike, which is why you design these out separately.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="13.3">
 <h2 data-number="13.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">13.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>A music-streaming team wants a latent property of its “Recommended for you” shelf: how much of a track’s play count comes from <em>where it sits</em> versus how well it matches the listener. Nobody prints that number anywhere, so they build an instrument. For a random slice of sessions they insert one fixed probe track, identical audio and identical artwork, and assign its shelf position at random across six slots, then record the play rate by slot. Because the track never changes and the slot is dealt by chance, the spread in play rate across slots isolates the pull of position alone. The estimand is the shelf’s <strong>attention curve</strong>: how much each rank commands, described for these sessions.</p>
+<p>Here is where the decision bites. Inside the study there truly is a causal effect of slot on clicks, but the team’s question was descriptive, and the honest report says so: “for these sessions, slot 1 drew about three times the plays of slot 5, at equal quality.” The forbidden sentence is “promoting tracks to slot 1 will triple their plays,” because that is a causal, deployable claim the design never tested. And before trusting even the descriptive number, the team rules out two artifacts: a demand effect if the probe looks like an ad, and an instrument effect if slot 1’s larger art or a slot-keyed logger inflates the count. The redesign renders every slot identically and logs impressions server-side.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="13.4">
 <h2 data-number="13.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">13.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb06 — Experimental descriptive research</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb06 — Experimental descriptive research</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. In it you read a real survey experiment as a measurement of a settled attitude, recover a hidden prevalence with a list experiment that a direct question cannot reach, and then declare, diagnose, and redesign a measurement experiment so a number built mostly of demand and instrument artifacts falls back onto the construct it was supposed to report.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="13.5">
 <h2 data-number="13.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">13.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own answer first, then delegate. Each prompt below ends with a check you run yourself.</p>
+<pre class="text"><code>Act as a literature scout. List three real, published experiments used to MEASURE
+a latent characteristic (position bias in a ranking interface, a hidden prevalence,
+a preference weight) rather than to test a deployable intervention. For each give
+authors, year, venue, and the single quantity measured, in a table. Only include
+work you are confident exists; mark any row you are unsure about.</code></pre>
+<p>After running, verify: open a database and retrieve each study yourself; any row you cannot find in a minute is a <strong>confident fabrication</strong>, so cut it.</p>
+<pre class="text"><code>Here is code that estimates an interface's attention curve as the difference in
+play rate across randomly assigned slots: [paste]. Name every assumption this
+estimator needs to be valid, and for each, one concrete way it could fail in my
+logs.</code></pre>
+<p>After running, verify: check each assumption against your actual pipeline; an estimator that sounds standard but assumes something your data break is a <strong>plausible-but-wrong method</strong>.</p>
+<pre class="text"><code>Act as a hostile measurement reviewer. Here is my construct and how I measure it:
+[plan]. List every demand effect and instrument effect that could produce my number
+even if the true value were different, and the redesign that rules each one out.</code></pre>
+<p>After running, verify: compare the list against the one artifact you wrote down first; if yours is missing, the tidy output just failed the <strong>illusion of completeness</strong> test, so add it back.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +509,25 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Three calls stay yours. Whether your inquiry is <strong>descriptive or causal</strong>, because the kind lives in your question’s words and no tool can read your intent. Whether the design actually measures <strong>your</strong> construct rather than something adjacent, which is a judgment about meaning, not about code. And which <strong>artifacts</strong> you are willing to stake your name on having ruled out. An AI partner can draft, locate, and attack. You declare and defend.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="13.6">
 <h2 data-number="13.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">13.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You paste your attention-curve result into an AI tool and ask it to write the findings sentence. It returns something fluent: “Moving tracks to the top slot causes a 3x lift in plays, so the team should promote its best matches to slot 1.” It reads like a win, but it is a <strong>silent scope change</strong>: you asked how attention is distributed, and the tool quietly answered a causal, deployable question about what promoting would do. You catch it by laying its sentence beside yours, word for word. Yours asked <em>how much</em> position pulls; its answer asked <em>what to do</em>. The tells are “causes,” “should,” and the imagined “lift” from an intervention you never ran. Reject it, and rewrite the claim bounded to the units you observed.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="13.7">
 <h2 data-number="13.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">13.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify the lab’s key result by <strong>simulation</strong>, the verification-guide method for checking how a procedure behaves rather than a fixed number. Build a toy world where you set the true latent value yourself, run the estimator, and confirm the estimate lands on the value you planted. Then run a <strong>falsification test</strong>: set the true position pull to exactly zero and rerun. An honest instrument returns about zero. If your pipeline instead reports an attention curve where you planted none, that curve is an instrument effect your logging created, not a property of the interface, so it must be designed out before any real number is trusted.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="13.8">
 <h2 data-number="13.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">13.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter is the spine of <strong>milestone M6, your experimental measurement or data-acquisition protocol</strong>. Name the latent characteristic your project must measure, the design that reveals it, and the exact descriptive quantity it reports for named units. Then write the artifact plan: the one demand effect and the one instrument effect you most fear, each with the redesign that guards it. Add the two-sentence boundary that states the descriptive claim you license with its uncertainty and the causal sentence you forbid yourself. Those pieces are what you walk a skeptic through at Friday’s studio, and they feed the abstract that clears its gate there.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="13.9">
 <h2 data-number="13.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">13.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>State the decision this chapter equips and defend it for your own project. Name your latent characteristic and the randomized stimulus that reveals it, then say in one sentence why the inquiry is <strong>descriptive</strong>, a property that already exists, and not <strong>causal</strong>, the effect of an intervention you would deploy. Close with the boundary and the uncertainty: the descriptive claim your design licenses, the worst artifact you have not fully ruled out, and the interval or caveat around your number. A declaration with no boundary and no uncertainty is not yet a defense.</p>
 
 
 </section>

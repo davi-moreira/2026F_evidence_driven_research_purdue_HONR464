@@ -4,51 +4,202 @@ title: "15. Experimental Causal Research"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_experimental_causal_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Decide whether the way treatment was assigned in your
+> study lets you read a plain difference in outcomes as a causal effect, and name
+> exactly which quantity, and for whom, that difference estimates. You confirm the
+> randomization and name the quantity yourself, and you never let a tool declare
+> that your design proves cause.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"Everyone shows me the treated group did better. So did the patients who were
+> healthier to begin with, or more organized, or younger. 'Better after treatment'
+> is not 'the treatment worked.' Show me that chance, not the kind of patient,
+> decided who got treated, and tell me exactly who your number speaks for."*
+> — a **clinical-trial reviewer**, reading a claim that a new reminder improved
+> medication adherence
+
+This is the hardest claim you make in this course, a causal one. A tool can now
+clean your data, run the comparison, and hand you a confident number in seconds.
+That speed is the danger. If you paste back "the treatment worked," you have signed
+your name to a claim you have not earned. The reviewer above does not care how
+fluent the output sounded. She cares how treatment was assigned and who the number
+describes. This chapter gives you the one move that earns the word *because*, and
+the discipline to say who it applies to.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+Start with a **causal question**, a question about what would change if you
+intervened rather than what merely goes together. Example: "does a text reminder
+*raise* the share of patients who refill on time?", not "do patients who got
+reminders refill more?"
+
+For one unit, one patient, write two numbers. The **potential outcome Y(1)** is
+what that unit would show *with* the treatment. Example: whether Ms. R refills on
+time if she gets the texts. The **potential outcome Y(0)** is what the *same* unit
+would show *without* it. Example: whether that same Ms. R refills if she gets
+nothing. The causal effect for her is Y(1) minus Y(0). Now the rule that governs
+the whole field, the **fundamental problem of causal inference**: for any one unit
+you only ever see one of those two numbers. Ms. R was either texted or not, never
+both, so her individual effect is unrecoverable.
+
+So you give up the individual and chase the average. The **average treatment
+effect (ATE)** is the average of Y(1) minus Y(0) across all your units, the typical
+effect rather than any one unit's. Example: on average, the reminder raised on-time
+refills by a few points. One move unlocks an honest estimate of it. **Random
+assignment** lets pure chance, a coin flip, decide which units get treated.
+Example: a computer flips a fair coin for each patient. Chance knows nothing about
+health or organization, so the two groups it builds are alike on average, and the
+untreated group's outcome honestly stands in for what the treated group would have
+done untreated. That is what random assignment defeats: a **confounder**, a third
+trait that pushes on both who gets treated and the outcome. Example: more organized
+patients both refill anyway and are easier to enroll, so a reminder looks effective
+even when it did nothing. Randomizing breaks the link between any trait and who gets
+treated, and that broken link is the entire reason an experiment can say *because*.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You run a clinic and want to know whether a daily text-message reminder raises the
+share of hypertension patients who refill their blood-pressure prescription on
+time. You enroll 800 patients and let a computer flip a fair coin for each: 400 to
+the reminder arm (the treatment), 400 to a no-text control arm.
+
+For Ms. R, Y(1) is whether she refills if she gets the texts, and Y(0) is whether
+she refills if she gets nothing. You will only ever see one. Across all 800, you
+estimate the ATE as the difference in on-time refill rates between the arms. Say the
+reminder arm refills at 71 percent and the control arm at 62 percent, a
+9-percentage-point gap. Because the coin, not the patient's organization, sorted the
+arms, that 9 points is an honest estimate of the reminder's average effect.
+
+Now the honesty test. Suppose the sickest patients in the reminder arm stopped
+answering follow-up and left the study. **Attrition** is units leaving before you
+measure the outcome. Example: the patients whose blood pressure was worst drop out
+of the arm you are studying. When who leaves is tied to the outcome, the patients
+who remain are no longer a fair comparison, and your 9-point gap now describes only
+patients healthy enough to stay, not everyone you enrolled. Attrition has two
+siblings the lab drills. **Noncompliance** is assigned units that never take the
+treatment, like patients who changed numbers and never got a text. **Spillover** is
+treatment reaching the control arm, like a texted patient reminding an untreated
+friend. Each one leaves the coin flip untouched and still changes which quantity
+your number describes. Naming that quantity is the decision this chapter equips.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb08 — Experimental causal research**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb08 — Experimental causal research**. Open it in
+Colab with the badge above and work the cells alongside this chapter. There you
+analyze a real get-out-the-vote field experiment, estimate the effect as a
+difference in means, and put a randomization-inference interval around it. Then you
+watch attrition, noncompliance, and spillover each bend a clean estimate, so you
+learn to name which quantity actually survives.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt below is a checkable job,
+not a request for a verdict.
+
+**Locate the standard tool.**
+
+```python
+Act as a statistics assistant. I ran a two-arm randomized trial and computed a
+plain difference in on-time refill rates between a reminder arm and a control arm.
+Before any code, name the standard way to attach a 95% interval to a difference in
+two proportions, and one resampling alternative, citing where each is documented.
+Only name methods you are confident exist.
+```
+
+After running, verify: open the cited documentation and confirm the method and its
+formula exist as described. Counters *confident fabrication* (an invented method
+name arrives as confidently as a real one).
+
+**List the assumptions to verify.**
+
+```python
+Here is my analysis of a randomized reminder trial: [paste your cell]. List, as a
+table, every assumption my causal reading rests on: that assignment was truly
+random, that no one dropped out in a way tied to the outcome, that the control arm
+got no treatment. For each, say what I would check in my own data to confirm it.
+```
+
+After running, verify: check each listed assumption against your actual design and
+retention numbers before you accept the causal reading. Counters *silent scope
+change* (an association quietly reported as a settled cause).
+
+**Red-team your effect.**
+
+```python
+My claim: "the reminder raised on-time refills by 9 points." Act as a hostile
+clinical-trial reviewer. Name every way dropout, noncompliance, or spillover could
+make this number describe a different group than everyone I enrolled. Do not
+rewrite the claim for me.
+```
+
+After running, verify: if it only praises the design, push back and demand the
+single worst threat, then test it against your retention by arm. Counters
+*sycophantic agreement* (praise that reviews your ego, not your evidence).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three calls never leave your hands. You decide **whether random assignment actually
+happened** in your study, because a tool cannot see how you sorted the arms. You
+decide **which quantity your number estimates and for whom**, the effect for
+everyone enrolled or only the effect among those who stayed. And you decide
+**whether the effect is large enough to act on**, and whether it is even ethical to
+randomize real patients and withhold something from the control arm. You own the
+final sentence, its boundary, and its uncertainty.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste your trial into the tool and it reports, with full confidence, "the
+reminder raised on-time refills by 12 points, and the effect is significant." The
+code runs without a single error. Here is the trap. A third of the reminder arm,
+the patients whose blood pressure was worst, stopped answering follow-up and left
+the study, so the tool computed the gap among the patients who *stayed* and labeled
+it "the effect of the reminder." That is a silent scope change. The number now
+describes only the healthier patients who remained, not everyone you enrolled, and
+dropping the worst cases pushed it up.
+
+You catch it by checking retention by arm, not by re-reading the fluent paragraph.
+When you see the reminder arm lost far more patients than the control arm, and the
+ones it lost were the sickest, you know the 12 points is the effect among stayers. A
+green check is not a correct result. You rewrite the sentence to name the group the
+number actually speaks for.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify the chapter's key result, that the gap is more than chance, with two methods
+from the
+[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+First, **simulation**: re-randomize. Shuffle the treatment labels thousands of
+times as if you re-ran the coin flips under the assumption that the reminder does
+nothing, recompute the gap each time, and see how rarely pure chance produces a gap
+as large as yours. This is **randomization inference**, asking how often chance
+alone would hand you a gap this big if the treatment truly did nothing, and it earns
+you an interval rather than assuming one from a formula. Second, **alternative
+code**: recompute the same difference a second way, filtering each arm by hand and
+subtracting the two refill rates, and confirm you land on the same number. Two
+independent roads to one answer is a verified result. Two roads to two answers means
+your pipeline, not the reminder, is what you measured.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter becomes your **M8 minimum viable analysis**, the first real estimate
+on your own question, which you pitch at this week's Friday studio. Draft its spine:
+the potential outcomes Y(1) and Y(0) for one unit and which one your data will
+observe; the number M8 reports (a difference in means, or your pathway's
+equivalent) and the interval you attach; whether your design is realistically
+powered for the effect you expect; the single threat nearest your design
+(attrition, noncompliance, spillover, or confounding if you are not randomizing);
+and one sentence naming exactly what your estimate means and for whom, plus the
+overclaim you forbid. Those five pieces are what you pitch in 60 seconds to a room
+of skeptics.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend the causal reading of one estimate from your own project.
+Name your treatment and your outcome, and state whether random assignment licenses
+reading your difference as a causal effect. Name the exact quantity your number
+estimates and for whom, for example "the effect among patients who complied," not
+"the effect for everyone." State the boundary, what a clean randomization does *not*
+rescue if attrition, noncompliance, or spillover struck. Close with your
+uncertainty: the width of your interval or the threat you most fear, and the one
+check you would run next to close it.

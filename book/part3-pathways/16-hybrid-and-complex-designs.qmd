@@ -4,51 +4,175 @@ title: "16. Hybrid and Complex Designs"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_anatomy_of_design_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** When your question forces you to stitch several
+> measurements or stages into one answer, decide whether that combined design still
+> behaves as a single aligned whole you can diagnose before you run it, instead of
+> assuming that stacking rigorous-looking pieces automatically produces a rigorous
+> result.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"Do not hand me the headline number. Hand me the error budget: every quantity you
+> measured, how you measured it, and how each one's uncertainty flowed into the final
+> answer. A precise result built on one uncharacterized step is a precise wrong
+> answer."*
+> — an **experimental physicist** reviewing a lab report that claims to have measured a
+> constant
+
+A complex design fails in a quiet way. Each piece looks careful on its own, so the whole
+looks careful too. But an answer assembled from several measurements is only as
+trustworthy as its worst-characterized piece, and the assembly can amplify a small
+mistake into a large one. This chapter gives you the discipline to take such a design
+apart and diagnose the whole before you trust its number.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+Every research design has four parts, and the course names them **MIDA**: the
+**Model** (your written picture of how the world could work), the **Inquiry** (the one
+exact quantity you want from it), the **Data strategy** (how the data come to exist),
+and the **Answer strategy** (how you turn that data into an estimate). The Colab lab
+builds all four from scratch. This chapter takes them somewhere harder.
+
+A **complex, or hybrid, design** is a research design whose four MIDA parts have more
+than one moving piece: several measurements, stages, or sub-questions stitched into a
+single answer. Example: computing a physical constant from two separate measurements,
+each with its own instrument and its own error.
+
+Two ideas decide whether such a design holds together. The first is **alignment**,
+meaning all four parts point at the same single quantity. Complexity breaks it in a
+fresh way: two carefully built sub-measurements can each be fine yet quietly target
+slightly different quantities that never combine into the one you named. The second is
+**error propagation**, meaning each measured input's uncertainty flows into the final
+answer, sometimes amplified. Example: if your answer depends on the *square* of a
+measured time, a 1% error in that time becomes roughly a 2% error in the result.
+
+Keep the lab's two failure words close. **Bias** is a systematic tilt that more data
+does not shrink; **variance** is run-to-run wobble that more data does. Complexity lets
+a small systematic error hide behind an impressively small random one.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You want the local acceleration due to gravity, call it `g`, from a swinging pendulum.
+Your model is the small-angle pendulum, whose period obeys `T = 2π√(L/g)` and
+rearranges to the estimand you will report: `g = 4π²L / T²`. That single formula is a
+complex design in miniature. It stitches two sub-measurements into one answer: the
+length `L` you read off a ruler, and the period `T` you time with a stopwatch.
+
+Watch the anatomy. Timing one swing is noisy, because your reaction time adds a random
+error to each start and stop. So you make a smart data-strategy move: time 50 swings
+and divide by 50. That averaging crushes the *variance*, and your period looks
+beautifully repeatable.
+
+Here is the trap the lab trains you to see. Repetition does nothing for *bias*. Let the
+pendulum swing wide and the small-angle model behind `T = 2π√(L/g)` no longer holds, so
+the period you measure runs systematically longer than the formula assumes. Your data
+strategy and your model have drifted apart, and because `T` is squared, that drift is
+amplified straight into `g`. A value of `g` that reads 9.72 and never wobbles is not a
+correct `g`, only a confidently wrong one. The fix is a redesign of the data strategy,
+swinging at a small amplitude so the model holds again, not one more round of timing.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb03 — The anatomy of a research design: MIDA + declare → diagnose → redesign**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb03 — The anatomy of a research design: MIDA +
+declare → diagnose → redesign**. Open it in Colab with the badge above. There you build
+a small simulated world, **declare** a design as something a computer can run,
+**diagnose** it by simulating it thousands of times to read its bias, variance, and
+power, then **redesign** the one part that most improves it. The lab runs that loop on a
+causal social question; this chapter shows the same anatomy holds when the design is
+complex.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt is a checkable job, not a
+request for a verdict.
+
+**Locate the real rule.**
+
+```text
+Act as a physics-lab assistant. For a simple pendulum timed to estimate g via
+g = 4π²L/T², name two things and cite a real, retrievable source for each: (1) the
+amplitude below which the small-angle approximation holds to about 1%, and (2) the
+standard rule for propagating the uncertainty in L and T into g. Only state values
+you are confident exist.
+```
+After running, verify: open the cited source and confirm the amplitude threshold and the
+propagation rule actually appear there. Counters *confident fabrication* (an invented
+threshold arrives as confidently as a real one).
+
+**Decompose the design into pieces you can check.**
+
+```text
+Here is my combined design: [paste your model, inquiry, and how you measure L and T].
+Break it into sub-designs. For each sub-measurement, name which MIDA part it lives in,
+the one assumption it depends on, and how its error enters the final g. Return a table.
+```
+After running, verify: set the table beside your own decomposition. Any sub-design or
+assumption it skipped is exactly the gap to chase. Counters *illusion of completeness*
+(a tidy table that omits the one uncharacterized step).
+
+**Red-team the combined result.**
+
+```text
+Act as a hostile metrologist. Here is my measured g and its stated uncertainty:
+[paste]. Name the single systematic error that more repetitions can never fix and the
+place my four MIDA parts fail to point at the same quantity. Do not fix it for me.
+```
+After running, verify: if it only praises your precision, push back and demand the one
+worst systematic error. Counters *sycophantic agreement* (praise that reviews your ego,
+not your error budget).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three calls stay yours. You decide **what single quantity your inquiry names** (which
+`g`, under what conditions), **whether each sub-design actually targets that same
+quantity** so the parts align, and **whether to trust a combined number your diagnosis
+says a systematic error dominates**. A tool can propagate the arithmetic, but it cannot
+decide that a precise number is a correct one. That judgment is the whole point of the
+chapter, and it is yours.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste your `L` and `T` into an AI tool and ask for `g`. It returns, with total
+confidence, `g = 9.79 ± 0.02 m/s²`. The number sits right next to the textbook 9.81,
+the interval is tiny, and the code ran without an error. It is wrong. The tool
+propagated only the *random* timing variance, the part you already crushed by timing 50
+swings, and never modeled the *systematic* bias from your wide swing amplitude. That
+tight `± 0.02` describes wobble it could see and stays silent about the tilt it could
+not.
+
+You catch it in two moves. First, check the assumption the number rests on: was the
+amplitude actually small enough for `T = 2π√(L/g)` to hold? Second, run a falsification
+move: redo the timing at a deliberately larger amplitude and watch the "precise" `g`
+drift systematically downward. A quantity that shifts well outside its own stated
+interval had an uncertainty that was never honest. Verify the number, not the tidy
+interval beside it.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify the chapter's key result, that a complex design's precision does not prove it is
+unbiased, with **simulation** from the
+[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+Declare the combined design in code with a known `g` and a planted large-angle bias, run
+it many times, and read the two numbers apart: variance shrinks as you add swings, while
+bias stays exactly where the amplitude put it. Then add a second, independent check,
+**direct calculation**: recompute `g` by hand from your `L` and `T`. Two roads to one
+answer is a verified result; two roads to two answers means the pipeline, not the
+pendulum, is what you measured.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter deepens your **M3 research charter and MIDA declaration**, the three-minute
+declaration you present at Friday's studio. If your own project's design is complex,
+meaning it draws on more than one data source, runs a two-stage answer strategy, or
+blends a descriptive sub-question with a causal one, do not declare it as a single black
+box. Decompose it into its sub-designs, confirm each aligns to your single inquiry, and
+diagnose the whole rather than each piece alone. Bring that decomposition and one named
+redesign to the studio as the diagnosis-and-redesign part of your declaration.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend one complex design. Name the sub-designs it stitches together
+and the single inquiry all of them must align to. State the bounded claim the whole
+design licenses, and say whether one sub-measurement's systematic error dominates the
+result. Close with your uncertainty: the sub-measurement whose bias you have not yet
+ruled out, and the one check you would run next to close it.

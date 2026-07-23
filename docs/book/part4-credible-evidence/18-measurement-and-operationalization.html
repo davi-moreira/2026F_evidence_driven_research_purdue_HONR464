@@ -456,27 +456,55 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> <em>(Forthcoming — one or two sentences naming the exact decision this chapter equips you to make and defend.)</em></p>
+<p><strong>The research decision.</strong> Decide how to turn the abstract idea your question is about into one concrete number you can actually record and defend: name the concept, name the construct that stands for it, and name the indicator you will measure. Then state plainly what that indicator captures and what it leaves out.</p>
 </blockquote>
 <section id="why-this-decision-matters" class="level2" data-number="18.1">
 <h2 data-number="18.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">18.1</span> Why this decision matters</h2>
-<p><em>(Forthcoming.)</em></p>
+<blockquote class="blockquote">
+<p><em>“Before you tell me the cover crop made the soil healthier, tell me exactly what you put a number on. ‘Healthier’ is a word. I need to know which measurement stands behind it, and what that measurement quietly ignores.”</em> — a <strong>field agronomist</strong> reading the first draft of a soil study</p>
+</blockquote>
+<p>Every result you report answers a question about some idea: soil health, drought stress, yield quality. But you never measure the idea. You measure a number that stands in for it, and your finding is only as trustworthy as that swap. If you cannot say which number you recorded and what it misses, the agronomist above has no reason to believe your headline. This chapter gives you the move that makes the swap honest.</p>
 </section>
 <section id="the-concept" class="level2" data-number="18.2">
 <h2 data-number="18.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">18.2</span> The concept</h2>
-<p><em>(Forthcoming — plain-language explanation; every term introduced as bold term → one-sentence definition → concrete example before it is used again.)</em></p>
+<p><strong>Operationalization</strong> is the act of turning an abstract idea into a specific, repeatable measurement procedure. Example: turning “soil health” into “the percent organic matter you get by drying and burning a soil sample.” You do it by climbing down a three-rung ladder, and each rung has a name.</p>
+<ul>
+<li><strong>Concept</strong>: the abstract idea your question is really about. Example: soil health. A concept is rich and fuzzy, and you cannot measure it directly.</li>
+<li><strong>Construct</strong>: the one specific, named facet of the concept you decide to measure. Example: soil organic matter content, the fraction of the soil made of decomposed plant and animal material. You pick a construct because it is concrete enough to attach a procedure to.</li>
+<li><strong>Indicator</strong>: the exact number a procedure produces. Example: percent organic matter by loss-on-ignition, a standard method where you dry a sample, weigh it, burn off the organic material in a furnace, weigh it again, and report the mass lost as a percentage.</li>
+</ul>
+<p>Two questions decide whether the swap holds. <strong>Measurement validity</strong> asks whether your indicator actually captures the construct it claims to. Example: does percent organic matter really stand for soil health, or does it miss compaction and pH? <strong>Measurement reliability</strong> asks whether measuring the same thing twice gives you the same reading. Example: you split one soil sample into two, run both, and check that the numbers agree. An indicator can be reliable and still invalid: a scale reads your weight the same way five times in a row, yet weight is a poor indicator of the construct “fitness.”</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="18.3">
 <h2 data-number="18.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">18.3</span> A worked example</h2>
-<p><em>(Forthcoming — a STEM-relevant worked example.)</em></p>
+<p>You want to answer a real farm question: is the cover-cropped field healthier than the bare field next to it? Watch the ladder do its work.</p>
+<p>You start at the <strong>concept</strong>, soil health, and admit right away that no instrument reads “health.” So you drop to a <strong>construct</strong>. Of the several honest facets of soil health, you choose soil organic matter content, because a higher organic fraction holds water and feeds soil life. Now you name the <strong>indicator</strong>: percent organic matter by loss-on-ignition, measured on ten samples from each field.</p>
+<p>Before you trust a single reading, you check reliability. You split three samples in two and run each half. The paired readings land within a few tenths of a percent, so the procedure is repeatable. Then you check validity by naming what the indicator ignores. Organic matter says nothing about compaction, pH, or the microbes in the soil. It is one true facet, not the whole of soil health.</p>
+<p>That honesty sets your claim boundary. You can defend this: “the cover-cropped plots averaged higher soil organic matter than the bare plots, one facet of soil health, measured reliably by loss-on-ignition.” You cannot defend “the cover crop made the soil healthier,” because you never measured the facets your indicator skips. The number is real, and its meaning stops exactly where the construct stops.</p>
 </section>
 <section id="the-colab-laboratory" class="level2" data-number="18.4">
 <h2 data-number="18.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">18.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb04 — Observational descriptive research</strong>. Open it in Colab with the badge above and work the cells alongside this chapter.</p>
+<p>This chapter’s lab is notebook <strong>nb04 — Observational descriptive research</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you build a concept → construct → indicator ladder for your own key measure, and you watch a single indicator flatten reality firsthand: a survey’s mean of 4.43 sits in a dip between two peaks, so the average describes almost no real respondent. An index is an operationalization, and every operationalization hides what it averages over.</p>
 </section>
 <section id="recommended-ai-prompts" class="level2" data-number="18.5">
 <h2 data-number="18.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">18.5</span> Recommended AI prompts</h2>
-<p><em>(Forthcoming — commit-first, delegable prompt sequences with an “After running, verify” step that names the failure mode it counters.)</em></p>
+<p>Commit your own draft first, then delegate. Each prompt is a checkable job, not a verdict to trust.</p>
+<p><strong>Locate the standard indicators.</strong></p>
+<pre class="text"><code>Act as a soil-science assistant. I want to measure the construct "soil organic
+matter content" for a field study. Name the standard, published indicators
+agronomists use for this construct, with the method name and a real source I can
+open. Only list methods you are confident exist; mark anything uncertain.</code></pre>
+<p>After running, verify: open one named source and confirm the method exists and measures organic matter. Counters <em>confident fabrication</em> (an invented method name arrives as fluently as a real one).</p>
+<p><strong>List the limits, so you can verify them.</strong></p>
+<pre class="text"><code>Here is my operationalization: concept = soil health, construct = organic matter,
+indicator = percent by loss-on-ignition. Return a table of every facet of soil
+health this indicator does NOT capture, one row each, with why it matters.</code></pre>
+<p>After running, verify: check the table against a real soil-health framework you retrieve yourself. Counters <em>illusion of completeness</em> (a tidy list that still omits the facet that most threatens your claim).</p>
+<p><strong>Red-team the swap.</strong></p>
+<pre class="text"><code>Act as a hostile thesis reviewer. Here is my claim: "the cover-cropped field is
+healthier, because it has more organic matter." Name every place my indicator
+fails to support the word "healthier." Do not rewrite the claim for me.</code></pre>
+<p>After running, verify: if it only praises the design, push back and demand the single worst gap. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your measurement).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,25 +515,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>(Forthcoming — the decisions in this chapter that stay yours alone.)</em></p>
+<p>Which <strong>concept</strong> your question is about, which <strong>construct</strong> honestly stands for it, and where your <strong>indicator’s</strong> meaning must stop are yours alone. The tool can list methods and name limitations, but only you decide that organic matter is a fair stand-in for the health facet you actually care about, and only you write the sentence that refuses to call one facet the whole concept. Naming what your number leaves out is the researcher’s job, not the model’s.</p>
 </div>
 </div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="18.6">
 <h2 data-number="18.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">18.6</span> An AI failure case</h2>
-<p><em>(Forthcoming — a realistic case where an AI tool is confidently wrong here, and how you catch it.)</em></p>
+<p>You ask, “operationalize soil health for my field study,” and the tool answers with total confidence: “Measure soil organic matter by loss-on-ignition. That is soil health.” The recipe is clean, correct-sounding, and runs without complaint. Here is the trap. Soil health is a broad concept with several independent facets, and the tool silently narrowed it to one construct, then handed you the indicator as if it were the whole idea. This is a scope change wearing the costume of a complete answer.</p>
+<p>You catch it by reading the answer’s claim next to your question, word for word. Your question was about “soil health”; the answer is about “organic matter,” and those are not the same box. Then you confirm it with a real source: open a recognized soil-health framework and find the several facets the recipe never mentioned. A confident recipe is not a valid operationalization. You verify the construct, not the fluency of the paragraph that proposed it.</p>
 </section>
 <section id="verification-laboratory" class="level2" data-number="18.7">
 <h2 data-number="18.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">18.7</span> Verification laboratory</h2>
-<p><em>(Forthcoming — how to verify the chapter’s key result yourself.)</em></p>
+<p>Verify this chapter’s key result, that your indicator faithfully stands for its construct, with <strong>primary-source reading</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: find the recognized method for your construct, open it, and confirm it measures what you claim before you cite it. Then add a second, independent check for reliability: measure the same thing twice and compare, the way you split one soil sample and confirm the two halves agree. Two roads to one number is a reliable indicator. In the lab, do the same by <strong>direct calculation</strong>: recompute the distribution behind that mean of 4.43 and see how much shape the single number hid.</p>
 </section>
 <section id="project-transfer" class="level2" data-number="18.8">
 <h2 data-number="18.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">18.8</span> Project transfer</h2>
-<p><em>(Forthcoming — how this chapter advances your own research project and its milestone.)</em></p>
+<p>This chapter becomes the measurement rung of your <strong>M4 observational descriptive design audit</strong>, which asks for a measurement ladder and a coverage note. Draft it here: write your own concept → construct → indicator for your project’s key measure, one line each, then name the one facet your indicator most worries you by leaving out. Bring that ladder, plus a one-sentence reliability and validity note, to Friday’s studio. It is the piece that lets your later population claim mean something, because a reach claim about a badly-measured construct reaches nowhere.</p>
 </section>
 <section id="defend-your-decision" class="level2" data-number="18.9">
 <h2 data-number="18.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">18.9</span> Defend your decision</h2>
-<p><em>(Forthcoming — a short prompt asking you to state and defend the decision this chapter equips, with its boundary and uncertainty.)</em></p>
+<p>In four sentences, defend one operationalization from your own project. Name the concept, the construct you chose to stand for it, and the exact indicator you will record. State the bounded claim your indicator licenses, worded to stop where the construct stops. Name what the indicator leaves out and why it is still the honest choice. Close with your uncertainty: the reliability or validity limit you have not yet checked, and the one measurement you would run next to close it.</p>
 
 
 </section>

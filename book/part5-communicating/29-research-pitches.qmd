@@ -4,51 +4,189 @@ title: "29. Research Pitches"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_delivery_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Decide how to turn your finished poster into spoken
+> pitches, each sized to the seconds a listener gives you, so every version
+> compresses the claim for speech without ever inflating it. You choose where the
+> boundary sentence sits, and you refuse to let it move when the adrenaline speeds
+> you up.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"I stop at maybe forty posters in an afternoon. What I remember is not the one
+> with the most data. It is the one whose presenter told me, in one clean breath,
+> exactly what they found and exactly where it stops. The ones who oversold lost me
+> on the second sentence."*
+> — a **skeptical peer** working the room at a research expo
+
+A finished poster is silent. The moment a visitor stops, your voice takes over, and
+speaking is faster than reading, so you compress on the fly. That is where claims
+quietly grow. Under a little pressure, "was associated with" slides into "causes,"
+and "on data it never saw" drops out. The peer above is not testing your data. She is
+testing whether the sentence in your mouth still matches the sentence on your board.
+This chapter gives you a pitch you can say cold, under pressure, that never widens
+the claim your evidence earned.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+A **pitch** is a short, prepared spoken version of your project, built to fit a
+fixed slice of time. Example: the thirty seconds you give a visitor who pauses, and
+the guided tour you give the one who stays, are two pitches of different lengths.
+
+Every pitch shares one skeleton, the **pitch architecture**: the fixed set of beats
+each version moves through, which is hook, claim, evidence, boundary, invitation.
+
+- **Hook**: one sentence a stranger outside your field cares about. Example: "a
+  help desk drowns in tickets every morning and cannot tell which will drag on."
+- **Claim**: your headline, said plainly and inside its limits.
+- **Evidence**: the finding that earns the claim, one spoken sentence at a time.
+- **Boundary sentence**: one sentence naming what the claim does not show. This is
+  the beat pressure will try to drop, so you rehearse it until it is reflex.
+- **Invitation**: a reason to look closer.
+
+The three layers are that one skeleton at three lengths: a **30-second hook** (hook,
+claim, boundary, invitation, with no evidence yet), a **90-second walk** (the hook
+plus two or three evidence beats), and a **full pitch** of three to five minutes.
+Deciding what goes in each length is the choice this chapter equips.
+
+One rule governs all three. **Compression** is a shorter version of a claim that
+keeps its boundary. Example: "on data the model had never seen, it flagged four of
+every five slow tickets" compresses to "on new tickets, it caught most of the slow
+ones." **Inflation** is a version that quietly makes the claim bigger. Example: the
+same finding becomes "my model predicts which tickets will be slow." One lost a
+detail; the other lost the truth. The failure to hunt is the **excited-mouth
+upgrade**: the moment your spoken verb outruns your written one and the boundary
+moves while nobody watches the words. Example: you wrote "is associated with" and
+your mouth says "causes."
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You built a small machine-learning model for a campus help desk. A **held-out set**
+is a slice of your data the model never learned from, kept aside so its score is
+honest. Example: you trained on 4,000 past tickets and tested on 1,000 the model had
+never seen. On that held-out set, when the model flagged a ticket "slow," it was right
+about 78% of the time. That right-when-it-flags rate has a name: **precision** is the
+share of a model's flags that turn out correct. Your poster headline reads: "On
+held-out tickets, the model flagged slow ones with 78% precision."
+
+Now you build the pitch on the architecture.
+
+- **Hook:** "A help desk drowns in tickets every morning and cannot tell which ones
+  will drag on for days."
+- **Claim, compressed for speech:** "On tickets it had never seen, my model flagged
+  the slow ones, and when it raised a flag it was right about three times in four."
+- **Boundary sentence, the beat you rehearse to reflex:** "That number is precision
+  on a held-out slice, not overall accuracy, and the model still misses some slow
+  tickets."
+- **Invitation:** "The surprising part is which tickets fooled it. Want the walk?"
+
+Watch the two ways this goes wrong when you speak it. Drop the words "held-out" and
+you have claimed the model works on any ticket, which your test never showed. Swap
+"precision" for "accuracy" and you have quoted a number your poster does not report.
+Both are the excited-mouth upgrade, and both feel natural because the shorter
+sentence sounds cleaner. The fix is mechanical: mark the boundary sentence and say it
+at every length, even the 30-second one.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb11 — Poster delivery: pitches, uncertainty, difficult questions**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb11 — Poster delivery: pitches, uncertainty, and
+difficult questions**. Open it in Colab with the badge above and work the cells
+alongside this chapter. There you run a pacing calculator that turns a script's word
+count into seconds of speech, so you can size each layer honestly, then draft and
+stress-test your own three pitch layers against the one rule.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own version first, then delegate. Each prompt is a checkable job, not a
+request for a verdict.
+
+**Locate the jargon and translate it.**
+
+```text
+Here is one sentence from my poster: "[paste it]". My headline claim and its
+boundary are: "[paste them]". List every word a curious stranger with no training
+in my field could not decode. Then give two plain rewrites a first-year in any
+major would follow, each keeping my claim exactly as narrow as it is now.
+```
+
+After running, verify: read each rewrite next to your boundary and reject any that
+dropped a qualifier like "held-out" or turned "flagged" into "predicts." Counters
+*silent scope change* (a "plain" rewrite that quietly widens the claim while it
+simplifies).
+
+**List the words that inflate my claim.**
+
+```text
+Here is my 30-second hook: "[paste it]". Here is my poster's boundary sentence:
+"[paste it]". Play a hurried visitor. List every word in the hook that says
+something bigger than the boundary allows. Rewrite nothing; just name the words.
+```
+
+After running, verify: if it flags nothing and calls the hook "strong," push back
+and demand the single worst offender. Counters *sycophantic agreement* (praise
+reviews your ego, not your words).
+
+**Red-team the pitch as a hurried stranger.**
+
+```text
+Play a skeptical conference visitor with thirty seconds of patience, from outside
+my field. Here is my full pitch: "[paste it]". Name the exact sentence where you
+lose interest or stop believing me, and the single place I promise more than I show.
+```
+
+After running, verify: check its answer against a real practice run with a friend,
+and ask it "what is the one thing you left out?" Counters *illusion of completeness*
+(a polished "it's clear" that skips the moment a stranger actually drifts).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three calls stay yours. You decide **which claim your evidence actually supports**,
+**where the claim must stop** (the exact boundary sentence), and **whether a
+compressed sentence still says what the poster says**. A tool can trim words and
+flag jargon. It cannot decide the shorter sentence is still true, and it will not be
+standing at the board when the stranger asks. You say the sentence. You own it.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste your 90-second walk and ask a tool to compress it to a 30-second hook.
+Back comes a crisp, confident line: "My model predicts slow help-desk tickets 78% of
+the time." It reads beautifully, and it is wrong twice. It dropped "held-out," so it
+now claims the model works on any ticket, and it turned precision into a general
+"78% of the time," a number your poster never reports. The sentence is shorter and
+smoother than yours, which is exactly the trap.
+
+You catch it by putting the compressed line next to your poster's boundary sentence
+and reading them word for word. "Predicts ... 78% of the time" does not match
+"precision on a held-out slice." Then you say the line to a friend, who asks, "so
+it's right 78% of the time on any ticket?" That question is the widened claim coming
+back at you. You keep your own boundary sentence and drop the tool's version.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify this chapter's key result, that your compressed pitch still says what your
+poster says, with **peer reasoning** from the
+[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+say your 30-second hook once to a partner from outside your field, then have them
+repeat back, in their own words, your claim and its boundary. If what they repeat is
+bigger than your poster allows, the compression inflated, and the words they added
+tell you where. Add a second, independent check from a different family: run your
+script through the pacing cell in nb11 (**direct calculation** on the word count) to
+confirm it fits the clock without rushing. One check guards the claim, the other
+guards the clock.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter builds the first component of milestone **M11**, your presentation
+package: the three pitch layers plus the poster-walk map that says what your hand
+points at, beat by beat. Draft all three for the poster you already locked, mark the
+boundary sentence in each, and deliver the 30-second hook twice to a partner who
+flags every spoken upgrade. Those flags are your revision list. You drill the whole
+package Friday at the mock symposium, a full rehearsal in a safe room, and M11 is due
+that night.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend one pitch layer you built. Name the layer and the single
+boundary sentence you refuse to drop at any length. State the claim you can make
+aloud, compressed for speech, and show that it still sits inside your poster's
+boundary. Close with your uncertainty: the one word your excited mouth is most likely
+to upgrade under pressure, and the check you will run to catch it.

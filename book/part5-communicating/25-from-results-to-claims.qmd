@@ -4,51 +4,180 @@ title: "25. From Results to Claims"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_poster_criticism_lock_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Decide the exact claim your results license: the one
+> headline sentence you will print on your poster and defend out loud, worded so
+> its verb stays inside your compass position, its uncertainty rides in the same
+> eye-span, and every number and source behind it is backed. You choose the words
+> and you lock them, and you never let a tool talk your claim past its boundary.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"At the health-sciences poster hall I point at one number and ask where it came
+> from and what it lets you say. If the headline reads 'lowers blood pressure' but
+> the study only watched who chose to walk, I stop reading. A claim that outruns
+> its evidence tells me to distrust the whole board."*
+> — a **research-integrity judge** working a poster session
+
+A result is not yet a claim. Your analysis prints a number; your poster asserts a
+sentence. The gap between them is where most posters break, because the sentence
+almost always wants to say more than the number earned. The judge above is not
+testing your statistics. She is testing whether the words on your board match the
+evidence underneath them. This chapter is the habit that closes that gap before a
+stranger finds it open.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+Start with the two words this chapter lives between. A **result** is a number your
+analysis produced, such as a difference of 6 points between two group averages. A
+**claim** is a sentence you assert and will defend, such as "the walking group had
+lower blood pressure." Turning the first into the second is a decision, not a
+formatting step, because you choose how much the sentence is allowed to say.
+
+Three ideas govern that choice.
+
+Your **compass position** is the kind and reach of the question your project
+answered: did you describe the cases you observed, or establish that one thing
+caused another? Example: if you watched who already chose to walk, you ran a
+descriptive comparison, not a causal test. Your **claim boundary** is the line
+between what your evidence licenses and what it does not, and it lives in the
+headline verb. Example: an observational project may write "was associated with
+lower," never "lowered." The verb is where a claim quietly crosses the line.
+
+The last idea is where the claim's honesty becomes visible. **Uncertainty in the
+same eye-span** means the interval or caveat sits right beside the claim, not in a
+footnote. Example: "about 6 points lower (95% interval: 1 to 11)" printed under the
+headline, so a reader meets the doubt at the same moment as the number. A bound a
+reader has to hunt for is a bound doing hidden work.
+
+One more habit backs all of this. **Traceability** means every number on the poster
+walks back to the exact notebook cell that produced it. Example: the 6-point gap on
+your board points to the one line of code that computed it, and you can show that
+line when a judge asks. A number you cannot trace cannot go up.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+An honors student in nursing runs a small community pilot. Forty volunteers wear a
+step tracker for a month. Twenty walk at least 8,000 steps a day; twenty do not.
+Their average resting systolic blood pressure comes out at 128 in the active group
+and 134 in the less-active group, a 6-point gap.
+
+The result is that 6-point gap. The claim is the decision. The draft headline reads
+"Walking LOWERS blood pressure," drawn as two bars on an axis that starts at 125,
+which makes the small gap look like a cliff, with the two groups told apart by red
+and green alone.
+
+Walk the decision. The compass position is descriptive: nobody was assigned to
+walk, so the active group may differ in age, diet, or baseline health. That means
+the verb "lowers" claims a crossing the design never paid for, and the honest verb
+is "was associated with lower." The truncated axis has to drop to the full scale,
+so the 6-point gap reads as the modest difference it is. The 95% interval runs
+roughly 1 to 11 points, wide enough that the honest headline must carry it in the
+same eye-span. And each bar gets a direct value label, so a color-blind or
+screen-reader reader receives the number, not just the hue.
+
+The locked claim: "In this sample, more-active volunteers averaged about 6 points
+lower resting systolic blood pressure (95% interval: 1 to 11); this is an observed
+association, not evidence that walking caused the drop." Same result, a claim that
+survives the judge.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb10 — Poster criticism + final poster lock**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb10 — Poster criticism + final poster lock**. Open
+it in Colab with the badge above and work the cells alongside this chapter. There
+you run a gallery-walk audit on one headline figure drawn two ways from the same
+numbers, rehearse a three-lens oral defense, and lock every number to its cell and
+every citation to a real source before the poster becomes final.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt is a checkable job, never
+a request for a verdict.
+
+**Locate the real source behind a health claim.**
+
+```text
+Act as a literature assistant in public health. My poster claims regular walking
+is linked to lower blood pressure. Name up to three peer-reviewed sources or
+clinical guidelines that support this, with title, authors, year, and venue.
+Only list work you are confident exists; mark anything uncertain.
+```
+After running, verify: open each source in a library database and confirm it exists
+and says what you claim. Counters *confident fabrication* (an invented citation
+arrives as confidently as a real one).
+
+**Turn your result into a checklist of hard questions.**
+
+```text
+Here is my headline claim: "[paste it]" and my compass position: "descriptive,
+observational." Generate the eight hardest questions a skeptic would ask, and mark
+which single audit each one belongs to: claim boundary, figure honesty,
+uncertainty, or accessibility.
+```
+After running, verify: map every question to an audit and check it against your
+printed numbers; a missing audit is a gap the tidy list hid. Counters *illusion of
+completeness* (a long, organized list that skips the one flaw that matters most).
+
+**Red-team the verb.**
+
+```text
+Here is my written headline: "[paste it]." Act as a hostile reviewer and find every
+place the verb claims more than an observational design licenses. Do not rewrite it
+for me; list the exact words so I can fix them myself.
+```
+After running, verify: read each flagged word against your compass position and keep
+only the objections your design actually forces. Counters *silent scope change* (a
+claim quietly upgraded from association to cause).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+Three calls stay yours. You choose the **verb in your headline**, the one word that
+fixes your claim boundary. You make the **defend-or-concede call** when a question
+pushes on that boundary out loud. And you make the **lock decision**: the judgment
+that every number is traced, every citation resolves, and the poster is ready to be
+final. A tool can draft questions and hunt sources, but it cannot decide what your
+evidence licenses or when your claim is earned.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You paste your honest headline into a tool and ask it to make it "punchier for a
+poster." It returns, with total confidence, "Walking Reduces Blood Pressure by 6
+Points." It reads beautifully and it is wrong. The tool upgraded your verb from an
+association to a cause and dropped your interval, a silent scope change dressed up
+as a copy edit.
+
+You catch it by comparing the new verb to your compass position. Your study never
+assigned anyone to walk, so "reduces" claims a crossing you did not pay for. You
+also notice the "6 points" now stands alone with no interval beside it. You revert
+to "was associated with about 6 points lower (95% interval: 1 to 11)." The fluent
+rewrite reviewed your poster's style; only you can review its claim.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify this chapter's key result, the number behind the claim, with **alternative
+code** from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recompute the group means and the gap a second way and confirm you get the same 6
+points. Filter each group by hand and subtract, rather than trusting a single
+grouped call, then recompute the interval and check it still runs about 1 to 11.
+Two roads to one answer verifies the number. Then verify the verb with a **causal
+diagram**: sketch what could cause both walking and lower blood pressure, such as
+age or baseline fitness, and if that common cause is open, the honest verb stays
+"associated with," not "lowered."
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter is the engine of your **M10 final poster lock**. Take the one headline
+sentence your project's results produced and run it through the decision here: fix
+the verb to your compass position, print the interval in the same eye-span, and
+trace every number on the board back to its cell. Cut any citation you cannot open
+yourself, and write the one-line AI-use disclosure that records what a tool did and
+how you checked it. The claim that survives this pass is the one you carry into M11
+and say out loud at the Expo.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend your locked headline. State the claim exactly as it will
+appear on the poster, and name the compass position whose boundary its verb
+respects. Give the uncertainty that rides beside it, the interval or caveat a reader
+meets at the same moment as the number. Close with the one crossing your design did
+not license, the sentence a stranger might try to push you into that you will
+decline to say.

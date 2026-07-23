@@ -4,51 +4,183 @@ title: "35. Managing Multiple AI Agents"
 
 [![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_managing_ai_agents_student.ipynb){target="_blank"}
 
-> **The research decision.** *(Forthcoming — one or two sentences naming the exact
-> decision this chapter equips you to make and defend.)*
+> **The research decision.** Before you turn several AI roles loose on one piece of
+> your research, decide how to split the work into scoped jobs and wire them in an
+> order that no early mistake can slip past. You own the split and the order, and you
+> keep one step in the chain that no role is allowed to take.
 
 ## Why this decision matters
 
-*(Forthcoming.)*
+> *"Bring me a chapter, not a pile of AI output. I want to know which part each tool
+> touched, what you told it to do, and how you checked it. If you cannot tell me
+> that, you did not write the chapter."*
+> — your **thesis advisor**, reading the draft you will defend this week
+
+By now one AI assistant can draft, cite, critique, and polish in a single breath. The
+temptation is to open four of them at once and feel four times as safe. You are not.
+Four roles reading the same draft with the same instructions tend to miss the same
+thing and agree loudly about it. The advisor above does not want a louder chorus. She
+wants to see that you broke the job into pieces, put those pieces in a sane order, and
+stayed the one person who decided what the chapter claims. This chapter gives you that
+management skill.
 
 ## The concept
 
-*(Forthcoming — plain-language explanation; every term introduced as bold term →
-one-sentence definition → concrete example before it is used again.)*
+The move that turns a crowd of AI roles into a workflow you can defend is **task
+decomposition**: breaking one large job into smaller subtasks, each with a single
+clear owner. Example: instead of asking a tool to "improve my chapter," you split the
+work into check the design, check the citations, and tighten the prose. Each piece
+now has a pass-or-fail you can judge.
+
+Each piece becomes a **scoped role**: an AI job narrow enough to state in one sentence
+and check in one pass. Example: "flag every sentence in my results section that claims
+more than my sample can support." A scoped role has a clear finish line. "Make it
+better" does not.
+
+The backbone that keeps roles honest is the **worker-critic pair**: one role produces
+something and a second, separate role attacks what the first produced. Example: a
+worker drafts your limitations paragraph, then a critic hunts for the limitation the
+worker left out. A worker alone is confident about its own quality, which is exactly
+the blind spot it cannot see from the inside.
+
+Wiring the roles means deciding what waits on what. A **dependency** is a required
+order between two subtasks, where one needs the other's output before it can start.
+Example: a critic cannot attack a draft the worker has not written yet. Roles with no
+dependency between them run at the same time. Roles joined by one run in order.
+
+The chain of dependencies you cannot shorten is the **critical path**: the longest run
+of must-follow-must steps in your workflow. Example: worker drafts, then critic
+attacks, then you integrate is three steps that cannot collapse into fewer. That chain
+sets the minimum number of rounds your workflow takes. Reading the critical path off
+your own design, instead of guessing it, is the skill this chapter drills.
 
 ## A worked example
 
-*(Forthcoming — a STEM-relevant worked example.)*
+You are finishing a chapter on a small health study: whether a ten-minute post-lunch
+walk is associated with a lower afternoon resting heart rate among the residents on
+your dorm floor. You have a draft and four AI roles waiting.
+
+**Split.** You break the review into scoped roles. A **clarity reviewer** checks
+whether each sentence reads plainly. A **methodologist** checks whether "associated
+with" is the honest word for what your data can show. A **citation-checker** confirms
+the two heart-rate studies you cite are real and say what you claim. An **editor**
+tightens the prose. Each role owns one sentence-long job.
+
+**Wire.** The worker drafts your limitations paragraph. The three critics can all read
+that draft at the same moment, because none needs another's output. That is three
+roles running in parallel. Then you integrate their notes, and the editor tightens
+what survives. Trace the arrows: worker to a critic is one, critic to you is two, you
+to editor is three. Your critical path is three arrows deep, and it runs three critics
+at its widest.
+
+**Keep one step human.** The integrate step is yours. When the methodologist says your
+walk-and-heart-rate result is only an association and the clarity reviewer loved the
+sentence that called it an effect, no role settles that clash. You do. The decision
+about what the chapter claims never enters the workflow as a delegated task.
+
+The tools drafted, flagged, and polished. You split the job, set the order, and owned
+the claim that carries your name.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb15 — Managing multiple AI agents + the final defense**. Open it in Colab with the
-badge above and work the cells alongside this chapter.
+This chapter's lab is notebook **nb15 — Managing multiple AI agents + the final
+defense**. Open it in Colab with the badge above and work the cells alongside this
+chapter. There you build the worker-critic workflow as a directed graph, read its
+critical-path depth and parallel width straight off the code, and watch the path grow
+by one round the moment you make a critic wait on another critic. Then you decompose
+your own chapter into scoped roles and defend the wiring you chose.
 
 ## Recommended AI prompts
 
-*(Forthcoming — commit-first, delegable prompt sequences with an "After running,
-verify" step that names the failure mode it counters.)*
+Commit your own answer first, then delegate. Each prompt is a checkable job, not a
+request for a verdict.
+
+**Decompose, then hand back the human step.**
+
+```text
+I am splitting the review of my health chapter into scoped AI roles. Here are my
+section headings and one line on each: [paste them]. Propose a table with one row
+per role: the role's one-sentence scoped task, the draft or input it needs, whether
+it can run in parallel or must wait on another role, and the single decision it must
+hand back to me.
+```
+After running, verify: check that every "hand back to me" cell names a real
+never-delegate decision, not one invented to look cautious. Counters *illusion of
+completeness* (a tidy role table that reads thorough while omitting the check that
+matters).
+
+**Confirm the wiring has no early error slipping past.**
+
+```text
+Here is my proposed workflow as a list of "role A feeds role B" arrows: [paste them].
+For each role, tell me exactly what input it depends on, and name any role I have
+scheduled to start before the input it needs actually exists.
+```
+After running, verify: draw the arrows yourself and trace whether each role's input
+exists when it starts. Counters *plausible-but-wrong-method* (a confident wiring that
+lets a role run before its input is ready).
+
+**Red-team the decomposition.**
+
+```text
+Act as a hostile reviewer of my AI workflow, not of my chapter. Name every place an
+early mistake in one role could flow downstream unchecked, and every role whose job
+overlaps another so much that it adds no independent check. Do not rewrite my plan.
+```
+After running, verify: if it only praises your plan, push back and demand the single
+worst wiring flaw. Counters *sycophantic agreement* (praise that reviews your ego,
+not your workflow).
 
 ::: {.callout-important title="Do not delegate"}
-*(Forthcoming — the decisions in this chapter that stay yours alone.)*
+The split and the order can be informed by a tool, but three calls stay yours alone.
+You decide **which jobs are worth a separate role** and which just multiply output you
+cannot supervise. You decide **the order**, so that no role settles a question a role
+upstream of it should have answered first. And you keep **the integrate step** human:
+when two roles disagree about what your chapter claims, you make that call in your own
+words. A workflow that hands the claim to a tool is not a workflow you can defend.
 :::
 
 ## An AI failure case
 
-*(Forthcoming — a realistic case where an AI tool is confidently wrong here, and
-how you catch it.)*
+You ask a tool to design your multi-agent workflow, and it returns a confident,
+well-formatted plan: run the worker, the methodologist, the skeptic, and the editor
+all in parallel to "save rounds." The plan runs in your head without a hitch. Here is
+the trap. The editor and the skeptic have nothing to read yet, because the worker has
+not drafted anything. The tool scheduled three roles to start before the input they
+depend on exists, and dressed it up as efficiency.
+
+You catch it by drawing the arrows and asking one question at each role: does this
+role's input exist at the moment it starts? The editor's input is the integrated
+draft, which does not exist until the end, so "editor in parallel with worker" is
+impossible. Redrawn honestly, the plan is a critical path three arrows deep, not one.
+A green, tidy plan is not a valid one. You check the dependencies, not the confidence.
 
 ## Verification laboratory
 
-*(Forthcoming — how to verify the chapter's key result yourself.)*
+Verify this chapter's key number, the critical-path depth, with **alternative code**
+from the [verification
+guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recompute the same quantity a different way and compare. The notebook computes the
+depth with a graph function. You confirm it by hand: write out every role, draw each
+"feeds" arrow, and trace the longest unbroken chain from start to finish, counting as
+you go. If your hand count matches the code, the depth is verified. If it does not,
+the wiring you drew and the wiring the code built are two different workflows, and
+that disagreement is the finding worth chasing.
 
 ## Project transfer
 
-*(Forthcoming — how this chapter advances your own research project and its
-milestone.)*
+This chapter builds the first piece of **M15**, your final research chapter and
+AI-management portfolio. Take one real section of your own project, your methods, your
+results, or your limitations, and write down its decomposition: the scoped roles you
+will run, which run in parallel and which must wait, and the one node you keep human.
+Bring that decomposition to Friday's studio as the opening move of your portfolio. It
+is the evidence that you ran the AI team rather than letting the team run you.
 
 ## Defend your decision
 
-*(Forthcoming — a short prompt asking you to state and defend the decision this
-chapter equips, with its boundary and uncertainty.)*
+In four sentences, defend the workflow you designed for one section of your chapter.
+Name the scoped roles you chose and the order you wired them in. State the one early
+error your ordering stops from flowing downstream, and name the step you kept human
+and why no role can take it. Close with the boundary: one place your wiring could still
+let a shared mistake through, and the independent check you would run before you trust
+the roles' agreement.
