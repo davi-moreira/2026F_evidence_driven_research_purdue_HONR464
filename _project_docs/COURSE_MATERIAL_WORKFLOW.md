@@ -1,15 +1,21 @@
-> ⚠️ **SEEDED FROM MGMT474 — NOT YET ADAPTED FOR HONR 46400.**
-> This pipeline still assumes ML notebooks, recorded micro-videos, the CV-first audit,
-> and references deleted files (`audit_cv_first.py`, `MGMT47400_Online4Week_Plan`).
-> **Do not follow it verbatim.** For an in-person MWF research course the video/NotebookLM
-> phases collapse and the CV-first gate is gone. Adapt during curriculum work — see
-> `NEW_COURSE_SETUP.md` and the "Adapt seeded `_project_docs`" task on the course board.
+# Course Material Production Workflow (per week)
 
-# Course Material Production Workflow (per notebook)
+The end-to-end pipeline for producing **one week's unit** of HONR 46400: the topic
+notebook (`nbNN`, one per week, `nb00`–`nb15`), its milestone brief, its session
+guide, and the schedule rows that place it on the calendar. It generalizes the
+sequence used across the v2 build (DECISIONS.md D17–D21) and is run once per week.
 
-The end-to-end pipeline for producing **one notebook's full set of course materials**: the Jupyter notebook, the recorded videos, the Brightspace page, the NotebookLM concept videos, and the quizzes. It generalizes the sequence used to build **NB19** and refined across NB01–NB18. Run it once per notebook (`nbNN`).
+> This doc **sequences the whole pipeline**. The behavior-changing *quality gates*
+> for each step — Instructor-First editing, the voice rule, evidence-integrity,
+> render + commit — live in `CLAUDE.md`; this doc points to them, it does not
+> restate them.
 
-> This doc **sequences the whole pipeline**. The behavior-changing *quality gates* for each step (instructor-first editing, the voice check, the CV-first audit, render + commit) live in `CLAUDE.md` — this doc points to them, it does not restate them.
+This is an **in-person MWF research course**, not the MGMT474 online ML course this
+folder was seeded from. There are no recorded videos, no NotebookLM concept clips,
+no auto-graded MC banks in the default path, and no CV-first / test-set machinery.
+The unit of production is the **week**, and its downstream artifacts are the
+**session guide** (how the instructor runs the room) and the **milestone brief**
+(what the students build).
 
 ---
 
@@ -17,15 +23,22 @@ The end-to-end pipeline for producing **one notebook's full set of course materi
 
 | Artifact | Path | Git |
 |---|---|---|
-| Instructor notebook (source of truth) | `notebooks/nbNN_*_instructor.ipynb` | ignored (local) |
-| **Student notebook (the deliverable)** | `notebooks/nbNN_*_student.ipynb` | **tracked / public** |
-| Video lecture guide | `video_guides/NN_video_lecture_guide.md` | ignored |
-| Brightspace page | `brightspace/NN_*.md` | ignored |
-| NotebookLM source + splits | `_notebook_lm/nbNN_*_instructor.md`, `…_vN.md` | ignored |
-| Quiz blueprint + CSVs | `_quizzes/2026Summer/quiz_blueprint_nbNN.md`, `quiz_nbNN_vN.csv` | ignored |
-| Recorded / edited videos | external (`*.mp4` are gitignored) | ignored |
+| Cell source (canonical for editing) | `_production_kit/nb_sources/nbNN_<slug>.py` | ignored (local) |
+| Instructor notebook (built from source) | `notebooks/instructor/nbNN_<slug>_instructor.ipynb` | ignored (local) |
+| **Student notebook (the deliverable)** | `notebooks/student/nbNN_<slug>_student.ipynb` | **tracked / public** |
+| Datasets + downloadable bundle | `notebooks/data/…`, `notebooks/data/honr46400_datasets.zip` | tracked |
+| Session guide | `session_guides/NN_session_guide.md` | ignored (generator tracked) |
+| Milestone brief | `_research_project/2026Fall/milestone_NN_<slug>.md` | tracked |
+| Schedule data (per meeting, incl. SRL fields) | `scripts/schedule_data/partN.py` | tracked |
+| Meeting schedule (generated) | `planning/MEETING_SCHEDULE.{csv,md}` | tracked |
+| Public schedule page (generated) | `schedule.qmd` → `docs/` | tracked |
+| Instructor tab (private-repo badges, encrypted) | `instructor.qmd` → `docs/instructor.html` | tracked (ciphertext only) |
 
-Only the **student notebook** (plus the rendered `docs/`, `schedule.qmd`, and the planning docs) is public. Everything else is instructor-facing and local-only.
+Only the **student notebook**, the **datasets**, the **milestone briefs**, the
+**planning docs**, and the **rendered `docs/`** are public. The cell source,
+instructor notebooks, and session guides are instructor-facing and local-only
+(gitignored); instructor notebooks reach the instructor via the **private repo**
+(Phase E), never the public one.
 
 ---
 
@@ -33,71 +46,164 @@ Only the **student notebook** (plus the rendered `docs/`, `schedule.qmd`, and th
 
 ### Phase A — Notebook (the source of truth)
 
-**A1. Develop the notebook.** Edit `nbNN_*_instructor.ipynb` **first**, then generate the student copy (delete every `INSTRUCTOR SOLUTION` cell, fix the Colab badge). Apply the narrative-polish + voice rules, test in Colab (*Run all*), then run the voice-check grep and (nb09+) the CV-first audit, `quarto render`, and commit the **student** notebook + `docs/` and push.
-*Gates: CLAUDE.md → Instructor-First Editing, Voice & Audience, CV-First, Commit + Render.*
+**A1. Edit the cell source FIRST.** Never edit a `notebooks/student/*.ipynb` or a
+`notebooks/instructor/*.ipynb` directly. All authoring happens in the gitignored
+`_production_kit/nb_sources/nbNN_<slug>.py`, which exports `CELLS: list[(kind,
+source)]`. Solutions live here as `INSTRUCTOR SOLUTION` cells; the student file is
+a mechanical, answer-stripped copy of the built instructor file.
+*Gate: CLAUDE.md → Instructor-First Notebook Editing.*
 
-The instructor notebook is the spine of every downstream artifact: the videos follow its sections, the Brightspace page summarizes them, the NotebookLM markdown is generated from it, and the quizzes are written from it.
+Every topic notebook must carry the blocks the template and the v2 rules require:
 
-### Phase B — Videos
+- the **Inquiry & Claim Boundary** block — the compass position (kind × reach) with
+  its PERMITS / NOT rows (CLAUDE.md → Inquiry-Declaration Justification);
+- an **AI Research Ledger** entry block — task delegated · tool · prompt · output
+  summary · decision · verification method · remaining concern · responsible person
+  (DECISIONS.md D21); every embedded Gemini prompt ends with an
+  **"After running, verify:"** habit;
+- a **Sources & Provenance** section with real, retrievable citations only
+  (CLAUDE.md → Evidence-Integrity), and the setup discipline `SEED = 464`, no
+  seaborn.
 
-**B1. Record the video lecture** — one segment per planned section range (a segment ≈ one "Video N").
-**B2. Edit the videos.** The **edited videos are the source of truth for the final split**: their count and boundaries may differ from the original plan, and the Brightspace page, the NotebookLM splits, and the quizzes must all match the edited reality.
+**A2. Build the notebook.** One command does the whole chain:
 
-### Phase C — Brightspace page
+```bash
+.venv/bin/python scripts/nbbuild.py nbNN
+```
 
-**C1. Create the Brightspace page** (`brightspace/NN_*.md`) following the established pattern (the canonical pages 01–15; pick the closest analog by notebook type — content notebook vs. milestone walkthrough). The page's **Videos** section is where each segment's range is declared: `### Video N [Section X–Y]`, with two placeholders per segment when applicable (a **Topic AI Video** concept clip + a **Notebook Video** walkthrough).
+`nbbuild.py` writes `notebooks/instructor/nbNN_<slug>_instructor.ipynb` from the
+source, **executes it end-to-end with nbclient** (kernel = repo `.venv`, cwd = repo
+root, 300 s/cell — any raised error fails the build), **strips every `INSTRUCTOR
+SOLUTION` cell** to generate the student file, runs `validate_notebooks.py` on the
+pair, and refreshes the `schedule.qmd` badges. A `PostToolUse` hook additionally
+runs `voice_lint_notebooks.py` whenever a student notebook is written.
 
-**C2. Lock the video splits to the edited videos.** Set the page's video count and section ranges to match the **actual recorded/edited** videos (e.g., NB17 became 2 videos, not the planned 3). **This is the lock point** — every downstream artifact follows these ranges.
+**A3. Run the evidence gate.** Before the notebook is considered done:
 
-**C3. Generate per-video titles + descriptions.** Paste the developed notebook into an LLM (ChatGPT) and run the prompt below over a section range (fill in the boundary), then paste the result into the page's Video sections.
+```bash
+.venv/bin/python scripts/audit_sources.py   # URL allowlist + verified-citation registry + fake-citation blocklist
+```
 
-> **Prompt (verbatim — fill in the section boundary):**
-> *"provide me a summary and description from the start to before Section 8 as if it was a video: a very short 2-3 sentence summary, a paragraph for course documentation + provide me a short title for each of the videos."*
+### Phase B — Schedule (only if sequencing changed)
 
-Collect, per video: the **short title**, the **2–3 sentence summary**, and the **documentation paragraph**.
+Skip this phase if the week's placement, driving questions, SRL assignment, or
+milestone mapping did not change.
 
-### Phase D — NotebookLM concept videos
+**B1. Edit the meeting data** in `scripts/schedule_data/partN.py`. This is where each
+Mon/Wed lecture carries its **`srl_slot`** (the Student Research Lead's rotation
+seat A–E) and **`srl_focus`** (that lecture's Socratic puzzle) — the flipped-classroom
+fields from D18. Fridays are studios and async meetings are self-contained; both
+leave the SRL fields empty (they are in `OPTIONAL_EMPTY`).
 
-**D1. Generate the NotebookLM source, then split it.** The full `_notebook_lm/nbNN_*_instructor.md` is produced automatically by the `PostToolUse` hook on any instructor-notebook edit (or run `bash scripts/sync_instructor_md.sh`). Then **split it into per-video files** (`…_vN.md`) whose ranges match the Brightspace **Videos** section locked in **C2**. Keep **both** the full file and the split files in `_notebook_lm/`. *(Done for NB19.)*
+**B2. If the calendar backbone itself moved** (a date, day, or modality changed),
+regenerate the verified backbone first — `build_meeting_schedule.py` validates
+against it and will refuse to run on a mismatch:
 
-**D2. Generate the AI concept videos in NotebookLM** from the split files — one per segment. These become the **Topic AI Video** clips referenced on the Brightspace page.
+```bash
+python3 scripts/validate_calendar.py --emit-csv   # (re)write planning/CALENDAR_BACKBONE.csv
+```
 
-### Phase E — Assessment
+**B3. Rebuild the meeting schedule** (this is a **gate**, not just a generator):
 
-**E1. Generate the quizzes.** Follow `_quizzes/2026Summer/quiz_generation_plan.md`: first the per-notebook **blueprint** (`quiz_blueprint_nbNN.md`) covering all video splits, then the per-video **CSVs** (`quiz_nbNN_vN.csv`), byte-compatible with `_quizzes/2026Summer/sample_quiz.csv`. The blueprint is sourced from the **split video md files** (Phase D), so **E follows D**. *(Done for NB19.)*
+```bash
+python3 scripts/build_meeting_schedule.py         # writes MEETING_SCHEDULE.{csv,md}; non-zero exit on any invariant break
+```
 
-**E2. Run the answer-length gate.** Before importing ANY quiz or exam CSV to Brightspace: `python scripts/audit_answer_length.py --file <csv>` must print PASS (no option-length cue to the correct answer — see the MC Option-Length Parity rule in `CLAUDE.md` and the spec in `scripts/_distractor_rewrite_instructions.md`). A bank that FAILs does not ship.
+### Phase C — Session guide
 
-### Phase F — Sync the rest of the course
+Regenerate the instructor's run-of-show from the schedule (never hand-write it):
 
-Once the notebook's materials are final, propagate the change:
+```bash
+python3 scripts/build_session_guides.py
+```
 
-- **Video guide** (`video_guides/NN_video_lecture_guide.md`) — keep cell refs, the section map, and the Suggested Video Structure in sync; run `python scripts/voice_check_guides.py`.
-- **Schedule** (`schedule.qmd` **and** the syllabus `_syllabus/2026Summer/…_schedule.docx`) — set the day's **video count to the final segment count** (count "Video N" segments, not clips), then `quarto render` and commit `docs/`.
-- **Planning docs** (`_project_docs/MGMT47400_Online4Week_Plan_2026Summer.md`, `_project_docs/claude_course_plan.md`) — update the sequencing rationale if sections, tools, or dependencies changed.
+Guides are gitignored but the generator is tracked, so they are always reproducible.
+Sessions are labeled by kind — "Lecture i of N", "Studio Friday", "Async module" —
+with **no dates and no meeting numbers** (CLAUDE.md → Lecture Labels, Never Dates).
+
+### Phase D — Milestone brief
+
+**D1. Author/update the brief** at `_research_project/2026Fall/milestone_NN_<slug>.md`.
+Milestones M0–M15 pair one-to-one with the weekly notebooks; the brief is what the
+Friday studio kicks off and what the student submits into the Research Project
+Dossier (with a cumulative AI Research Ledger appended, D21).
+
+**D2. Validate the milestone system:**
+
+```bash
+python3 scripts/validate_milestones.py            # chain in PROJECT_MILESTONES.md vs. schedule + backbone; fixed anchors + due-date uniqueness
+```
+
+**D3. Replicate to Brightspace manually.** The brief is the source of truth; the
+Brightspace assignment page is hand-copied from it. There is no generator for the
+LMS side — keep the brief authoritative and the Brightspace page a faithful copy.
+
+### Phase E — Sync instructor material, then publish
+
+**E1. Push instructor material to the private repo** (the Instructor tab's backing
+store):
+
+```bash
+bash scripts/sync_instructor_repo.sh              # notebooks/instructor/ + session_guides/ + notebooks/data/ → private repo
+```
+
+**E2. If a dataset changed,** regenerate the downloadable bundle before rendering:
+
+```bash
+.venv/bin/python scripts/make_dataset_zip.py      # rebuild notebooks/data/honr46400_datasets.zip, then commit it
+```
+
+**E3. Render and publish** (CLAUDE.md → Commit AND Render Webpage — the project's
+most common mistake is skipping the render):
+
+```bash
+git add notebooks/student/nbNN_*_student.ipynb <changed .qmd / schedule data / briefs>
+git commit -m "feat: ..."
+/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto render
+git add docs/ && git commit -m "build: Render Quarto site"
+git push origin main
+```
+
+The render's `post-render` step runs `protect_instructor_page.py`, which encrypts
+`docs/instructor.html` client-side (password `eureka`). Never commit an unencrypted
+instructor page — always publish through `quarto render`, never by hand-editing
+`docs/`.
+
+---
+
+## The validator battery (what gates what)
+
+| Script | Guards | When it runs |
+|---|---|---|
+| `validate_calendar.py` | the 43-meeting backbone (41 in-person + 2 async); `--emit-csv` rewrites `CALENDAR_BACKBONE.csv` | before any schedule change to the calendar |
+| `build_meeting_schedule.py` | schedule data matches the backbone (row count, columns, date/day/modality, required fields) — **fails the build on mismatch** | every schedule regeneration |
+| `validate_milestones.py` | M0–M15 present, dev-meetings precede due dates, fixed anchors, no shared due dates | after any milestone or schedule edit |
+| `validate_notebooks.py` | template conformance: Inquiry & Claim Boundary block, provenance + Sources, the active-learning moves, `SEED = 464`, no seaborn, no leaked `INSTRUCTOR SOLUTION`, markdown hygiene | inside `nbbuild.py` |
+| `voice_lint_notebooks.py` | undergrad voice: em-dash budget, no "students" in student cells, no dates / "Meeting M#" (D13/D14) | inside `nbbuild.py` + `PostToolUse` hook |
+| `audit_sources.py` | citation integrity: URL allowlist, verified-citation registry, fake-citation blocklist | before shipping any notebook |
+| `update_schedule_badges.py --check` | `schedule.qmd` is not stale vs. the tracked student notebooks | before push |
 
 ---
 
 ## Dependency order — what must precede what
 
 ```
-A  notebook  ─►  B  record + edit videos  ─►  C2  LOCK the video splits (Brightspace Videos section)
-                                                  │
-                        ┌─────────────────────────┼─────────────────────────┐
-                        ▼                         ▼                         ▼
-                  C3 titles/desc            D1 notebook_lm split       (all wait on C2)
-                                                  │
-                                                  ▼
-                                            D2 AI concept videos
-                                                  │
-                                                  ▼
-                                            E  quizzes (from the splits)
-                                                  │
-                                                  ▼
-                                  F  sync video guide + schedule + planning docs
+A  cell source ─► nbbuild (build → execute → strip → validate → badge) ─► audit_sources
+                                                                              │
+                  (if sequencing changed)                                     │
+B  schedule_data/partN.py ─► [validate_calendar --emit-csv] ─► build_meeting_schedule (GATE)
+                                                                              │
+C                                          build_session_guides ◄────────────┤
+                                                                              │
+D  milestone brief ─► validate_milestones ─► (manual Brightspace copy)        │
+                                                                              ▼
+E  sync_instructor_repo.sh ─► [make_dataset_zip] ─► quarto render ─► commit docs/ ─► push
 ```
 
-**The lock point is C2.** The edited videos fix the split, and the Brightspace **Videos** ranges become the single source that both the NotebookLM splits (D) and the quiz blueprints (E) follow. **Do not start D or E until C2 is locked**, or the splits and quizzes will not line up with the videos.
+Phase A is always required. Phase B runs only when the week's placement, questions,
+SRL assignment, or milestone mapping change. The schedule (B) must be current before
+the session guides (C) are regenerated, because the guides are parsed from
+`MEETING_SCHEDULE.csv`.
 
 ---
 
@@ -105,26 +211,33 @@ A  notebook  ─►  B  record + edit videos  ─►  C2  LOCK the video splits 
 
 | Step | Claude can do it | Manual (instructor) |
 |---|---|---|
-| A1 develop notebook | ✅ | review / Colab test |
-| B1–B2 record + edit videos | — | ✅ |
-| C1 create Brightspace page | ✅ | — |
-| C2 lock splits to edited videos | ✅ (told the real counts) | confirm counts |
-| C3 titles + descriptions | ✅ or ChatGPT | paste into page |
-| D1 notebook_lm full + split | ✅ | — |
-| D2 AI concept videos | — | ✅ (NotebookLM) |
-| E1 quizzes | ✅ | import to Brightspace |
-| F sync guide/schedule/planning | ✅ | — |
+| A1 author cell source | ✅ | review the compass declaration + solutions |
+| A2 `nbbuild.py` build/execute/strip | ✅ | — |
+| A3 `audit_sources.py` | ✅ | — |
+| B schedule data + regenerate | ✅ | confirm SRL rotation |
+| C `build_session_guides.py` | ✅ | — |
+| D1 milestone brief | ✅ | approve scope |
+| D3 Brightspace page | — | ✅ (copy from the brief) |
+| E1 `sync_instructor_repo.sh` | ✅ (needs `gh` auth) | — |
+| E3 render + commit + push | ✅ | — |
 
 ---
 
 ## Quality gates (apply at every relevant phase)
 
-- Student-notebook **voice check** + **narrative polish** (CLAUDE.md). Zero non-`Student's t` hits.
-- **CV-first audit** for nb09–nb20 (`scripts/audit_cv_first.py`).
-- **Escape** `$`→`\$` and `~`→`\~` in all rendered markdown (notebooks, video guides, Brightspace pages, `.qmd`).
-- **Render + commit `docs/` + push** after any `.qmd` / notebook / image change.
-- Keep instructor-only artifacts (instructor notebook, `video_guides/`, `brightspace/`, `_notebook_lm/`, `_quizzes/`, `_production_kit/`) **out of git** — they are gitignored; only the student notebook ships.
+- **Instructor-first, always.** Edit the cell source; never touch a built `.ipynb`
+  directly, and never let the student file drift from the instructor version.
+- **Voice + evidence integrity.** `voice_lint_notebooks.py` clean, `audit_sources.py`
+  clean; every AI use logged in the AI Research Ledger with a verification method.
+- **Escape** `$`→`\$` and `~`→`\~` in all rendered markdown (notebooks, guides,
+  briefs, `.qmd`) — `validate_notebooks.py` fails on unescaped `$<digit>`/`~<digit>`.
+- **Render + commit `docs/` + push** after any `.qmd` / notebook / schedule / dataset
+  change; the instructor page ships only as post-render ciphertext.
+- Keep instructor-only artifacts (cell sources, instructor notebooks, session guides)
+  **out of the public repo** — they are gitignored and reach the instructor via the
+  private repo sync.
 
 ---
 
-*Last refined: 2026-06-04 — generalized from the NB19 production run.*
+*Rewritten 2026-07-23 for the v2 course (DECISIONS.md D17–D21); replaces the
+MGMT474-era video/NotebookLM/quiz pipeline.*
