@@ -30,6 +30,8 @@ website:
         text: Syllabus
       - href: material.qmd
         text: Material
+      - href: book/index.html
+        text: Book
       - href: schedule.qmd
         text: Schedule
       - href: instructor.qmd

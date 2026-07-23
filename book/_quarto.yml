@@ -1,0 +1,67 @@
+project:
+  type: book
+  output-dir: ../docs/book
+
+book:
+  title: "Evidence-Driven Research"
+  subtitle: "How to Design, Analyze, Verify, and Defend Empirical Research"
+  author: "Professor Davi Moreira"
+  description: "The course book for HONR 46400 (Purdue Honors). RDSS is the theory text; this is the AI-era research manual, synchronized with the 16 course notebooks."
+  chapters:
+    - index.qmd
+    - part: "Part I — Research when AI can produce almost everything"
+      chapters:
+        - part1-research-with-ai/01-ai-is-your-arm-not-your-brain.qmd
+        - part1-research-with-ai/02-the-student-as-research-director.qmd
+        - part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.qmd
+        - part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.qmd
+    - part: "Part II — From curiosity to research design"
+      chapters:
+        - part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.qmd
+        - part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.qmd
+        - part2-curiosity-to-design/07-research-builds-on-research.qmd
+        - part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.qmd
+        - part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.qmd
+        - part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.qmd
+    - part: "Part III — Research pathways"
+      chapters:
+        - part3-pathways/11-observational-descriptive-research.qmd
+        - part3-pathways/12-observational-causal-research.qmd
+        - part3-pathways/13-experimental-descriptive-research.qmd
+        - part3-pathways/14-prediction-and-generalization.qmd
+        - part3-pathways/15-experimental-causal-research.qmd
+        - part3-pathways/16-hybrid-and-complex-designs.qmd
+    - part: "Part IV — Producing credible evidence with AI"
+      chapters:
+        - part4-credible-evidence/17-data-provenance-and-data-quality.qmd
+        - part4-credible-evidence/18-measurement-and-operationalization.qmd
+        - part4-credible-evidence/19-ai-as-programmer.qmd
+        - part4-credible-evidence/20-ai-as-analytical-assistant.qmd
+        - part4-credible-evidence/21-robustness-and-sensitivity.qmd
+        - part4-credible-evidence/22-diagnostics-and-negative-tests.qmd
+        - part4-credible-evidence/23-ai-as-adversarial-reviewer.qmd
+        - part4-credible-evidence/24-recognizing-false-confidence.qmd
+    - part: "Part V — Communicating and defending research"
+      chapters:
+        - part5-communicating/25-from-results-to-claims.qmd
+        - part5-communicating/26-claim-evidence-tables.qmd
+        - part5-communicating/27-research-posters.qmd
+        - part5-communicating/28-poster-criticism.qmd
+        - part5-communicating/29-research-pitches.qmd
+        - part5-communicating/30-difficult-questions-and-uncertainty.qmd
+        - part5-communicating/31-ai-disclosure-and-research-integrity.qmd
+    - part: "Part VI — Research after the conference"
+      chapters:
+        - part6-after-conference/32-replication-and-reproduction.qmd
+        - part6-after-conference/33-from-poster-to-research-note.qmd
+        - part6-after-conference/34-open-and-reusable-research-packages.qmd
+        - part6-after-conference/35-managing-multiple-ai-agents.qmd
+        - part6-after-conference/36-conflicting-agents-and-human-escalation.qmd
+        - part6-after-conference/37-final-research-and-ai-management-portfolio.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+editor: visual
