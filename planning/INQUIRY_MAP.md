@@ -114,8 +114,8 @@ the proof is always diagnosis:
 ## The design-pathway layer (Weeks 5–9)
 
 The design library adds the axis the compass leaves open: **data strategy**
-(observational vs experimental). Five pathways cover the space, plus prediction
-as its own objective (`course_config.yaml pathways:`):
+(observational vs experimental). Four pathways cover the space, plus prediction
+as its own objective (five in all; `course_config.yaml pathways:`):
 
 | Wk | Pathway | NB | RDSS | Example designs |
 |---|---|---|---|---|

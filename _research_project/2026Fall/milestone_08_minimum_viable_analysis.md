@@ -177,7 +177,7 @@ boundary). Name the file or section where each now lives.
 |---|---|
 | **Reproducibility** | The reported number reruns from the seeded notebook top to bottom; the figure in your write-up matches what the notebook prints. A number that does not reproduce is not evidence. |
 | **Length** | The five-part spine + ledger rows (typically the notebook's markdown, or an equivalent 1–2 page PDF companion) |
-| **Presentation** | 60-second first-evidence walkthrough at the Friday studio (Oct 23): your estimate, its interval, the nearest threat; a partner and an assigned GenAI Studio reviewer red-team it — part of the grade |
+| **Presentation** | 60-second first-evidence walkthrough at the Friday studio (Oct 23): your estimate, its interval, the nearest threat; a partner and an AI reviewer (Gemini or a GenAI Studio role) red-team it — part of the grade |
 | **Style** | Plain language; every technical term used as defined above; the quantity sentence and the forbidden overclaim stated as two explicit sentences |
 | **Filename** | A shared Colab link (required); optional `lastname_m08_minimum_viable_analysis.pdf` |
 | **Location** | Brightspace → Assignments → M08 |

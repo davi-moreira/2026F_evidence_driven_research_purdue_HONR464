@@ -250,7 +250,7 @@ genai_studio:
   capability_levels_implemented: [prompted_role, custom_model, rag_assistant, sequential_workflow]
   not_available: [autonomous_agents, native_orchestration]
   student_touchpoints: {M5: "Causal Identification Skeptic", M7: "Prediction & Leakage Auditor",
-                        M9: "Poster Critic + Robustness Reviewer", M13: "Reproducibility Auditor"}
+                        M9: "Poster Critic + Robustness & Sensitivity Reviewer", M13: "Reproducibility Auditor"}
 
 # Notebook conventions (adapted from MGMT474; ML-isms removed).
 notebooks:

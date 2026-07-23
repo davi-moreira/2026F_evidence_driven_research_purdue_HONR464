@@ -19,8 +19,9 @@ instructions and rubrics live one page per milestone, like this one.
 ## What to Submit on Brightspace
 
 Due: **Friday, October 9, 11:59 PM**. That Friday is a **protocol clinic and
-abstract workshop**: you bring a near-final draft, walk a partner and the
-assigned **Experimental Design Reviewer** GenAI Studio role through your
+abstract workshop**: you bring a near-final draft, walk a partner and an AI
+reviewer (Gemini, or optionally the **Experimental Design Reviewer** role in
+GenAI Studio) through your
 measurement protocol, and clear the internal gate on your URC abstract before it
 can go out. The red-team notes from that studio feed the grade; you polish from
 them and submit by the same-day deadline.
@@ -189,7 +190,7 @@ and a gated URC abstract. Name the file or section where each now lives.
 |---|---|
 | **Length** | The six-part protocol + abstract + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
 | **Figure** | The measurement DAG as a legible image: stimulus (or source) and latent characteristic into the response, plus at least one dashed artifact arrow |
-| **Clinic** | Protocol clinic and abstract workshop at the Friday studio (Oct 9); a partner and the assigned Experimental Design Reviewer red-team your boundary and artifact plan — part of the grade |
+| **Clinic** | Protocol clinic and abstract workshop at the Friday studio (Oct 9); a partner and an AI reviewer (Gemini or the Experimental Design Reviewer role) red-team your boundary and artifact plan — part of the grade |
 | **Style** | Plain language; every technical term used as defined this week; the claim boundary stated as two explicit sentences; the abstract inside that boundary |
 | **Filename** | `lastname_m06_measurement_protocol.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M06 |
@@ -204,7 +205,7 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
 |---|---|---|---|---|
 | **Compass & pathway alignment** (30) | The design is declared as experimental-descriptive or data-acquisition; the descriptive quantity is named with units; any random assignment is shown to serve measurement, not a causal claim; the boundary matches (26–30) | Design and quantity correct; one link between assignment and descriptive inquiry stated loosely (21–25) | Design or quantity present but the descriptive-vs-causal line blurred, or the quantity vague (13–20) | Random assignment read as a causal effect, or no named descriptive quantity (0–12) |
 | **Evidence integrity & provenance** (20) | Every construct, instrument, and cited measurement study is real and retrievable; the descriptive quantity traces to the design that produces it (18–20) | Real and traceable; one provenance link thin (14–17) | A claimed instrument or study asserted without a locatable source (8–13) | A cited source or measurement study that does not exist or does not say what you claim (0–7) |
-| **Verification of AI-assisted parts** (20) | Every AI-assisted step (study scout, DAG scaffold, boundary or abstract critique) has a ledger row with a named, non-vague verification method; the Experimental Design Reviewer critique is resolved in writing (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used but verification not named (8–13) | AI output reproduced without any verification, or the boundary or abstract written by AI and unchecked (0–7) |
+| **Verification of AI-assisted parts** (20) | Every AI-assisted step (study scout, DAG scaffold, boundary or abstract critique) has a ledger row with a named, non-vague verification method; the AI reviewer's critique is resolved in writing (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used but verification not named (8–13) | AI output reproduced without any verification, or the boundary or abstract written by AI and unchecked (0–7) |
 | **Uncertainty & artifact boundary** (20) | Both boundary sentences present; the licensed sentence carries its uncertainty; the artifact plan names a real demand effect and instrument effect, each with a redesign tied to a dashed DAG arrow; the forbidden causal or population sentence is named precisely (18–20) | Both sentences present; uncertainty or one artifact stated loosely (14–17) | Only one sentence, or an artifact named with no redesign, or the boundary without the crossing it forbids (8–13) | No boundary, or a measurement upgraded to a causal or population claim the design cannot buy (0–7) |
 | **Craft, ledger & abstract gate** (10) | On-format, on-time, clear clinic walkthrough, URC abstract inside the boundary, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; abstract and ledger complete (7–8) | Missing pieces, a rushed walkthrough, or an abstract that drifts past the boundary (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
