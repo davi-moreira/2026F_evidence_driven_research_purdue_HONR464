@@ -32,9 +32,9 @@ page. Milestone instructions and rubrics are on Brightspace.
 | Topic | Sessions | Notebook | Data | Readings |
 |-------|----------|----------|------|----------|
 | **Week 1 — Research in the age of AI** | | | | |
-| **Topic 00 · Research in the age of AI: your arm, your RA — not your brain** | 2 lectures | *nb00 (coming)* | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 1, 2 |
+| **Topic 00 · Research in the age of AI: your arm, your RA — not your brain** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb00_ai_arm_not_brain_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 1, 2 |
 | **Week 2 — From curiosity to a research problem** | | | | |
-| **Topic 01 · From curiosity to a research problem: descriptive, predictive, causal** | 2 lectures | *nb01 (coming)* | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 4, 7<br>*+ optional CB case* |
+| **Topic 01 · From curiosity to a research problem: descriptive, predictive, causal** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_curiosity_to_problem_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 4, 7<br>*+ optional CB case* |
 | **Week 3 — Research builds on research** | | | | |
 | **Topic 02 · Research builds on research: verified evidence + real gaps** | 1 lecture | *nb02 (coming)* | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 4 |
 | **Week 4 — The anatomy of a research design** | | | | |
@@ -42,25 +42,25 @@ page. Milestone instructions and rubrics are on Brightspace.
 | **Week 5 — Observational descriptive research** | | | | |
 | **Topic 04 · Observational descriptive research** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_observational_descriptive_student.ipynb){target="_blank"} | `la_voter_file.csv`<br>`lapop_brazil.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 15<br>*+ optional CB case* |
 | **Week 6 — Observational causal research** | | | | |
-| **Topic 05 · Observational causal research** | 2 lectures | *nb05 (coming)* | `cliningsmith_etal.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 16<br>*+ optional CB case* |
+| **Topic 05 · Observational causal research** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_causal_student.ipynb){target="_blank"} | `cliningsmith_etal.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 16<br>*+ optional CB case* |
 | **Week 7 — Experimental descriptive research** | | | | |
-| **Topic 06 · Experimental descriptive research** | 2 lectures | *nb06 (coming)* | `bonilla_tillery.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 17 |
+| **Topic 06 · Experimental descriptive research** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_experimental_descriptive_student.ipynb){target="_blank"} | `bonilla_tillery.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 17 |
 | **Week 8 — Prediction** | | | | |
-| **Topic 07 · Prediction: generalizing to unseen cases** | 1 lecture | *nb07 (coming)* | `la_voter_file.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | *+ optional CB case* |
+| **Topic 07 · Prediction: generalizing to unseen cases** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_prediction_student.ipynb){target="_blank"} | `la_voter_file.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | *+ optional CB case* |
 | **Week 9 — Experimental causal research** | | | | |
-| **Topic 08 · Experimental causal research** | 2 lectures | *nb08 (coming)* | `foos_etal.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 18 |
+| **Topic 08 · Experimental causal research** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_experimental_causal_student.ipynb){target="_blank"} | `foos_etal.csv`<br>[all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 18 |
 | **Week 10 — Share the research and attack the analysis** | | | | |
-| **Topic 09 · Share the research + attack the analysis** | 2 lectures | *nb09 (coming)* | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | *+ optional CB case* |
+| **Topic 09 · Share the research + attack the analysis** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_attack_the_analysis_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | *+ optional CB case* |
 | **Week 11 — Poster criticism and final poster lock** | | | | |
 | **Topic 10 · Poster criticism + final poster lock** | 2 lectures | *nb10 (coming)* | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | — |
 | **Week 12 — Poster delivery** | | | | |
-| **Topic 11 · Poster delivery: pitches, uncertainty, difficult questions** | 2 lectures | *nb11 (coming)* | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | — |
+| **Topic 11 · Poster delivery: pitches, uncertainty, difficult questions** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_delivery_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | — |
 | **Week 13 — Conference week** | | | | |
-| **Topic 12 · Final conference preparation, presentation + reflection** | 1 lecture | *nb12 (coming)* | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | — |
+| **Topic 12 · Final conference preparation, presentation + reflection** | 1 lecture | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_conference_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | — |
 | **Week 14 — Thanksgiving async: replication and red-team** | | | | |
-| **Topic 13 · Async module: replication + red-team of a peer's package** | async module | *nb13 (coming)* | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | — |
+| **Topic 13 · Async module: replication + red-team of a peer's package** | async module | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_replication_redteam_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | — |
 | **Week 15 — From poster to research note** | | | | |
-| **Topic 14 · From poster to research note** | 2 lectures | *nb14 (coming)* | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | — |
+| **Topic 14 · From poster to research note** | 2 lectures | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_poster_to_research_note_student.ipynb){target="_blank"} | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | — |
 | **Week 16 — Managing multiple AI agents** | | | | |
 | **Topic 15 · Managing multiple AI agents + the final defense** | 2 lectures | *nb15 (coming)* | [all datasets (.zip)](notebooks/data/honr46400_datasets.zip) | RDSS ch. 24 |
 
