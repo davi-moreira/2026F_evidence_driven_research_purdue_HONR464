@@ -56,8 +56,10 @@ by `lecture_labels()` in `scripts/notebooks_map.py` — never hand-invented.
 The course's operational spine (the inquiry compass — `planning/INQUIRY_MAP.md`).
 State up front which compass position(s) the week emphasizes — **kind**
 (descriptive / causal) and **reach** (data at hand / population / unseen cases) —
-and the claim boundary it patrols. Weeks 5–9 additionally name the **design
-pathway** (observational/experimental × descriptive/causal, or prediction).
+and the claim boundary it patrols. Every notebook also names its **design
+pathway**: one of the five design-library pathways for the Weeks 5–9 topics
+(observational/experimental × descriptive/causal, or prediction), or
+`cross-cutting` for framing, diagnosis, and communication weeks.
 
 ```markdown
 ## 🧭 Inquiry & Claim Boundary
