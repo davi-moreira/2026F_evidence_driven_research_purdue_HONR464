@@ -43,7 +43,7 @@ https://raw.githubusercontent.com/davi-moreira/2026F_evidence_driven_research_pu
 | pie-vs-bar.png | nb06 | same data as pie vs bar |
 | steve-jobs-pie.jpg | nb06 | the 2008 keynote 3-D pie (39% vs 19.5% perception) |
 | data_ink.png | nb14 | the data-ink ratio: same bar chart before/after cleanup (MGMT474 lecture, after Tufte) |
-| rdss_fig_8_1.png | nb07 | the data-strategy DAG: sampling S, assignment Z, response R, measurement Q |
+| rdss_fig_8_1.png | nb04, nb07 | the data-strategy DAG (nb04 caption introduces only **sampling S** and **response R**, the two handles observational descriptive research uses; nb07 reads the full S/Z/R/Q chain) |
 | rdss_fig_8_2.png | nb07 | sampling procedures grid: simple/complete/stratified × individual/cluster/multistage |
 | rdss_fig_21_1.png | nb07 | ethics: scientific benefits vs ethical costs by inquiry importance |
 | rdss_fig_18_2.png | nb09 | covariate adjustment buys power/precision (by R²) |

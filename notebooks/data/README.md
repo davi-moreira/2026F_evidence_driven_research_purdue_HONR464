@@ -13,8 +13,8 @@ book's replication archive.
 
 | File | Shape | What it is | Course use |
 |---|---|---|---|
-| `lapop_brazil.csv` | 10,000 × 10 | AmericasBarometer (LAPOP) Brazil survey items — **a 10,000-row resample with replacement of the original**, suitable for planning/teaching, NOT for substantive research claims (per the package documentation; this caveat is itself taught in nb06) | description, measurement, inference (nb02, nb06, nb09, nb10) |
-| `la_voter_file.csv` | 1,000 × 4 | Los Angeles voter-file extract (party, age, census tract, 2012 turnout) | sampling & selection (nb07), prediction target (nb12) |
+| `lapop_brazil.csv` | 10,000 × 10 | AmericasBarometer (LAPOP) Brazil survey items — **a 10,000-row resample with replacement of the original**, suitable for planning/teaching, NOT for substantive research claims (per the package documentation; this caveat is itself taught in nb04 and nb06) | observational descriptive summaries: distribution, relationship, index + nonresponse stress-test (nb04); description, measurement, inference (nb02, nb06, nb09, nb10) |
+| `la_voter_file.csv` | 1,000 × 4 | Los Angeles voter-file extract (party, age, census tract, 2012 turnout) | known frame for seeded sampling & selection demos (nb04); sampling & selection (nb07); prediction target (nb12) |
 | `foos_etal.csv` | 8,375 × 5 | Foos et al. UK get-out-the-vote field experiment replication (treatment, 2014 turnout, ward/street, weights) | causal: randomized experiment (nb13) |
 | `cliningsmith_etal.csv` | 958 × 8 | Clingingsmith, Khwaja & Kremer Hajj-lottery study replication (lottery success, views toward other groups) | causal: natural experiment (nb13) |
 | `bonilla_tillery.csv` | 849 × 10 | Bonilla & Tillery survey experiment replication (treatment `Z`, BLM support, linked fate, demographics) | measurement items (nb05), survey experiment (nb13) |
