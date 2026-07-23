@@ -1,9 +1,9 @@
 # Hard Questions Protocol — M34 (Fri Nov 13)
 
 *Build your question bank, then survive a hot seat on it. Governs the
-question-bank half of
-[milestone_14 — Uncertainty & Limitations Statement + Question Bank](../../_research_project/2026Fall/milestone_14_uncertainty_limitations_question_bank.md).
-Drilled in class M34; full M14 due that night.*
+five-type question bank in
+[milestone_11 — Presentation Package](../../_research_project/2026Fall/milestone_11_presentation_package.md).
+Drilled in class M34; the full presentation package (M11) is due that night, Fri Nov 13.*
 
 ## Purpose
 
@@ -76,7 +76,7 @@ the credible one.
 | 12–24 | **Bank-building studio:** write your five questions (one per type) with answer sketches. |
 | 24–44 | **Hot-seat rounds:** 3 minutes per presenter (bank + surprise deck); instructor models one save. |
 | 44–48 | Bank revision from what the hot seat exposed. |
-| 48–50 | Exit ticket (the question I most fear + my first sentence in reply); M14 due tonight. |
+| 48–50 | Exit ticket (the question I most fear + my first sentence in reply); M11 presentation package due tonight. |
 
 ## Roles
 
@@ -89,7 +89,7 @@ Professor Moreira prepares a surprise-question deck per project, times the 3-min
 seats, models one save, and slows the room if a seat runs hot. Each presenter
 sits once; each questioner asks across multiple seats.
 
-## Quality checklist (before submitting M14)
+## Quality checklist (before submitting M11)
 
 - ☐ Five questions, one per type, each hard and fair to your own poster.
 - ☐ A two-line answer sketch for each; the AI-use answer cites your ledger.
@@ -105,4 +105,4 @@ sits once; each questioner asks across multiple seats.
 4. **Blaming the AI tool.** "The AI gave me that" is not a defense — you verified, or you didn't. Own the process.
 5. **Essay answers.** The Expo floor rewards two crisp sentences, not a lecture. Drill for brevity.
 
-*Paired with [uncertainty_limitations_protocol.md](uncertainty_limitations_protocol.md) — together they complete M14. Next: [dress_rehearsal_protocol.md](dress_rehearsal_protocol.md).*
+*Paired with [uncertainty_limitations_protocol.md](uncertainty_limitations_protocol.md) — together they complete the M11 presentation package. Next: [dress_rehearsal_protocol.md](dress_rehearsal_protocol.md).*

@@ -858,9 +858,9 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Inquiry:** all positions (poster criticism)
 - **Claim PERMITTED:** "On this poster, the headline is inside or outside its evidence, the uncertainty is visible or buried, and the design reaches or excludes these readers — here is the specific hit."
 - **Claim NOT permitted:** A gallery-walk 'looks great' with no named hit — politeness is not a review, and a criticism round with no findings failed the poster, not spared it.
-- **RDSS reading:** (no new RDSS chapter — poster-criticism week; the reading is project/poster/redteam_review_protocol.md and poster_rubric.md)
-- **Other material:** nb10 student notebook (poster criticism and final lock), §1–2 (Colab); project/poster/redteam_review_protocol.md (four-audit slip); project/poster/poster_rubric.md (the five graded rows); Gemini for AI-generated skeptic questions per poster
-- **Provenance:** project/poster/redteam_review_protocol.md + poster_rubric.md + fresh gallery-walk method | poster-criticism unit | four-audit gallery walk with AI-generated skeptic prompts | fresh
+- **RDSS reading:** Course book chapter 28 'Poster Criticism' — the gallery-walk audit plus accessibility; also project/poster/redteam_review_protocol.md (the four audits + accessibility) and the milestone_10 poster rubric
+- **Other material:** nb10 student notebook (poster criticism and final lock), §1–2 (Colab); project/poster/redteam_review_protocol.md (four-audit + accessibility slip); the milestone_10 poster rubric (the five graded rows, incl. the AI Research Ledger); Gemini for AI-generated skeptic questions per poster
+- **Provenance:** project/poster/redteam_review_protocol.md + milestone_10 poster rubric + fresh gallery-walk method | poster-criticism unit | four-audit + accessibility gallery walk with AI-generated skeptic prompts | fresh
 - **Concepts:** the gallery-walk audit; the four audits (claim boundary, figure honesty, read path, uncertainty) plus visual design and accessibility; impression-versus-number; accessibility as a claim reaching every reader; AI-generated skeptic questions as a critique aid
 - **Python dependency:** none required (figure re-checks optional, matplotlib)
 - **Dataset / simulation:** the class's own five poster drafts on display
@@ -888,7 +888,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Inquiry:** all positions (oral poster defense)
 - **Claim PERMITTED:** "Asked as an outsider, a methodologist, and a skeptic, I defended what my evidence licenses and conceded what it does not — on the record, at the poster."
 - **Claim NOT permitted:** Bluffing an answer you do not have or upgrading the claim under pressure — the spoken defense must stay inside the poster's written boundary.
-- **RDSS reading:** (no new RDSS chapter — poster-criticism week; the reading is project/poster/redteam_review_protocol.md, oral-defense section)
+- **RDSS reading:** Course book chapter 28 'Poster Criticism', the oral-defense section; also project/poster/redteam_review_protocol.md and a three-lens question deck for the interdisciplinary, methods, and skeptic lenses
 - **Other material:** nb10 student notebook (poster criticism and final lock), §3 (Colab); project/poster/redteam_review_protocol.md; a three-lens question deck (interdisciplinary / methods / skeptic); Gemini for generating additional hard questions per poster
 - **Provenance:** project/poster/redteam_review_protocol.md (oral-defense adaptation) + fresh three-lens question protocol | poster-criticism unit | oral defense rounds with interdisciplinary/methods/skeptic questioning | fresh
 - **Concepts:** oral poster defense; interdisciplinary vs methods vs skeptical questions; the honest-don't-know formula; defend-versus-concede judgment; the spoken claim boundary
@@ -917,8 +917,8 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim PERMITTED:** "Locked: every number traces to a notebook cell, every citation resolves to a real source, every claim sits inside its boundary, and the AI-use disclosure is on the record."
 - **Claim NOT permitted:** "I'll fix it after submission" — there is no after; the poster is terminal and the Expo audience reads the submitted version.
 - **RDSS reading:** (no new reading — studio Friday; bring your print-ready poster file and your notebook, runnable)
-- **Other material:** nb10 student notebook (poster criticism and final lock), §4 final checklist (Colab); project/poster/production_checklist.md; project/poster/poster_rubric.md (self-score); the course citation-verification discipline (every source retrieved and confirmed); URC poster spec + submission instructions on Brightspace
-- **Provenance:** project/poster/production_checklist.md + poster_rubric.md + course evidence-integrity discipline | studio Friday (terminal) | final production checklist + citation/claim/disclosure audit + poster lock | fresh
+- **Other material:** nb10 student notebook (poster criticism and final lock), §4 final checklist (Colab); project/poster/production_checklist.md; the milestone_10 poster rubric (self-score against the five graded rows); the course citation-verification discipline (every source retrieved and confirmed); URC poster spec + submission instructions on Brightspace
+- **Provenance:** project/poster/production_checklist.md + milestone_10 poster rubric + course evidence-integrity discipline | studio Friday (terminal) | final production checklist + citation/claim/disclosure audit + poster lock | fresh
 - **Concepts:** citation verification (every source real and retrievable); claim–evidence traceability (every number to a cell); the AI-use disclosure block; print-spec compliance; the terminal lock
 - **Python dependency:** none required (figure re-exports at print resolution as needed)
 - **Dataset / simulation:** each student's own final poster + runnable notebook

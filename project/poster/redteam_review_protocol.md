@@ -1,7 +1,10 @@
 # Red-Team Review Protocol — M30 (Wed Nov 4)
 
 *The structured adversarial review of your draft poster, run in class M30.
-Governs [milestone_11 — Poster Draft + Red-Team Review](../../_research_project/2026Fall/milestone_11_poster_draft_redteam.md).
+The four-plus-one audits it runs are the same audits graded on your poster draft
+([milestone_09 — Poster Draft 1 and Research Audit](../../_research_project/2026Fall/milestone_09_poster_draft_research_audit.md))
+and re-run as the gallery-walk audit record of your locked poster
+([milestone_10 — Final Poster Lock](../../_research_project/2026Fall/milestone_10_final_poster_lock.md)).
 Rule of the room: hard on the poster, warm on the person.*
 
 ## Purpose
@@ -15,10 +18,10 @@ red-teamed by two — then triage your hits and fix the worst one before you lea
 
 - Your full draft poster, on screen (built from your M29 storyboard grid).
 - Two blank audit slips per reviewer (one per poster you review).
-- The M14 honest-viz checklist (it rides again for the figure-honesty audit).
+- The nb10 honest-viz checklist (it rides again for the figure-honesty audit).
 - The rotation assignment (below) so everyone knows who reviews whom.
 
-## The four audits (what every reviewer runs)
+## The five audits (what every reviewer runs)
 
 **1. Claim-boundary audit.**
 - ☐ Does the headline claim stay inside the poster's declared compass position (Description / Generalization / Prediction / Causal)?
@@ -43,6 +46,12 @@ red-teamed by two — then triage your hits and fix the worst one before you lea
 - ☐ Are limitations stated as expertise, not buried or absent?
 - ☐ Does the strongest claim carry its bound in the same eye-span?
 
+**5. Accessibility audit.**
+- ☐ Is any distinction carried by **color alone**? Every meaning color carries must ride a second channel too — a label, a shape, a pattern, or a direct text value.
+- ☐ Is the palette **color-blind-safe** (readable in red-green and blue-yellow color vision), so a figure survives for the roughly 1-in-12 men with a color-vision deficiency?
+- ☐ Are values **labeled directly** on the figure (numbers on or beside the marks), so a screen-reader user and a color-blind reader both reach the finding without decoding a color key?
+- ☐ Is text-to-background **contrast** sufficient at print scale (dark text on light fills), and are font sizes legible from a step back?
+
 ## The audit slip (fillable — one per poster reviewed)
 
 ```
@@ -56,6 +65,7 @@ Claim boundary   [ ]/[ ]    _______________________________________
 Figure honesty   [ ]/[ ]    _______________________________________
 Read path        [ ]/[ ]    _______________________________________
 Uncertainty      [ ]/[ ]    _______________________________________
+Accessibility    [ ]/[ ]    _______________________________________
 
 The one fix I'd make first if this were my poster:
 _____________________________________________________________
@@ -80,15 +90,15 @@ Every author (A–E) is reviewed by exactly two people across the two rounds.
 | Time | Activity |
 |---|---|
 | 0–5 | Norms + roles: hard on the poster, warm on the person; rotation posted. |
-| 5–10 | Protocol walkthrough: the four audits and the slip. |
+| 5–10 | Protocol walkthrough: the five audits and the slip. |
 | 10–22 | **Round 1** (12 min): reviewer walks the poster aloud with the slip; **author is silent**; last 2 min, author asks clarifying questions only. |
 | 22–34 | **Round 2** (12 min): same format, new pairing. |
 | 34–46 | **Revision triage:** rank your received hits; fix the top one NOW; write the plan for the rest. |
-| 46–50 | Exit ticket (the hit I'm fixing first + what the fixed version says); submit M11 tonight. |
+| 46–50 | Exit ticket (the hit I'm fixing first + what the fixed version says); log the slips into your M10 lock record. |
 
 ## Roles
 
-- **Reviewer:** runs all four audits out loud, names the single strongest hit per audit, is specific enough to act on.
+- **Reviewer:** runs all five audits out loud, names the single strongest hit per audit, is specific enough to act on.
 - **Author (during review):** silent — you listen and take notes; you get 2 minutes of questions at the end, not rebuttal.
 
 ### Session flow (for the record)
@@ -97,10 +107,11 @@ Professor Moreira keeps the two 12-minute rounds strict, enforces author silence
 and holds a sample poster with six planted flaws ready for the walkthrough. Each
 reviewer produces two completed slips; each author leaves with two.
 
-## What you submit tonight (M11)
+## What goes into your M10 lock record
 
 Your two given audit slips, the two slips you received, your ranked triage plan,
-and the first fix already applied to the draft.
+and the first fix already applied to the draft. These become the gallery-walk
+audit record you submit with the locked poster at M10 (Fri Nov 6).
 
 ## Common failure modes
 

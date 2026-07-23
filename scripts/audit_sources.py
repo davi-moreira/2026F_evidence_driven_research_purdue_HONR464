@@ -94,8 +94,20 @@ def audit(path: Path) -> list[str]:
     return problems
 
 
+def audit_book(path: Path) -> list[str]:
+    """Book chapters (.qmd prose) carry legitimate varied citations AND narrated
+    fake-citation illustrations (AI-failure-case teaching examples), so the URL
+    allowlist and verified-registry checks do not apply. The one hard rule that
+    DOES apply everywhere (D16): the retired planted-fake NAMES must never
+    appear. This is the machine-checkable book gate."""
+    text = path.read_text()
+    return [f"blocked fake citation {fake!r} (D16: forbidden everywhere)"
+            for fake in BLOCKED if fake in text]
+
+
 def main() -> None:
-    targets = ([Path(a) for a in sys.argv[1:]] or
+    args = sys.argv[1:]
+    targets = ([Path(a) for a in args] or
                sorted((REPO / "notebooks" / "student").glob("nb*_student.ipynb")))
     failed = False
     for t in targets:
@@ -107,9 +119,20 @@ def main() -> None:
                 print("    " + p)
         else:
             print(f"✓ {t.name}")
+
+    # Book chapters: blocklist-only scan (no explicit path args given).
+    book_files = sorted(REPO.glob("book/part*/*.qmd")) if not args else []
+    for bf in book_files:
+        probs = audit_book(bf)
+        if probs:
+            failed = True
+            print(f"✗ book/{bf.parent.name}/{bf.name}")
+            for p in probs:
+                print("    " + p)
     if failed:
         sys.exit(1)
-    print(f"✓ citation-integrity audit clean across {len(targets)} notebook(s)")
+    print(f"✓ citation-integrity audit clean across {len(targets)} notebook(s)"
+          + (f" + {len(book_files)} book chapter(s)" if book_files else ""))
 
 
 if __name__ == "__main__":

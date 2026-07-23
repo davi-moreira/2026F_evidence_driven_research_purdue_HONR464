@@ -1,8 +1,10 @@
 # Presentation Plan Protocol — M32 (Mon Nov 9)
 
 *How to build and rehearse the two spoken versions of your poster pitch.
-Governs [milestone_13 — Presentation Plan](../../_research_project/2026Fall/milestone_13_presentation_plan.md).
-Scripted in class M32; both scripts + walk map due Wed Nov 11.*
+Governs the pitch layers of
+[milestone_11 — Presentation Package](../../_research_project/2026Fall/milestone_11_presentation_package.md).
+Scripted in class M32; the scripts and walk map feed M11, due at the mock-symposium
+studio (M34, Fri Nov 13).*
 
 ## Purpose
 
@@ -16,7 +18,7 @@ claim.
 
 - Your final poster (content internalized, headline claim sayable cold).
 - Your inquiry declaration §5–6 (the boundary you must not cross aloud).
-- Your uncertainty line and the limitation you'll speak (feeds M14).
+- Your uncertainty line and the limitation you'll speak (feeds the M11 ULN statement).
 - A partner and a timer for the delivery rounds.
 
 ## The two architectures
@@ -38,7 +40,7 @@ claim.
 2. EVIDENCE BLOCK 1    strongest — what it shows, in one spoken sentence
 3. EVIDENCE BLOCK 2    the support
 4. EVIDENCE BLOCK 3    the weakest kept, honestly labeled
-5. ULN MOMENT          uncertainty → limitation → next step (the M14 move)
+5. ULN MOMENT          uncertainty → limitation → next step (the ULN move)
 6. INVITATION          hand the question back: "what would you probe first?"
 ```
 
@@ -65,8 +67,9 @@ outrun it live.
 | 42–48 | Revise the script from the flags. |
 | 48–50 | Exit ticket (your boundary sentence, exactly as you'll say it). |
 
-Homework: draft the 3-minute walk; the plan (both scripts + poster-walk map) is
-due Wed Nov 11.
+Homework: draft the 3-minute walk; both scripts and the poster-walk map join the
+rest of your presentation package (M11), submitted at the mock-symposium studio
+(M34, Fri Nov 13).
 
 ## Roles
 
@@ -79,7 +82,7 @@ Professor Moreira demonstrates the well/inflated pair, times the twice-through
 delivery rounds, and normalizes stage fright by making everyone's first attempt a
 draft. Each presenter delivers twice and flags for one partner.
 
-## Quality checklist (before submitting M13)
+## Quality checklist (before submitting M11)
 
 - ☐ 1-minute script has all four moves; the boundary sentence is marked.
 - ☐ 3-minute walk adds evidence blocks + a ULN moment to the same spine.

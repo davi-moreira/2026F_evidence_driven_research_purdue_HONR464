@@ -1,8 +1,12 @@
 # Storyboard Protocol — M29 (Mon Nov 2)
 
 *The method for building your poster's storyboard before you build the poster.
-Governs [milestone_10 — Poster Storyboard](../../_research_project/2026Fall/milestone_10_poster_storyboard.md).
-Run in class M29; storyboard submitted that night.*
+The read-path decision it produces underlies your poster draft 1
+([milestone_09 — Poster Draft 1 and Research Audit](../../_research_project/2026Fall/milestone_09_poster_draft_research_audit.md))
+and the poster you lock at
+[milestone_10 — Final Poster Lock](../../_research_project/2026Fall/milestone_10_final_poster_lock.md).
+Re-derived and pressure-tested in the poster-criticism week (M29); the grid it
+produces feeds the M10 lock, due Fri Nov 6, 5:00 PM (terminal).*
 
 ## Purpose
 
@@ -15,7 +19,7 @@ expensive to change in production week.
 ## Materials
 
 - The storyboard grid (one printed sheet per person — the template below).
-- Your M09 pilot outputs: every table, figure, and number you produced.
+- Your M9 poster-draft evidence: every table, figure, and number you produced.
 - Your inquiry declaration (`project/templates/INQUIRY_DECLARATION.md`),
   open to §4–5 (what your compass position can and cannot establish).
 - A pen for you; a second colored pen for whoever reads your read-path.
@@ -49,7 +53,7 @@ print. This is the single most common poster failure.
 
 **Evidence hierarchy.** Rank your three blocks by how much they earn belief in
 the headline — strongest gets the top-center slot. Everything that does not
-serve the headline is cut, not shrunk. Your practice cut (nb14) is: rank all
+serve the headline is cut, not shrunk. Your practice cut (nb10) is: rank all
 five pilot outputs, keep three, drop the bottom two.
 
 **Uncertainty line.** One sentence the reader cannot miss — the interval, the
@@ -66,7 +70,7 @@ Uncertainty rule), not just a poster-day problem.
 | 12–30 | **Grid studio.** You fill your grid: headline, three ranked evidence blocks, uncertainty line, read-path arrows. |
 | 30–42 | **Storyboard pitches.** 90 seconds each — you walk a listener down your read path, box by box. Listeners mark where they got lost. |
 | 42–48 | Revise your grid from the lost-point marks. |
-| 48–50 | Exit ticket (headline claim, ≤ 15 words); submit M10 tonight, 11:59 PM. |
+| 48–50 | Exit ticket (headline claim, ≤ 15 words); carry the grid into the week's poster-criticism and lock work — M10 locks Fri Nov 6, 5:00 PM. |
 
 ## Roles
 

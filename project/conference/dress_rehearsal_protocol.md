@@ -1,7 +1,8 @@
 # Dress Rehearsal Protocol — M35 (Mon Nov 16)
 
-*The full URC simulation the day before the real thing. Governs
-[milestone_15 — Dress Rehearsal + Readiness Audit](../../_research_project/2026Fall/milestone_15_dress_rehearsal_readiness_audit.md).
+*The full URC simulation the day before the real thing. Prepares the Expo
+presentation, a graded component of
+[milestone_12 — Conference Reflection & Poster-Criticism Portfolio](../../_research_project/2026Fall/milestone_12_conference_reflection.md).
 Run in class M35; the readiness audit is signed in class. The Expo is TOMORROW,
 Tue Nov 17.*
 
@@ -47,7 +48,7 @@ every poster. The presenter needs to feel each type before tomorrow.
 ## The readiness audit sheet (sign in class)
 
 ```
-READINESS AUDIT — M15   Name: __________________   Date: Nov 16
+READINESS AUDIT — M12 Expo readiness   Name: __________________   Date: Nov 16
 
   ☐ Rehearsed the full walk TWICE, inside 3 minutes
   ☐ Question bank DRILLED (survived a hot seat / today's visitors)

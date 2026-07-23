@@ -1,9 +1,9 @@
-# Conference Reflection Protocol — M36 (Wed Nov 18)
+# Conference Reflection Protocol — M36 (Fri Nov 20)
 
 *Turn the questions strangers asked you at the Expo into coded data, and find the
-pattern. Governs
-[milestone_17 — Conference Reflection](../../_research_project/2026Fall/milestone_17_conference_reflection.md).
-Coded in class M36 (nb16); reflection submitted that night.*
+pattern. Governs the reflection-and-criticism package of
+[milestone_12 — Conference Reflection & Poster-Criticism Portfolio](../../_research_project/2026Fall/milestone_12_conference_reflection.md).
+Coded in class M36 (nb12); the reflection is submitted that night, Fri Nov 20.*
 
 ## Purpose
 
@@ -16,7 +16,7 @@ something real. This session extracts that signal.
 ## Materials
 
 - Every question and reaction you captured at the Expo (see logging method below).
-- The nb16 tally cells (Colab).
+- The nb12 tally cells (Colab).
 - Professor Moreira's own observation notes from your poster (returned today).
 - A partner for the tally swap.
 
@@ -44,7 +44,8 @@ Code every logged question on three dimensions:
 
 The claims-vs-communication split is the key move: a communication question means
 fix the poster; a claims question means the evidence itself was probed. They lead
-to different redesigns (M18), so tag them apart.
+to different fixes — a poster tweak versus a claim you must re-scope — so tag them
+apart.
 
 ## Finding your pattern
 
@@ -63,10 +64,10 @@ whether Nov 17 challenged your evidence or your clarity.
 |---|---|
 | 0–8 | **Story round:** 90 seconds each — the single most surprising moment at your poster. |
 | 8–15 | Mini-lesson: feedback is data — code it (recurred? from whom? claims or communication?). |
-| 15–32 | **Coding studio:** log every question into the nb16 tally (type, target, recurrence); find your pattern. |
+| 15–32 | **Coding studio:** log every question into the nb12 tally (type, target, recurrence); find your pattern. |
 | 32–44 | **Pair analysis:** swap tallies — tell your partner what their pattern says that they can't see. |
 | 44–48 | **Reflection freewrite:** the honest paragraph — what the conference changed in how you see your project. |
-| 48–50 | Exit ticket (the most repeated question + what its repetition evidences); M17 due tonight. |
+| 48–50 | Exit ticket (the most repeated question + what its repetition evidences); M12 due tonight. |
 
 ## Roles
 
@@ -80,7 +81,7 @@ tally template, and if someone missed the Expo for a documented reason, runs the
 make-up path (department session or recorded defense) with rehearsal data used
 meanwhile. Each person tells one story, codes one tally, reads one partner's.
 
-## Quality checklist (before submitting M17)
+## Quality checklist (before submitting M12)
 
 - ☐ Every captured question coded on all three dimensions.
 - ☐ The claims-vs-communication split applied — not collapsed into one pile.
@@ -96,4 +97,4 @@ meanwhile. Each person tells one story, codes one tally, reads one partner's.
 4. **Pattern by vibe.** "People liked it" is not a pattern. Name the count that supports the claim.
 5. **Cherry-picking the flattering questions.** The stinging, recurrent one is the data you most need.
 
-*Feeds [post_conference_redesign_protocol.md](../final_dossier/post_conference_redesign_protocol.md) — M37 maps this pattern onto MIDA and declares the redesign.*
+*Feeds [milestone_13 — Replication & Red-Team Report](../../_research_project/2026Fall/milestone_13_replication_redteam.md) — your coded reception and criticism discipline become the standard you apply to a peer's anonymized package over the break.*

@@ -1,9 +1,9 @@
 # Final Production Checklist — M31 (Fri Nov 6)
 
 *The last pass before your poster is locked. Run in class M31; the deadline is
-TODAY, Nov 6, 11:59 PM — there is no "after."
-Governs [milestone_12 — Final Poster](../../_research_project/2026Fall/milestone_12_final_poster.md).
-Quality bar: [poster_rubric.md](poster_rubric.md).*
+TODAY, Nov 6, 5:00 PM — there is no "after."
+Governs [milestone_10 — Final Poster Lock](../../_research_project/2026Fall/milestone_10_final_poster_lock.md).
+Quality bar: the milestone_10 grading rubric (the single poster rubric).*
 
 ## Purpose
 
@@ -90,4 +90,4 @@ the file is what is due today, the paper is what is needed by the Expo.
 4. **Uncertainty lost in the final layout.** Re-confirm it survived the last design pass.
 5. **Submitting the wrong file.** Verify it's the final version, correctly named, before you close the laptop.
 
-*Previous: [redteam_review_protocol.md](redteam_review_protocol.md) · Rubric: [poster_rubric.md](poster_rubric.md)*
+*Previous: [redteam_review_protocol.md](redteam_review_protocol.md) · Rubric: [milestone_10 — Final Poster Lock](../../_research_project/2026Fall/milestone_10_final_poster_lock.md)*
