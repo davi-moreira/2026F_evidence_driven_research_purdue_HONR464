@@ -397,7 +397,7 @@ links both ways.
 **Decision:** The v1 "AI-use ledger" habit and per-deliverable disclosure
 block are unified into ONE structured artifact: the **AI Research Ledger**,
 with fixed fields (task delegated · tool used · prompt · output summary ·
-decision · verification method · remaining concern · responsible student).
+decision · verification method · remaining concern · responsible researcher).
 Every notebook carries a ledger-entry block; every milestone submission
 appends to the student's cumulative ledger inside the Research Project
 Dossier. The claim ledger (claims, evidence, verification, boundaries)

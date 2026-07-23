@@ -192,7 +192,7 @@ def ledger_row(role, model, prompt_text, got_reply):
     task = "REPLACE: the one job you handed to this role, in a sentence"
     return (
         "| Task delegated | Tool used | Prompt | Output summary | Decision | "
-        "Verification method | Remaining concern | Responsible student |\n"
+        "Verification method | Remaining concern | Responsible researcher |\n"
         "|---|---|---|---|---|---|---|---|\n"
         f"| {task} | {tool} | "
         f"{prompt_text.strip()[:80]}... | "

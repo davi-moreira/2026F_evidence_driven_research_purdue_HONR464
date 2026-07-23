@@ -39,12 +39,12 @@ information appears every time and a grader can scan it fast.
 | 5 | **Decision** | What **you** did with it: accepted, edited, rejected, asked again. This column is where your judgment shows. |
 | 6 | **Verification method** | How you confirmed the output was true, named from the verification menu (recompute, primary-source read, alternative code, counterexample, and so on). |
 | 7 | **Remaining concern** | What you are still unsure about, or "none, and here is why." An honest concern scores better than a blank. |
-| 8 | **Responsible student** | Your name. On an individual project this is always you; the field keeps the habit for any shared work. |
+| 8 | **Responsible researcher** | Your name. On an individual project this is always you; the field keeps the habit for any shared work. |
 
 Copy this empty row to start:
 
 ```
-| Task delegated | Tool used | Prompt | Output summary | Decision | Verification method | Remaining concern | Responsible student |
+| Task delegated | Tool used | Prompt | Output summary | Decision | Verification method | Remaining concern | Responsible researcher |
 |---|---|---|---|---|---|---|---|
 |  |  |  |  |  |  |  |  |
 ```
@@ -57,19 +57,19 @@ weight. The output is never trusted on its own.
 
 **A code task.**
 
-| Task delegated | Tool used | Prompt | Output summary | Decision | Verification method | Remaining concern | Responsible student |
+| Task delegated | Tool used | Prompt | Output summary | Decision | Verification method | Remaining concern | Responsible researcher |
 |---|---|---|---|---|---|---|---|
 | Write pandas code to compute the mean outcome by treatment group | Gemini in Colab | "Given a dataframe `df` with columns `group` and `outcome`, write pandas to report the mean `outcome` for each `group`, and show the difference." | A `groupby("group")["outcome"].mean()` snippet plus a difference line | Accepted the groupby, rewrote the difference line to subtract in the direction my question asks | **Alternative code**: recomputed the same two means by hand-filtering each group and subtracting; matched to the fourth decimal | The group sizes are uneven; the raw difference ignores that, which I flag in my claim | You |
 
 **A literature task.**
 
-| Task delegated | Tool used | Prompt | Output summary | Decision | Verification method | Remaining concern | Responsible student |
+| Task delegated | Tool used | Prompt | Output summary | Decision | Verification method | Remaining concern | Responsible researcher |
 |---|---|---|---|---|---|---|---|
 | Find peer-reviewed work on my outcome measure to see if my gap is real | Gemini | "List peer-reviewed studies from the last ten years that measure \[my outcome] in \[my setting]. For each, give title, authors, year, venue, and a one-line finding." | Six studies with titles, authors, venues, and findings | Rejected two rows I could not locate; kept four after finding them myself | **Primary-source read**: searched each title in the library database, opened the actual paper, confirmed authors and finding match | One kept paper is a preprint, not yet peer-reviewed; I mark it as such | You |
 
 **A critique task.**
 
-| Task delegated | Tool used | Prompt | Output summary | Decision | Verification method | Remaining concern | Responsible student |
+| Task delegated | Tool used | Prompt | Output summary | Decision | Verification method | Remaining concern | Responsible researcher |
 |---|---|---|---|---|---|---|---|
 | Stress-test my claim that the sample difference generalizes to the population | GenAI Studio — Causal Identification Skeptic | "My question is descriptive with population reach. Here is my sampling frame and my claim. Name every reason this difference might not hold beyond my sample, ranked by how much it worries you." | Five threats, led by coverage gaps in my sampling frame | Accepted three, edited one into my limitations section, set one aside as not applicable to my frame | **Peer reasoning**: walked the top threat past a classmate, who agreed the frame misses a subgroup I had not named | I cannot fully bound the coverage gap without frame documentation I do not have yet | You |
 

@@ -69,7 +69,7 @@ An escalation is a ledger row like any other, but its decision column carries mo
 weight and it names the trigger. Use this shape:
 
 ```
-| Task delegated | Tool used | Prompt | Output summary | Decision | Verification method | Remaining concern | Responsible student |
+| Task delegated | Tool used | Prompt | Output summary | Decision | Verification method | Remaining concern | Responsible researcher |
 |---|---|---|---|---|---|---|---|
 | [the task that hit the boundary] | [tool/role] | [prompt] | [what it returned] | ESCALATED (trigger #_): I took this decision myself — [your decision, in your words, and why the AI output did not settle it] | [the non-AI method you used to stand behind your decision] | [what you still watch] | You |
 ```

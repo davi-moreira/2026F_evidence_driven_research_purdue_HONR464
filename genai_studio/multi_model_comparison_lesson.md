@@ -119,7 +119,7 @@ is.
 **5. The decision and the ledger row.** What *you* concluded and did, then a
 completed AI Research Ledger row: task delegated · tool used (name each model) ·
 prompt · output summary · decision · verification method · remaining concern ·
-responsible student.
+responsible researcher.
 
 ---
 

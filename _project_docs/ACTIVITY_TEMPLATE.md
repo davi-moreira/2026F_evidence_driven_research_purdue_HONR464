@@ -216,7 +216,7 @@ implement SDIIVDD around the notebook's real work.
 | Prompt modification | `### 🔁 Modify the Prompt` | change a supplied prompt yourself and predict how the output will change, then check |
 | Output interrogation | `### 🔬 Interrogate the Output` | challenge the AI's response for errors, overreach, and fabricated citations; independently verify any code it produced before trusting a result |
 | Human-only checkpoint | `### 🧑‍⚖️ Human-Only Checkpoint` | a decision made with AI set aside (one of the never-delegate decisions) |
-| AI Research Ledger | `### 📒 AI Research Ledger` | log this notebook's AI use in the structured artifact (D21): task delegated · tool · prompt · output summary · decision · verification method · remaining concern · responsible student |
+| AI Research Ledger | `### 📒 AI Research Ledger` | log this notebook's AI use in the structured artifact (D21): task delegated · tool · prompt · output summary · decision · verification method · remaining concern · responsible researcher |
 
 **Where useful (defined, not hard-required):**
 - `### ⚔️ Competing AI Roles` — put two AI roles against each other (e.g.,

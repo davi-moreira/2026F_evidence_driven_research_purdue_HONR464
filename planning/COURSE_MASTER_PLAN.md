@@ -40,7 +40,7 @@ choosing measures and judging data quality; ethical judgments; deciding which
 claims the evidence justifies; owning uncertainty and limitations; and defending
 the project publicly. Every deliverable carries an **AI Research Ledger** entry
 (task delegated · tool · prompt · output summary · decision · verification
-method · remaining concern · responsible student). Primary tool: Google Gemini
+method · remaining concern · responsible researcher). Primary tool: Google Gemini
 in and alongside Colab; reviewer bench: Purdue GenAI Studio; other tools
 permitted with disclosure.
 

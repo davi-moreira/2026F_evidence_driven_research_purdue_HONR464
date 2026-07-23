@@ -45,7 +45,7 @@ ai_policy:
   discipline_shorthand: "Ask -> Verify -> Document"   # the student-facing everyday form
   ledger_required: true            # AI Research Ledger entry on every deliverable
   ledger_fields: [task_delegated, tool_used, prompt, output_summary, decision,
-                  verification_method, remaining_concern, responsible_student]
+                  verification_method, remaining_concern, responsible_researcher]
   never_delegate:                  # decisions that stay human, per the syllabus
     - selecting the research problem and question
     - declaring the research design and target population

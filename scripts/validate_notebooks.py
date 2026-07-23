@@ -42,7 +42,10 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
 from voice_lint_notebooks import lint_notebook  # noqa: E402
-from notebooks_map import NOTEBOOKS, student_filename, instructor_filename  # noqa: E402
+from notebooks_map import (  # noqa: E402
+    NOTEBOOKS, MS_NOTEBOOKS, student_filename, instructor_filename,
+    ms_student_filename,
+)
 
 # Headings are matched by their name text at level-3, robust to emoji variation
 # (e.g. the 🧑‍⚖️ ZWJ sequence). The Runnable move keeps its emoji marker because
@@ -172,6 +175,20 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
     return errs
 
 
+def check_ms_student(path: Path) -> list[str]:
+    """Reduced studio contract for a milestone studio notebook (msNN)."""
+    nb = nbformat.read(path, as_version=4)
+    text = "\n\n".join(c.source for c in nb.cells)
+    errs = [f"missing required studio block: {name}"
+            for name, pat in MS_REQUIRED.items() if not pat.search(text)]
+    if text.count("💡 **Gemini Prompt") < 1:
+        errs.append("studio notebook needs ≥1 Gemini Prompt block")
+    if "INSTRUCTOR SOLUTION" in text:
+        errs.append("INSTRUCTOR SOLUTION marker leaked into student file")
+    errs += [f"voice: {p}" for p in lint_notebook(path)]
+    return errs
+
+
 def check_instructor(path: Path) -> list[str]:
     nb = nbformat.read(path, as_version=4)
     errs = []
@@ -196,13 +213,18 @@ def _selected(only: set[str]) -> list[int]:
 
 
 def main() -> None:
-    only = set(sys.argv[1:])
+    args = sys.argv[1:]
+    ms_args = [a for a in args if a.lower().startswith("ms")]
+    nb_args = [a for a in args if not a.lower().startswith("ms")]
+    no_filter = not args                 # bare call → validate everything
+    run_topics = no_filter or bool(nb_args)
+    run_studios = no_filter or bool(ms_args)
     student_dir = REPO / "notebooks" / "student"
     instructor_dir = REPO / "notebooks" / "instructor"
 
     checked_s = checked_i = 0
     failed = False
-    for n in _selected(only):
+    for n in (_selected(set(nb_args)) if run_topics else []):
         title = NOTEBOOKS[n][1]
         is_async = title.lower().startswith("async module")
 
@@ -229,19 +251,24 @@ def main() -> None:
                     print("    " + e)
 
     # Milestone studio notebooks (msNN_*_student.ipynb): reduced required set.
+    # With explicit ms args validate exactly those; a bare call sweeps all.
     checked_ms = 0
-    if not only:
-        for sp in sorted(student_dir.glob("ms*_student.ipynb")):
+    if run_studios:
+        if ms_args:
+            ms_paths = []
+            for a in ms_args:
+                m = re.search(r"\d+", a)
+                if m:
+                    ms_paths.append(student_dir / ms_student_filename(int(m.group())))
+        else:
+            ms_paths = sorted(student_dir.glob("ms*_student.ipynb"))
+        for sp in ms_paths:
+            if not sp.exists():
+                failed = True
+                print(f"✗ {sp.name}: studio notebook not built")
+                continue
             checked_ms += 1
-            nb = nbformat.read(sp, as_version=4)
-            text = "\n\n".join(c.source for c in nb.cells)
-            errs = [f"missing required studio block: {name}"
-                    for name, pat in MS_REQUIRED.items() if not pat.search(text)]
-            if text.count("💡 **Gemini Prompt") < 1:
-                errs.append("studio notebook needs ≥1 Gemini Prompt block")
-            if "INSTRUCTOR SOLUTION" in text:
-                errs.append("INSTRUCTOR SOLUTION marker leaked into student file")
-            errs += [f"voice: {p}" for p in lint_notebook(sp)]
+            errs = check_ms_student(sp)
             if errs:
                 failed = True
                 print(f"✗ {sp.name}")

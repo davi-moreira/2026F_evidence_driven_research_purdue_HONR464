@@ -40,6 +40,16 @@ NOTEBOOKS = {
 
 REPO_SLUG = "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
 
+# Milestone studio notebooks (msNN) — the light Friday-studio companions to the
+# M0–M15 milestone briefs (ACTIVITY_TEMPLATE.md, "Milestone studio notebooks"
+# final section). Keyed by milestone id. These carry the reduced required set,
+# no schedule badge, and no per-lecture structure. Built ad hoc as each milestone
+# package ships; not every id is present until P4 completes.
+MS_NOTEBOOKS = {
+    4: ("ms04_observational_descriptive_audit",
+        "M4 studio — observational descriptive design audit"),
+}
+
 
 def student_filename(n: int) -> str:
     return f"{NOTEBOOKS[n][0]}_student.ipynb"
@@ -47,6 +57,14 @@ def student_filename(n: int) -> str:
 
 def instructor_filename(n: int) -> str:
     return f"{NOTEBOOKS[n][0]}_instructor.ipynb"
+
+
+def ms_student_filename(n: int) -> str:
+    return f"{MS_NOTEBOOKS[n][0]}_student.ipynb"
+
+
+def ms_instructor_filename(n: int) -> str:
+    return f"{MS_NOTEBOOKS[n][0]}_instructor.ipynb"
 
 
 def colab_badge(n: int) -> str:

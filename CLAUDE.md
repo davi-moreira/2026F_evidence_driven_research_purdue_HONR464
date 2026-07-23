@@ -118,7 +118,7 @@ wrap-ups bridging to the next week.
 
 Every deliverable and every notebook session appends to the student's **AI
 Research Ledger** (fields: task delegated · tool used · prompt · output summary
-· decision · verification method · remaining concern · responsible student).
+· decision · verification method · remaining concern · responsible researcher).
 Embedded AI prompts carry an **"After running, verify:"** checklist ending with
 a ledger line. Every notebook also contains: an AI Research Partner briefing,
 an initial human commitment BEFORE consulting AI, at least one required prompt
