@@ -19,7 +19,7 @@ Every STUDENT notebook must carry:
   * the five required AI-collaboration blocks (SDIIVDD): AI Research Partner
     briefing, Modify the Prompt, Interrogate the Output, Human-Only Checkpoint,
     AI Research Ledger
-  * ≥3 Gemini prompt blocks and ≥3 inline Q&A blocks
+  * ≥4 Gemini prompt blocks and ≥3 inline Q&A blocks
   * setup discipline: SEED = 464, no seaborn anywhere
   * no INSTRUCTOR SOLUTION marker in a student file
   * markdown hygiene: no unescaped $<digit>
@@ -139,8 +139,8 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
                         f"{need} (one per lecture; {n_lecture} '# Lecture N' heading(s))")
 
     n_gem = text.count("💡 **Gemini Prompt")
-    if n_gem < 3:
-        errs.append(f"only {n_gem} Gemini Prompt block(s) — frame requires ≥3 "
+    if n_gem < 4:
+        errs.append(f"only {n_gem} Gemini Prompt block(s) — frame requires ≥4 "
                     f"(one before every substantive code chunk)")
     if text.count("After running, verify") < n_gem:
         errs.append("each Gemini Prompt must be followed by an "

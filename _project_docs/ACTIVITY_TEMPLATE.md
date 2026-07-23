@@ -211,8 +211,8 @@ implement SDIIVDD around the notebook's real work.
 
 | Block | Heading marker | What it is |
 |---|---|---|
-| Partner briefing | `### 🤝 AI Research Partner` | once near the top: how to task Gemini for THIS topic, what to never delegate, and the reminder to commit your own answer first |
-| Gemini prompt + verify | `> 💡 **Gemini Prompt:**` (**≥3**) | a copy-paste prompt + an "After running, verify" checklist (see §8a) |
+| Partner briefing | `### 🤝 AI Research Partner` | once near the top: how to task Gemini for THIS topic, what to never delegate (link `ai_resources/human_responsibility_checklist.md`), and the reminder to commit your own answer first |
+| Gemini prompt + verify | `> 💡 **Gemini Prompt:**` (**≥4**) | a copy-paste prompt + an "After running, verify" checklist (see §8a) |
 | Prompt modification | `### 🔁 Modify the Prompt` | change a supplied prompt yourself and predict how the output will change, then check |
 | Output interrogation | `### 🔬 Interrogate the Output` | challenge the AI's response for errors, overreach, and fabricated citations; independently verify any code it produced before trusting a result |
 | Human-only checkpoint | `### 🧑‍⚖️ Human-Only Checkpoint` | a decision made with AI set aside (one of the never-delegate decisions) |
@@ -228,7 +228,7 @@ implement SDIIVDD around the notebook's real work.
 Every substantive code cell is preceded by a Gemini prompt (the setup cell and
 trivial one-line prints are exempt). Prompts are scripts the reader copies into
 Google Gemini, written exactly as they would type them (second person, never
-about "students"). Each notebook carries **≥3** (machine-checked):
+about "students"). Each notebook carries **≥4** (machine-checked):
 
 ```markdown
 > 💡 **Gemini Prompt:** "[prompt text — explain / critique / extend the next cell]"
@@ -379,7 +379,7 @@ asserts, by exact marker string:
 | 7 | Moves | `### 🔮 Pause & Predict`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Reading the Evidence`, `### 🎯 Project Transfer`, `### 🛡️ Exit Defense` | ≥1 each |
 | 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Hands-On:` | ≥1 (exempt: nb10, nb11, nb12) |
 | 9 | Partner briefing | `### 🤝 AI Research Partner` | ≥1 |
-| 10 | Gemini prompts | `> 💡 **Gemini Prompt:**` each followed by `**After running, verify` | ≥3 |
+| 10 | Gemini prompts | `> 💡 **Gemini Prompt:**` each followed by `**After running, verify` | ≥4 |
 | 11 | Prompt modification | `### 🔁 Modify the Prompt` | ≥1 |
 | 12 | Interrogation | `### 🔬 Interrogate the Output` | ≥1 |
 | 13 | Human-only | `### 🧑‍⚖️ Human-Only Checkpoint` | ≥1 |
