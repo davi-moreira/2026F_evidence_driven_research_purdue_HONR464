@@ -2,11 +2,15 @@
 # Source of truth for validators, notebook headers, and the schedule generator.
 # Human narrative lives in planning/COURSE_MASTER_PLAN.md; dates are verified by
 # scripts/validate_calendar.py. Keep this file and that script in agreement.
+# v2 (2026-07-23): prompt-architecture rebuild — 16 weekly topics nb00–nb15,
+# milestones M0–M15, Student Research Lead flipped classroom, SDIIVDD AI
+# discipline, GenAI Studio reviewer bench, 37-chapter course book. v1 preserved
+# at git tag v1-compass-build.
 
 course:
   number: "HONR 46400"
   title: "Evidence-Driven Research"
-  subtitle: "From Curiosity to Defensible Claims"
+  subtitle: "How to Design, Analyze, Verify, and Defend Empirical Research"
   term: "2026-fall"
   institution: "Purdue University Honors College"
   instructor: "Professor Davi Moreira"
@@ -21,21 +25,70 @@ course:
 calendar:
   first_class: "2026-08-24"
   last_class: "2026-12-11"
-  total_meetings: 44
-  in_person: 42
+  total_meetings: 43
+  in_person: 41
   async_meetings: ["2026-10-02", "2026-11-23"]
-  no_class: ["2026-09-07", "2026-10-12", "2026-11-25", "2026-11-27"]
+  no_class: ["2026-09-07", "2026-10-12", "2026-11-18", "2026-11-25", "2026-11-27"]
   events:
     urc_expo: "2026-11-17"          # Tuesday — REQUIRED poster presentation
-    poster_deadline: "2026-11-06"   # final poster production + submission
-    urc_abstract_deadline: "TBD"    # external; internal completion gate = 2026-10-09 (M20)
+    poster_deadline: "2026-11-06"   # M10 final poster lock, 5:00 PM (terminal)
+    replication_due: "2026-11-29"   # Sunday — M13 replication + red-team report
+    urc_abstract_deadline: "TBD"    # external; internal completion gate = 2026-10-09
 
-# The inquiry compass — the course's operational spine, native to RDSS ch. 7.
-# Classify every research question twice: by KIND (descriptive vs causal) and by
-# REACH (data at hand / a population beyond the data / cases not yet seen).
-# Four named compass positions keep one deep-dive notebook each; CROSSINGS
-# between positions are licensed by design elements (D, A) and proven by
-# diagnosis — every overclaim in the wild is a crossing without its license.
+# ---------------------------------------------------------------------------
+# The central pedagogical principle and the AI-collaboration discipline.
+# ---------------------------------------------------------------------------
+ai_policy:
+  principle: "AI IS YOUR ARM AND YOUR RESEARCH ASSISTANT — NOT YOUR BRAIN."
+  verify_rule: "AI MAY PROPOSE. THE RESEARCHER MUST VERIFY. THE EVIDENCE MUST SUPPORT."
+  discipline: "Specify -> Delegate -> Interrogate -> Inspect -> Verify -> Document -> Defend"
+  discipline_shorthand: "Ask -> Verify -> Document"   # the student-facing everyday form
+  ledger_required: true            # AI Research Ledger entry on every deliverable
+  ledger_fields: [task_delegated, tool_used, prompt, output_summary, decision,
+                  verification_method, remaining_concern, responsible_student]
+  never_delegate:                  # decisions that stay human, per the syllabus
+    - selecting the research problem and question
+    - declaring the research design and target population
+    - choosing measurements and evaluating data quality
+    - ethical judgments
+    - deciding which claims the evidence justifies
+    - acknowledging uncertainty and limitations
+    - defending the project publicly
+  tools:
+    primary: "Google Gemini (in and alongside Colab)"
+    reviewer_bench: "Purdue GenAI Studio (custom role models + course knowledge base)"
+    also_permitted: "Microsoft Copilot (Purdue-provided) and other tools, with disclosure"
+
+# ---------------------------------------------------------------------------
+# Flipped classroom: the Student Research Lead (SRL) system.
+# ---------------------------------------------------------------------------
+srl:
+  leadable_lectures: 25            # all Mon/Wed lectures except Week 1 (M1, M2)
+  leads_per_student: 5             # 25 slots / 5 students
+  first_slot_meeting: 4            # Mon Aug 31 (nb01 Lecture 1)
+  model: "Socratic investigation, not summary presentation"
+  monday_sections:                 # minutes must sum to 50
+    - {name: "Student-led research puzzle", min: 9}
+    - {name: "Guided AI research-partner investigation", min: 22}
+    - {name: "Human verification + instructor formalization", min: 12}
+    - {name: "Decision and defense", min: 7}
+  wednesday_sections:
+    - {name: "Student-led retrieval and challenge", min: 7}
+    - {name: "Intensive applied AI laboratory", min: 23}
+    - {name: "Peer defense and adversarial questioning", min: 12}
+    - {name: "Transfer to the final project", min: 8}
+  friday_sections:
+    - {name: "Research stand-up", min: 6}
+    - {name: "Milestone kickoff + AI-supported sprint", min: 23}
+    - {name: "Peer and AI red-team review", min: 12}
+    - {name: "Revision, ledger, submission", min: 9}
+
+# ---------------------------------------------------------------------------
+# The inquiry compass (RDSS ch. 7) — the QUESTION-classification layer, taught
+# in nb01 and used in every declaration. Research DESIGNS are organized by the
+# RDSS design-library pathways (ch. 15–18): inquiry kind × data strategy, with
+# prediction as its own answer objective (generalization to unseen cases).
+# ---------------------------------------------------------------------------
 inquiry_framework:
   kinds:
     descriptive: "asks what the world is or was — no counterfactual contrast required"
@@ -50,29 +103,29 @@ inquiry_framework:
       reach: "sample"
       can_establish: "what is observed in the data at hand; patterns, distributions, differences"
       cannot_establish: "reach beyond these units; causal effects"
-      deep_dive_notebook: "nb06"
+      taught_in: "nb01 (classification), nb04 (design deep dive)"
     generalization:
       label: "generalization (statistical/observational inference)"
       kind: "descriptive"
       reach: "population"
       can_establish: "estimates about a population with quantified uncertainty, for the frame the sampling design reaches"
       cannot_establish: "a causal effect (association is not causation); reach past the frame"
-      deep_dive_notebook: "nb10"
+      taught_in: "nb01 (classification), nb04 (design deep dive)"
     prediction:
       label: "prediction (descriptive inquiries about unseen cases)"
       kind: "descriptive"
       reach: "unseen"
       can_establish: "out-of-sample forecasts for new observations, against a stated baseline + metric"
       cannot_establish: "explanation or causation; performance != understanding"
-      deep_dive_notebook: "nb12"
-      note: "RDSS's design library stops at ch. 18; the course authors the missing entry 'Observational: predictive' in the book's own declare-diagnose-redesign format"
+      taught_in: "nb01 (classification), nb07 (design deep dive)"
+      note: "a distinct answer objective — never forced into the descriptive-vs-causal or observational-vs-experimental grids"
     causal:
       label: "causal reasoning"
       kind: "causal"
       reach: "sample or population (identification licenses the kind-crossing; sampling licenses reach)"
       can_establish: "an effect of an intervention under a stated identification argument"
       cannot_establish: "effects when identification assumptions fail or no design supplies leverage"
-      deep_dive_notebook: "nb13"
+      taught_in: "nb01 (classification), nb05 + nb08 (design deep dives)"
   crossings:
     sample_to_population:
       license: "a sampling data strategy (RDSS ch. 8) + an uncertainty-bearing answer strategy (ch. 9) + diagnosis (ch. 10)"
@@ -83,23 +136,88 @@ inquiry_framework:
     descriptive_to_causal:
       license: "an assignment strategy (RDSS ch. 8, 18) or a defended observational identification argument (ch. 16)"
       violation: "after-therefore-because; design mimicry"
-  eda:
-    role: "not a compass position — the explore -> declare -> confirm loop"
-    upstream: "nb04 (explore to calibrate M and discover candidate I)"
-    anchor: "nb06 (the loop taught by name)"
-    answer_strategy: "nb09 (RDSS ch. 9.1.3 — declare the whole procedure)"
-    pivoting: "nb17 (RDSS ch. 22 — pivot + reconciliation)"
+  pathways:                        # the design-library layer (Weeks 5–9)
+    observational_descriptive: {week: 5, notebook: "nb04", rdss: "ch. 15", example_designs: "sample surveys, indices, case selection"}
+    observational_causal:      {week: 6, notebook: "nb05", rdss: "ch. 16", example_designs: "selection-on-observables, DiD, IV, RDD, natural experiments"}
+    experimental_descriptive:  {week: 7, notebook: "nb06", rdss: "ch. 17", example_designs: "audit, list, conjoint experiments; behavioral games; measurement experiments"}
+    prediction:                {week: 8, notebook: "nb07", rdss: "course-authored library entry (declare-diagnose-redesign format)", example_designs: "baseline vs model, held-out evaluation, calibration"}
+    experimental_causal:       {week: 9, notebook: "nb08", rdss: "ch. 18", example_designs: "two-arm trials, blocking, cluster + factorial designs"}
 
-# The course operating system (Blair/Coppock/Humphreys declaration→diagnosis→redesign,
-# expressed as a recurring student loop).
+# The course operating system (declaration→diagnosis→redesign as a student loop).
 operating_system:
   workflow: [CURIOSITY, GAP, PROBLEM, QUESTION, COMPASS, MODEL, INQUIRY, MEASUREMENT,
              DATA_STRATEGY, ANSWER_STRATEGY, DECLARATION, DIAGNOSIS, REDESIGN,
              ANALYSIS, CLAIM, COMMUNICATION, REFLECTION, REVISION]
   student_loop: [ASK, DEFINE, CLASSIFY, MATCH, DECLARE, BUILD, DIAGNOSE, REDESIGN,
                  VERIFY, CLAIM, COMMUNICATE, REVISE]
+  ai_loop: [SPECIFY, DELEGATE, INTERROGATE, INSPECT, VERIFY, DOCUMENT, DEFEND]
 
-# Source-of-truth materials (see planning/SOURCE_AUDIT.md for the full inventory).
+# ---------------------------------------------------------------------------
+# Weekly architecture: 16 topics, one notebook per week (nb00–nb15).
+# ---------------------------------------------------------------------------
+weeks:
+  - {week: 1,  notebook: "nb00", lectures: 2, topic: "Research in the age of AI: your arm, your RA — not your brain", milestone: "M0"}
+  - {week: 2,  notebook: "nb01", lectures: 2, topic: "From curiosity to a research problem: descriptive, predictive, causal", milestone: "M1"}
+  - {week: 3,  notebook: "nb02", lectures: 1, topic: "Research builds on research: verified evidence and real gaps", milestone: "M2"}
+  - {week: 4,  notebook: "nb03", lectures: 2, topic: "The anatomy of a research design: MIDA, declaration, diagnosis", milestone: "M3"}
+  - {week: 5,  notebook: "nb04", lectures: 2, topic: "Observational descriptive research", milestone: "M4"}
+  - {week: 6,  notebook: "nb05", lectures: 2, topic: "Observational causal research", milestone: "M5"}
+  - {week: 7,  notebook: "nb06", lectures: 2, topic: "Experimental descriptive research", milestone: "M6"}
+  - {week: 8,  notebook: "nb07", lectures: 1, topic: "Prediction", milestone: "M7"}
+  - {week: 9,  notebook: "nb08", lectures: 2, topic: "Experimental causal research", milestone: "M8"}
+  - {week: 10, notebook: "nb09", lectures: 2, topic: "Share the research and attack the analysis", milestone: "M9"}
+  - {week: 11, notebook: "nb10", lectures: 2, topic: "Poster criticism and final poster lock", milestone: "M10"}
+  - {week: 12, notebook: "nb11", lectures: 2, topic: "Poster delivery: pitches, uncertainty, difficult questions", milestone: "M11"}
+  - {week: 13, notebook: "nb12", lectures: 1, topic: "Final conference preparation, presentation, and reflection", milestone: "M12"}
+  - {week: 14, notebook: "nb13", lectures: 0, topic: "Thanksgiving async: replication and red-team", milestone: "M13"}   # async module
+  - {week: 15, notebook: "nb14", lectures: 2, topic: "From poster to research note", milestone: "M14"}
+  - {week: 16, notebook: "nb15", lectures: 2, topic: "Managing multiple AI agents; the final defense", milestone: "M15"}
+
+milestones:
+  M0:  {title: "Research and AI baseline",                     due: "2026-08-28", kind: "studio"}
+  M1:  {title: "Research opportunity landscape",               due: "2026-09-04", kind: "studio"}
+  M2:  {title: "Verified evidence and contribution map",       due: "2026-09-11", kind: "studio"}
+  M3:  {title: "Research charter and MIDA declaration",        due: "2026-09-18", kind: "studio"}
+  M4:  {title: "Observational descriptive design audit",       due: "2026-09-25", kind: "studio"}
+  M5:  {title: "Causal identification strategy or causal-language boundary", due: "2026-10-02", kind: "async-studio"}
+  M6:  {title: "Experimental measurement or data-acquisition protocol (+ URC abstract internal gate)", due: "2026-10-09", kind: "studio"}
+  M7:  {title: "Declared analysis protocol",                   due: "2026-10-16", kind: "studio"}
+  M8:  {title: "Minimum viable analysis",                      due: "2026-10-23", kind: "studio"}
+  M9:  {title: "Poster draft 1 and research audit",            due: "2026-10-30", kind: "studio"}
+  M10: {title: "Final poster lock",                            due: "2026-11-06", kind: "terminal", note: "5:00 PM, submitted for printing"}
+  M11: {title: "Presentation package",                         due: "2026-11-13", kind: "studio", note: "Friday = mock poster symposium"}
+  M12: {title: "Conference reflection and poster-criticism portfolio", due: "2026-11-20", kind: "studio", note: "Expo Tue Nov 17 presentation is a graded component"}
+  M13: {title: "Replication and red-team report",              due: "2026-11-29", kind: "async", note: "peer's anonymized package; Sunday due date"}
+  M14: {title: "Research-note draft and reproducibility capsule", due: "2026-12-04", kind: "studio"}
+  M15: {title: "Final research chapter and AI-management portfolio", due: "2026-12-11", kind: "terminal"}
+
+# The cumulative Research Project Dossier (every milestone updates it).
+dossier_components:
+  - research charter
+  - evidence and literature map
+  - MIDA design declaration
+  - data and measurement documentation
+  - reproducible Colab notebook
+  - declared analysis protocol
+  - claim–evidence table
+  - robustness and diagnostic record
+  - AI Research Ledger
+  - poster and presentation materials
+  - replication record
+  - research note / chapter
+  - AI-agent management portfolio
+
+# Grading (proposal pending instructor confirmation in syllabus v2).
+assessment:
+  notebook_prep_engagement: 10
+  srl_performance: 15
+  milestones_m0_m9: 25
+  poster_and_expo_m10_m12: 20
+  replication_m13: 5
+  research_note_final_chapter_m14_m15: 15
+  claim_analyses_concept_checks: 10
+
+# Source-of-truth materials (see planning/SOURCE_AUDIT_V2.md).
 sources:
   primary_book:
     key: "RDSS"
@@ -107,29 +225,39 @@ sources:
     local_root: "_adm/_references/book/"
     r_package: "rdss"           # CRAN v1.0.14, MIT license; wraps DeclareDesign
     license: "MIT"
+    library: "https://book.declaredesign.org/library/"   # Weeks 5–9 backbone
+  course_book:
+    key: "EDR"
+    title: "Evidence-Driven Research: How to Design, Analyze, Verify, and Defend Empirical Research"
+    format: "Quarto book, 37 chapters in six parts, rendered to docs/book/"
+    sync: "chapters synchronized with nb00–nb15 + site (validate_book_sync.py)"
   secondary_book:
     key: "CB"
     citation: "Bergstrom & West (2020). Calling Bullshit: The Art of Skepticism in a Data-Driven World."
     local: false
     use: "optional / parallel; light discussion; public callingbullshit.org where used"
   datasets:            # from rdss / RDSS replication (MIT); shipped as CSV under notebooks/data/
-    - bonilla_tillery
-    - cliningsmith_etal
-    - foos_etal
-    - la_voter_file
-    - lapop_brazil
+    - bonilla_tillery      # survey experiment → nb06
+    - cliningsmith_etal    # natural experiment → nb05
+    - foos_etal            # field experiment → nb08
+    - la_voter_file        # sampling frame → nb04
+    - lapop_brazil         # sample survey → nb04
 
-# AI-use policy (assessed habit).
-ai_policy:
-  principle: "AI MAY PROPOSE. THE RESEARCHER MUST VERIFY. THE EVIDENCE MUST SUPPORT."
-  ledger_required: true
-  discipline: "Ask -> Verify -> Document"
+# GenAI Studio (verified against RCAC docs 2026-07-22; see genai_studio/).
+genai_studio:
+  base_url: "https://genai.rcac.purdue.edu"
+  api: "https://genai.rcac.purdue.edu/api/chat/completions"   # OpenAI-compatible
+  capability_levels_implemented: [prompted_role, custom_model, rag_assistant, sequential_workflow]
+  not_available: [autonomous_agents, native_orchestration]
+  student_touchpoints: {M5: "Causal Identification Skeptic", M7: "Prediction & Leakage Auditor",
+                        M9: "Poster Critic + Robustness Reviewer", M13: "Reproducibility Auditor"}
 
 # Notebook conventions (adapted from MGMT474; ML-isms removed).
 notebooks:
   layout: "notebooks/{student,instructor,shared}/"
-  naming: "nbNN_topic_{student,instructor}.ipynb"   # one notebook per TOPIC
-  count_planned: 20                                  # nb00..nb19
+  naming: "nbNN_topic_{student,instructor}.ipynb"   # one notebook per WEEK/topic
+  count_planned: 16                                  # nb00..nb15
+  studio_naming: "msNN_topic_{student,instructor}.ipynb"  # milestone studio notebooks
   platform: "Google Colab"
   python: "3.11"
   libraries: [numpy, pandas, matplotlib, scipy, statsmodels, scikit-learn, networkx]

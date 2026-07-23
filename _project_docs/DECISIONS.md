@@ -1,8 +1,9 @@
-> ⚠️ **SEEDED FROM MGMT474 — NOT YET ADAPTED FOR HONR 46400.**
-> Several decisions below are machine-learning-specific (60/20/20 split, `RANDOM_SEED=474`,
-> CV-first / `audit_cv_first.py`, Colab+Gemini stack) and do **not** apply to this course.
-> **Do not treat these as authoritative HONR 46400 conventions yet.** Adapt during curriculum
-> work — see `NEW_COURSE_SETUP.md` (gap list) and the "Adapt seeded `_project_docs`" task.
+> **Registry status (2026-07-23).** D1–D11 are legacy seeds from MGMT474: D2/D3/D9
+> are DROPPED for HONR 46400, D10 is superseded by D14, the rest survive only where
+> restated below or in CLAUDE.md. D12–D16 are the 2026-07-19/20 HONR rulings; parts
+> of D12 (sequencing) and D13 (Friday section format) are superseded by **D17**.
+> D17–D21 (2026-07-22/23) govern the current v2 build. The full v1 build is
+> preserved at git tag `v1-compass-build`.
 
 # Course Design Decisions
 
@@ -287,3 +288,125 @@ exemption.
 verification exercise") that undercut the course's own evidence-integrity spine
 and read as AI-generated filler. Verifying real sources exercises the same
 skill without shipping fakes in student material.
+
+---
+
+## Decision 17: Prompt-Architecture Rebuild — the v2 Course (2026-07-22, instructor ruling)
+
+**Decision:** The instructor's Fall 2026 master prompt governs the course
+architecture. The course is rebuilt as **16 weekly topics (nb00–nb15, one
+notebook per week)** over a **43-meeting calendar** (41 in-person + 2 async;
+NO class Wed Nov 18, the day after the Expo), with **milestones M0–M15**.
+Weeks 5–9 follow the DeclareDesign design library (RDSS ch. 15–18): one week
+each for observational descriptive, observational causal, experimental
+descriptive, prediction, and experimental causal designs — prediction treated
+as its own answer objective, never forced into either grid. The **inquiry
+compass (RDSS ch. 7) is retained as the question-classification layer**
+(taught Week 2, used in every declaration); the retired four-approach grid
+does NOT return. Friday studios adopt the four-section format: stand-up /
+milestone kickoff + AI sprint / peer + AI red-team / revise + submit.
+
+**Rationale:** The instructor ruled (2026-07-22) that the new prompt's
+architecture must govern and new material be developed. RDSS carries both
+layers natively (ch. 7 for questions, ch. 14–19 for designs), so the compass
+and the pathway weeks are one system, not competitors.
+
+**Implication:** Supersedes D12's notebook sequencing (compass concepts and
+claim-boundary machinery survive) and D13's Friday section format (the
+studio-Friday principle — no new topic content on Fridays — survives). All 20
+v1 notebooks, 24 v1 milestone briefs, and the 44-meeting schedule are replaced;
+v1 is preserved at tag `v1-compass-build` and mined per
+`planning/SOURCE_AUDIT_V2.md` §7.
+
+---
+
+## Decision 18: Flipped Classroom — the Student Research Lead System (2026-07-22)
+
+**Decision:** Every Mon/Wed lecture from Week 2 onward is led by a **Student
+Research Lead (SRL)** running a Socratic investigation (never a summary
+presentation): a concrete puzzle first, prior beliefs elicited, commitment
+before AI, directed Gemini use, human-vs-AI comparison, assumption probing,
+revision, and a closing defense. 25 lead slots ÷ 5 students = 5 leads each,
+assigned by rotation seats A–E in the schedule data. The 50-minute classes use
+fixed four-section architectures (Mon 9/22/12/7; Wed 7/23/12/8) enforced by
+the session-guide generator. SRL performance is graded on a rubric
+(conceptual correctness, Socratic quality, assumption exposure, productive AI
+use, AI interrogation, inclusion, time management, connection to research
+decisions, handling uncertainty).
+
+**Rationale:** The master prompt's central pedagogy; with a 5-person honors
+seminar, frequent leading is feasible and rehearses exactly the skills the
+Expo and the final defense assess.
+
+**Implication:** `scripts/schedule_data/` carries `srl_slot` + `srl_focus`
+per lecture; the SRL handbook/templates/rubric live in `project/srl/`;
+Week 1's two lectures stay instructor-led to model the format.
+
+---
+
+## Decision 19: AI Stack — Gemini Primary, GenAI Studio Reviewer Bench (2026-07-22)
+
+**Decision:** Google Gemini (in/alongside Colab) remains the embedded
+in-notebook research assistant; all prompts are REWRITTEN for the v2 material.
+**Purdue GenAI Studio** (genai.rcac.purdue.edu) is built out as the course's
+reviewer bench: custom role models (base model + system prompt + course
+knowledge base), shared via a course group, with required milestone
+touchpoints (M5 Causal Identification Skeptic; M7 Prediction & Leakage
+Auditor; M9 Poster Critic + Robustness & Sensitivity Reviewer; M13
+Reproducibility Auditor) and an OpenAI-compatible-API Colab proof-of-concept
+(Colab Secrets, never keys in code; manual-UI fallback is a first-class path).
+Materials use the six-level taxonomy (prompted role → custom model → RAG
+assistant → sequential multi-role workflow → autonomous agent → multi-agent
+orchestration) and implement GenAI Studio only at levels 1–4 — it has NO
+native agents and materials never claim otherwise.
+
+**Rationale:** Rewriting 84 working Gemini prompts to a different primary tool
+buys nothing; GenAI Studio's verified capabilities (custom models, RAG KBs,
+groups, multi-model comparison, OpenAI-compatible API) map exactly onto the
+reviewer-role pedagogy and the model-disagreement lessons.
+
+**Implication:** Role specs + KB strategy + PoC live in `genai_studio/`;
+student access must be verified by the instructor before the semester (open
+item); the SDIIVDD discipline (Specify → Delegate → Interrogate → Inspect →
+Verify → Document → Defend) becomes the course's full AI-collaboration loop
+with Ask → Verify → Document as its everyday shorthand.
+
+---
+
+## Decision 20: The Course Book — 37 Chapters, Six Parts (2026-07-22)
+
+**Decision:** Build the full 37-chapter open-access Quarto book ("Evidence-
+Driven Research: How to Design, Analyze, Verify, and Defend Empirical
+Research") in `book/`, rendered into `docs/book/` with a site Book tab.
+Chapters synchronize with the v2 notebooks + site (Part I ↔ nb00; II ↔
+nb01–03; III ↔ nb04–08; IV ↔ nb07–09 + cross-cutting; V ↔ nb10–12; VI ↔
+nb13–15), each carrying: the research decision, conceptual explanation, a
+STEM worked example, a Colab lab link, recommended AI prompts, a "Do not
+delegate" box, an AI failure case, a verification lab, project transfer, and
+a defend-your-decision activity. RDSS remains the assigned theory text.
+
+**Rationale:** Instructor ruling (2026-07-22): full book, synchronized with
+the new notebooks and site. Building it AFTER the notebooks stabilize keeps
+one source of truth; `scripts/validate_book_sync.py` enforces chapter↔notebook
+links both ways.
+
+---
+
+## Decision 21: The AI Research Ledger (2026-07-22)
+
+**Decision:** The v1 "AI-use ledger" habit and per-deliverable disclosure
+block are unified into ONE structured artifact: the **AI Research Ledger**,
+with fixed fields (task delegated · tool used · prompt · output summary ·
+decision · verification method · remaining concern · responsible student).
+Every notebook carries a ledger-entry block; every milestone submission
+appends to the student's cumulative ledger inside the Research Project
+Dossier. The claim ledger (claims, evidence, verification, boundaries)
+remains a DISTINCT instrument: the claim ledger tracks what the research
+asserts; the AI Research Ledger tracks what AI did and how it was checked.
+Missing ledger entries keep the v1 penalty: the rubric's Craft criterion
+scores 0 and the submission is returned.
+
+**Rationale:** One named artifact, taught on day 1 and audited at every
+milestone, turns the responsible-AI-use rule from a habit into a graded,
+inspectable record — and gives the M13 red-team and M15 portfolio their
+primary source.

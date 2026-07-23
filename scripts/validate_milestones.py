@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""validate_milestones.py — milestone-system consistency gates.
+"""validate_milestones.py — milestone-system consistency gates (v2: M0–M15).
 
 Parses the chain table in planning/PROJECT_MILESTONES.md and checks, against
 planning/MEETING_SCHEDULE.csv and the calendar backbone:
 
-  * all 24 milestones (M00–M23) present, each with development meetings, a
+  * all 16 milestones (M0–M15) present, each with development meetings, a
     presentation moment, and a due date
   * every milestone's development meetings precede (or meet) its due date
   * every milestone ID appears in >= 1 meeting's milestone_developed column
-  * the fixed anchors hold: M07 abstract Oct 9, M12 poster Nov 6, M16 = URC
-    Nov 17, M22 defenses Dec 7/9, M23 dossier Dec 11
-  * no two written milestones share a due date (M07's two parts exempted by ID)
+  * the fixed anchors hold: M6 abstract-gate Oct 9, M10 poster lock Nov 6,
+    M12 references the Expo Nov 17, M13 replication Nov 29 (Sunday),
+    M15 final chapter Dec 11
+  * no two milestones share a due date
 
 Usage: python3 scripts/validate_milestones.py
 """
@@ -28,6 +29,7 @@ SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.csv"
 BACKBONE = REPO / "planning" / "CALENDAR_BACKBONE.csv"
 
 MONTHS = {"Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
+N_MILESTONES = 16   # M0–M15
 
 
 def parse_dates(text: str) -> list[date]:
@@ -57,67 +59,66 @@ def main() -> None:
     # --- parse the chain table --------------------------------------------
     rows = {}
     for line in PM.read_text().splitlines():
-        m = re.match(r"\|\s*M(\d\d)\s*\|", line)
+        m = re.match(r"\|\s*M(\d{1,2})\s*\|", line)
         if not m:
             continue
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
-        if len(cells) < 6:
+        if len(cells) < 5:
             continue
         rows[int(m.group(1))] = {
             "name": cells[1], "dev": cells[2], "pres": cells[3], "due": cells[4],
         }
 
-    expected = set(range(24))
+    expected = set(range(N_MILESTONES))
     if set(rows) != expected:
-        errs.append(f"chain table has milestones {sorted(rows)}, expected M00–M23")
+        errs.append(f"chain table has milestones {sorted(rows)}, expected M0–M15")
 
     # --- per-milestone checks ---------------------------------------------
     due_dates = {}
     for mid, r in sorted(rows.items()):
         dev_meetings = parse_meetings(r["dev"])
         dues = parse_dates(r["due"])
-        if mid == 16:  # URC Expo event
-            if "Nov 17" not in r["due"] + r["pres"]:
-                errs.append("M16 must anchor to the URC Expo Tue Nov 17")
-            continue
         if not dev_meetings:
-            errs.append(f"M{mid:02d}: no development meetings listed")
-        if not dues and mid not in (15, 22):  # in-class / performed artifacts
-            errs.append(f"M{mid:02d}: no due date parseable from {r['due']!r}")
+            errs.append(f"M{mid}: no development meetings listed")
+        if not dues:
+            errs.append(f"M{mid}: no due date parseable from {r['due']!r}")
         if dev_meetings and dues:
-            last_dev = max(meeting_date[m] for m in dev_meetings if m in meeting_date)
-            if last_dev > max(dues):
-                errs.append(f"M{mid:02d}: development (through {last_dev}) ends "
+            known = [meeting_date[m] for m in dev_meetings if m in meeting_date]
+            if not known:
+                errs.append(f"M{mid}: development meetings {dev_meetings} not in backbone")
+            elif max(known) > max(dues):
+                errs.append(f"M{mid}: development (through {max(known)}) ends "
                             f"after its due date {max(dues)}")
         if dues:
             due_dates[mid] = dues
 
     # --- fixed anchors -----------------------------------------------------
     anchors = {
-        7: [date(2026, 10, 9), date(2026, 10, 16)],
-        12: [date(2026, 11, 6)],
-        23: [date(2026, 12, 11)],
+        6:  [date(2026, 10, 9)],    # URC abstract internal gate
+        10: [date(2026, 11, 6)],    # final poster lock (terminal)
+        13: [date(2026, 11, 29)],   # replication + red-team (Sunday)
+        14: [date(2026, 12, 4)],
+        15: [date(2026, 12, 11)],   # final chapter + portfolio (terminal)
     }
     for mid, want in anchors.items():
         if due_dates.get(mid) != want:
-            errs.append(f"M{mid:02d}: due {due_dates.get(mid)} != anchor {want}")
-    if 22 in rows and not {date(2026, 12, 7), date(2026, 12, 9)} <= set(
-            parse_dates(rows[22]["pres"] + rows[22]["due"])):
-        errs.append("M22 defenses must sit on Dec 7 and Dec 9")
+            errs.append(f"M{mid}: due {due_dates.get(mid)} != anchor {want}")
+    if 12 in rows and "Nov 17" not in rows[12]["pres"] + rows[12]["due"]:
+        errs.append("M12 must reference the URC Expo (Tue Nov 17) as a graded component")
 
-    # --- unique written due dates (M07 two-parter exempt from itself) ------
+    # --- unique due dates --------------------------------------------------
     flat = [(mid, d) for mid, ds in due_dates.items() for d in ds]
-    seen = {}
+    seen: dict[date, int] = {}
     for mid, d in flat:
         if d in seen and seen[d] != mid:
-            errs.append(f"M{seen[d]:02d} and M{mid:02d} share due date {d}")
+            errs.append(f"M{seen[d]} and M{mid} share due date {d}")
         seen[d] = mid
 
     # --- schedule cross-check ---------------------------------------------
     dev_col = " ".join(r["milestone_developed"] for r in sched)
     for mid in expected:
-        if f"M{mid:02d}" not in dev_col:
-            errs.append(f"M{mid:02d} never appears in the schedule's "
+        if not re.search(rf"\bM{mid}\b", dev_col):
+            errs.append(f"M{mid} never appears in the schedule's "
                         f"milestone_developed column")
     empty_work = [r["meeting"] for r in sched if not r["milestone_work_time"].strip()]
     if empty_work:
@@ -128,8 +129,9 @@ def main() -> None:
         for e in errs:
             print("  " + e)
         sys.exit(1)
-    print("✓ milestone system consistent — 24 milestones, dev→present→submit "
-          "ordering holds, anchors fixed (Oct 9, Nov 6, Nov 17, Dec 7/9, Dec 11)")
+    print("✓ milestone system consistent — 16 milestones (M0–M15), "
+          "dev→present→submit ordering holds, anchors fixed "
+          "(Oct 9, Nov 6, Nov 17, Nov 29, Dec 4, Dec 11)")
 
 
 if __name__ == "__main__":
