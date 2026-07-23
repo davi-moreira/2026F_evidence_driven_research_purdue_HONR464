@@ -46,3 +46,6 @@ jobs:
 
       - name: Citation-integrity audit
         run: python3 scripts/audit_sources.py
+
+      - name: Book manifest + chapter sync (37 chapters ↔ 16 notebooks)
+        run: python3 scripts/validate_book_sync.py --strict
