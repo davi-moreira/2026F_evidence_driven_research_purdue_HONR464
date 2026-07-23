@@ -19,6 +19,30 @@ quality bar: `planning/QUALITY_REPORT_P3.md`. v1 preserved at git tag
 > not defects — see `planning/FINAL_REPORT_V2.md` (Stage-8 outcomes + deferred
 > items). v1 preserved at tag `v1-compass-build`; v2 shipped at `v2-audit-shipped`.
 
+## ▶ RESUME HERE (open items for the next session)
+
+The build is complete and shippable. If/when work resumes, these are the only
+outstanding items — none are defects; all are decisions or optional polish:
+
+1. **Instructor course-design decisions** (need Davi's call; see
+   `FINAL_REPORT_V2.md` "deferred" section): end-of-term deadline density
+   (M13→M14→M15 over Thanksgiving) · Week-9 technical peak (nb08 + first M8
+   analysis) · workload transparency (credit-hours/effort budgets) · STEM-dataset
+   concentration (all 5 shipped datasets are civic/poli-sci — consider shipping
+   ≥1 STEM CSV + routing nb04/nb08). Each moves a validated calendar anchor or
+   adds scope, so it was NOT changed unilaterally.
+2. **Grading re-map confirmation**: the syllabus proposes adding SRL performance
+   at 15% (weights 10/15/25/20/5/15/10). Confirm before the term.
+3. **18 LOW polish findings**: cosmetic; itemized in `planning/AUDIT_FIXLIST.md`
+   (LOW section). Batch opportunistically.
+4. **External unknowns** (non-blocking): URC abstract deadline (TBD → internal
+   gate Oct 9) · GenAI Studio student-access + API-key verification before term ·
+   Honors grading-policy confirmation · poster print logistics.
+
+To resume: read this file → `FINAL_REPORT_V2.md` → `AUDIT_FIXLIST.md`, then the
+usual `CLAUDE.md` + `course_config.yaml`. Editing rules unchanged (instructor-first
+`_production_kit/nb_sources/` → `nbbuild.py`; Commit-AND-Render; `sync_instructor_repo.sh`).
+
 Last updated: 2026-07-23, after **Phase 4 COMPLETE** (all 16 notebooks + 16
 studios + 16 briefs built and gate-green; a second completion workflow ran
 14/14 agents clean after the rate limit reset). Adversarial verify pass on the
