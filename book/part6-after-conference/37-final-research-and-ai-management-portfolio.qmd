@@ -53,7 +53,7 @@ ask three reviewers to "confirm my chapter is ready," and all three oblige, so t
 chorus tells you nothing. The cure is **an independence check**, a step that makes
 agreement worth more than a head count: a check you run yourself, outside the tools.
 
-The whole thing ends in **the Evidence Defense**, a short public defense of your claims
+The whole thing ends in **an evidence defense**, a short public defense of your claims
 at their boundaries, followed by questions you cannot rehearse for. Example: you state
 what you found, name exactly what you do not claim, and answer each question from your
 own record.
@@ -93,19 +93,21 @@ draft the four parts of your own portfolio and stage your Evidence Defense.
 ## Recommended AI prompts
 
 Commit your own answer first, then delegate. Each prompt hands the tool reach, not the
-decision.
+decision, and each one opens a loop rather than ending in a single answer: you read
+what comes back, push on the weakest part, and run it again. Closing the loop is your
+move, not the tool's.
 
 **Locate the real benchmark.**
 
 ```
-Act as a research assistant in analytical chemistry. I measured the acetic acid
-content of one vinegar sample. I want a published or label-stated reference value to
-compare against. Give the value, the exact source it comes from, and a link. Only
-state a figure you are confident is real; if you are unsure, say so and tell me where
-to look.
+Act as a research assistant in plant biology. I measured the germination rate of one
+packet of lettuce seed. I want a published or label-stated reference value to compare
+against. Give the value, the exact source it comes from, and a link. Only state a
+figure you are confident is real; if you are unsure, say so and tell me where to
+look.
 ```
 
-After running, verify: open the source or read the label yourself before you trust the
+After running, verify: open the source or read the packet yourself before you trust the
 number (primary-source reading). Counters **confident fabrication**, a reference value
 quoted with an invented source.
 
@@ -136,7 +138,7 @@ agreement**, a partner that rehearses your ego instead of your defense.
 
 ::: {.callout-important title="Do not delegate"}
 The tools may draft, review, and surface hard questions. They may never decide which
-claims you put your name on, where a claim like "4.9% acetic acid" must stop, whether
+claims you put your name on, where a claim like "88% germination" must stop, whether
 your reviewers were ever independent, what your stopping rule is, or a single word of
 the public defense. When agreeing roles bless a claim, deciding whether that agreement
 is real or just correlated is yours. So is the answer you give when the room asks how
@@ -149,14 +151,14 @@ You send your finished chapter to three reviewer roles and ask each to "confirm 
 ready to submit." All three return the same verdict: "Looks solid, no major problems."
 It feels like three confirmations. It is one. The three roles run on the same base
 model, you gave them the same leading prompt, and they share a blind spot: none flags
-that your headline number carries no uncertainty, no range across your titration runs.
+that your headline number carries no uncertainty, no range across your three trays.
 That is false consensus, and trusting it would send an overclaimed result into your
 defense.
 
 You catch it with a reframe and a check the tools cannot see. First you drop the leading
 ask and run a neutral one: "List the three weakest claims in this chapter and why." Now
 a role names the missing range. Then you leave the tools entirely and recompute the
-spread of your runs yourself, which hands you the 4.7% to 5.1% boundary the reviewers
+spread of your trays yourself, which hands you the 84% to 92% boundary the reviewers
 all skipped. The lesson is blunt: agreement is worth only the independence behind it.
 Count the checks you ran yourself, never the roles that nodded.
 
