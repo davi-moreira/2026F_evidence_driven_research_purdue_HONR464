@@ -26,10 +26,10 @@ nada hasta que hayas revisado lo que hay debajo.
 ## El concepto
 
 La trampa tiene nombre. La **falsa confianza** es cuando una salida fluida y detallada te hace
-sentir segura de algo que en realidad nunca verificaste. Ejemplo: un resumen de IA reporta que
-una limpieza de arroyo "redujo el nitrato en aproximadamente 40 por ciento", y la cifra nítida
-y la redacción suave hacen que la afirmación se sienta resuelta antes de que hayas mirado una
-sola medición.
+sentir seguridad sobre algo que en realidad nunca verificaste. Ejemplo: un resumen de IA
+reporta que una limpieza de arroyo "redujo el nitrato en aproximadamente 40 por ciento", y la
+cifra nítida y la redacción suave hacen que la afirmación se sienta resuelta antes de que
+hayas mirado una sola medición.
 
 Dos hábitos vuelven peligrosa la trampa. El **sesgo de automatización** es la tendencia a
 confiar de más en un sistema automatizado y dejar de revisar, precisamente porque la respuesta
@@ -107,7 +107,7 @@ is or is not that number. Do not rerun it; I will read my own output and compare
 
 Después de ejecutarlo, verifica (contrarresta la *fabricación confiada*): un resumen fluido
 puede enunciar un número que los datos nunca produjeron. Lee los dos promedios que imprimió tu
-celda y calcula el cambio tú misma. Si no coincide con la cifra de la IA, confía en tu
+celda y calcula el cambio por tu cuenta. Si no coincide con la cifra de la IA, confía en tu
 impresión.
 
 **Saca a la fuerza la incertidumbre (tú revisas la cota).**
