@@ -2,46 +2,62 @@
 title: "Gerenciando Vários Agentes de IA"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Antes de soltar vários papéis de IA sobre um pedaço da sua
-> pesquisa, decida como dividir o trabalho em tarefas delimitadas e como ligá-las em uma
-> ordem que não deixe nenhum erro inicial passar batido. A divisão e a ordem são suas, e
-> você guarda um passo da cadeia que nenhum papel tem permissão de dar.
+> **A decisão de pesquisa.** Rodar vários agentes de IA é rodar vários loops ao mesmo
+> tempo. Você decide como dividir o trabalho em tarefas delimitadas, em que ordem esses
+> loops rodam para que nenhum erro inicial escorra adiante, e qual passo da cadeia
+> nenhum loop jamais tem permissão de fechar.
 
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do tópico correspondente do curso; o laboratório no Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*) cap. 24, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+## Por que essa decisão importa
 
-## Por que esta decisão importa
+**A decisão em jogo: quantos loops de IA você coloca para rodar sobre um pedaço do seu
+trabalho, em que ordem, e qual passo você mantém fora de todos eles.**
 
-> *"Me traga um capítulo, não uma pilha de saídas de IA. Quero saber qual parte cada
+> *"Me traga um rascunho, não uma pilha de saídas de IA. Quero saber qual parte cada
 > ferramenta tocou, o que você mandou ela fazer e como você conferiu. Se você não
-> consegue me contar isso, você não escreveu o capítulo."*
-> — sua **orientadora de tese**, lendo o rascunho que você vai defender esta semana
+> consegue me contar isso, você não escreveu."*
+> — sua **orientadora de tese**, lendo o rascunho que você está prestes a defender
 
 A esta altura, um único assistente de IA consegue redigir, citar, criticar e polir de
 uma só vez. A tentação é abrir quatro deles ao mesmo tempo e se sentir quatro vezes
 mais seguro. Você não está. Quatro papéis lendo o mesmo rascunho com as mesmas
 instruções tendem a deixar passar a mesma coisa e a concordar em alto e bom som sobre
-ela. A orientadora acima não quer um coro mais alto. Ela quer ver que você quebrou o
-trabalho em pedaços, colocou esses pedaços em uma ordem sensata e continuou sendo a
-única pessoa que decidiu o que o capítulo alega. Este capítulo dá a você essa
-habilidade de gestão.
+ela. E cada um desses papéis não é um prompt. É um loop, rodando até você ou ele
+decidir parar. Quatro loops ao mesmo tempo são quatro vezes mais saída e, sem gestão,
+quatro vezes mais trabalho não supervisionado. A orientadora acima não quer um coro
+mais alto. Ela quer ver que você quebrou o trabalho em pedaços, colocou esses pedaços
+em uma ordem sensata e continuou sendo a única pessoa que decidiu o que o rascunho
+alega. Este capítulo dá a você essa habilidade de gestão.
 
 ## O conceito
 
-O movimento que transforma um bando de papéis de IA em um fluxo de trabalho defensável
-é a **decomposição de tarefas**: quebrar um trabalho grande em subtarefas menores, cada
-uma com um dono claro. Exemplo: em vez de pedir a uma ferramenta que "melhore o meu
-capítulo", você divide o trabalho em conferir o desenho de pesquisa, conferir as
+Comece pela unidade que você de fato gerencia. **O loop de IA** é o ciclo que você vem
+rodando desde o começo deste livro: você faz o prompt, lê a saída, interroga, refina o
+pedido e roda de novo. Um loop, uma tarefa, uma pessoa olhando. **Ferramentas
+agênticas** são sistemas de IA que rodam esse loop sozinhos, decidindo o próprio passo
+seguinte e chamando as próprias ferramentas entre as suas rodadas. Exemplo: você pede
+que as citações sejam conferidas e a ferramenta busca, lê, reconfere e revisa ao longo
+de várias voltas antes de voltar para você. É mais rápido, e cada volta que você não
+leu é uma volta que você não supervisionou.
+
+Então a verdadeira pergunta de gestão não é quantos prompts você escreve. É quantos
+loops você tem rodando, no que cada um pode mexer e onde eles passam o bastão uns para
+os outros. Você orquestra loops, não prompts.
+
+O movimento que transforma um bando de loops em um fluxo de trabalho defensável é a
+**decomposição de tarefas**: quebrar um trabalho grande em subtarefas menores, cada uma
+com um dono claro. Exemplo: em vez de pedir a uma ferramenta que "melhore o meu
+rascunho", você divide o trabalho em conferir o desenho de pesquisa, conferir as
 citações e apertar a prosa. Agora cada peça tem um passa-ou-não-passa que você consegue
 julgar.
 
 Cada peça vira um **papel delimitado**: uma tarefa de IA estreita o bastante para ser
 enunciada em uma frase e conferida em uma passada. Exemplo: "sinalize cada frase da
 minha seção de resultados que alega mais do que a minha amostra sustenta". Um papel
-delimitado tem linha de chegada clara. "Deixe melhor" não tem.
+delimitado tem linha de chegada clara. "Deixe melhor" não tem. Essa linha de chegada é
+o que torna seguro rodar o loop desse papel: o loop para quando a tarefa está feita, e
+você consegue perceber de fora se ela está.
 
 O esqueleto que mantém os papéis honestos é o **par executor–crítico**: um papel produz
 alguma coisa e um segundo papel, separado, ataca o que o primeiro produziu. Exemplo: um
@@ -60,14 +76,16 @@ sequência mais longa de passos que obrigatoriamente seguem uns aos outros no se
 de trabalho. Exemplo: o executor redige, então o crítico ataca, então você integra são
 três passos que não colapsam em menos. Essa cadeia define o número mínimo de rodadas
 que o seu fluxo leva. Ler o caminho crítico no seu próprio desenho, em vez de adivinhar
-qual é, é a habilidade que este capítulo treina.
+qual é, é a habilidade que este capítulo treina. Conte em loops, não em mensagens. Um
+único papel pode levar quatro voltas de prompt para terminar a sua única tarefa, e
+ainda assim ocupa um só nó no caminho.
 
 ## Um exemplo trabalhado
 
-Você está terminando um capítulo sobre um pequeno estudo de saúde: se uma caminhada de
-dez minutos depois do almoço está associada a uma frequência cardíaca de repouso mais
-baixa à tarde entre os moradores do seu andar no alojamento. Você tem um rascunho e
-quatro papéis de IA esperando.
+Você está terminando o texto de um pequeno estudo de saúde: se uma caminhada de dez
+minutos depois do almoço está associada a uma frequência cardíaca de repouso mais baixa
+à tarde entre os moradores do seu andar no alojamento. Você tem um rascunho e quatro
+papéis de IA esperando.
 
 **Divida.** Você quebra a revisão em papéis delimitados. Um **revisor de clareza**
 confere se cada frase se lê com facilidade. Um **metodologista** confere se "associada
@@ -78,19 +96,22 @@ de uma frase.
 
 **Ligue.** O executor redige o seu parágrafo de limitações. Os três críticos podem ler
 esse rascunho no mesmo instante, porque nenhum deles precisa da saída de outro. São
-três papéis rodando em paralelo. Depois você integra as observações deles, e o editor
-aperta o que sobreviveu. Siga as setas: do executor a um crítico é uma, do crítico até
-você são duas, de você até o editor são três. O seu caminho crítico tem profundidade de
-três setas, e no ponto mais largo roda três críticos.
+três loops rodando em paralelo. Cada um leva quantas voltas precisar: o verificador de
+citações provavelmente roda quatro ou cinco, buscando, não encontrando um dos seus
+estudos e voltando para contar isso a você. Depois você integra as observações deles, e
+o editor aperta o que sobreviveu. Siga as setas: do executor a um crítico é uma, do
+crítico até você são duas, de você até o editor são três. O seu caminho crítico tem
+profundidade de três setas, e no ponto mais largo roda três loops.
 
-**Mantenha um passo humano.** O passo de integrar é seu. Quando o metodologista diz que
-o seu resultado sobre caminhada e frequência cardíaca é apenas uma associação e o
-revisor de clareza adorou a frase que a chamava de efeito, nenhum papel resolve esse
-choque. Você resolve. A decisão sobre o que o capítulo alega nunca entra no fluxo de
-trabalho como tarefa delegada.
+**Mantenha um passo humano.** O passo de integrar é seu, e é o único nó sem nenhum loop
+preso a ele. Quando o metodologista diz que o seu resultado sobre caminhada e
+frequência cardíaca é apenas uma associação e o revisor de clareza adorou a frase que a
+chamava de efeito, nenhum papel resolve esse choque. Você resolve. A decisão sobre o
+que o texto alega nunca entra no fluxo de trabalho como tarefa delegada.
 
 As ferramentas redigiram, sinalizaram e poliram. Você dividiu o trabalho, definiu a
-ordem e assumiu a alegação que leva o seu nome.
+ordem, decidiu quando cada loop já tinha rodado o bastante e assumiu a alegação que
+leva o seu nome.
 
 ## O laboratório no Colab
 
@@ -99,18 +120,20 @@ final defense**. Abra no Colab pelo selo acima e trabalhe as células junto com 
 capítulo. Lá você monta o fluxo executor–crítico como um grafo direcionado, lê a
 profundidade do caminho crítico e a largura paralela direto do código, e vê o caminho
 crescer uma rodada no instante em que você faz um crítico esperar por outro crítico.
-Depois você decompõe o seu próprio capítulo em papéis delimitados e defende a ligação
+Depois você decompõe o seu próprio rascunho em papéis delimitados e defende a ligação
 que escolheu.
 
 ## Prompts de IA recomendados
 
-Comprometa-se primeiro com a sua própria resposta, depois delegue. Cada prompt é uma
-tarefa verificável, não um pedido de veredito.
+Comprometa-se primeiro com a sua própria resposta, depois delegue. Cada prompt abaixo
+abre um loop que você supervisiona, e um deles é um loop sobre os seus outros loops.
+Leia o que volta, aperte na parte fraca, rode de novo. Cada prompt é uma tarefa
+verificável, não um pedido de veredito.
 
 **Decomponha e devolva o passo humano.**
 
 ```text
-I am splitting the review of my health chapter into scoped AI roles. Here are my
+I am splitting the review of my health write-up into scoped AI roles. Here are my
 section headings and one line on each: [paste them]. Propose a table with one row
 per role: the role's one-sentence scoped task, the draft or input it needs, whether
 it can run in parallel or must wait on another role, and the single decision it must
@@ -135,7 +158,7 @@ ligação confiante que deixa um papel rodar antes de o insumo dele estar pronto
 **Faça red team (revisão adversária) da decomposição.**
 
 ```text
-Act as a hostile reviewer of my AI workflow, not of my chapter. Name every place an
+Act as a hostile reviewer of my AI workflow, not of my draft. Name every place an
 early mistake in one role could flow downstream unchecked, and every role whose job
 overlaps another so much that it adds no independent check. Do not rewrite my plan.
 ```
@@ -145,13 +168,15 @@ ego, não o seu fluxo de trabalho).
 
 ::: {.callout-important title="Não delegue"}
 A divisão e a ordem podem ser informadas por uma ferramenta, mas três decisões
-continuam só suas. Você decide **quais tarefas merecem um papel separado** e quais
-apenas multiplicam saídas que você não consegue supervisionar. Você decide **a ordem**,
-para que nenhum papel resolva uma questão que um papel anterior deveria ter respondido
+continuam só suas. Você decide **quais tarefas merecem um loop próprio** e quais apenas
+multiplicam saídas que você não consegue supervisionar. Você decide **a ordem**, para
+que nenhum papel resolva uma questão que um papel anterior deveria ter respondido
 primeiro. E você mantém **o passo de integrar** humano: quando dois papéis discordam
-sobre o que o seu capítulo alega, você toma essa decisão com as suas próprias palavras.
+sobre o que o seu rascunho alega, você toma essa decisão com as suas próprias palavras.
 Um fluxo de trabalho que entrega a alegação a uma ferramenta não é um fluxo que você
-consegue defender.
+consegue defender. A regra acompanha o número de loops em vez de ceder a ele. Mais
+agentes não significa comando mais frouxo; significa a mesma disciplina de comando,
+repetida.
 :::
 
 ## Um caso de falha da IA
@@ -161,7 +186,10 @@ devolve um plano confiante e bem formatado: rode o executor, o metodologista, o 
 o editor todos em paralelo para "economizar rodadas". O plano roda na sua cabeça sem
 tropeço. Eis a armadilha. O editor e o cético não têm nada para ler ainda, porque o
 executor não redigiu coisa alguma. A ferramenta escalou três papéis para começar antes
-de o insumo do qual dependem existir, e vestiu isso de eficiência.
+de o insumo do qual dependem existir, e vestiu isso de eficiência. Entregue esse plano a
+uma ferramenta agêntica que o executa por você e a falha fica mais silenciosa, não mais
+barulhenta: três loops rodam sobre um rascunho vazio e devolvem três revisões confiantes
+de nada.
 
 Você pega o erro desenhando as setas e fazendo uma pergunta em cada papel: o insumo
 deste papel existe no momento em que ele começa? O insumo do editor é o rascunho
@@ -170,38 +198,29 @@ impossível. Redesenhado com honestidade, o plano é um caminho crítico com tr�
 profundidade, não uma. Um plano verde e arrumadinho não é um plano válido. Você confere
 as dependências, não a confiança.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA para checar a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, que faz a pesquisa.
-:::
+*O seu projeto já tem uma nota de pesquisa e uma cápsula reutilizável; este passo monta
+o pequeno time de IA que vai ajudar você a revisar as duas, sem entregar a esse time o
+seu julgamento.*
 
-Verifique o número central deste capítulo, a profundidade do caminho crítico, com
-**código alternativo** do [guia de
-verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-recalcule a mesma quantidade por outro caminho e compare. O notebook calcula a
-profundidade com uma função de grafo. Você confirma na mão: escreva cada papel, desenhe
-cada seta de "alimenta" e siga a cadeia ininterrupta mais longa do começo ao fim,
-contando conforme avança. Se a sua contagem manual bater com o código, a profundidade
-está verificada. Se não bater, a ligação que você desenhou e a ligação que o código
-construiu são dois fluxos de trabalho diferentes, e essa discordância é o achado que
-vale perseguir.
-
-## Transferência para o projeto
-
-Este capítulo constrói a primeira peça do seu **capítulo final de pesquisa e portfólio
-de gestão de IA**, o último marco do projeto. Pegue uma seção real do seu próprio
-projeto, os seus métodos, os seus resultados ou as suas limitações, e escreva a
-decomposição dela: os papéis delimitados que você vai rodar, quais rodam em paralelo e
-quais precisam esperar, e o único nó que você mantém humano. Leve essa decomposição ao
-estúdio de sexta-feira como o lance de abertura do seu portfólio. Ela é a evidência de
-que você comandou a equipe de IA, em vez de deixar a equipe comandar você.
-
-## Defenda a sua decisão
-
-Em quatro frases, defenda o fluxo de trabalho que você desenhou para uma seção do seu
-capítulo. Diga quais papéis delimitados você escolheu e em que ordem os ligou. Aponte o
-erro inicial que a sua ordenação impede de correr para as etapas seguintes, e nomeie o
-passo que você manteve humano e por que nenhum papel pode dá-lo. Feche com o limite: um
-lugar em que a sua ligação ainda pode deixar passar um erro compartilhado, e a checagem
-independente que você faria antes de confiar na concordância entre os papéis.
+1. Escolha uma seção real do seu projeto para revisar: os seus métodos, os seus
+   resultados ou as suas limitações. Tudo o que vem abaixo vale só para essa seção.
+2. Monte três loops, cada um com uma tarefa de uma frase que você conseguiria avaliar.
+   Um **redator** que redige ou reescreve. Um **cético** que ataca o que o redator
+   produziu e procura a alegação que vai além da sua evidência. Um **auditor** que
+   confere os seus números, as suas citações e se cada frase corresponde a uma saída
+   que você de fato tem.
+3. Ligue os três. Anote quais loops podem rodar ao mesmo tempo e quais precisam esperar
+   a saída de outro, e depois trace a cadeia mais longa de passos que obrigatoriamente
+   seguem uns aos outros. Essa cadeia é o número mínimo de rodadas que a sua revisão
+   vai levar.
+4. Nomeie o único nó que você mantém humano, o passo em que o trabalho dos loops vira a
+   sua alegação, e escreva por que nenhum papel tem permissão de tomá-lo.
+5. Rode a rodada. Para cada loop, registre quantas voltas ele levou, o que você
+   rejeitou e o que você manteve. Um loop cuja saída você aceitou sem ler é um loop que
+   você não gerenciou.
+6. Registre cada loop no seu **AI Research Ledger** (registro de pesquisa com IA), e
+   verifique pelo menos um resultado com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd). Um revisor de IA pode rodar a
+   checagem com você; a decisão de aceitar ou rejeitar continua sendo sua.

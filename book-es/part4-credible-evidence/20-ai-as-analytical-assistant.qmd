@@ -60,10 +60,10 @@ nada sobre el código que lo produjo en la vuelta siete.
 Hay una segunda razón para preocuparse, y es la que muerde. Cada nuevo prompt es una
 bifurcación de tu análisis. Si sigues volviendo a preguntar hasta que la estimación se vea
 mejor, corriste una búsqueda de especificaciones con cara amable, y la corriste sin
-contárselo a nadie, tú incluida. El remedio es barato: lleva una bitácora corrida, una
-línea por ciclo, que diga qué pediste, qué volvió, y qué cambiaste y por qué. Un asistente
-que corrió diez variantes silenciosas y reportó la más bonita no es un asistente. Es una
-búsqueda sin registrar.
+contárselo a nadie, ni siquiera a ti. El remedio es barato: lleva una bitácora corrida,
+una línea por ciclo, que diga qué pediste, qué volvió, y qué cambiaste y por qué. Un
+asistente que corrió diez variantes silenciosas y reportó la más bonita no es un
+asistente. Es una búsqueda sin registrar.
 
 Entonces la división del trabajo es esta. El asistente propone verificaciones, escribe
 código e imprime números, ciclo tras ciclo. Tú decides qué verificaciones cuentan,
