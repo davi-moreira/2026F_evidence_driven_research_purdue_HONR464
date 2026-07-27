@@ -3,13 +3,13 @@ project:
   output-dir: ../docs/book-es
 
 book:
-  title: "Investigación Guiada por la Evidencia en la Era de la IA"
+  title: "EDR|AI — Investigación Guiada por la Evidencia en la Era de la IA"
   subtitle: "Cómo Diseñar, Analizar, Verificar y Defender"
   author: "Professor Davi Moreira"
   description: "EDRAI — manual de investigación en la era de la IA para estudiantes de grado. Traducción del original en inglés; la edición en inglés es la fuente oficial. Obra en desarrollo."
   chapters:
     - index.qmd
-    - part: "Parte I — Investigar cuando la IA puede producirlo casi todo"
+    - part: part1-research-with-ai/part1-overview.qmd
       chapters:
         - part1-research-with-ai/01-ai-is-your-arm-not-your-brain.qmd
         - part1-research-with-ai/02-the-student-as-research-director.qmd
@@ -60,10 +60,13 @@ book:
         - part6-after-conference/37-final-research-and-ai-management-portfolio.qmd
   appendices:
     - srl.qmd
+    - verification-guide.qmd
+    - author.qmd
 
 format:
   html:
     theme: cosmo
     toc: true
+    include-before-body: _lang-switcher.html
 
 editor: visual

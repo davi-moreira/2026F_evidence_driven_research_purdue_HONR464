@@ -2,17 +2,13 @@
 title: "Research Posters"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide whether your poster's headline figure is
 > *honest*: whether its visual impression matches its actual number, whether its
 > uncertainty sits in the same glance as the claim, and whether every reader,
 > including a color-blind or screen-reader reader, can receive it. You own the
 > headline verb and the call that the picture never says more than the data.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -166,7 +162,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify the chapter's key result, that the truncated axis inflates the gap, with
 **direct calculation** from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+[verification guide](../verification-guide.qmd):
 recompute the numbers by hand and compare them to the picture. The honest ratio of
 the two bars is 74 to 71, about 1.04, a four-percent difference. On an axis floored at
 70, the drawn heights are (74−70) to (71−70), which is 4 to 1. The figure makes

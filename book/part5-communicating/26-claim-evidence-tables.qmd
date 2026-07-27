@@ -2,16 +2,12 @@
 title: "Claim–Evidence Tables"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
 
 > **The research decision.** For every claim your poster makes, decide which exact
 > piece of evidence backs it, where that evidence lives, and what it does not
 > establish, and record all three in one row of a claim–evidence table before the
 > poster is locked.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -155,7 +151,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 :::
 
 Verify this chapter's key result, the table's traceability, with two named methods
-from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+from the [verification guide](../verification-guide.qmd).
 For every traced number, use **direct calculation**: recompute the value a second,
 simpler way and confirm it matches the figure on the board, digit for digit. For
 every cited fact, use **primary-source reading**: open the source, find the line,

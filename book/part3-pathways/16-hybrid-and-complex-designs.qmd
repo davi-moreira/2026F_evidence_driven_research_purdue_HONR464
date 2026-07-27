@@ -2,17 +2,13 @@
 title: "Hybrid and Complex Designs"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
 
 > **The research decision.** When your question forces you to stitch several
 > measurements or stages into one answer, decide whether that combined design still
 > behaves as a single aligned whole you can diagnose before you run it, instead of
 > assuming that stacking rigorous-looking pieces automatically produces a rigorous
 > result.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 2, 5, 10, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -170,7 +166,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify the chapter's key result, that a complex design's precision does not prove it is
 unbiased, with **simulation** from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+[verification guide](../verification-guide.qmd).
 Declare the combined design in code with a known true index and a planted gap in the
 denominator's coverage, run it many times, and read the two numbers apart: variance
 shrinks as you add months, while bias stays exactly where the missing sellers put it.

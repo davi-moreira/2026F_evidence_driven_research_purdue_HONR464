@@ -7,43 +7,54 @@ reorganized as it is used in the classroom; when something looks unfinished,
 that is why. Questions and suggestions are welcome.
 :::
 
-**Evidence-Driven Research in AI-era: How to Design, Analyze, Verify, and
-Defend** — **EDRAI**, for short — is an open research manual for undergraduate
-students in economics, STEM, and business fields who want to turn curiosity
-into credible, defensible, evidence-based insight in a world where AI can
-produce almost everything. It was first written for an Honors research seminar
-at Purdue University, and it is deliberately institution-agnostic: any
-instructor or student, anywhere, is welcome to adopt it.
+**EDR|AI** — *Evidence-Driven Research in the Age of AI: How to Design,
+Analyze, Verify, and Defend* — is an open research manual for undergraduate
+students in economics, political science, business, and biology who want to
+turn curiosity into credible, defensible, evidence-based insight in a world
+where AI can produce almost everything. It was first written for an Honors
+research seminar at Purdue University, and it is deliberately
+institution-agnostic: any instructor or student, anywhere, is welcome to adopt
+it.
 
 Its one message: *AI is your arm and your research assistant, not your brain.*
 You will direct AI tools through the
 **Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend**
 workflow while keeping every research decision your own. One rule runs through
-every verification step in this book: **AI can review AI** — a second model is
-a real auditor of the first — **but the last decision is always human**.
+every verification step in this book (collected in the
+[Verification Guide](verification-guide.qmd) appendix): **AI can review AI** —
+a second model is a real auditor of the first — **but the last decision is
+always human**.
+
+**This book is also a manual you can follow to a finished project.** Every
+chapter ends with an **It is your turn** section: concrete steps that apply the
+chapter to your own research. Work them in order and they chain into a
+complete, defensible research project — and by the last page, a draft research
+artifact (a paper, note, or poster) with your name on it. You do not need to be
+enrolled in any course for that to work; you need curiosity and the discipline
+the book teaches.
 
 Blair, Coppock and Humphreys' *Research Design in the Social Sciences* (RDSS,
 free at [book.declaredesign.org](https://book.declaredesign.org)) is the theory
-text that EDRAI translates for the undergraduate audience. In the original
-course the EDRAI chapter is the **required** reading each week and the matching
-RDSS chapters are **recommended** for depth; each chapter's Reading box names
-its RDSS companions. Each chapter names a research decision, works an example,
-links a Colab lab, shows an AI failure and how to catch it, and asks you to
-defend a claim.
+text that EDR|AI translates for the undergraduate audience. In the original
+course the EDR|AI chapter is the **required** reading each week and the
+matching RDSS chapters are **recommended** for depth. Each chapter names a
+research decision, works an example, links a Colab lab, shows an AI failure and
+how to catch it, and hands the work back to you.
 
-The book has six parts: research when AI can produce almost everything;
-from curiosity to research design; the research pathways (observational and
-experimental, descriptive and causal, and prediction); producing credible
-evidence with AI; communicating and defending research; and research after
-the conference.
+The book has six parts: research when AI does "everything"; from curiosity to
+research design; the research pathways (observational and experimental,
+descriptive and causal, and prediction); producing credible evidence with AI;
+communicating and defending research; and research after the conference.
 
-**Languages.** EDRAI is also available in
+**Languages.** EDR|AI is also available in
 [Português (Brasil)](../book-pt/index.html) and
-[Español](../book-es/index.html). The English edition is the source of truth;
-the translations are regenerated from it as it evolves.
+[Español](../book-es/index.html) — use the language links at the top of any
+page to switch at any moment. The English edition is the source of truth; the
+translations are regenerated from it as it evolves.
 
 If your course runs the flipped format this book supports, most lectures are
 led by a student: the day's **Student Research Lead**. That lead's brief lives
 at the start of the corresponding lecture notebook, and the appendix
 [The Student Research Lead](srl.qmd) collects the format, the preparation
-cadence, and the expectations in one place.
+cadence, and the expectations in one place. To meet the person behind the
+book, see [About the Author](author.qmd).

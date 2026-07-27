@@ -2,16 +2,12 @@
 title: "Open and Reusable Research Packages"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide what goes into the reproducibility capsule that
 > ships with your research note, and defend the claim that a stranger can rerun your
 > work and get your numbers. You own what the package includes and whether "it
 > reproduces" is honest, and you never let a clean run stand in for a correct one.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -158,7 +154,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 :::
 
 Verify this chapter's key result, that your capsule reproduces, with a **benchmark
-result** from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+result** from the [verification guide](../verification-guide.qmd):
 compare a fresh run against a previously verified value. Record your headline number
 from your own machine. Then clear the kernel and run all in a second environment, a
 classmate's laptop or a clean Colab session, and check that the number returns within

@@ -2,16 +2,12 @@
 title: "Managing Multiple AI Agents"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
 
 > **The research decision.** Before you turn several AI roles loose on one piece of
 > your research, decide how to split the work into scoped jobs and wire them in an
 > order that no early mistake can slip past. You own the split and the order, and you
 > keep one step in the chain that no role is allowed to take.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 24, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -167,7 +163,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify this chapter's key number, the critical-path depth, with **alternative code**
 from the [verification
-guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+guide](../verification-guide.qmd):
 recompute the same quantity a different way and compare. The notebook computes the
 depth with a graph function. You confirm it by hand: write out every role, draw each
 "feeds" arrow, and trace the longest unbroken chain from start to finish, counting as

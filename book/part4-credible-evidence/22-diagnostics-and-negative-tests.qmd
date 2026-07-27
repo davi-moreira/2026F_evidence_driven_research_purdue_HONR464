@@ -2,16 +2,12 @@
 title: "Diagnostics and Negative Tests"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
 > **The research decision.** Before you believe a result, decide which negative
 > test to run, a check aimed at a place where the answer must be zero, and read
 > what its outcome does and does not license. You pick the test, confirm it is
 > genuinely null, and defend only what a clean pass actually earns you.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -162,7 +158,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify this chapter's key result, that a genuine negative test returns zero, with
 **simulation** from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+[verification guide](../verification-guide.qmd).
 Build a dataset by hand where no effect exists: assign a fake label by coin flip and
 generate an outcome that ignores it entirely. Run your negative-test machinery on it.
 If the procedure is sound, the estimate comes back near zero, again and again across

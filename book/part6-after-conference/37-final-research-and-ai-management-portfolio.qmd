@@ -2,16 +2,12 @@
 title: "Final Research and AI-Management Portfolio"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide which claims from a semester of AI-assisted work
 > you will stand behind at your public defense, and assemble the AI-management
 > portfolio that shows how you ran your AI team, what you kept in your own hands, and
 > how each surviving claim was checked.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 24, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -169,7 +165,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify this chapter's key result, that a claim in your portfolio is one you can defend,
 with **benchmark result**, the method of comparing your output against a known-good
-reference value (see `ai_resources/verification_guide.md`). Set your measured 4.9%
+reference value (see the [Verification Guide](../verification-guide.qmd) appendix). Set your measured 4.9%
 against the label's stated 5% acidity and confirm they agree within your run-to-run
 spread. Because the label was never part of your AI workflow, this is a genuine
 independence check, not one tool grading another. Pair it with **peer reasoning**: walk

@@ -3,13 +3,13 @@ project:
   output-dir: ../docs/book
 
 book:
-  title: "Evidence-Driven Research in AI-era"
+  title: "EDR|AI — Evidence-Driven Research in the Age of AI"
   subtitle: "How to Design, Analyze, Verify, and Defend"
   author: "Professor Davi Moreira"
-  description: "The course book for HONR 46400 (Purdue Honors). RDSS is the theory text; this is the AI-era research manual, synchronized with the 16 course notebooks. A work in progress, under development across the semester."
+  description: "EDR|AI — an open research manual for undergraduates in econ, political science, business, and biology: how to design, analyze, verify, and defend evidence-driven research in the age of AI. Work every chapter's 'It is your turn' and finish with a research project of your own. A work in progress."
   chapters:
     - index.qmd
-    - part: "Part I — Research when AI can produce almost everything"
+    - part: part1-research-with-ai/part1-overview.qmd
       chapters:
         - part1-research-with-ai/01-ai-is-your-arm-not-your-brain.qmd
         - part1-research-with-ai/02-the-student-as-research-director.qmd
@@ -60,10 +60,13 @@ book:
         - part6-after-conference/37-final-research-and-ai-management-portfolio.qmd
   appendices:
     - srl.qmd
+    - verification-guide.qmd
+    - author.qmd
 
 format:
   html:
     theme: cosmo
     toc: true
+    include-before-body: _lang-switcher.html
 
 editor: visual

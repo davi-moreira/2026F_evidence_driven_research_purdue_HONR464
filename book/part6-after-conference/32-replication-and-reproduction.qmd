@@ -2,15 +2,11 @@
 title: "Replication and Reproduction"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb){target="_blank"}
 
 > **The research decision.** You decide whether a peer's reported result actually
 > reproduces from the files they shipped, and then you rank the weaknesses you find
 > by how much each one threatens the headline claim, not by how easy each is to fix.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -172,7 +168,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify this chapter's key result, the honest tank-level interval, with
 **alternative code** from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+[verification guide](../verification-guide.qmd):
 recompute the same quantity a different way and compare. Collapse each tank to its
 own mean length, giving six numbers, then difference the three treated tank means
 against the three control tank means. Confirm the point estimate matches your

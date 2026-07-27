@@ -2,17 +2,13 @@
 title: "Descriptive, Predictive, and Causal Questions"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
 
 > **The research decision.** This chapter equips you to classify any research
 > question on the **inquiry compass** by its *kind* (descriptive or causal) and its
 > *reach* (the data at hand, a population, or cases not yet seen), then defend that
 > placement by the answer the question actually wants rather than the words it
 > happens to carry.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 4, 7, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -173,7 +169,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 :::
 
 The chapter's key result is a classification, which is a judgment call, so the fitting
-check from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md) is
+check from the [verification guide](../verification-guide.qmd) is
 **peer reasoning**. Explain your placement to a classmate or the instructor, walking
 them through the two definitions, and see whether the reasoning survives their hardest
 question. Do it after you have committed your own placement, so their challenge has

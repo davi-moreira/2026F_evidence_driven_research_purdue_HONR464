@@ -2,16 +2,12 @@
 title: "Difficult Questions and Uncertainty"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
 
 > **The research decision.** When a stranger at your poster asks the hardest fair
 > question, decide in advance how you will state your study's uncertainty and its
 > limits, and how you will answer without letting a single spoken word claim more
 > than your evidence supports. You prepare that answer; you never improvise it.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -151,7 +147,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 The chapter's key spoken result is your uncertainty-and-limitations delivery, and
 you verify it two independent ways from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+[verification guide](../verification-guide.qmd).
 First, **direct calculation**: recompute the detector's flag count by hand. Read
 your sentence aloud and tally every self-erasing word ("sorry," "just,"
 "probably," "I guess"). If your hand count matches the printed count, the number is

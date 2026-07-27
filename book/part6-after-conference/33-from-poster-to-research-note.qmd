@@ -2,16 +2,12 @@
 title: "From Poster to Research Note"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
 
 > **The research decision.** When you turn your poster into a written research note,
 > decide which finding has earned the headline and exactly how big each claim is
 > allowed to be given your evidence, then package the note so a stranger can rerun
 > it and reach your number without you in the room.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -174,7 +170,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 :::
 
 Verify this chapter's key result, the headline speedup, with **alternative code** from
-the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+the [verification guide](../verification-guide.qmd):
 recompute the median wait-time drop a second way, from the raw simulated wait times
 rather than the summarized table, and confirm the number and its interval match. Then verify the
 capsule with **peer reasoning**: hand it to a partner who reruns it cold with

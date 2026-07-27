@@ -37,7 +37,7 @@ PART_SLUGS = {
 }
 REQUIRED_ELEMENTS = [
     "research decision", "worked example", "Do not delegate",
-    "failure", "verification", "project transfer", "defend",
+    "failure", "It is your turn",
 ]
 
 

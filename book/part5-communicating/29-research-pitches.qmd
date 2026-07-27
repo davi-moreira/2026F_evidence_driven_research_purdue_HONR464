@@ -2,17 +2,13 @@
 title: "Research Pitches"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide how to turn your finished poster into spoken
 > pitches, each sized to the seconds a listener gives you, so every version
 > compresses the claim for speech without ever inflating it. You choose where the
 > boundary sentence sits, and you refuse to let it move when the adrenaline speeds
 > you up.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -172,7 +168,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify this chapter's key result, that your compressed pitch still says what your
 poster says, with **peer reasoning** from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+[verification guide](../verification-guide.qmd):
 say your 30-second hook once to a partner from outside your field, then have them
 repeat back, in their own words, your claim and its boundary. If what they repeat is
 bigger than your poster allows, the compression inflated, and the words they added

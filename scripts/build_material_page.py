@@ -66,7 +66,7 @@ One notebook per topic, listed in course order. Open a notebook in Colab from
 its badge (no installation needed), download every dataset the course uses in
 one bundle, and find the calendar on the [Schedule](schedule.qmd) page.
 Required readings come from the course book,
-[**EDRAI** — *Evidence-Driven Research in AI-era*](book/index.html){{target="_blank"}}
+[**EDR|AI** — *Evidence-Driven Research in the Age of AI*](book/index.html){{target="_blank"}}
 (a work in progress, under development across the semester); the matching RDSS
 chapters are recommended companions. Milestone instructions and rubrics are on
 Brightspace.
@@ -212,7 +212,7 @@ def readings_label(d: dict) -> str:
     if d["chapters"]:
         links = ", ".join(f"[ch. {ch}]({href}){{target=\"_blank\"}}"
                           for ch, href in d["chapters"])
-        parts.append(f"**EDRAI** {links}")
+        parts.append(f"**EDR\\|AI** {links}")
     if d.get("rdss"):
         parts.append(f"*RDSS ch. {', '.join(d['rdss'])} (recommended)*")
     return "<br>".join(parts) if parts else "—"

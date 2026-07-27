@@ -2,16 +2,12 @@
 title: "Measurement and Operationalization"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide how to turn the abstract idea your question is
 > about into one concrete number you can actually record and defend: name the
 > concept, name the construct that stands for it, and name the indicator you will
 > measure. Then state plainly what that indicator captures and what it leaves out.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 15, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -158,7 +154,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify this chapter's key result, that your indicator faithfully stands for its
 construct, with **primary-source reading** from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+[verification guide](../verification-guide.qmd):
 find the recognized method for your construct, open it, and confirm it measures what
 you claim before you cite it. Then add a second, independent check for reliability:
 measure the same thing twice and compare, the way you split one soil sample and

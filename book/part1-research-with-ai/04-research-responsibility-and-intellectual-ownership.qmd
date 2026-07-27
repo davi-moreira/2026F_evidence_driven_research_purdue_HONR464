@@ -2,16 +2,12 @@
 title: "Research Responsibility and Intellectual Ownership"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
 
 > **The research decision.** For every part of your work an AI tool helped produce,
 > decide exactly what you will personally stand behind as your own, and disclose
 > plainly what the tool did and how you checked it. Your name on the work means you
 > answer for it, whatever tool helped.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 1, 2, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -156,7 +152,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify this chapter's key result, that a claim under your name is one you can defend,
 with **primary-source reading**, the method of finding the actual source and reading the
-relevant line yourself (see `ai_resources/verification_guide.md`). Take the EPA chloride
+relevant line yourself (see the [Verification Guide](../verification-guide.qmd) appendix). Take the EPA chloride
 figure the tool quoted, open the EPA's criteria document, and confirm the number and its
 meaning with your own eyes. Pair it with **direct calculation**: recompute the mean of
 your samples and check it matches the draft. Two independent checks beat one, and each

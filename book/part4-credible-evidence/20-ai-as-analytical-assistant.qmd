@@ -2,16 +2,12 @@
 title: "AI as Analytical Assistant"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide which parts of your own analysis to hand an AI
 > tool as an analytical assistant, and how to verify every number it returns
 > against your data before you believe any of it. You own which checks count and
 > which flagged problems are real; the tool only does the labor you specify.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -162,7 +158,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify this chapter's key result, the surviving robustness of your headline gap,
 with **alternative code** from the [verification
-guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+guide](../verification-guide.qmd):
 recompute the same gap a second way and compare. Filter each group by hand,
 subtract the two means yourself, and confirm you land on the assistant's number.
 Then add a second, independent road with a **falsification test**, the placebo:

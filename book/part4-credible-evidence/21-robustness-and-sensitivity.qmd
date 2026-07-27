@@ -2,16 +2,12 @@
 title: "Robustness and Sensitivity"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
 > **The research decision.** Before you look at a single result, decide the full set
 > of robustness and sensitivity checks you will run on your headline estimate, and
 > commit to reporting all of them. That order, list first and look second, is what
 > separates a finding you can defend from a flattering number you went fishing for.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -170,7 +166,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 :::
 
 Verify this chapter's key result, the specification curve, with **alternative code**
-from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+from the [verification guide](../verification-guide.qmd):
 recompute one point of the curve a second, simpler way and compare. Take a single
 specification, filter the two groups by hand, subtract their mean order values, and
 confirm the number matches what the automated grid printed. Two roads to one answer is

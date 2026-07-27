@@ -2,16 +2,12 @@
 title: "AI Disclosure and Research Integrity"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_conference_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_conference_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide exactly what to disclose about every AI tool you
 > used on your project (which tool, for which task, and how you checked its output),
 > and record it so that when someone asks *"did you use AI, and how did you verify
 > it?"* you can answer truthfully and point to a checkable record, not a memory.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -160,7 +156,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 :::
 
 Verify this chapter's key result, your finished disclosure, with **peer reasoning**
-from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+from the [verification guide](../verification-guide.qmd).
 Hand a partner your disclosure and your actual project, and ask one question: can you
 find an AI use I did not disclose, or a verification I claimed but cannot show? If they
 find one, your disclosure was incomplete, which is a finding, not a failure. For the

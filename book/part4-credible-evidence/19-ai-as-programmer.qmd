@@ -2,16 +2,12 @@
 title: "AI as Programmer"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
 
 > **The research decision.** When you hand the writing of analysis code to an AI,
 > you decide **what quantity that code must compute and over which set of cases**,
 > then verify it computed *that* quantity before you believe the number. A cell
 > that runs without an error is not a result you have earned.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 15, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -156,7 +152,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 :::
 
 Verify this chapter's key result, the threshold share, with **alternative code** from
-the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+the [verification guide](../verification-guide.qmd):
 recompute the same quantity a different way and compare. If the tool used a filtered
 `.mean()` on a boolean mask, recount with a `groupby` over the same set and confirm the
 two shares match to the digit. Then catch the silent trap: print the dataframe's shape

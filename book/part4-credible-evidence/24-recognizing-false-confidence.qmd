@@ -2,16 +2,12 @@
 title: "Recognizing False Confidence"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
 
 > **The research decision.** When an AI tool hands you a fluent, confident finding,
 > you decide whether its confidence counts as evidence (it never does) and exactly
 > which independent check you run on the number underneath it before you repeat the
 > claim as your own.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 1, 2, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -153,7 +149,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 The chapter's key result is that a confident summary's number can be flatly wrong.
 Confirm it yourself with **direct calculation** (from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)): recompute the
+[verification guide](../verification-guide.qmd)): recompute the
 before-mean and the after-mean by hand, or with a second simple expression, and
 subtract. If the change you get differs from the AI's figure, the figure was never
 evidence. For extra assurance, use **alternative code**: compute the same difference a

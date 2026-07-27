@@ -2,7 +2,7 @@
 title: "AI as Adversarial Reviewer"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
 > **The research decision.** When an adversarial reviewer hands you a list of
 > flaws in your own analysis, you decide which flaws are real by running the single
@@ -10,10 +10,6 @@ title: "AI as Adversarial Reviewer"
 > sounds most certain. This chapter equips you to pre-commit your robustness checks,
 > verify every flag against your data, and defend the one bounded claim that
 > survives.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -183,7 +179,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 The chapter's key result is that confidence never certifies truth: a winning number
 can be manufactured by searching, and a confident flag can be pure invention.
 Confirm it yourself with **simulation** (from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)). Compare two
+[verification guide](../verification-guide.qmd)). Compare two
 stretches of the same unchanged layout against each other, so the true difference is
 zero by construction, then slice the visits by hour and let a searcher report the
 best-looking slice. Watch an "improvement" appear from nothing. For the specific

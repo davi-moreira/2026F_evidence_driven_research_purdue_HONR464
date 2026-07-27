@@ -1,11 +1,12 @@
-# BOOK_MAP — the course book "Evidence-Driven Research" (37 chapters, 6 parts)
+# BOOK_MAP — the course book EDR|AI (37 chapters, 6 parts)
 
 Authoritative manifest for the open-access Quarto book (D20). RDSS remains the
 assigned theory text; this book is the course's own AI-era research manual.
-Each chapter carries the same ten elements (the research decision · conceptual
-explanation · a STEM worked example · a Colab lab link to its primary notebook ·
-recommended AI prompts · a "Do not delegate" box · an AI failure case · a
-verification lab · project transfer · a defend-your-decision activity), the same
+Each chapter carries the same core elements (the research decision · conceptual
+explanation · a worked example (econ / political science / business / biology) ·
+a Colab lab link to its primary notebook · recommended AI prompts · a "Do not
+delegate" box · an AI failure case · an "It is your turn" section that chains
+into a full research project across the book), the same
 undergraduate voice + citation rules as the notebooks, and a Colab link to its
 **primary notebook**. `scripts/validate_book_sync.py` checks, both directions,
 that every chapter links its notebook and every notebook nb01–nb16 is the

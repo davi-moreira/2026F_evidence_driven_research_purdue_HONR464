@@ -496,3 +496,45 @@ reviewable center of the course with a clear propagation loop, open it to
 audiences beyond Purdue (including PT-BR/ES readers), tighten the student
 notebooks to content that serves the reader, and raise the claim standard from
 "the source exists" to "I read, confirmed, and criticized it."
+
+---
+
+## Decision 24: EDR|AI — the self-contained manual (2026-07-27, third review round)
+
+**Decision:** Instructor ruling.
+1. **Title/brand:** the book is **EDR|AI — Evidence-Driven Research in the Age
+   of AI** (subtitle: How to Design, Analyze, Verify, and Defend) in all three
+   languages; the site tab reads "Book: EDR|AI" and opens in a new tab.
+2. **Self-contained manual:** chapter bodies carry NO course furniture
+   (milestones, studios, quizzes, rubrics, "this course"). The three closing
+   sections (Verification laboratory · Project transfer · Defend your
+   decision) are replaced by ONE final **"It is your turn"** section per
+   chapter; the 37 sections chain into a complete research project and a draft
+   research artifact by the end of the book. Sync-validator element set
+   updated accordingly.
+3. **Domains:** worked examples come from econ, political science, business,
+   and biology, at undergraduate level, in a friendly first-person-researcher
+   register (the ch. 2 "run the assay… that part is mine" passage is the
+   exemplar).
+4. **The AI loop:** the book teaches AI use as a LOOP (prompt → output →
+   interrogate → refine → run again; agentic tools run loops autonomously),
+   formally introduced in ch. 3 with SDIIVDD as the checklist that governs
+   every cycle; chs. 19–20 and 35–36 build on it.
+5. **Apparatus:** in-chapter Reading boxes retired; the verification guide is
+   now a book APPENDIX (book/verification-guide.qmd, from
+   ai_resources/verification_guide.md) and all chapter links point at it; new
+   appendices: About the Author; Part I opens with an overview page + mermaid
+   diagram of the book's arc; Part I retitled 'Research when AI does
+   "everything"'; every book page carries a language switcher (EN · PT-BR ·
+   ES) via include-before-body.
+6. **nb01:** an explicit ⚙️ Setup section (setup + readiness + AI Research
+   Partner) precedes Lecture 1; Lecture 1 is the orientation lecture
+   (professor intro with updated title line — Quantitative Methods Department,
+   Director of the Daniels Undergraduate Business Honors Program — student
+   intros, course at a glance, weekly rhythm + milestone chain, grading,
+   materials/logistics, questions), with the SRL Lead Brief and Research
+   Puzzle moved after orientation.
+
+**Rationale:** make EDR|AI a book that stands entirely on its own — a manual
+any student anywhere can follow to a finished, defensible research artifact —
+while the course wraps around it, not the other way round.

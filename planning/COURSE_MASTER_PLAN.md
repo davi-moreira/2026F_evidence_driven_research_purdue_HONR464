@@ -201,16 +201,16 @@ alignment, and responsible interpretation — never coding elegance.
 
 ## 8. The course book — 37 chapters, six parts
 
-The course ships its own open text, **Evidence-Driven Research in AI-era: How
-to Design, Analyze, Verify, and Defend** (**EDRAI**), a Quarto book of **37 chapters
+The course ships its own open text, **EDR|AI — Evidence-Driven Research in the Age of AI: How to Design, Analyze,
+Verify, and Defend** (**EDR|AI**), a Quarto book of **37 chapters
 in six parts** rendered to `docs/book/` and synchronized with the notebooks by
 `validate_book_sync.py`. The book is presented to students as a **work in
 progress**, under development across the semester. An appendix chapter
 (`book/srl.qmd`) carries the Student Research Lead guide. **RDSS remains the theory text**;
-EDRAI is the course-authored narrative that translates RDSS to the undergraduate audience: EDRAI chapters are the REQUIRED reading and the matching RDSS chapters are RECOMMENDED. It is the narrative that walks students through the same
+EDR|AI is the course-authored narrative that translates RDSS to the undergraduate audience: EDR|AI chapters are the REQUIRED reading and the matching RDSS chapters are RECOMMENDED. It is the narrative that walks students through the same
 material at the honors-undergraduate reading level. Part-to-notebook synchronization:
 
-| Part | EDRAI chapters | Notebooks |
+| Part | EDR|AI chapters | Notebooks |
 |---|---|---|
 | I — Foundations: research and AI | 1–4 | `nb01` |
 | II — From curiosity to a classified question | 5–10 | `nb02`–`nb04` |

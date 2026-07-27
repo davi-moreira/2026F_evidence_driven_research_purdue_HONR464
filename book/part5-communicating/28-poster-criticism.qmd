@@ -2,7 +2,7 @@
 title: "Poster Criticism"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
 
 > **The research decision.** Before your poster becomes permanent, you decide
 > whether every claim on it is actually backed, or whether it still needs one more
@@ -10,10 +10,6 @@ title: "Poster Criticism"
 > shows its uncertainty beside the claim, traces every number to a cell, and
 > reaches every reader. This chapter equips you to run that audit as a hostile
 > stranger would, then defend the lock call you make.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
-:::
 
 ## Why this decision matters
 
@@ -180,7 +176,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 The chapter's key result is that the same numbers drawn honestly tell a smaller
 story than the truncated chart does. Confirm it with **direct calculation** (from
-the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)): recompute the
+the [verification guide](../verification-guide.qmd)): recompute the
 yield gap by hand, 191 minus 185 is 6 bushels per acre, then recompute the truncated
 axis's exaggeration factor, the taller bar's height above the 180 floor divided by
 the shorter bar's, and confirm the honest 0-to-full-scale chart shows a difference

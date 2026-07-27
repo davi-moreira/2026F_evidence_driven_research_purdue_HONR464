@@ -2,16 +2,12 @@
 title: "From Curiosity to a Research Problem"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
 
 > **The research decision.** Which single research problem, out of everything your
 > curiosity could become, you will commit a term to. You state it as one
 > answerable question that names its units, its outcome, and the population it
 > speaks for, and you defend it as important, feasible, and genuinely new.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 4, 7, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -170,7 +166,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 The key result of this chapter is a claim about your own question: that it is
 answerable and carries its three terms. Verify it with **peer reasoning**, method
-11 in the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md). Hand your
+11 in the [verification guide](../verification-guide.qmd). Hand your
 one-sentence question to a classmate who has never seen your project, and ask them
 to name, from that sentence alone, what one unit is, what you would record, and who
 the answer is about. If they name all three, your question holds. If they stall,

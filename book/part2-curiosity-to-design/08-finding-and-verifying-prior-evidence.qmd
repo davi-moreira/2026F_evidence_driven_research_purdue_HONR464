@@ -2,15 +2,11 @@
 title: "Finding and Verifying Prior Evidence"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
 
 > **The research decision.** Which sources count as *verified evidence* you may
 > build on, and whether the gap you want to claim is genuinely open or just a
 > search you stopped too early.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 4, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -155,7 +151,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 The chapter's key result is your verified-source list, and the method that confirms
 it is **primary-source reading** from the [verification
-guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md): for any citation, find the actual
+guide](../verification-guide.qmd): for any citation, find the actual
 source and read the relevant line. Reach for it whenever an output cites a study, a
 statistic, or a fact from the literature. Concretely, for each source you plan to
 keep, open the paper itself, confirm the author, year, and venue match, and confirm

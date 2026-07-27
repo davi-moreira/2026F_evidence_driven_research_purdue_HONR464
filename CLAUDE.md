@@ -213,10 +213,11 @@ Notebooks load data via `load_course_data()` (GitHub raw first, local fallback).
 
 ---
 
-## 🚨 CRITICAL RULE — The EDRAI Book-First Loop  *(D20, amended D23)*
+## 🚨 CRITICAL RULE — The EDR|AI Book-First Loop  *(D20, amended D23/D24)*
 
-The course book is **EDRAI** (*Evidence-Driven Research in AI-era*; `book/`,
-37 chapters + SRL appendix, rendered to `docs/book/`). The loop:
+The course book is **EDR|AI** (*Evidence-Driven Research in the Age of AI*;
+`book/`, 37 chapters + Part I overview + appendices: SRL, Verification Guide,
+About the Author; rendered to `docs/book/`). The loop:
 
 1. **Notebook content must reflect the book** — every chapter links its Colab
    lab; every notebook's wrap-up names its chapters; never edit a chapter's
@@ -226,10 +227,15 @@ The course book is **EDRAI** (*Evidence-Driven Research in AI-era*; `book/`,
    (notebooks, guides, site).
 3. **The book is institution-agnostic** (used outside Purdue): chapter bodies
    say "your course platform", "AI reviewer bench", "your research conference";
-   Purdue specifics appear only as parentheticals. Reading model: EDRAI
-   chapters REQUIRED, matching RDSS chapters RECOMMENDED. Every chapter keeps
-   its Reading box and its "AI can review AI — but the last decision is human"
-   verification callout.
+   Purdue specifics appear only as parentheticals. Reading model: EDR|AI
+   chapters REQUIRED, matching RDSS chapters RECOMMENDED (stated on the
+   Material page and preface — the in-chapter Reading boxes were retired, D24).
+   The book is a SELF-CONTAINED MANUAL: every chapter ends with an
+   **"It is your turn"** section, and the 37 sections chain into a complete
+   research project/paper by the end (no course-milestone language in chapter
+   bodies). Domains for examples: econ, political science, business, biology.
+   The "AI can review AI — but the last decision is human" rule lives in the
+   Verification Guide appendix and wherever chapters verify.
 4. **Translations:** `book-pt/` (PT-BR) and `book-es/` (ES) are generated from
    the English edition (the source of truth) and must be resynchronized after
    any EN chapter edit. Render all three books on any book change:
@@ -341,7 +347,7 @@ de-policying. (5.1 — first instructor review round (2026-07-27, D22):
 week-aligned numbering nb01–nb16, random SRL slots with notebook-embedded
 student-visible SRL Lead Briefs, quiz-first Fridays (10-min printed MC quiz;
 `_quizzes/2026Fall/weekly/`), confirmed assessment weights, course book
-retitled "Evidence-Driven Research in AI-era" (work in progress) with the SRL
+retitled (now EDR|AI, D24) (work in progress) with the SRL
 appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting

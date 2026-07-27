@@ -2,17 +2,13 @@
 title: "Experimental Causal Research"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide whether the way treatment was assigned in your
 > study lets you read a plain difference in outcomes as a causal effect, and name
 > exactly which quantity, and for whom, that difference estimates. You confirm the
 > randomization and name the quantity yourself, and you never let a tool declare
 > that your design proves cause.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 18, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -176,7 +172,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 
 Verify the chapter's key result, that the gap is more than chance, with two methods
 from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+[verification guide](../verification-guide.qmd).
 First, **simulation**: re-randomize. Shuffle the treatment labels thousands of
 times as if you re-ran the coin flips under the assumption that the reminder does
 nothing, recompute the gap each time, and see how rarely pure chance produces a gap

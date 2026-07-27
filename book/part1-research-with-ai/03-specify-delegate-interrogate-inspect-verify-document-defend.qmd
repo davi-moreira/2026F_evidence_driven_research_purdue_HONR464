@@ -2,16 +2,12 @@
 title: "Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
 
 > **The research decision.** Before you hand any research task to an AI tool, decide
 > how to route it through one seven-step protocol so the result comes back
 > verifiable and defensible. You specify the work and defend the result yourself,
 > and you never let the tool own those two ends.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 1, 2, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -166,7 +162,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 :::
 
 Verify this chapter's key result, the speedup, with **alternative code** from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+[verification guide](../verification-guide.qmd):
 recompute the same quantity a different way and compare. Time both functions again with
 a second mechanism, average several runs instead of taking one, and confirm the speedup
 holds. Then confirm correctness the same way: check that `dedupe_fast` and `dedupe_slow`

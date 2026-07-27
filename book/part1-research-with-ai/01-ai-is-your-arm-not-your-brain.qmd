@@ -2,16 +2,12 @@
 title: "AI Is Your Arm, Not Your Brain"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
 
 > **The research decision.** For every task in your research, you decide whether to
 > hand it to an AI tool, and if you do, how you will confirm what it returns before
 > you put your name on it. This chapter equips you to draw that line task by task
 > and defend where you drew it.
-
-::: {.callout-note title="Reading"}
-This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 1, 2, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
 
 ## Why this decision matters
 
@@ -161,7 +157,7 @@ A second model can audit the first: ask one AI to check another's claim, code, o
 :::
 
 The chapter's key result is that polish does not predict truth. Confirm it yourself
-with **primary-source reading** (from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)):
+with **primary-source reading** (from the [verification guide](../verification-guide.qmd)):
 take a real list of citations an AI returns for a topic you know, search each exact
 title, and count how many actually open. The confident-sounding ones are not more
 likely to be real than the plain ones. For a number, add **direct calculation**:
