@@ -9,6 +9,10 @@ title: "Robustness and Sensitivity"
 > commit to reporting all of them. That order, list first and look second, is what
 > separates a finding you can defend from a flattering number you went fishing for.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"Everyone shows me the version of the analysis that worked. I assume that one
@@ -32,11 +36,12 @@ this work, and people mix them up constantly.
 
 A **robustness check** is re-running the same finding under a different but equally
 defensible choice, to see whether the answer stays. Example: you reported an average
-strength, so you also compute it after dropping the one specimen that failed at the
-grip, and confirm the story holds. A **sensitivity check**, which some fields call a
-**sensitivity analysis**, is deliberately changing an assumption to see how far the
-answer moves. Example: you assumed your load cell was calibrated, so you ask how much
-your result would shift if it were off by two percent.
+order value, so you also compute it after dropping the one account that turned out to
+be a wholesale buyer, and confirm the story holds. A **sensitivity check**, which some
+fields call a **sensitivity analysis**, is deliberately changing an assumption to see
+how far the answer moves. Example: you assumed the checkout system logged every
+purchase, so you ask how much your result would shift if it quietly missed two percent
+of them.
 
 Both attacks aim at the same target, the **headline estimate**: the single number
 that stands in for your whole finding. You attack it from four handles, and any
@@ -59,27 +64,28 @@ difference is the order of looking and deciding.
 
 ## A worked example
 
-Your lab tests whether a new heat treatment raises the **yield strength** of a steel
-alloy, the stress at which the metal begins to deform permanently. Your headline: the
-treated bars yield about twelve percent higher than the untreated ones. Before you
-defend that number, you attack it across the four handles.
+Your team tests whether a new loyalty discount raises **average order value**, the
+average amount a customer spends per purchase. Your headline: shoppers offered the
+discount spend about twelve percent more than those who were not. Before you defend
+that number, you attack it across the four handles.
 
-- **Sample.** All bars, or all bars except the one that fractured inside the machine's
-  grip, which is a legitimate mechanical exclusion, not a convenient one.
-- **Measurement.** Yield read by the standard 0.2 percent offset method, or read at
-  the upper yield point.
-- **Specification.** Force divided by the nominal cross-section, or divided by each
-  bar's actual machined area.
-- **Metric.** The gain in megapascals, or the gain as a percent.
+- **Sample.** All shoppers, or all shoppers except the one account that turned out to
+  be a wholesale buyer placing bulk orders through the retail site, which is a
+  legitimate exclusion on your definition of a customer, not a convenient one.
+- **Measurement.** Order value read as the total amount charged, or read with shipping
+  and taxes stripped out.
+- **Specification.** Spending averaged over everyone offered the discount, or averaged
+  only over those who actually placed an order.
+- **Metric.** The gain in dollars, or the gain as a percent.
 
 You pre-list all sixteen combinations, run them, and plot the specification curve.
-Every combination comes back positive: the treatment helps no matter which defensible
+Every combination comes back positive: the discount helps no matter which defensible
 choice you make. The magnitude ranges from about plus eight percent to plus fifteen
-percent. So the honest headline is not "twelve percent." It is "higher yield in every
-specification we ran, by roughly eight to fifteen percent." Then you run one more
-attack, a **placebo test**: you split bars that all got the *same* treatment into fake
-"A" and "B" groups and confirm the gap between them sits near zero. If identical bars
-showed a gap, your measurement, not the treatment, would be manufacturing it.
+percent. So the honest headline is not "twelve percent." It is "higher spending in
+every specification we ran, by roughly eight to fifteen percent." Then you run one
+more attack, a **placebo test**: you split shoppers who all got the *same* offer into
+fake "A" and "B" groups and confirm the gap between them sits near zero. If identical
+shoppers showed a gap, your measurement, not the discount, would be manufacturing it.
 
 ## The Colab laboratory
 
@@ -98,7 +104,8 @@ request for a verdict.
 **Locate the standard checks.**
 
 ```text
-Act as a methods assistant for a two-group strength comparison. Before any code,
+Act as a methods assistant for a two-group comparison of average customer spending.
+Before any code,
 name the standard families of robustness and sensitivity checks for this design and
 the four things I can vary to stress the estimate. Cite a real methods reference you
 are confident exists; if you are unsure a source is real, say so.
@@ -110,23 +117,24 @@ confidently as a real one).
 **Delegate, with a list to verify.**
 
 ```text
-Here is my pre-listed robustness grid for one estimate: I vary the sample (all bars
-/ drop the grip failure), the measurement (0.2% offset / upper yield point), the
-specification (nominal / actual area), and the metric (MPa / percent). Name up to
-three additional, equally defensible specifications I did NOT list, and for each say
-which direction you expect it to push the estimate.
+Here is my pre-listed robustness grid for one estimate: I vary the sample (all
+shoppers / drop the wholesale account), the measurement (total charged / shipping and
+taxes stripped out), the specification (averaged over everyone offered / averaged over
+buyers only), and the metric (dollars / percent). Name up to three additional, equally
+defensible specifications I did NOT list, and for each say which direction you expect
+it to push the estimate.
 ```
 After running, verify: check each suggestion against the four handles and add only
-the ones you can actually run on your bars. Counters *illusion of completeness* (a
+the ones you can actually run on your own data. Counters *illusion of completeness* (a
 tidy grid that quietly omits the one choice that would break the claim).
 
 **Red-team your range.**
 
 ```text
-Here is my claim: "higher yield in every specification we ran, by roughly 8 to 15
-percent." Act as a hostile reviewer of a materials study. Name the single worst way
-this could be specification searching rather than robustness, and the one check that
-would expose it. Do not rewrite the claim for me.
+Here is my claim: "higher spending in every specification we ran, by roughly 8 to 15
+percent." Act as a hostile reviewer of a retail pricing study. Name the single worst
+way this could be specification searching rather than robustness, and the one check
+that would expose it. Do not rewrite the claim for me.
 ```
 After running, verify: run the check it names against your own data; the flaw is real
 only if your numbers confirm it. Counters *sycophantic agreement* (praise that
@@ -136,7 +144,7 @@ reviews your ego, not your evidence).
 Three calls stay yours. You decide **which checks you commit to before you look**,
 **which flagged issues the data actually confirms**, and **the final claim, with its
 range and its boundary, that you defend**. A reviewer, human or AI, proposes. You
-verify against your bars, and the evidence decides.
+verify against your own data, and the evidence decides.
 :::
 
 ## An AI failure case
@@ -145,8 +153,9 @@ You paste your four-handle grid and ask an AI to write your robustness section. 
 comes a long, well-organized passage that runs the sample handle, the specification
 handle, and the metric handle, and closes with "the twelve percent result is robust
 across all standard specifications." It reads as thorough and complete. The trap is
-that it never listed the **measurement** handle, the 0.2 percent offset versus upper
-yield point, and that is precisely the choice that moves your estimate the most. The
+that it never listed the **measurement** handle, the total amount charged versus
+shipping and taxes stripped out, and that is precisely the choice that moves your
+estimate the most. The
 section looks exhaustive while omitting the one check a reviewer would reach for
 first.
 
@@ -158,10 +167,14 @@ against yours, not against how finished it sounds.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, the specification curve, with **alternative code**
 from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
 recompute one point of the curve a second, simpler way and compare. Take a single
-specification, filter the two groups by hand, subtract their mean strengths, and
+specification, filter the two groups by hand, subtract their mean order values, and
 confirm the number matches what the automated grid printed. Two roads to one answer is
 a verified point. Then use a **counterexample** hunt on the whole curve: try to build
 one defensible specification that flips the sign. If you cannot find one after an
@@ -170,8 +183,9 @@ specification belongs in your report, not your recycling bin.
 
 ## Project transfer
 
-This chapter turns into your **M9 research audit and poster draft**. Take the estimate
-you produced in M8 and write a short, pre-listed robustness plan for it: three checks,
+This chapter turns into your **research audit and poster draft milestone**. Take the
+estimate you produced in the previous milestone and write a short, pre-listed
+robustness plan for it: three checks,
 in order, chosen for the choices a hostile reviewer is most likely to attack, plus one
 placebo or leave-one-out check. Run all of them, report the whole picture, and record
 each as a row in your AI Research Ledger with the verification method that earned your

@@ -230,9 +230,12 @@ sources:
     license: "MIT"
     library: "https://book.declaredesign.org/library/"   # Weeks 5–9 backbone
   course_book:
-    key: "EDR"
+    key: "EDRAI"
     title: "Evidence-Driven Research in AI-era: How to Design, Analyze, Verify, and Defend"
+    acronym: "EDRAI"
     status: "work in progress — under development across the semester"
+    reading_model: "EDRAI chapters are the REQUIRED reading; the matching RDSS chapters are RECOMMENDED (EDRAI translates RDSS to the undergraduate audience)"
+    translations: ["pt-BR (book-pt/ -> docs/book-pt)", "es (book-es/ -> docs/book-es)"]
     format: "Quarto book, 37 chapters in six parts, rendered to docs/book/"
     sync: "chapters synchronized with nb01–nb16 + site (validate_book_sync.py)"
   secondary_book:

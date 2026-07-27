@@ -10,7 +10,7 @@ Every STUDENT notebook must carry:
 
   * kernel metadata (python3), non-trivial cell count
   * the Inquiry & Claim Boundary block (inquiry emphasis + PERMITS/NOT rows)
-  * a provenance line + the Sources & Provenance section + learning objectives
+  * the Sources & Provenance section + learning objectives
   * the seven active-learning moves (Pause & Predict, Run-the-Study/Hands-On,
     Make a Design Choice, Practice, Reading the Evidence, Project Transfer,
     Exit Defense — the v2 closing move that replaces the Claim Ticket)
@@ -108,8 +108,9 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
         errs.append("missing design-pathway line (library pathway or 'cross-cutting')")
     if "PERMITS" not in text or "NOT permit" not in text:
         errs.append("missing claim-permitted / claim-not-permitted rows")
-    if not re.search(r"\*?Provenance:", text):
-        errs.append("missing provenance line")
+    # D23: the pipe-separated build-provenance metadata line is retired from
+    # student-facing cells; the Sources & Provenance section (real, retrievable
+    # sources) remains required.
     if not re.search(r"Sources\s*&\s*Provenance", text):
         errs.append("missing Sources & Provenance section")
     if "By the end of this notebook" not in text:

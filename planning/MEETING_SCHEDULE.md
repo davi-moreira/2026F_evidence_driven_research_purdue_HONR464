@@ -11,7 +11,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Driving question:** What does research even mean when an AI can generate the code and the prose for you?
 - **Secondary questions:** What will you build this semester? Where is the line between AI assistance and intellectual substitution? What does 'AI may propose, the researcher must verify' demand of you on day one?
 - **Inquiry:** all positions (course framing)
-- **Claim PERMITTED:** "An AI tool generated this, and I confirmed the underlying source exists before I used it" — the course's opening standard.
+- **Claim PERMITTED:** "An AI tool generated this, the source exists, and I read, confirmed, and criticized the underlying argument or technique before using it" — the course's opening standard.
 - **Claim NOT permitted:** "The AI said so" offered as evidence — a generated citation you have not retrieved and checked is not yet a source.
 - **RDSS reading:** RDSS ch. 1 (Preface) + ch. 2 'What is a research design?' — skim before Wednesday (book.declaredesign.org)
 - **Other material:** nb01 (Colab); course website; syllabus; Brightspace orientation; genai.rcac.purdue.edu login

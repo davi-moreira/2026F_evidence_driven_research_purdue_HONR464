@@ -36,6 +36,7 @@ website:
         text: Material
       - href: book/index.html
         text: Book
+        target: _blank
       - href: schedule.qmd
         text: Schedule
       - href: instructor.qmd

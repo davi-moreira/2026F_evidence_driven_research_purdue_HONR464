@@ -9,6 +9,10 @@ title: "AI as Analytical Assistant"
 > against your data before you believe any of it. You own which checks count and
 > which flagged problems are real; the tool only does the labor you specify.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"I do not care that a model ran your robustness checks. I care which ones you
@@ -152,6 +156,10 @@ correct result.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, the surviving robustness of your headline gap,
 with **alternative code** from the [verification
 guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
@@ -164,9 +172,10 @@ assistant's code, not your effect.
 
 ## Project transfer
 
-This chapter feeds your **M9 poster draft and research audit**, the graded record
-of how hard you tried to break your own claim and what survived. Take your own M8
-estimate, delegate its robustness grid and a placebo to an assistant, and verify
+This chapter feeds your **poster draft and research audit milestone**, the graded
+record of how hard you tried to break your own claim and what survived. Take the
+estimate you produced in the previous milestone, delegate its robustness grid and a
+placebo to an assistant, and verify
 every number before it enters the audit. For each AI use, record the task you
 delegated, the number the tool returned, the named check that earned your trust,
 and the one flag you caught the tool getting wrong. That verified trail, plus your

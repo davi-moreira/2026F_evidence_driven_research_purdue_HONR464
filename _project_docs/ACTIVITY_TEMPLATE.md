@@ -78,13 +78,12 @@ experimental descriptive | prediction | experimental causal | cross-cutting]
 
 **Where this sits in the course:** [one sentence: which week, which milestone it
 develops, what it builds on — no meeting numbers, no dates.]
-
-*Provenance: [source-file or "fresh"] | [chapter/section] | [item] | [transformation]*
 ```
 
-The provenance line follows `planning/SOURCE_AUDIT_V2.md` §7 (the v1→v2 reuse
-map) and the evidence-integrity rule. Never invent chapters, declarations,
-functions, or datasets.
+The pipe-separated build-provenance metadata line is RETIRED from student-facing
+cells (D23) — provenance tracking lives in `planning/SOURCE_AUDIT_V2.md` §7 and
+the schedule data, not in the notebook. The evidence-integrity rule stands:
+never invent chapters, declarations, functions, or datasets.
 
 ### 3. Learning objectives (markdown)
 

@@ -9,6 +9,10 @@ title: "AI as Programmer"
 > then verify it computed *that* quantity before you believe the number. A cell
 > that runs without an error is not a result you have earned.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 15, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 > *"Do not read me the number. Tell me what set it was computed over. If the code
@@ -147,6 +151,10 @@ the code ran, never that it answered your question.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, the threshold share, with **alternative code** from
 the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
 recompute the same quantity a different way and compare. If the tool used a filtered
@@ -158,7 +166,8 @@ means the code, not the campus, is what you measured.
 
 ## Project transfer
 
-This is the code half of your **M4 observational descriptive design audit**. Before
+This is the code half of your **observational descriptive design audit**, the
+corresponding project milestone for this topic. Before
 you delegate the code that produces any descriptive number for your project, write
 your quantity of interest and its frame in one sentence each, the way nb05 has you
 name the target population, accessible population, frame, and sample. Then verify the

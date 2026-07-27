@@ -69,9 +69,9 @@ Leading a lecture is a graded performance. Slots are randomly assigned at the be
 
 ## Course Materials
 
--   **Primary text (free):** **Blair, Coppock & Humphreys (2023), *Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign*** (Princeton University Press) — read **free online** at [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}; no purchase required. Chapters are read conceptually, with no quantitative prerequisite, on the light cadence in the course schedule.
+-   **Theory text (free, recommended):** **Blair, Coppock & Humphreys (2023), *Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign*** (RDSS, Princeton University Press) — read **free online** at [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}; no purchase required. The course book translates RDSS to the undergraduate audience, so each week the course-book chapters are **required** and the matching RDSS chapters are **recommended**.
 
--   **Course book (free):** the course's own open text, **_Evidence-Driven Research in AI-era: How to Design, Analyze, Verify, and Defend_**, published on the course website. It walks through the same material at an honors-undergraduate reading level and links each chapter to its Colab lab. **The course book is a work in progress**: it is still under development and will keep growing and improving during the semester.
+-   **Course book (free, required):** the course's own open text, [**EDRAI** — **_Evidence-Driven Research in AI-era: How to Design, Analyze, Verify, and Defend_**](book/index.html){target="_blank"}, published on the course website (opens in its own tab) with translations in [Brazilian Portuguese](book-pt/index.html){target="_blank"} and [Spanish](book-es/index.html){target="_blank"}. It walks through the material at an undergraduate reading level and links each chapter to its Colab lab. **EDRAI is a work in progress**: it is still under development and will keep growing and improving during the semester.
 
 -   **Optional companion:** Bergstrom & West, *Calling Bullshit* (public case studies at [callingbullshit.org](https://callingbullshit.org/){target="_blank"}), used lightly to sharpen claim evaluation. Any additional readings are posted on Brightspace.
 
@@ -103,19 +103,9 @@ The course assesses the research chain itself: a semester-long research project 
 | Final Project                                |        20% |
 | Research artifact (paper/chapter/note)       |        10% |
 
-**Late policy:** −10% per day, up to 3 days, then not accepted (documented emergencies handled individually per Purdue policy).
-
 **Grading scale:** A ≥ 93, A− ≥ 90, B+ ≥ 87, B ≥ 83, B− ≥ 80, C+ ≥ 77, C ≥ 73, C− ≥ 70, D ≥ 60, F < 60 (no curve).
 
 Additional information about Purdue undergraduate research conferences: <https://www.purdue.edu/undergrad-research/conferences/index.php>{target="_blank"}.
-
-### Poster and Conference Policy
-
-Presenting at the **Purdue Fall Undergraduate Research Expo (Tuesday, November 17)** is a **required**, graded component of the course. Your poster is **locked for printing on Friday, November 6 at 5:00 PM** (M10) and cannot be revised after that time. At the Expo you present your own poster and **evaluate at least three colleagues' posters** using the course criticism instrument. The Expo presentation is a live event: only a **documented emergency** qualifies for a make-up arrangement, handled individually per Honors College norms.
-
-### Reproducibility Policy
-
-Every analysis ships as a **clean-run Colab package** that reproduces from a fresh runtime with the course seed (**SEED = 464**), so the same inputs yield the same outputs on any machine. At the **replication and red-team milestone (M13)**, you reproduce a peer's anonymized package and **attest** whether its headline result runs, then report where it is fragile. Your project closes as a **reproducibility capsule** (M14): the notebook, data, and documentation a stranger would need to rebuild your claim.
 
 ### Grade Challenges
 

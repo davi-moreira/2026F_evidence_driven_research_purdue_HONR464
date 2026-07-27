@@ -9,6 +9,10 @@ title: "Experimental Descriptive Research"
 > characteristic that already exists, or a **causal** one, and you defend that
 > classification and name the artifacts your measurement still has to rule out.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 17, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 Picture your research advisor stopping at one line of your methods page. "You
@@ -136,6 +140,10 @@ ran. Reject it, and rewrite the claim bounded to the units you observed.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify the lab's key result by **simulation**, the verification-guide method for
 checking how a procedure behaves rather than a fixed number. Build a toy world
 where you set the true latent value yourself, run the estimator, and confirm the
@@ -147,8 +155,8 @@ interface, so it must be designed out before any real number is trusted.
 
 ## Project transfer
 
-This chapter is the spine of **milestone M6, your experimental measurement or
-data-acquisition protocol**. Name the latent characteristic your project must
+This chapter is the spine of **your experimental measurement and
+data-acquisition protocol milestone**. Name the latent characteristic your project must
 measure, the design that reveals it, and the exact descriptive quantity it reports
 for named units. Then write the artifact plan: the one demand effect and the one
 instrument effect you most fear, each with the redesign that guards it. Add the

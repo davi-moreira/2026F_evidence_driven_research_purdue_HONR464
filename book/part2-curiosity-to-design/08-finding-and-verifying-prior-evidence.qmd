@@ -8,6 +8,10 @@ title: "Finding and Verifying Prior Evidence"
 > build on, and whether the gap you want to claim is genuinely open or just a
 > search you stopped too early.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 4, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 Picture a thesis advisor handing your first draft back across the desk. "Show me
@@ -145,6 +149,10 @@ search result is the tell.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The chapter's key result is your verified-source list, and the method that confirms
 it is **primary-source reading** from the [verification
 guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md): for any citation, find the actual
@@ -160,14 +168,14 @@ owes.
 
 ## Project transfer
 
-This chapter is the engine of **Milestone 2, your Verified Evidence and
-Contribution Map**, presented as a gallery walk at the Friday studio. M2 asks for a
+This chapter is the engine of your **verified evidence and contribution map**
+milestone, presented as a gallery walk at the Friday studio. That milestone asks for a
 ledger of at least six sources you personally retrieved, an evidence map with your
 contradictions drawn rather than hidden, your gap placed where the map is
 demonstrably open, and a bounded contribution line of the form "based on the
 sources I retrieved and verified, ___ has not been established for ___." The
 retrieval-verification loop you practice here is exactly what fills that ledger, and
-the verified map becomes the ground the M3 research charter stands on.
+the verified map becomes the ground your research charter stands on.
 
 ## Defend your decision
 

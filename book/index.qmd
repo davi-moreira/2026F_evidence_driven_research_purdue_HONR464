@@ -2,25 +2,34 @@
 
 ::: {.callout-warning title="A work in progress"}
 This book is a **work in progress**. It is still under development and will
-keep growing and improving during the semester. Chapters may be revised,
-expanded, or reorganized as the course runs; when something looks unfinished,
+keep growing and improving over time. Chapters may be revised, expanded, or
+reorganized as it is used in the classroom; when something looks unfinished,
 that is why. Questions and suggestions are welcome.
 :::
 
 **Evidence-Driven Research in AI-era: How to Design, Analyze, Verify, and
-Defend** is the course book for HONR 46400 at Purdue's Honors College. Its one
-message: *AI is your arm and your research assistant, not your brain.* You will
-direct AI tools through the
-**Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend**
-workflow while keeping every research decision your own.
+Defend** — **EDRAI**, for short — is an open research manual for undergraduate
+students in economics, STEM, and business fields who want to turn curiosity
+into credible, defensible, evidence-based insight in a world where AI can
+produce almost everything. It was first written for an Honors research seminar
+at Purdue University, and it is deliberately institution-agnostic: any
+instructor or student, anywhere, is welcome to adopt it.
 
-Blair, Coppock and Humphreys' *Research Design in the Social Sciences*
-(free at [book.declaredesign.org](https://book.declaredesign.org)) remains
-the theory text. This book is the course's own AI-era manual: each chapter
-names a research decision, works a STEM example, links a Colab lab, shows
-an AI failure and how to catch it, and asks you to defend a claim. The
-chapters track the sixteen course notebooks; open each chapter's lab and
-work them together.
+Its one message: *AI is your arm and your research assistant, not your brain.*
+You will direct AI tools through the
+**Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend**
+workflow while keeping every research decision your own. One rule runs through
+every verification step in this book: **AI can review AI** — a second model is
+a real auditor of the first — **but the last decision is always human**.
+
+Blair, Coppock and Humphreys' *Research Design in the Social Sciences* (RDSS,
+free at [book.declaredesign.org](https://book.declaredesign.org)) is the theory
+text that EDRAI translates for the undergraduate audience. In the original
+course the EDRAI chapter is the **required** reading each week and the matching
+RDSS chapters are **recommended** for depth; each chapter's Reading box names
+its RDSS companions. Each chapter names a research decision, works an example,
+links a Colab lab, shows an AI failure and how to catch it, and asks you to
+defend a claim.
 
 The book has six parts: research when AI can produce almost everything;
 from curiosity to research design; the research pathways (observational and
@@ -28,7 +37,13 @@ experimental, descriptive and causal, and prediction); producing credible
 evidence with AI; communicating and defending research; and research after
 the conference.
 
-If you are the day's **Student Research Lead**, your lead brief lives at the
-start of your lecture in that lecture's notebook. The appendix
+**Languages.** EDRAI is also available in
+[Português (Brasil)](../book-pt/index.html) and
+[Español](../book-es/index.html). The English edition is the source of truth;
+the translations are regenerated from it as it evolves.
+
+If your course runs the flipped format this book supports, most lectures are
+led by a student: the day's **Student Research Lead**. That lead's brief lives
+at the start of the corresponding lecture notebook, and the appendix
 [The Student Research Lead](srl.qmd) collects the format, the preparation
 cadence, and the expectations in one place.

@@ -454,3 +454,45 @@ with weeks for student legibility; make the SRL system simpler, public, and
 creative; add weekly retrieval practice with a graded quiz; settle grading
 weights; de-clutter the public pages while keeping operational detail in the
 first notebook, the book appendix, and the schedule.
+
+---
+
+## Decision 23: EDRAI book-first loop, agnostic book, translations, notebook de-cluttering (2026-07-27)
+
+**Decision:** Instructor ruling, second review round.
+1. **EDRAI.** The course book's acronym is **EDRAI** (*Evidence-Driven Research
+   in AI-era: How to Design, Analyze, Verify, and Defend*). Reading model:
+   **EDRAI chapters are the required reading; the matching RDSS chapters are
+   recommended** — EDRAI exists to translate RDSS to the econ/STEM/business
+   undergraduate audience. Every chapter carries a Reading box naming its RDSS
+   companions, and a verification-section callout stating: **AI can review AI,
+   but the last decision is always human.** The Book tab opens in a new tab.
+2. **The book-first loop.** Going forward: (a) notebook content must reflect
+   the book; (b) the instructor manually reviews and updates the book; (c) the
+   assistant then articulates and incorporates those reviews across the course
+   material (notebooks, guides, site); (d) the book stays
+   **institution-agnostic** (usable by instructors/students outside Purdue —
+   generic "course platform", "AI reviewer bench", "your research conference"
+   phrasing in chapter bodies; Purdue specifics only as parentheticals).
+3. **Translations.** EDRAI ships in Brazilian Portuguese (`book-pt/` →
+   `docs/book-pt`) and Spanish (`book-es/` → `docs/book-es`). The English
+   edition is the source of truth; translations are regenerated from it after
+   EN edits. Render all three books on any book change.
+4. **Notebook de-cluttering.** The vacuous "all positions (…)" inquiry-emphasis
+   tags and the pipe-separated build-provenance metadata lines are retired from
+   student-facing cells (validator updated; the end-of-notebook Sources &
+   Provenance section stays). The course's opening claim standard is now: "An
+   AI tool generated this, the source exists, and I read, confirmed, and
+   criticized the underlying argument or technique before using it."
+5. **nb01 welcome.** The first notebook opens Lecture 1 with the professor's
+   introduction (bio, Palmeiras, Carnaval de Olinda; images in
+   `images/professor/`), mirroring the MGMT305 opening-lecture format.
+6. **Syllabus de-policying.** The late-policy line and the Poster & Conference
+   and Reproducibility policy sections are removed from the syllabus page
+   (reproducibility remains enforced through milestones and notebooks).
+
+**Rationale:** Instructor review 2026-07-27 (second round): make the book the
+reviewable center of the course with a clear propagation loop, open it to
+audiences beyond Purdue (including PT-BR/ES readers), tighten the student
+notebooks to content that serves the reader, and raise the claim standard from
+"the source exists" to "I read, confirmed, and criticized it."

@@ -9,6 +9,10 @@ title: "Research Builds on Research"
 > sources you have verified, you decide whether the gap you want to study is
 > *genuine* or is only the place where your search happened to stop.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 4, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 Picture the moment a **thesis advisor** hands your first draft back with one line
@@ -145,6 +149,10 @@ treat it as fabricated until you prove otherwise.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The key result of this chapter is a verdict: this source is verified, and this gap is (or
 is not) real. Verify it with **primary-source reading** (verification guide, method 4):
 find the actual source, open it, and read the line that supports the claim before you
@@ -155,8 +163,8 @@ that agree are far stronger than one.
 
 ## Project transfer
 
-This chapter builds your **M2 verified evidence and contribution map**, the milestone you
-present as a gallery walk at Friday's studio. It puts the question and guessed gap from
+This chapter builds your **verified evidence and contribution map**, the project milestone
+you present as a gallery walk at Friday's studio. It puts the question and guessed gap from
 the previous chapter to the test of retrieval. Leave with four pieces drafted: a
 verified-source log (author, year, where you retrieved it, its claim in your words), an
 evidence map naming at least one contradiction, your gap placed honestly with its

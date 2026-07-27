@@ -10,6 +10,10 @@ title: "From Results to Claims"
 > eye-span, and every number and source behind it is backed. You choose the words
 > and you lock them, and you never let a tool talk your claim past its boundary.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"At the health-sciences poster hall I point at one number and ask where it came
@@ -153,6 +157,10 @@ rewrite reviewed your poster's style; only you can review its claim.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, the number behind the claim, with **alternative
 code** from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
 recompute the group means and the gap a second way and confirm you get the same 6
@@ -165,13 +173,14 @@ age or baseline fitness, and if that common cause is open, the honest verb stays
 
 ## Project transfer
 
-This chapter is the engine of your **M10 final poster lock**. Take the one headline
+This chapter is the engine of your **final poster lock** milestone. Take the one headline
 sentence your project's results produced and run it through the decision here: fix
 the verb to your compass position, print the interval in the same eye-span, and
 trace every number on the board back to its cell. Cut any citation you cannot open
 yourself, and write the one-line AI-use disclosure that records what a tool did and
-how you checked it. The claim that survives this pass is the one you carry into M11
-and say out loud at the Expo.
+how you checked it. The claim that survives this pass is the one you carry into your
+oral defense and say out loud at your research conference (for the original course,
+the Purdue Fall Undergraduate Research Expo).
 
 ## Defend your decision
 

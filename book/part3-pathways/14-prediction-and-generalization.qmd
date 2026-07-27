@@ -9,6 +9,10 @@ title: "Prediction and Generalization"
 > forecasting contract (target, baseline, split, metric) plus a leakage check, so
 > you can defend a modest honest score and say exactly where it stops generalizing.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 Picture a county public-health officer who must decide, each Friday, whether to
@@ -148,6 +152,10 @@ the score fall back to 0.88, and keep the honest model.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify the chapter's key result with a **holdout sample**, the verification-guide
 method for any fitted model: never report a score computed on rows the model
 trained on. Confirm the split is real by checking that no held-out week appears in
@@ -158,7 +166,7 @@ feature was doing work a real forecast cannot.
 
 ## Project transfer
 
-This chapter builds the spine of your **M7 declared analysis protocol**, the plan
+This chapter builds the spine of your **declared analysis protocol** milestone, the plan
 for how you will analyze your data, fixed before you touch it. Draft four pieces for
 your project: the prediction verdict (target, baseline, split, metric, in that
 order, or an honest "prediction is the wrong question, and here is why"), the

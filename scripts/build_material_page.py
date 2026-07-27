@@ -65,9 +65,11 @@ toc: false
 One notebook per topic, listed in course order. Open a notebook in Colab from
 its badge (no installation needed), download every dataset the course uses in
 one bundle, and find the calendar on the [Schedule](schedule.qmd) page.
-Readings come from the [course book](book/index.html) (a work in progress,
-under development across the semester). Milestone instructions and rubrics are
-on Brightspace.
+Required readings come from the course book,
+[**EDRAI** — *Evidence-Driven Research in AI-era*](book/index.html){{target="_blank"}}
+(a work in progress, under development across the semester); the matching RDSS
+chapters are recommended companions. Milestone instructions and rubrics are on
+Brightspace.
 
 '''
 
@@ -178,7 +180,10 @@ def topic_info() -> list[dict]:
         n = nb_of(r["other_material"])
         if n is None:
             continue
-        d = info.setdefault(n, {"datasets": set(), "async": False})
+        d = info.setdefault(n, {"datasets": set(), "async": False, "rdss": []})
+        for ch in re.findall(r"ch\.\s*(\d+)", r["rdss_reading"]):
+            if ch not in d["rdss"]:
+                d["rdss"].append(ch)
         if r["modality"] == "async-online":
             d["async"] = True
         for ds in ("lapop_brazil", "la_voter_file", "foos_etal",
@@ -203,10 +208,14 @@ def sessions_label(d: dict) -> str:
 
 
 def readings_label(d: dict) -> str:
-    if not d["chapters"]:
-        return "—"
-    links = ", ".join(f"[ch. {ch}]({href})" for ch, href in d["chapters"])
-    return f"Course book {links}"
+    parts = []
+    if d["chapters"]:
+        links = ", ".join(f"[ch. {ch}]({href}){{target=\"_blank\"}}"
+                          for ch, href in d["chapters"])
+        parts.append(f"**EDRAI** {links}")
+    if d.get("rdss"):
+        parts.append(f"*RDSS ch. {', '.join(d['rdss'])} (recommended)*")
+    return "<br>".join(parts) if parts else "—"
 
 
 def data_cell(d: dict) -> str:

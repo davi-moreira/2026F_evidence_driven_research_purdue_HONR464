@@ -8,6 +8,10 @@ title: "Declaring and Diagnosing a Research Design"
 > decided by simulating it before you collect a single data point, reading how
 > often it lands on the truth, and naming the one change that most improves it.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 2, 5, 10, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 Picture a methodologist on your committee reading your plan. She asks one
@@ -145,6 +149,10 @@ failure, and your own diagnosis unmasks it.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The method here is **simulation** (verification guide, method 2: reach for it when
 a claim is about how a procedure behaves, not a fixed number). Never trust an AI's
 "your design has about 80% power." Declare the design yourself, set a true effect
@@ -156,11 +164,12 @@ no power number rescues you, and your honest claim stops at "associated with."
 
 ## Project transfer
 
-This chapter carries you through the back half of **M3, your research charter and
-MIDA declaration**, the three-minute declaration you present at Friday's studio.
-Chapter 9 gave you the four parts; here you declare them as a runnable design,
-diagnose it for bias, variance, and power, and bring one named redesign. Your M3
-is graded on drawing the identify-versus-associate line for your own design, so
+This chapter carries you through the back half of your **research charter and MIDA
+declaration** milestone, the three-minute declaration you present at Friday's
+studio. Chapter 9 gave you the four parts; here you declare them as a runnable
+design, diagnose it for bias, variance, and power, and bring one named redesign.
+That milestone is graded on drawing the identify-versus-associate line for your own
+design, so
 the diagnosis you run this week is the evidence behind the boundary you will
 defend.
 

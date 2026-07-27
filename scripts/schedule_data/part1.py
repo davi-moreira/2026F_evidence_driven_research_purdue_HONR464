@@ -31,7 +31,7 @@ MEETINGS_P1 = [
         "inquiry": "all positions (course framing)",
         "srl_slot": "",
         "srl_focus": "",
-        "claim_permitted": "\"An AI tool generated this, and I confirmed the underlying source exists before I used it\" — the course's opening standard.",
+        "claim_permitted": "\"An AI tool generated this, the source exists, and I read, confirmed, and criticized the underlying argument or technique before using it\" — the course's opening standard.",
         "claim_not_permitted": "\"The AI said so\" offered as evidence — a generated citation you have not retrieved and checked is not yet a source.",
         "rdss_reading": "RDSS ch. 1 (Preface) + ch. 2 'What is a research design?' — skim before Wednesday (book.declaredesign.org)",
         "cb_reading": "",

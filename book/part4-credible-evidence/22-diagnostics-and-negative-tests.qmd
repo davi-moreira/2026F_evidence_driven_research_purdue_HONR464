@@ -9,6 +9,10 @@ title: "Diagnostics and Negative Tests"
 > what its outcome does and does not license. You pick the test, confirm it is
 > genuinely null, and defend only what a clean pass actually earns you.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"Before you tell me the extract works, show me the plate with no extract on it.
@@ -152,6 +156,10 @@ the advice sounded like textbook practice and was wrong for your case.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, that a genuine negative test returns zero, with
 **simulation** from the
 [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
@@ -164,7 +172,8 @@ known-null data is one you can trust when it returns zero on your real data.
 
 ## Project transfer
 
-This chapter adds one pre-listed check to your **M9 research audit**, the graded record
+This chapter adds one pre-listed check to your **research audit milestone**, the
+graded record
 of how hard you tried to break your own claim. Before you look at your result, write
 down one negative test your design calls for, name the exact zero you expect, and
 commit to reporting it whichever way it comes out. Run it, record what you got against

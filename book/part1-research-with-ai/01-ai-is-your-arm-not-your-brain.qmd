@@ -9,40 +9,45 @@ title: "AI Is Your Arm, Not Your Brain"
 > you put your name on it. This chapter equips you to draw that line task by task
 > and defend where you drew it.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 1, 2, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
-Picture a design review. A **licensed professional engineer (PE)** is an engineer
-legally authorized to approve a design, whose signature (their "stamp") makes them
-personally answerable for it. Example: the PE who stamps a pedestrian bridge is who
-the public trusts if it fails.
+Picture an audit review. A **certified public accountant (CPA)** is an accountant
+licensed to sign off on a company's financial statements, and that signature makes
+them personally answerable for the numbers. Example: the CPA who signs a firm's annual
+statements is who investors turn to if the figures prove wrong.
 
-When a PE stamps your drawing, they are not saying the software ran without errors.
-They are saying, "I checked this, and I will answer for it." That is the posture this
-course asks you to adopt on day one. An AI tool can fetch a property, draft a
-paragraph, or write working code in seconds, but it cannot stamp your work. You can.
-So the question that matters is not "what can the tool produce?" It is "what did I
-hand it, and how did I check what came back?"
+When a CPA signs a statement, they are not saying the accounting software ran without
+errors. They are saying, "I checked this, and I will answer for it." That is the
+posture this course asks you to adopt on day one. An AI tool can fetch a statistic,
+draft a paragraph, or write working code in seconds, but it cannot sign your work. You
+can. So the question that matters is not "what can the tool produce?" It is "what did
+I hand it, and how did I check what came back?"
 
 ## The concept
 
 The rule that names the chapter is **AI as your arm, not your brain**: the tool can
 reach, fetch, draft, and compute for you, but it does not get to decide what is true
-or what you claim. Example: you let it draft a summary of a datasheet, then confirm
-every number in that summary yourself.
+or what you claim. Example: you let it draft a summary of a government statistics
+release, then confirm every number in that summary yourself.
 
 Two moves put the rule into practice. **Delegation** is handing a well-specified task
-to the tool, such as "find three candidate datasheets for this alloy."
-**Verification** is an independent check, run by a method outside the model, that the
-result is actually true. Example: you open the manufacturer's real datasheet and read
-the number yourself instead of trusting what the tool typed.
+to the tool, such as "find three published sources for last year's county unemployment
+rate." **Verification** is an independent check, run by a method outside the model,
+that the result is actually true. Example: you open the statistical agency's real data
+table and read the number yourself instead of trusting what the tool typed.
 
 Verification cannot be skipped because a wrong AI answer looks exactly like a right
 one. A **hallucination** is confident, polished output that is simply made up, such as
-a citation to a standard that does not exist. Example: a tool reports a fatigue limit
-and attributes it to "ASTM E-4471," a number never published. Tone is identical for
-real and invented, so tone cannot be your filter. Retrievability is. A source is
-**retrievable** when you can open the actual document and confirm it, such as finding
-the real standard in the Purdue Libraries and reading the clause.
+a citation to a report that does not exist. Example: a tool quotes a median starting
+salary and attributes it to a "National Graduate Earnings Survey" that was never
+published. Tone is identical for real and invented, so tone cannot be your filter.
+Retrievability is. A source is **retrievable** when you can open the actual document
+and confirm it, such as finding the real report through your university library and
+reading the line.
 
 Some judgments never get delegated. A **never-delegate decision** is a call that stays
 yours no matter how good the tool becomes: which question you pursue, what your

@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./book/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./book/index.html" class="sidebar-item-text sidebar-link" target="_blank">
  <span class="menu-text">Book</span></a>
   </div>
 </li>
@@ -175,8 +175,6 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#assessments" id="toc-assessments" class="nav-link" data-scroll-target="#assessments">Assessments</a>
   <ul class="collapse">
-  <li><a href="#poster-and-conference-policy" id="toc-poster-and-conference-policy" class="nav-link" data-scroll-target="#poster-and-conference-policy">Poster and Conference Policy</a></li>
-  <li><a href="#reproducibility-policy" id="toc-reproducibility-policy" class="nav-link" data-scroll-target="#reproducibility-policy">Reproducibility Policy</a></li>
   <li><a href="#grade-challenges" id="toc-grade-challenges" class="nav-link" data-scroll-target="#grade-challenges">Grade Challenges</a></li>
   </ul></li>
   <li><a href="#course-policies-and-additional-details" id="toc-course-policies-and-additional-details" class="nav-link" data-scroll-target="#course-policies-and-additional-details">Course Policies and Additional Details</a>
@@ -275,8 +273,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="course-materials" class="level2">
 <h2 class="anchored" data-anchor-id="course-materials">Course Materials</h2>
 <ul>
-<li><p><strong>Primary text (free):</strong> <strong>Blair, Coppock &amp; Humphreys (2023), <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em></strong> (Princeton University Press) — read <strong>free online</strong> at <a href="https://book.declaredesign.org/" target="_blank">book.declaredesign.org</a>; no purchase required. Chapters are read conceptually, with no quantitative prerequisite, on the light cadence in the course schedule.</p></li>
-<li><p><strong>Course book (free):</strong> the course’s own open text, <strong><em>Evidence-Driven Research in AI-era: How to Design, Analyze, Verify, and Defend</em></strong>, published on the course website. It walks through the same material at an honors-undergraduate reading level and links each chapter to its Colab lab. <strong>The course book is a work in progress</strong>: it is still under development and will keep growing and improving during the semester.</p></li>
+<li><p><strong>Theory text (free, recommended):</strong> <strong>Blair, Coppock &amp; Humphreys (2023), <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em></strong> (RDSS, Princeton University Press) — read <strong>free online</strong> at <a href="https://book.declaredesign.org/" target="_blank">book.declaredesign.org</a>; no purchase required. The course book translates RDSS to the undergraduate audience, so each week the course-book chapters are <strong>required</strong> and the matching RDSS chapters are <strong>recommended</strong>.</p></li>
+<li><p><strong>Course book (free, required):</strong> the course’s own open text, <a href="book/index.html" target="_blank"><strong>EDRAI</strong> — <strong><em>Evidence-Driven Research in AI-era: How to Design, Analyze, Verify, and Defend</em></strong></a>, published on the course website (opens in its own tab) with translations in <a href="book-pt/index.html" target="_blank">Brazilian Portuguese</a> and <a href="book-es/index.html" target="_blank">Spanish</a>. It walks through the material at an undergraduate reading level and links each chapter to its Colab lab. <strong>EDRAI is a work in progress</strong>: it is still under development and will keep growing and improving during the semester.</p></li>
 <li><p><strong>Optional companion:</strong> Bergstrom &amp; West, <em>Calling Bullshit</em> (public case studies at <a href="https://callingbullshit.org/" target="_blank">callingbullshit.org</a>), used lightly to sharpen claim evaluation. Any additional readings are posted on Brightspace.</p></li>
 <li><p><strong>Computing (required):</strong> A laptop or desktop with internet access and a modern web browser. Course activities run in the browser through <a href="https://colab.research.google.com/" target="_blank">Google Colab</a>, with no local installation. There are <strong>no purchases</strong> required for this course.</p></li>
 <li><p><strong>AI tools:</strong> The course teaches responsible, documented AI use (see the <a href="#ai-policy">AI Policy</a>). Approved tools:</p>
@@ -330,17 +328,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p><strong>Late policy:</strong> −10% per day, up to 3 days, then not accepted (documented emergencies handled individually per Purdue policy).</p>
 <p><strong>Grading scale:</strong> A ≥ 93, A− ≥ 90, B+ ≥ 87, B ≥ 83, B− ≥ 80, C+ ≥ 77, C ≥ 73, C− ≥ 70, D ≥ 60, F &lt; 60 (no curve).</p>
 <p>Additional information about Purdue undergraduate research conferences: <a href="https://www.purdue.edu/undergrad-research/conferences/index.php" target="_blank">https://www.purdue.edu/undergrad-research/conferences/index.php</a>.</p>
-<section id="poster-and-conference-policy" class="level3">
-<h3 class="anchored" data-anchor-id="poster-and-conference-policy">Poster and Conference Policy</h3>
-<p>Presenting at the <strong>Purdue Fall Undergraduate Research Expo (Tuesday, November 17)</strong> is a <strong>required</strong>, graded component of the course. Your poster is <strong>locked for printing on Friday, November 6 at 5:00 PM</strong> (M10) and cannot be revised after that time. At the Expo you present your own poster and <strong>evaluate at least three colleagues’ posters</strong> using the course criticism instrument. The Expo presentation is a live event: only a <strong>documented emergency</strong> qualifies for a make-up arrangement, handled individually per Honors College norms.</p>
-</section>
-<section id="reproducibility-policy" class="level3">
-<h3 class="anchored" data-anchor-id="reproducibility-policy">Reproducibility Policy</h3>
-<p>Every analysis ships as a <strong>clean-run Colab package</strong> that reproduces from a fresh runtime with the course seed (<strong>SEED = 464</strong>), so the same inputs yield the same outputs on any machine. At the <strong>replication and red-team milestone (M13)</strong>, you reproduce a peer’s anonymized package and <strong>attest</strong> whether its headline result runs, then report where it is fragile. Your project closes as a <strong>reproducibility capsule</strong> (M14): the notebook, data, and documentation a stranger would need to rebuild your claim.</p>
-</section>
 <section id="grade-challenges" class="level3">
 <h3 class="anchored" data-anchor-id="grade-challenges">Grade Challenges</h3>
 <p>Students who wish to challenge a grade must do so <strong>within 3 calendar days</strong> of the grade’s release. An exception applies for the last week of class, when assignments must be challenged <strong>within 1 calendar day</strong> to ensure timely computation of final course grades. Grade challenges must be grounded in legitimate disputes over research-methods principles or grading accuracy. Challenges based on post-hoc legalistic arguments or subjective dissatisfaction will not be considered.</p>

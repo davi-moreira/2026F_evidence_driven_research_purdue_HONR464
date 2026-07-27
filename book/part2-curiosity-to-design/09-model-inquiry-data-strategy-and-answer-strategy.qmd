@@ -10,6 +10,10 @@ title: "Model, Inquiry, Data Strategy, and Answer Strategy"
 > quantity. This chapter equips you to write those four parts and defend that they
 > point at the same thing.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 2, 5, 10, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 Picture a data science lead reading your one-page design before you spend a
@@ -134,6 +138,10 @@ confounder the fluent draft never mentioned.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The key result to verify is the alignment claim itself: that your four parts point
 at one quantity. Use **peer reasoning** from the verification guide. Explain your
 model, inquiry, data strategy, and answer strategy to a partner and ask them to
@@ -145,8 +153,8 @@ left standing. Two independent checks that agree are far stronger than one.
 
 ## Project transfer
 
-This chapter is the spine of milestone **M3 — your research charter and MIDA
-declaration**. Bring your own project's question and write its four parts, then add
+This chapter is the spine of your **research charter and MIDA declaration**
+milestone. Bring your own project's question and write its four parts, then add
 one sentence naming which part you were least sure aligned and why. That alignment
 note becomes the claim boundary you defend in your charter, and it is the exact
 input chapter 10 builds on when you declare and diagnose the same design.

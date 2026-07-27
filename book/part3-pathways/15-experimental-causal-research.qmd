@@ -10,6 +10,10 @@ title: "Experimental Causal Research"
 > randomization and name the quantity yourself, and you never let a tool declare
 > that your design proves cause.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 18, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 > *"Everyone shows me the treated group did better. So did the patients who were
@@ -166,6 +170,10 @@ number actually speaks for.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify the chapter's key result, that the gap is more than chance, with two methods
 from the
 [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
@@ -182,10 +190,10 @@ your pipeline, not the reminder, is what you measured.
 
 ## Project transfer
 
-This chapter becomes your **M8 minimum viable analysis**, the first real estimate
+This chapter becomes your **minimum viable analysis** milestone, the first real estimate
 on your own question, which you pitch at this week's Friday studio. Draft its spine:
 the potential outcomes Y(1) and Y(0) for one unit and which one your data will
-observe; the number M8 reports (a difference in means, or your pathway's
+observe; the number that milestone reports (a difference in means, or your pathway's
 equivalent) and the interval you attach; whether your design is realistically
 powered for the effect you expect; the single threat nearest your design
 (attrition, noncompliance, spillover, or confounding if you are not randomizing);

@@ -10,6 +10,10 @@ title: "Research Posters"
 > including a color-blind or screen-reader reader, can receive it. You own the
 > headline verb and the call that the picture never says more than the data.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"From four feet away I read one thing: does your tallest bar mean what it looks
@@ -29,19 +33,19 @@ reaches the wall.
 The decision is one judgment made four ways, and each way has a name.
 
 - **Headline claim.** The one sentence you want a reader to leave with. Its verb
-  carries the whole meaning. Example: "Catalyst B raised our yield" promises far
-  more than "Catalyst B yielded slightly higher."
+  carries the whole meaning. Example: "Version B raised our sales" promises far
+  more than "Version B sold slightly more."
 - **Claim boundary.** The line between what your evidence licenses and what it does
   not. Example: an observational comparison may say "is associated with," never
   "causes."
 - **Compass position.** The kind and reach of the question your project answered,
   which fixes what the headline is allowed to say. Example: a descriptive question
-  about the batches you measured, not a causal claim about why.
+  about the weeks you measured, not a causal claim about why.
 - **Figure honesty.** The rule that a figure's picture cannot say more than its
   data. Example: if the real gap is three points, the bars should look about three
   points apart, not twice as tall.
 - **Truncated axis.** An axis that starts above the bottom of its scale instead of
-  at the floor. Example: a yield axis running 70 to 76 instead of 0 to 100
+  at the floor. Example: a completion-rate axis running 70 to 76 instead of 0 to 100
   magnifies a small difference into a cliff.
 - **Uncertainty on the page.** The interval or caveat printed in the same glance as
   the claim, not buried in a footnote. Example: a "±4 points" error bar drawn right
@@ -58,12 +62,13 @@ right.
 
 ## A worked example
 
-You are presenting an organic-chemistry project comparing two catalysts for the
-same reaction. Across replicate runs, Catalyst A gives a mean percent yield of 71
-and Catalyst B a mean of 74. The 95% interval on each mean is about ±4 percentage
-points, so the two intervals overlap. Your first draft draws a bar chart with the
-y-axis running 70 to 76, titles it "Catalyst B BOOSTS yield," and colors the bars
-red and green.
+You are presenting a business-analytics project comparing two versions of an online
+store's checkout page. The outcome is the **completion rate**, the share of shoppers
+who start checkout and finish the purchase. Across weekly samples, Version A gives a
+mean completion rate of 71 percent and Version B a mean of 74. The 95% interval on
+each mean is about ±4 percentage points, so the two intervals overlap. Your first
+draft draws a bar chart with the y-axis running 70 to 76, titles it "Version B BOOSTS
+completion," and colors the bars red and green.
 
 Now run the decision. **Figure honesty:** the real gap is 3 points, but on an axis
 floored at 70 the taller bar is drawn four times the height of the shorter one, so
@@ -154,6 +159,10 @@ completeness. The check lives in your own audit list, the one you wrote before y
 asked.
 
 ## Verification laboratory
+
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
 
 Verify the chapter's key result, that the truncated axis inflates the gap, with
 **direct calculation** from the

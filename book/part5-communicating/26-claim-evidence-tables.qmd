@@ -9,6 +9,10 @@ title: "Claim–Evidence Tables"
 > establish, and record all three in one row of a claim–evidence table before the
 > poster is locked.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"I point at one number on your board and ask where it came from. Walk me to the
@@ -26,8 +30,8 @@ into the board and not patched under pressure.
 
 A **claim–evidence table** is a table with one row per claim, pairing each claim
 your poster makes with the specific evidence behind it. Example: a row that reads
-"Material B conducts heat about 1.4x faster than Material A" in the claim column,
-with the two measured conductivities in the evidence column.
+"Store B sold about 1.4 times as many units per week as Store A" in the claim column,
+with the two weekly sales averages in the evidence column.
 
 Four columns carry each row, and each is a term worth knowing.
 
@@ -146,6 +150,10 @@ table.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, the table's traceability, with two named methods
 from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
 For every traced number, use **direct calculation**: recompute the value a second,
@@ -157,7 +165,7 @@ either is a finding, and the claim comes off the board until you fix it.
 
 ## Project transfer
 
-This chapter is a graded piece of your **M10 final poster lock**. Build a
+This chapter is a graded piece of your **final poster lock** milestone. Build a
 claim–evidence table for your own poster: one row for every headline number and
 cited fact, each with its trace to a cell or source and its boundary written down.
 That table is what you carry into the gallery-walk audit and the oral defense, and

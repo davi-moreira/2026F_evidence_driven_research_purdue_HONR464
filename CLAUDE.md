@@ -213,15 +213,30 @@ Notebooks load data via `load_course_data()` (GitHub raw first, local fallback).
 
 ---
 
-## 🚨 CRITICAL RULE — Book–Notebook–Site Synchronization  *(D20 — NEW)*
+## 🚨 CRITICAL RULE — The EDRAI Book-First Loop  *(D20, amended D23)*
 
-The course book (`book/`, 37 chapters, six parts, rendered to `docs/book/`)
-synchronizes with the notebooks: every chapter links its Colab lab; every
-notebook's wrap-up names its chapters. Never edit a chapter's design content
-without checking its notebook (and vice versa).
+The course book is **EDRAI** (*Evidence-Driven Research in AI-era*; `book/`,
+37 chapters + SRL appendix, rendered to `docs/book/`). The loop:
+
+1. **Notebook content must reflect the book** — every chapter links its Colab
+   lab; every notebook's wrap-up names its chapters; never edit a chapter's
+   design content without checking its notebook (and vice versa).
+2. **The instructor manually reviews and updates the book**; the assistant then
+   articulates and incorporates those reviews across the course material
+   (notebooks, guides, site).
+3. **The book is institution-agnostic** (used outside Purdue): chapter bodies
+   say "your course platform", "AI reviewer bench", "your research conference";
+   Purdue specifics appear only as parentheticals. Reading model: EDRAI
+   chapters REQUIRED, matching RDSS chapters RECOMMENDED. Every chapter keeps
+   its Reading box and its "AI can review AI — but the last decision is human"
+   verification callout.
+4. **Translations:** `book-pt/` (PT-BR) and `book-es/` (ES) are generated from
+   the English edition (the source of truth) and must be resynchronized after
+   any EN chapter edit. Render all three books on any book change:
 
 ```bash
 .venv/bin/python scripts/validate_book_sync.py   # chapter↔notebook links, both directions
+quarto render book/ && quarto render book-pt/ && quarto render book-es/
 ```
 
 ---
@@ -315,7 +330,14 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 5.1 — instructor review round (2026-07-27, DECISIONS.md D22):
+**Version:** 5.2 — second instructor review round (2026-07-27, DECISIONS.md
+D23): EDRAI acronym + book-first loop (notebooks reflect the book; instructor
+reviews the book; assistant propagates; institution-agnostic body), EDRAI
+required / RDSS recommended reading model, PT-BR + ES book translations
+(book-pt/, book-es/ — EN is source of truth), AI-reviews-AI-human-decides
+callouts, provenance metadata lines + "all positions" tags retired from
+notebooks, upgraded claim standard, professor intro opening nb01, syllabus
+de-policying. (5.1 — first instructor review round (2026-07-27, D22):
 week-aligned numbering nb01–nb16, random SRL slots with notebook-embedded
 student-visible SRL Lead Briefs, quiz-first Fridays (10-min printed MC quiz;
 `_quizzes/2026Fall/weekly/`), confirmed assessment weights, course book
@@ -324,5 +346,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))
 **Maintained by:** Professor Davi Moreira + AI Assistants

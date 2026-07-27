@@ -10,14 +10,18 @@ title: "Hybrid and Complex Designs"
 > assuming that stacking rigorous-looking pieces automatically produces a rigorous
 > result.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 2, 5, 10, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 > *"Do not hand me the headline number. Hand me the error budget: every quantity you
 > measured, how you measured it, and how each one's uncertainty flowed into the final
 > answer. A precise result built on one uncharacterized step is a precise wrong
 > answer."*
-> — an **experimental physicist** reviewing a lab report that claims to have measured a
-> constant
+> — an **antitrust economist** reviewing a report that claims to have measured how
+> concentrated a market is
 
 A complex design fails in a quiet way. Each piece looks careful on its own, so the whole
 looks careful too. But an answer assembled from several measurements is only as
