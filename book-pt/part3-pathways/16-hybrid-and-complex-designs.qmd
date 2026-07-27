@@ -2,91 +2,92 @@
 title: "Desenhos Híbridos e Complexos"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Quando a sua pergunta obriga você a costurar várias
-> mensurações ou etapas em uma resposta só, decida se esse desenho combinado ainda se
-> comporta como um todo único e alinhado, que você consegue diagnosticar antes de
-> rodá-lo, em vez de supor que empilhar peças de aparência rigorosa produz
-> automaticamente um resultado rigoroso.
-
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do seu tópico no curso; o laboratório em Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*, desenho de pesquisa nas ciências sociais), cap. 2, 5 e 10, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **A decisão de pesquisa.** Quando a sua resposta precisa ser costurada a partir de
+> várias mensurações ou etapas, decida se o desenho combinado ainda é uma coisa só,
+> alinhada, que você consegue diagnosticar antes de rodar. Empilhar peças cuidadosas
+> não produz automaticamente um resultado cuidadoso, e decidir *cortar* uma peça que
+> você não consegue caracterizar é tanto uma decisão de desenho quanto acrescentar
+> outra.
 
 ## Por que essa decisão importa
 
-> *"Não me entregue o número de manchete. Me entregue o orçamento de erro: cada
-> quantidade que você mediu, como mediu e como a incerteza de cada uma escoou até a
-> resposta final. Um resultado preciso construído sobre uma etapa não caracterizada é
-> uma resposta errada com precisão."*
-> — um **economista antitruste** revisando um relatório que afirma ter medido o quão
-> concentrado é um mercado
+**A decisão em jogo: se a peça móvel a mais do seu desenho merece o lugar dela ou só
+acrescenta um erro que você não consegue prestar contas.**
 
-Um desenho complexo falha de um jeito silencioso. Cada peça parece cuidadosa sozinha,
-então o conjunto também parece cuidadoso. Mas uma resposta montada a partir de várias
-mensurações só é tão confiável quanto a sua peça pior caracterizada, e a montagem pode
-amplificar um erro pequeno até virar um grande. Este capítulo lhe dá a disciplina de
-desmontar um desenho desses e diagnosticar o todo antes de confiar no número dele.
+> *"Não me entregue o número de manchete. Me entregue o orçamento de erro: cada
+> quantidade que você mediu, como você mediu e como a incerteza de cada uma fluiu
+> para a resposta final. Um resultado preciso construído sobre uma etapa não
+> caracterizada é uma resposta errada e precisa."*
+> — um **economista antitruste** revisando um relatório que alega ter medido o quanto
+> um mercado é concentrado
+
+Um desenho complexo falha de um jeito silencioso. Cada peça parece cuidadosa por
+conta própria, então o conjunto também parece. Mas uma resposta montada a partir de
+várias mensurações é tão confiável quanto a sua peça pior caracterizada, e a montagem
+pode amplificar um erro pequeno até virar um erro grande. Este capítulo dá a
+disciplina de desmontar um desenho desses e diagnosticar o todo antes de confiar no
+número dele.
 
 ## O conceito
 
-Todo desenho de pesquisa tem quatro partes, e o curso as chama de **MIDA** (*model,
-inquiry, data strategy, answer strategy*): o **Modelo** (o seu retrato escrito de como
-o mundo poderia funcionar), a **Indagação** (a quantidade exata que você quer dele), a
-**Estratégia de dados** (como os dados passam a existir) e a **Estratégia de resposta**
-(como você transforma esses dados em uma estimativa). O laboratório em Colab constrói
-as quatro do zero. Este capítulo as leva a um terreno mais difícil.
+Todo desenho de pesquisa tem quatro partes, e este livro as chama de **MIDA**
+(*Model, Inquiry, Data strategy, Answer strategy*): o **Modelo** (a sua imagem
+escrita de como o mundo poderia funcionar), a **Indagação** (a única quantidade exata
+que você quer dele), a **Estratégia de dados** (como os dados passam a existir) e a
+**Estratégia de resposta** (como você transforma esses dados em uma estimativa). O
+laboratório em Colab constrói as quatro do zero. Este capítulo as leva a um terreno
+mais difícil.
 
-Um **desenho complexo, ou híbrido,** é um desenho de pesquisa cujas quatro partes MIDA
-têm mais de uma peça móvel: várias mensurações, etapas ou subperguntas costuradas em
-uma resposta só. Exemplo: calcular o escore de concentração de um mercado a partir de
-duas mensurações separadas, cada uma vinda da sua própria fonte e carregando o seu
-próprio erro.
+Um **desenho complexo, ou híbrido**, é um desenho de pesquisa cujas quatro partes
+MIDA têm mais de uma peça móvel: várias mensurações, etapas ou subperguntas costuradas
+em uma única resposta. Exemplo: calcular o escore de concentração de um mercado a
+partir de duas mensurações separadas, cada uma vinda da sua própria fonte e carregando
+o seu próprio erro.
 
 Duas ideias decidem se um desenho desses se sustenta. A primeira é o **alinhamento**,
-ou seja, as quatro partes apontam para a mesma quantidade única. A complexidade quebra
-o alinhamento de um jeito novo: duas submensurações construídas com cuidado podem
-estar bem cada uma e, ainda assim, mirar discretamente quantidades ligeiramente
-diferentes, que nunca se combinam naquela que você nomeou. A segunda é a **propagação
-de erro**, ou seja, a incerteza de cada insumo medido escoa até a resposta final, às
-vezes amplificada. Exemplo: se a sua resposta depende do *quadrado* de uma participação
-medida, um erro de 1% nessa participação vira um erro de aproximadamente 2% no
-resultado.
+ou seja, todas as quatro partes apontam para a mesma quantidade única. A complexidade
+o quebra de um jeito novo: duas submensurações construídas com cuidado podem estar
+cada uma bem e ainda assim mirar, em silêncio, quantidades ligeiramente diferentes,
+que nunca se combinam naquela que você nomeou. A segunda é a **propagação de erro**,
+ou seja, a incerteza de cada insumo medido flui para a resposta final, às vezes
+amplificada. Exemplo: se a sua resposta depende do *quadrado* de uma fatia medida, um
+erro de 1% nessa fatia vira mais ou menos um erro de 2% no resultado.
 
 Mantenha por perto as duas palavras de falha do laboratório. **Viés** é uma inclinação
 sistemática que mais dados não reduzem; **variância** é a oscilação de rodada para
-rodada, que mais dados reduzem. A complexidade permite que um erro sistemático pequeno
-se esconda atrás de um erro aleatório impressionantemente pequeno.
+rodada que mais dados reduzem. A complexidade deixa um erro sistemático pequeno se
+esconder atrás de um erro aleatório impressionantemente pequeno.
 
 ## Um exemplo trabalhado
 
-Você quer saber o quão concentrado é o mercado de supermercados da sua cidade: um
-punhado de redes domina, ou ele está dividido entre muitos vendedores? A resposta
-padrão é um **índice de concentração**, um escore único que sobe conforme as vendas de
-um mercado se acumulam em menos mãos. Você o calcula elevando ao quadrado a
-participação de mercado de cada vendedor e somando os quadrados, em que a participação
-de um vendedor é `share = its revenue / total market revenue`. Essa única fórmula é um
-desenho complexo em miniatura. Ela costura duas submensurações em uma resposta só: a
-`revenue` de cada rede, que você tira de uma pesquisa mensal do setor, e a `total
-market revenue` no denominador, que você precisa medir separadamente.
+Você quer saber o quanto o mercado de supermercados da sua cidade é concentrado: um
+punhado de redes domina, ou ele está repartido entre muitos vendedores? A resposta
+padrão é um **índice de concentração**, um escore único que sobe conforme as vendas
+de um mercado se acumulam em menos mãos. Você o calcula elevando ao quadrado a fatia
+de mercado de cada vendedor e somando os quadrados, sendo que a fatia de um vendedor
+é `share = its revenue / total market revenue`. Essa fórmula sozinha já é um desenho
+complexo em miniatura. Ela costura duas submensurações em uma resposta: a `revenue`
+de cada rede, que você tira de uma pesquisa setorial mensal, e a `total market
+revenue` do denominador, que você precisa medir separadamente.
 
-Observe a anatomia. Um único mês de receita reportada é ruidoso, porque uma semana de
-feriado ou uma declaração entregue com atraso empurra o número de qualquer rede para
-cima ou para baixo. Então você faz um movimento esperto de estratégia de dados: tira a
-média de doze meses de receita para cada rede antes de calcular as participações. Essa
-média esmaga a *variância*, e o seu índice fica lindamente repetível, mexendo um ou
-dois pontos no máximo quando você troca os meses usados.
+Repare na anatomia. Um único mês de receita reportada é ruidoso, porque uma semana de
+feriado ou uma declaração atrasada empurra o número de qualquer rede para cima ou
+para baixo. Então você faz um movimento esperto de estratégia de dados: tirar a média
+de doze meses de receita de cada rede antes de calcular as fatias. Essa média esmaga
+a *variância*, e o seu índice fica lindamente repetível, mexendo um ou dois pontos no
+máximo quando você troca quais meses usa.
 
-Aqui está a armadilha que o laboratório treina você a enxergar. A repetição não faz
-nada contra o *viés*. A sua pesquisa setorial cobre as redes, mas não as mercearias
-independentes de esquina nem as entregas de mercado on-line, então a `total market
-revenue` pela qual você divide é sistematicamente pequena demais. Toda participação
-fica, portanto, sistematicamente grande demais e, como as participações são elevadas ao
-quadrado, essa inclinação é amplificada direto para dentro do índice. A sua estratégia
-de dados e o seu modelo se afastaram um do outro. Um índice que marca 2.850 e nunca
-oscila não é um índice correto, apenas um índice confiantemente errado, e ele pode
-empurrar um mercado para além da linha que as autoridades de concorrência tratam como
+Aqui está a armadilha que o laboratório treina você a enxergar. Repetição não faz nada
+contra o *viés*. A sua pesquisa setorial cobre as redes, mas não as mercearias de
+esquina independentes nem as entregas de supermercado on-line, então a `total market
+revenue` pela qual você divide é sistematicamente pequena demais. Toda fatia é,
+portanto, sistematicamente grande demais e, como as fatias são elevadas ao quadrado,
+essa inclinação é amplificada direto para dentro do índice. A sua estratégia de dados
+e o seu modelo se afastaram. Um índice que marca 2.850 e nunca oscila não é um índice
+correto, apenas um índice confiantemente errado, e ele pode empurrar um mercado para
+o outro lado da linha que as autoridades de defesa da concorrência tratam como
 altamente concentrado. A correção é um redesenho da estratégia de dados, tirando o
 denominador de uma fonte construída para cobrir todos os vendedores, como um censo
 econômico do governo, e não mais um ano da mesma pesquisa.
@@ -94,18 +95,22 @@ econômico do governo, e não mais um ano da mesma pesquisa.
 ## O laboratório em Colab
 
 O laboratório deste capítulo é o notebook **nb04 — The anatomy of a research design:
-MIDA + declare → diagnose → redesign** (a anatomia de um desenho de pesquisa: MIDA +
-declarar → diagnosticar → redesenhar). Abra-o no Colab pelo selo acima. Ali você
+MIDA + declare → diagnose → redesign**. Abra no Colab pelo selo acima. Lá você
 constrói um pequeno mundo simulado, **declara** um desenho como algo que um computador
 consegue rodar, **diagnostica** esse desenho simulando-o milhares de vezes para ler o
-seu viés, a sua variância e o seu poder, e depois **redesenha** a parte que mais o
-melhora. O laboratório roda esse ciclo sobre uma pergunta social causal; este capítulo
-mostra que a mesma anatomia vale quando o desenho é complexo.
+viés, a variância e o poder dele, e depois **redesenha** a parte que mais o melhora. O
+laboratório roda esse loop em uma pergunta social causal; este capítulo mostra que a
+mesma anatomia vale quando o desenho é complexo.
 
 ## Prompts de IA recomendados
 
 Comprometa-se com a sua própria resposta primeiro, depois delegue. Cada prompt é uma
-tarefa verificável, não um pedido de veredito.
+tarefa conferível, não um pedido de veredito. Rode-os como um loop, e não como tiro
+único: a segunda passagem, em que você devolve a peça que a ferramenta pulou e
+pergunta de novo, costuma ser a que encontra a etapa não caracterizada. Ferramentas
+agênticas que encadeiam essas passagens sozinhas vão montar, de uma vez, um orçamento
+de erro com cara de completo. Cara de completo é justamente o modo de falha de que
+este capítulo trata.
 
 **Localize a regra real.**
 
@@ -117,11 +122,11 @@ to call a market moderately or highly concentrated, and (2) the standard rule fo
 propagating the uncertainty in the measured revenues and the market total into the
 index. Only state values you are confident exist.
 ```
-Depois de rodar, verifique: abra a fonte citada e confirme que os limiares e a regra de
-propagação aparecem mesmo lá. Combate a *fabricação confiante* (um limiar inventado
-chega com a mesma confiança de um real).
+Depois de rodar, verifique: abra a fonte citada e confirme que os limiares e a regra
+de propagação aparecem mesmo lá. Enfrenta a *fabricação confiante* (um limiar
+inventado chega com a mesma confiança de um real).
 
-**Decomponha o desenho em peças que você consiga checar.**
+**Decomponha o desenho em peças que você consiga conferir.**
 
 ```text
 Here is my combined design: [paste your model, inquiry, and how you measure each
@@ -129,12 +134,12 @@ seller's revenue and the total market revenue]. Break it into sub-designs. For e
 sub-measurement, name which MIDA part it lives in, the one assumption it depends on,
 and how its error enters the final index. Return a table.
 ```
-Depois de rodar, verifique: coloque a tabela ao lado da sua própria decomposição.
-Qualquer subdesenho ou suposição que ela pulou é exatamente a lacuna a perseguir.
-Combate a *ilusão de completude* (uma tabela bem-arrumada que omite justamente a etapa
-não caracterizada).
+Depois de rodar, verifique: ponha a tabela ao lado da sua própria decomposição.
+Qualquer subdesenho ou suposição que ela tenha pulado é exatamente a lacuna a
+perseguir. Enfrenta a *ilusão de completude* (uma tabela bem arrumada que omite a
+única etapa não caracterizada).
 
-**Faça red team (revisão adversária) no resultado combinado.**
+**Faça red team no resultado combinado.**
 
 ```text
 Act as a hostile antitrust economist. Here is my measured concentration index and its
@@ -143,71 +148,64 @@ can never fix and the place my four MIDA parts fail to point at the same quantit
 not fix it for me.
 ```
 Depois de rodar, verifique: se a ferramenta só elogiar a sua precisão, insista e exija
-o pior erro sistemático. Combate a *concordância bajuladora* (elogio que revisa o seu
-ego, não o seu orçamento de erro).
+o único pior erro sistemático. Enfrenta a *concordância bajuladora* (elogio que revisa
+o seu ego, não o seu orçamento de erro).
 
 ::: {.callout-important title="Não delegue"}
 Três decisões continuam sendo suas. Você decide **qual quantidade única a sua indagação
-nomeia** (qual mercado, em que recorte geográfico e em que janela de tempo), **se cada
-subdesenho de fato mira essa mesma quantidade**, para que as partes se alinhem, e **se
-vale confiar em um número combinado que o seu diagnóstico diz ser dominado por um erro
-sistemático**. Uma ferramenta pode propagar a aritmética, mas não pode decidir que um
-número preciso é um número correto. Esse julgamento é o ponto inteiro do capítulo, e
-ele é seu.
+nomeia** (qual mercado, em que geografia e em que janela de tempo), **se cada
+subdesenho de fato mira essa mesma quantidade**, de modo que as partes se alinhem, e
+**se vale confiar em um número combinado que o seu diagnóstico diz ser dominado por um
+erro sistemático**. Uma ferramenta pode propagar a aritmética, mas não pode decidir
+que um número preciso é um número correto. Esse julgamento é o ponto inteiro do
+capítulo, e ele é seu.
 :::
 
-## Um caso de falha de IA
+## Um caso de falha da IA
 
 Você cola a sua tabela de receitas em uma ferramenta de IA e pede o índice de
 concentração. Ela devolve, com total confiança, `index = 2,850 ± 18`. O número parece
-plausível para um mercado com algumas redes grandes, o intervalo é minúsculo e o código
-rodou sem erro. Está errado. A ferramenta propagou apenas a variância *de mês a mês* da
-receita, justamente a parte que você já esmagou tirando a média de doze meses, e nunca
+plausível para um mercado com algumas redes grandes, o intervalo é minúsculo e o
+código rodou sem erro. Está errado. A ferramenta propagou apenas a variância *de mês a
+mês* da receita, a parte que você já esmagou tirando a média de doze meses, e nunca
 modelou o viés *sistemático* de um denominador que deixa de fora todo vendedor que a
-sua pesquisa não alcança. Aquele apertado `± 18` descreve a oscilação que a ferramenta
-conseguia ver e se cala sobre a inclinação que ela não conseguia.
+sua pesquisa não alcança. Esse `± 18` apertado descreve a oscilação que ela conseguia
+ver e se cala sobre a inclinação que ela não conseguia.
 
-Você pega isso em dois movimentos. Primeiro, cheque a suposição em que o número se
-apoia: o total pelo qual as suas participações são divididas cobre mesmo o mercado
-inteiro? Segundo, faça um movimento de falsificação: recalcule o índice a partir de uma
-pesquisa deliberadamente mais estreita, derrubando também as menores redes, e veja o
-índice "preciso" derivar sistematicamente para cima. Uma quantidade que se desloca bem
-para fora do próprio intervalo declarado tinha uma incerteza que nunca foi honesta.
-Verifique o número, não o intervalo bem-arrumado ao lado dele.
+Você pega isso em dois movimentos. Primeiro, confira a suposição sobre a qual o número
+se apoia: o total pelo qual as suas fatias são divididas cobre mesmo o mercado
+inteiro? Segundo, rode um movimento de falsificação: recalcule o índice a partir de
+uma pesquisa deliberadamente mais estreita, derrubando também as redes menores, e veja
+o índice "preciso" derivar sistematicamente para cima. Uma quantidade que se desloca
+bem para fora do próprio intervalo declarado tinha uma incerteza que nunca foi
+honesta. Verifique o número, não o intervalo bem arrumado ao lado dele.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é outra proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado é sempre sua, de quem faz a pesquisa.
-:::
+*Você já percorreu as quatro trilhas. Este passo decide se o seu próprio projeto
+precisa de mais de uma peça móvel, e faz você justificar a resposta nos dois casos.*
 
-Verifique o resultado principal do capítulo, que a precisão de um desenho complexo não
-prova que ele seja não enviesado, com **simulação**, do
-[guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
-Declare o desenho combinado em código, com um índice verdadeiro conhecido e uma falha
-plantada na cobertura do denominador, rode muitas vezes e leia os dois números
-separadamente: a variância encolhe conforme você acrescenta meses, enquanto o viés fica
-exatamente onde os vendedores ausentes o colocaram. Depois acrescente uma segunda
-checagem independente, o **cálculo direto**: recalcule o índice na mão a partir das
-suas participações. Dois caminhos para uma resposta é um resultado verificado; dois
-caminhos para duas respostas significa que o que você mediu foi o pipeline, não o
-mercado.
-
-## Transferência para o projeto
-
-Este capítulo aprofunda o seu marco de **carta de pesquisa e declaração MIDA**, a
-declaração de três minutos que você apresenta no estúdio de sexta-feira. Se o desenho
-do seu próprio projeto for complexo, ou seja, se ele recorre a mais de uma fonte de
-dados, roda uma estratégia de resposta em duas etapas ou mistura uma subpergunta
-descritiva com uma causal, não o declare como uma caixa-preta única. Decomponha-o em
-seus subdesenhos, confirme que cada um se alinha à sua indagação única e diagnostique o
-todo, e não cada peça isolada. Leve essa decomposição e um redesenho nomeado ao estúdio
-como a parte de diagnóstico e redesenho da sua declaração.
-
-## Defenda a sua decisão
-
-Em quatro frases, defenda um desenho complexo. Nomeie os subdesenhos que ele costura e
-a indagação única a que todos precisam se alinhar. Enuncie a alegação delimitada que o
-desenho inteiro autoriza e diga se o erro sistemático de uma das submensurações domina
-o resultado. Encerre com a sua incerteza: a submensuração cujo viés você ainda não
-descartou e a checagem que você rodaria em seguida para fechá-la.
+1. Escreva o seu desenho como uma lista ordenada das mensurações e etapas necessárias
+   para ir dos dados brutos até a sua resposta. Uma linha significa um desenho
+   simples. Duas ou mais significam que você está rodando um híbrido, tendo você
+   pretendido isso ou não.
+2. Para cada linha, nomeie em qual parte MIDA ela mora e a única quantidade que ela
+   mira. Depois confronte a lista com a sua indagação. Todas as peças apontam para a
+   mesma quantidade, ou uma delas derivou em silêncio para uma quantidade vizinha?
+3. Escolha a peça cujo erro mais doeria e rastreie como a incerteza dela chega à sua
+   resposta final. Sinalize toda etapa que eleva ao quadrado, divide ou faz razão de
+   um valor medido, porque é exatamente ali que uma inclinação pequena é amplificada.
+4. Decida e escreva a justificativa em uma frase. Ou "esta peça me dá algo que uma
+   mensuração única não dá, e eu consigo caracterizar o erro dela", ou "esta peça
+   acrescenta uma etapa que eu não consigo caracterizar, então estou cortando ela e
+   estreitando a minha alegação na mesma medida".
+5. Nomeie o erro sistemático do que sobrou, aquele que mais dados nunca vão reduzir, e
+   o que você teria que mudar no lugar: uma fonte diferente, um marco amostral mais
+   amplo, um instrumento melhor.
+6. Registre o passo no seu **AI Research Ledger** (registro de pesquisa com IA), e
+   verifique pelo menos uma saída com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd). A simulação é a checagem natural
+   para um desenho costurado: plante um viés conhecido em uma peça, rode a coisa
+   inteira muitas vezes e veja a variância encolher enquanto o viés fica exatamente
+   onde você o colocou. Um revisor de IA pode rodar a checagem com você; a decisão de
+   aceitar ou rejeitar continua sendo sua.

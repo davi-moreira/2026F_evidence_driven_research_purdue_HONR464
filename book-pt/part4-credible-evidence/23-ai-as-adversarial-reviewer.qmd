@@ -2,120 +2,126 @@
 title: "A IA como Revisora Adversária"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Quando uma revisora adversária lhe entrega uma lista de
-> defeitos na sua própria análise, você decide quais defeitos são reais rodando a
-> única conferência nos dados que confirma ou refuta cada um, em vez de agir com base
-> em quem soou mais convicto. Este capítulo prepara você para pré-comprometer as suas
-> verificações de robustez, verificar cada alerta contra os seus dados e defender a
-> única alegação delimitada que sobreviver.
-
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do tópico correspondente no curso; o laboratório no Colab está no link acima. Não há capítulo companheiro do RDSS (o manual *Research Design in the Social Sciences*) para este tópico; este capítulo se sustenta sozinho.
-:::
+> **A decisão de pesquisa.** Quando alguém que revisa lhe entrega uma lista de falhas na
+> sua própria análise, você decide **quais falhas são reais, e decide isso rodando a
+> verificação de dados que confirma ou refuta cada uma**, nunca indo com quem soou mais
+> seguro. Confiança não é evidência, e um painel de revisores confiantes não é três
+> evidências.
 
 ## Por que essa decisão importa
 
-Imagine a análise de uma proposta para implantar uma mudança de loja em toda a rede.
-Uma **gerência de operações** é quem assina embaixo para que a sua mudança chegue a
-todas as lojas, e é quem responde por ela quando as filas dos caixas contam outra
-história. Exemplo: quem aprovou o seu novo layout de autoatendimento é quem atende às
-reclamações quando as filas se acumulam no primeiro sábado movimentado. A preocupação
-dessa pessoa é direta.
+**A decisão em jogo: quais das falhas que uma revisão aponta são reais, resolvida por
+uma verificação que você roda e não pelo quanto quem revisou soou seguro.**
 
-> *"Não me diga que os números melhoraram. Me diga qual conferência você rodou que
-> teria pegado o problema caso eles não tivessem melhorado. Eu confio na conferência,
-> não no gráfico."*
+Imagine a análise de uma proposta de levar uma mudança de loja para toda a rede. Uma
+**gerente de operações** é a pessoa cuja assinatura permite que a sua mudança chegue a
+todas as lojas, e que responde por ela quando as filas do caixa contam outra história.
+Exemplo: a gerente que aprovou o seu novo layout de autoatendimento é quem atende as
+reclamações quando as filas engrossam no primeiro sábado cheio. A preocupação dela é
+direta.
 
-Uma medição confiante, uma crítica fluente de IA e uma tabela de aparência limpa podem
-todas estar erradas do mesmo jeito convincente. A gerência está pedindo aquilo que
-parece menos impressionante e mais importa: a conferência com a qual você se
-comprometeu antes de olhar, e o alerta que você de fato verificou contra os dados.
+> *"Não me diga que os números melhoraram. Me diga qual verificação você rodou que
+> teria pegado o problema se eles não tivessem melhorado. Eu confio na verificação, não
+> no gráfico."*
+
+Uma mensuração confiante, uma crítica fluente de IA e uma tabela de aparência limpa
+podem estar erradas do mesmo jeito convincente. A gerente está pedindo o que parece
+menos impressionante e mais importa: a verificação com a qual você se comprometeu antes
+de olhar, e o alerta que você de fato conferiu contra os dados.
 
 ## O conceito
 
-Uma **revisora adversária** é quem lê o seu trabalho com a tarefa de atacar o seu
-resultado e achar onde ele quebra, não de elogiá-lo. Exemplo: um colega que tenta
-mostrar que a melhoria que você mediu foi sorte, e não uma mudança real. Quem revisa
-pode ser um colega de turma, uma ferramenta de IA ou um painel de modelos, e cada um
-falha do seu próprio jeito.
+Uma **revisora adversária** é quem lê o seu resultado com a função de atacá-lo e achar
+onde ele quebra, não de elogiá-lo. Exemplo: uma colega que tenta mostrar que a melhora
+que você mensurou foi sorte, e não uma mudança real. Quem revisa pode ser uma pessoa,
+uma ferramenta de IA ou um painel de modelos, e cada um falha do seu próprio jeito.
 
 Você defende um resultado tentando quebrá-lo primeiro. Uma **verificação de robustez**
 repete o mesmo achado sob uma escolha diferente, mas igualmente defensável, e vê se a
-resposta se mantém. Exemplo: você mediu a melhoria em um horário do dia, então também
-a mede em dois outros blocos de horário realistas. Um **teste de placebo** roda o seu
-procedimento exato onde o efeito não pode existir e confirma que ele volta perto de
+resposta se mantém. Exemplo: você mensurou a melhora em um único horário do dia, então
+também a mensura em outras duas faixas de horário realistas. Um **teste placebo** roda o
+seu procedimento exato onde o efeito não pode existir e confirma que ele volta perto de
 zero. Exemplo: você compara dois trechos do layout *antigo* entre si, e qualquer
-"melhoria" entre eles é a sua medição mentindo.
+"melhora" entre eles é a sua mensuração mentindo.
 
 O hábito que mantém um ataque honesto é a ordem. **Busca por especificações** é tentar
 muitas versões de uma análise e relatar apenas aquela que deu a resposta que você
 queria, sem revelar a busca. O nome dela no dia a dia é **p-hacking**. Exemplo: você
-mede dez horários diferentes e mostra só o horário em que a sua mudança ganha. A cura é
+mensura dez horários diferentes e mostra só aquele em que a sua mudança vence. A cura é
 um conjunto de **verificações pré-listadas**, a lista completa do que você vai rodar,
-assumida antes de ver qualquer resultado. Exemplo: você anota três blocos de horário e
-um placebo, depois roda os quatro e relata cada número, inclusive os que não ajudaram.
+assumida antes de ver qualquer resultado. Exemplo: você anota três faixas de horário e
+um placebo, depois roda as quatro e relata todos os números, inclusive os que não
+ajudaram.
 
-Mais uma falha ganha nome porque revisores de IA a cometem sem parar. **Erro
-correlacionado** é quando duas pessoas revisoras erram do mesmo jeito, de modo que a
-concordância entre elas é um eco, não uma confirmação. Exemplo: dois modelos de IA
-compartilham um ponto cego e ambos sinalizam o mesmo não problema com igual confiança.
-Em tudo isso a regra cabe em uma frase: quem revisa propõe um defeito, e os dados
-decidem se ele é real. A confiança, humana ou de máquina, não diz nada sobre a
-existência do defeito.
+Mais uma falha ganha nome porque revisores de IA a cometem o tempo todo. **Erro
+correlacionado** é duas revisões erradas do mesmo jeito, de modo que a concordância
+entre elas é um eco, não uma confirmação. Exemplo: dois modelos de IA compartilham um
+ponto cego e ambos apontam o mesmo não problema com a mesma confiança.
+
+### Uma revisora agêntica continua sem ter voto
+
+Hoje você pode apontar uma ferramenta para a sua análise inteira e deixá-la rodar o
+próprio loop: ler o seu código, rodá-lo de novo, cutucar variantes e voltar com uma
+lista ordenada de problemas. Isso é um ganho real em relação a um prompt só, e ela vai
+achar erros reais que você deixou passar. E não muda nada sobre quem julga. Todo item
+daquela lista continua sendo uma proposta, e cada um continua precisando do mesmo
+tratamento: nomeie a verificação, rode a verificação, leia a sua própria saída. A lista
+é mais longa e mais bem organizada do que costumava ser, o que a torna mais tentadora
+de aceitar em bloco, então segure a linha com mais firmeza. Quem revisa propõe uma
+falha, e os dados decidem se ela é real. Confiança, humana ou de máquina, não lhe diz
+nada sobre a falha existir.
 
 ## Um exemplo trabalhado
 
-Sua loja instalou um novo layout de autoatendimento, e os seus dados dizem que a
-clientela passou pela fila mais rápido. Antes de defender isso, você ataca. Primeiro,
-um termo. **Tempo de espera p95** é o tempo dentro do qual 95 de cada 100 clientes
-conseguem passar, um resumo mais justo do que a média porque captura as esperas longas
-de que as pessoas de fato reclamam. Exemplo: um p95 de 210 segundos significa que
-apenas os 5 por cento mais lentos esperaram mais do que isso. Seu resultado principal é
-uma queda do p95 de 210 para 140 segundos.
+Sua loja instalou um novo layout de autoatendimento, e os seus dados dizem que as
+pessoas passaram mais rápido pela fila. Antes de defender isso, você ataca. Primeiro,
+um termo. O **tempo de espera p95** é a espera que 95 de cada 100 clientes conseguem
+não ultrapassar, um resumo mais justo que a média porque captura as esperas longas de
+que as pessoas de fato reclamam. Exemplo: um p95 de 210 segundos significa que só os 5
+por cento mais lentos esperaram mais que isso. Sua manchete é uma queda de p95 de 210
+segundos para 140.
 
-Você entrega o resultado a três revisores adversários, e cada um aponta um defeito
-fatal diferente. O primeiro diz que a vitória é puxada por uma única manhã
-excepcionalmente vazia. O segundo diz que você escolheu a dedo o único perfil de
-clientela em que o layout ajuda. O terceiro diz que você comparou uma semana com
-equipe completa contra uma semana com equipe reduzida, então o que você mediu foi a
-equipe, não o layout. Os três estão confiantes, e os três discordam.
+Você entrega o resultado a três revisões adversárias, e cada uma nomeia uma falha fatal
+diferente. A primeira diz que a vitória é puxada por uma única manhã excepcionalmente
+vazia. A segunda diz que você escolheu a dedo o único perfil de clientes em que o
+layout ajuda. A terceira diz que você comparou uma semana com equipe completa contra
+uma semana com falta de gente, então mensurou pessoal, não layout. As três estão
+confiantes, e as três discordam.
 
-Você não confia na voz mais alta. Você transforma cada defeito em uma conferência. O
-leave-one-out remove a manhã vazia e recalcula o p95: ele quase não se move, então o
-primeiro defeito está refutado. A sua grade pré-listada de especificações roda de novo
-a queda em três perfis de clientela, e ela se mantém nos três, então o segundo também
-está refutado. O placebo compara dois trechos do layout antigo entre si. Uma melhoria
-entre dois trechos idênticos daria razão ao terceiro revisor, mas ela volta perto de
-zero, então a maquinaria está limpa.
+Você não confia na voz mais alta. Você transforma cada falha em uma verificação.
+Deixar de fora a manhã vazia e recalcular o p95: ele quase não se move, então a
+primeira falha está refutada. Sua grade pré-listada de especificações roda a queda de
+novo em três perfis de clientes, e ela se mantém nos três, então a segunda também está
+refutada. O placebo compara dois trechos do layout antigo entre si. Uma melhora entre
+dois trechos idênticos provaria que a terceira revisão estava certa, mas ela volta
+perto de zero, então a maquinaria está limpa.
 
-Os dois alertas mais barulhentos se dissolveram no instante em que uma conferência
-encostou neles. O defeito que sobrevive é um que nenhuma medição adicional consegue
-remover e que nenhum dos três levantou: isso rodou em uma loja, em dias de semana, não
-na rede inteira. Então a alegação honesta é delimitada. Você mediu uma melhoria de p95
-para estes três perfis de clientela nesta loja, não uma garantia para todas as
-unidades que a sua empresa opera.
+Os dois alertas mais barulhentos se dissolveram no instante em que uma verificação os
+tocou. A falha que sobrevive é uma que nenhuma mensuração adicional remove e que
+nenhuma das três levantou: isso rodou em uma loja, em dias de semana, não na rede
+inteira. Então a alegação honesta é limitada. Você mensurou uma melhora de p95 para
+estes três perfis de clientes nesta loja, não uma garantia para todas as unidades que a
+sua empresa opera.
 
 ## O laboratório no Colab
 
 O laboratório deste capítulo é o notebook **nb10, Share the Research and Attack the
-Analysis** (compartilhe a pesquisa e ataque a análise). Abra-o no Colab pelo selo acima
-e trabalhe as células junto com este capítulo. Você roda de novo uma estimativa ao
-longo de uma grade pré-listada de oito especificações, vê a busca por especificações
-fabricar um resultado significante a partir de puro ruído, roda um placebo e uma
-verificação de influência leave-one-out, e depois entrega a sua análise a uma pessoa, a
-uma IA e a um painel de modelos de IA, julgando cada alerta que levantarem contra os
-dados.
+Analysis**. Abra no Colab pelo selo acima e trabalhe as células junto com este
+capítulo. Você roda de novo uma estimativa ao longo de uma grade pré-listada de oito
+especificações, vê a busca por especificações fabricar um resultado significativo a
+partir de puro ruído, roda um placebo e uma verificação de influência deixando um caso
+de fora, e depois entrega a sua análise a uma pessoa, a uma IA e a um painel de modelos
+de IA e julga cada alerta que eles levantam contra os dados.
 
 ## Prompts de IA recomendados
 
-Comprometa-se primeiro com a sua própria leitura do resultado, depois deixe alguém
-atacá-lo. Cada prompt abaixo entrega uma tarefa que você consegue conferir, com uma
-nota de verificação que nomeia a falha da qual ele defende.
+Comprometa-se com a sua própria leitura do resultado primeiro, e só então deixe alguém
+atacá-lo. Cada prompt abaixo entrega uma tarefa que você pode conferir, com uma nota de
+verificação nomeando a falha da qual ele defende.
 
-**Faça red team (revisão adversária) no resultado (a conferência que ele nomear é você
-que roda).**
+**Faça o red team do resultado (a verificação que ele nomear, quem roda é você).**
 
 ```text
 Act as a hostile operations reviewer, not a cheerleader. Here is a one-paragraph
@@ -125,12 +131,12 @@ that would confirm or refute it. Do not rewrite my study and do not list more th
 one flaw.
 ```
 
-Depois de rodar, verifique (contra-ataca a *concordância bajuladora*): se a ferramenta
-chamar a sua montagem de "sólida" ou oferecer apenas elogios leves, insista e peça o
-pior problema supondo que o resultado seja falso. Um defeito só é real depois que você
-roda a medição nomeada e os seus próprios números confirmam.
+Depois de rodar, verifique (contra-ataca a *concordância bajuladora*): se ela chamar o
+seu desenho de "sólido" ou oferecer só elogios amenos, insista e peça o pior problema
+supondo que o resultado seja falso. Uma falha só é real depois que você roda a
+mensuração nomeada e os seus próprios números confirmam.
 
-**Liste as especificações que você deixou de fora (a lista quem audita é você).**
+**Liste as especificações que ficaram de fora (a lista, quem audita é você).**
 
 ```text
 Here is my pre-listed robustness grid for one wait-time result: I vary the customer
@@ -140,9 +146,8 @@ result, and for each say which direction you expect it to push.
 ```
 
 Depois de rodar, verifique (contra-ataca a *ilusão de completude*): uma grade longa e
-arrumadinha ainda pode omitir justo a configuração que quebra a alegação. Acrescente e
-rode de novo as sugestões que você consegue operacionalizar de fato, e descarte o
-resto.
+arrumadinha ainda pode omitir a única configuração que quebra a alegação. Acrescente e
+rode de novo as sugestões que você consegue de fato operacionalizar, e descarte o resto.
 
 **Reduza os alertas do painel (o veredito continua sendo seu).**
 
@@ -153,75 +158,59 @@ Then tell me which two of the three are most likely the same underlying concern 
 different words, and which one is genuinely separate.
 ```
 
-Depois de rodar, verifique (contra-ataca os *erros correlacionados*): três pessoas
-revisoras ecoando um mesmo ponto cego podem parecer três confirmações. Rode cada
-conferência contra a sua própria saída antes de acreditar em qualquer alerta, e trate a
-concordância unânime como uma candidata a ser conferida, nunca como a conferência em
-si.
+Depois de rodar, verifique (contra-ataca os *erros correlacionados*): três revisões
+ecoando um mesmo ponto cego podem parecer três confirmações. Rode cada verificação
+contra a sua própria saída antes de acreditar em qualquer alerta, e trate a
+unanimidade como um candidato a conferir, nunca como a conferência em si.
 
 ::: {.callout-important title="Não delegue"}
-Estas continuam sendo suas, por mais fluente que quem revisa soe. Quais verificações de
-robustez você assume antes de olhar, porque uma verificação escolhida depois de ver o
-resultado não é uma verificação, é uma busca. Quais defeitos sinalizados os seus dados
-de fato confirmam, decisão tomada pela medição e não pela confiança. Se um defeito é um
-problema de limite da alegação, que nenhuma medição adicional conserta e só uma
-alegação mais estreita resolve. E o único resultado delimitado que você vai defender,
-com a sua incerteza declarada. Quem revisa propõe;
-você verifica, e a evidência decide.
+Estas coisas continuam sendo suas, por mais fluente que quem revisa soe. Quais
+verificações de robustez você assume antes de olhar, porque uma verificação escolhida
+depois de ver o resultado não é verificação, é busca. Quais falhas apontadas os seus
+dados de fato confirmam, decidido pela mensuração e não pela confiança. Se uma falha é
+um problema de limite da alegação que nenhuma mensuração adicional conserta e que só
+uma alegação mais estreita resolve. E o único resultado limitado que você vai defender,
+com a sua incerteza declarada. Quem revisa propõe; você verifica, e a evidência decide.
 :::
 
 ## Um caso de falha da IA
 
-Você cola o resumo do seu estudo de tempo de espera em uma revisora de IA, e ela
-responde com certeza total: a sua melhoria é um artefato de uma única manhã
-excepcionalmente vazia, remova essa manhã e ela some. A afirmação é específica,
-mecanicista e feita sem nenhuma ressalva. Ela se lê exatamente como alguém que já viu
-esse erro cem vezes.
+Você cola o resumo do seu estudo de tempo de espera em uma IA revisora, e ela responde
+com total certeza: a sua melhora é artefato de uma única manhã excepcionalmente vazia,
+tire aquela manhã e ela desaparece. A afirmação é específica, mecanicista e enunciada
+sem nenhuma ressalva. Ela soa exatamente como alguém que já viu esse erro cem vezes.
 
-Veja como você pega o problema. Você não age com base no veredito. Você roda o
-leave-one-out por conta própria, removendo a manhã vazia e recalculando o p95. A melhoria quase não se
-move. O defeito confiante era fabricado, um mecanismo de som realista parafusado a um
+Aqui está como você pega isso. Você não age sobre o veredito. Você mesmo roda a
+verificação deixando aquela manhã de fora e recalcula o p95. A melhora quase não se
+move. A falha confiante foi fabricada, um mecanismo com som de real parafusado em um
 problema que os seus dados não têm. Confie na certeza e você joga fora um resultado
-genuíno por causa de um palpite. Apontar a conferência para os seus próprios números
-foi a única coisa que resolveu a questão.
+genuíno por causa de um palpite. Apontar a verificação para os seus próprios números
+foi a única coisa que resolveu.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, a pesquisadora ou o pesquisador.
-:::
+*Seu projeto tem uma estimativa, um intervalo em volta dela e um teste negativo por
+trás. Este passo entrega o conjunto inteiro a quem tem a única função de quebrá-lo, e
+faz de você quem decide o que quebrou.*
 
-O resultado central do capítulo é que a confiança nunca certifica a verdade: um número
-vencedor pode ser fabricado por busca, e um alerta confiante pode ser pura invenção.
-Confirme isso por conta própria com **simulação** (do
-[guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)). Compare dois
-trechos do mesmo layout inalterado entre si, de modo que a diferença verdadeira seja
-zero por construção, depois fatie as visitas por hora e deixe um buscador relatar a
-fatia de melhor aparência. Veja uma "melhoria" surgir do nada. Para o número
-específico, acrescente **código alternativo**: recalcule o mesmo p95 de um segundo
-jeito, ordenando os tempos de espera brutos e lendo diretamente o índice do
-percentil 95, e confirme que os dois caminhos dão uma resposta só.
-
-## Transferência para o seu projeto
-
-Este capítulo alimenta a sua **etapa de pôster preliminar e auditoria de pesquisa**,
-apresentada no estúdio de sexta-feira. Uma **auditoria de pesquisa** é o registro
-avaliado de quanto você tentou quebrar a sua própria alegação e do que sobreviveu. Três
-movimentos passam para cá. Pré-liste as três verificações de robustez ou de placebo com
-as quais você se compromete para a sua própria estimativa, cada uma amarrada ao ataque
-de revisão que ela responde. Construa uma trilha verificada de revisão por IA: cada
-defeito levantado por uma pessoa ou por um painel de modelos, marcado como confirmado
-ou refutado por uma conferência nos dados, mais o alerta errado mais confiante que você
-pegou. Depois enuncie a única limitação que nenhuma conferência conseguiu consertar.
-Escreva de um jeito que quem nunca viu o seu projeto consiga perceber o quanto você
-pressionou o seu próprio número.
-
-## Defenda sua decisão
-
-Em um parágrafo curto, enuncie a única alegação delimitada que a sua análise sustenta
-depois de você tê-la atacado. Nomeie a conferência que você pré-listou, o alerta que
-você verificou contra os dados e se você aceitou, mudou ou rejeitou o que quem revisou
-devolveu. Depois nomeie o seu limite e a sua incerteza. Qual alerta de revisão os dados
-refutaram, e onde a sua alegação é um problema de limite que nenhuma conferência
-adicional resgata? Um resultado que você não tentou quebrar, e um defeito que você
-aceitou sem uma conferência, estão ambos sem defesa.
+1. Escreva um resumo de um parágrafo do seu desenho de pesquisa, da sua alegação
+   principal e das verificações que você já rodou. Quem revisa sem saber o que você fez
+   vai inventar falhas que você descartou semana passada.
+2. Encomende a revisão: peça a falha mais séria, uma só, e a mensuração exata que a
+   confirmaria ou refutaria. Faça isso pelo menos duas vezes, com enquadramentos ou
+   ferramentas diferentes, e trate duas respostas coincidentes como um candidato a
+   conferir, não como duas confirmações.
+3. Pegue os três pontos mais difíceis que você recebeu. Para cada um, escreva em uma
+   única linha a verificação de dados que o resolveria.
+4. Rode as três verificações contra os seus próprios dados. Marque cada alerta como
+   confirmado ou refutado pela sua própria saída, nunca pelo quanto quem revisou soou
+   seguro. Guarde o alerta errado mais confiante que você pegou; ele lhe diz algo sobre
+   a ferramenta que você vai usar de novo amanhã.
+5. Encontre a falha que nenhuma verificação conserta, aquela que é um problema de limite
+   e não de mensuração, e estreite a sua alegação até que a alegação seja verdadeira.
+6. Registre a revisão e cada alerta julgado no seu **AI Research Ledger** (registro de
+   pesquisa com IA), e verifique pelo menos uma saída com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd). O **raciocínio revisado por pares**
+   pertence a este momento: leve a sua alegação estreitada a uma pessoa e veja se ela
+   sobrevive à primeira pergunta. Uma IA revisora pode rodar a checagem com você; a
+   decisão de aceitar ou rejeitar continua sendo sua.

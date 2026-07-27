@@ -2,103 +2,109 @@
 title: "Diagnósticos e Testes Negativos"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Antes de acreditar em um resultado, decida qual teste
-> negativo você vai rodar, ou seja, uma verificação apontada para um lugar onde a
-> resposta tem de ser zero, e leia o que o desfecho dele licencia e o que não
-> licencia. Você escolhe o teste, confirma que ele é genuinamente nulo e defende
-> apenas o que uma passagem limpa de fato lhe garante.
-
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do tópico correspondente no curso; o laboratório no Colab está no link acima. Não há capítulo companheiro do RDSS (o manual *Research Design in the Social Sciences*) para este tópico; este capítulo se sustenta sozinho.
-:::
+> **A decisão de pesquisa.** Você decide **de qual teste negativo o seu desenho de
+> pesquisa realmente precisa**, uma verificação apontada para um lugar onde a resposta
+> tem de ser zero, e decide o que uma passagem limpa autoriza e não autoriza você a
+> dizer. Escolher o teste é a pesquisa. Rodá-lo é a parte fácil.
 
 ## Por que essa decisão importa
 
-> *"Antes de me dizer que o extrato funciona, me mostre a placa sem extrato nenhum.
-> Se o disco em branco também limpou as bactérias, você não descobriu um remédio.
-> Você descobriu que o seu solvente é tóxico."*
-> — uma **orientadora de laboratório de microbiologia**, sobre a primeira placa que
-> ela pede para ver
+**A decisão em jogo: qual verificação apontada para um zero garantido você roda, e o
+que passar nela lhe rende.**
+
+> *"Antes de me dizer que o extrato funciona, me mostre a placa sem extrato nenhum. Se
+> o disco em branco também limpou as bactérias, você não descobriu um medicamento. Você
+> descobriu que o seu solvente é tóxico."*
+> — uma **orientadora de laboratório de microbiologia**, sobre a primeira placa que ela
+> pede para ver
 
 Um resultado impressionante é a coisa mais fácil do mundo de se produzir por acidente.
 O seu procedimento tem muitas peças móveis: como você manuseou as amostras, como
-mediu, como codificou os grupos. Qualquer uma delas pode fabricar um sinal que não tem
-nada a ver com aquilo que você se propôs a estudar. Um teste negativo é como você
-descobre se quem produziu o seu resultado foi o mundo ou o seu próprio procedimento.
-Pule esse passo e você pode passar um semestre defendendo um artefato.
+mensurou, como codificou os grupos. Qualquer uma delas pode fabricar um sinal que não
+tem nada a ver com aquilo que você se propôs a estudar. Um teste negativo é como você
+descobre se foi o mundo que produziu o seu resultado ou se foi o seu próprio pipeline.
+Pule esse teste e você pode passar meses defendendo um artefato.
 
 ## O conceito
 
-Um **teste negativo** é uma verificação que roda a sua análise exata sobre uma
-situação em que a resposta verdadeira tem de ser zero, de modo que qualquer sinal que
-ela devolva vem do seu procedimento, não do fenômeno. Exemplo: medir o seu "efeito"
-em um grupo que não recebeu tratamento nenhum. Como a resposta honesta ali é zero, uma
-leitura diferente de zero expõe um defeito na sua maquinaria. Três membros dessa
-família aparecem em quase toda auditoria.
+Um **teste negativo** é uma verificação que roda a sua análise exata em uma situação em
+que a resposta verdadeira tem de ser zero, de modo que qualquer sinal que ela devolva
+vem do seu procedimento, não do fenômeno. Exemplo: mensurar o seu "efeito" em um grupo
+que não recebeu tratamento nenhum. Como a resposta honesta ali é zero, uma leitura
+diferente de zero expõe uma falha na sua maquinaria. Três membros dessa família
+aparecem em quase toda auditoria.
 
-- **Teste de placebo**: você troca a causa real por uma falsa, que não pode agir, e
+- **Teste placebo**: você substitui a causa real por uma falsa, que não pode agir, e
   confirma que o efeito desaparece. Exemplo: troque os rótulos reais de tratamento e
-  controle por um cara ou coroa e confira se a estimativa desaba em direção a zero.
+  controle por um cara ou coroa e confira se a estimativa desaba na direção do zero.
 - **Teste de falsificação**: você confere uma consequência que precisa ser falsa se a
   sua explicação estiver certa, e confirma que ela é falsa. Exemplo: o seu composto só
-  pode agir depois que você o adiciona, então uma leitura feita *antes* da adição
-  deveria não mostrar nada.
-- **Controle negativo**: você aponta a mesma maquinaria para um desfecho que a sua
+  pode agir depois de você adicioná-lo, então uma leitura feita *antes* de adicioná-lo
+  não deveria mostrar nada.
+- **Controle negativo**: você aponta a mesma maquinaria para um resultado que a sua
   causa não teria como tocar. Exemplo: um antibiótico não deveria mudar o diâmetro da
   placa de ágar, então uma leitura de "placa encolhendo" significaria que quem está
-  falando é a mensuração, não o remédio.
+  falando é a mensuração, não o medicamento.
 
 Um termo merece linha própria. Um **controle de veículo** é o controle negativo
-pareado com o modo como você entregou a causa: o carreador sem o ingrediente ativo.
-Exemplo: se você dissolveu o seu extrato em etanol, o controle de veículo é um disco
-embebido só em etanol. O que cada um desses testes caça é um **artefato**, um sinal
-produzido pelo seu procedimento e não pela coisa que você estuda. Exemplo: um anel
-transparente causado pelo solvente, não pelo extrato.
+combinado com o modo como você entregou a causa: o veículo com o ingrediente ativo
+deixado de fora. Exemplo: se você dissolveu o seu extrato em etanol, o controle de
+veículo é um disco embebido apenas em etanol. O que cada um desses testes caça é um
+**artefato**, um sinal produzido pelo seu procedimento em vez de pela coisa que você
+estuda. Exemplo: um anel transparente causado pelo solvente, não pelo extrato.
 
-Todos compartilham um mesmo movimento: apontar a maquinaria para onde a resposta tem de
-ser zero, e garantir que ela diga zero. Aqui está o limite que você nunca pode borrar.
-Um teste negativo aprovado descarta **um artefato específico**. Ele não prova que o
-seu efeito é real, e nunca transforma uma correlação em causa.
+Ao lado deles fica o diagnóstico mais barato da pesquisa, a **verificação deixando um
+caso de fora**: remova cada caso por vez, recalcule e veja se uma única observação
+está carregando em silêncio o seu achado inteiro. Ela responde a uma pergunta diferente
+da de um teste negativo. O teste negativo pergunta se o seu procedimento inventa sinal.
+Deixar um caso de fora pergunta se o seu resultado se apoia em um único ponto.
+
+Os testes negativos compartilham um mesmo movimento: apontar a maquinaria para onde a
+resposta tem de ser zero e garantir que ela diga zero. Aqui está o limite que você
+nunca pode borrar. Um teste negativo aprovado descarta **um artefato específico**. Ele
+não prova que o seu efeito é real, e nunca transforma uma correlação em causa.
 
 ## Um exemplo trabalhado
 
-Você está testando se o extrato de uma planta medicinal mata uma bactéria comum. Você
-embebe um pequeno disco de papel no extrato, o deposita sobre um tapete de bactérias
-crescendo em uma placa de ágar, incuba durante a noite e, na manhã seguinte, mede o
-**halo de inibição**, o anel transparente onde as bactérias não cresceram ao redor do
+Você testa se o extrato de uma planta medicinal mata uma bactéria comum. Você embebe um
+pequeno disco de papel no extrato, o deposita sobre um tapete de bactérias crescendo em
+uma placa de ágar, incuba durante a noite e, na manhã seguinte, mede o **halo de
+inibição**, o anel transparente onde as bactérias não conseguiram crescer em volta do
 disco. Um anel largo parece um efeito antibacteriano real, e é tentador anotar isso.
 
 Antes de anotar, você roda o teste negativo. Você dissolveu o extrato em etanol 70%,
-então o seu controle de veículo é um disco embebido só em etanol 70%, colocado sobre
-uma placa idêntica e tratado exatamente do mesmo jeito. Se esse disco deixar um tapete
-intacto, sem inibição, o teste passou: o etanol sozinho não fez nada, então o anel em
-volta do disco de extrato não é um artefato do solvente, e o seu efeito sobrevive a uma
-preocupação específica. Se o disco de veículo criar o seu próprio anel transparente, o
-teste falhou. O etanol está matando as bactérias, e você não tem mais como saber quanto
+então o seu controle de veículo é um disco embebido apenas em etanol 70%, colocado em
+uma placa idêntica e tratado exatamente do mesmo jeito. Se esse disco deixar o tapete
+inteiro, sem inibição, o teste passou: o etanol sozinho não fez nada, então o anel em
+volta do disco com extrato não é um artefato do solvente, e o seu efeito sobrevive a
+uma preocupação específica. Se o disco de veículo criar o próprio anel transparente, o
+teste falhou. O etanol está matando as bactérias, e você já não consegue dizer quanto
 do anel do extrato é extrato e quanto é solvente. O achado é um artefato até você
 refazê-lo em uma concentração menor.
 
-Repare no que uma passagem limpa ainda assim não compra. Ela não diz que o extrato
-funciona dentro de um animal vivo, nem qual molécula é responsável. Ela descartou um
-artefato e nada mais, e essa modéstia é justamente o ponto.
+Repare no que uma passagem limpa ainda assim não lhe compra. Ela não diz que o extrato
+funciona dentro de um animal vivo, nem qual molécula é a responsável. Ela descartou um
+artefato e nada mais, e essa modéstia é o ponto.
 
 ## O laboratório no Colab
 
 O laboratório deste capítulo é o notebook **nb10 — Share the research + attack the
-analysis** (compartilhe a pesquisa e ataque a análise). Abra-o no Colab pelo selo
-acima e trabalhe as células junto com este capítulo. Lá você roda um teste de placebo
-sobre uma estimativa real de survey: você joga fora o agrupamento verdadeiro,
-substitui por um rótulo de cara ou coroa 500 vezes e vê as diferenças falsas se
-juntarem bem em torno de zero enquanto o resultado real fica bem fora dessa nuvem.
-Depois uma verificação leave-one-out (deixando um caso de fora por vez) mostra se um
-único ponto de dados está carregando o achado inteiro em silêncio.
+analysis**. Abra no Colab pelo selo acima e trabalhe as células junto com este
+capítulo. Lá você roda um teste placebo sobre uma estimativa real de survey: você joga
+fora o agrupamento verdadeiro, o substitui por um rótulo de cara ou coroa 500 vezes e
+vê as diferenças falsas se aglomerarem bem juntinho no zero, enquanto o resultado real
+fica bem longe dessa nuvem. Depois uma verificação deixando um caso de fora mostra se
+um único ponto de dados está carregando em silêncio o achado inteiro.
 
 ## Prompts de IA recomendados
 
-Comprometa-se primeiro com a sua própria expectativa, depois delegue uma tarefa
-conferível. Nunca deixe a ferramenta decidir se o seu controle é válido.
+Comprometa-se com a sua própria expectativa primeiro, depois delegue uma tarefa
+conferível. Espere trabalhar em ciclos: propor, interrogar, refinar, perguntar de novo.
+Um julgamento, porém, nunca melhora com um novo prompt: se o seu controle é
+genuinamente nulo. Isso você resolve uma vez só, a partir do mecanismo, e nenhuma
+quantidade de voltas resolve por você.
 
 **Localize o controle padrão.**
 
@@ -112,7 +118,7 @@ Depois de rodar, verifique: abra o protocolo citado e confirme que o controle é
 padrão antes de usá-lo. Contra-ataca a *fabricação confiante* (um controle "padrão"
 inventado chega com a mesma confiança de um real).
 
-**Liste candidatos a teste negativo e depois verifique cada um.**
+**Liste testes negativos candidatos e depois verifique cada um.**
 
 ```text
 Here is my analysis: [one-sentence design, your cause, your outcome]. Propose three
@@ -121,11 +127,11 @@ cannot yet exist, and a negative-control outcome my cause could not plausibly af
 For each, state the exact zero I should expect and what a non-zero result would mean.
 ```
 Depois de rodar, verifique: para cada teste, confirme que a sua causa genuinamente
-*não pode* tocar o controle negativo. Um controle que a sua causa consegue afetar não
-é nulo, e ele falha em silêncio. Contra-ataca o *método plausível mas errado* (um
-"controle negativo" que na verdade não é zero).
+*não pode* tocar o controle negativo. Um controle que a sua causa consegue afetar não é
+nulo, e ele falha em silêncio. Contra-ataca o *método plausível mas errado* (um
+"controle negativo" que não é de fato zero).
 
-**Faça red team (revisão adversária) em uma passagem limpa.**
+**Faça o red team de uma passagem limpa.**
 
 ```text
 Here is a negative test I ran and its result: [describe the control and its
@@ -133,71 +139,63 @@ near-zero outcome]. Act as a hostile reviewer. Name every reason this test could
 read as zero for the WRONG reason: too few samples to detect anything, a control too
 weak to carry the artifact, a zero I would have gotten no matter what. Do not reassure me.
 ```
-Depois de rodar, verifique: se a ferramenta apenas elogiar o resultado limpo, insista e
-exija a única maneira pela qual o teste é pouco informativo. Contra-ataca a
-*concordância bajuladora* (elogio que revisa o seu alívio, não a sua evidência).
+Depois de rodar, verifique: se ela apenas elogiar o resultado limpo, insista e exija a
+única maneira pela qual o teste é não informativo. Contra-ataca a *concordância
+bajuladora* (elogio que revisa o seu alívio, não a sua evidência).
 
 ::: {.callout-important title="Não delegue"}
-Você decide **de qual teste negativo o seu desenho de pesquisa realmente precisa**,
-**se o controle é genuinamente nulo** (um lugar que a sua causa de fato não alcança) e
-**o que uma passagem limpa lhe licencia afirmar**. Uma ferramenta pode listar
-candidatos a controle, mas só você conhece o mecanismo bem o bastante para certificar
-que a sua causa não toca aquele que você escolheu. O julgamento de que um teste
-negativo aprovado descarta um artefato *sem* provar que o seu efeito é real continua
-sendo seu.
+Você decide **de qual teste negativo o seu desenho de pesquisa realmente precisa**, **se
+o controle é genuinamente nulo** (um lugar que a sua causa de fato não alcança) e **o
+que uma passagem limpa autoriza você a alegar**. Uma ferramenta pode listar controles
+candidatos, mas só você conhece o mecanismo bem o bastante para atestar que a sua causa
+não toca o que você escolheu. O julgamento de que um teste negativo aprovado descarta um
+artefato *sem* provar que o seu efeito é real continua sendo seu.
 :::
 
 ## Um caso de falha da IA
 
-Você pede a uma IA que desenhe um controle negativo para o seu ensaio à base de
-etanol. Ela responde, com toda a confiança: "use um disco embebido em água estéril".
-Você roda, o disco de água volta perfeitamente limpo e a conclusão arrumadinha se
-escreve sozinha: controle aprovado, efeito confirmado. Aqui está a armadilha. A água
-não é o veículo que você usou. Você entregou o extrato em etanol, então o artefato que
-você precisava descartar era a toxicidade do etanol, e um disco de água nunca poderia
-mostrá-la. O resultado limpo não descartou absolutamente nada.
+Você pede a uma IA que desenhe um controle negativo para o seu ensaio com etanol. Ela
+responde, com total confiança, "use um disco embebido em água estéril". Você roda, o
+disco de água volta perfeitamente limpo, e a conclusão arrumadinha se escreve sozinha:
+controle aprovado, efeito confirmado. Aqui está a armadilha. Água não é o veículo que
+você usou. Você entregou o extrato em etanol, então o artefato que precisava descartar
+era a toxicidade do etanol, e um disco de água nunca conseguiria mostrá-la. O resultado
+limpo não descartou absolutamente nada.
 
-Você pega o problema com uma pergunta que a ferramenta nunca fez a si mesma: *qual
-artefato este controle realmente descarta?* Um controle de veículo válido combina com o
-modo como você entregou a causa, solvente por solvente. No instante em que você enxerga
-o descompasso, troca a água por etanol 70% e roda o teste que pode genuinamente
-falhar. Isso é um *método plausível mas errado*: o conselho soava como prática de
-manual e estava errado para o seu caso.
+Você pega isso com uma pergunta que a ferramenta nunca fez a si mesma: *qual artefato
+este controle de fato descarta?* Um controle de veículo válido combina com o modo como
+você entregou a causa, solvente por solvente. No instante em que você vê o
+descompasso, troca a água por etanol 70% e roda o teste que pode genuinamente falhar.
+Isso é um *método plausível mas errado*: o conselho soava como prática de livro-texto e
+estava errado para o seu caso.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, a pesquisadora ou o pesquisador.
-:::
+*Seu projeto tem uma estimativa principal com um intervalo em volta. Este passo aponta
+duas verificações para lugares onde a resposta tem de ser zero, para você descobrir se
+foi o mundo que produziu o seu resultado ou o seu próprio pipeline.*
 
-Verifique o resultado central deste capítulo, o de que um teste negativo genuíno
-devolve zero, com **simulação**, do
-[guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
-Construa na mão um conjunto de dados em que nenhum efeito existe: atribua um rótulo
-falso por cara ou coroa e gere um desfecho que o ignore por completo. Rode nele a sua
-maquinaria de teste negativo. Se o procedimento estiver sólido, a estimativa volta
-perto de zero, de novo e de novo, ao longo de muitos rótulos aleatórios. Se ela
-devolver um sinal em dados que você construiu para não ter nenhum, quem está quebrado é
-o teste, não o mundo. Um teste negativo que você confirmou devolver zero em dados
-sabidamente nulos é um teste em que você pode confiar quando ele devolver zero nos seus
-dados reais.
-
-## Transferência para o seu projeto
-
-Este capítulo acrescenta uma verificação pré-listada à sua **etapa de auditoria de
-pesquisa**, o registro avaliado de quanto você tentou quebrar a sua própria alegação.
-Antes de olhar o seu resultado, escreva um teste negativo que o seu desenho de pesquisa
-exige, nomeie o zero exato que você espera e comprometa-se a relatá-lo qualquer que
-seja o desfecho. Rode-o, registre o que você obteve contra o que tinha previsto e, se a
-estimativa se moveu, diga em quanto. Essa linha, o teste negativo que você escolheu
-mais o zero que você esperava mais o resultado, é uma das mais fortes que você pode
-apresentar a uma pessoa cética no estúdio de sexta-feira.
-
-## Defenda sua decisão
-
-Em quatro frases, defenda o teste negativo que você escolheu para o seu próprio
-resultado. Nomeie o teste e o zero exato que você esperava antes de rodá-lo. Diga o que
-uma passagem limpa lhe licencia afirmar, e o seu limite: o artefato que ela descarta, e
-a alegação causal ou geral que ela *não* estabelece. Encerre com a sua incerteza: se o
-teste tinha poder suficiente para ter pego o artefato caso ele estivesse mesmo lá, e a
-próxima verificação que você faria.
+1. Nomeie o artefato que mais lhe assusta: a maneira pela qual o seu procedimento, e não
+   o seu objeto de estudo, poderia ter fabricado o seu resultado. Uma frase, escrita
+   antes de você sair procurando.
+2. Escolha o teste negativo capaz de pegá-lo, seja um rótulo placebo, um resultado de
+   falsificação mensurado onde o efeito ainda não pode existir, ou um controle negativo
+   que a sua causa não teria como tocar. Depois confirme que o controle é genuinamente
+   nulo. Se a sua causa alcança esse controle, não é um teste negativo e ele vai falhar
+   em silêncio.
+3. Escreva o zero exato que você espera antes de rodar qualquer coisa, e comprometa-se
+   a relatar o resultado dê no que der.
+4. Rode um diagnóstico ao lado dele. Deixar um caso de fora é o mais barato: remova cada
+   caso por vez, recalcule e descubra se uma única observação está carregando o seu
+   achado.
+5. Registre o que você obteve contra o que previu e, se a estimativa se moveu, diga em
+   quanto. Depois escreva o seu limite em uma linha: o artefato que essa passagem
+   descarta, e a alegação causal ou geral que ela ainda assim não estabelece.
+6. Registre os dois testes no seu **AI Research Ledger** (registro de pesquisa com IA),
+   e verifique pelo menos uma saída com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd). A **simulação** é a ferramenta
+   certa para um teste negativo: construa na mão um conjunto de dados em que nenhum
+   efeito existe, rode nele a sua maquinaria de teste e confirme que ela devolve zero em
+   dados sabidamente nulos antes de confiar no zero que ela devolveu nos seus. Uma IA
+   revisora pode rodar a checagem com você; a decisão de aceitar ou rejeitar continua
+   sendo sua.

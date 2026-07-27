@@ -2,7 +2,7 @@
 title: "Do Pôster à Nota de Pesquisa"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Ao transformar o seu pôster em uma nota de pesquisa
 > escrita, decida qual achado conquistou o lugar de destaque e exatamente qual é o
@@ -10,11 +10,10 @@ title: "Do Pôster à Nota de Pesquisa"
 > que uma pessoa desconhecida consiga rodá-la de novo e chegar ao seu número sem você
 > na sala.
 
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do tópico correspondente do curso; o laboratório no Colab está no link acima. Não há capítulo companheiro no RDSS (*Research Design in the Social Sciences*) para este tópico; este capítulo se sustenta sozinho.
-:::
+## Por que essa decisão importa
 
-## Por que esta decisão importa
+**A decisão em jogo: qual achado abre a sua nota escrita, e qual é o tamanho permitido
+de cada alegação quando a sua voz não está mais na sala.**
 
 > *"Me mostre os seus resultados na ordem em que você confia neles. Se o seu número
 > mais chamativo vem de uma rodada de sorte e é ele que abre o artigo, eu já sei como
@@ -69,7 +68,8 @@ outra metade é uma **cápsula de reprodutibilidade**, tudo o que uma pessoa des
 precisa para reconstruir o seu número e nada que ela tenha de adivinhar: um notebook
 que passa no **restart-and-run-all** (limpar tudo, rodar cada célula de cima a baixo, e
 o número principal volta), versões fixadas dos dados e das ferramentas, uma semente
-fixa, um registro de decisões e o seu **AI Research Ledger** (registro de uso de IA).
+fixa, um registro de decisões e o seu **AI Research Ledger** (registro de pesquisa com
+IA).
 
 ## Um exemplo trabalhado
 
@@ -108,8 +108,12 @@ reprodutibilidade quebra.
 
 ## Prompts de IA recomendados
 
-Comprometa-se primeiro com a sua própria resposta, depois delegue. Cada prompt é uma
-tarefa verificável, não um pedido de veredito.
+Comprometa-se primeiro com a sua própria resposta, depois delegue. Escrever com uma
+ferramenta de IA é um loop, não um pedido único: você manda o prompt, lê a saída,
+contesta a parte que está errada e roda de novo. Mantenha o loop apontado para o seu
+próprio texto. No instante em que ele começa a produzir frases que você não pensou e
+não consegue checar, você deixou de editar e passou a ser editado. Cada prompt abaixo é
+uma tarefa verificável, não um pedido de veredito.
 
 **Localize fontes reais para a lacuna.**
 
@@ -179,38 +183,29 @@ média, e não de um sábado real de movimento, então a alegação geral não �
 Você fica com as edições que esclarecem e rejeita a que inflou. Prosa fluente não é
 evidência. Você verifica a alegação, não o polimento.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA para checar a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, que faz a pesquisa.
-:::
+*O seu projeto já tem um pôster ou um resumo de uma figura só e uma pasta que outra
+pessoa conseguiria rodar; este passo transforma esse resumo em uma prosa que se
+sustenta sozinha na página.*
 
-Verifique o resultado central deste capítulo, o ganho de rapidez em destaque, com
-**código alternativo** do
-[guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-recalcule a queda do tempo mediano de espera por um segundo caminho, a partir dos
-tempos de espera simulados brutos em vez da tabela resumida, e confirme que o número e
-o intervalo dele batem. Depois verifique a cápsula com **raciocínio de pares**: entregue
-a cápsula a uma dupla que a rode a frio com restart-and-run-all. Se o seu número voltar
-na máquina dela, a cápsula é executável. Se não voltar, você mediu a sua própria
-memória, não um resultado reprodutível.
-
-## Transferência para o projeto
-
-Este capítulo vira a sua **nota de pesquisa e cápsula de reprodutibilidade**, o marco
-de projeto deste tópico. Escreva em prosa o eixo problema–lacuna–pergunta com cada
-alegação referenciada, organize os seus achados em uma hierarquia de resultados com o
-mais defensável na frente, dimensione as suas limitações ao tamanho da sua evidência e
-monte a cápsula de modo que o restart-and-run-all devolva o seu número principal. Uma
-dupla vai ler a nota em voz alta e rodar a cápsula no estúdio de sexta-feira, quando a
-nota é entregue e o seu capítulo final de pesquisa começa. A nota torna o seu trabalho
-legível; a cápsula o torna executável.
-
-## Defenda a sua decisão
-
-Em quatro frases, defenda a sua nota de pesquisa. Diga qual achado você escolheu como
-destaque e por que foi ele, e não um resultado mais surpreendente, que conquistou o
-topo. Enuncie a alegação delimitada em uma frase, com o seu limite (o contexto, a
-amostra ou a população que ela não cobre). Depois enuncie a sua incerteza: o seu
-intervalo ou a ressalva que mais ameaça o número, e a única checagem que uma dupla
-rodando a sua cápsula a frio faria em seguida para testá-lo.
+1. Escreva o seu eixo problema–lacuna–pergunta como três parágrafos curtos. Nomeie o
+   problema, nomeie o que o trabalho anterior e recuperável não estabeleceu, e nomeie a
+   pergunta que fecha exatamente essa lacuna. Cada frase do parágrafo da lacuna se
+   apoia em uma fonte que a pessoa leitora consegue abrir.
+2. Ordene os seus achados, do mais bem sustentado para o menos. O que você consegue
+   defender com mais dados abre a lista. Tudo o que se apoia em uma única observação ou
+   em uma rodada de sorte vai para o fim e leva a palavra exploratório.
+3. Escreva a sua alegação de destaque em uma frase, com o limite dela dentro da mesma
+   frase: o contexto, a amostra e a população que ela não cobre. Depois escreva a
+   versão inflada que você recusa, para reconhecê-la caso ela tente se infiltrar de
+   volta.
+4. Dimensione as suas limitações pelo que de fato ameaça a alegação. Corte tudo o que
+   soa como "mais pesquisas são necessárias" e fique com o que uma pessoa leitora
+   hostil levantaria primeiro.
+5. Anexe a sua pasta à nota e confirme que as duas concordam: o número da sua frase de
+   abertura é o número que um restart-and-run-all a frio imprime.
+6. Registre a rodada de escrita no seu AI Research Ledger, e verifique pelo menos um
+   resultado com um método nomeado do [Guia de Verificação](../verification-guide.qmd).
+   Um revisor de IA pode rodar a checagem com você; a decisão de aceitar ou rejeitar
+   continua sendo sua.

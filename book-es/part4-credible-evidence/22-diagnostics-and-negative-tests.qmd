@@ -2,102 +2,109 @@
 title: "Diagnósticos y pruebas negativas"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Antes de creerle a un resultado, decide qué prueba
-> negativa vas a correr, una verificación apuntada a un lugar donde la respuesta tiene que
-> ser cero, y lee qué autoriza y qué no autoriza su desenlace. Tú eliges la prueba,
-> confirmas que sea genuinamente nula y defiendes solo lo que una aprobación limpia
-> realmente te concede.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay capítulo complementario de RDSS (*Research Design in the Social Sciences*, el libro de referencia del curso) para este tema; este capítulo se sostiene por sí solo.
-:::
+> **La decisión de investigación.** Tú decides **qué prueba negativa necesita de verdad tu
+> diseño**, una verificación apuntada a un lugar donde la respuesta tiene que ser cero, y
+> decides qué te autoriza a decir una aprobación limpia y qué no. Elegir la prueba es la
+> investigación. Correrla es la parte fácil.
 
 ## Por qué importa esta decisión
 
-> *"Antes de decirme que el extracto funciona, muéstrame la placa sin extracto. Si el
-> disco en blanco también eliminó las bacterias, no descubriste un fármaco. Descubriste
-> que tu solvente es tóxico."*
+**La decisión sobre la mesa: qué verificación apuntada a un cero garantizado corres, y qué
+te ganas al aprobarla.**
+
+> *"Antes de decirme que el extracto funciona, muéstrame la placa sin extracto. Si el disco
+> en blanco también despejó las bacterias, no descubriste un fármaco. Descubriste que tu
+> solvente es tóxico."*
 > — una **asesora de laboratorio de microbiología**, sobre la primera placa que pide ver
 
-Un resultado llamativo es la cosa más fácil del mundo de producir por accidente. Tu
+Un resultado llamativo es lo más fácil del mundo de producir por accidente. Tu
 procedimiento tiene muchas piezas móviles: cómo manejaste las muestras, cómo mediste, cómo
 codificaste los grupos. Cualquiera de ellas puede fabricar una señal que no tiene nada que
 ver con aquello que te propusiste estudiar. Una prueba negativa es como averiguas si tu
-resultado lo produjo el mundo o tu propio flujo de trabajo. Si te la saltas, puedes pasar
-un semestre defendiendo un artefacto.
+resultado lo produjo el mundo o tu propio proceso. Sáltatela y puedes pasar meses
+defendiendo un artefacto.
 
 ## El concepto
 
-Una **prueba negativa** es una verificación que corre tu análisis exacto sobre una
-situación donde la respuesta verdadera tiene que ser cero, de modo que cualquier señal que
-devuelva viene de tu procedimiento y no del fenómeno. Ejemplo: medir tu "efecto" en un
-grupo que no recibió ningún tratamiento. Como ahí la respuesta honesta es cero, una lectura
-distinta de cero expone una falla en tu maquinaria. Tres miembros de esta familia aparecen
-en casi toda auditoría.
+Una **prueba negativa** es una verificación que corre tu análisis exacto sobre una situación
+donde la respuesta verdadera tiene que ser cero, de modo que cualquier señal que devuelva
+viene de tu procedimiento y no del fenómeno. Ejemplo: medir tu "efecto" en un grupo que no
+recibió ningún tratamiento. Como ahí la respuesta honesta es cero, una lectura distinta de
+cero expone una falla en tu maquinaria. Tres miembros de esta familia aparecen en casi
+cualquier auditoría.
 
 - **Prueba de placebo**: reemplazas la causa real por una falsa que no puede actuar, y
-  confirmas que el efecto desaparece. Ejemplo: cambia las etiquetas reales de tratamiento y
-  control por el resultado de lanzar una moneda, y revisa que la estimación se desplome
+  confirmas que el efecto desaparece. Ejemplo: cambias las etiquetas reales de tratamiento y
+  control por el resultado de una moneda al aire, y revisas que la estimación se desplome
   hacia cero.
 - **Prueba de falsación**: revisas una consecuencia que tiene que ser falsa si tu
   explicación es correcta, y confirmas que es falsa. Ejemplo: tu compuesto solo puede actuar
-  después de que lo agregas, así que una lectura tomada *antes* de agregarlo debería no
+  después de que lo agregas, así que una lectura tomada *antes* de agregarlo no debería
   mostrar nada.
-- **Control negativo**: apuntas la misma maquinaria a un desenlace que tu causa no podría
+- **Control negativo**: apuntas la misma maquinaria a un resultado que tu causa no podría
   tocar de ninguna manera. Ejemplo: un antibiótico no debería cambiar el diámetro de la
-  placa de agar, así que una lectura de "placa que se encoge" significaría que quien habla
-  es la medición, no el fármaco.
+  placa de agar, así que una lectura de "placa encogida" significaría que quien habla es la
+  medición, no el fármaco.
 
 Un término se gana su propia línea. Un **control de vehículo** es el control negativo
-emparejado con la forma en que entregaste la causa: el vehículo con el ingrediente activo
+emparejado con la forma en que entregaste la causa: el portador con el ingrediente activo
 quitado. Ejemplo: si disolviste tu extracto en etanol, el control de vehículo es un disco
-empapado solo en etanol. Lo que cada una de estas pruebas caza es un **artefacto**, una
-señal producida por tu procedimiento y no por aquello que estudias. Ejemplo: un halo
-transparente causado por el solvente, no por el extracto.
+empapado solo en etanol. Lo que todas estas pruebas cazan es un **artefacto**, una señal
+producida por tu procedimiento y no por aquello que estudias. Ejemplo: un anillo despejado
+causado por el solvente, no por el extracto.
 
-Comparten un mismo movimiento: apuntar la maquinaria a donde la respuesta tiene que ser
-cero, y asegurarse de que diga cero. Este es el límite que nunca debes desdibujar. Una
-prueba negativa aprobada descarta **un artefacto específico**. No prueba que tu efecto sea
-real, y nunca convierte una correlación en una causa.
+Junto a ellas está el diagnóstico más barato de la investigación, la **verificación dejando
+uno fuera**: elimina cada caso por turno, recalcula y mira si una sola observación está
+cargando calladamente todo tu hallazgo. Responde una pregunta distinta de la de una prueba
+negativa. La prueba negativa pregunta si tu procedimiento inventa señal. Dejar uno fuera
+pregunta si tu resultado descansa sobre un solo punto.
+
+Todas las pruebas negativas comparten un movimiento: apuntar la maquinaria a donde la
+respuesta tiene que ser cero, y asegurarse de que diga cero. Este es el límite que nunca
+debes difuminar. Una prueba negativa aprobada descarta **un artefacto específico**. No
+prueba que tu efecto sea real, y nunca convierte una correlación en una causa.
 
 ## Un ejemplo resuelto
 
-Estás probando si un extracto de una planta medicinal mata a una bacteria común. Empapas un
-pequeño disco de papel en el extracto, lo colocas sobre un césped de bacterias que crece en
-una placa de agar, lo incubas toda la noche y a la mañana siguiente mides el **halo de
-inhibición**, el anillo transparente donde las bacterias no lograron crecer alrededor del
-disco. Un anillo ancho parece un efecto antibacteriano real, y da tentación anotarlo.
+Estás probando si un extracto de una planta medicinal mata una bacteria común. Empapas un
+pequeño disco de papel en el extracto, lo colocas sobre un césped de bacterias creciendo en
+una placa de agar, lo incubas durante la noche y a la mañana siguiente mides la **zona de
+inhibición**, el anillo despejado donde las bacterias no lograron crecer alrededor del
+disco. Un anillo ancho parece un efecto antibacteriano real, y es tentador anotarlo.
 
 Antes de hacerlo, corres la prueba negativa. Disolviste el extracto en etanol al 70%, así
-que tu control de vehículo es un disco empapado solo en etanol al 70%, colocado en una
-placa idéntica y tratado exactamente igual. Si ese disco deja un césped desnudo y sin
-inhibir, la prueba se aprobó: el etanol por sí solo no hizo nada, así que el anillo
-alrededor de tu disco con extracto no es un artefacto del solvente, y tu efecto sobrevive a
-una preocupación específica. Si el disco de vehículo genera su propio anillo transparente,
-la prueba falló. El etanol está matando a las bacterias, y ya no puedes distinguir cuánto
-del anillo del extracto es el extracto y cuánto es el solvente. El hallazgo es un artefacto
-hasta que lo rehagas con una concentración más baja.
+que tu control de vehículo es un disco empapado solo en etanol al 70%, colocado en una placa
+idéntica y tratado exactamente igual. Si ese disco deja un césped intacto y sin inhibir, la
+prueba pasó: el etanol por sí solo no hizo nada, así que el anillo alrededor del disco con
+extracto no es un artefacto del solvente, y tu efecto sobrevive a una preocupación
+específica. Si el disco de vehículo genera su propio anillo despejado, la prueba falló. El
+etanol está matando las bacterias, y ya no puedes distinguir cuánto del anillo del extracto
+es extracto y cuánto es solvente. El hallazgo es un artefacto hasta que lo rehagas a una
+concentración menor.
 
-Fíjate en lo que una aprobación limpia sigue sin comprarte. No te dice que el extracto
-funcione dentro de un animal vivo, ni cuál molécula es responsable. Descartó un artefacto y
-nada más, y esa modestia es justamente el punto.
+Fíjate en lo que una aprobación limpia todavía no te compra. No te dice que el extracto
+funcione dentro de un animal vivo, ni qué molécula es la responsable. Descartó un artefacto
+y nada más, y esa modestia es justamente el punto.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb10 — Comparte la investigación + ataca
-el análisis**. Ábrelo en Colab con el distintivo de arriba y trabaja las celdas junto con
-este capítulo. Ahí corres una prueba de placebo sobre una estimación real de encuesta:
-tiras a la basura la agrupación verdadera, la reemplazas 500 veces por una etiqueta echada
-a la suerte, y ves cómo las diferencias falsas se agrupan apretadamente en cero mientras el
-resultado real queda muy fuera de esa nube. Después, una verificación dejando uno fuera te
-muestra si un solo dato está cargando calladamente con todo el hallazgo.
+El laboratorio de este capítulo es el notebook **nb10 — Comparte la investigación y ataca el
+análisis**. Ábrelo en Colab con el botón de arriba y trabaja las celdas junto a este
+capítulo. Ahí corres una prueba de placebo sobre una estimación real de encuesta: tiras a la
+basura la agrupación verdadera, la reemplazas 500 veces por una etiqueta al azar de moneda
+al aire, y ves cómo las brechas falsas se agrupan muy apretadas en cero mientras el
+resultado real queda muy afuera de esa nube. Después una verificación dejando uno fuera te
+muestra si un solo dato está cargando calladamente todo el hallazgo.
 
 ## Prompts de IA recomendados
 
 Comprométete primero con tu propia expectativa, y luego delega un trabajo verificable.
-Nunca dejes que la herramienta decida si tu control es válido.
+Espera trabajar en ciclos: proponer, interrogar, refinar, volver a preguntar. Sin embargo,
+hay un juicio que nunca mejora por volver a preguntar, y es si tu control es genuinamente
+nulo. Eso lo resuelves una sola vez, desde el mecanismo, y ninguna cantidad de vueltas lo
+resuelve por ti.
 
 **Ubica el control estándar.**
 
@@ -111,7 +118,7 @@ Después de ejecutarlo, verifica: abre el protocolo citado y confirma que el con
 y estándar antes de usarlo. Contrarresta la *fabricación confiada* (un control "estándar"
 inventado llega con la misma seguridad que uno real).
 
-**Enumera pruebas negativas candidatas, y luego verifica cada una.**
+**Lista candidatas a prueba negativa, y después verifica cada una.**
 
 ```text
 Here is my analysis: [one-sentence design, your cause, your outcome]. Propose three
@@ -133,68 +140,58 @@ read as zero for the WRONG reason: too few samples to detect anything, a control
 weak to carry the artifact, a zero I would have gotten no matter what. Do not reassure me.
 ```
 Después de ejecutarlo, verifica: si solo elogia el resultado limpio, insiste y exige la
-única forma en que la prueba resulta no informativa. Contrarresta el *acuerdo complaciente*
+única forma en que la prueba no informa nada. Contrarresta el *acuerdo complaciente*
 (elogios que revisan tu alivio, no tu evidencia).
 
 ::: {.callout-important title="No delegues"}
-Tú decides **qué prueba negativa necesita realmente tu diseño**, **si el control es
-genuinamente nulo** (un lugar al que tu causa de verdad no puede llegar), y **qué te
-autoriza a afirmar una aprobación limpia**. Una herramienta puede enumerar controles
-candidatos, pero solo tú conoces el mecanismo lo suficiente para certificar que tu causa no
-puede tocar el que elegiste. El juicio de que una prueba negativa aprobada descarta un
-artefacto *sin* probar que tu efecto sea real sigue siendo tuyo.
+Tú decides **qué prueba negativa necesita de verdad tu diseño**, **si el control es
+genuinamente nulo** (un lugar al que tu causa realmente no puede llegar) y **qué te autoriza
+a afirmar una aprobación limpia**. Una herramienta puede listar controles candidatos, pero
+solo tú conoces el mecanismo lo suficiente para certificar que tu causa no puede tocar el que
+elegiste. El juicio de que una prueba negativa aprobada descarta un artefacto *sin* probar
+que tu efecto es real sigue siendo tuyo.
 :::
 
 ## Un caso de falla de la IA
 
 Le pides a una IA que diseñe un control negativo para tu ensayo con base de etanol.
-Responde, con total confianza: "usa un disco empapado en agua estéril". Lo corres, el disco
-de agua vuelve perfectamente limpio, y la conclusión ordenada se escribe sola: control
-aprobado, efecto confirmado. Esta es la trampa. El agua no es el vehículo que usaste.
-Entregaste el extracto en etanol, así que el artefacto que necesitabas descartar era la
+Responde, con completa confianza: "usa un disco empapado en agua estéril". Lo corres, el
+disco de agua vuelve perfectamente limpio, y la conclusión ordenada se escribe sola: control
+aprobado, efecto confirmado. Aquí está la trampa. El agua no es el vehículo que usaste.
+Entregaste el extracto en etanol, así que el artefacto que necesitabas descartar es la
 toxicidad del etanol, y un disco de agua nunca puede mostrarla. El resultado limpio no
 descartó absolutamente nada.
 
-Lo detectas con una pregunta que la herramienta nunca se hizo: *¿qué artefacto descarta
-realmente este control?* Un control de vehículo válido corresponde a cómo entregaste la
-causa, solvente por solvente. En cuanto ves el desajuste, cambias el agua por etanol al 70%
-y corres la prueba que sí puede fallar. Esto es un *método plausible pero equivocado*: el
-consejo sonaba a práctica de manual y era equivocado para tu caso.
+Lo detectas con una pregunta que la herramienta nunca se hizo: *¿qué artefacto descarta de
+verdad este control?* Un control de vehículo válido coincide con la forma en que entregaste
+la causa, solvente por solvente. En el momento en que ves el desajuste cambias el agua por
+etanol al 70% y corres la prueba que sí puede fallar. Esto es un *método plausible pero
+equivocado*: el consejo sonaba a práctica de libro de texto y estaba mal para tu caso.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, la persona que investiga.
-:::
+*Tu proyecto tiene una estimación principal con un rango alrededor. Este paso apunta dos
+verificaciones a lugares donde la respuesta tiene que ser cero, para que averigües si tu
+resultado lo produjo el mundo o tu propio proceso.*
 
-Verifica el resultado clave de este capítulo, que una prueba negativa genuina devuelve
-cero, con **simulación** de la
-[guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
-Construye a mano un conjunto de datos donde no exista ningún efecto: asigna una etiqueta
-falsa echándola a la suerte y genera un desenlace que la ignore por completo. Corre sobre
-él la maquinaria de tu prueba negativa. Si el procedimiento es sólido, la estimación vuelve
-cerca de cero, una y otra vez a lo largo de muchas etiquetas aleatorias. Si devuelve una
-señal sobre datos que construiste para no tener ninguna, lo que está roto es la prueba, no
-el mundo. Una prueba negativa que confirmaste que devuelve cero sobre datos que sabes que
-son nulos es una prueba en la que puedes confiar cuando devuelva cero sobre tus datos
-reales.
-
-## Transferencia al proyecto
-
-Este capítulo agrega una verificación prelistada a tu **hito de auditoría de
-investigación**, el registro calificado de cuánto te esforzaste por romper tu propia
-afirmación. Antes de mirar tu resultado, anota una prueba negativa que tu diseño exija,
-nombra el cero exacto que esperas y comprométete a reportarla salga como salga. Córrela,
-registra qué obtuviste frente a lo que predijiste y, si la estimación se movió, di cuánto.
-Esa fila, la prueba negativa que elegiste más el cero que esperabas más el resultado, es una
-de las líneas más fuertes que puedes recorrer con alguien escéptico en el estudio del
-viernes.
-
-## Defiende tu decisión
-
-En cuatro oraciones, defiende la prueba negativa que elegiste para tu propio resultado.
-Nombra la prueba y el cero exacto que esperabas antes de correrla. Declara qué te autoriza a
-afirmar una aprobación limpia, y su límite: el único artefacto que descarta, y la afirmación
-causal o general que *no* establece. Cierra con tu incertidumbre: si la prueba tenía
-suficiente potencia para haber atrapado el artefacto en caso de que realmente estuviera
-ahí, y la siguiente verificación que correrías.
+1. Nombra el artefacto que más te asusta: la única forma en que tu procedimiento, y no tu
+   objeto de estudio, podría haber fabricado tu resultado. Una oración, escrita antes de
+   salir a buscar.
+2. Elige la prueba negativa que podría atraparlo, sea una etiqueta de placebo, un resultado
+   de falsación medido donde el efecto todavía no puede existir, o un control negativo que tu
+   causa no podría tocar de ninguna manera. Después confirma que el control es genuinamente
+   nulo. Si tu causa puede alcanzarlo, no es una prueba negativa y va a fallar en silencio.
+3. Escribe el cero exacto que esperas antes de correr nada, y comprométete a reportar el
+   resultado caiga como caiga.
+4. Corre un diagnóstico al lado. Dejar uno fuera es el más barato: elimina cada caso por
+   turno, recalcula y averigua si una sola observación está cargando tu hallazgo.
+5. Registra qué obtuviste frente a qué predijiste, y si la estimación se movió, di cuánto.
+   Después escribe tu límite en una línea: el artefacto que descarta esta aprobación, y la
+   afirmación causal o general que aun así no establece.
+6. Registra ambas pruebas en tu AI Research Ledger (registro de investigación con IA), y
+   verifica al menos una salida con un método nombrado de la
+   [Guía de Verificación](../verification-guide.qmd). La **simulación** es la herramienta
+   correcta para una prueba negativa: construye a mano un conjunto de datos donde no exista
+   ningún efecto, corre sobre él la maquinaria de tu prueba y confirma que devuelve cero con
+   datos de nulidad conocida antes de confiar en el cero que devolvió con los tuyos. Una IA
+   revisora puede hacer la comprobación contigo; la decisión de aceptar o rechazar es tuya.

@@ -2,106 +2,104 @@
 title: "Paquetes de investigación abiertos y reutilizables"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Decides qué entra en la cápsula de
-> reproducibilidad que acompaña a tu nota de investigación, y defiendes la afirmación
-> de que una persona desconocida puede volver a ejecutar tu trabajo y obtener tus
-> números. Tú eres responsable de lo que el paquete incluye y de si "se reproduce" es
-> honesto, y nunca dejas que una ejecución limpia haga las veces de una correcta.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay un capítulo complementario de RDSS (*Research Design in the Social Sciences*) para este tema; este capítulo se sostiene solo.
-:::
+> **La decisión de investigación.** Decides qué entra en la cápsula de reproducibilidad
+> que viaja con tu nota de investigación, y defiendes la afirmación de que una persona
+> desconocida puede volver a ejecutar tu trabajo y obtener tus números. Tú eres dueña de
+> lo que el paquete incluye y de si "esto se reproduce" es honesto, y nunca dejas que una
+> ejecución limpia haga pasar por correcta a una que no lo es.
 
 ## Por qué importa esta decisión
 
-> *"No quiero oír que corre en tu laptop. Dame la carpeta, déjame borrarlo todo y
-> déjame apretar ejecutar. Si tu número titular no vuelve en mi máquina, todavía no
-> tienes un resultado. Tienes el recuerdo de uno."*
+**La decisión en juego: qué va dentro de la cápsula que viaja con tu trabajo, y si la
+oración "esto se reproduce" es honesta cuando la escribes.**
+
+> *"No quiero oír que corre en tu laptop. Dame la carpeta, déjame borrar todo y déjame
+> apretar ejecutar. Si tu número titular no vuelve en mi máquina, todavía no tienes un
+> resultado. Tienes el recuerdo de uno."*
 > — un **editor de replicación**, abriendo la carpeta adjunta a tu entrega
 
-Una nota de investigación argumenta tu afirmación en prosa. La cápsula demuestra que
-la afirmación sobrevive sin que tú estés en la sala. Si el único lugar donde tu
-análisis corre es la laptop en la que lo construiste, en el orden de clics que
-casualmente recuerdas, entonces nadie puede revisarte, y un resultado que nadie puede
-revisar es un rumor con gráfica. Este capítulo es cómo empacas el trabajo para que
-revisarlo sea fácil, y cómo te mantienes honesto sobre lo que "reproducible" de
-verdad significa.
+Una nota de investigación argumenta tu afirmación en prosa. La cápsula demuestra que la
+afirmación sobrevive sin ti en la sala. Si el único lugar donde tu análisis corre es la
+laptop donde lo construiste, en el orden de clics que resulta que recuerdas, entonces
+nadie puede revisarte, y un resultado que nadie puede revisar es un rumor con gráfico.
+Este capítulo es cómo empaquetas el trabajo para que revisarlo sea fácil, y cómo te
+mantienes honesta sobre lo que "reproducible" significa de verdad.
 
 ## El concepto
 
-Una **cápsula de reproducibilidad** es todo lo que una persona desconocida necesita
-para reconstruir tus números y nada que tendría que adivinar. Ejemplo: una carpeta
-que guarda tu cuaderno, tus datos y un registro breve de cada decisión que tomaste a
-mano. Tiene cinco partes, cada una definida una sola vez.
+Una **cápsula de reproducibilidad** es todo lo que una persona desconocida necesita para
+reconstruir tus números y nada que tendría que adivinar. Ejemplo: una carpeta con tu
+cuaderno, tus datos y un registro corto de cada decisión hecha a mano. Tiene cinco
+partes, cada una definida una sola vez.
 
-- Un **cuaderno ejecutable** que pasa la prueba de **reiniciar y ejecutar todo**, es
-  decir, borras el kernel y corres cada celda de arriba abajo sin memoria de clics
-  anteriores. Ejemplo: Entorno de ejecución, Reiniciar y ejecutar todo, y tu número
-  titular reaparece.
-- Una **nota de procedencia de los datos**: de dónde vino cada conjunto de datos, su
-  versión y cómo se puede usar. Ejemplo: la URL de descarga, la fecha y la licencia.
-- Una **semilla fija**, un número de partida que hace que cada paso aleatorio
-  devuelva los mismos valores en cada ejecución. Ejemplo: `SEED = 464` alimentando
-  cada remuestreo.
-- Una **bitácora de decisiones**: las decisiones que tomaste a mano y que dieron
-  forma al resultado, cada una con su razón. Ejemplo: cada fila que descartaste, y
-  por qué.
-- Un **registro de uso de IA** (**AI Research Ledger**): cada herramienta, su tarea y
-  cómo verificaste su salida.
+- Un **cuaderno ejecutable** que pasa **reiniciar y ejecutar todo**, es decir, borras el
+  kernel y corres cada celda de arriba abajo sin memoria de clics anteriores. Ejemplo:
+  Entorno de ejecución, Reiniciar y ejecutar todo, y tu número titular reaparece.
+- Una **nota de procedencia de datos**: de dónde vino cada conjunto de datos, su versión
+  y cómo puede usarse. Ejemplo: la URL de descarga, la fecha y la licencia.
+- Una **semilla fija**, un número de arranque que hace que cada paso aleatorio devuelva
+  los mismos valores en cada ejecución. Ejemplo: `SEED = 464` alimentando cada remuestreo.
+- Una **bitácora de decisiones**: las decisiones hechas a mano que dieron forma al
+  resultado, cada una con su razón. Ejemplo: cada fila que descartaste, y por qué.
+- Un **registro de uso de IA**: cada herramienta, su tarea y cómo verificaste su salida.
 
-Las cápsulas se rompen de formas aburridamente predecibles, y eso es buena noticia,
-porque una falla predecible es una falla que se puede atrapar. Con nombre, son **los
-cinco pecados del paquete**: una **ruta fija en el código** que solo existe en tu
-máquina, una **semilla ausente** que mueve cada ejecución, una **edición a mano** que
-ninguna ejecución limpia reproduce, una **exclusión no documentada** sin razón
-anotada, y **datos desactualizados** que quien lee no puede volver a obtener. El
-auditor del laboratorio busca los cinco. Pero aférrate a la única línea que carga
-todo el capítulo: una cápsula sin un solo señalamiento queda demostrada como
-**ejecutable**, nunca como **correcta**. El escaneo te lleva a la línea de salida.
-Una persona que te vuelve a ejecutar en frío es la carrera.
+Las cápsulas se rompen de maneras aburridamente predecibles, lo cual es buena noticia,
+porque una falla predecible es una falla detectable. Con nombre, son **los cinco pecados
+del paquete**: una **ruta escrita a mano** que solo existe en tu máquina, una **semilla
+faltante** que mueve cada ejecución, una **edición manual** que ninguna ejecución limpia
+reproduce, una **exclusión sin documentar** sin razón registrada, y **datos vencidos** que
+quien lee no puede volver a obtener. El auditor del laboratorio busca los cinco. Pero
+quédate con la única línea que carga todo el capítulo: una cápsula con cero alertas es
+**ejecutable**, nunca está probada como **correcta**. El escaneo te lleva a la línea de
+salida. Quien te vuelve a ejecutar en frío es la carrera.
 
-## Un ejemplo trabajado
+## Un ejemplo resuelto
 
-Mediste nitrato, un nutriente que se lava desde los campos agrícolas hacia los
-arroyos, en doce sitios de monitoreo de una misma cuenca, y tu titular es la
-proporción de muestras por encima del límite de agua potable de la EPA de Estados
-Unidos, 10 mg/L. Mira el mismo análisis entregado de dos maneras.
+Recopilaste la participación electoral por casilla en doce condados de un estado en una
+elección intermedia, y tu titular es la proporción de casillas donde la participación cayó
+por debajo del 40%. Mira el mismo análisis entregado de dos maneras.
 
-La **cápsula pecadora** carga `~/Desktop/nitrate_clean.csv`, un archivo que solo tiene
-tu laptop. Calcula por bootstrap un intervalo de confianza para esa proporción sin
-semilla, así que el intervalo se mueve en cada ejecución. Parcha a mano un sitio mal
-etiquetado en una celda que ninguna ejecución limpia repite. Descarta en silencio las
-muestras por debajo del límite de detección sin nota sobre por qué. Y sus datos se
-descargaron "en algún momento de la primavera pasada" sin versión. Cinco pecados, y
-cada uno rompe la reejecución.
+La **cápsula pecadora** carga `~/Desktop/turnout_clean.csv`, un archivo que solo tiene tu
+laptop. Calcula por bootstrap un intervalo de confianza para esa proporción sin semilla,
+así que el intervalo se mueve en cada ejecución. Corrige a mano un nombre de casilla
+duplicado en una celda que ninguna ejecución limpia repite. Descarta en silencio cada
+casilla cuyo conteo de personas registradas faltaba, sin nota sobre por qué. Y sus datos se
+descargaron "en algún momento de la primavera pasada", antes de que el estado certificara
+el conteo, sin versión registrada. Cinco pecados, y cada uno rompe la nueva ejecución.
 
-La **cápsula limpia** carga los mismos datos a través de una URL compartida, con la
-fuente, la fecha y la licencia en la nota de procedencia. Fija `SEED = 464` antes del
-bootstrap. Anota en la bitácora de decisiones el único reetiquetado con su razón.
-Conserva las muestras por debajo del límite de detección, o las descarta según una
-regla declarada de antemano y anotada. Ahora una persona desconocida borra el kernel,
-corre de arriba abajo, y tu proporción por encima de 10 mg/L vuelve. Mismo número,
-sin adivinar.
+La **cápsula limpia** carga el archivo certificado desde su URL pública, con la fuente, la
+fecha de descarga y los términos de uso en la nota de procedencia. Fija `SEED = 464` antes
+del bootstrap. Registra en la bitácora de decisiones la única corrección de nombre con su
+razón. Conserva las casillas con conteos de registro faltantes, o las descarta con una
+regla registrada y declarada de antemano. Ahora una persona desconocida borra el kernel,
+corre de arriba abajo, y tu proporción de casillas por debajo del 40% vuelve. Mismo número,
+sin adivinanzas.
 
-Aquí está la prueba de honestidad que el auditor no puede hacer por ti. La cápsula
+Aquí está la comprobación de honestidad que el auditor no puede hacer por ti. La cápsula
 limpia todavía puede estar *equivocada*: tu semilla podría estar fijada sobre el
-subconjunto equivocado, o tu regla del límite de detección podría ser una mala regla
-limpiamente anotada. Ejecutable no es correcta. Ese hueco es justamente por qué a tu
-cápsula la ejercita otra persona, y no solo un script.
+subconjunto incorrecto, o descartar las casillas con registro faltante podría ser una mala
+regla limpiamente registrada. Ejecutable no es correcto. Ese hueco es exactamente por qué
+tu cápsula la ejercita una persona, no solo un script.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb15 — Del póster a la nota de
-investigación**. Ábrelo en Colab con la insignia de arriba. Allí construyes
-`audit_capsule`, lo ves señalar los cinco pecados en un paquete roto a propósito y
-ninguno en uno limpio, y luego pegas las líneas clave de tu propia cápsula y arreglas
-lo que atrape antes del estudio del viernes.
+El laboratorio de este capítulo es el cuaderno **nb15 — From poster to research note**
+(*del póster a la nota de investigación*). Ábrelo en Colab con el botón de arriba. Ahí
+construyes `audit_capsule`, lo ves marcar los cinco pecados en un paquete roto a propósito
+y ninguno en uno limpio, y después pegas las líneas clave de tu propia cápsula y arreglas
+lo que detecte.
 
 ## Prompts de IA recomendados
 
-Comprométete primero con tu propia respuesta y luego delega. Cada prompt es una tarea
+Comprométete primero con tu propia respuesta y después delega. Empaquetar es un **bucle de
+IA** que correrás más de una vez: el ciclo prompt → respuesta → interrogación →
+refinamiento → nueva ejecución. Preguntas, arreglas lo que vuelve, vuelves a ejecutar la
+cápsula en frío, y esa nueva ejecución saca a la superficie el siguiente hueco. Algunas
+herramientas ya corren ese bucle solas, editando archivos y reejecutando hasta que nada dé
+error. Un bucle que termina sin errores demostró que el código se ejecuta. No demostró que
+los números estén bien, y solo tú puedes notar la diferencia. Cada prompt es una tarea
 verificable, no un veredicto.
 
 **Localiza la herramienta estándar.**
@@ -112,11 +110,11 @@ the exact package versions a notebook needs in order to rerun, and cite the offi
 documentation. Only name tools you are confident exist.
 ```
 
-Después de ejecutarlo, verifica: abre la documentación oficial y confirma que el
-archivo y su sintaxis existen. Contrarresta la *fabricación confiada* (el nombre de
-una herramienta inventada llega con la misma seguridad que uno real).
+Después de ejecutarlo, verifica: abre la documentación oficial y confirma que el archivo y
+su sintaxis existen. Contrarresta la *fabricación confiada* (un nombre de herramienta
+inventado llega con la misma seguridad que uno real).
 
-**Lista para que puedas verificar (el replicador en frío).**
+**Enumera para que puedas verificar (la persona que replica en frío).**
 
 ```text
 Here are the key lines of my capsule: [paste]. Playing a replicator who has only
@@ -124,12 +122,12 @@ these lines and none of my memory, list every input, file, or by-hand step you w
 need to rerun my headline number and might not find here.
 ```
 
-Después de ejecutarlo, verifica: contrasta cada vacío nombrado con lo que tu propia
-ejecución de `audit_capsule` de verdad señaló, y descarta cualquier vacío que no
-corresponda a una línea faltante real. Contrarresta la *ilusión de completitud* (una
-cápsula ordenada que parece entera mientras falta un insumo).
+Después de ejecutarlo, verifica: contrasta cada hueco nombrado con lo que tu propia
+ejecución de `audit_capsule` de verdad marcó, y descarta cualquier hueco que no corresponda
+a ninguna línea realmente faltante. Contrarresta la *ilusión de exhaustividad* (una cápsula
+ordenada que se ve entera mientras falta un insumo).
 
-**Hazle red team a la afirmación.**
+**Hazle red team (revisión adversaria) a la afirmación.**
 
 ```text
 My claim is: "a stranger can rerun this capsule and get my number." Act as a hostile
@@ -137,67 +135,53 @@ replication reviewer and name every way it could fail on a machine that is not m
 Do not fix it for me.
 ```
 
-Después de ejecutarlo, verifica: si solo te tranquiliza, insiste y exige la peor falla
-posible. Contrarresta el *acuerdo adulador* (elogios que revisan tu ego, no tu
+Después de ejecutarlo, verifica: si solo te tranquiliza, empuja de vuelta y exige la peor
+falla individual. Contrarresta el *acuerdo complaciente* (elogio que revisa tu ego, no tu
 paquete).
 
 ::: {.callout-important title="No delegues"}
-Tú decides **qué entra en la cápsula** y si la oración "esto se reproduce" es honesta.
-La herramienta puede listar vacíos y fijar versiones, pero no puede registrar la
-procedencia verdadera de tus datos, ni juzgar si la razón anotada de una exclusión es
-una *buena* razón, ni certificar que tu análisis sea correcto y no solo ejecutable. El
-nombre en la carpeta, y la afirmación de que una persona desconocida puede confiar en
-ella, son tuyos.
+Tú decides **qué entra en la cápsula** y si la oración "esto se reproduce" es honesta. La
+herramienta puede enumerar huecos y fijar versiones, pero no puede registrar la procedencia
+verdadera de tus datos, juzgar si la razón registrada de una exclusión es una *buena* razón,
+ni certificar que tu análisis es correcto y no solo ejecutable. El nombre en la carpeta, y
+la afirmación de que una persona desconocida puede confiar en ella, son tuyos.
 :::
 
 ## Un caso de falla de la IA
 
-Pegas tu cuaderno en Gemini y preguntas: "¿esto correrá en frío y producirá mi
-proporción de nitrato?". Recorre cada celda y responde, con total seguridad: "Sí,
-esto corre de arriba abajo sin problemas y devuelve tu número titular". Suena a marca
-verde de aprobación. No lo es. Gemini nunca ejecutó nada. Leyó el código y lo narró.
-La celda 3 carga `~/Desktop/nitrate_clean.csv`, una ruta que solo tiene tu laptop, y
-el recorrido fluido describió la lectura de ese archivo como si estuviera ahí.
+Pegas tu cuaderno en Gemini y preguntas: "¿esto correrá en frío y producirá mi proporción
+de baja participación?". Recorre cada celda y responde, con total confianza: "Sí, esto corre
+de arriba abajo sin problemas y devuelve tu número titular". Suena como una palomita verde.
+No lo es. Gemini nunca ejecutó nada. Leyó el código y lo narró. La celda 3 carga
+`~/Desktop/turnout_clean.csv`, una ruta que solo tiene tu laptop, y el recorrido fluido
+describió la lectura de ese archivo como si estuviera ahí.
 
-Lo atrapas de la única forma que cuenta: de verdad corres reiniciar y ejecutar todo
-en un kernel fresco, idealmente en Colab, en una máquina que no es la tuya. El
-`FileNotFoundError` aparece en la celda 3 en segundos. Una ejecución narrada no es
-una ejecución. Verificas el cuaderno ejecutándolo, no leyendo un párrafo sobre su
-ejecución.
+Lo detectas de la única manera que cuenta: de verdad corres reiniciar y ejecutar todo en un
+kernel nuevo, idealmente en Colab, en una máquina que no es la tuya. El `FileNotFoundError`
+aparece en la celda 3 en segundos. Una ejecución narrada no es una ejecución. Verificas el
+cuaderno ejecutándolo, no leyendo un párrafo sobre ejecutarlo.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.
-:::
+*Tu proyecto ya tiene una nota de investigación y una carpeta que corre; este paso convierte
+las dos en una sola cápsula que alguien podría tomar dentro de un año y reutilizar.*
 
-Verifica el resultado clave de este capítulo, que tu cápsula se reproduce, con un
-**resultado de referencia** de la [guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-compara una ejecución fresca contra un valor verificado antes. Registra tu número
-titular desde tu propia máquina. Luego borra el kernel y ejecuta todo en un segundo
-entorno, la laptop de un compañero o una sesión limpia de Colab, y comprueba que el
-número vuelve dentro del redondeo. Una coincidencia significa que la cápsula viaja.
-Una discrepancia significa que algo que cargaste a mano, una ruta, una semilla, una
-edición sin anotar, estaba haciendo un trabajo silencioso que nunca empacaste. Dos
-máquinas, un número, es un resultado reproducido.
-
-## Transferencia al proyecto
-
-Este capítulo construye la mitad de cápsula de tu **nota de investigación y cápsula
-de reproducibilidad**, el hito del proyecto para este tema. Arma las cinco partes
-para tu propio proyecto, corre `audit_capsule` sobre tus líneas clave y arregla el
-primer pecado que señale. Luego haz lo que el script no puede: entrégale la carpeta a
-otra persona en el estudio del viernes y pídele que borre el kernel y la vuelva a
-correr en frío. El número que obtenga, puesto junto al número que reportaste, es tu
-evidencia de reproducibilidad, y su reejecución es lo que convierte "me corre a mí"
-en una afirmación que puedes defender.
-
-## Defiende tu decisión
-
-En cuatro oraciones, defiende tu cápsula. Nombra qué pusiste en ella y el único
-pecado del paquete que más tentado estuviste de dejar sin arreglar. Enuncia la
-afirmación acotada que ya puedes hacer, "una persona desconocida volvió a correr esto
-y obtuvo mi número", y su límite: ejecutable no es correcta, y reproducida en las
-máquinas que probaste no es prueba de que corra en todas partes. Cierra con tu
-incertidumbre: el insumo o el paso con el que un replicador en frío todavía podría
-tropezar, y la comprobación que correrías enseguida para cerrarlo.
+1. Arma las cinco partes para tu propio proyecto: el cuaderno ejecutable, la nota de
+   procedencia de datos, la semilla fija, la bitácora de decisiones y tu registro de uso de
+   IA. Todo lo que quien lee tendría que adivinar pertenece a una de las cinco.
+2. Corre la auditoría del capítulo sobre tus propias líneas clave y arregla lo que marque,
+   empezando por el pecado que más tentación te daba dejar en paz. Las rutas escritas a mano
+   y las semillas faltantes son los dos que más seguido rompen a quien viene de fuera.
+3. Escribe el README que una persona desconocida lee primero: qué pregunta el proyecto, cuál
+   es el número titular, qué archivo lo produce y en qué orden ejecutar las cosas.
+4. Vuelve a ejecutarlo en frío en un segundo entorno, una sesión limpia de Colab o una
+   máquina que no sea la tuya, y comprueba que el titular vuelve dentro del redondeo. Un
+   número que viaja es reproducible. Un número que no viaja significa que algo que cargabas
+   a mano estaba haciendo un trabajo silencioso que nunca empaquetaste.
+5. Escribe una oración honesta sobre el límite de todo esto: tu cápsula es ejecutable, que no
+   es lo mismo que correcta, y nombra la decisión dentro de ella que más querrías que alguien
+   cuestionara.
+6. Registra la ronda de empaquetado en tu AI Research Ledger (registro de investigación con
+   IA) y verifica al menos una salida con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd). Un revisor de IA puede hacer la comprobación
+   contigo; la decisión de aceptar o rechazar sigue siendo tuya.
