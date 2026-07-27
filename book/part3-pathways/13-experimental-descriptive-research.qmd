@@ -12,8 +12,8 @@ title: "Experimental Descriptive Research"
 
 ## Why this decision matters
 
-**The decision on the table: whether your coin flip is measuring the world as it
-stands or testing an intervention you would roll out.**
+**The decision on the table: whether the number your randomized study reports is a
+property the world already has, or an effect you would go out and cause.**
 
 Picture your advisor stopping at one line of your methods page. "You randomized,"
 they say, "so you wrote *causes*. Show me the question first." Random assignment
@@ -54,9 +54,9 @@ hits every unit alike, which is why you design these out separately.
 
 ## A worked example
 
-A music-streaming team wants a latent property of its "Recommended for you" shelf:
-how much of a track's play count comes from *where it sits* versus how well it
-matches the listener. Nobody prints that number anywhere, so they build an
+A music-streaming team wants to pin down a latent property of its "Recommended for
+you" shelf: how much of a track's play count comes from *where it sits* versus how
+well it matches the listener. Nobody prints that number anywhere, so they build an
 instrument. For a random slice of sessions they insert one fixed probe track,
 identical audio and identical artwork, and assign its shelf position at random
 across six slots, then record the play rate by slot. Because the track never

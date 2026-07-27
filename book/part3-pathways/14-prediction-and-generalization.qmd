@@ -16,8 +16,8 @@ title: "Prediction and Generalization"
 are, what score you would accept as honest.**
 
 Picture a county public-health officer who must decide, week by week, whether to
-post a swimming advisory at a lake. Blooms of cyanobacteria can turn a swimming
-beach into a hazard in days. A vendor arrives with a model that flags harmful
+post a swimming advisory at a lake. Blooms of cyanobacteria can turn a safe beach
+into a health hazard within days. A vendor arrives with a model that flags harmful
 blooms "with 94% accuracy."
 
 > *"Ninety-four percent compared to WHAT? Most weeks this lake is fine, so if I

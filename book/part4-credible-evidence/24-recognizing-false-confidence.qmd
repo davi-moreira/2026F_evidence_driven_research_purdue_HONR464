@@ -4,21 +4,24 @@ title: "Recognizing False Confidence"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
 
-> **The research decision.** When an AI tool hands you a fluent, confident finding,
-> you decide whether its confidence counts as evidence (it never does) and exactly
-> which independent check you run on the number underneath it before you repeat the
-> claim as your own.
+> **The research decision.** When a tool hands you a fluent, confident finding, you
+> decide **whether its confidence counts as evidence** (it never does) and **which
+> independent check you run on the number underneath it** before you repeat the claim
+> as your own. Nothing about how sure the sentence sounds tells you whether it is true.
 
 ## Why this decision matters
 
-Picture the officer who reviews grant reports for a watershed restoration program.
-Every year she reads summaries that announce success in polished, sure prose. Her
-standard is blunt: *"I don't fund the sentence. I fund the number behind it. Show me
-the measurement, how you computed the change, and why the project gets the credit."* A
-confident paragraph moves nobody who has read a hundred confident paragraphs. What
-moves her is a number you recomputed and can defend. An AI partner will write you a
-beautiful, sure-sounding finding in seconds. Your job is to treat that confidence as
-worth nothing until you have checked what sits under it.
+**The decision on the table: what you require of a confident-sounding result before you
+put your name on it.**
+
+Picture the fisheries biologist who reviews stream-restoration reports for a state
+agency. Every year they read summaries that announce success in polished, sure prose.
+Their standard is blunt: *"I don't act on the sentence. I act on the number behind it.
+Show me the measurement, how you computed the change, and why the project gets the
+credit."* A confident paragraph moves nobody who has read a hundred confident
+paragraphs. What moves them is a number you recomputed and can defend. An AI partner
+will write you a beautiful, sure-sounding finding in seconds. Your job is to treat that
+confidence as worth nothing until you have checked what sits under it.
 
 ## The concept
 
@@ -34,10 +37,18 @@ answer. Example: you would double-check a lab partner's arithmetic, but you past
 AI's percentage straight into your report because "the tool computed it." **Illusion
 of understanding** is mistaking a smooth explanation for real comprehension. Example:
 you nod along as the AI walks you line by line through its calculation, then realize
-you could not defend the number to the watershed reviewer without rerunning it
+you could not defend the number to the agency reviewer without rerunning it
 yourself.
 
-The rule that beats all three is short: **verify the number, not the paragraph.**
+The loop makes this worse, not better. You rarely stop at a first answer now. You
+prompt, read, refine, and run again, and agentic tools spin those cycles on their own.
+Each pass comes back cleaner and surer than the last, and that polish *feels* like
+convergence on the truth. It is nothing of the kind. A number that was wrong on turn one
+is usually still wrong on turn six, only better dressed. Confidence grows across the loop
+whether or not accuracy does, so check the number on the turn you actually intend to
+use.
+
+The rule that beats all of this is short: **verify the number, not the paragraph.**
 **Verification** is an independent check, run by a method outside the model, that a
 result is actually true. Example: instead of trusting the AI's "40 percent," you
 recompute the average nitrate before and after the cleanup from the raw readings and
@@ -50,8 +61,9 @@ that is right.
 You are studying a small stream where a **riparian buffer** (a strip of trees and
 grasses planted along a bank to filter runoff) was installed last year. You have
 weekly **nitrate** readings (nitrate is a nutrient from fertilizer that, in excess,
-fuels algae blooms and starves the water of oxygen), measured in milligrams per liter,
-for the year before planting and the year after.
+fuels algal blooms and starves the water of oxygen), measured in milligrams per liter,
+for the year before planting and the year after. The agency cares because low oxygen
+kills the trout the restoration was meant to bring back.
 
 You ask an AI to summarize the dataset. It returns: *"The riparian buffer reduced
 average nitrate by about 40 percent, a clear environmental success."* The sentence is
@@ -63,10 +75,10 @@ for the "after" weeks, then subtract. Suppose the before-mean is 8.1 mg/L and th
 after-mean is 6.9 mg/L. The real drop is 1.2 mg/L, about 15 percent, not 40. The
 confident summary overstated the change by more than double. A second problem also
 hid behind the polish: the readings come from one site with no comparison stream, so
-even the true 15 percent cannot be pinned on the buffer alone. A wet spring or a new
-practice upstream could move nitrate just as much. You keep the finding you can defend,
-"nitrate fell about 15 percent at this site over one year," and you drop both the
-inflated figure and the word "success."
+even the true 15 percent cannot be pinned on the buffer alone. A wet spring or a change
+in fertilizer practice upstream could move nitrate just as much. You keep the finding you
+can defend, "nitrate fell about 15 percent at this site over one year," and you drop both
+the inflated figure and the word "success."
 
 ## The Colab laboratory
 
@@ -110,9 +122,9 @@ Confirm the range against the spread you can see in your own readings.
 **Red-team your finding (you keep the claim).**
 
 ```text
-Here is my finding: "[paste your sentence]." Act as a hostile watershed reviewer.
-Name every place it reaches past one site and one year of data. Do not rewrite it
-for me; list the weaknesses.
+Here is my finding: "[paste your sentence]." Act as a hostile reviewer for a state
+fisheries agency. Name every place it reaches past one site and one year of data.
+Do not rewrite it for me; list the weaknesses.
 ```
 
 After running, verify (counters *sycophantic agreement*): if every objection is mild,
@@ -141,37 +153,26 @@ single year, so even the honest 15 percent could come from the weather rather th
 buffer. The confident summary failed twice, once on the number and once on the causal
 reach, and both failures were invisible until you checked outside the model.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project has an estimate, a range, negative tests, and an adversarial review behind
+it. This step turns the audit on yourself and produces the one sentence your evidence can
+actually carry.*
 
-The chapter's key result is that a confident summary's number can be flatly wrong.
-Confirm it yourself with **direct calculation** (from the
-[verification guide](../verification-guide.qmd)): recompute the
-before-mean and the after-mean by hand, or with a second simple expression, and
-subtract. If the change you get differs from the AI's figure, the figure was never
-evidence. For extra assurance, use **alternative code**: compute the same difference a
-second way, such as filtering each period separately and subtracting, and confirm both
-roads give one answer.
-
-## Project transfer
-
-This chapter feeds your **research-and-AI baseline milestone**, presented at
-Friday's studio. Two moves carry over. First, adopt a standing rule for your own
-project: no AI-reported number reaches your poster or brief until you have recomputed
-it by a second method. Second, log the catch in your AI Research Ledger, recording the
-task, the tool, your decision (kept the verified 15 percent, dropped the claimed 40),
-and the verification method (direct calculation). Then name, in your baseline, the one
-place you are most likely to let a confident answer past unchecked. That admission is
-where automation bias gets managed.
-
-## Defend your decision
-
-In a short paragraph, take one number an AI reported to you and state the claim you
-will defend after recomputing it: the bounded finding, in your own words. Then give
-its boundary and your uncertainty. What does the verified number *not* establish (does
-your design let you credit a cause, or only describe a change?), and where were you
-most tempted to trust the confident version without checking? A finding stated with no
-boundary and no uncertainty is the overclaiming-certainty defect, not a defense.
+1. List every number currently in your project that you have not personally recomputed.
+   The list is usually longer than you expect. Recompute each one or take it out.
+2. For your headline number, write down where your confidence in it actually comes from:
+   your own recomputation, a tool's fluent summary, or the fact that it matched what you
+   were hoping for. Only the first one counts as a reason.
+3. Write your boundary sentence, the claim your design licenses and nothing beyond it.
+   Name the unit, the setting, the time span, and whether you can credit a cause or can
+   only report that something changed.
+4. Name the one place you are most likely to let a confident answer past unchecked, and
+   write it down. That admission is where automation bias gets managed.
+5. Adopt a standing rule for the rest of the project: no AI-reported number reaches your
+   paper, note, or poster until you have recomputed it by a second method.
+6. Log the audit in your AI Research Ledger, and verify your headline number with a named
+   method from the [Verification Guide](../verification-guide.qmd). **Direct calculation**
+   is the one this chapter is built on: recompute the means by hand, subtract, and see
+   whether the confident figure survives. An AI reviewer may run the check with you; the
+   decision to accept or reject stays yours.

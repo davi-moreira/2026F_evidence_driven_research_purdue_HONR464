@@ -88,7 +88,7 @@ This chapter's lab is notebook **nb16 — Managing multiple AI agents + the fina
 defense**. Open it in Colab with the badge above and work the cells alongside this
 chapter. There you wire a worker-critic team, run a seeded simulation showing four
 look-alike reviewers miss a real flaw far more often than four independent ones, then
-draft the four parts of your own portfolio and stage your Evidence Defense.
+draft the four parts of your own portfolio and stage your evidence defense.
 
 ## Recommended AI prompts
 
@@ -162,40 +162,32 @@ spread of your trays yourself, which hands you the 84% to 92% boundary the revie
 all skipped. The lesson is blunt: agreement is worth only the independence behind it.
 Count the checks you ran yourself, never the roles that nodded.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project already has a note, a capsule, a managed AI team, and escalation rules
+you wrote down; this last step assembles all of it into the artifact you hand over and
+the defense you give.*
 
-Verify this chapter's key result, that a claim in your portfolio is one you can defend,
-with **benchmark result**, the method of comparing your output against a known-good
-reference value (see the [Verification Guide](../verification-guide.qmd) appendix). Set your measured 4.9%
-against the label's stated 5% acidity and confirm they agree within your run-to-run
-spread. Because the label was never part of your AI workflow, this is a genuine
-independence check, not one tool grading another. Pair it with **peer reasoning**: walk
-your claim boundary past a classmate and see whether your reason for stopping at "this
-bottle" survives their first question. Two independent checks beat one, and each leaves
-a ledger line.
+1. Finish the research artifact itself: your paper, note, or poster, with each claim
+   stated at its boundary and your uncertainty in the same sentence as your headline
+   number. This is the document with your name on it.
+2. Assemble your AI-management portfolio in four parts: the decomposition of loops you
+   ran, one real conflict and the override you made with its non-AI check, your
+   stopping rule and your never-delegate list, and one independence check that made an
+   agreement worth more than a head count.
+3. Write your stopping rule as a sentence you could read aloud, phrased around what
+   you have verified rather than what your tools approved. "Every surviving claim has
+   a check I ran myself" is a stopping rule. "The reviewers agreed" is not.
+4. Rehearse the defense in three movements: your claim and its boundary, the central
+   choice you made and the road you did not take, and the verification you lead with.
+   Then have someone ask you the question you least want to be asked.
+5. Read the whole artifact once more against your ledger and cut anything you cannot
+   trace to a check. What is left is what you can defend.
+6. Close the ledger with the last entry, and verify your headline claim one final time
+   with a named method from the [Verification Guide](../verification-guide.qmd). An AI
+   reviewer may run the check with you; the decision to accept or reject stays yours.
 
-## Project transfer
-
-This last chapter delivers the final project milestone: your final research chapter,
-your AI-management portfolio, and the Evidence Defense you perform this week. Bring four
-assembled parts and one staged defense. The four parts are the decomposition of AI roles
-you ran on your chapter, one real conflict-and-override with its non-AI check, your
-stopping rule and never-automate list, and one independence check that made an agreement
-worth more than a head count. The defense is three movements in order: your claim and
-its boundary, your central choice and the road you did not take, and the verification
-you lead with. Draft every piece yourself. A tool may critique it after, but the chapter
-and the defense you deliver have to be reasoned and owned by you.
-
-## Defend your decision
-
-In five or six sentences, close the course. State one claim from your own project that
-you will put your name on in the room. Give its boundary: name what your evidence does
-not establish, and if the claim rests on one sample, say so. Name one thing still
-uncertain and why. Then show your AI-management portfolio doing its job in one honest
-line: the place your roles agreed, the independent check that made the agreement real,
-and the one decision you refused to hand to any tool. That last line is what the
-examiner is listening for.
+That is the whole book. You started with a curiosity you could not yet answer, and you
+now have a finished piece of research, a record of every tool that touched it, and a
+set of claims you can defend at their edges. The tools were fast. The judgment was
+yours the entire way, and that is the part that makes it your work.
