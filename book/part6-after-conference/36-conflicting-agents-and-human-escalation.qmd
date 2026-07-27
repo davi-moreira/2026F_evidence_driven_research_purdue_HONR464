@@ -19,11 +19,14 @@ an echo, and the moment you halt the loops and decide for yourself.**
 > and the most dangerous to trust."*
 > — a **skeptical peer** at your practice defense
 
-By now you can run a small team of AI roles on your work. The seductive next thought
-is that a team is safer than one assistant, so three roles blessing your chapter must
-mean three confirmations. It does not. Three roles built the same way, reading the
-same draft with the same instructions, tend to make the same mistake, so their
-agreement is one error repeated three times. This chapter is about seeing through
+By now you can run a small team of AI roles on your work, which means you can run
+several loops at once. The seductive next thought is that a team is safer than one
+assistant, so three roles blessing your chapter must mean three confirmations. It does
+not. Three loops built the same way, reading the same draft with the same
+instructions, tend to make the same mistake, so their agreement is one error repeated
+three times. Worse, a loop that keeps running can talk itself into confidence: each
+turn polishes the last one's answer instead of testing it, and what returns to you is
+a well-defended version of the first mistake. This chapter is about seeing through
 that, and about the moment you stop counting votes and decide for yourself.
 
 ## The concept
@@ -62,6 +65,13 @@ at that moment is a **human override**: you take the pen back and make the call 
 your own words, backed by your own check, even when the roles agreed on something
 else. A decision that just counted the roles is not a decision. It is a vote, and
 votes among look-alike models are meaningless.
+
+Escalation is also the one moment where the loops have to stop. An agentic tool left
+running will keep looking for a next step, and if nobody halts it, it will take the
+decision by default, not because you delegated it but because the loop had nowhere
+else to go. So write your triggers down before you start the round: the specific
+decisions where the loops pause and wait for you. A trigger you decide in the moment,
+with three tidy reviews in front of you, is not a trigger. It is a mood.
 
 ## A worked example
 
@@ -103,8 +113,10 @@ confidence you can measure.
 
 ## Recommended AI prompts
 
-Commit your own diagnosis first, then delegate. Each prompt is a checkable job, not a
-request for a verdict.
+Commit your own diagnosis first, then delegate. Each prompt starts a loop, and with
+several loops in play the discipline is the same as with one: read the output,
+interrogate it, refine, run again, and never let a loop close a question that belongs
+to you. Each prompt is a checkable job, not a request for a verdict.
 
 **Locate the decisions that must escalate.**
 
@@ -155,7 +167,9 @@ You send your chapter to four AI roles and all four reply "no major problems." I
 like overwhelming confirmation, and it is confidently wrong. The four share a base model
 and read the same draft with the same instructions, so they share a blind spot.
 Whenever your one real flaw falls inside that blind spot, all four miss it together.
-Their unanimous "fine" is close to a single voice, not four.
+Their unanimous "fine" is close to a single voice, not four. Running each loop longer
+does not rescue you either. Four loops with the same blind spot, given more turns,
+return the same verdict with better paragraphs around it.
 
 You catch it by refusing to treat agreement as evidence. You run an independence check:
 re-read the flagged claim against your own inquiry declaration, or hand the draft to a

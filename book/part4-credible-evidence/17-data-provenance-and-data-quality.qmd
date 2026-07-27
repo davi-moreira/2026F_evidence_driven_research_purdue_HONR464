@@ -4,73 +4,97 @@ title: "Data Provenance and Data Quality"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
 
-> **The research decision.** For every fact, measurement, or source your project
-> leans on, decide whether it is solid enough to build on. You make that call by
-> tracing the value back to where it was first measured (its provenance) and by
-> judging whether it was measured well, under the conditions your work needs (its
-> quality).
+> **The research decision.** For every number, dataset, and source your project
+> leans on, decide whether it is solid enough to build on. You make that call
+> twice: once on where the value came from and whose hands it passed through, its
+> provenance, and once on whether it was produced well enough, under the right
+> definition, for the specific use you have in mind, its quality.
 
 ## Why this decision matters
 
-Picture a **thesis advisor**, the researcher who signs off on your project, reading
-the first draft of your background section:
+**The decision on the table: whether a number you did not produce yourself is
+solid enough to carry your project's weight.**
 
-> *"You wrote that this solvent dissolves 13 grams per liter at room temperature.
-> Where did that number come from? Not which website copied it. Who actually put the
-> compound in water, weighed it, and at what temperature? Bring me the paper that
-> measured it, or take the number out."*
+Picture an advisor, the researcher who will eventually sign off on your project,
+reading the first draft of your background section:
 
-A value with no traceable origin is a rumor with a decimal point. Precision is not the
-same as trust. This chapter trains you to stop treating a number or a citation as true
-because it arrived looking tidy, and to ask two questions of everything you borrow:
-where did it come from, and is it any good.
+> *"You wrote that turnout in this county was 72 percent. Where did that come from?
+> Not which website you copied it off. Who counted the ballots, and 72 percent of
+> what? Of registered voters, of adults, of adults actually eligible to vote? Bring
+> me the office that certified the count, or take the number out."*
+
+A value with no traceable origin is a rumor with a decimal point. Precision is not
+the same as trust. This chapter trains you to stop treating a number or a citation
+as true because it arrived looking tidy, and to ask two questions of everything you
+borrow: where did it come from, and is it any good for what I need it for.
 
 ## The concept
 
 **Data provenance** is the documented origin of a value and every hand it passed
-through before it reached you. Example: a solubility figure printed in your textbook,
-traced back through a 2010 review that quoted it to the lab paper that first measured
-it in 1968.
+through before it reached you. Example: a turnout figure in a news story, traced
+back through a state summary table to the county election office that certified the
+count.
 
-That chain has two kinds of links. A **primary source** is the original report where a
-value was first measured. Example: the paper whose authors actually ran the experiment.
-A **secondary source** re-reports a value it did not measure. Example: a review or
-textbook that copies the primary paper's number. A value is only as trustworthy as the
-primary source at the end of its chain.
+That chain has two kinds of links. A **primary source** is the original record
+where a value was first produced. Example: the county's certified canvass, the
+official document reporting the final vote totals. A **secondary source**
+re-reports a value it did not produce. Example: a newspaper table, an encyclopedia
+entry, or a data aggregator that copies the county's number. A value is only as
+trustworthy as the primary source at the end of its chain.
 
-**Data quality** is whether a value is fit for *your* specific use: real, measured
-rather than guessed, and obtained under the conditions your project needs. Example: a
-solubility measured at 25°C is high quality for a room-temperature question and the
-wrong value for a reaction you run at 60°C. A **mischaracterized value** is a real
-number attached to the wrong conditions or method. Example: a figure a model *computed*
-reported as if it were *measured*, or a 40°C reading cited as the 25°C value.
+**Data quality** is whether a value is fit for *your* specific use: real, produced
+by a method you can name, and defined the way your question needs. Example: a
+turnout rate computed over registered voters is high quality for a question about
+whether registered people showed up, and the wrong number for a question about how
+much of the adult population takes part. A **mischaracterized value** is a real
+number attached to the wrong definition or method. Example: a survey's
+self-reported turnout presented as an official count, or a registered-voter rate
+cited as though it covered everyone eligible.
 
-You settle both questions with one habit, the **retrieval-verification loop**: **Ask**
-a tool to surface a value and its source, **Retrieve** the primary source yourself,
-**Verify** that it exists and reports that value under those conditions, and
+Whole datasets carry the same two questions, column by column. Who produced this
+variable, who cleaned it, what did they drop, and does the definition behind the
+column match the one in your question? A file that lands in your folder with no
+answers to those questions is not yet data. It is a rumor in a spreadsheet.
+
+You settle all of it with one habit, the **retrieval-verification loop**: **Ask** a
+tool to surface a value and its source, **Retrieve** the primary source yourself,
+**Verify** that it exists and reports that value under that definition, and
 **Document** where you found it. A citation you have not opened is a lead, not a
 source, however confident the tool that handed it to you.
 
 ## A worked example
 
-You are studying greener extraction methods and you need one number: how much caffeine
-dissolves in water at 25°C. You ask an AI assistant, and it answers instantly:
-"21.7 g/L at 25°C," with an author, a year, and a real-looking journal.
+Suppose you are studying whether a local election reform changed participation, and
+you need one number to anchor your background section: turnout in a particular
+county in a recent presidential election. You ask an AI assistant and get an answer
+in about a second. Seventy-two percent, with a source that looks entirely real.
 
-You run the loop instead of copying the number. First, **provenance**. You search the
-exact title of that citation. If it resolves nowhere, the value is orphaned and you
-drop it. If the paper is real, you check whether it *measured* the solubility or merely
-quoted it from an older study, which sends you one link further back toward the primary
-paper that put caffeine in water and weighed what dissolved.
+You run the loop instead of copying the number. First, **provenance**. You search
+the exact title of the source. If it resolves nowhere, the value is orphaned and
+you drop it. If the page is real, you ask whether it *produced* that number or
+merely republished it. That question usually sends you one link further back, to
+the state's official results summary, and behind that to the county clerk's
+certified canvass, which is where the totals were actually settled.
 
-Then, **quality**. You open the primary source and read the conditions line. Was it
-25°C, your temperature, or 40°C? Was the value measured on a balance or predicted by
-software? You cross-check the figure against an independent reference, the free NIST
-Chemistry WebBook (webbook.nist.gov) or PubChem, both of which cite their own sources.
-When your citation, the primary paper, and the reference database agree on the value
-and the temperature, the number has earned a place in your project. When they disagree,
-the disagreement *is* the finding: the literature is not settled, so you report a range
-rather than a false point.
+Then, **quality**. You open the canvass and read what the percentage is *of*. Is
+the denominator registered voters, all adults, or adults eligible to vote, which
+excludes noncitizens and, in some states, people with certain felony convictions?
+Those three denominators produce three different turnout numbers for the same
+election, and the gaps between them are not small. You also ask whether the figure
+was *counted* or *estimated*. Ballots cast are counted. Eligible-population
+denominators are estimated from census data. Survey turnout is self-reported, and
+people reliably overstate whether they voted, so it is a third kind of number
+again.
+
+You cross-check against an independent source that documents its own methods. Two
+worth knowing: the United States Elections Project, which publishes
+voting-eligible-population turnout estimates and explains exactly how it builds the
+denominator, and the Census Bureau's Current Population Survey Voting and
+Registration Supplement, which reports self-reported turnout from a large national
+survey. When the certified canvass and an independent reference agree on both the
+count and the definition, the number has earned a place in your project. When they
+disagree, the disagreement *is* the finding. You report both, name the definition
+behind each, and say which one your question needs and why.
 
 ## The Colab laboratory
 
@@ -85,95 +109,96 @@ opened yourself.
 ## Recommended AI prompts
 
 Each prompt is **commit-first**: write down the value or source you already believe,
-then let the tool disagree with something of yours.
+then let the tool disagree with something of yours. Treat every one as the start of
+a loop rather than a single request. The first answer gives you leads; your second
+message names the lead that did not survive retrieval and asks again. Tools that
+run the search loop on their own will hand you a longer, tidier list of sources.
+Longer and tidier does not mean opened, and opening them is still your job.
 
 **Locate the primary source (delegable).**
 
 ```text
-Act as a chemistry literature assistant. I have this value: [paste value, units,
-conditions]. Name the primary published source that FIRST measured it, with authors,
-year, exact title, journal, and the temperature and method reported. Only list work
-you are confident exists; mark anything uncertain, and flag whether each is a primary
-measurement or a secondary re-report.
+Act as a research-data assistant. I have this figure: [paste the value, the place,
+the year, and how it is expressed]. Name the primary source that FIRST reported it,
+with the issuing body, the exact document title, the year, and the definition used,
+including what the denominator is. Only list sources you are confident exist, mark
+anything uncertain, and say for each whether it is the original record or a
+re-report.
 ```
 
-After running, verify (counters *confident fabrication*): open every citation yourself
+After running, verify (counters *confident fabrication*): open every source yourself
 before you trust it; a source you cannot retrieve is invented until it opens.
 
 **Turn borrowed numbers into a provenance table (delegable).**
 
 ```text
 Here are five numbers my project borrows: [paste them]. For each, return a row with
-the value, its stated conditions (temperature, pressure, solvent), the primary source,
-and whether the value was measured or computed. Return it as a table so I can audit
-each row on its own.
+the value, its exact definition (which population, which time window, which
+denominator), the primary source, and whether the value was counted, estimated, or
+self-reported. Return it as a table so I can audit each row on its own.
 ```
 
-After running, verify (counters *silent scope change*): read each row's conditions
-against the conditions your project actually needs; a value quietly measured at the
-wrong temperature can be handed to you as if it were yours.
+After running, verify (counters *silent scope change*): read each row's definition
+against the definition your question actually needs; a number built on a different
+population can be handed to you as if it were yours.
 
 **Red-team the number you like (delegable).**
 
 ```text
-I plan to build on this value: [paste value and source]. Act as a hostile reviewer
-and argue it is unreliable for a reaction run at [your conditions]: wrong temperature,
-computed not measured, or copied through a chain of reviews. Do not reassure me.
+I plan to build on this figure: [paste value and source]. Act as a hostile reviewer
+and argue it is unreliable for a claim about [your population and time window]:
+wrong denominator, self-reported rather than counted, or copied through a chain of
+summaries. Do not reassure me.
 ```
 
 After running, verify (counters *sycophantic agreement*): if the reviewer only praises
-your number, push back and take its strongest objection to the primary source or your
-instructor rather than trusting easy approval.
+your number, push back, then take its strongest objection to the primary source or to
+someone who knows the data better than you do rather than trusting easy approval.
 
 ::: {.callout-important title="Do not delegate"}
 Three calls stay yours. **Whether a value counts as verified** is settled by a source
-you opened, not by the tool's confidence. **Whether its measurement conditions fit
-your use** is a judgment about your specific reaction, and no lookup makes it. And
-**how much uncertainty you report** when your sources disagree is yours to state and
+you opened, not by the tool's confidence. **Whether its definition fits your use** is
+a judgment about your specific question, and no lookup makes it for you. And **how
+much uncertainty you report** when your sources disagree is yours to state and
 defend, because your name goes on the claim the number supports.
 :::
 
 ## An AI failure case
 
-You ask for the caffeine solubility and the tool returns "21.7 g/L at 25°C," with a
-citation to a real journal. Seven details look right, so it is tempting to paste it in.
-You open the primary paper instead, and the conditions line reads 40°C, not 25°C. The
-number is real. The temperature is wrong for your question, and the tool swapped it
-silently. You catch it two ways. You had written your own expectation first, so a value
-that sits oddly high for room temperature already looked suspect. Then you read the
-actual conditions line rather than the tool's summary of it, and the mismatch is plain.
-The value goes into your notes as a 40°C figure, and your 25°C question stays open.
+You ask for county turnout and the tool returns "72 percent," with a citation to a
+real state elections page. Seven details look right, so it is tempting to paste it
+straight in. You open the page instead, and the table header reads *percent of
+registered voters*, not percent of everyone eligible. The number is real. The
+denominator is the wrong one for your question, and the tool swapped it silently.
+You catch it two ways. You had written your own expectation first, so a figure that
+sits well above what you knew about participation in that county already looked
+suspect. Then you read the actual column header rather than the tool's summary of
+it, and the mismatch is plain. The value goes into your notes as a
+registered-voter rate, and your original question stays open.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your design is settled and your measurements come next. Before either can be
+trusted, this step pins down where your data actually came from.*
 
-The key result here is a value with a claimed origin, so verify it with **primary-source
-reading**: find the paper that first measured the number and read the line that reports
-it and its conditions, not a summary of that line. Because a borrowed number reaches
-your poster and your defense, treat it as high-stakes and add a second, independent
-check, a **benchmark result**: compare the value against a known-good reference such as
-the NIST Chemistry WebBook. Two independent confirmations that agree guard against
-trusting a single source that quietly copied its number from somewhere else.
-
-## Project transfer
-
-This chapter sharpens your **verified evidence and contribution map**, the milestone
-you present at Friday's studio. Every entry in its source log already needs an
-author, a year, and where you retrieved it. Add two columns: whether the entry is a
-primary source or a secondary re-report, and the conditions or scope under which its
-central value holds. A log built this way lets a skeptic trace any number you use back
-to the bench where it was made, which is what makes your gap and your contribution line
-believable.
-
-## Defend your decision
-
-In a short paragraph, take one value your project depends on and defend building on it.
-Name the value and its conditions, name the primary source you traced it to and where
-you retrieved it, and state the boundary: under what conditions the value no longer
-applies to your work. Then give your uncertainty in one sentence, including whether any
-of your sources disagree on the number. If you cannot yet name the primary source behind
-a value you are using, say so plainly. That admission is a finding about the borrowed
-number you most need to check before Friday.
+1. List every dataset, table, and borrowed number your project uses. Include the
+   ones a collaborator handed you and the ones you downloaded months ago and
+   stopped thinking about.
+2. For each, write four things: who produced it, when, from what original record,
+   and every hand it passed through on the way to you. Where a link in that chain
+   is missing, write "unknown" instead of guessing. Unknown is a finding.
+3. Open the primary source behind the entry your headline claim leans on hardest.
+   Read the line that reports the value and the line that defines it, not a summary
+   of either.
+4. Beside each entry, write its definition in your own words and mark whether it
+   matches the definition your question needs. Anything marked "no" gets dropped or
+   gets reported with the mismatch stated out loud.
+5. Save the record as a file that travels with your project, and note the date you
+   retrieved each source. Sources get revised, and a retrieval date is what lets a
+   reader tell whether they are looking at your version.
+6. Log the step in your AI Research Ledger, and verify at least one entry with a
+   named method from the [Verification Guide](../verification-guide.qmd).
+   Primary-source reading is the method this chapter is built on, and any borrowed
+   number that will reach your final write-up deserves a second one: a benchmark
+   result against an independent reference. An AI reviewer may run the check with
+   you; the decision to accept or reject stays yours.

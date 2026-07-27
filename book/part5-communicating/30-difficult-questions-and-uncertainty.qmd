@@ -4,12 +4,16 @@ title: "Difficult Questions and Uncertainty"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
 
-> **The research decision.** When a stranger at your poster asks the hardest fair
-> question, decide in advance how you will state your study's uncertainty and its
-> limits, and how you will answer without letting a single spoken word claim more
-> than your evidence supports. You prepare that answer; you never improvise it.
+> **The research decision.** Decide, before anyone asks, how you will say what your
+> study cannot show. You write the uncertainty, the limits, and the answers to the
+> hardest fair questions in advance, so the version that comes out of your mouth
+> under pressure is the one you chose rather than the one adrenaline wrote. You
+> prepare that answer; you never improvise it.
 
 ## Why this decision matters
+
+**The decision on the table: how you will state your study's uncertainty and its
+limits out loud, before a stranger forces the question.**
 
 > *"When a presenter tells me, unprompted, exactly what their study can't show, I
 > trust everything else they said more. When they insist it's airtight, I start
@@ -54,11 +58,10 @@ thing you *can* stand on, and the method that would settle it.
 
 ## A worked example
 
-You study human-computer interaction. From your app's usage logs you compared
-task-completion times for people who chose the compact toolbar against those who
-kept the expanded one. Compact users found the target page a median of six seconds
-faster. At the poster, a visitor asks the question you feared: "so the compact
-toolbar *causes* faster navigation?"
+You work with usage logs from a small software company's app. Comparing customers
+who chose the compact toolbar against those who kept the expanded one, compact users
+found the target page a median of six seconds faster. At the poster, a visitor asks
+the question you feared: "so the compact toolbar *causes* faster navigation?"
 
 Your study cannot say that. Users picked their own toolbar, so power users may
 have chosen compact and would have been fast with any layout. That self-selection
@@ -82,6 +85,12 @@ against your own project.
 
 Commit your own answer first, then delegate. Each prompt below is a checkable job,
 not a request for approval.
+
+These work best as a conversation. Ask, read, then name what the answer avoided and
+ask again. A question bank built over three rounds is noticeably harder than one
+built in a single pass. When a tool runs those rounds itself, the questions arrive
+already polished, which is why you check the list against the question you actually
+dread rather than the other way around.
 
 **List your hardest questions, to verify against your own fear.**
 
@@ -139,39 +148,22 @@ word. Your headline says "associated with." The rewrite says "improves." The kin
 of claim moved while the sentence got prettier. You keep your own verb, and log
 that the polish inflated the claim.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*You can say your claim at two lengths now; this step prepares the part of the
+conversation you do not control.*
 
-The chapter's key spoken result is your uncertainty-and-limitations delivery, and
-you verify it two independent ways from the
-[verification guide](../verification-guide.qmd).
-First, **direct calculation**: recompute the detector's flag count by hand. Read
-your sentence aloud and tally every self-erasing word ("sorry," "just,"
-"probably," "I guess"). If your hand count matches the printed count, the number is
-trustworthy; if it disagrees, the harness measured something other than your words.
-Second, **peer reasoning**: say your boundary sentence to a classmate and ask,
-"does anything I said claim more than my design shows?" A zero flag count proves
-your spine was straight, but only a second human can confirm the boundary itself
-was the right one.
-
-## Project transfer
-
-This chapter completes the second half of your **presentation package** milestone, due at
-Friday's studio. You leave with three artifacts you drafted yourself and then
-stress-tested: a ULN paragraph pairing your most threatening limitation with its
-next step, a five-question bank marked "defend" or "concede," and one honest
-don't-know written in full form for the question you fear most. At the mock
-symposium you run all three under live fire, so the first stranger who asks "does
-it cause it?" meets a prepared answer, not a flinch.
-
-## Defend your decision
-
-In four sentences, defend the answer you prepared. State your headline claim and
-its exact boundary, worded to stop where your evidence stops. Name the compass
-position your design supports and the one word you must refuse aloud to keep the
-claim honest. Give your uncertainty and limitation in ULN form, ending on the next
-step rather than the flaw. Close with the one question you still cannot fully
-answer, and the study you would run to close it.
+1. Write the five hardest fair questions someone could ask you, one for each type:
+   method, alternative explanation, why-it-matters, generalization, AI use.
+2. Draft a two-sentence answer to each and mark it defend or concede. A concede
+   answer names the narrower claim you would retreat to on the spot.
+3. Write your uncertainty-and-limitations statement in ULN form: how much your
+   number could wobble and why, the one thing your design cannot show, and the study
+   that would settle it.
+4. Read it aloud and cut every self-erasing word, replacing each with the exact
+   boundary it was hiding. Then write one honest don't-know in full, for the
+   question you dread most.
+5. Log it in your AI Research Ledger, and verify at least one prepared answer with a
+   named method from the [Verification Guide](../verification-guide.qmd), such as
+   peer reasoning. An AI reviewer may run the check with you; the decision to accept
+   or reject stays yours.
