@@ -2,115 +2,117 @@
 title: "Perguntas Descritivas, Preditivas e Causais"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Este capítulo prepara você para classificar qualquer
-> pergunta de pesquisa na **bússola da indagação** pelo seu *tipo* (descritivo ou
-> causal) e pelo seu *alcance* (os dados em mãos, uma população, ou casos ainda
-> não vistos), e depois defender essa colocação pela resposta que a pergunta
-> realmente quer, e não pelas palavras que ela por acaso carrega.
-
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do seu tópico no curso; o laboratório no Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*) cap. 4, 7, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **A decisão de pesquisa.** Onde a sua pergunta se encaixa na **bússola da
+> indagação**: que *tipo* de resposta ela quer (descritiva ou causal) e até onde
+> essa resposta precisa alcançar (os dados em mãos, uma população, ou casos que
+> você não viu). Você faz a colocação e a defende pela resposta que a pergunta de
+> fato quer, e não pelas palavras que ela por acaso carrega.
 
 ## Por que essa decisão importa
 
-Um orientador de tese, na sua primeira reunião de banca, coloca a coisa sem
-rodeios: *"Antes de aprovar um único método, eu faço você responder duas
-perguntas sobre a sua pergunta. Que tipo de resposta ela quer, e para quem essa
-resposta precisa valer?"* Tudo o que vem depois cabe dentro da caixa que essas
-duas respostas desenham. Classifique mal a sua pergunta e todo método posterior
-mira o alvo errado, porque um método que descreve o que está lá não pode dizer o
-que uma intervenção mudaria. A bússola fixa o que a sua evidência pode alegar
-antes de você gastar um semestre coletando-a.
+**A decisão em jogo: que tipo de resposta a sua pergunta quer, e para quais
+unidades essa resposta precisa valer.**
+
+Quem orienta a sua tese, na primeira reunião da banca, coloca a coisa de forma
+direta: *"Antes de aprovar um único método, eu faço você responder a duas perguntas
+sobre a sua pergunta. Que tipo de resposta ela quer, e para quem essa resposta
+precisa valer?"*. Tudo o que vem depois cabe dentro da caixa que essas duas
+respostas desenham. Classifique a sua pergunta errado e todo método posterior mira
+no alvo errado, porque um método que descreve o que está aí não consegue te dizer o
+que uma intervenção mudaria. A bússola fixa o que a sua evidência pode alegar antes
+de você gastar meses coletando-a.
 
 ## O conceito
 
 Todo projeto se estreita até uma **pergunta de pesquisa**: a única frase que a
 evidência consegue responder e sobre a qual pode estar errada, como "um segundo
-caixa encurta a fila?". Antes de escolher um método, você classifica essa
-pergunta na **bússola da indagação**, o mapa do curso que ordena qualquer
-pergunta por exatamente duas coisas. A bússola é adaptada de *Research Design in
-the Social Sciences* (Blair, Coppock e Humphreys, 2023, cap. 7).
+caixa encurta a fila?". Antes de escolher um método, você classifica essa pergunta
+na **bússola da indagação**, o mapa que ordena qualquer pergunta por exatamente
+duas coisas. A bússola é adaptada de *Research Design in the Social Sciences*
+(Blair, Coppock e Humphreys, 2023, cap. 7).
 
-O primeiro eixo é o **tipo**. Uma **pergunta descritiva** indaga o que o mundo é
-ou foi, sem necessidade de intervenção; você olha e registra, como em "que fração
-dos calouros pula o café da manhã?". Uma **pergunta causal** indaga o que mudaria
-se alguém interviesse, o que força uma comparação com um mundo que não aconteceu,
-como em "um café da manhã gratuito aumenta a frequência às aulas?".
+O primeiro eixo é o **tipo**. Uma **pergunta descritiva** indaga o que o mundo é ou
+foi, sem necessidade de intervenção; você olha e registra, como em "que fração dos
+calouros pula o café da manhã?". Uma **pergunta causal** indaga o que mudaria se
+alguém interviesse, o que força uma comparação com um mundo que não aconteceu, como
+em "um café da manhã gratuito aumenta a frequência às aulas?".
 
 O segundo eixo é o **alcance**: para quais unidades a resposta precisa valer.
 **Dados em mãos** significa apenas as unidades que você de fato observou. **Uma
 população** significa um grupo maior que a sua amostragem alcança para além dos
-dados. **Casos não vistos** significa unidades que você ainda não observou, em
-geral futuras.
+dados. **Casos não vistos** significa unidades que você ainda não observou, em geral
+futuras.
 
-Cruzar os dois eixos dá quatro posições com nome. **Descrição** é descritiva
-sobre os dados em mãos. **Generalização** é descritiva sobre uma população, e
-precisa pagar pelo seu alcance com um desenho amostral que permita às unidades
-que você viu representar as que você não viu. **Predição** é descritiva sobre
-casos não vistos; ela projeta um caso novo a partir de um padrão. Predição ainda
-é descritiva, não causal: adivinhar quem vai desistir do curso não é o mesmo que
-saber o que faz essas pessoas desistirem. **Raciocínio causal** é o tipo causal,
-a única posição que conquista a palavra "porque".
+Cruzar os dois eixos dá quatro posições com nome. **Descrição** é descritiva sobre
+os dados em mãos. **Generalização** é descritiva sobre uma população, e precisa
+pagar pelo seu alcance com um desenho amostral que permita às unidades que você viu
+representar as que você não viu. **Predição** é descritiva sobre casos não vistos;
+ela projeta um caso novo a partir de um padrão. Predição ainda é descritiva, não
+causal: adivinhar quem vai desistir do curso não é o mesmo que saber o que faz essas
+pessoas desistirem. **Raciocínio causal** é o tipo causal, a única posição que
+conquista a palavra "porque".
 
-Um último perigo. Uma **pergunta dupla** (do inglês *double-barreled*) é uma
-frase só que secretamente faz duas perguntas de tipos diferentes, como "quão
-comum é o esgotamento, e o trabalho noturno o causa?". Ela não pode ser respondida
-como uma só, e a correção é dividi-la em duas perguntas limpas, cada uma com a
-sua própria posição.
+Um último perigo. Uma **pergunta dupla** (do inglês *double-barreled*) é uma frase
+só que secretamente faz duas perguntas de tipos diferentes, como "quão comum é o
+esgotamento, e o trabalho noturno o causa?". Ela não pode ser respondida como uma
+só, e a correção é dividi-la em duas perguntas limpas, cada uma com a sua própria
+posição.
 
 ## Um exemplo trabalhado
 
-Comece com uma curiosidade cotidiana de negócios: "por que a fila do café do
-campus é tão lenta ao meio-dia?". Dê-lhe contornos e ela vira um **tema**, o
-tempo de espera nos balcões de alimentação do campus. Esse único tema esconde
-quatro perguntas diferentes, uma em cada posição da bússola. Um resultado padrão
-em pesquisa operacional diz que o tempo de espera sobe acentuadamente assim que
-os clientes chegam quase tão rápido quanto o balcão consegue atender. Com esse
-pano de fundo, você cronometra quanto doze clientes esperam para ser atendidos.
+Comece com uma curiosidade cotidiana de negócios: "por que a fila do café do campus
+é tão lenta ao meio-dia?". Dê-lhe contornos e ela vira um **tema**, o tempo de
+espera nos balcões de alimentação do campus. Esse único tema esconde quatro
+perguntas diferentes, uma em cada posição da bússola. Um resultado padrão em
+pesquisa operacional diz que o tempo de espera sobe acentuadamente assim que os
+clientes chegam quase tão rápido quanto o balcão consegue atender. Com esse pano de
+fundo, você cronometra quanto doze clientes esperam para ser atendidos.
 
-1. *"Entre estes doze clientes, qual foi a espera média?"* Isso indaga apenas o
-   que os seus números registrados dizem. É **descritiva** com alcance **dados em
+1. *"Entre estes doze clientes, qual foi a espera média?"* Isso indaga apenas o que
+   os seus números registrados dizem. É **descritiva** com alcance **dados em
    mãos**. Posição: **Descrição**.
-2. *"Entre todos os clientes deste balcão durante o almoço em dias úteis, qual é
-   a espera média?"* Mesmo tipo descritivo, mas a resposta precisa valer para uma
-   população que você não mediu, paga com um desenho amostral que faz os seus
-   doze representarem os demais. Posição: **Generalização**.
+2. *"Entre todos os clientes deste balcão durante o almoço em dias úteis, qual é a
+   espera média?"* Mesmo tipo descritivo, mas a resposta precisa valer para uma
+   população que você não mediu, paga com um desenho amostral que faz os seus doze
+   representarem os demais. Posição: **Generalização**.
 3. *"Um cliente chega amanhã ao meio-dia; quanto tempo vai esperar?"* Ainda
-   descritiva, porque você só precisa de um padrão que viaje até um caso que
-   você não viu. Posição: **Predição**. Você projeta a espera sem saber por que
-   uma fila específica anda rápido ou devagar.
+   descritiva, porque você só precisa de um padrão que viaje até um caso que você
+   não viu. Posição: **Predição**. Você projeta a espera sem saber por que uma fila
+   específica anda rápido ou devagar.
 4. *"Abrir um segundo caixa encurta a espera?"* Agora o tipo vira. Para responder
    isso você precisa comparar o mesmo horário de almoço em dois mundos, um com um
    segundo caixa e outro sem, e apenas um desses mundos de fato acontece. Essa
    comparação imaginada é a assinatura de uma pergunta **causal**. Posição:
    **Raciocínio causal**.
 
-Um movimento fecha a habilidade. Um colega de projeto oferece o que ele chama de
-uma pergunta: "quão longas são as nossas filas, e um segundo caixa as encurta?".
-Ela é **dupla**, fundindo a média descritiva da pergunta 1 com a comparação
-causal da pergunta 4, e nenhum desenho único responde às duas. Você a divide, e
-cada metade fica com a sua própria posição.
+Um movimento fecha a habilidade. Um parceiro de projeto oferece o que ele chama de
+uma pergunta só: "quão longas são as nossas filas, e um segundo caixa as encurta?".
+Ela é **dupla**, fundindo a média descritiva da pergunta 1 com a comparação causal
+da pergunta 4, e nenhum desenho único responde às duas. Você a divide, e cada metade
+fica com a sua própria posição.
 
 ## O laboratório no Colab
 
 O laboratório deste capítulo é o notebook **nb02 — From curiosity to a research
 problem: descriptive, predictive, causal**. Abra-o no Colab pelo selo acima e
-trabalhe as células junto com este capítulo. Lá você leva a sua própria
-curiosidade até uma pergunta, vê um classificador ingênuo por palavras-chave ser
-enganado por um baralho de oito perguntas, e coloca a sua própria pergunta na
-bússola no formato que o seu marco de panorama de oportunidades de pesquisa vai
-avaliar.
+trabalhe as células junto com este capítulo. Lá você leva a sua própria curiosidade
+até uma pergunta, vê um classificador ingênuo por palavras-chave ser enganado por um
+baralho de oito perguntas, e coloca a sua própria pergunta na bússola no formato que
+você vai reusar toda vez que declarar um desenho de pesquisa.
 
 ## Prompts de IA recomendados
 
-Comprometa-se primeiro com a sua própria resposta, em todos os casos. Escreva a
-sua classificação antes de abrir a ferramenta, para que a réplica dela tenha algo
-seu de que discordar.
+Comprometa-se primeiro com a sua própria resposta, em todos os casos. Escreva a sua
+classificação antes de abrir a ferramenta, para que a resposta dela tenha algo seu
+com que discordar. E trate uma discordância como o começo de um loop, não como um
+veredito: se a ferramenta atribuir uma posição diferente, pergunte que palavra da
+sua frase levou a essa leitura, reescreva a frase e pergunte de novo. Duas ou três
+passadas costumam mostrar se a discussão é sobre a sua redação ou sobre o seu
+desenho de pesquisa.
 
-Classificar, depois de você mesmo ter classificado:
+Classifique, depois de você mesmo ter classificado:
 
 ```text
 Act as a research-methods tutor. I have already classified my question:
@@ -120,12 +122,12 @@ unseen cases), name the single word that most influenced you, and say
 whether answering it needs an intervention or only a pattern. Use a table.
 ```
 
-*Depois de rodar, verifique (combate a **mudança silenciosa de escopo**):* releia
-a posição que ela devolve contra as duas definições. Se ela chamar a sua pergunta
-de causal, confirme se o seu desenho de pesquisa de fato intervém em algum
-momento; se ele apenas observa o que já existe, o tipo honesto é descritivo.
+*Depois de rodar, verifique (combate a **mudança silenciosa de escopo**):* releia a
+posição que ela devolve contra as duas definições. Se ela chamar a sua pergunta de
+causal, confirme se o seu desenho de pesquisa intervém em algum momento; se ele
+apenas observa o que já existe, o tipo honesto é descritivo.
 
-Dividir uma pergunta que você suspeita ser dupla:
+Divida uma pergunta que você suspeita ser dupla:
 
 ```text
 Here is a question I think secretly asks two things: [paste it]. Split it
@@ -134,11 +136,11 @@ not add any unit, outcome, or population that was not in my sentence.
 ```
 
 *Depois de rodar, verifique (combate a **ilusão de completude**):* uma divisão
-bem-arrumada pode discretamente descartar uma metade ou contrabandear uma nova
-variável. Confirme que as duas metades juntas cobrem a sua frase inteira e que
-nenhuma acrescentou nada que você não escreveu.
+organizada pode discretamente derrubar uma das metades ou contrabandear uma variável
+nova. Confirme que as duas metades juntas cobrem a sua frase inteira e que nenhuma
+acrescentou algo que você não escreveu.
 
-Fazer red team (revisão adversária) da sua própria colocação:
+Faça o red team (revisão adversária) da sua própria colocação:
 
 ```text
 Act as a hostile methodologist. Here is my question and the compass position
@@ -150,75 +152,64 @@ assumption that method needs, in a table.
 *Depois de rodar, verifique (combate a **concordância bajuladora** e o **método
 plausível mas errado**):* elogio sem objeção é sinal de alerta, então force a
 objeção. Para qualquer método que ela nomear, confira se os seus dados conseguem
-mesmo atender à suposição que ela lista. Uma suposição que você não consegue
-atender transforma um método confiante em um método errado.
+mesmo atender à suposição que ela lista. Uma suposição que você não consegue atender
+transforma um método confiante em um método errado.
 
 ::: {.callout-important title="Não delegue"}
 Três decisões continuam sendo suas: qual problema você vai estudar, como você
 formula a sua pergunta, e a qual posição da bússola ela pertence. Uma ferramenta
 pode oferecer um rótulo, mas só você pode decidir que resposta a sua pergunta
-verdadeiramente quer, e só você defende a colocação no estúdio. Se você ainda não
-consegue classificar a sua pergunta com clareza, isso é uma descoberta, não um
-fracasso; uma pergunta que não se acomoda em uma única caixa em geral ainda é uma
-pergunta dupla, e nomear isso é progresso.
+verdadeiramente quer, e só você consegue defender a colocação quando alguém a
+contesta. Se você ainda não consegue classificar a sua pergunta com clareza, isso é
+uma descoberta, não um fracasso; uma pergunta que não se acomoda em uma única caixa
+em geral ainda é uma pergunta dupla, e nomear isso é progresso.
 :::
 
 ## Um caso de falha da IA
 
-Suponha que o seu projeto só registre tempos de espera em balcões que já operam
-com dois caixas. Nada é jamais atribuído; você mede os balcões como os encontra.
-Você pede a um chatbot que classifique "um segundo caixa é uma forma eficaz de
-cortar a espera?". Ele vê a palavra "eficaz", lê a pergunta como causal e
-recomenda com confiança um experimento aleatorizado que atribua a cada balcão um
-ou dois caixas. Isso é fluente e bem formatado, e errado para o seu desenho de
-pesquisa, porque não existe em lugar nenhum dos seus dados um mundo de comparação
-com um caixa só. A palavra "eficaz" é uma **palavra denunciadora**, uma pista de
-superfície na qual a ferramenta confiou em vez de perguntar que resposta a
-pergunta quer. Você pega isso sempre do mesmo jeito: releia a pergunta contra as
-duas definições e pergunte se o seu desenho intervém em algum momento. Ele não
-intervém, então a pergunta é descritiva (Descrição para os balcões que você
-cronometrou, Generalização se ela alcançar todos os balcões do campus), e você
-rejeita o rótulo causal como uma mudança silenciosa de escopo.
+Suponha que o seu projeto só registre tempos de espera em balcões que já operam com
+dois caixas. Nada é jamais atribuído; você mede os balcões como os encontra. Você
+pede a um chatbot que classifique "um segundo caixa é uma forma eficaz de cortar a
+espera?". Ele vê a palavra "eficaz", lê a pergunta como causal e recomenda com
+confiança um experimento aleatorizado que atribua a cada balcão um ou dois caixas.
+Isso é fluente e bem formatado, e errado para o seu desenho de pesquisa, porque não
+existe em lugar nenhum dos seus dados um mundo de comparação com um caixa só. A
+palavra "eficaz" é uma **palavra denunciadora**, uma pista de superfície na qual a
+ferramenta confiou em vez de perguntar que resposta a pergunta quer. Você pega isso
+sempre do mesmo jeito: releia a pergunta contra as duas definições e pergunte se o
+seu desenho intervém em algum momento. Ele não intervém, então a pergunta é
+descritiva (Descrição para os balcões que você cronometrou, Generalização se ela
+alcançar todos os balcões do campus), e você rejeita o rótulo causal como uma
+mudança silenciosa de escopo.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é outra proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado pertence sempre a você, que pesquisa.
-:::
+*Você já tem um problema de pesquisa delimitado. Este passo decide que tipo de
+resposta ele está pedindo, o que fixa o que a sua evidência algum dia poderá dizer.*
 
-O resultado central do capítulo é uma classificação, que é um julgamento, então a
-checagem adequada do
-[guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)
-é o **raciocínio entre pares**. Explique a sua colocação a um colega de turma ou
-ao professor, conduzindo-o pelas duas definições, e veja se o raciocínio
-sobrevive à pergunta mais dura que eles fizerem. Faça isso depois de ter assumido
-a sua própria colocação, para que o desafio deles tenha contra o que empurrar.
-Quando a sua colocação for causal, acrescente uma segunda checagem independente:
-desenhe um **diagrama causal** do que causa o quê e confirme que o seu desenho de
-pesquisa isola o efeito, ou seja, que existe uma comparação real com um mundo que
-não aconteceu. Duas checagens que concordam valem mais que uma, e protegem contra
-a armadilha em que uma ferramenta e a sua própria rechecagem compartilham a mesma
-falha.
-
-## Transferência para o projeto
-
-Este capítulo constrói a espinha dorsal do seu marco **panorama de oportunidades
-de pesquisa**, que você apresenta no estúdio de sexta-feira. Pegue a curiosidade
-mais forte do seu mapa de curiosidades do nb01, leve-a até uma única pergunta e
-coloque essa pergunta na bússola exatamente no formato que o marco avalia: "minha
-pergunta é uma indagação [descritiva ou causal] alcançando [os dados em mãos /
-uma população / casos não vistos], porque a resposta que ela quer é [qual]".
-Depois nomeie a única alegação que essa posição permite e a única que ela proíbe.
-Cada declaração de desenho que você fizer no resto do semestre vive dentro da
-caixa que você desenha aqui.
-
-## Defenda sua decisão
-
-Em um parágrafo curto, enuncie a pergunta do seu projeto, nomeando as suas
-unidades de análise, o seu desfecho e a sua população-alvo, e depois dê a sua
-posição na bússola no formato do marco descrito acima. Defenda-a: nomeie a única
-alegação que a posição permite e o limite que ela desenha (o alcance que ela não
-alcança, e se ela conquista ou não a palavra "porque"), e encerre com uma frase
-de incerteza honesta sobre a classificação ou sobre o problema. Uma colocação sem
-limite declarado e sem incerteza declarada é incompleta, por mais confiante que
-soe.
+1. Escreva o seu problema de pesquisa em forma de perguntas, três ou quatro delas,
+   cada uma uma frase que a evidência conseguiria responder e sobre a qual poderia
+   estar errada. Problemas quase sempre escondem mais de uma.
+2. Classifique cada pergunta nos dois eixos, tipo e alcance, e nomeie a posição. Ao
+   lado de cada uma, escreva uma linha de raciocínio baseada na resposta que a
+   pergunta quer, não nas palavras que ela por acaso usa.
+3. Cace as perguntas duplas. Toda frase com um "e" escondendo uma segunda pergunta
+   de tipo diferente é dividida em duas perguntas limpas, cada uma com a sua própria
+   posição.
+4. Escolha a sua **pergunta principal**, aquela em torno da qual o seu projeto vai
+   ser construído. Escreva uma frase sobre por que ela e não as outras, e uma frase
+   nomeando uma alegação que a posição dela te proíbe, mesmo que a resposta saia
+   linda.
+5. Se a sua pergunta principal for causal, descreva o mundo de comparação de que ela
+   precisa: a versão dos acontecimentos que não aconteceu e que o seu desenho de
+   pesquisa vai ter de substituir. Se você não consegue descrever esse mundo, a sua
+   pergunta provavelmente ainda é descritiva, e é melhor descobrir isso agora.
+6. Registre a colocação no seu **AI Research Ledger** (o registro de uso de IA) e
+   verifique-a com um método nomeado do [Guia de
+   Verificação](../verification-guide.qmd). Uma classificação é um julgamento, então
+   use o raciocínio revisado por pares: percorra com alguém as duas definições e o
+   seu argumento, e veja se ele sobrevive à pergunta mais dura dessa pessoa. Se a sua
+   posição for causal, acrescente uma segunda checagem independente desenhando um
+   diagrama causal e confirmando que o efeito está de fato identificado. Uma IA
+   revisora pode rodar qualquer uma das checagens com você; a decisão de aceitar ou
+   rejeitar continua sendo sua.
