@@ -2,103 +2,130 @@
 title: "A IA como Programadora"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Quando você entrega a escrita do código de análise a
-> uma IA, você decide **qual quantidade esse código precisa calcular e sobre qual
-> conjunto de casos**, e depois verifica se ele calculou *essa* quantidade antes de
-> acreditar no número. Uma célula que roda sem erro não é um resultado que você
-> conquistou.
-
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do tópico correspondente no curso; o laboratório no Colab está no link acima. Companheiro recomendado: RDSS (o manual *Research Design in the Social Sciences*) cap. 15, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **A decisão de pesquisa.** Você decide **qual quantidade o seu código precisa
+> calcular e sobre qual conjunto de casos**, e segue decidindo isso a cada volta do
+> loop, porque a ferramenta reescreve o código toda vez que você aperta enter. Uma
+> célula que roda sem erro não é um resultado que você conquistou. É um rascunho que
+> você não leu.
 
 ## Por que essa decisão importa
 
-> *"Não me leia o número. Me diga sobre qual conjunto ele foi calculado. Se o código
-> só enxergou os prédios que já tinham sensores, você não descreveu o campus. Você
-> descreveu os sensores."*
-> — uma **revisora de segurança predial**, chamada a agir com base em um relatório
-> de qualidade do ar interno
+**A decisão em jogo: qual quantidade o seu código calcula e quais casos ele conta.**
 
-Uma IA consegue escrever o seu código de análise em segundos, e ele vai rodar. É
-exatamente aí que mora o perigo. A ferramenta escreve código fluente para a
-quantidade que ela *acha* que você pediu, sobre quaisquer casos que estejam no
-dataframe que você entregou. Cole o número impresso no seu relatório e você assinou
-embaixo de uma quantidade que nunca conferiu, sobre um conjunto que nunca escolheu. A
-revisora acima não se importa que o código estivesse limpo. Ela se importa com o que
-ele contou, e sobre quem.
+> *"Não me leia a porcentagem. Me diga sobre quais cidades ela foi calculada. Se o seu
+> código só enxergou os municípios com portal de dados abertos, você não descreveu o
+> estado. Você descreveu os portais."*
+> — uma **servidora estadual de acesso à informação**, chamada a agir sobre um
+> relatório de transparência
+
+Uma IA escreve o código da sua análise em segundos, e ele roda. É exatamente aí que
+mora o perigo. A ferramenta escreve um código fluente para a quantidade que ela *acha*
+que você pediu, sobre as linhas que estiverem no dataframe que você entregou. Cole o
+número impresso no seu relatório e você assinou embaixo de uma quantidade que nunca
+conferiu, sobre um conjunto que nunca escolheu. A servidora acima não se importa que o
+código estivesse limpo, só com o que ele contou e sobre quem.
 
 ## O conceito
 
-A ferramenta é a programadora. Você é a pesquisadora ou o pesquisador. Duas decisões
-nunca passam para o lado da programadora na mesa, e este capítulo trata de segurá-las.
+A ferramenta é a programadora. Você é quem pesquisa. Duas decisões nunca passam para o
+lado da programadora na mesa, e este capítulo trata de segurá-las.
 
 - **Resumo descritivo**: um número ou uma imagem que relata o que de fato existe nos
   casos que você consegue ver, como uma proporção, uma média ou uma distribuição
-  inteira. Exemplo: a fração de salas monitoradas cujo ar ultrapassa um limite de
-  saúde.
-- **Quantidade de interesse**: o número exato que o seu código deve produzir,
-  definido em palavras *antes* de você pedir qualquer código. Exemplo: "a proporção
-  de prédios acadêmicos cujo CO₂ no horário de pico passa de 1000 ppm".
-- **Marco amostral**: o conjunto concreto de casos que os seus dados realmente
-  cobrem, quase sempre menor do que o grupo sobre o qual a sua pergunta fala.
-  Exemplo: apenas os prédios que já têm sensores parafusados na parede.
+  inteira. Exemplo: a fração de câmaras municipais que publicam as atas das sessões em
+  até uma semana.
+- **Quantidade de interesse**: o número exato que o seu código deve produzir, definido
+  em palavras *antes* de você pedir qualquer código. Exemplo: "a proporção de
+  municípios do estado que publicam a ata da sessão em até sete dias".
+- **Marco amostral**: o conjunto concreto de casos que os seus dados de fato cobrem,
+  quase sempre menor do que o grupo sobre o qual a sua pergunta fala. Exemplo: apenas
+  as cidades que publicam por meio de um portal de dados abertos.
 - **Amostra por conveniência**: um conjunto de casos reunido porque era fácil de
-  alcançar, e não sorteado para representar uma população. Exemplo: esses prédios com
-  sensores, que tendem a ser os mais novos e mais bem ventilados do campus.
+  alcançar, e não sorteado para representar uma população. Exemplo: essas cidades com
+  portal, que tendem a ser as maiores e mais bem estruturadas do estado.
 
 Aqui está a armadilha que este capítulo fecha. Uma ferramenta pode calcular uma
 proporção impecável sobre o marco amostral errado, e o código ainda assim termina com
 um sinal verde. **Uma execução limpa não é um resultado correto**: uma célula pode
 executar sem erro nenhum e mesmo assim calcular um número diferente daquele de que a
-sua pergunta precisa. Então duas coisas são suas, e a programadora não pode assumi-las.
-Primeiro, você define a quantidade de interesse e o marco amostral sobre o qual ela é
-calculada, em palavras simples, antes de delegar. Segundo, você verifica se o código
-devolvido calculou *essa* quantidade sobre *esse* marco, e não um vizinho plausível.
+sua pergunta precisa.
+
+### Programar com IA é um loop, não um pedido de desejo
+
+Ninguém consegue código de análise funcionando a partir de um prompt só, e você não
+deveria tentar. Programar com IA de verdade é um **loop de IA**, o ciclo prompt →
+resposta → interrogação → refinamento → nova execução: você pede, lê o que voltou,
+interroga, refina e roda outra vez. Ferramentas agênticas hoje rodam esse loop
+sozinhas. Elas escrevem, executam, leem o erro, corrigem o código, rodam de novo e lhe
+entregam um estado final arrumadinho, com um parágrafo sobre como tudo correu bem.
+
+O loop é um ganho real de velocidade. Também é onde o seu marco amostral se perde.
+Qualquer volta pode acrescentar um filtro, derrubar um join ou buscar outra coluna, e o
+código que você finalmente lê pode não ser o código que você especificou três voltas
+atrás. Nada anuncia a mudança. O número apenas fica mais bonito.
+
+Por isso a verificação acontece a cada ciclo, não a cada sessão. Toda vez que o código
+muda, você faz as mesmas duas perguntas de novo: qual quantidade, sobre quais casos?
+Quando uma ferramenta roda os ciclos por você, obrigue-a a entregar as escolhas que fez
+pelo caminho, e leia o código em vez do resumo do código. Duas coisas são suas, e a
+programadora não pode assumi-las. Primeiro, você define a quantidade de interesse e o
+marco amostral em palavras simples, antes de delegar. Segundo, você confirma que o
+código diante de você *neste momento* calcula essa quantidade sobre esse marco, e não
+um vizinho plausível.
 
 ## Um exemplo trabalhado
 
-Você quer descrever a qualidade do ar interno no campus para responder à pergunta
-*qual proporção dos prédios acadêmicos ultrapassa o limite saudável de CO₂ durante o
-horário de aula?* Você tem uma planilha com leituras de sensores e pede a uma IA que
-escreva o código Python que devolve a proporção acima de 1000 ppm.
+Você quer responder uma pergunta simples sobre o seu estado: *qual proporção das
+câmaras municipais publica a ata das sessões em até sete dias?* Você tem uma planilha
+raspada dos sites das prefeituras e pede a uma IA que escreva o Python que devolve a
+proporção que publica no prazo.
 
-Ela escreve seis linhas limpas. Elas rodam. A saída diz que **6% dos prédios
-ultrapassam o limite**, e a tentação é escrever "o ar do campus está bem". Em vez
-disso, você lê o que o código fez, e duas coisas saltam aos olhos. O dataframe contém
-apenas os oito prédios que já carregam sensores permanentes, os mais novos e mais bem
-ventilados do campus. Isso é uma **amostra por conveniência** representando
-silenciosamente o campus inteiro. O código também chama `.dropna()`, e as linhas
-descartadas são as leituras em que sensores baratos falharam, concentradas nas salas
-mais antigas e mais lotadas. Os 6% descrevem os melhores prédios com as piores salas
-apagadas.
+**Volta um.** Ela escreve seis linhas limpas. Elas rodam. A saída diz que **95% das
+câmaras publicam as atas no prazo**, e a tentação é escrever "o cumprimento é alto". Em
+vez disso, você lê o que o código fez.
 
-Volte a ancorar na sua **quantidade de interesse**: a proporção sobre *todos* os
-prédios acadêmicos da lista da secretaria acadêmica, mantidas as leituras de horário
-de pico. Recalcule sobre a lista completa, sinalize as salas com sensor falho em vez
-de descartá-las, e a proporção honesta fica muito mais alta. A ferramenta escreveu
-código correto para a pergunta errada. Quem fez pesquisa foi você, ao decidir o que o
-código tinha permissão de contar.
+**Volta dois.** Você interroga: quais linhas estão aqui dentro, e o que você descartou?
+Duas coisas aparecem. O dataframe guarda apenas os 40 municípios que publicam por um
+portal de dados abertos, os maiores e mais bem estruturados do estado. São 240 na lista
+oficial. Isso é uma **amostra por conveniência** representando todos eles em silêncio.
+O código também chama `.dropna()`, e as linhas descartadas são justamente as cidades
+onde o raspador voltou vazio, ou seja, os lugares pequenos com o menor quadro de
+servidores. Os 95% descrevem as cidades mais bem estruturadas com os piores registros
+apagados.
+
+**Volta três.** Você reancora na sua **quantidade de interesse**: a proporção sobre
+*todos* os municípios da lista estadual, com os registros irrecuperáveis sinalizados em
+vez de descartados. Você refina o prompt para dizer exatamente isso, roda de novo, e o
+quadro muda. No máximo um em cada seis municípios está *confirmado* como publicando no
+prazo, e sobre a maior parte do estado você simplesmente não sabe. Esse "não sei" é um
+achado, não uma lacuna para disfarçar.
+
+Agora repare no que teria acontecido se uma ferramenta agêntica tivesse rodado as três
+voltas sozinha. Ela teria entregado os 95% polidos com um parágrafo confiante, e a
+decisão que encolheu o seu estado para 40 cidades teria acontecido dentro de um passo
+que você nunca viu. A ferramenta escreveu um código correto para a pergunta errada.
+Você fez a pesquisa ao decidir o que o código tinha permissão de contar.
 
 ## O laboratório no Colab
 
 O laboratório deste capítulo é o notebook **nb05 — Observational descriptive
-research** (pesquisa descritiva observacional). Abra-o no Colab pelo selo acima. Lá
-você entrega células ao Gemini e faz com que ele conquiste a sua confiança: você pede
-que ele explique, linha por linha, por que dez amostras aleatórias se agrupam em torno
-da média verdadeira de um marco amostral enquanto um canal de conveniência erra por
-quase doze anos, e depois confere o intervalo que ele cita contra os números que a sua
-própria célula de fato imprimiu. Essa distância entre a história fluente da ferramenta
-e a sua saída impressa é a lição deste capítulo, rodando ao vivo.
+research**. Abra no Colab pelo selo acima. Lá você entrega células ao Gemini e o faz
+merecer a sua confiança: você pede que ele explique, linha por linha, por que dez
+amostras aleatórias se agrupam em torno da média verdadeira de um marco amostral
+enquanto um canal de conveniência erra por quase doze anos, e depois confere o
+intervalo que ele cita contra os números que a sua própria célula de fato imprimiu.
+Essa distância entre a história fluente da ferramenta e a sua saída impressa é a lição
+deste capítulo, rodando ao vivo.
 
 ## Prompts de IA recomendados
 
-Comprometa-se primeiro com a sua própria resposta, depois delegue. Cada prompt é uma
-tarefa conferível, não um pedido de veredito.
+Comprometa-se com a sua própria resposta primeiro, depois delegue. Cada prompt é uma
+tarefa conferível, não um pedido de veredito, e cada um é uma volta de um loop que você
+segue rodando até o código dizer o que você quis dizer.
 
-**Localize a expressão padrão da linguagem.**
+**Localize a expressão padrão.**
 
 ```text
 Act as a Python data assistant. I need the share of rows above a threshold,
@@ -106,94 +133,94 @@ computed only over a subset I will name. Before any code, name the standard pand
 idiom for a threshold share over a filtered subset and the exact argument that
 controls whether missing values are dropped. Only name functions you are sure exist.
 ```
-Depois de rodar, verifique: abra a documentação do pandas e confirme que o método e
-esse argumento existem e têm o comportamento padrão descrito. Contra-ataca a
-*fabricação confiante* (um método ou argumento inventado chega com a mesma confiança
-de um real).
+Depois de rodar, verifique: abra a documentação do pandas e confirme que o método e o
+argumento existem e funcionam por padrão como foi descrito. Contra-ataca a *fabricação
+confiante* (um método ou argumento inventado chega com a mesma confiança de um real).
 
-**Delegue e depois exija as escolhas de volta em forma de tabela.**
+**Delegue e depois exija as escolhas de volta em uma tabela.**
 
 ```text
-Write code that returns the share of academic buildings whose peak-hour CO2 exceeds
-1000 ppm. Then return a table of every choice you made: which rows you kept, whether
-you dropped any and why, the exact set the share is computed over, and whether you
-reported a share or an average.
+Write code that returns the share of municipalities that posted council minutes
+within seven days of the meeting. Then return a table of every choice you made:
+which rows you kept, whether you dropped any and why, the exact set the share is
+computed over, and whether you reported a share or an average.
 ```
 Depois de rodar, verifique: confira a contagem de linhas antes e depois do código e
 confirme que o conjunto sobre o qual ele calculou é aquele que a sua pergunta nomeia.
 Contra-ataca a *mudança silenciosa de escopo* (uma proporção calculada discretamente
-sobre os prédios com sensores, e não sobre o campus).
+sobre as cidades com portal, e não sobre o estado).
 
-**Faça red team (revisão adversária) no número.**
+**Faça o loop mostrar o serviço.**
 
 ```text
-Here is my claim: "6% of academic buildings exceed the CO2 threshold." Act as a
-hostile facilities reviewer. Name every way this code could have counted the wrong
-quantity or this share could mislead. Do not rewrite the claim for me.
+You revised this code three times. For each revision, tell me in one line what changed
+about which rows are included or excluded, and which revision changed the set the
+number is computed over. Show me the code, not a summary of it.
 ```
-Depois de rodar, verifique: se a ferramenta apenas elogiar o número, insista e exija o
-pior defeito, um só. Contra-ataca a *concordância bajuladora* (elogio que revisa o seu
-ego, não a sua evidência).
+Depois de rodar, verifique: coloque a primeira e a última versão lado a lado e confirme
+que os filtros batem com o que a ferramenta relatou. Contra-ataca a *mudança silenciosa
+de escopo* na sua forma mais sorrateira, um marco amostral que se estreita uma revisão
+por vez.
+
+**Faça o red team do número.**
+
+```text
+Here is my claim: "95% of city councils post their minutes within seven days."
+Act as a hostile open-records reviewer. Name every way this code could have counted
+the wrong quantity or this share could mislead. Do not rewrite the claim for me.
+```
+Depois de rodar, verifique: se ela apenas elogiar o número, insista e exija a pior
+falha, uma só. Contra-ataca a *concordância bajuladora* (elogio que revisa o seu ego,
+não a sua evidência).
 
 ::: {.callout-important title="Não delegue"}
 Você define **qual quantidade o código calcula** e **sobre qual conjunto de casos ele
-roda**, e você decide **o que o número tem permissão de afirmar**. A ferramenta pode
-escrever o filtro, a agregação e o gráfico, mas não pode decidir que os prédios com
-sensores falam pelo campus, nem que uma proporção com as piores salas descartadas é
-honesta. A frase final, o seu marco amostral e o seu limite são seus.
+roda**, e você decide **o que o número tem permissão de alegar**. A ferramenta pode
+escrever o filtro, a agregação e o gráfico, e pode rodar o próprio loop até tudo ficar
+limpo. Ela não pode decidir que 40 cidades com portal falam por um estado de 240, nem
+que uma taxa de cumprimento com as cidades inalcançáveis apagadas é honesta. A frase
+final é sua, com o marco amostral e o limite dela.
 :::
 
 ## Um caso de falha da IA
 
-Você pede a proporção acima do limite e a ferramenta devolve um código arrumadinho que
-imprime, com toda a confiança: "**6% dos prédios ultrapassam 1000 ppm, a qualidade do
-ar está dentro das normas.**" O código não dá erro nenhum e se lê muito bem. A
-armadilha está enterrada em duas linhas: o dataframe de entrada já estava limitado aos
-prédios com sensores instalados, e um `.dropna()` removeu em silêncio as salas onde os
-sensores falharam. A proporção é aritmética de verdade sobre o conjunto errado.
+Você pede a proporção de publicações no prazo e a ferramenta devolve um código
+arrumadinho que imprime, com total confiança, "**95% das câmaras publicam as atas no
+prazo. O cumprimento é alto.**" O código não tem erro nenhum e é bonito de ler. A
+armadilha está enterrada em duas linhas: o dataframe de entrada já estava limitado às
+cidades com portal de dados abertos, e um `.dropna()` removeu em silêncio as cidades
+onde nenhuma data de publicação voltou. A proporção é aritmética verdadeira sobre o
+conjunto errado.
 
-Você pega o problema lendo o código, não o resumo dele. Imprimir o formato do dataframe
-mostra oito prédios, não o campus. Imprimir a contagem de linhas antes e depois do
-`.dropna()` mostra quantas leituras sumiram, e inspecionar quais revela as salas pior
-ventiladas. Recalcular sobre a lista completa de prédios da secretaria acadêmica, com
-as falhas sinalizadas em vez de descartadas, derruba os tranquilizadores 6%. Um sinal
-verde certificou que o código rodou, jamais que ele respondeu à sua pergunta.
+Você pega isso lendo o código, não o resumo dele. Imprimir o formato do dataframe
+mostra 40 municípios, não 240. Imprimir a contagem de linhas antes e depois do
+`.dropna()` mostra quantas cidades sumiram, e olhar quais são revela os menores governos
+do estado. Recalcule sobre a lista inteira, sinalize os registros irrecuperáveis em vez
+de apagá-los, e os tranquilizadores 95% desabam. Um sinal verde certificou que o código
+rodou, nunca que ele respondeu à sua pergunta.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, a pesquisadora ou o pesquisador.
-:::
+*Seu projeto tem um desenho de pesquisa, uma fonte de dados documentada e mensurações
+definidas. Este passo transforma tudo isso nos seus primeiros números de verdade, e no
+hábito de nunca confiar em código que você não leu.*
 
-Verifique o resultado central deste capítulo, a proporção acima do limite, com
-**código alternativo** do [guia de
-verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-recalcule a mesma quantidade de outro jeito e compare. Se a ferramenta usou um
-`.mean()` filtrado sobre uma máscara booleana, reconte com um `groupby` sobre o mesmo
-conjunto e confirme que as duas proporções batem no dígito. Depois pegue a armadilha
-silenciosa: imprima o formato do dataframe e a contagem de linhas antes e depois de
-qualquer descarte, para que uma linha desaparecida não consiga se esconder dentro de um
-número limpo. Dois caminhos até uma proporção é um resultado verificado. Dois caminhos
-até duas proporções significa que o que você mediu foi o código, não o campus.
-
-## Transferência para o seu projeto
-
-Esta é a metade de código da sua **auditoria de desenho descritivo observacional**, a
-etapa correspondente a este tópico no seu projeto. Antes de delegar o código que
-produz qualquer número descritivo do seu projeto, escreva a sua quantidade de interesse
-e o seu marco amostral em uma frase cada, do mesmo jeito que a nb05 pede que você nomeie
-a população-alvo, a população acessível, o marco amostral e a amostra. Depois verifique
-se o código devolvido calculou essa quantidade sobre esse marco, e registre a conferência
-de contagem de linhas que provou isso no seu **AI Research Ledger** (registro de pesquisa
-com IA): a tarefa, a ferramenta, a decisão, a conferência nomeada. Esse número verificado
-é o que sustenta a sua sequência de marco e amostra quando você conduzir uma pessoa
-cética por ela no estúdio de sexta-feira.
-
-## Defenda sua decisão
-
-Em quatro frases, defenda um número descritivo cujo código você delegou. Nomeie a
-quantidade de interesse exata e o conjunto de casos sobre o qual o código rodou. Diga
-qual foi a verificação que confirmou que o código calculou *essa* quantidade, e não uma
-vizinha. Dê o limite, ou seja, o que o número não estabelece sobre a população além do
-seu marco amostral, e encerre com a incerteza que resta e a próxima conferência que
-você faria para fechá-la.
+1. Escreva a sua quantidade de interesse em uma frase, e o marco amostral sobre o qual
+   ela roda em uma segunda. Seja concreto: não "meus dados", mas a lista exata de casos
+   que uma pessoa estranha ao projeto conseguiria reconstruir sem perguntar nada a você.
+2. Peça a uma ferramenta de IA o código que calcula essa quantidade sobre esse marco.
+   Salve a transcrição. Esta é a volta um de um loop, não uma resposta pronta.
+3. Leia o código devolvido linha por linha e pergunte o que cada linha remove.
+   Interrogue todo filtro, todo join e toda chamada que trata valores faltantes. Depois
+   refine o seu prompt e rode o loop de novo, quantas vezes forem necessárias.
+4. Imprima o formato dos dados sobre os quais o número foi calculado, e a contagem de
+   linhas antes e depois de qualquer coisa que possa descartar linhas. Um número sem a
+   contagem de linhas ainda não é um resultado.
+5. Escreva uma frase dizendo o que este número *não* cobre: os casos que o seu marco
+   amostral deixou de fora, e o que você portanto não pode dizer sobre eles.
+6. Registre este primeiro número no seu **AI Research Ledger** (registro de pesquisa
+   com IA), e verifique-o com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd). **Código alternativo** é a escolha
+   natural aqui: recalcule a mesma quantidade por um segundo caminho e confirme que os
+   dois caminhos dão uma resposta só. Uma IA revisora pode rodar a checagem com você; a
+   decisão de aceitar ou rejeitar continua sendo sua.

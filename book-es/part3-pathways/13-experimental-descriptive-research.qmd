@@ -2,29 +2,29 @@
 title: "Investigación experimental descriptiva"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Decides si un diseño que asigna un estímulo
-> al azar responde una pregunta **descriptiva**, midiendo una característica
-> latente que ya existe, o una **causal**, y defiendes esa clasificación y
-> nombras los artefactos que tu medición todavía tiene que descartar.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria del tema del curso al que corresponde; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (el manual *Research Design in the Social Sciences*) cap. 17, gratuito en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **La decisión de investigación.** Una moneda al aire no decide qué tipo de
+> pregunta hiciste. Tú decides si tu estudio aleatorizado está **midiendo** una
+> propiedad que el mundo ya tiene o **probando** una intervención que
+> implementarías, y nombras los artefactos que tu medición todavía tiene que
+> descartar antes de que el número signifique algo.
 
 ## Por qué importa esta decisión
 
-Imagina que tu asesor de investigación se detiene en una sola línea de tu página
-de métodos. "Aleatorizaste", dice, "así que escribiste *causa*. Muéstrame primero
-la pregunta." La asignación aleatoria se siente causal por reflejo, y ese reflejo
-es la trampa que este capítulo desactiva. Lo que fija el tipo de una pregunta es
-la **pregunta**, no el **procedimiento**. Dirige una moneda al aire hacia "¿qué
-cambiaría si implementáramos esto?" y tienes un estudio causal; dirige esa misma
+**La decisión sobre la mesa: si el número que reporta tu estudio aleatorizado es
+una propiedad que el mundo ya tiene, o un efecto que saldrías a provocar.**
+
+Imagina a quien te asesora deteniéndose en una sola línea de tu página de métodos.
+"Aleatorizaste", te dice, "así que escribiste *causa*. Muéstrame primero la
+pregunta." La asignación aleatoria se siente causal por reflejo, y ese reflejo es
+la trampa que este capítulo desactiva. Lo que fija el tipo de una pregunta es la
+**pregunta**, no el **procedimiento**. Dirige una moneda al aire hacia "¿qué
+cambiaría si implementáramos esto?" y tienes un estudio causal. Dirige esa misma
 moneda hacia "¿cuánto de esta propiedad hay en el mundo ahora mismo?" y tienes una
-medición. Etiqueta la segunda como si fuera la primera y afirmas de más: prometes
-una palanca que tu evidencia nunca probó, y un lector cuidadoso deja de confiar en
-el resto de tu trabajo.
+medición. Etiqueta la segunda como si fuera la primera y afirmas de más. Prometes
+una palanca que tu evidencia nunca probó, y quien lee con cuidado deja de confiar
+en el resto de tu trabajo.
 
 ## El concepto
 
@@ -59,16 +59,17 @@ igual a todas las unidades, y por eso estos se diseñan aparte.
 
 ## Un ejemplo resuelto
 
-Un equipo de streaming de música quiere una propiedad latente de su estante
-"Recomendado para ti": cuánto del conteo de reproducciones de una canción viene de
-*dónde está colocada* frente a qué tan bien coincide con quien escucha. Ese número
-no está impreso en ninguna parte, así que construyen un instrumento. Para una
-porción aleatoria de sesiones insertan una canción sonda fija, con audio idéntico y
-portada idéntica, y asignan su posición en el estante al azar entre seis lugares;
-luego registran la tasa de reproducción por lugar. Como la canción nunca cambia y
-el lugar se reparte al azar, la dispersión de la tasa de reproducción entre lugares
-aísla el tirón de la posición por sí sola. El estimando es la **curva de atención**
-del estante: cuánta atención acapara cada rango, descrita para estas sesiones.
+Un equipo de streaming de música quiere precisar una propiedad latente de su
+estante "Recomendado para ti": cuánto del conteo de reproducciones de una canción
+viene de *dónde está colocada* frente a qué tan bien coincide con quien escucha.
+Ese número no está impreso en ninguna parte, así que construyen un instrumento.
+Para una porción aleatoria de sesiones insertan una canción sonda fija, con audio
+idéntico y portada idéntica, y asignan su posición en el estante al azar entre seis
+lugares; luego registran la tasa de reproducción por lugar. Como la canción nunca
+cambia y el lugar se reparte al azar, la dispersión de la tasa de reproducción
+entre lugares aísla el tirón de la posición por sí sola. El estimando es la **curva
+de atención** del estante: cuánta atención acapara cada rango, descrita para estas
+sesiones.
 
 Aquí es donde muerde la decisión. Dentro del estudio sí existe un efecto causal del
 lugar sobre los clics, pero la pregunta del equipo era descriptiva, y el reporte
@@ -95,7 +96,12 @@ vuelva a caer sobre el constructo que debía reportar.
 ## Prompts de IA recomendados
 
 Comprométete primero con tu propia respuesta y luego delega. Cada prompt de abajo
-termina con una comprobación que corres tú.
+termina con una comprobación que corres tú. Y trata cada uno como la jugada de
+apertura de un **bucle de IA**, no como un pedido de un solo tiro: el ciclo prompt →
+respuesta → interrogación → refinamiento → nueva ejecución. Lees la salida, discutes
+la parte más débil, afinas el prompt y lo vuelves a correr. Hoy las herramientas
+agénticas corren varias vueltas de ese bucle por su cuenta, lo que no retira tu
+comprobación. Solo significa que entre una comprobación y otra llega más salida.
 
 ```text
 Act as a literature scout. List three real, published experiments used to MEASURE
@@ -106,7 +112,7 @@ work you are confident exists; mark any row you are unsure about.
 ```
 Después de ejecutarlo, verifica: abre una base de datos y recupera cada estudio por
 tu cuenta; cualquier fila que no puedas encontrar en un minuto es una **fabricación
-confiada**, así que elimínala.
+confiada** (*confident fabrication*), así que elimínala.
 
 ```text
 Here is code that estimates an interface's attention curve as the difference in
@@ -150,42 +156,30 @@ señales son "causa", "debería" y el "aumento" imaginado de una intervención q
 nunca corriste. Recházala y reescribe la afirmación acotada a las unidades que
 observaste.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pide a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, la persona que investiga.
-:::
+*Tu diseño ya está declarado y diagnosticado. Este paso le hace una pregunta más
+estrecha: ¿tu estudio está midiendo una propiedad que el mundo ya tiene y, si es
+así, puede hacerlo con honestidad?*
 
-Verifica el resultado clave del laboratorio por **simulación**, el método de la guía
-de verificación para comprobar cómo se comporta un procedimiento en vez de un número
-fijo. Construye un mundo de juguete donde tú fijas el valor latente verdadero, corre
-el estimador y confirma que la estimación cae sobre el valor que sembraste. Luego
-corre una **prueba de falsación**: fija el tirón verdadero de la posición
-exactamente en cero y vuelve a correrla. Un instrumento honesto devuelve alrededor
-de cero. Si en cambio tu flujo de procesamiento reporta una curva de atención donde
-no sembraste ninguna, esa curva es un efecto del instrumento que creó tu registro,
-no una propiedad de la interfaz, así que hay que diseñarla fuera antes de confiar en
-cualquier número real.
-
-## Transferencia al proyecto
-
-Este capítulo es la columna vertebral de tu **hito de protocolo de medición
-experimental y adquisición de datos**. Nombra la característica latente que tu
-proyecto debe medir, el diseño que la revela y la cantidad descriptiva exacta que
-reporta para unidades nombradas. Luego escribe el plan de artefactos: el efecto de
-demanda y el efecto del instrumento que más temes, cada uno con el rediseño que lo
-protege. Agrega la frontera de dos oraciones que enuncie la afirmación descriptiva
-que autorizas con su incertidumbre y la oración causal que te prohíbes a ti mismo.
-Esas piezas son las que le recorres a alguien escéptico en el estudio del viernes, y
-alimentan el resumen que pasa su filtro ahí.
-
-## Defiende tu decisión
-
-Enuncia la decisión que habilita este capítulo y defiéndela para tu propio proyecto.
-Nombra tu característica latente y el estímulo aleatorizado que la revela; luego di
-en una oración por qué la indagación es **descriptiva**, una propiedad que ya existe,
-y no **causal**, el efecto de una intervención que implementarías. Cierra con la
-frontera y la incertidumbre: la afirmación descriptiva que tu diseño autoriza, el
-peor artefacto que no has descartado del todo y el intervalo o la salvedad alrededor
-de tu número. Una declaración sin frontera y sin incertidumbre todavía no es una
-defensa.
+1. Lee tu pregunta guía en voz alta y subraya el verbo. ¿Pregunta cuánto de algo ya
+   existe allá afuera, o qué cambiaría si intervinieras? Escribe la respuesta en una
+   línea. Esa línea decide si esta ruta es la tuya.
+2. Si lo es, nombra la característica latente que tu proyecto tiene que revelar, la
+   propiedad que nadie publica en ninguna parte, y el estímulo controlado que
+   asignarás al azar para revelarla.
+3. Escribe tu estimando en una oración: la cantidad exacta, para qué unidades,
+   descrita tal como está. Debajo, escribe la oración causal que te prohíbes a ti
+   mismo, la que empieza con "si nosotros".
+4. Nombra el efecto de demanda y el efecto del instrumento que más temes, cada uno
+   con el rediseño que lo descarta.
+5. Si esta ruta no es la tuya, corre igual los pasos 2 a 4 como ejercicio, tratando
+   tu pregunta como si tuvieras que medirla en vez de intervenir. Lo que se rompe es
+   tu evidencia de que la ruta que elegiste encaja mejor. Escribe eso en dos líneas.
+6. Registra el paso en tu AI Research Ledger (registro de investigación con IA) y
+   verifica al menos una salida con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd). Una prueba de falsación encaja bien con
+   este capítulo: fija el efecto verdadero exactamente en cero en una versión de
+   juguete de tu diseño y confirma que tu instrumento reporta alrededor de cero. Una
+   IA revisora puede hacer la comprobación contigo; la decisión de aceptar o
+   rechazar es tuya.

@@ -2,108 +2,115 @@
 title: "Declarar y diagnosticar un diseño de investigación"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Si tu diseño de investigación es lo bastante fuerte
-> para llevarlo a cabo, decidido simulándolo antes de recoger un solo dato, leyendo con
-> qué frecuencia acierta la verdad y nombrando el único cambio que más lo mejora.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de referencia del curso) cap. 2, 5 y 10, gratis en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **La decisión de investigación.** Si el diseño que escribiste es lo bastante fuerte
+> para correrlo, decidido antes de recoger un solo dato: lo simulas, lees con qué
+> frecuencia aterriza en la verdad y nombras el único cambio que más lo mejora.
+> Después lo corres, lo arreglas o reduces lo que prometiste.
 
 ## Por qué importa esta decisión
 
-Imagina a una metodóloga de tu comité leyendo tu plan. Hace una sola pregunta: *«¿Con
-qué frecuencia este diseño exacto captaría el efecto real si lo corrieras mil veces?»*
-Si tu respuesta es «nunca lo comprobé», ella se detiene ahí. Un diseño puede leerse
-hermoso, con una pregunta afilada y una comparación limpia, y aun así devolver «aquí no
-hay nada» nueve de cada diez veces, o aterrizar con seguridad en el número equivocado
-siempre. Este capítulo te deja averiguarlo barato, en simulación, para que un semestre
-que habrías gastado recogiendo datos condenados se vaya en cambio a un diseño que sí
-puede responder tu pregunta.
+**La decisión sobre la mesa: si este diseño es lo bastante fuerte para correrlo,
+juzgado antes de gastar nada en recoger datos.**
+
+Imagina a la metodóloga de tu comité leyendo tu plan. Hace una sola pregunta: *«¿Con
+qué frecuencia atraparía este diseño exacto el efecto real si lo corrieras mil
+veces?»* Si tu respuesta es «nunca lo comprobé», ahí se detiene. Un diseño puede
+leerse hermoso, con una pregunta afilada y una comparación limpia, y aun así volver
+con «aquí no hay nada» nueve de cada diez veces, o aterrizar con seguridad en el
+número equivocado todas las veces. Este capítulo te deja descubrirlo barato, en
+simulación, para que los meses que habrías gastado recogiendo datos condenados se
+vayan a un diseño que sí puede responder tu pregunta.
 
 ## El concepto
 
 En el capítulo 9 construiste las cuatro partes de un diseño. Este capítulo las pone a
-prueba con un ciclo de tres pasos que el curso toma prestado de su texto RDSS
-(*Research Design in the Social Sciences: Declare, Diagnose, Redesign*).
+prueba con un ciclo de tres pasos que este libro toma de RDSS (*Research Design in the
+Social Sciences: Declare, Diagnose, Redesign*).
 
 **Declarar** significa escribir tus cuatro partes del diseño como algo que una
-computadora puede correr: un modelo que genera datos falsos, una indagación que puede
-calcularse sobre esos datos falsos, un plan para muestrear y asignar condiciones, y una
-regla para convertir datos en una estimación. *Ejemplo:* código que inventa 40 personas
-usuarias, lanza una moneda para darle a cada una una interfaz nueva y resta los
-promedios de los dos grupos.
+computadora pueda correr: un modelo que genera datos falsos, una indagación que se
+puede calcular sobre esos datos falsos, un plan de muestreo y de asignación de
+condiciones, y una regla para convertir datos en una estimación. *Ejemplo:* código que
+inventa 40 personas compradoras, lanza una moneda para darle a cada una la nueva
+pantalla de pago y resta los promedios de los dos grupos.
 
 **Diagnosticar** significa correr ese diseño declarado muchas veces sobre mundos
-simulados nuevos y observar cómo se comporta su estimación. *Ejemplo:* corre el estudio
-del lanzamiento de moneda 2,000 veces y junta las 2,000 estimaciones. Tres números
-resumen el montón.
+simulados frescos y observar cómo se comporta su estimación. *Ejemplo:* corre el
+estudio de la moneda 2.000 veces y recoge las 2.000 estimaciones. Tres números resumen
+el montón.
 
-El **sesgo** es la distancia promedio entre tu estimación y la verdad a lo largo de las
-corridas; un diseño es insesgado cuando sus estimaciones se centran en la respuesta
-verdadera. *Ejemplo:* si la verdad es 2 y tus estimaciones promedian 2.0, el sesgo es
-cerca de cero. El sesgo es una inclinación sistemática, y más datos nunca lo reducen.
+El **sesgo** es la distancia promedio entre tu estimación y la verdad a lo largo de
+las corridas; un diseño es insesgado cuando sus estimaciones se centran en la
+respuesta verdadera. *Ejemplo:* si la verdad es 2 y tus estimaciones promedian 2,0, el
+sesgo es cercano a cero. El sesgo es una inclinación sistemática, y más datos nunca lo
+achican.
 
-La **varianza** es cuánto se tambalea la estimación de una corrida a la siguiente.
+La **varianza** es cuánto se bambolea la estimación de una corrida a la siguiente.
 *Ejemplo:* estimaciones que oscilan entre -5 y +9 alrededor de un valor verdadero de 2
-tienen varianza alta. Más datos *sí* reducen esto.
+tienen varianza alta. Más datos sí achican esto.
 
 La **potencia** es con qué frecuencia el diseño detecta un efecto real. *Ejemplo:* un
-diseño que encuentra el efecto en 8 de 100 corridas tiene 8% de potencia, lo cual es
+diseño que encuentra el efecto en 8 de 100 corridas tiene 8% de potencia, lo que es
 casi inútil.
 
 **Rediseñar** significa cambiar exactamente una parte en respuesta al diagnóstico y
-volver a diagnosticar. Una potencia baja por varianza alta pide más datos. El sesgo pide
-un diseño distinto, porque el tamaño compra estabilidad, no verdad.
+volver a diagnosticar. La potencia baja por varianza alta pide más datos. El sesgo
+pide un diseño distinto, porque el tamaño compra estabilidad, no verdad.
 
 ## Un ejemplo resuelto
 
-Investigas en **interacción humano-computadora** y te preguntas si una *pista de
-validación en línea*, un mensaje pequeño que aparece mientras escribes («la contraseña
-necesita un número») en vez de solo después de enviar, ayuda a la gente a terminar un
-formulario de registro más rápido. Tu resultado son los segundos que toma completarlo.
-Tu efecto verdadero, en el mundo que simulas, es que la pista recorta 8 segundos.
+Trabajas con un supermercado en línea que quiere saber si un **botón de recompra con
+un toque**, que reconstruye el último carrito de una persona con una sola pulsación,
+hace que la gente pase por el pago más rápido. Tu resultado son los segundos hasta
+completar la compra. Tu efecto verdadero, en el mundo que simulas, es que el botón
+recorta 8 segundos.
 
-Lo **declaras**: construyes personas usuarias cuyos tiempos de partida varían mucho,
-porque algunas leen despacio y otras van a toda velocidad; lanzas una moneda para
-asignar la versión con pista; restas los promedios de los dos grupos. **Diagnosticas**
-un piloto de 12 personas por versión. El resultado es aleccionador. El sesgo es cercano
-a cero, así que el diseño apunta bien, pero la dispersión es enorme porque los tiempos
-por persona varían muchísimo, y la potencia vuelve por debajo del 10%. El diseño es
-honesto e inútil a la vez: en promedio señala la ganancia de 8 segundos y casi nunca se
-acerca lo suficiente en una corrida individual para demostrarla.
+Lo **declaras**: construye personas compradoras cuyos tiempos de pago de base varíen
+mucho, porque algunas navegan y otras corren; lanza una moneda para asignar el botón;
+resta los promedios de los dos grupos. **Diagnosticas** un piloto de 12 personas por
+versión. El resultado da que pensar. El sesgo es cercano a cero, así que el diseño
+apunta bien, pero la dispersión es enorme porque los tiempos individuales varían
+muchísimo, y la potencia vuelve por debajo del 10%. El diseño es honesto e inútil a la
+vez. Apunta en promedio a la ganancia de 8 segundos y casi nunca se acerca lo bastante
+en una corrida individual como para demostrarla.
 
 Ahora **rediseña**. El problema es la varianza, así que subes la muestra a 400 por
 versión y vuelves a diagnosticar. La potencia salta por encima del 90% y la dispersión
-se cierra hacia la verdad. Eso es varianza curada con tamaño. Pero corre un diseño más
-como advertencia: quita el lanzamiento de moneda y deja que las personas con más
-destreza tecnológica se autoseleccionen a la versión nueva. Esas personas terminan más
-rápido de todos modos, así que la pista se lleva el crédito por una velocidad que trajo
-la destreza. Este diseño confundido es igual de preciso con 400 por versión y, sin
-embargo, se centra en una ganancia de 14 segundos en vez de 8, y ninguna cantidad extra
-de datos lo mueve. Esa brecha nombra la última idea. Un diseño aleatorizado puede
-**identificar** el efecto de la pista, es decir, atribuirle a la pista la diferencia de
-tiempo y descartar otras causas, mientras que el confundido muestra solo una
-**asociación**, donde las dos cosas se mueven juntas pero una causa común podría
-explicarlo.
+se colapsa hacia la verdad. Eso es varianza curada con tamaño. Pero corre un diseño
+más como advertencia: quita el lanzamiento de la moneda y deja que la gente elija
+usar el botón nuevo por su cuenta. Quienes lo eligen son las personas frecuentes y
+practicadas, que de todos modos pagan más rápido, así que el botón se lleva el crédito
+por una velocidad que aportó la costumbre. Este diseño confundido es igual de preciso
+con 400 por versión, y sin embargo se centra en una ganancia de 14 segundos en lugar
+de 8, y ninguna cantidad extra de datos lo mueve. Esa brecha nombra la última idea. Un
+diseño aleatorizado puede **identificar** el efecto del botón, es decir, atribuirle la
+diferencia de tiempo al botón y descartar otras causas, mientras que el confundido
+solo muestra una **asociación**, donde ambas cosas se mueven juntas pero una causa
+común podría explicarlo.
 
 ## El laboratorio en Colab
 
 El laboratorio de este capítulo es el cuaderno **nb04 — The anatomy of a research
-design: MIDA + declare → diagnose → redesign** (MIDA: *Model, Inquiry, Data strategy,
-Answer strategy*, es decir, modelo, indagación, estrategia de datos y estrategia de
-respuesta). Ábrelo en Colab con la insignia de arriba y trabaja las celdas junto con
-este capítulo. En el laboratorio declaras el diseño de mentoría en unas pocas líneas de
-Python, lo corres miles de veces para leer con tus propios ojos su sesgo, su varianza y
-su potencia, y luego ves cómo un solo rediseño rescata un estudio justo pero sin
-potencia mientras su gemelo confundido sigue equivocado con cualquier tamaño de muestra.
+design: MIDA + declare → diagnose → redesign** (*la anatomía de un diseño de
+investigación: MIDA + declarar → diagnosticar → rediseñar*). Ábrelo en Colab con la
+insignia de arriba y trabaja las celdas junto con este capítulo. Allí declararás el
+diseño de mentoría del cuaderno en unas pocas líneas de Python, lo correrás miles de
+veces para leer con tus propios ojos su sesgo, su varianza y su potencia, y verás
+cómo un rediseño rescata un estudio justo pero sin potencia mientras su gemelo
+confundido sigue equivocado con cualquier tamaño de muestra.
 
 ## Prompts de IA recomendados
 
 Comprométete primero con tu propia expectativa y solo después delega. Cada prompt de
-abajo te deja un borrador que todavía tienes que revisar.
+abajo te deja un borrador que igual tienes que revisar. La simulación es donde el
+**bucle de IA** (el ciclo prompt → respuesta → interrogación → refinamiento → nueva
+ejecución) se vuelve más rápido y más peligroso a la vez: los asistentes de código
+modernos escriben el script, lo corren, leen el error y lo parchan sin esperarte, y
+convergerán encantados en código que corre limpio mientras declara un diseño distinto
+del tuyo. Deja que la herramienta se quede con el tecleo. Quédate tú con la propiedad
+del efecto verdadero que plantas y de los números que lees.
 
 ```text
 Act as a simulation assistant. Here is my declared design in words:
@@ -112,85 +119,80 @@ that builds a world where I set the true effect, runs the design many times,
 and reports bias, variance, and power. List every assumption your code makes
 about my design that I did not state.
 ```
-Después de ejecutarlo, verifica (contrarresta el *método plausible pero equivocado*,
-«plausible-but-wrong-method»): vuelve a correrlo con el efecto verdadero fijado en cero
-y confirma que «detecta» un efecto solo con la frecuencia que permite tu umbral de
-significancia. Una simulación que se dispara con un efecto cero está declarando un
-diseño distinto al tuyo.
+Después de ejecutarlo, verifica (contrarresta el *método plausible pero equivocado*):
+vuelve a correrlo con el efecto verdadero puesto en cero y confirma que «detecta» un
+efecto solo con la frecuencia que permite tu umbral de significancia. Una simulación
+que se dispara con un efecto cero está declarando un diseño distinto del tuyo.
 
 ```text
 Here is my diagnosed design and its numbers: [bias, variance, power]. List the
 threats to any conclusion from one run as a table: threat, whether it is a
 bias / variance / power problem, and the single redesign that reduces it most.
 ```
-Después de ejecutarlo, verifica (contrarresta la *ilusión de exhaustividad*,
-«illusion of completeness»): contrasta la tabla con tu propio diagnóstico impreso. La
-amenaza letal que tus números ya demostraron debe ser la primera fila; una lista pulcra
-de seis amenazas que nunca la nombra no entendió el punto.
+Después de ejecutarlo, verifica (contrarresta la *ilusión de exhaustividad*):
+contrasta la tabla con tu propio diagnóstico impreso. El problema letal que tus
+números ya demostraron tiene que ser la primera fila; una lista ordenada de seis
+amenazas que nunca lo nombra se perdió el punto.
 
 ```text
 Argue against my claim that this design is strong enough to run. As a hostile
 methodologist, name the one diagnosand I am most likely fooling myself about,
 and the observation that would expose it.
 ```
-Después de ejecutarlo, verifica (contrarresta el *acuerdo complaciente*, «sycophantic
-agreement»): si elogia el diseño sin una sola objeción, descarta la respuesta y vuelve a
-diagnosticar por tu cuenta.
+Después de ejecutarlo, verifica (contrarresta el *acuerdo complaciente*): si elogia el
+diseño sin una sola objeción, descarta la respuesta y vuelve a diagnosticar por tu
+cuenta.
 
 ::: {.callout-important title="No delegues"}
 Tres decisiones siguen siendo tuyas. **Qué mundo supone tu pregunta**, el modelo que
 declaras, es una afirmación sobre la realidad que ninguna herramienta puede hacer por
-ti. **Qué única cantidad nombras como tu indagación** decide qué significa siquiera
+ti. **Qué única cantidad nombras como tu indagación** decide qué significa siquiera el
 «éxito». Y **la decisión honesta de correr o no un diseño que tu propio diagnóstico
-llama demasiado débil** es un juicio que firmas con tu nombre. Una IA puede proponer
-amenazas y redactar código de simulación, pero no puede decidir que tu estudio sin
-potencia vale un semestre de todos modos.
+dice que es demasiado débil** es un juicio que firmas con tu nombre. Una IA puede
+proponer amenazas y redactar código de simulación, pero no puede decidir que tu
+estudio sin potencia vale meses de tu vida de todos modos.
 :::
 
 ## Un caso de falla de la IA
 
 Pegas tu diseño observacional confundido y preguntas: «Mi estimación es ruidosa. ¿Qué
-debo hacer?». La herramienta responde con seguridad: «Recluta más participantes para
-ajustar tu estimación». Suena obviamente correcto y es exactamente equivocado en tu
-caso. Tu problema es **sesgo** por autoselección, no varianza, y más datos solo vuelven
-a una estimación sesgada un número equivocado más *preciso*. Lo atrapas como enseña este
-capítulo: corre el diseño confundido en simulación con una muestra grande y observa cómo
-las estimaciones se agrupan apretadas alrededor de 14 segundos cuando la verdad es 8. La
-dispersión se encogió; el error no. Esa es la falla `plausible-but-wrong-method`, y tu
-propio diagnóstico la desenmascara.
+debería hacer?». La herramienta responde con seguridad: «Recoge más observaciones para
+ajustar tu estimación». Eso suena obviamente correcto y es exactamente lo equivocado
+en tu caso. Tu problema es **sesgo** por autoselección, no varianza, y más datos solo
+convierten una estimación sesgada en un número equivocado más *preciso*. Lo atrapas
+como enseña este capítulo: corre el diseño confundido en simulación con una muestra
+grande y observa cómo las estimaciones se agrupan apretadas alrededor de 14 segundos
+cuando la verdad es 8. La dispersión se achicó; el error no. Esa es la falla del
+`plausible-but-wrong-method` (método plausible pero equivocado), y tu propio
+diagnóstico la desenmascara.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: si le pides a una IA que revise la afirmación, el código o la cita de otra, encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te corresponde a ti, quien investiga.
-:::
+*Tienes cuatro partes de un diseño sobre el papel. Este paso pregunta si sobrevivirían
+al contacto con el mundo, mientras una mala respuesta todavía es gratis.*
 
-El método aquí es la **simulación** (guía de verificación, método 2: recurre a ella
-cuando una afirmación trata de cómo se comporta un procedimiento y no de un número
-fijo). Nunca confíes en un «tu diseño tiene alrededor de 80% de potencia» dicho por una
-IA. Declara el diseño por tu cuenta, fija un efecto verdadero que tú elijas, córrelo unos
-miles de veces y lee la potencia en tu propio montón de estimaciones. Para cualquier
-diseño que reclame una *causa*, agrega una segunda comprobación independiente: el
-**diagrama causal** (método 8). Dibuja tu modelo como un DAG, un grafo acíclico dirigido,
-y busca una causa común con una flecha hacia tu tratamiento y hacia tu resultado. Si esa
-puerta trasera está abierta, ningún número de potencia te rescata, y tu afirmación
-honesta se detiene en «asociado con».
-
-## Transferencia al proyecto
-
-Este capítulo te lleva por la segunda mitad de tu hito **carta de investigación y
-declaración MIDA**, la declaración de tres minutos que presentas en el estudio del
-viernes. El capítulo 9 te dio las cuatro partes; aquí las declaras como un diseño
-ejecutable, lo diagnosticas en sesgo, varianza y potencia, y traes un rediseño con
-nombre. Ese hito se califica por trazar la línea entre identificar y asociar para tu
-propio diseño, así que el diagnóstico que corres esta semana es la evidencia detrás del
-límite que vas a defender.
-
-## Defiende tu decisión
-
-En cinco oraciones, declara y defiende un diseño para tu proyecto. Enuncia la única
-cantidad que buscas (tu indagación). Reporta el peor número de diagnóstico que puedas
-estimar, sesgo, varianza o potencia, y di qué le hace a tu respuesta. Después toma la
-decisión honesta: correrlo, rediseñar primero o acotar la afirmación, y nombra el único
-cambio que más lo mejoraría. Cierra con el límite: ¿tu diseño **identifica** un efecto o
-solo muestra una **asociación**, y qué sigue siendo incierto incluso si todo sale bien?
+1. Declara tu diseño como algo que se pueda correr. Si sabes programarlo, escribe el
+   script más pequeño que construya un mundo donde *tú* fijas el efecto verdadero,
+   saque tu muestra, aplique tu estrategia de respuesta e imprima una estimación. Si
+   todavía no sabes programarlo, decláralo en palabras lo bastante precisas como para
+   que alguien más pueda: enuncia el efecto verdadero que estás suponiendo, el número
+   de unidades y la aritmética exacta.
+2. Diagnostícalo. Córrelo unos miles de veces y lee tres números: sesgo (¿se centran
+   las estimaciones en la verdad que plantaste?), varianza (¿qué tan ancha es la
+   dispersión?) y potencia (¿con qué frecuencia detecta el efecto?). Razonarlo cuenta
+   si la simulación queda fuera de tu alcance, pero anota los números de todos modos.
+3. Nombra el peor de los tres y di de qué tipo de problema se trata. La varianza y la
+   potencia baja son problemas de tamaño. El sesgo es un problema de diseño, y ningún
+   tamaño de muestra lo arregla.
+4. Rediseña una vez. Cambia exactamente una cosa, la que señala tu diagnóstico, y
+   vuelve a diagnosticar. Registra ambos diagnósticos lado a lado para que la mejora
+   se vea.
+5. Toma la decisión honesta en una oración: correrlo tal como quedó rediseñado,
+   rediseñar otra vez, o reducir la afirmación a lo que este diseño de verdad puede
+   entregar. Los tres son resultados respetables. Fingir que nunca lo comprobaste, no.
+6. Registra ambos diagnósticos en tu AI Research Ledger (registro de investigación con
+   IA) y verifica el número clave con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd); la simulación es el método para una
+   afirmación sobre cómo se comporta un procedimiento, y un diagrama causal es la
+   segunda comprobación si tu indagación usa la palabra *causa*. Una IA revisora puede
+   correr el diagnóstico contigo; la decisión de correr, arreglar o reducir es tuya.

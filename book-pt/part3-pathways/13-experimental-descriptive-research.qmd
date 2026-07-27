@@ -2,30 +2,29 @@
 title: "Pesquisa Descritiva Experimental"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Você decide se um desenho que atribui um estímulo
-> ao acaso está respondendo a uma pergunta **descritiva**, medindo uma
-> característica latente que já existe, ou a uma pergunta **causal**, e defende
-> essa classificação nomeando os artefatos que a sua mensuração ainda precisa
-> descartar.
-
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do seu tópico no curso; o laboratório em Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*, desenho de pesquisa nas ciências sociais), cap. 17, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **A decisão de pesquisa.** Um cara ou coroa não decide que tipo de pergunta você
+> fez. Quem decide se o seu estudo randomizado está **medindo** uma propriedade que
+> o mundo já tem ou **testando** uma intervenção que você implantaria é você, e é
+> você quem nomeia os artefatos que a sua mensuração ainda precisa descartar antes
+> que o número signifique alguma coisa.
 
 ## Por que essa decisão importa
 
+**A decisão em jogo: se o número que o seu estudo randomizado relata é uma
+propriedade que o mundo já tem ou um efeito que você sairia por aí causando.**
+
 Imagine quem orienta a sua pesquisa parando em uma única linha da sua página de
 métodos. "Você randomizou", essa pessoa diz, "então escreveu *causa*. Me mostre a
-pergunta primeiro." A atribuição aleatória parece causal por reflexo, e esse
-reflexo é a armadilha que este capítulo desarma. O que fixa o tipo de uma
-pergunta é a **pergunta**, não o **procedimento**. Aponte um cara ou coroa para
-"o que mudaria se implantássemos isto?" e você tem um estudo causal; aponte o
-mesmo cara ou coroa para "quanto dessa propriedade existe no mundo agora?" e você
-tem uma mensuração. Rotule a segunda como se fosse a primeira e você exagera:
-promete uma alavanca que a sua evidência nunca testou, e quem lê com atenção para
-de confiar no resto do seu trabalho.
+pergunta primeiro." A atribuição aleatória parece causal por reflexo, e esse reflexo
+é a armadilha que este capítulo desarma. O que fixa o tipo de uma pergunta é a
+**pergunta**, não o **procedimento**. Aponte um cara ou coroa para "o que mudaria se
+implantássemos isto?" e você tem um estudo causal. Aponte o mesmo cara ou coroa para
+"quanto dessa propriedade existe no mundo agora?" e você tem uma mensuração. Rotule
+a segunda como se fosse a primeira e você exagera. Você promete uma alavanca que a
+sua evidência nunca testou, e quem lê com atenção para de confiar no resto do seu
+trabalho.
 
 ## O conceito
 
@@ -41,61 +40,64 @@ Três termos sustentam a ideia. Conheça um de cada vez.
 - **O experimento como instrumento de mensuração**: usar estímulos controlados
   atribuídos ao acaso para expor uma característica latente e relatá-la como uma
   descrição simples. O número que você relata é o **estimando** (*estimand*), a
-  quantidade exata que o desenho foi construído para declarar, e aqui ela descreve
-  o mundo como ele está.
+  quantidade exata que o desenho foi construído para declarar, e aqui ela descreve o
+  mundo como ele está.
 
 Uma mensuração pode ser confiante e ainda assim estar errada, porque o próprio
 arranjo é um dos ingredientes. Dois artefatos fazem a maior parte do estrago. Um
 **efeito de demanda** acontece quando as pessoas medidas adivinham o que você
 procura e se deslocam nessa direção; exemplo: usuários que percebem estar em um
-estudo clicam com mais cuidado do que clicariam em casa. Um **efeito de
-instrumento** acontece quando o próprio dispositivo de medida ou a redação move a
-leitura sozinho; exemplo: a posição 1 exibe uma miniatura maior, então o
-registrador credita à posição a atenção que a imagem conquistou. Os dois ameaçam a
-**validade de constructo**, o grau em que o seu número estima o conceito que você
-pretendia e não algo adjacente. Randomizar *quem* vê o quê não faz nada contra um
-viés que atinge todas as unidades por igual, e é por isso que você desenha esses
-problemas para fora separadamente.
+estudo clicam com mais cuidado do que clicariam em casa. Um **efeito de instrumento**
+acontece quando o próprio dispositivo de medida ou a redação move a leitura sozinho;
+exemplo: a posição 1 exibe uma miniatura maior, então o registrador credita à
+posição a atenção que a imagem conquistou. Os dois ameaçam a **validade de
+constructo**, o grau em que o seu número estima o conceito que você pretendia e não
+algo adjacente. Randomizar *quem* vê o quê não faz nada contra um viés que atinge
+todas as unidades por igual, e é por isso que você desenha esses problemas para fora
+separadamente.
 
 ## Um exemplo trabalhado
 
-Uma equipe de streaming de música quer uma propriedade latente da sua prateleira
-"Recomendado para você": quanto da contagem de reproduções de uma faixa vem de
-*onde ela está posicionada* e quanto vem de quão bem ela combina com quem escuta.
-Ninguém publica esse número em lugar nenhum, então a equipe constrói um
-instrumento. Para uma fatia aleatória de sessões, ela insere uma faixa-sonda fixa,
-com áudio idêntico e capa idêntica, e sorteia a posição dessa faixa na prateleira
-entre seis lugares, registrando depois a taxa de reprodução por posição. Como a
-faixa nunca muda e a posição é sorteada, a variação da taxa de reprodução entre as
-posições isola a atração da posição sozinha. O estimando é a **curva de atenção**
-da prateleira: quanta atenção cada lugar comanda, descrita para essas sessões.
+Uma equipe de streaming de música quer cravar uma propriedade latente da prateleira
+"Recomendados para você": quanto das reproduções de uma faixa vem de *onde ela está
+posicionada* e quanto vem de quão bem ela combina com quem ouve. Ninguém publica esse
+número em lugar nenhum, então a equipe constrói um instrumento. Em uma fatia
+aleatória de sessões ela insere uma faixa-sonda fixa, com o mesmo áudio e a mesma
+capa, atribui a posição dela ao acaso entre seis lugares e registra a taxa de
+reprodução por posição. Como a faixa nunca muda e a posição é sorteada, a diferença
+na taxa de reprodução entre as posições isola só a atração da posição. O estimando é
+a **curva de atenção** da prateleira: quanto cada lugar comanda, descrito para essas
+sessões.
 
-É aqui que a decisão pesa. Dentro do estudo existe de fato um efeito causal da
-posição sobre os cliques, mas a pergunta da equipe era descritiva, e o relato
-honesto diz isso: "nessas sessões, a posição 1 atraiu cerca de três vezes mais
-reproduções do que a posição 5, com qualidade igual." A frase proibida é "promover
-faixas para a posição 1 vai triplicar suas reproduções", porque essa é uma alegação
-causal e implantável que o desenho nunca testou. E, antes de confiar até no número
+É aqui que a decisão morde. Dentro do estudo existe, sim, um efeito causal da posição
+sobre os cliques, mas a pergunta da equipe era descritiva, e o relato honesto diz
+isso: "nessas sessões, a posição 1 atraiu cerca de três vezes mais reproduções que a
+posição 5, com qualidade igual". A frase proibida é "promover faixas para a posição 1
+vai triplicar as reproduções delas", porque essa é uma alegação causal e
+implementável que o desenho nunca testou. E, antes de confiar até no número
 descritivo, a equipe descarta dois artefatos: um efeito de demanda, se a sonda
 parecer um anúncio, e um efeito de instrumento, se a arte maior da posição 1 ou um
-registrador atrelado à posição inflar a contagem. O redesenho renderiza todas as
-posições de forma idêntica e registra as impressões no servidor.
+registrador atrelado à posição inflar a contagem. O redesenho exibe todas as posições
+de forma idêntica e registra as exibições no servidor.
 
 ## O laboratório em Colab
 
 O laboratório deste capítulo é o notebook **nb07 — Experimental descriptive
-research** (pesquisa descritiva experimental). Abra-o no Colab pelo selo acima e
-trabalhe as células ao lado deste capítulo. Nele você lê um experimento de survey
-real como a mensuração de uma atitude já consolidada, recupera uma prevalência
-oculta com um experimento de lista que uma pergunta direta não alcança e, então,
-declara, diagnostica e redesenha um experimento de mensuração para que um número
-feito principalmente de artefatos de demanda e de instrumento volte a pousar sobre
-o constructo que ele deveria relatar.
+research**. Abra no Colab pelo selo acima e trabalhe as células junto com este
+capítulo. Nele você lê um experimento de survey real como a mensuração de uma atitude
+já consolidada, recupera uma prevalência escondida com um experimento de lista que
+uma pergunta direta não alcança e depois declara, diagnostica e redesenha um
+experimento de mensuração, até que um número feito quase só de artefatos de demanda e
+de instrumento volte a pousar sobre o constructo que ele deveria relatar.
 
 ## Prompts de IA recomendados
 
-Comprometa-se com a sua própria resposta primeiro, depois delegue. Cada prompt
-abaixo termina com uma verificação que você mesmo executa.
+Comprometa-se com a sua própria resposta primeiro, depois delegue. Cada prompt abaixo
+termina com uma checagem que você mesmo roda. E trate cada um deles como a jogada de
+abertura de um loop, não como um pedido de uma rodada só: leia a saída, conteste a
+parte mais fraca, afie o prompt, rode de novo. Ferramentas agênticas hoje rodam
+várias voltas desse loop por conta própria, o que não aposenta a sua checagem. Só
+significa que chega mais saída entre uma checagem e outra.
 
 ```text
 Act as a literature scout. List three real, published experiments used to MEASURE
@@ -104,9 +106,9 @@ a preference weight) rather than to test a deployable intervention. For each giv
 authors, year, venue, and the single quantity measured, in a table. Only include
 work you are confident exists; mark any row you are unsure about.
 ```
-Depois de rodar, verifique: abra uma base de dados e recupere cada estudo você
-mesmo; qualquer linha que você não encontrar em um minuto é uma **fabricação
-confiante**, então corte-a.
+Depois de rodar, verifique: abra uma base de dados e recupere você mesmo cada estudo;
+qualquer linha que você não achar em um minuto é uma **fabricação confiante**, então
+corte.
 
 ```text
 Here is code that estimates an interface's attention curve as the difference in
@@ -114,8 +116,8 @@ play rate across randomly assigned slots: [paste]. Name every assumption this
 estimator needs to be valid, and for each, one concrete way it could fail in my
 logs.
 ```
-Depois de rodar, verifique: confronte cada suposição com o seu pipeline real; um
-estimador que soa padrão mas supõe algo que os seus dados violam é um **método
+Depois de rodar, verifique: confronte cada suposição com o seu pipeline de verdade;
+um estimador que soa padrão mas supõe algo que os seus dados quebram é um **método
 plausível, porém errado**.
 
 ```text
@@ -123,69 +125,57 @@ Act as a hostile measurement reviewer. Here is my construct and how I measure it
 [plan]. List every demand effect and instrument effect that could produce my number
 even if the true value were different, and the redesign that rules each one out.
 ```
-Depois de rodar, verifique: compare a lista com o artefato que você anotou
-primeiro; se o seu não estiver lá, a saída bem-arrumada acabou de falhar no teste
-da **ilusão de completude**, então recoloque-o.
+Depois de rodar, verifique: compare a lista com o artefato que você anotou primeiro;
+se o seu não estiver ali, a saída bem arrumada acabou de falhar no teste da **ilusão
+de completude**, então recoloque-o.
 
 ::: {.callout-important title="Não delegue"}
 Três decisões continuam sendo suas. Se a sua indagação é **descritiva ou causal**,
-porque o tipo vive nas palavras da sua pergunta e nenhuma ferramenta consegue ler a
-sua intenção. Se o desenho de fato mede o **seu** constructo e não algo adjacente,
-o que é um julgamento sobre significado, não sobre código. E quais **artefatos**
-você aceita assinar como descartados. Uma parceira de IA pode rascunhar, localizar
-e atacar. Você declara e defende.
+porque o tipo mora nas palavras da sua pergunta e nenhuma ferramenta lê a sua
+intenção. Se o desenho mede mesmo o **seu** constructo, e não algo adjacente, o que é
+um julgamento sobre significado, não sobre código. E quais **artefatos** você aceita
+assinar embaixo como descartados. Uma parceria de IA pode rascunhar, localizar e
+atacar. Declarar e defender é com você.
 :::
 
-## Um caso de falha de IA
+## Um caso de falha da IA
 
-Você cola o resultado da sua curva de atenção em uma ferramenta de IA e pede que
-ela escreva a frase de achados. Ela devolve algo fluente: "mover faixas para a
-primeira posição causa um aumento de 3x nas reproduções, então a equipe deveria
-promover suas melhores combinações para a posição 1." Parece uma vitória, mas é uma
-**mudança silenciosa de escopo**: você perguntou como a atenção se distribui, e a
-ferramenta respondeu, sem avisar, a uma pergunta causal e implantável sobre o que
-promover faria. Você percebe isso colocando a frase dela ao lado da sua, palavra
-por palavra. A sua perguntava *quanto* a posição atrai; a resposta dela perguntava
-*o que fazer*. Os sinais são "causa", "deveria" e o imaginado "aumento" vindo de
-uma intervenção que você nunca rodou. Rejeite e reescreva a alegação limitada às
-unidades que você observou.
+Você cola o resultado da sua curva de atenção em uma ferramenta de IA e pede que ela
+escreva a frase dos achados. Volta algo fluente: "Mover faixas para a primeira
+posição causa um aumento de 3x nas reproduções, então a equipe deveria promover para
+a posição 1 as músicas que melhor combinam." Parece uma vitória, mas é uma **mudança
+silenciosa de escopo**: você perguntou como a atenção se distribui, e a ferramenta
+respondeu, sem avisar, a uma pergunta causal e implementável sobre o que promover
+faria. Você pega isso pondo a frase dela ao lado da sua, palavra por palavra. A sua
+perguntava *quanto* a posição atrai; a resposta dela perguntava *o que fazer*. Os
+sinais são "causa", "deveria" e o "aumento" imaginado de uma intervenção que você
+nunca rodou. Rejeite e reescreva a alegação limitada às unidades que você observou.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é outra proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado é sempre sua, de quem faz a pesquisa.
-:::
+*O seu desenho está declarado e diagnosticado. Este passo faz uma pergunta mais
+estreita a ele: o seu estudo está medindo uma propriedade que o mundo já tem e, se
+estiver, ele consegue fazer isso com honestidade?*
 
-Verifique o resultado principal do laboratório por **simulação**, o método do guia
-de verificação para checar como um procedimento se comporta, e não um número fixo.
-Construa um mundo de brinquedo em que você mesmo define o valor latente verdadeiro,
-rode o estimador e confirme que a estimativa cai sobre o valor que você plantou.
-Depois rode um **teste de falsificação**: coloque a atração da posição em exatamente
-zero e rode de novo. Um instrumento honesto devolve mais ou menos zero. Se, em vez
-disso, o seu pipeline relatar uma curva de atenção onde você não plantou nenhuma,
-essa curva é um efeito de instrumento criado pelo seu registro de dados, não uma
-propriedade da interface, e precisa ser eliminada no desenho antes que qualquer
-número real mereça confiança.
-
-## Transferência para o projeto
-
-Este capítulo é a espinha dorsal do **seu marco de protocolo de mensuração
-experimental e aquisição de dados**. Nomeie a característica latente que o seu
-projeto precisa medir, o desenho que a revela e a quantidade descritiva exata que
-ele relata para unidades nomeadas. Depois escreva o plano de artefatos: o efeito de
-demanda e o efeito de instrumento que você mais teme, cada um com o redesenho que o
-contém. Acrescente a fronteira em duas frases que declara a alegação descritiva que
-você autoriza, com a sua incerteza, e a frase causal que você proíbe a si mesmo.
-São essas peças que você apresenta a alguém cético no estúdio de sexta-feira, e são
-elas que alimentam o resumo que passa pelo crivo de lá.
-
-## Defenda a sua decisão
-
-Enuncie a decisão que este capítulo prepara e defenda-a para o seu próprio projeto.
-Nomeie a sua característica latente e o estímulo aleatorizado que a revela, depois
-diga em uma frase por que a indagação é **descritiva**, uma propriedade que já
-existe, e não **causal**, o efeito de uma intervenção que você implantaria. Encerre
-com a fronteira e a incerteza: a alegação descritiva que o seu desenho autoriza, o
-pior artefato que você não descartou por completo e o intervalo ou a ressalva em
-torno do seu número. Uma declaração sem fronteira e sem incerteza ainda não é uma
-defesa.
+1. Leia a sua pergunta principal em voz alta e sublinhe o verbo. Ela pergunta quanto
+   de algo já existe lá fora, ou o que mudaria se você interviesse? Escreva a
+   resposta em uma linha. Essa linha decide se esta trilha é a sua.
+2. Se for a sua, nomeie a característica latente que o seu projeto precisa revelar, a
+   propriedade que ninguém publica em lugar nenhum, e o estímulo controlado que você
+   vai atribuir ao acaso para revelá-la.
+3. Escreva o seu estimando em uma frase: a quantidade exata, para quais unidades,
+   descrita como ela está. Embaixo, escreva a frase causal que você se proíbe de
+   dizer, aquela que começa com "se nós".
+4. Nomeie o efeito de demanda e o efeito de instrumento que você mais teme, cada um
+   com o redesenho que o descarta.
+5. Se esta trilha não for a sua, rode os passos 2 a 4 como exercício mesmo assim,
+   tratando a sua pergunta como se você tivesse que medi-la em vez de intervir. O que
+   quebrar é a sua evidência de que a trilha escolhida encaixa melhor. Escreva isso
+   em duas linhas.
+6. Registre o passo no seu **AI Research Ledger** (registro de pesquisa com IA), e
+   verifique pelo menos uma saída com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd). Um teste de falsificação cai bem
+   neste capítulo: coloque o efeito verdadeiro em exatamente zero em uma versão de
+   brinquedo do seu desenho e confirme que o seu instrumento relata mais ou menos
+   zero. Um revisor de IA pode rodar a checagem com você; a decisão de aceitar ou
+   rejeitar continua sendo sua.

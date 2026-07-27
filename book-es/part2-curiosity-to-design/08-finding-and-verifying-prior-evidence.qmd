@@ -2,110 +2,115 @@
 title: "Encontrar y verificar la evidencia previa"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Qué fuentes cuentan como *evidencia verificada*
-> sobre la que puedes construir, y si el vacío que quieres reclamar está genuinamente
-> abierto o es solo una búsqueda que detuviste demasiado pronto.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de referencia del curso) cap. 4, gratis en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **La decisión de investigación.** Cuáles de tus pistas candidatas sobreviven a la
+> recuperación y a la lectura, y por lo tanto se vuelven evidencia sobre la que puedes
+> construir, y si el punto silencioso que dejan en tu mapa es un vacío genuino o una
+> búsqueda que detuviste demasiado pronto.
 
 ## Por qué importa esta decisión
 
-Imagina a tu asesora de tesis devolviéndote el primer borrador por encima del
-escritorio. «Muéstrame la conversación a la que se suma tu trabajo», dice, «no un
-montón de resúmenes. Qué estudios coinciden, cuáles pelean y dónde está exactamente el
-hueco que dices llenar». Esa pregunta decide si tu proyecto tiene dónde pararse.
-Equivócate de una de dos maneras y todo el proyecto se inclina. Cita una fuente que no
-existe, o que no dice lo que afirmas, y todo resultado que se apoye en ella queda
-comprometido. Anuncia un vacío que un artículo ya llenó y habrás prometido una
-contribución que no puedes entregar. Este capítulo te prepara para tomar ambas
-decisiones y defenderlas.
+**La decisión sobre la mesa: cuáles pistas se convierten en evidencia verificada, y si
+el punto silencioso de tu mapa es un vacío real.**
+
+Imagina a quien asesora tu tesis devolviéndote el primer borrador por encima del
+escritorio. «Muéstrame la conversación a la que se suma tu trabajo», te dice, «no una
+pila de resúmenes. Qué estudios coinciden, cuáles pelean, y dónde exactamente está el
+hueco que dices llenar». Esa pregunta decide si tu proyecto tiene dónde pararse. Hay
+dos maneras de equivocarse, y las dos salen caras. Si citas una fuente que no existe,
+o que no dice lo que afirmas, todo resultado que se apoye en ella queda comprometido.
+Si anuncias un vacío que un artículo ya llenó, prometiste una contribución que no
+puedes entregar. Este capítulo es donde tomas ambas decisiones, y quedan registradas.
 
 ## El concepto
 
 Un campo es una **conversación acumulativa**: una discusión continua en la que cada
-estudio responde, amplía o cuestiona a los anteriores. Por ejemplo, un laboratorio
-reporta que un tratamiento del suelo aumenta el rendimiento del cultivo, y el
-siguiente prueba si el efecto se sostiene en otro clima. Tu tarea no es inventar una
-isla. Es encontrar la conversación a la que pertenece tu pregunta y agregarle una
-oración honesta.
+estudio responde, amplía o cuestiona a los anteriores. Un equipo reporta que un
+tratamiento del suelo eleva el rendimiento de un cultivo; el siguiente prueba si el
+efecto se sostiene en otro clima. Tu tarea no es inventar una isla. Es encontrar la
+conversación a la que pertenece tu pregunta y agregarle una oración honesta.
 
 Cada fuente que conservas pasa por un mismo hábito. El **ciclo de recuperación y
 verificación** tiene cuatro pasos: pedirle a cualquier herramienta que saque pistas a
-la superficie, recuperar tú la fuente real, verificar que existe y que dice lo que se
-afirmó, y documentar dónde la encontraste. Una **pista** es una fuente candidata que
-todavía no has confirmado, como una cita que te entrega una IA. Una pista sigue siendo
-una pista hasta que la recuperación y la verificación la ascienden a fuente.
+la superficie, recuperar la fuente real por tu cuenta, verificar que existe y que dice
+lo que se afirmó, y documentar dónde la encontraste. Una **pista** es una fuente
+candidata que todavía no has confirmado. Una pista sigue siendo pista hasta que la
+recuperación y la verificación la asciendan a fuente.
 
-El ciclo existe para atrapar dos fallas con nombre propio. Una **alucinación de citas**
-(*citation hallucination*) es una IA inventando una fuente que no existe, vestida con
-un par de autores que suena real, un año reciente y una revista plausible. Una
-**fuente mal caracterizada** (*mischaracterized source*) es un artículo real citado por
-una afirmación que nunca hace, como un estudio que reporta una correlación y se cita
-como prueba de una causa. Una fuente puede ser real y aun así estar mal caracterizada,
-así que «¿existe?» y «¿dice esto?» son dos comprobaciones distintas.
+Hay dos fallas con nombre propio que el ciclo existe para atrapar. Una **alucinación
+de citas** (*citation hallucination*) es una IA inventando una fuente que no existe,
+vestida con un par de autores que suena real, un año reciente y una revista plausible.
+Una **fuente mal caracterizada** (*mischaracterized source*) es un artículo real
+citado para una afirmación que nunca hace, como un estudio que reporta una correlación
+citado como prueba de una causa. Una fuente puede ser real y aun así estar mal
+caracterizada, así que «¿existe?» y «¿dice esto?» son dos comprobaciones distintas.
+Corre las dos.
 
 Una vez que tienes una fuente verificada, haces crecer las demás con la **búsqueda en
 bola de nieve**: recorrer sus enlaces en dos direcciones. Una **búsqueda de citas
-hacia atrás** lee la propia lista de referencias de la fuente para encontrar los
-trabajos más antiguos sobre los que se apoyó. Una **búsqueda de citas hacia adelante**
-encuentra los trabajos más nuevos que la citan, siguiendo un rastro de «Citado por».
+hacia atrás** lee la propia lista de referencias de la fuente para hallar los trabajos
+más antiguos sobre los que se apoyó. Una **búsqueda de citas hacia adelante**
+encuentra los trabajos más nuevos que la citan, a través de un rastro de «Citado por».
 Dos fuentes sólidas, recorridas en ambas direcciones, se vuelven diez.
 
 Así también te ganas la palabra vacío. Un **vacío genuino** es una pregunta que tus
 fuentes verificadas de verdad dejan sin responder, confirmada al mirar. Una **búsqueda
 inconclusa** es una pregunta que simplemente dejaste de perseguir. Desde tu escritorio
 se sienten idénticas, y solo una es una contribución real. La prueba es la
-recuperación: te ganas la palabra vacío solo después de que fuentes reales, seguidas
+recuperación. Te ganaste la palabra vacío solo después de que fuentes reales, seguidas
 hacia adelante y hacia atrás, siguen calladas sobre tu pregunta.
 
 ## Un ejemplo resuelto
 
-Eres estudiante de honores en agronomía y te preguntas si agregar **biocarbón** (carbón
-hecho con residuos de cultivo y mezclado con el suelo) aumenta el rendimiento del maíz
-en campos arenosos. Le pides evidencia a una herramienta de IA. Devuelve una cita
-segura de sí misma: un par de autores con nombre, una fecha de 2021, una revista de
-ciencias del suelo que suena real y un hallazgo pulcro: el biocarbón elevó el
-rendimiento un 18 por ciento. Perfecto. Entonces vas a leerla y no está en ninguna
-parte. Ni en el portal de la biblioteca, ni en Google Scholar, ni en el sitio de la
-editorial.
+Estudias ciencias del cultivo, y tu pregunta es si agregar **biocarbón** (carbón hecho
+con residuos de cultivo y mezclado en el suelo) eleva el rendimiento del maíz en
+campos arenosos. Le pides evidencia a una herramienta de IA. Devuelve una cita segura
+de sí misma: un par de autores con nombre, una fecha de 2021, una revista de ciencias
+del suelo que suena real y un hallazgo bien ordenado según el cual el biocarbón elevó
+el rendimiento en un 18 por ciento. Perfecto. Así que vas a leerla, y no está en
+ninguna parte. Ni en el portal de la biblioteca, ni en Google Scholar, ni en el sitio
+de la editorial.
 
-Esta es la decisión sobre la mesa. ¿El estudio faltante prueba que «nadie ha probado el
-biocarbón en suelo arenoso, así que mi vacío es real»? No. Tres cosas podrían ser
-ciertas. La IA **inventó** el estudio entero y no hay nada que encontrar. **Distorsionó**
-una fuente real, con la idea correcta pero la autoría o el año equivocados, así que
-buscas la afirmación misma y la autoría real probable. O el artículo es real pero está
-**tras un muro de pago o es poco visible**, y llegas a él por la biblioteca o
+Aquí está la decisión sobre la mesa. ¿Es el estudio faltante una prueba de que «nadie
+ha probado biocarbón en suelo arenoso, así que mi vacío es real»? No. Tres cosas
+podrían ser ciertas. La IA **fabricó** el estudio entero, y no hay nada que encontrar.
+**Distorsionó** una fuente real, idea correcta pero autoría o año equivocados, así que
+buscas la afirmación misma y los autores reales probables. O el artículo es real pero
+está **tras un muro de pago o es oscuro**, alcanzable a través de tu biblioteca o
 escribiéndole a quien lo firma. Tu siguiente movimiento es el mismo en los tres casos:
-la pista se queda fuera de tu columna de verificadas hasta que la recuperación tenga
-éxito.
+la pista se queda fuera de tu columna de verificadas hasta que la recuperación
+funcione.
 
-Así que haces el trabajo. Recuperas cuatro estudios reales de ciencias del suelo por la
-base de datos de la biblioteca, lees cada uno y aplicas la bola de nieve. Hacia atrás,
-desde un ensayo de campo de 2019, encuentras el estudio de invernadero más antiguo
-sobre el que se apoyó. Hacia adelante, por «Citado por», encuentras dos ensayos más
-nuevos que probaron la misma idea en suelo franco y arcilloso. Ahora puedes ver la
-conversación: el biocarbón ayuda al rendimiento en algunos suelos, la magnitud varía, y
-ninguno de los cuatro que recuperaste hizo el ensayo en el suelo arenoso que se cultiva
-en tu región. *Ese* punto callado, rodeado por fuentes que abriste tú, es un vacío que
-puedes defender.
+Así que haces el trabajo. Recuperas cuatro estudios reales de ciencias del suelo a
+través de la base de datos de la biblioteca, lees cada uno y aplicas la bola de nieve.
+Hacia atrás, desde un ensayo de campo de 2019, encuentras el estudio de invernadero
+más antiguo en el que se apoyó. Hacia adelante, por «Citado por», encuentras dos
+ensayos más nuevos que probaron la misma idea en suelo franco y arcilloso. Ahora
+puedes ver la conversación: el biocarbón ayuda al rendimiento en algunos suelos, el
+tamaño del efecto varía, y ninguno de los cuatro que recuperaste corrió el ensayo en
+el suelo arenoso que cultiva tu condado. *Ese* punto silencioso, rodeado de fuentes
+que abriste tú, es un vacío que puedes defender.
 
 ## El laboratorio en Colab
 
 El laboratorio de este capítulo es el cuaderno **nb03 — Research builds on research:
-verified evidence + real gaps**. Ábrelo en Colab con la insignia de arriba y trabaja
-las celdas junto con este capítulo. En el laboratorio corres el ciclo de recuperación y
-verificación sobre tu propia afirmación y ves cómo una simulación reduce un montón
-pulcro de quince citas generadas por IA al puñado que sobrevive a la recuperación; luego
-construyes un mapa de evidencia cuyo único cuadro vacío es tu vacío.
+verified evidence + real gaps** (*la investigación se construye sobre la
+investigación: evidencia verificada y vacíos reales*). Ábrelo en Colab con la insignia
+de arriba y trabaja las celdas junto con este capítulo. Allí correrás el ciclo de
+recuperación y verificación sobre tu propia afirmación y verás una simulación reducir
+un montón ordenado de quince citas generadas por IA al puñado que sobrevive a la
+recuperación, para después construir un mapa de evidencia cuyo único cuadro vacío es
+tu vacío.
 
 ## Prompts de IA recomendados
 
-Comprométete primero con tu propia respuesta y solo después delega. Cada bloque de
-abajo es algo que realmente escribirías.
+Comprométete primero con tu propia respuesta y solo después delega. La verificación
+tampoco es un solo prompt. Es un **bucle de IA**: el ciclo prompt → respuesta →
+interrogación → refinamiento → nueva ejecución. Preguntas, lees la salida contra el
+artículo, le dices a la herramienta exactamente dónde se pasó de la raya, y vuelves a
+preguntar. La segunda pasada suele ser donde aparece la respuesta honesta, porque la
+primera todavía está tratando de agradarte.
 
 ```text
 My research question is: [paste it]. The claim I need sources for is:
@@ -123,9 +128,9 @@ the single claim its evidence actually supports, and flag any where my
 one-line summary reaches further than the study does.
 ```
 *Después de ejecutarlo, verifica:* lee cada afirmación marcada contra la sección de
-resultados del propio artículo. Esto contrarresta la **fuente mal caracterizada** y el
-**cambio silencioso de alcance** (*silent scope change*), una correlación reportada
-calladamente como causa.
+resultados del propio artículo. Esto contrarresta la **fuente mal caracterizada**
+(*mischaracterized source*) y el **cambio silencioso de alcance** (*silent scope
+change*), una correlación reportada calladamente como una causa.
 
 ```text
 Here is my research question and the gap I placed: [paste them]. Argue the gap
@@ -134,67 +139,54 @@ authors, year, title, and venue. Do not reassure me.
 ```
 *Después de ejecutarlo, verifica:* recupera cada estudio que nombre; una fuente que no
 puedes abrir no cierra nada. Esto contrarresta el **acuerdo complaciente**
-(*sycophantic agreement*): un socio que elogia tu vacío te ha halagado, no te ha puesto
+(*sycophantic agreement*): una IA que elogia tu vacío te ha halagado, no lo ha puesto
 a prueba.
 
 ::: {.callout-important title="No delegues"}
-Dos decisiones son solo tuyas, porque tu nombre va en el mapa. Primero, **si una fuente
-cuenta como verificada**: la recuperaste, la abriste y leíste la afirmación por tu
-cuenta, así que ningún resumen de IA sustituye al artículo. Segundo, **si tu vacío es
-genuino**: recorriste un enlace hacia atrás y uno hacia adelante desde cada fuente
-verificada y la pregunta sigue sin respuesta. Una IA puede señalar; solo tú puedes dar
-fe.
+Dos decisiones son solo tuyas, porque tu nombre va en el mapa. Primera, **si una
+fuente cuenta como verificada**: la recuperaste, la abriste y leíste la afirmación por
+tu cuenta, así que ningún resumen de IA sustituye al artículo. Segunda, **si tu vacío
+es genuino**: recorriste un enlace hacia atrás y uno hacia adelante desde cada fuente
+verificada y la pregunta sigue sin respuesta. Una IA puede señalar; solo tú puedes
+responder por ella.
 :::
 
 ## Un caso de falla de la IA
 
-La falla que debes esperar aquí es la fabricación confiada. Pídele a una herramienta de
-propósito general «el estudio más citado sobre biocarbón y rendimiento de maíz en suelo
-arenoso» y a menudo producirá uno, con una cadena con forma de DOI y el nombre de una
-revista real, porque producir una cita fluida es exactamente para lo que está
-construida. El detalle no es prueba de existencia. La atrapas en el momento en que
-intentas recuperarla: pega el título exacto entre comillas en la base de datos de la
-biblioteca y en Google Scholar. Si nada aparece en ningún lugar donde debería estar, la
-cita es inventada hasta que se demuestre lo contrario, y nunca entra en tu registro. La
-fluidez era la trampa; el resultado de búsqueda vacío es la señal.
+La falla que hay que esperar aquí es la fabricación confiada. Pídele a una herramienta
+de propósito general «el estudio más citado sobre biocarbón y rendimiento del maíz en
+suelo arenoso» y a menudo producirá uno, completo con una cadena con forma de DOI y el
+nombre de una revista real, porque producir una cita fluida es exactamente aquello
+para lo que fue construida. El detalle no es prueba de existencia. La atrapas en el
+momento en que intentas recuperarla: pega el título exacto entre comillas en la base
+de datos de la biblioteca y en Google Scholar. Si nada aparece en ninguno de los
+lugares donde debería estar, la cita está inventada hasta que se demuestre lo
+contrario, y nunca entra en tu registro. La fluidez era la trampa; el resultado de
+búsqueda vacío es la señal.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: si le pides a una IA que revise la afirmación, el código o la cita de otra, encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te corresponde a ti, quien investiga.
-:::
+*Entraste con una lista de pistas candidatas. Sales con una base de evidencia que
+abriste personalmente, y con un vacío que puedes defender en voz alta.*
 
-El resultado clave del capítulo es tu lista de fuentes verificadas, y el método que la
-confirma es la **lectura de la fuente primaria** de la [guía de
-verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-para cualquier cita, encuentra la fuente real y lee la línea pertinente. Recurre a ella
-siempre que una salida cite un estudio, una estadística o un dato de la literatura. En
-concreto, para cada fuente que pienses conservar, abre el artículo mismo, confirma que
-la autoría, el año y el medio coinciden, y confirma que la oración que le atribuyes es
-una oración que realmente contiene. Una fuente que sobrevive a esa lectura está
-verificada; una que no se puede abrir, o que no dice lo que afirmaste, se corta. Para el
-vacío en sí, agrega un segundo método independiente: el **razonamiento con pares**,
-llevando a alguien de la clase por las razones por las que el mapa se queda callado
-donde ubicaste tu vacío y dejando que su única pregunta revele lo que tu recuperación
-todavía debe.
-
-## Transferencia al proyecto
-
-Este capítulo es el motor de tu hito **mapa de evidencia verificada y contribución**,
-presentado como recorrido de galería en el estudio del viernes. Ese hito pide un
-registro de al menos seis fuentes que recuperaste personalmente, un mapa de evidencia
-con tus contradicciones dibujadas en vez de escondidas, tu vacío ubicado donde el mapa
-está demostrablemente abierto, y una línea de contribución acotada de la forma «con base
-en las fuentes que recuperé y verifiqué, ___ no se ha establecido para ___». El ciclo de
-recuperación y verificación que practicas aquí es exactamente lo que llena ese registro,
-y el mapa verificado se vuelve el suelo sobre el que se para tu carta de investigación.
-
-## Defiende tu decisión
-
-En un párrafo corto, enuncia la decisión que este capítulo te permite tomar y defiéndela
-para tu propio proyecto. Nombra una fuente que hayas verificado y la afirmación exacta
-que hace. Enuncia tu vacío provisional en una oración acotada. Después da su **límite e
-incertidumbre**: en qué posición de la brújula se ubica (descripción o generalización),
-cuántas fuentes has recuperado realmente hasta ahora, y si tu vacío está confirmado por
-la recuperación o sigue siendo una búsqueda inconclusa que debes perseguir antes del
-viernes.
+1. Intenta recuperar cada candidata de tu lista. Busca el título exacto entre comillas
+   en la base de datos de tu biblioteca y en Google Scholar. Lo que no aparezca sigue
+   siendo una pista y nunca entra en tu base de evidencia. Anota por qué falló.
+2. Abre las que sí aparecen y léelas. Como mínimo: el resumen, la sección de diseño y
+   los resultados. Luego escribe la afirmación central de cada fuente en una oración,
+   con tus palabras. Si no puedes escribir esa oración, todavía no la has leído.
+3. Critica cada una. Nombra la población que estudió, el diseño que usó y la única
+   cosa que *no* concluirías a partir de ella. Una fuente que no puedes criticar es
+   una fuente que no has entendido.
+4. Dibuja tu mapa de evidencia: un nodo por fuente verificada, líneas entre las que
+   coinciden, y una línea marcada entre cualquier par que se contradiga. Las
+   contradicciones se dibujan, nunca se maquillan.
+5. Encuentra el punto silencioso del mapa y escribe tu vacío como una oración acotada:
+   «Entre las fuentes que recuperé y verifiqué, ___ no ha sido establecido para ___».
+   Si la versión honesta es «mi búsqueda todavía está inconclusa», escribe eso en su
+   lugar. Eso es un hallazgo sobre tu búsqueda, no un fracaso.
+6. Registra el trabajo de verificación en tu AI Research Ledger (registro de
+   investigación con IA), nombrando el método que usaste de la [Guía de
+   Verificación](../verification-guide.qmd); la lectura de la fuente primaria es el
+   que le corresponde a cada cita. Una IA revisora puede intentar contigo argumentar
+   en contra de tu vacío; la decisión de conservarlo o descartarlo es tuya.

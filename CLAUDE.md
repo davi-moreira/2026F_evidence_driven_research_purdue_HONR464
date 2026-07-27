@@ -336,9 +336,18 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 5.2 — second instructor review round (2026-07-27, DECISIONS.md
-D23): EDRAI acronym + book-first loop (notebooks reflect the book; instructor
-reviews the book; assistant propagates; institution-agnostic body), EDRAI
+**Version:** 5.3 — third instructor review round (2026-07-27, DECISIONS.md
+D24): the book becomes **EDR|AI — Evidence-Driven Research in the Age of AI**,
+a SELF-CONTAINED MANUAL: per-chapter "It is your turn" sections chaining into a
+full research artifact (Verification lab / Project transfer / Defend sections
+retired; Reading boxes retired; sync-validator elements updated); domains econ
+/ political science / business / biology; the AI loop taught from ch. 3;
+per-page language switcher; Part I overview page with diagram; appendices:
+SRL, Verification Guide, About the Author; site tab "Book: EDR|AI" (new tab);
+nb01 = orientation Lecture 1 with ⚙️ Setup section and updated bio. (5.2 —
+second instructor review round (2026-07-27,
+D23): EDR|AI (then 'EDRAI') acronym + book-first loop (notebooks reflect the book; instructor
+reviews the book; assistant propagates; institution-agnostic body), EDR|AI
 required / RDSS recommended reading model, PT-BR + ES book translations
 (book-pt/, book-es/ — EN is source of truth), AI-reviews-AI-human-decides
 callouts, provenance metadata lines + "all positions" tags retired from
@@ -352,5 +361,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))
 **Maintained by:** Professor Davi Moreira + AI Assistants

@@ -2,115 +2,122 @@
 title: "Tabelas Alegação–Evidência"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Para cada alegação que o seu pôster faz, decida qual
-> peça exata de evidência a respalda, onde essa evidência vive e o que ela não
-> estabelece, e registre as três coisas em uma linha de uma tabela
-> alegação–evidência antes de travar o pôster.
-
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do tópico correspondente do curso; o laboratório no Colab está linkado acima. Não existe capítulo companheiro no RDSS (*Research Design in the Social Sciences*, o livro de desenho de pesquisa que acompanha o curso) para este tópico; este capítulo se sustenta sozinho.
-:::
+> **A decisão de pesquisa.** Para cada alegação que o seu trabalho faz em público,
+> decida qual peça exata de evidência a sustenta, onde essa evidência mora e o que ela
+> não estabelece. Depois escreva as três coisas numa linha de uma tabela
+> alegação–evidência, antes de a alegação chegar a algum lugar onde um estranho possa
+> apontar o dedo.
 
 ## Por que essa decisão importa
 
-> *"Eu aponto para um número do seu painel e pergunto de onde ele veio. Me leve
-> até a linha que o produziu e eu confio no pôster inteiro. Diga 'está na análise
-> em algum lugar' e eu paro de acreditar em todos os outros números que estão lá
-> em cima."*
+**A decisão em jogo: para cada alegação que você faz, qual evidência específica a
+sustenta e onde essa evidência pode ser encontrada.**
+
+> *"Eu aponto para um número no seu painel e pergunto de onde ele veio. Me leve até a
+> linha que o produziu e eu confio no pôster inteiro. Diga 'está na análise em algum
+> lugar' e eu paro de acreditar em todos os outros números que estão ali."*
 > — uma **avaliadora de integridade em pesquisa** trabalhando num salão de pôsteres
 
-Um pôster é um conjunto de promessas feitas em público. Cada número de destaque,
-cada figura, cada fato citado é uma alegação que um estranho pode testar em noventa
-segundos. A distância perigosa fica entre uma alegação que você consegue *dizer* e
-uma alegação que você consegue *respaldar*. Uma tabela alegação–evidência fecha
-essa distância de propósito, antes que alguém aponte o dedo, para que a honestidade
-esteja construída dentro do painel e não remendada sob pressão.
+Um pôster é um conjunto de promessas feitas em público. Cada número de destaque, cada
+figura, cada fato citado é uma alegação que um estranho pode testar em noventa
+segundos. A lacuna perigosa fica entre uma alegação que você consegue *dizer* e uma
+alegação que você consegue *sustentar*. Uma tabela alegação–evidência fecha essa lacuna
+de propósito, antes que alguém aponte o dedo, de modo que a honestidade fique embutida
+no trabalho em vez de ser remendada sob pressão.
 
 ## O conceito
 
-Uma **tabela alegação–evidência** é uma tabela com uma linha por alegação, que
-emparelha cada alegação feita pelo seu pôster com a evidência específica que está
-por trás dela. Exemplo: uma linha que diz "a Loja B vendeu cerca de 1,4 vez mais
-unidades por semana do que a Loja A" na coluna de alegação, com as duas médias
-semanais de vendas na coluna de evidência.
+Uma **tabela alegação–evidência** é uma tabela com uma linha por alegação, que emparelha
+cada alegação que você faz com a evidência específica que está por trás dela. Exemplo:
+uma linha que diz "a Loja B vendeu cerca de 1,4 vez mais unidades por semana do que a
+Loja A" na coluna da alegação, com as duas médias semanais de vendas na coluna da
+evidência.
 
 Quatro colunas sustentam cada linha, e cada uma é um termo que vale conhecer.
 
-- **Alegação.** A afirmação que o seu pôster sustenta como verdadeira. Exemplo:
-  "nosso valor medido de *g* é 9,79 m/s²."
-- **Evidência.** O resultado ou a fonte exata que respalda a alegação, com a sua
-  incerteza. Exemplo: 30 oscilações cronometradas dando um período de 2,007 s e o
-  intervalo de ±0,06 m/s² em torno da estimativa.
-- **Rastro.** Onde o número foi de fato produzido, nomeado com precisão suficiente
-  para você abrir. Um **número rastreável** é aquele que você consegue seguir de
+- **Alegação.** A afirmação que você sustenta como verdadeira. Exemplo: "o
+  comparecimento nessas seções eleitorais foi de 61,3 por cento".
+- **Evidência.** O resultado exato ou a fonte exata que sustenta a alegação, com a sua
+  incerteza. Exemplo: 30 seções eleitorais amostradas, com 48.900 votos depositados
+  contra 79.800 eleitores registrados, e o intervalo de ±1,8 ponto em torno da
+  estimativa.
+- **Rastro.** Onde um número foi de fato produzido, nomeado com precisão suficiente
+  para ser aberto. Um **número rastreável** é aquele que você consegue percorrer de
   volta até a célula do notebook que o calculou. Exemplo: "célula 16, onde roda
-  `g = 4*pi**2*L / T**2`". Um número que você não consegue seguir de volta, digitado
-  de memória ou arredondado à mão, é um **número não rastreável**, e ele não
-  pertence ao painel.
-- **Fronteira.** A **fronteira da alegação** é a linha entre o que a evidência
-  autoriza e o que ela não autoriza. Exemplo: "medido em um único local, com um
-  único comprimento de pêndulo e cronometrado à mão, portanto este não é o valor
-  padrão ao nível do mar."
+  `turnout = ballots.sum() / registered.sum()`". Um número que você não consegue
+  percorrer de volta, digitado de memória ou arredondado à mão, é um **número não
+  rastreável**, e ele não pertence ao painel.
+- **Fronteira.** A **fronteira da alegação** é a linha entre o que a evidência autoriza
+  e o que ela não autoriza. Exemplo: "um município, uma eleição de meio de mandato,
+  apenas eleitores registrados, então esta não é a taxa estadual".
 
-Construir a tabela é a habilidade avaliada. Assim que cada alegação tem uma linha
-preenchida, uma alegação sem respaldo não tem onde se esconder, porque uma célula
-em branco é um buraco visível.
+Construir a tabela é a habilidade. Quando toda alegação tem uma linha preenchida, uma
+alegação sem respaldo não tem onde se esconder, porque uma célula em branco é um buraco
+visível.
 
 ## Um exemplo resolvido
 
-Você montou um pôster de física relatando uma medição de *g*, a aceleração da
-gravidade, a partir de um pêndulo simples. Sua manchete diz "medimos *g* =
-9,79 m/s²". Antes de o arquivo ir para a gráfica, você constrói a tabela.
+Você montou um pôster de ciência política relatando uma estimativa de comparecimento: a
+parcela de eleitores registrados que votou na eleição de meio de mandato de um
+município. A sua manchete diz "o comparecimento nessas seções eleitorais foi de 61,3
+por cento". Antes de o arquivo ir para a gráfica, você constrói a tabela.
 
-**Linha 1 (a manchete).** Alegação: "*g* = 9,79 ± 0,06 m/s²." Evidência: 30
-cronometragens de um pêndulo de 1,00 m, período médio de 2,007 s, e a dispersão dos
-30 períodos gerando o intervalo. Rastro: célula 16, a linha `g = 4*pi**2*L / T**2`.
-Fronteira: um local, um comprimento, cronometragem manual, então um viés de tempo
-de reação da ordem de um décimo de segundo é possível e o valor não pretende ser os
-9,81 m/s² aceitos.
+**Linha 1 (a manchete).** Alegação: "o comparecimento foi de 61,3 ± 1,8 por cento".
+Evidência: 30 seções eleitorais amostradas, 48.900 votos depositados contra 79.800
+eleitores registrados, com a dispersão das 30 taxas por seção dando o intervalo. Rastro:
+célula 16, a linha `turnout = ballots.sum() / registered.sum()`. Fronteira: um
+município, uma eleição de meio de mandato, apenas eleitores registrados, então nada é
+alegado sobre o comparecimento estadual nem sobre adultos elegíveis que nunca se
+registraram.
 
-Preencher a Linha 1 força uma pegadinha honesta. Você vai atrás do rastro e
-descobre que o número no rascunho do painel diz 9,81, não 9,79. Você tinha escrito
-em silêncio o valor do livro-texto em vez do valor que a sua célula imprimiu. A
-tabela pegou um número não rastreável antes que um avaliador pegasse.
+Preencher a Linha 1 força uma pescaria honesta. Você vai atrás do rastro e descobre que
+o número no rascunho do seu painel diz 63,0, e não 61,3. Você tinha escrito, sem
+perceber, a cifra estadual oficialmente divulgada em vez daquela que a sua célula
+imprimiu. A tabela pegou um número não rastreável antes de a banca pegar.
 
-**Linha 2 (uma alegação secundária).** Alegação: "o período quase não muda com a
-amplitude em oscilações pequenas." Evidência: os períodos medidos a 5° e a 15°
-diferem por menos do que a dispersão da sua cronometragem. Rastro: célula 18, a
-comparação de amplitudes. Fronteira: testado apenas abaixo de 15°, então nada é
-alegado sobre oscilações grandes.
+**Linha 2 (uma alegação secundária).** Alegação: "a estimativa quase não se move quando
+mudo o critério para considerar um registro como ativo". Evidência: sob duas definições
+razoáveis, as estimativas diferem por menos do que a sua dispersão amostral. Rastro:
+célula 18, a comparação de definições. Fronteira: apenas duas definições testadas,
+então nada é alegado sobre cadastros mais frouxos, que mantêm registros inativos há
+muito tempo.
 
-Duas alegações, duas linhas, cada número seguido de volta até uma célula, cada
-fronteira escrita. Essa tabela é o que permite ao seu pôster sobreviver a um dedo
-apontado.
+Duas alegações, duas linhas, cada número percorrido de volta até uma célula, cada
+fronteira escrita. Essa tabela é o que permite ao seu trabalho sobreviver a um dedo em
+riste.
 
 ## O laboratório no Colab
 
 O laboratório deste capítulo é o notebook **nb11 — Poster criticism + final poster
-lock**. Abra-o no Colab pelo selo acima e trabalhe as células junto com este
-capítulo. Lá você faz a auditoria de travamento final em um pôster real: rastreia
-cada número até a célula que o produziu, confirma que cada citação resolve para uma
-fonte que você mesmo abriu e transforma alegações soltas em linhas travadas e
-respaldadas.
+lock**. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo.
+Lá você faz a auditoria de travamento final em um pôster de verdade: rastreia cada
+número até a célula que o produziu, confirma que cada citação resolve para uma fonte
+que você mesmo abriu, e transforma alegações soltas em linhas travadas e sustentadas.
 
 ## Prompts de IA recomendados
 
-Comprometa-se primeiro com o seu próprio rascunho de tabela e só depois delegue.
-Cada prompt é uma tarefa verificável, não um pedido de veredito.
+Comprometa-se primeiro com o seu próprio rascunho de tabela e só depois delegue. Cada
+prompt é uma tarefa verificável, não um pedido de veredito.
+
+Nenhum deles é de tiro único. Você envia o prompt, lê a resposta, insiste na linha que
+parece lisa demais e envia de novo. Ferramentas agênticas vão iterar por você e devolver
+uma tabela pronta, e é exatamente aí que se deve desacelerar. Uma tabela montada em
+cinco voltas invisíveis ainda precisa ser aberta célula por célula.
 
 **Localize a fonte de um fato citado.**
 
 ```text
-Act as a physics reference assistant. I want to cite the accepted sea-level value
-of g. Name the value and one real, retrievable source that reports it, and give me
-enough detail to find it myself. If you are not confident a source exists, say so
-instead of guessing.
+Act as a reference assistant in political science. I want to cite the officially
+reported turnout for this county in this election. Name the figure and one real,
+retrievable source that reports it, such as a state or county election office
+release, and give me enough detail to find it myself. If you are not confident a
+source exists, say so instead of guessing.
 ```
-Depois de rodar, verifique: abra você mesmo a fonte nomeada e confirme que ela
-relata aquele valor antes que ele encoste no seu pôster. Neutraliza a *fabricação
-confiante* (uma citação inventada chega com a mesma confiança de uma real).
+Depois de rodar, verifique: abra você mesmo a fonte indicada e confirme que ela relata
+aquele valor antes de ele encostar no seu pôster. Neutraliza a *fabricação confiante*
+(uma citação inventada chega com a mesma confiança de uma real).
 
 **Liste todas as alegações, para que nenhuma fique sem respaldo.**
 
@@ -121,11 +128,11 @@ judge whether my evidence is good; just surface every claim, including implicit
 ones.
 ```
 Depois de rodar, verifique: confronte a lista com a sua própria tabela e acrescente
-qualquer alegação para a qual você não tinha escrito uma linha. Neutraliza a
-*ilusão de completude* (uma lista arrumadinha que pula em silêncio justamente a
-alegação sem evidência por trás).
+qualquer alegação para a qual você não tinha escrito uma linha. Neutraliza a *ilusão de
+completude* (uma lista arrumadinha que pula em silêncio justamente a alegação sem
+evidência por trás).
 
-**Faça red team no par alegação–evidência.**
+**Faça red team no encaixe alegação–evidência.**
 
 ```text
 Here is one row of my claim-evidence table: claim "[paste]", evidence "[paste]".
@@ -135,63 +142,49 @@ that overreach.
 ```
 Depois de rodar, verifique: leia cada objeção contra a sua coluna de fronteira e
 rejeite qualquer uma que peça para você conceder algo que a sua evidência de fato
-autoriza. Neutraliza a *mudança silenciosa de escopo* (evidência para uma alegação
-mais fácil, apresentada como respaldo da alegação difícil).
+autoriza. Neutraliza a *mudança silenciosa de escopo* (evidência para uma alegação mais
+fácil, disfarçada de respaldo para a difícil).
 
 ::: {.callout-important title="Não delegue"}
-A **redação de cada alegação**, o **julgamento de que uma peça de evidência de fato
-a respalda** e a **fronteira que cada alegação carrega** continuam sendo seus. Uma
-IA pode listar alegações e rascunhar linhas, mas não pode abrir a célula do seu
-notebook para confirmar que um número é real, e não pode decidir que a evidência é
-honesta o bastante para ser impressa. A decisão de que a tabela está completa e o
-pôster está travado é sua para declarar e defender.
+A **redação de cada alegação**, o **julgamento de que uma peça de evidência realmente a
+sustenta** e a **fronteira que cada alegação carrega** continuam suas. Uma IA pode
+listar alegações e rascunhar linhas, mas não pode abrir a sua célula do notebook para
+confirmar que um número é real, e não pode decidir que a evidência é honesta o bastante
+para ser impressa. A decisão de que a tabela está completa e o trabalho está travado é
+sua para declarar e defender.
 :::
 
 ## Um caso de falha da IA
 
 Você cola o texto do seu pôster e pede a uma ferramenta de IA que construa a tabela
 alegação–evidência inteira para você. Ela devolve uma grade limpa e completa, cada
-célula preenchida, e a coluna de rastro diz com confiança: "valor de *g* da célula
-14". Você quase aceita. Então você abre a célula 14, e ela calcula o *período*, não
-*g*. O valor que você relata é produzido duas células depois, na célula 16. A
-ferramenta chutou um número de célula plausível e o preencheu com total confiança,
-e a tabela arrumadinha e terminada escondeu o rastro errado atrás de uma aparência
-polida.
+célula preenchida, e a coluna de rastro diz com confiança: "valor de comparecimento da
+célula 14". Você quase aceita. Então você abre a célula 14, e ela soma os eleitores
+registrados; ela nunca divide. A taxa que você relata é produzida duas células depois,
+na célula 16. A ferramenta chutou um número de célula plausível e o preencheu com total
+confiança, e a tabela pronta e arrumadinha escondeu o rastro errado atrás de um
+acabamento bonito.
 
-Você pega o erro recusando-se a confiar num rastro que você não abriu. Ler a célula
-de verdade, com o número na mão, é a disciplina inteira. Uma tabela preenchida não
-é uma tabela verificada.
+Você pega isso recusando-se a confiar num rastro que não abriu. Ler a célula de verdade,
+com o número na mão, é toda a disciplina. Uma tabela preenchida não é uma tabela
+verificada.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é outra proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado é sempre sua, pesquisadora ou pesquisador.
-:::
+*Os seus resultados agora estão redigidos como alegações com fronteiras; este passo faz
+cada uma apontar para a evidência que a sustenta.*
 
-Verifique o resultado central deste capítulo, a rastreabilidade da tabela, com dois
-métodos nomeados no [guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
-Para cada número rastreado, use o **cálculo direto**: recalcule o valor por um
-segundo caminho, mais simples, e confirme que ele bate com o número do painel,
-dígito por dígito. Para cada fato citado, use a **leitura da fonte primária**: abra
-a fonte, encontre a linha e confirme que ela diz o que o seu pôster alega. Um
-número que sobrevive a um recálculo independente e uma citação que resolve para uma
-página real estão respaldados. Uma divergência em qualquer um dos dois é um achado,
-e a alegação sai do painel até você corrigir.
-
-## Transferência para o projeto
-
-Este capítulo é uma peça avaliada do seu marco de **travamento final do pôster**.
-Construa uma tabela alegação–evidência para o seu próprio pôster: uma linha para
-cada número de destaque e cada fato citado, cada uma com o seu rastro até uma
-célula ou fonte e com a sua fronteira escrita. Essa tabela é o que você leva para a
-auditoria de galeria e para a defesa oral, e é a prova de que a honestidade do seu
-pôster foi verificada, e não apenas afirmada.
-
-## Defenda sua decisão
-
-Em quatro frases, defenda uma linha da sua tabela. Enuncie a alegação nas palavras
-exatas que vão aparecer no seu painel e nomeie a evidência específica que a
-respalda. Enuncie a fronteira dela: o que essa alegação *não* estabelece e a
-posição na bússola a partir da qual ela fala. Encerre com a incerteza: o intervalo
-ou a ressalva que viaja no mesmo campo de visão da alegação, e a única checagem que
-você rodou para confirmar que o número rastreado é real.
+1. Escreva uma linha por alegação com quatro colunas: alegação, evidência, rastro,
+   fronteira. Inclua as alegações implícitas, aquelas que as suas figuras fazem sem
+   nenhuma frase.
+2. Preencha a coluna de evidência com o resultado de fato e a sua incerteza, não com uma
+   descrição do resultado.
+3. Preencha a coluna de rastro abrindo a célula ou a fonte e lendo o número na tela. Se
+   você não consegue abrir, a linha não está preenchida.
+4. Escreva cada fronteira como uma frase sobre o que a linha não estabelece e depois
+   cace células em branco. Uma célula em branco é uma alegação sem respaldo, então ou
+   você a respalda ou corta a alegação.
+5. Registre isso no seu AI Research Ledger (registro de uso de IA) e verifique pelo
+   menos um número rastreado com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd). Uma IA revisora pode fazer a
+   checagem junto com você; a decisão de aceitar ou rejeitar continua sua.

@@ -234,7 +234,7 @@ sources:
     title: "Evidence-Driven Research in the Age of AI: How to Design, Analyze, Verify, and Defend"
     acronym: "EDR|AI"
     status: "work in progress — under development across the semester"
-    reading_model: "EDRAI chapters are the REQUIRED reading; the matching RDSS chapters are RECOMMENDED (EDRAI translates RDSS to the undergraduate audience)"
+    reading_model: "EDR|AI chapters are the REQUIRED reading; the matching RDSS chapters are RECOMMENDED (EDR|AI translates RDSS to the undergraduate audience)"
     translations: ["pt-BR (book-pt/ -> docs/book-pt)", "es (book-es/ -> docs/book-es)"]
     format: "Quarto book, 37 chapters in six parts, rendered to docs/book/"
     sync: "chapters synchronized with nb01–nb16 + site (validate_book_sync.py)"

@@ -2,90 +2,98 @@
 title: "Modelo, indagación, estrategia de datos y estrategia de respuesta"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Tú decides las cuatro partes de tu diseño de
-> investigación y confirmas que se alinean: un modelo del mundo, una cantidad con
-> nombre que quieres obtener de él, un plan de cómo llegan los datos y un plan para
-> convertir esos datos en tu cantidad. Este capítulo te prepara para escribir esas
-> cuatro partes y defender que apuntan a lo mismo.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de referencia del curso) cap. 2, 5 y 10, gratis en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **La decisión de investigación.** Las cuatro partes de tu propio diseño, escritas
+> antes de que exista dato alguno: un modelo del mundo, la única cantidad con nombre
+> que quieres sacar de él, un plan de cómo llegan los datos y un plan para convertir
+> esos datos en tu cantidad. Y luego la decisión más difícil: si esas cuatro partes de
+> verdad apuntan a lo mismo.
 
 ## Por qué importa esta decisión
 
-Imagina a una líder de ciencia de datos leyendo tu diseño de una página antes de que le
-dediques un semestre. Su preocupación es simple: «Muéstrame el número exacto que buscas
-y luego muéstrame que la forma en que recoges y procesas los datos puede alcanzar de
-verdad ese número. Si esos dos se separan, cada resultado que me traigas responde una
-pregunta que nunca hice». Un diseño que se salta este paso no es riguroso. Es una
-esperanza con buen formato. Lograr que las cuatro partes coincidan, en papel, antes de
-que existan datos, es el control de calidad más barato que harás en tu vida.
+**La decisión sobre la mesa: las cuatro partes de tu diseño, y si las cuatro apuntan a
+la misma cantidad.**
+
+Imagina a la persona que lidera analítica leyendo tu diseño de una página antes de que
+le dediques meses. Su preocupación es simple: «Muéstrame el número exacto que buscas y
+después muéstrame que la manera en que recoges y procesas los datos de verdad puede
+llegar a ese número. Si esas dos cosas se separan, cada resultado que me traigas
+responde una pregunta que nunca hice». Un diseño que se salta este paso no es
+riguroso. Es una esperanza con buen formato. Lograr que las cuatro partes coincidan,
+sobre el papel, antes de que exista un solo dato, es el control de calidad más barato
+que vas a correr en tu vida.
 
 ## El concepto
 
-Todo diseño de investigación tiene las mismas cuatro partes. El curso las llama **MIDA**
-(*Model, Inquiry, Data strategy, Answer strategy*: modelo, indagación, estrategia de
-datos y estrategia de respuesta), una letra para cada una.
+Todo diseño de investigación tiene las mismas cuatro partes. Este libro las llama
+**MIDA**, una letra cada una (por sus siglas en inglés: *Model, Inquiry, Data
+strategy, Answer strategy*).
 
-- **Modelo**: tu imagen escrita de cómo podría funcionar el mundo, es decir, qué cosas
-  existen y qué podría afectar a qué. Ejemplo: «la probabilidad de que alguien acepte
-  una canción recomendada va de 0 a 1, y un recomendador nuevo podría subirla».
+- **Modelo**: tu retrato escrito de cómo podría funcionar el mundo, es decir, qué
+  cosas existen y qué podría afectar a qué. Ejemplo: «la probabilidad de que una
+  persona acepte una canción recomendada va de 0 a 1, y un recomendador nuevo podría
+  empujarla hacia arriba».
 - **Indagación**: la única cantidad exacta que quieres de ese mundo, nombrada antes de
   que lleguen los datos. Ejemplo: «el aumento promedio en la tasa de aceptación que el
   nuevo recomendador causa entre quienes escuchan».
 - **Estrategia de datos**: tu plan de cómo llegan a existir los datos, es decir, a
-  quién se muestrea y quién recibe cada condición. Ejemplo: «enviar al azar cada sesión
-  al recomendador viejo o al nuevo y registrar cada aceptación».
-- **Estrategia de respuesta**: tu plan para convertir los datos en una estimación de la
-  indagación. Ejemplo: «tasa de aceptación en el grupo nuevo menos tasa de aceptación
-  en el grupo viejo».
+  quién se muestrea y quién recibe cada condición. Ejemplo: «mandar al azar cada
+  sesión al recomendador viejo o al nuevo, y registrar cada aceptación».
+- **Estrategia de respuesta**: tu plan para convertir los datos en una estimación de
+  la indagación. Ejemplo: «tasa de aceptación del grupo nuevo menos tasa de aceptación
+  del grupo viejo».
 
-Las cuatro no son una lista de verificación que llenas en cualquier orden. Deben
-**alinearse**, es decir, tus estrategias de datos y de respuesta deben alcanzar de
-verdad la indagación que tu modelo vuelve preguntable. Ejemplo de desalineación: una
-indagación causal («el aumento que el recomendador *causa*») servida por una estrategia
-de datos que nunca aleatoriza quién ve qué solo puede mostrar una **asociación**, es
-decir, dos cosas que se mueven juntas sin prueba de que una causó a la otra. Nombrar la
-desalineación en papel es todo el trabajo aquí.
+Las cuatro no son una lista que llenas en cualquier orden. Tienen que **alinearse**, es
+decir, tus estrategias de datos y de respuesta de verdad tienen que alcanzar la
+indagación que tu modelo hace preguntable. Ejemplo de desalineación: una indagación
+causal («el aumento que el recomendador *causa*») servida por una estrategia de datos
+que nunca aleatoriza quién ve qué solo puede mostrar una **asociación**, es decir, dos
+cosas que se mueven juntas sin prueba de que una causó la otra. Nombrar la
+desalineación sobre el papel es todo el trabajo aquí.
 
 ## Un ejemplo resuelto
 
-Toma una app de streaming de música que prueba si un nuevo recomendador de reproducción
-automática aumenta cuántas veces quienes escuchan se quedan con la pista sugerida.
-Recorre las cuatro partes.
+Toma una empresa de streaming musical que está probando si un nuevo recomendador de
+reproducción automática aumenta la frecuencia con que quienes escuchan se quedan con
+la canción sugerida. Recorre las cuatro partes.
 
-El **modelo** dice que cada persona que escucha tiene dos tasas de aceptación posibles,
-una con el recomendador viejo y otra con el nuevo, y que la nueva podría ser mayor,
-menor o igual. La **indagación** es la diferencia promedio entre esas dos tasas entre
-todas las personas, un solo número, causal en su tipo. La **estrategia de datos**
-reparte al azar cada sesión entrante al grupo viejo o al nuevo, de modo que nada de la
+El **modelo** dice que cada persona tiene dos tasas de aceptación posibles, una con el
+recomendador viejo y otra con el nuevo, y que la nueva podría ser mayor, menor o
+igual. La **indagación** es la diferencia promedio entre esas dos tasas entre todas
+las personas que escuchan: un número, causal por su tipo. La **estrategia de datos**
+reparte al azar cada sesión entrante entre viejo y nuevo, de modo que nada sobre la
 persona decide qué versión recibe. La **estrategia de respuesta** calcula la tasa de
 aceptación en cada grupo y resta.
 
-Ahora audita la alineación. La indagación pide una diferencia causada. El reparto al
-azar es lo que autoriza esa palabra, porque rompe cualquier vínculo entre quién es la
-persona y qué versión ve. Así que las cuatro partes concuerdan. Contrasta con un atajo
-tentador: lanzar el recomendador nuevo a las personas usuarias nuevas y compararlas con
-las usuarias existentes que tienen el viejo. Esa estrategia de datos ya no se alinea con
-una indagación causal, porque las personas nuevas y las existentes difieren en formas
-que también mueven la tasa de aceptación. La afirmación honesta se derrumba de «causa» a
-«está asociado con». Misma pregunta, alineación rota.
+Ahora audita la alineación. La indagación pide una diferencia causada. El reparto
+aleatorio es lo que autoriza esa palabra, porque rompe cualquier vínculo entre quién
+es la persona y qué versión ve. Así que las cuatro partes coinciden. Contrasta con un
+atajo tentador: lanzar el recomendador nuevo a los usuarios nuevos y compararlos con
+los usuarios existentes que siguen con el viejo. Esa estrategia de datos ya no se
+alinea con una indagación causal, porque los usuarios nuevos y los existentes difieren
+en cosas que también mueven la tasa de aceptación. La afirmación honesta se derrumba
+de «causa» a «está asociado con». Misma pregunta, alineación rota.
 
 ## El laboratorio en Colab
 
 El laboratorio de este capítulo es el cuaderno **nb04 — The anatomy of a research
-design: MIDA + declare → diagnose → redesign**. Ábrelo en Colab con la insignia de
-arriba y trabaja las celdas junto con este capítulo. Allí construyes un pequeño mundo
-simulado, escribes sus cuatro partes MIDA y ves qué le pasa a tu respuesta cuando una
-estrategia de datos deja de coincidir en silencio con la indagación.
+design: MIDA + declare → diagnose → redesign** (*la anatomía de un diseño de
+investigación: MIDA + declarar → diagnosticar → rediseñar*). Ábrelo en Colab con la
+insignia de arriba y trabaja las celdas junto con este capítulo. Allí construirás un
+pequeño mundo simulado, escribirás sus cuatro partes MIDA y verás qué le pasa a tu
+respuesta cuando una estrategia de datos deja calladamente de coincidir con la
+indagación.
 
 ## Prompts de IA recomendados
 
-Escribe primero tu propio borrador de cada parte y después pregunta. Comprometerte
-primero le da a la salida de la IA algo con lo que estar en desacuerdo.
+Escribe primero tu propio borrador de cada parte y solo después pregunta.
+Comprometerte primero le da a la salida de la IA algo con lo que estar en desacuerdo.
+Y cuenta con dar más de una vuelta: redactas, lees la respuesta, corriges la única
+parte que salió mal, pegas tu corrección de vuelta y vuelves a preguntar. Ese es el
+**bucle de IA**: el ciclo prompt → respuesta → interrogación → refinamiento → nueva
+ejecución. Cada vuelta debería afilar la indagación hacia menos palabras, no hacia
+más.
 
 ```
 Act as a research-design tutor. Here is my research question: [paste it].
@@ -93,10 +101,11 @@ Draft the four MIDA parts as a labeled list — Model, Inquiry, Data strategy,
 Answer strategy. State the Inquiry as one exact quantity. Mark each part
 "confident" or "guessing." Do not smooth over gaps.
 ```
-Después de ejecutarlo, verifica: lee las palabras de la indagación redactada junto a las
-palabras de tu pregunta. ¿Coinciden el tipo y el alcance? Esto contrarresta el **cambio
-silencioso de alcance** (*silent scope change*), donde la herramienta responde una
-pregunta vecina y más fácil que la que hiciste.
+
+Después de ejecutarlo, verifica: lee las palabras de la indagación redactada junto a
+las palabras de tu pregunta. ¿Coinciden el tipo y el alcance? Esto contrarresta el
+**cambio silencioso de alcance** (*silent scope change*), donde la herramienta
+responde una pregunta vecina más fácil que la que hiciste.
 
 ```
 Act as a hostile methodologist. Here are my four MIDA parts: [paste them].
@@ -104,76 +113,70 @@ Name the single worst misalignment — a place where my data or answer strategy
 cannot reach my stated inquiry. Give one concrete way my design fails, not
 praise.
 ```
-Después de ejecutarlo, verifica: contrasta la objeción con tu propia nota de alineación.
-Esto contrarresta el **acuerdo complaciente** (*sycophantic agreement*), donde la
-herramienta llama sólido a un diseño porque tú lo propusiste.
+
+Después de ejecutarlo, verifica: contrasta la objeción con tu propia nota de
+alineación. Esto contrarresta el **acuerdo complaciente** (*sycophantic agreement*),
+donde la herramienta declara sólido un diseño porque tú lo propusiste.
 
 ```
 Find one real, published study that used a design like mine to answer a similar
 question. Give title, authors, year, and venue. If you are not confident it
 exists, say so instead of inventing one.
 ```
+
 Después de ejecutarlo, verifica: abre una base de datos de biblioteca y localiza el
 estudio exacto antes de citarlo. Esto contrarresta la **fabricación confiada**
 (*confident fabrication*), donde la herramienta devuelve una cita plausible de un
 artículo que no existe.
 
 ::: {.callout-important title="No delegues"}
-Tres decisiones siguen siendo tuyas. **Qué mundo supone tu pregunta** (el modelo y, por
-tanto, qué podría confundirlo). **Qué única cantidad quieres** (la indagación, nombrada
-con tus palabras, no con la paráfrasis de la IA). **Si tus cuatro partes se alinean** y,
-por tanto, si el límite de tu afirmación es *causa* o solo *está asociado con*. Una IA
-puede redactar partes candidatas. Decidir que concuerdan, y hacerte cargo de la
-afirmación que se desprende, es juicio de investigación que no puedes ceder.
+Tres elecciones siguen siendo tuyas. **Qué mundo supone tu pregunta** (el modelo, y
+por lo tanto qué podría confundirlo). **Qué única cantidad quieres** (la indagación,
+nombrada con tus palabras, no con la paráfrasis de la IA). Y **si tus cuatro partes se
+alinean**, y por lo tanto si el límite de tu afirmación es *causa* o solo *está
+asociado con*. Una IA puede redactar partes candidatas. Decidir que coinciden, y
+hacerte cargo de la afirmación que se desprende, es un juicio de investigación que no
+puedes ceder.
 :::
 
 ## Un caso de falla de la IA
 
-Pegas tu pregunta sobre streaming y pides MIDA. La herramienta devuelve cuatro partes
-seguras y bien formateadas y llama «riguroso» al diseño. Léelo con cuidado: escribió la
-**estrategia de datos** como «comparar a las personas usuarias nuevas con el recomendador
-nuevo contra las usuarias existentes con el viejo», y dejó la **indagación** redactada
-como un aumento causado. Son dos fallas a la vez. La estrategia de datos es **plausible
-pero equivocada** (*plausible-but-wrong*), porque la antigüedad de la persona usuaria
-mueve por sí sola la tasa de aceptación, y la redacción de la indagación es un **cambio
-silencioso de alcance** de asociación a causa. Lo atrapas de dos maneras: pon las
-palabras de la indagación junto a la estrategia de datos y pregunta si de verdad hubo
-aleatorización; luego dibuja el modelo como diagrama y busca una flecha que vaya de
-«antigüedad de la persona usuaria» tanto a la versión vista como a la tasa de
-aceptación. Esa flecha abierta es el factor de confusión que el borrador fluido nunca
-mencionó.
+Pegas tu pregunta sobre streaming y pides el MIDA. La herramienta devuelve cuatro
+partes seguras y bien formateadas, y llama «riguroso» al diseño. Léelo con cuidado:
+escribió la **estrategia de datos** como «comparar usuarios nuevos con el recomendador
+nuevo contra usuarios existentes con el viejo», y dejó la **indagación** redactada
+como un aumento causado. Eso son dos fallas a la vez. La estrategia de datos es
+**plausible pero equivocada** (*plausible-but-wrong-method*), porque la antigüedad del
+usuario mueve la tasa de aceptación por su cuenta, y la redacción de la indagación es
+un **cambio silencioso de alcance** (*silent scope change*), de asociación a causa. La
+atrapas de dos maneras: pon las palabras de la indagación al lado de la estrategia de
+datos y pregunta si de verdad hubo aleatorización, y luego dibuja el modelo como un
+diagrama y busca una flecha que vaya de «antigüedad del usuario» tanto a la versión
+vista como a la tasa de aceptación. Esa flecha abierta es el factor de confusión que
+el borrador fluido nunca mencionó.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: si le pides a una IA que revise la afirmación, el código o la cita de otra, encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te corresponde a ti, quien investiga.
-:::
+*Tienes una pregunta y un vacío que puedes defender. Este paso los convierte en un
+diseño, en una página, en cuatro partes que tienen que coincidir entre sí.*
 
-El resultado clave por verificar es la afirmación de alineación misma: que tus cuatro
-partes apuntan a una sola cantidad. Usa el **razonamiento con pares** de la guía de
-verificación. Explícale a otra persona tu modelo, tu indagación, tu estrategia de datos
-y tu estrategia de respuesta, y pídele que nombre la parte que no alcanza a las demás.
-La primera pregunta de una segunda persona suele encontrar la deriva que dejaste de ver.
-Para cualquier diseño cuya indagación use la palabra *causa*, agrega una segunda
-comprobación independiente: dibuja el **diagrama causal** y confirma que no queda en pie
-ninguna ruta de puerta trasera abierta (una causa común del tratamiento y del
-resultado). Dos comprobaciones independientes que coinciden son mucho más fuertes que
-una.
-
-## Transferencia al proyecto
-
-Este capítulo es la columna vertebral de tu hito **carta de investigación y declaración
-MIDA**. Trae la pregunta de tu propio proyecto y escribe sus cuatro partes; después
-agrega una oración que nombre qué parte te generó más dudas en cuanto a su alineación y
-por qué. Esa nota de alineación se vuelve el límite de la afirmación que defiendes en tu
-carta, y es justo el insumo sobre el que se construye el capítulo 10 cuando declaras y
-diagnosticas el mismo diseño.
-
-## Defiende tu decisión
-
-En tres o cuatro oraciones, enuncia las cuatro partes MIDA de tu proyecto, nombra la
-única cantidad a la que apunta tu indagación y declara el límite de tu afirmación: ¿tu
-estrategia de datos se gana la palabra *causa* o se detiene en *está asociado con*?
-Después nombra la parte de cuya alineación tienes menos confianza y la incertidumbre que
-cambiaría tu respuesta si resultara de otro modo. Una declaración sin límite enunciado y
-sin incertidumbre enunciada está incompleta.
+1. Escribe tu **modelo** en tres o cuatro oraciones de lenguaje llano. Qué unidades
+   existen, qué podría afectar a qué, y qué puede variar. No hacen falta ecuaciones.
+   Después dibújalo como cajas y flechas, aunque quede feo.
+2. Escribe tu **indagación** como una oración que nombre una cantidad: un promedio,
+   una diferencia, una tasa, una proporción. Si necesitas la palabra «y» para
+   enunciarla, tienes dos indagaciones. Elige la que defenderías primero.
+3. Escribe tu **estrategia de datos**: quién o qué se muestrea, de qué lista, y quién
+   recibe cada condición, si es que hay condiciones. Di con honestidad si algo se
+   aleatoriza o si el mundo asignó las condiciones por ti.
+4. Escribe tu **estrategia de respuesta**: la aritmética que convierte tus datos en tu
+   indagación. Restar dos promedios cuenta. Aquí lo simple es una virtud.
+5. Audita la alineación por tu cuenta y escribe la oración que importa: «Como mi estrategia
+   de datos es ___, la redacción honesta más fuerte de mi resultado es ___». Si esa
+   oración aterriza en *está asociado con* en lugar de *causa*, no fracasaste:
+   encontraste temprano el límite de tu afirmación, que es justamente el punto.
+6. Registra el borrador en tu AI Research Ledger (registro de investigación con IA) y
+   después verifica la afirmación de alineación con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd); tanto el razonamiento con pares como un
+   diagrama causal encajan. Una IA revisora puede discutir contigo la desalineación;
+   la decisión de aceptar o rechazar la objeción es tuya.
