@@ -187,10 +187,10 @@ persona desconocida podría ejecutar sin ti en la sala.*
 
 1. Reúne todo en una sola carpeta: los datos, el código, el orden de ejecución, la
    semilla aleatoria y un texto corto que enuncie tu número titular en palabras.
-2. Reproduce por tu cuenta en frío. Borra el kernel, ejecuta todas las celdas desde arriba
-   sin arreglos manuales y, de ser posible, hazlo en un lugar distinto de la máquina
-   donde lo construiste. Anota si tu número titular volvió exacto, aproximado o no
-   volvió.
+2. Reproduce por tu cuenta en frío. Borra el kernel, ejecuta todas las celdas desde
+   arriba sin arreglos manuales y, de ser posible, hazlo en un lugar distinto de la
+   máquina donde lo construiste. Anota si tu número titular volvió exacto, aproximado o
+   no volvió.
 3. Alinea cada oración de tu texto con un número que tu código de verdad imprima. Marca
    cada desajuste, incluido el redondeo que no tenías intención de esconder.
 4. Cambia una decisión defendible que nunca revelaste, una regla de exclusión, un punto

@@ -1,0 +1,175 @@
+---
+title: "Perguntas Difíceis e Incerteza"
+---
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Decida, antes de alguém perguntar, como você vai dizer o
+> que o seu estudo não consegue mostrar. Você escreve a incerteza, os limites e as
+> respostas às perguntas justas mais difíceis com antecedência, para que a versão que
+> sai da sua boca sob pressão seja a que você escolheu, e não a que a adrenalina
+> escreveu. Você prepara essa resposta; você nunca a improvisa.
+
+## Por que essa decisão importa
+
+**A decisão em jogo: como você vai enunciar em voz alta a incerteza e os limites do seu
+estudo, antes que um estranho force a pergunta.**
+
+> *"Quando alguém me diz, sem eu perguntar, exatamente o que o estudo não consegue
+> mostrar, eu confio mais em tudo o mais que essa pessoa disse. Quando insiste que está
+> tudo blindado, eu começo a procurar a rachadura por conta própria."*
+> — uma **gestora de políticas públicas** que já ouviu mil apresentações de pôster
+
+O seu pôster está pronto e honesto. O perigo agora é a sua própria boca. Sob pressão,
+quem apresenta nervoso faz uma de duas coisas, e as duas distorcem a evidência. Uma
+enterra um achado real debaixo de desculpas. A outra, tomada pelo momento, promove um
+cuidadoso "andaram juntos" a um confiante "causou". A gestora acima não está testando a
+sua confiança. Ela está testando se você sabe onde a sua alegação para. Este capítulo te
+dá a resposta que sobrevive à pergunta mais dura dela.
+
+## O conceito
+
+O movimento que transforma um limite em força tem nome: o **movimento ULN**, um jeito de
+falar uma fronteira em três tempos. Ele vai de incerteza a limitação e daí a próximo
+passo, e cada tempo é um termo que vale definir uma vez.
+
+Uma **declaração de incerteza** é uma frase dizendo o quanto o seu número pode oscilar e
+por quê. Exemplo: "com 812 pessoas, a minha estimativa pode ficar alguns pontos acima ou
+abaixo". Uma **limitação** é uma frase verdadeira sobre o que o seu desenho não consegue
+mostrar. Exemplo: "eu medi que duas coisas andaram juntas, então não posso dizer que uma
+causou a outra". Um **próximo passo** é o estudo que resolveria essa limitação.
+Entregues juntos, o ULN soa como domínio do assunto, porque você está nomeando a borda
+da sua evidência de propósito.
+
+A falha que o ULN evita é a **espiral de desculpas**: enterrar um achado real e
+defensável debaixo de autoapagamento, como "sinceramente isso aqui deve estar todo
+errado, a minha amostra é minúscula". A correção é escolher **precisão**, nomear a
+fronteira exata, em vez de **evasivas**, autoproteção vaga que borra onde a alegação
+para. "Esta é uma amostra de um campus só" é precisão. "Mais ou menos, leve com um grão
+de sal" é evasiva. A precisão informa quem ouve; a evasiva só protege você.
+
+O segundo instrumento é o **banco de perguntas**: uma lista curta e escrita das
+perguntas justas mais difíceis que alguém poderia fazer, cada uma com uma resposta
+preparada. Cinco cobrem o espaço, uma por tipo recorrente (método, explicação
+alternativa, e-daí, generalização, uso de IA). Quando você não consegue responder
+plenamente a uma delas, você entrega um **"não sei" honesto**: uma admissão com
+conteúdo, que nomeia o que você não pode dizer, aquilo em que você *pode* se apoiar e o
+método que resolveria a questão.
+
+## Um exemplo resolvido
+
+Você trabalha com registros de uso do aplicativo de uma pequena empresa de software.
+Comparando clientes que escolheram a barra de ferramentas compacta com os que ficaram
+com a expandida, quem usa a compacta encontrou a página-alvo em uma mediana de seis
+segundos a menos. No pôster, um visitante faz a pergunta que você temia: "então a barra
+compacta *causa* uma navegação mais rápida?".
+
+O seu estudo não pode dizer isso. As pessoas escolheram a própria barra, então quem tem
+mais experiência pode ter escolhido a compacta e teria sido rápida com qualquer layout.
+Essa autosseleção é um **fator de confusão**, um terceiro fator que molda tanto a
+escolha quanto o desfecho. Então você entrega a resposta em dois tempos. Primeiro a
+verdade: "não posso dizer que ela causa a velocidade, porque quem usa a compacta pode já
+ser gente mais experiente". Depois o interesse: "o estudo que responderia à sua pergunta
+é designar a barra aleatoriamente para novos usuários, e é isso que eu faria em
+seguida". Você recusou a palavra "causa" e entregou ao visitante uma pergunta de
+pesquisa de verdade, em vez de um muro.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb12 — Poster delivery: pitches,
+uncertainty, and the questions you fear**. Abra-o no Colab pelo selo acima. Lá você roda
+um detector de espiral de desculpas que conta palavras de autoapagamento em três
+apresentações de exemplo, e depois cola a sua própria frase de incerteza e limitações e
+leva a contagem de sinalizações a zero. Você também monta o seu banco de cinco perguntas
+e ensaia a resposta causal contra o seu próprio projeto.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria resposta e só depois delegue. Cada prompt
+abaixo é uma tarefa verificável, não um pedido de aprovação.
+
+Estes funcionam melhor como conversa. Pergunte, leia, depois nomeie o que a resposta
+evitou e pergunte de novo. Um banco de perguntas construído em três voltas é
+visivelmente mais duro do que um construído numa passada só. Quando uma ferramenta roda
+essas voltas sozinha, as perguntas chegam já polidas, e é por isso que você confronta a
+lista com a pergunta que de fato te dá medo, e não o contrário.
+
+**Liste as suas perguntas mais difíceis, para verificar contra o seu próprio medo.**
+
+```text
+Play a skeptical but fair conference visitor. My project: "[one-paragraph summary
+of question, design, and headline finding]". Write the single hardest FAIR question
+for each type: method, alternative explanation, why-it-matters, generalization,
+AI-use. For each, flag whether an honest two-sentence answer exists.
+```
+Depois de rodar, verifique: compare as cinco com a única pergunta que você anotou como a
+que mais teme. Se ela estiver faltando, o conjunto não está completo. Neutraliza a
+*ilusão de completude* (um conjunto arrumadinho de cinco que omite exatamente a pergunta
+que você teme).
+
+**Force a incerteza para fora.**
+
+```text
+Here is my headline number and how I got it: "[paste]". Do not restate it.
+List what is missing before I can state its uncertainty honestly: the sample
+size, the source of wobble, and the one limitation a reviewer would raise first.
+```
+Depois de rodar, verifique: confirme cada item contra os seus próprios dados antes de
+falá-lo. Neutraliza a *incerteza ausente* (um número limpo relatado sem nenhum limite).
+
+**Faça red team na sua resposta.**
+
+```text
+Here is my two-sentence reply to "does it cause it?": "[paste]". Act as a hostile
+reviewer. Name every word that still claims more than an association supports.
+Do not rewrite it for me.
+```
+Depois de rodar, verifique: se ela só elogiar a resposta, insista e exija a pior
+palavra, uma só. Neutraliza a *concordância bajuladora* (elogio que revisa o seu ego,
+não a sua evidência).
+
+::: {.callout-important title="Não delegue"}
+Três decisões nunca saem das suas mãos: **qual alegação a sua evidência de fato
+sustenta**, **onde essa alegação precisa parar** e **como você reconhece a incerteza e
+as limitações dela**. A ferramenta pode rascunhar uma pergunta ou sinalizar uma palavra,
+mas só você decide a posição na bússola que o seu desenho aguenta e a palavra que você
+precisa recusar em voz alta. O seu "não sei" honesto é seu para dizer com convicção, não
+para recitar.
+:::
+
+## Um caso de falha da IA
+
+Você cola a sua limitação numa ferramenta de IA e pede que ela "deixe isso mais
+confiante para o pôster". Ela devolve uma frase fluente e polida: "A barra de
+ferramentas compacta melhora a velocidade de navegação, com resultados fortes entre os
+usuários". Sai limpo, lê bem e está errado. A ferramenta trocou em silêncio "esteve
+associada a tempos mais rápidos" por "melhora", e "melhora" é um verbo causal que os
+seus registros observacionais não sustentam. Isso é uma mudança silenciosa de escopo
+disfarçada de edição prestativa.
+
+Você pega isso lendo o verbo da IA contra a manchete do seu pôster, palavra por palavra.
+A sua manchete diz "associada a". A reescrita diz "melhora". O tipo de alegação se moveu
+enquanto a frase ficava mais bonita. Você mantém o seu próprio verbo e registra que o
+acabamento inflou a alegação.
+
+## Agora é a sua vez
+
+*Você já consegue dizer a sua alegação em dois tamanhos; este passo prepara a parte da
+conversa que você não controla.*
+
+1. Escreva as cinco perguntas justas mais difíceis que alguém poderia te fazer, uma para
+   cada tipo: método, explicação alternativa, e-daí, generalização, uso de IA.
+2. Rascunhe uma resposta de duas frases para cada uma e marque-a como defender ou
+   conceder. Uma resposta de conceder nomeia a alegação mais estreita para a qual você
+   recuaria ali mesmo.
+3. Escreva a sua declaração de incerteza e limitações em forma ULN: o quanto o seu
+   número pode oscilar e por quê, a única coisa que o seu desenho não consegue mostrar e
+   o estudo que resolveria a questão.
+4. Leia em voz alta e corte toda palavra de autoapagamento, substituindo cada uma pela
+   fronteira exata que ela estava escondendo. Depois escreva por inteiro um "não sei"
+   honesto, para a pergunta que você mais teme.
+5. Registre isso no seu AI Research Ledger (registro de uso de IA) e verifique pelo
+   menos uma resposta preparada com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd), como o raciocínio com pares. Uma IA
+   revisora pode fazer a checagem junto com você; a decisão de aceitar ou rejeitar
+   continua sua.

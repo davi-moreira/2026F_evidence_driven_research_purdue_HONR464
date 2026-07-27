@@ -1,0 +1,127 @@
+---
+title: "O Guia de Verificação"
+---
+
+*O cardápio de maneiras de confirmar que um resultado de IA é verdadeiro, com uma
+nota sobre quando recorrer a cada uma. A verificação é o hábito que está no centro
+deste livro. Qualquer que seja o método usado, **dê o nome dele no seu AI Research
+Ledger** (registro de uso de IA): "pareceu certo" não é uma verificação.*
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o
+código ou a citação de outra, e ela vai encontrar erros reais. Isso conta como uma
+checagem que vale a pena fazer, e nunca conta como a palavra final. Uma auditoria é
+outra proposta, não um veredito. A decisão de aceitar, rejeitar ou qualificar um
+resultado é sempre sua, pesquisador ou pesquisadora.
+:::
+
+## Por que um cardápio, e não uma regra
+
+Resultados diferentes falham de maneiras diferentes, então precisam de checagens
+diferentes. Um número se verifica recalculando; uma citação se verifica abrindo o
+artigo; uma escolha de método se verifica encontrando o caso em que ela quebra.
+Escolher a checagem certa faz parte da habilidade. Esta página é o cardápio do qual
+você escolhe, e a regra é simples: **todo resultado feito com apoio de IA recebe
+pelo menos um método nomeado antes de você confiar nele, e o nome vai para o seu
+registro.**
+
+## O cardápio de verificação
+
+Cada método abaixo traz uma linha de "recorra a este quando" e um exemplo curto e
+trabalhado. Combine o método com aquilo que poderia dar errado no resultado.
+
+**1. Cálculo direto.** *Recorra a este quando o resultado for um número que você
+poderia obter de outra forma.* Recalcule à mão ou com uma segunda expressão, mais
+simples. *Exemplo:* a IA informa uma média de grupo de 4,2; você soma os dez valores
+e divide, e obtém 4,2. Confirmado.
+
+**2. Simulação.** *Recorra a este quando a alegação for sobre como um procedimento se
+comporta, e não sobre um número fixo.* Gere dados em que você conhece a resposta e
+veja se o método a recupera. *Exemplo:* na dúvida se uma fórmula estima uma diferença
+corretamente, você simula dois grupos com uma distância conhecida de 3 e confere se o
+código devolve algo em torno de 3.
+
+**3. Consulta à documentação.** *Recorra a este quando o resultado usar uma função, um
+argumento ou um padrão que você não escolheu.* Abra a documentação oficial. *Exemplo:*
+a IA chama uma função com `ddof=0`; você lê a documentação para confirmar que esse é o
+padrão que você quer, e não uma escolha silenciosa que muda o seu resultado.
+
+**4. Leitura da fonte primária.** *Recorra a este quando o resultado citar um estudo,
+uma estatística ou um fato da literatura.* Encontre a fonte de verdade e leia a linha
+relevante. *Exemplo:* a IA atribui um achado a um artigo de 2019; você localiza o
+artigo, abre e confirma o achado e o ano antes de citá-lo.
+
+**5. Código alternativo.** *Recorra a este quando um resultado de código mudaria a sua
+alegação.* Recalcule a mesma quantidade por outro caminho e compare. *Exemplo:* um
+`groupby` dá uma diferença de 0,8; você filtra cada grupo manualmente e subtrai, e
+obtém 0,8. Dois caminhos, uma resposta.
+
+**6. Resultado de referência (benchmark).** *Recorra a este quando você tiver um valor
+de referência conhecido e confiável.* Compare o resultado com um número publicado ou
+verificado antes. *Exemplo:* a sua replicação de um exemplo de livro-texto deveria
+bater com a estimativa relatada pelo livro, a menos de arredondamento; se não bater,
+tem algo fora do lugar no seu processo.
+
+**7. Contraexemplo.** *Recorra a este quando o resultado enunciar uma regra geral ou
+uma recomendação de método.* Tente encontrar um caso em que ela falha. *Exemplo:* a IA
+diz "sempre descarte as linhas com dados faltantes"; você constrói um caso em que as
+linhas faltantes são justamente o sinal, mostrando que a regra não é universal.
+
+**8. Diagrama causal.** *Recorra a este quando o resultado fizer ou sugerir uma
+alegação causal.* Desenhe o diagrama de o que causa o quê e confira se o efeito
+alegado está de fato identificado. *Exemplo:* a IA lê uma correlação como um efeito; o
+seu diagrama mostra um caminho de porta dos fundos aberto (uma causa comum), então o
+efeito não está identificado e a alegação precisa ser suavizada.
+
+**9. Amostra separada para teste (held-out).** *Recorra a este quando o resultado for
+uma predição ou um modelo ajustado.* Confira o desempenho em dados que o modelo nunca
+viu. *Exemplo:* um modelo parece preciso nos dados em que foi ajustado; você o avalia
+em uma fatia separada para teste, e o número honesto é mais baixo. O número da fatia
+separada é o que você reporta.
+
+**10. Teste de falsificação.** *Recorra a este quando uma alegação deveria ter uma
+consequência observável.* Diga o que você veria se a alegação fosse falsa e então vá
+olhar. *Exemplo:* se o seu tratamento realmente não teve efeito, um desfecho placebo
+que ele não consegue afetar deveria não mostrar nada; você confere, e ele de fato não
+mostra nada, o que apoia a sua montagem.
+
+**11. Raciocínio revisado por pares.** *Recorra a este quando o resultado se apoiar em
+um julgamento que um segundo ser humano pode testar.* Apresente o raciocínio a um
+colega, a um par de turma ou a um mentor e veja se ele sobrevive. *Exemplo:* você
+explica o seu argumento de identificação a um parceiro; uma única pergunta dele expõe
+uma suposição que você não tinha defendido, e ela vai para as suas limitações.
+
+## Escolhendo rápido
+
+Um jeito rápido de decidir:
+
+- O resultado é um **número** → cálculo direto ou código alternativo.
+- O resultado é uma **citação ou um fato** → leitura da fonte primária.
+- O resultado é um **método ou uma regra geral** → contraexemplo, ou simulação.
+- O resultado é uma **alegação causal** → diagrama causal, teste de falsificação.
+- O resultado é uma **predição** → amostra separada para teste.
+- O resultado é um **juízo** → raciocínio revisado por pares.
+
+Quando um resultado importa muito, use dois métodos de linhas diferentes. Duas
+checagens independentes que concordam são muito mais fortes do que uma, e protegem
+contra a armadilha do erro correlacionado, em que uma ideia falha passa na sua própria
+checagem falha.
+
+## A regra, repetida
+
+1. Todo resultado feito com apoio de IA recebe **pelo menos um** método nomeado antes
+   de você confiar nele.
+2. Resultados de alto risco (qualquer coisa que chegue ao seu pôster, ao seu artigo ou
+   à sua defesa pública) recebem **dois métodos independentes**.
+3. O **nome do método vai para o seu AI Research Ledger**. Um espaço em branco ou uma
+   palavra vaga ali é tratado como nenhuma verificação.
+4. Se você **não conseguir** verificar um resultado, isso já é um achado: você não o
+   usa, e você diz isso.
+
+---
+
+*Materiais companheiros no repositório do curso:
+[guia de desenho de prompts](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/prompt_design_guide.md){target="_blank"} (como obter um resultado
+que valha a pena checar) · [taxonomia de erros de IA](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/ai_error_taxonomy.md){target="_blank"} (contra o que cada
+método está defendendo) · [modelo de AI Research Ledger](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/ai_research_ledger_template.md){target="_blank"}
+(onde o método é registrado).*

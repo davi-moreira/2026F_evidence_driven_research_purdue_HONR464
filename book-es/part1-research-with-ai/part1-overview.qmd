@@ -1,0 +1,41 @@
+---
+title: 'Parte I — Investigar cuando la IA lo hace "todo"'
+---
+
+Las herramientas de IA ya pueden redactar el código, la prosa, las citas y las
+figuras. Entonces, ¿qué te queda a ti? La Parte I responde esa pregunta y te
+entrega las reglas de operación para todo lo que sigue: el principio (la IA es
+tu brazo y tu asistente de investigación, no tu cerebro), tu papel (director de
+investigación), el protocolo que ejecutas cada vez que delegas (SDIIVDD:
+Especificar → Delegar → Interrogar → Inspeccionar → Verificar → Documentar →
+Defender) y la responsabilidad que nunca se transfiere (tu nombre en la
+afirmación).
+
+Aquí está la Parte I de un vistazo, y dónde se ubica dentro del libro:
+
+```{mermaid}
+flowchart TB
+  subgraph P1["PARTE I — Investigar cuando la IA lo hace 'todo'"]
+    direction TB
+    C1["Cap. 1 · El principio<br/>La IA es tu brazo,<br/>no tu cerebro"] --> C2["Cap. 2 · Tu papel<br/>director de investigación"]
+    C2 --> C3["Cap. 3 · El protocolo<br/>SDIIVDD: el bucle que ejecutas<br/>cada vez que delegas"]
+    C3 --> C4["Cap. 4 · La responsabilidad<br/>tu nombre en la afirmación"]
+  end
+  P1 --> P2["PARTE II<br/>De la curiosidad al<br/>diseño de investigación"]
+  P2 --> P3["PARTE III<br/>Rutas de investigación"]
+  P3 --> P4["PARTE IV<br/>Evidencia creíble<br/>con IA"]
+  P4 --> P5["PARTE V<br/>Comunicar y defender<br/>la investigación"]
+  P5 --> P6["PARTE VI<br/>La investigación después<br/>de la conferencia"]
+```
+
+Todo lo que viene después se apoya en estos cuatro capítulos. Cuando la Parte
+II convierta tu curiosidad en un diseño de investigación, la lista de tareas
+del director del Capítulo 2 será tu manera de repartir el trabajo. Cuando las
+Partes III y IV produzcan evidencia, el protocolo SDIIVDD del Capítulo 3 será
+la manera en que se revisa cada paso delegado. Y cuando las Partes V y VI
+pongan tu afirmación en público, la regla de responsabilidad del Capítulo 4
+será el piso sobre el que estás parado.
+
+Cada capítulo termina con una sección **Ahora te toca a ti**. Trabájalas en
+orden, empezando aquí, y para la última página del libro habrás construido un
+proyecto de investigación completo y defendible, tuyo.

@@ -1,0 +1,200 @@
+---
+title: "Pitches de Pesquisa"
+---
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** A sua página é silenciosa. Decida como ela soa em voz
+> alta: um pitch para cada tamanho de atenção que alguém pode te dar, com cada versão
+> comprimindo a alegação para a fala sem nunca inflá-la. Você decide onde fica a
+> frase de fronteira, e se recusa a deixá-la sair do lugar quando a adrenalina te
+> acelerar.
+
+## Por que essa decisão importa
+
+**A decisão em jogo: o que é cortado quando você diz a sua alegação em voz alta, e o
+que nunca é cortado.**
+
+> *"Eu paro em uns quarenta pôsteres numa tarde. O que eu lembro não é o que tinha mais
+> dados. É aquele cuja apresentadora me disse, num fôlego limpo, exatamente o que
+> encontrou e exatamente onde aquilo para. Quem vendeu demais me perdeu na segunda
+> frase."*
+> — uma **colega cética** circulando por uma conferência de pesquisa
+
+Um pôster pronto é silencioso. No momento em que alguém para diante dele, a sua voz
+assume, e falar é mais rápido do que ler, então você comprime na hora. É aí que as
+alegações crescem sem que ninguém veja. Sob um pouco de pressão, "esteve associado a"
+escorrega para "causa", e "em dados que ele nunca viu" some. A colega acima não está
+testando os seus dados. Ela está testando se a frase na sua boca ainda bate com a frase
+no seu painel. Este capítulo te dá um pitch que você consegue dizer de improviso, sob
+pressão, sem nunca alargar a alegação que a sua evidência conquistou.
+
+## O conceito
+
+Um **pitch** é uma versão falada curta e preparada do seu projeto, feita para caber num
+tempo fixo. Exemplo: os trinta segundos que você dá a quem faz uma pausa e o tour
+guiado que você dá a quem fica são dois pitches de tamanhos diferentes.
+
+Todo pitch compartilha um esqueleto, a **arquitetura do pitch**: o conjunto fixo de
+tempos pelos quais cada versão passa, que é gancho, alegação, evidência, fronteira,
+convite.
+
+- **Gancho**: uma frase com a qual um estranho de fora da sua área se importa. Exemplo:
+  "um help desk se afoga em chamados toda manhã e não consegue dizer quais vão se
+  arrastar".
+- **Alegação**: a sua manchete, dita com clareza e dentro dos seus limites.
+- **Evidência**: o achado que conquista a alegação, uma frase falada de cada vez.
+- **Frase de fronteira**: uma frase dizendo o que a alegação não mostra. Este é o tempo
+  que a pressão vai tentar cortar, então você o ensaia até virar reflexo.
+- **Convite**: um motivo para olhar mais de perto.
+
+As três camadas são esse mesmo esqueleto em três tamanhos: um **gancho de 30 segundos**
+(gancho, alegação, fronteira, convite, ainda sem evidência), uma **caminhada de 90
+segundos** (o gancho mais dois ou três tempos de evidência) e um **pitch completo** de
+três a cinco minutos. Decidir o que entra em cada tamanho é a escolha que este capítulo
+prepara.
+
+Uma regra governa as três. **Compressão** é uma versão mais curta de uma alegação que
+mantém a fronteira dela. Exemplo: "em dados que o modelo nunca tinha visto, ele
+sinalizou quatro em cada cinco chamados lentos" comprime para "em chamados novos, ele
+pegou a maioria dos lentos". **Inflação** é uma versão que deixa a alegação maior em
+silêncio. Exemplo: o mesmo achado vira "o meu modelo prevê quais chamados vão ser
+lentos". Uma perdeu um detalhe; a outra perdeu a verdade. A falha a ser caçada é a
+**promoção pela boca animada**: o momento em que o seu verbo falado ultrapassa o
+escrito e a fronteira se move sem ninguém olhando para as palavras. Exemplo: você
+escreveu "está associado a" e a sua boca diz "causa".
+
+## Um exemplo resolvido
+
+Você construiu um pequeno modelo de machine learning para o help desk do campus. Uma
+**amostra separada para teste (held-out)** é uma fatia dos seus dados com a qual o
+modelo nunca aprendeu, guardada de lado para que a nota dele seja honesta. Exemplo:
+você treinou em 4.000 chamados antigos e testou em 1.000 que o modelo nunca tinha
+visto. Nessa amostra separada, quando o modelo sinalizava um chamado como "lento", ele
+acertava cerca de 78% das vezes. Essa taxa de acerto quando ele sinaliza tem um nome:
+**precisão** é a parcela dos alertas de um modelo que se revelam corretos. A manchete do
+seu pôster diz: "Em chamados separados para teste, o modelo sinalizou os lentos com 78%
+de precisão".
+
+Agora você constrói o pitch em cima da arquitetura.
+
+- **Gancho:** "Um help desk se afoga em chamados toda manhã e não consegue dizer quais
+  vão se arrastar por dias."
+- **Alegação, comprimida para a fala:** "Em chamados que ele nunca tinha visto, o meu
+  modelo sinalizou os lentos, e quando levantava um alerta ele acertava mais ou menos
+  três vezes em quatro."
+- **Frase de fronteira, o tempo que você ensaia até virar reflexo:** "Esse número é
+  precisão em uma fatia separada para teste, não acurácia geral, e o modelo ainda perde
+  alguns chamados lentos."
+- **Convite:** "A parte surpreendente é quais chamados o enganaram. Quer a caminhada?"
+
+Repare nas duas maneiras pelas quais isso dá errado quando você fala. Solte as palavras
+"separado para teste" e você alegou que o modelo funciona em qualquer chamado, o que o
+seu teste nunca mostrou. Troque "precisão" por "acurácia" e você citou um número que o
+seu pôster não relata. As duas coisas são a promoção pela boca animada, e as duas
+parecem naturais porque a frase mais curta soa mais limpa. A correção é mecânica: marque
+a frase de fronteira e diga-a em todos os tamanhos, inclusive no de 30 segundos.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb12 — Poster delivery: pitches,
+uncertainty, and difficult questions**. Abra-o no Colab pelo selo acima e trabalhe as
+células junto com este capítulo. Lá você roda uma calculadora de ritmo que transforma a
+contagem de palavras de um roteiro em segundos de fala, para dimensionar cada camada
+com honestidade, e depois rascunha e submete a estresse as suas próprias três camadas de
+pitch contra a regra única.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria versão e só depois delegue. Cada prompt é uma
+tarefa verificável, não um pedido de veredito.
+
+Espere duas ou três voltas em cada um. A primeira compressão costuma ser lisa demais,
+então você aponta o qualificador que ela descartou e pergunta de novo. Ferramentas
+agênticas vão iterar rumo ao que soa melhor pelos próprios critérios delas, que é
+exatamente a pressão que alarga alegações, então a sua frase de fronteira precisa ser
+algo que você segura, e não algo que você delega.
+
+**Localize o jargão e traduza.**
+
+```text
+Here is one sentence from my poster: "[paste it]". My headline claim and its
+boundary are: "[paste them]". List every word a curious stranger with no training
+in my field could not decode. Then give two plain rewrites a first-year in any
+major would follow, each keeping my claim exactly as narrow as it is now.
+```
+
+Depois de rodar, verifique: leia cada reescrita ao lado da sua fronteira e rejeite
+qualquer uma que tenha descartado um qualificador como "separado para teste" ou
+transformado "sinalizou" em "prevê". Neutraliza a *mudança silenciosa de escopo* (uma
+reescrita "simples" que alarga a alegação enquanto simplifica).
+
+**Liste as palavras que inflam a minha alegação.**
+
+```text
+Here is my 30-second hook: "[paste it]". Here is my poster's boundary sentence:
+"[paste it]". Play a hurried visitor. List every word in the hook that says
+something bigger than the boundary allows. Rewrite nothing; just name the words.
+```
+
+Depois de rodar, verifique: se ela não sinalizar nada e chamar o gancho de "forte",
+insista e exija o pior transgressor, um só. Neutraliza a *concordância bajuladora*
+(elogio revisa o seu ego, não as suas palavras).
+
+**Faça red team no pitch como um estranho apressado.**
+
+```text
+Play a skeptical conference visitor with thirty seconds of patience, from outside
+my field. Here is my full pitch: "[paste it]". Name the exact sentence where you
+lose interest or stop believing me, and the single place I promise more than I show.
+```
+
+Depois de rodar, verifique: confronte a resposta dela com um ensaio de verdade com um
+amigo, e pergunte a ela "o que foi a única coisa que você deixou de fora?". Neutraliza
+a *ilusão de completude* (um "está claro" polido que pula o momento em que um estranho
+de fato se dispersa).
+
+::: {.callout-important title="Não delegue"}
+Três decisões continuam suas. Você decide **qual alegação a sua evidência de fato
+sustenta**, **onde a alegação precisa parar** (a frase de fronteira exata) e **se uma
+frase comprimida ainda diz o que o pôster diz**. Uma ferramenta pode enxugar palavras e
+sinalizar jargão. Ela não pode decidir que a frase mais curta continua verdadeira, e
+não vai estar diante do painel quando o estranho perguntar. Você diz a frase. Ela é
+sua.
+:::
+
+## Um caso de falha da IA
+
+Você cola a sua caminhada de 90 segundos e pede a uma ferramenta que a comprima em um
+gancho de 30 segundos. Volta uma linha nítida e confiante: "O meu modelo prevê chamados
+lentos de help desk 78% das vezes". Fica lindo, e está errado duas vezes. Ela descartou
+"separado para teste", então agora alega que o modelo funciona em qualquer chamado, e
+transformou precisão em um "78% das vezes" genérico, um número que o seu pôster nunca
+relata. A frase é mais curta e mais lisa do que a sua, que é exatamente a armadilha.
+
+Você pega isso colocando a linha comprimida ao lado da frase de fronteira do seu pôster
+e lendo as duas palavra por palavra. "Prevê ... 78% das vezes" não bate com "precisão em
+uma fatia separada para teste". Depois você diz a linha a um amigo, que pergunta:
+"então ele acerta 78% das vezes em qualquer chamado?". Essa pergunta é a alegação
+alargada voltando para você. Você mantém a sua própria frase de fronteira e descarta a
+versão da ferramenta.
+
+## Agora é a sua vez
+
+*O seu rascunho está pronto e criticado; este passo é a versão que você diz em voz alta,
+em dois tamanhos, sem a alegação crescer no caminho.*
+
+1. Escreva a sua frase de fronteira primeiro, numa linha só dela, e marque-a. É o tempo
+   que cai sob pressão, então ele entra antes de tudo.
+2. Construa a versão de 30 segundos: gancho, alegação, fronteira, convite, ainda sem
+   tempos de evidência.
+3. Construa a versão de 3 minutos: o mesmo esqueleto com dois ou três tempos de
+   evidência e a mesma frase de fronteira, palavra por palavra.
+4. Diga as duas em voz alta para alguém de fora da sua área e peça que essa pessoa
+   repita a sua alegação de volta. Se o que voltar for maior do que o que você
+   escreveu, as palavras que ela acrescentou são a sua lista de revisão.
+5. Registre isso no seu AI Research Ledger (registro de uso de IA) e verifique pelo
+   menos uma frase comprimida com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd), como o raciocínio com pares. Uma
+   IA revisora pode fazer a checagem junto com você; a decisão de aceitar ou rejeitar
+   continua sua.

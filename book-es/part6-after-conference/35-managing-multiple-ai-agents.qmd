@@ -141,8 +141,8 @@ hand back to me.
 Después de ejecutarlo, verifica: comprueba que cada celda de "devuélvemelo a mí" nombra
 una decisión de no delegar que es real, no una inventada para parecer prudente.
 Contrarresta la
-*ilusión de exhaustividad* (una tabla de roles ordenada que se lee exhaustiva mientras omite
-la comprobación que importa).
+*ilusión de exhaustividad* (una tabla de roles ordenada que se lee exhaustiva mientras
+omite la comprobación que importa).
 
 **Confirma que el cableado no deja pasar ningún error temprano.**
 
@@ -200,25 +200,25 @@ dependencias, no la seguridad con que se presentan.
 
 ## Ahora te toca a ti
 
-*Tu proyecto ya tiene una nota de investigación y una cápsula reutilizable; este paso monta
-el pequeño equipo de IA que te ayudará a revisarlas, sin entregarle al equipo tu
+*Tu proyecto ya tiene una nota de investigación y una cápsula reutilizable; este paso
+monta el pequeño equipo de IA que te ayudará a revisarlas, sin entregarle al equipo tu
 criterio.*
 
 1. Elige una sección real de tu proyecto para revisar: tus métodos, tus resultados o tus
    limitaciones. Todo lo de abajo aplica solo a esa sección.
 2. Monta tres bucles, cada uno con una tarea de una oración que podrías calificar. Un
    **escritor** que redacta o reescribe. Un **escéptico** que ataca lo que el escritor
-   produjo y busca la afirmación que se estira más allá de tu evidencia. Un **auditor** que
-   revisa tus números, tus citas y si cada oración corresponde a una salida que de verdad
-   tienes.
+   produjo y busca la afirmación que se estira más allá de tu evidencia. Un **auditor**
+   que revisa tus números, tus citas y si cada oración corresponde a una salida que de
+   verdad tienes.
 3. Conéctalos. Anota qué bucles pueden correr al mismo tiempo y cuáles deben esperar la
-   salida de otro, y después traza la cadena más larga de pasos obligatorios. Esa cadena es
-   el número mínimo de rondas que tomará tu revisión.
+   salida de otro, y después traza la cadena más larga de pasos obligatorios. Esa cadena
+   es el número mínimo de rondas que tomará tu revisión.
 4. Nombra el único nodo que mantienes humano, el paso donde el trabajo de los bucles se
    vuelve tu afirmación, y anota por qué ningún rol tiene permitido tomarlo.
 5. Corre la ronda. Para cada bucle, registra cuántos turnos tomó, qué rechazaste y qué
    conservaste. Un bucle cuya salida aceptaste sin leer es un bucle que no gestionaste.
-6. Registra cada bucle en tu AI Research Ledger (registro de investigación con IA) y verifica
-   al menos una salida con un método nombrado de la [Guía de
-   Verificación](../verification-guide.qmd). Un revisor de IA puede hacer la comprobación
-   contigo; la decisión de aceptar o rechazar sigue siendo tuya.
+6. Registra cada bucle en tu AI Research Ledger (registro de investigación con IA) y
+   verifica al menos una salida con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd). Un revisor de IA puede hacer la
+   comprobación contigo; la decisión de aceptar o rechazar sigue siendo tuya.

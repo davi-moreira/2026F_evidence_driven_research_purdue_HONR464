@@ -1,0 +1,192 @@
+---
+title: "Pôsteres de Pesquisa"
+---
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Uma figura vai falar quase tudo por você. Decida se ela é
+> honesta: se a impressão visual bate com o número de verdade, se a incerteza aparece
+> no mesmo olhar da alegação e se toda pessoa que lê, inclusive quem é daltônica ou usa
+> leitor de tela, consegue recebê-la. O verbo da manchete é seu, e a decisão de que a
+> imagem nunca diz mais do que os dados também é sua.
+
+## Por que essa decisão importa
+
+**A decisão em jogo: se a imagem da sua figura principal diz exatamente o que os
+números dela dizem, e nada além.**
+
+> *"De um metro e meio de distância eu leio uma coisa só: a sua barra mais alta
+> significa o que parece significar? Se o seu eixo começa na metade da escala, eu já te
+> peguei antes de ler uma palavra dos seus métodos, e agora eu desconfio do painel
+> inteiro."*
+> — um **colega cético** percorrendo uma sessão de pôsteres
+
+Numa sessão de pôsteres, um estranho te dá noventa segundos e um olhar. A figura fala
+quase tudo, e uma figura consegue mentir com números verdadeiros. Um eixo que começa
+logo abaixo dos seus dados transforma uma diferença do tamanho de um arredondamento em
+uma goleada. Uma pessoa que não consegue distinguir a sua barra vermelha da verde não
+recebe mensagem nenhuma. Este capítulo é a decisão que mantém o seu recurso visual mais
+forte honesto antes de ele chegar à parede.
+
+## O conceito
+
+A decisão é um único julgamento feito de quatro maneiras, e cada maneira tem um nome.
+
+- **Alegação de manchete.** A única frase com a qual você quer que a pessoa vá embora.
+  O verbo dela carrega o sentido inteiro. Exemplo: "a Versão B aumentou as nossas
+  vendas" promete muito mais do que "a Versão B vendeu um pouco mais".
+- **Fronteira da alegação.** A linha entre o que a sua evidência autoriza e o que ela
+  não autoriza. Exemplo: uma comparação observacional pode dizer "está associada a",
+  nunca "causa".
+- **Posição na bússola.** O tipo e o alcance da pergunta que o seu projeto respondeu, o
+  que fixa o que a manchete pode dizer. Exemplo: uma pergunta descritiva sobre as
+  semanas que você mediu, não uma alegação causal sobre o porquê.
+- **Honestidade da figura.** A regra de que a imagem de uma figura não pode dizer mais
+  do que os dados dela. Exemplo: se a diferença real é de três pontos, as barras devem
+  parecer distantes cerca de três pontos, não o dobro da altura.
+- **Eixo truncado.** Um eixo que começa acima do fundo da sua escala em vez de começar
+  no chão. Exemplo: um eixo de taxa de conclusão indo de 70 a 76 em vez de 0 a 100
+  amplia uma diferença pequena e a transforma num abismo.
+- **Incerteza na página.** O intervalo ou a ressalva impressa no mesmo olhar da
+  alegação, e não enterrada numa nota de rodapé. Exemplo: uma barra de erro de "±4
+  pontos" desenhada bem em cima da figura principal.
+- **Acessibilidade.** Se a sua mensagem chega a quem percebe de outra forma. Exemplo:
+  um par de barras vermelha e verde não carrega nada para quem tem daltonismo
+  vermelho-verde, mais ou menos 1 em cada 12 homens.
+- **Codificação redundante.** Carregar a mesma distinção em mais de um canal, para que
+  nenhum canal isolado seja indispensável. Exemplo: rotule cada barra com o seu valor e
+  dê a cada uma uma textura, para que a cor vire um bônus, e não o único sinal.
+
+Um pôster que falha em qualquer um desses pontos alega demais, mesmo quando os números
+estão exatamente certos.
+
+## Um exemplo resolvido
+
+Você está apresentando um projeto de business analytics que compara duas versões da
+página de checkout de uma loja on-line. O desfecho é a **taxa de conclusão**, a parcela
+de compradores que inicia o checkout e termina a compra. Nas amostras semanais, a
+Versão A dá uma taxa média de conclusão de 71 por cento e a Versão B, de 74. O
+intervalo de 95% em cada média é de cerca de ±4 pontos percentuais, então os dois
+intervalos se sobrepõem. O seu primeiro rascunho desenha um gráfico de barras com o
+eixo y indo de 70 a 76, o intitula "Versão B TURBINA a conclusão" e colore as barras de
+vermelho e verde.
+
+Agora rode a decisão. **Honestidade da figura:** a diferença real é de 3 pontos, mas num
+eixo com piso em 70 a barra mais alta é desenhada quatro vezes maior que a mais baixa,
+então a imagem alega uma goleada que os dados nunca entregaram. **Incerteza na
+página:** os intervalos se sobrepõem, então uma diferença que a figura vende como
+decisiva pode ser ruído, e nada no painel mostra isso. **Fronteira da alegação:**
+"TURBINA" é um verbo decisivo e causal para uma diferença de três pontos com intervalos
+sobrepostos. **Acessibilidade:** distinguidas apenas por vermelho e verde, as barras não
+carregam informação nenhuma para quem é daltônico, e um leitor de tela não lê valor
+algum na imagem.
+
+A figura corrigida mantém todos os números e muda só a honestidade. Você roda o eixo de
+0 a 100, imprime cada média como rótulo na sua barra, desenha o intervalo de ±4 pontos
+por cima, separa as barras com um par de cores seguro para daltonismo mais uma textura
+hachurada, e suaviza a manchete para "a Versão B concluiu cerca de 3 pontos a mais,
+dentro de intervalos que se sobrepõem". Os mesmos dados, uma imagem que agora diz a
+verdade.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb11 — Poster criticism + final poster
+lock**. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo.
+Lá você desenha uma figura principal de duas maneiras a partir dos mesmos números,
+observa um eixo truncado inflar várias vezes uma diferença pequena e roda as quatro
+auditorias mais a de acessibilidade até que cada uma aponte um problema localizado e
+corrigível no painel.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria auditoria e só depois delegue. Cada prompt
+abaixo é uma tarefa verificável, não um pedido de veredito.
+
+Rode isso como um loop. Primeiro a resposta, depois a sua objeção, depois a resposta
+mais afiada. A segunda e a terceira voltas costumam ser onde aparece a crítica útil,
+porque a primeira passada tende a ser genérica. Se a sua ferramenta roda as próprias
+voltas antes de responder, você recebe o acabamento sem ver os rascunhos, então a sua
+própria lista de auditoria importa mais, e não menos.
+
+**Localize os canais que dependem só de cor.**
+
+```text
+Here is the code that draws my poster's headline figure: [paste the cell].
+List every place this figure encodes a meaningful distinction using color.
+For each, tell me exactly what a red-green color-blind reader and a
+screen-reader user would fail to receive. Do not rewrite the figure.
+```
+Depois de rodar, verifique: renderize a sua figura e confira cada canal apontado contra
+a imagem que você consegue ver. Neutraliza o *método plausível mas errado* (conselho
+genérico de acessibilidade que não corresponde a como a sua figura é de fato
+desenhada).
+
+**Liste as perguntas do cético e depois associe cada uma a uma auditoria.**
+
+```text
+Act as a hostile poster reviewer. My headline figure is a bar chart of mean
+checkout completion rate for two page versions, y-axis 70 to 76, red versus green
+bars, no interval shown, titled "Version B BOOSTS completion." Generate the six
+hardest questions you would ask, then name the one this figure cannot answer at all.
+```
+Depois de rodar, verifique: associe cada pergunta a uma auditoria (fronteira da
+alegação, honestidade da figura, incerteza, acessibilidade); uma auditoria sem nenhuma
+pergunta é a lacuna, e é bom que o eixo truncado apareça. Neutraliza a *ilusão de
+completude* (uma lista longa e arrumadinha que pula em silêncio o defeito que mais
+importa).
+
+**Faça red team no verbo da manchete.**
+
+```text
+Here is my headline: "[paste it]" and my compass position: "[descriptive /
+associational / causal]". Act as a skeptical reviewer and find every word that
+claims more than that position licenses. List the exact words. Do not soften them.
+```
+Depois de rodar, verifique: se a ferramenta elogiar a manchete ou não achar nada,
+insista e exija a pior palavra, uma só, e depois confronte cada palavra sinalizada com
+o seu intervalo. Neutraliza a *concordância bajuladora* (elogio que revisa a sua
+coragem, não a sua evidência).
+
+::: {.callout-important title="Não delegue"}
+As palavras da sua manchete e o verbo que carrega a fronteira dela são seus. Também é
+seu o julgamento de que a impressão da figura bate com o número dela, a decisão de que
+a incerteza está visível no mesmo olhar e a decisão de que a página está honesta o
+bastante para ser travada. A IA pode gerar as perguntas do cético e vasculhar o seu
+código atrás de canais que dependem só de cor. Ela não consegue ver o seu painel e não
+pode decidir que a alegação foi conquistada. Isso fica com você.
+:::
+
+## Um caso de falha da IA
+
+Você cola a figura descrita e pede ao Gemini as perguntas mais duras de um revisor. Ele
+devolve uma lista confiante e bem organizada de seis: tamanho da amostra, quantas
+semanas foram amostradas, generalização para outras páginas de produto, sazonalidade do
+tráfego e mais duas. Toda pergunta é razoável, e nenhuma menciona o eixo truncado, o
+pior defeito do painel. A lista parece completa, então é tentador confiar nela e seguir
+em frente.
+
+Você pega isso associando cada pergunta devolvida a uma auditoria. Fronteira da
+alegação, amostragem e métodos todas atraem perguntas; honestidade da figura não atrai
+nenhuma. Essa linha vazia é o achado. Você confere o número que a sua própria célula
+imprimiu, o exagero que o eixo com piso cria, e acrescenta o problema de honestidade da
+figura que a lista arrumadinha pulou. Fluência não é completude. A checagem mora na sua
+própria lista de auditoria, aquela que você escreveu antes de perguntar.
+
+## Agora é a sua vez
+
+*As suas alegações agora têm linhas e rastros; este passo as transforma na única página,
+ou no resumo de uma figura só, que um estranho encontra primeiro.*
+
+1. Escolha a única figura que carrega a sua alegação principal e desenhe-a com o eixo
+   percorrendo a escala completa da medida.
+2. Imprima cada valor como rótulo na marca a que ele pertence e desenhe o intervalo bem
+   em cima da figura, para que a incerteza chegue no mesmo olhar do número.
+3. Carregue toda distinção relevante em pelo menos dois canais, para que a cor nunca
+   seja o único sinal que alguém pode perder.
+4. Escreva a manchete acima da figura usando o verbo que a sua fronteira da alegação
+   permite, e distribua o resto da página de modo que um estranho encontre essa
+   manchete em menos de um minuto.
+5. Registre isso no seu AI Research Ledger (registro de uso de IA) e verifique pelo
+   menos um número da página com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd). Uma IA revisora pode fazer a
+   checagem junto com você; a decisão de aceitar ou rejeitar continua sua.

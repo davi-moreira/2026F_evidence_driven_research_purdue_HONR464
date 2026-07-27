@@ -166,25 +166,27 @@ ejecución. Verificas el cuaderno ejecutándolo, no leyendo un párrafo sobre ej
 
 ## Ahora te toca a ti
 
-*Tu proyecto ya tiene una nota de investigación y una carpeta que corre; este paso convierte
-las dos en una sola cápsula que alguien podría tomar dentro de un año y reutilizar.*
+*Tu proyecto ya tiene una nota de investigación y una carpeta que corre; este paso
+convierte las dos en una sola cápsula que alguien podría tomar dentro de un año y
+reutilizar.*
 
 1. Arma las cinco partes para tu propio proyecto: el cuaderno ejecutable, la nota de
-   procedencia de datos, la semilla fija, la bitácora de decisiones y tu registro de uso de
-   IA. Todo lo que quien lee tendría que adivinar pertenece a una de las cinco.
-2. Corre la auditoría del capítulo sobre tus propias líneas clave y arregla lo que marque,
-   empezando por el pecado que más tentación te daba dejar en paz. Las rutas escritas a mano
-   y las semillas faltantes son los dos que más seguido rompen a quien viene de fuera.
-3. Escribe el README que una persona desconocida lee primero: qué pregunta el proyecto, cuál
-   es el número titular, qué archivo lo produce y en qué orden ejecutar las cosas.
+   procedencia de datos, la semilla fija, la bitácora de decisiones y tu registro de uso
+   de IA. Todo lo que quien lee tendría que adivinar pertenece a una de las cinco.
+2. Corre la auditoría del capítulo sobre tus propias líneas clave y arregla lo que
+   marque, empezando por el pecado que más tentación te daba dejar en paz. Las rutas
+   escritas a mano y las semillas faltantes son los dos que más seguido rompen a quien
+   viene de fuera.
+3. Escribe el README que una persona desconocida lee primero: qué pregunta el proyecto,
+   cuál es el número titular, qué archivo lo produce y en qué orden ejecutar las cosas.
 4. Vuelve a ejecutarlo en frío en un segundo entorno, una sesión limpia de Colab o una
    máquina que no sea la tuya, y comprueba que el titular vuelve dentro del redondeo. Un
-   número que viaja es reproducible. Un número que no viaja significa que algo que cargabas
-   a mano estaba haciendo un trabajo silencioso que nunca empaquetaste.
-5. Escribe una oración honesta sobre el límite de todo esto: tu cápsula es ejecutable, que no
-   es lo mismo que correcta, y nombra la decisión dentro de ella que más querrías que alguien
-   cuestionara.
-6. Registra la ronda de empaquetado en tu AI Research Ledger (registro de investigación con
-   IA) y verifica al menos una salida con un método nombrado de la [Guía de
-   Verificación](../verification-guide.qmd). Un revisor de IA puede hacer la comprobación
-   contigo; la decisión de aceptar o rechazar sigue siendo tuya.
+   número que viaja es reproducible. Un número que no viaja significa que algo que
+   cargabas a mano estaba haciendo un trabajo silencioso que nunca empaquetaste.
+5. Escribe una oración honesta sobre el límite de todo esto: tu cápsula es ejecutable,
+   que no es lo mismo que correcta, y nombra la decisión dentro de ella que más querrías
+   que alguien cuestionara.
+6. Registra la ronda de empaquetado en tu AI Research Ledger (registro de investigación
+   con IA) y verifica al menos una salida con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd). Un revisor de IA puede hacer la
+   comprobación contigo; la decisión de aceptar o rechazar sigue siendo tuya.

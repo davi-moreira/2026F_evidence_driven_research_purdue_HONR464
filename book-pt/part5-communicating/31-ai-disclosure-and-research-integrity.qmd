@@ -1,0 +1,188 @@
+---
+title: "Declaração de Uso de IA e Integridade em Pesquisa"
+---
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_conference_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Decida exatamente o que você vai dizer sobre cada
+> ferramenta de IA que usou: qual ferramenta, em qual tarefa e como você checou o que
+> voltou. Depois registre isso, para que, quando alguém perguntar *"você usou IA, e como
+> verificou?"*, você responda a partir de um registro checável em vez de responder de
+> memória.
+
+## Por que essa decisão importa
+
+**A decisão em jogo: quais usos de IA você declara e o que você afirma ter feito para
+checar cada um.**
+
+> *"Eu não vou te penalizar por usar uma ferramenta de IA. Eu vou te penalizar por não
+> conseguir me dizer onde você usou e como checou. Um resultado que eu não consigo
+> rastrear até uma fonte e uma verificação é um resultado em que eu não consigo
+> confiar."*
+> — um **revisor de conferência**, parado diante do seu pôster, fazendo a pergunta sobre uso de IA
+
+Na sua conferência de pesquisa, um dos cinco tipos de pergunta que um estranho pode te
+fazer é a pergunta sobre uso de IA. Muitos periódicos e conferências hoje pedem que
+autores digam onde e como ferramentas de IA foram usadas, então isso não é uma
+formalidade que dá para dispensar. Se a sua única resposta for "sim, um pouco, e pareceu
+tudo bem", você transformou um bom trabalho em um resultado não confiável na hora. A
+declaração é o que mantém um uso honesto de IA honesto sob interrogatório.
+
+## O conceito
+
+**Declaração de uso de IA** é um enunciado verdadeiro sobre onde e como você usou uma
+ferramenta de IA no seu trabalho. Exemplo: "usei o Gemini para rascunhar o código que
+calculou o meu índice de cobertura, e recalculei esse número à mão antes de relatá-lo".
+**Integridade em pesquisa** é a prática de manter o seu trabalho honesto e rastreável,
+para que quem lê consiga ver de onde veio cada resultado e confiar nele. Exemplo: uma
+alegação que nomeia a sua fonte e a sua checagem tem integridade; uma alegação que não
+nomeia nenhuma das duas, não.
+
+A ferramenta que torna a declaração fácil é aquela que você mantém desde o primeiro
+capítulo: o **AI Research Ledger** (registro de uso de IA), uma tabela corrente com uma
+linha por uso de IA, registrando a tarefa, a ferramenta, a sua decisão e o método de
+verificação. Uma declaração completa não é escrita do zero no final. Ela é lida direto
+do seu registro.
+
+Três partes tornam uma declaração completa, e cada uma corresponde a uma coluna do
+registro: **qual ferramenta** você usou, **para qual tarefa** e **como você verificou** a
+saída. Falte uma delas e a declaração falha. "Usei IA" sem tarefa não significa nada;
+uma tarefa sem verificação é exatamente a lacuna que quem revisa é treinado para
+encontrar.
+
+## Um exemplo resolvido
+
+Você está apresentando um pôster de business analytics sobre se uma empresa de capital
+aberto consegue pagar com folga os juros da sua dívida. O seu número principal é o
+**índice de cobertura de juros**, a razão entre o lucro operacional de uma empresa e os
+juros que ela deve no ano. Um índice de cobertura de 2,0 significa que a empresa ganhou
+o dobro do que devia.
+
+Você usou uma ferramenta de IA duas vezes: uma para encontrar o lucro operacional
+divulgado pela empresa e outra para escrever o cálculo curto que transforma esse lucro e
+a sua despesa de juros em um índice de cobertura. Os dois são usos honestos, e nenhum
+deles é seguro enquanto não for declarado e verificado.
+
+O seu registro já guarda duas linhas. Para a cifra divulgada, o método de verificação é
+a **leitura da fonte primária**: você abriu o relatório anual publicado pela empresa e
+confirmou o lucro operacional que a ferramenta te deu. Para o cálculo, o método é o
+**código alternativo**, recalculando o mesmo número por um segundo caminho:
+
+```python
+# The number the AI code reported, recomputed by hand.
+operating_income = 276    # USD millions, confirmed against the annual report
+interest_expense = 131    # USD millions, from the same annual report
+coverage_ratio   = operating_income / interest_expense
+print(round(coverage_ratio, 2))   # 2.11 — matches the AI-generated cell
+```
+
+Quando o revisor faz a pergunta sobre uso de IA, você não improvisa. Você lê as suas
+duas linhas em voz alta: as ferramentas, as tarefas e as duas checagens. A alegação que
+você defende tem limites. O índice de cobertura é de cerca de 2,1 para este exercício
+fiscal, com a cifra de lucro confirmada contra o relatório anual e a aritmética
+reproduzida à mão. A fronteira dela também é honesta: você leu um único ano de
+resultados divulgados, não um cenário de recessão e não a dívida que vence no ano que
+vem.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb13 — Final conference preparation,
+presentation + reflection**. Abra-o no Colab pelo selo acima e trabalhe as células junto
+com este capítulo. Lá você codifica como dados as perguntas sobre uso de IA que te
+fizeram e preenche o AI Research Ledger que vira a declaração que você defende. A Defesa
+de Saída (Exit Defense) final pede que você nomeie o que delegou ao Gemini e a checagem
+específica que decidiu se você aceitou, mudou ou rejeitou o resultado.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria resposta e só depois delegue. Cada prompt é uma
+tarefa verificável, não um pedido de veredito.
+
+Rode o loop, e registre. Cada volta é um prompt, uma saída, uma objeção e uma nova
+rodada, e a linha do registro anota o que você finalmente aceitou e por quê. Isso importa
+aqui mais do que em qualquer outra parte do livro. Se uma ferramenta agêntica rodou dez
+voltas invisíveis para produzir o seu parágrafo, a sua declaração ainda tem que
+descrever apenas aquilo por que você pode pessoalmente responder.
+
+**Localize o padrão.**
+
+```text
+Act as a research-integrity assistant. Name the elements a complete AI-use
+disclosure should contain for a research poster, and cite one real, retrievable
+source such as a university research-integrity office or a major publisher's AI
+policy. Only name a source you are confident exists.
+```
+Depois de rodar, verifique: abra a política citada e confirme que cada elemento nomeado
+está de fato nela. Neutraliza a *fabricação confiante* (um elemento de política inventado
+chega com a mesma confiança de um real).
+
+**Transforme anotações numa tabela de declaração a verificar.**
+
+```text
+Here are my raw notes on every time I used an AI tool on this project: [paste].
+Build a table with columns tool, task, and verification method, one row per use.
+Do not invent a verification I did not mention. If a use has no check, leave that
+cell blank and flag the row.
+```
+Depois de rodar, verifique: confronte cada linha com o seu registro; uma verificação
+preenchida onde as suas anotações não tinham nenhuma é fabricada, então corte.
+Neutraliza a *ilusão de completude* (uma tabela arrumadinha que relata em silêncio
+checagens que você nunca fez).
+
+**Faça red team na sua declaração.**
+
+```text
+Here is my drafted AI-use disclosure: [paste]. Act as a hostile reviewer who
+suspects I am hiding a use or overstating my checks. Name every place I claim a
+verification I have not shown, or omit a use a reviewer would expect. Do not
+rewrite it for me.
+```
+Depois de rodar, verifique: para cada linha sinalizada, apresente a linha do registro que
+a respalda ou apague a alegação. Neutraliza a *concordância bajuladora* (um revisor que
+elogia a sua honestidade em vez de testá-la).
+
+::: {.callout-important title="Não delegue"}
+A honestidade da declaração é só sua. Você decide **quais usos declarar** (inclusive
+aquele que você preferiria não mencionar), **se uma verificação que você afirma de fato
+aconteceu** e **se o enunciado final é verdadeiro**. Uma ferramenta pode formatar o seu
+registro em um parágrafo limpo. Ela não pode saber o que você realmente fez nem atestar
+que você checou. Assinar o seu nome embaixo de uma declaração que você não consegue
+sustentar é a falha de integridade que este capítulo existe para evitar.
+:::
+
+## Um caso de falha da IA
+
+Você pede a uma ferramenta que "escreva a minha declaração de uso de IA a partir destas
+anotações", e ela devolve um parágrafo polido: *"Todas as saídas geradas por IA foram
+verificadas de forma independente contra fontes primárias."* Fica lindo, e é falso. Você
+verificou o lucro operacional contra o relatório anual, mas nunca checou de forma
+independente a cifra de juros que a mesma ferramenta te ajudou a levantar. A frase
+promoveu uma checagem real a uma alegação geral de "todas".
+
+Você pega isso lendo a declaração linha a linha contra o seu registro. Toda frase que
+afirma uma verificação precisa apontar para uma linha que nomeia essa checagem. A
+palavra "todas" não tem linha nenhuma, então é fabricada e sai. A sua declaração
+verdadeira é mais estreita e mais forte: você nomeia as duas checagens que fez e o
+único insumo que não confirmou de forma independente. Um parágrafo confiante não é um
+parágrafo verdadeiro. Você verifica a declaração contra o registro, não contra o quanto
+ela soa responsável.
+
+## Agora é a sua vez
+
+*Você já tem respostas prontas para as perguntas mais difíceis que vão te fazer; este
+passo escreve a que é sobre IA, e a respalda com um registro.*
+
+1. Leia o seu AI Research Ledger de ponta a ponta e liste cada uso, inclusive aquele
+   que você preferiria não mencionar.
+2. Para cada uso, escreva as três partes de que uma declaração precisa: qual ferramenta,
+   para qual tarefa e como você verificou a saída. Um uso sem checagem fica em branco.
+   Não preencha de memória.
+3. Transforme as linhas em um enunciado curto, com as suas próprias palavras, e depois
+   confira cada frase contra uma linha. Toda frase que afirma uma checagem para a qual
+   você não consegue apontar sai.
+4. Diga o que você não verificou. Nomear o único insumo assistido por IA que você nunca
+   confirmou de forma independente é o que torna o resto do enunciado crível.
+5. Registre isso no seu AI Research Ledger e verifique o enunciado final com um método
+   nomeado do [Guia de Verificação](../verification-guide.qmd), como o raciocínio com
+   pares. Uma IA revisora pode fazer a checagem junto com você; a decisão de aceitar ou
+   rejeitar continua sua.

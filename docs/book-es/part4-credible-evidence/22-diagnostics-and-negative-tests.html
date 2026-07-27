@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="EDRAI — manual de investigación en la era de la IA para estudiantes de grado. Traducción del original en inglés; la edición en inglés es la fuente oficial. Obra en desarrollo.">
+
+<title>22&nbsp; Diagnósticos y pruebas negativas – EDR|AI — Investigación Guiada por la Evidencia en la Era de la IA</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../part4-credible-evidence/23-ai-as-adversarial-reviewer.html" rel="next">
+<link href="../part4-credible-evidence/21-robustness-and-sensitivity.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html">Parte IV — Producir evidencia creíble con IA</a></li><li class="breadcrumb-item"><a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Diagnósticos y pruebas negativas</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">EDR|AI — Investigación Guiada por la Evidencia en la Era de la IA</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part1-research-with-ai/part1-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Parte I — Investigar cuando la IA lo hace "todo"</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">La IA es tu brazo, no tu cerebro</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/02-the-student-as-research-director.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">El estudiante como director de investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Especificar, Delegar, Interrogar, Inspeccionar, Verificar, Documentar, Defender</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Responsabilidad en la investigación y autoría intelectual</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte II — De la curiosidad al diseño de investigación</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">De la curiosidad a un problema de investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Preguntas descriptivas, predictivas y causales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/07-research-builds-on-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La investigación se construye sobre la investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Encontrar y verificar la evidencia previa</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modelo, indagación, estrategia de datos y estrategia de respuesta</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Declarar y diagnosticar un diseño de investigación</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte III — Rutas de investigación</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/11-observational-descriptive-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Investigación observacional descriptiva</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/12-observational-causal-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Investigación observacional causal</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/13-experimental-descriptive-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Investigación experimental descriptiva</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/14-prediction-and-generalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Predicción y generalización</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/15-experimental-causal-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Investigación experimental causal</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/16-hybrid-and-complex-designs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diseños híbridos y complejos</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte IV — Producir evidencia creíble con IA</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Procedencia y calidad de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/18-measurement-and-operationalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Medición y operacionalización</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/19-ai-as-programmer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">La IA como programadora</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/20-ai-as-analytical-assistant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">La IA como asistente analítico</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Robustez y sensibilidad</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Diagnósticos y pruebas negativas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/23-ai-as-adversarial-reviewer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">La IA como revisora adversaria</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/24-recognizing-false-confidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Reconocer la falsa confianza</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte V — Comunicar y defender la investigación</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/25-from-results-to-claims.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">De los resultados a las afirmaciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/26-claim-evidence-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Tablas afirmación–evidencia</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/27-research-posters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Pósteres de investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/28-poster-criticism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Crítica del póster</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/29-research-pitches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Pitches de investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/30-difficult-questions-and-uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Preguntas difíciles e incertidumbre</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/31-ai-disclosure-and-research-integrity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Declaración de uso de IA e integridad de la investigación</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte VI — La investigación después de la conferencia</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/32-replication-and-reproduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Replicación y reproducción</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/33-from-poster-to-research-note.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Del póster a la nota de investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/34-open-and-reusable-research-packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Paquetes de investigación abiertos y reutilizables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/35-managing-multiple-ai-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Gestionar varios agentes de IA</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/36-conflicting-agents-and-human-escalation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Agentes en conflicto y escalamiento humano</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/37-final-research-and-ai-management-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Investigación final y portafolio de gestión de IA</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../srl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">El Student Research Lead</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../verification-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">La Guía de Verificación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Sobre el autor</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#por-qué-importa-esta-decisión" id="toc-por-qué-importa-esta-decisión" class="nav-link active" data-scroll-target="#por-qué-importa-esta-decisión"><span class="header-section-number">22.1</span> Por qué importa esta decisión</a></li>
+  <li><a href="#el-concepto" id="toc-el-concepto" class="nav-link" data-scroll-target="#el-concepto"><span class="header-section-number">22.2</span> El concepto</a></li>
+  <li><a href="#un-ejemplo-resuelto" id="toc-un-ejemplo-resuelto" class="nav-link" data-scroll-target="#un-ejemplo-resuelto"><span class="header-section-number">22.3</span> Un ejemplo resuelto</a></li>
+  <li><a href="#el-laboratorio-en-colab" id="toc-el-laboratorio-en-colab" class="nav-link" data-scroll-target="#el-laboratorio-en-colab"><span class="header-section-number">22.4</span> El laboratorio en Colab</a></li>
+  <li><a href="#prompts-de-ia-recomendados" id="toc-prompts-de-ia-recomendados" class="nav-link" data-scroll-target="#prompts-de-ia-recomendados"><span class="header-section-number">22.5</span> Prompts de IA recomendados</a></li>
+  <li><a href="#un-caso-de-falla-de-la-ia" id="toc-un-caso-de-falla-de-la-ia" class="nav-link" data-scroll-target="#un-caso-de-falla-de-la-ia"><span class="header-section-number">22.6</span> Un caso de falla de la IA</a></li>
+  <li><a href="#ahora-te-toca-a-ti" id="toc-ahora-te-toca-a-ti" class="nav-link" data-scroll-target="#ahora-te-toca-a-ti"><span class="header-section-number">22.7</span> Ahora te toca a ti</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<div class="edrai-lang" style="text-align:right; margin:.3rem .8rem .2rem 0; font-size:.85rem; opacity:.9;">
+  🌐 <a href="#" data-lang="book">English</a> · <a href="#" data-lang="book-pt">Português (BR)</a> · <a href="#" data-lang="book-es">Español</a>
+</div>
+<script>
+(function () {
+  var here = window.location.pathname;
+  var dirs = ["book-pt", "book-es", "book"];
+  var cur = null;
+  for (var i = 0; i < dirs.length; i++) {
+    if (here.indexOf("/" + dirs[i] + "/") !== -1) { cur = dirs[i]; break; }
+  }
+  var links = document.querySelectorAll(".edrai-lang a");
+  for (var j = 0; j < links.length; j++) {
+    var a = links[j], t = a.getAttribute("data-lang");
+    if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
+    if (t === cur) {
+      a.style.pointerEvents = "none"; a.style.textDecoration = "none";
+      a.style.fontWeight = "bold"; a.style.color = "inherit";
+      continue;
+    }
+    a.href = here.replace("/" + cur + "/", "/" + t + "/");
+  }
+})();
+</script>
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html">Parte IV — Producir evidencia creíble con IA</a></li><li class="breadcrumb-item"><a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Diagnósticos y pruebas negativas</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Diagnósticos y pruebas negativas</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open In Colab</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p><strong>La decisión de investigación.</strong> Tú decides <strong>qué prueba negativa necesita de verdad tu diseño</strong>, una verificación apuntada a un lugar donde la respuesta tiene que ser cero, y decides qué te autoriza a decir una aprobación limpia y qué no. Elegir la prueba es la investigación. Correrla es la parte fácil.</p>
+</blockquote>
+<section id="por-qué-importa-esta-decisión" class="level2" data-number="22.1">
+<h2 data-number="22.1" class="anchored" data-anchor-id="por-qué-importa-esta-decisión"><span class="header-section-number">22.1</span> Por qué importa esta decisión</h2>
+<p><strong>La decisión sobre la mesa: qué verificación apuntada a un cero garantizado corres, y qué te ganas al aprobarla.</strong></p>
+<blockquote class="blockquote">
+<p><em>“Antes de decirme que el extracto funciona, muéstrame la placa sin extracto. Si el disco en blanco también despejó las bacterias, no descubriste un fármaco. Descubriste que tu solvente es tóxico.”</em> — una <strong>asesora de laboratorio de microbiología</strong>, sobre la primera placa que pide ver</p>
+</blockquote>
+<p>Un resultado llamativo es lo más fácil del mundo de producir por accidente. Tu procedimiento tiene muchas piezas móviles: cómo manejaste las muestras, cómo mediste, cómo codificaste los grupos. Cualquiera de ellas puede fabricar una señal que no tiene nada que ver con aquello que te propusiste estudiar. Una prueba negativa es como averiguas si tu resultado lo produjo el mundo o tu propio proceso. Sáltatela y puedes pasar meses defendiendo un artefacto.</p>
+</section>
+<section id="el-concepto" class="level2" data-number="22.2">
+<h2 data-number="22.2" class="anchored" data-anchor-id="el-concepto"><span class="header-section-number">22.2</span> El concepto</h2>
+<p>Una <strong>prueba negativa</strong> es una verificación que corre tu análisis exacto sobre una situación donde la respuesta verdadera tiene que ser cero, de modo que cualquier señal que devuelva viene de tu procedimiento y no del fenómeno. Ejemplo: medir tu “efecto” en un grupo que no recibió ningún tratamiento. Como ahí la respuesta honesta es cero, una lectura distinta de cero expone una falla en tu maquinaria. Tres miembros de esta familia aparecen en casi cualquier auditoría.</p>
+<ul>
+<li><strong>Prueba de placebo</strong>: reemplazas la causa real por una falsa que no puede actuar, y confirmas que el efecto desaparece. Ejemplo: cambias las etiquetas reales de tratamiento y control por el resultado de una moneda al aire, y revisas que la estimación se desplome hacia cero.</li>
+<li><strong>Prueba de falsación</strong>: revisas una consecuencia que tiene que ser falsa si tu explicación es correcta, y confirmas que es falsa. Ejemplo: tu compuesto solo puede actuar después de que lo agregas, así que una lectura tomada <em>antes</em> de agregarlo no debería mostrar nada.</li>
+<li><strong>Control negativo</strong>: apuntas la misma maquinaria a un resultado que tu causa no podría tocar de ninguna manera. Ejemplo: un antibiótico no debería cambiar el diámetro de la placa de agar, así que una lectura de “placa encogida” significaría que quien habla es la medición, no el fármaco.</li>
+</ul>
+<p>Un término se gana su propia línea. Un <strong>control de vehículo</strong> es el control negativo emparejado con la forma en que entregaste la causa: el portador con el ingrediente activo quitado. Ejemplo: si disolviste tu extracto en etanol, el control de vehículo es un disco empapado solo en etanol. Lo que todas estas pruebas cazan es un <strong>artefacto</strong>, una señal producida por tu procedimiento y no por aquello que estudias. Ejemplo: un anillo despejado causado por el solvente, no por el extracto.</p>
+<p>Junto a ellas está el diagnóstico más barato de la investigación, la <strong>verificación dejando uno fuera</strong>: elimina cada caso por turno, recalcula y mira si una sola observación está cargando calladamente todo tu hallazgo. Responde una pregunta distinta de la de una prueba negativa. La prueba negativa pregunta si tu procedimiento inventa señal. Dejar uno fuera pregunta si tu resultado descansa sobre un solo punto.</p>
+<p>Todas las pruebas negativas comparten un movimiento: apuntar la maquinaria a donde la respuesta tiene que ser cero, y asegurarse de que diga cero. Este es el límite que nunca debes difuminar. Una prueba negativa aprobada descarta <strong>un artefacto específico</strong>. No prueba que tu efecto sea real, y nunca convierte una correlación en una causa.</p>
+</section>
+<section id="un-ejemplo-resuelto" class="level2" data-number="22.3">
+<h2 data-number="22.3" class="anchored" data-anchor-id="un-ejemplo-resuelto"><span class="header-section-number">22.3</span> Un ejemplo resuelto</h2>
+<p>Estás probando si un extracto de una planta medicinal mata una bacteria común. Empapas un pequeño disco de papel en el extracto, lo colocas sobre un césped de bacterias creciendo en una placa de agar, lo incubas durante la noche y a la mañana siguiente mides la <strong>zona de inhibición</strong>, el anillo despejado donde las bacterias no lograron crecer alrededor del disco. Un anillo ancho parece un efecto antibacteriano real, y es tentador anotarlo.</p>
+<p>Antes de hacerlo, corres la prueba negativa. Disolviste el extracto en etanol al 70%, así que tu control de vehículo es un disco empapado solo en etanol al 70%, colocado en una placa idéntica y tratado exactamente igual. Si ese disco deja un césped intacto y sin inhibir, la prueba pasó: el etanol por sí solo no hizo nada, así que el anillo alrededor del disco con extracto no es un artefacto del solvente, y tu efecto sobrevive a una preocupación específica. Si el disco de vehículo genera su propio anillo despejado, la prueba falló. El etanol está matando las bacterias, y ya no puedes distinguir cuánto del anillo del extracto es extracto y cuánto es solvente. El hallazgo es un artefacto hasta que lo rehagas a una concentración menor.</p>
+<p>Fíjate en lo que una aprobación limpia todavía no te compra. No te dice que el extracto funcione dentro de un animal vivo, ni qué molécula es la responsable. Descartó un artefacto y nada más, y esa modestia es justamente el punto.</p>
+</section>
+<section id="el-laboratorio-en-colab" class="level2" data-number="22.4">
+<h2 data-number="22.4" class="anchored" data-anchor-id="el-laboratorio-en-colab"><span class="header-section-number">22.4</span> El laboratorio en Colab</h2>
+<p>El laboratorio de este capítulo es el notebook <strong>nb10 — Comparte la investigación y ataca el análisis</strong>. Ábrelo en Colab con el botón de arriba y trabaja las celdas junto a este capítulo. Ahí corres una prueba de placebo sobre una estimación real de encuesta: tiras a la basura la agrupación verdadera, la reemplazas 500 veces por una etiqueta al azar de moneda al aire, y ves cómo las brechas falsas se agrupan muy apretadas en cero mientras el resultado real queda muy afuera de esa nube. Después una verificación dejando uno fuera te muestra si un solo dato está cargando calladamente todo el hallazgo.</p>
+</section>
+<section id="prompts-de-ia-recomendados" class="level2" data-number="22.5">
+<h2 data-number="22.5" class="anchored" data-anchor-id="prompts-de-ia-recomendados"><span class="header-section-number">22.5</span> Prompts de IA recomendados</h2>
+<p>Comprométete primero con tu propia expectativa, y luego delega un trabajo verificable. Espera trabajar en ciclos: proponer, interrogar, refinar, volver a preguntar. Sin embargo, hay un juicio que nunca mejora por volver a preguntar, y es si tu control es genuinamente nulo. Eso lo resuelves una sola vez, desde el mecanismo, y ninguna cantidad de vueltas lo resuelve por ti.</p>
+<p><strong>Ubica el control estándar.</strong></p>
+<pre class="text"><code>Act as a lab-methods assistant. I ran an antibiotic disk-diffusion assay with a
+plant extract dissolved in 70% ethanol. Before any advice, name the standard
+negative (vehicle) control for this assay and cite a protocol or textbook where it
+appears. Only name controls you are confident are standard practice.</code></pre>
+<p>Después de ejecutarlo, verifica: abre el protocolo citado y confirma que el control es real y estándar antes de usarlo. Contrarresta la <em>fabricación confiada</em> (un control “estándar” inventado llega con la misma seguridad que uno real).</p>
+<p><strong>Lista candidatas a prueba negativa, y después verifica cada una.</strong></p>
+<pre class="text"><code>Here is my analysis: [one-sentence design, your cause, your outcome]. Propose three
+negative tests: a placebo label, a falsification outcome measured where the effect
+cannot yet exist, and a negative-control outcome my cause could not plausibly affect.
+For each, state the exact zero I should expect and what a non-zero result would mean.</code></pre>
+<p>Después de ejecutarlo, verifica: para cada prueba, confirma que tu causa genuinamente <em>no puede</em> tocar el control negativo. Un control que tu causa sí puede afectar no es nulo, y falla en silencio. Contrarresta el <em>método plausible pero equivocado</em> (un “control negativo” que en realidad no es cero).</p>
+<p><strong>Haz red team (revisión adversaria) a una aprobación limpia.</strong></p>
+<pre class="text"><code>Here is a negative test I ran and its result: [describe the control and its
+near-zero outcome]. Act as a hostile reviewer. Name every reason this test could
+read as zero for the WRONG reason: too few samples to detect anything, a control too
+weak to carry the artifact, a zero I would have gotten no matter what. Do not reassure me.</code></pre>
+<p>Después de ejecutarlo, verifica: si solo elogia el resultado limpio, insiste y exige la única forma en que la prueba no informa nada. Contrarresta el <em>acuerdo complaciente</em> (elogios que revisan tu alivio, no tu evidencia).</p>
+<div class="callout callout-style-default callout-important callout-titled" title="No delegues">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>No delegues
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tú decides <strong>qué prueba negativa necesita de verdad tu diseño</strong>, <strong>si el control es genuinamente nulo</strong> (un lugar al que tu causa realmente no puede llegar) y <strong>qué te autoriza a afirmar una aprobación limpia</strong>. Una herramienta puede listar controles candidatos, pero solo tú conoces el mecanismo lo suficiente para certificar que tu causa no puede tocar el que elegiste. El juicio de que una prueba negativa aprobada descarta un artefacto <em>sin</em> probar que tu efecto es real sigue siendo tuyo.</p>
+</div>
+</div>
+</section>
+<section id="un-caso-de-falla-de-la-ia" class="level2" data-number="22.6">
+<h2 data-number="22.6" class="anchored" data-anchor-id="un-caso-de-falla-de-la-ia"><span class="header-section-number">22.6</span> Un caso de falla de la IA</h2>
+<p>Le pides a una IA que diseñe un control negativo para tu ensayo con base de etanol. Responde, con completa confianza: “usa un disco empapado en agua estéril”. Lo corres, el disco de agua vuelve perfectamente limpio, y la conclusión ordenada se escribe sola: control aprobado, efecto confirmado. Aquí está la trampa. El agua no es el vehículo que usaste. Entregaste el extracto en etanol, así que el artefacto que necesitabas descartar es la toxicidad del etanol, y un disco de agua nunca puede mostrarla. El resultado limpio no descartó absolutamente nada.</p>
+<p>Lo detectas con una pregunta que la herramienta nunca se hizo: <em>¿qué artefacto descarta de verdad este control?</em> Un control de vehículo válido coincide con la forma en que entregaste la causa, solvente por solvente. En el momento en que ves el desajuste cambias el agua por etanol al 70% y corres la prueba que sí puede fallar. Esto es un <em>método plausible pero equivocado</em>: el consejo sonaba a práctica de libro de texto y estaba mal para tu caso.</p>
+</section>
+<section id="ahora-te-toca-a-ti" class="level2" data-number="22.7">
+<h2 data-number="22.7" class="anchored" data-anchor-id="ahora-te-toca-a-ti"><span class="header-section-number">22.7</span> Ahora te toca a ti</h2>
+<p><em>Tu proyecto tiene una estimación principal con un rango alrededor. Este paso apunta dos verificaciones a lugares donde la respuesta tiene que ser cero, para que averigües si tu resultado lo produjo el mundo o tu propio proceso.</em></p>
+<ol type="1">
+<li>Nombra el artefacto que más te asusta: la única forma en que tu procedimiento, y no tu objeto de estudio, podría haber fabricado tu resultado. Una oración, escrita antes de salir a buscar.</li>
+<li>Elige la prueba negativa que podría atraparlo, sea una etiqueta de placebo, un resultado de falsación medido donde el efecto todavía no puede existir, o un control negativo que tu causa no podría tocar de ninguna manera. Después confirma que el control es genuinamente nulo. Si tu causa puede alcanzarlo, no es una prueba negativa y va a fallar en silencio.</li>
+<li>Escribe el cero exacto que esperas antes de correr nada, y comprométete a reportar el resultado caiga como caiga.</li>
+<li>Corre un diagnóstico al lado. Dejar uno fuera es el más barato: elimina cada caso por turno, recalcula y averigua si una sola observación está cargando tu hallazgo.</li>
+<li>Registra qué obtuviste frente a qué predijiste, y si la estimación se movió, di cuánto. Después escribe tu límite en una línea: el artefacto que descarta esta aprobación, y la afirmación causal o general que aun así no establece.</li>
+<li>Registra ambas pruebas en tu AI Research Ledger (registro de investigación con IA), y verifica al menos una salida con un método nombrado de la <a href="../verification-guide.html">Guía de Verificación</a>. La <strong>simulación</strong> es la herramienta correcta para una prueba negativa: construye a mano un conjunto de datos donde no exista ningún efecto, corre sobre él la maquinaria de tu prueba y confirma que devuelve cero con datos de nulidad conocida antes de confiar en el cero que devolvió con los tuyos. Una IA revisora puede hacer la comprobación contigo; la decisión de aceptar o rechazar es tuya.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="pagination-link" aria-label="Robustez y sensibilidad">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Robustez y sensibilidad</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../part4-credible-evidence/23-ai-as-adversarial-reviewer.html" class="pagination-link" aria-label="La IA como revisora adversaria">
+        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">La IA como revisora adversaria</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

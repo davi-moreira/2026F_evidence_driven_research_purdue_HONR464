@@ -1,0 +1,39 @@
+---
+title: 'Parte I — Pesquisa quando a IA faz "tudo"'
+---
+
+Ferramentas de IA já conseguem escrever o código, o texto, as citações e as
+figuras. Então o que sobra para você? A Parte I responde a essa pergunta e
+entrega as regras de operação para tudo o que vem depois: o princípio (a IA é o
+seu braço e a sua assistente de pesquisa, não o seu cérebro), o seu papel
+(diretor de pesquisa), o protocolo que você roda toda vez que delega (SDIIVDD) e
+a propriedade intelectual que nunca se transfere (o seu nome na alegação).
+
+Aqui está a Parte I em um relance, e onde ela se encaixa no livro:
+
+```{mermaid}
+flowchart TB
+  subgraph P1["PARTE I — Pesquisa quando a IA faz 'tudo'"]
+    direction TB
+    C1["Cap. 1 · O princípio<br/>A IA é o seu braço,<br/>não o seu cérebro"] --> C2["Cap. 2 · O seu papel<br/>o diretor de pesquisa"]
+    C2 --> C3["Cap. 3 · O protocolo<br/>SDIIVDD: o loop que você roda<br/>toda vez que delega"]
+    C3 --> C4["Cap. 4 · A propriedade intelectual<br/>o seu nome na alegação"]
+  end
+  P1 --> P2["PARTE II<br/>Da curiosidade ao<br/>desenho de pesquisa"]
+  P2 --> P3["PARTE III<br/>Trilhas de pesquisa"]
+  P3 --> P4["PARTE IV<br/>Evidência crível<br/>com IA"]
+  P4 --> P5["PARTE V<br/>Comunicando e<br/>defendendo a pesquisa"]
+  P5 --> P6["PARTE VI<br/>A pesquisa depois<br/>da conferência"]
+```
+
+Tudo o que vem depois se apoia nesses quatro capítulos. Quando a Parte II
+transformar a sua curiosidade em um desenho de pesquisa, a lista de tarefas do
+diretor, do Capítulo 2, é como você divide o trabalho. Quando as Partes III e IV
+produzirem evidência, o protocolo SDIIVDD, do Capítulo 3, é como cada etapa
+delegada é conferida. E quando as Partes V e VI colocarem a sua alegação em
+público, a regra de propriedade intelectual do Capítulo 4 é o chão em que você
+está pisando.
+
+Cada capítulo termina com uma seção **Agora é a sua vez**. Faça-as em ordem,
+começando aqui, e, na última página do livro, você terá construído um projeto de
+pesquisa completo e defensável, seu.

@@ -1,0 +1,212 @@
+---
+title: "Crítica de Pôsteres"
+---
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Antes de o seu rascunho virar a versão que as outras
+> pessoas leem, você decide se ele está pronto ou se precisa de mais uma correção. Você
+> roda a auditoria que um estranho hostil rodaria: a manchete fica dentro da evidência,
+> a imagem bate com os números, a incerteza está ao lado da alegação, cada número
+> rastreia até uma célula, toda pessoa que lê consegue receber a mensagem. Depois você
+> toma a decisão de travamento e a defende em voz alta.
+
+## Por que essa decisão importa
+
+**A decisão em jogo: se este rascunho está honesto o bastante para se tornar
+permanente, ou se precisa de mais uma correção antes.**
+
+Imagine a última hora antes de um pôster ir para a impressão. Uma **avaliadora de
+integridade em pesquisa**, a pessoa que numa conferência sonda se as alegações de um
+pôster estão de fato respaldadas, percorre a sua fileira e para em um número do seu
+painel. "De onde veio isto?" Se você consegue levá-la até a linha exata de código que o
+produziu, o pôster inteiro ganha confiança. Se você responde "acho que isso veio da
+análise em algum lugar", ela para de acreditar em todos os outros números também.
+Depois que o arquivo vai para a gráfica você não consegue mais remendar, então a
+honestidade precisa estar embutida antes de ele sair das suas mãos. Este capítulo é a
+última auditoria entre um pôster rascunho e um pôster permanente.
+
+## O conceito
+
+Três passadas transformam um pôster frágil em um que sobrevive a um estranho, e cada
+uma termina numa decisão que só você pode tomar.
+
+A primeira passada é a **auditoria de galeria**, um percurso estruturado em que você
+para diante de um pôster e roda sempre a mesma lista fixa de checagens em vez de dar
+uma olhada e seguir adiante. Quatro perguntas formam o seu núcleo. A auditoria de
+fronteira da alegação pergunta se a manchete fica dentro da sua evidência, sendo a
+**fronteira da alegação** a linha entre o que a sua evidência autoriza e o que ela não
+autoriza, e que mora no verbo da manchete: um estudo observacional de campo pode dizer
+"está associado a", nunca "causa". A auditoria de honestidade da figura pergunta se a
+imagem bate com os números, sendo **honestidade da figura** a regra de que um gráfico
+não pode dizer mais do que os seus dados, de modo que um eixo começando logo abaixo dos
+dados desenha uma diferença pequena como um cânion. A auditoria de caminho de leitura
+pergunta se um estranho encontra a manchete em noventa segundos. A auditoria de
+incerteza pergunta se o intervalo está ao lado da alegação, e não enterrado numa nota
+de rodapé. Uma quinta checagem, a de acessibilidade, pergunta se toda pessoa que lê
+consegue receber a alegação, e a solução dela tem nome: **codificação redundante**
+significa carregar uma distinção em mais de um canal, como um rótulo de valor mais uma
+textura hachurada, para que a cor nunca seja o único sinal que uma pessoa daltônica
+pode perder.
+
+A segunda passada é a **defesa oral**, a conversa ao vivo diante do seu painel em que
+você responde a perguntas que não pode editar depois. Três lentes cobrem quase toda
+pergunta difícil: alguém de fora testando se a sua alegação sobrevive à tradução, um
+especialista sondando uma escolha de desenho, e um cético oferecendo uma explicação
+rival para a mesma evidência. O julgamento por baixo é o **defender-ou-conceder**: você
+defende quando a objeção pede algo que a sua evidência já autoriza, e você concede,
+estreitando a alegação ali mesmo, quando ela pede um cruzamento que o seu desenho nunca
+pagou. A sua **posição na bússola**, o tipo e o alcance da pergunta que o seu projeto
+respondeu, diz qual escolha fazer.
+
+A terceira passada é o travamento. **Rastreabilidade alegação–evidência** significa que
+todo número do pôster rastreia até a célula exata que o produziu, para que você consiga
+mostrar essa linha quando alguém apontar para ela. O **travamento definitivo** é o
+momento em que o pôster se torna final e imutável, e é por isso que a auditoria que
+vem antes dele é a de maior consequência em todo o projeto.
+
+## Um exemplo resolvido
+
+Um pôster de biologia vegetal carrega a manchete "Composto ELEVA a produtividade do
+milho". A figura central é um gráfico de barras da produtividade média de grãos em
+talhões que receberam adubação com composto contra talhões que não receberam,
+desenhado como uma barra vermelha e uma barra verde. As médias são 185 e 191 alqueires
+por acre, uma diferença de 6. O eixo y começa em 180, e nenhum intervalo é mostrado. Os
+talhões não foram aleatorizados; o produtor escolheu quais campos receberiam composto.
+
+Percorra a auditoria de galeria por cima disso. A auditoria de fronteira da alegação
+pega o verbo primeiro: "eleva" é causal, mas nada foi aleatorizado, então um campo
+naturalmente mais rico pode ter recebido tanto o composto quanto a produtividade mais
+alta. A manchete honesta é "composto está associado a cerca de 6 alqueires a mais por
+acre". A auditoria de honestidade da figura pega o eixo, com piso em 180, que desenha
+uma diferença de 6 alqueires várias vezes maior do que ela é de verdade, então rode-o a
+partir de 0. A auditoria de incerteza pega o intervalo ausente: um intervalo de 95% de
+cerca de ±9 alqueires por acre engole uma diferença de 6 alqueires, então ele precisa
+viajar ao lado da manchete. A auditoria de acessibilidade pega o par vermelho-verde,
+que uma pessoa avaliadora com daltonismo vermelho-verde, mais ou menos um homem em cada
+doze, não consegue distinguir, então você acrescenta rótulos de valor e uma textura
+hachurada.
+
+Você não consegue consertar tudo antes de imprimir, então você decide. O problema de
+fronteira da alegação é o que viaja mais longe, porque quem pega um exagero causal
+desconfia do painel inteiro, então você trava primeiro o verbo associativo. Essa única
+decisão, tomada por você e defendida em voz alta, é o trabalho deste capítulo.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb11 — Poster criticism + final poster
+lock**. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo.
+No laboratório você desenha um conjunto honesto de números-piloto de duas maneiras e lê
+o fator de exagero que a sua própria célula imprime, roda as quatro auditorias mais a
+de acessibilidade em um pôster de exemplo, mapeia as três lentes de defesa e registra
+os problemas que o seu próprio pôster recebeu na sua lista de travamento do pôster
+final.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria auditoria e só depois delegue. Cada prompt
+entrega à ferramenta uma tarefa que você pode checar, com uma nota de verificação que
+nomeia a falha contra a qual ela defende.
+
+Trate cada prompt como um lance de abertura. Quando a resposta voltar magra, diga o que
+faltou e pergunte de novo. Quem revisa fica mais afiado na segunda passada, gente e
+máquina igualmente. Algumas ferramentas hoje rodam esse loop internamente e devolvem só
+a crítica final, o que é conveniente e também esconde o raciocínio que você poderia
+questionar.
+
+**Gere as perguntas hostis (você associa cada uma a uma auditoria).**
+
+```text
+Act as a hostile poster reviewer. My headline figure is a bar chart comparing
+mean corn yield for compost-amended versus control plots on a y-axis that starts
+at 180, titled "Compost RAISES corn yield," with no interval shown and the two
+bars told apart by red versus green only. Generate the six hardest skeptic
+questions you would ask, then name the single flaw this figure cannot answer.
+```
+
+Depois de rodar, verifique (neutraliza a *ilusão de completude*): associe cada pergunta
+a uma auditoria (fronteira da alegação, honestidade da figura, caminho de leitura,
+incerteza, acessibilidade). Uma auditoria inteira que a lista arrumadinha pula é a
+lacuna. Depois confronte as sobreviventes com a diferença real e o fator de exagero que
+a sua própria célula do notebook imprimiu.
+
+**Liste as codificações por cor a verificar (você confere contra a figura renderizada).**
+
+```text
+Here is the code that draws my poster's headline figure: [paste the cell]. List
+every place it encodes a meaningful distinction with color, and for each, say what
+a red-green color-blind reader and a screen-reader user would fail to receive.
+Then propose one redundant encoding that carries the same distinction.
+```
+
+Depois de rodar, verifique (neutraliza o *método plausível mas errado*): leia cada
+codificação que ela nomear contra a sua figura renderizada. Conselho genérico de
+acessibilidade que não corresponde a como a sua figura é de fato desenhada está errado
+para o seu caso, então confie na imagem que você consegue ver, e renderize de novo
+depois de aplicar uma das correções propostas.
+
+**Faça red team na sua resposta falada (as palavras continuam suas).**
+
+```text
+Here is my written headline: "[paste it]". Here is what I plan to say when a
+skeptic asks whether something else could explain it: "[paste it]". Find every
+place my spoken answer claims more than my written headline. Do not rewrite it;
+list the exact words.
+```
+
+Depois de rodar, verifique (neutraliza a *mudança silenciosa de escopo*): leia cada
+trecho sinalizado ao lado da sua posição na bússola. Mantenha toda captura de um
+"causa" falado que o seu pôster escrito nunca disse, e rejeite qualquer empurrão para
+conceder um ponto que o seu desenho de fato autoriza.
+
+::: {.callout-important title="Não delegue"}
+Estas coisas continuam suas, por mais fluente que a ferramenta soe. As palavras da sua
+alegação de manchete e o verbo que a mantém dentro da sua posição na bússola. A
+decisão, tomada em voz alta, de defender um ponto ou conceder. E a decisão de que o
+pôster está honesto o bastante para ser travado. A ferramenta pode gerar perguntas
+difíceis e vasculhar uma figura atrás de armadilhas de cor; decidir o que a sua
+evidência autoriza, e responder por isso diante do painel, é seu.
+:::
+
+## Um caso de falha da IA
+
+Você descreve a sua figura do composto ao Gemini e pede as perguntas mais duras de um
+cético. Volta uma lista nítida de seis itens: o tamanho da amostra, a única safra, o
+método de análise de solo, a generalização para outras regiões, o custo e a definição
+de "produtividade". Parece minucioso, e a tentação é tratar o pôster como plenamente
+auditado.
+
+Não está. A lista nunca menciona o eixo truncado e nunca menciona as barras vermelha e
+verde. Esses são os dois defeitos mais concretos e mais corrigíveis do painel, e a lista
+polida pulou os dois em silêncio. Isso é a ilusão de completude: uma resposta longa e
+organizada que omite justamente o que mais importa.
+
+Veja como você pega isso. Você associa cada pergunta a uma auditoria. Quatro caem em
+fronteira da alegação e incerteza, nenhuma em honestidade da figura, nenhuma em
+acessibilidade. Duas auditorias inteiras estão faltando, o que diz que a lista está
+incompleta por mais confiante que ela pareça. Depois você confronta as sobreviventes com
+o fator de exagero que a sua própria célula do notebook imprimiu, e corta qualquer
+pergunta que suponha uma diferença diferente dos 6 alqueires que você calculou. A
+checagem de completude é sua, não da ferramenta.
+
+## Agora é a sua vez
+
+*Você tem uma página rascunho e uma figura principal; este passo é a auditoria que
+decide se alguma das duas sobrevive a um estranho hostil.*
+
+1. Rode a auditoria de galeria no seu próprio rascunho como se nunca o tivesse visto:
+   fronteira da alegação, honestidade da figura, caminho de leitura, incerteza,
+   acessibilidade. Anote cada problema, localizado com precisão suficiente para
+   corrigir.
+2. Ordene os problemas por quanto o erro viaja. Um verbo causal que o seu desenho nunca
+   comprou viaja mais longe, porque quem pega um exagero para de confiar em todo o
+   resto.
+3. Enfrente as três lentes em voz alta: alguém de fora, um especialista e um cético com
+   uma explicação rival. Para cada pergunta, decida defender ou conceder, e escreva a
+   redação mais estreita para a qual você concederia.
+4. Revise uma vez, corrigindo os problemas na ordem, e então tome a decisão de
+   travamento. Cada número rastreado e cada citação aberta, ou ainda não.
+5. Registre isso no seu AI Research Ledger (registro de uso de IA) e verifique pelo
+   menos um número corrigido com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd). Uma IA revisora pode fazer a
+   checagem junto com você; a decisão de aceitar ou rejeitar continua sua.

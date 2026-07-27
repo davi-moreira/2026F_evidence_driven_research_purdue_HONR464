@@ -1,0 +1,24 @@
+<div class="edrai-lang" style="text-align:right; margin:.3rem .8rem .2rem 0; font-size:.85rem; opacity:.9;">
+  🌐 <a href="#" data-lang="book">English</a> · <a href="#" data-lang="book-pt">Português (BR)</a> · <a href="#" data-lang="book-es">Español</a>
+</div>
+<script>
+(function () {
+  var here = window.location.pathname;
+  var dirs = ["book-pt", "book-es", "book"];
+  var cur = null;
+  for (var i = 0; i < dirs.length; i++) {
+    if (here.indexOf("/" + dirs[i] + "/") !== -1) { cur = dirs[i]; break; }
+  }
+  var links = document.querySelectorAll(".edrai-lang a");
+  for (var j = 0; j < links.length; j++) {
+    var a = links[j], t = a.getAttribute("data-lang");
+    if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
+    if (t === cur) {
+      a.style.pointerEvents = "none"; a.style.textDecoration = "none";
+      a.style.fontWeight = "bold"; a.style.color = "inherit";
+      continue;
+    }
+    a.href = here.replace("/" + cur + "/", "/" + t + "/");
+  }
+})();
+</script>

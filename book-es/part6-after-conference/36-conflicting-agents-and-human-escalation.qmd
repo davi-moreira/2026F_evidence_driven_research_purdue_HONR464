@@ -192,26 +192,29 @@ amontonar más roles correlacionados no puede cerrar la brecha.
 
 ## Ahora te toca a ti
 
-*Tu proyecto ya tiene un pequeño equipo de IA corriendo sobre una sección; este paso decide de
-antemano dónde deben detenerse esos bucles y devolverte la decisión.*
+*Tu proyecto ya tiene un pequeño equipo de IA corriendo sobre una sección; este paso
+decide de antemano dónde deben detenerse esos bucles y devolverte la decisión.*
 
-1. Escribe tus reglas de escalamiento antes de que empiece la siguiente ronda. Enumera las
-   decisiones específicas que ningún bucle puede cerrar: el límite de tu afirmación, tu
-   incertidumbre, cuáles fuentes son reales, qué cuenta como terminado y cualquier cosa con
-   filo ético. Deja la lista lo bastante corta como para recordarla bajo presión.
-2. Añade las condiciones de parada que no son de contenido. Cuántos turnos puede correr un
-   bucle antes de que lo leas, y qué tiene permitido cambiar una herramienta agéntica sin
-   preguntarte primero.
-3. Encuentra un desacuerdo real en lo que tus roles ya devolvieron, y diagnostícalo dejando
-   constancia: desacuerdo real, error correlacionado o un consenso que tu propio prompt fabricó.
-   Di cuál y por qué.
-4. Resuélvelo por tu cuenta con una comprobación que los bucles no puedan correr: recalcula el
-   número, abre la fuente o compara contra una cifra que nunca estuvo en ningún prompt. Escribe
-   juntas la resolución y la comprobación, porque una sin la otra es solo una opinión.
-5. Toma un lugar donde tus roles coincidieron en algo que importaba y pon a prueba si el acuerdo
-   fue independiente. Vuelve a correr uno de ellos con otro planteamiento y otro contexto, o
-   verifica el punto por tu cuenta fuera de las herramientas.
-6. Registra el conflicto, el diagnóstico y la anulación en tu AI Research Ledger (registro de
-   investigación con IA), y verifica al menos una salida con un método nombrado de la
-   [Guía de Verificación](../verification-guide.qmd). Un revisor de IA puede hacer la
-   comprobación contigo; la decisión de aceptar o rechazar sigue siendo tuya.
+1. Escribe tus reglas de escalamiento antes de que empiece la siguiente ronda. Enumera
+   las decisiones específicas que ningún bucle puede cerrar: el límite de tu afirmación,
+   tu incertidumbre, cuáles fuentes son reales, qué cuenta como terminado y cualquier
+   cosa con filo ético. Deja la lista lo bastante corta como para recordarla bajo
+   presión.
+2. Añade las condiciones de parada que no son de contenido. Cuántos turnos puede correr
+   un bucle antes de que lo leas, y qué tiene permitido cambiar una herramienta agéntica
+   sin preguntarte primero.
+3. Encuentra un desacuerdo real en lo que tus roles ya devolvieron, y diagnostícalo
+   dejando constancia: desacuerdo real, error correlacionado o un consenso que tu propio
+   prompt fabricó. Di cuál y por qué.
+4. Resuélvelo por tu cuenta con una comprobación que los bucles no puedan correr:
+   recalcula el número, abre la fuente o compara contra una cifra que nunca estuvo en
+   ningún prompt. Escribe juntas la resolución y la comprobación, porque una sin la otra
+   es solo una opinión.
+5. Toma un lugar donde tus roles coincidieron en algo que importaba y pon a prueba si el
+   acuerdo fue independiente. Vuelve a correr uno de ellos con otro planteamiento y otro
+   contexto, o verifica el punto por tu cuenta fuera de las herramientas.
+6. Registra el conflicto, el diagnóstico y la anulación en tu AI Research Ledger
+   (registro de investigación con IA), y verifica al menos una salida con un método
+   nombrado de la [Guía de Verificación](../verification-guide.qmd). Un revisor de IA
+   puede hacer la comprobación contigo; la decisión de aceptar o rechazar sigue siendo
+   tuya.
