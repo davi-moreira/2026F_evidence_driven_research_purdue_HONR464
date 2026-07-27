@@ -2,34 +2,32 @@
 title: "De los resultados a las afirmaciones"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Decide la afirmación exacta que tus resultados
-> autorizan: la única frase-titular que imprimirás en tu póster y defenderás en voz
-> alta, redactada de modo que su verbo se quede dentro de tu posición en la brújula,
-> que su incertidumbre viaje en el mismo golpe de vista y que cada número y cada
-> fuente detrás de ella estén respaldados. Tú eliges las palabras y tú las cierras, y
-> nunca dejas que una herramienta empuje tu afirmación más allá de su límite.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay un capítulo de RDSS (*Research Design in the Social Sciences*, el libro complementario del curso) que acompañe este tema; este capítulo se sostiene por sí solo.
-:::
+> **La decisión de investigación.** Tu análisis imprimió un número. Ahora decides la
+> frase que ese número te permite sostener: el titular que vas a mostrar en público y
+> defender en voz alta, redactado para que su verbo se quede dentro de lo que
+> estableció tu diseño y para que su incertidumbre viaje en el mismo golpe de vista.
+> Tú eliges las palabras. Tú las cierras. Nunca dejas que una herramienta empuje tu
+> afirmación más allá de su límite.
 
 ## Por qué importa esta decisión
 
-> *"En el salón de pósteres de ciencias de la salud señalo un número y pregunto de
-> dónde salió y qué te permite decir. Si el titular dice 'baja la presión arterial'
-> pero el estudio solo observó a quienes eligieron caminar, dejo de leer. Una
-> afirmación que le saca ventaja a su evidencia me dice que desconfíe de todo el
-> tablero."*
+**La decisión en juego: el verbo de tu titular y hasta dónde tu evidencia le permite
+llegar.**
+
+> *"En el salón de pósteres señalo un número y pregunto de dónde salió y qué te
+> permite decir. Si el titular dice 'baja la presión arterial' pero el estudio solo
+> observó a quienes eligieron caminar, dejo de leer. Una afirmación que le saca
+> ventaja a su evidencia me dice que desconfíe de todo el tablero."*
 > — una **jueza de integridad de la investigación** en una sesión de pósteres
 
-Un resultado todavía no es una afirmación. Tu análisis imprime un número; tu póster
+Un resultado todavía no es una afirmación. Tu análisis imprime un número; tu titular
 sostiene una frase. La distancia entre ambos es donde se rompen casi todos los
-pósteres, porque la frase casi siempre quiere decir más de lo que el número se ganó.
-La jueza de arriba no está evaluando tu estadística. Está evaluando si las palabras
-de tu tablero coinciden con la evidencia que hay debajo. Este capítulo es el hábito
-que cierra esa distancia antes de que un desconocido la encuentre abierta.
+proyectos, porque la frase casi siempre quiere decir más de lo que el número se ganó.
+La jueza de arriba no está evaluando tu estadística. Está evaluando si tus palabras
+coinciden con la evidencia que hay debajo. Este capítulo es el hábito que cierra esa
+distancia antes de que un desconocido la encuentre abierta.
 
 ## El concepto
 
@@ -48,69 +46,75 @@ otra? Ejemplo: si observaste a quienes ya habían elegido caminar, hiciste una
 comparación descriptiva, no una prueba causal. Tu **límite de la afirmación** es la
 línea entre lo que tu evidencia autoriza y lo que no, y vive en el verbo del titular.
 Ejemplo: un proyecto observacional puede escribir "se asoció con una presión más
-baja", nunca "bajó la presión". El verbo es el lugar por donde una afirmación cruza
-la línea en silencio.
+baja", nunca "bajó la presión". El verbo es el lugar por donde una afirmación cruza la
+línea en silencio.
 
 La última idea es donde la honestidad de la afirmación se vuelve visible.
 **Incertidumbre en el mismo golpe de vista** significa que el intervalo o la
-advertencia va justo al lado de la afirmación, no en una nota al pie. Ejemplo: "unos
-6 puntos menos (intervalo del 95%: 1 a 11)" impreso debajo del titular, para que
-quien lee encuentre la duda en el mismo momento que el número. Un límite que hay que
-ir a buscar es un límite que trabaja a escondidas.
+advertencia va justo al lado de la afirmación, no en una nota al pie. Ejemplo: "unos 6
+puntos menos (intervalo del 95%: 1 a 11)" impreso debajo del titular, para que quien
+lee encuentre la duda en el mismo momento que el número. Un límite que hay que ir a
+buscar es un límite que trabaja a escondidas.
 
-Un hábito más sostiene todo esto. La **trazabilidad** significa que cada número del
-póster se puede rastrear hasta la celda exacta del notebook que lo produjo. Ejemplo:
-la brecha de 6 puntos de tu tablero apunta a la única línea de código que la calculó,
-y puedes mostrar esa línea cuando un juez lo pide. Un número que no puedes rastrear no
-se sube al tablero.
+Un hábito más sostiene todo esto. La **trazabilidad** significa que cada número que
+muestras se puede rastrear hasta la celda exacta del notebook que lo produjo. Ejemplo:
+la brecha de 6 puntos de tu tablero apunta a la única línea de código que la calculó, y
+puedes mostrar esa línea cuando alguien lo pide. Un número que no puedes rastrear no
+sube al tablero.
 
 ## Un ejemplo resuelto
 
-Una estudiante de honores de enfermería realiza un pequeño piloto comunitario.
+Una persona que estudia biología hace un pequeño estudio piloto de fisiología humana.
 Cuarenta voluntarios usan un contador de pasos durante un mes. Veinte caminan al menos
 8,000 pasos al día; veinte no. Su presión arterial sistólica en reposo promedia 128 en
 el grupo activo y 134 en el grupo menos activo, una brecha de 6 puntos.
 
-El resultado es esa brecha de 6 puntos. La afirmación es la decisión. El titular del
-borrador dice "Caminar BAJA la presión arterial", dibujado como dos barras sobre un
-eje que empieza en 125, lo que hace que la pequeña brecha parezca un precipicio, y con
-los dos grupos distinguidos solo por rojo y verde.
+El resultado es esa brecha de 6 puntos. La afirmación es la decisión. El borrador del
+titular dice "Caminar BAJA la presión arterial", dibujado como dos barras sobre un eje
+que empieza en 125, lo que hace que la pequeña brecha parezca un precipicio, y con los
+dos grupos distinguidos solo por rojo y verde.
 
-Recorre la decisión. La posición en la brújula es descriptiva: a nadie se le asignó
-caminar, así que el grupo activo puede diferir en edad, dieta o salud de partida. Eso
+Recorre la decisión. La posición en la brújula es descriptiva: nadie fue asignado a
+caminar, así que el grupo activo puede diferir en edad, dieta o salud de base. Eso
 significa que el verbo "baja" reclama un cruce que el diseño nunca pagó, y el verbo
-honesto es "se asoció con una presión más baja". El eje truncado tiene que bajar a la
-escala completa, para que la brecha de 6 puntos se lea como la diferencia modesta que
-es. El intervalo del 95% va aproximadamente de 1 a 11 puntos, lo bastante ancho como
-para que el titular honesto lo lleve en el mismo golpe de vista. Y cada barra recibe
-una etiqueta con su valor, para que una persona con daltonismo o que use un lector de
-pantalla reciba el número, no solo el color.
+honesto es "se asoció con una presión más baja". El eje truncado tiene que bajar hasta
+la escala completa, para que la brecha de 6 puntos se lea como la diferencia modesta
+que es. El intervalo del 95% va aproximadamente de 1 a 11 puntos, lo bastante ancho
+como para que el titular honesto lo lleve en el mismo golpe de vista. Y cada barra
+recibe una etiqueta con su valor, para que alguien con daltonismo o que usa un lector
+de pantalla reciba el número, no solo el color.
 
 La afirmación cerrada: "En esta muestra, los voluntarios más activos promediaron unos
 6 puntos menos de presión arterial sistólica en reposo (intervalo del 95%: 1 a 11);
 esta es una asociación observada, no evidencia de que caminar haya causado la baja".
-El mismo resultado, y una afirmación que sobrevive a la jueza.
+El mismo resultado, con una afirmación que sobrevive a la jueza.
 
 ## El laboratorio en Colab
 
 El laboratorio de este capítulo es el notebook **nb11 — Poster criticism + final
-poster lock** (crítica del póster y cierre final). Ábrelo en Colab con la insignia de
-arriba y trabaja las celdas junto con este capítulo. Ahí ejecutas una auditoría de
-recorrido de galería sobre una figura principal dibujada de dos maneras con los mismos
-números, ensayas una defensa oral de tres lentes y cierras cada número contra su celda
-y cada cita contra una fuente real antes de que el póster sea definitivo.
+poster lock** (crítica del póster y cierre final del póster). Ábrelo en Colab con el
+botón de arriba y trabaja las celdas junto con este capítulo. Ahí haces una auditoría
+de recorrido de galería sobre una figura principal dibujada de dos maneras a partir de
+los mismos números, ensayas una defensa oral con tres lentes y cierras cada número a su
+celda y cada cita a una fuente real antes de que tu página quede final.
 
 ## Prompts de IA recomendados
 
 Comprométete primero con tu propia respuesta y después delega. Cada prompt es una
-tarea que puedes verificar, nunca una petición de veredicto.
+tarea verificable, nunca una petición de veredicto.
 
-**Localiza la fuente real detrás de una afirmación de salud.**
+Espera ejecutar cada uno más de una vez. Lees lo que vuelve, nombras la parte que está
+mal y preguntas de nuevo con esa corrección dentro del prompt. Ese ida y vuelta es el
+método, no una señal de que preguntaste mal. Algunas herramientas ya hacen varias
+rondas por su cuenta antes de mostrarte nada, lo que sube las apuestas de tu último
+paso en vez de bajarlas, porque más razonamiento ocurrió donde no pudiste mirar.
+
+**Localiza la fuente real detrás de una afirmación de fisiología.**
 
 ```text
-Act as a literature assistant in public health. My poster claims regular walking
-is linked to lower blood pressure. Name up to three peer-reviewed sources or
-clinical guidelines that support this, with title, authors, year, and venue.
+Act as a literature assistant in human physiology. My headline claims regular
+walking is linked to lower blood pressure. Name up to three peer-reviewed sources
+or clinical guidelines that support this, with title, authors, year, and venue.
 Only list work you are confident exists; mark anything uncertain.
 ```
 Después de ejecutarlo, verifica: abre cada fuente en una base de datos de biblioteca y
@@ -125,10 +129,10 @@ observational." Generate the eight hardest questions a skeptic would ask, and ma
 which single audit each one belongs to: claim boundary, figure honesty,
 uncertainty, or accessibility.
 ```
-Después de ejecutarlo, verifica: asigna cada pregunta a una auditoría y contrástala
-con los números que imprimiste; una auditoría sin preguntas es un hueco que la lista
-ordenada escondió. Contrarresta la *ilusión de exhaustividad* (una lista larga y
-organizada que se salta justo la falla que más importa).
+Después de ejecutarlo, verifica: asigna cada pregunta a una auditoría y contrástala con
+los números que imprimiste; una auditoría que falta es el hueco que la lista ordenada
+escondió. Contrarresta la *ilusión de exhaustividad* (una lista larga y organizada que
+se salta justamente la falla que más importa).
 
 **Haz red team (revisión adversaria) al verbo.**
 
@@ -138,67 +142,49 @@ place the verb claims more than an observational design licenses. Do not rewrite
 for me; list the exact words so I can fix them myself.
 ```
 Después de ejecutarlo, verifica: lee cada palabra señalada contra tu posición en la
-brújula y conserva solo las objeciones que tu diseño realmente obliga a aceptar.
-Contrarresta el *cambio silencioso de alcance* (una afirmación ascendida en silencio
-de asociación a causa).
+brújula y quédate solo con las objeciones que tu diseño realmente obliga a aceptar.
+Contrarresta el *cambio silencioso de alcance* (una afirmación ascendida en silencio de
+asociación a causa).
 
 ::: {.callout-important title="No delegues"}
-Tres decisiones siguen siendo tuyas. Tú eliges el **verbo de tu titular**, la única
-palabra que fija el límite de tu afirmación. Tú tomas la **decisión de defender o
-conceder** cuando una pregunta empuja ese límite en voz alta. Y tú tomas la
-**decisión de cierre**: el juicio de que cada número está rastreado, cada cita se
-resuelve y el póster está listo para ser definitivo. Una herramienta puede redactar
-preguntas y buscar fuentes, pero no puede decidir qué autoriza tu evidencia ni cuándo
-tu afirmación está ganada.
+Tres decisiones se quedan contigo. Tú eliges el **verbo de tu titular**, la única
+palabra que fija el límite de tu afirmación. Tú haces la **llamada de defender o
+conceder** cuando una pregunta empuja ese límite en voz alta. Y tú tomas la **decisión
+de cierre**: el juicio de que cada número está rastreado, cada cita resuelve y la
+afirmación está lista para ser final. Una herramienta puede redactar preguntas y buscar
+fuentes, pero no puede decidir qué autoriza tu evidencia ni cuándo tu afirmación está
+ganada.
 :::
 
 ## Un caso de falla de la IA
 
-Pegas tu titular honesto en una herramienta y le pides que lo haga "más contundente
-para un póster". Devuelve, con total seguridad: "Caminar reduce la presión arterial en
-6 puntos". Se lee muy bien y está mal. La herramienta ascendió tu verbo de una
-asociación a una causa y eliminó tu intervalo: un cambio silencioso de alcance
-disfrazado de corrección de estilo.
+Pegas tu titular honesto en una herramienta y le pides que lo haga "más contundente".
+Devuelve, con total confianza, "Caminar reduce la presión arterial en 6 puntos". Se lee
+precioso y está mal. La herramienta ascendió tu verbo de una asociación a una causa y
+eliminó tu intervalo: un cambio silencioso de alcance disfrazado de corrección de
+estilo.
 
 Lo detectas comparando el verbo nuevo con tu posición en la brújula. Tu estudio nunca
 asignó a nadie a caminar, así que "reduce" reclama un cruce que no pagaste. También
-notas que ahora los "6 puntos" quedan solos, sin intervalo al lado. Vuelves a "se
-asoció con unos 6 puntos menos (intervalo del 95%: 1 a 11)". La reescritura fluida
-revisó el estilo de tu póster; solo tú puedes revisar su afirmación.
+notas que "6 puntos" ahora aparece solo, sin intervalo al lado. Vuelves a "se asoció con
+unos 6 puntos menos (intervalo del 95%: 1 a 11)". La reescritura fluida revisó tu
+estilo; solo tú puedes revisar tu afirmación.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.
-:::
+*Después del capítulo anterior sabes dónde se detiene de verdad tu confianza; este paso
+convierte cada uno de tus resultados en una frase que imprimirías y defenderías.*
 
-Verifica el resultado clave de este capítulo, el número detrás de la afirmación, con
-**código alternativo** de la [guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-vuelve a calcular los promedios de los grupos y la brecha por una segunda vía y
-confirma que obtienes los mismos 6 puntos. Filtra cada grupo a mano y resta, en vez de
-confiar en una sola llamada agrupada; después recalcula el intervalo y comprueba que
-sigue yendo aproximadamente de 1 a 11. Dos caminos hacia una misma respuesta verifican
-el número. Luego verifica el verbo con un **diagrama causal**: dibuja qué podría causar
-a la vez el caminar y una presión más baja, como la edad o la condición física de
-partida, y si esa causa común queda abierta, el verbo honesto sigue siendo "se asoció
-con", no "bajó".
-
-## Transferencia al proyecto
-
-Este capítulo es el motor de tu hito de **cierre final del póster**. Toma la única
-frase-titular que produjeron los resultados de tu proyecto y pásala por la decisión de
-aquí: ajusta el verbo a tu posición en la brújula, imprime el intervalo en el mismo
-golpe de vista y rastrea cada número del tablero hasta su celda. Elimina cualquier cita
-que no puedas abrir tú mismo y escribe la declaración de uso de IA de una línea que
-registre qué hizo la herramienta y cómo lo comprobaste. La afirmación que sobrevive a
-esta pasada es la que llevas a tu defensa oral y dices en voz alta en tu conferencia de
-investigación (en el curso original, la Purdue Fall Undergraduate Research Expo).
-
-## Defiende tu decisión
-
-En cuatro frases, defiende tu titular cerrado. Enuncia la afirmación exactamente como
-aparecerá en el póster y nombra la posición en la brújula cuyo límite respeta su verbo.
-Da la incertidumbre que viaja a su lado, el intervalo o la advertencia que quien lee
-encuentra en el mismo momento que el número. Cierra con el único cruce que tu diseño no
-autorizó: la frase a la que un desconocido podría intentar empujarte y que te vas a
-negar a decir.
+1. Enumera todos los resultados que podrías poner frente a quien lee y después escribe
+   la frase de afirmación que cada uno autoriza.
+2. Revisa cada verbo contra lo que estableció tu diseño y baja de nivel los que llegan
+   demasiado lejos. "Causó" se vuelve "se asoció con"; "predice" se vuelve "señaló".
+3. Escribe una línea de límite junto a cada afirmación que nombre lo que no establece, y
+   pon la incertidumbre en el mismo golpe de vista que el número.
+4. Rastrea cada número hasta la celda que lo produjo y corta los que no puedas seguir
+   hacia atrás. Después elige tu afirmación principal, la frase que dirías primero si
+   tuvieras diez segundos.
+5. Regístralo en tu AI Research Ledger (registro de investigación con IA) y verifica al
+   menos una afirmación con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd). Un revisor de IA puede hacer la
+   comprobación contigo; la decisión de aceptar o rechazar sigue siendo tuya.
