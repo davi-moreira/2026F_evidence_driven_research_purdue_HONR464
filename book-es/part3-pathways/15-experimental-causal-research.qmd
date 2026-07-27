@@ -2,19 +2,18 @@
 title: "Investigación experimental causal"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Decide si la manera en que se asignó el
 > tratamiento en tu estudio te permite leer una diferencia simple de resultados como
-> un efecto causal, y nombra exactamente qué cantidad estima esa diferencia y para
-> quién. La aleatorización la confirmas tú y la cantidad la nombras tú, y nunca dejas
-> que una herramienta declare que tu diseño prueba una causa.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria del tema del curso al que corresponde; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (el manual *Research Design in the Social Sciences*) cap. 18, gratuito en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> un efecto causal, y luego nombra exactamente qué cantidad estima esa diferencia y
+> de quién es ese efecto. Nadie más puede confirmar cómo repartiste tus unidades, así
+> que ninguna herramienta declara que tu diseño prueba una causa.
 
 ## Por qué importa esta decisión
+
+**La decisión sobre la mesa: si tu diferencia de resultados se ganó la palabra
+"porque", y a quién describe de verdad esa diferencia.**
 
 > *"Todo el mundo me muestra que al grupo tratado le fue mejor. También les fue mejor
 > a quienes ya estaban más sanos de entrada, o eran más organizados, o más jóvenes.
@@ -24,7 +23,7 @@ Este capítulo es la lectura obligatoria del tema del curso al que corresponde; 
 > — una **revisora de ensayos clínicos**, leyendo una afirmación de que un nuevo
 > recordatorio mejoró la adherencia a la medicación
 
-Esta es la afirmación más difícil que harás en este curso: una causal. Hoy una
+Una afirmación causal es lo más difícil que sostendrás en este libro. Hoy una
 herramienta puede limpiar tus datos, correr la comparación y entregarte un número
 seguro en segundos. Esa velocidad es el peligro. Si pegas de vuelta "el tratamiento
 funcionó", firmaste con tu nombre una afirmación que no te ganaste. A la revisora de
@@ -52,35 +51,35 @@ irrecuperable.
 Entonces renuncias al individuo y persigues el promedio. El **efecto promedio del
 tratamiento (ATE)** es el promedio de Y(1) menos Y(0) a lo largo de todas tus
 unidades, el efecto típico en vez del de una unidad cualquiera. Ejemplo: en promedio,
-el recordatorio elevó los resurtidos a tiempo en unos pocos puntos. Un solo movimiento
-desbloquea una estimación honesta de ese promedio. La **asignación aleatoria** deja
-que el puro azar, una moneda al aire, decida qué unidades reciben tratamiento.
-Ejemplo: una computadora lanza una moneda justa para cada paciente. El azar no sabe
-nada de salud ni de organización, así que los dos grupos que arma son parecidos en
-promedio, y el resultado del grupo sin tratar hace de sustituto honesto de lo que el
-grupo tratado habría hecho sin tratamiento. Eso es lo que derrota la asignación
-aleatoria: un **factor de confusión**, un tercer rasgo que empuja a la vez sobre
-quién recibe tratamiento y sobre el resultado. Ejemplo: las personas más organizadas
-resurten de todos modos y son más fáciles de inscribir, así que un recordatorio
-parece efectivo aunque no haya hecho nada. Aleatorizar rompe el vínculo entre
-cualquier rasgo y quién recibe tratamiento, y ese vínculo roto es toda la razón por
-la que un experimento puede decir *porque*.
+el recordatorio elevó los resurtidos a tiempo en unos pocos puntos. Un solo
+movimiento desbloquea una estimación honesta de ese promedio. La **asignación
+aleatoria** deja que el puro azar, una moneda al aire, decida qué unidades reciben
+tratamiento. Ejemplo: una computadora lanza una moneda justa para cada paciente. El
+azar no sabe nada de salud ni de organización, así que los dos grupos que arma son
+parecidos en promedio, y el resultado del grupo sin tratar hace de sustituto honesto
+de lo que el grupo tratado habría hecho sin tratamiento. Eso es lo que derrota la
+asignación aleatoria: un **factor de confusión**, un tercer rasgo que empuja a la vez
+sobre quién recibe tratamiento y sobre el resultado. Ejemplo: las personas más
+organizadas resurten de todos modos y son más fáciles de inscribir, así que un
+recordatorio parece efectivo aunque no haya hecho nada. Aleatorizar rompe el vínculo
+entre cualquier rasgo y quién recibe tratamiento, y ese vínculo roto es toda la razón
+por la que un experimento puede decir *porque*.
 
 ## Un ejemplo resuelto
 
 Diriges una clínica y quieres saber si un recordatorio diario por mensaje de texto
 eleva la proporción de pacientes con hipertensión que resurten a tiempo su receta
 para la presión arterial. Inscribes a 800 pacientes y dejas que una computadora lance
-una moneda justa para cada uno: 400 al brazo con recordatorio (el tratamiento) y 400
-a un brazo de control sin mensajes.
+una moneda justa por cada una: 400 al brazo con recordatorio (el tratamiento) y 400 a
+un brazo de control sin mensajes.
 
 Para la Sra. R, Y(1) es si resurte cuando recibe los mensajes, y Y(0) es si resurte
-cuando no recibe nada. Solo llegarás a ver uno. A lo largo de las 800, estimas el ATE
-como la diferencia en las tasas de resurtido a tiempo entre los brazos. Digamos que
-el brazo con recordatorio resurte al 71 por ciento y el de control al 62 por ciento,
-una brecha de 9 puntos porcentuales. Como fue la moneda, y no la organización de cada
-paciente, la que separó los brazos, esos 9 puntos son una estimación honesta del
-efecto promedio del recordatorio.
+cuando no recibe nada. Solo llegarás a ver uno. Sobre las 800, estimas el ATE como la
+diferencia en las tasas de resurtido a tiempo entre los brazos. Digamos que el brazo
+con recordatorio resurte al 71 por ciento y el de control al 62 por ciento, una
+brecha de 9 puntos porcentuales. Como fue la moneda, y no la organización de cada
+paciente, la que armó los brazos, esos 9 puntos son una estimación honesta del efecto
+promedio del recordatorio.
 
 Ahora la prueba de honestidad. Supón que las pacientes más enfermas del brazo con
 recordatorio dejaron de responder al seguimiento y abandonaron el estudio. La
@@ -98,18 +97,24 @@ tu número. Nombrar esa cantidad es la decisión que habilita este capítulo.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb09 — Experimental causal research**
-(*investigación experimental causal*). Ábrelo en Colab con la insignia de arriba y
-trabaja las celdas junto con este capítulo. Ahí analizas un experimento de campo real
-para movilizar el voto, estimas el efecto como una diferencia de medias y le pones
-alrededor un intervalo por inferencia de aleatorización. Luego ves cómo la atrición,
-el incumplimiento y el derrame doblan cada uno una estimación limpia, para que
-aprendas a nombrar qué cantidad sobrevive de verdad.
+El laboratorio de este capítulo es el cuaderno **nb09 — Experimental causal
+research** (*investigación experimental causal*). Ábrelo en Colab con la insignia de
+arriba y trabaja las celdas junto con este capítulo. Ahí analizas un experimento de
+campo real para movilizar el voto, estimas el efecto como una diferencia de promedios
+y le pones alrededor un intervalo por inferencia de aleatorización. Luego ves cómo la
+atrición, el incumplimiento y el derrame doblan cada uno una estimación limpia, para
+que aprendas a nombrar qué cantidad sobrevive de verdad.
 
 ## Prompts de IA recomendados
 
 Comprométete primero con tu propia respuesta y luego delega. Cada prompt de abajo es
-un encargo comprobable, no una petición de veredicto.
+una tarea verificable, no un pedido de veredicto. Trabájalos como un **bucle de IA**:
+el ciclo prompt → respuesta → interrogación → refinamiento → nueva ejecución. La
+primera respuesta es un borrador: encuentra la afirmación que no puedes comprobar,
+dilo en tu siguiente mensaje y vuelve a correrlo. Algunas herramientas corren ese
+bucle completo sin supervisión y te entregan un análisis terminado. Esa apariencia de
+terminado es justamente lo que hace que valga la pena hacer las preguntas de este
+capítulo antes de aceptarlo.
 
 **Localiza la herramienta estándar.**
 
@@ -123,9 +128,10 @@ Only name methods you are confident exist.
 
 Después de ejecutarlo, verifica: abre la documentación citada y confirma que el
 método y su fórmula existen tal como se describen. Contrarresta la *fabricación
-confiada* (el nombre de un método inventado llega con tanta seguridad como uno real).
+confiada* (*confident fabrication*): un nombre de método inventado llega con la misma
+seguridad que uno real.
 
-**Lista los supuestos que hay que verificar.**
+**Enumera los supuestos por verificar.**
 
 ```python
 Here is my analysis of a randomized reminder trial: [paste your cell]. List, as a
@@ -136,8 +142,8 @@ got no treatment. For each, say what I would check in my own data to confirm it.
 
 Después de ejecutarlo, verifica: contrasta cada supuesto listado con tu diseño real y
 con tus números de retención antes de aceptar la lectura causal. Contrarresta el
-*cambio silencioso de alcance* (una asociación reportada en silencio como una causa
-establecida).
+*cambio silencioso de alcance*: una asociación reportada sin aviso como una causa
+establecida.
 
 **Haz red team a tu efecto.**
 
@@ -149,79 +155,62 @@ rewrite the claim for me.
 ```
 
 Después de ejecutarlo, verifica: si solo elogia el diseño, insiste y exige la peor
-amenaza individual, y luego pruébala contra tu retención por brazo. Contrarresta el
-*acuerdo complaciente* (elogios que revisan tu ego, no tu evidencia).
+amenaza, luego pruébala contra tu retención por brazo. Contrarresta el *acuerdo
+complaciente*: elogios que revisan tu ego, no tu evidencia.
 
 ::: {.callout-important title="No delegues"}
 Tres decisiones nunca salen de tus manos. Tú decides **si de verdad hubo asignación
-aleatoria** en tu estudio, porque una herramienta no puede ver cómo separaste los
+aleatoria** en tu estudio, porque una herramienta no puede ver cómo armaste los
 brazos. Tú decides **qué cantidad estima tu número y para quién**, el efecto para
 todas las personas inscritas o solo el efecto entre quienes se quedaron. Y tú decides
-**si el efecto es lo bastante grande como para actuar**, y si siquiera es ético
-aleatorizar pacientes reales y negarle algo al brazo de control. La oración final, su
-frontera y su incertidumbre son tuyas.
+**si el efecto es lo bastante grande como para actuar**, y si es siquiera ético
+aleatorizar a pacientes reales y negarle algo al brazo de control. La oración final
+es tuya, con su frontera y su incertidumbre.
 :::
 
 ## Un caso de falla de la IA
 
-Pegas tu ensayo en la herramienta y reporta, con plena confianza, "el recordatorio
+Pegas tu ensayo en la herramienta y reporta, con plena seguridad: "el recordatorio
 elevó los resurtidos a tiempo en 12 puntos, y el efecto es significativo". El código
 corre sin un solo error. Aquí está la trampa. Un tercio del brazo con recordatorio,
 las pacientes con la peor presión arterial, dejó de responder al seguimiento y
-abandonó el estudio, así que la herramienta calculó la brecha entre las pacientes que
-*se quedaron* y la etiquetó como "el efecto del recordatorio". Eso es un cambio
-silencioso de alcance. El número ahora describe solo a las pacientes más sanas que
-permanecieron, no a todas las que inscribiste, y descartar los peores casos lo empujó
-hacia arriba.
+abandonó el estudio, así que la herramienta calculó la brecha entre quienes *se
+quedaron* y la etiquetó "el efecto del recordatorio". Eso es un cambio silencioso de
+alcance. El número ahora describe solo a las pacientes más sanas que permanecieron, no
+a todas las que inscribiste, y soltar los peores casos lo empujó hacia arriba.
 
 Lo detectas revisando la retención por brazo, no releyendo el párrafo fluido. Cuando
-ves que el brazo con recordatorio perdió muchas más pacientes que el de control, y que
-las que perdió eran las más enfermas, sabes que los 12 puntos son el efecto entre
+ves que el brazo con recordatorio perdió muchas más pacientes que el de control, y
+que las que perdió eran las más enfermas, sabes que esos 12 puntos son el efecto entre
 quienes se quedaron. Una palomita verde no es un resultado correcto. Reescribes la
-oración para nombrar al grupo del que el número habla en realidad.
+oración para nombrar al grupo del que habla el número de verdad.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pide a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, la persona que investiga.
-:::
+*Tu diseño ya está declarado y diagnosticado. Este paso pregunta si se ganó la
+palabra "porque", y te obliga a decir en voz alta de quién es el efecto que reporta
+tu número.*
 
-Verifica el resultado clave del capítulo, que la brecha es más que azar, con dos
-métodos de la
-[guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
-Primero, **simulación**: vuelve a aleatorizar. Baraja las etiquetas de tratamiento
-miles de veces, como si repitieras los lanzamientos de la moneda bajo el supuesto de
-que el recordatorio no hace nada, recalcula la brecha cada vez y observa qué tan
-raramente el puro azar produce una brecha tan grande como la tuya. Esto es la
-**inferencia de aleatorización**, preguntar con qué frecuencia el azar solo te
-entregaría una brecha de este tamaño si el tratamiento de verdad no hiciera nada, y te
-gana un intervalo en vez de suponerlo a partir de una fórmula. Segundo, **código
-alternativo**: recalcula la misma diferencia de otra manera, filtrando cada brazo a
-mano y restando las dos tasas de resurtido, y confirma que llegas al mismo número. Dos
-caminos independientes a una sola respuesta es un resultado verificado. Dos caminos a
-dos respuestas significa que lo que mediste fue tu flujo de procesamiento, no el
-recordatorio.
-
-## Transferencia al proyecto
-
-Este capítulo se convierte en tu hito de **análisis mínimo viable**, la primera
-estimación real sobre tu propia pregunta, que presentas en el estudio del viernes de
-esta semana. Redacta su columna vertebral: los resultados potenciales Y(1) y Y(0)
-para una unidad y cuál de los dos observarán tus datos; el número que reporta ese
-hito (una diferencia de medias, o el equivalente de tu ruta) y el intervalo que le
-adjuntas; si tu diseño tiene de forma realista la potencia estadística para el efecto
-que esperas; la amenaza más cercana a tu diseño (atrición, incumplimiento, derrame o
-confusión si no estás aleatorizando); y una oración que nombre exactamente qué
-significa tu estimación y para quién, más la afirmación excesiva que te prohíbes.
-Esas cinco piezas son las que presentas en 60 segundos a una sala de escépticos.
-
-## Defiende tu decisión
-
-En cuatro oraciones, defiende la lectura causal de una estimación de tu propio
-proyecto. Nombra tu tratamiento y tu resultado, y di si la asignación aleatoria
-autoriza leer tu diferencia como un efecto causal. Nombra la cantidad exacta que
-estima tu número y para quién, por ejemplo "el efecto entre las pacientes que
-cumplieron", no "el efecto para todas". Enuncia la frontera: qué *no* rescata una
-aleatorización limpia si golpearon la atrición, el incumplimiento o el derrame.
-Cierra con tu incertidumbre: el ancho de tu intervalo o la amenaza que más temes, y
-la comprobación que correrías enseguida para cerrarla.
+1. Escribe tu tratamiento y tu resultado como dos frases cortas. Luego escribe una
+   oración sobre cómo una unidad termina tratada. Si la respuesta es algo distinto de
+   "lo decidió un mecanismo de azar", esta ruta todavía no es la tuya.
+2. Toma una unidad real de tu estudio y escribe Y(1) y Y(0) para ella en palabras
+   simples. Marca con un círculo la que de verdad llegarás a ver. Ese círculo es el
+   problema fundamental de la inferencia causal con la letra de tu propio proyecto.
+3. Nombra la cantidad a la que apunta tu estimación y para quién: todas las personas
+   que inscribiste, solo quienes cumplieron, solo quienes se quedaron. Escríbelo como
+   una oración que alguien desconocido pueda repetirte correctamente.
+4. Nombra la amenaza más cercana a tu diseño, sea atrición, incumplimiento o derrame,
+   y la comprobación que correrás en tus propios datos para ver qué tan grave es:
+   retención por brazo, adopción por brazo, contacto entre brazos.
+5. Si no puedes aleatorizar, corre los pasos 1 a 4 como ejercicio y luego nombra el
+   factor de confusión que la asignación aleatoria habría matado por ti y el
+   movimiento observacional que usarás en su lugar.
+6. Registra el paso en tu AI Research Ledger (registro de investigación con IA) y
+   verifica al menos una salida con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd). El resultado de este capítulo merece
+   dos: código alternativo, recalculando tu diferencia a mano y llegando al mismo
+   número, y simulación, revolviendo las etiquetas de tratamiento miles de veces para
+   ver con qué poca frecuencia el azar solo produce una brecha tan grande como la
+   tuya. Una IA revisora puede hacer las comprobaciones contigo; la decisión de
+   aceptar o rechazar es tuya.

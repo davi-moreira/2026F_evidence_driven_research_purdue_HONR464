@@ -2,201 +2,239 @@
 title: "Especificar, Delegar, Interrogar, Inspeccionar, Verificar, Documentar, Defender"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Antes de entregarle cualquier tarea de
-> investigación a una herramienta de IA, decide cómo la vas a encaminar por un solo
-> protocolo de siete pasos, para que el resultado vuelva verificable y defendible. Tú
-> especificas el trabajo y defiendes el resultado, y nunca dejas que la herramienta
-> se adueñe de esos dos extremos.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de diseño de investigación en las ciencias sociales) cap. 1, 2, gratuito en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **La decisión de investigación.** Cada vez que le entregas trabajo a una herramienta
+> de IA, decides cómo se enruta ese trabajo: qué fijas antes de preguntar, qué abres y
+> lees cuando vuelve la respuesta, y qué estás dispuesta o dispuesto a decir con tus
+> propias palabras al final. Tu decisión en este capítulo es dejar de improvisar esa
+> ruta y correr la misma lista de control de siete pasos siempre.
 
 ## Por qué importa esta decisión
 
-> *"Muéstrame el benchmark, no el número. Quiero ver qué mediste, cuántas veces lo
-> corriste y contra qué lo comparaste. Una mejora de velocidad que no puedo
-> reproducir es un rumor."*
-> — una **revisora de software de investigación**, leyendo la afirmación de que una
-> función nueva es más rápida
+**La decisión sobre la mesa: si cada delegación se improvisa, o si pasa por la misma
+lista de control fija todas y cada una de las veces.**
+
+> *"Muéstrame la comparación, no el número. ¿Quién vio cada versión, en qué días, y
+> medida contra qué? Un aumento que no puedo reproducir es un rumor."*
+> — una **líder de analítica**, leyendo la afirmación de que una nueva página de pago
+> convierte mejor
 
 Una herramienta ya puede escribir el código, ejecutarlo y entregarte un resultado
-ordenado de un solo tirón. Justo por eso un hábito flojo es peligroso. Si pegas el
-resultado directo en tu trabajo, importaste una conjetura y le pusiste tu firma. A la
-revisora de arriba no le importa qué tan segura sonó la salida. Le importa qué montaste,
-qué entregaste y cómo lo revisaste antes de creerlo. Este capítulo te da el hábito que
-sobrevive a esa pregunta.
+ordenado de un solo aliento. Justamente por eso un hábito flojo es peligroso. Si pegas
+el resultado directo en tu trabajo, importaste una suposición y la firmaste con tu
+nombre. A esa persona que revisa no le importa qué tan segura sonaba la salida. Le
+importa una sola pregunta, y es la pregunta que toda persona que lea tu trabajo en
+serio terminará haciéndote:
+
+> **¿Qué montaste, qué entregaste y cómo lo revisaste antes de creerlo?**
+
+Este capítulo te da un hábito que responde esa pregunta cada vez, para que nunca
+tengas que reconstruir la respuesta de memoria.
 
 ## El concepto
 
-El hábito tiene un nombre que puedes deletrear: **SDIIVDD** (por sus siglas en inglés),
-un protocolo de siete pasos para entregarle trabajo a una herramienta de IA y recibir de
-vuelta algo que puedas defender. Un **protocolo** no es más que una secuencia fija de
-pasos que corres siempre, para no saltarte nunca la revisión que importa. Ya conociste
-su versión corta de tres palabras en el Capítulo 1: Pregunta, luego Verifica, luego
-Documenta. SDIIVDD es la versión completa.
+SDIIVDD es una **lista de control**: siete pasos que corres cada vez que le entregas
+trabajo de investigación a una herramienta de IA, en el mismo orden, sin importar qué
+tan pequeña se vea la tarea. Un **protocolo** es solo una secuencia fija de pasos que
+corres siempre, para no saltarte nunca la revisión que importa. Ya conociste el
+resumen de tres palabras en el Capítulo 1: Pregunta, luego Verifica, luego Documenta.
+SDIIVDD es ese resumen desplegado en los pasos que realmente ejecutas, y el nombre es
+apenas la primera letra de cada uno: Especificar, Delegar, Interrogar, Inspeccionar,
+Verificar, Documentar, Defender.
+
+Córrelo como quien pilotea corre la lista previa al vuelo. No porque haya olvidado
+volar, sino porque el punto que se habría saltado es el que muerde.
 
 Los siete pasos, cada uno definido una vez y con un ejemplo:
 
 1. **Especificar.** Escribe la tarea exacta y tu propia respuesta esperada *antes* de
-   preguntar. Ejemplo: "mide el tiempo de dos funciones de deduplicación sobre 10.000
-   registros; espero que la versión con hash gane por unas 5 veces".
+   preguntar. Ejemplo: "compara la conversión de la página de pago vieja y la nueva;
+   espero que la nueva gane por unos pocos puntos porcentuales, no por la mitad, y las
+   dos versiones tienen que medirse en los mismos días".
 2. **Delegar.** Entrégale a la herramienta la pieza bien especificada. **Delegar** es
-   asignar un pedazo de trabajo revisable, no tu juicio. Ejemplo: "escribe el arnés de
-   medición de tiempo para estas dos funciones".
-3. **Interrogar.** Pregúntale al borrador qué está suponiendo. Ejemplo: "¿tu
-   cronómetro incluye el costo de preparación o solo la búsqueda?".
+   asignar un pedazo de trabajo revisable, no tu juicio. Ejemplo: "trae los valores
+   del índice de precios al consumidor de 2019 y 2025 y escribe el código que convierte
+   mis precios a dólares de 2025".
+3. **Interrogar.** Pregúntale al borrador qué está suponiendo. Ejemplo: "cuando
+   reportas la participación electoral, ¿el denominador son las personas registradas o
+   toda la población en edad de votar?".
 4. **Inspeccionar.** Lee lo que la herramienta produjo de verdad, no su resumen de sí
-   misma. Ejemplo: abre el código y mira qué líneas quedan dentro del bloque medido.
+   misma. Ejemplo: abre el script de análisis y mira qué pozos trata como controles,
+   en lugar de confiar en el comentario que dice que los controles fueron excluidos.
 5. **Verificar.** Confirma el resultado con una revisión real e independiente antes de
-   confiar en él. Ejemplo: vuelve a medir el tiempo de otra manera y compara.
-6. **Documentar.** Registra la herramienta, la tarea y cómo revisaste, en un registro
-   que viaje con tu trabajo.
+   confiar en él. Ejemplo: recalcula a mano el ajuste por inflación a partir de los dos
+   valores publicados del índice y mira si llegas al mismo número.
+6. **Documentar.** Registra la herramienta, la tarea, el prompt y cómo revisaste, en un
+   registro que viaja con tu trabajo. Ejemplo: una fila del registro que diga que la
+   herramienta escribió el script de conversión y que tú volviste a derivar a mano la
+   tasa de una semana.
 7. **Defender.** Enuncia el resultado con tus propias palabras, con la herramienta
-   fuera de la sala.
+   fuera de la sala. Ejemplo: "la participación fue seis puntos más alta en estos
+   distritos, entre las personas registradas, en esta única elección".
 
-Dos de estos siguen siendo humanos por más bueno que se vuelva el modelo. Las
-**decisiones que nunca se delegan** son las que siempre te tocan: qué estás preguntando
-en realidad, qué cuenta como una prueba justa y qué te autoriza a afirmar tu evidencia.
-Ejemplo: la herramienta puede medir el tiempo de tu código, pero solo tú decides que la
-comparación fue lo bastante justa como para reportarla. Especificar y Defender son los
-sujetalibros humanos. Todo lo que entregas queda a salvo entre ellos.
+Dos de estos siete siguen siendo humanos por bueno que se ponga la herramienta:
+**Especificar** (paso 1) y **Defender** (paso 7). Son los soportes humanos en los
+extremos, y todo lo que entregas queda a salvo entre ellos. Eso es lo que los
+convierte en **decisiones que nunca se delegan**, las llamadas que siempre son tuyas:
+qué estás preguntando en realidad, qué cuenta como una prueba justa y qué te autoriza
+a afirmar tu evidencia. Una herramienta puede correr la comparación por ti. Solo tú
+decides que la comparación fue lo bastante justa como para reportarla.
+
+### El bucle, y quién lo está corriendo
+
+El medio de la lista de control no es una línea recta. El trabajo real con IA corre en
+un bucle: haces el prompt, lees la salida, la interrogas, refinas el prompt o el
+código, y lo corres de nuevo. Los pasos 2 a 5 son ese bucle, y una sola tarea puede
+mandarte a darle cinco vueltas. Dar vueltas no es señal de que lo estés haciendo mal.
+Una primera salida que no necesita una segunda pasada es rara, lo bastante rara como
+para que desconfíes un poco de ella.
+
+Lo nuevo es que ahora la herramienta puede correr el bucle sin ti. Las herramientas
+agénticas planean la tarea, escriben el código, lo ejecutan, leen su propio error,
+reescriben y vuelven a ejecutar, muchos ciclos hacia adentro, y después te entregan un
+resultado limpio. Eso es una ganancia real de alcance. También significa que todo el
+interrogar e inspeccionar que habrías hecho entre ciclos nunca ocurrió, a menos que tú
+lo hayas exigido.
+
+SDIIVDD es cómo mantienes el mando en cualquiera de los dos casos. Cuando tú corres el
+bucle, la lista te dice qué hacer en cada pasada. Cuando la herramienta corre el
+bucle, la lista te dice a qué obligarla: una especificación escrita antes del primer
+ciclo, el trabajo intermedio abierto y leído en vez de resumido, y una revisión
+independiente del número final, antes de que digas nada en tu propio nombre. Los
+ciclos se pueden automatizar. Los soportes de los extremos, no.
 
 ## Un ejemplo trabajado
 
-Estás estudiando si una función de deduplicación basada en hash, que le pediste a una IA
-que escribiera, es de verdad más rápida que la versión simple en la que confías. Un
-**benchmark** es una prueba controlada de tiempos que compara dos implementaciones sobre
-la misma entrada. Mira correr el protocolo.
+Estás revisando si una nueva página de pago de una tienda en línea pequeña de verdad
+convierte mejor que la vieja. La **tasa de conversión** es la proporción de visitas
+que terminan en compra, así que 40 compras de 1,000 visitas es 4 por ciento. Mira
+correr la lista de control.
 
-**Especificar.** Escribes primero tu expectativa: "sobre 10.000 registros, la versión
-con hash debería ser varias veces más rápida, y tiene que devolver exactamente la misma
-lista sin duplicados".
+**Especificar.** Escribes primero tu expectativa: "la página nueva debería ganar por
+unos pocos puntos porcentuales como máximo, y las dos versiones tienen que medirse en
+los mismos días, sobre el mismo tipo de comprador".
 
-**Delegar.** Le pides a la herramienta que escriba `dedupe_fast()` y un arnés que mida
-el tiempo de ambas funciones.
+**Delegar.** Le pides a la herramienta que escriba el script que calcula la tasa de
+conversión de cada versión a partir del registro de sesiones y reporta la diferencia.
 
-**Interrogar.** Preguntas: "¿qué supone tu cronómetro?". Admite que corre cada función
-una sola vez.
+**Interrogar.** Preguntas: "¿qué supone tu cálculo sobre quién vio cada versión?".
+Admite que juntó todas las sesiones del archivo.
 
-**Inspeccionar.** Lees el arnés. La función lenta corre primero, en frío, antes de que
-el intérprete se haya calentado. El **calentamiento** es el costo extra de la primera
-corrida por carga y caché, que una corrida en régimen ya no paga. El arnés le carga ese
-costo solo a la función lenta.
+**Inspeccionar.** Lees el script y luego los datos. La tienda corrió una rebaja en
+todo el sitio la primera semana, que llenó el sitio de cazadores de ofertas que miran
+y se van. La página nueva solo entró en línea en la segunda semana. El script le cargó
+a la versión A una semana entera de gente que solo miraba vitrinas y que la versión B
+nunca vio.
 
-**Verificar.** Corres cada función cinco veces, descartas la primera y tomas la mediana.
-También compruebas que ambas devuelvan una salida idéntica.
+**Verificar.** Restringes ambas versiones a la segunda semana, cuando corrieron lado a
+lado, y recalculas. También confirmas que las dos versiones cuentan una compra de la
+misma manera.
 
 **Documentar.** Registras el prompt, el arreglo y los números verificados.
 
-**Defender.** Escribes: "sobre esta entrada sintética de 10.000 registros, la versión
-con hash fue unas 6 veces más rápida y devolvió una lista idéntica byte a byte. No he
-probado datos reales ni entradas llenas de casi-duplicados".
+**Defender.** Escribes: "entre quienes compraron y vieron cualquiera de las dos
+versiones durante los cinco días en que ambas estuvieron activas, la página nueva
+convirtió alrededor de 6 por ciento mejor. No la he probado durante una rebaja, y no
+he mirado el tráfico móvil por separado".
 
-La herramienta hizo la escritura. Tú hiciste la investigación.
+La herramienta hizo el tecleo. Tú hiciste la investigación.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb01 — Research in the age of AI: your
-arm, your RA, not your brain**. Ábrelo en Colab con el botón de arriba. Ahí corres el
-protocolo en vivo: detectas una cita fabricada recuperándola por tu cuenta y después
-detectas un resumen seguro de sí mismo que exagera un número que los datos nunca
-tuvieron. Ambos son los pasos Inspeccionar y Verificar bajo presión real.
+El laboratorio de este capítulo es el cuaderno **nb01 — Research in the age of AI:
+your arm, your RA, not your brain**. Ábrelo en Colab con el botón de arriba. Ahí
+corres el protocolo en vivo: atrapas una cita fabricada recuperándola por tu cuenta, y
+después atrapas un resumen seguro que exagera un número que los datos nunca tuvieron.
+Ambos son los pasos Inspeccionar y Verificar bajo presión real.
 
 ## Prompts de IA recomendados
 
 Comprométete primero con tu propia respuesta y después delega. Cada prompt de abajo es
-una tarea revisable, no una petición de veredicto.
+un encargo revisable, no una petición de veredicto, y cada uno es el movimiento de
+apertura de un bucle, no la conversación entera.
 
-**Localizar la herramienta estándar.**
-
-```text
-Act as a Python performance assistant. I want to time two functions fairly.
-Before any code, name the standard-library tool for timing repeated runs and its
-key arguments, citing the official docs section. Only name functions you are
-confident exist.
-```
-Después de ejecutarlo, verifica: abre la documentación oficial y confirma que la función
-y sus valores por defecto existen. Contrarresta la *fabricación confiada* (el nombre de
-una función inventada llega con tanta seguridad como uno real).
-
-**Delegar, con una lista para verificar.**
+**Localizar el método estándar.**
 
 ```text
-Write a harness that benchmarks dedupe_slow and dedupe_fast on the same input.
-Then return a table of every assumption your timing makes: warmup, number of
-repeats, what sits inside the timed block, and how realistic the input is.
+Act as a business-analytics assistant. I need to compare conversion rates for two
+versions of a checkout page. Before any code, name the standard statistical test
+for comparing two proportions and the exact library function that implements it,
+citing the official documentation section. Only name functions you are confident
+exist.
 ```
-Después de ejecutarlo, verifica: corre ambas funciones sobre una entrada y confirma
-salidas idénticas con una segunda revisión, más simple. Contrarresta el *método
-plausible pero equivocado* (un cronómetro que compara, en silencio, condiciones
-injustas).
+Después de ejecutarlo, verifica: abre la documentación oficial y confirma que la
+función y sus valores por defecto existen. Contrarresta la *fabricación confiada* (un
+nombre de función inventado llega con la misma seguridad que uno real).
 
-**Hacer red team a tu mejora de velocidad.**
+**Delegar, con una lista de control para verificar.**
 
 ```text
-Here is my claim: "the hash version is about 6x faster on 10,000 records."
-Act as a hostile reviewer of research software. Name every way this benchmark
-could be unfair or this number could mislead. Do not rewrite the claim for me.
+Write the script that computes the conversion rate for version A and version B
+from this session log. Then return a table of every assumption your calculation
+makes: which sessions are included and excluded, how you count a purchase, whether
+both versions ran over the same days, and how repeat visits are handled.
 ```
-Después de ejecutarlo, verifica: si solo elogia la afirmación, insiste y exige la peor
-falla, una sola. Contrarresta el *acuerdo complaciente* (elogios que revisan tu ego, no
-tu evidencia).
+Después de ejecutarlo, verifica: recalcula a mano la tasa de una versión para un solo
+día y revisa que coincida. Contrarresta el *método plausible pero equivocado* (un
+cálculo que en silencio compara condiciones desiguales).
+
+**Hacerle red team (revisión adversaria) a tu aumento.**
+
+```text
+Here is my claim: "the new checkout page converts about 6 percent better."
+Act as a hostile reviewer. Name every way this comparison could be unfair or this
+number could mislead. Do not rewrite the claim for me.
+```
+Después de ejecutarlo, verifica: si solo elogia la afirmación, insiste y exige el peor
+defecto, uno solo. Contrarresta el *acuerdo complaciente* (elogio que revisa tu ego,
+no tu evidencia).
 
 ::: {.callout-important title="No delegues"}
-Especificar y Defender nunca salen de tus manos. Tú decides **qué pregunta responde el
-benchmark**, **qué cuenta como una comparación justa** y **si la entrada sintética es
-honesta** para la afirmación que quieres hacer. La oración final es tuya, con su límite
-y su incertidumbre. La herramienta puede medir el tiempo del código,
-pero no puede decidir que la prueba fue justa ni que la afirmación se ganó. Eso es tuyo.
+Especificar y Defender nunca salen de tus manos. Tú decides **qué pregunta responde la
+comparación**, **qué cuenta como una comparación justa** y **si los datos detrás de
+ella son honestos** para la afirmación que quieres hacer. Eres dueña o dueño de la
+oración final, de su límite y de su incertidumbre. La herramienta puede calcular las
+tasas, pero no puede decidir que la prueba fue justa ni que la afirmación se ganó.
+Esas son tuyas.
 :::
 
 ## Un caso de falla de la IA
 
-Pides un benchmark y la herramienta reporta, con total seguridad, "la versión con hash
-es 50 veces más rápida". El número está mal, y el código que lo produjo corre sin un
-solo error. Esta es la trampa: el arnés midió cada función exactamente una vez, y la
-función lenta corrió primero, en frío, así que pagó todo el costo de calentamiento. La
-comparación le cargó a una función un costo de preparación que ambas comparten.
+Pides el análisis y la herramienta reporta, con total seguridad, que "la nueva página
+de pago convierte 50 por ciento mejor". El número está mal, y el código que lo produjo
+corre sin un solo error. Aquí está la trampa: el script juntó todas las sesiones del
+registro. Los números de la página vieja incluyen la semana de rebaja, cuando el sitio
+estaba lleno de cazadores de ofertas que nunca pensaron comprar, y la página nueva solo
+existió después. La comparación le cargó a una versión una multitud que la otra jamás
+conoció.
 
-Lo detectas en Inspeccionar y Verificar. Leer el arnés muestra la medición de una sola
-corrida y el orden desafortunado. Volver a correr cada función cinco veces, descartar la
-primera y tomar la mediana derrumba el "50 veces" a unas 6 veces. Una palomita verde no
-es un resultado correcto. Verificas el número, no el párrafo sobre el número.
+Lo atrapas en Inspeccionar y Verificar. Leer el script muestra que nunca filtra por
+fecha. Restringir ambas versiones a los días en que de verdad corrieron lado a lado
+derrumba el "50 por ciento" a cerca de 6. Un visto bueno verde no es un resultado
+correcto. Verificas el número, no el párrafo sobre el número.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, quien investiga.
-:::
+*Ya tienes una lista de tareas que dice qué estás dispuesta o dispuesto a delegar.
+Ahora delegas algo real, y mantienes el mando desde la primera palabra hasta la
+última.*
 
-Verifica el resultado clave de este capítulo, la mejora de velocidad, con **código
-alternativo** de la
-[guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-recalcula la misma cantidad de otra manera y compara. Mide el tiempo de ambas funciones
-otra vez con un segundo mecanismo, promedia varias corridas en vez de tomar una sola, y
-confirma que la mejora se sostiene. Después confirma la corrección del mismo modo:
-comprueba que `dedupe_fast` y `dedupe_slow` devuelvan salidas idénticas sobre la misma
-entrada, elemento por elemento. Dos caminos a una misma respuesta es un resultado
-verificado. Dos caminos a dos respuestas significa que lo que mediste fue el arnés, no
-la función.
-
-## Transferencia al proyecto
-
-Este capítulo se convierte en tu **línea base de investigación e IA**, el primer hito de
-proyecto del curso. La próxima vez que delegues algo real en tu propio proyecto, ya sea
-localizar una fuente, redactar una reescritura o correr un análisis pequeño, encamínalo
-por los siete pasos y regístralo como tu primera fila en el **AI Research Ledger**
-(registro de investigación con IA): la tarea, la herramienta, tu decisión y la revisión
-nombrada que se ganó tu confianza. Esa fila, más las dos decisiones que te niegas a
-delegar, es la columna vertebral de lo que presentas en el estudio del viernes.
-
-## Defiende tu decisión
-
-En cuatro oraciones, defiende una tarea que hayas pasado por el protocolo. Nombra la
-tarea que delegaste y el único paso donde detectaste algo que la herramienta hizo mal o
-dejó fuera. Enuncia la afirmación acotada que ya puedes hacer, con su límite (lo que tu
-revisión *no* establece). Cierra con tu incertidumbre: aquello que todavía no sabes y la
-verificación que harías a continuación para cerrarlo.
+1. Elige una afirmación genuina y revisable de tu propia área: una tasa, un total, una
+   comparación, cualquier cosa que una fuente o un cálculo pudieran zanjar. Escríbela
+   como una sola oración.
+2. **Especificar.** Antes de abrir ninguna herramienta, escribe tu propia respuesta
+   esperada y cómo se vería una manera justa de obtenerla.
+3. **Delegar, Interrogar, Inspeccionar.** Entrega la tarea. Pregúntale a la salida qué
+   supone. Después abre lo que produjo de verdad, la fuente o el código o la tabla, en
+   lugar de su resumen de sí misma. Espera varias pasadas por ese bucle, y anota qué
+   cambió en cada una.
+4. **Verificar.** Corre una revisión independiente. Si la revisión y la salida no
+   coinciden, no las promedies; averigua cuál está equivocada.
+5. **Defender.** Con la herramienta cerrada, escribe una oración que enuncie el
+   resultado con tus propias palabras, y una oración que nombre qué no establece.
+6. **Documenta** la corrida completa en tu AI Research Ledger (tu registro de
+   investigación con IA), nombrando el método de verificación que usaste de la
+   [Guía de Verificación](../verification-guide.qmd) y el paso donde atrapaste algo que
+   la herramienta hizo mal. Una IA revisora puede correr la revisión contigo; la
+   decisión de aceptar o rechazar sigue siendo tuya.

@@ -2,148 +2,179 @@
 title: "A IA como Assistente Analítica"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Decida quais partes da sua própria análise você entrega
-> a uma ferramenta de IA como assistente analítica, e como verificar cada número que
-> ela devolve contra os seus dados antes de acreditar em qualquer um deles. Você
-> decide quais conferências contam e quais problemas sinalizados são reais; a
-> ferramenta só faz o trabalho que você especificar.
-
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do tópico correspondente no curso; o laboratório no Colab está no link acima. Não há capítulo companheiro do RDSS (o manual *Research Design in the Social Sciences*) para este tópico; este capítulo se sustenta sozinho.
-:::
+> **A decisão de pesquisa.** Você decide **quais tarefas analíticas a assistente roda e
+> quais números você mesmo refaz** antes que qualquer um deles chegue a uma alegação. A
+> assistente fornece mão de obra aos baldes. Quais verificações contam, quais alertas
+> são reais e o que o número sobrevivente significa: isso fica do seu lado da mesa.
 
 ## Por que essa decisão importa
 
-> *"Não me importa que um modelo tenha rodado as suas verificações de robustez. Me
-> importa quais delas você escolheu, quais números você refez por conta própria e
-> quais alertas você confirmou contra os dados. Me mostre essa trilha e eu confio no seu
-> julgamento. Me mostre a transcrição do modelo e eu não confio em nenhum dos dois."*
-> — uma **revisora de uma conferência de interação humano-computador**, lendo a seção
-> de resultados de um estudo de usabilidade
+**A decisão em jogo: qual trabalho analítico você entrega, e quais números você refaz
+pessoalmente antes de acreditar neles.**
 
-Hoje uma ferramenta de IA consegue escrever o seu código de análise, rodar uma dúzia
-de verificações de robustez e devolver uma tabela limpa em segundos. Essa velocidade é
-justamente o que torna um hábito frouxo perigoso. Cole a tabela no seu pôster e você
-assinou embaixo de números que nunca conferiu. A revisora acima quer a lista curta de
-decisões que continuaram sendo suas. Este capítulo dá a você o hábito que sobrevive à
-pergunta dela.
+> *"Não me interessa que um modelo tenha rodado as suas verificações de robustez. Me
+> interessa quais você escolheu, quais números você mesmo refez e quais alertas você
+> confirmou contra os dados. Me mostre essa trilha e eu confio no seu julgamento. Me
+> mostre a transcrição do modelo e não confio em nenhum dos dois."*
+> — uma **debatedora em um seminário de economia do trabalho**, lendo a sua seção de
+> resultados
+
+Uma ferramenta de IA pode escrever o código da sua análise, rodar uma dúzia de
+verificações de robustez e lhe entregar uma tabela limpa em segundos. Essa velocidade é
+exatamente o motivo de um hábito frouxo ser perigoso. Cole a tabela no seu artigo e
+você assinou embaixo de números que nunca conferiu. A debatedora acima quer a lista
+curta de decisões que continuaram sendo suas. Este capítulo lhe dá o hábito que
+sobrevive a essa pergunta.
 
 ## O conceito
 
-Uma **assistente analítica de IA** é uma ferramenta de IA a quem você entrega uma
-tarefa analítica bem especificada, nunca o seu julgamento. Exemplo: você diz a ela
-"recalcule esta diferença de tempo depois de remover os três usuários mais
-experientes" e ela escreve e roda essa única conferência. A tarefa é conferível. O
-veredito não é trabalho dela.
+Uma **assistente analítica de IA** é uma ferramenta de IA à qual você entrega uma
+tarefa analítica bem especificada, nunca o seu julgamento. Exemplo: você diz "recalcule
+essa diferença depois de tirar as três pessoas que entraram já com uma proposta na
+mão", e ela escreve e roda essa verificação. A tarefa é conferível. O veredito não é
+trabalho dela.
 
 A unidade que você ataca é a sua **estimativa principal**, o número único que
-representa o seu achado inteiro. Exemplo: "quem usou a nova interface terminou cerca
-de 0,7 desvio-padrão mais rápido". Antes de defender esse número, você tenta
-quebrá-lo, e é esse trabalho que você delega.
+representa o seu achado inteiro. Exemplo: "quem passou pelo programa recebeu a primeira
+proposta cerca de 0,7 desvio-padrão mais cedo". Antes de defender esse número, você
+tenta quebrá-lo, e quebrá-lo é o trabalho que você delega.
 
-Dois ataques fazem quase todo o serviço. Uma **verificação de robustez** repete o
-mesmo achado sob uma escolha diferente, mas igualmente defensável, e pergunta se a
-resposta se mantém. Exemplo: você relatou um tempo médio de conclusão, então também
-calcula a mediana e confere se a história sobrevive. Um **teste de placebo** roda a
-sua análise exata onde o efeito não pode existir e confirma que ela devolve algo perto
-de zero. Exemplo: você embaralha ao acaso os rótulos "nova interface / interface
-antiga" e confere se a diferença falsa desaba para nada.
+Dois ataques fazem quase todo o serviço. Uma **verificação de robustez** repete o mesmo
+achado sob uma escolha diferente, mas igualmente defensável, e pergunta se a resposta
+se mantém. Exemplo: você relatou o tempo médio até a primeira proposta, então também
+calcula a mediana e confere se a história sobrevive. Um **teste placebo** roda a sua
+análise exata em um lugar onde o efeito não pode existir e confirma que ela devolve
+quase zero. Exemplo: você embaralha ao acaso os rótulos "programa" e "sem programa" e
+confere se a diferença falsa desaba para nada.
 
-Aqui está a divisão de trabalho. A assistente propõe conferências, escreve o código e
-imprime os números. Você decide quais conferências contam, e você verifica cada número
-antes que ele chegue à sua alegação. Uma ferramenta que rodou sem erro não provou que
-o resultado dela está correto. Você verifica o número, não o parágrafo sobre o número.
+### A assistente trabalha em loop, e o loop precisa de registro
+
+Você não vai obter a sua análise a partir de um prompt só. Você pede, lê o que voltou,
+interroga, refina e roda de novo. Esse é o **loop de IA**, o ciclo prompt → resposta →
+interrogação → refinamento → nova execução, e ferramentas agênticas hoje rodam esses
+ciclos por conta própria, escrevendo, executando e corrigindo até algo parecer pronto.
+A verificação se prende a cada ciclo, não ao último. Um número que sobreviveu à volta
+quatro não diz nada sobre o código que o produziu na volta sete.
+
+Há um segundo motivo para se preocupar, e é o que morde. Cada novo prompt é uma
+bifurcação na sua análise. Se você fica repetindo o pedido até a estimativa ficar mais
+bonita, você rodou uma busca por especificações com cara de amiga, e rodou sem contar a
+ninguém, nem a você mesmo. O conserto é barato: mantenha um registro corrido, uma linha
+por ciclo, dizendo o que você pediu, o que voltou, e o que você mudou e por quê. Uma
+assistente que rodou dez variantes em silêncio e relatou a mais simpática não é uma
+assistente. É uma busca não registrada.
+
+Então a divisão de trabalho é esta. A assistente propõe verificações, escreve código e
+imprime números, ciclo após ciclo. Você decide quais verificações contam, você registra
+os ciclos, e você verifica cada número antes que ele chegue à sua alegação. Uma
+ferramenta que rodou sem erro não provou que o resultado dela está correto. Você
+verifica o número, não o parágrafo sobre o número.
 
 ## Um exemplo trabalhado
 
-Você está estudando se uma **paleta de comandos** (um menu pesquisável que você abre
-com uma tecla) ajuda as pessoas a formatar um documento mais rápido do que os antigos
-menus aninhados. Sua estimativa principal: quem usou a paleta terminou cerca de 0,7
-desvio-padrão mais rápido. Você usa uma assistente analítica para atacá-la.
+Você estuda se um **programa gratuito de apoio à busca de emprego**, um serviço de
+quatro semanas que ajuda as pessoas a mirar as candidaturas e a ensaiar entrevistas,
+leva quem participa mais rápido à primeira proposta de trabalho. Seu resultado de
+interesse são as semanas entre a inscrição e a primeira proposta. Sua estimativa
+principal: quem participou chegou a uma proposta cerca de 0,7 desvio-padrão mais cedo.
+Você usa uma assistente analítica para atacá-la.
 
-**Delegue.** Você pede à assistente que recalcule a diferença ao longo de uma pequena
-grade: todas as pessoas participantes contra a exclusão das três que já tinham usado
-uma paleta de comandos antes (a amostra), tempo médio contra tempo mediano de
-conclusão (a mensuração), e a diferença bruta contra uma diferença ajustada pela
-velocidade de digitação de cada pessoa (a especificação).
+**Delegar.** Você pede que a assistente recalcule a diferença ao longo de uma grade
+pequena: todas as pessoas inscritas contra a versão sem as três que já tinham uma
+proposta na mão ao se inscrever (a amostra), média contra mediana de semanas até a
+proposta (a mensuração), e a diferença bruta contra uma ajustada pela experiência de
+trabalho anterior de cada pessoa (a especificação).
 
-**Inspecione e verifique.** A assistente devolve oito números. Você ainda não confia
-neles. Você recalcula duas linhas na mão com uma segunda expressão, mais simples, e
-elas batem. A direção se mantém nos oito casos, e a magnitude vai de cerca de 0,5 a
-0,9 desvio-padrão. Seu título honesto é uma direção mais um intervalo, não um número
-lisonjeiro só.
+**Inspecionar e verificar.** A assistente devolve oito números. Você ainda não confia
+neles. Você recalcula duas linhas na mão, com uma segunda expressão mais simples, e
+elas batem. A direção se mantém nos oito, e a magnitude vai de cerca de 0,5 a 0,9
+desvio-padrão. A sua manchete honesta é uma direção mais um intervalo, não um número
+lisonjeiro. Foram três ciclos até essa grade rodar, e os três estão no seu registro.
 
-**Placebo e red team.** Você pede à assistente que embaralhe os rótulos da paleta e
+**Placebo e red team.** Você pede que a assistente embaralhe os rótulos de programa e
 rode de novo. A diferença falsa volta perto de zero, então a maquinaria não está
-fabricando o seu efeito. Depois você pede a ela, como revisora hostil, o pior defeito,
-um só. Ela diz com total confiança que quem já tinha experiência é o que puxa o
-resultado. Você já tinha removido essas pessoas na conferência de amostra e a
-diferença se manteve, então os dados refutam esse alerta. O defeito que ela não viu é
-o que importa: tempo de conclusão não é satisfação de quem usa, então a sua alegação
-precisa continuar sendo sobre velocidade, não sobre preferência.
+fabricando o seu efeito. Depois você pede a ela, como revisora hostil, a pior falha,
+uma só. Ela diz com total confiança que quem tem mais experiência está puxando o
+resultado. Você já tinha tirado o grupo que já estava empregado na verificação de
+amostra e a diferença se manteve, então os dados refutam esse alerta. A falha que ela
+não viu é a que importa: semanas até uma proposta não é a qualidade da proposta, então
+a sua alegação precisa continuar sendo sobre velocidade de colocação, não sobre salário
+ou adequação.
 
-A assistente fez a aritmética. Você decidiu quais conferências contavam e quais
-alertas os dados confirmaram.
+A assistente fez a aritmética. Você decidiu quais verificações contavam e quais alertas
+os dados confirmaram.
 
 ## O laboratório no Colab
 
 O laboratório deste capítulo é o notebook **nb10 — Share the research and attack the
-analysis** (compartilhe a pesquisa e ataque a análise). Abra-o no Colab pelo selo
-acima e trabalhe as células junto com este capítulo. Lá você delega a uma assistente
-uma grade de robustez real, um teste de placebo e uma verificação de influência,
-depois julga três revisores de IA confiantes contra os dados e vê dois dos três
-alertas se dissolverem no instante em que uma conferência encosta neles.
+analysis**. Abra no Colab pelo selo acima e trabalhe as células junto com este
+capítulo. Lá você delega a uma assistente uma grade de robustez de verdade, um teste
+placebo e uma verificação de influência, e depois julga três revisores de IA confiantes
+contra os dados e vê dois dos três alertas se dissolverem no instante em que uma
+verificação os toca.
 
 ## Prompts de IA recomendados
 
-Comprometa-se primeiro com a sua própria expectativa, depois delegue. Cada prompt é
-uma tarefa conferível, não um pedido de veredito.
+Comprometa-se com a sua própria expectativa primeiro, depois delegue. Cada prompt é uma
+tarefa conferível, não um pedido de veredito.
 
-**Proponha as conferências que talvez você tenha esquecido.**
+**Proponha as verificações que talvez me tenham escapado.**
 
 ```text
-Here is my robustness grid for one estimate: I vary the sample (all users /
-drop prior palette users), the measurement (mean / median time), and the
-specification (raw gap / typing-speed-adjusted). Act as a hostile reviewer.
-Name up to three additional, equally defensible checks I did NOT list, and
-for each say which direction you expect it to move the estimate.
+Here is my robustness grid for one estimate: I vary the sample (all enrollees /
+drop those who enrolled with an offer in hand), the measurement (mean / median
+weeks to first offer), and the specification (raw gap / adjusted for prior work
+experience). Act as a hostile reviewer. Name up to three additional, equally
+defensible checks I did NOT list, and for each say which direction you expect it
+to move the estimate.
 ```
 Depois de rodar, verifique: confronte cada proposta com as suas quatro alavancas e
-confirme que você realmente consegue calculá-la nos seus dados. Contra-ataca a
-*ilusão de completude* (uma grade arrumadinha que mesmo assim omite justo a
-conferência capaz de quebrar a alegação).
+confirme que você consegue de fato calculá-la nos seus dados. Contra-ataca a *ilusão de
+completude* (uma grade arrumadinha que ainda assim omite a única verificação capaz de
+quebrar a alegação).
 
 **Delegue o cálculo e mantenha os números conferíveis.**
 
 ```text
-Recompute my time gap under each row of this grid and return a table:
+Recompute my time-to-offer gap under each row of this grid and return a table:
 row label, the gap, and the exact columns and filter used for that row.
 Do not summarize; show one number and its code path per row.
 ```
 Depois de rodar, verifique: recalcule duas linhas na mão com uma segunda expressão e
-confirme que elas batem com a tabela. Contra-ataca o *método plausível mas errado*
-(uma linha cujo rótulo e cujo código discordam em silêncio).
+confirme que elas batem com a tabela. Contra-ataca o *método plausível mas errado* (uma
+linha cujo rótulo e cujo código discordam em silêncio).
 
-**Faça red team (revisão adversária) na alegação sobrevivente.**
+**Faça o loop confessar.**
 
 ```text
-Here is my claim: "the palette is about 0.7 SD faster." Act as a hostile
-reviewer of HCI studies. Name the single worst way this result could
-mislead, and the exact data check that would confirm or kill it. Do not
-rewrite my claim.
+Before I accept this table: list every version of this analysis you ran while
+producing it, in order, with what changed each time and why. If you tried a
+variant and set it aside, it goes on the list too.
 ```
-Depois de rodar, verifique: rode a conferência que ela nomear e trate o defeito como
-real apenas se a sua própria saída confirmar. Contra-ataca a *concordância bajuladora*
-(elogio que revisa o seu ego, não a sua evidência).
+Depois de rodar, verifique: compare a lista dela com o seu próprio registro de ciclos e
+rode de novo qualquer variante que ela mencione e que você nunca viu. Contra-ataca uma
+*busca por especificações não registrada* (o loop testando opções em silêncio até uma
+ficar boa).
+
+**Faça o red team da alegação sobrevivente.**
+
+```text
+Here is my claim: "the program gets people to a first offer about 0.7 SD sooner."
+Act as a hostile reviewer of labor-market program evaluations. Name the single
+worst way this result could mislead, and the exact data check that would confirm
+or kill it. Do not rewrite my claim.
+```
+Depois de rodar, verifique: rode a checagem que ela nomear e trate a falha como real só
+se a sua própria saída confirmar. Contra-ataca a *concordância bajuladora* (elogio que
+revisa o seu ego, não a sua evidência).
 
 ::: {.callout-important title="Não delegue"}
-Três decisões nunca saem das suas mãos. Você decide **quais conferências contam** para
-a alegação que você quer fazer, **quais problemas sinalizados os dados realmente
-confirmam** e **a alegação final que você defende**, com o seu limite e o seu
-intervalo. A assistente propõe e calcula. A evidência decide, e quem lê a evidência é
-você.
+Três decisões nunca saem das suas mãos. Você decide **quais verificações contam** para
+a alegação que quer fazer, **quais problemas apontados os dados de fato confirmam** e
+**a alegação final que você defende**, com o limite e o intervalo dela. A assistente
+propõe e calcula. A evidência decide, e quem lê a evidência é você.
 :::
 
 ## Um caso de falha da IA
@@ -152,51 +183,36 @@ Você entrega a sua grade a uma assistente e ela devolve uma tabela polida de oi
 linhas, todas perto de 0,7, e declara o resultado "totalmente robusto". A execução não
 deu erro nenhum. Aqui está a armadilha: as linhas de "mediana" chamam em silêncio a
 mesma função de média das linhas de "média", então quatro dos oito números são
-duplicatas usando rótulos diferentes. A tabela concorda consigo mesma porque nunca
-variou a alavanca que diz variar. Isso é a **ilusão de completude**, uma saída de
-aparência minuciosa à qual falta justo o que importa, resvalando na **fabricação
-confiante**, um número afirmado com certeza que nunca veio do caminho de código que
-ele diz ter percorrido.
+duplicatas com rótulos diferentes. A tabela concorda consigo mesma porque nunca variou
+a alavanca que diz variar. Isso é a **ilusão de completude**, uma saída com cara de
+minuciosa à qual falta justamente o que importa, resvalando para a **fabricação
+confiante**, um número enunciado com certeza que nunca veio do caminho de código que
+ele nomeia.
 
-Você pega o problema recalculando na mão uma linha de "mediana". A diferença mediana
-verdadeira é 0,55, não 0,70. A grade exagerou o quanto as suas escolhas concordavam.
-Um sinal verde não é um resultado correto.
+Você pega isso recalculando na mão uma linha de "mediana". A diferença mediana
+verdadeira é 0,55, não 0,70. A grade exagerou o quanto as suas escolhas concordavam. Um
+sinal verde não é um resultado correto.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, a pesquisadora ou o pesquisador.
-:::
+*Seu projeto tem código verificado e um primeiro número. Este passo roda a análise de
+verdade com uma assistente ao seu lado, e guarda os comprovantes de cada volta do loop
+para que a sua análise continue sendo uma análise, e não uma busca silenciosa.*
 
-Verifique o resultado central deste capítulo, a robustez sobrevivente da sua diferença
-principal, com **código alternativo** do [guia de
-verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-recalcule a mesma diferença de um segundo jeito e compare. Filtre cada grupo na mão,
-subtraia as duas médias por conta própria e confirme que você chega ao número da
-assistente.
-Depois acrescente um segundo caminho, independente, com um **teste de falsificação**, o
-placebo: embaralhe os rótulos de grupo, rode de novo e confirme que a diferença falsa
-fica em zero. Dois caminhos até uma resposta é um resultado verificado. Dois caminhos
-até duas respostas significa que você mediu o código da assistente, não o seu efeito.
-
-## Transferência para o seu projeto
-
-Este capítulo alimenta a sua **etapa de pôster preliminar e auditoria de pesquisa**, o
-registro avaliado de quanto você tentou quebrar a sua própria alegação e do que
-sobreviveu. Pegue a estimativa que você produziu na etapa anterior, delegue a uma
-assistente a sua grade de robustez e um placebo, e verifique cada número antes que ele
-entre na auditoria. Para cada uso de IA, registre a tarefa que você delegou, o número
-que a ferramenta devolveu, a conferência nomeada que conquistou a sua confiança e o
-único alerta em que você pegou a ferramenta errando. Essa trilha verificada, mais o seu
-resultado principal sobrevivente enunciado com o seu intervalo, é o que você apresenta
-a uma pessoa cética no estúdio de sexta-feira.
-
-## Defenda sua decisão
-
-Em quatro frases, defenda uma tarefa analítica que você entregou a uma assistente.
-Nomeie a conferência que você delegou e o único número que você refez por conta própria
-antes de acreditar nele. Enuncie a alegação delimitada que você agora consegue fazer, com o seu
-limite (o que a conferência *não* estabelece) e o seu intervalo (o quanto a estimativa
-se moveu entre as suas escolhas defensáveis). Encerre com a sua incerteza: o defeito
-que nenhuma conferência conseguiu resolver e a verificação que você faria em seguida
-para fechá-lo.
+1. Antes que a assistente toque em qualquer coisa, escreva a sua estimativa principal
+   em uma frase e a resposta que você espera. Você está se comprometendo publicamente,
+   para que um resultado surpreendente de fato o surpreenda.
+2. Entregue uma tarefa bem especificada por vez. Peça o número, as colunas exatas e o
+   filtro por trás dele, nunca um veredito sobre o que aquilo significa.
+3. Mantenha um registro de ciclos enquanto trabalha: uma linha por volta, com o que
+   você pediu, o que voltou, e o que você mudou e por quê. Se uma ferramenta agêntica
+   rodou voltas que você não viu, obrigue-a a listá-las e acrescente-as ao seu registro.
+4. Refaça pelo menos dois números você mesmo, na mão ou com uma segunda expressão
+   simples, antes que qualquer um deles entre em uma alegação.
+5. Rode um placebo: embaralhe os rótulos de grupo, rode o mesmo código sem alterações e
+   confirme que a diferença falsa desaba para perto de zero.
+6. Registre a análise no seu **AI Research Ledger** (registro de pesquisa com IA), com
+   o registro de ciclos anexado, e verifique pelo menos uma saída com um método nomeado
+   do [Guia de Verificação](../verification-guide.qmd). **Código alternativo** cai bem
+   para uma diferença calculada. Uma IA revisora pode rodar a checagem com você; a
+   decisão de aceitar ou rejeitar continua sendo sua.

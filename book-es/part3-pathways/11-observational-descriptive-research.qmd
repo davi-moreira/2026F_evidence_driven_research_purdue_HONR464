@@ -2,101 +2,108 @@
 title: "Investigación observacional descriptiva"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Decide por qué grupo pueden hablar honestamente tus
-> datos observados y traza la línea exacta más allá de la cual una descripción de tu
-> muestra ya no puede convertirse en una afirmación sobre una población más amplia.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de referencia del curso) cap. 15, gratis en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **La decisión de investigación.** Por cuál grupo pueden hablar honestamente tus
+> datos observados, y dónde cae exactamente la línea a partir de la cual una
+> descripción de tu muestra ya no puede convertirse en una afirmación sobre una
+> población más amplia. Tú trazas esa línea, y escribes la oración del otro lado que
+> te niegas a decir.
 
 ## Por qué importa esta decisión
 
-Imagina a alguien con responsabilidad en políticas públicas leyendo tu informe antes de
-decidir si aplica a su ciudad. Su primera pregunta nunca es sobre tus cuentas. Es: *«¿A
-qué grupo llegó realmente tu procedimiento?»* Un resultado que describe calladamente a
-un grupo mientras dice hablar por otro es la falla más común del trabajo observacional:
-una estimación precisa, bien formateada y sobre el grupo equivocado. Este capítulo te
-prepara para nombrar el grupo al que llegan tus datos y para rechazar la oración que lo
-cambia por un grupo que tus datos nunca tocaron.
+**La decisión sobre la mesa: por cuál grupo pueden hablar honestamente tus datos.**
+
+Imagina a alguien con responsabilidad en política pública leyendo tu informe antes de
+decidir si aplica a su ciudad. Su primera pregunta nunca es sobre tus cuentas. Es:
+*«¿A qué grupo llegó realmente tu procedimiento?»* Un resultado que describe
+calladamente a un grupo mientras dice hablar por otro es la falla más común del
+trabajo observacional: una estimación precisa, bien formateada y sobre el grupo
+equivocado. Este capítulo te prepara para nombrar el grupo al que llegan tus datos, y
+para rechazar la oración que lo cambia por un grupo que tus datos nunca tocaron.
 
 ## El concepto
 
-La **investigación observacional descriptiva** significa que observas y registras lo que
-hay sin cambiar la experiencia de nadie, y luego lo resumes. Ejemplo: colocas sensores
-de aire en un conjunto de salones y reportas con qué frecuencia marcan por encima de un
-umbral de salud. Nunca asignas un tratamiento, así que esta ruta puede describir y, con
-cuidado, generalizar, pero no puede por sí sola decir que una cosa causó otra.
+La **investigación observacional descriptiva** significa que observas y registras lo
+que hay sin cambiarle la experiencia a nadie, y después lo resumes. Ejemplo: sacas los
+registros de votación nominal de cada integrante de una legislatura y reportas con qué
+frecuencia cada quien cruzó las líneas de su partido. Nunca asignas un tratamiento,
+así que esta ruta puede describir, y con cuidado generalizar, pero no puede por sí
+sola decir que una cosa causó otra.
 
-Cuatro grupos anidados mantienen honesta una descripción así. Imagina cuatro cajas, cada
-una más pequeña que la anterior.
+Cuatro grupos anidados mantienen honesta una descripción así. Imagina cuatro cajas,
+cada una más pequeña que la anterior.
 
-- **Población objetivo**: todas las personas de las que trata tu pregunta. Ejemplo: cada
-  cliente al que un servicio de streaming le cobrará alguna vez. Esta es la caja más
+- **Población objetivo**: todas las personas sobre las que trata tu pregunta. Ejemplo:
+  cada cliente al que un servicio de streaming le cobrará alguna vez. Es la caja más
   externa, el grupo que desearías poder estudiar.
-- **Población accesible**: la parte del objetivo a la que podrías llegar en principio,
-  dados el tiempo y el costo. Ejemplo: la clientela que de verdad puedes contactar con
-  una encuesta este trimestre.
+- **Población accesible**: la parte de la población objetivo a la que podrías llegar
+  en principio, dados el tiempo y el costo. Ejemplo: los clientes que de verdad puedes
+  contactar con una encuesta este trimestre.
 - **Marco muestral**: la lista concreta de la que extraes. Ejemplo: la lista actual de
-  personas suscritas de la que tira tu herramienta de encuestas. Lo que no está en esa
+  personas suscritas de la que saca tu herramienta de encuestas. Lo que no está en esa
   lista no puede ser muestreado.
-- **Muestra**: la clientela que efectivamente encuestas. La caja más interna.
+- **Muestra**: los clientes que efectivamente encuestas. La caja más interna.
 
 Una afirmación es honesta solo cuando la caja que describe coincide con la caja que
-nombra. Dos procesos deciden en qué se diferencian las cajas. La **selección** es
-cualquier proceso, distinto del puro azar, que decide quién termina en tus datos.
-Ejemplo: una encuesta levantada a la salida de un comedor selecciona a quienes comen ahí
-al mediodía. La **no respuesta** son las unidades que extrajiste pero que nunca te
-dieron datos. Ejemplo: de 500 personas contactadas responden 300, y las 200 calladas
-rara vez son una tajada aleatoria. Cuando cualquiera de los dos procesos se relaciona
-con aquello mismo que estás midiendo, tu resumen se aparta de la verdad, y ninguna
-cantidad extra de datos lo trae de vuelta. El tamaño reduce el tambaleo de una muestra a
-otra; no le hace nada a una inclinación sistemática en a quién llegaste.
+nombra. Dos procesos deciden en qué difieren las cajas. La **selección** es cualquier
+proceso, distinto del puro azar, que decide quién termina en tus datos. Ejemplo: una
+encuesta levantada a la salida de un solo comedor selecciona a quienes comen ahí al
+mediodía. La **no respuesta** son las unidades que extrajiste y que nunca te dieron
+datos. Ejemplo: de 500 personas contactadas, 300 responden, y las 200 calladas rara
+vez son una rebanada al azar. Cuando cualquiera de los dos procesos se relaciona con
+justo aquello que estás midiendo, tu resumen se aleja de la verdad, y ninguna cantidad
+extra de datos lo trae de vuelta. El tamaño achica el bamboleo de muestra a muestra.
+No le hace nada a una inclinación sistemática en a quién llegaste.
 
 ## Un ejemplo resuelto
 
-Un servicio de streaming por suscripción mide su **tasa de errores de facturación**, es
-decir, la fracción de clientes cuyo cobro mensual sale mal. Ejemplo: 2 cobros
-equivocados en 100 clientes son una tasa de errores de facturación del 2%. El equipo de
+Un servicio de streaming por suscripción mide su **tasa de errores de facturación**,
+es decir, la fracción de clientes cuyo cobro mensual sale mal. Ejemplo: 2 cobros
+equivocados en 100 clientes es una tasa de errores de facturación del 2%. El equipo de
 analítica saca la lista actual de personas suscritas, envía por correo una encuesta
 corta a una extracción aleatoria de esa lista y cuenta cuántas reportan un cobro
-equivocado en el último año. La encuesta reporta 2% y el titular se escribe solo: *«el
+equivocado en el último año. La encuesta reporta 2%, y el titular se escribe solo: *«el
 servicio tiene una tasa de errores de facturación del 2%»*.
 
-Ahora recorre las cajas. La **población objetivo** es cada cliente al que el servicio le
-cobra. El **marco muestral** es la lista actual de personas suscritas, porque solo
-quienes están en esa lista reciben la encuesta. Aquí está la trampa: la clientela más
-golpeada por errores de facturación, la que recibió un cobro doble o un cobro después de
-cancelar, es también la más propensa a haberse ido con frustración. Se quitaron del
-marco antes de que nadie las encuestara. Esto es **selección por supervivencia**, un
-filtro que conserva justo a las personas menos propensas a mostrar el problema que estás
-contando. Quienes siguen suscritos son el extremo satisfecho de la base de clientes, no
-una tajada justa de ella.
+Ahora recorre las cajas. La **población objetivo** es cada cliente al que el servicio
+le cobra. El **marco muestral** es la lista actual de personas suscritas, porque solo
+quienes están en esa lista reciben la encuesta. Aquí está la trampa: los clientes más
+golpeados por los errores de facturación, los que fueron cobrados dos veces o cobrados
+después de cancelar, son también los más propensos a haberse ido con frustración. Se
+sacaron a sí mismos del marco antes de que nadie los encuestara. Esto es **selección
+por supervivencia**, un filtro que conserva justamente a las personas con menos
+probabilidad de mostrar el problema que estás contando. Quienes siguen suscritos son
+el extremo satisfecho de la base de clientes, no una rebanada justa de ella.
 
 Así que el 2% es honesto sobre una caja y deshonesto sobre otra. La afirmación
-autorizada es: *«entre la clientela que sigue suscrita, la tasa de errores de
-facturación es del 2%»*. La ampliación silenciosa, la oración que hay que rechazar, es:
+autorizada es: *«entre los clientes que siguen suscritos, la tasa de errores de
+facturación es del 2%»*. El ascenso silencioso, la oración que hay que rechazar, es:
 *«la tasa de errores de facturación del servicio es del 2%»*. La tasa verdadera entre
-todas las personas facturadas es casi con seguridad más alta, porque la clientela más
-golpeada ya se había ido antes de que saliera la encuesta. Esa brecha entre la caja que
+todas las personas facturadas es casi con certeza más alta, porque los clientes más
+golpeados ya se habían ido cuando salió la encuesta. Esa brecha entre la caja que
 mediste y la caja que nombraste es el tema de este capítulo.
 
 ## El laboratorio en Colab
 
 El laboratorio de este capítulo es el cuaderno **nb05 — Observational descriptive
-research**. Ábrelo en Colab con la insignia de arriba y trabaja las celdas junto con
-este capítulo. En el laboratorio tratas un padrón electoral real como un mundo conocido,
-extraes de él muestras aleatorias y un canal por conveniencia, y ves cómo las
-extracciones aleatorias se agrupan en la verdad mientras el canal por conveniencia falla
-la edad promedio verdadera por casi doce años. Después corres una prueba de estrés de no
-respuesta que muestra una estimación limpia apartándose de la verdad.
+research** (*investigación observacional descriptiva*). Ábrelo en Colab con la
+insignia de arriba y trabaja las celdas junto con este capítulo. Allí tratarás un
+padrón electoral real como un mundo conocido, extraerás de él muestras aleatorias y un
+canal por conveniencia, y verás cómo las extracciones aleatorias se agrupan en la
+verdad mientras el canal por conveniencia falla la edad promedio real por casi doce
+años. Después correrás una prueba de estrés de no respuesta que muestra una estimación
+limpia alejándose de la verdad.
 
 ## Prompts de IA recomendados
 
-Comprométete primero con tu propia respuesta y solo después delega. Cada prompt de abajo
-deja el juicio contigo y le entrega a la IA solo el trabajo de campo.
+Comprométete primero con tu propia respuesta y solo después delega. Cada prompt de
+abajo te deja a ti el juicio y le entrega a la IA solo el trabajo de campo. Trabájalos
+como un **bucle de IA** (el ciclo prompt → respuesta → interrogación → refinamiento →
+nueva ejecución) en vez de como un solo tiro: la primera lista de grupos que se caen
+siempre es la obvia, y la respuesta útil suele llegar en la segunda o tercera pasada,
+después de que le dijiste a la herramienta qué grupo se le escapó y le pediste que lo
+intentara de nuevo con eso en mente.
 
 **Localizar.** Encuentra respaldo metodológico real en vez de confiar en un párrafo.
 
@@ -106,13 +113,12 @@ survivorship and nonresponse bias in observational studies. For each, give
 title, authors, year, and venue, and mark any you are not confident exist.
 ```
 
-Después de ejecutarlo, verifica abriendo cada fuente en una base de datos de biblioteca
-antes de citarla. Contrarresta la *fabricación confiada* («confident fabrication»): una
-cita fluida de un artículo que no existe se ve idéntica a una real hasta que intentas
-recuperarla.
+Después de ejecutarlo, verifica abriendo cada fuente en una base de datos de
+biblioteca antes de citarla. Contrarresta la *fabricación confiada*: una cita fluida
+de un artículo que no existe se ve idéntica a una real hasta que intentas recuperarla.
 
 **Listar para verificar.** Convierte una preocupación vaga en una lista comprobable de
-quién queda fuera.
+quién se cae.
 
 ```
 I am drawing a selection diagram for an observational study. My target
@@ -121,10 +127,10 @@ drops out between target and sample, in a table, with whether their absence
 pushes my estimate up or down.
 ```
 
-Después de ejecutarlo, verifica mapeando cada grupo nombrado a un paso real de tu propio
-diagrama y comprobando que el grupo que más temías está en la lista. Contrarresta la
-*ilusión de exhaustividad* («illusion of completeness»): una lista larga y pulcra que
-omite en silencio al grupo que más importa.
+Después de ejecutarlo, verifica mapeando cada grupo nombrado a un paso real de tu
+propio diagrama, y comprobando que el grupo que más temías esté en la lista.
+Contrarresta la *ilusión de exhaustividad*: una lista larga y ordenada que omite
+calladamente al grupo que más importa.
 
 **Red team (revisión adversaria).** Haz que la IA ataque tu oración de límite en vez de
 elogiarla.
@@ -136,17 +142,17 @@ direction of the drift. Do not rewrite it for me.
 ```
 
 Después de ejecutarlo, verifica contrastando cada objeción con tus propios números e
-insistiendo si todas las objeciones son suaves. Contrarresta el *acuerdo complaciente*
-(«sycophantic agreement»): una IA que llama «bien equilibrada» a tu advertencia revisó
-tu ego, no tu evidencia.
+insistiendo si todas las objeciones son suaves. Contrarresta el *acuerdo
+complaciente*: una IA que llama «bien equilibrada» a tu advertencia revisó tu ego, no
+tu evidencia.
 
 ::: {.callout-important title="No delegues"}
-Tres decisiones son solo tuyas. Primero, **de qué población trata realmente tu
-proyecto**: la IA no conoce la intención de tu pregunta. Segundo, **a qué marco puedes
-llegar honestamente** y, por tanto, la brecha de cobertura que debes revelar. Tercero,
-**la línea de límite misma**: la oración exacta donde se detiene tu descripción y la
-afirmación poblacional que te niegas a hacer. Puedes pedirle a una IA que ataque esa
-línea, nunca que la trace por ti.
+Tres decisiones son solo tuyas. Primera, **de qué población trata realmente tu
+proyecto**: la IA no conoce la intención de tu pregunta. Segunda, **a qué marco puedes
+llegar honestamente**, y por lo tanto la brecha de cobertura que tienes que declarar.
+Tercera, **la línea de límite en sí**: la oración exacta donde tu descripción se
+detiene y la afirmación poblacional que te niegas a hacer. Puedes pedirle a una IA que
+ataque esa línea, nunca que la trace por ti.
 :::
 
 ## Un caso de falla de la IA
@@ -154,58 +160,50 @@ línea, nunca que la trace por ti.
 Le preguntas a un chatbot: *«Mi encuesta a personas suscritas actuales muestra una tasa
 de errores de facturación del 2% en un panel grande. ¿Puedo reportar la tasa de errores
 de facturación del servicio como 2%?»* Responde con plena seguridad: *«Sí. Con una
-muestra tan grande, tu estimación es precisa y confiable»*. Esto está mal de dos maneras
-con nombre a la vez. Comete un **cambio silencioso de alcance** (*silent scope change*),
-ascendiendo calladamente de «personas suscritas actuales» a «la clientela del servicio»,
-y se apoya en la falacia de que una muestra grande cura una muestra inclinada.
+muestra tan grande, tu estimación es precisa y confiable»*. Esto está mal de dos
+maneras con nombre propio a la vez. Comete un **cambio silencioso de alcance** (*silent
+scope change*), ascendiendo calladamente «personas suscritas actuales» a «los clientes
+del servicio», y se apoya en la falacia de que una muestra grande cura una muestra
+inclinada.
 
 Lo atrapas porque escribiste tu propia respuesta primero, y la tuya nombraba el marco:
-la clientela que sigue suscrita, no todas las personas a las que el servicio factura,
-así que el cambio se ve a simple vista. Después contrastas el mecanismo con los datos.
-La clientela con los peores errores de facturación canceló antes de que saliera la
-encuesta, así que la falta de datos se relaciona directamente con el resultado que
-cuentas. Un panel más grande de personas suscritas actuales solo estima con más
-precisión la tasa de error de las personas suscritas actuales. Nunca alcanza a quienes
-se fueron.
+los clientes que siguen suscritos, no todas las personas a las que el servicio factura,
+así que el cambio se ve a simple vista. Después compruebas el mecanismo contra los
+datos. Los clientes con los peores errores de facturación cancelaron antes de que
+saliera la encuesta, así que la ausencia de datos se relaciona directamente con el
+resultado que cuentas. Un panel más grande de personas suscritas actuales solo estima
+con más precisión la tasa de error de las personas suscritas actuales. Nunca alcanza a
+quienes se fueron.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: si le pides a una IA que revise la afirmación, el código o la cita de otra, encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te corresponde a ti, quien investiga.
-:::
+*Llegas con un diseño declarado y diagnosticado. Este es el primero de los capítulos de
+rutas, así que tu tarea ahora es o bien desarrollar tu diseño sobre esta ruta, o bien
+usarla para poner a prueba la ruta que elegiste.*
 
-El resultado clave del capítulo es una afirmación sobre *cómo se comporta un
-procedimiento*: las extracciones aleatorias de un marco se agrupan en su verdad,
-mientras que un canal por conveniencia puede fallarla sin importar cuánto crezca. La
-comprobación correcta para una afirmación sobre un procedimiento es la **simulación**
-(verification_guide, método 2): construye un mundo donde ya conoces la respuesta y luego
-mira si cada método de muestreo la recupera. El laboratorio hace exactamente eso. Tomas
-un archivo cuya edad promedio verdadera puedes leer directamente, extraes diez muestras
-aleatorias de 100 y confirmas que las diez medias se apiñan en una banda estrecha
-alrededor de la verdad. Después conservas un grupo por conveniencia y ves su media
-aterrizar muy fuera de esa banda. Como el valor verdadero lo fijaste tú, cualquier
-método que no logre recuperarlo queda expuesto de inmediato, sin ninguna oración de IA
-en la que confiar.
-
-## Transferencia al proyecto
-
-Este capítulo es la columna vertebral de tu hito **auditoría de diseño observacional
-descriptivo**.
-Para tu propio proyecto escribirás cuatro piezas: la pila de población, población
-accesible, marco y muestra, una línea cada una; un diagrama de selección que nombre el
-filtro que más temes que tuerza a la vez a quién alcanzas y qué mides; una nota de
-medición que señale la variable que más te preocupa que falte de forma no aleatoria; y
-las dos oraciones que ese hito califica. La primera es la afirmación poblacional que tu
-marco autoriza, enunciada con su incertidumbre. La segunda es la ampliación silenciosa
-que tu diseño prohíbe, escrita para que puedas rechazarla a simple vista. Redacta las
-cuatro por tu cuenta y luego defiéndelas en el estudio del viernes.
-
-## Defiende tu decisión
-
-En unas pocas oraciones tuyas: nombra el grupo exacto por el que habla tu evidencia,
-enuncia la única afirmación acotada que firmarías con tu nombre y escribe el límite donde
-se detiene tu descripción. Después nombra el cruce que una afirmación poblacional
-tendría que pagar en tu diseño, si lo pagaste, y la mayor fuente de incertidumbre o
-brecha de cobertura que queda. Si todavía no puedes escribir honestamente la oración
-poblacional, dilo con claridad. Eso es un hallazgo sobre tu diseño, no un fracaso, y
-nombra el cruce que aún debes.
+1. Decide en cuál caso estás. Lee las palabras de tu indagación. Si pregunta *cuánto,
+   cuántos, con qué frecuencia*, sobre un grupo que vas a observar en vez de asignar,
+   esta es tu ruta. Si pregunta *por qué* o *qué pasaría si*, no lo es, y entonces
+   corres el ejercicio del paso 5.
+2. **Si esta es tu ruta**, escribe tus cuatro cajas, una línea cada una: población
+   objetivo, población accesible, marco muestral y muestra. Sé concreto con el marco.
+   Nombra la lista, base de datos o flujo real del que vendrán tus datos.
+3. Dibuja tu diagrama de selección: una flecha de cada caja a la siguiente, con el
+   filtro que quita gente escrito sobre la flecha. Encierra en un círculo el filtro que
+   más temes que tuerza *a la vez* a quién alcanzas y qué mides. Ese es el que vas a
+   tener que declarar.
+4. Escribe las dos oraciones que definen tu afirmación. La primera es la afirmación
+   poblacional que tu marco de verdad autoriza, enunciada con su incertidumbre. La
+   segunda es el ascenso silencioso que tu diseño prohíbe, escrito completo para que
+   puedas reconocerlo y rechazarlo cuando una persona coautora o una IA te lo devuelva.
+5. **Si esta no es tu ruta**, corre el ejercicio de clasificación. Escribe tu pregunta
+   como si fuera una pregunta observacional descriptiva, nombra las cuatro cajas que
+   necesitaría y di con precisión qué no podría decirte esa versión. La oración que no
+   puedes escribir aquí es la razón por la que tu ruta elegida tiene que ganarse sus
+   supuestos extra.
+6. Registra el trabajo en tu AI Research Ledger (registro de investigación con IA) y
+   verifica la afirmación clave con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd); aquí encaja la simulación, porque la
+   afirmación es sobre cómo se comporta un procedimiento de muestreo y no sobre un
+   número fijo. Una IA revisora puede atacar contigo tu oración de límite; la decisión
+   de sostener la línea o moverla es tuya.

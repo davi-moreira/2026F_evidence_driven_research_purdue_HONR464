@@ -2,97 +2,96 @@
 title: "Preguntas difíciles e incertidumbre"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Cuando un desconocido en tu póster haga la pregunta
-> justa más difícil, decide de antemano cómo vas a enunciar la incertidumbre de tu
-> estudio y sus límites, y cómo vas a responder sin dejar que una sola palabra hablada
-> afirme más de lo que tu evidencia respalda. Esa respuesta se prepara; nunca se
-> improvisa.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay un capítulo de RDSS (*Research Design in the Social Sciences*, el libro complementario del curso) que acompañe este tema; este capítulo se sostiene por sí solo.
-:::
+> **La decisión de investigación.** Decide, antes de que alguien pregunte, cómo vas a
+> decir lo que tu estudio no puede mostrar. Escribes por adelantado la incertidumbre, los
+> límites y las respuestas a las preguntas justas más difíciles, para que la versión que
+> sale de tu boca bajo presión sea la que elegiste y no la que escribió la adrenalina. Esa
+> respuesta la preparas; nunca la improvisas.
 
 ## Por qué importa esta decisión
 
+**La decisión en juego: cómo vas a decir en voz alta la incertidumbre y los límites de tu
+estudio, antes de que un desconocido te obligue a la pregunta.**
+
 > *"Cuando alguien me dice, sin que se lo pida, exactamente qué no puede mostrar su
-> estudio, confío más en todo lo demás que dijo. Cuando insiste en que es inatacable,
-> empiezo a buscar la grieta yo misma."*
+> estudio, confío más en todo lo demás que dijo. Cuando insiste en que es impecable,
+> empiezo a buscar la grieta por mi cuenta."*
 > — una **responsable de políticas públicas** que ha escuchado mil pitches de póster
 
 Tu póster está terminado y es honesto. El peligro ahora es tu propia boca. Bajo presión,
 quien presenta con nervios hace una de dos cosas, y ambas tergiversan la evidencia. Una
-entierra un hallazgo real debajo de disculpas. La otra, atrapada en el momento, asciende
-un cuidadoso "fueron juntos" a un seguro "causó". La responsable de arriba no está
-evaluando tu confianza. Está evaluando si sabes dónde se detiene tu afirmación. Este
-capítulo te da la respuesta que sobrevive a su pregunta más dura.
+entierra un hallazgo real bajo disculpas. La otra, atrapada en el momento, asciende un
+cuidadoso "iban juntos" a un confiado "causó". La responsable de arriba no está evaluando tu
+seguridad. Está evaluando si sabes dónde se detiene tu afirmación. Este capítulo te da la
+respuesta que sobrevive a su pregunta más dura.
 
 ## El concepto
 
-El movimiento que convierte un límite en una fortaleza tiene nombre: el **movimiento ULN**
-(*uncertainty, limitation, next step*: incertidumbre, limitación, siguiente paso), una
-manera de decir un límite en tres tiempos. Va incertidumbre, luego limitación, luego
-siguiente paso, y cada tiempo es un término que vale la pena definir una vez.
+La jugada que convierte un límite en una fortaleza tiene nombre: el **movimiento ULN**, una
+manera de decir un límite en tres tiempos. Corre incertidumbre, después limitación, después
+paso siguiente, y cada tiempo es un término que vale la pena definir una vez.
 
-Un **enunciado de incertidumbre** es una frase que dice cuánto podría oscilar tu número, y
-por qué. Ejemplo: "con 812 personas, mi estimación podría quedar unos puntos más arriba o
-más abajo". Una **limitación** es una frase verdadera sobre lo que tu diseño no puede
-mostrar. Ejemplo: "medí que dos cosas fueron juntas, así que no puedo decir que una haya
-causado la otra". Un **siguiente paso** es el estudio que resolvería esa limitación.
-Entregados juntos, ULN suena a experticia, porque estás nombrando a propósito el borde de
-tu evidencia.
+Una **declaración de incertidumbre** es una frase que dice cuánto podría oscilar tu número, y
+por qué. Ejemplo: "con 812 personas, mi estimación podría quedar unos puntos más arriba o más
+abajo". Una **limitación** es una frase verdadera sobre lo que tu diseño no puede mostrar.
+Ejemplo: "medí que dos cosas iban juntas, así que no puedo decir que una haya causado la
+otra". Un **paso siguiente** es el estudio que resolvería esa limitación. Entregado en
+conjunto, ULN suena a experticia, porque estás nombrando a propósito el borde de tu evidencia.
 
 La falla que ULN previene es la **espiral de disculpas**: enterrar un hallazgo real y
-defendible bajo una autoanulación del tipo "la verdad esto probablemente esté todo mal, mi
-muestra es minúscula". El arreglo es elegir la **precisión**, nombrar el límite exacto, por
-encima de la **vaguedad defensiva**, esa autoprotección difusa que borronea dónde se detiene
-la afirmación. "Esta es la muestra de un solo campus" es precisión. "Más o menos, tómalo con
-pinzas" es vaguedad defensiva. La precisión informa a quien escucha; la vaguedad solo te
-protege a ti.
+defendible bajo un borrarse a sí mismo del tipo "la verdad esto probablemente esté todo mal, mi
+muestra es diminuta". El arreglo es elegir la **precisión**, nombrar el límite exacto, por
+encima del **vaguedeo**, esa autoprotección difusa que borronea dónde se detiene la afirmación.
+"Esta es una muestra de un solo campus" es precisión. "Más o menos, tómalo con pinzas" es
+vaguedeo. La precisión informa a quien escucha; el vaguedeo solo te protege a ti.
 
-El segundo instrumento es el **banco de preguntas**: una lista breve y escrita de las
-preguntas justas más difíciles que podría hacer un visitante, cada una con una respuesta
-preparada. Cinco cubren el espacio, una por cada tipo recurrente (método, explicación
-alternativa, y-qué, generalización, uso de IA). Cuando no puedes responder del todo una de
-ellas, entregas un **"no sé" honesto**: una admisión con contenido, que nombra lo que no
-puedes decir, aquello sobre lo que *sí* te puedes parar y el método que lo resolvería.
+El segundo instrumento es el **banco de preguntas**: una lista breve y escrita de las preguntas
+justas más difíciles que alguien podría hacerte, cada una con una respuesta preparada. Con
+cinco alcanza para cubrir el espacio, una por tipo recurrente (método, explicación alternativa,
+y-esto-para-qué, generalización, uso de IA). Cuando no puedas responder una del todo, entregas
+un **no-sé honesto**: una admisión con contenido, que nombra lo que no puedes decir, aquello en
+lo que *sí* puedes pararte y el método que lo resolvería.
 
 ## Un ejemplo resuelto
 
-Estudias interacción humano-computadora. A partir de los registros de uso de tu aplicación
-comparaste los tiempos de finalización de tareas entre las personas que eligieron la barra
-de herramientas compacta y quienes conservaron la expandida. Quienes usaron la compacta
-encontraron la página objetivo una mediana de seis segundos más rápido. En el póster, un
-visitante hace la pregunta que temías: "¿entonces la barra compacta *causa* una navegación
-más rápida?".
+Trabajas con registros de uso de la aplicación de una pequeña empresa de software. Comparando a
+la clientela que eligió la barra de herramientas compacta con la que se quedó con la expandida,
+quienes usan la compacta encontraron la página objetivo una mediana de seis segundos más
+rápido. En el póster, alguien te hace la pregunta que temías: "¿entonces la barra compacta
+*causa* una navegación más rápida?".
 
-Tu estudio no puede decir eso. Los usuarios eligieron su propia barra, así que quienes ya
-eran usuarios expertos pueden haber elegido la compacta y habrían sido rápidos con
-cualquier diseño. Esa autoselección es un **factor de confusión**, un tercer factor que
-moldea a la vez la elección y el resultado. Así que entregas la respuesta de dos tiempos.
-Primero la verdad: "No puedo decir que cause la velocidad, porque quienes usan la compacta
-tal vez ya sean usuarios expertos". Después el interés: "El estudio que te respondería eso
-es asignar la barra al azar a usuarios nuevos, y es lo que correría después". Rechazaste la
-palabra "causa" y le entregaste al visitante una pregunta de investigación real en lugar de
-un muro.
+Tu estudio no puede decir eso. Cada persona eligió su propia barra, así que quizá quienes ya
+eran usuarios avanzados eligieron la compacta y habrían sido rápidos con cualquier diseño. Esa
+autoselección es un **factor de confusión**, un tercer factor que moldea tanto la elección como
+el resultado. Así que entregas la respuesta de dos tiempos. Primero la verdad: "No puedo decir
+que cause la velocidad, porque quienes usan la compacta quizá ya son usuarios avanzados".
+Después el interés: "El estudio que respondería tu pregunta es asignar la barra al azar a
+usuarios nuevos, y eso es lo que correría después". Te negaste a la palabra "causa" y le
+entregaste a esa persona una pregunta de investigación real en lugar de un muro.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb12 — Poster delivery: pitches,
-uncertainty, and the questions you fear** (entrega del póster: pitches, incertidumbre y las
-preguntas que temes). Ábrelo en Colab con la insignia de arriba. Ahí corres un detector de
-espiral de disculpas que cuenta palabras de autoanulación en tres entregas de muestra, y
-después pegas tu propia frase de incertidumbre y limitaciones y llevas su conteo de señales
-a cero. También construyes tu banco de cinco preguntas y ensayas la respuesta causal contra
-tu propio proyecto.
+El laboratorio de este capítulo es el notebook **nb12 — Poster delivery: pitches, uncertainty,
+and the questions you fear** (entrega del póster: pitches, incertidumbre y las preguntas que
+temes). Ábrelo en Colab con el botón de arriba. Ahí corres un detector de espiral de disculpas
+que cuenta las palabras que te borran a ti misma en tres entregas de muestra, y después pegas tu
+propia frase de incertidumbre y limitaciones y llevas su conteo de señales a cero. También
+construyes tu banco de cinco preguntas y ensayas la respuesta causal contra tu propio proyecto.
 
 ## Prompts de IA recomendados
 
-Comprométete primero con tu propia respuesta y después delega. Cada prompt de abajo es una
-tarea que puedes verificar, no una petición de aprobación.
+Comprométete primero con tu propia respuesta y después delega. Cada prompt de abajo es una tarea
+verificable, no una petición de aprobación.
 
-**Lista tus preguntas más difíciles, para contrastarlas con tu propio temor.**
+Estos funcionan mejor como conversación. Pregunta, lee, después nombra lo que la respuesta evitó
+y pregunta de nuevo. Un banco de preguntas construido en tres rondas es notablemente más duro
+que uno construido de una sola pasada. Cuando una herramienta corre esas rondas por su cuenta,
+las preguntas llegan ya pulidas, y por eso contrastas la lista con la pregunta que de verdad
+temes, y no al revés.
+
+**Enumera tus preguntas más difíciles, para contrastarlas con tu propio miedo.**
 
 ```text
 Play a skeptical but fair conference visitor. My project: "[one-paragraph summary
@@ -100,20 +99,20 @@ of question, design, and headline finding]". Write the single hardest FAIR quest
 for each type: method, alternative explanation, why-it-matters, generalization,
 AI-use. For each, flag whether an honest two-sentence answer exists.
 ```
-Después de ejecutarlo, verifica: compara las cinco con la única pregunta que anotaste como
-la que más temes. Si falta, el conjunto no está completo. Contrarresta la *ilusión de
-exhaustividad* (unas cinco muy ordenadas que omiten justo la pregunta que temes).
+Después de ejecutarlo, verifica: compara las cinco con la única pregunta que escribiste y que
+más temes. Si falta, el conjunto no está completo. Contrarresta la *ilusión de exhaustividad*
+(unas cinco muy ordenadas que omiten justo la pregunta que temes).
 
-**Fuerza la incertidumbre a salir a la luz.**
+**Fuerza a que la incertidumbre salga a la luz.**
 
 ```text
 Here is my headline number and how I got it: "[paste]". Do not restate it.
 List what is missing before I can state its uncertainty honestly: the sample
 size, the source of wobble, and the one limitation a reviewer would raise first.
 ```
-Después de ejecutarlo, verifica: confirma cada punto contra tus propios datos antes de
-decirlo en voz alta. Contrarresta la *incertidumbre ausente* (un número limpio reportado sin
-ninguna cota).
+Después de ejecutarlo, verifica: confirma cada punto contra tus propios datos antes de decirlo
+en voz alta. Contrarresta la *incertidumbre ausente* (un número limpio reportado sin ningún
+margen).
 
 **Haz red team (revisión adversaria) a tu respuesta.**
 
@@ -122,64 +121,47 @@ Here is my two-sentence reply to "does it cause it?": "[paste]". Act as a hostil
 reviewer. Name every word that still claims more than an association supports.
 Do not rewrite it for me.
 ```
-Después de ejecutarlo, verifica: si solo elogia la respuesta, insiste y exige la peor
+Después de ejecutarlo, verifica: si solo elogia la respuesta, insiste y exige la única peor
 palabra. Contrarresta la *adulación complaciente* (el elogio revisa tu ego, no tu evidencia).
 
 ::: {.callout-important title="No delegues"}
-Tres decisiones nunca salen de tus manos: **qué afirmación respalda realmente tu
-evidencia**, **dónde debe detenerse esa afirmación** y **cómo reconoces su incertidumbre y
-sus limitaciones**. La herramienta puede redactar una pregunta o señalar una palabra, pero
-solo tú decides qué posición en la brújula puede sostener tu diseño y cuál es la palabra que
-debes rechazar en voz alta. Tu "no sé" honesto es tuyo para sostenerlo de verdad, no para
-recitarlo.
+Tres decisiones nunca salen de tus manos: **qué afirmación respalda realmente tu evidencia**,
+**dónde tiene que detenerse esa afirmación** y **cómo reconoces su incertidumbre y sus
+limitaciones**. La herramienta puede redactar una pregunta o señalar una palabra, pero solo tú
+decides la posición en la brújula que tu diseño puede sostener y la única palabra que debes
+rechazar en voz alta. Tu no-sé honesto es tuyo para sostenerlo, no para recitarlo.
 :::
 
 ## Un caso de falla de la IA
 
-Pegas tu limitación en una herramienta de IA y le pides que "haga que esto suene más seguro
-para el póster". Devuelve una frase fluida y pulida: "La barra de herramientas compacta mejora
-la velocidad de navegación, con resultados sólidos entre los usuarios". Corre limpia, se lee
-bien y está mal. La herramienta cambió en silencio "se asoció con tiempos más rápidos" por
-"mejora", y "mejora" es un verbo causal que tus registros observacionales no pueden respaldar.
-Este es un cambio silencioso de alcance disfrazado de edición útil.
+Pegas tu limitación en una herramienta de IA y le pides que la "haga sonar más segura para el
+póster". Devuelve una frase fluida y pulida: "La barra de herramientas compacta mejora la
+velocidad de navegación, con resultados sólidos entre usuarios". Corre limpia, se lee bien y
+está mal. La herramienta cambió en silencio "se asoció con tiempos más rápidos" por "mejora", y
+"mejora" es un verbo causal que tus registros observacionales no pueden sostener. Este es un
+cambio silencioso de alcance disfrazado de edición útil.
 
 Lo detectas leyendo el verbo de la IA contra el titular de tu póster, palabra por palabra. Tu
 titular dice "se asoció con". La reescritura dice "mejora". El tipo de afirmación se movió
 mientras la frase se ponía más bonita. Te quedas con tu propio verbo y registras que el pulido
 infló la afirmación.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.
-:::
+*Ya puedes decir tu afirmación en dos longitudes; este paso prepara la parte de la conversación
+que no controlas.*
 
-El resultado hablado clave del capítulo es tu entrega de incertidumbre y limitaciones, y la
-verificas de dos maneras independientes con la
-[guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
-Primero, **cálculo directo**: recalcula a mano el conteo de señales del detector. Lee tu frase
-en voz alta y cuenta cada palabra de autoanulación ("perdón", "solo", "probablemente", "supongo
-que"). Si tu conteo a mano coincide con el conteo impreso, el número es confiable; si difiere,
-el andamiaje midió algo distinto de tus palabras. Segundo, **razonamiento con pares**: dile tu
-frase de límite a una compañera de clase y pregúntale: "¿algo de lo que dije afirma más de lo
-que muestra mi diseño?". Un conteo de cero señales prueba que mantuviste la espalda recta, pero
-solo otra persona puede confirmar que el límite mismo era el correcto.
-
-## Transferencia al proyecto
-
-Este capítulo completa la segunda mitad de tu hito de **paquete de presentación**, que se
-entrega en el estudio del viernes. Sales con tres productos que redactaste tú y después pusiste
-a prueba: un párrafo ULN que empareja tu limitación más amenazante con su siguiente paso, un
-banco de cinco preguntas marcadas como "defender" o "conceder" y un "no sé" honesto escrito en
-su forma completa para la pregunta que más temes. En el simposio simulado corres los tres bajo
-fuego real, para que el primer desconocido que pregunte "¿eso lo causa?" se encuentre con una
-respuesta preparada y no con un titubeo.
-
-## Defiende tu decisión
-
-En cuatro frases, defiende la respuesta que preparaste. Enuncia tu afirmación titular y su
-límite exacto, redactado para detenerse donde se detiene tu evidencia. Nombra la posición en la
-brújula que respalda tu diseño y la única palabra que debes rechazar en voz alta para mantener
-honesta la afirmación. Da tu incertidumbre y tu limitación en forma ULN, terminando en el
-siguiente paso y no en la falla. Cierra con la única pregunta que todavía no puedes responder
-del todo, y el estudio que correrías para cerrarla.
+1. Escribe las cinco preguntas justas más difíciles que alguien podría hacerte, una por cada
+   tipo: método, explicación alternativa, y-esto-para-qué, generalización, uso de IA.
+2. Redacta una respuesta de dos frases para cada una y márcala como defender o conceder. Una
+   respuesta de conceder nombra la afirmación más angosta a la que te replegarías en el momento.
+3. Escribe tu declaración de incertidumbre y limitaciones en forma ULN: cuánto podría oscilar tu
+   número y por qué, la única cosa que tu diseño no puede mostrar y el estudio que lo
+   resolvería.
+4. Léela en voz alta y corta cada palabra que te borra, reemplazándola por el límite exacto que
+   estaba escondiendo. Después escribe completo un no-sé honesto, para la pregunta que más
+   temes.
+5. Regístralo en tu AI Research Ledger (registro de investigación con IA) y verifica al menos una
+   respuesta preparada con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd), por ejemplo el razonamiento con pares. Un revisor de
+   IA puede hacer la comprobación contigo; la decisión de aceptar o rechazar sigue siendo tuya.

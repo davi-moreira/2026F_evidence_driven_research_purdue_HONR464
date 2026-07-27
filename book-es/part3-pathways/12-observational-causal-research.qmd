@@ -2,123 +2,130 @@
 title: "Investigación observacional causal"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_observational_causal_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_observational_causal_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Decide si tu comparación observacional se ha ganado
-> la palabra *porque* o debe detenerse en *asociado con*, y defiende esa decisión
-> nombrando el factor de confusión del que depende y el argumento de identificación (si
-> lo hay) que cierra la puerta trasera.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de referencia del curso) cap. 16, gratis en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **La decisión de investigación.** Si tu comparación observacional se ganó la palabra
+> *porque* o tiene que detenerse en *asociado con*. Lo resuelves nombrando el único
+> factor de confusión del que depende la comparación y escribiendo el argumento de
+> identificación que cierra la puerta trasera, o admitiendo por escrito que no tienes
+> ninguno.
 
 ## Por qué importa esta decisión
 
-Imagina a tu asesora de tesis leyendo tu primer borrador. Escribiste: «al grupo tratado
-le fue mejor, así que el tratamiento funcionó». Su respuesta es la oración que
-escucharás el resto de tu vida de investigación: *«Después no es porque. Muéstrame el
-mundo en el que no fueron tratados, o admite que estás adivinando»*. Casi toda pregunta
-que vale la pena hacer prohíbe el experimento limpio. No puedes asignarle una enfermedad
-a una persona, una guerra a un país ni un microbio intestinal a un animal salvaje. Así
-que el oficio real de quien investiga con honestidad es decidir, en voz alta y por
-escrito, cuándo una comparación observada es lo bastante confiable para cargar con una
-causa. Equivócate en esto y un artículo afirma más de lo que sus datos sostienen.
-Acierta y una afirmación modesta y acotada se vuelve creíble.
+**La decisión sobre la mesa: si tu comparación se ganó la palabra *porque*.**
+
+Imagina a quien asesora tu tesis leyendo tu primer borrador. Escribiste: «al grupo
+tratado le fue mejor, así que el tratamiento funcionó». Su respuesta es la oración que
+vas a escuchar el resto de tu vida investigadora: *«Después no es porque. Muéstrame el
+mundo en el que no fueron tratados, o admite que estás adivinando»*. Casi toda
+pregunta que vale la pena prohíbe el experimento limpio. No puedes asignarle una
+enfermedad a una persona, una guerra a un país ni un microbio intestinal a un animal
+salvaje. Así que el verdadero oficio de quien investiga con honestidad es decidir, en
+voz alta y por escrito, cuándo una comparación observada es lo bastante confiable como
+para cargar una causa. Si te equivocas, un artículo afirma más de lo que sus datos
+sostienen. Si aciertas, una afirmación modesta y acotada se vuelve creíble.
 
 ## El concepto
 
 Empieza por el mundo que falta.
 
 - **Contrafactual**: el resultado que habría ocurrido bajo la opción que *no* se tomó.
-  Ejemplo: cuánto habría vivido una persona que toma café *si no hubiera* tomado café.
-  Nunca lo ves, porque sí tomó café.
+  Ejemplo: cuánto habría vivido una persona bebedora de café *si no hubiera* tomado
+  café. Nunca lo ves, porque sí tomó café.
 
 Una afirmación causal es una afirmación sobre un contrafactual. El problema es un
 villano que se esconde dentro de casi toda comparación observacional.
 
-- **Factor de confusión**: un tercer factor que empuja *tanto* a quién recibe el
-  tratamiento *como* al resultado. Ejemplo: un estilo de vida preocupado por la salud
-  aumenta a la vez la probabilidad del hábito diario del café y la esperanza de vida,
-  así que quienes toman café parecen vivir más aunque el café no haya hecho nada.
+- **Factor de confusión**: un tercer factor que empuja *a la vez* sobre quién recibe el
+  tratamiento y sobre el resultado. Ejemplo: un estilo de vida saludable eleva tanto la
+  probabilidad de un hábito diario de café como la longevidad, así que las personas que
+  toman café parecen vivir más incluso si el café no hizo nada.
 
-Puedes dibujar el problema. Un **diagrama causal** es una imagen de flechas donde cada
-flecha significa «esto influye directamente en aquello». Ahí, el factor de confusión
-crea una **puerta trasera**: una ruta furtiva que une tratamiento y resultado y que pasa
-*por* el factor de confusión en vez de por algún efecto real. Una comparación cruda ve
-las dos rutas a la vez y le echa la culpa al tratamiento por el trabajo del factor de
+Puedes dibujar el problema. Un **diagrama causal** es un dibujo de flechas donde cada
+flecha significa «esto influye directamente sobre aquello». Ahí, el factor de confusión
+crea una **puerta trasera**: un camino tramposo que vincula tratamiento y resultado y
+que pasa *por* el factor de confusión en vez de por un efecto real. Una comparación
+cruda ve ambos caminos a la vez y culpa al tratamiento por el trabajo del factor de
 confusión.
 
-Dos movimientos cierran la puerta trasera sin un experimento.
+Dos movimientos cierran la puerta trasera sin experimento.
 
-- **Selección sobre observables**: identificar un efecto ajustando por todos los
-  factores de confusión que puedes medir, de modo que tratados y no tratados coincidan
-  en todos ellos. Ejemplo: compara a quienes toman café y a quienes no *dentro* del
-  mismo grupo de estilo de vida. Funciona solo para los factores de confusión que de
-  verdad puedes ver.
+- **Selección sobre observables**: identificar un efecto ajustando por cada factor de
+  confusión que puedas medir, de modo que tratados y no tratados queden emparejados en
+  todos ellos. Ejemplo: comparar a quienes toman café con quienes no *dentro* del mismo
+  grupo de estilo de vida. Funciona solo para los factores de confusión que de verdad
+  puedes ver.
 - **Experimento natural**: una situación en la que una fuerza parecida al azar y fuera
-  del control de cualquiera decidió quién recibió el tratamiento, lo que vuelve la
-  asignación **como si fuera aleatoria** («as-if random», creíblemente como el
-  lanzamiento de una moneda). Ejemplo: una lotería de visas decide quién hace un viaje,
-  así que ganadores y perdedores difieren solo por suerte.
+  del control de cualquiera decidió quién fue tratado, volviendo la asignación **como si
+  fuera aleatoria** (creíblemente parecida al lanzamiento de una moneda). Ejemplo: una
+  lotería de visas decide quién hace un viaje, así que quienes ganan y quienes pierden
+  se diferencian solo por suerte.
 
-Uses el movimiento que uses, le debes a quien te lee un **argumento de identificación**:
+Sea cual sea el movimiento que uses, le debes a quien te lee un **argumento de
+identificación**:
 tu razón escrita de que la comparación recupera un efecto real, apoyada en un **supuesto
-no comprobable** que los datos nunca pueden confirmar, solo volver plausible. Cuando no
-puedes hacer ese argumento con honestidad, llegaste al **límite del lenguaje causal**,
-el punto pasado el cual tu evidencia deja de ganarse el *porque* y debe cambiar a
-*asociado con*. La falla más común aquí también tiene nombre. El **mimetismo de diseño**
-(*design mimicry*) consiste en tomar prestado el vocabulario («experimento natural»,
-«diferencias en diferencias») para decorar una comparación cuyo supuesto nunca se
-argumentó. La palabra no es el argumento.
+no verificable** que los datos nunca pueden confirmar, solo volver plausible. Cuando no
+puedes construir ese argumento con honestidad, llegaste al **límite del lenguaje
+causal**, el punto a partir del cual tu evidencia deja de ganarse el *porque* y tiene
+que pasar a *asociado con*. La falla más común aquí también tiene nombre. La
+**imitación de diseño** (*design mimicry*) es tomar prestado el vocabulario
+(«experimento natural», «diferencias en diferencias») para decorar una comparación cuyo
+supuesto nunca se argumentó. La palabra no es el argumento.
 
 ## Un ejemplo resuelto
 
 Lleva esto a un laboratorio de biología. Estudias ratones derivados de poblaciones
-silvestres y notas un patrón llamativo: los individuos cuyo intestino lleva cierta
-bacteria que digiere fibra son, en promedio, más delgados que los ratones sin ella. El
-titular se escribe solo: «el microbio causa la delgadez». ¿Apostarías una tesis a eso?
+silvestres y notas un patrón llamativo: los individuos cuyo intestino lleva una
+bacteria particular que digiere fibra son, en promedio, más delgados que los ratones
+sin ella. El titular se escribe solo: «el microbio causa delgadez». ¿Apostarías una
+tesis a eso?
 
 Dibuja primero tres cajas: *microbio*, *delgadez* y una tercera para cualquier cosa que
-pudiera impulsar ambas. Esa tercera caja se llena rápido. La dieta es un factor de
-confusión. Los ratones que forrajean plantas altas en fibra albergan más de la bacteria
-que digiere fibra *y además* se mantienen más delgados por razones ajenas al microbio.
-La dieta apunta a las dos cajas, lo que abre una puerta trasera, así que una comparación
+pueda impulsar ambas. Esa tercera caja se llena rápido. La dieta es un factor de
+confusión. Los ratones que forrajean plantas altas en fibra a la vez albergan más de la
+bacteria que digiere fibra *y* se mantienen más delgados por razones ajenas al microbio.
+La dieta apunta a las dos cajas, abriendo una puerta trasera, así que una comparación
 ingenua entre con microbio y sin microbio mide sobre todo la brecha de *dieta* y se la
-acredita a la bacteria. Una colonia de diez mil ratones haría ese número equivocado
-bellamente preciso y no menos equivocado, porque una muestra más grande reduce el ruido,
+acredita a la bacteria. Una colonia de diez mil ratones volvería ese número equivocado
+bellamente preciso y no menos equivocado, porque una muestra más grande achica el ruido,
 no la confusión.
 
 Ahora el arreglo. Si *registraste* la dieta de cada ratón, usa selección sobre
 observables: compara portadores con no portadores *dentro* del grupo de alta fibra,
-luego *dentro* del grupo de baja fibra, y promedia las dos diferencias honestas dentro
-de cada dieta. Si la brecha se cae hacia cero, el microbio era sobre todo un pasajero de
-la dieta. La trampa es honesta: esto funciona solo para el factor de confusión que
-mediste. Si los ratones también difieren en un rasgo no registrado, digamos un
-temperamento que impulsa tanto el forrajeo como el metabolismo, ese rasgo mantiene la
-puerta trasera abierta y «controlamos por dieta» no es identificación. Entonces tu
-afirmación defendible es que el microbio está *asociado con* la delgadez, y la pregunta
-causal espera una intervención real, como colonizar ratones genéticamente idénticos y
+luego *dentro* del grupo de baja fibra, y promedia las dos diferencias honestas por
+dieta. Si la brecha se derrumba hacia cero, el microbio era sobre todo un pasajero de la
+dieta. La trampa es honesta: esto funciona solo para el factor de confusión que mediste.
+Si los ratones también difieren en un rasgo no registrado, digamos un temperamento que
+impulsa tanto el forrajeo como el metabolismo, ese rasgo mantiene abierta la puerta
+trasera y «controlamos por dieta» no es identificación. Entonces tu afirmación
+defendible es que el microbio *está asociado con* la delgadez, y la pregunta causal
+espera una intervención real, como colonizar ratones genéticamente idénticos y
 alimentados de forma idéntica. Ese límite es lo que este capítulo te enseña a ver y a
 decir.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb06 — Observational causal research**.
-Ábrelo en Colab con la insignia de arriba y trabaja las celdas junto con este capítulo.
-En el laboratorio construyes un mundo pequeño donde *tú* fijas el efecto verdadero del
-café, plantas un factor de confusión oculto y ves cómo una comparación ingenua infla un
-+1.0 verdadero hasta cerca de +3.1; después recuperas la verdad ajustando por el factor
-de confusión que sí puedes ver. Luego analizas un experimento natural *real*, la lotería
-de visas del Hajj de Clingingsmith, Khwaja y Kremer (RDSS cap. 16), como una diferencia
-de medias, y enuncias exactamente qué te permite afirmar su asignación como si fuera
-aleatoria, y sobre quiénes.
+El laboratorio de este capítulo es el cuaderno **nb06 — Observational causal research**
+(*investigación observacional causal*). Ábrelo en Colab con la insignia de arriba y
+trabaja las celdas junto con este capítulo. Allí construirás un mundo pequeño donde *tú*
+fijas el efecto verdadero del café, plantarás un factor de confusión oculto y verás cómo
+una comparación ingenua infla un verdadero +1,0 hasta cerca de +3,1, para después
+recuperar la verdad ajustando por el factor de confusión que sí puedes ver. Luego
+analizarás un experimento natural *real*, la lotería de visas del Hajj de Clingingsmith,
+Khwaja y Kremer (RDSS cap. 16), como una diferencia de medias, y enunciarás exactamente
+qué te permite afirmar su asignación como si fuera aleatoria, y sobre quiénes.
 
 ## Prompts de IA recomendados
 
-Comprométete siempre primero con tu propia respuesta y solo después delega.
+Comprométete primero con tu propia respuesta cada vez, y solo después delega. Trata cada
+uno de estos como el movimiento de apertura de un **bucle de IA** (el ciclo prompt →
+respuesta → interrogación → refinamiento → nueva ejecución), no como una pregunta suelta.
+Pregunta, lee, nombra la única cosa que la respuesta entendió mal sobre tu contexto y
+vuelve a preguntar con esa corrección en la mano. En las preguntas causales la segunda
+pasada importa más que en ninguna otra parte de este libro, porque la primera respuesta
+casi siempre acepta tu encuadre, y tu encuadre es justamente lo que hay que atacar.
 
-**Localiza un diseño real (comprométete primero con tu propia conjetura sobre la palanca).**
+**Localizar un diseño real (comprométete primero con tu propia apuesta sobre la palanca).**
 
 ```
 Act as a research librarian in biology. Find peer-reviewed observational studies
@@ -127,11 +134,11 @@ a gut microbe on a host trait. For each: title, authors, year, venue, and the
 as-if-random source. Only include work you are confident exists; mark anything
 uncertain.
 ```
-*Después de ejecutarlo, verifica (contrarresta la **fabricación confiada**, «confident
-fabrication»): abre cada fuente y lee la línea por tu cuenta antes de citarla, lectura
-de la fuente primaria. Corta las que no puedas encontrar.*
+*Después de ejecutarlo, verifica (contrarresta la **fabricación confiada**): abre cada
+fuente y lee tú la línea antes de citarla, que es lectura de la fuente primaria.
+Descarta las que no puedas encontrar.*
 
-**Lista los factores de confusión por verificar (comprométete primero con tu propia lista).**
+**Listar los factores de confusión que hay que verificar (haz primero tu propia lista).**
 
 ```
 I claim a gut microbe causes leanness in wild mice. List traits that plausibly raise
@@ -139,101 +146,79 @@ both microbe presence and leanness, in a table with the trait and the direction 
 would bias a naive comparison. Then, as a hostile reviewer, name the one trait you
 are most likely wrong to include and the important one you left out.
 ```
-*Después de ejecutarlo, verifica (contrarresta la **ilusión de exhaustividad**,
-«illusion of completeness»): compara la lista con la que escribiste primero y mapea cada
-rasgo a una ruta de puerta trasera (rasgo → microbio, rasgo → delgadez). Un rasgo con
-una sola flecha no es un factor de confusión.*
+*Después de ejecutarlo, verifica (contrarresta la **ilusión de exhaustividad**):
+compara la lista con la que redactaste primero y mapea cada rasgo a un camino de puerta
+trasera (rasgo → microbio, rasgo → delgadez). Un rasgo con una sola flecha no es un
+factor de confusión.*
 
-**Aplica red team (revisión adversaria) a la oración causal que escribiste (escríbela tú, no dejes que la IA la redacte).**
+**Red team a la oración causal que escribiste (escribe tú la oración; no dejes que la IA la redacte).**
 
 ```
 Here is a causal sentence I wrote: "[paste your sentence]." Act as a hostile peer
 reviewer. Name every place it over-reaches or claims more than my observational
 design identifies. Do not rewrite it for me; list the weaknesses so I fix them.
 ```
-*Después de ejecutarlo, verifica (contrarresta el **acuerdo complaciente**, «sycophantic
-agreement»): si todas las objeciones son suaves, insiste: «asume que la oración es
-incorrecta; nombra el peor defecto». El elogio sin una objeción es una alerta, no una
-calificación.*
+*Después de ejecutarlo, verifica (contrarresta el **acuerdo complaciente**): si todas
+las objeciones son suaves, insiste con «supón que la oración es incorrecta; nombra el
+peor defecto». El elogio sin una objeción es una señal de alerta.*
 
 ::: {.callout-important title="No delegues"}
 Tres decisiones son solo tuyas. **Si tu diseño identifica un efecto causal** es un juicio
-sobre cómo se asignó realmente el tratamiento, y solo tú lo sabes. **Qué factor de
+sobre cómo se asignó realmente el tratamiento, y solo tú lo sabes. **Cuál factor de
 confusión amenaza más tu comparación** depende del mecanismo, que un modelo no puede ver
-en tus datos. Y **si tu hallazgo se gana el *porque* o debe detenerse en *asociado
-con*** es toda la destreza de la semana. Una herramienta llamará con gusto «experimento
-natural» a tu comparación porque tú escribiste esas palabras. Ganarse el *porque* es tu
-firma, no la del modelo.
+en tus datos. Y **si tu hallazgo se gana el *porque* o tiene que detenerse en *asociado
+con*** es toda la destreza de este capítulo. Una herramienta llamará encantada
+«experimento natural» a tu comparación porque tú escribiste esas palabras. Ganarse el
+*porque* es tu firma, no la del modelo.
 :::
 
 ## Un caso de falla de la IA
 
-Pegas tu comparación de ratones en un chatbot y preguntas: «¿Esto es un experimento
-natural y puedo decir que el microbio causa la delgadez?». Responde con un sí seguro y
+Pegas tu comparación de ratones en un chatbot y preguntas: «¿Es esto un experimento
+natural, y puedo decir que el microbio causa delgadez?». Responde con un sí seguro y
 bien formateado: tu montaje «se parece a un experimento natural», la diferencia «puede
-leerse causalmente», el texto «se ve riguroso». Son dos fallas con nombre a la vez:
-**método plausible pero equivocado** (*plausible-but-wrong-method*), que le pega una
-etiqueta de diseño a una comparación cuyo supuesto clave falla a las claras, y **cambio
-silencioso de alcance** (*silent scope change*), que asciende *asociado con* a *porque*
-mientras suena como si hubiera zanjado la pregunta. La fluidez no es evidencia. Lo
-atrapas rechazando la etiqueta y haciendo la única pregunta que el modelo no puede
-responder por ti: *¿cómo se asignó realmente el tratamiento?* Ninguna lotería, ningún
-punto de corte, ninguna fuerza externa decidió qué ratones portaban el microbio. Se
-ordenaron solos por dieta y conducta, así que no hay asignación como si fuera aleatoria,
-la puerta trasera sigue abierta y el *porque* no está ganado. Di *asociado con* y
-registra por qué.
+leerse causalmente», el escrito «se ve riguroso». Esto son dos fallas con nombre propio a
+la vez: **método plausible pero equivocado** (*plausible-but-wrong-method*), pegarle una
+etiqueta de diseño a una comparación cuyo supuesto clave claramente falla, y **cambio
+silencioso de alcance** (*silent scope change*), ascender *asociado con* a *porque* con
+un tono de haber zanjado la cuestión. La fluidez no es evidencia. La atrapas rechazando
+la etiqueta y haciendo la única pregunta que el modelo no puede responder por ti: *¿cómo
+se asignó realmente el tratamiento?* No hubo lotería, ni punto de corte, ni fuerza
+externa que decidiera qué ratones llevaban el microbio. Se ordenaron solos por dieta y
+comportamiento, así que no hay asignación como si fuera aleatoria, la puerta trasera
+sigue abierta y el *porque* no está ganado. Di *asociado con*, y registra por qué.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: si le pides a una IA que revise la afirmación, el código o la cita de otra, encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te corresponde a ti, quien investiga.
-:::
+*Tu diseño está declarado y diagnosticado. Este capítulo de ruta es donde una pregunta
+causal obtiene por escrito su argumento de identificación, o recibe en su lugar un límite
+honesto.*
 
-Verifica el resultado clave del capítulo con la **simulación**, el método de la guía de
-verificación para comprobar cómo se comporta un *procedimiento* y no un número fijo.
-Construye un mundo donde tú fijas el efecto verdadero, de modo que conozcas la respuesta
-correcta y puedas calificar contra ella cada método:
-
-```
-rng = np.random.default_rng(464)
-n = 4000
-lifestyle = rng.integers(0, 2, n)                       # the confounder you can see
-p = np.where(lifestyle == 1, 0.70, 0.30)                # health-conscious drink more
-coffee = rng.binomial(1, p)
-score = 2.0 * lifestyle + 1.0 * coffee + rng.normal(0, 1, n)  # TRUE effect = +1.0
-
-naive = score[coffee == 1].mean() - score[coffee == 0].mean()
-adj = np.mean([score[(coffee==1)&(lifestyle==g)].mean()
-             - score[(coffee==0)&(lifestyle==g)].mean() for g in (0, 1)])
-```
-
-La brecha ingenua aterriza muy por encima del +1.0 que plantaste; el ajuste dentro de
-cada estilo de vida la trae de vuelta cerca de +1.0. Eso es la confusión y su arreglo, en
-números que son tuyos. Para el resultado real de la lotería del laboratorio, agrega un
-segundo método independiente: el **cálculo directo**, filtrando a mano a ganadores y
-perdedores y restando tú su promedio de `views`, en vez de confiar en una sola celda.
-
-## Transferencia al proyecto
-
-Este capítulo es la columna vertebral de tu hito **estrategia de identificación causal**
-(o de tu límite honesto del lenguaje causal), que se entrega en el estudio del viernes.
-Redacta cuatro piezas para tu proyecto: la pregunta causal como un tratamiento y un
-resultado; un diagrama causal que nombre el factor de confusión que más temes; tu
-palanca (selección sobre observables, un experimento natural, diferencias en
-diferencias, regresión discontinua o variables instrumentales) y el único supuesto no
-comprobable en el que se apoya, o el límite del lenguaje causal si no tienes ninguna; y
-un número que recalcularías por una segunda vía para revisar la estimación de cualquier
-colaborador. Escríbelas de modo que la revisión obligatoria «Causal Identification
-Skeptic» (escéptico de la identificación causal) del estudio pueda encontrar el supuesto
-exacto del que depende tu afirmación, porque eso es lo primero que atacará.
-
-## Defiende tu decisión
-
-En un párrafo corto, enuncia el tratamiento y el resultado de tu proyecto y luego declara
-la decisión que este capítulo te permite tomar: ¿tu diseño *identifica* el efecto causal
-o tu afirmación se detiene en *asociado con*? Si reclamas identificación, nombra el
-argumento y el único supuesto no comprobable en el que se apoya, y reporta el efecto con
-su incertidumbre. Si te detienes en la asociación, nombra el factor de confusión no
-medido que no puedes descartar. En cualquier caso, enuncia el límite con claridad: la
-única cosa que un escéptico podría decir que movería tu afirmación de *porque* de vuelta
-a *asociado con*.
+1. Decide en cuál caso estás. Si tu indagación pregunta *qué pasaría si* algo cambiara,
+   y nadie aleatorizó el cambio, esta es tu ruta. Si tu indagación es descriptiva,
+   predictiva o genuinamente experimental, no lo es, y entonces corres el ejercicio del
+   paso 6.
+2. **Si esta es tu ruta**, escribe tu pregunta causal como exactamente dos cosas: un
+   tratamiento (lo que varía) y un resultado (lo que mides). Una oración, sin rodeos.
+3. Dibuja el diagrama causal. Pon tratamiento y resultado en los extremos y agrega cada
+   tercera variable que se te ocurra que empuje sobre ambos. Encierra en un círculo el
+   factor de confusión que más temes. Después escribe, en una línea, si puedes medirlo.
+4. Nombra tu palanca y su precio. Selección sobre observables, un experimento natural,
+   diferencias en diferencias, regresión discontinua o variables instrumentales, y
+   debajo el único supuesto no verificable en el que se apoya, en lenguaje llano con el
+   que alguien escéptico pueda discutir. Si no tienes palanca, escribe en su lugar la
+   oración del límite del lenguaje causal: qué muestra tu comparación y qué *porque*
+   estás declinando afirmar.
+5. Anota un número que volverías a calcular por una segunda vía para comprobar
+   cualquier estimación que te entregue alguien de tu equipo o una IA, y di qué
+   resultado te haría abandonar por completo la lectura causal.
+6. **Si esta no es tu ruta**, corre el ejercicio de clasificación. Escribe de todos
+   modos la versión causal de tu pregunta, nombra el factor de confusión del que
+   dependería y di qué supuesto tendrías que defender para responderla. Saber qué no
+   estás afirmando vale tanto como saber qué sí.
+7. Registra todo en tu AI Research Ledger (registro de investigación con IA) y verifica
+   con un método nombrado de la [Guía de Verificación](../verification-guide.qmd); el
+   diagrama causal es el método construido para este capítulo, y la simulación con un
+   factor de confusión que plantas tú es la segunda comprobación fuerte. Una IA revisora
+   puede atacar el supuesto junto a ti; la decisión de conservar el *porque* o replegarse
+   a *asociado con* es tuya.

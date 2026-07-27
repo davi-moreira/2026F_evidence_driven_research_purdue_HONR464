@@ -2,96 +2,97 @@
 title: "Predicción y generalización"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Decide si tu pregunta es de verdad una
-> *predicción* sobre casos que todavía no has visto, y si lo es, comprométete por
-> adelantado con un contrato de pronóstico de cuatro partes (objetivo, línea base,
-> partición, métrica) más una revisión de fuga de datos, para poder defender un
-> puntaje honesto y modesto y decir exactamente dónde deja de generalizar.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria del tema del curso al que corresponde; su laboratorio en Colab está enlazado arriba. No hay un capítulo complementario de RDSS (el manual *Research Design in the Social Sciences*) para este tema; este capítulo se sostiene por sí solo.
-:::
+> **La decisión de investigación.** Decide si tu pregunta es de verdad un
+> *pronóstico* sobre casos que nadie ha visto todavía y, si lo es, firma un contrato
+> de cuatro partes antes de ajustar nada: objetivo, línea base, partición, métrica,
+> más una revisión de fuga de datos. Ese contrato es lo que te permite defender un
+> puntaje modesto y honesto, y decir en voz alta dónde deja de funcionar tu
+> pronóstico.
 
 ## Por qué importa esta decisión
 
-Imagina a quien dirige la salud pública de un condado y debe decidir, cada viernes,
-si publica un aviso de riesgo para nadar en un lago. Llega un proveedor con un
-modelo que detecta floraciones de algas nocivas "con 94% de exactitud".
+**La decisión sobre la mesa: si estás pronosticando casos no vistos y, si es así,
+qué puntaje aceptarías como honesto.**
+
+Imagina a la persona a cargo de salud pública de un condado, que debe decidir semana
+a semana si publica un aviso para no nadar en un lago. Las floraciones de
+cianobacterias pueden convertir una playa segura en un riesgo sanitario en cuestión
+de días. Llega un proveedor con un modelo que detecta floraciones dañinas "con 94%
+de exactitud".
 
 > *"¿Noventa y cuatro por ciento comparado con QUÉ? Casi todas las semanas este lago
-> está bien, así que si simplemente digo 'no hay floración' cada semana, ya acierto
-> alrededor del ochenta y cinco por ciento de las veces. Si su modelo no puede
-> superar eso con claridad, y demostrar que lo hizo en semanas que nunca estudió, no
-> voy a cerrar una playa pública por su palabra."*
-> — una persona a cargo de la salud pública que ya se quemó con un número que sonaba
-> impresionante
+> está bien, así que si digo 'no hay floración' todas las semanas ya acierto más o
+> menos el ochenta y cinco por ciento de las veces. Si su modelo no supera eso con
+> claridad, y no demuestra que lo hizo en semanas que nunca estudió, no voy a cerrar
+> una playa pública porque él lo diga."*
+> — una responsable de salud pública a quien ya la quemó un número impresionante
 
-Esa persona hace las dos preguntas que este capítulo te entrena a responder antes de
-confiar en cualquier pronóstico. ¿Es mejor que la regla honesta más tonta, y se ganó
-ese resultado en casos que el modelo nunca vio? Si te equivocas en eso, o gritas que
-viene el lobo o dejas pasar un peligro real.
+Esa responsable hace las dos preguntas que este capítulo te entrena a responder antes
+de confiar en cualquier pronóstico. ¿Es mejor que la regla honesta más tonta, y se lo
+ganó en casos que el modelo nunca vio? Falla en cualquiera de las dos y gritarás
+"¡lobo!" o dejarás pasar un riesgo real.
 
 ## El concepto
 
 Una **predicción** es la mejor conjetura sobre un caso cuyo resultado todavía no
-puedes ver. Ejemplo: pronosticar si un lago tendrá floración la semana que viene,
-antes de que esa semana exista. La predicción es descriptiva, no causal. Pronostica
+puedes ver. Ejemplo: pronosticar si un lago florecerá la semana que viene, antes de
+que exista la semana que viene. La predicción es descriptiva, no causal. Pronostica
 *qué* pasará, nunca *por qué*.
 
-Lo que hace de la predicción una pregunta propia es su **alcance**, los casos que
-una afirmación pretende cubrir. El alcance de la predicción son los **casos no
-vistos**, unidades que no están en tus datos y cuyo resultado aún se desconoce, como
+Lo que hace de la predicción una pregunta propia es su **alcance**, los casos que una
+afirmación pretende cubrir. El alcance de la predicción son los **casos no vistos**,
+unidades que no están en tus datos y cuyo resultado sigue siendo desconocido, como
 las muestras del mes que viene. Su prima es la **generalización**, el alcance que va
-de tu muestra a una población más amplia, como pasar de los doce lagos que mediste a
-todos los lagos de la cuenca. Ambas van más allá de los datos que tienes en la mano,
-y ambas son honestas solo cuando puedes nombrar el cruce que las autoriza.
+de tu muestra a una población más amplia, por ejemplo de los doce lagos que mediste a
+todos los lagos de la cuenca. Ambas van más allá de los datos que tienes en la mano, y
+ambas son honestas solo cuando puedes nombrar el cruce que las autoriza.
 
 Un pronóstico se gana la confianza bajo un **contrato** de cuatro partes, en orden
 fijo. El **objetivo** es la única columna que predices, por ejemplo
-`bloom_next_week`. La **línea base** es la regla honesta más tonta que debes superar,
-casi siempre "adivina siempre la respuesta más común"; si el 85% de las semanas no
-tiene floración, esa regla saca 85% gratis, así que 85% es la vara. La **partición**
-divide las filas entre un conjunto de entrenamiento del que aprende el modelo y un
-**conjunto reservado para prueba (held-out)**, filas que se apartan durante el
-entrenamiento y se usan solo como examen, digamos un cuarto aleatorio de las semanas.
-La **métrica** es cómo llevas el marcador, ajustada al objetivo; la exactitud engaña
-cuando las floraciones son raras, así que la sensibilidad (*recall*) en la clase de
-floración, la proporción de floraciones reales que el modelo atrapa, suele importar
-más.
+`bloom_next_week`. La **línea base** es la regla honesta más tonta que tienes que
+superar, casi siempre "adivina siempre la respuesta más común"; si el 85% de las
+semanas no tiene floración, esa regla saca 85% gratis, así que 85% es la vara. La
+**partición** divide las filas en un conjunto de entrenamiento del que el modelo
+aprende y un **conjunto reservado para prueba (held-out)**, filas que se apartan
+durante el entrenamiento y se usan solo como su examen, digamos una cuarta parte
+aleatoria de las semanas. La **métrica** es cómo llevas el marcador, ajustada al
+objetivo; la exactitud engaña cuando las floraciones son raras, así que la
+sensibilidad sobre la clase con floración, la proporción de floraciones reales que el
+modelo detecta, suele importar más.
 
 Hay una trampa por encima de todas. La **fuga de datos** es una característica que
-carga información que no tendrías en el momento del pronóstico, porque su valor
-queda definido solo al ocurrir el resultado o después. Ejemplo: la concentración de
-toxina medida *durante* la floración. Una característica filtrada infla tu puntaje
+carga información que no tendrías en el momento del pronóstico, porque su valor queda
+fijado solo en el momento del resultado o después. Ejemplo: la concentración de
+toxinas medida *durante* la floración. Una característica filtrada infla tu puntaje
 con los datos de hoy y se derrumba con los de mañana, porque no existirá cuando de
 verdad necesites el pronóstico.
 
 ## Un ejemplo resuelto
 
-Supón que quieres avisar a quienes nadan con una semana de anticipación. Tu
+Supón que quieres avisar con una semana de anticipación a quienes nadan. Tu
 **objetivo** es `bloom_next_week`, uno si el lago supera el umbral del aviso y cero
 si no. A lo largo de tres veranos de muestras semanales, el 85% de las semanas está
 limpio, así que tu **línea base**, "di siempre que no hay floración", saca 0.85 sin
-ningún modelo.
+modelo alguno.
 
-Te quedas con características genuinamente conocidas con una semana de antelación:
-temperatura del agua, lluvia reciente, carga de fósforo aguas arriba. Ajustas un
-modelo logístico (un clasificador estándar de sí o no), **particionas** un cuarto de
-las semanas como conjunto reservado y calificas ambos solo en esas semanas
-reservadas. El modelo llega a alrededor de 0.88. Esa ventaja de cuatro puntos se
-siente pequeña, y su pequeñez es el resultado honesto: un triunfo verdadero y modesto
-vale más que uno falso y dramático.
+Te quedas con características que de verdad se conocen con una semana de
+anticipación: temperatura del agua, lluvia reciente, carga de fósforo aguas arriba.
+Ajustas un modelo logístico (un clasificador estándar de sí o no), apartas con la
+**partición** una cuarta parte reservada de las semanas y calificas ambos solo en
+esas semanas reservadas. El modelo cae alrededor de 0.88. Esa ventaja de cuatro
+puntos se siente pequeña, y su pequeñez es el resultado honesto: un triunfo modesto
+y verdadero vale más que uno dramático y falso.
 
-Entonces una persona bienintencionada del equipo agrega `chlorophyll_a`, la lectura
-del pigmento. La exactitud en el conjunto reservado salta a 0.97. Emocionante, hasta
-que preguntas *cuándo* se mide la clorofila: durante la misma floración que estás
+Entonces alguien con buenas intenciones agrega `chlorophyll_a`, la lectura del
+pigmento. La exactitud en el conjunto reservado salta a 0.97. Emocionante, hasta que
+preguntas *cuándo* se mide la clorofila: durante la floración misma que estás
 pronosticando. Es el resultado disfrazado con otra etiqueta. Quítala, y el puntaje
-vuelve a caer a 0.88. Lo que decide es la prueba de temporalidad, no la exactitud. Y
-como entrenaste en un lago poco profundo, nombras la frontera en voz alta: en un
-embalse profundo y frío el patrón puede no sostenerse, así que el pronóstico todavía
-no generaliza ahí.
+vuelve a 0.88. Lo que decide es la prueba del momento, no la exactitud. Y como
+entrenaste en un lago poco profundo, nombras la frontera en voz alta: en un embalse
+profundo y frío el patrón puede no sostenerse, así que el pronóstico todavía no
+generaliza ahí.
 
 ## El laboratorio en Colab
 
@@ -99,14 +100,20 @@ El laboratorio de este capítulo es el cuaderno **nb08 — Prediction: generaliz
 unseen cases** (*predicción: generalizar a casos no vistos*). Ábrelo en Colab con la
 insignia de arriba y trabaja las celdas junto con este capítulo. En el laboratorio
 firmas el contrato de cuatro partes sobre un conjunto de datos real, calificas
-primero una línea base honesta, y luego *construyes una fuga a propósito* para que
-sientas subir un puntaje falso y aprendas a cazarlo por correlación y por
-temporalidad antes de reentrenar limpio.
+primero una línea base honesta y luego *construyes una fuga a propósito* para que
+sientas subir un puntaje falso y aprendas a cazarlo por correlación y por momento
+antes de reentrenar limpio.
 
 ## Prompts de IA recomendados
 
 Comprométete primero con tu propia respuesta y luego delega. Pega salida real, nunca
-un número que recuerdes.
+un número que recuerdas. Espera correr cada prompt más de una vez: lee la respuesta,
+nombra la parte que no te crees, devuelve esa objeción al prompt y vuelve a correrlo.
+Las herramientas que corren ese **bucle de IA** por su cuenta, el ciclo prompt →
+respuesta → interrogación → refinamiento → nueva ejecución, ajustando y reajustando
+un modelo a lo largo de varias vueltas, vuelven la pregunta de la fuga de datos más
+urgente, no menos. Nadie dentro de ese bucle, salvo tú, sabe cuándo se registraron
+tus datos.
 
 ```
 Act as a Python tutor. Here is a cell that holds out 25% of my weekly
@@ -119,8 +126,8 @@ never in training.
 
 *Después de ejecutarlo, verifica: lee la línea base, el modelo y el margen en tu
 propia impresión y confirma que los números de la herramienta coinciden, y que no son
-números que adivinó. Contrarresta la **fabricación confiada**, un recorrido fluido que
-cita un margen que tu código nunca produjo.*
+números que adivinó. Contrarresta la **fabricación confiada** (*confident
+fabrication*), un recorrido fluido que cita un margen que tu código nunca produjo.*
 
 ```
 Here is the outcome I want to predict and the moment I need the forecast:
@@ -130,11 +137,11 @@ say whether its value is settled before, at, or after the outcome, and
 flag any that could not exist at prediction time.
 ```
 
-*Después de ejecutarlo, verifica: vuelve a derivar la temporalidad de la
-característica que aprueba con más confianza. Si alguna característica queda
-definida al ocurrir el resultado o después, recházala diga lo que diga la
-herramienta. Contrarresta la **ilusión de exhaustividad**, una lista ordenada que
-omite la única característica de definición tardía que arruina el pronóstico.*
+*Después de ejecutarlo, verifica: vuelve a derivar el momento de la característica que
+la herramienta aprueba con más seguridad. Si alguna queda fijada en el momento de la
+floración o después, recházala diga lo que diga la herramienta. Contrarresta la
+**ilusión de exhaustividad**, una lista ordenada que omite la única característica de
+definición tardía que arruina el pronóstico.*
 
 ```
 Act as a hostile reviewer. Attack this headline: "Our model forecasts
@@ -143,68 +150,58 @@ distrust it, including the baseline it beat, the metric, and any hidden
 leak.
 ```
 
-*Después de ejecutarlo, verifica: contrasta cada objeción con tu impresión y conserva
-las que tus números sostengan. Contrarresta el **acuerdo complaciente**, cuando un
-asistente predispuesto a ayudar elogia un titular que escribiste tú.*
+*Después de ejecutarlo, verifica: contrasta cada objeción con tu impresión y quédate
+con las que tus números respaldan. Contrarresta el **acuerdo complaciente**, cuando
+una asistente preparada para ayudar elogia un titular que escribiste tú.*
 
 ::: {.callout-important title="No delegues"}
 Cuatro decisiones siguen siendo tuyas. **El objetivo**: qué pronosticas y por qué
-importa. **La línea base**: la regla honesta que el modelo debe superar. **La
-temporalidad de cada característica**: si un valor existiría de verdad en el momento
-del pronóstico, algo que solo puedes resolver tú, que conoces la línea de tiempo de
-tus datos. Y **el veredicto** sobre si tu proyecto debería predecir siquiera. Una
-herramienta que nunca ha visto tu línea de tiempo no puede tomar estas decisiones por
-ti.
+importa. **La línea base**: la regla honesta que el modelo debe superar. **El momento
+de cada característica**: si un valor existiría de verdad en el instante del
+pronóstico, algo que solo puedes resolver tú, que conoces la línea de tiempo de tus
+datos. Y **el veredicto** sobre si tu proyecto debería predecir siquiera. Una
+herramienta que nunca vio tu línea de tiempo no puede tomar estas decisiones por ti.
 :::
 
 ## Un caso de falla de la IA
 
 Pegas tu lista de características y le preguntas a un socio de IA cuáles son seguras
-de usar. Responde con confianza: "`chlorophyll_a` es tu predictor más fuerte,
+de usar. Responde con seguridad: "`chlorophyll_a` es tu predictor más fuerte,
 consérvala". El razonamiento suena impecable, porque la clorofila correlaciona casi a
 la perfección con las floraciones. Esa correlación casi perfecta es justamente la
-señal. Esta es la falla del **método plausible pero equivocado**: la herramienta
-ordenó la característica por qué tan bien *ajusta* al pasado, no por si podría
-*existir a tiempo* para un pronóstico. Lo detectas con una pregunta que la estadística
-sola no puede responder. ¿Cuándo se mide la clorofila? Durante la floración, así que
-ningún pronóstico hecho una semana antes podría tenerla. Quítala, mira el puntaje
-caer de vuelta a 0.88 y quédate con el modelo honesto.
+señal. Es la falla del **método plausible pero equivocado**: la herramienta ordenó la
+característica por qué tan bien *ajusta* el pasado, no por si podría *existir a
+tiempo* para un pronóstico. Lo detectas con una pregunta que la estadística sola no
+puede responder. ¿Cuándo se mide la clorofila? Durante la floración, así que ningún
+pronóstico hecho una semana antes podría tenerla. Quítala, mira el puntaje caer de
+vuelta a 0.88 y quédate con el modelo honesto.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pide a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, la persona que investiga.
-:::
+*Tu diseño ya está declarado y diagnosticado. Este paso decide si tu proyecto está
+pronosticando de verdad casos que nadie ha visto todavía y, si es así, pone ese
+pronóstico bajo contrato antes de que ajustes un solo modelo.*
 
-Verifica el resultado clave del capítulo con una **muestra reservada (holdout)**, el
-método de la guía de verificación para cualquier modelo ajustado: nunca reportes un
-puntaje calculado sobre filas con las que el modelo entrenó. Confirma que la
-partición es real revisando que ninguna semana reservada aparezca en el conjunto de
-entrenamiento, un **cálculo directo** de una línea sobre los índices de las filas.
-Luego falsifica la fuga: reajusta el modelo sin la característica sospechosa y
-confirma que el puntaje baja al número honesto del conjunto reservado. Si quitar una
-sola característica derrumba tu exactitud, esa característica estaba haciendo un
-trabajo que un pronóstico real no puede hacer.
-
-## Transferencia al proyecto
-
-Este capítulo construye la columna vertebral de tu hito de **protocolo de análisis
-declarado**, el plan de cómo analizarás tus datos, fijado antes de tocarlos. Redacta
-cuatro piezas para tu proyecto: el veredicto de predicción (objetivo, línea base,
-partición, métrica, en ese orden, o un honesto "la predicción es la pregunta
-equivocada, y esta es la razón"), la característica con más probabilidad de filtrar
-información junto con la revisión de temporalidad que la descarta, las
-comprobaciones de honestidad que correrás antes de reportar, y una frontera de la
-afirmación en una oración. La revisión de predicción y fuga de datos pone a prueba
-exactamente esto en el estudio del viernes.
-
-## Defiende tu decisión
-
-Enuncia y defiende la decisión que habilita este capítulo. Nombra tu objetivo y la
-línea base que debe superar. Declara en voz alta la posición en la brújula:
-predicción, tipo descriptivo, alcance de casos no vistos, sin ninguna lectura causal
-del peso de un modelo. Luego nombra el borde de lo que puedes afirmar: tu
-incertidumbre (la dispersión que ves cuando repites la partición reservada varias
-veces, una comprobación llamada validación cruzada), tu riesgo de fuga de datos y la
-población donde tu pronóstico puede dejar de generalizar. Un pronóstico reportado sin
-su frontera y sin su incertidumbre todavía no es defendible.
+1. Hazte la versión más directa de tu pregunta: ¿tu proyecto necesita adivinar el
+   resultado de un caso cuyo resultado todavía no existe? Escribe sí o no, y la
+   oración que justifica tu respuesta.
+2. Si es que sí, firma el contrato de cuatro partes, en orden. Nombra la columna
+   objetivo, la línea base honesta más tonta que tiene que superar, la partición que
+   deja sin ver una porción de los casos, y la métrica ajustada a qué tan raro es tu
+   resultado.
+3. Enumera tus características y escribe al lado de cada una el momento en que su
+   valor queda fijado. Marca con un círculo todo lo que quede fijado en el momento
+   del resultado o después. Ese conjunto marcado es tu lista de fuga de datos, y va
+   en tu reporte tanto si quitas esas características como si no.
+4. Escribe la frontera en una oración: los casos que tu pronóstico cubre y los que
+   quien te lea no debería suponer que cubre. Sé específico sobre qué los hace
+   diferentes.
+5. Si la predicción no es tu pregunta, escribe la línea que lo diga con claridad y
+   luego corre igual el paso 3. Una variable que queda fijada después del resultado
+   también hunde en silencio el trabajo descriptivo y el causal.
+6. Registra el paso en tu AI Research Ledger (registro de investigación con IA) y
+   verifica al menos una salida con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd). Para un modelo ajustado, el método es la
+   muestra reservada: nunca reportes un puntaje calculado sobre filas con las que el
+   modelo entrenó. Una IA revisora puede hacer la comprobación contigo; la decisión
+   de aceptar o rechazar es tuya.

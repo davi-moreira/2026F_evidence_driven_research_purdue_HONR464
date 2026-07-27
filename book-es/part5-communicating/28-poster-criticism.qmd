@@ -2,111 +2,114 @@
 title: "Crítica del póster"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Antes de que tu póster se vuelva permanente, tú
-> decides si cada afirmación que lleva está realmente respaldada o si todavía necesita
-> un arreglo más antes de cerrarlo. Un póster respaldado mantiene su titular dentro de
-> su evidencia, muestra su incertidumbre junto a la afirmación, rastrea cada número
-> hasta una celda y llega a todo lector. Este capítulo te prepara para correr esa
-> auditoría como lo haría un desconocido hostil y luego defender la decisión de cierre
-> que tomes.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay un capítulo de RDSS (*Research Design in the Social Sciences*, el libro complementario del curso) que acompañe este tema; este capítulo se sostiene por sí solo.
-:::
+> **La decisión de investigación.** Antes de que tu borrador se convierta en la versión
+> que otras personas leen, decides si está listo o si necesita un arreglo más. Corres la
+> auditoría que correría un desconocido hostil: ¿el titular se queda dentro de la
+> evidencia?, ¿la imagen coincide con los números?, ¿la incertidumbre está junto a la
+> afirmación?, ¿cada número se rastrea hasta una celda?, ¿todo el mundo puede recibirlo?
+> Después tomas la decisión de cierre y la defiendes en voz alta.
 
 ## Por qué importa esta decisión
 
-Imagina la última hora antes de que se imprima un póster. Una **jueza de integridad de
-la investigación**, la persona que en una conferencia indaga si las afirmaciones de un
-póster están realmente respaldadas, recorre tu fila y se detiene en un número de tu
-tablero. "¿De dónde salió esto?". Si puedes llevarla hasta la línea exacta de código que
-lo produjo, todo el póster se gana la confianza. Si respondes "creo que eso salió del
-análisis, en alguna parte", deja de creer también en todos los demás números. Una vez
-que el archivo se va a la imprenta ya no puedes parcharlo, así que la honestidad tiene
-que estar construida antes de que salga de tus manos. Este capítulo es la última
-auditoría entre un póster borrador y uno permanente.
+**La decisión en juego: si este borrador es lo bastante honesto para volverse
+permanente, o si primero necesita un arreglo más.**
+
+Imagina la última hora antes de que se imprima un póster. Una **jueza de integridad de la
+investigación**, la persona que en una conferencia indaga si las afirmaciones de un póster
+están de verdad respaldadas, recorre tu fila y se detiene en un número de tu tablero. "¿De
+dónde salió esto?". Si puedes llevarla a la línea exacta de código que lo produjo, todo el
+póster se gana la confianza. Si respondes "creo que eso salió del análisis, en alguna
+parte", la jueza deja de creerle también a todos los demás números. Una vez que el archivo
+se va a la imprenta ya no puedes parcharlo, así que la honestidad tiene que estar construida
+antes de que salga de tus manos. Este capítulo es la última auditoría entre un póster
+borrador y uno permanente.
 
 ## El concepto
 
-Tres pasadas convierten un póster frágil en uno que sobrevive a un desconocido, y cada
-una termina en una decisión que solo tú puedes tomar.
+Tres pasadas convierten un póster frágil en uno que sobrevive a un desconocido, y cada una
+termina en una decisión que solo tú puedes tomar.
 
-La primera pasada es la **auditoría de recorrido de galería**, un recorrido estructurado
-en el que te detienes ante un póster y corres siempre la misma lista fija en lugar de
-echar un vistazo y seguir. Cuatro preguntas forman su núcleo. La auditoría del límite de
-la afirmación pregunta si el titular se queda dentro de su evidencia, donde un **límite
-de la afirmación** es la línea entre lo que tu evidencia autoriza y lo que no, y vive en
-el verbo del titular: un ensayo de campo observacional puede decir "se asocia con", nunca
-"causa". La auditoría de honestidad de la figura pregunta si la imagen coincide con los
-números, donde la **honestidad de la figura** significa que un gráfico no puede decir más
-que sus datos, así que un eje que empieza justo debajo de los datos dibuja una brecha
-pequeña como un cañón. La auditoría del recorrido de lectura pregunta si un desconocido
-encuentra el titular en noventa segundos. La auditoría de incertidumbre pregunta si el
-intervalo queda junto a la afirmación y no enterrado en una nota al pie. Una quinta
-comprobación, la accesibilidad, pregunta si todo lector puede recibir la afirmación, y su
-arreglo tiene nombre: la **codificación redundante** significa llevar una distinción en
-más de un canal, como una etiqueta con el valor más un patrón de tramado, para que el
-color nunca sea la única señal que un lector con daltonismo puede perder.
+La primera pasada es la **auditoría de recorrido de galería**, un recorrido estructurado en
+el que te detienes ante un póster y corres la misma lista fija en lugar de echar un vistazo
+y seguir. Cuatro preguntas forman su núcleo. La auditoría del límite de la afirmación
+pregunta si el titular se queda dentro de su evidencia, donde un **límite de la afirmación**
+es la línea entre lo que tu evidencia autoriza y lo que no, y vive en el verbo del titular:
+un ensayo de campo observacional puede decir "se asocia con", nunca "causa". La auditoría de
+honestidad de la figura pregunta si la imagen coincide con los números, donde **honestidad
+de la figura** significa que un gráfico no puede decir más que sus datos, así que un eje que
+empieza justo debajo de los datos dibuja una brecha pequeña como un cañón. La auditoría del
+recorrido de lectura pregunta si un desconocido encuentra el titular en noventa segundos. La
+auditoría de incertidumbre pregunta si el intervalo va junto a la afirmación y no enterrado
+en una nota al pie. Una quinta comprobación, la accesibilidad, pregunta si todo el mundo
+puede recibir la afirmación, y su arreglo tiene nombre: **codificación redundante** significa
+llevar una distinción en más de un canal, por ejemplo una etiqueta con el valor más una
+trama, para que el color nunca sea la única señal que una persona con daltonismo pueda
+perder.
 
-La segunda pasada es la **defensa oral**, la conversación en vivo frente a tu tablero en
-la que respondes preguntas que después no puedes editar. Tres lentes cubren casi toda
-pregunta difícil: alguien de fuera que prueba si tu afirmación sobrevive a la traducción,
-un especialista que indaga una decisión de diseño y un escéptico que ofrece una
-explicación rival para la misma evidencia. El juicio que hay debajo es **defender o
-conceder**: defiendes cuando la objeción pide algo que tu evidencia ya autoriza, y
-concedes, estrechando la afirmación en el momento, cuando pide un cruce que tu diseño
-nunca pagó. Tu **posición en la brújula**, el tipo y el alcance de la pregunta que
-respondió tu proyecto, te dice cuál de las dos elegir.
+La segunda pasada es la **defensa oral**, la conversación en vivo frente a tu tablero donde
+respondes preguntas que después no puedes editar. Tres lentes cubren casi toda pregunta
+difícil: alguien de fuera que prueba si tu afirmación sobrevive a la traducción, una persona
+especialista que indaga una decisión de diseño y alguien escéptico que ofrece una explicación
+rival para la misma evidencia. El juicio que hay debajo es **defender o conceder**: defiendes
+cuando la objeción pide algo que tu evidencia ya autoriza, y concedes, angostando la
+afirmación en el momento, cuando pide un cruce que tu diseño nunca pagó. Tu **posición en la
+brújula**, el tipo y el alcance de la pregunta que respondió tu proyecto, te dice cuál de las
+dos elegir.
 
-La tercera pasada es el cierre. La **trazabilidad afirmación–evidencia** significa que
-cada número del póster se rastrea hasta la celda exacta que lo produjo, para que puedas
-mostrar esa línea cuando un juez la señale. El **cierre definitivo** es el momento en que
-el póster se vuelve final e inalterable, y por eso la auditoría previa es la más
-consecuente que corres en toda la semana.
+La tercera pasada es el cierre. La **trazabilidad afirmación–evidencia** significa que cada
+número del póster se rastrea hasta la celda exacta que lo produjo, para que puedas mostrar
+esa línea cuando alguien la señale. El **cierre definitivo** es el momento en que el póster
+se vuelve final e inmodificable, y por eso la auditoría que lo precede es la más
+consecuente que corres en todo el proyecto.
 
 ## Un ejemplo resuelto
 
-Un póster de honores en agronomía lleva el titular "El compost ELEVA el rendimiento de
-maíz". Su figura central es un gráfico de barras del rendimiento promedio de grano en
-parcelas que recibieron una enmienda de compost frente a parcelas que no, dibujado como
-una barra roja y una barra verde. Los promedios son 185 y 191 bushels por acre, una
-brecha de 6. El eje y empieza en 180 y no se muestra ningún intervalo. Las parcelas no
-fueron aleatorizadas; el agricultor eligió qué campos recibían compost.
+Un póster de biología vegetal lleva el titular "El compost SUBE el rendimiento del maíz". Su
+figura central es un gráfico de barras del rendimiento promedio de grano en parcelas que
+recibieron una enmienda de compost frente a parcelas que no, dibujado como una barra roja y
+una verde. Los promedios son 185 y 191 bushels por acre, una brecha de 6. El eje y empieza en
+180 y no se muestra ningún intervalo. Las parcelas no fueron aleatorizadas; quien cultiva
+eligió qué campos recibían compost.
 
 Recorre la auditoría de galería sobre él. La auditoría del límite de la afirmación atrapa
-primero el verbo: "eleva" es causal, pero nada fue aleatorizado, así que un campo
-naturalmente más rico pudo haber recibido a la vez el compost y el rendimiento más alto.
-El titular honesto es "el compost se asocia con unos 6 bushels por acre más". La auditoría
-de honestidad de la figura atrapa el eje, con piso en 180, que dibuja una brecha de 6
-bushels varias veces más alta de lo que realmente es, así que córrelo desde 0. La
-auditoría de incertidumbre atrapa el intervalo faltante: un intervalo del 95% de
-aproximadamente ±9 bushels por acre se traga una brecha de 6 bushels, así que tiene que
-viajar junto al titular. La auditoría de accesibilidad atrapa el par rojo-verde, que un
-revisor con daltonismo rojo-verde, cerca de un hombre de cada doce, no puede distinguir,
-así que agregas etiquetas de valor y un patrón de tramado.
+primero el verbo: "sube" es causal, pero nada fue aleatorizado, así que un campo naturalmente
+más rico pudo haber recibido tanto el compost como el rendimiento más alto. El titular
+honesto es "el compost se asocia con unos 6 bushels por acre más". La auditoría de honestidad
+de la figura atrapa el eje, con piso en 180, que dibuja una brecha de 6 bushels varias veces
+más alta de lo que en realidad es, así que córrelo desde 0. La auditoría de incertidumbre
+atrapa el intervalo ausente: un intervalo del 95% de aproximadamente ±9 bushels por acre se
+traga una brecha de 6 bushels, así que tiene que viajar junto al titular. La auditoría de
+accesibilidad atrapa el par rojo-verde, que alguien con daltonismo rojo-verde, cerca de uno
+de cada doce hombres, no puede distinguir, así que agregas etiquetas de valor y una trama.
 
 No puedes arreglar todo antes de imprimir, así que decides. El golpe del límite de la
-afirmación es el que viaja más lejos, porque un revisor que atrapa una extralimitación
-causal desconfía de todo el tablero, así que cierras primero el verbo asociativo. Esa
-única decisión, tomada por ti y defendida en voz alta, es el trabajo de este capítulo.
+afirmación es el que viaja más lejos, porque quien atrapa una exageración causal desconfía de
+todo el tablero, así que cierras primero el verbo asociativo. Esa única decisión, tomada por
+ti y defendida en voz alta, es el trabajo de este capítulo.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb11 — Poster criticism + final poster
-lock** (crítica del póster y cierre final). Ábrelo en Colab con la insignia de arriba y
-trabaja las celdas junto con este capítulo. En el laboratorio dibujas un mismo conjunto
-honesto de números piloto de dos maneras y lees el factor de exageración que imprime tu
-propia celda, corres las cuatro auditorías más la de accesibilidad sobre un póster de
-muestra, mapeas las tres lentes de defensa y registras los golpes que recibió tu propio
-póster en tu lista de cierre final.
+El laboratorio de este capítulo es el notebook **nb11 — Poster criticism + final poster lock**
+(crítica del póster y cierre final del póster). Ábrelo en Colab con el botón de arriba y
+trabaja las celdas junto con este capítulo. En el laboratorio dibujas un conjunto honesto de
+números piloto de dos maneras y lees el factor de exageración que imprime tu propia celda,
+corres las cuatro auditorías más la de accesibilidad sobre un póster de muestra, mapeas las
+tres lentes de defensa y anotas los golpes que recibió tu propio póster en tu lista de cierre
+final.
 
 ## Prompts de IA recomendados
 
-Comprométete primero con tu propia auditoría y después delega. Cada prompt le entrega a
-la herramienta una tarea que puedes comprobar, con una nota de verificación que nombra la
-falla contra la que te protege.
+Comprométete primero con tu propia auditoría y después delega. Cada prompt le entrega a la
+herramienta una tarea que puedes verificar, con una nota de verificación que nombra la falla
+contra la que te defiende.
+
+Trata cada prompt como una jugada de apertura. Cuando la respuesta vuelva pobre, di qué se le
+escapó y pregunta de nuevo. Quien revisa se afila en la segunda pasada, humano o máquina por
+igual. Algunas herramientas ya corren ese bucle internamente y devuelven solo la crítica
+final, lo cual es cómodo y también esconde el razonamiento que de otro modo podrías
+cuestionar.
 
 **Genera las preguntas hostiles (tú asignas cada una a una auditoría).**
 
@@ -120,11 +123,12 @@ questions you would ask, then name the single flaw this figure cannot answer.
 
 Después de ejecutarlo, verifica (contrarresta la *ilusión de exhaustividad*): asigna cada
 pregunta a una auditoría (límite de la afirmación, honestidad de la figura, recorrido de
-lectura, incertidumbre, accesibilidad). Una auditoría entera que la lista ordenada se
-salta es el hueco. Luego contrasta las sobrevivientes con la brecha real y el factor de
-exageración que imprimió tu propia celda del notebook.
+lectura, incertidumbre, accesibilidad). Una auditoría entera que la lista ordenada se salta es
+el hueco. Después contrasta las sobrevivientes con la brecha real y el factor de exageración
+que imprimió tu propia celda del notebook.
 
-**Lista las codificaciones de color para verificarlas (tú las contrastas con la figura renderizada).**
+**Enumera las codificaciones de color a verificar (tú las contrastas con la figura
+renderizada).**
 
 ```text
 Here is the code that draws my poster's headline figure: [paste the cell]. List
@@ -133,11 +137,11 @@ a red-green color-blind reader and a screen-reader user would fail to receive.
 Then propose one redundant encoding that carries the same distinction.
 ```
 
-Después de ejecutarlo, verifica (contrarresta el *método plausible pero equivocado*): lee
-cada codificación que nombre contra tu figura renderizada. Un consejo genérico de
-accesibilidad que no corresponde a cómo está dibujada realmente tu figura es incorrecto
-para tu caso, así que confía en la imagen que puedes ver y vuelve a renderizar después de
-aplicar uno de los arreglos propuestos.
+Después de ejecutarlo, verifica (contrarresta el *método plausible pero equivocado*): lee cada
+codificación que nombre contra tu figura renderizada. Los consejos de accesibilidad genéricos
+que no corresponden a cómo está dibujada tu figura están mal para tu caso, así que confía en
+la imagen que puedes ver y vuelve a renderizar después de aplicar uno de los arreglos
+propuestos.
 
 **Haz red team (revisión adversaria) a tu respuesta hablada (tú te quedas con las palabras).**
 
@@ -149,72 +153,57 @@ list the exact words.
 ```
 
 Después de ejecutarlo, verifica (contrarresta el *cambio silencioso de alcance*): lee cada
-frase señalada junto a tu posición en la brújula. Conserva cada captura de un "causa"
-hablado que tu póster escrito nunca dijo, y rechaza cualquier empujón a conceder un punto
-que tu diseño sí autoriza.
+frase señalada junto a tu posición en la brújula. Conserva cada captura de un "causa" hablado
+que tu póster escrito nunca dijo, y rechaza cualquier empujón a conceder un punto que tu
+diseño sí autoriza.
 
 ::: {.callout-important title="No delegues"}
-Estas cosas siguen siendo tuyas, por más fluida que suene la herramienta. Las palabras de
-tu afirmación titular y el verbo que la mantiene dentro de tu posición en la brújula. La
-decisión, tomada en voz alta, de defender un punto o conceder. Y la decisión de que el
-póster es lo bastante honesto para cerrarse. La herramienta puede generar preguntas
-difíciles y escanear una figura en busca de trampas de color; decidir qué autoriza tu
-evidencia, y responder por ello frente al tablero, es tuyo.
+Estas cosas se quedan contigo, por fluida que suene la herramienta. Las palabras de tu
+afirmación titular, y el verbo que la mantiene dentro de tu posición en la brújula. La
+decisión, tomada en voz alta, de defender un punto o conceder. Y la decisión de que el póster
+es lo bastante honesto para cerrarse. La herramienta puede generar preguntas difíciles y
+revisar una figura en busca de trampas de color; decidir qué autoriza tu evidencia, y
+responder por ello frente al tablero, es tuyo.
 :::
 
 ## Un caso de falla de la IA
 
-Le describes tu figura de compost a Gemini y le pides las preguntas más duras de un
-escéptico. Vuelve con una lista nítida de seis puntos: el tamaño de muestra, la única
-temporada de cultivo, el método de análisis de suelo, la generalización a otras regiones,
-el costo y la definición de "rendimiento". Se lee minuciosa, y la tentación es tratar el
-póster como completamente auditado.
+Le describes tu figura del compost a Gemini y le pides las preguntas más duras de alguien
+escéptico. Vuelve una lista nítida de seis puntos: el tamaño de muestra, la única temporada de
+cultivo, el método de análisis de suelo, la generalización a otras regiones, el costo y la
+definición de "rendimiento". Se lee como algo minucioso, y la tentación es dar el póster por
+auditado del todo.
 
-No lo está. La lista nunca menciona el eje truncado ni las barras rojo-verde. Esas son las
-dos fallas más concretas y más reparables del tablero, y la lista pulida se saltó ambas en
-silencio. Esta es la ilusión de exhaustividad: una respuesta larga y organizada que omite
-lo que más importa.
+No lo está. La lista nunca menciona el eje truncado y nunca menciona las barras rojo-verde.
+Esas son las dos fallas más concretas y más reparables del tablero, y la lista pulida se
+saltó ambas en silencio. Esta es la ilusión de exhaustividad: una respuesta larga y organizada
+que omite lo que más importa.
 
-Así lo detectas. Asignas cada pregunta a una auditoría. Cuatro caen en límite de la
-afirmación e incertidumbre, ninguna en honestidad de la figura, ninguna en accesibilidad.
-Faltan dos auditorías enteras, lo que te dice que la lista está incompleta por más segura
-que se lea. Luego contrastas las sobrevivientes con el factor de exageración que imprimió
-tu propia celda del notebook y descartas cualquier pregunta que suponga una brecha
-distinta de los 6 bushels que calculaste. La comprobación de exhaustividad es tuya, no de
-la herramienta.
+Así lo detectas. Asignas cada pregunta a una auditoría. Cuatro caen en límite de la afirmación
+e incertidumbre, ninguna en honestidad de la figura, ninguna en accesibilidad. Faltan dos
+auditorías enteras, lo que te dice que la lista está incompleta por confiada que se lea.
+Después contrastas las sobrevivientes con el factor de exageración que imprimió tu propia
+celda del notebook, y cortas cualquier pregunta que suponga una brecha distinta de los 6
+bushels que calculaste. La comprobación de exhaustividad es tuya, no de la herramienta.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.
-:::
+*Tienes una página borrador y una figura principal; este paso es la auditoría que decide si
+alguna de las dos sobrevive a un desconocido hostil.*
 
-El resultado clave del capítulo es que los mismos números dibujados con honestidad cuentan
-una historia más pequeña que la del gráfico truncado. Confírmalo con **cálculo directo**
-(de la [guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)): recalcula a
-mano la brecha de rendimiento, 191 menos 185 son 6 bushels por acre, luego recalcula el
-factor de exageración del eje truncado, la altura de la barra más alta por encima del piso
-de 180 dividida entre la de la más baja, y confirma que el gráfico honesto de 0 a la
-escala completa muestra una diferencia real pero pequeña. Para la fila de citas del cierre,
-agrega la **lectura de la fuente primaria**: haz clic en cada fuente que nombra tu póster y
-confirma que el trabajo abre y dice lo que tu póster afirma.
-
-## Transferencia al proyecto
-
-Este capítulo desarrolla y cierra el hito del **póster final**, y hace la entrega al hito
-de la defensa oral, donde presentas ese póster en voz alta. Tres movimientos se
-transfieren. Corre la auditoría de recorrido de galería sobre tu propio póster y registra
-cada golpe localizado, ordenado por qué tan lejos viaja el error. Enfrenta la defensa oral
-de tres lentes y lista cada afirmación que expuso como demasiado fuerte, junto con la
-redacción más suave que vas a cerrar. Luego toma la decisión de cierre: rastrea cada número
-hasta su celda, confirma que cada cita se resuelve y escribe el bloque de declaración de
-uso de IA que registra qué herramienta hizo qué tarea y cómo la comprobaste.
-
-## Defiende tu decisión
-
-En un párrafo corto, enuncia tu decisión de cierre para tu propio póster. ¿Está listo para
-ser definitivo, sí o no? Nombra tu titular cerrado y el único verbo que lo mantiene dentro
-de su posición en la brújula, y la incertidumbre que viaja en el mismo golpe de vista que
-la afirmación. Después nombra el límite: ¿qué golpe arreglaste, cuál dejaste para después y
-qué es lo que el póster cerrado sigue sin establecer? Una decisión de cierre sin límite
-enunciado y sin incertidumbre todavía no está defendida.
+1. Corre la auditoría de recorrido de galería sobre tu propio borrador como si nunca lo
+   hubieras visto: límite de la afirmación, honestidad de la figura, recorrido de lectura,
+   incertidumbre, accesibilidad. Anota cada golpe, localizado con la precisión suficiente para
+   arreglarlo.
+2. Ordena los golpes por qué tan lejos viaja el error. Un verbo causal que tu diseño nunca
+   compró viaja más lejos, porque quien atrapa una exageración deja de confiar en todo lo
+   demás.
+3. Enfrenta las tres lentes en voz alta: alguien de fuera, una persona especialista y alguien
+   escéptico con una explicación rival. Para cada pregunta, decide defender o conceder, y
+   escribe la redacción más angosta a la que concederías.
+4. Revisa una vez, arreglando los golpes en orden de prioridad, y después toma la decisión de
+   cierre. Cada número rastreado y cada cita abierta, o todavía no.
+5. Regístralo en tu AI Research Ledger (registro de investigación con IA) y verifica al menos
+   un número corregido con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd). Un revisor de IA puede hacer la comprobación
+   contigo; la decisión de aceptar o rechazar sigue siendo tuya.

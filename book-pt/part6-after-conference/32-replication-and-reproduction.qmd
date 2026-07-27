@@ -2,18 +2,17 @@
 title: "Replicação e Reprodução"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Você decide se o resultado relatado por um colega de fato
-> se reproduz a partir dos arquivos entregues e, depois, ordena as fragilidades que
-> encontrar pelo tamanho da ameaça que cada uma representa para a alegação principal,
-> não pela facilidade de corrigir cada uma.
+> **A decisão de pesquisa.** Sem nada além dos arquivos que um estudo entregou, seu ou
+> de outra pessoa, você decide se o número relatado de fato volta a aparecer. Depois,
+> você ordena as fragilidades que encontrou pelo tamanho da ameaça que cada uma
+> representa para a alegação principal, não pela facilidade de corrigir cada uma.
 
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do tópico correspondente do curso; o laboratório no Colab está no link acima. Não há capítulo companheiro no RDSS (*Research Design in the Social Sciences*) para este tópico; este capítulo se sustenta sozinho.
-:::
+## Por que essa decisão importa
 
-## Por que esta decisão importa
+**A decisão em jogo: se um resultado se regenera a partir dos arquivos sozinhos, e qual
+das fragilidades dele mais ameaça a alegação.**
 
 > *"Não me interessa que o seu gráfico esteja bonito nem que o código tenha rodado no
 > seu computador. Me entregue os seus arquivos e me deixe obter o mesmo número de
@@ -31,10 +30,10 @@ aprenda a enxergar as rachaduras antes que alguém as encontre no seu próprio t
 
 Duas palavras parecem iguais e significam coisas diferentes. **Reprodução** é obter o
 mesmo número a partir dos *mesmos* dados e do *mesmo* código que um estudo entregou.
-Exemplo: você abre o notebook de um colega, roda do começo ao fim e confere se a mesma
-figura de crescimento volta. **Replicação** é obter um resultado parecido a partir de
-um *novo* estudo ou de novos dados. Exemplo: um segundo laboratório faz o próprio
-experimento e vê o mesmo efeito. Este capítulo é sobre reprodução. Você testa o
+Exemplo: você abre o notebook de outro pesquisador, roda do começo ao fim e confere se
+a mesma figura de crescimento volta. **Replicação** é obter um resultado parecido a
+partir de um *novo* estudo ou de novos dados. Exemplo: um segundo laboratório faz o
+próprio experimento e vê o mesmo efeito. Este capítulo é sobre reprodução. Você testa o
 pacote, não o mundo.
 
 O que você testa é um **pacote de reprodutibilidade**: o conjunto completo que um
@@ -61,11 +60,11 @@ quando a verdadeira unidade experimental é o animal, a placa ou o tanque (Hurlb
 
 ## Um exemplo trabalhado
 
-O pacote de um colega testa se um probiótico adicionado à água aumenta o comprimento
-do corpo de larvas de peixe-zebra. São seis tanques: três recebem o probiótico, três
-recebem água pura. Cada tanque abriga cerca de 40 larvas, e o comprimento do corpo é
-registrado para cada larva. O pôster diz: **"O probiótico aumentou o comprimento do
-corpo das larvas em 0.5 mm."**
+Um pacote de outro laboratório testa se um probiótico adicionado à água aumenta o
+comprimento do corpo de larvas de peixe-zebra. São seis tanques: três recebem o
+probiótico, três recebem água pura. Cada tanque abriga cerca de 40 larvas, e o
+comprimento do corpo é registrado para cada larva. O pôster diz: **"O probiótico
+aumentou o comprimento do corpo das larvas em 0.5 mm."**
 
 **Reproduza.** Você faz restart-and-run-all. O código carrega o arquivo, separa as
 larvas por tipo de tanque e calcula a diferença entre as duas médias de grupo. O número
@@ -97,19 +96,22 @@ terceiro: real, mas a menor ameaça à existência de um efeito.
 
 ## O laboratório no Colab
 
-O laboratório deste capítulo é o notebook **nb14 — Async module: replication and
-red-team of a peer's package**. Abra no Colab pelo selo acima. Lá você reproduz a frio
-o número principal de um experimento de campo real, só a partir dos arquivos, e depois
-faz as mesmas três auditorias que você acabou de ver: alinha cada alegação escrita com
-a saída que a sustenta, move o número com uma especificação não divulgada e alarga o
-intervalo ao respeitar o agrupamento que o texto ignorou.
+O laboratório deste capítulo é o notebook **nb14 — replication and red-team of another
+researcher's package**. Abra no Colab pelo selo acima. Lá você reproduz a frio o número
+principal de um experimento de campo real, só a partir dos arquivos, e depois faz as
+mesmas três auditorias que você acabou de ver: alinha cada alegação escrita com a saída
+que a sustenta, move o número com uma especificação não divulgada e alarga o intervalo
+ao respeitar o agrupamento que o texto ignorou.
 
 ## Prompts de IA recomendados
 
-Comprometa-se primeiro com a sua própria resposta, depois delegue. Cada prompt é uma
-tarefa verificável, não um veredito que você terceiriza.
+Comprometa-se primeiro com a sua própria resposta, depois delegue. Nenhum destes
+prompts é um tiro único. Você manda o prompt, lê o que volta, interroga, afia o pedido
+e roda de novo. Isso é o loop de IA, e uma auditoria costuma levar duas ou três voltas
+antes de a ferramenta parar de chutar e começar a apontar para linhas de verdade. Cada
+prompt é uma tarefa verificável, não um veredito que você terceiriza.
 
-**Localize todo insumo que está faltando.**
+**Localize cada insumo que está faltando.**
 
 ```text
 Act as a cold reproducibility auditor. Here is everything a peer's package
@@ -174,44 +176,30 @@ a ferramenta endossou acaba se apoiando em uma certeza que os dados nunca conqui
 Um sinal verde e um parágrafo polido não são um resultado reproduzido. Você verifica o
 número e a correspondência dele com a alegação, nunca a história confiante sobre eles.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA para checar a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, que faz a pesquisa.
-:::
+*O seu projeto já tem alegações que você consegue defender e uma divulgação escrita de
+como a IA ajudou você a chegar até elas; este passo transforma tudo isso em arquivos
+que uma pessoa desconhecida conseguiria rodar sem você na sala.*
 
-Verifique o resultado central deste capítulo, o intervalo honesto no nível do tanque,
-com **código alternativo** do
-[guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-recalcule a mesma quantidade por outro caminho e compare. Reduza cada tanque a um único
-comprimento médio, o que dá seis números, e então tire a diferença entre as médias dos
-três tanques tratados e as dos três tanques de controle. Confirme que a estimativa
-pontual bate com o seu número no nível da larva e que a dispersão entre os seis tanques
-é bem maior do que a dispersão sugerida pelo cálculo ingênuo com 240 pontos. Reforce
-com um **cálculo direto**: tire a média de dois tanques na mão, a partir das linhas
-brutas, e confira se o seu código devolve as mesmas duas médias. Dois caminhos para uma
-resposta é um resultado verificado. Dois caminhos para duas respostas quer dizer que
-você mediu o pipeline, não os peixes.
-
-## Transferência para o projeto
-
-Este capítulo vira o seu **relatório de replicação e red team** sobre um pacote de
-colega designado a você. Monte o esqueleto a partir da sua própria execução: um
-registro de reprodução (o restart-and-run-all funcionou, qual número principal você
-obteve, ele bateu com o texto), um rastreamento de cada alegação até a saída que a
-sustenta, com toda divergência sinalizada, uma especificação alternativa e uma
-suposição oculta que você testou, e recomendações priorizadas pela ameaça que cada uma
-representa para a alegação. Publique no fórum da turma a fragilidade mais ameaçadora
-que você encontrou, junto com a única checagem que a resolveria. A auditoria que você
-faz aqui no trabalho de um colega é exatamente a auditoria que o seu próprio dossiê vai
-ter de sobreviver quando as aulas voltarem.
-
-## Defenda a sua decisão
-
-Em quatro frases, defenda o seu veredito sobre um pacote que você auditou. Diga o
-número principal que você reproduziu e se ele bateu com o texto. Aponte a única
-fragilidade que você classificou como a mais ameaçadora e o número ou a saída que a
-expôs. Dê o limite: a reprodução confirma que o número volta a ser gerado, não que a
-ciência está certa, e um red team aponta riscos que ele sozinho não resolve. Feche com
-a sua incerteza: a checagem que você não conseguiu terminar e a execução que ainda
-falta antes de você chamar o veredito de final.
+1. Junte tudo em uma pasta só: os dados, o código, a ordem de execução, a semente
+   aleatória e um texto curto que enuncie o seu número principal em palavras.
+2. Reproduza a frio você mesmo. Limpe o kernel, rode cada célula desde o topo sem
+   nenhum conserto manual e, se possível, faça isso em outra máquina que não a que você
+   usou para construir tudo. Anote se o seu número principal voltou exatamente, mais ou
+   menos, ou não voltou.
+3. Alinhe cada frase do seu texto com um número que o seu código de fato imprime.
+   Sinalize cada divergência, inclusive o arredondamento que você não teve a intenção
+   de esconder.
+4. Mude uma escolha defensável que você nunca revelou, uma regra de exclusão, um ponto
+   de corte ou um subconjunto, e registre o quanto o seu número principal se move.
+   Relate a faixa inteira, não a ponta mais simpática dela.
+5. Nomeie a suposição sem a qual o seu resultado desmoronaria e ordene tudo o que você
+   encontrou pela ameaça à alegação, não pela facilidade de conserto. Se você tiver
+   um colega, troquem as pastas e rodem a frio a do outro. O número que a outra pessoa
+   obtiver, colocado ao lado do número que você relatou, é a sua evidência de
+   reprodução.
+6. Registre a auditoria no seu **AI Research Ledger** (registro de pesquisa com IA), e
+   verifique pelo menos um resultado com um método nomeado do
+   [Guia de Verificação](../verification-guide.qmd). Um revisor de IA pode rodar a
+   checagem com você; a decisão de aceitar ou rejeitar continua sendo sua.
