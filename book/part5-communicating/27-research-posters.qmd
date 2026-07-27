@@ -82,7 +82,7 @@ and a screen reader reads no value off the image.
 The fixed figure keeps every number and changes only the honesty. You run the axis 0
 to 100, print each mean as a label on its bar, draw the ±4-point interval on top,
 separate the bars with a color-blind-safe pair plus a hatch pattern, and soften the
-headline to "Catalyst B yielded about 3 points higher, within overlapping intervals."
+headline to "Version B completed about 3 points higher, within overlapping intervals."
 Same data, a picture that now tells the truth.
 
 ## The Colab laboratory
@@ -114,9 +114,9 @@ advice that does not match how your figure is actually drawn).
 
 ```text
 Act as a hostile poster reviewer. My headline figure is a bar chart of mean
-percent yield for two catalysts, y-axis 70 to 76, red versus green bars, no
-interval shown, titled "Catalyst B BOOSTS yield." Generate the six hardest
-questions you would ask, then name the one this figure cannot answer at all.
+checkout completion rate for two page versions, y-axis 70 to 76, red versus green
+bars, no interval shown, titled "Version B BOOSTS completion." Generate the six
+hardest questions you would ask, then name the one this figure cannot answer at all.
 ```
 After running, verify: map each question to one audit (claim boundary, figure
 honesty, uncertainty, accessibility); an audit with no question is the gap, and the
@@ -146,8 +146,8 @@ earned. Those stay with you.
 ## An AI failure case
 
 You paste the described figure and ask Gemini for the hardest reviewer questions. It
-returns a confident, well-organized list of six: sample size, replicate count,
-generalization to other substrates, temperature control, and two more. Every question
+returns a confident, well-organized list of six: sample size, how many weeks were
+sampled, generalization to other product pages, seasonal traffic, and two more. Every question
 is reasonable, and not one mentions the truncated axis, the single worst flaw on the
 board. The list looks complete, so it is tempting to trust it and move on.
 
@@ -170,19 +170,20 @@ Verify the chapter's key result, that the truncated axis inflates the gap, with
 recompute the numbers by hand and compare them to the picture. The honest ratio of
 the two bars is 74 to 71, about 1.04, a four-percent difference. On an axis floored at
 70, the drawn heights are (74−70) to (71−70), which is 4 to 1. The figure makes
-Catalyst B's bar look four times Catalyst A's when the yields really differ by four
-percent, and the axis alone is doing that work. For a second road, redraw the same two
+Version B's bar look four times Version A's when the completion rates really differ
+by four percent, and the axis alone is doing that work. For a second road, redraw the same two
 means on a 0-to-100 axis (**alternative code**) and confirm the bars now look about as
 close as the numbers are.
 
 ## Project transfer
 
-This chapter turns into the headline figure of your poster milestone. Your **M9
-poster draft** carries a first version of that figure. Run the four audits plus
+This chapter turns into the headline figure of your poster milestone. Your **poster
+draft** carries a first version of that figure. Run the four audits plus
 accessibility on it now, log each located hit, and rebuild the figure honestly before
-the **M10 final poster lock**, where a number the picture overstates becomes a
+the **final poster lock**, where a number the picture overstates becomes a
 permanent, public claim you cannot patch after printing. The one figure you fix here
-is the one a stranger cannot break at the expo.
+is the one a stranger cannot break at your research conference (for the original
+course, the Purdue Fall Undergraduate Research Expo).
 
 ## Defend your decision
 

@@ -159,6 +159,10 @@ the people who left.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The chapter's key result is a claim about *how a procedure behaves*: random draws
 from a frame cluster on its truth, while a convenience channel can miss it no matter
 how large it grows. The right check for a claim about a procedure is **simulation**
@@ -172,12 +176,13 @@ AI sentence to trust.
 
 ## Project transfer
 
-This chapter is the spine of your **M4 observational descriptive design audit**.
+This chapter is the spine of your **observational descriptive design audit**
+milestone.
 For your own project you will write four pieces: the population, accessible
 population, frame, and sample stack, one line each; a selection diagram naming the
 one filter you most fear bends both who you reach and what you measure; a
 measurement note flagging the variable you most worry is missing not-at-random; and
-the two sentences M4 grades. The first is the population claim your frame licenses,
+the two sentences that milestone grades. The first is the population claim your frame licenses,
 stated with its uncertainty. The second is the silent upgrade your design forbids,
 written out so you can refuse it on sight. Draft all four yourself, then defend them
 at Friday's studio.

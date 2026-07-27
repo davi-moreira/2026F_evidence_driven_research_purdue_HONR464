@@ -39,8 +39,8 @@ builds all four from scratch. This chapter takes them somewhere harder.
 
 A **complex, or hybrid, design** is a research design whose four MIDA parts have more
 than one moving piece: several measurements, stages, or sub-questions stitched into a
-single answer. Example: computing a physical constant from two separate measurements,
-each with its own instrument and its own error.
+single answer. Example: computing a market's concentration score from two separate
+measurements, each drawn from its own source and carrying its own error.
 
 Two ideas decide whether such a design holds together. The first is **alignment**,
 meaning all four parts point at the same single quantity. Complexity breaks it in a
@@ -48,7 +48,7 @@ fresh way: two carefully built sub-measurements can each be fine yet quietly tar
 slightly different quantities that never combine into the one you named. The second is
 **error propagation**, meaning each measured input's uncertainty flows into the final
 answer, sometimes amplified. Example: if your answer depends on the *square* of a
-measured time, a 1% error in that time becomes roughly a 2% error in the result.
+measured share, a 1% error in that share becomes roughly a 2% error in the result.
 
 Keep the lab's two failure words close. **Bias** is a systematic tilt that more data
 does not shrink; **variance** is run-to-run wobble that more data does. Complexity lets

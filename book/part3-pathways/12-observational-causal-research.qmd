@@ -9,6 +9,10 @@ title: "Observational Causal Research"
 > decision by naming the one confounder it turns on and the identification argument
 > (if any) that closes the back door.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 16, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 Picture a thesis advisor reading your first draft. You wrote, "the treated group did
@@ -168,6 +172,10 @@ so there is no as-if-random assignment, the back door stays open, and *because* 
 earned. Say *associated with*, and log why.
 
 ## Verification laboratory
+
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
 
 Verify the chapter's key result with **simulation**, the method from the verification
 guide for checking how a *procedure* behaves rather than a fixed number. Build a world
