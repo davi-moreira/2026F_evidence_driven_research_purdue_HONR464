@@ -4,13 +4,16 @@ title: "Research Posters"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
 
-> **The research decision.** Decide whether your poster's headline figure is
-> *honest*: whether its visual impression matches its actual number, whether its
+> **The research decision.** One figure will do most of your talking. Decide whether
+> it is honest: whether its visual impression matches its actual number, whether its
 > uncertainty sits in the same glance as the claim, and whether every reader,
 > including a color-blind or screen-reader reader, can receive it. You own the
-> headline verb and the call that the picture never says more than the data.
+> headline verb, and you own the call that the picture never says more than the data.
 
 ## Why this decision matters
+
+**The decision on the table: whether your headline figure's picture says exactly
+what its numbers say, and nothing more.**
 
 > *"From four feet away I read one thing: does your tallest bar mean what it looks
 > like it means? If your axis starts halfway up the scale, I have caught you before
@@ -94,6 +97,12 @@ until each one names a located, fixable hit on the board.
 Commit your own audit first, then delegate. Each prompt below is a checkable job, not
 a request for a verdict.
 
+Run these as a loop. First answer, then your objection, then the sharper answer. The
+second and third rounds are usually where the useful criticism shows up, because a
+first pass tends to be generic. If your tool runs its own rounds before replying, you
+get the polish without seeing the drafts, so your own audit list matters more, not
+less.
+
 **Locate the color-only channels.**
 
 ```text
@@ -133,7 +142,7 @@ Counters *sycophantic agreement* (praise that reviews your nerve, not your evide
 ::: {.callout-important title="Do not delegate"}
 The words of your headline and the verb that carries its boundary are yours. So is
 the judgment that the figure's impression matches its number, the call that the
-uncertainty is visible in the same glance, and the decision that the poster is honest
+uncertainty is visible in the same glance, and the decision that the page is honest
 enough to lock. AI can generate the skeptic's questions and scan your code for
 color-only channels. It cannot see your board, and it cannot decide the claim was
 earned. Those stay with you.
@@ -154,39 +163,19 @@ creates, and you add the figure-honesty hit the tidy list skipped. Fluency is no
 completeness. The check lives in your own audit list, the one you wrote before you
 asked.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your claims now have rows and traces; this step turns them into the one page, or the
+one-figure summary, that a stranger meets first.*
 
-Verify the chapter's key result, that the truncated axis inflates the gap, with
-**direct calculation** from the
-[verification guide](../verification-guide.qmd):
-recompute the numbers by hand and compare them to the picture. The honest ratio of
-the two bars is 74 to 71, about 1.04, a four-percent difference. On an axis floored at
-70, the drawn heights are (74−70) to (71−70), which is 4 to 1. The figure makes
-Version B's bar look four times Version A's when the completion rates really differ
-by four percent, and the axis alone is doing that work. For a second road, redraw the same two
-means on a 0-to-100 axis (**alternative code**) and confirm the bars now look about as
-close as the numbers are.
-
-## Project transfer
-
-This chapter turns into the headline figure of your poster milestone. Your **poster
-draft** carries a first version of that figure. Run the four audits plus
-accessibility on it now, log each located hit, and rebuild the figure honestly before
-the **final poster lock**, where a number the picture overstates becomes a
-permanent, public claim you cannot patch after printing. The one figure you fix here
-is the one a stranger cannot break at your research conference (for the original
-course, the Purdue Fall Undergraduate Research Expo).
-
-## Defend your decision
-
-In four sentences, defend your headline figure. State the bounded claim it makes and
-the verb that keeps it inside your compass position. Name what the figure does not
-establish: the overlap in the intervals, the difference that might be noise, the reach
-your design never bought. Say how the uncertainty rides in the same glance as the
-claim, and name the one reader your design still works to reach. Close with the single
-check that decided the figure was honest enough to lock: the number you recomputed, or
-the audit you could not make fail.
+1. Choose the single figure that carries your lead claim, and draw it with the axis
+   running the full scale of the measure.
+2. Print each value as a label on the mark it belongs to, and draw the interval right
+   on the figure so the uncertainty arrives in the same glance as the number.
+3. Carry every meaningful distinction in at least two channels, so color is never the
+   only signal a reader can lose.
+4. Write the headline above the figure using the verb your claim boundary allows, and
+   lay out the rest of the page so a stranger finds that headline in under a minute.
+5. Log it in your AI Research Ledger, and verify at least one number on the page with
+   a named method from the [Verification Guide](../verification-guide.qmd). An AI
+   reviewer may run the check with you; the decision to accept or reject stays yours.

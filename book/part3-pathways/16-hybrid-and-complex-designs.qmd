@@ -165,36 +165,30 @@ chains too, and watch the "precise" index drift systematically upward. A quantit
 shifts well outside its own stated interval had an uncertainty that was never honest.
 Verify the number, not the tidy interval beside it.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*You have now walked all four pathways. This step decides whether your own project
+needs more than one moving piece, and makes you justify the answer either way.*
 
-Verify the chapter's key result, that a complex design's precision does not prove it is
-unbiased, with **simulation** from the
-[verification guide](../verification-guide.qmd).
-Declare the combined design in code with a known true index and a planted gap in the
-denominator's coverage, run it many times, and read the two numbers apart: variance
-shrinks as you add months, while bias stays exactly where the missing sellers put it.
-Then add a second, independent check, **direct calculation**: recompute the index by
-hand from your shares. Two roads to one answer is a verified result; two roads to two
-answers means the pipeline, not the market, is what you measured.
-
-## Project transfer
-
-This chapter deepens your **research charter and MIDA declaration** milestone, the
-three-minute declaration you present at Friday's studio. If your own project's design is complex,
-meaning it draws on more than one data source, runs a two-stage answer strategy, or
-blends a descriptive sub-question with a causal one, do not declare it as a single black
-box. Decompose it into its sub-designs, confirm each aligns to your single inquiry, and
-diagnose the whole rather than each piece alone. Bring that decomposition and one named
-redesign to the studio as the diagnosis-and-redesign part of your declaration.
-
-## Defend your decision
-
-In four sentences, defend one complex design. Name the sub-designs it stitches together
-and the single inquiry all of them must align to. State the bounded claim the whole
-design licenses, and say whether one sub-measurement's systematic error dominates the
-result. Close with your uncertainty: the sub-measurement whose bias you have not yet
-ruled out, and the one check you would run next to close it.
+1. Write your design as an ordered list of the measurements and stages it takes to
+   get from raw data to your answer. One line means a simple design. Two or more
+   means you are running a hybrid, whether you meant to or not.
+2. For each line, name which MIDA part it lives in and the single quantity it
+   targets. Then hold the list against your inquiry. Do all the pieces point at the
+   same quantity, or has one quietly drifted to a neighboring one?
+3. Pick the piece whose error would hurt most and trace how its uncertainty reaches
+   your final answer. Flag any step that squares, divides, or ratios a measured
+   value, because a small tilt gets amplified exactly there.
+4. Decide, and write the one-sentence justification. Either "this piece buys me
+   something a single measurement cannot, and I can characterize its error," or
+   "this piece adds a step I cannot characterize, so I am cutting it and narrowing
+   my claim to match."
+5. Name the systematic error in what remains that more data will never shrink, and
+   what you would have to change instead: a different source, a wider sampling
+   frame, a better instrument.
+6. Log the step in your AI Research Ledger, and verify at least one output with a
+   named method from the [Verification Guide](../verification-guide.qmd).
+   Simulation is the natural check for a stitched design: plant a known bias in one
+   piece, run the whole thing many times, and watch the variance shrink while the
+   bias sits exactly where you put it. An AI reviewer may run the check with you;
+   the decision to accept or reject stays yours.

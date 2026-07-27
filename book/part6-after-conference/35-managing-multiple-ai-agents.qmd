@@ -4,29 +4,47 @@ title: "Managing Multiple AI Agents"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
 
-> **The research decision.** Before you turn several AI roles loose on one piece of
-> your research, decide how to split the work into scoped jobs and wire them in an
-> order that no early mistake can slip past. You own the split and the order, and you
-> keep one step in the chain that no role is allowed to take.
+> **The research decision.** Several AI agents means several loops running at once. You
+> decide how to split the work into scoped jobs, in what order those loops run so that
+> no early mistake slips downstream, and which step in the chain no loop is ever
+> allowed to close.
 
 ## Why this decision matters
+
+**The decision on the table: how many AI loops you set running on one piece of your
+work, in what order, and which step you keep out of every one of them.**
 
 > *"Bring me a chapter, not a pile of AI output. I want to know which part each tool
 > touched, what you told it to do, and how you checked it. If you cannot tell me
 > that, you did not write the chapter."*
-> — your **thesis advisor**, reading the draft you will defend this week
+> — your **thesis advisor**, reading the draft you are about to defend
 
 By now one AI assistant can draft, cite, critique, and polish in a single breath. The
 temptation is to open four of them at once and feel four times as safe. You are not.
 Four roles reading the same draft with the same instructions tend to miss the same
-thing and agree loudly about it. The advisor above does not want a louder chorus. She
-wants to see that you broke the job into pieces, put those pieces in a sane order, and
-stayed the one person who decided what the chapter claims. This chapter gives you that
-management skill.
+thing and agree loudly about it. And each of those roles is not one prompt. It is a
+loop, running until you or it decides to stop. Four loops going at once is four times
+the output and, unmanaged, four times the unsupervised work. The advisor above does
+not want a louder chorus. She wants to see that you broke the job into pieces, put
+those pieces in a sane order, and stayed the one person who decided what the chapter
+claims. This chapter gives you that management skill.
 
 ## The concept
 
-The move that turns a crowd of AI roles into a workflow you can defend is **task
+Start with the unit you are actually managing. **The AI loop** is the cycle you have
+been running since the beginning of this book: you prompt, you read the output, you
+interrogate it, you refine the ask, you run it again. One loop, one job, one person
+watching. **Agentic tools** are AI systems that run that loop on their own, deciding
+their own next step and calling their own tools between your turns. Example: you ask
+for the citations to be checked and the tool searches, reads, rechecks, and revises
+across several turns before it comes back to you. It is faster, and every turn you did
+not read is a turn you did not supervise.
+
+So the real management question is not how many prompts you write. It is how many
+loops you have running, what each one is allowed to touch, and where they hand off to
+each other. You orchestrate loops, not prompts.
+
+The move that turns a crowd of loops into a workflow you can defend is **task
 decomposition**: breaking one large job into smaller subtasks, each with a single
 clear owner. Example: instead of asking a tool to "improve my chapter," you split the
 work into check the design, check the citations, and tighten the prose. Each piece
@@ -35,7 +53,8 @@ now has a pass-or-fail you can judge.
 Each piece becomes a **scoped role**: an AI job narrow enough to state in one sentence
 and check in one pass. Example: "flag every sentence in my results section that claims
 more than my sample can support." A scoped role has a clear finish line. "Make it
-better" does not.
+better" does not. That finish line is what makes the role's loop safe to run: the loop
+stops when the job is done, and you can tell from the outside whether it is.
 
 The backbone that keeps roles honest is the **worker-critic pair**: one role produces
 something and a second, separate role attacks what the first produced. Example: a
