@@ -9,6 +9,10 @@ title: "Managing Multiple AI Agents"
 > order that no early mistake can slip past. You own the split and the order, and you
 > keep one step in the chain that no role is allowed to take.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 24, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 > *"Bring me a chapter, not a pile of AI output. I want to know which part each tool
@@ -157,6 +161,10 @@ A green, tidy plan is not a valid one. You check the dependencies, not the confi
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key number, the critical-path depth, with **alternative code**
 from the [verification
 guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
@@ -169,8 +177,9 @@ that disagreement is the finding worth chasing.
 
 ## Project transfer
 
-This chapter builds the first piece of **M15**, your final research chapter and
-AI-management portfolio. Take one real section of your own project, your methods, your
+This chapter builds the first piece of your **final research chapter and AI-management
+portfolio**, the last project milestone. Take one real section of your own project,
+your methods, your
 results, or your limitations, and write down its decomposition: the scoped roles you
 will run, which run in parallel and which must wait, and the one node you keep human.
 Bring that decomposition to Friday's studio as the opening move of your portfolio. It

@@ -58,34 +58,35 @@ questions, each with its own position.
 
 ## A worked example
 
-Start with a physics curiosity: "why does my coffee go cold so fast?" Give it edges
-and it becomes a **topic**, heat loss from travel mugs. That one topic hides four
-different questions, one at each compass position. Newton's law of cooling, a standard
-result in introductory physics, says a warm object loses heat faster the hotter it is
-than the room. Against that backdrop you time twelve mugs as each cools from 90 °C to
-60 °C.
+Start with an everyday business curiosity: "why is the campus coffee line so slow at
+noon?" Give it edges and it becomes a **topic**, waiting time at campus dining
+counters. That one topic hides four different questions, one at each compass position.
+A standard result in operations research says waiting time climbs sharply once
+customers arrive nearly as fast as the counter can serve them. Against that backdrop
+you time how long twelve customers wait to be served.
 
-1. *"In these twelve mugs, what was the average time to cool from 90 to 60 °C?"* This
-   asks only what your recorded numbers say. It is **descriptive** with reach **data
-   at hand**. Position: **Description**.
-2. *"Across every mug of this model ever made, what is the mean cooling time?"* Same
-   descriptive kind, but the answer must hold for a population you did not measure,
-   paid for with a sampling design that makes your twelve stand in for the rest.
-   Position: **Generalization**.
-3. *"A new mug arrives tomorrow; how long until it cools to 60 °C?"* Still
+1. *"Among these twelve customers, what was the average wait?"* This asks only what
+   your recorded numbers say. It is **descriptive** with reach **data at hand**.
+   Position: **Description**.
+2. *"Across every customer at this counter during weekday lunch, what is the mean
+   wait?"* Same descriptive kind, but the answer must hold for a population you did
+   not measure, paid for with a sampling design that makes your twelve stand in for
+   the rest. Position: **Generalization**.
+3. *"A customer walks up tomorrow at noon; how long will they wait?"* Still
    descriptive, because you only need a pattern that travels to a case you have not
-   seen. Position: **Prediction**. You forecast the cooling time without knowing why
-   any particular mug runs fast or slow.
-4. *"Does adding a lid slow the cooling?"* Now the kind flips. To answer it you must
-   compare the same mug in two worlds, one with a lid and one without, and only one of
-   those worlds actually happens. That imagined comparison is the signature of a
-   **causal** question. Position: **Causal reasoning**.
+   seen. Position: **Prediction**. You forecast the wait without knowing why any
+   particular line runs fast or slow.
+4. *"Does opening a second register shorten the wait?"* Now the kind flips. To answer
+   it you must compare the same lunch hour in two worlds, one with a second register
+   and one without, and only one of those worlds actually happens. That imagined
+   comparison is the signature of a **causal** question. Position: **Causal
+   reasoning**.
 
-One move finishes the skill. A lab partner offers what they call one question: "how
-fast do our mugs cool, and does a lid slow them down?" It is **double-barreled**,
-fusing the descriptive headcount of question 1 with the causal comparison of question
-4, and no single design answers both. You split it, and each half keeps its own
-position.
+One move finishes the skill. A project partner offers what they call one question:
+"how long are our lines, and does a second register shorten them?" It is
+**double-barreled**, fusing the descriptive average of question 1 with the causal
+comparison of question 4, and no single design answers both. You split it, and each
+half keeps its own position.
 
 ## The Colab laboratory
 
