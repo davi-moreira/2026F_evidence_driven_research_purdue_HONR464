@@ -4,13 +4,16 @@ title: "Descriptive, Predictive, and Causal Questions"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
 
-> **The research decision.** This chapter equips you to classify any research
-> question on the **inquiry compass** by its *kind* (descriptive or causal) and its
-> *reach* (the data at hand, a population, or cases not yet seen), then defend that
-> placement by the answer the question actually wants rather than the words it
-> happens to carry.
+> **The research decision.** Where your question sits on the **inquiry compass**: what
+> *kind* of answer it wants (descriptive or causal) and how far that answer has to
+> reach (the data at hand, a population, or cases you have not seen). You place it,
+> and you defend the placement by the answer the question actually wants rather than
+> by the words it happens to carry.
 
 ## Why this decision matters
+
+**The decision on the table: what kind of answer your question wants, and for which
+units that answer has to hold.**
 
 A thesis advisor at your first committee meeting puts it plainly: *"Before I approve
 a single method, I make you answer two questions about your question. What kind of
@@ -18,13 +21,13 @@ answer does it want, and for whom must that answer hold?"* Everything downstream
 inside the box those two answers draw. Misclassify your question and every later
 method aims at the wrong target, because a method that describes what is there cannot
 tell you what an intervention would change. The compass fixes what your evidence may
-claim before you spend a term collecting it.
+claim before you spend months collecting it.
 
 ## The concept
 
 Every project narrows to a **research question**: the single sentence evidence can
 answer and be wrong about, such as "does a second register shorten the line?" Before you
-pick a method, you classify that question on the **inquiry compass**, the course map
+pick a method, you classify that question on the **inquiry compass**, the map
 that sorts any question by exactly two things. The compass is adapted from *Research
 Design in the Social Sciences* (Blair, Coppock, and Humphreys, 2023, ch. 7).
 
@@ -89,13 +92,17 @@ half keeps its own position.
 This chapter's lab is notebook **nb02 — From curiosity to a research problem: descriptive, predictive, causal**. Open it in Colab with the
 badge above and work the cells alongside this chapter. There you walk your own
 curiosity down to a question, watch a naive keyword sorter get fooled on a deck of
-eight questions, and place your own question on the compass in the shape your research
-opportunity landscape milestone will grade.
+eight questions, and place your own question on the compass in the shape you will
+reuse every time you declare a design.
 
 ## Recommended AI prompts
 
 Commit your own answer first in every case. Write your classification down before you
-open the tool, so its reply has something of yours to disagree with.
+open the tool, so its reply has something of yours to disagree with. And treat a
+disagreement as the start of a loop rather than a verdict: if the tool assigns a
+different position, ask it which word in your sentence drove that reading, rewrite the
+sentence, and ask again. Two or three passes usually show whether the argument is
+about your wording or about your design.
 
 Classify, after you have classified it yourself:
 
@@ -141,10 +148,10 @@ An assumption you cannot meet turns a confident method into a wrong one.
 ::: {.callout-important title="Do not delegate"}
 Three decisions stay yours: which problem you will study, how you word your question,
 and which compass position it belongs to. A tool can offer a label, but only you can
-decide what answer your question truly wants, and only you defend the placement at the
-studio. If you cannot classify your question cleanly yet, that is a finding, not a
-failure; a question that will not sit in one box is usually still double-barreled, and
-naming that is progress.
+decide what answer your question truly wants, and only you can defend the placement
+when someone challenges it. If you cannot classify your question cleanly yet, that is
+a finding, not a failure; a question that will not sit in one box is usually still
+double-barreled, and naming that is progress.
 :::
 
 ## An AI failure case
@@ -162,40 +169,30 @@ definitions and ask whether your design ever intervenes. It does not, so the que
 is descriptive (Description for the counters you timed, Generalization if it reaches
 to every counter on campus), and you reject the causal label as a silent scope change.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*You have one scoped research problem. This step decides what kind of answer it is
+asking for, which fixes what your evidence will ever be allowed to say.*
 
-The chapter's key result is a classification, which is a judgment call, so the fitting
-check from the [verification guide](../verification-guide.qmd) is
-**peer reasoning**. Explain your placement to a classmate or the instructor, walking
-them through the two definitions, and see whether the reasoning survives their hardest
-question. Do it after you have committed your own placement, so their challenge has
-something to push against. When your placement is causal, add a second, independent
-check: draw a **causal diagram** of what causes what and confirm your design isolates
-the effect, meaning a real comparison to a world that did not happen exists. Two
-checks that agree beat one, and guard against the trap where a tool and its own
-re-check share the same flaw.
-
-## Project transfer
-
-This chapter builds the spine of your **research opportunity landscape** milestone,
-which you pitch at the Friday studio. Take the strongest curiosity from your
-nb01 curiosity map, walk it down to a single question, and place that question on the
-compass in the exact shape that milestone grades: "my question is a [descriptive or causal]
-inquiry reaching [the data at hand / a population / unseen cases], because the answer
-it wants is [what]." Then name the one claim that position permits and the one it
-forbids. Every design declaration you make for the rest of the term lives inside the
-box you draw here.
-
-## Defend your decision
-
-In a short paragraph, state your project's question, naming its units of analysis, its
-outcome, and its target population, then give its compass position in the milestone
-shape above. Defend it: name the one claim the position permits and the boundary it draws
-(the reach it does not reach, and whether it earns the word "because"), and close with
-one sentence of honest uncertainty about the classification or the problem. A
-placement with no stated boundary and no stated uncertainty is incomplete, however
-confident it sounds.
+1. Write your research problem out as questions, three or four of them, each a
+   sentence evidence could answer and be wrong about. Problems almost always hide more
+   than one.
+2. Classify each question on both axes, kind and reach, and name the position. Beside
+   each, write one line of reasoning based on the answer the question wants, not on
+   the words it happens to use.
+3. Hunt the double-barrels. Any sentence with an "and" hiding a second question of a
+   different kind gets split into two clean questions, each with its own position.
+4. Pick your **lead question**, the one your project will be built around. Write one
+   sentence on why it and not the others, and one sentence naming a claim its position
+   forbids you even if the answer comes out beautifully.
+5. If your lead question is causal, describe the comparison world it needs: the
+   version of events that did not happen and that your design will have to stand in
+   for. If you cannot describe that world, your question is probably still descriptive,
+   and it is better to learn that now.
+6. Log the placement in your AI Research Ledger, and verify it with a named method from
+   the [Verification Guide](../verification-guide.qmd). A classification is a judgment,
+   so use peer reasoning: walk someone through the two definitions and your argument,
+   and see whether it survives their hardest question. If your position is causal, add
+   a second, independent check by drawing a causal diagram and confirming the effect is
+   actually identified. An AI reviewer may run either check with you; the decision to
+   accept or reject stays yours.

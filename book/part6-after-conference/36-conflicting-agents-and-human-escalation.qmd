@@ -178,39 +178,29 @@ this trap measured. Four correlated reviewers miss a real flaw about seven times
 often as four independent ones, and piling on more correlated roles cannot close the
 gap.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project already has a small AI team running on one section; this step decides in
+advance where those loops must stop and hand the call back to you.*
 
-Verify the chapter's key result, the correlated team's miss rate, with **direct
-calculation** from the [verification guide](../verification-guide.qmd):
-recompute the same quantity a second way and compare. Four independent reviewers, each
-catching a flaw half the time on its own, all miss only when every one misses at once:
-0.5 × 0.5 × 0.5 × 0.5 = 0.0625, about the 6% the lab prints. The correlated team misses
-on the entire shared blind spot, 40% of chapters, plus the other 60% where each still
-misses on its own: 0.40 + 0.60 × 0.0625 = 0.4375, about the 43% the lab prints. Two
-roads, one answer. The gap between 6% and 44% is the whole argument, and now you hold it
-by hand, not on faith.
-
-## Project transfer
-
-This chapter builds two of the four parts of your **final research chapter and
-AI-management portfolio**, the last project milestone. The first is your
-**conflict-and-override log**: one real clash
-between your roles, your diagnosis (real disagreement, correlated error, or false
-consensus), and the override you made with the non-AI check that backed it. The second
-is your **independence check**: one place your roles agreed on something that mattered,
-and the independent test that made the agreement worth more than a head-count. Write
-both from your own project this week, so your portfolio shows not just that your roles
-agreed, but that you knew when their agreement was worth trusting.
-
-## Defend your decision
-
-In four sentences, defend one moment you escalated. Name the AI agreement or conflict
-you faced and the diagnosis you made (real disagreement, correlated error, or false
-consensus). State the call you took back and the independent check that decided it, not
-the roles' vote. Then name the boundary and the uncertainty: what your override
-established, what it did not, and the one blind spot your roles might still share that
-you have not yet ruled out.
+1. Write your escalation rules before the next round starts. List the specific
+   decisions no loop may close: your claim boundary, your uncertainty, which sources
+   are real, what counts as done, and anything with an ethical edge. Keep the list
+   short enough to remember under pressure.
+2. Add the stopping conditions that are not about content. How many turns a loop may
+   run before you read it, and what an agentic tool is allowed to change without
+   asking you first.
+3. Find one real disagreement in what your roles have already returned, and diagnose
+   it on the record: real disagreement, correlated error, or a consensus your own
+   prompt manufactured. Say which and why.
+4. Resolve it yourself with a check the loops cannot run: recompute the number, open
+   the source, or compare against a figure that was never in any prompt. Write the
+   resolution and the check together, because one without the other is just an
+   opinion.
+5. Take one place your roles agreed on something that mattered and test whether the
+   agreement was independent. Rerun one of them with a different framing and different
+   context, or verify the point yourself outside the tools.
+6. Log the conflict, the diagnosis, and the override in your AI Research Ledger, and
+   verify at least one output with a named method from the
+   [Verification Guide](../verification-guide.qmd). An AI reviewer may run the check
+   with you; the decision to accept or reject stays yours.

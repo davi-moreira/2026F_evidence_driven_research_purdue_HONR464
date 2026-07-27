@@ -4,14 +4,16 @@ title: "AI as Adversarial Reviewer"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
-> **The research decision.** When an adversarial reviewer hands you a list of
-> flaws in your own analysis, you decide which flaws are real by running the single
-> data check that confirms or refutes each, instead of acting on whichever reviewer
-> sounds most certain. This chapter equips you to pre-commit your robustness checks,
-> verify every flag against your data, and defend the one bounded claim that
-> survives.
+> **The research decision.** When a reviewer hands you a list of flaws in your own
+> analysis, you decide **which flaws are real, and you decide it by running the one data
+> check that confirms or refutes each**, never by going with whichever reviewer sounded
+> most certain. Confidence is not evidence, and a panel of confident reviewers is not
+> three pieces of evidence.
 
 ## Why this decision matters
+
+**The decision on the table: which of the flaws a reviewer names are real, settled by a
+check you run rather than by how sure the reviewer sounded.**
 
 Picture the review of a proposal to roll out a store change chain-wide. An
 **operations manager** is the person whose sign-off lets your change reach every
@@ -32,7 +34,7 @@ flag you actually verified against the data.
 
 An **adversarial reviewer** is a reader whose job is to attack your result and find
 where it breaks, not to praise it. Example: a peer who tries to show your measured
-improvement was luck rather than a real change. The reviewer can be a classmate, one
+improvement was luck rather than a real change. The reviewer can be a colleague, one
 AI tool, or a panel of models, and each fails in its own way.
 
 You defend a result by trying to break it first. A **robustness check** re-runs the
@@ -55,9 +57,19 @@ not help.
 One more failure earns a name because AI reviewers make it constantly. **Correlated
 error** is two reviewers wrong in the same way, so their agreement is an echo, not a
 confirmation. Example: two AI models share a blind spot and both flag the same
-non-issue with equal confidence. Across all of this the rule is one sentence: a
-reviewer proposes a flaw, and the data decides whether it is real. Confidence, human
-or machine, tells you nothing about whether the flaw exists.
+non-issue with equal confidence.
+
+### An agentic reviewer still does not get a vote
+
+You can now point a tool at your whole analysis and let it run its own loop: read your
+code, rerun it, poke at variants, and come back with a ranked list of problems. That is
+a genuine upgrade over a single prompt, and it will find real errors you missed. It
+changes nothing about who adjudicates. Every item on that list is still a proposal, and
+each one still needs the same treatment: name the check, run the check, read your own
+output. The list is longer and better organized than it used to be, which makes it more
+tempting to accept wholesale, so hold the line harder. A reviewer proposes a flaw, and
+the data decide whether it is real. Confidence, human or machine, tells you nothing
+about whether the flaw exists.
 
 ## A worked example
 
@@ -170,41 +182,30 @@ problem your data do not have. Trust the certainty and you throw away a genuine
 result on a hunch. Pointing the check at your own numbers is the only thing that
 settled it.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project has an estimate, a range around it, and a negative test behind it. This
+step hands the whole thing to a reviewer whose only job is to break it, and makes you
+the one who decides what broke.*
 
-The chapter's key result is that confidence never certifies truth: a winning number
-can be manufactured by searching, and a confident flag can be pure invention.
-Confirm it yourself with **simulation** (from the
-[verification guide](../verification-guide.qmd)). Compare two
-stretches of the same unchanged layout against each other, so the true difference is
-zero by construction, then slice the visits by hour and let a searcher report the
-best-looking slice. Watch an "improvement" appear from nothing. For the specific
-number, add **alternative code**: recompute the same p95 a second way, sorting the raw
-wait times and reading the 95th-percentile index directly, and confirm the two roads
-give one answer.
-
-## Project transfer
-
-This chapter feeds your **poster draft and research audit milestone**, presented
-at Friday's studio. A **research audit** is the graded record of how hard you tried
-to break your own claim and what survived. Three moves carry over. Pre-list the
-three robustness or placebo checks you commit to for your own estimate, each tied to
-the reviewer attack it answers. Build a verified AI-review trail: every flaw a human
-or a model panel raised, marked confirmed or refuted by a data check, plus the most
-confident wrong flag you caught. Then state the one limitation no check could fix.
-Write it so a reader who has never seen your project could tell how far you pushed on
-your own number.
-
-## Defend your decision
-
-In a short paragraph, state the one bounded claim your analysis supports after you
-attacked it. Name the check you pre-listed, the flag you verified against the data,
-and whether you accepted, changed, or rejected what a reviewer returned. Then name
-its boundary and your uncertainty. Which reviewer flag did the data refute, and
-where is your claim a boundary problem that no further check can rescue? A result you
-have not tried to break, and a flaw you accepted without a check, are both
-undefended.
+1. Write a one-paragraph summary of your design, your headline claim, and the checks you
+   have already run. A reviewer who does not know what you did will invent flaws you
+   ruled out last week.
+2. Commission the review: ask for the single most serious flaw and the exact measurement
+   that would confirm or refute it. Do this at least twice, with different framings or
+   different tools, and treat two matching answers as one candidate to check rather than
+   as two confirmations.
+3. Take the three hardest points you got back. For each, write the one data check that
+   would settle it, in a single line.
+4. Run all three checks against your own data. Mark each flag confirmed or refuted by
+   your own output, never by how certain the reviewer sounded. Save the most confident
+   wrong flag you caught; it tells you something about the tool you will use again
+   tomorrow.
+5. Find the flaw that no check can fix, the one that is a boundary problem rather than a
+   measurement problem, and narrow your claim until the claim is true.
+6. Log the review and every adjudicated flag in your AI Research Ledger, and verify at
+   least one output with a named method from the
+   [Verification Guide](../verification-guide.qmd). **Peer reasoning** belongs here:
+   walk your narrowed claim past a person and see whether it survives their first
+   question. An AI reviewer may run the check with you; the decision to accept or reject
+   stays yours.

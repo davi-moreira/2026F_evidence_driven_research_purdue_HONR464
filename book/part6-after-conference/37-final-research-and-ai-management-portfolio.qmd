@@ -4,20 +4,23 @@ title: "Final Research and AI-Management Portfolio"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
 
-> **The research decision.** Decide which claims from a semester of AI-assisted work
-> you will stand behind at your public defense, and assemble the AI-management
-> portfolio that shows how you ran your AI team, what you kept in your own hands, and
-> how each surviving claim was checked.
+> **The research decision.** Out of everything your project produced, you decide which
+> claims you will stand behind in public, and you assemble the record that shows how
+> you ran your AI team, what you kept in your own hands, and how each surviving claim
+> was checked.
 
 ## Why this decision matters
+
+**The decision on the table: which of your claims you are willing to be wrong about in
+public, and what record you can show for how you checked them.**
 
 > *"By the time you stand up to defend, I do not count your tools. I ask which claims
 > you are willing to be wrong about in public, and whether you can show me you checked
 > them yourself."*
-> — a **defense examiner**, on the day the portfolio is due
+> — a **defense examiner**, opening the folder you handed over
 
 You reach this chapter with a full project behind you and one thing left to do: gather
-it into something you can defend out loud. A semester of AI-assisted work leaves a trail
+it into something you can defend out loud. Months of AI-assisted work leave a trail
 of drafts, role outputs, and half-finished checks. Left in a pile, none of it is
 defensible. The examiner will not read the pile. She will ask which claims you own,
 where each stops, and how you know. This chapter is where you decide those answers on
@@ -33,8 +36,8 @@ a lab project it holds your headline result, the measurements behind it, and the
 you ran to confirm the number is right.
 
 Alongside it sits **an AI-management portfolio**, the honest record of how you ran your
-AI team all semester: which tasks you delegated, where you took the decision back, and
-which calls you never handed to a tool. Example: it shows a reviewer role drafted your
+AI team from the first curiosity to the last check: which tasks you delegated, where
+you took the decision back, and which calls you never handed to a tool. Example: it shows a reviewer role drafted your
 limitations, that you overrode it when it softened a claim you could not support, and
 that you alone chose the claim boundary.
 
@@ -57,27 +60,27 @@ own record.
 
 ## A worked example
 
-Picture an honors project in analytical chemistry. You measured how much acetic acid a
-bottle of vinegar contains, using **titration**, a lab method where you add a solution
-of known strength drop by drop until a reaction just finishes, revealing the unknown
-amount. Three runs gave an average of 4.9% acetic acid by mass. Now you choose the claim
-you will defend.
+Picture a small plant-biology project. You tested how many seeds from one packet of
+lettuce seed actually sprout, using a **germination test**, a standard method where you
+lay a counted number of seeds on damp paper under steady warmth and light, then count
+how many have sprouted after a fixed number of days. Three trays of 50 seeds each gave
+an average of 88% germination. Now you choose the claim you will defend.
 
-You run three AI reviewer roles on your chapter draft. A reviewer role praises your
-headline sentence, "Vinegar contains 4.9% acetic acid." A diagnostician role flags the
-same sentence for reaching past your evidence: you measured one bottle three times, not
-vinegar in general. That disagreement is a gift, because it points straight at the
+You run three AI reviewer roles on your draft. A reviewer role praises your headline
+sentence, "Lettuce seed germinates at 88%." A diagnostician role flags the same
+sentence for reaching past your evidence: you tested one packet in three trays, not
+lettuce seed in general. That disagreement is a gift, because it points straight at the
 boundary decision. You take the pen back and rewrite the claim to what your data hold:
-"This bottle, measured three times, averaged 4.9% acetic acid, with the runs spanning
-4.7% to 5.1%." The narrower sentence is the one you will defend.
+"This packet, tested in three trays of 50, averaged 88% germination, with the trays
+spanning 84% to 92%." The narrower sentence is the one you will defend.
 
-Then you run an independence check the tools cannot fake. The bottle's own label states
-5% acidity, so you compare your 4.9% against that value by hand. The two numbers land
-close, which is real reassurance because the label was never part of your AI workflow.
-Your stopping rule is now satisfied, so you stop. Into the AI-management portfolio go
-four things: the roles you ran, the reviewer-versus-diagnostician conflict and your
-override, this stopping rule, and the label comparison that made your reviewers'
-agreement worth more than a head count.
+Then you run an independence check the tools cannot fake. The packet's own label states
+a germination rate of 85%, so you compare your 88% against that value by hand. The two
+numbers land close, which is real reassurance because the label was never part of your
+AI workflow. Your stopping rule is now satisfied, so you stop. Into the AI-management
+portfolio go four things: the roles you ran, the reviewer-versus-diagnostician conflict
+and your override, this stopping rule, and the label comparison that made your
+reviewers' agreement worth more than a head count.
 
 ## The Colab laboratory
 
