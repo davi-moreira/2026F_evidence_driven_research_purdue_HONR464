@@ -21,7 +21,7 @@ an echo, and the moment you halt the loops and decide for yourself.**
 
 By now you can run a small team of AI roles on your work, which means you can run
 several loops at once. The seductive next thought is that a team is safer than one
-assistant, so three roles blessing your chapter must mean three confirmations. It does
+assistant, so three roles blessing your draft must mean three confirmations. It does
 not. Three loops built the same way, reading the same draft with the same
 instructions, tend to make the same mistake, so their agreement is one error repeated
 three times. Worse, a loop that keeps running can talk itself into confidence: each
@@ -49,7 +49,7 @@ simple: could they be wrong the *same* way? If yes, their consensus is one signa
 not three.
 
 **False consensus** is when the roles agree only because your prompt framed the task
-so they had to. Example: you ask "confirm my chapter is ready," and every role
+so they had to. Example: you ask "confirm my draft is ready," and every role
 obliges. You led all the witnesses. Reframe the ask neutrally and run it again.
 
 The tool that tells these apart is an **independence check**: a test that makes
@@ -154,7 +154,7 @@ worst one, then rerun the review neutrally. Counters *sycophantic agreement* (pr
 that rehearses your ego, not your evidence).
 
 ::: {.callout-important title="Do not delegate"}
-Which claims your chapter can defend, where each claim must stop, whether an agreement
+Which claims your draft can defend, where each claim must stop, whether an agreement
 among your roles was ever independent, and the moment to escalate: those stay yours. No
 role decides its own trustworthiness, and no head-count of roles decides your claim
 boundary or your ethics. When an AI output would *settle* one of those rather than
@@ -163,7 +163,7 @@ inform it, you stop and you decide.
 
 ## An AI failure case
 
-You send your chapter to four AI roles and all four reply "no major problems." It feels
+You send your draft to four AI roles and all four reply "no major problems." It feels
 like overwhelming confirmation, and it is confidently wrong. The four share a base model
 and read the same draft with the same instructions, so they share a blind spot.
 Whenever your one real flaw falls inside that blind spot, all four miss it together.

@@ -37,9 +37,9 @@ you ran to confirm the number is right.
 
 Alongside it sits **an AI-management portfolio**, the honest record of how you ran your
 AI team from the first curiosity to the last check: which tasks you delegated, where
-you took the decision back, and which calls you never handed to a tool. Example: it shows a reviewer role drafted your
-limitations, that you overrode it when it softened a claim you could not support, and
-that you alone chose the claim boundary.
+you took the decision back, and which calls you never handed to a tool. Example: it
+shows a reviewer role drafted your limitations, that you overrode it when it softened
+a claim you could not support, and that you alone chose the claim boundary.
 
 The decision that closes both is your **stopping rule**, a written statement of what
 "done" means, phrased around your own verified confidence rather than the tools'
@@ -49,7 +49,7 @@ because a team of look-alike tools can agree loudly and be wrong together.
 
 That trap has a name you will guard against: **false consensus**, agreement that exists
 only because the tools shared a blind spot or you asked a leading question. Example: you
-ask three reviewers to "confirm my chapter is ready," and all three oblige, so the
+ask three reviewers to "confirm my draft is ready," and all three oblige, so the
 chorus tells you nothing. The cure is **an independence check**, a step that makes
 agreement worth more than a head count: a check you run yourself, outside the tools.
 
@@ -114,9 +114,9 @@ quoted with an invented source.
 **List every claim to verify.**
 
 ```
-Here is my draft chapter: [paste]. List every empirical claim in it as a table: the
-claim, the number or measurement it rests on, and whether that claim stays inside my
-single sample or reaches past it. Do not add any new claims.
+Here is my draft: [paste]. List every empirical claim in it as a table: the claim,
+the number or measurement it rests on, and whether that claim stays inside my single
+sample or reaches past it. Do not add any new claims.
 ```
 
 After running, verify: check the table against your own list of what you measured, and
@@ -147,7 +147,7 @@ you know.
 
 ## An AI failure case
 
-You send your finished chapter to three reviewer roles and ask each to "confirm it is
+You send your finished draft to three reviewer roles and ask each to "confirm it is
 ready to submit." All three return the same verdict: "Looks solid, no major problems."
 It feels like three confirmations. It is one. The three roles run on the same base
 model, you gave them the same leading prompt, and they share a blind spot: none flags
@@ -156,7 +156,7 @@ That is false consensus, and trusting it would send an overclaimed result into y
 defense.
 
 You catch it with a reframe and a check the tools cannot see. First you drop the leading
-ask and run a neutral one: "List the three weakest claims in this chapter and why." Now
+ask and run a neutral one: "List the three weakest claims in this draft and why." Now
 a role names the missing range. Then you leave the tools entirely and recompute the
 spread of your trays yourself, which hands you the 84% to 92% boundary the reviewers
 all skipped. The lesson is blunt: agreement is worth only the independence behind it.

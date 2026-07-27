@@ -4,7 +4,8 @@ title: "Managing Multiple AI Agents"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
 
-> **The research decision.** Several AI agents means several loops running at once. You
+> **The research decision.** Running several AI agents means running several loops at
+> once. You
 > decide how to split the work into scoped jobs, in what order those loops run so that
 > no early mistake slips downstream, and which step in the chain no loop is ever
 > allowed to close.
@@ -14,9 +15,9 @@ title: "Managing Multiple AI Agents"
 **The decision on the table: how many AI loops you set running on one piece of your
 work, in what order, and which step you keep out of every one of them.**
 
-> *"Bring me a chapter, not a pile of AI output. I want to know which part each tool
+> *"Bring me a draft, not a pile of AI output. I want to know which part each tool
 > touched, what you told it to do, and how you checked it. If you cannot tell me
-> that, you did not write the chapter."*
+> that, you did not write it."*
 > — your **thesis advisor**, reading the draft you are about to defend
 
 By now one AI assistant can draft, cite, critique, and polish in a single breath. The
@@ -26,7 +27,7 @@ thing and agree loudly about it. And each of those roles is not one prompt. It i
 loop, running until you or it decides to stop. Four loops going at once is four times
 the output and, unmanaged, four times the unsupervised work. The advisor above does
 not want a louder chorus. She wants to see that you broke the job into pieces, put
-those pieces in a sane order, and stayed the one person who decided what the chapter
+those pieces in a sane order, and stayed the one person who decided what the draft
 claims. This chapter gives you that management skill.
 
 ## The concept
@@ -46,7 +47,7 @@ each other. You orchestrate loops, not prompts.
 
 The move that turns a crowd of loops into a workflow you can defend is **task
 decomposition**: breaking one large job into smaller subtasks, each with a single
-clear owner. Example: instead of asking a tool to "improve my chapter," you split the
+clear owner. Example: instead of asking a tool to "improve my draft," you split the
 work into check the design, check the citations, and tighten the prose. Each piece
 now has a pass-or-fail you can judge.
 
@@ -77,7 +78,7 @@ one job, and it still occupies one node on the path.
 
 ## A worked example
 
-You are finishing a chapter on a small health study: whether a ten-minute post-lunch
+You are finishing the write-up of a small health study: whether a ten-minute post-lunch
 walk is associated with a lower afternoon resting heart rate among the residents on
 your dorm floor. You have a draft and four AI roles waiting.
 
@@ -99,7 +100,7 @@ runs three loops at its widest.
 **Keep one step human.** The integrate step is yours, and it is the one node with no
 loop attached to it. When the methodologist says your walk-and-heart-rate result is
 only an association and the clarity reviewer loved the sentence that called it an
-effect, no role settles that clash. You do. The decision about what the chapter claims
+effect, no role settles that clash. You do. The decision about what the write-up claims
 never enters the workflow as a delegated task.
 
 The tools drafted, flagged, and polished. You split the job, set the order, decided
@@ -112,7 +113,7 @@ defense**. Open it in Colab with the badge above and work the cells alongside th
 chapter. There you build the worker-critic workflow as a directed graph, read its
 critical-path depth and parallel width straight off the code, and watch the path grow
 by one round the moment you make a critic wait on another critic. Then you decompose
-your own chapter into scoped roles and defend the wiring you chose.
+your own draft into scoped roles and defend the wiring you chose.
 
 ## Recommended AI prompts
 
@@ -124,7 +125,7 @@ a verdict.
 **Decompose, then hand back the human step.**
 
 ```text
-I am splitting the review of my health chapter into scoped AI roles. Here are my
+I am splitting the review of my health write-up into scoped AI roles. Here are my
 section headings and one line on each: [paste them]. Propose a table with one row
 per role: the role's one-sentence scoped task, the draft or input it needs, whether
 it can run in parallel or must wait on another role, and the single decision it must
@@ -149,7 +150,7 @@ lets a role run before its input is ready).
 **Red-team the decomposition.**
 
 ```text
-Act as a hostile reviewer of my AI workflow, not of my chapter. Name every place an
+Act as a hostile reviewer of my AI workflow, not of my draft. Name every place an
 early mistake in one role could flow downstream unchecked, and every role whose job
 overlaps another so much that it adds no independent check. Do not rewrite my plan.
 ```
@@ -162,7 +163,7 @@ The split and the order can be informed by a tool, but three calls stay yours al
 You decide **which jobs are worth their own loop** and which just multiply output you
 cannot supervise. You decide **the order**, so that no role settles a question a role
 upstream of it should have answered first. And you keep **the integrate step** human:
-when two roles disagree about what your chapter claims, you make that call in your own
+when two roles disagree about what your draft claims, you make that call in your own
 words. A workflow that hands the claim to a tool is not a workflow you can defend. The
 rule scales with the number of loops rather than bending to it. More agents does not
 mean looser command; it means the same command discipline, repeated.
