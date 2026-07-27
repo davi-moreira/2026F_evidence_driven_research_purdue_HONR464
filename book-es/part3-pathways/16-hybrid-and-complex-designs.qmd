@@ -67,8 +67,9 @@ Quieres saber qué tan concentrado está el mercado de supermercados de tu ciuda
 respuesta estándar es un **índice de concentración**, un puntaje único que sube a
 medida que las ventas de un mercado se acumulan en menos manos. Lo calculas elevando
 al cuadrado la participación de mercado de cada vendedor y sumando los cuadrados,
-donde la participación de un vendedor es `share = its revenue / total market
-revenue`. Esa sola fórmula es un diseño complejo en miniatura. Cose dos submediciones
+donde para un vendedor
+`share = its revenue / total market revenue`.
+Esa sola fórmula es un diseño complejo en miniatura. Cose dos submediciones
 en una respuesta: los ingresos de cada cadena, su `revenue`, que tomas de una encuesta
 mensual de la industria, y el `total market revenue` del denominador, que tienes que
 medir por separado.
