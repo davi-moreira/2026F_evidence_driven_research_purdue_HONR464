@@ -1,0 +1,191 @@
+---
+title: "Investigación experimental descriptiva"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Decides si un diseño que asigna un estímulo
+> al azar responde una pregunta **descriptiva**, midiendo una característica
+> latente que ya existe, o una **causal**, y defiendes esa clasificación y
+> nombras los artefactos que tu medición todavía tiene que descartar.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria del tema del curso al que corresponde; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (el manual *Research Design in the Social Sciences*) cap. 17, gratuito en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por qué importa esta decisión
+
+Imagina que tu asesor de investigación se detiene en una sola línea de tu página
+de métodos. "Aleatorizaste", dice, "así que escribiste *causa*. Muéstrame primero
+la pregunta." La asignación aleatoria se siente causal por reflejo, y ese reflejo
+es la trampa que este capítulo desactiva. Lo que fija el tipo de una pregunta es
+la **pregunta**, no el **procedimiento**. Dirige una moneda al aire hacia "¿qué
+cambiaría si implementáramos esto?" y tienes un estudio causal; dirige esa misma
+moneda hacia "¿cuánto de esta propiedad hay en el mundo ahora mismo?" y tienes una
+medición. Etiqueta la segunda como si fuera la primera y afirmas de más: prometes
+una palanca que tu evidencia nunca probó, y un lector cuidadoso deja de confiar en
+el resto de tu trabajo.
+
+## El concepto
+
+Tres términos sostienen la idea. Conócelos uno por uno.
+
+- **Característica latente**: una propiedad real que no puedes leer de forma
+  directa, así que un diseño tiene que revelarla. Ejemplo: cuántos clics atrae la
+  *posición* de una interfaz de búsqueda, al margen de qué tan bueno es cada
+  resultado.
+- **Estímulo controlado**: una versión de un prompt, un ítem o una configuración
+  que fijas a propósito y asignas al azar, de modo que cualquier diferencia en la
+  respuesta se atribuya a la versión y no a quién la recibió. Ejemplo: el mismo
+  resultado mostrado en el lugar 1 para algunas sesiones y en el lugar 5 para
+  otras, elegido al azar.
+- **El experimento como instrumento de medición**: usar estímulos controlados
+  asignados al azar para exponer una característica latente y reportarla como una
+  descripción simple. El número que reportas es el **estimando**, la cantidad
+  exacta que el diseño está construido para declarar, y aquí describe el mundo tal
+  como está.
+
+Una medición puede ser segura y aun así estar equivocada, porque el montaje mismo
+es uno de los ingredientes. Dos artefactos hacen casi todo el daño. Un **efecto de
+demanda** ocurre cuando las personas medidas adivinan qué buscas y se desplazan
+hacia ello; ejemplo: quienes notan que están en un estudio hacen clic con más
+cuidado del que tendrían en casa. Un **efecto del instrumento** ocurre cuando el
+aparato de medición o la redacción mueven la lectura por su cuenta; ejemplo: el
+lugar 1 muestra una miniatura más grande, así que el registro le acredita a la
+posición la atención que ganó la imagen. Ambos amenazan la **validez de
+constructo**, el grado en que tu número estima el concepto que querías y no algo
+cercano. Aleatorizar *quién* ve qué no hace nada contra un sesgo que golpea por
+igual a todas las unidades, y por eso estos se diseñan aparte.
+
+## Un ejemplo resuelto
+
+Un equipo de streaming de música quiere una propiedad latente de su estante
+"Recomendado para ti": cuánto del conteo de reproducciones de una canción viene de
+*dónde está colocada* frente a qué tan bien coincide con quien escucha. Ese número
+no está impreso en ninguna parte, así que construyen un instrumento. Para una
+porción aleatoria de sesiones insertan una canción sonda fija, con audio idéntico y
+portada idéntica, y asignan su posición en el estante al azar entre seis lugares;
+luego registran la tasa de reproducción por lugar. Como la canción nunca cambia y
+el lugar se reparte al azar, la dispersión de la tasa de reproducción entre lugares
+aísla el tirón de la posición por sí sola. El estimando es la **curva de atención**
+del estante: cuánta atención acapara cada rango, descrita para estas sesiones.
+
+Aquí es donde muerde la decisión. Dentro del estudio sí existe un efecto causal del
+lugar sobre los clics, pero la pregunta del equipo era descriptiva, y el reporte
+honesto lo dice así: "para estas sesiones, el lugar 1 atrajo alrededor del triple de
+reproducciones que el lugar 5, a igual calidad". La frase prohibida es "promover
+canciones al lugar 1 triplicará sus reproducciones", porque esa es una afirmación
+causal y accionable que el diseño nunca probó. Y antes de confiar siquiera en el
+número descriptivo, el equipo descarta dos artefactos: un efecto de demanda si la
+sonda parece un anuncio, y un efecto del instrumento si la portada más grande del
+lugar 1 o un registro atado al lugar infla el conteo. El rediseño muestra todos los
+lugares de forma idéntica y registra las impresiones del lado del servidor.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el cuaderno **nb07 — Experimental descriptive
+research** (*investigación experimental descriptiva*). Ábrelo en Colab con la
+insignia de arriba y trabaja las celdas junto con este capítulo. Ahí lees un
+experimento de encuesta real como la medición de una actitud ya asentada, recuperas
+una prevalencia oculta con un experimento de lista que una pregunta directa no
+alcanza, y luego declaras, diagnosticas y rediseñas un experimento de medición para
+que un número construido sobre todo con artefactos de demanda y de instrumento
+vuelva a caer sobre el constructo que debía reportar.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia respuesta y luego delega. Cada prompt de abajo
+termina con una comprobación que corres tú.
+
+```text
+Act as a literature scout. List three real, published experiments used to MEASURE
+a latent characteristic (position bias in a ranking interface, a hidden prevalence,
+a preference weight) rather than to test a deployable intervention. For each give
+authors, year, venue, and the single quantity measured, in a table. Only include
+work you are confident exists; mark any row you are unsure about.
+```
+Después de ejecutarlo, verifica: abre una base de datos y recupera cada estudio por
+tu cuenta; cualquier fila que no puedas encontrar en un minuto es una **fabricación
+confiada**, así que elimínala.
+
+```text
+Here is code that estimates an interface's attention curve as the difference in
+play rate across randomly assigned slots: [paste]. Name every assumption this
+estimator needs to be valid, and for each, one concrete way it could fail in my
+logs.
+```
+Después de ejecutarlo, verifica: contrasta cada supuesto con tu procesamiento real;
+un estimador que suena estándar pero supone algo que tus datos rompen es un **método
+plausible pero equivocado**.
+
+```text
+Act as a hostile measurement reviewer. Here is my construct and how I measure it:
+[plan]. List every demand effect and instrument effect that could produce my number
+even if the true value were different, and the redesign that rules each one out.
+```
+Después de ejecutarlo, verifica: compara la lista con el artefacto que escribiste tú
+primero; si el tuyo falta, esa salida ordenada acaba de reprobar la prueba de la
+**ilusión de exhaustividad**, así que devuélvelo a la lista.
+
+::: {.callout-important title="No delegues"}
+Tres decisiones siguen siendo tuyas. Si tu indagación es **descriptiva o causal**,
+porque el tipo vive en las palabras de tu pregunta y ninguna herramienta puede leer
+tu intención. Si el diseño mide de verdad **tu** constructo y no algo cercano, que es
+un juicio sobre significado, no sobre código. Y qué **artefactos** estás en
+condiciones de firmar como descartados con tu nombre. Un socio de IA puede redactar,
+localizar y atacar. Tú declaras y defiendes.
+:::
+
+## Un caso de falla de la IA
+
+Pegas tu resultado de la curva de atención en una herramienta de IA y le pides que
+escriba la frase de hallazgos. Devuelve algo fluido: "Mover canciones al primer
+lugar causa un aumento de tres veces en las reproducciones, así que el equipo
+debería promover sus mejores coincidencias al lugar 1". Suena a triunfo, pero es un
+**cambio silencioso de alcance**: preguntaste cómo se distribuye la atención, y la
+herramienta respondió en silencio una pregunta causal y accionable sobre qué haría
+promover. Lo detectas poniendo su frase junto a la tuya, palabra por palabra. La
+tuya preguntaba *cuánto* tira la posición; su respuesta preguntaba *qué hacer*. Las
+señales son "causa", "debería" y el "aumento" imaginado de una intervención que
+nunca corriste. Recházala y reescribe la afirmación acotada a las unidades que
+observaste.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pide a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, la persona que investiga.
+:::
+
+Verifica el resultado clave del laboratorio por **simulación**, el método de la guía
+de verificación para comprobar cómo se comporta un procedimiento en vez de un número
+fijo. Construye un mundo de juguete donde tú fijas el valor latente verdadero, corre
+el estimador y confirma que la estimación cae sobre el valor que sembraste. Luego
+corre una **prueba de falsación**: fija el tirón verdadero de la posición
+exactamente en cero y vuelve a correrla. Un instrumento honesto devuelve alrededor
+de cero. Si en cambio tu flujo de procesamiento reporta una curva de atención donde
+no sembraste ninguna, esa curva es un efecto del instrumento que creó tu registro,
+no una propiedad de la interfaz, así que hay que diseñarla fuera antes de confiar en
+cualquier número real.
+
+## Transferencia al proyecto
+
+Este capítulo es la columna vertebral de tu **hito de protocolo de medición
+experimental y adquisición de datos**. Nombra la característica latente que tu
+proyecto debe medir, el diseño que la revela y la cantidad descriptiva exacta que
+reporta para unidades nombradas. Luego escribe el plan de artefactos: el efecto de
+demanda y el efecto del instrumento que más temes, cada uno con el rediseño que lo
+protege. Agrega la frontera de dos oraciones que enuncie la afirmación descriptiva
+que autorizas con su incertidumbre y la oración causal que te prohíbes a ti mismo.
+Esas piezas son las que le recorres a alguien escéptico en el estudio del viernes, y
+alimentan el resumen que pasa su filtro ahí.
+
+## Defiende tu decisión
+
+Enuncia la decisión que habilita este capítulo y defiéndela para tu propio proyecto.
+Nombra tu característica latente y el estímulo aleatorizado que la revela; luego di
+en una oración por qué la indagación es **descriptiva**, una propiedad que ya existe,
+y no **causal**, el efecto de una intervención que implementarías. Cierra con la
+frontera y la incertidumbre: la afirmación descriptiva que tu diseño autoriza, el
+peor artefacto que no has descartado del todo y el intervalo o la salvedad alrededor
+de tu número. Una declaración sin frontera y sin incertidumbre todavía no es una
+defensa.

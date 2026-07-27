@@ -1,0 +1,215 @@
+---
+title: "Pesquisa Final e Portfólio de Gestão de IA"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Decida quais alegações de um semestre inteiro de trabalho
+> assistido por IA você vai sustentar na sua defesa pública, e monte o portfólio de
+> gestão de IA que mostra como você comandou a sua equipe de IA, o que você manteve nas
+> suas próprias mãos e como cada alegação sobrevivente foi conferida.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do tópico correspondente do curso; o laboratório no Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*) cap. 24, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por que esta decisão importa
+
+> *"Na hora em que você se levantar para defender, eu não conto as suas ferramentas. Eu
+> pergunto sobre quais alegações você aceita estar errado em público, e se você
+> consegue me mostrar que conferiu cada uma delas."*
+> — uma **examinadora de defesa**, no dia em que o portfólio é entregue
+
+Você chega a este capítulo com um projeto inteiro atrás de você e uma coisa por fazer:
+reunir tudo em algo que você consiga defender em voz alta. Um semestre de trabalho
+assistido por IA deixa uma trilha de rascunhos, saídas de papéis e checagens pela
+metade. Largado numa pilha, nada disso é defensável. A examinadora não vai ler a pilha.
+Ela vai perguntar quais alegações são suas, onde cada uma para e como você sabe. Este
+capítulo é onde você decide essas respostas de propósito, antes que a sala as decida
+por você.
+
+## O conceito
+
+A sua entrega final tem duas metades, e este capítulo constrói as duas.
+
+**Um portfólio de pesquisa** é o corpo montado do seu trabalho terminado: as suas
+alegações, a evidência por trás delas e a verificação que torna cada uma defensável.
+Exemplo: em um projeto de laboratório, ele guarda o seu resultado principal, as
+medições por trás dele e a checagem que você fez para confirmar que o número está
+certo.
+
+Ao lado dele vem **um portfólio de gestão de IA**, o registro honesto de como você
+comandou a sua equipe de IA o semestre inteiro: quais tarefas você delegou, onde você
+retomou a decisão e quais chamadas você nunca entregou a uma ferramenta. Exemplo: ele
+mostra que um papel revisor redigiu as suas limitações, que você fez o override quando
+ele suavizou uma alegação que você não conseguia sustentar, e que só você escolheu o
+limite da alegação.
+
+A decisão que fecha as duas metades é a sua **regra de parada**, uma declaração escrita
+do que "pronto" significa, formulada em torno da sua própria confiança verificada, e não
+da concordância das ferramentas. Exemplo: "eu paro quando consigo defender cada alegação
+sobrevivente diante de um revisor hostil com uma checagem que eu mesmo fiz". Uma regra
+de parada do tipo "quando todos os papéis concordarem" é uma armadilha, porque uma
+equipe de ferramentas parecidas entre si pode concordar em alto e bom som e estar errada
+junto.
+
+Essa armadilha tem um nome do qual você vai se proteger: **consenso falso**,
+concordância que existe só porque as ferramentas dividiam um ponto cego ou porque você
+fez uma pergunta indutora. Exemplo: você pede a três revisores para "confirmar que o meu
+capítulo está pronto", e os três obedecem, então o coro não diz nada. A cura é **uma
+checagem de independência**, um passo que faz a concordância valer mais do que uma
+contagem de votos: uma checagem que você faz por conta própria, fora das ferramentas.
+
+Tudo isso termina na **Defesa de Evidências** (Evidence Defense), uma defesa pública e
+curta das suas alegações nos limites delas, seguida de perguntas para as quais você não
+consegue ensaiar. Exemplo: você diz o que encontrou, nomeia exatamente o que não afirma
+e responde a cada pergunta a partir do seu próprio registro.
+
+## Um exemplo trabalhado
+
+Imagine um projeto de honors em química analítica. Você mediu quanto ácido acético uma
+garrafa de vinagre contém, usando **titulação**, um método de laboratório em que você
+adiciona gota a gota uma solução de concentração conhecida até a reação terminar,
+revelando a quantidade desconhecida. Três rodadas deram uma média de 4.9% de ácido
+acético em massa. Agora você escolhe a alegação que vai defender.
+
+Você roda três papéis revisores de IA sobre o rascunho do seu capítulo. Um papel revisor
+elogia a sua frase de destaque, "O vinagre contém 4.9% de ácido acético". Um papel
+diagnosticador sinaliza essa mesma frase por ir além da sua evidência: você mediu uma
+garrafa três vezes, não vinagre em geral. Essa discordância é um presente, porque aponta
+direto para a decisão de limite. Você retoma a caneta e reescreve a alegação para o que
+os seus dados sustentam: "Esta garrafa, medida três vezes, teve média de 4.9% de ácido
+acético, com as rodadas variando de 4.7% a 5.1%". A frase mais estreita é a que você vai
+defender.
+
+Depois você faz uma checagem de independência que as ferramentas não conseguem forjar. O
+próprio rótulo da garrafa declara 5% de acidez, então você compara os seus 4.9% com esse
+valor na mão. Os dois números ficam próximos, e isso é uma tranquilidade real, porque o
+rótulo nunca fez parte do seu fluxo de trabalho com IA. A sua regra de parada agora está
+satisfeita, então você para. Para dentro do portfólio de gestão de IA vão quatro coisas:
+os papéis que você rodou, o conflito entre revisor e diagnosticador e o seu override,
+esta regra de parada, e a comparação com o rótulo que fez a concordância dos seus
+revisores valer mais do que uma contagem de votos.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb16 — Managing multiple AI agents + the
+final defense**. Abra no Colab pelo selo acima e trabalhe as células junto com este
+capítulo. Lá você liga uma equipe executor–crítico, roda uma simulação com semente fixa
+mostrando que quatro revisores parecidos entre si deixam passar uma falha real muito
+mais vezes do que quatro independentes, e depois redige as quatro partes do seu próprio
+portfólio e prepara a sua Defesa de Evidências.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria resposta, depois delegue. Cada prompt entrega
+alcance à ferramenta, não a decisão.
+
+**Localize a referência real.**
+
+```
+Act as a research assistant in analytical chemistry. I measured the acetic acid
+content of one vinegar sample. I want a published or label-stated reference value to
+compare against. Give the value, the exact source it comes from, and a link. Only
+state a figure you are confident is real; if you are unsure, say so and tell me where
+to look.
+```
+
+Depois de rodar, verifique: abra a fonte ou leia o rótulo você mesmo antes de confiar no
+número (leitura da fonte primária). Combate a **fabricação confiante**, um valor de
+referência citado com uma fonte inventada.
+
+**Liste todas as alegações a verificar.**
+
+```
+Here is my draft chapter: [paste]. List every empirical claim in it as a table: the
+claim, the number or measurement it rests on, and whether that claim stays inside my
+single sample or reaches past it. Do not add any new claims.
+```
+
+Depois de rodar, verifique: confira a tabela contra a sua própria lista do que você
+mediu, e confirme que nada vai além dos seus dados sem estar marcado. Combate a **ilusão
+de completude**, uma lista arrumadinha que omite a única alegação que exagera em
+silêncio.
+
+**Faça red team (revisão adversária) da defesa.**
+
+```
+Act as a hostile but fair cross-examiner at a research defense. Here is my headline
+claim, its boundary, and my two weakest verification steps: [paste]. Ask me the five
+hardest questions you can, each tied to a specific claim or check. Do not soften them,
+and do not answer them for me.
+```
+
+Depois de rodar, verifique: se toda pergunta for gentil ou se a sua alegação for chamada
+de "bem sustentada", insista e exija o elo mais fraco. Combate a **concordância
+bajuladora**, um parceiro que ensaia o seu ego em vez da sua defesa.
+
+::: {.callout-important title="Não delegue"}
+As ferramentas podem redigir, revisar e trazer perguntas difíceis. Elas nunca podem
+decidir quais alegações levam o seu nome, onde uma alegação como "4.9% de ácido
+acético" precisa parar, se os seus revisores chegaram a ser independentes, qual é a sua
+regra de parada, nem uma única palavra da defesa pública. Quando papéis concordantes
+abençoam uma alegação, decidir se essa concordância é real ou apenas correlacionada é
+tarefa sua. E também é sua a resposta que você dá quando a sala pergunta como você sabe.
+:::
+
+## Um caso de falha da IA
+
+Você manda o seu capítulo pronto para três papéis revisores e pede a cada um que
+"confirme que está pronto para submissão". Os três devolvem o mesmo veredito: "Parece
+sólido, nenhum problema grave". Parece três confirmações. É uma. Os três papéis rodam
+sobre o mesmo modelo-base, você deu a eles o mesmo prompt indutor, e eles dividem um
+ponto cego: nenhum sinaliza que o seu número de destaque não carrega incerteza nenhuma,
+nenhuma faixa entre as suas rodadas de titulação. Isso é consenso falso, e confiar nele
+mandaria um resultado exagerado para dentro da sua defesa.
+
+Você pega o erro com um reenquadramento e uma checagem que as ferramentas não enxergam.
+Primeiro você abandona o pedido indutor e faz um neutro: "Liste as três alegações mais
+fracas deste capítulo e por quê". Agora um papel nomeia a faixa que falta. Depois você
+sai das ferramentas por completo e recalcula você mesmo a dispersão entre as suas
+rodadas, o que entrega o limite de 4.7% a 5.1% que todos os revisores pularam. A lição é
+direta: a concordância vale apenas o tanto de independência que existe por trás dela.
+Conte as checagens que você mesmo fez, nunca os papéis que balançaram a cabeça.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA para checar a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, que faz a pesquisa.
+:::
+
+Verifique o resultado central deste capítulo, que uma alegação do seu portfólio é uma
+alegação que você consegue defender, com **resultado de referência**, o método de
+comparar a sua saída com um valor de referência sabidamente bom (veja
+`ai_resources/verification_guide.md`). Coloque os seus 4.9% medidos ao lado dos 5% de
+acidez declarados no rótulo e confirme que eles concordam dentro da dispersão entre as
+suas rodadas. Como o rótulo nunca fez parte do seu fluxo de trabalho com IA, esta é uma
+checagem de independência genuína, não uma ferramenta corrigindo outra. Combine com
+**raciocínio de pares**: leve o limite da sua alegação até um colega e veja se o seu
+motivo para parar em "esta garrafa" sobrevive à primeira pergunta. Duas checagens
+independentes valem mais do que uma, e cada uma deixa uma linha no seu registro.
+
+## Transferência para o projeto
+
+Este último capítulo entrega o marco final do projeto: o seu capítulo final de pesquisa,
+o seu portfólio de gestão de IA e a Defesa de Evidências que você apresenta esta semana.
+Traga quatro partes montadas e uma defesa preparada. As quatro partes são a decomposição
+dos papéis de IA que você rodou sobre o seu capítulo, um conflito real com o seu
+override e a checagem não feita por IA que o sustentou, a sua regra de parada com a
+lista do que nunca automatizar, e uma checagem de independência que fez uma concordância
+valer mais do que uma contagem de votos. A defesa tem três movimentos, nesta ordem: a
+sua alegação e o limite dela, a sua escolha central e o caminho que você não seguiu, e a
+verificação com que você abre. Escreva cada peça você mesmo. Uma ferramenta pode
+criticar depois, mas o capítulo e a defesa que você entrega precisam ser raciocinados e
+assumidos por você.
+
+## Defenda a sua decisão
+
+Em cinco ou seis frases, feche o curso. Enuncie uma alegação do seu próprio projeto que
+você vai assinar com o seu nome na sala. Dê o limite dela: nomeie o que a sua evidência
+não estabelece e, se a alegação se apoia em uma única amostra, diga isso. Nomeie uma
+coisa que continua incerta e por quê. Depois mostre o seu portfólio de gestão de IA
+fazendo o trabalho dele em uma linha honesta: o lugar em que os seus papéis concordaram,
+a checagem independente que tornou essa concordância real, e a única decisão que você se
+recusou a entregar a qualquer ferramenta. É essa última linha que a examinadora está
+esperando ouvir.

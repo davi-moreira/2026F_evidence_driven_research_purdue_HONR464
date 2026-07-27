@@ -1,0 +1,203 @@
+---
+title: "A IA É o Seu Braço, Não o Seu Cérebro"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Para cada tarefa da sua pesquisa, você decide se vai
+> entregá-la a uma ferramenta de IA e, se entregar, como vai confirmar o que ela
+> devolve antes de colocar o seu nome naquilo. Este capítulo prepara você para
+> traçar essa linha tarefa por tarefa e defender onde a traçou.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do seu tópico no curso; o laboratório no Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*) cap. 1, 2, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por que essa decisão importa
+
+Imagine uma revisão de auditoria. Um **contador público certificado (CPA, na
+sigla em inglês)** é um contador autorizado a assinar as demonstrações
+financeiras de uma empresa, e essa assinatura o torna pessoalmente responsável
+pelos números. Exemplo: o CPA que assina as demonstrações anuais de uma empresa é
+a quem os investidores recorrem se os valores se mostrarem errados.
+
+Quando um CPA assina uma demonstração, ele não está dizendo que o software de
+contabilidade rodou sem erros. Está dizendo: "Eu conferi isto e vou responder por
+isso." Essa é a postura que este curso pede que você adote desde o primeiro dia.
+Uma ferramenta de IA consegue buscar uma estatística, redigir um parágrafo ou
+escrever código que funciona em segundos, mas ela não pode assinar o seu
+trabalho. Você pode. Então a pergunta que importa não é "o que a ferramenta
+consegue produzir?". É "o que eu entreguei a ela, e como conferi o que voltou?".
+
+## O conceito
+
+A regra que dá nome ao capítulo é **a IA como o seu braço, não o seu cérebro**: a
+ferramenta pode alcançar, buscar, redigir e calcular por você, mas não cabe a ela
+decidir o que é verdade nem o que você afirma. Exemplo: você deixa que ela redija
+um resumo de uma divulgação de estatísticas oficiais e depois confirma você mesmo
+cada número desse resumo.
+
+Dois movimentos colocam a regra em prática. **Delegação** é entregar à ferramenta
+uma tarefa bem especificada, como "encontre três fontes publicadas para a taxa de
+desemprego do município no ano passado". **Verificação** é uma checagem
+independente, feita por um método fora do modelo, de que o resultado é de fato
+verdadeiro. Exemplo: você abre a tabela de dados real do órgão de estatística e
+lê o número você mesmo, em vez de confiar no que a ferramenta digitou.
+
+A verificação não pode ser pulada porque uma resposta errada da IA se parece
+exatamente com uma resposta certa. Uma **alucinação** é um resultado seguro e bem
+acabado que é simplesmente inventado, como a citação de um relatório que não
+existe. Exemplo: uma ferramenta informa um salário inicial mediano e o atribui a
+uma "National Graduate Earnings Survey" que nunca foi publicada. O tom é idêntico
+para o real e para o inventado, então o tom não pode ser o seu filtro. A
+recuperabilidade pode. Uma fonte é **recuperável** quando você consegue abrir o
+documento de verdade e confirmá-la, como ao encontrar o relatório real pela
+biblioteca da sua universidade e ler a linha.
+
+Alguns julgamentos nunca são delegados. Uma **decisão que nunca se delega** é uma
+escolha que continua sendo sua por melhor que a ferramenta fique: qual pergunta
+você persegue, o que a sua evidência autoriza, a ética do trabalho e como você
+declara a sua incerteza. Exemplo: uma ferramenta pode listar várias formas de
+ajustar preços antigos pela inflação, mas decidir qual delas a sua análise exige
+é responsabilidade sua. O hábito que amarra tudo isso é curto: **Pergunte, depois
+Verifique, depois Documente.** Use a ferramenta com ambição, confirme você mesmo
+cada fato e cada número, e então registre a ferramenta, a tarefa e a checagem em
+um documento que viaja junto com o seu trabalho.
+
+## Um exemplo trabalhado
+
+Você é estudante de um programa de honras e quer saber se as refeições em
+restaurantes perto do campus ficaram mais caras depois de um aumento local do
+salário mínimo em 2019. Você não pode comparar o preço de um cardápio de 2019 com
+o preço de hoje do jeito que eles estão, porque um dólar compra menos agora do
+que comprava naquela época. Para compará-los, você precisa do **Índice de Preços
+ao Consumidor (CPI, na sigla em inglês)**, um número publicado que acompanha
+quanto custa ao longo do tempo a cesta de bens de uma família típica, no qual um
+valor mais alto significa que a mesma cesta custa mais.
+
+Separe o trabalho. Você pode *delegar* a localização de séries de preços
+publicadas candidatas e a listagem dos insumos de que um ajuste pela inflação
+precisa. Você *mantém* três coisas: decidir que um índice de preços ao consumidor
+(e não um índice de produtor ou de atacado) é a medida certa para o que as
+famílias pagam, escolher o ano-base para o qual você converte todos os preços, e
+julgar se uma fonte é confiável. Você pede a série ao Gemini e ele devolve "os
+preços ao consumidor subiram cerca de 23 por cento entre 2019 e 2025", citando um
+órgão de estatística.
+
+Agora verifique. Você abre a tabela de dados real do órgão, lê você mesmo os dois
+valores do índice e recalcula à mão a variação percentual. Se isso confirmar o
+número, você registra um insumo verificado. Se mostrar um valor diferente, ou se
+a tabela não puder ser encontrada, o número que a ferramenta lhe entregou nunca
+foi evidência. De um jeito ou de outro, a sua comparação se apoia em um número
+que você recuperou, não em um que um modelo digitou.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb01, Research in the Age of AI: Your
+Arm, Your RA, Not Your Brain**. Abra-o no Colab pelo selo acima e trabalhe as
+células junto com este capítulo. No laboratório você roda uma pequena simulação
+com semente fixa que mostra por que o quanto uma fonte *soa* confiante não diz
+nada sobre ela ser real; depois você pega um tema que lhe interessa, pede fontes
+acadêmicas a uma IA e verifica cada uma recuperando-a você mesmo.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria resposta e só então delegue. Cada prompt
+entrega uma tarefa que você pode conferir, com uma nota de verificação que nomeia
+a falha contra a qual ele protege.
+
+**Localizar fontes candidatas (você verifica cada uma).**
+
+```text
+Act as an economic-research assistant. I need annual consumer price index values
+for 2019 and 2025. List 3 candidate published sources, each with the exact table
+or series name and the agency that publishes it. Only include documents you are
+confident exist; mark anything uncertain.
+```
+
+Depois de rodar, verifique (combate a *fabricação confiante*): abra cada
+documento você mesmo e leia o número. Uma tabela que você não consegue recuperar
+é inventada até que você a encontre.
+
+**Transformar uma decisão em uma lista de checagem (você audita a lista).**
+
+```text
+For converting a 2019 restaurant price into 2025 dollars, list every input my
+calculation needs. For each, say why it belongs and which single choice most
+governs the result.
+```
+
+Depois de rodar, verifique (combate a *ilusão de completude*): uma lista longa e
+bem organizada ainda pode omitir a escolha que governa a sua resposta. Compare-a
+com uma lista de checagem que você escreveu antes e confirme que a escolha
+decisiva é mesmo aquela sobre a qual a comparação se apoia.
+
+**Fazer red team (revisão adversária) da sua própria escolha (a decisão continua sendo sua).**
+
+```text
+Here is my price index and base year for comparing 2019 and 2025 menu prices:
+[paste it]. Act as a hostile referee. Name every place the choice reaches past my
+evidence. Do not rewrite it for me; list the weaknesses.
+```
+
+Depois de rodar, verifique (combate a *concordância bajuladora*): se toda objeção
+for branda, ou se a ferramenta chamar a sua escolha de "bem equilibrada", insista
+e peça o pior defeito, um só.
+
+::: {.callout-important title="Não delegue"}
+Estas escolhas continuam sendo suas, por mais fluente que a ferramenta pareça.
+Decidir qual medida se ajusta à sua pergunta e qual ano-base a comparação exige.
+Julgar se uma fonte é confiável o bastante para construir em cima dela. Definir a
+alegação que você vai defender e declarar a sua incerteza. A ferramenta reúne
+opções e redige texto; escolher entre elas, e responder pela escolha, é trabalho
+de quem pesquisa.
+:::
+
+## Um caso de falha da IA
+
+Você pede o salário inicial mediano dos formados na sua área, e uma fonte. A
+ferramenta devolve um valor preciso e o atribui à "National Graduate Earnings
+Survey de 2024, Tabela 3". Aquilo se lê como toda citação real que você já viu:
+uma pesquisa de nome oficial, um ano, uma tabela. Ela é fabricada, ou o número
+não está naquela página.
+
+Veja exatamente como você a pega. Você não confia na citação como ela foi
+entregue. Você procura a pesquisa pela biblioteca da sua universidade e, se ela
+abrir, vai até a tabela indicada e lê a linha. Se a pesquisa não existe, ou não
+traz esse valor, a citação confiante desaba. Fontes fabricadas soam tão
+autorizadas quanto as reais, então o único filtro confiável é abrir o documento.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é outra proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado pertence sempre a você, que pesquisa.
+:::
+
+O resultado central do capítulo é que o acabamento não prevê a verdade. Confirme
+isso você mesmo com a **leitura da fonte primária** (do
+[guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)):
+pegue uma lista real de citações que uma IA devolve para um tema que você
+conhece, procure cada título exato e conte quantos de fato abrem. As que soam
+confiantes não têm mais chance de ser reais do que as simples. Para um número,
+acrescente o **cálculo direto**: recalcule à mão a variação percentual alegada a
+partir dos dois valores publicados do índice e confira se ela bate.
+
+## Transferência para o projeto
+
+Este capítulo dá partida ao seu primeiro marco de projeto, a linha de base de
+pesquisa e IA que você apresenta no estúdio de sexta-feira. Três movimentos
+passam direto para lá. Classifique as tarefas do seu próprio projeto em seguras
+para delegar, delegar e então verificar, e nunca delegar, dizendo por quê em cada
+caso. Faça uma captura de citação ao vivo no seu tema e registre o veredito.
+Preencha a sua primeira linha no **AI Research Ledger** (registro de pesquisa com
+IA), anotando a tarefa, a ferramenta, a sua decisão e o método de verificação.
+Essa linha do registro é o hábito que o marco de linha de base instala.
+
+## Defenda sua decisão
+
+Em um parágrafo curto, declare a linha de delegação que você traçou para uma
+tarefa do seu próprio projeto: o que você entregou à ferramenta, o que você
+manteve e a checagem exata que você fez no que voltou. Depois nomeie o limite
+dela e a sua incerteza. O que o seu resultado verificado *não* estabelece, e onde
+é mais provável que você confie demais na ferramenta e pare de conferir? Uma
+decisão sem limite declarado ainda não está defendida.

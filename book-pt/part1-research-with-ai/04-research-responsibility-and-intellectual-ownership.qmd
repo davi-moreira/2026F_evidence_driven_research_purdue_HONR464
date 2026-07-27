@@ -1,0 +1,200 @@
+---
+title: "Responsabilidade na Pesquisa e Propriedade Intelectual"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Para cada parte do seu trabalho que uma ferramenta
+> de IA ajudou a produzir, decida exatamente por qual parcela você vai responder
+> pessoalmente como sua, e revele com clareza o que a ferramenta fez e como você
+> conferiu. O seu nome no trabalho significa que você responde por ele, seja qual
+> for a ferramenta que ajudou.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do seu tópico no curso; o laboratório no Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*) cap. 1, 2, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por que essa decisão importa
+
+> *"Quando algo neste artigo se revela errado, eu não pergunto qual software o
+> escreveu. Eu pergunto de quem é o nome que está nele. Essa pessoa responde por
+> cada linha."*
+> — um **editor de periódico**, a um autor de primeira viagem
+
+Você vai terminar este curso com um trabalho que leva o seu nome: um pôster, uma
+nota de pesquisa, uma defesa pública. Uma ferramenta de IA pode ter ajudado você
+a encontrar fontes, redigir um parágrafo ou calcular um número. Nada disso tira a
+responsabilidade de você. O revisor, o leitor e o seu eu futuro consideram você,
+o autor nomeado, o responsável. Este capítulo traça essa linha de propósito,
+antes que outra pessoa a trace por você.
+
+## O conceito
+
+**Propriedade intelectual** é ser autor de, e responder por, cada alegação que
+aparece sob o seu nome, seja qual for a ferramenta que ajudou a produzi-la.
+Exemplo: se uma IA redige o seu parágrafo de métodos e ele afirma que o cloreto
+do córrego ultrapassou um limite de segurança, essa frase é sua, e se ela estiver
+errada, o erro é seu.
+
+A propriedade se apoia na **responsabilização**, ser a pessoa que responde pela
+correção e pela integridade do trabalho quando ele é questionado. Exemplo: na sua
+defesa, quando alguém perguntar como você sabe um número, "a IA calculou" não é
+uma resposta. "Eu recalculei a partir das minhas próprias medições, e aqui está a
+checagem" é.
+
+O hábito que torna a responsabilização visível é a **divulgação do uso de IA**,
+um registro curto e honesto de qual ferramenta de IA fez qual tarefa e de como
+você verificou o resultado dela. Exemplo: "O Gemini localizou fontes candidatas;
+eu recuperei e confirmei cada uma no catálogo da biblioteca." Divulgar não é
+confessar. Isso protege você, porque mostra exatamente onde o seu próprio
+julgamento entrou no trabalho.
+
+Algumas escolhas nunca vão para a ferramenta. Uma **decisão que nunca se delega**
+é um julgamento que continua sendo seu por mais capaz que a ferramenta fique:
+qual pergunta você persegue, o que a sua evidência autoriza, a ética do estudo e
+a decisão de colocar o seu nome no trabalho. Exemplo: uma IA pode listar medidas
+candidatas de qualidade da água, mas escolher aquela que você vai defender é
+tarefa sua.
+
+Somando tudo, a regra é simples. Use IA à vontade para alcance e velocidade.
+Guarde para si a propriedade, a responsabilização e a divulgação honesta.
+
+## Um exemplo trabalhado
+
+Imagine um projeto de primeiro ano de um programa de honras em ciências
+ambientais. Você está testando se o sal usado nas estradas no inverno eleva o
+**cloreto**, um íon de sal dissolvido que prejudica a vida de água doce acima de
+certos níveis, em um córrego atrás do campus. Você coleta dez amostras de água e
+pede a uma ferramenta de IA que ajude a escrever o resultado.
+
+A ferramenta devolve um parágrafo fluente: "O cloreto médio foi de 310 mg/L, bem
+acima do critério crônico para vida aquática de 230 mg/L da EPA dos Estados
+Unidos, então o córrego é inseguro para a vida aquática." Aquilo se lê como um
+resultado pronto. Aqui está a decisão de propriedade: por quais partes dessa
+frase você vai responder pessoalmente?
+
+Você a divide em pedaços que consegue assumir. A média das suas dez amostras é um
+número que você recalcula em um minuto, então você recalcula, e obtém 297, não
+310. O critério da EPA é um valor publicado, então você abre os National
+Recommended Water Quality Criteria da EPA e confirma você mesmo o número real, em
+vez de confiar no número da ferramenta. A palavra "inseguro" afirma algo sobre o
+córrego inteiro ao longo de todo o inverno, a partir de dez amostras de um único
+dia, então você a estreita até o que a sua evidência autoriza: cloreto elevado
+nestas amostras, neste ponto, nesta data.
+
+Agora a sua divulgação se escreve sozinha: a ferramenta redigiu o parágrafo, e
+você fez a conferência, a recuperação e a reescrita que tornaram a alegação sua.
+Você é dono da frase corrigida. Você não seria dono da original.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb01**, "Research in the age of AI:
+your arm, your RA, not your brain". Abra-o no Colab pelo selo acima. Lá você
+classifica tarefas reais de pesquisa pelo quão seguro é delegá-las, pega uma
+citação ao vivo recuperando-a você mesmo e preenche a sua primeira linha do
+**AI Research Ledger** (registro de pesquisa com IA): o documento que transforma
+"eu conferi" em algo que você pode mostrar.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria resposta e só então delegue. Cada prompt
+abaixo entrega alcance à ferramenta, não julgamento.
+
+**Localizar a fonte real.**
+
+```
+Act as a research assistant in environmental science. I need the current U.S. EPA
+aquatic-life criterion for chloride. Give the exact value, the document it comes
+from, and a link. Only state a figure you are confident is published; if you are
+unsure, say so and tell me where to look.
+```
+
+Depois de rodar, verifique: abra o documento da EPA e leia você mesmo o valor
+(leitura da fonte primária). Combate a **fabricação confiante**, um número citado
+com uma fonte inventada.
+
+**Listar toda alegação a verificar.**
+
+```
+Here is my draft results paragraph: [paste]. List every empirical claim in it as a
+table: the claim, the number or source it rests on, and whether that number came from
+my data or from you. Do not add any new claims.
+```
+
+Depois de rodar, verifique: confira a tabela contra a sua própria lista do que
+você de fato mediu. Combate a **ilusão de completude**, uma alegação que o
+rascunho enfiou no texto e que nunca aparece na prestação de contas da própria
+ferramenta.
+
+**Fazer red team (revisão adversária) da sua propriedade.**
+
+```
+Act as a hostile reviewer. Read my draft and name every sentence I could NOT defend
+myself if someone asked how I know it is true. Do not rewrite anything. List the weak
+spots.
+```
+
+Depois de rodar, verifique: para cada frase sinalizada, ou produza a sua própria
+checagem ou corte a alegação. Combate a **concordância bajuladora**, o elogio que
+revisa o seu ego em vez da sua evidência.
+
+::: {.callout-important title="Não delegue"}
+A ferramenta pode buscar, redigir e calcular. Ela nunca pode decidir em quais
+alegações você põe o seu nome, se a sua evidência sustenta uma palavra como
+"inseguro", a ética da sua amostragem, como você declara a sua incerteza, ou o
+que diz a sua divulgação do uso de IA. Autoria é uma responsabilidade, não uma
+tarefa, e ela não se transfere.
+:::
+
+## Um caso de falha da IA
+
+Você pede à ferramenta que escreva a sua divulgação de uso de IA. Ela produz uma
+frase organizada e confiante: "A IA foi usada apenas para pequenas edições de
+linguagem." Aquilo soa profissional, e é falso. A ferramenta na verdade redigiu o
+seu parágrafo de resultados inteiro, incluindo o valor de 310 mg/L e a alegação
+de "inseguro". Sem checagem, essa divulgação subestima o papel da ferramenta e
+superestima a sua propriedade, que é exatamente o problema de integridade que a
+divulgação existe para evitar.
+
+Você pega isso com um documento que a ferramenta não vê: o seu próprio AI
+Research Ledger. Coloque a divulgação de uma linha ao lado das linhas do seu
+registro e a divergência fica evidente. O registro diz que a ferramenta redigiu a
+análise; a divulgação diz que ela só editou a linguagem. Você reescreve a
+divulgação para corresponder ao que aconteceu. A lição é direta: nunca deixe uma
+ferramenta descrever o próprio papel. Você descreve, a partir do seu registro.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é outra proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado pertence sempre a você, que pesquisa.
+:::
+
+Verifique o resultado central deste capítulo, que uma alegação sob o seu nome é
+uma alegação que você consegue defender, com a **leitura da fonte primária**, o
+método de encontrar a fonte real e ler você mesmo a linha relevante (veja
+`ai_resources/verification_guide.md`). Pegue o valor de cloreto da EPA que a
+ferramenta citou, abra o documento de critérios da EPA e confirme o número e o
+seu significado com os seus próprios olhos. Combine isso com o **cálculo
+direto**: recalcule a média das suas amostras e confira se ela bate com o
+rascunho. Duas checagens independentes valem mais que uma, e cada uma deixa uma
+linha para o seu registro.
+
+## Transferência para o projeto
+
+Este capítulo dá partida ao seu primeiro marco de projeto, a linha de base de
+pesquisa e IA que você apresenta no estúdio de sexta-feira. Leve as três coisas
+que ele pede: duas decisões que você se recusa a delegar no seu próprio projeto,
+com uma frase para cada uma sobre o porquê; a sua primeira linha do AI Research
+Ledger, revelando honestamente um uso real de IA e como você o conferiu; e uma
+alegação que você já consegue defender, enunciada no alcance que a sua evidência
+sustenta. Propriedade não é uma preocupação para o fim do semestre. É a linha de
+base sobre a qual você constrói todo o resto.
+
+## Defenda sua decisão
+
+Em quatro ou cinco frases, declare a decisão de propriedade para uma parte do seu
+próprio trabalho. Nomeie uma alegação na qual você vai pôr o seu nome. Dê o
+limite dela: o que a sua evidência não estabelece e, se a alegação se apoia em
+uma amostra, diga que ela é sobre aquela amostra, não sobre o mundo. Nomeie uma
+coisa que você ainda não sabe. Depois revele o papel da IA em uma linha honesta,
+e nomeie a checagem que, apesar de tudo, permite que a alegação seja sua.

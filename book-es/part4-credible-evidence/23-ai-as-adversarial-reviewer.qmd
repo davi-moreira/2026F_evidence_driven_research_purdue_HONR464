@@ -1,0 +1,213 @@
+---
+title: "La IA como revisora adversaria"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Cuando una revisora adversaria te entrega una lista de
+> fallas en tu propio análisis, tú decides cuáles fallas son reales corriendo la única
+> verificación de datos que confirma o refuta cada una, en vez de actuar según quien suene
+> más seguro. Este capítulo te equipa para comprometerte de antemano con tus verificaciones
+> de robustez, verificar cada señal contra tus datos y defender la única afirmación acotada
+> que sobreviva.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay capítulo complementario de RDSS (*Research Design in the Social Sciences*, el libro de referencia del curso) para este tema; este capítulo se sostiene por sí solo.
+:::
+
+## Por qué importa esta decisión
+
+Imagina la revisión de una propuesta para desplegar un cambio de tienda en toda una cadena.
+La **gerencia de operaciones** es quien, con su firma, permite que tu cambio llegue a todas
+las tiendas, y quien responde por él cuando las filas de las cajas cuentan otra historia.
+Ejemplo: quien aprobó tu nueva disposición de autopago es quien recibe las quejas cuando las
+filas se acumulan el primer sábado concurrido. Su preocupación es directa.
+
+> *"No me digas que los números mejoraron. Dime qué verificación corriste que lo habría
+> detectado si no hubieran mejorado. Confío en la verificación, no en el gráfico."*
+
+Una medición segura de sí misma, una crítica fluida de IA y una tabla de apariencia limpia
+pueden estar equivocadas de la misma manera convincente. La gerencia está pidiendo lo que
+suena menos impresionante y más importa: la verificación con la que te comprometiste antes
+de mirar, y la señal que efectivamente verificaste contra los datos.
+
+## El concepto
+
+Una **revisora adversaria** es una lectora cuyo trabajo es atacar tu resultado y encontrar
+dónde se rompe, no elogiarlo. Ejemplo: una compañera que intenta mostrar que tu mejora
+medida fue suerte y no un cambio real. Quien revisa puede ser alguien de la clase, una sola
+IA o un panel de modelos, y cada uno falla a su manera.
+
+Defiendes un resultado intentando romperlo primero. Una **verificación de robustez** vuelve
+a correr el mismo hallazgo bajo una decisión distinta pero igual de defendible y ve si la
+respuesta se mantiene. Ejemplo: mediste la mejora durante una franja horaria, así que
+también la mides en otros dos bloques de horario realistas. Una **prueba de placebo** corre
+tu procedimiento exacto donde el efecto no puede existir y confirma que vuelve cerca de
+cero. Ejemplo: comparas dos tramos de la disposición *vieja* entre sí, y cualquier "mejora"
+entre ellos es tu medición mintiendo.
+
+El hábito que mantiene honesto un ataque es el orden. La **búsqueda de especificaciones**
+significa probar muchas versiones de un análisis y reportar solo la que dio la respuesta que
+querías, sin revelar la búsqueda. Su nombre cotidiano es **p-hacking**. Ejemplo: mides diez
+horas distintas y muestras solo la hora en que tu cambio gana. La cura es un conjunto de
+**verificaciones prelistadas**, la lista completa de lo que vas a correr, comprometida antes
+de ver ningún resultado. Ejemplo: anotas tres bloques de horario y un placebo, después
+corres los cuatro y reportas cada número, incluidos los que no ayudaron.
+
+Una falla más se gana un nombre porque las IA revisoras la cometen constantemente. El
+**error correlacionado** es cuando dos revisores se equivocan de la misma manera, de modo
+que su acuerdo es un eco y no una confirmación. Ejemplo: dos modelos de IA comparten un
+punto ciego y ambos señalan el mismo no-problema con igual confianza. A través de todo esto,
+la regla cabe en una oración: quien revisa propone una falla, y los datos deciden si es
+real. La confianza, humana o de máquina, no te dice nada sobre si la falla existe.
+
+## Un ejemplo resuelto
+
+Tu tienda instaló una nueva disposición de autopago, y tus datos dicen que la clientela pasó
+la fila más rápido. Antes de defender eso, lo atacas. Primero, un término. El **tiempo de
+espera p95** es el tiempo por debajo del cual esperan 95 de cada 100 personas, un resumen
+más justo que el promedio porque captura las esperas largas de las que la gente realmente se
+queja. Ejemplo: un p95 de 210 segundos significa que solo el 5 por ciento más lento esperó
+más que eso. Tu titular es una caída del p95 de 210 segundos a 140.
+
+Le entregas el resultado a tres revisores adversarios, y cada uno nombra una falla fatal
+distinta. El primero dice que la victoria la impulsa una sola mañana inusualmente tranquila.
+El segundo dice que escogiste a conveniencia la única mezcla de clientela donde la
+disposición ayuda. El tercero dice que comparaste una semana con personal completo contra
+una con falta de personal, así que mediste la dotación de personal, no la disposición. Los
+tres están seguros, y los tres se contradicen.
+
+No le crees a la voz más fuerte. Conviertes cada falla en una verificación. Dejar uno fuera
+elimina la mañana tranquila y recalcula el p95: apenas se mueve, así que la primera falla
+queda refutada. Tu rejilla prelistada de especificaciones vuelve a correr la caída en tres
+mezclas de clientela, y se sostiene en las tres, así que la segunda también queda refutada.
+El placebo compara dos tramos de la disposición vieja entre sí. Una mejora entre dos tramos
+idénticos le daría la razón al tercer revisor, pero vuelve cerca de cero, así que la
+maquinaria está limpia.
+
+Las dos señales más ruidosas se disolvieron en cuanto una verificación las tocó. La falla que
+sobrevive es una que ninguna medición adicional puede quitar y que ninguno de los tres
+levantó: esto corrió en una tienda, entre semana, no en toda la cadena. Así que la afirmación
+honesta es acotada. Mediste una mejora del p95 para estas tres mezclas de clientela en esta
+tienda, no una garantía para cada local que opera tu empresa.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el cuaderno **nb10, Comparte la investigación y ataca el
+análisis**. Ábrelo en Colab con el distintivo de arriba y trabaja las celdas junto con este
+capítulo. Vuelves a correr una estimación a lo largo de una rejilla prelistada de ocho
+especificaciones, ves cómo la búsqueda de especificaciones fabrica un resultado significativo
+a partir de puro ruido, corres un placebo y una verificación de influencia dejando uno fuera,
+y después le entregas tu análisis a una persona, a una IA y a un panel de modelos de IA, y
+arbitras contra los datos cada señal que levanten.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia lectura del resultado, y después deja que quien revisa lo
+ataque. Cada prompt de abajo reparte una tarea que puedes verificar, con una nota de
+verificación que nombra la falla contra la que te defiende.
+
+**Haz red team (revisión adversaria) al resultado (tú corres la verificación que nombre).**
+
+```text
+Act as a hostile operations reviewer, not a cheerleader. Here is a one-paragraph
+summary of my wait-time study and its headline claim: [paste your summary]. Name the
+single most serious flaw you can find, and state the exact measurement I could run
+that would confirm or refute it. Do not rewrite my study and do not list more than
+one flaw.
+```
+
+Después de ejecutarlo, verifica (contrarresta el *acuerdo complaciente*): si califica tu montaje
+de "sólido" u ofrece solo elogios suaves, insiste y pide el peor problema suponiendo que el
+resultado es falso. Una falla es real solo una vez que corres la medición que nombró y tus
+propios números la confirman.
+
+**Enumera las especificaciones que dejaste fuera (tú auditas la lista).**
+
+```text
+Here is my pre-listed robustness grid for one wait-time result: I vary the customer
+mix, the time of day, and whether the store was fully staffed. Name up to three
+additional, equally defensible specifications I did NOT list that could move the
+result, and for each say which direction you expect it to push.
+```
+
+Después de ejecutarlo, verifica (contrarresta la *ilusión de exhaustividad*): una rejilla
+larga y ordenada puede aun así omitir la única condición que rompe la afirmación. Agrega y
+vuelve a correr las sugerencias que realmente puedas operacionalizar, y descarta el resto.
+
+**Colapsa las señales del panel (tú te quedas con el veredicto).**
+
+```text
+Three reviewers each named one "most serious flaw" in my analysis: [A], [B], [C].
+For each, give the single data check that would confirm or refute it, in one line.
+Then tell me which two of the three are most likely the same underlying concern in
+different words, and which one is genuinely separate.
+```
+
+Después de ejecutarlo, verifica (contrarresta los *errores correlacionados*): tres revisores
+haciendo eco de un mismo punto ciego pueden sentirse como tres confirmaciones. Corre cada
+verificación contra tu propia salida antes de creerle a ninguna señal, y trata el acuerdo
+unánime como candidato a verificar, nunca como la verificación misma.
+
+::: {.callout-important title="No delegues"}
+Estas siguen siendo tuyas, por fluido que suene quien revisa. Con qué verificaciones de
+robustez te comprometes antes de mirar, porque una verificación elegida después de ver el
+resultado no es una verificación, es una búsqueda. Cuáles de las fallas señaladas confirman
+realmente tus datos, decidido por la medición y no por la confianza. Si una falla es un
+problema de límite de la afirmación que ninguna medición adicional puede arreglar y que solo
+una afirmación más estrecha puede responder. Y el único resultado acotado que vas a defender,
+con su incertidumbre enunciada. Quien revisa propone;
+tú verificas, y la evidencia decide.
+:::
+
+## Un caso de falla de la IA
+
+Pegas tu resumen de tiempos de espera en una IA revisora, y responde con total certeza: tu
+mejora es un artefacto de una sola mañana inusualmente tranquila, elimina esa mañana y
+desaparece. La afirmación es específica, mecanicista y enunciada sin matices. Se lee
+exactamente como alguien que ha visto este error cien veces.
+
+Así es como la detectas. No actúas según el veredicto. Corres tú el dejar uno fuera,
+eliminando la mañana tranquila y recalculando el p95. La mejora apenas se mueve. La falla
+segura de sí misma estaba fabricada, un mecanismo que suena real atornillado a un problema
+que tus datos no tienen. Si le crees a la certeza, tiras a la basura un resultado genuino por
+una corazonada. Apuntar la verificación a tus propios números fue lo único que lo resolvió.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, la persona que investiga.
+:::
+
+El resultado clave del capítulo es que la confianza nunca certifica la verdad: un número
+ganador puede fabricarse buscando, y una señal segura de sí misma puede ser pura invención.
+Confírmalo por tu cuenta con **simulación** (de la
+[guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)). Compara dos
+tramos de la misma disposición sin cambios entre sí, de modo que la diferencia verdadera sea
+cero por construcción, después rebana las visitas por hora y deja que un buscador reporte la
+rebanada de mejor apariencia. Observa cómo aparece una "mejora" desde la nada. Para el número
+específico, agrega **código alternativo**: recalcula el mismo p95 por una segunda vía,
+ordenando los tiempos de espera crudos y leyendo directamente el índice del percentil 95, y
+confirma que los dos caminos dan una sola respuesta.
+
+## Transferencia al proyecto
+
+Este capítulo alimenta tu **hito de borrador del póster y auditoría de investigación**,
+presentado en el estudio del viernes. Una **auditoría de investigación** es el registro
+calificado de cuánto te esforzaste por romper tu propia afirmación y de qué sobrevivió. Tres
+movimientos se transfieren. Prelista las tres verificaciones de robustez o de placebo con las
+que te comprometes para tu propia estimación, cada una atada al ataque de revisión que
+responde. Construye un rastro verificado de revisión por IA: cada falla que levantó una
+persona o un panel de modelos, marcada como confirmada o refutada por una verificación de
+datos, más la señal equivocada más segura de sí misma que atrapaste. Después declara la única
+limitación que ninguna verificación pudo arreglar. Escríbelo de modo que alguien que nunca ha
+visto tu proyecto pueda darse cuenta de cuánto presionaste sobre tu propio número.
+
+## Defiende tu decisión
+
+En un párrafo corto, declara la única afirmación acotada que sostiene tu análisis después de
+haberlo atacado. Nombra la verificación que prelistaste, la señal que verificaste contra los
+datos, y si aceptaste, cambiaste o rechazaste lo que devolvió quien revisó. Después nombra su
+límite y tu incertidumbre. ¿Qué señal de revisión refutaron los datos, y dónde tu afirmación
+es un problema de límite que ninguna verificación adicional puede rescatar? Un resultado que
+no intentaste romper, y una falla que aceptaste sin una verificación, están ambos indefensos.

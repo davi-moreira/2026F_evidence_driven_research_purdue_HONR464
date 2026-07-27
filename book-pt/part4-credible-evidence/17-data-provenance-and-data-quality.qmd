@@ -1,0 +1,192 @@
+---
+title: "Proveniência e Qualidade dos Dados"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Para cada fato, mensuração ou fonte em que o seu projeto
+> se apoia, decida se aquilo é sólido o bastante para servir de base. Você toma essa
+> decisão rastreando o valor até onde ele foi medido pela primeira vez (a sua
+> proveniência) e julgando se ele foi bem medido, nas condições de que o seu trabalho
+> precisa (a sua qualidade).
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do seu tópico no curso; o laboratório em Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*, desenho de pesquisa nas ciências sociais), cap. 4, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por que essa decisão importa
+
+Imagine um **orientador de tese**, a pessoa que dá o aval ao seu projeto, lendo o
+primeiro rascunho da sua seção de contexto:
+
+> *"Você escreveu que este solvente dissolve 13 gramas por litro à temperatura
+> ambiente. De onde veio esse número? Não qual site copiou. Quem de fato colocou o
+> composto na água, pesou, e a que temperatura? Me traga o artigo que mediu isso, ou
+> tire o número daí."*
+
+Um valor sem origem rastreável é um boato com casa decimal. Precisão não é a mesma
+coisa que confiança. Este capítulo treina você a parar de tratar um número ou uma
+citação como verdadeiros só porque chegaram com aparência arrumada, e a fazer duas
+perguntas a tudo o que você toma emprestado: de onde isso veio, e isso presta?
+
+## O conceito
+
+**Proveniência de dados** é a origem documentada de um valor e cada mão pela qual ele
+passou antes de chegar até você. Exemplo: um número de solubilidade impresso no seu
+livro-texto, rastreado através de uma revisão de 2010 que o citou até o artigo de
+laboratório que o mediu pela primeira vez em 1968.
+
+Essa cadeia tem dois tipos de elo. Uma **fonte primária** é o relato original em que um
+valor foi medido pela primeira vez. Exemplo: o artigo cujos autores de fato rodaram o
+experimento. Uma **fonte secundária** repete um valor que ela não mediu. Exemplo: uma
+revisão ou um livro-texto que copia o número do artigo primário. Um valor só é tão
+confiável quanto a fonte primária no fim da sua cadeia.
+
+**Qualidade de dados** é se um valor serve ao *seu* uso específico: se é real, se foi
+medido em vez de chutado e se foi obtido nas condições de que o seu projeto precisa.
+Exemplo: uma solubilidade medida a 25°C é de alta qualidade para uma pergunta à
+temperatura ambiente e é o valor errado para uma reação que você roda a 60°C. Um
+**valor mal caracterizado** é um número real grudado nas condições ou no método
+errados. Exemplo: um número que um modelo *calculou* relatado como se tivesse sido
+*medido*, ou uma leitura a 40°C citada como o valor a 25°C.
+
+Você resolve as duas perguntas com um hábito só, o **ciclo de recuperação e
+verificação**: **Pergunte** a uma ferramenta por um valor e pela fonte dele,
+**Recupere** você mesmo a fonte primária, **Verifique** que ela existe e relata aquele
+valor naquelas condições, e **Documente** onde a encontrou. Uma citação que você não
+abriu é uma pista, não uma fonte, por mais confiante que tenha sido a ferramenta que a
+entregou.
+
+## Um exemplo trabalhado
+
+Você estuda métodos de extração mais verdes e precisa de um número: quanta cafeína se
+dissolve em água a 25°C. Você pergunta a uma assistente de IA, e ela responde na hora:
+"21,7 g/L a 25°C", com autor, ano e um periódico de aparência real.
+
+Em vez de copiar o número, você roda o ciclo. Primeiro, a **proveniência**. Você busca
+o título exato daquela citação. Se ele não leva a lugar nenhum, o valor está órfão e
+você o descarta. Se o artigo é real, você checa se ele *mediu* a solubilidade ou apenas
+a citou de um estudo mais antigo, o que empurra você um elo mais para trás, em direção
+ao artigo primário que colocou cafeína na água e pesou o que se dissolveu.
+
+Depois, a **qualidade**. Você abre a fonte primária e lê a linha das condições. Era
+25°C, a sua temperatura, ou 40°C? O valor foi medido em uma balança ou previsto por um
+software? Você confere o número contra uma referência independente, o NIST Chemistry
+WebBook, gratuito (webbook.nist.gov), ou o PubChem, que citam as próprias fontes.
+Quando a sua citação, o artigo primário e a base de referência concordam no valor e na
+temperatura, o número conquistou um lugar no seu projeto. Quando discordam, a
+discordância *é* o achado: a literatura não está resolvida, então você relata uma faixa
+em vez de um ponto falso.
+
+## O laboratório em Colab
+
+O laboratório deste capítulo é o notebook **nb03 — Research builds on research:
+verified evidence + real gaps** (pesquisa se constrói sobre pesquisa: evidência
+verificada + lacunas reais). Abra-o no Colab pelo selo acima e trabalhe as células ao
+lado deste capítulo. No laboratório, você roda o ciclo de recuperação e verificação
+sobre uma alegação do seu próprio projeto, vê uma pilha bem-arrumada de citações
+sugeridas por IA encolher até as poucas que sobrevivem à recuperação, e segue cadeias
+de citação para trás e para a frente até formar um mapa de evidências cujo único
+quadrado vazio é uma lacuna que você consegue defender, porque cada fonte em volta dela
+é uma que você mesmo abriu.
+
+## Prompts de IA recomendados
+
+Cada prompt é **compromisso primeiro**: anote o valor ou a fonte em que você já
+acredita, e só depois deixe a ferramenta discordar de algo seu.
+
+**Localize a fonte primária (delegável).**
+
+```text
+Act as a chemistry literature assistant. I have this value: [paste value, units,
+conditions]. Name the primary published source that FIRST measured it, with authors,
+year, exact title, journal, and the temperature and method reported. Only list work
+you are confident exists; mark anything uncertain, and flag whether each is a primary
+measurement or a secondary re-report.
+```
+
+Depois de rodar, verifique (combate a *fabricação confiante*): abra você mesmo cada
+citação antes de confiar nela; uma fonte que você não consegue recuperar é inventada
+até que ela abra.
+
+**Transforme números emprestados em uma tabela de proveniência (delegável).**
+
+```text
+Here are five numbers my project borrows: [paste them]. For each, return a row with
+the value, its stated conditions (temperature, pressure, solvent), the primary source,
+and whether the value was measured or computed. Return it as a table so I can audit
+each row on its own.
+```
+
+Depois de rodar, verifique (combate a *mudança silenciosa de escopo*): leia as condições
+de cada linha contra as condições de que o seu projeto realmente precisa; um valor
+medido discretamente na temperatura errada pode ser entregue a você como se fosse o seu.
+
+**Faça red team (revisão adversária) no número de que você gostou (delegável).**
+
+```text
+I plan to build on this value: [paste value and source]. Act as a hostile reviewer
+and argue it is unreliable for a reaction run at [your conditions]: wrong temperature,
+computed not measured, or copied through a chain of reviews. Do not reassure me.
+```
+
+Depois de rodar, verifique (combate a *concordância bajuladora*): se o revisor só
+elogiar o seu número, insista e leve a objeção mais forte dele à fonte primária ou a
+quem ensina a disciplina, em vez de confiar em uma aprovação fácil.
+
+::: {.callout-important title="Não delegue"}
+Três decisões continuam sendo suas. **Se um valor conta como verificado** é algo
+resolvido por uma fonte que você abriu, não pela confiança da ferramenta. **Se as
+condições de medição servem ao seu uso** é um julgamento sobre a sua reação específica,
+e nenhuma consulta o faz por você. E **quanta incerteza você relata** quando as suas
+fontes discordam é sua para enunciar e defender, porque é o seu nome que vai na
+alegação que o número sustenta.
+:::
+
+## Um caso de falha de IA
+
+Você pede a solubilidade da cafeína e a ferramenta devolve "21,7 g/L a 25°C", com uma
+citação a um periódico real. Sete detalhes parecem certos, então é tentador colar isso
+direto. Em vez disso, você abre o artigo primário, e a linha das condições diz 40°C,
+não 25°C. O número é real. A temperatura está errada para a sua pergunta, e a
+ferramenta a trocou em silêncio. Você pega isso de duas maneiras. Você tinha escrito
+antes a sua própria expectativa, então um valor estranhamente alto para temperatura
+ambiente já parecia suspeito. Depois, você leu a linha real das condições em vez do
+resumo que a ferramenta fez dela, e a incompatibilidade fica evidente. O valor entra
+nas suas anotações como um número de 40°C, e a sua pergunta a 25°C continua aberta.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é outra proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado é sempre sua, de quem faz a pesquisa.
+:::
+
+O resultado principal aqui é um valor com uma origem alegada, então verifique-o com a
+**leitura da fonte primária**: encontre o artigo que mediu o número pela primeira vez e
+leia a linha que o relata junto com as suas condições, não um resumo dessa linha. Como
+um número emprestado chega ao seu pôster e à sua defesa, trate-o como algo de alto
+risco e acrescente uma segunda checagem independente, um **resultado de referência**:
+compare o valor com uma referência reconhecidamente boa, como o NIST Chemistry WebBook.
+Duas confirmações independentes que concordam entre si protegem você de confiar em uma
+fonte única que copiou o número de outro lugar sem avisar.
+
+## Transferência para o projeto
+
+Este capítulo afia o seu **mapa de evidências verificadas e contribuição**, o marco que
+você apresenta no estúdio de sexta-feira. Toda entrada do registro de fontes já precisa
+de um autor, um ano e o lugar de onde você a recuperou. Acrescente duas colunas: se a
+entrada é uma fonte primária ou uma repetição secundária, e as condições ou o escopo
+sob os quais o valor central dela vale. Um registro construído assim permite que alguém
+cético rastreie qualquer número que você usa até a bancada onde ele foi feito, e é isso
+que torna críveis a sua lacuna e a sua linha de contribuição.
+
+## Defenda a sua decisão
+
+Em um parágrafo curto, pegue um valor de que o seu projeto depende e defenda construir
+em cima dele. Nomeie o valor e as condições dele, nomeie a fonte primária até a qual
+você o rastreou e onde a recuperou, e enuncie a fronteira: sob quais condições o valor
+deixa de se aplicar ao seu trabalho. Depois dê a sua incerteza em uma frase, incluindo
+se alguma das suas fontes discorda do número. Se você ainda não consegue nomear a fonte
+primária por trás de um valor que está usando, diga isso com todas as letras. Essa
+admissão é um achado sobre o número emprestado que você mais precisa checar antes de
+sexta-feira.

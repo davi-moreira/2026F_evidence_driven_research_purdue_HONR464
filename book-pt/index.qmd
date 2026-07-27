@@ -1,0 +1,53 @@
+# Prefácio {.unnumbered}
+
+::: {.callout-warning title="Um trabalho em construção"}
+Este livro é um **trabalho em construção**. Ele ainda está em desenvolvimento e
+vai continuar crescendo e melhorando com o tempo. Capítulos podem ser revisados,
+ampliados ou reorganizados conforme o material é usado em sala de aula; quando
+algo parecer inacabado, é por isso. Perguntas e sugestões são bem-vindas.
+:::
+
+**Pesquisa Orientada por Evidências na Era da IA: Como Desenhar, Analisar,
+Verificar e Defender** — **EDRAI** (do inglês *Evidence-Driven Research in
+AI-era*), na forma abreviada — é um manual aberto de pesquisa para estudantes de
+graduação em economia, STEM e áreas de negócios que querem transformar
+curiosidade em conhecimento crível, defensável e baseado em evidências, em um
+mundo no qual a IA consegue produzir quase tudo. Ele foi escrito primeiro para um
+seminário de pesquisa do Honors College da Purdue University, e é
+deliberadamente independente de instituição: qualquer docente ou estudante, em
+qualquer lugar, pode adotá-lo.
+
+Sua única mensagem: *A IA é o seu braço e a sua assistente de pesquisa, não o seu
+cérebro.* Você vai dirigir ferramentas de IA pelo fluxo de trabalho
+**Especificar → Delegar → Interrogar → Inspecionar → Verificar → Documentar →
+Defender**, mantendo cada decisão de pesquisa nas suas próprias mãos. Uma regra
+atravessa cada etapa de verificação deste livro: **IA pode revisar IA** — um
+segundo modelo é um auditor de verdade do primeiro — **mas a última decisão é
+sempre humana**.
+
+O livro *Research Design in the Social Sciences*, de Blair, Coppock e Humphreys
+(RDSS, gratuito em [book.declaredesign.org](https://book.declaredesign.org)), é o
+texto teórico que o EDRAI traduz para o público de graduação. No curso original,
+o capítulo do EDRAI é a leitura **obrigatória** de cada semana, e os capítulos
+correspondentes do RDSS são **recomendados** para aprofundamento; a caixa de
+Leitura de cada capítulo indica os capítulos companheiros no RDSS. Cada capítulo
+nomeia uma decisão de pesquisa, desenvolve um exemplo, dá acesso a um laboratório
+no Colab, mostra uma falha de IA e como detectá-la, e pede que você defenda uma
+alegação.
+
+O livro tem seis partes: pesquisa quando a IA pode produzir quase tudo; da
+curiosidade ao desenho de pesquisa; as trilhas de pesquisa (observacional e
+experimental, descritiva e causal, e predição); produzindo evidência crível com
+IA; comunicando e defendendo a pesquisa; e a pesquisa depois da conferência.
+
+**Idiomas.** O EDRAI também está disponível em
+[English](../book/index.html) e
+[Español](../book-es/index.html). A edição em inglês é a fonte oficial; as
+traduções são regeradas a partir dela conforme ela evolui.
+
+Se o seu curso adota o formato de sala de aula invertida que este livro apoia, a
+maior parte das aulas é conduzida por um estudante: o **Student Research Lead**
+(líder estudantil de pesquisa) do dia. O briefing desse líder fica no começo do
+notebook da aula correspondente, e o apêndice
+[O Student Research Lead](srl.qmd) reúne o formato, o ritmo de preparação e as
+expectativas em um só lugar.

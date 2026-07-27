@@ -1,0 +1,205 @@
+---
+title: "Pósteres de investigación"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Decide si la figura principal de tu póster es
+> *honesta*: si su impresión visual coincide con su número real, si su incertidumbre
+> queda en el mismo vistazo que la afirmación y si todo lector, incluido quien tiene
+> daltonismo o usa un lector de pantalla, puede recibirla. Tú eres dueño del verbo del
+> titular y de la decisión de que la imagen nunca diga más que los datos.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay un capítulo de RDSS (*Research Design in the Social Sciences*, el libro complementario del curso) que acompañe este tema; este capítulo se sostiene por sí solo.
+:::
+
+## Por qué importa esta decisión
+
+> *"Desde un metro y medio de distancia leo una sola cosa: ¿tu barra más alta significa
+> lo que parece significar? Si tu eje empieza a la mitad de la escala, ya te atrapé
+> antes de leer una palabra de tus métodos, y ahora desconfío de todo el tablero."*
+> — una **colega escéptica** que recorre una sesión de pósteres
+
+En una sesión de pósteres, un desconocido te da noventa segundos y un vistazo. La figura
+hace casi todo el trabajo de hablar, y una figura puede mentir con números verdaderos.
+Un eje que empieza justo debajo de tus datos convierte una diferencia del tamaño de un
+redondeo en un derrumbe. Quien no puede distinguir tu barra roja de la verde no recibe
+mensaje alguno. Este capítulo es la decisión que mantiene honesto tu recurso visual más
+fuerte antes de que llegue a la pared.
+
+## El concepto
+
+La decisión es un solo juicio hecho de cuatro maneras, y cada manera tiene nombre.
+
+- **Afirmación del titular.** La única frase con la que quieres que se quede quien lee.
+  Su verbo carga todo el significado. Ejemplo: "la Versión B elevó nuestras ventas"
+  promete mucho más que "la Versión B vendió un poco más".
+- **Límite de la afirmación.** La línea entre lo que tu evidencia autoriza y lo que no.
+  Ejemplo: una comparación observacional puede decir "se asocia con", nunca "causa".
+- **Posición en la brújula.** El tipo y el alcance de la pregunta que respondió tu
+  proyecto, que fija lo que el titular tiene permitido decir. Ejemplo: una pregunta
+  descriptiva sobre las semanas que mediste, no una afirmación causal sobre el porqué.
+- **Honestidad de la figura.** La regla de que la imagen de una figura no puede decir
+  más que sus datos. Ejemplo: si la brecha real es de tres puntos, las barras deberían
+  verse a unos tres puntos de distancia, no del doble de altura.
+- **Eje truncado.** Un eje que empieza por encima del fondo de su escala en lugar de
+  empezar en el piso. Ejemplo: un eje de tasa de finalización que va de 70 a 76 en lugar
+  de 0 a 100 magnifica una diferencia pequeña y la convierte en un precipicio.
+- **Incertidumbre en la página.** El intervalo o la advertencia impresos en el mismo
+  vistazo que la afirmación, no enterrados en una nota al pie. Ejemplo: una barra de
+  error de "±4 puntos" dibujada directamente sobre la figura principal.
+- **Accesibilidad.** Si tu mensaje llega a quienes perciben de otra manera. Ejemplo: un
+  par de barras rojo-verde no carga nada para un lector con daltonismo rojo-verde, es
+  decir, alrededor de 1 de cada 12 hombres.
+- **Codificación redundante.** Llevar la misma distinción en más de un canal, para que
+  ningún canal por sí solo sostenga el peso. Ejemplo: etiqueta cada barra con su valor y
+  dale a cada una un patrón de tramado, para que el color sea un extra y no la única
+  señal.
+
+Un póster que falla en cualquiera de estos puntos afirma de más, aun cuando sus números
+sean exactamente correctos.
+
+## Un ejemplo resuelto
+
+Estás presentando un proyecto de analítica de negocios que compara dos versiones de la
+página de pago de una tienda en línea. El resultado de interés es la **tasa de
+finalización**, la proporción de compradores que inician el pago y terminan la compra.
+En las muestras semanales, la Versión A da una tasa de finalización promedio del 71 por
+ciento y la Versión B, del 74. El intervalo del 95% de cada promedio es de unos ±4
+puntos porcentuales, así que los dos intervalos se traslapan. Tu primer borrador dibuja
+un gráfico de barras con el eje y de 70 a 76, lo titula "La Versión B DISPARA la
+finalización" y colorea las barras de rojo y verde.
+
+Ahora recorre la decisión. **Honestidad de la figura:** la brecha real es de 3 puntos,
+pero sobre un eje con piso en 70 la barra más alta queda dibujada con cuatro veces la
+altura de la más baja, así que la imagen reclama un derrumbe que los datos nunca
+entregaron. **Incertidumbre en la página:** los intervalos se traslapan, de modo que una
+diferencia que la figura vende como decisiva podría ser ruido, y nada en el tablero lo
+muestra. **Límite de la afirmación:** "DISPARA" es un verbo decisivo y causal para una
+brecha de tres puntos con intervalos traslapados. **Accesibilidad:** distinguidas solo
+por rojo y verde, las barras no cargan información para un lector con daltonismo, y un
+lector de pantalla no lee ningún valor desde la imagen.
+
+La figura corregida conserva cada número y cambia solo la honestidad. Corres el eje de 0
+a 100, imprimes cada promedio como etiqueta sobre su barra, dibujas encima el intervalo
+de ±4 puntos, separas las barras con un par de colores seguro para daltonismo más un
+patrón de tramado y suavizas el titular a "la Versión B terminó unos 3 puntos más
+arriba, con intervalos traslapados". Los mismos datos, y una imagen que ahora dice la
+verdad.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el notebook **nb11 — Poster criticism + final poster
+lock** (crítica del póster y cierre final). Ábrelo en Colab con la insignia de arriba y
+trabaja las celdas junto con este capítulo. Ahí dibujas una figura principal de dos
+maneras con los mismos números, ves cómo un eje truncado infla una brecha pequeña varias
+veces y corres las cuatro auditorías más la de accesibilidad hasta que cada una nombre un
+golpe localizado y reparable en el tablero.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia auditoría y después delega. Cada prompt de abajo es
+una tarea que puedes verificar, no una petición de veredicto.
+
+**Localiza los canales que dependen solo del color.**
+
+```text
+Here is the code that draws my poster's headline figure: [paste the cell].
+List every place this figure encodes a meaningful distinction using color.
+For each, tell me exactly what a red-green color-blind reader and a
+screen-reader user would fail to receive. Do not rewrite the figure.
+```
+Después de ejecutarlo, verifica: renderiza tu figura y revisa cada canal nombrado contra
+la imagen que puedes ver. Contrarresta el *método plausible pero equivocado* (consejos
+genéricos de accesibilidad que no corresponden a cómo está dibujada realmente tu figura).
+
+**Lista las preguntas del escéptico y luego asígnalas a auditorías.**
+
+```text
+Act as a hostile poster reviewer. My headline figure is a bar chart of mean
+checkout completion rate for two page versions, y-axis 70 to 76, red versus green
+bars, no interval shown, titled "Version B BOOSTS completion." Generate the six
+hardest questions you would ask, then name the one this figure cannot answer at all.
+```
+Después de ejecutarlo, verifica: asigna cada pregunta a una auditoría (límite de la
+afirmación, honestidad de la figura, incertidumbre, accesibilidad); una auditoría sin
+preguntas es el hueco, y el eje truncado más vale que aparezca. Contrarresta la *ilusión
+de exhaustividad* (una lista larga y ordenada que se salta en silencio la falla que más
+importa).
+
+**Haz red team (revisión adversaria) al verbo del titular.**
+
+```text
+Here is my headline: "[paste it]" and my compass position: "[descriptive /
+associational / causal]". Act as a skeptical reviewer and find every word that
+claims more than that position licenses. List the exact words. Do not soften them.
+```
+Después de ejecutarlo, verifica: si elogia el titular o no encuentra nada, insiste y
+exige la peor palabra; luego contrasta cada palabra señalada con tu intervalo.
+Contrarresta la *adulación complaciente* (elogios que revisan tu valentía, no tu
+evidencia).
+
+::: {.callout-important title="No delegues"}
+Las palabras de tu titular y el verbo que carga su límite son tuyos. También lo es el
+juicio de que la impresión de la figura coincide con su número, la decisión de que la
+incertidumbre es visible en el mismo vistazo y la decisión de que el póster es lo
+bastante honesto para cerrarse. La IA puede generar las preguntas del escéptico y
+escanear tu código en busca de canales que dependan solo del color. No puede ver tu
+tablero y no puede decidir que la afirmación se ganó. Eso se queda contigo.
+:::
+
+## Un caso de falla de la IA
+
+Pegas la figura descrita y le pides a Gemini las preguntas de revisión más duras.
+Devuelve una lista segura y bien organizada de seis: el tamaño de muestra, cuántas
+semanas se muestrearon, la generalización a otras páginas de producto, el tráfico
+estacional y dos más. Cada pregunta es razonable, y ni una sola menciona el eje truncado,
+la peor falla del tablero. La lista parece completa, así que es tentador confiar en ella
+y seguir adelante.
+
+Lo detectas asignando cada pregunta devuelta a una auditoría. El límite de la afirmación,
+el muestreo y los métodos reciben preguntas; la honestidad de la figura no recibe
+ninguna. Esa fila vacía es el hallazgo. Revisas el número que imprimió tu propia celda,
+la exageración que crea el eje con piso, y agregas el golpe de honestidad de la figura
+que la lista ordenada se saltó. Fluidez no es exhaustividad. La comprobación vive en tu
+propia lista de auditorías, la que escribiste antes de preguntar.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.
+:::
+
+Verifica el resultado clave del capítulo, que el eje truncado infla la brecha, con
+**cálculo directo** de la
+[guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recalcula los números a mano y compáralos con la imagen. La razón honesta entre las dos
+barras es 74 sobre 71, alrededor de 1.04, una diferencia del cuatro por ciento. Sobre un
+eje con piso en 70, las alturas dibujadas son (74−70) contra (71−70), es decir 4 a 1. La
+figura hace que la barra de la Versión B se vea cuatro veces la de la Versión A cuando
+las tasas de finalización en realidad difieren en un cuatro por ciento, y el eje por sí
+solo está haciendo ese trabajo. Para un segundo camino, vuelve a dibujar los mismos dos
+promedios en un eje de 0 a 100 (**código alternativo**) y confirma que las barras ahora
+se ven tan cercanas como lo son los números.
+
+## Transferencia al proyecto
+
+Este capítulo se convierte en la figura principal de tu hito de póster. Tu **borrador del
+póster** lleva una primera versión de esa figura. Corre ahora sobre ella las cuatro
+auditorías más la de accesibilidad, registra cada golpe localizado y reconstruye la
+figura con honestidad antes del **cierre final del póster**, donde un número que la
+imagen exagera se vuelve una afirmación pública y permanente que ya no puedes parchar
+después de imprimir. La única figura que arreglas aquí es la que un desconocido no podrá
+romper en tu conferencia de investigación (en el curso original, la Purdue Fall
+Undergraduate Research Expo).
+
+## Defiende tu decisión
+
+En cuatro frases, defiende tu figura principal. Enuncia la afirmación acotada que hace y
+el verbo que la mantiene dentro de tu posición en la brújula. Nombra lo que la figura no
+establece: el traslape de los intervalos, la diferencia que podría ser ruido, el alcance
+que tu diseño nunca compró. Di cómo la incertidumbre viaja en el mismo vistazo que la
+afirmación y nombra al lector que tu diseño todavía se esfuerza por alcanzar. Cierra con
+la única comprobación que decidió que la figura era lo bastante honesta para cerrarse: el
+número que recalculaste o la auditoría que no lograste hacer fallar.

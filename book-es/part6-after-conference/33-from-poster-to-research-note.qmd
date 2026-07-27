@@ -1,0 +1,222 @@
+---
+title: "Del póster a la nota de investigación"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Cuando conviertes tu póster en una nota de
+> investigación escrita, decides qué hallazgo se ganó el titular y exactamente qué
+> tan grande puede ser cada afirmación dada tu evidencia; luego empacas la nota para
+> que una persona desconocida pueda volver a ejecutarla y llegar a tu número sin que
+> tú estés en la sala.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay un capítulo complementario de RDSS (*Research Design in the Social Sciences*) para este tema; este capítulo se sostiene solo.
+:::
+
+## Por qué importa esta decisión
+
+> *"Muéstrame tus resultados en el orden en que confías en ellos. Si tu número más
+> llamativo viene de una corrida con suerte y encabeza el artículo, ya sé cómo
+> termina esta revisión. No quiero primero tu resultado más sorprendente. Quiero el
+> más defendible."*
+> — una **revisora de conferencia**, sobre la primera página de un artículo que de verdad pesa
+
+En el póster estabas de pie junto a tu trabajo y llenabas los silencios con tu voz.
+La nota no te tiene a ti parado al lado. Cada salto que el póster te dejaba insinuar,
+la prosa ahora tiene que ganárselo, en orden, para alguien que nunca te oirá
+explicarlo. A la revisora de arriba no la impresiona un número grande. Está
+preguntando qué hallazgo seguirías defendiendo después de que la sala se vacíe, y si
+podría volver a ejecutar tu trabajo y ver aparecer el mismo número. Este capítulo es
+cómo respondes a las dos preguntas.
+
+## El concepto
+
+Un póster y una nota hacen el mismo argumento, pero lo cargan de forma distinta. La
+**lógica de póster** es comunicación construida para alguien que está de pie junto a
+ti, donde unos pocos recuadros y tu voz en vivo se reparten el trabajo. Ejemplo: un
+recuadro de Vacío que solo dice "pocos estudios sobre tiempos de espera en horas
+pico" mientras tú dices el resto en voz alta. La **lógica de artículo** es
+comunicación que tiene que sostenerse sola en la página, donde cada afirmación se
+argumenta en prosa porque tú no estás ahí para responder. Ejemplo: ese mismo vacío
+escrito como un párrafo que nombra qué cubrieron los estudios previos, qué se
+saltaron y por qué importa la pieza que falta. Convertir lo uno en lo otro no es
+agregar palabras. Es hacer visible el razonamiento.
+
+Una nota carga ese razonamiento sobre una columna vertebral. La **columna
+problema–vacío–pregunta** son tres piezas enlazadas: el problema real al que tu
+trabajo responde, la cosa específica que el trabajo previo y recuperable no ha
+establecido, y la pregunta respondible que cierra exactamente ese vacío. Ejemplo: los
+clientes se rinden y se van durante el ajetreo de la mañana (problema); los estudios
+publicados sobre tiempos de espera miden solo horas tranquilas y estables (vacío);
+cuánto recorta la espera durante el ajetreo en esta cafetería una opción de pedido
+anticipado por celular (pregunta). La columna se sostiene solo cuando el vacío es
+real, y un vacío es real solo cuando muestras lo que ya se sabe con **densidad de
+evidencia**, la parte de un párrafo que descansa en fuentes que quien lee podría
+abrir, en lugar de en afirmaciones sin respaldo. Ejemplo: "como todo el mundo sabe"
+no carga densidad; una oración que descansa en una cifra publicada que quien lee
+puede buscar y recalcular carga algo.
+
+La segunda mitad de la nota necesita un término más. Una **jerarquía de resultados**
+es el orden en que presentas los hallazgos: primero el mejor respaldado y al final el
+más frágil. Ejemplo: encabeza una mediana medida sobre mil mañanas simuladas; un
+pedido inusualmente rápido espera al fondo, etiquetado como exploratorio. Tus
+limitaciones siguen la misma disciplina, enunciadas en proporción a lo que de verdad
+amenaza la afirmación: "medido sobre un patrón de llegadas simulado, no sobre un
+sábado real de ajetreo", y no un genérico "se necesita más investigación".
+
+Por último, una nota que quien lee no puede volver a ejecutar es media afirmación. La
+otra mitad es una **cápsula de reproducibilidad**, todo lo que una persona
+desconocida necesita para reconstruir tu número y nada que tenga que adivinar: un
+cuaderno que pasa la prueba de **reiniciar y ejecutar todo** (borras todo, corres cada
+celda de arriba abajo y el número titular vuelve), versiones fijadas de datos y
+herramientas, una semilla fija, una bitácora de decisiones y tu registro de uso de IA
+(**AI Research Ledger**).
+
+## Un ejemplo trabajado
+
+Pusiste a prueba una opción de pedido anticipado por celular para una cafetería del
+campus. Tu póster tenía un recuadro: "38% más rápido". La nota tiene que convertir
+ese recuadro en una afirmación que puedas defender.
+
+**Ordena los hallazgos.** A lo largo de mil llegadas de clientes en una simulación
+con semilla del ajetreo matutino, la mediana del tiempo de espera cayó cerca de 38%,
+con un intervalo estrecho a su alrededor. También notaste a un cliente con pedido
+anticipado al que atendieron casi al instante, una caída de 95%. El número
+sorprendente es el cliente único; el defendible es la mediana sobre mil llegadas. Así
+que la mediana encabeza, y el cliente solitario va al fondo, etiquetado como una
+observación, no como un resultado.
+
+**Dimensiona la afirmación.** El titular honesto dice: "sobre este patrón de llegadas
+simulado, agregar el pedido anticipado por celular recortó la mediana del tiempo de
+espera en cerca de 38% (intervalo adjunto); esta es una medición sobre demanda
+simulada, no una garantía para un sábado real de ajetreo". La versión inflada que
+rechazas: "el pedido anticipado por celular hace la cafetería 38% más rápida". Esa
+oración deja fuera el patrón de demanda, deja fuera la palabra mediana y le promete a
+cada cliente una espera más corta que tu simulación nunca puso a prueba.
+
+**Empácalo.** Tu cápsula fija la semilla de la simulación, registra la máquina y las
+versiones de las bibliotecas, deja anotado que excluiste el primer pedido de la
+mañana y por qué, y pasa la prueba de reiniciar y ejecutar todo, de modo que el 38%
+vuelve en un kernel limpio. La nota ya es legible y ejecutable.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el cuaderno **nb15 — Del póster a la nota de
+investigación**. Ábrelo en Colab con la insignia de arriba y trabaja las celdas junto
+a este capítulo. Allí calificas la densidad de evidencia de dos párrafos, construyes
+una jerarquía de resultados viendo cómo un intervalo estrecho se gana la cima
+mientras un intervalo de cuarenta filas espera al fondo, y corres un auditor que caza
+las cinco formas en que se rompe una cápsula de reproducibilidad.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia respuesta y luego delega. Cada prompt es una tarea
+verificable, no una petición de veredicto.
+
+**Localiza fuentes reales para el vacío.**
+
+```text
+Act as a literature assistant in service operations. List peer-reviewed or
+official sources that measure customer wait times or the effect of pre-ordering
+on queues, in a table with title, authors, venue, year, and one-line finding.
+Only include work you are confident exists; mark anything uncertain. Do not
+write my gap paragraph.
+```
+
+Después de ejecutarlo, verifica: recupera tú mismo cada fuente antes de que entre en
+la nota; una fuente que no puedes abrir en segundos está fabricada hasta que se
+demuestre lo contrario. Contrarresta la *fabricación confiada* (una cita inventada
+llega con la misma seguridad que una real).
+
+**Lista cada exceso para verificarlo.**
+
+```text
+Here is my discussion paragraph and the cell that printed my median wait-time
+drop with its interval: [paste both]. List every sentence that claims more than
+the printout supports: a bigger number, a wider setting, or "faster for everyone"
+where I measured one simulated demand pattern. List them; do not rewrite them.
+```
+
+Después de ejecutarlo, verifica: contrasta cada oración señalada con tu impresión de
+resultados y conserva solo las ediciones que encogen una afirmación hasta que quepa
+en la evidencia. Contrarresta el *cambio silencioso de alcance* (una oración más
+filosa que asciende "sobre este patrón de llegadas" a "para todo el mundo" ha
+respondido en silencio una pregunta distinta).
+
+**Hazle red team a la cápsula.**
+
+```text
+Here are the key lines of my reproducibility capsule: [paste them]. Playing a cold
+replicator who has only these lines, list every input, version, or by-hand step you
+would need to rerun my number and might not find here. Then name one problem this
+line-scan can never catch that only a person running it cold would hit.
+```
+
+Después de ejecutarlo, verifica: contrasta cada vacío con lo que de verdad ves que
+falta, y confirma que el problema "que no se puede atrapar" es real releyendo tus
+propias líneas. Contrarresta la *ilusión de completitud* (una cápsula puede parecer
+completa y aun así omitir el único insumo que una persona desconocida necesita).
+
+::: {.callout-important title="No delegues"}
+Tres decisiones siguen siendo tuyas por más fluida que sea la herramienta. **Cuál
+hallazgo es tu titular**, **qué tan grande puede ser esa afirmación** y **cuáles
+fuentes son reales** no se delegan nunca. Una IA puede afilar una oración, pero una
+oración más filosa no es un hallazgo más grande, y la prosa limpia es exactamente por
+donde se cuela un exceso de afirmación. Las palabras que firmas son tuyas, y también
+lo son su límite y su incertidumbre.
+:::
+
+## Un caso de falla de la IA
+
+Pegas tu discusión en Gemini y le pides que afile la escritura. Te devuelve prosa más
+limpia, y pasa tu corrector ortográfico sin una sola marca. Enterrada en el pulido,
+una oración cambió de tamaño. Tu original decía "la mediana del tiempo de espera cayó
+cerca de 38% sobre este patrón de llegadas simulado". La reescritura dice "el pedido
+anticipado por celular hace la cafetería cerca de 38% más rápida". La palabra mediana
+desapareció, el límite del patrón de demanda desapareció, y una medición sobre
+demanda simulada ahora le promete a cada cliente una espera más corta. La oración se
+lee mejor y afirma más.
+
+Lo atrapas comparando la reescritura contra tu oración original y contra tu resultado
+impreso. El número vino de una mediana sobre una simulación con semilla, no de un
+promedio, y no de un sábado real de ajetreo, así que la afirmación general no está
+autorizada. Conservas las ediciones que aclaran y rechazas la que infló. La prosa
+fluida no es evidencia. Verificas la afirmación, no el pulido.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.
+:::
+
+Verifica el resultado clave de este capítulo, la aceleración titular, con **código
+alternativo** de la
+[guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recalcula de una segunda forma la caída de la mediana del tiempo de espera, desde los
+tiempos de espera simulados en crudo en vez de la tabla resumida, y confirma que el
+número y su intervalo coinciden. Luego verifica la cápsula con **razonamiento con
+pares**: entrégasela a alguien que la vuelva a correr en frío con reiniciar y ejecutar
+todo. Si tu número regresa en su máquina, la cápsula es ejecutable. Si no, mediste tu
+propia memoria, no un resultado reproducible.
+
+## Transferencia al proyecto
+
+Este capítulo se convierte en tu **nota de investigación y cápsula de
+reproducibilidad**, el hito del proyecto para este tema. Redacta en prosa la columna
+problema–vacío–pregunta con cada afirmación respaldada por una fuente, ordena tus
+hallazgos en una jerarquía de resultados con el defendible al frente, dimensiona tus
+limitaciones a tu evidencia y arma la cápsula para que reiniciar y ejecutar todo
+devuelva tu titular. Alguien lee la nota en voz alta contigo y vuelve a correr la
+cápsula en el estudio del viernes, cuando la nota se entrega y empieza tu capítulo
+final de investigación. La nota hace que tu trabajo sea legible; la cápsula lo hace
+ejecutable.
+
+## Defiende tu decisión
+
+En cuatro oraciones, defiende tu nota de investigación. Nombra el hallazgo que
+elegiste como titular y por qué él, y no un resultado más sorprendente, se ganó la
+cima. Enuncia la afirmación acotada en una oración, con su límite (el entorno, la
+muestra o la población que no cubre). Luego enuncia tu incertidumbre: tu intervalo o
+la salvedad que más amenaza al número, y la comprobación que correría enseguida
+alguien que ejecute tu cápsula en frío para ponerlo a prueba.

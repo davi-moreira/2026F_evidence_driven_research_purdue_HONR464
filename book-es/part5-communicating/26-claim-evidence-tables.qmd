@@ -1,0 +1,191 @@
+---
+title: "Tablas afirmación–evidencia"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Para cada afirmación que hace tu póster, decide
+> qué pieza exacta de evidencia la respalda, dónde vive esa evidencia y qué es lo que
+> no establece, y registra las tres cosas en una fila de una tabla
+> afirmación–evidencia antes de cerrar el póster.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay un capítulo de RDSS (*Research Design in the Social Sciences*, el libro complementario del curso) que acompañe este tema; este capítulo se sostiene por sí solo.
+:::
+
+## Por qué importa esta decisión
+
+> *"Señalo un número de tu tablero y pregunto de dónde salió. Llévame hasta la línea
+> que lo produjo y confío en todo el póster. Dime 'está en el análisis, en alguna
+> parte' y dejo de creer en todos los demás números de ahí arriba."*
+> — una **jueza de integridad de la investigación** en un salón de pósteres
+
+Un póster es un conjunto de promesas hechas en público. Cada número principal, cada
+figura, cada dato citado es una afirmación que un desconocido puede poner a prueba en
+noventa segundos. La brecha peligrosa está entre una afirmación que puedes *decir* y
+una afirmación que puedes *respaldar*. Una tabla afirmación–evidencia cierra esa
+brecha a propósito, antes de que alguien te señale con el dedo, para que la honestidad
+quede construida dentro del tablero y no parchada bajo presión.
+
+## El concepto
+
+Una **tabla afirmación–evidencia** es una tabla con una fila por afirmación, que
+empareja cada afirmación de tu póster con la evidencia específica que hay detrás.
+Ejemplo: una fila que dice "la Tienda B vendió unas 1.4 veces más unidades por semana
+que la Tienda A" en la columna de afirmación, con los dos promedios semanales de ventas
+en la columna de evidencia.
+
+Cuatro columnas sostienen cada fila, y cada una es un término que vale la pena conocer.
+
+- **Afirmación.** El enunciado que tu póster sostiene como verdadero. Ejemplo:
+  "nuestro valor medido de *g* es 9.79 m/s²".
+- **Evidencia.** El resultado o la fuente exacta que respalda la afirmación, con su
+  incertidumbre. Ejemplo: 30 oscilaciones cronometradas que dan un período de 2.007 s,
+  y el intervalo de ±0.06 m/s² alrededor de la estimación.
+- **Traza.** Dónde se produjo realmente un número, nombrado con la precisión suficiente
+  para poder abrirlo. Un **número trazable** es aquel que puedes rastrear hasta la celda
+  del notebook que lo calculó. Ejemplo: "celda 16, donde corre
+  `g = 4*pi**2*L / T**2`". Un número que no puedes rastrear, uno escrito de memoria o
+  redondeado a mano, es un **número no trazable**, y no pertenece al tablero.
+- **Límite.** El **límite de la afirmación** es la línea entre lo que la evidencia
+  autoriza y lo que no. Ejemplo: "medido en un solo lugar, con una sola longitud de
+  péndulo, cronometrado a mano, así que este no es el valor estándar a nivel del mar".
+
+Construir la tabla es la destreza que se califica. Una vez que cada afirmación tiene su
+fila llena, una afirmación sin respaldo no tiene dónde esconderse, porque una celda en
+blanco es un hueco visible.
+
+## Un ejemplo resuelto
+
+Construiste un póster de física que reporta una medición de *g*, la aceleración debida
+a la gravedad, a partir de un péndulo simple. Tu titular dice "medimos *g* = 9.79 m/s²".
+Antes de que el archivo se vaya a la imprenta, construyes la tabla.
+
+**Fila 1 (el titular).** Afirmación: "*g* = 9.79 ± 0.06 m/s²". Evidencia: 30
+cronometrajes de un péndulo de 1.00 m, período promedio de 2.007 s, y la dispersión de
+los 30 períodos que da el intervalo. Traza: celda 16, la línea
+`g = 4*pi**2*L / T**2`. Límite: un solo lugar, una sola longitud, cronometraje manual,
+así que es posible un sesgo por tiempo de reacción del orden de una décima de segundo y
+no se afirma que el valor sea el aceptado de 9.81 m/s².
+
+Llenar la Fila 1 obliga a una captura honesta. Vas por la traza y descubres que el
+número de tu borrador dice 9.81, no 9.79. Habías escrito en silencio el valor del libro
+de texto en lugar del que imprimió tu celda. La tabla atrapó un número no trazable antes
+que un juez.
+
+**Fila 2 (una afirmación secundaria).** Afirmación: "el período casi no cambia con la
+amplitud en oscilaciones pequeñas". Evidencia: los períodos medidos a 5° y 15° difieren
+menos que la dispersión de tu cronometraje. Traza: celda 18, la comparación de
+amplitudes. Límite: solo se probó por debajo de 15°, así que no se afirma nada sobre
+oscilaciones grandes.
+
+Dos afirmaciones, dos filas, cada número rastreado hasta una celda, cada límite escrito.
+Esa tabla es lo que permite que tu póster sobreviva a un dedo que señala.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el notebook **nb11 — Poster criticism + final poster
+lock** (crítica del póster y cierre final). Ábrelo en Colab con la insignia de arriba y
+trabaja las celdas junto con este capítulo. Ahí ejecutas la auditoría de cierre final
+sobre un póster real: rastreas cada número hasta la celda que lo produjo, confirmas que
+cada cita se resuelve en una fuente que abriste tú mismo y conviertes afirmaciones
+sueltas en filas cerradas y respaldadas.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propio borrador de tabla y después delega. Cada prompt es
+una tarea que puedes verificar, no una petición de veredicto.
+
+**Localiza la fuente de un dato citado.**
+
+```text
+Act as a physics reference assistant. I want to cite the accepted sea-level value
+of g. Name the value and one real, retrievable source that reports it, and give me
+enough detail to find it myself. If you are not confident a source exists, say so
+instead of guessing.
+```
+Después de ejecutarlo, verifica: abre tú mismo la fuente nombrada y confirma que reporta
+ese valor antes de que llegue a tu póster. Contrarresta la *fabricación confiada* (una
+cita inventada llega con la misma seguridad que una real).
+
+**Lista todas las afirmaciones, para que ninguna quede sin respaldo.**
+
+```text
+Here is my poster text: [paste it]. List every distinct claim it makes, one per
+row. For each, name what evidence a reader would need to see to believe it. Do not
+judge whether my evidence is good; just surface every claim, including implicit
+ones.
+```
+Después de ejecutarlo, verifica: contrasta la lista con tu propia tabla y agrega
+cualquier afirmación para la que no habías escrito una fila. Contrarresta la *ilusión de
+exhaustividad* (una lista ordenada que se salta en silencio la única afirmación sin
+evidencia detrás).
+
+**Haz red team (revisión adversaria) al emparejamiento afirmación–evidencia.**
+
+```text
+Here is one row of my claim-evidence table: claim "[paste]", evidence "[paste]".
+Act as a hostile reviewer. Tell me every way this evidence fails to license this
+claim, or claims more than it shows. Do not soften the claim for me; name the words
+that overreach.
+```
+Después de ejecutarlo, verifica: lee cada objeción contra tu columna de límite y rechaza
+las que te pidan conceder algo que tu evidencia sí autoriza. Contrarresta el *cambio
+silencioso de alcance* (evidencia para una afirmación más fácil, disfrazada de respaldo
+para la difícil).
+
+::: {.callout-important title="No delegues"}
+La **redacción de cada afirmación**, el **juicio de que una pieza de evidencia
+realmente la respalda** y el **límite que carga cada afirmación** siguen siendo tuyos.
+Una IA puede listar afirmaciones y redactar filas, pero no puede abrir la celda de tu
+notebook para confirmar que un número es real, y no puede decidir que la evidencia es lo
+bastante honesta para imprimirse. La decisión de que la tabla está completa y el póster
+cerrado es tuya, y tuya es la defensa.
+:::
+
+## Un caso de falla de la IA
+
+Pegas el texto de tu póster y le pides a una herramienta de IA que construya toda la
+tabla afirmación–evidencia por ti. Devuelve una cuadrícula limpia y completa, con cada
+celda llena, y la columna de traza dice con seguridad: "valor de *g* de la celda 14".
+Casi lo aceptas. Entonces abres la celda 14 y ves que calcula el *período*, no *g*. El
+valor que reportas se produce dos celdas después, en la celda 16. La herramienta adivinó
+un número de celda plausible y lo llenó con total confianza, y su tabla pulida y
+terminada escondió la traza equivocada detrás de una buena apariencia.
+
+Lo detectas negándote a confiar en una traza que no has abierto. Leer la celda real, con
+el número en la mano, es toda la disciplina. Una tabla llena no es una tabla verificada.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.
+:::
+
+Verifica el resultado clave de este capítulo, la trazabilidad de la tabla, con dos
+métodos nombrados de la [guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
+Para cada número rastreado, usa el **cálculo directo**: vuelve a calcular el valor por
+una segunda vía, más simple, y confirma que coincide con la cifra del tablero, dígito
+por dígito. Para cada dato citado, usa la **lectura de la fuente primaria**: abre la
+fuente, encuentra la línea y confirma que dice lo que tu póster afirma. Un número que
+sobrevive a un recálculo independiente y una cita que se resuelve en una página real
+están respaldados. Una discrepancia en cualquiera de los dos es un hallazgo, y la
+afirmación baja del tablero hasta que la arregles.
+
+## Transferencia al proyecto
+
+Este capítulo es una pieza calificada de tu hito de **cierre final del póster**.
+Construye una tabla afirmación–evidencia para tu propio póster: una fila por cada
+número principal y cada dato citado, cada uno con su traza a una celda o a una fuente y
+con su límite escrito. Esa tabla es la que llevas a la auditoría de recorrido de galería
+y a la defensa oral, y es la prueba de que la honestidad de tu póster fue verificada y
+no simplemente declarada.
+
+## Defiende tu decisión
+
+En cuatro frases, defiende una fila de tu tabla. Enuncia la afirmación con las palabras
+exactas que aparecerán en tu tablero y nombra la evidencia específica que la respalda.
+Enuncia su límite: lo que esta afirmación *no* establece y la posición en la brújula
+desde la que habla. Cierra con su incertidumbre: el intervalo o la advertencia que viaja
+en el mismo golpe de vista que la afirmación, y la única comprobación que hiciste para
+confirmar que el número rastreado es real.

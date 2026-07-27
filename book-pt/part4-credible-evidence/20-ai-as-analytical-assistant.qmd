@@ -1,0 +1,202 @@
+---
+title: "A IA como Assistente Analítica"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Decida quais partes da sua própria análise você entrega
+> a uma ferramenta de IA como assistente analítica, e como verificar cada número que
+> ela devolve contra os seus dados antes de acreditar em qualquer um deles. Você
+> decide quais conferências contam e quais problemas sinalizados são reais; a
+> ferramenta só faz o trabalho que você especificar.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do tópico correspondente no curso; o laboratório no Colab está no link acima. Não há capítulo companheiro do RDSS (o manual *Research Design in the Social Sciences*) para este tópico; este capítulo se sustenta sozinho.
+:::
+
+## Por que essa decisão importa
+
+> *"Não me importa que um modelo tenha rodado as suas verificações de robustez. Me
+> importa quais delas você escolheu, quais números você refez por conta própria e
+> quais alertas você confirmou contra os dados. Me mostre essa trilha e eu confio no seu
+> julgamento. Me mostre a transcrição do modelo e eu não confio em nenhum dos dois."*
+> — uma **revisora de uma conferência de interação humano-computador**, lendo a seção
+> de resultados de um estudo de usabilidade
+
+Hoje uma ferramenta de IA consegue escrever o seu código de análise, rodar uma dúzia
+de verificações de robustez e devolver uma tabela limpa em segundos. Essa velocidade é
+justamente o que torna um hábito frouxo perigoso. Cole a tabela no seu pôster e você
+assinou embaixo de números que nunca conferiu. A revisora acima quer a lista curta de
+decisões que continuaram sendo suas. Este capítulo dá a você o hábito que sobrevive à
+pergunta dela.
+
+## O conceito
+
+Uma **assistente analítica de IA** é uma ferramenta de IA a quem você entrega uma
+tarefa analítica bem especificada, nunca o seu julgamento. Exemplo: você diz a ela
+"recalcule esta diferença de tempo depois de remover os três usuários mais
+experientes" e ela escreve e roda essa única conferência. A tarefa é conferível. O
+veredito não é trabalho dela.
+
+A unidade que você ataca é a sua **estimativa principal**, o número único que
+representa o seu achado inteiro. Exemplo: "quem usou a nova interface terminou cerca
+de 0,7 desvio-padrão mais rápido". Antes de defender esse número, você tenta
+quebrá-lo, e é esse trabalho que você delega.
+
+Dois ataques fazem quase todo o serviço. Uma **verificação de robustez** repete o
+mesmo achado sob uma escolha diferente, mas igualmente defensável, e pergunta se a
+resposta se mantém. Exemplo: você relatou um tempo médio de conclusão, então também
+calcula a mediana e confere se a história sobrevive. Um **teste de placebo** roda a
+sua análise exata onde o efeito não pode existir e confirma que ela devolve algo perto
+de zero. Exemplo: você embaralha ao acaso os rótulos "nova interface / interface
+antiga" e confere se a diferença falsa desaba para nada.
+
+Aqui está a divisão de trabalho. A assistente propõe conferências, escreve o código e
+imprime os números. Você decide quais conferências contam, e você verifica cada número
+antes que ele chegue à sua alegação. Uma ferramenta que rodou sem erro não provou que
+o resultado dela está correto. Você verifica o número, não o parágrafo sobre o número.
+
+## Um exemplo trabalhado
+
+Você está estudando se uma **paleta de comandos** (um menu pesquisável que você abre
+com uma tecla) ajuda as pessoas a formatar um documento mais rápido do que os antigos
+menus aninhados. Sua estimativa principal: quem usou a paleta terminou cerca de 0,7
+desvio-padrão mais rápido. Você usa uma assistente analítica para atacá-la.
+
+**Delegue.** Você pede à assistente que recalcule a diferença ao longo de uma pequena
+grade: todas as pessoas participantes contra a exclusão das três que já tinham usado
+uma paleta de comandos antes (a amostra), tempo médio contra tempo mediano de
+conclusão (a mensuração), e a diferença bruta contra uma diferença ajustada pela
+velocidade de digitação de cada pessoa (a especificação).
+
+**Inspecione e verifique.** A assistente devolve oito números. Você ainda não confia
+neles. Você recalcula duas linhas na mão com uma segunda expressão, mais simples, e
+elas batem. A direção se mantém nos oito casos, e a magnitude vai de cerca de 0,5 a
+0,9 desvio-padrão. Seu título honesto é uma direção mais um intervalo, não um número
+lisonjeiro só.
+
+**Placebo e red team.** Você pede à assistente que embaralhe os rótulos da paleta e
+rode de novo. A diferença falsa volta perto de zero, então a maquinaria não está
+fabricando o seu efeito. Depois você pede a ela, como revisora hostil, o pior defeito,
+um só. Ela diz com total confiança que quem já tinha experiência é o que puxa o
+resultado. Você já tinha removido essas pessoas na conferência de amostra e a
+diferença se manteve, então os dados refutam esse alerta. O defeito que ela não viu é
+o que importa: tempo de conclusão não é satisfação de quem usa, então a sua alegação
+precisa continuar sendo sobre velocidade, não sobre preferência.
+
+A assistente fez a aritmética. Você decidiu quais conferências contavam e quais
+alertas os dados confirmaram.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb10 — Share the research and attack the
+analysis** (compartilhe a pesquisa e ataque a análise). Abra-o no Colab pelo selo
+acima e trabalhe as células junto com este capítulo. Lá você delega a uma assistente
+uma grade de robustez real, um teste de placebo e uma verificação de influência,
+depois julga três revisores de IA confiantes contra os dados e vê dois dos três
+alertas se dissolverem no instante em que uma conferência encosta neles.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria expectativa, depois delegue. Cada prompt é
+uma tarefa conferível, não um pedido de veredito.
+
+**Proponha as conferências que talvez você tenha esquecido.**
+
+```text
+Here is my robustness grid for one estimate: I vary the sample (all users /
+drop prior palette users), the measurement (mean / median time), and the
+specification (raw gap / typing-speed-adjusted). Act as a hostile reviewer.
+Name up to three additional, equally defensible checks I did NOT list, and
+for each say which direction you expect it to move the estimate.
+```
+Depois de rodar, verifique: confronte cada proposta com as suas quatro alavancas e
+confirme que você realmente consegue calculá-la nos seus dados. Contra-ataca a
+*ilusão de completude* (uma grade arrumadinha que mesmo assim omite justo a
+conferência capaz de quebrar a alegação).
+
+**Delegue o cálculo e mantenha os números conferíveis.**
+
+```text
+Recompute my time gap under each row of this grid and return a table:
+row label, the gap, and the exact columns and filter used for that row.
+Do not summarize; show one number and its code path per row.
+```
+Depois de rodar, verifique: recalcule duas linhas na mão com uma segunda expressão e
+confirme que elas batem com a tabela. Contra-ataca o *método plausível mas errado*
+(uma linha cujo rótulo e cujo código discordam em silêncio).
+
+**Faça red team (revisão adversária) na alegação sobrevivente.**
+
+```text
+Here is my claim: "the palette is about 0.7 SD faster." Act as a hostile
+reviewer of HCI studies. Name the single worst way this result could
+mislead, and the exact data check that would confirm or kill it. Do not
+rewrite my claim.
+```
+Depois de rodar, verifique: rode a conferência que ela nomear e trate o defeito como
+real apenas se a sua própria saída confirmar. Contra-ataca a *concordância bajuladora*
+(elogio que revisa o seu ego, não a sua evidência).
+
+::: {.callout-important title="Não delegue"}
+Três decisões nunca saem das suas mãos. Você decide **quais conferências contam** para
+a alegação que você quer fazer, **quais problemas sinalizados os dados realmente
+confirmam** e **a alegação final que você defende**, com o seu limite e o seu
+intervalo. A assistente propõe e calcula. A evidência decide, e quem lê a evidência é
+você.
+:::
+
+## Um caso de falha da IA
+
+Você entrega a sua grade a uma assistente e ela devolve uma tabela polida de oito
+linhas, todas perto de 0,7, e declara o resultado "totalmente robusto". A execução não
+deu erro nenhum. Aqui está a armadilha: as linhas de "mediana" chamam em silêncio a
+mesma função de média das linhas de "média", então quatro dos oito números são
+duplicatas usando rótulos diferentes. A tabela concorda consigo mesma porque nunca
+variou a alavanca que diz variar. Isso é a **ilusão de completude**, uma saída de
+aparência minuciosa à qual falta justo o que importa, resvalando na **fabricação
+confiante**, um número afirmado com certeza que nunca veio do caminho de código que
+ele diz ter percorrido.
+
+Você pega o problema recalculando na mão uma linha de "mediana". A diferença mediana
+verdadeira é 0,55, não 0,70. A grade exagerou o quanto as suas escolhas concordavam.
+Um sinal verde não é um resultado correto.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, a pesquisadora ou o pesquisador.
+:::
+
+Verifique o resultado central deste capítulo, a robustez sobrevivente da sua diferença
+principal, com **código alternativo** do [guia de
+verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recalcule a mesma diferença de um segundo jeito e compare. Filtre cada grupo na mão,
+subtraia as duas médias por conta própria e confirme que você chega ao número da
+assistente.
+Depois acrescente um segundo caminho, independente, com um **teste de falsificação**, o
+placebo: embaralhe os rótulos de grupo, rode de novo e confirme que a diferença falsa
+fica em zero. Dois caminhos até uma resposta é um resultado verificado. Dois caminhos
+até duas respostas significa que você mediu o código da assistente, não o seu efeito.
+
+## Transferência para o seu projeto
+
+Este capítulo alimenta a sua **etapa de pôster preliminar e auditoria de pesquisa**, o
+registro avaliado de quanto você tentou quebrar a sua própria alegação e do que
+sobreviveu. Pegue a estimativa que você produziu na etapa anterior, delegue a uma
+assistente a sua grade de robustez e um placebo, e verifique cada número antes que ele
+entre na auditoria. Para cada uso de IA, registre a tarefa que você delegou, o número
+que a ferramenta devolveu, a conferência nomeada que conquistou a sua confiança e o
+único alerta em que você pegou a ferramenta errando. Essa trilha verificada, mais o seu
+resultado principal sobrevivente enunciado com o seu intervalo, é o que você apresenta
+a uma pessoa cética no estúdio de sexta-feira.
+
+## Defenda sua decisão
+
+Em quatro frases, defenda uma tarefa analítica que você entregou a uma assistente.
+Nomeie a conferência que você delegou e o único número que você refez por conta própria
+antes de acreditar nele. Enuncie a alegação delimitada que você agora consegue fazer, com o seu
+limite (o que a conferência *não* estabelece) e o seu intervalo (o quanto a estimativa
+se moveu entre as suas escolhas defensáveis). Encerre com a sua incerteza: o defeito
+que nenhuma conferência conseguiu resolver e a verificação que você faria em seguida
+para fechá-lo.

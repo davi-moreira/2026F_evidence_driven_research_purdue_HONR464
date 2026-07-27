@@ -1,0 +1,196 @@
+---
+title: "Declarar y diagnosticar un diseño de investigación"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Si tu diseño de investigación es lo bastante fuerte
+> para llevarlo a cabo, decidido simulándolo antes de recoger un solo dato, leyendo con
+> qué frecuencia acierta la verdad y nombrando el único cambio que más lo mejora.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de referencia del curso) cap. 2, 5 y 10, gratis en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por qué importa esta decisión
+
+Imagina a una metodóloga de tu comité leyendo tu plan. Hace una sola pregunta: *«¿Con
+qué frecuencia este diseño exacto captaría el efecto real si lo corrieras mil veces?»*
+Si tu respuesta es «nunca lo comprobé», ella se detiene ahí. Un diseño puede leerse
+hermoso, con una pregunta afilada y una comparación limpia, y aun así devolver «aquí no
+hay nada» nueve de cada diez veces, o aterrizar con seguridad en el número equivocado
+siempre. Este capítulo te deja averiguarlo barato, en simulación, para que un semestre
+que habrías gastado recogiendo datos condenados se vaya en cambio a un diseño que sí
+puede responder tu pregunta.
+
+## El concepto
+
+En el capítulo 9 construiste las cuatro partes de un diseño. Este capítulo las pone a
+prueba con un ciclo de tres pasos que el curso toma prestado de su texto RDSS
+(*Research Design in the Social Sciences: Declare, Diagnose, Redesign*).
+
+**Declarar** significa escribir tus cuatro partes del diseño como algo que una
+computadora puede correr: un modelo que genera datos falsos, una indagación que puede
+calcularse sobre esos datos falsos, un plan para muestrear y asignar condiciones, y una
+regla para convertir datos en una estimación. *Ejemplo:* código que inventa 40 personas
+usuarias, lanza una moneda para darle a cada una una interfaz nueva y resta los
+promedios de los dos grupos.
+
+**Diagnosticar** significa correr ese diseño declarado muchas veces sobre mundos
+simulados nuevos y observar cómo se comporta su estimación. *Ejemplo:* corre el estudio
+del lanzamiento de moneda 2,000 veces y junta las 2,000 estimaciones. Tres números
+resumen el montón.
+
+El **sesgo** es la distancia promedio entre tu estimación y la verdad a lo largo de las
+corridas; un diseño es insesgado cuando sus estimaciones se centran en la respuesta
+verdadera. *Ejemplo:* si la verdad es 2 y tus estimaciones promedian 2.0, el sesgo es
+cerca de cero. El sesgo es una inclinación sistemática, y más datos nunca lo reducen.
+
+La **varianza** es cuánto se tambalea la estimación de una corrida a la siguiente.
+*Ejemplo:* estimaciones que oscilan entre -5 y +9 alrededor de un valor verdadero de 2
+tienen varianza alta. Más datos *sí* reducen esto.
+
+La **potencia** es con qué frecuencia el diseño detecta un efecto real. *Ejemplo:* un
+diseño que encuentra el efecto en 8 de 100 corridas tiene 8% de potencia, lo cual es
+casi inútil.
+
+**Rediseñar** significa cambiar exactamente una parte en respuesta al diagnóstico y
+volver a diagnosticar. Una potencia baja por varianza alta pide más datos. El sesgo pide
+un diseño distinto, porque el tamaño compra estabilidad, no verdad.
+
+## Un ejemplo resuelto
+
+Investigas en **interacción humano-computadora** y te preguntas si una *pista de
+validación en línea*, un mensaje pequeño que aparece mientras escribes («la contraseña
+necesita un número») en vez de solo después de enviar, ayuda a la gente a terminar un
+formulario de registro más rápido. Tu resultado son los segundos que toma completarlo.
+Tu efecto verdadero, en el mundo que simulas, es que la pista recorta 8 segundos.
+
+Lo **declaras**: construyes personas usuarias cuyos tiempos de partida varían mucho,
+porque algunas leen despacio y otras van a toda velocidad; lanzas una moneda para
+asignar la versión con pista; restas los promedios de los dos grupos. **Diagnosticas**
+un piloto de 12 personas por versión. El resultado es aleccionador. El sesgo es cercano
+a cero, así que el diseño apunta bien, pero la dispersión es enorme porque los tiempos
+por persona varían muchísimo, y la potencia vuelve por debajo del 10%. El diseño es
+honesto e inútil a la vez: en promedio señala la ganancia de 8 segundos y casi nunca se
+acerca lo suficiente en una corrida individual para demostrarla.
+
+Ahora **rediseña**. El problema es la varianza, así que subes la muestra a 400 por
+versión y vuelves a diagnosticar. La potencia salta por encima del 90% y la dispersión
+se cierra hacia la verdad. Eso es varianza curada con tamaño. Pero corre un diseño más
+como advertencia: quita el lanzamiento de moneda y deja que las personas con más
+destreza tecnológica se autoseleccionen a la versión nueva. Esas personas terminan más
+rápido de todos modos, así que la pista se lleva el crédito por una velocidad que trajo
+la destreza. Este diseño confundido es igual de preciso con 400 por versión y, sin
+embargo, se centra en una ganancia de 14 segundos en vez de 8, y ninguna cantidad extra
+de datos lo mueve. Esa brecha nombra la última idea. Un diseño aleatorizado puede
+**identificar** el efecto de la pista, es decir, atribuirle a la pista la diferencia de
+tiempo y descartar otras causas, mientras que el confundido muestra solo una
+**asociación**, donde las dos cosas se mueven juntas pero una causa común podría
+explicarlo.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el cuaderno **nb04 — The anatomy of a research
+design: MIDA + declare → diagnose → redesign** (MIDA: *Model, Inquiry, Data strategy,
+Answer strategy*, es decir, modelo, indagación, estrategia de datos y estrategia de
+respuesta). Ábrelo en Colab con la insignia de arriba y trabaja las celdas junto con
+este capítulo. En el laboratorio declaras el diseño de mentoría en unas pocas líneas de
+Python, lo corres miles de veces para leer con tus propios ojos su sesgo, su varianza y
+su potencia, y luego ves cómo un solo rediseño rescata un estudio justo pero sin
+potencia mientras su gemelo confundido sigue equivocado con cualquier tamaño de muestra.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia expectativa y solo después delega. Cada prompt de
+abajo te deja un borrador que todavía tienes que revisar.
+
+```text
+Act as a simulation assistant. Here is my declared design in words:
+[model, inquiry, data strategy, answer strategy]. Write the smallest Python
+that builds a world where I set the true effect, runs the design many times,
+and reports bias, variance, and power. List every assumption your code makes
+about my design that I did not state.
+```
+Después de ejecutarlo, verifica (contrarresta el *método plausible pero equivocado*,
+«plausible-but-wrong-method»): vuelve a correrlo con el efecto verdadero fijado en cero
+y confirma que «detecta» un efecto solo con la frecuencia que permite tu umbral de
+significancia. Una simulación que se dispara con un efecto cero está declarando un
+diseño distinto al tuyo.
+
+```text
+Here is my diagnosed design and its numbers: [bias, variance, power]. List the
+threats to any conclusion from one run as a table: threat, whether it is a
+bias / variance / power problem, and the single redesign that reduces it most.
+```
+Después de ejecutarlo, verifica (contrarresta la *ilusión de exhaustividad*,
+«illusion of completeness»): contrasta la tabla con tu propio diagnóstico impreso. La
+amenaza letal que tus números ya demostraron debe ser la primera fila; una lista pulcra
+de seis amenazas que nunca la nombra no entendió el punto.
+
+```text
+Argue against my claim that this design is strong enough to run. As a hostile
+methodologist, name the one diagnosand I am most likely fooling myself about,
+and the observation that would expose it.
+```
+Después de ejecutarlo, verifica (contrarresta el *acuerdo complaciente*, «sycophantic
+agreement»): si elogia el diseño sin una sola objeción, descarta la respuesta y vuelve a
+diagnosticar por tu cuenta.
+
+::: {.callout-important title="No delegues"}
+Tres decisiones siguen siendo tuyas. **Qué mundo supone tu pregunta**, el modelo que
+declaras, es una afirmación sobre la realidad que ninguna herramienta puede hacer por
+ti. **Qué única cantidad nombras como tu indagación** decide qué significa siquiera
+«éxito». Y **la decisión honesta de correr o no un diseño que tu propio diagnóstico
+llama demasiado débil** es un juicio que firmas con tu nombre. Una IA puede proponer
+amenazas y redactar código de simulación, pero no puede decidir que tu estudio sin
+potencia vale un semestre de todos modos.
+:::
+
+## Un caso de falla de la IA
+
+Pegas tu diseño observacional confundido y preguntas: «Mi estimación es ruidosa. ¿Qué
+debo hacer?». La herramienta responde con seguridad: «Recluta más participantes para
+ajustar tu estimación». Suena obviamente correcto y es exactamente equivocado en tu
+caso. Tu problema es **sesgo** por autoselección, no varianza, y más datos solo vuelven
+a una estimación sesgada un número equivocado más *preciso*. Lo atrapas como enseña este
+capítulo: corre el diseño confundido en simulación con una muestra grande y observa cómo
+las estimaciones se agrupan apretadas alrededor de 14 segundos cuando la verdad es 8. La
+dispersión se encogió; el error no. Esa es la falla `plausible-but-wrong-method`, y tu
+propio diagnóstico la desenmascara.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: si le pides a una IA que revise la afirmación, el código o la cita de otra, encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te corresponde a ti, quien investiga.
+:::
+
+El método aquí es la **simulación** (guía de verificación, método 2: recurre a ella
+cuando una afirmación trata de cómo se comporta un procedimiento y no de un número
+fijo). Nunca confíes en un «tu diseño tiene alrededor de 80% de potencia» dicho por una
+IA. Declara el diseño por tu cuenta, fija un efecto verdadero que tú elijas, córrelo unos
+miles de veces y lee la potencia en tu propio montón de estimaciones. Para cualquier
+diseño que reclame una *causa*, agrega una segunda comprobación independiente: el
+**diagrama causal** (método 8). Dibuja tu modelo como un DAG, un grafo acíclico dirigido,
+y busca una causa común con una flecha hacia tu tratamiento y hacia tu resultado. Si esa
+puerta trasera está abierta, ningún número de potencia te rescata, y tu afirmación
+honesta se detiene en «asociado con».
+
+## Transferencia al proyecto
+
+Este capítulo te lleva por la segunda mitad de tu hito **carta de investigación y
+declaración MIDA**, la declaración de tres minutos que presentas en el estudio del
+viernes. El capítulo 9 te dio las cuatro partes; aquí las declaras como un diseño
+ejecutable, lo diagnosticas en sesgo, varianza y potencia, y traes un rediseño con
+nombre. Ese hito se califica por trazar la línea entre identificar y asociar para tu
+propio diseño, así que el diagnóstico que corres esta semana es la evidencia detrás del
+límite que vas a defender.
+
+## Defiende tu decisión
+
+En cinco oraciones, declara y defiende un diseño para tu proyecto. Enuncia la única
+cantidad que buscas (tu indagación). Reporta el peor número de diagnóstico que puedas
+estimar, sesgo, varianza o potencia, y di qué le hace a tu respuesta. Después toma la
+decisión honesta: correrlo, rediseñar primero o acotar la afirmación, y nombra el único
+cambio que más lo mejoraría. Cierra con el límite: ¿tu diseño **identifica** un efecto o
+solo muestra una **asociación**, y qué sigue siendo incierto incluso si todo sale bien?

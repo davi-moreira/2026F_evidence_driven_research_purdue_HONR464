@@ -1,0 +1,198 @@
+---
+title: "La investigación se construye sobre la investigación"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Ante una fuente que te entrega una herramienta de
+> IA o una búsqueda, tú decides si cuenta como *verificada* (recuperada y leída por
+> ti). Y a partir de las fuentes que has verificado, tú decides si el vacío que
+> quieres estudiar es *genuino* o es solo el punto donde tu búsqueda se detuvo.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de referencia del curso) cap. 4, gratis en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por qué importa esta decisión
+
+Imagina el momento en que **quien asesora tu tesis** te devuelve el primer borrador
+con una línea marcada en círculo: *«Citas seis artículos. ¿Cuáles leíste de verdad y
+dónde está el hueco que dices llenar?»* Esa pregunta es todo el trabajo. Una revisión
+de literatura construida con resúmenes que suenan seguros se derrumba en el instante
+en que alguien abre una cita y encuentra que dice otra cosa, o que no existe. La
+decisión de este capítulo convierte «lo busqué» en «lo recuperé, lo leí y puedo
+mostrarte el punto vacío del mapa».
+
+## El concepto
+
+Un campo es una **conversación acumulativa**: una discusión continua en la que cada
+estudio responde, amplía o cuestiona a los anteriores. Un laboratorio mide una
+velocidad de reacción, un segundo la repite con un catalizador nuevo, un tercero junta
+ambas. Tu tarea no es inventar una isla. Es encontrar la conversación a la que
+pertenece tu pregunta y agregarle una oración honesta.
+
+Aplicas un mismo hábito a cada fuente. El **ciclo de recuperación y verificación**
+tiene cuatro pasos: pedirle pistas a una herramienta, recuperar la fuente por tu
+cuenta, verificar que existe y que dice lo que se afirmó, y documentar dónde la
+encontraste. Una **pista** es una candidata que todavía no has comprobado, como una
+cita que te entrega una IA. Sigue siendo una pista hasta que la recuperes y la leas.
+
+A partir de una fuente verificada haces crecer las demás con la **búsqueda en bola de
+nieve**: recorrer sus enlaces en dos direcciones. La **búsqueda de citas hacia atrás**
+lee la propia lista de referencias de la fuente para hallar los trabajos más antiguos
+sobre los que se apoyó. La **búsqueda de citas hacia adelante** encuentra los
+artículos más nuevos que la citan. Dos fuentes sólidas, recorridas en ambas
+direcciones, se vuelven diez muy rápido.
+
+La bola de nieve te permite distinguir un vacío real de un callejón sin salida. Un
+**vacío genuino** es una pregunta que tus fuentes verificadas de verdad dejan sin
+responder, confirmada al mirar en ambas direcciones. Una **búsqueda inconclusa** es
+una que simplemente dejaste de perseguir. Desde tu escritorio se sienten idénticas, y
+solo una es una contribución.
+
+Luego ordenas lo que encontraste como un **mapa de evidencia**: cada fuente verificada
+se vuelve un **nodo de afirmación** (lo que sostiene, en una oración), las líneas
+conectan las afirmaciones que coinciden o se contradicen, y un punto marcado muestra
+dónde no llega ninguna fuente. Ese punto es tu vacío, honesto solo porque cada nodo a
+su alrededor es una fuente que abriste.
+
+## Un ejemplo resuelto
+
+Supón que tu curiosidad es la química verde. Has leído que las **nanopartículas de
+plata** (motas de plata de milmillonésimas de metro) pueden fabricarse sin reactivos
+agresivos reduciendo iones de plata con un ácido suave. Tu pregunta: ¿el **ácido
+L-ascórbico** (la vitamina C común) reduce iones de plata a nanopartículas a
+temperatura ambiente, y una cantidad mayor hace que las partículas sean más pequeñas?
+
+Le pides a una IA los estudios clave. Devuelve una cita segura de sí misma: un par de
+autores plausible, una fecha de 2019, una revista llamada *Journal of Green
+Chemistry*. Vas a leerla y el título exacto no arroja nada en el portal de tu
+biblioteca, nada en Google Scholar, nada en el sitio de la editorial. Esa revista no
+existe; el título real de la Royal Society of Chemistry es simplemente *Green
+Chemistry*. La cita fue inventada.
+
+Así que corres el ciclo como se debe. Recuperas una revisión real sobre síntesis verde
+de nanopartículas, la lees y aplicas la bola de nieve. Sus referencias apuntan hacia
+atrás, a la química de reducción sobre la que se apoyó; su lista de «Citado por»
+apunta hacia adelante, a estudios recientes con ácido ascórbico. En una hora tu mapa
+tiene media docena de fuentes reales y una contradicción: un artículo reporta que más
+reductor produce partículas más pequeñas, y otro lo contrario. Ese desacuerdo es el
+borde vivo del campo y te dice que la pregunta sigue abierta.
+
+Ahora, la decisión que te toca a ti. La pregunta amplia «¿puede la vitamina C fabricar
+nanopartículas de plata?» no es un vacío: el campo es enorme. Pero tu pregunta
+estrecha, cómo se comporta el tamaño de partícula en un rango de concentración
+específico donde dos artículos reales ya discrepan, sí puede serlo. Puedes defenderla
+solo porque recuperaste las fuentes que la rodean y aun así la dejan abierta.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el cuaderno **nb03 — Research builds on research:
+verified evidence + real gaps**. Ábrelo en Colab con la insignia de arriba y trabaja
+las celdas junto con este capítulo. Allí verás cómo un montón de quince citas
+generadas por IA se reduce a las pocas que sobreviven a la recuperación, construirás
+un mapa de evidencia en código y correrás el ciclo de recuperación y verificación
+sobre tu propia afirmación.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia respuesta y solo después delega. Cada prompt te
+gana un mejor borrador; ninguno se gana tu confianza.
+
+**Localizar.** Pide pistas que perseguir, no una bibliografía terminada.
+
+```text
+Act as a literature scout in [your field]. My question is: [paste it].
+List the five published studies most relevant to it, each with authors,
+year, exact title, and venue, so I can retrieve and verify each myself.
+Only include work you are confident exists; mark anything uncertain.
+```
+
+*Después de ejecutarlo, verifica:* recupera cada cita buscando su título exacto entre
+comillas antes de creer que existe. Contrarresta la **fabricación confiada**
+(*confident fabrication*), una cita que suena real de un artículo que nunca se
+escribió.
+
+**Listar para verificar (bola de nieve).** Parte de una fuente que ya hayas leído.
+
+```text
+Here is one source I have verified: [authors, year, exact title, venue].
+Name three older works from its reference list it likely built on, and
+three newer works that likely cite it, each with authors, year, title,
+and venue, plus one line on why it belongs on the chain.
+```
+
+*Después de ejecutarlo, verifica:* contrasta los nombres «hacia atrás» con la lista de
+referencias real de la fuente semilla y recupera el resto. Una cadena ordenada puede
+omitir en silencio el único estudio que contradice. Contrarresta la **ilusión de
+exhaustividad** (*illusion of completeness*).
+
+**Red team (revisión adversaria).** Haz que la herramienta ataque tu vacío en vez de
+halagarlo.
+
+```text
+Here is my question and the gap I placed: [one or two sentences].
+Argue that this gap is NOT real. Name up to three published studies that
+may already answer it, with authors, year, title, and venue, and say what
+each would have to show to close it. Do not reassure me.
+```
+
+*Después de ejecutarlo, verifica:* si solo coincide en que el vacío está abierto y no
+nombra nada, insiste y oblígala a intentar cerrarlo; luego recupera cada estudio que
+mencione. Contrarresta el **acuerdo complaciente** (*sycophantic agreement*).
+
+::: {.callout-important title="No delegues"}
+Dos decisiones nunca salen de tus manos. Si una fuente cuenta como **verificada**: eso
+solo lo zanja leerla por tu cuenta. Y si tu **vacío es real**: solo una recuperación
+que vuelve vacía se gana esa palabra. Lo que tu proyecto puede afirmar se desprende de
+esas dos. Una IA puede señalar; no puede certificar.
+:::
+
+## Un caso de falla de la IA
+
+La falla más común aquí es la **alucinación de citas** (*citation hallucination*), la
+*fabricación confiada* de la taxonomía: el modelo inventa una fuente y la presenta con
+plena seguridad. En el ejemplo resuelto te dio un par de autores plausible, una fecha
+de 2019 y *Journal of Green Chemistry*. La atrapaste en un minuto: buscaste el título
+exacto entre comillas en el portal de tu biblioteca y en Google Scholar, no
+encontraste nada y notaste que la revista no existe. La fluidez segura no es
+evidencia. Si no puedes localizar una fuente donde debería estar, trátala como
+inventada hasta que demuestres lo contrario.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: si le pides a una IA que revise la afirmación, el código o la cita de otra, encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te corresponde a ti, quien investiga.
+:::
+
+El resultado clave de este capítulo es un veredicto: esta fuente está verificada y
+este vacío es (o no es) real. Verifícalo con la **lectura de la fuente primaria**
+(guía de verificación, método 4): encuentra la fuente real, ábrela y lee la línea que
+sostiene la afirmación antes de citarla. Hazlo con cada fuente de tu mapa, no con una
+muestra. Para un vacío que vas a defender en voz alta, agrega una segunda comprobación
+independiente, como el **razonamiento con pares**: pásale tu vacío a alguien de la
+clase, cuya única pregunta a menudo revela una fuente que te saltaste. Dos
+comprobaciones independientes que coinciden son mucho más fuertes que una.
+
+## Transferencia al proyecto
+
+Este capítulo construye tu **mapa de evidencia verificada y contribución**, el hito del
+proyecto que presentas como recorrido de galería en el estudio del viernes. Somete la
+pregunta y el vacío intuido del capítulo anterior a la prueba de la recuperación. Sal
+de aquí con cuatro piezas redactadas: un registro de fuentes verificadas (autoría,
+año, dónde la recuperaste, su afirmación en tus palabras), un mapa de evidencia que
+nombre al menos una contradicción, tu vacío ubicado con honestidad junto con su
+oración de prueba de honestidad, y una línea de contribución de una oración que se
+detenga donde se detiene tu recuperación. Ese mapa es el suelo sobre el que se para tu
+futura carta de investigación.
+
+## Defiende tu decisión
+
+En un párrafo corto, enuncia tu vacío en una sola oración y luego defiéndelo. Nombra
+su **posición en la brújula** (descripción o generalización, los tipos de afirmación
+que este trabajo de evidencia sostiene). Di con claridad si el vacío está confirmado
+por la recuperación o si todavía es una búsqueda inconclusa. Después nombra tu
+incertidumbre: cuántas fuentes has abierto de verdad y qué no alcanza a ver tu mapa.
+Si todavía no puedes escribir la oración de límite honesta, *«entre las fuentes que
+recuperé y verifiqué, ninguna aborda mi vacío»*, di qué recuperación te falta. Eso es
+un hallazgo, no un fracaso.

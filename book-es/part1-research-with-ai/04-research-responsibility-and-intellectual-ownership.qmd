@@ -1,0 +1,191 @@
+---
+title: "Responsabilidad en la investigación y autoría intelectual"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Para cada parte de tu trabajo que una herramienta
+> de IA ayudó a producir, decide exactamente qué vas a respaldar personalmente como
+> propio, y declara con claridad qué hizo la herramienta y cómo lo revisaste. Tu
+> nombre en el trabajo significa que respondes por él, sin importar qué herramienta
+> ayudó.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de diseño de investigación en las ciencias sociales) cap. 1, 2, gratuito en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por qué importa esta decisión
+
+> *"Cuando algo en este artículo resulta estar mal, no pregunto qué software lo
+> escribió. Pregunto de quién es el nombre que aparece. Esa persona responde por cada
+> línea."*
+> — un **editor de revista**, a quien publica por primera vez
+
+Terminarás este curso con trabajo que lleva tu nombre: un póster, una nota de
+investigación, una defensa pública. Puede que una herramienta de IA te haya ayudado a
+encontrar fuentes, redactar un párrafo o calcular un número. Nada de eso mueve la
+responsabilidad fuera de ti. Quien revisa, quien lee y tu yo del futuro te consideran a
+ti, la persona que firma, responsable. Este capítulo traza esa línea a propósito, antes
+de que alguien más la trace por ti.
+
+## El concepto
+
+La **autoría intelectual** consiste en ser quien firma, y quien responde por, cada
+afirmación que aparece bajo tu nombre, sin importar qué herramienta ayudó a producirla.
+Ejemplo: si una IA redacta tu párrafo de métodos y ahí dice que el cloruro del arroyo
+superó un umbral de seguridad, esa oración es tuya, y si está mal, el error es tuyo.
+
+La autoría descansa en la **rendición de cuentas**: ser la persona que responde por la
+corrección y la integridad del trabajo cuando se lo cuestiona. Ejemplo: en tu defensa,
+cuando alguien pregunte cómo sabes un número, "lo calculó la IA" no es una respuesta.
+"Lo recalculé a partir de mis propias mediciones, y aquí está la revisión" sí lo es.
+
+El hábito que hace visible la rendición de cuentas es la **declaración de uso de IA**:
+un registro corto y honesto de qué herramienta de IA hizo qué tarea y cómo verificaste
+su salida. Ejemplo: "Gemini localizó fuentes candidatas; yo recuperé y confirmé cada una
+en el catálogo de la biblioteca". Declarar no es confesar. Te protege, porque muestra
+exactamente dónde entró tu propio juicio en el trabajo.
+
+Algunas decisiones no se mueven nunca hacia la herramienta. Una **decisión que nunca se
+delega** es un juicio que sigue siendo tuyo por más capaz que se vuelva la herramienta:
+qué pregunta persigues, qué autoriza tu evidencia, la ética del estudio y la decisión de
+poner tu nombre en el trabajo. Ejemplo: una IA puede listar medidas candidatas de
+calidad del agua, pero elegir la que vas a defender te toca a ti.
+
+En conjunto, la regla es simple. Usa la IA con libertad para ganar alcance y velocidad.
+Guarda para ti la autoría, la rendición de cuentas y la declaración honesta.
+
+## Un ejemplo trabajado
+
+Imagina un proyecto de honores de primer año en ciencias ambientales. Estás probando si
+la sal de carretera del invierno eleva el **cloruro**, un ion de sal disuelta que daña
+la vida dulceacuícola por encima de ciertos niveles, en un arroyo detrás del campus.
+Recoges diez muestras de agua y le pides a una herramienta de IA que te ayude a redactar
+el resultado.
+
+La herramienta devuelve un párrafo fluido: "El cloruro medio fue de 310 mg/L, muy por
+encima del criterio crónico para vida acuática de la U.S. EPA de 230 mg/L, así que el
+arroyo no es seguro para la vida acuática". Se lee como un resultado terminado. Aquí
+está la decisión de autoría: ¿qué partes de esa oración vas a respaldar personalmente?
+
+La divides en piezas que puedas asumir. La media de tus diez muestras es un número que
+puedes recalcular en un minuto, así que lo haces, y te da 297, no 310. El criterio de la
+EPA es un valor publicado, así que abres el documento National Recommended Water Quality
+Criteria de la EPA y confirmas por tu cuenta la cifra real en vez de confiar en el
+número de la herramienta. La palabra "no es seguro" afirma algo sobre todo el arroyo
+durante todo el invierno, a partir de diez muestras de un solo día, así que la reduces a
+lo que tu evidencia autoriza: cloruro elevado en estas muestras, en este sitio, en esta
+fecha.
+
+Ahora tu declaración se escribe sola: la herramienta redactó el párrafo, y tú hiciste la
+revisión, la recuperación y la reescritura que hicieron tuya la afirmación. La oración
+corregida es tuya. La original no lo habría sido.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el cuaderno **nb01**, "Research in the age of AI:
+your arm, your RA, not your brain". Ábrelo en Colab con el botón de arriba. Ahí
+clasificas tareas reales de investigación por qué tan seguro es delegarlas, detectas una
+cita en vivo recuperándola por tu cuenta, y llenas tu primera fila del **AI Research
+Ledger** (registro de investigación con IA): el registro que convierte "yo lo revisé" en
+algo que puedes mostrar.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia respuesta y después delega. Cada prompt de abajo le
+entrega alcance a la herramienta, no juicio.
+
+**Localizar la fuente real.**
+
+```
+Act as a research assistant in environmental science. I need the current U.S. EPA
+aquatic-life criterion for chloride. Give the exact value, the document it comes
+from, and a link. Only state a figure you are confident is published; if you are
+unsure, say so and tell me where to look.
+```
+
+Después de ejecutarlo, verifica: abre el documento de la EPA y lee la cifra por tu cuenta
+(lectura de la fuente primaria). Contrarresta la **fabricación confiada**, un número
+citado con una fuente inventada.
+
+**Listar cada afirmación por verificar.**
+
+```
+Here is my draft results paragraph: [paste]. List every empirical claim in it as a
+table: the claim, the number or source it rests on, and whether that number came from
+my data or from you. Do not add any new claims.
+```
+
+Después de ejecutarlo, verifica: contrasta la tabla con tu propia lista de lo que
+mediste de verdad. Contrarresta la **ilusión de exhaustividad**, una afirmación que el
+borrador coló y que nunca aparece en el propio recuento de la herramienta.
+
+**Hacer red team a tu autoría.**
+
+```
+Act as a hostile reviewer. Read my draft and name every sentence I could NOT defend
+myself if someone asked how I know it is true. Do not rewrite anything. List the weak
+spots.
+```
+
+Después de ejecutarlo, verifica: para cada oración señalada, o produces tu propia
+revisión o eliminas la afirmación. Contrarresta el **acuerdo complaciente**, elogios que
+revisan tu ego en vez de tu evidencia.
+
+::: {.callout-important title="No delegues"}
+La herramienta puede buscar, redactar y calcular. Nunca puede decidir en qué
+afirmaciones pones tu nombre, si tu evidencia sostiene una palabra como "inseguro", la
+ética de tu muestreo, cómo expresas tu incertidumbre, ni qué dice tu declaración de uso
+de IA. La autoría es una responsabilidad, no una tarea, y no se transfiere.
+:::
+
+## Un caso de falla de la IA
+
+Le pides a la herramienta que escriba tu declaración de uso de IA. Produce una oración
+ordenada y segura: "La IA se usó únicamente para edición menor del lenguaje". Suena
+profesional, y es falsa. La herramienta en realidad redactó todo tu párrafo de
+resultados, incluida la cifra de 310 mg/L y la afirmación de que el arroyo "no es
+seguro". Sin revisión, esa declaración subestima el papel de la herramienta y
+sobrestima tu autoría, que es exactamente el problema de integridad que la declaración
+existe para prevenir.
+
+Lo detectas con un registro que la herramienta no puede ver: tu propio AI Research
+Ledger. Pon la declaración de una línea junto a las filas de tu ledger y el desajuste
+salta a la vista. El ledger dice que la herramienta redactó el análisis; la declaración
+dice que solo editó el lenguaje. Reescribes la declaración para que coincida con lo que
+pasó. La lección es directa: nunca dejes que una herramienta describa su propio papel.
+Tú lo describes, a partir de tu registro.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, quien investiga.
+:::
+
+Verifica el resultado clave de este capítulo, que una afirmación bajo tu nombre es una
+que puedes defender, con la **lectura de la fuente primaria**, el método de encontrar la
+fuente real y leer por tu cuenta la línea relevante (ver `ai_resources/verification_guide.md`).
+Toma la cifra de cloruro de la EPA que citó la herramienta, abre el documento de
+criterios de la EPA y confirma con tus propios ojos el número y su significado.
+Combínalo con el **cálculo directo**: recalcula la media de tus muestras y comprueba que
+coincida con el borrador. Dos revisiones independientes le ganan a una, y cada una deja
+una línea para tu ledger.
+
+## Transferencia al proyecto
+
+Este capítulo lanza el primer hito de tu proyecto, la línea base de investigación e IA
+que presentas en el estudio del viernes. Lleva las tres cosas que pide: dos decisiones
+que te niegas a delegar en tu propio proyecto, con una oración de justificación cada
+una; tu primera fila del AI Research Ledger, declarando con honestidad un uso real de IA
+y cómo lo revisaste; y una afirmación que ya puedas defender, enunciada al alcance que
+tu evidencia sostiene. La autoría no es una preocupación de final de semestre. Es la
+línea base sobre la que construyes todo lo demás.
+
+## Defiende tu decisión
+
+En cuatro o cinco oraciones, expón la decisión de autoría para una pieza de tu propio
+trabajo. Nombra una afirmación en la que vas a poner tu nombre. Da su límite: qué no
+establece tu evidencia y, si la afirmación descansa en una muestra, di que es sobre esa
+muestra, no sobre el mundo. Nombra una cosa que todavía no sabes. Después declara el
+papel de la IA en una línea honesta, y nombra la revisión que te permite asumir la
+afirmación de todos modos.

@@ -1,0 +1,216 @@
+---
+title: "Do Pôster à Nota de Pesquisa"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Ao transformar o seu pôster em uma nota de pesquisa
+> escrita, decida qual achado conquistou o lugar de destaque e exatamente qual é o
+> tamanho que cada alegação pode ter dada a sua evidência, e então empacote a nota para
+> que uma pessoa desconhecida consiga rodá-la de novo e chegar ao seu número sem você
+> na sala.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do tópico correspondente do curso; o laboratório no Colab está no link acima. Não há capítulo companheiro no RDSS (*Research Design in the Social Sciences*) para este tópico; este capítulo se sustenta sozinho.
+:::
+
+## Por que esta decisão importa
+
+> *"Me mostre os seus resultados na ordem em que você confia neles. Se o seu número
+> mais chamativo vem de uma rodada de sorte e é ele que abre o artigo, eu já sei como
+> esta revisão termina. Eu não quero o seu resultado mais surpreendente primeiro. Quero
+> o mais defensável."*
+> — uma **revisora de conferência**, sobre a primeira página de um artigo que ela leva a sério
+
+No pôster você ficava de pé ao lado do seu trabalho e preenchia os silêncios com a sua
+voz. A nota não tem você de pé ao lado dela. Cada salto que o pôster deixava você
+sugerir, agora a prosa tem de conquistar, em ordem, para alguém que nunca vai ouvir a
+sua explicação. A revisora acima não se impressiona com um número grande. Ela está
+perguntando qual achado você ainda defenderia depois que a sala esvaziasse, e se ela
+conseguiria rodar o seu trabalho de novo e ver o mesmo número voltar. Este capítulo é
+como você responde às duas coisas.
+
+## O conceito
+
+Um pôster e uma nota fazem o mesmo argumento, mas carregam esse argumento de formas
+diferentes. A **lógica de pôster** é a comunicação feita para alguém que está de pé ao
+seu lado, em que algumas caixas e a sua voz ao vivo dividem o trabalho. Exemplo: uma
+caixa de Lacuna que diz apenas "poucos estudos sobre tempos de espera nos horários de
+pico" enquanto você fala o resto em voz alta. A **lógica de artigo** é a comunicação
+que precisa se sustentar sozinha na página, em que cada alegação é argumentada em prosa
+porque você não está lá para responder. Exemplo: essa mesma lacuna escrita como um
+parágrafo que diz o que os estudos anteriores cobriram, o que eles deixaram de fora e
+por que a peça que falta importa. Transformar uma coisa na outra não é acrescentar
+palavras. É tornar o raciocínio visível.
+
+Uma nota carrega esse raciocínio sobre um eixo. O **eixo problema–lacuna–pergunta** tem
+três peças ligadas: o problema real a que o seu trabalho responde, a coisa específica
+que o trabalho anterior e recuperável não estabeleceu, e a pergunta respondível que
+fecha exatamente essa lacuna. Exemplo: os clientes desistem e vão embora durante a
+correria da manhã (problema); os estudos publicados sobre tempo de espera medem apenas
+horários calmos e estáveis (lacuna); quanto uma opção de pedido antecipado pelo celular
+reduz a espera no pico da manhã nesta cafeteria (pergunta). O eixo só se sustenta
+quando a lacuna é real, e uma lacuna só é real quando você mostra o que já se sabe com
+**densidade de evidência**, a parcela de um parágrafo que se apoia em fontes que a
+pessoa leitora poderia abrir, em vez de afirmações soltas. Exemplo: "como todo mundo
+sabe" não tem densidade nenhuma; uma frase apoiada em um número publicado que a pessoa
+leitora pode consultar e recalcular tem alguma.
+
+A segunda metade da nota precisa de mais um termo. Uma **hierarquia de resultados** é a
+ordem em que você apresenta os achados, do mais bem sustentado ao mais frágil.
+Exemplo: uma mediana medida ao longo de mil manhãs simuladas abre a lista; um único
+pedido excepcionalmente rápido espera lá no fim, rotulado como exploratório. As suas
+limitações seguem a mesma disciplina, declaradas na proporção do que de fato ameaça a
+alegação: "medido sobre um padrão de chegada simulado, não sobre um sábado real de
+movimento", e não um genérico "mais pesquisas são necessárias".
+
+Por fim, uma nota que a pessoa leitora não consegue rodar de novo é meia alegação. A
+outra metade é uma **cápsula de reprodutibilidade**, tudo o que uma pessoa desconhecida
+precisa para reconstruir o seu número e nada que ela tenha de adivinhar: um notebook
+que passa no **restart-and-run-all** (limpar tudo, rodar cada célula de cima a baixo, e
+o número principal volta), versões fixadas dos dados e das ferramentas, uma semente
+fixa, um registro de decisões e o seu **AI Research Ledger** (registro de uso de IA).
+
+## Um exemplo trabalhado
+
+Você testou uma opção de pedido antecipado pelo celular em uma cafeteria do campus. O
+seu pôster tinha uma caixa: "38% mais rápido". A nota tem de transformar essa caixa em
+uma alegação que você consiga defender.
+
+**Ordene os achados.** Ao longo de mil chegadas de clientes em uma simulação com
+semente fixa do pico da manhã, o tempo mediano de espera caiu cerca de 38%, com um
+intervalo estreito em torno disso. Você também notou um cliente com pedido antecipado
+que foi atendido quase na hora, uma queda de 95%. O número surpreendente é o cliente
+único; o defensável é a mediana sobre mil chegadas. Então a mediana abre a lista, e o
+cliente solitário vai para o fim, rotulado como uma observação, não como um resultado.
+
+**Dimensione a alegação.** O destaque honesto diz: "neste padrão de chegada simulado,
+adicionar o pedido antecipado pelo celular cortou o tempo mediano de espera em cerca de
+38% (intervalo em anexo); isso é uma medição sobre demanda simulada, não uma garantia
+para um sábado real de movimento." A versão inflada que você recusa: "o pedido
+antecipado pelo celular deixa a cafeteria 38% mais rápida." Essa frase larga o padrão
+de demanda, larga a palavra mediana e promete a cada cliente uma espera menor que a sua
+simulação nunca testou.
+
+**Empacote.** A sua cápsula fixa a semente da simulação, registra a máquina e as
+versões das bibliotecas, anota que você excluiu o primeiro pedido da manhã e por quê, e
+passa no restart-and-run-all, de modo que os 38% voltam em um kernel limpo. Agora a
+nota é legível e executável.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb15 — From poster to research note**. Abra
+no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você pontua
+a densidade de evidência de dois parágrafos, monta uma hierarquia de resultados vendo
+um intervalo estreito conquistar o topo enquanto um intervalo de quarenta linhas espera
+no fim, e roda um auditor que caça os cinco jeitos pelos quais uma cápsula de
+reprodutibilidade quebra.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria resposta, depois delegue. Cada prompt é uma
+tarefa verificável, não um pedido de veredito.
+
+**Localize fontes reais para a lacuna.**
+
+```text
+Act as a literature assistant in service operations. List peer-reviewed or
+official sources that measure customer wait times or the effect of pre-ordering
+on queues, in a table with title, authors, venue, year, and one-line finding.
+Only include work you are confident exists; mark anything uncertain. Do not
+write my gap paragraph.
+```
+
+Depois de rodar, verifique: recupere você mesmo cada fonte antes que ela entre na nota;
+uma fonte que você não consegue abrir em segundos é fabricada até prova em contrário.
+Combate a *fabricação confiante* (uma citação inventada chega com a mesma confiança de
+uma real).
+
+**Liste todo exagero a verificar.**
+
+```text
+Here is my discussion paragraph and the cell that printed my median wait-time
+drop with its interval: [paste both]. List every sentence that claims more than
+the printout supports: a bigger number, a wider setting, or "faster for everyone"
+where I measured one simulated demand pattern. List them; do not rewrite them.
+```
+
+Depois de rodar, verifique: confira cada frase sinalizada contra a sua saída impressa e
+fique só com as edições que encolhem uma alegação para caber na evidência. Combate a
+*mudança silenciosa de escopo* (uma frase mais afiada que promove "neste padrão de
+chegada" a "para todo mundo" respondeu, em silêncio, a outra pergunta).
+
+**Faça red team (revisão adversária) da cápsula.**
+
+```text
+Here are the key lines of my reproducibility capsule: [paste them]. Playing a cold
+replicator who has only these lines, list every input, version, or by-hand step you
+would need to rerun my number and might not find here. Then name one problem this
+line-scan can never catch that only a person running it cold would hit.
+```
+
+Depois de rodar, verifique: case cada lacuna apontada com o que você consegue de fato
+ver faltando, e confirme que o problema "impossível de pegar" é real relendo as suas
+próprias linhas. Combate a *ilusão de completude* (uma cápsula pode parecer completa e
+ainda assim omitir o único insumo de que uma pessoa desconhecida precisa).
+
+::: {.callout-important title="Não delegue"}
+Três decisões continuam sendo suas, por mais fluente que a ferramenta seja. **Qual
+achado é o seu destaque**, **qual é o tamanho permitido dessa alegação** e **quais
+fontes são reais** nunca se delegam. Uma IA pode afiar uma frase, mas uma frase mais
+afiada não é um achado maior, e prosa limpa é exatamente o caminho por onde um exagero
+se infiltra. As palavras que levam o seu nome são suas, assim como o limite e a
+incerteza delas.
+:::
+
+## Um caso de falha da IA
+
+Você cola a sua discussão no Gemini e pede que ele deixe o texto mais afiado. Ele
+devolve uma prosa mais limpa, e ela passa pelo corretor ortográfico sem nenhuma marca.
+Enterrada no polimento, uma frase mudou de tamanho. O seu original dizia "o tempo
+mediano de espera caiu cerca de 38% neste padrão de chegada simulado". A reescrita diz
+"o pedido antecipado pelo celular deixa a cafeteria cerca de 38% mais rápida". A palavra
+mediana sumiu, o limite do padrão de demanda sumiu, e uma medição sobre demanda simulada
+agora promete a cada cliente uma espera menor. A frase lê melhor e alega mais.
+
+Você pega o erro comparando a reescrita com a sua frase original e com o seu resultado
+impresso. O número veio de uma mediana sobre uma simulação com semente fixa, não de uma
+média, e não de um sábado real de movimento, então a alegação geral não é licenciada.
+Você fica com as edições que esclarecem e rejeita a que inflou. Prosa fluente não é
+evidência. Você verifica a alegação, não o polimento.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA para checar a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, que faz a pesquisa.
+:::
+
+Verifique o resultado central deste capítulo, o ganho de rapidez em destaque, com
+**código alternativo** do
+[guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recalcule a queda do tempo mediano de espera por um segundo caminho, a partir dos
+tempos de espera simulados brutos em vez da tabela resumida, e confirme que o número e
+o intervalo dele batem. Depois verifique a cápsula com **raciocínio de pares**: entregue
+a cápsula a uma dupla que a rode a frio com restart-and-run-all. Se o seu número voltar
+na máquina dela, a cápsula é executável. Se não voltar, você mediu a sua própria
+memória, não um resultado reprodutível.
+
+## Transferência para o projeto
+
+Este capítulo vira a sua **nota de pesquisa e cápsula de reprodutibilidade**, o marco
+de projeto deste tópico. Escreva em prosa o eixo problema–lacuna–pergunta com cada
+alegação referenciada, organize os seus achados em uma hierarquia de resultados com o
+mais defensável na frente, dimensione as suas limitações ao tamanho da sua evidência e
+monte a cápsula de modo que o restart-and-run-all devolva o seu número principal. Uma
+dupla vai ler a nota em voz alta e rodar a cápsula no estúdio de sexta-feira, quando a
+nota é entregue e o seu capítulo final de pesquisa começa. A nota torna o seu trabalho
+legível; a cápsula o torna executável.
+
+## Defenda a sua decisão
+
+Em quatro frases, defenda a sua nota de pesquisa. Diga qual achado você escolheu como
+destaque e por que foi ele, e não um resultado mais surpreendente, que conquistou o
+topo. Enuncie a alegação delimitada em uma frase, com o seu limite (o contexto, a
+amostra ou a população que ela não cobre). Depois enuncie a sua incerteza: o seu
+intervalo ou a ressalva que mais ameaça o número, e a única checagem que uma dupla
+rodando a sua cápsula a frio faria em seguida para testá-lo.

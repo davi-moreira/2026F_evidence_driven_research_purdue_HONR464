@@ -1,0 +1,188 @@
+---
+title: "El estudiante como director de investigación"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Para cada tarea de tu proyecto, decide si se la
+> entregas por completo a tu asistente de IA, si se la entregas y después verificas
+> el resultado por tu cuenta, o si la conservas como un juicio que solo tú puedes
+> hacer. Este capítulo te prepara para trazar esa línea y defender dónde la trazaste.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de diseño de investigación en las ciencias sociales) cap. 1, 2, gratuito en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por qué importa esta decisión
+
+Imagina a una **investigadora principal**, la persona que dirige un laboratorio y es
+dueña de sus decisiones científicas, instruyendo a un nuevo integrante en su primer día:
+
+> *"Aquí, quien asiste en investigación puede correr el ensayo, graficar las lecturas
+> y dar formato a la tabla. Lo que no hace es elegir la pregunta, decidir qué
+> significan las lecturas ni firmar la afirmación. Esa parte es mía. Aprende dónde
+> está esa línea, porque no se mueve solo porque la asistencia se volvió más rápida."*
+
+La IA es la asistencia de investigación más rápida que dirigirás en tu vida. El riesgo
+no es que haga el trabajo rutinario. El riesgo es dejar que se meta en las decisiones
+que hacen tuyo el trabajo. Decidir, tarea por tarea, qué delegas es el primer acto de
+ser quien dirige la investigación en vez de quien va de pasajero.
+
+## El concepto
+
+Quien **dirige la investigación** es la persona que asigna cada pieza de trabajo y sigue
+siendo responsable del resultado final. Ejemplo: puedes pedirle a una herramienta que
+redacte tu párrafo de métodos, pero tú eres quien lo firma y quien responde por él. La
+**delegación** es entregar una tarea a alguien o a algo más para que la ejecute, como
+cuando pasas el formateo de una tabla desordenada mientras conservas la lectura de lo
+que significan los números.
+
+El movimiento central de este capítulo es el **triaje de delegación**: clasificar cada
+tarea en uno de tres grupos antes de empezar.
+
+- **Seguro de delegar**: bajo riesgo y fácil de revisar, así que una respuesta
+  equivocada cuesta poco. Ejemplo: reformular de tres maneras un ítem de encuesta.
+- **Delegar y luego verificar**: está bien entregarla, pero debes confirmar el
+  resultado con una revisión real antes de confiar en él. Ejemplo: pedirle a la
+  herramienta que localice un protocolo de laboratorio y después abrir el protocolo
+  real para confirmar que existe y que dice lo que la herramienta afirmó.
+- **Nunca delegar**: un juicio que sigue siendo tuyo por más capaz que se vuelva la
+  herramienta. Ejemplo: decidir si tu evidencia de verdad sostiene la afirmación que
+  quieres hacer.
+
+Una **decisión que nunca se delega** es cualquier determinación que define la ciencia
+misma: la pregunta que persigues, el diseño y las personas o muestras que abarca, qué
+significan tus medidas, la ética, el límite de tu afirmación y la incertidumbre que
+reportas. La **verificación** es el paso que gana la confianza: confirmar un resultado
+por tu cuenta, con un método nombrado, antes de poner tu nombre encima.
+
+## Un ejemplo trabajado
+
+Una estudiante de honores en biología se pregunta si un conservante alimentario común,
+el benzoato de sodio, frena el crecimiento de una cepa inofensiva de laboratorio de *E.
+coli*. Mide el crecimiento por **densidad óptica**, es decir, qué tan turbio se pone un
+cultivo líquido a medida que las células se multiplican, leída en un lector de placas
+como OD600. Ella dirige. La IA asiste. Este es su triaje.
+
+**Seguro de delegar.** Reformatear tres placas de números crudos de OD600 en una sola
+tabla ordenada, y redactar una versión en lenguaje sencillo de su párrafo de métodos. Si
+un valor cae en la columna equivocada, un vistazo lo detecta, así que el riesgo es bajo.
+
+**Delegar y luego verificar.** Localizar un protocolo estándar para leer curvas de
+crecimiento bacteriano, y redactar la fórmula del **tiempo de duplicación**, las horas
+que tarda una población en duplicar su número. Entrega estas tareas y después confirma
+cada una: abre el protocolo real y recalcula a mano un tiempo de duplicación a partir de
+dos valores de OD impresos.
+
+**Nunca delegar.** Decidir que las concentraciones que prueba son biológicamente
+significativas y seguras, decidir si una brecha entre las curvas tratada y no tratada
+autoriza la palabra "inhibe", y expresar qué tan incierta es esa conclusión con tres
+placas y una sola cepa. Ninguna herramienta toma esas decisiones. En el momento en que
+se lo permite, pasa a ser lectora de la conjetura de alguien más.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el cuaderno **nb01 — Research in the age of AI: your arm, your RA — not your brain**. Ábrelo en Colab con el
+botón de arriba y trabaja las celdas junto a este capítulo. En la práctica "seguro de
+delegar, verificar primero o nunca delegar" clasificas cinco tareas reales de
+investigación en los tres grupos y defiendes cada decisión, y en el Human-Only Checkpoint
+(punto de control sin IA) cierras la herramienta y nombras, para tu propio proyecto, dos
+decisiones que nunca vas a entregar.
+
+## Prompts de IA recomendados
+
+Cada prompt de abajo es de **compromiso primero**: escribe tu propia respuesta antes de
+abrir la herramienta, para que su respuesta tenga algo tuyo con lo cual estar en
+desacuerdo.
+
+**Localizar un recurso de laboratorio (delegable).**
+
+```text
+Act as a lab-methods assistant in microbiology. I am measuring bacterial growth
+by optical density (OD600). List 3 published, retrievable protocols or textbook
+methods for reading a growth curve. For each, give authors or source, year, and
+where it appears. Only include work you are confident exists; mark anything
+uncertain. Then tell me which one to verify first.
+```
+
+Después de ejecutarlo, verifica (contrarresta la *fabricación confiada*): abre cada
+protocolo por tu cuenta antes de citarlo; una fuente que no puedes recuperar está
+inventada hasta que abre.
+
+**Convertir tu triaje en una lista revisable.**
+
+```text
+Here are eight tasks in my project: [paste your list]. For each, label it "safe to
+delegate," "delegate then verify," or "never delegate," and give a one-line reason.
+Return it as a table so I can audit each row on its own.
+```
+
+Después de ejecutarlo, verifica (contrarresta la *ilusión de exhaustividad*): compara la
+tabla con el triaje que escribiste antes y con la lista de lo que nunca se delega; una
+tabla ordenada puede clasificar mal, en silencio, justo la decisión que importaba.
+
+**Hacer red team a tu propio límite.**
+
+```text
+I marked this task "never delegate": [paste one task]. Act as a hostile reviewer
+and argue that it is actually safe to hand to an AI. Give your strongest case. Do
+not agree with me.
+```
+
+Después de ejecutarlo, verifica (contrarresta el *acuerdo complaciente*): si quien
+revisa se rinde y elogia tu decisión, insiste y lleva su objeción más fuerte a una
+compañera o compañero de clase, o a tu docente, en vez de confiar en la aprobación de la
+herramienta.
+
+::: {.callout-important title="No delegues"}
+Los grupos los llenas tú, y tres decisiones nunca salen del grupo "nunca delegar":
+**qué pregunta persigue tu proyecto**, **si tu evidencia sostiene la afirmación que
+quieres hacer** y **cuánta incertidumbre reportas**. Puedes pedirle a una herramienta
+que despliegue opciones, pero elegir entre ellas, y responder por la elección, es el
+trabajo que te hace quien dirige.
+:::
+
+## Un caso de falla de la IA
+
+Pegas tus ocho tareas y le pides a la herramienta que las clasifique. Vuelve una tabla
+limpia y segura. Siete filas se ven bien. Pero una dice: *"Decidir si la diferencia de
+crecimiento es biológicamente significativa: delegar y luego verificar, solo aplica el
+umbral estándar de tamaño de efecto."* Suena con autoridad y esconde un cambio de
+alcance. Un juicio sobre qué cuenta como significativo en tu sistema específico fue
+sustituido por una consulta mecánica, y el "umbral estándar" que nombra es uno que
+ninguna fuente confirmará. Lo detectas de dos maneras. Escribiste tu propio triaje antes
+de preguntar, y tu versión tenía esa fila como nunca delegar, así que el desajuste salta
+a la vista. Después intentas recuperar el "umbral estándar" y nada real lo sostiene. La
+fila vuelve a donde pertenece.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, quien investiga.
+:::
+
+El resultado clave de este capítulo es un triaje, que es un juicio, así que verifícalo
+con **razonamiento entre pares**: recorre tus tres grupos con una compañera o compañero
+de clase, o con tu docente, y pídeles que cuestionen cualquier ubicación. Un juicio que
+sobrevive a una segunda lectura escéptica es mucho más fuerte que uno que clasificaste
+en soledad. Para cualquier fila de "delegar y luego verificar" que nombre una fuente,
+agrega la **lectura de la fuente primaria**: abre el protocolo o el artículo real y
+confirma que dice lo que la herramienta afirmó.
+
+## Transferencia al proyecto
+
+Este capítulo construye la columna vertebral de tu **línea base de investigación e IA**,
+el primer hito del proyecto, que presentas en el estudio del viernes. Ese hito te pide
+nombrar dos decisiones de tu propio proyecto que no vas a delegar, y decir en una oración
+por qué cada una es tuya.
+El triaje que practicas aquí es exactamente esa lista, escrita para tu tema en vez de
+para el ejemplo de *E. coli*.
+
+## Defiende tu decisión
+
+En un párrafo corto, expón tu regla para una tarea sobre la que tengas dudas y después
+defiéndela. Nombra la tarea, nombra el grupo en el que la pusiste y da la revisión que
+harías si la delegaras. Después expón el límite: qué la movería a otro grupo y cuánta
+confianza tienes en haber trazado la línea en el lugar correcto. Si todavía no
+puedes nombrar dónde podrías confiar de más en la herramienta, dilo con claridad. Esa
+admisión es en sí misma un hallazgo sobre el hábito que más necesitas vigilar.

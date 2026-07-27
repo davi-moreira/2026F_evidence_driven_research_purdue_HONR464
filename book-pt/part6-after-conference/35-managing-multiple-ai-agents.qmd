@@ -1,0 +1,207 @@
+---
+title: "Gerenciando Vários Agentes de IA"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Antes de soltar vários papéis de IA sobre um pedaço da sua
+> pesquisa, decida como dividir o trabalho em tarefas delimitadas e como ligá-las em uma
+> ordem que não deixe nenhum erro inicial passar batido. A divisão e a ordem são suas, e
+> você guarda um passo da cadeia que nenhum papel tem permissão de dar.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do tópico correspondente do curso; o laboratório no Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*) cap. 24, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por que esta decisão importa
+
+> *"Me traga um capítulo, não uma pilha de saídas de IA. Quero saber qual parte cada
+> ferramenta tocou, o que você mandou ela fazer e como você conferiu. Se você não
+> consegue me contar isso, você não escreveu o capítulo."*
+> — sua **orientadora de tese**, lendo o rascunho que você vai defender esta semana
+
+A esta altura, um único assistente de IA consegue redigir, citar, criticar e polir de
+uma só vez. A tentação é abrir quatro deles ao mesmo tempo e se sentir quatro vezes
+mais seguro. Você não está. Quatro papéis lendo o mesmo rascunho com as mesmas
+instruções tendem a deixar passar a mesma coisa e a concordar em alto e bom som sobre
+ela. A orientadora acima não quer um coro mais alto. Ela quer ver que você quebrou o
+trabalho em pedaços, colocou esses pedaços em uma ordem sensata e continuou sendo a
+única pessoa que decidiu o que o capítulo alega. Este capítulo dá a você essa
+habilidade de gestão.
+
+## O conceito
+
+O movimento que transforma um bando de papéis de IA em um fluxo de trabalho defensável
+é a **decomposição de tarefas**: quebrar um trabalho grande em subtarefas menores, cada
+uma com um dono claro. Exemplo: em vez de pedir a uma ferramenta que "melhore o meu
+capítulo", você divide o trabalho em conferir o desenho de pesquisa, conferir as
+citações e apertar a prosa. Agora cada peça tem um passa-ou-não-passa que você consegue
+julgar.
+
+Cada peça vira um **papel delimitado**: uma tarefa de IA estreita o bastante para ser
+enunciada em uma frase e conferida em uma passada. Exemplo: "sinalize cada frase da
+minha seção de resultados que alega mais do que a minha amostra sustenta". Um papel
+delimitado tem linha de chegada clara. "Deixe melhor" não tem.
+
+O esqueleto que mantém os papéis honestos é o **par executor–crítico**: um papel produz
+alguma coisa e um segundo papel, separado, ataca o que o primeiro produziu. Exemplo: um
+executor redige o seu parágrafo de limitações, e então um crítico caça a limitação que
+o executor deixou de fora. Um executor sozinho é confiante sobre a própria qualidade, e
+esse é exatamente o ponto cego que ele não enxerga de dentro.
+
+Ligar os papéis é decidir o que espera pelo quê. Uma **dependência** é uma ordem
+obrigatória entre duas subtarefas, quando uma precisa da saída da outra para começar.
+Exemplo: um crítico não ataca um rascunho que o executor ainda não escreveu. Papéis sem
+dependência entre si rodam ao mesmo tempo. Papéis unidos por uma dependência rodam em
+sequência.
+
+A cadeia de dependências que você não consegue encurtar é o **caminho crítico**: a
+sequência mais longa de passos que obrigatoriamente seguem uns aos outros no seu fluxo
+de trabalho. Exemplo: o executor redige, então o crítico ataca, então você integra são
+três passos que não colapsam em menos. Essa cadeia define o número mínimo de rodadas
+que o seu fluxo leva. Ler o caminho crítico no seu próprio desenho, em vez de adivinhar
+qual é, é a habilidade que este capítulo treina.
+
+## Um exemplo trabalhado
+
+Você está terminando um capítulo sobre um pequeno estudo de saúde: se uma caminhada de
+dez minutos depois do almoço está associada a uma frequência cardíaca de repouso mais
+baixa à tarde entre os moradores do seu andar no alojamento. Você tem um rascunho e
+quatro papéis de IA esperando.
+
+**Divida.** Você quebra a revisão em papéis delimitados. Um **revisor de clareza**
+confere se cada frase se lê com facilidade. Um **metodologista** confere se "associada
+a" é a palavra honesta para o que os seus dados conseguem mostrar. Um **verificador de
+citações** confirma que os dois estudos de frequência cardíaca que você cita existem e
+dizem o que você afirma. Um **editor** aperta a prosa. Cada papel é dono de uma tarefa
+de uma frase.
+
+**Ligue.** O executor redige o seu parágrafo de limitações. Os três críticos podem ler
+esse rascunho no mesmo instante, porque nenhum deles precisa da saída de outro. São
+três papéis rodando em paralelo. Depois você integra as observações deles, e o editor
+aperta o que sobreviveu. Siga as setas: do executor a um crítico é uma, do crítico até
+você são duas, de você até o editor são três. O seu caminho crítico tem profundidade de
+três setas, e no ponto mais largo roda três críticos.
+
+**Mantenha um passo humano.** O passo de integrar é seu. Quando o metodologista diz que
+o seu resultado sobre caminhada e frequência cardíaca é apenas uma associação e o
+revisor de clareza adorou a frase que a chamava de efeito, nenhum papel resolve esse
+choque. Você resolve. A decisão sobre o que o capítulo alega nunca entra no fluxo de
+trabalho como tarefa delegada.
+
+As ferramentas redigiram, sinalizaram e poliram. Você dividiu o trabalho, definiu a
+ordem e assumiu a alegação que leva o seu nome.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb16 — Managing multiple AI agents + the
+final defense**. Abra no Colab pelo selo acima e trabalhe as células junto com este
+capítulo. Lá você monta o fluxo executor–crítico como um grafo direcionado, lê a
+profundidade do caminho crítico e a largura paralela direto do código, e vê o caminho
+crescer uma rodada no instante em que você faz um crítico esperar por outro crítico.
+Depois você decompõe o seu próprio capítulo em papéis delimitados e defende a ligação
+que escolheu.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria resposta, depois delegue. Cada prompt é uma
+tarefa verificável, não um pedido de veredito.
+
+**Decomponha e devolva o passo humano.**
+
+```text
+I am splitting the review of my health chapter into scoped AI roles. Here are my
+section headings and one line on each: [paste them]. Propose a table with one row
+per role: the role's one-sentence scoped task, the draft or input it needs, whether
+it can run in parallel or must wait on another role, and the single decision it must
+hand back to me.
+```
+Depois de rodar, verifique: confira se toda célula do tipo "devolver para mim" nomeia
+uma decisão que de fato nunca se delega, e não uma inventada para parecer cautelosa.
+Combate a *ilusão de completude* (uma tabela de papéis arrumadinha que se lê minuciosa
+enquanto omite a checagem que importa).
+
+**Confirme que a ligação não deixa nenhum erro inicial passar batido.**
+
+```text
+Here is my proposed workflow as a list of "role A feeds role B" arrows: [paste them].
+For each role, tell me exactly what input it depends on, and name any role I have
+scheduled to start before the input it needs actually exists.
+```
+Depois de rodar, verifique: desenhe as setas você mesmo e siga se o insumo de cada
+papel existe no momento em que ele começa. Combate o *método plausível mas errado* (uma
+ligação confiante que deixa um papel rodar antes de o insumo dele estar pronto).
+
+**Faça red team (revisão adversária) da decomposição.**
+
+```text
+Act as a hostile reviewer of my AI workflow, not of my chapter. Name every place an
+early mistake in one role could flow downstream unchecked, and every role whose job
+overlaps another so much that it adds no independent check. Do not rewrite my plan.
+```
+Depois de rodar, verifique: se a resposta só elogiar o seu plano, insista e exija a pior
+falha isolada de ligação. Combate a *concordância bajuladora* (elogio que revisa o seu
+ego, não o seu fluxo de trabalho).
+
+::: {.callout-important title="Não delegue"}
+A divisão e a ordem podem ser informadas por uma ferramenta, mas três decisões
+continuam só suas. Você decide **quais tarefas merecem um papel separado** e quais
+apenas multiplicam saídas que você não consegue supervisionar. Você decide **a ordem**,
+para que nenhum papel resolva uma questão que um papel anterior deveria ter respondido
+primeiro. E você mantém **o passo de integrar** humano: quando dois papéis discordam
+sobre o que o seu capítulo alega, você toma essa decisão com as suas próprias palavras.
+Um fluxo de trabalho que entrega a alegação a uma ferramenta não é um fluxo que você
+consegue defender.
+:::
+
+## Um caso de falha da IA
+
+Você pede a uma ferramenta que desenhe o seu fluxo de trabalho com vários agentes, e ela
+devolve um plano confiante e bem formatado: rode o executor, o metodologista, o cético e
+o editor todos em paralelo para "economizar rodadas". O plano roda na sua cabeça sem
+tropeço. Eis a armadilha. O editor e o cético não têm nada para ler ainda, porque o
+executor não redigiu coisa alguma. A ferramenta escalou três papéis para começar antes
+de o insumo do qual dependem existir, e vestiu isso de eficiência.
+
+Você pega o erro desenhando as setas e fazendo uma pergunta em cada papel: o insumo
+deste papel existe no momento em que ele começa? O insumo do editor é o rascunho
+integrado, que só existe no fim, então "editor em paralelo com o executor" é
+impossível. Redesenhado com honestidade, o plano é um caminho crítico com três setas de
+profundidade, não uma. Um plano verde e arrumadinho não é um plano válido. Você confere
+as dependências, não a confiança.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA para checar a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, que faz a pesquisa.
+:::
+
+Verifique o número central deste capítulo, a profundidade do caminho crítico, com
+**código alternativo** do [guia de
+verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recalcule a mesma quantidade por outro caminho e compare. O notebook calcula a
+profundidade com uma função de grafo. Você confirma na mão: escreva cada papel, desenhe
+cada seta de "alimenta" e siga a cadeia ininterrupta mais longa do começo ao fim,
+contando conforme avança. Se a sua contagem manual bater com o código, a profundidade
+está verificada. Se não bater, a ligação que você desenhou e a ligação que o código
+construiu são dois fluxos de trabalho diferentes, e essa discordância é o achado que
+vale perseguir.
+
+## Transferência para o projeto
+
+Este capítulo constrói a primeira peça do seu **capítulo final de pesquisa e portfólio
+de gestão de IA**, o último marco do projeto. Pegue uma seção real do seu próprio
+projeto, os seus métodos, os seus resultados ou as suas limitações, e escreva a
+decomposição dela: os papéis delimitados que você vai rodar, quais rodam em paralelo e
+quais precisam esperar, e o único nó que você mantém humano. Leve essa decomposição ao
+estúdio de sexta-feira como o lance de abertura do seu portfólio. Ela é a evidência de
+que você comandou a equipe de IA, em vez de deixar a equipe comandar você.
+
+## Defenda a sua decisão
+
+Em quatro frases, defenda o fluxo de trabalho que você desenhou para uma seção do seu
+capítulo. Diga quais papéis delimitados você escolheu e em que ordem os ligou. Aponte o
+erro inicial que a sua ordenação impede de correr para as etapas seguintes, e nomeie o
+passo que você manteve humano e por que nenhum papel pode dá-lo. Feche com o limite: um
+lugar em que a sua ligação ainda pode deixar passar um erro compartilhado, e a checagem
+independente que você faria antes de confiar na concordância entre os papéis.

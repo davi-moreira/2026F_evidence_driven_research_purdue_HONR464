@@ -1,0 +1,193 @@
+---
+title: "Reconhecendo a Falsa Confiança"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Quando uma ferramenta de IA lhe entrega um achado
+> fluente e confiante, você decide se a confiança dela conta como evidência (nunca
+> conta) e exatamente qual verificação independente você roda no número por baixo
+> dele antes de repetir a alegação como sua.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do tópico correspondente no curso; o laboratório no Colab está no link acima. Companheiro recomendado: RDSS (o manual *Research Design in the Social Sciences*) cap. 1, 2, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por que essa decisão importa
+
+Imagine a analista que avalia relatórios de financiamento de um programa de
+restauração de bacias hidrográficas. Todo ano ela lê resumos que anunciam sucesso em
+prosa polida e segura. O critério dela é direto: *"Eu não financio a frase. Eu financio
+o número por trás dela. Me mostre a medição, como você calculou a mudança e por que o
+crédito é do projeto."* Um parágrafo confiante não convence ninguém que já leu cem
+parágrafos confiantes. O que a convence é um número que você recalculou e consegue
+defender. Uma parceira de IA vai escrever para você um achado lindo e de som seguro em
+segundos. Seu trabalho é tratar essa confiança como algo que não vale nada até você
+conferir o que está por baixo dela.
+
+## O conceito
+
+A armadilha tem nome. **Falsa confiança** é quando uma saída fluente e detalhada faz
+você ter certeza de algo que nunca verificou. Exemplo: um resumo de IA relata que
+um mutirão de limpeza de um córrego "reduziu o nitrato em cerca de 40 por cento", e o
+número preciso e a redação lisa fazem a alegação parecer resolvida antes de você ter
+olhado uma única medição.
+
+Dois hábitos tornam a armadilha perigosa. **Viés de automação** é a tendência a confiar
+demais em um sistema automatizado e parar de conferir, justamente porque quem produziu
+a resposta foi uma máquina. Exemplo: você conferiria duas vezes a conta de um colega de
+laboratório, mas cola a porcentagem da IA direto no seu relatório porque "a ferramenta
+calculou". **Ilusão de entendimento** é confundir uma explicação lisa com compreensão
+real. Exemplo: você concorda com a cabeça enquanto a IA percorre linha por linha o
+cálculo dela, e depois percebe que não conseguiria defender o número diante da analista
+da bacia hidrográfica sem refazê-lo por conta própria.
+
+A regra que derrota as três é curta: **verifique o número, não o parágrafo.** Uma
+**verificação** é uma conferência independente, rodada por um método fora do modelo, de
+que um resultado é de fato verdadeiro. Exemplo: em vez de confiar nos "40 por cento" da
+IA, você recalcula o nitrato médio antes e depois do mutirão a partir das leituras
+brutas e vê o que os dados realmente mostram. Um código que roda sem erros não é a
+mesma coisa que um código correto, e um resumo que se lê muito bem não é a mesma coisa
+que um resumo certo.
+
+## Um exemplo trabalhado
+
+Você está estudando um pequeno córrego onde foi implantada, no ano passado, uma **mata
+ciliar** (uma faixa de árvores e gramíneas plantada ao longo da margem para filtrar o
+escoamento). Você tem leituras semanais de **nitrato** (o nitrato é um nutriente vindo
+de fertilizante que, em excesso, alimenta a proliferação de algas e tira o oxigênio da
+água), medidas em miligramas por litro, para o ano anterior ao plantio e o ano
+posterior.
+
+Você pede a uma IA que resuma o conjunto de dados. Ela devolve: *"A mata ciliar reduziu
+o nitrato médio em cerca de 40 por cento, um claro sucesso ambiental."* A frase é
+fluente e segura. É aqui que a falsa confiança venceria: você sente o alívio de um
+resultado limpo e estica a mão para citá-lo.
+
+Em vez disso, você verifica o número. Você calcula o nitrato médio das semanas de
+"antes" e o das semanas de "depois", e subtrai. Suponha que a média do antes seja
+8,1 mg/L e a do depois, 6,9 mg/L. A queda real é de 1,2 mg/L, cerca de 15 por cento,
+não 40. O resumo confiante superestimou a mudança em mais do que o dobro. Um segundo
+problema também se escondia por trás do polimento: as leituras vêm de um único ponto,
+sem córrego de comparação, então mesmo os 15 por cento verdadeiros não podem ser
+atribuídos só à mata ciliar. Uma primavera chuvosa ou uma nova prática rio acima podem
+mover o nitrato tanto quanto. Você fica com o achado que consegue defender, "o nitrato
+caiu cerca de 15 por cento neste ponto ao longo de um ano", e descarta tanto o número
+inflado quanto a palavra "sucesso".
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb01, Research in the Age of AI: Your Arm,
+Your RA, Not Your Brain** (pesquisa na era da IA: seu braço, sua assistente de
+pesquisa, não o seu cérebro). Abra-o no Colab pelo selo acima e trabalhe as células
+junto com este capítulo. No laboratório você roda um pequeno estudo aleatorizado,
+encontra um resumo confiante de uma linha que afirma um efeito grande, e recalcula a
+diferença real nos dados para ver o resumo exagerá-la. Depois você faz red team em um
+achado que você escreveu e pega uma IA elogiando a sua frase em vez de testá-la.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria expectativa, depois delegue. Cada prompt
+entrega uma tarefa que você consegue conferir, com uma nota de verificação que nomeia a
+falha da qual ele defende.
+
+**Aponte o número real (quem recalcula é você).**
+
+```text
+Here is a cell that computes average nitrate before and after a buffer was
+installed and prints both means: [paste it]. Tell me which single printed number
+is the actual change, and state plainly whether a "40 percent reduction" summary
+is or is not that number. Do not rerun it; I will read my own output and compare.
+```
+
+Depois de rodar, verifique (contra-ataca a *fabricação confiante*): um resumo fluente
+pode afirmar um número que os dados nunca produziram. Leia as duas médias que a sua
+célula imprimiu e calcule a mudança por conta própria. Se ela não bater com a cifra da IA,
+confie na sua saída impressa.
+
+**Force a incerteza a aparecer (quem confere o intervalo é você).**
+
+```text
+For the before/after nitrate change in my data, rate how firm the estimate is.
+Give a plausible range, and name what drives the uncertainty: the sample size, the
+week-to-week scatter, and the lack of a comparison stream.
+```
+
+Depois de rodar, verifique (contra-ataca a *incerteza ausente*): se um resultado chega
+como um fato limpo e sem nenhum intervalo, presuma que a incerteza foi omitida, não que
+não havia nenhuma. Confirme o intervalo contra a dispersão que você consegue ver nas
+suas próprias leituras.
+
+**Faça red team (revisão adversária) no seu achado (a alegação continua sendo sua).**
+
+```text
+Here is my finding: "[paste your sentence]." Act as a hostile watershed reviewer.
+Name every place it reaches past one site and one year of data. Do not rewrite it
+for me; list the weaknesses.
+```
+
+Depois de rodar, verifique (contra-ataca a *concordância bajuladora*): se toda objeção
+for branda, ou se a ferramenta chamar a sua frase de "bem equilibrada", insista e peça
+o pior defeito, um só.
+
+::: {.callout-important title="Não delegue"}
+Estas continuam sendo suas, por mais segura que a ferramenta soe. Decidir qual alegação
+o número verificado de fato sustenta, e até onde essa alegação alcança. Julgar se o seu
+desenho de pesquisa permite creditar a mudança à mata ciliar, ou só permite relatar que
+o nitrato caiu. Enunciar a incerteza e os limites com as suas próprias palavras. A
+ferramenta pode rascunhar um resumo; decidir se esse resumo é verdadeiro, e responder
+por ele, é trabalho de quem pesquisa.
+:::
+
+## Um caso de falha da IA
+
+Você pede à IA que "resuma o que este conjunto de dados de qualidade da água mostra", e
+ela devolve um parágrafo confiante terminando em "uma redução de 40 por cento, um claro
+sucesso". Cada parte se lê como um achado que você poderia citar: uma cifra redonda, um
+veredito firme, nenhuma ressalva.
+
+Veja exatamente como você pega o problema. Você não repete o parágrafo. Você calcula as
+duas médias de grupo a partir das leituras brutas e subtrai, e a mudança real é de
+cerca de 15 por cento, não 40. Depois você pergunta o que o desenho de pesquisa
+licencia: um ponto só, sem córrego de controle, um único ano, então mesmo os honestos
+15 por cento poderiam vir do clima em vez da mata ciliar. O resumo confiante falhou
+duas vezes, uma no número e outra no alcance causal, e as duas falhas eram invisíveis
+até você conferir fora do modelo.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA que confira a alegação, o código ou a citação de outra e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, a pesquisadora ou o pesquisador.
+:::
+
+O resultado central do capítulo é que o número de um resumo confiante pode estar
+simplesmente errado. Confirme isso por conta própria com **cálculo direto** (do
+[guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)): recalcule a
+média do antes e a média do depois na mão, ou com uma segunda expressão simples, e
+subtraia. Se a mudança que você obtiver for diferente da cifra da IA, aquela cifra
+nunca foi evidência. Para garantia extra, use **código alternativo**: calcule a mesma
+diferença de um segundo jeito, por exemplo filtrando cada período separadamente e
+subtraindo, e confirme que os dois caminhos dão uma resposta só.
+
+## Transferência para o seu projeto
+
+Este capítulo alimenta a sua **etapa de linha de base de pesquisa e IA**, apresentada
+no estúdio de sexta-feira. Dois movimentos passam para cá. Primeiro, adote uma regra
+permanente para o seu projeto: nenhum número relatado por IA chega ao seu pôster ou ao
+seu resumo executivo antes de você o ter recalculado por um segundo método. Segundo,
+registre a captura no seu **AI Research Ledger** (registro de pesquisa com IA),
+anotando a tarefa, a ferramenta, a sua decisão (ficou com os 15 por cento verificados,
+descartou os 40 alegados) e o método de verificação (cálculo direto). Depois nomeie, na
+sua linha de base, o lugar em que você tem mais chance de deixar passar uma resposta
+confiante sem conferir. É nessa admissão que o viés de automação começa a ser
+gerenciado.
+
+## Defenda sua decisão
+
+Em um parágrafo curto, pegue um número que uma IA relatou para você e enuncie a
+alegação que você vai defender depois de recalculá-lo: o achado delimitado, com as suas
+próprias palavras. Depois dê o seu limite e a sua incerteza. O que o número verificado
+*não* estabelece (o seu desenho de pesquisa permite creditar uma causa, ou apenas
+descrever uma mudança?), e onde foi maior a sua tentação de confiar na versão confiante
+sem conferir? Um achado enunciado sem limite e sem incerteza é o defeito de excesso de
+certeza, não uma defesa.

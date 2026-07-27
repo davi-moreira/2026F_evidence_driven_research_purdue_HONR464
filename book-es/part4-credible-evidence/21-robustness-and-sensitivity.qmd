@@ -1,0 +1,207 @@
+---
+title: "Robustez y sensibilidad"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Antes de mirar un solo resultado, decide el conjunto
+> completo de verificaciones de robustez y de sensibilidad que correrás sobre tu
+> estimación principal, y comprométete a reportarlas todas. Ese orden, primero la lista y
+> después la mirada, es lo que separa un hallazgo que puedes defender de un número
+> halagador que fuiste a pescar.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay capítulo complementario de RDSS (*Research Design in the Social Sciences*, el libro de referencia del curso) para este tema; este capítulo se sostiene por sí solo.
+:::
+
+## Por qué importa esta decisión
+
+> *"Todo el mundo me muestra la versión del análisis que funcionó. Doy por sentado que
+> esa versión existe. Mi pregunta real es qué pasó con todas las versiones razonables que
+> pudiste haber corrido en su lugar, y si las miraste antes o después de ver esta
+> respuesta."*
+> — una **revisora de una revista académica**, abriendo la primera lectura seria que
+> recibirá tu trabajo
+
+La revisora no te está acusando de hacer trampa. Está señalando un hecho simple sobre el
+análisis. Casi toda estimación real depende de decisiones que pudiste haber tomado de otra
+manera, y cualquier decisión individual puede halagar el resultado. Si reportas solo la
+versión que funcionó, le entregaste un número sin forma de distinguir una verdad delicada
+de una rebanada afortunada. Este capítulo te da el hábito que le responde antes de que
+tenga que preguntar.
+
+## El concepto
+
+Una **estimación** no es un número. Es un número que depende de varias decisiones, y quien
+critica ataca las decisiones. Así que las atacas tú primero. Dos ataques con nombre hacen
+este trabajo, y la gente los confunde todo el tiempo.
+
+Una **verificación de robustez** consiste en volver a correr el mismo hallazgo bajo una
+decisión distinta pero igual de defendible, para ver si la respuesta se mantiene. Ejemplo:
+reportaste un valor promedio del pedido, así que también lo calculas después de eliminar
+la única cuenta que resultó ser de un comprador mayorista, y confirmas que la historia se
+sostiene. Una **verificación de sensibilidad**, que en algunos campos llaman **análisis de
+sensibilidad**, consiste en cambiar deliberadamente un supuesto para ver cuánto se mueve
+la respuesta. Ejemplo: supusiste que el sistema de pago registraba cada compra, así que te
+preguntas cuánto se desplazaría tu resultado si en silencio se le escapara el dos por
+ciento de ellas.
+
+Los dos ataques apuntan al mismo blanco, la **estimación principal**: el único número que
+representa todo tu hallazgo. La atacas desde cuatro palancas, y todo plan honesto gira una
+o más de ellas. La **muestra** es qué datos conservas. La **medición** es cómo conviertes
+un concepto en un número. La **especificación** es el conjunto de decisiones de modelado
+detrás de la estimación. La **métrica** es la vara con la que reportas.
+
+Girar todas las palancas a la vez y graficar los resultados da una **curva de
+especificaciones**: una imagen de una estimación bajo muchas decisiones defendibles, una
+al lado de la otra. Si toda la curva se queda de un mismo lado del cero, tu dirección es
+robusta. Su dispersión es tu rango honesto.
+
+El peligro tiene nombre. La **búsqueda de especificaciones**, cuyo nombre cotidiano es
+**p-hacking**, consiste en correr muchos análisis y reportar solo el que dio el resultado
+que querías, sin revelar la búsqueda. Su opuesto son las **verificaciones prelistadas**:
+anotar cada verificación que vas a correr, y comprometerte a reportarlas todas, antes de
+ver ningún resultado. El mismo código, la misma tabla, la integridad opuesta. La única
+diferencia es el orden entre mirar y decidir.
+
+## Un ejemplo resuelto
+
+Tu equipo prueba si un nuevo descuento de fidelidad eleva el **valor promedio del pedido**,
+el monto promedio que gasta una persona clienta por compra. Tu titular: quienes recibieron
+la oferta de descuento gastan alrededor de doce por ciento más que quienes no la
+recibieron. Antes de defender ese número, lo atacas desde las cuatro palancas.
+
+- **Muestra.** Todas las personas compradoras, o todas menos la única cuenta que resultó
+  ser un comprador mayorista haciendo pedidos al por mayor a través del sitio minorista,
+  lo cual es una exclusión legítima según tu definición de persona clienta, no una
+  exclusión conveniente.
+- **Medición.** El valor del pedido leído como el monto total cobrado, o leído con el
+  envío y los impuestos descontados.
+- **Especificación.** El gasto promediado sobre todas las personas a quienes se ofreció el
+  descuento, o promediado solo sobre quienes efectivamente hicieron un pedido.
+- **Métrica.** La ganancia en dólares, o la ganancia como porcentaje.
+
+Prelistas las dieciséis combinaciones, las corres y graficas la curva de especificaciones.
+Cada combinación vuelve positiva: el descuento ayuda sin importar qué decisión defendible
+tomes. La magnitud va de aproximadamente más ocho por ciento a más quince por ciento. Así
+que el titular honesto no es "doce por ciento". Es "mayor gasto en todas las
+especificaciones que corrimos, de aproximadamente ocho a quince por ciento". Después
+corres un ataque más, una **prueba de placebo**: divides en grupos falsos "A" y "B" a
+personas compradoras que recibieron *la misma* oferta y confirmas que la diferencia entre
+ellos queda cerca de cero. Si personas idénticas mostraran una diferencia, sería tu
+medición, y no el descuento, la que la estaría fabricando.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el cuaderno **nb10 — Comparte la investigación + ataca
+el análisis**. Ábrelo en Colab con el distintivo de arriba y trabaja las celdas junto con
+este capítulo. Ahí vuelves a correr una diferencia principal a lo largo de una rejilla
+prelistada y lees su curva de especificaciones, ves cómo la búsqueda de especificaciones
+fabrica un resultado "significativo" a partir de datos sin ningún efecto real, y corres una
+prueba de placebo y una verificación de influencia dejando uno fuera sobre código con
+semilla fija, para que sientas la diferencia entre un hallazgo robusto y uno frágil.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia respuesta, y luego delega. Cada prompt es un trabajo
+verificable, no una solicitud de veredicto.
+
+**Ubica las verificaciones estándar.**
+
+```text
+Act as a methods assistant for a two-group comparison of average customer spending.
+Before any code, name the standard families of robustness and sensitivity checks for
+this design and the four things I can vary to stress the estimate. Cite a real methods
+reference you are confident exists; if you are unsure a source is real, say so.
+```
+Después de ejecutarlo, verifica: abre la referencia y confirma que las verificaciones y la
+fuente existen. Contrarresta la *fabricación confiada* (un método o una cita inventados
+llegan con la misma seguridad que los reales).
+
+**Delega, con una lista que puedas verificar.**
+
+```text
+Here is my pre-listed robustness grid for one estimate: I vary the sample (all
+shoppers / drop the wholesale account), the measurement (total charged / shipping and
+taxes stripped out), the specification (averaged over everyone offered / averaged over
+buyers only), and the metric (dollars / percent). Name up to three additional, equally
+defensible specifications I did NOT list, and for each say which direction you expect
+it to push the estimate.
+```
+Después de ejecutarlo, verifica: contrasta cada sugerencia con las cuatro palancas y
+agrega solo las que realmente puedas correr con tus propios datos. Contrarresta la
+*ilusión de exhaustividad* (una rejilla ordenada que calladamente omite la única decisión
+que rompería la afirmación).
+
+**Haz red team (revisión adversaria) a tu rango.**
+
+```text
+Here is my claim: "higher spending in every specification we ran, by roughly 8 to 15
+percent." Act as a hostile reviewer of a retail pricing study. Name the single worst
+way this could be specification searching rather than robustness, and the one check
+that would expose it. Do not rewrite the claim for me.
+```
+Después de ejecutarlo, verifica: corre contra tus propios datos la verificación que
+nombre; la falla es real solo si tus números la confirman. Contrarresta el *acuerdo
+adulador* (elogios que revisan tu ego, no tu evidencia).
+
+::: {.callout-important title="No delegues"}
+Tres decisiones siguen siendo tuyas. Tú decides **con qué verificaciones te comprometes
+antes de mirar**, **cuáles de los problemas señalados confirman realmente los datos**, y
+**la afirmación final, con su rango y su límite, que defiendes**. Quien revisa, humano o
+IA, propone. Tú verificas contra tus propios datos, y la evidencia decide.
+:::
+
+## Un caso de falla de la IA
+
+Pegas tu rejilla de cuatro palancas y le pides a una IA que escriba tu sección de
+robustez. Vuelve un pasaje largo y bien organizado que corre la palanca de muestra, la de
+especificación y la de métrica, y cierra con "el resultado del doce por ciento es robusto
+en todas las especificaciones estándar". Se lee minucioso y completo. La trampa es que
+nunca listó la palanca de **medición**, el monto total cobrado frente al monto con envío e
+impuestos descontados, y esa es precisamente la decisión que más mueve tu estimación. La
+sección parece exhaustiva mientras omite la única verificación que alguien que revisa
+buscaría primero.
+
+Lo detectas porque prelistaste tú las cuatro palancas antes de abrir la herramienta.
+Al leer su sección contra tu propia lista, notas que falta medición, corres esa comparación
+y ves la estimación deslizarse hacia el extremo bajo de tu rango. Un pasaje que parece
+completo no es lo mismo que uno que lo está. Contrastas su lista con la tuya, no con lo
+terminado que suena.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, la persona que investiga.
+:::
+
+Verifica el resultado clave de este capítulo, la curva de especificaciones, con **código
+alternativo** de la [guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recalcula un punto de la curva por una segunda vía más simple y compara. Toma una sola
+especificación, filtra los dos grupos a mano, resta sus valores promedio de pedido y
+confirma que el número coincide con lo que imprimió la rejilla automatizada. Dos caminos
+hacia una sola respuesta es un punto verificado. Después usa una cacería de
+**contraejemplos** sobre la curva completa: intenta construir una especificación defendible
+que voltee el signo. Si no encuentras ninguna después de una búsqueda honesta, tu
+afirmación de "la dirección es robusta" se ganó su lugar. Si la encuentras, esa
+especificación pertenece a tu informe, no a tu papelera.
+
+## Transferencia al proyecto
+
+Este capítulo se convierte en tu **hito de auditoría de investigación y borrador del
+póster**. Toma la estimación que produjiste en el hito anterior y escribe para ella un plan
+corto de robustez prelistado: tres verificaciones, en orden, elegidas por las decisiones
+que alguien hostil atacaría con más probabilidad, más una verificación de placebo o de
+dejar uno fuera. Córrelas todas, reporta el panorama completo y registra cada una como una
+fila en tu AI Research Ledger (bitácora de investigación con IA) junto con el método de
+verificación que se ganó tu confianza. Ese plan prelistado, y el rango que produce, es la
+columna vertebral de lo que defiendes en el estudio del viernes.
+
+## Defiende tu decisión
+
+En cuatro oraciones, defiende tu plan de robustez. Enuncia tu titular como una dirección
+más un rango, no como un solo número, y nombra la verificación que con más probabilidad lo
+habría volteado. Declara el límite: nombra una cosa que un plan de robustez aprobado **no**
+establece, como convertir una correlación en una causa. Cierra con tu incertidumbre: la
+única especificación que todavía te genera dudas, y la verificación que correrías
+después para resolverla.

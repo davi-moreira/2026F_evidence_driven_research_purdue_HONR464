@@ -1,0 +1,201 @@
+---
+title: "Declarar e Diagnosticar um Desenho de Pesquisa"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Se o seu desenho de pesquisa é forte o bastante para
+> ser rodado, decidido simulando-o antes de você coletar um único dado, lendo com
+> que frequência ele acerta a verdade e nomeando a única mudança que mais o
+> melhora.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do seu tópico no curso; o laboratório em Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*) cap. 2, 5, 10, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por que essa decisão importa
+
+Imagine uma metodologista da sua banca lendo o seu plano. Ela faz uma pergunta:
+*"Com que frequência este desenho exato pegaria o efeito real se você o rodasse
+mil vezes?"* Se a sua resposta for "eu nunca chequei", ela para por aí. Um desenho
+pode ser lindo de ler, com uma pergunta afiada e uma comparação limpa, e ainda
+assim voltar com "nada aqui" nove vezes em cada dez, ou acertar com confiança o
+número errado toda vez. Este capítulo permite descobrir isso de forma barata, em
+simulação, para que um semestre que você teria gastado coletando dados condenados
+vá para um desenho capaz de responder de verdade à sua pergunta.
+
+## O conceito
+
+No capítulo 9 você construiu as quatro partes de um desenho. Este capítulo as põe
+à prova com um ciclo de três passos que o curso toma emprestado do seu texto RDSS
+(*Research Design in the Social Sciences: Declare, Diagnose, Redesign*).
+
+**Declarar** significa escrever as suas quatro partes de desenho como algo que um
+computador consegue rodar: um modelo que gera dados falsos, uma indagação que ele
+consegue calcular sobre esses dados falsos, um plano de amostragem e de atribuição
+de condições, e uma regra para transformar dados em uma estimativa. *Exemplo:*
+código que inventa 40 usuários, joga uma moeda para dar a cada um uma nova
+interface e subtrai as médias dos dois grupos.
+
+**Diagnosticar** significa rodar esse desenho declarado muitas vezes em mundos
+simulados novos e observar como a estimativa dele se comporta. *Exemplo:* rode o
+estudo da moeda 2.000 vezes e junte as 2.000 estimativas. Três números resumem a
+pilha.
+
+**Viés** é a distância média entre a sua estimativa e a verdade ao longo das
+rodadas; um desenho é não enviesado quando as estimativas dele se centram na
+resposta verdadeira. *Exemplo:* se a verdade é 2 e as suas estimativas dão em
+média 2,0, o viés é quase zero. Viés é uma inclinação sistemática, e mais dados
+nunca o encolhem.
+
+**Variância** é o quanto a estimativa balança de uma rodada para a outra.
+*Exemplo:* estimativas oscilando entre -5 e +9 em torno de um valor verdadeiro de
+2 têm variância alta. Mais dados *de fato* encolhem isso.
+
+**Poder** é a frequência com que o desenho detecta um efeito real. *Exemplo:* um
+desenho que encontra o efeito em 8 de 100 rodadas tem 8% de poder, o que é quase
+inútil.
+
+**Redesenhar** significa mudar exatamente uma parte em resposta ao diagnóstico e
+então diagnosticar de novo. Poder baixo por causa de variância alta pede mais
+dados. Viés pede um desenho diferente, porque tamanho compra estabilidade, não
+verdade.
+
+## Um exemplo trabalhado
+
+Você é pesquisador de **interação humano-computador** e pergunta se uma *dica de
+validação em linha*, uma mensagem pequena que aparece enquanto você digita ("a
+senha precisa de um número") em vez de só depois de enviar, ajuda as pessoas a
+concluir um formulário de cadastro mais rápido. O seu desfecho é o tempo em
+segundos até concluir. O seu efeito verdadeiro, no mundo que você simula, é que a
+dica corta 8 segundos.
+
+Você o **declara**: cria usuários cujos tempos de base variam muito, porque alguns
+leem devagar e outros correm; joga uma moeda para atribuir a versão com dica;
+subtrai as médias dos dois grupos. Você **diagnostica** um piloto de 12 usuários
+por versão. O resultado é desanimador. O viés é quase zero, então o desenho mira
+certo, mas a dispersão é enorme porque os tempos individuais variam muito, e o
+poder volta abaixo de 10%. O desenho é honesto e inútil ao mesmo tempo: em média
+ele aponta para o ganho de 8 segundos e quase nunca chega perto o bastante, em uma
+rodada isolada, para prová-lo.
+
+Agora **redesenhe**. O problema é variância, então você eleva a amostra para 400
+por versão e diagnostica de novo. O poder salta acima de 90% e a dispersão desaba
+em direção à verdade. Isso é variância curada por tamanho. Mas rode mais um
+desenho como advertência: abandone o sorteio e deixe que usuários com mais
+familiaridade tecnológica escolham sozinhos a nova versão. Usuários experientes
+terminam mais rápido de qualquer jeito, então a dica leva o crédito por uma
+velocidade que a experiência entregou. Esse desenho confundido é igualmente
+preciso a 400 por versão e, ainda assim, se centra em um ganho de 14 segundos em
+vez de 8, e nenhuma quantidade extra de dados o move. Essa diferença dá nome à
+última ideia. Um desenho com sorteio consegue **identificar** o efeito da dica, ou
+seja, atribuir a diferença de tempo à dica e descartar outras causas, enquanto o
+confundido mostra apenas uma **associação**, em que os dois se movem juntos mas
+uma causa comum poderia explicar isso.
+
+## O laboratório em Colab
+
+O laboratório deste capítulo é o notebook **nb04 — The anatomy of a research
+design: MIDA + declare → diagnose → redesign** (a anatomia de um desenho de
+pesquisa: MIDA + declarar → diagnosticar → redesenhar). Abra-o no Colab pelo selo
+acima e trabalhe as células junto com este capítulo. No laboratório você declara o
+desenho de mentoria em poucas linhas de Python, roda-o milhares de vezes para ler
+com os próprios olhos o viés, a variância e o poder dele, e depois vê um redesenho
+resgatar um estudo justo mas sem poder, enquanto um gêmeo confundido permanece
+errado em qualquer tamanho de amostra.
+
+## Prompts de IA recomendados
+
+Comprometa-se com a sua própria expectativa primeiro, depois delegue. Cada prompt
+abaixo deixa você com um rascunho que ainda precisa ser checado.
+
+```text
+Act as a simulation assistant. Here is my declared design in words:
+[model, inquiry, data strategy, answer strategy]. Write the smallest Python
+that builds a world where I set the true effect, runs the design many times,
+and reports bias, variance, and power. List every assumption your code makes
+about my design that I did not state.
+```
+Depois de rodar, verifique (combate o *método plausível mas errado*): rode de novo
+com o efeito verdadeiro fixado em zero e confirme que o código só "detecta" um
+efeito mais ou menos na frequência que o seu limiar de significância permite. Uma
+simulação que dispara com efeito zero está declarando um desenho diferente do seu.
+
+```text
+Here is my diagnosed design and its numbers: [bias, variance, power]. List the
+threats to any conclusion from one run as a table: threat, whether it is a
+bias / variance / power problem, and the single redesign that reduces it most.
+```
+Depois de rodar, verifique (combate a *ilusão de completude*): confronte a tabela
+com o seu próprio diagnóstico impresso. O assassino que os seus números já
+comprovaram precisa estar na primeira linha; uma lista arrumadinha de seis ameaças
+que nunca o nomeia perdeu o ponto.
+
+```text
+Argue against my claim that this design is strong enough to run. As a hostile
+methodologist, name the one diagnosand I am most likely fooling myself about,
+and the observation that would expose it.
+```
+Depois de rodar, verifique (combate a *concordância bajuladora*): se a ferramenta
+elogiar o desenho sem uma única objeção, descarte a resposta e diagnostique de
+novo você mesmo.
+
+::: {.callout-important title="Não delegue"}
+Três decisões continuam sendo suas. **Qual mundo a sua pergunta pressupõe**, o
+modelo que você declara, é uma afirmação sobre a realidade que nenhuma ferramenta
+faz por você. **Qual quantidade única você nomeia como sua indagação** decide o que
+"sucesso" sequer significa. E **a decisão honesta de rodar ou não um desenho que o
+seu próprio diagnóstico diz ser fraco demais** é um julgamento que você assina. Uma
+IA pode propor ameaças e rascunhar código de simulação, mas ela não pode decidir
+que o seu estudo sem poder vale um semestre assim mesmo.
+:::
+
+## Um caso de falha da IA
+
+Você cola o seu desenho observacional confundido e pergunta: "Minha estimativa
+está ruidosa. O que devo fazer?" A ferramenta responde com confiança: "Recrute
+mais participantes para apertar a sua estimativa." Isso soa obviamente certo e é
+exatamente errado no seu caso. O seu problema é **viés** por autosseleção, não
+variância, e mais dados só tornam uma estimativa enviesada um número errado mais
+*preciso*. Você pega o erro do jeito que este capítulo ensina: rode o desenho
+confundido em simulação com uma amostra grande e veja as estimativas se agruparem
+firmemente em torno de 14 segundos quando a verdade é 8. A dispersão encolheu; o
+erro não. Essa é a falha `plausible-but-wrong-method`, e o seu próprio diagnóstico
+a desmascara.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA que cheque a alegação, o código ou a citação de outra, e ela encontrará erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado é sempre sua, de quem faz a pesquisa.
+:::
+
+O método aqui é a **simulação** (guia de verificação, método 2: recorra a ele
+quando a alegação for sobre como um procedimento se comporta, e não sobre um
+número fixo). Nunca confie no "o seu desenho tem cerca de 80% de poder" dito por
+uma IA. Declare o desenho você mesmo, fixe um efeito verdadeiro escolhido por
+você, rode alguns milhares de vezes e leia o poder na sua própria pilha de
+estimativas. Para qualquer desenho que alegue uma *causa*, acrescente uma segunda
+checagem independente: o **diagrama causal** (método 8). Desenhe o seu modelo como
+um DAG e procure uma causa comum com seta entrando tanto no seu tratamento quanto
+no seu desfecho. Se essa porta dos fundos estiver aberta, nenhum número de poder
+resgata você, e a sua alegação honesta para em "associado a".
+
+## Transferência para o projeto
+
+Este capítulo conduz você pela segunda metade do seu marco **carta de pesquisa e
+declaração MIDA**, a declaração de três minutos que você apresenta no estúdio de
+sexta-feira. O capítulo 9 deu as quatro partes; aqui você as declara como um
+desenho executável, diagnostica viés, variância e poder, e traz um redesenho
+nomeado. Esse marco é avaliado pela linha que você traça entre identificar e
+associar no seu próprio desenho, então o diagnóstico que você roda nesta semana é
+a evidência por trás da fronteira que você vai defender.
+
+## Defenda a sua decisão
+
+Em cinco frases, declare e defenda um desenho para o seu projeto. Enuncie a única
+quantidade que você busca (a sua indagação). Relate o pior número de diagnóstico
+que você consegue estimar, viés, variância ou poder, e diga o que ele faz com a
+sua resposta. Depois tome a decisão honesta: rodar, redesenhar antes ou estreitar
+a alegação, e nomeie a única mudança que mais melhoraria o desenho. Feche com a
+fronteira: o seu desenho **identifica** um efeito ou mostra apenas uma
+**associação**, e o que permanece incerto mesmo que tudo dê certo?

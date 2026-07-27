@@ -1,0 +1,204 @@
+---
+title: "De la curiosidad a un problema de investigación"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Cuál es el único problema de investigación, de
+> todo lo que tu curiosidad podría llegar a ser, al que le vas a dedicar un semestre.
+> Lo enuncias como una pregunta respondible que nombra sus unidades, su variable de
+> resultado y la población de la que habla, y lo defiendes como importante, viable y
+> genuinamente nuevo.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de diseño de investigación en las ciencias sociales) cap. 4, 7, gratuito en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por qué importa esta decisión
+
+Imagina a una mentora de investigación leyendo tu propuesta de una línea antes de la
+primera reunión. No pregunta por tus datos ni por tu software. Pregunta una sola cosa:
+*"¿Cuál es, exactamente, la pregunta?"*. Su razón: *"En un párrafo me doy cuenta de si
+alguien sabe qué está preguntando. Si no lo sabe, nada de lo que venga después salva el
+proyecto"*.
+
+Todo lo que hagas después se apoya en esta decisión. Una pregunta vaga vuelve arbitraria
+cada elección posterior, porque cualquier dato y cualquier respuesta parecerán encajar.
+Una pregunta afilada te dice qué evidencia necesitas y qué contaría como estar en un
+error. Elige bien el problema y el semestre tiene columna vertebral.
+Elígelo mal y ningún análisis lo enderezará.
+
+## El concepto
+
+Convertir la curiosidad en un problema es un embudo con cuatro paradas. Cada parada bota
+la vaguedad que la parada anterior todavía permitía.
+
+- **Curiosidad**: un interés sentido, todavía sin bordes. Ejemplo: *"¿por qué algunas
+  personas parecen enfermarse más durante las semanas de exámenes?"*. No puedes reunir
+  evidencia sobre eso, porque nunca dice a quién ni a qué mirar.
+- **Tema**: una curiosidad con bordes, un territorio dentro del cual alguien podría
+  reunir evidencia. Ejemplo: *"sueño y enfermedad entre estudiantes de primer año que
+  viven en residencias"*.
+- **Problema de investigación**: un desconocido específico dentro de ese territorio
+  cuya ausencia importa. Ejemplo: *"no sabemos si dormir poco durante la semana de
+  exámenes finales va junto con más enfermedades reportadas"*.
+- **Pregunta respondible**: la única oración que la evidencia puede responder, y sobre
+  la que puede equivocarse. Ejemplo: *"¿quienes cursan primer año y duermen menos de
+  seis horas durante los finales reportan más días de enfermedad que quienes duermen
+  siete o más?"*.
+
+Una buena pregunta también carga tres cosas que debe nombrar, o no sabrás qué registrar.
+
+- **Unidades de análisis**: el quién o el qué que representa cada fila de tu evidencia.
+  Ejemplo: una persona estudiante. Si no puedes decir qué es una unidad, no puedes
+  contar nada.
+- **Población objetivo**: el grupo completo del que en realidad trata la pregunta, más
+  allá del puñado al que llegas. Ejemplo: todas las personas de primer año en
+  residencias, no solo las veinte que encuestaste.
+- **Variable de resultado**: la cosa observable que varía, la cantidad que de hecho
+  registras. Ejemplo: el número de días de enfermedad autorreportados. Debe ser
+  medible, aunque sea de forma imperfecta.
+
+Por último, tres pruebas deciden si un problema candidato vale un semestre. La
+**importancia** pregunta si alguien más allá de ti se interesaría por la respuesta. La
+**viabilidad** pregunta si puedes conseguir la evidencia este semestre, con el acceso y
+el tiempo que tienes. La **contribución** pregunta si la respuesta agrega algo que no
+esté ya resuelto, dado que una búsqueda de diez minutos que la encuentra ya sabida mata
+la contribución.
+
+Una vez que tengas una pregunta, también vas a clasificar qué *tipo* de respuesta
+quiere. Eso es la brújula de la indagación, y es todo el trabajo del próximo capítulo.
+Por ahora, la tarea es el embudo.
+
+## Un ejemplo trabajado
+
+Empieza con una curiosidad de salud: *"¿moverse más de verdad ayuda a dormir?"*. Es un
+sentimiento real, pero no puedes estudiarlo, porque no nombra a nadie y no mide nada.
+Dale bordes y se vuelve un **tema**: actividad física y calidad del sueño en estudiantes
+de grado. Empújalo más hasta un **problema de investigación**: no sabemos si caminar más
+al día va junto con dormir mejor, según la propia calificación, entre estudiantes de
+primer año que viven en residencias. Eso apunta a una pieza faltante, no a una materia
+entera.
+
+Ahora afílalo hasta una **pregunta respondible**: *"entre estudiantes de primer año que
+viven en residencias, ¿quienes promedian más de 8.000 pasos al día reportan mejor
+calidad de sueño que quienes promedian menos de 4.000?"*. Los tres términos que se
+cargan caen en su lugar. La **unidad** es una persona de primer año. La **variable de
+resultado** es una calificación de calidad del sueño, digamos un autorreporte de 1 a 10
+que recoges en el teléfono. La **población** son las personas de primer año en
+residencias, no todo el campus.
+
+Ahora corre las tres pruebas. Pasa la de **importancia** (a cualquiera que aconseje a
+estudiantes de primer año con falta de sueño le interesa la respuesta), la de
+**viabilidad** (los conteos de pasos y una calificación nocturna se pueden recoger en un
+semestre) y la de **contribución** (el vínculo entre actividad y sueño está muy
+estudiado en personas adultas, pero mucho menos en este grupo de primer año que vive en
+residencias). La curiosidad ya es un problema que podrías defender.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el cuaderno **nb02 — From curiosity to a research
+problem: descriptive, predictive, causal**. Ábrelo en Colab con el botón de arriba y
+trabaja las celdas junto a este capítulo. Verás cómo una curiosidad se afila en el
+instante en que toca columnas reales de una encuesta; después bajarás tu propia
+curiosidad, tomada de tu mapa de nb01, por el embudo, redactarás dos problemas
+candidatos y defenderás el que conserves.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia respuesta. Solo entonces abre la herramienta, para
+que su salida tenga algo tuyo con lo cual estar en desacuerdo.
+
+**Localizar lo que ya se sabe** (antes de afirmar que tu problema es nuevo):
+
+```
+Act as a research-scoping assistant. My topic is [your topic]. List what is
+already reasonably well established about it and where a genuine open question
+might remain. For every established fact, give one real, retrievable source I
+can open myself. Mark anything you are unsure exists.
+```
+
+*Después de ejecutarlo, verifica:* abre cada fuente antes de confiar en ella. Esto
+contrarresta la **fabricación confiada**, donde una respuesta fluida cita un estudio con
+nombre creíble que no existe.
+
+**Ampliar una curiosidad en candidatos que tú revisas:**
+
+```
+Here is my curiosity: [one sentence]. Produce five candidate research problems
+inside it. For each, name its units of analysis, its outcome, and its target
+population, in a table. Do not add any topic I did not mention.
+```
+
+*Después de ejecutarlo, verifica:* contrasta cada fila con la curiosidad que en verdad
+escribiste. Esto contrarresta el **cambio silencioso de alcance**, donde la herramienta
+responde en silencio una pregunta vecina y te la devuelve como si fuera la tuya.
+
+**Hacer red team al problema que elegiste:**
+
+```
+Act as a hostile grant reviewer. Here is the research problem I want to commit a
+term to: [paste it]. Argue the strongest case that it is not worth doing. Attack
+it on importance, on feasibility, and on whether it adds anything new.
+```
+
+*Después de ejecutarlo, verifica:* conserva solo las objeciones que sobrevivan a tu
+propio razonamiento. Esto contrarresta el **acuerdo complaciente**, donde una
+herramienta elogia tu idea porque tú la propusiste.
+
+::: {.callout-important title="No delegues"}
+Tres decisiones son solo tuyas. **Qué problema** eliges para dedicarle un semestre.
+**Cómo redactas** la pregunta, incluidas sus unidades, su variable de resultado y su
+población. Y el **juicio** sobre si es importante y genuinamente nueva. Una herramienta
+puede ampliar tus opciones y atacar tu elección. No puede hacer la elección, porque solo
+tú cargas las razones que tendrás que defender en el estudio.
+:::
+
+## Un caso de falla de la IA
+
+Le pides a una herramienta que *"convierta mi curiosidad sobre sueño y salud en una
+pregunta de investigación"*. Responde, con total seguridad: *"¿La exposición a luz azul
+antes de dormir reduce el sueño REM en estudiantes universitarios? Los estudios muestran
+que la luz azul suprime la melatonina"*. Suena con autoridad, y para ti está mal.
+
+Falla de dos maneras. Primero, cambió tu alcance en silencio. Tú nunca elegiste luz azul
+ni sueño REM, y sin embargo la pregunta ahora depende de ambos. Eso es un
+**cambio silencioso de alcance**, y lo detectas leyendo las unidades, la variable de
+resultado y la población de la herramienta contra las que tú comprometiste. Las tuyas
+eran pasos y una calificación de sueño, no pantallas ni REM. Segundo, la línea sobre la
+melatonina se enuncia como hecho resuelto y sin fuente. Antes de repetirla, buscas y
+abres por tu cuenta un estudio real y, si no puedes, la tratas como **fabricación
+confiada** y la descartas.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, quien investiga.
+:::
+
+El resultado clave de este capítulo es una afirmación sobre tu propia pregunta: que es
+respondible y que carga sus tres términos. Verifícala con **razonamiento entre pares**,
+el método 11 de la [guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md). Entrégale tu
+pregunta de una oración a alguien de la clase que nunca haya visto tu proyecto, y pídele
+que nombre, solo a partir de esa oración, qué es una unidad, qué registrarías y sobre
+quién es la respuesta. Si nombra las tres, tu pregunta se sostiene. Si se traba, la
+pregunta todavía no es respondible, y su confusión muestra qué término sigue faltando.
+
+## Transferencia al proyecto
+
+Este capítulo construye la columna vertebral de tu hito de **panorama de oportunidades
+de investigación**. Toma la curiosidad más fuerte de tu mapa de nb01 y bájala por el
+embudo: tema, problema de investigación y después pregunta respondible, nombrando sus
+unidades, su variable de resultado y su población, y puntuándola en importancia,
+viabilidad y contribución. Lo que defiendes en el estudio del viernes es un problema que
+pasaste por el embudo y elegiste tú, no la sugerencia de una herramienta.
+
+## Defiende tu decisión
+
+En tres o cuatro oraciones, enuncia como pregunta respondible el único problema al que
+te estás comprometiendo, y defiéndelo. Nombra el **límite**: una cosa que esta pregunta
+*no* te dejará afirmar, incluso si la respondes bien. Nombra tu **incertidumbre**: la
+parte de importancia, viabilidad o contribución sobre la que tienes menos confianza, y
+qué evidencia la resolvería. Una elección que puedes defender con su borde y su duda
+nombrados es un problema de investigación. Una elección sin ellos sigue siendo una
+curiosidad.

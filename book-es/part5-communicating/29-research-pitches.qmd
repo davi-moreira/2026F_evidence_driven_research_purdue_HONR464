@@ -1,0 +1,208 @@
+---
+title: "Pitches de investigación"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Decide cómo convertir tu póster terminado en
+> pitches hablados, cada uno del tamaño de los segundos que te da quien escucha, de
+> modo que cada versión comprima la afirmación para el habla sin inflarla nunca. Tú
+> eliges dónde queda la frase de límite y te niegas a moverla cuando la adrenalina te
+> acelera.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. No hay un capítulo de RDSS (*Research Design in the Social Sciences*, el libro complementario del curso) que acompañe este tema; este capítulo se sostiene por sí solo.
+:::
+
+## Por qué importa esta decisión
+
+> *"Me detengo en unos cuarenta pósteres en una tarde. Lo que recuerdo no es el que
+> tiene más datos. Es aquel cuya presentadora me dijo, en un solo respiro limpio,
+> exactamente qué encontró y exactamente dónde se detiene. Los que vendieron de más me
+> perdieron en la segunda frase."*
+> — una **colega escéptica** recorriendo el salón en una conferencia de investigación
+
+Un póster terminado es silencioso. En el momento en que un visitante se detiene, tu voz
+toma el mando, y hablar es más rápido que leer, así que comprimes sobre la marcha. Ahí
+es donde las afirmaciones crecen en silencio. Bajo un poco de presión, "se asoció con"
+se desliza hacia "causa", y "con datos que nunca vio" se cae. La colega de arriba no
+está evaluando tus datos. Está evaluando si la frase que sale de tu boca todavía coincide
+con la frase de tu tablero. Este capítulo te da un pitch que puedes decir en frío, bajo
+presión, y que nunca ensancha la afirmación que tu evidencia ganó.
+
+## El concepto
+
+Un **pitch** es una versión hablada, breve y preparada de tu proyecto, construida para
+caber en una franja fija de tiempo. Ejemplo: los treinta segundos que le das a un
+visitante que hace una pausa, y el recorrido guiado que le das a quien se queda, son dos
+pitches de distinta longitud.
+
+Todos los pitches comparten un mismo esqueleto, la **arquitectura del pitch**: el conjunto
+fijo de tiempos por los que pasa cada versión, que es gancho, afirmación, evidencia,
+límite e invitación.
+
+- **Gancho**: una frase que le importe a un desconocido de fuera de tu campo. Ejemplo:
+  "una mesa de ayuda se ahoga en tickets cada mañana y no puede saber cuáles se van a
+  alargar".
+- **Afirmación**: tu titular, dicho con claridad y dentro de sus límites.
+- **Evidencia**: el hallazgo que gana la afirmación, una frase hablada a la vez.
+- **Frase de límite**: una frase que nombra lo que la afirmación no muestra. Este es el
+  tiempo que la presión intentará quitarte, así que lo ensayas hasta que sea reflejo.
+- **Invitación**: una razón para mirar más de cerca.
+
+Las tres capas son ese mismo esqueleto en tres longitudes: un **gancho de 30 segundos**
+(gancho, afirmación, límite e invitación, sin evidencia todavía), un **recorrido de 90
+segundos** (el gancho más dos o tres tiempos de evidencia) y un **pitch completo** de tres
+a cinco minutos. Decidir qué va en cada longitud es la elección que este capítulo te
+prepara a tomar.
+
+Una sola regla gobierna las tres. La **compresión** es una versión más corta de una
+afirmación que conserva su límite. Ejemplo: "con datos que el modelo nunca había visto,
+señaló cuatro de cada cinco tickets lentos" se comprime a "con tickets nuevos, atrapó la
+mayoría de los lentos". La **inflación** es una versión que agranda la afirmación en
+silencio. Ejemplo: el mismo hallazgo se convierte en "mi modelo predice qué tickets serán
+lentos". Uno perdió un detalle; el otro perdió la verdad. La falla que hay que cazar es el
+**ascenso en caliente**: el momento en que tu verbo hablado le saca ventaja al escrito y el
+límite se mueve sin que nadie vigile las palabras. Ejemplo: escribiste "se asocia con" y tu
+boca dice "causa".
+
+## Un ejemplo resuelto
+
+Construiste un pequeño modelo de aprendizaje automático para la mesa de ayuda del campus.
+Un **conjunto reservado para prueba (held-out)** es una porción de tus datos con la que el
+modelo nunca aprendió, apartada para que su puntaje sea honesto. Ejemplo: entrenaste con
+4,000 tickets pasados y probaste con 1,000 que el modelo nunca había visto. En ese conjunto
+reservado, cuando el modelo marcaba un ticket como "lento", acertaba alrededor del 78% de
+las veces. Esa tasa de acierto cuando marca tiene nombre: la **precisión** es la proporción
+de las marcas de un modelo que resultan correctas. El titular de tu póster dice: "En tickets
+reservados para prueba, el modelo marcó los lentos con 78% de precisión".
+
+Ahora construyes el pitch sobre la arquitectura.
+
+- **Gancho:** "Una mesa de ayuda se ahoga en tickets cada mañana y no puede saber cuáles se
+  van a alargar durante días".
+- **Afirmación, comprimida para el habla:** "Con tickets que nunca había visto, mi modelo
+  marcó los lentos, y cuando levantaba una marca acertaba unas tres de cada cuatro veces".
+- **Frase de límite, el tiempo que ensayas hasta el reflejo:** "Ese número es precisión
+  sobre una porción reservada para prueba, no exactitud general, y el modelo todavía deja
+  pasar algunos tickets lentos".
+- **Invitación:** "Lo sorprendente es cuáles tickets lo engañaron. ¿Quieres el recorrido?".
+
+Observa las dos maneras en que esto sale mal cuando lo dices. Quita las palabras
+"reservado para prueba" y habrás afirmado que el modelo funciona con cualquier ticket, algo
+que tu prueba nunca mostró. Cambia "precisión" por "exactitud" y habrás citado un número que
+tu póster no reporta. Ambos son el ascenso en caliente, y ambos se sienten naturales porque
+la frase más corta suena más limpia. El arreglo es mecánico: marca la frase de límite y dila
+en todas las longitudes, incluso en la de 30 segundos.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el notebook **nb12 — Poster delivery: pitches,
+uncertainty, and difficult questions** (entrega del póster: pitches, incertidumbre y
+preguntas difíciles). Ábrelo en Colab con la insignia de arriba y trabaja las celdas junto
+con este capítulo. Ahí corres una calculadora de ritmo que convierte el conteo de palabras
+de un guion en segundos de habla, para que puedas dimensionar cada capa con honestidad, y
+después redactas y pones a prueba tus propias tres capas de pitch contra la única regla.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia versión y después delega. Cada prompt es una tarea que
+puedes verificar, no una petición de veredicto.
+
+**Localiza la jerga y tradúcela.**
+
+```text
+Here is one sentence from my poster: "[paste it]". My headline claim and its
+boundary are: "[paste them]". List every word a curious stranger with no training
+in my field could not decode. Then give two plain rewrites a first-year in any
+major would follow, each keeping my claim exactly as narrow as it is now.
+```
+
+Después de ejecutarlo, verifica: lee cada reescritura junto a tu límite y rechaza cualquiera
+que haya soltado un calificativo como "reservado para prueba" o que haya convertido "marcó"
+en "predice". Contrarresta el *cambio silencioso de alcance* (una reescritura "sencilla" que
+ensancha la afirmación en silencio mientras simplifica).
+
+**Lista las palabras que inflan mi afirmación.**
+
+```text
+Here is my 30-second hook: "[paste it]". Here is my poster's boundary sentence:
+"[paste it]". Play a hurried visitor. List every word in the hook that says
+something bigger than the boundary allows. Rewrite nothing; just name the words.
+```
+
+Después de ejecutarlo, verifica: si no señala nada y llama "fuerte" al gancho, insiste y
+exige el peor infractor. Contrarresta la *adulación complaciente* (el elogio revisa tu ego,
+no tus palabras).
+
+**Haz red team (revisión adversaria) al pitch como un desconocido apurado.**
+
+```text
+Play a skeptical conference visitor with thirty seconds of patience, from outside
+my field. Here is my full pitch: "[paste it]". Name the exact sentence where you
+lose interest or stop believing me, and the single place I promise more than I show.
+```
+
+Después de ejecutarlo, verifica: contrasta su respuesta con un ensayo real frente a una
+amistad, y pregúntale "¿qué es lo único que dejaste fuera?". Contrarresta la *ilusión de
+exhaustividad* (un pulido "está claro" que se salta el momento en que un desconocido
+realmente se distrae).
+
+::: {.callout-important title="No delegues"}
+Tres decisiones siguen siendo tuyas. Tú decides **qué afirmación respalda realmente tu
+evidencia**, **dónde debe detenerse la afirmación** (la frase de límite exacta) y **si una
+frase comprimida sigue diciendo lo que dice el póster**. Una herramienta puede recortar
+palabras y señalar jerga. No puede decidir que la frase más corta sigue siendo verdadera, y
+no va a estar de pie frente al tablero cuando el desconocido pregunte. Tú dices la frase. Tú
+respondes por ella.
+:::
+
+## Un caso de falla de la IA
+
+Pegas tu recorrido de 90 segundos y le pides a una herramienta que lo comprima a un gancho
+de 30 segundos. Vuelve una línea nítida y segura: "Mi modelo predice los tickets lentos de
+la mesa de ayuda el 78% de las veces". Se lee muy bien y está mal dos veces. Soltó
+"reservado para prueba", así que ahora afirma que el modelo funciona con cualquier ticket, y
+convirtió la precisión en un "78% de las veces" general, un número que tu póster nunca
+reporta. La frase es más corta y más fluida que la tuya, que es justo la trampa.
+
+Lo detectas poniendo la línea comprimida junto a la frase de límite de tu póster y leyéndolas
+palabra por palabra. "Predice ... el 78% de las veces" no coincide con "precisión sobre una
+porción reservada para prueba". Después le dices la línea a una amistad, que pregunta: "¿o
+sea que acierta el 78% de las veces con cualquier ticket?". Esa pregunta es la afirmación
+ensanchada volviendo hacia ti. Te quedas con tu propia frase de límite y descartas la versión
+de la herramienta.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.
+:::
+
+Verifica el resultado clave de este capítulo, que tu pitch comprimido sigue diciendo lo que
+dice tu póster, con **razonamiento con pares** de la
+[guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+di tu gancho de 30 segundos una vez a una persona de fuera de tu campo y luego pídele que te
+repita, con sus propias palabras, tu afirmación y su límite. Si lo que repite es más grande de
+lo que tu póster permite, la compresión infló, y las palabras que agregó te dicen dónde. Suma
+una segunda comprobación independiente, de otra familia: pasa tu guion por la celda de ritmo
+de nb12 (**cálculo directo** sobre el conteo de palabras) para confirmar que cabe en el reloj
+sin apurarte. Una comprobación cuida la afirmación; la otra cuida el reloj.
+
+## Transferencia al proyecto
+
+Este capítulo construye el primer componente de tu hito de **paquete de presentación**: las
+tres capas de pitch más el mapa del recorrido del póster que dice hacia dónde apunta tu mano,
+tiempo por tiempo. Redacta las tres para el póster que ya cerraste, marca la frase de límite
+en cada una y entrega el gancho de 30 segundos dos veces a alguien que señale cada ascenso
+hablado. Esas señales son tu lista de revisión. Ejercitas todo el paquete el viernes en el
+simposio simulado, un ensayo completo en una sala segura, y el paquete se entrega esa noche.
+
+## Defiende tu decisión
+
+En cuatro frases, defiende una de las capas de pitch que construiste. Nombra la capa y la
+única frase de límite que te niegas a soltar en cualquier longitud. Enuncia la afirmación que
+puedes decir en voz alta, comprimida para el habla, y muestra que sigue quedando dentro del
+límite de tu póster. Cierra con tu incertidumbre: la única palabra que tu boca entusiasmada
+tiene más probabilidades de ascender bajo presión, y la comprobación que correrás para
+atraparla.

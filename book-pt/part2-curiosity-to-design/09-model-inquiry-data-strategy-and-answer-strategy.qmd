@@ -1,0 +1,185 @@
+---
+title: "Modelo, Indagação, Estratégia de Dados e Estratégia de Resposta"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Você decide as quatro partes do seu desenho de
+> pesquisa e confirma que elas se alinham: um modelo do mundo, uma quantidade
+> nomeada que você quer extrair dele, um plano de como os dados chegam e um plano
+> para transformar esses dados na sua quantidade. Este capítulo prepara você para
+> escrever essas quatro partes e defender que elas apontam para a mesma coisa.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do seu tópico no curso; o laboratório em Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*) cap. 2, 5, 10, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por que essa decisão importa
+
+Imagine uma líder de ciência de dados lendo o seu desenho de uma página antes de
+você gastar um semestre nele. A preocupação dela é simples: "Me mostre o número
+exato que você quer, e depois me mostre que o jeito como você coleta e processa
+os dados de fato alcança esse número. Se os dois se afastarem, todo resultado que
+você me trouxer estará respondendo a uma pergunta que eu nunca fiz." Um desenho
+que pula esse passo não é rigoroso. É uma esperança com boa formatação. Fazer as
+quatro partes concordarem, no papel, antes de existir qualquer dado, é a checagem
+de qualidade mais barata que você vai rodar na vida.
+
+## O conceito
+
+Todo desenho de pesquisa tem as mesmas quatro partes. O curso as chama de **MIDA**
+(*Model, Inquiry, Data strategy, Answer strategy*: modelo, indagação, estratégia
+de dados, estratégia de resposta), uma letra para cada.
+
+- **Modelo** (*Model*): a sua imagem escrita de como o mundo poderia funcionar,
+  ou seja, quais coisas existem e o que poderia afetar o quê. Exemplo: "a chance
+  de um ouvinte aceitar uma música recomendada vai de 0 a 1, e um novo
+  recomendador poderia empurrá-la para cima."
+- **Indagação** (*Inquiry*): a única quantidade exata que você quer daquele mundo,
+  nomeada antes de qualquer dado chegar. Exemplo: "o aumento médio na taxa de
+  aceitação que o novo recomendador causa entre os ouvintes."
+- **Estratégia de dados** (*Data strategy*): o seu plano de como os dados passam a
+  existir, ou seja, quem é amostrado e quem recebe qual condição. Exemplo:
+  "mandar cada sessão, ao acaso, para o recomendador antigo ou para o novo, e
+  depois registrar cada aceite."
+- **Estratégia de resposta** (*Answer strategy*): o seu plano para transformar os
+  dados em uma estimativa da indagação. Exemplo: "taxa de aceitação no grupo novo
+  menos taxa de aceitação no grupo antigo."
+
+As quatro não são uma lista de checagem que você preenche em qualquer ordem. Elas
+precisam **se alinhar**, ou seja, as suas estratégias de dados e de resposta
+precisam de fato alcançar a indagação que o seu modelo torna perguntável. Exemplo
+de desalinhamento: uma indagação causal ("o aumento que o recomendador *causa*")
+servida por uma estratégia de dados que nunca sorteia quem vê o quê só consegue
+mostrar uma **associação**, ou seja, duas coisas que se movem juntas sem prova de
+que uma causou a outra. Nomear o desalinhamento no papel é o trabalho inteiro
+aqui.
+
+## Um exemplo trabalhado
+
+Pegue um aplicativo de streaming de música testando se um novo recomendador de
+reprodução automática aumenta a frequência com que os ouvintes mantêm a faixa
+sugerida. Percorra as quatro partes.
+
+O **modelo** diz que cada ouvinte tem duas taxas de aceitação possíveis, uma sob o
+recomendador antigo e outra sob o novo, e a nova pode ser maior, menor ou igual. A
+**indagação** é a diferença média entre essas duas taxas no conjunto dos ouvintes,
+um número só, causal quanto ao tipo. A **estratégia de dados** joga cada sessão
+que chega, ao acaso, no balde antigo ou no novo, de modo que nada a respeito do
+ouvinte decide qual versão ele recebe. A **estratégia de resposta** calcula a taxa
+de aceitação em cada balde e subtrai.
+
+Agora audite o alinhamento. A indagação pede uma diferença causada. O sorteio dos
+baldes é o que autoriza essa palavra, porque ele rompe qualquer ligação entre quem
+é o ouvinte e qual versão ele vê. Então as quatro partes concordam. Compare com um
+atalho tentador: lançar o novo recomendador para usuários novos e compará-los com
+os usuários antigos que ficaram no velho. Essa estratégia de dados deixa de se
+alinhar a uma indagação causal, porque usuários novos e antigos diferem de
+maneiras que também mexem na taxa de aceitação. A alegação honesta desaba de
+"causa" para "está associado a". Mesma pergunta, alinhamento quebrado.
+
+## O laboratório em Colab
+
+O laboratório deste capítulo é o notebook **nb04 — The anatomy of a research
+design: MIDA + declare → diagnose → redesign** (a anatomia de um desenho de
+pesquisa: MIDA + declarar → diagnosticar → redesenhar). Abra-o no Colab pelo selo
+acima e trabalhe as células junto com este capítulo. Ali você constrói um pequeno
+mundo simulado, escreve as quatro partes MIDA dele e vê o que acontece com a sua
+resposta quando uma estratégia de dados silenciosamente deixa de corresponder à
+indagação.
+
+## Prompts de IA recomendados
+
+Escreva o seu próprio rascunho de cada parte primeiro, depois pergunte.
+Comprometer-se antes dá à saída da IA algo de que discordar.
+
+```
+Act as a research-design tutor. Here is my research question: [paste it].
+Draft the four MIDA parts as a labeled list — Model, Inquiry, Data strategy,
+Answer strategy. State the Inquiry as one exact quantity. Mark each part
+"confident" or "guessing." Do not smooth over gaps.
+```
+Depois de rodar, verifique: leia as palavras da indagação rascunhada ao lado das
+palavras da sua pergunta. O tipo e o alcance batem? Isso combate a **mudança
+silenciosa de escopo**, em que a ferramenta responde a uma pergunta vizinha e mais
+fácil do que a que você fez.
+
+```
+Act as a hostile methodologist. Here are my four MIDA parts: [paste them].
+Name the single worst misalignment — a place where my data or answer strategy
+cannot reach my stated inquiry. Give one concrete way my design fails, not
+praise.
+```
+Depois de rodar, verifique: confronte a objeção com a sua própria nota de
+alinhamento. Isso combate a **concordância bajuladora**, em que a ferramenta chama
+um desenho de sólido porque foi você quem o propôs.
+
+```
+Find one real, published study that used a design like mine to answer a similar
+question. Give title, authors, year, and venue. If you are not confident it
+exists, say so instead of inventing one.
+```
+Depois de rodar, verifique: abra uma base de dados de biblioteca e localize o
+estudo exato antes de citá-lo. Isso combate a **fabricação confiante**, em que a
+ferramenta devolve uma citação plausível para um artigo que não existe.
+
+::: {.callout-important title="Não delegue"}
+Três escolhas continuam sendo suas. **Qual mundo a sua pergunta pressupõe** (o
+modelo e, portanto, o que poderia confundi-lo). **Qual quantidade única você
+quer** (a indagação, nomeada com as suas palavras, não com a paráfrase da IA). **Se
+as suas quatro partes se alinham** e, portanto, se a fronteira da sua alegação é
+*causa* ou apenas *está associado a*. Uma IA pode rascunhar partes candidatas.
+Decidir que elas concordam, e assumir a alegação que decorre disso, é julgamento
+de pesquisa que você não pode passar adiante.
+:::
+
+## Um caso de falha da IA
+
+Você cola a sua pergunta sobre streaming e pede o MIDA. A ferramenta devolve
+quatro partes confiantes e bem formatadas e chama o desenho de "rigoroso". Leia
+com atenção: ela escreveu a **estratégia de dados** como "comparar usuários novos
+no recomendador novo com usuários antigos no recomendador velho", e manteve a
+**indagação** redigida como um aumento causado. São duas falhas ao mesmo tempo. A
+estratégia de dados é **plausível mas errada**, porque o tempo de casa do usuário
+mexe na taxa de aceitação por conta própria, e a redação da indagação é uma
+**mudança silenciosa de escopo**, de associação para causa. Você pega o erro de
+duas maneiras: coloque as palavras da indagação ao lado da estratégia de dados e
+pergunte se houve mesmo sorteio, e depois esboce o modelo como um diagrama e
+procure uma seta indo de "tempo de casa" tanto para a versão vista quanto para a
+taxa de aceitação. Essa seta aberta é o fator de confusão que o rascunho fluente
+nunca mencionou.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA que cheque a alegação, o código ou a citação de outra, e ela encontrará erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado é sempre sua, de quem faz a pesquisa.
+:::
+
+O resultado-chave a verificar é a própria alegação de alinhamento: que as suas
+quatro partes apontam para uma quantidade só. Use o **raciocínio com pares** do
+guia de verificação. Explique o seu modelo, a sua indagação, a sua estratégia de
+dados e a sua estratégia de resposta a um parceiro e peça que ele nomeie a parte
+que não alcança as outras. A primeira pergunta de uma segunda pessoa costuma achar
+o desvio que você parou de enxergar. Para qualquer desenho cuja indagação use a
+palavra *causa*, acrescente uma segunda checagem independente: desenhe o
+**diagrama causal** e confirme que não sobrou nenhum caminho de porta dos fundos
+aberto (uma causa comum tanto do tratamento quanto do desfecho). Duas checagens
+independentes que concordam são muito mais fortes do que uma.
+
+## Transferência para o projeto
+
+Este capítulo é a espinha do seu marco **carta de pesquisa e declaração MIDA**.
+Traga a pergunta do seu próprio projeto e escreva as quatro partes dela, e depois
+acrescente uma frase nomeando de qual parte você teve menos certeza quanto ao
+alinhamento e por quê. Essa nota de alinhamento vira a fronteira de alegação que
+você defende na sua carta, e é exatamente o insumo sobre o qual o capítulo 10 se
+apoia quando você declara e diagnostica o mesmo desenho.
+
+## Defenda a sua decisão
+
+Em três ou quatro frases, enuncie as quatro partes MIDA do seu projeto, nomeie a
+única quantidade que a sua indagação mira e declare a sua fronteira de alegação: a
+sua estratégia de dados conquista a palavra *causa*, ou ela para em *está
+associado a*? Depois nomeie a parte cujo alinhamento você tem menos certeza, e a
+incerteza que mudaria a sua resposta caso as coisas fossem diferentes. Uma
+declaração sem fronteira enunciada e sem incerteza enunciada está incompleta.

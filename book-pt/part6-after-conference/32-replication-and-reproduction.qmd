@@ -1,0 +1,217 @@
+---
+title: "Replicação e Reprodução"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Você decide se o resultado relatado por um colega de fato
+> se reproduz a partir dos arquivos entregues e, depois, ordena as fragilidades que
+> encontrar pelo tamanho da ameaça que cada uma representa para a alegação principal,
+> não pela facilidade de corrigir cada uma.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do tópico correspondente do curso; o laboratório no Colab está no link acima. Não há capítulo companheiro no RDSS (*Research Design in the Social Sciences*) para este tópico; este capítulo se sustenta sozinho.
+:::
+
+## Por que esta decisão importa
+
+> *"Não me interessa que o seu gráfico esteja bonito nem que o código tenha rodado no
+> seu computador. Me entregue os seus arquivos e me deixe obter o mesmo número de
+> volta. Se eu não conseguir, você ainda não tem um resultado. Você tem uma história."*
+> — um **pesquisador principal** lendo o relatório de laboratório de alguém no primeiro ano de pesquisa
+
+Em um laboratório de verdade, um número que ninguém mais consegue gerar de novo é um
+passivo, não um achado. Um pôster pode arredondar, uma legenda pode exagerar, e um
+notebook de aparência limpa ainda pode esconder a única escolha que sustenta a
+alegação inteira. O revisor acima está aplicando o padrão que todo resultado uma hora
+encontra. Este capítulo coloca você primeiro do lado de quem revisa, para que você
+aprenda a enxergar as rachaduras antes que alguém as encontre no seu próprio trabalho.
+
+## O conceito
+
+Duas palavras parecem iguais e significam coisas diferentes. **Reprodução** é obter o
+mesmo número a partir dos *mesmos* dados e do *mesmo* código que um estudo entregou.
+Exemplo: você abre o notebook de um colega, roda do começo ao fim e confere se a mesma
+figura de crescimento volta. **Replicação** é obter um resultado parecido a partir de
+um *novo* estudo ou de novos dados. Exemplo: um segundo laboratório faz o próprio
+experimento e vê o mesmo efeito. Este capítulo é sobre reprodução. Você testa o
+pacote, não o mundo.
+
+O que você testa é um **pacote de reprodutibilidade**: o conjunto completo que um
+estudo entrega para que outra pessoa consiga reconstruir seus números, ou seja, os
+dados, o código, a ordem de execução, qualquer semente aleatória e o texto final. O
+único valor em que a alegação principal se apoia é o **número principal**. Exemplo: "o
+suplemento aumentou o crescimento das larvas em 0.5 mm." Você reconstrói esse número
+primeiro, usando **restart-and-run-all** (reiniciar e rodar tudo), que significa limpar
+a memória do notebook e rodar todas as células desde o topo, sem nenhum conserto
+manual. Se um número só aparece quando as células rodam fora de ordem, ele não é
+reprodutível.
+
+Uma execução limpa prova que o código roda. Ela nunca prova que o texto é verdadeiro,
+então você faz três auditorias em cima dela. A **concordância entre alegações e
+cálculo** confere se cada frase afirmada no texto está sustentada por um número que o
+código de fato imprime. Uma **especificação alternativa** é um jeito diferente, mas
+igualmente defensável, de calcular o mesmo número principal, para ver se a resposta
+depende de uma escolha não divulgada. Uma **suposição oculta** é algo em que a análise
+se apoia em silêncio e nunca declara, e sem o que o resultado desmoronaria. A mais
+perigosa na biologia tem nome: **pseudorreplicação**, tratar medições repetidas do
+mesmo animal, da mesma placa ou do mesmo tanque como pontos de dados independentes
+quando a verdadeira unidade experimental é o animal, a placa ou o tanque (Hurlbert,
+1984).
+
+## Um exemplo trabalhado
+
+O pacote de um colega testa se um probiótico adicionado à água aumenta o comprimento
+do corpo de larvas de peixe-zebra. São seis tanques: três recebem o probiótico, três
+recebem água pura. Cada tanque abriga cerca de 40 larvas, e o comprimento do corpo é
+registrado para cada larva. O pôster diz: **"O probiótico aumentou o comprimento do
+corpo das larvas em 0.5 mm."**
+
+**Reproduza.** Você faz restart-and-run-all. O código carrega o arquivo, separa as
+larvas por tipo de tanque e calcula a diferença entre as duas médias de grupo. O número
+que volta é **0.43 mm**, não 0.5. O pacote se reproduz, e isso é um sucesso real. Mas o
+texto diz 0.5 e o código diz 0.43. Esse arredondamento silencioso é o seu primeiro
+achado, e ele dá a você o direito de apertar mais.
+
+**Mude uma escolha defensável.** O pacote descartou as larvas que morreram antes da
+medição final e nunca disse isso. Em vez disso, mantenha o último comprimento
+registrado de cada larva morta, uma regra igualmente defensável, e a diferença
+escorrega para 0.31 mm. Nenhum dos dois números é mentira. O achado é que o número
+principal se move com uma escolha que o pôster nunca revelou, então o relato honesto é
+a faixa entre os dois.
+
+**Teste a suposição oculta.** O pacote relata sua diferença como se todas as 240 larvas
+fossem independentes, produzindo um intervalo estreito e bem acima de zero. Elas não
+são independentes. O probiótico foi atribuído por tanque, então larvas que dividem o
+mesmo tanque dividem água, comida e aperto. A verdadeira unidade experimental é o
+tanque, e existem apenas seis. Recalcule no nível do tanque, tirando primeiro a média
+de cada tanque e comparando os três tanques tratados com os três controles, e o
+intervalo se alarga até a borda inferior tocar o zero. A estimativa pontual quase não
+se moveu. A incerteza honesta em torno dela explodiu. Isso é pseudorreplicação, e é a
+fragilidade que tem dentes.
+
+**Ordene por ameaça.** A pseudorreplicação vem primeiro, porque pode dissolver a
+alegação de "efeito claro". A regra não divulgada sobre as larvas mortas vem em
+segundo, porque move o número. A diferença entre 0.43 calculado e 0.5 relatado vem em
+terceiro: real, mas a menor ameaça à existência de um efeito.
+
+## O laboratório no Colab
+
+O laboratório deste capítulo é o notebook **nb14 — Async module: replication and
+red-team of a peer's package**. Abra no Colab pelo selo acima. Lá você reproduz a frio
+o número principal de um experimento de campo real, só a partir dos arquivos, e depois
+faz as mesmas três auditorias que você acabou de ver: alinha cada alegação escrita com
+a saída que a sustenta, move o número com uma especificação não divulgada e alarga o
+intervalo ao respeitar o agrupamento que o texto ignorou.
+
+## Prompts de IA recomendados
+
+Comprometa-se primeiro com a sua própria resposta, depois delegue. Cada prompt é uma
+tarefa verificável, não um veredito que você terceiriza.
+
+**Localize todo insumo que está faltando.**
+
+```text
+Act as a cold reproducibility auditor. Here is everything a peer's package
+shipped: [paste the README, the data description, the code, and the headline
+claim]. List every input or step a stranger needs and might not find: the data
+file and its version, the exact run order, any random seed, any hard-coded path.
+Put it in a table with the item, whether the package supplies it, and the cell
+where I should check.
+```
+Depois de rodar, verifique: mapeie cada item para uma célula real e depois pergunte
+"qual é a coisa mais importante que você deixou de fora?". Combate a *ilusão de
+completude* (uma lista de lacunas bem-arrumada ainda pode omitir o único ponteiro que
+falta e que trava a execução inteira).
+
+**Percorra a célula do número principal e depois confirme por fora.**
+
+```text
+Here is the cell that computes the package's headline number: [paste the cell].
+Explain line by line what it computes, and name which printed value is the
+headline a reader should compare against the write-up. Then give me one
+independent way to confirm that value without rerunning this exact code.
+```
+Depois de rodar, verifique: confirme que o valor apontado bate com o número que a sua
+execução de fato imprimiu, e então faça você mesmo a checagem independente sugerida.
+Combate a *fabricação confiante* (uma explicação fluente pode descrever um número que
+o código nunca produziu).
+
+**Faça red team (revisão adversária) da suposição oculta.**
+
+```text
+This analysis treats every measured larva as an independent observation, though
+the probiotic was assigned by tank. Act as a hostile methods reviewer. Name the
+one assumption most likely to inflate the reported certainty, say what the honest
+experimental unit is, and do not reassure me the design is fine.
+```
+Depois de rodar, verifique: recalcule você mesmo o intervalo no nível do tanque e veja
+se ele alcança o zero. Combate o *método plausível mas errado* (supor observações
+independentes em dados agrupados encolhe silenciosamente todos os intervalos).
+
+::: {.callout-important title="Não delegue"}
+Uma ferramenta de IA não roda o código, então ela nunca consegue resolver se o número
+de fato se reproduziu. Só o seu próprio restart-and-run-all faz isso. Você também
+guarda três julgamentos: **qual fragilidade mais ameaça a alegação**, **como você
+ordena as recomendações** e **o veredito final** sobre o que o pacote sustenta e o que
+não sustenta. Uma ferramenta propõe suspeitos. Você decide quais deles a evidência
+condena.
+:::
+
+## Um caso de falha da IA
+
+Você cola o pacote inteiro em uma ferramenta de IA genérica e pergunta: "Este estudo se
+reproduz, e as limitações estão completas?". Ela responde com total confiança: sim, o
+código roda, e o parágrafo de limitações parece minucioso, cobrindo tamanho de amostra,
+ruído de mensuração e um pedido de pesquisa futura. Cada frase é fluente. A ferramenta
+não sinaliza nenhuma vez que as 240 larvas vieram de apenas seis tanques. Em silêncio,
+ela confundiu uma lista longa com uma lista completa.
+
+Você pega o erro ao se recusar a avaliar o parágrafo e avaliar o desenho de pesquisa no
+lugar. Você pergunta qual era de fato a unidade experimental e depois recalcula o
+intervalo no nível do tanque. Quando o limite inferior cai a zero, o "efeito claro" que
+a ferramenta endossou acaba se apoiando em uma certeza que os dados nunca conquistaram.
+Um sinal verde e um parágrafo polido não são um resultado reproduzido. Você verifica o
+número e a correspondência dele com a alegação, nunca a história confiante sobre eles.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA para checar a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, que faz a pesquisa.
+:::
+
+Verifique o resultado central deste capítulo, o intervalo honesto no nível do tanque,
+com **código alternativo** do
+[guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recalcule a mesma quantidade por outro caminho e compare. Reduza cada tanque a um único
+comprimento médio, o que dá seis números, e então tire a diferença entre as médias dos
+três tanques tratados e as dos três tanques de controle. Confirme que a estimativa
+pontual bate com o seu número no nível da larva e que a dispersão entre os seis tanques
+é bem maior do que a dispersão sugerida pelo cálculo ingênuo com 240 pontos. Reforce
+com um **cálculo direto**: tire a média de dois tanques na mão, a partir das linhas
+brutas, e confira se o seu código devolve as mesmas duas médias. Dois caminhos para uma
+resposta é um resultado verificado. Dois caminhos para duas respostas quer dizer que
+você mediu o pipeline, não os peixes.
+
+## Transferência para o projeto
+
+Este capítulo vira o seu **relatório de replicação e red team** sobre um pacote de
+colega designado a você. Monte o esqueleto a partir da sua própria execução: um
+registro de reprodução (o restart-and-run-all funcionou, qual número principal você
+obteve, ele bateu com o texto), um rastreamento de cada alegação até a saída que a
+sustenta, com toda divergência sinalizada, uma especificação alternativa e uma
+suposição oculta que você testou, e recomendações priorizadas pela ameaça que cada uma
+representa para a alegação. Publique no fórum da turma a fragilidade mais ameaçadora
+que você encontrou, junto com a única checagem que a resolveria. A auditoria que você
+faz aqui no trabalho de um colega é exatamente a auditoria que o seu próprio dossiê vai
+ter de sobreviver quando as aulas voltarem.
+
+## Defenda a sua decisão
+
+Em quatro frases, defenda o seu veredito sobre um pacote que você auditou. Diga o
+número principal que você reproduziu e se ele bateu com o texto. Aponte a única
+fragilidade que você classificou como a mais ameaçadora e o número ou a saída que a
+expôs. Dê o limite: a reprodução confirma que o número volta a ser gerado, não que a
+ciência está certa, e um red team aponta riscos que ele sozinho não resolve. Feche com
+a sua incerteza: a checagem que você não conseguiu terminar e a execução que ainda
+falta antes de você chamar o veredito de final.

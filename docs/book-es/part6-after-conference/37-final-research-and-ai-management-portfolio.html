@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="EDRAI — manual de investigación en la era de la IA para estudiantes de grado. Traducción del original en inglés; la edición en inglés es la fuente oficial. Obra en desarrollo.">
+
+<title>37&nbsp; Investigación final y portafolio de gestión de IA – Investigación Guiada por la Evidencia en la Era de la IA</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../srl.html" rel="next">
+<link href="../part6-after-conference/36-conflicting-agents-and-human-escalation.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part6-after-conference/32-replication-and-reproduction.html">Parte VI — La investigación después de la conferencia</a></li><li class="breadcrumb-item"><a href="../part6-after-conference/37-final-research-and-ai-management-portfolio.html"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Investigación final y portafolio de gestión de IA</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Investigación Guiada por la Evidencia en la Era de la IA</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte I — Investigar cuando la IA puede producirlo casi todo</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">La IA es tu brazo, no tu cerebro</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/02-the-student-as-research-director.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">El estudiante como director de investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Especificar, Delegar, Interrogar, Inspeccionar, Verificar, Documentar, Defender</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Responsabilidad en la investigación y autoría intelectual</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte II — De la curiosidad al diseño de investigación</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">De la curiosidad a un problema de investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Preguntas descriptivas, predictivas y causales</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/07-research-builds-on-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">La investigación se construye sobre la investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Encontrar y verificar la evidencia previa</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modelo, indagación, estrategia de datos y estrategia de respuesta</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Declarar y diagnosticar un diseño de investigación</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte III — Rutas de investigación</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/11-observational-descriptive-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Investigación observacional descriptiva</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/12-observational-causal-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Investigación observacional causal</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/13-experimental-descriptive-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Investigación experimental descriptiva</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/14-prediction-and-generalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Predicción y generalización</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/15-experimental-causal-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Investigación experimental causal</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/16-hybrid-and-complex-designs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Diseños híbridos y complejos</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte IV — Producir evidencia creíble con IA</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Procedencia y calidad de los datos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/18-measurement-and-operationalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Medición y operacionalización</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/19-ai-as-programmer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">La IA como programadora</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/20-ai-as-analytical-assistant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">La IA como asistente analítico</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Robustez y sensibilidad</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Diagnósticos y pruebas negativas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/23-ai-as-adversarial-reviewer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">La IA como revisora adversaria</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/24-recognizing-false-confidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Reconocer la falsa confianza</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte V — Comunicar y defender la investigación</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/25-from-results-to-claims.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">De los resultados a las afirmaciones</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/26-claim-evidence-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Tablas afirmación–evidencia</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/27-research-posters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Pósteres de investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/28-poster-criticism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Crítica del póster</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/29-research-pitches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Pitches de investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/30-difficult-questions-and-uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Preguntas difíciles e incertidumbre</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/31-ai-disclosure-and-research-integrity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Declaración de uso de IA e integridad de la investigación</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte VI — La investigación después de la conferencia</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/32-replication-and-reproduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Replicación y reproducción</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/33-from-poster-to-research-note.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Del póster a la nota de investigación</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/34-open-and-reusable-research-packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Paquetes de investigación abiertos y reutilizables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/35-managing-multiple-ai-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Gestionar varios agentes de IA</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/36-conflicting-agents-and-human-escalation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Agentes en conflicto y escalamiento humano</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/37-final-research-and-ai-management-portfolio.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Investigación final y portafolio de gestión de IA</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../srl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">El Student Research Lead</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#por-qué-importa-esta-decisión" id="toc-por-qué-importa-esta-decisión" class="nav-link active" data-scroll-target="#por-qué-importa-esta-decisión"><span class="header-section-number">37.1</span> Por qué importa esta decisión</a></li>
+  <li><a href="#el-concepto" id="toc-el-concepto" class="nav-link" data-scroll-target="#el-concepto"><span class="header-section-number">37.2</span> El concepto</a></li>
+  <li><a href="#un-ejemplo-trabajado" id="toc-un-ejemplo-trabajado" class="nav-link" data-scroll-target="#un-ejemplo-trabajado"><span class="header-section-number">37.3</span> Un ejemplo trabajado</a></li>
+  <li><a href="#el-laboratorio-en-colab" id="toc-el-laboratorio-en-colab" class="nav-link" data-scroll-target="#el-laboratorio-en-colab"><span class="header-section-number">37.4</span> El laboratorio en Colab</a></li>
+  <li><a href="#prompts-de-ia-recomendados" id="toc-prompts-de-ia-recomendados" class="nav-link" data-scroll-target="#prompts-de-ia-recomendados"><span class="header-section-number">37.5</span> Prompts de IA recomendados</a></li>
+  <li><a href="#un-caso-de-falla-de-la-ia" id="toc-un-caso-de-falla-de-la-ia" class="nav-link" data-scroll-target="#un-caso-de-falla-de-la-ia"><span class="header-section-number">37.6</span> Un caso de falla de la IA</a></li>
+  <li><a href="#laboratorio-de-verificación" id="toc-laboratorio-de-verificación" class="nav-link" data-scroll-target="#laboratorio-de-verificación"><span class="header-section-number">37.7</span> Laboratorio de verificación</a></li>
+  <li><a href="#transferencia-al-proyecto" id="toc-transferencia-al-proyecto" class="nav-link" data-scroll-target="#transferencia-al-proyecto"><span class="header-section-number">37.8</span> Transferencia al proyecto</a></li>
+  <li><a href="#defiende-tu-decisión" id="toc-defiende-tu-decisión" class="nav-link" data-scroll-target="#defiende-tu-decisión"><span class="header-section-number">37.9</span> Defiende tu decisión</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part6-after-conference/32-replication-and-reproduction.html">Parte VI — La investigación después de la conferencia</a></li><li class="breadcrumb-item"><a href="../part6-after-conference/37-final-research-and-ai-management-portfolio.html"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Investigación final y portafolio de gestión de IA</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Investigación final y portafolio de gestión de IA</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open the lab in Colab</figcaption>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p><strong>La decisión de investigación.</strong> Decides qué afirmaciones de un semestre de trabajo asistido por IA vas a respaldar en tu defensa pública, y armas el portafolio de gestión de IA que muestra cómo dirigiste a tu equipo de IA, qué mantuviste en tus propias manos y cómo se revisó cada afirmación que sobrevivió.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Lectura">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Lectura
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (<em>Research Design in the Social Sciences</em>) cap. 24, gratis en <a href="https://book.declaredesign.org" target="_blank">book.declaredesign.org</a>.</p>
+</div>
+</div>
+<section id="por-qué-importa-esta-decisión" class="level2" data-number="37.1">
+<h2 data-number="37.1" class="anchored" data-anchor-id="por-qué-importa-esta-decisión"><span class="header-section-number">37.1</span> Por qué importa esta decisión</h2>
+<blockquote class="blockquote">
+<p><em>“Para cuando te pares a defender, yo no cuento tus herramientas. Pregunto sobre qué afirmaciones estás dispuesta a equivocarte en público, y si puedes mostrarme que las revisaste tú.”</em> — una <strong>examinadora de defensa</strong>, el día en que se entrega el portafolio</p>
+</blockquote>
+<p>Llegas a este capítulo con un proyecto completo detrás y una sola cosa por hacer: reunirlo en algo que puedas defender en voz alta. Un semestre de trabajo asistido por IA deja un rastro de borradores, salidas de roles y revisiones a medio terminar. Dejado en un montón, nada de eso es defendible. La examinadora no leerá el montón. Preguntará de qué afirmaciones te haces responsable, dónde se detiene cada una y cómo lo sabes. Este capítulo es donde decides esas respuestas a propósito, antes de que la sala las decida por ti.</p>
+</section>
+<section id="el-concepto" class="level2" data-number="37.2">
+<h2 data-number="37.2" class="anchored" data-anchor-id="el-concepto"><span class="header-section-number">37.2</span> El concepto</h2>
+<p>Tu entrega final tiene dos mitades, y este capítulo construye las dos.</p>
+<p><strong>Un portafolio de investigación</strong> es el cuerpo reunido de tu trabajo terminado: tus afirmaciones, la evidencia detrás de ellas y la verificación que hace defendible a cada una. Ejemplo: para un proyecto de laboratorio guarda tu resultado titular, las mediciones detrás de él y la comprobación que corriste para confirmar que el número está bien.</p>
+<p>Junto a él va <strong>un portafolio de gestión de IA</strong>, el registro honesto de cómo dirigiste a tu equipo de IA todo el semestre: qué tareas delegaste, dónde retomaste la decisión y qué llamadas nunca le entregaste a una herramienta. Ejemplo: muestra que un rol revisor redactó tus limitaciones, que lo anulaste cuando suavizó una afirmación que no podías sostener, y que solo tú elegiste el límite de la afirmación.</p>
+<p>La decisión que cierra ambos es tu <strong>regla de parada</strong>, una declaración escrita de qué significa “terminado”, formulada alrededor de tu propia confianza verificada y no del acuerdo de las herramientas. Ejemplo: “me detengo cuando puedo defender cada afirmación sobreviviente ante un revisor hostil con una comprobación que corrí yo”. Una regla de parada de “cuando todos los roles coincidan” es una trampa, porque un equipo de herramientas parecidas entre sí puede coincidir ruidosamente y equivocarse junto.</p>
+<p>Esa trampa tiene un nombre del que te vas a cuidar: <strong>falso consenso</strong>, un acuerdo que existe solo porque las herramientas compartieron un punto ciego o porque hiciste una pregunta que inducía la respuesta. Ejemplo: les pides a tres revisores que “confirmen que mi capítulo está listo”, los tres obedecen, y el coro no te dice nada. La cura es <strong>una comprobación de independencia</strong>, un paso que hace que el acuerdo valga más que un conteo de cabezas: una comprobación que corres tú, fuera de las herramientas.</p>
+<p>Todo termina en <strong>la Defensa de la Evidencia</strong>, una defensa pública breve de tus afirmaciones en sus límites, seguida de preguntas para las que no puedes ensayar. Ejemplo: dices qué encontraste, nombras exactamente lo que no afirmas y respondes cada pregunta desde tu propio registro.</p>
+</section>
+<section id="un-ejemplo-trabajado" class="level2" data-number="37.3">
+<h2 data-number="37.3" class="anchored" data-anchor-id="un-ejemplo-trabajado"><span class="header-section-number">37.3</span> Un ejemplo trabajado</h2>
+<p>Imagina un proyecto de honores en química analítica. Mediste cuánto ácido acético contiene una botella de vinagre usando <strong>titulación</strong>, un método de laboratorio en el que agregas gota a gota una solución de concentración conocida hasta que una reacción apenas termina, lo que revela la cantidad desconocida. Tres corridas dieron un promedio de 4.9% de ácido acético en masa. Ahora eliges la afirmación que vas a defender.</p>
+<p>Corres tres roles revisores de IA sobre el borrador de tu capítulo. Un rol revisor elogia tu oración titular, “El vinagre contiene 4.9% de ácido acético”. Un rol diagnosticador señala esa misma oración por ir más allá de tu evidencia: mediste una botella tres veces, no el vinagre en general. Ese desacuerdo es un regalo, porque apunta directo a la decisión sobre el límite. Retomas la pluma y reescribes la afirmación hasta lo que tus datos sostienen: “Esta botella, medida tres veces, promedió 4.9% de ácido acético, con corridas que van de 4.7% a 5.1%”. La oración más estrecha es la que vas a defender.</p>
+<p>Luego corres una comprobación de independencia que las herramientas no pueden fingir. La propia etiqueta de la botella declara 5% de acidez, así que comparas a mano tu 4.9% contra ese valor. Los dos números quedan cerca, y eso es una tranquilidad real porque la etiqueta nunca fue parte de tu flujo de trabajo con IA. Tu regla de parada ya está satisfecha, así que te detienes. Al portafolio de gestión de IA entran cuatro cosas: los roles que corriste, el conflicto entre revisor y diagnosticador junto con tu anulación, esta regla de parada, y la comparación con la etiqueta que hizo que el acuerdo de tus revisores valiera más que un conteo de cabezas.</p>
+</section>
+<section id="el-laboratorio-en-colab" class="level2" data-number="37.4">
+<h2 data-number="37.4" class="anchored" data-anchor-id="el-laboratorio-en-colab"><span class="header-section-number">37.4</span> El laboratorio en Colab</h2>
+<p>El laboratorio de este capítulo es el cuaderno <strong>nb16 — Gestionar varios agentes de IA + la defensa final</strong>. Ábrelo en Colab con la insignia de arriba y trabaja las celdas junto a este capítulo. Allí conectas un equipo trabajador-crítico, corres una simulación con semilla que muestra que cuatro revisores parecidos entre sí pasan por alto una falla real mucho más seguido que cuatro independientes, y luego redactas las cuatro partes de tu propio portafolio y preparas tu Defensa de la Evidencia.</p>
+</section>
+<section id="prompts-de-ia-recomendados" class="level2" data-number="37.5">
+<h2 data-number="37.5" class="anchored" data-anchor-id="prompts-de-ia-recomendados"><span class="header-section-number">37.5</span> Prompts de IA recomendados</h2>
+<p>Comprométete primero con tu propia respuesta y luego delega. Cada prompt le entrega a la herramienta alcance, no la decisión.</p>
+<p><strong>Localiza el punto de referencia real.</strong></p>
+<pre><code>Act as a research assistant in analytical chemistry. I measured the acetic acid
+content of one vinegar sample. I want a published or label-stated reference value to
+compare against. Give the value, the exact source it comes from, and a link. Only
+state a figure you are confident is real; if you are unsure, say so and tell me where
+to look.</code></pre>
+<p>Después de ejecutarlo, verifica: abre la fuente o lee la etiqueta tú antes de confiar en el número (lectura de la fuente primaria). Contrarresta la <strong>fabricación confiada</strong>, un valor de referencia citado con una fuente inventada.</p>
+<p><strong>Lista cada afirmación para verificarla.</strong></p>
+<pre><code>Here is my draft chapter: [paste]. List every empirical claim in it as a table: the
+claim, the number or measurement it rests on, and whether that claim stays inside my
+single sample or reaches past it. Do not add any new claims.</code></pre>
+<p>Después de ejecutarlo, verifica: contrasta la tabla con tu propia lista de lo que mediste, y confirma que nada va más allá de tus datos sin estar marcado. Contrarresta la <strong>ilusión de completitud</strong>, una lista ordenada que omite la única afirmación que en silencio se excede.</p>
+<p><strong>Hazle red team a la defensa.</strong></p>
+<pre><code>Act as a hostile but fair cross-examiner at a research defense. Here is my headline
+claim, its boundary, and my two weakest verification steps: [paste]. Ask me the five
+hardest questions you can, each tied to a specific claim or check. Do not soften them,
+and do not answer them for me.</code></pre>
+<p>Después de ejecutarlo, verifica: si toda pregunta es suave o tu afirmación queda calificada como “bien respaldada”, insiste y exige el eslabón más débil. Contrarresta el <strong>acuerdo adulador</strong>, un compañero que ensaya tu ego en vez de tu defensa.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="No delegues">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>No delegues
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las herramientas pueden redactar, revisar y sacar a la luz preguntas difíciles. Nunca pueden decidir qué afirmaciones firmas, dónde debe detenerse una afirmación como “4.9% de ácido acético”, si tus revisores fueron alguna vez independientes, cuál es tu regla de parada, ni una sola palabra de la defensa pública. Cuando roles que coinciden bendicen una afirmación, decidir si ese acuerdo es real o solo correlacionado es cosa tuya. También lo es la respuesta que das cuando la sala pregunta cómo lo sabes.</p>
+</div>
+</div>
+</section>
+<section id="un-caso-de-falla-de-la-ia" class="level2" data-number="37.6">
+<h2 data-number="37.6" class="anchored" data-anchor-id="un-caso-de-falla-de-la-ia"><span class="header-section-number">37.6</span> Un caso de falla de la IA</h2>
+<p>Le mandas tu capítulo terminado a tres roles revisores y le pides a cada uno que “confirme que está listo para entregar”. Los tres devuelven el mismo veredicto: “Se ve sólido, sin problemas mayores”. Se siente como tres confirmaciones. Es una. Los tres roles corren sobre el mismo modelo base, les diste el mismo prompt que inducía la respuesta, y comparten un punto ciego: ninguno señala que tu número titular no lleva incertidumbre, ningún rango entre tus corridas de titulación. Eso es falso consenso, y confiar en él mandaría un resultado excedido a tu defensa.</p>
+<p>Lo atrapas con un replanteamiento y una comprobación que las herramientas no pueden ver. Primero dejas caer la petición que inducía la respuesta y corres una neutral: “Lista las tres afirmaciones más débiles de este capítulo y por qué”. Ahora un rol nombra el rango faltante. Luego dejas las herramientas por completo y recalculas tú la dispersión de tus corridas, lo que te entrega el límite de 4.7% a 5.1% que todos los revisores se saltaron. La lección es directa: un acuerdo vale solo lo que vale la independencia detrás de él. Cuenta las comprobaciones que corriste tú, nunca los roles que asintieron.</p>
+</section>
+<section id="laboratorio-de-verificación" class="level2" data-number="37.7">
+<h2 data-number="37.7" class="anchored" data-anchor-id="laboratorio-de-verificación"><span class="header-section-number">37.7</span> Laboratorio de verificación</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="La IA puede revisar a la IA — pero la última decisión es humana">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>La IA puede revisar a la IA — pero la última decisión es humana
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.</p>
+</div>
+</div>
+<p>Verifica el resultado clave de este capítulo, que una afirmación de tu portafolio es una que puedes defender, con un <strong>resultado de referencia</strong>, el método de comparar tu salida contra un valor de referencia conocido y confiable (ver <code>ai_resources/verification_guide.md</code>). Pon tu 4.9% medido frente al 5% de acidez que declara la etiqueta y confirma que coinciden dentro de la dispersión entre tus corridas. Como la etiqueta nunca fue parte de tu flujo de trabajo con IA, esta es una comprobación de independencia genuina, no una herramienta calificando a otra. Acompáñala con <strong>razonamiento con pares</strong>: pasea el límite de tu afirmación frente a un compañero y mira si tu razón para detenerte en “esta botella” sobrevive a su primera pregunta. Dos comprobaciones independientes le ganan a una, y cada una deja una línea en tu <strong>AI Research Ledger</strong>.</p>
+</section>
+<section id="transferencia-al-proyecto" class="level2" data-number="37.8">
+<h2 data-number="37.8" class="anchored" data-anchor-id="transferencia-al-proyecto"><span class="header-section-number">37.8</span> Transferencia al proyecto</h2>
+<p>Este último capítulo entrega el hito final del proyecto: tu capítulo final de investigación, tu portafolio de gestión de IA y la Defensa de la Evidencia que haces esta semana. Lleva cuatro partes armadas y una defensa preparada. Las cuatro partes son la descomposición de roles de IA que corriste sobre tu capítulo, un conflicto y anulación real con su comprobación no hecha por IA, tu regla de parada y tu lista de lo que nunca automatizas, y una comprobación de independencia que hizo que un acuerdo valiera más que un conteo de cabezas. La defensa son tres movimientos en orden: tu afirmación y su límite, tu decisión central y el camino que no tomaste, y la verificación con la que encabezas. Redacta cada pieza tú. Una herramienta puede criticarla después, pero el capítulo y la defensa que entregas tienen que estar razonados y respaldados por ti.</p>
+</section>
+<section id="defiende-tu-decisión" class="level2" data-number="37.9">
+<h2 data-number="37.9" class="anchored" data-anchor-id="defiende-tu-decisión"><span class="header-section-number">37.9</span> Defiende tu decisión</h2>
+<p>En cinco o seis oraciones, cierra el curso. Enuncia una afirmación de tu propio proyecto que vas a firmar en la sala. Da su límite: nombra lo que tu evidencia no establece, y si la afirmación descansa en una sola muestra, dilo. Nombra una cosa que sigue incierta y por qué. Luego muestra tu portafolio de gestión de IA haciendo su trabajo en una línea honesta: el lugar donde tus roles coincidieron, la comprobación independiente que hizo real ese acuerdo, y la única decisión que te negaste a entregarle a cualquier herramienta. Esa última línea es lo que la examinadora está esperando escuchar.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../part6-after-conference/36-conflicting-agents-and-human-escalation.html" class="pagination-link" aria-label="Agentes en conflicto y escalamiento humano">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Agentes en conflicto y escalamiento humano</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../srl.html" class="pagination-link" aria-label="El Student Research Lead">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">El Student Research Lead</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

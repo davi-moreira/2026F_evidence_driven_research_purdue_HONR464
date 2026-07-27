@@ -1,0 +1,211 @@
+---
+title: "Gestionar varios agentes de IA"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+
+> **La decisión de investigación.** Antes de soltar varios roles de IA sobre una
+> pieza de tu investigación, decides cómo partir el trabajo en tareas acotadas y cómo
+> conectarlas en un orden en el que ningún error temprano pueda colarse. Tú eres
+> responsable de la partición y del orden, y te quedas con un paso de la cadena que
+> ningún rol tiene permitido dar.
+
+::: {.callout-note title="Lectura"}
+Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*) cap. 24, gratis en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por qué importa esta decisión
+
+> *"Tráeme un capítulo, no un montón de salidas de IA. Quiero saber qué parte tocó
+> cada herramienta, qué le dijiste que hiciera y cómo la revisaste. Si no puedes
+> decirme eso, no escribiste el capítulo."*
+> — tu **directora de tesis**, leyendo el borrador que defenderás esta semana
+
+A estas alturas un solo asistente de IA puede redactar, citar, criticar y pulir de un
+tirón. La tentación es abrir cuatro a la vez y sentirte cuatro veces más protegido.
+No lo estás. Cuatro roles que leen el mismo borrador con las mismas instrucciones
+tienden a pasar por alto lo mismo y a coincidir ruidosamente en ello. A la directora
+de arriba no le interesa un coro más fuerte. Quiere ver que partiste el trabajo en
+piezas, que pusiste esas piezas en un orden sensato y que seguiste siendo la única
+persona que decidió qué afirma el capítulo. Este capítulo te da esa habilidad de
+gestión.
+
+## El concepto
+
+El movimiento que convierte una multitud de roles de IA en un flujo de trabajo que
+puedes defender es la **descomposición de tareas**: partir un trabajo grande en
+subtareas más pequeñas, cada una con un único responsable claro. Ejemplo: en vez de
+pedirle a una herramienta que "mejore mi capítulo", partes el trabajo en revisar el
+diseño de investigación, revisar las citas y apretar la prosa. Cada pieza ahora tiene
+un aprobado o reprobado que puedes juzgar.
+
+Cada pieza se vuelve un **rol acotado**: una tarea de IA lo bastante estrecha como
+para enunciarla en una oración y revisarla en una pasada. Ejemplo: "señala cada
+oración de mi sección de resultados que afirme más de lo que mi muestra puede
+sostener". Un rol acotado tiene una línea de meta clara. "Hazlo mejor" no la tiene.
+
+La columna vertebral que mantiene honestos a los roles es el **par
+trabajador-crítico**: un rol produce algo y un segundo rol, aparte, ataca lo que el
+primero produjo. Ejemplo: un trabajador redacta tu párrafo de limitaciones y luego un
+crítico caza la limitación que el trabajador dejó fuera. Un trabajador solo confía en
+su propia calidad, que es justamente el punto ciego que no puede ver desde adentro.
+
+Conectar los roles significa decidir qué espera a qué. Una **dependencia** es un orden
+obligatorio entre dos subtareas, donde una necesita la salida de la otra antes de
+poder empezar. Ejemplo: un crítico no puede atacar un borrador que el trabajador
+todavía no ha escrito. Los roles sin dependencia entre ellos corren al mismo tiempo.
+Los roles unidos por una corren en orden.
+
+La cadena de dependencias que no puedes acortar es la **ruta crítica**: la secuencia
+más larga de pasos obligatorios en tu flujo de trabajo. Ejemplo: el trabajador
+redacta, luego el crítico ataca, luego tú integras son tres pasos que no pueden
+colapsar en menos. Esa cadena fija el número mínimo de rondas que toma tu flujo de
+trabajo. Leer la ruta crítica de tu propio diseño, en vez de adivinarla, es la
+habilidad que este capítulo entrena.
+
+## Un ejemplo trabajado
+
+Estás terminando un capítulo sobre un estudio pequeño de salud: si una caminata de
+diez minutos después del almuerzo se asocia con una frecuencia cardíaca en reposo más
+baja por la tarde entre quienes viven en tu piso de la residencia. Tienes un borrador
+y cuatro roles de IA esperando.
+
+**Parte.** Divides la revisión en roles acotados. Un **revisor de claridad** revisa si
+cada oración se lee con sencillez. Un **metodólogo** revisa si "se asocia con" es la
+palabra honesta para lo que tus datos pueden mostrar. Un **verificador de citas**
+confirma que los dos estudios de frecuencia cardíaca que citas son reales y dicen lo
+que afirmas. Una **editora** aprieta la prosa. Cada rol es dueño de un trabajo de una
+sola oración.
+
+**Conecta.** El trabajador redacta tu párrafo de limitaciones. Los tres críticos
+pueden leer ese borrador en el mismo momento, porque ninguno necesita la salida de
+otro. Eso son tres roles corriendo en paralelo. Luego tú integras sus notas, y la
+editora aprieta lo que sobrevivió. Sigue las flechas: del trabajador a un crítico es
+una, del crítico a ti son dos, de ti a la editora son tres. Tu ruta crítica tiene
+tres flechas de profundidad, y en su punto más ancho corre tres críticos.
+
+**Deja un paso humano.** El paso de integrar es tuyo. Cuando el metodólogo dice que tu
+resultado de caminata y frecuencia cardíaca es solo una asociación y al revisor de
+claridad le encantó la oración que lo llamaba efecto, ningún rol zanja ese choque. Tú
+sí. La decisión sobre qué afirma el capítulo nunca entra al flujo de trabajo como
+tarea delegada.
+
+Las herramientas redactaron, señalaron y pulieron. Tú partiste el trabajo, fijaste el
+orden y te hiciste responsable de la afirmación que lleva tu nombre.
+
+## El laboratorio en Colab
+
+El laboratorio de este capítulo es el cuaderno **nb16 — Gestionar varios agentes de
+IA + la defensa final**. Ábrelo en Colab con la insignia de arriba y trabaja las
+celdas junto a este capítulo. Allí construyes el flujo trabajador-crítico como un
+grafo dirigido, lees su profundidad de ruta crítica y su ancho en paralelo
+directamente del código, y ves cómo la ruta crece una ronda en el momento en que
+haces que un crítico espere a otro crítico. Luego descompones tu propio capítulo en
+roles acotados y defiendes el cableado que elegiste.
+
+## Prompts de IA recomendados
+
+Comprométete primero con tu propia respuesta y luego delega. Cada prompt es una tarea
+verificable, no una petición de veredicto.
+
+**Descompón y devuelve el paso humano.**
+
+```text
+I am splitting the review of my health chapter into scoped AI roles. Here are my
+section headings and one line on each: [paste them]. Propose a table with one row
+per role: the role's one-sentence scoped task, the draft or input it needs, whether
+it can run in parallel or must wait on another role, and the single decision it must
+hand back to me.
+```
+Después de ejecutarlo, verifica: revisa que cada casilla de "devolver a mí" nombre una
+decisión real que nunca se delega, y no una inventada para parecer prudente.
+Contrarresta la *ilusión de completitud* (una tabla de roles ordenada que se lee
+exhaustiva mientras omite la revisión que importa).
+
+**Confirma que el cableado no deja pasar un error temprano.**
+
+```text
+Here is my proposed workflow as a list of "role A feeds role B" arrows: [paste them].
+For each role, tell me exactly what input it depends on, and name any role I have
+scheduled to start before the input it needs actually exists.
+```
+Después de ejecutarlo, verifica: dibuja tú mismo las flechas y rastrea si la entrada
+de cada rol existe cuando ese rol empieza. Contrarresta el *método plausible pero
+equivocado* (un cableado confiado que deja correr a un rol antes de que su entrada
+esté lista).
+
+**Hazle red team a la descomposición.**
+
+```text
+Act as a hostile reviewer of my AI workflow, not of my chapter. Name every place an
+early mistake in one role could flow downstream unchecked, and every role whose job
+overlaps another so much that it adds no independent check. Do not rewrite my plan.
+```
+Después de ejecutarlo, verifica: si solo elogia tu plan, insiste y exige la peor falla
+de cableado. Contrarresta el *acuerdo adulador* (elogios que revisan tu ego, no tu
+flujo de trabajo).
+
+::: {.callout-important title="No delegues"}
+La partición y el orden pueden apoyarse en una herramienta, pero tres decisiones
+siguen siendo solo tuyas. Tú decides **qué trabajos merecen un rol aparte** y cuáles
+solo multiplican una producción que no puedes supervisar. Tú decides **el orden**,
+para que ningún rol zanje una pregunta que un rol aguas arriba debió responder
+primero. Y mantienes **el paso de integrar** en manos humanas: cuando dos roles no
+coinciden sobre qué afirma tu capítulo, esa decisión la tomas tú con tus propias
+palabras. Un flujo de trabajo que le entrega la afirmación a una herramienta no es un
+flujo de trabajo que puedas defender.
+:::
+
+## Un caso de falla de la IA
+
+Le pides a una herramienta que diseñe tu flujo de trabajo con varios agentes, y te
+devuelve un plan confiado y bien formateado: corre el trabajador, el metodólogo, el
+escéptico y la editora todos en paralelo para "ahorrar rondas". El plan corre en tu
+cabeza sin tropiezos. Aquí está la trampa. La editora y el escéptico no tienen nada
+que leer todavía, porque el trabajador no ha redactado nada. La herramienta programó
+tres roles para empezar antes de que existiera la entrada de la que dependen, y lo
+vistió de eficiencia.
+
+Lo atrapas dibujando las flechas y haciendo una pregunta en cada rol: ¿existe la
+entrada de este rol en el momento en que empieza? La entrada de la editora es el
+borrador integrado, que no existe hasta el final, así que "la editora en paralelo con
+el trabajador" es imposible. Redibujado con honestidad, el plan es una ruta crítica
+de tres flechas de profundidad, no de una. Un plan verde y ordenado no es un plan
+válido. Revisas las dependencias, no la seguridad con que se presentan.
+
+## Laboratorio de verificación
+
+::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
+Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.
+:::
+
+Verifica el número clave de este capítulo, la profundidad de la ruta crítica, con
+**código alternativo** de la [guía de
+verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+recalcula la misma cantidad de otra forma y compara. El cuaderno calcula la
+profundidad con una función de grafos. Tú lo confirmas a mano: escribe cada rol,
+dibuja cada flecha de "alimenta a" y rastrea la cadena ininterrumpida más larga de
+principio a fin, contando mientras avanzas. Si tu conteo a mano coincide con el
+código, la profundidad está verificada. Si no coincide, el cableado que dibujaste y
+el cableado que construyó el código son dos flujos de trabajo distintos, y ese
+desacuerdo es el hallazgo que vale la pena perseguir.
+
+## Transferencia al proyecto
+
+Este capítulo construye la primera pieza de tu **capítulo final de investigación y
+portafolio de gestión de IA**, el último hito del proyecto. Toma una sección real de
+tu propio proyecto, tus métodos, tus resultados o tus limitaciones, y escribe su
+descomposición: los roles acotados que vas a correr, cuáles corren en paralelo y
+cuáles deben esperar, y el único nodo que mantienes humano. Lleva esa descomposición
+al estudio del viernes como el movimiento de apertura de tu portafolio. Es la
+evidencia de que dirigiste al equipo de IA en vez de dejar que el equipo te dirigiera
+a ti.
+
+## Defiende tu decisión
+
+En cuatro oraciones, defiende el flujo de trabajo que diseñaste para una sección de tu
+capítulo. Nombra los roles acotados que elegiste y el orden en que los conectaste.
+Enuncia el único error temprano que tu orden impide que fluya aguas abajo, y nombra el
+paso que mantuviste humano y por qué ningún rol puede darlo. Cierra con el límite: un
+lugar donde tu cableado todavía podría dejar pasar un error compartido, y la revisión
+independiente que correrías antes de confiar en el acuerdo de los roles.

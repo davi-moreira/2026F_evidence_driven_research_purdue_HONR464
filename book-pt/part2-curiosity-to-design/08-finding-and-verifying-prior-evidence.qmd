@@ -1,0 +1,203 @@
+---
+title: "Encontrar e Verificar Evidência Prévia"
+---
+
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+
+> **A decisão de pesquisa.** Quais fontes contam como *evidência verificada* sobre
+> a qual você pode construir, e se a lacuna que você quer reivindicar está
+> genuinamente aberta ou é apenas uma busca que você interrompeu cedo demais.
+
+::: {.callout-note title="Leitura"}
+Este capítulo é a leitura obrigatória do seu tópico no curso; o laboratório em Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*) cap. 4, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
+## Por que essa decisão importa
+
+Imagine uma orientadora de tese devolvendo o seu primeiro rascunho por cima da
+mesa. "Me mostre a conversa da qual o seu trabalho participa", ela diz, "não uma
+pilha de resumos. Quais estudos concordam, quais brigam, e onde exatamente está o
+buraco que você diz estar preenchendo?" Essa pergunta decide se o seu projeto tem
+onde se apoiar. Erre de uma de duas maneiras e o projeto inteiro pende. Cite uma
+fonte que não existe, ou que não diz o que você afirma, e todo resultado apoiado
+nela fica comprometido. Anuncie uma lacuna que um artigo já preencheu, e você
+prometeu uma contribuição que não pode entregar. Este capítulo prepara você para
+tomar as duas decisões e defendê-las.
+
+## O conceito
+
+Uma área do conhecimento é uma **conversa cumulativa**: uma discussão em
+andamento em que cada estudo responde, estende ou desafia os que vieram antes.
+Por exemplo, um laboratório relata que um tratamento do solo aumenta a
+produtividade de uma lavoura, e o laboratório seguinte testa se o efeito se
+mantém em outro clima. O seu trabalho não é inventar uma ilha. É encontrar a
+conversa à qual a sua pergunta pertence e acrescentar a ela uma frase honesta.
+
+Toda fonte que você mantém passa por um mesmo hábito. O **ciclo de recuperação e
+verificação** tem quatro passos: pedir a qualquer ferramenta que levante pistas,
+recuperar você mesmo a fonte de verdade, verificar que ela existe e diz o que foi
+afirmado, e documentar onde você a encontrou. Uma **pista** é uma fonte candidata
+que você ainda não confirmou, como uma citação que uma IA entrega a você. Uma
+pista continua sendo pista até que a recuperação e a verificação a promovam a
+fonte.
+
+O ciclo existe para pegar duas falhas com nome. Uma **alucinação de citação** é
+uma IA inventando uma fonte que não existe, vestida com um par de autores que soa
+real, um ano recente e uma revista plausível. Uma **fonte descaracterizada** é um
+artigo real citado para uma alegação que ele nunca faz, como um estudo que relata
+uma correlação sendo citado como prova de uma causa. Uma fonte pode ser real e
+ainda assim estar descaracterizada, então "ela existe?" e "ela diz isso?" são
+duas checagens separadas.
+
+Assim que você tem uma fonte verificada, faz as outras crescerem por **bola de
+neve**: percorrendo os links dela em duas direções. Uma **busca de citações para
+trás** lê a própria lista de referências da fonte para encontrar o trabalho mais
+antigo em que ela se apoiou. Uma **busca de citações para frente** encontra os
+trabalhos mais novos que a citam, por uma trilha de "Citado por". Duas fontes
+sólidas, percorridas nos dois sentidos, viram dez.
+
+É assim também que você conquista o direito à palavra lacuna. Uma **lacuna
+genuína** é uma pergunta que as suas fontes verificadas de fato deixam sem
+resposta, confirmada por checagem. Uma **busca inacabada** é uma pergunta que
+você simplesmente parou de perseguir. Da sua mesa, as duas parecem idênticas, e
+só uma é uma contribuição real. O teste é a recuperação: você só conquistou a
+palavra lacuna depois que fontes reais, seguidas para frente e para trás,
+continuam em silêncio sobre a sua pergunta.
+
+## Um exemplo trabalhado
+
+Você é estudante de agronomia no programa de honras e pergunta se adicionar
+**biochar** (carvão feito de resíduos agrícolas e misturado ao solo) aumenta a
+produtividade do milho em campos arenosos. Você pede evidências a uma ferramenta
+de IA. Ela devolve uma citação confiante: um par de autores com nome, uma data de
+2021, uma revista de ciência do solo que soa real e um achado bem arrumado de que
+o biochar elevou a produtividade em 18 por cento. Perfeito. Aí você vai lê-la, e
+ela não está em lugar nenhum. Nem no portal da biblioteca, nem no Google Scholar,
+nem no site da editora.
+
+Eis a decisão sobre a mesa. O estudo que não aparece é prova de que "ninguém
+testou biochar em solo arenoso, logo a minha lacuna é real"? Não. Três coisas
+podem ser verdade. A IA **fabricou** o estudo inteiro, e não há nada a encontrar.
+Ela **embaralhou** uma fonte real, ideia certa mas autoria ou ano errados, então
+você busca pela própria alegação e pelos prováveis autores reais. Ou o artigo é
+real, mas está **atrás de um paywall ou é obscuro**, alcançável pela biblioteca ou
+por um e-mail à autoria. O seu próximo passo é o mesmo nos três casos: a pista
+fica fora da sua coluna de verificadas até que a recuperação dê certo.
+
+Então você faz o trabalho. Você recupera quatro estudos reais de ciência do solo
+pela base de dados da biblioteca, lê cada um e faz bola de neve. Para trás, a
+partir de um experimento de campo de 2019, você encontra o estudo mais antigo em
+casa de vegetação em que ele se apoiou. Para frente, pelo "Citado por", você
+encontra dois experimentos mais novos que testaram a mesma ideia em solo franco e
+em argila. Agora você enxerga a conversa: o biochar ajuda a produtividade em
+alguns solos, o tamanho do efeito varia, e nenhum dos quatro que você recuperou
+fez o experimento no solo arenoso que o seu município cultiva. *Esse* ponto
+silencioso, cercado por fontes que você mesmo abriu, é uma lacuna que você pode
+defender.
+
+## O laboratório em Colab
+
+O laboratório deste capítulo é o notebook **nb03 — Research builds on research:
+verified evidence + real gaps** (a pesquisa se constrói sobre a pesquisa:
+evidência verificada + lacunas reais). Abra-o no Colab pelo selo acima e trabalhe
+as células junto com este capítulo. No laboratório você roda o ciclo de
+recuperação e verificação na sua própria alegação e vê uma simulação encolher uma
+pilha arrumadinha de quinze citações de IA até o punhado que sobrevive à
+recuperação, e depois constrói um mapa de evidências cujo único quadrado vazio é
+a sua lacuna.
+
+## Prompts de IA recomendados
+
+Comprometa-se com a sua própria resposta primeiro, depois delegue. Cada bloco
+abaixo é algo que você digitaria de verdade.
+
+```text
+My research question is: [paste it]. The claim I need sources for is:
+[paste the claim]. List the five published studies most relevant to this
+claim, each with authors, year, exact title, and venue, so I can retrieve
+and verify each one myself.
+```
+*Depois de rodar, verifique:* busque cada título exato entre aspas antes de
+acreditar que ele existe. Isso combate a **fabricação confiante** (uma citação com
+cara de verdadeira para um artigo que nunca foi escrito).
+
+```text
+Here are the five sources I retrieved and read: [paste them]. For each, state
+the single claim its evidence actually supports, and flag any where my
+one-line summary reaches further than the study does.
+```
+*Depois de rodar, verifique:* leia cada alegação sinalizada contra a própria seção
+de resultados do artigo. Isso combate a **fonte descaracterizada** e a **mudança
+silenciosa de escopo** (uma correlação relatada em silêncio como causa).
+
+```text
+Here is my research question and the gap I placed: [paste them]. Argue the gap
+is NOT real: name up to three published studies that may already fill it, with
+authors, year, title, and venue. Do not reassure me.
+```
+*Depois de rodar, verifique:* recupere cada estudo que ela nomear; uma fonte que
+você não consegue abrir não fecha nada. Isso combate a **concordância bajuladora**
+(uma parceira que elogia a sua lacuna bajulou você, não testou você).
+
+::: {.callout-important title="Não delegue"}
+Duas decisões são só suas, porque é o seu nome que vai no mapa. Primeira, **se uma
+fonte conta como verificada**: você a recuperou, abriu e leu a alegação você
+mesmo, então nenhum resumo de IA substitui o artigo. Segunda, **se a sua lacuna é
+genuína**: você percorreu um link para trás e um para frente a partir de cada
+fonte verificada e a pergunta continua sem resposta. Uma IA pode apontar; só você
+pode dar fé.
+:::
+
+## Um caso de falha da IA
+
+A falha esperada aqui é a fabricação confiante. Peça a uma ferramenta de uso geral
+"o estudo mais citado sobre biochar e produtividade do milho em solo arenoso" e
+ela muitas vezes vai produzir um, completo com uma sequência em formato de DOI e
+um nome real de revista, porque produzir uma citação fluente é exatamente aquilo
+para o que ela foi construída. O detalhe não é prova de existência. Você pega o
+erro no momento em que tenta recuperar a fonte: cole o título exato entre aspas na
+base de dados da biblioteca e no Google Scholar. Se nada aparece em nenhum lugar
+onde deveria estar, a citação é fabricada até prova em contrário, e ela nunca
+entra no seu registro. A fluência era a armadilha; o resultado de busca vazio é a
+pista.
+
+## Laboratório de verificação
+
+::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
+Um segundo modelo pode auditar o primeiro: peça a uma IA que cheque a alegação, o código ou a citação de outra, e ela encontrará erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado é sempre sua, de quem faz a pesquisa.
+:::
+
+O resultado-chave do capítulo é a sua lista de fontes verificadas, e o método que
+a confirma é a **leitura da fonte primária**, do [guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
+para qualquer citação, encontre a fonte de verdade e leia a linha pertinente.
+Recorra a esse método sempre que uma saída citar um estudo, uma estatística ou um
+fato da literatura. Concretamente, para cada fonte que você pretende manter, abra
+o próprio artigo, confirme que autoria, ano e veículo batem, e confirme que a
+frase que você atribui a ele é uma frase que ele de fato contém. Uma fonte que
+sobrevive a essa leitura está verificada; a que não pode ser aberta, ou que não
+diz o que você afirmou, é cortada. Para a lacuna em si, acrescente um segundo
+método independente: o **raciocínio com pares**, levando um colega a percorrer por
+que o mapa fica silencioso onde você posicionou a sua lacuna e deixando que a
+única pergunta dele exponha o que a sua recuperação ainda deve.
+
+## Transferência para o projeto
+
+Este capítulo é o motor do seu marco **mapa de evidências verificadas e
+contribuição**, apresentado como exposição em galeria no estúdio de sexta-feira.
+Esse marco pede um registro de pelo menos seis fontes que você mesmo recuperou, um
+mapa de evidências com as suas contradições desenhadas em vez de escondidas, a sua
+lacuna posicionada onde o mapa está comprovadamente aberto, e uma linha de
+contribuição delimitada na forma "com base nas fontes que recuperei e verifiquei,
+___ não foi estabelecido para ___". O ciclo de recuperação e verificação que você
+pratica aqui é exatamente o que preenche esse registro, e o mapa verificado vira o
+chão sobre o qual a sua carta de pesquisa se apoia.
+
+## Defenda a sua decisão
+
+Em um parágrafo curto, enuncie a decisão que este capítulo prepara e defenda-a
+para o seu próprio projeto. Nomeie uma fonte que você verificou e a alegação exata
+que ela faz. Enuncie a sua lacuna provisória em uma frase delimitada. Depois dê a
+**fronteira e a incerteza** dela: em qual posição da bússola ela está (descrição
+ou generalização), quantas fontes você de fato recuperou até agora, e se a sua
+lacuna está confirmada pela recuperação ou ainda é uma busca inacabada que você
+precisa continuar perseguindo antes de sexta-feira.
