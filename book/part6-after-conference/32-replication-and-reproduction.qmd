@@ -4,11 +4,15 @@ title: "Replication and Reproduction"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb){target="_blank"}
 
-> **The research decision.** You decide whether a peer's reported result actually
-> reproduces from the files they shipped, and then you rank the weaknesses you find
-> by how much each one threatens the headline claim, not by how easy each is to fix.
+> **The research decision.** Handed nothing but the files a study shipped, yours or
+> someone else's, you decide whether the reported number actually comes back out. Then
+> you rank the weaknesses you found by how much each one threatens the headline claim,
+> not by how easy each one is to fix.
 
 ## Why this decision matters
+
+**The decision on the table: whether a result regenerates from the files alone, and
+which of its weaknesses most endangers the claim.**
 
 > *"I do not care that your figure is pretty or that the code ran on your laptop.
 > Hand me your files and let me get the same number back out. If I cannot, you do
@@ -25,8 +29,8 @@ finds them in your own work.
 ## The concept
 
 Two words sound alike and mean different things. **Reproduction** is getting the
-same number from the *same* data and code a study shipped. Example: you open a
-classmate's notebook, run it top to bottom, and check that the same growth figure
+same number from the *same* data and code a study shipped. Example: you open another
+researcher's notebook, run it top to bottom, and check that the same growth figure
 comes back. **Replication** is getting a similar result from a *new* study or new
 data. Example: a second lab runs its own experiment and sees the same effect. This
 chapter is about reproduction. You test the package, not the world.
@@ -52,7 +56,7 @@ is the animal, plate, or tank (Hurlbert, 1984).
 
 ## A worked example
 
-A classmate's package tests whether a probiotic added to the water raises the body
+A package from another lab tests whether a probiotic added to the water raises the body
 length of zebrafish larvae. Six tanks: three get the probiotic, three get plain
 water. Each tank holds about 40 larvae, and body length is recorded for every
 larva. The poster reads: **"The probiotic increased larval body length by 0.5 mm."**
@@ -85,8 +89,8 @@ to whether an effect exists.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb14 — Async module: replication and red-team of a
-peer's package**. Open it in Colab with the badge above. There you cold-reproduce a
+This chapter's lab is notebook **nb14 — replication and red-team of another
+researcher's package**. Open it in Colab with the badge above. There you cold-reproduce a
 real field experiment's headline number from its files alone, then run the same
 three audits you just saw: you line each written claim against the output behind it,
 move the number with an undisclosed specification, and widen its interval by
@@ -94,8 +98,11 @@ respecting the clustering the write-up ignored.
 
 ## Recommended AI prompts
 
-Commit your own answer first, then delegate. Each prompt is a checkable job, not a
-verdict you hand off.
+Commit your own answer first, then delegate. None of these is a single shot. You send
+the prompt, read what comes back, interrogate it, sharpen the ask, and run it again.
+That is the loop, and an audit usually takes two or three turns of it before the tool
+stops guessing and starts pointing at real lines. Each prompt is a checkable job, not
+a verdict you hand off.
 
 **Locate every missing input.**
 
@@ -160,41 +167,26 @@ turns out to rest on a certainty the data never earned. A green check and a poli
 paragraph are not a reproduced result. You verify the number and its match to the
 claim, never the confident story about them.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project already has claims you can defend and a written disclosure of how AI
+helped you reach them; this step turns all of it into files a stranger could run
+without you in the room.*
 
-Verify this chapter's key result, the honest tank-level interval, with
-**alternative code** from the
-[verification guide](../verification-guide.qmd):
-recompute the same quantity a different way and compare. Collapse each tank to its
-own mean length, giving six numbers, then difference the three treated tank means
-against the three control tank means. Confirm the point estimate matches your
-larva-level number and that the spread across six tanks is far wider than the spread
-the naive 240-point calculation implied. Back it with a **direct calculation**:
-average two tanks by hand from the raw rows and check your code returns the same two
-means. Two roads to one answer is a verified result. Two roads to two answers means
-you measured the pipeline, not the fish.
-
-## Project transfer
-
-This chapter becomes your **replication and red-team report** on an assigned
-peer package. Draft its spine from your own run: a reproduction log (did
-restart-and-run-all succeed, what headline number did you get, did it match the
-write-up), a claim-to-output trace with every mismatch flagged, one alternative
-specification and one hidden assumption you tested, and prioritized recommendations
-ranked by threat to the claim. Post your single most-threatening weakness to the
-board with the one check that would settle it. The audit you run on a classmate here
-is the exact audit your own dossier has to survive when class resumes.
-
-## Defend your decision
-
-In four sentences, defend your verdict on one package you audited. Name the headline
-number you reproduced and whether it matched the write-up. State the single weakness
-you ranked most threatening and the number or output that exposed it. Give the
-boundary: reproduction confirms the number regenerates, not that the science is
-right, and a red-team names risks it does not by itself resolve. Close with your
-uncertainty: the one check you could not finish, and the run you still owe before
-you would call the verdict final.
+1. Gather everything into one folder: the data, the code, the run order, the random
+   seed, and a short write-up that states your headline number in words.
+2. Reproduce yourself cold. Clear the kernel, run every cell from the top with no
+   manual fixes, and ideally do it somewhere other than the machine you built it on.
+   Write down whether your headline number came back exactly, roughly, or not at all.
+3. Line every sentence of your write-up against a number your code actually prints.
+   Flag each mismatch, including the rounding you did not mean to hide.
+4. Change one defensible choice you never disclosed, an exclusion rule or a cutoff or
+   a subset, and record how far your headline moves. Report the range, not the
+   friendlier end of it.
+5. Name the assumption your result would collapse without, and rank everything you
+   found by threat to the claim rather than by ease of repair. If you have a peer,
+   swap folders and rerun each other's cold. The number they get, set beside the
+   number you reported, is your reproduction evidence.
+6. Log the audit in your AI Research Ledger, and verify at least one output with a
+   named method from the [Verification Guide](../verification-guide.qmd). An AI
+   reviewer may run the check with you; the decision to accept or reject stays yours.

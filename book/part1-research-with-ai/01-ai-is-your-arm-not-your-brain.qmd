@@ -4,12 +4,15 @@ title: "AI Is Your Arm, Not Your Brain"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
 
-> **The research decision.** For every task in your research, you decide whether to
-> hand it to an AI tool, and if you do, how you will confirm what it returns before
-> you put your name on it. This chapter equips you to draw that line task by task
-> and defend where you drew it.
+> **The research decision.** An AI tool can hand you a fact, a number, a citation,
+> or a finished paragraph in seconds. None of it is evidence yet. Your decision in
+> this chapter is what has to happen in between: which check turns an output into
+> something you would put your name on, and what you do when that check fails.
 
 ## Why this decision matters
+
+**The decision on the table: what has to happen to an AI's output before you are
+willing to call it evidence.**
 
 Picture an audit review. A **certified public accountant (CPA)** is an accountant
 licensed to sign off on a company's financial statements, and that signature makes
@@ -18,7 +21,7 @@ statements is who investors turn to if the figures prove wrong.
 
 When a CPA signs a statement, they are not saying the accounting software ran without
 errors. They are saying, "I checked this, and I will answer for it." That is the
-posture this course asks you to adopt on day one. An AI tool can fetch a statistic,
+posture this book asks you to adopt from page one. An AI tool can fetch a statistic,
 draft a paragraph, or write working code in seconds, but it cannot sign your work. You
 can. So the question that matters is not "what can the tool produce?" It is "what did
 I hand it, and how did I check what came back?"
@@ -42,34 +45,32 @@ a citation to a report that does not exist. Example: a tool quotes a median star
 salary and attributes it to a "National Graduate Earnings Survey" that was never
 published. Tone is identical for real and invented, so tone cannot be your filter.
 Retrievability is. A source is **retrievable** when you can open the actual document
-and confirm it, such as finding the real report through your university library and
-reading the line.
+and confirm it, such as finding the real report through a library and reading the line.
 
 Some judgments never get delegated. A **never-delegate decision** is a call that stays
 yours no matter how good the tool becomes: which question you pursue, what your
 evidence licenses, the ethics of the work, and how you state your uncertainty.
 Example: a tool may list several ways to adjust old prices for inflation, but deciding
 which one your analysis requires is yours to own. The habit that ties this together is
-short: **Ask, then
-Verify, then Document.** Use the tool ambitiously, confirm every fact and number
-yourself, then log the tool, the task, and the check in a record that travels with
-your work.
+short: **Ask, then Verify, then Document.** Use the tool ambitiously, confirm every
+fact and number yourself, then log the tool, the task, and the check in a record that
+travels with your work.
 
 ## A worked example
 
-You are an honors student asking whether meals at restaurants near campus got more
-expensive after a local minimum-wage increase in 2019. You cannot compare a 2019 menu
-price to today's price as they stand, because a dollar buys less now than it did then.
-To compare them you need the **Consumer Price Index (CPI)**, a published number that
-tracks what a typical household's basket of goods costs over time, where a higher
-value means the same basket costs more.
+You want to know whether meals at restaurants near you got more expensive after a
+local minimum-wage increase in 2019. You cannot compare a 2019 menu price to today's
+price as they stand, because a dollar buys less now than it did then. To compare them
+you need the **Consumer Price Index (CPI)**, a published number that tracks what a
+typical household's basket of goods costs over time, where a higher value means the
+same basket costs more.
 
 Sort the work. You can *delegate* locating candidate published price series and
 listing the inputs an inflation adjustment needs. You *keep* three things: deciding
 that a consumer price index (not a producer or wholesale index) is the right measure
 for what households pay, choosing the base year you convert every price into, and
-judging whether a source is authoritative. You ask Gemini for the series and it
-returns "consumer prices rose roughly 23 percent between 2019 and 2025," citing a
+judging whether a source is authoritative. You ask an AI assistant for the series and
+it returns "consumer prices rose roughly 23 percent between 2019 and 2025," citing a
 statistical agency.
 
 Now verify. You open the agency's actual data table, read the two index values
@@ -89,8 +90,14 @@ yourself.
 
 ## Recommended AI prompts
 
-Commit your own answer first, then delegate. Each prompt hands out a task you can
-check, with a verify note naming the failure it defends against.
+Commit your own answer first, then delegate. And expect a loop rather than a single
+shot: you ask, you read what comes back, you push on the part that looks thin, you ask
+again. That back-and-forth is how real AI work goes, and it is fine. What matters is
+where the loop stops. It stops when you have run the check yourself, not when the tool
+finally sounds sure.
+
+Each prompt below hands out a task you can check, with a verify note naming the
+failure it defends against.
 
 **Locate candidate sources (you verify each one).**
 
@@ -145,38 +152,30 @@ Survey, Table 3." It reads like every real citation you have seen: an official-s
 survey, a year, a table. It is fabricated, or the number is not on that page.
 
 Here is exactly how you catch it. You do not trust the citation as delivered. You
-search for the survey through your university library and, if it opens, turn to the
-named table and read the line. If the survey does not exist, or has no such value, the
-confident citation collapses. Fabricated sources sound just as authoritative as real
-ones, so the only reliable filter is opening the document.
+search for the survey in a library catalog and, if it opens, turn to the named table
+and read the line. If the survey does not exist, or has no such value, the confident
+citation collapses. Fabricated sources sound just as authoritative as real ones, so
+the only reliable filter is opening the document.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project starts here. There is no question yet and no data, only the two things
+everything else will rest on: the record you keep and the habit of checking.*
 
-The chapter's key result is that polish does not predict truth. Confirm it yourself
-with **primary-source reading** (from the [verification guide](../verification-guide.qmd)):
-take a real list of citations an AI returns for a topic you know, search each exact
-title, and count how many actually open. The confident-sounding ones are not more
-likely to be real than the plain ones. For a number, add **direct calculation**:
-recompute the claimed percentage change by hand from the two published index values
-and check it matches.
-
-## Project transfer
-
-This chapter launches your first project milestone, the research-and-AI baseline you
-present at Friday's studio. Three moves carry over directly. Sort the tasks in your own project
-into safe-to-delegate, delegate-then-verify, and never-delegate, and say why for each.
-Run one live citation catch on your topic and record the verdict. Fill your first row
-in the AI Research Ledger, logging the task, the tool, your decision, and the
-verification method. That ledger row is the habit the baseline milestone installs.
-
-## Defend your decision
-
-In a short paragraph, state the delegation line you drew for one task in your own
-project: what you handed the tool, what you kept, and the exact check you ran on what
-came back. Then name its boundary and your uncertainty. What does your verified
-result *not* establish, and where are you most likely to over-trust the tool and stop
-checking? A decision with no stated boundary is not yet defended.
+1. Open a blank spreadsheet or document and title it **AI Research Ledger**. Give it
+   eight columns: task delegated, tool used, prompt, output summary, decision,
+   verification method, remaining concern, and responsible researcher. Put your own
+   name in that last column now, and leave it there for the rest of the book.
+2. Write down three genuine curiosities from your own life, work, or field. One
+   sentence each. Not three topics you think sound impressive: three things you
+   actually wonder about and would like a real answer to.
+3. Under each one, write the single fact you would need to know before you could take
+   that curiosity seriously as a project.
+4. Pick the curiosity you cannot stop thinking about, and ask an AI tool for three
+   published sources that speak to that fact. Before you read the reply, write down
+   what you expect it to say.
+5. Log the exchange in your AI Research Ledger, and verify at least one output with a
+   named method from the [Verification Guide](../verification-guide.qmd). For a
+   citation the method is primary-source reading: open the document and read the line.
+   An AI reviewer may run the check with you; the decision to accept or reject stays
+   yours.

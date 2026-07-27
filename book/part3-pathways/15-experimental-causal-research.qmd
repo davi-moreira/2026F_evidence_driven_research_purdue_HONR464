@@ -5,12 +5,15 @@ title: "Experimental Causal Research"
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide whether the way treatment was assigned in your
-> study lets you read a plain difference in outcomes as a causal effect, and name
-> exactly which quantity, and for whom, that difference estimates. You confirm the
-> randomization and name the quantity yourself, and you never let a tool declare
-> that your design proves cause.
+> study lets you read a plain difference in outcomes as a cause, and then name
+> exactly which quantity that difference estimates and whose effect it is. Nobody
+> else can confirm how you sorted your units, so no tool gets to declare that your
+> design proves cause.
 
 ## Why this decision matters
+
+**The decision on the table: whether your difference in outcomes has earned the
+word "because", and whose effect that difference actually describes.**
 
 > *"Everyone shows me the treated group did better. So did the patients who were
 > healthier to begin with, or more organized, or younger. 'Better after treatment'
@@ -19,11 +22,11 @@ title: "Experimental Causal Research"
 > — a **clinical-trial reviewer**, reading a claim that a new reminder improved
 > medication adherence
 
-This is the hardest claim you make in this course, a causal one. A tool can now
+A causal claim is the hardest thing you will assert in this book. A tool can now
 clean your data, run the comparison, and hand you a confident number in seconds.
 That speed is the danger. If you paste back "the treatment worked," you have signed
 your name to a claim you have not earned. The reviewer above does not care how
-fluent the output sounded. She cares how treatment was assigned and who the number
+fluent the output sounded. They care how treatment was assigned and who the number
 describes. This chapter gives you the one move that earns the word *because*, and
 the discipline to say who it applies to.
 
@@ -95,7 +98,11 @@ learn to name which quantity actually survives.
 ## Recommended AI prompts
 
 Commit your own answer first, then delegate. Each prompt below is a checkable job,
-not a request for a verdict.
+not a request for a verdict. Work them as a loop. The first answer is a draft: find
+the claim you cannot check, say so in your next message, and run it again. Some
+tools will run that whole loop unattended and hand you a finished analysis. The
+finished look is exactly what makes the questions in this chapter worth asking
+before you accept it.
 
 **Locate the standard tool.**
 
@@ -164,46 +171,30 @@ ones it lost were the sickest, you know the 12 points is the effect among stayer
 green check is not a correct result. You rewrite the sentence to name the group the
 number actually speaks for.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your design is declared and diagnosed. This step asks whether it has earned the
+word "because", and makes you say out loud whose effect your number is.*
 
-Verify the chapter's key result, that the gap is more than chance, with two methods
-from the
-[verification guide](../verification-guide.qmd).
-First, **simulation**: re-randomize. Shuffle the treatment labels thousands of
-times as if you re-ran the coin flips under the assumption that the reminder does
-nothing, recompute the gap each time, and see how rarely pure chance produces a gap
-as large as yours. This is **randomization inference**, asking how often chance
-alone would hand you a gap this big if the treatment truly did nothing, and it earns
-you an interval rather than assuming one from a formula. Second, **alternative
-code**: recompute the same difference a second way, filtering each arm by hand and
-subtracting the two refill rates, and confirm you land on the same number. Two
-independent roads to one answer is a verified result. Two roads to two answers means
-your pipeline, not the reminder, is what you measured.
-
-## Project transfer
-
-This chapter becomes your **minimum viable analysis** milestone, the first real estimate
-on your own question, which you pitch at this week's Friday studio. Draft its spine:
-the potential outcomes Y(1) and Y(0) for one unit and which one your data will
-observe; the number that milestone reports (a difference in means, or your pathway's
-equivalent) and the interval you attach; whether your design is realistically
-powered for the effect you expect; the single threat nearest your design
-(attrition, noncompliance, spillover, or confounding if you are not randomizing);
-and one sentence naming exactly what your estimate means and for whom, plus the
-overclaim you forbid. Those five pieces are what you pitch in 60 seconds to a room
-of skeptics.
-
-## Defend your decision
-
-In four sentences, defend the causal reading of one estimate from your own project.
-Name your treatment and your outcome, and state whether random assignment licenses
-reading your difference as a causal effect. Name the exact quantity your number
-estimates and for whom, for example "the effect among patients who complied," not
-"the effect for everyone." State the boundary, what a clean randomization does *not*
-rescue if attrition, noncompliance, or spillover struck. Close with your
-uncertainty: the width of your interval or the threat you most fear, and the one
-check you would run next to close it.
+1. Write your treatment and your outcome as two short phrases. Then write one
+   sentence on how a unit ends up treated. If the answer is anything other than
+   "a chance device decided," this pathway is not yours yet.
+2. Take one real unit from your study and write Y(1) and Y(0) for it in plain
+   words. Circle the one you will actually get to see. That circle is the
+   fundamental problem of causal inference in your own project's handwriting.
+3. Name the quantity your estimate targets and for whom: everyone you enrolled,
+   only those who complied, only those who stayed. Write it as one sentence a
+   stranger could repeat back to you correctly.
+4. Name the threat nearest your design, whether attrition, noncompliance, or
+   spillover, and the check you will run in your own data to see how bad it is:
+   retention by arm, take-up by arm, contact between arms.
+5. If you cannot randomize, run steps 1 to 4 as a drill, then name the confounder
+   that random assignment would have killed for you and the observational move you
+   will use in its place.
+6. Log the step in your AI Research Ledger, and verify at least one output with a
+   named method from the [Verification Guide](../verification-guide.qmd). This
+   chapter's result deserves two: alternative code, recomputing your difference by
+   hand and landing on the same number, and simulation, shuffling the treatment
+   labels thousands of times to see how rarely chance alone produces a gap as big
+   as yours. An AI reviewer may run the checks with you; the decision to accept or
+   reject stays yours.

@@ -4,13 +4,16 @@ title: "Hybrid and Complex Designs"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
 
-> **The research decision.** When your question forces you to stitch several
-> measurements or stages into one answer, decide whether that combined design still
-> behaves as a single aligned whole you can diagnose before you run it, instead of
-> assuming that stacking rigorous-looking pieces automatically produces a rigorous
-> result.
+> **The research decision.** When your answer has to be stitched together from
+> several measurements or stages, decide whether the combined design is still one
+> aligned thing you can diagnose before you run it. Stacking careful pieces does
+> not automatically produce a careful result, and deciding to *cut* a piece you
+> cannot characterize is as much a design decision as adding one.
 
 ## Why this decision matters
+
+**The decision on the table: whether the extra moving piece in your design earns
+its place, or just adds an error you cannot account for.**
 
 > *"Do not hand me the headline number. Hand me the error budget: every quantity you
 > measured, how you measured it, and how each one's uncertainty flowed into the final
@@ -27,7 +30,7 @@ apart and diagnose the whole before you trust its number.
 
 ## The concept
 
-Every research design has four parts, and the course names them **MIDA**: the
+Every research design has four parts, and this book names them **MIDA**: the
 **Model** (your written picture of how the world could work), the **Inquiry** (the one
 exact quantity you want from it), the **Data strategy** (how the data come to exist),
 and the **Answer strategy** (how you turn that data into an estimate). The Colab lab
@@ -92,7 +95,11 @@ complex.
 ## Recommended AI prompts
 
 Commit your own answer first, then delegate. Each prompt is a checkable job, not a
-request for a verdict.
+request for a verdict. Run them as a loop rather than a single shot: the second
+pass, where you hand back the piece the tool skipped and ask again, is usually the
+one that finds the uncharacterized step. Agentic tools that chain those passes
+themselves will assemble a complete-looking error budget in one go. A complete look
+is the failure mode this chapter is about.
 
 **Locate the real rule.**
 

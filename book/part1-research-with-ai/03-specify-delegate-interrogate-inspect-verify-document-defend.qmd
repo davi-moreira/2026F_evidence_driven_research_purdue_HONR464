@@ -4,86 +4,130 @@ title: "Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
 
-> **The research decision.** Before you hand any research task to an AI tool, decide
-> how to route it through one seven-step protocol so the result comes back
-> verifiable and defensible. You specify the work and defend the result yourself,
-> and you never let the tool own those two ends.
+> **The research decision.** Every time you hand work to an AI tool, you decide how
+> that work gets routed: what you pin down before you ask, what you open and read when
+> the answer comes back, and what you are willing to say in your own words at the end.
+> Your decision in this chapter is to stop improvising that route and run the same
+> seven-step checklist every time.
 
 ## Why this decision matters
 
-> *"Show me the benchmark, not the number. I want to see what you timed, how many
-> times you ran it, and what you compared it against. A speedup I cannot reproduce
-> is a rumor."*
-> — a **research-software reviewer**, reading a claim that a new function is faster
+**The decision on the table: whether each delegation gets improvised, or run through
+the same fixed checklist every single time.**
+
+> *"Show me the comparison, not the number. Who saw each version, over which days, and
+> measured against what? A lift I cannot reproduce is a rumor."*
+> — an **analytics lead**, reading a claim that a new checkout page converts better
 
 A tool can now write the code, run it, and hand you a tidy result in one breath. That
 is exactly why a loose habit is dangerous. If you paste the result straight into your
-work, you have imported a guess and signed your name to it. The reviewer above does
-not care how confident the output sounded. She cares what you set up, what you handed
-off, and how you checked it before you believed it. This chapter gives you the habit
-that survives that question.
+work, you have imported a guess and signed your name to it. That reviewer does not
+care how confident the output sounded. They care about one question, and it is the
+question every serious reader of your work will eventually ask you:
+
+> **What did you set up, what did you hand off, and how did you check it before you
+> believed it?**
+
+This chapter gives you a habit that answers that question every time, so you never
+have to reconstruct the answer from memory.
 
 ## The concept
 
-The habit has a name you can spell: **SDIIVDD**, a seven-step protocol for handing
-work to an AI tool and getting back something you can defend. A **protocol** is just
-a fixed sequence of steps you run every time, so you never skip the check that
-matters. You met its three-word shorthand in Chapter 1, Ask then Verify then
-Document. SDIIVDD is the full version.
+SDIIVDD is a **checklist**: seven steps you run every time you hand research work to
+an AI tool, in the same order, no matter how small the task looks. A **protocol** is
+just a fixed sequence of steps you run every time, so you never skip the check that
+matters. You already met the three-word shorthand in Chapter 1, Ask then Verify then
+Document. SDIIVDD is that shorthand opened up into the steps you actually perform, and
+the name is only the first letter of each one: Specify, Delegate, Interrogate,
+Inspect, Verify, Document, Defend.
+
+Run it the way a pilot runs a preflight checklist. Not because you have forgotten how
+to fly, but because the item you would have skipped is the one that bites.
 
 The seven steps, each defined once with an example:
 
 1. **Specify.** Write down the exact task and your own expected answer *before* you
-   ask. Example: "time two dedupe functions on 10,000 records; I expect the hash
-   version to win by maybe 5x."
+   ask. Example: "compare conversion on the old and new checkout pages; I expect the
+   new page to win by a few percent, not by half, and both versions have to be
+   measured on the same days."
 2. **Delegate.** Hand the well-specified piece to the tool. To **delegate** is to
-   assign a checkable chunk of work, not your judgment. Example: "write the timing
-   harness for these two functions."
-3. **Interrogate.** Ask the draft what it assumes. Example: "does your timer include
-   the setup cost, or only the lookup?"
+   assign a checkable chunk of work, not your judgment. Example: "pull the consumer
+   price index values for 2019 and 2025 and write the code that converts my prices
+   into 2025 dollars."
+3. **Interrogate.** Ask the draft what it assumes. Example: "when you report turnout,
+   is the denominator registered voters or every voting-age adult?"
 4. **Inspect.** Read what the tool actually produced, not its summary of itself.
-   Example: open the code and see which lines sit inside the timed block.
+   Example: open the analysis script and see which wells it treats as controls,
+   instead of trusting the comment that says controls were excluded.
 5. **Verify.** Confirm the result with a real, independent check before you trust it.
-   Example: re-run the timing a different way and compare.
-6. **Document.** Log the tool, the task, and how you checked, in a record that
-   travels with your work.
+   Example: recompute the inflation adjustment by hand from the two published index
+   values and see whether you land on the same number.
+6. **Document.** Log the tool, the task, the prompt, and how you checked, in a record
+   that travels with your work. Example: one ledger row saying the tool wrote the
+   conversion script and that you re-derived one week's rate by hand.
 7. **Defend.** State the result in your own words, with the tool out of the room.
+   Example: "turnout was six points higher in these precincts, among registered
+   voters, in this one election."
 
-Two of these stay human no matter how good the tool gets. **Never-delegate decisions**
-are the calls you always own: what you are really asking, what counts as a fair test,
-and what your evidence licenses you to claim. Example: the tool can time your code,
-but only you decide the comparison was fair enough to report. Specify and Defend are
-the human bookends. Everything you hand off sits safely between them.
+Two of these seven stay human no matter how good the tool gets: **Specify** (step 1)
+and **Defend** (step 7). They are the human bookends, and everything you hand off sits
+safely between them. That is what makes them **never-delegate decisions**, the calls
+you always own: what you are really asking, what counts as a fair test, and what your
+evidence licenses you to claim. A tool can run the comparison for you. Only you decide
+the comparison was fair enough to report.
+
+### The loop, and who is running it
+
+The middle of the checklist is not a straight line. Real AI work runs in a loop: you
+prompt, you read the output, you interrogate it, you refine the prompt or the code,
+and you run it again. Steps 2 through 5 are that loop, and one task can send you
+around it five times. Going around is not a sign you are doing it badly. A first
+output that needs no second pass is rare enough that you should be a little
+suspicious of it.
+
+What is new is that the tool can now run the loop without you. Agentic tools plan the
+task, write the code, execute it, read their own error, rewrite, and run again, many
+cycles deep, then hand you one clean result. That is a real gain in reach. It also
+means all the interrogating and inspecting you would have done between cycles never
+happened, unless you insisted on it.
+
+SDIIVDD is how you keep command either way. When you run the loop, the checklist tells
+you what to do on each pass. When the tool runs the loop, the checklist tells you what
+to hold it to: a specification written before the first cycle, the intermediate work
+opened and read rather than summarized, and an independent check on the final number,
+before you say anything in your own name. The cycles can be automated. The bookends
+cannot.
 
 ## A worked example
 
-You are studying whether a hash-based deduplication function you asked an AI to write
-is genuinely faster than the simple version you trust. A **benchmark** is a
-controlled timing test that compares two implementations on the same input. Watch the
-protocol run.
+You are checking whether a new checkout page on a small online store genuinely
+converts better than the old one. **Conversion rate** is the share of visits that end
+in a purchase, so 40 purchases out of 1,000 visits is 4 percent. Watch the checklist
+run.
 
-**Specify.** You write your expectation first: "on 10,000 records, the hash version
-should be a few times faster, and it must return the exact same de-duplicated list."
+**Specify.** You write your expectation first: "the new page should win by a few
+percent at most, and the two versions have to be measured on the same days, on the
+same kind of shopper."
 
-**Delegate.** You ask the tool to write `dedupe_fast()` and a harness that times both
-functions.
+**Delegate.** You ask the tool to write the script that computes the conversion rate
+for each version from the session log and reports the difference.
 
-**Interrogate.** You ask, "what does your timer assume?" It admits it runs each
-function once.
+**Interrogate.** You ask, "what does your calculation assume about who saw each
+version?" It admits it pooled every session in the file.
 
-**Inspect.** You read the harness. The slow function runs first, on a cold start,
-before the interpreter has warmed up. **Warmup** is the first run's extra cost from
-loading and caching that a steady run does not pay. The harness charges that cost to
-the slow function alone.
+**Inspect.** You read the script and then the data. The store ran a site-wide sale in
+the first week, which filled the site with bargain hunters who browse and leave. The
+new page only went live in the second week. The script charged version A an entire
+week of window shoppers that version B never saw.
 
-**Verify.** You run each function five times, drop the first, and take the median. You
-also check that both return identical output.
+**Verify.** You restrict both versions to the second week, when they ran side by side,
+and recompute. You also confirm both versions count a purchase the same way.
 
 **Document.** You log the prompt, the fix, and the verified numbers.
 
-**Defend.** You write: "on this synthetic 10,000-record input, the hash version was
-about 6x faster and returned a byte-identical list. I have not tested real data or
-inputs full of near-duplicates."
+**Defend.** You write: "among shoppers who saw either version during the five days
+both were live, the new page converted about 6 percent better. I have not tested it
+during a sale, and I have not looked at mobile traffic separately."
 
 The tool did the typing. You did the research.
 
@@ -98,15 +142,17 @@ and Verify steps under real pressure.
 ## Recommended AI prompts
 
 Commit your own answer first, then delegate. Each prompt below is a checkable job,
-not a request for a verdict.
+not a request for a verdict, and each is the opening move of a loop rather than the
+whole conversation.
 
-**Locate the standard tool.**
+**Locate the standard method.**
 
 ```text
-Act as a Python performance assistant. I want to time two functions fairly.
-Before any code, name the standard-library tool for timing repeated runs and its
-key arguments, citing the official docs section. Only name functions you are
-confident exist.
+Act as a business-analytics assistant. I need to compare conversion rates for two
+versions of a checkout page. Before any code, name the standard statistical test
+for comparing two proportions and the exact library function that implements it,
+citing the official documentation section. Only name functions you are confident
+exist.
 ```
 After running, verify: open the official docs and confirm the function and its
 defaults exist. Counters *confident fabrication* (an invented function name arrives
@@ -115,75 +161,66 @@ as confidently as a real one).
 **Delegate, with a checklist to verify.**
 
 ```text
-Write a harness that benchmarks dedupe_slow and dedupe_fast on the same input.
-Then return a table of every assumption your timing makes: warmup, number of
-repeats, what sits inside the timed block, and how realistic the input is.
+Write the script that computes the conversion rate for version A and version B
+from this session log. Then return a table of every assumption your calculation
+makes: which sessions are included and excluded, how you count a purchase, whether
+both versions ran over the same days, and how repeat visits are handled.
 ```
-After running, verify: run both functions on one input and confirm identical output
-with a second, simpler check. Counters *plausible-but-wrong-method* (a timer that
-quietly compares unfair conditions).
+After running, verify: recompute one version's rate for a single day by hand and check
+that it matches. Counters *plausible-but-wrong-method* (a calculation that quietly
+compares unequal conditions).
 
-**Red-team your speedup.**
+**Red-team your lift.**
 
 ```text
-Here is my claim: "the hash version is about 6x faster on 10,000 records."
-Act as a hostile reviewer of research software. Name every way this benchmark
-could be unfair or this number could mislead. Do not rewrite the claim for me.
+Here is my claim: "the new checkout page converts about 6 percent better."
+Act as a hostile reviewer. Name every way this comparison could be unfair or this
+number could mislead. Do not rewrite the claim for me.
 ```
 After running, verify: if it only praises the claim, push back and demand the single
 worst flaw. Counters *sycophantic agreement* (praise that reviews your ego, not your
 evidence).
 
 ::: {.callout-important title="Do not delegate"}
-Specify and Defend never leave your hands. You decide **what question the benchmark
-answers**, **what counts as a fair comparison**, and **whether the synthetic input is
+Specify and Defend never leave your hands. You decide **what question the comparison
+answers**, **what counts as a fair comparison**, and **whether the data behind it is
 honest** for the claim you want to make. You own the final sentence, its boundary, and
-its uncertainty. The tool can time the code, but it cannot decide the test was fair or
-the claim was earned. Those are yours.
+its uncertainty. The tool can compute the rates, but it cannot decide the test was
+fair or the claim was earned. Those are yours.
 :::
 
 ## An AI failure case
 
-You ask for a benchmark and the tool reports, with total confidence, "the hash version
-is 50x faster." The number is wrong, and the code that produced it runs without a
-single error. Here is the trap: the harness timed each function exactly once, and the
-slow function ran first, on a cold start, so it paid the entire warmup cost. The
-comparison charged one function for a setup both of them share.
+You ask for the analysis and the tool reports, with total confidence, "the new
+checkout page converts 50 percent better." The number is wrong, and the code that
+produced it runs without a single error. Here is the trap: the script pooled every
+session in the log. The old page's numbers include the sale week, when the site was
+full of bargain hunters who never intended to buy, and the new page only existed
+afterward. The comparison charged one version a crowd the other never met.
 
-You catch it at Inspect and Verify. Reading the harness shows the single-run timing and
-the unlucky ordering. Re-running each function five times, dropping the first, and
-taking the median collapses the "50x" to about 6x. A green check is not a correct
-result. You verify the number, not the paragraph about the number.
+You catch it at Inspect and Verify. Reading the script shows it never filters by date.
+Restricting both versions to the days they actually ran side by side collapses the
+"50 percent" to about 6. A green check is not a correct result. You verify the number,
+not the paragraph about the number.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*You have a task list that says what you are willing to delegate. Now you delegate
+something real, and keep command of it from the first word to the last.*
 
-Verify this chapter's key result, the speedup, with **alternative code** from the
-[verification guide](../verification-guide.qmd):
-recompute the same quantity a different way and compare. Time both functions again with
-a second mechanism, average several runs instead of taking one, and confirm the speedup
-holds. Then confirm correctness the same way: check that `dedupe_fast` and `dedupe_slow`
-return identical output on the same input, element by element. Two roads to one answer
-is a verified result. Two roads to two answers means the harness, not the function, is
-what you measured.
-
-## Project transfer
-
-This chapter turns into your **research-and-AI baseline**, the course's first project
-milestone. The next time you delegate anything real on your own project, whether
-locating a source, drafting a rewrite, or running a small analysis, route it through
-all seven steps and record it as your first row in the AI Research Ledger: the task,
-the tool, your decision, and the named check that earned your trust. That row, plus the
-two decisions you refuse to delegate, is the spine of what you present at Friday's
-studio.
-
-## Defend your decision
-
-In four sentences, defend one task you ran through the protocol. Name the task you
-delegated and the one step where you caught something the tool got wrong or left out.
-State the bounded claim you can now make, with its boundary (what your check does *not*
-establish). Close with your uncertainty: the one thing you still do not know, and the
-verification you would run next to close it.
+1. Pick one genuine, checkable claim in your own area: a rate, a total, a comparison,
+   anything a source or a calculation could settle. Write it as a single sentence.
+2. **Specify.** Before you open any tool, write your own expected answer and what a
+   fair way of getting it would look like.
+3. **Delegate, Interrogate, Inspect.** Hand the task over. Ask the output what it
+   assumes. Then open what it actually produced, the source or the code or the table,
+   rather than its summary of itself. Expect several passes around that loop, and note
+   what changed on each one.
+4. **Verify.** Run one independent check. If the check and the output disagree, do not
+   average them; find out which one is wrong.
+5. **Defend.** With the tool closed, write one sentence stating the result in your own
+   words, and one sentence naming what it does not establish.
+6. **Document** the whole run in your AI Research Ledger, naming the verification
+   method you used from the [Verification Guide](../verification-guide.qmd) and the
+   step where you caught something the tool got wrong. An AI reviewer may run the check
+   with you; the decision to accept or reject stays yours.

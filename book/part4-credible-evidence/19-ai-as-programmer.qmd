@@ -4,24 +4,27 @@ title: "AI as Programmer"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
 
-> **The research decision.** When you hand the writing of analysis code to an AI,
-> you decide **what quantity that code must compute and over which set of cases**,
-> then verify it computed *that* quantity before you believe the number. A cell
-> that runs without an error is not a result you have earned.
+> **The research decision.** You decide **which quantity your code must compute and
+> over which set of cases**, and you keep deciding it at every turn of the loop,
+> because the tool rewrites the code each time you press enter. A cell that runs
+> without an error is not a result you have earned. It is a draft you have not read.
 
 ## Why this decision matters
 
-> *"Do not read me the number. Tell me what set it was computed over. If the code
-> only saw the buildings that already had sensors, you have not described the
-> campus. You have described the sensors."*
-> — a **facilities-safety reviewer**, asked to act on an indoor-air-quality report
+**The decision on the table: which quantity your code computes, and which cases it
+counts.**
 
-An AI can write your analysis code in seconds, and it will run. That is exactly
-where the danger sits. The tool writes fluent code for the quantity it *thinks* you
-asked for, over whatever cases sit in the dataframe you handed it. Paste the printed
-number into your report and you have signed your name to a quantity you never
-checked, over a set you never chose. The reviewer above does not care that the code
-was clean. She cares what it counted, and over whom.
+> *"Do not read me the percentage. Tell me which cities it was computed over. If your
+> code only saw the towns with an open-data portal, you have not described the state.
+> You have described the portals."*
+> — a **state open-records officer**, asked to act on a transparency report
+
+An AI writes your analysis code in seconds, and it runs. That is exactly where the
+danger sits. The tool writes fluent code for the quantity it *thinks* you asked for,
+over whatever rows sit in the dataframe you handed it. Paste the printed number into
+your report and you have signed your name to a quantity you never checked, over a set
+you never chose. The officer above does not care that the code was clean, only what it
+counted and about whom.
 
 ## The concept
 
@@ -29,47 +32,75 @@ The tool is the programmer. You are the researcher. Two decisions never move to 
 programmer's side of the desk, and this chapter is about holding them.
 
 - **Descriptive summary**: a number or picture that reports what is actually in the
-  cases you can see, such as a share, an average, or a full distribution. Example:
-  the fraction of monitored rooms whose air crosses a health line.
+  cases you can see, such as a share, an average, or a full distribution. Example: the
+  fraction of city councils that post their meeting minutes within a week.
 - **Quantity of interest**: the one exact number your code is supposed to produce,
   pinned down in words *before* you ask for any code. Example: "the share of
-  academic buildings whose peak-hour CO₂ exceeds 1000 ppm."
+  municipalities in the state that post council minutes within seven days of the
+  meeting."
 - **Frame**: the concrete set of cases your data actually covers, which is often
-  smaller than the group your question is about. Example: only the buildings that
-  already have sensors bolted to a wall.
-- **Convenience sample**: a set of cases collected because they were easy to reach,
-  not drawn to stand in for a population. Example: those sensored buildings, which
-  tend to be the newest and best-ventilated on campus.
+  smaller than the group your question is about. Example: only the cities that publish
+  through an open-data portal.
+- **Convenience sample**: a set of cases collected because they were easy to reach, not
+  drawn to stand in for a population. Example: those portal cities, which tend to be the
+  largest and best-staffed in the state.
 
-Here is the trap the chapter closes. A tool can compute a flawless share over the
-wrong frame, and the code still finishes with a green check. **A clean run is not a
-correct result**: a cell can execute with no error and still compute a different
-number than your question needs. So you own two things the programmer cannot. First,
-you define the quantity of interest and the frame it runs over, in plain words, before
-you delegate. Second, you verify the returned code computed *that* quantity over
-*that* frame, not a plausible neighbor.
+Here is the trap the chapter closes. A tool can compute a flawless share over the wrong
+frame, and the code still finishes with a green check. **A clean run is not a correct
+result**: a cell can execute with no error and still compute a different number than
+your question needs.
+
+### Coding with AI is a loop, not a wish
+
+Nobody gets working analysis code from one prompt, and you should not try to. Real
+AI-assisted coding is a **loop**: you prompt, you read the output, you interrogate it,
+you refine, and you run it again. Agentic tools now run that loop by themselves. They
+write, execute, read the error, patch the code, rerun, and hand you a tidy end state
+with a paragraph about how well it went.
+
+The loop is a real gain in speed. It is also where your frame goes missing. Any turn can
+add a filter, drop a join, or reach for a different column, and the code you finally
+read may not be the code you specified three turns ago. Nothing announces the change.
+The number just gets prettier.
+
+So verification runs per cycle, not per session. Every time the code changes, you ask
+the same two questions again: what quantity, over which cases? When a tool runs the
+cycles for you, make it surrender the choices it made along the way, and read the code
+rather than its summary of the code. You own two things the programmer cannot. First,
+you define the quantity of interest and the frame in plain words, before you delegate.
+Second, you confirm that the code sitting in front of you *right now* computes that
+quantity over that frame, and not a plausible neighbor.
 
 ## A worked example
 
-You want to describe indoor air quality across campus for the question *what share
-of academic buildings exceed the healthy CO₂ threshold during class hours?* You have
-a spreadsheet of sensor readings, and you ask an AI to write the Python that returns
-the share above 1000 ppm.
+You want to answer a simple question about your state: *what share of city councils
+post their meeting minutes within seven days?* You have a spreadsheet scraped from
+municipal websites, and you ask an AI to write the Python that returns the share posting
+on time.
 
-It writes six clean lines. They run. The printout says **6% of buildings exceed the
-threshold**, and the temptation is to write "campus air is fine." Instead you read
-what the code did, and two things jump out. The dataframe holds only the eight
-buildings that already carry permanent sensors, the newest and best ventilated on
-campus. That is a **convenience sample** standing in silently for the whole campus.
-The code also calls `.dropna()`, and the dropped rows are the readings where cheap
-sensors failed, clustered in the oldest, most crowded rooms. The 6% describes the best
-buildings with their worst rooms deleted.
+**Turn one.** It writes six clean lines. They run. The printout says **95% of councils
+post their minutes on time**, and the temptation is to write "compliance is strong."
+Instead you read what the code did.
 
-Re-anchor to your **quantity of interest**: the share over *all* academic buildings on
-the registrar's list, peak-hour readings kept. Recompute over the full list, flag the
-failed-sensor rooms rather than dropping them, and the honest share is far higher. The
-tool wrote correct code for the wrong question. You did the research by deciding what
-the code was allowed to count.
+**Turn two.** You interrogate it: which rows are in here, and what did you drop? Two
+things surface. The dataframe holds only the 40 municipalities that publish through an
+open-data portal, the largest and best-staffed in the state. There are 240 on the
+roster. That is a **convenience sample** standing in silently for all of them. The code
+also calls `.dropna()`, and the dropped rows are the towns where the scraper came back
+empty, which are exactly the small places with the thinnest clerical staff. The 95%
+describes the best-resourced cities with their worst records deleted.
+
+**Turn three.** You re-anchor to your **quantity of interest**: the share over *every*
+municipality on the state roster, with unretrievable records flagged instead of dropped.
+You refine the prompt to say precisely that, run again, and the picture changes. At most
+one in six municipalities is *confirmed* to post on time, and for most of the state you
+simply do not know. That "do not know" is a finding, not a gap to paper over.
+
+Now notice what would have happened if an agentic tool had run all three turns on its
+own. It would have handed you the polished 95% with a confident paragraph, and the
+decision that shrank your state to 40 cities would have happened inside a step you never
+saw. The tool wrote correct code for the wrong question. You did the research by
+deciding what the code was allowed to count.
 
 ## The Colab laboratory
 
@@ -84,7 +115,8 @@ run live.
 ## Recommended AI prompts
 
 Commit your own answer first, then delegate. Each prompt is a checkable job, not a
-request for a verdict.
+request for a verdict, and each one is a turn in a loop you keep running until the code
+says what you meant.
 
 **Locate the standard idiom.**
 
@@ -101,21 +133,32 @@ or argument arrives as confidently as a real one).
 **Delegate, then demand the choices back as a table.**
 
 ```text
-Write code that returns the share of academic buildings whose peak-hour CO2 exceeds
-1000 ppm. Then return a table of every choice you made: which rows you kept, whether
-you dropped any and why, the exact set the share is computed over, and whether you
-reported a share or an average.
+Write code that returns the share of municipalities that posted council minutes
+within seven days of the meeting. Then return a table of every choice you made:
+which rows you kept, whether you dropped any and why, the exact set the share is
+computed over, and whether you reported a share or an average.
 ```
 After running, verify: check the row count before and after the code, and confirm the
 set it computed over is the one your question names. Counters *silent scope change*
-(a share quietly computed over the sensored buildings, not the campus).
+(a share quietly computed over the portal cities, not the state).
+
+**Make the loop show its work.**
+
+```text
+You revised this code three times. For each revision, tell me in one line what changed
+about which rows are included or excluded, and which revision changed the set the
+number is computed over. Show me the code, not a summary of it.
+```
+After running, verify: put the first and the last version side by side and confirm the
+filters match what the tool reported. Counters *silent scope change* in its sneakiest
+form, a frame that narrows one revision at a time.
 
 **Red-team the number.**
 
 ```text
-Here is my claim: "6% of academic buildings exceed the CO2 threshold." Act as a
-hostile facilities reviewer. Name every way this code could have counted the wrong
-quantity or this share could mislead. Do not rewrite the claim for me.
+Here is my claim: "95% of city councils post their minutes within seven days."
+Act as a hostile open-records reviewer. Name every way this code could have counted
+the wrong quantity or this share could mislead. Do not rewrite the claim for me.
 ```
 After running, verify: if it only praises the number, push back and demand the single
 worst flaw. Counters *sycophantic agreement* (praise that reviews your ego, not your
@@ -123,59 +166,49 @@ evidence).
 
 ::: {.callout-important title="Do not delegate"}
 You define **what quantity the code computes** and **which set of cases it runs
-over**, and you decide **what the number is allowed to claim**. The tool can write
-the filter, the aggregation, and the plot, but it cannot decide that the sensored
-buildings speak for the campus, or that a share with the worst rooms dropped is
-honest. You own the final sentence, its frame, and its boundary.
+over**, and you decide **what the number is allowed to claim**. The tool can write the
+filter, the aggregation, and the plot, and it can run its own loop until everything is
+clean. It cannot decide that 40 portal cities speak for a state of 240, or that a
+compliance rate with the unreachable towns deleted is honest. You own the final
+sentence, its frame, and its boundary.
 :::
 
 ## An AI failure case
 
-You ask for the threshold share and the tool returns tidy code that prints, with full
-confidence, "**6% of buildings exceed 1000 ppm — air quality is within norms.**" The
-code has no error and reads beautifully. The trap is buried in two lines: the input
-dataframe was already limited to buildings with installed sensors, and a `.dropna()`
-silently removed the rooms where sensors failed. The share is real arithmetic over the
+You ask for the on-time share and the tool returns tidy code that prints, with full
+confidence, "**95% of councils post minutes on time. Compliance is strong.**" The code
+has no error and reads beautifully. The trap is buried in two lines: the input dataframe
+was already limited to cities with an open-data portal, and a `.dropna()` silently
+removed the towns where no posting date came back. The share is real arithmetic over the
 wrong set.
 
-You catch it by reading the code, not its summary. Printing the dataframe's shape
-shows eight buildings, not the campus. Printing the row count before and after
-`.dropna()` shows how many readings vanished, and inspecting which reveals the
-worst-ventilated rooms. Recomputing over the registrar's full building list, failures
-flagged instead of dropped, collapses the reassuring 6%. A green check certified that
-the code ran, never that it answered your question.
+You catch it by reading the code, not its summary. Printing the dataframe's shape shows
+40 municipalities, not 240. Printing the row count before and after `.dropna()` shows how
+many towns vanished, and looking at which ones reveals the smallest governments in the
+state. Recompute over the full roster, flag the unretrievable records instead of deleting
+them, and the reassuring 95% collapses. A green check certified that the code ran, never
+that it answered your question.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project has a design, a documented data source, and defined measurements. This
+step turns them into your first real numbers, and into the habit of never trusting code
+you have not read.*
 
-Verify this chapter's key result, the threshold share, with **alternative code** from
-the [verification guide](../verification-guide.qmd):
-recompute the same quantity a different way and compare. If the tool used a filtered
-`.mean()` on a boolean mask, recount with a `groupby` over the same set and confirm the
-two shares match to the digit. Then catch the silent trap: print the dataframe's shape
-and the row count before and after any drop, so a disappearing row cannot hide inside a
-clean number. Two roads to one share is a verified result. Two roads to two shares
-means the code, not the campus, is what you measured.
-
-## Project transfer
-
-This is the code half of your **observational descriptive design audit**, the
-corresponding project milestone for this topic. Before you delegate the code that
-produces any descriptive number for your project, write
-your quantity of interest and its frame in one sentence each, the way nb05 has you
-name the target population, accessible population, frame, and sample. Then verify the
-returned code computed that quantity over that frame, and record the row-count check
-that proved it in your AI Research Ledger: the task, the tool, the decision, the named
-check. That verified number is what your frame-and-sample stack rests on when you walk
-a skeptic through it at Friday's studio.
-
-## Defend your decision
-
-In four sentences, defend one descriptive number you delegated code to compute. Name
-the exact quantity of interest and the set of cases the code ran over. State the one
-verification that confirmed the code computed *that* quantity, not a neighbor. Give the
-boundary, what the number does not establish about the population beyond your frame,
-and close with your remaining uncertainty and the next check you would run to close it.
+1. Write your quantity of interest in one sentence, and the frame it runs over in a
+   second. Be concrete: not "my data," but the exact list of cases a stranger could
+   reconstruct without asking you.
+2. Prompt an AI tool for the code that computes that quantity over that frame. Save the
+   transcript. This is turn one of a loop, not a finished answer.
+3. Read the returned code line by line and ask what each line removes. Interrogate every
+   filter, join, and missing-value call. Then refine your prompt and run the loop again,
+   as many times as it takes.
+4. Print the shape of the data the number was computed over, and the row count before and
+   after anything that can drop rows. A number without its row count is not a result yet.
+5. Write one sentence naming what this number does *not* cover: the cases your frame
+   left out, and what you therefore cannot say about them.
+6. Log this first number in your AI Research Ledger, and verify it with a named method
+   from the [Verification Guide](../verification-guide.qmd). **Alternative code** is the
+   natural pick here: recompute the same quantity a second way and confirm the two roads
+   give one answer. An AI reviewer may run the check with you; the decision to accept or
+   reject stays yours.

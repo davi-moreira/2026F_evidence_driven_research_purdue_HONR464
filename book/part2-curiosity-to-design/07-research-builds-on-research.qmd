@@ -4,87 +4,101 @@ title: "Research Builds on Research"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
 
-> **The research decision.** Given a source an AI tool or a search hands you, you
-> decide whether it counts as *verified* (retrieved and read by you). And given the
-> sources you have verified, you decide whether the gap you want to study is
-> *genuine* or is only the place where your search happened to stop.
+> **The research decision.** Which conversation your question joins, and which of
+> the candidate sources a search or an AI hands you are worth chasing. You decide
+> what goes on the list and what gets dropped. Nothing on that list counts as
+> evidence yet.
 
 ## Why this decision matters
 
-Picture the moment a **thesis advisor** hands your first draft back with one line
-circled: *"You cite six papers. Which did you actually read, and where is the hole you
-claim to fill?"* That question is the whole job. A literature built from
-confident-sounding summaries collapses the instant a reviewer opens one citation and
-finds it says something else, or finds it does not exist. This chapter's decision turns
-"I looked it up" into "I retrieved it, I read it, and I can show you the empty spot on
-the map."
+**The decision on the table: which conversation your question joins, and which
+leads are worth your time.**
+
+Picture a thesis advisor reading your first draft with one line circled: *"You cite
+six papers. Where did they come from, and what argument are they having?"* Research
+never starts from zero. Someone has already asked something close to your question,
+and your job is to find them before you spend months rediscovering what they already
+know. Get the search wrong in one direction and you miss the study that answers you.
+Get it wrong in the other and you build on a citation nobody ever wrote. Get it right
+and you inherit years of other people's work for the price of an afternoon.
 
 ## The concept
 
-A field is a **cumulative conversation**: a running argument where each study answers,
-extends, or challenges the ones before it. One lab measures a reaction rate, a second
-repeats it with a new catalyst, a third pools both. Your job is not to invent an island.
-It is to find the conversation your question belongs to and add one honest sentence.
+A field is a **cumulative conversation**: a running argument where each study
+answers, extends, or challenges the ones before it. One team measures how a policy
+moved turnout in one state, a second repeats it elsewhere, a third pools both. Your
+job is not to invent an island. It is to find the conversation your question belongs
+to and add one honest sentence.
 
-You run one habit on every source. The **retrieval-verification loop** has four steps:
-ask a tool for leads, retrieve the source yourself, verify it exists and says what was
-claimed, and document where you found it. A **lead** is a candidate you have not checked
-yet, such as a citation an AI hands you. It stays a lead until you retrieve and read it.
+Everything you gather starts as a lead. A **lead** is a candidate source you have not
+checked yet, such as a citation an AI hands you. It stays a lead until you retrieve
+and read it. That standard is the **retrieval-verification loop**, and it has four
+steps: ask a tool for leads, retrieve the source yourself, verify it exists and says
+what was claimed, and document where you found it. This chapter is about the first
+step, gathering well. The next chapter is where the leads earn promotion.
 
-From one verified source you grow the rest by **snowballing**: walking its links two
-ways. **Backward citation search** reads the source's own reference list for older work
-it built on. **Forward citation search** finds the newer papers that cite it. Two solid
-sources, snowballed both ways, quickly become ten.
+From one real source you grow the rest by **snowballing**: walking its links two ways.
+**Backward citation search** reads the source's own reference list for the older work
+it built on. **Forward citation search** finds the newer papers that cite it. Two
+solid sources, snowballed both ways, quickly become ten, and the ten arrive with
+their relationships already visible.
 
-Snowballing lets you tell a real gap from a dead end. A **genuine gap** is a question
-your verified sources actually leave unanswered, confirmed by looking both ways. An
-**unfinished search** is one you simply stopped chasing. They feel identical from your
-desk, and only one is a contribution.
+Snowballing is also how you tell a real gap from a dead end. A **genuine gap** is a
+question your verified sources actually leave unanswered, confirmed by looking both
+ways. An **unfinished search** is one you simply stopped chasing. They feel identical
+from your desk, and only one is a contribution.
 
-You then arrange what you found as an **evidence map**: each verified source becomes one
+You then arrange what you found as an **evidence map**: each source becomes one
 **claim node** (what it asserts, in one sentence), lines connect claims that agree or
-contradict, and one marked spot shows where no source reaches. That spot is your gap,
-honest only because every node around it is a source you opened.
+contradict, and one marked spot shows where no source reaches. That spot is your
+candidate gap. It becomes honest only when every node around it is a source you
+opened yourself.
 
 ## A worked example
 
-Say your curiosity is green chemistry. You have read that **silver nanoparticles**
-(specks of silver billionths of a meter across) can be made without harsh reagents by
-reducing silver ions with a mild acid. Your question: does **L-ascorbic acid** (ordinary
-vitamin C) reduce silver ions to nanoparticles at room temperature, and does more of it
-make the particles smaller?
+Say your curiosity is voting. You have read that how far people live from their
+polling place seems to matter for whether they show up. Your question: does moving a
+polling place farther away lower turnout, and does the drop land harder in some
+neighborhoods than others?
 
-You ask an AI for the key studies. It returns a confident citation: a plausible author
-pair, a 2019 date, a journal called *Journal of Green Chemistry*. You go to read it, and
-the exact title returns nothing in your library portal, nothing on Google Scholar,
-nothing on the publisher's site. The journal does not exist; the real Royal Society of
-Chemistry title is simply *Green Chemistry*. The citation was fabricated.
+You ask an AI for the key studies. It hands you a confident citation: two plausible
+author names, a 2019 date, and a journal whose title reads like a longer, more
+official version of the real *Electoral Studies*. You go to read it. The exact title
+returns nothing in your library portal, nothing on Google Scholar, nothing on the
+publisher's site. That journal does not exist. The citation was manufactured, and it
+took four minutes to find out.
 
-So you run the loop properly. You retrieve one real review of green nanoparticle
-synthesis, read it, and snowball. Its references point backward to the reduction
-chemistry it built on; its "Cited by" list points forward to recent ascorbic-acid
-studies. Within an hour your map holds a half-dozen real sources and a contradiction:
-one paper reports that more reductant yields smaller particles, another the opposite.
-That disagreement is the live edge of the field, and it tells you the question is
-unsettled.
+So you run the loop properly. You retrieve one real review of polling-place location
+and turnout, read it, and snowball. Its reference list points backward to the older
+work on the costs of voting that it builds on. Its "Cited by" trail points forward to
+recent studies using precinct-level administrative records. Within an hour your list
+holds a half-dozen real sources and one live disagreement: some studies find that
+relocating a polling place shaves a point or two off turnout, others find that voters
+switch to mail ballots and total turnout barely moves. That disagreement is the live
+edge of the field, and it tells you the question is unsettled.
 
-Now the decision that is yours. The broad question "can vitamin C make silver
-nanoparticles" is no gap: the field is enormous. But your narrow question, how particle
-size behaves across a specific concentration range where two real papers already
-disagree, may be genuine. You can defend it only because you retrieved the sources around
-it and they still leave it open.
+Now the decision that is yours. The broad question "does distance affect turnout" is
+no gap; the literature is enormous. But your narrower question, whether the drop
+concentrates in neighborhoods without a car, may be genuine. You will be able to
+defend it only because you gathered the sources around it, and because you are about
+to open every one.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb03 — Research builds on research: verified evidence +
-real gaps**. Open it in Colab with the badge above and work the cells alongside this
+This chapter's lab is notebook **nb03 — Research builds on research: verified evidence
++ real gaps**. Open it in Colab with the badge above and work the cells alongside this
 chapter. In the lab you watch a pile of fifteen AI citations collapse to the few that
-survive retrieval, build an evidence map in code, and run the retrieval-verification loop
-on your own claim.
+survive retrieval, build an evidence map in code, and run the retrieval-verification
+loop on your own claim.
 
 ## Recommended AI prompts
 
-Commit your own answer first, then delegate. Each prompt earns a better draft; none earns
+Commit your own answer first, then delegate. And do not treat these as one-shot
+requests. A search is a loop: you prompt, you read what came back, you tell the tool
+what was off-target and why, and you ask again. Two or three passes beat one long
+prompt every time. Some tools now run that loop themselves, browsing and re-searching
+without asking you between steps. That changes who types the queries; it does not
+change who opens the papers. Each pass earns you a better list. None of them earns
 your trust.
 
 **Locate.** Ask for leads to chase, not a finished bibliography.
@@ -96,9 +110,9 @@ year, exact title, and venue, so I can retrieve and verify each myself.
 Only include work you are confident exists; mark anything uncertain.
 ```
 
-*After running, verify:* retrieve every citation by searching its exact title in quotes
-before you believe it exists. Counters **confident fabrication** (a real-sounding
-citation for a paper that was never written).
+*After running, verify:* retrieve every citation by searching its exact title in
+quotes before you believe it exists. Counters **confident fabrication** (a
+real-sounding citation for a paper that was never written).
 
 **List-to-verify (snowball).** Start from one source you have already read.
 
@@ -110,8 +124,8 @@ and venue, plus one line on why it belongs on the chain.
 ```
 
 *After running, verify:* cross-check the "backward" names against the seed's real
-reference list and retrieve the rest. A tidy chain can quietly omit the one contradicting
-study. Counters **illusion of completeness**.
+reference list and retrieve the rest. A tidy chain can quietly omit the one
+contradicting study. Counters **illusion of completeness**.
 
 **Red-team.** Make the tool attack your gap, not flatter it.
 
@@ -122,57 +136,50 @@ may already answer it, with authors, year, title, and venue, and say what
 each would have to show to close it. Do not reassure me.
 ```
 
-*After running, verify:* if it just agrees the gap is open and names nothing, push back
-and make it try to close the gap; then retrieve every study it names. Counters
+*After running, verify:* if it just agrees the gap is open and names nothing, push
+back and make it try to close the gap; then retrieve every study it names. Counters
 **sycophantic agreement**.
 
 ::: {.callout-important title="Do not delegate"}
 Two decisions never leave your hands. Whether a source counts as **verified**: only
-reading it yourself settles that. And whether your **gap is real**: only retrieval that
-comes up empty earns the word. What your project may claim follows from those two. An AI
-can point; it cannot certify.
+reading it yourself settles that. And whether your **gap is real**: only retrieval
+that comes up empty earns the word. What your project may claim follows from those
+two. An AI can point; it cannot certify.
 :::
 
 ## An AI failure case
 
 The most common failure here is **citation hallucination**, the taxonomy's *confident
 fabrication*: the model invents a source and presents it with full confidence. In the
-worked example it gave you a plausible author pair, a 2019 date, and *Journal of Green
-Chemistry*. You caught it in a minute: you searched the exact title in quotes across your
-library portal and Google Scholar, found nothing, and noticed the journal does not exist.
-Fluent confidence is not evidence. If you cannot locate a source where it should live,
-treat it as fabricated until you prove otherwise.
+worked example it produced a plausible author pair, a 2019 date, and a journal that
+does not exist. You caught it in a minute by searching the exact title in quotes
+across your library portal and Google Scholar and finding nothing. Fluent confidence
+is not evidence. If you cannot locate a source where it should live, treat it as
+fabricated until you prove otherwise.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*You arrived with a lead question from the previous chapter. This step surrounds it
+with the conversation it belongs to: a pool of candidate sources, gathered fast, with
+AI doing the legwork.*
 
-The key result of this chapter is a verdict: this source is verified, and this gap is (or
-is not) real. Verify it with **primary-source reading** (verification guide, method 4):
-find the actual source, open it, and read the line that supports the claim before you
-cite it. Do this for every source on your map, not a sample. For a gap you will defend
-out loud, add a second, independent check such as **peer reasoning**: walk your gap past
-a classmate, whose one question often exposes a source you skipped. Two independent checks
-that agree are far stronger than one.
-
-## Project transfer
-
-This chapter builds your **verified evidence and contribution map**, the project milestone
-you present as a gallery walk at Friday's studio. It puts the question and guessed gap from
-the previous chapter to the test of retrieval. Leave with four pieces drafted: a
-verified-source log (author, year, where you retrieved it, its claim in your words), an
-evidence map naming at least one contradiction, your gap placed honestly with its
-honesty-test sentence, and a one-sentence contribution line that stops where your
-retrieval stops. That map is the ground your later research charter stands on.
-
-## Defend your decision
-
-In one short paragraph, state your gap in a single sentence, then defend it. Name its
-**compass position** (description or generalization, the kinds of claim this evidence work
-supports). Say plainly whether the gap is confirmed by retrieval or is still an unfinished
-search. Then name your uncertainty: how many sources you have actually opened, and what
-your map cannot see. If you cannot yet write the honest boundary sentence, *"across the
-sources I retrieved and verified, none addresses my gap,"* say what retrieval it still
-owes. That is a finding, not a failure.
+1. Write your lead question at the top of a fresh page. Underneath it, write the one
+   sentence you already believe the literature says. That belief is what your search
+   will either confirm or embarrass.
+2. Search once yourself before you delegate. Use your library database or Google
+   Scholar and your question's own words, and keep the single best thing you find.
+   That is your seed.
+3. Ask an AI for five more candidates on the same question, each with authors, year,
+   exact title, and venue. Then run the loop: read what came back, tell the tool which
+   two are off-target and why, and ask again. Stop when a pass stops adding anything
+   new.
+4. Snowball your seed by hand. Read its reference list backward for the older work it
+   builds on, and follow its "Cited by" trail forward for the newer work. Add
+   everything that touches your question.
+5. Put all of them in one candidate list with a status column, and write `lead` in
+   every row. Nothing here is a source yet. The next chapter is where they earn the
+   promotion.
+6. Log the delegation in your AI Research Ledger, and verify at least one candidate
+   now with a named method from the [Verification Guide](../verification-guide.qmd);
+   primary-source reading is the one that fits. An AI reviewer may run the check with
+   you; the decision to accept or reject stays yours.

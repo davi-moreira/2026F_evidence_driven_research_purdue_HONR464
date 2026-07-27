@@ -4,22 +4,26 @@ title: "Experimental Descriptive Research"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb){target="_blank"}
 
-> **The research decision.** You decide whether a design that assigns a stimulus
-> at random is answering a **descriptive** question, measuring a latent
-> characteristic that already exists, or a **causal** one, and you defend that
-> classification and name the artifacts your measurement still has to rule out.
+> **The research decision.** A coin flip does not decide what kind of question you
+> asked. You decide whether your randomized study is **measuring** a property the
+> world already has or **testing** an intervention you would deploy, and you name
+> the artifacts your measurement still has to rule out before the number means
+> anything.
 
 ## Why this decision matters
 
-Picture your research advisor stopping at one line of your methods page. "You
-randomized," they say, "so you wrote *causes*. Show me the question first." Random
-assignment feels causal by reflex, and that reflex is the trap this chapter
-defuses. The word that fixes the kind of a question is the **question**, not the
-**procedure**. Point a coin flip at "what would change if we deployed this?" and
-you have a causal study; point the same flip at "how much of this property sits in
-the world right now?" and you have a measurement. Mislabel the second as the first
-and you overclaim: you promise a lever your evidence never tested, and a careful
-reader stops trusting the rest of your work.
+**The decision on the table: whether your coin flip is measuring the world as it
+stands or testing an intervention you would roll out.**
+
+Picture your advisor stopping at one line of your methods page. "You randomized,"
+they say, "so you wrote *causes*. Show me the question first." Random assignment
+feels causal by reflex, and that reflex is the trap this chapter defuses. What
+fixes the kind of a question is the **question**, not the **procedure**. Point a
+coin flip at "what would change if we deployed this?" and you have a causal study.
+Point the same flip at "how much of this property sits in the world right now?"
+and you have a measurement. Mislabel the second as the first and you overclaim.
+You promise a lever your evidence never tested, and a careful reader stops
+trusting the rest of your work.
 
 ## The concept
 
@@ -82,7 +86,11 @@ instrument artifacts falls back onto the construct it was supposed to report.
 ## Recommended AI prompts
 
 Commit your own answer first, then delegate. Each prompt below ends with a check
-you run yourself.
+you run yourself. And treat each one as the opening move of a loop, not a
+one-shot request: read the output, push back on the weakest part, sharpen the
+prompt, run it again. Agentic tools now run several turns of that loop on their
+own, which does not retire your check. It just means more output arrives between
+your checks.
 
 ```text
 Act as a literature scout. List three real, published experiments used to MEASURE
@@ -134,39 +142,29 @@ word. Yours asked *how much* position pulls; its answer asked *what to do*. The
 tells are "causes," "should," and the imagined "lift" from an intervention you never
 ran. Reject it, and rewrite the claim bounded to the units you observed.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your design is declared and diagnosed. This step asks a narrower question of it:
+is your study measuring a property the world already has, and if so, can it do
+that honestly?*
 
-Verify the lab's key result by **simulation**, the verification-guide method for
-checking how a procedure behaves rather than a fixed number. Build a toy world
-where you set the true latent value yourself, run the estimator, and confirm the
-estimate lands on the value you planted. Then run a **falsification test**: set the
-true position pull to exactly zero and rerun. An honest instrument returns about
-zero. If your pipeline instead reports an attention curve where you planted none,
-that curve is an instrument effect your logging created, not a property of the
-interface, so it must be designed out before any real number is trusted.
-
-## Project transfer
-
-This chapter is the spine of **your experimental measurement and
-data-acquisition protocol milestone**. Name the latent characteristic your project must
-measure, the design that reveals it, and the exact descriptive quantity it reports
-for named units. Then write the artifact plan: the one demand effect and the one
-instrument effect you most fear, each with the redesign that guards it. Add the
-two-sentence boundary that states the descriptive claim you license with its
-uncertainty and the causal sentence you forbid yourself. Those pieces are what you
-walk a skeptic through at Friday's studio, and they feed the abstract that clears
-its gate there.
-
-## Defend your decision
-
-State the decision this chapter equips and defend it for your own project. Name
-your latent characteristic and the randomized stimulus that reveals it, then say in
-one sentence why the inquiry is **descriptive**, a property that already exists, and
-not **causal**, the effect of an intervention you would deploy. Close with the
-boundary and the uncertainty: the descriptive claim your design licenses, the worst
-artifact you have not fully ruled out, and the interval or caveat around your
-number. A declaration with no boundary and no uncertainty is not yet a defense.
+1. Read your lead question aloud and underline the verb. Does it ask how much of
+   something already sits out there, or what would change if you intervened? Write
+   the answer in one line. That line decides whether this pathway is yours.
+2. If it is yours, name the latent characteristic your project has to reveal, the
+   property nobody publishes anywhere, and the controlled stimulus you will assign
+   by chance to reveal it.
+3. Write your estimand in one sentence: the exact quantity, for which units,
+   described as it stands. Underneath it, write the causal sentence you forbid
+   yourself, the one that starts with "if we".
+4. Name the one demand effect and the one instrument effect you most fear, each
+   with the redesign that rules it out.
+5. If this pathway is not yours, run steps 2 to 4 as a drill anyway, treating your
+   question as if you had to measure it rather than intervene. What breaks is your
+   evidence that the pathway you chose fits better. Write that in two lines.
+6. Log the step in your AI Research Ledger, and verify at least one output with a
+   named method from the [Verification Guide](../verification-guide.qmd). A
+   falsification test fits this chapter well: set the true effect to exactly zero
+   in a toy version of your design and confirm your instrument reports about zero.
+   An AI reviewer may run the check with you; the decision to accept or reject
+   stays yours.

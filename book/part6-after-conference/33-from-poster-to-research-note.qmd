@@ -11,6 +11,9 @@ title: "From Poster to Research Note"
 
 ## Why this decision matters
 
+**The decision on the table: which finding leads your written note, and how big each
+claim is allowed to be once your voice is no longer in the room.**
+
 > *"Show me your results in the order you trust them. If your flashiest number comes
 > from one lucky run and it leads the paper, I already know how this review ends. I
 > do not want your most surprising result first. I want your most defensible one."*
@@ -94,8 +97,12 @@ that hunts the five ways a reproducibility capsule breaks.
 
 ## Recommended AI prompts
 
-Commit your own answer first, then delegate. Each prompt is a checkable job, not a
-request for a verdict.
+Commit your own answer first, then delegate. Writing with an AI tool is a loop, not a
+single ask: you send the prompt, read the output, push back on the part that is wrong,
+and run it again. Keep the loop pointed at your own text. The moment it starts
+producing sentences you did not think of and cannot check, you are no longer editing,
+you are being edited. Each prompt below is a checkable job, not a request for a
+verdict.
 
 **Locate real sources for the gap.**
 
@@ -163,35 +170,25 @@ not a real Saturday rush, so the general claim is not licensed. You keep the edi
 clarify and reject the one that inflated. Fluent prose is not evidence. You verify the
 claim, not the polish.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project already has a poster or one-figure summary and a folder someone could
+rerun; this step turns that summary into prose that stands on its own page.*
 
-Verify this chapter's key result, the headline speedup, with **alternative code** from
-the [verification guide](../verification-guide.qmd):
-recompute the median wait-time drop a second way, from the raw simulated wait times
-rather than the summarized table, and confirm the number and its interval match. Then verify the
-capsule with **peer reasoning**: hand it to a partner who reruns it cold with
-restart-and-run-all. If your number comes back on their machine, the capsule is
-runnable. If it does not, you measured your own memory, not a reproducible result.
-
-## Project transfer
-
-This chapter becomes your **research note and reproducibility capsule**, the project
-milestone for this topic. Draft the problem–gap–question spine in prose with every
-claim sourced, order your findings into a results hierarchy with the defensible one
-leading, size your limitations to your evidence, and assemble the capsule so
-restart-and-run-all returns your headline. A partner table-reads the note and reruns
-the capsule at Friday's studio, where the note is due and your final research chapter
-begins. The note makes your work readable; the capsule makes it runnable.
-
-## Defend your decision
-
-In four sentences, defend your research note. Name the finding you chose as the
-headline and why it, not a more surprising result, earned the top. State the bounded
-claim in one sentence, with its boundary (the setting, sample, or population it does
-not cover). Then state your uncertainty: your interval or the caveat that most
-threatens the number, and the one check a partner running your capsule cold would run
-next to test it.
+1. Write your problem–gap–question spine as three short paragraphs. Name the trouble,
+   name what prior retrievable work has not established, and name the question that
+   closes exactly that gap. Every sentence in the gap paragraph rests on a source a
+   reader can open.
+2. Order your findings, best-supported first. Whatever you can defend with the most
+   data leads. Anything that rests on one observation or one lucky run goes to the
+   back and wears the word exploratory.
+3. Write your headline claim in one sentence, with its boundary inside the same
+   sentence: the setting, the sample, and the population it does not cover. Then write
+   the inflated version you refuse, so you can recognize it if it sneaks back in.
+4. Size your limitations to what actually threatens the claim. Cut anything that reads
+   like "more research is needed" and keep what a hostile reader would raise first.
+5. Attach your folder to the note and confirm the two agree: the number in your lead
+   sentence is the number a cold restart-and-run-all prints.
+6. Log the drafting round in your AI Research Ledger, and verify at least one output
+   with a named method from the [Verification Guide](../verification-guide.qmd). An AI
+   reviewer may run the check with you; the decision to accept or reject stays yours.

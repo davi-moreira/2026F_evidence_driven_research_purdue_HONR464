@@ -4,12 +4,15 @@ title: "Claim–Evidence Tables"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
 
-> **The research decision.** For every claim your poster makes, decide which exact
-> piece of evidence backs it, where that evidence lives, and what it does not
-> establish, and record all three in one row of a claim–evidence table before the
-> poster is locked.
+> **The research decision.** For every claim your work makes in public, decide which
+> exact piece of evidence backs it, where that evidence lives, and what it does not
+> establish. Then write all three in one row of a claim–evidence table, before the
+> claim reaches anywhere a stranger can point at it.
 
 ## Why this decision matters
+
+**The decision on the table: for each claim you make, which specific evidence backs
+it and where that evidence can be found.**
 
 > *"I point at one number on your board and ask where it came from. Walk me to the
 > line that made it and I trust the whole poster. Say 'it's in the analysis
@@ -20,58 +23,61 @@ A poster is a set of promises made in public. Each headline number, each figure,
 each cited fact is a claim a stranger can test in ninety seconds. The dangerous gap
 is between a claim you can *say* and a claim you can *back*. A claim–evidence table
 closes that gap on purpose, before anyone points a finger, so the honesty is built
-into the board and not patched under pressure.
+into the work and not patched under pressure.
 
 ## The concept
 
 A **claim–evidence table** is a table with one row per claim, pairing each claim
-your poster makes with the specific evidence behind it. Example: a row that reads
+you make with the specific evidence behind it. Example: a row that reads
 "Store B sold about 1.4 times as many units per week as Store A" in the claim column,
 with the two weekly sales averages in the evidence column.
 
 Four columns carry each row, and each is a term worth knowing.
 
-- **Claim.** The statement your poster asserts as true. Example: "our measured
-  value of *g* is 9.79 m/s²."
+- **Claim.** The statement you assert as true. Example: "turnout in these precincts
+  was 61.3 percent."
 - **Evidence.** The exact result or source that backs the claim, with its
-  uncertainty. Example: 30 timed swings giving a period of 2.007 s, and the
-  interval ±0.06 m/s² around the estimate.
+  uncertainty. Example: 30 sampled precincts giving 48,900 ballots against 79,800
+  registered voters, and the interval of ±1.8 points around the estimate.
 - **Trace.** Where a number was actually produced, named precisely enough to open.
   A **traceable number** is one you can walk back to the notebook cell that computed
-  it. Example: "cell 16, where `g = 4*pi**2*L / T**2` runs." A number you cannot
-  walk back, one typed from memory or rounded by hand, is an **untraceable number**,
-  and it does not belong on the board.
+  it. Example: "cell 16, where `turnout = ballots.sum() / registered.sum()` runs." A
+  number you cannot walk back, one typed from memory or rounded by hand, is an
+  **untraceable number**, and it does not belong on the board.
 - **Boundary.** The **claim boundary** is the line between what the evidence
-  licenses and what it does not. Example: "measured at one location, one pendulum
-  length, timed by hand, so this is not the standard sea-level value."
+  licenses and what it does not. Example: "one county, one midterm election,
+  registered voters only, so this is not the statewide rate."
 
-Building the table is the graded skill. Once every claim has a filled row, an
-unbacked claim has nowhere to hide, because a blank cell is a visible hole.
+Building the table is the skill. Once every claim has a filled row, an unbacked
+claim has nowhere to hide, because a blank cell is a visible hole.
 
 ## A worked example
 
-You built a physics poster reporting a measurement of *g*, the acceleration due to
-gravity, from a simple pendulum. Your headline reads "we measured *g* = 9.79 m/s²."
-Before the file goes to the printer, you build the table.
+You built a political-science poster reporting a turnout estimate: the share of
+registered voters who cast a ballot in one county's midterm election. Your headline
+reads "turnout in these precincts was 61.3 percent." Before the file goes to the
+printer, you build the table.
 
-**Row 1 (the headline).** Claim: "*g* = 9.79 ± 0.06 m/s²." Evidence: 30 timings of a
-1.00 m pendulum, mean period 2.007 s, the spread of the 30 periods giving the
-interval. Trace: cell 16, the line `g = 4*pi**2*L / T**2`. Boundary: one location,
-one length, hand timing, so a reaction-time bias of order a tenth of a second is
-possible and the value is not claimed to be the accepted 9.81 m/s².
+**Row 1 (the headline).** Claim: "turnout was 61.3 ± 1.8 percent." Evidence: 30
+sampled precincts, 48,900 ballots cast against 79,800 registered voters, with the
+spread of the 30 precinct-level rates giving the interval. Trace: cell 16, the line
+`turnout = ballots.sum() / registered.sum()`. Boundary: one county, one midterm,
+registered voters only, so nothing is claimed about statewide turnout or about
+eligible adults who never registered.
 
 Filling Row 1 forces one honest catch. You reach for the trace and find the number
-on your draft board reads 9.81, not 9.79. You had quietly written the textbook value
-instead of the one your cell printed. The table caught an untraceable number before
-a judge did.
+on your draft board reads 63.0, not 61.3. You had quietly written the officially
+reported statewide figure instead of the one your cell printed. The table caught an
+untraceable number before a judge did.
 
-**Row 2 (a secondary claim).** Claim: "the period barely changes with amplitude for
-small swings." Evidence: periods measured at 5° and 15° differ by less than your
-timing spread. Trace: cell 18, the amplitude comparison. Boundary: only tested below
-15°, so nothing is claimed about large swings.
+**Row 2 (a secondary claim).** Claim: "the estimate barely moves when I change how a
+registration counts as active." Evidence: under two reasonable definitions the
+estimates differ by less than your sampling spread. Trace: cell 18, the definition
+comparison. Boundary: only two definitions tested, so nothing is claimed about
+looser rolls that keep long-inactive registrations.
 
 Two claims, two rows, every number walked back to a cell, every boundary written
-down. That table is the thing that lets your poster survive a pointed finger.
+down. That table is the thing that lets your work survive a pointed finger.
 
 ## The Colab laboratory
 
@@ -86,13 +92,19 @@ and turn loose claims into locked, backed rows.
 Commit your own draft table first, then delegate. Each prompt is a checkable job,
 not a request for a verdict.
 
+None of these is a one-shot. You send the prompt, read the answer, push on the row
+that looks too smooth, and send it again. Agentic tools will do that iterating for
+you and hand back a finished table, which is exactly when to slow down. A table
+assembled over five invisible rounds still has to be opened cell by cell.
+
 **Locate the source for a cited fact.**
 
 ```text
-Act as a physics reference assistant. I want to cite the accepted sea-level value
-of g. Name the value and one real, retrievable source that reports it, and give me
-enough detail to find it myself. If you are not confident a source exists, say so
-instead of guessing.
+Act as a reference assistant in political science. I want to cite the officially
+reported turnout for this county in this election. Name the figure and one real,
+retrievable source that reports it, such as a state or county election office
+release, and give me enough detail to find it myself. If you are not confident a
+source exists, say so instead of guessing.
 ```
 After running, verify: open the named source yourself and confirm it reports that
 value before it touches your poster. Counters *confident fabrication* (an invented
@@ -127,51 +139,38 @@ The **wording of each claim**, the **judgment that a piece of evidence actually
 backs it**, and the **boundary each claim carries** stay yours. An AI can list
 claims and draft rows, but it cannot open your notebook cell to confirm a number is
 real, and it cannot decide the evidence is honest enough to print. The call that the
-table is complete and the poster is locked is yours to declare and defend.
+table is complete and the work is locked is yours to declare and defend.
 :::
 
 ## An AI failure case
 
 You paste your poster text and ask an AI tool to build the whole claim–evidence
 table for you. It returns a clean, complete grid, every cell filled, and the trace
-column reads confidently: "*g* value from cell 14." You almost accept it. Then you
-open cell 14, and it computes the *period*, not *g*. The value you report is
-produced two cells later, in cell 16. The tool guessed a plausible cell number and
-filled it with full confidence, and its tidy finished table hid the wrong trace
-behind a polished look.
+column reads confidently: "turnout value from cell 14." You almost accept it. Then
+you open cell 14, and it totals the registered voters; it never divides. The rate
+you report is produced two cells later, in cell 16. The tool guessed a plausible
+cell number and filled it with full confidence, and its tidy finished table hid the
+wrong trace behind a polished look.
 
 You catch it by refusing to trust a trace you have not opened. Reading the actual
 cell, number in hand, is the whole discipline. A filled table is not a verified
 table.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your results are now worded as claims with boundaries; this step makes each one
+point at the evidence that backs it.*
 
-Verify this chapter's key result, the table's traceability, with two named methods
-from the [verification guide](../verification-guide.qmd).
-For every traced number, use **direct calculation**: recompute the value a second,
-simpler way and confirm it matches the figure on the board, digit for digit. For
-every cited fact, use **primary-source reading**: open the source, find the line,
-and confirm it says what your poster claims. A number that survives an independent
-recomputation and a citation that resolves to a real page are backed. A mismatch on
-either is a finding, and the claim comes off the board until you fix it.
-
-## Project transfer
-
-This chapter is a graded piece of your **final poster lock** milestone. Build a
-claim–evidence table for your own poster: one row for every headline number and
-cited fact, each with its trace to a cell or source and its boundary written down.
-That table is what you carry into the gallery-walk audit and the oral defense, and
-it is the proof that your poster's honesty was verified, not merely asserted.
-
-## Defend your decision
-
-In four sentences, defend one row of your table. State the claim in the exact words
-that will appear on your board, and name the specific evidence that backs it. State
-its boundary: what this claim does *not* establish, and the compass position it
-speaks from. Close with its uncertainty: the interval or caveat that rides in the
-same eye-span as the claim, and the single check you ran to confirm the traced
-number is real.
+1. Write one row per claim with four columns: claim, evidence, trace, boundary.
+   Include the implicit claims, the ones your figures make without a sentence.
+2. Fill the evidence column with the actual result and its uncertainty, not a
+   description of the result.
+3. Fill the trace column by opening the cell or the source and reading the number
+   off the screen. If you cannot open it, the row is not filled.
+4. Write each boundary as a sentence about what the row does not establish, then
+   hunt for blank cells. A blank cell is an unbacked claim, so either back it or cut
+   the claim.
+5. Log it in your AI Research Ledger, and verify at least one traced number with a
+   named method from the [Verification Guide](../verification-guide.qmd). An AI
+   reviewer may run the check with you; the decision to accept or reject stays
+   yours.

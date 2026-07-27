@@ -11,6 +11,9 @@ title: "Open and Reusable Research Packages"
 
 ## Why this decision matters
 
+**The decision on the table: what goes inside the capsule that ships with your work,
+and whether the sentence "this reproduces" is honest when you write it.**
+
 > *"I don't want to hear that it runs on your laptop. Hand me the folder, let me
 > clear everything, and let me press run. If your headline number does not come back
 > on my machine, you do not have a result yet. You have a memory of one."*
@@ -52,41 +55,46 @@ to the starting line. A person who reruns you cold is the race.
 
 ## A worked example
 
-You measured nitrate, a nutrient that washes off farm fields into streams, at twelve
-monitoring sites in one watershed, and your headline is the share of samples above
-the U.S. EPA drinking-water limit of 10 mg/L. Watch the same analysis shipped two
-ways.
+You collected precinct-level turnout for twelve counties in one state's midterm
+election, and your headline is the share of precincts where turnout fell below 40%.
+Watch the same analysis shipped two ways.
 
-The **sinful capsule** loads `~/Desktop/nitrate_clean.csv`, a file only your laptop
+The **sinful capsule** loads `~/Desktop/turnout_clean.csv`, a file only your laptop
 has. It bootstraps a confidence interval for that share with no seed, so the interval
-shifts on every run. It patches one mislabeled site by hand in a cell no clean run
-repeats. It silently drops the below-detection-limit samples with no note on why. And
-its data was downloaded "sometime last spring" with no version. Five sins, and every
+shifts on every run. It patches one duplicated precinct name by hand in a cell no
+clean run repeats. It silently drops every precinct whose registered-voter count was
+missing, with no note on why. And its data was downloaded "sometime last spring,"
+before the state certified the count, with no version recorded. Five sins, and every
 one breaks the rerun.
 
-The **clean capsule** loads the same data through a shared URL, with the source,
-date, and licence in the provenance note. It fixes `SEED = 464` before the bootstrap.
-It records the one relabel in the decision log with its reason. It keeps the
-below-detection samples, or drops them by a logged, pre-declared rule. Now a stranger
-clears the kernel, runs top to bottom, and your share above 10 mg/L comes back. Same
-number, no guessing.
+The **clean capsule** loads the certified file through its public URL, with the
+source, the download date, and the terms of use in the provenance note. It fixes
+`SEED = 464` before the bootstrap. It records the one relabel in the decision log with
+its reason. It keeps the precincts with missing registration counts, or drops them by
+a logged, pre-declared rule. Now a stranger clears the kernel, runs top to bottom, and
+your share of precincts below 40% comes back. Same number, no guessing.
 
 Here is the honesty check the auditor cannot do for you. The clean capsule can still
-be *wrong*: your seed might be fixed on the wrong subset, or your detection-limit
-rule might be a bad rule cleanly logged. Runnable is not correct. That gap is exactly
-why your capsule is exercised by a partner, not only by a script.
+be *wrong*: your seed might be fixed on the wrong subset, or dropping the
+missing-registration precincts might be a bad rule cleanly logged. Runnable is not
+correct. That gap is exactly why your capsule is exercised by a person, not only by a
+script.
 
 ## The Colab laboratory
 
 This chapter's lab is notebook **nb15 — From poster to research note**. Open it in
 Colab with the badge above. There you build `audit_capsule`, watch it flag all five
 sins in a deliberately broken package and none in a clean one, then paste your own
-capsule's key lines in and fix what it catches before Friday's studio.
+capsule's key lines in and fix what it catches.
 
 ## Recommended AI prompts
 
-Commit your own answer first, then delegate. Each prompt is a checkable job, not a
-verdict.
+Commit your own answer first, then delegate. Packaging is a loop you will run more
+than once: you ask, you fix what comes back, you rerun the capsule cold, and the rerun
+surfaces the next gap. Some tools will now run that loop themselves, editing files and
+rerunning until nothing errors. A loop that ends with no errors has proved the code
+executes. It has not proved the numbers are right, and only you can tell the
+difference. Each prompt is a checkable job, not a verdict.
 
 **Locate the standard tool.**
 
@@ -136,10 +144,10 @@ and the claim that a stranger can trust it, are yours.
 ## An AI failure case
 
 You paste your notebook into Gemini and ask, "will this run cold and produce my
-nitrate share?" It walks through every cell and answers, with total confidence,
+low-turnout share?" It walks through every cell and answers, with total confidence,
 "Yes, this runs top to bottom cleanly and returns your headline number." It sounds
 like a green check. It is not. Gemini never executed anything. It read the code and
-narrated it. Cell 3 loads `~/Desktop/nitrate_clean.csv`, a path only your laptop has,
+narrated it. Cell 3 loads `~/Desktop/turnout_clean.csv`, a path only your laptop has,
 and the fluent walkthrough described reading that file as if it were sitting there.
 
 You catch it the only way that counts: you actually run restart-and-run-all on a
@@ -147,37 +155,26 @@ fresh kernel, ideally in Colab on a machine that is not yours. The `FileNotFound
 appears on cell 3 in seconds. A narrated run is not a run. You verify the notebook by
 executing it, not by reading a paragraph about executing it.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project already has a research note and a folder that runs; this step turns the
+two into one capsule someone could pick up a year from now and reuse.*
 
-Verify this chapter's key result, that your capsule reproduces, with a **benchmark
-result** from the [verification guide](../verification-guide.qmd):
-compare a fresh run against a previously verified value. Record your headline number
-from your own machine. Then clear the kernel and run all in a second environment, a
-classmate's laptop or a clean Colab session, and check that the number returns within
-rounding. A match means the capsule travels. A mismatch means something you carried
-by hand, a path, a seed, an unlogged edit, was doing quiet work you never packaged.
-Two machines, one number, is a reproduced result.
-
-## Project transfer
-
-This chapter builds the capsule half of your **research note and reproducibility
-capsule**, the project milestone for this topic. Assemble the five parts for your own
-project, run `audit_capsule` on your key lines, and fix the first sin it flags. Then
-do the thing the script cannot: hand
-the folder to a partner at Friday's studio and have them clear the kernel and rerun
-it cold. The number they get, set next to the number you reported, is your
-reproducibility evidence, and their rerun is what turns "it runs for me" into a claim
-you can defend.
-
-## Defend your decision
-
-In four sentences, defend your capsule. Name what you put in it and the one package
-sin you were most tempted to leave unfixed. State the bounded claim you can now make,
-"a stranger reran this and got my number," and its boundary: runnable is not correct,
-and reproduced on the machines you tried is not proof it runs everywhere. Close with
-your uncertainty: the one input or step a cold replicator might still trip on, and the
-check you would run next to close it.
+1. Assemble the five parts for your own project: the runnable notebook, the
+   data-provenance note, the fixed seed, the decision log, and your AI-use ledger.
+   Anything a reader would otherwise have to guess belongs in one of the five.
+2. Run the chapter's audit on your own key lines and fix what it flags, starting with
+   the sin you were most tempted to leave alone. Hard-coded paths and missing seeds
+   are the two that break strangers most often.
+3. Write the README a stranger reads first: what the project asks, what the headline
+   number is, which file produces it, and in what order to run things.
+4. Rerun it cold in a second environment, a clean Colab session or a machine that is
+   not yours, and check the headline returns within rounding. A number that travels is
+   reproducible. A number that does not means something you carried by hand was doing
+   quiet work you never packaged.
+5. Write one honest sentence about the limit of all this: your capsule is runnable,
+   which is not the same as correct, and name the choice inside it you would most want
+   a reviewer to question.
+6. Log the packaging round in your AI Research Ledger, and verify at least one output
+   with a named method from the [Verification Guide](../verification-guide.qmd). An AI
+   reviewer may run the check with you; the decision to accept or reject stays yours.

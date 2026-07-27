@@ -4,16 +4,21 @@ title: "Prediction and Generalization"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb){target="_blank"}
 
-> **The research decision.** Decide whether your question is truly a *prediction*
-> about cases you have not yet seen, and if it is, commit in advance to a four-part
-> forecasting contract (target, baseline, split, metric) plus a leakage check, so
-> you can defend a modest honest score and say exactly where it stops generalizing.
+> **The research decision.** Decide whether your question is truly a *forecast*
+> about cases nobody has seen yet, and if it is, sign a four-part contract before
+> you fit anything: target, baseline, split, metric, plus a leakage check. That
+> contract is what lets you defend a modest honest score and say out loud where
+> your forecast stops working.
 
 ## Why this decision matters
 
-Picture a county public-health officer who must decide, each Friday, whether to
-post a swimming advisory at a lake. A vendor arrives with a model that flags
-harmful algal blooms "with 94% accuracy."
+**The decision on the table: whether you are forecasting unseen cases, and if you
+are, what score you would accept as honest.**
+
+Picture a county public-health officer who must decide, week by week, whether to
+post a swimming advisory at a lake. Blooms of cyanobacteria can turn a swimming
+beach into a hazard in days. A vendor arrives with a model that flags harmful
+blooms "with 94% accuracy."
 
 > *"Ninety-four percent compared to WHAT? Most weeks this lake is fine, so if I
 > just say 'no bloom' every single week I am already right about eighty-five
@@ -86,7 +91,11 @@ correlation and timing before you retrain clean.
 ## Recommended AI prompts
 
 Commit your own answer first, then delegate. Paste real output, never a number you
-remember.
+remember. Expect to run each prompt more than once: read the answer, name the part
+you do not believe, put that objection back into the prompt, run it again. Tools
+that run that loop by themselves, fitting and refitting a model across several
+turns, make the leakage question below more urgent rather than less. Nobody in the
+loop but you knows when your data were recorded.
 
 ```
 Act as a Python tutor. Here is a cell that holds out 25% of my weekly
@@ -146,36 +155,30 @@ it with one question statistics alone cannot answer. When is chlorophyll measure
 During the bloom, so no forecast made a week earlier could have it. Drop it, watch
 the score fall back to 0.88, and keep the honest model.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your design is declared and diagnosed. This step decides whether your project is
+really forecasting cases nobody has seen yet, and if it is, puts that forecast
+under contract before you fit a single model.*
 
-Verify the chapter's key result with a **holdout sample**, the verification-guide
-method for any fitted model: never report a score computed on rows the model
-trained on. Confirm the split is real by checking that no held-out week appears in
-the training set, a one-line **direct calculation** on the row indices. Then falsify
-the leak: refit with the suspect feature removed and confirm the score drops back to
-the honest held-out number. If pulling one feature collapses your accuracy, that
-feature was doing work a real forecast cannot.
-
-## Project transfer
-
-This chapter builds the spine of your **declared analysis protocol** milestone, the plan
-for how you will analyze your data, fixed before you touch it. Draft four pieces for
-your project: the prediction verdict (target, baseline, split, metric, in that
-order, or an honest "prediction is the wrong question, and here is why"), the
-feature most likely to leak with the timing check that rules it out, the honesty
-checks you will run before reporting, and a one-sentence claim boundary. The
-prediction-and-leakage auditor tests exactly these at Friday's studio.
-
-## Defend your decision
-
-State and defend the decision this chapter equips. Name your target and the
-baseline it must beat. State the compass position out loud: prediction, descriptive
-kind, unseen-cases reach, with no causal reading of any model weight. Then name the
-edge of what you can claim: your uncertainty (the spread you see when you repeat the
-held-out split several times, a check called cross-validation), your leakage risk,
-and the population where your forecast may stop generalizing. A forecast reported
-without its boundary and its uncertainty is not yet defensible.
+1. Ask the blunt version of your question: does your project need to guess an
+   outcome for a case whose outcome does not exist yet? Write yes or no, and the
+   one sentence that justifies your answer.
+2. If yes, sign the four-part contract, in order. Name the target column, the
+   dumbest honest baseline it has to beat, the split that keeps a slice of cases
+   unseen, and the metric matched to how rare your outcome is.
+3. List your features and write beside each one the moment its value is settled.
+   Circle anything settled at or after the outcome. That circled set is your
+   leakage list, and it belongs in your write-up whether or not you drop the
+   features on it.
+4. Write the boundary in one sentence: the cases your forecast covers, and the
+   ones a reader should not assume it covers. Be specific about what makes them
+   different.
+5. If prediction is not your question, write the line that says so plainly, then
+   run step 3 anyway. A variable settled after the outcome quietly sinks
+   descriptive and causal work too.
+6. Log the step in your AI Research Ledger, and verify at least one output with a
+   named method from the [Verification Guide](../verification-guide.qmd). For a
+   fitted model the method is a holdout sample: never report a score computed on
+   rows the model trained on. An AI reviewer may run the check with you; the
+   decision to accept or reject stays yours.

@@ -4,20 +4,24 @@ title: "The Student as Research Director"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
 
-> **The research decision.** For every task in your project, decide whether to hand
-> it fully to your AI assistant, hand it over and then verify the result yourself, or
-> keep it as a judgment only you may make. This chapter equips you to draw that line
-> and defend where you drew it.
+> **The research decision.** Every task in your project belongs in one of three
+> buckets: safe to delegate, delegate then verify, or never delegate. Your decision
+> here is where each task goes. You sort the list before you open the tool, not in
+> the middle of using it, and you defend the placements one line at a time.
 
 ## Why this decision matters
+
+**The decision on the table: which tasks in your project you hand to an AI, which you
+hand over and then check yourself, and which never leave your hands at all.**
 
 Picture a **principal investigator**, the researcher who runs a lab and owns its
 scientific decisions, briefing a new lab member on the first day:
 
-> *"A research assistant here can run the assay, plot the readings, and format the
-> table. What the assistant does not do is choose the question, decide what the
-> readings mean, or sign the claim. That part is mine. Learn where that line sits,
-> because it does not move just because the assistant got faster."*
+> *"Here is the deal. A research assistant here can run the assay, plot the readings,
+> and format the table, and honestly, they will do it faster than I would. What the
+> assistant does not do is choose the question, decide what the readings mean, or sign
+> the claim. That part is mine. Learn where that line sits, because it does not move
+> just because the assistant got faster."*
 
 AI is the fastest research assistant you will ever direct. The risk is not that it
 does the routine work. The risk is letting it drift into the calls that make the work
@@ -51,28 +55,35 @@ measures mean, the ethics, the boundary of your claim, and the uncertainty you
 report. **Verification** is the step that earns trust: confirming a result yourself,
 by a named method, before you put your name on it.
 
+One thing about delegation has changed, and your triage has to keep up. Handing a task
+to a modern tool rarely means one prompt and one answer. It means a loop: the tool
+drafts, runs, reads its own error, rewrites, and runs again. Increasingly the tool
+closes that loop by itself and shows you only the tidy result at the end. A loop you
+did not watch is not a loop you verified. So when you drop a task into "delegate then
+verify," decide right then what you will inspect when the loop stops, rather than
+deciding later whether the final answer looks plausible.
+
 ## A worked example
 
-An honors biology student wonders whether a common food preservative, sodium
-benzoate, slows the growth of a harmless lab strain of *E. coli*. She measures growth
-by **optical density**, how cloudy a liquid culture gets as cells multiply, read on a
-plate reader as OD600. She is the director. The AI is her assistant. Here is her
-triage.
+You are asking whether a common food preservative, sodium benzoate, slows the growth
+of a harmless lab strain of *E. coli*. You measure growth by **optical density**, how
+cloudy a liquid culture gets as cells multiply, read on a plate reader as OD600. You
+are the director. The AI is your assistant. Here is your triage.
 
 **Safe to delegate.** Reformatting three plates of raw OD600 numbers into one tidy
-table, and drafting a plain-language version of her methods paragraph. If a value lands
-in the wrong column, one glance catches it, so the stakes are low.
+table, and drafting a plain-language version of your methods paragraph. If a value
+lands in the wrong column, one glance catches it, so the stakes are low.
 
 **Delegate then verify.** Locating a standard protocol for reading bacterial growth
 curves, and drafting the formula for **doubling time**, the hours a population takes to
-double in number. She hands these out, then confirms each: she opens the actual
-protocol, and she recomputes one doubling time by hand from two printed OD values.
+double in number. You hand these out, then confirm each: you open the actual protocol,
+and you recompute one doubling time by hand from two printed OD values.
 
-**Never delegate.** Deciding that the concentrations she tests are biologically
-meaningful and safe, deciding whether a gap between the treated and untreated curves
-licenses the word "inhibits," and stating how uncertain that conclusion is given three
-plates and one strain. No tool makes those calls. The moment she lets it, she becomes
-a reader of someone else's guess.
+**Never delegate.** Deciding that the concentrations you test are biologically
+meaningful and safe. Deciding whether a gap between the treated and untreated curves
+licenses the word "inhibits." Stating how uncertain that conclusion is, given three
+plates and one strain. No tool makes those calls. The moment you let it, you become a
+reader of someone else's guess.
 
 ## The Colab laboratory
 
@@ -85,7 +96,9 @@ and name, for your own project, two decisions you will never hand over.
 ## Recommended AI prompts
 
 Each prompt below is **commit-first**: write your own answer before you open the tool,
-so its reply has something of yours to disagree with.
+so its reply has something of yours to disagree with. Expect to run each one more than
+once. You read the reply, find the weak spot, sharpen the prompt, and go again. The
+loop is normal; stopping the loop before you have checked anything is the mistake.
 
 **Locate a bench resource (delegable).**
 
@@ -121,8 +134,8 @@ not agree with me.
 ```
 
 After running, verify (counters *sycophantic agreement*): if the reviewer folds and
-praises your call, push back and take its strongest objection to a classmate or your
-instructor rather than trusting the tool's approval.
+praises your call, push back, then take its strongest objection to a colleague or
+mentor rather than trusting the tool's approval.
 
 ::: {.callout-important title="Do not delegate"}
 The buckets themselves are yours to fill, and three calls never leave the "never
@@ -144,33 +157,27 @@ You catch it two ways. You wrote your own triage before you asked, and your vers
 that row as never delegate, so the mismatch jumps out. Then you try to retrieve the
 "standard cutoff," and nothing real supports it. The row goes back where it belongs.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*You have a ledger and three curiosities. Now you take the job of the person who
+decides who does what.*
 
-The key result of this chapter is a triage, which is a judgment, so verify it with
-**peer reasoning**: walk your three buckets past a classmate or the instructor and ask
-them to challenge any placement. A judgment that survives a skeptical second reader is
-far stronger than one you sorted alone. For any "delegate then verify" row that names a
-source, add **primary-source reading**: open the actual protocol or paper and confirm
-it says what the tool claimed.
-
-## Project transfer
-
-This chapter builds the spine of your **research-and-AI baseline**, the first project
-milestone, which you present at Friday's studio. That milestone asks you to name two
-decisions in your own project that you will not delegate, and to say in one sentence
-each why each is yours to own.
-The triage you practice here is exactly that list, written for your topic instead of
-the *E. coli* example.
-
-## Defend your decision
-
-In a short paragraph, state your rule for a task you are unsure about, then defend it.
-Name the task, name the bucket you put it in, and give the check you would run if you
-delegated it. Then state the boundary: what would move it to a different bucket, and
-how confident you are that you drew the line in the right place. If you cannot yet name
-where you might over-trust the tool, say so plainly. That admission is itself a finding
-about the habit you most need to watch.
+1. Pick the curiosity from Chapter 1 you are most drawn to, and list every task the
+   project around it would need: finding sources, gathering or cleaning data, choosing
+   measures, computing, drafting, interpreting, deciding. Aim for at least ten lines,
+   and do not filter yet.
+2. Sort every line into safe to delegate, delegate then verify, or never delegate, with
+   a one-line reason beside it. That sorted list is your director's task list, and you
+   will keep amending it for the rest of the book.
+3. For each "delegate then verify" line, name the check now, while it is cheap: which
+   document you will open, which number you will recompute, which second method you
+   will run.
+4. Star the two lines you would defend hardest as never-delegate, and write one
+   sentence each on why those calls are what make the project yours.
+5. Hand the same list to an AI tool, ask it to argue with your placements, and keep
+   only the changes you can justify out loud.
+6. Log that exchange in your AI Research Ledger, and verify at least one placement with
+   a named method from the [Verification Guide](../verification-guide.qmd). A triage is
+   a judgment, so the fitting method is peer reasoning: walk your three buckets past a
+   colleague or mentor and let them challenge a placement. An AI reviewer may run the
+   check with you; the decision to accept or reject stays yours.
