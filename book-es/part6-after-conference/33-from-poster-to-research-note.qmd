@@ -48,19 +48,19 @@ pregunta respondible que cierra exactamente ese vacío. Ejemplo: la clientela se
 se va durante la hora pico de la mañana (problema); los estudios publicados de tiempos
 de espera solo miden horas tranquilas y estables (vacío); cuánto recorta la espera en la
 hora pico de esta cafetería una opción de pedido anticipado por celular (pregunta). La
-columna se sostiene solo cuando el vacío es real, y un vacío es real solo cuando muestras
-lo que ya se sabe con **densidad de evidencia**, la parte de un párrafo que descansa en
-fuentes que alguien podría abrir en vez de en pura aserción. Ejemplo: "como todo el mundo
-sabe" no carga densidad; una oración que descansa en una cifra publicada que alguien
-puede consultar y recalcular carga alguna.
+columna se sostiene solo cuando el vacío es real, y un vacío es real solo cuando
+muestras lo que ya se sabe con **densidad de evidencia**, la parte de un párrafo que
+descansa en fuentes que alguien podría abrir en vez de en pura aserción. Ejemplo: "como
+todo el mundo sabe" no carga densidad; una oración que descansa en una cifra publicada
+que alguien puede consultar y recalcular carga alguna.
 
 La segunda mitad de la nota necesita un término más. Una **jerarquía de resultados** es
 el orden en que presentas los hallazgos, primero el mejor respaldado y al final el más
 frágil. Ejemplo: una mediana medida sobre mil mañanas simuladas encabeza; un pedido
 inusualmente rápido espera al fondo, etiquetado como exploratorio. Tus limitaciones
 siguen la misma disciplina, enunciadas en proporción a lo que de verdad amenaza la
-afirmación: "medido sobre un patrón de llegadas simulado, no sobre un sábado real de hora
-pico", no un genérico "se necesita más investigación".
+afirmación: "medido sobre un patrón de llegadas simulado, no sobre un sábado real de
+hora pico", no un genérico "se necesita más investigación".
 
 Por último, una nota que quien lee no puede volver a ejecutar es media afirmación. La
 otra mitad es una **cápsula de reproducibilidad**, todo lo que una persona desconocida
@@ -78,23 +78,23 @@ recuadro en una afirmación que puedas defender.
 **Ordena los hallazgos.** A lo largo de mil llegadas de clientela en una simulación con
 semilla de la hora pico de la mañana, la mediana del tiempo de espera bajó alrededor de
 38%, con un intervalo estrecho a su alrededor. También notaste una persona con pedido
-anticipado que fue atendida casi al instante, una caída de 95%. El número sorprendente es
-esa única persona; el defendible es la mediana sobre mil llegadas. Así que la mediana
+anticipado que fue atendida casi al instante, una caída de 95%. El número sorprendente
+es esa única persona; el defendible es la mediana sobre mil llegadas. Así que la mediana
 encabeza, y la persona sola va al fondo, etiquetada como una observación, no como un
 resultado.
 
 **Dimensiona la afirmación.** El titular honesto dice: "sobre este patrón de llegadas
-simulado, añadir pedido anticipado por celular recortó la mediana del tiempo de espera en
-cerca de 38% (intervalo adjunto); esta es una medición sobre demanda simulada, no una
+simulado, añadir pedido anticipado por celular recortó la mediana del tiempo de espera
+en cerca de 38% (intervalo adjunto); esta es una medición sobre demanda simulada, no una
 garantía para un sábado real de hora pico". La versión inflada que rechazas: "el pedido
-anticipado por celular hace la cafetería 38% más rápida". Esa oración suelta el patrón de
-demanda, suelta la palabra mediana y le promete a cada persona una espera más corta que
-tu simulación nunca puso a prueba.
+anticipado por celular hace la cafetería 38% más rápida". Esa oración suelta el patrón
+de demanda, suelta la palabra mediana y le promete a cada persona una espera más corta
+que tu simulación nunca puso a prueba.
 
 **Empaquétalo.** Tu cápsula fija la semilla de la simulación, registra la máquina y las
 versiones de las bibliotecas, deja anotado que excluiste el primer pedido de la mañana y
-por qué, y pasa reiniciar y ejecutar todo, así que el 38% vuelve con un kernel limpio. La
-nota ahora es legible y ejecutable.
+por qué, y pasa reiniciar y ejecutar todo, así que el 38% vuelve con un kernel limpio.
+La nota ahora es legible y ejecutable.
 
 ## El laboratorio en Colab
 
@@ -102,8 +102,8 @@ El laboratorio de este capítulo es el cuaderno **nb15 — From poster to resear
 (*del póster a la nota de investigación*). Ábrelo en Colab con el botón de arriba y
 trabaja las celdas junto a este capítulo. Ahí calificas la densidad de evidencia de dos
 párrafos, construyes una jerarquía de resultados viendo cómo un intervalo estrecho se
-gana el primer lugar mientras un intervalo de cuarenta filas espera al fondo, y corres un
-auditor que caza las cinco maneras en que una cápsula de reproducibilidad se rompe.
+gana el primer lugar mientras un intervalo de cuarenta filas espera al fondo, y corres
+un auditor que caza las cinco maneras en que una cápsula de reproducibilidad se rompe.
 
 ## Prompts de IA recomendados
 
@@ -125,10 +125,10 @@ Only include work you are confident exists; mark anything uncertain. Do not
 write my gap paragraph.
 ```
 
-Después de ejecutarlo, verifica: recupera tú misma cada fuente antes de que entre en la
-nota; una fuente que no puedes abrir en segundos está fabricada hasta que se demuestre lo
-contrario. Contrarresta la *fabricación confiada* (una cita inventada llega con la misma
-seguridad que una real).
+Después de ejecutarlo, verifica: recupera por tu cuenta cada fuente antes de que entre
+en la nota; una fuente que no puedes abrir en segundos está fabricada hasta que se
+demuestre lo contrario. Contrarresta la *fabricación confiada* (una cita inventada llega
+con la misma seguridad que una real).
 
 **Enumera cada exceso para verificarlo.**
 
@@ -140,10 +140,10 @@ where I measured one simulated demand pattern. List them; do not rewrite them.
 ```
 
 Después de ejecutarlo, verifica: contrasta cada oración señalada con tu impresión de
-resultados y quédate solo con las ediciones que encogen una afirmación hasta que quepa en
-la evidencia. Contrarresta el *cambio silencioso de alcance* (una oración más afilada que
-asciende "sobre este patrón de llegadas" a "para todo el mundo" ya respondió, en silencio,
-una pregunta distinta).
+resultados y quédate solo con las ediciones que encogen una afirmación hasta que quepa
+en la evidencia. Contrarresta el *cambio silencioso de alcance* (una oración más afilada
+que asciende "sobre este patrón de llegadas" a "para todo el mundo" ya respondió, en
+silencio, una pregunta distinta).
 
 **Hazle red team (revisión adversaria) a la cápsula.**
 
@@ -154,34 +154,35 @@ would need to rerun my number and might not find here. Then name one problem thi
 line-scan can never catch that only a person running it cold would hit.
 ```
 
-Después de ejecutarlo, verifica: contrasta cada hueco con lo que de verdad puedes ver que
-falta, y confirma que el problema "que no se puede detectar" es real releyendo tus propias
-líneas. Contrarresta la *ilusión de exhaustividad* (una cápsula puede verse completa y aun
-así omitir el único insumo que una persona desconocida necesita).
+Después de ejecutarlo, verifica: contrasta cada hueco con lo que de verdad puedes ver
+que falta, y confirma que el problema "que no se puede detectar" es real releyendo tus
+propias líneas. Contrarresta la *ilusión de exhaustividad* (una cápsula puede verse
+completa y aun así omitir el único insumo que una persona desconocida necesita).
 
 ::: {.callout-important title="No delegues"}
 Tres decisiones se quedan contigo por más fluida que sea la herramienta. **Cuál hallazgo
 es tu titular**, **qué tan grande puede ser esa afirmación** y **cuáles fuentes son
 reales** nunca se delegan. Una IA puede afilar una oración, pero una oración más afilada
 no es un hallazgo más grande, y la prosa limpia es exactamente por donde se cuela un
-exceso. Tú eres dueña de las palabras que firmas, de su límite y de su incertidumbre.
+exceso. Las palabras que firmas son tuyas, y también su límite y su incertidumbre.
 :::
 
 ## Un caso de falla de la IA
 
 Pegas tu discusión en Gemini y le pides que afile la escritura. Devuelve una prosa más
 limpia, y pasa tu corrector ortográfico sin una sola marca. Enterrada en el pulido, una
-oración cambió de tamaño. Tu original decía "la mediana del tiempo de espera bajó alrededor
-de 38% sobre este patrón de llegadas simulado". La reescritura dice "el pedido anticipado
-por celular hace la cafetería alrededor de 38% más rápida". La palabra mediana desapareció,
-el límite del patrón de demanda desapareció, y una medición sobre demanda simulada ahora le
-promete a cada persona una espera más corta. La oración se lee mejor y afirma más.
+oración cambió de tamaño. Tu original decía "la mediana del tiempo de espera bajó
+alrededor de 38% sobre este patrón de llegadas simulado". La reescritura dice "el pedido
+anticipado por celular hace la cafetería alrededor de 38% más rápida". La palabra
+mediana desapareció, el límite del patrón de demanda desapareció, y una medición sobre
+demanda simulada ahora le promete a cada persona una espera más corta. La oración se lee
+mejor y afirma más.
 
 Lo detectas comparando la reescritura contra tu oración original y contra tu resultado
-impreso. El número vino de una mediana sobre una simulación con semilla, no de un promedio,
-y no de un sábado real de hora pico, así que la afirmación general no está autorizada. Te
-quedas con las ediciones que aclaran y rechazas la que infló. La prosa fluida no es
-evidencia. Verificas la afirmación, no el pulido.
+impreso. El número vino de una mediana sobre una simulación con semilla, no de un
+promedio, y no de un sábado real de hora pico, así que la afirmación general no está
+autorizada. Te quedas con las ediciones que aclaran y rechazas la que infló. La prosa
+fluida no es evidencia. Verificas la afirmación, no el pulido.
 
 ## Ahora te toca a ti
 

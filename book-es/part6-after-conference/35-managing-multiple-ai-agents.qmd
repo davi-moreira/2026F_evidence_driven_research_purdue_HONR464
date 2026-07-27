@@ -20,110 +20,113 @@ en qué orden, y qué paso mantienes fuera de todos ellos.**
 > — tu **directora de tesis**, leyendo el borrador que estás por defender
 
 A estas alturas, una sola asistente de IA puede redactar, citar, criticar y pulir de un
-tirón. La tentación es abrir cuatro a la vez y sentirse cuatro veces más segura. No lo
-estás. Cuatro roles que leen el mismo borrador con las mismas instrucciones tienden a
-pasar por alto lo mismo y a coincidir en voz alta al respecto. Y cada uno de esos roles no
-es un prompt. Es un bucle, corriendo hasta que tú o él deciden parar. Cuatro bucles a la
-vez son cuatro veces la salida y, sin gestión, cuatro veces el trabajo sin supervisar. La
-directora de arriba no quiere un coro más ruidoso. Quiere ver que partiste el trabajo en
-piezas, pusiste esas piezas en un orden sensato y seguiste siendo la única persona que
-decidió qué afirma el borrador. Este capítulo te da esa capacidad de gestión.
+tirón. La tentación es abrir cuatro a la vez y sentir cuatro veces más seguridad. No la
+tienes. Cuatro roles que leen el mismo borrador con las mismas instrucciones tienden a
+pasar por alto lo mismo y a coincidir en voz alta al respecto. Y cada uno de esos roles
+no es un prompt. Es un bucle, corriendo hasta que tú o él deciden parar. Cuatro bucles a
+la vez son cuatro veces la salida y, sin gestión, cuatro veces el trabajo sin
+supervisar. La directora de arriba no quiere un coro más ruidoso. Quiere ver que
+partiste el trabajo en piezas, pusiste esas piezas en un orden sensato y seguiste siendo
+la única persona que decidió qué afirma el borrador. Este capítulo te da esa capacidad
+de gestión.
 
 ## El concepto
 
-Empieza por la unidad que en realidad estás gestionando. **El bucle de IA** es el ciclo que
-vienes corriendo desde el principio de este libro: escribes el prompt, lees la salida, la
-interrogas, afinas el pedido y lo corres otra vez. Un bucle, una tarea, una persona
-mirando. Las **herramientas agénticas** son sistemas de IA que corren ese bucle solos,
-decidiendo su propio siguiente paso y llamando sus propias herramientas entre tus turnos.
-Ejemplo: pides que se revisen las citas y la herramienta busca, lee, vuelve a revisar y
-corrige a lo largo de varios turnos antes de volver a ti. Es más rápido, y cada turno que
-no leíste es un turno que no supervisaste.
+Empieza por la unidad que en realidad estás gestionando. **El bucle de IA** es el ciclo
+que vienes corriendo desde el principio de este libro: escribes el prompt, lees la
+salida, la interrogas, afinas el pedido y lo corres otra vez. Un bucle, una tarea, una
+persona mirando. Las **herramientas agénticas** son sistemas de IA que corren ese bucle
+solos, decidiendo su propio siguiente paso y llamando sus propias herramientas entre tus
+turnos. Ejemplo: pides que se revisen las citas y la herramienta busca, lee, vuelve a
+revisar y corrige a lo largo de varios turnos antes de volver a ti. Es más rápido, y
+cada turno que no leíste es un turno que no supervisaste.
 
-Así que la verdadera pregunta de gestión no es cuántos prompts escribes. Es cuántos bucles
-tienes corriendo, qué tiene permitido tocar cada uno y dónde se pasan el trabajo entre sí.
-Orquestas bucles, no prompts.
+Así que la verdadera pregunta de gestión no es cuántos prompts escribes. Es cuántos
+bucles tienes corriendo, qué tiene permitido tocar cada uno y dónde se pasan el trabajo
+entre sí. Orquestas bucles, no prompts.
 
 El movimiento que convierte una multitud de bucles en un flujo de trabajo que puedes
 defender es la **descomposición de tareas**: partir un trabajo grande en subtareas más
-pequeñas, cada una con una sola dueña clara. Ejemplo: en vez de pedirle a una herramienta
-que "mejore mi borrador", partes el trabajo en revisar el diseño, revisar las citas y
-apretar la prosa. Cada pieza tiene ahora un aprobado o reprobado que puedes juzgar.
+pequeñas, cada una con una sola dueña clara. Ejemplo: en vez de pedirle a una
+herramienta que "mejore mi borrador", partes el trabajo en revisar el diseño, revisar
+las citas y apretar la prosa. Cada pieza tiene ahora un aprobado o reprobado que puedes
+juzgar.
 
 Cada pieza se vuelve un **rol acotado**: una tarea de IA lo bastante estrecha como para
-enunciarla en una oración y comprobarla en una pasada. Ejemplo: "señala cada oración de mi
-sección de resultados que afirme más de lo que mi muestra puede sostener". Un rol acotado
-tiene una línea de meta clara. "Hazlo mejor" no la tiene. Esa línea de meta es lo que hace
-seguro correr el bucle del rol: el bucle se detiene cuando la tarea está hecha, y desde
-fuera puedes notar si lo está.
+enunciarla en una oración y comprobarla en una pasada. Ejemplo: "señala cada oración de
+mi sección de resultados que afirme más de lo que mi muestra puede sostener". Un rol
+acotado tiene una línea de meta clara. "Hazlo mejor" no la tiene. Esa línea de meta es
+lo que hace seguro correr el bucle del rol: el bucle se detiene cuando la tarea está
+hecha, y desde fuera puedes notar si lo está.
 
-La columna vertebral que mantiene honestos a los roles es el **par trabajador-crítico**: un
-rol produce algo y un segundo rol, aparte, ataca lo que el primero produjo. Ejemplo: un
-trabajador redacta tu párrafo de limitaciones y después un crítico caza la limitación que
-el trabajador dejó fuera. Un trabajador solo confía en su propia calidad, que es
+La columna vertebral que mantiene honestos a los roles es el **par trabajador-crítico**:
+un rol produce algo y un segundo rol, aparte, ataca lo que el primero produjo. Ejemplo:
+un trabajador redacta tu párrafo de limitaciones y después un crítico caza la limitación
+que el trabajador dejó fuera. Un trabajador solo confía en su propia calidad, que es
 exactamente el punto ciego que no puede ver desde adentro.
 
 Conectar los roles significa decidir qué espera a qué. Una **dependencia** es un orden
 obligatorio entre dos subtareas, donde una necesita la salida de la otra antes de poder
 empezar. Ejemplo: un crítico no puede atacar un borrador que el trabajador todavía no ha
-escrito. Los roles sin dependencia entre ellos corren al mismo tiempo. Los roles unidos por
-una corren en orden.
+escrito. Los roles sin dependencia entre ellos corren al mismo tiempo. Los roles unidos
+por una corren en orden.
 
 La cadena de dependencias que no puedes acortar es la **ruta crítica**: la secuencia más
 larga de pasos que deben seguirse uno tras otro en tu flujo de trabajo. Ejemplo: el
 trabajador redacta, después el crítico ataca, después tú integras son tres pasos que no
 pueden colapsar en menos. Esa cadena fija el número mínimo de rondas que toma tu flujo.
 Leer la ruta crítica en tu propio diseño, en vez de adivinarla, es la habilidad que este
-capítulo entrena. Cuéntala en bucles, no en mensajes. Un solo rol puede tomar cuatro turnos
-de prompts para terminar su única tarea, y sigue ocupando un nodo de la ruta.
+capítulo entrena. Cuéntala en bucles, no en mensajes. Un solo rol puede tomar cuatro
+turnos de prompts para terminar su única tarea, y sigue ocupando un nodo de la ruta.
 
 ## Un ejemplo resuelto
 
-Estás terminando el texto de un pequeño estudio de salud: si una caminata de diez minutos
-después del almuerzo se asocia con una frecuencia cardíaca en reposo más baja por la tarde
-entre las personas que viven en tu piso de la residencia. Tienes un borrador y cuatro roles
-de IA esperando.
+Estás terminando el texto de un pequeño estudio de salud: si una caminata de diez
+minutos después del almuerzo se asocia con una frecuencia cardíaca en reposo más baja
+por la tarde entre las personas que viven en tu piso de la residencia. Tienes un
+borrador y cuatro roles de IA esperando.
 
 **Parte.** Divides la revisión en roles acotados. Un **revisor de claridad** comprueba si
 cada oración se lee con sencillez. Un **metodólogo** comprueba si "se asoció con" es la
-palabra honesta para lo que tus datos pueden mostrar. Un **verificador de citas** confirma
-que los dos estudios de frecuencia cardíaca que citas son reales y dicen lo que afirmas. Un
+palabra honesta para lo que tus datos pueden mostrar. Un **verificador de citas**
+confirma que los dos estudios de frecuencia cardíaca que citas son reales y dicen lo que
+afirmas. Un
 **editor** aprieta la prosa. Cada rol es dueño de una tarea de una oración.
 
 **Conecta.** El trabajador redacta tu párrafo de limitaciones. Los tres críticos pueden
-leer ese borrador en el mismo momento, porque ninguno necesita la salida de otro. Eso son
-tres bucles corriendo en paralelo. Cada uno toma los turnos que necesite: el verificador de
-citas probablemente corre cuatro o cinco, buscando, sin encontrar uno de tus estudios y
-volviendo para decírtelo. Después tú integras sus notas, y el editor aprieta lo que
-sobrevivió. Sigue las flechas: del trabajador a un crítico es una, del crítico a ti son
-dos, de ti al editor son tres. Tu ruta crítica tiene tres flechas de profundidad, y corre
-tres bucles en su punto más ancho.
+leer ese borrador en el mismo momento, porque ninguno necesita la salida de otro. Eso
+son tres bucles corriendo en paralelo. Cada uno toma los turnos que necesite: el
+verificador de citas probablemente corre cuatro o cinco, buscando, sin encontrar uno de
+tus estudios y volviendo para decírtelo. Después tú integras sus notas, y el editor
+aprieta lo que sobrevivió. Sigue las flechas: del trabajador a un crítico es una, del
+crítico a ti son dos, de ti al editor son tres. Tu ruta crítica tiene tres flechas de
+profundidad, y corre tres bucles en su punto más ancho.
 
 **Mantén un paso humano.** El paso de integrar es tuyo, y es el único nodo sin bucle
-conectado. Cuando el metodólogo dice que tu resultado de caminata y frecuencia cardíaca es
-solo una asociación y el revisor de claridad amó la oración que la llamaba efecto, ningún
-rol zanja ese choque. Tú sí. La decisión sobre qué afirma el texto nunca entra al flujo de
-trabajo como una tarea delegada.
+conectado. Cuando el metodólogo dice que tu resultado de caminata y frecuencia cardíaca
+es solo una asociación y el revisor de claridad amó la oración que la llamaba efecto,
+ningún rol zanja ese choque. Tú sí. La decisión sobre qué afirma el texto nunca entra al
+flujo de trabajo como una tarea delegada.
 
 Las herramientas redactaron, señalaron y pulieron. Tú partiste el trabajo, fijaste el
-orden, decidiste cuándo cada bucle había corrido lo suficiente y fuiste dueña de la
-afirmación que lleva tu nombre.
+orden, decidiste cuándo cada bucle había corrido lo suficiente, y la afirmación que
+lleva tu nombre siguió siendo tuya.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb16 — Managing multiple AI agents + the
-final defense** (*gestionar varios agentes de IA y la defensa final*). Ábrelo en Colab con
-el botón de arriba y trabaja las celdas junto a este capítulo. Ahí construyes el flujo
-trabajador-crítico como un grafo dirigido, lees su profundidad de ruta crítica y su ancho
-paralelo directo del código, y ves la ruta crecer una ronda en el momento en que haces que
-un crítico espere a otro crítico. Después descompones tu propio borrador en roles acotados
-y defiendes el cableado que elegiste.
+El laboratorio de este capítulo es el cuaderno **nb16 — Managing multiple AI agents +
+the final defense** (*gestionar varios agentes de IA y la defensa final*). Ábrelo en
+Colab con el botón de arriba y trabaja las celdas junto a este capítulo. Ahí construyes
+el flujo trabajador-crítico como un grafo dirigido, lees su profundidad de ruta crítica
+y su ancho paralelo directo del código, y ves la ruta crecer una ronda en el momento en
+que haces que un crítico espere a otro crítico. Después descompones tu propio borrador
+en roles acotados y defiendes el cableado que elegiste.
 
 ## Prompts de IA recomendados
 
-Comprométete primero con tu propia respuesta y después delega. Cada prompt de abajo abre un
-bucle que tú supervisas, y uno de ellos es un bucle sobre tus otros bucles. Lee lo que
-vuelve, empuja contra la parte débil, córrelo otra vez. Cada prompt es una tarea
+Comprométete primero con tu propia respuesta y después delega. Cada prompt de abajo abre
+un bucle que tú supervisas, y uno de ellos es un bucle sobre tus otros bucles. Lee lo
+que vuelve, empuja contra la parte débil, córrelo otra vez. Cada prompt es una tarea
 verificable, no una petición de veredicto.
 
 **Descompón y devuelve el paso humano.**
@@ -135,8 +138,9 @@ per role: the role's one-sentence scoped task, the draft or input it needs, whet
 it can run in parallel or must wait on another role, and the single decision it must
 hand back to me.
 ```
-Después de ejecutarlo, verifica: comprueba que cada celda de "devuélvemelo a mí" nombra una
-decisión de no delegar que es real, no una inventada para parecer prudente. Contrarresta la
+Después de ejecutarlo, verifica: comprueba que cada celda de "devuélvemelo a mí" nombra
+una decisión de no delegar que es real, no una inventada para parecer prudente.
+Contrarresta la
 *ilusión de exhaustividad* (una tabla de roles ordenada que se lee exhaustiva mientras omite
 la comprobación que importa).
 
@@ -147,9 +151,10 @@ Here is my proposed workflow as a list of "role A feeds role B" arrows: [paste t
 For each role, tell me exactly what input it depends on, and name any role I have
 scheduled to start before the input it needs actually exists.
 ```
-Después de ejecutarlo, verifica: dibuja tú misma las flechas y sigue si el insumo de cada
-rol existe cuando ese rol empieza. Contrarresta el *método plausible pero equivocado* (un
-cableado confiado que deja correr un rol antes de que su insumo esté listo).
+Después de ejecutarlo, verifica: dibuja por tu cuenta las flechas y sigue si el insumo
+de cada rol existe cuando ese rol empieza. Contrarresta el *método plausible pero
+equivocado* (un cableado confiado que deja correr un rol antes de que su insumo esté
+listo).
 
 **Hazle red team (revisión adversaria) a la descomposición.**
 
@@ -158,44 +163,46 @@ Act as a hostile reviewer of my AI workflow, not of my draft. Name every place a
 early mistake in one role could flow downstream unchecked, and every role whose job
 overlaps another so much that it adds no independent check. Do not rewrite my plan.
 ```
-Después de ejecutarlo, verifica: si solo elogia tu plan, empuja de vuelta y exige la peor
-falla de cableado. Contrarresta el *acuerdo complaciente* (elogio que revisa tu ego, no tu
-flujo de trabajo).
+Después de ejecutarlo, verifica: si solo elogia tu plan, empuja de vuelta y exige la
+peor falla de cableado. Contrarresta el *acuerdo complaciente* (elogio que revisa tu
+ego, no tu flujo de trabajo).
 
 ::: {.callout-important title="No delegues"}
-La partición y el orden pueden apoyarse en una herramienta, pero tres decisiones se quedan
-solo contigo. Tú decides **qué tareas valen su propio bucle** y cuáles solo multiplican una
-salida que no puedes supervisar. Tú decides **el orden**, para que ningún rol zanje una
-pregunta que un rol aguas arriba debió responder primero. Y mantienes **el paso de integrar**
-humano: cuando dos roles no coinciden sobre qué afirma tu borrador, tomas esa decisión con
-tus propias palabras. Un flujo de trabajo que entrega la afirmación a una herramienta no es
-un flujo que puedas defender. La regla escala con el número de bucles en vez de doblarse
-ante él. Más agentes no significa mando más flojo; significa la misma disciplina de mando,
-repetida.
+La partición y el orden pueden apoyarse en una herramienta, pero tres decisiones se
+quedan solo contigo. Tú decides **qué tareas valen su propio bucle** y cuáles solo
+multiplican una salida que no puedes supervisar. Tú decides **el orden**, para que
+ningún rol zanje una pregunta que un rol aguas arriba debió responder primero. Y
+mantienes **el paso de integrar** humano: cuando dos roles no coinciden sobre qué afirma
+tu borrador, tomas esa decisión con tus propias palabras. Un flujo de trabajo que
+entrega la afirmación a una herramienta no es un flujo que puedas defender. La regla
+escala con el número de bucles en vez de doblarse ante él. Más agentes no significa
+mando más flojo; significa la misma disciplina de mando, repetida.
 :::
 
 ## Un caso de falla de la IA
 
-Le pides a una herramienta que diseñe tu flujo de trabajo multiagente, y devuelve un plan
-confiado y bien formateado: corre el trabajador, el metodólogo, el escéptico y el editor
-todos en paralelo para "ahorrar rondas". El plan corre en tu cabeza sin tropiezos. Aquí está
-la trampa. El editor y el escéptico no tienen nada que leer todavía, porque el trabajador no
-ha redactado nada. La herramienta programó tres roles para empezar antes de que exista el
-insumo del que dependen, y lo vistió de eficiencia. Entrega ese plan a una herramienta
-agéntica que lo ejecuta por ti y la falla se vuelve más silenciosa, no más ruidosa: tres
-bucles corren sobre un borrador vacío y devuelven tres revisiones confiadas de nada.
+Le pides a una herramienta que diseñe tu flujo de trabajo multiagente, y devuelve un
+plan confiado y bien formateado: corre el trabajador, el metodólogo, el escéptico y el
+editor todos en paralelo para "ahorrar rondas". El plan corre en tu cabeza sin
+tropiezos. Aquí está la trampa. El editor y el escéptico no tienen nada que leer
+todavía, porque el trabajador no ha redactado nada. La herramienta programó tres roles
+para empezar antes de que exista el insumo del que dependen, y lo vistió de eficiencia.
+Entrega ese plan a una herramienta agéntica que lo ejecuta por ti y la falla se vuelve
+más silenciosa, no más ruidosa: tres bucles corren sobre un borrador vacío y devuelven
+tres revisiones confiadas de nada.
 
-Lo detectas dibujando las flechas y haciendo una pregunta en cada rol: ¿existe el insumo de
-este rol en el momento en que empieza? El insumo del editor es el borrador integrado, que no
-existe hasta el final, así que "editor en paralelo con el trabajador" es imposible.
-Redibujado con honestidad, el plan es una ruta crítica de tres flechas de profundidad, no de
-una. Un plan verde y ordenado no es un plan válido. Revisas las dependencias, no la
-seguridad con que se presentan.
+Lo detectas dibujando las flechas y haciendo una pregunta en cada rol: ¿existe el insumo
+de este rol en el momento en que empieza? El insumo del editor es el borrador integrado,
+que no existe hasta el final, así que "editor en paralelo con el trabajador" es
+imposible. Redibujado con honestidad, el plan es una ruta crítica de tres flechas de
+profundidad, no de una. Un plan verde y ordenado no es un plan válido. Revisas las
+dependencias, no la seguridad con que se presentan.
 
 ## Ahora te toca a ti
 
 *Tu proyecto ya tiene una nota de investigación y una cápsula reutilizable; este paso monta
-el pequeño equipo de IA que te ayudará a revisarlas, sin entregarle al equipo tu criterio.*
+el pequeño equipo de IA que te ayudará a revisarlas, sin entregarle al equipo tu
+criterio.*
 
 1. Elige una sección real de tu proyecto para revisar: tus métodos, tus resultados o tus
    limitaciones. Todo lo de abajo aplica solo a esa sección.

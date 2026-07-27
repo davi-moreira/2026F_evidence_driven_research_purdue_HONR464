@@ -6,8 +6,8 @@ title: "Paquetes de investigación abiertos y reutilizables"
 
 > **La decisión de investigación.** Decides qué entra en la cápsula de reproducibilidad
 > que viaja con tu nota de investigación, y defiendes la afirmación de que una persona
-> desconocida puede volver a ejecutar tu trabajo y obtener tus números. Tú eres dueña de
-> lo que el paquete incluye y de si "esto se reproduce" es honesto, y nunca dejas que una
+> desconocida puede volver a ejecutar tu trabajo y obtener tus números. Tú respondes por
+> lo que el paquete incluye y por si "esto se reproduce" es honesto, y nunca dejas que una
 > ejecución limpia haga pasar por correcta a una que no lo es.
 
 ## Por qué importa esta decisión
@@ -24,8 +24,8 @@ Una nota de investigación argumenta tu afirmación en prosa. La cápsula demues
 afirmación sobrevive sin ti en la sala. Si el único lugar donde tu análisis corre es la
 laptop donde lo construiste, en el orden de clics que resulta que recuerdas, entonces
 nadie puede revisarte, y un resultado que nadie puede revisar es un rumor con gráfico.
-Este capítulo es cómo empaquetas el trabajo para que revisarlo sea fácil, y cómo te
-mantienes honesta sobre lo que "reproducible" significa de verdad.
+Este capítulo es cómo empaquetas el trabajo para que revisarlo sea fácil, y cómo
+conservas la honestidad sobre lo que "reproducible" significa de verdad.
 
 ## El concepto
 
@@ -35,72 +35,74 @@ cuaderno, tus datos y un registro corto de cada decisión hecha a mano. Tiene ci
 partes, cada una definida una sola vez.
 
 - Un **cuaderno ejecutable** que pasa **reiniciar y ejecutar todo**, es decir, borras el
-  kernel y corres cada celda de arriba abajo sin memoria de clics anteriores. Ejemplo:
-  Entorno de ejecución, Reiniciar y ejecutar todo, y tu número titular reaparece.
+kernel y corres cada celda de arriba abajo sin memoria de clics anteriores. Ejemplo:
+Entorno de ejecución, Reiniciar y ejecutar todo, y tu número titular reaparece.
 - Una **nota de procedencia de datos**: de dónde vino cada conjunto de datos, su versión
-  y cómo puede usarse. Ejemplo: la URL de descarga, la fecha y la licencia.
+y cómo puede usarse. Ejemplo: la URL de descarga, la fecha y la licencia.
 - Una **semilla fija**, un número de arranque que hace que cada paso aleatorio devuelva
-  los mismos valores en cada ejecución. Ejemplo: `SEED = 464` alimentando cada remuestreo.
+los mismos valores en cada ejecución. Ejemplo: `SEED = 464` alimentando cada remuestreo.
 - Una **bitácora de decisiones**: las decisiones hechas a mano que dieron forma al
-  resultado, cada una con su razón. Ejemplo: cada fila que descartaste, y por qué.
+resultado, cada una con su razón. Ejemplo: cada fila que descartaste, y por qué.
 - Un **registro de uso de IA**: cada herramienta, su tarea y cómo verificaste su salida.
 
 Las cápsulas se rompen de maneras aburridamente predecibles, lo cual es buena noticia,
 porque una falla predecible es una falla detectable. Con nombre, son **los cinco pecados
 del paquete**: una **ruta escrita a mano** que solo existe en tu máquina, una **semilla
 faltante** que mueve cada ejecución, una **edición manual** que ninguna ejecución limpia
-reproduce, una **exclusión sin documentar** sin razón registrada, y **datos vencidos** que
-quien lee no puede volver a obtener. El auditor del laboratorio busca los cinco. Pero
-quédate con la única línea que carga todo el capítulo: una cápsula con cero alertas es
+reproduce, una **exclusión sin documentar** sin razón registrada, y **datos vencidos**
+que quien lee no puede volver a obtener. El auditor del laboratorio busca los cinco.
+Pero quédate con la única línea que carga todo el capítulo: una cápsula con cero alertas
+es
 **ejecutable**, nunca está probada como **correcta**. El escaneo te lleva a la línea de
 salida. Quien te vuelve a ejecutar en frío es la carrera.
 
 ## Un ejemplo resuelto
 
 Recopilaste la participación electoral por casilla en doce condados de un estado en una
-elección intermedia, y tu titular es la proporción de casillas donde la participación cayó
-por debajo del 40%. Mira el mismo análisis entregado de dos maneras.
+elección intermedia, y tu titular es la proporción de casillas donde la participación
+cayó por debajo del 40%. Mira el mismo análisis entregado de dos maneras.
 
-La **cápsula pecadora** carga `~/Desktop/turnout_clean.csv`, un archivo que solo tiene tu
-laptop. Calcula por bootstrap un intervalo de confianza para esa proporción sin semilla,
-así que el intervalo se mueve en cada ejecución. Corrige a mano un nombre de casilla
-duplicado en una celda que ninguna ejecución limpia repite. Descarta en silencio cada
-casilla cuyo conteo de personas registradas faltaba, sin nota sobre por qué. Y sus datos se
-descargaron "en algún momento de la primavera pasada", antes de que el estado certificara
-el conteo, sin versión registrada. Cinco pecados, y cada uno rompe la nueva ejecución.
+La **cápsula pecadora** carga `~/Desktop/turnout_clean.csv`, un archivo que solo tiene
+tu laptop. Calcula por bootstrap un intervalo de confianza para esa proporción sin
+semilla, así que el intervalo se mueve en cada ejecución. Corrige a mano un nombre de
+casilla duplicado en una celda que ninguna ejecución limpia repite. Descarta en silencio
+cada casilla cuyo conteo de personas registradas faltaba, sin nota sobre por qué. Y sus
+datos se descargaron "en algún momento de la primavera pasada", antes de que el estado
+certificara el conteo, sin versión registrada. Cinco pecados, y cada uno rompe la nueva
+ejecución.
 
-La **cápsula limpia** carga el archivo certificado desde su URL pública, con la fuente, la
-fecha de descarga y los términos de uso en la nota de procedencia. Fija `SEED = 464` antes
-del bootstrap. Registra en la bitácora de decisiones la única corrección de nombre con su
-razón. Conserva las casillas con conteos de registro faltantes, o las descarta con una
-regla registrada y declarada de antemano. Ahora una persona desconocida borra el kernel,
-corre de arriba abajo, y tu proporción de casillas por debajo del 40% vuelve. Mismo número,
-sin adivinanzas.
+La **cápsula limpia** carga el archivo certificado desde su URL pública, con la fuente,
+la fecha de descarga y los términos de uso en la nota de procedencia. Fija `SEED = 464`
+antes del bootstrap. Registra en la bitácora de decisiones la única corrección de nombre
+con su razón. Conserva las casillas con conteos de registro faltantes, o las descarta
+con una regla registrada y declarada de antemano. Ahora una persona desconocida borra el
+kernel, corre de arriba abajo, y tu proporción de casillas por debajo del 40% vuelve.
+Mismo número, sin adivinanzas.
 
 Aquí está la comprobación de honestidad que el auditor no puede hacer por ti. La cápsula
 limpia todavía puede estar *equivocada*: tu semilla podría estar fijada sobre el
-subconjunto incorrecto, o descartar las casillas con registro faltante podría ser una mala
-regla limpiamente registrada. Ejecutable no es correcto. Ese hueco es exactamente por qué
-tu cápsula la ejercita una persona, no solo un script.
+subconjunto incorrecto, o descartar las casillas con registro faltante podría ser una
+mala regla limpiamente registrada. Ejecutable no es correcto. Ese hueco es exactamente
+por qué tu cápsula la ejercita una persona, no solo un script.
 
 ## El laboratorio en Colab
 
 El laboratorio de este capítulo es el cuaderno **nb15 — From poster to research note**
 (*del póster a la nota de investigación*). Ábrelo en Colab con el botón de arriba. Ahí
-construyes `audit_capsule`, lo ves marcar los cinco pecados en un paquete roto a propósito
-y ninguno en uno limpio, y después pegas las líneas clave de tu propia cápsula y arreglas
-lo que detecte.
+construyes `audit_capsule`, lo ves marcar los cinco pecados en un paquete roto a
+propósito y ninguno en uno limpio, y después pegas las líneas clave de tu propia cápsula
+y arreglas lo que detecte.
 
 ## Prompts de IA recomendados
 
-Comprométete primero con tu propia respuesta y después delega. Empaquetar es un **bucle de
-IA** que correrás más de una vez: el ciclo prompt → respuesta → interrogación →
+Comprométete primero con tu propia respuesta y después delega. Empaquetar es un **bucle
+de IA** que correrás más de una vez: el ciclo prompt → respuesta → interrogación →
 refinamiento → nueva ejecución. Preguntas, arreglas lo que vuelve, vuelves a ejecutar la
 cápsula en frío, y esa nueva ejecución saca a la superficie el siguiente hueco. Algunas
-herramientas ya corren ese bucle solas, editando archivos y reejecutando hasta que nada dé
-error. Un bucle que termina sin errores demostró que el código se ejecuta. No demostró que
-los números estén bien, y solo tú puedes notar la diferencia. Cada prompt es una tarea
-verificable, no un veredicto.
+herramientas ya corren ese bucle solas, editando archivos y reejecutando hasta que nada
+dé error. Un bucle que termina sin errores demostró que el código se ejecuta. No
+demostró que los números estén bien, y solo tú puedes notar la diferencia. Cada prompt
+es una tarea verificable, no un veredicto.
 
 **Localiza la herramienta estándar.**
 
@@ -110,8 +112,8 @@ the exact package versions a notebook needs in order to rerun, and cite the offi
 documentation. Only name tools you are confident exist.
 ```
 
-Después de ejecutarlo, verifica: abre la documentación oficial y confirma que el archivo y
-su sintaxis existen. Contrarresta la *fabricación confiada* (un nombre de herramienta
+Después de ejecutarlo, verifica: abre la documentación oficial y confirma que el archivo
+y su sintaxis existen. Contrarresta la *fabricación confiada* (un nombre de herramienta
 inventado llega con la misma seguridad que uno real).
 
 **Enumera para que puedas verificar (la persona que replica en frío).**
@@ -123,9 +125,9 @@ need to rerun my headline number and might not find here.
 ```
 
 Después de ejecutarlo, verifica: contrasta cada hueco nombrado con lo que tu propia
-ejecución de `audit_capsule` de verdad marcó, y descarta cualquier hueco que no corresponda
-a ninguna línea realmente faltante. Contrarresta la *ilusión de exhaustividad* (una cápsula
-ordenada que se ve entera mientras falta un insumo).
+ejecución de `audit_capsule` de verdad marcó, y descarta cualquier hueco que no
+corresponda a ninguna línea realmente faltante. Contrarresta la *ilusión de
+exhaustividad* (una cápsula ordenada que se ve entera mientras falta un insumo).
 
 **Hazle red team (revisión adversaria) a la afirmación.**
 
@@ -135,31 +137,32 @@ replication reviewer and name every way it could fail on a machine that is not m
 Do not fix it for me.
 ```
 
-Después de ejecutarlo, verifica: si solo te tranquiliza, empuja de vuelta y exige la peor
-falla individual. Contrarresta el *acuerdo complaciente* (elogio que revisa tu ego, no tu
-paquete).
+Después de ejecutarlo, verifica: si solo te tranquiliza, empuja de vuelta y exige la
+peor falla individual. Contrarresta el *acuerdo complaciente* (elogio que revisa tu ego,
+no tu paquete).
 
 ::: {.callout-important title="No delegues"}
-Tú decides **qué entra en la cápsula** y si la oración "esto se reproduce" es honesta. La
-herramienta puede enumerar huecos y fijar versiones, pero no puede registrar la procedencia
-verdadera de tus datos, juzgar si la razón registrada de una exclusión es una *buena* razón,
-ni certificar que tu análisis es correcto y no solo ejecutable. El nombre en la carpeta, y
-la afirmación de que una persona desconocida puede confiar en ella, son tuyos.
+Tú decides **qué entra en la cápsula** y si la oración "esto se reproduce" es honesta.
+La herramienta puede enumerar huecos y fijar versiones, pero no puede registrar la
+procedencia verdadera de tus datos, juzgar si la razón registrada de una exclusión es
+una *buena* razón, ni certificar que tu análisis es correcto y no solo ejecutable. El
+nombre en la carpeta, y la afirmación de que una persona desconocida puede confiar en
+ella, son tuyos.
 :::
 
 ## Un caso de falla de la IA
 
-Pegas tu cuaderno en Gemini y preguntas: "¿esto correrá en frío y producirá mi proporción
-de baja participación?". Recorre cada celda y responde, con total confianza: "Sí, esto corre
-de arriba abajo sin problemas y devuelve tu número titular". Suena como una palomita verde.
-No lo es. Gemini nunca ejecutó nada. Leyó el código y lo narró. La celda 3 carga
-`~/Desktop/turnout_clean.csv`, una ruta que solo tiene tu laptop, y el recorrido fluido
-describió la lectura de ese archivo como si estuviera ahí.
+Pegas tu cuaderno en Gemini y preguntas: "¿esto correrá en frío y producirá mi
+proporción de baja participación?". Recorre cada celda y responde, con total confianza:
+"Sí, esto corre de arriba abajo sin problemas y devuelve tu número titular". Suena como
+una palomita verde. No lo es. Gemini nunca ejecutó nada. Leyó el código y lo narró. La
+celda 3 carga `~/Desktop/turnout_clean.csv`, una ruta que solo tiene tu laptop, y el
+recorrido fluido describió la lectura de ese archivo como si estuviera ahí.
 
-Lo detectas de la única manera que cuenta: de verdad corres reiniciar y ejecutar todo en un
-kernel nuevo, idealmente en Colab, en una máquina que no es la tuya. El `FileNotFoundError`
-aparece en la celda 3 en segundos. Una ejecución narrada no es una ejecución. Verificas el
-cuaderno ejecutándolo, no leyendo un párrafo sobre ejecutarlo.
+Lo detectas de la única manera que cuenta: de verdad corres reiniciar y ejecutar todo en
+un kernel nuevo, idealmente en Colab, en una máquina que no es la tuya. El
+`FileNotFoundError` aparece en la celda 3 en segundos. Una ejecución narrada no es una
+ejecución. Verificas el cuaderno ejecutándolo, no leyendo un párrafo sobre ejecutarlo.
 
 ## Ahora te toca a ti
 

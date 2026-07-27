@@ -20,50 +20,49 @@ cuál de sus debilidades pone más en peligro la afirmación.**
 > — una **investigadora principal** que lee el informe de laboratorio de alguien en su primer año
 
 En un laboratorio que trabaja de verdad, un número que nadie más puede regenerar es un
-pasivo, no un hallazgo. Un póster puede redondear, un pie de figura puede exagerar, y
-un cuaderno de apariencia impecable todavía puede esconder la única decisión que
-sostiene toda la afirmación. La investigadora de arriba está aplicando el estándar que
-todo resultado termina enfrentando. Este capítulo te pone primero del lado de quien
-revisa, para que aprendas a ver las grietas antes de que alguien las encuentre en tu
-propio trabajo.
+pasivo, no un hallazgo. Un póster puede redondear, un pie de figura puede exagerar, y un
+cuaderno de apariencia impecable todavía puede esconder la única decisión que sostiene
+toda la afirmación. La investigadora de arriba está aplicando el estándar que todo
+resultado termina enfrentando. Este capítulo te pone primero del lado de quien revisa,
+para que aprendas a ver las grietas antes de que alguien las encuentre en tu propio
+trabajo.
 
 ## El concepto
 
 Dos palabras suenan parecido y significan cosas distintas. La **reproducción** es
-obtener el mismo número a partir de los *mismos* datos y el mismo código que un
-estudio entregó. Ejemplo: abres el cuaderno de otra persona, lo ejecutas de principio
-a fin y compruebas que vuelve a aparecer la misma cifra de crecimiento. La
+obtener el mismo número a partir de los *mismos* datos y el mismo código que un estudio
+entregó. Ejemplo: abres el cuaderno de otra persona, lo ejecutas de principio a fin y
+compruebas que vuelve a aparecer la misma cifra de crecimiento. La
 **replicación** es obtener un resultado parecido a partir de un estudio *nuevo* o de
 datos nuevos. Ejemplo: un segundo laboratorio hace su propio experimento y ve el mismo
 efecto. Este capítulo trata sobre la reproducción. Pones a prueba el paquete, no el
 mundo.
 
-Lo que pones a prueba es un **paquete de reproducibilidad**: el conjunto completo que
-un estudio entrega para que otra persona pueda reconstruir sus números, es decir, los
-datos, el código, el orden de ejecución, cualquier semilla aleatoria y el texto
-escrito. La única cifra sobre la que descansa la afirmación principal es el **número
-titular**. Ejemplo: "el suplemento aumentó el crecimiento larvario en 0.5 mm". Eso es
-lo primero que reconstruyes, usando **reiniciar y ejecutar todo**, que significa borrar
-la memoria del cuaderno y correr todas las celdas desde arriba, sin arreglos manuales.
-Si un número solo aparece cuando las celdas se ejecutan fuera de orden, no es
-reproducible.
+Lo que pones a prueba es un **paquete de reproducibilidad**: el conjunto completo que un
+estudio entrega para que otra persona pueda reconstruir sus números, es decir, los
+datos, el código, el orden de ejecución, cualquier semilla aleatoria y el texto escrito.
+La única cifra sobre la que descansa la afirmación principal es el **número titular**.
+Ejemplo: "el suplemento aumentó el crecimiento larvario en 0.5 mm". Eso es lo primero
+que reconstruyes, usando **reiniciar y ejecutar todo**, que significa borrar la memoria
+del cuaderno y correr todas las celdas desde arriba, sin arreglos manuales. Si un número
+solo aparece cuando las celdas se ejecutan fuera de orden, no es reproducible.
 
 Una ejecución limpia demuestra que el código corre. Nunca demuestra que el texto sea
 verdadero, así que encima de ella corres tres auditorías. La **concordancia entre
-afirmaciones y cálculo** revisa que cada oración que el texto afirma esté respaldada
-por un número que el código de verdad imprime. Una **especificación alternativa** es
-una forma distinta pero igual de defendible de calcular el mismo número titular, para
-ver si la respuesta depende de una decisión que nunca se reveló. Un **supuesto oculto**
-es una afirmación de la que el análisis depende en silencio y que nunca declara, y sin
-la cual el resultado se derrumbaría. El más peligroso en biología tiene nombre: la
+afirmaciones y cálculo** revisa que cada oración que el texto afirma esté respaldada por
+un número que el código de verdad imprime. Una **especificación alternativa** es una
+forma distinta pero igual de defendible de calcular el mismo número titular, para ver si
+la respuesta depende de una decisión que nunca se reveló. Un **supuesto oculto** es una
+afirmación de la que el análisis depende en silencio y que nunca declara, y sin la cual
+el resultado se derrumbaría. El más peligroso en biología tiene nombre: la
 **pseudorreplicación**, tratar mediciones repetidas del mismo animal, placa o tanque
 como puntos de datos independientes cuando la verdadera unidad experimental es el
 animal, la placa o el tanque (Hurlbert, 1984).
 
 ## Un ejemplo resuelto
 
-El paquete de otro laboratorio pone a prueba si un probiótico añadido al agua aumenta
-la longitud corporal de larvas de pez cebra. Seis tanques: tres reciben el probiótico y
+El paquete de otro laboratorio pone a prueba si un probiótico añadido al agua aumenta la
+longitud corporal de larvas de pez cebra. Seis tanques: tres reciben el probiótico y
 tres reciben agua simple. Cada tanque tiene unas 40 larvas, y se registra la longitud
 corporal de cada una. El póster dice: **"El probiótico aumentó la longitud corporal
 larvaria en 0.5 mm."**
@@ -71,8 +70,8 @@ larvaria en 0.5 mm."**
 **Repruébalo.** Reinicias y ejecutas todo. El código carga el archivo, separa las
 larvas por tipo de tanque y calcula la diferencia entre los dos promedios de grupo. El
 número que vuelve es **0.43 mm**, no 0.5. El paquete se reproduce, y eso es un éxito
-real. Pero el texto dice 0.5 y el código dice 0.43. Ese redondeo silencioso es tu
-primer hallazgo, y te gana el derecho a empujar más fuerte.
+real. Pero el texto dice 0.5 y el código dice 0.43. Ese redondeo silencioso es tu primer
+hallazgo, y te gana el derecho a empujar más fuerte.
 
 **Cambia una decisión defendible.** El paquete descartó las larvas que murieron antes
 de la medición final y nunca lo dijo. Conserva en cambio la última longitud registrada
@@ -83,12 +82,12 @@ decisión que el póster nunca reveló, así que el reporte honesto es el rango.
 **Pon a prueba el supuesto oculto.** El paquete reporta su diferencia como si las 240
 larvas fueran independientes, y eso produce un intervalo estrecho muy por encima de
 cero. No son independientes. El probiótico se asignó por tanque, así que las larvas que
-comparten tanque comparten agua, comida y hacinamiento. La verdadera unidad
-experimental es el tanque, y solo hay seis. Recalcula a nivel de tanque, promediando
-primero cada tanque y comparando tres tanques tratados contra tres de control, y el
-intervalo se ensancha hasta que su borde inferior toca el cero. La estimación puntual
-casi no se movió. La incertidumbre honesta a su alrededor explotó. Eso es
-pseudorreplicación, y es la debilidad con dientes.
+comparten tanque comparten agua, comida y hacinamiento. La verdadera unidad experimental
+es el tanque, y solo hay seis. Recalcula a nivel de tanque, promediando primero cada
+tanque y comparando tres tanques tratados contra tres de control, y el intervalo se
+ensancha hasta que su borde inferior toca el cero. La estimación puntual casi no se
+movió. La incertidumbre honesta a su alrededor explotó. Eso es pseudorreplicación, y es
+la debilidad con dientes.
 
 **Ordena por amenaza.** La pseudorreplicación va primero, porque puede disolver la
 afirmación de "efecto claro". La regla de supervivencia no revelada va segunda, porque
@@ -137,8 +136,8 @@ Explain line by line what it computes, and name which printed value is the
 headline a reader should compare against the write-up. Then give me one
 independent way to confirm that value without rerunning this exact code.
 ```
-Después de ejecutarlo, verifica: confirma que el valor que nombra coincide con el
-número que tu ejecución de verdad imprimió, y después corre tú mismo la comprobación
+Después de ejecutarlo, verifica: confirma que el valor que nombra coincide con el número
+que tu ejecución de verdad imprimió, y después corre por tu cuenta la comprobación
 independiente que propone. Contrarresta la *fabricación confiada* (un recorrido fluido
 puede describir un número que el código nunca produjo).
 
@@ -150,10 +149,10 @@ the probiotic was assigned by tank. Act as a hostile methods reviewer. Name the
 one assumption most likely to inflate the reported certainty, say what the honest
 experimental unit is, and do not reassure me the design is fine.
 ```
-Después de ejecutarlo, verifica: recalcula tú mismo el intervalo a nivel de tanque y
-mira si alcanza el cero. Contrarresta el *método plausible pero equivocado* (un supuesto
-de observaciones independientes sobre datos agrupados encoge en silencio todos los
-intervalos).
+Después de ejecutarlo, verifica: recalcula por tu cuenta el intervalo a nivel de tanque
+y mira si alcanza el cero. Contrarresta el *método plausible pero equivocado* (un
+supuesto de observaciones independientes sobre datos agrupados encoge en silencio todos
+los intervalos).
 
 ::: {.callout-important title="No delegues"}
 Una herramienta de IA no puede ejecutar el código, así que nunca puede zanjar si el
@@ -188,7 +187,7 @@ persona desconocida podría ejecutar sin ti en la sala.*
 
 1. Reúne todo en una sola carpeta: los datos, el código, el orden de ejecución, la
    semilla aleatoria y un texto corto que enuncie tu número titular en palabras.
-2. Reproduce tú mismo en frío. Borra el kernel, ejecuta todas las celdas desde arriba
+2. Reproduce por tu cuenta en frío. Borra el kernel, ejecuta todas las celdas desde arriba
    sin arreglos manuales y, de ser posible, hazlo en un lugar distinto de la máquina
    donde lo construiste. Anota si tu número titular volvió exacto, aproximado o no
    volvió.

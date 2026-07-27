@@ -2,18 +2,17 @@
 title: "Agentes em Conflito e Escalonamento Humano"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
 
-> **A decisão de pesquisa.** Quando os seus papéis de IA discordam, ou quando vários
-> deles concordam, decida qual das três coisas você está vendo (discordância real, erro
-> correlacionado ou consenso fabricado) e decida o momento exato de trazer a decisão de
-> volta para as suas mãos.
+> **A decisão de pesquisa.** Os seus loops voltaram e não batem entre si, ou batem bem
+> demais. Você decide qual das três coisas está vendo (discordância real, erro
+> correlacionado ou consenso fabricado) e decide o momento exato de parar os loops e
+> trazer a decisão para as suas próprias mãos.
 
-::: {.callout-note title="Leitura"}
-Este capítulo é a leitura obrigatória do tópico correspondente do curso; o laboratório no Colab está no link acima. Companheiro recomendado: RDSS (*Research Design in the Social Sciences*) cap. 24, gratuito em [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+## Por que essa decisão importa
 
-## Por que esta decisão importa
+**A decisão em jogo: se a concordância entre os seus revisores de IA é evidência ou
+eco, e o momento em que você interrompe os loops e decide por conta própria.**
 
 > *"Não me diga que os seus revisores concordaram. Me diga se eles poderiam ter
 > concordado pelo mesmo motivo errado. Concordância é a coisa mais fácil do mundo de se
@@ -21,12 +20,16 @@ Este capítulo é a leitura obrigatória do tópico correspondente do curso; o l
 > — um **colega cético** na sua defesa de treino
 
 A esta altura você já consegue rodar uma pequena equipe de papéis de IA sobre o seu
-trabalho. O pensamento sedutor seguinte é que uma equipe é mais segura do que um
-assistente só, então três papéis abençoando o seu capítulo devem valer três
-confirmações. Não valem. Três papéis construídos do mesmo jeito, lendo o mesmo rascunho
-com as mesmas instruções, tendem a cometer o mesmo erro, então a concordância deles é um
-erro repetido três vezes. Este capítulo é sobre enxergar através disso, e sobre o
-momento em que você para de contar votos e decide por conta própria.
+trabalho, o que significa rodar vários loops ao mesmo tempo. O pensamento sedutor
+seguinte é que uma equipe é mais segura do que um assistente só, então três papéis
+abençoando o seu rascunho devem valer três confirmações. Não valem. Três loops
+construídos do mesmo jeito, lendo o mesmo rascunho com as mesmas instruções, tendem a
+cometer o mesmo erro, então a concordância deles é um erro repetido três vezes. Pior:
+um loop que continua rodando consegue se convencer da própria confiança, porque cada
+volta pole a resposta da volta anterior em vez de testá-la, e o que chega de volta até
+você é uma versão bem defendida do primeiro erro. Este capítulo é sobre enxergar
+através disso, e sobre o momento em que você para de contar votos e decide por conta
+própria.
 
 ## O conceito
 
@@ -48,7 +51,7 @@ A pergunta a fazer é simples: eles poderiam estar errados do *mesmo* jeito? Se 
 consenso deles é um sinal, não três.
 
 **Consenso falso** é quando os papéis concordam só porque o seu prompt enquadrou a
-tarefa de um jeito que os obrigava. Exemplo: você pede "confirme que o meu capítulo
+tarefa de um jeito que os obrigava. Exemplo: você pede "confirme que o meu rascunho
 está pronto", e todo papel obedece. Você induziu todas as testemunhas. Reformule o
 pedido de forma neutra e rode de novo.
 
@@ -67,6 +70,14 @@ e toma a decisão com as suas próprias palavras, apoiado na sua própria checag
 quando os papéis concordaram com outra coisa. Uma decisão que apenas contou os papéis
 não é uma decisão. É uma votação, e votações entre modelos parecidos entre si não
 significam nada.
+
+O escalonamento é também o único momento em que os loops têm de parar. Uma ferramenta
+agêntica deixada rodando vai continuar procurando um próximo passo e, se ninguém a
+interromper, vai tomar a decisão por padrão, não porque você delegou, mas porque o loop
+não tinha mais para onde ir. Então escreva os seus gatilhos antes de começar a rodada:
+as decisões específicas em que os loops pausam e esperam por você. Um gatilho que você
+decide na hora, com três revisões arrumadinhas na sua frente, não é um gatilho. É um
+estado de espírito.
 
 ## Um exemplo trabalhado
 
@@ -111,8 +122,10 @@ concordância unânime em uma confiança falsa que você consegue medir.
 
 ## Prompts de IA recomendados
 
-Comprometa-se primeiro com o seu próprio diagnóstico, depois delegue. Cada prompt é uma
-tarefa verificável, não um pedido de veredito.
+Comprometa-se primeiro com o seu próprio diagnóstico, depois delegue. Cada prompt abre
+um loop e, com vários loops em jogo, a disciplina é a mesma de quando havia um só: leia
+a saída, interrogue, refine, rode de novo, e nunca deixe um loop fechar uma questão que
+pertence a você. Cada prompt é uma tarefa verificável, não um pedido de veredito.
 
 **Localize as decisões que precisam escalar.**
 
@@ -152,7 +165,7 @@ exija a pior delas, e então rode a revisão de forma neutra. Combate a *concord
 bajuladora* (elogio que ensaia o seu ego, não a sua evidência).
 
 ::: {.callout-important title="Não delegue"}
-Quais alegações o seu capítulo consegue defender, onde cada alegação precisa parar, se
+Quais alegações o seu rascunho consegue defender, onde cada alegação precisa parar, se
 uma concordância entre os seus papéis chegou a ser independente, e o momento de
 escalar: isso continua sendo seu. Nenhum papel decide a própria confiabilidade, e
 nenhuma contagem de votos entre papéis decide o limite da sua alegação ou a sua ética.
@@ -162,12 +175,14 @@ decide.
 
 ## Um caso de falha da IA
 
-Você manda o seu capítulo para quatro papéis de IA e os quatro respondem "nenhum
+Você manda o seu rascunho para quatro papéis de IA e os quatro respondem "nenhum
 problema grave". Parece uma confirmação esmagadora, e é confiantemente errada. Os quatro
 dividem um modelo-base e leem o mesmo rascunho com as mesmas instruções, então dividem
 um ponto cego. Sempre que a sua única falha real cai dentro desse ponto cego, os quatro
 a deixam passar juntos. O "tudo certo" unânime deles está mais para uma voz só do que
-para quatro.
+para quatro. Rodar cada loop por mais tempo também não salva você. Quatro loops com o
+mesmo ponto cego, com mais voltas, devolvem o mesmo veredito com parágrafos melhores em
+volta.
 
 Você pega o erro ao se recusar a tratar concordância como evidência. Você faz uma
 checagem de independência: relê a alegação sinalizada contra a sua própria declaração
@@ -176,41 +191,28 @@ contexto. No laboratório você vai ver o tamanho dessa armadilha medido. Quatro
 correlacionados deixam passar uma falha real cerca de sete vezes mais do que quatro
 independentes, e empilhar mais papéis correlacionados não fecha essa distância.
 
-## Laboratório de verificação
+## Agora é a sua vez
 
-::: {.callout-important title="IA pode revisar IA — mas a última decisão é humana"}
-Um segundo modelo pode auditar o primeiro: peça a uma IA para checar a alegação, o código ou a citação de outra, e ela vai encontrar erros reais. Mas uma auditoria é mais uma proposta, não um veredito. A decisão final de aceitar, rejeitar ou qualificar um resultado sempre pertence a você, que faz a pesquisa.
-:::
+*O seu projeto já tem um pequeno time de IA rodando sobre uma seção; este passo decide
+de antemão onde esses loops precisam parar e devolver a decisão para você.*
 
-Verifique o resultado central do capítulo, a taxa de erros não detectados da equipe
-correlacionada, com **cálculo direto** do [guia de verificação](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-recalcule a mesma quantidade por um segundo caminho e compare. Quatro revisores
-independentes, cada um pegando uma falha metade das vezes por conta própria, só deixam
-passar quando todos deixam passar ao mesmo tempo: 0.5 × 0.5 × 0.5 × 0.5 = 0.0625, cerca
-dos 6% que o laboratório imprime. A equipe correlacionada deixa passar em todo o ponto
-cego compartilhado, 40% dos capítulos, mais os outros 60% em que cada um ainda deixa
-passar por conta própria: 0.40 + 0.60 × 0.0625 = 0.4375, cerca dos 43% que o
-laboratório imprime. Dois caminhos, uma resposta. A distância entre 6% e 44% é o
-argumento inteiro, e agora você o segura na mão, não na fé.
-
-## Transferência para o projeto
-
-Este capítulo constrói duas das quatro partes do seu **capítulo final de pesquisa e
-portfólio de gestão de IA**, o último marco do projeto. A primeira é o seu **registro de
-conflito e override**: um choque real entre os seus papéis, o seu diagnóstico
-(discordância real, erro correlacionado ou consenso falso) e o override que você fez,
-com a checagem não feita por IA que o sustentou. A segunda é a sua **checagem de
-independência**: um lugar em que os seus papéis concordaram sobre algo que importava, e
-o teste independente que fez essa concordância valer mais do que uma contagem de votos.
-Escreva as duas a partir do seu próprio projeto esta semana, para que o seu portfólio
-mostre não apenas que os seus papéis concordaram, mas que você soube quando valia a pena
-confiar na concordância deles.
-
-## Defenda a sua decisão
-
-Em quatro frases, defenda um momento em que você escalou. Diga qual concordância ou
-conflito de IA você enfrentou e qual diagnóstico você fez (discordância real, erro
-correlacionado ou consenso falso). Aponte a decisão que você retomou e a checagem
-independente que a resolveu, não o voto dos papéis. Depois nomeie o limite e a
-incerteza: o que o seu override estabeleceu, o que ele não estabeleceu, e o único ponto
-cego que os seus papéis ainda podem dividir e que você ainda não descartou.
+1. Escreva as suas regras de escalonamento antes de a próxima rodada começar. Liste as
+   decisões específicas que nenhum loop pode fechar: o limite da sua alegação, a sua
+   incerteza, quais fontes são reais, o que conta como pronto e qualquer coisa com uma
+   aresta ética. Mantenha a lista curta o bastante para lembrar dela sob pressão.
+2. Acrescente as condições de parada que não são sobre conteúdo. Quantas voltas um loop
+   pode rodar antes de você ler, e o que uma ferramenta agêntica pode mudar sem
+   perguntar a você primeiro.
+3. Encontre uma discordância real no que os seus papéis já devolveram e diagnostique-a
+   por escrito: discordância real, erro correlacionado ou um consenso fabricado pelo
+   seu próprio prompt. Diga qual e por quê.
+4. Resolva você mesmo com uma checagem que os loops não conseguem fazer: recalcule o
+   número, abra a fonte ou compare com um valor que nunca esteve em nenhum prompt.
+   Escreva a resolução e a checagem juntas, porque uma sem a outra é só opinião.
+5. Pegue um ponto em que os seus papéis concordaram sobre algo que importava e teste se
+   a concordância era independente. Rode um deles de novo com outro enquadramento e
+   outro contexto, ou verifique o ponto você mesmo, fora das ferramentas.
+6. Registre o conflito, o diagnóstico e o override no seu **AI Research Ledger**
+   (registro de pesquisa com IA), e verifique pelo menos um resultado com um método
+   nomeado do [Guia de Verificação](../verification-guide.qmd). Um revisor de IA pode
+   rodar a checagem com você; a decisão de aceitar ou rejeitar continua sendo sua.
