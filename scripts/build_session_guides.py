@@ -70,8 +70,8 @@ COMPASS_CHEAT_SHEET = """\
   intervention change?*) — RDSS ch. 7.
 - **REACH** — the data at hand · a population beyond the data · cases not yet
   seen.
-- **Positions (classified in nb01):** Description · Generalization · Prediction
-  · Causal reasoning. Design pathways deep-dive in nb04–nb08 (observational
+- **Positions (classified in nb02):** Description · Generalization · Prediction
+  · Causal reasoning. Design pathways deep-dive in nb05–nb09 (observational
   descriptive · observational causal · experimental descriptive · prediction ·
   experimental causal).
 - **Crossings & licenses:** sample→population = sampling design + uncertainty
@@ -182,7 +182,8 @@ def srl_banner(m: dict, kind: str) -> str | None:
         return None
     if int(m["meeting"]) < FIRST_SRL_MEETING:
         return ("**Led by:** instructor (launch week — the Student Research Lead "
-                "rotation begins the following week).")
+                "slots, randomly assigned at semester start, begin the following "
+                "week).")
     return ("**Led by:** the day's **Student Research Lead** — a Socratic "
             "investigation, not a summary. The lead opens the 🧩 Research Puzzle, "
             "steers the AI research-partner investigation, and prompts peer "

@@ -2,7 +2,7 @@
 title: "16. Hybrid and Complex Designs"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_anatomy_of_design_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
 
 > **The research decision.** When your question forces you to stitch several
 > measurements or stages into one answer, decide whether that combined design still
@@ -73,7 +73,7 @@ swinging at a small amplitude so the model holds again, not one more round of ti
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb03 — The anatomy of a research design: MIDA +
+This chapter's lab is notebook **nb04 — The anatomy of a research design: MIDA +
 declare → diagnose → redesign**. Open it in Colab with the badge above. There you build
 a small simulated world, **declare** a design as something a computer can run,
 **diagnose** it by simulating it thousands of times to read its bias, variance, and

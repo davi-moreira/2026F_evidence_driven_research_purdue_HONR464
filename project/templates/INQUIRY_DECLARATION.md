@@ -85,7 +85,7 @@ signature skill, in writing.*
 
 > *Two or three sentences: the evidence that would tell you the kind or reach
 > was wrong, and the position you would move to. (This is the redesign reflex —
-> nb11 — applied to the declaration itself.)*
+> nb12 — applied to the declaration itself.)*
 
 ## 9. AI-use disclosure for this document
 

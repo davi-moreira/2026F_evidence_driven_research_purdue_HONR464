@@ -20,22 +20,22 @@ NB_RE = re.compile(r"nb(\d\d)")
 
 # nb number -> (file slug, short site title). One notebook per WEEK (v2).
 NOTEBOOKS = {
-    0:  ("nb00_ai_arm_not_brain", "Research in the age of AI: your arm, your RA — not your brain"),
-    1:  ("nb01_curiosity_to_problem", "From curiosity to a research problem: descriptive, predictive, causal"),
-    2:  ("nb02_research_builds_on_research", "Research builds on research: verified evidence + real gaps"),
-    3:  ("nb03_anatomy_of_design", "The anatomy of a research design: MIDA + declare → diagnose → redesign"),
-    4:  ("nb04_observational_descriptive", "Observational descriptive research"),
-    5:  ("nb05_observational_causal", "Observational causal research"),
-    6:  ("nb06_experimental_descriptive", "Experimental descriptive research"),
-    7:  ("nb07_prediction", "Prediction: generalizing to unseen cases"),
-    8:  ("nb08_experimental_causal", "Experimental causal research"),
-    9:  ("nb09_attack_the_analysis", "Share the research + attack the analysis"),
-    10: ("nb10_poster_criticism_lock", "Poster criticism + final poster lock"),
-    11: ("nb11_poster_delivery", "Poster delivery: pitches, uncertainty, difficult questions"),
-    12: ("nb12_conference", "Final conference preparation, presentation + reflection"),
-    13: ("nb13_replication_redteam", "Async module: replication + red-team of a peer's package"),
-    14: ("nb14_poster_to_research_note", "From poster to research note"),
-    15: ("nb15_managing_ai_agents", "Managing multiple AI agents + the final defense"),
+    1:  ("nb01_ai_arm_not_brain", "Research in the age of AI: your arm, your RA, not your brain"),
+    2:  ("nb02_curiosity_to_problem", "From curiosity to a research problem: descriptive, predictive, causal"),
+    3:  ("nb03_research_builds_on_research", "Research builds on research: verified evidence + real gaps"),
+    4:  ("nb04_anatomy_of_design", "The anatomy of a research design: MIDA + declare → diagnose → redesign"),
+    5:  ("nb05_observational_descriptive", "Observational descriptive research"),
+    6:  ("nb06_observational_causal", "Observational causal research"),
+    7:  ("nb07_experimental_descriptive", "Experimental descriptive research"),
+    8:  ("nb08_prediction", "Prediction: generalizing to unseen cases"),
+    9:  ("nb09_experimental_causal", "Experimental causal research"),
+    10: ("nb10_attack_the_analysis", "Share the research + attack the analysis"),
+    11: ("nb11_poster_criticism_lock", "Poster criticism + final poster lock"),
+    12: ("nb12_poster_delivery", "Poster delivery: pitches, uncertainty, difficult questions"),
+    13: ("nb13_conference", "Final conference preparation, presentation + reflection"),
+    14: ("nb14_replication_redteam", "Async module: replication + red-team of a peer's package"),
+    15: ("nb15_poster_to_research_note", "From poster to research note"),
+    16: ("nb16_managing_ai_agents", "Managing multiple AI agents + the final defense"),
 }
 
 REPO_SLUG = "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"

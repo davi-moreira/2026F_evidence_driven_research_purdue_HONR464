@@ -11,7 +11,7 @@ follows the same cadence: **Friday-studio kickoff → develop across the week �
 present → submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
-checked it. Milestone weights and the revision policy live in the syllabus;
+checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
 ---
@@ -40,7 +40,7 @@ source already sits.
 The discipline that makes this milestone matter is the course's spine:
 **evidence integrity**. Every source on your ledger is one *you personally
 retrieved and read*, from a place you can name, whose central claim you can state
-in your own words. In nb02 you ran the **retrieval-verification loop** — treat any
+in your own words. In nb03 you ran the **retrieval-verification loop** — treat any
 suggested source as a lead, retrieve it yourself, confirm it exists and says what
 was claimed — and you watched a tidy pile of fifteen AI citations collapse to the
 handful that survived retrieval. Here you turn that same reflex on your own
@@ -99,7 +99,7 @@ four things:
 
 ### 2. The evidence map, with your gap placed on it
 
-Using the builder from nb02, fill the claims table and the relationships table and
+Using the builder from nb03, fill the claims table and the relationships table and
 run the graph cell so the map draws itself. **Nodes are claims** drawn from your
 verified ledger. **Edges mark how two claims relate** — they **agree** when they
 point the same way, **contradict** when they clash, and **qualify** when one

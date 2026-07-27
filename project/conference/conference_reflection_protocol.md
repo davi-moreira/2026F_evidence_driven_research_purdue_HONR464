@@ -3,7 +3,7 @@
 *Turn the questions strangers asked you at the Expo into coded data, and find the
 pattern. Governs the reflection-and-criticism package of
 [milestone_12 — Conference Reflection & Poster-Criticism Portfolio](../../_research_project/2026Fall/milestone_12_conference_reflection.md).
-Coded in class M36 (nb12); the reflection is submitted that night, Fri Nov 20.*
+Coded in class M36 (nb13); the reflection is submitted that night, Fri Nov 20.*
 
 ## Purpose
 
@@ -16,7 +16,7 @@ something real. This session extracts that signal.
 ## Materials
 
 - Every question and reaction you captured at the Expo (see logging method below).
-- The nb12 tally cells (Colab).
+- The nb13 tally cells (Colab).
 - Professor Moreira's own observation notes from your poster (returned today).
 - A partner for the tally swap.
 
@@ -64,7 +64,7 @@ whether Nov 17 challenged your evidence or your clarity.
 |---|---|
 | 0–8 | **Story round:** 90 seconds each — the single most surprising moment at your poster. |
 | 8–15 | Mini-lesson: feedback is data — code it (recurred? from whom? claims or communication?). |
-| 15–32 | **Coding studio:** log every question into the nb12 tally (type, target, recurrence); find your pattern. |
+| 15–32 | **Coding studio:** log every question into the nb13 tally (type, target, recurrence); find your pattern. |
 | 32–44 | **Pair analysis:** swap tallies — tell your partner what their pattern says that they can't see. |
 | 44–48 | **Reflection freewrite:** the honest paragraph — what the conference changed in how you see your project. |
 | 48–50 | Exit ticket (the most repeated question + what its repetition evidences); M12 due tonight. |

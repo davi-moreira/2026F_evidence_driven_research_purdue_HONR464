@@ -2,7 +2,7 @@
 title: "24. Recognizing False Confidence"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb00_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
 
 > **The research decision.** When an AI tool hands you a fluent, confident finding,
 > you decide whether its confidence counts as evidence (it never does) and exactly
@@ -70,7 +70,7 @@ inflated figure and the word "success."
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb00, Research in the Age of AI: Your Arm, Your RA,
+This chapter's lab is notebook **nb01, Research in the Age of AI: Your Arm, Your RA,
 Not Your Brain**. Open it in Colab with the badge above and work the cells alongside
 this chapter. In the lab you run a small randomized study, meet a confident one-line
 summary that claims a large effect, and recompute the actual gap in the data to watch

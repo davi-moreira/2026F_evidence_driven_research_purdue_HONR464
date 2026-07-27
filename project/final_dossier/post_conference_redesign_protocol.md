@@ -18,7 +18,7 @@ in the study you'd run again.
 
 - Your coded conference tally (M17 output).
 - Your inquiry declaration (`project/templates/INQUIRY_DECLARATION.md`)
-  and your DAG / inquiry from nb11.
+  and your DAG / inquiry from nb12.
 - The M18 redesign-plan template.
 
 ## The feedback → MIDA mapping method

@@ -1,8 +1,16 @@
 # Preface {.unnumbered}
 
-**Evidence-Driven Research** is the course book for HONR 46400 at Purdue's
-Honors College. Its one message: *AI is your arm and your research
-assistant, not your brain.* You will direct AI tools through the
+::: {.callout-warning title="A work in progress"}
+This book is a **work in progress**. It is still under development and will
+keep growing and improving during the semester. Chapters may be revised,
+expanded, or reorganized as the course runs; when something looks unfinished,
+that is why. Questions and suggestions are welcome.
+:::
+
+**Evidence-Driven Research in AI-era: How to Design, Analyze, Verify, and
+Defend** is the course book for HONR 46400 at Purdue's Honors College. Its one
+message: *AI is your arm and your research assistant, not your brain.* You will
+direct AI tools through the
 **Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend**
 workflow while keeping every research decision your own.
 
@@ -19,3 +27,8 @@ from curiosity to research design; the research pathways (observational and
 experimental, descriptive and causal, and prediction); producing credible
 evidence with AI; communicating and defending research; and research after
 the conference.
+
+If you are the day's **Student Research Lead**, your lead brief lives at the
+start of your lecture in that lecture's notebook. The appendix
+[The Student Research Lead](srl.qmd) collects the format, the preparation
+cadence, and the expectations in one place.

@@ -13,7 +13,7 @@ teaching honors students — **without assuming a quantitative or computing
 background** — to run an original evidence-driven research project from
 curiosity to a publicly defended claim. The course's defining message:
 
-> **AI is your arm and your research assistant — not your brain.**
+> **AI is your arm and your research assistant, not your brain.**
 
 Students direct AI (Gemini in Colab; Purdue GenAI Studio reviewer roles) through
 the **Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend**
@@ -37,8 +37,8 @@ research chapter, an AI-management portfolio, and an oral evidence defense.
 | File | When to read |
 |---|---|
 | `_project_docs/ACTIVITY_TEMPLATE.md` | Creating/restructuring a topic notebook — the machine-validated template |
-| `_project_docs/DECISIONS.md` | Before proposing convention changes — D17–D21 govern the v2 build |
-| `planning/COURSE_MASTER_PLAN.md` | Sequencing source of truth (16 weeks, nb00–nb15, M0–M15) |
+| `_project_docs/DECISIONS.md` | Before proposing convention changes — D17–D22 govern the v2 build |
+| `planning/COURSE_MASTER_PLAN.md` | Sequencing source of truth (16 weeks, nb01–nb16, M0–M15) |
 | `planning/PROJECT_MILESTONES.md` | The milestone chain (dev meetings, presentations, due dates) |
 | `planning/SOURCE_AUDIT_V2.md` | The rebuild audit: rulings, reuse map, GenAI Studio verification |
 | `planning/MEETING_SCHEDULE.md` | Per-meeting detail (43 × 34; generated from `scripts/schedule_data/`) |
@@ -47,7 +47,7 @@ research chapter, an AI-management portfolio, and an oral evidence defense.
 | `genai_studio/` | GenAI Studio role specs, KB strategy, Colab PoC |
 | `CONVERSATION_LOG.md` | Project history and prior decisions |
 
-**Canonical notebook reference:** `notebooks/student/nb04_observational_descriptive_student.ipynb`
+**Canonical notebook reference:** `notebooks/student/nb05_observational_descriptive_student.ipynb`
 (the v2 gold standard, built as the Phase-2 prototype) — match its formatting
 exactly. Cell sources live in gitignored `_production_kit/nb_sources/nbNN_<slug>.py`;
 edit the source, then rebuild with `.venv/bin/python scripts/nbbuild.py nbNN`.
@@ -168,12 +168,17 @@ milestone briefs (`_research_project/2026Fall/`).
 
 ---
 
-## 🚨 CRITICAL RULE — The Flipped Classroom & 50-Minute Architectures  *(D17/D18 — replaces the v1 Friday-studio rule)*
+## 🚨 CRITICAL RULE — The Flipped Classroom & 50-Minute Architectures  *(D17/D18, amended D22)*
 
 **Every Mon/Wed lecture from Week 2 is led by a Student Research Lead (SRL)**
-running a Socratic investigation (25 slots, 5 per student, seats A–E in
-`scripts/schedule_data/`). Fixed section frames, enforced by the session-guide
-generator (sums = 50):
+running a Socratic investigation. Slots are **randomly assigned at the start of
+the semester** (no rotation, no seats). Each lecture's **SRL Lead Brief** is a
+STUDENT-VISIBLE `### 🎤 SRL Lead Brief` cell that opens that lecture in its
+notebook (right after `# Lecture N`, before the 🧩 Research Puzzle); leads prep
+from one week ahead and submit a preparation script/notebook two days ahead.
+Briefs must stay simple to follow and explicitly leave room for the lead's own
+staging. Fixed section frames, enforced by the session-guide generator
+(sums = 50):
 
 - **Monday:** 0–9 SRL research puzzle · 9–31 guided Gemini research-partner
   investigation · 31–43 human verification + instructor formalization ·
@@ -181,13 +186,16 @@ generator (sums = 50):
 - **Wednesday:** 0–7 SRL retrieval & challenge · 7–30 intensive applied AI
   laboratory · 30–42 peer defense + adversarial questioning · 42–50 project
   transfer (ledger + Claim Ticket).
-- **Friday studio (no new topic content, ever):** 0–6 research stand-up ·
-  6–29 milestone kickoff (from its Brightspace brief) + AI-supported sprint ·
-  29–41 peer + AI red-team review · 41–50 revise, update ledger + dossier,
+- **Friday studio (no new topic content, ever):** 0–10 weekly multiple-choice
+  topic quiz (printed; `_quizzes/2026Fall/weekly/`) · 10–15 research stand-up ·
+  15–32 milestone kickoff (from its Brightspace brief) + AI-supported sprint ·
+  32–42 peer + AI red-team review · 42–50 revise, update ledger + dossier,
   submit (Claim Ticket).
 
 Week 1's two lectures are instructor-led to model the format. SRL materials:
-`project/srl/`.
+`project/srl/` + the course-book appendix `book/srl.qmd`; the milestone chain
+and weekly-architecture orientation live in nb01 Lecture 1 (not on the
+syllabus).
 
 ---
 
@@ -298,7 +306,7 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 ## Naming and Commit Conventions
 
 - Student notebooks (committed): `notebooks/student/nbNN_topic_student.ipynb`
-  (nb00–nb15, one per week); milestone studio notebooks `msNN_topic_student.ipynb`.
+  (nb01–nb16, one per week); milestone studio notebooks `msNN_topic_student.ipynb`.
 - Instructor notebooks (gitignored): `notebooks/instructor/…_instructor.ipynb`
 - Cell sources (gitignored, canonical for editing): `_production_kit/nb_sources/`
 - Milestone briefs: `_research_project/2026Fall/milestone_NN_<slug>.md` (M0–M15)
@@ -307,11 +315,14 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 5.0 — v2 prompt-architecture rebuild (2026-07-22/23, DECISIONS.md
-D17–D21): 16 weekly topics nb00–nb15 with the DeclareDesign-library pathway
-weeks, milestones M0–M15, Student Research Lead flipped classroom, AI Research
-Ledger + SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
-calendar (no class Wed Nov 18). (4.0 = 2026-07-20 course redesign D13–D16;
-3.0 = RDSS inquiry compass 2026-07-19; 2.0 = v1 build complete; 1.0 = seeded
-from MGMT474 infra.)
+**Version:** 5.1 — instructor review round (2026-07-27, DECISIONS.md D22):
+week-aligned numbering nb01–nb16, random SRL slots with notebook-embedded
+student-visible SRL Lead Briefs, quiz-first Fridays (10-min printed MC quiz;
+`_quizzes/2026Fall/weekly/`), confirmed assessment weights, course book
+retitled "Evidence-Driven Research in AI-era" (work in progress) with the SRL
+appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
+weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
+SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
+calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)
 **Maintained by:** Professor Davi Moreira + AI Assistants

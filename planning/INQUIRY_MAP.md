@@ -6,9 +6,9 @@ classification draws, and then **matching the classified question to a design
 pathway**. Two layers, one shared axis (**kind**):
 
 - **Compass (RDSS ch. 7) — classifies QUESTIONS** by kind × reach. Taught in
-  Week 2 (`nb01`); used in every declaration from M3 onward.
+  Week 2 (`nb02`); used in every declaration from M3 onward.
 - **Design library (RDSS ch. 15–18) — organizes DESIGNS** by kind × data
-  strategy. Gives Weeks 5–9 (`nb04`–`nb08`) their sequence.
+  strategy. Gives Weeks 5–9 (`nb05`–`nb09`) their sequence.
 
 Machine-readable core: `course_config.yaml inquiry_framework:` (positions,
 crossings, and `pathways:`). The v1 map is preserved at git tag
@@ -29,7 +29,7 @@ violations are carried forward here unchanged.
 | **Causal** | **Causal reasoning** (identification licenses the kind; sampling licenses the reach) | | |
 
 The four named positions are *derived* from the two-kind split, not standing
-beside it. All four are introduced together when the compass is taught (`nb01`);
+beside it. All four are introduced together when the compass is taught (`nb02`);
 each is deepened later inside its matched pathway.
 
 ## Crossings, licenses, and named violations — the claim-boundary discipline
@@ -52,7 +52,7 @@ the proof is always diagnosis:
 - **Asks:** what is observed in the data at hand — patterns, distributions, differences.
 - **Can establish:** statements about these units ("in these 10,000 interviews, X% report Y").
 - **Cannot establish:** any reach beyond these units; causal readings.
-- **Taught:** classification in `nb01`; design deep dive in `nb04`.
+- **Taught:** classification in `nb02`; design deep dive in `nb05`.
 - **Classic misclassification:** a descriptive question dressed in causal language
   ("does social media *make* people anxious?" when the real question is "how
   anxious are heavy users?").
@@ -65,7 +65,7 @@ the proof is always diagnosis:
 - **Can establish:** estimates with quantified uncertainty for the population the
   sampling frame reaches ("X ± interval among the population my procedure covers").
 - **Cannot establish:** causation from association; reach past the frame.
-- **Taught:** classification in `nb01`; design deep dive in `nb04` (sampling +
+- **Taught:** classification in `nb02`; design deep dive in `nb05` (sampling +
   uncertainty).
 - **Classic misclassification:** the **silent upgrade** — association → link →
   impact → effect across a paragraph; reach claimed with no sampling design behind it.
@@ -87,7 +87,7 @@ the proof is always diagnosis:
   units; D = what is honestly available at prediction time (leakage = a D
   violation); A = learner + baseline + the whole selection procedure (ch. 9.1.3);
   diagnosis = held-out performance; redesign = baseline and feature-set comparisons.
-- **Taught:** classification in `nb01`; design deep dive in `nb07`, the
+- **Taught:** classification in `nb02`; design deep dive in `nb08`, the
   course-authored library entry written in the book's declare-diagnose-redesign
   format (RDSS Part III stops short of a predictive entry).
 - **Classic misclassification:** "the model predicts well, so X causes Y" — a
@@ -100,8 +100,8 @@ the proof is always diagnosis:
   (randomized assignment, or a defended observational design).
 - **Cannot establish:** effects when identification assumptions fail or no design
   supplies leverage; "after therefore because."
-- **Taught:** classification in `nb01`; design deep dives in `nb05` (observational
-  causal: selection-on-observables, DiD, IV, RDD, natural experiments) and `nb08`
+- **Taught:** classification in `nb02`; design deep dives in `nb06` (observational
+  causal: selection-on-observables, DiD, IV, RDD, natural experiments) and `nb09`
   (experimental causal: two-arm trials, blocking, cluster + factorial designs).
 - **Reach within the causal kind:** SATE vs PATE (ch. 7) — the sample → population
   crossing applies here too; identification licenses the kind, sampling licenses
@@ -119,11 +119,11 @@ as its own objective (five in all; `course_config.yaml pathways:`):
 
 | Wk | Pathway | NB | RDSS | Example designs |
 |---|---|---|---|---|
-| 5 | Observational descriptive | `nb04` | ch. 15 | sample surveys, indices, case selection |
-| 6 | Observational causal | `nb05` | ch. 16 | selection-on-observables, DiD, IV, RDD, natural experiments |
-| 7 | Experimental descriptive | `nb06` | ch. 17 | audit, list, conjoint experiments; behavioral games; measurement experiments |
-| 8 | Prediction | `nb07` | course-authored entry | baseline vs model, held-out evaluation, calibration |
-| 9 | Experimental causal | `nb08` | ch. 18 | two-arm trials, blocking, cluster + factorial designs |
+| 5 | Observational descriptive | `nb05` | ch. 15 | sample surveys, indices, case selection |
+| 6 | Observational causal | `nb06` | ch. 16 | selection-on-observables, DiD, IV, RDD, natural experiments |
+| 7 | Experimental descriptive | `nb07` | ch. 17 | audit, list, conjoint experiments; behavioral games; measurement experiments |
+| 8 | Prediction | `nb08` | course-authored entry | baseline vs model, held-out evaluation, calibration |
+| 9 | Experimental causal | `nb09` | ch. 18 | two-arm trials, blocking, cluster + factorial designs |
 
 **Experimental assignment does NOT imply a causal inquiry.** Week 7 exists to
 make this concrete: **experimental descriptive** designs (audit, list, conjoint,
@@ -140,12 +140,12 @@ fixes the data strategy and names the crossing that must be licensed:
 
 | Compass position (question) | Data strategy | Pathway (design) | Crossing to license |
 |---|---|---|---|
-| Description (descriptive · at hand) | observational | Observational descriptive (`nb04`) | none — the answer stays at hand |
-| Description (descriptive · at hand) | experimental | Experimental descriptive (`nb06`) | none — an experiment *measures* a descriptive quantity |
-| Generalization (descriptive · population) | observational + sampling | Observational descriptive + sampling (`nb04`) | sample → population |
-| Prediction (descriptive · unseen) | prediction-time-honest | Prediction entry (`nb07`) | observed → unseen |
-| Causal reasoning (causal · at hand/population) | observational | Observational causal (`nb05`) | descriptive → causal, via a defended identification argument |
-| Causal reasoning (causal · at hand/population) | experimental | Experimental causal (`nb08`) | descriptive → causal, via randomized assignment |
+| Description (descriptive · at hand) | observational | Observational descriptive (`nb05`) | none — the answer stays at hand |
+| Description (descriptive · at hand) | experimental | Experimental descriptive (`nb07`) | none — an experiment *measures* a descriptive quantity |
+| Generalization (descriptive · population) | observational + sampling | Observational descriptive + sampling (`nb05`) | sample → population |
+| Prediction (descriptive · unseen) | prediction-time-honest | Prediction entry (`nb08`) | observed → unseen |
+| Causal reasoning (causal · at hand/population) | observational | Observational causal (`nb06`) | descriptive → causal, via a defended identification argument |
+| Causal reasoning (causal · at hand/population) | experimental | Experimental causal (`nb09`) | descriptive → causal, via randomized assignment |
 
 **How a student moves across the matrix.** They classify the question on the
 compass (M1), commit to a position and its permitted claim in the MIDA
@@ -163,9 +163,9 @@ holds, and (3) key limitations and sources of uncertainty.
 
 | Moment | What happens |
 |---|---|
-| Week 2 (`nb01`), M1 | The compass is taught (kind + reach drills); each project question gets a classified position |
+| Week 2 (`nb02`), M1 | The compass is taught (kind + reach drills); each project question gets a classified position |
 | M3 | The MIDA declaration commits the position and its permitted claim |
-| Weeks 5–9 (`nb04`–`nb08`), M4–M8 | Each pathway is deepened; the project's design is matched and audited against its crossing license |
+| Weeks 5–9 (`nb05`–`nb09`), M4–M8 | Each pathway is deepened; the project's design is matched and audited against its crossing license |
 | M5 (GenAI Studio: Causal Identification Skeptic) | The identification paragraph — or the honest causal-language boundary — is defended |
 | M7 (GenAI Studio: Prediction & Leakage Auditor) | The declared analysis protocol; leakage and baseline honesty are audited |
 | M9 / M13 | Robustness and replication branch by position — the classification has consequences |

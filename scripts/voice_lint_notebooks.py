@@ -44,11 +44,16 @@ EM_DASH_CELL_MAX = 1    # per markdown cell (D14)
 EM_DASH_NB_MAX = 20     # per notebook (D14)
 
 # Text stripped before linting (URLs and repo paths legitimately contain
-# "student", e.g. the Colab badge target notebooks/student/...).
+# "student", e.g. the Colab badge target notebooks/student/...). The official
+# role name "Student Research Lead" (and the fixed section names built on it)
+# is a proper noun, not a third-person reference — SRL Lead Brief cells are
+# student-visible by design (D22).
 STRIP = [
     re.compile(r"https?://\S+"),
     re.compile(r"notebooks/student/\S*"),
     re.compile(r"\S*_student\.ipynb"),
+    re.compile(r"Student Research Leads?\b"),
+    re.compile(r"Student-led\b"),
 ]
 
 

@@ -2,7 +2,7 @@
 title: "37. Final Research and AI-Management Portfolio"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide which claims from a semester of AI-assisted work
 > you will stand behind at your public defense, and assemble the AI-management
@@ -81,7 +81,7 @@ agreement worth more than a head count.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb15 — Managing multiple AI agents + the final
+This chapter's lab is notebook **nb16 — Managing multiple AI agents + the final
 defense**. Open it in Colab with the badge above and work the cells alongside this
 chapter. There you wire a worker-critic team, run a seeded simulation showing four
 look-alike reviewers miss a real flaw far more often than four independent ones, then

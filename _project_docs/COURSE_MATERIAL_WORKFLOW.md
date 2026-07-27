@@ -1,7 +1,7 @@
 # Course Material Production Workflow (per week)
 
 The end-to-end pipeline for producing **one week's unit** of HONR 46400: the topic
-notebook (`nbNN`, one per week, `nb00`–`nb15`), its milestone brief, its session
+notebook (`nbNN`, one per week, `nb01`–`nb16`), its milestone brief, its session
 guide, and the schedule rows that place it on the calendar. It generalizes the
 sequence used across the v2 build (DECISIONS.md D17–D21) and is run once per week.
 

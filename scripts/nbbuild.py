@@ -22,7 +22,7 @@ pair, and validates it with the reduced studio contract. Studio notebooks carry
 no schedule badge, so the badge refresh runs only when a topic notebook (nbNN)
 was built.
 
-Usage: .venv/bin/python scripts/nbbuild.py nb00 [nb01 ...] [ms04 ...] [--no-exec]
+Usage: .venv/bin/python scripts/nbbuild.py nb01 [nb02 ...] [ms04 ...] [--no-exec]
 """
 from __future__ import annotations
 

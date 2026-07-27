@@ -2,7 +2,7 @@
 title: "32. Replication and Reproduction"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_replication_redteam_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb){target="_blank"}
 
 > **The research decision.** You decide whether a peer's reported result actually
 > reproduces from the files they shipped, and then you rank the weaknesses you find
@@ -85,7 +85,7 @@ to whether an effect exists.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb13 — Async module: replication and red-team of a
+This chapter's lab is notebook **nb14 — Async module: replication and red-team of a
 peer's package**. Open it in Colab with the badge above. There you cold-reproduce a
 real field experiment's headline number from its files alone, then run the same
 three audits you just saw: you line each written claim against the output behind it,

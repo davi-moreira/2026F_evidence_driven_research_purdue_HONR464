@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="The course book for HONR 46400 (Purdue Honors). RDSS is the theory text; this is the AI-era research manual, synchronized with the 16 course notebooks.">
 
-<title>22&nbsp; 22. Diagnostics and Negative Tests – Evidence-Driven Research</title>
+<title>22. Diagnostics and Negative Tests – HONR 46400: Evidence-Driven Research (Fall 2026)</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,25 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../part4-credible-evidence/23-ai-as-adversarial-reviewer.html" rel="next">
-<link href="../part4-credible-evidence/21-robustness-and-sensitivity.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-af82d7f591780a2244ae675016860d00.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,9 +71,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -86,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html">Part IV — Producing credible evidence with AI</a></li><li class="breadcrumb-item"><a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">22. Diagnostics and Negative Tests</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">22. Diagnostics and Negative Tests</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -98,11 +95,15 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">Evidence-Driven Research</a> 
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/honr_464_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../images/honr_464_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+</div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -113,298 +114,40 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Part I — Research when AI can produce almost everything</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">1. AI Is Your Arm, Not Your Brain</span></span></a>
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part1-research-with-ai/02-the-student-as-research-director.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">2. The Student as Research Director</span></span></a>
+  <a href="../../material.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Material</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">3. Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend</span></span></a>
+  <a href="../../book/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Book</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">4. Research Responsibility and Intellectual Ownership</span></span></a>
+  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Part II — From curiosity to research design</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">5. From Curiosity to a Research Problem</span></span></a>
+  <a href="../../instructor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instructor</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">6. Descriptive, Predictive, and Causal Questions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-curiosity-to-design/07-research-builds-on-research.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">7. Research Builds on Research</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">8. Finding and Verifying Prior Evidence</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">9. Model, Inquiry, Data Strategy, and Answer Strategy</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">10. Declaring and Diagnosing a Research Design</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Part III — Research pathways</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part3-pathways/11-observational-descriptive-research.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">11. Observational Descriptive Research</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part3-pathways/12-observational-causal-research.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">12. Observational Causal Research</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part3-pathways/13-experimental-descriptive-research.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">13. Experimental Descriptive Research</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part3-pathways/14-prediction-and-generalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">14. Prediction and Generalization</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part3-pathways/15-experimental-causal-research.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">15. Experimental Causal Research</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part3-pathways/16-hybrid-and-complex-designs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">16. Hybrid and Complex Designs</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Part IV — Producing credible evidence with AI</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">17. Data Provenance and Data Quality</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part4-credible-evidence/18-measurement-and-operationalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">18. Measurement and Operationalization</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part4-credible-evidence/19-ai-as-programmer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">19. AI as Programmer</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part4-credible-evidence/20-ai-as-analytical-assistant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">20. AI as Analytical Assistant</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">21. Robustness and Sensitivity</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">22. Diagnostics and Negative Tests</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part4-credible-evidence/23-ai-as-adversarial-reviewer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">23. AI as Adversarial Reviewer</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part4-credible-evidence/24-recognizing-false-confidence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">24. Recognizing False Confidence</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Part V — Communicating and defending research</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part5-communicating/25-from-results-to-claims.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">25. From Results to Claims</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part5-communicating/26-claim-evidence-tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">26. Claim–Evidence Tables</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part5-communicating/27-research-posters.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">27. Research Posters</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part5-communicating/28-poster-criticism.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">28. Poster Criticism</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part5-communicating/29-research-pitches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">29. Research Pitches</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part5-communicating/30-difficult-questions-and-uncertainty.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">30. Difficult Questions and Uncertainty</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part5-communicating/31-ai-disclosure-and-research-integrity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">31. AI Disclosure and Research Integrity</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Part VI — Research after the conference</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part6-after-conference/32-replication-and-reproduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">32. Replication and Reproduction</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part6-after-conference/33-from-poster-to-research-note.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">33. From Poster to Research Note</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part6-after-conference/34-open-and-reusable-research-packages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">34. Open and Reusable Research Packages</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part6-after-conference/35-managing-multiple-ai-agents.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">35. Managing Multiple AI Agents</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part6-after-conference/36-conflicting-agents-and-human-escalation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">36. Conflicting Agents and Human Escalation</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../part6-after-conference/37-final-research-and-ai-management-portfolio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">37. Final Research and AI-Management Portfolio</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -412,27 +155,27 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">22.1</span> Why this decision matters</a></li>
-  <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">22.2</span> The concept</a></li>
-  <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">22.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">22.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">22.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">22.6</span> An AI failure case</a></li>
-  <li><a href="#verification-laboratory" id="toc-verification-laboratory" class="nav-link" data-scroll-target="#verification-laboratory"><span class="header-section-number">22.7</span> Verification laboratory</a></li>
-  <li><a href="#project-transfer" id="toc-project-transfer" class="nav-link" data-scroll-target="#project-transfer"><span class="header-section-number">22.8</span> Project transfer</a></li>
-  <li><a href="#defend-your-decision" id="toc-defend-your-decision" class="nav-link" data-scroll-target="#defend-your-decision"><span class="header-section-number">22.9</span> Defend your decision</a></li>
+  <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters">Why this decision matters</a></li>
+  <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept">The concept</a></li>
+  <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example">A worked example</a></li>
+  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory">The Colab laboratory</a></li>
+  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts">Recommended AI prompts</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case">An AI failure case</a></li>
+  <li><a href="#verification-laboratory" id="toc-verification-laboratory" class="nav-link" data-scroll-target="#verification-laboratory">Verification laboratory</a></li>
+  <li><a href="#project-transfer" id="toc-project-transfer" class="nav-link" data-scroll-target="#project-transfer">Project transfer</a></li>
+  <li><a href="#defend-your-decision" id="toc-defend-your-decision" class="nav-link" data-scroll-target="#defend-your-decision">Defend your decision</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html">Part IV — Producing credible evidence with AI</a></li><li class="breadcrumb-item"><a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">22. Diagnostics and Negative Tests</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">22. Diagnostics and Negative Tests</span></h1>
+<h1 class="title">22. Diagnostics and Negative Tests</h1>
 </div>
 
 
@@ -451,22 +194,22 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_attack_the_analysis_student.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
 <figcaption>Open the lab in Colab</figcaption>
 </figure>
 </div>
 <blockquote class="blockquote">
 <p><strong>The research decision.</strong> Before you believe a result, decide which negative test to run, a check aimed at a place where the answer must be zero, and read what its outcome does and does not license. You pick the test, confirm it is genuinely null, and defend only what a clean pass actually earns you.</p>
 </blockquote>
-<section id="why-this-decision-matters" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">22.1</span> Why this decision matters</h2>
+<section id="why-this-decision-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-decision-matters">Why this decision matters</h2>
 <blockquote class="blockquote">
 <p><em>“Before you tell me the extract works, show me the plate with no extract on it. If the blank disk also cleared the bacteria, you have not discovered a drug. You have discovered that your solvent is toxic.”</em> — a <strong>microbiology lab advisor</strong>, on the first plate she asks to see</p>
 </blockquote>
 <p>A striking result is the easiest thing in the world to produce by accident. Your procedure has many moving parts: how you handled the samples, how you measured, how you coded the groups. Any one of them can manufacture a signal that has nothing to do with the thing you set out to study. A negative test is how you find out whether the world produced your result or your own pipeline did. Skip it, and you may spend a semester defending an artifact.</p>
 </section>
-<section id="the-concept" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">22.2</span> The concept</h2>
+<section id="the-concept" class="level2">
+<h2 class="anchored" data-anchor-id="the-concept">The concept</h2>
 <p>A <strong>negative test</strong> is a check that runs your exact analysis on a situation where the true answer has to be zero, so any signal it returns is coming from your procedure, not the phenomenon. Example: measuring your “effect” in a group that received no treatment at all. Because the honest answer there is zero, a non-zero reading exposes a flaw in your machinery. Three members of this family show up in almost every audit.</p>
 <ul>
 <li><strong>Placebo test</strong>: you replace the real cause with a fake one that cannot act, and confirm the effect disappears. Example: swap the real treatment and control labels for a coin flip, and check that the estimate collapses toward zero.</li>
@@ -476,18 +219,18 @@ ul.task-list li input[type="checkbox"] {
 <p>One term earns its own line. A <strong>vehicle control</strong> is the negative control matched to how you delivered the cause: the carrier with the active ingredient left out. Example: if you dissolved your extract in ethanol, the vehicle control is a disk soaked in ethanol alone. What every one of these tests hunts for is an <strong>artifact</strong>, a signal produced by your procedure rather than by the thing you study. Example: a clear ring caused by the solvent, not the extract.</p>
 <p>They share one move: aim the machinery where the answer must be zero, and make sure it says zero. Here is the boundary you must never blur. A passed negative test rules out <strong>one specific artifact</strong>. It does not prove your effect is real, and it never turns a correlation into a cause.</p>
 </section>
-<section id="a-worked-example" class="level2" data-number="22.3">
-<h2 data-number="22.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">22.3</span> A worked example</h2>
+<section id="a-worked-example" class="level2">
+<h2 class="anchored" data-anchor-id="a-worked-example">A worked example</h2>
 <p>You are testing whether an extract from a medicinal plant kills a common bacterium. You soak a small paper disk in the extract, lay it on a lawn of bacteria growing on an agar plate, incubate overnight, and next morning measure the <strong>zone of inhibition</strong>, the clear ring where bacteria failed to grow around the disk. A wide ring looks like a real antibacterial effect, and it is tempting to write that down.</p>
 <p>Before you do, you run the negative test. You dissolved the extract in 70% ethanol, so your vehicle control is a disk soaked in 70% ethanol alone, placed on an identical plate and treated exactly the same way. If that disk leaves a bare, uninhibited lawn, the test passed: ethanol on its own did nothing, so the ring around your extract disk is not a solvent artifact, and your effect survives one specific worry. If the vehicle disk grows its own clear ring, the test failed. The ethanol is killing the bacteria, and you can no longer tell how much of the extract’s ring is the extract and how much is the solvent. The finding is an artifact until you redo it at a lower concentration.</p>
 <p>Notice what a clean pass still does not buy you. It does not tell you the extract works inside a living animal, or which molecule is responsible. It ruled out one artifact and nothing more, and that modesty is the point.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="22.4">
-<h2 data-number="22.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">22.4</span> The Colab laboratory</h2>
-<p>This chapter’s lab is notebook <strong>nb09 — Share the research + attack the analysis</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you run a placebo test on a real survey estimate: you throw away the true grouping, replace it with a coin-flip label 500 times, and watch the fake gaps cluster tightly at zero while the real result sits far outside that cloud. Then a leave-one-out check shows you whether a single data point is quietly carrying the whole finding.</p>
+<section id="the-colab-laboratory" class="level2">
+<h2 class="anchored" data-anchor-id="the-colab-laboratory">The Colab laboratory</h2>
+<p>This chapter’s lab is notebook <strong>nb10 — Share the research + attack the analysis</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you run a placebo test on a real survey estimate: you throw away the true grouping, replace it with a coin-flip label 500 times, and watch the fake gaps cluster tightly at zero while the real result sits far outside that cloud. Then a leave-one-out check shows you whether a single data point is quietly carrying the whole finding.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="22.5">
-<h2 data-number="22.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">22.5</span> Recommended AI prompts</h2>
+<section id="recommended-ai-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="recommended-ai-prompts">Recommended AI prompts</h2>
 <p>Commit your own expectation first, then delegate a checkable job. Never let the tool decide whether your control is valid.</p>
 <p><strong>Locate the standard control.</strong></p>
 <pre class="text"><code>Act as a lab-methods assistant. I ran an antibiotic disk-diffusion assay with a
@@ -521,21 +264,21 @@ weak to carry the artifact, a zero I would have gotten no matter what. Do not re
 </div>
 </div>
 </section>
-<section id="an-ai-failure-case" class="level2" data-number="22.6">
-<h2 data-number="22.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">22.6</span> An AI failure case</h2>
+<section id="an-ai-failure-case" class="level2">
+<h2 class="anchored" data-anchor-id="an-ai-failure-case">An AI failure case</h2>
 <p>You ask an AI to design a negative control for your ethanol-based assay. It answers, with complete confidence, “use a disk soaked in sterile water.” You run it, the water disk comes back perfectly clean, and the tidy conclusion writes itself: control passed, effect confirmed. Here is the trap. Water is not the vehicle you used. You delivered the extract in ethanol, so the artifact you needed to rule out is ethanol toxicity, and a water disk can never show it. The clean result ruled out nothing at all.</p>
 <p>You catch it with one question the tool never asked itself: <em>what artifact does this control actually rule out?</em> A valid vehicle control matches how you delivered the cause, solvent for solvent. The moment you see the mismatch you swap water for 70% ethanol and run the test that can genuinely fail. This is a <em>plausible-but-wrong-method</em>: the advice sounded like textbook practice and was wrong for your case.</p>
 </section>
-<section id="verification-laboratory" class="level2" data-number="22.7">
-<h2 data-number="22.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">22.7</span> Verification laboratory</h2>
+<section id="verification-laboratory" class="level2">
+<h2 class="anchored" data-anchor-id="verification-laboratory">Verification laboratory</h2>
 <p>Verify this chapter’s key result, that a genuine negative test returns zero, with <strong>simulation</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>. Build a dataset by hand where no effect exists: assign a fake label by coin flip and generate an outcome that ignores it entirely. Run your negative-test machinery on it. If the procedure is sound, the estimate comes back near zero, again and again across many random labels. If it returns a signal on data you built to hold none, the test itself is broken, not the world. A negative test you have confirmed returns zero on known-null data is one you can trust when it returns zero on your real data.</p>
 </section>
-<section id="project-transfer" class="level2" data-number="22.8">
-<h2 data-number="22.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">22.8</span> Project transfer</h2>
+<section id="project-transfer" class="level2">
+<h2 class="anchored" data-anchor-id="project-transfer">Project transfer</h2>
 <p>This chapter adds one pre-listed check to your <strong>M9 research audit</strong>, the graded record of how hard you tried to break your own claim. Before you look at your result, write down one negative test your design calls for, name the exact zero you expect, and commit to reporting it whichever way it comes out. Run it, record what you got against what you predicted, and if the estimate moved, say by how much. That row, the negative test you chose plus the zero you expected plus the result, is one of the strongest lines you can walk a skeptic through at Friday’s studio.</p>
 </section>
-<section id="defend-your-decision" class="level2" data-number="22.9">
-<h2 data-number="22.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">22.9</span> Defend your decision</h2>
+<section id="defend-your-decision" class="level2">
+<h2 class="anchored" data-anchor-id="defend-your-decision">Defend your decision</h2>
 <p>In four sentences, defend the negative test you chose for your own result. Name the test and the exact zero you expected before you ran it. State what a clean pass licenses you to claim, and its boundary: the one artifact it rules out, and the causal or general claim it does <em>not</em> establish. Close with your uncertainty: whether the test was powerful enough to have caught the artifact if it were really there, and the one check you would run next.</p>
 
 
@@ -942,18 +685,6 @@ weak to carry the artifact, a zero I would have gotten no matter what. Do not re
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="pagination-link" aria-label="21. Robustness and Sensitivity">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">21. Robustness and Sensitivity</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../part4-credible-evidence/23-ai-as-adversarial-reviewer.html" class="pagination-link" aria-label="23. AI as Adversarial Reviewer">
-        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">23. AI as Adversarial Reviewer</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 

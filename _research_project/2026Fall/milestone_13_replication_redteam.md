@@ -11,7 +11,7 @@ follows the same cadence: **Friday-studio kickoff → develop across the week �
 present → submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
-checked it. Milestone weights and the revision policy live in the syllabus;
+checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
 This milestone is the whole of the **Replication & red-team** component and is

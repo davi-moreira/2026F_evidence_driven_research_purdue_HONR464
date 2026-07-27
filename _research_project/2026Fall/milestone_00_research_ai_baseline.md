@@ -11,7 +11,7 @@ follows the same cadence: **Friday-studio kickoff → develop across the week �
 present → submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
-checked it. Milestone weights and the revision policy live in the syllabus;
+checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
 ---
@@ -23,7 +23,7 @@ the Friday studio that same day, and share your baseline with the room).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m00_research_ai_baseline.pdf`** *or* a shared Colab notebook link | The four-part baseline below: your three curiosities with one defended pick, your AI baseline (two things you assume AI is good at with the check for each, and two decisions you will not delegate), a screenshot of nb00's readiness checks, and your first AI Research Ledger row from the Lecture 1 citation catch. This is the graded artifact. |
+| 1 | **`lastname_m00_research_ai_baseline.pdf`** *or* a shared Colab notebook link | The four-part baseline below: your three curiosities with one defended pick, your AI baseline (two things you assume AI is good at with the check for each, and two decisions you will not delegate), a screenshot of nb01's readiness checks, and your first AI Research Ledger row from the Lecture 1 citation catch. This is the graded artifact. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.
@@ -45,7 +45,7 @@ curiosities** before they evaporate, and it **installs your working relationship
 with AI**: what you will let it do, what you will never hand it, and how you
 check what comes back.
 
-That second half is the spine of the course. In nb00 you met the one rule
+That second half is the spine of the course. In nb01 you met the one rule
 everything rests on: **AI is your arm and your research assistant, not your
 brain.** You saw why a fabricated source sounds exactly like a real one, so you
 verify by retrieving. You named the ways a fluent partner fools careful people,
@@ -78,7 +78,7 @@ the funnel from curiosity to a question is M1's job, not today's.
 
 Then **mark the one you would currently carry** and defend it in a short
 paragraph: why this one, and what would make it a *bad* choice you should watch
-for. Name a real risk from the three nb00 gave you: **too broad to finish**, **no
+for. Name a real risk from the three nb01 gave you: **too broad to finish**, **no
 reachable data**, or **already settled**. You are not locked in. You are
 practicing the move: choose, and say why.
 
@@ -90,7 +90,7 @@ practicing the move: choose, and say why.
 ### 2. Your AI baseline
 
 This is the half of M0 that is unique to this course. Draw the line you will
-patrol all semester, in three parts, from your nb00 Human-Only Checkpoint.
+patrol all semester, in three parts, from your nb01 Human-Only Checkpoint.
 
 - **Two things you assume AI is good at** for research, and for **each one, the
   exact check** that would confirm or break that assumption. "Good at finding
@@ -106,14 +106,14 @@ patrol all semester, in three parts, from your nb00 Human-Only Checkpoint.
   you over-trust the tool, say so. That is itself a finding, and it names the
   habit to watch first.
 
-This is the **assistance-versus-intellectual-substitution** line from nb00.
+This is the **assistance-versus-intellectual-substitution** line from nb01.
 **Assistance** speeds up work you could check and own. **Intellectual
 substitution** is letting the tool make a judgment that was yours to make. Your
 baseline says, in writing, which is which for you.
 
 ### 3. Tool-readiness screenshot
 
-Open **nb00** in Colab, save a copy to your Drive, and run the readiness cell.
+Open **nb01** in Colab, save a copy to your Drive, and run the readiness cell.
 It ends in three ✓ marks when your environment is ready: you can run a code cell,
 the course data loads, and you have claimed your copy by name. Paste one
 screenshot showing all three ✓ marks into your submission. This is your proof
@@ -135,8 +135,8 @@ full row of the eight-field ledger:
 
 The **decision** and **verification method** columns carry the weight: the
 output is a proposal, and the named verification is what makes it usable. "No AI
-used beyond nb00's exercise" is a legitimate entry only if it is true; because
-nb00 walks you through one deliberate citation catch, you will almost certainly
+used beyond nb01's exercise" is a legitimate entry only if it is true; because
+nb01 walks you through one deliberate citation catch, you will almost certainly
 have a real row to log. An undisclosed AI contribution is an academic-integrity
 violation; a frankly logged one is graded on its honesty. The ledger template and
 worked rows live in
@@ -158,7 +158,7 @@ M1, where one curiosity funnels into a single answerable question.
 |---|---|
 | **Length** | 1–2 pages (PDF), or the equivalent notebook sections, including the screenshot and ledger row |
 | **Pitch** | 30 seconds at the Friday studio (Aug 28), one curiosity, no slides needed — part of the grade |
-| **Style** | Plain prose; three clearly separated curiosities; every technical term (assistance vs substitution, retrievable, never-delegate) used as nb00 defined it |
+| **Style** | Plain prose; three clearly separated curiosities; every technical term (assistance vs substitution, retrievable, never-delegate) used as nb01 defined it |
 | **Filename** | `lastname_m00_research_ai_baseline.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M00 |
 

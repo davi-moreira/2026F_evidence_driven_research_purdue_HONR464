@@ -2,8 +2,9 @@
 
 *How your leading is graded. Read this before your first slot so you know what
 strong leading looks like, then aim your preparation template at it. You are
-graded live, during the session, on the nine rows below. Across your five slots,
-these scores make up the SRL-performance share of your course grade.*
+graded live, during the session, on the nine rows below. Each lead is scored on
+its own, and together those scores make up the SRL-performance share of your
+course grade.*
 
 The rubric measures one thing from nine angles: **did you run a Socratic
 investigation that kept the room thinking, used AI as an arm rather than a
@@ -18,7 +19,7 @@ Exemplary.
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
 | **1. Conceptual correctness** (15) | The concept in play is handled correctly throughout; any student or AI error is caught and corrected; the room leaves with an accurate understanding (13–15) | Concept is essentially correct; a minor imprecision, self-corrected or harmless (10–12) | A conceptual slip goes uncorrected until the instructor steps in; partial understanding leaves the room (6–9) | A conceptual error spreads unchecked; the room leaves with a wrong idea (0–5) |
-| **2. Quality of Socratic questions** (15) | Questions are open and non-leading and repeatedly hand the thinking back to the room; the room does the reasoning (13–15) | Mostly strong questions, with an occasional leading or yes/no question (10–12) | Questions often point at the answer or are answerable in a word; the lead does most of the reasoning (6–9) | Little real questioning; the session is a presentation, not an investigation (0–5) |
+| **2. Quality of Socratic questions** (15) | Questions are open and non-leading and repeatedly hand the thinking back to the room; the room does the reasoning; the puzzle is staged in the lead's own way rather than read off the brief (13–15) | Mostly strong questions, with an occasional leading or yes/no question (10–12) | Questions often point at the answer or are answerable in a word; the lead does most of the reasoning (6–9) | Little real questioning; the session is a presentation, not an investigation (0–5) |
 | **3. Ability to expose assumptions** (10) | Names the hidden assumption under at least one claim and makes the room examine it; the probe is the lesson (9–10) | Surfaces an assumption but does not fully work it (7–8) | Gestures at assumptions without naming one clearly (4–6) | Claims pass unexamined; no assumption surfaced (0–3) |
 | **4. Productive use of AI** (15) | Commit-before-AI is enforced; AI is pointed at a specific job with a prepared prompt; the room sees AI used as an arm, not a brain (13–15) | AI is used purposefully, with a minor lapse such as a vague prompt or a skipped commitment (10–12) | AI is used loosely; the room reads an AI answer without committing first (6–9) | AI does the thinking, or "explain this topic" is read aloud, or the hard cap below triggers (0–5) |
 | **5. Ability to interrogate AI output** (15) | Actively hunts the three failure patterns (fabrication, wrong method, missing uncertainty); sources are confirmed; AI overconfidence is called out (13–15) | Interrogates the AI but misses one failure pattern present in the output (10–12) | Light or superficial checking; takes the AI answer largely at face value (6–9) | AI output is accepted without interrogation (0–5) |

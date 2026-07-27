@@ -68,7 +68,7 @@ know what you are and are not using. **GenAI Studio implements only levels 1–4
 | 5 | Autonomous agent | A model that plans and takes actions on its own, without a human in each step. | ✗ No — not in GenAI Studio |
 | 6 | Multi-agent orchestration | Several autonomous agents coordinating a task. | ✗ No — not in GenAI Studio |
 
-Levels 5 and 6 are taught **conceptually** in Week 16 (nb15, "Managing multiple
+Levels 5 and 6 are taught **conceptually** in Week 16 (nb16, "Managing multiple
 AI agents; the final defense") so you can name them, recognize their risks, and
 explain why the course does not hand a research decision to either. The Week-16
 "orchestrator" (`roles/ai_research_team_orchestrator.md`) is a **level-4
@@ -93,7 +93,7 @@ Three uses, all inside the Ask → Verify → Document loop.
    models and study where they disagree. Disagreement is a flag to investigate;
    **agreement is not proof**, because models trained on overlapping data share
    correlated errors and can be confidently wrong together.
-3. **The Week-16 sequential multi-role workflow** (nb15). You plan and run a
+3. **The Week-16 sequential multi-role workflow** (nb16). You plan and run a
    short chain of roles by hand or through the API, keeping a human decision and
    a ledger row at every hand-off. This is the level-4 capstone: you experience
    orchestrating AI reviewers while staying the orchestrator.

@@ -11,7 +11,7 @@ follows the same cadence: **Friday-studio kickoff → develop across the week �
 present → submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
-checked it. Milestone weights and the revision policy live in the syllabus;
+checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
 ---
@@ -33,7 +33,7 @@ open it, and that the DAG figure renders when the notebook is run.
 ## Purpose
 
 This is the milestone where your question stops floating and gets a **design** to
-live in. In nb03 you learned that every study, from a two-person survey to a
+live in. In nb04 you learned that every study, from a two-person survey to a
 national experiment, has the same four parts — **MIDA**: a **Model** (the world
 your question assumes), an **Inquiry** (the exact quantity you want), a **Data
 strategy** (how the data come to exist), and an **Answer strategy** (how you turn
@@ -131,7 +131,7 @@ that happens to be nearby.
 ### 5. The diagnosis and one redesign
 
 A design earns a claim only when it is **diagnosed**, not merely argued for. In
-nb03 you declared a design and ran it many times to read three numbers:
+nb04 you declared a design and ran it many times to read three numbers:
 
 - **Bias** — the average distance between your estimate and the truth. A tilt
   that **more data cannot fix**; only a design change moves it.
@@ -195,7 +195,7 @@ section in your dossier where each now lives.
 | **Length** | The charter's six declared parts + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
 | **Figure** | The 3-node DAG as a legible image; treatment, outcome, and at least one confounder with an arrow into both |
 | **Presentation** | 3-minute charter declaration at the Friday studio (Sep 18); a partner and the assigned MIDA Design Reviewer red-team your alignment, your DAG's arrows, and your claim boundary — part of the grade |
-| **Style** | Plain language; every technical term used as defined in nb03; the inquiry stated both in words and as an estimand; the claim boundary stated as two explicit sentences |
+| **Style** | Plain language; every technical term used as defined in nb04; the inquiry stated both in words and as an estimand; the claim boundary stated as two explicit sentences |
 | **Filename** | `lastname_m03_charter.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M03 |
 

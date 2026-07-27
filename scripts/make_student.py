@@ -4,7 +4,7 @@ gitignored instructor notebook by stripping every cell whose source contains
 the marker `INSTRUCTOR SOLUTION` (heading, code, or HTML-comment form).
 
 Usage:
-    python3 scripts/make_student.py notebooks/instructor/nb01_*_instructor.ipynb
+    python3 scripts/make_student.py notebooks/instructor/nb02_*_instructor.ipynb
     python3 scripts/make_student.py --all
 
 Also clears outputs/execution counts in the student file (students run it

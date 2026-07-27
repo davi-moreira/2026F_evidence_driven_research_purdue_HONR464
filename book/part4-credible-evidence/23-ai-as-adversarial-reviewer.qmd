@@ -2,7 +2,7 @@
 title: "23. AI as Adversarial Reviewer"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
 > **The research decision.** When an adversarial reviewer hands you a list of
 > flaws in your own analysis, you decide which flaws are real by running the single
@@ -90,7 +90,7 @@ endpoint your users hit.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb09, Share the Research and Attack the Analysis**.
+This chapter's lab is notebook **nb10, Share the Research and Attack the Analysis**.
 Open it in Colab with the badge above and work the cells alongside this chapter. You
 rerun one estimate across a pre-listed grid of eight specifications, watch
 specification searching manufacture a significant result from pure noise, run a

@@ -3,10 +3,10 @@ project:
   output-dir: ../docs/book
 
 book:
-  title: "Evidence-Driven Research"
-  subtitle: "How to Design, Analyze, Verify, and Defend Empirical Research"
+  title: "Evidence-Driven Research in AI-era"
+  subtitle: "How to Design, Analyze, Verify, and Defend"
   author: "Professor Davi Moreira"
-  description: "The course book for HONR 46400 (Purdue Honors). RDSS is the theory text; this is the AI-era research manual, synchronized with the 16 course notebooks."
+  description: "The course book for HONR 46400 (Purdue Honors). RDSS is the theory text; this is the AI-era research manual, synchronized with the 16 course notebooks. A work in progress, under development across the semester."
   chapters:
     - index.qmd
     - part: "Part I — Research when AI can produce almost everything"
@@ -58,6 +58,8 @@ book:
         - part6-after-conference/35-managing-multiple-ai-agents.qmd
         - part6-after-conference/36-conflicting-agents-and-human-escalation.qmd
         - part6-after-conference/37-final-research-and-ai-management-portfolio.qmd
+  appendices:
+    - srl.qmd
 
 format:
   html:

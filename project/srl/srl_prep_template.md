@@ -1,6 +1,7 @@
 # SRL Preparation Template
 
-*Fill this in and submit it two days before your lead. This is your script. A
+*Start from the **SRL Lead Brief** at the top of your lecture's notebook, then
+fill this in and submit it two days before your lead. This is your script. A
 strong prep template is most of a strong session, and the instructor's notes on
 it are the last chance to fix a session before it happens. Keep every section
 in the student voice you will actually use in the room.*
@@ -8,21 +9,23 @@ in the student voice you will actually use in the room.*
 ---
 
 **Your name:**
-**Your rotation seat (A–E):**
-**Slot number (1–25):**
 **Format (Monday guided investigation / Wednesday applied AI lab):**
 **Topic / notebook this session serves (nbNN):**
 **The one thing the room must leave understanding:**
+**One thing I am adding that the SRL Lead Brief does not have** *(your own
+example, your own staging, your own opening question; the brief is a floor, not
+a ceiling):*
 
 ---
 
 ## 1. The puzzle (≤ 120 words)
 
-> *Your concrete opening. State the puzzle so a classmate outside your project
-> would lean in. It needs a real answer, more than one tempting wrong answer,
-> and no jargon that has not been defined yet. On Wednesday this is your
-> retrieval challenge instead: a common error, an ambiguous claim, a flawed AI
-> output, a design conflict, or a result that needs interpreting.*
+> *Your concrete opening. Take the brief's seed puzzle, sharpen it, or write
+> your own. State it so a classmate outside your project would lean in. It needs
+> a real answer, more than one tempting wrong answer, and no jargon that has not
+> been defined yet. On Wednesday this is your retrieval challenge instead: a
+> common error, an ambiguous claim, a flawed AI output, a design conflict, or a
+> result that needs interpreting.*
 
 
 

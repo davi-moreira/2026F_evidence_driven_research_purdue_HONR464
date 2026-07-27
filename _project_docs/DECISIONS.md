@@ -410,3 +410,47 @@ scores 0 and the submission is returned.
 milestone, turns the responsible-AI-use rule from a habit into a graded,
 inspectable record — and gives the M13 red-team and M15 portfolio their
 primary source.
+
+---
+
+## Decision 22: Week-aligned numbering, quiz-first Fridays, notebook-embedded SRL briefs, confirmed assessment (2026-07-27)
+
+**Decision:** Instructor ruling, seven parts.
+1. **Renumbering:** the weekly topic notebooks run `nb01`–`nb16` so the week
+   number always equals the notebook number (formerly `nb00`–`nb15`; files,
+   registry keys, Topic NN headers, book links, and planning docs all shifted;
+   milestones keep M0–M15 and studio notebooks keep ms00–ms15).
+2. **SRL assignment:** lead slots are randomly assigned at the start of the
+   semester — the seat A–E rotation is retired. No student-facing "five times"
+   promise; no five-day SRL-page release.
+3. **SRL briefs:** each lecture's SRL guidance is a STUDENT-VISIBLE
+   `### 🎤 SRL Lead Brief` cell opening that lecture in its notebook (after
+   `# Lecture N`, before the 🧩 Research Puzzle). The old instructor-only "SRL
+   page" cells are retired. Briefs must be simple to follow, and must leave
+   explicit room for the lead's own staging ("the brief is a floor, not a
+   ceiling"). The voice linter allow-lists the exact role name
+   "Student Research Lead"/"Student-led" (proper noun, not third-person voice).
+   The SRL guide is also a course-book appendix (`book/srl.qmd`).
+4. **Friday studios are quiz-first:** 0–10 weekly multiple-choice topic quiz
+   (printed, solo, graded) · 10–15 stand-up · 15–32 milestone kickoff +
+   AI-supported sprint · 32–42 peer + AI red-team review · 42–50 revise,
+   ledger, submit. Quiz masters + keys + D2L banks: `_quizzes/2026Fall/weekly/`
+   (gate: `scripts/audit_answer_length.py --file`).
+5. **Assessment (confirmed):** Lecture Notebook Completion 10 · Quizzes 20 ·
+   SRL performance 20 · Final Project Milestones 20 · Final Project 20 ·
+   Research artifact (paper/chapter/note) 10.
+6. **Course book:** retitled "Evidence-Driven Research in AI-era: How to
+   Design, Analyze, Verify, and Defend"; presented as a work in progress under
+   development across the semester.
+7. **Site:** course description replaced verbatim (no bold); learning outcomes
+   mirror it; the AI-tagline blockquote, async/no-class bullets, midterm/exam
+   sentence, revision-policy block, and Milestone Chain section are off the
+   home/syllabus pages — the milestone chain and weekly architecture now live
+   in nb01 Lecture 1 (dateless; dates stay on Schedule). The tagline drops its
+   em dash: "your arm, your RA, not your brain."
+
+**Rationale:** Instructor review of the v2 build (2026-07-27): align numbering
+with weeks for student legibility; make the SRL system simpler, public, and
+creative; add weekly retrieval practice with a graded quiz; settle grading
+weights; de-clutter the public pages while keeping operational detail in the
+first notebook, the book appendix, and the schedule.

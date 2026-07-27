@@ -2,7 +2,7 @@
 title: "34. Open and Reusable Research Packages"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_poster_to_research_note_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide what goes into the reproducibility capsule that
 > ships with your research note, and defend the claim that a stranger can rerun your
@@ -78,7 +78,7 @@ why your capsule is exercised by a partner, not only by a script.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb14 — From poster to research note**. Open it in
+This chapter's lab is notebook **nb15 — From poster to research note**. Open it in
 Colab with the badge above. There you build `audit_capsule`, watch it flag all five
 sins in a deliberately broken package and none in a clean one, then paste your own
 capsule's key lines in and fix what it catches before Friday's studio.

@@ -2,7 +2,7 @@
 title: "12. Observational Causal Research"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_causal_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_observational_causal_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide whether your observational comparison has
 > earned the word *because* or must stop at *associated with*, and defend that
@@ -93,7 +93,7 @@ and to say.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb05 — Observational causal research**. Open it in
+This chapter's lab is notebook **nb06 — Observational causal research**. Open it in
 Colab with the badge above and work the cells alongside this chapter. In the lab you
 build a small world where *you* set coffee's true effect, plant a hidden confounder,
 and watch a naive comparison inflate a true +1.0 to about +3.1, then recover the

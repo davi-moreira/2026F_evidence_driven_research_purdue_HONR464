@@ -2,7 +2,7 @@
 title: "22. Diagnostics and Negative Tests"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
 > **The research decision.** Before you believe a result, decide which negative
 > test to run, a check aimed at a place where the answer must be zero, and read
@@ -77,7 +77,7 @@ nothing more, and that modesty is the point.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb09 — Share the research + attack the analysis**.
+This chapter's lab is notebook **nb10 — Share the research + attack the analysis**.
 Open it in Colab with the badge above and work the cells alongside this chapter.
 There you run a placebo test on a real survey estimate: you throw away the true
 grouping, replace it with a coin-flip label 500 times, and watch the fake gaps

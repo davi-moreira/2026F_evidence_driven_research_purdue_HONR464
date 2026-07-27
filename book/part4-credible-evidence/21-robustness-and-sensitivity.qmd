@@ -2,7 +2,7 @@
 title: "21. Robustness and Sensitivity"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
 > **The research decision.** Before you look at a single result, decide the full set
 > of robustness and sensitivity checks you will run on your headline estimate, and
@@ -83,7 +83,7 @@ showed a gap, your measurement, not the treatment, would be manufacturing it.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb09 — Share the research + attack the analysis**.
+This chapter's lab is notebook **nb10 — Share the research + attack the analysis**.
 Open it in Colab with the badge above and work the cells alongside this chapter.
 There you rerun one headline gap across a pre-listed grid and read its specification
 curve, watch specification searching manufacture a "significant" result from data with

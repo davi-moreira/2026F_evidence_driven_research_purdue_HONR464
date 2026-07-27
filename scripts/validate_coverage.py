@@ -2,7 +2,7 @@
 """validate_coverage.py — cross-artifact consistency gates.
 
   1. Every meeting (43) names exactly one topic notebook, and every notebook
-     (nb00–nb15) is named by >= 1 meeting.
+     (nb01–nb16) is named by >= 1 meeting.
   2. Every referenced notebook's STUDENT file exists (skippable pre-Phase-D
      with --plan, which only checks the mapping).
   3. Readings-vs-inventory: every RDSS chapter cited in the schedule is in the

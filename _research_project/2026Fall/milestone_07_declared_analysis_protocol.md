@@ -11,7 +11,7 @@ follows the same cadence: **Friday-studio kickoff → develop across the week �
 present → submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
-checked it. Milestone weights and the revision policy live in the syllabus;
+checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
 ---
@@ -40,7 +40,7 @@ into a flattering method. Once you have seen which model or which metric happens
 win on your data, you can no longer honestly claim you would have chosen it anyway.
 Declaring the plan first is how you keep that honesty.
 
-This milestone is where the prediction week (Topic 07) becomes your own project's
+This milestone is where the prediction week (Topic 08) becomes your own project's
 spine. Prediction is one of the four compass positions, and it is the one most
 likely to fool you: a score can look impressive because the model quietly read the
 answer, not because it learned anything. So the protocol you declare has to say, in

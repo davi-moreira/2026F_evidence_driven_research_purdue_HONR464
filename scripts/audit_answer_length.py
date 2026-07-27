@@ -144,8 +144,8 @@ def main():
     late = [f for f in quiz_files if nb_num(f) >= 9]
 
     groups = [
-        ("QUIZZES nb09-nb19 (reported) — CHARACTERS", late, chars),
-        ("QUIZZES nb01-nb08 (context) — CHARACTERS", early, chars),
+        ("QUIZZES nb10-nb19 (reported) — CHARACTERS", late, chars),
+        ("QUIZZES nb02-nb09 (context) — CHARACTERS", early, chars),
         ("MIDTERM all 14 cases — CHARACTERS", mid_files, chars),
         ("MIDTERM all 14 cases — CONNECTOR WORDS", mid_files, conn),
     ]

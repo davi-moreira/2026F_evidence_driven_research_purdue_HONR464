@@ -1,16 +1,16 @@
-"""Convert inline-paragraph Q&A blocks to the nb09 blockquote convention.
+"""Convert inline-paragraph Q&A blocks to the nb10 blockquote convention.
 
-The nb09 convention is:
+The nb10 convention is:
     > **A question that often comes up here:** *"<question>"* <answer prose>
 (blockquote prefix, bold opener with colon, italic question in double quotes,
 single paragraph of flowing prose).
 
 This script rewrites the inline-paragraph form used in earlier drafts:
     A question that often comes up here is *"<question>"* <answer prose>
-into the nb09 form, idempotently.
+into the nb10 form, idempotently.
 
 Usage:
-    python scripts/qa_format_to_nb09.py notebooks/nb11_decision_trees_student.ipynb [more notebooks...]
+    python scripts/qa_format_to_nb09.py notebooks/nb12_decision_trees_student.ipynb [more notebooks...]
 """
 from __future__ import annotations
 import json
@@ -31,7 +31,7 @@ def transform_cell_source(src: str) -> tuple[str, int]:
     new_lines: list[str] = []
     n_changes = 0
     for line in lines:
-        # Already in the nb09 blockquote form? leave it alone.
+        # Already in the nb10 blockquote form? leave it alone.
         if line.lstrip().startswith("> **A question that often comes up"):
             new_lines.append(line)
             continue

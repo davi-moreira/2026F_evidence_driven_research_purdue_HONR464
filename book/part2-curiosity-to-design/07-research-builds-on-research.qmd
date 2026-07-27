@@ -2,7 +2,7 @@
 title: "7. Research Builds on Research"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_research_builds_on_research_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
 
 > **The research decision.** Given a source an AI tool or a search hands you, you
 > decide whether it counts as *verified* (retrieved and read by you). And given the
@@ -76,7 +76,7 @@ it and they still leave it open.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb02 — Research builds on research: verified evidence +
+This chapter's lab is notebook **nb03 — Research builds on research: verified evidence +
 real gaps**. Open it in Colab with the badge above and work the cells alongside this
 chapter. In the lab you watch a pile of fifteen AI citations collapse to the few that
 survive retrieval, build an evidence map in code, and run the retrieval-verification loop

@@ -2,7 +2,7 @@
 title: "36. Conflicting Agents and Human Escalation"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
 
 > **The research decision.** When your AI roles disagree, or when several of them
 > agree, decide which of three things you are looking at (real disagreement,
@@ -90,7 +90,7 @@ was earned.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb15 — Managing multiple AI agents + the final
+This chapter's lab is notebook **nb16 — Managing multiple AI agents + the final
 defense**. Open it in Colab with the badge above and work the cells alongside this
 chapter. There you wire a worker-critic workflow on a real draft, then simulate two
 four-reviewer teams and watch a shared blind spot turn unanimous agreement into false

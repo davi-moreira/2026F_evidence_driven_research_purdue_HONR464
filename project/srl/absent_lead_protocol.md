@@ -5,20 +5,21 @@
 *What to do when the scheduled Student Research Lead is absent, or arrives
 without a usable preparation. The goal is that the session runs well regardless,
 no learning block is lost, and the accountability lands fairly on the person
-responsible. With a five-person seminar and 25 slots, a missed lead is rare but
-must never derail a class.*
+responsible. In a seminar this small, a missed lead is rare but must never
+derail a class.*
 
 ---
 
-## Standby order
+## Naming a standby
 
-Every slot has a standby: **the next seat in the rotation**. Seats run A, B, C,
-D, E and cycle, so the standby for a seat-C slot is seat D, the standby for
-seat E is seat A, and so on. The standby is not expected to prepare in advance;
-they are a warm body who can run a script, and the script already exists.
+There is no standing standby list. **When an absence is known, name a standby at
+random from the roster.** Drawing at random keeps it fair and keeps no one
+permanently on the hook. The standby is not expected to prepare in advance; they
+are a warm body who can run a script, and the script already exists.
 
-If the standby is also absent, continue down the rotation to the next present
-seat. If no student can step in, the instructor leads (see escalation below).
+If the drawn student cannot step in, draw again. If no student can step in, the
+instructor leads the session from the lecture notebook's **SRL Lead Brief**,
+which is already public to the whole class.
 
 ## The prep template is the substitute's script
 
@@ -41,16 +42,16 @@ from it with minutes of notice.
 A student who misses their slot has not lost the learning opportunity, only the
 scheduled one. Offer, in order of preference:
 
-1. **Swap into a later open or trade-able slot** with another student's
-   agreement, keeping the five-leads-each balance intact. This is the cleanest
-   make-up and the default.
-2. **Take an unclaimed slot** later in the rotation if the calendar has slack.
+1. **Swap with another student's later slot**, with that student's agreement,
+   keeping each person's number of leads unchanged. This is the cleanest make-up
+   and the default.
+2. **Take an unassigned later slot** if the calendar has slack.
 3. **Lead a milestone-studio segment** as a substitute performance if no
    Mon/Wed slot can be recovered, graded on the same rubric adapted to the
    studio context.
 
-Document the arrangement so the five-slot count and the rotation stay correct
-through the end of the semester.
+Document the arrangement so each student's assigned lectures stay correct on the
+Schedule page through the end of the semester.
 
 ## No preparation received — the escalation ladder
 
@@ -65,8 +66,8 @@ template. Handle it on a fixed ladder so it is predictable and fair.
   lead. If yes, require at minimum the puzzle, the commitment question, and one
   Gemini prompt before end of day — the irreducible core of a runnable session.
   If that does not arrive, treat the slot as unprepared.
-- **Day of, no usable preparation:** the **instructor leads the session** using
-  the instructor notebook's SRL page, so the room loses nothing. The student's
+- **Day of, no usable preparation:** the **instructor leads the session** from
+  the lecture notebook's SRL Lead Brief, so the room loses nothing. The student's
   slot is **rescheduled** into a later make-up (see options above), and the
   **preparation grade is affected**: the SRL rubric's preparation-dependent rows
   cannot score at the top when no template was submitted, and the make-up slot

@@ -2,7 +2,7 @@
 title: "14. Prediction and Generalization"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_prediction_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide whether your question is truly a *prediction*
 > about cases you have not yet seen, and if it is, commit in advance to a four-part
@@ -77,7 +77,7 @@ forecast does not yet generalize there.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb07 — Prediction: generalizing to unseen cases**. Open it in Colab with the
+This chapter's lab is notebook **nb08 — Prediction: generalizing to unseen cases**. Open it in Colab with the
 badge above and work the cells alongside this chapter. In the lab you sign the
 four-part contract on a real dataset, score an honest baseline first, then *build a
 leak on purpose* so you feel a fake score climb and learn to hunt it by

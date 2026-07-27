@@ -11,7 +11,7 @@ follows the same cadence: **Friday-studio kickoff → develop across the week �
 present → submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
-checked it. Milestone weights and the revision policy live in the syllabus;
+checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
 ---
@@ -74,7 +74,7 @@ Walk your curiosity down the funnel and show what each stop adds:
 - **Research problem** — a specific unknown inside that territory whose absence
   matters, plus one line on why it matters.
 
-Then name the **three terms** your problem must carry, each defined in nb01:
+Then name the **three terms** your problem must carry, each defined in nb02:
 
 - **Units of analysis** — the who or what each row of your evidence stands for
   (one respondent, one team, one game).
@@ -94,7 +94,7 @@ Then name the **three terms** your problem must carry, each defined in nb01:
 This is the milestone's namesake and its heart. Draft **at least two candidate
 problems** your topic could support, each naming its units, outcome, and target
 population. Then choose one and defend the choice against the three worth-doing
-tests from nb01, one short paragraph:
+tests from nb02, one short paragraph:
 
 - **Importance** — would anyone beyond you act on the answer?
 - **Feasibility** — can you actually get this evidence this term, with the access,
@@ -113,7 +113,7 @@ survives all three.
 
 State your project's question in its best current form: the single sentence
 evidence can answer, **and be wrong about**. Then score it yourself against the
-answerability marks nb01 teaches, one line each saying where the mark is met or
+answerability marks nb02 teaches, one line each saying where the mark is met or
 still weak:
 
 - **Units** named,
@@ -127,7 +127,7 @@ met.
 ### 5. The compass declaration and its claim boundary
 
 Classify your question on the **inquiry compass** and state the boundary that
-classification draws. Write it in the exact shape nb01 grades:
+classification draws. Write it in the exact shape nb02 grades:
 
 - **The declaration:** *"My question is a [descriptive or causal] inquiry reaching
   [the data at hand / a population / unseen cases], because the answer it wants is
@@ -140,7 +140,7 @@ classification draws. Write it in the exact shape nb01 grades:
 - **The giveaway word:** name the one word in your question that most signals a
   position, and say whether it **tells the truth** about the classification or is a
   **trap** that would fool a word-scanner (as "effective" fooled the sorter in
-  nb01).
+  nb02).
 
 > **A question that often comes up here:** *"What if I cannot classify my question
 > cleanly yet?"* That is a finding, not a failure. A question that will not sit in
@@ -184,7 +184,7 @@ Name the file or section in your dossier where each now lives.
 |---|---|
 | **Length** | The landscape + ledger rows (typically 2–3 pages PDF, or the equivalent notebook sections) |
 | **Pitch** | 2 minutes at the Friday studio (Sep 4); a partner and the room classify your question on the compass and you respond to any disagreement — part of the grade |
-| **Style** | Plain language; headings for the components; every technical term used as defined in nb01; any citation retrievable |
+| **Style** | Plain language; headings for the components; every technical term used as defined in nb02; any citation retrievable |
 | **Filename** | `lastname_m01_landscape.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M01 |
 

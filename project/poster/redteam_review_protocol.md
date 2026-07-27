@@ -18,7 +18,7 @@ red-teamed by two — then triage your hits and fix the worst one before you lea
 
 - Your full draft poster, on screen (built from your M29 storyboard grid).
 - Two blank audit slips per reviewer (one per poster you review).
-- The nb10 honest-viz checklist (it rides again for the figure-honesty audit).
+- The nb11 honest-viz checklist (it rides again for the figure-honesty audit).
 - The rotation assignment (below) so everyone knows who reviews whom.
 
 ## The five audits (what every reviewer runs)

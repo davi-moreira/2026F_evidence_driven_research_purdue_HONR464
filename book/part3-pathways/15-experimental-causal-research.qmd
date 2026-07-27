@@ -2,7 +2,7 @@
 title: "15. Experimental Causal Research"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_experimental_causal_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb){target="_blank"}
 
 > **The research decision.** Decide whether the way treatment was assigned in your
 > study lets you read a plain difference in outcomes as a causal effect, and name
@@ -85,7 +85,7 @@ your number describes. Naming that quantity is the decision this chapter equips.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb08 — Experimental causal research**. Open it in
+This chapter's lab is notebook **nb09 — Experimental causal research**. Open it in
 Colab with the badge above and work the cells alongside this chapter. There you
 analyze a real get-out-the-vote field experiment, estimate the effect as a
 difference in means, and put a randomization-inference interval around it. Then you

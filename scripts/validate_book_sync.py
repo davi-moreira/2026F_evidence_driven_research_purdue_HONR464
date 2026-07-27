@@ -7,7 +7,7 @@ course book against it, both directions:
   1. every chapter in the manifest has a file book/<part-slug>/<NN>-*.qmd
   2. every chapter file contains a Colab link to its PRIMARY notebook's student
      file (so the "Colab lab" element is present and points at the right nb)
-  3. every registered notebook (nb00-nb15) is the primary of >= 1 chapter
+  3. every registered notebook (nb01-nb16) is the primary of >= 1 chapter
      (parsed from the manifest, so the book cannot silently drop a topic)
   4. every chapter carries the ten required element headings
 

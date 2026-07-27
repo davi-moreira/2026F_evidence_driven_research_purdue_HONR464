@@ -23,7 +23,7 @@ Assignments below say "skim" or "read" deliberately.
 | 2 | What is a research design? | M1–M2 |
 | 3 | Research design principles | M3 |
 | 4 | Getting started | M4, M7–M8 |
-| 5 | Declaring designs | (background for nb11 helpers) |
+| 5 | Declaring designs | (background for nb12 helpers) |
 | 6 | Specifying the model | M9 |
 | 7 | Defining the inquiry | M5–M6, M10 |
 | 8 | Crafting a data strategy (incl. §8.1 sampling; measurement) | M11–M12, M15–M16 |
@@ -34,7 +34,7 @@ Assignments below say "skim" or "read" deliberately.
 | 13 | Designing in code | (instructor reference; PS coding help) |
 | 15 | Observational: descriptive | M13–M14, M21 |
 | 16 | Observational: causal | M21, M26–M28 |
-| 17 | Experimental: descriptive | (referenced in nb06 boundary discussion) |
+| 17 | Experimental: descriptive | (referenced in nb07 boundary discussion) |
 | 18 | Experimental: causal (incl. §18.4 adjustment) | M27 |
 | 19 | Complex designs | (instructor reference) |
 | 21 | Planning | M39 |
@@ -54,7 +54,7 @@ Assignments below say "skim" or "read" deliberately.
 | Sep 28 | M15–M17 | RDSS ch. 8 §8.1 + §assignment; ch. 9 opening (async preview) | M17 async module carries its own materials |
 | Oct 5 | M18–M20 | RDSS ch. 9 (estimators, regression, uncertainty) | |
 | Oct 14* | M21–M22 | RDSS ch. 15–16 boundary; ch. 10 §power | *October break Mon Oct 12; + optional CB correlation case |
-| Oct 19 | M23–M25 | RDSS ch. 10; ch. 11 | + PS1 concepts (power) surface in nb10/nb11 |
+| Oct 19 | M23–M25 | RDSS ch. 10; ch. 11 | + PS1 concepts (power) surface in nb11/nb12 |
 | Oct 26 | M26–M28 | RDSS ch. 16 (DiD/RDD/IV intuition); declaration_18.1 context | + optional CB algorithm case (M25–M26) |
 | Nov 2 | M29–M31 | none new — poster production | URC specs sheet |
 | Nov 9 | M32–M34 | none new — delivery practice | |
@@ -66,7 +66,7 @@ Assignments below say "skim" or "read" deliberately.
 ## Local instructor-only materials (never assigned to students)
 
 - Problem sets 1–5 + answer keys (`_adm/_references/book/exercises/`) — concepts
-  translated into nb10/nb11 activities; PS titles: power analysis (1), power from
+  translated into nb11/nb12 activities; PS titles: power analysis (1), power from
   adjusting (2), power for an interaction (3), logit vs OLS (4), sampling
   designs (5).
 - Declarations/diagnoses `*.R` (`…/replication-materials/code/`) — translated

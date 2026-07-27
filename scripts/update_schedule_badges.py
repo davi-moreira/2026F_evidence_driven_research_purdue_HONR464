@@ -61,11 +61,12 @@ editor: visual
 
 # Course Schedule
 
-Forty-four Monday/Wednesday/Friday meetings (42 in person, 2 asynchronous
+Forty-three Monday/Wednesday/Friday meetings (41 in person, 2 asynchronous
 online). The weekly rhythm: **Monday and Wednesday are lectures** (new content,
-one notebook per topic), and **every Friday is a studio** — a quick recap of
-the week, the next project milestone presented, and the rest of the class spent
-working on your milestone and research project. Open each notebook in Colab
+one notebook per topic), and **every Friday is a studio** — a short
+multiple-choice quiz on the week's topic, a research stand-up, the next project
+milestone presented, and the rest of the class spent working on your milestone
+and research project. Open each notebook in Colab
 from its badge; milestone instructions and rubrics are on Brightspace. Topic
 resources are also cataloged on the [Material](material.qmd) page, and every
 dataset the course uses is in the

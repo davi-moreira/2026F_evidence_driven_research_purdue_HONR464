@@ -1,9 +1,9 @@
 # HONR 46400 Notebook Structure Template — v2 (canonical)
 
-> **Canonical reference:** `notebooks/student/nb04_observational_descriptive_student.ipynb`
+> **Canonical reference:** `notebooks/student/nb05_observational_descriptive_student.ipynb`
 > (the Week 5 prototype, built in P2) is the reference implementation. Every
 > weekly topic notebook (`notebooks/{instructor,student}/nbNN_topic_{instructor,student}.ipynb`)
-> MUST follow this template. **One notebook per WEEK** (nb00–nb15), not per
+> MUST follow this template. **One notebook per WEEK** (nb01–nb16), not per
 > meeting — each notebook absorbs its week's Mon/Wed lectures (see
 > `planning/COURSE_MASTER_PLAN.md` §2 and `scripts/notebooks_map.py`). The
 > MGMT474 ML-isms (RANDOM_SEED=474, 60/20/20 splits, ISLP, seaborn) are gone by
@@ -136,11 +136,29 @@ Multi-lecture notebooks open EACH lecture with an explicit `# Lecture N` heading
 cell (Lecture 1 right before section `## 1.`; later lectures after a horizontal
 rule) — never meeting numbers, never dates, never italic boundary markers.
 
-**Every lecture opens with a Student Research Lead puzzle cell.** From Week 2 on,
-each Mon/Wed lecture is run by a Student Research Lead as a Socratic
-investigation, not a summary (`course_config.yaml srl`; `planning/COURSE_MASTER_PLAN.md`
-§3). The notebook seeds that opening with a puzzle the reader chews on before any
-exposition or AI:
+**Every lecture opens with an SRL Lead Brief, then the puzzle cell.** From
+Week 2 on, each Mon/Wed lecture is run by a Student Research Lead as a Socratic
+investigation, not a summary (`course_config.yaml srl`;
+`planning/COURSE_MASTER_PLAN.md` §3). Slots are randomly assigned at semester
+start; the lead's guidance is a STUDENT-VISIBLE markdown cell placed
+immediately after `# Lecture N` (D22):
+
+```markdown
+### 🎤 SRL Lead Brief
+
+*This lecture opens with its Student Research Lead. …*
+
+[Mission (one sentence) · run-of-show table with the day's fixed minute frame ·
+three Socratic questions with listen-for hints · one AI trap to watch for ·
+checkpoint minute marks · a "Make it yours" creative-room paragraph · the prep
+cadence (start one week ahead; preparation script/notebook due two days
+ahead).]
+```
+
+Keep the brief simple and short (about 40 lines), with zero em dashes, second
+person to the lead. The exact role name "Student Research Lead"/"Student-led"
+is allow-listed by the voice linter; all other voice rules apply. The brief is
+followed by the puzzle the reader chews on before any exposition or AI:
 
 ```markdown
 ### 🧩 Research Puzzle
@@ -152,8 +170,10 @@ answer before we go further — no AI yet.)*
 "you"; poses a genuine question; is answerable by reasoning, not lookup.]
 ```
 
-One `### 🧩 Research Puzzle` per `# Lecture N`. Week 1's two launch lectures are
-instructor-led; they still carry the puzzle cell (the instructor runs it).
+One `### 🎤 SRL Lead Brief` AND one `### 🧩 Research Puzzle` per `# Lecture N`
+(both machine-checked). Week 1's two launch lectures are instructor-led; they
+still carry both cells (the brief explains the format the reader will inherit;
+the instructor runs the puzzle).
 
 ### 6. Content sections (`## 1.`, `## 2.`, …) — narrative pattern + undergraduate voice
 
@@ -181,7 +201,7 @@ The undergraduate voice (ENFORCED — CLAUDE.md "Undergraduate-Friendly Voice"):
 ### 7. The seven required active-learning moves (machine-checked)
 
 Every ordinary notebook contains at least one of EACH, with the exact headings
-below. The async-only module (nb13) embeds these inside its module flow.
+below. The async-only module (nb14) embeds these inside its module flow.
 
 | Move | Heading marker | What it is |
 |---|---|---|
@@ -196,11 +216,11 @@ below. The async-only module (nb13) embeds these inside its module flow.
 Pacing rule: direct exposition ≤8 min per segment, <15 min total per lecture;
 ≥70% of class time active.
 
-**Variants.** The communication/performance notebooks (nb10 poster criticism,
-nb11 delivery, nb12 conference) may satisfy the runnable move with structured
+**Variants.** The communication/performance notebooks (nb11 poster criticism,
+nb12 delivery, nb13 conference) may satisfy the runnable move with structured
 criticism or delivery rounds instead of `### 🛠️ Run the Study` — the validator
 exempts exactly those three from the runnable-move check, nothing else. The
-async module (nb13) embeds all moves inside its self-paced flow and carries no
+async module (nb14) embeds all moves inside its self-paced flow and carries no
 `### 🧩 Research Puzzle` (there is no Student Research Lead online).
 
 ### 8. The high-intensity AI-collaboration blocks (machine-checked)
@@ -399,7 +419,7 @@ same markers). Required cells, in order — nothing else is mandatory:
 
 ## Validation rules — the machine-checked contract (validate_notebooks v2)
 
-For every ORDINARY topic notebook (nb00–nb15 except as noted), the validator
+For every ORDINARY topic notebook (nb01–nb16 except as noted), the validator
 asserts, by exact marker string:
 
 | # | Check | Marker / rule | Threshold |
@@ -409,9 +429,9 @@ asserts, by exact marker string:
 | 3 | Inquiry block | `## 🧭 Inquiry & Claim Boundary` with `**Inquiry emphasis:**`, `**Design pathway:**`, PERMITS + does-NOT-permit rows, `*Provenance:` | all present |
 | 4 | Objectives | `By the end of this notebook, you will be able to:` | =1 |
 | 5 | Setup | `SEED = 464` + `default_rng`; `seaborn` absent notebook-wide | required |
-| 6 | Lecture heads | `# Lecture i` per schedule; one `### 🧩 Research Puzzle` per lecture (exempt: nb13) | exact |
+| 6 | Lecture heads | `# Lecture i` per schedule; one `### 🎤 SRL Lead Brief` + one `### 🧩 Research Puzzle` per lecture (exempt: nb14) | exact |
 | 7 | Moves | `### 🔮 Pause & Predict`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Reading the Evidence`, `### 🎯 Project Transfer`, `### 🛡️ Exit Defense` | ≥1 each |
-| 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Hands-On:` | ≥1 (exempt: nb10, nb11, nb12) |
+| 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Hands-On:` | ≥1 (exempt: nb11, nb12, nb13) |
 | 9 | Partner briefing | `### 🤝 AI Research Partner` | ≥1 |
 | 10 | Gemini prompts | `> 💡 **Gemini Prompt:**` each followed by `**After running, verify` | ≥4 |
 | 11 | Prompt modification | `### 🔁 Modify the Prompt` | ≥1 |

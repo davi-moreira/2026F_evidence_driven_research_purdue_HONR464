@@ -94,7 +94,7 @@ slots:
 | D | 4, 9, 14, 19, 24 |
 | E | 5, 10, 15, 20, 25 |
 
-Slot 1 is **meeting 4 (Mon Aug 31**, nb01 Lecture 1). The slot-to-meeting
+Slot 1 is **meeting 4 (Mon Aug 31**, nb02 Lecture 1). The slot-to-meeting
 mapping and Monday/Wednesday format live in the schedule data
 (`scripts/schedule_data/part1–4.py`, fields `srl_slot` + `srl_focus`) and surface
 on the public **Schedule** page; students read their dates there.
@@ -215,7 +215,7 @@ miss the print deadline and there is no poster to present.
    emergency qualifies for a make-up, handled individually per Honors College
    norms.
 
-Weeks 11–13 (`nb10`–`nb12`) rehearse the presentation: poster criticism, pitch
+Weeks 11–13 (`nb11`–`nb13`) rehearse the presentation: poster criticism, pitch
 delivery under uncertainty, and fielding hard questions
 (`project/conference/` holds the presentation, hard-questions,
 uncertainty-limitations, dress-rehearsal, and reflection protocols).

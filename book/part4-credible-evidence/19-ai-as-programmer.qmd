@@ -2,7 +2,7 @@
 title: "19. AI as Programmer"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_observational_descriptive_student.ipynb){target="_blank"}
+[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
 
 > **The research decision.** When you hand the writing of analysis code to an AI,
 > you decide **what quantity that code must compute and over which set of cases**,
@@ -73,7 +73,7 @@ the code was allowed to count.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb04 — Observational descriptive research**. Open it
+This chapter's lab is notebook **nb05 — Observational descriptive research**. Open it
 in Colab with the badge above. There you hand cells to Gemini and make it earn your
 trust: you ask it to explain, line by line, why ten random samples huddle around a
 frame's true mean while one convenience channel misses it by nearly twelve years,
@@ -160,7 +160,7 @@ means the code, not the campus, is what you measured.
 
 This is the code half of your **M4 observational descriptive design audit**. Before
 you delegate the code that produces any descriptive number for your project, write
-your quantity of interest and its frame in one sentence each, the way nb04 has you
+your quantity of interest and its frame in one sentence each, the way nb05 has you
 name the target population, accessible population, frame, and sample. Then verify the
 returned code computed that quantity over that frame, and record the row-count check
 that proved it in your AI Research Ledger: the task, the tool, the decision, the named

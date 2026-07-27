@@ -11,7 +11,7 @@ follows the same cadence: **Friday-studio kickoff → develop across the week �
 present → submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
-checked it. Milestone weights and the revision policy live in the syllabus;
+checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
 ---
@@ -42,7 +42,7 @@ single reportable quantity, reruns from a seed, and states plainly what it can
 and cannot support. A grand plan you never executed is a hope; a first estimate
 you can reproduce is evidence. This milestone turns the first into the second.
 
-The notebook this week (nb08, *Experimental Causal Research*) built exactly this
+The notebook this week (nb09, *Experimental Causal Research*) built exactly this
 muscle on a real get-out-the-vote experiment: it named the **potential outcomes**
 Y(1) and Y(0) behind a causal claim, estimated an **average treatment effect** as
 a difference in means, put a **randomization-inference** interval around it, read

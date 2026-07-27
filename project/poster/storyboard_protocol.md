@@ -53,7 +53,7 @@ print. This is the single most common poster failure.
 
 **Evidence hierarchy.** Rank your three blocks by how much they earn belief in
 the headline — strongest gets the top-center slot. Everything that does not
-serve the headline is cut, not shrunk. Your practice cut (nb10) is: rank all
+serve the headline is cut, not shrunk. Your practice cut (nb11) is: rank all
 five pilot outputs, keep three, drop the bottom two.
 
 **Uncertainty line.** One sentence the reader cannot miss — the interval, the

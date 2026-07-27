@@ -64,8 +64,10 @@ toc: false
 
 One notebook per topic, listed in course order. Open a notebook in Colab from
 its badge (no installation needed), download every dataset the course uses in
-one bundle, and find the week-by-week calendar on the [Schedule](schedule.qmd)
-page. Milestone instructions and rubrics are on Brightspace.
+one bundle, and find the calendar on the [Schedule](schedule.qmd) page.
+Readings come from the [course book](book/index.html) (a work in progress,
+under development across the semester). Milestone instructions and rubrics are
+on Brightspace.
 
 '''
 
@@ -142,21 +144,41 @@ def tracked_students() -> set[str]:
     return {Path(p).name for p in out.stdout.split()}
 
 
+BOOK_MAP = REPO / "planning" / "BOOK_MAP.md"
+BOOK_PART_SLUGS = {
+    "I": "part1-research-with-ai", "II": "part2-curiosity-to-design",
+    "III": "part3-pathways", "IV": "part4-credible-evidence",
+    "V": "part5-communicating", "VI": "part6-after-conference",
+}
+
+
+def book_chapters_by_nb() -> dict[int, list[tuple[int, str]]]:
+    """nb number -> [(chapter number, site-relative html link)] from BOOK_MAP."""
+    out: dict[int, list[tuple[int, str]]] = {}
+    for line in BOOK_MAP.read_text().splitlines():
+        m = re.match(r"\|\s*([IVX]+)\b[^|]*\|\s*(\d+)\s*\|\s*(.+?)\s*\|\s*nb(\d\d)\s*\|",
+                     line)
+        if not m:
+            continue
+        part, ch, nb = m.group(1), int(m.group(2)), int(m.group(4))
+        slug = BOOK_PART_SLUGS[part]
+        hits = sorted((REPO / "book" / slug).glob(f"{ch:02d}-*.qmd"))
+        if hits:
+            out.setdefault(nb, []).append(
+                (ch, f"book/{slug}/{hits[0].stem}.html"))
+    return out
+
+
 def topic_info() -> list[dict]:
-    """Per-notebook aggregates from the schedule: phase, sessions, readings, data."""
+    """Per-notebook aggregates from the schedule: sessions, book readings, data."""
     rows = load_schedule_rows()
+    chapters = book_chapters_by_nb()
     info: dict[int, dict] = {}
     for r in rows:
         n = nb_of(r["other_material"])
         if n is None:
             continue
-        d = info.setdefault(n, {"unit": r["unit"], "chapters": [], "cb": False,
-                                "datasets": set(), "async": False})
-        for ch in re.findall(r"ch\.\s*(\d+)", r["rdss_reading"]):
-            if ch not in d["chapters"]:
-                d["chapters"].append(ch)
-        if r["cb_reading"].strip():
-            d["cb"] = True
+        d = info.setdefault(n, {"datasets": set(), "async": False})
         if r["modality"] == "async-online":
             d["async"] = True
         for ds in ("lapop_brazil", "la_voter_file", "foos_etal",
@@ -168,6 +190,7 @@ def topic_info() -> list[dict]:
         d = info[n]
         d["nb"] = n
         d["lectures"] = lecture_count(n, rows)
+        d["chapters"] = sorted(chapters.get(n, []))
         ordered.append(d)
     return ordered
 
@@ -180,12 +203,10 @@ def sessions_label(d: dict) -> str:
 
 
 def readings_label(d: dict) -> str:
-    parts = []
-    if d["chapters"]:
-        parts.append("RDSS ch. " + ", ".join(d["chapters"]))
-    if d["cb"]:
-        parts.append("*+ optional CB case*")
-    return "<br>".join(parts) if parts else "—"
+    if not d["chapters"]:
+        return "—"
+    links = ", ".join(f"[ch. {ch}]({href})" for ch, href in d["chapters"])
+    return f"Course book {links}"
 
 
 def data_cell(d: dict) -> str:
@@ -203,12 +224,8 @@ def build_table(instructor: bool) -> str:
         lines.append("| Topic | Sessions | Notebook | Data | Readings |")
         lines.append("|-------|----------|----------|------|----------|")
 
-    current_unit = None
     for d in topic_info():
         n = d["nb"]
-        if d["unit"] != current_unit:
-            current_unit = d["unit"]
-            lines.append(f"| **{current_unit}** | | | | |")
         title = NOTEBOOKS[n][1]
         topic = f"**Topic {n:02d} · {title}**"
         if instructor:

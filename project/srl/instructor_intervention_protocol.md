@@ -113,11 +113,13 @@ score should rest on.
 
 The score is shaped before the session, at two fixed touchpoints.
 
-- **Five days out:** release the instructor notebook's SRL page for the slot to
-  the assigned lead. It carries the concept in focus, the compass position or
+- **One week out:** confirm the lead has read their **SRL Lead Brief** in the
+  lecture notebook. Nothing needs releasing — the brief is already public at the
+  top of that lecture, carrying the concept in focus, the compass position or
   design of the week, a seed puzzle, and the one thing the room must leave
-  understanding. Confirm the lead received it and knows their format (Monday or
-  Wednesday) from the Schedule page.
+  understanding. Confirm the lead knows their format (Monday or Wednesday) from
+  the Schedule page, and encourage them to add something of their own to the
+  brief rather than run it verbatim.
 - **Two days out:** the lead submits the preparation template
   (`srl_prep_template.md`). Review it for the load-bearing pieces: a puzzle with
   a real answer and tempting wrong ones, a genuine commit-before-AI moment,

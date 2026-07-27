@@ -7,8 +7,8 @@
 ## What a Student Research Lead is
 
 For most Monday and Wednesday lectures this semester, one of you runs the room.
-That person is the **Student Research Lead**, or **SRL** for short. You will be
-the SRL five times.
+That person is the **Student Research Lead**, or **SRL** for short. Your lecture
+slots are assigned at the start of the semester, so you will know yours early.
 
 Being the SRL is not giving a presentation. You are not there to summarize a
 reading, walk through slides, or tell the class what the notebook says. You are
@@ -53,8 +53,8 @@ Document what you decided and why. You will run the room through that loop live.
 
 ## The two lead formats
 
-Your slot is either a Monday or a Wednesday, and each has its own shape. Both
-run 50 minutes. The minute frames below are fixed, and the instructor posts
+Each of your slots is either a Monday or a Wednesday, and each has its own
+shape. Both run 50 minutes. The minute frames below are fixed, and the instructor posts
 checkpoint signals at the section boundaries so you always know your pace.
 
 ### Monday: the guided investigation
@@ -91,42 +91,50 @@ and carries the skill into their own projects.
 Your owned blocks are **0–7** and **7–30**. The **30–42** peer defense you
 referee; you keep the questions coming and the answers honest.
 
-## The seat rotation
+## Your slots
 
-There are 25 lead slots across the semester, and five of you, so **each person
-leads five times**. Slots are assigned by rotation seat, labeled **A** through
-**E**. The rotation starts at the first led lecture and cycles A, B, C, D, E,
-A, B, C, and so on.
+Lead slots are **assigned at random at the beginning of the semester**, so you
+will know which lectures are yours from the first week. Nothing rotates and
+nothing shifts as the term goes on: your lectures are your lectures.
 
-| Your seat | Your five slots |
-|---|---|
-| A | slots 1, 6, 11, 16, 21 |
-| B | slots 2, 7, 12, 17, 22 |
-| C | slots 3, 8, 13, 18, 23 |
-| D | slots 4, 9, 14, 19, 24 |
-| E | slots 5, 10, 15, 20, 25 |
-
-Which calendar meeting each slot lands on, and whether it is a Monday or a
+Which calendar meetings you drew, and whether each one is a Monday or a
 Wednesday format, lives on the **Schedule page of the course website**. Check it
-early so you know your dates and your format well in advance. This handbook
+early so you know your dates and your formats well in advance. This handbook
 never prints dates on purpose, so it never goes stale. The Schedule page is the
-single source of truth for when your slot is.
+single source of truth for when your slots are.
+
+## Your SRL Lead Brief
+
+Every led lecture opens with an **SRL Lead Brief** at the very start of that
+lecture's notebook. It is a normal, student-visible section, so the whole class
+can read it. Nothing is emailed to you and nothing is held back.
+
+Your brief names the concept in play, the compass position or design in focus, a
+seed puzzle you can use or adapt, and the one thing the room most needs to leave
+understanding.
+
+Treat the brief as a **floor, not a ceiling**. It guarantees the session has
+everything it needs even on a bad week, but the good sessions are the ones where
+the lead adds something. Swap in an example from your own project or your own
+field. Restage the puzzle with different numbers, a different case, or a
+demonstration the room can watch. Cut a question you find flat and write a
+sharper one. Bring your own voice. The only fixed parts are the minute frame and
+the moves the rubric grades; everything else is yours to make interesting.
 
 ## Your preparation timeline
 
 Good SRL sessions are built, not improvised. Here is the rhythm.
 
-### Five days before your lead
+### About a week before your lead
 
-- You receive the **instructor notebook's SRL page** for your slot. It names the
-  concept in play, the compass position or design in focus, and a seed puzzle
-  you can use or adapt. It also flags the one thing the class most needs to leave
-  understanding.
-- Read the week's notebook and the matching chapter yourself, as a learner. You
+- Read your **SRL Lead Brief** at the top of that lecture's notebook, then read
+  the rest of the notebook and the matching chapter yourself, as a learner. You
   cannot lead an investigation into an idea you have not sat with.
 - Pick your puzzle. Use the seed, sharpen it, or bring your own. A puzzle works
   when it has a real answer, more than one tempting wrong answer, and can be
   stated in a few sentences.
+- Decide what **you** are adding that the brief does not have. One thing is
+  enough: your own example, your own staging, your own opening question.
 - Rough out your three Socratic questions and the moment you will have the room
   commit before touching AI.
 
@@ -228,10 +236,10 @@ it keeps your session accurate.
 
 ## Logistics, in one place
 
-- You lead **five times** across the semester, on the dates listed for your seat
-  on the **Schedule page**.
-- You receive the **instructor notebook's SRL page** for your slot **five days
-  ahead**.
+- Your slots are **assigned at random at the start of the semester**, and the
+  dates are on the **Schedule page**.
+- Your **SRL Lead Brief** is already in the lecture notebook, at the very start.
+  Start reading it and the notebook **about a week ahead**.
 - You submit your **preparation template two days ahead**; the instructor sends
   notes.
 - Each session ends with the class recording an **AI Research Ledger** line and a
