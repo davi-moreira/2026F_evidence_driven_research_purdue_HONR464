@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="The course book for HONR 46400 (Purdue Honors). RDSS is the theory text; this is the AI-era research manual, synchronized with the 16 course notebooks. A work in progress, under development across the semester.">
 
-<title>20. AI as Analytical Assistant – HONR 46400: Evidence-Driven Research (Fall 2026)</title>
+<title>20&nbsp; 20. AI as Analytical Assistant – Evidence-Driven Research in AI-era</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,22 +27,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-af82d7f591780a2244ae675016860d00.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../part4-credible-evidence/21-robustness-and-sensitivity.html" rel="next">
+<link href="../part4-credible-evidence/19-ai-as-programmer.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,10 +75,9 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -83,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">20. AI as Analytical Assistant</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html">Part IV — Producing credible evidence with AI</a></li><li class="breadcrumb-item"><a href="../part4-credible-evidence/20-ai-as-analytical-assistant.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">20. AI as Analytical Assistant</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -95,15 +98,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/honr_464_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="../../images/honr_464_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
-      </a>
-      <div class="sidebar-tools-main">
-    <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
-</div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Evidence-Driven Research in AI-era</a> 
+    </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -114,40 +113,315 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Home</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I — Research when AI can produce almost everything</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Syllabus</span></a>
+  <a href="../part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">1. AI Is Your Arm, Not Your Brain</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../material.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Material</span></a>
+  <a href="../part1-research-with-ai/02-the-student-as-research-director.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">2. The Student as Research Director</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../book/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Book</span></a>
+  <a href="../part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">3. Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Schedule</span></a>
+  <a href="../part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">4. Research Responsibility and Intellectual Ownership</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II — From curiosity to research design</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../instructor.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Instructor</span></a>
+  <a href="../part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">5. From Curiosity to a Research Problem</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">6. Descriptive, Predictive, and Causal Questions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/07-research-builds-on-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">7. Research Builds on Research</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">8. Finding and Verifying Prior Evidence</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">9. Model, Inquiry, Data Strategy, and Answer Strategy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">10. Declaring and Diagnosing a Research Design</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III — Research pathways</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/11-observational-descriptive-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">11. Observational Descriptive Research</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/12-observational-causal-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">12. Observational Causal Research</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/13-experimental-descriptive-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">13. Experimental Descriptive Research</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/14-prediction-and-generalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">14. Prediction and Generalization</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/15-experimental-causal-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">15. Experimental Causal Research</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/16-hybrid-and-complex-designs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">16. Hybrid and Complex Designs</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part IV — Producing credible evidence with AI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">17. Data Provenance and Data Quality</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/18-measurement-and-operationalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">18. Measurement and Operationalization</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/19-ai-as-programmer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">19. AI as Programmer</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/20-ai-as-analytical-assistant.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">20. AI as Analytical Assistant</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">21. Robustness and Sensitivity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">22. Diagnostics and Negative Tests</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/23-ai-as-adversarial-reviewer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">23. AI as Adversarial Reviewer</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/24-recognizing-false-confidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">24. Recognizing False Confidence</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part V — Communicating and defending research</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/25-from-results-to-claims.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">25. From Results to Claims</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/26-claim-evidence-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">26. Claim–Evidence Tables</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/27-research-posters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">27. Research Posters</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/28-poster-criticism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">28. Poster Criticism</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/29-research-pitches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">29. Research Pitches</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/30-difficult-questions-and-uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">30. Difficult Questions and Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/31-ai-disclosure-and-research-integrity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">31. AI Disclosure and Research Integrity</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part VI — Research after the conference</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/32-replication-and-reproduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">32. Replication and Reproduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/33-from-poster-to-research-note.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">33. From Poster to Research Note</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/34-open-and-reusable-research-packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">34. Open and Reusable Research Packages</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/35-managing-multiple-ai-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">35. Managing Multiple AI Agents</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/36-conflicting-agents-and-human-escalation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">36. Conflicting Agents and Human Escalation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/37-final-research-and-ai-management-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">37. Final Research and AI-Management Portfolio</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../srl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">The Student Research Lead</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -155,27 +429,27 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters">Why this decision matters</a></li>
-  <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept">The concept</a></li>
-  <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example">A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory">The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts">Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case">An AI failure case</a></li>
-  <li><a href="#verification-laboratory" id="toc-verification-laboratory" class="nav-link" data-scroll-target="#verification-laboratory">Verification laboratory</a></li>
-  <li><a href="#project-transfer" id="toc-project-transfer" class="nav-link" data-scroll-target="#project-transfer">Project transfer</a></li>
-  <li><a href="#defend-your-decision" id="toc-defend-your-decision" class="nav-link" data-scroll-target="#defend-your-decision">Defend your decision</a></li>
+  <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">20.1</span> Why this decision matters</a></li>
+  <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">20.2</span> The concept</a></li>
+  <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">20.3</span> A worked example</a></li>
+  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">20.4</span> The Colab laboratory</a></li>
+  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">20.5</span> Recommended AI prompts</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">20.6</span> An AI failure case</a></li>
+  <li><a href="#verification-laboratory" id="toc-verification-laboratory" class="nav-link" data-scroll-target="#verification-laboratory"><span class="header-section-number">20.7</span> Verification laboratory</a></li>
+  <li><a href="#project-transfer" id="toc-project-transfer" class="nav-link" data-scroll-target="#project-transfer"><span class="header-section-number">20.8</span> Project transfer</a></li>
+  <li><a href="#defend-your-decision" id="toc-defend-your-decision" class="nav-link" data-scroll-target="#defend-your-decision"><span class="header-section-number">20.9</span> Defend your decision</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html">Part IV — Producing credible evidence with AI</a></li><li class="breadcrumb-item"><a href="../part4-credible-evidence/20-ai-as-analytical-assistant.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">20. AI as Analytical Assistant</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">20. AI as Analytical Assistant</h1>
+<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">20. AI as Analytical Assistant</span></h1>
 </div>
 
 
@@ -201,34 +475,34 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p><strong>The research decision.</strong> Decide which parts of your own analysis to hand an AI tool as an analytical assistant, and how to verify every number it returns against your data before you believe any of it. You own which checks count and which flagged problems are real; the tool only does the labor you specify.</p>
 </blockquote>
-<section id="why-this-decision-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-decision-matters">Why this decision matters</h2>
+<section id="why-this-decision-matters" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">20.1</span> Why this decision matters</h2>
 <blockquote class="blockquote">
 <p><em>“I do not care that a model ran your robustness checks. I care which ones you chose, which numbers you re-derived yourself, and which flags you confirmed against the data. Show me that trail and I trust your judgment. Show me the model’s transcript and I trust neither.”</em> — a <strong>reviewer for a human-computer interaction venue</strong>, reading a usability study’s results section</p>
 </blockquote>
 <p>An AI tool can now write your analysis code, run a dozen robustness checks, and hand you a clean table in seconds. That speed is exactly why a loose habit is dangerous. Paste the table into your poster and you have signed your name to numbers you never checked. The reviewer above wants the short list of decisions that stayed yours. This chapter gives you the habit that survives her question.</p>
 </section>
-<section id="the-concept" class="level2">
-<h2 class="anchored" data-anchor-id="the-concept">The concept</h2>
+<section id="the-concept" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">20.2</span> The concept</h2>
 <p>An <strong>AI analytical assistant</strong> is an AI tool you hand a well-specified analytical task, never your judgment. Example: you tell it “recompute this time gap after dropping the three most experienced users” and it writes and runs that one check. The task is checkable. The verdict is not its job.</p>
 <p>The unit you attack is your <strong>headline estimate</strong>, the single number that stands in for your whole finding. Example: “users of the new interface finished about 0.7 standard deviations faster.” Before you defend that number, you try to break it, and this is the labor you delegate.</p>
 <p>Two attacks do most of the work. A <strong>robustness check</strong> re-runs the same finding under a different but equally defensible choice and asks whether the answer holds. Example: you reported a mean completion time, so you also compute the median and check the story survives. A <strong>placebo test</strong> runs your exact analysis where the effect cannot exist and confirms it returns near zero. Example: you shuffle the “new interface / old interface” labels at random and check the fake gap collapses to nothing.</p>
 <p>Here is the division of labor. The assistant proposes checks, writes the code, and prints the numbers. You decide which checks count, and you verify every number before it reaches your claim. A tool that ran without an error has not proven its result is correct. You verify the number, not the paragraph about the number.</p>
 </section>
-<section id="a-worked-example" class="level2">
-<h2 class="anchored" data-anchor-id="a-worked-example">A worked example</h2>
+<section id="a-worked-example" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">20.3</span> A worked example</h2>
 <p>You are studying whether a <strong>command palette</strong> (a searchable menu you open with one keystroke) helps users format a document faster than the old nested menus. Your headline estimate: palette users finished about 0.7 standard deviations faster. You use an analytical assistant to attack it.</p>
 <p><strong>Delegate.</strong> You ask the assistant to recompute the gap across a small grid: all participants versus dropping the three who had used a command palette before (the sample), mean versus median completion time (the measurement), and the raw gap versus one adjusted for each user’s baseline typing speed (the specification).</p>
 <p><strong>Inspect and verify.</strong> The assistant returns eight numbers. You do not trust them yet. You recompute two rows by hand with a second, simpler expression, and they match. The direction holds across all eight, and the magnitude ranges from about 0.5 to 0.9 standard deviations. Your honest headline is a direction plus a range, not one flattering number.</p>
 <p><strong>Placebo and red-team.</strong> You ask the assistant to shuffle the palette labels and re-run. The fake gap comes back near zero, so the machinery is not manufacturing your effect. Then you ask it, as a hostile reviewer, for the single worst flaw. It says with total confidence that experienced users drive the result. You already dropped them in the sample check and the gap held, so the data refute that flag. The flaw it missed is the one that matters: completion time is not user satisfaction, so your claim must stay about speed, not preference.</p>
 <p>The assistant did the arithmetic. You decided which checks counted and which flags the data confirmed.</p>
 </section>
-<section id="the-colab-laboratory" class="level2">
-<h2 class="anchored" data-anchor-id="the-colab-laboratory">The Colab laboratory</h2>
+<section id="the-colab-laboratory" class="level2" data-number="20.4">
+<h2 data-number="20.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">20.4</span> The Colab laboratory</h2>
 <p>This chapter’s lab is notebook <strong>nb10 — Share the research and attack the analysis</strong>. Open it in Colab with the badge above and work the cells alongside this chapter. There you delegate a real robustness grid, a placebo test, and an influence check to an assistant, then adjudicate three confident AI reviewers against the data and watch two of their three flags dissolve the moment a check touches them.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2">
-<h2 class="anchored" data-anchor-id="recommended-ai-prompts">Recommended AI prompts</h2>
+<section id="recommended-ai-prompts" class="level2" data-number="20.5">
+<h2 data-number="20.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">20.5</span> Recommended AI prompts</h2>
 <p>Commit your own expectation first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
 <p><strong>Propose the checks you might have missed.</strong></p>
 <pre class="text"><code>Here is my robustness grid for one estimate: I vary the sample (all users /
@@ -262,21 +536,21 @@ rewrite my claim.</code></pre>
 </div>
 </div>
 </section>
-<section id="an-ai-failure-case" class="level2">
-<h2 class="anchored" data-anchor-id="an-ai-failure-case">An AI failure case</h2>
+<section id="an-ai-failure-case" class="level2" data-number="20.6">
+<h2 data-number="20.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">20.6</span> An AI failure case</h2>
 <p>You hand an assistant your grid and it returns a polished eight-row table, every row near 0.7, and declares the result “fully robust.” The run threw no error. Here is the trap: its “median” rows silently call the same mean function as the “mean” rows, so four of the eight numbers are duplicates wearing different labels. The table agrees with itself because it never varied the handle it claims to vary. This is the <strong>illusion of completeness</strong>, a thorough-looking output missing the one thing that matters, shading into <strong>confident fabrication</strong>, a number stated with certainty that never came from the code path it names.</p>
 <p>You catch it by recomputing one “median” row by hand. The true median gap is 0.55, not 0.70. The grid overstated how much your choices agreed. A green check is not a correct result.</p>
 </section>
-<section id="verification-laboratory" class="level2">
-<h2 class="anchored" data-anchor-id="verification-laboratory">Verification laboratory</h2>
+<section id="verification-laboratory" class="level2" data-number="20.7">
+<h2 data-number="20.7" class="anchored" data-anchor-id="verification-laboratory"><span class="header-section-number">20.7</span> Verification laboratory</h2>
 <p>Verify this chapter’s key result, the surviving robustness of your headline gap, with <strong>alternative code</strong> from the <a href="https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md">verification guide</a>: recompute the same gap a second way and compare. Filter each group by hand, subtract the two means yourself, and confirm you land on the assistant’s number. Then add a second, independent road with a <strong>falsification test</strong>, the placebo: shuffle the group labels, re-run, and confirm the fake gap sits at zero. Two roads to one answer is a verified result. Two roads to two answers means you measured the assistant’s code, not your effect.</p>
 </section>
-<section id="project-transfer" class="level2">
-<h2 class="anchored" data-anchor-id="project-transfer">Project transfer</h2>
+<section id="project-transfer" class="level2" data-number="20.8">
+<h2 data-number="20.8" class="anchored" data-anchor-id="project-transfer"><span class="header-section-number">20.8</span> Project transfer</h2>
 <p>This chapter feeds your <strong>M9 poster draft and research audit</strong>, the graded record of how hard you tried to break your own claim and what survived. Take your own M8 estimate, delegate its robustness grid and a placebo to an assistant, and verify every number before it enters the audit. For each AI use, record the task you delegated, the number the tool returned, the named check that earned your trust, and the one flag you caught the tool getting wrong. That verified trail, plus your surviving headline stated with its range, is what you walk a skeptic through at Friday’s studio.</p>
 </section>
-<section id="defend-your-decision" class="level2">
-<h2 class="anchored" data-anchor-id="defend-your-decision">Defend your decision</h2>
+<section id="defend-your-decision" class="level2" data-number="20.9">
+<h2 data-number="20.9" class="anchored" data-anchor-id="defend-your-decision"><span class="header-section-number">20.9</span> Defend your decision</h2>
 <p>In four sentences, defend one analytical task you handed an assistant. Name the check you delegated and the one number you re-derived yourself before you believed it. State the bounded claim you can now make, with its boundary (what the check does <em>not</em> establish) and its range (how far the estimate moved across your defensible choices). Close with your uncertainty: the one flaw no check could settle, and the verification you would run next to close it.</p>
 
 
@@ -683,6 +957,18 @@ rewrite my claim.</code></pre>
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../part4-credible-evidence/19-ai-as-programmer.html" class="pagination-link" aria-label="19. AI as Programmer">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">19. AI as Programmer</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="pagination-link" aria-label="21. Robustness and Sensitivity">
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">21. Robustness and Sensitivity</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

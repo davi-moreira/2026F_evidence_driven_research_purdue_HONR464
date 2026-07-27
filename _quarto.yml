@@ -4,6 +4,10 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+    # The course book is its OWN Quarto project (book/_quarto.yml → docs/book).
+    # Excluding it here keeps the site render from clobbering the book output
+    # with website-styled pages; render the book with `quarto render book/`.
+    - "!book/"
   resources:
     - "notebooks/data/honr46400_datasets.zip"
   # Encrypt the rendered instructor page (courtesy lock; the private repo +
