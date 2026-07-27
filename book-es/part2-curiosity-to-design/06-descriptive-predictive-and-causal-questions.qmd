@@ -2,111 +2,114 @@
 title: "Preguntas descriptivas, predictivas y causales"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Este capítulo te prepara para clasificar
-> cualquier pregunta de investigación en la **brújula de la indagación** por su
-> *tipo* (descriptiva o causal) y su *alcance* (los datos a la mano, una población o
-> casos aún no observados), y después defender esa ubicación por la respuesta que la
-> pregunta de verdad quiere, y no por las palabras que le tocó llevar.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*, el texto de diseño de investigación en las ciencias sociales) cap. 4, 7, gratuito en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **La decisión de investigación.** Dónde se ubica tu pregunta en la **brújula de la
+> indagación**: qué *tipo* de respuesta quiere (descriptiva o causal) y hasta dónde
+> tiene que llegar esa respuesta (los datos a la mano, una población, o casos que no
+> has visto). Tú la ubicas, y defiendes la ubicación por la respuesta que la pregunta
+> de verdad quiere, no por las palabras que le tocó cargar.
 
 ## Por qué importa esta decisión
 
-Un director de tesis lo dice sin rodeos en tu primer comité: *"Antes de aprobar un solo
-método, te hago responder dos preguntas sobre tu pregunta. ¿Qué tipo de respuesta
-quiere, y para quién debe valer esa respuesta?"*. Todo lo que viene después vive dentro
-de la caja que dibujan esas dos respuestas. Clasifica mal tu pregunta y todo método
-posterior apuntará al blanco equivocado, porque un método que describe lo que hay no
-puede decirte qué cambiaría una intervención. La brújula fija lo que tu evidencia podrá
-afirmar antes de que gastes un semestre recogiéndola.
+**La decisión sobre la mesa: qué tipo de respuesta quiere tu pregunta, y para qué
+unidades tiene que valer esa respuesta.**
+
+Quien dirige tu tesis lo pone claro en la primera reunión de comité: *"Antes de
+aprobar un solo método, te hago responder dos preguntas sobre tu pregunta. ¿Qué tipo
+de respuesta quiere, y para quién tiene que valer esa respuesta?"*. Todo lo que viene
+después cabe dentro de la caja que dibujan esas dos respuestas. Clasifica mal tu
+pregunta y cada método posterior apuntará al blanco equivocado, porque un método que
+describe lo que hay no puede decirte qué cambiaría una intervención. La brújula fija
+qué puede afirmar tu evidencia antes de que gastes meses recolectándola.
 
 ## El concepto
 
-Todo proyecto se estrecha hasta una **pregunta de investigación**: la única oración que
-la evidencia puede responder y sobre la que puede equivocarse, como "¿una segunda caja
-acorta la fila?". Antes de elegir un método, clasificas esa pregunta en la **brújula de
-la indagación**, el mapa del curso que ordena cualquier pregunta por exactamente dos
-cosas. La brújula está adaptada de *Research Design in the Social Sciences* (Blair,
+Todo proyecto se estrecha hasta una **pregunta de investigación**: la única oración
+que la evidencia puede responder y sobre la cual puede equivocarse, como "¿una segunda
+caja acorta la fila?". Antes de elegir un método, clasificas esa pregunta en la
+**brújula de la indagación**, el mapa que ordena cualquier pregunta según exactamente
+dos cosas. La brújula está adaptada de *Research Design in the Social Sciences* (Blair,
 Coppock y Humphreys, 2023, cap. 7).
 
-El primer eje es el **tipo**. Una **pregunta descriptiva** indaga qué es o qué fue el
-mundo, sin necesidad de intervención; miras y registras, como en "¿qué fracción de
-estudiantes de primer año se salta el desayuno?". Una **pregunta causal** indaga qué
-cambiaría si alguien interviniera, lo que obliga a comparar con un mundo que no ocurrió,
-como en "¿un desayuno gratuito aumenta la asistencia?".
+El primer eje es el **tipo**. Una **pregunta descriptiva** pregunta qué es o qué fue
+el mundo, sin necesidad de intervenir; miras y registras, como en "¿qué fracción de
+quienes cursan primer año se salta el desayuno?". Una **pregunta causal** pregunta qué
+cambiaría si alguien interviniera, lo que obliga a una comparación con un mundo que no
+ocurrió, como en "¿un desayuno gratis aumenta la asistencia?".
 
-El segundo eje es el **alcance**: para qué unidades debe valer la respuesta. **Los datos
-a la mano** significa solo las unidades que de hecho observaste. **Una población**
-significa un grupo más grande al que tu muestreo llega, más allá de los datos.
-**Casos no observados** significa unidades que todavía no has observado, por lo general
-futuras.
+El segundo eje es el **alcance**: para qué unidades tiene que valer la respuesta.
+**Datos a la mano** significa solo las unidades que efectivamente observaste. **Una
+población** significa un grupo más grande al que tu muestreo llega, más allá de los
+datos. **Casos no vistos** significa unidades que todavía no has observado, por lo
+general futuras.
 
-Cruzar los dos ejes da cuatro posiciones con nombre. La **Descripción** es descriptiva
-sobre los datos a la mano. La **Generalización** es descriptiva sobre una población, y
-debe pagar su alcance con un diseño de muestreo que permita a las unidades que viste
-representar a las que no viste. La **Predicción** es descriptiva sobre casos no
-observados; pronostica un caso nuevo a partir de un patrón. La predicción sigue siendo
-descriptiva, no causal: adivinar quién abandonará no es lo mismo que saber qué hace que
-abandone. El **Razonamiento causal** es del tipo causal, la única posición que se gana
+Cruzar los dos ejes da cuatro posiciones con nombre. **Descripción** es descriptiva
+sobre los datos a la mano. **Generalización** es descriptiva sobre una población, y
+tiene que pagar su alcance con un diseño de muestreo que permita a las unidades que
+viste representar a las que no. **Predicción** es descriptiva sobre casos no vistos;
+pronostica un caso nuevo a partir de un patrón. La predicción sigue siendo
+descriptiva, no causal: adivinar quién va a desertar no es lo mismo que saber qué hace
+que deserte. **Razonamiento causal** es el tipo causal, la única posición que se gana
 la palabra "porque".
 
-Un último peligro. Una **pregunta doble** es una sola oración que en secreto formula dos
+Un último peligro. Una **pregunta doble** es una sola oración que en secreto hace dos
 preguntas de tipos distintos, como "¿qué tan común es el agotamiento, y lo causa el
-trabajo nocturno?". No se puede responder como una sola, y el arreglo es partirla en dos
-preguntas limpias, cada una con su propia posición.
+trabajo nocturno?". No se puede responder como una sola, y el arreglo es partirla en
+dos preguntas limpias, cada una con su propia posición.
 
 ## Un ejemplo trabajado
 
-Empieza con una curiosidad cotidiana de negocios: "¿por qué la fila del café del campus
-va tan lenta al mediodía?". Dale bordes y se vuelve un **tema**: el tiempo de espera en
-los mostradores de comida del campus. Ese único tema esconde cuatro preguntas
-diferentes, una en cada posición de la brújula. Un resultado estándar en investigación
-de operaciones dice que el tiempo de espera sube abruptamente cuando la clientela llega
-casi tan rápido como el mostrador puede atender. Con ese telón de fondo, mides cuánto
-esperan doce clientes hasta ser atendidos.
+Empieza con una curiosidad cotidiana de negocios: "¿por qué la fila del café del
+campus es tan lenta al mediodía?". Dale bordes y se vuelve un **tema**: el tiempo de
+espera en los mostradores de comida del campus. Ese único tema esconde cuatro
+preguntas distintas, una en cada posición de la brújula. Un resultado estándar en
+investigación de operaciones dice que el tiempo de espera trepa bruscamente cuando la
+clientela llega casi tan rápido como el mostrador alcanza a atender. Con ese telón de
+fondo, cronometras cuánto esperan doce personas para ser atendidas.
 
-1. *"Entre estos doce clientes, ¿cuál fue la espera promedio?"*. Esto pregunta solo lo
-   que dicen tus números registrados. Es **descriptiva** con alcance en **los datos a
-   la mano**. Posición: **Descripción**.
-2. *"Entre toda la clientela de este mostrador durante el almuerzo entre semana, ¿cuál
-   es la espera media?"*. El mismo tipo descriptivo, pero la respuesta debe valer para
-   una población que no mediste, pagada con un diseño de muestreo que hace que tus doce
-   representen al resto. Posición: **Generalización**.
-3. *"Mañana al mediodía llega una persona; ¿cuánto va a esperar?"*. Sigue siendo
-   descriptiva, porque solo necesitas un patrón que viaje a un caso que no has visto.
-   Posición: **Predicción**. Pronosticas la espera sin saber por qué una fila en
-   particular va rápido o lento.
+1. *"Entre estas doce personas, ¿cuál fue la espera promedio?"*. Esto pregunta solo lo
+   que dicen los números que registraste. Es **descriptiva** con alcance **datos a la
+   mano**. Posición: **Descripción**.
+2. *"A lo largo de toda la clientela de este mostrador durante el almuerzo entre
+   semana, ¿cuál es la espera media?"*. El mismo tipo descriptivo, pero la respuesta
+   tiene que valer para una población que no mediste, pagada con un diseño de muestreo
+   que hace que tus doce representen al resto. Posición: **Generalización**.
+3. *"Llega alguien mañana al mediodía; ¿cuánto va a esperar?"*. Sigue siendo
+   descriptiva, porque solo necesitas un patrón que viaje hasta un caso que no has
+   visto. Posición: **Predicción**. Pronosticas la espera sin saber por qué una fila
+   en particular corre rápido o lento.
 4. *"¿Abrir una segunda caja acorta la espera?"*. Ahora el tipo cambia. Para
    responderla tienes que comparar la misma hora de almuerzo en dos mundos, uno con
    segunda caja y otro sin ella, y solo uno de esos mundos ocurre de verdad. Esa
    comparación imaginada es la firma de una pregunta **causal**. Posición:
    **Razonamiento causal**.
 
-Un movimiento cierra la destreza. Alguien del equipo ofrece lo que llama una sola
-pregunta: "¿qué tan largas son nuestras filas, y una segunda caja las acorta?". Es una
-**pregunta doble**, que funde el promedio descriptivo de la pregunta 1 con la
-comparación causal de la pregunta 4, y ningún diseño único responde ambas. La divides, y
-cada mitad conserva su propia posición.
+Un movimiento cierra la habilidad. Alguien del equipo ofrece lo que llama una sola
+pregunta: "¿qué tan largas son nuestras filas, y una segunda caja las acorta?". Es
+**doble**: fusiona el promedio descriptivo de la pregunta 1 con la comparación causal
+de la pregunta 4, y ningún diseño único responde ambas. La partes, y cada mitad se
+queda con su propia posición.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb02 — From curiosity to a research problem: descriptive, predictive, causal**. Ábrelo en Colab con el
-botón de arriba y trabaja las celdas junto a este capítulo. Ahí bajas tu propia
-curiosidad hasta una pregunta, ves cómo un clasificador ingenuo por palabras clave se
-deja engañar con un mazo de ocho preguntas, y ubicas tu propia pregunta en la brújula
-con la forma que calificará tu hito de panorama de oportunidades de investigación.
+El laboratorio de este capítulo es el cuaderno **nb02 — From curiosity to a research
+problem: descriptive, predictive, causal**. Ábrelo en Colab con el botón de arriba y
+trabaja las celdas junto a este capítulo. Ahí bajas tu propia curiosidad hasta una
+pregunta, ves cómo un clasificador ingenuo por palabras clave se deja engañar con un
+mazo de ocho preguntas, y ubicas tu propia pregunta en la brújula con la forma que
+vas a reutilizar cada vez que declares un diseño.
 
 ## Prompts de IA recomendados
 
 Comprométete primero con tu propia respuesta en todos los casos. Escribe tu
 clasificación antes de abrir la herramienta, para que su respuesta tenga algo tuyo con
-lo cual estar en desacuerdo.
+qué discrepar. Y trata un desacuerdo como el inicio de un bucle, no como un veredicto:
+si la herramienta asigna una posición distinta, pregúntale qué palabra de tu oración
+provocó esa lectura, reescribe la oración y pregunta de nuevo. Dos o tres pasadas
+suelen mostrar si la discusión es sobre tu redacción o sobre tu diseño.
 
-Clasificar, después de que tú la hayas clasificado:
+Clasificar, después de haberlo clasificado tú:
 
 ```text
 Act as a research-methods tutor. I have already classified my question:
@@ -117,8 +120,8 @@ whether answering it needs an intervention or only a pattern. Use a table.
 ```
 
 *Después de ejecutarlo, verifica (contrarresta el **cambio silencioso de alcance**):*
-relee la posición que devuelve contra las dos definiciones. Si llama causal a tu
-pregunta, confirma que tu diseño de verdad interviene alguna vez; si solo observa lo que
+relee contra las dos definiciones la posición que devuelve. Si llama causal a tu
+pregunta, confirma que tu diseño interviene en algún momento; si solo observa lo que
 ya existe, el tipo honesto es descriptivo.
 
 Partir una pregunta que sospechas que es doble:
@@ -130,11 +133,11 @@ not add any unit, outcome, or population that was not in my sentence.
 ```
 
 *Después de ejecutarlo, verifica (contrarresta la **ilusión de exhaustividad**):* una
-partición ordenada puede dejar caer una mitad o colar una variable nueva. Confirma que
-ambas mitades juntas cubren toda tu oración y que ninguna agregó algo que no
-escribiste.
+partición ordenada puede dejar caer una mitad en silencio o colar una variable nueva.
+Confirma que las dos mitades juntas cubren tu oración entera y que ninguna agregó algo
+que tú no escribiste.
 
-Hacer red team a tu propia ubicación:
+Hacerle red team (revisión adversaria) a tu propia ubicación:
 
 ```text
 Act as a hostile methodologist. Here is my question and the compass position
@@ -144,70 +147,64 @@ assumption that method needs, in a table.
 ```
 
 *Después de ejecutarlo, verifica (contrarresta el **acuerdo complaciente** y el
-**método plausible pero equivocado**):* el elogio sin objeción es una señal de alarma,
-así que fuerza la objeción. Para cualquier método que nombre, revisa si tus datos pueden
-de verdad cumplir el supuesto que lista. Un supuesto que no puedes cumplir convierte un
-método seguro de sí mismo en un método equivocado.
+**método plausible pero equivocado**):* el elogio sin objeción es una bandera roja, así
+que fuerza la objeción. Para cualquier método que nombre, revisa si tus datos de verdad
+pueden cumplir el supuesto que lista. Un supuesto que no puedes cumplir convierte un
+método seguro en uno equivocado.
 
 ::: {.callout-important title="No delegues"}
 Tres decisiones siguen siendo tuyas: qué problema vas a estudiar, cómo redactas tu
-pregunta y a qué posición de la brújula pertenece. Una herramienta puede ofrecer una
-etiqueta, pero solo tú puedes decidir qué respuesta quiere de verdad tu pregunta, y solo
-tú defiendes la ubicación en el estudio. Si todavía no puedes clasificar tu pregunta con
-limpieza, eso es un hallazgo, no un fracaso; una pregunta que no se deja poner en una
-sola casilla suele seguir siendo doble, y nombrar eso es avanzar.
+pregunta, y a qué posición de la brújula pertenece. Una herramienta puede ofrecer una
+etiqueta, pero solo tú puedes decidir qué respuesta quiere de verdad tu pregunta, y
+solo tú puedes defender la ubicación cuando alguien la cuestione. Si todavía no puedes
+clasificar tu pregunta con limpieza, eso es un hallazgo, no un fracaso; una pregunta
+que no se deja sentar en una sola caja suele seguir siendo doble, y nombrarlo es
+avanzar.
 :::
 
 ## Un caso de falla de la IA
 
 Supón que tu proyecto solo registra tiempos de espera en mostradores que ya funcionan
 con dos cajas. Nunca se asigna nada; mides los mostradores tal como los encuentras. Le
-pides a un chatbot que clasifique "¿es una segunda caja una forma efectiva de recortar
-la espera?". Ve la palabra "efectiva", lee la pregunta como causal y recomienda con
-seguridad un experimento aleatorizado que asigne mostradores a una o a dos cajas. Eso es
+pides a un chatbot que clasifique "¿es una segunda caja una manera efectiva de recortar
+la espera?". Ve la palabra "efectiva", lee la pregunta como causal, y recomienda con
+seguridad un experimento aleatorizado que asigne mostradores a una caja o a dos. Eso es
 fluido y bien formateado, y equivocado para tu diseño, porque en ningún lugar de tus
 datos existe un mundo de comparación con una sola caja. La palabra "efectiva" es una
-**palabra delatora**, una pista de superficie en la que la herramienta confió en vez de
-preguntar qué respuesta quiere la pregunta. Lo detectas siempre igual: relee la pregunta
-contra las dos definiciones y pregunta si tu diseño interviene alguna vez. No lo hace,
-así que la pregunta es descriptiva (Descripción para los mostradores que mediste,
-Generalización si alcanza a todos los mostradores del campus), y rechazas la etiqueta
-causal como un cambio silencioso de alcance.
+**palabra delatora**, una pista de superficie en la que la herramienta confió en lugar
+de preguntar qué respuesta quiere la pregunta. Lo atrapas igual siempre: relee la
+pregunta contra las dos definiciones y pregúntate si tu diseño interviene en algún
+momento. No lo hace, así que la pregunta es descriptiva (Descripción para los
+mostradores que cronometraste, Generalización si llega a todos los mostradores del
+campus), y rechazas la etiqueta causal como un cambio silencioso de alcance.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, quien investiga.
-:::
+*Ya tienes un problema de investigación delimitado. Este paso decide qué tipo de
+respuesta está pidiendo, lo que fija qué se le permitirá decir a tu evidencia.*
 
-El resultado clave del capítulo es una clasificación, que es un juicio, así que la
-revisión que corresponde en la [guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md) es el
-**razonamiento entre pares**. Explica tu ubicación a alguien de la clase o a tu docente,
-recorriendo las dos definiciones, y observa si el razonamiento sobrevive a su pregunta
-más dura. Hazlo después de haber comprometido tu propia ubicación, para que su desafío
-tenga algo contra qué empujar. Cuando tu ubicación sea causal, agrega una segunda
-revisión independiente: dibuja un **diagrama causal** de qué causa qué y confirma que tu
-diseño aísla el efecto, es decir, que existe una comparación real con un mundo que no
-ocurrió. Dos revisiones que coinciden le ganan a una, y protegen contra la trampa en la
-que una herramienta y su propia re-revisión comparten la misma falla.
-
-## Transferencia al proyecto
-
-Este capítulo construye la columna vertebral de tu hito de **panorama de oportunidades
-de investigación**, que presentas en el estudio del viernes. Toma la curiosidad más
-fuerte de tu mapa de curiosidades de nb01, bájala hasta una sola pregunta y ubica esa
-pregunta en la brújula con la forma exacta que ese hito califica: "mi pregunta es una
-indagación [descriptiva o causal] con alcance en [los datos a la mano / una población /
-casos no observados], porque la respuesta que quiere es [cuál]". Después nombra la única
-afirmación que esa posición permite y la que prohíbe. Cada declaración de diseño que
-hagas durante el resto del semestre vive dentro de la caja que dibujas aquí.
-
-## Defiende tu decisión
-
-En un párrafo corto, enuncia la pregunta de tu proyecto, nombrando sus unidades de
-análisis, su variable de resultado y su población objetivo, y después da su posición en
-la brújula con la forma del hito de arriba. Defiéndela: nombra la única afirmación que
-la posición permite y el límite que dibuja (el alcance al que no llega, y si se gana la
-palabra "porque"), y cierra con una oración de incertidumbre honesta sobre la
-clasificación o sobre el problema. Una ubicación sin límite declarado y sin
-incertidumbre declarada está incompleta, por más segura que suene.
+1. Escribe tu problema de investigación como preguntas, tres o cuatro, cada una una
+   oración que la evidencia podría responder y sobre la cual podría equivocarse. Los
+   problemas casi siempre esconden más de una.
+2. Clasifica cada pregunta en los dos ejes, tipo y alcance, y nombra la posición. Al
+   lado de cada una, escribe una línea de razonamiento basada en la respuesta que la
+   pregunta quiere, no en las palabras que le toca usar.
+3. Caza las preguntas dobles. Cualquier oración con una "y" que esconda una segunda
+   pregunta de otro tipo se parte en dos preguntas limpias, cada una con su propia
+   posición.
+4. Elige tu **pregunta principal**, aquella alrededor de la cual se va a construir tu
+   proyecto. Escribe una oración sobre por qué esa y no las otras, y una oración que
+   nombre una afirmación que su posición te prohíbe incluso si la respuesta sale
+   preciosa.
+5. Si tu pregunta principal es causal, describe el mundo de comparación que necesita:
+   la versión de los hechos que no ocurrió y que tu diseño va a tener que sustituir. Si
+   no puedes describir ese mundo, tu pregunta probablemente sigue siendo descriptiva, y
+   es mejor enterarse ahora.
+6. Registra la ubicación en tu AI Research Ledger (tu registro de investigación con IA)
+   y verifícala con un método con nombre de la
+   [Guía de Verificación](../verification-guide.qmd). Una clasificación es un juicio,
+   así que usa el razonamiento con pares: lleva a alguien por las dos definiciones y por
+   tu argumento, y mira si sobrevive a su pregunta más dura. Si tu posición es causal,
+   agrega una segunda revisión independiente dibujando un diagrama causal y confirmando
+   que el efecto está realmente identificado. Una IA revisora puede correr cualquiera de
+   las dos revisiones contigo; la decisión de aceptar o rechazar sigue siendo tuya.

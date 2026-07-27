@@ -2,117 +2,127 @@
 title: "Agentes en conflicto y escalamiento humano"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
 
-> **La decisión de investigación.** Cuando tus roles de IA no coinciden, o cuando
-> varios de ellos sí coinciden, decides cuál de tres cosas estás viendo (desacuerdo
-> real, error correlacionado o consenso fabricado) y decides el momento exacto de
-> tomar la decisión de vuelta en tus propias manos.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria de su tema del curso; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (*Research Design in the Social Sciences*) cap. 24, gratis en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> **La decisión de investigación.** Tus bucles volvieron y no coinciden, o coinciden
+> demasiado bien. Decides cuál de tres cosas estás viendo (desacuerdo real, error
+> correlacionado o consenso fabricado), y decides el momento exacto de detener los bucles
+> y tomar la decisión con tus propias manos.
 
 ## Por qué importa esta decisión
 
-> *"No me digas que tus revisores estuvieron de acuerdo. Dime si pudieron haber
-> estado de acuerdo por la misma razón equivocada. El acuerdo es lo más fácil del
-> mundo de fabricar, y lo más peligroso de creer."*
+**La decisión en juego: si el acuerdo entre tus revisores de IA es evidencia o un eco, y el
+momento en que detienes los bucles y decides por tu cuenta.**
+
+> *"No me digas que tus revisores coincidieron. Dime si podrían haber coincidido por la
+> misma razón equivocada. El acuerdo es lo más fácil del mundo de fabricar, y lo más
+> peligroso de creer."*
 > — un **compañero escéptico** en tu defensa de práctica
 
-A estas alturas puedes correr un equipo pequeño de roles de IA sobre tu trabajo. El
-pensamiento seductor que sigue es que un equipo es más seguro que un solo asistente,
-así que tres roles bendiciendo tu capítulo deben ser tres confirmaciones. No lo son.
-Tres roles construidos de la misma manera, que leen el mismo borrador con las mismas
-instrucciones, tienden a cometer el mismo error, así que su acuerdo es un error
-repetido tres veces. Este capítulo trata de ver a través de eso, y del momento en que
-dejas de contar votos y decides por tu cuenta.
+A estas alturas puedes correr un pequeño equipo de roles de IA sobre tu trabajo, lo que
+significa que puedes correr varios bucles a la vez. El pensamiento seductor que sigue es que
+un equipo es más seguro que una sola asistente, así que tres roles bendiciendo tu borrador
+deben ser tres confirmaciones. No lo son. Tres bucles construidos igual, leyendo el mismo
+borrador con las mismas instrucciones, tienden a cometer el mismo error, así que su acuerdo
+es un error repetido tres veces. Peor todavía, un bucle que sigue corriendo puede
+convencerse a sí mismo: cada turno pule la respuesta del anterior en vez de ponerla a
+prueba, y lo que te vuelve es una versión bien defendida del primer error. Este capítulo
+trata de ver a través de eso, y del momento en que dejas de contar votos y decides por tu
+cuenta.
 
 ## El concepto
 
 Cuando tus roles no coinciden, el primer movimiento no es elegir un ganador. Es
-**reconciliar salidas en conflicto**: decidir qué creer diagnosticando primero *por
-qué* difieren los roles. Ejemplo: antes de ponerte del lado del revisor y no del
+**reconciliar salidas en conflicto**: decidir qué creer diagnosticando primero *por qué*
+difieren los roles. Ejemplo: antes de ponerte del lado del revisor y en contra del
 metodólogo, preguntas qué haría que cada uno tuviera razón. Hay tres casos, y piden
 respuestas opuestas.
 
-El **desacuerdo real** es cuando los roles de verdad leen la evidencia de forma
-distinta. Ejemplo: tu revisor llama clara y fuerte a una oración mientras tu
-metodólogo señala esa misma oración por ir más allá de tus datos. Este es el caso
-bueno. El choque apunta directo a la afirmación que necesitas revisar.
+El **desacuerdo real** es cuando los roles genuinamente leen la evidencia de forma distinta.
+Ejemplo: tu revisor llama clara y contundente a una oración mientras tu metodólogo marca esa
+misma oración por estirarse más allá de tus datos. Este es el caso bueno. El choque apunta
+directo a la afirmación que necesitas revisar.
 
-El **error correlacionado** es cuando los roles coinciden, pero sobre el mismo
-supuesto equivocado, así que el acuerdo no prueba nada. Ejemplo: tres revisores
-construidos desde el mismo modelo base pasan por alto la misma falla porque comparten
-el punto ciego. La pregunta que hay que hacer es simple: ¿podrían estar equivocados
-de la *misma* forma? Si es así, su consenso es una señal, no tres.
+El **error correlacionado** es cuando los roles coinciden, pero sobre el mismo supuesto
+equivocado, así que el acuerdo no prueba nada. Ejemplo: tres revisores construidos sobre el
+mismo modelo base pasan por alto la misma falla porque comparten el punto ciego. La pregunta
+que hay que hacer es simple: ¿podrían estar equivocados de la *misma* manera? Si sí, su
+consenso es una señal, no tres.
 
-El **falso consenso** es cuando los roles coinciden solo porque tu prompt planteó la
-tarea de forma que tenían que hacerlo. Ejemplo: preguntas "confirma que mi capítulo
-está listo" y cada rol obedece. Guiaste a todos los testigos. Replantea la petición
-de forma neutral y córrela otra vez.
+El **falso consenso** es cuando los roles coinciden solo porque tu prompt planteó la tarea de
+modo que tenían que hacerlo. Ejemplo: preguntas "confirma que mi borrador está listo" y cada
+rol obedece. Guiaste a todos los testigos. Replantea el pedido de forma neutral y córrelo
+otra vez.
 
-La herramienta que distingue entre estos casos es una **comprobación de
-independencia**: una prueba que hace que el acuerdo valga más que un conteo de
-cabezas, ya sea un método independiente que corres tú o una forma de forzar a dos
-roles a ser de verdad independientes. Ejemplo: dos roles bendicen un número citado,
-así que abres la fuente y lo recalculas tú antes de confiar en cualquiera de los dos.
+La herramienta que distingue entre estos casos es una **comprobación de independencia**: una
+prueba que hace que el acuerdo valga más que un conteo de cabezas, ya sea un método
+independiente que corres tú misma o una manera de forzar a dos roles a ser genuinamente
+independientes. Ejemplo: dos roles bendicen un número citado, así que abres la fuente y lo
+recalculas tú misma antes de confiar en cualquiera de los dos.
 
-Luego viene la decisión que solo tú puedes tomar. El **escalamiento al juicio humano**
-es el momento en que una salida de IA *zanjaría* en vez de *informar* una decisión que
-es tuya, así que te detienes y la decides tú. Ejemplo: un rol propone llamar "causal"
-a tu resultado, lo que zanjaría el límite de tu afirmación, así que eso escala hacia
-ti. Lo que haces en ese momento es una **anulación humana**: retomas la pluma y tomas
-la decisión con tus propias palabras, respaldada por tu propia comprobación, aun
-cuando los roles coincidieran en otra cosa. Una decisión que solo contó los roles no
-es una decisión. Es una votación, y las votaciones entre modelos parecidos entre sí no
-significan nada.
+Después viene la decisión que solo tú puedes tomar. El **escalamiento al juicio humano** es
+el momento en que una salida de IA *zanjaría* en vez de *informar* una decisión que es tuya,
+así que te detienes y la decides tú. Ejemplo: un rol propone llamar "causal" a tu resultado,
+lo que zanjaría el límite de tu afirmación, así que escala hacia ti. Lo que haces en ese
+momento es una **anulación humana**: retomas la pluma y tomas la decisión con tus propias
+palabras, respaldada por tu propia comprobación, incluso cuando los roles coincidieron en
+otra cosa. Una decisión que solo contó los roles no es una decisión. Es una votación, y las
+votaciones entre modelos parecidos no significan nada.
 
-## Un ejemplo trabajado
+El escalamiento es también el único momento en que los bucles tienen que detenerse. Una
+herramienta agéntica que se deja corriendo seguirá buscando un siguiente paso, y si nadie la
+detiene tomará la decisión por defecto, no porque se la delegaras sino porque el bucle no
+tenía a dónde más ir. Así que escribe tus disparadores antes de empezar la ronda: las
+decisiones específicas donde los bucles se pausan y te esperan. Un disparador que decides en
+el momento, con tres revisiones ordenadas frente a ti, no es un disparador. Es un estado de
+ánimo.
 
-Estimaste la **tasa de desempleo** de tu ciudad (la proporción de personas que quieren
-trabajo remunerado y no lo encuentran) a partir de una encuesta que corriste tú. Le
-preguntaste a 250 adultos afuera de la biblioteca pública, durante tres tardes entre
-semana, si estaban trabajando o buscando trabajo, y luego dividiste un conteo entre el
-otro. Tu borrador reporta que "el desempleo aquí es de 4.0%, en excelente coincidencia
-con la tasa oficial".
+## Un ejemplo resuelto
 
-Corres tres roles revisores de IA. Los tres devuelven el mismo veredicto: "Se ve
-sólido. Coincide con la cifra publicada". ¿Son eso tres confirmaciones?
+Estimaste la **tasa de desempleo** de tu pueblo (la proporción de personas que quieren
+trabajo pagado y no lo encuentran) a partir de una encuesta que hiciste tú misma. Le
+preguntaste a 250 personas adultas afuera de la biblioteca pública, durante tres tardes entre
+semana, si trabajaban o buscaban trabajo, y después dividiste un conteo entre el otro. Tu
+borrador reporta "el desempleo aquí es de 4.0%, en excelente concordancia con la tasa
+oficial".
 
-Diagnostica antes de celebrar. Cada uno de esos roles ya espera un número cercano al
-4%, porque ese es el rango en el que se sitúan las tasas conocidas de los titulares,
-así que cada uno empata por patrón tu estimación con el valor con el que llegó y la
-bendice sin revisar cómo la obtuviste. Eso es **error correlacionado** con la máscara
-de la confirmación: comparten un punto ciego, el anclaje a la cifra familiar, y ese
-punto ciego esconde tu error de verdad. Le preguntaste solo a 250 personas, así que la
-suerte de quién pasó caminando vale por sí sola un par de puntos porcentuales, y les
-preguntaste en tardes entre semana afuera de una biblioteca, donde casi nadie que
-estuviera trabajando todo el día podría aparecer. El pulcro "4.0%" era suerte montada
-sobre un método de apariencia honesta.
+Corres tres roles revisores de IA. Los tres devuelven el mismo veredicto: "Se ve sólido.
+Coincide con la cifra publicada". ¿Son eso tres confirmaciones?
 
-Aquí es donde **escalas**. El acuerdo de los revisores *zanjaría* tu afirmación
-titular, y esa afirmación es tuya, así que retomas la pluma. Recalculas tú mismo la
-tasa a partir de tus respuestas crudas y arrastras la incertidumbre de una muestra de
-250 personas por toda la aritmética, y el resultado honesto es 4.0% ± 2.4 puntos
-porcentuales, de un grupo que no podía incluir a la mayoría de las personas que
-estaban trabajando. Consistente con la tasa oficial, pero ni de cerca tan precisa como
-escribiste. **Anulas** tres veredictos de "se ve genial" y reescribes la afirmación con
-su incertidumbre real. Los roles contaron la respuesta como correcta. Tú revisaste si
-se la había ganado.
+Diagnostica antes de celebrar. Cada uno de esos roles ya espera un número cercano a 4%, porque
+ese es el rango en el que se sitúan las tasas conocidas de los titulares, así que cada uno
+empata por patrón tu estimación con el valor con el que llegó y la bendice sin revisar cómo la
+obtuviste. Eso es **error correlacionado** con la máscara de la confirmación: comparten un
+punto ciego, el anclaje a la cifra conocida, y ese punto ciego esconde tu error real. Le
+preguntaste solo a 250 personas, así que la suerte de quién pasó caminando vale un par de
+puntos porcentuales por sí sola, y les preguntaste en tardes entre semana afuera de una
+biblioteca, donde casi nadie que estuviera trabajando todo el día podía aparecer. El ordenado
+"4.0%" era suerte montada sobre un método de apariencia honesta.
+
+Aquí es donde **escalas**. El acuerdo de los revisores *zanjaría* tu afirmación principal, y
+esa afirmación es tuya, así que retomas la pluma. Recalculas la tasa tú misma a partir de tus
+respuestas crudas y llevas la incertidumbre de una muestra de 250 personas a lo largo de la
+aritmética, y el resultado honesto es 4.0% ± 2.4 puntos porcentuales, a partir de un grupo que
+no podía incluir a la mayoría de las personas que estaban trabajando. Consistente con la tasa
+oficial, pero ni de cerca tan preciso como escribiste. **Anulas** tres veredictos de "se ve
+genial" y reescribes la afirmación con su incertidumbre real. Los roles contaron la respuesta
+como correcta. Tú revisaste si estaba ganada.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb16 — Gestionar varios agentes de IA
-+ la defensa final**. Ábrelo en Colab con la insignia de arriba y trabaja las celdas
-junto a este capítulo. Allí conectas un flujo trabajador-crítico sobre un borrador
-real, luego simulas dos equipos de cuatro revisores y ves cómo un punto ciego
-compartido convierte el acuerdo unánime en una falsa confianza que puedes medir.
+El laboratorio de este capítulo es el cuaderno **nb16 — Managing multiple AI agents + the
+final defense** (*gestionar varios agentes de IA y la defensa final*). Ábrelo en Colab con el
+botón de arriba y trabaja las celdas junto a este capítulo. Ahí conectas un flujo
+trabajador-crítico sobre un borrador real, y después simulas dos equipos de cuatro revisores y
+ves cómo un punto ciego compartido convierte el acuerdo unánime en una confianza falsa que
+puedes medir.
 
 ## Prompts de IA recomendados
 
-Comprométete primero con tu propio diagnóstico y luego delega. Cada prompt es una tarea
-verificable, no una petición de veredicto.
+Comprométete primero con tu propio diagnóstico y después delega. Cada prompt abre un bucle, y
+con varios bucles en juego la disciplina es la misma que con uno: lee la salida, interrógala,
+refina, córrelo otra vez, y nunca dejes que un bucle cierre una pregunta que te pertenece.
+Cada prompt es una tarea verificable, no una petición de veredicto.
 
 **Localiza las decisiones que deben escalar.**
 
@@ -122,12 +132,12 @@ never-delegate decisions I think it contains: [paste]. Using standard research-d
 criteria, list which decisions in this draft an AI output should never be allowed to
 settle, and which of my three I mislabeled. Do not settle any of them for me.
 ```
-Después de ejecutarlo, verifica: contrasta su lista con los disparadores de
-escalamiento que escribiste tú; la decisión que omita es la que hay que cuidar con más
-fuerza. Contrarresta la *ilusión de completitud* (una lista ordenada que deja caer en
-silencio la decisión que más importa).
+Después de ejecutarlo, verifica: contrasta su lista con los disparadores de escalamiento que
+escribiste tú misma; la decisión que omite es la que hay que cuidar con más fuerza.
+Contrarresta la *ilusión de exhaustividad* (una lista ordenada que en silencio suelta la
+decisión que más importa).
 
-**Lista los acuerdos que hay que verificar.**
+**Enumera los acuerdos para verificarlos.**
 
 ```text
 Here are three reviewer outputs on the same draft: [paste all three]. For each pair,
@@ -135,83 +145,69 @@ name one specific way they could be wrong the SAME way: a shared assumption, a s
 anchor, or a shared prompt. Rank the pairs from most to least likely to share a blind
 spot.
 ```
-Después de ejecutarlo, verifica: para el par que quede arriba, vuelve a correr un rol
-con un planteamiento distinto y un contexto distinto, y mira si el acuerdo sobrevive.
-Contrarresta los *errores correlacionados entre herramientas o roles* (un acuerdo que
-es una sola falla devuelta como eco).
+Después de ejecutarlo, verifica: para el par que encabeza, vuelve a correr un rol con otro
+planteamiento y otro contexto, y mira si el acuerdo sobrevive. Contrarresta los *errores
+correlacionados entre herramientas o roles* (un acuerdo que es una sola falla devuelta como
+eco).
 
-**Hazle red team al consenso.**
+**Hazle red team (revisión adversaria) al consenso.**
 
 ```text
 Act as a hostile reviewer who believes my three roles only agreed because my prompt led
 them. Argue that their consensus is manufactured, name the leading words in my original
 ask, and give me a neutral rewrite. Do not reassure me.
 ```
-Después de ejecutarlo, verifica: si no encuentra una sola palabra que induzca la
-respuesta, insiste y exige la peor, y luego vuelve a correr la revisión de forma
-neutral. Contrarresta el *acuerdo adulador* (elogios que ensayan tu ego, no tu
-evidencia).
+Después de ejecutarlo, verifica: si no encuentra una sola palabra que guíe, empuja de vuelta y
+exige la peor, y después vuelve a correr la revisión de forma neutral. Contrarresta el *acuerdo
+complaciente* (elogio que ensaya tu ego, no tu evidencia).
 
 ::: {.callout-important title="No delegues"}
-Qué afirmaciones puede defender tu capítulo, dónde debe detenerse cada afirmación, si
-un acuerdo entre tus roles fue alguna vez independiente y el momento de escalar: eso
-sigue siendo tuyo. Ningún rol decide qué tan confiable es, y ningún conteo de cabezas
-de roles decide el límite de tu afirmación ni tu ética. Cuando una salida de IA
-*zanjaría* una de esas cosas en vez de informarla, te detienes y decides tú.
+Qué afirmaciones puede defender tu borrador, dónde debe detenerse cada afirmación, si un
+acuerdo entre tus roles fue alguna vez independiente, y el momento de escalar: eso se queda
+contigo. Ningún rol decide qué tan confiable es él mismo, y ningún conteo de cabezas de roles
+decide el límite de tu afirmación ni tu ética. Cuando una salida de IA *zanjaría* una de esas
+cosas en vez de informarla, te detienes y decides.
 :::
 
 ## Un caso de falla de la IA
 
-Le mandas tu capítulo a cuatro roles de IA y los cuatro responden "sin problemas
-mayores". Se siente como una confirmación abrumadora, y es confiadamente falsa. Los
-cuatro comparten un modelo base y leen el mismo borrador con las mismas instrucciones,
-así que comparten un punto ciego. Cada vez que tu única falla real cae dentro de ese
-punto ciego, los cuatro la pasan por alto juntos. Su "todo bien" unánime está más cerca
-de ser una sola voz que cuatro.
+Envías tu borrador a cuatro roles de IA y los cuatro responden "sin problemas mayores". Se
+siente como una confirmación abrumadora, y está confiadamente equivocada. Los cuatro comparten
+un modelo base y leen el mismo borrador con las mismas instrucciones, así que comparten un
+punto ciego. Cada vez que tu única falla real cae dentro de ese punto ciego, los cuatro la
+pasan por alto juntos. Su "está bien" unánime está más cerca de una sola voz que de cuatro.
+Correr cada bucle por más tiempo tampoco te rescata. Cuatro bucles con el mismo punto ciego,
+si les das más turnos, devuelven el mismo veredicto con mejores párrafos alrededor.
 
-Lo atrapas si te niegas a tratar el acuerdo como evidencia. Corres una comprobación de
-independencia: relees la afirmación señalada contra tu propia declaración de
-indagación, o le entregas el borrador a un rol con un planteamiento distinto y un
-contexto distinto. En el laboratorio verás medido el tamaño de esta trampa. Cuatro
-revisores correlacionados pasan por alto una falla real unas siete veces más seguido
-que cuatro independientes, y amontonar más roles correlacionados no puede cerrar esa
-brecha.
+Lo detectas negándote a tratar el acuerdo como evidencia. Corres una comprobación de
+independencia: relees la afirmación señalada contra tu propia declaración de indagación, o
+entregas el borrador a un rol con otro planteamiento y otro contexto. En el laboratorio verás
+medido el tamaño de esta trampa. Cuatro revisores correlacionados pasan por alto una falla real
+unas siete veces más seguido que cuatro independientes, y amontonar más roles correlacionados
+no puede cerrar la brecha.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pídele a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre es tuya, la persona que investiga.
-:::
+*Tu proyecto ya tiene un pequeño equipo de IA corriendo sobre una sección; este paso decide de
+antemano dónde deben detenerse esos bucles y devolverte la decisión.*
 
-Verifica el resultado clave del capítulo, la tasa de fallos del equipo correlacionado,
-con **cálculo directo** de la [guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-recalcula la misma cantidad de una segunda forma y compara. Cuatro revisores
-independientes, cada uno capaz de atrapar una falla la mitad de las veces por su
-cuenta, la pasan por alto solo cuando todos fallan a la vez: 0.5 × 0.5 × 0.5 × 0.5 =
-0.0625, cerca del 6% que imprime el laboratorio. El equipo correlacionado falla en todo
-el punto ciego compartido, el 40% de los capítulos, más el otro 60% en el que cada uno
-todavía falla por su cuenta: 0.40 + 0.60 × 0.0625 = 0.4375, cerca del 43% que imprime el
-laboratorio. Dos caminos, una respuesta. La brecha entre 6% y 44% es todo el argumento,
-y ahora la sostienes a mano, no por fe.
-
-## Transferencia al proyecto
-
-Este capítulo construye dos de las cuatro partes de tu **capítulo final de
-investigación y portafolio de gestión de IA**, el último hito del proyecto. La primera
-es tu **bitácora de conflicto y anulación**: un choque real entre tus roles, tu
-diagnóstico (desacuerdo real, error correlacionado o falso consenso) y la anulación que
-hiciste con la comprobación no hecha por IA que la respaldó. La segunda es tu
-**comprobación de independencia**: un lugar donde tus roles coincidieron en algo que
-importaba, y la prueba independiente que hizo que ese acuerdo valiera más que un conteo
-de cabezas. Escribe ambas desde tu propio proyecto esta semana, para que tu portafolio
-muestre no solo que tus roles coincidieron, sino que supiste cuándo valía la pena
-confiar en su acuerdo.
-
-## Defiende tu decisión
-
-En cuatro oraciones, defiende un momento en que escalaste. Nombra el acuerdo o el
-conflicto de IA que enfrentaste y el diagnóstico que hiciste (desacuerdo real, error
-correlacionado o falso consenso). Enuncia la decisión que retomaste y la comprobación
-independiente que la definió, no el voto de los roles. Luego nombra el límite y la
-incertidumbre: qué estableció tu anulación, qué no estableció, y el punto ciego que tus
-roles todavía podrían compartir y que aún no has descartado.
+1. Escribe tus reglas de escalamiento antes de que empiece la siguiente ronda. Enumera las
+   decisiones específicas que ningún bucle puede cerrar: el límite de tu afirmación, tu
+   incertidumbre, cuáles fuentes son reales, qué cuenta como terminado y cualquier cosa con
+   filo ético. Deja la lista lo bastante corta como para recordarla bajo presión.
+2. Añade las condiciones de parada que no son de contenido. Cuántos turnos puede correr un
+   bucle antes de que lo leas, y qué tiene permitido cambiar una herramienta agéntica sin
+   preguntarte primero.
+3. Encuentra un desacuerdo real en lo que tus roles ya devolvieron, y diagnostícalo dejando
+   constancia: desacuerdo real, error correlacionado o un consenso que tu propio prompt fabricó.
+   Di cuál y por qué.
+4. Resuélvelo tú misma con una comprobación que los bucles no puedan correr: recalcula el
+   número, abre la fuente o compara contra una cifra que nunca estuvo en ningún prompt. Escribe
+   juntas la resolución y la comprobación, porque una sin la otra es solo una opinión.
+5. Toma un lugar donde tus roles coincidieron en algo que importaba y pon a prueba si el acuerdo
+   fue independiente. Vuelve a correr uno de ellos con otro planteamiento y otro contexto, o
+   verifica el punto tú misma fuera de las herramientas.
+6. Registra el conflicto, el diagnóstico y la anulación en tu AI Research Ledger (registro de
+   investigación con IA), y verifica al menos una salida con un método nombrado de la
+   [Guía de Verificación](../verification-guide.qmd). Un revisor de IA puede hacer la
+   comprobación contigo; la decisión de aceptar o rechazar sigue siendo tuya.

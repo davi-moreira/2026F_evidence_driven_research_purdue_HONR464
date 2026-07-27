@@ -2,84 +2,93 @@
 title: "Medición y operacionalización"
 ---
 
-[![Open the lab in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Decide cómo convertir la idea abstracta sobre la
-> que trata tu pregunta en un número concreto que puedas registrar y defender: nombra
-> el concepto, nombra el constructo que lo representa y nombra el indicador que vas a
-> medir. Luego enuncia con claridad qué captura ese indicador y qué deja fuera.
-
-::: {.callout-note title="Lectura"}
-Este capítulo es la lectura obligatoria del tema del curso al que corresponde; su laboratorio en Colab está enlazado arriba. Complemento recomendado: RDSS (el manual *Research Design in the Social Sciences*) cap. 15, gratuito en [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
-:::
+> que trata tu pregunta en un número concreto que puedas registrar, repetir y
+> defender. Nombra el concepto, nombra el constructo más estrecho que lo va a
+> representar, nombra el indicador que de verdad vas a medir, y luego di con claridad
+> qué captura ese indicador y qué deja fuera en silencio.
 
 ## Por qué importa esta decisión
 
-> *"Antes de decirme que el cultivo de cobertura hizo el suelo más sano, dime
-> exactamente a qué le pusiste un número. 'Más sano' es una palabra. Necesito saber
-> qué medición está detrás de ella, y qué ignora esa medición en silencio."*
-> — una **agrónoma de campo** leyendo el primer borrador de un estudio de suelos
+**La decisión sobre la mesa: qué número específico dejarás que represente la gran
+idea sobre la que trata tu pregunta.**
 
-Cada resultado que reportas responde una pregunta sobre alguna idea: salud del suelo,
-estrés hídrico, calidad del rendimiento. Pero nunca mides la idea. Mides un número que
-la representa, y tu hallazgo es tan confiable como ese intercambio. Si no puedes decir
-qué número registraste y qué se le escapa, la agrónoma de arriba no tiene razón para
-creer tu titular. Este capítulo te da el movimiento que vuelve honesto el intercambio.
+> *"Antes de decirme que el piloto hizo que la gente estuviera más comprometida, dime
+> exactamente a qué le pusiste un número. 'Comprometida' es una palabra. Necesito
+> saber qué pregunta hiciste, en qué escala, y qué ignora ese número en silencio."*
+> — una **líder de analítica de personas** leyendo el primer borrador de un estudio
+> laboral
+
+Cada resultado que reportas responde una pregunta sobre alguna idea: compromiso
+laboral, poder de mercado, bienestar, participación. Pero nunca mides la idea. Mides
+un número que la representa, y tu hallazgo es tan confiable como ese intercambio. Si no
+puedes decir qué número registraste y qué se le escapa, la analista de arriba no tiene
+razón para creer tu titular. Este capítulo te da el movimiento que vuelve honesto el
+intercambio.
 
 ## El concepto
 
 La **operacionalización** es el acto de convertir una idea abstracta en un
-procedimiento de medición específico y repetible. Ejemplo: convertir "salud del suelo"
-en "el porcentaje de materia orgánica que obtienes al secar y quemar una muestra de
-suelo". Lo haces bajando por una escalera de tres peldaños, y cada peldaño tiene
-nombre.
+procedimiento de medición específico y repetible. Ejemplo: convertir "el compromiso
+laboral de las personas empleadas" en "la respuesta promedio a un ítem de acuerdo en
+una escala de siete puntos". Lo haces bajando por una escalera de tres peldaños, y cada
+peldaño tiene nombre.
 
-- **Concepto**: la idea abstracta sobre la que trata realmente tu pregunta. Ejemplo:
-  la salud del suelo. Un concepto es rico y difuso, y no puedes medirlo de forma
+- **Concepto**: la idea abstracta sobre la que de verdad trata tu pregunta. Ejemplo:
+  el compromiso laboral. Un concepto es rico y difuso, y no puedes medirlo de forma
   directa.
 - **Constructo**: la faceta específica y nombrada del concepto que decides medir.
-  Ejemplo: el contenido de materia orgánica del suelo, la fracción del suelo formada
-  por material vegetal y animal descompuesto. Eliges un constructo porque es lo
-  bastante concreto como para atarle un procedimiento.
-- **Indicador**: el número exacto que produce un procedimiento. Ejemplo: el porcentaje
-  de materia orgánica por pérdida por ignición, un método estándar en el que secas una
-  muestra, la pesas, quemas el material orgánico en un horno, la pesas de nuevo y
-  reportas la masa perdida como porcentaje.
+  Ejemplo: la disposición a recomendar el lugar de trabajo, es decir, con cuánta
+  fuerza alguien le diría a una amistad que trabaje ahí. Eliges un constructo porque
+  es lo bastante concreto como para pegarle un procedimiento.
+- **Indicador**: el número exacto que produce un procedimiento. Ejemplo: la respuesta
+  promedio al ítem "recomendaría esta empresa como lugar para trabajar", calificado de
+  1 (muy en desacuerdo) a 7 (muy de acuerdo), promediado sobre todas las personas que
+  respondieron.
 
 Dos preguntas deciden si el intercambio se sostiene. La **validez de medición**
 pregunta si tu indicador captura de verdad el constructo que dice capturar. Ejemplo:
-¿el porcentaje de materia orgánica representa realmente la salud del suelo, o se le
-escapan la compactación y el pH? La **confiabilidad de medición** pregunta si medir lo
-mismo dos veces te da la misma lectura. Ejemplo: divides una muestra de suelo en dos,
-corres ambas y revisas que los números coincidan. Un indicador puede ser confiable y
-aun así inválido: una báscula marca tu peso igual cinco veces seguidas, y sin embargo
-el peso es un mal indicador del constructo "estado físico".
+¿una calificación de recomendar a una amistad representa de verdad el compromiso, o se
+le escapan el desgaste (*burnout*) y si la gente siente que su trabajo importa? La
+**confiabilidad de medición** pregunta si medir lo mismo dos veces te da la misma
+lectura. Ejemplo: le vuelves a preguntar a una porción aleatoria de quienes
+respondieron dos semanas después y revisas que sus respuestas caigan más o menos en el
+mismo lugar. Un indicador puede ser confiable y aun así inválido: una báscula marca tu
+peso igual cinco veces seguidas, y sin embargo el peso es un mal indicador del
+constructo "estado físico".
 
 ## Un ejemplo resuelto
 
-Quieres responder una pregunta real de campo: ¿la parcela con cultivo de cobertura
-está más sana que la parcela desnuda de al lado? Mira cómo trabaja la escalera.
+Quieres responder una pregunta real de negocio: ¿las sedes que corrieron el piloto de
+horarios flexibles están más comprometidas que las sedes que mantuvieron turnos fijos?
+Mira a la escalera hacer su trabajo.
 
-Empiezas en el **concepto**, la salud del suelo, y admites de entrada que ningún
-instrumento lee "salud". Así que bajas a un **constructo**. Entre las varias facetas
-honestas de la salud del suelo, eliges el contenido de materia orgánica, porque una
-fracción orgánica más alta retiene agua y alimenta la vida del suelo. Ahora nombras el
-**indicador**: el porcentaje de materia orgánica por pérdida por ignición, medido en
-diez muestras de cada parcela.
+Empiezas en el **concepto**, el compromiso laboral, y admites de entrada que ningún
+instrumento lee "compromiso". Así que bajas a un **constructo**. Entre las varias
+facetas honestas del compromiso, eliges la disposición a recomendar el lugar de
+trabajo, porque alguien que le diría a una amistad que trabaje ahí te está diciendo
+algo real sobre su vínculo con el empleo. Ahora nombras el **indicador**: la respuesta
+promedio a un único ítem de acuerdo, de uno a siete, recogido de todas las personas
+empleadas en las ocho sedes del piloto y las ocho sedes de comparación.
 
-Antes de confiar en una sola lectura, revisas la confiabilidad. Divides tres muestras
-en dos y corres cada mitad. Las lecturas emparejadas caen dentro de unas décimas de
-punto porcentual, así que el procedimiento es repetible. Luego revisas la validez
-nombrando lo que el indicador ignora. La materia orgánica no dice nada sobre la
-compactación, el pH ni los microbios del suelo. Es una faceta verdadera, no la
-totalidad de la salud del suelo.
+Antes de confiar en una sola lectura, revisas la confiabilidad. Le vuelves a preguntar
+a una décima parte aleatoria de quienes respondieron dos semanas después y comparas sus
+dos respuestas. Caen cerca, así que el ítem es repetible y no una moneda al aire
+disfrazada de dato. Luego revisas la validez nombrando lo que el indicador ignora. Una
+calificación de recomendar a una amistad no dice nada sobre el desgaste, sobre si el
+pago se siente justo, ni sobre si la gente cree que su trabajo importa. Tampoco puede
+escuchar a quienes ya renunciaron, que es justo el grupo al que una pregunta sobre
+compromiso más querría llegar. Es una faceta verdadera, no el compromiso entero.
 
-Esa honestidad fija la frontera de tu afirmación. Puedes defender esto: "las parcelas
-con cultivo de cobertura promediaron más materia orgánica del suelo que las parcelas
-desnudas, una faceta de la salud del suelo, medida de forma confiable por pérdida por
-ignición". No puedes defender "el cultivo de cobertura hizo el suelo más sano", porque
-nunca mediste las facetas que tu indicador se salta. El número es real, y su
-significado se detiene exactamente donde se detiene el constructo.
+Esa honestidad fija la frontera de tu afirmación. Puedes defender esto: "las sedes del
+piloto promediaron mayor disposición a recomendar la empresa que las sedes de
+comparación, una faceta del compromiso, medida con un único ítem repetible". No puedes
+defender "el piloto hizo que las personas empleadas estuvieran más comprometidas",
+porque nunca mediste las facetas que tu indicador se salta, y nunca escuchaste a
+quienes se fueron. El número es real, y su significado se detiene exactamente donde se
+detiene el constructo.
 
 ## El laboratorio en Colab
 
@@ -87,110 +96,112 @@ El laboratorio de este capítulo es el cuaderno **nb05 — Observational descrip
 research** (*investigación observacional descriptiva*). Ábrelo en Colab con la insignia
 de arriba y trabaja las celdas junto con este capítulo. Ahí construyes una escalera
 concepto → constructo → indicador para tu propia medida clave, y ves de primera mano
-cómo un solo indicador aplana la realidad: la media de 4.43 de una encuesta cae en un
-valle entre dos picos, así que el promedio no describe casi a ninguna persona real que
-respondió. Un índice es una operacionalización, y toda operacionalización esconde
+cómo un solo indicador aplana la realidad: el promedio de 4.43 de una encuesta cae en
+un valle entre dos picos, así que ese promedio no describe casi a nadie de quienes
+respondieron. Un índice es una operacionalización, y toda operacionalización esconde
 aquello sobre lo que promedia.
 
 ## Prompts de IA recomendados
 
-Comprométete primero con tu propio borrador y luego delega. Cada prompt es un encargo
-comprobable, no un veredicto en el que confiar.
+Comprométete primero con tu propio borrador y luego delega. Cada prompt es una tarea
+verificable, no un veredicto en el que confiar. Córrelos como un **bucle de IA**, el
+ciclo prompt → respuesta → interrogación → refinamiento → nueva ejecución: la primera
+respuesta nombra los instrumentos obvios, y la pasada útil es la segunda, donde dices
+qué faceta se saltó la herramienta y le pides que lo intente de nuevo. Las herramientas
+agénticas darán con gusto tres o cuatro vueltas y devolverán un plan de medición
+pulido. El pulido no es validez, y la oración que nombra lo que tu número deja fuera
+sigue teniendo que escribirla tú.
 
 **Localiza los indicadores estándar.**
 
 ```text
-Act as a soil-science assistant. I want to measure the construct "soil organic
-matter content" for a field study. Name the standard, published indicators
-agronomists use for this construct, with the method name and a real source I can
-open. Only list methods you are confident exist; mark anything uncertain.
+Act as a survey-methods assistant. I want to measure the construct "willingness to
+recommend one's workplace" in an organizational study. Name the standard, published
+instruments researchers use for this construct, with the instrument name, how it is
+scored, and a real source I can open. Only list instruments you are confident
+exist; mark anything uncertain.
 ```
 Después de ejecutarlo, verifica: abre una de las fuentes nombradas y confirma que el
-método existe y que mide materia orgánica. Contrarresta la *fabricación confiada* (el
-nombre de un método inventado llega con tanta fluidez como uno real).
+instrumento existe y mide lo que la herramienta dice. Contrarresta la *fabricación
+confiada* (*confident fabrication*): el nombre de una escala inventada llega con la
+misma fluidez que uno real.
 
-**Lista los límites, para que puedas verificarlos.**
+**Enumera los límites, para que puedas verificarlos.**
 
 ```text
-Here is my operationalization: concept = soil health, construct = organic matter,
-indicator = percent by loss-on-ignition. Return a table of every facet of soil
-health this indicator does NOT capture, one row each, with why it matters.
+Here is my operationalization: concept = employee engagement, construct =
+willingness to recommend the workplace, indicator = mean of a single 1-7 agreement
+item. Return a table of every facet of engagement this indicator does NOT capture,
+one row each, with why it matters and who it fails to hear from.
 ```
-Después de ejecutarlo, verifica: contrasta la tabla con un marco real de salud del
-suelo que recuperes tú. Contrarresta la *ilusión de exhaustividad* (una lista ordenada
-que aun así omite la faceta que más amenaza tu afirmación).
+Después de ejecutarlo, verifica: contrasta la tabla con un marco publicado sobre
+compromiso laboral que recuperes por tu cuenta. Contrarresta la *ilusión de
+exhaustividad*: una lista ordenada que aun así omite la faceta que más amenaza tu
+afirmación.
 
 **Haz red team al intercambio.**
 
 ```text
-Act as a hostile thesis reviewer. Here is my claim: "the cover-cropped field is
-healthier, because it has more organic matter." Name every place my indicator
-fails to support the word "healthier." Do not rewrite the claim for me.
+Act as a hostile reviewer. Here is my claim: "the pilot sites are more engaged,
+because more people there would recommend the company." Name every place my
+indicator fails to support the word "engaged." Do not rewrite the claim for me.
 ```
-Después de ejecutarlo, verifica: si solo elogia el diseño, insiste y exige la peor
-brecha individual. Contrarresta el *acuerdo complaciente* (elogios que revisan tu ego,
-no tu medición).
+Después de ejecutarlo, verifica: si solo elogia el diseño, insiste y exige el peor
+hueco. Contrarresta el *acuerdo complaciente*: elogios que revisan tu ego, no tu
+medición.
 
 ::: {.callout-important title="No delegues"}
 Sobre qué **concepto** trata tu pregunta, qué **constructo** lo representa con
 honestidad y dónde debe detenerse el significado de tu **indicador** son cosas solo
-tuyas. La herramienta puede listar métodos y nombrar limitaciones, pero solo tú decides
-que la materia orgánica es un sustituto justo de la faceta de salud que de verdad te
-importa, y solo tú escribes la oración que se niega a llamar concepto entero a una sola
-faceta. Nombrar lo que tu número deja fuera es trabajo de quien investiga, no del
-modelo.
+tuyas. La herramienta puede listar instrumentos y nombrar limitaciones, pero solo tú
+decides que una calificación de recomendar a una amistad es un sustituto justo de la
+faceta del compromiso que de verdad te importa, y solo tú escribes la oración que se
+niega a llamar concepto entero a una sola faceta. Nombrar lo que tu número deja fuera
+es trabajo de quien investiga, no del modelo.
 :::
 
 ## Un caso de falla de la IA
 
-Preguntas "operacionaliza la salud del suelo para mi estudio de campo", y la
-herramienta responde con total confianza: "Mide la materia orgánica del suelo por
-pérdida por ignición. Eso es la salud del suelo". La receta es limpia, suena correcta y
-corre sin quejarse. Aquí está la trampa. La salud del suelo es un concepto amplio con
-varias facetas independientes, y la herramienta lo estrechó en silencio a un solo
-constructo, y luego te entregó el indicador como si fuera la idea completa. Esto es un
-cambio de alcance disfrazado de respuesta completa.
+Preguntas "operacionaliza el compromiso laboral para mi estudio piloto", y la
+herramienta responde con total seguridad: "Pregunta si la gente recomendaría la empresa
+en una escala de 0 a 10 y toma la proporción que responde 9 o 10. Eso es compromiso".
+La receta es limpia, suena correcta y es fácil de aplicar en campo. Aquí está la
+trampa. El compromiso es un concepto amplio con varias facetas independientes, y la
+herramienta lo estrechó en silencio a un solo constructo, y luego te entregó el
+indicador como si fuera la idea entera. Es un cambio de alcance disfrazado de respuesta
+completa.
 
 Lo detectas leyendo la afirmación de la respuesta junto a tu pregunta, palabra por
-palabra. Tu pregunta era sobre la "salud del suelo"; la respuesta es sobre la "materia
-orgánica", y esas no son la misma caja. Luego lo confirmas con una fuente real: abre un
-marco reconocido de salud del suelo y encuentra las varias facetas que la receta nunca
-mencionó. Una receta segura no es una operacionalización válida. Verificas el
-constructo, no la fluidez del párrafo que lo propuso.
+palabra. Tu pregunta era sobre "compromiso"; la respuesta es sobre "recomendaría", y no
+son la misma caja. Luego lo confirmas con una fuente real: abre un marco publicado
+sobre compromiso y encuentra las varias facetas que la receta nunca mencionó. Una
+receta segura no es una operacionalización válida. Verifica el constructo, no la
+fluidez del párrafo que lo propuso.
 
-## Laboratorio de verificación
+## Ahora te toca a ti
 
-::: {.callout-important title="La IA puede revisar a la IA — pero la última decisión es humana"}
-Un segundo modelo puede auditar al primero: pide a una IA que revise la afirmación, el código o la cita de otra, y encontrará errores reales. Pero una auditoría es otra propuesta, no un veredicto. La decisión final de aceptar, rechazar o matizar un resultado siempre te pertenece a ti, la persona que investiga.
-:::
+*Ya sabes de dónde vienen tus datos. Este paso fija qué significan de verdad tus
+números, y qué no.*
 
-Verifica el resultado clave de este capítulo, que tu indicador representa fielmente a
-su constructo, con la **lectura de la fuente primaria** de la
-[guía de verificación](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-encuentra el método reconocido para tu constructo, ábrelo y confirma que mide lo que
-afirmas antes de citarlo. Luego agrega una segunda comprobación independiente para la
-confiabilidad: mide lo mismo dos veces y compara, tal como divides una muestra de suelo
-y confirmas que las dos mitades coinciden. Dos caminos a un solo número es un indicador
-confiable. En el laboratorio, haz lo mismo por **cálculo directo**: recalcula la
-distribución detrás de esa media de 4.43 y ve cuánta forma escondió ese número único.
-
-## Transferencia al proyecto
-
-Este capítulo se convierte en el peldaño de medición de tu hito de **auditoría de
-diseño observacional descriptivo**, que pide una escalera de medición y una nota de
-cobertura. Redáctala aquí: escribe tu propio concepto → constructo → indicador para la
-medida clave de tu proyecto, una línea cada uno, y luego nombra la faceta cuya
-ausencia más te preocupa en tu indicador. Lleva esa escalera, más una nota de una
-oración sobre confiabilidad y validez, al estudio del viernes. Es la pieza que hace que
-tu afirmación posterior sobre la población signifique algo, porque una afirmación de
-alcance sobre un constructo mal medido no alcanza a nada.
-
-## Defiende tu decisión
-
-En cuatro oraciones, defiende una operacionalización de tu propio proyecto. Nombra el
-concepto, el constructo que elegiste para representarlo y el indicador exacto que vas a
-registrar. Enuncia la afirmación acotada que autoriza tu indicador, redactada para
-detenerse donde se detiene el constructo. Nombra lo que el indicador deja fuera y por
-qué sigue siendo la elección honesta. Cierra con tu incertidumbre: el límite de
-confiabilidad o de validez que todavía no has revisado, y la medición que correrías
-enseguida para cerrarlo.
+1. Enumera cada concepto que contiene tu pregunta y marca con un círculo los
+   abstractos, las palabras que ningún instrumento lee: compromiso, salud,
+   participación, calidad, competitividad. Esos son los que necesitan una escalera.
+2. Debajo de cada concepto marcado escribe el constructo que de verdad vas a medir,
+   más una línea sobre por qué esa faceta y no una vecina. Elegir una faceta no es
+   hacer trampa. Fingir que mediste el concepto entero, sí.
+3. Debajo de cada constructo escribe el indicador: el procedimiento exacto y el número
+   exacto que produce, lo bastante específico como para que alguien desconocido pueda
+   repetirlo y obtener un valor comparable.
+4. Debajo de cada indicador completa esta oración con tus propias palabras: "este
+   número no captura ___". Usa la faceta que más te preocupa, y agrega a quiénes tu
+   medición nunca alcanza.
+5. Planea una comprobación de confiabilidad que de verdad puedas correr, y luego
+   córrela: las mismas unidades medidas dos veces, dos personas codificando los mismos
+   ítems, o dos mitades de una muestra comparadas.
+6. Registra el paso en tu AI Research Ledger (registro de investigación con IA) y
+   verifica al menos una medida con un método nombrado de la [Guía de
+   Verificación](../verification-guide.qmd). La lectura de la fuente primaria encaja
+   con este capítulo: encuentra el instrumento o el método publicado detrás de tu
+   indicador, ábrelo y confirma que mide lo que estás afirmando antes de citarlo. Una
+   IA revisora puede hacer la comprobación contigo; la decisión de aceptar o rechazar
+   es tuya.

@@ -85,8 +85,8 @@ sólido". En vez de eso, lees qué hizo el código.
 
 **Vuelta dos.** Lo interrogas: ¿qué filas hay aquí adentro y qué eliminaste? Salen dos
 cosas. El dataframe contiene solo los 40 municipios que publican a través de un portal de
-datos abiertos, los más grandes y con más personal del estado. En el listado oficial hay
-240. Esa es una **muestra por conveniencia** que en silencio se hace pasar por todos
+datos abiertos, los más grandes y con más personal del estado. En el listado oficial hay 240
+municipios. Esa es una **muestra por conveniencia** que en silencio se hace pasar por todos
 ellos. El código además llama a `.dropna()`, y las filas eliminadas son los municipios
 donde el extractor volvió vacío, que son exactamente los lugares pequeños con el personal
 administrativo más escaso. El 95% describe a las ciudades con más recursos y con sus
