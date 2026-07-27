@@ -9,12 +9,16 @@ title: "From Poster to Research Note"
 > allowed to be given your evidence, then package the note so a stranger can rerun
 > it and reach your number without you in the room.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"Show me your results in the order you trust them. If your flashiest number comes
 > from one lucky run and it leads the paper, I already know how this review ends. I
 > do not want your most surprising result first. I want your most defensible one."*
-> — a **conference reviewer**, on the first page of a systems paper they actually weigh
+> — a **conference reviewer**, on the first page of a paper they actually weigh
 
 On the poster you stood next to your work and filled the silences with your voice.
 The note has no you standing next to it. Every leap the poster let you imply, the
@@ -27,31 +31,32 @@ the same number return. This chapter is how you answer both.
 
 A poster and a note make the same argument, but they carry it differently. **Poster
 logic** is communication built for a reader standing next to you, where a few boxes
-and your live voice share the work. Example: a Gap box that reads only "few
-benchmarks on cold-start latency" while you say the rest out loud. **Paper logic** is
+and your live voice share the work. Example: a Gap box that reads only "few studies of
+wait times at peak hours" while you say the rest out loud. **Paper logic** is
 communication that must stand alone on the page, where every claim is argued in prose
 because you are not there to answer. Example: that same gap written as a paragraph
-naming what prior benchmarks covered, what they skipped, and why the missing piece
+naming what prior studies covered, what they skipped, and why the missing piece
 matters. Turning one into the other is not adding words. It is making the reasoning
 visible.
 
 A note carries that reasoning on a backbone. The **problem–gap–question spine** is
 three linked pieces: the real trouble your work responds to, the specific thing prior
 retrievable work has not established, and the answerable question that closes exactly
-that gap. Example: services stall on the first request (problem); published latency
-studies time only warmed-up requests (gap); how much does an in-memory cache cut
-first-request time on this workload (question). The spine holds only when the gap is
-real, and a gap is real only when you show what is already known with **evidence
-density**, the share of a paragraph resting on sources a reader could open rather than
-bare assertion. Example: "as everyone knows" carries no density; a sentence resting on
-a benchmark a reader can rerun carries some.
+that gap. Example: customers give up and leave during the morning rush (problem);
+published wait-time studies measure only quiet, steady hours (gap); how much does a
+mobile pre-order option cut the wait during the rush at this shop (question). The spine
+holds only when the gap is real, and a gap is real only when you show what is already
+known with **evidence density**, the share of a paragraph resting on sources a reader
+could open rather than bare assertion. Example: "as everyone knows" carries no density;
+a sentence resting on a published figure a reader can look up and recompute carries
+some.
 
 The back half of the note needs one more term. A **results hierarchy** is the order
 you present findings in, best-supported first and fragile last. Example: a median
-measured over a thousand runs leads; a single fast request waits at the back, labeled
-exploratory. Your limitations follow the same discipline, stated in proportion to what
-actually threatens the claim: "measured on a synthetic load, not production traffic,"
-not a generic "more research is needed."
+measured over a thousand simulated mornings leads; one unusually fast order waits at
+the back, labeled exploratory. Your limitations follow the same discipline, stated in
+proportion to what actually threatens the claim: "measured on a simulated arrival
+pattern, not a real Saturday rush," not a generic "more research is needed."
 
 Finally, a note a reader cannot rerun is half a claim. The other half is a
 **reproducibility capsule**, everything a stranger needs to rebuild your number and
@@ -61,27 +66,27 @@ data and tool versions, a fixed seed, a decision log, and your AI-use ledger.
 
 ## A worked example
 
-You benchmarked an in-memory cache for a small web service. Your poster had a box:
+You tested a mobile pre-order option for a campus coffee shop. Your poster had a box:
 "38% faster." The note has to turn that box into a claim you can defend.
 
-**Rank the findings.** Across a thousand requests from a seeded load generator, the
-median latency dropped about 38%, with a tight interval around it. You also noticed
-one cached request that returned almost instantly, a 95% drop. The surprising number
-is the single request; the defensible one is the median over a thousand runs. So the
-median leads, and the lone request goes to the back, labeled as one observation, not a
-result.
+**Rank the findings.** Across a thousand customer arrivals from a seeded simulation of
+the morning rush, the median wait time dropped about 38%, with a tight interval around
+it. You also noticed one pre-ordering customer who was served almost instantly, a 95%
+drop. The surprising number is the single customer; the defensible one is the median
+over a thousand arrivals. So the median leads, and the lone customer goes to the back,
+labeled as one observation, not a result.
 
-**Size the claim.** The honest headline reads: "on this synthetic workload, adding the
-cache cut median first-request latency by about 38% (interval attached); this is a
-measurement on generated load, not a guarantee for production traffic." The inflated
-version you refuse: "the cache makes the service 38% faster." That sentence drops the
-workload, drops the word median, and promises every user a speedup your bench never
-tested.
+**Size the claim.** The honest headline reads: "on this simulated arrival pattern,
+adding mobile pre-order cut median wait time by about 38% (interval attached); this is
+a measurement on simulated demand, not a guarantee for a real Saturday rush." The
+inflated version you refuse: "mobile pre-order makes the shop 38% faster." That
+sentence drops the demand pattern, drops the word median, and promises every customer a
+shorter wait your simulation never tested.
 
-**Package it.** Your capsule pins the load generator's seed, records the machine and
-library versions, logs that you excluded the warmup request and why, and passes
-restart-and-run-all so the 38% returns on a clean kernel. The note is now readable and
-runnable.
+**Package it.** Your capsule pins the simulation's seed, records the machine and
+library versions, logs that you excluded the first order of the morning and why, and
+passes restart-and-run-all so the 38% returns on a clean kernel. The note is now
+readable and runnable.
 
 ## The Colab laboratory
 
@@ -99,10 +104,11 @@ request for a verdict.
 **Locate real sources for the gap.**
 
 ```text
-Act as a literature assistant in systems performance. List peer-reviewed or
-official sources that benchmark cache or cold-start latency, in a table with
-title, authors, venue, year, and one-line finding. Only include work you are
-confident exists; mark anything uncertain. Do not write my gap paragraph.
+Act as a literature assistant in service operations. List peer-reviewed or
+official sources that measure customer wait times or the effect of pre-ordering
+on queues, in a table with title, authors, venue, year, and one-line finding.
+Only include work you are confident exists; mark anything uncertain. Do not
+write my gap paragraph.
 ```
 
 After running, verify: retrieve each source yourself before it enters the note; a
@@ -112,15 +118,15 @@ source you cannot open in seconds is fabricated until proven otherwise. Counters
 **List every over-reach to verify.**
 
 ```text
-Here is my discussion paragraph and the cell that printed my median latency drop
-with its interval: [paste both]. List every sentence that claims more than the
-printout supports: a bigger number, a wider workload, or "faster for everyone"
-where I measured one synthetic load. List them; do not rewrite them.
+Here is my discussion paragraph and the cell that printed my median wait-time
+drop with its interval: [paste both]. List every sentence that claims more than
+the printout supports: a bigger number, a wider setting, or "faster for everyone"
+where I measured one simulated demand pattern. List them; do not rewrite them.
 ```
 
 After running, verify: check each flagged sentence against your printout and keep only
 edits that shrink a claim to fit the evidence. Counters *silent scope change* (a
-sharper sentence that upgrades "on this workload" to "for everyone" has quietly
+sharper sentence that upgrades "on this arrival pattern" to "for everyone" has quietly
 answered a different question).
 
 **Red-team the capsule.**
@@ -149,43 +155,47 @@ words you put your name on, their boundary, and their uncertainty.
 
 You paste your discussion into Gemini and ask it to make the writing sharper. It hands
 back cleaner prose, and it runs through your spell-check without a flag. Buried in the
-polish, one sentence has changed size. Your original said "median first-request
-latency dropped about 38% on this synthetic workload." The rewrite says "the cache
-makes the service roughly 38% faster." The word median is gone, the workload boundary
-is gone, and a measurement on generated load now promises every user a speedup. The
-sentence reads better and claims more.
+polish, one sentence has changed size. Your original said "median wait time dropped
+about 38% on this simulated arrival pattern." The rewrite says "mobile pre-order makes
+the shop roughly 38% faster." The word median is gone, the demand-pattern boundary is
+gone, and a measurement on simulated demand now promises every customer a shorter wait.
+The sentence reads better and claims more.
 
 You catch it by diffing the rewrite against your original sentence and against your
-printed benchmark. The number came from a median over a seeded load generator, not a
-mean, and not production traffic, so the general claim is not licensed. You keep the
-edits that clarify and reject the one that inflated. Fluent prose is not evidence. You
-verify the claim, not the polish.
+printed result. The number came from a median over a seeded simulation, not a mean, and
+not a real Saturday rush, so the general claim is not licensed. You keep the edits that
+clarify and reject the one that inflated. Fluent prose is not evidence. You verify the
+claim, not the polish.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, the headline speedup, with **alternative code** from
 the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
-recompute the median latency drop a second way, from the raw timings rather than the
-summarized table, and confirm the number and its interval match. Then verify the
+recompute the median wait-time drop a second way, from the raw simulated wait times
+rather than the summarized table, and confirm the number and its interval match. Then verify the
 capsule with **peer reasoning**: hand it to a partner who reruns it cold with
 restart-and-run-all. If your number comes back on their machine, the capsule is
 runnable. If it does not, you measured your own memory, not a reproducible result.
 
 ## Project transfer
 
-This chapter becomes your **M14 research note and reproducibility capsule**. Draft the
-problem–gap–question spine in prose with every claim sourced, order your findings into
-a results hierarchy with the defensible one leading, size your limitations to your
-evidence, and assemble the capsule so restart-and-run-all returns your headline. A
-partner table-reads the note and reruns the capsule at Friday's studio, where M14 is
-due and M15, your final research chapter, begins. The note makes your work readable;
-the capsule makes it runnable.
+This chapter becomes your **research note and reproducibility capsule**, the project
+milestone for this topic. Draft the problem–gap–question spine in prose with every
+claim sourced, order your findings into a results hierarchy with the defensible one
+leading, size your limitations to your evidence, and assemble the capsule so
+restart-and-run-all returns your headline. A partner table-reads the note and reruns
+the capsule at Friday's studio, where the note is due and your final research chapter
+begins. The note makes your work readable; the capsule makes it runnable.
 
 ## Defend your decision
 
 In four sentences, defend your research note. Name the finding you chose as the
 headline and why it, not a more surprising result, earned the top. State the bounded
-claim in one sentence, with its boundary (the workload, sample, or population it does
+claim in one sentence, with its boundary (the setting, sample, or population it does
 not cover). Then state your uncertainty: your interval or the caveat that most
 threatens the number, and the one check a partner running your capsule cold would run
 next to test it.

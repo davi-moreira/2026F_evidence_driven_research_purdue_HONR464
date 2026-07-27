@@ -9,6 +9,10 @@ title: "Open and Reusable Research Packages"
 > work and get your numbers. You own what the package includes and whether "it
 > reproduces" is honest, and you never let a clean run stand in for a correct one.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"I don't want to hear that it runs on your laptop. Hand me the folder, let me
@@ -149,6 +153,10 @@ executing it, not by reading a paragraph about executing it.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, that your capsule reproduces, with a **benchmark
 result** from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
 compare a fresh run against a previously verified value. Record your headline number
@@ -160,9 +168,10 @@ Two machines, one number, is a reproduced result.
 
 ## Project transfer
 
-This chapter builds the capsule half of your **M14 research note and reproducibility
-capsule**. Assemble the five parts for your own project, run `audit_capsule` on your
-key lines, and fix the first sin it flags. Then do the thing the script cannot: hand
+This chapter builds the capsule half of your **research note and reproducibility
+capsule**, the project milestone for this topic. Assemble the five parts for your own
+project, run `audit_capsule` on your key lines, and fix the first sin it flags. Then
+do the thing the script cannot: hand
 the folder to a partner at Friday's studio and have them clear the kernel and rerun
 it cold. The number they get, set next to the number you reported, is your
 reproducibility evidence, and their rerun is what turns "it runs for me" into a claim

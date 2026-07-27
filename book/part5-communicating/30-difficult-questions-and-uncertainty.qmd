@@ -9,6 +9,10 @@ title: "Difficult Questions and Uncertainty"
 > limits, and how you will answer without letting a single spoken word claim more
 > than your evidence supports. You prepare that answer; you never improvise it.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"When a presenter tells me, unprompted, exactly what their study can't show, I
@@ -141,6 +145,10 @@ that the polish inflated the claim.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The chapter's key spoken result is your uncertainty-and-limitations delivery, and
 you verify it two independent ways from the
 [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
@@ -155,7 +163,7 @@ was the right one.
 
 ## Project transfer
 
-This chapter completes the second half of your **M11 presentation package**, due at
+This chapter completes the second half of your **presentation package** milestone, due at
 Friday's studio. You leave with three artifacts you drafted yourself and then
 stress-tested: a ULN paragraph pairing your most threatening limitation with its
 next step, a five-question bank marked "defend" or "concede," and one honest

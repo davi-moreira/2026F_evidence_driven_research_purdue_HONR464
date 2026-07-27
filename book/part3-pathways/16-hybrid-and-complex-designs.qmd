@@ -56,24 +56,32 @@ a small systematic error hide behind an impressively small random one.
 
 ## A worked example
 
-You want the local acceleration due to gravity, call it `g`, from a swinging pendulum.
-Your model is the small-angle pendulum, whose period obeys `T = 2π√(L/g)` and
-rearranges to the estimand you will report: `g = 4π²L / T²`. That single formula is a
-complex design in miniature. It stitches two sub-measurements into one answer: the
-length `L` you read off a ruler, and the period `T` you time with a stopwatch.
+You want to know how concentrated your city's grocery market is: does a handful of
+chains dominate it, or is it split among many sellers? The standard answer is a
+**concentration index**, a single score that rises as a market's sales pile up in
+fewer hands. You compute it by squaring each seller's market share and adding the
+squares, where a seller's `share = its revenue / total market revenue`. That one
+formula is a complex design in miniature. It stitches two sub-measurements into one
+answer: each chain's `revenue`, which you take from a monthly industry survey, and the
+`total market revenue` in the denominator, which you have to measure separately.
 
-Watch the anatomy. Timing one swing is noisy, because your reaction time adds a random
-error to each start and stop. So you make a smart data-strategy move: time 50 swings
-and divide by 50. That averaging crushes the *variance*, and your period looks
-beautifully repeatable.
+Watch the anatomy. A single month of reported revenue is noisy, because a holiday week
+or a late filing pushes any one chain's figure up or down. So you make a smart
+data-strategy move: average twelve months of revenue for each chain before you compute
+shares. That averaging crushes the *variance*, and your index looks beautifully
+repeatable, moving a point or two at most when you swap which months you use.
 
-Here is the trap the lab trains you to see. Repetition does nothing for *bias*. Let the
-pendulum swing wide and the small-angle model behind `T = 2π√(L/g)` no longer holds, so
-the period you measure runs systematically longer than the formula assumes. Your data
-strategy and your model have drifted apart, and because `T` is squared, that drift is
-amplified straight into `g`. A value of `g` that reads 9.72 and never wobbles is not a
-correct `g`, only a confidently wrong one. The fix is a redesign of the data strategy,
-swinging at a small amplitude so the model holds again, not one more round of timing.
+Here is the trap the lab trains you to see. Repetition does nothing for *bias*. Your
+industry survey covers the chains, but not the independent corner stores or the
+online grocery deliveries, so the `total market revenue` you divide by is
+systematically too small. Every share is therefore systematically too large, and
+because shares are squared, that tilt is amplified straight into the index. Your data
+strategy and your model have drifted apart. An index that reads 2,850 and never
+wobbles is not a correct index, only a confidently wrong one, and it can push a market
+across the line competition authorities treat as highly concentrated. The fix is a
+redesign of the data strategy, taking the denominator from a source built to cover
+every seller, such as a government economic census, not one more year of the same
+survey.
 
 ## The Colab laboratory
 
@@ -93,22 +101,24 @@ request for a verdict.
 **Locate the real rule.**
 
 ```text
-Act as a physics-lab assistant. For a simple pendulum timed to estimate g via
-g = 4π²L/T², name two things and cite a real, retrievable source for each: (1) the
-amplitude below which the small-angle approximation holds to about 1%, and (2) the
-standard rule for propagating the uncertainty in L and T into g. Only state values
-you are confident exist.
+Act as an industrial-organization research assistant. For a market concentration index
+computed as the sum of every seller's squared market share, name two things and cite a
+real, retrievable source for each: (1) the index thresholds competition authorities use
+to call a market moderately or highly concentrated, and (2) the standard rule for
+propagating the uncertainty in the measured revenues and the market total into the
+index. Only state values you are confident exist.
 ```
-After running, verify: open the cited source and confirm the amplitude threshold and the
+After running, verify: open the cited source and confirm the thresholds and the
 propagation rule actually appear there. Counters *confident fabrication* (an invented
 threshold arrives as confidently as a real one).
 
 **Decompose the design into pieces you can check.**
 
 ```text
-Here is my combined design: [paste your model, inquiry, and how you measure L and T].
-Break it into sub-designs. For each sub-measurement, name which MIDA part it lives in,
-the one assumption it depends on, and how its error enters the final g. Return a table.
+Here is my combined design: [paste your model, inquiry, and how you measure each
+seller's revenue and the total market revenue]. Break it into sub-designs. For each
+sub-measurement, name which MIDA part it lives in, the one assumption it depends on,
+and how its error enters the final index. Return a table.
 ```
 After running, verify: set the table beside your own decomposition. Any sub-design or
 assumption it skipped is exactly the gap to chase. Counters *illusion of completeness*
@@ -117,9 +127,10 @@ assumption it skipped is exactly the gap to chase. Counters *illusion of complet
 **Red-team the combined result.**
 
 ```text
-Act as a hostile metrologist. Here is my measured g and its stated uncertainty:
-[paste]. Name the single systematic error that more repetitions can never fix and the
-place my four MIDA parts fail to point at the same quantity. Do not fix it for me.
+Act as a hostile antitrust economist. Here is my measured concentration index and its
+stated uncertainty: [paste]. Name the single systematic error that more months of data
+can never fix and the place my four MIDA parts fail to point at the same quantity. Do
+not fix it for me.
 ```
 After running, verify: if it only praises your precision, push back and demand the one
 worst systematic error. Counters *sycophantic agreement* (praise that reviews your ego,
@@ -127,8 +138,8 @@ not your error budget).
 
 ::: {.callout-important title="Do not delegate"}
 Three calls stay yours. You decide **what single quantity your inquiry names** (which
-`g`, under what conditions), **whether each sub-design actually targets that same
-quantity** so the parts align, and **whether to trust a combined number your diagnosis
+market, over what geography and time window), **whether each sub-design actually
+targets that same quantity** so the parts align, and **whether to trust a combined number your diagnosis
 says a systematic error dominates**. A tool can propagate the arithmetic, but it cannot
 decide that a precise number is a correct one. That judgment is the whole point of the
 chapter, and it is yours.
@@ -136,37 +147,41 @@ chapter, and it is yours.
 
 ## An AI failure case
 
-You paste your `L` and `T` into an AI tool and ask for `g`. It returns, with total
-confidence, `g = 9.79 ± 0.02 m/s²`. The number sits right next to the textbook 9.81,
-the interval is tiny, and the code ran without an error. It is wrong. The tool
-propagated only the *random* timing variance, the part you already crushed by timing 50
-swings, and never modeled the *systematic* bias from your wide swing amplitude. That
-tight `± 0.02` describes wobble it could see and stays silent about the tilt it could
-not.
+You paste your revenue table into an AI tool and ask for the concentration index. It
+returns, with total confidence, `index = 2,850 ± 18`. The number looks plausible for a
+market with a few big chains, the interval is tiny, and the code ran without an error.
+It is wrong. The tool propagated only the *month-to-month* revenue variance, the part
+you already crushed by averaging twelve months, and never modeled the *systematic* bias
+from a denominator that leaves out every seller your survey does not reach. That tight
+`± 18` describes wobble it could see and stays silent about the tilt it could not.
 
-You catch it in two moves. First, check the assumption the number rests on: was the
-amplitude actually small enough for `T = 2π√(L/g)` to hold? Second, run a falsification
-move: redo the timing at a deliberately larger amplitude and watch the "precise" `g`
-drift systematically downward. A quantity that shifts well outside its own stated
-interval had an uncertainty that was never honest. Verify the number, not the tidy
-interval beside it.
+You catch it in two moves. First, check the assumption the number rests on: does the
+total your shares divide by actually cover the whole market? Second, run a falsification
+move: recompute the index from a deliberately narrower survey, dropping the smallest
+chains too, and watch the "precise" index drift systematically upward. A quantity that
+shifts well outside its own stated interval had an uncertainty that was never honest.
+Verify the number, not the tidy interval beside it.
 
 ## Verification laboratory
+
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
 
 Verify the chapter's key result, that a complex design's precision does not prove it is
 unbiased, with **simulation** from the
 [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
-Declare the combined design in code with a known `g` and a planted large-angle bias, run
-it many times, and read the two numbers apart: variance shrinks as you add swings, while
-bias stays exactly where the amplitude put it. Then add a second, independent check,
-**direct calculation**: recompute `g` by hand from your `L` and `T`. Two roads to one
-answer is a verified result; two roads to two answers means the pipeline, not the
-pendulum, is what you measured.
+Declare the combined design in code with a known true index and a planted gap in the
+denominator's coverage, run it many times, and read the two numbers apart: variance
+shrinks as you add months, while bias stays exactly where the missing sellers put it.
+Then add a second, independent check, **direct calculation**: recompute the index by
+hand from your shares. Two roads to one answer is a verified result; two roads to two
+answers means the pipeline, not the market, is what you measured.
 
 ## Project transfer
 
-This chapter deepens your **M3 research charter and MIDA declaration**, the three-minute
-declaration you present at Friday's studio. If your own project's design is complex,
+This chapter deepens your **research charter and MIDA declaration** milestone, the
+three-minute declaration you present at Friday's studio. If your own project's design is complex,
 meaning it draws on more than one data source, runs a two-stage answer strategy, or
 blends a descriptive sub-question with a causal one, do not declare it as a single black
 box. Decompose it into its sub-designs, confirm each aligns to your single inquiry, and

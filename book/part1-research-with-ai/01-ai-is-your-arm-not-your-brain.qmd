@@ -99,42 +99,43 @@ check, with a verify note naming the failure it defends against.
 **Locate candidate sources (you verify each one).**
 
 ```text
-Act as a materials-research assistant. I need the flexural modulus of
-carbon-fiber-reinforced PLA filament. List 3 candidate manufacturer datasheets
-or standards, each with the exact document title and where it is published. Only
-include documents you are confident exist; mark anything uncertain.
+Act as an economic-research assistant. I need annual consumer price index values
+for 2019 and 2025. List 3 candidate published sources, each with the exact table
+or series name and the agency that publishes it. Only include documents you are
+confident exist; mark anything uncertain.
 ```
 
 After running, verify (counters *confident fabrication*): open each document
-yourself and read the number. A datasheet you cannot retrieve is invented until you
+yourself and read the number. A table you cannot retrieve is invented until you
 find it.
 
 **Turn a decision into a checklist (you audit the list).**
 
 ```text
-For sizing a printed drone arm as a beam in bending, list every material and
-geometric property my deflection calculation needs. For each, say why it belongs
-and which single property most governs the result.
+For converting a 2019 restaurant price into 2025 dollars, list every input my
+calculation needs. For each, say why it belongs and which single choice most
+governs the result.
 ```
 
 After running, verify (counters *illusion of completeness*): a long, tidy list can
-still omit the property that governs your design. Compare it against a checklist you
-wrote first, and confirm the governing property is really the one bending demands.
+still omit the choice that governs your answer. Compare it against a checklist you
+wrote first, and confirm the governing choice is really the one the comparison rests
+on.
 
 **Red-team your own choice (you keep the decision).**
 
 ```text
-Here is my material and safety-factor choice for the drone arm: [paste it]. Act as
-a hostile design reviewer. Name every place the choice reaches past my evidence.
-Do not rewrite it for me; list the weaknesses.
+Here is my price index and base year for comparing 2019 and 2025 menu prices:
+[paste it]. Act as a hostile referee. Name every place the choice reaches past my
+evidence. Do not rewrite it for me; list the weaknesses.
 ```
 
 After running, verify (counters *sycophantic agreement*): if every objection is mild
 or it calls your choice "well-balanced," push back and ask for the single worst flaw.
 
 ::: {.callout-important title="Do not delegate"}
-These stay yours, no matter how fluent the tool sounds. Deciding which property
-governs your design and what safety margin the part requires. Judging whether a source
+These stay yours, no matter how fluent the tool sounds. Deciding which measure fits
+your question and which base year the comparison requires. Judging whether a source
 is authoritative enough to build on. Setting the claim you will defend and stating its
 uncertainty. The tool gathers options and drafts prose; choosing among them, and
 answering for the choice, is the researcher's job.
@@ -142,34 +143,39 @@ answering for the choice, is the researcher's job.
 
 ## An AI failure case
 
-You ask for the fatigue limit of your filament and a source. The tool returns a crisp
-value and attributes it to "ASTM D-7791, Table 3." It reads like every real citation
-you have seen: a standards body, a document number, a table. It is fabricated, or the
-number is not on that page.
+You ask for the median starting salary of graduates in your field and a source. The
+tool returns a crisp value and attributes it to "the 2024 National Graduate Earnings
+Survey, Table 3." It reads like every real citation you have seen: an official-sounding
+survey, a year, a table. It is fabricated, or the number is not on that page.
 
 Here is exactly how you catch it. You do not trust the citation as delivered. You
-search the standard in the Purdue Libraries and, if it opens, turn to the named table
-and read the line. If the standard does not exist, or has no such value, the confident
-citation collapses. Fabricated sources sound just as authoritative as real ones, so
-the only reliable filter is opening the document.
+search for the survey through your university library and, if it opens, turn to the
+named table and read the line. If the survey does not exist, or has no such value, the
+confident citation collapses. Fabricated sources sound just as authoritative as real
+ones, so the only reliable filter is opening the document.
 
 ## Verification laboratory
+
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
 
 The chapter's key result is that polish does not predict truth. Confirm it yourself
 with **primary-source reading** (from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)):
 take a real list of citations an AI returns for a topic you know, search each exact
 title, and count how many actually open. The confident-sounding ones are not more
 likely to be real than the plain ones. For a number, add **direct calculation**:
-recompute the claimed value by hand from the datasheet and check it matches.
+recompute the claimed percentage change by hand from the two published index values
+and check it matches.
 
 ## Project transfer
 
-This chapter launches milestone **M0**, your research-and-AI baseline, presented at
-Friday's studio. Three moves carry over directly. Sort the tasks in your own project
+This chapter launches your first project milestone, the research-and-AI baseline you
+present at Friday's studio. Three moves carry over directly. Sort the tasks in your own project
 into safe-to-delegate, delegate-then-verify, and never-delegate, and say why for each.
 Run one live citation catch on your topic and record the verdict. Fill your first row
 in the AI Research Ledger, logging the task, the tool, your decision, and the
-verification method. That ledger row is the habit M0 installs.
+verification method. That ledger row is the habit the baseline milestone installs.
 
 ## Defend your decision
 

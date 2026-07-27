@@ -10,13 +10,17 @@ title: "Research Pitches"
 > boundary sentence sits, and you refuse to let it move when the adrenaline speeds
 > you up.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"I stop at maybe forty posters in an afternoon. What I remember is not the one
 > with the most data. It is the one whose presenter told me, in one clean breath,
 > exactly what they found and exactly where it stops. The ones who oversold lost me
 > on the second sentence."*
-> — a **skeptical peer** working the room at a research expo
+> — a **skeptical peer** working the room at a research conference
 
 A finished poster is silent. The moment a visitor stops, your voice takes over, and
 speaking is faster than reading, so you compress on the fly. That is where claims
@@ -162,6 +166,10 @@ back at you. You keep your own boundary sentence and drop the tool's version.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, that your compressed pitch still says what your
 poster says, with **peer reasoning** from the
 [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
@@ -175,13 +183,13 @@ guards the clock.
 
 ## Project transfer
 
-This chapter builds the first component of milestone **M11**, your presentation
-package: the three pitch layers plus the poster-walk map that says what your hand
+This chapter builds the first component of your **presentation package** milestone:
+the three pitch layers plus the poster-walk map that says what your hand
 points at, beat by beat. Draft all three for the poster you already locked, mark the
 boundary sentence in each, and deliver the 30-second hook twice to a partner who
 flags every spoken upgrade. Those flags are your revision list. You drill the whole
-package Friday at the mock symposium, a full rehearsal in a safe room, and M11 is due
-that night.
+package Friday at the mock symposium, a full rehearsal in a safe room, and the
+package is due that night.
 
 ## Defend your decision
 

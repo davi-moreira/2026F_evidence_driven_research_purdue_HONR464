@@ -11,43 +11,48 @@ title: "AI as Adversarial Reviewer"
 > verify every flag against your data, and defend the one bounded claim that
 > survives.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
-Picture the review of a pull request that claims a speedup. A **staff engineer** is
-a senior developer whose sign-off lets your change ship to real users, and who
-answers for it when production tells a different story. Example: the engineer who
-approved your caching change is the one paged when latency climbs at 2 a.m. Their
-concern is blunt.
+Picture the review of a proposal to roll out a store change chain-wide. An
+**operations manager** is the person whose sign-off lets your change reach every
+store, and who answers for it when the checkout lines tell a different story.
+Example: the manager who approved your new self-checkout layout is the one fielding
+complaints when the queues back up on the first busy Saturday. Their concern is
+blunt.
 
 > *"Do not tell me the numbers got better. Tell me which check you ran that would
 > have caught it if they hadn't. I trust the check, not the graph."*
 
-A confident benchmark, a fluent AI critique, and a clean-looking table can all be
-wrong in the same convincing way. The engineer is asking for what sounds least
+A confident measurement, a fluent AI critique, and a clean-looking table can all be
+wrong in the same convincing way. The manager is asking for what sounds least
 impressive and matters most: the check you committed to before you looked, and the
 flag you actually verified against the data.
 
 ## The concept
 
 An **adversarial reviewer** is a reader whose job is to attack your result and find
-where it breaks, not to praise it. Example: a peer who tries to show your benchmark
-was luck rather than a real improvement. The reviewer can be a classmate, one AI
-tool, or a panel of models, and each fails in its own way.
+where it breaks, not to praise it. Example: a peer who tries to show your measured
+improvement was luck rather than a real change. The reviewer can be a classmate, one
+AI tool, or a panel of models, and each fails in its own way.
 
 You defend a result by trying to break it first. A **robustness check** re-runs the
 same finding under a different but equally defensible choice and sees whether the
-answer holds. Example: you measured a speedup on one workload, so you also measure it
-on two other realistic workloads. A **placebo test** runs your exact procedure where
-the effect cannot exist and confirms it comes back near zero. Example: you benchmark
-an unchanged build against an identical copy of itself, and any "speedup" between
-them is your harness lying.
+answer holds. Example: you measured the improvement during one time of day, so you
+also measure it in two other realistic time blocks. A **placebo test** runs your exact
+procedure where the effect cannot exist and confirms it comes back near zero. Example:
+you compare two stretches of the *old* layout against each other, and any
+"improvement" between them is your measurement lying.
 
 The habit that keeps an attack honest is order. **Specification searching** means
 trying many versions of an analysis and reporting only the one that gave the answer
 you wanted, without disclosing the search. Its everyday name is **p-hacking**.
-Example: you benchmark ten input sizes and slide only the size where your change
+Example: you measure ten different hours and show only the hour where your change
 wins. The cure is a set of **pre-listed checks**, the full list you will run,
-committed to before you see any result. Example: you write down three workloads and
+committed to before you see any result. Example: you write down three time blocks and
 one placebo, then run all four and report every number, including the ones that did
 not help.
 
@@ -60,33 +65,32 @@ or machine, tells you nothing about whether the flaw exists.
 
 ## A worked example
 
-You added an in-memory cache to a web service, and your benchmark reports responses
-got faster. Before you defend that, you attack it. First, one term. **p95 latency**
-is the response time that 95 out of 100 requests come in under, a fairer summary than
-the average because it captures the slow tail your users actually feel. Example: a
-p95 of 210 milliseconds means only the slowest 5 percent took longer than that. Your
-headline is a p95 drop from 210 milliseconds to 140.
+Your store installed a new self-checkout layout, and your data say customers got
+through the line faster. Before you defend that, you attack it. First, one term.
+**p95 wait time** is the wait that 95 out of 100 customers come in under, a fairer
+summary than the average because it captures the long waits people actually complain
+about. Example: a p95 of 210 seconds means only the slowest 5 percent waited longer
+than that. Your headline is a p95 drop from 210 seconds to 140.
 
 You hand the result to three adversarial reviewers, and each names a different fatal
-flaw. The first says the win is driven by a single warm-up run where the cache was
-already full. The second says you cherry-picked the one request mix where caching
-helps. The third says you compared a fresh deploy against a tired one, so you
-measured the restart, not the cache. All three are confident, and all three
-disagree.
+flaw. The first says the win is driven by a single unusually quiet morning. The
+second says you cherry-picked the one customer mix where the layout helps. The third
+says you compared a fully staffed week against a short-handed one, so you measured
+staffing, not the layout. All three are confident, and all three disagree.
 
 You do not trust the loudest voice. You turn each flaw into a check. Leave-one-out
-drops the warm-up run and recomputes the p95: it barely moves, so the first flaw is
-refuted. Your pre-listed specification grid reruns the drop across three request
-mixes, and it holds in all three, so the second is refuted too. The placebo
-benchmarks the unchanged build against an identical copy of itself. A speedup between
-two identical builds would prove the third reviewer right, but it comes back near
+drops the quiet morning and recomputes the p95: it barely moves, so the first flaw is
+refuted. Your pre-listed specification grid reruns the drop across three customer
+mixes, and it holds in all three, so the second is refuted too. The placebo compares
+two stretches of the old layout against each other. An improvement between two
+identical stretches would prove the third reviewer right, but it comes back near
 zero, so the machinery is clean.
 
 The two loudest flags dissolved the moment a check touched them. The flaw that
-survives is one no benchmark can remove and none of the three raised: this ran on
-your laptop, not on production hardware. So the honest claim is bounded. You measured
-a p95 improvement on these three workloads on this machine, not a guarantee for every
-endpoint your users hit.
+survives is one no further measurement can remove and none of the three raised: this
+ran at one store on weekdays, not across the chain. So the honest claim is bounded.
+You measured a p95 improvement for these three customer mixes at this store, not a
+guarantee for every location your company runs.
 
 ## The Colab laboratory
 
@@ -106,11 +110,11 @@ defends against.
 **Red-team the result (you run the check it names).**
 
 ```text
-Act as a hostile performance reviewer, not a cheerleader. Here is a one-paragraph
-summary of my benchmark and its headline claim: [paste your summary]. Name the
+Act as a hostile operations reviewer, not a cheerleader. Here is a one-paragraph
+summary of my wait-time study and its headline claim: [paste your summary]. Name the
 single most serious flaw you can find, and state the exact measurement I could run
-that would confirm or refute it. Do not rewrite my benchmark and do not list more
-than one flaw.
+that would confirm or refute it. Do not rewrite my study and do not list more than
+one flaw.
 ```
 
 After running, verify (counters *sycophantic agreement*): if it calls your setup
@@ -121,8 +125,8 @@ own numbers confirm it.
 **List the specifications you left off (you audit the list).**
 
 ```text
-Here is my pre-listed robustness grid for one benchmark result: I vary the workload
-mix, the input size, and whether the cache is pre-warmed. Name up to three
+Here is my pre-listed robustness grid for one wait-time result: I vary the customer
+mix, the time of day, and whether the store was fully staffed. Name up to three
 additional, equally defensible specifications I did NOT list that could move the
 result, and for each say which direction you expect it to push.
 ```
@@ -150,20 +154,21 @@ These stay yours, no matter how fluent the reviewer sounds. Which robustness che
 you commit to before you look, because a check chosen after you see the result is
 not a check, it is a search. Which flagged flaws your data actually confirm, decided
 by the measurement and not by the confidence. Whether a flaw is a claim-boundary
-problem that no benchmark can fix and only a narrower claim can answer. And the one
+problem that no further measurement can fix and only a narrower claim can answer. And
+the one
 bounded result you will defend, with its uncertainty stated. A reviewer proposes;
 you verify, and the evidence decides.
 :::
 
 ## An AI failure case
 
-You paste your benchmark summary into an AI reviewer, and it answers with total
-certainty: your speedup is an artifact of one warm-up run, drop that run and it
-vanishes. The claim is specific, mechanistic, and stated without a hedge. It reads
-exactly like a reviewer who has seen this mistake a hundred times.
+You paste your wait-time summary into an AI reviewer, and it answers with total
+certainty: your improvement is an artifact of one unusually quiet morning, drop that
+morning and it vanishes. The claim is specific, mechanistic, and stated without a
+hedge. It reads exactly like a reviewer who has seen this mistake a hundred times.
 
 Here is how you catch it. You do not act on the verdict. You run the leave-one-out
-yourself, dropping the warm-up run and recomputing the p95. The improvement barely
+yourself, dropping the quiet morning and recomputing the p95. The improvement barely
 moves. The confident flaw was fabricated, a real-sounding mechanism bolted onto a
 problem your data do not have. Trust the certainty and you throw away a genuine
 result on a hunch. Pointing the check at your own numbers is the only thing that
@@ -171,20 +176,24 @@ settled it.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The chapter's key result is that confidence never certifies truth: a winning number
 can be manufactured by searching, and a confident flag can be pure invention.
 Confirm it yourself with **simulation** (from the
-[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)). Benchmark an
-unchanged build against an identical copy of itself, so the true difference is zero
-by construction, then slice the runs by input size and let a searcher report the
-best-looking slice. Watch a "speedup" appear from nothing. For the specific number,
-add **alternative code**: recompute the same p95 a second way, sorting the raw
-samples and reading the 95th-percentile index directly, and confirm the two roads
+[verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)). Compare two
+stretches of the same unchanged layout against each other, so the true difference is
+zero by construction, then slice the visits by hour and let a searcher report the
+best-looking slice. Watch an "improvement" appear from nothing. For the specific
+number, add **alternative code**: recompute the same p95 a second way, sorting the raw
+wait times and reading the 95th-percentile index directly, and confirm the two roads
 give one answer.
 
 ## Project transfer
 
-This chapter feeds milestone **M9**, your poster draft and research audit, presented
+This chapter feeds your **poster draft and research audit milestone**, presented
 at Friday's studio. A **research audit** is the graded record of how hard you tried
 to break your own claim and what survived. Three moves carry over. Pre-list the
 three robustness or placebo checks you commit to for your own estimate, each tied to

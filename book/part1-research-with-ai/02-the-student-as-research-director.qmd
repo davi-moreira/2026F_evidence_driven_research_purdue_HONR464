@@ -9,6 +9,10 @@ title: "The Student as Research Director"
 > keep it as a judgment only you may make. This chapter equips you to draw that line
 > and defend where you drew it.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 1, 2, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 Picture a **principal investigator**, the researcher who runs a lab and owns its
@@ -146,6 +150,10 @@ that row as never delegate, so the mismatch jumps out. Then you try to retrieve 
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The key result of this chapter is a triage, which is a judgment, so verify it with
 **peer reasoning**: walk your three buckets past a classmate or the instructor and ask
 them to challenge any placement. A judgment that survives a skeptical second reader is
@@ -155,9 +163,10 @@ it says what the tool claimed.
 
 ## Project transfer
 
-This chapter builds the spine of your **M0 research-and-AI baseline**, the milestone
-you present at Friday's studio. M0 asks you to name two decisions in your own project
-that you will not delegate, and to say in one sentence each why each is yours to own.
+This chapter builds the spine of your **research-and-AI baseline**, the first project
+milestone, which you present at Friday's studio. That milestone asks you to name two
+decisions in your own project that you will not delegate, and to say in one sentence
+each why each is yours to own.
 The triage you practice here is exactly that list, written for your topic instead of
 the *E. coli* example.
 

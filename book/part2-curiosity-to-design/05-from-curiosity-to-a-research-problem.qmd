@@ -9,6 +9,10 @@ title: "From Curiosity to a Research Problem"
 > answerable question that names its units, its outcome, and the population it
 > speaks for, and you defend it as important, feasible, and genuinely new.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 4, 7, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 Picture a research mentor reading your one-line pitch before your first meeting.
@@ -160,6 +164,10 @@ cannot, you treat it as **confident fabrication** and drop it.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The key result of this chapter is a claim about your own question: that it is
 answerable and carries its three terms. Verify it with **peer reasoning**, method
 11 in the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md). Hand your
@@ -171,8 +179,8 @@ missing.
 
 ## Project transfer
 
-This chapter builds the spine of milestone **M1, your research opportunity
-landscape**. Take the strongest curiosity from your nb01 map and walk it down the
+This chapter builds the spine of your **research opportunity landscape**
+milestone. Take the strongest curiosity from your nb01 map and walk it down the
 funnel: topic, research problem, then answerable question, naming its units,
 outcome, and population, and scoring it on importance, feasibility, and
 contribution. What you defend at the Friday studio is a problem you funneled and

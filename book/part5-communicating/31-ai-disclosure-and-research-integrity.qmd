@@ -9,6 +9,10 @@ title: "AI Disclosure and Research Integrity"
 > and record it so that when someone asks *"did you use AI, and how did you verify
 > it?"* you can answer truthfully and point to a checkable record, not a memory.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 > *"I am not going to penalize you for using an AI tool. I am going to penalize you
@@ -16,7 +20,8 @@ title: "AI Disclosure and Research Integrity"
 > cannot trace back to a source and a verification is a result I cannot trust."*
 > — a **conference reviewer**, standing at your poster and asking the AI-use question
 
-At the Expo, one of the five kinds of question a stranger can ask you is the AI-use
+At your research conference (for the original course, the Purdue Fall Undergraduate
+Research Expo), one of the five kinds of question a stranger can ask you is the AI-use
 question. Many journals and conferences now ask authors to state where and how AI
 tools were used, so this is not a classroom formality. If your only answer is "yes, a
 bit, and it seemed fine," you have turned good work into an untrustable result on the
@@ -25,7 +30,7 @@ spot. The disclosure is what keeps an honest use of AI honest under questioning.
 ## The concept
 
 **AI disclosure** is a truthful statement of where and how you used an AI tool in
-your work. Example: "I used Gemini to draft the code that computed my safety factor,
+your work. Example: "I used Gemini to draft the code that computed my coverage ratio,
 and I recomputed that number by hand before reporting it." **Research integrity** is
 the practice of keeping your work honest and traceable, so a reader can see where each
 result came from and trust it. Example: a claim that names its source and its check
@@ -43,34 +48,35 @@ exactly the gap a reviewer is trained to find.
 
 ## A worked example
 
-You are presenting a senior-design poster in mechanical engineering. Your bracket
-must hold a static design load, and your headline number is its **safety factor**,
-the ratio of the material's strength to the stress your load actually puts on the
-part. A safety factor of 2.0 means the part can take twice the load before it yields.
+You are presenting a business-analytics poster on whether a public company can
+comfortably pay the interest on its debt. Your headline number is its **interest
+coverage ratio**, the ratio of a company's operating income to the interest it owes
+in a year. A coverage ratio of 2.0 means the company earned twice what it owed.
 
-You used an AI tool twice: once to find the yield strength of 6061-T6 aluminum, once
-to write the short calculation that turns that strength and your load into a safety
-factor. Both are honest uses, and neither is safe until it is disclosed and verified.
+You used an AI tool twice: once to find the company's reported operating income, once
+to write the short calculation that turns that income and its interest expense into a
+coverage ratio. Both are honest uses, and neither is safe until it is disclosed and
+verified.
 
-Your ledger already holds two rows. For the material property, the verification method
-is **primary-source reading**: you opened the alloy's published datasheet and confirmed
-the yield strength the tool gave you. For the calculation, the method is **alternative
-code**, recomputing the same number a second way:
+Your ledger already holds two rows. For the reported figure, the verification method
+is **primary-source reading**: you opened the company's published annual report and
+confirmed the operating income the tool gave you. For the calculation, the method is
+**alternative code**, recomputing the same number a second way:
 
 ```python
 # The number the AI code reported, recomputed by hand.
-yield_strength = 276      # MPa, confirmed against the 6061-T6 datasheet
-applied_stress = 131      # MPa, from my load and cross-section
-safety_factor  = yield_strength / applied_stress
-print(round(safety_factor, 2))   # 2.11 — matches the AI-generated cell
+operating_income = 276    # USD millions, confirmed against the annual report
+interest_expense = 131    # USD millions, from the same annual report
+coverage_ratio   = operating_income / interest_expense
+print(round(coverage_ratio, 2))   # 2.11 — matches the AI-generated cell
 ```
 
 When the reviewer asks the AI-use question, you do not improvise. You read your two
 rows aloud: the tools, the tasks, and the two checks. The claim you defend is bounded.
-The safety factor is about 2.1 under this static load, with the strength confirmed
-against the datasheet and the arithmetic reproduced by hand. Its boundary is honest
-too: you modeled a single idealized load case, not fatigue and not stress
-concentration at the holes.
+The coverage ratio is about 2.1 for this fiscal year, with the income figure confirmed
+against the annual report and the arithmetic reproduced by hand. Its boundary is
+honest too: you read a single year of reported results, not a downturn scenario and
+not the debt coming due next year.
 
 ## The Colab laboratory
 
@@ -135,10 +141,10 @@ failure this chapter exists to prevent.
 
 You ask a tool to "write my AI-use disclosure from these notes," and it hands back a
 polished paragraph: *"All AI-generated outputs were independently verified against
-primary sources."* It reads beautifully, and it is false. You verified the yield
-strength against the datasheet, but you never independently checked the load figure the
-same tool helped you estimate. The sentence upgraded one real check into a blanket
-claim of "all."
+primary sources."* It reads beautifully, and it is false. You verified the operating
+income against the annual report, but you never independently checked the interest
+figure the same tool helped you pull. The sentence upgraded one real check into a
+blanket claim of "all."
 
 You catch it by reading the disclosure line by line against your ledger. Every
 sentence claiming a verification must point to a row that names that check. The word
@@ -149,21 +155,26 @@ disclosure against the record, not against how responsible it sounds.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, your finished disclosure, with **peer reasoning**
 from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md).
 Hand a partner your disclosure and your actual project, and ask one question: can you
 find an AI use I did not disclose, or a verification I claimed but cannot show? If they
 find one, your disclosure was incomplete, which is a finding, not a failure. For the
-engineering number itself, recompute the safety factor a second way, so the value you
+headline number itself, recompute the coverage ratio a second way, so the value you
 disclose survives two independent roads to the same answer.
 
 ## Project transfer
 
 This chapter turns your AI Research Ledger into the disclosure you submit and defend
-with **M12**, your conference reflection and criticism portfolio. The ledger is a
+with your **conference reflection and criticism portfolio** milestone. The ledger is a
 required part of that package: a missing ledger scores Craft 0 and the submission is
 returned unread. So read your finished ledger into a short, truthful AI-use statement,
-attach it to M12, and rehearse answering the Expo's AI-use question straight from it.
+attach it to the portfolio, and rehearse answering the conference's AI-use question
+straight from it.
 When a stranger asks how you checked your work, your answer is already written and
 already verified.
 

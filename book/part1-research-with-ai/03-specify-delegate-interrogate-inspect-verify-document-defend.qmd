@@ -9,6 +9,10 @@ title: "Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend"
 > verifiable and defensible. You specify the work and defend the result yourself,
 > and you never let the tool own those two ends.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 1, 2, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 > *"Show me the benchmark, not the number. I want to see what you timed, how many
@@ -157,6 +161,10 @@ result. You verify the number, not the paragraph about the number.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, the speedup, with **alternative code** from the
 [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
 recompute the same quantity a different way and compare. Time both functions again with
@@ -168,7 +176,7 @@ what you measured.
 
 ## Project transfer
 
-This chapter turns into your **M0 research-and-AI baseline**, the course's first
+This chapter turns into your **research-and-AI baseline**, the course's first project
 milestone. The next time you delegate anything real on your own project, whether
 locating a source, drafting a rewrite, or running a small analysis, route it through
 all seven steps and record it as your first row in the AI Research Ledger: the task,

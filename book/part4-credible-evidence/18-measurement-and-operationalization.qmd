@@ -9,6 +9,10 @@ title: "Measurement and Operationalization"
 > concept, name the construct that stands for it, and name the indicator you will
 > measure. Then state plainly what that indicator captures and what it leaves out.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 15, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 > *"Before you tell me the cover crop made the soil healthier, tell me exactly what
@@ -148,6 +152,10 @@ fluency of the paragraph that proposed it.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, that your indicator faithfully stands for its
 construct, with **primary-source reading** from the
 [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
@@ -160,8 +168,8 @@ mean of 4.43 and see how much shape the single number hid.
 
 ## Project transfer
 
-This chapter becomes the measurement rung of your **M4 observational descriptive
-design audit**, which asks for a measurement ladder and a coverage note. Draft it
+This chapter becomes the measurement rung of your **observational descriptive
+design audit** milestone, which asks for a measurement ladder and a coverage note. Draft it
 here: write your own concept → construct → indicator for your project's key measure,
 one line each, then name the one facet your indicator most worries you by leaving
 out. Bring that ladder, plus a one-sentence reliability and validity note, to

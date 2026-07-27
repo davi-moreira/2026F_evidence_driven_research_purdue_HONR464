@@ -11,6 +11,10 @@ title: "Poster Criticism"
 > reaches every reader. This chapter equips you to run that audit as a hostile
 > stranger would, then defend the lock call you make.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. There is no RDSS companion chapter for this topic; this chapter stands on its own.
+:::
+
 ## Why this decision matters
 
 Picture the last hour before a poster prints. A **research-integrity judge**, the
@@ -90,7 +94,8 @@ This chapter's lab is notebook **nb11 — Poster criticism + final poster lock**
 badge above and work the cells alongside this chapter. In the lab you draw one
 honest set of pilot numbers two ways and read the exaggeration factor your own cell
 prints, run the four audits plus accessibility on a sample poster, map the three
-defense lenses, and log the hits your own poster received into your M10 lock list.
+defense lenses, and log the hits your own poster received into your final-poster
+lock list.
 
 ## Recommended AI prompts
 
@@ -169,6 +174,10 @@ bushels you computed. The completeness check is yours, not the tool's.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The chapter's key result is that the same numbers drawn honestly tell a smaller
 story than the truncated chart does. Confirm it with **direct calculation** (from
 the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md)): recompute the
@@ -181,8 +190,8 @@ what your poster claims.
 
 ## Project transfer
 
-This chapter develops and locks milestone **M10, your final poster**, and hands off
-to M11, where you deliver that poster out loud. Three moves carry over. Run the
+This chapter develops and locks the **final poster** milestone, and hands off to the
+oral-defense milestone, where you deliver that poster out loud. Three moves carry over. Run the
 gallery-walk audit on your own poster and log every located hit, ranked by how far
 the error travels. Field the three-lens oral defense and list every claim it exposed
 as too strong, with the softer wording you will lock. Then make the lock call: trace

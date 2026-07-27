@@ -10,6 +10,10 @@ title: "Data Provenance and Data Quality"
 > judging whether it was measured well, under the conditions your work needs (its
 > quality).
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 4, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 Picture a **thesis advisor**, the researcher who signs off on your project, reading
@@ -146,6 +150,10 @@ The value goes into your notes as a 40°C figure, and your 25°C question stays 
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 The key result here is a value with a claimed origin, so verify it with **primary-source
 reading**: find the paper that first measured the number and read the line that reports
 it and its conditions, not a summary of that line. Because a borrowed number reaches
@@ -156,8 +164,8 @@ trusting a single source that quietly copied its number from somewhere else.
 
 ## Project transfer
 
-This chapter sharpens your **M2 verified evidence and contribution map**, the milestone
-you present at Friday's studio. Every entry in your M2 source log already needs an
+This chapter sharpens your **verified evidence and contribution map**, the milestone
+you present at Friday's studio. Every entry in its source log already needs an
 author, a year, and where you retrieved it. Add two columns: whether the entry is a
 primary source or a secondary re-report, and the conditions or scope under which its
 central value holds. A log built this way lets a skeptic trace any number you use back

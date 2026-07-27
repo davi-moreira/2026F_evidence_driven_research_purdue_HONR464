@@ -9,6 +9,10 @@ title: "Recognizing False Confidence"
 > which independent check you run on the number underneath it before you repeat the
 > claim as your own.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 1, 2, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 Picture the officer who reviews grant reports for a watershed restoration program.
@@ -142,6 +146,10 @@ buffer. The confident summary failed twice, once on the number and once on the c
 reach, and both failures were invisible until you checked outside the model.
 
 ## Verification laboratory
+
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
 
 The chapter's key result is that a confident summary's number can be flatly wrong.
 Confirm it yourself with **direct calculation** (from the

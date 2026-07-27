@@ -9,6 +9,10 @@ title: "Research Responsibility and Intellectual Ownership"
 > plainly what the tool did and how you checked it. Your name on the work means you
 > answer for it, whatever tool helped.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 1, 2, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 > *"When something in this paper turns out to be wrong, I do not ask which software
@@ -146,6 +150,10 @@ describe its own role. You describe it, from your record.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, that a claim under your name is one you can defend,
 with **primary-source reading**, the method of finding the actual source and reading the
 relevant line yourself (see `ai_resources/verification_guide.md`). Take the EPA chloride
@@ -156,8 +164,8 @@ leaves a line for your ledger.
 
 ## Project transfer
 
-This chapter launches milestone **M0**, your research-and-AI baseline, presented at
-Friday's studio. Bring three things it asks for: two decisions you refuse to delegate
+This chapter launches your first project milestone, the research-and-AI baseline you
+present at Friday's studio. Bring three things it asks for: two decisions you refuse to delegate
 on your own project, with one sentence each on why; your first AI Research Ledger row,
 honestly disclosing a real AI use and how you checked it; and one claim you can already
 defend, stated at the reach your evidence supports. Ownership is not a late-semester
