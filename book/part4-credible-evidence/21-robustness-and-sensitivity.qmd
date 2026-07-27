@@ -105,10 +105,9 @@ request for a verdict.
 
 ```text
 Act as a methods assistant for a two-group comparison of average customer spending.
-Before any code,
-name the standard families of robustness and sensitivity checks for this design and
-the four things I can vary to stress the estimate. Cite a real methods reference you
-are confident exists; if you are unsure a source is real, say so.
+Before any code, name the standard families of robustness and sensitivity checks for
+this design and the four things I can vary to stress the estimate. Cite a real methods
+reference you are confident exists; if you are unsure a source is real, say so.
 ```
 After running, verify: open the reference and confirm the checks and the source
 exist. Counters *confident fabrication* (an invented method or citation arrives as
@@ -155,9 +154,8 @@ handle, and the metric handle, and closes with "the twelve percent result is rob
 across all standard specifications." It reads as thorough and complete. The trap is
 that it never listed the **measurement** handle, the total amount charged versus
 shipping and taxes stripped out, and that is precisely the choice that moves your
-estimate the most. The
-section looks exhaustive while omitting the one check a reviewer would reach for
-first.
+estimate the most. The section looks exhaustive while omitting the one check a
+reviewer would reach for first.
 
 You catch it because you pre-listed all four handles yourself before opening the tool.
 Reading its section against your own list, you notice measurement is missing, run that
@@ -185,8 +183,8 @@ specification belongs in your report, not your recycling bin.
 
 This chapter turns into your **research audit and poster draft milestone**. Take the
 estimate you produced in the previous milestone and write a short, pre-listed
-robustness plan for it: three checks,
-in order, chosen for the choices a hostile reviewer is most likely to attack, plus one
+robustness plan for it: three checks, in order, chosen for the choices a hostile
+reviewer is most likely to attack, plus one
 placebo or leave-one-out check. Run all of them, report the whole picture, and record
 each as a row in your AI Research Ledger with the verification method that earned your
 trust. That pre-listed plan, and the range it produces, is the spine of what you

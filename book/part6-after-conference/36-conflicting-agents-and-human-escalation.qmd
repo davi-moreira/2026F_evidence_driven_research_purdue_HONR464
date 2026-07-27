@@ -9,6 +9,10 @@ title: "Conflicting Agents and Human Escalation"
 > correlated error, or manufactured consensus) and decide the exact moment to take
 > the call back into your own hands.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 24, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 > *"Don't tell me your reviewers agreed. Tell me whether they could have agreed for
@@ -62,31 +66,33 @@ votes among look-alike models are meaningless.
 
 ## A worked example
 
-You measured the local acceleration of gravity, **g** (how fast a dropped object
-speeds up, about 9.81 meters per second squared at Earth's surface), using a simple
-pendulum. You timed its swing, then used the small-angle formula g = 4π²L/T², where L
-is the length and T is the period. Your draft reports "g = 9.81 m/s², in excellent
-agreement with the accepted value."
+You estimated the **unemployment rate** in your town (the share of people who want
+paid work and cannot find it) from a survey you ran yourself. You asked 250 adults
+outside the public library, over three weekday afternoons, whether they were working
+or looking for work, then divided one count by the other. Your draft reports
+"unemployment here is 4.0%, in excellent agreement with the official rate."
 
 You run three AI reviewer roles. All three return the same verdict: "Looks solid.
-Matches the textbook value." Is that three confirmations?
+Matches the published figure." Is that three confirmations?
 
-Diagnose before you celebrate. Every one of those roles already knows 9.81 is *the*
-answer, so each one pattern-matches your number to the known constant and blesses it
-without checking how you got there. That is **correlated error** wearing the mask of
-confirmation: they share one blind spot, the anchor to the famous value, and it hides
-your actual mistake. Your swing was wide, around 30 degrees, where the small-angle
-formula quietly breaks down, and you timed a single swing by hand, so reaction time
-alone is roughly a fifth of a second of noise. The tidy "9.81" was luck riding on an
-honest-looking method.
+Diagnose before you celebrate. Every one of those roles already expects a number near
+4%, because that is the range the familiar headline rates sit in, so each one
+pattern-matches your estimate to the value it walked in with and blesses it without
+checking how you got there. That is **correlated error** wearing the mask of
+confirmation: they share one blind spot, the anchor to the familiar figure, and it
+hides your actual mistake. You asked only 250 people, so the luck of who happened to
+walk by is worth a couple of percentage points on its own, and you asked them on
+weekday afternoons outside a library, where almost nobody who was at work all day
+could appear. The tidy "4.0%" was luck riding on an honest-looking method.
 
 This is where you **escalate**. The reviewers' agreement would *settle* your headline
-claim, and that claim is yours, so you take the pen back. You recompute g from your
-raw timings yourself and carry the stopwatch error through the arithmetic, and the
-honest result is g = 9.7 ± 0.4 m/s². Consistent with 9.81, but nowhere near as precise
-as you wrote. You **override** three "looks great" verdicts and rewrite the claim with
-its real uncertainty. The roles counted the answer as correct. You checked whether it
-was earned.
+claim, and that claim is yours, so you take the pen back. You recompute the rate from
+your raw responses yourself and carry the uncertainty of a 250-person sample through
+the arithmetic, and the honest result is 4.0% ± 2.4 percentage points, from a group
+that could not include most of the people who were working. Consistent with the
+official rate, but nowhere near as precise as you wrote. You **override** three "looks
+great" verdicts and rewrite the claim with its real uncertainty. The roles counted the
+answer as correct. You checked whether it was earned.
 
 ## The Colab laboratory
 
@@ -161,6 +167,10 @@ gap.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify the chapter's key result, the correlated team's miss rate, with **direct
 calculation** from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md):
 recompute the same quantity a second way and compare. Four independent reviewers, each
@@ -173,8 +183,9 @@ by hand, not on faith.
 
 ## Project transfer
 
-This chapter builds two of the four parts of **M15**, your final research chapter and
-AI-management portfolio. The first is your **conflict-and-override log**: one real clash
+This chapter builds two of the four parts of your **final research chapter and
+AI-management portfolio**, the last project milestone. The first is your
+**conflict-and-override log**: one real clash
 between your roles, your diagnosis (real disagreement, correlated error, or false
 consensus), and the override you made with the non-AI check that backed it. The second
 is your **independence check**: one place your roles agreed on something that mattered,

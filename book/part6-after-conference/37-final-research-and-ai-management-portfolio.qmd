@@ -9,6 +9,10 @@ title: "Final Research and AI-Management Portfolio"
 > portfolio that shows how you ran your AI team, what you kept in your own hands, and
 > how each surviving claim was checked.
 
+::: {.callout-note title="Reading"}
+This chapter is the required reading for its course topic; its Colab lab is linked above. Recommended companion: RDSS ch. 24, free at [book.declaredesign.org](https://book.declaredesign.org){target="_blank"}.
+:::
+
 ## Why this decision matters
 
 > *"By the time you stand up to defend, I do not count your tools. I ask which claims
@@ -85,7 +89,7 @@ This chapter's lab is notebook **nb16 — Managing multiple AI agents + the fina
 defense**. Open it in Colab with the badge above and work the cells alongside this
 chapter. There you wire a worker-critic team, run a seeded simulation showing four
 look-alike reviewers miss a real flaw far more often than four independent ones, then
-draft the four parts of your own M15 portfolio and stage your Evidence Defense.
+draft the four parts of your own portfolio and stage your Evidence Defense.
 
 ## Recommended AI prompts
 
@@ -159,6 +163,10 @@ Count the checks you ran yourself, never the roles that nodded.
 
 ## Verification laboratory
 
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
+
 Verify this chapter's key result, that a claim in your portfolio is one you can defend,
 with **benchmark result**, the method of comparing your output against a known-good
 reference value (see `ai_resources/verification_guide.md`). Set your measured 4.9%
@@ -171,8 +179,8 @@ a ledger line.
 
 ## Project transfer
 
-This last chapter delivers milestone **M15**: your final research chapter, your
-AI-management portfolio, and the Evidence Defense you perform this week. Bring four
+This last chapter delivers the final project milestone: your final research chapter,
+your AI-management portfolio, and the Evidence Defense you perform this week. Bring four
 assembled parts and one staged defense. The four parts are the decomposition of AI roles
 you ran on your chapter, one real conflict-and-override with its non-AI check, your
 stopping rule and never-automate list, and one independence check that made an agreement

@@ -93,8 +93,8 @@ half keeps its own position.
 This chapter's lab is notebook **nb02 — From curiosity to a research problem: descriptive, predictive, causal**. Open it in Colab with the
 badge above and work the cells alongside this chapter. There you walk your own
 curiosity down to a question, watch a naive keyword sorter get fooled on a deck of
-eight questions, and place your own question on the compass in the shape milestone M1
-will grade.
+eight questions, and place your own question on the compass in the shape your research
+opportunity landscape milestone will grade.
 
 ## Recommended AI prompts
 
@@ -153,20 +153,24 @@ naming that is progress.
 
 ## An AI failure case
 
-Suppose your project only records the cooling curves of bottles that are already
-vacuum-insulated. Nothing is ever assigned; you measure bottles as they are. You ask a
-chatbot to classify "is a vacuum-insulated bottle an effective heat barrier?" It sees
+Suppose your project only records wait times at counters that already run two
+registers. Nothing is ever assigned; you measure counters as you find them. You ask a
+chatbot to classify "is a second register an effective way to cut waiting?" It sees
 the word "effective," reads the question as causal, and confidently recommends a
-randomized experiment that assigns bottles to insulation on or off. That is fluent and
-well-formatted, and wrong for your design, because no un-insulated comparison world
+randomized experiment that assigns counters to one register or two. That is fluent and
+well-formatted, and wrong for your design, because no one-register comparison world
 exists anywhere in your data. The word "effective" is a **giveaway
 word**, a surface hint the tool trusted instead of asking what answer the question
 wants. You catch it the same way every time: reread the question against the two
 definitions and ask whether your design ever intervenes. It does not, so the question
-is descriptive (Description for your bottles, Generalization if it reaches to all
-bottles of the model), and you reject the causal label as a silent scope change.
+is descriptive (Description for the counters you timed, Generalization if it reaches
+to every counter on campus), and you reject the causal label as a silent scope change.
 
 ## Verification laboratory
+
+::: {.callout-important title="AI can review AI — but the last decision is human"}
+A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
+:::
 
 The chapter's key result is a classification, which is a judgment call, so the fitting
 check from the [verification guide](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/ai_resources/verification_guide.md) is
@@ -181,10 +185,10 @@ re-check share the same flaw.
 
 ## Project transfer
 
-This chapter builds the spine of your milestone **M1, the research opportunity
-landscape** you pitch at the Friday studio. Take the strongest curiosity from your
+This chapter builds the spine of your **research opportunity landscape** milestone,
+which you pitch at the Friday studio. Take the strongest curiosity from your
 nb01 curiosity map, walk it down to a single question, and place that question on the
-compass in the exact shape M1 grades: "my question is a [descriptive or causal]
+compass in the exact shape that milestone grades: "my question is a [descriptive or causal]
 inquiry reaching [the data at hand / a population / unseen cases], because the answer
 it wants is [what]." Then name the one claim that position permits and the one it
 forbids. Every design declaration you make for the rest of the term lives inside the
@@ -193,8 +197,8 @@ box you draw here.
 ## Defend your decision
 
 In a short paragraph, state your project's question, naming its units of analysis, its
-outcome, and its target population, then give its compass position in the M1 shape
-above. Defend it: name the one claim the position permits and the boundary it draws
+outcome, and its target population, then give its compass position in the milestone
+shape above. Defend it: name the one claim the position permits and the boundary it draws
 (the reach it does not reach, and whether it earns the word "because"), and close with
 one sentence of honest uncertainty about the classification or the problem. A
 placement with no stated boundary and no stated uncertainty is incomplete, however
