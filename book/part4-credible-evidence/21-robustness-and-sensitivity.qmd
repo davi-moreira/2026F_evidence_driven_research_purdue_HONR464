@@ -4,84 +4,91 @@ title: "Robustness and Sensitivity"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
 
-> **The research decision.** Before you look at a single result, decide the full set
-> of robustness and sensitivity checks you will run on your headline estimate, and
-> commit to reporting all of them. That order, list first and look second, is what
-> separates a finding you can defend from a flattering number you went fishing for.
+> **The research decision.** You decide **the full list of robustness and sensitivity
+> checks you will run, and you decide it before you look at a single result**, then
+> report every one of them. Same code, same table, opposite integrity: the only thing
+> that separates a defensible finding from a lucky slice is the order of looking and
+> deciding.
 
 ## Why this decision matters
 
-> *"Everyone shows me the version of the analysis that worked. I assume that one
-> exists. My real question is what happened to all the reasonable versions you could
-> have run instead, and whether you looked at them before or after you saw this
-> answer."*
+**The decision on the table: which alternative versions of your analysis you commit to
+running and reporting, chosen before you see any of their answers.**
+
+> *"Everyone shows me the version of the analysis that worked. I assume that one exists.
+> My real question is what happened to all the reasonable versions you could have run
+> instead, and whether you looked at them before or after you saw this answer."*
 > — a **journal reviewer**, opening the first serious read your work will get
 
-The reviewer is not accusing you of cheating. She is naming a plain fact about
-analysis. Almost every real estimate depends on choices you could have made
-differently, and any single choice can flatter the result. If you report only the
-version that worked, you have handed her a number with no way to tell a delicate
-truth from a lucky slice. This chapter gives you the habit that answers her before
-she has to ask.
+That reviewer is not accusing you of cheating. They are naming a plain fact about
+analysis. Almost every real estimate depends on choices you could have made differently,
+and any single choice can flatter the result. If you report only the version that worked,
+you have handed over a number with no way to tell a delicate truth from a lucky slice.
+This chapter gives you the habit that answers the question before it gets asked.
 
 ## The concept
 
-An **estimate** is not one number. It is one number that depends on several choices,
-and a critic attacks the choices. So you attack them first. Two named attacks do
-this work, and people mix them up constantly.
+An **estimate** is not one number. It is one number that depends on several choices, and
+a critic attacks the choices. So you attack them first. Two named attacks do this work,
+and people mix them up constantly.
 
 A **robustness check** is re-running the same finding under a different but equally
 defensible choice, to see whether the answer stays. Example: you reported an average
-order value, so you also compute it after dropping the one account that turned out to
-be a wholesale buyer, and confirm the story holds. A **sensitivity check**, which some
-fields call a **sensitivity analysis**, is deliberately changing an assumption to see
-how far the answer moves. Example: you assumed the checkout system logged every
-purchase, so you ask how much your result would shift if it quietly missed two percent
-of them.
+order value, so you also compute it after dropping the one account that turned out to be
+a wholesale buyer, and confirm the story holds. A **sensitivity check**, which some
+fields call a **sensitivity analysis**, is deliberately changing an assumption to see how
+far the answer moves. Example: you assumed the checkout system logged every purchase, so
+you ask how much your result would shift if it quietly missed two percent of them.
 
-Both attacks aim at the same target, the **headline estimate**: the single number
-that stands in for your whole finding. You attack it from four handles, and any
-honest plan turns one or more of them. The **sample** is which data you keep. The
-**measurement** is how you turn a concept into a number. The **specification** is the
-bundle of modeling choices behind the estimate. The **metric** is the yardstick you
-report.
+Both attacks aim at the same target, the **headline estimate**: the single number that
+stands in for your whole finding. You attack it from four handles, and any honest plan
+turns one or more of them. The **sample** is which data you keep. The **measurement** is
+how you turn a concept into a number. The **specification** is the bundle of modeling
+choices behind the estimate. The **metric** is the yardstick you report.
 
-Turning every handle at once and plotting the results gives a **specification curve**:
-a picture of one estimate under many defensible choices side by side. If the whole
-curve stays on one side of zero, your direction is robust. Its spread is your honest
-range.
+Turning every handle at once and plotting the results gives a **specification curve**: a
+picture of one estimate under many defensible choices side by side. If the whole curve
+stays on one side of zero, your direction is robust. Its spread is your honest range.
 
-The danger has a name. **Specification searching**, whose everyday name is
-**p-hacking**, is running many analyses and reporting only the one that gave the
-result you wanted, without disclosing the search. Its opposite is **pre-listed
-checks**: writing down every check you will run, and committing to report all of
-them, before you see any result. Same code, same table, opposite integrity. The only
-difference is the order of looking and deciding.
+The danger has a name. **Specification searching**, whose everyday name is **p-hacking**,
+is running many analyses and reporting only the one that gave the result you wanted,
+without disclosing the search. Its opposite is **pre-listed checks**: writing down every
+check you will run, and committing to report all of them, before you see any result.
+
+That distinction is under new pressure, and you should know why. Working with an AI
+assistant means working in a **loop**: prompt, read, interrogate, refine, run again, with
+agentic tools now spinning those cycles on their own. Each turn of the loop can change a
+filter, a variable, or a model, which means each turn is a new specification. Twenty
+turns is twenty analyses. If you kept re-prompting because the number was disappointing,
+you ran a specification search and the tool kept no record of it for you. Keep your own
+log of the cycles, and your pre-listed plan survives contact with the loop.
 
 ## A worked example
 
 Your team tests whether a new loyalty discount raises **average order value**, the
 average amount a customer spends per purchase. Your headline: shoppers offered the
-discount spend about twelve percent more than those who were not. Before you defend
-that number, you attack it across the four handles.
+discount spend about twelve percent more than those who were not. Before you defend that
+number, you attack it across the four handles.
 
-- **Sample.** All shoppers, or all shoppers except the one account that turned out to
-  be a wholesale buyer placing bulk orders through the retail site, which is a
-  legitimate exclusion on your definition of a customer, not a convenient one.
+- **Sample.** All shoppers, or all shoppers except the one account that turned out to be
+  a wholesale buyer placing bulk orders through the retail site, which is a legitimate
+  exclusion on your definition of a customer, not a convenient one.
 - **Measurement.** Order value read as the total amount charged, or read with shipping
   and taxes stripped out.
 - **Specification.** Spending averaged over everyone offered the discount, or averaged
   only over those who actually placed an order.
 - **Metric.** The gain in dollars, or the gain as a percent.
 
-You pre-list all sixteen combinations, run them, and plot the specification curve.
-Every combination comes back positive: the discount helps no matter which defensible
-choice you make. The magnitude ranges from about plus eight percent to plus fifteen
-percent. So the honest headline is not "twelve percent." It is "higher spending in
-every specification we ran, by roughly eight to fifteen percent." Then you run one
-more attack, a **placebo test**: you split shoppers who all got the *same* offer into
-fake "A" and "B" groups and confirm the gap between them sits near zero. If identical
-shoppers showed a gap, your measurement, not the discount, would be manufacturing it.
+You pre-list all sixteen combinations, run them, and plot the specification curve. Every
+combination comes back positive: the discount helps no matter which defensible choice you
+make. The magnitude ranges from about plus eight percent to plus fifteen percent. So the
+honest headline is not "twelve percent." It is "higher spending in every specification we
+ran, by roughly eight to fifteen percent."
+
+Then you run one more attack, a **placebo test**: you split shoppers who all got the
+*same* offer into fake "A" and "B" groups and confirm the gap between them sits near zero.
+If identical shoppers showed a gap, your measurement, not the discount, would be
+manufacturing it.
 
 ## The Colab laboratory
 
@@ -159,38 +166,31 @@ comparison, and watch the estimate slide toward the low end of your range. A pas
 that looks complete is not the same as one that is complete. You check its list
 against yours, not against how finished it sounds.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project has an analysis you ran with an assistant and a headline number you
+re-derived yourself. This step tries to break that number before a reviewer gets the
+chance.*
 
-Verify this chapter's key result, the specification curve, with **alternative code**
-from the [verification guide](../verification-guide.qmd):
-recompute one point of the curve a second, simpler way and compare. Take a single
-specification, filter the two groups by hand, subtract their mean order values, and
-confirm the number matches what the automated grid printed. Two roads to one answer is
-a verified point. Then use a **counterexample** hunt on the whole curve: try to build
-one defensible specification that flips the sign. If you cannot find one after an
-honest search, your "direction is robust" claim has earned its place. If you can, that
-specification belongs in your report, not your recycling bin.
-
-## Project transfer
-
-This chapter turns into your **research audit and poster draft milestone**. Take the
-estimate you produced in the previous milestone and write a short, pre-listed
-robustness plan for it: three checks, in order, chosen for the choices a hostile
-reviewer is most likely to attack, plus one
-placebo or leave-one-out check. Run all of them, report the whole picture, and record
-each as a row in your AI Research Ledger with the verification method that earned your
-trust. That pre-listed plan, and the range it produces, is the spine of what you
-defend at Friday's studio.
-
-## Defend your decision
-
-In four sentences, defend your robustness plan. State your headline as a direction
-plus a range, not a single number, and name the one check that would most likely have
-flipped it. State the boundary: name one thing a passed robustness plan does **not**
-establish, such as turning a correlation into a cause. Close with your uncertainty:
-the one specification you still are not sure about, and the check you would run next
-to settle it.
+1. Write your headline estimate in one sentence. Then list its four handles: the sample
+   you kept, the measurement you chose, the specification you fit, and the metric you
+   report. For each, name one alternative you could defend just as well as the one you
+   picked.
+2. Pre-list the checks you will run, at least two, aimed at the handles a hostile reader
+   would attack first. Write them down before you run any of them, and commit now to
+   reporting all of them however they come out.
+3. Run every check on your list. Report the finding as a direction plus a range, such as
+   "positive in all four versions, between eight and fifteen percent," rather than as the
+   single friendliest number.
+4. Add one placebo: build groups you know are identical, run the same analysis on them,
+   and confirm the gap sits near zero. If it does not, your machinery is producing the
+   effect.
+5. Read back your AI cycle log and mark any re-prompt that followed a disappointing
+   number. Every version you actually ran belongs in the report, including the ones that
+   did not help you.
+6. Log the pre-listed plan and its full results in your AI Research Ledger, and verify at
+   least one output with a named method from the
+   [Verification Guide](../verification-guide.qmd). A **counterexample** hunt suits a
+   robustness claim: try honestly to build one defensible specification that flips the
+   sign, and if you find it, that specification goes in your report. An AI reviewer may
+   run the check with you; the decision to accept or reject stays yours.

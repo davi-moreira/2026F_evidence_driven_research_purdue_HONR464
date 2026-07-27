@@ -71,7 +71,9 @@ The chain of dependencies you cannot shorten is the **critical path**: the longe
 of must-follow-must steps in your workflow. Example: worker drafts, then critic
 attacks, then you integrate is three steps that cannot collapse into fewer. That chain
 sets the minimum number of rounds your workflow takes. Reading the critical path off
-your own design, instead of guessing it, is the skill this chapter drills.
+your own design, instead of guessing it, is the skill this chapter drills. Count it in
+loops, not in messages. A single role may take four turns of prompting to finish its
+one job, and it still occupies one node on the path.
 
 ## A worked example
 
@@ -87,18 +89,21 @@ tightens the prose. Each role owns one sentence-long job.
 
 **Wire.** The worker drafts your limitations paragraph. The three critics can all read
 that draft at the same moment, because none needs another's output. That is three
-roles running in parallel. Then you integrate their notes, and the editor tightens
-what survives. Trace the arrows: worker to a critic is one, critic to you is two, you
-to editor is three. Your critical path is three arrows deep, and it runs three critics
-at its widest.
+loops running in parallel. Each one takes as many turns as it needs: the
+citation-checker probably runs four or five, searching, failing to find one of your
+studies, and coming back to tell you so. Then you integrate their notes, and the
+editor tightens what survives. Trace the arrows: worker to a critic is one, critic to
+you is two, you to editor is three. Your critical path is three arrows deep, and it
+runs three loops at its widest.
 
-**Keep one step human.** The integrate step is yours. When the methodologist says your
-walk-and-heart-rate result is only an association and the clarity reviewer loved the
-sentence that called it an effect, no role settles that clash. You do. The decision
-about what the chapter claims never enters the workflow as a delegated task.
+**Keep one step human.** The integrate step is yours, and it is the one node with no
+loop attached to it. When the methodologist says your walk-and-heart-rate result is
+only an association and the clarity reviewer loved the sentence that called it an
+effect, no role settles that clash. You do. The decision about what the chapter claims
+never enters the workflow as a delegated task.
 
-The tools drafted, flagged, and polished. You split the job, set the order, and owned
-the claim that carries your name.
+The tools drafted, flagged, and polished. You split the job, set the order, decided
+when each loop had run long enough, and owned the claim that carries your name.
 
 ## The Colab laboratory
 
@@ -111,8 +116,10 @@ your own chapter into scoped roles and defend the wiring you chose.
 
 ## Recommended AI prompts
 
-Commit your own answer first, then delegate. Each prompt is a checkable job, not a
-request for a verdict.
+Commit your own answer first, then delegate. Each prompt below opens a loop you
+supervise, and one of them is a loop about your other loops. Read what comes back,
+push on the weak part, run it again. Each prompt is a checkable job, not a request for
+a verdict.
 
 **Decompose, then hand back the human step.**
 
@@ -152,11 +159,13 @@ not your workflow).
 
 ::: {.callout-important title="Do not delegate"}
 The split and the order can be informed by a tool, but three calls stay yours alone.
-You decide **which jobs are worth a separate role** and which just multiply output you
+You decide **which jobs are worth their own loop** and which just multiply output you
 cannot supervise. You decide **the order**, so that no role settles a question a role
 upstream of it should have answered first. And you keep **the integrate step** human:
 when two roles disagree about what your chapter claims, you make that call in your own
-words. A workflow that hands the claim to a tool is not a workflow you can defend.
+words. A workflow that hands the claim to a tool is not a workflow you can defend. The
+rule scales with the number of loops rather than bending to it. More agents does not
+mean looser command; it means the same command discipline, repeated.
 :::
 
 ## An AI failure case
@@ -166,7 +175,9 @@ well-formatted plan: run the worker, the methodologist, the skeptic, and the edi
 all in parallel to "save rounds." The plan runs in your head without a hitch. Here is
 the trap. The editor and the skeptic have nothing to read yet, because the worker has
 not drafted anything. The tool scheduled three roles to start before the input they
-depend on exists, and dressed it up as efficiency.
+depend on exists, and dressed it up as efficiency. Hand that plan to an agentic tool
+that executes it for you and the failure gets quieter, not louder: three loops run on
+an empty draft and return three confident reviews of nothing.
 
 You catch it by drawing the arrows and asking one question at each role: does this
 role's input exist at the moment it starts? The editor's input is the integrated
@@ -174,37 +185,26 @@ draft, which does not exist until the end, so "editor in parallel with worker" i
 impossible. Redrawn honestly, the plan is a critical path three arrows deep, not one.
 A green, tidy plan is not a valid one. You check the dependencies, not the confidence.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your project already has a research note and a reusable capsule; this step sets up
+the small AI team that will help you revise them, without handing the team your
+judgment.*
 
-Verify this chapter's key number, the critical-path depth, with **alternative code**
-from the [verification
-guide](../verification-guide.qmd):
-recompute the same quantity a different way and compare. The notebook computes the
-depth with a graph function. You confirm it by hand: write out every role, draw each
-"feeds" arrow, and trace the longest unbroken chain from start to finish, counting as
-you go. If your hand count matches the code, the depth is verified. If it does not,
-the wiring you drew and the wiring the code built are two different workflows, and
-that disagreement is the finding worth chasing.
-
-## Project transfer
-
-This chapter builds the first piece of your **final research chapter and AI-management
-portfolio**, the last project milestone. Take one real section of your own project,
-your methods, your results, or your limitations, and write down its decomposition:
-the scoped roles you
-will run, which run in parallel and which must wait, and the one node you keep human.
-Bring that decomposition to Friday's studio as the opening move of your portfolio. It
-is the evidence that you ran the AI team rather than letting the team run you.
-
-## Defend your decision
-
-In four sentences, defend the workflow you designed for one section of your chapter.
-Name the scoped roles you chose and the order you wired them in. State the one early
-error your ordering stops from flowing downstream, and name the step you kept human
-and why no role can take it. Close with the boundary: one place your wiring could still
-let a shared mistake through, and the independent check you would run before you trust
-the roles' agreement.
+1. Pick one real section of your project to revise: your methods, your results, or
+   your limitations. Everything below applies to that section only.
+2. Set up three loops, each with a one-sentence job you could grade. A **writer** that
+   drafts or rewrites. A **skeptic** that attacks what the writer produced and looks
+   for the claim reaching past your evidence. An **auditor** that checks your numbers,
+   your citations, and whether each sentence matches an output you actually have.
+3. Wire them. Write down which loops can run at the same time and which must wait for
+   another's output, then trace the longest chain of must-follow steps. That chain is
+   the minimum number of rounds your revision will take.
+4. Name the one node you keep human, the step where the loops' work becomes your
+   claim, and write down why no role is allowed to take it.
+5. Run the round. For each loop, record how many turns it took, what you rejected, and
+   what you kept. A loop whose output you accepted without reading is a loop you did
+   not manage.
+6. Log every loop in your AI Research Ledger, and verify at least one output with a
+   named method from the [Verification Guide](../verification-guide.qmd). An AI
+   reviewer may run the check with you; the decision to accept or reject stays yours.

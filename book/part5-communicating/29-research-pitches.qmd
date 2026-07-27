@@ -4,13 +4,16 @@ title: "Research Pitches"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
 
-> **The research decision.** Decide how to turn your finished poster into spoken
-> pitches, each sized to the seconds a listener gives you, so every version
-> compresses the claim for speech without ever inflating it. You choose where the
+> **The research decision.** Your page is silent. Decide how it sounds out loud: one
+> pitch for each length of attention a listener might give you, every version
+> compressing the claim for speech without ever inflating it. You decide where the
 > boundary sentence sits, and you refuse to let it move when the adrenaline speeds
 > you up.
 
 ## Why this decision matters
+
+**The decision on the table: what gets cut when you say your claim out loud, and
+what never gets cut.**
 
 > *"I stop at maybe forty posters in an afternoon. What I remember is not the one
 > with the most data. It is the one whose presenter told me, in one clean breath,
@@ -99,6 +102,12 @@ stress-test your own three pitch layers against the one rule.
 Commit your own version first, then delegate. Each prompt is a checkable job, not a
 request for a verdict.
 
+Expect two or three rounds each. The first compression is usually too smooth, so you
+point at the qualifier it dropped and ask again. Agentic tools will iterate toward
+whatever sounds best on its own terms, which is exactly the pressure that widens
+claims, so your boundary sentence has to be something you hold rather than something
+you delegate.
+
 **Locate the jargon and translate it.**
 
 ```text
@@ -160,37 +169,21 @@ and reading them word for word. "Predicts ... 78% of the time" does not match
 it's right 78% of the time on any ticket?" That question is the widened claim coming
 back at you. You keep your own boundary sentence and drop the tool's version.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your draft is finished and criticized; this step is the version you say out loud, at
+two lengths, without the claim growing on the way.*
 
-Verify this chapter's key result, that your compressed pitch still says what your
-poster says, with **peer reasoning** from the
-[verification guide](../verification-guide.qmd):
-say your 30-second hook once to a partner from outside your field, then have them
-repeat back, in their own words, your claim and its boundary. If what they repeat is
-bigger than your poster allows, the compression inflated, and the words they added
-tell you where. Add a second, independent check from a different family: run your
-script through the pacing cell in nb12 (**direct calculation** on the word count) to
-confirm it fits the clock without rushing. One check guards the claim, the other
-guards the clock.
-
-## Project transfer
-
-This chapter builds the first component of your **presentation package** milestone:
-the three pitch layers plus the poster-walk map that says what your hand
-points at, beat by beat. Draft all three for the poster you already locked, mark the
-boundary sentence in each, and deliver the 30-second hook twice to a partner who
-flags every spoken upgrade. Those flags are your revision list. You drill the whole
-package Friday at the mock symposium, a full rehearsal in a safe room, and the
-package is due that night.
-
-## Defend your decision
-
-In four sentences, defend one pitch layer you built. Name the layer and the single
-boundary sentence you refuse to drop at any length. State the claim you can make
-aloud, compressed for speech, and show that it still sits inside your poster's
-boundary. Close with your uncertainty: the one word your excited mouth is most likely
-to upgrade under pressure, and the check you will run to catch it.
+1. Write your boundary sentence first, on its own line, and mark it. It is the beat
+   that gets dropped under pressure, so it goes in before anything else.
+2. Build the 30-second version: hook, claim, boundary, invitation, with no evidence
+   beats yet.
+3. Build the 3-minute version: the same skeleton with two or three evidence beats and
+   the same boundary sentence, word for word.
+4. Say both out loud to someone outside your field and have them repeat your claim
+   back to you. If what comes back is bigger than what you wrote, the words they
+   added are your revision list.
+5. Log it in your AI Research Ledger, and verify at least one compressed sentence
+   with a named method from the [Verification Guide](../verification-guide.qmd), such
+   as peer reasoning. An AI reviewer may run the check with you; the decision to
+   accept or reject stays yours.

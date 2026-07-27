@@ -4,22 +4,25 @@ title: "From Curiosity to a Research Problem"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"}
 
-> **The research decision.** Which single research problem, out of everything your
-> curiosity could become, you will commit a term to. You state it as one
-> answerable question that names its units, its outcome, and the population it
-> speaks for, and you defend it as important, feasible, and genuinely new.
+> **The research decision.** Out of everything your curiosity could become, you commit
+> to one research problem. You state it as a single answerable question that names its
+> units, its outcome, and the population it speaks for, and you defend it as
+> important, feasible, and genuinely new.
 
 ## Why this decision matters
 
+**The decision on the table: which one research problem, out of everything your
+curiosity could become, gets months of your work.**
+
 Picture a research mentor reading your one-line pitch before your first meeting.
-She does not ask about your data or your software. She asks one thing: *"What,
-exactly, is the question?"* Her reason: *"I can tell in a paragraph whether someone
+They do not ask about your data or your software. They ask one thing: *"What,
+exactly, is the question?"* Their reason: *"I can tell in a paragraph whether someone
 knows what they are asking. If they do not, nothing downstream saves the project."*
 
 Everything you do later sits below this decision. A vague question makes every
 later choice arbitrary, because any data and any answer will seem to fit. A sharp
 question tells you what evidence you need and what would count as being wrong. Pick
-the problem well and the term has a spine. Pick it badly and no analysis will
+the problem well and the work has a spine. Pick it badly and no analysis will
 straighten it.
 
 ## The concept
@@ -27,34 +30,36 @@ straighten it.
 Turning curiosity into a problem is a funnel with four stops. Each stop throws
 away vagueness the stop above it still allowed.
 
-- **Curiosity**: a felt interest with no edges yet. Example: *"why do some people
-  seem to get sick more during exam weeks?"* You cannot collect evidence on it,
-  because it never says who or what to look at.
+- **Curiosity**: a felt interest with no edges yet. Example: *"why do some small
+  businesses make it through a downturn when others close?"* You cannot collect
+  evidence on it, because it never says who or what to look at.
 - **Topic**: a curiosity with edges, a territory someone could gather evidence
-  inside. Example: *"sleep and illness among residence-hall first-years."*
+  inside. Example: *"cash reserves and survival among independent restaurants."*
 - **Research problem**: one specific unknown inside that territory whose absence
-  matters. Example: *"we do not know whether short sleep during finals week goes
-  with more reported illness."*
+  matters. Example: *"we do not know whether restaurants that entered the 2020
+  downturn with more cash on hand were more likely to still be open two years
+  later."*
 - **Answerable question**: the single sentence evidence can answer, and be wrong
-  about. Example: *"do first-years who sleep under six hours during finals report
-  more sick days than those who sleep seven or more?"*
+  about. Example: *"among independent restaurants in one city, did those holding at
+  least three months of operating cash in January 2020 stay open through 2022 at a
+  higher rate than those holding less?"*
 
 A good question also carries three things it must name, or you will not know what
 to record.
 
 - **Units of analysis**: the who or what each row of your evidence stands for.
-  Example: one student. If you cannot say what one unit is, you cannot count
+  Example: one restaurant. If you cannot say what one unit is, you cannot count
   anything.
 - **Target population**: the full group the question is really about, beyond the
-  handful you reach. Example: all residence-hall first-years, not only the twenty
-  you surveyed.
+  handful you reach. Example: all independent restaurants in that city, not only the
+  thirty whose owners answered you.
 - **Outcome**: the observable thing that varies, the quantity you actually record.
-  Example: the number of self-reported sick days. It must be measurable, even if
-  imperfectly.
+  Example: whether the restaurant was still open in 2022. It must be measurable, even
+  if imperfectly.
 
-Finally, three tests decide whether a candidate problem is worth a term.
+Finally, three tests decide whether a candidate problem is worth months of your work.
 **Importance** asks whether anyone beyond you would care about the answer.
-**Feasibility** asks whether you can get the evidence this term, with the access
+**Feasibility** asks whether you can actually get the evidence, with the access
 and time you have. **Contribution** asks whether the answer adds something not
 already settled, since a ten-minute search that finds it already known kills the
 contribution.
@@ -81,7 +86,7 @@ first-years, not the whole campus.
 
 Now run the three tests. It clears **importance** (anyone advising sleep-deprived
 first-years wants the answer), **feasibility** (step counts and a nightly rating
-are both collectable in one term), and **contribution** (the activity-and-sleep
+are both collectable in a few weeks), and **contribution** (the activity-and-sleep
 link is studied broadly in adults but far less in this dorm-living, first-year
 group). The curiosity is now a problem you could defend.
 
@@ -96,7 +101,10 @@ down the funnel, draft two candidate problems, and defend the one you keep.
 ## Recommended AI prompts
 
 Commit your own answer first. Only then open the tool, so its output has something
-of yours to disagree with.
+of yours to disagree with. And plan on going around more than once. The first list
+of candidate problems is almost never the useful one; you narrow, re-ask, and narrow
+again. The one thing that must not drift across those cycles is whose curiosity is
+being scoped.
 
 **Locate what is already known** (before you claim your problem is new):
 
@@ -126,9 +134,10 @@ question and hands it back as yours.
 **Red-team the problem you chose:**
 
 ```
-Act as a hostile grant reviewer. Here is the research problem I want to commit a
-term to: [paste it]. Argue the strongest case that it is not worth doing. Attack
-it on importance, on feasibility, and on whether it adds anything new.
+Act as a hostile grant reviewer. Here is the research problem I want to commit
+months of work to: [paste it]. Argue the strongest case that it is not worth
+doing. Attack it on importance, on feasibility, and on whether it adds anything
+new.
 ```
 
 *After running, verify:* keep only the objections that survive your own reasoning.
@@ -136,11 +145,11 @@ This counters **sycophantic agreement**, where a tool praises your idea because 
 proposed it.
 
 ::: {.callout-important title="Do not delegate"}
-Three calls stay yours alone. **Which problem** you commit a term to. **How you
-word** the question, including its units, outcome, and population. And the
-**judgment** on whether it is important and genuinely new. A tool can widen your
-options and attack your choice. It cannot make the choice, because only you carry
-the reasons you will have to defend at the studio.
+Three calls stay yours alone. **Which problem** you commit to. **How you word** the
+question, including its units, outcome, and population. And the **judgment** on
+whether it is important and genuinely new. A tool can widen your options and attack
+your choice. It cannot make the choice, because only you carry the reasons you will
+have to give when someone asks why this problem and not another.
 :::
 
 ## An AI failure case
@@ -158,35 +167,28 @@ screens and REM. Second, the melatonin line is stated as settled fact with no
 source. Before repeating it, you find and open a real study yourself, and if you
 cannot, you treat it as **confident fabrication** and drop it.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*Your three curiosities are still only curiosities. This step turns one of them into
+something evidence can actually answer.*
 
-The key result of this chapter is a claim about your own question: that it is
-answerable and carries its three terms. Verify it with **peer reasoning**, method
-11 in the [verification guide](../verification-guide.qmd). Hand your
-one-sentence question to a classmate who has never seen your project, and ask them
-to name, from that sentence alone, what one unit is, what you would record, and who
-the answer is about. If they name all three, your question holds. If they stall,
-the question is not yet answerable, and their confusion shows which term is still
-missing.
-
-## Project transfer
-
-This chapter builds the spine of your **research opportunity landscape**
-milestone. Take the strongest curiosity from your nb01 map and walk it down the
-funnel: topic, research problem, then answerable question, naming its units,
-outcome, and population, and scoring it on importance, feasibility, and
-contribution. What you defend at the Friday studio is a problem you funneled and
-chose yourself, not a tool's suggestion.
-
-## Defend your decision
-
-In three or four sentences, state the one problem you are committing to as an
-answerable question, and defend it. Name the **boundary**: one thing this question
-will *not* let you claim, even if you answer it well. Name your **uncertainty**:
-the part of importance, feasibility, or contribution you are least sure of, and
-what evidence would settle it. A choice you can defend with its edge and its doubt
-named is a research problem. A choice without them is still a curiosity.
+1. Take the strongest of your three and walk it down the funnel in writing: curiosity,
+   topic, research problem, answerable question. One line per stop, so you can see
+   where the vagueness leaves.
+2. Under the question, name its three carried terms out loud: what one unit is, exactly
+   what you would record as the outcome, and the population the answer is meant to
+   speak for.
+3. Score it on importance, feasibility, and contribution, one honest sentence each.
+   Feasibility means the access, data, and time you actually have, not the ones you
+   wish you had.
+4. Write a second candidate problem from the same curiosity and scope it the same way.
+   Then choose between them, and write one sentence on why the other one lost.
+5. Ask an AI to attack your chosen problem on all three tests, and keep only the
+   objections that survive your own reasoning.
+6. Log it in your AI Research Ledger, and verify your question with a named method from
+   the [Verification Guide](../verification-guide.qmd). The fitting method here is peer
+   reasoning: hand the single sentence to someone who knows nothing about your project
+   and ask them to tell you, from that sentence alone, what one unit is, what you would
+   record, and who the answer is about. If they stall, the missing term is your next
+   revision. An AI reviewer may run the check with you; the decision to accept or
+   reject stays yours.

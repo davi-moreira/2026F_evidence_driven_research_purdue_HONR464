@@ -4,14 +4,17 @@ title: "Poster Criticism"
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
 
-> **The research decision.** Before your poster becomes permanent, you decide
-> whether every claim on it is actually backed, or whether it still needs one more
-> fix before you lock it. A backed poster keeps its headline inside its evidence,
-> shows its uncertainty beside the claim, traces every number to a cell, and
-> reaches every reader. This chapter equips you to run that audit as a hostile
-> stranger would, then defend the lock call you make.
+> **The research decision.** Before your draft becomes the version other people
+> read, you decide whether it is done or whether it needs one more fix. You run the
+> audit a hostile stranger would run: does the headline stay inside the evidence,
+> does the picture match the numbers, does the uncertainty sit beside the claim,
+> does every number trace to a cell, does every reader receive it. Then you make the
+> lock call, and you defend it out loud.
 
 ## Why this decision matters
+
+**The decision on the table: whether this draft is honest enough to become
+permanent, or needs one more fix first.**
 
 Picture the last hour before a poster prints. A **research-integrity judge**, the
 person at a conference who probes whether a poster's claims are actually backed,
@@ -57,15 +60,15 @@ The third pass is the lock. **Claim-evidence traceability** means every number o
 the poster traces to the exact cell that produced it, so you can show that line
 when a judge points at it. The **terminal lock** is the moment the poster becomes
 final and unchangeable, which is why the audit before it is the most consequential
-one you run all week.
+one you run on the whole project.
 
 ## A worked example
 
-An honors agronomy poster carries the headline "Compost RAISES corn yield." Its
+A plant-biology poster carries the headline "Compost RAISES corn yield." Its
 center figure is a bar chart of mean grain yield for plots that received a compost
 amendment against plots that did not, drawn as a red bar and a green bar. The means
 are 185 and 191 bushels per acre, a gap of 6. The y-axis starts at 180, and no
-interval is shown. The plots were not randomized; the farmer chose which fields got
+interval is shown. The plots were not randomized; the grower chose which fields got
 compost.
 
 Walk the gallery audit across it. The claim-boundary audit catches the verb first:
@@ -97,6 +100,12 @@ lock list.
 
 Commit your own audit first, then delegate. Each prompt hands the tool a job you
 can check, with a verify note naming the failure it defends against.
+
+Treat each prompt as an opening move. When the answer comes back thin, say what it
+missed and ask again. Reviewers get sharper on the second pass, human and machine
+alike. Some tools now run that loop internally and return only the final critique,
+which is convenient and also hides the reasoning you would otherwise get to
+question.
 
 **Generate the hostile questions (you map each to an audit).**
 
@@ -168,37 +177,23 @@ it reads. Then you check the survivors against the exaggeration factor your own
 notebook cell printed, and cut any question that assumes a gap other than the 6
 bushels you computed. The completeness check is yours, not the tool's.
 
-## Verification laboratory
+## It is your turn
 
-::: {.callout-important title="AI can review AI — but the last decision is human"}
-A second model can audit the first: ask one AI to check another's claim, code, or citation, and it will catch real errors. But an audit is another proposal, not a verdict. The final decision to accept, reject, or qualify a result always belongs to you, the researcher.
-:::
+*You have a draft page and a headline figure; this step is the audit that decides
+whether either one survives a hostile stranger.*
 
-The chapter's key result is that the same numbers drawn honestly tell a smaller
-story than the truncated chart does. Confirm it with **direct calculation** (from
-the [verification guide](../verification-guide.qmd)): recompute the
-yield gap by hand, 191 minus 185 is 6 bushels per acre, then recompute the truncated
-axis's exaggeration factor, the taller bar's height above the 180 floor divided by
-the shorter bar's, and confirm the honest 0-to-full-scale chart shows a difference
-that is real but small. For the citation row of the lock, add **primary-source
-reading**: click each source your poster names, and confirm the work opens and says
-what your poster claims.
-
-## Project transfer
-
-This chapter develops and locks the **final poster** milestone, and hands off to the
-oral-defense milestone, where you deliver that poster out loud. Three moves carry over. Run the
-gallery-walk audit on your own poster and log every located hit, ranked by how far
-the error travels. Field the three-lens oral defense and list every claim it exposed
-as too strong, with the softer wording you will lock. Then make the lock call: trace
-every number to its cell, confirm every citation resolves, and write the AI-use
-disclosure block recording which tool did which task and how you checked it.
-
-## Defend your decision
-
-In a short paragraph, state your lock call for your own poster. Is it ready to be
-terminal, yes or no? Name your locked headline and the single verb that keeps it
-inside its compass position, and the uncertainty that rides in the same eye-span as
-the claim. Then name the boundary: which hit did you fix, which did you leave for
-later, and what does the locked poster still not establish? A lock call with no
-stated boundary and no uncertainty is not yet defended.
+1. Run the gallery-walk audit on your own draft as if you had never seen it: claim
+   boundary, figure honesty, read path, uncertainty, accessibility. Write down every
+   hit, located precisely enough to fix.
+2. Rank the hits by how far the error travels. A causal verb your design never
+   bought travels farthest, because a reader who catches one overreach stops
+   trusting everything else.
+3. Field the three lenses out loud: an outsider, a specialist, and a skeptic with a
+   rival explanation. For each question, decide defend or concede, and write the
+   narrower wording you would concede to.
+4. Revise once, fixing the hits in ranked order, then make the lock call. Every
+   number traced and every citation opened, or not yet.
+5. Log it in your AI Research Ledger, and verify at least one fixed number with a
+   named method from the [Verification Guide](../verification-guide.qmd). An AI
+   reviewer may run the check with you; the decision to accept or reject stays
+   yours.
