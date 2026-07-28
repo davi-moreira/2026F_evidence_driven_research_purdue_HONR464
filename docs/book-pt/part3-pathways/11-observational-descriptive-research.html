@@ -24,6 +24,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -453,10 +488,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#por-que-essa-decisão-importa" id="toc-por-que-essa-decisão-importa" class="nav-link active" data-scroll-target="#por-que-essa-decisão-importa"><span class="header-section-number">11.1</span> Por que essa decisão importa</a></li>
   <li><a href="#o-conceito" id="toc-o-conceito" class="nav-link" data-scroll-target="#o-conceito"><span class="header-section-number">11.2</span> O conceito</a></li>
   <li><a href="#um-exemplo-trabalhado" id="toc-um-exemplo-trabalhado" class="nav-link" data-scroll-target="#um-exemplo-trabalhado"><span class="header-section-number">11.3</span> Um exemplo trabalhado</a></li>
-  <li><a href="#o-laboratório-em-colab" id="toc-o-laboratório-em-colab" class="nav-link" data-scroll-target="#o-laboratório-em-colab"><span class="header-section-number">11.4</span> O laboratório em Colab</a></li>
-  <li><a href="#prompts-de-ia-recomendados" id="toc-prompts-de-ia-recomendados" class="nav-link" data-scroll-target="#prompts-de-ia-recomendados"><span class="header-section-number">11.5</span> Prompts de IA recomendados</a></li>
-  <li><a href="#um-caso-de-falha-da-ia" id="toc-um-caso-de-falha-da-ia" class="nav-link" data-scroll-target="#um-caso-de-falha-da-ia"><span class="header-section-number">11.6</span> Um caso de falha da IA</a></li>
-  <li><a href="#agora-é-a-sua-vez" id="toc-agora-é-a-sua-vez" class="nav-link" data-scroll-target="#agora-é-a-sua-vez"><span class="header-section-number">11.7</span> Agora é a sua vez</a></li>
+  <li><a href="#uma-simulação-com-semente" id="toc-uma-simulação-com-semente" class="nav-link" data-scroll-target="#uma-simulação-com-semente"><span class="header-section-number">11.4</span> Uma simulação com semente</a></li>
+  <li><a href="#o-laboratório-em-colab" id="toc-o-laboratório-em-colab" class="nav-link" data-scroll-target="#o-laboratório-em-colab"><span class="header-section-number">11.5</span> O laboratório em Colab</a></li>
+  <li><a href="#prompts-de-ia-recomendados" id="toc-prompts-de-ia-recomendados" class="nav-link" data-scroll-target="#prompts-de-ia-recomendados"><span class="header-section-number">11.6</span> Prompts de IA recomendados</a></li>
+  <li><a href="#um-caso-de-falha-da-ia" id="toc-um-caso-de-falha-da-ia" class="nav-link" data-scroll-target="#um-caso-de-falha-da-ia"><span class="header-section-number">11.7</span> Um caso de falha da IA</a></li>
+  <li><a href="#agora-é-a-sua-vez" id="toc-agora-é-a-sua-vez" class="nav-link" data-scroll-target="#agora-é-a-sua-vez"><span class="header-section-number">11.8</span> Agora é a sua vez</a></li>
   </ul>
 </nav>
     </div>
@@ -506,6 +542,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="review-pending callout callout-style-default callout-warning callout-titled" title="Em desenvolvimento">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Em desenvolvimento
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este capítulo faz parte de um livro em desenvolvimento ativo e ainda não passou pela revisão do autor. O conteúdo pode mudar conforme a revisão avança.</p>
+</div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch11_observational_descriptive_research.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
@@ -538,12 +587,50 @@ ul.task-list li input[type="checkbox"] {
 <p>Agora percorra as caixas. A <strong>população-alvo</strong> é todo cliente que o serviço cobra. O <strong>marco amostral</strong> é a lista atual de assinantes, porque só quem está nessa lista recebe a pesquisa. Aqui está a armadilha: os clientes mais atingidos por erros de cobrança, os que foram cobrados duas vezes ou cobrados depois de cancelar, são também os que mais provavelmente saíram do serviço de tanta frustração. Eles se removeram do marco antes de qualquer um entrevistá-los. Isso é <strong>seleção por sobrevivência</strong>, um filtro que mantém exatamente as pessoas menos propensas a mostrar o problema que você está contando. Assinantes atuais são a ponta contente da base de clientes, não uma fatia justa dela.</p>
 <p>Então os 2% são honestos sobre uma caixa e desonestos sobre outra. A alegação autorizada é: <em>“entre os clientes ainda assinantes, a taxa de erro de cobrança é de 2%.”</em> O upgrade silencioso, a frase a recusar, é: <em>“a taxa de erro de cobrança do serviço é de 2%.”</em> A taxa verdadeira entre todos os cobrados é quase certamente mais alta, porque os clientes mais atingidos já tinham ido embora quando a pesquisa saiu. Essa distância entre a caixa que você mediu e a caixa que você nomeou é o assunto deste capítulo.</p>
 </section>
-<section id="o-laboratório-em-colab" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="o-laboratório-em-colab"><span class="header-section-number">11.4</span> O laboratório em Colab</h2>
+<section id="uma-simulação-com-semente" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="uma-simulação-com-semente"><span class="header-section-number">11.4</span> Uma simulação com semente</h2>
+<p>O exemplo trabalhado argumenta que <em>quem você alcança</em> inclina <em>o que você mede</em>, e que uma amostra maior não conserta a inclinação. Você pode ver isso acontecer. Uma <strong>semente</strong> (seed) é um ponto de partida fixo para o gerador de números aleatórios: a mesma semente sempre reproduz os mesmos sorteios, então a figura abaixo é exatamente o que você vai obter ao rodar este código no notebook companheiro. O código constrói uma população de 100.000 pessoas cuja idade média verdadeira é conhecida por construção, sorteia dez amostras aleatórias honestas de 500, e depois sorteia uma amostra de conveniência do mesmo tamanho por um canal que alcança principalmente pessoas mais jovens.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>populacao <span class="op">=</span> np.clip(rng.normal(<span class="dv">49</span>, <span class="dv">17</span>, size<span class="op">=</span><span class="dv">100_000</span>), <span class="dv">18</span>, <span class="dv">90</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>verdade <span class="op">=</span> populacao.mean()</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>medias_aleatorias <span class="op">=</span> [rng.choice(populacao, <span class="dv">500</span>, replace<span class="op">=</span><span class="va">False</span>).mean()</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                     <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>pesos <span class="op">=</span> np.exp(<span class="op">-</span>(populacao <span class="op">-</span> <span class="dv">25</span>) <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> (<span class="dv">2</span> <span class="op">*</span> <span class="dv">12</span> <span class="op">**</span> <span class="dv">2</span>))  <span class="co"># jovem = mais provável</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>conveniencia <span class="op">=</span> rng.choice(populacao, <span class="dv">500</span>, replace<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                          p<span class="op">=</span>pesos <span class="op">/</span> pesos.<span class="bu">sum</span>())</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.6</span>, <span class="fl">2.9</span>))</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.scatter(medias_aleatorias, np.ones(<span class="dv">10</span>), s<span class="op">=</span><span class="dv">60</span>, color<span class="op">=</span><span class="st">"#2a78d6"</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.scatter([conveniencia.mean()], [<span class="dv">0</span>], s<span class="op">=</span><span class="dv">60</span>, color<span class="op">=</span><span class="st">"#eb6834"</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax.axvline(verdade, color<span class="op">=</span><span class="st">"#333333"</span>, ls<span class="op">=</span><span class="st">"--"</span>, lw<span class="op">=</span><span class="fl">1.2</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>ax.text(verdade <span class="op">+</span> <span class="fl">.5</span>, <span class="fl">1.55</span>, <span class="ss">f"média verdadeira = </span><span class="sc">{</span>verdade<span class="sc">:.1f}</span><span class="ss">"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"#333333"</span>, fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>ax.set_yticks([<span class="dv">0</span>, <span class="dv">1</span>], [<span class="st">"Canal de</span><span class="ch">\n</span><span class="st">conveniência (n = 500)"</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"Amostras aleatórias</span><span class="ch">\n</span><span class="st">(n = 500)"</span>], fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Idade média da amostra (anos)"</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">.7</span>, <span class="fl">1.9</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/sims/ch11_sampling_channels.png" class="img-fluid figure-img" alt="Gráfico de pontos. Dez médias azuis de amostras aleatórias se agrupam entre cerca de 47 e 51 em torno de uma linha tracejada na média verdadeira de 49,1. Uma única média laranja do canal de conveniência fica sozinha perto de 33."></p>
+<figcaption>Dez médias de amostras aleatórias se aglomeram em torno da idade média verdadeira; a média única do canal de conveniência fica muito abaixo.</figcaption>
+</figure>
+</div>
+<p>Leia a figura como uma revisora leria. As dez amostras aleatórias nunca concordam exatamente: as médias se espalham entre cerca de 47 e 51. Mas elas se aglomeram em torno da verdade, e esse espalhamento é incerteza honesta e quantificável. O canal de conveniência tem exatamente o mesmo tamanho de amostra, e erra a média verdadeira por cerca de dezesseis anos. Nada no ponto em si avisa você; ele parece tão confiante quanto qualquer outro. Só o <em>procedimento</em> de amostragem diz que tipo de ponto você tem. No notebook companheiro, mova o centro do canal (o <code>25</code> dentro de <code>pesos</code>) e rode de novo: a inclinação segue o canal, nunca o tamanho da amostra.</p>
+</section>
+<section id="o-laboratório-em-colab" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="o-laboratório-em-colab"><span class="header-section-number">11.5</span> O laboratório em Colab</h2>
 <p>Este capítulo tem o seu próprio <strong>notebook companheiro</strong> — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho <strong>Agora é a sua vez</strong>, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso <strong>nb05 — Observational descriptive research</strong> (<a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb">abrir no Colab</a>), parte do curso companheiro apresentado no apêndice <a href="../for-instructors.html">Para instrutores</a>. No laboratório você trata um cadastro real de eleitores como um mundo conhecido, sorteia amostras aleatórias e um canal de conveniência a partir dele, e vê os sorteios aleatórios se aglomerarem em torno da verdade enquanto o canal de conveniência erra a idade média verdadeira por quase doze anos. Depois você roda um teste de estresse de não resposta que mostra uma estimativa limpa se afastando da verdade.</p>
 </section>
-<section id="prompts-de-ia-recomendados" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="prompts-de-ia-recomendados"><span class="header-section-number">11.5</span> Prompts de IA recomendados</h2>
+<section id="prompts-de-ia-recomendados" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="prompts-de-ia-recomendados"><span class="header-section-number">11.6</span> Prompts de IA recomendados</h2>
 <p>Comprometa-se com a sua própria resposta primeiro, depois delegue. Cada prompt abaixo deixa o julgamento com você e entrega à IA apenas o trabalho de perna. Trabalhe-os como um loop, não como tiro único: a primeira lista de grupos que ficam de fora é sempre a óbvia, e a resposta útil costuma chegar na segunda ou terceira passagem, depois que você disse à ferramenta qual grupo ela esqueceu e pediu que tentasse de novo com isso em mente.</p>
 <p><strong>Localizar.</strong> Encontre respaldo metodológico real em vez de confiar em um parágrafo.</p>
 <pre><code>Act as a research-methods assistant. List real, retrievable references on
@@ -575,13 +662,13 @@ direction of the drift. Do not rewrite it for me.</code></pre>
 </div>
 </div>
 </section>
-<section id="um-caso-de-falha-da-ia" class="level2" data-number="11.6">
-<h2 data-number="11.6" class="anchored" data-anchor-id="um-caso-de-falha-da-ia"><span class="header-section-number">11.6</span> Um caso de falha da IA</h2>
+<section id="um-caso-de-falha-da-ia" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="um-caso-de-falha-da-ia"><span class="header-section-number">11.7</span> Um caso de falha da IA</h2>
 <p>Você pergunta a um chatbot: <em>“Minha pesquisa com assinantes atuais mostra uma taxa de erro de cobrança de 2% em um painel grande. Posso relatar a taxa de erro de cobrança do serviço como 2%?”</em> Ele responde com total confiança: <em>“Sim. Com uma amostra desse tamanho, a sua estimativa é precisa e confiável.”</em> Isso está errado de duas maneiras nomeadas ao mesmo tempo. Ele comete uma <strong>mudança silenciosa de escopo</strong>, promovendo em silêncio “assinantes atuais” a “os clientes do serviço”, e se apoia na falácia de que uma amostra grande cura uma amostra inclinada.</p>
 <p>Você pega isso porque escreveu a sua própria resposta primeiro, e a sua nomeava o marco: os clientes ainda assinantes, não todo mundo que o serviço cobra, então a troca fica visível de cara. Depois você confere o mecanismo contra os dados. Os clientes com os piores erros de cobrança cancelaram antes de a pesquisa sair, então a ausência de dados se relaciona diretamente com o desfecho que você conta. Um painel maior de assinantes atuais só estima com mais precisão a taxa de erro dos assinantes atuais. Ele nunca alcança as pessoas que foram embora.</p>
 </section>
-<section id="agora-é-a-sua-vez" class="level2" data-number="11.7">
-<h2 data-number="11.7" class="anchored" data-anchor-id="agora-é-a-sua-vez"><span class="header-section-number">11.7</span> Agora é a sua vez</h2>
+<section id="agora-é-a-sua-vez" class="level2" data-number="11.8">
+<h2 data-number="11.8" class="anchored" data-anchor-id="agora-é-a-sua-vez"><span class="header-section-number">11.8</span> Agora é a sua vez</h2>
 <p><em>Você chega com um desenho de pesquisa declarado e diagnosticado. Este é o primeiro dos capítulos de caminho, então o seu trabalho agora é ou desenvolver o seu desenho neste caminho, ou usá-lo para testar sob estresse o caminho que você escolheu.</em></p>
 <ol type="1">
 <li>Decida em qual caso você está. Leia as palavras da sua indagação. Se ela pergunta <em>quanto, quantos, com que frequência</em>, sobre um grupo que você vai observar em vez de atribuir, este é o seu caminho. Se ela pergunta <em>por quê</em> ou <em>o que aconteceria se</em>, não é, e você faz o exercício do passo 5 no lugar.</li>

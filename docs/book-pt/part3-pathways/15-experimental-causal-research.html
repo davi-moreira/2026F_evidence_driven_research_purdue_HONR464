@@ -488,10 +488,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#por-que-essa-decisão-importa" id="toc-por-que-essa-decisão-importa" class="nav-link active" data-scroll-target="#por-que-essa-decisão-importa"><span class="header-section-number">15.1</span> Por que essa decisão importa</a></li>
   <li><a href="#o-conceito" id="toc-o-conceito" class="nav-link" data-scroll-target="#o-conceito"><span class="header-section-number">15.2</span> O conceito</a></li>
   <li><a href="#um-exemplo-trabalhado" id="toc-um-exemplo-trabalhado" class="nav-link" data-scroll-target="#um-exemplo-trabalhado"><span class="header-section-number">15.3</span> Um exemplo trabalhado</a></li>
-  <li><a href="#o-laboratório-em-colab" id="toc-o-laboratório-em-colab" class="nav-link" data-scroll-target="#o-laboratório-em-colab"><span class="header-section-number">15.4</span> O laboratório em Colab</a></li>
-  <li><a href="#prompts-de-ia-recomendados" id="toc-prompts-de-ia-recomendados" class="nav-link" data-scroll-target="#prompts-de-ia-recomendados"><span class="header-section-number">15.5</span> Prompts de IA recomendados</a></li>
-  <li><a href="#um-caso-de-falha-da-ia" id="toc-um-caso-de-falha-da-ia" class="nav-link" data-scroll-target="#um-caso-de-falha-da-ia"><span class="header-section-number">15.6</span> Um caso de falha da IA</a></li>
-  <li><a href="#agora-é-a-sua-vez" id="toc-agora-é-a-sua-vez" class="nav-link" data-scroll-target="#agora-é-a-sua-vez"><span class="header-section-number">15.7</span> Agora é a sua vez</a></li>
+  <li><a href="#uma-simulação-com-semente" id="toc-uma-simulação-com-semente" class="nav-link" data-scroll-target="#uma-simulação-com-semente"><span class="header-section-number">15.4</span> Uma simulação com semente</a></li>
+  <li><a href="#o-laboratório-em-colab" id="toc-o-laboratório-em-colab" class="nav-link" data-scroll-target="#o-laboratório-em-colab"><span class="header-section-number">15.5</span> O laboratório em Colab</a></li>
+  <li><a href="#prompts-de-ia-recomendados" id="toc-prompts-de-ia-recomendados" class="nav-link" data-scroll-target="#prompts-de-ia-recomendados"><span class="header-section-number">15.6</span> Prompts de IA recomendados</a></li>
+  <li><a href="#um-caso-de-falha-da-ia" id="toc-um-caso-de-falha-da-ia" class="nav-link" data-scroll-target="#um-caso-de-falha-da-ia"><span class="header-section-number">15.7</span> Um caso de falha da IA</a></li>
+  <li><a href="#agora-é-a-sua-vez" id="toc-agora-é-a-sua-vez" class="nav-link" data-scroll-target="#agora-é-a-sua-vez"><span class="header-section-number">15.8</span> Agora é a sua vez</a></li>
   </ul>
 </nav>
     </div>
@@ -541,6 +542,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="review-pending callout callout-style-default callout-warning callout-titled" title="Em desenvolvimento">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Em desenvolvimento
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este capítulo faz parte de um livro em desenvolvimento ativo e ainda não passou pela revisão do autor. O conteúdo pode mudar conforme a revisão avança.</p>
+</div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch15_experimental_causal_research.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
@@ -570,31 +584,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Para a Sra. R, Y(1) é se ela renova caso receba as mensagens, e Y(0) é se ela renova caso não receba nada. Você só vai chegar a ver um dos dois. Entre as 800, você estima o ATE como a diferença nas taxas de renovação no prazo entre os braços. Digamos que o braço do lembrete renove a 71 por cento e o de controle a 62 por cento, uma distância de 9 pontos percentuais. Como foi a moeda, e não a organização da paciente, que separou os braços, esses 9 pontos são uma estimativa honesta do efeito médio do lembrete.</p>
 <p>Agora o teste de honestidade. Suponha que os pacientes mais graves do braço do lembrete tenham parado de responder ao acompanhamento e saído do estudo. <strong>Atrito</strong> é quando unidades saem antes de você medir o desfecho. Exemplo: os pacientes com a pior pressão abandonam justamente o braço que você está estudando. Quando quem sai está ligado ao desfecho, quem fica deixa de ser uma comparação justa, e a sua distância de 9 pontos passa a descrever só os pacientes saudáveis o bastante para permanecer, e não todos os que você recrutou. O atrito tem dois irmãos que o laboratório treina. <strong>Não conformidade</strong> é quando unidades atribuídas nunca tomam o tratamento, como pacientes que trocaram de número e nunca receberam mensagem. <strong>Transbordamento</strong> é quando o tratamento chega ao braço de controle, como um paciente que recebeu as mensagens lembrando um amigo não tratado. Cada um deles deixa o sorteio intacto e ainda assim muda qual quantidade o seu número descreve. Nomear essa quantidade é a decisão que este capítulo prepara.</p>
 </section>
-<section id="o-laboratório-em-colab" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="o-laboratório-em-colab"><span class="header-section-number">15.4</span> O laboratório em Colab</h2>
+<section id="uma-simulação-com-semente" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="uma-simulação-com-semente"><span class="header-section-number">15.4</span> Uma simulação com semente</h2>
+<p>A aleatorização é uma promessa sobre o <em>procedimento</em>: atribua o tratamento por sorteio, e a diferença de médias fica certa em média, com uma oscilação que você pode quantificar. O código abaixo mantém essa promessa visível. Ele dá a 200 pacientes as suas duas taxas potenciais de renovação de receita — sem lembrete, e com um lembrete que de fato acrescenta 5 pontos percentuais — e então refaz o sorteio da atribuição 2.000 vezes, registrando a estimativa que cada atribuição teria produzido. A semente faz cada execução reproduzir exatamente esta figura.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>n, tau <span class="op">=</span> <span class="dv">200</span>, <span class="fl">5.0</span>                            <span class="co"># efeito verdadeiro: +5 pontos</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> np.clip(rng.normal(<span class="dv">70</span>, <span class="dv">12</span>, n), <span class="dv">20</span>, <span class="dv">99</span>)  <span class="co"># taxa de renovação sem lembrete</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> np.clip(y0 <span class="op">+</span> tau, <span class="dv">20</span>, <span class="dv">100</span>)              <span class="co"># taxa de renovação com lembrete</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>estimativas <span class="op">=</span> []</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2000</span>):</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    tratados <span class="op">=</span> rng.permutation(n) <span class="op">&lt;</span> n <span class="op">//</span> <span class="dv">2</span>   <span class="co"># um novo sorteio da atribuição</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    estimativas.append(y1[tratados].mean() <span class="op">-</span> y0[<span class="op">~</span>tratados].mean())</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>estimativas <span class="op">=</span> np.array(estimativas)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.6</span>, <span class="fl">3.2</span>))</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.hist(estimativas, bins<span class="op">=</span><span class="dv">40</span>, color<span class="op">=</span><span class="st">"#2a78d6"</span>, edgecolor<span class="op">=</span><span class="st">"white"</span>, lw<span class="op">=</span><span class="fl">.4</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.axvline(tau, color<span class="op">=</span><span class="st">"#333333"</span>, ls<span class="op">=</span><span class="st">"--"</span>, lw<span class="op">=</span><span class="fl">1.2</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">.02</span>, <span class="fl">.92</span>, <span class="ss">f"efeito verdadeiro = </span><span class="sc">{</span>tau<span class="sc">:.1f}</span><span class="ss"> pp"</span>, color<span class="op">=</span><span class="st">"#333333"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        fontsize<span class="op">=</span><span class="dv">9</span>, transform<span class="op">=</span>ax.transAxes)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">.02</span>, <span class="fl">.82</span>, <span class="ss">f"média das estimativas = </span><span class="sc">{</span>estimativas<span class="sc">.</span>mean()<span class="sc">:.1f}</span><span class="ss"> pp"</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"#2a78d6"</span>, fontsize<span class="op">=</span><span class="dv">9</span>, transform<span class="op">=</span>ax.transAxes)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Efeito estimado do lembrete (pontos percentuais)"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Número de re-sorteios"</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/sims/ch15_randomization.png" class="img-fluid figure-img" alt="Histograma de 2.000 efeitos estimados em azul, aproximadamente em forma de sino de cerca de 0 a 10 pontos percentuais, com uma linha vertical tracejada no efeito verdadeiro de 5,0 e uma anotação com a média das estimativas em 4,9."></p>
+<figcaption>O histograma de 2.000 estimativas re-sorteadas se centra no efeito verdadeiro de 5 pontos.</figcaption>
+</figure>
+</div>
+<p>O histograma é a <strong>distribuição de aleatorização</strong>: cada estimativa que este mesmo experimento poderia ter produzido sob outro sorteio. Ele se centra quase exatamente na verdade (média das estimativas 4,9 contra 5,0 verdadeiro), que é a promessa do “certo em média”, cumprida e visível. Mas execuções individuais caíram entre cerca de 2 e 8 pontos. O seu único experimento realizado é um único sorteio deste histograma, e esse espalhamento é a incerteza que um relato honesto precisa carregar ao lado da estimativa. No notebook companheiro, dobre <code>n</code> e veja o histograma estreitar: tamanho de amostra compra precisão — é a aleatorização que compra verdade em média.</p>
+</section>
+<section id="o-laboratório-em-colab" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="o-laboratório-em-colab"><span class="header-section-number">15.5</span> O laboratório em Colab</h2>
 <p>Este capítulo tem o seu próprio <strong>notebook companheiro</strong> — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho <strong>Agora é a sua vez</strong>, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso <strong>nb09 — Experimental causal research</strong> (<a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb">abrir no Colab</a>), parte do curso companheiro apresentado no apêndice <a href="../for-instructors.html">Para instrutores</a>. Lá você analisa um experimento de campo real de mobilização eleitoral, estima o efeito como uma diferença de médias e coloca em volta dele um intervalo por inferência de randomização. Depois você vê atrito, não conformidade e transbordamento entortarem, cada um a seu modo, uma estimativa limpa, e assim aprende a nomear qual quantidade realmente sobrevive.</p>
 </section>
-<section id="prompts-de-ia-recomendados" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="prompts-de-ia-recomendados"><span class="header-section-number">15.5</span> Prompts de IA recomendados</h2>
+<section id="prompts-de-ia-recomendados" class="level2" data-number="15.6">
+<h2 data-number="15.6" class="anchored" data-anchor-id="prompts-de-ia-recomendados"><span class="header-section-number">15.6</span> Prompts de IA recomendados</h2>
 <p>Comprometa-se com a sua própria resposta primeiro, depois delegue. Cada prompt abaixo é uma tarefa conferível, não um pedido de veredito. Trabalhe-os como um loop. A primeira resposta é um rascunho: encontre a afirmação que você não consegue conferir, diga isso na sua próxima mensagem e rode de novo. Algumas ferramentas rodam esse loop inteiro sozinhas e entregam uma análise pronta. É justamente a aparência de pronto que faz as perguntas deste capítulo valerem a pena antes de você aceitar o resultado.</p>
 <p><strong>Localize a ferramenta padrão.</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Act <span class="im">as</span> a statistics assistant. I ran a two<span class="op">-</span>arm randomized trial <span class="kw">and</span> computed a</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>plain difference <span class="kw">in</span> on<span class="op">-</span>time refill rates between a reminder arm <span class="kw">and</span> a control arm.</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Before <span class="bu">any</span> code, name the standard way to attach a <span class="dv">95</span><span class="op">%</span> interval to a difference <span class="kw">in</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>two proportions, <span class="kw">and</span> one resampling alternative, citing where each <span class="kw">is</span> documented.</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Only name methods you are confident exist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Act <span class="im">as</span> a statistics assistant. I ran a two<span class="op">-</span>arm randomized trial <span class="kw">and</span> computed a</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>plain difference <span class="kw">in</span> on<span class="op">-</span>time refill rates between a reminder arm <span class="kw">and</span> a control arm.</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Before <span class="bu">any</span> code, name the standard way to attach a <span class="dv">95</span><span class="op">%</span> interval to a difference <span class="kw">in</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>two proportions, <span class="kw">and</span> one resampling alternative, citing where each <span class="kw">is</span> documented.</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Only name methods you are confident exist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Depois de rodar, verifique: abra a documentação citada e confirme que o método e a fórmula dele existem como descrito. Enfrenta a <em>fabricação confiante</em> (um nome de método inventado chega com a mesma confiança de um real).</p>
 <p><strong>Liste as suposições a verificar.</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Here <span class="kw">is</span> my analysis of a randomized reminder trial: [paste your cell]. List, <span class="im">as</span> a</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>table, every assumption my causal reading rests on: that assignment was truly</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>random, that no one dropped out <span class="kw">in</span> a way tied to the outcome, that the control arm</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>got no treatment. For each, say what I would check <span class="kw">in</span> my own data to confirm it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Here <span class="kw">is</span> my analysis of a randomized reminder trial: [paste your cell]. List, <span class="im">as</span> a</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>table, every assumption my causal reading rests on: that assignment was truly</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>random, that no one dropped out <span class="kw">in</span> a way tied to the outcome, that the control arm</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>got no treatment. For each, say what I would check <span class="kw">in</span> my own data to confirm it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Depois de rodar, verifique: confronte cada suposição listada com o seu desenho real e com os seus números de permanência antes de aceitar a leitura causal. Enfrenta a <em>mudança silenciosa de escopo</em> (uma associação relatada, sem alarde, como causa estabelecida).</p>
 <p><strong>Faça red team no seu efeito.</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>My claim: <span class="st">"the reminder raised on-time refills by 9 points."</span> Act <span class="im">as</span> a hostile</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>clinical<span class="op">-</span>trial reviewer. Name every way dropout, noncompliance, <span class="kw">or</span> spillover could</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>make this number describe a different group than everyone I enrolled. Do <span class="kw">not</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>rewrite the claim <span class="cf">for</span> me.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>My claim: <span class="st">"the reminder raised on-time refills by 9 points."</span> Act <span class="im">as</span> a hostile</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>clinical<span class="op">-</span>trial reviewer. Name every way dropout, noncompliance, <span class="kw">or</span> spillover could</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>make this number describe a different group than everyone I enrolled. Do <span class="kw">not</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>rewrite the claim <span class="cf">for</span> me.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Depois de rodar, verifique: se a ferramenta só elogiar o desenho, insista e exija a única pior ameaça, depois teste essa ameaça contra a permanência por braço. Enfrenta a <em>concordância bajuladora</em> (elogio que revisa o seu ego, não a sua evidência).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Não delegue">
 <div class="callout-header d-flex align-content-center">
@@ -610,13 +661,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="um-caso-de-falha-da-ia" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="um-caso-de-falha-da-ia"><span class="header-section-number">15.6</span> Um caso de falha da IA</h2>
+<section id="um-caso-de-falha-da-ia" class="level2" data-number="15.7">
+<h2 data-number="15.7" class="anchored" data-anchor-id="um-caso-de-falha-da-ia"><span class="header-section-number">15.7</span> Um caso de falha da IA</h2>
 <p>Você cola o seu ensaio na ferramenta e ela relata, com toda a confiança, “o lembrete aumentou em 12 pontos as renovações no prazo, e o efeito é significativo”. O código roda sem um único erro. Aqui está a armadilha. Um terço do braço do lembrete, os pacientes com a pior pressão, parou de responder ao acompanhamento e saiu do estudo, então a ferramenta calculou a distância entre os pacientes que <em>ficaram</em> e chamou isso de “o efeito do lembrete”. Isso é uma mudança silenciosa de escopo. O número agora descreve só os pacientes mais saudáveis que permaneceram, e não todos os que você recrutou, e descartar os piores casos empurrou o número para cima.</p>
 <p>Você pega isso conferindo a permanência por braço, não relendo o parágrafo fluente. Quando você vê que o braço do lembrete perdeu muito mais pacientes que o de controle, e que os perdidos eram os mais graves, você sabe que os 12 pontos são o efeito entre quem ficou. Um sinal verde não é um resultado correto. Você reescreve a frase para nomear o grupo por quem o número de fato fala.</p>
 </section>
-<section id="agora-é-a-sua-vez" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="agora-é-a-sua-vez"><span class="header-section-number">15.7</span> Agora é a sua vez</h2>
+<section id="agora-é-a-sua-vez" class="level2" data-number="15.8">
+<h2 data-number="15.8" class="anchored" data-anchor-id="agora-é-a-sua-vez"><span class="header-section-number">15.8</span> Agora é a sua vez</h2>
 <p><em>O seu desenho está declarado e diagnosticado. Este passo pergunta se ele conquistou a palavra “porque” e obriga você a dizer em voz alta de quem é o efeito que o seu número mede.</em></p>
 <ol type="1">
 <li>Escreva o seu tratamento e o seu desfecho como duas frases curtas. Depois escreva uma frase sobre como uma unidade acaba tratada. Se a resposta for qualquer coisa diferente de “um dispositivo de acaso decidiu”, esta trilha ainda não é a sua.</li>

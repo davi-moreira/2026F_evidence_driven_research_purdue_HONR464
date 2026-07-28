@@ -24,6 +24,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -453,10 +488,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#por-qué-importa-esta-decisión" id="toc-por-qué-importa-esta-decisión" class="nav-link active" data-scroll-target="#por-qué-importa-esta-decisión"><span class="header-section-number">14.1</span> Por qué importa esta decisión</a></li>
   <li><a href="#el-concepto" id="toc-el-concepto" class="nav-link" data-scroll-target="#el-concepto"><span class="header-section-number">14.2</span> El concepto</a></li>
   <li><a href="#un-ejemplo-resuelto" id="toc-un-ejemplo-resuelto" class="nav-link" data-scroll-target="#un-ejemplo-resuelto"><span class="header-section-number">14.3</span> Un ejemplo resuelto</a></li>
-  <li><a href="#el-laboratorio-en-colab" id="toc-el-laboratorio-en-colab" class="nav-link" data-scroll-target="#el-laboratorio-en-colab"><span class="header-section-number">14.4</span> El laboratorio en Colab</a></li>
-  <li><a href="#prompts-de-ia-recomendados" id="toc-prompts-de-ia-recomendados" class="nav-link" data-scroll-target="#prompts-de-ia-recomendados"><span class="header-section-number">14.5</span> Prompts de IA recomendados</a></li>
-  <li><a href="#un-caso-de-falla-de-la-ia" id="toc-un-caso-de-falla-de-la-ia" class="nav-link" data-scroll-target="#un-caso-de-falla-de-la-ia"><span class="header-section-number">14.6</span> Un caso de falla de la IA</a></li>
-  <li><a href="#ahora-te-toca-a-ti" id="toc-ahora-te-toca-a-ti" class="nav-link" data-scroll-target="#ahora-te-toca-a-ti"><span class="header-section-number">14.7</span> Ahora te toca a ti</a></li>
+  <li><a href="#una-simulación-con-semilla" id="toc-una-simulación-con-semilla" class="nav-link" data-scroll-target="#una-simulación-con-semilla"><span class="header-section-number">14.4</span> Una simulación con semilla</a></li>
+  <li><a href="#el-laboratorio-en-colab" id="toc-el-laboratorio-en-colab" class="nav-link" data-scroll-target="#el-laboratorio-en-colab"><span class="header-section-number">14.5</span> El laboratorio en Colab</a></li>
+  <li><a href="#prompts-de-ia-recomendados" id="toc-prompts-de-ia-recomendados" class="nav-link" data-scroll-target="#prompts-de-ia-recomendados"><span class="header-section-number">14.6</span> Prompts de IA recomendados</a></li>
+  <li><a href="#un-caso-de-falla-de-la-ia" id="toc-un-caso-de-falla-de-la-ia" class="nav-link" data-scroll-target="#un-caso-de-falla-de-la-ia"><span class="header-section-number">14.7</span> Un caso de falla de la IA</a></li>
+  <li><a href="#ahora-te-toca-a-ti" id="toc-ahora-te-toca-a-ti" class="nav-link" data-scroll-target="#ahora-te-toca-a-ti"><span class="header-section-number">14.8</span> Ahora te toca a ti</a></li>
   </ul>
 </nav>
     </div>
@@ -506,6 +542,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="review-pending callout callout-style-default callout-warning callout-titled" title="En desarrollo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>En desarrollo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este capítulo forma parte de un libro en desarrollo activo y todavía no ha pasado por la revisión del autor. El contenido puede cambiar a medida que avanza la revisión.</p>
+</div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch14_prediction_and_generalization.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
@@ -537,12 +586,60 @@ ul.task-list li input[type="checkbox"] {
 <p>Te quedas con características que de verdad se conocen con una semana de anticipación: temperatura del agua, lluvia reciente, carga de fósforo aguas arriba. Ajustas un modelo logístico (un clasificador estándar de sí o no), apartas con la <strong>partición</strong> una cuarta parte reservada de las semanas y calificas ambos solo en esas semanas reservadas. El modelo cae alrededor de 0.88. Esa ventaja de cuatro puntos se siente pequeña, y su pequeñez es el resultado honesto: un triunfo modesto y verdadero vale más que uno dramático y falso.</p>
 <p>Entonces alguien con buenas intenciones agrega <code>chlorophyll_a</code>, la lectura del pigmento. La exactitud en el conjunto reservado salta a 0.97. Emocionante, hasta que preguntas <em>cuándo</em> se mide la clorofila: durante la floración misma que estás pronosticando. Es el resultado disfrazado con otra etiqueta. Quítala, y el puntaje vuelve a 0.88. Lo que decide es la prueba del momento, no la exactitud. Y como entrenaste en un lago poco profundo, nombras la frontera en voz alta: en un embalse profundo y frío el patrón puede no sostenerse, así que el pronóstico todavía no generaliza ahí.</p>
 </section>
-<section id="el-laboratorio-en-colab" class="level2" data-number="14.4">
-<h2 data-number="14.4" class="anchored" data-anchor-id="el-laboratorio-en-colab"><span class="header-section-number">14.4</span> El laboratorio en Colab</h2>
+<section id="una-simulación-con-semilla" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="una-simulación-con-semilla"><span class="header-section-number">14.4</span> Una simulación con semilla</h2>
+<p>El capítulo afirma que un modelo puede volverse <em>mejor</em> en los datos que tiene mientras se vuelve <em>peor</em> en los casos que nunca vio. Míralo suceder. La semilla hace la corrida reproducible: el mismo código siempre extrae el mismo mundo. El código construye un mundo (una curva seno más ruido), extrae de ese mismo mundo un conjunto de entrenamiento y un conjunto de prueba, ajusta al entrenamiento polinomios de flexibilidad creciente, y evalúa cada ajuste en ambos conjuntos.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mundo(n):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> rng.uniform(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, n)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x, np.sin(<span class="fl">1.5</span> <span class="op">*</span> x) <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">.35</span>, n)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>x_entren, y_entren <span class="op">=</span> mundo(<span class="dv">40</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>x_prueba, y_prueba <span class="op">=</span> mundo(<span class="dv">40</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>grados <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">13</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>err_entren, err_prueba <span class="op">=</span> [], []</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> g <span class="kw">in</span> grados:</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    coefs <span class="op">=</span> np.polyfit(x_entren, y_entren, g)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    err_entren.append(np.sqrt(np.mean(</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        (np.polyval(coefs, x_entren) <span class="op">-</span> y_entren) <span class="op">**</span> <span class="dv">2</span>)))</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    err_prueba.append(np.sqrt(np.mean(</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        (np.polyval(coefs, x_prueba) <span class="op">-</span> y_prueba) <span class="op">**</span> <span class="dv">2</span>)))</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>mejor <span class="op">=</span> grados[<span class="bu">int</span>(np.argmin(err_prueba))]</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">7.6</span>, <span class="fl">3.4</span>))</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ax.plot(grados, err_entren, color<span class="op">=</span><span class="st">"#2a78d6"</span>, lw<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">"o"</span>, ms<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>ax.plot(grados, err_prueba, color<span class="op">=</span><span class="st">"#eb6834"</span>, lw<span class="op">=</span><span class="dv">2</span>, marker<span class="op">=</span><span class="st">"o"</span>, ms<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>ax.axvline(mejor, color<span class="op">=</span><span class="st">"#333333"</span>, ls<span class="op">=</span><span class="st">":"</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>ax.text(grados[<span class="op">-</span><span class="dv">1</span>], err_entren[<span class="op">-</span><span class="dv">1</span>], <span class="st">"  Error de entrenamiento"</span>,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"#2a78d6"</span>, fontsize<span class="op">=</span><span class="dv">9</span>, va<span class="op">=</span><span class="st">"center"</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>ax.text(grados[<span class="op">-</span><span class="dv">1</span>], err_prueba[<span class="op">-</span><span class="dv">1</span>], <span class="st">"  Error en el conjunto de prueba"</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"#eb6834"</span>, fontsize<span class="op">=</span><span class="dv">9</span>, va<span class="op">=</span><span class="st">"center"</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>ax.text(mejor <span class="op">+</span> <span class="fl">.1</span>, <span class="bu">max</span>(err_prueba) <span class="op">*</span> <span class="fl">.95</span>, <span class="st">"mejor honesto"</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"#333333"</span>, fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Flexibilidad del modelo (grado del polinomio)"</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Error de predicción (RMSE)"</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(grados[<span class="dv">0</span>], grados[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> <span class="fl">3.4</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/sims/ch14_overfitting.png" class="img-fluid figure-img" alt="Gráfico de líneas. Una línea azul de error de entrenamiento baja de forma continua a medida que el grado del polinomio sube de 1 a 12. Una línea naranja de error de prueba baja con ella hasta el grado seis, marcado por una línea vertical punteada rotulada mejor honesto, y luego sube."></p>
+<figcaption>El error de entrenamiento solo baja a medida que crece la flexibilidad; el error de prueba toca fondo en el grado seis y luego sube.</figcaption>
+</figure>
+</div>
+<p>El error de entrenamiento azul solo baja: cada grado extra de flexibilidad deja que el modelo se curve más cerca de los puntos que ya vio. El error de prueba naranja baja mientras el modelo aprende señal, toca fondo cerca del grado seis, y sube cuando el modelo empieza a memorizar ruido. La línea punteada es el mejor honesto: la flexibilidad que elegiría una comprobación con datos apartados. Nada en la línea azul sola te diría que pares ahí; solo datos que el ajuste nunca tocó pueden decirlo, y ese es el argumento completo de la comprobación con datos apartados que exige esta ruta. En el cuaderno de acompañamiento, sube el ruido (el <code>.35</code>) y mira el mejor honesto moverse a la izquierda: cuanto más ruidoso el mundo, menos flexibilidad sostiene la verdad.</p>
+</section>
+<section id="el-laboratorio-en-colab" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="el-laboratorio-en-colab"><span class="header-section-number">14.5</span> El laboratorio en Colab</h2>
 <p>Este capítulo tiene su propio <strong>cuaderno de acompañamiento</strong>: ábrelo en Colab con la insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con el espacio de trabajo <strong>Ahora te toca a ti</strong>, para que completes el paso del capítulo en tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo es el cuaderno del curso <strong>nb08 — Prediction: generalizing to unseen cases</strong> (<em>predicción: generalizar a casos no vistos</em>) (<a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb">abrir en Colab</a>), parte del curso de acompañamiento presentado en el apéndice <a href="../for-instructors.html">Para docentes</a>. En el laboratorio firmas el contrato de cuatro partes sobre un conjunto de datos real, calificas primero una línea base honesta y luego <em>construyes una fuga a propósito</em> para que sientas subir un puntaje falso y aprendas a cazarlo por correlación y por momento antes de reentrenar limpio.</p>
 </section>
-<section id="prompts-de-ia-recomendados" class="level2" data-number="14.5">
-<h2 data-number="14.5" class="anchored" data-anchor-id="prompts-de-ia-recomendados"><span class="header-section-number">14.5</span> Prompts de IA recomendados</h2>
+<section id="prompts-de-ia-recomendados" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="prompts-de-ia-recomendados"><span class="header-section-number">14.6</span> Prompts de IA recomendados</h2>
 <p>Comprométete primero con tu propia respuesta y luego delega. Pega salida real, nunca un número que recuerdas. Espera correr cada prompt más de una vez: lee la respuesta, nombra la parte que no te crees, devuelve esa objeción al prompt y vuelve a correrlo. Las herramientas que corren ese <strong>bucle de IA</strong> por su cuenta, el ciclo prompt → respuesta → interrogación → refinamiento → nueva ejecución, ajustando y reajustando un modelo a lo largo de varias vueltas, vuelven la pregunta de la fuga de datos más urgente, no menos. Nadie dentro de ese bucle, salvo tú, sabe cuándo se registraron tus datos.</p>
 <pre><code>Act as a Python tutor. Here is a cell that holds out 25% of my weekly
 lake samples, scores a majority-class baseline on them, then scores a
@@ -576,12 +673,12 @@ leak.</code></pre>
 </div>
 </div>
 </section>
-<section id="un-caso-de-falla-de-la-ia" class="level2" data-number="14.6">
-<h2 data-number="14.6" class="anchored" data-anchor-id="un-caso-de-falla-de-la-ia"><span class="header-section-number">14.6</span> Un caso de falla de la IA</h2>
+<section id="un-caso-de-falla-de-la-ia" class="level2" data-number="14.7">
+<h2 data-number="14.7" class="anchored" data-anchor-id="un-caso-de-falla-de-la-ia"><span class="header-section-number">14.7</span> Un caso de falla de la IA</h2>
 <p>Pegas tu lista de características y le preguntas a un socio de IA cuáles son seguras de usar. Responde con seguridad: “<code>chlorophyll_a</code> es tu predictor más fuerte, consérvala”. El razonamiento suena impecable, porque la clorofila correlaciona casi a la perfección con las floraciones. Esa correlación casi perfecta es justamente la señal. Es la falla del <strong>método plausible pero equivocado</strong>: la herramienta ordenó la característica por qué tan bien <em>ajusta</em> el pasado, no por si podría <em>existir a tiempo</em> para un pronóstico. Lo detectas con una pregunta que la estadística sola no puede responder. ¿Cuándo se mide la clorofila? Durante la floración, así que ningún pronóstico hecho una semana antes podría tenerla. Quítala, mira el puntaje caer de vuelta a 0.88 y quédate con el modelo honesto.</p>
 </section>
-<section id="ahora-te-toca-a-ti" class="level2" data-number="14.7">
-<h2 data-number="14.7" class="anchored" data-anchor-id="ahora-te-toca-a-ti"><span class="header-section-number">14.7</span> Ahora te toca a ti</h2>
+<section id="ahora-te-toca-a-ti" class="level2" data-number="14.8">
+<h2 data-number="14.8" class="anchored" data-anchor-id="ahora-te-toca-a-ti"><span class="header-section-number">14.8</span> Ahora te toca a ti</h2>
 <p><em>Tu diseño ya está declarado y diagnosticado. Este paso decide si tu proyecto está pronosticando de verdad casos que nadie ha visto todavía y, si es así, pone ese pronóstico bajo contrato antes de que ajustes un solo modelo.</em></p>
 <ol type="1">
 <li>Hazte la versión más directa de tu pregunta: ¿tu proyecto necesita adivinar el resultado de un caso cuyo resultado todavía no existe? Escribe sí o no, y la oración que justifica tu respuesta.</li>
