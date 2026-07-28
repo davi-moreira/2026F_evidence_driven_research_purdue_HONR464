@@ -2,7 +2,7 @@
 title: "Tablas afirmación–evidencia"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch26_claim_evidence_tables.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Para cada afirmación que tu trabajo hace en
 > público, decide qué pieza exacta de evidencia la respalda, dónde vive esa evidencia y
@@ -86,12 +86,19 @@ Esa tabla es lo que permite que tu trabajo sobreviva a un dedo que señala.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb11 — Poster criticism + final poster
-lock** (crítica del póster y cierre final del póster). Ábrelo en Colab con el botón de
-arriba y trabaja las celdas junto con este capítulo. Ahí haces la auditoría de cierre
-final sobre un póster real: rastreas cada número hasta la celda que lo produjo, confirmas
-que cada cita resuelve a una fuente que abriste tú mismo y conviertes afirmaciones sueltas
-en filas cerradas y respaldadas.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb11 — Poster criticism + final poster lock** (crítica del
+póster y cierre final del póster) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí haces la auditoría de cierre final sobre un
+póster real: rastreas cada número hasta la celda que lo produjo, confirmas que cada cita
+resuelve a una fuente que abriste tú mismo y conviertes afirmaciones sueltas en filas
+cerradas y respaldadas.
+
 
 ## Prompts de IA recomendados
 

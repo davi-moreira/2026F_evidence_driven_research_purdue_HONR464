@@ -2,7 +2,7 @@
 title: "Pesquisa Descritiva Experimental"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch13_experimental_descriptive_research.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Um cara ou coroa não decide que tipo de pergunta você
 > fez. Quem decide se o seu estudo randomizado está **medindo** uma propriedade que
@@ -82,13 +82,19 @@ de forma idêntica e registra as exibições no servidor.
 
 ## O laboratório em Colab
 
-O laboratório deste capítulo é o notebook **nb07 — Experimental descriptive
-research**. Abra no Colab pelo selo acima e trabalhe as células junto com este
-capítulo. Nele você lê um experimento de survey real como a mensuração de uma atitude
-já consolidada, recupera uma prevalência escondida com um experimento de lista que
-uma pergunta direta não alcança e depois declara, diagnostica e redesenha um
-experimento de mensuração, até que um número feito quase só de artefatos de demanda e
-de instrumento volte a pousar sobre o constructo que ele deveria relatar.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb07 — Experimental descriptive research** ([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). Nele você lê um experimento de survey real como a
+mensuração de uma atitude já consolidada, recupera uma prevalência escondida com um
+experimento de lista que uma pergunta direta não alcança e depois declara, diagnostica e
+redesenha um experimento de mensuração, até que um número feito quase só de artefatos de
+demanda e de instrumento volte a pousar sobre o constructo que ele deveria relatar.
+
 
 ## Prompts de IA recomendados
 

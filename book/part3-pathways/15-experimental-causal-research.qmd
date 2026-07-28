@@ -2,7 +2,7 @@
 title: "Experimental Causal Research"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch15_experimental_causal_research.ipynb){target="_blank"}
 
 > **The research decision.** Decide whether the way treatment was assigned in your
 > study lets you read a plain difference in outcomes as a cause, and then name
@@ -88,12 +88,18 @@ your number describes. Naming that quantity is the decision this chapter equips.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb09 — Experimental causal research**. Open it in
-Colab with the badge above and work the cells alongside this chapter. There you
-analyze a real get-out-the-vote field experiment, estimate the effect as a
-difference in means, and put a randomization-inference interval around it. Then you
-watch attrition, noncompliance, and spillover each bend a clean estimate, so you
-learn to name which quantity actually survives.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb09 —
+Experimental causal research** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. There you analyze a real get-out-the-vote field experiment, estimate the
+effect as a difference in means, and put a randomization-inference interval around it.
+Then you watch attrition, noncompliance, and spillover each bend a clean estimate, so
+you learn to name which quantity actually survives.
+
 
 ## Recommended AI prompts
 

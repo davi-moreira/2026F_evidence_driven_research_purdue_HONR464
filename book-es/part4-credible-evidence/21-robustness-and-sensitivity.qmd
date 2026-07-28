@@ -2,7 +2,7 @@
 title: "Robustez y sensibilidad"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch21_robustness_and_sensitivity.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Tú decides **la lista completa de verificaciones de
 > robustez y sensibilidad que vas a correr, y la decides antes de mirar un solo
@@ -99,13 +99,21 @@ la que la estaría fabricando.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb10 — Comparte la investigación y ataca el
-análisis**. Ábrelo en Colab con el botón de arriba y trabaja las celdas junto a este
-capítulo. Ahí vuelves a correr una brecha principal sobre una rejilla prelistada y lees su
-curva de especificaciones, ves cómo la búsqueda de especificaciones fabrica un resultado
-"significativo" a partir de datos sin ningún efecto real, y corres una prueba de placebo y
-una verificación de influencia dejando uno fuera sobre código con semilla fija, para que
-sientas la diferencia entre un hallazgo robusto y uno frágil.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb10 — Comparte la investigación y ataca el análisis**
+([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí vuelves a correr una brecha principal sobre una
+rejilla prelistada y lees su curva de especificaciones, ves cómo la búsqueda de
+especificaciones fabrica un resultado "significativo" a partir de datos sin ningún
+efecto real, y corres una prueba de placebo y una verificación de influencia dejando uno
+fuera sobre código con semilla fija, para que sientas la diferencia entre un hallazgo
+robusto y uno frágil.
+
 
 ## Prompts de IA recomendados
 

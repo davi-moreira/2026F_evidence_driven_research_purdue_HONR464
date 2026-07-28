@@ -2,7 +2,7 @@
 title: "Investigación observacional causal"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_observational_causal_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch12_observational_causal_research.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Si tu comparación observacional se ganó la palabra
 > *porque* o tiene que detenerse en *asociado con*. Lo resuelves nombrando el único
@@ -105,15 +105,22 @@ decir.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb06 — Observational causal research**
-(*investigación observacional causal*). Ábrelo en Colab con la insignia de arriba y
-trabaja las celdas junto con este capítulo. Allí construirás un mundo pequeño donde *tú*
-fijas el efecto verdadero del café, plantarás un factor de confusión oculto y verás cómo
-una comparación ingenua infla un verdadero +1,0 hasta cerca de +3,1, para después
-recuperar la verdad ajustando por el factor de confusión que sí puedes ver. Luego
-analizarás un experimento natural *real*, la lotería de visas del Hajj de Clingingsmith,
-Khwaja y Kremer (RDSS cap. 16), como una diferencia de medias, y enunciarás exactamente
-qué te permite afirmar su asignación como si fuera aleatoria, y sobre quiénes.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb06 — Observational causal research** (*investigación
+observacional causal*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_observational_causal_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Allí construirás un mundo pequeño donde *tú* fijas el
+efecto verdadero del café, plantarás un factor de confusión oculto y verás cómo una
+comparación ingenua infla un verdadero +1,0 hasta cerca de +3,1, para después recuperar
+la verdad ajustando por el factor de confusión que sí puedes ver. Luego analizarás un
+experimento natural *real*, la lotería de visas del Hajj de Clingingsmith, Khwaja y
+Kremer (RDSS cap. 16), como una diferencia de medias, y enunciarás exactamente qué te
+permite afirmar su asignación como si fuera aleatoria, y sobre quiénes.
+
 
 ## Prompts de IA recomendados
 

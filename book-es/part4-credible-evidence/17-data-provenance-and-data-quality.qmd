@@ -2,7 +2,7 @@
 title: "Procedencia y calidad de los datos"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch17_data_provenance_and_data_quality.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Para cada número, conjunto de datos y fuente en
 > que se apoya tu proyecto, decide si es lo bastante sólido como para construir
@@ -103,15 +103,22 @@ necesita tu pregunta y por qué.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb03 — Research builds on research:
-verified evidence + real gaps** (*la investigación se construye sobre la investigación:
-evidencia verificada y vacíos reales*). Ábrelo en Colab con la insignia de arriba y
-trabaja las celdas junto con este capítulo. En el laboratorio corres el ciclo de
-recuperación y verificación sobre una afirmación de tu propio proyecto, ves cómo un
-montón ordenado de citas sugeridas por IA se reduce a las pocas que sobreviven a la
-recuperación, y sigues cadenas de citas hacia atrás y hacia adelante hasta armar un
-mapa de evidencia cuyo único casillero vacío es un vacío que puedes defender, porque
-cada fuente a su alrededor es una que abriste tú.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb03 — Research builds on research: verified evidence + real
+gaps** (*la investigación se construye sobre la investigación: evidencia verificada y
+vacíos reales*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). En el laboratorio corres el ciclo de recuperación y
+verificación sobre una afirmación de tu propio proyecto, ves cómo un montón ordenado de
+citas sugeridas por IA se reduce a las pocas que sobreviven a la recuperación, y sigues
+cadenas de citas hacia atrás y hacia adelante hasta armar un mapa de evidencia cuyo
+único casillero vacío es un vacío que puedes defender, porque cada fuente a su alrededor
+es una que abriste tú.
+
 
 ## Prompts de IA recomendados
 

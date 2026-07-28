@@ -2,7 +2,7 @@
 title: "Research Builds on Research"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch07_research_builds_on_research.ipynb){target="_blank"}
 
 > **The research decision.** Which conversation your question joins, and which of
 > the candidate sources a search or an AI hands you are worth chasing. You decide
@@ -85,11 +85,17 @@ to open every one.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb03 — Research builds on research: verified evidence
-+ real gaps**. Open it in Colab with the badge above and work the cells alongside this
-chapter. In the lab you watch a pile of fifteen AI citations collapse to the few that
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb03 —
+Research builds on research: verified evidence + real gaps** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. In the lab you watch a pile of fifteen AI citations collapse to the few that
 survive retrieval, build an evidence map in code, and run the retrieval-verification
 loop on your own claim.
+
 
 ## Recommended AI prompts
 

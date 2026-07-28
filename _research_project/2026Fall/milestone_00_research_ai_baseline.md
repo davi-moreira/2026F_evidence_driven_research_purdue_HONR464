@@ -24,6 +24,7 @@ the Friday studio that same day, and share your baseline with the room).
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m00_research_ai_baseline.pdf`** *or* a shared Colab notebook link | The four-part baseline below: your three curiosities with one defended pick, your AI baseline (two things you assume AI is good at with the check for each, and two decisions you will not delegate), a screenshot of nb01's readiness checks, and your first AI Research Ledger row from the Lecture 1 citation catch. This is the graded artifact. |
+| 2 | **EDR\|AI "It is your turn" — ch. 1, ch. 2, ch. 3, ch. 4, ch. 24** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.
@@ -33,6 +34,28 @@ purpose. Nothing here is a commitment. You are not choosing your project today.
 You are opening three doors, checking that your tools turn on, and installing the
 one habit the whole course runs on: use AI hard, then verify everything it hands
 you before you put your name on it.
+
+---
+
+## The Book Anchor — "It Is Your Turn"
+
+This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
+below as you develop the milestone, and complete each chapter's closing **"It
+is your turn"** section in its companion Colab notebook (or carry the same
+work inside your project notebook):
+
+- Ch. 1 — [AI Is Your Arm, Not Your Brain](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch01_ai_is_your_arm_not_your_brain.ipynb)
+- Ch. 2 — [The Student as Research Director](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/02-the-student-as-research-director.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch02_the_student_as_research_director.ipynb)
+- Ch. 3 — [Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch03_specify_delegate_interrogate_inspect_verify_document_defend.ipynb)
+- Ch. 4 — [Research Responsibility and Intellectual Ownership](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch04_research_responsibility_and_intellectual_ownership.ipynb)
+- Ch. 24 — [Recognizing False Confidence](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/24-recognizing-false-confidence.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch24_recognizing_false_confidence.ipynb)
+
+These sections are the point of the reading, not extra work: across the
+semester, the book's 37 "It is your turn" sections chain into your final
+research chapter, so what you complete here is a draft piece of your final
+artifact. Include the completed sections in this milestone's submission (see
+the submission table above) and carry them forward in your Research Project
+Dossier.
 
 ---
 

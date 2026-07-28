@@ -2,7 +2,7 @@
 title: "A IA como Revisora Adversária"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch23_ai_as_adversarial_reviewer.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Quando alguém que revisa lhe entrega uma lista de falhas na
 > sua própria análise, você decide **quais falhas são reais, e decide isso rodando a
@@ -107,13 +107,19 @@ sua empresa opera.
 
 ## O laboratório no Colab
 
-O laboratório deste capítulo é o notebook **nb10, Share the Research and Attack the
-Analysis**. Abra no Colab pelo selo acima e trabalhe as células junto com este
-capítulo. Você roda de novo uma estimativa ao longo de uma grade pré-listada de oito
-especificações, vê a busca por especificações fabricar um resultado significativo a
-partir de puro ruído, roda um placebo e uma verificação de influência deixando um caso
-de fora, e depois entrega a sua análise a uma pessoa, a uma IA e a um painel de modelos
-de IA e julga cada alerta que eles levantam contra os dados.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb10, Share the Research and Attack the Analysis** ([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). Você roda de novo uma estimativa ao longo de uma
+grade pré-listada de oito especificações, vê a busca por especificações fabricar um
+resultado significativo a partir de puro ruído, roda um placebo e uma verificação de
+influência deixando um caso de fora, e depois entrega a sua análise a uma pessoa, a uma
+IA e a um painel de modelos de IA e julga cada alerta que eles levantam contra os dados.
+
 
 ## Prompts de IA recomendados
 

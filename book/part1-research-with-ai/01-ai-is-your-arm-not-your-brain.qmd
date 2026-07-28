@@ -2,7 +2,7 @@
 title: "AI Is Your Arm, Not Your Brain"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch01_ai_is_your_arm_not_your_brain.ipynb){target="_blank"}
 
 > **The research decision.** An AI tool can hand you a fact, a number, a citation,
 > or a finished paragraph in seconds. None of it is evidence yet. Your decision in
@@ -107,12 +107,17 @@ number you retrieved, not one a model typed.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb01, Research in the Age of AI: Your Arm, Your RA,
-Not Your Brain**. Open it in Colab with the badge above and work the cells alongside
-this chapter. In the lab you run a small seeded simulation showing why how confident a
-source *sounds* tells you nothing about whether it is real, then take one topic you
-care about, ask an AI for scholarly sources, and verify each by retrieving it
-yourself.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb01,
+Research in the Age of AI: Your Arm, Your RA, Not Your Brain** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. In the lab you run a small seeded simulation showing why how confident a
+source *sounds* tells you nothing about whether it is real, then take one topic you care
+about, ask an AI for scholarly sources, and verify each by retrieving it yourself.
+
 
 ## Recommended AI prompts
 

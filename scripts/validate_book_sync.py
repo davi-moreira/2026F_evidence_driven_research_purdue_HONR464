@@ -1,15 +1,20 @@
 #!/usr/bin/env python3
-"""validate_book_sync.py — chapter <-> notebook synchronization gate (D20).
+"""validate_book_sync.py — chapter <-> notebook synchronization gate (D20/D25).
 
 Parses the 37-chapter manifest table in planning/BOOK_MAP.md and checks the
 course book against it, both directions:
 
   1. every chapter in the manifest has a file book/<part-slug>/<NN>-*.qmd
-  2. every chapter file contains a Colab link to its PRIMARY notebook's student
-     file (so the "Colab lab" element is present and points at the right nb)
+  2. every chapter file links its OWN companion notebook
+     (notebooks/book/chNN_*, the chapter badge) AND still names its PRIMARY
+     course notebook (the classroom lab in "The Colab laboratory")
   3. every registered notebook (nb01-nb16) is the primary of >= 1 chapter
      (parsed from the manifest, so the book cannot silently drop a topic)
   4. every chapter carries the ten required element headings
+  5. the For-instructors appendix exists in all three editions and the EN
+     edition links every course lab nb01-nb16 (the course material is made
+     available through the book, D25)
+  6. the PT/ES chapter files link their localized companion notebooks
 
 Until the book/ directory exists (Phase 6 not started), the file-level checks
 report "pending" and the script exits 0 on the manifest-only invariants (3),
@@ -90,10 +95,32 @@ def main() -> None:
             text = hits[0].read_text()
             if student_filename(c["nb"]).replace("_student.ipynb", "") not in text \
                     and f"nb{c['nb']:02d}" not in text:
-                errs.append(f"ch {c['ch']}: no Colab link to its primary nb{c['nb']:02d}")
+                errs.append(f"ch {c['ch']}: does not name its primary nb{c['nb']:02d}")
+            if f"notebooks/book/ch{c['ch']:02d}_" not in text:
+                errs.append(f"ch {c['ch']}: no link to its companion notebook "
+                            f"notebooks/book/ch{c['ch']:02d}_*.ipynb")
             missing = [e for e in REQUIRED_ELEMENTS if e.lower() not in text.lower()]
             if missing:
                 warns.append(f"ch {c['ch']}: missing element(s) {missing}")
+
+        # (5) For-instructors appendix: present everywhere, all labs linked (EN)
+        for edition in ("book", "book-pt", "book-es"):
+            if not (REPO / edition / "for-instructors.qmd").exists():
+                errs.append(f"{edition}/for-instructors.qmd missing")
+        fi = BOOK_DIR / "for-instructors.qmd"
+        if fi.exists():
+            fi_text = fi.read_text()
+            for n in NOTEBOOKS:
+                if student_filename(n) not in fi_text:
+                    errs.append(f"For-instructors appendix does not link nb{n:02d}")
+
+        # (6) translated chapters link their localized companion notebooks
+        for edition, sub in (("book-pt", "pt"), ("book-es", "es")):
+            for c in chapters:
+                slug = PART_SLUGS[c["part"]]
+                hits = sorted((REPO / edition / slug).glob(f"{c['ch']:02d}-*.qmd"))
+                if hits and f"notebooks/book/{sub}/ch{c['ch']:02d}_" not in hits[0].read_text():
+                    errs.append(f"{edition} ch {c['ch']}: no localized companion link")
 
     for w in warns:
         print(f"  ⚠️ {w}")

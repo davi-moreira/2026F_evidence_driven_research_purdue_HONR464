@@ -2,7 +2,7 @@
 title: "Diseños híbridos y complejos"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch16_hybrid_and_complex_designs.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Cuando tu respuesta tiene que coserse a partir de
 > varias mediciones o etapas, decide si el diseño combinado sigue siendo una sola cosa
@@ -96,14 +96,22 @@ oficial, y no un año más de la misma encuesta.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb04 — The anatomy of a research
-design: MIDA + declare → diagnose → redesign** (*la anatomía de un diseño de
-investigación: MIDA + declarar → diagnosticar → rediseñar*). Ábrelo en Colab con la
-insignia de arriba. Ahí construyes un mundo simulado pequeño, **declaras** un diseño
-como algo que una computadora puede correr, lo **diagnosticas** simulándolo miles de
-veces para leer su sesgo, su varianza y su potencia, y luego **rediseñas** la parte
-que más lo mejora. El laboratorio corre ese bucle sobre una pregunta social causal;
-este capítulo muestra que la misma anatomía se sostiene cuando el diseño es complejo.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb04 — The anatomy of a research design: MIDA + declare →
+diagnose → redesign** (*la anatomía de un diseño de investigación: MIDA + declarar →
+diagnosticar → rediseñar*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí construyes un mundo simulado pequeño,
+**declaras** un diseño como algo que una computadora puede correr, lo **diagnosticas**
+simulándolo miles de veces para leer su sesgo, su varianza y su potencia, y luego
+**rediseñas** la parte que más lo mejora. El laboratorio corre ese bucle sobre una
+pregunta social causal; este capítulo muestra que la misma anatomía se sostiene cuando
+el diseño es complejo.
+
 
 ## Prompts de IA recomendados
 

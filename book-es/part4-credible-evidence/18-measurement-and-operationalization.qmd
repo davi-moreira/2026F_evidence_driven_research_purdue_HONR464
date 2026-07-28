@@ -2,7 +2,7 @@
 title: "Medición y operacionalización"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch18_measurement_and_operationalization.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Decide cómo convertir la idea abstracta sobre la
 > que trata tu pregunta en un número concreto que puedas registrar, repetir y
@@ -92,14 +92,20 @@ detiene el constructo.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb05 — Observational descriptive
-research** (*investigación observacional descriptiva*). Ábrelo en Colab con la insignia
-de arriba y trabaja las celdas junto con este capítulo. Ahí construyes una escalera
-concepto → constructo → indicador para tu propia medida clave, y ves de primera mano
-cómo un solo indicador aplana la realidad: el promedio de 4.43 de una encuesta cae en
-un valle entre dos picos, así que ese promedio no describe casi a nadie de quienes
-respondieron. Un índice es una operacionalización, y toda operacionalización esconde
-aquello sobre lo que promedia.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb05 — Observational descriptive research** (*investigación
+observacional descriptiva*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí construyes una escalera concepto → constructo →
+indicador para tu propia medida clave, y ves de primera mano cómo un solo indicador
+aplana la realidad: el promedio de 4.43 de una encuesta cae en un valle entre dos picos,
+así que ese promedio no describe casi a nadie de quienes respondieron. Un índice es una
+operacionalización, y toda operacionalización esconde aquello sobre lo que promedia.
+
 
 ## Prompts de IA recomendados
 

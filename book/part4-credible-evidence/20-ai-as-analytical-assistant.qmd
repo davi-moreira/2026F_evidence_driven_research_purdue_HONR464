@@ -2,7 +2,7 @@
 title: "AI as Analytical Assistant"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch20_ai_as_analytical_assistant.ipynb){target="_blank"}
 
 > **The research decision.** You decide **which analytical tasks the assistant runs
 > and which numbers you re-derive yourself** before any of them reach a claim. The
@@ -99,12 +99,17 @@ data confirmed.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb10 — Share the research and attack the
-analysis**. Open it in Colab with the badge above and work the cells alongside this
-chapter. There you delegate a real robustness grid, a placebo test, and an
-influence check to an assistant, then adjudicate three confident AI reviewers
-against the data and watch two of their three flags dissolve the moment a check
-touches them.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb10 —
+Share the research and attack the analysis** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. There you delegate a real robustness grid, a placebo test, and an influence
+check to an assistant, then adjudicate three confident AI reviewers against the data and
+watch two of their three flags dissolve the moment a check touches them.
+
 
 ## Recommended AI prompts
 

@@ -2,7 +2,7 @@
 title: "La IA como revisora adversaria"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch23_ai_as_adversarial_reviewer.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Cuando alguien que revisa te entrega una lista de fallas
 > en tu propio análisis, tú decides **cuáles fallas son reales, y lo decides corriendo la
@@ -101,13 +101,20 @@ tienda, no una garantía para cada local que opera tu empresa.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb10, Comparte la investigación y ataca el
-análisis**. Ábrelo en Colab con el botón de arriba y trabaja las celdas junto a este capítulo.
-Vuelves a correr una estimación sobre una rejilla prelistada de ocho especificaciones, ves
-cómo la búsqueda de especificaciones fabrica un resultado significativo a partir de puro
-ruido, corres un placebo y una verificación de influencia dejando uno fuera, y después
-entregas tu análisis a una persona, a una IA y a un panel de modelos de IA, y arbitras contra
-los datos cada alerta que levanten.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb10, Comparte la investigación y ataca el análisis** ([abrir
+en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Vuelves a correr una estimación sobre una rejilla
+prelistada de ocho especificaciones, ves cómo la búsqueda de especificaciones fabrica un
+resultado significativo a partir de puro ruido, corres un placebo y una verificación de
+influencia dejando uno fuera, y después entregas tu análisis a una persona, a una IA y a
+un panel de modelos de IA, y arbitras contra los datos cada alerta que levanten.
+
 
 ## Prompts de IA recomendados
 

@@ -2,7 +2,7 @@
 title: "Pesquisa Final e Portfólio de Gestão de IA"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch37_final_research_and_ai_management_portfolio.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** De tudo o que o seu projeto produziu, você decide quais
 > alegações vai sustentar em público, e monta o registro que mostra como você comandou
@@ -92,12 +92,18 @@ fez a concordância dos seus revisores valer mais do que uma contagem de votos.
 
 ## O laboratório no Colab
 
-O laboratório deste capítulo é o notebook **nb16 — Managing multiple AI agents + the
-final defense**. Abra no Colab pelo selo acima e trabalhe as células junto com este
-capítulo. Lá você liga uma equipe executor–crítico, roda uma simulação com semente fixa
-mostrando que quatro revisores parecidos entre si deixam passar uma falha real muito
-mais vezes do que quatro independentes, e depois redige as quatro partes do seu próprio
-portfólio e prepara a sua defesa de evidências.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb16 — Managing multiple AI agents + the final defense** ([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). Lá você liga uma equipe executor–crítico, roda uma
+simulação com semente fixa mostrando que quatro revisores parecidos entre si deixam
+passar uma falha real muito mais vezes do que quatro independentes, e depois redige as
+quatro partes do seu próprio portfólio e prepara a sua defesa de evidências.
+
 
 ## Prompts de IA recomendados
 

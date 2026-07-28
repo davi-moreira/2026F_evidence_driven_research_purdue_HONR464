@@ -2,7 +2,7 @@
 title: "Preguntas difíciles e incertidumbre"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch30_difficult_questions_and_uncertainty.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Decide, antes de que alguien pregunte, cómo vas a
 > decir lo que tu estudio no puede mostrar. Escribes por adelantado la incertidumbre, los
@@ -73,12 +73,21 @@ entregaste a esa persona una pregunta de investigación real en lugar de un muro
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb12 — Poster delivery: pitches, uncertainty,
-and the questions you fear** (entrega del póster: pitches, incertidumbre y las preguntas que
-temes). Ábrelo en Colab con el botón de arriba. Ahí corres un detector de espiral de disculpas
-que cuenta las palabras que se borran a sí mismas en tres entregas de muestra, y después pegas tu
-propia frase de incertidumbre y limitaciones y llevas su conteo de señales a cero. También
-construyes tu banco de cinco preguntas y ensayas la respuesta causal contra tu propio proyecto.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb12 — Poster delivery: pitches, uncertainty, and the
+questions you fear** (entrega del póster: pitches, incertidumbre y las preguntas que
+temes) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí corres un detector de espiral de disculpas que
+cuenta las palabras que se borran a sí mismas en tres entregas de muestra, y después
+pegas tu propia frase de incertidumbre y limitaciones y llevas su conteo de señales a
+cero. También construyes tu banco de cinco preguntas y ensayas la respuesta causal
+contra tu propio proyecto.
+
 
 ## Prompts de IA recomendados
 

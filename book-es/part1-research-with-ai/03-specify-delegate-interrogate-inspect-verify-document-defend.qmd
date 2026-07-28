@@ -2,7 +2,7 @@
 title: "Especificar, Delegar, Interrogar, Inspeccionar, Verificar, Documentar, Defender"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch03_specify_delegate_interrogate_inspect_verify_document_defend.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Cada vez que le entregas trabajo a una herramienta
 > de IA, decides cómo se enruta ese trabajo: qué fijas antes de preguntar, qué abres y
@@ -142,11 +142,19 @@ La herramienta hizo el tecleo. Tú hiciste la investigación.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb01 — Research in the age of AI:
-your arm, your RA, not your brain**. Ábrelo en Colab con el botón de arriba. Ahí
-corres el protocolo en vivo: atrapas una cita fabricada recuperándola por tu cuenta, y
-después atrapas un resumen seguro que exagera un número que los datos nunca tuvieron.
-Ambos son los pasos Inspeccionar y Verificar bajo presión real.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb01 — Research in the age of AI: your arm, your RA, not your
+brain** ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí corres el protocolo en vivo: atrapas una cita
+fabricada recuperándola por tu cuenta, y después atrapas un resumen seguro que exagera
+un número que los datos nunca tuvieron. Ambos son los pasos Inspeccionar y Verificar
+bajo presión real.
+
 
 ## Prompts de IA recomendados
 

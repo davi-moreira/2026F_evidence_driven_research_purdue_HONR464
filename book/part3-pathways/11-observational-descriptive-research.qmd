@@ -2,7 +2,7 @@
 title: "Observational Descriptive Research"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch11_observational_descriptive_research.ipynb){target="_blank"}
 
 > **The research decision.** Which group your observed data can honestly speak for,
 > and where exactly the line falls past which a description of your sample is no
@@ -79,12 +79,18 @@ box you named is the subject of this chapter.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb05 — Observational descriptive research**. Open it
-in Colab with the badge above and work the cells alongside this chapter. In the lab
-you treat a real voter file as a known world, draw random samples and one convenience
-channel from it, and watch the random draws cluster on the truth while the convenience
-channel misses the true mean age by nearly twelve years. Then you run a nonresponse
-stress test that shows a clean estimate drifting off the truth.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb05 —
+Observational descriptive research** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. In the lab you treat a real voter file as a known world, draw random samples
+and one convenience channel from it, and watch the random draws cluster on the truth
+while the convenience channel misses the true mean age by nearly twelve years. Then you
+run a nonresponse stress test that shows a clean estimate drifting off the truth.
+
 
 ## Recommended AI prompts
 

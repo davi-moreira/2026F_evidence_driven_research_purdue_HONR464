@@ -24,9 +24,29 @@ the Friday studio that day).
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m01_landscape.pdf`** *or* a shared Colab notebook link | The landscape below: your hook, your funnel with its three terms, at least two candidate problems and the one you chose (defended on importance, feasibility, contribution), your answerable question with a self-score, your compass declaration with the claim it permits and the claim it forbids, one uncertainty-and-limitations sentence, and your AI Research Ledger rows. This is the graded artifact. |
+| 2 | **EDR\|AI "It is your turn" — ch. 5, ch. 6** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.
+
+---
+
+## The Book Anchor — "It Is Your Turn"
+
+This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
+below as you develop the milestone, and complete each chapter's closing **"It
+is your turn"** section in its companion Colab notebook (or carry the same
+work inside your project notebook):
+
+- Ch. 5 — [From Curiosity to a Research Problem](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch05_from_curiosity_to_a_research_problem.ipynb)
+- Ch. 6 — [Descriptive, Predictive, and Causal Questions](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch06_descriptive_predictive_and_causal_questions.ipynb)
+
+These sections are the point of the reading, not extra work: across the
+semester, the book's 37 "It is your turn" sections chain into your final
+research chapter, so what you complete here is a draft piece of your final
+artifact. Include the completed sections in this milestone's submission (see
+the submission table above) and carry them forward in your Research Project
+Dossier.
 
 ---
 

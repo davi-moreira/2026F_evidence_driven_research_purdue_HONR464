@@ -2,7 +2,7 @@
 title: "Replicación y reproducción"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch32_replication_and_reproduction.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Con nada más que los archivos que un estudio
 > entregó, tuyos o de otra persona, decides si el número reportado de verdad vuelve a
@@ -96,13 +96,21 @@ es la menor amenaza a que exista o no un efecto.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb14 — replication and red-team of
-another researcher's package** (*replicación y red team, revisión adversaria, del
-paquete de otra persona*). Ábrelo en Colab con el botón de arriba. Ahí reproduces en
-frío el número titular de un experimento de campo real solo a partir de sus archivos, y
-después corres las mismas tres auditorías que acabas de ver: alineas cada afirmación
-escrita con la salida que la respalda, mueves el número con una especificación no
-revelada y ensanchas su intervalo respetando el agrupamiento que el texto ignoró.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb14 — replication and red-team of another researcher's
+package** (*replicación y red team, revisión adversaria, del paquete de otra persona*)
+([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí reproduces en frío el número titular de un
+experimento de campo real solo a partir de sus archivos, y después corres las mismas
+tres auditorías que acabas de ver: alineas cada afirmación escrita con la salida que la
+respalda, mueves el número con una especificación no revelada y ensanchas su intervalo
+respetando el agrupamiento que el texto ignoró.
+
 
 ## Prompts de IA recomendados
 

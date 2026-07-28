@@ -10,12 +10,14 @@ algo parecer inacabado, é por isso. Perguntas e sugestões são bem-vindas.
 **EDR|AI** — *Pesquisa Orientada por Evidências na Era da IA: Como Desenhar,
 Analisar, Verificar e Defender* (no original em inglês, *Evidence-Driven
 Research in the Age of AI*) — é um manual aberto de pesquisa para estudantes de
-graduação em economia, ciência política, negócios e biologia que querem
-transformar curiosidade em conhecimento crível, defensável e baseado em
-evidências, em um mundo no qual a IA consegue produzir quase tudo. Ele foi
-escrito primeiro para um seminário de pesquisa do Honors College da Purdue
-University, e é deliberadamente independente de instituição: qualquer docente ou
-estudante, em qualquer lugar, pode adotá-lo.
+graduação que aspiram a produzir pesquisa de alta qualidade com impacto
+científico. Ele guia você por como desenhar, analisar, verificar e defender
+pesquisa orientada por evidências em um mundo no qual a IA consegue produzir
+quase tudo: faça a seção **Agora é a sua vez** de cada capítulo e termine com
+um projeto de pesquisa seu. O livro foi escrito primeiro para um seminário de
+pesquisa do Honors College da Purdue University, e é deliberadamente
+independente de instituição: qualquer docente ou estudante, em qualquer lugar,
+pode adotá-lo.
 
 Sua única mensagem: *A IA é o seu braço e a sua assistente de pesquisa, não o seu
 cérebro.* Você vai dirigir ferramentas de IA pelo fluxo de trabalho
@@ -36,12 +38,16 @@ você precisa de curiosidade e da disciplina que o livro ensina.
 
 O livro *Research Design in the Social Sciences*, de Blair, Coppock e Humphreys
 (RDSS, gratuito em [book.declaredesign.org](https://book.declaredesign.org)), é o
-texto teórico que o EDR|AI traduz para o público de graduação. No curso original,
-o capítulo do EDR|AI é a leitura **obrigatória** de cada semana, e os capítulos
-correspondentes do RDSS são **recomendados** para aprofundamento. Cada capítulo
-nomeia uma decisão de pesquisa, desenvolve um exemplo, dá acesso a um laboratório
-no Colab, mostra uma falha de IA e como detectá-la, e devolve o trabalho para
-você.
+texto teórico que o EDR|AI traduz para o público de graduação. No curso
+companheiro, o capítulo do EDR|AI é a leitura **obrigatória** de cada semana, e
+os capítulos correspondentes do RDSS são **recomendados** para aprofundamento.
+Cada capítulo nomeia uma decisão de pesquisa, desenvolve um exemplo, mostra uma
+falha de IA e como detectá-la, e devolve o trabalho para você. Cada capítulo
+também tem o seu **próprio notebook companheiro no Colab** — o selo no topo do
+capítulo — no qual você roda o código do capítulo e completa a sua seção
+**Agora é a sua vez** sem sair do navegador. Os notebooks companheiros
+pertencem ao livro: você não precisa de curso, de plataforma, nem de conta além
+do Colab gratuito para trabalhar todos eles.
 
 O livro tem seis partes: pesquisa quando a IA faz "tudo"; da curiosidade ao
 desenho de pesquisa; as trilhas de pesquisa (observacional e experimental,
@@ -54,10 +60,14 @@ comunicando e defendendo a pesquisa; e a pesquisa depois da conferência.
 página para trocar a qualquer momento. A edição em inglês é a fonte oficial; as
 traduções são regeradas a partir dela conforme ela evolui.
 
-Se o seu curso adota o formato de sala de aula invertida que este livro apoia, a
-maior parte das aulas é conduzida por um estudante: o **Student Research Lead**
-(líder estudantil de pesquisa) do dia. O briefing desse líder fica no começo do
-notebook da aula correspondente, e o apêndice
-[O Student Research Lead](srl.qmd) reúne o formato, o ritmo de preparação e as
-expectativas em um só lugar. Para conhecer a pessoa por trás do livro, veja
-[Sobre o Autor](author.qmd).
+**Se você ensina.** O apêndice [Para instrutores](for-instructors.qmd)
+apresenta o curso companheiro do qual este livro nasceu e disponibiliza
+gratuitamente os seus materiais: os notebooks de laboratório de sala de aula, a
+cadeia de milestones que reúne as seções **Agora é a sua vez** dos capítulos em
+um artefato final de pesquisa, e o formato invertido no qual a maior parte das
+aulas é conduzida por um estudante — o **Student Research Lead** (líder
+estudantil de pesquisa) do dia, cujo formato, ritmo de preparação e
+expectativas estão no apêndice [O Student Research Lead](srl.qmd).
+
+Para conhecer a pessoa por trás do livro, vire a página:
+[Sobre o Autor](author.qmd) vem logo depois deste prefácio.

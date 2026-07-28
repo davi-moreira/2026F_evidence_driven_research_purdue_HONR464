@@ -2,7 +2,7 @@
 title: "Claim–Evidence Tables"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch26_claim_evidence_tables.ipynb){target="_blank"}
 
 > **The research decision.** For every claim your work makes in public, decide which
 > exact piece of evidence backs it, where that evidence lives, and what it does not
@@ -81,11 +81,17 @@ down. That table is the thing that lets your work survive a pointed finger.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb11 — Poster criticism + final poster lock**. Open
-it in Colab with the badge above and work the cells alongside this chapter. There
-you run the final-lock audit on a real poster: you trace each number to the cell
-that produced it, confirm each citation resolves to a source you opened yourself,
-and turn loose claims into locked, backed rows.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb11 —
+Poster criticism + final poster lock** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. There you run the final-lock audit on a real poster: you trace each number to
+the cell that produced it, confirm each citation resolves to a source you opened
+yourself, and turn loose claims into locked, backed rows.
+
 
 ## Recommended AI prompts
 

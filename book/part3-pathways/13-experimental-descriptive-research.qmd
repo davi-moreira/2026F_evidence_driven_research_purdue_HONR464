@@ -2,7 +2,7 @@
 title: "Experimental Descriptive Research"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch13_experimental_descriptive_research.ipynb){target="_blank"}
 
 > **The research decision.** A coin flip does not decide what kind of question you
 > asked. You decide whether your randomized study is **measuring** a property the
@@ -76,12 +76,19 @@ slot identically and logs impressions server-side.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb07 — Experimental descriptive research**. Open it in Colab with the
-badge above and work the cells alongside this chapter. In it you read a real survey
-experiment as a measurement of a settled attitude, recover a hidden prevalence with
-a list experiment that a direct question cannot reach, and then declare, diagnose,
-and redesign a measurement experiment so a number built mostly of demand and
-instrument artifacts falls back onto the construct it was supposed to report.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb07 —
+Experimental descriptive research** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. In it you read a real survey experiment as a measurement of a settled
+attitude, recover a hidden prevalence with a list experiment that a direct question
+cannot reach, and then declare, diagnose, and redesign a measurement experiment so a
+number built mostly of demand and instrument artifacts falls back onto the construct it
+was supposed to report.
+
 
 ## Recommended AI prompts
 

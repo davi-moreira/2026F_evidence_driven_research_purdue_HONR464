@@ -2,7 +2,7 @@
 title: "AI as Adversarial Reviewer"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch23_ai_as_adversarial_reviewer.ipynb){target="_blank"}
 
 > **The research decision.** When a reviewer hands you a list of flaws in your own
 > analysis, you decide **which flaws are real, and you decide it by running the one data
@@ -102,12 +102,18 @@ guarantee for every location your company runs.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb10, Share the Research and Attack the Analysis**.
-Open it in Colab with the badge above and work the cells alongside this chapter. You
-rerun one estimate across a pre-listed grid of eight specifications, watch
-specification searching manufacture a significant result from pure noise, run a
-placebo and a leave-one-out influence check, then hand your analysis to a human, one
-AI, and a panel of AI models and adjudicate every flag they raise against the data.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb10,
+Share the Research and Attack the Analysis** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. You rerun one estimate across a pre-listed grid of eight specifications, watch
+specification searching manufacture a significant result from pure noise, run a placebo
+and a leave-one-out influence check, then hand your analysis to a human, one AI, and a
+panel of AI models and adjudicate every flag they raise against the data.
+
 
 ## Recommended AI prompts
 

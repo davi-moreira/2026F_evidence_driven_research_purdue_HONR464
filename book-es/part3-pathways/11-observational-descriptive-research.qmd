@@ -2,7 +2,7 @@
 title: "Investigación observacional descriptiva"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch11_observational_descriptive_research.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Por cuál grupo pueden hablar honestamente tus
 > datos observados, y dónde cae exactamente la línea a partir de la cual una
@@ -86,14 +86,20 @@ mediste y la caja que nombraste es el tema de este capítulo.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb05 — Observational descriptive
-research** (*investigación observacional descriptiva*). Ábrelo en Colab con la
-insignia de arriba y trabaja las celdas junto con este capítulo. Allí tratarás un
-padrón electoral real como un mundo conocido, extraerás de él muestras aleatorias y un
-canal por conveniencia, y verás cómo las extracciones aleatorias se agrupan en la
-verdad mientras el canal por conveniencia falla la edad promedio real por casi doce
-años. Después correrás una prueba de estrés de no respuesta que muestra una estimación
-limpia alejándose de la verdad.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb05 — Observational descriptive research** (*investigación
+observacional descriptiva*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Allí tratarás un padrón electoral real como un mundo
+conocido, extraerás de él muestras aleatorias y un canal por conveniencia, y verás cómo
+las extracciones aleatorias se agrupan en la verdad mientras el canal por conveniencia
+falla la edad promedio real por casi doce años. Después correrás una prueba de estrés de
+no respuesta que muestra una estimación limpia alejándose de la verdad.
+
 
 ## Prompts de IA recomendados
 

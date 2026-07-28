@@ -2,7 +2,7 @@
 title: "Diagnósticos e Testes Negativos"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch22_diagnostics_and_negative_tests.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Você decide **de qual teste negativo o seu desenho de
 > pesquisa realmente precisa**, uma verificação apontada para um lugar onde a resposta
@@ -90,13 +90,20 @@ artefato e nada mais, e essa modéstia é o ponto.
 
 ## O laboratório no Colab
 
-O laboratório deste capítulo é o notebook **nb10 — Share the research + attack the
-analysis**. Abra no Colab pelo selo acima e trabalhe as células junto com este
-capítulo. Lá você roda um teste placebo sobre uma estimativa real de survey: você joga
-fora o agrupamento verdadeiro, o substitui por um rótulo de cara ou coroa 500 vezes e
-vê as diferenças falsas se aglomerarem bem juntinho no zero, enquanto o resultado real
-fica bem longe dessa nuvem. Depois uma verificação deixando um caso de fora mostra se
-um único ponto de dados está carregando em silêncio o achado inteiro.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb10 — Share the research + attack the analysis** ([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). Lá você roda um teste placebo sobre uma estimativa
+real de survey: você joga fora o agrupamento verdadeiro, o substitui por um rótulo de
+cara ou coroa 500 vezes e vê as diferenças falsas se aglomerarem bem juntinho no zero,
+enquanto o resultado real fica bem longe dessa nuvem. Depois uma verificação deixando um
+caso de fora mostra se um único ponto de dados está carregando em silêncio o achado
+inteiro.
+
 
 ## Prompts de IA recomendados
 

@@ -2,7 +2,7 @@
 title: "Mensuração e Operacionalização"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch18_measurement_and_operationalization.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Decida como transformar a ideia abstrata de que a sua
 > pergunta trata em um número concreto que você consegue registrar, repetir e
@@ -91,13 +91,19 @@ constructo para.
 
 ## O laboratório em Colab
 
-O laboratório deste capítulo é o notebook **nb05 — Observational descriptive
-research**. Abra no Colab pelo selo acima e trabalhe as células junto com este
-capítulo. Lá você constrói uma escada conceito → constructo → indicador para a sua
-própria medida principal, e vê na prática um indicador único achatar a realidade: a
-média de 4,43 de um survey cai em um vale entre dois picos, então a média não descreve
-quase nenhum respondente real. Um índice é uma operacionalização, e toda
-operacionalização esconde aquilo sobre o que ela tira média.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb05 — Observational descriptive research** ([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). Lá você constrói uma escada conceito → constructo
+→ indicador para a sua própria medida principal, e vê na prática um indicador único
+achatar a realidade: a média de 4,43 de um survey cai em um vale entre dois picos, então
+a média não descreve quase nenhum respondente real. Um índice é uma operacionalização, e
+toda operacionalização esconde aquilo sobre o que ela tira média.
+
 
 ## Prompts de IA recomendados
 

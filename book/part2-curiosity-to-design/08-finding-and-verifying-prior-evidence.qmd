@@ -2,7 +2,7 @@
 title: "Finding and Verifying Prior Evidence"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch08_finding_and_verifying_prior_evidence.ipynb){target="_blank"}
 
 > **The research decision.** Which of your candidate leads survive retrieval and
 > reading, and therefore become evidence you may build on, and whether the quiet
@@ -83,11 +83,17 @@ ringed by sources you opened yourself, is a gap you can defend.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb03 — Research builds on research: verified evidence
-+ real gaps**. Open it in Colab with the badge above and work the cells alongside this
-chapter. In the lab you run the retrieval-verification loop on your own claim and
-watch a simulation collapse a tidy pile of fifteen AI citations down to the handful
-that survive retrieval, then build an evidence map whose one empty square is your gap.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb03 —
+Research builds on research: verified evidence + real gaps** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. In the lab you run the retrieval-verification loop on your own claim and watch
+a simulation collapse a tidy pile of fifteen AI citations down to the handful that
+survive retrieval, then build an evidence map whose one empty square is your gap.
+
 
 ## Recommended AI prompts
 

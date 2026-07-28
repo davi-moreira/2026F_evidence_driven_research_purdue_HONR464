@@ -2,7 +2,7 @@
 title: "Investigación experimental causal"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch15_experimental_causal_research.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Decide si la manera en que se asignó el
 > tratamiento en tu estudio te permite leer una diferencia simple de resultados como
@@ -97,13 +97,20 @@ tu número. Nombrar esa cantidad es la decisión que habilita este capítulo.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb09 — Experimental causal
-research** (*investigación experimental causal*). Ábrelo en Colab con la insignia de
-arriba y trabaja las celdas junto con este capítulo. Ahí analizas un experimento de
-campo real para movilizar el voto, estimas el efecto como una diferencia de promedios
-y le pones alrededor un intervalo por inferencia de aleatorización. Luego ves cómo la
-atrición, el incumplimiento y el derrame doblan cada uno una estimación limpia, para
-que aprendas a nombrar qué cantidad sobrevive de verdad.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb09 — Experimental causal research** (*investigación
+experimental causal*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí analizas un experimento de campo real para
+movilizar el voto, estimas el efecto como una diferencia de promedios y le pones
+alrededor un intervalo por inferencia de aleatorización. Luego ves cómo la atrición, el
+incumplimiento y el derrame doblan cada uno una estimación limpia, para que aprendas a
+nombrar qué cantidad sobrevive de verdad.
+
 
 ## Prompts de IA recomendados
 

@@ -2,7 +2,7 @@
 title: "Modelo, Indagação, Estratégia de Dados e Estratégia de Resposta"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch09_model_inquiry_data_strategy_and_answer_strategy.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** As quatro partes do seu próprio desenho de pesquisa,
 > escritas antes de existir qualquer dado: um modelo do mundo, a única quantidade
@@ -78,11 +78,18 @@ a". Mesma pergunta, alinhamento quebrado.
 
 ## O laboratório em Colab
 
-O laboratório deste capítulo é o notebook **nb04 — The anatomy of a research design:
-MIDA + declare → diagnose → redesign**. Abra no Colab pelo selo acima e trabalhe as
-células junto com este capítulo. Lá você constrói um pequeno mundo simulado, escreve
-as quatro partes MIDA dele e vê o que acontece com a sua resposta quando uma
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb04 — The anatomy of a research design: MIDA + declare → diagnose →
+redesign** ([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). Lá você constrói um pequeno mundo simulado,
+escreve as quatro partes MIDA dele e vê o que acontece com a sua resposta quando uma
 estratégia de dados silenciosamente deixa de combinar com a indagação.
+
 
 ## Prompts de IA recomendados
 

@@ -2,7 +2,7 @@
 title: "Declaración de uso de IA e integridad de la investigación"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_conference_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch31_ai_disclosure_and_research_integrity.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Decide exactamente qué vas a decir sobre cada
 > herramienta de IA que usaste: cuál herramienta, en qué tarea y cómo comprobaste lo que
@@ -81,13 +81,19 @@ vence el año que viene.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb13 — Final conference preparation,
-presentation + reflection** (preparación final de la conferencia, presentación y reflexión).
-Ábrelo en Colab con el botón de arriba y trabaja las celdas junto con este capítulo. Ahí codificas
-como datos las preguntas sobre uso de IA que te hicieron y llenas el AI Research Ledger que se
-convierte en la declaración que defiendes. La Defensa de Salida final te pide nombrar qué
-delegaste en Gemini y la comprobación específica que decidió si lo aceptaste, lo cambiaste o lo
-rechazaste.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb13 — Final conference preparation, presentation +
+reflection** (preparación final de la conferencia, presentación y reflexión) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_conference_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí codificas como datos las preguntas sobre uso de
+IA que te hicieron y llenas el AI Research Ledger que se convierte en la declaración que
+defiendes. La Defensa de Salida final te pide nombrar qué delegaste en Gemini y la
+comprobación específica que decidió si lo aceptaste, lo cambiaste o lo rechazaste.
+
 
 ## Prompts de IA recomendados
 

@@ -2,7 +2,7 @@
 title: "Investigación final y portafolio de gestión de IA"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch37_final_research_and_ai_management_portfolio.ipynb){target="_blank"}
 
 > **La decisión de investigación.** De todo lo que produjo tu proyecto, decides qué
 > afirmaciones vas a respaldar en público, y armas el registro que muestra cómo dirigiste
@@ -91,13 +91,19 @@ acuerdo de tus revisores valiera más que un conteo de cabezas.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb16 — Managing multiple AI agents +
-the final defense** (*gestionar varios agentes de IA y la defensa final*). Ábrelo en
-Colab con el botón de arriba y trabaja las celdas junto a este capítulo. Ahí conectas un
-equipo trabajador-crítico, corres una simulación con semilla que muestra que cuatro
-revisores parecidos pasan por alto una falla real mucho más seguido que cuatro
-independientes, y después redactas las cuatro partes de tu propio portafolio y montas tu
-defensa de la evidencia.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb16 — Managing multiple AI agents + the final defense**
+(*gestionar varios agentes de IA y la defensa final*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí conectas un equipo trabajador-crítico, corres una
+simulación con semilla que muestra que cuatro revisores parecidos pasan por alto una
+falla real mucho más seguido que cuatro independientes, y después redactas las cuatro
+partes de tu propio portafolio y montas tu defensa de la evidencia.
+
 
 ## Prompts de IA recomendados
 

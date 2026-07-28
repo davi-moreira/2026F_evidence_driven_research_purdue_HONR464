@@ -2,7 +2,7 @@
 title: "Robustness and Sensitivity"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch21_robustness_and_sensitivity.ipynb){target="_blank"}
 
 > **The research decision.** You decide **the full list of robustness and sensitivity
 > checks you will run, and you decide it before you look at a single result**, then
@@ -92,12 +92,19 @@ manufacturing it.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb10 — Share the research + attack the analysis**.
-Open it in Colab with the badge above and work the cells alongside this chapter.
-There you rerun one headline gap across a pre-listed grid and read its specification
-curve, watch specification searching manufacture a "significant" result from data with
-no real effect, and run a placebo test and a leave-one-out influence check on seeded
-code so you feel the difference between a robust finding and a fragile one.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb10 —
+Share the research + attack the analysis** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. There you rerun one headline gap across a pre-listed grid and read its
+specification curve, watch specification searching manufacture a "significant" result
+from data with no real effect, and run a placebo test and a leave-one-out influence
+check on seeded code so you feel the difference between a robust finding and a fragile
+one.
+
 
 ## Recommended AI prompts
 

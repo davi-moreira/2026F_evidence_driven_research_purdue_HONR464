@@ -2,7 +2,7 @@
 title: "La investigación se construye sobre la investigación"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch07_research_builds_on_research.ipynb){target="_blank"}
 
 > **La decisión de investigación.** A qué conversación se suma tu pregunta, y cuáles
 > de las fuentes candidatas que te entrega una búsqueda o una IA valen la pena
@@ -91,13 +91,20 @@ abrir cada una.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb03 — Research builds on research:
-verified evidence + real gaps** (*la investigación se construye sobre la
-investigación: evidencia verificada y vacíos reales*). Ábrelo en Colab con la insignia
-de arriba y trabaja las celdas junto con este capítulo. Allí verás cómo un montón de
-quince citas generadas por IA se reduce a las pocas que sobreviven a la recuperación,
-construirás un mapa de evidencia en código y correrás el ciclo de recuperación y
-verificación sobre tu propia afirmación.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb03 — Research builds on research: verified evidence + real
+gaps** (*la investigación se construye sobre la investigación: evidencia verificada y
+vacíos reales*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Allí verás cómo un montón de quince citas generadas
+por IA se reduce a las pocas que sobreviven a la recuperación, construirás un mapa de
+evidencia en código y correrás el ciclo de recuperación y verificación sobre tu propia
+afirmación.
+
 
 ## Prompts de IA recomendados
 

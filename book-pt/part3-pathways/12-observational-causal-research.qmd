@@ -2,7 +2,7 @@
 title: "Pesquisa Observacional Causal"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_observational_causal_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch12_observational_causal_research.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Se a sua comparação observacional mereceu a palavra
 > *porque* ou tem de parar em *associado a*. Você resolve isso nomeando o único
@@ -103,15 +103,21 @@ fronteira é o que este capítulo ensina você a enxergar e a dizer.
 
 ## O laboratório em Colab
 
-O laboratório deste capítulo é o notebook **nb06 — Observational causal research**.
-Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. No
-laboratório você constrói um pequeno mundo em que *você* fixa o efeito verdadeiro do
-café, planta um confundidor oculto e vê uma comparação ingênua inflar um +1,0
-verdadeiro para cerca de +3,1, e depois recupera a verdade ajustando pelo confundidor
-que você consegue enxergar. Em seguida você analisa um experimento natural *real*, a
-loteria de vistos do Hajj de Clingingsmith, Khwaja e Kremer (RDSS cap. 16), como uma
-diferença de médias, e enuncia exatamente o que a atribuição como se aleatória dela
-permite alegar, e sobre quem.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb06 — Observational causal research** ([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_observational_causal_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). No laboratório você constrói um pequeno mundo em
+que *você* fixa o efeito verdadeiro do café, planta um confundidor oculto e vê uma
+comparação ingênua inflar um +1,0 verdadeiro para cerca de +3,1, e depois recupera a
+verdade ajustando pelo confundidor que você consegue enxergar. Em seguida você analisa
+um experimento natural *real*, a loteria de vistos do Hajj de Clingingsmith, Khwaja e
+Kremer (RDSS cap. 16), como uma diferença de médias, e enuncia exatamente o que a
+atribuição como se aleatória dela permite alegar, e sobre quem.
+
 
 ## Prompts de IA recomendados
 

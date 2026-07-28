@@ -2,7 +2,7 @@
 title: "Responsabilidad en la investigación y autoría intelectual"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch04_research_responsibility_and_intellectual_ownership.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Para cada oración que una IA ayudó a producir,
 > decides dos cosas: si vas a respaldarla personalmente como propia, y qué va a decir
@@ -92,12 +92,19 @@ autora o autor de la oración corregida. No lo habrías sido de la original.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb01**, "Research in the age of AI:
-your arm, your RA, not your brain". Ábrelo en Colab con el botón de arriba. Ahí
-clasificas tareas reales de investigación según qué tan seguro es delegarlas, atrapas
-una cita en vivo recuperándola por tu cuenta, y llenas tu primera fila del AI Research
-Ledger (tu registro de investigación con IA): el registro que convierte "lo revisé" en
-algo que puedes mostrar.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb01**, "Research in the age of AI: your arm, your RA, not
+your brain" ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí clasificas tareas reales de investigación según
+qué tan seguro es delegarlas, atrapas una cita en vivo recuperándola por tu cuenta, y
+llenas tu primera fila del AI Research Ledger (tu registro de investigación con IA): el
+registro que convierte "lo revisé" en algo que puedes mostrar.
+
 
 ## Prompts de IA recomendados
 

@@ -2,7 +2,7 @@
 title: "Recognizing False Confidence"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch24_recognizing_false_confidence.ipynb){target="_blank"}
 
 > **The research decision.** When a tool hands you a fluent, confident finding, you
 > decide **whether its confidence counts as evidence** (it never does) and **which
@@ -82,12 +82,18 @@ the inflated figure and the word "success."
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb01, Research in the Age of AI: Your Arm, Your RA,
-Not Your Brain**. Open it in Colab with the badge above and work the cells alongside
-this chapter. In the lab you run a small randomized study, meet a confident one-line
-summary that claims a large effect, and recompute the actual gap in the data to watch
-the summary overstate it. You then red-team a finding you wrote and catch an AI that
-praises your sentence instead of testing it.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb01,
+Research in the Age of AI: Your Arm, Your RA, Not Your Brain** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. In the lab you run a small randomized study, meet a confident one-line summary
+that claims a large effect, and recompute the actual gap in the data to watch the
+summary overstate it. You then red-team a finding you wrote and catch an AI that praises
+your sentence instead of testing it.
+
 
 ## Recommended AI prompts
 

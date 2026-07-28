@@ -2,7 +2,7 @@
 title: "Reconocer la falsa confianza"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch24_recognizing_false_confidence.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Cuando una herramienta te entrega un hallazgo fluido y
 > seguro, tú decides **si su confianza cuenta como evidencia** (nunca cuenta) y **qué
@@ -82,13 +82,20 @@ sitio a lo largo de un año", y descartas tanto la cifra inflada como la palabra
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb01, Investigar en la era de la IA: tu
-brazo, tu asistente, no tu cerebro**. Ábrelo en Colab con el botón de arriba y trabaja las
-celdas junto a este capítulo. En el laboratorio corres un pequeño estudio aleatorizado, te
-encuentras con un resumen seguro de una línea que afirma un efecto grande, y recalculas la
-brecha real en los datos para ver cómo el resumen la exagera. Después le haces red team
-(revisión adversaria) a un hallazgo que escribiste y atrapas a una IA que elogia tu oración en
-vez de ponerla a prueba.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb01, Investigar en la era de la IA: tu brazo, tu asistente,
+no tu cerebro** ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). En el laboratorio corres un pequeño estudio
+aleatorizado, te encuentras con un resumen seguro de una línea que afirma un efecto
+grande, y recalculas la brecha real en los datos para ver cómo el resumen la exagera.
+Después le haces red team (revisión adversaria) a un hallazgo que escribiste y atrapas a
+una IA que elogia tu oración en vez de ponerla a prueba.
+
 
 ## Prompts de IA recomendados
 

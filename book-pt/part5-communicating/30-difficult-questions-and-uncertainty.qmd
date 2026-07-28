@@ -2,7 +2,7 @@
 title: "Perguntas Difíceis e Incerteza"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch30_difficult_questions_and_uncertainty.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Decida, antes de alguém perguntar, como você vai dizer o
 > que o seu estudo não consegue mostrar. Você escreve a incerteza, os limites e as
@@ -76,12 +76,20 @@ pesquisa de verdade, em vez de um muro.
 
 ## O laboratório no Colab
 
-O laboratório deste capítulo é o notebook **nb12 — Poster delivery: pitches,
-uncertainty, and the questions you fear**. Abra-o no Colab pelo selo acima. Lá você roda
-um detector de espiral de desculpas que conta palavras de autoapagamento em três
-apresentações de exemplo, e depois cola a sua própria frase de incerteza e limitações e
-leva a contagem de sinalizações a zero. Você também monta o seu banco de cinco perguntas
-e ensaia a resposta causal contra o seu próprio projeto.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb12 — Poster delivery: pitches, uncertainty, and the questions you
+fear** ([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). Lá você roda um detector de espiral de desculpas
+que conta palavras de autoapagamento em três apresentações de exemplo, e depois cola a
+sua própria frase de incerteza e limitações e leva a contagem de sinalizações a zero.
+Você também monta o seu banco de cinco perguntas e ensaia a resposta causal contra o seu
+próprio projeto.
+
 
 ## Prompts de IA recomendados
 

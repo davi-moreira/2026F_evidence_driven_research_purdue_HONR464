@@ -2,7 +2,7 @@
 title: "Investigación experimental descriptiva"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch13_experimental_descriptive_research.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Una moneda al aire no decide qué tipo de
 > pregunta hiciste. Tú decides si tu estudio aleatorizado está **midiendo** una
@@ -84,14 +84,20 @@ lugares de forma idéntica y registra las impresiones del lado del servidor.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb07 — Experimental descriptive
-research** (*investigación experimental descriptiva*). Ábrelo en Colab con la
-insignia de arriba y trabaja las celdas junto con este capítulo. Ahí lees un
-experimento de encuesta real como la medición de una actitud ya asentada, recuperas
-una prevalencia oculta con un experimento de lista que una pregunta directa no
-alcanza, y luego declaras, diagnosticas y rediseñas un experimento de medición para
-que un número construido sobre todo con artefactos de demanda y de instrumento
-vuelva a caer sobre el constructo que debía reportar.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb07 — Experimental descriptive research** (*investigación
+experimental descriptiva*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí lees un experimento de encuesta real como la
+medición de una actitud ya asentada, recuperas una prevalencia oculta con un experimento
+de lista que una pregunta directa no alcanza, y luego declaras, diagnosticas y rediseñas
+un experimento de medición para que un número construido sobre todo con artefactos de
+demanda y de instrumento vuelva a caer sobre el constructo que debía reportar.
+
 
 ## Prompts de IA recomendados
 

@@ -2,7 +2,7 @@
 title: "Encontrar y verificar la evidencia previa"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch08_finding_and_verifying_prior_evidence.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Cuáles de tus pistas candidatas sobreviven a la
 > recuperación y a la lectura, y por lo tanto se vuelven evidencia sobre la que puedes
@@ -94,14 +94,20 @@ que abriste tú, es un vacío que puedes defender.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb03 — Research builds on research:
-verified evidence + real gaps** (*la investigación se construye sobre la
-investigación: evidencia verificada y vacíos reales*). Ábrelo en Colab con la insignia
-de arriba y trabaja las celdas junto con este capítulo. Allí correrás el ciclo de
-recuperación y verificación sobre tu propia afirmación y verás una simulación reducir
-un montón ordenado de quince citas generadas por IA al puñado que sobrevive a la
-recuperación, para después construir un mapa de evidencia cuyo único cuadro vacío es
-tu vacío.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb03 — Research builds on research: verified evidence + real
+gaps** (*la investigación se construye sobre la investigación: evidencia verificada y
+vacíos reales*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Allí correrás el ciclo de recuperación y verificación
+sobre tu propia afirmación y verás una simulación reducir un montón ordenado de quince
+citas generadas por IA al puñado que sobrevive a la recuperación, para después construir
+un mapa de evidencia cuyo único cuadro vacío es tu vacío.
+
 
 ## Prompts de IA recomendados
 

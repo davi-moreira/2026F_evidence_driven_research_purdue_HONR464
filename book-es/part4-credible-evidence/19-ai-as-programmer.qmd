@@ -2,7 +2,7 @@
 title: "La IA como programadora"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch19_ai_as_programmer.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Tú decides **qué cantidad debe calcular tu código y
 > sobre qué conjunto de casos**, y lo sigues decidiendo en cada vuelta del bucle, porque
@@ -107,14 +107,20 @@ investigación al decidir qué tenía permitido contar ese código.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb05 — Investigación descriptiva
-observacional**. Ábrelo en Colab con el botón de arriba. Ahí le entregas celdas a Gemini y
-le haces ganarse tu confianza: le pides que explique, línea por línea, por qué diez
-muestras aleatorias se agrupan alrededor de la media verdadera de un marco mientras un
-canal por conveniencia se aleja de ella casi doce años, y después confirmas el rango que
-cita contra los números que de verdad imprimió tu propia celda. Esa distancia entre la
-historia fluida de la herramienta y tu impresión es la lección de este capítulo, corriendo
-en vivo.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb05 — Investigación descriptiva observacional** ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí le entregas celdas a Gemini y le haces ganarse tu
+confianza: le pides que explique, línea por línea, por qué diez muestras aleatorias se
+agrupan alrededor de la media verdadera de un marco mientras un canal por conveniencia
+se aleja de ella casi doce años, y después confirmas el rango que cita contra los
+números que de verdad imprimió tu propia celda. Esa distancia entre la historia fluida
+de la herramienta y tu impresión es la lección de este capítulo, corriendo en vivo.
+
 
 ## Prompts de IA recomendados
 

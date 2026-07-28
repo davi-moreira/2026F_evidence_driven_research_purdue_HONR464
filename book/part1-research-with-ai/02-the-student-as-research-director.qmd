@@ -2,7 +2,7 @@
 title: "The Student as Research Director"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch02_the_student_as_research_director.ipynb){target="_blank"}
 
 > **The research decision.** Every task in your project belongs in one of three
 > buckets: safe to delegate, delegate then verify, or never delegate. Your decision
@@ -87,11 +87,18 @@ reader of someone else's guess.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb01 — Research in the age of AI: your arm, your RA — not your brain**. Open it in Colab with the
-badge above and work the cells alongside this chapter. In the "safe to delegate,
-verify first, or never delegate" practice you sort five real research tasks into the
-three buckets and defend each call, and at the Human-Only Checkpoint you close the AI
-and name, for your own project, two decisions you will never hand over.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb01 —
+Research in the age of AI: your arm, your RA — not your brain** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. In the "safe to delegate, verify first, or never delegate" practice you sort
+five real research tasks into the three buckets and defend each call, and at the
+Human-Only Checkpoint you close the AI and name, for your own project, two decisions you
+will never hand over.
+
 
 ## Recommended AI prompts
 

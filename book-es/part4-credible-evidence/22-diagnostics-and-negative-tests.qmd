@@ -2,7 +2,7 @@
 title: "Diagnósticos y pruebas negativas"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch22_diagnostics_and_negative_tests.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Tú decides **qué prueba negativa necesita de verdad tu
 > diseño**, una verificación apuntada a un lugar donde la respuesta tiene que ser cero, y
@@ -90,13 +90,21 @@ y nada más, y esa modestia es justamente el punto.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb10 — Comparte la investigación y ataca el
-análisis**. Ábrelo en Colab con el botón de arriba y trabaja las celdas junto a este
-capítulo. Ahí corres una prueba de placebo sobre una estimación real de encuesta: tiras a la
-basura la agrupación verdadera, la reemplazas 500 veces por una etiqueta al azar de moneda
-al aire, y ves cómo las brechas falsas se agrupan muy apretadas en cero mientras el
-resultado real queda muy afuera de esa nube. Después una verificación dejando uno fuera te
-muestra si un solo dato está cargando calladamente todo el hallazgo.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb10 — Comparte la investigación y ataca el análisis**
+([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí corres una prueba de placebo sobre una estimación
+real de encuesta: tiras a la basura la agrupación verdadera, la reemplazas 500 veces por
+una etiqueta al azar de moneda al aire, y ves cómo las brechas falsas se agrupan muy
+apretadas en cero mientras el resultado real queda muy afuera de esa nube. Después una
+verificación dejando uno fuera te muestra si un solo dato está cargando calladamente
+todo el hallazgo.
+
 
 ## Prompts de IA recomendados
 

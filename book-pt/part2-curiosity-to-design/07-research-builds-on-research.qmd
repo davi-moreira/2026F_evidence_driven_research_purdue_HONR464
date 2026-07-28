@@ -2,7 +2,7 @@
 title: "A Pesquisa se Constrói sobre a Pesquisa"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch07_research_builds_on_research.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** De qual conversa a sua pergunta vai participar, e quais
 > das fontes candidatas que uma busca ou uma IA entrega a você valem a perseguição.
@@ -91,11 +91,19 @@ porque reuniu as fontes ao redor dela, e porque está prestes a abrir cada uma.
 
 ## O laboratório em Colab
 
-O laboratório deste capítulo é o notebook **nb03 — Research builds on research:
-verified evidence + real gaps**. Abra no Colab pelo selo acima e trabalhe as células
-junto com este capítulo. No laboratório você vê uma pilha de quinze citações de IA
-encolher até as poucas que sobrevivem à recuperação, constrói um mapa de evidências
-em código e roda o ciclo de recuperação e verificação na sua própria alegação.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb03 — Research builds on research: verified evidence + real gaps**
+([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). No laboratório você vê uma pilha de quinze
+citações de IA encolher até as poucas que sobrevivem à recuperação, constrói um mapa de
+evidências em código e roda o ciclo de recuperação e verificação na sua própria
+alegação.
+
 
 ## Prompts de IA recomendados
 

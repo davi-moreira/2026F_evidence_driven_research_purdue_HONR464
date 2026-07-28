@@ -2,7 +2,7 @@
 title: "Paquetes de investigación abiertos y reutilizables"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch34_open_and_reusable_research_packages.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Decides qué entra en la cápsula de reproducibilidad
 > que viaja con tu nota de investigación, y defiendes la afirmación de que una persona
@@ -87,11 +87,18 @@ por qué tu cápsula la ejercita una persona, no solo un script.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb15 — From poster to research note**
-(*del póster a la nota de investigación*). Ábrelo en Colab con el botón de arriba. Ahí
-construyes `audit_capsule`, lo ves marcar los cinco pecados en un paquete roto a
-propósito y ninguno en uno limpio, y después pegas las líneas clave de tu propia cápsula
-y arreglas lo que detecte.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb15 — From poster to research note** (*del póster a la nota
+de investigación*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí construyes `audit_capsule`, lo ves marcar los
+cinco pecados en un paquete roto a propósito y ninguno en uno limpio, y después pegas
+las líneas clave de tu propia cápsula y arreglas lo que detecte.
+
 
 ## Prompts de IA recomendados
 

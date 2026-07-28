@@ -2,7 +2,7 @@
 title: "Diagnostics and Negative Tests"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch22_diagnostics_and_negative_tests.ipynb){target="_blank"}
 
 > **The research decision.** You decide **which negative test your design actually
 > needs**, a check aimed at a place where the answer must be zero, and you decide what
@@ -86,13 +86,19 @@ nothing more, and that modesty is the point.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb10 — Share the research + attack the analysis**.
-Open it in Colab with the badge above and work the cells alongside this chapter.
-There you run a placebo test on a real survey estimate: you throw away the true
-grouping, replace it with a coin-flip label 500 times, and watch the fake gaps
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb10 —
+Share the research + attack the analysis** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. There you run a placebo test on a real survey estimate: you throw away the
+true grouping, replace it with a coin-flip label 500 times, and watch the fake gaps
 cluster tightly at zero while the real result sits far outside that cloud. Then a
-leave-one-out check shows you whether a single data point is quietly carrying the
-whole finding.
+leave-one-out check shows you whether a single data point is quietly carrying the whole
+finding.
+
 
 ## Recommended AI prompts
 

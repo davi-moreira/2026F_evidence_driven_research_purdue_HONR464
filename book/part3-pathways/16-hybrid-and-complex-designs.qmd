@@ -2,7 +2,7 @@
 title: "Hybrid and Complex Designs"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch16_hybrid_and_complex_designs.ipynb){target="_blank"}
 
 > **The research decision.** When your answer has to be stitched together from
 > several measurements or stages, decide whether the combined design is still one
@@ -84,13 +84,19 @@ survey.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb04 — The anatomy of a research design: MIDA +
-declare → diagnose → redesign**. Open it in Colab with the badge above. There you build
-a small simulated world, **declare** a design as something a computer can run,
-**diagnose** it by simulating it thousands of times to read its bias, variance, and
-power, then **redesign** the one part that most improves it. The lab runs that loop on a
-causal social question; this chapter shows the same anatomy holds when the design is
-complex.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb04 — The
+anatomy of a research design: MIDA + declare → diagnose → redesign** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. There you build a small simulated world, **declare** a design as something a
+computer can run, **diagnose** it by simulating it thousands of times to read its bias,
+variance, and power, then **redesign** the one part that most improves it. The lab runs
+that loop on a causal social question; this chapter shows the same anatomy holds when
+the design is complex.
+
 
 ## Recommended AI prompts
 

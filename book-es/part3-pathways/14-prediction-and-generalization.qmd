@@ -2,7 +2,7 @@
 title: "Predicción y generalización"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch14_prediction_and_generalization.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Decide si tu pregunta es de verdad un
 > *pronóstico* sobre casos que nadie ha visto todavía y, si lo es, firma un contrato
@@ -96,13 +96,19 @@ generaliza ahí.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb08 — Prediction: generalizing to
-unseen cases** (*predicción: generalizar a casos no vistos*). Ábrelo en Colab con la
-insignia de arriba y trabaja las celdas junto con este capítulo. En el laboratorio
-firmas el contrato de cuatro partes sobre un conjunto de datos real, calificas
-primero una línea base honesta y luego *construyes una fuga a propósito* para que
-sientas subir un puntaje falso y aprendas a cazarlo por correlación y por momento
-antes de reentrenar limpio.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb08 — Prediction: generalizing to unseen cases**
+(*predicción: generalizar a casos no vistos*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). En el laboratorio firmas el contrato de cuatro partes
+sobre un conjunto de datos real, calificas primero una línea base honesta y luego
+*construyes una fuga a propósito* para que sientas subir un puntaje falso y aprendas a
+cazarlo por correlación y por momento antes de reentrenar limpio.
+
 
 ## Prompts de IA recomendados
 

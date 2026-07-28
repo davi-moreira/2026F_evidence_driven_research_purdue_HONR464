@@ -538,3 +538,45 @@ notebooks to content that serves the reader, and raise the claim standard from
 **Rationale:** make EDR|AI a book that stands entirely on its own — a manual
 any student anywhere can follow to a finished, defensible research artifact —
 while the course wraps around it, not the other way round.
+
+## Decision 25: Book/course separation — companion notebooks, For Instructors, book-anchored milestones (2026-07-28, fourth review round)
+
+**Decision:** Instructor ruling. The book and the course are DIFFERENT
+artifacts, coupled only through the book-first loop.
+
+1. **The book owns its notebooks:** every chapter has its own companion Colab
+   notebook (`notebooks/book/chNN_<slug>.ipynb`, plus `pt/` and `es/`
+   editions), generated from the chapter sources by
+   `scripts/build_book_notebooks.py` (rerun after any chapter edit). The
+   chapter badge opens the companion notebook — a reader runs the chapter's
+   code and completes its "It is your turn" section there, with no course.
+   Each chapter's "Colab laboratory" section introduces the companion notebook
+   first, then names the classroom lab (course notebook nbNN) as
+   companion-course material with an inline Colab link.
+2. **The course refers to the book:** (a) readings — EDR|AI chapters required,
+   RDSS recommended (unchanged); (b) course notebooks derive from the book's
+   chapters (lecture structure/dynamics unchanged); (c) every milestone brief
+   M0–M15 carries a "Book Anchor — It Is Your Turn" section + submission-table
+   row: students complete and submit the anchored chapters' "It is your turn"
+   sections (milestone NN anchors the chapters whose primary lab is
+   nb(NN+1); the 16 anchors partition all 37 chapters).
+3. **For Instructors appendix** (`for-instructors.qmd`, all three editions):
+   presents the companion course and makes its material available — the
+   two-artifacts model, the weekly SRL/studio architecture, the milestone
+   chain, and a table of all 16 course labs with their chapters and Colab
+   links.
+4. **Front matter:** About the Author moves from the appendices to directly
+   AFTER the Preface (unnumbered page); book author is "Davi Moreira" (no
+   title); new preface/description blurb — "an open research manual for
+   undergraduates who aspire to produce high-quality research with scientific
+   impact…" (domains list and "A work in progress" dropped from the blurb; the
+   in-preface work-in-progress callout stays).
+5. **Validator:** `validate_book_sync.py` now also requires each chapter to
+   link its companion notebook, the For-instructors appendix to exist in all
+   three editions and link all 16 labs, and PT/ES chapters to link their
+   localized companions.
+
+**Rationale:** a reader anywhere can complete the whole manual from the
+chapter badges alone, while the course consumes the book (readings, derived
+labs, milestone-collected "It is your turn" chains) and the book presents the
+course to instructors — separation with an explicit, validated interface.

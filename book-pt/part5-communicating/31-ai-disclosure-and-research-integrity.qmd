@@ -2,7 +2,7 @@
 title: "Declaração de Uso de IA e Integridade em Pesquisa"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_conference_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch31_ai_disclosure_and_research_integrity.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Decida exatamente o que você vai dizer sobre cada
 > ferramenta de IA que usou: qual ferramenta, em qual tarefa e como você checou o que
@@ -86,12 +86,20 @@ vem.
 
 ## O laboratório no Colab
 
-O laboratório deste capítulo é o notebook **nb13 — Final conference preparation,
-presentation + reflection**. Abra-o no Colab pelo selo acima e trabalhe as células junto
-com este capítulo. Lá você codifica como dados as perguntas sobre uso de IA que te
-fizeram e preenche o AI Research Ledger que vira a declaração que você defende. A Defesa
-de Saída (Exit Defense) final pede que você nomeie o que delegou ao Gemini e a checagem
-específica que decidiu se você aceitou, mudou ou rejeitou o resultado.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb13 — Final conference preparation, presentation + reflection**
+([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_conference_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). Lá você codifica como dados as perguntas sobre uso
+de IA que te fizeram e preenche o AI Research Ledger que vira a declaração que você
+defende. A Defesa de Saída (Exit Defense) final pede que você nomeie o que delegou ao
+Gemini e a checagem específica que decidiu se você aceitou, mudou ou rejeitou o
+resultado.
+
 
 ## Prompts de IA recomendados
 

@@ -2,7 +2,7 @@
 title: "Predição e Generalização"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch14_prediction_and_generalization.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Decida se a sua pergunta é mesmo uma *previsão* sobre
 > casos que ninguém viu ainda e, se for, assine um contrato de quatro partes antes de
@@ -92,12 +92,18 @@ padrão pode não valer, então a previsão ainda não generaliza para lá.
 
 ## O laboratório em Colab
 
-O laboratório deste capítulo é o notebook **nb08 — Prediction: generalizing to unseen
-cases**. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo.
-No laboratório você assina o contrato de quatro partes em um conjunto de dados real,
-pontua primeiro uma linha de base honesta e depois *constrói um vazamento de
-propósito*, para sentir uma pontuação falsa subir e aprender a caçá-la por correlação
-e por temporalidade antes de retreinar limpo.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb08 — Prediction: generalizing to unseen cases** ([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). No laboratório você assina o contrato de quatro
+partes em um conjunto de dados real, pontua primeiro uma linha de base honesta e depois
+*constrói um vazamento de propósito*, para sentir uma pontuação falsa subir e aprender a
+caçá-la por correlação e por temporalidade antes de retreinar limpo.
+
 
 ## Prompts de IA recomendados
 

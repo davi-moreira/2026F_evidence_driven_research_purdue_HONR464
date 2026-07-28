@@ -2,7 +2,7 @@
 title: "Declarar y diagnosticar un diseño de investigación"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch10_declaring_and_diagnosing_a_research_design.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Si el diseño que escribiste es lo bastante fuerte
 > para correrlo, decidido antes de recoger un solo dato: lo simulas, lees con qué
@@ -92,14 +92,21 @@ común podría explicarlo.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb04 — The anatomy of a research
-design: MIDA + declare → diagnose → redesign** (*la anatomía de un diseño de
-investigación: MIDA + declarar → diagnosticar → rediseñar*). Ábrelo en Colab con la
-insignia de arriba y trabaja las celdas junto con este capítulo. Allí declararás el
-diseño de mentoría del cuaderno en unas pocas líneas de Python, lo correrás miles de
-veces para leer con tus propios ojos su sesgo, su varianza y su potencia, y verás
-cómo un rediseño rescata un estudio justo pero sin potencia mientras su gemelo
-confundido sigue equivocado con cualquier tamaño de muestra.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb04 — The anatomy of a research design: MIDA + declare →
+diagnose → redesign** (*la anatomía de un diseño de investigación: MIDA + declarar →
+diagnosticar → rediseñar*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Allí declararás el diseño de mentoría del cuaderno en
+unas pocas líneas de Python, lo correrás miles de veces para leer con tus propios ojos
+su sesgo, su varianza y su potencia, y verás cómo un rediseño rescata un estudio justo
+pero sin potencia mientras su gemelo confundido sigue equivocado con cualquier tamaño de
+muestra.
+
 
 ## Prompts de IA recomendados
 

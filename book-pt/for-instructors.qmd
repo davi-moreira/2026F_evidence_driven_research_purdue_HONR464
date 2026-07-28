@@ -1,0 +1,101 @@
+---
+title: "Para Instrutores"
+---
+
+*O EDR|AI é um manual autocontido: um estudante trabalhando sozinho não
+precisa de nada além dos capítulos e dos seus notebooks companheiros no Colab.
+Este apêndice é para o outro leitor — o instrutor que quer ensinar com o
+livro. Ele apresenta o curso companheiro do qual o livro nasceu e disponibiliza
+gratuitamente todos os seus materiais.*
+
+## Dois artefatos, um só ciclo
+
+O livro e o curso são artefatos diferentes, e mantê-los distintos é o que
+permite que cada um viaje por conta própria.
+
+- **O livro** é o manual. Todo capítulo termina com uma seção **Agora é a sua
+  vez**, e todo capítulo tem o seu **próprio notebook companheiro no Colab** (o
+  selo no topo do capítulo), no qual o leitor roda o código do capítulo e
+  completa essa seção. Feitas em ordem, as 37 seções se encadeiam em um projeto
+  de pesquisa completo. Nada disso exige um curso.
+- **O curso** se organiza em volta do livro. Os seus **notebooks de
+  laboratório** semanais são artefatos de sala de aula derivados dos capítulos
+  do livro e moldados para aulas invertidas de 50 minutos; as suas **leituras**
+  são os capítulos do livro (obrigatórios) com os capítulos correspondentes do
+  RDSS recomendados; e os seus **milestones** reúnem as seções Agora é a sua
+  vez dos capítulos, de modo que cada etapa avaliada do projeto semestral do
+  estudante é um pedaço da cadeia do livro.
+
+Quando o livro muda, o material do curso é ressincronizado a partir dele: a
+edição em inglês do livro é a fonte oficial de tudo o que vem depois.
+
+## O curso companheiro
+
+A implementação de referência é **HONR 46400 — Evidence-Driven Research**, um
+seminário semestral do Honors College da Purdue University (três encontros de
+50 minutos por semana, projetos individuais de pesquisa, uma conferência
+pública de pôsteres e uma defesa oral de evidências). Tudo o que é voltado ao
+estudante é aberto:
+
+- **Site do curso:**
+  [davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/){target="_blank"}
+  (syllabus, calendário, material)
+- **Repositório:**
+  [github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464){target="_blank"}
+- **Bases de dados do curso, em um pacote:**
+  [honr46400_datasets.zip](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/notebooks/data/honr46400_datasets.zip)
+
+O ritmo semanal: as aulas de segunda e quarta-feira são conduzidas por um
+estudante — o **Student Research Lead** do dia, cujo sistema é o apêndice
+[O Student Research Lead](srl.qmd) — como investigações socráticas construídas
+sobre o notebook de laboratório da semana; a IA faz o trabalho pesado ao vivo,
+e toda alegação que ela produz é verificada antes de sobreviver. A sexta-feira
+é um **estúdio**: um quiz curto de recuperação, um stand-up de pesquisa e um
+sprint no **milestone** da semana, atacado por colegas e por uma bancada de
+revisores de IA (na Purdue, o GenAI Studio) antes da submissão.
+
+## Milestones: avaliando a cadeia do livro
+
+O projeto atravessa dezesseis milestones, **M0–M15**, um por semana, de um
+primeiro mapa de curiosidades a um capítulo final de pesquisa defendido. Cada
+brief de milestone nomeia a sua **âncora no livro**: os capítulos cujas seções
+Agora é a sua vez o estudante completa e submete naquela semana. Avaliar o
+milestone é, portanto, avaliar um trecho da cadeia do livro, trabalhado no
+projeto do próprio estudante. Os briefs são abertos no repositório:
+[`_research_project/2026Fall/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/_research_project/2026Fall){target="_blank"}.
+
+## Os notebooks de laboratório do curso
+
+Um laboratório por semana, nb01–nb16, cada um derivado dos capítulos que
+ensina. Eles são as contrapartes de sala de aula dos notebooks companheiros do
+livro — simulações mais ricas, briefings de SRL e estrutura de aula — e
+qualquer um deles abre no Colab gratuito.
+
+| Laboratório do curso (abre no Colab) | Derivado dos capítulos |
+|---|---|
+| [nb01 — Research in the age of AI: your arm, your RA, not your brain](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"} | 1–4, 24 |
+| [nb02 — From curiosity to a research problem](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb){target="_blank"} | 5, 6 |
+| [nb03 — Research builds on research](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb){target="_blank"} | 7, 8, 17 |
+| [nb04 — The anatomy of a research design](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb){target="_blank"} | 9, 10, 16 |
+| [nb05 — Observational descriptive research](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"} | 11, 18, 19 |
+| [nb06 — Observational causal research](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_observational_causal_student.ipynb){target="_blank"} | 12 |
+| [nb07 — Experimental descriptive research](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb){target="_blank"} | 13 |
+| [nb08 — Prediction: generalizing to unseen cases](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb){target="_blank"} | 14 |
+| [nb09 — Experimental causal research](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb){target="_blank"} | 15 |
+| [nb10 — Share the research + attack the analysis](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"} | 20–23 |
+| [nb11 — Poster criticism + final poster lock](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"} | 25–28 |
+| [nb12 — Poster delivery: pitches, uncertainty, difficult questions](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb){target="_blank"} | 29, 30 |
+| [nb13 — Final conference preparation, presentation + reflection](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_conference_student.ipynb){target="_blank"} | 31 |
+| [nb14 — Async module: replication + red-team of a peer's package](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb){target="_blank"} | 32 |
+| [nb15 — From poster to research note](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"} | 33, 34 |
+| [nb16 — Managing multiple AI agents + the final defense](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"} | 35–37 |
+
+## Adotar ou adaptar
+
+O livro é deliberadamente independente de instituição, e o material do curso
+acima é aberto: leve a arquitetura inteira, um único laboratório, ou apenas a
+sequência de leituras. O material do lado do instrutor — notebooks com
+soluções e guias de aula por encontro — fica atrás da aba Instructor do site
+do curso, protegida por senha; escreva ao autor para ter acesso
+([Sobre o Autor](author.qmd)). Se você ensinar com o EDR|AI, o autor vai
+gostar de verdade de saber como foi.

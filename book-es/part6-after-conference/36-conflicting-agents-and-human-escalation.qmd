@@ -2,7 +2,7 @@
 title: "Agentes en conflicto y escalamiento humano"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch36_conflicting_agents_and_human_escalation.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Tus bucles volvieron y no coinciden, o coinciden
 > demasiado bien. Decides cuál de tres cosas estás viendo (desacuerdo real, error
@@ -112,12 +112,18 @@ estaba ganada.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb16 — Managing multiple AI agents +
-the final defense** (*gestionar varios agentes de IA y la defensa final*). Ábrelo en
-Colab con el botón de arriba y trabaja las celdas junto a este capítulo. Ahí conectas un
-flujo trabajador-crítico sobre un borrador real, y después simulas dos equipos de cuatro
-revisores y ves cómo un punto ciego compartido convierte el acuerdo unánime en una
-confianza falsa que puedes medir.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb16 — Managing multiple AI agents + the final defense**
+(*gestionar varios agentes de IA y la defensa final*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí conectas un flujo trabajador-crítico sobre un
+borrador real, y después simulas dos equipos de cuatro revisores y ves cómo un punto
+ciego compartido convierte el acuerdo unánime en una confianza falsa que puedes medir.
+
 
 ## Prompts de IA recomendados
 

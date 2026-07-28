@@ -2,7 +2,7 @@
 title: "Responsabilidade na Pesquisa e Propriedade Intelectual"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch04_research_responsibility_and_intellectual_ownership.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Para cada frase que uma IA ajudou a produzir, você
 > decide duas coisas: se você vai pessoalmente sustentá-la como sua, e o que a sua
@@ -98,12 +98,19 @@ Você é dono da frase corrigida. Você não seria dono da original.
 
 ## O laboratório no Colab
 
-O laboratório deste capítulo é o notebook **nb01**, "Research in the age of AI:
-your arm, your RA, not your brain". Abra-o no Colab pelo selo acima. Lá você
-classifica tarefas de pesquisa reais pelo quanto elas podem ser delegadas com
-segurança, pega uma citação ao vivo recuperando-a você mesmo, e preenche a sua
-primeira linha do AI Research Ledger (o registro de uso de IA): o registro que
-transforma "eu conferi" em algo que você consegue mostrar.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb01**, "Research in the age of AI: your arm, your RA, not your
+brain" ([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). Lá você classifica tarefas de pesquisa reais pelo
+quanto elas podem ser delegadas com segurança, pega uma citação ao vivo recuperando-a
+você mesmo, e preenche a sua primeira linha do AI Research Ledger (o registro de uso de
+IA): o registro que transforma "eu conferi" em algo que você consegue mostrar.
+
 
 ## Prompts de IA recomendados
 

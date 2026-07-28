@@ -9,12 +9,13 @@ that is why. Questions and suggestions are welcome.
 
 **EDR|AI** — *Evidence-Driven Research in the Age of AI: How to Design,
 Analyze, Verify, and Defend* — is an open research manual for undergraduate
-students in economics, political science, business, and biology who want to
-turn curiosity into credible, defensible, evidence-based insight in a world
-where AI can produce almost everything. It was first written for an Honors
-research seminar at Purdue University, and it is deliberately
-institution-agnostic: any instructor or student, anywhere, is welcome to adopt
-it.
+students who aspire to produce high-quality research with scientific impact.
+It guides you through how to design, analyze, verify, and defend
+evidence-driven research in a world where AI can produce almost everything:
+work every chapter's **It is your turn** section and finish with a research
+project of your own. The book was first written for an Honors research seminar
+at Purdue University, and it is deliberately institution-agnostic: any
+instructor or student, anywhere, is welcome to adopt it.
 
 Its one message: *AI is your arm and your research assistant, not your brain.*
 You will direct AI tools through the
@@ -35,11 +36,15 @@ the book teaches.
 
 Blair, Coppock and Humphreys' *Research Design in the Social Sciences* (RDSS,
 free at [book.declaredesign.org](https://book.declaredesign.org)) is the theory
-text that EDR|AI translates for the undergraduate audience. In the original
+text that EDR|AI translates for the undergraduate audience. In the companion
 course the EDR|AI chapter is the **required** reading each week and the
 matching RDSS chapters are **recommended** for depth. Each chapter names a
-research decision, works an example, links a Colab lab, shows an AI failure and
-how to catch it, and hands the work back to you.
+research decision, works an example, shows an AI failure and how to catch it,
+and hands the work back to you. Each chapter also has its **own companion
+Colab notebook** — the badge at the top of the chapter — where you run the
+chapter's code and complete its **It is your turn** section without leaving
+the browser. The companion notebooks belong to the book: you need no course,
+no platform, and no account beyond free Colab to work all of them.
 
 The book has six parts: research when AI does "everything"; from curiosity to
 research design; the research pathways (observational and experimental,
@@ -52,9 +57,13 @@ communicating and defending research; and research after the conference.
 page to switch at any moment. The English edition is the source of truth; the
 translations are regenerated from it as it evolves.
 
-If your course runs the flipped format this book supports, most lectures are
-led by a student: the day's **Student Research Lead**. That lead's brief lives
-at the start of the corresponding lecture notebook, and the appendix
-[The Student Research Lead](srl.qmd) collects the format, the preparation
-cadence, and the expectations in one place. To meet the person behind the
-book, see [About the Author](author.qmd).
+**If you teach.** The appendix [For instructors](for-instructors.qmd) presents
+the companion course this book grew out of and makes its materials freely
+available: the classroom lab notebooks, the milestone chain that collects the
+chapters' **It is your turn** sections into a final research artifact, and the
+flipped format in which most lectures are led by a student — the day's
+**Student Research Lead**, whose format, preparation cadence, and expectations
+live in the appendix [The Student Research Lead](srl.qmd).
+
+To meet the person behind the book, turn the page:
+[About the Author](author.qmd) comes right after this preface.

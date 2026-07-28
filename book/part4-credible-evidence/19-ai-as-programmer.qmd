@@ -2,7 +2,7 @@
 title: "AI as Programmer"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch19_ai_as_programmer.ipynb){target="_blank"}
 
 > **The research decision.** You decide **which quantity your code must compute and
 > over which set of cases**, and you keep deciding it at every turn of the loop,
@@ -104,13 +104,19 @@ deciding what the code was allowed to count.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb05 — Observational descriptive research**. Open it
-in Colab with the badge above. There you hand cells to Gemini and make it earn your
-trust: you ask it to explain, line by line, why ten random samples huddle around a
-frame's true mean while one convenience channel misses it by nearly twelve years,
-then confirm the range it quotes against the numbers your own cell actually printed.
-That gap between the tool's fluent story and your printout is this chapter's lesson,
-run live.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb05 —
+Observational descriptive research** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. There you hand cells to Gemini and make it earn your trust: you ask it to
+explain, line by line, why ten random samples huddle around a frame's true mean while
+one convenience channel misses it by nearly twelve years, then confirm the range it
+quotes against the numbers your own cell actually printed. That gap between the tool's
+fluent story and your printout is this chapter's lesson, run live.
+
 
 ## Recommended AI prompts
 

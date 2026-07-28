@@ -2,7 +2,7 @@
 title: "La IA es tu brazo, no tu cerebro"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch01_ai_is_your_arm_not_your_brain.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Una herramienta de IA puede entregarte un dato,
 > un número, una cita o un párrafo terminado en segundos. Nada de eso es evidencia
@@ -119,12 +119,19 @@ modelo.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb01, Research in the Age of AI: Your
-Arm, Your RA, Not Your Brain**. Ábrelo en Colab con el botón de arriba y trabaja las
-celdas junto a este capítulo. En el laboratorio corres una pequeña simulación con
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb01, Research in the Age of AI: Your Arm, Your RA, Not Your
+Brain** ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). En el laboratorio corres una pequeña simulación con
 semilla que muestra por qué lo *segura que suena* una fuente no dice nada sobre si es
 real; después tomas un tema que te importe, le pides a una IA fuentes académicas y
 verificas cada una recuperándola por tu cuenta.
+
 
 ## Prompts de IA recomendados
 

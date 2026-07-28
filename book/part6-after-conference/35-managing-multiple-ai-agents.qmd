@@ -2,7 +2,7 @@
 title: "Managing Multiple AI Agents"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch35_managing_multiple_ai_agents.ipynb){target="_blank"}
 
 > **The research decision.** Running several AI agents means running several loops at
 > once. You decide how to split the work into scoped jobs, in what order those loops
@@ -107,12 +107,18 @@ when each loop had run long enough, and owned the claim that carries your name.
 
 ## The Colab laboratory
 
-This chapter's lab is notebook **nb16 — Managing multiple AI agents + the final
-defense**. Open it in Colab with the badge above and work the cells alongside this
-chapter. There you build the worker-critic workflow as a directed graph, read its
-critical-path depth and parallel width straight off the code, and watch the path grow
-by one round the moment you make a critic wait on another critic. Then you decompose
-your own draft into scoped roles and defend the wiring you chose.
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb16 —
+Managing multiple AI agents + the final defense** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. There you build the worker-critic workflow as a directed graph, read its
+critical-path depth and parallel width straight off the code, and watch the path grow by
+one round the moment you make a critic wait on another critic. Then you decompose your
+own draft into scoped roles and defend the wiring you chose.
+
 
 ## Recommended AI prompts
 

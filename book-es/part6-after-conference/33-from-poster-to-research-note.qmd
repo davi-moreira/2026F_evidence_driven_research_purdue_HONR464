@@ -2,7 +2,7 @@
 title: "Del póster a la nota de investigación"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch33_from_poster_to_research_note.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Cuando conviertes tu póster en una nota de
 > investigación escrita, decides qué hallazgo se ganó el titular y exactamente qué tan
@@ -98,12 +98,19 @@ La nota ahora es legible y ejecutable.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el cuaderno **nb15 — From poster to research note**
-(*del póster a la nota de investigación*). Ábrelo en Colab con el botón de arriba y
-trabaja las celdas junto a este capítulo. Ahí calificas la densidad de evidencia de dos
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb15 — From poster to research note** (*del póster a la nota
+de investigación*) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí calificas la densidad de evidencia de dos
 párrafos, construyes una jerarquía de resultados viendo cómo un intervalo estrecho se
 gana el primer lugar mientras un intervalo de cuarenta filas espera al fondo, y corres
 un auditor que caza las cinco maneras en que una cápsula de reproducibilidad se rompe.
+
 
 ## Prompts de IA recomendados
 

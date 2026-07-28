@@ -2,7 +2,7 @@
 title: "Pósteres de investigación"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch27_research_posters.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Una figura va a hablar por casi todo tu trabajo.
 > Decide si es honesta: si su impresión visual coincide con su número real, si su
@@ -88,12 +88,19 @@ intervalos que se traslapan". Los mismos datos, una imagen que ahora dice la ver
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb11 — Poster criticism + final poster
-lock** (crítica del póster y cierre final del póster). Ábrelo en Colab con el botón de
-arriba y trabaja las celdas junto con este capítulo. Ahí dibujas una figura principal de dos
-maneras a partir de los mismos números, ves cómo un eje truncado infla varias veces una
-brecha pequeña, y corres las cuatro auditorías más la de accesibilidad hasta que cada una
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb11 — Poster criticism + final poster lock** (crítica del
+póster y cierre final del póster) ([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí dibujas una figura principal de dos maneras a
+partir de los mismos números, ves cómo un eje truncado infla varias veces una brecha
+pequeña, y corres las cuatro auditorías más la de accesibilidad hasta que cada una
 nombre un golpe localizado y reparable en el tablero.
+
 
 ## Prompts de IA recomendados
 

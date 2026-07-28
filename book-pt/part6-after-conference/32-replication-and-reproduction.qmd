@@ -2,7 +2,7 @@
 title: "Replicação e Reprodução"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch32_replication_and_reproduction.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Sem nada além dos arquivos que um estudo entregou, seu ou
 > de outra pessoa, você decide se o número relatado de fato volta a aparecer. Depois,
@@ -96,12 +96,20 @@ terceiro: real, mas a menor ameaça à existência de um efeito.
 
 ## O laboratório no Colab
 
-O laboratório deste capítulo é o notebook **nb14 — replication and red-team of another
-researcher's package**. Abra no Colab pelo selo acima. Lá você reproduz a frio o número
-principal de um experimento de campo real, só a partir dos arquivos, e depois faz as
-mesmas três auditorias que você acabou de ver: alinha cada alegação escrita com a saída
-que a sustenta, move o número com uma especificação não divulgada e alarga o intervalo
-ao respeitar o agrupamento que o texto ignorou.
+Este capítulo tem o seu próprio **notebook companheiro** — abra-o no Colab pelo selo
+acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de
+trabalho **Agora é a sua vez**, para você completar a etapa do capítulo no seu projeto
+sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o
+notebook do curso **nb14 — replication and red-team of another researcher's package**
+([abrir no
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb)),
+parte do curso companheiro apresentado no apêndice [Para
+instrutores](../for-instructors.qmd). Lá você reproduz a frio o número principal de um
+experimento de campo real, só a partir dos arquivos, e depois faz as mesmas três
+auditorias que você acabou de ver: alinha cada alegação escrita com a saída que a
+sustenta, move o número com uma especificação não divulgada e alarga o intervalo ao
+respeitar o agrupamento que o texto ignorou.
+
 
 ## Prompts de IA recomendados
 

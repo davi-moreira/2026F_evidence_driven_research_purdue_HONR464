@@ -2,7 +2,7 @@
 title: "La IA como asistente analítico"
 ---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb){target="_blank"}
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch20_ai_as_analytical_assistant.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Tú decides **qué tareas analíticas corre el asistente
 > y qué números vuelves a derivar por tu cuenta** antes de que cualquiera de ellos llegue
@@ -107,12 +107,19 @@ confirmaban los datos.
 
 ## El laboratorio en Colab
 
-El laboratorio de este capítulo es el notebook **nb10 — Comparte la investigación y ataca
-el análisis**. Ábrelo en Colab con el botón de arriba y trabaja las celdas junto a este
-capítulo. Ahí le delegas a un asistente una rejilla de robustez real, una prueba de placebo
-y una verificación de influencia, y después arbitras a tres revisores de IA muy seguros de
-sí mismos contra los datos, y ves cómo dos de sus tres alertas se disuelven apenas una
-verificación las toca.
+Este capítulo tiene su propio **cuaderno de acompañamiento**: ábrelo en Colab con la
+insignia de arriba. El cuaderno reúne los prompts y el código del capítulo y termina con
+el espacio de trabajo **Ahora te toca a ti**, para que completes el paso del capítulo en
+tu proyecto sin salir de Colab. El laboratorio de aula completo detrás de este capítulo
+es el cuaderno del curso **nb10 — Comparte la investigación y ataca el análisis**
+([abrir en
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
+parte del curso de acompañamiento presentado en el apéndice [Para
+docentes](../for-instructors.qmd). Ahí le delegas a un asistente una rejilla de robustez
+real, una prueba de placebo y una verificación de influencia, y después arbitras a tres
+revisores de IA muy seguros de sí mismos contra los datos, y ves cómo dos de sus tres
+alertas se disuelven apenas una verificación las toca.
+
 
 ## Prompts de IA recomendados
 
