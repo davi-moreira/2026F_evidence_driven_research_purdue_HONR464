@@ -2,6 +2,12 @@
 title: "Predicción y generalización"
 ---
 
+::: {.callout-warning .review-pending title="En desarrollo"}
+Este capítulo forma parte de un libro en desarrollo activo y todavía
+no ha pasado por la revisión del autor. El contenido puede cambiar a
+medida que avanza la revisión.
+:::
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch14_prediction_and_generalization.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Decide si tu pregunta es de verdad un
@@ -93,6 +99,76 @@ vuelve a 0.88. Lo que decide es la prueba del momento, no la exactitud. Y como
 entrenaste en un lago poco profundo, nombras la frontera en voz alta: en un embalse
 profundo y frío el patrón puede no sostenerse, así que el pronóstico todavía no
 generaliza ahí.
+
+## Una simulación con semilla
+
+El capítulo afirma que un modelo puede volverse *mejor* en los datos que
+tiene mientras se vuelve *peor* en los casos que nunca vio. Míralo suceder.
+La semilla hace la corrida reproducible: el mismo código siempre extrae el
+mismo mundo. El código construye un mundo (una curva seno más ruido), extrae
+de ese mismo mundo un conjunto de entrenamiento y un conjunto de prueba,
+ajusta al entrenamiento polinomios de flexibilidad creciente, y evalúa cada
+ajuste en ambos conjuntos.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+def mundo(n):
+    x = rng.uniform(-3, 3, n)
+    return x, np.sin(1.5 * x) + rng.normal(0, .35, n)
+
+x_entren, y_entren = mundo(40)
+x_prueba, y_prueba = mundo(40)
+
+grados = np.arange(1, 13)
+err_entren, err_prueba = [], []
+for g in grados:
+    coefs = np.polyfit(x_entren, y_entren, g)
+    err_entren.append(np.sqrt(np.mean(
+        (np.polyval(coefs, x_entren) - y_entren) ** 2)))
+    err_prueba.append(np.sqrt(np.mean(
+        (np.polyval(coefs, x_prueba) - y_prueba) ** 2)))
+mejor = grados[int(np.argmin(err_prueba))]
+
+fig, ax = plt.subplots(figsize=(7.6, 3.4))
+ax.plot(grados, err_entren, color="#2a78d6", lw=2, marker="o", ms=4)
+ax.plot(grados, err_prueba, color="#eb6834", lw=2, marker="o", ms=4)
+ax.axvline(mejor, color="#333333", ls=":", lw=1)
+ax.text(grados[-1], err_entren[-1], "  Error de entrenamiento",
+        color="#2a78d6", fontsize=9, va="center")
+ax.text(grados[-1], err_prueba[-1], "  Error en el conjunto de prueba",
+        color="#eb6834", fontsize=9, va="center")
+ax.text(mejor + .1, max(err_prueba) * .95, "mejor honesto",
+        color="#333333", fontsize=9)
+ax.set_xlabel("Flexibilidad del modelo (grado del polinomio)")
+ax.set_ylabel("Error de predicción (RMSE)")
+ax.set_xlim(grados[0], grados[-1] + 3.4)
+plt.show()
+```
+
+![El error de entrenamiento solo baja a medida que crece la flexibilidad; el
+error de prueba toca fondo en el grado seis y luego
+sube.](../images/sims/ch14_overfitting.png){fig-alt="Gráfico de líneas. Una
+línea azul de error de entrenamiento baja de forma continua a medida que el
+grado del polinomio sube de 1 a 12. Una línea naranja de error de prueba baja
+con ella hasta el grado seis, marcado por una línea vertical punteada
+rotulada mejor honesto, y luego sube."}
+
+El error de entrenamiento azul solo baja: cada grado extra de flexibilidad
+deja que el modelo se curve más cerca de los puntos que ya vio. El error de
+prueba naranja baja mientras el modelo aprende señal, toca fondo cerca del
+grado seis, y sube cuando el modelo empieza a memorizar ruido. La línea
+punteada es el mejor honesto: la flexibilidad que elegiría una comprobación
+con datos apartados. Nada en la línea azul sola te diría que pares ahí; solo
+datos que el ajuste nunca tocó pueden decirlo, y ese es el argumento completo
+de la comprobación con datos apartados que exige esta ruta. En el cuaderno de
+acompañamiento, sube el ruido (el `.35`) y mira el mejor honesto moverse a la
+izquierda: cuanto más ruidoso el mundo, menos flexibilidad sostiene la
+verdad.
 
 ## El laboratorio en Colab
 

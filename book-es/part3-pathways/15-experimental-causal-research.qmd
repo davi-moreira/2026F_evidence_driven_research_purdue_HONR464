@@ -2,6 +2,12 @@
 title: "Investigación experimental causal"
 ---
 
+::: {.callout-warning .review-pending title="En desarrollo"}
+Este capítulo forma parte de un libro en desarrollo activo y todavía
+no ha pasado por la revisión del autor. El contenido puede cambiar a
+medida que avanza la revisión.
+:::
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch15_experimental_causal_research.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Decide si la manera en que se asignó el
@@ -94,6 +100,65 @@ recibieron un mensaje. El **derrame (spillover)** ocurre cuando el tratamiento l
 al brazo de control, como una paciente con mensajes que le recuerda a una amiga sin
 tratar. Cada uno deja intacta la moneda al aire y aun así cambia qué cantidad describe
 tu número. Nombrar esa cantidad es la decisión que habilita este capítulo.
+
+## Una simulación con semilla
+
+La aleatorización es una promesa sobre el *procedimiento*: asigna el
+tratamiento a cara o cruz, y la diferencia de medias queda correcta en
+promedio, con una oscilación que puedes cuantificar. El código de abajo
+mantiene esa promesa a la vista. Les da a 200 pacientes sus dos tasas
+potenciales de renovación de receta — sin recordatorio, y con un
+recordatorio que de verdad agrega 5 puntos porcentuales — y luego repite la
+asignación aleatoria 2.000 veces, registrando la estimación que cada
+asignación habría producido. La semilla hace que cada corrida reproduzca
+exactamente esta figura.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n, tau = 200, 5.0                            # efecto verdadero: +5 puntos
+y0 = np.clip(rng.normal(70, 12, n), 20, 99)  # tasa de renovación sin recordatorio
+y1 = np.clip(y0 + tau, 20, 100)              # tasa de renovación con recordatorio
+
+estimaciones = []
+for _ in range(2000):
+    tratados = rng.permutation(n) < n // 2   # una nueva asignación al azar
+    estimaciones.append(y1[tratados].mean() - y0[~tratados].mean())
+estimaciones = np.array(estimaciones)
+
+fig, ax = plt.subplots(figsize=(7.6, 3.2))
+ax.hist(estimaciones, bins=40, color="#2a78d6", edgecolor="white", lw=.4)
+ax.axvline(tau, color="#333333", ls="--", lw=1.2)
+ax.text(.02, .92, f"efecto verdadero = {tau:.1f} pp", color="#333333",
+        fontsize=9, transform=ax.transAxes)
+ax.text(.02, .82, f"media de las estimaciones = {estimaciones.mean():.1f} pp",
+        color="#2a78d6", fontsize=9, transform=ax.transAxes)
+ax.set_xlabel("Efecto estimado del recordatorio (puntos porcentuales)")
+ax.set_ylabel("Número de reasignaciones")
+plt.show()
+```
+
+![El histograma de 2.000 estimaciones reasignadas se centra en el efecto
+verdadero de 5 puntos.](../images/sims/ch15_randomization.png){fig-alt="Histograma
+de 2.000 efectos estimados en azul, aproximadamente en forma de campana desde
+cerca de 0 hasta 10 puntos porcentuales, con una línea vertical discontinua
+en el efecto verdadero de 5,0 y una anotación con la media de las
+estimaciones en 4,9."}
+
+El histograma es la **distribución de aleatorización**: cada estimación que
+este mismo experimento pudo haber producido bajo otro sorteo. Se centra casi
+exactamente en la verdad (media de las estimaciones 4,9 contra un 5,0
+verdadero), que es la promesa del "correcto en promedio", cumplida y visible.
+Pero corridas individuales cayeron entre unos 2 y 8 puntos. Tu único
+experimento realizado es una sola extracción de este histograma, y ese
+reparto es la incertidumbre que un informe honesto debe llevar junto a la
+estimación. En el cuaderno de acompañamiento, duplica `n` y mira el
+histograma estrecharse: el tamaño de muestra compra precisión — es la
+aleatorización la que compra verdad en promedio.
 
 ## El laboratorio en Colab
 

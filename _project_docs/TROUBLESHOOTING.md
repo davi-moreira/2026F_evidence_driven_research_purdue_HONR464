@@ -155,7 +155,8 @@ the password gate, or a diff shows cleartext instructor material staged.
 
 **Cause:** The page was hand-edited or committed without going through `quarto render`,
 so the `post-render` step (`protect_instructor_page.py`) never ran. That step AES-GCM
-encrypts the page behind the `eureka` gate and is idempotent.
+encrypts the page behind the password gate and is idempotent (password from
+env `HONR_INSTRUCTOR_PASSWORD` or gitignored `_production_kit/page_password.txt`).
 
 **Solutions:**
 1. Re-run the full render so `post-render` fires, then commit the encrypted page:

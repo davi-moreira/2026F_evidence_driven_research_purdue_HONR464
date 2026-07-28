@@ -2,6 +2,12 @@
 title: "Prediction and Generalization"
 ---
 
+::: {.callout-warning .review-pending title="Under development"}
+This chapter is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch14_prediction_and_generalization.ipynb){target="_blank"}
 
 > **The research decision.** Decide whether your question is truly a *forecast*
@@ -79,6 +85,72 @@ different label. Drop it, and the score falls back to 0.88. The timing test, not
 the accuracy, decides. And because you trained on one shallow lake, you name the
 boundary out loud: on a deep, cold reservoir the pattern may not hold, so the
 forecast does not yet generalize there.
+
+## A seeded simulation
+
+The chapter claims a model can get *better* at the data it has while getting
+*worse* at cases it has never seen. Watch it happen. The seed makes the run
+reproducible: the same code always draws the same world. The code builds one
+world (a sine curve plus noise), draws a training set and a holdout set from
+that same world, fits polynomials of growing flexibility to the training set,
+and scores every fit on both sets.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+def world(n):
+    x = rng.uniform(-3, 3, n)
+    return x, np.sin(1.5 * x) + rng.normal(0, .35, n)
+
+x_train, y_train = world(40)
+x_test, y_test = world(40)
+
+degrees = np.arange(1, 13)
+train_err, test_err = [], []
+for d in degrees:
+    coefs = np.polyfit(x_train, y_train, d)
+    train_err.append(np.sqrt(np.mean(
+        (np.polyval(coefs, x_train) - y_train) ** 2)))
+    test_err.append(np.sqrt(np.mean(
+        (np.polyval(coefs, x_test) - y_test) ** 2)))
+best = degrees[int(np.argmin(test_err))]
+
+fig, ax = plt.subplots(figsize=(7.6, 3.4))
+ax.plot(degrees, train_err, color="#2a78d6", lw=2, marker="o", ms=4)
+ax.plot(degrees, test_err, color="#eb6834", lw=2, marker="o", ms=4)
+ax.axvline(best, color="#333333", ls=":", lw=1)
+ax.text(degrees[-1], train_err[-1], "  Training error", color="#2a78d6",
+        fontsize=9, va="center")
+ax.text(degrees[-1], test_err[-1], "  Holdout error", color="#eb6834",
+        fontsize=9, va="center")
+ax.text(best + .1, max(test_err) * .95, "honest best", color="#333333",
+        fontsize=9)
+ax.set_xlabel("Model flexibility (polynomial degree)")
+ax.set_ylabel("Prediction error (RMSE)")
+ax.set_xlim(degrees[0], degrees[-1] + 3.4)
+plt.show()
+```
+
+![Training error only falls as flexibility grows; holdout error bottoms out
+at degree six and then climbs.](../images/sims/ch14_overfitting.png){fig-alt="Line
+chart. A blue training-error line falls steadily as polynomial degree rises
+from 1 to 12. An orange holdout-error line falls with it until degree six,
+marked by a dotted vertical line labeled honest best, then climbs."}
+
+The blue training error only falls: every extra degree of flexibility lets
+the model bend closer to points it has already seen. The orange holdout error
+falls while the model is learning signal, bottoms out near degree six, and
+climbs as the model starts memorizing noise. The dotted line is the honest
+best: the flexibility a held-out check would pick. Nothing in the blue line
+alone would ever tell you to stop there; only data the fit never touched can
+say that, which is the whole case for the held-out check this pathway
+requires. In the companion notebook, raise the noise (the `.35`) and watch
+the honest best move left: the noisier the world, the less flexibility the
+truth can support.
 
 ## The Colab laboratory
 

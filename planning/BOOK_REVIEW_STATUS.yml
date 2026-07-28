@@ -1,0 +1,46 @@
+# BOOK_REVIEW_STATUS — per-chapter instructor-review registry (D26).
+#
+# Every chapter carries an under-development banner until Davi reviews it.
+# When he reports a chapter reviewed: set reviewed: true and the date, run
+#   .venv/bin/python scripts/update_chapter_review_banners.py
+# and re-render the three books (site first, then book/, book-pt/, book-es/).
+# The script inserts the banner into every UNreviewed chapter in all three
+# editions and removes it from reviewed ones. Idempotent.
+chapters:
+  ch01: {reviewed: false, date: null}
+  ch02: {reviewed: false, date: null}
+  ch03: {reviewed: false, date: null}
+  ch04: {reviewed: false, date: null}
+  ch05: {reviewed: false, date: null}
+  ch06: {reviewed: false, date: null}
+  ch07: {reviewed: false, date: null}
+  ch08: {reviewed: false, date: null}
+  ch09: {reviewed: false, date: null}
+  ch10: {reviewed: false, date: null}
+  ch11: {reviewed: false, date: null}
+  ch12: {reviewed: false, date: null}
+  ch13: {reviewed: false, date: null}
+  ch14: {reviewed: false, date: null}
+  ch15: {reviewed: false, date: null}
+  ch16: {reviewed: false, date: null}
+  ch17: {reviewed: false, date: null}
+  ch18: {reviewed: false, date: null}
+  ch19: {reviewed: false, date: null}
+  ch20: {reviewed: false, date: null}
+  ch21: {reviewed: false, date: null}
+  ch22: {reviewed: false, date: null}
+  ch23: {reviewed: false, date: null}
+  ch24: {reviewed: false, date: null}
+  ch25: {reviewed: false, date: null}
+  ch26: {reviewed: false, date: null}
+  ch27: {reviewed: false, date: null}
+  ch28: {reviewed: false, date: null}
+  ch29: {reviewed: false, date: null}
+  ch30: {reviewed: false, date: null}
+  ch31: {reviewed: false, date: null}
+  ch32: {reviewed: false, date: null}
+  ch33: {reviewed: false, date: null}
+  ch34: {reviewed: false, date: null}
+  ch35: {reviewed: false, date: null}
+  ch36: {reviewed: false, date: null}
+  ch37: {reviewed: false, date: null}

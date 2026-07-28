@@ -2,6 +2,12 @@
 title: "Experimental Causal Research"
 ---
 
+::: {.callout-warning .review-pending title="Under development"}
+This chapter is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch15_experimental_causal_research.ipynb){target="_blank"}
 
 > **The research decision.** Decide whether the way treatment was assigned in your
@@ -85,6 +91,61 @@ treatment, like patients who changed numbers and never got a text. **Spillover**
 treatment reaching the control arm, like a texted patient reminding an untreated
 friend. Each one leaves the coin flip untouched and still changes which quantity
 your number describes. Naming that quantity is the decision this chapter equips.
+
+## A seeded simulation
+
+Randomization is a promise about *procedure*: assign treatment by coin flip,
+and the difference in means is right on average, with a wobble you can
+quantify. The code below keeps that promise visible. It gives 200 patients
+both of their potential refill rates — without a reminder, and with a
+reminder that truly adds 5 percentage points — then reruns the random
+assignment 2,000 times and records the estimate each assignment would have
+produced. The seed makes every rerun reproduce this exact figure.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n, tau = 200, 5.0                              # true effect: +5 points
+y0 = np.clip(rng.normal(70, 12, n), 20, 99)    # refill rate, no reminder
+y1 = np.clip(y0 + tau, 20, 100)                # refill rate, with reminder
+
+estimates = []
+for _ in range(2000):
+    treated = rng.permutation(n) < n // 2      # a fresh coin-flip assignment
+    estimates.append(y1[treated].mean() - y0[~treated].mean())
+estimates = np.array(estimates)
+
+fig, ax = plt.subplots(figsize=(7.6, 3.2))
+ax.hist(estimates, bins=40, color="#2a78d6", edgecolor="white", lw=.4)
+ax.axvline(tau, color="#333333", ls="--", lw=1.2)
+ax.text(.02, .92, f"true effect = {tau:.1f} pp", color="#333333",
+        fontsize=9, transform=ax.transAxes)
+ax.text(.02, .82, f"mean of estimates = {estimates.mean():.1f} pp",
+        color="#2a78d6", fontsize=9, transform=ax.transAxes)
+ax.set_xlabel("Estimated effect of the reminder (percentage points)")
+ax.set_ylabel("Number of re-randomizations")
+plt.show()
+```
+
+![The histogram of 2,000 re-randomized estimates centers on the true
+5-point effect.](../images/sims/ch15_randomization.png){fig-alt="Histogram of
+2,000 estimated effects in blue, roughly bell-shaped from about 0 to 10
+percentage points, with a dashed vertical line at the true effect of 5.0 and
+an annotation reading mean of estimates 4.9."}
+
+The histogram is the **randomization distribution**: every estimate this same
+trial could have produced under a different coin flip. It centers almost
+exactly on the truth (mean of estimates 4.9 against a true 5.0), which is the
+"right on average" promise, kept and visible. But individual runs landed
+anywhere from about 2 to 8 points. Your one realized trial is a single draw
+from this histogram, and that spread is the uncertainty an honest report must
+carry next to the estimate. In the companion notebook, double `n` and watch
+the histogram narrow: sample size buys precision — it is randomization that
+buys truth on average.
 
 ## The Colab laboratory
 

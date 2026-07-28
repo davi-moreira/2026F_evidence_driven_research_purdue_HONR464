@@ -213,7 +213,7 @@ Notebooks load data via `load_course_data()` (GitHub raw first, local fallback).
 
 ---
 
-## 🚨 CRITICAL RULE — The EDR|AI Book-First Loop  *(D20, amended D23/D24/D25)*
+## 🚨 CRITICAL RULE — The EDR|AI Book-First Loop  *(D20, amended D23/D24/D25/D26)*
 
 The course book is **EDR|AI** (*Evidence-Driven Research in the Age of AI*;
 `book/`, 37 chapters + Part I overview; front matter: Preface then About the
@@ -226,17 +226,35 @@ Author; appendices: SRL, Verification Guide, For Instructors; rendered to
    `scripts/build_book_notebooks.py` — rerun it after ANY chapter edit. The
    chapter's "Colab laboratory" section introduces the companion notebook,
    then names its primary course lab (nbNN) as companion-course material. The
-   **For Instructors** appendix presents and links all course material.
-2. **Notebook content must reflect the book** — course notebooks derive from
+   **For Instructors** appendix presents and links all course material; it is
+   **password-locked** (D26): each book render's post-render encrypts
+   `docs/book*/for-instructors.html`; the password lives ONLY in gitignored
+   `_production_kit/page_password.txt` (or env `HONR_INSTRUCTOR_PASSWORD`),
+   is requested by email, and must NEVER appear in committed files. The
+   generator also derives each chapter's **"It is your turn" RUBRIC** (D26):
+   a rubric cell in the companion notebook + `<edition>/_iyt-rubrics.qmd`
+   included in the locked appendix — never hand-edit those files.
+2. **Development banners + seeded simulations (D26).** Every chapter carries
+   a `.review-pending` warning banner until Davi reviews it: the registry is
+   `planning/BOOK_REVIEW_STATUS.yml`; when he reports a chapter reviewed,
+   flip its flag, run `scripts/update_chapter_review_banners.py`, re-render.
+   Whenever possible, chapters embed **seeded (SEED=464) simulation code that
+   visually presents the concept**: the chapter shows the code AND the
+   pre-generated figure (`scripts/build_book_sim_figures.py`, localized
+   labels, offline — no render-time execution); keep the chapter block and
+   the script in sync, and the code flows into the companion notebook
+   automatically. Shipped so far: ch11, ch14, ch15 — extend as chapters are
+   reviewed.
+3. **Notebook content must reflect the book** — course notebooks derive from
    the chapters; every notebook's wrap-up names its chapters; never edit a
    chapter's design content without checking its notebook (and vice versa).
    Every milestone brief M0–M15 carries a **Book Anchor**: students submit the
    anchored chapters' "It is your turn" sections (milestone NN ↔ nb(NN+1)'s
    chapters; the 16 anchors partition all 37 chapters).
-3. **The instructor manually reviews and updates the book**; the assistant then
+4. **The instructor manually reviews and updates the book**; the assistant then
    articulates and incorporates those reviews across the course material
    (notebooks, guides, site).
-4. **The book is institution-agnostic** (used outside Purdue): chapter bodies
+5. **The book is institution-agnostic** (used outside Purdue): chapter bodies
    say "your course platform", "AI reviewer bench", "your research conference";
    Purdue specifics appear only as parentheticals (the For Instructors appendix
    is where the companion course is presented). Reading model: EDR|AI chapters
@@ -248,14 +266,16 @@ Author; appendices: SRL, Verification Guide, For Instructors; rendered to
    bodies). Domains for examples: econ, political science, business, biology.
    The "AI can review AI — but the last decision is human" rule lives in the
    Verification Guide appendix and wherever chapters verify.
-5. **Translations:** `book-pt/` (PT-BR) and `book-es/` (ES) are generated from
+6. **Translations:** `book-pt/` (PT-BR) and `book-es/` (ES) are generated from
    the English edition (the source of truth) and must be resynchronized after
    any EN chapter edit. Render all three books on any book change:
 
 ```bash
-.venv/bin/python scripts/build_book_notebooks.py   # regenerate the 111 companion notebooks
-.venv/bin/python scripts/validate_book_sync.py     # chapter↔notebook links, both directions
-quarto render book/ && quarto render book-pt/ && quarto render book-es/
+.venv/bin/python scripts/build_book_notebooks.py          # 111 companion notebooks + rubrics
+.venv/bin/python scripts/update_chapter_review_banners.py # banners from BOOK_REVIEW_STATUS.yml
+.venv/bin/python scripts/build_book_sim_figures.py        # seeded sim figures (if sims changed)
+.venv/bin/python scripts/validate_book_sync.py            # chapter↔notebook links, both directions
+quarto render book/ && quarto render book-pt/ && quarto render book-es/  # AFTER the site render
 ```
 
 ---
@@ -280,7 +300,8 @@ the schedule badge.
 - Badges key off git-tracked student files (`scripts/update_schedule_badges.py`).
 - **After building, sync the private instructor repo:**
   `scripts/sync_instructor_repo.sh` (backs the password-gated Instructor tab;
-  page password `eureka` is a courtesy lock — the private repo is the real
+  the page password (gitignored `_production_kit/page_password.txt`; request
+  by email, never committed) is a courtesy lock — the private repo is the real
   protection).
 
 ---
@@ -349,7 +370,17 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 5.4 — fourth instructor review round (2026-07-28, DECISIONS.md
+**Version:** 5.5 — fifth instructor review round (2026-07-28, DECISIONS.md
+D26): For-Instructors appendix password-locked in all three editions
+(post-render encryption; password only in gitignored
+`_production_kit/page_password.txt`, requested by email, scrubbed from all
+committed docs); auto-derived **"It is your turn" rubrics** in every companion
+notebook + the locked appendix (`_iyt-rubrics.qmd`); under-development
+banners on all 37 chapters driven by `planning/BOOK_REVIEW_STATUS.yml` +
+`update_chapter_review_banners.py`; standing seeded-simulation content rule
+with first tranche ch11/ch14/ch15 (`build_book_sim_figures.py`); book-funding
+search tracked as private course task #17. (5.4 — fourth instructor review
+round (2026-07-28, DECISIONS.md
 D25): book/course SEPARATION — every chapter gets its OWN companion Colab
 notebook (`notebooks/book/`, EN/PT/ES, built by
 `scripts/build_book_notebooks.py`; chapter badges repointed; "Colab
@@ -385,5 +416,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

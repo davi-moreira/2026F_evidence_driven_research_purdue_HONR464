@@ -2,6 +2,12 @@
 title: "Pesquisa Causal Experimental"
 ---
 
+::: {.callout-warning .review-pending title="Em desenvolvimento"}
+Este capítulo faz parte de um livro em desenvolvimento ativo e ainda
+não passou pela revisão do autor. O conteúdo pode mudar conforme a
+revisão avança.
+:::
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch15_experimental_causal_research.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Decida se a forma como o tratamento foi atribuído no seu
@@ -92,6 +98,63 @@ quando o tratamento chega ao braço de controle, como um paciente que recebeu as
 mensagens lembrando um amigo não tratado. Cada um deles deixa o sorteio intacto e
 ainda assim muda qual quantidade o seu número descreve. Nomear essa quantidade é a
 decisão que este capítulo prepara.
+
+## Uma simulação com semente
+
+A aleatorização é uma promessa sobre o *procedimento*: atribua o tratamento
+por sorteio, e a diferença de médias fica certa em média, com uma oscilação
+que você pode quantificar. O código abaixo mantém essa promessa visível. Ele
+dá a 200 pacientes as suas duas taxas potenciais de renovação de receita —
+sem lembrete, e com um lembrete que de fato acrescenta 5 pontos percentuais —
+e então refaz o sorteio da atribuição 2.000 vezes, registrando a estimativa
+que cada atribuição teria produzido. A semente faz cada execução reproduzir
+exatamente esta figura.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n, tau = 200, 5.0                            # efeito verdadeiro: +5 pontos
+y0 = np.clip(rng.normal(70, 12, n), 20, 99)  # taxa de renovação sem lembrete
+y1 = np.clip(y0 + tau, 20, 100)              # taxa de renovação com lembrete
+
+estimativas = []
+for _ in range(2000):
+    tratados = rng.permutation(n) < n // 2   # um novo sorteio da atribuição
+    estimativas.append(y1[tratados].mean() - y0[~tratados].mean())
+estimativas = np.array(estimativas)
+
+fig, ax = plt.subplots(figsize=(7.6, 3.2))
+ax.hist(estimativas, bins=40, color="#2a78d6", edgecolor="white", lw=.4)
+ax.axvline(tau, color="#333333", ls="--", lw=1.2)
+ax.text(.02, .92, f"efeito verdadeiro = {tau:.1f} pp", color="#333333",
+        fontsize=9, transform=ax.transAxes)
+ax.text(.02, .82, f"média das estimativas = {estimativas.mean():.1f} pp",
+        color="#2a78d6", fontsize=9, transform=ax.transAxes)
+ax.set_xlabel("Efeito estimado do lembrete (pontos percentuais)")
+ax.set_ylabel("Número de re-sorteios")
+plt.show()
+```
+
+![O histograma de 2.000 estimativas re-sorteadas se centra no efeito
+verdadeiro de 5 pontos.](../images/sims/ch15_randomization.png){fig-alt="Histograma
+de 2.000 efeitos estimados em azul, aproximadamente em forma de sino de cerca
+de 0 a 10 pontos percentuais, com uma linha vertical tracejada no efeito
+verdadeiro de 5,0 e uma anotação com a média das estimativas em 4,9."}
+
+O histograma é a **distribuição de aleatorização**: cada estimativa que este
+mesmo experimento poderia ter produzido sob outro sorteio. Ele se centra
+quase exatamente na verdade (média das estimativas 4,9 contra 5,0
+verdadeiro), que é a promessa do "certo em média", cumprida e visível. Mas
+execuções individuais caíram entre cerca de 2 e 8 pontos. O seu único
+experimento realizado é um único sorteio deste histograma, e esse
+espalhamento é a incerteza que um relato honesto precisa carregar ao lado da
+estimativa. No notebook companheiro, dobre `n` e veja o histograma estreitar:
+tamanho de amostra compra precisão — é a aleatorização que compra verdade em
+média.
 
 ## O laboratório em Colab
 

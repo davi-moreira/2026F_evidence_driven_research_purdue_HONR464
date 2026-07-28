@@ -2,6 +2,12 @@
 title: "Investigación observacional descriptiva"
 ---
 
+::: {.callout-warning .review-pending title="En desarrollo"}
+Este capítulo forma parte de un libro en desarrollo activo y todavía
+no ha pasado por la revisión del autor. El contenido puede cambiar a
+medida que avanza la revisión.
+:::
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/es/ch11_observational_descriptive_research.ipynb){target="_blank"}
 
 > **La decisión de investigación.** Por cuál grupo pueden hablar honestamente tus
@@ -83,6 +89,67 @@ facturación es del 2%»*. El ascenso silencioso, la oración que hay que rechaz
 todas las personas facturadas es casi con certeza más alta, porque los clientes más
 golpeados ya se habían ido cuando salió la encuesta. Esa brecha entre la caja que
 mediste y la caja que nombraste es el tema de este capítulo.
+
+## Una simulación con semilla
+
+El ejemplo resuelto sostiene que *a quién alcanzas* inclina *lo que mides*, y
+que una muestra más grande no arregla la inclinación. Puedes verlo suceder.
+Una **semilla** (seed) es un punto de partida fijo para el generador de
+números aleatorios: la misma semilla siempre reproduce las mismas
+extracciones, así que la figura de abajo es exactamente lo que obtendrás al
+correr este código en el cuaderno de acompañamiento. El código construye una
+población de 100.000 personas cuya edad media verdadera se conoce por
+construcción, extrae diez muestras aleatorias honestas de 500, y luego extrae
+una muestra por conveniencia del mismo tamaño a través de un canal que
+alcanza sobre todo a personas más jóvenes.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+poblacion = np.clip(rng.normal(49, 17, size=100_000), 18, 90)
+verdad = poblacion.mean()
+
+medias_aleatorias = [rng.choice(poblacion, 500, replace=False).mean()
+                     for _ in range(10)]
+
+pesos = np.exp(-(poblacion - 25) ** 2 / (2 * 12 ** 2))  # joven = más probable
+conveniencia = rng.choice(poblacion, 500, replace=False,
+                          p=pesos / pesos.sum())
+
+fig, ax = plt.subplots(figsize=(7.6, 2.9))
+ax.scatter(medias_aleatorias, np.ones(10), s=60, color="#2a78d6", zorder=3)
+ax.scatter([conveniencia.mean()], [0], s=60, color="#eb6834", zorder=3)
+ax.axvline(verdad, color="#333333", ls="--", lw=1.2)
+ax.text(verdad + .5, 1.55, f"media verdadera = {verdad:.1f}",
+        color="#333333", fontsize=9)
+ax.set_yticks([0, 1], ["Canal por\nconveniencia (n = 500)",
+                       "Muestras aleatorias\n(n = 500)"], fontsize=9)
+ax.set_xlabel("Edad media de la muestra (años)")
+ax.set_ylim(-.7, 1.9)
+plt.show()
+```
+
+![Diez medias de muestras aleatorias se agrupan alrededor de la edad media
+verdadera; la única media del canal por conveniencia queda muy por
+debajo.](../images/sims/ch11_sampling_channels.png){fig-alt="Gráfico de
+puntos. Diez medias azules de muestras aleatorias se agrupan entre
+aproximadamente 47 y 51 alrededor de una línea discontinua en la media
+verdadera de 49,1. Una única media naranja del canal por conveniencia queda
+sola cerca de 33."}
+
+Lee la figura como la leería una revisora. Las diez muestras aleatorias nunca
+coinciden exactamente: sus medias se reparten entre 47 y 51. Pero se agrupan
+alrededor de la verdad, y ese reparto es incertidumbre honesta y
+cuantificable. El canal por conveniencia tiene exactamente el mismo tamaño de
+muestra, y falla la media verdadera por unos dieciséis años. Nada en el punto
+mismo te avisa; se ve tan seguro como cualquier otro. Solo el *procedimiento*
+de muestreo te dice qué clase de punto tienes. En el cuaderno de
+acompañamiento, mueve el centro del canal (el `25` dentro de `pesos`) y corre
+de nuevo: la inclinación sigue al canal, nunca al tamaño de la muestra.
 
 ## El laboratorio en Colab
 

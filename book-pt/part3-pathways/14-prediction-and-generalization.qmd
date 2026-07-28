@@ -2,6 +2,12 @@
 title: "Predição e Generalização"
 ---
 
+::: {.callout-warning .review-pending title="Em desenvolvimento"}
+Este capítulo faz parte de um livro em desenvolvimento ativo e ainda
+não passou pela revisão do autor. O conteúdo pode mudar conforme a
+revisão avança.
+:::
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch14_prediction_and_generalization.ipynb){target="_blank"}
 
 > **A decisão de pesquisa.** Decida se a sua pergunta é mesmo uma *previsão* sobre
@@ -89,6 +95,74 @@ prevendo. É o desfecho usando outro crachá. Tire a variável e a pontuação v
 0,88. Quem decide é o teste de temporalidade, não a acurácia. E, como você treinou em
 um lago raso, você nomeia a fronteira em voz alta: em um reservatório fundo e frio o
 padrão pode não valer, então a previsão ainda não generaliza para lá.
+
+## Uma simulação com semente
+
+O capítulo afirma que um modelo pode ficar *melhor* nos dados que ele tem
+enquanto fica *pior* nos casos que nunca viu. Veja isso acontecer. A semente
+torna a execução reprodutível: o mesmo código sempre sorteia o mesmo mundo. O
+código constrói um mundo (uma curva seno mais ruído), sorteia dele um
+conjunto de treino e um conjunto de teste, ajusta ao treino polinômios de
+flexibilidade crescente, e avalia cada ajuste nos dois conjuntos.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+def mundo(n):
+    x = rng.uniform(-3, 3, n)
+    return x, np.sin(1.5 * x) + rng.normal(0, .35, n)
+
+x_treino, y_treino = mundo(40)
+x_teste, y_teste = mundo(40)
+
+graus = np.arange(1, 13)
+erro_treino, erro_teste = [], []
+for g in graus:
+    coefs = np.polyfit(x_treino, y_treino, g)
+    erro_treino.append(np.sqrt(np.mean(
+        (np.polyval(coefs, x_treino) - y_treino) ** 2)))
+    erro_teste.append(np.sqrt(np.mean(
+        (np.polyval(coefs, x_teste) - y_teste) ** 2)))
+melhor = graus[int(np.argmin(erro_teste))]
+
+fig, ax = plt.subplots(figsize=(7.6, 3.4))
+ax.plot(graus, erro_treino, color="#2a78d6", lw=2, marker="o", ms=4)
+ax.plot(graus, erro_teste, color="#eb6834", lw=2, marker="o", ms=4)
+ax.axvline(melhor, color="#333333", ls=":", lw=1)
+ax.text(graus[-1], erro_treino[-1], "  Erro de treino", color="#2a78d6",
+        fontsize=9, va="center")
+ax.text(graus[-1], erro_teste[-1], "  Erro no conjunto de teste",
+        color="#eb6834", fontsize=9, va="center")
+ax.text(melhor + .1, max(erro_teste) * .95, "melhor honesto",
+        color="#333333", fontsize=9)
+ax.set_xlabel("Flexibilidade do modelo (grau do polinômio)")
+ax.set_ylabel("Erro de predição (RMSE)")
+ax.set_xlim(graus[0], graus[-1] + 3.4)
+plt.show()
+```
+
+![O erro de treino só cai conforme a flexibilidade cresce; o erro de teste
+atinge o mínimo no grau seis e depois
+sobe.](../images/sims/ch14_overfitting.png){fig-alt="Gráfico de linhas. Uma
+linha azul de erro de treino cai continuamente conforme o grau do polinômio
+sobe de 1 a 12. Uma linha laranja de erro de teste cai junto até o grau seis,
+marcado por uma linha vertical pontilhada rotulada melhor honesto, e depois
+sobe."}
+
+O erro de treino azul só cai: cada grau extra de flexibilidade deixa o modelo
+se curvar mais para perto dos pontos que ele já viu. O erro de teste laranja
+cai enquanto o modelo aprende sinal, atinge o mínimo perto do grau seis, e
+sobe quando o modelo começa a memorizar ruído. A linha pontilhada é o melhor
+honesto: a flexibilidade que uma checagem em dados separados escolheria. Nada
+na linha azul sozinha diria para você parar ali; só dados que o ajuste nunca
+tocou podem dizer isso, e esse é o argumento inteiro da checagem em dados
+separados que esta trilha exige. No notebook companheiro, aumente o ruído (o
+`.35`) e veja o melhor honesto se mover para a esquerda: quanto mais ruidoso
+o mundo, menos flexibilidade a verdade sustenta.
 
 ## O laboratório em Colab
 

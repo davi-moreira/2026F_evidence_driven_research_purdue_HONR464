@@ -2,9 +2,10 @@
 
 **Read this first on resume.** The Fall 2026 course was rebuilt to the
 instructor's master-prompt architecture, revised in THREE instructor review
-rounds on 2026-07-27, then a FOURTH round on 2026-07-28 (D25: book/course
-separation). Governing decisions: `_project_docs/DECISIONS.md` **D17–D25**;
-operating manual: `CLAUDE.md` **v5.4**. v1 preserved at git tag
+rounds on 2026-07-27, then FOURTH and FIFTH rounds on 2026-07-28 (D25: book/course separation;
+D26: locked instructor area, rubrics, review banners, simulations).
+Governing decisions: `_project_docs/DECISIONS.md` **D17–D26**; operating
+manual: `CLAUDE.md` **v5.5**. v1 preserved at git tag
 `v1-compass-build`; v1 notebook sources archived in
 `_production_kit/nb_sources_v1/`.
 
@@ -35,6 +36,17 @@ operating manual: `CLAUDE.md` **v5.4**. v1 preserved at git tag
 > "It is your turn" sections (the 16 anchors partition all 37 chapters);
 > About the Author moved right after the Preface; author "Davi Moreira"; new
 > preface blurb; `validate_book_sync.py` extended.
+> **D26 (2026-07-28)** — For-Instructors appendix PASSWORD-LOCKED ×3
+> (post-render encryption via the generalized `protect_instructor_page.py`;
+> password only in gitignored `_production_kit/page_password.txt`, requested
+> by email, literal scrubbed from committed docs); auto-derived **IYT
+> rubrics** in every companion notebook + `_iyt-rubrics.qmd` in the locked
+> appendix; **under-development banners** on all 37 chapters ×3 editions,
+> driven by `planning/BOOK_REVIEW_STATUS.yml` +
+> `update_chapter_review_banners.py` (flip flag → rerun → re-render);
+> standing **seeded-simulation** rule with tranche ch11/ch14/ch15
+> (`build_book_sim_figures.py`, figures offline, code flows into companion
+> notebooks); book-funding search tracked as private course task #17.
 
 ## ▶ RESUME HERE (open items for the next session)
 
@@ -59,8 +71,8 @@ operating manual: `CLAUDE.md` **v5.4**. v1 preserved at git tag
 (`quarto render` + `quarto render book/` + `book-pt/` + `book-es/`), or the
 site render clobbers the book output with website-styled pages.
 
-To resume: read this file → `CLAUDE.md` (v5.4) → `_project_docs/DECISIONS.md`
-D22–D25 → `course_config.yaml`. Editing rules unchanged (instructor-first
+To resume: read this file → `CLAUDE.md` (v5.5) → `_project_docs/DECISIONS.md`
+D22–D26 → `course_config.yaml`. Editing rules unchanged (instructor-first
 `_production_kit/nb_sources/` → `nbbuild.py`; Commit-AND-Render;
 `sync_instructor_repo.sh`; after any chapter edit also
 `build_book_notebooks.py`).
@@ -81,4 +93,4 @@ D22–D25 → `course_config.yaml`. Editing rules unchanged (instructor-first
 | **GenAI Studio** roles/KB/PoC | `genai_studio/`. **Book**: `book/` → `docs/book/`; map `planning/BOOK_MAP.md`. |
 | **Calendar / schedule** source | `scripts/schedule_data/part1–4.py` → `build_meeting_schedule.py` → `MEETING_SCHEDULE.{csv,md}`; backbone `validate_calendar.py`. |
 
-Last updated: **2026-07-28**, after the fourth instructor review round (D25 — book/course separation: companion notebooks, For Instructors appendix, milestone Book Anchors, front-matter changes) was applied and rendered.
+Last updated: **2026-07-28**, after the fifth instructor review round (D26 — locked For-Instructors area, IYT rubrics, review banners + registry, seeded simulations ch11/ch14/ch15, funding task #17) was applied and rendered.

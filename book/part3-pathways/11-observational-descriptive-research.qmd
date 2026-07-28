@@ -2,6 +2,12 @@
 title: "Observational Descriptive Research"
 ---
 
+::: {.callout-warning .review-pending title="Under development"}
+This chapter is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch11_observational_descriptive_research.ipynb){target="_blank"}
 
 > **The research decision.** Which group your observed data can honestly speak for,
@@ -76,6 +82,64 @@ the sentence to refuse, is: *"the service's billing-error rate is 2%."* The true
 across everyone billed is almost certainly higher, because the worst-hit customers
 were gone before the survey went out. That gap between the box you measured and the
 box you named is the subject of this chapter.
+
+## A seeded simulation
+
+The worked example argues that *who you reach* tilts *what you measure*, and
+that a bigger sample does not fix the tilt. You can watch that happen. A
+**seed** is a fixed starting point for a random-number generator: the same
+seed always reproduces the same draws, so the figure below is exactly what
+you will get when you run this code in the companion notebook. The code
+builds a population of 100,000 people whose true mean age is known by
+construction, draws ten honest random samples of 500, then draws one
+convenience sample of the same size through a channel that mostly reaches
+younger people.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+population = np.clip(rng.normal(49, 17, size=100_000), 18, 90)
+truth = population.mean()
+
+random_means = [rng.choice(population, 500, replace=False).mean()
+                for _ in range(10)]
+
+weights = np.exp(-(population - 25) ** 2 / (2 * 12 ** 2))  # younger = likelier
+convenience = rng.choice(population, 500, replace=False,
+                         p=weights / weights.sum())
+
+fig, ax = plt.subplots(figsize=(7.6, 2.9))
+ax.scatter(random_means, np.ones(10), s=60, color="#2a78d6", zorder=3)
+ax.scatter([convenience.mean()], [0], s=60, color="#eb6834", zorder=3)
+ax.axvline(truth, color="#333333", ls="--", lw=1.2)
+ax.text(truth + .5, 1.55, f"true mean = {truth:.1f}", color="#333333",
+        fontsize=9)
+ax.set_yticks([0, 1], ["Convenience\nchannel (n = 500)",
+                       "Random samples\n(n = 500)"], fontsize=9)
+ax.set_xlabel("Sample mean age (years)")
+ax.set_ylim(-.7, 1.9)
+plt.show()
+```
+
+![Ten random sample means cluster around the true mean age; the single
+convenience-channel mean sits far below
+it.](../images/sims/ch11_sampling_channels.png){fig-alt="Dot plot. Ten blue
+random-sample means huddle between about 47 and 51 around a dashed line at
+the true mean of 49.1. A single orange convenience-channel mean sits alone at
+about 33."}
+
+Read it the way a reviewer would. The ten random samples never agree exactly:
+their means spread between about 47 and 51. But they huddle around the truth,
+and that spread is honest, quantifiable uncertainty. The convenience channel
+has exactly the same sample size, and it misses the true mean by about
+sixteen years. Nothing about the dot itself warns you; it looks as confident
+as any other. Only the sampling *procedure* tells you which kind of dot you
+have. In the companion notebook, move the channel's center (the `25` inside
+`weights`) and rerun: the tilt follows the channel, never the sample size.
 
 ## The Colab laboratory
 

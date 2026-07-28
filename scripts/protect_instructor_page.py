@@ -1,20 +1,27 @@
 #!/usr/bin/env python3
-"""protect_instructor_page.py — encrypt docs/instructor.html behind a password.
+"""protect_instructor_page.py — encrypt instructor-facing pages behind a password.
 
-Runs as the Quarto post-render step (_quarto.yml project.post-render), so the
-published GitHub Pages site never contains the instructor page in cleartext.
-The whole rendered page is AES-GCM encrypted with a key derived from the
-password (PBKDF2-HMAC-SHA256); a small self-contained gate page decrypts it
-in the browser via WebCrypto. Idempotent: an already-encrypted page is left
-alone.
+Runs as the Quarto post-render step of EVERY project in this repo (the site
+and the three book editions), so the published GitHub Pages site never
+contains an instructor page in cleartext. Protected pages (D26): the site's
+docs/instructor.html and the book's For-Instructors appendix in all three
+editions (docs/book*/for-instructors.html — companion-course material and the
+"It is your turn" grading rubrics). Each page is AES-GCM encrypted with a key
+derived from the password (PBKDF2-HMAC-SHA256); a small self-contained gate
+page decrypts it in the browser via WebCrypto and tells visitors to request
+the password by email. Idempotent: an already-encrypted page is left alone,
+so the four projects can each run this without stepping on one another.
 
-This is a courtesy lock so casual visitors cannot read the page. The real
-protection for instructor material is the PRIVATE GitHub repo the page links
+This is a courtesy lock so casual visitors cannot read the pages. The real
+protection for instructor material is the PRIVATE GitHub repo the pages link
 to (Colab/GitHub require the instructor's login).
 
-Password: env HONR_INSTRUCTOR_PASSWORD, default "eureka".
+Password (never committed): env HONR_INSTRUCTOR_PASSWORD, else the gitignored
+file _production_kit/page_password.txt. The script fails hard if neither is
+set — there is no default.
 
-Usage: python3 scripts/protect_instructor_page.py [path-to-html]
+Usage: python3 scripts/protect_instructor_page.py [path-to-html ...]
+       (no arguments: protect every registered page that exists)
 """
 from __future__ import annotations
 
@@ -29,9 +36,34 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import hashes
 
 REPO = Path(__file__).resolve().parent.parent
-TARGET = REPO / "docs" / "instructor.html"
 MARKER = "<!-- honr-encrypted -->"
 ITERATIONS = 600_000
+PASSWORD_FILE = REPO / "_production_kit" / "page_password.txt"
+
+EMAIL = ('<a href="mailto:dcordeir@purdue.edu">dcordeir@purdue.edu</a>')
+
+# path (relative to repo) -> gate title, heading, message shown on the lock page
+PAGES = {
+    "docs/instructor.html": (
+        "Instructor — HONR 46400", "Instructor material",
+        "HONR 46400 — Evidence-Driven Research. Enter the instructor "
+        f"password, or request it by email: {EMAIL}."),
+    "docs/book/for-instructors.html": (
+        "For Instructors — EDR|AI", "For Instructors",
+        "This area holds the companion-course material and the grading "
+        "rubrics for the “It is your turn” sections. Request the "
+        f"password by email from the author: {EMAIL}."),
+    "docs/book-pt/for-instructors.html": (
+        "Para Instrutores — EDR|AI", "Para Instrutores",
+        "Esta área reúne o material do curso companheiro e as rubricas de "
+        "avaliação das seções “Agora é a sua vez”. Solicite a "
+        f"senha por e-mail ao autor: {EMAIL}."),
+    "docs/book-es/for-instructors.html": (
+        "Para Docentes — EDR|AI", "Para Docentes",
+        "Esta área reúne el material del curso de acompañamiento y las "
+        "rúbricas de calificación de las secciones “Ahora te toca a "
+        f"ti”. Solicita la contraseña por correo al autor: {EMAIL}."),
+}
 
 GATE = """<!DOCTYPE html>
 <html lang="en">
@@ -40,7 +72,7 @@ GATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Instructor — HONR 46400</title>
+<title>{title}</title>
 <style>
   body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
          Helvetica, Arial, sans-serif; background: #f5f6f8; margin: 0;
@@ -63,8 +95,8 @@ GATE = """<!DOCTYPE html>
 </head>
 <body>
 <div class="card">
-  <h1>Instructor material</h1>
-  <p>HONR 46400 — Evidence-Driven Research. Enter the instructor password.</p>
+  <h1>{heading}</h1>
+  <p>{message}</p>
   <form id="f">
     <input id="pw" type="password" autocomplete="current-password"
            placeholder="Password" autofocus>
@@ -99,17 +131,28 @@ document.getElementById("f").addEventListener("submit", async ev => {{
 """
 
 
-def main() -> None:
-    target = Path(sys.argv[1]) if len(sys.argv) > 1 else TARGET
-    if not target.exists():
-        print(f"protect_instructor_page: {target} not found (nothing to do)")
-        return
+def get_password() -> bytes:
+    env = os.environ.get("HONR_INSTRUCTOR_PASSWORD")
+    if env:
+        return env.encode()
+    if PASSWORD_FILE.exists():
+        return PASSWORD_FILE.read_text().strip().encode()
+    sys.exit("✗ protect_instructor_page: no password — set "
+             "HONR_INSTRUCTOR_PASSWORD or create "
+             "_production_kit/page_password.txt (gitignored). "
+             "The password is never committed and never defaulted.")
+
+
+def protect(target: Path, password: bytes) -> None:
+    rel = target.resolve().relative_to(REPO).as_posix()
+    title, heading, message = PAGES.get(
+        rel, ("Protected page", "Protected page",
+              f"Request the password by email: {EMAIL}."))
     html = target.read_text()
     if MARKER in html:
-        print(f"✓ {target.relative_to(REPO)} already encrypted (skipped)")
+        print(f"✓ {rel} already encrypted (skipped)")
         return
 
-    password = os.environ.get("HONR_INSTRUCTOR_PASSWORD", "eureka").encode()
     salt = secrets.token_bytes(16)
     kdf = PBKDF2HMAC(algorithm=hashes.SHA256(), length=32, salt=salt,
                      iterations=ITERATIONS)
@@ -118,15 +161,27 @@ def main() -> None:
     cipher = AESGCM(key).encrypt(iv, html.encode(), None)
 
     page = GATE.format(
-        marker=MARKER,
+        marker=MARKER, title=title, heading=heading, message=message,
         salt=base64.b64encode(salt).decode(),
         iv=base64.b64encode(iv).decode(),
         data=base64.b64encode(cipher).decode(),
         iterations=ITERATIONS,
     )
     target.write_text(page)
-    print(f"✓ encrypted {target.relative_to(REPO)} "
-          f"({len(cipher) // 1024} KB ciphertext)")
+    print(f"✓ encrypted {rel} ({len(cipher) // 1024} KB ciphertext)")
+
+
+def main() -> None:
+    password = get_password()
+    if len(sys.argv) > 1:
+        targets = [Path(a) for a in sys.argv[1:]]
+    else:
+        targets = [REPO / rel for rel in PAGES]
+    for target in targets:
+        if target.exists():
+            protect(target, password)
+        else:
+            print(f"protect_instructor_page: {target} not found (nothing to do)")
 
 
 if __name__ == "__main__":

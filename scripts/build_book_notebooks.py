@@ -13,8 +13,12 @@ course involved. This generator parses each edition's 37 chapter .qmd files
 
 Each workbook carries: the chapter header + how-to, the research-decision
 quote, any runnable code blocks from the chapter body, the "Recommended AI
-prompts" with a response cell per prompt, the "Do not delegate" callout, and
-the full "It is your turn" section with a work cell per step.
+prompts" with a response cell per prompt, the "Do not delegate" callout, the
+full "It is your turn" section with a work cell per step, and the section's
+grading RUBRIC (D26) — one 0/1/2 row per step plus a standing craft-and-
+verification row, derived mechanically from the step text. The same rubrics
+are collected into <edition>/_iyt-rubrics.qmd, included at the end of each
+edition's password-protected For-instructors appendix for grading.
 
 Cell ids are deterministic so regeneration produces clean git diffs. Re-run
 after ANY chapter edit (the book-first loop):
@@ -72,6 +76,24 @@ EDITIONS = [
         "work_cell_generic": ("✍️ **Your work.** Double-click this cell and complete "
                               "the section above here."),
         "scratch": "# Scratch space — use this cell for any code your steps need.",
+        "rubric_heading": "### How this section is graded",
+        "rubric_intro": ("Each row scores **0** (missing), **1** (attempted but "
+                         "incomplete, generic, or unverified), or **2** (complete, "
+                         "specific to your own project, and verified where a check "
+                         "applies). **{total} points total.**"),
+        "rubric_header_row": "| # | Criterion | 0–2 |",
+        "rubric_standing": ("Craft and verification record: AI use logged in your AI "
+                            "Research Ledger, claims stated with their uncertainty, "
+                            "and each key claim verified with a named method"),
+        "rubric_fallback": "The section above, completed for your own project",
+        "appendix_title": '## Grading rubrics — the "It is your turn" sections',
+        "appendix_intro": ("One rubric per chapter, derived from the chapter's "
+                           "numbered steps. The same rubric appears in the chapter's "
+                           "companion notebook, so what you grade is exactly what the "
+                           "student saw. Scoring, for every rubric: **0** missing · "
+                           "**1** attempted · **2** complete, project-specific, and "
+                           "verified."),
+        "ch_word": "Ch.",
         "closing": ("**Before you leave this notebook:** add today's rows to your AI "
                     "Research Ledger, and verify your key claim with a named method "
                     "from the [Verification Guide]({vg}). AI can review AI — but the "
@@ -126,6 +148,26 @@ EDITIONS = [
                               "complete aqui a seção acima."),
         "scratch": ("# Espaço de rascunho — use esta célula para qualquer código de "
                     "que os passos precisarem."),
+        "rubric_heading": "### Como esta seção é avaliada",
+        "rubric_intro": ("Cada linha vale **0** (ausente), **1** (tentada, mas "
+                         "incompleta, genérica ou não verificada) ou **2** (completa, "
+                         "específica do seu próprio projeto e verificada onde couber "
+                         "uma checagem). **{total} pontos no total.**"),
+        "rubric_header_row": "| # | Critério | 0–2 |",
+        "rubric_standing": ("Cuidado e registro de verificação: uso de IA registrado "
+                            "no seu AI Research Ledger, alegações declaradas com a "
+                            "sua incerteza, e cada alegação-chave verificada com um "
+                            "método nomeado"),
+        "rubric_fallback": "A seção acima, completada para o seu próprio projeto",
+        "appendix_title": ('## Rubricas de avaliação — as seções '
+                           '"Agora é a sua vez"'),
+        "appendix_intro": ("Uma rubrica por capítulo, derivada dos passos numerados "
+                           "do capítulo. A mesma rubrica aparece no notebook "
+                           "companheiro do capítulo, então o que você avalia é "
+                           "exatamente o que o estudante viu. Pontuação de todas as "
+                           "rubricas: **0** ausente · **1** tentada · **2** completa, "
+                           "específica do projeto e verificada."),
+        "ch_word": "Cap.",
         "closing": ("**Antes de sair deste notebook:** acrescente as linhas de hoje "
                     "ao seu AI Research Ledger, e verifique a sua alegação principal "
                     "com um método nomeado do [Guia de Verificação]({vg}). IA pode "
@@ -180,6 +222,26 @@ EDITIONS = [
                               "completa aquí la sección de arriba."),
         "scratch": ("# Espacio de borrador — usa esta celda para cualquier código que "
                     "necesiten los pasos."),
+        "rubric_heading": "### Cómo se califica esta sección",
+        "rubric_intro": ("Cada fila vale **0** (ausente), **1** (intentada pero "
+                         "incompleta, genérica o sin verificar) o **2** (completa, "
+                         "específica de tu propio proyecto y verificada donde aplique "
+                         "una comprobación). **{total} puntos en total.**"),
+        "rubric_header_row": "| # | Criterio | 0–2 |",
+        "rubric_standing": ("Cuidado y registro de verificación: uso de IA registrado "
+                            "en tu AI Research Ledger, afirmaciones declaradas con su "
+                            "incertidumbre, y cada afirmación clave verificada con un "
+                            "método nombrado"),
+        "rubric_fallback": "La sección de arriba, completada para tu propio proyecto",
+        "appendix_title": ('## Rúbricas de calificación — las secciones '
+                           '"Ahora te toca a ti"'),
+        "appendix_intro": ("Una rúbrica por capítulo, derivada de los pasos numerados "
+                           "del capítulo. La misma rúbrica aparece en el cuaderno de "
+                           "acompañamiento del capítulo, así que lo que calificas es "
+                           "exactamente lo que vio el estudiante. Puntaje de todas "
+                           "las rúbricas: **0** ausente · **1** intentada · **2** "
+                           "completa, específica del proyecto y verificada."),
+        "ch_word": "Cap.",
         "closing": ("**Antes de salir de este cuaderno:** agrega las filas de hoy a "
                     "tu AI Research Ledger, y verifica tu afirmación principal con un "
                     "método nombrado de la [Guía de Verificación]({vg}). La IA puede "
@@ -318,6 +380,28 @@ def iyt_pieces(section: str) -> tuple[str, list[str]]:
     return "\n".join(intro).strip(), ["\n".join(s).strip() for s in steps]
 
 
+def first_sentence(text: str, limit: int = 150) -> str:
+    """A rubric criterion from a step: its first sentence, flattened."""
+    flat = re.sub(r"\s+", " ", text).strip()
+    flat = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", flat)  # links -> their text
+    sent = re.split(r"(?<=[.!?])\s", flat)[0].rstrip(".")
+    if len(sent) > limit:
+        sent = sent[:limit].rsplit(" ", 1)[0] + "…"
+    return sent.replace("|", "\\|")
+
+
+def rubric_table(ed: dict, steps: list[str]) -> str:
+    """The chapter's It-is-your-turn rubric (D26): 0/1/2 per step + craft row."""
+    rows = ([(f"{ed['step_word']} {i}", first_sentence(s))
+             for i, s in enumerate(steps, 1)]
+            if steps else [("1", ed["rubric_fallback"])])
+    rows.append(("+", ed["rubric_standing"]))
+    lines = [ed["rubric_header_row"], "|---|---|---|"]
+    lines += [f"| {label} | {crit} | |" for label, crit in rows]
+    return (ed["rubric_intro"].format(total=2 * len(rows))
+            + "\n\n" + "\n".join(lines))
+
+
 def python_blocks(sections, skip_headings) -> list[tuple[str, str]]:
     """(section-heading, code) for every ```python fence outside skipped sections."""
     found = []
@@ -345,7 +429,8 @@ def chapter_files(book_dir: Path) -> list[Path]:
     return files
 
 
-def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None) -> dict:
+def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
+                   rubrics: list | None = None) -> dict:
     title, body = parse_front_matter(path.read_text())
     part_dir = path.parent.name
     n = int(path.stem[:2])
@@ -404,6 +489,10 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None) -> dict:
             add_md(ed["work_cell"].format(i=k))
     else:
         add_md(ed["work_cell_generic"])
+    rubric = rubric_table(ed, steps)
+    add_md(ed["rubric_heading"] + "\n\n" + rubric)
+    if rubrics is not None:
+        rubrics.append((n, title, rubric))
     add_code(ed["scratch"])
 
     closing = ed["closing"].format(vg=vg)
@@ -436,6 +525,7 @@ def main() -> None:
         files = chapter_files(book_dir)
         if len(files) != 37:
             sys.exit(f"✗ {ed['book_dir']}: found {len(files)} chapters, expected 37")
+        rubrics: list[tuple[int, str, str]] = []
         for k, path in enumerate(files):
             nxt = None
             if k + 1 < len(files):
@@ -443,13 +533,17 @@ def main() -> None:
                 nxt_title, _ = parse_front_matter(np_.read_text())
                 nxt = (f"{ed['site_base']}/{np_.parent.name}/{np_.stem}.html",
                        nxt_title)
-            nb = build_notebook(ed, path, nxt)
+            nb = build_notebook(ed, path, nxt, rubrics)
             slug = f"ch{path.stem[:2]}_{path.stem[3:].replace('-', '_')}"
             out = out_dir / f"{slug}.ipynb"
             out.write_text(json.dumps(nb, ensure_ascii=False, indent=1) + "\n")
             total += 1
+        inc = [ed["appendix_title"], "", ed["appendix_intro"], ""]
+        for n, title, rubric in rubrics:
+            inc += [f"### {ed['ch_word']} {n} — {title}", "", rubric, ""]
+        (book_dir / "_iyt-rubrics.qmd").write_text("\n".join(inc))
         print(f"✓ {ed['book_dir']}: {len(files)} companion notebooks → "
-              f"{out_dir.relative_to(REPO)}/")
+              f"{out_dir.relative_to(REPO)}/ + _iyt-rubrics.qmd")
     print(f"✓ {total} book companion notebooks built")
 
 

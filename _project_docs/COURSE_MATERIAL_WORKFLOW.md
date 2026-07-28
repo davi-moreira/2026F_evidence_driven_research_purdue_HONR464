@@ -165,7 +165,8 @@ git push origin main
 ```
 
 The render's `post-render` step runs `protect_instructor_page.py`, which encrypts
-`docs/instructor.html` client-side (password `eureka`). Never commit an unencrypted
+`docs/instructor.html` client-side (password in gitignored
+`_production_kit/page_password.txt`). Never commit an unencrypted
 instructor page — always publish through `quarto render`, never by hand-editing
 `docs/`.
 
