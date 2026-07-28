@@ -68,6 +68,30 @@ o tempo que tem. A **contribuição** pergunta se a resposta acrescenta algo que
 não está resolvido, já que uma busca de dez minutos que a encontra já conhecida mata
 a contribuição.
 
+Uma lente a mais afia os três testes, e ela vem da teoria da informação. Um ensaio
+de 2026 na *Science*, "Advancing science by designing for surprise" (Evans, Petroff
+e King 2026), parte de um fato direto: uma resposta que confirma o que todos já
+acreditam ensina quase nada. A **surpresa** é a distância entre o que pessoas bem
+informadas esperam e o que a evidência mostra, e é ela que torna uma resposta
+informativa. Exemplo: se todo mundo que aconselha calouros já supõe que caminhar
+mais anda junto com dormir melhor, confirmar a relação não muda conselho nenhum,
+enquanto não encontrar relação alguma mudaria os conselhos da noite para o dia. O
+ensaio relata que os artigos mais surpreendentes têm cerca de cinco vezes mais
+chance de ficar entre os mais citados, então isso não é uma questão de gosto; é
+assim que a pesquisa conquista atenção. E ele vem com um aviso que você deve
+carregar: quanto mais surpreendente a alegação, mais evidência é preciso para
+sustentá-la, então a surpresa é um lugar para mirar a sua pergunta, nunca uma
+licença para inflar a sua resposta.
+
+O ensaio sugere uma disciplina que você pode adotar hoje. Antes de olhar qualquer
+evidência, escreva a resposta que espera e nomeie a pessoa para quem uma resposta
+diferente seria genuinamente surpreendente. Essa frase escrita é a sua **resposta
+esperada**: a previsão que a sua evidência vai depois confirmar ou, com mais valor,
+derrubar. Exemplo: "espero que quem caminha mais durma melhor, e um coordenador de
+moradia estudantil ficaria surpreso se não fosse assim." Quando você chegar aos
+resultados, a distância entre essa frase e o que encontrou é a medida mais honesta
+do que o seu projeto ensinou a alguém.
+
 Depois de ter uma pergunta, você também vai classificar que *tipo* de resposta ela
 quer. Isso é a bússola da indagação, e é todo o trabalho do próximo capítulo. Por
 ora, o trabalho é o funil.
@@ -193,9 +217,13 @@ delas em algo que a evidência consegue de fato responder.*
 4. Escreva um segundo problema candidato a partir da mesma curiosidade e delimite-o
    do mesmo jeito. Depois escolha entre os dois, e escreva uma frase sobre por que o
    outro perdeu.
-5. Peça a uma IA que ataque o problema escolhido nos três testes, e fique só com as
+5. Embaixo da pergunta que ficou, escreva a sua resposta esperada em uma frase e
+   nomeie uma pessoa ou função real para quem uma resposta diferente seria
+   genuinamente surpreendente. Guarde essa frase; mais adiante no livro você vai
+   colocar a sua evidência diante dela.
+6. Peça a uma IA que ataque o problema escolhido nos três testes, e fique só com as
    objeções que sobrevivem ao seu próprio raciocínio.
-6. Registre isso no seu **AI Research Ledger** (o registro de uso de IA) e verifique
+7. Registre isso no seu **AI Research Ledger** (o registro de uso de IA) e verifique
    a sua pergunta com um método nomeado do [Guia de
    Verificação](../verification-guide.qmd). O método adequado aqui é o raciocínio
    revisado por pares: entregue a frase única a alguém que não sabe nada do seu

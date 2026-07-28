@@ -63,6 +63,35 @@ herramienta con ambición, confirma por tu cuenta cada dato y cada número, y de
 registra la herramienta, la tarea y la revisión en un registro que viaja con tu
 trabajo.
 
+¿Por qué trazar la línea exactamente ahí? Una respuesta corta viene de la historia
+del descubrimiento. Albert Einstein dibujó una vez la investigación como un ciclo:
+partes de la experiencia, saltas a una idea que podría explicarla y luego razonas de
+vuelta hasta predicciones que puedes comprobar. El salto hacia arriba tiene nombre.
+La **abducción** es el acto de inventar una explicación nueva para una observación
+sorprendente, una causa que nadie te entregó. Ejemplo: las ventas de una tienda caen
+cada tres semanas, y conjeturas que detrás hay un ciclo de pago de salarios, una
+hipótesis que no aparece en ninguna base de datos. Aquí está el ciclo en una imagen:
+
+```{mermaid}
+flowchart LR
+  E["Experiencia<br/>lo que observas"] -- "el salto: una idea nueva<br/>(abducción, te toca a ti)" --> A["Ideas y supuestos<br/>lo que podría explicarla"]
+  A -- "derivación<br/>(delegable, luego revisada)" --> P["Predicciones"]
+  P -- "verificación contra la evidencia<br/>(delegable, luego revisada)" --> E
+```
+
+La investigación reciente en IA traza la misma línea. Un position paper de 2026 de
+Google DeepMind, *LLMs can't jump* (Zahavy 2026), sostiene que la IA de hoy domina
+la búsqueda de patrones en datos y avanza rápido en la derivación paso a paso, pero
+todavía no puede dar el salto, porque no tiene experiencia del mundo desde la cual
+saltar, solo texto sobre el mundo. Su caso de estudio es el propio Einstein. Cuando
+empezó a construir la relatividad general, ninguna pila de mediciones fallidas lo
+empujaba; la física de Newton se ajustaba a los datos casi a la perfección. La idea
+nueva vino de imaginar qué se siente al caer, no de comprimir observaciones. Así que
+cuando este libro mantiene la pregunta, la afirmación y el juicio de tu lado del
+escritorio, no es cautela ante una herramienta que podría mejorar el año que viene.
+La parte de la investigación que le falta a la herramienta es la parte que este
+libro entrena.
+
 ## Un ejemplo trabajado
 
 Quieres saber si las comidas en los restaurantes cerca de ti se encarecieron después

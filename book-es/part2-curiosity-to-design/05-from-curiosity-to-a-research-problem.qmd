@@ -66,6 +66,30 @@ tiempo que tienes. La **contribución** pregunta si la respuesta agrega algo que
 esté ya zanjado, porque una búsqueda de diez minutos que la encuentra ya conocida mata
 la contribución.
 
+Una lente más afila las tres pruebas, y viene de la teoría de la información. Un
+ensayo de 2026 en *Science*, "Advancing science by designing for surprise" (Evans,
+Petroff y King 2026), parte de un hecho directo: una respuesta que confirma lo que
+todos ya creen enseña casi nada. La **sorpresa** es la distancia entre lo que la
+gente informada espera y lo que la evidencia muestra, y es lo que vuelve informativa
+una respuesta. Ejemplo: si todos los que aconsejan a estudiantes de primer año ya
+suponen que caminar más va con dormir mejor, confirmar la relación no cambia ningún
+consejo, mientras que no encontrar relación alguna los cambiaría de un día para
+otro. El ensayo reporta que los artículos más sorprendentes tienen unas cinco veces
+más probabilidad de quedar entre los más citados, así que esto no es una cuestión de
+gusto; es como la investigación se gana la atención. Y trae una advertencia que
+debes cargar contigo: cuanto más sorprendente la afirmación, más evidencia hace
+falta para sostenerla, así que la sorpresa es un lugar hacia donde apuntar tu
+pregunta, nunca una licencia para inflar tu respuesta.
+
+El ensayo sugiere una disciplina que puedes adoptar hoy. Antes de mirar cualquier
+evidencia, escribe la respuesta que esperas y nombra a la persona para quien una
+respuesta distinta sería genuinamente sorprendente. Esa frase escrita es tu
+**respuesta esperada**: la predicción que tu evidencia después confirmará o, con más
+valor, derribará. Ejemplo: "espero que quienes caminan más duerman mejor, y a un
+asesor de residencias le sorprendería que no fuera así." Cuando llegues a tus
+resultados, la distancia entre esa frase y lo que encontraste es la medida más
+honesta de lo que tu proyecto le enseñó a alguien.
+
 Una vez que tengas una pregunta, también vas a clasificar qué *tipo* de respuesta
 quiere. Esa es la brújula de la indagación, y es el trabajo completo del próximo
 capítulo. Por ahora, el trabajo es el embudo.
@@ -190,9 +214,13 @@ ellas en algo que la evidencia puede responder de verdad.*
 4. Escribe un segundo problema candidato a partir de la misma curiosidad y delimítalo
    de la misma manera. Después elige entre los dos, y escribe una oración sobre por qué
    perdió el otro.
-5. Pídele a una IA que ataque tu problema elegido en las tres pruebas, y quédate solo
+5. Debajo de la pregunta que quedó, escribe tu respuesta esperada en una oración y
+   nombra a una persona o rol real para quien una respuesta distinta sería
+   genuinamente sorprendente. Guarda esa oración; más adelante en el libro pondrás tu
+   evidencia frente a ella.
+6. Pídele a una IA que ataque tu problema elegido en las tres pruebas, y quédate solo
    con las objeciones que sobrevivan a tu propio razonamiento.
-6. Regístralo en tu AI Research Ledger (tu registro de investigación con IA) y verifica
+7. Regístralo en tu AI Research Ledger (tu registro de investigación con IA) y verifica
    tu pregunta con un método con nombre de la
    [Guía de Verificación](../verification-guide.qmd). El método que encaja aquí es el
    razonamiento con pares: entrégale la oración única a alguien que no sepa nada de tu

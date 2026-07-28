@@ -56,6 +56,32 @@ short: **Ask, then Verify, then Document.** Use the tool ambitiously, confirm ev
 fact and number yourself, then log the tool, the task, and the check in a record that
 travels with your work.
 
+Why draw the line exactly there? A short answer comes from the history of discovery.
+Albert Einstein once sketched research as a cycle: you start from experience, you leap
+to an idea that could explain it, and then you reason back down to predictions you can
+check. The leap upward has a name. **Abduction** is the act of inventing a new
+explanation for a surprising observation, a cause nobody handed you. Example: sales at
+a shop dip every third week, and you guess that a payday cycle is behind it, a
+hypothesis that appears in no dataset. Here is that cycle in one picture:
+
+```{mermaid}
+flowchart LR
+  E["Experience<br/>what you observe"] -- "the jump: a new idea<br/>(abduction, yours to make)" --> A["Ideas and assumptions<br/>what could explain it"]
+  A -- "derivation<br/>(delegable, then checked)" --> P["Predictions"]
+  P -- "verification against evidence<br/>(delegable, then checked)" --> E
+```
+
+Recent AI research draws the same line. A 2026 position paper from Google DeepMind,
+*LLMs can't jump* (Zahavy 2026), argues that today's AI has mastered finding patterns
+in data and is fast conquering step-by-step derivation, but cannot yet make the jump,
+because it has no experience of the world to leap from, only text about the world. Its
+case study is Einstein himself. When he began building general relativity, no pile of
+failed measurements was pushing him; Newton's physics fit the data almost perfectly.
+The new idea came from imagining what falling feels like, not from compressing
+observations. So when this book keeps the question, the claim, and the judgment on
+your side of the desk, that is not caution about a tool that might improve next year.
+The part of research the tool lacks is the part this book trains.
+
 ## A worked example
 
 You want to know whether meals at restaurants near you got more expensive after a

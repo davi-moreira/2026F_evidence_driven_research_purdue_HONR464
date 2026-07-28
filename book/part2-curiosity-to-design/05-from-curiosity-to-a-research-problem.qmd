@@ -64,6 +64,28 @@ and time you have. **Contribution** asks whether the answer adds something not
 already settled, since a ten-minute search that finds it already known kills the
 contribution.
 
+One more lens sharpens all three, and it comes from information theory. A 2026
+essay in *Science*, "Advancing science by designing for surprise" (Evans, Petroff,
+and King 2026), starts from a blunt fact: an answer that confirms what everyone
+already believes teaches almost nothing. **Surprise** is the distance between what
+informed people expect and what the evidence shows, and it is what makes an answer
+informative. Example: if everyone advising first-years already assumes more walking
+goes with better sleep, confirming the link changes no advice, while finding no link
+would change it overnight. The essay reports that the most surprising papers are
+about five times more likely to land among the most-cited work, so this is not a
+taste; it is how research earns attention. It also comes with a warning you should
+carry: the more surprising the claim, the more evidence it takes to support it, so
+surprise is a place to aim your question, never a license to inflate your answer.
+
+The essay suggests a discipline you can adopt today. Before you look at any
+evidence, write down the answer you expect, and name the person for whom a
+different answer would be genuinely surprising. That written sentence is your
+**expected answer**: the prediction your evidence will later confirm or, more
+valuably, overturn. Example: "I expect heavier walkers to sleep better, and a
+residence-life advisor would be surprised if they did not." When you reach your
+results, the gap between that sentence and what you found is the most honest
+measure of what your project taught anyone.
+
 Once you have a question, you will also classify what *kind* of answer it wants.
 That is the inquiry compass, and it is the whole job of the next chapter. For now,
 the work is the funnel.
@@ -183,9 +205,12 @@ something evidence can actually answer.*
    wish you had.
 4. Write a second candidate problem from the same curiosity and scope it the same way.
    Then choose between them, and write one sentence on why the other one lost.
-5. Ask an AI to attack your chosen problem on all three tests, and keep only the
+5. Under the question you kept, write your expected answer in one sentence, and name
+   one real person or role for whom a different answer would be genuinely surprising.
+   Keep this sentence; late in the book you will hold your evidence up against it.
+6. Ask an AI to attack your chosen problem on all three tests, and keep only the
    objections that survive your own reasoning.
-6. Log it in your AI Research Ledger, and verify your question with a named method from
+7. Log it in your AI Research Ledger, and verify your question with a named method from
    the [Verification Guide](../verification-guide.qmd). The fitting method here is peer
    reasoning: hand the single sentence to someone who knows nothing about your project
    and ask them to tell you, from that sentence alone, what one unit is, what you would
