@@ -4,9 +4,19 @@
     "href": "index.html",
     "title": "EDR|AI — Pesquisa Orientada por Evidências na Era da IA",
     "section": "",
-    "text": "🌐 English · Português (BR) · Español\n\n\n\n\n\n\n\nPrefácio\n\n\n\n\n\n\nWarningUm trabalho em construção\n\n\n\nEste livro é um trabalho em construção. Ele ainda está em desenvolvimento e vai continuar crescendo e melhorando com o tempo. Capítulos podem ser revisados, ampliados ou reorganizados conforme o material é usado em sala de aula; quando algo parecer inacabado, é por isso. Perguntas e sugestões são bem-vindas.\n\n\nEDR|AI — Pesquisa Orientada por Evidências na Era da IA: Como Desenhar, Analisar, Verificar e Defender (no original em inglês, Evidence-Driven Research in the Age of AI) — é um manual aberto de pesquisa para estudantes de graduação em economia, ciência política, negócios e biologia que querem transformar curiosidade em conhecimento crível, defensável e baseado em evidências, em um mundo no qual a IA consegue produzir quase tudo. Ele foi escrito primeiro para um seminário de pesquisa do Honors College da Purdue University, e é deliberadamente independente de instituição: qualquer docente ou estudante, em qualquer lugar, pode adotá-lo.\nSua única mensagem: A IA é o seu braço e a sua assistente de pesquisa, não o seu cérebro. Você vai dirigir ferramentas de IA pelo fluxo de trabalho Especificar → Delegar → Interrogar → Inspecionar → Verificar → Documentar → Defender, mantendo cada decisão de pesquisa nas suas próprias mãos. Uma regra atravessa cada etapa de verificação deste livro (todas reunidas no apêndice Guia de Verificação): IA pode revisar IA — um segundo modelo é um auditor de verdade do primeiro — mas a última decisão é sempre humana.\nEste livro também é um manual que você pode seguir até um projeto terminado. Todo capítulo termina com uma seção Agora é a sua vez: passos concretos que aplicam o capítulo à sua própria pesquisa. Faça-os em ordem e eles se encadeiam em um projeto de pesquisa completo e defensável — e, na última página, em um rascunho de artefato de pesquisa (um artigo, uma nota ou um pôster) com o seu nome. Você não precisa estar matriculado em nenhum curso para isso funcionar; você precisa de curiosidade e da disciplina que o livro ensina.\nO livro Research Design in the Social Sciences, de Blair, Coppock e Humphreys (RDSS, gratuito em book.declaredesign.org), é o texto teórico que o EDR|AI traduz para o público de graduação. No curso original, o capítulo do EDR|AI é a leitura obrigatória de cada semana, e os capítulos correspondentes do RDSS são recomendados para aprofundamento. Cada capítulo nomeia uma decisão de pesquisa, desenvolve um exemplo, dá acesso a um laboratório no Colab, mostra uma falha de IA e como detectá-la, e devolve o trabalho para você.\nO livro tem seis partes: pesquisa quando a IA faz “tudo”; da curiosidade ao desenho de pesquisa; as trilhas de pesquisa (observacional e experimental, descritiva e causal, e predição); produzindo evidência crível com IA; comunicando e defendendo a pesquisa; e a pesquisa depois da conferência.\nIdiomas. O EDR|AI também está disponível em English e Español — use os links de idioma no topo de qualquer página para trocar a qualquer momento. A edição em inglês é a fonte oficial; as traduções são regeradas a partir dela conforme ela evolui.\nSe o seu curso adota o formato de sala de aula invertida que este livro apoia, a maior parte das aulas é conduzida por um estudante: o Student Research Lead (líder estudantil de pesquisa) do dia. O briefing desse líder fica no começo do notebook da aula correspondente, e o apêndice O Student Research Lead reúne o formato, o ritmo de preparação e as expectativas em um só lugar. Para conhecer a pessoa por trás do livro, veja Sobre o Autor.",
+    "text": "🌐 English · Português (BR) · Español\n\n\n\n\n\n\n\nPrefácio\n\n\n\n\n\n\nWarningUm trabalho em construção\n\n\n\nEste livro é um trabalho em construção. Ele ainda está em desenvolvimento e vai continuar crescendo e melhorando com o tempo. Capítulos podem ser revisados, ampliados ou reorganizados conforme o material é usado em sala de aula; quando algo parecer inacabado, é por isso. Perguntas e sugestões são bem-vindas.\n\n\nEDR|AI — Pesquisa Orientada por Evidências na Era da IA: Como Desenhar, Analisar, Verificar e Defender (no original em inglês, Evidence-Driven Research in the Age of AI) — é um manual aberto de pesquisa para estudantes de graduação que aspiram a produzir pesquisa de alta qualidade com impacto científico. Ele guia você por como desenhar, analisar, verificar e defender pesquisa orientada por evidências em um mundo no qual a IA consegue produzir quase tudo: faça a seção Agora é a sua vez de cada capítulo e termine com um projeto de pesquisa seu. O livro foi escrito primeiro para um seminário de pesquisa do Honors College da Purdue University, e é deliberadamente independente de instituição: qualquer docente ou estudante, em qualquer lugar, pode adotá-lo.\nSua única mensagem: A IA é o seu braço e a sua assistente de pesquisa, não o seu cérebro. Você vai dirigir ferramentas de IA pelo fluxo de trabalho Especificar → Delegar → Interrogar → Inspecionar → Verificar → Documentar → Defender, mantendo cada decisão de pesquisa nas suas próprias mãos. Uma regra atravessa cada etapa de verificação deste livro (todas reunidas no apêndice Guia de Verificação): IA pode revisar IA — um segundo modelo é um auditor de verdade do primeiro — mas a última decisão é sempre humana.\nEste livro também é um manual que você pode seguir até um projeto terminado. Todo capítulo termina com uma seção Agora é a sua vez: passos concretos que aplicam o capítulo à sua própria pesquisa. Faça-os em ordem e eles se encadeiam em um projeto de pesquisa completo e defensável — e, na última página, em um rascunho de artefato de pesquisa (um artigo, uma nota ou um pôster) com o seu nome. Você não precisa estar matriculado em nenhum curso para isso funcionar; você precisa de curiosidade e da disciplina que o livro ensina.\nO livro Research Design in the Social Sciences, de Blair, Coppock e Humphreys (RDSS, gratuito em book.declaredesign.org), é o texto teórico que o EDR|AI traduz para o público de graduação. No curso companheiro, o capítulo do EDR|AI é a leitura obrigatória de cada semana, e os capítulos correspondentes do RDSS são recomendados para aprofundamento. Cada capítulo nomeia uma decisão de pesquisa, desenvolve um exemplo, mostra uma falha de IA e como detectá-la, e devolve o trabalho para você. Cada capítulo também tem o seu próprio notebook companheiro no Colab — o selo no topo do capítulo — no qual você roda o código do capítulo e completa a sua seção Agora é a sua vez sem sair do navegador. Os notebooks companheiros pertencem ao livro: você não precisa de curso, de plataforma, nem de conta além do Colab gratuito para trabalhar todos eles.\nO livro tem seis partes: pesquisa quando a IA faz “tudo”; da curiosidade ao desenho de pesquisa; as trilhas de pesquisa (observacional e experimental, descritiva e causal, e predição); produzindo evidência crível com IA; comunicando e defendendo a pesquisa; e a pesquisa depois da conferência.\nIdiomas. O EDR|AI também está disponível em English e Español — use os links de idioma no topo de qualquer página para trocar a qualquer momento. A edição em inglês é a fonte oficial; as traduções são regeradas a partir dela conforme ela evolui.\nSe você ensina. O apêndice Para instrutores apresenta o curso companheiro do qual este livro nasceu e disponibiliza gratuitamente os seus materiais: os notebooks de laboratório de sala de aula, a cadeia de milestones que reúne as seções Agora é a sua vez dos capítulos em um artefato final de pesquisa, e o formato invertido no qual a maior parte das aulas é conduzida por um estudante — o Student Research Lead (líder estudantil de pesquisa) do dia, cujo formato, ritmo de preparação e expectativas estão no apêndice O Student Research Lead.\nPara conhecer a pessoa por trás do livro, vire a página: Sobre o Autor vem logo depois deste prefácio.",
     "crumbs": [
       "Prefácio"
+    ]
+  },
+  {
+    "objectID": "author.html",
+    "href": "author.html",
+    "title": "Sobre o Autor",
+    "section": "",
+    "text": "Fora do expediente\nEle escreveu este livro para os estudantes que ensina: alunos de graduação em economia, ciência política, negócios e biologia que querem produzir pesquisa que consigam defender, em um mundo no qual a IA consegue produzir quase todo o resto. A única regra do livro também é a regra de trabalho dele: a IA é o seu braço e a sua assistente de pesquisa, não o seu cérebro.\nDuas coisas sobre as quais você vai acabar ouvindo falar se fizer aula com ele.\nPalmeiras. O maior clube de futebol do Brasil e o treinamento em incerteza mais rigoroso da vida do autor.\nO jogo mais emocionante da história (vídeo)\nCarnaval de Olinda. O carnaval de rua da cidade natal dele, em Pernambuco, famoso por seus bonecos gigantes.\nNYT: Como John Travolta virou a estrela do Carnaval (em inglês)",
+    "crumbs": [
+      "Sobre o Autor"
     ]
   },
   {
@@ -57,7 +67,7 @@
     "href": "part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html#o-laboratório-no-colab",
     "title": "1  A IA É o Seu Braço, Não o Seu Cérebro",
     "section": "1.4 O laboratório no Colab",
-    "text": "1.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb01, Research in the Age of AI: Your Arm, Your RA, Not Your Brain. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo. No laboratório você roda uma pequena simulação com semente fixa que mostra por que o quanto uma fonte soa confiante não diz nada sobre ela ser real, e depois pega um tema com o qual você se importa, pede a uma IA fontes acadêmicas e verifica cada uma recuperando-a você mesmo.",
+    "text": "1.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb01, Research in the Age of AI: Your Arm, Your RA, Not Your Brain (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No laboratório você roda uma pequena simulação com semente fixa que mostra por que o quanto uma fonte soa confiante não diz nada sobre ela ser real, e depois pega um tema com o qual você se importa, pede a uma IA fontes acadêmicas e verifica cada uma recuperando-a você mesmo.",
     "crumbs": [
       "Parte I — Pesquisa quando a IA faz \"tudo\"",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>A IA É o Seu Braço, Não o Seu Cérebro</span>"
@@ -145,7 +155,7 @@
     "href": "part1-research-with-ai/02-the-student-as-research-director.html#o-laboratório-no-colab",
     "title": "2  O Estudante como Diretor de Pesquisa",
     "section": "2.4 O laboratório no Colab",
-    "text": "2.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb01 — Research in the age of AI: your arm, your RA — not your brain. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo. No exercício “seguro delegar, verificar primeiro, ou nunca delegar” você classifica cinco tarefas de pesquisa reais nos três grupos e defende cada escolha; e no Human-Only Checkpoint (ponto de checagem só humano) você fecha a IA e nomeia, para o seu próprio projeto, duas decisões que nunca vai entregar.",
+    "text": "2.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb01 — Research in the age of AI: your arm, your RA — not your brain (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No exercício “seguro delegar, verificar primeiro, ou nunca delegar” você classifica cinco tarefas de pesquisa reais nos três grupos e defende cada escolha; e no Human-Only Checkpoint (ponto de checagem só humano) você fecha a IA e nomeia, para o seu próprio projeto, duas decisões que nunca vai entregar.",
     "crumbs": [
       "Parte I — Pesquisa quando a IA faz \"tudo\"",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>O Estudante como Diretor de Pesquisa</span>"
@@ -233,7 +243,7 @@
     "href": "part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html#o-laboratório-no-colab",
     "title": "3  Especificar, Delegar, Interrogar, Inspecionar, Verificar, Documentar, Defender",
     "section": "3.4 O laboratório no Colab",
-    "text": "3.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb01 — Research in the age of AI: your arm, your RA, not your brain. Abra-o no Colab pelo selo acima. Lá você roda o protocolo ao vivo: pega uma citação fabricada recuperando-a você mesmo, e depois pega um resumo confiante que exagera um número que os dados nunca tiveram. Os dois são as etapas Inspecionar e Verificar sob pressão real.",
+    "text": "3.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb01 — Research in the age of AI: your arm, your RA, not your brain (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você roda o protocolo ao vivo: pega uma citação fabricada recuperando-a você mesmo, e depois pega um resumo confiante que exagera um número que os dados nunca tiveram. Os dois são as etapas Inspecionar e Verificar sob pressão real.",
     "crumbs": [
       "Parte I — Pesquisa quando a IA faz \"tudo\"",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Especificar, Delegar, Interrogar, Inspecionar, Verificar, Documentar, Defender</span>"
@@ -321,7 +331,7 @@
     "href": "part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html#o-laboratório-no-colab",
     "title": "4  Responsabilidade na Pesquisa e Propriedade Intelectual",
     "section": "4.4 O laboratório no Colab",
-    "text": "4.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb01, “Research in the age of AI: your arm, your RA, not your brain”. Abra-o no Colab pelo selo acima. Lá você classifica tarefas de pesquisa reais pelo quanto elas podem ser delegadas com segurança, pega uma citação ao vivo recuperando-a você mesmo, e preenche a sua primeira linha do AI Research Ledger (o registro de uso de IA): o registro que transforma “eu conferi” em algo que você consegue mostrar.",
+    "text": "4.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb01, “Research in the age of AI: your arm, your RA, not your brain” (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você classifica tarefas de pesquisa reais pelo quanto elas podem ser delegadas com segurança, pega uma citação ao vivo recuperando-a você mesmo, e preenche a sua primeira linha do AI Research Ledger (o registro de uso de IA): o registro que transforma “eu conferi” em algo que você consegue mostrar.",
     "crumbs": [
       "Parte I — Pesquisa quando a IA faz \"tudo\"",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Responsabilidade na Pesquisa e Propriedade Intelectual</span>"
@@ -398,7 +408,7 @@
     "href": "part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html#o-laboratório-no-colab",
     "title": "5  Da Curiosidade a um Problema de Pesquisa",
     "section": "5.4 O laboratório no Colab",
-    "text": "5.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb02 — From curiosity to a research problem: descriptive, predictive, causal. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo. Você vai ver uma curiosidade se afiar no instante em que toca colunas reais de um questionário, e depois levar a sua própria curiosidade, vinda do seu mapa do nb01, funil abaixo, rascunhar dois problemas candidatos e defender aquele que você mantiver.",
+    "text": "5.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb02 — From curiosity to a research problem: descriptive, predictive, causal (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Você vai ver uma curiosidade se afiar no instante em que toca colunas reais de um questionário, e depois levar a sua própria curiosidade, vinda do seu mapa do nb01, funil abaixo, rascunhar dois problemas candidatos e defender aquele que você mantiver.",
     "crumbs": [
       "Parte II — Da curiosidade ao desenho de pesquisa",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Da Curiosidade a um Problema de Pesquisa</span>"
@@ -475,7 +485,7 @@
     "href": "part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html#o-laboratório-no-colab",
     "title": "6  Perguntas Descritivas, Preditivas e Causais",
     "section": "6.4 O laboratório no Colab",
-    "text": "6.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb02 — From curiosity to a research problem: descriptive, predictive, causal. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você leva a sua própria curiosidade até uma pergunta, vê um classificador ingênuo por palavras-chave ser enganado por um baralho de oito perguntas, e coloca a sua própria pergunta na bússola no formato que você vai reusar toda vez que declarar um desenho de pesquisa.",
+    "text": "6.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb02 — From curiosity to a research problem: descriptive, predictive, causal (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você leva a sua própria curiosidade até uma pergunta, vê um classificador ingênuo por palavras-chave ser enganado por um baralho de oito perguntas, e coloca a sua própria pergunta na bússola no formato que você vai reusar toda vez que declarar um desenho de pesquisa.",
     "crumbs": [
       "Parte II — Da curiosidade ao desenho de pesquisa",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Perguntas Descritivas, Preditivas e Causais</span>"
@@ -552,7 +562,7 @@
     "href": "part2-curiosity-to-design/07-research-builds-on-research.html#o-laboratório-em-colab",
     "title": "7  A Pesquisa se Constrói sobre a Pesquisa",
     "section": "7.4 O laboratório em Colab",
-    "text": "7.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb03 — Research builds on research: verified evidence + real gaps. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. No laboratório você vê uma pilha de quinze citações de IA encolher até as poucas que sobrevivem à recuperação, constrói um mapa de evidências em código e roda o ciclo de recuperação e verificação na sua própria alegação.",
+    "text": "7.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb03 — Research builds on research: verified evidence + real gaps (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No laboratório você vê uma pilha de quinze citações de IA encolher até as poucas que sobrevivem à recuperação, constrói um mapa de evidências em código e roda o ciclo de recuperação e verificação na sua própria alegação.",
     "crumbs": [
       "Parte II — Da curiosidade ao desenho de pesquisa",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>A Pesquisa se Constrói sobre a Pesquisa</span>"
@@ -629,7 +639,7 @@
     "href": "part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html#o-laboratório-em-colab",
     "title": "8  Encontrar e Verificar Evidência Prévia",
     "section": "8.4 O laboratório em Colab",
-    "text": "8.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb03 — Research builds on research: verified evidence + real gaps. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. No laboratório você roda o ciclo de recuperação e verificação na sua própria alegação e vê uma simulação encolher uma pilha bem arrumada de quinze citações de IA até o punhado que sobrevive à recuperação, e depois constrói um mapa de evidências cujo único quadrado vazio é a sua lacuna.",
+    "text": "8.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb03 — Research builds on research: verified evidence + real gaps (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No laboratório você roda o ciclo de recuperação e verificação na sua própria alegação e vê uma simulação encolher uma pilha bem arrumada de quinze citações de IA até o punhado que sobrevive à recuperação, e depois constrói um mapa de evidências cujo único quadrado vazio é a sua lacuna.",
     "crumbs": [
       "Parte II — Da curiosidade ao desenho de pesquisa",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Encontrar e Verificar Evidência Prévia</span>"
@@ -706,7 +716,7 @@
     "href": "part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html#o-laboratório-em-colab",
     "title": "9  Modelo, Indagação, Estratégia de Dados e Estratégia de Resposta",
     "section": "9.4 O laboratório em Colab",
-    "text": "9.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você constrói um pequeno mundo simulado, escreve as quatro partes MIDA dele e vê o que acontece com a sua resposta quando uma estratégia de dados silenciosamente deixa de combinar com a indagação.",
+    "text": "9.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você constrói um pequeno mundo simulado, escreve as quatro partes MIDA dele e vê o que acontece com a sua resposta quando uma estratégia de dados silenciosamente deixa de combinar com a indagação.",
     "crumbs": [
       "Parte II — Da curiosidade ao desenho de pesquisa",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Modelo, Indagação, Estratégia de Dados e Estratégia de Resposta</span>"
@@ -783,7 +793,7 @@
     "href": "part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html#o-laboratório-em-colab",
     "title": "10  Declarar e Diagnosticar um Desenho de Pesquisa",
     "section": "10.4 O laboratório em Colab",
-    "text": "10.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. No laboratório você declara o desenho de mentoria do notebook em poucas linhas de Python, roda-o milhares de vezes para ler o viés, a variância e o poder dele com os seus próprios olhos, e depois vê um redesenho salvar um estudo justo mas sem poder, enquanto um gêmeo confundido segue errado em qualquer tamanho de amostra.",
+    "text": "10.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No laboratório você declara o desenho de mentoria do notebook em poucas linhas de Python, roda-o milhares de vezes para ler o viés, a variância e o poder dele com os seus próprios olhos, e depois vê um redesenho salvar um estudo justo mas sem poder, enquanto um gêmeo confundido segue errado em qualquer tamanho de amostra.",
     "crumbs": [
       "Parte II — Da curiosidade ao desenho de pesquisa",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Declarar e Diagnosticar um Desenho de Pesquisa</span>"
@@ -860,7 +870,7 @@
     "href": "part3-pathways/11-observational-descriptive-research.html#o-laboratório-em-colab",
     "title": "11  Pesquisa Observacional Descritiva",
     "section": "11.4 O laboratório em Colab",
-    "text": "11.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb05 — Observational descriptive research. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. No laboratório você trata um cadastro real de eleitores como um mundo conhecido, sorteia amostras aleatórias e um canal de conveniência a partir dele, e vê os sorteios aleatórios se aglomerarem em torno da verdade enquanto o canal de conveniência erra a idade média verdadeira por quase doze anos. Depois você roda um teste de estresse de não resposta que mostra uma estimativa limpa se afastando da verdade.",
+    "text": "11.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb05 — Observational descriptive research (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No laboratório você trata um cadastro real de eleitores como um mundo conhecido, sorteia amostras aleatórias e um canal de conveniência a partir dele, e vê os sorteios aleatórios se aglomerarem em torno da verdade enquanto o canal de conveniência erra a idade média verdadeira por quase doze anos. Depois você roda um teste de estresse de não resposta que mostra uma estimativa limpa se afastando da verdade.",
     "crumbs": [
       "Parte III — Trilhas de pesquisa",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Pesquisa Observacional Descritiva</span>"
@@ -937,7 +947,7 @@
     "href": "part3-pathways/12-observational-causal-research.html#o-laboratório-em-colab",
     "title": "12  Pesquisa Observacional Causal",
     "section": "12.4 O laboratório em Colab",
-    "text": "12.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb06 — Observational causal research. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. No laboratório você constrói um pequeno mundo em que você fixa o efeito verdadeiro do café, planta um confundidor oculto e vê uma comparação ingênua inflar um +1,0 verdadeiro para cerca de +3,1, e depois recupera a verdade ajustando pelo confundidor que você consegue enxergar. Em seguida você analisa um experimento natural real, a loteria de vistos do Hajj de Clingingsmith, Khwaja e Kremer (RDSS cap. 16), como uma diferença de médias, e enuncia exatamente o que a atribuição como se aleatória dela permite alegar, e sobre quem.",
+    "text": "12.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb06 — Observational causal research (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No laboratório você constrói um pequeno mundo em que você fixa o efeito verdadeiro do café, planta um confundidor oculto e vê uma comparação ingênua inflar um +1,0 verdadeiro para cerca de +3,1, e depois recupera a verdade ajustando pelo confundidor que você consegue enxergar. Em seguida você analisa um experimento natural real, a loteria de vistos do Hajj de Clingingsmith, Khwaja e Kremer (RDSS cap. 16), como uma diferença de médias, e enuncia exatamente o que a atribuição como se aleatória dela permite alegar, e sobre quem.",
     "crumbs": [
       "Parte III — Trilhas de pesquisa",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Pesquisa Observacional Causal</span>"
@@ -1014,7 +1024,7 @@
     "href": "part3-pathways/13-experimental-descriptive-research.html#o-laboratório-em-colab",
     "title": "13  Pesquisa Descritiva Experimental",
     "section": "13.4 O laboratório em Colab",
-    "text": "13.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb07 — Experimental descriptive research. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Nele você lê um experimento de survey real como a mensuração de uma atitude já consolidada, recupera uma prevalência escondida com um experimento de lista que uma pergunta direta não alcança e depois declara, diagnostica e redesenha um experimento de mensuração, até que um número feito quase só de artefatos de demanda e de instrumento volte a pousar sobre o constructo que ele deveria relatar.",
+    "text": "13.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb07 — Experimental descriptive research (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Nele você lê um experimento de survey real como a mensuração de uma atitude já consolidada, recupera uma prevalência escondida com um experimento de lista que uma pergunta direta não alcança e depois declara, diagnostica e redesenha um experimento de mensuração, até que um número feito quase só de artefatos de demanda e de instrumento volte a pousar sobre o constructo que ele deveria relatar.",
     "crumbs": [
       "Parte III — Trilhas de pesquisa",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Pesquisa Descritiva Experimental</span>"
@@ -1102,7 +1112,7 @@
     "href": "part3-pathways/14-prediction-and-generalization.html#o-laboratório-em-colab",
     "title": "14  Predição e Generalização",
     "section": "14.4 O laboratório em Colab",
-    "text": "14.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb08 — Prediction: generalizing to unseen cases. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. No laboratório você assina o contrato de quatro partes em um conjunto de dados real, pontua primeiro uma linha de base honesta e depois constrói um vazamento de propósito, para sentir uma pontuação falsa subir e aprender a caçá-la por correlação e por temporalidade antes de retreinar limpo.",
+    "text": "14.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb08 — Prediction: generalizing to unseen cases (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No laboratório você assina o contrato de quatro partes em um conjunto de dados real, pontua primeiro uma linha de base honesta e depois constrói um vazamento de propósito, para sentir uma pontuação falsa subir e aprender a caçá-la por correlação e por temporalidade antes de retreinar limpo.",
     "crumbs": [
       "Parte III — Trilhas de pesquisa",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Predição e Generalização</span>"
@@ -1190,7 +1200,7 @@
     "href": "part3-pathways/15-experimental-causal-research.html#o-laboratório-em-colab",
     "title": "15  Pesquisa Causal Experimental",
     "section": "15.4 O laboratório em Colab",
-    "text": "15.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb09 — Experimental causal research. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você analisa um experimento de campo real de mobilização eleitoral, estima o efeito como uma diferença de médias e coloca em volta dele um intervalo por inferência de randomização. Depois você vê atrito, não conformidade e transbordamento entortarem, cada um a seu modo, uma estimativa limpa, e assim aprende a nomear qual quantidade realmente sobrevive.",
+    "text": "15.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb09 — Experimental causal research (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você analisa um experimento de campo real de mobilização eleitoral, estima o efeito como uma diferença de médias e coloca em volta dele um intervalo por inferência de randomização. Depois você vê atrito, não conformidade e transbordamento entortarem, cada um a seu modo, uma estimativa limpa, e assim aprende a nomear qual quantidade realmente sobrevive.",
     "crumbs": [
       "Parte III — Trilhas de pesquisa",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Pesquisa Causal Experimental</span>"
@@ -1278,7 +1288,7 @@
     "href": "part3-pathways/16-hybrid-and-complex-designs.html#o-laboratório-em-colab",
     "title": "16  Desenhos Híbridos e Complexos",
     "section": "16.4 O laboratório em Colab",
-    "text": "16.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign. Abra no Colab pelo selo acima. Lá você constrói um pequeno mundo simulado, declara um desenho como algo que um computador consegue rodar, diagnostica esse desenho simulando-o milhares de vezes para ler o viés, a variância e o poder dele, e depois redesenha a parte que mais o melhora. O laboratório roda esse loop em uma pergunta social causal; este capítulo mostra que a mesma anatomia vale quando o desenho é complexo.",
+    "text": "16.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você constrói um pequeno mundo simulado, declara um desenho como algo que um computador consegue rodar, diagnostica esse desenho simulando-o milhares de vezes para ler o viés, a variância e o poder dele, e depois redesenha a parte que mais o melhora. O laboratório roda esse loop em uma pergunta social causal; este capítulo mostra que a mesma anatomia vale quando o desenho é complexo.",
     "crumbs": [
       "Parte III — Trilhas de pesquisa",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Desenhos Híbridos e Complexos</span>"
@@ -1366,7 +1376,7 @@
     "href": "part4-credible-evidence/17-data-provenance-and-data-quality.html#o-laboratório-em-colab",
     "title": "17  Proveniência e Qualidade dos Dados",
     "section": "17.4 O laboratório em Colab",
-    "text": "17.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb03 — Research builds on research: verified evidence + real gaps. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. No laboratório você roda o loop de recuperação e verificação em uma alegação do seu próprio projeto, vê uma pilha bem arrumada de citações sugeridas por IA desabar até as poucas que sobrevivem à recuperação, e segue cadeias de citação para trás e para frente até formar um mapa de evidências cujo único quadrado vazio é uma lacuna que você consegue defender, porque cada fonte em volta dele é uma fonte que você mesmo abriu.",
+    "text": "17.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb03 — Research builds on research: verified evidence + real gaps (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No laboratório você roda o loop de recuperação e verificação em uma alegação do seu próprio projeto, vê uma pilha bem arrumada de citações sugeridas por IA desabar até as poucas que sobrevivem à recuperação, e segue cadeias de citação para trás e para frente até formar um mapa de evidências cujo único quadrado vazio é uma lacuna que você consegue defender, porque cada fonte em volta dele é uma fonte que você mesmo abriu.",
     "crumbs": [
       "Parte IV — Produzindo evidência crível com IA",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proveniência e Qualidade dos Dados</span>"
@@ -1454,7 +1464,7 @@
     "href": "part4-credible-evidence/18-measurement-and-operationalization.html#o-laboratório-em-colab",
     "title": "18  Mensuração e Operacionalização",
     "section": "18.4 O laboratório em Colab",
-    "text": "18.4 O laboratório em Colab\nO laboratório deste capítulo é o notebook nb05 — Observational descriptive research. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você constrói uma escada conceito → constructo → indicador para a sua própria medida principal, e vê na prática um indicador único achatar a realidade: a média de 4,43 de um survey cai em um vale entre dois picos, então a média não descreve quase nenhum respondente real. Um índice é uma operacionalização, e toda operacionalização esconde aquilo sobre o que ela tira média.",
+    "text": "18.4 O laboratório em Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb05 — Observational descriptive research (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você constrói uma escada conceito → constructo → indicador para a sua própria medida principal, e vê na prática um indicador único achatar a realidade: a média de 4,43 de um survey cai em um vale entre dois picos, então a média não descreve quase nenhum respondente real. Um índice é uma operacionalização, e toda operacionalização esconde aquilo sobre o que ela tira média.",
     "crumbs": [
       "Parte IV — Produzindo evidência crível com IA",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Mensuração e Operacionalização</span>"
@@ -1542,7 +1552,7 @@
     "href": "part4-credible-evidence/19-ai-as-programmer.html#o-laboratório-no-colab",
     "title": "19  A IA como Programadora",
     "section": "19.4 O laboratório no Colab",
-    "text": "19.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb05 — Observational descriptive research. Abra no Colab pelo selo acima. Lá você entrega células ao Gemini e o faz merecer a sua confiança: você pede que ele explique, linha por linha, por que dez amostras aleatórias se agrupam em torno da média verdadeira de um marco amostral enquanto um canal de conveniência erra por quase doze anos, e depois confere o intervalo que ele cita contra os números que a sua própria célula de fato imprimiu. Essa distância entre a história fluente da ferramenta e a sua saída impressa é a lição deste capítulo, rodando ao vivo.",
+    "text": "19.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb05 — Observational descriptive research (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você entrega células ao Gemini e o faz merecer a sua confiança: você pede que ele explique, linha por linha, por que dez amostras aleatórias se agrupam em torno da média verdadeira de um marco amostral enquanto um canal de conveniência erra por quase doze anos, e depois confere o intervalo que ele cita contra os números que a sua própria célula de fato imprimiu. Essa distância entre a história fluente da ferramenta e a sua saída impressa é a lição deste capítulo, rodando ao vivo.",
     "crumbs": [
       "Parte IV — Produzindo evidência crível com IA",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>A IA como Programadora</span>"
@@ -1630,7 +1640,7 @@
     "href": "part4-credible-evidence/20-ai-as-analytical-assistant.html#o-laboratório-no-colab",
     "title": "20  A IA como Assistente Analítica",
     "section": "20.4 O laboratório no Colab",
-    "text": "20.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb10 — Share the research and attack the analysis. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você delega a uma assistente uma grade de robustez de verdade, um teste placebo e uma verificação de influência, e depois julga três revisores de IA confiantes contra os dados e vê dois dos três alertas se dissolverem no instante em que uma verificação os toca.",
+    "text": "20.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb10 — Share the research and attack the analysis (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você delega a uma assistente uma grade de robustez de verdade, um teste placebo e uma verificação de influência, e depois julga três revisores de IA confiantes contra os dados e vê dois dos três alertas se dissolverem no instante em que uma verificação os toca.",
     "crumbs": [
       "Parte IV — Produzindo evidência crível com IA",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>A IA como Assistente Analítica</span>"
@@ -1718,7 +1728,7 @@
     "href": "part4-credible-evidence/21-robustness-and-sensitivity.html#o-laboratório-no-colab",
     "title": "21  Robustez e Sensibilidade",
     "section": "21.4 O laboratório no Colab",
-    "text": "21.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb10 — Share the research + attack the analysis. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você roda de novo uma diferença principal ao longo de uma grade pré-listada e lê a curva de especificações dela, vê a busca por especificações fabricar um resultado “significativo” a partir de dados sem efeito nenhum, e roda um teste placebo e uma verificação de influência deixando um caso de fora por vez, em código com semente fixa, para sentir a diferença entre um achado robusto e um frágil.",
+    "text": "21.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb10 — Share the research + attack the analysis (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você roda de novo uma diferença principal ao longo de uma grade pré-listada e lê a curva de especificações dela, vê a busca por especificações fabricar um resultado “significativo” a partir de dados sem efeito nenhum, e roda um teste placebo e uma verificação de influência deixando um caso de fora por vez, em código com semente fixa, para sentir a diferença entre um achado robusto e um frágil.",
     "crumbs": [
       "Parte IV — Produzindo evidência crível com IA",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Robustez e Sensibilidade</span>"
@@ -1806,7 +1816,7 @@
     "href": "part4-credible-evidence/22-diagnostics-and-negative-tests.html#o-laboratório-no-colab",
     "title": "22  Diagnósticos e Testes Negativos",
     "section": "22.4 O laboratório no Colab",
-    "text": "22.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb10 — Share the research + attack the analysis. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você roda um teste placebo sobre uma estimativa real de survey: você joga fora o agrupamento verdadeiro, o substitui por um rótulo de cara ou coroa 500 vezes e vê as diferenças falsas se aglomerarem bem juntinho no zero, enquanto o resultado real fica bem longe dessa nuvem. Depois uma verificação deixando um caso de fora mostra se um único ponto de dados está carregando em silêncio o achado inteiro.",
+    "text": "22.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb10 — Share the research + attack the analysis (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você roda um teste placebo sobre uma estimativa real de survey: você joga fora o agrupamento verdadeiro, o substitui por um rótulo de cara ou coroa 500 vezes e vê as diferenças falsas se aglomerarem bem juntinho no zero, enquanto o resultado real fica bem longe dessa nuvem. Depois uma verificação deixando um caso de fora mostra se um único ponto de dados está carregando em silêncio o achado inteiro.",
     "crumbs": [
       "Parte IV — Produzindo evidência crível com IA",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Diagnósticos e Testes Negativos</span>"
@@ -1894,7 +1904,7 @@
     "href": "part4-credible-evidence/23-ai-as-adversarial-reviewer.html#o-laboratório-no-colab",
     "title": "23  A IA como Revisora Adversária",
     "section": "23.4 O laboratório no Colab",
-    "text": "23.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb10, Share the Research and Attack the Analysis. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Você roda de novo uma estimativa ao longo de uma grade pré-listada de oito especificações, vê a busca por especificações fabricar um resultado significativo a partir de puro ruído, roda um placebo e uma verificação de influência deixando um caso de fora, e depois entrega a sua análise a uma pessoa, a uma IA e a um painel de modelos de IA e julga cada alerta que eles levantam contra os dados.",
+    "text": "23.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb10, Share the Research and Attack the Analysis (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Você roda de novo uma estimativa ao longo de uma grade pré-listada de oito especificações, vê a busca por especificações fabricar um resultado significativo a partir de puro ruído, roda um placebo e uma verificação de influência deixando um caso de fora, e depois entrega a sua análise a uma pessoa, a uma IA e a um painel de modelos de IA e julga cada alerta que eles levantam contra os dados.",
     "crumbs": [
       "Parte IV — Produzindo evidência crível com IA",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>A IA como Revisora Adversária</span>"
@@ -1971,7 +1981,7 @@
     "href": "part4-credible-evidence/24-recognizing-false-confidence.html#o-laboratório-no-colab",
     "title": "24  Reconhecendo a Falsa Confiança",
     "section": "24.4 O laboratório no Colab",
-    "text": "24.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb01, Research in the Age of AI: Your Arm, Your RA, Not Your Brain. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. No laboratório você roda um pequeno estudo aleatorizado, encontra um resumo confiante de uma linha alegando um efeito grande, e recalcula a diferença real nos dados para ver o resumo exagerá-la. Depois você faz o red team de um achado que você mesmo escreveu e pega uma IA elogiando a sua frase em vez de testá-la.",
+    "text": "24.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb01, Research in the Age of AI: Your Arm, Your RA, Not Your Brain (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No laboratório você roda um pequeno estudo aleatorizado, encontra um resumo confiante de uma linha alegando um efeito grande, e recalcula a diferença real nos dados para ver o resumo exagerá-la. Depois você faz o red team de um achado que você mesmo escreveu e pega uma IA elogiando a sua frase em vez de testá-la.",
     "crumbs": [
       "Parte IV — Produzindo evidência crível com IA",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Reconhecendo a Falsa Confiança</span>"
@@ -2059,7 +2069,7 @@
     "href": "part5-communicating/25-from-results-to-claims.html#o-laboratório-no-colab",
     "title": "25  Dos Resultados às Alegações",
     "section": "25.4 O laboratório no Colab",
-    "text": "25.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb11 — Poster criticism + final poster lock. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você faz uma auditoria de galeria em uma figura principal desenhada de duas maneiras a partir dos mesmos números, ensaia uma defesa oral com três lentes e trava cada número na sua célula e cada citação numa fonte real antes de a sua página ficar definitiva.",
+    "text": "25.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb11 — Poster criticism + final poster lock (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você faz uma auditoria de galeria em uma figura principal desenhada de duas maneiras a partir dos mesmos números, ensaia uma defesa oral com três lentes e trava cada número na sua célula e cada citação numa fonte real antes de a sua página ficar definitiva.",
     "crumbs": [
       "Parte V — Comunicando e defendendo a pesquisa",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Dos Resultados às Alegações</span>"
@@ -2147,7 +2157,7 @@
     "href": "part5-communicating/26-claim-evidence-tables.html#o-laboratório-no-colab",
     "title": "26  Tabelas Alegação–Evidência",
     "section": "26.4 O laboratório no Colab",
-    "text": "26.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb11 — Poster criticism + final poster lock. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você faz a auditoria de travamento final em um pôster de verdade: rastreia cada número até a célula que o produziu, confirma que cada citação resolve para uma fonte que você mesmo abriu, e transforma alegações soltas em linhas travadas e sustentadas.",
+    "text": "26.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb11 — Poster criticism + final poster lock (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você faz a auditoria de travamento final em um pôster de verdade: rastreia cada número até a célula que o produziu, confirma que cada citação resolve para uma fonte que você mesmo abriu, e transforma alegações soltas em linhas travadas e sustentadas.",
     "crumbs": [
       "Parte V — Comunicando e defendendo a pesquisa",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>Tabelas Alegação–Evidência</span>"
@@ -2235,7 +2245,7 @@
     "href": "part5-communicating/27-research-posters.html#o-laboratório-no-colab",
     "title": "27  Pôsteres de Pesquisa",
     "section": "27.4 O laboratório no Colab",
-    "text": "27.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb11 — Poster criticism + final poster lock. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você desenha uma figura principal de duas maneiras a partir dos mesmos números, observa um eixo truncado inflar várias vezes uma diferença pequena e roda as quatro auditorias mais a de acessibilidade até que cada uma aponte um problema localizado e corrigível no painel.",
+    "text": "27.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb11 — Poster criticism + final poster lock (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você desenha uma figura principal de duas maneiras a partir dos mesmos números, observa um eixo truncado inflar várias vezes uma diferença pequena e roda as quatro auditorias mais a de acessibilidade até que cada uma aponte um problema localizado e corrigível no painel.",
     "crumbs": [
       "Parte V — Comunicando e defendendo a pesquisa",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Pôsteres de Pesquisa</span>"
@@ -2312,7 +2322,7 @@
     "href": "part5-communicating/28-poster-criticism.html#o-laboratório-no-colab",
     "title": "28  Crítica de Pôsteres",
     "section": "28.4 O laboratório no Colab",
-    "text": "28.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb11 — Poster criticism + final poster lock. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo. No laboratório você desenha um conjunto honesto de números-piloto de duas maneiras e lê o fator de exagero que a sua própria célula imprime, roda as quatro auditorias mais a de acessibilidade em um pôster de exemplo, mapeia as três lentes de defesa e registra os problemas que o seu próprio pôster recebeu na sua lista de travamento do pôster final.",
+    "text": "28.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb11 — Poster criticism + final poster lock (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. No laboratório você desenha um conjunto honesto de números-piloto de duas maneiras e lê o fator de exagero que a sua própria célula imprime, roda as quatro auditorias mais a de acessibilidade em um pôster de exemplo, mapeia as três lentes de defesa e registra os problemas que o seu próprio pôster recebeu na sua lista de travamento do pôster final.",
     "crumbs": [
       "Parte V — Comunicando e defendendo a pesquisa",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Crítica de Pôsteres</span>"
@@ -2400,7 +2410,7 @@
     "href": "part5-communicating/29-research-pitches.html#o-laboratório-no-colab",
     "title": "29  Pitches de Pesquisa",
     "section": "29.4 O laboratório no Colab",
-    "text": "29.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb12 — Poster delivery: pitches, uncertainty, and difficult questions. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você roda uma calculadora de ritmo que transforma a contagem de palavras de um roteiro em segundos de fala, para dimensionar cada camada com honestidade, e depois rascunha e submete a estresse as suas próprias três camadas de pitch contra a regra única.",
+    "text": "29.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb12 — Poster delivery: pitches, uncertainty, and difficult questions (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você roda uma calculadora de ritmo que transforma a contagem de palavras de um roteiro em segundos de fala, para dimensionar cada camada com honestidade, e depois rascunha e submete a estresse as suas próprias três camadas de pitch contra a regra única.",
     "crumbs": [
       "Parte V — Comunicando e defendendo a pesquisa",
       "<span class='chapter-number'>29</span>  <span class='chapter-title'>Pitches de Pesquisa</span>"
@@ -2488,7 +2498,7 @@
     "href": "part5-communicating/30-difficult-questions-and-uncertainty.html#o-laboratório-no-colab",
     "title": "30  Perguntas Difíceis e Incerteza",
     "section": "30.4 O laboratório no Colab",
-    "text": "30.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb12 — Poster delivery: pitches, uncertainty, and the questions you fear. Abra-o no Colab pelo selo acima. Lá você roda um detector de espiral de desculpas que conta palavras de autoapagamento em três apresentações de exemplo, e depois cola a sua própria frase de incerteza e limitações e leva a contagem de sinalizações a zero. Você também monta o seu banco de cinco perguntas e ensaia a resposta causal contra o seu próprio projeto.",
+    "text": "30.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb12 — Poster delivery: pitches, uncertainty, and the questions you fear (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você roda um detector de espiral de desculpas que conta palavras de autoapagamento em três apresentações de exemplo, e depois cola a sua própria frase de incerteza e limitações e leva a contagem de sinalizações a zero. Você também monta o seu banco de cinco perguntas e ensaia a resposta causal contra o seu próprio projeto.",
     "crumbs": [
       "Parte V — Comunicando e defendendo a pesquisa",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Perguntas Difíceis e Incerteza</span>"
@@ -2576,7 +2586,7 @@
     "href": "part5-communicating/31-ai-disclosure-and-research-integrity.html#o-laboratório-no-colab",
     "title": "31  Declaração de Uso de IA e Integridade em Pesquisa",
     "section": "31.4 O laboratório no Colab",
-    "text": "31.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb13 — Final conference preparation, presentation + reflection. Abra-o no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você codifica como dados as perguntas sobre uso de IA que te fizeram e preenche o AI Research Ledger que vira a declaração que você defende. A Defesa de Saída (Exit Defense) final pede que você nomeie o que delegou ao Gemini e a checagem específica que decidiu se você aceitou, mudou ou rejeitou o resultado.",
+    "text": "31.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb13 — Final conference preparation, presentation + reflection (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você codifica como dados as perguntas sobre uso de IA que te fizeram e preenche o AI Research Ledger que vira a declaração que você defende. A Defesa de Saída (Exit Defense) final pede que você nomeie o que delegou ao Gemini e a checagem específica que decidiu se você aceitou, mudou ou rejeitou o resultado.",
     "crumbs": [
       "Parte V — Comunicando e defendendo a pesquisa",
       "<span class='chapter-number'>31</span>  <span class='chapter-title'>Declaração de Uso de IA e Integridade em Pesquisa</span>"
@@ -2664,7 +2674,7 @@
     "href": "part6-after-conference/32-replication-and-reproduction.html#o-laboratório-no-colab",
     "title": "32  Replicação e Reprodução",
     "section": "32.4 O laboratório no Colab",
-    "text": "32.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb14 — replication and red-team of another researcher’s package. Abra no Colab pelo selo acima. Lá você reproduz a frio o número principal de um experimento de campo real, só a partir dos arquivos, e depois faz as mesmas três auditorias que você acabou de ver: alinha cada alegação escrita com a saída que a sustenta, move o número com uma especificação não divulgada e alarga o intervalo ao respeitar o agrupamento que o texto ignorou.",
+    "text": "32.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb14 — replication and red-team of another researcher’s package (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você reproduz a frio o número principal de um experimento de campo real, só a partir dos arquivos, e depois faz as mesmas três auditorias que você acabou de ver: alinha cada alegação escrita com a saída que a sustenta, move o número com uma especificação não divulgada e alarga o intervalo ao respeitar o agrupamento que o texto ignorou.",
     "crumbs": [
       "Parte VI — A pesquisa depois da conferência",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>Replicação e Reprodução</span>"
@@ -2752,7 +2762,7 @@
     "href": "part6-after-conference/33-from-poster-to-research-note.html#o-laboratório-no-colab",
     "title": "33  Do Pôster à Nota de Pesquisa",
     "section": "33.4 O laboratório no Colab",
-    "text": "33.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb15 — From poster to research note. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você pontua a densidade de evidência de dois parágrafos, monta uma hierarquia de resultados vendo um intervalo estreito conquistar o topo enquanto um intervalo de quarenta linhas espera no fim, e roda um auditor que caça os cinco jeitos pelos quais uma cápsula de reprodutibilidade quebra.",
+    "text": "33.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb15 — From poster to research note (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você pontua a densidade de evidência de dois parágrafos, monta uma hierarquia de resultados vendo um intervalo estreito conquistar o topo enquanto um intervalo de quarenta linhas espera no fim, e roda um auditor que caça os cinco jeitos pelos quais uma cápsula de reprodutibilidade quebra.",
     "crumbs": [
       "Parte VI — A pesquisa depois da conferência",
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Do Pôster à Nota de Pesquisa</span>"
@@ -2840,7 +2850,7 @@
     "href": "part6-after-conference/34-open-and-reusable-research-packages.html#o-laboratório-no-colab",
     "title": "34  Pacotes de Pesquisa Abertos e Reutilizáveis",
     "section": "34.4 O laboratório no Colab",
-    "text": "34.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb15 — From poster to research note. Abra no Colab pelo selo acima. Lá você constrói o audit_capsule, vê a função sinalizar os cinco pecados em um pacote quebrado de propósito e nenhum em um pacote limpo, e depois cola as linhas principais da sua própria cápsula e corrige o que ela pegar.",
+    "text": "34.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb15 — From poster to research note (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você constrói o audit_capsule, vê a função sinalizar os cinco pecados em um pacote quebrado de propósito e nenhum em um pacote limpo, e depois cola as linhas principais da sua própria cápsula e corrige o que ela pegar.",
     "crumbs": [
       "Parte VI — A pesquisa depois da conferência",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Pacotes de Pesquisa Abertos e Reutilizáveis</span>"
@@ -2928,7 +2938,7 @@
     "href": "part6-after-conference/35-managing-multiple-ai-agents.html#o-laboratório-no-colab",
     "title": "35  Gerenciando Vários Agentes de IA",
     "section": "35.4 O laboratório no Colab",
-    "text": "35.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb16 — Managing multiple AI agents + the final defense. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você monta o fluxo executor–crítico como um grafo direcionado, lê a profundidade do caminho crítico e a largura paralela direto do código, e vê o caminho crescer uma rodada no instante em que você faz um crítico esperar por outro crítico. Depois você decompõe o seu próprio rascunho em papéis delimitados e defende a ligação que escolheu.",
+    "text": "35.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb16 — Managing multiple AI agents + the final defense (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você monta o fluxo executor–crítico como um grafo direcionado, lê a profundidade do caminho crítico e a largura paralela direto do código, e vê o caminho crescer uma rodada no instante em que você faz um crítico esperar por outro crítico. Depois você decompõe o seu próprio rascunho em papéis delimitados e defende a ligação que escolheu.",
     "crumbs": [
       "Parte VI — A pesquisa depois da conferência",
       "<span class='chapter-number'>35</span>  <span class='chapter-title'>Gerenciando Vários Agentes de IA</span>"
@@ -3016,7 +3026,7 @@
     "href": "part6-after-conference/36-conflicting-agents-and-human-escalation.html#o-laboratório-no-colab",
     "title": "36  Agentes em Conflito e Escalonamento Humano",
     "section": "36.4 O laboratório no Colab",
-    "text": "36.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb16 — Managing multiple AI agents + the final defense. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você liga um fluxo executor–crítico sobre um rascunho real, depois simula duas equipes de quatro revisores e vê um ponto cego compartilhado transformar concordância unânime em uma confiança falsa que você consegue medir.",
+    "text": "36.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb16 — Managing multiple AI agents + the final defense (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você liga um fluxo executor–crítico sobre um rascunho real, depois simula duas equipes de quatro revisores e vê um ponto cego compartilhado transformar concordância unânime em uma confiança falsa que você consegue medir.",
     "crumbs": [
       "Parte VI — A pesquisa depois da conferência",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>Agentes em Conflito e Escalonamento Humano</span>"
@@ -3104,7 +3114,7 @@
     "href": "part6-after-conference/37-final-research-and-ai-management-portfolio.html#o-laboratório-no-colab",
     "title": "37  Pesquisa Final e Portfólio de Gestão de IA",
     "section": "37.4 O laboratório no Colab",
-    "text": "37.4 O laboratório no Colab\nO laboratório deste capítulo é o notebook nb16 — Managing multiple AI agents + the final defense. Abra no Colab pelo selo acima e trabalhe as células junto com este capítulo. Lá você liga uma equipe executor–crítico, roda uma simulação com semente fixa mostrando que quatro revisores parecidos entre si deixam passar uma falha real muito mais vezes do que quatro independentes, e depois redige as quatro partes do seu próprio portfólio e prepara a sua defesa de evidências.",
+    "text": "37.4 O laboratório no Colab\nEste capítulo tem o seu próprio notebook companheiro — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho Agora é a sua vez, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso nb16 — Managing multiple AI agents + the final defense (abrir no Colab), parte do curso companheiro apresentado no apêndice Para instrutores. Lá você liga uma equipe executor–crítico, roda uma simulação com semente fixa mostrando que quatro revisores parecidos entre si deixam passar uma falha real muito mais vezes do que quatro independentes, e depois redige as quatro partes do seu próprio portfólio e prepara a sua defesa de evidências.",
     "crumbs": [
       "Parte VI — A pesquisa depois da conferência",
       "<span class='chapter-number'>37</span>  <span class='chapter-title'>Pesquisa Final e Portfólio de Gestão de IA</span>"
@@ -3276,14 +3286,69 @@
     ]
   },
   {
-    "objectID": "author.html",
-    "href": "author.html",
-    "title": "Appendix C — Sobre o Autor",
+    "objectID": "for-instructors.html",
+    "href": "for-instructors.html",
+    "title": "Appendix C — Para Instrutores",
     "section": "",
-    "text": "C.1 Fora do expediente\nEle escreveu este livro para os estudantes que ensina: alunos de graduação em economia, ciência política, negócios e biologia que querem produzir pesquisa que consigam defender, em um mundo no qual a IA consegue produzir quase todo o resto. A única regra do livro também é a regra de trabalho dele: a IA é o seu braço e a sua assistente de pesquisa, não o seu cérebro.\nDuas coisas sobre as quais você vai acabar ouvindo falar se fizer aula com ele.\nPalmeiras. O maior clube de futebol do Brasil e o treinamento em incerteza mais rigoroso da vida do autor.\nO jogo mais emocionante da história (vídeo)\nCarnaval de Olinda. O carnaval de rua da cidade natal dele, em Pernambuco, famoso por seus bonecos gigantes.\nNYT: Como John Travolta virou a estrela do Carnaval (em inglês)",
+    "text": "C.1 Dois artefatos, um só ciclo\nO EDR|AI é um manual autocontido: um estudante trabalhando sozinho não precisa de nada além dos capítulos e dos seus notebooks companheiros no Colab. Este apêndice é para o outro leitor — o instrutor que quer ensinar com o livro. Ele apresenta o curso companheiro do qual o livro nasceu e disponibiliza gratuitamente todos os seus materiais.\nO livro e o curso são artefatos diferentes, e mantê-los distintos é o que permite que cada um viaje por conta própria.\nQuando o livro muda, o material do curso é ressincronizado a partir dele: a edição em inglês do livro é a fonte oficial de tudo o que vem depois.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Sobre o Autor</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Para Instrutores</span>"
+    ]
+  },
+  {
+    "objectID": "for-instructors.html#dois-artefatos-um-só-ciclo",
+    "href": "for-instructors.html#dois-artefatos-um-só-ciclo",
+    "title": "Appendix C — Para Instrutores",
+    "section": "",
+    "text": "O livro é o manual. Todo capítulo termina com uma seção Agora é a sua vez, e todo capítulo tem o seu próprio notebook companheiro no Colab (o selo no topo do capítulo), no qual o leitor roda o código do capítulo e completa essa seção. Feitas em ordem, as 37 seções se encadeiam em um projeto de pesquisa completo. Nada disso exige um curso.\nO curso se organiza em volta do livro. Os seus notebooks de laboratório semanais são artefatos de sala de aula derivados dos capítulos do livro e moldados para aulas invertidas de 50 minutos; as suas leituras são os capítulos do livro (obrigatórios) com os capítulos correspondentes do RDSS recomendados; e os seus milestones reúnem as seções Agora é a sua vez dos capítulos, de modo que cada etapa avaliada do projeto semestral do estudante é um pedaço da cadeia do livro.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Para Instrutores</span>"
+    ]
+  },
+  {
+    "objectID": "for-instructors.html#o-curso-companheiro",
+    "href": "for-instructors.html#o-curso-companheiro",
+    "title": "Appendix C — Para Instrutores",
+    "section": "C.2 O curso companheiro",
+    "text": "C.2 O curso companheiro\nA implementação de referência é HONR 46400 — Evidence-Driven Research, um seminário semestral do Honors College da Purdue University (três encontros de 50 minutos por semana, projetos individuais de pesquisa, uma conferência pública de pôsteres e uma defesa oral de evidências). Tudo o que é voltado ao estudante é aberto:\n\nSite do curso: davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464 (syllabus, calendário, material)\nRepositório: github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464\nBases de dados do curso, em um pacote: honr46400_datasets.zip\n\nO ritmo semanal: as aulas de segunda e quarta-feira são conduzidas por um estudante — o Student Research Lead do dia, cujo sistema é o apêndice O Student Research Lead — como investigações socráticas construídas sobre o notebook de laboratório da semana; a IA faz o trabalho pesado ao vivo, e toda alegação que ela produz é verificada antes de sobreviver. A sexta-feira é um estúdio: um quiz curto de recuperação, um stand-up de pesquisa e um sprint no milestone da semana, atacado por colegas e por uma bancada de revisores de IA (na Purdue, o GenAI Studio) antes da submissão.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Para Instrutores</span>"
+    ]
+  },
+  {
+    "objectID": "for-instructors.html#milestones-avaliando-a-cadeia-do-livro",
+    "href": "for-instructors.html#milestones-avaliando-a-cadeia-do-livro",
+    "title": "Appendix C — Para Instrutores",
+    "section": "C.3 Milestones: avaliando a cadeia do livro",
+    "text": "C.3 Milestones: avaliando a cadeia do livro\nO projeto atravessa dezesseis milestones, M0–M15, um por semana, de um primeiro mapa de curiosidades a um capítulo final de pesquisa defendido. Cada brief de milestone nomeia a sua âncora no livro: os capítulos cujas seções Agora é a sua vez o estudante completa e submete naquela semana. Avaliar o milestone é, portanto, avaliar um trecho da cadeia do livro, trabalhado no projeto do próprio estudante. Os briefs são abertos no repositório: _research_project/2026Fall/.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Para Instrutores</span>"
+    ]
+  },
+  {
+    "objectID": "for-instructors.html#os-notebooks-de-laboratório-do-curso",
+    "href": "for-instructors.html#os-notebooks-de-laboratório-do-curso",
+    "title": "Appendix C — Para Instrutores",
+    "section": "C.4 Os notebooks de laboratório do curso",
+    "text": "C.4 Os notebooks de laboratório do curso\nUm laboratório por semana, nb01–nb16, cada um derivado dos capítulos que ensina. Eles são as contrapartes de sala de aula dos notebooks companheiros do livro — simulações mais ricas, briefings de SRL e estrutura de aula — e qualquer um deles abre no Colab gratuito.\n\n\n\nLaboratório do curso (abre no Colab)\nDerivado dos capítulos\n\n\n\n\nnb01 — Research in the age of AI: your arm, your RA, not your brain\n1–4, 24\n\n\nnb02 — From curiosity to a research problem\n5, 6\n\n\nnb03 — Research builds on research\n7, 8, 17\n\n\nnb04 — The anatomy of a research design\n9, 10, 16\n\n\nnb05 — Observational descriptive research\n11, 18, 19\n\n\nnb06 — Observational causal research\n12\n\n\nnb07 — Experimental descriptive research\n13\n\n\nnb08 — Prediction: generalizing to unseen cases\n14\n\n\nnb09 — Experimental causal research\n15\n\n\nnb10 — Share the research + attack the analysis\n20–23\n\n\nnb11 — Poster criticism + final poster lock\n25–28\n\n\nnb12 — Poster delivery: pitches, uncertainty, difficult questions\n29, 30\n\n\nnb13 — Final conference preparation, presentation + reflection\n31\n\n\nnb14 — Async module: replication + red-team of a peer’s package\n32\n\n\nnb15 — From poster to research note\n33, 34\n\n\nnb16 — Managing multiple AI agents + the final defense\n35–37",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Para Instrutores</span>"
+    ]
+  },
+  {
+    "objectID": "for-instructors.html#adotar-ou-adaptar",
+    "href": "for-instructors.html#adotar-ou-adaptar",
+    "title": "Appendix C — Para Instrutores",
+    "section": "C.5 Adotar ou adaptar",
+    "text": "C.5 Adotar ou adaptar\nO livro é deliberadamente independente de instituição, e o material do curso acima é aberto: leve a arquitetura inteira, um único laboratório, ou apenas a sequência de leituras. O material do lado do instrutor — notebooks com soluções e guias de aula por encontro — fica atrás da aba Instructor do site do curso, protegida por senha; escreva ao autor para ter acesso (Sobre o Autor). Se você ensinar com o EDR|AI, o autor vai gostar de verdade de saber como foi.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Para Instrutores</span>"
     ]
   }
 ]

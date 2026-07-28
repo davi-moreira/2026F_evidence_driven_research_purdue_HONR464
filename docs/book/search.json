@@ -4,9 +4,19 @@
     "href": "index.html",
     "title": "EDR|AI — Evidence-Driven Research in the Age of AI",
     "section": "",
-    "text": "🌐 English · Português (BR) · Español\n\n\n\n\n\n\n\nPreface\n\n\n\n\n\n\nWarningA work in progress\n\n\n\nThis book is a work in progress. It is still under development and will keep growing and improving over time. Chapters may be revised, expanded, or reorganized as it is used in the classroom; when something looks unfinished, that is why. Questions and suggestions are welcome.\n\n\nEDR|AI — Evidence-Driven Research in the Age of AI: How to Design, Analyze, Verify, and Defend — is an open research manual for undergraduate students in economics, political science, business, and biology who want to turn curiosity into credible, defensible, evidence-based insight in a world where AI can produce almost everything. It was first written for an Honors research seminar at Purdue University, and it is deliberately institution-agnostic: any instructor or student, anywhere, is welcome to adopt it.\nIts one message: AI is your arm and your research assistant, not your brain. You will direct AI tools through the Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend workflow while keeping every research decision your own. One rule runs through every verification step in this book (collected in the Verification Guide appendix): AI can review AI — a second model is a real auditor of the first — but the last decision is always human.\nThis book is also a manual you can follow to a finished project. Every chapter ends with an It is your turn section: concrete steps that apply the chapter to your own research. Work them in order and they chain into a complete, defensible research project — and by the last page, a draft research artifact (a paper, note, or poster) with your name on it. You do not need to be enrolled in any course for that to work; you need curiosity and the discipline the book teaches.\nBlair, Coppock and Humphreys’ Research Design in the Social Sciences (RDSS, free at book.declaredesign.org) is the theory text that EDR|AI translates for the undergraduate audience. In the original course the EDR|AI chapter is the required reading each week and the matching RDSS chapters are recommended for depth. Each chapter names a research decision, works an example, links a Colab lab, shows an AI failure and how to catch it, and hands the work back to you.\nThe book has six parts: research when AI does “everything”; from curiosity to research design; the research pathways (observational and experimental, descriptive and causal, and prediction); producing credible evidence with AI; communicating and defending research; and research after the conference.\nLanguages. EDR|AI is also available in Português (Brasil) and Español — use the language links at the top of any page to switch at any moment. The English edition is the source of truth; the translations are regenerated from it as it evolves.\nIf your course runs the flipped format this book supports, most lectures are led by a student: the day’s Student Research Lead. That lead’s brief lives at the start of the corresponding lecture notebook, and the appendix The Student Research Lead collects the format, the preparation cadence, and the expectations in one place. To meet the person behind the book, see About the Author.",
+    "text": "🌐 English · Português (BR) · Español\n\n\n\n\n\n\n\nPreface\n\n\n\n\n\n\nWarningA work in progress\n\n\n\nThis book is a work in progress. It is still under development and will keep growing and improving over time. Chapters may be revised, expanded, or reorganized as it is used in the classroom; when something looks unfinished, that is why. Questions and suggestions are welcome.\n\n\nEDR|AI — Evidence-Driven Research in the Age of AI: How to Design, Analyze, Verify, and Defend — is an open research manual for undergraduate students who aspire to produce high-quality research with scientific impact. It guides you through how to design, analyze, verify, and defend evidence-driven research in a world where AI can produce almost everything: work every chapter’s It is your turn section and finish with a research project of your own. The book was first written for an Honors research seminar at Purdue University, and it is deliberately institution-agnostic: any instructor or student, anywhere, is welcome to adopt it.\nIts one message: AI is your arm and your research assistant, not your brain. You will direct AI tools through the Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend workflow while keeping every research decision your own. One rule runs through every verification step in this book (collected in the Verification Guide appendix): AI can review AI — a second model is a real auditor of the first — but the last decision is always human.\nThis book is also a manual you can follow to a finished project. Every chapter ends with an It is your turn section: concrete steps that apply the chapter to your own research. Work them in order and they chain into a complete, defensible research project — and by the last page, a draft research artifact (a paper, note, or poster) with your name on it. You do not need to be enrolled in any course for that to work; you need curiosity and the discipline the book teaches.\nBlair, Coppock and Humphreys’ Research Design in the Social Sciences (RDSS, free at book.declaredesign.org) is the theory text that EDR|AI translates for the undergraduate audience. In the companion course the EDR|AI chapter is the required reading each week and the matching RDSS chapters are recommended for depth. Each chapter names a research decision, works an example, shows an AI failure and how to catch it, and hands the work back to you. Each chapter also has its own companion Colab notebook — the badge at the top of the chapter — where you run the chapter’s code and complete its It is your turn section without leaving the browser. The companion notebooks belong to the book: you need no course, no platform, and no account beyond free Colab to work all of them.\nThe book has six parts: research when AI does “everything”; from curiosity to research design; the research pathways (observational and experimental, descriptive and causal, and prediction); producing credible evidence with AI; communicating and defending research; and research after the conference.\nLanguages. EDR|AI is also available in Português (Brasil) and Español — use the language links at the top of any page to switch at any moment. The English edition is the source of truth; the translations are regenerated from it as it evolves.\nIf you teach. The appendix For instructors presents the companion course this book grew out of and makes its materials freely available: the classroom lab notebooks, the milestone chain that collects the chapters’ It is your turn sections into a final research artifact, and the flipped format in which most lectures are led by a student — the day’s Student Research Lead, whose format, preparation cadence, and expectations live in the appendix The Student Research Lead.\nTo meet the person behind the book, turn the page: About the Author comes right after this preface.",
     "crumbs": [
       "Preface"
+    ]
+  },
+  {
+    "objectID": "author.html",
+    "href": "author.html",
+    "title": "About the Author",
+    "section": "",
+    "text": "Off the clock\nHe wrote this book for the students he teaches: undergraduates in economics, political science, business, and biology who want to produce research they can defend, in a world where AI can produce almost everything else. The book’s one rule is also his own working rule: AI is your arm and your research assistant, not your brain.\nTwo things you will eventually hear about if you take his classes.\nPalmeiras. The greatest Brazilian football club, and the author’s most rigorous lifelong training in uncertainty.\nThe Most Exciting Game in History (video)\nCarnaval de Olinda. His hometown street carnival in Pernambuco, Brazil, famous for its giant puppets.\nNYT: How John Travolta Became the Star of Carnival",
+    "crumbs": [
+      "About the Author"
     ]
   },
   {
@@ -57,7 +67,7 @@
     "href": "part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html#the-colab-laboratory",
     "title": "1  AI Is Your Arm, Not Your Brain",
     "section": "1.4 The Colab laboratory",
-    "text": "1.4 The Colab laboratory\nThis chapter’s lab is notebook nb01, Research in the Age of AI: Your Arm, Your RA, Not Your Brain. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you run a small seeded simulation showing why how confident a source sounds tells you nothing about whether it is real, then take one topic you care about, ask an AI for scholarly sources, and verify each by retrieving it yourself.",
+    "text": "1.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb01, Research in the Age of AI: Your Arm, Your RA, Not Your Brain (open in Colab), part of the companion course presented in the For instructors appendix. In the lab you run a small seeded simulation showing why how confident a source sounds tells you nothing about whether it is real, then take one topic you care about, ask an AI for scholarly sources, and verify each by retrieving it yourself.",
     "crumbs": [
       "Part I — Research when AI does \"everything\"",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>AI Is Your Arm, Not Your Brain</span>"
@@ -145,7 +155,7 @@
     "href": "part1-research-with-ai/02-the-student-as-research-director.html#the-colab-laboratory",
     "title": "2  The Student as Research Director",
     "section": "2.4 The Colab laboratory",
-    "text": "2.4 The Colab laboratory\nThis chapter’s lab is notebook nb01 — Research in the age of AI: your arm, your RA — not your brain. Open it in Colab with the badge above and work the cells alongside this chapter. In the “safe to delegate, verify first, or never delegate” practice you sort five real research tasks into the three buckets and defend each call, and at the Human-Only Checkpoint you close the AI and name, for your own project, two decisions you will never hand over.",
+    "text": "2.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb01 — Research in the age of AI: your arm, your RA — not your brain (open in Colab), part of the companion course presented in the For instructors appendix. In the “safe to delegate, verify first, or never delegate” practice you sort five real research tasks into the three buckets and defend each call, and at the Human-Only Checkpoint you close the AI and name, for your own project, two decisions you will never hand over.",
     "crumbs": [
       "Part I — Research when AI does \"everything\"",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>The Student as Research Director</span>"
@@ -233,7 +243,7 @@
     "href": "part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html#the-colab-laboratory",
     "title": "3  Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend",
     "section": "3.4 The Colab laboratory",
-    "text": "3.4 The Colab laboratory\nThis chapter’s lab is notebook nb01 — Research in the age of AI: your arm, your RA, not your brain. Open it in Colab with the badge above. There you run the protocol live: you catch a fabricated citation by retrieving it yourself, then catch a confident summary that overstates a number the data never held. Both are the Inspect and Verify steps under real pressure.",
+    "text": "3.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb01 — Research in the age of AI: your arm, your RA, not your brain (open in Colab), part of the companion course presented in the For instructors appendix. There you run the protocol live: you catch a fabricated citation by retrieving it yourself, then catch a confident summary that overstates a number the data never held. Both are the Inspect and Verify steps under real pressure.",
     "crumbs": [
       "Part I — Research when AI does \"everything\"",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend</span>"
@@ -321,7 +331,7 @@
     "href": "part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html#the-colab-laboratory",
     "title": "4  Research Responsibility and Intellectual Ownership",
     "section": "4.4 The Colab laboratory",
-    "text": "4.4 The Colab laboratory\nThis chapter’s lab is notebook nb01, “Research in the age of AI: your arm, your RA, not your brain.” Open it in Colab with the badge above. There you sort real research tasks by how safely they delegate, catch a live citation by retrieving it yourself, and fill your first AI Research Ledger row: the record that turns “I checked it” into something you can show.",
+    "text": "4.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb01, “Research in the age of AI: your arm, your RA, not your brain” (open in Colab), part of the companion course presented in the For instructors appendix. There you sort real research tasks by how safely they delegate, catch a live citation by retrieving it yourself, and fill your first AI Research Ledger row: the record that turns “I checked it” into something you can show.",
     "crumbs": [
       "Part I — Research when AI does \"everything\"",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Research Responsibility and Intellectual Ownership</span>"
@@ -398,7 +408,7 @@
     "href": "part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html#the-colab-laboratory",
     "title": "5  From Curiosity to a Research Problem",
     "section": "5.4 The Colab laboratory",
-    "text": "5.4 The Colab laboratory\nThis chapter’s lab is notebook nb02 — From curiosity to a research problem: descriptive, predictive, causal. Open it in Colab with the badge above and work the cells alongside this chapter. You will watch one curiosity sharpen the instant it touches real survey columns, then walk your own curiosity from your nb01 map down the funnel, draft two candidate problems, and defend the one you keep.",
+    "text": "5.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb02 — From curiosity to a research problem: descriptive, predictive, causal (open in Colab), part of the companion course presented in the For instructors appendix. You will watch one curiosity sharpen the instant it touches real survey columns, then walk your own curiosity from your nb01 map down the funnel, draft two candidate problems, and defend the one you keep.",
     "crumbs": [
       "Part II — From curiosity to research design",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>From Curiosity to a Research Problem</span>"
@@ -475,7 +485,7 @@
     "href": "part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html#the-colab-laboratory",
     "title": "6  Descriptive, Predictive, and Causal Questions",
     "section": "6.4 The Colab laboratory",
-    "text": "6.4 The Colab laboratory\nThis chapter’s lab is notebook nb02 — From curiosity to a research problem: descriptive, predictive, causal. Open it in Colab with the badge above and work the cells alongside this chapter. There you walk your own curiosity down to a question, watch a naive keyword sorter get fooled on a deck of eight questions, and place your own question on the compass in the shape you will reuse every time you declare a design.",
+    "text": "6.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb02 — From curiosity to a research problem: descriptive, predictive, causal (open in Colab), part of the companion course presented in the For instructors appendix. There you walk your own curiosity down to a question, watch a naive keyword sorter get fooled on a deck of eight questions, and place your own question on the compass in the shape you will reuse every time you declare a design.",
     "crumbs": [
       "Part II — From curiosity to research design",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Descriptive, Predictive, and Causal Questions</span>"
@@ -552,7 +562,7 @@
     "href": "part2-curiosity-to-design/07-research-builds-on-research.html#the-colab-laboratory",
     "title": "7  Research Builds on Research",
     "section": "7.4 The Colab laboratory",
-    "text": "7.4 The Colab laboratory\nThis chapter’s lab is notebook nb03 — Research builds on research: verified evidence + real gaps. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you watch a pile of fifteen AI citations collapse to the few that survive retrieval, build an evidence map in code, and run the retrieval-verification loop on your own claim.",
+    "text": "7.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb03 — Research builds on research: verified evidence + real gaps (open in Colab), part of the companion course presented in the For instructors appendix. In the lab you watch a pile of fifteen AI citations collapse to the few that survive retrieval, build an evidence map in code, and run the retrieval-verification loop on your own claim.",
     "crumbs": [
       "Part II — From curiosity to research design",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Research Builds on Research</span>"
@@ -629,7 +639,7 @@
     "href": "part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html#the-colab-laboratory",
     "title": "8  Finding and Verifying Prior Evidence",
     "section": "8.4 The Colab laboratory",
-    "text": "8.4 The Colab laboratory\nThis chapter’s lab is notebook nb03 — Research builds on research: verified evidence + real gaps. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you run the retrieval-verification loop on your own claim and watch a simulation collapse a tidy pile of fifteen AI citations down to the handful that survive retrieval, then build an evidence map whose one empty square is your gap.",
+    "text": "8.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb03 — Research builds on research: verified evidence + real gaps (open in Colab), part of the companion course presented in the For instructors appendix. In the lab you run the retrieval-verification loop on your own claim and watch a simulation collapse a tidy pile of fifteen AI citations down to the handful that survive retrieval, then build an evidence map whose one empty square is your gap.",
     "crumbs": [
       "Part II — From curiosity to research design",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Finding and Verifying Prior Evidence</span>"
@@ -706,7 +716,7 @@
     "href": "part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html#the-colab-laboratory",
     "title": "9  Model, Inquiry, Data Strategy, and Answer Strategy",
     "section": "9.4 The Colab laboratory",
-    "text": "9.4 The Colab laboratory\nThis chapter’s lab is notebook nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign. Open it in Colab with the badge above and work the cells alongside this chapter. There you build a small simulated world, write its four MIDA parts, and watch what happens to your answer when a data strategy quietly stops matching the inquiry.",
+    "text": "9.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign (open in Colab), part of the companion course presented in the For instructors appendix. There you build a small simulated world, write its four MIDA parts, and watch what happens to your answer when a data strategy quietly stops matching the inquiry.",
     "crumbs": [
       "Part II — From curiosity to research design",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Model, Inquiry, Data Strategy, and Answer Strategy</span>"
@@ -783,7 +793,7 @@
     "href": "part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html#the-colab-laboratory",
     "title": "10  Declaring and Diagnosing a Research Design",
     "section": "10.4 The Colab laboratory",
-    "text": "10.4 The Colab laboratory\nThis chapter’s lab is notebook nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you declare the notebook’s mentoring design in a few lines of Python, run it thousands of times to read its bias, variance, and power with your own eyes, then watch one redesign rescue a fair-but-powerless study while a confounded twin stays wrong at any sample size.",
+    "text": "10.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign (open in Colab), part of the companion course presented in the For instructors appendix. In the lab you declare the notebook’s mentoring design in a few lines of Python, run it thousands of times to read its bias, variance, and power with your own eyes, then watch one redesign rescue a fair-but-powerless study while a confounded twin stays wrong at any sample size.",
     "crumbs": [
       "Part II — From curiosity to research design",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Declaring and Diagnosing a Research Design</span>"
@@ -860,7 +870,7 @@
     "href": "part3-pathways/11-observational-descriptive-research.html#the-colab-laboratory",
     "title": "11  Observational Descriptive Research",
     "section": "11.4 The Colab laboratory",
-    "text": "11.4 The Colab laboratory\nThis chapter’s lab is notebook nb05 — Observational descriptive research. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you treat a real voter file as a known world, draw random samples and one convenience channel from it, and watch the random draws cluster on the truth while the convenience channel misses the true mean age by nearly twelve years. Then you run a nonresponse stress test that shows a clean estimate drifting off the truth.",
+    "text": "11.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb05 — Observational descriptive research (open in Colab), part of the companion course presented in the For instructors appendix. In the lab you treat a real voter file as a known world, draw random samples and one convenience channel from it, and watch the random draws cluster on the truth while the convenience channel misses the true mean age by nearly twelve years. Then you run a nonresponse stress test that shows a clean estimate drifting off the truth.",
     "crumbs": [
       "Part III — Research pathways",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Observational Descriptive Research</span>"
@@ -937,7 +947,7 @@
     "href": "part3-pathways/12-observational-causal-research.html#the-colab-laboratory",
     "title": "12  Observational Causal Research",
     "section": "12.4 The Colab laboratory",
-    "text": "12.4 The Colab laboratory\nThis chapter’s lab is notebook nb06 — Observational causal research. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you build a small world where you set coffee’s true effect, plant a hidden confounder, and watch a naive comparison inflate a true +1.0 to about +3.1, then recover the truth by adjusting for the confounder you can see. You then analyze a real natural experiment, the Hajj visa lottery from Clingingsmith, Khwaja and Kremer (RDSS ch. 16), as a difference in means and state exactly what its as-if-random assignment lets you claim, and over whom.",
+    "text": "12.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb06 — Observational causal research (open in Colab), part of the companion course presented in the For instructors appendix. In the lab you build a small world where you set coffee’s true effect, plant a hidden confounder, and watch a naive comparison inflate a true +1.0 to about +3.1, then recover the truth by adjusting for the confounder you can see. You then analyze a real natural experiment, the Hajj visa lottery from Clingingsmith, Khwaja and Kremer (RDSS ch. 16), as a difference in means and state exactly what its as-if-random assignment lets you claim, and over whom.",
     "crumbs": [
       "Part III — Research pathways",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Observational Causal Research</span>"
@@ -1014,7 +1024,7 @@
     "href": "part3-pathways/13-experimental-descriptive-research.html#the-colab-laboratory",
     "title": "13  Experimental Descriptive Research",
     "section": "13.4 The Colab laboratory",
-    "text": "13.4 The Colab laboratory\nThis chapter’s lab is notebook nb07 — Experimental descriptive research. Open it in Colab with the badge above and work the cells alongside this chapter. In it you read a real survey experiment as a measurement of a settled attitude, recover a hidden prevalence with a list experiment that a direct question cannot reach, and then declare, diagnose, and redesign a measurement experiment so a number built mostly of demand and instrument artifacts falls back onto the construct it was supposed to report.",
+    "text": "13.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb07 — Experimental descriptive research (open in Colab), part of the companion course presented in the For instructors appendix. In it you read a real survey experiment as a measurement of a settled attitude, recover a hidden prevalence with a list experiment that a direct question cannot reach, and then declare, diagnose, and redesign a measurement experiment so a number built mostly of demand and instrument artifacts falls back onto the construct it was supposed to report.",
     "crumbs": [
       "Part III — Research pathways",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Experimental Descriptive Research</span>"
@@ -1102,7 +1112,7 @@
     "href": "part3-pathways/14-prediction-and-generalization.html#the-colab-laboratory",
     "title": "14  Prediction and Generalization",
     "section": "14.4 The Colab laboratory",
-    "text": "14.4 The Colab laboratory\nThis chapter’s lab is notebook nb08 — Prediction: generalizing to unseen cases. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you sign the four-part contract on a real dataset, score an honest baseline first, then build a leak on purpose so you feel a fake score climb and learn to hunt it by correlation and timing before you retrain clean.",
+    "text": "14.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb08 — Prediction: generalizing to unseen cases (open in Colab), part of the companion course presented in the For instructors appendix. In the lab you sign the four-part contract on a real dataset, score an honest baseline first, then build a leak on purpose so you feel a fake score climb and learn to hunt it by correlation and timing before you retrain clean.",
     "crumbs": [
       "Part III — Research pathways",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Prediction and Generalization</span>"
@@ -1190,7 +1200,7 @@
     "href": "part3-pathways/15-experimental-causal-research.html#the-colab-laboratory",
     "title": "15  Experimental Causal Research",
     "section": "15.4 The Colab laboratory",
-    "text": "15.4 The Colab laboratory\nThis chapter’s lab is notebook nb09 — Experimental causal research. Open it in Colab with the badge above and work the cells alongside this chapter. There you analyze a real get-out-the-vote field experiment, estimate the effect as a difference in means, and put a randomization-inference interval around it. Then you watch attrition, noncompliance, and spillover each bend a clean estimate, so you learn to name which quantity actually survives.",
+    "text": "15.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb09 — Experimental causal research (open in Colab), part of the companion course presented in the For instructors appendix. There you analyze a real get-out-the-vote field experiment, estimate the effect as a difference in means, and put a randomization-inference interval around it. Then you watch attrition, noncompliance, and spillover each bend a clean estimate, so you learn to name which quantity actually survives.",
     "crumbs": [
       "Part III — Research pathways",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Experimental Causal Research</span>"
@@ -1278,7 +1288,7 @@
     "href": "part3-pathways/16-hybrid-and-complex-designs.html#the-colab-laboratory",
     "title": "16  Hybrid and Complex Designs",
     "section": "16.4 The Colab laboratory",
-    "text": "16.4 The Colab laboratory\nThis chapter’s lab is notebook nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign. Open it in Colab with the badge above. There you build a small simulated world, declare a design as something a computer can run, diagnose it by simulating it thousands of times to read its bias, variance, and power, then redesign the one part that most improves it. The lab runs that loop on a causal social question; this chapter shows the same anatomy holds when the design is complex.",
+    "text": "16.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign (open in Colab), part of the companion course presented in the For instructors appendix. There you build a small simulated world, declare a design as something a computer can run, diagnose it by simulating it thousands of times to read its bias, variance, and power, then redesign the one part that most improves it. The lab runs that loop on a causal social question; this chapter shows the same anatomy holds when the design is complex.",
     "crumbs": [
       "Part III — Research pathways",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Hybrid and Complex Designs</span>"
@@ -1366,7 +1376,7 @@
     "href": "part4-credible-evidence/17-data-provenance-and-data-quality.html#the-colab-laboratory",
     "title": "17  Data Provenance and Data Quality",
     "section": "17.4 The Colab laboratory",
-    "text": "17.4 The Colab laboratory\nThis chapter’s lab is notebook nb03 — Research builds on research: verified evidence + real gaps. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you run the retrieval-verification loop on a claim from your own project, watch a tidy pile of AI-suggested citations collapse to the few that survive retrieval, and follow citation chains backward and forward into an evidence map whose one empty square is a gap you can defend, because every source around it is one you opened yourself.",
+    "text": "17.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb03 — Research builds on research: verified evidence + real gaps (open in Colab), part of the companion course presented in the For instructors appendix. In the lab you run the retrieval-verification loop on a claim from your own project, watch a tidy pile of AI-suggested citations collapse to the few that survive retrieval, and follow citation chains backward and forward into an evidence map whose one empty square is a gap you can defend, because every source around it is one you opened yourself.",
     "crumbs": [
       "Part IV — Producing credible evidence with AI",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Data Provenance and Data Quality</span>"
@@ -1454,7 +1464,7 @@
     "href": "part4-credible-evidence/18-measurement-and-operationalization.html#the-colab-laboratory",
     "title": "18  Measurement and Operationalization",
     "section": "18.4 The Colab laboratory",
-    "text": "18.4 The Colab laboratory\nThis chapter’s lab is notebook nb05 — Observational descriptive research. Open it in Colab with the badge above and work the cells alongside this chapter. There you build a concept → construct → indicator ladder for your own key measure, and you watch a single indicator flatten reality firsthand: a survey’s mean of 4.43 sits in a dip between two peaks, so the average describes almost no real respondent. An index is an operationalization, and every operationalization hides what it averages over.",
+    "text": "18.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb05 — Observational descriptive research (open in Colab), part of the companion course presented in the For instructors appendix. There you build a concept → construct → indicator ladder for your own key measure, and you watch a single indicator flatten reality firsthand: a survey’s mean of 4.43 sits in a dip between two peaks, so the average describes almost no real respondent. An index is an operationalization, and every operationalization hides what it averages over.",
     "crumbs": [
       "Part IV — Producing credible evidence with AI",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Measurement and Operationalization</span>"
@@ -1542,7 +1552,7 @@
     "href": "part4-credible-evidence/19-ai-as-programmer.html#the-colab-laboratory",
     "title": "19  AI as Programmer",
     "section": "19.4 The Colab laboratory",
-    "text": "19.4 The Colab laboratory\nThis chapter’s lab is notebook nb05 — Observational descriptive research. Open it in Colab with the badge above. There you hand cells to Gemini and make it earn your trust: you ask it to explain, line by line, why ten random samples huddle around a frame’s true mean while one convenience channel misses it by nearly twelve years, then confirm the range it quotes against the numbers your own cell actually printed. That gap between the tool’s fluent story and your printout is this chapter’s lesson, run live.",
+    "text": "19.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb05 — Observational descriptive research (open in Colab), part of the companion course presented in the For instructors appendix. There you hand cells to Gemini and make it earn your trust: you ask it to explain, line by line, why ten random samples huddle around a frame’s true mean while one convenience channel misses it by nearly twelve years, then confirm the range it quotes against the numbers your own cell actually printed. That gap between the tool’s fluent story and your printout is this chapter’s lesson, run live.",
     "crumbs": [
       "Part IV — Producing credible evidence with AI",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>AI as Programmer</span>"
@@ -1630,7 +1640,7 @@
     "href": "part4-credible-evidence/20-ai-as-analytical-assistant.html#the-colab-laboratory",
     "title": "20  AI as Analytical Assistant",
     "section": "20.4 The Colab laboratory",
-    "text": "20.4 The Colab laboratory\nThis chapter’s lab is notebook nb10 — Share the research and attack the analysis. Open it in Colab with the badge above and work the cells alongside this chapter. There you delegate a real robustness grid, a placebo test, and an influence check to an assistant, then adjudicate three confident AI reviewers against the data and watch two of their three flags dissolve the moment a check touches them.",
+    "text": "20.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb10 — Share the research and attack the analysis (open in Colab), part of the companion course presented in the For instructors appendix. There you delegate a real robustness grid, a placebo test, and an influence check to an assistant, then adjudicate three confident AI reviewers against the data and watch two of their three flags dissolve the moment a check touches them.",
     "crumbs": [
       "Part IV — Producing credible evidence with AI",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>AI as Analytical Assistant</span>"
@@ -1718,7 +1728,7 @@
     "href": "part4-credible-evidence/21-robustness-and-sensitivity.html#the-colab-laboratory",
     "title": "21  Robustness and Sensitivity",
     "section": "21.4 The Colab laboratory",
-    "text": "21.4 The Colab laboratory\nThis chapter’s lab is notebook nb10 — Share the research + attack the analysis. Open it in Colab with the badge above and work the cells alongside this chapter. There you rerun one headline gap across a pre-listed grid and read its specification curve, watch specification searching manufacture a “significant” result from data with no real effect, and run a placebo test and a leave-one-out influence check on seeded code so you feel the difference between a robust finding and a fragile one.",
+    "text": "21.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb10 — Share the research + attack the analysis (open in Colab), part of the companion course presented in the For instructors appendix. There you rerun one headline gap across a pre-listed grid and read its specification curve, watch specification searching manufacture a “significant” result from data with no real effect, and run a placebo test and a leave-one-out influence check on seeded code so you feel the difference between a robust finding and a fragile one.",
     "crumbs": [
       "Part IV — Producing credible evidence with AI",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Robustness and Sensitivity</span>"
@@ -1806,7 +1816,7 @@
     "href": "part4-credible-evidence/22-diagnostics-and-negative-tests.html#the-colab-laboratory",
     "title": "22  Diagnostics and Negative Tests",
     "section": "22.4 The Colab laboratory",
-    "text": "22.4 The Colab laboratory\nThis chapter’s lab is notebook nb10 — Share the research + attack the analysis. Open it in Colab with the badge above and work the cells alongside this chapter. There you run a placebo test on a real survey estimate: you throw away the true grouping, replace it with a coin-flip label 500 times, and watch the fake gaps cluster tightly at zero while the real result sits far outside that cloud. Then a leave-one-out check shows you whether a single data point is quietly carrying the whole finding.",
+    "text": "22.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb10 — Share the research + attack the analysis (open in Colab), part of the companion course presented in the For instructors appendix. There you run a placebo test on a real survey estimate: you throw away the true grouping, replace it with a coin-flip label 500 times, and watch the fake gaps cluster tightly at zero while the real result sits far outside that cloud. Then a leave-one-out check shows you whether a single data point is quietly carrying the whole finding.",
     "crumbs": [
       "Part IV — Producing credible evidence with AI",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Diagnostics and Negative Tests</span>"
@@ -1894,7 +1904,7 @@
     "href": "part4-credible-evidence/23-ai-as-adversarial-reviewer.html#the-colab-laboratory",
     "title": "23  AI as Adversarial Reviewer",
     "section": "23.4 The Colab laboratory",
-    "text": "23.4 The Colab laboratory\nThis chapter’s lab is notebook nb10, Share the Research and Attack the Analysis. Open it in Colab with the badge above and work the cells alongside this chapter. You rerun one estimate across a pre-listed grid of eight specifications, watch specification searching manufacture a significant result from pure noise, run a placebo and a leave-one-out influence check, then hand your analysis to a human, one AI, and a panel of AI models and adjudicate every flag they raise against the data.",
+    "text": "23.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb10, Share the Research and Attack the Analysis (open in Colab), part of the companion course presented in the For instructors appendix. You rerun one estimate across a pre-listed grid of eight specifications, watch specification searching manufacture a significant result from pure noise, run a placebo and a leave-one-out influence check, then hand your analysis to a human, one AI, and a panel of AI models and adjudicate every flag they raise against the data.",
     "crumbs": [
       "Part IV — Producing credible evidence with AI",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>AI as Adversarial Reviewer</span>"
@@ -1971,7 +1981,7 @@
     "href": "part4-credible-evidence/24-recognizing-false-confidence.html#the-colab-laboratory",
     "title": "24  Recognizing False Confidence",
     "section": "24.4 The Colab laboratory",
-    "text": "24.4 The Colab laboratory\nThis chapter’s lab is notebook nb01, Research in the Age of AI: Your Arm, Your RA, Not Your Brain. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you run a small randomized study, meet a confident one-line summary that claims a large effect, and recompute the actual gap in the data to watch the summary overstate it. You then red-team a finding you wrote and catch an AI that praises your sentence instead of testing it.",
+    "text": "24.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb01, Research in the Age of AI: Your Arm, Your RA, Not Your Brain (open in Colab), part of the companion course presented in the For instructors appendix. In the lab you run a small randomized study, meet a confident one-line summary that claims a large effect, and recompute the actual gap in the data to watch the summary overstate it. You then red-team a finding you wrote and catch an AI that praises your sentence instead of testing it.",
     "crumbs": [
       "Part IV — Producing credible evidence with AI",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Recognizing False Confidence</span>"
@@ -2059,7 +2069,7 @@
     "href": "part5-communicating/25-from-results-to-claims.html#the-colab-laboratory",
     "title": "25  From Results to Claims",
     "section": "25.4 The Colab laboratory",
-    "text": "25.4 The Colab laboratory\nThis chapter’s lab is notebook nb11 — Poster criticism + final poster lock. Open it in Colab with the badge above and work the cells alongside this chapter. There you run a gallery-walk audit on one headline figure drawn two ways from the same numbers, rehearse a three-lens oral defense, and lock every number to its cell and every citation to a real source before your page becomes final.",
+    "text": "25.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb11 — Poster criticism + final poster lock (open in Colab), part of the companion course presented in the For instructors appendix. There you run a gallery-walk audit on one headline figure drawn two ways from the same numbers, rehearse a three-lens oral defense, and lock every number to its cell and every citation to a real source before your page becomes final.",
     "crumbs": [
       "Part V — Communicating and defending research",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>From Results to Claims</span>"
@@ -2147,7 +2157,7 @@
     "href": "part5-communicating/26-claim-evidence-tables.html#the-colab-laboratory",
     "title": "26  Claim–Evidence Tables",
     "section": "26.4 The Colab laboratory",
-    "text": "26.4 The Colab laboratory\nThis chapter’s lab is notebook nb11 — Poster criticism + final poster lock. Open it in Colab with the badge above and work the cells alongside this chapter. There you run the final-lock audit on a real poster: you trace each number to the cell that produced it, confirm each citation resolves to a source you opened yourself, and turn loose claims into locked, backed rows.",
+    "text": "26.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb11 — Poster criticism + final poster lock (open in Colab), part of the companion course presented in the For instructors appendix. There you run the final-lock audit on a real poster: you trace each number to the cell that produced it, confirm each citation resolves to a source you opened yourself, and turn loose claims into locked, backed rows.",
     "crumbs": [
       "Part V — Communicating and defending research",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>Claim–Evidence Tables</span>"
@@ -2235,7 +2245,7 @@
     "href": "part5-communicating/27-research-posters.html#the-colab-laboratory",
     "title": "27  Research Posters",
     "section": "27.4 The Colab laboratory",
-    "text": "27.4 The Colab laboratory\nThis chapter’s lab is notebook nb11 — Poster criticism + final poster lock. Open it in Colab with the badge above and work the cells alongside this chapter. There you draw one headline figure two ways from the same numbers, watch a truncated axis inflate a small gap several times over, and run the four audits plus accessibility until each one names a located, fixable hit on the board.",
+    "text": "27.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb11 — Poster criticism + final poster lock (open in Colab), part of the companion course presented in the For instructors appendix. There you draw one headline figure two ways from the same numbers, watch a truncated axis inflate a small gap several times over, and run the four audits plus accessibility until each one names a located, fixable hit on the board.",
     "crumbs": [
       "Part V — Communicating and defending research",
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Research Posters</span>"
@@ -2312,7 +2322,7 @@
     "href": "part5-communicating/28-poster-criticism.html#the-colab-laboratory",
     "title": "28  Poster Criticism",
     "section": "28.4 The Colab laboratory",
-    "text": "28.4 The Colab laboratory\nThis chapter’s lab is notebook nb11 — Poster criticism + final poster lock. Open it in Colab with the badge above and work the cells alongside this chapter. In the lab you draw one honest set of pilot numbers two ways and read the exaggeration factor your own cell prints, run the four audits plus accessibility on a sample poster, map the three defense lenses, and log the hits your own poster received into your final-poster lock list.",
+    "text": "28.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb11 — Poster criticism + final poster lock (open in Colab), part of the companion course presented in the For instructors appendix. In the lab you draw one honest set of pilot numbers two ways and read the exaggeration factor your own cell prints, run the four audits plus accessibility on a sample poster, map the three defense lenses, and log the hits your own poster received into your final-poster lock list.",
     "crumbs": [
       "Part V — Communicating and defending research",
       "<span class='chapter-number'>28</span>  <span class='chapter-title'>Poster Criticism</span>"
@@ -2400,7 +2410,7 @@
     "href": "part5-communicating/29-research-pitches.html#the-colab-laboratory",
     "title": "29  Research Pitches",
     "section": "29.4 The Colab laboratory",
-    "text": "29.4 The Colab laboratory\nThis chapter’s lab is notebook nb12 — Poster delivery: pitches, uncertainty, and difficult questions. Open it in Colab with the badge above and work the cells alongside this chapter. There you run a pacing calculator that turns a script’s word count into seconds of speech, so you can size each layer honestly, then draft and stress-test your own three pitch layers against the one rule.",
+    "text": "29.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb12 — Poster delivery: pitches, uncertainty, and difficult questions (open in Colab), part of the companion course presented in the For instructors appendix. There you run a pacing calculator that turns a script’s word count into seconds of speech, so you can size each layer honestly, then draft and stress-test your own three pitch layers against the one rule.",
     "crumbs": [
       "Part V — Communicating and defending research",
       "<span class='chapter-number'>29</span>  <span class='chapter-title'>Research Pitches</span>"
@@ -2488,7 +2498,7 @@
     "href": "part5-communicating/30-difficult-questions-and-uncertainty.html#the-colab-laboratory",
     "title": "30  Difficult Questions and Uncertainty",
     "section": "30.4 The Colab laboratory",
-    "text": "30.4 The Colab laboratory\nThis chapter’s lab is notebook nb12 — Poster delivery: pitches, uncertainty, and the questions you fear. Open it in Colab with the badge above. There you run an apology-spiral detector that counts self-erasing words in three sample deliveries, then paste in your own uncertainty-and-limitations sentence and drive its flag count to zero. You also build your five-question bank and rehearse the causal reply against your own project.",
+    "text": "30.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb12 — Poster delivery: pitches, uncertainty, and the questions you fear (open in Colab), part of the companion course presented in the For instructors appendix. There you run an apology-spiral detector that counts self-erasing words in three sample deliveries, then paste in your own uncertainty-and-limitations sentence and drive its flag count to zero. You also build your five-question bank and rehearse the causal reply against your own project.",
     "crumbs": [
       "Part V — Communicating and defending research",
       "<span class='chapter-number'>30</span>  <span class='chapter-title'>Difficult Questions and Uncertainty</span>"
@@ -2576,7 +2586,7 @@
     "href": "part5-communicating/31-ai-disclosure-and-research-integrity.html#the-colab-laboratory",
     "title": "31  AI Disclosure and Research Integrity",
     "section": "31.4 The Colab laboratory",
-    "text": "31.4 The Colab laboratory\nThis chapter’s lab is notebook nb13 — Final conference preparation, presentation + reflection. Open it in Colab with the badge above and work the cells alongside this chapter. There you code the AI-use questions you were asked as data and fill the AI Research Ledger that becomes the disclosure you defend. The final Exit Defense asks you to name what you delegated to Gemini and the specific check that decided whether you accepted, changed, or rejected it.",
+    "text": "31.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb13 — Final conference preparation, presentation + reflection (open in Colab), part of the companion course presented in the For instructors appendix. There you code the AI-use questions you were asked as data and fill the AI Research Ledger that becomes the disclosure you defend. The final Exit Defense asks you to name what you delegated to Gemini and the specific check that decided whether you accepted, changed, or rejected it.",
     "crumbs": [
       "Part V — Communicating and defending research",
       "<span class='chapter-number'>31</span>  <span class='chapter-title'>AI Disclosure and Research Integrity</span>"
@@ -2664,7 +2674,7 @@
     "href": "part6-after-conference/32-replication-and-reproduction.html#the-colab-laboratory",
     "title": "32  Replication and Reproduction",
     "section": "32.4 The Colab laboratory",
-    "text": "32.4 The Colab laboratory\nThis chapter’s lab is notebook nb14 — replication and red-team of another researcher’s package. Open it in Colab with the badge above. There you cold-reproduce a real field experiment’s headline number from its files alone, then run the same three audits you just saw: you line each written claim against the output behind it, move the number with an undisclosed specification, and widen its interval by respecting the clustering the write-up ignored.",
+    "text": "32.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb14 — replication and red-team of another researcher’s package (open in Colab), part of the companion course presented in the For instructors appendix. There you cold-reproduce a real field experiment’s headline number from its files alone, then run the same three audits you just saw: you line each written claim against the output behind it, move the number with an undisclosed specification, and widen its interval by respecting the clustering the write-up ignored.",
     "crumbs": [
       "Part VI — Research after the conference",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>Replication and Reproduction</span>"
@@ -2752,7 +2762,7 @@
     "href": "part6-after-conference/33-from-poster-to-research-note.html#the-colab-laboratory",
     "title": "33  From Poster to Research Note",
     "section": "33.4 The Colab laboratory",
-    "text": "33.4 The Colab laboratory\nThis chapter’s lab is notebook nb15 — From poster to research note. Open it in Colab with the badge above and work the cells alongside this chapter. There you score the evidence density of two paragraphs, build a results hierarchy by watching a tight interval earn the top while a forty-row interval waits at the back, and run an auditor that hunts the five ways a reproducibility capsule breaks.",
+    "text": "33.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb15 — From poster to research note (open in Colab), part of the companion course presented in the For instructors appendix. There you score the evidence density of two paragraphs, build a results hierarchy by watching a tight interval earn the top while a forty-row interval waits at the back, and run an auditor that hunts the five ways a reproducibility capsule breaks.",
     "crumbs": [
       "Part VI — Research after the conference",
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>From Poster to Research Note</span>"
@@ -2840,7 +2850,7 @@
     "href": "part6-after-conference/34-open-and-reusable-research-packages.html#the-colab-laboratory",
     "title": "34  Open and Reusable Research Packages",
     "section": "34.4 The Colab laboratory",
-    "text": "34.4 The Colab laboratory\nThis chapter’s lab is notebook nb15 — From poster to research note. Open it in Colab with the badge above. There you build audit_capsule, watch it flag all five sins in a deliberately broken package and none in a clean one, then paste your own capsule’s key lines in and fix what it catches.",
+    "text": "34.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb15 — From poster to research note (open in Colab), part of the companion course presented in the For instructors appendix. There you build audit_capsule, watch it flag all five sins in a deliberately broken package and none in a clean one, then paste your own capsule’s key lines in and fix what it catches.",
     "crumbs": [
       "Part VI — Research after the conference",
       "<span class='chapter-number'>34</span>  <span class='chapter-title'>Open and Reusable Research Packages</span>"
@@ -2928,7 +2938,7 @@
     "href": "part6-after-conference/35-managing-multiple-ai-agents.html#the-colab-laboratory",
     "title": "35  Managing Multiple AI Agents",
     "section": "35.4 The Colab laboratory",
-    "text": "35.4 The Colab laboratory\nThis chapter’s lab is notebook nb16 — Managing multiple AI agents + the final defense. Open it in Colab with the badge above and work the cells alongside this chapter. There you build the worker-critic workflow as a directed graph, read its critical-path depth and parallel width straight off the code, and watch the path grow by one round the moment you make a critic wait on another critic. Then you decompose your own draft into scoped roles and defend the wiring you chose.",
+    "text": "35.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb16 — Managing multiple AI agents + the final defense (open in Colab), part of the companion course presented in the For instructors appendix. There you build the worker-critic workflow as a directed graph, read its critical-path depth and parallel width straight off the code, and watch the path grow by one round the moment you make a critic wait on another critic. Then you decompose your own draft into scoped roles and defend the wiring you chose.",
     "crumbs": [
       "Part VI — Research after the conference",
       "<span class='chapter-number'>35</span>  <span class='chapter-title'>Managing Multiple AI Agents</span>"
@@ -3016,7 +3026,7 @@
     "href": "part6-after-conference/36-conflicting-agents-and-human-escalation.html#the-colab-laboratory",
     "title": "36  Conflicting Agents and Human Escalation",
     "section": "36.4 The Colab laboratory",
-    "text": "36.4 The Colab laboratory\nThis chapter’s lab is notebook nb16 — Managing multiple AI agents + the final defense. Open it in Colab with the badge above and work the cells alongside this chapter. There you wire a worker-critic workflow on a real draft, then simulate two four-reviewer teams and watch a shared blind spot turn unanimous agreement into false confidence you can measure.",
+    "text": "36.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb16 — Managing multiple AI agents + the final defense (open in Colab), part of the companion course presented in the For instructors appendix. There you wire a worker-critic workflow on a real draft, then simulate two four-reviewer teams and watch a shared blind spot turn unanimous agreement into false confidence you can measure.",
     "crumbs": [
       "Part VI — Research after the conference",
       "<span class='chapter-number'>36</span>  <span class='chapter-title'>Conflicting Agents and Human Escalation</span>"
@@ -3104,7 +3114,7 @@
     "href": "part6-after-conference/37-final-research-and-ai-management-portfolio.html#the-colab-laboratory",
     "title": "37  Final Research and AI-Management Portfolio",
     "section": "37.4 The Colab laboratory",
-    "text": "37.4 The Colab laboratory\nThis chapter’s lab is notebook nb16 — Managing multiple AI agents + the final defense. Open it in Colab with the badge above and work the cells alongside this chapter. There you wire a worker-critic team, run a seeded simulation showing four look-alike reviewers miss a real flaw far more often than four independent ones, then draft the four parts of your own portfolio and stage your evidence defense.",
+    "text": "37.4 The Colab laboratory\nThis chapter has its own companion notebook — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the It is your turn workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook nb16 — Managing multiple AI agents + the final defense (open in Colab), part of the companion course presented in the For instructors appendix. There you wire a worker-critic team, run a seeded simulation showing four look-alike reviewers miss a real flaw far more often than four independent ones, then draft the four parts of your own portfolio and stage your evidence defense.",
     "crumbs": [
       "Part VI — Research after the conference",
       "<span class='chapter-number'>37</span>  <span class='chapter-title'>Final Research and AI-Management Portfolio</span>"
@@ -3276,14 +3286,69 @@
     ]
   },
   {
-    "objectID": "author.html",
-    "href": "author.html",
-    "title": "Appendix C — About the Author",
+    "objectID": "for-instructors.html",
+    "href": "for-instructors.html",
+    "title": "Appendix C — For Instructors",
     "section": "",
-    "text": "C.1 Off the clock\nHe wrote this book for the students he teaches: undergraduates in economics, political science, business, and biology who want to produce research they can defend, in a world where AI can produce almost everything else. The book’s one rule is also his own working rule: AI is your arm and your research assistant, not your brain.\nTwo things you will eventually hear about if you take his classes.\nPalmeiras. The greatest Brazilian football club, and the author’s most rigorous lifelong training in uncertainty.\nThe Most Exciting Game in History (video)\nCarnaval de Olinda. His hometown street carnival in Pernambuco, Brazil, famous for its giant puppets.\nNYT: How John Travolta Became the Star of Carnival",
+    "text": "C.1 Two artifacts, one loop\nEDR|AI is a self-contained manual: a student working alone needs nothing beyond the chapters and their companion Colab notebooks. This appendix is for the other reader — the instructor who wants to teach with the book. It presents the companion course the book grew out of and makes all of its materials freely available.\nThe book and the course are different artifacts, and keeping them distinct is what lets each travel on its own.\nWhen the book changes, the course material is resynchronized from it: the English edition of the book is the source of truth for everything downstream.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>About the Author</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>For Instructors</span>"
+    ]
+  },
+  {
+    "objectID": "for-instructors.html#two-artifacts-one-loop",
+    "href": "for-instructors.html#two-artifacts-one-loop",
+    "title": "Appendix C — For Instructors",
+    "section": "",
+    "text": "The book is the manual. Every chapter ends with an It is your turn section, and every chapter has its own companion Colab notebook (the badge at the top of the chapter) where a reader runs the chapter’s code and completes that section. Worked in order, the 37 sections chain into a complete research project. None of this requires a course.\nThe course wraps around the book. Its weekly lab notebooks are classroom artifacts derived from the book’s chapters and shaped for live, 50-minute flipped sessions; its readings are the book’s chapters (required) with matching RDSS chapters recommended; and its milestones collect the chapters’ It is your turn sections, so each graded step of the student’s semester project is a piece of the book’s chain.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>For Instructors</span>"
+    ]
+  },
+  {
+    "objectID": "for-instructors.html#the-companion-course",
+    "href": "for-instructors.html#the-companion-course",
+    "title": "Appendix C — For Instructors",
+    "section": "C.2 The companion course",
+    "text": "C.2 The companion course\nThe reference implementation is HONR 46400 — Evidence-Driven Research, a semester-long Honors seminar at Purdue University (three 50-minute meetings a week, individual research projects, a public poster conference, and an oral evidence defense). Everything student-facing is open:\n\nCourse website: davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464 (syllabus, schedule, material)\nRepository: github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464\nCourse datasets, one bundle: honr46400_datasets.zip\n\nThe weekly rhythm: Monday and Wednesday lectures are led by a student — the day’s Student Research Lead, whose system is the appendix The Student Research Lead — as Socratic investigations built on the week’s lab notebook; the AI does the legwork live, and every claim it produces is verified before it survives. Friday is a studio: a short retrieval quiz, a research stand-up, and a sprint on the week’s milestone, red-teamed by peers and by an AI reviewer bench (at Purdue, GenAI Studio) before submission.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>For Instructors</span>"
+    ]
+  },
+  {
+    "objectID": "for-instructors.html#milestones-grading-the-books-chain",
+    "href": "for-instructors.html#milestones-grading-the-books-chain",
+    "title": "Appendix C — For Instructors",
+    "section": "C.3 Milestones: grading the book’s chain",
+    "text": "C.3 Milestones: grading the book’s chain\nThe project runs through sixteen milestones, M0–M15, one per week, from a first curiosity map to a defended final research chapter. Each milestone brief names its book anchor: the chapters whose It is your turn sections the student completes and submits that week. Grading the milestone is therefore grading a stretch of the book’s chain, worked on the student’s own project. The briefs are open in the repository: _research_project/2026Fall/.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>For Instructors</span>"
+    ]
+  },
+  {
+    "objectID": "for-instructors.html#the-course-lab-notebooks",
+    "href": "for-instructors.html#the-course-lab-notebooks",
+    "title": "Appendix C — For Instructors",
+    "section": "C.4 The course lab notebooks",
+    "text": "C.4 The course lab notebooks\nOne lab per week, nb01–nb16, each derived from the chapters it teaches. These are the classroom counterparts of the book’s companion notebooks — richer simulations, SRL lead briefs, and session structure — and any of them opens in free Colab.\n\n\n\nCourse lab (opens in Colab)\nDerived from chapters\n\n\n\n\nnb01 — Research in the age of AI: your arm, your RA, not your brain\n1–4, 24\n\n\nnb02 — From curiosity to a research problem\n5, 6\n\n\nnb03 — Research builds on research\n7, 8, 17\n\n\nnb04 — The anatomy of a research design\n9, 10, 16\n\n\nnb05 — Observational descriptive research\n11, 18, 19\n\n\nnb06 — Observational causal research\n12\n\n\nnb07 — Experimental descriptive research\n13\n\n\nnb08 — Prediction: generalizing to unseen cases\n14\n\n\nnb09 — Experimental causal research\n15\n\n\nnb10 — Share the research + attack the analysis\n20–23\n\n\nnb11 — Poster criticism + final poster lock\n25–28\n\n\nnb12 — Poster delivery: pitches, uncertainty, difficult questions\n29, 30\n\n\nnb13 — Final conference preparation, presentation + reflection\n31\n\n\nnb14 — Async module: replication + red-team of a peer’s package\n32\n\n\nnb15 — From poster to research note\n33, 34\n\n\nnb16 — Managing multiple AI agents + the final defense\n35–37",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>For Instructors</span>"
+    ]
+  },
+  {
+    "objectID": "for-instructors.html#adopting-or-adapting",
+    "href": "for-instructors.html#adopting-or-adapting",
+    "title": "Appendix C — For Instructors",
+    "section": "C.5 Adopting or adapting",
+    "text": "C.5 Adopting or adapting\nThe book is deliberately institution-agnostic, and the course material above is open: take the whole architecture, one lab, or nothing but the reading sequence. Instructor-side material — solution notebooks and per-meeting session guides — lives behind the password-gated Instructor tab of the course website; write to the author for access (About the Author). If you teach with EDR|AI, the author would genuinely like to hear how it went.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>For Instructors</span>"
     ]
   }
 ]
