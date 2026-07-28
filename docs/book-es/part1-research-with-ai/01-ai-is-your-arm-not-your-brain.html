@@ -73,6 +73,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -521,6 +524,23 @@ ul.task-list li input[type="checkbox"] {
 <p>Dos movimientos ponen la regla en práctica. <strong>La delegación</strong> es entregarle a la herramienta una tarea bien especificada, como “encuentra tres fuentes publicadas con la tasa de desempleo del condado el año pasado”. <strong>La verificación</strong> es una revisión independiente, hecha con un método externo al modelo, de que el resultado de verdad es cierto. Ejemplo: abres la tabla de datos real de la agencia estadística y lees el número por tu cuenta, en lugar de confiar en lo que la herramienta escribió.</p>
 <p>La verificación no se puede saltar porque una respuesta equivocada de la IA se ve exactamente igual que una correcta. Una <strong>alucinación</strong> es una salida segura y pulida que simplemente está inventada, como una cita a un informe que no existe. Ejemplo: una herramienta cita un salario inicial mediano y se lo atribuye a una “Encuesta Nacional de Ingresos de Egresados” que nunca se publicó. El tono es idéntico en lo real y en lo inventado, así que el tono no puede ser tu filtro. La recuperabilidad sí. Una fuente es <strong>recuperable</strong> cuando puedes abrir el documento real y confirmarlo, como cuando encuentras el informe verdadero a través de una biblioteca y lees la línea.</p>
 <p>Algunos juicios nunca se delegan. Una <strong>decisión que nunca se delega</strong> es un juicio que sigue siendo tuyo por muy buena que se ponga la herramienta: qué pregunta persigues, qué autoriza tu evidencia, la ética del trabajo y cómo enuncias tu incertidumbre. Ejemplo: una herramienta puede listar varias maneras de ajustar precios antiguos por inflación, pero decidir cuál necesita tu análisis te toca a ti. El hábito que amarra todo esto es corto: <strong>Pregunta, luego Verifica, luego Documenta.</strong> Usa la herramienta con ambición, confirma por tu cuenta cada dato y cada número, y después registra la herramienta, la tarea y la revisión en un registro que viaja con tu trabajo.</p>
+<p>¿Por qué trazar la línea exactamente ahí? Una respuesta corta viene de la historia del descubrimiento. Albert Einstein dibujó una vez la investigación como un ciclo: partes de la experiencia, saltas a una idea que podría explicarla y luego razonas de vuelta hasta predicciones que puedes comprobar. El salto hacia arriba tiene nombre. La <strong>abducción</strong> es el acto de inventar una explicación nueva para una observación sorprendente, una causa que nadie te entregó. Ejemplo: las ventas de una tienda caen cada tres semanas, y conjeturas que detrás hay un ciclo de pago de salarios, una hipótesis que no aparece en ninguna base de datos. Aquí está el ciclo en una imagen:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  E["Experiencia&lt;br/&gt;lo que observas"] -- "el salto: una idea nueva&lt;br/&gt;(abducción, te toca a ti)" --&gt; A["Ideas y supuestos&lt;br/&gt;lo que podría explicarla"]
+  A -- "derivación&lt;br/&gt;(delegable, luego revisada)" --&gt; P["Predicciones"]
+  P -- "verificación contra la evidencia&lt;br/&gt;(delegable, luego revisada)" --&gt; E
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>La investigación reciente en IA traza la misma línea. Un position paper de 2026 de Google DeepMind, <em>LLMs can’t jump</em> (Zahavy 2026), sostiene que la IA de hoy domina la búsqueda de patrones en datos y avanza rápido en la derivación paso a paso, pero todavía no puede dar el salto, porque no tiene experiencia del mundo desde la cual saltar, solo texto sobre el mundo. Su caso de estudio es el propio Einstein. Cuando empezó a construir la relatividad general, ninguna pila de mediciones fallidas lo empujaba; la física de Newton se ajustaba a los datos casi a la perfección. La idea nueva vino de imaginar qué se siente al caer, no de comprimir observaciones. Así que cuando este libro mantiene la pregunta, la afirmación y el juicio de tu lado del escritorio, no es cautela ante una herramienta que podría mejorar el año que viene. La parte de la investigación que le falta a la herramienta es la parte que este libro entrena.</p>
 </section>
 <section id="un-ejemplo-trabajado" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="un-ejemplo-trabajado"><span class="header-section-number">1.3</span> Un ejemplo trabajado</h2>

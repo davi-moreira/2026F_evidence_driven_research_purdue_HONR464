@@ -73,6 +73,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -521,6 +524,23 @@ ul.task-list li input[type="checkbox"] {
 <p>Two moves put the rule into practice. <strong>Delegation</strong> is handing a well-specified task to the tool, such as “find three published sources for last year’s county unemployment rate.” <strong>Verification</strong> is an independent check, run by a method outside the model, that the result is actually true. Example: you open the statistical agency’s real data table and read the number yourself instead of trusting what the tool typed.</p>
 <p>Verification cannot be skipped because a wrong AI answer looks exactly like a right one. A <strong>hallucination</strong> is confident, polished output that is simply made up, such as a citation to a report that does not exist. Example: a tool quotes a median starting salary and attributes it to a “National Graduate Earnings Survey” that was never published. Tone is identical for real and invented, so tone cannot be your filter. Retrievability is. A source is <strong>retrievable</strong> when you can open the actual document and confirm it, such as finding the real report through a library and reading the line.</p>
 <p>Some judgments never get delegated. A <strong>never-delegate decision</strong> is a call that stays yours no matter how good the tool becomes: which question you pursue, what your evidence licenses, the ethics of the work, and how you state your uncertainty. Example: a tool may list several ways to adjust old prices for inflation, but deciding which one your analysis requires is yours to own. The habit that ties this together is short: <strong>Ask, then Verify, then Document.</strong> Use the tool ambitiously, confirm every fact and number yourself, then log the tool, the task, and the check in a record that travels with your work.</p>
+<p>Why draw the line exactly there? A short answer comes from the history of discovery. Albert Einstein once sketched research as a cycle: you start from experience, you leap to an idea that could explain it, and then you reason back down to predictions you can check. The leap upward has a name. <strong>Abduction</strong> is the act of inventing a new explanation for a surprising observation, a cause nobody handed you. Example: sales at a shop dip every third week, and you guess that a payday cycle is behind it, a hypothesis that appears in no dataset. Here is that cycle in one picture:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  E["Experience&lt;br/&gt;what you observe"] -- "the jump: a new idea&lt;br/&gt;(abduction, yours to make)" --&gt; A["Ideas and assumptions&lt;br/&gt;what could explain it"]
+  A -- "derivation&lt;br/&gt;(delegable, then checked)" --&gt; P["Predictions"]
+  P -- "verification against evidence&lt;br/&gt;(delegable, then checked)" --&gt; E
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Recent AI research draws the same line. A 2026 position paper from Google DeepMind, <em>LLMs can’t jump</em> (Zahavy 2026), argues that today’s AI has mastered finding patterns in data and is fast conquering step-by-step derivation, but cannot yet make the jump, because it has no experience of the world to leap from, only text about the world. Its case study is Einstein himself. When he began building general relativity, no pile of failed measurements was pushing him; Newton’s physics fit the data almost perfectly. The new idea came from imagining what falling feels like, not from compressing observations. So when this book keeps the question, the claim, and the judgment on your side of the desk, that is not caution about a tool that might improve next year. The part of research the tool lacks is the part this book trains.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">1.3</span> A worked example</h2>
