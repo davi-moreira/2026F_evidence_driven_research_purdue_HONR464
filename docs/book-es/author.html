@@ -456,8 +456,25 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div class="edrai-lang" style="text-align:right; margin:.3rem .8rem .2rem 0; font-size:.85rem; opacity:.9;">
-  🌐 <a href="#" data-lang="book">English</a> · <a href="#" data-lang="book-pt">Português (BR)</a> · <a href="#" data-lang="book-es">Español</a>
+<style>
+  .edrai-lang { display: flex; justify-content: flex-end; align-items: center;
+    gap: .4rem; margin: .55rem .9rem .1rem 0; font-size: .8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-lang .edrai-globe { opacity: .55; font-size: .9rem; margin-right: .1rem; }
+  .edrai-lang a { border: 1px solid #d0d7de; border-radius: 999px;
+    padding: .2rem .75rem; text-decoration: none; color: #444;
+    background: #fff; line-height: 1.2; letter-spacing: .01em;
+    transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
+  .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
+    color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+</style>
+<div class="edrai-lang">
+  <span class="edrai-globe" aria-hidden="true">🌐</span>
+  <a href="#" data-lang="book" lang="en" title="English edition">English</a>
+  <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
+  <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
 </div>
 <script>
 (function () {
@@ -471,11 +488,7 @@ ul.task-list li input[type="checkbox"] {
   for (var j = 0; j < links.length; j++) {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
-    if (t === cur) {
-      a.style.pointerEvents = "none"; a.style.textDecoration = "none";
-      a.style.fontWeight = "bold"; a.style.color = "inherit";
-      continue;
-    }
+    if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
     a.href = here.replace("/" + cur + "/", "/" + t + "/");
   }
 })();
@@ -504,14 +517,15 @@ ul.task-list li input[type="checkbox"] {
 <div class="column" style="width:32%;">
 <p><img src="images/davi_moreira_photo.JPG" class="img-fluid" style="width:90.0%" alt="Retrato de Davi Moreira"></p>
 </div><div class="column" style="width:68%;">
-<p><strong>Davi Moreira</strong> es Clinical Assistant Professor en el Departamento de Métodos Cuantitativos y director del Daniels Undergraduate Business Honors Program de Purdue University. Su trabajo académico aborda comunicación política, ciencia de datos, texto como datos, inteligencia artificial y política comparada. También ha trabajado como consultor especialista en Monitoreo y Evaluación para el Banco Mundial en Brasil, Mozambique, Angola y la República Democrática del Congo.</p>
+<p><strong>Davi Moreira</strong> es Clinical Assistant Professor en el Departamento de Métodos Cuantitativos y director del Daniels Undergraduate Business Honors Program en la Mitch Daniels School of Business de Purdue University. Su trabajo se centra en la ciencia de datos aplicada — estadística, procesamiento de lenguaje natural, análisis predictivo, inferencia causal e inteligencia artificial — con raíces en comunicación política, política comparada y texto como datos.</p>
 <ul>
 <li>Sitio web: <a href="https://davi-moreira.github.io/" target="_blank">davi-moreira.github.io</a></li>
 <li>Correo: <a href="mailto:dcordeir@purdue.edu">dcordeir@purdue.edu</a></li>
 </ul>
 </div>
 </div>
-<p>Escribió este libro para los estudiantes a los que enseña: estudiantes de grado en economía, ciencia política, negocios y biología que quieren producir investigación que puedan defender, en un mundo donde la IA puede producir casi todo lo demás. La única regla del libro es también su propia regla de trabajo: la IA es tu brazo y tu asistente de investigación, no tu cerebro.</p>
+<p>Antes de Purdue, fue profesor de ciencia política en la Universidad Federal de Pernambuco (UFPE), en Brasil, y tuvo posiciones de profesor visitante en Emory University y en la School of Global Policy and Strategy de UC San Diego. Su investigación doctoral recibió el premio a la mejor tesis doctoral brasileña en Ciencia Política y Relaciones Internacionales de 2017. Fuera de la universidad, ha trabajado como consultor especialista en Monitoreo y Evaluación para el Banco Mundial en Brasil, Mozambique, Angola y la República Democrática del Congo.</p>
+<p>Hoy, la mayor parte de su tiempo en Purdue se va en aquello de lo que está hecho este libro: enseñar a estudiantes de grado en negocios a razonar con datos, dirigir un programa de honors construido alrededor de la investigación original, y diseñar cursos — incluido aquel del que nació este libro — que entrenan a los estudiantes a usar la IA intensamente y verificar todo lo que entrega. Escribió EDR|AI para los estudiantes a los que enseña: estudiantes de grado que quieren producir investigación que puedan defender, en un mundo donde la IA puede producir casi todo lo demás. La única regla del libro es también su propia regla de trabajo: la IA es tu brazo y tu asistente de investigación, no tu cerebro.</p>
 <section id="fuera-del-horario" class="level2">
 <h2 class="anchored" data-anchor-id="fuera-del-horario">Fuera del horario</h2>
 <p>Dos cosas de las que vas a oír hablar tarde o temprano si tomas sus clases.</p>

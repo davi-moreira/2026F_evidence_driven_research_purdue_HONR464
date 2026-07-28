@@ -7,6 +7,7 @@
 # The script inserts the banner into every UNreviewed chapter in all three
 # editions and removes it from reviewed ones. Idempotent.
 chapters:
+  part1_overview: {reviewed: false, date: null}
   ch01: {reviewed: false, date: null}
   ch02: {reviewed: false, date: null}
   ch03: {reviewed: false, date: null}

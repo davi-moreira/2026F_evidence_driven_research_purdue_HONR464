@@ -456,8 +456,25 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div class="edrai-lang" style="text-align:right; margin:.3rem .8rem .2rem 0; font-size:.85rem; opacity:.9;">
-  🌐 <a href="#" data-lang="book">English</a> · <a href="#" data-lang="book-pt">Português (BR)</a> · <a href="#" data-lang="book-es">Español</a>
+<style>
+  .edrai-lang { display: flex; justify-content: flex-end; align-items: center;
+    gap: .4rem; margin: .55rem .9rem .1rem 0; font-size: .8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-lang .edrai-globe { opacity: .55; font-size: .9rem; margin-right: .1rem; }
+  .edrai-lang a { border: 1px solid #d0d7de; border-radius: 999px;
+    padding: .2rem .75rem; text-decoration: none; color: #444;
+    background: #fff; line-height: 1.2; letter-spacing: .01em;
+    transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
+  .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
+    color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+</style>
+<div class="edrai-lang">
+  <span class="edrai-globe" aria-hidden="true">🌐</span>
+  <a href="#" data-lang="book" lang="en" title="English edition">English</a>
+  <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
+  <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
 </div>
 <script>
 (function () {
@@ -471,11 +488,7 @@ ul.task-list li input[type="checkbox"] {
   for (var j = 0; j < links.length; j++) {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
-    if (t === cur) {
-      a.style.pointerEvents = "none"; a.style.textDecoration = "none";
-      a.style.fontWeight = "bold"; a.style.color = "inherit";
-      continue;
-    }
+    if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
     a.href = here.replace("/" + cur + "/", "/" + t + "/");
   }
 })();
@@ -527,6 +540,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>This book is a <strong>work in progress</strong>. It is still under development and will keep growing and improving over time. Chapters may be revised, expanded, or reorganized as it is used in the classroom; when something looks unfinished, that is why. Questions and suggestions are welcome.</p>
 </div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/edrai_book.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:46.0%" alt="The EDR|AI book"></p>
+</figure>
 </div>
 <p><strong>EDR|AI</strong> — <em>Evidence-Driven Research in the Age of AI: How to Design, Analyze, Verify, and Defend</em> — is an open research manual for undergraduate students who aspire to produce high-quality research with scientific impact. It guides you through how to design, analyze, verify, and defend evidence-driven research in a world where AI can produce almost everything: work every chapter’s <strong>It is your turn</strong> section and finish with a research project of your own. The book was first written for an Honors research seminar at Purdue University, and it is deliberately institution-agnostic: any instructor or student, anywhere, is welcome to adopt it.</p>
 <p>Its one message: <em>AI is your arm and your research assistant, not your brain.</em> You will direct AI tools through the <strong>Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend</strong> workflow while keeping every research decision your own. One rule runs through every verification step in this book (collected in the <a href="./verification-guide.html">Verification Guide</a> appendix): <strong>AI can review AI</strong> — a second model is a real auditor of the first — <strong>but the last decision is always human</strong>.</p>

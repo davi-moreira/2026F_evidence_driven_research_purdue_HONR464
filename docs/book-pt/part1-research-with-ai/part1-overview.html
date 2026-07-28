@@ -73,9 +73,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -453,8 +450,25 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div class="edrai-lang" style="text-align:right; margin:.3rem .8rem .2rem 0; font-size:.85rem; opacity:.9;">
-  🌐 <a href="#" data-lang="book">English</a> · <a href="#" data-lang="book-pt">Português (BR)</a> · <a href="#" data-lang="book-es">Español</a>
+<style>
+  .edrai-lang { display: flex; justify-content: flex-end; align-items: center;
+    gap: .4rem; margin: .55rem .9rem .1rem 0; font-size: .8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-lang .edrai-globe { opacity: .55; font-size: .9rem; margin-right: .1rem; }
+  .edrai-lang a { border: 1px solid #d0d7de; border-radius: 999px;
+    padding: .2rem .75rem; text-decoration: none; color: #444;
+    background: #fff; line-height: 1.2; letter-spacing: .01em;
+    transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
+  .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
+    color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+</style>
+<div class="edrai-lang">
+  <span class="edrai-globe" aria-hidden="true">🌐</span>
+  <a href="#" data-lang="book" lang="en" title="English edition">English</a>
+  <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
+  <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
 </div>
 <script>
 (function () {
@@ -468,11 +482,7 @@ ul.task-list li input[type="checkbox"] {
   for (var j = 0; j < links.length; j++) {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
-    if (t === cur) {
-      a.style.pointerEvents = "none"; a.style.textDecoration = "none";
-      a.style.fontWeight = "bold"; a.style.color = "inherit";
-      continue;
-    }
+    if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
     a.href = here.replace("/" + cur + "/", "/" + t + "/");
   }
 })();
@@ -497,30 +507,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="review-pending callout callout-style-default callout-warning callout-titled" title="Em desenvolvimento">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Em desenvolvimento
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este capítulo faz parte de um livro em desenvolvimento ativo e ainda não passou pela revisão do autor. O conteúdo pode mudar conforme a revisão avança.</p>
+</div>
+</div>
 <p>Ferramentas de IA já conseguem escrever o código, o texto, as citações e as figuras. Então o que sobra para você? A Parte I responde a essa pergunta e entrega as regras de operação para tudo o que vem depois: o princípio (a IA é o seu braço e a sua assistente de pesquisa, não o seu cérebro), o seu papel (diretor de pesquisa), o protocolo que você roda toda vez que delega (SDIIVDD) e a propriedade intelectual que nunca se transfere (o seu nome na alegação).</p>
 <p>Aqui está a Parte I em um relance, e onde ela se encaixa no livro:</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  subgraph P1["PARTE I — Pesquisa quando a IA faz 'tudo'"]
-    direction TB
-    C1["Cap. 1 · O princípio&lt;br/&gt;A IA é o seu braço,&lt;br/&gt;não o seu cérebro"] --&gt; C2["Cap. 2 · O seu papel&lt;br/&gt;o diretor de pesquisa"]
-    C2 --&gt; C3["Cap. 3 · O protocolo&lt;br/&gt;SDIIVDD: o loop que você roda&lt;br/&gt;toda vez que delega"]
-    C3 --&gt; C4["Cap. 4 · A propriedade intelectual&lt;br/&gt;o seu nome na alegação"]
-  end
-  P1 --&gt; P2["PARTE II&lt;br/&gt;Da curiosidade ao&lt;br/&gt;desenho de pesquisa"]
-  P2 --&gt; P3["PARTE III&lt;br/&gt;Trilhas de pesquisa"]
-  P3 --&gt; P4["PARTE IV&lt;br/&gt;Evidência crível&lt;br/&gt;com IA"]
-  P4 --&gt; P5["PARTE V&lt;br/&gt;Comunicando e&lt;br/&gt;defendendo a pesquisa"]
-  P5 --&gt; P6["PARTE VI&lt;br/&gt;A pesquisa depois&lt;br/&gt;da conferência"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/part1_arc.png" class="img-fluid figure-img" alt="Diagrama. Dentro de um grande quadro da Parte I, quatro capítulos se encadeiam: o princípio, o seu papel, o protocolo, a propriedade. Uma seta desce para uma fileira de cinco caixas, Partes II a VI, do desenho de pesquisa à pesquisa depois da conferência."></p>
+<figcaption>A Parte I entrega as regras de operação; as Partes II–VI são a estrada que você percorre com elas.</figcaption>
+</figure>
 </div>
 <p>Tudo o que vem depois se apoia nesses quatro capítulos. Quando a Parte II transformar a sua curiosidade em um desenho de pesquisa, a lista de tarefas do diretor, do Capítulo 2, é como você divide o trabalho. Quando as Partes III e IV produzirem evidência, o protocolo SDIIVDD, do Capítulo 3, é como cada etapa delegada é conferida. E quando as Partes V e VI colocarem a sua alegação em público, a regra de propriedade intelectual do Capítulo 4 é o chão em que você está pisando.</p>
 <p>Cada capítulo termina com uma seção <strong>Agora é a sua vez</strong>. Faça-as em ordem, começando aqui, e, na última página do livro, você terá construído um projeto de pesquisa completo e defensável, seu.</p>

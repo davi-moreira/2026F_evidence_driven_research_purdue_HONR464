@@ -73,9 +73,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -453,8 +450,25 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div class="edrai-lang" style="text-align:right; margin:.3rem .8rem .2rem 0; font-size:.85rem; opacity:.9;">
-  🌐 <a href="#" data-lang="book">English</a> · <a href="#" data-lang="book-pt">Português (BR)</a> · <a href="#" data-lang="book-es">Español</a>
+<style>
+  .edrai-lang { display: flex; justify-content: flex-end; align-items: center;
+    gap: .4rem; margin: .55rem .9rem .1rem 0; font-size: .8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-lang .edrai-globe { opacity: .55; font-size: .9rem; margin-right: .1rem; }
+  .edrai-lang a { border: 1px solid #d0d7de; border-radius: 999px;
+    padding: .2rem .75rem; text-decoration: none; color: #444;
+    background: #fff; line-height: 1.2; letter-spacing: .01em;
+    transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
+  .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
+    color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+</style>
+<div class="edrai-lang">
+  <span class="edrai-globe" aria-hidden="true">🌐</span>
+  <a href="#" data-lang="book" lang="en" title="English edition">English</a>
+  <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
+  <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
 </div>
 <script>
 (function () {
@@ -468,11 +482,7 @@ ul.task-list li input[type="checkbox"] {
   for (var j = 0; j < links.length; j++) {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
-    if (t === cur) {
-      a.style.pointerEvents = "none"; a.style.textDecoration = "none";
-      a.style.fontWeight = "bold"; a.style.color = "inherit";
-      continue;
-    }
+    if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
     a.href = here.replace("/" + cur + "/", "/" + t + "/");
   }
 })();
@@ -497,30 +507,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="review-pending callout callout-style-default callout-warning callout-titled" title="En desarrollo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>En desarrollo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este capítulo forma parte de un libro en desarrollo activo y todavía no ha pasado por la revisión del autor. El contenido puede cambiar a medida que avanza la revisión.</p>
+</div>
+</div>
 <p>Las herramientas de IA ya pueden redactar el código, la prosa, las citas y las figuras. Entonces, ¿qué te queda a ti? La Parte I responde esa pregunta y te entrega las reglas de operación para todo lo que sigue: el principio (la IA es tu brazo y tu asistente de investigación, no tu cerebro), tu papel (director de investigación), el protocolo que ejecutas cada vez que delegas (SDIIVDD: Especificar → Delegar → Interrogar → Inspeccionar → Verificar → Documentar → Defender) y la responsabilidad que nunca se transfiere (tu nombre en la afirmación).</p>
 <p>Aquí está la Parte I de un vistazo, y dónde se ubica dentro del libro:</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  subgraph P1["PARTE I — Investigar cuando la IA lo hace 'todo'"]
-    direction TB
-    C1["Cap. 1 · El principio&lt;br/&gt;La IA es tu brazo,&lt;br/&gt;no tu cerebro"] --&gt; C2["Cap. 2 · Tu papel&lt;br/&gt;director de investigación"]
-    C2 --&gt; C3["Cap. 3 · El protocolo&lt;br/&gt;SDIIVDD: el bucle que ejecutas&lt;br/&gt;cada vez que delegas"]
-    C3 --&gt; C4["Cap. 4 · La responsabilidad&lt;br/&gt;tu nombre en la afirmación"]
-  end
-  P1 --&gt; P2["PARTE II&lt;br/&gt;De la curiosidad al&lt;br/&gt;diseño de investigación"]
-  P2 --&gt; P3["PARTE III&lt;br/&gt;Rutas de investigación"]
-  P3 --&gt; P4["PARTE IV&lt;br/&gt;Evidencia creíble&lt;br/&gt;con IA"]
-  P4 --&gt; P5["PARTE V&lt;br/&gt;Comunicar y defender&lt;br/&gt;la investigación"]
-  P5 --&gt; P6["PARTE VI&lt;br/&gt;La investigación después&lt;br/&gt;de la conferencia"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/part1_arc.png" class="img-fluid figure-img" alt="Diagrama. Dentro de un gran marco de la Parte I, cuatro capítulos se encadenan: el principio, tu papel, el protocolo, la propiedad. Una flecha baja a una fila de cinco cajas, Partes II a VI, del diseño de investigación a la investigación tras la conferencia."></p>
+<figcaption>La Parte I te entrega las reglas de operación; las Partes II–VI son el camino que recorres con ellas.</figcaption>
+</figure>
 </div>
 <p>Todo lo que viene después se apoya en estos cuatro capítulos. Cuando la Parte II convierta tu curiosidad en un diseño de investigación, la lista de tareas del director del Capítulo 2 será tu manera de repartir el trabajo. Cuando las Partes III y IV produzcan evidencia, el protocolo SDIIVDD del Capítulo 3 será la manera en que se revisa cada paso delegado. Y cuando las Partes V y VI pongan tu afirmación en público, la regla de responsabilidad del Capítulo 4 será el piso sobre el que estás parado.</p>
 <p>Cada capítulo termina con una sección <strong>Ahora te toca a ti</strong>. Trabájalas en orden, empezando aquí, y para la última página del libro habrás construido un proyecto de investigación completo y defendible, tuyo.</p>

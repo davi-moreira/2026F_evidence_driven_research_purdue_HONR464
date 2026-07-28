@@ -2,6 +2,12 @@
 title: 'Parte I — Investigar cuando la IA lo hace "todo"'
 ---
 
+::: {.callout-warning .review-pending title="En desarrollo"}
+Este capítulo forma parte de un libro en desarrollo activo y todavía
+no ha pasado por la revisión del autor. El contenido puede cambiar a
+medida que avanza la revisión.
+:::
+
 Las herramientas de IA ya pueden redactar el código, la prosa, las citas y las
 figuras. Entonces, ¿qué te queda a ti? La Parte I responde esa pregunta y te
 entrega las reglas de operación para todo lo que sigue: el principio (la IA es
@@ -13,20 +19,7 @@ afirmación).
 
 Aquí está la Parte I de un vistazo, y dónde se ubica dentro del libro:
 
-```{mermaid}
-flowchart TB
-  subgraph P1["PARTE I — Investigar cuando la IA lo hace 'todo'"]
-    direction TB
-    C1["Cap. 1 · El principio<br/>La IA es tu brazo,<br/>no tu cerebro"] --> C2["Cap. 2 · Tu papel<br/>director de investigación"]
-    C2 --> C3["Cap. 3 · El protocolo<br/>SDIIVDD: el bucle que ejecutas<br/>cada vez que delegas"]
-    C3 --> C4["Cap. 4 · La responsabilidad<br/>tu nombre en la afirmación"]
-  end
-  P1 --> P2["PARTE II<br/>De la curiosidad al<br/>diseño de investigación"]
-  P2 --> P3["PARTE III<br/>Rutas de investigación"]
-  P3 --> P4["PARTE IV<br/>Evidencia creíble<br/>con IA"]
-  P4 --> P5["PARTE V<br/>Comunicar y defender<br/>la investigación"]
-  P5 --> P6["PARTE VI<br/>La investigación después<br/>de la conferencia"]
-```
+![La Parte I te entrega las reglas de operación; las Partes II–VI son el camino que recorres con ellas.](../images/part1_arc.png){fig-alt="Diagrama. Dentro de un gran marco de la Parte I, cuatro capítulos se encadenan: el principio, tu papel, el protocolo, la propiedad. Una flecha baja a una fila de cinco cajas, Partes II a VI, del diseño de investigación a la investigación tras la conferencia."}
 
 Todo lo que viene después se apoya en estos cuatro capítulos. Cuando la Parte
 II convierta tu curiosidad en un diseño de investigación, la lista de tareas

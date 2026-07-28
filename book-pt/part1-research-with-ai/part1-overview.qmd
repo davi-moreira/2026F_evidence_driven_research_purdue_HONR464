@@ -2,6 +2,12 @@
 title: 'Parte I — Pesquisa quando a IA faz "tudo"'
 ---
 
+::: {.callout-warning .review-pending title="Em desenvolvimento"}
+Este capítulo faz parte de um livro em desenvolvimento ativo e ainda
+não passou pela revisão do autor. O conteúdo pode mudar conforme a
+revisão avança.
+:::
+
 Ferramentas de IA já conseguem escrever o código, o texto, as citações e as
 figuras. Então o que sobra para você? A Parte I responde a essa pergunta e
 entrega as regras de operação para tudo o que vem depois: o princípio (a IA é o
@@ -11,20 +17,7 @@ a propriedade intelectual que nunca se transfere (o seu nome na alegação).
 
 Aqui está a Parte I em um relance, e onde ela se encaixa no livro:
 
-```{mermaid}
-flowchart TB
-  subgraph P1["PARTE I — Pesquisa quando a IA faz 'tudo'"]
-    direction TB
-    C1["Cap. 1 · O princípio<br/>A IA é o seu braço,<br/>não o seu cérebro"] --> C2["Cap. 2 · O seu papel<br/>o diretor de pesquisa"]
-    C2 --> C3["Cap. 3 · O protocolo<br/>SDIIVDD: o loop que você roda<br/>toda vez que delega"]
-    C3 --> C4["Cap. 4 · A propriedade intelectual<br/>o seu nome na alegação"]
-  end
-  P1 --> P2["PARTE II<br/>Da curiosidade ao<br/>desenho de pesquisa"]
-  P2 --> P3["PARTE III<br/>Trilhas de pesquisa"]
-  P3 --> P4["PARTE IV<br/>Evidência crível<br/>com IA"]
-  P4 --> P5["PARTE V<br/>Comunicando e<br/>defendendo a pesquisa"]
-  P5 --> P6["PARTE VI<br/>A pesquisa depois<br/>da conferência"]
-```
+![A Parte I entrega as regras de operação; as Partes II–VI são a estrada que você percorre com elas.](../images/part1_arc.png){fig-alt="Diagrama. Dentro de um grande quadro da Parte I, quatro capítulos se encadeiam: o princípio, o seu papel, o protocolo, a propriedade. Uma seta desce para uma fileira de cinco caixas, Partes II a VI, do desenho de pesquisa à pesquisa depois da conferência."}
 
 Tudo o que vem depois se apoia nesses quatro capítulos. Quando a Parte II
 transformar a sua curiosidade em um desenho de pesquisa, a lista de tarefas do

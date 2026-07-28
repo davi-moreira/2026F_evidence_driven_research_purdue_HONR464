@@ -48,12 +48,18 @@ BANNER_RE = re.compile(
 FRONT_RE = re.compile(r"\A(---\n.*?\n---\n\n?)", re.S)
 
 
+# non-chapter pages that also carry the banner, keyed in the registry
+EXTRA_PAGES = [("part1_overview", "part1-research-with-ai/part1-overview.qmd")]
+
+
 def main() -> None:
     status = yaml.safe_load(REGISTRY.read_text())["chapters"]
     added = removed = kept = 0
     for edition, banner in BANNERS.items():
-        for path in sorted((REPO / edition).glob("part*/[0-9][0-9]-*.qmd")):
-            key = f"ch{path.stem[:2]}"
+        pages = [(f"ch{p.stem[:2]}", p) for p in
+                 sorted((REPO / edition).glob("part*/[0-9][0-9]-*.qmd"))]
+        pages += [(key, REPO / edition / rel) for key, rel in EXTRA_PAGES]
+        for key, path in pages:
             if key not in status:
                 sys.exit(f"✗ {path}: no entry {key} in BOOK_REVIEW_STATUS.yml")
             reviewed = bool(status[key].get("reviewed"))

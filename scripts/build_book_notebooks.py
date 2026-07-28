@@ -47,9 +47,8 @@ EDITIONS = [
         "chapter_word": "Chapter",
         "book_name": "EDR|AI — Evidence-Driven Research in the Age of AI",
         "header": ("This is the **companion notebook** of [{chapter_word} {n} — "
-                   "{title}]({url}) from **{book}**. It belongs to the book, not to "
-                   "any course: everything you need is this notebook, the chapter, "
-                   "and free Colab.\n\n[Open the chapter]({url}) · "
+                   "{title}]({url}) from **{book}**. Authored by "
+                   "[Davi Moreira]({home}).\n\n[Open the chapter]({url}) · "
                    "[Book home]({home}) · [Verification Guide]({vg})\n\n"
                    "*AI is your arm and your research assistant, not your brain.*"),
         "howto": ("## How to use this notebook\n\n"
@@ -114,9 +113,8 @@ EDITIONS = [
         "chapter_word": "Capítulo",
         "book_name": "EDR|AI — Pesquisa Orientada por Evidências na Era da IA",
         "header": ("Este é o **notebook companheiro** do [{chapter_word} {n} — "
-                   "{title}]({url}) de **{book}**. Ele pertence ao livro, não a curso "
-                   "nenhum: tudo de que você precisa é este notebook, o capítulo e o "
-                   "Colab gratuito.\n\n[Abrir o capítulo]({url}) · "
+                   "{title}]({url}) de **{book}**. De autoria de "
+                   "[Davi Moreira]({home}).\n\n[Abrir o capítulo]({url}) · "
                    "[Início do livro]({home}) · [Guia de Verificação]({vg})\n\n"
                    "*A IA é o seu braço e a sua assistente de pesquisa, não o seu "
                    "cérebro.*"),
@@ -188,9 +186,8 @@ EDITIONS = [
         "chapter_word": "Capítulo",
         "book_name": "EDR|AI — Investigación Guiada por la Evidencia en la Era de la IA",
         "header": ("Este es el **cuaderno de acompañamiento** del [{chapter_word} "
-                   "{n} — {title}]({url}) de **{book}**. Pertenece al libro, no a "
-                   "ningún curso: todo lo que necesitas es este cuaderno, el capítulo "
-                   "y Colab gratuito.\n\n[Abrir el capítulo]({url}) · "
+                   "{n} — {title}]({url}) de **{book}**. Escrito por "
+                   "[Davi Moreira]({home}).\n\n[Abrir el capítulo]({url}) · "
                    "[Inicio del libro]({home}) · [Guía de Verificación]({vg})\n\n"
                    "*La IA es tu brazo y tu asistente de investigación, no tu "
                    "cerebro.*"),
@@ -454,7 +451,9 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
         nonlocal i
         cells.append(code_cell(i, src)); i += 1
 
-    add_md(f"# {ed['chapter_word']} {n} — {title}\n\n"
+    add_md(f'<img src="{ed["site_base"]}/images/edrai_logo.png" '
+           f'alt="EDR|AI" width="300"/>\n\n'
+           f"# {ed['chapter_word']} {n} — {title}\n\n"
            + ed["header"].format(chapter_word=ed["chapter_word"], n=n, title=title,
                                  url=url, home=home, vg=vg, book=ed["book_name"]))
     add_md(ed["howto"])

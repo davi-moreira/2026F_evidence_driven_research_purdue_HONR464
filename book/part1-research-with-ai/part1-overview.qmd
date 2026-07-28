@@ -2,6 +2,12 @@
 title: 'Part I — Research when AI does "everything"'
 ---
 
+::: {.callout-warning .review-pending title="Under development"}
+This chapter is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
 AI tools can now draft the code, the prose, the citations, and the figures. So
 what is left for you? Part I answers that question and hands you the operating
 rules for everything that follows: the principle (AI is your arm and your
@@ -11,20 +17,7 @@ never transfers (your name on the claim).
 
 Here is Part I at a glance, and where it sits in the book:
 
-```{mermaid}
-flowchart TB
-  subgraph P1["PART I — Research when AI does 'everything'"]
-    direction TB
-    C1["Ch. 1 · The principle<br/>AI is your arm,<br/>not your brain"] --> C2["Ch. 2 · Your role<br/>the research director"]
-    C2 --> C3["Ch. 3 · The protocol<br/>SDIIVDD: the loop you run<br/>every time you delegate"]
-    C3 --> C4["Ch. 4 · The ownership<br/>your name on the claim"]
-  end
-  P1 --> P2["PART II<br/>From curiosity to<br/>research design"]
-  P2 --> P3["PART III<br/>Research pathways"]
-  P3 --> P4["PART IV<br/>Credible evidence<br/>with AI"]
-  P4 --> P5["PART V<br/>Communicating and<br/>defending research"]
-  P5 --> P6["PART VI<br/>Research after<br/>the conference"]
-```
+![Part I hands you the operating rules; Parts II–VI are the road they carry you down.](../images/part1_arc.png){fig-alt="Diagram. Inside a large Part I frame, four chapters chain left to right: the principle, your role, the protocol, the ownership. An arrow leads down to a row of five boxes, Parts II through VI, from research design to research after the conference."}
 
 Everything downstream leans on these four chapters. When Part II turns your
 curiosity into a research design, the director's task list from Chapter 2 is

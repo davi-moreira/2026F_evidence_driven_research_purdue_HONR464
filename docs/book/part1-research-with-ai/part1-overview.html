@@ -73,9 +73,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -453,8 +450,25 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div class="edrai-lang" style="text-align:right; margin:.3rem .8rem .2rem 0; font-size:.85rem; opacity:.9;">
-  🌐 <a href="#" data-lang="book">English</a> · <a href="#" data-lang="book-pt">Português (BR)</a> · <a href="#" data-lang="book-es">Español</a>
+<style>
+  .edrai-lang { display: flex; justify-content: flex-end; align-items: center;
+    gap: .4rem; margin: .55rem .9rem .1rem 0; font-size: .8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-lang .edrai-globe { opacity: .55; font-size: .9rem; margin-right: .1rem; }
+  .edrai-lang a { border: 1px solid #d0d7de; border-radius: 999px;
+    padding: .2rem .75rem; text-decoration: none; color: #444;
+    background: #fff; line-height: 1.2; letter-spacing: .01em;
+    transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
+  .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
+    color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+</style>
+<div class="edrai-lang">
+  <span class="edrai-globe" aria-hidden="true">🌐</span>
+  <a href="#" data-lang="book" lang="en" title="English edition">English</a>
+  <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
+  <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
 </div>
 <script>
 (function () {
@@ -468,11 +482,7 @@ ul.task-list li input[type="checkbox"] {
   for (var j = 0; j < links.length; j++) {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
-    if (t === cur) {
-      a.style.pointerEvents = "none"; a.style.textDecoration = "none";
-      a.style.fontWeight = "bold"; a.style.color = "inherit";
-      continue;
-    }
+    if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
     a.href = here.replace("/" + cur + "/", "/" + t + "/");
   }
 })();
@@ -497,30 +507,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="review-pending callout callout-style-default callout-warning callout-titled" title="Under development">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Under development
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This chapter is part of a book in active development and has not yet been through the author’s review. Content may change as the review advances.</p>
+</div>
+</div>
 <p>AI tools can now draft the code, the prose, the citations, and the figures. So what is left for you? Part I answers that question and hands you the operating rules for everything that follows: the principle (AI is your arm and your research assistant, not your brain), your role (research director), the protocol you run every time you delegate (SDIIVDD), and the ownership that never transfers (your name on the claim).</p>
 <p>Here is Part I at a glance, and where it sits in the book:</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  subgraph P1["PART I — Research when AI does 'everything'"]
-    direction TB
-    C1["Ch. 1 · The principle&lt;br/&gt;AI is your arm,&lt;br/&gt;not your brain"] --&gt; C2["Ch. 2 · Your role&lt;br/&gt;the research director"]
-    C2 --&gt; C3["Ch. 3 · The protocol&lt;br/&gt;SDIIVDD: the loop you run&lt;br/&gt;every time you delegate"]
-    C3 --&gt; C4["Ch. 4 · The ownership&lt;br/&gt;your name on the claim"]
-  end
-  P1 --&gt; P2["PART II&lt;br/&gt;From curiosity to&lt;br/&gt;research design"]
-  P2 --&gt; P3["PART III&lt;br/&gt;Research pathways"]
-  P3 --&gt; P4["PART IV&lt;br/&gt;Credible evidence&lt;br/&gt;with AI"]
-  P4 --&gt; P5["PART V&lt;br/&gt;Communicating and&lt;br/&gt;defending research"]
-  P5 --&gt; P6["PART VI&lt;br/&gt;Research after&lt;br/&gt;the conference"]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/part1_arc.png" class="img-fluid figure-img" alt="Diagram. Inside a large Part I frame, four chapters chain left to right: the principle, your role, the protocol, the ownership. An arrow leads down to a row of five boxes, Parts II through VI, from research design to research after the conference."></p>
+<figcaption>Part I hands you the operating rules; Parts II–VI are the road they carry you down.</figcaption>
+</figure>
 </div>
 <p>Everything downstream leans on these four chapters. When Part II turns your curiosity into a research design, the director’s task list from Chapter 2 is how you split the work. When Parts III and IV produce evidence, the SDIIVDD protocol from Chapter 3 is how every delegated step gets checked. And when Parts V and VI put your claim in public, the ownership rule from Chapter 4 is what you are standing on.</p>
 <p>Each chapter ends with an <strong>It is your turn</strong> section. Work them in order, starting here, and by the last page of the book you will have built a complete, defensible research project of your own.</p>

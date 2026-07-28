@@ -2,10 +2,10 @@
 
 **Read this first on resume.** The Fall 2026 course was rebuilt to the
 instructor's master-prompt architecture, revised in THREE instructor review
-rounds on 2026-07-27, then FOURTH and FIFTH rounds on 2026-07-28 (D25: book/course separation;
-D26: locked instructor area, rubrics, review banners, simulations).
-Governing decisions: `_project_docs/DECISIONS.md` **D17–D26**; operating
-manual: `CLAUDE.md` **v5.5**. v1 preserved at git tag
+rounds on 2026-07-27, then FOURTH–SIXTH rounds on 2026-07-28 (D25 book/course separation; D26
+locked instructor area, rubrics, banners, simulations; D27 presentation
+polish). Governing decisions: `_project_docs/DECISIONS.md` **D17–D27**;
+operating manual: `CLAUDE.md` **v5.6**. v1 preserved at git tag
 `v1-compass-build`; v1 notebook sources archived in
 `_production_kit/nb_sources_v1/`.
 
@@ -47,6 +47,14 @@ manual: `CLAUDE.md` **v5.5**. v1 preserved at git tag
 > standing **seeded-simulation** rule with tranche ch11/ch14/ch15
 > (`build_book_sim_figures.py`, figures offline, code flows into companion
 > notebooks); book-funding search tracked as private course task #17.
+> **D27 (2026-07-28)** — presentation polish: pill-button language
+> switcher; designed Part I figure (`build_book_part1_figure.py`, mermaid
+> retired); part1-overview joins the banner registry (`part1_overview`);
+> author page enriched from davi-moreira.github.io ×3; notebook header
+> spec = logo + "Authored by Davi Moreira" (no artifact-boundary
+> meta-commentary, standing rule); badge implicit-figure caption fixed
+> ×111; 3D book mockup in the preface ×3; book cover art wired
+> (`edrai_cover.png` cover-image, `edrai_logo.png` in notebooks).
 
 ## ▶ RESUME HERE (open items for the next session)
 
@@ -71,8 +79,8 @@ manual: `CLAUDE.md` **v5.5**. v1 preserved at git tag
 (`quarto render` + `quarto render book/` + `book-pt/` + `book-es/`), or the
 site render clobbers the book output with website-styled pages.
 
-To resume: read this file → `CLAUDE.md` (v5.5) → `_project_docs/DECISIONS.md`
-D22–D26 → `course_config.yaml`. Editing rules unchanged (instructor-first
+To resume: read this file → `CLAUDE.md` (v5.6) → `_project_docs/DECISIONS.md`
+D22–D27 → `course_config.yaml`. Editing rules unchanged (instructor-first
 `_production_kit/nb_sources/` → `nbbuild.py`; Commit-AND-Render;
 `sync_instructor_repo.sh`; after any chapter edit also
 `build_book_notebooks.py`).
@@ -93,4 +101,4 @@ D22–D26 → `course_config.yaml`. Editing rules unchanged (instructor-first
 | **GenAI Studio** roles/KB/PoC | `genai_studio/`. **Book**: `book/` → `docs/book/`; map `planning/BOOK_MAP.md`. |
 | **Calendar / schedule** source | `scripts/schedule_data/part1–4.py` → `build_meeting_schedule.py` → `MEETING_SCHEDULE.{csv,md}`; backbone `validate_calendar.py`. |
 
-Last updated: **2026-07-28**, after the fifth instructor review round (D26 — locked For-Instructors area, IYT rubrics, review banners + registry, seeded simulations ch11/ch14/ch15, funding task #17) was applied and rendered.
+Last updated: **2026-07-28**, after the sixth instructor review round (D27 — switcher, Part I figure, author page, notebook header spec, badge caption fix, preface mockup) was applied and rendered.

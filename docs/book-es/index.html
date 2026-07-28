@@ -456,8 +456,25 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div class="edrai-lang" style="text-align:right; margin:.3rem .8rem .2rem 0; font-size:.85rem; opacity:.9;">
-  🌐 <a href="#" data-lang="book">English</a> · <a href="#" data-lang="book-pt">Português (BR)</a> · <a href="#" data-lang="book-es">Español</a>
+<style>
+  .edrai-lang { display: flex; justify-content: flex-end; align-items: center;
+    gap: .4rem; margin: .55rem .9rem .1rem 0; font-size: .8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-lang .edrai-globe { opacity: .55; font-size: .9rem; margin-right: .1rem; }
+  .edrai-lang a { border: 1px solid #d0d7de; border-radius: 999px;
+    padding: .2rem .75rem; text-decoration: none; color: #444;
+    background: #fff; line-height: 1.2; letter-spacing: .01em;
+    transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
+  .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
+    color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+</style>
+<div class="edrai-lang">
+  <span class="edrai-globe" aria-hidden="true">🌐</span>
+  <a href="#" data-lang="book" lang="en" title="English edition">English</a>
+  <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
+  <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
 </div>
 <script>
 (function () {
@@ -471,11 +488,7 @@ ul.task-list li input[type="checkbox"] {
   for (var j = 0; j < links.length; j++) {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
-    if (t === cur) {
-      a.style.pointerEvents = "none"; a.style.textDecoration = "none";
-      a.style.fontWeight = "bold"; a.style.color = "inherit";
-      continue;
-    }
+    if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
     a.href = here.replace("/" + cur + "/", "/" + t + "/");
   }
 })();
@@ -527,6 +540,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>Este libro es una <strong>obra en desarrollo</strong>. Todavía está en construcción y seguirá creciendo y mejorando con el tiempo. Los capítulos pueden revisarse, ampliarse o reorganizarse a medida que se usan en clase; cuando algo se vea inacabado, esa es la razón. Las preguntas y sugerencias son bienvenidas.</p>
 </div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/edrai_book.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:46.0%" alt="El libro EDR|AI"></p>
+</figure>
 </div>
 <p><strong>EDR|AI</strong> — <em>Investigación Guiada por la Evidencia en la Era de la IA: Cómo Diseñar, Analizar, Verificar y Defender</em> (en inglés, <em>Evidence-Driven Research in the Age of AI</em>, de donde viene la sigla) — es un manual de investigación abierto para estudiantes de grado que aspiran a producir investigación de alta calidad con impacto científico. Te guía por cómo diseñar, analizar, verificar y defender investigación guiada por la evidencia en un mundo donde la IA puede producir casi cualquier cosa: trabaja la sección <strong>Ahora te toca a ti</strong> de cada capítulo y termina con un proyecto de investigación propio. El libro se escribió primero para un seminario de investigación de la Honors College de Purdue University, y es deliberadamente independiente de cualquier institución: cualquier docente o estudiante, en cualquier lugar, puede adoptarlo.</p>
 <p>Su único mensaje: <em>La IA es tu brazo y tu asistente de investigación, no tu cerebro.</em> Dirigirás herramientas de IA a través del flujo de trabajo <strong>Especificar → Delegar → Interrogar → Inspeccionar → Verificar → Documentar → Defender</strong> mientras conservas como tuya cada decisión de investigación. Una regla recorre cada paso de verificación de este libro (reunidos en el apéndice <a href="./verification-guide.html">Guía de Verificación</a>): <strong>la IA puede revisar a la IA</strong> — un segundo modelo es un auditor real del primero — <strong>pero la última decisión siempre es humana</strong>.</p>

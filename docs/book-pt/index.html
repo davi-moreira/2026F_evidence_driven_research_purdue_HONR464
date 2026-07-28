@@ -456,8 +456,25 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-<div class="edrai-lang" style="text-align:right; margin:.3rem .8rem .2rem 0; font-size:.85rem; opacity:.9;">
-  🌐 <a href="#" data-lang="book">English</a> · <a href="#" data-lang="book-pt">Português (BR)</a> · <a href="#" data-lang="book-es">Español</a>
+<style>
+  .edrai-lang { display: flex; justify-content: flex-end; align-items: center;
+    gap: .4rem; margin: .55rem .9rem .1rem 0; font-size: .8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-lang .edrai-globe { opacity: .55; font-size: .9rem; margin-right: .1rem; }
+  .edrai-lang a { border: 1px solid #d0d7de; border-radius: 999px;
+    padding: .2rem .75rem; text-decoration: none; color: #444;
+    background: #fff; line-height: 1.2; letter-spacing: .01em;
+    transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
+  .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
+    color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+</style>
+<div class="edrai-lang">
+  <span class="edrai-globe" aria-hidden="true">🌐</span>
+  <a href="#" data-lang="book" lang="en" title="English edition">English</a>
+  <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
+  <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
 </div>
 <script>
 (function () {
@@ -471,11 +488,7 @@ ul.task-list li input[type="checkbox"] {
   for (var j = 0; j < links.length; j++) {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
-    if (t === cur) {
-      a.style.pointerEvents = "none"; a.style.textDecoration = "none";
-      a.style.fontWeight = "bold"; a.style.color = "inherit";
-      continue;
-    }
+    if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
     a.href = here.replace("/" + cur + "/", "/" + t + "/");
   }
 })();
@@ -527,6 +540,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="callout-body-container callout-body">
 <p>Este livro é um <strong>trabalho em construção</strong>. Ele ainda está em desenvolvimento e vai continuar crescendo e melhorando com o tempo. Capítulos podem ser revisados, ampliados ou reorganizados conforme o material é usado em sala de aula; quando algo parecer inacabado, é por isso. Perguntas e sugestões são bem-vindas.</p>
 </div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/edrai_book.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:46.0%" alt="O livro EDR|AI"></p>
+</figure>
 </div>
 <p><strong>EDR|AI</strong> — <em>Pesquisa Orientada por Evidências na Era da IA: Como Desenhar, Analisar, Verificar e Defender</em> (no original em inglês, <em>Evidence-Driven Research in the Age of AI</em>) — é um manual aberto de pesquisa para estudantes de graduação que aspiram a produzir pesquisa de alta qualidade com impacto científico. Ele guia você por como desenhar, analisar, verificar e defender pesquisa orientada por evidências em um mundo no qual a IA consegue produzir quase tudo: faça a seção <strong>Agora é a sua vez</strong> de cada capítulo e termine com um projeto de pesquisa seu. O livro foi escrito primeiro para um seminário de pesquisa do Honors College da Purdue University, e é deliberadamente independente de instituição: qualquer docente ou estudante, em qualquer lugar, pode adotá-lo.</p>
 <p>Sua única mensagem: <em>A IA é o seu braço e a sua assistente de pesquisa, não o seu cérebro.</em> Você vai dirigir ferramentas de IA pelo fluxo de trabalho <strong>Especificar → Delegar → Interrogar → Inspecionar → Verificar → Documentar → Defender</strong>, mantendo cada decisão de pesquisa nas suas próprias mãos. Uma regra atravessa cada etapa de verificação deste livro (todas reunidas no apêndice <a href="./verification-guide.html">Guia de Verificação</a>): <strong>IA pode revisar IA</strong> — um segundo modelo é um auditor de verdade do primeiro — <strong>mas a última decisão é sempre humana</strong>.</p>

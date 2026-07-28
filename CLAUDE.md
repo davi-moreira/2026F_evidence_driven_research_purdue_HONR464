@@ -235,9 +235,17 @@ Author; appendices: SRL, Verification Guide, For Instructors; rendered to
    a rubric cell in the companion notebook + `<edition>/_iyt-rubrics.qmd`
    included in the locked appendix — never hand-edit those files.
 2. **Development banners + seeded simulations (D26).** Every chapter carries
-   a `.review-pending` warning banner until Davi reviews it: the registry is
+   a `.review-pending` warning banner until Davi reviews it (the Part I
+   overview page too — `part1_overview` in the registry): the registry is
    `planning/BOOK_REVIEW_STATUS.yml`; when he reports a chapter reviewed,
    flip its flag, run `scripts/update_chapter_review_banners.py`, re-render.
+   Companion-notebook header spec (D27): logo → title → "Authored by Davi
+   Moreira" (links to the book) → companion line → links → the one rule.
+   NEVER add artifact-boundary meta-commentary to reader-facing content
+   (no "this belongs to X, not Y" sentences). Chapter badges use
+   `[![](badge){fig-alt="Open In Colab"}](url)` — the empty alt suppresses
+   Pandoc's implicit-figure caption; keep that form. Part I figure:
+   `scripts/build_book_part1_figure.py` (mermaid retired).
    Whenever possible, chapters embed **seeded (SEED=464) simulation code that
    visually presents the concept**: the chapter shows the code AND the
    pre-generated figure (`scripts/build_book_sim_figures.py`, localized
@@ -370,7 +378,13 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 5.5 — fifth instructor review round (2026-07-28, DECISIONS.md
+**Version:** 5.6 — sixth instructor review round (2026-07-28, DECISIONS.md
+D27): pill-button language switcher; designed Part I figure
+(`build_book_part1_figure.py`, mermaid retired); part1-overview joins the
+banner registry; enriched author page ×3; companion-notebook header spec
+(logo + "Authored by Davi Moreira" + no artifact-boundary meta-commentary
+rule); badge implicit-figure caption fix ×111; 3D book mockup in the
+preface ×3. (5.5 — fifth instructor review round (2026-07-28, DECISIONS.md
 D26): For-Instructors appendix password-locked in all three editions
 (post-render encryption; password only in gitignored
 `_production_kit/page_password.txt`, requested by email, scrubbed from all
@@ -416,5 +430,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants
