@@ -1,152 +1,72 @@
 # BUILD_STATUS_V2 — the v2 rebuild re-entry point
 
 **Read this first on resume.** The Fall 2026 course was rebuilt to the
-instructor's master-prompt architecture (16 weekly topics nb00–nb15, milestones
-M0–M15, Student Research Lead flipped classroom, AI Research Ledger + SDIIVDD,
-GenAI Studio reviewer bench, 37-chapter course book). Governing decisions:
-`_project_docs/DECISIONS.md` D17–D21; operating manual: `CLAUDE.md` v5.0;
-audit + rulings + reuse map: `planning/SOURCE_AUDIT_V2.md`; the prototype
-quality bar: `planning/QUALITY_REPORT_P3.md`. v1 preserved at git tag
+instructor's master-prompt architecture and then revised in THREE instructor
+review rounds on 2026-07-27. Governing decisions: `_project_docs/DECISIONS.md`
+**D17–D24**; operating manual: `CLAUDE.md` **v5.3**. v1 preserved at git tag
 `v1-compass-build`; v1 notebook sources archived in
 `_production_kit/nb_sources_v1/`.
 
-> ## ✅ v2 BUILD COMPLETE (2026-07-23)
-> All seven phases done: spine, resources, prototype (3-reviewer pass), 16
-> notebooks + 16 milestone packages, GenAI Studio suite, 37-chapter book, and
-> the Phase-7 cross-course + adversarial audit (0 critical) with Stage-8 fixes
-> applied and Stage-9 validation verified. Full battery green; site + book live;
-> instructor repo synced. Remaining items are instructor course-design decisions,
-> not defects — see `planning/FINAL_REPORT_V2.md` (Stage-8 outcomes + deferred
-> items). v1 preserved at tag `v1-compass-build`; v2 shipped at `v2-audit-shipped`.
+> ## ✅ v2 BUILD COMPLETE (2026-07-23) + THREE REVIEW ROUNDS APPLIED (2026-07-27)
+> The seven-phase build (0-critical audit) shipped at `v2-audit-shipped`. Then,
+> all on 2026-07-27: **D22** — notebooks renumbered **nb01–nb16 (week ==
+> notebook number)**, random SRL slots with student-visible `### 🎤 SRL Lead
+> Brief` cells opening every MW lecture, quiz-first Fridays (10/5/17/10/8) with
+> 14 printed MC quizzes + keys in gitignored `_quizzes/2026Fall/`, confirmed
+> assessment 10/20/20/20/20/10, milestone chain + weekly architecture moved
+> into nb01. **D23** — book-first loop (notebooks reflect the book; Davi
+> reviews the book; assistant propagates), institution-agnostic book, PT-BR +
+> ES editions (`book-pt/`, `book-es/`; EN is source of truth). **D24** — the
+> book is **EDR|AI — Evidence-Driven Research in the Age of AI**, a
+> SELF-CONTAINED MANUAL: per-chapter closing **"It is your turn"** sections
+> chain into a full research artifact; Verification lab / Project transfer /
+> Defend sections and Reading boxes retired; domains econ / political science /
+> business / biology; the AI loop taught from ch. 3; per-page language
+> switcher; Part I overview page (mermaid); appendices SRL + Verification
+> Guide + About the Author; nb01 Lecture 1 = orientation (professor intro,
+> course/grading/materials) with a `## ⚙️ Setup` section before it.
 
 ## ▶ RESUME HERE (open items for the next session)
 
-The build is complete and shippable. If/when work resumes, these are the only
-outstanding items — none are defects; all are decisions or optional polish:
+1. **Davi's manual review is the next step** (his words: notebook by notebook,
+   book chapter by chapter, milestone by milestone). Propagate every review via
+   the D23/D24 loop (book → notebooks/guides/site), then **re-translate the
+   touched chapters** (book-pt/book-es are first-pass machine translations of
+   the current EN).
+2. **Part I title grammar**: applied as *Research when AI does "everything"*;
+   Davi wrote "AI do" — flagged, unconfirmed.
+3. **Random SRL slot draw** still to be performed at semester start (no seats,
+   no rotation — D22).
+4. **Print the quizzes** before the semester: `_quizzes/2026Fall/ANSWER_KEY.md`
+   + `weekly/weekNN_quiz.md` masters (weeks 1–5, 7–13, 15, 16).
+5. **Week-1 reading intent** (recorded, unbuilt): "Advancing science by
+   designing for surprise" (Science, DOI 10.1126/science.aej4257).
+6. Older deferred items (deadline density, Week-9/10 peak, STEM datasets,
+   external unknowns) remain in `FINAL_REPORT_V2.md` — decisions, not defects.
 
-1. **Instructor course-design decisions** (need Davi's call; see
-   `FINAL_REPORT_V2.md` "deferred" section): end-of-term deadline density
-   (M13→M14→M15 over Thanksgiving) · Week-9 technical peak (nb08 + first M8
-   analysis) · workload transparency (credit-hours/effort budgets) · STEM-dataset
-   concentration (all 5 shipped datasets are civic/poli-sci — consider shipping
-   ≥1 STEM CSV + routing nb04/nb08). Each moves a validated calendar anchor or
-   adds scope, so it was NOT changed unilaterally.
-2. **Grading re-map confirmation**: the syllabus proposes adding SRL performance
-   at 15% (weights 10/15/25/20/5/15/10). Confirm before the term.
-3. **18 LOW polish findings**: cosmetic; itemized in `planning/AUDIT_FIXLIST.md`
-   (LOW section). Batch opportunistically.
-4. **External unknowns** (non-blocking): URC abstract deadline (TBD → internal
-   gate Oct 9) · GenAI Studio student-access + API-key verification before term ·
-   Honors grading-policy confirmation · poster print logistics.
+**Render rule (hard-won):** the site `_quarto.yml` EXCLUDES `book/`,
+`book-pt/`, `book-es/` — render the site and each book project separately
+(`quarto render` + `quarto render book/` + `book-pt/` + `book-es/`), or the
+site render clobbers the book output with website-styled pages.
 
-To resume: read this file → `FINAL_REPORT_V2.md` → `AUDIT_FIXLIST.md`, then the
-usual `CLAUDE.md` + `course_config.yaml`. Editing rules unchanged (instructor-first
-`_production_kit/nb_sources/` → `nbbuild.py`; Commit-AND-Render; `sync_instructor_repo.sh`).
+To resume: read this file → `CLAUDE.md` (v5.3) → `_project_docs/DECISIONS.md`
+D22–D24 → `course_config.yaml`. Editing rules unchanged (instructor-first
+`_production_kit/nb_sources/` → `nbbuild.py`; Commit-AND-Render;
+`sync_instructor_repo.sh`).
 
 ## Quick reference — where things live
 
 | You want… | It's here |
 |---|---|
-| The weekly **lecture dynamic** (Mon/Wed/Fri section names + minutes, sums to 50) | `course_config.yaml` `srl:` block (`monday_sections` 9/22/12/7 · `wednesday_sections` 7/23/12/8 · `friday_sections` 6/23/12/9). Mon = concept discovery; Wed = applied lab + adversarial defense; Fri = milestone studio (no new content). |
+| The weekly **lecture dynamic** (Mon/Wed/Fri section names + minutes, sums to 50) | `course_config.yaml` `srl:` block (`monday_sections` 9/22/12/7 · `wednesday_sections` 7/23/12/8 · `friday_sections` 10/5/17/10/8, quiz-first). Mon = concept discovery; Wed = applied lab + adversarial defense; Fri = quiz + milestone studio (no new content). |
 | A lecture's **run-of-show + read-alouds + lead slot** | `session_guides/NN_session_guide.md` (gitignored/instructor-only; generated by `build_session_guides.py`). |
-| The lead's **per-lecture SRL page** (puzzle script, 3 Socratic Qs, expected-AI-error note, checkpoint minutes) | instructor-only cells inside `notebooks/instructor/nbNN_*_instructor.ipynb` (stripped from student files; reach via the private `…_instructor` repo or the eureka-gated Instructor tab). |
+| The lead's **per-lecture SRL Lead Brief** (mission, run of show, 3 Socratic Qs, AI trap, checkpoints, creative room) | STUDENT-VISIBLE `### 🎤 SRL Lead Brief` cell opening each lecture in `notebooks/student/nbNN_*_student.ipynb` (D22; validator-enforced). |
+| The weekly **printed quizzes** + master answer key | gitignored `_quizzes/2026Fall/` (`weekly/weekNN_quiz.md`, `weekNN_key.md`, `weekNN_bank.csv`, `ANSWER_KEY.md`); gate: `audit_answer_length.py --file`. |
+| The **book, three editions** + appendices | `book/`, `book-pt/`, `book-es/` → `docs/book*`; map `planning/BOOK_MAP.md`; appendices `srl.qmd`, `verification-guide.qmd`, `author.qmd`; per-page language switcher `_lang-switcher.html` in each project. |
 | The **SRL templates + rubric** (public) | `project/srl/` (handbook, prep template, question bank, rubric, intervention + absent-lead protocols). |
 | **Notebook content** (edit) | `_production_kit/nb_sources/nbNN_*.py` (gitignored) → `nbbuild.py nbNN`; studios `msNN_*.py`. Registry: `scripts/notebooks_map.py`. |
 | **Milestone briefs** | `_research_project/2026Fall/milestone_NN_*.md` (M0–M15). Chain + validator: `PROJECT_MILESTONES.md` / `validate_milestones.py`. |
 | **GenAI Studio** roles/KB/PoC | `genai_studio/`. **Book**: `book/` → `docs/book/`; map `planning/BOOK_MAP.md`. |
 | **Calendar / schedule** source | `scripts/schedule_data/part1–4.py` → `build_meeting_schedule.py` → `MEETING_SCHEDULE.{csv,md}`; backbone `validate_calendar.py`. |
 
-Last updated: 2026-07-23, after **Phase 4 COMPLETE** (all 16 notebooks + 16
-studios + 16 briefs built and gate-green; a second completion workflow ran
-14/14 agents clean after the rate limit reset). Adversarial verify pass on the
-15 workflow-built notebooks COMPLETE (15/15 clean). Phase 6 book + Phase 7 audit
-+ Stage-8 fixes COMPLETE.
-
-## DONE (committed + pushed + rendered + instructor-repo synced)
-
-- **Phases 0–3, 5:** full v2 spine, all governance docs, all resource suites
-  (SRL 8 · AI 9 · reproducibility 8 · GenAI Studio 18), course-level docs,
-  hardened `ACTIVITY_TEMPLATE` + validators + generators + msNN build pipeline,
-  GitHub Actions CI, the **fully-verified Week-5 prototype** (nb04 + M4, 12
-  must-fixes applied), and **Phase 6 groundwork** (BOOK_MAP 37-ch manifest +
-  `validate_book_sync.py`).
-- **16 / 16 topic notebooks** built + executed + validated + badged live
-  (nb00–nb15); **16 / 16 studio notebooks** (ms00–ms15); **16 / 16 milestone
-  briefs** (M0–M15). Full battery green: validate_calendar / build_meeting_schedule
-  / validate_milestones / validate_coverage (full file-level) / validate_notebooks
-  / voice_lint / audit_sources.
-
-## IN PROGRESS
-
-- **Adversarial verify pass** (workflow) on the 15 notebooks that skipped the
-  nb04-grade quality gate (all except nb04): re-derive numbers vs executed
-  output, orphan-requirement check vs brief, prompt-quality audit, fix + rebuild.
-
-## REMAINING after verify
-
-- **Phase 6:** author the 37 book chapters (part-waves, gated by
-  `validate_book_sync.py`) into `book/`; add the Book tab to `_quarto.yml`;
-  render to `docs/book/`.
-- **Phase 7:** cross-course audit (progression, workload, deadlines, terminology,
-  links, citations, book↔notebook sync), a final adversarial "assume-failure"
-  review, the Stage-9 validation checklist, and `planning/FINAL_REPORT_V2.md`.
-
-## SUPERSEDED (historical — the first Phase-4 workflow's partial state)
-
-The section below documented the mid-build remainder after the rate-limited
-first workflow; it is now fully resolved (all artifacts built). Retained for
-history only.
-
-## REMAINING (the completion pass — needs agent capacity; session limit resets 12:20 ET)
-
-## REMAINING (the completion pass — needs agent capacity; session limit resets 12:20 ET)
-
-### A. Topic notebooks (4) — sources exist but are truncated/partial
-| nb | slug | state | needs |
-|---|---|---|---|
-| nb02 | nb02_research_builds_on_research | 26 cells, first half only | author the tail: Make a Design Choice, Practice, Project Transfer, Exit Defense, Wrap-Up, Sources, thank-you; keep the good first half |
-| nb03 | nb03_anatomy_of_design | 26 cells, first half only | same tail profile; 2-lecture week (MIDA + DAG) |
-| nb10 | nb10_poster_criticism_lock | 53 cells, missing closing blocks | author the tail: Human-Only Checkpoint, AI Research Ledger, Exit Defense, Wrap-Up, Sources, thank-you (comm week — runnable-exempt) |
-| nb15 | nb15_managing_ai_agents | 5 cells, barely started | author in full (capstone: multi-agent management + final defense) |
-
-### B. Milestone briefs (9): M2, M3, M6, M7, M9, M10, M11, M14, M15
-Pattern = `_research_project/2026Fall/milestone_04_observational_descriptive_audit.md`
-(the v2 exemplar); mine v1 via `git show v1-compass-build:_research_project/2026Fall/<v1slug>.md`.
-
-### C. Studio notebooks (12)
-- Sources complete, need only an em-dash-budget voice fix then build: **ms05,
-  ms08, ms13** (each has 2–6 em-dashes in 1–3 markdown cells; budget is ≤1/cell).
-- Author + build: **ms02, ms03, ms06, ms07, ms09, ms10, ms11, ms14, ms15**.
-  Registry slugs are in `scripts/notebooks_map.py MS_NOTEBOOKS`.
-
-### D. Adversarial verify pass owed (11 notebooks)
-The workflow-built + manually-recovered notebooks passed stage-1 authoring +
-the automated gates but SKIPPED the stage-3 adversarial verify (the session
-limit): **nb00, nb01, nb05, nb06, nb07, nb08, nb09, nb11, nb12, nb13, nb14.**
-Each needs the nb04-grade pass: re-derive ≥3 reported numbers against executed
-output (hunt output-vs-narration contradictions), orphan-requirement check
-against its milestone brief, and prompt-quality/commit-first audit. nb04 is
-already fully verified.
-
-## Completion recipe (after reset)
-
-1. Do NOT `resumeFromRunId` the original workflow — nb06/nb09/nb14 were rebuilt
-   manually and a resume would re-author (overwrite) them. Launch a NEW workflow
-   scoped to A–D above.
-2. Suggested shape: `pipeline` over the 4 remaining weeks (author tail → brief →
-   verify) + a `parallel` fan-out for the 9 standalone briefs + a `parallel`
-   fan-out for the 12 studios + a final `parallel` verify pass over the 11
-   unverified notebooks. Each agent: chunked writes; build with `--no-badges`;
-   iterate to green.
-3. Central finalize: `update_schedule_badges.py` (→ 16/16), `build_material_page.py`,
-   `quarto render`, commit docs, push, `sync_instructor_repo.sh`.
-4. Then Phase 6 (37-chapter book) and Phase 7 (cross-course + adversarial audit,
-   Stage-9 checklist, `planning/FINAL_REPORT_V2.md`).
-
-## Build reminders
-- `.claude/.autocommit-off` is present (session autocommit disabled during batch
-  builds) — remove it when the batch work is done to restore turn-end autocommit.
-- Parallel notebook builds MUST use `.venv/bin/python scripts/nbbuild.py nbNN --no-badges`;
-  regenerate badges once, centrally, at the end.
-- Every gate green before commit: validate_notebooks, voice_lint_notebooks,
-  audit_sources; then render before committing docs/.
+Last updated: **2026-07-27**, after the three same-day instructor review rounds (D22–D24) were fully applied, rendered, pushed (HEAD 7973526), and instructor-repo synced.
