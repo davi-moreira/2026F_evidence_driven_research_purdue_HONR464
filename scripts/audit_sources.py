@@ -41,6 +41,7 @@ ALLOWED_DOMAINS = {
     "gemini.google.com",           # AI-tool pointer (syllabus stack)
     "www.nytimes.com",             # nb01: Olinda carnival coverage (professor's own slide links)
     "blogs.worldbank.org",         # nb01: professor's World Bank work
+    "www.youtube.com",             # nb01 + author page: Palmeiras video (D24, instructor-provided)
 }
 
 # Works verified real during the build (each was independently confirmed to
