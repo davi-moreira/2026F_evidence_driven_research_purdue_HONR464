@@ -204,13 +204,13 @@ below. The async-only module (nb14) embeds these inside its module flow.
 
 | Move | Heading marker | What it is |
 |---|---|---|
-| Pre-run prediction | `### 🔮 Pause & Predict` | commit a written prediction BEFORE running the next cell; the following cell reveals |
-| Runnable activity | `### 🛠️ Run the Study` (or `### 🛠️ Hands-On:` variant) | execute + modify real code on real data/simulation |
+| Pre-run prediction | `### 🔮 Predict First` | commit a written prediction BEFORE running the next cell; the following cell reveals |
+| Runnable activity | `### 🛠️ Run the Study` (or `### 🛠️ Run It Live:` variant) | execute + modify real code on real data/simulation |
 | Defended decision | `### ⚖️ Make a Design Choice` | choose between stated options and write a one-paragraph defense |
 | Practice item | `### 📝 Practice` | short transfer drill (sorting, matching, repairing, classifying) |
-| Interpretation task | `### 🔍 Reading the Evidence` | write what an output DOES and DOES NOT establish |
-| Milestone transfer | `### 🎯 Project Transfer` | apply the topic to your own project/milestone, in the notebook |
-| Exit defense | `### 🛡️ Exit Defense` | the closing move — see §9 |
+| Interpretation task | `### 🔍 Read the Evidence` | write what an output DOES and DOES NOT establish |
+| Milestone transfer | `### 🎯 Take It to Your Project` | apply the topic to your own project/milestone, in the notebook |
+| Exit defense | `### 🛡️ Defend Your Decision` | the closing move — see §9 |
 
 Pacing rule: direct exposition ≤8 min per segment, <15 min total per lecture;
 ≥70% of class time active.
@@ -278,14 +278,14 @@ inspected-and-attributed inventory) and embed Colab-compatibly:
 
 Never embed a figure you have not looked at; never caption beyond what it shows.
 
-### 9. Exit Defense (markdown) — the closing move, machine-checked
+### 9. Defend Your Decision (markdown) — the closing move, machine-checked
 
-`### 🛡️ Exit Defense` replaces v1's Claim Ticket. It is the SDIIVDD **Defend**
+`### 🛡️ Defend Your Decision` replaces v1's Claim Ticket. It is the SDIIVDD **Defend**
 step and the notebook's numbered exit. The reader states one claim they would put
 their name on, its boundary, and how AI's contribution was verified:
 
 ```markdown
-### 🛡️ Exit Defense
+### 🛡️ Defend Your Decision
 
 Defense #NN — write, in your own words:
 1. **The claim I can defend:** [one bounded sentence].
@@ -295,12 +295,12 @@ Defense #NN — write, in your own words:
 4. **AI check:** what I delegated, and how I verified it before trusting it.
 ```
 
-**Written vs spoken exits.** The Exit Defense is the notebook's WRITTEN closing
+**Written vs spoken exits.** The Defend Your Decision is the notebook's WRITTEN closing
 block. The class ALSO keeps its spoken exit ritual, the **Claim Ticket** read
 aloud at the close of every meeting — that ritual lives in the session guides
 (the schedule's `exit_ticket` field), not in the notebook. When a run-of-show
 says "ledger + Claim Ticket", it means: complete the notebook's 📒 ledger row
-and 🛡️ Exit Defense, then the spoken Claim Ticket closes the room.
+and 🛡️ Defend Your Decision, then the spoken Claim Ticket closes the room.
 
 ### 10. Instructor-solution cells (stripped from the student file)
 
@@ -366,7 +366,7 @@ the P4 scale inherits these as hard rules:
    that names the ai_error_taxonomy failure it counters and checks the cell's
    actual printed numbers.
 4. **Predict-before-reveal, always:** every reveal (not just one) is gated by a
-   commit or 🔮 Pause & Predict; reveal prose never shares a cell with its
+   commit or 🔮 Predict First; reveal prose never shares a cell with its
    commit prompt.
 5. **Vocabulary continuity contract:** every term the week's milestone rubric
    grades is taught in that week's notebook (bold → plain definition →
@@ -429,8 +429,8 @@ asserts, by exact marker string:
 | 4 | Objectives | `By the end of this notebook, you will be able to:` | =1 |
 | 5 | Setup | `SEED = 464` + `default_rng`; `seaborn` absent notebook-wide | required |
 | 6 | Lecture heads | `# Lecture i` per schedule; one `### 🎤 SRL Lead Brief` + one `### 🧩 Research Puzzle` per lecture (exempt: nb14) | exact |
-| 7 | Moves | `### 🔮 Pause & Predict`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Reading the Evidence`, `### 🎯 Project Transfer`, `### 🛡️ Exit Defense` | ≥1 each |
-| 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Hands-On:` | ≥1 (exempt: nb11, nb12, nb13) |
+| 7 | Moves | `### 🔮 Predict First`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Read the Evidence`, `### 🎯 Take It to Your Project`, `### 🛡️ Defend Your Decision` | ≥1 each |
+| 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Run It Live:` | ≥1 (exempt: nb11, nb12, nb13) |
 | 9 | Partner briefing | `### 🤝 AI Research Partner` | ≥1 |
 | 10 | AI prompts | `> 💡 **AI Prompt:**` each followed by `**After running, verify` | ≥4 |
 | 11 | Prompt modification | `### 🔁 Modify the Prompt` | ≥1 |
@@ -449,3 +449,14 @@ Exchange`, `### 📒 AI Research Ledger`, `### ✅ Submission Checklist`.
 Voice, dates, em-dash budget, and citation integrity are enforced separately by
 `voice_lint_notebooks.py` and `audit_sources.py`. The AI Research Ledger's
 CONTENT quality is graded by rubric, not machine-checked.
+
+
+## D32 amendment — the per-lecture move framework (2026-07-29)
+
+All seven active-learning moves appear IN EVERY LECTURE of every topic
+notebook (nb01 orientation and the async module are exempt), under a 🗺️
+frame cell that nbbuild injects after each `# Lecture N` heading. Active-voice
+names: 🔮 Predict First · 🛠️ Run the Study (live variants: "Run It Live") ·
+🔍 Read the Evidence · ⚖️ Make a Design Choice · 📝 Practice · 🎯 Take It to
+Your Project · 🛡️ Defend Your Decision. `validate_notebooks.py` enforces the
+per-lecture rule.

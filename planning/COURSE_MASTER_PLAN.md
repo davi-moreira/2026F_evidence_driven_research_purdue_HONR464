@@ -160,7 +160,7 @@ through a fixed set of moves:
 - **Competing AI roles** where useful (e.g., proposer vs skeptic).
 - **Human-Only Checkpoint** — a decision made with AI set aside.
 - **AI Research Ledger entry** — the structured disclosure record.
-- **Exit Defense** — a claim the student can defend, with its boundary.
+- **Defend Your Decision** — a claim the student can defend, with its boundary.
 
 **GenAI Studio reviewer bench.** Purdue GenAI Studio supplies custom reviewer
 roles at designated milestones (`genai_studio.student_touchpoints`): **M5 Causal

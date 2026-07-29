@@ -11,9 +11,9 @@ Every STUDENT notebook must carry:
   * kernel metadata (python3), non-trivial cell count
   * the Inquiry & Claim Boundary block (inquiry emphasis + PERMITS/NOT rows)
   * the Sources & Provenance section + learning objectives
-  * the seven active-learning moves (Pause & Predict, Run-the-Study/Hands-On,
-    Make a Design Choice, Practice, Reading the Evidence, Project Transfer,
-    Exit Defense — the v2 closing move that replaces the Claim Ticket)
+  * the seven active-learning moves (Predict First, Run the Study,
+    Make a Design Choice, Practice, Read the Evidence, Take It to Your Project,
+    Defend Your Decision — the closing move)
   * the SRL opener: one `### 🧩 Research Puzzle` per `# Lecture N` (async-only
     modules are exempt)
   * the five required AI-collaboration blocks (SDIIVDD): AI Research Partner
@@ -51,13 +51,13 @@ from notebooks_map import (  # noqa: E402
 # (e.g. the 🧑‍⚖️ ZWJ sequence). The Runnable move keeps its emoji marker because
 # its wording varies ("Run the Study" / "Hands-On: …").
 MOVES = {
-    "Pause & Predict": re.compile(r"^\s*###[^\n]*Pause & Predict", re.M),
+    "Predict First": re.compile(r"^\s*###[^\n]*Predict First", re.M),
     "Runnable activity": re.compile(r"^\s*###\s*🛠️", re.M),
     "Make a Design Choice": re.compile(r"^\s*###[^\n]*Make a Design Choice", re.M),
     "Practice": re.compile(r"^\s*###[^\n]*Practice", re.M),
-    "Reading the Evidence": re.compile(r"^\s*###[^\n]*Reading the Evidence", re.M),
-    "Project Transfer": re.compile(r"^\s*###[^\n]*Project Transfer", re.M),
-    "Exit Defense": re.compile(r"^\s*###[^\n]*Exit Defense", re.M),
+    "Read the Evidence": re.compile(r"^\s*###[^\n]*Read the Evidence", re.M),
+    "Take It to Your Project": re.compile(r"^\s*###[^\n]*Take It to Your Project", re.M),
+    "Defend Your Decision": re.compile(r"^\s*###[^\n]*Defend Your Decision", re.M),
 }
 
 # The high-intensity AI-collaboration blocks (SDIIVDD); each required ≥1.
@@ -129,6 +129,18 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
             continue
         if not pat.search(text):
             errs.append(f"missing required move: {name}")
+
+    # D32: the seven moves are PER LECTURE (nb01 is the orientation exception;
+    # async modules keep the notebook-level requirement above).
+    if not is_async and nb_num != 1:
+        segments = re.split(r"(?m)^#\s*Lecture\s+\d", text)[1:]
+        for li, seg in enumerate(segments, 1):
+            for name, pat in MOVES.items():
+                if name == "Runnable activity" and nb_num in RUNNABLE_EXEMPT:
+                    continue
+                if not pat.search(seg):
+                    errs.append(f"Lecture {li}: missing move '{name}' "
+                                f"(D32: all seven moves in every lecture)")
 
     for name, pat in AI_BLOCKS.items():
         if not pat.search(text):

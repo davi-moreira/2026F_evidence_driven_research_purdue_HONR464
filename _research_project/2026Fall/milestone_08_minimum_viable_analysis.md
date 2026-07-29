@@ -65,7 +65,7 @@ Y(1) and Y(0) behind a causal claim, estimated an **average treatment effect** a
 a difference in means, put a **randomization-inference** interval around it, read
 a **power** curve to see the smallest effect the design could catch, and watched
 **attrition, noncompliance, and spillover** each change which units and which
-quantity the number honestly described. Its Project Transfer cell hands you the
+quantity the number honestly described. Its Take It to Your Project cell hands you the
 five-piece spine below. Your job at M8 is to run that spine on **your own**
 question.
 

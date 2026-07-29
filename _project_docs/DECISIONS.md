@@ -804,3 +804,25 @@ companion notebooks, GenAI recommended).
    **Attendance 1%** (iClicker, 85% target) + **Participation 9%** (rubric:
    notebook completion, feedback surveys, in-class activities) — in
    course_config.yaml, the syllabus, and nb01.
+
+## Decision 32: One visible lecture framework — seven active-voice moves, per lecture (2026-07-29, tenth review round)
+
+**Decision:** Instructor ruling.
+1. **The MW lecture architecture nb01 presents is now visible in every topic
+   notebook** (nb02–nb16): nbbuild injects a 🗺️ "Today's frame" cell after
+   every `# Lecture N` heading — Monday (9/22/12/7) for Lecture 1, Wednesday
+   (7/23/12/8) for Lecture 2, a day-neutral frame for single-lecture
+   notebooks; nb01 and the async module are exempt.
+2. **The seven moves are renamed in active voice** and required IN EVERY
+   LECTURE: 🔮 Predict First (was Pause & Predict) · 🛠️ Run the Study
+   ("Hands-On" variants → "Run It Live") · 🔍 Read the Evidence · ⚖️ Make a
+   Design Choice · 📝 Practice · 🎯 Take It to Your Project (was Project
+   Transfer) · 🛡️ Defend Your Decision (was Exit Defense). The 33 missing
+   per-lecture instances were authored (uniform ritual closers anchored to
+   "today's research decision" + bespoke cells for nb04-L2 Read, nb10-L2 and
+   nb16-L2 Practice). `validate_notebooks.py` enforces all seven per lecture.
+3. **The book matches**: the SRL appendix (×3 editions) presents the same
+   four blocks and names the seven moves; nb01's Mon/Wed cells name them too.
+
+**Rationale:** students get one identical, visible framework for what to do
+in every lecture; leads inherit structure instead of inventing it.

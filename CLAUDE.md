@@ -123,7 +123,7 @@ Embedded AI prompts carry an **"After running, verify:"** checklist ending with
 a ledger line. Every notebook also contains: an AI Research Partner briefing,
 an initial human commitment BEFORE consulting AI, at least one required prompt
 modification, an AI-output interrogation, a **Human-Only Checkpoint** (no AI),
-and an **Exit Defense**. A missing ledger entry scores the rubric's Craft
+and a **Defend Your Decision** closing move. A missing ledger entry scores the rubric's Craft
 criterion 0 and returns the submission. The claim ledger (what the research
 asserts) is a separate instrument from the AI Research Ledger (what AI did and
 how it was checked).

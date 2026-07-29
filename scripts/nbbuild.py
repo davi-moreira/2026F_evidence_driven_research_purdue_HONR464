@@ -44,6 +44,31 @@ from notebooks_map import (  # noqa: E402
 
 SOURCES = REPO / "_production_kit" / "nb_sources"
 
+# D32: every lecture opens with the same visible frame, injected at build time
+# (topic notebooks only; nb01 orientation and the async module are exempt).
+FRAME_MON = (
+    "🗺️ **Today's frame (Monday, 9 / 22 / 12 / 7):** open with the 🧩 puzzle "
+    "and 🔮 **Predict First** · investigate with 🛠️ **Run the Study** and "
+    "your AI · verify with 🔍 **Read the Evidence** · close with ⚖️ **Make a "
+    "Design Choice** and 🛡️ **Defend Your Decision**. 📝 **Practice** and "
+    "🎯 **Take It to Your Project** complete the notebook after class.")
+FRAME_WED = (
+    "🗺️ **Today's frame (Wednesday, 7 / 23 / 12 / 8):** open with the 🧩 "
+    "challenge and 🔮 **Predict First** · attack the problem with 🛠️ **Run "
+    "the Study** and your AI · defend your solution to your peers · close "
+    "with ⚖️ **Make a Design Choice**, 🎯 **Take It to Your Project**, and "
+    "🛡️ **Defend Your Decision**. 📝 **Practice** completes the notebook "
+    "after class.")
+FRAME_ONE = (
+    "🗺️ **The frame (50 min):** 🧩 puzzle → 🔮 **Predict First** · 🛠️ **Run "
+    "the Study** with your AI · 🔍 **Read the Evidence** · ⚖️ **Make a Design "
+    "Choice** · 🎯 **Take It to Your Project** · 🛡️ **Defend Your Decision**. "
+    "📝 **Practice** locks it in.")
+FRAME_EXEMPT = {1, 14}   # nb01 orientation; nb14 async module
+
+LECTURE_HEAD = re.compile(r"(?m)^#\s*Lecture\s+(\d)\s*$")
+
+
 # Every built notebook carries the EDR|AI wordmark inside its TITLE cell,
 # right after the <hr> that separates the topic line from the course name
 # (the MGMT474 launchpad placement). Injected at build time so the sources
@@ -75,7 +100,13 @@ def load_cells(slug: str):
     return mod.CELLS
 
 
-def _write_instructor(cells, out: Path) -> Path:
+def _frame_for(lecture_no: int, n_lectures: int) -> str:
+    if n_lectures == 1:
+        return FRAME_ONE
+    return FRAME_MON if lecture_no == 1 else FRAME_WED
+
+
+def _write_instructor(cells, out: Path, frames_nb: int | None = None) -> Path:
     nb = nbformat.v4.new_notebook()
     nb.metadata = {
         "kernelspec": {"display_name": "Python 3", "language": "python",
@@ -83,11 +114,16 @@ def _write_instructor(cells, out: Path) -> Path:
         "language_info": {"name": "python", "version": "3.11"},
         "colab": {"provenance": []},
     }
+    n_lectures = sum(1 for k, src in cells if k == "md" and LECTURE_HEAD.search(src))
     for i, (kind, source) in enumerate(cells):
         if kind == "md":
             if i == 0:
                 source = inject_logo(source)
             nb.cells.append(nbformat.v4.new_markdown_cell(source))
+            m = LECTURE_HEAD.search(source)
+            if m and frames_nb is not None and frames_nb not in FRAME_EXEMPT:
+                nb.cells.append(nbformat.v4.new_markdown_cell(
+                    _frame_for(int(m.group(1)), n_lectures)))
         elif kind == "code":
             nb.cells.append(nbformat.v4.new_code_cell(source))
         else:
@@ -99,7 +135,7 @@ def _write_instructor(cells, out: Path) -> Path:
 
 def build_instructor(n: int) -> Path:
     out = REPO / "notebooks" / "instructor" / instructor_filename(n)
-    return _write_instructor(load_cells(NOTEBOOKS[n][0]), out)
+    return _write_instructor(load_cells(NOTEBOOKS[n][0]), out, frames_nb=n)
 
 
 def build_ms_instructor(n: int) -> Path:
