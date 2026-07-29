@@ -22,7 +22,7 @@ Due: **Friday, August 28, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m00_research_ai_baseline.pdf`** *or* a shared Colab notebook link | The four-part baseline below: your three curiosities with one defended pick, your AI baseline (two things you assume AI is good at with the check for each, and two decisions you will not delegate), a screenshot of nb01's readiness checks, and your first AI Research Ledger row from the Lecture 1 citation catch. This is the graded artifact. |
+| 1 | **`lastname_m00_research_ai_baseline.pdf`** *or* a shared Colab notebook link | The four-part baseline below: your three curiosities with one defended pick, your AI baseline (two things you assume AI is good at with the check for each, and two decisions you will not delegate), a screenshot of nb01's readiness checks, and your first AI Research Ledger row from the citation catch in EDR\|AI ch. 1's "It is your turn" (companion notebook). This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 1, ch. 2, ch. 3, ch. 4, ch. 24** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -143,7 +143,7 @@ becomes a lost class hour in September.
 ### 4. Your first AI Research Ledger row
 
 This is the first row of a ledger you keep all semester, and it doubles as your
-AI-use disclosure. Use the Lecture 1 **citation catch**: you asked your AI for
+AI-use disclosure. Use the **citation catch** from EDR|AI ch. 1's "It is your turn": you asked your AI for
 scholarly sources, then verified each one by retrieving it yourself, recording a
 verdict of **retrieved** (you opened the real paper and the authors, year, and
 venue match), **distorted** (something real exists but a detail is wrong), or
@@ -156,7 +156,7 @@ full row of the eight-field ledger:
 The **decision** and **verification method** columns carry the weight: the
 output is a proposal, and the named verification is what makes it usable. "No AI
 used beyond nb01's exercise" is a legitimate entry only if it is true; because
-nb01 walks you through one deliberate citation catch, you will almost certainly
+chapter 1's companion notebook walks you through one deliberate citation catch, you will almost certainly
 have a real row to log. An undisclosed AI contribution is an academic-integrity
 violation; a frankly logged one is graded on its honesty. The ledger template and
 worked rows live in
