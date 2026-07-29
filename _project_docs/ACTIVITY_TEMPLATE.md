@@ -460,3 +460,5 @@ names: 🔮 Predict First · 🛠️ Run the Study (live variants: "Run It Live"
 🔍 Read the Evidence · ⚖️ Make a Design Choice · 📝 Practice · 🎯 Take It to
 Your Project · 🛡️ Defend Your Decision. `validate_notebooks.py` enforces the
 per-lecture rule.
+
+Amendment (2026-07-29): the `### 🤝 AI Research Partner` briefing appears in nb01 (orientation) and the book only; nb02–nb16 do not carry it.

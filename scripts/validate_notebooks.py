@@ -143,6 +143,8 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
                                 f"(D32: all seven moves in every lecture)")
 
     for name, pat in AI_BLOCKS.items():
+        if name == "AI Research Partner briefing" and nb_num != 1:
+            continue  # the briefing lives in nb01 (orientation) + the book only
         if not pat.search(text):
             errs.append(f"missing required AI-collaboration block: {name}")
 
