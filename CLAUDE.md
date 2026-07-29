@@ -168,7 +168,7 @@ milestone briefs (`_research_project/2026Fall/`).
 
 ---
 
-## 🚨 CRITICAL RULE — The Flipped Classroom & 50-Minute Architectures  *(D17/D18, amended D22)*
+## 🚨 CRITICAL RULE — The Flipped Classroom & 50-Minute Architectures  *(D17/D18, amended D22/D33)*
 
 **Every Mon/Wed lecture from Week 2 is led by a Student Research Lead (SRL)**
 running a Socratic investigation. Slots are **randomly assigned at the start of
@@ -193,6 +193,14 @@ staging. Fixed section frames, enforced by the session-guide generator
   ledger + dossier, submit (Claim Ticket). The Friday red-team block was
   RETIRED (D30); students WORK ON milestones at the studio (no weekly
   presentations).
+
+**All seven active-learning moves + the lecture's 📒 ledger row run INSIDE the
+50 minutes (D33)**, above each lecture's `### ⏸ Optional depth from here`
+line; below the ⏸ (and every 🏠-labeled prompt) is enrichment, never required
+homework. In-class weights: 📝 aloud · ⚖️ one committed line defended aloud ·
+🎯 one sentence · 🛡️ the short ritual close. `validate_notebooks.py` enforces
+placement (exempt: nb01, nb14, nb13 — conference week's below-⏸ is the Expo +
+reflection-studio path).
 
 Week 1's two lectures are instructor-led to model the format. SRL materials:
 `project/srl/` + the course-book appendix `book/srl.qmd`; the milestone chain
@@ -385,7 +393,15 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 5.9 — eighth instructor review round (2026-07-29, DECISIONS.md
+**Version:** 6.0 — eleventh instructor review round (2026-07-29, DECISIONS.md
+D33): ALL seven moves + a per-lecture 📒 ledger row now run INSIDE the
+50-minute MW frame, above each lecture's `### ⏸ Optional depth from here`
+line — the required homework tail is retired (below-⏸ and 🏠 prompts are
+optional depth); Wednesday opens with a spoken 📝 retrieval drill and folds
+🔁/🔬 into the lab; in-class weights codified (template §7); frames, validator
+placement checks, all 25 lectures, nb01's week cells, and the SRL appendix ×3
+updated; exemptions nb01/nb14/nb13 (conference path). (5.9 — eighth
+instructor review round (2026-07-29, DECISIONS.md
 D30): AI-generic student-facing voice (Gemini retired from notebooks + 5
 chapters; template element renamed "AI Prompt"); agentic-era framing +
 brainstorming as a partner role; Friday studio = 10/5/30/5 with the
