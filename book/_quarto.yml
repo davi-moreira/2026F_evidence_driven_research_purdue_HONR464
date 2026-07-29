@@ -1,6 +1,9 @@
 project:
   type: book
   output-dir: ../docs/book
+  resources:
+    - images/edrai_logo.png
+    - images/edrai_cover.png
   post-render: ../.venv/bin/python ../scripts/protect_instructor_page.py
 
 book:
