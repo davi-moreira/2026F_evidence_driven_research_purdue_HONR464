@@ -826,3 +826,44 @@ companion notebooks, GenAI recommended).
 
 **Rationale:** students get one identical, visible framework for what to do
 in every lecture; leads inherit structure instead of inventing it.
+
+## Decision 33: All seven moves INSIDE the 50-minute frame — the homework tail retired (2026-07-29, eleventh review round)
+
+**Decision:** Instructor ruling ("do not overwhelm my students with homework;
+fit all moves inside the MW lecture structures").
+
+1. **Placement.** Every one of the seven moves, plus the lecture's 📒 AI
+   Research Ledger row, runs INSIDE the 50-minute lecture and sits ABOVE that
+   lecture's `### ⏸` line. Monday's blocks now host: 🧩+🔮 (block 1), 🛠️
+   (block 2), 🔍 + a spoken 📝 drill + ⚖️ (block 3), 🎯 + 🛡️ + 📒 (block 4).
+   Wednesday's: 🧩 + a spoken 📝 retrieval drill of Monday's decision rule +
+   🔮 (block 1), 🛠️ with 🔁/🔬 folded into the lab's iterative control
+   (block 2), 🧑‍⚖️ + ⚖️ + peer defense (block 3), 🎯 + 🛡️ + 📒 (block 4).
+   Block boundaries and minute splits are unchanged (D22).
+2. **In-class weight.** 📝 runs aloud (writing optional); ⚖️ is one committed
+   written line defended aloud (full paragraph = optional depth); 🎯 is one
+   sentence (deep transfer lives at the Friday studio and in the book's "It
+   is your turn" chain); 🛡️ keeps its short ritual form, completed by the
+   ledger row and the spoken Claim Ticket.
+3. **The ⏸ cell changed meaning**: "Optional depth from here", placed after
+   the closing moves; everything below it (and every 🏠-labeled prompt) is
+   enrichment, never required — the required homework tail is retired.
+   Wednesday's old full-length 📝 drill lives on below the line as optional
+   depth. 🏠 labels now read "Optional depth."
+4. **Machinery.** nbbuild frames rewritten (Wednesday finally names 🔍; both
+   days name all seven + 📒 and the ⏸ rule; day-neutral and nb13 conference
+   variants); validate_notebooks enforces placement per lecture (moves + 📒
+   above ⏸; 🔁/🔬/🧑‍⚖️ above a ⏸ notebook-wide); ACTIVITY_TEMPLATE §7/P3
+   updated; all 25 lectures transformed and rebuilt; nb01's week-structure
+   cells and the book SRL appendix (×3) updated to match.
+5. **Exemptions.** nb01 (orientation), nb14 (async), and nb13 (conference
+   week): below nb13's ⏸ is the CONFERENCE PATH (Expo fieldwork + reflection
+   studio → M12), kept as own-time work with its own frame cell wording.
+   Editorial calls made in the sweep: nb11-L2's Final-Lock section and
+   nb12-L2's mock-symposium briefing moved into class; nb04-L1's genie-test
+   section, nb08's ##4 model-checks deep dive, and similar depth sections
+   became optional; nb09-L1's 📝 gained an inline power definition.
+
+**Rationale:** the required path now fits the room. Depth is preserved but
+opt-in; milestone-level transfer keeps its Friday/It-is-your-turn home; and
+the visible frame finally tells the truth about when each move happens.
