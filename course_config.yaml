@@ -83,9 +83,8 @@ srl:
   friday_sections:
     - {name: "Weekly topic quiz (multiple choice)", min: 10}
     - {name: "Research stand-up", min: 5}
-    - {name: "Milestone kickoff + AI-supported sprint", min: 17}
-    - {name: "Peer and AI red-team review", min: 10}
-    - {name: "Revision, ledger, submission", min: 8}
+    - {name: "Milestone kickoff + AI-supported sprint", min: 30}
+    - {name: "Revision, ledger, submission", min: 5}
 
 # ---------------------------------------------------------------------------
 # The inquiry compass (RDSS ch. 7) — the QUESTION-classification layer, taught

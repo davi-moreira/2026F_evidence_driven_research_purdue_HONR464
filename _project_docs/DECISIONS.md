@@ -711,3 +711,49 @@ preface now speaks to each of its two readers directly.
 **Rationale:** one visual identity across book, site, and notebooks, and
 honest labeling of generated artwork — the book practices the disclosure it
 teaches.
+
+## Decision 30: AI-generic voice, agentic-era framing, Friday 10/5/30/5, nb01 restructure (2026-07-29, eighth review round)
+
+**Decision:** Instructor ruling, 18 items.
+1. **Syllabus:** EDR|AI listed before RDSS; translations described as "AI
+   generated"; the milestone-collection sentence dropped from the book bullet.
+2. **Friday studio rearchitected:** four sections, 10 quiz / 5 stand-up /
+   30 milestone kickoff + AI-supported sprint / 5 revision-ledger-submission.
+   The peer + AI red-team block is RETIRED; the kickoff line is now "your
+   instructor presents the milestone in the course Brightspace page, then you
+   work on it with your AI assistant." Students WORK ON milestones at the
+   studio (no weekly presentations). "No new topic content, ever" loses the
+   ", ever". Applied in course_config.yaml, schedule_data part1–4
+   (timelines retimed 15–45/45–50, red-team segments excised), regenerated
+   MEETING_SCHEDULE + session guides, CLAUDE.md.
+3. **AI-generic voice (student-facing):** notebooks never name a specific
+   AI product; "Gemini" swept to AI-partner phrasing across all 32 notebook
+   sources (416 mentions) and 5 book chapters ×3 editions (ch19/27/28/33/34;
+   ch31's concrete disclosure examples deliberately keep the tool name). The
+   template element is renamed **"AI Prompt"** (validator +
+   ACTIVITY_TEMPLATE.md updated). CLAUDE.md mission/Monday lines genericized.
+4. **Agentic-era framing (standing rule):** AI is more than a chatbot;
+   asking AI/agents to DO things is encouraged, while review, curation, and
+   the final decision stay human. Touchpoints added: preface ¶2 ×3, nb01
+   partner cell, companion-notebook how-to bullet ×3 languages. ch03 already
+   taught the agentic loop (D24). **Brainstorming** is named as a partner
+   role (nb01 + ch03 ×3).
+5. **nb01:** Inquiry & Claim Boundary panel now explains its own parts
+   (Inquiry emphasis / Design pathway / claim table); the five design
+   pathways are named wherever referenced; M0 is "worked on", not presented;
+   the AI Research Partner cell moved directly before the Research Puzzle;
+   the never-delegate list links book ch. 4; every code cell has an
+   expectation lead-in and a "Reading the output" cell (with the seeded
+   numbers verified against execution).
+6. **Code-cell narration (standing rule, D30):** every code chunk in course
+   and book notebooks is preceded by what it is expected to do and followed
+   by a "Reading the output" explanation. Implemented: nb01 (exemplar) + the
+   companion-notebook generator (all 111). Remaining course notebooks
+   (nb02–nb16, studios) get it as Davi's review advances.
+
+**Deferred, flagged for Davi:** milestone briefs still say "you present a
+3-minute walkthrough" (presentation model retired?); the
+milestone_presentation_review fields in schedule_data still describe
+present+review Fridays; GenAI Studio reviewer touchpoints at M7/M9 lost
+their Friday home (M5/M13 live in async modules); the syllabus still lists
+the four required GenAI Studio reviews (M5, M7, M9, M13).

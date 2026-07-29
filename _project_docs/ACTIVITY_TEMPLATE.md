@@ -230,8 +230,8 @@ implement SDIIVDD around the notebook's real work.
 
 | Block | Heading marker | What it is |
 |---|---|---|
-| Partner briefing | `### 🤝 AI Research Partner` | once near the top: how to task Gemini for THIS topic, what to never delegate (link `ai_resources/human_responsibility_checklist.md`), and the reminder to commit your own answer first |
-| Gemini prompt + verify | `> 💡 **Gemini Prompt:**` (**≥4**) | a copy-paste prompt + an "After running, verify" checklist (see §8a) |
+| Partner briefing | `### 🤝 AI Research Partner` | once near the top: how to task your AI for THIS topic, what to never delegate (link `ai_resources/human_responsibility_checklist.md`), and the reminder to commit your own answer first |
+| AI prompt + verify | `> 💡 **AI Prompt:**` (**≥4**) | a copy-paste prompt + an "After running, verify" checklist (see §8a) |
 | Prompt modification | `### 🔁 Modify the Prompt` | change a supplied prompt yourself and predict how the output will change, then check |
 | Output interrogation | `### 🔬 Interrogate the Output` | challenge the AI's response for errors, overreach, and fabricated citations; independently verify any code it produced before trusting a result |
 | Human-only checkpoint | `### 🧑‍⚖️ Human-Only Checkpoint` | a decision made with AI set aside (one of the never-delegate decisions) |
@@ -242,15 +242,15 @@ implement SDIIVDD around the notebook's real work.
   proposer vs skeptic; the GenAI Studio reviewer bench at M5/M7/M9/M13) and
   adjudicate as the human.
 
-### 8a. Gemini prompt + verification block (Ask → Verify → Document)
+### 8a. AI prompt + verification block (Ask → Verify → Document)
 
-Every substantive code cell is preceded by a Gemini prompt (the setup cell and
+Every substantive code cell is preceded by a AI prompt (the setup cell and
 trivial one-line prints are exempt). Prompts are scripts the reader copies into
-Google Gemini, written exactly as they would type them (second person, never
+their AI tool, written exactly as they would type them (second person, never
 about "students"). Each notebook carries **≥4** (machine-checked):
 
 ```markdown
-> 💡 **Gemini Prompt:** "[prompt text — explain / critique / extend the next cell]"
+> 💡 **AI Prompt:** "[prompt text — explain / critique / extend the next cell]"
 >
 > **After running, verify (the responsible-AI habit):**
 > - [ ] Every source the AI cited exists — you retrieved it yourself.
@@ -356,10 +356,10 @@ the P4 scale inherits these as hard rules:
    22/23-minute investigation frame (puzzle + core concepts + ONE live Gemini
    prompt + the central run + reading-the-evidence). ⚖️ Design Choice,
    📝 Practice, and extra prompts live below the line as homework depth.
-2. **One live prompt per lecture:** exactly one Gemini prompt per lecture is
+2. **One live prompt per lecture:** exactly one AI prompt per lecture is
    marked for in-class use; the others say "homework depth". Never three AI
    round-trips inside one SRL block.
-3. **Prompt-sequence standard:** every Gemini prompt block = a one-line human
+3. **Prompt-sequence standard:** every AI prompt block = a one-line human
    commitment cell above it → a delegable task (locate / list-to-verify /
    red-team / explain-code-to-confirm), never re-explaining the notebook's own
    prose → at least one follow-up or interrogation move → a verify checklist
@@ -409,7 +409,7 @@ same markers). Required cells, in order — nothing else is mandatory:
    evidence, restated to the reader.
 3. `### 🤝 AI Research Partner` — what AI may help with in this sprint and what
    you must decide yourself.
-4. `> 💡 **Gemini Prompt:**` (≥1) with the After-running-verify checklist —
+4. `> 💡 **AI Prompt:**` (≥1) with the After-running-verify checklist —
    the sprint's AI assist.
 5. `### 🗡️ Red-Team Exchange` — the peer + AI review protocol for this
    milestone (what to attack, what to log).
@@ -432,7 +432,7 @@ asserts, by exact marker string:
 | 7 | Moves | `### 🔮 Pause & Predict`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Reading the Evidence`, `### 🎯 Project Transfer`, `### 🛡️ Exit Defense` | ≥1 each |
 | 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Hands-On:` | ≥1 (exempt: nb11, nb12, nb13) |
 | 9 | Partner briefing | `### 🤝 AI Research Partner` | ≥1 |
-| 10 | Gemini prompts | `> 💡 **Gemini Prompt:**` each followed by `**After running, verify` | ≥4 |
+| 10 | AI prompts | `> 💡 **AI Prompt:**` each followed by `**After running, verify` | ≥4 |
 | 11 | Prompt modification | `### 🔁 Modify the Prompt` | ≥1 |
 | 12 | Interrogation | `### 🔬 Interrogate the Output` | ≥1 |
 | 13 | Human-only | `### 🧑‍⚖️ Human-Only Checkpoint` | ≥1 |
@@ -443,7 +443,7 @@ asserts, by exact marker string:
 
 For every MILESTONE STUDIO notebook (msNN): checks 2, 5 (if code present), plus
 `**Milestone MN · studio notebook**`, `## 🎯 Definition of Done`,
-`### 🤝 AI Research Partner`, ≥1 Gemini prompt+verify, `### 🗡️ Red-Team
+`### 🤝 AI Research Partner`, ≥1 AI prompt+verify, `### 🗡️ Red-Team
 Exchange`, `### 📒 AI Research Ledger`, `### ✅ Submission Checklist`.
 
 Voice, dates, em-dash budget, and citation integrity are enforced separately by

@@ -165,10 +165,10 @@ ella, son tuyos.
 
 ## Un caso de falla de la IA
 
-Pegas tu cuaderno en Gemini y preguntas: "¿esto correrá en frío y producirá mi
+Pegas tu cuaderno en tu IA y preguntas: "¿esto correrá en frío y producirá mi
 proporción de baja participación?". Recorre cada celda y responde, con total confianza:
 "Sí, esto corre de arriba abajo sin problemas y devuelve tu número titular". Suena como
-una palomita verde. No lo es. Gemini nunca ejecutó nada. Leyó el código y lo narró. La
+una palomita verde. No lo es. La IA nunca ejecutó nada. Leyó el código y lo narró. La
 celda 3 carga `~/Desktop/turnout_clean.csv`, una ruta que solo tiene tu laptop, y el
 recorrido fluido describió la lectura de ese archivo como si estuviera ahí.
 

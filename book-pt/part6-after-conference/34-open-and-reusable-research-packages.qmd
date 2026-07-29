@@ -166,10 +166,10 @@ nela, são seus.
 
 ## Um caso de falha da IA
 
-Você cola o seu notebook no Gemini e pergunta: "isto vai rodar a frio e produzir a
+Você cola o seu notebook na sua IA e pergunta: "isto vai rodar a frio e produzir a
 minha fração de comparecimento baixo?". Ele percorre cada célula e responde, com total
 confiança: "Sim, isto roda de cima a baixo sem problemas e devolve o seu número
-principal". Soa como um sinal verde. Não é. O Gemini não executou nada. Ele leu o
+principal". Soa como um sinal verde. Não é. A IA não executou nada. Ele leu o
 código e narrou. A célula 3 carrega `~/Desktop/turnout_clean.csv`, um caminho que só o
 seu computador tem, e a explicação fluente descreveu a leitura desse arquivo como se
 ele estivesse ali.

@@ -60,7 +60,10 @@ EDITIONS = [
                   "this chapter's step of your own research project.\n"
                   "5. Log every AI use in your **AI Research Ledger**: task · tool · "
                   "prompt · output summary · decision · verification method · "
-                  "remaining concern · you as the responsible researcher."),
+                  "remaining concern · you as the responsible researcher.\n"
+                  "6. Your AI can be more than a chatbot: agentic tools can run "
+                  "multi-step work for you. Delegating boldly is fine; reviewing, "
+                  "curating, and deciding stay yours."),
         "response_cell": ("✍️ **Your run.** Double-click this cell and record: what "
                           "the AI returned (one or two lines), what you verified and "
                           "how, and your ledger row."),
@@ -68,7 +71,13 @@ EDITIONS = [
         "code_note": ("The cells below come from the chapter. Run them, then change "
                       "something and run again — the numbers should move the way the "
                       "chapter says they will."),
-        "code_from": "*From the section “{section}”.*",
+        "code_from": ("*From the section “{section}”.* **What this cell does:** exactly "
+                      "what the chapter walks through in that section; run it and "
+                      "compare with the chapter."),
+        "code_reading": ("**Reading the output.** The chapter reads this output in the "
+                         "same section; check yours against it, then change one input "
+                         "and rerun. The numbers should move the way the chapter says "
+                         "they will."),
         "step_word": "Step",
         "work_cell": ("✍️ **Your work for step {i}.** Double-click this cell and "
                       "write your answer here."),
@@ -130,7 +139,10 @@ EDITIONS = [
                   "5. Registre todo uso de IA no seu **AI Research Ledger**: tarefa · "
                   "ferramenta · prompt · resumo do resultado · decisão · método de "
                   "verificação · preocupação restante · você como pesquisador(a) "
-                  "responsável."),
+                  "responsável.\n"
+                  "6. A sua IA pode ser mais do que um chatbot: ferramentas agênticas "
+                  "executam trabalho de várias etapas para você. Delegar com ousadia "
+                  "é bom; revisar, fazer a curadoria e decidir continuam com você."),
         "response_cell": ("✍️ **Seu registro.** Clique duas vezes nesta célula e "
                           "anote: o que a IA devolveu (uma ou duas linhas), o que "
                           "você verificou e como, e a sua linha do ledger."),
@@ -138,7 +150,13 @@ EDITIONS = [
         "code_note": ("As células abaixo vêm do capítulo. Rode-as, depois mude algo e "
                       "rode de novo — os números devem se mover do jeito que o "
                       "capítulo diz."),
-        "code_from": "*Da seção “{section}”.*",
+        "code_from": ("*Da seção “{section}”.* **O que esta célula faz:** exatamente o "
+                      "que o capítulo percorre nessa seção; rode e compare com o "
+                      "capítulo."),
+        "code_reading": ("**Lendo o resultado.** O capítulo lê este resultado na mesma "
+                         "seção; confira o seu contra o dele, depois mude um valor e "
+                         "rode de novo. Os números devem se mover do jeito que o "
+                         "capítulo diz."),
         "step_word": "Passo",
         "work_cell": ("✍️ **Seu trabalho no passo {i}.** Clique duas vezes nesta "
                       "célula e escreva a sua resposta aqui."),
@@ -203,7 +221,10 @@ EDITIONS = [
                   "5. Registra cada uso de IA en tu **AI Research Ledger**: tarea · "
                   "herramienta · prompt · resumen del resultado · decisión · método "
                   "de verificación · preocupación restante · tú como responsable de "
-                  "la investigación."),
+                  "la investigación.\n"
+                  "6. Tu IA puede ser más que un chatbot: las herramientas agénticas "
+                  "ejecutan trabajo de varios pasos por ti. Delegar con audacia está "
+                  "bien; revisar, curar y decidir siguen siendo tuyos."),
         "response_cell": ("✍️ **Tu registro.** Haz doble clic en esta celda y anota: "
                           "qué devolvió la IA (una o dos líneas), qué verificaste y "
                           "cómo, y tu fila del ledger."),
@@ -211,7 +232,13 @@ EDITIONS = [
         "code_note": ("Las celdas de abajo vienen del capítulo. Córrelas, luego "
                       "cambia algo y corre de nuevo — los números deben moverse como "
                       "dice el capítulo."),
-        "code_from": "*De la sección “{section}”.*",
+        "code_from": ("*De la sección “{section}”.* **Qué hace esta celda:** exactamente "
+                      "lo que el capítulo recorre en esa sección; córrela y compara "
+                      "con el capítulo."),
+        "code_reading": ("**Leyendo el resultado.** El capítulo lee este resultado en "
+                         "la misma sección; compara el tuyo con el suyo, luego cambia "
+                         "un valor y corre de nuevo. Los números deben moverse como "
+                         "dice el capítulo."),
         "step_word": "Paso",
         "work_cell": ("✍️ **Tu trabajo en el paso {i}.** Haz doble clic en esta celda "
                       "y escribe tu respuesta aquí."),
@@ -469,6 +496,7 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
         for heading, block in code:
             add_md(ed["code_from"].format(section=heading))
             add_code(block)
+            add_md(ed["code_reading"])
 
     prompts = by_name.get(ed["prompts_heading"], "")
     if prompts:

@@ -19,7 +19,7 @@ Every STUDENT notebook must carry:
   * the five required AI-collaboration blocks (SDIIVDD): AI Research Partner
     briefing, Modify the Prompt, Interrogate the Output, Human-Only Checkpoint,
     AI Research Ledger
-  * ≥4 Gemini prompt blocks and ≥3 inline Q&A blocks
+  * ≥4 AI prompt blocks and ≥3 inline Q&A blocks
   * setup discipline: SEED = 464, no seaborn anywhere
   * no INSTRUCTOR SOLUTION marker in a student file
   * markdown hygiene: no unescaped $<digit>
@@ -153,12 +153,12 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
             errs.append(f"only {n_pause} '⏸' in-class demarcation cell(s) — need "
                         f"{need} (one per lecture; template 'Prototype lessons' §1)")
 
-    n_gem = text.count("💡 **Gemini Prompt")
+    n_gem = text.count("💡 **AI Prompt")
     if n_gem < 4:
-        errs.append(f"only {n_gem} Gemini Prompt block(s) — frame requires ≥4 "
+        errs.append(f"only {n_gem} AI Prompt block(s) — frame requires ≥4 "
                     f"(one before every substantive code chunk)")
     if text.count("After running, verify") < n_gem:
-        errs.append("each Gemini Prompt must be followed by an "
+        errs.append("each AI Prompt must be followed by an "
                     "'After running, verify' checklist")
     n_qa = text.count("A question that often comes up here")
     if n_qa < 3:
@@ -193,8 +193,8 @@ def check_ms_student(path: Path) -> list[str]:
     text = "\n\n".join(c.source for c in nb.cells)
     errs = [f"missing required studio block: {name}"
             for name, pat in MS_REQUIRED.items() if not pat.search(text)]
-    if text.count("💡 **Gemini Prompt") < 1:
-        errs.append("studio notebook needs ≥1 Gemini Prompt block")
+    if text.count("💡 **AI Prompt") < 1:
+        errs.append("studio notebook needs ≥1 AI Prompt block")
     if "INSTRUCTOR SOLUTION" in text:
         errs.append("INSTRUCTOR SOLUTION marker leaked into student file")
     errs += [f"voice: {p}" for p in lint_notebook(path)]

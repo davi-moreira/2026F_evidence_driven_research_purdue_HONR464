@@ -15,7 +15,7 @@ curiosity to a publicly defended claim. The course's defining message:
 
 > **AI is your arm and your research assistant, not your brain.**
 
-Students direct AI (Gemini in Colab; Purdue GenAI Studio reviewer roles) through
+Students direct AI (their AI tools in Colab; Purdue GenAI Studio reviewer roles) through
 the **Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend**
 workflow (everyday shorthand: **Ask → Verify → Document**), while keeping every
 research decision — problem, question, design, measurement, ethics, claims,
@@ -180,17 +180,19 @@ Briefs must stay simple to follow and explicitly leave room for the lead's own
 staging. Fixed section frames, enforced by the session-guide generator
 (sums = 50):
 
-- **Monday:** 0–9 SRL research puzzle · 9–31 guided Gemini research-partner
+- **Monday:** 0–9 SRL research puzzle · 9–31 guided AI research-partner
   investigation · 31–43 human verification + instructor formalization ·
   43–50 decision & defense (ledger + Claim Ticket).
 - **Wednesday:** 0–7 SRL retrieval & challenge · 7–30 intensive applied AI
   laboratory · 30–42 peer defense + adversarial questioning · 42–50 project
   transfer (ledger + Claim Ticket).
-- **Friday studio (no new topic content, ever):** 0–10 weekly multiple-choice
-  topic quiz (printed; `_quizzes/2026Fall/weekly/`) · 10–15 research stand-up ·
-  15–32 milestone kickoff (from its Brightspace brief) + AI-supported sprint ·
-  32–42 peer + AI red-team review · 42–50 revise, update ledger + dossier,
-  submit (Claim Ticket).
+- **Friday studio (no new topic content):** 0–10 weekly multiple-choice topic
+  quiz (printed; `_quizzes/2026Fall/weekly/`) · 10–15 research stand-up ·
+  15–45 milestone kickoff (presented from the course Brightspace page) +
+  AI-supported work with the student's AI assistant · 45–50 revise, update
+  ledger + dossier, submit (Claim Ticket). The Friday red-team block was
+  RETIRED (D30); students WORK ON milestones at the studio (no weekly
+  presentations).
 
 Week 1's two lectures are instructor-led to model the format. SRL materials:
 `project/srl/` + the course-book appendix `book/srl.qmd`; the milestone chain
@@ -383,7 +385,16 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 5.8 — same-day addendum (2026-07-29, DECISIONS.md D29): one
+**Version:** 5.9 — eighth instructor review round (2026-07-29, DECISIONS.md
+D30): AI-generic student-facing voice (Gemini retired from notebooks + 5
+chapters; template element renamed "AI Prompt"); agentic-era framing +
+brainstorming as a partner role; Friday studio = 10/5/30/5 with the
+red-team block RETIRED and milestones WORKED ON (not presented); nb01
+restructured (panel explainer, pathways named, partner cell before the
+puzzle, book-ch4 never-delegate link, per-code-cell expectation +
+"Reading the output" narration — standing rule, exemplar nb01 +
+companion generator); syllabus book-first + AI-generated translations.
+(5.8 — same-day addendum (2026-07-29, DECISIONS.md D29): one
 brand — site sidebar carries the EDR|AI wordmark and the book's neutral
 palette (gold retired from styles.css); `nbbuild.py` prepends a generated
 logo cell to every built notebook (injected once into existing ones);
@@ -446,5 +457,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

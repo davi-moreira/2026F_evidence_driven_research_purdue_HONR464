@@ -4,9 +4,9 @@
 instructor's master-prompt architecture, revised in THREE instructor review
 rounds on 2026-07-27, then rounds FOUR–SEVEN on 2026-07-28/29 (D25 book/course separation; D26
 locked instructor area, rubrics, banners, simulations; D27 presentation
-polish; D28 voice policy + preface restructure). Governing decisions:
-`_project_docs/DECISIONS.md` **D17–D28**; operating manual: `CLAUDE.md`
-**v5.7**. v1 preserved at git tag
+polish; D28 voice policy; D29 one brand; D30 AI-generic voice + agentic
+framing + Friday 10/5/30/5). Governing decisions: `_project_docs/DECISIONS.md`
+**D17–D30**; operating manual: `CLAUDE.md` **v5.9**. v1 preserved at git tag
 `v1-compass-build`; v1 notebook sources archived in
 `_production_kit/nb_sources_v1/`.
 
@@ -110,4 +110,4 @@ D22–D28 → `course_config.yaml`. Editing rules unchanged (instructor-first
 | **GenAI Studio** roles/KB/PoC | `genai_studio/`. **Book**: `book/` → `docs/book/`; map `planning/BOOK_MAP.md`. |
 | **Calendar / schedule** source | `scripts/schedule_data/part1–4.py` → `build_meeting_schedule.py` → `MEETING_SCHEDULE.{csv,md}`; backbone `validate_calendar.py`. |
 
-Last updated: **2026-07-29**, after the seventh instructor review round (D28 — book voice policy + linter, enrollment-language ban, preface restructure with For students / For instructors sections) was applied and rendered.
+Last updated: **2026-07-29**, after the eighth review round (D30 — AI-generic voice, agentic framing, Friday 10/5/30/5 red-team retired, nb01 restructure + code-narration standing rule). DEFERRED flags in D30's closing paragraph need Davi's rulings.

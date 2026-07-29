@@ -600,7 +600,7 @@ Do not fix it for me.</code></pre>
 </section>
 <section id="un-caso-de-falla-de-la-ia" class="level2" data-number="34.6">
 <h2 data-number="34.6" class="anchored" data-anchor-id="un-caso-de-falla-de-la-ia"><span class="header-section-number">34.6</span> Un caso de falla de la IA</h2>
-<p>Pegas tu cuaderno en Gemini y preguntas: “¿esto correrá en frío y producirá mi proporción de baja participación?”. Recorre cada celda y responde, con total confianza: “Sí, esto corre de arriba abajo sin problemas y devuelve tu número titular”. Suena como una palomita verde. No lo es. Gemini nunca ejecutó nada. Leyó el código y lo narró. La celda 3 carga <code>~/Desktop/turnout_clean.csv</code>, una ruta que solo tiene tu laptop, y el recorrido fluido describió la lectura de ese archivo como si estuviera ahí.</p>
+<p>Pegas tu cuaderno en tu IA y preguntas: “¿esto correrá en frío y producirá mi proporción de baja participación?”. Recorre cada celda y responde, con total confianza: “Sí, esto corre de arriba abajo sin problemas y devuelve tu número titular”. Suena como una palomita verde. No lo es. La IA nunca ejecutó nada. Leyó el código y lo narró. La celda 3 carga <code>~/Desktop/turnout_clean.csv</code>, una ruta que solo tiene tu laptop, y el recorrido fluido describió la lectura de ese archivo como si estuviera ahí.</p>
 <p>Lo detectas de la única manera que cuenta: de verdad corres reiniciar y ejecutar todo en un kernel nuevo, idealmente en Colab, en una máquina que no es la tuya. El <code>FileNotFoundError</code> aparece en la celda 3 en segundos. Una ejecución narrada no es una ejecución. Verificas el cuaderno ejecutándolo, no leyendo un párrafo sobre ejecutarlo.</p>
 </section>
 <section id="ahora-te-toca-a-ti" class="level2" data-number="34.7">

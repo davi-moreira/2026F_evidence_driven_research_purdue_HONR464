@@ -156,10 +156,10 @@ and the claim that a stranger can trust it, are yours.
 
 ## An AI failure case
 
-You paste your notebook into Gemini and ask, "will this run cold and produce my
+You paste your notebook into your AI and ask, "will this run cold and produce my
 low-turnout share?" It walks through every cell and answers, with total confidence,
 "Yes, this runs top to bottom cleanly and returns your headline number." It sounds
-like a green check. It is not. Gemini never executed anything. It read the code and
+like a green check. It is not. The AI never executed anything. It read the code and
 narrated it. Cell 3 loads `~/Desktop/turnout_clean.csv`, a path only your laptop has,
 and the fluent walkthrough described reading that file as if it were sitting there.
 

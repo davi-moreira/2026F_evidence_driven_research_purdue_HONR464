@@ -600,7 +600,7 @@ Do not fix it for me.</code></pre>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="34.6">
 <h2 data-number="34.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">34.6</span> An AI failure case</h2>
-<p>You paste your notebook into Gemini and ask, “will this run cold and produce my low-turnout share?” It walks through every cell and answers, with total confidence, “Yes, this runs top to bottom cleanly and returns your headline number.” It sounds like a green check. It is not. Gemini never executed anything. It read the code and narrated it. Cell 3 loads <code>~/Desktop/turnout_clean.csv</code>, a path only your laptop has, and the fluent walkthrough described reading that file as if it were sitting there.</p>
+<p>You paste your notebook into your AI and ask, “will this run cold and produce my low-turnout share?” It walks through every cell and answers, with total confidence, “Yes, this runs top to bottom cleanly and returns your headline number.” It sounds like a green check. It is not. The AI never executed anything. It read the code and narrated it. Cell 3 loads <code>~/Desktop/turnout_clean.csv</code>, a path only your laptop has, and the fluent walkthrough described reading that file as if it were sitting there.</p>
 <p>You catch it the only way that counts: you actually run restart-and-run-all on a fresh kernel, ideally in Colab on a machine that is not yours. The <code>FileNotFoundError</code> appears on cell 3 in seconds. A narrated run is not a run. You verify the notebook by executing it, not by reading a paragraph about executing it.</p>
 </section>
 <section id="it-is-your-turn" class="level2" data-number="34.7">
