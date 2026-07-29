@@ -215,6 +215,19 @@ below. The async-only module (nb14) embeds these inside its module flow.
 Pacing rule: direct exposition ≤8 min per segment, <15 min total per lecture;
 ≥70% of class time active.
 
+**In-class weight (D33).** All seven moves run INSIDE the 50-minute frame, at
+in-class weight, and each one sits ABOVE the lecture's `### ⏸` line
+(machine-checked): 📝 is a spoken drill (answers called out; writing is
+optional); ⚖️ is one committed written line defended aloud (the full
+paragraph is optional depth); 🎯 is one sentence naming where today's
+decision lands in the project (the deep transfer happens at the Friday
+studio); 🛡️ is the short ritual close, with the expanded form carried by the
+📒 ledger row and the spoken Claim Ticket. Every lecture also closes with its
+own `### 📒 AI Research Ledger` row, in class (Mondays included), and the
+SDIIVDD blocks 🔁/🔬/🧑‍⚖️ are in-class work on the lecture that carries
+them. Exempt: nb01 (orientation), nb14 (async), nb13 (conference week — the
+reflection path completes at the Expo and the reflection studio).
+
 **Variants.** The communication/performance notebooks (nb11 poster criticism,
 nb12 delivery, nb13 conference) may satisfy the runnable move with structured
 criticism or delivery rounds instead of `### 🛠️ Run the Study` — the validator
@@ -349,16 +362,19 @@ Thank you!
 Encoded from `planning/QUALITY_REPORT_P3.md` after the Week-5 prototype review;
 the P4 scale inherits these as hard rules:
 
-1. **⏸ In-class demarcation (machine-checked):** every lecture carries exactly
-   one demarcation cell — `⏸ **You have reached the end of the in-class
-   block.**` + one sentence telling the reader to finish the rest before the
-   next lecture. The IN-CLASS portion above it must realistically fit the
-   22/23-minute investigation frame (puzzle + core concepts + ONE live Gemini
-   prompt + the central run + reading-the-evidence). ⚖️ Design Choice,
-   📝 Practice, and extra prompts live below the line as homework depth.
-2. **One live prompt per lecture:** exactly one AI prompt per lecture is
-   marked for in-class use; the others say "homework depth". Never three AI
-   round-trips inside one SRL block.
+1. **⏸ Optional-depth demarcation (machine-checked; D33 semantics):** every
+   lecture carries exactly one demarcation cell — `### ⏸ Optional depth from
+   here` — placed AFTER the closing moves (…🎯 → 🛡️ → 📒). Everything above
+   it is the required 50-minute lecture path (the four-block frame);
+   everything below it, and every prompt labeled 🏠 optional depth, is
+   enrichment, never required and never homework. The block-2 investigation
+   core (puzzle + core concepts + ONE live AI prompt + the central run +
+   reading-the-evidence) must still realistically fit its 22/23 minutes.
+2. **One live prompt per lecture:** one AI prompt per lecture is the
+   designated in-class exchange; the others carry the 🏠 optional-depth
+   label. Never three AI round-trips inside one SRL block. (nb03's single
+   lecture keeps its gap-attack exchange in class alongside the live prompt —
+   the SDIIVDD chain is built on it.)
 3. **Prompt-sequence standard:** every AI prompt block = a one-line human
    commitment cell above it → a delegable task (locate / list-to-verify /
    red-team / explain-code-to-confirm), never re-explaining the notebook's own
@@ -429,14 +445,14 @@ asserts, by exact marker string:
 | 4 | Objectives | `By the end of this notebook, you will be able to:` | =1 |
 | 5 | Setup | `SEED = 464` + `default_rng`; `seaborn` absent notebook-wide | required |
 | 6 | Lecture heads | `# Lecture i` per schedule; one `### 🎤 SRL Lead Brief` + one `### 🧩 Research Puzzle` per lecture (exempt: nb14) | exact |
-| 7 | Moves | `### 🔮 Predict First`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Read the Evidence`, `### 🎯 Take It to Your Project`, `### 🛡️ Defend Your Decision` | ≥1 each |
-| 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Run It Live:` | ≥1 (exempt: nb11, nb12, nb13) |
+| 7 | Moves | `### 🔮 Predict First`, `### ⚖️ Make a Design Choice`, `### 📝 Practice`, `### 🔍 Read the Evidence`, `### 🎯 Take It to Your Project`, `### 🛡️ Defend Your Decision` | ≥1 each, per lecture, ABOVE the ⏸ line (D33; placement exempt: nb13) |
+| 8 | Runnable move | `### 🛠️ Run the Study` or `### 🛠️ Run It Live:` | ≥1 per lecture above ⏸ (exempt: nb11, nb12, nb13) |
 | 9 | Partner briefing | `### 🤝 AI Research Partner` | ≥1 |
 | 10 | AI prompts | `> 💡 **AI Prompt:**` each followed by `**After running, verify` | ≥4 |
 | 11 | Prompt modification | `### 🔁 Modify the Prompt` | ≥1 |
 | 12 | Interrogation | `### 🔬 Interrogate the Output` | ≥1 |
 | 13 | Human-only | `### 🧑‍⚖️ Human-Only Checkpoint` | ≥1 |
-| 14 | Ledger | `### 📒 AI Research Ledger` | ≥1 |
+| 14 | Ledger | `### 📒 AI Research Ledger` | ≥1 per lecture, above ⏸ (D33; placement exempt: nb13) |
 | 15 | Q&A density | `> **A question that often comes up here:**` | ≥3 |
 | 16 | Wrap + sources | `## N. Wrap-Up`, `## N+1. Sources & Provenance`, final thank-you cell | present, ordered |
 | 17 | No leakage | `INSTRUCTOR SOLUTION` absent from the student file | =0 |
@@ -462,3 +478,20 @@ Your Project · 🛡️ Defend Your Decision. `validate_notebooks.py` enforces t
 per-lecture rule.
 
 Amendment (2026-07-29): the `### 🤝 AI Research Partner` briefing appears in nb01 (orientation) and the book only; nb02–nb16 do not carry it.
+
+## D33 amendment — all seven moves INSIDE the 50 minutes (2026-07-29)
+
+The whole seven-move path now runs in class, at in-class weight (§7), and the
+`### ⏸` cell changed meaning: it reads "Optional depth from here", sits AFTER
+the closing moves, and everything below it is enrichment, never required —
+the required homework tail is retired. Concretely, per lecture: Monday closes
+📝 → ⚖️ → 🎯 → 🛡️ → 📒; Wednesday opens with a spoken 📝 retrieval drill
+after the 🧩 challenge, runs 🔁/🔬 inside the laboratory, then closes
+🧑‍⚖️ → ⚖️ → 🎯 → 🛡️ → 📒 (the old full-length Wednesday 📝 drill lives on
+below the ⏸ line as optional depth). Every lecture logs its own 📒 ledger row
+before the room empties. `validate_notebooks.py` enforces placement (all
+seven + 📒 above each lecture's ⏸; 🔁/🔬/🧑‍⚖️ above a ⏸ notebook-wide).
+Exempt: nb01, nb14, and nb13 (conference week: below nb13's ⏸ line is the
+conference path — Expo fieldwork plus the reflection studio, feeding M12 —
+not optional depth and not homework). Deep transfer work stays where it
+belongs: the Friday studio sprint and the book's "It is your turn" chain.
