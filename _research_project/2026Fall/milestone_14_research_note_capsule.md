@@ -8,7 +8,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-present → submit → revise (where eligible)**. Every milestone also updates your
+submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in the syllabus;
@@ -23,8 +23,7 @@ either stays sized to its evidence or quietly grows past it. It is
 
 ## What to Submit on Brightspace
 
-Due: **Friday, December 4, 11:59 PM** (you table-read your draft at the Friday
-studio that day, leaving and receiving margin notes).
+Due: **Friday, December 4, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|

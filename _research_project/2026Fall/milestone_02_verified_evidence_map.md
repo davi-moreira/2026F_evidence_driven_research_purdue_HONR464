@@ -8,7 +8,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-present → submit → revise (where eligible)**. Every milestone also updates your
+submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in the syllabus;
@@ -207,7 +207,7 @@ where each now lives.
 |---|---|
 | **Length** | The four-part map + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
 | **Figure** | The evidence map as a legible image: claim nodes from your ledger, agree/contradict/qualify edges, and exactly one gap node placed where the map is quiet |
-| **Presentation** | Contribution-map gallery walk at the Friday studio (Sep 11); the class red-teams your gap with sticky-note challenges and you incorporate one live — part of the grade |
+| **Studio work** | Worked at the Friday studio (Sep 11) with your AI assistant; submitted the same day |
 | **Style** | Plain language; every technical term used as defined above; claims in your own words; every citation retrievable |
 | **Filename** | `lastname_m02_evidence_map.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M02 |

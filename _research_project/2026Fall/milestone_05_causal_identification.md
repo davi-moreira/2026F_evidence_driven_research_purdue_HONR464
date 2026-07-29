@@ -8,7 +8,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-present → submit → revise (where eligible)**. Every milestone also updates your
+submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in the syllabus;
@@ -24,7 +24,7 @@ time. In place of a live studio pitch, you record a **90-second causal-strategy
 statement** and post it to the Brightspace discussion board by the same
 deadline. On the board, a partner and the assigned **Causal Identification
 Skeptic** GenAI Studio reviewer red-team your identification argument (the
-async board red-team); you reply with your resolutions. The written document is
+async board); you reply with your resolutions. The written document is
 what is graded.
 
 | # | File | Description |
@@ -90,7 +90,7 @@ earned by an argued and probed assumption, never by the name of a method.
 ## Components
 
 Draft every piece yourself first. AI may critique what you wrote afterward, and
-the Causal Identification Skeptic is a required reviewer, but the strategy you
+the Causal Identification Skeptic is a recommended reviewer, but the strategy you
 submit has to be reasoned by you. Whether your design earns a causal claim is a
 never-delegate decision.
 
@@ -179,7 +179,7 @@ assumption you would still have to defend, or that your claim belongs on the
 
 ### 4. The Causal Identification Skeptic critique and your resolutions
 
-The **Causal Identification Skeptic** (a GenAI Studio role) is a **required**
+The **Causal Identification Skeptic** (a GenAI Studio role) is a **recommended**
 reviewer for this milestone. Paste your identification argument or your boundary
 to it and ask it to attack. It returns a ranked **Threats to identification**
 list and any **Language-boundary flags**. Do not accept the attack as
@@ -210,7 +210,7 @@ Every use of AI in building this deliverable gets a row in your **AI Research
 Ledger** (the eight-field table: task delegated · tool used · prompt · output
 summary · decision · verification method · remaining concern · responsible
 researcher). Red-teaming your causal sentence, having the Skeptic rank threats,
-and asking Gemini to name a confounder you might have missed are all delegable
+and asking your AI to name a confounder you might have missed are all delegable
 tasks, and each one you delegated needs a row naming how you verified the result.
 "No AI used" is a legitimate entry if it is true.
 
@@ -232,7 +232,7 @@ file or section in your dossier where each now lives.
 |---|---|
 | **Length** | The six-part deliverable + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
 | **Figure** | The confounding causal diagram as a legible image: the treatment-to-outcome arrow plus at least one confounder with arrows into both |
-| **Presentation** | 90-second recorded causal-strategy statement, posted to the Brightspace board by Friday Oct 2; a partner and the Causal Identification Skeptic red-team your identification argument on the board thread (the async board red-team) — part of the grade |
+| **Studio work (async)** | Async module worked and submitted by Friday, Oct 2; one board reply; recommended Causal Identification Skeptic review logged |
 | **Style** | Plain language; every technical term used as defined above; your language matched to the license your design actually holds |
 | **Filename** | `lastname_m05_causal_identification.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M05 |
@@ -294,7 +294,7 @@ days of feedback recovers up to half the lost points.
    confounder still opens the back door. Adjustment works only for the confounder
    you can see. Name the one variable whose absence would break your
    identification, and say how you would know you were missing it.
-3. **The AI-written identification argument.** Asking Gemini to judge whether your
+3. **The AI-written identification argument.** Asking your AI to judge whether your
    design earns *because*, or pasting a fluent caveat you did not reason to.
    Judging identification is the whole skill this milestone teaches, and it is
    exactly what an AI fakes best. Draft the argument or the boundary yourself,

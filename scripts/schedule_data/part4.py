@@ -8,7 +8,7 @@ the full dress rehearsal, then the Expo (Tuesday, a graded presentation +
 evaluating >=3 colleagues' posters), then the Friday reflection studio (Expo
 questions coded as data + criticism portfolio). Week 14 (nb14, ASYNC Thanksgiving
 module) — AI-assisted replication + red-team of a peer's anonymized package, with
-a required GenAI Studio 'Reproducibility Auditor' pass; the report is due Sunday
+a recommended GenAI Studio 'Reproducibility Auditor' pass; the report is due Sunday
 night. Week 15 (nb15) — from poster to research note: paper logic, the
 problem-gap-question spine, results hierarchy, limitations, AI as a writing
 critic without surrendering authorship, and the reproducibility capsule. Week 16
@@ -219,12 +219,12 @@ MEETINGS_P4 = [
         "rdss_reading": "(no new reading — self-contained async module; the reproducibility-audit protocol stands in for the reading)",
         "cb_reading": "",
         "other_material": "nb14 student notebook — fully self-contained async module (Colab); project/final_dossier/reproducibility_audit_protocol.md; the assigned anonymized replication package; GenAI Studio 'Reproducibility Auditor' role (genai.rcac.purdue.edu); async discussion board; M13 due Sunday night; M14 brief posted on Brightspace",
-        "provenance": "reproducibility_audit_protocol.md + GenAI Studio Reproducibility Auditor touchpoint | replication + red-team unit | self-contained reproduce-and-audit module with a required GenAI Studio role pass | fresh",
+        "provenance": "reproducibility_audit_protocol.md + GenAI Studio Reproducibility Auditor touchpoint | replication + red-team unit | self-contained reproduce-and-audit module with a recommended GenAI Studio role pass | fresh",
         "concepts": "AI-assisted replication; restart-and-run-all execution; data and code lineage; alternative specifications; hidden assumptions; claims-vs-computation agreement; AI-related weaknesses; the illusion of completeness; prioritized (triaged) recommendations",
         "python_r_dependency": "pandas/numpy (execute the peer's package end to end); scikit-learn if the package uses it",
         "dataset_simulation": "a classmate's anonymized replication package",
         "minute_dynamic": "ASYNC (~50 min self-paced, no live meeting): 0–6 module orientation + open the assigned anonymized package; 6–20 cold reproduction — restart-and-run-all, trace the data and code lineage, and try to reproduce the headline number, logging every break; 20–32 red-team audit — check the poster's claims against what the computation actually shows, probe one alternative specification, and surface the hidden assumptions and AI-related weaknesses; 32–42 REQUIRED GenAI Studio pass — run the package summary through the 'Reproducibility Auditor' role, then verify its findings yourself and log the pass in your AI-use ledger (the role proposes, you confirm); 42–48 write the prioritized recommendations, ranked by threat to the claim, not by ease of fixing; 48–50 (async board) post the single weakness you ranked most threatening and reply to one classmate.",
-        "hands_on_activity": "Reproduce a classmate's anonymized headline number, red-team it for hidden assumptions and AI weaknesses, and run the required GenAI Studio Reproducibility Auditor pass.",
+        "hands_on_activity": "Reproduce a classmate's anonymized headline number, red-team it for hidden assumptions and AI weaknesses, and run the recommended GenAI Studio Reproducibility Auditor pass.",
         "practice": "📝 nb14 practice: for one sample package, list three ways a clean run can still hide a broken claim, then rank them by threat.",
         "discussion_prompt": "(async board) The weakness you ranked most threatening in your assigned package: post it, and reply to one classmate with a check that would confirm or dissolve theirs.",
         "project_connection": "M13 is a full red-team report on a peer's work — the skill you will want turned on your own dossier next; M14 (your research note) is posted today to read over break.",

@@ -757,3 +757,20 @@ milestone_presentation_review fields in schedule_data still describe
 present+review Fridays; GenAI Studio reviewer touchpoints at M7/M9 lost
 their Friday home (M5/M13 live in async modules); the syllabus still lists
 the four required GenAI Studio reviews (M5, M7, M9, M13).
+
+**D30 addendum (2026-07-29, same day): deferred items a–d resolved by
+extending the same policy.** (a) All 16 milestone briefs: cadence is now
+kickoff → develop → submit → revise; studio-presentation parentheticals and
+"Presentation"/"Clinic" spec rows replaced by **Studio work** rows; walkthrough
+phrasing removed from rubric cells; red-teaming YOUR OWN work (and M13's
+replication + red-team identity) kept; briefs are AI-generic (Gemini swept).
+(b) schedule_data: all "M# presented:" values → "worked at the studio and
+submitted"; "(presented + submitted/due)" → "(worked + …)"; guide label is now
+**Studio work / review**; schedule + guides regenerated. (c)+(d) GenAI Studio
+reviewer roles are **recommended everywhere, required nowhere** (syllabus,
+home page, briefs M5/M7/M9/M13, schedule fields, notebook sources nb10/nb14/
+ms09/ms13 — rebuilt). Lecture-block activities that are real course
+components (Evidence Defenses, poster gallery walks, hot-seat rounds, the
+Expo) are unchanged. The home page's Course Materials and AI Tools blocks
+were resynchronized with the syllabus (book first, AI-generated translations,
+companion notebooks, GenAI recommended).

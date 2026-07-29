@@ -80,9 +80,9 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 studio log: record one AI suggestion you kept, one you rejected, and the reason for each.
 - **Discussion prompt:** Whose 30-second curiosity would you follow for a semester, and what is the first thing you would need to know to start?
 - **Project connection:** M0 closes today; the candidate problem areas widened in the sprint open the M1 opportunity landscape.
-- **Milestone developed:** M0 — Research and AI baseline (presented + due); M1 — Research opportunity landscape (kickoff)
+- **Milestone developed:** M0 — Research and AI baseline (worked + due); M1 — Research opportunity landscape (kickoff)
 - **Milestone work time:** 30 min studio block
-- **Milestone presentation/review:** M0 presented: 30-second curiosity pitch + whole-class stand-up, each pitch gets one 'so what?' and one AI-overreach flag
+- **Milestone presentation/review:** M0 worked at the studio and submitted (no class presentation)
 - **Student prep:** M0 complete (baseline, curiosities, tool-readiness screenshots, Ledger entries); 30-second pitch ready; laptop ready.
 - **Student artifact:** Delivered pitch + a first M1 candidate-problem-area list with a verified Ledger trail
 - **Exit ticket:** Claim Ticket #3: my strongest curiosity in one sentence, plus one thing I will NOT let AI decide about it.
@@ -171,9 +171,9 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 studio log: record the lead problem you committed to and the single feasibility risk that most threatens it.
 - **Discussion prompt:** Which classmate's lead problem would you switch your own project to, and what makes it feel doable in one semester?
 - **Project connection:** M1 closes today; the lead problem and evidence leads from the sprint open the M2 verified-evidence map.
-- **Milestone developed:** M1 — Research opportunity landscape (presented + due); M2 — Verified evidence and contribution map (kickoff)
+- **Milestone developed:** M1 — Research opportunity landscape (worked + due); M2 — Verified evidence and contribution map (kickoff)
 - **Milestone work time:** 30 min studio block
-- **Milestone presentation/review:** M1 presented: landscape pitch + class red-team on feasibility and compass position
+- **Milestone presentation/review:** M1 worked at the studio and submitted
 - **Student prep:** M1 opportunity landscape complete; Purdue Libraries login working; laptop ready.
 - **Student artifact:** Committed lead problem + a first list of evidence leads to verify, with a Ledger trail
 - **Exit ticket:** Claim Ticket #6: the one problem I am committing to, its compass position, and why it is doable this semester.
@@ -231,9 +231,9 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 studio log: record the challenge you incorporated and what changed on your map because of it.
 - **Discussion prompt:** On your neighbor's map: is the gap they placed real, or does one of their own verified sources already fill it?
 - **Project connection:** M2 closes today; the confirmed gap and contribution seed the M3 research charter and MIDA declaration.
-- **Milestone developed:** M2 — Verified evidence and contribution map (presented + due); M3 — Research charter and MIDA declaration (kickoff)
+- **Milestone developed:** M2 — Verified evidence and contribution map (worked + due); M3 — Research charter and MIDA declaration (kickoff)
 - **Milestone work time:** 30 min studio block
-- **Milestone presentation/review:** M2 presented: evidence-map gallery walk with sticky-note peer challenges
+- **Milestone presentation/review:** M2 worked at the studio and submitted
 - **Student prep:** Evidence map built from ≥6 verified sources; source log current; laptop ready.
 - **Student artifact:** Evidence map with a defended gap + one incorporated revision
 - **Exit ticket:** Claim Ticket #8: the strongest verified claim in my map that argues AGAINST my project's premise.
@@ -322,9 +322,9 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 studio log: record the clarifying question that stung most and how your declaration will change because of it.
 - **Discussion prompt:** Which classmate's declaration could you repeat back word for word, and what made its inquiry so easy to hold onto?
 - **Project connection:** M3 closes today; the declared design opens the design-library phase, beginning with the M4 observational descriptive audit.
-- **Milestone developed:** M3 — Research charter and MIDA declaration (presented + due); M4 — Observational descriptive design audit (kickoff)
+- **Milestone developed:** M3 — Research charter and MIDA declaration (worked + due); M4 — Observational descriptive design audit (kickoff)
 - **Milestone work time:** 30 min studio block
-- **Milestone presentation/review:** M3 presented: 3-minute MIDA declaration + one clarifying question per listener
+- **Milestone presentation/review:** M3 worked at the studio and submitted
 - **Student prep:** 3-minute M3 declaration rehearsed; nb04 cells complete; laptop ready.
 - **Student artifact:** Delivered declaration + revision notes + a started M4 audit
 - **Exit ticket:** Claim Ticket #11: my inquiry, restated after feedback, in one sentence a non-researcher could repeat back.
@@ -413,9 +413,9 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 while listening: for each walkthrough, note the strongest boundary line and the one place the description quietly overreaches.
 - **Discussion prompt:** Which classmate's coverage limit would you steal for your own project, and what does admitting it buy you?
 - **Project connection:** M4 presents and submits; M5 (a causal identification strategy or a defended causal-language boundary) kicks off from its Brightspace brief.
-- **Milestone developed:** M4 — Observational descriptive design audit (presented + submitted); M5 — Causal identification strategy or causal-language boundary (kickoff)
+- **Milestone developed:** M4 — Observational descriptive design audit (worked + submitted); M5 — Causal identification strategy or causal-language boundary (kickoff)
 - **Milestone work time:** 23-min kickoff + sprint within the studio block (M5 opens, M4 walkthroughs)
-- **Milestone presentation/review:** M4 presented: 3-minute walkthrough + written two-line peer reviews + AI overclaim-check
+- **Milestone presentation/review:** M4 worked at the studio and submitted
 - **Student prep:** M4 audit complete; 3-minute walkthrough rehearsed; nb05 finished.
 - **Student artifact:** Delivered walkthrough + peer reviews given/received + M5 causal question drafted
 - **Exit ticket:** Claim Ticket #14: one coverage limit I heard today that I will adopt, and the causal question I am tempted to ask next.
@@ -482,7 +482,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Student prep:** Read the RDSS ch. 16 difference-in-differences, IV, and regression-discontinuity sections; bring your causal DAG from the previous lecture.
 - **Student artifact:** Analyzed lottery natural experiment + your identification paragraph (or honest causal-language boundary)
 - **Exit ticket:** Claim Ticket #16: my project's causal status in one sentence — identified by ___, or honestly stopping at association.
-- **Homework / next milestone:** This Friday runs asynchronously online: complete nb06, run the required GenAI Studio 'Causal Identification Skeptic' review, and submit M5 by the posted time. Budget about 50 minutes.
+- **Homework / next milestone:** This Friday runs asynchronously online: complete nb06, run the recommended GenAI Studio 'Causal Identification Skeptic' review, and submit M5 by the posted time. Budget about 50 minutes.
 - **Instructor prep:** Verify cliningsmith_etal.csv loads and the effect reproduces; check the DiD/RDD intuition figures render; brief the SRL on the lottery puzzle; confirm the async module and discussion board are staged.
 - **Risks / contingency:** Intuition pictures crowd the lab → the DiD/RDD/IV block compresses to the three figures and nb06 carries the depth; content overruns → the identification paragraph moves into the async studio.
 
@@ -497,17 +497,17 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Calling Bullshit (optional):** optional: one callingbullshit.org case of your choice from the module linked in nb06
 - **Other material:** nb06 — fully self-contained async module (Colab); GenAI Studio 'Causal Identification Skeptic' role; M6 Brightspace brief (posted today)
 - **Provenance:** RDSS ch.16 + course async-studio protocol + GenAI Studio reviewer bench | self-contained causal claim defense | recorded stand-up + async red-team board exchange + required skeptic role review | newly-constructed-from-source-concept
-- **Concepts:** stating an untestable assumption plainly; adversarial review of an identification argument; the required GenAI Studio 'Causal Identification Skeptic' pass; honest causal-language boundaries; asynchronous research defense
+- **Concepts:** stating an untestable assumption plainly; adversarial review of an identification argument; the recommended GenAI Studio 'Causal Identification Skeptic' pass; honest causal-language boundaries; asynchronous research defense
 - **Python dependency:** pandas (one small recompute of your own estimate); no live session
 - **Dataset / simulation:** student's own project data plans + the nb06 lottery example for reference
 - **50-minute dynamic:** ASYNC (~50 min self-paced, no live meeting): 0–8 record and post a 90-second research stand-up stating your causal question and candidate identification argument to the discussion board; 8–28 sprint: complete nb06 and assemble your M5 — the identification paragraph (or honest causal-language boundary), its untestable assumption, and one recompute of your own estimate; 28–40 asynchronous peer red-team exchange: post your identification argument and reply to one classmate's with the single assumption you would attack, then run the REQUIRED GenAI Studio 'Causal Identification Skeptic' review and patch the weakest point it finds; 40–50 submission: finalize M5, update the dossier and AI Research Ledger (including the skeptic-review pass), and submit with your Claim Ticket.
-- **Hands-on activity:** Complete the self-contained causal module: recompute your own estimate, run the required GenAI Studio 'Causal Identification Skeptic' review, exchange async red-team notes, and submit M5.
+- **Hands-on activity:** Complete the self-contained causal module: recompute your own estimate, run the recommended GenAI Studio 'Causal Identification Skeptic' review, exchange async red-team notes, and submit M5.
 - **Practice:** 📝 nb06 async practice: classify three published causal headlines by whether they name their identifying assumption, and rewrite one to stop at what it earns.
 - **Discussion prompt:** (async board post) Post your identification argument and its untestable assumption; reply to one classmate with the single assumption you would attack first, and why.
 - **Project connection:** M5 submits and the causal branch of your design is locked or honestly bounded; the M6 brief opens the experimental-measurement question.
 - **Milestone developed:** M5 — Causal identification strategy or causal-language boundary (submitted async); M6 — Experimental measurement or data-acquisition protocol (brief posted)
-- **Milestone work time:** module includes a 20-min M5 assembly block + the required GenAI Studio skeptic review
-- **Milestone presentation/review:** async board: 90-second recorded stand-up + one red-team reply + required GenAI Studio 'Causal Identification Skeptic' review logged in the ledger
+- **Milestone work time:** module includes a 20-min M5 assembly block + the recommended GenAI Studio skeptic review
+- **Milestone presentation/review:** async module worked and submitted; one board reply; recommended GenAI Studio 'Causal Identification Skeptic' review logged in the ledger
 - **Student prep:** nb06 lectures complete; identification paragraph (or causal-language boundary) drafted; GenAI Studio account access confirmed.
 - **Student artifact:** Completed nb06 async module: recompute cell + skeptic-review log + red-team exchange + submitted M5 + board stand-up
 - **Exit ticket:** (embedded in the module) Claim Ticket #17: the assumption the skeptic attacked hardest, and how I answered or conceded it.
@@ -595,9 +595,9 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 abstract drill: find the one sentence a skimming reader would over-believe in your abstract, and defuse it.
 - **Discussion prompt:** Read your partner's abstract cold — what did you believe that their design cannot actually deliver?
 - **Project connection:** M6 submits and the URC abstract clears its internal gate (drafted, verified, submitted internally); M7 (declared analysis protocol) kicks off from its Brightspace brief.
-- **Milestone developed:** M6 — Experimental measurement or data-acquisition protocol (presented + submitted) + URC abstract internal gate (cleared today); M7 — Declared analysis protocol (kickoff)
+- **Milestone developed:** M6 — Experimental measurement or data-acquisition protocol (worked + submitted) + URC abstract internal gate (cleared today); M7 — Declared analysis protocol (kickoff)
 - **Milestone work time:** 23-min kickoff + sprint within the studio block (M7 opens, URC abstract workshop)
-- **Milestone presentation/review:** M6 presented: protocol clinic + partner abstract swap with the uncertainty-and-reach checklist + AI overbelief-check
+- **Milestone presentation/review:** M6 worked at the studio and submitted (URC abstract gate cleared)
 - **Student prep:** M6 protocol complete; URC abstract drafted (150–250 words); nb07 finished.
 - **Student artifact:** Submitted M6 + abstract cleared at the internal gate + M7 declared-analysis kickoff notes
 - **Exit ticket:** Claim Ticket #20: the uncertainty phrase that now protects my abstract's reader, and the artifact control I am proudest of.
@@ -652,13 +652,13 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Python dependency:** none required (assembly + auditor review; nb08 open for reference)
 - **Dataset / simulation:** student's own project data plans (no shared dataset today)
 - **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each project states its analysis question and the one place leakage could enter; 15–45 milestone kickoff from the Brightspace brief + AI-supported sprint: present the M8 deliverable and rubric (a minimum viable analysis), then assemble the declared analysis protocol from the template; 45–50 revise, update ledger + dossier, submit + Claim Ticket: patch the auditor's hardest hit, log the review in the ledger, submit M7, and write the Claim Ticket.
-- **Hands-on activity:** Assemble your declared analysis protocol, run the required GenAI Studio 'Prediction & Leakage Auditor' review, patch its hardest hit, and submit M7.
+- **Hands-on activity:** Assemble your declared analysis protocol, run the recommended GenAI Studio 'Prediction & Leakage Auditor' review, patch its hardest hit, and submit M7.
 - **Practice:** 📝 during the sprint: for a partner's protocol, name the one step where leakage or an after-the-fact metric choice could still sneak in.
 - **Discussion prompt:** What did the Prediction & Leakage Auditor catch in your protocol that you had not seen, and why did you miss it?
 - **Project connection:** M7 (declared analysis protocol) submits after its auditor review; M8 (minimum viable analysis) kicks off from its Brightspace brief.
-- **Milestone developed:** M7 — Declared analysis protocol (presented + submitted, auditor-reviewed); M8 — Minimum viable analysis (kickoff)
+- **Milestone developed:** M7 — Declared analysis protocol (worked + submitted); M8 — Minimum viable analysis (kickoff)
 - **Milestone work time:** 23-min kickoff + sprint within the studio block (M8 opens, declared-analysis assembly)
-- **Milestone presentation/review:** M7 presented: required GenAI Studio 'Prediction & Leakage Auditor' review + peer red-team exchange
+- **Milestone presentation/review:** M7 worked at the studio and submitted; recommended GenAI Studio 'Prediction & Leakage Auditor' review
 - **Student prep:** Declared analysis protocol drafted; nb08 complete; GenAI Studio access confirmed.
 - **Student artifact:** Submitted M7 + logged Prediction & Leakage Auditor review + M8 kickoff notes
 - **Exit ticket:** Claim Ticket #22: the leakage or overclaim risk the auditor caught in my protocol, and how I closed it.
@@ -748,7 +748,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Project connection:** M8 submits tonight; every project leaves with a headline-claim seed and a locked plan for the M9 poster draft + research audit.
 - **Milestone developed:** M8 — Minimum viable analysis (due tonight) → M9 — Poster draft 1 and research audit (kickoff)
 - **Milestone work time:** 30 min studio block
-- **Milestone presentation/review:** M8 presented: 60-second evidence pitches with peer + AI red-team hits
+- **Milestone presentation/review:** M8 worked at the studio and submitted
 - **Student prep:** Minimum viable analysis executed (any state of polish); pitch rehearsed once; verification note ready.
 - **Student artifact:** Delivered pitch + red-team hit logged + submitted M8
 - **Exit ticket:** Claim Ticket #25: "My poster's headline claim starts as [≤ 15 words], and my M8 evidence backs exactly that much — no more."
@@ -815,7 +815,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Student prep:** Robustness checks from Monday run; a one-paragraph written summary of your analysis ready to hand a reviewer.
 - **Student artifact:** Human + multi-model AI review logged in the ledger, each hit verified real or refuted
 - **Exit ticket:** Claim Ticket #27: "The realest flaw any reviewer found in my analysis is [flaw]; I confirmed it with [check]; the most confident wrong flag was [x]."
-- **Homework / next milestone:** Fold the verified hits into your poster draft and research audit; both are due at this Friday's studio, where you present the draft and log the required GenAI Studio Poster Critic and Robustness reviews.
+- **Homework / next milestone:** Fold the verified hits into your poster draft and research audit; both are due at this Friday's studio, where you present the draft and log the recommended GenAI Studio Poster Critic and Robustness reviews.
 - **Instructor prep:** Confirm GenAI Studio access and that the adversarial-reviewer and multi-model roles are live; verify the RCAC endpoint; prep the conflicting-reviewers practice case; brief the SRL.
 - **Risks / contingency:** GenAI Studio access fails → the multi-model comparison runs on provided saved transcripts of three models reviewing a sample analysis; the lesson (compare, then verify) survives without live access.
 
@@ -829,17 +829,17 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **RDSS reading:** (no new reading — studio Friday; bring your poster draft and your robustness results)
 - **Other material:** nb10 student notebook (attack the analysis) for the recap; M10 Brightspace brief (final poster lock); Purdue GenAI Studio — REQUIRED Poster Critic + Robustness & Sensitivity Reviewer roles, logged in the ledger; project/poster/redteam_review_protocol.md (four-audit slip); AI Research Ledger template
 - **Provenance:** week's nb10 material + M10 Brightspace brief + GenAI Studio reviewer bench + project/poster/redteam_review_protocol.md | studio Friday | poster-draft review + required-role AI audit + poster-lock kickoff | fresh
-- **Concepts:** the research audit as a graded artifact; required GenAI Studio Poster Critic + Robustness reviews; verifying AI critique before acting on it; the four-audit peer red-team; the poster-criticism and lock week ahead
+- **Concepts:** the research audit as a graded artifact; recommended GenAI Studio Poster Critic + Robustness reviews; verifying AI critique before acting on it; the four-audit peer red-team; the poster-criticism and lock week ahead
 - **Python dependency:** none required (robustness results carried from the week)
 - **Dataset / simulation:** each student's own poster draft + audited analysis
 - **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each student's one-line status on their poster draft and audit; 15–45 milestone kickoff + AI-supported sprint: present the M10 brief on Brightspace — the final poster lock and the criticism week that leads to it — then a sprint where every student runs the REQUIRED GenAI Studio Poster Critic and Robustness & Sensitivity Reviewer roles against their own draft and logs both in the ledger; 45–50 revise, log the ledger, submit M9 tonight + Claim Ticket.
-- **Hands-on activity:** Run the required GenAI Studio Poster Critic and Robustness reviews on your own draft, log them, then red-team a peer's draft with the four-audit slip and submit your poster draft plus research audit.
+- **Hands-on activity:** Run the recommended GenAI Studio Poster Critic and Robustness reviews on your own draft, log them, then red-team a peer's draft with the four-audit slip and submit your poster draft plus research audit.
 - **Practice:** 📝 during the sprint: for each required AI reviewer, write one hit you verified and acted on, and one you checked and rejected.
 - **Discussion prompt:** Where did the GenAI Studio Poster Critic and your human peer disagree about your draft — and whose hit did the data side with?
 - **Project connection:** M9 submits tonight; every project enters poster-criticism week with an audited draft and a documented, verified AI review trail.
 - **Milestone developed:** M9 — Poster draft 1 and research audit (due tonight) → M10 — Final poster lock (kickoff)
 - **Milestone work time:** 30 min studio block
-- **Milestone presentation/review:** M9 review: four-audit peer red-team + required GenAI Studio Poster Critic and Robustness reviews logged
+- **Milestone presentation/review:** M9 worked at the studio and submitted; four audits run on own draft; recommended GenAI Studio Poster Critic and Robustness reviews
 - **Student prep:** Poster draft built and on screen; robustness and AI-review results from the week at hand.
 - **Student artifact:** Submitted poster draft + research audit + logged GenAI Studio Poster Critic and Robustness reviews + one peer red-team slip
 - **Exit ticket:** Claim Ticket #28: "The one change the required AI reviews made to my poster — and the check that convinced me it was right, not just confident."
@@ -1098,12 +1098,12 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Claim NOT permitted:** "It ran, so it's fine" (a clean run is not agreement between the poster's claims and the computational evidence).
 - **RDSS reading:** (no new reading — self-contained async module; the reproducibility-audit protocol stands in for the reading)
 - **Other material:** nb14 student notebook — fully self-contained async module (Colab); project/final_dossier/reproducibility_audit_protocol.md; the assigned anonymized replication package; GenAI Studio 'Reproducibility Auditor' role (genai.rcac.purdue.edu); async discussion board; M13 due Sunday night; M14 brief posted on Brightspace
-- **Provenance:** reproducibility_audit_protocol.md + GenAI Studio Reproducibility Auditor touchpoint | replication + red-team unit | self-contained reproduce-and-audit module with a required GenAI Studio role pass | fresh
+- **Provenance:** reproducibility_audit_protocol.md + GenAI Studio Reproducibility Auditor touchpoint | replication + red-team unit | self-contained reproduce-and-audit module with a recommended GenAI Studio role pass | fresh
 - **Concepts:** AI-assisted replication; restart-and-run-all execution; data and code lineage; alternative specifications; hidden assumptions; claims-vs-computation agreement; AI-related weaknesses; the illusion of completeness; prioritized (triaged) recommendations
 - **Python dependency:** pandas/numpy (execute the peer's package end to end); scikit-learn if the package uses it
 - **Dataset / simulation:** a classmate's anonymized replication package
 - **50-minute dynamic:** ASYNC (~50 min self-paced, no live meeting): 0–6 module orientation + open the assigned anonymized package; 6–20 cold reproduction — restart-and-run-all, trace the data and code lineage, and try to reproduce the headline number, logging every break; 20–32 red-team audit — check the poster's claims against what the computation actually shows, probe one alternative specification, and surface the hidden assumptions and AI-related weaknesses; 32–42 REQUIRED GenAI Studio pass — run the package summary through the 'Reproducibility Auditor' role, then verify its findings yourself and log the pass in your AI-use ledger (the role proposes, you confirm); 42–48 write the prioritized recommendations, ranked by threat to the claim, not by ease of fixing; 48–50 (async board) post the single weakness you ranked most threatening and reply to one classmate.
-- **Hands-on activity:** Reproduce a classmate's anonymized headline number, red-team it for hidden assumptions and AI weaknesses, and run the required GenAI Studio Reproducibility Auditor pass.
+- **Hands-on activity:** Reproduce a classmate's anonymized headline number, red-team it for hidden assumptions and AI weaknesses, and run the recommended GenAI Studio Reproducibility Auditor pass.
 - **Practice:** 📝 nb14 practice: for one sample package, list three ways a clean run can still hide a broken claim, then rank them by threat.
 - **Discussion prompt:** (async board) The weakness you ranked most threatening in your assigned package: post it, and reply to one classmate with a check that would confirm or dissolve theirs.
 - **Project connection:** M13 is a full red-team report on a peer's work — the skill you will want turned on your own dossier next; M14 (your research note) is posted today to read over break.

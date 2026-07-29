@@ -263,7 +263,7 @@ def meeting_section(m: dict, labels: dict[int, tuple[int, int, int]]) -> str:
         lines.append(f"- **In-class work time:** {m['milestone_work_time']}")
     if clean(m.get("milestone_presentation_review")) and \
             m["milestone_presentation_review"].lower() not in ("none", "none (kickoff)"):
-        lines.append(f"- **Presentation/review:** {m['milestone_presentation_review']}")
+        lines.append(f"- **Studio work / review:** {m['milestone_presentation_review']}")
     lines.append(f"- **Project connection:** {m['project_connection']}")
     lines.append("")
     lines.append("### Before class")

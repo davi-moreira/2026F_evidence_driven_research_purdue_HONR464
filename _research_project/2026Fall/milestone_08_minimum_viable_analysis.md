@@ -8,7 +8,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-present → submit → revise (where eligible)**. Every milestone also updates your
+submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in the syllabus;
@@ -18,9 +18,7 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, October 23, 11:59 PM** (you present a 60-second first-evidence
-walkthrough at the Friday studio that day — your estimate, its interval, and the
-one threat you most fear).
+Due: **Friday, October 23, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
@@ -196,7 +194,7 @@ boundary). Name the file or section where each now lives.
 |---|---|
 | **Reproducibility** | The reported number reruns from the seeded notebook top to bottom; the figure in your write-up matches what the notebook prints. A number that does not reproduce is not evidence. |
 | **Length** | The five-part spine + ledger rows (typically the notebook's markdown, or an equivalent 1–2 page PDF companion) |
-| **Presentation** | 60-second first-evidence walkthrough at the Friday studio (Oct 23): your estimate, its interval, the nearest threat; a partner and an AI reviewer (Gemini or a GenAI Studio role) red-team it — part of the grade |
+| **Studio work** | Worked at the Friday studio (Oct 23) with your AI assistant; submitted the same day |
 | **Style** | Plain language; every technical term used as defined above; the quantity sentence and the forbidden overclaim stated as two explicit sentences |
 | **Filename** | A shared Colab link (required); optional `lastname_m08_minimum_viable_analysis.pdf` |
 | **Location** | Brightspace → Assignments → M08 |
@@ -213,7 +211,7 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
 | **Evidence integrity** (20) | Every source, dataset, and measure is real and retrievable; every number traces to a line of code the reader can find (18–20) | Real and traceable; one provenance link thin (14–17) | A dataset or measure asserted without a locatable source, or one number hard to trace (8–13) | A cited source or dataset that does not exist, or a number with no path back to data (0–7) |
 | **Verification** (25) | The reported number reruns from the seeded notebook and is confirmed by a named cross-check (recompute, alternative code, self-check cell); every AI-assisted step has a ledger row with a non-vague verification method (22–25) | Number reproduces; one cross-check or one ledger verification loose (18–21) | Number reproduces but no independent cross-check named, or AI outputs used with verification unnamed (11–17) | The number does not rerun from the notebook, or an AI-written result is reproduced with no verification (0–10) |
 | **Uncertainty & limitations** (25) | The interval is reported and read correctly; the power/adequacy read is honest; the nearest threat is faced with a fix or an explicit bound; the quantity sentence and the forbidden overclaim are both precise (22–25) | Interval, power read, threat, and both sentences present; one stated loosely (18–21) | Interval reported but no power read, or the threat named without handling, or only one of the two boundary sentences (11–17) | No interval, or the estimate reported as certain, or the number silently upgraded to a wider population or to proven cause (0–10) |
-| **Craft & AI Research Ledger** (10) | On-format, on-time, clear 60-second walkthrough, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces or a rushed walkthrough (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Craft & AI Research Ledger** (10) | On-format, on-time, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces or a rushed walkthrough (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 

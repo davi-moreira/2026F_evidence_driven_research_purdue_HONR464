@@ -8,7 +8,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-present → submit → revise (where eligible)**. Every milestone also updates your
+submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in the syllabus;
@@ -158,9 +158,9 @@ Push on the number two ways, exactly as the module rehearsed.
 For each, say in one phrase whether it **moves** the estimate, **widens** its
 uncertainty, or **breaks** the claim outright.
 
-### 4. The required GenAI Studio pass, verified by your own run
+### 4. The recommended GenAI Studio pass, verified by your own run
 
-M13 requires one pass through Purdue's **GenAI Studio Reproducibility Auditor**,
+M13 recommends one pass through Purdue's **GenAI Studio Reproducibility Auditor**,
 the course-configured role that reads a package the way a cold replicator would and
 returns a **reproduction gap list** and a **claim-to-output trace**
 (`genai_studio/roles/reproducibility_auditor.md`). Paste only the cleared package
@@ -170,12 +170,12 @@ your own run**, and which you added or dropped.
 
 Name the trap the module warned you about. **Correlated errors across tools** means
 two AI readers make the *same* mistake, so their agreement feels like confirmation
-when it is one flaw echoed twice (for example, Gemini and the Auditor both miss the
+when it is one flaw echoed twice (for example, your AI and the Auditor both miss the
 clustering and both call the package sound). Two models agreeing on a reading they
 did without running anything is not two votes — it is one, counted twice. Your own
 run is the only evidence that settles it.
 
-> **A question that often comes up here:** *"If the Auditor and Gemini both say the
+> **A question that often comes up here:** *"If the Auditor and your AI both say the
 > package reproduces, can I report that it reproduces?"* No. Neither tool executed
 > the code. A package reproduces when **you** run it and the number comes back,
 > full stop. Reporting a reproduction on the strength of two AI readings is exactly
@@ -202,7 +202,7 @@ Every use of AI in building this report gets a row in your **AI Research Ledger*
 (the eight-field table: task delegated · tool used · prompt · output summary ·
 decision · verification method · remaining concern · responsible researcher).
 Walking through a reproduction cell, building a claim-to-output table, and the
-required GenAI Studio pass are all delegable tasks, and each one you delegated needs
+recommended GenAI Studio pass are all delegable tasks, and each one you delegated needs
 a row that names how you verified the result **against your own run**. The pattern
 this milestone grades hardest: the AI proposes suspects, your run confirms. "No AI
 used" is a legitimate entry if it is true.
@@ -243,7 +243,7 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
 |---|---|---|---|---|
 | **Reproduction & red-team correctness** (30) | Headline number cold-reproduced and logged as *your* run produced it; claim-to-output trace flags every gap; one alternative specification and one hidden assumption each stress-tested with the number both ways; recommendations ranked by threat, not ease; the report stays inside what reproduction and a red-team can establish (26–30) | Reproduction and trace correct; one of the two stress tests thin, or the ranking slips once toward ease (21–25) | Reproduction present but the trace or a stress test missing, or the ranking ordered by ease throughout (13–20) | "It ran, so it's fine" — a clean run reported as if it settled the claim; no trace, no stress test (0–12) |
 | **Evidence integrity** (20) | Every number in the report traces to the package or to your own run; any source or claim you name is real and retrievable; the reader can follow each figure back to where it came from (18–20) | Real and traceable; one number lightly sourced (14–17) | A reported figure asserted without a path back to the package or your run (8–13) | A fabricated or unretrievable source, or a headline number the package does not actually produce reported as if it did (0–7) |
-| **Verification of AI-assisted parts** (20) | Every AI-assisted step (Gemini, the GenAI Studio Auditor) has a ledger row with a named, non-vague verification method; the reproduced number is confirmed by *your* run, not the tool's trace; the correlated-error trap is named and avoided (18–20) | Ledger present; one method vague or one step unlogged (14–17) | AI outputs used but verification not named; the Auditor's trace accepted without an independent run (8–13) | A reproduction "pass" reported on two AI readings with no run behind it, or an AI-drafted finding reproduced with no verification (0–7) |
+| **Verification of AI-assisted parts** (20) | Every AI-assisted step (your AI, the GenAI Studio Auditor) has a ledger row with a named, non-vague verification method; the reproduced number is confirmed by *your* run, not the tool's trace; the correlated-error trap is named and avoided (18–20) | Ledger present; one method vague or one step unlogged (14–17) | AI outputs used but verification not named; the Auditor's trace accepted without an independent run (8–13) | A reproduction "pass" reported on two AI readings with no run behind it, or an AI-drafted finding reproduced with no verification (0–7) |
 | **Uncertainty & limitations** (20) | The report states what reproduction does *not* establish (regeneration, not truth); the missing-uncertainty gap is flagged; residuals or unrun checks are named honestly; no finding oversold beyond the number that supports it (18–20) | Boundaries and residuals present; uncertainty or an overstatement stated loosely (14–17) | Limits gestured at; an unrun check hidden, or a modest swing described as damning (8–13) | No boundary — reproduction treated as proof the science is right, or a residual concealed (0–7) |
 | **Craft, ledger & communication** (10) | On-format, on-time; board post + one reply completed; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces, no board reply, or a rushed report (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
@@ -283,7 +283,7 @@ days** of feedback recovers up to half the lost points.
    number, or whether a buried assumption is false. Reproduction earns you a
    number; the red-team is the grade.
 2. **Trusting the tool's trace instead of your run.** The GenAI Studio Auditor and
-   Gemini both read; neither runs code. If both call the package sound, that is the
+   your AI both read; neither runs code. If both call the package sound, that is the
    correlated-error trap, not confirmation — one flaw echoed twice. Confirm every
    flag that survives against a number *you* produced, and log the run that decided
    it.

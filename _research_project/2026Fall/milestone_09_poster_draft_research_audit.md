@@ -8,7 +8,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-present → submit → revise (where eligible)**. Every milestone also updates your
+submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in the syllabus;
@@ -19,8 +19,8 @@ instructions and rubrics live one page per milestone, like this one.
 ## What to Submit on Brightspace
 
 Due: **Friday, October 30, 11:59 PM**. At the Friday studio that day you present
-a short walkthrough and your draft is red-teamed on the **four audits** by two
-peers and by two required GenAI Studio reviewer roles (the **Poster Critic** and
+your draft is audited on the **four audits** by two
+peers and by the two recommended GenAI Studio reviewer roles (the **Poster Critic** and
 the **Robustness & Sensitivity Reviewer**).
 
 | # | File | Description |
@@ -183,7 +183,7 @@ pre-submission checklist.
 | **Notebook** | Seeded (`SEED = 464`); reruns top to bottom; every reported number traces to a cell |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | Robustness/diagnostic record and claim–evidence row located by file or section |
-| **Presentation** | Short walkthrough at the Friday studio; four-audit red-team by two peers + the two required GenAI Studio roles; feedback incorporated |
+| **Studio work** | Worked at the Friday studio with your AI assistant; four audits run on your own draft; recommended Poster Critic + Robustness reviews logged |
 | **Filenames** | `lastname_m09_poster_draft.pdf`, `lastname_m09_audit.pdf` (or notebook sections), `lastname_m09_audit.ipynb` |
 | **Location** | Brightspace → Assignments → M09 |
 
@@ -200,7 +200,7 @@ Four bands on the course's five shared virtues
 | **Evidence integrity & provenance** (20) | Every number on the draft and in the audit traces to a real cell, dataset, or retrievable source; a reader can follow each to its origin (18–20) | Traceable; one number's path thin or one source under-linked (14–17) | A claimed figure or source asserted without a locatable origin (8–13) | A fabricated or unretrievable source, or a headline number with no path back to the data (0–7) |
 | **Verification & robustness** (25) | Three pre-listed checks run and reported in full; each AI-flagged issue confirmed or refuted by a named data check; the loudest wrong flag caught; the notebook reruns and every number reproduces (23–25) | Checks run and mostly reported; one verification vague, or one flag acted on without a named check (18–22) | A single generic "I checked it" line, or checks run after the result was chosen and relabeled as pre-listed (11–17) | Specification searching reported as robustness, an AI flag pasted in unverified, or a headline number that does not rerun from the notebook (0–10) |
 | **Uncertainty & limitations** (20) | The surviving headline carries its range or interval; the one limitation no check fixed is stated as expertise, calibrated, neither hidden nor spiraling (18–20) | Uncertainty and limitation both present but one stated loosely (14–17) | Only a point estimate, or a limitation gestured at without saying what it costs the claim (8–13) | No uncertainty stated, or the result reported as settled certainty (0–7) |
-| **Craft, ledger & communication** (15) | Poster draft 1 assembled and legible, on-format, on-time; clear studio walkthrough with the four-audit feedback incorporated; complete AI Research Ledger; dossier line present (14–15) | Minor format lapses; ledger complete (11–13) | Missing pieces or a rushed walkthrough; feedback not incorporated (6–10) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–5) |
+| **Craft, ledger & communication** (15) | Poster draft 1 assembled and legible, on-format, on-time; four-audit feedback incorporated; complete AI Research Ledger; dossier line present (14–15) | Minor format lapses; ledger complete (11–13) | Missing pieces or a rushed walkthrough; feedback not incorporated (6–10) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–5) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 

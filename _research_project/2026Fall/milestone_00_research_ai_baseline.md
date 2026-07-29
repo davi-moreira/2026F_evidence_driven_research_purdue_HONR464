@@ -8,7 +8,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-present → submit → revise (where eligible)**. Every milestone also updates your
+submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in the syllabus;
@@ -18,8 +18,7 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, August 28, 11:59 PM** (you give a 30-second curiosity pitch at
-the Friday studio that same day, and share your baseline with the room).
+Due: **Friday, August 28, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
@@ -76,9 +75,7 @@ and you ran one claim through the habit the course trains: **Ask → Verify →
 Document**. M0 is where you write that down for *your* start, so no later week is
 lost to setup and no later claim rests on an unchecked machine guess.
 
-At the Friday studio you pitch one curiosity in 30 seconds, the room gives it one
-genuine strength and one honest question, and a partner plus an assigned AI
-reviewer red-team your citation catch and your never-delegate list. The two
+You stress-test your citation catch and your never-delegate list with your AI reviewer. The two
 curiosities you did *not* pitch, and the boundary you drew, become the raw
 material M1 narrows into a single answerable question.
 
@@ -146,7 +143,7 @@ becomes a lost class hour in September.
 ### 4. Your first AI Research Ledger row
 
 This is the first row of a ledger you keep all semester, and it doubles as your
-AI-use disclosure. Use the Lecture 1 **citation catch**: you asked Gemini for
+AI-use disclosure. Use the Lecture 1 **citation catch**: you asked your AI for
 scholarly sources, then verified each one by retrieving it yourself, recording a
 verdict of **retrieved** (you opened the real paper and the authors, year, and
 venue match), **distorted** (something real exists but a detail is wrong), or

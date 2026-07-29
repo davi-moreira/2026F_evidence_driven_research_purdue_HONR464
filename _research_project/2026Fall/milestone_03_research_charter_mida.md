@@ -8,7 +8,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-present → submit → revise (where eligible)**. Every milestone also updates your
+submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in the syllabus;
@@ -18,8 +18,7 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, September 18, 11:59 PM** (you deliver a 3-minute charter
-declaration at the Friday studio that day).
+Due: **Friday, September 18, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
@@ -76,7 +75,7 @@ the spine your descriptive audit (M4), your causal boundary (M5), and every
 protocol after it hang from. Get the four parts aligned and honestly diagnosed
 now, and the rest of the semester builds on solid ground.
 
-> **A question that often comes up here:** *"If Gemini can draft a whole design
+> **A question that often comes up here:** *"If your AI can draft a whole design
 > in seconds, why build it part by part myself?"* Because a design is a chain of
 > commitments, and the tool cannot make them for you. It does not know which
 > world your question assumes or which single number would actually answer it. If
@@ -215,7 +214,7 @@ section in your dossier where each now lives.
 |---|---|
 | **Length** | The charter's six declared parts + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
 | **Figure** | The 3-node DAG as a legible image; treatment, outcome, and at least one confounder with an arrow into both |
-| **Presentation** | 3-minute charter declaration at the Friday studio (Sep 18); a partner and the assigned MIDA Design Reviewer red-team your alignment, your DAG's arrows, and your claim boundary — part of the grade |
+| **Studio work** | Worked at the Friday studio (Sep 18) with your AI assistant; submitted the same day |
 | **Style** | Plain language; every technical term used as defined in nb04; the inquiry stated both in words and as an estimand; the claim boundary stated as two explicit sentences |
 | **Filename** | `lastname_m03_charter.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M03 |

@@ -7,7 +7,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 **M0–M15**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes here, with an
 oral **Evidence Defense** and a final research chapter. Every milestone followed
-the same cadence: **Friday-studio kickoff → develop across the week → present →
+the same cadence: **Friday-studio kickoff → develop across the week →
 submit → revise (where eligible)**. This one is the last, and it is different:
 **M15 is terminal.** There is no revision window and no resubmission. The
 deadline governs the grade.

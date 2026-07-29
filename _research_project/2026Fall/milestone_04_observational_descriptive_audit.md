@@ -8,7 +8,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-present → submit → revise (where eligible)**. Every milestone also updates your
+submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in the syllabus;
@@ -18,8 +18,7 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, September 25, 11:59 PM** (you present a 3-minute walkthrough at
-the Friday studio that day).
+Due: **Friday, September 25, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
@@ -204,7 +203,7 @@ boundary. Name the file or section in your dossier where each now lives.
 |---|---|
 | **Length** | The five-part audit + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
 | **Figure** | The selection DAG as a legible image; funnel plus at least one selection-influence arrow |
-| **Presentation** | 3-minute walkthrough at the Friday studio (Sep 25); a partner and an assigned AI reviewer red-team your boundary and DAG — part of the grade |
+| **Studio work** | Worked at the Friday studio (Sep 25) with your AI assistant; submitted the same day |
 | **Style** | Plain language; every technical term used as defined above; the generalization boundary stated as two explicit sentences |
 | **Filename** | `lastname_m04_descriptive_audit.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M04 |
@@ -221,7 +220,7 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
 | **Evidence integrity & provenance** (20) | Every named frame, indicator, and source is real and retrievable; the reader can trace each to its origin (18–20) | Real and traceable; one provenance link thin (14–17) | A claimed frame or indicator asserted without a locatable source (8–13) | A cited source or survey item that does not exist or does not say what you claim (0–7) |
 | **Verification of AI-assisted parts** (20) | Every AI-assisted step (frame list, DAG scaffold, boundary critique) has a ledger row with a named, non-vague verification method (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used but verification not named (8–13) | AI output reproduced without any verification, or the boundary caveat written by AI and unchecked (0–7) |
 | **Uncertainty & generalization boundary** (20) | Both boundary sentences present; the licensed population sentence carries its uncertainty; the forbidden silent upgrade is named precisely (18–20) | Both sentences present; uncertainty or the forbidden crossing stated loosely (14–17) | Only one sentence, or the boundary asserted without the crossing it forbids (8–13) | No boundary, or a description silently upgraded to the whole population or to cause (0–7) |
-| **Craft, ledger & communication** (10) | On-format, on-time, clear 3-minute walkthrough, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces or a rushed walkthrough (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Craft, ledger & communication** (10) | On-format, on-time, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces or a rushed walkthrough (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 

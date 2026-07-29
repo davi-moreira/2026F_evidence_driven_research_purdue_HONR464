@@ -8,7 +8,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-present → submit → revise (where eligible)**. Every milestone also updates your
+submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in the syllabus;
@@ -18,9 +18,7 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, October 16, 11:59 PM** (you present a 3-minute protocol walkthrough
-at that day's Friday studio, and a partner plus an assigned AI reviewer cross-review
-it — part of the grade).
+Due: **Friday, October 16, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
@@ -230,7 +228,7 @@ file or section in your dossier where each now lives.
 |---|---|
 | **Length** | The seven-part protocol + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
 | **Order** | The contract stated in order (target → baseline → split → metric), or the defended non-prediction verdict; the boundary as one explicit sentence with its uncertainty |
-| **Presentation** | 3-minute protocol walkthrough at the Friday studio (Oct 16); a partner and the Prediction & Leakage Auditor cross-review your leakage trace and claim boundary — part of the grade |
+| **Studio work** | Worked at the Friday studio (Oct 16) with your AI assistant; recommended Prediction & Leakage Auditor review; submitted the same day |
 | **Style** | Plain language; every technical term used as defined above; no causal reading of any model weight |
 | **Filename** | `lastname_m07_analysis_protocol.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M07 |
@@ -247,7 +245,7 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
 | **Evidence integrity & provenance** (15) | Every dataset, feature, and source is real and retrievable; each feature's measurement-timing traces to its origin (13–15) | Real and traceable; one provenance or timing link thin (10–12) | A claimed feature or source asserted without a locatable origin (5–9) | A cited source, dataset, or feature that does not exist or is not what you claim (0–4) |
 | **Verification of AI-assisted parts** (20) | Every AI-assisted step is ledgered with a named, non-vague verification; the Prediction & Leakage Auditor's trace is pasted with your written fix for each flag; the one recompute is named and real (18–20) | Ledger present; one verification vague or one auditor flag unaddressed (14–17) | Ledger thin; AI outputs used but verification not named, or a flagged leak waved past (8–13) | AI output reproduced without any verification, or a leak flagged and left in the protocol (0–7) |
 | **Uncertainty & claim boundary** (20) | The one-sentence boundary carries its uncertainty (cross-validation spread, subgroup gap, or shift boundary); the forbidden crossing named; no causal reading of any weight (18–20) | Boundary present; uncertainty or the forbidden crossing stated loosely (14–17) | A boundary with no uncertainty, or a score reported without the baseline it beat (8–13) | No boundary, an overclaimed certainty, or a cause read off a model weight (0–7) |
-| **Craft, ledger & communication** (15) | On-format, on-time, clear 3-minute walkthrough, complete AI Research Ledger, dossier line present, active cross-review (13–15) | Minor format lapses; ledger complete (10–12) | Missing pieces or a rushed walkthrough (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+| **Craft, ledger & communication** (15) | On-format, on-time, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; ledger complete (10–12) | Missing pieces or a rushed walkthrough (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 

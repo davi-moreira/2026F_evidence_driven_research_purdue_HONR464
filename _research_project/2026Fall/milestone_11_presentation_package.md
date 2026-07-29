@@ -7,7 +7,7 @@ from curiosity to a defended, reproducible claim. It runs through milestones
 **M0–M15**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
-follows the same cadence: **studio kickoff → develop across the week → present →
+follows the same cadence: **studio kickoff → develop across the week →
 submit → revise (where eligible)**. Every milestone also updates your cumulative
 **Research Project Dossier** and appends at least one row to your **AI Research
 Ledger** — the running record of what you handed to AI and how you checked it.
@@ -177,7 +177,7 @@ method · remaining concern · responsible researcher). Stress-testing a pitch f
 a spoken upgrade, running the apology-spiral check on your ULN, and generating
 hostile questions are all delegable tasks, and each one you delegated needs a row
 naming how you verified the result **against reality** — the notebook's printed
-count, not Gemini's prediction. "No AI used" is a legitimate entry if it is true.
+count, not the AI's prediction. "No AI used" is a legitimate entry if it is true.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
@@ -216,7 +216,7 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
 |---|---|---|---|---|
 | **Compass alignment — boundary discipline, spoken = written** (25) | Every spoken claim across all three pitch layers sits inside the poster's compass boundary; the 30-second hook's boundary sentence is marked and sharp; no excited-mouth upgrade anywhere (22–25) | Inside the boundary; boundary sentence present but soft, or one layer's bound under-stated (18–21) | One spoken upgrade past the poster's claim, or the boundary sentence unmarked (11–17) | Spoken claims routinely inflate the poster's compass position; the excited-mouth upgrade is uncaught (0–10) |
 | **Evidence integrity & provenance** (15) | Every number and source named in any pitch layer, the ULN, or the question bank is real and retrievable; a listener could trace each to its origin in the poster or dossier (14–15) | Real and traceable; one provenance link thin (11–13) | A spoken figure or source asserted without a locatable path (6–10) | A cited source or number that does not exist or does not say what you claim (0–5) |
-| **Verification of AI-assisted parts** (20) | Every AI-assisted step (pitch stress-test, apology-spiral check, question generation) has a ledger row with a named, non-vague verification method; pacing and apology-spiral counts verified against the notebook's printed output, not Gemini's prediction (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | AI outputs used but verification not named, or a predicted count trusted over the printed one (8–13) | AI output reproduced without verification, or a pitch or answer written by AI and unchecked (0–7) |
+| **Verification of AI-assisted parts** (20) | Every AI-assisted step (pitch stress-test, apology-spiral check, question generation) has a ledger row with a named, non-vague verification method; pacing and apology-spiral counts verified against the notebook's printed output, not the AI's prediction (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | AI outputs used but verification not named, or a predicted count trusted over the printed one (8–13) | AI output reproduced without verification, or a pitch or answer written by AI and unchecked (0–7) |
 | **Uncertainty & limitations — the ULN move** (20) | The spoken ULN statement names uncertainty, the single most threatening limitation, and a next step in a straight spine; uncertainty is spoken, not buried; the honest don't-know is prepared (18–20) | ULN present; uncertainty or the limitation stated loosely, or the next step thin (14–17) | The ULN hedges or apology-spirals, or the honest don't-know is missing (8–13) | Uncertainty absent from the spoken delivery, or limitations replaced by apology (0–7) |
 | **Craft, ledger & communication** (20) | Three pitch layers built to architecture and sized to the poster; poster-walk map maps every beat to a poster element; five-type question bank complete with defend/concede marks; on-format, on-time; complete AI Research Ledger; dossier line present; delivered at the mock symposium (18–20) | Minor format lapses; one bank entry thin or one map beat vague; ledger complete (14–17) | A pitch layer or the question bank incomplete, or the map missing beats (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned), or the package substantially incomplete (0–7) |
 
