@@ -51,8 +51,14 @@ needs_render="$(printf '%s\n' "$changed" | grep -iE '\.qmd$|\.ipynb$|_quarto\.ym
 
 if [ -n "$needs_render" ]; then
   if [ -x "$QUARTO" ]; then
-    log "content changed -> quarto render"
+    log "content changed -> quarto render (site, then the three books)"
     run "\"$QUARTO\" render >&2 2>&1" || log "quarto render failed; committing without a fresh docs/"
+    # HARD-WON (2026-07-29): the site render PRUNES docs/book* (the book dirs
+    # are excluded inputs), which once took the published book offline. Always
+    # re-render the three book projects after the site so docs/book* survives.
+    for bk in book book-pt book-es; do
+      run "\"$QUARTO\" render \"$bk\" >&2 2>&1" || log "book render failed: $bk (docs/$bk may be stale)"
+    done
   else
     log "content changed but quarto binary not found; committing without a fresh docs/"
   fi
