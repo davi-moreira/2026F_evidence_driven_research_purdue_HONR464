@@ -10,8 +10,6 @@ book:
   title: "EDR|AI — Investigación Guiada por la Evidencia en la Era de la IA"
   subtitle: "Cómo Diseñar, Analizar, Verificar y Defender"
   author: "Davi Moreira"
-  cover-image: images/edrai_book.png
-  cover-image-alt: "EDR|AI — Investigación Guiada por la Evidencia en la Era de la IA"
   chapters:
     - index.qmd
     - author.qmd

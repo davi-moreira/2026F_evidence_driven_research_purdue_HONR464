@@ -17,6 +17,15 @@ code {
   border-right: 1px solid #e1e4e8;
 }
 
+/* Sidebar text stays ink on the light background (the theme would otherwise
+   inherit light-on-dark text from the old primary scheme). */
+#quarto-sidebar .sidebar-item-text,
+#quarto-sidebar .menu-text,
+#quarto-sidebar a,
+#quarto-sidebar .sidebar-tools-main .quarto-navigation-tool {
+  color: #1a1a19 !important;
+}
+
 /* Bold every entry in the left sidebar menu */
 #quarto-sidebar .sidebar-item-text,
 #quarto-sidebar .menu-text {

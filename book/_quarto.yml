@@ -10,8 +10,6 @@ book:
   title: "EDR|AI — Evidence-Driven Research in the Age of AI"
   subtitle: "How to Design, Analyze, Verify, and Defend"
   author: "Davi Moreira"
-  cover-image: images/edrai_book.png
-  cover-image-alt: "EDR|AI — Evidence-Driven Research in the Age of AI"
   chapters:
     - index.qmd
     - author.qmd

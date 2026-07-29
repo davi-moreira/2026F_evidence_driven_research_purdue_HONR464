@@ -10,8 +10,6 @@ book:
   title: "EDR|AI — Pesquisa Orientada por Evidências na Era da IA"
   subtitle: "Como Desenhar, Analisar, Verificar e Defender"
   author: "Davi Moreira"
-  cover-image: images/edrai_book.png
-  cover-image-alt: "EDR|AI — Pesquisa Orientada por Evidências na Era da IA"
   chapters:
     - index.qmd
     - author.qmd
