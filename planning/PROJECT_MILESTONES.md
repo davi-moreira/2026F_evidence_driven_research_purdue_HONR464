@@ -31,7 +31,7 @@ are `M0…M15`.
 | M2 | Verified evidence and contribution map | M6–M7 | contribution-map gallery walk (M8) | Fri Sep 11 |
 | M3 | Research charter and MIDA declaration | M8–M10 | 3-min charter declaration (M11) | Fri Sep 18 |
 | M4 | Observational descriptive design audit | M11–M13 | design-audit walkthrough (M14) | Fri Sep 25 |
-| M5 | Causal identification strategy or causal-language boundary | M14–M16 | async recorded statement + board red-team (M17) | Fri Oct 2 (async) |
+| M5 | Causal identification strategy or causal-language boundary | M14–M16 | worked at the studio (M17) | Fri Oct 2 |
 | M6 | Experimental measurement or data-acquisition protocol + URC abstract internal gate | M17–M19 | protocol clinic + abstract workshop (M20) | Fri Oct 9 |
 | M7 | Declared analysis protocol | M20–M21 | protocol cross-review (M22) | Fri Oct 16 |
 | M8 | Minimum viable analysis | M22–M24 | first-evidence walkthrough (M25) | Fri Oct 23 |

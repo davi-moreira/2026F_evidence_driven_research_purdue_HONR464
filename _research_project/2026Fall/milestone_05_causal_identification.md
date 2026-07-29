@@ -18,14 +18,10 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, October 2, 11:59 PM**. That Friday is the course's **async
-module**: there is no class meeting, and you complete this milestone on your own
-time. In place of a live studio pitch, you record a **90-second causal-strategy
-statement** and post it to the Brightspace discussion board by the same
-deadline. On the board, a partner and the assigned **Causal Identification
-Skeptic** GenAI Studio reviewer red-team your identification argument (the
-async board); you reply with your resolutions. The written document is
-what is graded.
+Due: **Friday, October 2, 11:59 PM** (you work on it at that Friday's studio).
+As you assemble the deliverable, run the **Causal Identification Skeptic**
+GenAI Studio reviewer (recommended) against your identification argument and
+patch the weakest point it finds. The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
@@ -190,8 +186,8 @@ Then **answer every ranked threat in writing.** For each threat, either show why
 your design rules it out (a lottery or a cutoff you already have) or acknowledge
 it as a limitation you carry. An unanswered top threat is an open hole in your
 claim. These threats and your resolutions are the required M5 content of your AI
-Research Ledger (a critique-task row), and they are what the async board
-red-team continues.
+Research Ledger (a critique-task row), and they are what the Skeptic
+review continues.
 
 ### 5. One recompute
 
@@ -232,7 +228,7 @@ file or section in your dossier where each now lives.
 |---|---|
 | **Length** | The six-part deliverable + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
 | **Figure** | The confounding causal diagram as a legible image: the treatment-to-outcome arrow plus at least one confounder with arrows into both |
-| **Studio work (async)** | Async module worked and submitted by Friday, Oct 2; one board reply; recommended Causal Identification Skeptic review logged |
+| **Studio work** | Worked at the Friday studio (Oct 2) with your AI assistant; recommended Causal Identification Skeptic review logged; submitted the same day |
 | **Style** | Plain language; every technical term used as defined above; your language matched to the license your design actually holds |
 | **Filename** | `lastname_m05_causal_identification.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M05 |

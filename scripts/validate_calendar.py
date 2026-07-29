@@ -4,11 +4,11 @@ validate_calendar.py — Authoritative Fall 2026 MWF calendar for HONR 46400.
 
 This script is the single source of truth for the meeting backbone. It generates
 every Monday/Wednesday/Friday class date from the first day of classes through the
-last class, removes the official no-class days, flags the two asynchronous-online
+last class, removes the official no-class days, flags the asynchronous-online
 meetings and the external events (URC Expo, poster deadline), and PROGRAMMATICALLY
 VERIFIES the counts the course design depends on:
 
-    43 total scheduled MWF meetings  =  41 in-person  +  2 asynchronous-online
+    43 total scheduled MWF meetings  =  42 in-person  +  1 asynchronous-online
 
 Run it as a gate before shipping the schedule:
 
@@ -45,7 +45,6 @@ HOLIDAYS: dict[date, str] = {
 
 # MWF meetings that are held fully asynchronously online.
 ASYNC_DAYS: dict[date, str] = {
-    date(2026, 10, 2):  "Asynchronous online (instructor traveling to Chicago)",
     date(2026, 11, 23): "Asynchronous online (Thanksgiving replication + red-team module)",
 }
 
@@ -58,8 +57,8 @@ EVENTS: dict[date, str] = {
 
 # Invariants the whole course design relies on.
 EXPECT_TOTAL = 43
-EXPECT_INPERSON = 41
-EXPECT_ASYNC = 2
+EXPECT_INPERSON = 42
+EXPECT_ASYNC = 1
 
 
 def generate_meetings() -> list[dict]:
@@ -160,7 +159,7 @@ def main() -> int:
             print(f"  - {e}", file=sys.stderr)
         return 1
     if not args.quiet:
-        print("\n✓ calendar invariants hold (43 = 41 in-person + 2 async).")
+        print("\n✓ calendar invariants hold (43 = 42 in-person + 1 async).")
     return 0
 
 

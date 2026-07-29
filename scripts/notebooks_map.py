@@ -52,7 +52,7 @@ MS_NOTEBOOKS = {
     3:  ("ms03_research_charter_mida", "M3 studio — research charter and MIDA declaration"),
     4:  ("ms04_observational_descriptive_audit",
         "M4 studio — observational descriptive design audit"),
-    5:  ("ms05_causal_identification", "M5 studio — causal identification or boundary (async)"),
+    5:  ("ms05_causal_identification", "M5 studio — causal identification or boundary"),
     6:  ("ms06_experimental_measurement_protocol", "M6 studio — experimental measurement protocol + abstract gate"),
     7:  ("ms07_declared_analysis_protocol", "M7 studio — declared analysis protocol"),
     8:  ("ms08_minimum_viable_analysis", "M8 studio — minimum viable analysis"),

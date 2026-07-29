@@ -69,7 +69,7 @@ the student commits to that week.
 | 3 | `nb03` · Research builds on research: verified evidence + real gaps | 1 | M2 · Fri Sep 11 | What is genuinely known, and where is the real gap? |
 | 4 | `nb04` · The anatomy of a research design: MIDA + declare → diagnose → redesign | 2 | M3 · Fri Sep 18 | What are my model, inquiry, data strategy, and answer strategy? |
 | 5 | `nb05` · Observational descriptive research | 2 | M4 · Fri Sep 25 | Is my question observational-descriptive, and does the design hold? |
-| 6 | `nb06` · Observational causal research | 2 | M5 · Fri Oct 2 (async) | Can I identify a causal effect observationally, or must I stay descriptive? |
+| 6 | `nb06` · Observational causal research | 2 | M5 · Fri Oct 2 | Can I identify a causal effect observationally, or must I stay descriptive? |
 | 7 | `nb07` · Experimental descriptive research | 2 | M6 · Fri Oct 9 | How will I measure or acquire data — experimentally or not? |
 | 8 | `nb08` · Prediction: generalizing to unseen cases | 1 | M7 · Fri Oct 16 | What is my declared analysis protocol, baseline, metric, and honesty check? |
 | 9 | `nb09` · Experimental causal research | 2 | M8 · Fri Oct 23 | What does my minimum viable analysis show? |

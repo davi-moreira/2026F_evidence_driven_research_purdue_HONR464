@@ -774,3 +774,33 @@ components (Evidence Defenses, poster gallery walks, hot-seat rounds, the
 Expo) are unchanged. The home page's Course Materials and AI Tools blocks
 were resynchronized with the syllabus (book first, AI-generated translations,
 companion notebooks, GenAI recommended).
+
+## Decision 31: nb01 = orientation + Colab exercise; M5 goes live; attendance/participation split (2026-07-29, ninth review round)
+
+**Decision:** Instructor ruling, 10 items.
+1. **nb01 Lecture 1 is orientation only, ending at Questions.** Everything
+   from the Research Puzzle to the end of Lecture 1 is now a submitted
+   exercise ("Your First Colab Mission") that doubles as Colab training:
+   run/edit/add cells, with three **🧱 Build it** tasks (add your own text and
+   code cells) and an explicit submit instruction. The AI Research Partner
+   section sits after Materials and Logistics; Materials and Logistics is
+   fully hyperlinked; the SRL brief links the book's SRL appendix and states
+   the swap policy (swap weeks allowed, notify the instructor one week
+   ahead); "research seminar, not a statistics survey" and "all code is
+   provided" dropped; briefs/rubrics/deadlines sentence simplified to
+   Brightspace.
+2. **The Course at a Glance teaches what students LEARN**: the working
+   structure of contemporary scientific research (question → design →
+   evidence along the pathways → verification → uncertainty → public
+   defense) with AI agents inside it — added to nb01 and the For-Instructors
+   appendix ×3 (which also drops its stale red-team Friday sentence).
+3. **M5 is no longer async.** Friday Oct 2 is a regular in-person studio:
+   calendar invariant is now 43 = 42 in-person + 1 async
+   (validate_calendar updated; the Chicago-travel async note removed);
+   meeting 17 rewritten to the 10/5/30/5 frame; m05 brief, nb06, ms05,
+   registry title, nb01 chain, and planning docs de-asynced. M13's
+   Thanksgiving async module stays.
+4. **Grading split:** Lecture Notebook Completion (10%) becomes
+   **Attendance 1%** (iClicker, 85% target) + **Participation 9%** (rubric:
+   notebook completion, feedback surveys, in-class activities) — in
+   course_config.yaml, the syllabus, and nb01.

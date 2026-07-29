@@ -212,7 +212,8 @@ dossier_components:
 
 # Grading (confirmed 2026-07-27; keep syllabus.qmd table in sync).
 assessment:
-  lecture_notebook_completion: 10
+  attendance: 1                    # iClicker; 85% attendance target
+  participation: 9                 # rubric: notebook completion + feedback surveys + in-class activities
   quizzes: 20                      # weekly Friday multiple-choice topic quizzes
   srl_performance: 20
   final_project_milestones: 20

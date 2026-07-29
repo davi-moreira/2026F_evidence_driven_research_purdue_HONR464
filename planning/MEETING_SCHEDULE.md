@@ -475,41 +475,41 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Hands-on activity:** Analyze a real lottery natural experiment end-to-end, then match difference-in-differences, IV, and regression discontinuity to the untestable assumption each would require.
 - **Practice:** 📝 nb06 practice: for each of difference-in-differences, IV, and regression discontinuity, write the one sentence a skeptic would attack first, and how you would probe it.
 - **Discussion prompt:** For your own project, is there any natural experiment hiding in how your treatment gets assigned — a lottery, a cutoff, a rule change — or must your claim stop at association?
-- **Project connection:** Today you write your project's identification paragraph or its honest causal-language boundary — the core of the M5 deliverable due at this Friday's async studio.
+- **Project connection:** Today you write your project's identification paragraph or its honest causal-language boundary — the core of the M5 deliverable due at this Friday's studio.
 - **Milestone developed:** M5 — Causal identification strategy or causal-language boundary (final development)
 - **Milestone work time:** 10 min (identification paragraph or causal-language boundary drafted into M5)
 - **Milestone presentation/review:** none (lecture day)
 - **Student prep:** Read the RDSS ch. 16 difference-in-differences, IV, and regression-discontinuity sections; bring your causal DAG from the previous lecture.
 - **Student artifact:** Analyzed lottery natural experiment + your identification paragraph (or honest causal-language boundary)
 - **Exit ticket:** Claim Ticket #16: my project's causal status in one sentence — identified by ___, or honestly stopping at association.
-- **Homework / next milestone:** This Friday runs asynchronously online: complete nb06, run the recommended GenAI Studio 'Causal Identification Skeptic' review, and submit M5 by the posted time. Budget about 50 minutes.
-- **Instructor prep:** Verify cliningsmith_etal.csv loads and the effect reproduces; check the DiD/RDD intuition figures render; brief the SRL on the lottery puzzle; confirm the async module and discussion board are staged.
-- **Risks / contingency:** Intuition pictures crowd the lab → the DiD/RDD/IV block compresses to the three figures and nb06 carries the depth; content overruns → the identification paragraph moves into the async studio.
+- **Homework / next milestone:** At this Friday's studio: complete nb06, run the recommended GenAI Studio 'Causal Identification Skeptic' review, and submit M5 by the posted time. Budget about 50 minutes.
+- **Instructor prep:** Verify cliningsmith_etal.csv loads and the effect reproduces; check the DiD/RDD intuition figures render; brief the SRL on the lottery puzzle; confirm nb06's module cells are staged.
+- **Risks / contingency:** Intuition pictures crowd the lab → the DiD/RDD/IV block compresses to the three figures and nb06 carries the depth; content overruns → the identification paragraph moves into Friday's studio.
 
-### M17 — Fri 2026-10-02 (async-online) — ASYNC — self-paced causal studio: the identification skeptic reviews your design (M5 submits, M6 brief posts)
+### M17 — Fri 2026-10-02 (in-person) — Studio Friday — causal identification sprint: the skeptic reviews your design (M5 submits, M6 brief posts)
 
 - **Driving question:** Can your causal claim survive a skeptic you cannot argue back to in real time?
 - **Secondary questions:** Does your identification argument state its untestable assumption plainly? Where would a hostile reviewer break it? If no identification is available, is your causal-language boundary honest and explicit?
-- **Inquiry:** Causal reasoning — causal kind · observational pathway (async claim defense)
+- **Inquiry:** Causal reasoning — causal kind · observational pathway (claim defense)
 - **Claim PERMITTED:** "My design identifies the effect by [argument]; the assumption it rests on is [X]; a skeptic's strongest objection is [Y], and here is my answer."
 - **Claim NOT permitted:** A causal claim submitted without naming its untestable assumption, or a boundary that quietly keeps causal language it has not earned.
 - **RDSS reading:** RDSS ch. 16 'Observational: causal' (book.declaredesign.org), assumption-probing sections (read before Monday)
 - **Calling Bullshit (optional):** optional: one callingbullshit.org case of your choice from the module linked in nb06
-- **Other material:** nb06 — fully self-contained async module (Colab); GenAI Studio 'Causal Identification Skeptic' role; M6 Brightspace brief (posted today)
-- **Provenance:** RDSS ch.16 + course async-studio protocol + GenAI Studio reviewer bench | self-contained causal claim defense | recorded stand-up + async red-team board exchange + required skeptic role review | newly-constructed-from-source-concept
-- **Concepts:** stating an untestable assumption plainly; adversarial review of an identification argument; the recommended GenAI Studio 'Causal Identification Skeptic' pass; honest causal-language boundaries; asynchronous research defense
-- **Python dependency:** pandas (one small recompute of your own estimate); no live session
+- **Other material:** nb06 — self-contained module (Colab); GenAI Studio 'Causal Identification Skeptic' role; M6 Brightspace brief (posted today)
+- **Provenance:** RDSS ch.16 + course studio protocol + GenAI Studio reviewer bench | self-contained causal claim defense | studio sprint + recommended skeptic role review | newly-constructed-from-source-concept
+- **Concepts:** stating an untestable assumption plainly; adversarial review of an identification argument; the recommended GenAI Studio 'Causal Identification Skeptic' pass; honest causal-language boundaries; defending an identification argument
+- **Python dependency:** pandas (one small recompute of your own estimate)
 - **Dataset / simulation:** student's own project data plans + the nb06 lottery example for reference
-- **50-minute dynamic:** ASYNC (~50 min self-paced, no live meeting): 0–8 record and post a 90-second research stand-up stating your causal question and candidate identification argument to the discussion board; 8–28 sprint: complete nb06 and assemble your M5 — the identification paragraph (or honest causal-language boundary), its untestable assumption, and one recompute of your own estimate; 28–40 asynchronous peer red-team exchange: post your identification argument and reply to one classmate's with the single assumption you would attack, then run the REQUIRED GenAI Studio 'Causal Identification Skeptic' review and patch the weakest point it finds; 40–50 submission: finalize M5, update the dossier and AI Research Ledger (including the skeptic-review pass), and submit with your Claim Ticket.
-- **Hands-on activity:** Complete the self-contained causal module: recompute your own estimate, run the recommended GenAI Studio 'Causal Identification Skeptic' review, exchange async red-team notes, and submit M5.
-- **Practice:** 📝 nb06 async practice: classify three published causal headlines by whether they name their identifying assumption, and rewrite one to stop at what it earns.
-- **Discussion prompt:** (async board post) Post your identification argument and its untestable assumption; reply to one classmate with the single assumption you would attack first, and why.
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper; 10–15 research stand-up: state your causal question and your candidate identification argument in one sentence each; 15–45 milestone kickoff from the course Brightspace page + AI-supported sprint: work nb06's module cells and assemble your M5 — the identification paragraph (or honest causal-language boundary), its untestable assumption, and one recompute of your own estimate; run the recommended GenAI Studio 'Causal Identification Skeptic' review and patch the weakest point it finds; 45–50 finalize M5, update the dossier and AI Research Ledger, and submit with your Claim Ticket.
+- **Hands-on activity:** Complete the self-contained causal module: recompute your own estimate, run the recommended GenAI Studio 'Causal Identification Skeptic' review, and submit M5.
+- **Practice:** 📝 nb06 practice: classify three published causal headlines by whether they name their identifying assumption, and rewrite one to stop at what it earns.
+- **Discussion prompt:** State your identification argument and its untestable assumption, then name the single assumption a skeptic would attack first — and your answer to that attack.
 - **Project connection:** M5 submits and the causal branch of your design is locked or honestly bounded; the M6 brief opens the experimental-measurement question.
-- **Milestone developed:** M5 — Causal identification strategy or causal-language boundary (submitted async); M6 — Experimental measurement or data-acquisition protocol (brief posted)
+- **Milestone developed:** M5 — Causal identification strategy or causal-language boundary (submitted at the studio); M6 — Experimental measurement or data-acquisition protocol (brief posted)
 - **Milestone work time:** module includes a 20-min M5 assembly block + the recommended GenAI Studio skeptic review
-- **Milestone presentation/review:** async module worked and submitted; one board reply; recommended GenAI Studio 'Causal Identification Skeptic' review logged in the ledger
+- **Milestone presentation/review:** M5 worked at the studio and submitted; recommended GenAI Studio 'Causal Identification Skeptic' review logged in the ledger
 - **Student prep:** nb06 lectures complete; identification paragraph (or causal-language boundary) drafted; GenAI Studio account access confirmed.
-- **Student artifact:** Completed nb06 async module: recompute cell + skeptic-review log + red-team exchange + submitted M5 + board stand-up
+- **Student artifact:** Completed nb06 module: recompute cell + skeptic-review log + submitted M5 + board stand-up
 - **Exit ticket:** (embedded in the module) Claim Ticket #17: the assumption the skeptic attacked hardest, and how I answered or conceded it.
 - **Homework / next milestone:** Submit M5 and the nb06 module by the posted time. For Monday, read the RDSS ch. 17 opener on experimental descriptive designs; the M6 brief is on Brightspace.
 - **Instructor prep:** Final-check nb06 runs unattended end-to-end; confirm the GenAI Studio 'Causal Identification Skeptic' role is live with its instructions in the module; post the M6 brief; seed and monitor the discussion board while traveling.
@@ -664,7 +664,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Exit ticket:** Claim Ticket #22: the leakage or overclaim risk the auditor caught in my protocol, and how I closed it.
 - **Homework / next milestone:** Submit M7 tonight on Brightspace. Start the M8 minimum viable analysis this weekend; for Monday, bring your first executed analysis cell.
 - **Instructor prep:** Confirm the GenAI Studio 'Prediction & Leakage Auditor' role is live with its rubric; stage the M8 Brightspace brief; print the declared-analysis template; consult order.
-- **Risks / contingency:** GenAI Studio unavailable → a provided AI fallback auditor prompt stands in and the required review is logged when the service returns; assembly overruns → the auditor review runs on the strongest protocols live and the rest asynchronously, with submission tonight.
+- **Risks / contingency:** GenAI Studio unavailable → a provided AI fallback auditor prompt stands in and the review is logged when the service returns; assembly overruns → the auditor review runs on the strongest protocols and the rest after class, with submission tonight.
 
 ## Week 9 — Experimental causal research
 
