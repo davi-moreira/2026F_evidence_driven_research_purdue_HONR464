@@ -42,6 +42,7 @@ ALLOWED_DOMAINS = {
     "www.nytimes.com",             # nb01: Olinda carnival coverage (professor's own slide links)
     "blogs.worldbank.org",         # nb01: professor's World Bank work
     "www.youtube.com",             # nb01 + author page: Palmeiras video (D24, instructor-provided)
+    "genai.rcac.purdue.edu",       # Purdue GenAI Studio (course AI reviewer bench)
 }
 
 # Works verified real during the build (each was independently confirmed to
