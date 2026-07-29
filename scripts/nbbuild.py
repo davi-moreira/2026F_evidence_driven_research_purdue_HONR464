@@ -44,22 +44,25 @@ from notebooks_map import (  # noqa: E402
 
 SOURCES = REPO / "_production_kit" / "nb_sources"
 
-# Every built notebook opens with the EDR|AI wordmark (D29) — injected here so
-# the sources stay logo-free and the brand can change in one place. The layout
-# mirrors the MGMT474 launchpad header: centered logo, course line, professor.
-LOGO_CELL = (
+# Every built notebook carries the EDR|AI wordmark inside its TITLE cell,
+# right after the <hr> that separates the topic line from the course name
+# (the MGMT474 launchpad placement). Injected at build time so the sources
+# stay logo-free and the brand can change in one place.
+LOGO_BLOCK = (
     "<center>\n"
     "<div>\n"
     '<img src="https://davi-moreira.github.io/'
     "2026F_evidence_driven_research_purdue_HONR464/book/images/"
     'edrai_logo.png" width="220"/>\n'
     "</div>\n"
-    "</center>\n"
-    "\n"
-    "# <center>HONR 46400 · Evidence-Driven Research</center>\n"
-    "# <center>Professor: Davi Moreira</center>\n"
-    "\n"
-    "<hr>")
+    "</center>\n")
+
+
+def inject_logo(source: str) -> str:
+    """Place the wordmark after the title cell's first <hr>; no-op if present."""
+    if "edrai_logo" in source or "<hr>" not in source:
+        return source
+    return source.replace("<hr>", "<hr>\n\n" + LOGO_BLOCK, 1)
 
 
 def load_cells(slug: str):
@@ -80,9 +83,10 @@ def _write_instructor(cells, out: Path) -> Path:
         "language_info": {"name": "python", "version": "3.11"},
         "colab": {"provenance": []},
     }
-    nb.cells.append(nbformat.v4.new_markdown_cell(LOGO_CELL))
-    for kind, source in cells:
+    for i, (kind, source) in enumerate(cells):
         if kind == "md":
+            if i == 0:
+                source = inject_logo(source)
             nb.cells.append(nbformat.v4.new_markdown_cell(source))
         elif kind == "code":
             nb.cells.append(nbformat.v4.new_code_cell(source))
