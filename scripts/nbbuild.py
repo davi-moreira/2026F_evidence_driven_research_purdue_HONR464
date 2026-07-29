@@ -44,27 +44,41 @@ from notebooks_map import (  # noqa: E402
 
 SOURCES = REPO / "_production_kit" / "nb_sources"
 
-# D32: every lecture opens with the same visible frame, injected at build time
-# (topic notebooks only; nb01 orientation and the async module are exempt).
+# D32/D33: every lecture opens with the same visible frame, injected at build
+# time (topic notebooks only; nb01 orientation and the async module are
+# exempt). D33: all seven moves run INSIDE the 50 minutes; below each
+# lecture's ⏸ line is optional depth, never homework.
 FRAME_MON = (
     "🗺️ **Today's frame (Monday, 9 / 22 / 12 / 7):** open with the 🧩 puzzle "
     "and 🔮 **Predict First** · investigate with 🛠️ **Run the Study** and "
-    "your AI · verify with 🔍 **Read the Evidence** · close with ⚖️ **Make a "
-    "Design Choice** and 🛡️ **Defend Your Decision**. 📝 **Practice** and "
-    "🎯 **Take It to Your Project** complete the notebook after class.")
+    "your AI · verify with 🔍 **Read the Evidence** · drill 📝 **Practice** "
+    "aloud and take ⚖️ **Make a Design Choice** · close in the room with "
+    "🎯 **Take It to Your Project**, 🛡️ **Defend Your Decision**, and your "
+    "📒 ledger row. All seven moves happen in class; below the ⏸ line is "
+    "optional depth.")
 FRAME_WED = (
     "🗺️ **Today's frame (Wednesday, 7 / 23 / 12 / 8):** open with the 🧩 "
-    "challenge and 🔮 **Predict First** · attack the problem with 🛠️ **Run "
-    "the Study** and your AI · defend your solution to your peers · close "
-    "with ⚖️ **Make a Design Choice**, 🎯 **Take It to Your Project**, and "
-    "🛡️ **Defend Your Decision**. 📝 **Practice** completes the notebook "
-    "after class.")
+    "challenge, a spoken 📝 **Practice** retrieval drill, and 🔮 **Predict "
+    "First** · attack the problem with 🛠️ **Run the Study**, 🔁 modifying "
+    "the prompt and 🔬 interrogating what comes back · verify with 🔍 **Read "
+    "the Evidence** · defend ⚖️ **Make a Design Choice** to your peers, AI "
+    "closed at the 🧑‍⚖️ checkpoint · close with 🎯 **Take It to Your "
+    "Project**, 🛡️ **Defend Your Decision**, and your 📒 ledger row. All "
+    "seven moves happen in class; below the ⏸ line is optional depth.")
 FRAME_ONE = (
     "🗺️ **The frame (50 min):** 🧩 puzzle → 🔮 **Predict First** · 🛠️ **Run "
-    "the Study** with your AI · 🔍 **Read the Evidence** · ⚖️ **Make a Design "
-    "Choice** · 🎯 **Take It to Your Project** · 🛡️ **Defend Your Decision**. "
-    "📝 **Practice** locks it in.")
+    "the Study** with your AI · 🔍 **Read the Evidence** · 📝 **Practice** · "
+    "⚖️ **Make a Design Choice** · 🎯 **Take It to Your Project** · "
+    "🛡️ **Defend Your Decision** · 📒 ledger row. All seven moves happen in "
+    "class; below the ⏸ line is optional depth.")
+FRAME_CONF = (
+    "🗺️ **The frame (50 min, then the Expo):** in the room: 🧩 puzzle → "
+    "🔮 **Predict First** · dress-rehearsal rounds · 🔍 **Read the "
+    "Evidence** · 📝 **Practice** · ⚖️ **Make a Design Choice** · 🛡️ "
+    "**Defend Your Decision** with your 📒 ledger row. 🎯 **Take It to Your "
+    "Project** completes at the conference itself: capture, tally, reflect.")
 FRAME_EXEMPT = {1, 14}   # nb01 orientation; nb14 async module
+FRAME_SPECIAL = {13: FRAME_CONF}   # conference week: the path ends at the Expo
 
 LECTURE_HEAD = re.compile(r"(?m)^#\s*Lecture\s+(\d)\s*$")
 
@@ -100,7 +114,9 @@ def load_cells(slug: str):
     return mod.CELLS
 
 
-def _frame_for(lecture_no: int, n_lectures: int) -> str:
+def _frame_for(lecture_no: int, n_lectures: int, nb: int | None = None) -> str:
+    if nb in FRAME_SPECIAL:
+        return FRAME_SPECIAL[nb]
     if n_lectures == 1:
         return FRAME_ONE
     return FRAME_MON if lecture_no == 1 else FRAME_WED
@@ -123,7 +139,7 @@ def _write_instructor(cells, out: Path, frames_nb: int | None = None) -> Path:
             m = LECTURE_HEAD.search(source)
             if m and frames_nb is not None and frames_nb not in FRAME_EXEMPT:
                 nb.cells.append(nbformat.v4.new_markdown_cell(
-                    _frame_for(int(m.group(1)), n_lectures)))
+                    _frame_for(int(m.group(1)), n_lectures, frames_nb)))
         elif kind == "code":
             nb.cells.append(nbformat.v4.new_code_cell(source))
         else:

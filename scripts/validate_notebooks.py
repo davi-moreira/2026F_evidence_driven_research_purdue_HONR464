@@ -13,7 +13,10 @@ Every STUDENT notebook must carry:
   * the Sources & Provenance section + learning objectives
   * the seven active-learning moves (Predict First, Run the Study,
     Make a Design Choice, Practice, Read the Evidence, Take It to Your Project,
-    Defend Your Decision — the closing move)
+    Defend Your Decision — the closing move), each present in EVERY lecture
+    AND above that lecture's `### ⏸` optional-depth line (D33: the whole
+    path runs in class; nothing below ⏸ is required), plus a per-lecture
+    📒 ledger row above the line (nb13 conference week: presence only)
   * the SRL opener: one `### 🧩 Research Puzzle` per `# Lecture N` (async-only
     modules are exempt)
   * the five required AI-collaboration blocks (SDIIVDD): AI Research Partner
@@ -77,6 +80,12 @@ LECTURE_RE = re.compile(r"^\s*#\s*Lecture\s+\d", re.M)
 # criticism or delivery rounds instead (template §7 Variants).
 RUNNABLE_EXEMPT = {11, 12, 13}
 
+# D33: the whole seven-move path runs INSIDE the 50-minute lecture — every
+# move (and the lecture's 📒 ledger row) must sit ABOVE that lecture's
+# `### ⏸` optional-depth line. nb13 (conference week) is exempt from the
+# placement rule only: its reflection path completes at the Expo itself.
+PLACEMENT_EXEMPT = {13}
+
 # Milestone studio notebooks (msNN) — reduced required set (template, final §).
 MS_REQUIRED = {
     "milestone header": re.compile(r"\*\*Milestone M\d{1,2} · studio notebook\*\*"),
@@ -132,15 +141,35 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
 
     # D32: the seven moves are PER LECTURE (nb01 is the orientation exception;
     # async modules keep the notebook-level requirement above).
+    # D33: each move must also sit ABOVE the lecture's ⏸ optional-depth line —
+    # the whole path is in class; nothing below ⏸ is required. The lecture's
+    # 📒 ledger row is per lecture and in class too. nb13 keeps presence but
+    # is exempt from placement (conference week).
     if not is_async and nb_num != 1:
         segments = re.split(r"(?m)^#\s*Lecture\s+\d", text)[1:]
+        placed = nb_num not in PLACEMENT_EXEMPT
         for li, seg in enumerate(segments, 1):
+            above = re.split(r"###\s*⏸", seg, maxsplit=1)[0]
+            scope = above if placed else seg
             for name, pat in MOVES.items():
                 if name == "Runnable activity" and nb_num in RUNNABLE_EXEMPT:
                     continue
-                if not pat.search(seg):
-                    errs.append(f"Lecture {li}: missing move '{name}' "
-                                f"(D32: all seven moves in every lecture)")
+                if not pat.search(scope):
+                    where = " above the ⏸ line" if placed else ""
+                    errs.append(f"Lecture {li}: missing move '{name}'{where} "
+                                f"(D33: all seven moves in class, every lecture)")
+            if placed and not AI_BLOCKS["AI Research Ledger"].search(above):
+                errs.append(f"Lecture {li}: missing 📒 AI Research Ledger above "
+                            f"the ⏸ line (D33: a ledger row closes every lecture)")
+        # D33: the notebook-required SDIIVDD blocks are in-class work as well.
+        if placed and segments:
+            above_all = "\n\n".join(
+                re.split(r"###\s*⏸", s, maxsplit=1)[0] for s in segments)
+            for name in ("Modify the Prompt", "Interrogate the Output",
+                         "Human-Only Checkpoint"):
+                if not AI_BLOCKS[name].search(above_all):
+                    errs.append(f"required AI block '{name}' must appear above "
+                                f"a ⏸ line (D33: in-class, not homework)")
 
     for name, pat in AI_BLOCKS.items():
         if name == "AI Research Partner briefing" and nb_num != 1:
