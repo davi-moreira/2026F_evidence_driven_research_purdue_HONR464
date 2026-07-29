@@ -108,6 +108,46 @@ The loop is also where AI earns its keep as a **brainstorming partner**: ask
 it for candidate questions, rival explanations, designs you had not
 considered. Generate widely with it; the choosing stays yours.
 
+### The same checklist, at 126,000 conversations
+
+A research team at the Wharton Generative AI Labs asked whether the ordinary tactics of
+human persuasion work on a chatbot. Would an appeal to authority, or a reminder that
+everyone else has already agreed, move a model into answering a request it was built to
+refuse?
+
+A model's answer is not the same twice, so settling that question means running each
+prompt hundreds of times and comparing rates rather than anecdotes. The team built a
+tool to do the running. For their first study, in early 2025, they operated it through
+its web interface: write the plain version of a request, write the persuasive version,
+say how an answer should be judged, set how many times to run each one, then read the
+results. That study covered 28,000 conversations with a single model.
+
+For the follow-up they described the experiment to an AI coding agent in plain language
+and let it drive the tool. The agent offered different ways to word a condition, ran
+pilots, sent the whole design to three models at once, and read the raw answers back to
+flag the ones that broke the pattern. The published study reports 126,000 conversations,
+and the persuasion tactics lifted compliance from about 35 percent to about 51 percent.
+
+Look at which steps changed hands. Configuring the runs, launching them in parallel, and
+taking the first pass over the transcripts: all delegated. Writing the plain request,
+writing the persuasive one, and deciding what counts as the model complying: never
+delegated, in either version of the study. The team's own summary of what stayed theirs
+names this chapter's first and last steps. The researcher, they write, "still makes the
+scientific decisions, determining what question is worth asking, what counts as a fair
+comparison, and whether the results are meaningful."
+
+One thing this case does not show is that the agent made the science better. It made the
+science bigger: more conversations, more models, more transcripts actually opened.
+Whether the comparison was fair, and whether 51 percent means what it appears to mean,
+still rest with the six researchers whose names are on the paper. Scale is not rigor,
+and a specification you got wrong gets more expensive the faster it runs.
+
+The study: Lennart Meincke, Dan Shapiro, Angela Duckworth, Ethan R. Mollick, Lilach
+Mollick, and Robert Cialdini, "Persuading large language models to comply with
+objectionable requests," PNAS, 2026, doi:10.1073/pnas.2535868123. Their account of
+working with the coding agent: "Prompting Research Itself," Wharton Generative AI Labs,
+2026.
+
 ## A worked example
 
 You are checking whether a new checkout page on a small online store genuinely
