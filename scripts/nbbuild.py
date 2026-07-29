@@ -45,11 +45,21 @@ from notebooks_map import (  # noqa: E402
 SOURCES = REPO / "_production_kit" / "nb_sources"
 
 # Every built notebook opens with the EDR|AI wordmark (D29) — injected here so
-# the sources stay logo-free and the brand can change in one place.
-LOGO_CELL = ('<img src="https://davi-moreira.github.io/'
-             '2026F_evidence_driven_research_purdue_HONR464/book/images/'
-             'edrai_logo.png" alt="EDR|AI — Evidence-Driven Research in the '
-             'Age of AI" width="280"/>')
+# the sources stay logo-free and the brand can change in one place. The layout
+# mirrors the MGMT474 launchpad header: centered logo, course line, professor.
+LOGO_CELL = (
+    "<center>\n"
+    "<div>\n"
+    '<img src="https://davi-moreira.github.io/'
+    "2026F_evidence_driven_research_purdue_HONR464/book/images/"
+    'edrai_logo.png" width="220"/>\n'
+    "</div>\n"
+    "</center>\n"
+    "\n"
+    "# <center>HONR 46400 · Evidence-Driven Research</center>\n"
+    "# <center>Professor: Davi Moreira</center>\n"
+    "\n"
+    "<hr>")
 
 
 def load_cells(slug: str):
