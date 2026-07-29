@@ -44,6 +44,13 @@ from notebooks_map import (  # noqa: E402
 
 SOURCES = REPO / "_production_kit" / "nb_sources"
 
+# Every built notebook opens with the EDR|AI wordmark (D29) — injected here so
+# the sources stay logo-free and the brand can change in one place.
+LOGO_CELL = ('<img src="https://davi-moreira.github.io/'
+             '2026F_evidence_driven_research_purdue_HONR464/book/images/'
+             'edrai_logo.png" alt="EDR|AI — Evidence-Driven Research in the '
+             'Age of AI" width="280"/>')
+
 
 def load_cells(slug: str):
     src = SOURCES / f"{slug}.py"
@@ -63,6 +70,7 @@ def _write_instructor(cells, out: Path) -> Path:
         "language_info": {"name": "python", "version": "3.11"},
         "colab": {"provenance": []},
     }
+    nb.cells.append(nbformat.v4.new_markdown_cell(LOGO_CELL))
     for kind, source in cells:
         if kind == "md":
             nb.cells.append(nbformat.v4.new_markdown_cell(source))

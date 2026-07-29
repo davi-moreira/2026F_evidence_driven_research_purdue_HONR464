@@ -691,3 +691,23 @@ artifacts.
 **Rationale:** the book's credibility depends on sounding like its author;
 a policy plus a linter makes that testable instead of aspirational, and the
 preface now speaks to each of its two readers directly.
+
+## Decision 29: One brand — the site follows the book; logo in every notebook; AI-image disclosure (2026-07-29)
+
+**Decision:** Instructor ruling.
+1. **The course site matches the book's aesthetics**: sidebar logo replaced
+   with the EDR|AI wordmark (`images/edrai_logo.png`); the Purdue-gold link
+   and sidebar colors retired from `styles.css` in favor of the book's look
+   (cosmo defaults, neutral `#f4f4f3` sidebar, ink accents).
+2. **The EDR|AI wordmark opens every notebook**: `nbbuild.py` now prepends a
+   generated logo cell to every built notebook (topics and studios,
+   instructor and student), so sources stay logo-free and the brand changes
+   in one place; the same cell was injected once into all existing built
+   notebooks. The book's companion notebooks already carried it (D27).
+3. **AI-image disclosure**: a small muted note under the book image on the
+   main page, ×3 editions, saying the image is AI-generated and provisional
+   while the book is under development.
+
+**Rationale:** one visual identity across book, site, and notebooks, and
+honest labeling of generated artwork — the book practices the disclosure it
+teaches.

@@ -383,7 +383,12 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 5.7 — seventh instructor review round (2026-07-29, DECISIONS.md
+**Version:** 5.8 — same-day addendum (2026-07-29, DECISIONS.md D29): one
+brand — site sidebar carries the EDR|AI wordmark and the book's neutral
+palette (gold retired from styles.css); `nbbuild.py` prepends a generated
+logo cell to every built notebook (injected once into existing ones);
+AI-image disclosure note under the book image on the main page ×3.
+(5.7 — seventh instructor review round (2026-07-29, DECISIONS.md
 D28): BOOK_VOICE_POLICY (book must never read as AI-generated; adapted from
 mgaldino's rewrite-introduction style guide for the undergrad audience) +
 `voice_lint_book.py`; enrollment language banned (self-learning framing
@@ -441,5 +446,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants
