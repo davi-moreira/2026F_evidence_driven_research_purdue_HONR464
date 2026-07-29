@@ -53,7 +53,7 @@ LOGO_BLOCK = (
     "<div>\n"
     '<img src="https://davi-moreira.github.io/'
     "2026F_evidence_driven_research_purdue_HONR464/book/images/"
-    'edrai_logo.png" width="220"/>\n'
+    'edrai_logo.png" width="300"/>\n'
     "</div>\n"
     "</center>\n")
 
