@@ -9,7 +9,6 @@ book:
   author: "Davi Moreira"
   cover-image: images/edrai_book.png
   cover-image-alt: "EDR|AI — Evidence-Driven Research in the Age of AI"
-  description: "EDR|AI — an open research manual for undergraduates who aspire to produce high-quality research with scientific impact. It guides you through how to design, analyze, verify, and defend evidence-driven research in the age of AI. Work every chapter's 'It is your turn' and finish with a research project of your own."
   chapters:
     - index.qmd
     - author.qmd

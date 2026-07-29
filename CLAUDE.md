@@ -252,7 +252,11 @@ Author; appendices: SRL, Verification Guide, For Instructors; rendered to
    labels, offline — no render-time execution); keep the chapter block and
    the script in sync, and the code flows into the companion notebook
    automatically. Shipped so far: ch11, ch14, ch15 — extend as chapters are
-   reviewed.
+   reviewed. ALL book prose follows `_project_docs/BOOK_VOICE_POLICY.md`
+   (D28: must never read as AI-generated; teaching devices stay, the tells
+   go; never say a reader "does not need to be enrolled" — frame
+   self-learning positively). Lint: `scripts/voice_lint_book.py`
+   (`--strict` on newly written prose).
 3. **Notebook content must reflect the book** — course notebooks derive from
    the chapters; every notebook's wrap-up names its chapters; never edit a
    chapter's design content without checking its notebook (and vice versa).
@@ -282,6 +286,7 @@ Author; appendices: SRL, Verification Guide, For Instructors; rendered to
 .venv/bin/python scripts/build_book_notebooks.py          # 111 companion notebooks + rubrics
 .venv/bin/python scripts/update_chapter_review_banners.py # banners from BOOK_REVIEW_STATUS.yml
 .venv/bin/python scripts/build_book_sim_figures.py        # seeded sim figures (if sims changed)
+.venv/bin/python scripts/voice_lint_book.py               # BOOK_VOICE_POLICY tells (D28)
 .venv/bin/python scripts/validate_book_sync.py            # chapter↔notebook links, both directions
 quarto render book/ && quarto render book-pt/ && quarto render book-es/  # AFTER the site render
 ```
@@ -378,7 +383,13 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 5.6 — sixth instructor review round (2026-07-28, DECISIONS.md
+**Version:** 5.7 — seventh instructor review round (2026-07-29, DECISIONS.md
+D28): BOOK_VOICE_POLICY (book must never read as AI-generated; adapted from
+mgaldino's rewrite-introduction style guide for the undergrad audience) +
+`voice_lint_book.py`; enrollment language banned (self-learning framing
+instead); preface restructured ×3 with For students / For instructors /
+Languages sections; `description:` blurb removed from the three book
+`_quarto.yml`. (5.6 — sixth instructor review round (2026-07-28, DECISIONS.md
 D27): pill-button language switcher; designed Part I figure
 (`build_book_part1_figure.py`, mermaid retired); part1-overview joins the
 banner registry; enriched author page ×3; companion-notebook header spec
@@ -430,5 +441,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

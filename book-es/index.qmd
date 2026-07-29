@@ -8,74 +8,75 @@ es la razón. Las preguntas y sugerencias son bienvenidas.
 :::
 
 **EDR|AI** — *Investigación Guiada por la Evidencia en la Era de la IA: Cómo
-Diseñar, Analizar, Verificar y Defender* (en inglés, *Evidence-Driven Research
-in the Age of AI*, de donde viene la sigla) — es un manual de investigación
-abierto para estudiantes de grado que aspiran a producir investigación de alta
-calidad con impacto científico. Te guía por cómo diseñar, analizar, verificar
-y defender investigación guiada por la evidencia en un mundo donde la IA puede
-producir casi cualquier cosa: trabaja la sección **Ahora te toca a ti** de
-cada capítulo y termina con un proyecto de investigación propio. El libro se
-escribió primero para un seminario de investigación de la Honors College de
-Purdue University, y es deliberadamente independiente de cualquier
-institución: cualquier docente o estudiante, en cualquier lugar, puede
-adoptarlo.
+Diseñar, Analizar, Verificar y Defender* (en inglés, *Evidence-Driven
+Research in the Age of AI*, de donde viene la sigla) — es un manual abierto
+de investigación para estudiantes de grado que quieren producir
+investigación que puedan defender. La IA ya puede redactar el código, la
+prosa, las citas y las figuras. Lo que no puede es decidir cuál es tu
+pregunta, qué cuenta como evidencia para ella, o si una afirmación merece tu
+nombre. Este libro enseña esas decisiones. Se escribió primero para un
+seminario de investigación de la Honors College de Purdue University, y es
+deliberadamente independiente de cualquier institución: cualquier docente o
+estudiante, en cualquier lugar, puede adoptarlo.
 
 Su único mensaje: *La IA es tu brazo y tu asistente de investigación, no tu
 cerebro.* Dirigirás herramientas de IA a través del flujo de trabajo
 **Especificar → Delegar → Interrogar → Inspeccionar → Verificar → Documentar →
 Defender** mientras conservas como tuya cada decisión de investigación. Una
-regla recorre cada paso de verificación de este libro (reunidos en el apéndice
-[Guía de Verificación](verification-guide.qmd)): **la IA puede revisar a la
-IA** — un segundo modelo es un auditor real del primero — **pero la última
-decisión siempre es humana**.
-
-**Este libro también es un manual que puedes seguir hasta terminar un
-proyecto.** Cada capítulo termina con una sección **Ahora te toca a ti**: pasos
-concretos que aplican el capítulo a tu propia investigación. Trabájalos en
-orden y se encadenan en un proyecto de investigación completo y defendible, y,
-para la última página, en el borrador de un artefacto de investigación (un
-artículo, una nota o un póster) con tu nombre. No necesitas estar inscrito en
-ningún curso para que eso funcione; necesitas curiosidad y la disciplina que
-enseña el libro.
-
-*Research Design in the Social Sciences*, de Blair, Coppock y Humphreys (RDSS,
-"diseño de investigación en las ciencias sociales", gratuito en
-[book.declaredesign.org](https://book.declaredesign.org)), es el texto teórico
-que EDR|AI traduce para el público de grado. En el curso de acompañamiento, el
-capítulo de EDR|AI es la lectura **obligatoria** de cada semana y los capítulos
-correspondientes de RDSS son **recomendados** para profundizar. Cada capítulo
-nombra una decisión de investigación, trabaja un ejemplo, muestra una falla de
-la IA y cómo detectarla, y te devuelve el trabajo a ti. Cada capítulo tiene
-además su **propio cuaderno de acompañamiento en Colab** — la insignia en la
-parte superior del capítulo — donde corres el código del capítulo y completas
-su sección **Ahora te toca a ti** sin salir del navegador. Los cuadernos de
-acompañamiento pertenecen al libro: no necesitas curso, ni plataforma, ni más
-cuenta que el Colab gratuito para trabajarlos todos.
+regla recorre cada paso de verificación, reunidos en el apéndice
+[Guía de Verificación](verification-guide.qmd): la IA puede revisar a la IA,
+y un segundo modelo es un auditor real del primero, pero la última decisión
+siempre es humana.
 
 El libro tiene seis partes: investigar cuando la IA lo hace "todo"; de la
 curiosidad al diseño de investigación; las rutas de investigación
 (observacional y experimental, descriptiva y causal, y predicción); producir
 evidencia creíble con IA; comunicar y defender la investigación; y la
-investigación después de la conferencia.
+investigación después de la conferencia. *Research Design in the Social
+Sciences*, de Blair, Coppock y Humphreys (RDSS, gratuito en
+[book.declaredesign.org](https://book.declaredesign.org)), es el texto
+teórico que EDR|AI traduce para el público de grado; lee los capítulos
+correspondientes de RDSS cuando quieras más profundidad.
 
-**Idiomas.** EDR|AI también está disponible en
-[English](../book/index.html) y
-[Português (Brasil)](../book-pt/index.html) — usa los enlaces de idioma en la
-parte superior de cualquier página para cambiar en cualquier momento. La
-edición en inglés es la fuente oficial; las traducciones se regeneran a partir
-de ella a medida que evoluciona.
+## Para estudiantes
 
-**Si enseñas.** El apéndice [Para docentes](for-instructors.qmd) presenta el
-curso de acompañamiento del que nació este libro y pone sus materiales a
-disposición de los docentes: los cuadernos de laboratorio del aula, la cadena
-de milestones que reúne las secciones **Ahora te toca a ti** de los capítulos
-en un artefacto final de investigación, las rúbricas de calificación de esas
-secciones, y el formato invertido en el que la mayoría de las clases las
-dirige un estudiante — el **Student Research Lead** (líder estudiantil de
-investigación) del día, cuyo formato, ritmo de preparación y expectativas
-viven en el apéndice [El Student Research Lead](srl.qmd). El área Para
-docentes está protegida con contraseña: solicítala por correo al autor (la
-dirección está en la página [Sobre el autor](author.qmd)).
+Cada capítulo hace el mismo trabajo en el mismo orden: nombra una decisión
+de investigación, trabaja un ejemplo, muestra una falla de la IA y cómo
+detectarla, y te devuelve el trabajo a ti. La mitad práctica vive en el
+**cuaderno de acompañamiento** del capítulo en Colab, que abre la insignia
+en la parte superior del capítulo. Corre ahí el código del capítulo, trabaja
+los prompts de IA y completa la sección final **Ahora te toca a ti** sin
+salir del navegador.
+
+Las secciones "Ahora te toca a ti" son la columna vertebral del libro.
+Trabajadas en orden, las 37 secciones se encadenan en un proyecto de
+investigación completo y defendible, y en la última página tienes en las
+manos el borrador de un artefacto de investigación — un artículo, una nota o
+un póster — con tu nombre. Ese diseño también hace de EDR|AI un recurso de
+autoaprendizaje: si estudias por tu cuenta, los capítulos, los cuadernos de
+acompañamiento y la [Guía de Verificación](verification-guide.qmd) forman un
+camino completo desde la curiosidad hasta una afirmación defendida, a tu
+propio ritmo. Trae la curiosidad; el libro pone la disciplina.
+
+## Para docentes
+
+EDR|AI nació de un seminario semestral de grado, y el apéndice
+[Para docentes](for-instructors.qmd) pone ese curso a disposición: los
+cuadernos de laboratorio del aula, la cadena de milestones que reúne las
+secciones "Ahora te toca a ti" de los capítulos en un artefacto final de
+investigación, las rúbricas de calificación de esas secciones, y el formato
+invertido en el que la mayoría de las clases las dirige un estudiante, el
+Student Research Lead del día (mira [El Student Research Lead](srl.qmd)). El
+apéndice está protegido con contraseña; solicítala por correo al autor. La
+dirección está en la página [Sobre el autor](author.qmd).
+
+## Idiomas
+
+EDR|AI también está disponible en [English](../book/index.html) y
+[Português (Brasil)](../book-pt/index.html); los botones de idioma en la
+parte superior de cualquier página cambian de edición sin salir de la
+página. La edición en inglés es la fuente oficial, y las traducciones se
+regeneran a partir de ella a medida que evoluciona.
 
 Para conocer a la persona detrás del libro, pasa la página:
 [Sobre el autor](author.qmd) viene justo después de este prefacio.

@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Davi Moreira">
-<meta name="description" content="EDR|AI — an open research manual for undergraduates who aspire to produce high-quality research with scientific impact. It guides you through how to design, analyze, verify, and defend evidence-driven research in the age of AI. Work every chapter’s ‘It is your turn’ and finish with a research project of your own.">
 
 <title>EDR|AI — Evidence-Driven Research in the Age of AI</title>
 <style>
@@ -450,7 +449,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <ul class="collapse">
+  <li><a href="#for-students" id="toc-for-students" class="nav-link" data-scroll-target="#for-students">For students</a></li>
+  <li><a href="#for-instructors" id="toc-for-instructors" class="nav-link" data-scroll-target="#for-instructors">For instructors</a></li>
+  <li><a href="#languages" id="toc-languages" class="nav-link" data-scroll-target="#languages">Languages</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -500,11 +504,6 @@ ul.task-list li input[type="checkbox"] {
 <p class="subtitle lead">How to Design, Analyze, Verify, and Defend</p>
 </div>
 
-<div>
-  <div class="description">
-    EDR|AI — an open research manual for undergraduates who aspire to produce high-quality research with scientific impact. It guides you through how to design, analyze, verify, and defend evidence-driven research in the age of AI. Work every chapter’s ‘It is your turn’ and finish with a research project of your own.
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -541,16 +540,25 @@ ul.task-list li input[type="checkbox"] {
 <p>This book is a <strong>work in progress</strong>. It is still under development and will keep growing and improving over time. Chapters may be revised, expanded, or reorganized as it is used in the classroom; when something looks unfinished, that is why. Questions and suggestions are welcome.</p>
 </div>
 </div>
-<p><strong>EDR|AI</strong> — <em>Evidence-Driven Research in the Age of AI: How to Design, Analyze, Verify, and Defend</em> — is an open research manual for undergraduate students who aspire to produce high-quality research with scientific impact. It guides you through how to design, analyze, verify, and defend evidence-driven research in a world where AI can produce almost everything: work every chapter’s <strong>It is your turn</strong> section and finish with a research project of your own. The book was first written for an Honors research seminar at Purdue University, and it is deliberately institution-agnostic: any instructor or student, anywhere, is welcome to adopt it.</p>
-<p>Its one message: <em>AI is your arm and your research assistant, not your brain.</em> You will direct AI tools through the <strong>Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend</strong> workflow while keeping every research decision your own. One rule runs through every verification step in this book (collected in the <a href="./verification-guide.html">Verification Guide</a> appendix): <strong>AI can review AI</strong> — a second model is a real auditor of the first — <strong>but the last decision is always human</strong>.</p>
-<p><strong>This book is also a manual you can follow to a finished project.</strong> Every chapter ends with an <strong>It is your turn</strong> section: concrete steps that apply the chapter to your own research. Work them in order and they chain into a complete, defensible research project — and by the last page, a draft research artifact (a paper, note, or poster) with your name on it. You do not need to be enrolled in any course for that to work; you need curiosity and the discipline the book teaches.</p>
-<p>Blair, Coppock and Humphreys’ <em>Research Design in the Social Sciences</em> (RDSS, free at <a href="https://book.declaredesign.org">book.declaredesign.org</a>) is the theory text that EDR|AI translates for the undergraduate audience. In the companion course the EDR|AI chapter is the <strong>required</strong> reading each week and the matching RDSS chapters are <strong>recommended</strong> for depth. Each chapter names a research decision, works an example, shows an AI failure and how to catch it, and hands the work back to you. Each chapter also has its <strong>own companion Colab notebook</strong> — the badge at the top of the chapter — where you run the chapter’s code and complete its <strong>It is your turn</strong> section without leaving the browser. The companion notebooks belong to the book: you need no course, no platform, and no account beyond free Colab to work all of them.</p>
-<p>The book has six parts: research when AI does “everything”; from curiosity to research design; the research pathways (observational and experimental, descriptive and causal, and prediction); producing credible evidence with AI; communicating and defending research; and research after the conference.</p>
-<p><strong>Languages.</strong> EDR|AI is also available in <a href="../book-pt/index.html">Português (Brasil)</a> and <a href="../book-es/index.html">Español</a> — use the language links at the top of any page to switch at any moment. The English edition is the source of truth; the translations are regenerated from it as it evolves.</p>
-<p><strong>If you teach.</strong> The appendix <a href="./for-instructors.html">For instructors</a> presents the companion course this book grew out of and makes its materials available to instructors: the classroom lab notebooks, the milestone chain that collects the chapters’ <strong>It is your turn</strong> sections into a final research artifact, the grading rubrics for those sections, and the flipped format in which most lectures are led by a student — the day’s <strong>Student Research Lead</strong>, whose format, preparation cadence, and expectations live in the appendix <a href="./srl.html">The Student Research Lead</a>. The For-instructors area is password-protected: request the password by email from the author (the address is on the <a href="./author.html">About the Author</a> page).</p>
+<p><strong>EDR|AI</strong> — <em>Evidence-Driven Research in the Age of AI: How to Design, Analyze, Verify, and Defend</em> — is an open research manual for undergraduate students who want to produce research they can defend. AI can now draft the code, the prose, the citations, and the figures. What it cannot do is decide what your question is, what counts as evidence for it, or whether a claim deserves your name. This book teaches those decisions. It was first written for an Honors research seminar at Purdue University, and it is deliberately institution-agnostic: any instructor or student, anywhere, is welcome to adopt it.</p>
+<p>Its one message: <em>AI is your arm and your research assistant, not your brain.</em> You will direct AI tools through the <strong>Specify → Delegate → Interrogate → Inspect → Verify → Document → Defend</strong> workflow while keeping every research decision your own. One rule runs through every verification step, collected in the <a href="./verification-guide.html">Verification Guide</a> appendix: AI can review AI, and a second model is a real auditor of the first, but the last decision is always human.</p>
+<p>The book has six parts: research when AI does “everything”; from curiosity to research design; the research pathways (observational and experimental, descriptive and causal, and prediction); producing credible evidence with AI; communicating and defending research; and research after the conference. Blair, Coppock and Humphreys’ <em>Research Design in the Social Sciences</em> (RDSS, free at <a href="https://book.declaredesign.org">book.declaredesign.org</a>) is the theory text that EDR|AI translates for the undergraduate audience; read the matching RDSS chapters whenever you want more depth.</p>
+<section id="for-students" class="level2">
+<h2 class="anchored" data-anchor-id="for-students">For students</h2>
+<p>Every chapter does the same work in the same order: it names a research decision, works an example, shows an AI failure and how to catch it, and hands the work back to you. The hands-on half lives in the chapter’s <strong>companion Colab notebook</strong>, opened by the badge at the top of the chapter. Run the chapter’s code there, work the AI prompts, and complete the closing <strong>It is your turn</strong> section without leaving the browser.</p>
+<p>The “It is your turn” sections are the spine of the book. Worked in order, the 37 sections chain into a complete, defensible research project, and by the last page you hold a draft research artifact — a paper, note, or poster — with your name on it. That design also makes EDR|AI a self-learning resource: if you are studying on your own, the chapters, the companion notebooks, and the <a href="./verification-guide.html">Verification Guide</a> form a complete path from curiosity to a defended claim, at your own pace. Bring the curiosity; the book supplies the discipline.</p>
+</section>
+<section id="for-instructors" class="level2">
+<h2 class="anchored" data-anchor-id="for-instructors">For instructors</h2>
+<p>EDR|AI grew out of a semester-long undergraduate seminar, and the appendix <a href="./for-instructors.html">For instructors</a> makes that course available: the classroom lab notebooks, the milestone chain that collects the chapters’ “It is your turn” sections into a final research artifact, the grading rubrics for those sections, and the flipped format in which most lectures are led by a student, the day’s Student Research Lead (see <a href="./srl.html">The Student Research Lead</a>). The appendix is password-protected; request the password by email from the author. The address is on the <a href="./author.html">About the Author</a> page.</p>
+</section>
+<section id="languages" class="level2">
+<h2 class="anchored" data-anchor-id="languages">Languages</h2>
+<p>EDR|AI is also available in <a href="../book-pt/index.html">Português (Brasil)</a> and <a href="../book-es/index.html">Español</a>; the language buttons at the top of any page switch editions in place. The English edition is the source of truth, and the translations are regenerated from it as it evolves.</p>
 <p>To meet the person behind the book, turn the page: <a href="./author.html">About the Author</a> comes right after this preface.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -2,10 +2,11 @@
 
 **Read this first on resume.** The Fall 2026 course was rebuilt to the
 instructor's master-prompt architecture, revised in THREE instructor review
-rounds on 2026-07-27, then FOURTH–SIXTH rounds on 2026-07-28 (D25 book/course separation; D26
+rounds on 2026-07-27, then rounds FOUR–SEVEN on 2026-07-28/29 (D25 book/course separation; D26
 locked instructor area, rubrics, banners, simulations; D27 presentation
-polish). Governing decisions: `_project_docs/DECISIONS.md` **D17–D27**;
-operating manual: `CLAUDE.md` **v5.6**. v1 preserved at git tag
+polish; D28 voice policy + preface restructure). Governing decisions:
+`_project_docs/DECISIONS.md` **D17–D28**; operating manual: `CLAUDE.md`
+**v5.7**. v1 preserved at git tag
 `v1-compass-build`; v1 notebook sources archived in
 `_production_kit/nb_sources_v1/`.
 
@@ -54,7 +55,15 @@ operating manual: `CLAUDE.md` **v5.6**. v1 preserved at git tag
 > spec = logo + "Authored by Davi Moreira" (no artifact-boundary
 > meta-commentary, standing rule); badge implicit-figure caption fixed
 > ×111; 3D book mockup in the preface ×3; book cover art wired
-> (`edrai_cover.png` cover-image, `edrai_logo.png` in notebooks).
+> (`edrai_cover.png` cover-image, `edrai_logo.png` in notebooks); then the
+> main page reduced to the 3D mockup only (cover slot = `edrai_book.png`).
+> **D28 (2026-07-29)** — `_project_docs/BOOK_VOICE_POLICY.md` (book must
+> never read as AI-generated; adapted from mgaldino's style guide;
+> teaching devices stay, tells go) + `voice_lint_book.py` (129/129 clean
+> baseline; --strict on new prose); enrollment language BANNED
+> (self-learning framing); preface restructured ×3 (For students / For
+> instructors / Languages); `description:` removed from the three book
+> `_quarto.yml`.
 
 ## ▶ RESUME HERE (open items for the next session)
 
@@ -79,8 +88,8 @@ operating manual: `CLAUDE.md` **v5.6**. v1 preserved at git tag
 (`quarto render` + `quarto render book/` + `book-pt/` + `book-es/`), or the
 site render clobbers the book output with website-styled pages.
 
-To resume: read this file → `CLAUDE.md` (v5.6) → `_project_docs/DECISIONS.md`
-D22–D27 → `course_config.yaml`. Editing rules unchanged (instructor-first
+To resume: read this file → `CLAUDE.md` (v5.7) → `_project_docs/DECISIONS.md`
+D22–D28 → `course_config.yaml`. Editing rules unchanged (instructor-first
 `_production_kit/nb_sources/` → `nbbuild.py`; Commit-AND-Render;
 `sync_instructor_repo.sh`; after any chapter edit also
 `build_book_notebooks.py`).
@@ -101,4 +110,4 @@ D22–D27 → `course_config.yaml`. Editing rules unchanged (instructor-first
 | **GenAI Studio** roles/KB/PoC | `genai_studio/`. **Book**: `book/` → `docs/book/`; map `planning/BOOK_MAP.md`. |
 | **Calendar / schedule** source | `scripts/schedule_data/part1–4.py` → `build_meeting_schedule.py` → `MEETING_SCHEDULE.{csv,md}`; backbone `validate_calendar.py`. |
 
-Last updated: **2026-07-28**, after the sixth instructor review round (D27 — switcher, Part I figure, author page, notebook header spec, badge caption fix, preface mockup) was applied and rendered.
+Last updated: **2026-07-29**, after the seventh instructor review round (D28 — book voice policy + linter, enrollment-language ban, preface restructure with For students / For instructors sections) was applied and rendered.

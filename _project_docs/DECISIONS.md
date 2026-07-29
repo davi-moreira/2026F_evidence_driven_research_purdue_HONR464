@@ -657,3 +657,37 @@ visible, not just stated — reproducibly, in the reader's own hands.
 **Rationale:** presentation polish round — the book should look like the
 object on its own cover: designed, consistent, and free of generator
 artifacts.
+
+## Decision 28: The book voice policy + preface restructure (2026-07-29, seventh review round)
+
+**Decision:** Instructor ruling.
+1. **Voice policy:** the book must never read as AI-generated. The policy is
+   `_project_docs/BOOK_VOICE_POLICY.md`, adapted for the undergraduate
+   audience from the "rewrite-introduction" style guide
+   (github.com/mgaldino/agents-workflow). The book's teaching devices
+   (second person, stakeholder openers, Q&A blocks, bold term → definition →
+   example) STAY; the tells go: contrast-formula defaults, pivot-word
+   accumulation, typographic emphasis, default triads/symmetry, generic
+   smart phrases, vague upgrade words, synthetic endings, filler, inserted
+   transitions, empty compression. Mechanical subset enforced by
+   `scripts/voice_lint_book.py` (per-language tell lists; warnings by
+   default, `--strict` on newly written prose; baseline: 129/129 files
+   clean). New prose is drafted under the policy; existing chapters are
+   swept as Davi reviews them (banner workflow); PT/ES follow EN.
+2. **Enrollment language banned:** never state that a reader "does not need
+   to be enrolled in a course"; frame the book positively as a self-learning
+   resource instead. All existing instances swept (preface ×3, For
+   Instructors ×3).
+3. **Preface restructured ×3:** opening (what the book is, the one message,
+   six parts + RDSS) → **For students** (chapter anatomy, companion
+   notebooks, the It-is-your-turn chain, self-learning) → **For
+   instructors** (condensed pointer to the locked appendix, password by
+   email) → **Languages**. The `description:` blurb was REMOVED from the
+   three `_quarto.yml` (it rendered as duplicate text at the top of the main
+   page).
+4. **Main page image** (reaffirmed from the 8701499 fix): the cover slot
+   shows `edrai_book.png` only; `edrai_cover.png` is unused on the page.
+
+**Rationale:** the book's credibility depends on sounding like its author;
+a policy plus a linter makes that testable instead of aspirational, and the
+preface now speaks to each of its two readers directly.
