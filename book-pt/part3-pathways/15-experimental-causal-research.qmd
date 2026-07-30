@@ -85,13 +85,41 @@ de 9 pontos percentuais. Como foi a moeda, e não a organização da paciente, q
 separou os braços, esses 9 pontos são uma estimativa honesta do efeito médio do
 lembrete.
 
-Agora o teste de honestidade. Suponha que os pacientes mais graves do braço do
-lembrete tenham parado de responder ao acompanhamento e saído do estudo. **Atrito** é
-quando unidades saem antes de você medir o desfecho. Exemplo: os pacientes com a pior
-pressão abandonam justamente o braço que você está estudando. Quando quem sai está
-ligado ao desfecho, quem fica deixa de ser uma comparação justa, e a sua distância de
-9 pontos passa a descrever só os pacientes saudáveis o bastante para permanecer, e
-não todos os que você recrutou. O atrito tem dois irmãos que o laboratório treina.
+Agora o teste de honestidade. Suponha que alguns pacientes tenham parado de responder
+antes da medição final. **Atrito** é o desfecho de uma unidade sumir depois da
+atribuição. Exemplo: pacientes que trocam de telefone, se mudam ou abandonam em
+silêncio, e cuja taxa final de renovação nunca é registrada.
+
+Aqui está a parte que derruba muita gente. É tentador dizer que a distância de 9
+pontos agora descreve "os pacientes que ficaram". Cuidado com essa frase. Quando o
+próprio tratamento pode mudar quem fica, o braço do lembrete mostra pacientes que
+ficaram *com* lembretes e o braço de controle mostra pacientes que ficaram *sem*
+eles, e esses dois grupos observados não precisam ser o mesmo tipo de gente. A
+diferença entre eles é um **contraste de casos completos**, uma comparação de quem
+por acaso foi medido em cada braço. Um efeito para algum grupo comum de
+permanecentes pode muito bem existir como ideia, mas este contraste não o entrega
+sem suposições que você teria de enunciar e defender.
+
+Quando é que o contraste engana de verdade? Não simplesmente porque gente saiu, e
+não simplesmente porque os braços perderam frações diferentes. O estrago vem quando
+*quem* sai está amarrado a *qual seria o seu desfecho*. Se o braço do lembrete perde
+os pacientes mais graves, a média de quem sobra sobe por razões que nada têm a ver
+com o lembrete funcionar. Retenção desigual entre braços é uma luz de alerta que
+vale relatar sempre, mas é só uma luz de alerta: braços podem perder frações
+diferentes de pacientes parecidos com pouco dano, e perder frações idênticas de
+pacientes muito diferentes com dano enorme. As taxas sozinhas não condenam nem
+absolvem; elas dizem onde cavar.
+
+Então relate a retenção por braço primeiro, antes de qualquer efeito, e depois faça
+a pergunta de sensibilidade que um estranho fará a você: quão ruins os desfechos que
+faltam teriam de ser para mudar a conclusão? Exemplo: suponha que um quarto do braço
+do lembrete ficou sem medição. Se esses pacientes renovariam a apenas 50 por cento,
+a média verdadeira do braço é 0,75 × 71 + 0,25 × 50, cerca de 66, e a distância de 9
+pontos encolhe para cerca de 4. Se eles se parecem com os pacientes que você mediu,
+a distância segura nos 9. Trabalhar dois ou três desses "e se" diz se o seu achado
+sobrevive a um pessimismo honesto, e essa faixa pertence ao texto final.
+
+O atrito tem dois irmãos que o laboratório treina.
 **Não conformidade** é quando unidades atribuídas nunca tomam o tratamento, como
 pacientes que trocaram de número e nunca receberam mensagem. **Transbordamento** é
 quando o tratamento chega ao braço de controle, como um paciente que recebeu as
@@ -118,8 +146,8 @@ SEED = 464
 rng = np.random.default_rng(SEED)
 
 n, tau = 200, 5.0                            # efeito verdadeiro: +5 pontos
-y0 = np.clip(rng.normal(70, 12, n), 20, 99)  # taxa de renovação sem lembrete
-y1 = np.clip(y0 + tau, 20, 100)              # taxa de renovação com lembrete
+y0 = np.clip(rng.normal(70, 12, n), 20, 95)  # taxa de renovação sem lembrete
+y1 = y0 + tau                                # exatamente +5 para cada paciente
 
 estimativas = []
 for _ in range(2000):
@@ -143,18 +171,79 @@ plt.show()
 verdadeiro de 5 pontos.](../images/sims/ch15_randomization.png){fig-alt="Histograma
 de 2.000 efeitos estimados em azul, aproximadamente em forma de sino de cerca
 de 0 a 10 pontos percentuais, com uma linha vertical tracejada no efeito
-verdadeiro de 5,0 e uma anotação com a média das estimativas em 4,9."}
+verdadeiro de 5,0 e uma anotação com a média das estimativas em 5,0."}
 
 O histograma é a **distribuição de aleatorização**: cada estimativa que este
 mesmo experimento poderia ter produzido sob outro sorteio. Ele se centra
-quase exatamente na verdade (média das estimativas 4,9 contra 5,0
-verdadeiro), que é a promessa do "certo em média", cumprida e visível. Mas
-execuções individuais caíram entre cerca de 2 e 8 pontos. O seu único
+quase exatamente na verdade (média das estimativas 5,0 contra 5,0
+verdadeiro), que é a promessa do "certo em média", cumprida e visível. Mas a
+maioria das execuções caiu entre cerca de 2 e 8 pontos, e os extremos foram
+de abaixo de zero a acima de 10. O seu único
 experimento realizado é um único sorteio deste histograma, e esse
 espalhamento é a incerteza que um relato honesto precisa carregar ao lado da
 estimativa. No notebook companheiro, dobre `n` e veja o histograma estreitar:
 tamanho de amostra compra precisão — é a aleatorização que compra verdade em
 média.
+
+
+## O que o atrito faz com essa promessa
+
+O código abaixo mantém o cara ou coroa exatamente tão honesto quanto antes e muda uma
+única coisa: quem ainda pode ser medido no final. Cada um dos 2.000 pacientes recebe
+um benefício verdadeiro de 5 pontos. Sob controle, pacientes abandonam só se a sua
+saúde é ruim. Sob o lembrete, o corte é mais duro, então mais dos pacientes mais
+graves ficam sem medição. Depois o estudo é re-sorteado 2.000 vezes, e a cada vez
+tomamos a diferença simples entre os pacientes que ainda conseguimos ver.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+N, reps, tau = 2000, 2000, 5.0
+saude = rng.normal(size=N)
+y0 = 60 + 10 * saude + rng.normal(0, 5, size=N)   # taxa de renovação sem lembrete
+y1 = y0 + tau                                     # ... com o lembrete
+r0 = saude > -0.8         # ainda mensurável sob controle
+r1 = saude > -0.2         # ... sob o lembrete: os mais graves somem
+
+contrastes = []
+for _ in range(reps):
+    z = rng.permutation(N) < N // 2               # um cara ou coroa honesto
+    y = np.where(z, y1, y0)
+    medido = np.where(z, r1, r0)
+    contrastes.append(y[z & medido].mean() - y[(~z) & medido].mean())
+contrastes = np.asarray(contrastes)
+
+print("efeito verdadeiro para todos os inscritos:", np.mean(y1 - y0))
+print("contraste médio de casos completos:      ", contrastes.mean().round(2))
+```
+
+![Os contrastes de casos completos se acumulam perto de 8 pontos, longe do efeito
+verdadeiro de 5.](../images/sims/ch15_attrition.png){fig-alt="Histograma de 2.000
+contrastes de casos completos em laranja, centrado perto de 8,1 pontos percentuais,
+com uma linha vertical tracejada no efeito verdadeiro de 5,0 bem à esquerda de toda
+a distribuição."}
+
+Olhe onde a linha tracejada está. A verdade é 5 pontos, e nenhum dos 2.000
+re-sorteios produziu um contraste nem perto dela. Eles se acumulam em torno de 8,1.
+Nada aqui é azar de uma amostra infeliz, e nenhum dado a mais puxaria a pilha para a
+esquerda, porque a inclinação não é ruído. Tirar os pacientes mais graves de um braço
+sobe a média daquele braço, e a distância herda a subida.
+
+Repare no que a simulação *não* fez. Ela nunca tocou no cara ou coroa, e nunca fez o
+lembrete valer mais que 5 pontos para ninguém. A atribuição aleatória fez o seu
+trabalho inteiro. O estrago veio depois, quando desfechos sumiram de um jeito que o
+próprio tratamento controlava. Por isso a retenção por braço entra no seu relato
+antes de qualquer efeito: 59 por cento do braço do lembrete ainda foi medido contra
+80 por cento do controle. Leia essa distância como luz de alerta, não como veredito.
+O que enviesou este contraste não foram as taxas desiguais em si, e sim o fato de a
+saída estar amarrada à saúde, que também move o desfecho. Um desenho pode perder
+frações diferentes de pacientes parecidos quase sem dano, e frações iguais de
+pacientes muito diferentes com dano desastroso. As taxas dizem onde cavar; a
+escavação é o trabalho de sensibilidade do teste de honestidade acima.
 
 ## O laboratório em Colab
 
@@ -225,8 +314,9 @@ a *concordância bajuladora* (elogio que revisa o seu ego, não a sua evidência
 ::: {.callout-important title="Não delegue"}
 Três decisões nunca saem das suas mãos. Você decide **se a atribuição aleatória
 realmente aconteceu** no seu estudo, porque nenhuma ferramenta enxerga como você
-separou os braços. Você decide **qual quantidade o seu número estima e para quem**, o
-efeito para todos os recrutados ou só o efeito entre quem ficou. E você decide **se o
+separou os braços. Você decide **qual quantidade o seu número estima e para quem**: se ele ainda fala
+por todos os recrutados, ou se o atrito o deixou sem número causal nenhum até você
+enunciar uma suposição e testar o quanto ela pesa. E você decide **se o
 efeito é grande o bastante para agir**, e se é sequer ético randomizar pacientes reais
 e negar algo ao braço de controle. A frase final, a fronteira dela e a incerteza dela
 são suas.
@@ -243,11 +333,16 @@ isso de "o efeito do lembrete". Isso é uma mudança silenciosa de escopo. O nú
 agora descreve só os pacientes mais saudáveis que permaneceram, e não todos os que
 você recrutou, e descartar os piores casos empurrou o número para cima.
 
-Você pega isso conferindo a permanência por braço, não relendo o parágrafo fluente.
-Quando você vê que o braço do lembrete perdeu muito mais pacientes que o de controle,
-e que os perdidos eram os mais graves, você sabe que os 12 pontos são o efeito entre
-quem ficou. Um sinal verde não é um resultado correto. Você reescreve a frase para
-nomear o grupo por quem o número de fato fala.
+Você pega isso conferindo a permanência por braço e quem foi perdido, não relendo o
+parágrafo fluente. O braço do lembrete perdeu muito mais pacientes, e os perdidos
+eram os mais graves, então quem ficou estava amarrado a qual seria o desfecho. Isso
+faz dos 12 pontos um contraste de casos completos: não o efeito para todos os
+recrutados, e não automaticamente um efeito para nenhum grupo comum de quem ficou,
+já que cada braço produziu o seu próprio. Um sinal verde não é um resultado correto.
+Você reescreve a frase para relatar a permanência nos dois braços, para dizer com
+todas as letras que este experimento, como foi rodado, não entrega o efeito para
+todos os recrutados, e para rodar o "e se" do teste de honestidade: quão baixas as
+renovações dos pacientes não medidos teriam de ser para o achado virar?
 
 ## Agora é a sua vez
 
@@ -261,9 +356,13 @@ número mede.*
 2. Pegue uma unidade real do seu estudo e escreva Y(1) e Y(0) dela em palavras
    simples. Circule aquela que você vai realmente chegar a ver. Esse círculo é o
    problema fundamental da inferência causal escrito com a letra do seu projeto.
-3. Nomeie a quantidade que a sua estimativa mira e para quem: todos os recrutados, só
-   quem cumpriu o tratamento, só quem ficou. Escreva isso como uma frase que uma
-   pessoa estranha conseguiria repetir corretamente de volta para você.
+3. Nomeie a quantidade que a sua estimativa mira e para quem, em uma frase que uma
+   pessoa estranha conseguiria repetir corretamente de volta para você. "Todos os que
+   recrutei" é o padrão. "Só quem cumpriu" e "só quem ficou" são grupos que o seu
+   tratamento pode ter ajudado a criar, então nenhum dos dois sai de uma comparação
+   simples de subgrupos: nomear um deles compromete você com suposições que precisa
+   enunciar. Se o atrito tocou os seus dados, diga o que você supõe sobre as pessoas
+   que não mediu, e mostre como a conclusão se move quando essa suposição verga.
 4. Nomeie a ameaça mais próxima do seu desenho, seja atrito, não conformidade ou
    transbordamento, e a checagem que você vai rodar nos seus próprios dados para ver
    o tamanho do estrago: permanência por braço, adesão por braço, contato entre

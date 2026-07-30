@@ -87,14 +87,43 @@ brecha de 9 puntos porcentuales. Como fue la moneda, y no la organización de ca
 paciente, la que armó los brazos, esos 9 puntos son una estimación honesta del efecto
 promedio del recordatorio.
 
-Ahora la prueba de honestidad. Supón que las pacientes más enfermas del brazo con
-recordatorio dejaron de responder al seguimiento y abandonaron el estudio. La
-**atrición** es la salida de unidades antes de que midas el resultado. Ejemplo: las
-pacientes con la peor presión arterial abandonan el brazo que estás estudiando.
-Cuando quién se va está atado al resultado, quienes permanecen ya no son una
-comparación justa, y tu brecha de 9 puntos ahora describe solo a pacientes lo bastante
-sanas como para quedarse, no a todas las que inscribiste. La atrición tiene dos
-hermanas que el laboratorio ejercita. El **incumplimiento** ocurre cuando unidades
+Ahora la prueba de honestidad. Supón que algunas pacientes dejaron de responder
+antes de la medición final. La **atrición** es que el resultado de una unidad
+desaparezca después de la asignación. Ejemplo: pacientes que cambian de teléfono, se
+mudan o abandonan en silencio, y cuya tasa final de renovación nunca queda
+registrada.
+
+Aquí está la parte que tumba a mucha gente. Es tentador decir que la brecha de 9
+puntos ahora describe a "las pacientes que se quedaron". Cuidado con esa frase.
+Cuando el propio tratamiento puede cambiar quién se queda, el brazo con recordatorio
+te muestra pacientes que se quedaron *con* recordatorios y el brazo de control te
+muestra pacientes que se quedaron *sin* ellos, y esos dos grupos observados no
+tienen por qué ser el mismo tipo de gente. Su diferencia es un **contraste de casos
+completos**, una comparación de quienes por casualidad fueron medidas en cada brazo.
+Un efecto para algún grupo común de quienes permanecen puede existir como idea, pero
+este contraste no lo entrega sin supuestos que tendrías que enunciar y defender.
+
+¿Cuándo engaña de verdad el contraste? No simplemente porque se fue gente, y no
+simplemente porque los brazos perdieron fracciones distintas. El daño llega cuando
+*quién* se va está amarrado a *cuál habría sido su resultado*. Si el brazo con
+recordatorio pierde a sus pacientes más enfermas, el promedio de las que quedan sube
+por razones que nada tienen que ver con que el recordatorio funcione. La retención
+desigual entre brazos es una luz de advertencia que vale reportar siempre, pero es
+solo una luz: los brazos pueden perder fracciones distintas de pacientes parecidas
+con poco daño, y perder fracciones idénticas de pacientes muy distintas con un daño
+enorme. Las tasas solas no condenan ni absuelven; te dicen dónde excavar.
+
+Así que reporta primero la retención por brazo, antes de cualquier efecto, y luego
+hazte la pregunta de sensibilidad que un extraño te hará: ¿qué tan malos tendrían
+que ser los resultados faltantes para cambiar la conclusión? Ejemplo: supón que un
+cuarto del brazo con recordatorio quedó sin medir. Si esas pacientes renovarían a
+solo 50 por ciento, el promedio verdadero del brazo es 0,75 × 71 + 0,25 × 50, cerca
+de 66, y la brecha de 9 puntos se encoge a cerca de 4. Si se parecen a las pacientes
+que sí mediste, la brecha aguanta en 9. Trabajar dos o tres de esos "qué pasaría si"
+te dice si tu hallazgo sobrevive a un pesimismo honesto, y ese rango pertenece al
+informe.
+
+La atrición tiene dos hermanas que el laboratorio ejercita. El **incumplimiento** ocurre cuando unidades
 asignadas nunca toman el tratamiento, como pacientes que cambiaron de número y nunca
 recibieron un mensaje. El **derrame (spillover)** ocurre cuando el tratamiento llega
 al brazo de control, como una paciente con mensajes que le recuerda a una amiga sin
@@ -121,8 +150,8 @@ SEED = 464
 rng = np.random.default_rng(SEED)
 
 n, tau = 200, 5.0                            # efecto verdadero: +5 puntos
-y0 = np.clip(rng.normal(70, 12, n), 20, 99)  # tasa de renovación sin recordatorio
-y1 = np.clip(y0 + tau, 20, 100)              # tasa de renovación con recordatorio
+y0 = np.clip(rng.normal(70, 12, n), 20, 95)  # tasa de renovación sin recordatorio
+y1 = y0 + tau                                # exactamente +5 para cada paciente
 
 estimaciones = []
 for _ in range(2000):
@@ -147,18 +176,80 @@ verdadero de 5 puntos.](../images/sims/ch15_randomization.png){fig-alt="Histogra
 de 2.000 efectos estimados en azul, aproximadamente en forma de campana desde
 cerca de 0 hasta 10 puntos porcentuales, con una línea vertical discontinua
 en el efecto verdadero de 5,0 y una anotación con la media de las
-estimaciones en 4,9."}
+estimaciones en 5,0."}
 
 El histograma es la **distribución de aleatorización**: cada estimación que
 este mismo experimento pudo haber producido bajo otro sorteo. Se centra casi
-exactamente en la verdad (media de las estimaciones 4,9 contra un 5,0
+exactamente en la verdad (media de las estimaciones 5,0 contra un 5,0
 verdadero), que es la promesa del "correcto en promedio", cumplida y visible.
-Pero corridas individuales cayeron entre unos 2 y 8 puntos. Tu único
+Pero la mayoría de las corridas cayó entre unos 2 y 8 puntos, y los extremos
+fueron de abajo de cero a arriba de 10. Tu único
 experimento realizado es una sola extracción de este histograma, y ese
 reparto es la incertidumbre que un informe honesto debe llevar junto a la
 estimación. En el cuaderno de acompañamiento, duplica `n` y mira el
 histograma estrecharse: el tamaño de muestra compra precisión — es la
 aleatorización la que compra verdad en promedio.
+
+
+## Lo que la atrición le hace a esa promesa
+
+El código de abajo mantiene la moneda exactamente tan honesta como antes y cambia una
+sola cosa: quién puede seguir siendo medido al final. Cada uno de los 2.000 pacientes
+recibe un beneficio verdadero de 5 puntos. Bajo control, los pacientes abandonan solo
+si su salud es mala. Bajo el recordatorio, el corte es más duro, así que más de los
+pacientes más enfermos quedan sin medir. Luego el estudio se re-sortea 2.000 veces, y
+cada vez tomamos la diferencia simple entre los pacientes que todavía podemos ver.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+N, reps, tau = 2000, 2000, 5.0
+salud = rng.normal(size=N)
+y0 = 60 + 10 * salud + rng.normal(0, 5, size=N)   # tasa de renovación sin recordatorio
+y1 = y0 + tau                                     # ... con el recordatorio
+r0 = salud > -0.8         # aún medible bajo control
+r1 = salud > -0.2         # ... bajo el recordatorio: los más enfermos desaparecen
+
+contrastes = []
+for _ in range(reps):
+    z = rng.permutation(N) < N // 2               # una moneda honesta
+    y = np.where(z, y1, y0)
+    medido = np.where(z, r1, r0)
+    contrastes.append(y[z & medido].mean() - y[(~z) & medido].mean())
+contrastes = np.asarray(contrastes)
+
+print("efecto verdadero para todos los inscritos:", np.mean(y1 - y0))
+print("contraste promedio de casos completos:    ", contrastes.mean().round(2))
+```
+
+![Los contrastes de casos completos se apilan cerca de 8 puntos, lejos del efecto
+verdadero de 5.](../images/sims/ch15_attrition.png){fig-alt="Histograma de 2.000
+contrastes de casos completos en naranja, centrado cerca de 8,1 puntos porcentuales,
+con una línea vertical discontinua en el efecto verdadero de 5,0 bien a la izquierda
+de toda la distribución."}
+
+Mira dónde queda la línea discontinua. La verdad es 5 puntos, y ninguno de los 2.000
+re-sorteos produjo un contraste ni cerca de ella. Se apilan alrededor de 8,1. Nada
+aquí es mala suerte de una muestra desafortunada, y ningún dato extra empujaría la
+pila hacia la izquierda, porque la inclinación no es ruido. Quitar a los pacientes
+más enfermos de un brazo sube el promedio de ese brazo, y la brecha hereda la subida.
+
+Fíjate en lo que la simulación *no* hizo. Nunca tocó la moneda, y nunca hizo que el
+recordatorio valiera más de 5 puntos para nadie. La asignación aleatoria hizo todo su
+trabajo. El daño llegó después, cuando los resultados desaparecieron de una manera
+que el propio tratamiento controlaba. Por eso la retención por brazo entra en tu
+informe antes que cualquier efecto: el 59 por ciento del brazo con recordatorio
+siguió medido contra el 80 por ciento del control. Lee esa brecha como luz de
+advertencia, no como veredicto. Lo que sesgó este contraste no fueron las tasas
+desiguales en sí, sino que la salida estaba amarrada a la salud, que también mueve el
+resultado. Un diseño puede perder fracciones distintas de pacientes parecidos casi
+sin daño, y fracciones iguales de pacientes muy distintos con un daño desastroso. Las
+tasas dicen dónde excavar; la excavación es el trabajo de sensibilidad de la prueba
+de honestidad de arriba.
 
 ## El laboratorio en Colab
 

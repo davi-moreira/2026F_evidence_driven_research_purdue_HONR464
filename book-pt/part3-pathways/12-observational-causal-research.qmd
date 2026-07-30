@@ -55,20 +55,36 @@ confundidor.
 
 Dois movimentos fecham a porta dos fundos sem um experimento.
 
-- **Seleção sobre observáveis**: identificar um efeito ajustando para todo confundidor
-  que você consegue medir, de modo que tratados e não tratados fiquem pareados em
-  todos eles. Exemplo: comparar bebedores e não bebedores de café *dentro* do mesmo
-  grupo de estilo de vida. Funciona só para os confundidores que você consegue de fato
-  enxergar.
+- **Seleção sobre observáveis**: identificar um efeito ajustando para um conjunto de
+  confundidores medidos que seja suficiente para bloquear todos os caminhos da porta
+  dos fundos. Exemplo: comparar bebedores e não bebedores de café *dentro* do mesmo
+  grupo de estilo de vida, porque é o estilo de vida que empurra os dois. Funciona só
+  para os confundidores que você consegue de fato enxergar, e a palavra *suficiente*
+  está trabalhando de verdade: a meta é o conjunto certo, não o mais comprido.
 - **Experimento natural**: uma situação em que uma força parecida com o acaso, fora do
   controle de qualquer um, decidiu quem foi tratado, tornando a atribuição **como se
   aleatória** (de modo crível, parecida com um cara ou coroa). Exemplo: uma loteria de
   vistos decide quem faz uma viagem, então ganhadores e perdedores diferem só pela
   sorte.
 
+Um aviso antes que o primeiro movimento tente você a ajustar para tudo o que há no
+arquivo. Ajustar não é de graça, e ajustar para a variável errada fabrica viés em
+vez de removê-lo. Um **mediador** é uma variável sentada no próprio caminho causal:
+o café pode agir sobre a longevidade em parte via pressão arterial, então ajustar
+para pressão arterial joga fora parte do próprio efeito que você está estimando. Um
+**colisor** é uma variável que o tratamento e o desfecho empurram juntos: hábito de
+café e vida longa podem, cada um, aumentar a chance de aparecer em um estudo de
+"envelhecimento saudável", então ajustar para a participação no estudo cria entre
+eles um vínculo que não existe em lugar nenhum do mundo. Desenhe o diagrama
+primeiro; ajuste para causas comuns, e deixe mediadores e colisores em paz.
+
 Qualquer que seja o movimento, você deve ao leitor um **argumento de identificação**:
-a sua razão escrita de que a comparação recupera um efeito real, apoiada em uma
-**suposição não testável** que os dados nunca confirmam, apenas tornam plausível.
+a sua razão escrita de que a comparação recupera um efeito real. Todo desenho desta
+família se apoia em uma lista curta de **suposições estruturais** que os dados nunca
+confirmam por completo, apenas tornam plausíveis. A seleção sobre observáveis precisa
+que o conjunto de ajuste seja suficiente e que os grupos se sobreponham. Uma loteria
+de vistos precisa que o sorteio seja genuinamente aleatório e toque a longevidade só
+pela viagem. Nomeie a lista do seu desenho; uma frase por suposição basta.
 Quando você não consegue fazer esse argumento honestamente, você bateu na **fronteira
 da linguagem causal**, o ponto além do qual a sua evidência deixa de merecer *porque*
 e precisa mudar para *associado a*. A falha mais comum aqui também tem nome. A
@@ -218,8 +234,9 @@ fronteira honesta no lugar.*
    medi-lo.
 4. Nomeie a sua alavanca e o preço dela. Seleção sobre observáveis, um experimento
    natural, diferenças em diferenças, regressão descontínua ou variáveis instrumentais,
-   e embaixo a única suposição não testável em que ela se apoia, em linguagem simples
-   com a qual um cético pudesse discutir. Se você não tem alavanca, escreva no lugar a
+   e embaixo a lista curta de suposições estruturais em que ela se apoia, cada uma em
+   linguagem simples com a qual um cético pudesse discutir. Comece pela que você mais
+   duvida. Se você não tem alavanca, escreva no lugar a
    frase de fronteira da linguagem causal: o que a sua comparação mostra, e o *porque*
    que você está deixando de alegar.
 5. Escreva um número que você recalcularia por um segundo caminho para checar qualquer

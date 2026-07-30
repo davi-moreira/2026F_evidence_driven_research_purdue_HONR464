@@ -44,26 +44,57 @@ pantalla de pago y resta los promedios de los dos grupos.
 
 **Diagnosticar** significa correr ese diseño declarado muchas veces sobre mundos
 simulados frescos y observar cómo se comporta su estimación. *Ejemplo:* corre el
-estudio de la moneda 2.000 veces y recoge las 2.000 estimaciones. Tres números resumen
-el montón.
+estudio de la moneda 2.000 veces y recoge las 2.000 estimaciones. Tres números
+empiezan la historia de ese montón, y cada uno responde a una preocupación distinta.
 
-El **sesgo** es la distancia promedio entre tu estimación y la verdad a lo largo de
-las corridas; un diseño es insesgado cuando sus estimaciones se centran en la
-respuesta verdadera. *Ejemplo:* si la verdad es 2 y tus estimaciones promedian 2,0, el
-sesgo es cercano a cero. El sesgo es una inclinación sistemática, y más datos nunca lo
-achican.
+El **sesgo** es el promedio de tus errores a lo largo de las corridas, contando la
+dirección: cada estimación menos la verdad, promediado. Un diseño es insesgado
+cuando sus estimaciones se centran en la respuesta verdadera. *Ejemplo:* la verdad
+es 2, y cinco corridas devuelven 0, 1, 2, 3 y 4. Los errores son -2, -1, 0, +1, +2,
+que promedian cero, así que el sesgo es cero aunque una sola corrida haya caído en
+2. La dirección es lo que separa al sesgo de la simple distancia: errores que se
+cancelan dicen que el diseño apunta bien, mientras que errores que se inclinan todos
+hacia un lado dicen que está torcido.
 
 La **varianza** es cuánto se bambolea la estimación de una corrida a la siguiente.
-*Ejemplo:* estimaciones que oscilan entre -5 y +9 alrededor de un valor verdadero de 2
-tienen varianza alta. Más datos sí achican esto.
+*Ejemplo:* estimaciones que oscilan entre -5 y +9 alrededor de un valor verdadero de
+2 tienen varianza alta. Recoger más datos del mismo tipo, con el mismo diseño,
+normalmente achica ese bamboleo. Es el único problema que el tamaño resuelve con
+confianza.
 
-La **potencia** es con qué frecuencia el diseño detecta un efecto real. *Ejemplo:* un
-diseño que encuentra el efecto en 8 de 100 corridas tiene 8% de potencia, lo que es
-casi inútil.
+La **potencia** es con qué frecuencia el diseño detecta un efecto real, y no
+significa nada hasta que digas cómo decidirías. Una **prueba estadística** es la
+regla que usas para decidir si tus datos chocan lo suficiente con "ningún efecto"
+como para llamar real al resultado. *Ejemplo:* en el estudio del pago en línea, una
+regla de diferencia de medias: declara un efecto cuando la brecha entre los dos
+grupos supera cerca de dos veces su bamboleo típico entre corridas. El **umbral** de
+la prueba es qué tan exigente es esa regla, y se lee a lo largo de repeticiones
+imaginadas: en el ajuste usual de 5 por ciento, un diseño cuyo efecto verdadero es
+CERO todavía gritaría "efecto" en unas 5 corridas de cada 100. El umbral es una
+propiedad de la regla a lo largo de muchas corridas, nunca la probabilidad de que tu
+hallazgo particular sea falso. *Ejemplo:* un diseño que pasa esa regla en 8 de 100
+corridas, cuando el efecto verdadero es 2, tiene 8% de potencia, lo que es casi
+inútil. La potencia se mueve con todo lo que está en la declaración: la prueba, el
+umbral, el efecto que plantaste, el tamaño de la muestra y cómo hace ruido el mundo.
+Reporta la tarjeta completa junto al número.
+
+Esos tres no agotan el montón, y los diagnósticos más completos agregan otros. Dos
+valen la pena por su nombre. La **raíz del error cuadrático medio** es el tamaño
+típico de un error, con los errores grandes pesando de más. *Ejemplo:* en el ejemplo
+de cinco corridas de arriba, la distancia promedio simple es 1,2, pero la raíz del
+error cuadrático medio es cerca de 1,4, porque los dos errores de 2 puntos cuentan
+más que su parte. La **cobertura** es con qué frecuencia el rango que reportas
+alrededor de tu estimación de verdad contiene la verdad. *Ejemplo:* si reportas un
+rango hecho para acertar 95 de cada 100 veces, la cobertura revisa si de verdad
+acierta. Un diseño puede ser insesgado y aun así fallar feo cada vez, y exactamente
+por eso un solo número nunca es el diagnóstico completo. Un capítulo más adelante
+construye esos rangos como corresponde; aquí basta con saber que un diagnóstico
+puede preguntar por ellos.
 
 **Rediseñar** significa cambiar exactamente una parte en respuesta al diagnóstico y
-volver a diagnosticar. La potencia baja por varianza alta pide más datos. El sesgo
-pide un diseño distinto, porque el tamaño compra estabilidad, no verdad.
+volver a diagnosticar. La potencia baja por varianza alta pide más datos. Una
+inclinación incrustada en el diseño, como quién termina en qué grupo, pide un diseño
+distinto: más datos vuelven una estimación torcida más estable, no más verdadera.
 
 ## Un ejemplo resuelto
 
@@ -192,11 +223,18 @@ al contacto con el mundo, mientras una mala respuesta todavía es gratis.*
    de unidades y la aritmética exacta.
 2. Diagnostícalo. Córrelo unos miles de veces y lee tres números: sesgo (¿se centran
    las estimaciones en la verdad que plantaste?), varianza (¿qué tan ancha es la
-   dispersión?) y potencia (¿con qué frecuencia detecta el efecto?). Razonarlo cuenta
-   si la simulación queda fuera de tu alcance, pero anota los números de todos modos.
-3. Nombra el peor de los tres y di de qué tipo de problema se trata. La varianza y la
-   potencia baja son problemas de tamaño. El sesgo es un problema de diseño, y ningún
-   tamaño de muestra lo arregla.
+   dispersión?) y potencia (¿con qué frecuencia pasa el umbral que declaraste?).
+   Anota la prueba y el umbral que usaste, o el número de potencia no significa
+   nada. Si la simulación queda fuera de tu alcance, registra cada número como "no
+   estimado" y razona en palabras sobre la dirección: hacia qué lado esperas la
+   inclinación, y qué ensancharía la dispersión. Etiqueta ese razonamiento como
+   razonamiento. Un número que no computaste no es un diagnóstico.
+3. Nombra el peor de los tres y di de qué tipo de problema se trata. El bamboleo
+   ancho y la potencia baja suelen ceder ante una muestra más grande, aunque no solo
+   ante ella: una medición más afilada, grupos mejor equilibrados y un contraste de
+   tratamiento más fuerte también compran potencia. Una inclinación en quién termina
+   dónde es un problema de diseño, y una muestra más grande la vuelve más precisa en
+   lugar de menos equivocada.
 4. Rediseña una vez. Cambia exactamente una cosa, la que señala tu diagnóstico, y
    vuelve a diagnosticar. Registra ambos diagnósticos lado a lado para que la mejora
    se vea.

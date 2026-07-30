@@ -56,21 +56,39 @@ confusión.
 
 Dos movimientos cierran la puerta trasera sin experimento.
 
-- **Selección sobre observables**: identificar un efecto ajustando por cada factor de
-  confusión que puedas medir, de modo que tratados y no tratados queden emparejados en
-  todos ellos. Ejemplo: comparar a quienes toman café con quienes no *dentro* del mismo
-  grupo de estilo de vida. Funciona solo para los factores de confusión que de verdad
-  puedes ver.
+- **Selección sobre observables**: identificar un efecto ajustando por un conjunto de
+  factores de confusión medidos que sea suficiente para bloquear todos los caminos de
+  la puerta trasera. Ejemplo: comparar a quienes toman café con quienes no *dentro*
+  del mismo grupo de estilo de vida, porque el estilo de vida es lo que empuja a
+  ambos. Funciona solo para los factores de confusión que de verdad puedes ver, y la
+  palabra *suficiente* está haciendo trabajo real: la meta es el conjunto correcto,
+  no el más largo.
 - **Experimento natural**: una situación en la que una fuerza parecida al azar y fuera
   del control de cualquiera decidió quién fue tratado, volviendo la asignación **como si
   fuera aleatoria** (creíblemente parecida al lanzamiento de una moneda). Ejemplo: una
   lotería de visas decide quién hace un viaje, así que quienes ganan y quienes pierden
   se diferencian solo por suerte.
 
+Una advertencia antes de que el primer movimiento te tiente a ajustar por todo lo
+que hay en el archivo. Ajustar no es gratis, y ajustar por la variable equivocada
+fabrica sesgo en lugar de quitarlo. Un **mediador** es una variable sentada en el
+propio camino causal: el café puede actuar sobre la longevidad en parte vía presión
+arterial, así que ajustar por presión arterial tira parte del mismísimo efecto que
+estás estimando. Un **colisionador** es una variable que el tratamiento y el
+desenlace empujan a la vez: el hábito del café y la vida larga pueden, cada uno,
+subir la probabilidad de aparecer en un estudio de "envejecimiento saludable", así
+que ajustar por la participación en el estudio crea entre ellos un vínculo que no
+existe en ninguna parte del mundo. Dibuja el diagrama primero; ajusta por causas
+comunes, y deja en paz a mediadores y colisionadores.
+
 Sea cual sea el movimiento que uses, le debes a quien te lee un **argumento de
-identificación**:
-tu razón escrita de que la comparación recupera un efecto real, apoyada en un **supuesto
-no verificable** que los datos nunca pueden confirmar, solo volver plausible. Cuando no
+identificación**: tu razón escrita de que la comparación recupera un efecto real.
+Todo diseño de esta familia se apoya en una lista corta de **supuestos
+estructurales** que los datos nunca confirman del todo, solo vuelven plausibles. La
+selección sobre observables necesita que el conjunto de ajuste sea suficiente y que
+los grupos se superpongan. Una lotería de visas necesita que el sorteo sea
+genuinamente aleatorio y toque la longevidad solo a través del viaje. Nombra la
+lista de tu diseño; una frase por supuesto alcanza. Cuando no
 puedes construir ese argumento con honestidad, llegaste al **límite del lenguaje
 causal**, el punto a partir del cual tu evidencia deja de ganarse el *porque* y tiene
 que pasar a *asociado con*. La falla más común aquí también tiene nombre. La
@@ -218,8 +236,9 @@ honesto.*
    factor de confusión que más temes. Después escribe, en una línea, si puedes medirlo.
 4. Nombra tu palanca y su precio. Selección sobre observables, un experimento natural,
    diferencias en diferencias, regresión discontinua o variables instrumentales, y
-   debajo el único supuesto no verificable en el que se apoya, en lenguaje llano con el
-   que alguien escéptico pueda discutir. Si no tienes palanca, escribe en su lugar la
+   debajo la lista corta de supuestos estructurales en los que se apoya, cada uno en
+   lenguaje llano con el que alguien escéptico pueda discutir. Empieza por el que más
+   dudas te dé. Si no tienes palanca, escribe en su lugar la
    oración del límite del lenguaje causal: qué muestra tu comparación y qué *porque*
    estás declinando afirmar.
 5. Anota un número que volverías a calcular por una segunda vía para comprobar
