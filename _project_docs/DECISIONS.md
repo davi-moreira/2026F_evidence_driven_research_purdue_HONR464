@@ -962,3 +962,165 @@ an AI-latency field, six predeclared pass criteria, an observer form, ledger
 audits, and the first-two-weeks review rule with its cut order (Wednesday
 block 2 first; the ⏸/🏠 pilots next; the accuracy lock lengthens before any
 frame moves; D22 reopens only on two failed levers in both weeks).
+
+## Decision 35: EDR|AI Architecture v0 — the independence axiom, 39 lessons, 12 practice stations, and the design freeze (2026-07-30, book design evaluation)
+
+**Decision:** Instructor ruling on the EDR|AI book design evaluation (course
+task #20), run through two independent ultra-effort OpenAI Codex reviews and
+two Claude analyses. The full chain is recorded on the private task as Records
+1–6; session artifacts in gitignored
+`_adm/codex_reviews/2026-07-30_book-project-design-review/` and
+`_adm/codex_reviews/2026-07-30_book-native-redesign-proposal/`.
+
+Both reviews converged: the book's content inventory is sound, but **37
+identically equipped chapters are the wrong unit for the practice apparatus**,
+and several flagship methods examples teach invalid analysis. Chapter review is
+FROZEN until Architecture v1.
+
+1. **The independence axiom (binding).** EDR|AI is an independent,
+   self-contained research manual. It must work for a reader at any
+   institution, on any calendar (semester, quarter, trimester, none), in any of
+   its three languages, with no course attached. HONR 46400 is its first
+   adopter, not its skeleton. Course structures — 16 weeks, nb01–nb16,
+   milestones M0–M15, the Purdue Expo, SRL machinery, weekly quizzes — may
+   constrain ONLY the adoption crosswalk in the For Instructors appendix, never
+   the book's spine, and never a chapter body. A machine leakage scan enforces
+   this (Phase 2).
+
+2. **Two grains, 39 lessons.** Chapters are *lessons* (reading units); the full
+   pedagogical apparatus lives at *stations* (practice units). Two lessons are
+   added where both reviews found load-bearing gaps: **uncertainty foundations**
+   (estimand → estimator → sampling/randomization distribution → standard
+   error/interval → dependence) placed BEFORE ch10, which needs it for its own
+   bias/variance/power discussion; and **research ethics and data governance**
+   (competent-authority determination, permissions, privacy, de-identification,
+   AI data-exposure rules) after ch10. Total 39. The "37 chapters" branding is
+   retired rather than merging useful lessons to preserve numerology.
+
+3. **Architecture v0 — 12 versioned practice stations (PROVISIONAL).** Adopted
+   from the Codex round-2 counter-proposal. Current chapter numbers are trace
+   labels only; production uses immutable semantic lesson IDs.
+
+   | Station | Lessons | Defensible checkpoint |
+   |---|---|---|
+   | 1. Govern the work | ch1–4 | Responsibility statement, AI/data-handling rules, AI ledger, early red-flag screen |
+   | 2. Frame the inquiry | ch5–6 | Objective, units/outcomes/conditions, target/reach, provisional claim boundary |
+   | 3. Ground it in verified evidence | ch7–8 | Evidence registry, search log, evidence map; explicit revision of Station 2 |
+   | 4. Declare and diagnose provisionally | ch9 → uncertainty foundations → ch10 → ethics/governance | MIDA/Contract v0, diagnosands, permission status, redesign record |
+   | 5. Develop the pathway | route hub + ch11–15; ch16 optional complex overlay | Objective × target/reach × data-strategy × warrant declaration; Contract v1 |
+   | 6. Govern data and measurement | ch17–18 | Provenance, management, measurement, route-specific permission recheck |
+   | 7. Produce a reproducible first analysis | ch19–20 | Route-specific result with uncertainty, restart-and-run-all, environment and claim–output checks |
+   | 8. Stress-test and adjudicate | ch21–24 | Robustness, negative-test, diagnostic, adversarial-review, adjudication record |
+   | 9. Write, bound, and disclose | ch25–26 + ch31 + rewritten ch33 | Stand-alone research note/report draft, claim–evidence table, AI disclosure |
+   | 10. Adapt and defend | ch27–30 as genre branches | One chosen adaptation (poster, talk, brief, other) + defense rehearsal; not yet public release |
+   | 11. Reproduce and package | ch32 + ch34 | Independent cold run and reusable package |
+   | 12. Release and direct the next cycle | rewritten ch37; ch35–36 optional advanced | Release audit, final dossier, stopping rule, next-study agenda |
+
+   **Versioned, not irreversible.** Checkpoints produce numbered versions with
+   reasons, never locked passes — anything else contradicts the book's own
+   Declare → Diagnose → Redesign method. Station 4 produces Contract v0 plus a
+   permission status; route diagnosis, measurement, permissions, and
+   realized-data changes each generate a later version.
+
+   **Four persistent rails** cross every station: ethics/permissions/data
+   exposure · evidence, provenance, reproducibility · AI activity, verification,
+   human decisions · uncertainty, claim boundary, revision history.
+
+   **The Research Dossier CONTAINS the Contract, it does not equal it.**
+   Components: Design Declaration/Contract versions · Evidence Registry ·
+   permissions record · data/measurement documentation · analysis/claim ledger ·
+   AI ledger · communication artifacts · reproducibility package · revision
+   history.
+
+   **Route model — four independent dimensions**, never three conflated ones:
+   objective/inquiry; target and reach; data strategy; identification /
+   generalization / validation warrant. A currently unidentified causal
+   question remains CAUSAL. The five pathway forms of the design layer are
+   preserved (observational descriptive · observational causal · experimental
+   descriptive · prediction · experimental causal); ch16 is a cross-cutting
+   complex-design overlay, not a sixth pathway. Station 5 runs a route hub with
+   recognition practice across all forms, full dossier work on the selected
+   branch, and one deliberate contrast case.
+
+   **Reproduce before you publish.** Restart-and-run-all, environment capture,
+   and claim-to-output agreement belong to the Station 7 first-analysis
+   checkpoint; the author's pre-release self-reproduction gates public release
+   (Station 11); later peer reproduction is a distinct exercise.
+
+   **A rubric cannot authorize research.** The Station 4 checkpoint is
+   "document required determinations and permissions", with states `cleared` ·
+   `formal determination required` · `pending` · `not authorized/stop`. No
+   collecting, acquiring, linking, transferring, or uploading restricted,
+   identifiable, or proprietary real data until the status is documented; safe
+   public or synthetic feasibility work is permitted meanwhile.
+
+   v0 is **provisional by design**. It becomes Architecture v1 only after the
+   Phase-3 prototypes and cold pilots pass (see `BOOK_DESIGN_ACCEPTANCE.md`).
+
+4. **Retired claims and apparatus.** D24's "the 37 It-is-your-turn sections
+   chain into a complete project" is retired — the chain does not produce a
+   complete artifact; the accumulation promise moves to the 12 station
+   checkpoints, and chapter IYT becomes short practice feeding them. D25(1)'s
+   per-chapter companion notebooks are replaced by per-station workbooks
+   (physical file count stays provisional until the Station 5/10 prototypes —
+   generated-file count is not a maintenance measure). D26's auto-derived
+   first-sentence rubrics are retired in favor of authored analytic rubrics with
+   stable criterion IDs, route/genre addenda, and exemplar pairs, stored in
+   `planning/BOOK_ASSESSMENTS.yml`. D26's seeded-simulation rule and the
+   review-banner workflow are unchanged. Non-computational stations are called
+   **workbooks**, not laboratories.
+
+5. **F7 — the instructor lock is retired.** A password recoverable from public
+   git history still opened all four committed pages, so the encryption was
+   theater. The adoption guide, crosswalk, and rubrics are published openly; the
+   **private instructor repo** — already "the real protection" — holds
+   everything genuinely private (solutions, keys, quiz banks). The post-render
+   encryption step and the password file are removed.
+
+6. **Secondary dispositions.** The SRL appendix (`book/srl.qmd`) leaves the
+   general appendices in all three editions — it is course machinery, and the
+   course keeps its own canonical copy at `project/srl/`. The 111 legacy
+   compatibility notebooks are SKIPPED: the book is weeks old, banner-flagged on
+   every chapter, and unannounced, so no external reader is known to depend on
+   those paths; HTML paths stay stable and semantic lesson IDs are adopted now.
+   The review registry is confirmed accurate — nothing is reviewed yet.
+
+7. **The phase plan.** Phase 0: this decision + `BOOK_DESIGN_ACCEPTANCE.md`.
+   Phase 1 (independent of architecture, release blockers): the F2/F3 methods
+   corrections, the F9 factual fixes, the F7 lock retirement. Phase 2:
+   `BOOK_ARCHITECTURE.yml` (immutable lesson IDs, station assignments),
+   `COURSE_BOOK_CROSSWALK.yml` (the 16-row map, machine-verified against
+   `MEETING_SCHEDULE.csv` and the milestone briefs), `BOOK_ASSESSMENTS.yml`
+   skeleton, and rewritten generator/validator with course-leakage scan and
+   prerequisite-timing check — this MUST precede inserting the two new lessons,
+   or the renumbering desync bites. Phase 3: build the two new lessons and EN
+   prototypes of Stations 4, 5, 7, and 10/11; run the cold note-only solo path;
+   then freeze v1 and amend D24–D26 and CLAUDE.md. Phase 4: remaining station
+   workbooks, authored rubrics + exemplars, de-coursing the chapter bodies
+   (Part VI retitle, ch33/ch37 rewrites), citations apparatus, locale
+   regeneration. **Chapter review resumes only after the v1 freeze.**
+
+8. **Trimmed from the Codex round-2 list** (right in principle, oversized for a
+   one-maintainer project at this stage): the 111 legacy shims (item 6); full
+   WCAG 2.2 AA assistive-technology QA across three languages — basic
+   accessibility folds into the acceptance criteria and the workbook generator,
+   full testing waits until v1 so it does not test throwaway artifacts; and the
+   exemplar-provenance BUILD GATES — the registry fields are adopted from day
+   one, but failing builds on "unexplained culture-specific adaptation" waits
+   until exemplar translations exist.
+
+9. **The next Codex review targets the Phase-3 prototypes**, not another paper
+   proposal. Both verdicts said the whole evaluation chain lacked real
+   artifacts and cold pilots; a third round on prose would repeat that gap.
+
+**Rationale:** the evaluation found the book promising a complete, self-contained
+route it does not deliver, teaching several methods incorrectly, shipping 33
+"laboratories" that contain only a scratch cell, and grading with rubrics
+truncated to a step's first sentence. The architecture that produced those
+defects is the per-chapter uniform kit; the fix is to separate reading grain
+from practice grain, put the apparatus where the research decisions actually
+cluster, and validate the result on real artifacts before freezing it. The
+independence axiom is what keeps the fix from importing Purdue's calendar into
+a manual meant for any reader anywhere. Timing: none of this blocks the Fall
+2026 launch — the course notebooks are separate artifacts and the early
+milestone anchors are identical under both architectures.
