@@ -125,19 +125,25 @@ inquiry_framework:
     causal:
       label: "causal reasoning"
       kind: "causal"
-      reach: "sample or population (identification licenses the kind-crossing; sampling licenses reach)"
+      reach: "sample, population, or a new setting (SATE / PATE / transported; identification warrants the causal CLAIM, sampling warrants population reach)"
       can_establish: "an effect of an intervention under a stated identification argument"
       cannot_establish: "effects when identification assumptions fail or no design supplies leverage"
+      identification_status: "declared per project: identified | causal target, currently unidentified — the kind NEVER changes with the data (D35)"
       taught_in: "nb02 (classification), nb06 + nb09 (design deep dives)"
-  crossings:
-    sample_to_population:
-      license: "a sampling data strategy (RDSS ch. 8) + an uncertainty-bearing answer strategy (ch. 9) + diagnosis (ch. 10)"
+  kind_rule: >-
+    The question's kind is fixed by its words (counterfactual contrast or not).
+    Data inadequacy never relabels a causal question descriptive; the honest
+    status is "causal target, currently unidentified" (D35). Warrants below
+    upgrade CLAIMS, never the question's kind.
+  claim_upgrades:                  # formerly `crossings:` — renamed by D35
+    units_to_population:
+      warrant: "a sampling data strategy (RDSS ch. 8) + an uncertainty-bearing answer strategy (ch. 9) + diagnosis (ch. 10)"
       violation: "the silent upgrade"
     observed_to_unseen:
-      license: "a prediction-time-honest data strategy (no leakage) + held-out diagnosands + a baseline comparison under redesign"
+      warrant: "a prediction-time-honest data strategy (no leakage) + held-out diagnosands + a baseline comparison under redesign"
       violation: "leakage; assuming tomorrow resembles the training data"
-    descriptive_to_causal:
-      license: "an assignment strategy (RDSS ch. 8, 18) or a defended observational identification argument (ch. 16)"
+    association_to_cause:
+      warrant: "an assignment strategy (RDSS ch. 8, 18) or a defended observational identification argument (ch. 16)"
       violation: "after-therefore-because; design mimicry"
   pathways:                        # the design-library layer (Weeks 5–9)
     observational_descriptive: {week: 5, notebook: "nb05", rdss: "ch. 15", example_designs: "sample surveys, indices, case selection"}

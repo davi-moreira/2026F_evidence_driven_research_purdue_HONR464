@@ -71,6 +71,17 @@ your design cannot isolate that answer, the honest status is **currently
 unidentified**, meaning the question is still causal and this design does not reach
 it yet. Example: you want to know whether a second register cuts waiting, but managers
 open one only when the line is already long, so crowding and registers move together.
+When that happens, you still have something to report, and keeping three labels apart
+tells you what. The **question** is what you asked, and its kind is fixed by its
+words: would a second register cut waiting? The **warrant** is the design's reason
+your evidence can answer it, and here the warrant is missing, because crowding
+decides which counters get the register. The **result** is what this evidence
+supports anyway: in the periods you observed, two-register counters had longer
+waits. That result is descriptive, real, and worth stating. It sits beside your
+causal question; it does not replace it. In some designs the missing warrant is
+partial rather than absent, and the evidence can still narrow the answer, bounding
+it or fixing its sign, without pinning it down.
+
 From there you have two legitimate moves. Strengthen the design until it can carry a
 causal answer, or deliberately declare a new descriptive question and record the
 swap as a decision you made. Sliding quietly between the two is how a project ends up
@@ -212,8 +223,10 @@ and a causal answer: showing why this comparison isolates the register's effect 
 nothing else. You catch it by asking what makes one counter differ from another, and
 whether that same thing also moves waiting time. Here it does. So your honest status
 is causal and currently unidentified, and you now choose openly. You can look for a
-design that carries the answer, such as periods where the second register opens on a
-schedule rather than on the crowd. Or you can declare a descriptive question you can
+design that carries the answer, such as opening periods assigned at random, or a
+schedule fixed in advance for reasons that have nothing to do with expected
+crowding. A schedule that quietly tracks the lunch rush is the same confounding
+wearing a clock. Or you can declare a descriptive question you can
 actually answer, write down that you changed it, and stop using the word "effective."
 
 ## It is your turn

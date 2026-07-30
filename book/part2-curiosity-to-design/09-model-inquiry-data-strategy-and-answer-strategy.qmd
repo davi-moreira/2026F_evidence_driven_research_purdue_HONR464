@@ -55,8 +55,8 @@ things move together without proof that one caused the other.
 Read that carefully, because it is easy to draw the wrong lesson. Alignment does not
 mean your data get to rewrite your question. The inquiry is still causal; this design
 simply does not reach it. Nor does the absence of randomizing settle the matter:
-observational designs can carry causal answers when they bring a defended argument for
-why the compared groups are otherwise alike, which is the whole subject of a later
+observational designs can carry causal answers when they bring a defended
+identification argument suited to the design, which is the whole subject of a later
 chapter. The honest diagnosis names the gap: causal inquiry, currently unidentified
 under this data and answer strategy. Naming that on paper is the whole job here.
 
@@ -78,8 +78,10 @@ what licenses that word, because it breaks any link between who the listener is 
 which version they see. So the four parts agree. Contrast a tempting shortcut: ship
 the new recommender to new users and compare them against existing users on the old
 one. That data strategy no longer aligns with a causal inquiry, because new and
-existing users differ in ways that also move accept rate. The honest claim collapses
-from "causes" to "is associated with." Same question, broken alignment.
+existing users differ in ways that also move accept rate. The inquiry stays exactly
+what it was: the caused lift. What changes is the claim this evidence supports,
+which drops from "causes" to "is associated with," leaving the inquiry itself
+causal and currently unidentified. Same question, broken alignment.
 
 ## The Colab laboratory
 
@@ -148,8 +150,11 @@ well-formatted parts and calls the design "rigorous." Read closely: it wrote the
 **data strategy** as "compare new users on the new recommender to existing users on
 the old one," and it kept the **inquiry** worded as a caused lift. That is two
 failures at once. The data strategy is **plausible-but-wrong**, because user tenure
-moves accept rate on its own, and the inquiry wording is a **silent scope change**
-from association to cause. You catch it two ways: set the inquiry's words beside the
+moves accept rate on its own. And the draft presents that comparison as if it
+answers the caused-lift inquiry, a **silent scope change** from what the evidence
+supports (an association) to what the write-up claims (a cause). The inquiry may
+keep its causal wording; what it may not do is borrow this comparison as its
+answer. You catch it two ways: set the inquiry's words beside the
 data strategy and ask whether randomization actually happened, then sketch the model
 as a diagram and look for an arrow from "user tenure" into both the version seen and
 the accept rate. That open arrow is the confounder the fluent draft never mentioned.

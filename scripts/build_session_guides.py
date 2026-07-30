@@ -74,10 +74,13 @@ COMPASS_CHEAT_SHEET = """\
   · Causal reasoning. Design pathways deep-dive in nb05–nb09 (observational
   descriptive · observational causal · experimental descriptive · prediction ·
   experimental causal).
-- **Crossings & licenses:** sample→population = sampling design + uncertainty
-  (*silent upgrade* if unpaid) · observed→unseen = prediction-time honesty +
-  held-out check (*leakage* if unpaid) · descriptive→causal = assignment /
-  identification (*after-therefore-because* if unpaid).
+- **Claim upgrades & warrants:** these units→a population = sampling design +
+  uncertainty (*silent upgrade* if unpaid) · observed→unseen = prediction-time
+  honesty + held-out check (*leakage* if unpaid) · "associated"→"causes" =
+  assignment / identification (*after-therefore-because* if unpaid).
+- **The kind rule (D35):** the question's KIND comes from its words and never
+  changes with the data. A causal question a design cannot identify is "causal,
+  currently unidentified" — never relabeled descriptive.
 - One-liner to repeat: **"You buy kind and reach with your data strategy, and
   you prove the purchase with diagnosis."**
 """

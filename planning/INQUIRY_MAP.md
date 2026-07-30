@@ -10,9 +10,10 @@ pathway**. Two layers, one shared axis (**kind**):
 - **Design library (RDSS ch. 15–18) — organizes DESIGNS** by kind × data
   strategy. Gives Weeks 5–9 (`nb05`–`nb09`) their sequence.
 
-Machine-readable core: `course_config.yaml inquiry_framework:` (positions,
-crossings, and `pathways:`). The v1 map is preserved at git tag
-`v1-compass-build`; its compass definitions, crossing licenses, and named
+Machine-readable core: `course_config.yaml inquiry_framework:` (positions, the
+`kind_rule`, `claim_upgrades:`, and `pathways:`). The v1 map is preserved at git tag
+`v1-compass-build`; its compass definitions, warrants (then called crossing
+licenses), and named
 violations are carried forward here unchanged.
 
 ## The two classifying questions (the compass)
@@ -28,16 +29,20 @@ violations are carried forward here unchanged.
 | **Descriptive** | **Description** | **Generalization** | **Prediction** |
 | **Causal** | **Causal reasoning — SATE** (the sampled units) | **PATE** (a population) | **transported effect** (a new setting or time) |
 
-The four named positions are *derived* from the two-kind split, not standing
-beside it. All four are introduced together when the compass is taught (`nb02`);
-each is deepened later inside its matched pathway.
+The three descriptive positions and the causal kind are *derived* from the
+two-kind split, not standing beside it; the causal row's three cells are one
+question kind at three reaches, not three new positions. The four classic names
+(Description, Generalization, Prediction, Causal reasoning) are introduced
+together when the compass is taught (`nb02`); each is deepened later inside its
+matched pathway.
 
 **Causal reach is real, and the causal row is not one cell (D35).** RDSS ch. 7
 defines causal inquiries over different unit sets: SATE (sampled units), PATE (a
 population), CATE (a defined covariate subgroup), and effects transported to a new
-setting. Identification licenses the causal *kind* in every cell; sampling licenses
-population reach; a transport argument licenses reach to a new setting. A causal
-question therefore needs its target named, not just its kind.
+setting. In every cell the question's kind comes from its words; identification
+warrants the causal *claim*, sampling warrants population reach, and a transport
+argument warrants reach to a new setting. A causal question therefore needs its
+target named, not just its kind.
 
 **The relabeling prohibition (D35, from the F2 finding).** A causal question whose
 data cannot identify it is **"causal target; currently unidentified"** — it NEVER
@@ -54,20 +59,23 @@ four independent route fields — objective/inquiry · target and reach · data
 strategy · identification/generalization/validation warrant. The corrections above
 remove the false content now; the architecture follows when the route hub is built.*
 
-## Crossings, licenses, and named violations — the claim-boundary discipline
+## Warrants, licenses, and named violations — the claim-boundary discipline
 
-Every overclaim in the wild is a **compass crossing without its license**. The
-license is always a design element (a data strategy D or answer strategy A), and
-the proof is always diagnosis:
+Three things must never be fused (D35, from the Batch-A review): the **question**
+(its kind is fixed by its words), the **warrant** (what the design licenses), and
+the **result** (what this evidence supports). Every overclaim in the wild is a
+**claim that outruns its warrant**. The warrant is always a design element (a data
+strategy D or answer strategy A), and the proof is always diagnosis:
 
-| Crossing | License (RDSS home) | Named violation (drilled) |
+| Claim upgrade | Warrant (RDSS home) | Named violation (drilled) |
 |---|---|---|
-| sample → population | sampling data strategy (ch. 8) + uncertainty-bearing answer strategy (ch. 9) + diagnosis: coverage/power (ch. 10) | **the silent upgrade** |
+| these units → a population | sampling data strategy (ch. 8) + uncertainty-bearing answer strategy (ch. 9) + diagnosis: coverage/power (ch. 10) | **the silent upgrade** |
 | observed → unseen | prediction-time-honest data strategy (no leakage) + held-out diagnosands + baseline comparison under redesign | **leakage**; "tomorrow resembles the training data" |
-| descriptive → causal | assignment strategy (ch. 8, 18) or a defended observational identification argument (ch. 16) | **after-therefore-because**; **design mimicry** |
+| "is associated with" → "causes" | assignment strategy (ch. 8, 18) or a defended observational identification argument (ch. 16) | **after-therefore-because**; **design mimicry** |
 
-> You buy KIND and REACH with your data strategy, and you prove the purchase
-> with diagnosis.
+> A warrant upgrades what your evidence may CLAIM. It never changes what your
+> question ASKS. A causal question with no identification warrant stays causal;
+> what you may report meanwhile is the association, plus the warrant's absence.
 
 ## Position 1 — Description (descriptive · data at hand)
 
@@ -113,7 +121,8 @@ the proof is always diagnosis:
   course-authored library entry written in the book's declare-diagnose-redesign
   format (RDSS Part III stops short of a predictive entry).
 - **Classic misclassification:** "the model predicts well, so X causes Y" — a
-  kind-crossing dressed as performance (the performance-understanding gap).
+  causal claim with no warrant, dressed as performance (the
+  performance-understanding gap).
 
 ## Position 4 — Causal reasoning (causal kind)
 
@@ -126,8 +135,9 @@ the proof is always diagnosis:
   causal: selection-on-observables, DiD, IV, RDD, natural experiments) and `nb09`
   (experimental causal: two-arm trials, blocking, cluster + factorial designs).
 - **Reach within the causal kind:** SATE vs PATE vs CATE vs a transported effect
-  (ch. 7) — the sample → population crossing applies here too; identification
-  licenses the kind, sampling licenses the reach.
+  (ch. 7) — the units → population upgrade applies here too; identification
+  warrants the causal CLAIM (never the question's kind, which its words fix),
+  sampling warrants the population reach.
 - **Classic misclassification:** **design mimicry** — DiD/RDD/IV vocabulary
   decorating a comparison whose assumptions were never argued.
 - **Classic misclassification (D35):** **silent relabeling** — calling a causal
@@ -161,9 +171,9 @@ inquiry is causal is a question-kind matter decided on the compass.
 A declaration commits a **compass position** (kind × reach, read off the
 question's words) and a **pathway** (kind × data strategy, read off what the
 student can actually do). The two must share the same **kind**; the pathway then
-fixes the data strategy and names the crossing that must be licensed:
+fixes the data strategy and names the warrant it must hold:
 
-| Compass position (question) | Data strategy | Pathway (design) | Crossing to license |
+| Compass position (question) | Data strategy | Pathway (design) | Warrant to hold |
 |---|---|---|---|
 | Description (descriptive · at hand) | observational | Observational descriptive (`nb05`) | none — the answer stays at hand |
 | Description (descriptive · at hand) | experimental | Experimental descriptive (`nb07`) | none — an experiment *measures* a descriptive quantity |
@@ -175,13 +185,13 @@ fixes the data strategy and names the crossing that must be licensed:
 **How a student moves across the matrix.** They classify the question on the
 compass (M1), commit to a position and its permitted claim in the MIDA
 declaration (M3), then select the pathway whose kind matches and whose data
-strategy is feasible — auditing it against its crossing license (M4 onward). The
+strategy is feasible — auditing it against its warrant (M4 onward). The
 same descriptive question may be served observationally or experimentally; the
 same causal question may be identified observationally or by assignment;
 prediction sits outside both grids as its own objective. The
 `project/templates/INQUIRY_DECLARATION.md` template enforces, per project, the
 three required justifications (CLAUDE.md Inquiry-Declaration rule): (1) why the
-kind and reach fit the question's words, (2) which crossing license the design
+kind and reach fit the question's words, (2) which warrant the design
 holds, and (3) key limitations and sources of uncertainty.
 
 ## Where the classification and matching skill lives
@@ -190,7 +200,7 @@ holds, and (3) key limitations and sources of uncertainty.
 |---|---|
 | Week 2 (`nb02`), M1 | The compass is taught (kind + reach drills); each project question gets a classified position |
 | M3 | The MIDA declaration commits the position and its permitted claim |
-| Weeks 5–9 (`nb05`–`nb09`), M4–M8 | Each pathway is deepened; the project's design is matched and audited against its crossing license |
+| Weeks 5–9 (`nb05`–`nb09`), M4–M8 | Each pathway is deepened; the project's design is matched and audited against its warrant |
 | M5 (GenAI Studio: Causal Identification Skeptic) | The identification paragraph — or the honest causal-language boundary — is defended |
 | M7 (GenAI Studio: Prediction & Leakage Auditor) | The declared analysis protocol; leakage and baseline honesty are audited |
 | M9 / M13 | Robustness and replication branch by position — the classification has consequences |
@@ -201,5 +211,5 @@ holds, and (3) key limitations and sources of uncertainty.
 Projects may combine positions when the question demands it (describe the sample,
 generalize to a population, and probe a causal channel). The rule is unchanged:
 every position and pathway used must state why the kind and reach fit, which
-crossing license it holds, and its limitations. A declaration with no stated
+warrant it holds, and its limitations. A declaration with no stated
 justification or limitation is incomplete.

@@ -229,8 +229,8 @@ def fig_ch14(s: dict, out: Path) -> dict:
 def fig_ch15(s: dict, out: Path) -> dict:
     rng = np.random.default_rng(SEED)
     n, tau = 200, 5.0                      # true effect: +5 percentage points
-    y0 = np.clip(rng.normal(70, 12, n), 20, 99)   # refill rate w/o reminder
-    y1 = np.clip(y0 + tau, 20, 100)               # ... with the reminder
+    y0 = np.clip(rng.normal(70, 12, n), 20, 95)   # refill rate w/o reminder
+    y1 = y0 + tau                                 # exactly +5 for every patient
     estimates = []
     for _ in range(2000):
         treated = rng.permutation(n) < n // 2
