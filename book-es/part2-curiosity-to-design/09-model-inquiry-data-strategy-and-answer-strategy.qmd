@@ -54,9 +54,18 @@ Las cuatro no son una lista que llenas en cualquier orden. Tienen que **alinears
 decir, tus estrategias de datos y de respuesta de verdad tienen que alcanzar la
 indagación que tu modelo hace preguntable. Ejemplo de desalineación: una indagación
 causal («el aumento que el recomendador *causa*») servida por una estrategia de datos
-que nunca aleatoriza quién ve qué solo puede mostrar una **asociación**, es decir, dos
-cosas que se mueven juntas sin prueba de que una causó la otra. Nombrar la
-desalineación sobre el papel es todo el trabajo aquí.
+en la que quienes ven la versión nueva difieren sistemáticamente de quienes no. Lo
+que esa comparación entrega es una **asociación**, es decir, dos cosas que se mueven
+juntas sin prueba de que una causó la otra.
+
+Lee eso con cuidado, porque es fácil sacar la lección equivocada. Alinearse no
+significa que tus datos puedan reescribir tu pregunta. La indagación sigue siendo
+causal; este diseño simplemente no la alcanza. Y la ausencia de aleatorización
+tampoco zanja el asunto: los diseños observacionales pueden cargar respuestas
+causales cuando traen un argumento de identificación defendido y adecuado al diseño,
+que es el tema entero de un capítulo más adelante. El diagnóstico honesto nombra la
+brecha: indagación causal, actualmente no identificada bajo esta estrategia de datos
+y de respuesta. Nombrar eso sobre el papel es todo el trabajo aquí.
 
 ## Un ejemplo resuelto
 
@@ -78,8 +87,10 @@ es la persona y qué versión ve. Así que las cuatro partes coinciden. Contrast
 atajo tentador: lanzar el recomendador nuevo a los usuarios nuevos y compararlos con
 los usuarios existentes que siguen con el viejo. Esa estrategia de datos ya no se
 alinea con una indagación causal, porque los usuarios nuevos y los existentes difieren
-en cosas que también mueven la tasa de aceptación. La afirmación honesta se derrumba
-de «causa» a «está asociado con». Misma pregunta, alineación rota.
+en cosas que también mueven la tasa de aceptación. La indagación sigue siendo
+exactamente la que era: el aumento causado. Lo que cambia es la afirmación que esta
+evidencia sostiene, que cae de «causa» a «está asociado con», dejando la indagación
+en sí causal y actualmente no identificada. Misma pregunta, alineación rota.
 
 ## El laboratorio en Colab
 
@@ -145,8 +156,11 @@ artículo que no existe.
 Tres elecciones siguen siendo tuyas. **Qué mundo supone tu pregunta** (el modelo, y
 por lo tanto qué podría confundirlo). **Qué única cantidad quieres** (la indagación,
 nombrada con tus palabras, no con la paráfrasis de la IA). Y **si tus cuatro partes se
-alinean**, y por lo tanto si el límite de tu afirmación es *causa* o solo *está
-asociado con*. Una IA puede redactar partes candidatas. Decidir que coinciden, y
+alinean**, y por lo tanto si el límite de tu afirmación es *causa*, solo *está
+asociado con*, o *causal, pero todavía no identificada por este diseño*. Ese tercer
+estado es una respuesta de verdad, y conservar tu pregunta admitiendo que el diseño
+no la alcanza es más honesto que encoger la pregunta para que quepa en los datos.
+Una IA puede redactar partes candidatas. Decidir que coinciden, y
 hacerte cargo de la afirmación que se desprende, es un juicio de investigación que no
 puedes ceder.
 :::
@@ -159,8 +173,12 @@ escribió la **estrategia de datos** como «comparar usuarios nuevos con el reco
 nuevo contra usuarios existentes con el viejo», y dejó la **indagación** redactada
 como un aumento causado. Eso son dos fallas a la vez. La estrategia de datos es
 **plausible pero equivocada** (*plausible-but-wrong-method*), porque la antigüedad del
-usuario mueve la tasa de aceptación por su cuenta, y la redacción de la indagación es
-un **cambio silencioso de alcance** (*silent scope change*), de asociación a causa. La
+usuario mueve la tasa de aceptación por su cuenta. Y el borrador presenta esa
+comparación como si respondiera a la indagación del aumento causado, un **cambio
+silencioso de alcance** (*silent scope change*) entre lo que la evidencia sostiene
+(una asociación) y lo que el texto afirma (una causa). La indagación puede conservar
+su redacción causal; lo que no puede es tomar prestada esta comparación como su
+respuesta. La
 atrapas de dos maneras: pon las palabras de la indagación al lado de la estrategia de
 datos y pregunta si de verdad hubo aleatorización, y luego dibuja el modelo como un
 diagrama y busca una flecha que vaya de «antigüedad del usuario» tanto a la versión

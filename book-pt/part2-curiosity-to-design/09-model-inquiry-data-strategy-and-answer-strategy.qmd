@@ -55,9 +55,18 @@ As quatro não são uma lista de checagem que você preenche em qualquer ordem. 
 precisam **se alinhar**, ou seja, as suas estratégias de dados e de resposta precisam
 de fato alcançar a indagação que o seu modelo torna perguntável. Exemplo de
 desalinhamento: uma indagação causal ("o aumento que o recomendador *causa*") servida
-por uma estratégia de dados que nunca sorteia quem vê o quê só consegue mostrar uma
-**associação**, ou seja, duas coisas que se movem juntas sem prova de que uma causou
-a outra. Nomear o desalinhamento no papel é o trabalho inteiro aqui.
+por uma estratégia de dados em que quem vê a versão nova difere sistematicamente de
+quem não vê. O que essa comparação entrega é uma **associação**, ou seja, duas
+coisas que se movem juntas sem prova de que uma causou a outra.
+
+Leia isso com cuidado, porque é fácil tirar a lição errada. Alinhamento não significa
+que os seus dados podem reescrever a sua pergunta. A indagação continua causal; este
+desenho apenas não a alcança. E a ausência de sorteio tampouco encerra o assunto:
+desenhos observacionais podem sustentar respostas causais quando trazem um argumento
+de identificação defendido e adequado ao desenho, que é o assunto inteiro de um
+capítulo mais adiante. O diagnóstico honesto nomeia a lacuna: indagação causal,
+atualmente não identificada sob esta estratégia de dados e de resposta. Nomear isso
+no papel é o trabalho inteiro aqui.
 
 ## Um exemplo trabalhado
 
@@ -79,8 +88,10 @@ ouvinte e qual versão ele vê. Então as quatro partes concordam. Compare com u
 tentador: lançar o novo recomendador para usuários novos e compará-los com usuários
 antigos que continuam no velho. Essa estratégia de dados deixa de se alinhar com uma
 indagação causal, porque usuários novos e antigos diferem de maneiras que também
-mexem na taxa de aceitação. A alegação honesta desaba de "causa" para "está associado
-a". Mesma pergunta, alinhamento quebrado.
+mexem na taxa de aceitação. A indagação continua exatamente o que era: o aumento
+causado. O que muda é a alegação que esta evidência sustenta, que cai de "causa"
+para "está associado a", deixando a indagação em si causal e atualmente não
+identificada. Mesma pergunta, alinhamento quebrado.
 
 ## O laboratório em Colab
 
@@ -142,8 +153,11 @@ devolve uma citação plausível para um artigo que não existe.
 Três escolhas continuam sendo suas. **Qual mundo a sua pergunta pressupõe** (o modelo,
 e portanto o que pode confundi-lo). **Qual quantidade única você quer** (a indagação,
 nomeada com as suas palavras, não com a paráfrase da IA). E **se as suas quatro partes
-se alinham**, e portanto se a fronteira da sua alegação é *causa* ou apenas *está
-associado a*. Uma IA pode rascunhar partes candidatas. Decidir que elas concordam, e
+se alinham**, e portanto se a fronteira da sua alegação é *causa*, apenas *está
+associado a*, ou *causal, mas ainda não identificada por este desenho*. Esse
+terceiro estado é uma resposta de verdade, e manter a sua pergunta admitindo que o
+desenho não a alcança é mais honesto do que encolher a pergunta para caber nos
+dados. Uma IA pode rascunhar partes candidatas. Decidir que elas concordam, e
 assumir a alegação que decorre disso, é julgamento de pesquisa que você não pode
 repassar.
 :::
@@ -156,8 +170,11 @@ ela escreveu a **estratégia de dados** como "comparar usuários novos no recome
 novo com usuários antigos no velho", e manteve a **indagação** redigida como um
 aumento causado. São duas falhas ao mesmo tempo. A estratégia de dados é um **método
 plausível, porém errado**, porque o tempo de casa do usuário mexe na taxa de aceitação
-por conta própria, e a redação da indagação é uma **mudança silenciosa de escopo**, de
-associação para causa. Você pega isso de dois jeitos: ponha as palavras da indagação
+por conta própria. E o rascunho apresenta essa comparação como se ela respondesse à
+indagação do aumento causado, uma **mudança silenciosa de escopo** entre o que a
+evidência sustenta (uma associação) e o que o texto alega (uma causa). A indagação
+pode manter a redação causal; o que ela não pode é tomar esta comparação emprestada
+como resposta. Você pega isso de dois jeitos: ponha as palavras da indagação
 ao lado da estratégia de dados e pergunte se houve mesmo aleatorização, depois desenhe
 o modelo como um diagrama e procure uma seta saindo de "tempo de casa" para a versão
 vista e para a taxa de aceitação. Essa seta aberta é o confundidor que o rascunho
