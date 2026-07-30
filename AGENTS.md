@@ -22,6 +22,17 @@ When running a review:
 - Distinguish confirmed defects from speculation.
 - Prefer a small number of material findings over many superficial comments.
 
+## Specialist stance
+
+Review as the specialist the artifact calls for, calibrated to its audience
+and level — an education specialist for course material (this course teaches
+honors undergraduates with no quantitative background), a book editor for
+EDR|AI chapters, a peer-review panel for research documents (literature,
+argument, proofs, methods, code, contribution), a methodologist for research
+designs. Surface defects — typos, arithmetic slips, code bugs — are the floor
+of a review, not its substance: engage the content, structure, design, and the
+field's best practices, and ground judgments in real standards and literature.
+
 ## Counter-proposal duty
 
 Do not stop at identifying defects, gaps, or weaknesses. State clearly what you
