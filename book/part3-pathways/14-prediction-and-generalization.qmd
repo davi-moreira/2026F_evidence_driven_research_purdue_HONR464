@@ -53,17 +53,45 @@ A forecast earns trust under a four-part **contract**, in fixed order. The
 **target** is the one column you predict, for example `bloom_next_week`. The
 **baseline** is the dumbest honest rule you must beat, usually "always guess the
 most common answer"; if 85% of weeks have no bloom, that rule scores 85% for free,
-so 85% is the bar. The **split** divides rows into a training set the model learns
-from and a **held-out set**, rows kept back during training and used only as its
-exam, say a random quarter of the weeks. The **metric** is how you keep score,
-matched to the target; accuracy misleads when blooms are rare, so recall on the
-bloom class, the share of real blooms the model catches, often matters more.
+so 85% is the bar. The **metric** is how you keep score, matched to the target;
+accuracy misleads when blooms are rare, so recall on the bloom class, the share of
+real blooms the model catches, often matters more.
 
-One trap sits above all others. **Data leakage** is a feature carrying information
-you would not have at the forecast moment, because its value is settled only at or
-after the outcome. Example: the toxin concentration measured *during* the bloom. A
-leaked feature inflates your score on today's data and collapses on tomorrow's,
-because it will not exist when you truly need the forecast.
+The **split** is where most honest-looking forecasts go wrong, so it gets three
+parts rather than two. The **training set** is the data each candidate model learns
+from. Example: the model works out its coefficients from your first summer. The
+**selection set** is separate data you use to choose among candidates. Example: you
+compare three feature lists and pick one on your second summer. The **final
+holdout** is data you lock away and open exactly once, after every choice is
+settled. Example: only the model you already chose ever touches your third summer.
+
+Run them in that order. Fit on training, choose on selection, then score your one
+choice on the final holdout. The reason for the middle step is easy to miss.
+Whenever you try twelve models and keep the best score you saw, that winning score
+is flattered by luck: some model was always going to look best on that particular
+data, partly because its errors happened to fall kindly there. **Model-selection
+bias** is that flattery, the gap between a winner's score on the data that crowned
+it and its honest score on data it has never met. Report the crowning score as
+final and you will promise performance the model cannot deliver.
+
+One consequence is worth stating plainly. If the final holdout makes you go back and
+change a feature, a threshold, or a model, it has joined development and stopped
+being an exam. You then need fresh untouched data for the next final check. Once you
+see the final score, any change breaks the seal.
+
+One trap sits above all others. **Data leakage** is information reaching your model,
+or your choice of model, that would not be available at the real forecast moment.
+Example: the toxin concentration measured *during* the bloom. A leaked feature
+inflates your score on today's data and collapses on tomorrow's, because it will not
+exist when you truly need the forecast. Choosing your model on the final holdout is
+the same failure wearing different clothes, since that score was supposed to stand in
+for data you have never seen.
+
+Time carries its own version of this trap. When your target is next week, your exam
+weeks must come *after* the weeks you learned from. Splitting weeks at random hands
+the model August while asking it to forecast July, which answers how well it fills in
+scattered past weeks rather than how well it forecasts the next one. Keep the blocks
+in calendar order, and let the latest block be the one you lock.
 
 ## A worked example
 
@@ -73,27 +101,34 @@ otherwise. Across three summers of weekly samples, 85% of weeks are clear, so yo
 **baseline**, "always say no bloom," scores 0.85 with no model at all.
 
 You keep features genuinely known a week early: water temperature, recent rainfall,
-upstream phosphorus load. You fit a logistic model (a standard yes-or-no
-classifier), **split** off a held-out quarter of the weeks, and score both only on
-those held-out weeks. The model lands around 0.88. That four-point edge feels small,
-and its smallness is the honest result: a modest true win beats a dramatic fake one.
+upstream phosphorus load. The three summers give you your three roles without any
+shuffling. Summer one trains your candidate models. Summer two chooses between them.
+Summer three stays locked until the choice is made. You fit a logistic model (a
+standard yes-or-no classifier) and compare a few feature lists on summer two. Then
+you open summer three once, for the winner alone. The model lands around 0.88. That
+four-point edge feels small, and its smallness is the honest result: a modest true
+win beats a dramatic fake one.
 
-Then a well-meaning collaborator adds `chlorophyll_a`, the pigment reading.
-Held-out accuracy leaps to 0.97. Exciting, until you ask *when* chlorophyll is
-measured: during the very bloom you are forecasting. It is the outcome wearing a
-different label. Drop it, and the score falls back to 0.88. The timing test, not
-the accuracy, decides. And because you trained on one shallow lake, you name the
+Then a well-meaning collaborator adds `chlorophyll_a`, the pigment reading. The score
+leaps to 0.97. Exciting, until you ask *when* chlorophyll is measured: during the
+very bloom you are forecasting. It is the outcome wearing a different label. Drop it,
+and the score falls back to 0.88. The timing test, not the accuracy, decides. And because you trained on one shallow lake, you name the
 boundary out loud: on a deep, cold reservoir the pattern may not hold, so the
 forecast does not yet generalize there.
 
 ## A seeded simulation
 
-The chapter claims a model can get *better* at the data it has while getting
-*worse* at cases it has never seen. Watch it happen. The seed makes the run
-reproducible: the same code always draws the same world. The code builds one
-world (a sine curve plus noise), draws a training set and a holdout set from
-that same world, fits polynomials of growing flexibility to the training set,
-and scores every fit on both sets.
+The chapter claims two things at once, and the code below shows both. A model can
+get *better* at data it has already seen while getting *worse* at cases it has never
+seen. And the score that crowned your winner is itself too kind. The seed makes the
+run reproducible: the same code always draws the same worlds.
+
+The left half builds one world (a sine curve plus noise) and draws three separate
+sets from it: training, selection, and final holdout. Twelve polynomials are fit on
+training, compared on selection, and the winner alone is scored on the final holdout.
+The right half repeats that whole procedure in 500 fresh worlds and records one
+number each time: the winner's final-holdout error minus the selection error that
+crowned it.
 
 ```python
 import numpy as np
@@ -101,56 +136,72 @@ import matplotlib.pyplot as plt
 
 SEED = 464
 rng = np.random.default_rng(SEED)
+degrees = np.arange(1, 13)
 
 def world(n):
     x = rng.uniform(-3, 3, n)
     return x, np.sin(1.5 * x) + rng.normal(0, .35, n)
 
-x_train, y_train = world(40)
-x_test, y_test = world(40)
+def rmse(coefs, data):
+    x, y = data
+    return np.sqrt(np.mean((np.polyval(coefs, x) - y) ** 2))
 
-degrees = np.arange(1, 13)
-train_err, test_err = [], []
-for d in degrees:
-    coefs = np.polyfit(x_train, y_train, d)
-    train_err.append(np.sqrt(np.mean(
-        (np.polyval(coefs, x_train) - y_train) ** 2)))
-    test_err.append(np.sqrt(np.mean(
-        (np.polyval(coefs, x_test) - y_test) ** 2)))
-best = degrees[int(np.argmin(test_err))]
+def one_world():
+    training, selection, final = world(40), world(40), world(40)
+    fits = [np.polyfit(training[0], training[1], d) for d in degrees]
+    train_err = np.array([rmse(c, training) for c in fits])
+    sel_err = np.array([rmse(c, selection) for c in fits])
+    chosen = int(np.argmin(sel_err))          # chosen on SELECTION, never final
+    return train_err, sel_err, chosen, rmse(fits[chosen], final)
 
-fig, ax = plt.subplots(figsize=(7.6, 3.4))
-ax.plot(degrees, train_err, color="#2a78d6", lw=2, marker="o", ms=4)
-ax.plot(degrees, test_err, color="#eb6834", lw=2, marker="o", ms=4)
-ax.axvline(best, color="#333333", ls=":", lw=1)
-ax.text(degrees[-1], train_err[-1], "  Training error", color="#2a78d6",
-        fontsize=9, va="center")
-ax.text(degrees[-1], test_err[-1], "  Holdout error", color="#eb6834",
-        fontsize=9, va="center")
-ax.text(best + .1, max(test_err) * .95, "honest best", color="#333333",
-        fontsize=9)
-ax.set_xlabel("Model flexibility (polynomial degree)")
-ax.set_ylabel("Prediction error (RMSE)")
-ax.set_xlim(degrees[0], degrees[-1] + 3.4)
-plt.show()
+train_err, sel_err, chosen, final_err = one_world()
+print("chosen degree:", degrees[chosen])
+print("selection error that chose it:", round(sel_err[chosen], 3))
+print("final-holdout error for that one model:", round(final_err, 3))
+
+gaps = []
+for _ in range(500):
+    _, sel, pick, fresh_final = one_world()
+    gaps.append(fresh_final - sel[pick])
+gaps = np.asarray(gaps)
+print("worse on the final holdout in", round(100 * (gaps > 0).mean(), 1), "% of worlds")
+print("typical (median) gap:", round(float(np.median(gaps)), 3))
 ```
 
-![Training error only falls as flexibility grows; holdout error bottoms out
-at degree six and then climbs.](../images/sims/ch14_overfitting.png){fig-alt="Line
-chart. A blue training-error line falls steadily as polynomial degree rises
-from 1 to 12. An orange holdout-error line falls with it until degree six,
-marked by a dotted vertical line labeled honest best, then climbs."}
+![Left: training error keeps falling while selection error turns up after degree
+six, where the model is chosen; one final-holdout point sits above that selection
+score. Right: across 500 worlds the winner is usually worse on the final
+holdout.](../images/sims/ch14_overfitting.png){fig-alt="Two-panel chart. Left panel:
+a blue training-error line falling steadily across polynomial degrees 1 to 12, an
+orange selection-error line falling to degree six then climbing, a dotted vertical
+line at degree six labeled chosen on selection, and a black diamond labeled final
+holdout sitting above the selection curve at degree six. Right panel: a histogram of
+the final-error-minus-selection-error gap across 500 simulated worlds, centered
+slightly right of zero, annotated worse on the final holdout in 59 percent of worlds
+and typical gap plus 0.013 RMSE."}
 
-The blue training error only falls: every extra degree of flexibility lets
-the model bend closer to points it has already seen. The orange holdout error
-falls while the model is learning signal, bottoms out near degree six, and
-climbs as the model starts memorizing noise. The dotted line is the honest
-best: the flexibility a held-out check would pick. Nothing in the blue line
-alone would ever tell you to stop there; only data the fit never touched can
-say that, which is the whole case for the held-out check this pathway
-requires. In the companion notebook, raise the noise (the `.35`) and watch
-the honest best move left: the noisier the world, the less flexibility the
-truth can support.
+Read the left panel first. The blue training error only falls: every extra degree of
+flexibility lets the model bend closer to points it has already seen. The orange
+selection error falls while the model is learning signal, bottoms out near degree
+six, and climbs as the model starts memorizing noise. Nothing in the blue line alone
+would ever tell you to stop at six. Only data the fit never touched can say that.
+
+Now look at the black diamond. That is the same chosen model, scored on the locked
+final holdout, and it sits *above* the selection score that picked it. Degree six won
+partly on merit and partly because that particular selection set happened to suit it.
+The right panel shows this is not bad luck in one world: repeat the whole procedure
+500 times and the winner comes out worse on fresh data in 59 percent of them, by
+about 0.013 RMSE in a typical world.
+
+Two honest notes about that number. It is a median, not a mean, because a couple of
+worlds out of 500 went spectacularly wrong when a degree-twelve fit swung wildly
+outside its data, and those few would otherwise drag the average on their own. And
+the gap is modest here, which is the realistic lesson: selection optimism is usually
+a small, systematic shading rather than a dramatic collapse. It is still real, it
+still points one way, and reporting the selection score as your final answer still
+promises performance you have not demonstrated. In the companion notebook, raise the
+noise (the `.35`) and watch the chosen degree move left and the gap widen: the
+noisier the world, the more the winner owes to luck.
 
 ## The Colab laboratory
 
@@ -243,8 +294,11 @@ under contract before you fit a single model.*
    outcome for a case whose outcome does not exist yet? Write yes or no, and the
    one sentence that justifies your answer.
 2. If yes, sign the four-part contract, in order. Name the target column, the
-   dumbest honest baseline it has to beat, the split that keeps a slice of cases
-   unseen, and the metric matched to how rare your outcome is.
+   dumbest honest baseline it has to beat, the split, and the metric matched to how
+   rare your outcome is. Give the split all three of its roles: which data fit your
+   candidates, which data choose between them, and which data stay locked for the
+   single final score. If your target is about a later time, order those three
+   blocks by the calendar and lock the latest one.
 3. List your features and write beside each one the moment its value is settled.
    Circle anything settled at or after the outcome. That circled set is your
    leakage list, and it belongs in your write-up whether or not you drop the
@@ -257,6 +311,8 @@ under contract before you fit a single model.*
    descriptive and causal work too.
 6. Log the step in your AI Research Ledger, and verify at least one output with a
    named method from the [Verification Guide](../verification-guide.qmd). For a
-   fitted model the method is a holdout sample: never report a score computed on
-   rows the model trained on. An AI reviewer may run the check with you; the
-   decision to accept or reject stays yours.
+   fitted model the method is a locked final holdout: never report a score computed
+   on rows the model trained on, and never report the score that chose the model as
+   though it were the final one. Write down how many candidates you compared, since
+   a reader cannot judge selection optimism without that number. An AI reviewer may
+   run the check with you; the decision to accept or reject stays yours.

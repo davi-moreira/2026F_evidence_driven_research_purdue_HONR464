@@ -39,10 +39,15 @@ L = {
         "truth_age": "true mean = {v:.1f}",
         "xlabel_age": "Sample mean age (years)",
         "train": "Training error",
-        "test": "Holdout error",
+        "test": "Selection error",
+        "final_pt": "Final holdout",
+        "chosen": "chosen on selection",
+        "xlabel_gap": "Final error minus the winning selection error",
+        "ylabel_worlds": "Simulated worlds",
+        "gapstat": "worse on the final holdout in {p:.0f}% of worlds\ntypical gap = {m:+.3f} RMSE",
         "xlabel_deg": "Model flexibility (polynomial degree)",
         "ylabel_rmse": "Prediction error (RMSE)",
-        "best": "honest best",
+        "best": "chosen on selection",
         "truth_ate": "true effect = {v:.1f} pp",
         "mean_est": "mean of estimates = {v:.1f} pp",
         "xlabel_ate": "Estimated effect of the reminder (percentage points)",
@@ -58,10 +63,15 @@ L = {
         "truth_age": "média verdadeira = {v:.1f}",
         "xlabel_age": "Idade média da amostra (anos)",
         "train": "Erro de treino",
-        "test": "Erro no conjunto de teste",
+        "test": "Erro de seleção",
+        "final_pt": "Holdout final",
+        "chosen": "escolhido na seleção",
+        "xlabel_gap": "Erro final menos o erro de seleção vencedor",
+        "ylabel_worlds": "Mundos simulados",
+        "gapstat": "pior no holdout final em {p:.0f}% dos mundos\ndiferença típica = {m:+.3f} RMSE",
         "xlabel_deg": "Flexibilidade do modelo (grau do polinômio)",
         "ylabel_rmse": "Erro de predição (RMSE)",
-        "best": "melhor honesto",
+        "best": "escolhido na seleção",
         "truth_ate": "efeito verdadeiro = {v:.1f} pp",
         "mean_est": "média das estimativas = {v:.1f} pp",
         "xlabel_ate": "Efeito estimado do lembrete (pontos percentuais)",
@@ -77,10 +87,15 @@ L = {
         "truth_age": "media verdadera = {v:.1f}",
         "xlabel_age": "Edad media de la muestra (años)",
         "train": "Error de entrenamiento",
-        "test": "Error en el conjunto de prueba",
+        "test": "Error de selección",
+        "final_pt": "Holdout final",
+        "chosen": "elegido en la selección",
+        "xlabel_gap": "Error final menos el error de selección ganador",
+        "ylabel_worlds": "Mundos simulados",
+        "gapstat": "peor en el holdout final en {p:.0f}% de los mundos\ndiferencia típica = {m:+.3f} RMSE",
         "xlabel_deg": "Flexibilidad del modelo (grado del polinomio)",
         "ylabel_rmse": "Error de predicción (RMSE)",
-        "best": "mejor honesto",
+        "best": "elegido en la selección",
         "truth_ate": "efecto verdadero = {v:.1f} pp",
         "mean_est": "media de las estimaciones = {v:.1f} pp",
         "xlabel_ate": "Efecto estimado del recordatorio (puntos porcentuales)",
@@ -129,45 +144,86 @@ def fig_ch11(s: dict, out: Path) -> dict:
 
 
 def fig_ch14(s: dict, out: Path) -> dict:
+    """Overfitting AND model-selection bias, with three honest data roles.
+
+    Left: training error falls forever while selection error turns up; the
+    degree is chosen on the SELECTION set, and only that one choice is scored
+    on the locked final holdout. Right: repeating the whole procedure in 500
+    fresh worlds shows the winner's selection score is optimistic on average.
+    """
     rng = np.random.default_rng(SEED)
+    degrees = np.arange(1, 13)
 
     def world(n):
         x = rng.uniform(-3, 3, n)
         return x, np.sin(1.5 * x) + rng.normal(0, .35, n)
 
-    x_train, y_train = world(40)
-    x_test, y_test = world(40)
-    degrees = np.arange(1, 13)
-    train_err, test_err = [], []
-    for d in degrees:
-        coefs = np.polyfit(x_train, y_train, d)
-        train_err.append(np.sqrt(np.mean(
-            (np.polyval(coefs, x_train) - y_train) ** 2)))
-        test_err.append(np.sqrt(np.mean(
-            (np.polyval(coefs, x_test) - y_test) ** 2)))
-    best = degrees[int(np.argmin(test_err))]
+    def rmse(coefs, data):
+        x, y = data
+        return np.sqrt(np.mean((np.polyval(coefs, x) - y) ** 2))
 
-    fig, ax = plt.subplots(figsize=(7.6, 3.4))
+    def one_world():
+        training, selection, final = world(40), world(40), world(40)
+        fits = [np.polyfit(training[0], training[1], d) for d in degrees]
+        tr = np.array([rmse(c, training) for c in fits])
+        sel = np.array([rmse(c, selection) for c in fits])
+        chosen = int(np.argmin(sel))
+        return tr, sel, chosen, rmse(fits[chosen], final)
+
+    train_err, sel_err, chosen, final_err = one_world()
+
+    gaps = []
+    for _ in range(500):
+        _, sel, pick, fresh_final = one_world()
+        gaps.append(fresh_final - sel[pick])
+    gaps = np.asarray(gaps)
+
+    fig, axes = plt.subplots(1, 2, figsize=(9.4, 3.5))
+    ax = axes[0]
     ax.plot(degrees, train_err, color=BLUE, lw=2, marker="o", ms=4)
-    ax.plot(degrees, test_err, color=ORANGE, lw=2, marker="o", ms=4)
-    ax.axvline(best, color=INK, ls=":", lw=1)
+    ax.plot(degrees, sel_err, color=ORANGE, lw=2, marker="o", ms=4)
+    ax.axvline(degrees[chosen], color=INK, ls=":", lw=1)
+    ax.scatter([degrees[chosen]], [final_err], color=INK, marker="D", s=46,
+               zorder=4)
     ax.text(degrees[-1], train_err[-1], "  " + s["train"], color=BLUE,
-            fontsize=9, va="center")
-    ax.text(degrees[-1], test_err[-1], "  " + s["test"], color=ORANGE,
-            fontsize=9, va="center")
-    ax.text(best + .1, max(test_err) * .95, s["best"], color=INK, fontsize=9)
+            fontsize=8, va="center")
+    ax.text(degrees[-1], sel_err[-1], "  " + s["test"], color=ORANGE,
+            fontsize=8, va="center")
+    ax.text(degrees[chosen] + .25, final_err, "  " + s["final_pt"], color=INK,
+            fontsize=8, va="center")
+    ax.text(degrees[chosen] + .1, max(sel_err) * .97, s["chosen"], color=INK,
+            fontsize=8)
     ax.set_xlabel(s["xlabel_deg"])
     ax.set_ylabel(s["ylabel_rmse"])
-    ax.set_xlim(degrees[0], degrees[-1] + 3.4)
-    for side in ("top", "right"):
-        ax.spines[side].set_visible(False)
-    ax.grid(axis="y", color="#e5e5e5", lw=.6)
-    ax.set_axisbelow(True)
+    ax.set_xlim(degrees[0], degrees[-1] + 4.6)
+
+    ax = axes[1]
+    # A couple of worlds explode when a degree-12 fit extrapolates wildly, so
+    # the MEAN gap is outlier-driven. Show the bulk and report robust numbers.
+    lo, hi = -0.2, 0.3
+    ax.hist(np.clip(gaps, lo, hi), bins=28, range=(lo, hi), color=BLUE,
+            edgecolor="white", lw=.4)
+    ax.axvline(0, color=INK, lw=1)
+    ax.axvline(np.median(gaps), color=ORANGE, ls="--", lw=1.5)
+    ax.text(.03, .90, s["gapstat"].format(p=100 * (gaps > 0).mean(),
+                                          m=np.median(gaps)),
+            color=ORANGE, fontsize=8, va="top", transform=ax.transAxes)
+    ax.set_xlim(lo, hi)
+    ax.set_xlabel(s["xlabel_gap"])
+    ax.set_ylabel(s["ylabel_worlds"])
+
+    for ax in axes:
+        for side in ("top", "right"):
+            ax.spines[side].set_visible(False)
+        ax.grid(axis="y", color="#e5e5e5", lw=.6)
+        ax.set_axisbelow(True)
     fig.tight_layout()
     fig.savefig(out / "ch14_overfitting.png", dpi=150)
     plt.close(fig)
-    return {"best": int(best), "train_at_12": train_err[-1],
-            "test_at_12": test_err[-1], "test_at_best": min(test_err)}
+    return {"chosen": int(degrees[chosen]), "sel_at_chosen": sel_err[chosen],
+            "final_at_chosen": final_err, "median_gap": float(np.median(gaps)),
+            "mean_gap_outlier_driven": gaps.mean(),
+            "pct_worse": 100 * (gaps > 0).mean()}
 
 
 def fig_ch15(s: dict, out: Path) -> dict:
