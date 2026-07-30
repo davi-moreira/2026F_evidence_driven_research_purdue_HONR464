@@ -543,7 +543,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Data strategy</strong>: your plan for how the data come to exist, meaning who gets sampled and who gets which condition. Example: “randomly send each session to the old or new recommender, then log every accept.”</li>
 <li><strong>Answer strategy</strong>: your plan for turning the data into an estimate of the inquiry. Example: “accept rate in the new group minus accept rate in the old group.”</li>
 </ul>
-<p>The four are not a checklist you fill in any order. They must <strong>align</strong>, meaning your data and answer strategies actually reach the inquiry your model makes askable. Example of misalignment: a causal inquiry (“the lift the recommender <em>causes</em>”) served by a data strategy that never randomizes who sees what can only show an <strong>association</strong>, meaning two things move together without proof that one caused the other. Naming the misalignment on paper is the whole job here.</p>
+<p>The four are not a checklist you fill in any order. They must <strong>align</strong>, meaning your data and answer strategies actually reach the inquiry your model makes askable. Example of misalignment: a causal inquiry (“the lift the recommender <em>causes</em>”) served by a data strategy where the people who see the new version differ systematically from those who do not. What that comparison delivers is an <strong>association</strong>, meaning two things move together without proof that one caused the other.</p>
+<p>Read that carefully, because it is easy to draw the wrong lesson. Alignment does not mean your data get to rewrite your question. The inquiry is still causal; this design simply does not reach it. Nor does the absence of randomizing settle the matter: observational designs can carry causal answers when they bring a defended argument for why the compared groups are otherwise alike, which is the whole subject of a later chapter. The honest diagnosis names the gap: causal inquiry, currently unidentified under this data and answer strategy. Naming that on paper is the whole job here.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">9.3</span> A worked example</h2>
@@ -582,7 +583,7 @@ exists, say so instead of inventing one.</code></pre>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Three choices stay yours. <strong>Which world your question assumes</strong> (the model, and so what could confound it). <strong>Which single quantity you want</strong> (the inquiry, named in your words, not the AI’s paraphrase). <strong>Whether your four parts align</strong>, and therefore whether your claim boundary is <em>causes</em> or only <em>is associated with</em>. An AI can draft candidate parts. Deciding they agree, and owning the claim that follows, is research judgment you cannot hand off.</p>
+<p>Three choices stay yours. <strong>Which world your question assumes</strong> (the model, and so what could confound it). <strong>Which single quantity you want</strong> (the inquiry, named in your words, not the AI’s paraphrase). <strong>Whether your four parts align</strong>, and therefore whether your claim boundary is <em>causes</em>, only <em>is associated with</em>, or <em>causal but not yet identified by this design</em>. That third state is a real answer, and keeping your question while admitting the design cannot reach it is more honest than shrinking the question to fit the data. An AI can draft candidate parts. Deciding they agree, and owning the claim that follows, is research judgment you cannot hand off.</p>
 </div>
 </div>
 </section>

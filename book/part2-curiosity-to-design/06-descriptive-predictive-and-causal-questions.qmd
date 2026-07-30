@@ -48,13 +48,42 @@ means only the units you actually observed. **A population** means a larger grou
 your sampling reaches beyond the data. **Unseen cases** means units you have not
 observed yet, usually future ones.
 
-Crossing the two axes gives four named positions. **Description** is descriptive
+Crossing the two axes gives four familiar names. **Description** is descriptive
 about the data at hand. **Generalization** is descriptive about a population, and it
 must pay for its reach with a sampling design that lets the units you saw stand in for
 the ones you did not. **Prediction** is descriptive about unseen cases; it forecasts a
 new case from a pattern. Prediction is still descriptive, not causal: guessing who
 will drop out is not the same as knowing what makes them drop out. **Causal
 reasoning** is the causal kind, the only position that earns the word "because."
+
+Those four names are labels, not boxes that answer anything for you. Causal questions
+have reach as well, and the reach changes what you are asking. You might want the
+effect for the units you actually studied, the effect for a wider population your
+sample stands in for, or the effect inside one named subgroup. Those are three
+different questions with three different answers, so say which one you want. Example:
+the effect of a second register on the twelve lunch periods you timed is not the same
+quantity as its effect on every weekday lunch this term.
+
+Now the rule that keeps the whole compass honest, and it is the one most often broken.
+Your data never change what kind of question you asked. A question about what an
+intervention would change stays causal even when your evidence cannot answer it. When
+your design cannot isolate that answer, the honest status is **currently
+unidentified**, meaning the question is still causal and this design does not reach
+it yet. Example: you want to know whether a second register cuts waiting, but managers
+open one only when the line is already long, so crowding and registers move together.
+From there you have two legitimate moves. Strengthen the design until it can carry a
+causal answer, or deliberately declare a new descriptive question and record the
+swap as a decision you made. Sliding quietly between the two is how a project ends up
+claiming more than it earned.
+
+> **A question that often comes up here:** if my data cannot answer a causal question,
+> should I just rewrite it as a descriptive one?
+>
+> Only if a descriptive question is genuinely what you now want to ask. Your current
+> result may well be descriptive while your causal question sits unanswered beside it.
+> Write "currently unidentified" next to the causal one, then decide whether to
+> redesign or to change questions. Both are respectable. Quietly swapping the question
+> and keeping the causal wording is not.
 
 One last hazard. A **double-barreled question** is one sentence that secretly asks two
 questions of different kinds, such as "how common is burnout, and does night work
@@ -127,9 +156,10 @@ whether answering it needs an intervention or only a pattern. Use a table.
 ```
 
 *After running, verify (counters **silent scope change**):* reread the position it
-returns against the two definitions. If it calls your question causal, confirm your
-design ever intervenes; if it only observes what already is, the honest kind is
-descriptive.
+returns against the two definitions, using the words of your question and not the data
+you happen to have. If it calls your question causal, ask whether your design can
+isolate that answer. If it cannot, the status is causal and currently unidentified,
+never descriptive.
 
 Split a question you suspect is double-barreled:
 
@@ -170,16 +200,21 @@ double-barreled, and naming that is progress.
 
 Suppose your project only records wait times at counters that already run two
 registers. Nothing is ever assigned; you measure counters as you find them. You ask a
-chatbot to classify "is a second register an effective way to cut waiting?" It sees
-the word "effective," reads the question as causal, and confidently recommends a
-randomized experiment that assigns counters to one register or two. That is fluent and
-well-formatted, and wrong for your design, because no one-register comparison world
-exists anywhere in your data. The word "effective" is a **giveaway
-word**, a surface hint the tool trusted instead of asking what answer the question
-wants. You catch it the same way every time: reread the question against the two
-definitions and ask whether your design ever intervenes. It does not, so the question
-is descriptive (Description for the counters you timed, Generalization if it reaches
-to every counter on campus), and you reject the causal label as a silent scope change.
+chatbot to classify "is a second register an effective way to cut waiting?" It reads
+the question as causal, which is right, and then reports the difference between busy
+two-register counters and quieter one-register counters as the effect. That is fluent,
+well-formatted, and wrong, because the counters that got a second register are the
+crowded ones. Crowding drives both the register and the wait, so the comparison
+carries no causal answer.
+
+The tool's error was not the label. It was skipping the step between a causal question
+and a causal answer: showing why this comparison isolates the register's effect and
+nothing else. You catch it by asking what makes one counter differ from another, and
+whether that same thing also moves waiting time. Here it does. So your honest status
+is causal and currently unidentified, and you now choose openly. You can look for a
+design that carries the answer, such as periods where the second register opens on a
+schedule rather than on the crowd. Or you can declare a descriptive question you can
+actually answer, write down that you changed it, and stop using the word "effective."
 
 ## It is your turn
 
@@ -199,8 +234,9 @@ asking for, which fixes what your evidence will ever be allowed to say.*
    forbids you even if the answer comes out beautifully.
 5. If your lead question is causal, describe the comparison world it needs: the
    version of events that did not happen and that your design will have to stand in
-   for. If you cannot describe that world, your question is probably still descriptive,
-   and it is better to learn that now.
+   for. Then say whether your design can stand in for it. If it cannot yet, write
+   "causal, currently unidentified" and keep the question. That is a design finding,
+   not a reason to relabel what you asked.
 6. Log the placement in your AI Research Ledger, and verify it with a named method from
    the [Verification Guide](../verification-guide.qmd). A classification is a judgment,
    so use peer reasoning: walk someone through the two definitions and your argument,

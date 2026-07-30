@@ -48,9 +48,17 @@ letter each.
 The four are not a checklist you fill in any order. They must **align**, meaning your
 data and answer strategies actually reach the inquiry your model makes askable.
 Example of misalignment: a causal inquiry ("the lift the recommender *causes*") served
-by a data strategy that never randomizes who sees what can only show an
-**association**, meaning two things move together without proof that one caused the
-other. Naming the misalignment on paper is the whole job here.
+by a data strategy where the people who see the new version differ systematically from
+those who do not. What that comparison delivers is an **association**, meaning two
+things move together without proof that one caused the other.
+
+Read that carefully, because it is easy to draw the wrong lesson. Alignment does not
+mean your data get to rewrite your question. The inquiry is still causal; this design
+simply does not reach it. Nor does the absence of randomizing settle the matter:
+observational designs can carry causal answers when they bring a defended argument for
+why the compared groups are otherwise alike, which is the whole subject of a later
+chapter. The honest diagnosis names the gap: causal inquiry, currently unidentified
+under this data and answer strategy. Naming that on paper is the whole job here.
 
 ## A worked example
 
@@ -126,9 +134,11 @@ citation for a paper that does not exist.
 Three choices stay yours. **Which world your question assumes** (the model, and so
 what could confound it). **Which single quantity you want** (the inquiry, named in
 your words, not the AI's paraphrase). **Whether your four parts align**, and therefore
-whether your claim boundary is *causes* or only *is associated with*. An AI can draft
-candidate parts. Deciding they agree, and owning the claim that follows, is research
-judgment you cannot hand off.
+whether your claim boundary is *causes*, only *is associated with*, or *causal but not
+yet identified by this design*. That third state is a real answer, and keeping your
+question while admitting the design cannot reach it is more honest than shrinking the
+question to fit the data. An AI can draft candidate parts. Deciding they agree, and
+owning the claim that follows, is research judgment you cannot hand off.
 :::
 
 ## An AI failure case

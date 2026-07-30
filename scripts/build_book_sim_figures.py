@@ -14,9 +14,10 @@ change a simulation, change BOTH (the chapter block and this script) and rerun:
 
     .venv/bin/python scripts/build_book_sim_figures.py
 
-Current figures (first tranche, D26): ch11 random-vs-convenience sampling,
-ch14 overfitting (train vs holdout error), ch15 the randomization
-distribution of a difference in means.
+Current figures: ch11 random-vs-convenience sampling, ch14 overfitting (train
+vs holdout error), ch15 the randomization distribution of a difference in
+means, and ch15 treatment-dependent attrition (the complete-case contrast is
+not the effect for everyone enrolled — the D35 Batch-A counterexample).
 """
 from __future__ import annotations
 
@@ -46,6 +47,10 @@ L = {
         "mean_est": "mean of estimates = {v:.1f} pp",
         "xlabel_ate": "Estimated effect of the reminder (percentage points)",
         "ylabel_n": "Number of re-randomizations",
+        "cc_truth": "true effect for everyone enrolled = {v:.1f} pp",
+        "cc_mean": "complete-case contrast = {v:.1f} pp",
+        "cc_retention": "still measured at the end:\n{t:.0f}% of the reminder arm, {c:.0f}% of the control arm",
+        "xlabel_cc": "Complete-case contrast (percentage points)",
     },
     "book-pt": {
         "random": "Amostras aleatórias\n(n = 500)",
@@ -61,6 +66,10 @@ L = {
         "mean_est": "média das estimativas = {v:.1f} pp",
         "xlabel_ate": "Efeito estimado do lembrete (pontos percentuais)",
         "ylabel_n": "Número de re-sorteios",
+        "cc_truth": "efeito verdadeiro para todos os inscritos = {v:.1f} pp",
+        "cc_mean": "contraste de casos completos = {v:.1f} pp",
+        "cc_retention": "ainda medidos ao final:\n{t:.0f}% do braço com lembrete, {c:.0f}% do braço de controle",
+        "xlabel_cc": "Contraste de casos completos (pontos percentuais)",
     },
     "book-es": {
         "random": "Muestras aleatorias\n(n = 500)",
@@ -76,6 +85,10 @@ L = {
         "mean_est": "media de las estimaciones = {v:.1f} pp",
         "xlabel_ate": "Efecto estimado del recordatorio (puntos porcentuales)",
         "ylabel_n": "Número de reasignaciones",
+        "cc_truth": "efecto verdadero para todos los inscritos = {v:.1f} pp",
+        "cc_mean": "contraste de casos completos = {v:.1f} pp",
+        "cc_retention": "aún medidos al final:\n{t:.0f}% del brazo con recordatorio, {c:.0f}% del brazo de control",
+        "xlabel_cc": "Contraste de casos completos (puntos porcentuales)",
     },
 }
 
@@ -189,6 +202,53 @@ def fig_ch15(s: dict, out: Path) -> dict:
             "hi": np.percentile(estimates, 97.5)}
 
 
+def fig_ch15_attrition(s: dict, out: Path) -> dict:
+    """Treatment-dependent attrition: the complete-case contrast is not the ATE.
+
+    Random assignment stays honest; deleting outcomes afterward is what breaks
+    the comparison. The reminder keeps only the healthier patients measurable,
+    so the observed gap runs far above the true effect for everyone enrolled.
+    """
+    rng = np.random.default_rng(SEED)
+    N, reps, tau = 2000, 2000, 5.0
+    health = rng.normal(size=N)
+    y0 = 60 + 10 * health + rng.normal(0, 5, size=N)   # refill rate, no reminder
+    y1 = y0 + tau                                      # ... with the reminder
+    r0 = health > -0.8         # who is still measurable under control
+    r1 = health > -0.2         # ... under the reminder: the sickest drop out
+    ate = float(np.mean(y1 - y0))
+
+    contrasts = []
+    for _ in range(reps):
+        z = rng.permutation(N) < N // 2
+        y = np.where(z, y1, y0)
+        retained = np.where(z, r1, r0)
+        contrasts.append(y[z & retained].mean() - y[(~z) & retained].mean())
+    contrasts = np.asarray(contrasts)
+
+    fig, ax = plt.subplots(figsize=(7.6, 3.2))
+    ax.hist(contrasts, bins=40, color=ORANGE, edgecolor="white", lw=.4)
+    ax.axvline(ate, color=INK, ls="--", lw=1.2)
+    ax.text(.02, .92, s["cc_truth"].format(v=ate), color=INK, fontsize=9,
+            transform=ax.transAxes)
+    ax.text(.02, .82, s["cc_mean"].format(v=contrasts.mean()), color=ORANGE,
+            fontsize=9, transform=ax.transAxes)
+    ax.text(.02, .58, s["cc_retention"].format(t=100 * r1.mean(),
+                                               c=100 * r0.mean()),
+            color="#777777", fontsize=8, transform=ax.transAxes)
+    ax.set_xlabel(s["xlabel_cc"])
+    ax.set_ylabel(s["ylabel_n"])
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.grid(axis="y", color="#e5e5e5", lw=.6)
+    ax.set_axisbelow(True)
+    fig.tight_layout()
+    fig.savefig(out / "ch15_attrition.png", dpi=150)
+    plt.close(fig)
+    return {"ate": ate, "cc_mean": contrasts.mean(),
+            "retention_t": r1.mean(), "retention_c": r0.mean()}
+
+
 def main() -> None:
     for edition, strings in L.items():
         out = REPO / edition / "images" / "sims"
@@ -196,12 +256,14 @@ def main() -> None:
         stats11 = fig_ch11(strings, out)
         stats14 = fig_ch14(strings, out)
         stats15 = fig_ch15(strings, out)
-        print(f"✓ {edition}: 3 figures → {out.relative_to(REPO)}/")
+        stats15a = fig_ch15_attrition(strings, out)
+        print(f"✓ {edition}: 4 figures → {out.relative_to(REPO)}/")
     print("ch11:", {k: (round(v, 2) if isinstance(v, float) else v)
                     for k, v in stats11.items()})
     print("ch14:", {k: (round(v, 3) if isinstance(v, float) else v)
                     for k, v in stats14.items()})
     print("ch15:", {k: round(float(v), 2) for k, v in stats15.items()})
+    print("ch15-attrition:", {k: round(float(v), 3) for k, v in stats15a.items()})
 
 
 if __name__ == "__main__":

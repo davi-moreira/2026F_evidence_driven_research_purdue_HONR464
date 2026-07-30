@@ -83,10 +83,24 @@ arms, that 9 points is an honest estimate of the reminder's average effect.
 Now the honesty test. Suppose the sickest patients in the reminder arm stopped
 answering follow-up and left the study. **Attrition** is units leaving before you
 measure the outcome. Example: the patients whose blood pressure was worst drop out
-of the arm you are studying. When who leaves is tied to the outcome, the patients
-who remain are no longer a fair comparison, and your 9-point gap now describes only
-patients healthy enough to stay, not everyone you enrolled. Attrition has two
-siblings the lab drills. **Noncompliance** is assigned units that never take the
+of the arm you are studying.
+
+Here is the part almost everyone gets wrong. It is tempting to say the 9-point gap
+still describes "the patients healthy enough to stay." It does not. Staying is now
+something the treatment itself changed, so the two arms no longer hold the same kind
+of person. The reminder arm shows you patients who stayed *with* reminders. The
+control arm shows you patients who stayed *without* them. Those are different groups,
+and the difference between them is a **complete-case contrast**, a comparison of
+whoever happened to be measured in each arm. Example: if reminders keep some anxious
+patients engaged who would otherwise have vanished, they appear in one arm and have no
+counterpart in the other.
+
+A complete-case contrast is not the effect for everyone you enrolled. It is also not
+the effect "among stayers," because each arm produced its own set of stayers. The
+coin flip was honest; deleting outcomes afterward is what broke the comparison. So
+report retention in each arm first, before any effect. If the arms lost different
+numbers of people, or different kinds, say so, and treat the gap as a number in search
+of an assumption rather than an answer. Attrition has two siblings the lab drills. **Noncompliance** is assigned units that never take the
 treatment, like patients who changed numbers and never got a text. **Spillover** is
 treatment reaching the control arm, like a texted patient reminding an untreated
 friend. Each one leaves the coin flip untouched and still changes which quantity
@@ -146,6 +160,61 @@ from this histogram, and that spread is the uncertainty an honest report must
 carry next to the estimate. In the companion notebook, double `n` and watch
 the histogram narrow: sample size buys precision — it is randomization that
 buys truth on average.
+
+## What attrition does to that promise
+
+The code below keeps the coin flip exactly as honest as before and changes one
+thing: who is still measurable at the end. Every one of 2,000 patients gets a
+true benefit of 5 points. Under control, patients drop out only if their health
+is poor. Under the reminder, the cut is harsher, so more of the sickest patients
+go unmeasured. Then the study is re-randomized 2,000 times, and each time we take
+the plain difference between the patients we can still see.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+N, reps, tau = 2000, 2000, 5.0
+health = rng.normal(size=N)
+y0 = 60 + 10 * health + rng.normal(0, 5, size=N)   # refill rate, no reminder
+y1 = y0 + tau                                      # ... with the reminder
+r0 = health > -0.8        # still measurable under control
+r1 = health > -0.2        # ... under the reminder: the sickest drop out
+
+contrasts = []
+for _ in range(reps):
+    z = rng.permutation(N) < N // 2                # an honest coin flip
+    y = np.where(z, y1, y0)
+    retained = np.where(z, r1, r0)
+    contrasts.append(y[z & retained].mean() - y[(~z) & retained].mean())
+contrasts = np.asarray(contrasts)
+
+print("true effect for everyone enrolled:", np.mean(y1 - y0))
+print("average complete-case contrast:   ", contrasts.mean().round(2))
+```
+
+![The complete-case contrasts pile up near 8 points, far from the true 5-point
+effect.](../images/sims/ch15_attrition.png){fig-alt="Histogram of 2,000
+complete-case contrasts in orange, centered near 8.1 percentage points, with a
+dashed vertical line at the true effect of 5.0 sitting far to the left of the
+entire distribution."}
+
+Look at where the dashed line sits. The truth is 5 points, and not one of the
+2,000 re-randomizations produced a contrast anywhere near it. They pile up around
+8.1. Nothing here is a fluke of one unlucky sample, and no amount of extra data
+would pull the pile leftward, because the tilt is not noise. Dropping the sickest
+patients from one arm raises that arm's average, and the gap inherits the lift.
+
+Notice what the simulation did *not* do. It never touched the coin flip, and it
+never made the reminder work better than 5 points for anybody. Random assignment
+did its whole job. The damage happened afterward, when outcomes went missing in a
+way the treatment itself controlled. That is why retention by arm belongs in your
+report before any effect does: 59 percent of the reminder arm was still measured
+against 80 percent of the control arm, and that gap alone tells a reader to
+distrust the headline.
 
 ## The Colab laboratory
 
@@ -215,7 +284,8 @@ single worst threat, then test it against your retention by arm. Counters
 Three calls never leave your hands. You decide **whether random assignment actually
 happened** in your study, because a tool cannot see how you sorted the arms. You
 decide **which quantity your number estimates and for whom**, the effect for
-everyone enrolled or only the effect among those who stayed. And you decide
+everyone enrolled, or whether attrition has left you without a causal number at all
+until you state an assumption and test how much it matters. And you decide
 **whether the effect is large enough to act on**, and whether it is even ethical to
 randomize real patients and withhold something from the control arm. You own the
 final sentence, its boundary, and its uncertainty.
@@ -234,9 +304,11 @@ dropping the worst cases pushed it up.
 
 You catch it by checking retention by arm, not by re-reading the fluent paragraph.
 When you see the reminder arm lost far more patients than the control arm, and the
-ones it lost were the sickest, you know the 12 points is the effect among stayers. A
-green check is not a correct result. You rewrite the sentence to name the group the
-number actually speaks for.
+ones it lost were the sickest, you know the 12 points is a complete-case contrast. It
+is not the effect among stayers either, because each arm made its own stayers. A green
+check is not a correct result. You rewrite the sentence to report retention in both
+arms, to say plainly that this trial as run does not deliver the effect for everyone
+enrolled, and to name what you would have to assume before any causal number follows.
 
 ## It is your turn
 
@@ -249,9 +321,11 @@ word "because", and makes you say out loud whose effect your number is.*
 2. Take one real unit from your study and write Y(1) and Y(0) for it in plain
    words. Circle the one you will actually get to see. That circle is the
    fundamental problem of causal inference in your own project's handwriting.
-3. Name the quantity your estimate targets and for whom: everyone you enrolled,
-   only those who complied, only those who stayed. Write it as one sentence a
-   stranger could repeat back to you correctly.
+3. Name the quantity your estimate targets and for whom: everyone you enrolled, or
+   only those who complied. Write it as one sentence a stranger could repeat back to
+   you correctly. "Those who stayed" is not available as an answer here. If your
+   treatment can change who stays, say instead what you assume about the people you
+   did not measure, and show how the conclusion moves when that assumption bends.
 4. Name the threat nearest your design, whether attrition, noncompliance, or
    spillover, and the check you will run in your own data to see how bad it is:
    retention by arm, take-up by arm, contact between arms.
