@@ -47,9 +47,11 @@ You defend a result by trying to break it first. A **robustness check** re-runs 
 same finding under a different but equally defensible choice and sees whether the
 answer holds. Example: you measured the improvement during one time of day, so you
 also measure it in two other realistic time blocks. A **placebo test** runs your exact
-procedure where the effect cannot exist and confirms it comes back near zero. Example:
-you compare two stretches of the *old* layout against each other, and any
-"improvement" between them is your measurement lying.
+procedure where the effect cannot exist and asks whether what comes back is ordinary
+for a world with nothing in it. Example: you compare two stretches of the old layout
+against each other. Repeat that over many such pairs, since any two stretches differ
+a little by chance, and an "improvement" far larger than the rest of that pile is
+your measurement lying.
 
 The habit that keeps an attack honest is order. **Specification searching** means
 trying many versions of an analysis and reporting only the one that gave the answer

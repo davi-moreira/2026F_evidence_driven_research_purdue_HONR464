@@ -69,7 +69,7 @@ larva. The poster reads: **"The probiotic increased larval body length by 0.5 mm
 
 **Reproduce it.** You restart-and-run-all. The code loads the file, splits larvae
 by tank type, and differences the two group means. The number that comes back is
-**0.43 mm**, not 0.5. The package reproduces, which is a real success. But the
+**0.43 mm**, not 0.5 (the figures in this worked example are constructed). The package reproduces, which is a real success. But the
 write-up says 0.5 and the code says 0.43, and notice that rounding does not explain
 it: 0.43 rounds to 0.4. This is a claim-output mismatch, your first finding, and it
 earns you the right to push harder.
@@ -90,8 +90,15 @@ gap between them is not a range and reporting it as one would be a third error o
 of the first two.
 
 What you report instead is survival by tank type first, then final length among
-surviving larvae, labeled exactly that way. If treatment changed survival, say so and
-say that the length comparison is conditional on an outcome the treatment touched.
+surviving larvae, labeled exactly that way. Say plainly what that pair does and does
+not do. It is an honest description of what happened in the tanks. It does not
+deliver an overall causal effect of the probiotic on day-30 length, and no
+rearrangement of these numbers will, because day-30 length does not exist for a larva
+that died. Note too that matching survival percentages do not rescue the comparison:
+two tanks can lose the same fraction and still lose different kinds of larvae. If
+the study needs one headline outcome, the fix is upstream — predefine a combined
+outcome before analysis, such as survived-and-reached-a-given-length, and defend why
+that ordering answers the biological question.
 
 **Test the hidden assumption.** The package reports its gap as if all 240 larvae
 were independent, producing a tight interval well above zero. They are not
@@ -174,7 +181,9 @@ interval).
 An AI tool connected to an execution environment *can* run the code, and asking it to
 is reasonable. What it cannot do is stand behind the result. So demand the evidence of
 the run rather than the summary of it: the commands, the environment and package
-versions, the raw output, and which files it actually touched. A confident "it
+versions, the exact version of the code and data it ran (a commit hash, if the
+package has one), whether each command exited cleanly or errored, the raw output,
+and which files it actually touched. A confident "it
 reproduces" with no execution record tells you nothing about whether the released
 package ran, a modified copy ran, or nothing ran at all. Then reproduce the headline
 yourself from a clean start, because the verdict carries your name. You also keep three

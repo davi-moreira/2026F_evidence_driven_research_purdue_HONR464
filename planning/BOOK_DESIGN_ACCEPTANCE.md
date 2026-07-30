@@ -103,8 +103,8 @@ check the reader must pass:
 | ch14 leakage | Nested selection versus reused-holdout selection produce different, and differently honest, performance estimates; time-ordered splits for temporal data |
 | ch15 attrition | Complete-case contrast under treatment-affected retention is not an effect "among stayers" |
 | ch18 reliability | Splitting respondents measures sampling variation; split-half reliability splits ITEMS |
-| ch21 robustness | Same-sign specification curves can share one bias; a multiverse range is not a confidence interval; specifications must share an estimand |
-| ch22 negative tests | Repeated samples under a valid null produce nonzero estimates; "exact zero" is the wrong criterion |
+| ch21 robustness | Same-sign specification curves can share one bias; a specification spread is not an uncertainty interval; every version must test the same substantive claim, dots in one panel must be commensurable, and no version may condition on a post-treatment outcome |
+| ch22 negative tests | Repeated samples under a valid null produce nonzero estimates; "exact zero" is the wrong criterion; a pass reduces concern only as far as the check was sensitive, and no simulated band is a decision rule |
 | ch32 LOCF | Death is post-treatment; the estimand and its assumptions must be declared, and the spread is not an honest range |
 
 **Pass (strengthened 2026-07-30, per the Batch-A review):** for each defect, the
@@ -128,6 +128,26 @@ counterexample set must contain, seeded (SEED = 464):
 One vivid counterexample demonstrates that a failure can happen; only the
 boundary and converse cases establish WHICH feature causes it, and only the
 propagation search makes the correction durable.
+
+**Amendment (2026-07-30, from the B/C review).** The earlier "all specifications
+must share an estimand" wording was itself too strict and helped produce a ch21
+overshoot: legitimate multiverse analysis does vary operationalizations. The rule
+is now four-part — (1) a common substantive claim; (2) commensurable quantities
+within a plotted panel; (3) explicit stratification into labeled panels when
+population, outcome definition, or scale changes; (4) exclusion or separate
+treatment of groups defined by a post-treatment outcome. Stricter where causal
+meaning is at stake, less falsely rigid where it is not.
+
+**Executable manifest (required before Phase 1 is declared complete).** A5 is not
+met by prose. Each defect needs one row in an executable manifest carrying: the
+declared estimand, the positive case, the boundary case, the converse case, the
+expected numbers with tolerances, the concept-check answer key, and the propagation
+allowlist. The check must FAIL when a rejected phrase is deliberately reinserted
+into a canonical source — that test is the point, since the B/C round passed prose
+review while the same misconceptions survived in `nb08`, `nb10`, `ch20`, `ch23`,
+`ms09`, `ms13`, `nb14`, and the generated rubrics. Propagation searches run across
+chapter bodies AND prompts, canonical notebook sources, generated notebooks,
+rubrics, configuration, and both translations.
 
 **Known Phase-1 → Phase-3 dependency (recorded 2026-07-30).** Correcting ch10's
 power definition required naming a **statistical test** and its **threshold**, and

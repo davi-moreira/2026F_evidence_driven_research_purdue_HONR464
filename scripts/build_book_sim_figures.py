@@ -45,7 +45,9 @@ L = {
         "chosen": "chosen on selection",
         "xlabel_gap": "Final error minus the winning selection error",
         "ylabel_worlds": "Simulated worlds",
-        "gapstat": "worse on the final holdout in {p:.0f}% of worlds\ntypical gap = {m:+.3f} RMSE",
+        "gapstat": "mean optimism = {mean:+.3f} RMSE (median {med:+.3f})\nworse than its crowning score in {p:.0f}% of worlds",
+        "overflow": "{n} worlds beyond +{hi:.1f} (largest {mx:+.2f})",
+        "xlabel_gap2": "True error of the winner minus its winning selection score",
         "xlabel_deg": "Model flexibility (polynomial degree)",
         "ylabel_rmse": "Prediction error (RMSE)",
         "best": "chosen on selection",
@@ -74,7 +76,9 @@ L = {
         "chosen": "escolhido na seleção",
         "xlabel_gap": "Erro final menos o erro de seleção vencedor",
         "ylabel_worlds": "Mundos simulados",
-        "gapstat": "pior no holdout final em {p:.0f}% dos mundos\ndiferença típica = {m:+.3f} RMSE",
+        "gapstat": "otimismo médio = {mean:+.3f} RMSE (mediana {med:+.3f})\npior que a nota da coroação em {p:.0f}% dos mundos",
+        "overflow": "{n} mundos além de +{hi:.1f} (maior {mx:+.2f})",
+        "xlabel_gap2": "Erro verdadeiro do vencedor menos a sua nota de seleção",
         "xlabel_deg": "Flexibilidade do modelo (grau do polinômio)",
         "ylabel_rmse": "Erro de predição (RMSE)",
         "best": "escolhido na seleção",
@@ -103,7 +107,9 @@ L = {
         "chosen": "elegido en la selección",
         "xlabel_gap": "Error final menos el error de selección ganador",
         "ylabel_worlds": "Mundos simulados",
-        "gapstat": "peor en el holdout final en {p:.0f}% de los mundos\ndiferencia típica = {m:+.3f} RMSE",
+        "gapstat": "optimismo medio = {mean:+.3f} RMSE (mediana {med:+.3f})\npeor que su nota de selección en {p:.0f}% de los mundos",
+        "overflow": "{n} mundos más allá de +{hi:.1f} (el mayor {mx:+.2f})",
+        "xlabel_gap2": "Error verdadero del ganador menos su nota de selección",
         "xlabel_deg": "Flexibilidad del modelo (grado del polinomio)",
         "ylabel_rmse": "Error de predicción (RMSE)",
         "best": "elegido en la selección",
@@ -164,8 +170,12 @@ def fig_ch14(s: dict, out: Path) -> dict:
 
     Left: training error falls forever while selection error turns up; the
     degree is chosen on the SELECTION set, and only that one choice is scored
-    on the locked final holdout. Right: repeating the whole procedure in 500
-    fresh worlds shows the winner's selection score is optimistic on average.
+    on the locked final holdout. Right: model-selection bias measured as the
+    verdict defines it — an EXPECTATION. In each of 500 fresh worlds the
+    winner's true error (a 10,000-point independent sample standing in for
+    the truth) is compared with the selection score that crowned it. Mean,
+    median, share-worse, and the tail are all reported; nothing is clipped
+    without an overflow mark.
     """
     rng = np.random.default_rng(SEED)
     degrees = np.arange(1, 13)
@@ -179,19 +189,21 @@ def fig_ch14(s: dict, out: Path) -> dict:
         return np.sqrt(np.mean((np.polyval(coefs, x) - y) ** 2))
 
     def one_world():
-        training, selection, final = world(40), world(40), world(40)
+        training, selection = world(40), world(40)
+        big = world(10_000)               # stands in for the model's true risk
         fits = [np.polyfit(training[0], training[1], d) for d in degrees]
         tr = np.array([rmse(c, training) for c in fits])
         sel = np.array([rmse(c, selection) for c in fits])
         chosen = int(np.argmin(sel))
-        return tr, sel, chosen, rmse(fits[chosen], final)
+        return tr, sel, chosen, rmse(fits[chosen], big), fits
 
-    train_err, sel_err, chosen, final_err = one_world()
+    train_err, sel_err, chosen, _, first_fits = one_world()
+    final_err = rmse(first_fits[chosen], world(40))   # the protocol's one final holdout
 
     gaps = []
     for _ in range(500):
-        _, sel, pick, fresh_final = one_world()
-        gaps.append(fresh_final - sel[pick])
+        _, sel, pick, fresh_true, _ = one_world()
+        gaps.append(fresh_true - sel[pick])
     gaps = np.asarray(gaps)
 
     fig, axes = plt.subplots(1, 2, figsize=(9.4, 3.5))
@@ -214,19 +226,24 @@ def fig_ch14(s: dict, out: Path) -> dict:
     ax.set_xlim(degrees[0], degrees[-1] + 4.6)
 
     ax = axes[1]
-    # A couple of worlds explode when a degree-12 fit extrapolates wildly, so
-    # the MEAN gap is outlier-driven. Show the bulk and report robust numbers.
-    lo, hi = -0.2, 0.3
-    ax.hist(np.clip(gaps, lo, hi), bins=28, range=(lo, hi), color=BLUE,
+    lo, hi = -0.15, 0.3
+    inside = gaps[(gaps >= lo) & (gaps <= hi)]
+    n_over = int((gaps > hi).sum())
+    ax.hist(inside, bins=27, range=(lo, hi), color=BLUE,
             edgecolor="white", lw=.4)
     ax.axvline(0, color=INK, lw=1)
-    ax.axvline(np.median(gaps), color=ORANGE, ls="--", lw=1.5)
-    ax.text(.03, .90, s["gapstat"].format(p=100 * (gaps > 0).mean(),
-                                          m=np.median(gaps)),
+    ax.axvline(gaps.mean(), color=ORANGE, ls="--", lw=1.5)
+    ax.text(.03, .93, s["gapstat"].format(mean=gaps.mean(),
+                                          med=np.median(gaps),
+                                          p=100 * (gaps > 0).mean()),
             color=ORANGE, fontsize=8, va="top", transform=ax.transAxes)
-    ax.set_xlim(lo, hi)
-    ax.set_xlabel(s["xlabel_gap"])
+    ax.annotate(s["overflow"].format(n=n_over, hi=hi, mx=gaps.max()),
+                xy=(hi, 0), xytext=(.55, .55), textcoords="axes fraction",
+                fontsize=8, color=INK,
+                arrowprops=dict(arrowstyle="->", color=INK, lw=.8))
+    ax.set_xlabel(s["xlabel_gap2"])
     ax.set_ylabel(s["ylabel_worlds"])
+    ax.set_xlim(lo, hi)
 
     for ax in axes:
         for side in ("top", "right"):
@@ -237,9 +254,10 @@ def fig_ch14(s: dict, out: Path) -> dict:
     fig.savefig(out / "ch14_overfitting.png", dpi=150)
     plt.close(fig)
     return {"chosen": int(degrees[chosen]), "sel_at_chosen": sel_err[chosen],
-            "final_at_chosen": final_err, "median_gap": float(np.median(gaps)),
-            "mean_gap_outlier_driven": gaps.mean(),
-            "pct_worse": 100 * (gaps > 0).mean()}
+            "final_at_chosen": final_err, "mean_gap": gaps.mean(),
+            "median_gap": float(np.median(gaps)),
+            "pct_worse": 100 * (gaps > 0).mean(),
+            "n_overflow": n_over, "max_gap": gaps.max()}
 
 
 def fig_ch15(s: dict, out: Path) -> dict:
@@ -322,11 +340,13 @@ def fig_ch15_attrition(s: dict, out: Path) -> dict:
 
 
 def fig_ch22(s: dict, out: Path) -> dict:
-    """A valid null does not print 0.00 — it prints a small number in a spread.
+    """A valid null returns a spread of small readings, not a row of zeros.
 
     2,000 vehicle-versus-blank experiments in a world where the vehicle truly
-    does nothing. The readings scatter around zero; not one is exactly zero.
-    Judge a negative test against this spread, never against 0.00.
+    does nothing. The readings scatter around zero (exact unrounded zero is
+    uncommon for a continuous estimator, though dozens round to 0.00 at two
+    decimals). The histogram is an illustration of null variation, never a
+    pass/fail band.
     """
     rng = np.random.default_rng(SEED)
     reps, pairs = 2000, 12

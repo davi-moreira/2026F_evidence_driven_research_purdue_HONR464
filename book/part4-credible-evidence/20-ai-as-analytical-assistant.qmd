@@ -47,9 +47,12 @@ it, and breaking it is the labor you delegate.
 Two attacks do most of the work. A **robustness check** re-runs the same finding under a
 different but equally defensible choice and asks whether the answer holds. Example: you
 reported a mean time to first offer, so you also compute the median and check the story
-survives. A **placebo test** runs your exact analysis where the effect cannot exist and
-confirms it returns near zero. Example: you shuffle the "program" and "no program"
-labels at random and check that the fake gap collapses to nothing.
+survives. A **placebo test** runs your exact analysis where the effect cannot exist and asks
+whether what comes back is ordinary for a world with nothing in it. Example: you
+shuffle the "program" and "no program" labels at random, many times, and look at the
+pile of fake gaps your machinery produces. Random labels always differ a little, so
+the pile is not zeros; what matters is whether your real gap looks ordinary in it or
+sits far outside.
 
 ### The assistant works in a loop, and the loop needs a log
 
@@ -92,8 +95,10 @@ direction holds across all eight, and the magnitude ranges from about 0.5 to 0.9
 deviations. Your honest headline is a direction plus a range, not one flattering number.
 Three cycles went into getting that grid to run, and all three are in your log.
 
-**Placebo and red-team.** You ask the assistant to shuffle the program labels and re-run.
-The fake gap comes back near zero, so the machinery is not manufacturing your effect. Then
+**Placebo and red-team.** You ask the assistant to shuffle the program labels and re-run
+many times. Your real gap sits far out in the tail of the fake ones, which lowers your
+worry that the machinery alone is manufacturing the effect, as far as this check can
+see. Then
 you ask it, as a hostile reviewer, for the single worst flaw. It says with total confidence
 that the most experienced workers are driving the result. You already dropped the
 already-employed group in the sample check and the gap held, so the data refute that flag.

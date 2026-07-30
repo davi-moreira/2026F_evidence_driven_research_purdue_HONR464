@@ -39,18 +39,24 @@ true answer has to be zero. Example: measuring your "effect" in a group that rec
 no treatment at all. Be precise about what "zero" means there, because this is where
 the test is most often misread. The TRUE answer is zero; the number your sample
 returns will almost never be exactly zero, because different samples wobble. What a
-clean pass looks like is a reading that is small, sitting inside the wobble your
-sample size ordinarily produces. What exposes a flaw is a reading far outside that
-wobble, too large for chance to explain. Demand exact zeros and you will "fail"
-perfectly healthy machinery, or worse, tinker until a readout prints 0.00 and call
-the tinkering a fix.
+clean pass looks like is a reading small enough to sit comfortably among the readings
+your own procedure produces when nothing is happening. What should worry you is a
+reading far out from that pile, big enough that ordinary wobble is a strained
+explanation. Notice the hedge in both sentences: chance does occasionally produce a
+large reading, so no cutoff turns this into a verdict. Demand exact zeros and you
+will "fail" perfectly healthy machinery, or worse, tinker until a readout prints 0.00
+and call the tinkering a fix.
 
-A good negative control also has to satisfy two conditions, and both matter. Your
-proposed cause must not be able to reach it, or it is not negative. And the artifact
-you fear must be able to reach it, or it is not a test: a control your pipeline never
+A good negative control has to satisfy three conditions, and all three matter. Your
+proposed cause must not be able to reach it, or it is not negative. The artifact you
+fear must be able to reach it, or it is not a test: a control your pipeline never
 touches cannot catch your pipeline. Example: if the worry is that your solvent kills
 bacteria, the control disk must carry the solvent, prepared and measured exactly like
-the real ones, minus only the extract. Three members of this family show up in almost
+the real ones, minus only the extract. And the check must be **sensitive** enough to
+show an artifact that would actually matter: run too few plates, or measure too
+coarsely, and a control sits near zero no matter what is going on. A quiet control
+from an insensitive check is not evidence of a clean pipeline; it is no evidence at
+all. Three members of this family show up in almost
 every audit.
 
 - **Placebo test**: you replace the real cause with a fake one that cannot act, and
@@ -79,9 +85,11 @@ rests on a single point.
 
 The negative tests all share one move: aim the machinery where the answer must be
 zero, and check that what comes back is ordinary for a world where it is. Here is the
-boundary you must never blur. A passed negative
-test rules out **one specific artifact**. It does not prove your effect is real, and it
-never turns a correlation into a cause.
+boundary you must never blur. A passed negative test **reduces your concern about one
+specific artifact, as far as that check could have detected it**. It does not prove
+the artifact is absent, it does not prove your effect is real, and it never turns a
+correlation into a cause. Report what the check could and could not have caught,
+not just that it passed.
 
 ## A worked example
 
@@ -100,14 +108,23 @@ disk grows its own clear ring, the test failed. The ethanol is killing the bacte
 and you can no longer tell how much of the extract's ring is the extract and how much
 is the solvent. The finding is an artifact until you redo it at a lower concentration.
 
-Notice what a clean pass still does not buy you. It does not tell you the extract works
-inside a living animal, or which molecule is responsible. It ruled out one artifact and
-nothing more, and that modesty is the point.
+Before you trust that pass, ask one more thing: could this check have caught a
+problem if there were one? A **positive control** is a condition you know produces a
+signal, run through the same machinery. Example: a disk soaked in a standard
+antibiotic should clear a ring. If it does, your lawn and your measurement are
+capable of showing inhibition, and a quiet vehicle disk means something. If even the
+antibiotic disk reads flat, your assay is not sensitive enough today, and the quiet
+vehicle told you nothing at all.
+
+Notice what a clean pass still does not buy you. It does not tell you the extract
+works inside a living animal, or which molecule is responsible. It lowered your
+worry about one artifact, as far as this assay could detect it, and that modesty is
+the point.
 
 ## A seeded simulation
 
 So what does "the vehicle did nothing" actually look like on paper? Not a row of
-zeros. The code below builds a world where the vehicle truly has no effect at all,
+clean zeros. The code below builds a world where the vehicle truly has no effect at all,
 then runs the experiment 2,000 times. Each run measures twelve matched vehicle and
 blank disks, with a shared plate-to-plate wobble and ordinary measurement noise, and
 reports the average difference.
@@ -126,8 +143,9 @@ vehicle = 6.3 + plate + rng.normal(0, .35, size=(reps, pairs))
 
 nulls = (vehicle - blank).mean(axis=1)   # true vehicle effect: exactly zero
 
-print("exactly zero in", int((nulls == 0).sum()), "of", reps, "experiments")
-print("middle 95% of readings:", np.percentile(nulls, [2.5, 97.5]).round(2))
+print("exactly zero:", int((nulls == 0).sum()), "of", reps, "experiments")
+print("rounds to 0.00 at two decimals:", int((nulls.round(2) == 0).sum()))
+print("typical spread (middle 95%):", np.percentile(nulls, [2.5, 97.5]).round(2))
 print("this run's reading:", round(float(nulls[0]), 3), "mm")
 ```
 
@@ -138,25 +156,29 @@ form a bell centered on zero, spanning roughly -0.4 to +0.4 millimetres, with a
 dashed line at zero and an orange line marking one experiment that read -0.03
 millimetres."}
 
-Count the exact zeros: **none**, out of two thousand experiments in a world built so
-the vehicle does nothing whatsoever. The readings pile up around zero and spread from
-about -0.29 to +0.27 mm, and the first run happened to return -0.03. A researcher
-demanding 0.00 would have called every one of these two thousand honest experiments a
-failure.
+Count them: in two thousand experiments, in a world built so the vehicle does nothing
+whatsoever, not one reading came back exactly zero. Sixty-two of them round to 0.00
+when you print two decimals, which is worth knowing, because a readout showing "0.00"
+is a rounded number and not a measurement of nothing. The readings pile up around zero
+and spread from about -0.29 to +0.27 mm, and the first run happened to return -0.03. A
+researcher demanding a true zero would have called all two thousand of these honest
+experiments failures.
 
-That spread is the thing to compare against, and it has a name worth keeping. Your
-**null reference spread** is the range of readings your own procedure produces when
-nothing is going on. Build it by simulating your null world at your sample size, as
-above, and then ask one question of your real control: is this reading ordinary in
-that pile, or is it out at the edge? A reading of -0.03 is unremarkable. A reading of
-+1.2 mm sits far outside anything the null world produced, and now you have something
-to investigate.
+That pile is what you compare against, and building your own is the useful habit:
+simulate your null world at your own sample size, look at the readings it produces,
+and then ask where your real control sits among them. A reading of -0.03 is
+unremarkable there. A reading of +1.2 mm sits far outside anything this null world
+produced, and now you have something to investigate.
 
-One honest limit. "Ordinary" and "unusual" are judgments here, not a formal decision
-rule, and this pile is only as trustworthy as the assumptions that generated it. A
-later chapter gives uncertainty its proper machinery. What you should carry from here
-is the reflex: judge a negative test against the spread its own null would produce,
-never against a number on a readout.
+Two limits keep this honest. The pile is only as trustworthy as the assumptions that
+built it, and it is an illustration of ordinary variation, never a pass line. Do not
+turn "inside the middle 95 percent" into a rule: that band excludes one honest
+experiment in twenty by construction, and drawing a cutoff there is a statistical
+decision this book has not equipped you to make yet. Ask the three questions instead.
+Could my cause have reached this control? Could the artifact I fear have reached it?
+Could this check have detected an artifact big enough to matter? A later chapter
+gives uncertainty its proper machinery, and then "how far outside is too far"
+becomes a question you can answer rather than guess.
 
 ## The Colab laboratory
 
@@ -257,10 +279,12 @@ produced your result or your own pipeline did.*
    falsification outcome measured where the effect cannot yet exist, or a negative
    control your cause could not possibly touch. Then confirm the control is genuinely
    null. If your cause can reach it, it is not a negative test and it will fail quietly.
-3. Before you run anything, write down what a clean pass looks like as a range, not
-   as 0.00: build your null reference spread by simulating your own null world at
-   your own sample size, and record the middle 95 percent of the readings it
-   produces. Commit to reporting your result whichever way it lands.
+3. Before you run anything, write down two things. First, how big an artifact would
+   actually matter for your claim: a shift of what size would change what you
+   conclude? Second, what ordinary looks like: simulate your null world at your own
+   sample size and see the range of readings it produces, so you are comparing
+   against a pile rather than against 0.00. Then commit to reporting your result
+   whichever way it lands.
 4. Run one diagnostic beside it. Leave-one-out is the cheapest: drop each case in turn,
    recompute, and find out whether a single observation is carrying your finding.
 5. Record what you got against what you predicted, and if the estimate moved, say by how
@@ -268,8 +292,10 @@ produced your result or your own pipeline did.*
    causal or general claim it still does not establish.
 6. Log both tests in your AI Research Ledger, and verify at least one output with a named
    method from the [Verification Guide](../verification-guide.qmd). **Simulation** is the
-   right tool for a negative test: build a dataset by hand where no effect exists, run
-   your test machinery on it many times, and confirm the readings scatter around zero
-   with the spread you expect. Note how large they get by chance, then judge your real
-   control against that pile rather than against 0.00. An AI reviewer may run the check with you; the
+   one good tool for a negative test: build a dataset by hand where no effect exists,
+   run your test machinery on it many times, and see the readings scatter around zero.
+   Note how large they get by chance, then judge your real control against that pile
+   rather than against 0.00. Pair it with a positive control, a condition you know
+   produces a signal, so you can show the check would have caught an artifact if one
+   were there. An AI reviewer may run the check with you; the
    decision to accept or reject stays yours.

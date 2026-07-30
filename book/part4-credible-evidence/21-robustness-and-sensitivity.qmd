@@ -12,9 +12,10 @@ advances.
 
 > **The research decision.** You decide **the full list of robustness and sensitivity
 > checks you will run, and you decide it before you look at a single result**, then
-> report every one of them. Same code, same table, opposite integrity: the only thing
-> that separates a defensible finding from a lucky slice is the order of looking and
-> deciding.
+> report every one of them. Two things separate a defensible finding from a lucky
+> slice: each version has to be a valid analysis on its own, and the looking has to
+> come after the deciding. Pre-listing protects the second; nothing rescues the
+> first.
 
 ## Why this decision matters
 
@@ -55,15 +56,19 @@ choices behind the estimate. The **metric** is the yardstick you report.
 Turning every handle at once and plotting the results gives a **specification curve**: a
 picture of one estimate under many defensible choices side by side.
 
-Before anything goes on that curve, it has to pass one gate. Every estimate on a single
-curve must aim at the **same estimand**, the one exact quantity you set out to learn,
-for the same group of units. Example: "the offer's effect on 30-day spending per
-shopper we assigned it to, counting shoppers who spent nothing" is an estimand. Swap in
-"average order value among the shoppers who actually bought something" and you have
-changed the question, because whether someone bought is itself affected by the offer.
-That estimate may be worth reporting, in its own place, with its own label. It is not
-another answer to the first question, and putting it on the same curve makes the curve
-meaningless.
+Before anything goes on that curve, it has to pass a gate with three parts. First,
+every version must test the **same substantive claim**, the one research question the
+curve is about, such as "does the offer raise shoppers' spending?" Second, the dots
+inside one panel must be **commensurable**: measured in the same units, for the same
+kind of quantity, so that reading them side by side means something. A choice that
+changes the outcome's definition or the scale does not disqualify the analysis, but
+it belongs in its own labeled panel, not mixed silently into this one. Third, one
+exclusion is absolute: no version may define its group by something the treatment
+itself could have changed. "Average order value among the shoppers who actually
+bought something" fails that test, because whether someone bought is downstream of
+the offer. That comparison may be worth reporting, in its own place, clearly
+labeled for what it is. It is not another answer to the offer question, and folding
+it into the curve makes the curve unreadable.
 
 Two more things the curve does not do. A curve that stays entirely on one side of zero
 shows that your answer is stable across the choices you listed. It cannot see a flaw
@@ -72,15 +77,18 @@ with, all sixteen versions inherit that error and lean the same way together, an
 picture looks reassuring precisely when it should not. **Shared bias** is that common
 error running underneath an entire curve.
 
-And the distance from the lowest dot to the highest is not an interval. It is the
-**specification spread**, the span your answer covered across the analyses you happened
-to run. It carries no promise about how often it contains the truth, which is what an
-interval is for. Report both, separately: the spread tells a reader how much your
-choices mattered, and each estimate still needs its own uncertainty beside it.
+And the distance from the lowest dot to the highest answers only one question: how
+much did your analysis choices move the number? Call it the **specification
+spread**, the span your answer covered across the versions you ran. It says nothing
+about chance. Every single dot still carries sampling wobble of its own, the
+uncertainty a later chapter teaches you to state properly, and the spread is not a
+substitute for it. Report the spread as what your choices did, and keep the
+uncertainty of your lead estimate a separate, labeled thing.
 
-The danger has a name. **Specification searching**, whose everyday name is **p-hacking**,
-is running many analyses and reporting only the one that gave the result you wanted,
-without disclosing the search. Its opposite is **pre-listed checks**: writing down every
+The danger has a name. **Specification searching** is running many analyses and
+reporting only the one that gave the result you wanted, without disclosing the
+search. Its most notorious version, hunting for a statistically significant result,
+is what researchers call p-hacking. Its opposite is **pre-listed checks**: writing down every
 check you will run, and committing to report all of them, before you see any result.
 
 That distinction is under new pressure, and you should know why. Working with an AI
@@ -93,9 +101,11 @@ log of the cycles, and your pre-listed plan survives contact with the loop.
 
 ## A worked example
 
-Your team tests whether a new loyalty discount raises **average order value**, the
-average amount a customer spends per purchase. Your headline: shoppers offered the
-discount spend about twelve percent more than those who were not. Before you defend that
+Your team randomly assigns a loyalty discount to shoppers and asks one question:
+does the offer raise spending? Your target, fixed before anything ran, is 30-day
+spending per shopper you assigned, counting the shoppers who spent nothing. Your
+headline: shoppers offered the discount spent about twelve percent more than those
+who were not (the numbers in this example are constructed). Before you defend that
 number, you attack it across the four handles.
 
 - **Sample.** All shoppers, or all shoppers except the one account that turned out to be
@@ -112,21 +122,29 @@ not belong here, because the discount can change who places an order. That compa
 answers a different question about a different group, so it goes in its own section with
 its own label, not on this curve.
 
-You pre-list the combinations, run them, and plot the specification curve. Every one
-comes back positive, spanning about plus eight to plus fifteen percent. Here is how to
-report that without overclaiming: "Spending was higher under the offer in all the
-specifications we pre-listed. The estimates spanned eight to fifteen percent, and our
-preferred estimate is twelve percent, with an interval of six to eighteen percent."
+You pre-list the combinations, run them, and plot the specification curve. Note what
+the handles did to the panels: the adjustment choice keeps the same outcome and the
+same units, so its versions sit on one panel; stripping shipping and taxes changes
+what "spending" means, so that pair gets its own labeled panel; and dollars versus
+percent is one comparison shown on two scales, not two pieces of evidence. Every
+version comes back positive, spanning about plus eight to plus fifteen percent.
+Here is how to report that without overclaiming: "Spending was higher under the
+offer in every version we pre-listed. Across them the estimates spanned eight to
+fifteen percent; our lead estimate is twelve percent, and its own sampling
+uncertainty is stated with it." The span says what your choices did. The
+uncertainty statement, built with tools a later chapter adds, says what chance
+could do. Collapsing the two into "the honest range is eight to fifteen" quietly
+claims a precision nobody computed.
 
-Two sentences, two different jobs. The span says how much your analysis choices mattered.
-The interval says how much sampling uncertainty surrounds the estimate you lead with.
-Collapsing them into "the honest range is eight to fifteen" quietly claims a precision
-nobody computed.
-
-Then you run one more attack, a **placebo test**: you split shoppers who all got the
-*same* offer into fake "A" and "B" groups and confirm the gap between them sits near zero.
-If identical shoppers showed a gap, your measurement, not the discount, would be
-manufacturing it.
+Then you run one more attack, a **placebo test**: you take shoppers who all got the
+same offer, split them into fake "A" and "B" groups at random, and compute the same
+gap your real analysis computes. One shuffle proves nothing, because two randomly
+labeled groups always differ a little by chance. So you reshuffle many times and
+collect the gaps. That pile shows what your machinery produces when there is
+nothing to find, and it will not be a pile of zeros. What you check is whether your
+real gap looks ordinary inside that pile or stands far outside it, and a real gap
+that the no-effect pile produces routinely is a warning that your machinery, not
+the discount, may be doing the work.
 
 ## The Colab laboratory
 
@@ -164,15 +182,18 @@ confidently as a real one).
 **Delegate, with a list to verify.**
 
 ```text
-Here is my pre-listed robustness grid for one estimate: I vary the sample (all
-shoppers / drop the wholesale account), the measurement (total charged / shipping and
-taxes stripped out), the specification (averaged over everyone offered / averaged over
-buyers only), and the metric (dollars / percent). Name up to three additional, equally
-defensible specifications I did NOT list, and for each say which direction you expect
-it to push the estimate.
+Here is my pre-listed robustness grid for one estimate of the offer's effect on
+30-day spending per assigned shopper: I vary the sample (all shoppers / drop the
+wholesale account), the measurement (total charged / shipping and taxes stripped
+out, in its own labeled panel), and the specification (no adjustment / adjusted for
+each shopper's pre-offer spending). Name up to three additional, equally defensible
+versions I did NOT list, flag any of my versions that changes the outcome
+definition or conditions on something the offer could have caused, and for each
+suggestion say which direction you expect it to push the estimate.
 ```
-After running, verify: check each suggestion against the four handles and add only
-the ones you can actually run on your own data. Counters *illusion of completeness* (a
+After running, verify: check each suggestion against the gate (same claim,
+commensurable within its panel, nothing conditioned on a post-treatment outcome)
+and add only the ones you can actually run on your own data. Counters *illusion of completeness* (a
 tidy grid that quietly omits the one choice that would break the claim).
 
 **Red-team your range.**
@@ -224,21 +245,25 @@ chance.*
 2. Pre-list the checks you will run, at least two, aimed at the handles a hostile reader
    would attack first. Write them down before you run any of them, and commit now to
    reporting all of them however they come out.
-3. Before you run anything, check that every version on your list aims at the same
-   quantity for the same units. Any version that changes the question, especially one
-   that keeps only units whose status your treatment could have changed, comes off the
-   curve and gets reported separately.
+3. Before you run anything, run your list through the gate. Every version tests your
+   one substantive claim; versions that change the outcome's definition or scale get
+   their own labeled panel; and any version that keeps only units whose status your
+   treatment could have changed comes off the curve entirely and is reported
+   separately for what it is.
 4. Run every check on your list. Report two things, not one: the direction and span
-   across versions ("positive in all four, between eight and fifteen percent"), and the
-   uncertainty around your preferred estimate. The span is not an interval, and neither
-   one alone is an honest report.
+   across versions ("positive in all four, between eight and fifteen percent"), and
+   your lead estimate with its own uncertainty stated beside it, built with the
+   tools the uncertainty chapter gives you. The span measures your choices, not
+   chance, and neither alone is an honest report.
 5. Ask what every version on your list has in common. If one flaw sits underneath all of
    them, such as a comparison group chosen badly, the whole curve leans together and
    agreement proves nothing. Name that shared threat in a sentence, since your curve
    cannot test it.
-6. Add one placebo: build groups you know are identical, run the same analysis on them,
-   and confirm the gap sits near zero. If it does not, your machinery is producing the
-   effect.
+6. Add one placebo: shuffle your group labels many times, rerun the same analysis on
+   each shuffle, and collect the gaps. That pile is what nothing-going-on looks like
+   through your machinery, and it is not a pile of zeros. Then ask whether your real
+   gap is ordinary inside that pile or stands far outside it, and treat a real gap
+   the pile produces routinely as a warning about your machinery.
 7. Read back your AI cycle log and mark any re-prompt that followed a disappointing
    number. Every version you actually ran belongs in the report, including the ones that
    did not help you.
