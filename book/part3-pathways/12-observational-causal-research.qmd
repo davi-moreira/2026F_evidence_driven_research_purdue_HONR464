@@ -53,18 +53,35 @@ treatment for the confounder's work.
 
 Two moves close the back door without an experiment.
 
-- **Selection on observables**: identifying an effect by adjusting for every confounder
-  you can measure, so the treated and untreated match on all of them. Example: compare
-  coffee drinkers and non-drinkers *within* the same lifestyle group. It works only for
-  confounders you can actually see.
+- **Selection on observables**: identifying an effect by adjusting for a set of
+  measured confounders sufficient to block every back-door path. Example: compare
+  coffee drinkers and non-drinkers *within* the same lifestyle group, because
+  lifestyle is what pushes on both. It works only for confounders you can actually
+  see, and the word *sufficient* is doing real work: the goal is the right set, not
+  the longest one.
 - **Natural experiment**: a situation where a chance-like force outside anyone's
   control decided who got treated, making assignment **as-if random** (credibly like a
   coin flip). Example: a visa lottery decides who makes a trip, so winners and losers
   differ only by luck.
 
+One warning before the first move tempts you into adjusting for everything in the
+file. Adjusting is not free, and adjusting for the wrong variable manufactures bias
+instead of removing it. A **mediator** is a variable sitting on the causal path
+itself: coffee may act on lifespan partly through blood pressure, so adjusting for
+blood pressure throws away part of the very effect you are estimating. A
+**collider** is a variable that treatment and outcome both push on: coffee habits
+and long life might each raise the chance of appearing in a "healthy aging" study,
+so adjusting for study membership creates a link between them that exists nowhere
+in the world. Draw the diagram first; adjust for common causes, and leave mediators
+and colliders alone.
+
 Whichever move you use, you owe a reader an **identification argument**: your written
-reason that the comparison recovers a real effect, resting on one **untestable
-assumption** the data can never confirm, only make plausible. When you cannot make that
+reason that the comparison recovers a real effect. Every design in this family rests
+on a short list of **load-bearing assumptions** the data can never fully confirm,
+only make plausible. Selection on observables needs the adjustment set to be
+sufficient and the groups to overlap. A visa-lottery design needs the lottery to be
+genuinely random and to touch lifespans only through the trip. Name your design's
+list; a single sentence per assumption is enough. When you cannot make that
 argument honestly, you have hit the **causal-language boundary**, the point past which
 your evidence stops earning *because* and must switch to *associated with*. The most
 common failure here has a name too. **Design mimicry** is borrowing the vocabulary
@@ -202,8 +219,8 @@ either gets its identification argument in writing, or gets an honest boundary i
    Then write, in one line, whether you can measure it.
 4. Name your leverage and its price. Selection on observables, a natural experiment,
    difference-in-differences, regression discontinuity, or instrumental variables, and
-   underneath it the one untestable assumption it rests on, in plain language a skeptic
-   could argue with. If you have no leverage, write the causal-language boundary
+   underneath it the short list of load-bearing assumptions it rests on, each in
+   plain language a skeptic could argue with. Start with the one you most doubt. If you have no leverage, write the causal-language boundary
    sentence instead: what your comparison shows, and the *because* you are declining to
    claim.
 5. Write down one number you would recompute by a second route to check any estimate a

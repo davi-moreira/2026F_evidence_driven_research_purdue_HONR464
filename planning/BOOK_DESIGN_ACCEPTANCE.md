@@ -107,8 +107,27 @@ check the reader must pass:
 | ch22 negative tests | Repeated samples under a valid null produce nonzero estimates; "exact zero" is the wrong criterion |
 | ch32 LOCF | Death is post-treatment; the estimand and its assumptions must be declared, and the spread is not an honest range |
 
-**Pass:** every counterexample runs seeded (SEED = 464) and the corrected prose
-is in place in all three editions.
+**Pass (strengthened 2026-07-30, per the Batch-A review):** for each defect, the
+counterexample set must contain, seeded (SEED = 464):
+
+1. a **positive case** demonstrating the defect;
+2. a **boundary case** where the superficial warning sign is present but the
+   defect is absent (e.g., differential retention unrelated to outcomes → little
+   bias);
+3. a **converse case** where the warning sign is absent but the defect is present
+   (e.g., equal retention rates with opposite outcome selection → large bias);
+4. **numerical assertions** tied to the declared estimand (the plotted "truth"
+   must equal the quantity computed from the generated potential outcomes, never
+   a hard-coded number the DGP only approximates);
+5. a **concept check with an expected answer**, so a wrong learner reading is
+   detectable;
+6. **propagation searches**: the rejected phrases greped across book chapters,
+   canonical notebook sources (`_production_kit/nb_sources/`), configuration
+   (`course_config.yaml`, generators), and both translations.
+
+One vivid counterexample demonstrates that a failure can happen; only the
+boundary and converse cases establish WHICH feature causes it, and only the
+propagation search makes the correction durable.
 
 **Known Phase-1 → Phase-3 dependency (recorded 2026-07-30).** Correcting ch10's
 power definition required naming a **statistical test** and its **threshold**, and
