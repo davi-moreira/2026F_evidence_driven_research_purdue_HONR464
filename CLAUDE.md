@@ -397,7 +397,29 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 6.1 — twelfth review round (2026-07-30, DECISIONS.md D34, from
+**Version:** 6.2 — the D35 book-design ruling + Phase 1 (2026-07-30, DECISIONS.md
+D35, from the task-#20 evaluation: two ultra Codex rounds + the Batch-A/B/C
+correction loop): EDR|AI Architecture v0 ruled — independence axiom binding, 39
+lessons, 12 provisional practice stations, versioned Research Contract, four
+rails, four-dimension route model; **chapter review frozen until Architecture
+v1** (`planning/BOOK_DESIGN_ACCEPTANCE.md` = the promise/acceptance-test
+contract, A1–A11); F7 page encryption retired (pages ship openly; the private
+instructor repo is the protection); SRL appendix out of the three books
+(canonical: `project/srl/`); 111 legacy shims skipped. Phase-1 methods
+corrections applied in ENGLISH through the two-role Codex loop (partner mirror
+runs + adversarial critiques): the kind rule (a causal question with weak data
+is "causal, currently unidentified" — NEVER relabeled descriptive; enforced in
+INQUIRY_MAP, course_config.yaml `kind_rule`/`claim_upgrades:`, nb02, ch06/ch09/
+ch25), signed bias + declared-test power (ch10, nb04), attrition as
+complete-case contrast with retention as warning-light-not-diagnosis (ch15,
+nb09), sufficient adjustment set not "every confounder" (ch12), three-role
+prediction split (ch14), items-not-people reliability + interpretation-and-use
+validity (ch18), same-estimand specification curves (ch21), null reference
+spread not exact zero (ch22), LOCF/death + demand-the-execution-record (ch32);
+new seeded counterexamples ch14/ch15-attrition/ch22. PT/ES deliberately stale
+until the English passes review — a release blocker, do not render-and-ship
+translations before syncing them. (6.1 — twelfth review round (2026-07-30,
+DECISIONS.md D34, from
 the task-#18 evaluation + Codex critique): truth-in-labelling sweep — optional
 (below-⏸ / 🏠) material may never be assessed or scheduled as required
 (week07 quiz Q5 replaced; M18/M26 schedule fields realigned; nb08 gained a
@@ -492,5 +514,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants
