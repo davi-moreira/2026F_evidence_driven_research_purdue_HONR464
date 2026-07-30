@@ -85,11 +85,14 @@ and carries the skill into their own projects.
 |---|---|---|
 | **0–7** | **Your retrieval challenge** | Open with a challenge that forces recall and exposes a fault line. Good challenges: a common error, an ambiguous claim, a flawed AI output, a design conflict, or a result that needs interpreting. |
 | **7–30** | **Applied AI laboratory** | You steer the room through hands-on work with AI. Everyone runs prompts, splits roles, and hunts for AI-failure patterns. This is the longest block, so pacing is on you. |
-| **30–42** | **Peer defense** | The class defends its results while classmates ask adversarial questions. **Adversarial** here means friendly but relentless: questions designed to find the weak point, not to attack the person. |
+| **30–38** | **Peer defense** | The class defends its results while classmates ask adversarial questions. **Adversarial** here means friendly but relentless: questions designed to find the weak point, not to attack the person. |
+| **38–42** | **Synthesis + accuracy lock** | You state the room's conclusion and its uncertainty in one or two lines. The instructor then locks accuracy: anything that survived challenge but is wrong gets corrected before it can enter a ledger. |
 | **42–50** | **Transfer to projects** | You close by connecting the skill to each person's own research project. The class records an AI Research Ledger line and a Claim Ticket. |
 
-Your owned blocks are **0–7** and **7–30**. The **30–42** peer defense you
-referee; you keep the questions coming and the answers honest.
+Your owned blocks are **0–7** and **7–30**. The **30–38** peer defense you
+referee; you keep the questions coming and the answers honest. At **38–42**
+you synthesize, and the instructor's accuracy lock has the last word before
+the ledger.
 
 ## Your slots
 

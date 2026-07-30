@@ -166,11 +166,16 @@ def render_run_of_show(m: dict, kind: str) -> list[str]:
     sections = srl_ranges(m.get("day", "Mon"))
     detail: dict[int, list[str]] = {i: [] for i in range(len(sections))}
     for time_range, seg in run_of_show(m.get("minute_dynamic", "")):
-        detail[_bin_index(_seg_start(time_range), sections)].append(seg)
+        i = _bin_index(_seg_start(time_range), sections)
+        # a sub-range inside a section (e.g. the D34 Wednesday 30–38 / 38–42
+        # peer-defense + accuracy-lock split) keeps its minute label visible
+        if time_range and time_range != f"{sections[i][1]}–{sections[i][2]}":
+            seg = f"*{time_range}:* {seg}"
+        detail[i].append(seg)
 
     lines += ["| Min | SRL section | What happens |", "|---|---|---|"]
     for i, (name, s, e) in enumerate(sections):
-        d = " ".join(detail[i]).replace("|", "\\|").strip()
+        d = " · ".join(detail[i]).replace("|", "\\|").strip()
         lines.append(f"| {s}–{e} | **{name}** | {d} |")
     lines.append("")
     return lines

@@ -1,5 +1,12 @@
 # Lecture-Structure Review — the D33 Monday/Wednesday architecture
 
+> **⚠️ Superseded in part (2026-07-30, D34).** An independent Codex critique
+> recomputed this review's measurements and audited the repository; several
+> numbers and recommendations below did not survive. See the **Verification
+> addendum** at the end of this document for the corrected figures, the
+> recommendations withdrawn, and the rulings actually applied
+> (`_project_docs/DECISIONS.md` Decision 34).
+
 **Prepared:** 2026-07-30 · **Status:** advisory review, no rulings applied yet
 **Tracks:** private task issue #18 ("Evaluate the new MW lecture structure (D33)")
 **Scope:** the four-block / seven-move 50-minute MW frame as built and pushed
@@ -298,3 +305,47 @@ the caveat attached.
 > own knowledge, not retrieved during this session. Before any of it enters
 > student-facing material, retrieve and confirm each source per the course's
 > evidence-integrity rule (`scripts/audit_sources.py`).
+
+---
+
+## Verification addendum (2026-07-30, post-Codex critique — D34)
+
+An independent Codex review (gpt-5.6-sol, xhigh; artifacts in gitignored
+`_adm/codex_reviews/2026-07-30_d33-mw-lecture-structure/`) recomputed this
+document's measurements and audited the claims. Corrections of record:
+
+**Corrected measurements.** The lecture population is 28 built segments, of
+which **24 are D33-governed** (nb01 ×2, nb13, nb14 exempt) — the headline
+figures above averaged over exempt lectures and used "27 governed"
+incorrectly. Governed-only figures: **12.1** ritual headings per lecture (not
+11.3), **9.9** production events (not 9.1, and most counted code cells are
+provided runs, not student productions), **1.7** AI-prompt blocks above the ⏸
+line (not 1.6). The "≥4 per notebook" comparison was invalid: the template's
+four-prompt minimum is notebook-wide and includes optional prompts. The
+"transition every 4.4 minutes" and "12–22% of class time" claims rested on an
+assumed 30–60-second cost per heading that was never measured; a heading is
+not necessarily a transition. "Wednesday never consolidates" overstated the
+premise: no dedicated timed slot existed, but the session guides, the
+implementation guide, and the intervention protocol all assigned the
+instructor a Wednesday adjudication role.
+
+**Withdrawn recommendations.** The 7/20/15/8 Wednesday retime (reverses D22
+while claiming not to touch the blocks); the four-heading collapse and
+Mon/Wed unification (heading count ≠ transition count, and the change touches
+template markers, validator regexes, source structures, answer stripping, SRL
+briefs, and book sync — not one generator function); the fixed
+Weeks 2–5/6–11/12–16 fading schedule (expertise reversal is expertise-
+contingent, not calendar-contingent; accountability instruments like the
+ledger are artifacts, not scaffolds, and never fade).
+
+**What was applied instead (D34).** The Wednesday consolidation need was met
+INSIDE D22's 30–42 block: 30–38 peer defense, 38–42 SRL synthesis +
+instructor accuracy lock. The two implementation failures the critique found
+— optional material still assessed/scheduled as required, and D33's in-class
+weights not propagated into every prompt — drove an alignment sweep and
+validator hardening. Write-then-speak 📝 and the ⚖️ choice grammar remain
+candidates to pilot in the room. The evidence appendix above survives with
+its caveat: every reference was recalled, then independently VERIFIED by the
+Codex pass against publisher records, with the repeated warning that the
+literature supports the design *principles*, not the specific doses, timings,
+or schedules this review attached to them.

@@ -27,7 +27,7 @@ monitor and the formalizer.
 
 - **0–9 — student-led research puzzle.** Watch, do not intervene. Let prior
   beliefs surface and the room commit in writing before any AI opens.
-- **9–31 — guided AI investigation.** Monitor Gemini output in the background
+- **9–31 — guided AI investigation.** Monitor the AI output in the background
   for factual errors. If a conceptual error starts to spread, flag it *without
   taking the room* from the lead. If an AI failure passes unnoticed, ask the
   lead to put it to the room rather than answering directly.
@@ -44,24 +44,30 @@ The SRL runs a retrieval challenge and a hands-on lab; the instructor referees
 the peer defense.
 
 - **0–7 — retrieval and challenge** (lead) · **7–30 — applied AI laboratory**
-  (lead) · **30–42 — peer defense and adversarial questioning** (you keep the
-  questions coming and the answers honest) · **42–50 — transfer to projects**
-  (lead), closing with a ledger line and Claim Ticket.
+  (lead) · **30–38 — peer defense and adversarial questioning** (you keep the
+  questions coming and the answers honest) · **38–42 — SRL synthesis + your
+  accuracy lock (D34):** the lead states the room's conclusion and its
+  uncertainty, and you correct any claim that survived challenge but is wrong
+  BEFORE it can enter a ledger — Wednesday's consolidation moment ·
+  **42–50 — transfer to projects** (lead), closing with a ledger line and
+  Claim Ticket.
 
 ### Friday — project studio (you run it)
 
-**No new topic content, ever.** The studio runs one loop:
+**No new topic content, ever.** The studio is quiz-first (D22/D30):
 
-- **0–6 — research stand-up.** Each student states last week's decision and this
-  week's blocker.
-- **6–29 — milestone kickoff + AI sprint.** Present the week's milestone from its
-  Brightspace brief (about 3 minutes), then run rotating consults while students
-  work.
-- **29–41 — peer + AI red-team review.** Students red-team each other; at
-  designated milestones an assigned GenAI Studio reviewer role is required (see
-  §5).
-- **41–50 — revise, update ledger + dossier, submit.** The milestone is submitted
-  at close.
+- **0–10 — weekly topic quiz.** Five printed multiple-choice questions on the
+  week's topic (`_quizzes/2026Fall/weekly/`), answered solo, closed notes,
+  handed in.
+- **10–15 — research stand-up.** Each student states last week's decision and
+  this week's blocker.
+- **15–45 — milestone kickoff + AI-supported work.** Present the week's
+  milestone from its Brightspace brief (about 3 minutes), then students WORK ON
+  the milestone with their AI assistant while you run rotating consults. The
+  old peer red-team block is retired (D30); at designated milestones an
+  assigned GenAI Studio reviewer role is still required (see §5).
+- **45–50 — revise, update ledger + dossier, submit.** The milestone is
+  submitted at close.
 
 **Week 1 is instructor-led** (both lectures) to model the SRL format before
 students take over in Week 2.
@@ -81,33 +87,26 @@ Two meetings are asynchronous online, each a self-contained graded unit:
 
 ## 2. The Student Research Lead (SRL) pipeline
 
-**Assign the seats first.** There are **25 leadable lectures** (all Mon/Wed
-except Week 1's two launch meetings) and 5 students, so **each student leads 5
-times**. Map the roster onto rotation seats **A–E**; the seat determines the
-slots:
-
-| Seat | Slots |
-|---|---|
-| A | 1, 6, 11, 16, 21 |
-| B | 2, 7, 12, 17, 22 |
-| C | 3, 8, 13, 18, 23 |
-| D | 4, 9, 14, 19, 24 |
-| E | 5, 10, 15, 20, 25 |
-
-Slot 1 is **meeting 4 (Mon Aug 31**, nb02 Lecture 1). The slot-to-meeting
-mapping and Monday/Wednesday format live in the schedule data
-(`scripts/schedule_data/part1–4.py`, fields `srl_slot` + `srl_focus`) and surface
-on the public **Schedule** page; students read their dates there.
+**Assign the slots first — randomly (D22).** There are **25 leadable
+lectures** (all Mon/Wed except Week 1's two launch meetings) and 5 students,
+so **each student leads 5 times**. Slots are **randomly assigned at the start
+of the semester** — no rotation, no seats. Slot 1 is **meeting 4 (Mon Aug
+31**, nb02 Lecture 1). The slot-to-meeting mapping and Monday/Wednesday format
+live in the schedule data (`scripts/schedule_data/part1–4.py`, fields
+`srl_slot` + `srl_focus`) and surface on the public **Schedule** page;
+students read their dates there.
 
 **The handoff timeline** (per lead):
 
-1. **5 days ahead** — send the lead the **SRL page** from that week's instructor
-   notebook: the concept in play, the compass position or design in focus, a seed
-   puzzle, and the one thing the room must leave understanding.
+1. **1 week ahead** — the lead preps from the student-visible `### 🎤 SRL
+   Lead Brief` cell that opens their lecture in that week's notebook (right
+   after `# Lecture N`): the concept in play, the run of show, and explicit
+   room for the lead's own staging.
 2. **2 days ahead** — the lead submits the preparation script
    (`project/srl/srl_prep_template.md`). **Review it and send notes.** This
    review is the difference between a session that lands and one that stalls.
-3. **Day of** — the lead runs the room; you monitor and formalize (§1).
+3. **Day of** — the lead runs the room; you monitor, formalize (§1), and on
+   Wednesdays run the 38–42 accuracy lock.
 
 **Grade it live.** Score each lead on `project/srl/srl_rubric.md` during or
 immediately after the session (conceptual correctness, Socratic quality,
@@ -115,7 +114,7 @@ assumption exposure, productive + interrogated AI use, inclusion, time
 management, connection to research decisions, handling uncertainty). Collect
 classmate feedback on `project/srl/srl_peer_feedback_form.md` and pass it to the
 lead quickly; it is the fastest way they improve before the next slot. SRL
-performance is **15%** of the course grade.
+performance is **20%** of the course grade (syllabus).
 
 **Intervention protocol.** How to step in without seizing the room is summarized
 in `project/srl/srl_handbook.md` ("How the instructor will step in"); the

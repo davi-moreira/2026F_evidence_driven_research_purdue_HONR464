@@ -54,8 +54,8 @@ FRAME_MON = (
     "your AI · verify with 🔍 **Read the Evidence** · drill 📝 **Practice** "
     "aloud and take ⚖️ **Make a Design Choice** · close in the room with "
     "🎯 **Take It to Your Project**, 🛡️ **Defend Your Decision**, and your "
-    "📒 ledger row. All seven moves happen in class; below the ⏸ line is "
-    "optional depth.")
+    "📒 ledger row. All seven moves happen in class; 🏠-marked items and "
+    "everything below the ⏸ line are optional depth.")
 FRAME_WED = (
     "🗺️ **Today's frame (Wednesday, 7 / 23 / 12 / 8):** open with the 🧩 "
     "challenge, a spoken 📝 **Practice** retrieval drill, and 🔮 **Predict "
@@ -64,13 +64,15 @@ FRAME_WED = (
     "the Evidence** · defend ⚖️ **Make a Design Choice** to your peers, AI "
     "closed at the 🧑‍⚖️ checkpoint · close with 🎯 **Take It to Your "
     "Project**, 🛡️ **Defend Your Decision**, and your 📒 ledger row. All "
-    "seven moves happen in class; below the ⏸ line is optional depth.")
+    "seven moves happen in class; 🏠-marked items and everything below the "
+    "⏸ line are optional depth.")
 FRAME_ONE = (
     "🗺️ **The frame (50 min):** 🧩 puzzle → 🔮 **Predict First** · 🛠️ **Run "
     "the Study** with your AI · 🔍 **Read the Evidence** · 📝 **Practice** · "
     "⚖️ **Make a Design Choice** · 🎯 **Take It to Your Project** · "
     "🛡️ **Defend Your Decision** · 📒 ledger row. All seven moves happen in "
-    "class; below the ⏸ line is optional depth.")
+    "class; 🏠-marked items and everything below the ⏸ line are optional "
+    "depth.")
 FRAME_CONF = (
     "🗺️ **The frame (50 min, then the Expo):** in the room: 🧩 puzzle → "
     "🔮 **Predict First** · dress-rehearsal rounds · 🔍 **Read the "
@@ -81,6 +83,57 @@ FRAME_EXEMPT = {1, 14}   # nb01 orientation; nb14 async module
 FRAME_SPECIAL = {13: FRAME_CONF}   # conference week: the path ends at the Expo
 
 LECTURE_HEAD = re.compile(r"(?m)^#\s*Lecture\s+(\d)\s*$")
+
+# D34: the ⏸ optional-depth region is NORMALIZED at build time. In every
+# lecture segment the ⏸ cell body is standardized, and in a notebook's final
+# lecture the close (Wrap-Up → Sources & Provenance → thank-you) is hoisted
+# ABOVE the ⏸ line, so the optional region ends the notebook and the close is
+# never formally optional. nb13 keeps its conference-path semantics; nb14 is
+# async. Sources stay edit-canonical for content; placement is build machinery.
+PAUSE_RE = re.compile(r"(?m)^###\s*⏸")
+WRAP_RE = re.compile(r"(?m)^##\s*\d+\.\s*Wrap-?Up")
+PAUSE_MID = (
+    "---\n\n### ⏸ Optional depth from here\n\n"
+    "**Today's lecture path is complete.** Anything between this line and the "
+    "next lecture heading is optional depth: run it if you want to push the "
+    "ideas further. Nothing below this line is required, and any 🏠-marked "
+    "prompt above it is optional too.")
+PAUSE_END = (
+    "---\n\n### ⏸ Optional depth from here\n\n"
+    "**Today's lecture path and the notebook's close are complete.** "
+    "Everything below this line is optional depth: run it if you want to push "
+    "the ideas further. Nothing here is required, and any 🏠-marked prompt "
+    "above is optional too.")
+NORMALIZE_EXEMPT = {13, 14}
+
+
+def normalize_pause_regions(cells, nb_num):
+    """Standardize each lecture's ⏸ cell and keep the notebook close above it."""
+    if nb_num in NORMALIZE_EXEMPT:
+        return cells
+    out = list(cells)
+    lect_idx = [i for i, (k, s) in enumerate(out)
+                if k == "md" and LECTURE_HEAD.search(s)]
+    bounds = ([(0, len(out))] if not lect_idx else
+              [(s, lect_idx[j + 1] if j + 1 < len(lect_idx) else len(out))
+               for j, s in enumerate(lect_idx)])
+    for li in range(len(bounds) - 1, -1, -1):
+        st, en = bounds[li]
+        seg = out[st:en]
+        p = next((i for i, (k, s) in enumerate(seg)
+                  if k == "md" and PAUSE_RE.search(s)), None)
+        if p is None:
+            continue
+        final = li == len(bounds) - 1
+        w = next((i for i in range(p + 1, len(seg))
+                  if seg[i][0] == "md" and WRAP_RE.search(seg[i][1])), None)
+        if w is not None:
+            tail, optional = seg[w:], seg[p:w]
+            seg = seg[:p] + tail + optional
+            p = len(seg) - len(optional)
+        seg[p] = ("md", PAUSE_END if final else PAUSE_MID)
+        out[st:en] = seg
+    return out
 
 
 # Every built notebook carries the EDR|AI wordmark inside its TITLE cell,
@@ -151,7 +204,8 @@ def _write_instructor(cells, out: Path, frames_nb: int | None = None) -> Path:
 
 def build_instructor(n: int) -> Path:
     out = REPO / "notebooks" / "instructor" / instructor_filename(n)
-    return _write_instructor(load_cells(NOTEBOOKS[n][0]), out, frames_nb=n)
+    cells = normalize_pause_regions(load_cells(NOTEBOOKS[n][0]), n)
+    return _write_instructor(cells, out, frames_nb=n)
 
 
 def build_ms_instructor(n: int) -> Path:

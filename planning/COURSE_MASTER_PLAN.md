@@ -100,16 +100,17 @@ Each meeting type has a **fixed 50-minute architecture** (`srl:` in
 |---|---|---|---|
 | 1 | Student-led research puzzle · 9 | Student-led retrieval & challenge · 7 | Weekly topic quiz (MC) · 10 |
 | 2 | Guided AI research-partner investigation · 22 | Intensive applied AI laboratory · 23 | Research stand-up · 5 |
-| 3 | Human verification + instructor formalization · 12 | Peer defense & adversarial questioning · 12 | Milestone kickoff + AI-supported sprint · 17 |
-| 4 | Decision and defense · 7 | Transfer to the final project · 8 | Peer & AI red-team review · 10 |
-| 5 | — | — | Revision, ledger, submission · 8 |
+| 3 | Human verification + instructor formalization · 12 | Peer defense & adversarial questioning · 12 (defense to 38, then SRL synthesis + instructor accuracy lock · D34) | Milestone kickoff + AI-supported work · 30 |
+| 4 | Decision and defense · 7 | Transfer to the final project · 8 | Revision, ledger, submission · 5 |
+| 5 | — | — | — |
 
 **No new topic content on Fridays.** Every Friday is an in-person studio: a
 10-minute multiple-choice quiz on the week's topic (printed; solo; graded),
 a stand-up, then the week's milestone is kicked off from its Brightspace brief
-and worked in an AI-supported sprint, red-teamed by peers and an assigned AI
-role, then revised, ledgered, and submitted at close. The two async meetings
-are self-contained modules with their own assessable artifact.
+and WORKED ON with the student's AI assistant (the weekly peer red-team block
+was retired, D30; GenAI Studio reviewer roles still apply at designated
+milestones), then revised, ledgered, and submitted at close. The two async
+meetings are self-contained modules with their own assessable artifact.
 
 ## 4. The two conceptual layers (critical — kept exactly)
 

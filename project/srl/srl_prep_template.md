@@ -117,13 +117,14 @@ transfer block; strong on Monday too):*
 | 31–43 | Instructor formalizes (I hand off + keep the thread) | |
 | 43–50 | Decision and defense | |
 
-**Wednesday frame** (checkpoints at 7, 30, 42):
+**Wednesday frame** (checkpoints at 7, 30, 38, 42):
 
 | Minutes | Section | My plan for this block |
 |---|---|---|
 | 0–7 | Retrieval challenge | |
 | 7–30 | Applied AI lab | |
-| 30–42 | Peer defense | |
+| 30–38 | Peer defense | |
+| 38–42 | My synthesis (the instructor locks accuracy) | |
 | 42–50 | Transfer to projects | |
 
 *(Fill in only the frame that matches your slot.)*

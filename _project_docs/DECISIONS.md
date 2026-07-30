@@ -867,3 +867,80 @@ fit all moves inside the MW lecture structures").
 **Rationale:** the required path now fits the room. Depth is preserved but
 opt-in; milestone-level transfer keeps its Friday/It-is-your-turn home; and
 the visible frame finally tells the truth about when each move happens.
+
+## Decision 34: The D33 evaluation rulings — alignment sweep, validator hardening, and the Wednesday accuracy lock (2026-07-30, twelfth review round)
+
+**Decision:** Instructor-directed evaluation of the D33 build (course task #18),
+run through two independent reviews (a Claude specialist review committed as
+`LECTURE_STRUCTURE_REVIEW.md`, then an OpenAI Codex critique that recomputed
+its counts and audited the repository; artifacts in gitignored
+`_adm/codex_reviews/2026-07-30_d33-mw-lecture-structure/`). Rulings applied:
+
+1. **§9① — the demoted arcs stay optional, and assessment aligns to the
+   required path.** nb07's list experiment and nb10's placebo/leave-one-out
+   arc remain below the ⏸ line (nb07's required §2 survey experiment already
+   executes the experimental-descriptive signature; D30 forbids moving new
+   teaching to Friday). Everything that still REQUIRED them was realigned:
+   week07 quiz Q5 replaced with a survey-experiment measurement item; the
+   M18/M26 schedule fields (minute_dynamic, hands_on_activity,
+   student_artifact, instructor_prep, risks_contingency, dataset_simulation)
+   no longer demand the optional cells; nb10's required 📝 item F became
+   self-contained (week10 Q4 is licensed by it and stays); nb08 hoisted a
+   compact cross-validation + distribution-shift probe above the ⏸ into the
+   verdict section (one provided code cell), which licenses week08 Q4/Q5 and
+   the M7 boundary language — the full five-check laboratory stays optional
+   (now §7). "Moves to homework" contingency phrasing retired from the
+   schedule data.
+2. **§9② — one live prompt per lecture, machine-checked.** nb03-L1's
+   seed-source snowball prompt demoted to 🏠 (rewrite + prediction stay
+   required; running it is optional). nb03 keeps TWO in-class exchanges (the
+   live chain-chase + the gap-attack), per the template's standing exception;
+   the validator caps required (non-🏠) prompts above the ⏸ at 1 per governed
+   lecture (nb03: 2), with the 🏠 label required in the SAME cell as the
+   prompt. Label standardized to `**🏠 Optional depth.**` everywhere (12
+   stale "Homework depth" strings purged; nb13 keeps its conference-path
+   labels).
+3. **§9③ — the frame names both optional markers.** All three generated
+   frames now close: "🏠-marked items and everything below the ⏸ line are
+   optional depth."
+4. **The notebook close is never optional.** `nbbuild.py` normalizes the ⏸
+   region at build: the ⏸ cell text is standardized, and each notebook's
+   Wrap-Up → Sources & Provenance → thank-you is hoisted ABOVE the final
+   ⏸ line, so the close and the provenance record sit on the required path
+   (nb13 exempt — its below-⏸ is the conference path, not optional depth).
+   Section numbers renumbered to read sequentially above the line (nb02,
+   nb04, nb07, nb08, nb12, nb16); optional tails carry the last numbers.
+5. **Validator hardening.** `validate_notebooks.py` now requires exactly one
+   `### ⏸` HEADING per governed lecture (the old character count let prose
+   mentions satisfy it, and a missing heading made the placement checks pass
+   vacuously); requires Wrap-Up and Sources above the final ⏸; enforces the
+   one-live-prompt cap; and bans the retired homework-depth label.
+6. **The Wednesday accuracy lock (from the specialist review, resized by the
+   Codex critique).** Wednesday block 3 keeps its D22 boundaries (30–42) and
+   gains an internal split: 30–38 peer defense + adversarial questioning,
+   38–42 SRL synthesis + instructor accuracy lock — the lead states the
+   room's conclusion and its uncertainty, and the instructor corrects any
+   claim that survived challenge but is wrong before it can enter a ledger.
+   Applied to all 13 ordinary Wednesdays in the schedule data (the
+   compressed Evidence-Defense Wednesday keeps its full 30–42; Week 1's
+   instructor-led Wednesday models the move); session-guide generator keeps
+   sub-range labels visible; SRL handbook, prep template, intervention
+   protocol, implementation guide, and the book SRL appendix ×3 updated.
+7. **Rejected from the specialist review** (per the Codex critique, verified
+   against the repository): the 7/20/15/8 Wednesday retime (breaks D22), the
+   four-heading collapse and Mon/Wed unification (heading count is not
+   transition count; implementation far larger than claimed), and the fixed
+   Weeks 2–5/6–11/12–16 guidance-fading schedule (expertise reversal does not
+   license calendar fading; safeguards never fade). Write-then-speak 📝 and
+   the ⚖️ "I chose X over Y because Z" grammar remain candidates to pilot in
+   the room, not pre-semester rewrites. Stale operational docs reconciled
+   (instructor guide: quiz-first 10/5/30/5 Friday, random SRL slots, SRL 20%,
+   AI-generic voice).
+
+**Rationale:** both reviews agreed the pedagogy holds; the defects that
+mattered were contract defects — material promised as optional was still
+assessed or scheduled as required, and enforcement had blind spots. The
+sweep makes "above the ⏸ line" a true statement of what is required, makes
+the validator able to notice when it stops being true, and buys Wednesday a
+consolidation moment without reopening D22. Feasibility in the room (block-4
+timing, Wednesday block 2) remains to be observed in Weeks 1–2, not assumed.

@@ -184,8 +184,9 @@ staging. Fixed section frames, enforced by the session-guide generator
   investigation · 31–43 human verification + instructor formalization ·
   43–50 decision & defense (ledger + Claim Ticket).
 - **Wednesday:** 0–7 SRL retrieval & challenge · 7–30 intensive applied AI
-  laboratory · 30–42 peer defense + adversarial questioning · 42–50 project
-  transfer (ledger + Claim Ticket).
+  laboratory · 30–42 peer defense + adversarial questioning (internal split,
+  D34: defense to 38, then 38–42 SRL synthesis + instructor accuracy lock) ·
+  42–50 project transfer (ledger + Claim Ticket).
 - **Friday studio (no new topic content):** 0–10 weekly multiple-choice topic
   quiz (printed; `_quizzes/2026Fall/weekly/`) · 10–15 research stand-up ·
   15–45 milestone kickoff (presented from the course Brightspace page) +
@@ -393,7 +394,22 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 6.0 — eleventh instructor review round (2026-07-29, DECISIONS.md
+**Version:** 6.1 — twelfth review round (2026-07-30, DECISIONS.md D34, from
+the task-#18 evaluation + Codex critique): truth-in-labelling sweep — optional
+(below-⏸ / 🏠) material may never be assessed or scheduled as required
+(week07 quiz Q5 replaced; M18/M26 schedule fields realigned; nb08 gained a
+compact in-class cross-validation + shift probe licensing week08's quiz and
+M7's boundary language); one-live-prompt rule machine-checked (nb03 allowance
+2; `**🏠 Optional depth.**` label required in the prompt's own cell; homework-
+depth wording banned); nbbuild normalizes the ⏸ region (standard cell text;
+Wrap-Up → Sources hoisted above the final ⏸ — the close is never optional;
+nb13 exempt); validator requires exactly one ⏸ heading per governed lecture +
+the close above it; Wednesday 30–42 split internally into 30–38 peer defense
++ 38–42 SRL synthesis & instructor accuracy lock (D22 boundaries untouched;
+13 Wednesdays; SRL suite + book appendix ×3 + implementation guide updated,
+the guide also de-staled: quiz-first Friday, random slots, SRL 20%). Rejected
+after verification: Wednesday retime, four-heading collapse, calendar
+fading. (6.0 — eleventh instructor review round (2026-07-29, DECISIONS.md
 D33): ALL seven moves + a per-lecture 📒 ledger row now run INSIDE the
 50-minute MW frame, above each lecture's `### ⏸ Optional depth from here`
 line — the required homework tail is retired (below-⏸ and 🏠 prompts are
@@ -473,5 +489,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

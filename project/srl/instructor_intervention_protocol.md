@@ -78,8 +78,10 @@ instructor is the visible clock so the lead does not have to watch it.
 - **Monday checkpoints at minutes 9, 31, 43.** Signal at each: 0–9 puzzle and
   commitment, 9–31 guided AI investigation, 31–43 human verification and
   instructor formalization, 43–50 decision and defense.
-- **Wednesday checkpoints at minutes 7, 30, 42.** Signal at each: 0–7 retrieval
-  and challenge, 7–30 applied AI lab, 30–42 peer defense, 42–50 transfer to
+- **Wednesday checkpoints at minutes 7, 30, 38, 42.** Signal at each: 0–7
+  retrieval and challenge, 7–30 applied AI lab, 30–38 peer defense, 38–42 SRL
+  synthesis + instructor accuracy lock (the consolidation moment — correct any
+  wrong surviving claim before it enters a ledger), 42–50 transfer to
   projects.
 - Use a consistent, quiet signal (a raised card, a note on the board, a two-word
   call). A predictable checkpoint lets the lead self-correct pace without losing

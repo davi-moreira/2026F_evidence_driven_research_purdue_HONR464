@@ -206,7 +206,7 @@ below. The async-only module (nb14) embeds these inside its module flow.
 |---|---|---|
 | Pre-run prediction | `### 🔮 Predict First` | commit a written prediction BEFORE running the next cell; the following cell reveals |
 | Runnable activity | `### 🛠️ Run the Study` (or `### 🛠️ Run It Live:` variant) | execute + modify real code on real data/simulation |
-| Defended decision | `### ⚖️ Make a Design Choice` | choose between stated options and write a one-paragraph defense |
+| Defended decision | `### ⚖️ Make a Design Choice` | choose between stated options and commit ONE written line, defended aloud (the full paragraph is optional depth — D33) |
 | Practice item | `### 📝 Practice` | short transfer drill (sorting, matching, repairing, classifying) |
 | Interpretation task | `### 🔍 Read the Evidence` | write what an output DOES and DOES NOT establish |
 | Milestone transfer | `### 🎯 Take It to Your Project` | apply the topic to your own project/milestone, in the notebook |
@@ -308,6 +308,10 @@ Defense #NN — write, in your own words:
 4. **AI check:** what I delegated, and how I verified it before trusting it.
 ```
 
+**In-class weight (D33/D34).** Each numbered part is ONE line — the ritual
+close fits its closing-block minutes. The expanded written defense is optional
+depth, and the spoken Claim Ticket reads part 1 aloud; it is not a new product.
+
 **Written vs spoken exits.** The Defend Your Decision is the notebook's WRITTEN closing
 block. The class ALSO keeps its spoken exit ritual, the **Claim Ticket** read
 aloud at the close of every meeting — that ritual lives in the session guides
@@ -362,19 +366,26 @@ Thank you!
 Encoded from `planning/QUALITY_REPORT_P3.md` after the Week-5 prototype review;
 the P4 scale inherits these as hard rules:
 
-1. **⏸ Optional-depth demarcation (machine-checked; D33 semantics):** every
-   lecture carries exactly one demarcation cell — `### ⏸ Optional depth from
-   here` — placed AFTER the closing moves (…🎯 → 🛡️ → 📒). Everything above
-   it is the required 50-minute lecture path (the four-block frame);
-   everything below it, and every prompt labeled 🏠 optional depth, is
-   enrichment, never required and never homework. The block-2 investigation
-   core (puzzle + core concepts + ONE live AI prompt + the central run +
-   reading-the-evidence) must still realistically fit its 22/23 minutes.
-2. **One live prompt per lecture:** one AI prompt per lecture is the
-   designated in-class exchange; the others carry the 🏠 optional-depth
-   label. Never three AI round-trips inside one SRL block. (nb03's single
-   lecture keeps its gap-attack exchange in class alongside the live prompt —
-   the SDIIVDD chain is built on it.)
+1. **⏸ Optional-depth demarcation (machine-checked; D33/D34 semantics):**
+   every lecture carries exactly one demarcation HEADING — `### ⏸ Optional
+   depth from here` — placed AFTER the closing moves (…🎯 → 🛡️ → 📒).
+   Everything above it is the required 50-minute lecture path (the four-block
+   frame); everything below it, and every prompt labeled 🏠 optional depth, is
+   enrichment, never required and never homework. The notebook CLOSE (Wrap-Up
+   → Sources & Provenance → thank-you) sits ABOVE the final lecture's ⏸ line:
+   `nbbuild.py` hoists it at build time and standardizes the ⏸ cell text, so
+   the close and the provenance record are never formally optional (nb13's
+   conference path is exempt). Section numbers read sequentially above the
+   line; the optional tail carries the last numbers. The block-2
+   investigation core (puzzle + core concepts + ONE live AI prompt + the
+   central run + reading-the-evidence) must still realistically fit its
+   22/23 minutes.
+2. **One live prompt per lecture (machine-checked, D34):** one AI prompt per
+   lecture is the designated in-class exchange; every other prompt carries
+   the exact label `**🏠 Optional depth.**` in the SAME cell as the prompt.
+   Never three AI round-trips inside one SRL block. (nb03's single lecture
+   keeps its gap-attack exchange in class alongside the live prompt — the
+   SDIIVDD chain is built on it — so its validator allowance is two.)
 3. **Prompt-sequence standard:** every AI prompt block = a one-line human
    commitment cell above it → a delegable task (locate / list-to-verify /
    red-team / explain-code-to-confirm), never re-explaining the notebook's own

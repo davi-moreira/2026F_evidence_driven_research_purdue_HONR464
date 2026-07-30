@@ -190,16 +190,68 @@ def check_student(path: Path, is_async: bool, nb_num: int | None = None) -> list
         if n_brief < need:
             errs.append(f"only {n_brief} '🎤 SRL Lead Brief' cell(s) — need "
                         f"{need} (one per lecture, right after '# Lecture N'; D22)")
-        # P3 lesson 1: one ⏸ in-class/homework demarcation cell per lecture.
-        n_pause = text.count("⏸")
-        if n_pause < need:
-            errs.append(f"only {n_pause} '⏸' in-class demarcation cell(s) — need "
-                        f"{need} (one per lecture; template 'Prototype lessons' §1)")
+        # D34: exactly ONE `### ⏸` HEADING per lecture (a character count can
+        # be satisfied by prose that merely mentions ⏸, which let a missing
+        # pause heading pass the placement checks vacuously).
+        if nb_num != 1:
+            segments = re.split(r"(?m)^#\s*Lecture\s+\d", text)[1:] or [text]
+            for li, seg in enumerate(segments, 1):
+                n_pause = len(re.findall(r"(?m)^\s*###\s*⏸", seg))
+                if n_pause != 1:
+                    errs.append(f"Lecture {li}: {n_pause} '### ⏸' heading(s) — "
+                                f"need exactly 1 (D34)")
+            # D34: the notebook close (Wrap-Up, Sources & Provenance) is
+            # required reading — it must sit ABOVE the final lecture's ⏸ line
+            # (nbbuild hoists it; nb13's conference path is exempt).
+            if nb_num not in PLACEMENT_EXEMPT and segments:
+                last = segments[-1]
+                above = re.split(r"###\s*⏸", last, maxsplit=1)[0]
+                for name, patt in (
+                        ("Wrap-Up", r"(?m)^##\s*\d*\.?\s*Wrap-?Up"),
+                        ("Sources & Provenance",
+                         r"(?m)^##\s*\d*\.?\s*Sources\s*&\s*Provenance")):
+                    if re.search(patt, last) and not re.search(patt, above):
+                        errs.append(f"{name} sits below the final ⏸ line "
+                                    f"(D34: the notebook close is required)")
 
     n_gem = text.count("💡 **AI Prompt")
     if n_gem < 4:
         errs.append(f"only {n_gem} AI Prompt block(s) — frame requires ≥4 "
                     f"(one before every substantive code chunk)")
+
+    # D34: at most ONE required (non-🏠) AI prompt above each governed
+    # lecture's ⏸ line — the designated live exchange. nb03's single lecture
+    # is allowed two (template P3 §2: the live prompt + the gap-attack its
+    # SDIIVDD chain is built on). Optional prompts carry 🏠 in the same cell.
+    if not is_async and nb_num not in (1,) and nb_num not in PLACEMENT_EXEMPT:
+        allowed = 2 if nb_num == 3 else 1
+        lect, in_optional, req = 0, False, {}
+        for c in nb.cells:
+            s = c.source
+            if c.cell_type == "markdown" and re.search(r"(?m)^#\s*Lecture\s+\d", s):
+                lect, in_optional = lect + 1, False
+                req.setdefault(lect, 0)
+                continue
+            if lect == 0:
+                continue
+            if c.cell_type == "markdown" and re.search(r"(?m)^\s*###\s*⏸", s):
+                in_optional = True
+                continue
+            if in_optional:
+                continue
+            n_p = s.count("💡 **AI Prompt")
+            if n_p and "🏠" not in s:
+                req[lect] += n_p
+        for li, n_req in sorted(req.items()):
+            if n_req > allowed:
+                errs.append(f"Lecture {li}: {n_req} required (non-🏠) AI "
+                            f"prompt(s) above the ⏸ line — max {allowed} "
+                            f"(D34 one-live-prompt rule)")
+
+    # D34: the retired label must not resurface.
+    if re.search(r"[Hh]omework[ -]depth", text):
+        errs.append("stale 'homework depth' label — D34 wording is "
+                    "'🏠 Optional depth'")
     if text.count("After running, verify") < n_gem:
         errs.append("each AI Prompt must be followed by an "
                     "'After running, verify' checklist")
