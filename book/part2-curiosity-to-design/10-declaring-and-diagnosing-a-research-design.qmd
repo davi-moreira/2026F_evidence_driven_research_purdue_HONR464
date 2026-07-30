@@ -69,9 +69,12 @@ changes with it, so report all three beside it.
 
 Those three do not exhaust the pile, and fuller diagnoses add more. Two worth knowing
 by name: **root mean-squared error**, the typical size of a miss with big misses
-weighted heavily, and **coverage**, how often an interval you report actually contains
-the truth. A design can be unbiased and still miss badly every time, which is exactly
-why one number is never the whole diagnosis.
+weighted heavily, and **coverage**, how often the range you report around your
+estimate actually contains the truth. *Example:* if you report a range meant to be
+right 95 times out of 100, coverage checks whether it really is. A design can be
+unbiased and still miss badly every time, which is exactly why one number is never
+the whole diagnosis. A later chapter builds these ranges properly; here you only need
+to know that a diagnosis can ask about them.
 
 **Redesign** means changing exactly one part in response to the diagnosis, then
 diagnosing again. Low power from high variance calls for more data. A tilt built into

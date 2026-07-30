@@ -110,6 +110,18 @@ check the reader must pass:
 **Pass:** every counterexample runs seeded (SEED = 464) and the corrected prose
 is in place in all three editions.
 
+**Known Phase-1 → Phase-3 dependency (recorded 2026-07-30).** Correcting ch10's
+power definition required naming a **statistical test** and its **threshold**, and
+correcting its diagnosand list required naming **coverage**. Verified by search:
+ch10 is now the FIRST place in the book where testing vocabulary appears, and
+nothing before it teaches tests, thresholds, or intervals. Phase 1 bridges this
+inline with bold-term definitions plus a forward pointer, which is the minimum
+honest fix. The real repair is the **uncertainty-foundations lesson placed before
+ch10** (D35 §2) — exactly the prerequisite inversion the round-2 review identified.
+When that lesson lands, revisit ch10's inline glosses and delete what it now
+supplies. Until then, ch10 carries a load its predecessors have not prepared, and
+the A1 cold pilots should watch specifically for readers stalling there.
+
 ### A6 — Assessment calibration · P2
 
 Common core criteria plus route- and genre-specific addenda, each with a stable
