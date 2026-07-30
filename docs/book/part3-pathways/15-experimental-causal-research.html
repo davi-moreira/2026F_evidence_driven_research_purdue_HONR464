@@ -482,10 +482,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">15.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">15.3</span> A worked example</a></li>
   <li><a href="#a-seeded-simulation" id="toc-a-seeded-simulation" class="nav-link" data-scroll-target="#a-seeded-simulation"><span class="header-section-number">15.4</span> A seeded simulation</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">15.5</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">15.6</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">15.7</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">15.8</span> It is your turn</a></li>
+  <li><a href="#what-attrition-does-to-that-promise" id="toc-what-attrition-does-to-that-promise" class="nav-link" data-scroll-target="#what-attrition-does-to-that-promise"><span class="header-section-number">15.5</span> What attrition does to that promise</a></li>
+  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">15.6</span> The Colab laboratory</a></li>
+  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">15.7</span> Recommended AI prompts</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">15.8</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">15.9</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -624,31 +625,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The histogram is the <strong>randomization distribution</strong>: every estimate this same trial could have produced under a different coin flip. It centers almost exactly on the truth (mean of estimates 4.9 against a true 5.0), which is the “right on average” promise, kept and visible. But individual runs landed anywhere from about 2 to 8 points. Your one realized trial is a single draw from this histogram, and that spread is the uncertainty an honest report must carry next to the estimate. In the companion notebook, double <code>n</code> and watch the histogram narrow: sample size buys precision — it is randomization that buys truth on average.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">15.5</span> The Colab laboratory</h2>
+<section id="what-attrition-does-to-that-promise" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="what-attrition-does-to-that-promise"><span class="header-section-number">15.5</span> What attrition does to that promise</h2>
+<p>The code below keeps the coin flip exactly as honest as before and changes one thing: who is still measurable at the end. Every one of 2,000 patients gets a true benefit of 5 points. Under control, patients drop out only if their health is poor. Under the reminder, the cut is harsher, so more of the sickest patients go unmeasured. Then the study is re-randomized 2,000 times, and each time we take the plain difference between the patients we can still see.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>N, reps, tau <span class="op">=</span> <span class="dv">2000</span>, <span class="dv">2000</span>, <span class="fl">5.0</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>health <span class="op">=</span> rng.normal(size<span class="op">=</span>N)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> <span class="dv">60</span> <span class="op">+</span> <span class="dv">10</span> <span class="op">*</span> health <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="dv">5</span>, size<span class="op">=</span>N)   <span class="co"># refill rate, no reminder</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> y0 <span class="op">+</span> tau                                      <span class="co"># ... with the reminder</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>r0 <span class="op">=</span> health <span class="op">&gt;</span> <span class="op">-</span><span class="fl">0.8</span>        <span class="co"># still measurable under control</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>r1 <span class="op">=</span> health <span class="op">&gt;</span> <span class="op">-</span><span class="fl">0.2</span>        <span class="co"># ... under the reminder: the sickest drop out</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>contrasts <span class="op">=</span> []</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(reps):</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> rng.permutation(N) <span class="op">&lt;</span> N <span class="op">//</span> <span class="dv">2</span>                <span class="co"># an honest coin flip</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> np.where(z, y1, y0)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    retained <span class="op">=</span> np.where(z, r1, r0)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    contrasts.append(y[z <span class="op">&amp;</span> retained].mean() <span class="op">-</span> y[(<span class="op">~</span>z) <span class="op">&amp;</span> retained].mean())</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>contrasts <span class="op">=</span> np.asarray(contrasts)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"true effect for everyone enrolled:"</span>, np.mean(y1 <span class="op">-</span> y0))</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"average complete-case contrast:   "</span>, contrasts.mean().<span class="bu">round</span>(<span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/sims/ch15_attrition.png" class="img-fluid figure-img" alt="Histogram of 2,000 complete-case contrasts in orange, centered near 8.1 percentage points, with a dashed vertical line at the true effect of 5.0 sitting far to the left of the entire distribution."></p>
+<figcaption>The complete-case contrasts pile up near 8 points, far from the true 5-point effect.</figcaption>
+</figure>
+</div>
+<p>Look at where the dashed line sits. The truth is 5 points, and not one of the 2,000 re-randomizations produced a contrast anywhere near it. They pile up around 8.1. Nothing here is a fluke of one unlucky sample, and no amount of extra data would pull the pile leftward, because the tilt is not noise. Dropping the sickest patients from one arm raises that arm’s average, and the gap inherits the lift.</p>
+<p>Notice what the simulation did <em>not</em> do. It never touched the coin flip, and it never made the reminder work better than 5 points for anybody. Random assignment did its whole job. The damage happened afterward, when outcomes went missing in a way the treatment itself controlled. That is why retention by arm belongs in your report before any effect does: 59 percent of the reminder arm was still measured against 80 percent of the control arm, and that gap alone tells a reader to distrust the headline.</p>
+</section>
+<section id="the-colab-laboratory" class="level2" data-number="15.6">
+<h2 data-number="15.6" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">15.6</span> The Colab laboratory</h2>
 <p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook <strong>nb09 — Experimental causal research</strong> (<a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb">open in Colab</a>), part of the companion course presented in the <a href="../for-instructors.html">For instructors</a> appendix. There you analyze a real get-out-the-vote field experiment, estimate the effect as a difference in means, and put a randomization-inference interval around it. Then you watch attrition, noncompliance, and spillover each bend a clean estimate, so you learn to name which quantity actually survives.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">15.6</span> Recommended AI prompts</h2>
+<section id="recommended-ai-prompts" class="level2" data-number="15.7">
+<h2 data-number="15.7" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">15.7</span> Recommended AI prompts</h2>
 <p>Commit your own answer first, then delegate. Each prompt below is a checkable job, not a request for a verdict. Work them as a loop. The first answer is a draft: find the claim you cannot check, say so in your next message, and run it again. Some tools will run that whole loop unattended and hand you a finished analysis. The finished look is exactly what makes the questions in this chapter worth asking before you accept it.</p>
 <p><strong>Locate the standard tool.</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Act <span class="im">as</span> a statistics assistant. I ran a two<span class="op">-</span>arm randomized trial <span class="kw">and</span> computed a</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>plain difference <span class="kw">in</span> on<span class="op">-</span>time refill rates between a reminder arm <span class="kw">and</span> a control arm.</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Before <span class="bu">any</span> code, name the standard way to attach a <span class="dv">95</span><span class="op">%</span> interval to a difference <span class="kw">in</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>two proportions, <span class="kw">and</span> one resampling alternative, citing where each <span class="kw">is</span> documented.</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Only name methods you are confident exist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Act <span class="im">as</span> a statistics assistant. I ran a two<span class="op">-</span>arm randomized trial <span class="kw">and</span> computed a</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plain difference <span class="kw">in</span> on<span class="op">-</span>time refill rates between a reminder arm <span class="kw">and</span> a control arm.</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Before <span class="bu">any</span> code, name the standard way to attach a <span class="dv">95</span><span class="op">%</span> interval to a difference <span class="kw">in</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>two proportions, <span class="kw">and</span> one resampling alternative, citing where each <span class="kw">is</span> documented.</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Only name methods you are confident exist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>After running, verify: open the cited documentation and confirm the method and its formula exist as described. Counters <em>confident fabrication</em> (an invented method name arrives as confidently as a real one).</p>
 <p><strong>List the assumptions to verify.</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Here <span class="kw">is</span> my analysis of a randomized reminder trial: [paste your cell]. List, <span class="im">as</span> a</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>table, every assumption my causal reading rests on: that assignment was truly</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>random, that no one dropped out <span class="kw">in</span> a way tied to the outcome, that the control arm</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>got no treatment. For each, say what I would check <span class="kw">in</span> my own data to confirm it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Here <span class="kw">is</span> my analysis of a randomized reminder trial: [paste your cell]. List, <span class="im">as</span> a</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>table, every assumption my causal reading rests on: that assignment was truly</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>random, that no one dropped out <span class="kw">in</span> a way tied to the outcome, that the control arm</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>got no treatment. For each, say what I would check <span class="kw">in</span> my own data to confirm it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>After running, verify: check each listed assumption against your actual design and retention numbers before you accept the causal reading. Counters <em>silent scope change</em> (an association quietly reported as a settled cause).</p>
 <p><strong>Red-team your effect.</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>My claim: <span class="st">"the reminder raised on-time refills by 9 points."</span> Act <span class="im">as</span> a hostile</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>clinical<span class="op">-</span>trial reviewer. Name every way dropout, noncompliance, <span class="kw">or</span> spillover could</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>make this number describe a different group than everyone I enrolled. Do <span class="kw">not</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>rewrite the claim <span class="cf">for</span> me.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>My claim: <span class="st">"the reminder raised on-time refills by 9 points."</span> Act <span class="im">as</span> a hostile</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>clinical<span class="op">-</span>trial reviewer. Name every way dropout, noncompliance, <span class="kw">or</span> spillover could</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>make this number describe a different group than everyone I enrolled. Do <span class="kw">not</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>rewrite the claim <span class="cf">for</span> me.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>After running, verify: if it only praises the design, push back and demand the single worst threat, then test it against your retention by arm. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
@@ -664,13 +700,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="an-ai-failure-case" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">15.7</span> An AI failure case</h2>
+<section id="an-ai-failure-case" class="level2" data-number="15.8">
+<h2 data-number="15.8" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">15.8</span> An AI failure case</h2>
 <p>You paste your trial into the tool and it reports, with full confidence, “the reminder raised on-time refills by 12 points, and the effect is significant.” The code runs without a single error. Here is the trap. A third of the reminder arm, the patients whose blood pressure was worst, stopped answering follow-up and left the study, so the tool computed the gap among the patients who <em>stayed</em> and labeled it “the effect of the reminder.” That is a silent scope change. The number now describes only the healthier patients who remained, not everyone you enrolled, and dropping the worst cases pushed it up.</p>
 <p>You catch it by checking retention by arm, not by re-reading the fluent paragraph. When you see the reminder arm lost far more patients than the control arm, and the ones it lost were the sickest, you know the 12 points is a complete-case contrast. It is not the effect among stayers either, because each arm made its own stayers. A green check is not a correct result. You rewrite the sentence to report retention in both arms, to say plainly that this trial as run does not deliver the effect for everyone enrolled, and to name what you would have to assume before any causal number follows.</p>
 </section>
-<section id="it-is-your-turn" class="level2" data-number="15.8">
-<h2 data-number="15.8" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">15.8</span> It is your turn</h2>
+<section id="it-is-your-turn" class="level2" data-number="15.9">
+<h2 data-number="15.9" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">15.9</span> It is your turn</h2>
 <p><em>Your design is declared and diagnosed. This step asks whether it has earned the word “because”, and makes you say out loud whose effect your number is.</em></p>
 <ol type="1">
 <li>Write your treatment and your outcome as two short phrases. Then write one sentence on how a unit ends up treated. If the answer is anything other than “a chance device decided,” this pathway is not yours yet.</li>

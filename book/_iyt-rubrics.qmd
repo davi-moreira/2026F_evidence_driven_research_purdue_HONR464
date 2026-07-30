@@ -207,7 +207,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 |---|---|---|
 | Step 1 | Write your treatment and your outcome as two short phrases | |
 | Step 2 | Take one real unit from your study and write Y(1) and Y(0) for it in plain words | |
-| Step 3 | Name the quantity your estimate targets and for whom: everyone you enrolled, only those who complied, only those who stayed | |
+| Step 3 | Name the quantity your estimate targets and for whom: everyone you enrolled, or only those who complied | |
 | Step 4 | Name the threat nearest your design, whether attrition, noncompliance, or spillover, and the check you will run in your own data to see how bad it… | |
 | Step 5 | If you cannot randomize, run steps 1 to 4 as a drill, then name the confounder that random assignment would have killed for you and the observational… | |
 | Step 6 | Log the step in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |

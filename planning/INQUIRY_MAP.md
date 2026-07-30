@@ -26,11 +26,33 @@ violations are carried forward here unchanged.
 | | **Reach: data at hand** | **Reach: a population** | **Reach: unseen cases** |
 |---|---|---|---|
 | **Descriptive** | **Description** | **Generalization** | **Prediction** |
-| **Causal** | **Causal reasoning** (identification licenses the kind; sampling licenses the reach) | | |
+| **Causal** | **Causal reasoning — SATE** (the sampled units) | **PATE** (a population) | **transported effect** (a new setting or time) |
 
 The four named positions are *derived* from the two-kind split, not standing
 beside it. All four are introduced together when the compass is taught (`nb02`);
 each is deepened later inside its matched pathway.
+
+**Causal reach is real, and the causal row is not one cell (D35).** RDSS ch. 7
+defines causal inquiries over different unit sets: SATE (sampled units), PATE (a
+population), CATE (a defined covariate subgroup), and effects transported to a new
+setting. Identification licenses the causal *kind* in every cell; sampling licenses
+population reach; a transport argument licenses reach to a new setting. A causal
+question therefore needs its target named, not just its kind.
+
+**The relabeling prohibition (D35, from the F2 finding).** A causal question whose
+data cannot identify it is **"causal target; currently unidentified"** — it NEVER
+becomes descriptive because the evidence is weak. Deficiencies in the data strategy
+show that the *design* does not reach the inquiry; they do not rewrite the inquiry.
+(RDSS ch. 7: "the deficiencies of the data strategy should not lead us too far away
+from our inferential targets.") Changing the question is a human decision, recorded
+openly as a revision — never a silent reclassification. Equally: a non-randomized
+data strategy does not by itself forbid a causal answer, since observational causal
+designs (pathway 2) identify effects under a defended argument.
+
+*Deferred to D35 Phase 3 (Station 5's route hub): restructuring this map into the
+four independent route fields — objective/inquiry · target and reach · data
+strategy · identification/generalization/validation warrant. The corrections above
+remove the false content now; the architecture follows when the route hub is built.*
 
 ## Crossings, licenses, and named violations — the claim-boundary discipline
 
@@ -103,11 +125,14 @@ the proof is always diagnosis:
 - **Taught:** classification in `nb02`; design deep dives in `nb06` (observational
   causal: selection-on-observables, DiD, IV, RDD, natural experiments) and `nb09`
   (experimental causal: two-arm trials, blocking, cluster + factorial designs).
-- **Reach within the causal kind:** SATE vs PATE (ch. 7) — the sample → population
-  crossing applies here too; identification licenses the kind, sampling licenses
-  the reach.
+- **Reach within the causal kind:** SATE vs PATE vs CATE vs a transported effect
+  (ch. 7) — the sample → population crossing applies here too; identification
+  licenses the kind, sampling licenses the reach.
 - **Classic misclassification:** **design mimicry** — DiD/RDD/IV vocabulary
   decorating a comparison whose assumptions were never argued.
+- **Classic misclassification (D35):** **silent relabeling** — calling a causal
+  question descriptive because the available data cannot identify it. The correct
+  status is "causal target; currently unidentified."
 - **RDSS home:** ch. 6–7 (model/inquiry), ch. 16 (observational causal), ch. 18
   (experimental causal).
 
