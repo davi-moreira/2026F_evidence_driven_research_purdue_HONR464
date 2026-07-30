@@ -944,3 +944,21 @@ sweep makes "above the ⏸ line" a true statement of what is required, makes
 the validator able to notice when it stops being true, and buys Wednesday a
 consolidation moment without reopening D22. Feasibility in the room (block-4
 timing, Wednesday block 2) remains to be observed in Weeks 1–2, not assumed.
+
+**Same-day addendum (the weight propagation + the instrument).** The D33
+in-class weights were propagated into the closing prompts themselves: the 14
+heavy 🎯 cells (all Wednesday closes + nb02-L1, nb03-L1, nb08-L1, nb12-L1)
+now ask for ONE in-class sentence, with the milestone spine compacted into a
+labeled Friday-studio preview and the answer cell reduced to one field; the
+13 heavy 🛡️ cells now run the four-field ritual at one line per field, each
+keeping its lecture-specific boundary hint. Measured on the rebuilt
+notebooks: required 🎯 prose 135 → 73 mean words with 0/24 lectures carrying
+numbered required tasks (was 14/24); 🛡️ 81 → 53. nb11's two 🎯 cells stay as
+built — they capture in-room gallery/defense output, which IS that block's
+work. The feasibility instrument now exists as
+`_project_docs/D33_EVALUATION_PROTOCOL.md`: four dry-run cases (nb03, nb08,
+an ordinary Monday, an ordinary Wednesday), a boundary-and-move timing sheet,
+an AI-latency field, six predeclared pass criteria, an observer form, ledger
+audits, and the first-two-weeks review rule with its cut order (Wednesday
+block 2 first; the ⏸/🏠 pilots next; the accuracy lock lengthens before any
+frame moves; D22 reopens only on two failed levers in both weeks).
