@@ -1,0 +1,74 @@
+# BOOK_ASSESSMENTS.yml — authored assessment source for EDR|AI
+# (D35 Phase 2, SKELETON — no criteria authored yet)
+#
+# Replaces the retired auto-derived first-sentence rubrics (D26 -> D35 §4).
+# Once populated, every displayed rubric is GENERATED from this file; criteria
+# are authored here, never derived from prose and never hand-edited in a
+# generated artifact. Authoring happens per station in Phase 4, after the
+# Phase-3 prototypes settle what each checkpoint actually assesses.
+#
+# Design commitments this schema encodes (from the round-2 review + D35):
+#   - stable criterion IDs (station-slug.criterion-slug) so feedback,
+#     calibration notes, and revisions can reference a criterion across
+#     versions;
+#   - common core criteria per station PLUS route/genre addenda — a rubric
+#     must not score a prediction project with causal-branch descriptors
+#     (route tokens, not bare N/A cells);
+#   - anchored performance levels (0/1/2 with described anchors, not bare
+#     numbers);
+#   - exemplar pairs per station (one strong, one plausible-but-wrong), each
+#     with provenance: stable ID, source/citation status, data license,
+#     route/genre tags, EN content hash, per-locale translation state
+#     (machine | post-edited | human-reviewed). Registry fields adopted from
+#     day one; BUILD GATES on exemplar provenance deferred until exemplar
+#     translations exist (D35 §8);
+#   - a prerequisite matrix: every Research Contract field maps to the lesson
+#     that teaches it (definition -> worked example -> faded practice ->
+#     checkpoint); the validator rejects any criterion assessing a field
+#     before its teaching lesson (acceptance-test A5 / freeze criterion 4).
+#
+# Lesson references use BOOK_ARCHITECTURE.yml ids.
+
+schema_version: 0.1
+status: skeleton
+
+contract_fields:
+  # The versioned Research Contract (D35 §3). `taught_by` = lesson id whose
+  # material first teaches the field; fill as Phase 3 lands the new lessons.
+  - {field: objective,            taught_by: question-kinds}
+  - {field: target_estimand,      taught_by: question-kinds}
+  - {field: population_setting_time, taught_by: question-kinds}
+  - {field: data_strategy,        taught_by: mida}
+  - {field: measurement,          taught_by: measurement}
+  - {field: warrant,              taught_by: declare-diagnose}
+  - {field: answer_strategy_uncertainty, taught_by: uncertainty-foundations}
+  - {field: ethics_authorization, taught_by: ethics-data-governance}
+  - {field: ai_activity_provenance, taught_by: sdiivdd}
+  - {field: claim_boundary,       taught_by: question-kinds}
+
+levels:
+  # Shared anchor scheme; per-criterion descriptors override the generic text.
+  - {score: 0, anchor: "absent, or asserts without the required element"}
+  - {score: 1, anchor: "present but incomplete or unverified in a stated way"}
+  - {score: 2, anchor: "complete, verified, and honestly bounded"}
+
+stations: []
+  # Populated in Phase 4, one entry per station:
+  # - station: 4
+  #   criteria:
+  #     - id: declare-and-diagnose.contract-v0
+  #       assesses: [objective, target_estimand, data_strategy, warrant]
+  #       text: "..."
+  #       levels: {0: "...", 1: "...", 2: "..."}
+  #       addenda:
+  #         - {route: prediction, text: "...", levels: {...}}
+  #   exemplars:
+  #     - id: declare-and-diagnose.strong-01
+  #       kind: strong
+  #       route: observational-descriptive
+  #       provenance: {source: "...", citation_status: verified,
+  #                    data_license: "...", en_hash: "...",
+  #                    locales: {pt-BR: machine, es: machine}}
+  #     - id: declare-and-diagnose.wrong-01
+  #       kind: plausible-but-wrong
+  #       teaches: "..."

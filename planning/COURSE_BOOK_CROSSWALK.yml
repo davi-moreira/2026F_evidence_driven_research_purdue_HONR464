@@ -1,0 +1,133 @@
+# COURSE_BOOK_CROSSWALK.yml — the HONR 46400 adoption map for EDR|AI
+# (D35 Phase 2, DRAFT v0 — NOT yet machine-verified)
+#
+# The ONLY place course facts and book structure meet (independence axiom:
+# course structures constrain this crosswalk, never the book's spine). Once
+# adopted, this file GENERATES: the For Instructors adoption table, milestone
+# Book Anchors, and course reading lists. Rows reference lessons by their
+# immutable ids from BOOK_ARCHITECTURE.yml, never by chapter number.
+#
+# Source of the mapping: the round-2 design review's 16-row counter-proposal
+# (task #20, Record 4 §5), adopted by D35 as v0 DATA subject to machine
+# verification. Per D35(7): the validator — checking every row against
+# planning/MEETING_SCHEDULE.csv and _research_project/2026Fall/ briefs, and
+# enforcing prerequisite timing (no construct assessed before its teaching
+# lesson) — is the arbiter, not any reviewer's reading. Until that check
+# passes, nothing here feeds a generated artifact.
+#
+# `station_action` vocabulary: open | advance | close | revisit (a station
+# checkpoint may be revisited — versioned, never irreversible, D35 §3).
+# `primary_lab_of` records which lessons name this nb as their primary course
+# lab; corrections ruled by D35 from the round-2 review are marked.
+#
+# Validator contract (Phase-2 rewrite): every lesson id appears in exactly one
+# `reading` (the 16 anchors partition all lessons, planned ones included);
+# every nb01–nb16 is primary lab of >= 1 lesson; every `station_action: close`
+# for a station follows all its lessons' readings; self-reproduction precedes
+# the poster lock (M10); no row conflicts with MEETING_SCHEDULE.csv.
+
+schema_version: 0.1
+status: draft-v0
+machine_verification: pending
+
+rows:
+  - milestone: M0
+    nb: nb01
+    reading: [ai-arm-not-brain, research-director, sdiivdd, responsibility-ownership]
+    primary_lab_of: [ai-arm-not-brain, research-director, sdiivdd, responsibility-ownership]
+    station_actions: [{station: 1, action: close}]
+
+  - milestone: M1
+    nb: nb02
+    reading: [curiosity-to-problem, question-kinds]
+    primary_lab_of: [curiosity-to-problem, question-kinds]
+    station_actions: [{station: 2, action: close}]
+
+  - milestone: M2
+    nb: nb03
+    reading: [research-builds, verifying-prior-evidence, data-provenance]
+    primary_lab_of: [research-builds, verifying-prior-evidence, data-provenance]
+    station_actions: [{station: 3, action: close}, {station: 6, action: open}]
+
+  - milestone: M3
+    nb: nb04
+    reading: [mida, uncertainty-foundations, declare-diagnose, ethics-data-governance]
+    primary_lab_of: [mida, declare-diagnose, uncertainty-foundations, ethics-data-governance]
+    # D35 correction: both planned lessons take nb04 as primary lab
+    station_actions: [{station: 4, action: close}]   # Contract v0 + permission status
+
+  - milestone: M4
+    nb: nb05
+    reading: [observational-descriptive, measurement, ai-as-programmer]
+    primary_lab_of: [observational-descriptive, measurement, ai-as-programmer]
+    station_actions: [{station: 5, action: open}, {station: 6, action: advance},
+                      {station: 7, action: open}]
+
+  - milestone: M5
+    nb: nb06
+    reading: [observational-causal]
+    primary_lab_of: [observational-causal]
+    station_actions: [{station: 5, action: advance}]   # branch or contrast case
+
+  - milestone: M6
+    nb: nb07
+    reading: [experimental-descriptive]
+    primary_lab_of: [experimental-descriptive]
+    station_actions: [{station: 5, action: advance}]
+
+  - milestone: M7
+    nb: nb08
+    reading: [prediction-generalization]
+    primary_lab_of: [prediction-generalization]
+    station_actions: [{station: 5, action: advance}]   # + revisit applied uncertainty
+
+  - milestone: M8
+    nb: nb09
+    reading: [experimental-causal, hybrid-complex-designs, ai-analytical-assistant]
+    primary_lab_of: [experimental-causal, hybrid-complex-designs, ai-analytical-assistant]
+    # D35 corrections: hybrid-complex-designs nb04 -> nb09; ai-analytical-assistant nb10 -> nb09
+    station_actions: [{station: 5, action: close}, {station: 7, action: close}]
+
+  - milestone: M9
+    nb: nb10
+    reading: [robustness-sensitivity, negative-tests, ai-adversarial-reviewer, false-confidence]
+    primary_lab_of: [robustness-sensitivity, negative-tests, ai-adversarial-reviewer, false-confidence]
+    # D35 correction: false-confidence nb01 -> nb10
+    station_actions: [{station: 8, action: close}]    # + self-reproduction precheck
+
+  - milestone: M10
+    nb: nb11
+    reading: [results-to-claims, claim-evidence-tables, research-posters, poster-criticism]
+    primary_lab_of: [results-to-claims, claim-evidence-tables, research-posters, poster-criticism]
+    station_actions: [{station: 9, action: open}, {station: 10, action: open}]
+    gate: "author self-reproduction REQUIRED before the poster lock (D35: reproduce before you publish)"
+
+  - milestone: M11
+    nb: nb12
+    reading: [research-pitches, difficult-questions]
+    primary_lab_of: [research-pitches, difficult-questions]
+    station_actions: [{station: 10, action: advance}]  # oral-defense branch
+
+  - milestone: M12
+    nb: nb13
+    reading: [ai-disclosure]        # before the Expo; Expo/reflection stays course-only
+    primary_lab_of: [ai-disclosure]
+    station_actions: [{station: 9, action: advance}]   # disclosure portion closes
+
+  - milestone: M13
+    nb: nb14
+    reading: [replication-reproduction]
+    primary_lab_of: [replication-reproduction]
+    station_actions: [{station: 11, action: advance}]  # peer/cold reproduction
+
+  - milestone: M14
+    nb: nb15
+    reading: [poster-to-note, research-packages]
+    primary_lab_of: [poster-to-note, research-packages]
+    station_actions: [{station: 9, action: close}, {station: 11, action: close}]
+
+  - milestone: M15
+    nb: nb16
+    reading: [managing-ai-agents, conflicting-agents, final-portfolio]
+    primary_lab_of: [managing-ai-agents, conflicting-agents, final-portfolio]
+    station_actions: [{station: 12, action: close}]
