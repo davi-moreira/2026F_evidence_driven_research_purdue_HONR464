@@ -53,8 +53,30 @@ how you turn a concept into a number. The **specification** is the bundle of mod
 choices behind the estimate. The **metric** is the yardstick you report.
 
 Turning every handle at once and plotting the results gives a **specification curve**: a
-picture of one estimate under many defensible choices side by side. If the whole curve
-stays on one side of zero, your direction is robust. Its spread is your honest range.
+picture of one estimate under many defensible choices side by side.
+
+Before anything goes on that curve, it has to pass one gate. Every estimate on a single
+curve must aim at the **same estimand**, the one exact quantity you set out to learn,
+for the same group of units. Example: "the offer's effect on 30-day spending per
+shopper we assigned it to, counting shoppers who spent nothing" is an estimand. Swap in
+"average order value among the shoppers who actually bought something" and you have
+changed the question, because whether someone bought is itself affected by the offer.
+That estimate may be worth reporting, in its own place, with its own label. It is not
+another answer to the first question, and putting it on the same curve makes the curve
+meaningless.
+
+Two more things the curve does not do. A curve that stays entirely on one side of zero
+shows that your answer is stable across the choices you listed. It cannot see a flaw
+that every one of those choices shares. If your comparison group was wrong to begin
+with, all sixteen versions inherit that error and lean the same way together, and the
+picture looks reassuring precisely when it should not. **Shared bias** is that common
+error running underneath an entire curve.
+
+And the distance from the lowest dot to the highest is not an interval. It is the
+**specification spread**, the span your answer covered across the analyses you happened
+to run. It carries no promise about how often it contains the truth, which is what an
+interval is for. Report both, separately: the spread tells a reader how much your
+choices mattered, and each estimate still needs its own uncertainty beside it.
 
 The danger has a name. **Specification searching**, whose everyday name is **p-hacking**,
 is running many analyses and reporting only the one that gave the result you wanted,
@@ -81,15 +103,25 @@ number, you attack it across the four handles.
   exclusion on your definition of a customer, not a convenient one.
 - **Measurement.** Order value read as the total amount charged, or read with shipping
   and taxes stripped out.
-- **Specification.** Spending averaged over everyone offered the discount, or averaged
-  only over those who actually placed an order.
+- **Specification.** Spending averaged with no adjustment, or adjusted for how much each
+  shopper spent in the weeks *before* the offer.
 - **Metric.** The gain in dollars, or the gain as a percent.
 
-You pre-list all sixteen combinations, run them, and plot the specification curve. Every
-combination comes back positive: the discount helps no matter which defensible choice you
-make. The magnitude ranges from about plus eight percent to plus fifteen percent. So the
-honest headline is not "twelve percent." It is "higher spending in every specification we
-ran, by roughly eight to fifteen percent."
+Notice what is missing. Averaging only over shoppers who actually placed an order does
+not belong here, because the discount can change who places an order. That comparison
+answers a different question about a different group, so it goes in its own section with
+its own label, not on this curve.
+
+You pre-list the combinations, run them, and plot the specification curve. Every one
+comes back positive, spanning about plus eight to plus fifteen percent. Here is how to
+report that without overclaiming: "Spending was higher under the offer in all the
+specifications we pre-listed. The estimates spanned eight to fifteen percent, and our
+preferred estimate is twelve percent, with an interval of six to eighteen percent."
+
+Two sentences, two different jobs. The span says how much your analysis choices mattered.
+The interval says how much sampling uncertainty surrounds the estimate you lead with.
+Collapsing them into "the honest range is eight to fifteen" quietly claims a precision
+nobody computed.
 
 Then you run one more attack, a **placebo test**: you split shoppers who all got the
 *same* offer into fake "A" and "B" groups and confirm the gap between them sits near zero.
@@ -192,16 +224,25 @@ chance.*
 2. Pre-list the checks you will run, at least two, aimed at the handles a hostile reader
    would attack first. Write them down before you run any of them, and commit now to
    reporting all of them however they come out.
-3. Run every check on your list. Report the finding as a direction plus a range, such as
-   "positive in all four versions, between eight and fifteen percent," rather than as the
-   single friendliest number.
-4. Add one placebo: build groups you know are identical, run the same analysis on them,
+3. Before you run anything, check that every version on your list aims at the same
+   quantity for the same units. Any version that changes the question, especially one
+   that keeps only units whose status your treatment could have changed, comes off the
+   curve and gets reported separately.
+4. Run every check on your list. Report two things, not one: the direction and span
+   across versions ("positive in all four, between eight and fifteen percent"), and the
+   uncertainty around your preferred estimate. The span is not an interval, and neither
+   one alone is an honest report.
+5. Ask what every version on your list has in common. If one flaw sits underneath all of
+   them, such as a comparison group chosen badly, the whole curve leans together and
+   agreement proves nothing. Name that shared threat in a sentence, since your curve
+   cannot test it.
+6. Add one placebo: build groups you know are identical, run the same analysis on them,
    and confirm the gap sits near zero. If it does not, your machinery is producing the
    effect.
-5. Read back your AI cycle log and mark any re-prompt that followed a disappointing
+7. Read back your AI cycle log and mark any re-prompt that followed a disappointing
    number. Every version you actually ran belongs in the report, including the ones that
    did not help you.
-6. Log the pre-listed plan and its full results in your AI Research Ledger, and verify at
+8. Log the pre-listed plan and its full results in your AI Research Ledger, and verify at
    least one output with a named method from the
    [Verification Guide](../verification-guide.qmd). A **counterexample** hunt suits a
    robustness claim: try honestly to build one defensible specification that flips the
