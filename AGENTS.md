@@ -22,6 +22,13 @@ When running a review:
 - Distinguish confirmed defects from speculation.
 - Prefer a small number of material findings over many superficial comments.
 
+## Counter-proposal duty
+
+Do not stop at identifying defects, gaps, or weaknesses. State clearly what you
+would do instead: a better approach, analysis, structure, or conclusion, argued
+on its merits with evidence. If the work under review is genuinely the best
+available option, say so explicitly and why.
+
 ## Review priorities
 
 Review for:
