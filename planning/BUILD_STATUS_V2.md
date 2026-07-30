@@ -40,7 +40,9 @@ framing + Friday 10/5/30/5). Governing decisions: `_project_docs/DECISIONS.md`
 > **D26 (2026-07-28)** — For-Instructors appendix PASSWORD-LOCKED ×3
 > (post-render encryption via the generalized `protect_instructor_page.py`;
 > password only in gitignored `_production_kit/page_password.txt`, requested
-> by email, literal scrubbed from committed docs); auto-derived **IYT
+> by email, literal scrubbed from committed docs — *lock RETIRED by D35,
+> 2026-07-30: pages ship openly, the private repo is the protection*);
+> auto-derived **IYT
 > rubrics** in every companion notebook + `_iyt-rubrics.qmd` in the locked
 > appendix; **under-development banners** on all 37 chapters ×3 editions,
 > driven by `planning/BOOK_REVIEW_STATUS.yml` +

@@ -54,8 +54,7 @@ choose the GitHub tab, and check **"Include private repos"** when authorizing.
 ::: below-table
 
 Instructor material is synced by `scripts/sync_instructor_repo.sh` after each
-notebook build. This page is encrypted at render time
-(`scripts/protect_instructor_page.py`); the password gate is a courtesy lock —
-the private repository plus GitHub authentication is the real protection.
+notebook build. The private repository plus GitHub authentication is what
+protects it — the links above open only for the instructor's GitHub account.
 
 :::

@@ -13,9 +13,8 @@ project:
     - "!book-es/"
   resources:
     - "notebooks/data/honr46400_datasets.zip"
-  # Encrypt the rendered instructor page (courtesy lock; the private repo +
-  # GitHub auth is the real protection). Runs after every `quarto render`.
-  post-render: .venv/bin/python scripts/protect_instructor_page.py
+  # No page encryption (D35): instructor-facing pages ship openly; the private
+  # instructor repo + GitHub auth is the real protection.
 
 
 website:

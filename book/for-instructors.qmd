@@ -51,8 +51,10 @@ open:
   [honr46400_datasets.zip](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/notebooks/data/honr46400_datasets.zip)
 
 The weekly rhythm: Monday and Wednesday lectures are led by a student — the
-day's **Student Research Lead**, whose system is the appendix
-[The Student Research Lead](srl.qmd) — as Socratic investigations built on the
+day's **Student Research Lead**, whose system (handbook, preparation template,
+rubric, question bank) lives with the course materials in
+[`project/srl/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/project/srl){target="_blank"} —
+as Socratic investigations built on the
 week's lab notebook; the AI does the legwork live, and every claim it produces
 is verified before it survives. Friday is a **studio**: a short retrieval quiz,
 a research stand-up, and a long sprint on the week's **milestone**, worked
@@ -100,8 +102,8 @@ free Colab.
 The book is deliberately institution-agnostic, and the course material above
 is open: take the whole architecture, one lab, or nothing but the reading
 sequence. Instructor-side material — solution notebooks and per-meeting
-session guides — lives behind the password-gated Instructor tab of the course
-website; write to the author for access
+session guides — lives in a private repository linked from the Instructor tab
+of the course website; write to the author for access
 ([About the Author](author.qmd)). If you teach with EDR|AI, the author would
 genuinely like to hear how it went.
 

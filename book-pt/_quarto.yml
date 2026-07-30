@@ -4,7 +4,6 @@ project:
   resources:
     - images/edrai_logo.png
     - images/edrai_cover.png
-  post-render: ../.venv/bin/python ../scripts/protect_instructor_page.py
 
 book:
   title: "EDR|AI — Pesquisa Orientada por Evidências na Era da IA"
@@ -63,7 +62,6 @@ book:
         - part6-after-conference/36-conflicting-agents-and-human-escalation.qmd
         - part6-after-conference/37-final-research-and-ai-management-portfolio.qmd
   appendices:
-    - srl.qmd
     - verification-guide.qmd
     - for-instructors.qmd
 

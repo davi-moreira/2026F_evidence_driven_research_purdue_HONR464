@@ -5,8 +5,8 @@ material.qmd is the student-facing, topic-indexed resource catalog (D15): one
 row per topic notebook with its Colab badge, lecture count, the course dataset
 bundle, and readings — the QM670-style split where Material is the catalog and
 Schedule is the calendar. instructor.qmd is the same catalog pointing at the
-PRIVATE instructor repo (instructor notebooks + session guides); the rendered
-docs/instructor.html is encrypted post-render by scripts/protect_instructor_page.py.
+PRIVATE instructor repo (instructor notebooks + session guides); the page ships
+openly (D35) — the private repo + GitHub auth is the protection.
 
 Both pages are generated from planning/MEETING_SCHEDULE.csv +
 scripts/notebooks_map.py — never hand-edit them; edit this generator or the
@@ -123,9 +123,8 @@ INSTRUCTOR_FOOTER = '''
 ::: below-table
 
 Instructor material is synced by `scripts/sync_instructor_repo.sh` after each
-notebook build. This page is encrypted at render time
-(`scripts/protect_instructor_page.py`); the password gate is a courtesy lock —
-the private repository plus GitHub authentication is the real protection.
+notebook build. The private repository plus GitHub authentication is what
+protects it — the links above open only for the instructor's GitHub account.
 
 :::
 '''

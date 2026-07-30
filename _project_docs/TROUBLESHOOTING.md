@@ -18,9 +18,6 @@ voice, and instructor-page entries reflect this repo's actual pipeline (see
 3. Check for broken links in `.qmd` files.
 4. Try rendering individual files first: `quarto render index.qmd`.
 5. Confirm Quarto is installed at the expected path: `/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto --version`.
-6. If the failure is in the `post-render` step (`protect_instructor_page.py`), see
-   "Instructor Page Shipped Unencrypted" below — the render itself may have produced
-   the pages correctly.
 
 ---
 
@@ -148,27 +145,14 @@ gate is deliberate.
 
 ---
 
-## Issue: Instructor Page Shipped Unencrypted
+## Issue: Instructor Page Encryption (RETIRED, D35)
 
-**Symptoms:** `docs/instructor.html` contains readable instructor content instead of
-the password gate, or a diff shows cleartext instructor material staged.
-
-**Cause:** The page was hand-edited or committed without going through `quarto render`,
-so the `post-render` step (`protect_instructor_page.py`) never ran. That step AES-GCM
-encrypts the page behind the password gate and is idempotent (password from
-env `HONR_INSTRUCTOR_PASSWORD` or gitignored `_production_kit/page_password.txt`).
-
-**Solutions:**
-1. Re-run the full render so `post-render` fires, then commit the encrypted page:
-   ```bash
-   /Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto render
-   git add docs/instructor.html && git commit -m "build: re-encrypt instructor page"
-   ```
-2. If the render errors in that step with a crypto import failure, the venv is missing
-   the dependency: `.venv/bin/pip install cryptography`, then re-render.
-3. Never hand-edit generated pages under `docs/`; edit the generator and re-render.
-   The gate is a courtesy lock — the real protection is the private repo the page
-   links to (Colab/GitHub require the instructor's login).
+The page-encryption step (`protect_instructor_page.py` + the gitignored page
+password) was retired 2026-07-30: a password recoverable from public git history
+defeated it. `docs/instructor.html` and the three `for-instructors.html` pages
+now ship openly. The real protection is unchanged — the private instructor
+repo, where Colab/GitHub require the instructor's login. Never hand-edit
+generated pages under `docs/`; edit the generator and re-render.
 
 ---
 

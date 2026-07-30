@@ -52,8 +52,10 @@ estrutura. Tudo o que é voltado ao estudante é aberto:
   [honr46400_datasets.zip](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/notebooks/data/honr46400_datasets.zip)
 
 O ritmo semanal: as aulas de segunda e quarta-feira são conduzidas por um
-estudante — o **Student Research Lead** do dia, cujo sistema é o apêndice
-[O Student Research Lead](srl.qmd) — como investigações socráticas construídas
+estudante — o **Student Research Lead** do dia, cujo sistema (manual, roteiro
+de preparação, rubrica, banco de perguntas) vive com os materiais do curso em
+[`project/srl/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/project/srl){target="_blank"} —
+como investigações socráticas construídas
 sobre o notebook de laboratório da semana; a IA faz o trabalho pesado ao vivo,
 e toda alegação que ela produz é verificada antes de sobreviver. A sexta-feira
 é um **estúdio**: um quiz curto de recuperação, um stand-up de pesquisa e um
@@ -102,9 +104,9 @@ qualquer um deles abre no Colab gratuito.
 O livro é deliberadamente independente de instituição, e o material do curso
 acima é aberto: leve a arquitetura inteira, um único laboratório, ou apenas a
 sequência de leituras. O material do lado do instrutor — notebooks com
-soluções e guias de aula por encontro — fica atrás da aba Instructor do site
-do curso, protegida por senha; escreva ao autor para ter acesso
-([Sobre o Autor](author.qmd)). Se você ensinar com o EDR|AI, o autor vai
+soluções e guias de aula por encontro — vive em um repositório privado
+apontado pela aba Instructor do site do curso; escreva ao autor para ter
+acesso ([Sobre o Autor](author.qmd)). Se você ensinar com o EDR|AI, o autor vai
 gostar de verdade de saber como foi.
 
 {{< include _iyt-rubrics.qmd >}}

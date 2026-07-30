@@ -164,11 +164,9 @@ git add docs/ && git commit -m "build: Render Quarto site"
 git push origin main
 ```
 
-The render's `post-render` step runs `protect_instructor_page.py`, which encrypts
-`docs/instructor.html` client-side (password in gitignored
-`_production_kit/page_password.txt`). Never commit an unencrypted
-instructor page — always publish through `quarto render`, never by hand-editing
-`docs/`.
+Instructor-facing pages ship openly (D35 retired the page encryption); the
+private instructor repo + GitHub auth is the protection. Always publish through
+`quarto render`, never by hand-editing `docs/`.
 
 ---
 
