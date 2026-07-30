@@ -207,7 +207,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 |---|---|---|
 | Step 1 | Write your treatment and your outcome as two short phrases | |
 | Step 2 | Take one real unit from your study and write Y(1) and Y(0) for it in plain words | |
-| Step 3 | Name the quantity your estimate targets and for whom: everyone you enrolled, or only those who complied | |
+| Step 3 | Name the quantity your estimate targets and for whom, in one sentence a stranger could repeat back to you correctly | |
 | Step 4 | Name the threat nearest your design, whether attrition, noncompliance, or spillover, and the check you will run in your own data to see how bad it… | |
 | Step 5 | If you cannot randomize, run steps 1 to 4 as a drill, then name the confounder that random assignment would have killed for you and the observational… | |
 | Step 6 | Log the step in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
@@ -286,16 +286,18 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 
 ### Ch. 21 — Robustness and Sensitivity
 
-Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
+Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **18 points total.**
 
 | # | Criterion | 0–2 |
 |---|---|---|
 | Step 1 | Write your headline estimate in one sentence | |
 | Step 2 | Pre-list the checks you will run, at least two, aimed at the handles a hostile reader would attack first | |
-| Step 3 | Run every check on your list | |
-| Step 4 | Add one placebo: build groups you know are identical, run the same analysis on them, and confirm the gap sits near zero | |
-| Step 5 | Read back your AI cycle log and mark any re-prompt that followed a disappointing number | |
-| Step 6 | Log the pre-listed plan and its full results in your AI Research Ledger, and verify at least one output with a named method from the Verification… | |
+| Step 3 | Before you run anything, check that every version on your list aims at the same quantity for the same units | |
+| Step 4 | Run every check on your list | |
+| Step 5 | Ask what every version on your list has in common | |
+| Step 6 | Add one placebo: build groups you know are identical, run the same analysis on them, and confirm the gap sits near zero | |
+| Step 7 | Read back your AI cycle log and mark any re-prompt that followed a disappointing number | |
+| Step 8 | Log the pre-listed plan and its full results in your AI Research Ledger, and verify at least one output with a named method from the Verification… | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
 ### Ch. 22 — Diagnostics and Negative Tests
