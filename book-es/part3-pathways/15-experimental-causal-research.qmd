@@ -324,8 +324,9 @@ complaciente*: elogios que revisan tu ego, no tu evidencia.
 ::: {.callout-important title="No delegues"}
 Tres decisiones nunca salen de tus manos. Tú decides **si de verdad hubo asignación
 aleatoria** en tu estudio, porque una herramienta no puede ver cómo armaste los
-brazos. Tú decides **qué cantidad estima tu número y para quién**, el efecto para
-todas las personas inscritas o solo el efecto entre quienes se quedaron. Y tú decides
+brazos. Tú decides **qué cantidad estima tu número y para quién**: si todavía habla por
+todas las personas inscritas, o si la atrición te dejó sin ningún número causal
+hasta que enuncies un supuesto y pruebes cuánto pesa. Y tú decides
 **si el efecto es lo bastante grande como para actuar**, y si es siquiera ético
 aleatorizar a pacientes reales y negarle algo al brazo de control. La oración final
 es tuya, con su frontera y su incertidumbre.
@@ -342,11 +343,17 @@ quedaron* y la etiquetó "el efecto del recordatorio". Eso es un cambio silencio
 alcance. El número ahora describe solo a las pacientes más sanas que permanecieron, no
 a todas las que inscribiste, y soltar los peores casos lo empujó hacia arriba.
 
-Lo detectas revisando la retención por brazo, no releyendo el párrafo fluido. Cuando
-ves que el brazo con recordatorio perdió muchas más pacientes que el de control, y
-que las que perdió eran las más enfermas, sabes que esos 12 puntos son el efecto entre
-quienes se quedaron. Una palomita verde no es un resultado correcto. Reescribes la
-oración para nombrar al grupo del que habla el número de verdad.
+Lo detectas revisando la retención por brazo y quiénes se perdieron, no releyendo el
+párrafo fluido. El brazo con recordatorio perdió muchas más pacientes, y las que
+perdió eran las más enfermas, así que quién se quedó estaba amarrado a cuál habría
+sido el resultado. Eso vuelve esos 12 puntos un contraste de casos completos: no el
+efecto para todas las inscritas, y no automáticamente un efecto para ningún grupo
+común de quienes se quedaron, ya que cada brazo produjo el suyo. Una palomita verde
+no es un resultado correcto. Reescribes la oración para reportar la retención en
+ambos brazos, para decir con todas sus letras que este ensayo, tal como corrió, no
+entrega el efecto para todas las inscritas, y para correr el "qué pasaría si" de la
+prueba de honestidad: ¿qué tan bajas tendrían que ser las renovaciones de las
+pacientes sin medir para que el hallazgo se voltee?
 
 ## Ahora te toca a ti
 
@@ -360,9 +367,14 @@ tu número.*
 2. Toma una unidad real de tu estudio y escribe Y(1) y Y(0) para ella en palabras
    simples. Marca con un círculo la que de verdad llegarás a ver. Ese círculo es el
    problema fundamental de la inferencia causal con la letra de tu propio proyecto.
-3. Nombra la cantidad a la que apunta tu estimación y para quién: todas las personas
-   que inscribiste, solo quienes cumplieron, solo quienes se quedaron. Escríbelo como
-   una oración que alguien desconocido pueda repetirte correctamente.
+3. Nombra la cantidad a la que apunta tu estimación y para quién, en una oración que
+   alguien desconocido pueda repetirte correctamente. "Todas las personas que
+   inscribí" es el punto de partida. "Solo quienes cumplieron" y "solo quienes se
+   quedaron" son grupos que tu tratamiento pudo haber ayudado a crear, así que
+   ninguno sale de una comparación simple de subgrupos: nombrar uno te compromete
+   con supuestos que debes enunciar. Si la atrición tocó tus datos, di qué supones
+   sobre las personas que no mediste, y muestra cómo se mueve la conclusión cuando
+   ese supuesto se dobla.
 4. Nombra la amenaza más cercana a tu diseño, sea atrición, incumplimiento o derrame,
    y la comprobación que correrás en tus propios datos para ver qué tan grave es:
    retención por brazo, adopción por brazo, contacto entre brazos.
