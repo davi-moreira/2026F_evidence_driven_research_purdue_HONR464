@@ -161,13 +161,13 @@ plt.show()
 5-point effect.](../images/sims/ch15_randomization.png){fig-alt="Histogram of
 2,000 estimated effects in blue, roughly bell-shaped from about 0 to 10
 percentage points, with a dashed vertical line at the true effect of 5.0 and
-an annotation reading mean of estimates 4.9."}
+an annotation reading mean of estimates 5.0."}
 
 The histogram is the **randomization distribution**: every estimate this same
 trial could have produced under a different coin flip. It centers almost
-exactly on the truth (mean of estimates 4.9 against a true 5.0), which is the
-"right on average" promise, kept and visible. But individual runs landed
-anywhere from about 2 to 8 points. Your one realized trial is a single draw
+exactly on the truth (mean of estimates 5.0 against a true 5.0), which is the
+"right on average" promise, kept and visible. But most runs landed between
+about 2 and 8 points, and the extremes stretched from below zero to above 10. Your one realized trial is a single draw
 from this histogram, and that spread is the uncertainty an honest report must
 carry next to the estimate. In the companion notebook, double `n` and watch
 the histogram narrow: sample size buys precision — it is randomization that

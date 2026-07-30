@@ -55,17 +55,23 @@ misses that cancel tell you the design is aimed correctly, while misses that all
 one way tell you it is tilted.
 
 **Variance** is how much the estimate wobbles from one run to the next. *Example:*
-estimates swinging between -5 and +9 around a true value of 2 have high variance. More
-data *does* shrink this.
+estimates swinging between -5 and +9 around a true value of 2 have high variance.
+Collecting more of the same kind of data, from the same design, usually shrinks this
+wobble. It is the one problem size reliably helps.
 
 **Power** is how often the design detects a real effect, and it means nothing until
 you say how you would decide. A **statistical test** is the rule you use to decide
-whether your data conflict enough with "no effect" to call the result real. Its
-**threshold** is how much conflict you demand before saying so, conventionally a
-5 percent chance of a false alarm. *Example:* a design that clears a 5 percent
-threshold in 8 of 100 runs, when the true effect is 2, has 8% power, which is almost
-useless. Change the threshold, the assumed effect, or the test, and the power number
-changes with it, so report all three beside it.
+whether your data conflict enough with "no effect" to call the result real.
+*Example:* in the checkout study, a difference-in-means rule: declare an effect when
+the gap between the two groups is more than about twice its typical run-to-run
+wobble. The test's **threshold** is how demanding that rule is, and it is read
+across imagined repetitions: at the usual 5 percent setting, a design whose true
+effect is ZERO would still cry effect in about 5 runs out of 100. The threshold is
+a property of the rule over many runs, never the chance that your one finding is
+false. *Example:* a design that clears that rule in 8 of 100 runs, when the true
+effect is 2, has 8% power, which is almost useless. Power moves with everything in
+the declaration: the test, the threshold, the effect you planted, the sample size,
+and how the world makes noise. Report the whole card beside the number.
 
 Those three do not exhaust the pile, and fuller diagnoses add more. Two worth knowing
 by name: **root mean-squared error**, the typical size of a miss with big misses
