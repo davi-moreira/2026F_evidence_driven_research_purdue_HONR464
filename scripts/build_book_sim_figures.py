@@ -16,8 +16,9 @@ change a simulation, change BOTH (the chapter block and this script) and rerun:
 
 Current figures: ch11 random-vs-convenience sampling, ch14 overfitting (train
 vs holdout error), ch15 the randomization distribution of a difference in
-means, and ch15 treatment-dependent attrition (the complete-case contrast is
-not the effect for everyone enrolled — the D35 Batch-A counterexample).
+means, ch15 treatment-dependent attrition (the complete-case contrast is not
+the effect for everyone enrolled — the D35 Batch-A counterexample), and ch22 the
+null reference spread (a valid null never prints 0.00 — Batch C).
 """
 from __future__ import annotations
 
@@ -56,6 +57,11 @@ L = {
         "cc_mean": "complete-case contrast = {v:.1f} pp",
         "cc_retention": "still measured at the end:\n{t:.0f}% of the reminder arm, {c:.0f}% of the control arm",
         "xlabel_cc": "Complete-case contrast (percentage points)",
+        "null_truth": "true vehicle effect = 0",
+        "null_one": "one experiment = {v:+.2f} mm",
+        "null_band": "middle 95% of null readings:\n{lo:+.2f} to {hi:+.2f} mm",
+        "xlabel_null": "Measured vehicle effect on zone diameter (mm)",
+        "ylabel_exp": "Number of simulated experiments",
     },
     "book-pt": {
         "random": "Amostras aleatórias\n(n = 500)",
@@ -80,6 +86,11 @@ L = {
         "cc_mean": "contraste de casos completos = {v:.1f} pp",
         "cc_retention": "ainda medidos ao final:\n{t:.0f}% do braço com lembrete, {c:.0f}% do braço de controle",
         "xlabel_cc": "Contraste de casos completos (pontos percentuais)",
+        "null_truth": "efeito verdadeiro do veículo = 0",
+        "null_one": "um experimento = {v:+.2f} mm",
+        "null_band": "95% central das leituras nulas:\n{lo:+.2f} a {hi:+.2f} mm",
+        "xlabel_null": "Efeito medido do veículo no diâmetro do halo (mm)",
+        "ylabel_exp": "Número de experimentos simulados",
     },
     "book-es": {
         "random": "Muestras aleatorias\n(n = 500)",
@@ -104,6 +115,11 @@ L = {
         "cc_mean": "contraste de casos completos = {v:.1f} pp",
         "cc_retention": "aún medidos al final:\n{t:.0f}% del brazo con recordatorio, {c:.0f}% del brazo de control",
         "xlabel_cc": "Contraste de casos completos (puntos porcentuales)",
+        "null_truth": "efecto verdadero del vehículo = 0",
+        "null_one": "un experimento = {v:+.2f} mm",
+        "null_band": "95% central de las lecturas nulas:\n{lo:+.2f} a {hi:+.2f} mm",
+        "xlabel_null": "Efecto medido del vehículo en el diámetro del halo (mm)",
+        "ylabel_exp": "Número de experimentos simulados",
     },
 }
 
@@ -305,6 +321,45 @@ def fig_ch15_attrition(s: dict, out: Path) -> dict:
             "retention_t": r1.mean(), "retention_c": r0.mean()}
 
 
+def fig_ch22(s: dict, out: Path) -> dict:
+    """A valid null does not print 0.00 — it prints a small number in a spread.
+
+    2,000 vehicle-versus-blank experiments in a world where the vehicle truly
+    does nothing. The readings scatter around zero; not one is exactly zero.
+    Judge a negative test against this spread, never against 0.00.
+    """
+    rng = np.random.default_rng(SEED)
+    reps, pairs = 2000, 12
+    plate = rng.normal(0, 0.4, size=(reps, pairs))       # shared plate effect
+    blank = 6.3 + plate + rng.normal(0, .35, size=(reps, pairs))
+    vehicle = 6.3 + plate + rng.normal(0, .35, size=(reps, pairs))
+    nulls = (vehicle - blank).mean(axis=1)               # true effect: exactly 0
+    lo, hi = np.percentile(nulls, [2.5, 97.5])
+    observed = nulls[0]
+
+    fig, ax = plt.subplots(figsize=(7.6, 3.2))
+    ax.hist(nulls, bins=40, color=BLUE, edgecolor="white", lw=.4)
+    ax.axvline(0, color=INK, ls="--", lw=1.2)
+    ax.axvline(observed, color=ORANGE, lw=2)
+    ax.text(.02, .92, s["null_truth"], color=INK, fontsize=9,
+            transform=ax.transAxes)
+    ax.text(.02, .82, s["null_one"].format(v=observed), color=ORANGE,
+            fontsize=9, transform=ax.transAxes)
+    ax.text(.02, .64, s["null_band"].format(lo=lo, hi=hi), color="#777777",
+            fontsize=8, va="top", transform=ax.transAxes)
+    ax.set_xlabel(s["xlabel_null"])
+    ax.set_ylabel(s["ylabel_exp"])
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.grid(axis="y", color="#e5e5e5", lw=.6)
+    ax.set_axisbelow(True)
+    fig.tight_layout()
+    fig.savefig(out / "ch22_null_spread.png", dpi=150)
+    plt.close(fig)
+    return {"mean": nulls.mean(), "sd": nulls.std(), "lo": lo, "hi": hi,
+            "first": observed, "exact_zeros": int((nulls == 0).sum())}
+
+
 def main() -> None:
     for edition, strings in L.items():
         out = REPO / edition / "images" / "sims"
@@ -313,13 +368,15 @@ def main() -> None:
         stats14 = fig_ch14(strings, out)
         stats15 = fig_ch15(strings, out)
         stats15a = fig_ch15_attrition(strings, out)
-        print(f"✓ {edition}: 4 figures → {out.relative_to(REPO)}/")
+        stats22 = fig_ch22(strings, out)
+        print(f"✓ {edition}: 5 figures → {out.relative_to(REPO)}/")
     print("ch11:", {k: (round(v, 2) if isinstance(v, float) else v)
                     for k, v in stats11.items()})
     print("ch14:", {k: (round(v, 3) if isinstance(v, float) else v)
                     for k, v in stats14.items()})
     print("ch15:", {k: round(float(v), 2) for k, v in stats15.items()})
     print("ch15-attrition:", {k: round(float(v), 3) for k, v in stats15a.items()})
+    print("ch22:", {k: round(float(v), 3) for k, v in stats22.items()})
 
 
 if __name__ == "__main__":

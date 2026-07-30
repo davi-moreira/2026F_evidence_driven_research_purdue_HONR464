@@ -70,14 +70,28 @@ larva. The poster reads: **"The probiotic increased larval body length by 0.5 mm
 **Reproduce it.** You restart-and-run-all. The code loads the file, splits larvae
 by tank type, and differences the two group means. The number that comes back is
 **0.43 mm**, not 0.5. The package reproduces, which is a real success. But the
-write-up says 0.5 and the code says 0.43. That silent rounding is your first
-finding, and it earns you the right to push harder.
+write-up says 0.5 and the code says 0.43, and notice that rounding does not explain
+it: 0.43 rounds to 0.4. This is a claim-output mismatch, your first finding, and it
+earns you the right to push harder.
 
-**Change one defensible choice.** The package dropped larvae that died before the
-final measurement and never said so. Keep each dead larva's last recorded length
-instead, an equally defensible rule, and the gap slides to 0.31 mm. Neither number
-is a lie. The finding is that the headline moves on a choice the poster never
-disclosed, so the honest report is the range.
+**Find the choice nobody declared.** The package dropped larvae that died before the
+final measurement and never said so. Death is not an ordinary blank cell. It is a
+**post-treatment event**: something that happens after treatment and that treatment
+itself may cause. If the probiotic changes which larvae survive, the survivors in the
+two tanks are not the same kind of larva, and their length difference is a comparison
+between different populations.
+
+You might be tempted to patch the blanks by carrying each dead larva's last recorded
+length forward, which produces 0.31 mm. Resist calling that an equally defensible
+alternative. It quietly assumes a dead larva's last measurement stands in for a final
+length it never had, which is a claim about biology, not a neutral default. The two
+numbers, 0.43 and 0.31, answer different questions with different assumptions, so the
+gap between them is not a range and reporting it as one would be a third error on top
+of the first two.
+
+What you report instead is survival by tank type first, then final length among
+surviving larvae, labeled exactly that way. If treatment changed survival, say so and
+say that the length comparison is conditional on an outcome the treatment touched.
 
 **Test the hidden assumption.** The package reports its gap as if all 240 larvae
 were independent, producing a tight interval well above zero. They are not
@@ -156,8 +170,13 @@ independent-observations assumption on clustered data silently shrinks every
 interval).
 
 ::: {.callout-important title="Do not delegate"}
-An AI tool cannot run the code, so it can never settle whether the number actually
-reproduced. Only your own restart-and-run-all does that. You also keep three
+An AI tool connected to an execution environment *can* run the code, and asking it to
+is reasonable. What it cannot do is stand behind the result. So demand the evidence of
+the run rather than the summary of it: the commands, the environment and package
+versions, the raw output, and which files it actually touched. A confident "it
+reproduces" with no execution record tells you nothing about whether the released
+package ran, a modified copy ran, or nothing ran at all. Then reproduce the headline
+yourself from a clean start, because the verdict carries your name. You also keep three
 judgments: **which weakness most threatens the claim**, **how you rank the
 recommendations**, and **the final verdict** on what the package can and cannot
 support. A tool proposes suspects. You decide which ones the evidence convicts.
