@@ -103,9 +103,10 @@ touches zero. The point estimate barely moved. The honest uncertainty around it
 exploded. That is pseudoreplication, and it is the weakness with teeth.
 
 **Rank by threat.** Pseudoreplication comes first, because it can dissolve the
-"clear effect" claim. The undisclosed survivor rule comes second, because it moves
-the number. The 0.43-reported-as-0.5 gap comes third: real, but the smallest threat
-to whether an effect exists.
+"clear effect" claim. The undisclosed handling of dead larvae comes second, because it
+decides which larvae the number even describes. The 0.43-reported-as-0.5 mismatch
+comes third: real, and a genuine reporting failure, but the smallest threat to whether
+an effect exists.
 
 ## The Colab laboratory
 
@@ -212,12 +213,20 @@ without you in the room.*
 3. Line every sentence of your write-up against a number your code actually prints.
    Flag each mismatch, including the rounding you did not mean to hide.
 4. Change one defensible choice you never disclosed, an exclusion rule or a cutoff or
-   a subset, and record how far your headline moves. Report the range, not the
-   friendlier end of it.
-5. Name the assumption your result would collapse without, and rank everything you
+   a subset, and record how far your headline moves. Report the spread across those
+   versions, not the friendlier end of it, and check first that each version still
+   answers the same question about the same units. Any version that changes the
+   question, especially one that keeps only units your treatment could have selected,
+   gets reported on its own rather than folded into a range.
+5. Classify every missing value before you fill any of them. Ask whether the number
+   exists and simply was not recorded, or whether an event such as death or dropout
+   means it never existed at all. If treatment could have caused that event, report
+   the event by group first, and label any comparison among the units that remain as
+   exactly that.
+6. Name the assumption your result would collapse without, and rank everything you
    found by threat to the claim rather than by ease of repair. If you have a peer,
    swap folders and rerun each other's cold. The number they get, set beside the
    number you reported, is your reproduction evidence.
-6. Log the audit in your AI Research Ledger, and verify at least one output with a
+7. Log the audit in your AI Research Ledger, and verify at least one output with a
    named method from the [Verification Guide](../verification-guide.qmd). An AI
    reviewer may run the check with you; the decision to accept or reject stays yours.

@@ -308,7 +308,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 |---|---|---|
 | Step 1 | Name the artifact you are most afraid of: the one way your procedure, rather than your subject, could have manufactured your result | |
 | Step 2 | Choose the negative test that could catch it, whether that is a placebo label, a falsification outcome measured where the effect cannot yet exist, or… | |
-| Step 3 | Write down the exact zero you expect before you run anything, and commit to reporting the result whichever way it lands | |
+| Step 3 | Before you run anything, write down what a clean pass looks like as a range, not as 0.00: build your null reference spread by simulating your own… | |
 | Step 4 | Run one diagnostic beside it | |
 | Step 5 | Record what you got against what you predicted, and if the estimate moved, say by how much | |
 | Step 6 | Log both tests in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
@@ -435,7 +435,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 
 ### Ch. 32 — Replication and Reproduction
 
-Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
+Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **16 points total.**
 
 | # | Criterion | 0–2 |
 |---|---|---|
@@ -443,8 +443,9 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 2 | Reproduce yourself cold | |
 | Step 3 | Line every sentence of your write-up against a number your code actually prints | |
 | Step 4 | Change one defensible choice you never disclosed, an exclusion rule or a cutoff or a subset, and record how far your headline moves | |
-| Step 5 | Name the assumption your result would collapse without, and rank everything you found by threat to the claim rather than by ease of repair | |
-| Step 6 | Log the audit in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
+| Step 5 | Classify every missing value before you fill any of them | |
+| Step 6 | Name the assumption your result would collapse without, and rank everything you found by threat to the claim rather than by ease of repair | |
+| Step 7 | Log the audit in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
 ### Ch. 33 — From Poster to Research Note

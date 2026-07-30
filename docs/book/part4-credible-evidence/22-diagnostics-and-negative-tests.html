@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -446,10 +481,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">22.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">22.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">22.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">22.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">22.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">22.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">22.7</span> It is your turn</a></li>
+  <li><a href="#a-seeded-simulation" id="toc-a-seeded-simulation" class="nav-link" data-scroll-target="#a-seeded-simulation"><span class="header-section-number">22.4</span> A seeded simulation</a></li>
+  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">22.5</span> The Colab laboratory</a></li>
+  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">22.6</span> Recommended AI prompts</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">22.7</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">22.8</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -556,12 +592,41 @@ ul.task-list li input[type="checkbox"] {
 <p>Before you do, you run the negative test. You dissolved the extract in 70% ethanol, so your vehicle control is a disk soaked in 70% ethanol alone, placed on an identical plate and treated exactly the same way. If that disk leaves a bare, uninhibited lawn, the test passed: ethanol on its own did nothing, so the ring around your extract disk is not a solvent artifact, and your effect survives one specific worry. If the vehicle disk grows its own clear ring, the test failed. The ethanol is killing the bacteria, and you can no longer tell how much of the extract’s ring is the extract and how much is the solvent. The finding is an artifact until you redo it at a lower concentration.</p>
 <p>Notice what a clean pass still does not buy you. It does not tell you the extract works inside a living animal, or which molecule is responsible. It ruled out one artifact and nothing more, and that modesty is the point.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="22.4">
-<h2 data-number="22.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">22.4</span> The Colab laboratory</h2>
+<section id="a-seeded-simulation" class="level2" data-number="22.4">
+<h2 data-number="22.4" class="anchored" data-anchor-id="a-seeded-simulation"><span class="header-section-number">22.4</span> A seeded simulation</h2>
+<p>So what does “the vehicle did nothing” actually look like on paper? Not a row of zeros. The code below builds a world where the vehicle truly has no effect at all, then runs the experiment 2,000 times. Each run measures twelve matched vehicle and blank disks, with a shared plate-to-plate wobble and ordinary measurement noise, and reports the average difference.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>reps, pairs <span class="op">=</span> <span class="dv">2000</span>, <span class="dv">12</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plate <span class="op">=</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.4</span>, size<span class="op">=</span>(reps, pairs))            <span class="co"># shared plate effect</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>blank   <span class="op">=</span> <span class="fl">6.3</span> <span class="op">+</span> plate <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">.35</span>, size<span class="op">=</span>(reps, pairs))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>vehicle <span class="op">=</span> <span class="fl">6.3</span> <span class="op">+</span> plate <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">.35</span>, size<span class="op">=</span>(reps, pairs))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>nulls <span class="op">=</span> (vehicle <span class="op">-</span> blank).mean(axis<span class="op">=</span><span class="dv">1</span>)   <span class="co"># true vehicle effect: exactly zero</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"exactly zero in"</span>, <span class="bu">int</span>((nulls <span class="op">==</span> <span class="dv">0</span>).<span class="bu">sum</span>()), <span class="st">"of"</span>, reps, <span class="st">"experiments"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"middle 95</span><span class="sc">% o</span><span class="st">f readings:"</span>, np.percentile(nulls, [<span class="fl">2.5</span>, <span class="fl">97.5</span>]).<span class="bu">round</span>(<span class="dv">2</span>))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"this run's reading:"</span>, <span class="bu">round</span>(<span class="bu">float</span>(nulls[<span class="dv">0</span>]), <span class="dv">3</span>), <span class="st">"mm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/sims/ch22_null_spread.png" class="img-fluid figure-img" alt="Histogram of 2,000 measured vehicle effects in a world where the true effect is zero. The bars form a bell centered on zero, spanning roughly -0.4 to +0.4 millimetres, with a dashed line at zero and an orange line marking one experiment that read -0.03 millimetres."></p>
+<figcaption>The null readings pile up around zero and spread from about -0.29 to +0.27 mm; none is exactly zero.</figcaption>
+</figure>
+</div>
+<p>Count the exact zeros: <strong>none</strong>, out of two thousand experiments in a world built so the vehicle does nothing whatsoever. The readings pile up around zero and spread from about -0.29 to +0.27 mm, and the first run happened to return -0.03. A researcher demanding 0.00 would have called every one of these two thousand honest experiments a failure.</p>
+<p>That spread is the thing to compare against, and it has a name worth keeping. Your <strong>null reference spread</strong> is the range of readings your own procedure produces when nothing is going on. Build it by simulating your null world at your sample size, as above, and then ask one question of your real control: is this reading ordinary in that pile, or is it out at the edge? A reading of -0.03 is unremarkable. A reading of +1.2 mm sits far outside anything the null world produced, and now you have something to investigate.</p>
+<p>One honest limit. “Ordinary” and “unusual” are judgments here, not a formal decision rule, and this pile is only as trustworthy as the assumptions that generated it. A later chapter gives uncertainty its proper machinery. What you should carry from here is the reflex: judge a negative test against the spread its own null would produce, never against a number on a readout.</p>
+</section>
+<section id="the-colab-laboratory" class="level2" data-number="22.5">
+<h2 data-number="22.5" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">22.5</span> The Colab laboratory</h2>
 <p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook <strong>nb10 — Share the research + attack the analysis</strong> (<a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb">open in Colab</a>), part of the companion course presented in the <a href="../for-instructors.html">For instructors</a> appendix. There you run a placebo test on a real survey estimate: you throw away the true grouping, replace it with a coin-flip label 500 times, and watch the fake gaps cluster tightly at zero while the real result sits far outside that cloud. Then a leave-one-out check shows you whether a single data point is quietly carrying the whole finding.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="22.5">
-<h2 data-number="22.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">22.5</span> Recommended AI prompts</h2>
+<section id="recommended-ai-prompts" class="level2" data-number="22.6">
+<h2 data-number="22.6" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">22.6</span> Recommended AI prompts</h2>
 <p>Commit your own expectation first, then delegate a checkable job. Expect to work in cycles: propose, interrogate, refine, ask again. One judgment never improves by re-prompting, though, and that is whether your control is genuinely null. You settle that once, from the mechanism, and no amount of looping settles it for you.</p>
 <p><strong>Locate the standard control.</strong></p>
 <pre class="text"><code>Act as a lab-methods assistant. I ran an antibiotic disk-diffusion assay with a
@@ -573,8 +638,9 @@ appears. Only name controls you are confident are standard practice.</code></pre
 <pre class="text"><code>Here is my analysis: [one-sentence design, your cause, your outcome]. Propose three
 negative tests: a placebo label, a falsification outcome measured where the effect
 cannot yet exist, and a negative-control outcome my cause could not plausibly affect.
-For each, state the exact zero I should expect and what a non-zero result would mean.</code></pre>
-<p>After running, verify: for each test, confirm your cause genuinely <em>cannot</em> touch the negative control. A control your cause can affect is not null, and it fails silently. Counters <em>plausible-but-wrong-method</em> (a “negative control” that is not actually zero).</p>
+For each, name the quantity that is truly zero, and say what reading would count as
+ordinary versus large enough to worry about at my sample size.</code></pre>
+<p>After running, verify: for each test, confirm two things. Your cause genuinely <em>cannot</em> touch the negative control, or it is not null. And the artifact you fear genuinely <em>can</em> touch it, or the test cannot catch anything. Reject any answer that asks for a reading of exactly zero. Counters <em>plausible-but-wrong-method</em> (a “negative control” that is not actually null, or that your pipeline never touches).</p>
 <p><strong>Red-team a clean pass.</strong></p>
 <pre class="text"><code>Here is a negative test I ran and its result: [describe the control and its
 near-zero outcome]. Act as a hostile reviewer. Name every reason this test could
@@ -595,21 +661,21 @@ weak to carry the artifact, a zero I would have gotten no matter what. Do not re
 </div>
 </div>
 </section>
-<section id="an-ai-failure-case" class="level2" data-number="22.6">
-<h2 data-number="22.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">22.6</span> An AI failure case</h2>
+<section id="an-ai-failure-case" class="level2" data-number="22.7">
+<h2 data-number="22.7" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">22.7</span> An AI failure case</h2>
 <p>You ask an AI to design a negative control for your ethanol-based assay. It answers, with complete confidence, “use a disk soaked in sterile water.” You run it, the water disk comes back perfectly clean, and the tidy conclusion writes itself: control passed, effect confirmed. Here is the trap. Water is not the vehicle you used. You delivered the extract in ethanol, so the artifact you needed to rule out is ethanol toxicity, and a water disk can never show it. The clean result ruled out nothing at all.</p>
 <p>You catch it with one question the tool never asked itself: <em>what artifact does this control actually rule out?</em> A valid vehicle control matches how you delivered the cause, solvent for solvent. The moment you see the mismatch you swap water for 70% ethanol and run the test that can genuinely fail. This is a <em>plausible-but-wrong-method</em>: the advice sounded like textbook practice and was wrong for your case.</p>
 </section>
-<section id="it-is-your-turn" class="level2" data-number="22.7">
-<h2 data-number="22.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">22.7</span> It is your turn</h2>
+<section id="it-is-your-turn" class="level2" data-number="22.8">
+<h2 data-number="22.8" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">22.8</span> It is your turn</h2>
 <p><em>Your project has a headline estimate with a range around it. This step points two checks at places where the answer must be zero, so you find out whether the world produced your result or your own pipeline did.</em></p>
 <ol type="1">
 <li>Name the artifact you are most afraid of: the one way your procedure, rather than your subject, could have manufactured your result. One sentence, written down before you go looking.</li>
 <li>Choose the negative test that could catch it, whether that is a placebo label, a falsification outcome measured where the effect cannot yet exist, or a negative control your cause could not possibly touch. Then confirm the control is genuinely null. If your cause can reach it, it is not a negative test and it will fail quietly.</li>
-<li>Write down the exact zero you expect before you run anything, and commit to reporting the result whichever way it lands.</li>
+<li>Before you run anything, write down what a clean pass looks like as a range, not as 0.00: build your null reference spread by simulating your own null world at your own sample size, and record the middle 95 percent of the readings it produces. Commit to reporting your result whichever way it lands.</li>
 <li>Run one diagnostic beside it. Leave-one-out is the cheapest: drop each case in turn, recompute, and find out whether a single observation is carrying your finding.</li>
 <li>Record what you got against what you predicted, and if the estimate moved, say by how much. Then write your boundary in one line: the artifact this pass rules out, and the causal or general claim it still does not establish.</li>
-<li>Log both tests in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. <strong>Simulation</strong> is the right tool for a negative test: build a dataset by hand where no effect exists, run your test machinery on it, and confirm it returns zero on known-null data before you trust the zero it returned on yours. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li>Log both tests in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. <strong>Simulation</strong> is the right tool for a negative test: build a dataset by hand where no effect exists, run your test machinery on it many times, and confirm the readings scatter around zero with the spread you expect. Note how large they get by chance, then judge your real control against that pile rather than against 0.00. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
 </ol>
 
 

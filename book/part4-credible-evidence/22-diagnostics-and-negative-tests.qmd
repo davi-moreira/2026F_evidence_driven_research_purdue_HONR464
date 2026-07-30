@@ -199,11 +199,14 @@ control arrives as confidently as a real one).
 Here is my analysis: [one-sentence design, your cause, your outcome]. Propose three
 negative tests: a placebo label, a falsification outcome measured where the effect
 cannot yet exist, and a negative-control outcome my cause could not plausibly affect.
-For each, state the exact zero I should expect and what a non-zero result would mean.
+For each, name the quantity that is truly zero, and say what reading would count as
+ordinary versus large enough to worry about at my sample size.
 ```
-After running, verify: for each test, confirm your cause genuinely *cannot* touch the
-negative control. A control your cause can affect is not null, and it fails silently.
-Counters *plausible-but-wrong-method* (a "negative control" that is not actually zero).
+After running, verify: for each test, confirm two things. Your cause genuinely
+*cannot* touch the negative control, or it is not null. And the artifact you fear
+genuinely *can* touch it, or the test cannot catch anything. Reject any answer that
+asks for a reading of exactly zero. Counters *plausible-but-wrong-method* (a
+"negative control" that is not actually null, or that your pipeline never touches).
 
 **Red-team a clean pass.**
 
