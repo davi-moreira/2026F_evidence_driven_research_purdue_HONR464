@@ -74,13 +74,15 @@ the declaration: the test, the threshold, the effect you planted, the sample siz
 and how the world makes noise. Report the whole card beside the number.
 
 Those three do not exhaust the pile, and fuller diagnoses add more. Two worth knowing
-by name: **root mean-squared error**, the typical size of a miss with big misses
-weighted heavily, and **coverage**, how often the range you report around your
-estimate actually contains the truth. *Example:* if you report a range meant to be
-right 95 times out of 100, coverage checks whether it really is. A design can be
-unbiased and still miss badly every time, which is exactly why one number is never
-the whole diagnosis. A later chapter builds these ranges properly; here you only need
-to know that a diagnosis can ask about them.
+by name. **Root mean-squared error** is the typical size of a miss, with big misses
+weighted extra. *Example:* in the five-run example above, the plain average distance
+is 1.2, but the RMSE is about 1.4, because the two 2-point misses count for more than
+their share. **Coverage** is how often the range you report around your estimate
+actually contains the truth. *Example:* if you report a range meant to be right 95
+times out of 100, coverage checks whether it really is. A design can be unbiased and
+still miss badly every time, which is exactly why one number is never the whole
+diagnosis. A later chapter builds these ranges properly; here you only need to know
+that a diagnosis can ask about them.
 
 **Redesign** means changing exactly one part in response to the diagnosis, then
 diagnosing again. Low power from high variance calls for more data. A tilt built into
@@ -205,9 +207,11 @@ contact with the world, while a bad answer is still free.*
    record each number as "not estimated" and reason in words about direction instead:
    which way you expect the tilt, and what would widen the spread. Label that reasoning
    as reasoning. A number you did not compute is not a diagnosis.
-3. Name the worst of the three, and say which kind of problem it is. Variance and low
-   power are usually size problems. A tilt in who ends up where is a design problem,
-   and a bigger sample makes it more precise rather than less wrong.
+3. Name the worst of the three, and say which kind of problem it is. Wobble and low
+   power often yield to a bigger sample, though not only to it: sharper measurement,
+   better-balanced groups, and a stronger treatment contrast all buy power too. A
+   tilt in who ends up where is a design problem, and a bigger sample makes it more
+   precise rather than less wrong.
 4. Redesign once. Change exactly one thing, the one your diagnosis points at, and
    diagnose again. Record both diagnoses side by side so the improvement is visible.
 5. Make the honest call in one sentence: run it as redesigned, redesign again, or
