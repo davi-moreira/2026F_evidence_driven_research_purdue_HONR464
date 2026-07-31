@@ -189,7 +189,7 @@ print("largest single gap:", round(float(gaps.max()), 2))
 
 ![Left: training error keeps falling while selection error turns up after degree
 six, where the model is chosen; a diamond marks its one final-holdout score. Right:
-across 500 worlds, the winner's true error beats its crowning score on average, with
+across 500 worlds, the winner's true error exceeds its crowning score on average, with
 a long right tail.](../images/sims/ch14_overfitting.png){fig-alt="Two-panel chart.
 Left panel: a blue training-error line falling steadily across polynomial degrees 1
 to 12, an orange selection-error line falling to degree six then climbing, a dotted

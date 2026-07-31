@@ -329,9 +329,9 @@ aumentou em 12 pontos as renovações no prazo, e o efeito é significativo". O 
 roda sem um único erro. Aqui está a armadilha. Um terço do braço do lembrete, os
 pacientes com a pior pressão, parou de responder ao acompanhamento e saiu do estudo,
 então a ferramenta calculou a distância entre os pacientes que *ficaram* e chamou
-isso de "o efeito do lembrete". Isso é uma mudança silenciosa de escopo. O número
-agora descreve só os pacientes mais saudáveis que permaneceram, e não todos os que
-você recrutou, e descartar os piores casos empurrou o número para cima.
+isso de "o efeito do lembrete". Isso é uma mudança silenciosa de escopo. O número é
+um contraste de casos completos: ele não é o efeito para todos os que você recrutou,
+e descartar os pacientes mais graves de um braço o empurrou para cima.
 
 Você pega isso conferindo a permanência por braço e quem foi perdido, não relendo o
 parágrafo fluente. O braço do lembrete perdeu muito mais pacientes, e os perdidos

@@ -340,8 +340,9 @@ corre sin un solo error. Aquí está la trampa. Un tercio del brazo con recordat
 las pacientes con la peor presión arterial, dejó de responder al seguimiento y
 abandonó el estudio, así que la herramienta calculó la brecha entre quienes *se
 quedaron* y la etiquetó "el efecto del recordatorio". Eso es un cambio silencioso de
-alcance. El número ahora describe solo a las pacientes más sanas que permanecieron, no
-a todas las que inscribiste, y soltar los peores casos lo empujó hacia arriba.
+alcance. El número es un contraste de casos completos: no es el efecto para todas las
+que inscribiste, y soltar a las pacientes más enfermas de un brazo lo empujó hacia
+arriba.
 
 Lo detectas revisando la retención por brazo y quiénes se perdieron, no releyendo el
 párrafo fluido. El brazo con recordatorio perdió muchas más pacientes, y las que
