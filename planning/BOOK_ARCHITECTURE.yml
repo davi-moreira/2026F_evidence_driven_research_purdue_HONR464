@@ -1,176 +1,316 @@
-# BOOK_ARCHITECTURE.yml — the book-only identity manifest (D35 Phase 2, DRAFT v0)
+# BOOK_ARCHITECTURE.yml — the book-only identity manifest (D35 Phase 2)
 #
-# THE canonical source of lesson identity for EDR|AI. Once adopted:
-#   - `lesson:` ids are IMMUTABLE and semantic — independent of display order,
-#     filename prefix, and chapter number. Citations, cross-references, and
-#     generated artifacts key off the id, never the ordinal.
-#   - Display numbering is derived at render time from `order:`; inserting a
-#     lesson shifts displayed numbers but changes NO id and NO existing URL
-#     (acceptance test A10: insert a test lesson → nothing else moves).
-#   - `source:` is the EN file (source of truth); PT/ES paths mirror it.
-#   - `station:` assigns each lesson to its D35 practice station (1–12);
-#     `role:` marks how a linear reader meets it (core | branch | contrast |
-#     optional). Branch lessons: the five pathway forms in Station 5 and the
-#     four genre adaptations in Station 10.
-#   - `legacy_aliases:` preserves any RETIRED path so redirects can be
-#     generated (D35 skipped the 111 notebook shims; HTML aliases only).
-#   - BOOK_MAP.md becomes GENERATED from this file (Phase 2 tooling); the
-#     course-adoption mapping lives in COURSE_BOOK_CROSSWALK.yml, NEVER here
-#     (independence axiom: no course facts in the book manifest).
+# THE canonical source of lesson identity for EDR|AI. Revised to schema 1.0
+# per the Phase-2 design critique (2026-07-31,
+# _adm/codex_reviews/2026-07-31_phase2-manifest-schema/verdict.md):
 #
-# status: draft-v0 — schema pending the Phase-2 design critique; the two
-# `planned` lessons are inserted only AFTER the generator/validator consume
-# this manifest (D35: identity layer precedes the new lessons).
+#   - `id` values (lessons AND stations) are IMMUTABLE and semantic —
+#     independent of display order, filename prefix, and chapter number.
+#     Citations, cross-references, review keys, and generated artifacts key
+#     off the id, never the ordinal.
+#   - Display numbering is a DERIVED LABEL from `rank` (A1 ruling: ids,
+#     canonical URLs, review keys, and artifact keys are stable; display
+#     numbers may change when a lesson is inserted). `rank` is mutable,
+#     globally unique, gaps are editorial convenience only.
+#   - `url_path` is the IMMUTABLE canonical HTML path. Existing lessons keep
+#     their legacy numeric paths as opaque identifiers (D35 promises stable
+#     HTML paths); new lessons take semantic filenames. Tooling must never
+#     parse identity or sequence out of a filename prefix.
+#   - Identity lifecycle (A2 ruling): a released id is NEVER deleted or
+#     reused — it moves to `tombstones:` with a disposition. The identity
+#     baseline is `identity_epoch`; validators compare against the last
+#     released snapshot, not the working tree.
+#   - Edition divergence (A3 ruling, D36): `editions:` declares per-edition
+#     lifecycle. While an edition is `frozen`, tooling validates snapshot
+#     integrity only — it neither requires current-EN coverage nor writes.
+#     A lesson absent from an edition routes language navigation to that
+#     edition's index.
+#   - Stations (A4 ruling) carry immutable slug ids, a mutable rank, their
+#     checkpoint ids, and a workbook state. Lessons reference
+#     `station: <slug>`. Route/genre tokens come ONLY from the registries
+#     below; `branch:` free-forms are retired.
+#   - The A2 course-leakage policy lives in planning/BOOK_LEAKAGE_POLICY.yml,
+#     never inline in tooling.
 #
-# Validator contract (to be implemented in the Phase-2 rewrite):
-#   1. every lesson file exists ×3 editions (except status: planned);
-#   2. ids unique + immutable (diff against git HEAD: an id may be added,
-#      never renamed or reused);
-#   3. order strictly increasing within a part; parts contiguous;
-#   4. every station 1–12 non-empty; every core lesson reachable in a linear
-#      read; branch/optional lessons attached to a station;
-#   5. course-leakage scan (acceptance test A2) over every `source:` body;
-#   6. crosswalk coverage: every lesson id appears exactly once in
-#      COURSE_BOOK_CROSSWALK.yml readings (the 16 anchors partition lessons);
-#   7. prerequisite timing: no Contract field assessed before its teaching
-#      lesson (matrix in BOOK_ASSESSMENTS.yml).
+# Validator contract (Phase-2 build, revised per the critique):
+#   1. per-edition existence: every lesson's (edition, state) pair matches
+#      the files on disk; `planned` lessons appear in NO public output;
+#   2. id uniqueness across lessons, stations, tombstones; no reuse of a
+#      tombstoned id; renames forbidden (diff vs the identity epoch);
+#   3. `rank` globally unique; part ranks strictly ordered; every lesson's
+#      part exists;
+#   4. route coverage: every `pathways`/`genres` token used by a lesson is
+#      registered; every core lesson appears on every route; each station
+#      has >= 1 lesson and >= 1 checkpoint;
+#   5. A2 leakage scan per BOOK_LEAKAGE_POLICY.yml over active EN sources;
+#   6. crosswalk coverage: every ACTIVE lesson id has exactly one
+#      home-anchor disposition in COURSE_BOOK_CROSSWALK.yml (planned
+#      lessons: planned_home_anchor only);
+#   7. prerequisite timing: delegated to BOOK_ASSESSMENTS.yml's
+#      learning_progressions once checkpoints carry course events.
 
-schema_version: 0.1
-status: draft-v0
+schema_version: "1.0"
+status: revised-per-critique   # -> review-approved when the validator passes A10
+identity_epoch: null           # set to the migration commit when tooling adopts ids
+
+editions:
+  en:
+    root: book
+    lifecycle: current
+    generation: enabled
+  pt-BR:
+    root: book-pt
+    lifecycle: frozen          # D36 — frozen until the translation pass
+    snapshot_commit: fdf882d   # notices included; sources byte-frozen since
+    generation: disabled
+    missing_lesson_target: index
+  es:
+    root: book-es
+    lifecycle: frozen
+    snapshot_commit: fdf882d
+    generation: disabled
+    missing_lesson_target: index
+
+pathways:                      # the five route tokens (D35 route model)
+  - observational-descriptive
+  - observational-causal
+  - experimental-descriptive
+  - experimental-causal
+  - prediction
+
+genres:                        # communication-genre tokens (Station 10)
+  - poster
+  - talk
+  - note
 
 parts:
-  - id: part1
-    slug: part1-research-with-ai
-    title_en: "Research when AI can produce almost everything"
-  - id: part2
-    slug: part2-curiosity-to-design
-    title_en: "From curiosity to research design"
-  - id: part3
-    slug: part3-pathways
-    title_en: "Research pathways"
-  - id: part4
-    slug: part4-credible-evidence
-    title_en: "Producing credible evidence with AI"
-  - id: part5
-    slug: part5-communicating
-    title_en: "Communicating and defending research"
-  - id: part6
-    slug: part6-after-conference
-    title_en: "Research after the conference"   # retitle pending (D35 Phase 4: medium-neutral)
+  - {id: part1, rank: 1, slug: part1-research-with-ai,
+     title_en: "Research when AI can produce almost everything"}
+  - {id: part2, rank: 2, slug: part2-curiosity-to-design,
+     title_en: "From curiosity to research design"}
+  - {id: part3, rank: 3, slug: part3-pathways,
+     title_en: "Research pathways"}
+  - {id: part4, rank: 4, slug: part4-credible-evidence,
+     title_en: "Producing credible evidence with AI"}
+  - {id: part5, rank: 5, slug: part5-communicating,
+     title_en: "Communicating and defending research"}
+  - {id: part6, rank: 6, slug: part6-after-conference,
+     title_en: "Research after the conference"}   # retitle pending (D35 Phase 4)
 
 stations:
-  - {n: 1,  slug: govern-the-work,        title: "Govern the work"}
-  - {n: 2,  slug: frame-the-inquiry,      title: "Frame the inquiry"}
-  - {n: 3,  slug: ground-in-evidence,     title: "Ground it in verified evidence"}
-  - {n: 4,  slug: declare-and-diagnose,   title: "Declare and diagnose provisionally"}
-  - {n: 5,  slug: develop-the-pathway,    title: "Develop the pathway"}
-  - {n: 6,  slug: govern-data-measurement, title: "Govern data and measurement"}
-  - {n: 7,  slug: first-analysis,         title: "Produce a reproducible first analysis"}
-  - {n: 8,  slug: stress-test,            title: "Stress-test and adjudicate"}
-  - {n: 9,  slug: write-bound-disclose,   title: "Write, bound, and disclose"}
-  - {n: 10, slug: adapt-and-defend,       title: "Adapt and defend"}
-  - {n: 11, slug: reproduce-and-package,  title: "Reproduce and package"}
-  - {n: 12, slug: release-next-cycle,     title: "Release and direct the next cycle"}
+  # Immutable `id` (slug); mutable `rank`; `checkpoints` are the versioned
+  # Research Contract events a reader can reach (revisit is always allowed —
+  # versioned, never irreversible, D35 §3). `workbook: pending` flips to a
+  # file path as Phase 3/4 lands each station workbook.
+  - {id: govern-the-work,         rank: 1,  title: "Govern the work",
+     checkpoints: [{id: working-agreement-v0}], workbook: pending}
+  - {id: frame-the-inquiry,       rank: 2,  title: "Frame the inquiry",
+     checkpoints: [{id: question-declared-v0}], workbook: pending}
+  - {id: ground-in-evidence,      rank: 3,  title: "Ground it in verified evidence",
+     checkpoints: [{id: evidence-base-v0}], workbook: pending}
+  - {id: declare-and-diagnose,    rank: 4,  title: "Declare and diagnose provisionally",
+     checkpoints: [{id: contract-v0}], workbook: pending}
+  - {id: develop-the-pathway,     rank: 5,  title: "Develop the pathway",
+     checkpoints: [{id: pathway-declared-v1}], workbook: pending}
+  - {id: govern-data-measurement, rank: 6,  title: "Govern data and measurement",
+     checkpoints: [{id: data-measurement-v1}], workbook: pending}
+  - {id: first-analysis,          rank: 7,  title: "Produce a reproducible first analysis",
+     checkpoints: [{id: first-analysis-v1}], workbook: pending}
+  - {id: stress-test,             rank: 8,  title: "Stress-test and adjudicate",
+     checkpoints: [{id: robustness-audit-v1}], workbook: pending}
+  - {id: write-bound-disclose,    rank: 9,  title: "Write, bound, and disclose",
+     checkpoints: [{id: bounded-claims-v1}], workbook: pending}
+  - {id: adapt-and-defend,        rank: 10, title: "Adapt and defend",
+     checkpoints: [{id: defense-ready-v1}], workbook: pending}
+  - {id: reproduce-and-package,   rank: 11, title: "Reproduce and package",
+     checkpoints: [{id: package-v1}], workbook: pending}
+  - {id: release-next-cycle,     rank: 12, title: "Release and direct the next cycle",
+     checkpoints: [{id: release-audit-v1}], workbook: pending}
 
 lessons:
-  # ---- Part I · Station 1 -------------------------------------------------
-  - {id: ai-arm-not-brain,          part: part1, order: 10,  station: 1, role: core,
-     source: part1-research-with-ai/01-ai-is-your-arm-not-your-brain.qmd}
-  - {id: research-director,         part: part1, order: 20,  station: 1, role: core,
-     source: part1-research-with-ai/02-the-student-as-research-director.qmd}
-  - {id: sdiivdd,                   part: part1, order: 30,  station: 1, role: core,
-     source: part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.qmd}
-  - {id: responsibility-ownership,  part: part1, order: 40,  station: 1, role: core,
-     source: part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.qmd}
+  # Fields: id (immutable) · state (active|planned) · rank (mutable, unique)
+  # · part · station (slug) · role (core|branch|optional) · route/genre
+  # (registry token, branch lessons only) · title_en (authored; display
+  # titles for active lessons still live in the chapter files until the
+  # generator consumes this manifest) · source (EN, edition roots + state
+  # govern PT/ES) · url_path (immutable canonical HTML path).
 
-  # ---- Part II · Stations 2–4 --------------------------------------------
-  - {id: curiosity-to-problem,      part: part2, order: 50,  station: 2, role: core,
-     source: part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.qmd}
-  - {id: question-kinds,            part: part2, order: 60,  station: 2, role: core,
-     source: part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.qmd}
-  - {id: research-builds,           part: part2, order: 70,  station: 3, role: core,
-     source: part2-curiosity-to-design/07-research-builds-on-research.qmd}
-  - {id: verifying-prior-evidence,  part: part2, order: 80,  station: 3, role: core,
-     source: part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.qmd}
-  - {id: mida,                      part: part2, order: 90,  station: 4, role: core,
-     source: part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.qmd}
-  - {id: uncertainty-foundations,   part: part2, order: 95,  station: 4, role: core,
-     status: planned,   # D35 §2: BEFORE declare-diagnose — ch10 needs it
-     source: part2-curiosity-to-design/uncertainty-foundations.qmd}
-  - {id: declare-diagnose,          part: part2, order: 100, station: 4, role: core,
-     source: part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.qmd}
-  - {id: ethics-data-governance,    part: part2, order: 105, station: 4, role: core,
-     status: planned,   # D35 §2: the permission-status gate
-     source: part2-curiosity-to-design/research-ethics-and-data-governance.qmd}
+  # ---- Part I · Station govern-the-work -----------------------------------
+  - {id: ai-arm-not-brain,          state: active, rank: 10,  part: part1,
+     station: govern-the-work, role: core,
+     source: part1-research-with-ai/01-ai-is-your-arm-not-your-brain.qmd,
+     url_path: part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html}
+  - {id: research-director,         state: active, rank: 20,  part: part1,
+     station: govern-the-work, role: core,
+     source: part1-research-with-ai/02-the-student-as-research-director.qmd,
+     url_path: part1-research-with-ai/02-the-student-as-research-director.html}
+  - {id: sdiivdd,                   state: active, rank: 30,  part: part1,
+     station: govern-the-work, role: core,
+     source: part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.qmd,
+     url_path: part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html}
+  - {id: responsibility-ownership,  state: active, rank: 40,  part: part1,
+     station: govern-the-work, role: core,
+     source: part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.qmd,
+     url_path: part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html}
 
-  # ---- Part III · Station 5 (route hub + branches) ------------------------
-  - {id: observational-descriptive, part: part3, order: 110, station: 5, role: branch,
-     branch: observational-descriptive,
-     source: part3-pathways/11-observational-descriptive-research.qmd}
-  - {id: observational-causal,      part: part3, order: 120, station: 5, role: branch,
-     branch: observational-causal,
-     source: part3-pathways/12-observational-causal-research.qmd}
-  - {id: experimental-descriptive,  part: part3, order: 130, station: 5, role: branch,
-     branch: experimental-descriptive,
-     source: part3-pathways/13-experimental-descriptive-research.qmd}
-  - {id: prediction-generalization, part: part3, order: 140, station: 5, role: branch,
-     branch: prediction,
-     source: part3-pathways/14-prediction-and-generalization.qmd}
-  - {id: experimental-causal,       part: part3, order: 150, station: 5, role: branch,
-     branch: experimental-causal,
-     source: part3-pathways/15-experimental-causal-research.qmd}
-  - {id: hybrid-complex-designs,    part: part3, order: 160, station: 5, role: optional,
-     source: part3-pathways/16-hybrid-and-complex-designs.qmd}   # overlay, not a sixth pathway
+  # ---- Part II · Stations frame-the-inquiry → declare-and-diagnose --------
+  - {id: curiosity-to-problem,      state: active, rank: 50,  part: part2,
+     station: frame-the-inquiry, role: core,
+     source: part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.qmd,
+     url_path: part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html}
+  - {id: question-kinds,            state: active, rank: 60,  part: part2,
+     station: frame-the-inquiry, role: core,
+     source: part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.qmd,
+     url_path: part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html}
+  - {id: research-builds,           state: active, rank: 70,  part: part2,
+     station: ground-in-evidence, role: core,
+     source: part2-curiosity-to-design/07-research-builds-on-research.qmd,
+     url_path: part2-curiosity-to-design/07-research-builds-on-research.html}
+  - {id: verifying-prior-evidence,  state: active, rank: 80,  part: part2,
+     station: ground-in-evidence, role: core,
+     source: part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.qmd,
+     url_path: part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html}
+  - {id: mida,                      state: active, rank: 90,  part: part2,
+     station: declare-and-diagnose, role: core,
+     source: part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.qmd,
+     url_path: part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html}
+  - {id: uncertainty-foundations,   state: planned, rank: 95,  part: part2,
+     station: declare-and-diagnose, role: core,
+     title_en: "Uncertainty before you need it: estimand, estimator, and the shape of chance",
+     source: part2-curiosity-to-design/uncertainty-foundations.qmd,
+     url_path: part2-curiosity-to-design/uncertainty-foundations.html}
+     # D35 §2: BEFORE declare-diagnose — ch10 needs it
+  - {id: declare-diagnose,          state: active, rank: 100, part: part2,
+     station: declare-and-diagnose, role: core,
+     source: part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.qmd,
+     url_path: part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html}
+  - {id: ethics-data-governance,    state: planned, rank: 105, part: part2,
+     station: declare-and-diagnose, role: core,
+     title_en: "Research ethics and data governance: the permission status of your study",
+     source: part2-curiosity-to-design/research-ethics-and-data-governance.qmd,
+     url_path: part2-curiosity-to-design/research-ethics-and-data-governance.html}
+     # D35 §2: the permission-status gate
 
-  # ---- Part IV · Stations 6–8 ---------------------------------------------
-  - {id: data-provenance,           part: part4, order: 170, station: 6, role: core,
-     source: part4-credible-evidence/17-data-provenance-and-data-quality.qmd}
-  - {id: measurement,               part: part4, order: 180, station: 6, role: core,
-     source: part4-credible-evidence/18-measurement-and-operationalization.qmd}
-  - {id: ai-as-programmer,          part: part4, order: 190, station: 7, role: core,
-     source: part4-credible-evidence/19-ai-as-programmer.qmd}
-  - {id: ai-analytical-assistant,   part: part4, order: 200, station: 7, role: core,
-     source: part4-credible-evidence/20-ai-as-analytical-assistant.qmd}
-  - {id: robustness-sensitivity,    part: part4, order: 210, station: 8, role: core,
-     source: part4-credible-evidence/21-robustness-and-sensitivity.qmd}
-  - {id: negative-tests,            part: part4, order: 220, station: 8, role: core,
-     source: part4-credible-evidence/22-diagnostics-and-negative-tests.qmd}
-  - {id: ai-adversarial-reviewer,   part: part4, order: 230, station: 8, role: core,
-     source: part4-credible-evidence/23-ai-as-adversarial-reviewer.qmd}
-  - {id: false-confidence,          part: part4, order: 240, station: 8, role: core,
-     source: part4-credible-evidence/24-recognizing-false-confidence.qmd}
+  # ---- Part III · Station develop-the-pathway (route hub + branches) ------
+  - {id: observational-descriptive, state: active, rank: 110, part: part3,
+     station: develop-the-pathway, role: branch, route: observational-descriptive,
+     source: part3-pathways/11-observational-descriptive-research.qmd,
+     url_path: part3-pathways/11-observational-descriptive-research.html}
+  - {id: observational-causal,      state: active, rank: 120, part: part3,
+     station: develop-the-pathway, role: branch, route: observational-causal,
+     source: part3-pathways/12-observational-causal-research.qmd,
+     url_path: part3-pathways/12-observational-causal-research.html}
+  - {id: experimental-descriptive,  state: active, rank: 130, part: part3,
+     station: develop-the-pathway, role: branch, route: experimental-descriptive,
+     source: part3-pathways/13-experimental-descriptive-research.qmd,
+     url_path: part3-pathways/13-experimental-descriptive-research.html}
+  - {id: prediction-generalization, state: active, rank: 140, part: part3,
+     station: develop-the-pathway, role: branch, route: prediction,
+     source: part3-pathways/14-prediction-and-generalization.qmd,
+     url_path: part3-pathways/14-prediction-and-generalization.html}
+  - {id: experimental-causal,       state: active, rank: 150, part: part3,
+     station: develop-the-pathway, role: branch, route: experimental-causal,
+     source: part3-pathways/15-experimental-causal-research.qmd,
+     url_path: part3-pathways/15-experimental-causal-research.html}
+  - {id: hybrid-complex-designs,    state: active, rank: 160, part: part3,
+     station: develop-the-pathway, role: optional,
+     source: part3-pathways/16-hybrid-and-complex-designs.qmd,
+     url_path: part3-pathways/16-hybrid-and-complex-designs.html}
+     # overlay across routes, not a sixth pathway
 
-  # ---- Part V · Stations 9–10 ---------------------------------------------
-  - {id: results-to-claims,         part: part5, order: 250, station: 9, role: core,
-     source: part5-communicating/25-from-results-to-claims.qmd}
-  - {id: claim-evidence-tables,     part: part5, order: 260, station: 9, role: core,
-     source: part5-communicating/26-claim-evidence-tables.qmd}
-  - {id: research-posters,          part: part5, order: 270, station: 10, role: branch,
-     branch: poster,
-     source: part5-communicating/27-research-posters.qmd}
-  - {id: poster-criticism,          part: part5, order: 280, station: 10, role: branch,
-     branch: poster,
-     source: part5-communicating/28-poster-criticism.qmd}
-  - {id: research-pitches,          part: part5, order: 290, station: 10, role: branch,
-     branch: talk,
-     source: part5-communicating/29-research-pitches.qmd}
-  - {id: difficult-questions,       part: part5, order: 300, station: 10, role: core,
-     source: part5-communicating/30-difficult-questions-and-uncertainty.qmd}
-  - {id: ai-disclosure,             part: part5, order: 310, station: 9, role: core,
-     source: part5-communicating/31-ai-disclosure-and-research-integrity.qmd}
+  # ---- Part IV · Stations govern-data-measurement → stress-test -----------
+  - {id: data-provenance,           state: active, rank: 170, part: part4,
+     station: govern-data-measurement, role: core,
+     source: part4-credible-evidence/17-data-provenance-and-data-quality.qmd,
+     url_path: part4-credible-evidence/17-data-provenance-and-data-quality.html}
+  - {id: measurement,               state: active, rank: 180, part: part4,
+     station: govern-data-measurement, role: core,
+     source: part4-credible-evidence/18-measurement-and-operationalization.qmd,
+     url_path: part4-credible-evidence/18-measurement-and-operationalization.html}
+  - {id: ai-as-programmer,          state: active, rank: 190, part: part4,
+     station: first-analysis, role: core,
+     source: part4-credible-evidence/19-ai-as-programmer.qmd,
+     url_path: part4-credible-evidence/19-ai-as-programmer.html}
+  - {id: ai-analytical-assistant,   state: active, rank: 200, part: part4,
+     station: first-analysis, role: core,
+     source: part4-credible-evidence/20-ai-as-analytical-assistant.qmd,
+     url_path: part4-credible-evidence/20-ai-as-analytical-assistant.html}
+  - {id: robustness-sensitivity,    state: active, rank: 210, part: part4,
+     station: stress-test, role: core,
+     source: part4-credible-evidence/21-robustness-and-sensitivity.qmd,
+     url_path: part4-credible-evidence/21-robustness-and-sensitivity.html}
+  - {id: negative-tests,            state: active, rank: 220, part: part4,
+     station: stress-test, role: core,
+     source: part4-credible-evidence/22-diagnostics-and-negative-tests.qmd,
+     url_path: part4-credible-evidence/22-diagnostics-and-negative-tests.html}
+  - {id: ai-adversarial-reviewer,   state: active, rank: 230, part: part4,
+     station: stress-test, role: core,
+     source: part4-credible-evidence/23-ai-as-adversarial-reviewer.qmd,
+     url_path: part4-credible-evidence/23-ai-as-adversarial-reviewer.html}
+  - {id: false-confidence,          state: active, rank: 240, part: part4,
+     station: stress-test, role: core,
+     source: part4-credible-evidence/24-recognizing-false-confidence.qmd,
+     url_path: part4-credible-evidence/24-recognizing-false-confidence.html}
 
-  # ---- Part VI · Stations 9, 11, 12 ---------------------------------------
-  - {id: replication-reproduction,  part: part6, order: 320, station: 11, role: core,
-     source: part6-after-conference/32-replication-and-reproduction.qmd}
-  - {id: poster-to-note,            part: part6, order: 330, station: 9, role: core,
-     source: part6-after-conference/33-from-poster-to-research-note.qmd}
+  # ---- Part V · Stations write-bound-disclose + adapt-and-defend ----------
+  - {id: results-to-claims,         state: active, rank: 250, part: part5,
+     station: write-bound-disclose, role: core,
+     source: part5-communicating/25-from-results-to-claims.qmd,
+     url_path: part5-communicating/25-from-results-to-claims.html}
+  - {id: claim-evidence-tables,     state: active, rank: 260, part: part5,
+     station: write-bound-disclose, role: core,
+     source: part5-communicating/26-claim-evidence-tables.qmd,
+     url_path: part5-communicating/26-claim-evidence-tables.html}
+  - {id: research-posters,          state: active, rank: 270, part: part5,
+     station: adapt-and-defend, role: branch, genre: poster,
+     source: part5-communicating/27-research-posters.qmd,
+     url_path: part5-communicating/27-research-posters.html}
+  - {id: poster-criticism,          state: active, rank: 280, part: part5,
+     station: adapt-and-defend, role: branch, genre: poster,
+     source: part5-communicating/28-poster-criticism.qmd,
+     url_path: part5-communicating/28-poster-criticism.html}
+  - {id: research-pitches,          state: active, rank: 290, part: part5,
+     station: adapt-and-defend, role: branch, genre: talk,
+     source: part5-communicating/29-research-pitches.qmd,
+     url_path: part5-communicating/29-research-pitches.html}
+  - {id: difficult-questions,       state: active, rank: 300, part: part5,
+     station: adapt-and-defend, role: core,
+     source: part5-communicating/30-difficult-questions-and-uncertainty.qmd,
+     url_path: part5-communicating/30-difficult-questions-and-uncertainty.html}
+  - {id: ai-disclosure,             state: active, rank: 310, part: part5,
+     station: write-bound-disclose, role: core,
+     source: part5-communicating/31-ai-disclosure-and-research-integrity.qmd,
+     url_path: part5-communicating/31-ai-disclosure-and-research-integrity.html}
+
+  # ---- Part VI · Stations write-bound-disclose / reproduce / release ------
+  - {id: replication-reproduction,  state: active, rank: 320, part: part6,
+     station: reproduce-and-package, role: core,
+     source: part6-after-conference/32-replication-and-reproduction.qmd,
+     url_path: part6-after-conference/32-replication-and-reproduction.html}
+  - {id: poster-to-note,            state: active, rank: 330, part: part6,
+     station: write-bound-disclose, role: branch, genre: note,
+     source: part6-after-conference/33-from-poster-to-research-note.qmd,
+     url_path: part6-after-conference/33-from-poster-to-research-note.html}
      # Phase-4 rewrite: dossier-to-note (the poster-first spine retires)
-  - {id: research-packages,         part: part6, order: 340, station: 11, role: core,
-     source: part6-after-conference/34-open-and-reusable-research-packages.qmd}
-  - {id: managing-ai-agents,        part: part6, order: 350, station: 12, role: optional,
-     source: part6-after-conference/35-managing-multiple-ai-agents.qmd}
-  - {id: conflicting-agents,        part: part6, order: 360, station: 12, role: optional,
-     source: part6-after-conference/36-conflicting-agents-and-human-escalation.qmd}
-  - {id: final-portfolio,           part: part6, order: 370, station: 12, role: core,
-     source: part6-after-conference/37-final-research-and-ai-management-portfolio.qmd}
-     # Phase-4 rewrite: medium-neutral release audit (the graded-portfolio spine retires)
+  - {id: research-packages,         state: active, rank: 340, part: part6,
+     station: reproduce-and-package, role: core,
+     source: part6-after-conference/34-open-and-reusable-research-packages.qmd,
+     url_path: part6-after-conference/34-open-and-reusable-research-packages.html}
+  - {id: managing-ai-agents,        state: active, rank: 350, part: part6,
+     station: release-next-cycle, role: optional,
+     source: part6-after-conference/35-managing-multiple-ai-agents.qmd,
+     url_path: part6-after-conference/35-managing-multiple-ai-agents.html}
+  - {id: conflicting-agents,        state: active, rank: 360, part: part6,
+     station: release-next-cycle, role: optional,
+     source: part6-after-conference/36-conflicting-agents-and-human-escalation.qmd,
+     url_path: part6-after-conference/36-conflicting-agents-and-human-escalation.html}
+  - {id: final-portfolio,           state: active, rank: 370, part: part6,
+     station: release-next-cycle, role: core,
+     source: part6-after-conference/37-final-research-and-ai-management-portfolio.qmd,
+     url_path: part6-after-conference/37-final-research-and-ai-management-portfolio.html}
+     # Phase-4 rewrite: medium-neutral release audit (graded-portfolio spine retires)
+
+tombstones: []
+  # A released id is never deleted or reused. Entries:
+  # - {id: ..., retired: YYYY-MM-DD, disposition: merged-into <id> | retired,
+  #    aliases: [old url_path, ...]}

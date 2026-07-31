@@ -1,74 +1,119 @@
 # BOOK_ASSESSMENTS.yml — authored assessment source for EDR|AI
-# (D35 Phase 2, SKELETON — no criteria authored yet)
+# (D35 Phase 2, revised to schema 1.0 per the Phase-2 design critique,
+#  2026-07-31; still a SKELETON — no criteria authored until Phase 4)
 #
 # Replaces the retired auto-derived first-sentence rubrics (D26 -> D35 §4).
-# Once populated, every displayed rubric is GENERATED from this file; criteria
-# are authored here, never derived from prose and never hand-edited in a
-# generated artifact. Authoring happens per station in Phase 4, after the
-# Phase-3 prototypes settle what each checkpoint actually assesses.
+# Once populated, every displayed rubric is GENERATED from this file;
+# criteria are authored here, never derived from prose and never hand-edited
+# in a generated artifact. Authoring happens per station in Phase 4, after
+# the Phase-3 prototypes settle what each checkpoint actually assesses.
 #
-# Design commitments this schema encodes (from the round-2 review + D35):
-#   - stable criterion IDs (station-slug.criterion-slug) so feedback,
-#     calibration notes, and revisions can reference a criterion across
-#     versions;
-#   - common core criteria per station PLUS route/genre addenda — a rubric
-#     must not score a prediction project with causal-branch descriptors
-#     (route tokens, not bare N/A cells);
-#   - anchored performance levels (0/1/2 with described anchors, not bare
-#     numbers);
-#   - exemplar pairs per station (one strong, one plausible-but-wrong), each
-#     with provenance: stable ID, source/citation status, data license,
-#     route/genre tags, EN content hash, per-locale translation state
-#     (machine | post-edited | human-reviewed). Registry fields adopted from
-#     day one; BUILD GATES on exemplar provenance deferred until exemplar
-#     translations exist (D35 §8);
-#   - a prerequisite matrix: every Research Contract field maps to the lesson
-#     that teaches it (definition -> worked example -> faded practice ->
-#     checkpoint); the validator rejects any criterion assessing a field
-#     before its teaching lesson (acceptance-test A5 / freeze criterion 4).
+# Design commitments (S1–S3 rulings):
+#   - This file implements FREEZE CRITERION 4 of
+#     planning/BOOK_DESIGN_ACCEPTANCE.md (prerequisite timing) — NOT
+#     acceptance test A5, which is the executable methods-misconception gate
+#     (planning/MISCONCEPTION_MANIFEST.yml).
+#   - Contract fields are ATOMIC (assessable units, no composites).
+#   - `learning_progressions` represent the full teaching chain per field:
+#     defined_by -> worked_example_by -> faded_practice_by -> assessed at a
+#     station checkpoint. `tbd-phase-3` / `tbd-phase-4` are explicit
+#     placeholders: the timing validator treats tbd as NOT TAUGHT (so a
+#     criterion assessing a tbd field fails, never passes vacuously).
+#     Route-specific teaching uses `conditional:` entries keyed by registered
+#     pathway tokens.
+#   - Criteria (Phase 4) use controlled `applies_when` conditions over
+#     objective/route/genre — a prediction project must never meet a
+#     causal-branch descriptor. Criterion-specific 0/1/2 descriptors are
+#     REQUIRED; the generic anchors below constrain language only.
+#   - Blocking safety gates (e.g. permission-status) are separate from
+#     scored criteria and never averaged.
+#   - Exemplars come in PAIRS sharing one task/context, with full provenance,
+#     rights, consent state, and per-locale availability (S3): a
+#     student-derived exemplar without documented permission must fail the
+#     build.
 #
-# Lesson references use BOOK_ARCHITECTURE.yml ids.
+# Lesson/station/checkpoint references use BOOK_ARCHITECTURE.yml ids.
 
-schema_version: 0.1
-status: skeleton
+schema_version: "1.0"
+status: skeleton-revised
 
 contract_fields:
-  # The versioned Research Contract (D35 §3). `taught_by` = lesson id whose
-  # material first teaches the field; fill as Phase 3 lands the new lessons.
-  - {field: objective,            taught_by: question-kinds}
-  - {field: target_estimand,      taught_by: question-kinds}
-  - {field: population_setting_time, taught_by: question-kinds}
-  - {field: data_strategy,        taught_by: mida}
-  - {field: measurement,          taught_by: measurement}
-  - {field: warrant,              taught_by: declare-diagnose}
-  - {field: answer_strategy_uncertainty, taught_by: uncertainty-foundations}
-  - {field: ethics_authorization, taught_by: ethics-data-governance}
-  - {field: ai_activity_provenance, taught_by: sdiivdd}
-  - {field: claim_boundary,       taught_by: question-kinds}
+  # The versioned Research Contract (D35 §3), atomic per S1.
+  - {field: objective,             progression: {defined_by: question-kinds,
+      worked_example_by: question-kinds, faded_practice_by: tbd-phase-3}}
+  - {field: target_estimand,       progression: {defined_by: uncertainty-foundations,
+      worked_example_by: uncertainty-foundations, faded_practice_by: tbd-phase-3}}
+      # S1 correction: "estimand" is NOT taught by ch06; D35 assigns it to
+      # the planned uncertainty lesson. Until that lesson is active, any
+      # criterion assessing this field must fail the timing check.
+  - {field: population,            progression: {defined_by: question-kinds,
+      worked_example_by: mida, faded_practice_by: tbd-phase-3}}
+  - {field: setting_time,          progression: {defined_by: question-kinds,
+      worked_example_by: mida, faded_practice_by: tbd-phase-3}}
+  - {field: data_strategy,         progression: {defined_by: mida,
+      worked_example_by: declare-diagnose, faded_practice_by: tbd-phase-3}}
+  - {field: measurement,           progression: {defined_by: measurement,
+      worked_example_by: measurement, faded_practice_by: tbd-phase-4}}
+  - field: warrant
+    progression: {defined_by: mida, worked_example_by: conditional,
+                  faded_practice_by: tbd-phase-3}
+    conditional:
+      # S1: route-specific warrants are developed by the pathway lessons.
+      - {route: observational-descriptive, worked_example_by: observational-descriptive}
+      - {route: observational-causal,      worked_example_by: observational-causal}
+      - {route: experimental-descriptive,  worked_example_by: experimental-descriptive}
+      - {route: experimental-causal,       worked_example_by: experimental-causal}
+      - {route: prediction,                worked_example_by: prediction-generalization}
+  - {field: answer_strategy,       progression: {defined_by: mida,
+      worked_example_by: declare-diagnose, faded_practice_by: tbd-phase-3}}
+  - {field: uncertainty_statement, progression: {defined_by: uncertainty-foundations,
+      worked_example_by: tbd-phase-3, faded_practice_by: tbd-phase-3}}
+  - {field: ethics_permission_status, progression: {defined_by: ethics-data-governance,
+      worked_example_by: tbd-phase-3, faded_practice_by: tbd-phase-3}}
+      # the four permission states; also a BLOCKING gate, never a score
+  - {field: ai_activity_provenance, progression: {defined_by: sdiivdd,
+      worked_example_by: sdiivdd, faded_practice_by: tbd-phase-4}}
+  - {field: claim_boundary,        progression: {defined_by: question-kinds,
+      worked_example_by: results-to-claims, faded_practice_by: tbd-phase-4}}
 
 levels:
-  # Shared anchor scheme; per-criterion descriptors override the generic text.
+  # Shared anchor scheme; per-criterion descriptors are REQUIRED in Phase 4
+  # and override this generic language (S2: anchors constrain, never
+  # substitute).
   - {score: 0, anchor: "absent, or asserts without the required element"}
   - {score: 1, anchor: "present but incomplete or unverified in a stated way"}
   - {score: 2, anchor: "complete, verified, and honestly bounded"}
 
 stations: []
-  # Populated in Phase 4, one entry per station:
-  # - station: 4
+  # Populated in Phase 4, one entry per station. Schema (S2/S3):
+  # - station: declare-and-diagnose          # architecture station id
+  #   checkpoint: contract-v0                # architecture checkpoint id
+  #   scoring: {aggregate: sum, comparable_across_routes: true}
   #   criteria:
-  #     - id: declare-and-diagnose.contract-v0
-  #       assesses: [objective, target_estimand, data_strategy, warrant]
+  #     - id: declare-and-diagnose.contract-v0.estimand-stated
+  #       assesses: [target_estimand]
+  #       applies_when: {}                   # empty = all routes/genres
   #       text: "..."
-  #       levels: {0: "...", 1: "...", 2: "..."}
+  #       levels: {0: "...", 1: "...", 2: "..."}   # criterion-specific, required
   #       addenda:
-  #         - {route: prediction, text: "...", levels: {...}}
-  #   exemplars:
-  #     - id: declare-and-diagnose.strong-01
-  #       kind: strong
-  #       route: observational-descriptive
-  #       provenance: {source: "...", citation_status: verified,
-  #                    data_license: "...", en_hash: "...",
-  #                    locales: {pt-BR: machine, es: machine}}
-  #     - id: declare-and-diagnose.wrong-01
-  #       kind: plausible-but-wrong
-  #       teaches: "..."
+  #         - {applies_when: {route: prediction}, text: "...",
+  #            levels: {0: "...", 1: "...", 2: "..."}}
+  #   gates:
+  #     - {id: permission-status-cleared, blocking: true, scored: false}
+  #   exemplar_pairs:
+  #     - id: declare-and-diagnose.pair-01
+  #       task: "shared prompt/case both artifacts answer"
+  #       applies_when: {route: observational-descriptive}
+  #       strong:
+  #         artifact: path-or-anchor
+  #         annotations: [{criterion: ..., score: 2, note: "..."}]
+  #         provenance: {source: "...", citation_status: verified,
+  #                      data_license: "...", redistribution: permitted,
+  #                      consent: not-student-derived | documented,
+  #                      en_sha256: "...",
+  #                      locales: {pt-BR: not-started, es: not-started}}
+  #       plausible_but_wrong:
+  #         artifact: path-or-anchor
+  #         teaches: "the specific misreading it embodies"
+  #         annotations: [{criterion: ..., score: 1, note: "..."}]
+  #         provenance: {...}                # required on BOTH members

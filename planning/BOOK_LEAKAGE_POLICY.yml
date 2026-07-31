@@ -1,0 +1,68 @@
+# BOOK_LEAKAGE_POLICY.yml — acceptance test A2: institution-agnostic chapters
+# (D35 Phase 2, created per the Phase-2 design critique, 2026-07-31)
+#
+# The book is a self-contained manual used outside Purdue (D24/D25): chapter
+# BODIES must carry no course-operational or institution-specific language.
+# This file is the ONLY authority on what the A2 scanner rejects and what it
+# excepts — one-off ignores in Python are forbidden.
+#
+# Scanner contract (Phase-2 build):
+#   - scanned artifacts: every ACTIVE EN lesson `source:` from
+#     BOOK_ARCHITECTURE.yml, its generated companion notebook, and the
+#     rubric projections. The For Instructors appendix is STRUCTURALLY
+#     excluded (that is where the companion course is presented, D25); the
+#     preface's languages/instructor pointers are excepted narrowly below.
+#   - scanned content: visible prose, code comments, link TARGETS, image alt
+#     text, and raw HTML — not just paragraph text.
+#   - frozen editions (D36): reported as frozen/advisory, never "passed";
+#     they hard-gate at the end-of-project translation pass.
+#   - exceptions are CONTENT-ADDRESSED (normalized sha256 of the containing
+#     paragraph) and lesson-scoped, with an occurrence cap and a review
+#     date. Whole-file ignores, line numbers, and broad regex suppressions
+#     are forbidden. Any edit near an excepted span invalidates it.
+#   - mutation self-tests: inject each rule family into prose, a code
+#     comment, a link target, and alt text of a scanned lesson copy; all
+#     four must be caught. A registered exception must pass; editing its
+#     paragraph must invalidate it.
+#
+# Rule families (id -> boundary-aware pattern; case-insensitive, scanned on
+# whitespace-normalized text like the misconception gate):
+
+rules:
+  - id: institution-name
+    pattern: "\\b(purdue|brightspace|honors college|honr ?464)\\b"
+    why: "institution/platform names belong in parentheticals or For Instructors"
+  - id: course-platform
+    pattern: "\\b(genai ?studio|genai\\.rcac|rcac\\.purdue)\\b"
+    why: "campus AI platform — chapters say 'your AI reviewer bench'"
+  - id: course-milestones
+    pattern: "\\bmilestone ?m?\\d{1,2}\\b|\\bm\\d{1,2} (brief|milestone)\\b"
+    why: "milestone machinery is course-side; chapters chain IYT sections instead"
+  - id: course-notebooks
+    pattern: "\\bnb\\d{2}\\b|\\bms\\d{2}\\b"
+    why: "course lab ids; the chapter's own companion notebook is the book artifact"
+  - id: course-calendar
+    pattern: "\\b(week \\d{1,2}|monday|wednesday|friday) (lecture|studio|class)\\b"
+    why: "calendar structure is course-side (D13/D35 independence axiom)"
+  - id: course-grading
+    pattern: "\\b(graded|grading|rubric score|points toward|syllabus)\\b"
+    why: "grading language; the book assesses via checkpoints, the course grades"
+  - id: expo-conference
+    pattern: "\\b(undergraduate research expo|fall expo|purdue expo)\\b"
+    why: "chapters say 'your research conference'"
+
+structural_exclusions:
+  # Excluded by ARTIFACT ID, not by path glob.
+  - artifact: for-instructors
+    reason: "the appendix that presents the companion course (D25); ships openly (D35)"
+
+exceptions: []
+  # Shape (content-addressed, reviewed, capped):
+  # - id: a2-purdue-parenthetical-001
+  #   rule: institution-name
+  #   lesson: <lesson id>
+  #   normalized_sha256: "sha256 of the containing paragraph, normalized"
+  #   max_occurrences: 1
+  #   reason: "explicit parenthetical institution example (D25 allows
+  #            Purdue specifics as parentheticals)"
+  #   review_on: "2027-01-01"

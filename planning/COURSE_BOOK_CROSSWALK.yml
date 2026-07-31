@@ -1,133 +1,214 @@
 # COURSE_BOOK_CROSSWALK.yml — the HONR 46400 adoption map for EDR|AI
-# (D35 Phase 2, DRAFT v0 — NOT yet machine-verified)
+# (D35 Phase 2, revised to schema 1.0 per the Phase-2 design critique,
+#  2026-07-31, _adm/codex_reviews/2026-07-31_phase2-manifest-schema/verdict.md)
 #
 # The ONLY place course facts and book structure meet (independence axiom:
 # course structures constrain this crosswalk, never the book's spine). Once
-# adopted, this file GENERATES: the For Instructors adoption table, milestone
-# Book Anchors, and course reading lists. Rows reference lessons by their
-# immutable ids from BOOK_ARCHITECTURE.yml, never by chapter number.
+# machine-verified, this file GENERATES: the For Instructors adoption table,
+# milestone Book Anchors, and course reading lists (BOOK_MAP.md becomes a
+# generated projection). Rows reference lessons and stations by their
+# immutable ids from BOOK_ARCHITECTURE.yml, never by number.
 #
-# Source of the mapping: the round-2 design review's 16-row counter-proposal
-# (task #20, Record 4 §5), adopted by D35 as v0 DATA subject to machine
-# verification. Per D35(7): the validator — checking every row against
-# planning/MEETING_SCHEDULE.csv and _research_project/2026Fall/ briefs, and
-# enforcing prerequisite timing (no construct assessed before its teaching
-# lesson) — is the arbiter, not any reviewer's reading. Until that check
-# passes, nothing here feeds a generated artifact.
+# Schema (C1–C4 rulings):
+#   - `assignments:` are TYPED objects, one per lesson-adoption event:
+#       {lesson, requirement: required|recommended|route-required|optional,
+#        purpose: first-read|revisit, primary_lab: true|false,
+#        home_anchor: true|false}
+#     HOME-ANCHOR RULE: every ACTIVE lesson has exactly one home_anchor row
+#     across the file (the partition); revisit assignments are a separate
+#     multiset and never anchor. `planned` lessons use `planned_home_anchor:`
+#     in the row instead — they generate NOTHING until active.
+#     Course policy note: this course adopts the book's `optional`-role
+#     lessons as REQUIRED reading; that is a course decision recorded here,
+#     never inferred from the book role.
+#   - `station_events:` replace open/advance/close with real event semantics:
+#       {station: <slug>, event: introduce|practice|checkpoint|revisit,
+#        checkpoint: <id, checkpoint/revisit only>, at: <course event>}
+#     `at` values: reading-due | studio | milestone-submission (the row's
+#     milestone unless stated). A checkpoint is versioned, never
+#     irreversible; later revisits are legal.
+#   - `gates:` are objects: {id, requires, before_event, evidence, blocking}.
+#   - There is NO authored machine_verification flag (C4): consumers must
+#     RUN the validator; provenance lives in a generated lock file
+#     (planning/.crosswalk_lock.json — hashes + validator version), written
+#     only by the validator itself.
 #
-# `station_action` vocabulary: open | advance | close | revisit (a station
-# checkpoint may be revisited — versioned, never irreversible, D35 §3).
-# `primary_lab_of` records which lessons name this nb as their primary course
-# lab; corrections ruled by D35 from the round-2 review are marked.
+# Migration audit (C1): the milestone briefs currently carry the PRE-D35
+# anchors. Until the briefs are regenerated FROM this file, the validator's
+# one-time `--migration-audit` must report EXACTLY these five differences and
+# no others: hybrid-complex-designs M3→M8, ai-analytical-assistant M9→M8,
+# false-confidence M0→M9, + the two planned lessons (no live anchors yet).
+# After regeneration, briefs/material are projections and only freshness is
+# checked.
 #
-# Validator contract (Phase-2 rewrite): every lesson id appears in exactly one
-# `reading` (the 16 anchors partition all lessons, planned ones included);
-# every nb01–nb16 is primary lab of >= 1 lesson; every `station_action: close`
-# for a station follows all its lessons' readings; self-reproduction precedes
-# the poster lock (M10); no row conflicts with MEETING_SCHEDULE.csv.
+# Course-event source: planning/MEETING_SCHEDULE.csv (43×34, generated). The
+# schedule has no structured notebook/milestone id columns yet; the Phase-2
+# validator matches on the `other_material` nbNN token and the
+# `milestone_developed` prefix until schedule_data grows structured ids.
 
-schema_version: 0.1
-status: draft-v0
-machine_verification: pending
+schema_version: "1.0"
+status: revised-per-critique
 
 rows:
   - milestone: M0
     nb: nb01
-    reading: [ai-arm-not-brain, research-director, sdiivdd, responsibility-ownership]
-    primary_lab_of: [ai-arm-not-brain, research-director, sdiivdd, responsibility-ownership]
-    station_actions: [{station: 1, action: close}]
+    assignments:
+      - {lesson: ai-arm-not-brain,         requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: research-director,        requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: sdiivdd,                  requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: responsibility-ownership, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: govern-the-work, event: checkpoint, checkpoint: working-agreement-v0, at: milestone-submission}
 
   - milestone: M1
     nb: nb02
-    reading: [curiosity-to-problem, question-kinds]
-    primary_lab_of: [curiosity-to-problem, question-kinds]
-    station_actions: [{station: 2, action: close}]
+    assignments:
+      - {lesson: curiosity-to-problem, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: question-kinds,       requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: frame-the-inquiry, event: checkpoint, checkpoint: question-declared-v0, at: milestone-submission}
 
   - milestone: M2
     nb: nb03
-    reading: [research-builds, verifying-prior-evidence, data-provenance]
-    primary_lab_of: [research-builds, verifying-prior-evidence, data-provenance]
-    station_actions: [{station: 3, action: close}, {station: 6, action: open}]
+    assignments:
+      - {lesson: research-builds,          requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: verifying-prior-evidence, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: data-provenance,          requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: ground-in-evidence,      event: checkpoint, checkpoint: evidence-base-v0, at: milestone-submission}
+      - {station: govern-data-measurement, event: introduce, at: reading-due}
 
   - milestone: M3
     nb: nb04
-    reading: [mida, uncertainty-foundations, declare-diagnose, ethics-data-governance]
-    primary_lab_of: [mida, declare-diagnose, uncertainty-foundations, ethics-data-governance]
-    # D35 correction: both planned lessons take nb04 as primary lab
-    station_actions: [{station: 4, action: close}]   # Contract v0 + permission status
+    assignments:
+      - {lesson: mida,             requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: declare-diagnose, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    planned_home_anchor: [uncertainty-foundations, ethics-data-governance]
+    # D35 correction: both planned lessons take nb04 as primary lab when active
+    station_events:
+      - {station: declare-and-diagnose, event: checkpoint, checkpoint: contract-v0, at: milestone-submission}
 
   - milestone: M4
     nb: nb05
-    reading: [observational-descriptive, measurement, ai-as-programmer]
-    primary_lab_of: [observational-descriptive, measurement, ai-as-programmer]
-    station_actions: [{station: 5, action: open}, {station: 6, action: advance},
-                      {station: 7, action: open}]
+    assignments:
+      - {lesson: observational-descriptive, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: measurement,               requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: ai-as-programmer,          requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: develop-the-pathway,      event: introduce, at: reading-due}
+      - {station: govern-data-measurement,  event: practice, at: studio}
+      - {station: first-analysis,           event: introduce, at: reading-due}
 
   - milestone: M5
     nb: nb06
-    reading: [observational-causal]
-    primary_lab_of: [observational-causal]
-    station_actions: [{station: 5, action: advance}]   # branch or contrast case
+    assignments:
+      - {lesson: observational-causal, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: develop-the-pathway, event: practice, at: studio}   # branch or contrast case
 
   - milestone: M6
     nb: nb07
-    reading: [experimental-descriptive]
-    primary_lab_of: [experimental-descriptive]
-    station_actions: [{station: 5, action: advance}]
+    assignments:
+      - {lesson: experimental-descriptive, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: develop-the-pathway, event: practice, at: studio}
 
   - milestone: M7
     nb: nb08
-    reading: [prediction-generalization]
-    primary_lab_of: [prediction-generalization]
-    station_actions: [{station: 5, action: advance}]   # + revisit applied uncertainty
+    assignments:
+      - {lesson: prediction-generalization, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: develop-the-pathway,  event: practice, at: studio}
+      - {station: declare-and-diagnose, event: revisit, checkpoint: contract-v0, at: studio}
+        # applied uncertainty revisit
 
   - milestone: M8
     nb: nb09
-    reading: [experimental-causal, hybrid-complex-designs, ai-analytical-assistant]
-    primary_lab_of: [experimental-causal, hybrid-complex-designs, ai-analytical-assistant]
-    # D35 corrections: hybrid-complex-designs nb04 -> nb09; ai-analytical-assistant nb10 -> nb09
-    station_actions: [{station: 5, action: close}, {station: 7, action: close}]
+    assignments:
+      - {lesson: experimental-causal,     requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: hybrid-complex-designs,  requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: ai-analytical-assistant, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    # D35 corrections: hybrid-complex-designs nb04 -> nb09;
+    # ai-analytical-assistant nb10 -> nb09
+    station_events:
+      - {station: develop-the-pathway, event: checkpoint, checkpoint: pathway-declared-v1, at: milestone-submission}
+      - {station: first-analysis,      event: checkpoint, checkpoint: first-analysis-v1, at: milestone-submission}
 
   - milestone: M9
     nb: nb10
-    reading: [robustness-sensitivity, negative-tests, ai-adversarial-reviewer, false-confidence]
-    primary_lab_of: [robustness-sensitivity, negative-tests, ai-adversarial-reviewer, false-confidence]
+    assignments:
+      - {lesson: robustness-sensitivity,  requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: negative-tests,          requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: ai-adversarial-reviewer, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: false-confidence,        requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
     # D35 correction: false-confidence nb01 -> nb10
-    station_actions: [{station: 8, action: close}]    # + self-reproduction precheck
+    station_events:
+      - {station: stress-test,           event: checkpoint, checkpoint: robustness-audit-v1, at: milestone-submission}
+      - {station: reproduce-and-package, event: introduce, at: studio}   # self-reproduction precheck
 
   - milestone: M10
     nb: nb11
-    reading: [results-to-claims, claim-evidence-tables, research-posters, poster-criticism]
-    primary_lab_of: [results-to-claims, claim-evidence-tables, research-posters, poster-criticism]
-    station_actions: [{station: 9, action: open}, {station: 10, action: open}]
-    gate: "author self-reproduction REQUIRED before the poster lock (D35: reproduce before you publish)"
+    assignments:
+      - {lesson: results-to-claims,     requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: claim-evidence-tables, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: research-posters,      requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: poster-criticism,      requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: write-bound-disclose, event: introduce, at: reading-due}
+      - {station: adapt-and-defend,     event: introduce, at: reading-due}
+    gates:
+      - {id: reproduce-before-publish,
+         requires: author-self-reproduction,
+         before_event: poster-lock,           # Fri Nov 6 5 PM, course calendar
+         evidence: reproduction-log,
+         blocking: true}
+         # D35: reproduce before you publish
 
   - milestone: M11
     nb: nb12
-    reading: [research-pitches, difficult-questions]
-    primary_lab_of: [research-pitches, difficult-questions]
-    station_actions: [{station: 10, action: advance}]  # oral-defense branch
+    assignments:
+      - {lesson: research-pitches,    requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: difficult-questions, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: adapt-and-defend, event: practice, at: studio}   # oral-defense branch
 
   - milestone: M12
     nb: nb13
-    reading: [ai-disclosure]        # before the Expo; Expo/reflection stays course-only
-    primary_lab_of: [ai-disclosure]
-    station_actions: [{station: 9, action: advance}]   # disclosure portion closes
+    assignments:
+      - {lesson: ai-disclosure, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    # before the Expo; Expo/reflection stays course-only
+    station_events:
+      - {station: write-bound-disclose, event: practice, at: studio}   # disclosure portion
 
   - milestone: M13
     nb: nb14
-    reading: [replication-reproduction]
-    primary_lab_of: [replication-reproduction]
-    station_actions: [{station: 11, action: advance}]  # peer/cold reproduction
+    assignments:
+      - {lesson: replication-reproduction, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: reproduce-and-package, event: practice, at: studio}  # peer/cold reproduction
 
   - milestone: M14
     nb: nb15
-    reading: [poster-to-note, research-packages]
-    primary_lab_of: [poster-to-note, research-packages]
-    station_actions: [{station: 9, action: close}, {station: 11, action: close}]
+    assignments:
+      - {lesson: poster-to-note,    requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: research-packages, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: write-bound-disclose,  event: checkpoint, checkpoint: bounded-claims-v1, at: milestone-submission}
+      - {station: reproduce-and-package, event: checkpoint, checkpoint: package-v1, at: milestone-submission}
 
   - milestone: M15
     nb: nb16
-    reading: [managing-ai-agents, conflicting-agents, final-portfolio]
-    primary_lab_of: [managing-ai-agents, conflicting-agents, final-portfolio]
-    station_actions: [{station: 12, action: close}]
+    assignments:
+      - {lesson: managing-ai-agents, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: conflicting-agents, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: final-portfolio,    requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+    station_events:
+      - {station: release-next-cycle, event: checkpoint, checkpoint: release-audit-v1, at: milestone-submission}
+
+# Checkpoints not yet reached by any event above but defined in the
+# architecture: adapt-and-defend/defense-ready-v1 (the oral defense sits in
+# the course's final-exam slot, outside the M-row grid) and
+# govern-data-measurement/data-measurement-v1 (assessed inside M4/M8
+# submissions; wire an explicit event when BOOK_ASSESSMENTS criteria land in
+# Phase 4). The validator treats a defined-but-unreached checkpoint as a
+# WARNING until Phase 4, then an error.
