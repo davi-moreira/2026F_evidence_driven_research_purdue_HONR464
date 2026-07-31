@@ -39,7 +39,6 @@ work inside your project notebook):
 
 - Ch. 9 — [Model, Inquiry, Data Strategy, and Answer Strategy](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch09_model_inquiry_data_strategy_and_answer_strategy.ipynb)
 - Ch. 10 — [Declaring and Diagnosing a Research Design](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch10_declaring_and_diagnosing_a_research_design.ipynb)
-- Ch. 16 — [Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch16_hybrid_and_complex_designs.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's 37 "It is your turn" sections chain into your final

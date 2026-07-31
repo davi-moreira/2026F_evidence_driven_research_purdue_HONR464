@@ -139,6 +139,31 @@ def check_architecture(arch) -> list[str]:
     used_stations = {l["station"] for l in lessons}
     if set(stations) - used_stations:
         p.append(f"arch: station with no lessons: {set(stations) - used_stations}")
+    # identity epoch (round-8 P1 / A10): every id + url_path released at the
+    # epoch must survive unchanged — renames and URL moves fail here, not in
+    # review. Tombstoned ids are the only legal exits.
+    epoch = arch.get("identity_epoch")
+    if not epoch:
+        p.append("arch: identity_epoch is unset — A10 has no baseline")
+    else:
+        import subprocess
+        try:
+            snap = yaml.safe_load(subprocess.run(
+                ["git", "show", f"{epoch}:planning/BOOK_ARCHITECTURE.yml"],
+                capture_output=True, text=True, check=True, cwd=REPO).stdout)
+            now_urls = {l["id"]: l["url_path"] for l in lessons}
+            for el in snap.get("lessons", []):
+                eid = el["id"]
+                if eid in tomb_ids:
+                    continue
+                if eid not in now_urls:
+                    p.append(f"arch[A10]: epoch lesson {eid!r} vanished — ids "
+                             f"are never renamed or deleted, only tombstoned")
+                elif el.get("url_path") and now_urls[eid] != el["url_path"]:
+                    p.append(f"arch[A10]: {eid} url_path changed from the "
+                             f"epoch value — canonical URLs are immutable")
+        except subprocess.CalledProcessError:
+            p.append(f"arch: identity_epoch {epoch!r} is not a readable commit")
     # editions sanity (D36)
     eds = arch.get("editions", {})
     if "en" not in eds or eds["en"].get("lifecycle") != "current":
@@ -244,15 +269,26 @@ def _brief_anchor_map() -> dict[str, set[int]]:
         if not m:
             continue
         mi = f"M{int(m.group(1))}"
-        # anchored chapters are named on EDR|AI lines (the submission-table
-        # row and the Book Anchor section); RDSS lines also say "ch. N", so
-        # scan only lines that mention EDR
-        chapters: set[int] = set()
-        for line in brief.read_text().splitlines():
+        text = brief.read_text()
+        # Surface 1: the EDR|AI submission-table row(s). RDSS lines also say
+        # "ch. N", so scan only lines mentioning EDR.
+        row: set[int] = set()
+        for line in text.splitlines():
             if "EDR" in line:
-                chapters.update(int(c) for c in
-                                re.findall(r"ch\.?\s*(\d{1,2})", line, re.I))
-        out[mi] = chapters
+                row.update(int(c) for c in
+                           re.findall(r"ch\.?\s*(\d{1,2})", line, re.I))
+        # Surface 2: the detailed "- Ch. N — [title](url) · companion" bullet
+        # list inside the Book Anchor section (round-8 P1: this list drifted
+        # while only the row was checked, handing students contradictory
+        # graded requirements).
+        bullets = {int(c) for c in
+                   re.findall(r"^- Ch\.\s*(\d{1,2})\b", text, re.M)}
+        if bullets and row and bullets != row:
+            raise SystemExit(
+                f"✗ {brief.name}: the submission row lists chapters "
+                f"{sorted(row)} but the Book Anchor bullets list "
+                f"{sorted(bullets)} — a brief may not contradict itself")
+        out[mi] = row | bullets
     return out
 
 

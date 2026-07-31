@@ -71,6 +71,14 @@ def _async_days() -> dict[date, str]:
                 f"  calendar.async_meetings — do not let the two disagree."
             )
         days[d] = ASYNC_LABELS[d]
+    # EVERY declared count must match the backbone, not only the async list
+    # (round-8 P2: in_person stayed 41 after the de-asyncing while this gate
+    # read only async_meetings and stayed green).
+    declared_inperson = yaml.safe_load(cfg.read_text())["calendar"].get("in_person")
+    if declared_inperson is not None and declared_inperson != 43 - len(days):
+        raise SystemExit(
+            f"✗ course_config.yaml calendar.in_person = {declared_inperson}, "
+            f"but 43 total - {len(days)} async = {43 - len(days)} in-person.")
     return days
 
 

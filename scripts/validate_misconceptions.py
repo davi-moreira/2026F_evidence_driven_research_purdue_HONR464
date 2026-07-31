@@ -412,14 +412,24 @@ def check_freshness() -> list[str]:
     except Exception:
         pass                                    # registry unavailable: fall back
 
-    for src in sorted(src_dir.glob("*.py")):
-        student = _ROOT / "notebooks" / "student" / f"{src.stem}_student.ipynb"
-        instructor = _ROOT / "notebooks" / "instructor" / f"{src.stem}_instructor.ipynb"
-        if active_stems is not None:
-            if src.stem not in active_stems:
-                continue                        # genuinely retired source
-        elif not student.exists() and not instructor.exists():
-            continue                            # fallback: both gone = retired
+    # Iterate the REGISTERED stems, not the files that happen to exist
+    # (round-8 P2: looping glob("*.py") let a deleted canonical source
+    # vanish silently while its generated artifacts stayed green).
+    if active_stems is not None:
+        stems = sorted(active_stems)
+    else:
+        stems = sorted(p.stem for p in src_dir.glob("*.py")
+                       if (_ROOT / "notebooks" / "student" /
+                           f"{p.stem}_student.ipynb").exists())
+    for stem in stems:
+        src = src_dir / f"{stem}.py"
+        student = _ROOT / "notebooks" / "student" / f"{stem}_student.ipynb"
+        instructor = _ROOT / "notebooks" / "instructor" / f"{stem}_instructor.ipynb"
+        if not src.exists():
+            problems.append(
+                f"local: MISSING canonical source {src.relative_to(_ROOT)} "
+                f"for registered notebook {stem}")
+            continue
         src_hash = hashlib.sha256(src.read_bytes()).hexdigest()
         for artifact in (student, instructor):
             if not artifact.exists():

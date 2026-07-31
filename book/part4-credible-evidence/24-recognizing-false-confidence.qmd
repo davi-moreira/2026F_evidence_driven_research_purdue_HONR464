@@ -95,10 +95,10 @@ Colab. The full classroom laboratory behind this chapter is course notebook **nb
 Share the research and attack the analysis** ([open in
 Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
 part of the companion course presented in the [For instructors](../for-instructors.qmd)
-appendix. In the lab you run a small randomized study, meet a confident one-line summary
-that claims a large effect, and recompute the actual gap in the data to watch the
-summary overstate it. You then red-team a finding you wrote and catch an AI that praises
-your sentence instead of testing it.
+appendix. In the lab you pre-list a robustness grid, run placebo and influence
+checks on a finding, then adjudicate three confident AI reviewers against the
+data and watch two of their three flags dissolve the moment a check touches
+them — confidence meeting evidence, which is this chapter's whole subject.
 
 
 ## Recommended AI prompts

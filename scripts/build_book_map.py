@@ -48,15 +48,8 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 """
 
 
-def main() -> int:
-    if not LOCK.exists():
-        sys.exit("✗ no crosswalk lock — run scripts/validate_book_architecture.py first")
-    lock = json.loads(LOCK.read_text())
-    for name in ("BOOK_ARCHITECTURE.yml", "COURSE_BOOK_CROSSWALK.yml"):
-        p = REPO / "planning" / name
-        if hashlib.sha256(p.read_bytes()).hexdigest() != lock["manifests"][name]:
-            sys.exit(f"✗ {name} changed since the lock — re-run the validator")
-
+def render() -> str:
+    """The generated BOOK_MAP content (no writes)."""
     arch = yaml.safe_load(ARCH.read_text())
     cw = yaml.safe_load(CW.read_text())
     parts = {p["id"]: p for p in arch["parts"]}
@@ -65,24 +58,42 @@ def main() -> int:
         for a in r.get("assignments", []):
             if a.get("home_anchor"):
                 primary[a["lesson"]] = r["nb"]
-
     rows = []
     active = sorted((l for l in arch["lessons"] if l["state"] == "active"),
                     key=lambda l: l["rank"])
     for i, l in enumerate(active, start=1):
         src = REPO / "book" / l["source"]
-        m = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', src.read_text(),
-                      re.M)
+        m = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', src.read_text(), re.M)
         title = m.group(1) if m else l.get("title_en", l["id"])
         part = parts[l["part"]]
         roman = ROMAN[part["rank"]]
         label = f"{roman} — {part['title_en']}" if i == 1 or \
             active[i - 2]["part"] != l["part"] else roman
         rows.append(f"| {label} | {i} | {title} | {primary[l['id']]} |")
+    return HEADER + "\n".join(rows) + "\n"
 
-    OUT.write_text(HEADER + "\n".join(rows) + "\n")
-    print(f"✓ BOOK_MAP.md generated — {len(active)} active lessons, "
-          f"{len(set(primary.values()))} primary notebooks")
+
+def main() -> int:
+    if "--check" in sys.argv:
+        # freshness only (round-8 P1): the on-disk projection must equal the
+        # regenerated content; no writes, no lock requirement
+        if OUT.read_text() != render():
+            print("✗ planning/BOOK_MAP.md is STALE — re-run the validator "
+                  "then scripts/build_book_map.py")
+            return 1
+        print("✓ BOOK_MAP.md is fresh against the manifests")
+        return 0
+    if not LOCK.exists():
+        sys.exit("✗ no crosswalk lock — run scripts/validate_book_architecture.py first")
+    lock = json.loads(LOCK.read_text())
+    for name in ("BOOK_ARCHITECTURE.yml", "COURSE_BOOK_CROSSWALK.yml"):
+        q = REPO / "planning" / name
+        if hashlib.sha256(q.read_bytes()).hexdigest() != lock["manifests"][name]:
+            sys.exit(f"✗ {name} changed since the lock — re-run the validator")
+    content = render()
+    OUT.write_text(content)
+    n = content.count("\n| ") + 1
+    print(f"✓ BOOK_MAP.md generated — {sum(1 for l in content.splitlines() if l.startswith('| '))-1} table rows")
     return 0
 
 

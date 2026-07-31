@@ -130,6 +130,9 @@ rows:
       - {lesson: ai-analytical-assistant, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
     # D35 corrections: hybrid-complex-designs nb04 -> nb09;
     # ai-analytical-assistant nb10 -> nb09
+    # PHASE-4 DEBT (round-8 P2): ch20's body still leans toward
+    # stress-testing; the Phase-4 de-coursing pass rewrites it around
+    # first-analysis delegation + verification (or this mapping is revisited)
     station_events:
       - {station: develop-the-pathway, event: checkpoint, checkpoint: pathway-declared-v1, at: milestone-submission}
       - {station: first-analysis,      event: checkpoint, checkpoint: first-analysis-v1, at: milestone-submission}

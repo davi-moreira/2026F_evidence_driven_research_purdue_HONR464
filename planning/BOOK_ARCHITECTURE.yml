@@ -51,7 +51,8 @@
 
 schema_version: "1.0"
 status: revised-per-critique   # -> review-approved when the validator passes A10
-identity_epoch: null           # set to the migration commit when tooling adopts ids
+identity_epoch: "18e1b43"      # the schema-1.0 adoption commit; ids/urls diff
+                               # against THIS baseline, never the working tree
 
 editions:
   en:

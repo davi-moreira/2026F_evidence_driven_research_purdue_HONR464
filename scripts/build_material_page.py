@@ -158,19 +158,28 @@ BOOK_PART_SLUGS = {
 
 
 def book_chapters_by_nb() -> dict[int, list[tuple[int, str]]]:
-    """nb number -> [(chapter number, site-relative html link)] from BOOK_MAP."""
+    """nb number -> [(display chapter number, site-relative html link)].
+
+    Links come from BOOK_ARCHITECTURE.yml's immutable `url_path`, never from
+    globbing a numeric filename prefix (round-8 P1 / A10: display numbers are
+    derived labels; parsing them out of filenames breaks on insertion). The
+    primary-notebook mapping comes from the crosswalk's home anchors.
+    """
+    import yaml
+    arch = yaml.safe_load((REPO / "planning" / "BOOK_ARCHITECTURE.yml").read_text())
+    cw = yaml.safe_load((REPO / "planning" / "COURSE_BOOK_CROSSWALK.yml").read_text())
+    primary: dict[str, int] = {}
+    for r in cw["rows"]:
+        for a in r.get("assignments", []):
+            if a.get("home_anchor"):
+                primary[a["lesson"]] = int(r["nb"][2:])
     out: dict[int, list[tuple[int, str]]] = {}
-    for line in BOOK_MAP.read_text().splitlines():
-        m = re.match(r"\|\s*([IVX]+)\b[^|]*\|\s*(\d+)\s*\|\s*(.+?)\s*\|\s*nb(\d\d)\s*\|",
-                     line)
-        if not m:
-            continue
-        part, ch, nb = m.group(1), int(m.group(2)), int(m.group(4))
-        slug = BOOK_PART_SLUGS[part]
-        hits = sorted((REPO / "book" / slug).glob(f"{ch:02d}-*.qmd"))
-        if hits:
-            out.setdefault(nb, []).append(
-                (ch, f"book/{slug}/{hits[0].stem}.html"))
+    active = sorted((l for l in arch["lessons"] if l["state"] == "active"),
+                    key=lambda l: l["rank"])
+    for i, lesson in enumerate(active, start=1):
+        nb = primary.get(lesson["id"])
+        if nb is not None:
+            out.setdefault(nb, []).append((i, f"book/{lesson['url_path']}"))
     return out
 
 

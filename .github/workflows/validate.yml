@@ -71,5 +71,8 @@ jobs:
 
       # D35 Phase 2: the identity/crosswalk validator is the arbiter — the
       # manifests, schedule, briefs, and generated BOOK_MAP must agree.
-      - name: Book architecture + crosswalk (schema 1.0)
+      - name: Book architecture + crosswalk (schema 1.0, A10 epoch)
         run: python3 scripts/validate_book_architecture.py
+
+      - name: BOOK_MAP projection freshness
+        run: python3 scripts/build_book_map.py --check

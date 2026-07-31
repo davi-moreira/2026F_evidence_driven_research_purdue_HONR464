@@ -97,11 +97,11 @@ Colab. The full classroom laboratory behind this chapter is course notebook **nb
 Experimental causal research** ([open in
 Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb)),
 part of the companion course presented in the [For instructors](../for-instructors.qmd)
-appendix. There you build a small simulated world, **declare** a design as something a
-computer can run, **diagnose** it by simulating it thousands of times to read its bias,
-variance, and power, then **redesign** the one part that most improves it. The lab runs
-that loop on a causal social question; this chapter shows the same anatomy holds when
-the design is complex.
+appendix. There you analyze a real get-out-the-vote field experiment and meet the
+complications this chapter names arriving in real data: attrition thinning the
+sample, spillover leaking treatment across neighbors, and inference that has to
+respect how the assignment was actually drawn. The lab handles them one at a
+time; this chapter shows how designs that combine such pieces stay readable.
 
 
 ## Recommended AI prompts

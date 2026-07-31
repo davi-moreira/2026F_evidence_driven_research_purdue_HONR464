@@ -47,7 +47,7 @@ permitted with disclosure.
 ## 2. Weekly architecture — 16 weeks, one notebook per week
 
 16 topics, one notebook per week (`nb01`–`nb16`), across **43 meetings = 27
-Mon/Wed lectures + 14 in-person Friday studios + 1 async module** (dates in
+Mon/Wed lectures + 15 in-person Friday studios + 1 async module** (dates in
 `planning/CALENDAR_BACKBONE.csv`). Slugs and titles are fixed in
 `scripts/notebooks_map.py`; the "research decision" column is the project choice
 the student commits to that week.
