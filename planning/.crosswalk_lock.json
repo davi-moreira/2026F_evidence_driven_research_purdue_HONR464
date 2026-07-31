@@ -1,0 +1,9 @@
+{
+  "validator_version": "1.0",
+  "manifests": {
+    "BOOK_ARCHITECTURE.yml": "bcdae09137aa1934e2b4570ecd5677686bb3351b7545d45c38327e9d1a0ca76f",
+    "COURSE_BOOK_CROSSWALK.yml": "3baf5622ce9eb3129f8e9732506f8ff86669d911ad2c6faddd63e653e04be92f",
+    "BOOK_ASSESSMENTS.yml": "fc1ed0068f63b7663518f149d2425918a22ec5e02a103fe4cb8257cd488833ed",
+    "BOOK_LEAKAGE_POLICY.yml": "c4643a044cd0b6c15610ede466eccdae4d44e3acf772584b155d4bda46ec6886"
+  }
+}

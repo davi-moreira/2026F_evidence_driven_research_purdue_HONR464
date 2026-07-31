@@ -23,7 +23,7 @@ Due: **Friday, September 18, 11:59 PM** (you work on it at that Friday's studio)
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m03_charter.pdf`** *or* a shared Colab notebook link | Your research charter: the four **MIDA** parts of your design (Model, Inquiry, Data strategy, Answer strategy), a 3-node **DAG** image, your **diagnosis** naming the biggest threat as bias, variance, or power plus the one **redesign** it demands, your **compass position and claim boundary**, and your AI Research Ledger rows. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 9, ch. 10, ch. 16** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 9, ch. 10** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
 open it, and that the DAG figure renders when the notebook is run.

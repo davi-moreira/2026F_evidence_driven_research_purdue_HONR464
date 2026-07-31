@@ -24,7 +24,7 @@ Due: **Friday, October 23, 11:59 PM** (you work on it at that Friday's studio).
 |---|---|---|
 | 1 | **A shared Colab notebook link** *(the reproducible artifact)* | Your minimum viable analysis: a seeded notebook that reruns end to end and produces the one number you report. It carries the five-part spine below in its markdown, plus your AI Research Ledger rows. This is the graded artifact and it becomes the **reproducible Colab notebook** in your dossier. |
 | 2 | **`lastname_m08_minimum_viable_analysis.pdf`** *(optional companion)* | If you prefer to write the five-part spine as a 1–2 page PDF, submit it alongside the link. The notebook link is still required, because the number has to reproduce. |
-| 3 | **EDR\|AI "It is your turn" — ch. 15** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 3 | **EDR\|AI "It is your turn" — ch. 15, ch. 16, ch. 20** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. Confirm the
 number in your write-up matches what the notebook prints when run top to bottom.

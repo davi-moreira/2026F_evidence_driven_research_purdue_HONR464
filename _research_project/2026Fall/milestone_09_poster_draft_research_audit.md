@@ -28,7 +28,7 @@ the **Robustness & Sensitivity Reviewer**).
 | 1 | **`lastname_m09_poster_draft.pdf`** | **Poster draft 1**: your project laid out as a first poster — question, evidence, and one bounded headline claim. A rough draft, not the locked poster. |
 | 2 | **`lastname_m09_audit.pdf`** *or* the same as notebook sections | **The research audit**: the four-part written record of how hard you tried to break your own claim and what survived. This is the graded core. |
 | 3 | **`lastname_m09_audit.ipynb`** *or* a shared Colab link | The runnable audit notebook — seeded, reruns end to end. **Every number on your poster draft and in your audit traces to a cell here.** |
-| 4 | **EDR\|AI "It is your turn" — ch. 20, ch. 21, ch. 22, ch. 23** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 4 | **EDR\|AI "It is your turn" — ch. 21, ch. 22, ch. 23, ch. 24** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 confirm every figure renders when the notebook is run top to bottom.

@@ -68,3 +68,8 @@ jobs:
 
       - name: Book manifest + chapter sync (37 chapters ↔ 16 notebooks)
         run: python3 scripts/validate_book_sync.py --strict
+
+      # D35 Phase 2: the identity/crosswalk validator is the arbiter — the
+      # manifests, schedule, briefs, and generated BOOK_MAP must agree.
+      - name: Book architecture + crosswalk (schema 1.0)
+        run: python3 scripts/validate_book_architecture.py
