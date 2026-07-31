@@ -116,6 +116,12 @@ def check_schema(data) -> list[str]:
             problems.append(f"schema[{mid}]: `concept_check` must carry "
                             f"question AND answer — without the key, a wrong "
                             f"reader is undetectable (A5)")
+        anchor = (cc or {}).get("anchor") if isinstance(cc, dict) else None
+        if not (isinstance(anchor, dict) and anchor.get("file")
+                and anchor.get("locator")):
+            problems.append(f"schema[{mid}]: `concept_check.anchor` must be a "
+                            f"structured, resolvable {{file, locator}} "
+                            f"(round-6 F1)")
         cases = m.get("cases", [])
         kinds = [c.get("kind") for c in cases]
         for need in ("positive", "boundary", "converse"):
@@ -189,7 +195,9 @@ def read_surface(f: Path) -> str:
     for cell in nb.get("cells", []):
         src = cell.get("source", "")
         out.append(src if isinstance(src, str) else "".join(src))
-    text = "\n".join(out)
+    # blank-line join: cells are ALWAYS separate paragraphs, so pin windows
+    # never straddle a cell boundary (round-6 F3)
+    text = "\n\n".join(out)
     _TEXT_CACHE[key] = text
     return text
 
@@ -284,17 +292,37 @@ def _paragraph_index(text: str) -> list[tuple[int, int, str]]:
     return out
 
 
+def _window_hashes(text: str) -> list[tuple[int, int, str]]:
+    """(start_line, end_line, sha256 of the prev+this+next paragraph WINDOW).
+
+    A pin is bound to the window, not the paragraph alone: an endorsement
+    added in the paragraph BEFORE or AFTER the quotation changes the window
+    hash and invalidates the exception (round-6 F3)."""
+    import hashlib
+    paras = _paragraph_index(text)
+    out = []
+    for i, (lo, hi, _sha) in enumerate(paras):
+        window = []
+        for j in (i - 1, i, i + 1):
+            if 0 <= j < len(paras):
+                window.append(paras[j][2])
+        out.append((lo, hi, hashlib.sha256(" ".join(window).encode()).hexdigest()))
+    return out
+
+
 def _pinned_suppressor(text: str, allow: list, file_rel: str):
     """Return a predicate: is the hit at (span, line) suppressed?
 
-    Suppression requires ALL of (round-5 G-B):
+    Suppression requires ALL of (round-5 G-B, hardened round-6 F3):
       1. the hit span fully inside an occurrence of the allow TEXT;
       2. this file listed in the allow entry's pins;
-      3. the paragraph containing the hit hashing to the pinned value —
-         so any edit near the quotation invalidates the exception.
+      3. the WINDOW (previous + containing + next paragraph) hashing to the
+         pinned value — any adjacent edit invalidates the exception;
+      4. EXACTLY ONE window in the file matching that pin — a duplicated
+         copy of the pinned paragraph invalidates it.
     """
     norm, _ = _normalize(text)
-    paras = _paragraph_index(text)
+    windows = _window_hashes(text)
     entries = []
     for a in allow:
         an = " ".join(a["text"].lower().split())
@@ -312,9 +340,10 @@ def _pinned_suppressor(text: str, allow: list, file_rel: str):
         for spans, shas in entries:
             if not any(s <= span[0] and span[1] <= e for s, e in spans):
                 continue
-            for lo, hi, sha in paras:
+            for lo, hi, wsha in windows:
                 if lo <= line <= hi:
-                    if sha in shas:
+                    if wsha in shas and \
+                            sum(1 for _, _, w in windows if w == wsha) == 1:
                         return True
                     break
         return False
@@ -376,23 +405,35 @@ def check_freshness() -> list[str]:
         if not student.exists():
             # v1-era or retired sources carry no tracked counterpart
             continue
-        try:
-            meta = json.loads(student.read_text()).get("metadata", {})
-        except json.JSONDecodeError:
-            problems.append(f"local: unreadable notebook {student.relative_to(_ROOT)}")
-            continue
-        stamp = meta.get("edrai_generation", {}).get("src_sha256")
-        if stamp is None:
-            problems.append(
-                f"local: UNSTAMPED generation — {student.relative_to(_ROOT)} "
-                f"carries no source hash; rerun scripts/nbbuild.py "
-                f"{src.stem.split('_')[0]}")
-            continue
-        if stamp != hashlib.sha256(src.read_bytes()).hexdigest():
-            problems.append(
-                f"local: STALE generation — {src.relative_to(_ROOT)} changed "
-                f"since {student.relative_to(_ROOT)} was built; rerun "
-                f"scripts/nbbuild.py {src.stem.split('_')[0]}")
+        # BOTH generated artifacts are gated (round-6 F4): a stale instructor
+        # notebook is exactly the surface public CI never sees
+        instructor = _ROOT / "notebooks" / "instructor" / f"{src.stem}_instructor.ipynb"
+        src_hash = hashlib.sha256(src.read_bytes()).hexdigest()
+        for artifact in (student, instructor):
+            if not artifact.exists():
+                problems.append(
+                    f"local: MISSING generated artifact "
+                    f"{artifact.relative_to(_ROOT)}; rerun scripts/nbbuild.py "
+                    f"{src.stem.split('_')[0]}")
+                continue
+            try:
+                meta = json.loads(artifact.read_text()).get("metadata", {})
+            except json.JSONDecodeError:
+                problems.append(f"local: unreadable notebook "
+                                f"{artifact.relative_to(_ROOT)}")
+                continue
+            stamp = meta.get("edrai_generation", {}).get("src_sha256")
+            if stamp is None:
+                problems.append(
+                    f"local: UNSTAMPED generation — "
+                    f"{artifact.relative_to(_ROOT)} carries no source hash; "
+                    f"rerun scripts/nbbuild.py {src.stem.split('_')[0]}")
+                continue
+            if stamp != src_hash:
+                problems.append(
+                    f"local: STALE generation — {src.relative_to(_ROOT)} "
+                    f"changed since {artifact.relative_to(_ROOT)} was built; "
+                    f"rerun scripts/nbbuild.py {src.stem.split('_')[0]}")
     return problems
 
 
@@ -437,11 +478,29 @@ def run(verbose: bool = False, check_nums: bool = True,
         if verbose:
             print(f"  {mid}: {len(files)} files scanned")
 
+    # anchor resolution (round-6 F1): the concept check must point at a real
+    # place a reader is actually asked
+    for m in data["misconceptions"]:
+        anchor = (m.get("concept_check") or {}).get("anchor")
+        if isinstance(anchor, dict) and anchor.get("file"):
+            f = _ROOT / anchor["file"]
+            if not f.exists():
+                problems.append(f"anchor[{m['id']}]: file {anchor['file']!r} "
+                                f"does not exist")
+            else:
+                needle = " ".join(str(anchor.get("locator", "")).lower().split())
+                if needle and needle not in _normalize(read_surface(f))[0]:
+                    problems.append(f"anchor[{m['id']}]: locator "
+                                    f"{anchor['locator']!r} not found in "
+                                    f"{anchor['file']}")
+
     if local:
         problems.extend(check_freshness())
+    # the A5 case table ALWAYS runs (round-6 F5): --no-numbers skips only the
+    # figure-number evaluator, never the executable misconception record
+    problems.extend(check_cases(data, verbose=verbose))
     if check_nums:
         problems.extend(check_numbers(data, verbose=verbose))
-        problems.extend(check_cases(data, verbose=verbose))
     return problems
 
 
@@ -720,18 +779,43 @@ def self_test() -> int:
                 failures.append("deleted required correction did NOT fail the scan")
             ch21.write_text(ch21_src)
 
-            # 6b. structural guarantee: editing a PINNED paragraph invalidates
-            # the pin, so an endorsement appended beside a corrective
-            # quotation fires the reject it was hiding (round-5 G-B)
+            # 6b. structural guarantees on the PIN model (rounds 5-6): the
+            # exception must die under (i) an edit inside the quotation's
+            # paragraph, (ii) an endorsement in the NEXT paragraph, (iii) an
+            # endorsement in the PREVIOUS paragraph, and (iv) a duplicated
+            # copy of the pinned paragraph in the same file.
             ch21_src2 = ch21.read_text()
-            ch21.write_text(ch21_src2.replace(
-                "quietly claims a precision nobody computed.",
-                "quietly claims a precision nobody computed. "
-                "That warning is overly cautious."))
-            if not any("[specification-spread]" in p and "21-robustness" in p
-                       for p in run(check_nums=False)):
-                failures.append("edited pinned paragraph did NOT invalidate "
-                                "the allow pin")
+            pin_probes = [
+                ("in-paragraph edit",
+                 ch21_src2.replace(
+                     "quietly claims a precision nobody computed.",
+                     "quietly claims a precision nobody computed. "
+                     "That warning is overly cautious.")),
+                ("next-paragraph endorsement",
+                 ch21_src2.replace(
+                     "\n\nThen you run one more attack",
+                     "\n\nThat warning is overly cautious. Use that quoted "
+                     "range as the study uncertainty interval.\n\n"
+                     "Then you run one more attack")),
+                ("previous-paragraph endorsement",
+                 ch21_src2.replace(
+                     "eight-to-fifteen range stretched",
+                     "Ignore the warning coming next. The eight-to-fifteen "
+                     "range stretched")),
+            ]
+            # (iv) duplicate the whole pinned paragraph at the end of the file
+            pinned_para = next(
+                (blk for blk in re.split(r"\n\s*\n", ch21_src2)
+                 if "the honest range is" in " ".join(blk.lower().split())),
+                None)
+            if pinned_para is not None:
+                pin_probes.append(("same-file duplicate",
+                                   ch21_src2 + "\n\n" + pinned_para + "\n"))
+            for label, mutated in pin_probes:
+                ch21.write_text(mutated)
+                if not any("[specification-spread]" in p and "21-robustness" in p
+                           for p in run(check_nums=False)):
+                    failures.append(f"pin survived laundering probe: {label}")
             ch21.write_text(ch21_src2)
 
             # 7. structural guarantee: a content-changed canonical source must
@@ -753,6 +837,37 @@ def self_test() -> int:
                     failures.append("content-changed canonical source did NOT "
                                     "fail --local (hash check inert)")
                 fresh_pair.write_bytes(src_bytes)
+            # 7b. structural guarantee: a corrupted INSTRUCTOR stamp must fail
+            # --local even while the student copy is valid (round-6 F4)
+            instr_nb = next(iter(sorted(
+                (snap / "notebooks/instructor").glob("*_instructor.ipynb"))), None)
+            if instr_nb is not None:
+                instr_src = instr_nb.read_text()
+                nbj = json.loads(instr_src)
+                nbj.setdefault("metadata", {}).setdefault(
+                    "edrai_generation", {})["src_sha256"] = "0" * 64
+                instr_nb.write_text(json.dumps(nbj))
+                probs7b = run(check_nums=False, local=True)
+                if not any("STALE generation" in p and "instructor" in p
+                           for p in probs7b):
+                    failures.append("corrupted instructor stamp did NOT fail "
+                                    "--local")
+                instr_nb.write_text(instr_src)
+
+            # 7c. structural guarantee: a broken concept-check anchor must
+            # fail — deletion (schema) and a nonexistent locator (round-6 F1)
+            manifest_anchor_src = mpath.read_text()
+            mpath.write_text(manifest_anchor_src.replace(
+                'locator: "counting direction"', 'locator: "phrase that is nowhere"'))
+            if not any("anchor[signed-bias]" in p for p in run(check_nums=False)):
+                failures.append("nonexistent anchor locator did NOT fail")
+            mpath.write_text(manifest_anchor_src.replace(
+                'anchor: {file: "book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.qmd", locator: "counting direction"}',
+                'anchor: ""'))
+            if not any("concept_check.anchor" in p for p in run(check_nums=False)):
+                failures.append("deleted anchor did NOT fail the schema")
+            mpath.write_text(manifest_anchor_src)
+
             # 8. structural guarantee: a flipped case expectation must FAIL
             # (round-5 G-A: an inert case table is prose wearing a test's name)
             manifest_src2 = mpath.read_text()

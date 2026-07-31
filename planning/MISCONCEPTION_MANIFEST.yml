@@ -40,11 +40,12 @@
 #                phrasings it must NOT flag); --self-test asserts both.
 #   allow        PINNED exceptions — passages that quote a phrase in order to
 #                refute it. Each entry is {text, pins: [{file, sha256}]}:
-#                suppression applies ONLY in a pinned file, and ONLY while the
-#                paragraph containing the hit still hashes to the pinned
-#                value. Editing anywhere near the quotation (including an
-#                appended endorsement) invalidates the pin and the reject
-#                fires (round-4 G3, round-5 G-B). Inert allows are forbidden:
+#                suppression applies ONLY in a pinned file, ONLY while the
+#                WINDOW (previous + containing + next paragraph; notebook
+#                cells are separate paragraphs) hashes to the pinned value,
+#                and ONLY while that window is UNIQUE in the file. An edit in
+#                or beside the quotation, or a duplicated copy, invalidates
+#                the exception (rounds 4-6). Inert allows are forbidden:
 #                an exception that suppresses nothing is laundering surface.
 #   allow_reversals
 #                adversarial endorsements that reuse allowed material and MUST
@@ -101,7 +102,7 @@ misconceptions:
       course_config.yaml `kind_rule` + ch06's worked example — strong causal
       words with weak data stay "causal, currently unidentified".
     concept_check:
-      anchor: "nb02 compass declaration exercise (kind + reach + why, before any data)"
+      anchor: {file: "notebooks/student/nb02_curiosity_to_problem_student.ipynb", locator: "compass"}
       question: >-
         Your question asks "does X increase Y", but you only have
         observational data with strong confounding. What is the question's
@@ -146,7 +147,7 @@ misconceptions:
       ch10's diagnosis walkthrough — two procedures with equal average distance
       and opposite signed lean.
     concept_check:
-      anchor: "ch10 asks the reader to say which direction their design leans and why"
+      anchor: {file: "book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.qmd", locator: "counting direction"}
       question: >-
         Two designs both miss the truth by 2 units on average. One always
         overshoots; one scatters evenly around the truth. Which is biased?
@@ -219,7 +220,7 @@ misconceptions:
       ch10's power walkthrough — the same design's "power" changes when the
       declared test changes, so power without a test is not a number.
     concept_check:
-      anchor: "ch10 prompts the reader for the test and the threshold before the power"
+      anchor: {file: "book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.qmd", locator: "statistical test"}
       question: >-
         A designer says "this study has 80 percent power." What must they have
         declared for that number to mean anything?
@@ -290,7 +291,7 @@ misconceptions:
       fig_ch15_attrition (seeded, SEED=464) — truth 5, complete-case contrast
       8.1, because treatment changed who stayed measurable.
     concept_check:
-      anchor: "nb09's ledger exemplar asks whose outcome the surviving rows describe"
+      anchor: {file: "notebooks/student/nb09_experimental_causal_student.ipynb", locator: "complete-case contrast"}
       question: >-
         Treatment made more low-scorers drop out before the final measure.
         Whose effect does the complete-case gap estimate?
@@ -375,7 +376,7 @@ misconceptions:
       ch12's collider example — conditioning on a consequence of both cause and
       outcome creates an association that was never there.
     concept_check:
-      anchor: "ch12 asks adjust-or-not for each named variable, with the reason"
+      anchor: {file: "book/part3-pathways/12-observational-causal-research.qmd", locator: "collider"}
       question: "Should you adjust for every variable you can measure?"
       answer: >-
         No — adjust for a SUFFICIENT set; conditioning on a collider
@@ -447,7 +448,7 @@ misconceptions:
       fig_ch14 (seeded, SEED=464) — across 500 worlds the winner's true error
       exceeds its crowning selection score by +0.025 RMSE on average.
     concept_check:
-      anchor: "ch14's three-role split question — which data may fit, choose, and score"
+      anchor: {file: "book/part3-pathways/14-prediction-and-generalization.qmd", locator: "selection set"}
       question: >-
         You picked the model with the best holdout score. May you report that
         score as its performance?
@@ -533,7 +534,7 @@ misconceptions:
       ch18's items-vs-people contrast — respondent halves agree even when the
       items measure nothing coherent.
     concept_check:
-      anchor: "ch18 asks the reader to say what a respondent split would actually measure"
+      anchor: {file: "book/part4-credible-evidence/18-measurement-and-operationalization.qmd", locator: "split items, never people"}
       question: "To check split-half reliability, do you split respondents or items?"
       answer: >-
         Items, never people — respondent halves agree even when the items
@@ -588,61 +589,69 @@ misconceptions:
       ch21's worked example (three panels, one span each) and ms09's executable
       grid — a cross-panel range compares net-of-tax to gross numbers.
     concept_check:
-      anchor: "ch21 IYT step 4 — a span per commensurable panel plus a separate uncertainty statement"
+      anchor: {file: "book/part4-credible-evidence/21-robustness-and-sensitivity.qmd", locator: "specification spread"}
       question: "All your specifications agree in sign. Is the finding robust?"
       answer: >-
         Not yet — a flaw shared by every specification tilts them all
         together; the span measures your choices, never what chance could do.
     cases:
+      # Every case keeps the SAME rows and SAME outcome and varies only
+      # defensible pre-treatment adjustment sets — the panel rule the entry
+      # itself enforces (round-6 F1: the earlier cases conditioned on the
+      # outcome and mixed populations into one range).
       - kind: positive
-        shows: "true effect ZERO, one shared confounder — every specification agrees anyway"
+        shows: "true effect ZERO, one shared unobserved confounder — every same-panel specification agrees anyway"
         code: |
           rng = np.random.default_rng(464); n = 3000
           u = rng.normal(0, 1, n)
+          z1 = rng.normal(0, 1, n); z2 = rng.normal(0, 1, n)
           g = (u + rng.normal(0, 1, n)) > 0
-          y = 0 * g + u + rng.normal(0, 1, n)
-          def gap(mask):
-              return float(y[g & mask].mean() - y[(~g) & mask].mean())
-          specs = [gap(np.ones(n, bool)), gap(np.abs(y) < 2.5),
-                   gap(u < 1.5), gap(rng.random(n) < .9)]
+          y = 0 * g + u + 0.3 * z1 + 0.3 * z2 + rng.normal(0, 1, n)
+          def spec(covs):
+              X = np.column_stack([np.ones(n), g.astype(float)] + covs)
+              return float(np.linalg.lstsq(X, y, rcond=None)[0][1])
+          specs = [spec([]), spec([z1]), spec([z2]), spec([z1, z2])]
           result = {"min_gap": min(specs), "truth": 0.0}
         expect:
-          - {key: min_gap, min: 0.3}
+          - {key: min_gap, min: 0.8}
           - {key: truth, value: 0.0, tolerance: 0}
       - kind: boundary
-        shows: "no shared bias — honest variation hugs zero and spans it"
+        shows: "same-sign agreement WITHOUT the defect — a real effect, randomized, no shared bias"
         code: |
           rng = np.random.default_rng(464); n = 3000
-          _ = rng.normal(0, 1, n); _ = rng.normal(0, 1, n)
           _ = rng.normal(0, 1, n)
+          z1 = rng.normal(0, 1, n); z2 = rng.normal(0, 1, n)
           g = rng.random(n) < .5
-          y = rng.normal(0, 1, n)
-          def gap(mask):
-              return float(y[g & mask].mean() - y[(~g) & mask].mean())
-          specs = [gap(np.ones(n, bool)), gap(np.abs(y) < 2.5),
-                   gap(rng.random(n) < .8), gap(rng.random(n) < .9)]
+          y = 0.5 * g + 0.3 * z1 + 0.3 * z2 + rng.normal(0, 1, n)
+          def spec(covs):
+              X = np.column_stack([np.ones(n), g.astype(float)] + covs)
+              return float(np.linalg.lstsq(X, y, rcond=None)[0][1])
+          specs = [spec([]), spec([z1]), spec([z2]), spec([z1, z2])]
           result = {"min_gap": min(specs), "max_gap": max(specs)}
         expect:
-          - {key: min_gap, max: 0.0}
-          - {key: max_gap, min: 0.0}
+          - {key: min_gap, min: 0.35}
+          - {key: max_gap, max: 0.55}
       - kind: converse
-        shows: "the specification range is far NARROWER than the sampling interval — it is not an uncertainty statement"
+        shows: "the specification range is far narrower than the lead estimate's OWN interval, computed from its actual group sizes and variances"
         code: |
           rng = np.random.default_rng(464); n = 3000
-          _ = rng.normal(0, 1, n); _ = rng.normal(0, 1, n)
           _ = rng.normal(0, 1, n)
+          z1 = rng.normal(0, 1, n); z2 = rng.normal(0, 1, n)
           g = rng.random(n) < .5
-          y = rng.normal(0, 1, n)
-          def gap(mask):
-              return float(y[g & mask].mean() - y[(~g) & mask].mean())
-          specs = [gap(np.ones(n, bool)), gap(np.abs(y) < 2.5),
-                   gap(rng.random(n) < .8), gap(rng.random(n) < .9)]
+          y = 0.5 * g + 0.3 * z1 + 0.3 * z2 + rng.normal(0, 1, n)
+          def spec(covs):
+              X = np.column_stack([np.ones(n), g.astype(float)] + covs)
+              return float(np.linalg.lstsq(X, y, rcond=None)[0][1])
+          specs = [spec([]), spec([z1]), spec([z2]), spec([z1, z2])]
+          y1, y0 = y[g], y[~g]
+          se = float(np.sqrt(y1.var(ddof=1) / len(y1)
+                             + y0.var(ddof=1) / len(y0)))
           spec_range = max(specs) - min(specs)
-          ci_width = float(4 * 2 * y.std() / np.sqrt(n))
-          result = {"spec_range": spec_range, "ci_width": ci_width,
-                    "ratio": spec_range / ci_width}
+          result = {"spec_range": spec_range,
+                    "ci_width": 2 * 1.96 * se,
+                    "ratio": spec_range / (2 * 1.96 * se)}
         expect:
-          - {key: ratio, max: 0.7}
+          - {key: ratio, max: 0.3}
     rejects:
       - "its spread is your honest range"
       - "the honest range is"
@@ -666,7 +675,7 @@ misconceptions:
       - text: 'Collapsing them into "the honest range is eight to fifteen" quietly claims a precision nobody computed'
         pins:
           - {file: "book/part4-credible-evidence/21-robustness-and-sensitivity.qmd",
-             sha256: "7c8eed84f01fad6711b8be007070043cb50d80b162e78f28f5e8687b801b2131"}
+             sha256: "27715dcc27fa8b6c9ef6c2e963d699095e9ad1301aaf0cd633e2d76ece77a5b9"}
     allow_reversals:
       - 'Collapsing them into "the honest range is 8 to 15" is correct.'
       - 'Collapsing them into "the honest range is eight to fifteen" is the right call.'
@@ -685,7 +694,7 @@ misconceptions:
       fig_ch22 (seeded, SEED=464) — 2,000 true-null runs, zero exact zeros,
       62 rounding to 0.00, spread -0.29 to +0.27.
     concept_check:
-      anchor: "ch22's read-the-histogram question and ch21 IYT step 6's three branches"
+      anchor: {file: "book/part4-credible-evidence/22-diagnostics-and-negative-tests.qmd", locator: "exactly zero"}
       question: "Your negative control read 0.07, not zero. Is that a failure?"
       answer: >-
         Not by itself — a valid null yields a spread of nonzero readings from
@@ -784,11 +793,11 @@ misconceptions:
       - text: 'watch out for "it rules out artifacts"'
         pins:
           - {file: "_production_kit/nb_sources/nb10_attack_the_analysis.py",
-             sha256: "7502040f0b7ddabe843937f881966ea84fddadf0356d192d3876f00a0bc9d630"}
+             sha256: "f6469d57999419c9ca2cfa6cb3d156e9aed6235e6f72015d2a4feca06b8555ec"}
           - {file: "notebooks/instructor/nb10_attack_the_analysis_instructor.ipynb",
-             sha256: "7502040f0b7ddabe843937f881966ea84fddadf0356d192d3876f00a0bc9d630"}
+             sha256: "f6469d57999419c9ca2cfa6cb3d156e9aed6235e6f72015d2a4feca06b8555ec"}
           - {file: "notebooks/student/nb10_attack_the_analysis_student.ipynb",
-             sha256: "7502040f0b7ddabe843937f881966ea84fddadf0356d192d3876f00a0bc9d630"}
+             sha256: "f6469d57999419c9ca2cfa6cb3d156e9aed6235e6f72015d2a4feca06b8555ec"}
     allow_reversals:
       - "You can conclude the result is not an artifact after one quiet control."
       - "Check that the control reads exactly zero before continuing."
@@ -807,7 +816,7 @@ misconceptions:
       ch32's dead-larvae walkthrough — LOCF invents outcomes for units that no
       longer have them, so the two "rules" answer different questions.
     concept_check:
-      anchor: "ch32 asks which estimand each handling rule actually estimates"
+      anchor: {file: "book/part6-after-conference/32-replication-and-reproduction.qmd", locator: "post-treatment event"}
       question: >-
         Some units died before the final measure. Is carrying the last
         observation forward a neutral default?
@@ -880,7 +889,7 @@ misconceptions:
       ch32's verification move — ask for the run's inputs, outputs, and seed
       instead of asserting the tool cannot run anything.
     concept_check:
-      anchor: "ch32's demand-the-execution-record prompt"
+      anchor: {file: "book/part6-after-conference/32-replication-and-reproduction.qmd", locator: "execution record"}
       question: >-
         A reviewer says "the AI cannot run code, so the results are
         unchecked." What is wrong with that sentence?
@@ -925,7 +934,7 @@ misconceptions:
       impressions server-side (prevention), while the probes that follow are
       diagnostics.
     concept_check:
-      anchor: "nb07's drafting move — name the artifact your design guards against or probes"
+      anchor: {file: "notebooks/student/nb07_experimental_descriptive_student.ipynb", locator: "sensitive diagnostic"}
       question: "Does a redesign detect the artifact it targets?"
       answer: >-
         No — a redesign prevents or removes it; a sensitive diagnostic
@@ -945,12 +954,13 @@ misconceptions:
       # Two one-sided patterns, because artifact context can sit on EITHER
       # side of the verb (round-5 G-B: "For demand effects, the redesigned
       # protocol detects…" slipped past a context-after-only pattern).
-      - pattern: "(redesign(ed)?s?( protocols?)?|(the|our|your|their|this|each|a) designs?)[^.]{0,40}\\b(detects?|able to detect)\\b[^.]{0,45}(artifact|artefact|demand|instrument)"
+      - pattern: "(redesign(ed)?s?( protocols?)?|(the|our|your|their|this|each|a|my|his|her|its) designs?)[^.]{0,40}\\b(detects?|able to detect)\\b[^.]{0,45}(artifact|artefact|demand|instrument)"
         why: "a redesign prevents or removes an artifact; detection is a diagnostic's job"
         catches:
           - "Could each redesign actually detect the artifact it targets?"
           - "The design must be able to detect demand effects."
           - "Our design detects instrument effects before they contaminate the outcome."
+          - "My design detects instrument effects before they contaminate the outcome."
         permits:
           - "Does each redesign prevent or remove the artifact it targets?"
           - "The redesign renders every slot identically and logs impressions server-side."
@@ -958,11 +968,12 @@ misconceptions:
           # statistics, not the artifact confusion this family targets.
           - "Power is how often the design detects a real effect, and it means nothing until you say how you would decide."
           - "Power: how often the design would actually detect the effect, under a stated decision rule."
-      - pattern: "(artifact|artefact|demand|instrument)[^.]{0,60}(redesign(ed)?s?( protocols?)?|(the|our|your|their|this|each|a) designs?)[^.]{0,40}\\b(detects?|able to detect)\\b"
+      - pattern: "(artifact|artefact|demand|instrument)[^.]{0,60}(redesign(ed)?s?( protocols?)?|(the|our|your|their|this|each|a|my|his|her|its) designs?)[^.]{0,40}\\b(detects?|able to detect)\\b"
         why: "same confusion with the artifact named before the design verb"
         catches:
           - "For demand effects, the redesigned protocol detects whether participants change their answers."
           - "Against instrument effects, the design detects the drift as it happens."
+          - "For demand effects, my design detects the shift."
         permits:
           - "For demand effects, the redesign is prevention: render every arm identically."
           - "Power is how often the design detects a real effect, and it means nothing until you say how you would decide."
