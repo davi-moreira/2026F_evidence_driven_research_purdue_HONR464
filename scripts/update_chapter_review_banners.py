@@ -53,12 +53,19 @@ EXTRA_PAGES = [("part1_overview", "part1-research-with-ai/part1-overview.qmd")]
 
 
 def main() -> None:
-    status = yaml.safe_load(REGISTRY.read_text())["chapters"]
+    status = yaml.safe_load(REGISTRY.read_text())["lessons"]
+    # Pages come from the identity manifest, keyed by IMMUTABLE lesson id —
+    # never parsed out of a filename prefix (A10; Phase-2 critique step 2).
+    arch = yaml.safe_load((REPO / "planning" / "BOOK_ARCHITECTURE.yml").read_text())
+    frozen = {e["root"] for e in arch.get("editions", {}).values()
+              if e.get("lifecycle") == "frozen"}
+    lesson_pages = [(l["id"], l["source"]) for l in arch["lessons"]
+                    if l["state"] == "active"]
     added = removed = kept = 0
     for edition, banner in BANNERS.items():
-        pages = [(f"ch{p.stem[:2]}", p) for p in
-                 sorted((REPO / edition).glob("part*/[0-9][0-9]-*.qmd"))]
-        pages += [(key, REPO / edition / rel) for key, rel in EXTRA_PAGES]
+        write_ok = edition not in frozen        # D36: frozen editions verify only
+        pages = [(key, REPO / edition / rel)
+                 for key, rel in lesson_pages + EXTRA_PAGES]
         for key, path in pages:
             if key not in status:
                 sys.exit(f"✗ {path}: no entry {key} in BOOK_REVIEW_STATUS.yml")
@@ -66,9 +73,20 @@ def main() -> None:
             text = path.read_text()
             has = BANNER_RE.search(text) is not None
             if reviewed and has:
+                if not write_ok:
+                    print(f"  ⚠ {edition}/{key}: banner change needed but the "
+                          f"edition is FROZEN (D36) — deferred to the "
+                          f"translation pass")
+                    kept += 1
+                    continue
                 path.write_text(BANNER_RE.sub("", text, count=1))
                 removed += 1
             elif not reviewed and not has:
+                if not write_ok:
+                    print(f"  ⚠ {edition}/{key}: banner missing but the "
+                          f"edition is FROZEN (D36) — deferred")
+                    kept += 1
+                    continue
                 m = FRONT_RE.match(text)
                 if not m:
                     sys.exit(f"✗ {path}: no YAML front matter to anchor banner")

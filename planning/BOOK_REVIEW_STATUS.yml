@@ -1,47 +1,47 @@
-# BOOK_REVIEW_STATUS — per-chapter instructor-review registry (D26).
+# BOOK_REVIEW_STATUS — per-lesson instructor-review registry (D26/D35).
 #
-# Every chapter carries an under-development banner until Davi reviews it.
-# When he reports a chapter reviewed: set reviewed: true and the date, run
-#   .venv/bin/python scripts/update_chapter_review_banners.py
-# and re-render the three books (site first, then book/, book-pt/, book-es/).
-# The script inserts the banner into every UNreviewed chapter in all three
-# editions and removes it from reviewed ones. Idempotent.
-chapters:
+# Keys are IMMUTABLE lesson ids from planning/BOOK_ARCHITECTURE.yml (A10:
+# review state follows the lesson, never its current display number), plus
+# part1_overview for the Part I page. Every unreviewed lesson carries the
+# under-development banner. When Davi reports one reviewed: set reviewed:
+# true + the date, run scripts/update_chapter_review_banners.py, re-render
+# (site first, then book/; PT/ES only when unfrozen, D36).
+lessons:
   part1_overview: {reviewed: false, date: null}
-  ch01: {reviewed: false, date: null}
-  ch02: {reviewed: false, date: null}
-  ch03: {reviewed: false, date: null}
-  ch04: {reviewed: false, date: null}
-  ch05: {reviewed: false, date: null}
-  ch06: {reviewed: false, date: null}
-  ch07: {reviewed: false, date: null}
-  ch08: {reviewed: false, date: null}
-  ch09: {reviewed: false, date: null}
-  ch10: {reviewed: false, date: null}
-  ch11: {reviewed: false, date: null}
-  ch12: {reviewed: false, date: null}
-  ch13: {reviewed: false, date: null}
-  ch14: {reviewed: false, date: null}
-  ch15: {reviewed: false, date: null}
-  ch16: {reviewed: false, date: null}
-  ch17: {reviewed: false, date: null}
-  ch18: {reviewed: false, date: null}
-  ch19: {reviewed: false, date: null}
-  ch20: {reviewed: false, date: null}
-  ch21: {reviewed: false, date: null}
-  ch22: {reviewed: false, date: null}
-  ch23: {reviewed: false, date: null}
-  ch24: {reviewed: false, date: null}
-  ch25: {reviewed: false, date: null}
-  ch26: {reviewed: false, date: null}
-  ch27: {reviewed: false, date: null}
-  ch28: {reviewed: false, date: null}
-  ch29: {reviewed: false, date: null}
-  ch30: {reviewed: false, date: null}
-  ch31: {reviewed: false, date: null}
-  ch32: {reviewed: false, date: null}
-  ch33: {reviewed: false, date: null}
-  ch34: {reviewed: false, date: null}
-  ch35: {reviewed: false, date: null}
-  ch36: {reviewed: false, date: null}
-  ch37: {reviewed: false, date: null}
+  ai-arm-not-brain: {reviewed: false, date: null}
+  research-director: {reviewed: false, date: null}
+  sdiivdd: {reviewed: false, date: null}
+  responsibility-ownership: {reviewed: false, date: null}
+  curiosity-to-problem: {reviewed: false, date: null}
+  question-kinds: {reviewed: false, date: null}
+  research-builds: {reviewed: false, date: null}
+  verifying-prior-evidence: {reviewed: false, date: null}
+  mida: {reviewed: false, date: null}
+  declare-diagnose: {reviewed: false, date: null}
+  observational-descriptive: {reviewed: false, date: null}
+  observational-causal: {reviewed: false, date: null}
+  experimental-descriptive: {reviewed: false, date: null}
+  prediction-generalization: {reviewed: false, date: null}
+  experimental-causal: {reviewed: false, date: null}
+  hybrid-complex-designs: {reviewed: false, date: null}
+  data-provenance: {reviewed: false, date: null}
+  measurement: {reviewed: false, date: null}
+  ai-as-programmer: {reviewed: false, date: null}
+  ai-analytical-assistant: {reviewed: false, date: null}
+  robustness-sensitivity: {reviewed: false, date: null}
+  negative-tests: {reviewed: false, date: null}
+  ai-adversarial-reviewer: {reviewed: false, date: null}
+  false-confidence: {reviewed: false, date: null}
+  results-to-claims: {reviewed: false, date: null}
+  claim-evidence-tables: {reviewed: false, date: null}
+  research-posters: {reviewed: false, date: null}
+  poster-criticism: {reviewed: false, date: null}
+  research-pitches: {reviewed: false, date: null}
+  difficult-questions: {reviewed: false, date: null}
+  ai-disclosure: {reviewed: false, date: null}
+  replication-reproduction: {reviewed: false, date: null}
+  poster-to-note: {reviewed: false, date: null}
+  research-packages: {reviewed: false, date: null}
+  managing-ai-agents: {reviewed: false, date: null}
+  conflicting-agents: {reviewed: false, date: null}
+  final-portfolio: {reviewed: false, date: null}
