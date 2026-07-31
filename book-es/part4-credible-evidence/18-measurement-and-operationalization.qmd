@@ -54,16 +54,46 @@ peldaño tiene nombre.
   1 (muy en desacuerdo) a 7 (muy de acuerdo), promediado sobre todas las personas que
   respondieron.
 
-Dos preguntas deciden si el intercambio se sostiene. La **validez de medición**
-pregunta si tu indicador captura de verdad el constructo que dice capturar. Ejemplo:
-¿una calificación de recomendar a una amistad representa de verdad el compromiso, o se
-le escapan el desgaste (*burnout*) y si la gente siente que su trabajo importa? La
-**confiabilidad de medición** pregunta si medir lo mismo dos veces te da la misma
-lectura. Ejemplo: le vuelves a preguntar a una porción aleatoria de quienes
-respondieron dos semanas después y revisas que sus respuestas caigan más o menos en el
-mismo lugar. Un indicador puede ser confiable y aun así inválido: una báscula marca tu
-peso igual cinco veces seguidas, y sin embargo el peso es un mal indicador del
-constructo "estado físico".
+Dos preguntas deciden si el intercambio se sostiene, y ambas son preguntas sobre una
+afirmación que piensas hacer, no sellos que un instrumento gana de una vez.
+
+La **validez de medición** pregunta si la evidencia acumulada sostiene el sentido
+específico que le das a tu número, para el uso específico que tienes en mente.
+Ejemplo: el promedio de "recomendaría a una amistad" de una sede bien puede sostener
+"quienes respondieron expresaron más disposición a recomendar este lugar de trabajo".
+Ese mismo número no sostiene por sí solo "aquí la gente está más comprometida", porque
+el compromiso incluye el desgaste (*burnout*) y si la gente siente que su trabajo
+importa; un argumento más amplio, con más evidencia, podría algún día llegar más
+lejos. La validez no es un sello que la calificación lleva consigo. Pertenece a una
+afirmación: este número, leído así, usado para esto, con evidencia detrás. Cambia la
+lectura o el uso y necesitas evidencia otra vez.
+
+La **confiabilidad de medición** pregunta si tu número se queda quieto cuando repites
+la medición, y no significa nada hasta que digas *qué* se repite. Repite la ocasión:
+vuelve a preguntar a las mismas personas dos semanas después y mira si las respuestas
+caen más o menos en el mismo lugar. Esa comprobación solo significa algo si lo que
+mides debía quedarse quieto esas dos semanas, y si la primera pregunta no cambió la
+segunda respuesta; para un ánimo que se mueve rápido, una respuesta distinta es
+noticia, no error. Repite a quien califica: dos personas entrenadas puntúan el mismo
+material y comparas. Repite los ítems: en un cuestionario con muchas preguntas sobre
+un constructo, divide esas preguntas en dos mitades comparables, puntúa cada mitad
+para cada persona y mira si las dos concuerdan. Esa última es la **confiabilidad de
+mitades**, la concordancia entre dos mitades de los ítems en las mismas personas. Dos
+advertencias vienen con ella. Las mitades tienen que ser comparables, no solo pares e
+impares por accidente de orden. Y cada mitad mide la mitad de largo que la escala
+real, así que la concordancia cruda entre ellas subestima la confiabilidad de la
+escala completa; quienes trabajan en estadística aplican una corrección estándar de
+longitud para pasar de una a la otra.
+
+Una advertencia te ahorra una tarde perdida común. Divides ítems, nunca personas.
+Comparar el promedio de la mitad de quienes respondieron contra la otra mitad te dice
+cuánto se bambolea un promedio de grupo entre muestras de personas, lo cual es real y
+es otra pregunta. No dice nada sobre si tu instrumento lee de forma consistente.
+
+La confiabilidad alimenta la validez sin resolverla. Un indicador puede ser
+perfectamente confiable y aun así sostener la afirmación equivocada: una báscula marca
+tu peso igual cinco veces seguidas, y el peso sigue siendo un mal sustituto del
+"estado físico".
 
 ## Un ejemplo resuelto
 
@@ -207,13 +237,24 @@ números, y qué no.*
 4. Debajo de cada indicador completa esta oración con tus propias palabras: "este
    número no captura ___". Usa la faceta que más te preocupa, y agrega a quiénes tu
    medición nunca alcanza.
-5. Planea una comprobación de confiabilidad que de verdad puedas correr, y luego
-   córrela: las mismas unidades medidas dos veces, dos personas codificando los mismos
-   ítems, o dos mitades de una muestra comparadas.
-6. Registra el paso en tu AI Research Ledger (registro de investigación con IA) y
+5. Escribe una oración que diga qué significa tu número y otra que diga qué vas a
+   hacer con él. Después nombra la lectura rival más fuerte: ¿qué más podría producir
+   ese mismo número?
+6. Planea una comprobación de confiabilidad que corresponda a una fuente de error que
+   de verdad te preocupe, y luego córrela: las mismas unidades medidas dos veces
+   (ocasiones), dos personas codificando el mismo material (calificadores), o dos
+   mitades de tus *ítems* puntuadas para las mismas personas (mitades). No compares
+   dos mitades de quienes respondieron y lo llames confiabilidad. Si tu indicador es
+   un solo ítem medido una vez, la comprobación de mitades no existe y puede que las
+   otras dos tampoco; "no hay ninguna comprobación de confiabilidad defendible para
+   esta medida y este uso" es un hallazgo honesto. Escríbelo y luego estrecha lo que
+   afirmas o elige otro instrumento.
+7. Registra el paso en tu AI Research Ledger (registro de investigación con IA) y
    verifica al menos una medida con un método nombrado de la [Guía de
    Verificación](../verification-guide.qmd). La lectura de la fuente primaria encaja
    con este capítulo: encuentra el instrumento o el método publicado detrás de tu
-   indicador, ábrelo y confirma que mide lo que estás afirmando antes de citarlo. Una
+   indicador y ábrelo. Lo que hay ahí es evidencia, no un veredicto. La validación
+   publicada se hizo con alguna población, para algún uso; revisa qué tan cerca están
+   de los tuyos, y trata esa distancia como parte de tu límite de afirmación. Una
    IA revisora puede hacer la comprobación contigo; la decisión de aceptar o rechazar
    es tuya.

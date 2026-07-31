@@ -75,15 +75,38 @@ larvaria en 0.5 mm."**
 
 **Repruébalo.** Reinicias y ejecutas todo. El código carga el archivo, separa las
 larvas por tipo de tanque y calcula la diferencia entre los dos promedios de grupo. El
-número que vuelve es **0.43 mm**, no 0.5. El paquete se reproduce, y eso es un éxito
-real. Pero el texto dice 0.5 y el código dice 0.43. Ese redondeo silencioso es tu primer
-hallazgo, y te gana el derecho a empujar más fuerte.
+número que vuelve es **0.43 mm**, no 0.5 (las cifras de este ejemplo están
+construidas). El paquete se reproduce, y eso es un éxito real. Pero el texto dice 0.5 y
+el código dice 0.43, y fíjate en que el redondeo no lo explica: 0.43 se redondea a 0.4.
+Esto es un desajuste entre la afirmación y la salida, tu primer hallazgo, y te gana el
+derecho a empujar más fuerte.
 
-**Cambia una decisión defendible.** El paquete descartó las larvas que murieron antes
-de la medición final y nunca lo dijo. Conserva en cambio la última longitud registrada
-de cada larva muerta, una regla igual de defendible, y la diferencia baja a 0.31 mm.
-Ninguno de los dos números es mentira. El hallazgo es que el titular se mueve según una
-decisión que el póster nunca reveló, así que el reporte honesto es el rango.
+**Encuentra la decisión que nadie declaró.** El paquete descartó las larvas que
+murieron antes de la medición final y nunca lo dijo. La muerte no es una celda vacía
+cualquiera. Es un **evento postratamiento**: algo que ocurre después del tratamiento y
+que el propio tratamiento puede causar. Si el probiótico cambia qué larvas sobreviven,
+las sobrevivientes de los dos tanques no son el mismo tipo de larva, y su diferencia de
+longitud compara poblaciones distintas.
+
+Puede tentarte tapar los huecos arrastrando la última longitud registrada de cada larva
+muerta, lo que produce 0.31 mm. Resístete a llamar a eso una alternativa igual de
+defendible. Supone en silencio que la última medición de una larva muerta sustituye a
+una longitud final que nunca tuvo, lo cual es una afirmación sobre biología, no un
+valor por defecto neutro. Los dos números, 0.43 y 0.31, responden preguntas distintas
+con supuestos distintos, así que la distancia entre ellos no es un rango, y reportarla
+como tal sería un tercer error encima de los dos primeros.
+
+Lo que reportas en su lugar es la supervivencia por tipo de tanque primero, y después
+la longitud final entre las larvas sobrevivientes, etiquetada exactamente así. Di con
+claridad qué hace y qué no hace ese par. Es una descripción honesta de lo que pasó en
+los tanques. No entrega un efecto causal general del probiótico sobre la longitud al
+día 30, y ningún reacomodo de estos números lo hará, porque la longitud al día 30 no
+existe para una larva que murió. Fíjate además en que tasas de supervivencia iguales no
+rescatan la comparación: dos tanques pueden perder la misma fracción y aun así perder
+tipos distintos de larva. Si el estudio necesita un desenlace principal único, el
+arreglo va aguas arriba: predefine antes del análisis un desenlace combinado, como
+sobrevivir y alcanzar cierta longitud, y defiende por qué ese orden responde la
+pregunta biológica.
 
 **Pon a prueba el supuesto oculto.** El paquete reporta su diferencia como si las 240
 larvas fueran independientes, y eso produce un intervalo estrecho muy por encima de
@@ -169,9 +192,15 @@ supuesto de observaciones independientes sobre datos agrupados encoge en silenci
 los intervalos).
 
 ::: {.callout-important title="No delegues"}
-Una herramienta de IA no puede ejecutar el código, así que nunca puede zanjar si el
-número de verdad se reprodujo. Solo tu propio reiniciar y ejecutar todo hace eso.
-También te quedas con tres juicios: **qué debilidad amenaza más la afirmación**, **cómo
+Una herramienta de IA conectada a un entorno de ejecución *sí* puede correr el código,
+y pedírselo es razonable. Lo que no puede es responder por el resultado. Así que exige
+la evidencia de la corrida en lugar del resumen: los comandos, el entorno y las
+versiones de los paquetes, la versión exacta del código y los datos que ejecutó (un
+hash de commit, si el paquete tiene uno), si cada comando terminó limpio o con error,
+la salida cruda, y qué archivos tocó. Un "se reproduce" seguro y sin registro de
+ejecución no te dice nada sobre si corrió el paquete publicado, una copia modificada o
+nada en absoluto. Luego reproduce el titular tú mismo desde un arranque limpio, porque
+el veredicto lleva tu nombre. También te quedas con tres juicios: **qué debilidad amenaza más la afirmación**, **cómo
 ordenas las recomendaciones** y **el veredicto final** sobre lo que el paquete puede y
 no puede sostener. Una herramienta propone sospechosos. Tú decides a cuáles condena la
 evidencia.

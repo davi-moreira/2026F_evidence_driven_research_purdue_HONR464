@@ -74,16 +74,38 @@ aumentou o comprimento do corpo das larvas em 0.5 mm."**
 
 **Reproduza.** Você faz restart-and-run-all. O código carrega o arquivo, separa as
 larvas por tipo de tanque e calcula a diferença entre as duas médias de grupo. O número
-que volta é **0.43 mm**, não 0.5. O pacote se reproduz, e isso é um sucesso real. Mas o
-texto diz 0.5 e o código diz 0.43. Esse arredondamento silencioso é o seu primeiro
-achado, e ele dá a você o direito de apertar mais.
+que volta é **0.43 mm**, não 0.5 (os números deste exemplo são construídos). O pacote
+se reproduz, e isso é um sucesso real. Mas o texto diz 0.5 e o código diz 0.43, e
+repare que arredondamento não explica: 0.43 arredonda para 0.4. Isso é uma divergência
+entre alegação e saída, o seu primeiro achado, e ele dá a você o direito de apertar
+mais.
 
-**Mude uma escolha defensável.** O pacote descartou as larvas que morreram antes da
-medição final e nunca disse isso. Em vez disso, mantenha o último comprimento
-registrado de cada larva morta, uma regra igualmente defensável, e a diferença
-escorrega para 0.31 mm. Nenhum dos dois números é mentira. O achado é que o número
-principal se move com uma escolha que o pôster nunca revelou, então o relato honesto é
-a faixa entre os dois.
+**Encontre a escolha que ninguém declarou.** O pacote descartou as larvas que morreram
+antes da medição final e nunca disse isso. Morte não é uma célula em branco comum. É um
+**evento pós-tratamento**: algo que acontece depois do tratamento e que o próprio
+tratamento pode causar. Se o probiótico muda quais larvas sobrevivem, as sobreviventes
+dos dois tanques não são o mesmo tipo de larva, e a diferença de comprimento entre elas
+compara populações diferentes.
+
+Você pode se sentir tentado a tapar os brancos carregando adiante o último comprimento
+registrado de cada larva morta, o que produz 0.31 mm. Resista a chamar isso de
+alternativa igualmente defensável. Isso supõe em silêncio que a última medição de uma
+larva morta substitui um comprimento final que ela nunca teve, o que é uma alegação
+sobre biologia, não um padrão neutro. Os dois números, 0.43 e 0.31, respondem a
+perguntas diferentes com suposições diferentes, então a distância entre eles não é uma
+faixa, e relatá-la como uma seria um terceiro erro em cima dos dois primeiros.
+
+O que você relata no lugar é a sobrevivência por tipo de tanque primeiro, depois o
+comprimento final entre as larvas sobreviventes, rotulado exatamente assim. Diga com
+clareza o que esse par faz e o que não faz. É uma descrição honesta do que aconteceu
+nos tanques. Ele não entrega um efeito causal geral do probiótico sobre o comprimento
+no dia 30, e nenhum rearranjo desses números vai entregar, porque comprimento no dia 30
+não existe para uma larva que morreu. Repare também que taxas de sobrevivência iguais
+não salvam a comparação: dois tanques podem perder a mesma fração e ainda assim perder
+tipos diferentes de larva. Se o estudo precisa de um desfecho principal único, a
+correção é a montante: defina antes da análise um desfecho combinado, como sobreviver e
+alcançar um dado comprimento, e defenda por que essa ordenação responde à pergunta
+biológica.
 
 **Teste a suposição oculta.** O pacote relata sua diferença como se todas as 240 larvas
 fossem independentes, produzindo um intervalo estreito e bem acima de zero. Elas não
@@ -166,9 +188,15 @@ se ele alcança o zero. Combate o *método plausível mas errado* (supor observa
 independentes em dados agrupados encolhe silenciosamente todos os intervalos).
 
 ::: {.callout-important title="Não delegue"}
-Uma ferramenta de IA não roda o código, então ela nunca consegue resolver se o número
-de fato se reproduziu. Só o seu próprio restart-and-run-all faz isso. Você também
-guarda três julgamentos: **qual fragilidade mais ameaça a alegação**, **como você
+Uma ferramenta de IA conectada a um ambiente de execução *consegue* rodar o código, e
+pedir isso a ela é razoável. O que ela não consegue é responder pelo resultado. Então
+exija a evidência da execução em vez do resumo dela: os comandos, o ambiente e as
+versões dos pacotes, a versão exata do código e dos dados que ela rodou (um hash de
+commit, se o pacote tiver um), se cada comando terminou limpo ou com erro, a saída
+bruta, e quais arquivos ela tocou. Um "reproduz" confiante sem registro de execução não
+diz nada sobre se rodou o pacote publicado, uma cópia modificada, ou nada. Depois
+reproduza a manchete você mesmo a partir de um começo limpo, porque o veredito leva o
+seu nome. Você também guarda três julgamentos: **qual fragilidade mais ameaça a alegação**, **como você
 ordena as recomendações** e **o veredito final** sobre o que o pacote sustenta e o que
 não sustenta. Uma ferramenta propõe suspeitos. Você decide quais deles a evidência
 condena.
