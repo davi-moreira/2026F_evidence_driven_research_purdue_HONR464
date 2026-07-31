@@ -58,19 +58,56 @@ Uma previsão ganha confiança sob um **contrato** de quatro partes, em ordem fi
 **alvo** é a única coluna que você prevê, por exemplo `bloom_next_week`. A **linha de
 base** é a regra honesta mais burra que você precisa superar, em geral "sempre chutar
 a resposta mais comum"; se 85% das semanas não têm floração, essa regra marca 85% de
-graça, então 85% é a régua. A **divisão** separa as linhas em um conjunto de treino,
-com que o modelo aprende, e um **conjunto separado para teste** (*held-out*), linhas
-guardadas durante o treino e usadas só como prova final, digamos um quarto das
-semanas escolhido ao acaso. A **métrica** é como você conta pontos, casada com o
+graça, então 85% é a régua. A **métrica** é como você conta pontos, casada com o
 alvo; a acurácia engana quando florações são raras, então a revocação na classe
 "floração", a fatia das florações reais que o modelo pega, costuma importar mais.
+Escolha a que escolher, pontue a linha de base e cada candidato com a mesma métrica,
+ou a comparação não significa nada.
 
-Uma armadilha está acima de todas as outras. **Vazamento de dados** é uma variável
-que carrega informação que você não teria no momento da previsão, porque o valor dela
-só se define no momento do desfecho ou depois dele. Exemplo: a concentração de
+A **divisão** é onde a maioria das previsões de aparência honesta se perde, então ela
+ganha três partes em vez de duas. O **conjunto de treino** são os dados com que cada
+modelo candidato aprende. Exemplo: o modelo acerta os coeficientes dele no seu
+primeiro verão. O **conjunto de seleção** são dados separados que você usa para
+escolher entre candidatos. Exemplo: você compara três listas de variáveis e escolhe
+uma no segundo verão. O **holdout final** são os dados que você tranca e abre uma vez
+só, depois que toda escolha está feita. Exemplo: só o modelo que você já escolheu
+chega a tocar o terceiro verão.
+
+Rode nessa ordem. Ajuste no treino, escolha na seleção, depois pontue a sua única
+escolha no holdout final. A razão do passo do meio é fácil de perder. Quando você
+tenta doze modelos e fica com a melhor nota que viu, essa nota vencedora está
+lisonjeada pela sorte, em média: algum modelo sempre ia parecer o melhor naqueles
+dados específicos, em parte porque os erros dele calharam de cair de um jeito
+gentil ali. Em qualquer divisão isolada a lisonja pode ser grande, pequena ou até
+invertida; ao longo de muitas divisões ela aponta para cima. O **viés de seleção de
+modelo** é essa lisonja, a distância entre a nota de um vencedor nos dados que o
+coroaram e a nota honesta dele em dados que ele nunca encontrou. Relate a nota da
+coroação como final e você vai prometer um desempenho que o modelo não entrega.
+
+Uma consequência vale ser dita com todas as letras. Se o holdout final fizer você
+voltar e mudar uma variável, um limiar ou um modelo, ele entrou no desenvolvimento e
+deixou de ser prova. Você então precisa de dados novos e intocados para a próxima
+checagem final. No fluxo simples que este livro ensina, ver a nota final lacra a
+análise; qualquer mudança depois disso quebra o lacre. Especialistas têm técnicas
+para reuso cuidadoso, e elas ficam fora deste capítulo, então segure a regra simples
+até ter uma razão defendida para não segurar.
+
+Uma armadilha está acima de todas as outras. **Vazamento de dados** é informação que
+chega ao seu modelo, ou à sua escolha de modelo, que não estaria disponível no
+momento real da previsão. Exemplo: a concentração de
 toxinas medida *durante* a floração. Uma variável vazada infla a sua pontuação nos
 dados de hoje e desaba nos de amanhã, porque ela não vai existir quando você
-realmente precisar da previsão.
+realmente precisar da previsão. Escolher o seu modelo no holdout final é a mesma
+falha com outra roupa, já que aquela nota devia representar dados que você nunca viu.
+
+O tempo carrega a própria versão dessa armadilha. Quando o seu alvo é a semana que
+vem, as suas semanas de prova deveriam vir depois das semanas com que você aprendeu.
+Dividir as semanas ao acaso entrega agosto ao modelo e pede que ele preveja julho, o
+que responde o quanto ele preenche semanas passadas espalhadas, e não o quanto ele
+prevê a próxima. Mantenha os blocos em ordem de calendário, e deixe o bloco mais
+recente ser o que você tranca. Esse é o padrão que imita como a previsão vai
+realmente ser usada; especialistas o relaxam em casos estreitos e argumentados, e
+nenhum deles começa embaralhando o calendário.
 
 ## Um exemplo trabalhado
 
@@ -81,15 +118,20 @@ limpas, então a sua **linha de base**, "sempre dizer que não há floração", 
 sem modelo nenhum.
 
 Você mantém variáveis genuinamente conhecidas com uma semana de antecedência:
-temperatura da água, chuva recente, carga de fósforo rio acima. Você ajusta um modelo
-logístico (um classificador padrão de sim ou não), **divide** e separa um quarto das
-semanas para teste, e pontua os dois só nessas semanas separadas. O modelo fica em
-torno de 0,88. Essa vantagem de quatro pontos parece pequena, e a pequenez dela é o
-resultado honesto: uma vitória verdadeira e modesta vale mais que uma vitória falsa e
-dramática.
+temperatura da água, chuva recente, carga de fósforo rio acima. Os três verões dão a
+você os seus três papéis sem embaralhar nada. O verão um treina os seus modelos
+candidatos. O verão dois escolhe entre eles. O verão três fica trancado até a escolha
+estar feita. Você ajusta um modelo logístico (um classificador padrão de sim ou não)
+e compara algumas listas de variáveis no verão dois. Depois abre o verão três uma vez
+só, para o vencedor sozinho. Pontuado na mesma métrica da linha de base, a acurácia,
+o modelo fica em torno de 0,88 contra os 0,85 da linha de base (estas notas são
+construídas para o exemplo). Essa vantagem de três pontos parece pequena, e a pequenez
+dela é o resultado honesto: uma vitória verdadeira e modesta vale mais que uma vitória
+falsa e dramática. Você ainda relata a revocação ao lado, já que a acurácia sozinha
+esconde as florações perdidas.
 
 Aí uma colaboradora bem-intencionada acrescenta `chlorophyll_a`, a leitura do
-pigmento. A acurácia no conjunto separado salta para 0,97. Empolgante, até você
+pigmento. A pontuação salta para 0,97. Empolgante, até você
 perguntar *quando* a clorofila é medida: durante a própria floração que você está
 prevendo. É o desfecho usando outro crachá. Tire a variável e a pontuação volta para
 0,88. Quem decide é o teste de temporalidade, não a acurácia. E, como você treinou em
@@ -98,71 +140,101 @@ padrão pode não valer, então a previsão ainda não generaliza para lá.
 
 ## Uma simulação com semente
 
-O capítulo afirma que um modelo pode ficar *melhor* nos dados que ele tem
-enquanto fica *pior* nos casos que nunca viu. Veja isso acontecer. A semente
-torna a execução reprodutível: o mesmo código sempre sorteia o mesmo mundo. O
-código constrói um mundo (uma curva seno mais ruído), sorteia dele um
-conjunto de treino e um conjunto de teste, ajusta ao treino polinômios de
-flexibilidade crescente, e avalia cada ajuste nos dois conjuntos.
+O capítulo alega duas coisas ao mesmo tempo, e o código abaixo mostra as duas. Um
+modelo pode ficar melhor nos dados que já viu enquanto piora nos casos que nunca viu.
+E a nota que coroou o seu vencedor o lisonjeia, em média. A semente torna a rodada
+reproduzível: o mesmo código sempre sorteia os mesmos mundos.
+
+A primeira metade constrói um mundo (uma curva senoidal mais ruído) e roda o
+protocolo que você acabou de aprender: doze polinômios ajustados no treino,
+comparados na seleção, e o vencedor sozinho pontuado uma vez em um holdout final. A
+segunda metade mede o viés de seleção de modelo do jeito que a definição exige, como
+uma média ao longo de repetições. Em cada um de 500 mundos novos ela pergunta: como o
+erro verdadeiro do vencedor se compara com a nota de seleção que o coroou? Ninguém
+mede o erro verdadeiro de um modelo com exatidão, então o código o representa com dez
+mil pontos novos, uma aproximação de alta precisão nesta simulação e muito mais do que
+qualquer estudo real teria. Cada metade reinicia a semente, então você pode rodar
+qualquer uma sozinha e obter estes mesmos números.
 
 ```python
 import numpy as np
-import matplotlib.pyplot as plt
 
 SEED = 464
-rng = np.random.default_rng(SEED)
+graus = np.arange(1, 13)
 
-def mundo(n):
+def mundo(rng, n):
     x = rng.uniform(-3, 3, n)
     return x, np.sin(1.5 * x) + rng.normal(0, .35, n)
 
-x_treino, y_treino = mundo(40)
-x_teste, y_teste = mundo(40)
+def rmse(coefs, dados):
+    x, y = dados
+    return np.sqrt(np.mean((np.polyval(coefs, x) - y) ** 2))
 
-graus = np.arange(1, 13)
-erro_treino, erro_teste = [], []
-for g in graus:
-    coefs = np.polyfit(x_treino, y_treino, g)
-    erro_treino.append(np.sqrt(np.mean(
-        (np.polyval(coefs, x_treino) - y_treino) ** 2)))
-    erro_teste.append(np.sqrt(np.mean(
-        (np.polyval(coefs, x_teste) - y_teste) ** 2)))
-melhor = graus[int(np.argmin(erro_teste))]
+# Primeira metade: um mundo, os três papéis.
+rng = np.random.default_rng(SEED)
+treino, selecao, final = (mundo(rng, 40) for _ in range(3))
+ajustes = [np.polyfit(treino[0], treino[1], g) for g in graus]
+err_sel = np.array([rmse(c, selecao) for c in ajustes])
+escolhido = int(np.argmin(err_sel))       # escolhido na SELEÇÃO, nunca no final
+print("grau escolhido:", graus[escolhido])
+print("nota de seleção que o escolheu:", round(float(err_sel[escolhido]), 3))
+print("a sua única nota no holdout final:", round(rmse(ajustes[escolhido], final), 3))
 
-fig, ax = plt.subplots(figsize=(7.6, 3.4))
-ax.plot(graus, erro_treino, color="#2a78d6", lw=2, marker="o", ms=4)
-ax.plot(graus, erro_teste, color="#eb6834", lw=2, marker="o", ms=4)
-ax.axvline(melhor, color="#333333", ls=":", lw=1)
-ax.text(graus[-1], erro_treino[-1], "  Erro de treino", color="#2a78d6",
-        fontsize=9, va="center")
-ax.text(graus[-1], erro_teste[-1], "  Erro no conjunto de teste",
-        color="#eb6834", fontsize=9, va="center")
-ax.text(melhor + .1, max(erro_teste) * .95, "melhor honesto",
-        color="#333333", fontsize=9)
-ax.set_xlabel("Flexibilidade do modelo (grau do polinômio)")
-ax.set_ylabel("Erro de predição (RMSE)")
-ax.set_xlim(graus[0], graus[-1] + 3.4)
-plt.show()
+# Segunda metade: otimismo em expectativa. Reinicie a semente para que este
+# estudo se reproduza sozinho.
+rng = np.random.default_rng(SEED)
+diferencas = []
+for _ in range(500):
+    tr, sel, grande = mundo(rng, 40), mundo(rng, 40), mundo(rng, 10_000)
+    f = [np.polyfit(tr[0], tr[1], g) for g in graus]
+    se = np.array([rmse(c, sel) for c in f])
+    pick = int(np.argmin(se))
+    diferencas.append(rmse(f[pick], grande) - se[pick])   # verdadeiro menos a coroa
+diferencas = np.asarray(diferencas)
+
+print("otimismo médio:", round(float(diferencas.mean()), 3), "RMSE")
+print("mediana:", round(float(np.median(diferencas)), 3))
+print("vencedor de fato pior que a nota da coroação em",
+      round(100 * float((diferencas > 0).mean()), 1), "% dos mundos")
+print("maior diferença isolada:", round(float(diferencas.max()), 2))
 ```
 
-![O erro de treino só cai conforme a flexibilidade cresce; o erro de teste
-atinge o mínimo no grau seis e depois
-sobe.](../images/sims/ch14_overfitting.png){fig-alt="Gráfico de linhas. Uma
-linha azul de erro de treino cai continuamente conforme o grau do polinômio
-sobe de 1 a 12. Uma linha laranja de erro de teste cai junto até o grau seis,
-marcado por uma linha vertical pontilhada rotulada melhor honesto, e depois
-sobe."}
+![À esquerda: o erro de treino cai sem parar enquanto o erro de seleção sobe depois
+do grau seis, onde o modelo é escolhido; um losango marca a sua única nota de holdout
+final. À direita: ao longo de 500 mundos, o erro verdadeiro do vencedor excede a nota
+que o coroou, em média, com uma cauda longa à
+direita.](../images/sims/ch14_overfitting.png){fig-alt="Gráfico de dois painéis. À
+esquerda: uma linha azul de erro de treino caindo de forma constante pelos graus
+polinomiais 1 a 12, uma linha laranja de erro de seleção caindo até o grau seis e
+depois subindo, uma linha vertical pontilhada no grau seis rotulada escolhido na
+seleção, e um losango preto rotulado holdout final acima da curva de seleção. À
+direita: um histograma do erro verdadeiro do vencedor menos a sua nota de seleção
+vencedora ao longo de 500 mundos simulados, centrado logo à direita de zero, anotado
+otimismo médio mais 0,025 RMSE, mediana mais 0,015, pior que a nota da coroação em 64
+por cento dos mundos, com uma seta indicando 4 mundos além de mais 0,3 e o maior em
+mais 1,86."}
 
-O erro de treino azul só cai: cada grau extra de flexibilidade deixa o modelo
-se curvar mais para perto dos pontos que ele já viu. O erro de teste laranja
-cai enquanto o modelo aprende sinal, atinge o mínimo perto do grau seis, e
-sobe quando o modelo começa a memorizar ruído. A linha pontilhada é o melhor
-honesto: a flexibilidade que uma checagem em dados separados escolheria. Nada
-na linha azul sozinha diria para você parar ali; só dados que o ajuste nunca
-tocou podem dizer isso, e esse é o argumento inteiro da checagem em dados
-separados que esta trilha exige. No notebook companheiro, aumente o ruído (o
-`.35`) e veja o melhor honesto se mover para a esquerda: quanto mais ruidoso
-o mundo, menos flexibilidade a verdade sustenta.
+Leia o painel da esquerda primeiro. O erro de treino azul só cai: cada grau extra de
+flexibilidade deixa o modelo se dobrar para mais perto de pontos que ele já viu. O
+erro de seleção laranja cai enquanto o modelo está aprendendo sinal, chega ao fundo
+perto do grau seis e sobe quando o modelo começa a decorar ruído. Nada na linha azul
+sozinha diria a você para parar no seis. Só dados que o ajuste nunca tocou dizem isso.
+
+Agora o painel da direita, e leia-o como uma média, porque é isso que o viés é. Ao
+longo de 500 mundos o erro verdadeiro do vencedor excede a nota que o coroou em 0,025
+RMSE em média (mediana 0,015), e o vencedor sai pior que a nota da coroação em 64 por
+cento dos mundos. No outro terço a sorte correu para o outro lado, e é por isso que
+nenhuma divisão isolada mostra o viés a você: ele é uma inclinação na pilha, não uma
+propriedade de cada rodada.
+
+Depois olhe a seta. Em 4 dos 500 mundos a diferença passou de mais 0,3, chegando a
+mais 1,86, porque um ajuste absurdamente flexível calhou de vencer a seleção e depois
+disparou para fora dos seus dados. Esses mundos não são ruído para aparar. São o risco
+real do procedimento se mostrando, e qualquer média que você relate tem de assumi-los.
+O resumo honesto nomeia as três coisas: a inclinação (a média), o caso típico (a
+mediana) e a cauda (quão ruim, com que frequência). No notebook companheiro, aumente o
+ruído (o `.35`) e veja as três crescerem: quanto mais ruidoso o mundo, mais o vencedor
+deve à sorte.
 
 ## O laboratório em Colab
 

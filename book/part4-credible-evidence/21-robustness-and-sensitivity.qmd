@@ -147,25 +147,33 @@ says what your choices did. The uncertainty statement, built with tools a later
 chapter adds, says what chance could do. Collapsing them into "the honest range is
 eight to fifteen" quietly claims a precision nobody computed.
 
-Then you run one more attack, a **placebo test**: you point the same analysis at a
-place where the answer has to be zero, and see what it returns. In this trial the
-natural version is to re-run the assignment itself. Keep every enrolled shopper,
-re-draw who is "offered" using the exact procedure the real study used, with the
-same group sizes and the same blocking, and recompute the gap. Do that many times.
-One redraw proves nothing, because two randomly formed groups always differ a little
-by chance, so what you build is a pile of fake gaps: what your machinery produces
-when the offer does nothing at all.
+Then you run one more attack, and its name matters, because three different checks
+get muddled together in practice.
 
-Two cautions before you lean on it. Your redraws have to copy the original
-assignment procedure, not just shuffle labels however you like; shuffling freely
-when the real study assigned in blocks answers a different question. And this move
-belongs to randomized studies. In observational data there is no assignment
-procedure to copy, so a shuffle does not describe any world you actually had, and
-you need a genuinely null comparison instead: an outcome your cause cannot touch, or
-a period before it existed. Comparing your real gap with that pile is the beginning
-of a formal argument the uncertainty chapter finishes; here it is a smell test, and a
-real gap the no-effect pile produces routinely is a warning that your machinery, not
-the discount, may be doing the work.
+An **assignment-based null check**, which statisticians call randomization
+inference, re-runs the assignment your study actually performed. Keep every enrolled
+shopper and their observed outcomes, re-draw who is "offered" using the exact
+procedure the real study used, with the same group sizes and the same blocking, and
+recompute the gap. Do that many times. One redraw proves nothing, because two
+randomly formed groups always differ a little by chance, so what you build is a pile
+of fake gaps: what your machinery produces when the offer does nothing at all. This
+move needs a real assignment procedure to copy, so it belongs to randomized studies.
+
+A **permutation check** shuffles labels that were not randomly assigned. It answers
+something only if you can argue that the groups were exchangeable to begin with, and
+in most observational data you cannot. Shuffling anyway builds a pile describing a
+world you never had.
+
+A **negative control**, sometimes called a placebo, is different from both: it points
+your analysis at an exposure, outcome, or period that should be causally null while
+still running through the same measurement and bias pathways. Example: check for an
+"effect" of the offer in the weeks before it launched. That is what catches a
+pipeline inventing signal, and it works whether or not anything was randomized.
+
+For this randomized trial, use the first. Comparing your real gap with that pile is
+the beginning of a formal argument the uncertainty chapter finishes; here it is a
+smell test, and a real gap the no-effect pile produces routinely is a warning that
+your machinery, not the discount, may be doing the work.
 
 ## The Colab laboratory
 
@@ -178,7 +186,7 @@ Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driv
 part of the companion course presented in the [For instructors](../for-instructors.qmd)
 appendix. There you rerun one headline gap across a pre-listed grid and read its
 specification curve, watch specification searching manufacture a "significant" result
-from data with no real effect, and run a placebo test and a leave-one-out influence
+from data with no real effect, and run a null check and a leave-one-out influence
 check on seeded code so you feel the difference between a robust finding and a fragile
 one.
 
@@ -217,13 +225,16 @@ commensurable within its panel, nothing conditioned on a post-treatment outcome)
 and add only the ones you can actually run on your own data. Counters *illusion of completeness* (a
 tidy grid that quietly omits the one choice that would break the claim).
 
-**Red-team your range.**
+**Red-team your span.**
 
 ```text
-Here is my claim: "higher spending in every specification we ran, by roughly 8 to 15
+Here is my claim: "higher spending in every version we pre-listed; within my primary
+panel, which holds population, outcome and units fixed, the estimates spanned 8 to 12
 percent." Act as a hostile reviewer of a retail pricing study. Name the single worst
 way this could be specification searching rather than robustness, and the one check
-that would expose it. Do not rewrite the claim for me.
+that would expose it. Also check whether my span mixes versions that changed the
+population, the outcome definition, or the scale; those belong in separate labeled
+panels with their own spans. Do not rewrite the claim for me.
 ```
 After running, verify: run the check it names against your own data; the flaw is real
 only if your numbers confirm it. Counters *sycophantic agreement* (praise that
@@ -232,7 +243,7 @@ reviews your ego, not your evidence).
 ::: {.callout-important title="Do not delegate"}
 Three calls stay yours. You decide **which checks you commit to before you look**,
 **which flagged issues the data actually confirms**, and **the final claim, with its
-range and its boundary, that you defend**. A reviewer, human or AI, proposes. You
+per-panel span and its boundary, that you defend**. A reviewer, human or AI, proposes. You
 verify against your own data, and the evidence decides.
 :::
 
@@ -271,23 +282,26 @@ chance.*
    their own labeled panel; and any version that keeps only units whose status your
    treatment could have changed comes off the curve entirely and is reported
    separately for what it is.
-4. Run every check on your list. Report two things, not one: the direction and span
-   across versions ("positive in all four, between eight and fifteen percent"), and
-   your lead estimate with its own uncertainty stated beside it, built with the
-   tools the uncertainty chapter gives you. The span measures your choices, not
-   chance, and neither alone is an honest report.
+4. Run every check on your list. Report two things, not one. First, the direction and
+   a span computed **within each commensurable panel**, never across them ("in the
+   primary panel, positive in all four versions, between eight and twelve percent"),
+   with any panel that changed the population, the outcome definition, or the scale
+   given its own labeled span. Second, your lead estimate with its own uncertainty
+   stated beside it, built with the tools the uncertainty chapter gives you. The span
+   measures your choices, not chance, and neither alone is an honest report.
 5. Ask what every version on your list has in common. If one flaw sits underneath all of
    them, such as a comparison group chosen badly, the whole curve leans together and
    agreement proves nothing. Name that shared threat in a sentence, since your curve
    cannot test it.
-6. Add one placebo. If your study randomized, re-draw the assignment the way the
-   study actually did it, many times, and collect the fake gaps; that pile is what
-   nothing-going-on looks like through your machinery, and it is not a pile of
-   zeros. If your data are observational, do not shuffle: find a genuinely null
-   comparison instead, such as an outcome your cause could not touch or a period
-   before it existed. Either way, ask whether your real number is ordinary in that
-   pile or stands far outside it, and treat one the pile produces routinely as a
-   warning about your machinery.
+6. Add one null check, and name it correctly. If your study randomized, run an
+   assignment-based null check: re-draw the assignment the way the study actually did
+   it, many times, and collect the fake gaps; that pile is what nothing-going-on looks
+   like through your machinery, and it is not a pile of zeros. If your data are
+   observational, do not shuffle — you have no assignment procedure to copy. Use a
+   negative control instead: an outcome your cause could not touch, or a period before
+   it existed. Either way, ask whether your real number is ordinary in that pile or
+   stands far outside it, and treat one the pile produces routinely as a warning about
+   your machinery.
 7. Read back your AI cycle log and mark any re-prompt that followed a disappointing
    number. Every version you actually ran belongs in the report, including the ones that
    did not help you.

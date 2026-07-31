@@ -265,11 +265,11 @@ You ask an AI to design a negative control for your ethanol-based assay. It answ
 with complete confidence, "use a disk soaked in sterile water." You run it, the water
 disk comes back perfectly clean, and the tidy conclusion writes itself: control passed,
 effect confirmed. Here is the trap. Water is not the vehicle you used. You delivered
-the extract in ethanol, so the artifact you needed to rule out is ethanol toxicity, and
-a water disk can never show it. The clean result ruled out nothing at all.
+the extract in ethanol, so the artifact you needed to catch is ethanol toxicity, and
+a water disk can never show it. The clean result told you nothing at all.
 
-You catch it with one question the tool never asked itself: *what artifact does this
-control actually rule out?* A valid vehicle control matches how you delivered the
+You catch it with one question the tool never asked itself: which artifact could this
+control actually have detected? A valid vehicle control matches how you delivered the
 cause, solvent for solvent. The moment you see the mismatch you swap water for 70%
 ethanol and run the test that can genuinely fail. This is a *plausible-but-wrong-method*:
 the advice sounded like textbook practice and was wrong for your case.
@@ -296,8 +296,9 @@ produced your result or your own pipeline did.*
 4. Run one diagnostic beside it. Leave-one-out is the cheapest: drop each case in turn,
    recompute, and find out whether a single observation is carrying your finding.
 5. Record what you got against what you predicted, and if the estimate moved, say by how
-   much. Then write your boundary in one line: the artifact this pass rules out, and the
-   causal or general claim it still does not establish.
+   much. Then write your boundary in one line: the artifact this pass makes less
+   likely, how far its sensitivity reached, and the causal or general claim it still
+   does not establish.
 6. Log both tests in your AI Research Ledger, and verify at least one output with a named
    method from the [Verification Guide](../verification-guide.qmd). **Simulation** is the
    one useful tool for a negative test: build a dataset by hand where no effect exists,
@@ -308,3 +309,9 @@ produced your result or your own pipeline did.*
    change your conclusion, since responding to a strong signal does not prove the
    assay would notice a weak one. An AI reviewer may run the check with you; the
    decision to accept or reject stays yours.
+
+
+Their difference is a complete-case contrast, a comparison of whoever happened to be measured in each arm.
+
+
+It is also not automatically an effect for any shared group of stayers.

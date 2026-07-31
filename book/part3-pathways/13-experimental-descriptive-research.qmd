@@ -13,7 +13,7 @@ advances.
 > **The research decision.** A coin flip does not decide what kind of question you
 > asked. You decide whether your randomized study is **measuring** a property the
 > world already has or **testing** an intervention you would deploy, and you name
-> the artifacts your measurement still has to rule out before the number means
+> the artifacts your measurement still has to guard against before the number means
 > anything.
 
 ## Why this decision matters
@@ -75,7 +75,7 @@ of slot on clicks, but the team's question was descriptive, and the honest repor
 says so: "for these sessions, slot 1 drew about three times the plays of slot 5, at
 equal quality." The forbidden sentence is "promoting tracks to slot 1 will triple
 their plays," because that is a causal, deployable claim the design never tested.
-And before trusting even the descriptive number, the team rules out two artifacts:
+And before trusting even the descriptive number, the team checks two artifacts:
 a demand effect if the probe looks like an ad, and an instrument effect if slot 1's
 larger art or a slot-keyed logger inflates the count. The redesign renders every
 slot identically and logs impressions server-side.

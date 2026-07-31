@@ -28,17 +28,31 @@
 #   surfaces     glob list; defaults to all book editions + canonical sources
 
 defaults:
+  # Every entry is {glob, required}. `required: true` means a glob matching ZERO
+  # files FAILS the build: a gate that silently skips a surface class reports
+  # "clean" about material it never opened (round-3 finding R3-7).
+  #
+  # NOTE on canonical sources: `_production_kit/nb_sources/*.py` is GITIGNORED,
+  # so it does not exist in a fresh CI checkout. It is scanned when present
+  # (required: false) — and the tracked, generated notebooks below carry the
+  # same prose, so CI still reads the content even when the sources are absent.
   surfaces:
-    - "book/**/*.qmd"
-    - "book-pt/**/*.qmd"
-    - "book-es/**/*.qmd"
-    - "_production_kit/nb_sources/*.py"
-    - "course_config.yaml"
-    - "planning/INQUIRY_MAP.md"
-    - "scripts/build_session_guides.py"
+    - {glob: "book/**/*.qmd", required: true}
+    - {glob: "book-pt/**/*.qmd", required: true}
+    - {glob: "book-es/**/*.qmd", required: true}
+    - {glob: "notebooks/student/*.ipynb", required: true}
+    - {glob: "notebooks/book/*.ipynb", required: true}
+    - {glob: "notebooks/book/pt/*.ipynb", required: true}
+    - {glob: "notebooks/book/es/*.ipynb", required: true}
+    - {glob: "book/_iyt-rubrics.qmd", required: true}
+    - {glob: "book-pt/_iyt-rubrics.qmd", required: true}
+    - {glob: "book-es/_iyt-rubrics.qmd", required: true}
+    - {glob: "course_config.yaml", required: true}
+    - {glob: "planning/INQUIRY_MAP.md", required: true}
+    - {glob: "scripts/build_session_guides.py", required: true}
+    - {glob: "_production_kit/nb_sources/*.py", required: false}
   exclude:
     - "**/.quarto/**"
-    - "book*/_iyt-rubrics.qmd"     # generated; regenerated from sources
 
 misconceptions:
 
@@ -62,7 +76,15 @@ misconceptions:
       Bias defined as average distance rather than signed mean error.
     rejects:
       - "average distance between your estimate"
-      - "the average distance between"
+    reject_patterns:
+      - pattern: "(bias|viés|sesgo)[^.]{0,40}\\b(is|é|es)\\b[^.]{0,30}((average|média|promedio)[^.]{0,15}(distance|distância|distancia)|(distance|distância|distancia)[^.]{0,15}(average|média|promedio))"
+        why: "bias defined as average distance (that is mean absolute error, unsigned)"
+        catches:
+          - "Bias is the average distance between your estimate and the truth."
+          - "O viés é a distância média entre a sua estimativa e a verdade."
+        permits:
+          - "The average distance between campus and the lab is two kilometres."
+          - "Bias is the average of your errors across the runs, counting direction."
     requires:
       - "counting direction"
 
@@ -96,8 +118,17 @@ misconceptions:
           - "It is tempting to hand the 9-point gap to the patients who stayed. Be careful with that sentence."
     requires:
       - "complete-case contrast"
+    reject_patterns:
+      - pattern: "not the effect among stayers[^.]{0,20}(except|unless|but whenever|save when)"
+        why: "the correction stated and then immediately taken back"
+        catches:
+          - "It is not the effect among stayers—except whenever retention differs."
+          - "It is not the effect among stayers unless retention is equal."
+        permits:
+          - "It is not the effect among stayers, because each arm produced its own."
     allow:
-      - "not the effect among stayers"
+      - "not the effect among stayers,"
+      - "not the effect among stayers either"
       - "not automatically an effect"
 
   - id: adjustment-set
@@ -179,6 +210,23 @@ misconceptions:
           - "A clean control rules out the artifact."
         permits:
           - "A passed negative test reduces your concern about one specific artifact, as far as that check could have detected it."
+      - pattern: "(rules? out[^.]{0,30}\\b(artifact|artefact|worry|one specific)|\\b(artifact|artefact|worry)[^.]{0,40}rules? out)"
+        why: "any phrasing that has a check RULE OUT an artifact rather than bound concern"
+        catches:
+          - "Then write the artifact this pass rules out."
+          - "This rules out one specific worry."
+          - "That rules out the artifact."
+          - "The placebo rules out a procedural artifact."
+        permits:
+          - "Random assignment rules out confounding by any pre-treatment trait."
+          - 'Watch out for "it rules out artifacts" and for expecting an exact zero.'
+      - pattern: "(is|was|are|were) not an artifact"
+        why: "a clean check reframed as proof the result is genuine"
+        catches:
+          - "The result is not an artifact of procedure."
+          - "This shows the gap is not an artifact."
+        permits:
+          - "You cannot conclude the result is not an artifact from a single quiet control."
       - pattern: "(confirm|check|verify|ensure)[^.]{0,50}(returns?|comes? back|reads?|says?|sits? at)[^.]{0,25}(exactly|precisely) zero"
         why: "demanding an exact zero from a continuous estimator"
         catches:
@@ -189,7 +237,9 @@ misconceptions:
     requires:
       - "reduces your concern"
     allow:
+      - "cannot conclude the result is not an artifact"
       - "Reject any answer that asks for a reading of exactly zero"
+      - 'watch out for "it rules out artifacts"'
       - "expecting an exact zero"
 
   - id: locf-truncation
@@ -208,10 +258,16 @@ misconceptions:
     defect: >-
       "An AI tool cannot run the code" — capability depends on the environment;
       what is missing from a bare claim is the execution record.
-    rejects:
-      - "cannot run the code"
-      - "It cannot run code"
-      - "The tool cannot run code"
+    reject_patterns:
+      - pattern: "(an? ai|the tool|the model|neither|it|a chatbot)\\b[^.]{0,25}((cannot|can't|could not|can never)|(?<=neither )can) (run|execute)[^.]{0,15}(the )?code"
+        why: "a blanket capability denial; an agent with an execution environment can run code"
+        catches:
+          - "Neither can run the code."
+          - "An AI cannot run the code."
+          - "The tool cannot run code."
+        permits:
+          - "In this disconnected environment, the configured reviewer role cannot run the code, so ask for the record instead."
+          - "This reviewer role does not execute anything."
     requires:
       - "execution record"
 
@@ -230,4 +286,8 @@ numbers:
   - id: ch22-null
     file: book/part4-credible-evidence/22-diagnostics-and-negative-tests.qmd
     claims:
-      - {text: "Sixty-two of them round to 0.00", source: "fig_ch22.rounded_zeros", tolerance: 0}
+      # `value:` is explicit because the prose spells the number out.
+      - {text: "Sixty-two of them round to 0.00", value: 62, source: "fig_ch22.rounded_zeros", tolerance: 0}
+      - {text: "not one reading came back exactly zero", value: 0, source: "fig_ch22.exact_zeros", tolerance: 0}
+      - {text: "-0.29 to +0.27 mm", value: -0.29, source: "fig_ch22.lo", tolerance: 0.005}
+      - {text: "roughly -0.48 and +0.47", value: -0.48, source: "fig_ch22.obs_min", tolerance: 0.005}

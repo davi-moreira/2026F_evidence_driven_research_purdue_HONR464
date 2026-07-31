@@ -380,7 +380,9 @@ def fig_ch22(s: dict, out: Path) -> dict:
     fig.savefig(out / "ch22_null_spread.png", dpi=150)
     plt.close(fig)
     return {"mean": nulls.mean(), "sd": nulls.std(), "lo": lo, "hi": hi,
-            "first": observed, "exact_zeros": int((nulls == 0).sum())}
+            "first": observed, "exact_zeros": int((nulls == 0).sum()),
+            "rounded_zeros": int((nulls.round(2) == 0).sum()),
+            "obs_min": float(nulls.min()), "obs_max": float(nulls.max())}
 
 
 def main() -> None:

@@ -295,7 +295,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 3 | Before you run anything, run your list through the gate | |
 | Step 4 | Run every check on your list | |
 | Step 5 | Ask what every version on your list has in common | |
-| Step 6 | Add one placebo | |
+| Step 6 | Add one null check, and name it correctly | |
 | Step 7 | Read back your AI cycle log and mark any re-prompt that followed a disappointing number | |
 | Step 8 | Log the pre-listed plan and its full results in your AI Research Ledger, and verify at least one output with a named method from the Verification… | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
