@@ -400,14 +400,26 @@ def check_freshness() -> list[str]:
     if not src_dir.is_dir():
         return ["local: _production_kit/nb_sources/ missing — canonical sources "
                 "cannot be certified from this checkout"]
+    # The ACTIVE stems come from the canonical registry, not from which files
+    # happen to exist (round-7 P2: inferring retirement from student-file
+    # absence let a deleted artifact escape unreported).
+    active_stems: set[str] | None = None
+    try:
+        sys.path.insert(0, str(REPO / "scripts"))
+        import notebooks_map as _nm
+        active_stems = {v[0] for v in _nm.NOTEBOOKS.values()} | \
+                       {v[0] for v in _nm.MS_NOTEBOOKS.values()}
+    except Exception:
+        pass                                    # registry unavailable: fall back
+
     for src in sorted(src_dir.glob("*.py")):
         student = _ROOT / "notebooks" / "student" / f"{src.stem}_student.ipynb"
-        if not student.exists():
-            # v1-era or retired sources carry no tracked counterpart
-            continue
-        # BOTH generated artifacts are gated (round-6 F4): a stale instructor
-        # notebook is exactly the surface public CI never sees
         instructor = _ROOT / "notebooks" / "instructor" / f"{src.stem}_instructor.ipynb"
+        if active_stems is not None:
+            if src.stem not in active_stems:
+                continue                        # genuinely retired source
+        elif not student.exists() and not instructor.exists():
+            continue                            # fallback: both gone = retired
         src_hash = hashlib.sha256(src.read_bytes()).hexdigest()
         for artifact in (student, instructor):
             if not artifact.exists():
@@ -867,6 +879,18 @@ def self_test() -> int:
             if not any("concept_check.anchor" in p for p in run(check_nums=False)):
                 failures.append("deleted anchor did NOT fail the schema")
             mpath.write_text(manifest_anchor_src)
+
+            # 7d. structural guarantee: a DELETED student artifact of an
+            # active notebook must fail --local by name (round-7 P2)
+            del_target = snap / "notebooks/student/nb05_observational_descriptive_student.ipynb"
+            if del_target.exists():
+                del_bytes = del_target.read_bytes()
+                del_target.unlink()
+                if not any("MISSING generated artifact" in p and "nb05" in p
+                           for p in run(check_nums=False, local=True)):
+                    failures.append("deleted student artifact did NOT fail "
+                                    "--local by name")
+                del_target.write_bytes(del_bytes)
 
             # 8. structural guarantee: a flipped case expectation must FAIL
             # (round-5 G-A: an inert case table is prose wearing a test's name)
