@@ -30,7 +30,7 @@ for up to half the lost points).
 | M2 | **Contribution-map gallery walk** — claim/evidence maps on screens; sticky-note challenges; one challenge incorporated live | M6–M7 | M8 (studio) | Fri Sep 11 | eligible |
 | M3 | **3-minute charter declaration** — listeners each write one clarifying question; declaration revised from them | M8–M10 | M11 (studio) | Fri Sep 18 | eligible |
 | M4 | **Design-audit walkthrough** — listeners file two-line reviews (best rung / weakest rung of the measurement ladder) | M11–M13 | M14 (studio) | Fri Sep 25 | eligible |
-| M5 | **90-second recorded causal/boundary statement + board red-team** (async) — classmates reply naming the identification move or the language boundary | M14–M16 | M17 (async board) | Fri Oct 2 | eligible |
+| M5 | **90-second causal/boundary statement + peer red-team** — classmates reply naming the identification move or the language boundary | M14–M16 | M17 (studio) | Fri Oct 2 | eligible |
 | M6 | **Protocol clinic + abstract workshop** — claim-anatomy checklist, rotating consults, partner proof-read, inside the studio block; URC abstract cleared the internal gate | M17–M19 | M20 (studio) | Fri Oct 9 | protocol eligible; abstract not revisable (gate) |
 | M7 | **Protocol cross-review** — partner swaps declared-analysis protocols and pre-registers one predicted attack on the other's plan | M20–M21 | M22 (studio) | Fri Oct 16 | eligible |
 | M8 | **First-evidence walkthrough** — 60-second redesign pitch: weakness, fix, before/after diagnosands on the first computed estimate | M22–M24 | M25 (studio) | Fri Oct 23 | eligible |

@@ -83,7 +83,7 @@ graph TD
 - nb04's claim-map second meeting (M8) can compress to one if M7 runs long.
 - nb11 has three meetings (M20–M22); §generalization (M21) can absorb overflow.
 - nb16 has four meetings; M34's hot seat can share time with M33's ULN rounds.
-- The **only immovable dates**: Oct 2 + Nov 23 (async), Oct 9 (abstract gate),
+- The **only immovable dates**: Nov 23 (async), Oct 9 (abstract gate),
   Nov 6 (poster), Nov 17 (URC), Dec 7/9 (defenses), Dec 11 (dossier).
 
 ## External dependencies

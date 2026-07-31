@@ -17,11 +17,11 @@ course:
   section: "002"
   crn: "25596"
   meeting_pattern: "MWF"
-  meeting_time: "13:30-14:20"     # 1:30-2:20 PM
-  room: "HCRS-1054"
   meeting_minutes: 50
-  modality: "in-person (2 async-online meetings)"
-  office_hours: "Wednesdays 14:30-15:30, in person, HCRN 1095, or by appointment"
+  modality: "in-person (1 async-online meeting)"
+  # Meeting time, classroom, and office-hours time/room are deliberately NOT
+  # recorded here or on any public page: they ship in the course syllabus
+  # document (Davi, 2026-07-31). The private course tracker holds them.
   repo: "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
   website: "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/"
   enrollment: 5
@@ -32,7 +32,7 @@ calendar:
   last_class: "2026-12-11"
   total_meetings: 43
   in_person: 41
-  async_meetings: ["2026-10-02", "2026-11-23"]
+  async_meetings: ["2026-11-23"]
   no_class: ["2026-09-07", "2026-10-12", "2026-11-18", "2026-11-25", "2026-11-27"]
   events:
     urc_expo: "2026-11-17"          # Tuesday — REQUIRED poster presentation
@@ -193,7 +193,7 @@ milestones:
   M2:  {title: "Verified evidence and contribution map",       due: "2026-09-11", kind: "studio"}
   M3:  {title: "Research charter and MIDA declaration",        due: "2026-09-18", kind: "studio"}
   M4:  {title: "Observational descriptive design audit",       due: "2026-09-25", kind: "studio"}
-  M5:  {title: "Causal identification strategy or causal-language boundary", due: "2026-10-02", kind: "async-studio"}
+  M5:  {title: "Causal identification strategy or causal-language boundary", due: "2026-10-02", kind: "studio"}
   M6:  {title: "Experimental measurement or data-acquisition protocol (+ URC abstract internal gate)", due: "2026-10-09", kind: "studio"}
   M7:  {title: "Declared analysis protocol",                   due: "2026-10-16", kind: "studio"}
   M8:  {title: "Minimum viable analysis",                      due: "2026-10-23", kind: "studio"}

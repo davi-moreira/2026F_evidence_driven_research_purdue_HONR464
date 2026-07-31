@@ -174,7 +174,7 @@ private instructor repo + GitHub auth is the protection. Always publish through
 
 | Script | Guards | When it runs |
 |---|---|---|
-| `validate_calendar.py` | the 43-meeting backbone (41 in-person + 2 async); `--emit-csv` rewrites `CALENDAR_BACKBONE.csv` | before any schedule change to the calendar |
+| `validate_calendar.py` | the 43-meeting backbone (42 in-person + 1 async); `--emit-csv` rewrites `CALENDAR_BACKBONE.csv` | before any schedule change to the calendar |
 | `build_meeting_schedule.py` | schedule data matches the backbone (row count, columns, date/day/modality, required fields) — **fails the build on mismatch** | every schedule regeneration |
 | `validate_milestones.py` | M0–M15 present, dev-meetings precede due dates, fixed anchors, no shared due dates | after any milestone or schedule edit |
 | `validate_notebooks.py` | template conformance: Inquiry & Claim Boundary block, provenance + Sources, the active-learning moves, `SEED = 464`, no seaborn, no leaked `INSTRUCTOR SOLUTION`, markdown hygiene | inside `nbbuild.py` |

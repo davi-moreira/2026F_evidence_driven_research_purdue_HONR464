@@ -92,7 +92,7 @@ research_note_reviewer, ai_research_team_orchestrator.
   changes, update the corresponding custom model's system prompt to match,
   verbatim. The Colab PoC pulls prompts live from the repo, so a UI model that
   drifts from its spec will behave differently from the API path — keep them equal.
-- **Watch the touchpoint weeks.** Before M5 (Fri Oct 2, async), M7 (Fri Oct 16), M9
+- **Watch the touchpoint weeks.** Before M5 (Fri Oct 2), M7 (Fri Oct 16), M9
   (Fri Oct 30), and M13 (Sun Nov 29), re-run the UI smoke test for that week's
   role(s) so students hit a working model.
 - **Do not add student material to shared collections.** Students consult roles

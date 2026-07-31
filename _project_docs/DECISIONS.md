@@ -796,7 +796,7 @@ companion notebooks, GenAI recommended).
    appendix ×3 (which also drops its stale red-team Friday sentence).
 3. **M5 is no longer async.** Friday Oct 2 is a regular in-person studio:
    calendar invariant is now 43 = 42 in-person + 1 async
-   (validate_calendar updated; the Chicago-travel async note removed);
+   (validate_calendar updated; the async note removed);
    meeting 17 rewritten to the 10/5/30/5 frame; m05 brief, nb06, ms05,
    registry title, nb01 chain, and planning docs de-asynced. M13's
    Thanksgiving async module stays.

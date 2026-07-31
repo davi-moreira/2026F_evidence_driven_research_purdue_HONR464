@@ -47,14 +47,13 @@ permitted with disclosure.
 ## 2. Weekly architecture — 16 weeks, one notebook per week
 
 16 topics, one notebook per week (`nb01`–`nb16`), across **43 meetings = 27
-Mon/Wed lectures + 14 in-person Friday studios + 2 async modules** (dates in
+Mon/Wed lectures + 14 in-person Friday studios + 1 async module** (dates in
 `planning/CALENDAR_BACKBONE.csv`). Slugs and titles are fixed in
 `scripts/notebooks_map.py`; the "research decision" column is the project choice
 the student commits to that week.
 
 | Calendar exception | Meeting | Date |
 |---|---|---|
-| Async module (instructor traveling) | m17 | Fri Oct 2 |
 | Async module (Thanksgiving replication + red-team) | m37 | Mon Nov 23 |
 | No class — Labor Day | — | Mon Sep 7 |
 | No class — October break | — | Mon Oct 12 |
@@ -109,8 +108,8 @@ Each meeting type has a **fixed 50-minute architecture** (`srl:` in
 a stand-up, then the week's milestone is kicked off from its Brightspace brief
 and WORKED ON with the student's AI assistant (the weekly peer red-team block
 was retired, D30; GenAI Studio reviewer roles still apply at designated
-milestones), then revised, ledgered, and submitted at close. The two async
-meetings are self-contained modules with their own assessable artifact.
+milestones), then revised, ledgered, and submitted at close. The async
+meeting is a self-contained module with its own assessable artifact.
 
 ## 4. The two conceptual layers (critical — kept exactly)
 

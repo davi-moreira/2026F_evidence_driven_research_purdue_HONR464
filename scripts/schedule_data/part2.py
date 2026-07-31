@@ -207,8 +207,8 @@ MEETINGS_P2 = [
         "student_artifact": "Completed nb06 module: recompute cell + skeptic-review log + submitted M5 + board stand-up",
         "exit_ticket": "(embedded in the module) Claim Ticket #17: the assumption the skeptic attacked hardest, and how I answered or conceded it.",
         "homework_next_milestone": "Submit M5 and the nb06 module by the posted time. For Monday, read the RDSS ch. 17 opener on experimental descriptive designs; the M6 brief is on Brightspace.",
-        "instructor_prep": "Final-check nb06 runs unattended end-to-end; confirm the GenAI Studio 'Causal Identification Skeptic' role is live with its instructions in the module; post the M6 brief; seed and monitor the discussion board while traveling.",
-        "risks_contingency": "A student is stuck alone → nb06 embeds hints behind expandable cells and an office-hours booking link; GenAI Studio unavailable → a provided AI fallback skeptic prompt stands in and the required review is logged when the service returns; the board is monitored remotely through the day.",
+        "instructor_prep": "Final-check nb06 runs end-to-end; confirm the GenAI Studio 'Causal Identification Skeptic' role is live with its instructions in the module; post the M6 brief; seed the discussion board for the studio.",
+        "risks_contingency": "A student stalls on the identification argument → nb06 embeds hints behind expandable cells and rotating consults reach every student; GenAI Studio unavailable → a provided AI fallback skeptic prompt stands in and the required review is logged when the service returns.",
     },
     # ------------------------------------------------------------------ M18
     {

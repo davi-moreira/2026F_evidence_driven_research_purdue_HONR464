@@ -29,6 +29,8 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
+import yaml
+
 # --- Fixed anchors from the design brief -----------------------------------
 FIRST_DAY = date(2026, 8, 24)   # Monday — classes begin
 LAST_DAY = date(2026, 12, 11)   # Friday — last MWF meeting
@@ -44,9 +46,35 @@ HOLIDAYS: dict[date, str] = {
 }
 
 # MWF meetings that are held fully asynchronously online.
-ASYNC_DAYS: dict[date, str] = {
+#
+# The dates are OWNED by course_config.yaml `calendar.async_meetings`; the
+# labels live here. Reading them instead of hardcoding is deliberate: the two
+# silently disagreed once (config listed 2026-10-02 as async long after the
+# ruling that made it a regular in-person studio), and this validator passed
+# green throughout because it only ever checked itself.
+ASYNC_LABELS: dict[date, str] = {
     date(2026, 11, 23): "Asynchronous online (Thanksgiving replication + red-team module)",
 }
+
+
+def _async_days() -> dict[date, str]:
+    """Async meeting dates from course_config.yaml, labelled from ASYNC_LABELS."""
+    cfg = Path(__file__).resolve().parent.parent / "course_config.yaml"
+    declared = yaml.safe_load(cfg.read_text())["calendar"]["async_meetings"]
+    days: dict[date, str] = {}
+    for iso in declared:
+        d = date.fromisoformat(iso)
+        if d not in ASYNC_LABELS:
+            raise SystemExit(
+                f"✗ course_config.yaml declares {iso} async but scripts/validate_calendar.py\n"
+                f"  has no label for it. Add one to ASYNC_LABELS, or drop the date from\n"
+                f"  calendar.async_meetings — do not let the two disagree."
+            )
+        days[d] = ASYNC_LABELS[d]
+    return days
+
+
+ASYNC_DAYS: dict[date, str] = _async_days()
 
 # External / non-MWF events that belong on the master schedule as rows even
 # though they are not ordinary class meetings.

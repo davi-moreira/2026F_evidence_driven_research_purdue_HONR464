@@ -136,7 +136,7 @@ gate is deliberate.
    python3 scripts/build_meeting_schedule.py
    ```
    `validate_calendar.py` is the single source of truth for the 43-meeting spine
-   (41 in-person + 2 async); if it fails, the meeting dates are wrong, not the data.
+   (42 in-person + 1 async); if it fails, the meeting dates are wrong, not the data.
 2. If the **backbone is correct** and a row is wrong, fix that meeting in
    `scripts/schedule_data/partN.py` — the error names the meeting number and field.
    `srl_slot` / `srl_focus` / `cb_reading` may be empty (studios, async, Week 1); all

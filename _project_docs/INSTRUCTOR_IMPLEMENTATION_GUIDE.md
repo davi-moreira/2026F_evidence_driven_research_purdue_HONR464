@@ -8,7 +8,7 @@ For the machine-readable spine (dates, weights, milestone IDs), read
 `planning/CALENDAR_BACKBONE.csv` and intent defers to the master plan.
 
 The course is a 5-student honors seminar meeting **Mon/Wed/Fri, 50 minutes**,
-across **43 meetings** (41 in person + 2 async). Five students run five
+across **43 meetings** (42 in person + 1 async). Five students run five
 individual projects to five posters. The instructor's job is not to lecture; it
 is to **monitor and formalize** student-led lectures, **run** the Friday
 studios, and **grade the chain** on a fast, predictable cadence.
@@ -72,14 +72,15 @@ the peer defense.
 **Week 1 is instructor-led** (both lectures) to model the SRL format before
 students take over in Week 2.
 
-### The two async modules
+### The async module
 
-Two meetings are asynchronous online, each a self-contained graded unit:
+One meeting is asynchronous online, a self-contained graded unit:
 
-- **Fri Oct 2 (meeting 17)** — instructor traveling; the M5 causal-identification
-  work runs async.
 - **Mon Nov 23 (meeting 37)** — the Thanksgiving replication + red-team module
   (M13).
+
+Fri Oct 2 (meeting 17) is a **regular in-person studio** on the standard
+10/5/30/5 frame; M5 is submitted there like any other milestone.
 
 **No class Wed Nov 18**, the day after the Expo.
 
@@ -129,7 +130,7 @@ Sixteen milestones (**M0–M15**), one graded artifact each, on a **develop →
 present → submit → revise** cadence. Due dates (all Fridays unless noted) are
 fixed in `course_config.yaml milestones:`:
 
-| M0 Aug 28 · M1 Sep 4 · M2 Sep 11 · M3 Sep 18 · M4 Sep 25 · M5 Oct 2 (async) ·
+| M0 Aug 28 · M1 Sep 4 · M2 Sep 11 · M3 Sep 18 · M4 Sep 25 · M5 Oct 2 ·
 M6 Oct 9 · M7 Oct 16 · M8 Oct 23 · M9 Oct 30 · **M10 Nov 6, 5 PM (terminal)** ·
 M11 Nov 13 · M12 Nov 20 · M13 Nov 29 (Sun, async) · M14 Dec 4 ·
 **M15 Dec 11 (terminal)** |

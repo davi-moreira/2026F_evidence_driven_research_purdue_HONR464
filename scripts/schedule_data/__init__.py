@@ -5,7 +5,7 @@ architecture (16 weekly topics nb01–nb16, milestones M0–M15, Student Researc
 Lead flipped classroom) + planning/CALENDAR_BACKBONE.csv; serialized by
 scripts/build_meeting_schedule.py into planning/MEETING_SCHEDULE.{csv,md}.
 
-43 meetings = 41 in-person + 2 async (Fri Oct 2, Mon Nov 23). No class on
+43 meetings = 42 in-person + 1 async (Mon Nov 23). No class on
 Labor Day (Sep 7), October Break (Oct 12), the post-Expo Wednesday (Nov 18),
 and Thanksgiving (Nov 25/27).
 

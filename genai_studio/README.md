@@ -110,7 +110,7 @@ are the v2 chain in `planning/PROJECT_MILESTONES.md` and
 
 | Milestone | Due | Required role(s) | What you submit to the role |
 |---|---|---|---|
-| **M5** — Causal identification strategy or causal-language boundary | Fri Oct 2 (async) | Causal Identification Skeptic | Your identification argument, or your defense that your language stays descriptive |
+| **M5** — Causal identification strategy or causal-language boundary | Fri Oct 2 | Causal Identification Skeptic | Your identification argument, or your defense that your language stays descriptive |
 | **M7** — Declared analysis protocol | Fri Oct 16 | Prediction & Leakage Auditor | Your declared analysis protocol, focusing on any out-of-sample / prediction claim |
 | **M9** — Poster draft 1 and research audit | Fri Oct 30 | Poster Critic **and** Robustness & Sensitivity Reviewer | Your poster draft, and your claim-and-evidence table with robustness checks |
 | **M13** — Replication and red-team report | Sun Nov 29 (async) | Reproducibility Auditor | The peer reproducibility package you are replicating |
