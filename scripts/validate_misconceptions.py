@@ -108,12 +108,48 @@ def check_schema(data) -> list[str]:
         if not m.get("requires"):
             problems.append(f"schema[{mid}]: no `requires` — absence of the error "
                             f"is not presence of the correction")
-        for field in ("defect", "estimand", "counterexample", "concept_check"):
+        for field in ("defect", "estimand", "counterexample"):
             if not m.get(field):
                 problems.append(f"schema[{mid}]: missing A5 field `{field}`")
+        cc = m.get("concept_check")
+        if not (isinstance(cc, dict) and cc.get("question") and cc.get("answer")):
+            problems.append(f"schema[{mid}]: `concept_check` must carry "
+                            f"question AND answer — without the key, a wrong "
+                            f"reader is undetectable (A5)")
+        cases = m.get("cases", [])
+        kinds = [c.get("kind") for c in cases]
+        for need in ("positive", "boundary", "converse"):
+            if need not in kinds:
+                problems.append(f"schema[{mid}]: no `{need}` case — one vivid "
+                                f"counterexample proves a failure CAN happen; "
+                                f"only boundary and converse prove WHICH "
+                                f"feature causes it (A5)")
+        for c in cases:
+            if c.get("code"):
+                if not c.get("expect"):
+                    problems.append(f"schema[{mid}]: a numeric case has no "
+                                    f"`expect` assertions")
+            elif c.get("fixture"):
+                if c.get("verdict") not in ("caught", "permitted"):
+                    problems.append(f"schema[{mid}]: a fixture case needs "
+                                    f"verdict caught|permitted")
+            else:
+                problems.append(f"schema[{mid}]: a case has neither `code` "
+                                f"nor `fixture`")
         if m.get("allow") and not m.get("allow_reversals"):
             problems.append(f"schema[{mid}]: has `allow:` but no `allow_reversals:` "
                             f"— an untested allow span is a laundering channel")
+        for a in m.get("allow", []):
+            if not isinstance(a, dict) or not a.get("text") or not a.get("pins"):
+                problems.append(
+                    f"schema[{mid}]: allow entries must be pinned "
+                    f"{{text, pins: [{{file, sha256}}]}} — an unpinned allow "
+                    f"suppresses anywhere (round-5 G-B)")
+                continue
+            for pin in a["pins"]:
+                if not (isinstance(pin, dict) and pin.get("file") and pin.get("sha256")):
+                    problems.append(f"schema[{mid}]: malformed pin in allow "
+                                    f"{a['text'][:40]!r}")
         for pt in m.get("reject_patterns", []):
             if not pt.get("catches"):
                 problems.append(f"schema[{mid}]: a pattern ships no `catches:` "
@@ -223,41 +259,89 @@ def _normalize(text: str) -> tuple[str, list[int]]:
     return res
 
 
-def _allow_spans(norm: str, allow: list[str]) -> list[tuple[int, int]]:
-    spans = []
+_PARA_CACHE: dict[int, list[tuple[int, int, str]]] = {}
+
+
+def _paragraph_index(text: str) -> list[tuple[int, int, str]]:
+    """(start_line, end_line, sha256-of-normalized-paragraph) per blank-line
+    block. The unit an `allow` pin is scoped to (round-5 G-B)."""
+    import hashlib
+    ck = hash(text)
+    if ck in _PARA_CACHE:
+        return _PARA_CACHE[ck]
+    out, line = [], 1
+    for block in re.split(r"(\n\s*\n)", text):
+        if re.fullmatch(r"\n\s*\n", block):
+            line += block.count("\n")
+            continue
+        n = block.count("\n")
+        norm = " ".join(block.lower().split())
+        if norm:
+            out.append((line, line + n,
+                        hashlib.sha256(norm.encode()).hexdigest()))
+        line += n
+    _PARA_CACHE[ck] = out
+    return out
+
+
+def _pinned_suppressor(text: str, allow: list, file_rel: str):
+    """Return a predicate: is the hit at (span, line) suppressed?
+
+    Suppression requires ALL of (round-5 G-B):
+      1. the hit span fully inside an occurrence of the allow TEXT;
+      2. this file listed in the allow entry's pins;
+      3. the paragraph containing the hit hashing to the pinned value —
+         so any edit near the quotation invalidates the exception.
+    """
+    norm, _ = _normalize(text)
+    paras = _paragraph_index(text)
+    entries = []
     for a in allow:
-        an = " ".join(a.lower().split())
-        start = 0
+        an = " ".join(a["text"].lower().split())
+        shas = {p["sha256"] for p in a["pins"] if p["file"] == file_rel}
+        if not shas:
+            continue
+        spans, start = [], 0
         while (i := norm.find(an, start)) != -1:
             spans.append((i, i + len(an)))
             start = i + 1
-    return spans
+        if spans:
+            entries.append((spans, shas))
+
+    def suppressed(span: tuple[int, int], line: int) -> bool:
+        for spans, shas in entries:
+            if not any(s <= span[0] and span[1] <= e for s, e in spans):
+                continue
+            for lo, hi, sha in paras:
+                if lo <= line <= hi:
+                    if sha in shas:
+                        return True
+                    break
+        return False
+
+    return suppressed
 
 
-def scan_file(text: str, phrase: str, allow: list[str]) -> list[int]:
-    """Line numbers where `phrase` appears outside an allowed corrective use.
+def scan_file(text: str, phrase: str, allow: list, file_rel: str = "") -> list[int]:
+    """Line numbers where `phrase` appears outside a PINNED corrective use.
 
     Works on whitespace-normalized text so wrapped phrases are still caught.
-    An allowed corrective use suppresses a hit only when it FULLY covers the
-    same span — and every `allow:` entry is required (by schema + self-test
-    reversals) to contain its refutation, so an endorsement reusing the bare
-    quotation no longer matches the allow and still fires (round-4 G3).
+    Suppression is pin-scoped: see `_pinned_suppressor`.
     """
     norm, linemap = _normalize(text)
     needle = " ".join(phrase.lower().split())
-    allow_spans = _allow_spans(norm, allow)
+    suppressed = _pinned_suppressor(text, allow, file_rel)
 
     hits, start = [], 0
     while (i := norm.find(needle, start)) != -1:
-        span = (i, i + len(needle))
-        covered = any(s <= span[0] and span[1] <= e for s, e in allow_spans)
-        if not covered:
-            hits.append(linemap[i] if i < len(linemap) else 0)
+        line = linemap[i] if i < len(linemap) else 0
+        if not suppressed((i, i + len(needle)), line):
+            hits.append(line)
         start = i + 1
     return hits
 
 
-def scan_pattern(text: str, pattern: str, allow: list[str]) -> list[int]:
+def scan_pattern(text: str, pattern: str, allow: list, file_rel: str = "") -> list[int]:
     """Same as scan_file but for a regex FAMILY, not a literal phrase.
 
     Literal phrases only catch the wording that was already fixed. Paraphrase
@@ -266,20 +350,22 @@ def scan_pattern(text: str, pattern: str, allow: list[str]) -> list[int]:
     These patterns target the CLAIM, so drift is caught too.
     """
     norm, linemap = _normalize(text)
-    allow_spans = _allow_spans(norm, allow)
+    suppressed = _pinned_suppressor(text, allow, file_rel)
     hits = []
     for m in re.finditer(pattern, norm):
-        span = m.span()
-        if any(s <= span[0] and span[1] <= e for s, e in allow_spans):
-            continue
-        hits.append(linemap[m.start()] if m.start() < len(linemap) else 0)
+        line = linemap[m.start()] if m.start() < len(linemap) else 0
+        if not suppressed(m.span(), line):
+            hits.append(line)
     return hits
 
 
 def check_freshness() -> list[str]:
-    """--local only: a canonical source newer than its generated student
-    notebook means the tracked artifact is STALE — the public tree shows prose
-    the next rebuild will change (round-4 G2's freshness requirement)."""
+    """--local only: the generated student notebook must carry a content-hash
+    stamp matching its canonical source. An mtime heuristic was defeatable by
+    timestamp restoration or by touching the generated file (round-5 G-D);
+    a content hash is not. `scripts/nbbuild.py` writes the stamp on every
+    build."""
+    import hashlib
     problems = []
     src_dir = _ROOT / "_production_kit" / "nb_sources"
     if not src_dir.is_dir():
@@ -290,11 +376,23 @@ def check_freshness() -> list[str]:
         if not student.exists():
             # v1-era or retired sources carry no tracked counterpart
             continue
-        if src.stat().st_mtime > student.stat().st_mtime + 1:
+        try:
+            meta = json.loads(student.read_text()).get("metadata", {})
+        except json.JSONDecodeError:
+            problems.append(f"local: unreadable notebook {student.relative_to(_ROOT)}")
+            continue
+        stamp = meta.get("edrai_generation", {}).get("src_sha256")
+        if stamp is None:
             problems.append(
-                f"local: STALE generation — {src.relative_to(_ROOT)} is newer "
-                f"than {student.relative_to(_ROOT)}; rerun scripts/nbbuild.py "
+                f"local: UNSTAMPED generation — {student.relative_to(_ROOT)} "
+                f"carries no source hash; rerun scripts/nbbuild.py "
                 f"{src.stem.split('_')[0]}")
+            continue
+        if stamp != hashlib.sha256(src.read_bytes()).hexdigest():
+            problems.append(
+                f"local: STALE generation — {src.relative_to(_ROOT)} changed "
+                f"since {student.relative_to(_ROOT)} was built; rerun "
+                f"scripts/nbbuild.py {src.stem.split('_')[0]}")
     return problems
 
 
@@ -316,18 +414,18 @@ def run(verbose: bool = False, check_nums: bool = True,
 
         for phrase in m.get("rejects", []):
             for f, text in texts.items():
-                for ln in scan_file(text, phrase, allow):
+                rel = f.relative_to(_ROOT).as_posix()
+                for ln in scan_file(text, phrase, allow, rel):
                     problems.append(
-                        f"[{mid}] rejected phrase {phrase!r} — "
-                        f"{f.relative_to(_ROOT)}:{ln}")
+                        f"[{mid}] rejected phrase {phrase!r} — {rel}:{ln}")
 
         for pat in m.get("reject_patterns", []):
             rx, why = pat["pattern"], pat.get("why", "")
             for f, text in texts.items():
-                for ln in scan_pattern(text, rx, allow):
+                rel = f.relative_to(_ROOT).as_posix()
+                for ln in scan_pattern(text, rx, allow, rel):
                     problems.append(
-                        f"[{mid}] rejected CLAIM ({why}) — "
-                        f"{f.relative_to(_ROOT)}:{ln}  [/{rx}/]")
+                        f"[{mid}] rejected CLAIM ({why}) — {rel}:{ln}  [/{rx}/]")
 
         for phrase in m.get("requires", []):
             needle = " ".join(phrase.lower().split())
@@ -343,6 +441,79 @@ def run(verbose: bool = False, check_nums: bool = True,
         problems.extend(check_freshness())
     if check_nums:
         problems.extend(check_numbers(data, verbose=verbose))
+        problems.extend(check_cases(data, verbose=verbose))
+    return problems
+
+
+def check_cases(data, verbose: bool = False) -> list[str]:
+    """Execute the A5 case table (round-5 G-A).
+
+    Every misconception runs its positive, boundary, and converse cases:
+    numeric cases execute seeded numpy code and assert declared expectations;
+    conceptual cases run their fixtures through the entry's OWN scan rules.
+    A green scan with a failing case table means the concept is wrong even
+    though no rejected wording is present — exactly what a phrase scanner
+    alone cannot see.
+    """
+    problems: list[str] = []
+    try:
+        import numpy as np
+    except Exception as e:                      # pragma: no cover
+        return [f"cases: numpy unavailable ({e})"]
+
+    for m in data["misconceptions"]:
+        mid = m["id"]
+        allow = m.get("allow", [])
+        for c in m.get("cases", []):
+            kind = c.get("kind", "?")
+            if c.get("code"):
+                ns = {"np": np}
+                try:
+                    exec(c["code"], ns)          # trusted repo-authored code
+                except Exception as e:
+                    problems.append(f"cases[{mid}/{kind}]: code raised {e!r}")
+                    continue
+                result = ns.get("result")
+                if not isinstance(result, dict):
+                    problems.append(f"cases[{mid}/{kind}]: code set no "
+                                    f"`result` dict")
+                    continue
+                for ex in c.get("expect", []):
+                    key = ex.get("key")
+                    if key not in result:
+                        problems.append(f"cases[{mid}/{kind}]: result has no "
+                                        f"key {key!r} (has {sorted(result)})")
+                        continue
+                    got = float(result[key])
+                    if "value" in ex:
+                        tol = float(ex.get("tolerance", 0))
+                        if abs(got - float(ex["value"])) > tol:
+                            problems.append(
+                                f"cases[{mid}/{kind}]: {key} = {got:.4f}, "
+                                f"expected {ex['value']} ± {tol}")
+                    if "min" in ex and got < float(ex["min"]):
+                        problems.append(
+                            f"cases[{mid}/{kind}]: {key} = {got:.4f} < "
+                            f"min {ex['min']}")
+                    if "max" in ex and got > float(ex["max"]):
+                        problems.append(
+                            f"cases[{mid}/{kind}]: {key} = {got:.4f} > "
+                            f"max {ex['max']}")
+            elif c.get("fixture"):
+                probe = c["fixture"]
+                caught = any(scan_file(probe, ph, allow, "case-fixture")
+                             for ph in m.get("rejects", []))
+                caught = caught or any(
+                    scan_pattern(probe, pt["pattern"], allow, "case-fixture")
+                    for pt in m.get("reject_patterns", []))
+                want = c.get("verdict") == "caught"
+                if caught != want:
+                    problems.append(
+                        f"cases[{mid}/{kind}]: fixture was "
+                        f"{'caught' if caught else 'permitted'}, expected "
+                        f"{c.get('verdict')}: {probe[:60]!r}")
+            if verbose:
+                print(f"  cases[{mid}/{kind}] ✓")
     return problems
 
 
@@ -549,7 +720,22 @@ def self_test() -> int:
                 failures.append("deleted required correction did NOT fail the scan")
             ch21.write_text(ch21_src)
 
-            # 7. structural guarantee: a stale canonical source must FAIL --local
+            # 6b. structural guarantee: editing a PINNED paragraph invalidates
+            # the pin, so an endorsement appended beside a corrective
+            # quotation fires the reject it was hiding (round-5 G-B)
+            ch21_src2 = ch21.read_text()
+            ch21.write_text(ch21_src2.replace(
+                "quietly claims a precision nobody computed.",
+                "quietly claims a precision nobody computed. "
+                "That warning is overly cautious."))
+            if not any("[specification-spread]" in p and "21-robustness" in p
+                       for p in run(check_nums=False)):
+                failures.append("edited pinned paragraph did NOT invalidate "
+                                "the allow pin")
+            ch21.write_text(ch21_src2)
+
+            # 7. structural guarantee: a content-changed canonical source must
+            # FAIL --local even with its timestamp untouched (round-5 G-D)
             src_dir = snap / "_production_kit" / "nb_sources"
             candidates = sorted(src_dir.glob("*.py")) if src_dir.is_dir() else []
             fresh_pair = next(
@@ -557,14 +743,32 @@ def self_test() -> int:
                  if (snap / "notebooks/student" / f"{s.stem}_student.ipynb").exists()),
                 None)
             if fresh_pair is not None:
-                student = snap / "notebooks/student" / f"{fresh_pair.stem}_student.ipynb"
                 import os
-                st = student.stat()
-                os.utime(fresh_pair, (st.st_atime, st.st_mtime + 3600))
+                src_bytes = fresh_pair.read_bytes()
+                st = fresh_pair.stat()
+                fresh_pair.write_bytes(src_bytes + b"\n# drifted content\n")
+                os.utime(fresh_pair, (st.st_atime, st.st_mtime))  # mtime restored
                 if not any("STALE generation" in p
                            for p in run(check_nums=False, local=True)):
-                    failures.append("stale canonical source did NOT fail --local")
-                os.utime(fresh_pair, (st.st_atime, st.st_mtime))
+                    failures.append("content-changed canonical source did NOT "
+                                    "fail --local (hash check inert)")
+                fresh_pair.write_bytes(src_bytes)
+            # 8. structural guarantee: a flipped case expectation must FAIL
+            # (round-5 G-A: an inert case table is prose wearing a test's name)
+            manifest_src2 = mpath.read_text()
+            mpath.write_text(manifest_src2.replace(
+                "- {key: bias_a, value: 1.993, tolerance: 0.1}",
+                "- {key: bias_a, value: 3.5, tolerance: 0.1}"))
+            if not any("cases[signed-bias/positive]" in p for p in run()):
+                failures.append("flipped case expectation did NOT fail the scan")
+            mpath.write_text(manifest_src2)
+
+            # 9. structural guarantee: deleting a required case kind must FAIL
+            mpath.write_text(manifest_src2.replace("- kind: converse",
+                                                   "- kind: extra", 1))
+            if not any("no `converse` case" in p for p in run(check_nums=False)):
+                failures.append("deleted converse case did NOT fail the schema")
+            mpath.write_text(manifest_src2)
         finally:
             set_root(REPO)
             _TEXT_CACHE.clear()

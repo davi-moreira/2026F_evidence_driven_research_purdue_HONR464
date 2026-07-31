@@ -304,14 +304,15 @@ no title). **Chapter review is FROZEN until Architecture v1 (D35;
    not ship *as current* before that sync. During the freeze:
 
 ```bash
-.venv/bin/python scripts/build_book_notebooks.py          # companion notebooks + rubrics
+.venv/bin/python scripts/build_book_notebooks.py          # EN companions + rubrics (D36: defaults --editions en)
 .venv/bin/python scripts/update_chapter_review_banners.py # banners from BOOK_REVIEW_STATUS.yml
-.venv/bin/python scripts/build_book_sim_figures.py        # seeded sim figures (if sims changed)
+.venv/bin/python scripts/build_book_sim_figures.py        # EN seeded figures (D36: defaults --editions en)
 .venv/bin/python scripts/voice_lint_book.py               # BOOK_VOICE_POLICY tells (D28)
 .venv/bin/python scripts/validate_book_sync.py            # chapter↔notebook links, both directions
 quarto render book/    # AFTER the site render
-quarto render book-pt/ && quarto render book-es/  # SOURCES frozen (D36), but the
-                       # site render PRUNES docs/book-*; re-render to restore
+quarto render book-pt/ && quarto render book-es/  # SOURCES frozen (D36) and the
+                       # generators skip them, so this re-emits byte-identical
+                       # pages; needed ONLY because the site render PRUNES docs/book-*
 ```
 
 ---

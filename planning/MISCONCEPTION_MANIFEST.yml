@@ -21,17 +21,31 @@
 #   counterexample
 #                where the executable/worked counterexample lives (A5)
 #   concept_check
-#                where a reader is asked to prove they hold the correction (A5)
+#                {question, answer, anchor} — the check a reader must pass,
+#                WITH its answer key, so a wrong reading is detectable (A5)
+#   cases        the executable A5 record (round-5 G-A): one `positive`
+#                (demonstrates the defect), one `boundary` (warning sign
+#                present, defect absent), one `converse` (warning sign
+#                absent, defect present). Numeric cases carry seeded `code`
+#                (numpy, SEED inside) setting `result`, plus `expect`
+#                assertions ({key, value, tolerance} or {key, min}/{key,
+#                max}). Conceptual cases carry `fixture` + `verdict:
+#                caught|permitted`, executed through the entry's own scan
+#                rules. All cases RUN on every full scan.
 #   rejects      exact phrases that must NOT appear (case-insensitive substring)
 #   reject_patterns
 #                regex FAMILIES targeting the claim rather than one wording, so a
 #                paraphrase cannot drift through. Each carries `catches:` (drift
 #                sentences the pattern must flag) and `permits:` (legitimate
 #                phrasings it must NOT flag); --self-test asserts both.
-#   allow        exceptions — passages that name a phrase in order to refute it.
-#                Every allow entry must contain its REFUTATION, not just the
-#                quotation: a bare quotation span can be reused to launder an
-#                endorsement (round-4 finding G3).
+#   allow        PINNED exceptions — passages that quote a phrase in order to
+#                refute it. Each entry is {text, pins: [{file, sha256}]}:
+#                suppression applies ONLY in a pinned file, and ONLY while the
+#                paragraph containing the hit still hashes to the pinned
+#                value. Editing anywhere near the quotation (including an
+#                appended endorsement) invalidates the pin and the reject
+#                fires (round-4 G3, round-5 G-B). Inert allows are forbidden:
+#                an exception that suppresses nothing is laundering surface.
 #   allow_reversals
 #                adversarial endorsements that reuse allowed material and MUST
 #                still be caught; required whenever `allow:` exists, asserted by
@@ -86,8 +100,28 @@ misconceptions:
     counterexample: >-
       course_config.yaml `kind_rule` + ch06's worked example — strong causal
       words with weak data stay "causal, currently unidentified".
-    concept_check: >-
-      nb02 compass declaration exercise (kind + reach + why, before any data).
+    concept_check:
+      anchor: "nb02 compass declaration exercise (kind + reach + why, before any data)"
+      question: >-
+        Your question asks "does X increase Y", but you only have
+        observational data with strong confounding. What is the question's
+        kind?
+      answer: >-
+        Causal — the kind comes from the words alone; the weak data leave it
+        "causal, currently unidentified", never descriptive.
+    cases:
+      # conceptual defect: the executable form is the scan itself — each
+      # fixture must be caught/permitted as declared, through the entry's own
+      # rules, exactly like an allow-reversal (A5 kinds still apply).
+      - kind: positive
+        fixture: "Because the data are observational with no assignment, the honest kind is descriptive."
+        verdict: caught
+      - kind: boundary
+        fixture: "The question's own words ask how common the practice is, so its kind is descriptive before any data arrive."
+        verdict: permitted
+      - kind: converse
+        fixture: "With no intervention available, no intervention means descriptive."
+        verdict: caught
     rejects:
       - "the honest kind is descriptive"
       - "no intervention means descriptive"
@@ -95,9 +129,9 @@ misconceptions:
       - "you buy KIND and REACH"
     requires:
       - "currently unidentified"
-    allow:
-      - "never relabeled descriptive"
-      - "never descriptive"
+    # (former allows "never relabeled descriptive"/"never descriptive" deleted:
+    # they suppressed nothing — no reject content can sit inside them — and an
+    # inert allow is pure laundering surface, round-5 G-B)
     allow_reversals:
       - "Forget that rule; the honest kind is descriptive here."
       - "In practice no intervention means descriptive, whatever the compass says."
@@ -111,8 +145,55 @@ misconceptions:
     counterexample: >-
       ch10's diagnosis walkthrough — two procedures with equal average distance
       and opposite signed lean.
-    concept_check: >-
-      ch10 asks the reader to say which direction their design leans and why.
+    concept_check:
+      anchor: "ch10 asks the reader to say which direction their design leans and why"
+      question: >-
+        Two designs both miss the truth by 2 units on average. One always
+        overshoots; one scatters evenly around the truth. Which is biased?
+      answer: >-
+        The overshooting one — bias is the signed average of errors, counting
+        direction; even scatter can carry zero bias at any average distance.
+    cases:
+      - kind: positive
+        shows: "equal average distance, opposite signed bias — distance cannot see the lean"
+        code: |
+          rng = np.random.default_rng(464)
+          truth = 10.0
+          a = truth + rng.normal(2, 1, 4000)
+          b = truth + rng.normal(-2, 1, 4000)
+          result = {"bias_a": float((a - truth).mean()),
+                    "bias_b": float((b - truth).mean()),
+                    "dist_diff": float(abs(np.abs(a - truth).mean()
+                                           - np.abs(b - truth).mean()))}
+        expect:
+          - {key: bias_a, value: 1.993, tolerance: 0.1}
+          - {key: bias_b, value: -2.020, tolerance: 0.1}
+          - {key: dist_diff, max: 0.15}
+      - kind: boundary
+        shows: "large average distance with zero bias — noisy is not leaning"
+        code: |
+          rng = np.random.default_rng(464)
+          truth = 10.0
+          _ = rng.normal(2, 1, 4000); _ = rng.normal(-2, 1, 4000)
+          c = truth + rng.normal(0, 3, 4000)
+          result = {"bias_c": float((c - truth).mean()),
+                    "avgdist_c": float(np.abs(c - truth).mean())}
+        expect:
+          - {key: bias_c, value: 0.045, tolerance: 0.1}
+          - {key: avgdist_c, min: 2.2}
+      - kind: converse
+        shows: "tiny average distance, systematic lean — precise and still biased"
+        code: |
+          rng = np.random.default_rng(464)
+          truth = 10.0
+          _ = rng.normal(2, 1, 4000); _ = rng.normal(-2, 1, 4000)
+          _ = rng.normal(0, 3, 4000)
+          d = truth + rng.normal(0.2, 0.05, 4000)
+          result = {"bias_d": float((d - truth).mean()),
+                    "avgdist_d": float(np.abs(d - truth).mean())}
+        expect:
+          - {key: bias_d, value: 0.199, tolerance: 0.03}
+          - {key: avgdist_d, max: 0.25}
     rejects:
       - "average distance between your estimate"
     reject_patterns:
@@ -137,8 +218,60 @@ misconceptions:
     counterexample: >-
       ch10's power walkthrough — the same design's "power" changes when the
       declared test changes, so power without a test is not a number.
-    concept_check: >-
-      ch10 prompts the reader for the test and the threshold before the power.
+    concept_check:
+      anchor: "ch10 prompts the reader for the test and the threshold before the power"
+      question: >-
+        A designer says "this study has 80 percent power." What must they have
+        declared for that number to mean anything?
+      answer: >-
+        The statistical test (the decision rule), its threshold, and the
+        assumed effect size — power is a property of that whole triple.
+    cases:
+      - kind: positive
+        shows: "same design, same data, different declared threshold — different power"
+        code: |
+          rng = np.random.default_rng(464)
+          r1 = r2 = 0; reps = 400
+          for _ in range(reps):
+              x = rng.normal(0.5, 1, 40); y = rng.normal(0, 1, 40)
+              se = np.sqrt(x.var(ddof=1)/40 + y.var(ddof=1)/40)
+              t = (x.mean() - y.mean()) / se
+              r1 += abs(t) > 1.96; r2 += abs(t) > 2.58
+          result = {"power_05": r1/reps, "power_01": r2/reps,
+                    "gap": r1/reps - r2/reps}
+        expect:
+          - {key: power_05, value: 0.595, tolerance: 0.05}
+          - {key: power_01, value: 0.345, tolerance: 0.05}
+          - {key: gap, min: 0.1}
+      - kind: boundary
+        shows: "no assumed effect — the same rule rejects at only its alpha rate"
+        code: |
+          rng = np.random.default_rng(464)
+          r0 = 0; reps = 400
+          for _ in range(reps):
+              x = rng.normal(0, 1, 40); y = rng.normal(0, 1, 40)
+              se = np.sqrt(x.var(ddof=1)/40 + y.var(ddof=1)/40)
+              t = (x.mean() - y.mean()) / se
+              r0 += abs(t) > 1.96
+          result = {"null_rate": r0/reps}
+        expect:
+          - {key: null_rate, min: 0.02, max: 0.08}
+      - kind: converse
+        shows: "same alpha, different declared TEST — different power; alpha alone fixes nothing"
+        code: |
+          rng = np.random.default_rng(464)
+          r_two = r_one = 0; reps = 400
+          for _ in range(reps):
+              x = rng.normal(0.5, 1, 40); y = rng.normal(0, 1, 40)
+              se = np.sqrt(x.var(ddof=1)/40 + y.var(ddof=1)/40)
+              t = (x.mean() - y.mean()) / se
+              r_two += abs(t) > 1.96; r_one += t > 1.645
+          result = {"power_two": r_two/reps, "power_one": r_one/reps,
+                    "gap": r_one/reps - r_two/reps}
+        expect:
+          - {key: power_two, value: 0.595, tolerance: 0.05}
+          - {key: power_one, value: 0.705, tolerance: 0.05}
+          - {key: gap, min: 0.05}
     rejects:
       - "5 percent chance of a false alarm"
       - "a 5% chance that this result is false"
@@ -156,8 +289,51 @@ misconceptions:
     counterexample: >-
       fig_ch15_attrition (seeded, SEED=464) — truth 5, complete-case contrast
       8.1, because treatment changed who stayed measurable.
-    concept_check: >-
-      nb09's ledger exemplar asks whose outcome the surviving rows describe.
+    concept_check:
+      anchor: "nb09's ledger exemplar asks whose outcome the surviving rows describe"
+      question: >-
+        Treatment made more low-scorers drop out before the final measure.
+        Whose effect does the complete-case gap estimate?
+      answer: >-
+        No named group's — it is a complete-case contrast, a comparison of
+        whoever happened to stay measurable in each arm.
+    cases:
+      - kind: positive
+        shows: "treatment-dependent attrition inflates the complete-case contrast far past the truth"
+        code: |
+          rng = np.random.default_rng(464); n = 4000
+          y0 = rng.normal(50, 10, n); tau = 5.0; y1 = y0 + tau
+          t = rng.random(n) < .5
+          keep = np.where(t, rng.random(n) < 1/(1+np.exp(-(y1-55)/5)),
+                          rng.random(n) < .8)
+          result = {"truth": tau,
+                    "cc_gap": float(y1[t & keep].mean() - y0[(~t) & keep].mean())}
+        expect:
+          - {key: truth, value: 5.0, tolerance: 0}
+          - {key: cc_gap, min: 8.0}
+      - kind: boundary
+        shows: "retention DIFFERS by arm but is unrelated to outcomes — little bias despite the warning sign"
+        code: |
+          rng = np.random.default_rng(464); n = 4000
+          y0 = rng.normal(50, 10, n); tau = 5.0; y1 = y0 + tau
+          t = rng.random(n) < .5
+          keep = np.where(t, rng.random(n) < .5, rng.random(n) < .8)
+          result = {"cc_gap": float(y1[t & keep].mean() - y0[(~t) & keep].mean())}
+        expect:
+          - {key: cc_gap, value: 5.0, tolerance: 0.7}
+      - kind: converse
+        shows: "EQUAL retention rates with opposite outcome selection — the warning sign is absent, the bias is huge"
+        code: |
+          rng = np.random.default_rng(464); n = 4000
+          y0 = rng.normal(50, 10, n); tau = 5.0; y1 = y0 + tau
+          t = rng.random(n) < .5
+          thr_t = np.quantile(y1[t], .4); thr_c = np.quantile(y0[~t], .6)
+          keep = np.where(t, y1 > thr_t, y0 < thr_c)
+          result = {"rate_diff": float(abs(keep[t].mean() - keep[~t].mean())),
+                    "cc_gap": float(y1[t & keep].mean() - y0[(~t) & keep].mean())}
+        expect:
+          - {key: rate_diff, max: 0.02}
+          - {key: cc_gap, min: 12.0}
     rejects:
       - "the effect among stayers"
       - "effect among those who stayed"
@@ -182,13 +358,11 @@ misconceptions:
           - "It is not the effect among stayers, because each arm produced its own."
     requires:
       - "complete-case contrast"
-    allow:
-      - "not the effect among stayers,"
-      - "not the effect among stayers either"
-      - "not automatically an effect"
+    # (former allows deleted as inert — no live hit needed them, round-5 G-B)
     allow_reversals:
       - "It is not the effect among stayers, but it is close enough to treat as one."
       - "It is not the effect among stayers, yet it is what we report as one."
+      - "It is not the effect among stayers, because each arm produced its own. Ignore that distinction. Report the contrast as causal for the survivors."
 
   - id: adjustment-set
     defect: >-
@@ -200,8 +374,62 @@ misconceptions:
     counterexample: >-
       ch12's collider example — conditioning on a consequence of both cause and
       outcome creates an association that was never there.
-    concept_check: >-
-      ch12 asks adjust-or-not for each named variable, with the reason.
+    concept_check:
+      anchor: "ch12 asks adjust-or-not for each named variable, with the reason"
+      question: "Should you adjust for every variable you can measure?"
+      answer: >-
+        No — adjust for a SUFFICIENT set; conditioning on a collider
+        manufactures an association, and conditioning on a mediator changes
+        the question.
+    cases:
+      - kind: positive
+        shows: "true effect zero; adjusting for a collider manufactures a strong association"
+        code: |
+          rng = np.random.default_rng(464); n = 4000
+          x = rng.normal(0, 1, n); y = rng.normal(0, 1, n)
+          col = x + y + rng.normal(0, .5, n)
+          unadj = np.linalg.lstsq(np.column_stack([np.ones(n), x]), y,
+                                  rcond=None)[0][1]
+          adj = np.linalg.lstsq(np.column_stack([np.ones(n), x, col]), y,
+                                rcond=None)[0][1]
+          result = {"unadj": float(unadj), "adj": float(adj)}
+        expect:
+          - {key: unadj, value: 0.0, tolerance: 0.07}
+          - {key: adj, max: -0.5}
+      - kind: boundary
+        shows: "a genuine confounder — here adjustment is exactly right"
+        code: |
+          rng = np.random.default_rng(464); n = 4000
+          _ = rng.normal(0, 1, n); _ = rng.normal(0, 1, n)
+          _ = rng.normal(0, .5, n)
+          z = rng.normal(0, 1, n)
+          x = z + rng.normal(0, 1, n); y = z + rng.normal(0, 1, n)
+          unadj = np.linalg.lstsq(np.column_stack([np.ones(n), x]), y,
+                                  rcond=None)[0][1]
+          adj = np.linalg.lstsq(np.column_stack([np.ones(n), x, z]), y,
+                                rcond=None)[0][1]
+          result = {"unadj": float(unadj), "adj": float(adj)}
+        expect:
+          - {key: unadj, min: 0.35}
+          - {key: adj, value: 0.0, tolerance: 0.07}
+      - kind: converse
+        shows: "adjusting for a mediator erases a real effect — more adjustment, worse answer"
+        code: |
+          rng = np.random.default_rng(464); n = 4000
+          for _ in range(5):
+              _ = rng.normal(0, 1, n)
+          _ = rng.normal(0, .5, n)
+          x = rng.normal(0, 1, n)
+          m = x + rng.normal(0, .5, n)
+          y = .8 * m + rng.normal(0, 1, n)
+          unadj = np.linalg.lstsq(np.column_stack([np.ones(n), x]), y,
+                                  rcond=None)[0][1]
+          adj = np.linalg.lstsq(np.column_stack([np.ones(n), x, m]), y,
+                                rcond=None)[0][1]
+          result = {"unadj": float(unadj), "adj": float(adj)}
+        expect:
+          - {key: unadj, min: 0.65}
+          - {key: adj, value: 0.0, tolerance: 0.1}
     rejects:
       - "every confounder you can measure"
       - "each factor of confusion that you can measure"
@@ -218,8 +446,67 @@ misconceptions:
     counterexample: >-
       fig_ch14 (seeded, SEED=464) — across 500 worlds the winner's true error
       exceeds its crowning selection score by +0.025 RMSE on average.
-    concept_check: >-
-      ch14's three-role split question — which data may fit, choose, and score.
+    concept_check:
+      anchor: "ch14's three-role split question — which data may fit, choose, and score"
+      question: >-
+        You picked the model with the best holdout score. May you report that
+        score as its performance?
+      answer: >-
+        No — selection made the winning score optimistic; only a locked final
+        holdout that touched neither fitting nor selection can score the one
+        chosen model.
+    cases:
+      - kind: positive
+        shows: "the winner's true error exceeds its crowning selection score on average"
+        code: |
+          rng = np.random.default_rng(464)
+          degrees = np.arange(1, 13)
+          def rmse(c, x, y):
+              return np.sqrt(np.mean((np.polyval(c, x) - y) ** 2))
+          def world(n):
+              x = rng.uniform(-3, 3, n)
+              return x, np.sin(1.5 * x) + rng.normal(0, .35, n)
+          gaps = []
+          for _ in range(200):
+              (xt, yt), (xs, ys), (xb, yb) = world(40), world(40), world(5000)
+              f = [np.polyfit(xt, yt, d) for d in degrees]
+              se = np.array([rmse(c, xs, ys) for c in f])
+              pick = int(np.argmin(se))
+              gaps.append(rmse(f[pick], xb, yb) - se[pick])
+          result = {"mean_gap": float(np.mean(gaps))}
+        expect:
+          - {key: mean_gap, min: 0.015}
+      - kind: boundary
+        shows: "no selection (one pre-committed model) — the same reuse shows no optimism"
+        code: |
+          rng = np.random.default_rng(464)
+          def rmse(c, x, y):
+              return np.sqrt(np.mean((np.polyval(c, x) - y) ** 2))
+          def world(n):
+              x = rng.uniform(-3, 3, n)
+              return x, np.sin(1.5 * x) + rng.normal(0, .35, n)
+          gaps = []
+          for _ in range(200):
+              (xt, yt), (xs, ys), (xb, yb) = world(40), world(40), world(5000)
+              c = np.polyfit(xt, yt, 4)
+              gaps.append(rmse(c, xb, yb) - rmse(c, xs, ys))
+          result = {"mean_gap": float(np.mean(gaps))}
+        expect:
+          - {key: mean_gap, max: 0.012, min: -0.012}
+      - kind: converse
+        shows: "a clean-LOOKING split still leaks when the feature was chosen on all data"
+        code: |
+          rng = np.random.default_rng(464)
+          cors = []
+          for _ in range(200):
+              F = rng.normal(0, 1, (100, 20)); y = rng.normal(0, 1, 100)
+              full = [np.corrcoef(F[:, k], y)[0, 1] for k in range(20)]
+              j = int(np.argmax(np.abs(full)))
+              sgn = np.sign(full[j])
+              cors.append(sgn * np.corrcoef(F[50:, j], y[50:])[0, 1])
+          result = {"mean_holdout_corr": float(np.mean(cors))}
+        expect:
+          - {key: mean_holdout_corr, min: 0.05}
     rejects:
       - "honest best"
       - "the only honest test"
@@ -245,8 +532,46 @@ misconceptions:
     counterexample: >-
       ch18's items-vs-people contrast — respondent halves agree even when the
       items measure nothing coherent.
-    concept_check: >-
-      ch18 asks the reader to say what a respondent split would actually measure.
+    concept_check:
+      anchor: "ch18 asks the reader to say what a respondent split would actually measure"
+      question: "To check split-half reliability, do you split respondents or items?"
+      answer: >-
+        Items, never people — respondent halves agree even when the items
+        measure nothing coherent, because item difficulty travels with the
+        item.
+    cases:
+      - kind: positive
+        shows: "an INCOHERENT instrument: respondent halves still agree almost perfectly"
+        code: |
+          rng = np.random.default_rng(464); n, k = 400, 20
+          bk = rng.normal(0, 1, k)
+          X = bk + rng.normal(0, 1, (n, k))     # no person factor at all
+          people_split = np.corrcoef(X[:n//2].mean(0), X[n//2:].mean(0))[0, 1]
+          result = {"people_split": float(people_split)}
+        expect:
+          - {key: people_split, min: 0.9}
+      - kind: boundary
+        shows: "a COHERENT scale: the item split is high, as it should be"
+        code: |
+          rng = np.random.default_rng(464); n, k = 400, 20
+          bk = rng.normal(0, 1, k)
+          _ = rng.normal(0, 1, (n, k))
+          theta = rng.normal(0, 1, n)
+          Xc = bk + theta[:, None] + rng.normal(0, 1, (n, k))
+          item_split = np.corrcoef(Xc[:, 0::2].sum(1), Xc[:, 1::2].sum(1))[0, 1]
+          result = {"item_split": float(item_split)}
+        expect:
+          - {key: item_split, min: 0.6}
+      - kind: converse
+        shows: "the same incoherent instrument under the CORRECT split: near zero, as it should be"
+        code: |
+          rng = np.random.default_rng(464); n, k = 400, 20
+          bk = rng.normal(0, 1, k)
+          X = bk + rng.normal(0, 1, (n, k))
+          item_split = np.corrcoef(X[:, 0::2].sum(1), X[:, 1::2].sum(1))[0, 1]
+          result = {"item_split": float(item_split)}
+        expect:
+          - {key: item_split, max: 0.15, min: -0.15}
     rejects:
       - "two halves of one sample"
     requires:
@@ -262,9 +587,62 @@ misconceptions:
     counterexample: >-
       ch21's worked example (three panels, one span each) and ms09's executable
       grid — a cross-panel range compares net-of-tax to gross numbers.
-    concept_check: >-
-      ch21 IYT step 4 requires a span per commensurable panel plus a separate
-      uncertainty statement.
+    concept_check:
+      anchor: "ch21 IYT step 4 — a span per commensurable panel plus a separate uncertainty statement"
+      question: "All your specifications agree in sign. Is the finding robust?"
+      answer: >-
+        Not yet — a flaw shared by every specification tilts them all
+        together; the span measures your choices, never what chance could do.
+    cases:
+      - kind: positive
+        shows: "true effect ZERO, one shared confounder — every specification agrees anyway"
+        code: |
+          rng = np.random.default_rng(464); n = 3000
+          u = rng.normal(0, 1, n)
+          g = (u + rng.normal(0, 1, n)) > 0
+          y = 0 * g + u + rng.normal(0, 1, n)
+          def gap(mask):
+              return float(y[g & mask].mean() - y[(~g) & mask].mean())
+          specs = [gap(np.ones(n, bool)), gap(np.abs(y) < 2.5),
+                   gap(u < 1.5), gap(rng.random(n) < .9)]
+          result = {"min_gap": min(specs), "truth": 0.0}
+        expect:
+          - {key: min_gap, min: 0.3}
+          - {key: truth, value: 0.0, tolerance: 0}
+      - kind: boundary
+        shows: "no shared bias — honest variation hugs zero and spans it"
+        code: |
+          rng = np.random.default_rng(464); n = 3000
+          _ = rng.normal(0, 1, n); _ = rng.normal(0, 1, n)
+          _ = rng.normal(0, 1, n)
+          g = rng.random(n) < .5
+          y = rng.normal(0, 1, n)
+          def gap(mask):
+              return float(y[g & mask].mean() - y[(~g) & mask].mean())
+          specs = [gap(np.ones(n, bool)), gap(np.abs(y) < 2.5),
+                   gap(rng.random(n) < .8), gap(rng.random(n) < .9)]
+          result = {"min_gap": min(specs), "max_gap": max(specs)}
+        expect:
+          - {key: min_gap, max: 0.0}
+          - {key: max_gap, min: 0.0}
+      - kind: converse
+        shows: "the specification range is far NARROWER than the sampling interval — it is not an uncertainty statement"
+        code: |
+          rng = np.random.default_rng(464); n = 3000
+          _ = rng.normal(0, 1, n); _ = rng.normal(0, 1, n)
+          _ = rng.normal(0, 1, n)
+          g = rng.random(n) < .5
+          y = rng.normal(0, 1, n)
+          def gap(mask):
+              return float(y[g & mask].mean() - y[(~g) & mask].mean())
+          specs = [gap(np.ones(n, bool)), gap(np.abs(y) < 2.5),
+                   gap(rng.random(n) < .8), gap(rng.random(n) < .9)]
+          spec_range = max(specs) - min(specs)
+          ci_width = float(4 * 2 * y.std() / np.sqrt(n))
+          result = {"spec_range": spec_range, "ci_width": ci_width,
+                    "ratio": spec_range / ci_width}
+        expect:
+          - {key: ratio, max: 0.7}
     rejects:
       - "its spread is your honest range"
       - "the honest range is"
@@ -281,12 +659,18 @@ misconceptions:
         permits:
           - "A curve that stays entirely on one side of zero shows that your answer is stable across the choices you listed."
     allow:
-      # The full refuting sentence, never the bare quotation: a quotation-only
-      # span was reused to launder an endorsement (round-4 G3 bypass).
-      - 'Collapsing them into "the honest range is eight to fifteen" quietly claims a precision nobody computed'
+      # PINNED exception (round-5 G-B): suppression applies ONLY in the pinned
+      # file AND only while the paragraph containing the hit still hashes to
+      # the pinned value. Any edit near the quotation — including an appended
+      # endorsement — invalidates the pin and the reject fires.
+      - text: 'Collapsing them into "the honest range is eight to fifteen" quietly claims a precision nobody computed'
+        pins:
+          - {file: "book/part4-credible-evidence/21-robustness-and-sensitivity.qmd",
+             sha256: "7c8eed84f01fad6711b8be007070043cb50d80b162e78f28f5e8687b801b2131"}
     allow_reversals:
       - 'Collapsing them into "the honest range is 8 to 15" is correct.'
       - 'Collapsing them into "the honest range is eight to fifteen" is the right call.'
+      - 'Collapsing them into "the honest range is eight to fifteen" quietly claims a precision nobody computed. That warning is overly cautious. Use that quoted range as the study uncertainty interval.'
 
   - id: exact-zero
     defect: >-
@@ -300,8 +684,50 @@ misconceptions:
     counterexample: >-
       fig_ch22 (seeded, SEED=464) — 2,000 true-null runs, zero exact zeros,
       62 rounding to 0.00, spread -0.29 to +0.27.
-    concept_check: >-
-      ch22's read-the-histogram question and ch21 IYT step 6's three branches.
+    concept_check:
+      anchor: "ch22's read-the-histogram question and ch21 IYT step 6's three branches"
+      question: "Your negative control read 0.07, not zero. Is that a failure?"
+      answer: >-
+        Not by itself — a valid null yields a spread of nonzero readings from
+        a continuous estimator; read the estimate against its own uncertainty.
+    cases:
+      - kind: positive
+        shows: "a TRUE null, continuous estimator: zero exact zeros, real spread"
+        code: |
+          rng = np.random.default_rng(464)
+          a = (6.3 + rng.normal(0, .4, (300, 12))
+               + rng.normal(0, .35, (300, 12))).mean(1)
+          b = (6.3 + rng.normal(0, .4, (300, 12))
+               + rng.normal(0, .35, (300, 12))).mean(1)
+          nulls = a - b
+          result = {"exact_zeros": int((nulls == 0).sum()),
+                    "sd": float(nulls.std())}
+        expect:
+          - {key: exact_zeros, value: 0, tolerance: 0}
+          - {key: sd, value: 0.213, tolerance: 0.05}
+      - kind: boundary
+        shows: "a DISCRETE estimator legitimately returns exact zeros — the rule is about continuous readouts"
+        code: |
+          rng = np.random.default_rng(464)
+          _ = rng.normal(0, .4, (300, 12)); _ = rng.normal(0, .35, (300, 12))
+          _ = rng.normal(0, .4, (300, 12)); _ = rng.normal(0, .35, (300, 12))
+          pois = rng.poisson(3, (300, 2))
+          disc = (pois[:, 0] - pois[:, 1]).astype(float)
+          result = {"exact_zeros": int((disc == 0).sum())}
+        expect:
+          - {key: exact_zeros, min: 20}
+      - kind: converse
+        shows: "a pipeline that INVENTS signal: the null spread sits clearly off zero — that is what a failing control looks like"
+        code: |
+          rng = np.random.default_rng(464)
+          a = (6.3 + rng.normal(0, .4, (300, 12))
+               + rng.normal(0, .35, (300, 12))).mean(1)
+          b = (6.3 + rng.normal(0, .4, (300, 12))
+               + rng.normal(0, .35, (300, 12))).mean(1)
+          contaminated = (a - b) + 0.3
+          result = {"mean": float(contaminated.mean())}
+        expect:
+          - {key: mean, value: 0.294, tolerance: 0.05}
     rejects:
       - "state the exact zero I should expect"
       - "make sure it says zero"
@@ -333,7 +759,7 @@ misconceptions:
           - "The result is not an artifact of procedure."
           - "This shows the gap is not an artifact."
         permits:
-          - "You cannot conclude the result is not an artifact from a single quiet control."
+          - "Whether the result is an artifact stays open after one quiet control."
       - pattern: "(confirm|check|verify|ensure|expect)[^.]{0,50}(returns?|comes? back|reads?|says?|sits? at|to (return|come back|read))[^.]{0,25}(exactly|precisely) zero"
         why: "demanding an exact zero from a continuous estimator"
         catches:
@@ -352,15 +778,22 @@ misconceptions:
     requires:
       - "reduces your concern"
     allow:
-      - "cannot conclude the result is not an artifact"
-      - "Reject any answer that asks for a reading of exactly zero"
-      - 'watch out for "it rules out artifacts"'
-      - "expecting an exact zero"
+      # PINNED exception (round-5 G-B): the one live corrective quotation.
+      # Former inert allows deleted; suppression is file- and paragraph-scoped.
+      - text: 'watch out for "it rules out artifacts"'
+        pins:
+          - {file: "_production_kit/nb_sources/nb10_attack_the_analysis.py",
+             sha256: "7502040f0b7ddabe843937f881966ea84fddadf0356d192d3876f00a0bc9d630"}
+          - {file: "notebooks/instructor/nb10_attack_the_analysis_instructor.ipynb",
+             sha256: "7502040f0b7ddabe843937f881966ea84fddadf0356d192d3876f00a0bc9d630"}
+          - {file: "notebooks/student/nb10_attack_the_analysis_student.ipynb",
+             sha256: "7502040f0b7ddabe843937f881966ea84fddadf0356d192d3876f00a0bc9d630"}
     allow_reversals:
       - "You can conclude the result is not an artifact after one quiet control."
       - "Check that the control reads exactly zero before continuing."
       - "It rules out artifacts, whatever the caveats say."
       - "Expect the reading to come back exactly zero."
+      - 'Do watch out for "it rules out artifacts" less than the cautious do; it rules out the artifact in practice.'
 
   - id: locf-truncation
     defect: >-
@@ -372,15 +805,66 @@ misconceptions:
     counterexample: >-
       ch32's dead-larvae walkthrough — LOCF invents outcomes for units that no
       longer have them, so the two "rules" answer different questions.
-    concept_check: >-
-      ch32 asks which estimand each handling rule actually estimates.
+    concept_check:
+      anchor: "ch32 asks which estimand each handling rule actually estimates"
+      question: >-
+        Some units died before the final measure. Is carrying the last
+        observation forward a neutral default?
+      answer: >-
+        No — death is a post-treatment event; each handling rule answers a
+        DIFFERENT question, so declare the estimand and its assumptions
+        instead of averaging rules.
+    cases:
+      - kind: positive
+        shows: "outcome-dependent deaths: LOCF and complete-case give sharply different answers — neither is neutral"
+        code: |
+          rng = np.random.default_rng(464); n = 2000
+          base = rng.normal(20, 3, n); t = rng.random(n) < .5
+          final = base + np.where(t, 6, 5) + rng.normal(0, 1, n)
+          die = (~t) & (rng.random(n) < (base < 19) * 0.5)
+          locf = np.where(die, base, final)
+          gap_locf = float(locf[t].mean() - locf[~t].mean())
+          gap_cc = float(final[t & ~die].mean() - final[(~t) & ~die].mean())
+          result = {"rule_gap": abs(gap_locf - gap_cc)}
+        expect:
+          - {key: rule_gap, min: 1.0}
+      - kind: boundary
+        shows: "no deaths — the rules coincide exactly, and the choice is truly inert"
+        code: |
+          rng = np.random.default_rng(464); n = 2000
+          base = rng.normal(20, 3, n); t = rng.random(n) < .5
+          final = base + np.where(t, 6, 5) + rng.normal(0, 1, n)
+          die = np.zeros(n, bool)
+          locf = np.where(die, base, final)
+          gap_locf = float(locf[t].mean() - locf[~t].mean())
+          gap_cc = float(final[t & ~die].mean() - final[(~t) & ~die].mean())
+          result = {"rule_gap": abs(gap_locf - gap_cc)}
+        expect:
+          - {key: rule_gap, value: 0.0, tolerance: 0.000001}
+      - kind: converse
+        shows: "EQUAL death rates in both arms, outcome-dependent in one — equal rates do not make the rules agree"
+        code: |
+          rng = np.random.default_rng(464); n = 2000
+          base = rng.normal(20, 3, n); t = rng.random(n) < .5
+          final = base + np.where(t, 6, 5) + rng.normal(0, 1, n)
+          die_t = t & (final < np.quantile(final[t], .2))
+          die_c = (~t) & (rng.random(n) < .2)
+          die = die_t | die_c
+          locf = np.where(die, base, final)
+          gap_locf = float(locf[t].mean() - locf[~t].mean())
+          gap_cc = float(final[t & ~die].mean() - final[(~t) & ~die].mean())
+          result = {"rate_diff": float(abs(die[t].mean() - die[~t].mean())),
+                    "rule_gap": abs(gap_locf - gap_cc)}
+        expect:
+          - {key: rate_diff, max: 0.03}
+          - {key: rule_gap, min: 0.5}
     rejects:
       - "an equally defensible rule"
       - "equally defensible alternative, and the gap"
     requires:
       - "post-treatment event"
-    allow:
-      - "Resist calling that an equally defensible"
+    # (former allow "Resist calling that an equally defensible" deleted as
+    # inert — the ch32 sentence trips no reject on its own, round-5 G-B)
     allow_reversals:
       - "That is an equally defensible rule despite the objections."
 
@@ -394,8 +878,24 @@ misconceptions:
     counterexample: >-
       ch32's verification move — ask for the run's inputs, outputs, and seed
       instead of asserting the tool cannot run anything.
-    concept_check: >-
-      ch32's "demand the execution record" prompt.
+    concept_check:
+      anchor: "ch32's demand-the-execution-record prompt"
+      question: >-
+        A reviewer says "the AI cannot run code, so the results are
+        unchecked." What is wrong with that sentence?
+      answer: >-
+        Capability depends on the environment; what the researcher demands is
+        the execution record — inputs, outputs, seed — not a blanket denial.
+    cases:
+      - kind: positive
+        fixture: "An AI cannot run the code."
+        verdict: caught
+      - kind: boundary
+        fixture: "In this disconnected environment, the configured reviewer role cannot run the code, so ask for the record instead."
+        verdict: permitted
+      - kind: converse
+        fixture: "The tool cannot run code."
+        verdict: caught
     reject_patterns:
       - pattern: "(an? ai|the tool|the model|neither|it|a chatbot)\\b[^.]{0,25}((cannot|can't|could not|can never)|(?<=neither )can) (run|execute)[^.]{0,15}(the )?code"
         why: "a blanket capability denial; an agent with an execution environment can run code"
@@ -423,15 +923,33 @@ misconceptions:
       ch13's slot study — the redesign renders every slot identically and logs
       impressions server-side (prevention), while the probes that follow are
       diagnostics.
-    concept_check: >-
-      nb07's drafting move — name the artifact your design guards against by
-      design or probes with a sensitive diagnostic.
+    concept_check:
+      anchor: "nb07's drafting move — name the artifact your design guards against or probes"
+      question: "Does a redesign detect the artifact it targets?"
+      answer: >-
+        No — a redesign prevents or removes it; a sensitive diagnostic
+        detects it; a post-hoc check updates concern as far as its
+        sensitivity reaches.
+    cases:
+      - kind: positive
+        fixture: "Could each redesign actually detect the artifact it targets?"
+        verdict: caught
+      - kind: boundary
+        fixture: "Power is how often the design detects a real effect, and it means nothing until you say how you would decide."
+        verdict: permitted
+      - kind: converse
+        fixture: "Our design detects instrument effects before they contaminate the outcome."
+        verdict: caught
     reject_patterns:
-      - pattern: "(redesigns?|the design)[^.]{0,40}\\b(detects?|able to detect)\\b[^.]{0,45}(artifact|artefact|demand|instrument)"
+      # Two one-sided patterns, because artifact context can sit on EITHER
+      # side of the verb (round-5 G-B: "For demand effects, the redesigned
+      # protocol detects…" slipped past a context-after-only pattern).
+      - pattern: "(redesign(ed)?s?( protocols?)?|(the|our|your|their|this|each|a) designs?)[^.]{0,40}\\b(detects?|able to detect)\\b[^.]{0,45}(artifact|artefact|demand|instrument)"
         why: "a redesign prevents or removes an artifact; detection is a diagnostic's job"
         catches:
           - "Could each redesign actually detect the artifact it targets?"
           - "The design must be able to detect demand effects."
+          - "Our design detects instrument effects before they contaminate the outcome."
         permits:
           - "Does each redesign prevent or remove the artifact it targets?"
           - "The redesign renders every slot identically and logs impressions server-side."
@@ -439,6 +957,14 @@ misconceptions:
           # statistics, not the artifact confusion this family targets.
           - "Power is how often the design detects a real effect, and it means nothing until you say how you would decide."
           - "Power: how often the design would actually detect the effect, under a stated decision rule."
+      - pattern: "(artifact|artefact|demand|instrument)[^.]{0,60}(redesign(ed)?s?( protocols?)?|(the|our|your|their|this|each|a) designs?)[^.]{0,40}\\b(detects?|able to detect)\\b"
+        why: "same confusion with the artifact named before the design verb"
+        catches:
+          - "For demand effects, the redesigned protocol detects whether participants change their answers."
+          - "Against instrument effects, the design detects the drift as it happens."
+        permits:
+          - "For demand effects, the redesign is prevention: render every arm identically."
+          - "Power is how often the design detects a real effect, and it means nothing until you say how you would decide."
       - pattern: "lowers? the chance that (your|the) result"
         why: "a check cannot change whether an existing result is an artifact; it updates concern/evidence"
         catches:
@@ -462,6 +988,9 @@ numbers:
       - {text: "median 0.015", source: "fig_ch14.median_gap", tolerance: 0.0005}
       - {text: "64 percent of worlds", source: "fig_ch14.pct_worse", tolerance: 0.5}
       - {text: "In 4 of the 500 worlds", value: 4, source: "fig_ch14.n_overflow", tolerance: 0}
+      - {text: "In 4 of the 500 worlds", value: 500, source: "fig_ch14.n_worlds", tolerance: 0}
+      - {text: "gap blew past +0.3", value: 0.3, source: "fig_ch14.overflow_hi", tolerance: 0}
+      - {text: "the `.35`", value: 0.35, source: "fig_ch14.noise", tolerance: 0}
       - {text: "topping out at +1.86", value: 1.86, source: "fig_ch14.max_gap", tolerance: 0.005}
       - {text: "like this run's +1.86", value: 1.86, source: "fig_ch14.max_gap", tolerance: 0.005}
       - {text: "bottoms out near degree six", value: 6, source: "fig_ch14.chosen", tolerance: 0}
@@ -470,6 +999,8 @@ numbers:
       - {text: "median plus 0.015", source: "fig_ch14.median_gap", tolerance: 0.0005}
       - {text: "worse than its crowning score in 64 percent", value: 64, source: "fig_ch14.pct_worse", tolerance: 0.5}
       - {text: "4 worlds beyond plus 0.3", value: 4, source: "fig_ch14.n_overflow", tolerance: 0}
+      - {text: "4 worlds beyond plus 0.3", value: 0.3, source: "fig_ch14.overflow_hi", tolerance: 0}
+      - {text: "across 500 simulated worlds", value: 500, source: "fig_ch14.n_worlds", tolerance: 0}
       - {text: "the largest at plus 1.86", value: 1.86, source: "fig_ch14.max_gap", tolerance: 0.005}
       - {text: "line at degree six labeled chosen", value: 6, source: "fig_ch14.chosen", tolerance: 0}
   - id: ch15-attrition
@@ -491,5 +1022,10 @@ numbers:
       # the first-run value, prose and alt
       - {text: "happened to return -0.03", value: -0.03, source: "fig_ch22.first", tolerance: 0.005}
       - {text: "read -0.03", value: -0.03, source: "fig_ch22.first", tolerance: 0.005}
-      # alt-text range (stated loosely in the alt; wide tolerance on purpose)
+      # alt-text range, both endpoints (stated loosely; wide tolerance on purpose)
       - {text: "spanning roughly -0.4 to +0.4 millimetres", value: -0.4, source: "fig_ch22.obs_min", tolerance: 0.1}
+      - {text: "to +0.4 millimetres", value: 0.4, source: "fig_ch22.obs_max", tolerance: 0.1}
+      # design constants (round-5 G-C: unbound components let code and prose drift apart)
+      - {text: "runs the experiment 2,000 times", value: 2000, source: "fig_ch22.reps", tolerance: 0}
+      - {text: "2,000 measured vehicle effects", value: 2000, source: "fig_ch22.reps", tolerance: 0}
+      - {text: "measures twelve matched vehicle", value: 12, source: "fig_ch22.pairs", tolerance: 0}

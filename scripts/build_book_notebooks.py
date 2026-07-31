@@ -544,8 +544,19 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
 
 
 def main() -> None:
+    # D36 freeze (round-5 L1): PT/ES are FROZEN until the end-of-project
+    # translation pass — generating their companions from frozen sources would
+    # still rewrite tracked artifacts, so the generator defaults to EN only.
+    # Pass --editions all (or pt/es) ONLY when the freeze is lifted.
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--editions", default="en",
+                    choices=["en", "pt", "es", "all"],
+                    help="editions to generate (default en — D36 freeze)")
+    sel = ap.parse_args().editions
+    active = [ed for ed in EDITIONS if sel == "all" or ed["code"] == sel]
     total = 0
-    for ed in EDITIONS:
+    for ed in active:
         book_dir = REPO / ed["book_dir"]
         out_dir = REPO / "notebooks" / "book" / ed["out_sub"]
         out_dir.mkdir(parents=True, exist_ok=True)

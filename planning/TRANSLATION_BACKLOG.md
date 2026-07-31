@@ -43,41 +43,41 @@ replace it.
 
 ## B. Structural changes accumulating during the freeze (Phases 2–4)
 
-4. **Two new lessons** (uncertainty foundations; ethics & data governance) —
+5. **Two new lessons** (uncertainty foundations; ethics & data governance) —
    full translation, including seeded-simulation labels localized via
    `scripts/build_book_sim_figures.py`.
-5. **Spine reorganization** — manifest-generated `_quarto.yml` order, any
+6. **Spine reorganization** — manifest-generated `_quarto.yml` order, any
    chapter renumbering, hard-coded chapter-number prose references swept to
    links. PT/ES `_quarto.yml` must be regenerated to mirror the EN manifest.
-6. **Station workbooks (12) + versioned Research Contract** — new files,
+7. **Station workbooks (12) + versioned Research Contract** — new files,
    full translation.
-7. **De-coursing edits** — Part VI retitle, ch33 dossier→note, ch37
+8. **De-coursing edits** — Part VI retitle, ch33 dossier→note, ch37
    medium-neutral release audit, course-lab paragraphs moved out of chapter
    bodies, F10 reframing, preface updated to the stations spine.
-8. **Authored rubrics** (`planning/BOOK_ASSESSMENTS.yml`) — localized rubric
+9. **Authored rubrics** (`planning/BOOK_ASSESSMENTS.yml`) — localized rubric
    cells replace the auto-derived IYT rubrics in PT/ES companions.
-9. **References apparatus** — `references.bib` shared; any in-prose citation
+10. **References apparatus** — `references.bib` shared; any in-prose citation
    sentences translated.
-10. **PT/ES companion notebooks** (`notebooks/book/pt/`, `notebooks/book/es/`)
+11. **PT/ES companion notebooks** (`notebooks/book/pt/`, `notebooks/book/es/`)
     — regenerate with `scripts/build_book_notebooks.py` ONLY after the PT/ES
     chapters are resynchronized (the generator skips PT/ES during the freeze).
 
 ## C. Verification required before the freeze lifts
 
-11. **Human PT/ES methods review** — required by round 4: an English
+12. **Human PT/ES methods review** — required by round 4: an English
     substring scanner cannot certify translated meaning; a human methods
-    reader per language signs off on ch06/09/10/12/14/15/18/21/22/25/32 at
+    reader per language signs off on ch06/09/10/12/13/14/15/18/21/22/25/32 at
     minimum. Davi schedules this.
-12. **Misconception gate over PT/ES** — extend/verify
+13. **Misconception gate over PT/ES** — extend/verify
     `planning/MISCONCEPTION_MANIFEST.yml` translated `rejects` families
     against the resynchronized text; `validate_misconceptions.py` green.
     Round-4 G4 addition: the `numbers:` evaluator must gain PER-EDITION
     claims — PT/ES numeric prose AND localized alt text for ch14/ch15/ch22
     (and any new seeded figure) — so a decimal-rendering drift in one
     language fails on its own.
-13. **Sync validator over all three editions** — `validate_book_sync.py`
+14. **Sync validator over all three editions** — `validate_book_sync.py`
     restored to three-edition scope (EN-only scope during the freeze).
-14. **Remove the freeze apparatus** — delete the development notices from
+15. **Remove the freeze apparatus** — delete the development notices from
     both `_lang-switcher.html` files, restore any EN-page language buttons
     repointed to the PT/ES index (Phase 3) back to per-page counterparts,
     restore CLAUDE.md §6 to the resynchronize-on-every-edit rule, and mark

@@ -260,7 +260,10 @@ def fig_ch14(s: dict, out: Path) -> dict:
             "final_at_chosen": final_err, "mean_gap": gaps.mean(),
             "median_gap": float(np.median(gaps)),
             "pct_worse": 100 * (gaps > 0).mean(),
-            "n_overflow": n_over, "max_gap": gaps.max()}
+            "n_overflow": n_over, "max_gap": gaps.max(),
+            # design constants, exported so the numbers gate can bind every
+            # component the prose states (round-5 G-C)
+            "n_worlds": 500, "noise": .35, "overflow_hi": hi}
 
 
 def fig_ch15(s: dict, out: Path) -> dict:
@@ -382,11 +385,25 @@ def fig_ch22(s: dict, out: Path) -> dict:
     return {"mean": nulls.mean(), "sd": nulls.std(), "lo": lo, "hi": hi,
             "first": observed, "exact_zeros": int((nulls == 0).sum()),
             "rounded_zeros": int((nulls.round(2) == 0).sum()),
-            "obs_min": float(nulls.min()), "obs_max": float(nulls.max())}
+            "obs_min": float(nulls.min()), "obs_max": float(nulls.max()),
+            # design constants for the numbers gate (round-5 G-C)
+            "reps": reps, "pairs": pairs}
 
 
 def main() -> None:
-    for edition, strings in L.items():
+    # D36 freeze (round-5 L1): localized figures for PT/ES are frozen with
+    # their editions; generate EN only until the translation pass.
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--editions", default="en",
+                    help="'en' (default, D36 freeze), 'all', or a comma list "
+                         "of edition dirs")
+    sel = ap.parse_args().editions
+    active = (L if sel == "all"
+              else {k: v for k, v in L.items()
+                    if k in {"book" if s == "en" else f"book-{s}"
+                             for s in sel.split(",")}})
+    for edition, strings in active.items():
         out = REPO / edition / "images" / "sims"
         out.mkdir(parents=True, exist_ok=True)
         stats11 = fig_ch11(strings, out)

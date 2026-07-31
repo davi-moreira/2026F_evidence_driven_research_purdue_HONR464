@@ -27,6 +27,7 @@ Usage: .venv/bin/python scripts/nbbuild.py nb01 [nb02 ...] [ms04 ...] [--no-exec
 from __future__ import annotations
 
 import importlib.util
+import json
 import re
 import subprocess
 import sys
@@ -223,6 +224,29 @@ def execute(path: Path) -> None:
     print(f"✓ executed {path.name} — {n_out} code cells produced output")
 
 
+def stamp_generation(instr: Path) -> None:
+    """Record the canonical source's content hash in both generated notebooks.
+
+    `validate_misconceptions.py --local` compares this stamp against the
+    current source: a content change without a rebuild fails the gate. An
+    mtime heuristic was defeatable by timestamp restoration (round-5 G-D);
+    content hashes are not. The generator's own hash is recorded as
+    provenance (not checked, so a tooling tweak does not stale every build).
+    """
+    import hashlib
+    stem = instr.stem.replace("_instructor", "")
+    src = SOURCES / f"{stem}.py"
+    stamp = {
+        "src_sha256": hashlib.sha256(src.read_bytes()).hexdigest(),
+        "generator_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+    }
+    student = REPO / "notebooks" / "student" / f"{stem}_student.ipynb"
+    for path in (instr, student):
+        nb = nbformat.read(path, as_version=4)
+        nb.metadata["edrai_generation"] = stamp
+        nbformat.write(nb, path)
+
+
 def main() -> None:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     do_exec = "--no-exec" not in sys.argv
@@ -238,6 +262,7 @@ def main() -> None:
             execute(instr)
         subprocess.run([sys.executable, str(REPO / "scripts" / "make_student.py"),
                         str(instr)], check=True)
+        stamp_generation(instr)
         tag = f"ms{n:02d}" if is_ms else f"nb{n:02d}"
         subprocess.run([sys.executable, str(REPO / "scripts" / "validate_notebooks.py"),
                         tag], check=True)
