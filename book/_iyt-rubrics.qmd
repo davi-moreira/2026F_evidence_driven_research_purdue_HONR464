@@ -280,7 +280,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 2 | Hand over one well-specified task at a time | |
 | Step 3 | Keep a cycle log as you go: one line per turn with what you asked, what came back, and what you changed and why | |
 | Step 4 | Re-derive at least two numbers yourself, by hand or with a second simple expression, before any of them enter a claim | |
-| Step 5 | Run a placebo: shuffle your group labels, re-run the same code unchanged, and confirm the fake gap collapses to near zero | |
+| Step 5 | Run a placebo: shuffle your group labels, re-run the same code unchanged, and confirm the fake gap lands in the ordinary part of that pile | |
 | Step 6 | Log the analysis in your AI Research Ledger, cycle log attached, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
@@ -295,7 +295,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 3 | Before you run anything, run your list through the gate | |
 | Step 4 | Run every check on your list | |
 | Step 5 | Ask what every version on your list has in common | |
-| Step 6 | Add one placebo: shuffle your group labels many times, rerun the same analysis on each shuffle, and collect the gaps | |
+| Step 6 | Add one placebo | |
 | Step 7 | Read back your AI cycle log and mark any re-prompt that followed a disappointing number | |
 | Step 8 | Log the pre-listed plan and its full results in your AI Research Ledger, and verify at least one output with a named method from the Verification… | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |

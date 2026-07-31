@@ -81,8 +81,8 @@ COMPASS_CHEAT_SHEET = """\
 - **The kind rule (D35):** the question's KIND comes from its words and never
   changes with the data. A causal question a design cannot identify is "causal,
   currently unidentified" — never relabeled descriptive.
-- One-liner to repeat: **"You buy kind and reach with your data strategy, and
-  you prove the purchase with diagnosis."**
+- One-liner to repeat: **"Your data buy what you may CLAIM, never what you
+  ASKED. A causal question you cannot identify stays causal."**
 """
 
 

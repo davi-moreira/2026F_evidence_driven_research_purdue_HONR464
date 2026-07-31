@@ -42,20 +42,37 @@ analysis produced, such as a difference of 6 points between two group averages. 
 lower blood pressure." Turning the first into the second is a decision, not a
 formatting step, because you choose how much the sentence is allowed to say.
 
-Three ideas govern that choice.
+Four ideas govern that choice, and keeping the first three apart is what stops
+overclaiming before it starts.
 
-Your **compass position** is the kind and reach of the question your project
-answered: did you describe the cases you observed, or establish that one thing
-caused another? Example: if you watched who already chose to walk, you ran a
-descriptive comparison, not a causal test. Your **claim boundary** is the line
-between what your evidence licenses and what it does not, and it lives in the
-headline verb. Example: an observational project may write "was associated with
-lower," never "lowered." The verb is where a claim quietly crosses the line.
+Your **question** is what you set out to learn, and its kind comes from its own
+words. Example: "does walking lower blood pressure?" asks what an intervention
+would change, so it is causal, and it stays causal no matter which data you
+managed to collect.
 
-The last idea is where the claim's honesty becomes visible. **Uncertainty in the
+Your **identification status** is whether this design can actually deliver that
+answer. Example: if you watched who already chose to walk, nothing separates the
+walking from the kind of person who walks, so your status is causal and currently
+unidentified. That is a fact about the design, not a demotion of the question.
+
+Your **result** is the quantity this evidence did produce. Here that is a
+descriptive association between walking and blood pressure, which is real and worth
+reporting, and which sits beside the causal question rather than replacing it.
+
+Your **claim boundary** is what those three together license you to write, and it
+lives in the headline verb. Example: with no identification argument, you write "was
+associated with lower," never "lowered." Read the condition carefully: what earns a
+causal verb is a defended identification argument. Randomizing is the cleanest way
+to get one, and a later chapter shows observational designs that carry causal
+answers when their assumptions are argued and defended. What you may never do is
+use the verb without the argument.
+
+One more idea makes the claim's honesty visible. **Uncertainty in the
 same eye-span** means the interval or caveat sits right beside the claim, not in a
 footnote. Example: "about 6 points lower (95% interval: 1 to 11)" printed under the
-headline, so a reader meets the doubt at the same moment as the number. A bound a
+headline, so a reader meets the doubt at the same moment as the number. The numbers
+in this chapter's examples are constructed to make the point; a later chapter builds
+intervals properly. A bound a
 reader has to hunt for is a bound doing hidden work.
 
 One more habit backs all of this. **Traceability** means every number you show walks
@@ -81,15 +98,18 @@ answer it. Nobody was assigned to walk, so the active group may differ in age, d
 or baseline health, and the comparison leaves that untouched. Your status is a causal
 question this design does not identify, which fixes what the claim may say. The verb
 "lowers" claims a crossing the design never paid for, and the honest verb is "was
-associated with lower." The truncated axis has to drop to the full scale,
-so the 6-point gap reads as the modest difference it is. The 95% interval runs
-roughly 1 to 11 points, wide enough that the honest headline must carry it in the
+associated with lower." The truncated axis is the next problem: bars encode
+magnitude, so starting them at 125 makes a 6-point gap look like a cliff. Start the
+bars at a meaningful zero, or better, plot the two group averages as points with
+their intervals on a blood-pressure scale a clinician would recognize. The interval
+reported here runs roughly 1 to 11 points (constructed for the example), wide enough
+that the honest headline must carry it in the
 same eye-span. And each bar gets a direct value label, so a color-blind or
 screen-reader reader receives the number, not just the hue.
 
 The locked claim: "In this sample, more-active volunteers averaged about 6 points
 lower resting systolic blood pressure (95% interval: 1 to 11); this is an observed
-association, not evidence that walking caused the drop." Same result, a claim that
+association, and this design does not identify whether walking caused the drop." Same result, a claim that
 survives the judge.
 
 ## The Colab laboratory

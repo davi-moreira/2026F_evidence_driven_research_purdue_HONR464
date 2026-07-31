@@ -214,7 +214,7 @@ analysis stays one analysis instead of a quiet search.*
 4. Re-derive at least two numbers yourself, by hand or with a second simple expression,
    before any of them enter a claim.
 5. Run a placebo: shuffle your group labels, re-run the same code unchanged, and confirm
-   the fake gap collapses to near zero.
+   the fake gap lands in the ordinary part of that pile.
 6. Log the analysis in your AI Research Ledger, cycle log attached, and verify at least
    one output with a named method from the [Verification Guide](../verification-guide.qmd).
    **Alternative code** fits a computed gap well. An AI reviewer may run the check with

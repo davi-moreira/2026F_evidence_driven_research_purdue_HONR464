@@ -170,17 +170,18 @@ def fig_ch14(s: dict, out: Path) -> dict:
 
     Left: training error falls forever while selection error turns up; the
     degree is chosen on the SELECTION set, and only that one choice is scored
-    on the locked final holdout. Right: model-selection bias measured as the
-    verdict defines it — an EXPECTATION. In each of 500 fresh worlds the
-    winner's true error (a 10,000-point independent sample standing in for
-    the truth) is compared with the selection score that crowned it. Mean,
-    median, share-worse, and the tail are all reported; nothing is clipped
-    without an overflow mark.
+    on the locked final holdout. Right: model-selection bias measured as an
+    EXPECTATION — in each of 500 fresh worlds the winner's true error (a
+    10,000-point independent sample standing in for the truth) is compared
+    with the selection score that crowned it. Mean, median, share-worse, and
+    the tail are all reported; nothing is clipped without an overflow mark.
+
+    Each panel restarts its own generator from SEED, so the code blocks
+    printed in the chapter reproduce these numbers exactly (D26 sync rule).
     """
-    rng = np.random.default_rng(SEED)
     degrees = np.arange(1, 13)
 
-    def world(n):
+    def world(rng, n):
         x = rng.uniform(-3, 3, n)
         return x, np.sin(1.5 * x) + rng.normal(0, .35, n)
 
@@ -188,22 +189,24 @@ def fig_ch14(s: dict, out: Path) -> dict:
         x, y = data
         return np.sqrt(np.mean((np.polyval(coefs, x) - y) ** 2))
 
-    def one_world():
-        training, selection = world(40), world(40)
-        big = world(10_000)               # stands in for the model's true risk
-        fits = [np.polyfit(training[0], training[1], d) for d in degrees]
-        tr = np.array([rmse(c, training) for c in fits])
-        sel = np.array([rmse(c, selection) for c in fits])
-        chosen = int(np.argmin(sel))
-        return tr, sel, chosen, rmse(fits[chosen], big), fits
+    # --- left panel: one world, the three roles ------------------------
+    rng = np.random.default_rng(SEED)
+    training, selection, final = (world(rng, 40) for _ in range(3))
+    fits = [np.polyfit(training[0], training[1], d) for d in degrees]
+    train_err = np.array([rmse(c, training) for c in fits])
+    sel_err = np.array([rmse(c, selection) for c in fits])
+    chosen = int(np.argmin(sel_err))
+    final_err = rmse(fits[chosen], final)
 
-    train_err, sel_err, chosen, _, first_fits = one_world()
-    final_err = rmse(first_fits[chosen], world(40))   # the protocol's one final holdout
-
+    # --- right panel: optimism in expectation, own fresh stream --------
+    rng = np.random.default_rng(SEED)
     gaps = []
     for _ in range(500):
-        _, sel, pick, fresh_true, _ = one_world()
-        gaps.append(fresh_true - sel[pick])
+        tr, sel, big = world(rng, 40), world(rng, 40), world(rng, 10_000)
+        f = [np.polyfit(tr[0], tr[1], d) for d in degrees]
+        se = np.array([rmse(c, sel) for c in f])
+        pick = int(np.argmin(se))
+        gaps.append(rmse(f[pick], big) - se[pick])
     gaps = np.asarray(gaps)
 
     fig, axes = plt.subplots(1, 2, figsize=(9.4, 3.5))

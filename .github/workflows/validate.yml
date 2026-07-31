@@ -47,5 +47,15 @@ jobs:
       - name: Citation-integrity audit
         run: python3 scripts/audit_sources.py
 
+      # A5 (D35): corrected methods misconceptions must not reappear anywhere —
+      # chapters, prompts, canonical notebook sources, config, translations.
+      # --self-test is the mutation test: if reinserting a rejected phrase does
+      # not fail the scan, the gate is not a gate.
+      - name: Misconception manifest — mutation test
+        run: python3 scripts/validate_misconceptions.py --self-test
+
+      - name: Misconception manifest — scan
+        run: python3 scripts/validate_misconceptions.py
+
       - name: Book manifest + chapter sync (37 chapters ↔ 16 notebooks)
         run: python3 scripts/validate_book_sync.py --strict

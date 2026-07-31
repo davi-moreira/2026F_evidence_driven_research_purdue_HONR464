@@ -1,0 +1,185 @@
+# MISCONCEPTION_MANIFEST.yml — the executable half of acceptance test A5 (D35)
+#
+# Each confirmed methods defect gets ONE row here. `scripts/validate_misconceptions.py`
+# reads this file and fails the build when a rejected formulation reappears anywhere
+# on the declared surfaces — chapter bodies AND their prompts, canonical notebook
+# sources, generated notebooks, rubrics, configuration, and both translations.
+#
+# Why this exists: the Batch-B/C round passed prose review while the same
+# misconceptions survived in nb08, nb10, ch20, ch23, ms09, ms13, nb14 and the
+# generated rubrics. Catching the sentence is not catching the misconception.
+#
+# Contract (verified by `--self-test`, which is the mutation test): reinserting any
+# `rejects:` phrase into any declared surface MUST make the validator exit non-zero.
+#
+# Fields
+#   id           stable slug, referenced by BOOK_DESIGN_ACCEPTANCE A5
+#   defect       one line: what was being taught wrongly
+#   rejects      phrases that must NOT appear (case-insensitive substring)
+#   allow        exceptions — passages that name a phrase in order to refute it
+#   requires     phrases that MUST appear somewhere in `surfaces` (the correction
+#                is present, not merely the error absent)
+#   numbers      figures whose prose value must match the seeded computation
+#   surfaces     glob list; defaults to all book editions + canonical sources
+
+defaults:
+  surfaces:
+    - "book/**/*.qmd"
+    - "book-pt/**/*.qmd"
+    - "book-es/**/*.qmd"
+    - "_production_kit/nb_sources/*.py"
+    - "course_config.yaml"
+    - "planning/INQUIRY_MAP.md"
+    - "scripts/build_session_guides.py"
+  exclude:
+    - "**/.quarto/**"
+    - "book*/_iyt-rubrics.qmd"     # generated; regenerated from sources
+
+misconceptions:
+
+  - id: compass-relabeling
+    defect: >-
+      A causal question whose data cannot identify it was relabeled descriptive.
+      The kind of a question comes from its words; weak data leave it unanswered.
+    rejects:
+      - "the honest kind is descriptive"
+      - "no intervention means descriptive"
+      - "is descriptive, whatever word it carries"
+      - "you buy KIND and REACH"
+    requires:
+      - "currently unidentified"
+    allow:
+      - "never relabeled descriptive"
+      - "never descriptive"
+
+  - id: signed-bias
+    defect: >-
+      Bias defined as average distance rather than signed mean error.
+    rejects:
+      - "average distance between your estimate"
+      - "the average distance between"
+    requires:
+      - "counting direction"
+
+  - id: power-needs-a-rule
+    defect: >-
+      Power stated with no test, no threshold, and alpha read as the chance the
+      finding is false.
+    rejects:
+      - "5 percent chance of a false alarm"
+      - "a 5% chance that this result is false"
+    requires:
+      - "statistical test"
+
+  - id: attrition-stayers
+    defect: >-
+      A complete-case contrast under treatment-dependent attrition called "the
+      effect among stayers"; unequal retention treated as a diagnosis.
+    rejects:
+      - "the effect among stayers"
+      - "effect among those who stayed"
+    requires:
+      - "complete-case contrast"
+    allow:
+      - "not the effect among stayers"
+      - "not automatically an effect"
+
+  - id: adjustment-set
+    defect: >-
+      "Adjust for every confounder you can measure" — adjusting for mediators or
+      colliders manufactures bias.
+    rejects:
+      - "every confounder you can measure"
+      - "each factor of confusion that you can measure"
+    requires:
+      - "collider"
+
+  - id: selection-on-holdout
+    defect: >-
+      Model chosen on the same holdout that reports final performance; the
+      winner's crowning score reported as final.
+    rejects:
+      - "honest best"
+      - "the only honest test"
+    requires:
+      - "selection set"
+
+  - id: reliability-splits-items
+    defect: >-
+      "Two halves of one sample" offered as split-half reliability; splitting
+      respondents measures sampling variation, not the instrument.
+    rejects:
+      - "two halves of one sample"
+    requires:
+      - "split items, never people"
+
+  - id: specification-spread
+    defect: >-
+      A same-sign specification curve read as robustness; the min-max span
+      reported as an uncertainty interval; versions mixing estimands.
+    rejects:
+      - "its spread is your honest range"
+      - "the honest range is"
+      - "direction is robust and the range"
+    requires:
+      - "specification spread"
+      - "Shared bias"
+    allow:
+      - 'Collapsing them into "the honest range is'
+      - 'Collapsing the two into "the honest range is'
+
+  - id: exact-zero
+    defect: >-
+      Negative tests expected to return exactly zero; a pass read as ruling out
+      an artifact; a simulated band used as a decision rule.
+    rejects:
+      - "state the exact zero I should expect"
+      - "make sure it says zero"
+      - "rules out one specific artifact"
+      - "rules out a procedural artifact"
+      - "which rules out the one worry"
+    requires:
+      - "reduces your concern"
+    allow:
+      - "Reject any answer that asks for a reading of exactly zero"
+      - "expecting an exact zero"
+
+  - id: locf-truncation
+    defect: >-
+      Last-observation-carried-forward for a post-treatment death called an
+      equally defensible rule; the resulting spread called an honest range.
+    rejects:
+      - "an equally defensible rule"
+      - "equally defensible alternative, and the gap"
+    requires:
+      - "post-treatment event"
+    allow:
+      - "Resist calling that an equally defensible"
+
+  - id: ai-cannot-execute
+    defect: >-
+      "An AI tool cannot run the code" — capability depends on the environment;
+      what is missing from a bare claim is the execution record.
+    rejects:
+      - "cannot run the code"
+      - "It cannot run code"
+      - "The tool cannot run code"
+    requires:
+      - "execution record"
+
+numbers:
+  # prose value -> the seeded computation that must produce it
+  - id: ch14-optimism
+    file: book/part3-pathways/14-prediction-and-generalization.qmd
+    claims:
+      - {text: "0.025 RMSE on average", source: "fig_ch14.mean_gap", tolerance: 0.0005}
+      - {text: "median 0.015", source: "fig_ch14.median_gap", tolerance: 0.0005}
+      - {text: "64 percent of worlds", source: "fig_ch14.pct_worse", tolerance: 0.5}
+  - id: ch15-attrition
+    file: book/part3-pathways/15-experimental-causal-research.qmd
+    claims:
+      - {text: "8.1", source: "fig_ch15_attrition.cc_mean", tolerance: 0.05}
+  - id: ch22-null
+    file: book/part4-credible-evidence/22-diagnostics-and-negative-tests.qmd
+    claims:
+      - {text: "Sixty-two of them round to 0.00", source: "fig_ch22.rounded_zeros", tolerance: 0}

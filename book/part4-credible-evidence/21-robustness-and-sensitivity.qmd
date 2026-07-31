@@ -15,7 +15,8 @@ advances.
 > report every one of them. Two things separate a defensible finding from a lucky
 > slice: each version has to be a valid analysis on its own, and the looking has to
 > come after the deciding. Pre-listing protects the second; nothing rescues the
-> first.
+> first. A check you think of later is still worth running, as long as you label it
+> as one you added after seeing results and report it with the rest.
 
 ## Why this decision matters
 
@@ -59,16 +60,20 @@ picture of one estimate under many defensible choices side by side.
 Before anything goes on that curve, it has to pass a gate with three parts. First,
 every version must test the **same substantive claim**, the one research question the
 curve is about, such as "does the offer raise shoppers' spending?" Second, the dots
-inside one panel must be **commensurable**: measured in the same units, for the same
-kind of quantity, so that reading them side by side means something. A choice that
-changes the outcome's definition or the scale does not disqualify the analysis, but
-it belongs in its own labeled panel, not mixed silently into this one. Third, one
-exclusion is absolute: no version may define its group by something the treatment
-itself could have changed. "Average order value among the shoppers who actually
+inside one panel must be **commensurable**: measured in the same units, about the
+same group of people, for the same kind of quantity, so that reading them side by
+side means something. A choice that changes who is counted, what the outcome means,
+or what scale it is on does not disqualify the analysis, but it belongs in its own
+labeled panel, not mixed silently into this one. Third, one rule is strict: no
+version on this curve may define its group by something the treatment itself could
+have changed. "Average order value among the shoppers who actually
 bought something" fails that test, because whether someone bought is downstream of
 the offer. That comparison may be worth reporting, in its own place, clearly
 labeled for what it is. It is not another answer to the offer question, and folding
-it into the curve makes the curve unreadable.
+it into the curve makes the curve unreadable. (Specialists do define careful causal
+quantities for post-treatment subgroups, but they need different assumptions and
+different machinery than a robustness curve; what is ruled out here is treating a
+raw survivor-style contrast as one more dot.)
 
 Two more things the curve does not do. A curve that stays entirely on one side of zero
 shows that your answer is stable across the choices you listed. It cannot see a flaw
@@ -122,28 +127,44 @@ not belong here, because the discount can change who places an order. That compa
 answers a different question about a different group, so it goes in its own section with
 its own label, not on this curve.
 
-You pre-list the combinations, run them, and plot the specification curve. Note what
-the handles did to the panels: the adjustment choice keeps the same outcome and the
-same units, so its versions sit on one panel; stripping shipping and taxes changes
-what "spending" means, so that pair gets its own labeled panel; and dollars versus
-percent is one comparison shown on two scales, not two pieces of evidence. Every
-version comes back positive, spanning about plus eight to plus fifteen percent.
-Here is how to report that without overclaiming: "Spending was higher under the
-offer in every version we pre-listed. Across them the estimates spanned eight to
-fifteen percent; our lead estimate is twelve percent, and its own sampling
-uncertainty is stated with it." The span says what your choices did. The
-uncertainty statement, built with tools a later chapter adds, says what chance
-could do. Collapsing the two into "the honest range is eight to fifteen" quietly
-claims a precision nobody computed.
+You pre-list the combinations, run them, and sort them into panels before you plot
+anything. The adjustment choice keeps the same people, the same outcome, and the
+same units, so its versions share one panel. Dropping the wholesale account changes
+who is counted, so it opens a second panel. Stripping shipping and taxes changes
+what "spending" means, so it opens a third. Dollars versus percent is one comparison
+shown on two scales, not two pieces of evidence, so it never adds a dot at all.
 
-Then you run one more attack, a **placebo test**: you take shoppers who all got the
-same offer, split them into fake "A" and "B" groups at random, and compute the same
-gap your real analysis computes. One shuffle proves nothing, because two randomly
-labeled groups always differ a little by chance. So you reshuffle many times and
-collect the gaps. That pile shows what your machinery produces when there is
-nothing to find, and it will not be a pile of zeros. What you check is whether your
-real gap looks ordinary inside that pile or stands far outside it, and a real gap
-that the no-effect pile produces routinely is a warning that your machinery, not
+Now the reporting rule that follows from those panels: **one span per panel, never a
+span across them.** In the main panel, all versions come back positive and the
+estimates run about plus eight to plus twelve percent. Say it that way, panel by
+panel: "In our primary panel, spending was higher under the offer in every version
+we pre-listed, with estimates spanning eight to twelve percent; our lead estimate is
+twelve percent, and its own sampling uncertainty is stated with it. Excluding the
+wholesale account, the same versions ran ten to fifteen percent." A single
+eight-to-fifteen range stretched across all three panels would compare a net-of-tax
+number to a gross one, over different sets of shoppers, and mean nothing. The span
+says what your choices did. The uncertainty statement, built with tools a later
+chapter adds, says what chance could do. Collapsing them into "the honest range is
+eight to fifteen" quietly claims a precision nobody computed.
+
+Then you run one more attack, a **placebo test**: you point the same analysis at a
+place where the answer has to be zero, and see what it returns. In this trial the
+natural version is to re-run the assignment itself. Keep every enrolled shopper,
+re-draw who is "offered" using the exact procedure the real study used, with the
+same group sizes and the same blocking, and recompute the gap. Do that many times.
+One redraw proves nothing, because two randomly formed groups always differ a little
+by chance, so what you build is a pile of fake gaps: what your machinery produces
+when the offer does nothing at all.
+
+Two cautions before you lean on it. Your redraws have to copy the original
+assignment procedure, not just shuffle labels however you like; shuffling freely
+when the real study assigned in blocks answers a different question. And this move
+belongs to randomized studies. In observational data there is no assignment
+procedure to copy, so a shuffle does not describe any world you actually had, and
+you need a genuinely null comparison instead: an outcome your cause cannot touch, or
+a period before it existed. Comparing your real gap with that pile is the beginning
+of a formal argument the uncertainty chapter finishes; here it is a smell test, and a
+real gap the no-effect pile produces routinely is a warning that your machinery, not
 the discount, may be doing the work.
 
 ## The Colab laboratory
@@ -259,11 +280,14 @@ chance.*
    them, such as a comparison group chosen badly, the whole curve leans together and
    agreement proves nothing. Name that shared threat in a sentence, since your curve
    cannot test it.
-6. Add one placebo: shuffle your group labels many times, rerun the same analysis on
-   each shuffle, and collect the gaps. That pile is what nothing-going-on looks like
-   through your machinery, and it is not a pile of zeros. Then ask whether your real
-   gap is ordinary inside that pile or stands far outside it, and treat a real gap
-   the pile produces routinely as a warning about your machinery.
+6. Add one placebo. If your study randomized, re-draw the assignment the way the
+   study actually did it, many times, and collect the fake gaps; that pile is what
+   nothing-going-on looks like through your machinery, and it is not a pile of
+   zeros. If your data are observational, do not shuffle: find a genuinely null
+   comparison instead, such as an outcome your cause could not touch or a period
+   before it existed. Either way, ask whether your real number is ordinary in that
+   pile or stands far outside it, and treat one the pile produces routinely as a
+   warning about your machinery.
 7. Read back your AI cycle log and mark any re-prompt that followed a disappointing
    number. Every version you actually ran belongs in the report, including the ones that
    did not help you.

@@ -133,23 +133,24 @@ get better at data it has already seen while getting worse at cases it has never
 seen. And the score that crowned your winner flatters it on average. The seed makes
 the run reproducible: the same code always draws the same worlds.
 
-The left half builds one world (a sine curve plus noise) and runs the protocol you
+The first half builds one world (a sine curve plus noise) and runs the protocol you
 just learned: twelve polynomials fit on training, compared on selection, and the
-winner alone scored once on a final holdout. The right half measures
+winner alone scored once on a final holdout. The second half measures
 model-selection bias the way the definition demands, as an average over
-repetitions. In each of 500 fresh worlds it asks: how does the winner's *true* error
-(measured on ten thousand independent points, standing in for the truth) compare
-with the selection score that crowned it?
+repetitions. In each of 500 fresh worlds it asks: how does the winner's true error
+compare with the selection score that crowned it? Nobody can measure a model's true
+error exactly, so the code stands in for it with ten thousand fresh points, which is
+close enough to trust and far more than any real study would have. Each half
+restarts the seed, so you can run either one on its own and get these same
+numbers.
 
 ```python
 import numpy as np
-import matplotlib.pyplot as plt
 
 SEED = 464
-rng = np.random.default_rng(SEED)
 degrees = np.arange(1, 13)
 
-def world(n):
+def world(rng, n):
     x = rng.uniform(-3, 3, n)
     return x, np.sin(1.5 * x) + rng.normal(0, .35, n)
 
@@ -157,18 +158,26 @@ def rmse(coefs, data):
     x, y = data
     return np.sqrt(np.mean((np.polyval(coefs, x) - y) ** 2))
 
-def one_world():
-    training, selection = world(40), world(40)
-    big = world(10_000)              # stands in for the model's true risk
-    fits = [np.polyfit(training[0], training[1], d) for d in degrees]
-    sel_err = np.array([rmse(c, selection) for c in fits])
-    chosen = int(np.argmin(sel_err))          # chosen on SELECTION, never final
-    return sel_err, chosen, rmse(fits[chosen], big)
+# Left panel: one world, the three roles.
+rng = np.random.default_rng(SEED)
+training, selection, final = (world(rng, 40) for _ in range(3))
+fits = [np.polyfit(training[0], training[1], d) for d in degrees]
+sel_err = np.array([rmse(c, selection) for c in fits])
+chosen = int(np.argmin(sel_err))          # chosen on SELECTION, never final
+print("chosen degree:", degrees[chosen])
+print("selection score that chose it:", round(float(sel_err[chosen]), 3))
+print("its one final-holdout score:  ", round(rmse(fits[chosen], final), 3))
 
+# Right panel: optimism in expectation. Restart the seed so this study
+# reproduces on its own.
+rng = np.random.default_rng(SEED)
 gaps = []
 for _ in range(500):
-    sel, pick, true_err = one_world()
-    gaps.append(true_err - sel[pick])
+    tr, sel, big = world(rng, 40), world(rng, 40), world(rng, 10_000)
+    f = [np.polyfit(tr[0], tr[1], d) for d in degrees]
+    se = np.array([rmse(c, sel) for c in f])
+    pick = int(np.argmin(se))
+    gaps.append(rmse(f[pick], big) - se[pick])   # true error minus its crown
 gaps = np.asarray(gaps)
 
 print("mean optimism:", round(float(gaps.mean()), 3), "RMSE")
@@ -188,8 +197,8 @@ vertical line at degree six labeled chosen on selection, and a black diamond lab
 final holdout above the selection curve. Right panel: a histogram of the winner's
 true error minus its winning selection score across 500 simulated worlds, centered
 just right of zero, annotated mean optimism plus 0.030 RMSE, median plus 0.019,
-worse than its crowning score in 66 percent of worlds, with an arrow noting 5 worlds
-beyond plus 0.3 and the largest at plus 2.25."}
+worse than its crowning score in 64 percent of worlds, with an arrow noting 4 worlds
+beyond plus 0.3 and the largest at plus 1.86."}
 
 Read the left panel first. The blue training error only falls: every extra degree of
 flexibility lets the model bend closer to points it has already seen. The orange
@@ -199,13 +208,13 @@ would ever tell you to stop at six. Only data the fit never touched can say that
 
 Now the right panel, and read it as an average, because that is what the bias is.
 Across 500 worlds the winner's true error exceeds the score that crowned it by
-0.030 RMSE on average (median 0.019), and the winner comes out worse than its
-crowning score in 66 percent of worlds. In the other third, luck ran the other way,
+0.025 RMSE on average (median 0.015), and the winner comes out worse than its
+crowning score in 64 percent of worlds. In the other third, luck ran the other way,
 which is why no single split can show you the bias: it is a lean in the pile, not a
 property of each run.
 
-Then look at the arrow. In 5 of the 500 worlds the gap blew past +0.3, topping out
-at +2.25, because a wildly flexible fit happened to win selection and then swung
+Then look at the arrow. In 4 of the 500 worlds the gap blew past +0.3, topping out
+at +1.86, because a wildly flexible fit happened to win selection and then swung
 hard outside its data. Those worlds are not noise to trim away. They are the
 procedure's real risk showing itself, and any average you report has to own them.
 The honest summary names all three things: the lean (the mean), the typical case

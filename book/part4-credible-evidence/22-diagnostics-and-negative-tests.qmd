@@ -109,12 +109,20 @@ and you can no longer tell how much of the extract's ring is the extract and how
 is the solvent. The finding is an artifact until you redo it at a lower concentration.
 
 Before you trust that pass, ask one more thing: could this check have caught a
-problem if there were one? A **positive control** is a condition you know produces a
+problem worth catching? A **positive control** is a condition you know produces a
 signal, run through the same machinery. Example: a disk soaked in a standard
-antibiotic should clear a ring. If it does, your lawn and your measurement are
-capable of showing inhibition, and a quiet vehicle disk means something. If even the
-antibiotic disk reads flat, your assay is not sensitive enough today, and the quiet
-vehicle told you nothing at all.
+antibiotic should clear a wide ring. Read what that does and does not tell you. If
+even the antibiotic disk reads flat, your assay is broken today and the quiet vehicle
+told you nothing. If it clears a ring, you have learned that the system responds to a
+strong inhibitor, which is not the same as learning it would notice a small one.
+
+The gap between those two matters, because the artifact you fear is usually small.
+So decide first how big a solvent effect would actually change your conclusion, then
+show the assay can see something that size: run a dilution series down toward that
+magnitude and check that the rings still track the dose and that repeat plates agree
+closely enough to tell that difference from noise. An assay that detects a powerful
+antibiotic and loses a one-millimetre shift has not cleared your vehicle; it has
+only failed to notice.
 
 Notice what a clean pass still does not buy you. It does not tell you the extract
 works inside a living animal, or which molecule is responsible. It lowered your
@@ -159,10 +167,10 @@ millimetres."}
 Count them: in two thousand experiments, in a world built so the vehicle does nothing
 whatsoever, not one reading came back exactly zero. Sixty-two of them round to 0.00
 when you print two decimals, which is worth knowing, because a readout showing "0.00"
-is a rounded number and not a measurement of nothing. The readings pile up around zero
-and spread from about -0.29 to +0.27 mm, and the first run happened to return -0.03. A
-researcher demanding a true zero would have called all two thousand of these honest
-experiments failures.
+is a rounded number and not a measurement of nothing. The readings pile up around zero, with the central 95 percent running from about
+-0.29 to +0.27 mm and rarer runs reaching roughly -0.48 and +0.47; the first run
+happened to return -0.03. A researcher demanding a true zero would have called all
+two thousand of these honest experiments failures.
 
 That pile is what you compare against, and building your own is the useful habit:
 simulate your null world at your own sample size, look at the readings it produces,
@@ -292,10 +300,11 @@ produced your result or your own pipeline did.*
    causal or general claim it still does not establish.
 6. Log both tests in your AI Research Ledger, and verify at least one output with a named
    method from the [Verification Guide](../verification-guide.qmd). **Simulation** is the
-   one good tool for a negative test: build a dataset by hand where no effect exists,
+   one useful tool for a negative test: build a dataset by hand where no effect exists,
    run your test machinery on it many times, and see the readings scatter around zero.
    Note how large they get by chance, then judge your real control against that pile
-   rather than against 0.00. Pair it with a positive control, a condition you know
-   produces a signal, so you can show the check would have caught an artifact if one
-   were there. An AI reviewer may run the check with you; the
+   rather than against 0.00. Pair it with a positive control to show the system
+   responds at all, and then with a check aimed at the smallest artifact that would
+   change your conclusion, since responding to a strong signal does not prove the
+   assay would notice a weak one. An AI reviewer may run the check with you; the
    decision to accept or reject stays yours.
