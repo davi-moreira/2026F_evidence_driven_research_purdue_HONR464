@@ -146,6 +146,25 @@ not how a misconception returns. `--self-test` asserts both directions — every
 drift sentence is caught, every legitimate phrasing is permitted — because a
 validator that cannot fail is not a gate, and one that fails wrongly is worse.
 
+**Hardened (2026-07-31, from the round-4 audit).** Twelve misconceptions now
+carry the A5 schema fields (estimand · counterexample · concept_check),
+enforced by the manifest schema check. The self-test runs against an ISOLATED
+SNAPSHOT (a round-4 interruption had leaked fixture text into published ch22
+— the test now cannot touch a real file), asserts each mutation is caught by
+its OWN id at the probe path, and runs 11 adversarial **allow-reversals**
+(every `allow:` span must carry its refutation; a bare quotation span had
+been shown to launder an endorsement). Public CI states honestly that it
+certifies tracked public surfaces only; `--local` scans the gitignored
+canonical sources and instructor notebooks plus generation freshness, and is
+wired into `scripts/nbbuild.py` (every build) and
+`scripts/sync_instructor_repo.sh` (every private sync) — the two points where
+canonical content moves. The numbers evaluator enumerates every numeric
+component of ch14/ch15/ch22 including alt text and both endpoints of every
+range, with numpy/matplotlib pinned in CI. On its first hardened run the
+gate found a stale nb12-era instructor notebook still carrying "the only
+honest test" and 20 orphaned v1 sources, one already damaged by a
+wrong-target sweep — all removed against a verified archive.
+
 Evidence it works: on first run it caught 7 live remnants that manual greps had
 missed (including `nb06` and `nb12`, which no review had flagged); a line-wrap
 bug in the matcher then hid 2 more, one of them a regression introduced minutes
