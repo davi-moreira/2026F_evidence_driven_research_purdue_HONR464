@@ -13,6 +13,11 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PRIVATE_SLUG="davi-moreira/2026F_evidence_driven_research_purdue_HONR464_instructor"
 CLONE_DIR="$REPO_ROOT/_instructor_repo"
 
+# A5 misconception gate over the CANONICAL surfaces before anything ships to
+# the private repo (round-4 G2): instructor notebooks are exactly the material
+# public CI never sees, so this sync is the second enforcement point.
+"$REPO_ROOT/.venv/bin/python" "$REPO_ROOT/scripts/validate_misconceptions.py" --local
+
 if [ ! -d "$CLONE_DIR/.git" ]; then
   echo "· cloning $PRIVATE_SLUG into _instructor_repo/"
   gh repo clone "$PRIVATE_SLUG" "$CLONE_DIR"

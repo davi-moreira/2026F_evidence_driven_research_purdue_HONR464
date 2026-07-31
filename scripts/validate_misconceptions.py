@@ -10,18 +10,33 @@ Why it exists: the Batch-B/C review round passed prose review while the same
 misconceptions survived in nb08, nb10, ch20, ch23, ms09, ms13, nb14 and the
 generated rubrics. The ordinary sync and voice validators cannot see a concept.
 
-    .venv/bin/python scripts/validate_misconceptions.py
-    .venv/bin/python scripts/validate_misconceptions.py --self-test
+    .venv/bin/python scripts/validate_misconceptions.py              # public surfaces
+    .venv/bin/python scripts/validate_misconceptions.py --local      # + canonical sources,
+                                                                     #   instructor notebooks,
+                                                                     #   staleness check
+    .venv/bin/python scripts/validate_misconceptions.py --self-test  # mutation test
 
-`--self-test` is the mutation test the acceptance contract requires: it
-reinserts every rejected phrase into a scratch copy of a real surface and
-asserts the scan catches each one. A validator that cannot fail is not a gate.
+HONESTY (round-4 finding G2): the default mode certifies ONLY tracked public
+surfaces — what a fresh CI checkout can read. Generated notebooks are not a
+substitute for the gitignored canonical sources (an instructor-only solution
+can carry a misconception the student copy never shows), so `--local` exists
+and is run by `scripts/nbbuild.py` and `scripts/sync_instructor_repo.sh`, the
+two points where canonical content actually moves. `--local` additionally
+fails when a canonical source is NEWER than its generated student notebook.
+
+`--self-test` is the mutation test the acceptance contract requires. It runs
+against an ISOLATED SNAPSHOT of every declared surface (round-4 finding G3: an
+earlier version mutated real files and one interrupted run shipped fixture
+text into a published chapter). Each mutation must be caught BY ITS OWN
+misconception id AT the probe path, and every `allow_reversals:` fixture — an
+endorsement built to launder through an `allow:` span — must be caught too.
 """
 from __future__ import annotations
 
 import argparse
 import json
 import re
+import shutil
 import sys
 import tempfile
 from pathlib import Path
@@ -29,7 +44,19 @@ from pathlib import Path
 import yaml
 
 REPO = Path(__file__).resolve().parent.parent
-MANIFEST = REPO / "planning" / "MISCONCEPTION_MANIFEST.yml"
+_ROOT = REPO                      # parameterized so the self-test can point the
+                                  # WHOLE validator at a snapshot (never at the
+                                  # real tree)
+MANIFEST_REL = Path("planning/MISCONCEPTION_MANIFEST.yml")
+
+
+def set_root(root: Path) -> None:
+    global _ROOT
+    _ROOT = root
+
+
+def manifest_path() -> Path:
+    return _ROOT / MANIFEST_REL
 
 
 class _DupKeyLoader(yaml.SafeLoader):
@@ -38,7 +65,7 @@ class _DupKeyLoader(yaml.SafeLoader):
     PyYAML silently keeps the last of a duplicated key. That is how a whole
     `reject_patterns:` block vanished from this manifest without a word: two
     blocks under one misconception, the first dropped, the rule it carried
-    quietly unenforced while the scan still reported clean.
+    quietly unenforced while the scan still reported clean (round-4 G1).
     """
 
 
@@ -60,7 +87,12 @@ _DupKeyLoader.add_constructor(
 
 
 def check_schema(data) -> list[str]:
-    """Structural checks on the manifest itself, before it gates anything."""
+    """Structural checks on the manifest itself, before it gates anything.
+
+    A5 requires each defect to carry its estimand, its counterexample, and a
+    concept check — a row that only rejects wordings is a phrase filter, not a
+    misconception record (round-4 G2).
+    """
     problems = []
     ids = [m.get("id") for m in data.get("misconceptions", [])]
     for i in ids:
@@ -76,8 +108,12 @@ def check_schema(data) -> list[str]:
         if not m.get("requires"):
             problems.append(f"schema[{mid}]: no `requires` — absence of the error "
                             f"is not presence of the correction")
-        if not m.get("defect"):
-            problems.append(f"schema[{mid}]: no `defect` description")
+        for field in ("defect", "estimand", "counterexample", "concept_check"):
+            if not m.get(field):
+                problems.append(f"schema[{mid}]: missing A5 field `{field}`")
+        if m.get("allow") and not m.get("allow_reversals"):
+            problems.append(f"schema[{mid}]: has `allow:` but no `allow_reversals:` "
+                            f"— an untested allow span is a laundering channel")
         for pt in m.get("reject_patterns", []):
             if not pt.get("catches"):
                 problems.append(f"schema[{mid}]: a pattern ships no `catches:` "
@@ -93,19 +129,14 @@ def check_schema(data) -> list[str]:
 
 
 def load():
-    return yaml.load(MANIFEST.read_text(), Loader=_DupKeyLoader)
+    return yaml.load(manifest_path().read_text(), Loader=_DupKeyLoader)
 
 
 _TEXT_CACHE: dict[tuple, str] = {}
 
 
 def read_surface(f: Path) -> str:
-    """Text of a surface. Notebooks are JSON, so pull the cell sources out.
-
-    Generated notebooks and rubrics carry the same prose as their canonical
-    sources and — unlike `_production_kit/`, which is gitignored — they ARE
-    tracked, so they are what a fresh CI checkout can actually read.
-    """
+    """Text of a surface. Notebooks are JSON, so pull the cell sources out."""
     key = (f, f.stat().st_mtime_ns, f.stat().st_size)
     if key in _TEXT_CACHE:
         return _TEXT_CACHE[key]
@@ -127,11 +158,13 @@ def read_surface(f: Path) -> str:
     return text
 
 
-def surfaces(spec, defaults) -> tuple[list[Path], list[str]]:
+def surfaces(spec, defaults, local: bool = False) -> tuple[list[Path], list[str]]:
     """Resolve globs to files, and report any REQUIRED glob that matched none.
 
     Fail-closed: a glob that silently matches zero files is how a gate reports
-    "clean" about material it never opened (round-3 finding R3-7).
+    "clean" about material it never opened (round-3 finding R3-7). In --local
+    mode, `local_required: true` globs (canonical sources, instructor
+    notebooks) are promoted to required.
     """
     groups = spec.get("surfaces") or defaults["surfaces"]
     excl = defaults.get("exclude", [])
@@ -140,11 +173,13 @@ def surfaces(spec, defaults) -> tuple[list[Path], list[str]]:
     for entry in groups:
         g = entry["glob"] if isinstance(entry, dict) else entry
         required = entry.get("required", False) if isinstance(entry, dict) else False
+        if local and isinstance(entry, dict) and entry.get("local_required"):
+            required = True
         matched = []
-        for f in REPO.glob(g):
+        for f in _ROOT.glob(g):
             if not f.is_file():
                 continue
-            rel = f.relative_to(REPO).as_posix()
+            rel = f.relative_to(_ROOT).as_posix()
             if any(f.match(e) or re.search(e.replace("**/", ".*").replace("*", "[^/]*"), rel)
                    for e in excl):
                 continue
@@ -203,7 +238,10 @@ def scan_file(text: str, phrase: str, allow: list[str]) -> list[int]:
     """Line numbers where `phrase` appears outside an allowed corrective use.
 
     Works on whitespace-normalized text so wrapped phrases are still caught.
-    An allowed corrective use suppresses a hit when it overlaps the same span.
+    An allowed corrective use suppresses a hit only when it FULLY covers the
+    same span — and every `allow:` entry is required (by schema + self-test
+    reversals) to contain its refutation, so an endorsement reusing the bare
+    quotation no longer matches the allow and still fires (round-4 G3).
     """
     norm, linemap = _normalize(text)
     needle = " ".join(phrase.lower().split())
@@ -238,14 +276,37 @@ def scan_pattern(text: str, pattern: str, allow: list[str]) -> list[int]:
     return hits
 
 
-def run(verbose: bool = False, check_nums: bool = True) -> list[str]:
+def check_freshness() -> list[str]:
+    """--local only: a canonical source newer than its generated student
+    notebook means the tracked artifact is STALE — the public tree shows prose
+    the next rebuild will change (round-4 G2's freshness requirement)."""
+    problems = []
+    src_dir = _ROOT / "_production_kit" / "nb_sources"
+    if not src_dir.is_dir():
+        return ["local: _production_kit/nb_sources/ missing — canonical sources "
+                "cannot be certified from this checkout"]
+    for src in sorted(src_dir.glob("*.py")):
+        student = _ROOT / "notebooks" / "student" / f"{src.stem}_student.ipynb"
+        if not student.exists():
+            # v1-era or retired sources carry no tracked counterpart
+            continue
+        if src.stat().st_mtime > student.stat().st_mtime + 1:
+            problems.append(
+                f"local: STALE generation — {src.relative_to(_ROOT)} is newer "
+                f"than {student.relative_to(_ROOT)}; rerun scripts/nbbuild.py "
+                f"{src.stem.split('_')[0]}")
+    return problems
+
+
+def run(verbose: bool = False, check_nums: bool = True,
+        local: bool = False) -> list[str]:
     data = load()
     defaults = data["defaults"]
     problems: list[str] = check_schema(data)
 
     for m in data["misconceptions"]:
         mid = m["id"]
-        files, empty = surfaces(m, defaults)
+        files, empty = surfaces(m, defaults, local=local)
         for g in empty:
             problems.append(
                 f"[{mid}] REQUIRED surface matched zero files: {g!r} — the gate "
@@ -258,7 +319,7 @@ def run(verbose: bool = False, check_nums: bool = True) -> list[str]:
                 for ln in scan_file(text, phrase, allow):
                     problems.append(
                         f"[{mid}] rejected phrase {phrase!r} — "
-                        f"{f.relative_to(REPO)}:{ln}")
+                        f"{f.relative_to(_ROOT)}:{ln}")
 
         for pat in m.get("reject_patterns", []):
             rx, why = pat["pattern"], pat.get("why", "")
@@ -266,7 +327,7 @@ def run(verbose: bool = False, check_nums: bool = True) -> list[str]:
                 for ln in scan_pattern(text, rx, allow):
                     problems.append(
                         f"[{mid}] rejected CLAIM ({why}) — "
-                        f"{f.relative_to(REPO)}:{ln}  [/{rx}/]")
+                        f"{f.relative_to(_ROOT)}:{ln}  [/{rx}/]")
 
         for phrase in m.get("requires", []):
             needle = " ".join(phrase.lower().split())
@@ -278,6 +339,8 @@ def run(verbose: bool = False, check_nums: bool = True) -> list[str]:
         if verbose:
             print(f"  {mid}: {len(files)} files scanned")
 
+    if local:
+        problems.extend(check_freshness())
     if check_nums:
         problems.extend(check_numbers(data, verbose=verbose))
     return problems
@@ -288,6 +351,8 @@ def check_numbers(data, verbose: bool = False) -> list[str]:
 
     Round-3 finding R3-8: the manifest declared numbers and nothing read them,
     so prose could drift away from the figures without failing the build.
+    Round-4 G4: claims now enumerate every numeric component — both endpoints,
+    counts, extrema, and the alt-text copies.
     """
     problems: list[str] = []
     specs = data.get("numbers", [])
@@ -300,13 +365,12 @@ def check_numbers(data, verbose: bool = False) -> list[str]:
     except Exception as e:                      # pragma: no cover
         return [f"numbers: cannot import the simulation module ({e})"]
 
-    import tempfile
     cache: dict[str, dict] = {}
     with tempfile.TemporaryDirectory() as td:
         out = Path(td)
         strings = sims.L["book"]
         for spec in specs:
-            f = REPO / spec["file"]
+            f = _ROOT / spec["file"]
             if not f.exists():
                 problems.append(f"numbers[{spec['id']}]: missing file {spec['file']}")
                 continue
@@ -356,107 +420,154 @@ def _first_number(text: str) -> float | None:
     return float(m.group(0)) if m else None
 
 
+def _snapshot(dst: Path) -> None:
+    """Copy every declared surface (plus the manifest) into `dst`, preserving
+    relative paths, so the self-test can mutate freely without ever touching
+    the real tree."""
+    data = yaml.load((REPO / MANIFEST_REL).read_text(), Loader=_DupKeyLoader)
+    defaults = data["defaults"]
+    todo = {REPO / MANIFEST_REL}
+    for entry in defaults["surfaces"]:
+        g = entry["glob"] if isinstance(entry, dict) else entry
+        todo.update(f for f in REPO.glob(g) if f.is_file())
+    for spec in data.get("numbers", []):
+        f = REPO / spec["file"]
+        if f.exists():
+            todo.add(f)
+    excl = defaults.get("exclude", [])
+    for f in todo:
+        rel = f.relative_to(REPO)
+        if any(f.match(e) for e in excl):
+            continue
+        target = dst / rel
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(f, target)
+
+
 def self_test() -> int:
-    """End-to-end mutation test: route every mutation through the PRODUCTION scan.
+    """End-to-end mutation test against an ISOLATED snapshot.
 
-    Round-3 finding R3-9: the earlier version wrote a synthetic probe and called
-    `scan_file()` directly, so it passed even when the real scan skipped whole
-    file classes or ignored every numerical assertion. It was a unit test of the
-    matcher wearing a mutation test's name.
+    Round-3 finding R3-9: the earlier version called `scan_file()` directly —
+    a unit test of the matcher wearing a mutation test's name. Round-4 G3: the
+    next version routed mutations through `run()` but wrote them into REAL
+    files; one interrupted run shipped fixture text into published ch22.
 
-    Now each mutation is written into a REAL declared surface, `run()` is called
-    exactly as production calls it, and the file is restored afterwards. It also
-    verifies the three structural guarantees: a zero-match required glob fails, a
-    deleted required correction fails, and drifted prose numbers fail.
+    Now: the whole surface set is copied into a temporary snapshot, the
+    validator root is pointed there, and every mutation happens on the copy.
+    Each mutation must be caught, BY ITS OWN misconception id, AT the probe
+    path. Killing this process at any moment leaves the real tree untouched.
     """
-    data = load()
     failures: list[str] = []
 
-    baseline = run(check_nums=False)
-    if baseline:
-        print("✗ self-test cannot run: the tree is not clean to begin with")
-        for b in baseline[:8]:
-            print("   ", b)
-        return 1
-
-    # Mutations go into a SCRATCH surface, never a shipped file. An earlier
-    # version appended fixtures to the real ch22 and restored it afterwards;
-    # one interrupted run left two fixture sentences in the published chapter.
-    # A test that can corrupt what it tests is not a test.
-    scratch_dir = REPO / "book" / "_selftest"
-    scratch = scratch_dir / "probe.qmd"
-
-    def mutate_and_scan(snippet: str) -> bool:
-        """True when the production scan catches the mutation."""
-        scratch_dir.mkdir(exist_ok=True)
-        scratch.write_text("---\ntitle: scratch\n---\n\n" + snippet + "\n")
+    with tempfile.TemporaryDirectory(prefix="misconception-selftest-") as td:
+        snap = Path(td)
+        _snapshot(snap)
+        set_root(snap)
         try:
-            # numbers are exercised separately in guarantee 4; skipping the
-            # simulations here keeps ~45 mutations from re-running them all
-            return bool(run(check_nums=False))
+            data = load()
+
+            baseline = run(check_nums=False)
+            if baseline:
+                print("✗ self-test cannot run: the snapshot is not clean to begin with")
+                for b in baseline[:8]:
+                    print("   ", b)
+                return 1
+
+            probe = snap / "book" / "_selftest_probe.qmd"
+
+            def mutate_and_scan(snippet: str, expect_id: str) -> tuple[bool, bool]:
+                """(caught_at_all, caught_by_expected_id_at_probe)."""
+                probe.write_text("---\ntitle: probe\n---\n\n" + snippet + "\n")
+                try:
+                    probs = run(check_nums=False)
+                    right = any(f"[{expect_id}]" in p and "_selftest_probe" in p
+                                for p in probs)
+                    return bool(probs), right
+                finally:
+                    probe.unlink(missing_ok=True)
+
+            # 1. every literal rejected phrase: caught by ITS id at the probe
+            for m in data["misconceptions"]:
+                for phrase in m.get("rejects", []):
+                    caught, right = mutate_and_scan(phrase, m["id"])
+                    if not right:
+                        failures.append(
+                            f"[{m['id']}] literal not caught by its own rule at "
+                            f"the probe: {phrase!r}" if caught else
+                            f"[{m['id']}] literal NOT caught end-to-end: {phrase!r}")
+
+            # 2. every paraphrase drift caught; every benign phrasing permitted
+            for m in data["misconceptions"]:
+                for pat in m.get("reject_patterns", []):
+                    for ex in pat.get("catches", []):
+                        caught, right = mutate_and_scan(ex, m["id"])
+                        if not right:
+                            failures.append(
+                                f"[{m['id']}] DRIFT not caught by its own rule: {ex!r}"
+                                if caught else
+                                f"[{m['id']}] DRIFT not caught end-to-end: {ex!r}")
+                    for ex in pat.get("permits", []):
+                        caught, _ = mutate_and_scan(ex, m["id"])
+                        if caught:
+                            failures.append(
+                                f"[{m['id']}] FALSE POSITIVE end-to-end: {ex!r}")
+
+            # 3. every allow-reversal — an endorsement engineered to hide inside
+            # an allow span — MUST still be caught (round-4 G3 laundering)
+            for m in data["misconceptions"]:
+                for ex in m.get("allow_reversals", []):
+                    caught, right = mutate_and_scan(ex, m["id"])
+                    if not right:
+                        failures.append(
+                            f"[{m['id']}] ALLOW-REVERSAL laundered through: {ex!r}")
+
+            # 4. structural guarantee: a required glob matching nothing must FAIL
+            mpath = snap / MANIFEST_REL
+            manifest_src = mpath.read_text()
+            mpath.write_text(manifest_src.replace(
+                '{glob: "notebooks/student/*.ipynb", required: true}',
+                '{glob: "notebooks/student/__none__*.ipynb", required: true}'))
+            if not any("REQUIRED surface matched zero files" in p
+                       for p in run(check_nums=False)):
+                failures.append("zero-match required glob did NOT fail the scan")
+            mpath.write_text(manifest_src)
+
+            # 5. structural guarantee: a drifted prose number must FAIL
+            ch14 = snap / "book/part3-pathways/14-prediction-and-generalization.qmd"
+            ch14_src = ch14.read_text()
+            ch14.write_text(ch14_src.replace("0.025 RMSE on average",
+                                             "0.030 RMSE on average"))
+            if not any("numbers[ch14-optimism]" in p for p in run()):
+                failures.append("drifted prose number did NOT fail the scan")
+            ch14.write_text(ch14_src)
+
+            # 6. structural guarantee: deleting a required correction must FAIL
+            ch21 = snap / "book/part4-credible-evidence/21-robustness-and-sensitivity.qmd"
+            ch21_src = ch21.read_text()
+            ch21.write_text(ch21_src.replace("specification\nspread", "REMOVED TERM"))
+            if not any("required correction" in p for p in run(check_nums=False)):
+                failures.append("deleted required correction did NOT fail the scan")
+            ch21.write_text(ch21_src)
+
+            # 7. structural guarantee: a stale canonical source must FAIL --local
+            src_dir = snap / "_production_kit" / "nb_sources"
+            candidates = sorted(src_dir.glob("*.py")) if src_dir.is_dir() else []
+            fresh_pair = next(
+                (s for s in candidates
+                 if (snap / "notebooks/student" / f"{s.stem}_student.ipynb").exists()),
+                None)
+            if fresh_pair is not None:
+                student = snap / "notebooks/student" / f"{fresh_pair.stem}_student.ipynb"
+                import os
+                st = student.stat()
+                os.utime(fresh_pair, (st.st_atime, st.st_mtime + 3600))
+                if not any("STALE generation" in p
+                           for p in run(check_nums=False, local=True)):
+                    failures.append("stale canonical source did NOT fail --local")
+                os.utime(fresh_pair, (st.st_atime, st.st_mtime))
         finally:
-            scratch.unlink(missing_ok=True)
-            try:
-                scratch_dir.rmdir()
-            except OSError:
-                pass
-
-    # 1. every literal rejected phrase, through the real scan
-    for m in data["misconceptions"]:
-        for phrase in m.get("rejects", []):
-            if not mutate_and_scan(phrase):
-                failures.append(f"[{m['id']}] literal NOT caught end-to-end: {phrase!r}")
-
-    # 2. every paraphrase drift, and every benign phrasing that must NOT fire
-    for m in data["misconceptions"]:
-        for pat in m.get("reject_patterns", []):
-            for ex in pat.get("catches", []):
-                if not mutate_and_scan(ex):
-                    failures.append(f"[{m['id']}] DRIFT not caught end-to-end: {ex!r}")
-            for ex in pat.get("permits", []):
-                if mutate_and_scan(ex):
-                    failures.append(f"[{m['id']}] FALSE POSITIVE end-to-end: {ex!r}")
-
-    # 3. structural guarantee: a required glob matching nothing must FAIL
-    mpath = MANIFEST
-    manifest_src = mpath.read_text()
-    try:
-        mpath.write_text(manifest_src.replace(
-            '{glob: "notebooks/student/*.ipynb", required: true}',
-            '{glob: "notebooks/student/__none__*.ipynb", required: true}'))
-        if not any("REQUIRED surface matched zero files" in p for p in run(check_nums=False)):
-            failures.append("zero-match required glob did NOT fail the scan")
-    finally:
-        mpath.write_text(manifest_src)
-        if mpath.read_text() != manifest_src:
-            failures.append("CRITICAL: the manifest was not restored after mutation")
-
-    # 4. structural guarantee: a drifted prose number must FAIL.
-    # These three mutate real files because they test file-specific rules;
-    # each restores in `finally` AND verifies the restore byte-for-byte.
-    ch14 = REPO / "book/part3-pathways/14-prediction-and-generalization.qmd"
-    ch14_src = ch14.read_text()
-    try:
-        ch14.write_text(ch14_src.replace("0.025 RMSE on average",
-                                         "0.030 RMSE on average"))
-        if not any("numbers[ch14-optimism]" in p for p in run()):
-            failures.append("drifted prose number did NOT fail the scan")
-    finally:
-        ch14.write_text(ch14_src)
-        if ch14.read_text() != ch14_src:
-            failures.append("CRITICAL: ch14 was not restored after mutation")
-
-    # 5. structural guarantee: deleting a required correction must FAIL
-    ch21 = REPO / "book/part4-credible-evidence/21-robustness-and-sensitivity.qmd"
-    ch21_src = ch21.read_text()
-    try:
-        ch21.write_text(ch21_src.replace("specification\nspread", "REMOVED TERM"))
-        if not any("required correction" in p for p in run(check_nums=False)):
-            failures.append("deleted required correction did NOT fail the scan")
-    finally:
-        ch21.write_text(ch21_src)
-        if ch21.read_text() != ch21_src:
-            failures.append("CRITICAL: ch21 was not restored after mutation")
+            set_root(REPO)
+            _TEXT_CACHE.clear()
 
     if failures:
         print("✗ self-test failed — the gate does not gate:")
@@ -464,29 +575,39 @@ def self_test() -> int:
             print("   ", f)
         return 1
 
+    data = yaml.load((REPO / MANIFEST_REL).read_text(), Loader=_DupKeyLoader)
     lit = sum(len(m.get("rejects", [])) for m in data["misconceptions"])
     drift = sum(len(pt.get("catches", []))
                 for m in data["misconceptions"] for pt in m.get("reject_patterns", []))
     permit = sum(len(pt.get("permits", []))
                  for m in data["misconceptions"] for pt in m.get("reject_patterns", []))
-    print(f"✓ end-to-end mutation test: {lit} literal phrases and {drift} paraphrase "
-          f"drifts caught through the production scan, {permit} benign phrasings "
-          f"permitted, plus zero-match-glob, drifted-number, and deleted-correction "
-          f"guarantees")
+    rev = sum(len(m.get("allow_reversals", [])) for m in data["misconceptions"])
+    print(f"✓ isolated end-to-end mutation test: {lit} literals and {drift} drifts "
+          f"caught by their own rules, {permit} benign phrasings permitted, "
+          f"{rev} allow-reversals refused laundering, plus zero-match-glob, "
+          f"drifted-number, deleted-correction, and stale-source guarantees "
+          f"— no real file was touched")
     return 0
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--self-test", action="store_true",
-                    help="mutation test: assert each rejected phrase is caught")
+                    help="mutation test against an isolated snapshot")
+    ap.add_argument("--local", action="store_true",
+                    help="also require canonical sources + instructor notebooks "
+                         "and check generation freshness (run by nbbuild/sync)")
+    ap.add_argument("--no-numbers", action="store_true",
+                    help="skip the seeded numerical evaluator (fast path for "
+                         "notebook builds; chapter edits must run WITH numbers)")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args()
 
     if args.self_test:
         return self_test()
 
-    problems = run(verbose=args.verbose)
+    problems = run(verbose=args.verbose, check_nums=not args.no_numbers,
+                   local=args.local)
     if problems:
         print(f"✗ misconception scan: {len(problems)} problem(s)")
         for p in problems:
@@ -494,8 +615,14 @@ def main() -> int:
         return 1
     data = load()
     n = len(data["misconceptions"])
-    print(f"✓ misconception scan clean — {n} corrected misconceptions hold "
-          f"across chapters, prompts, canonical sources, config, and translations")
+    if args.local:
+        print(f"✓ misconception scan clean (LOCAL) — {n} corrected misconceptions "
+              f"hold across public surfaces AND canonical sources + instructor "
+              f"notebooks; generation is fresh")
+    else:
+        print(f"✓ misconception scan clean — {n} corrected misconceptions hold "
+              f"across TRACKED PUBLIC surfaces (canonical sources need --local, "
+              f"run by nbbuild and the instructor-repo sync)")
     return 0
 
 

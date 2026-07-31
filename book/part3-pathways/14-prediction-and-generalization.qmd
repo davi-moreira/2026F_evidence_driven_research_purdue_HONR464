@@ -196,7 +196,7 @@ to 12, an orange selection-error line falling to degree six then climbing, a dot
 vertical line at degree six labeled chosen on selection, and a black diamond labeled
 final holdout above the selection curve. Right panel: a histogram of the winner's
 true error minus its winning selection score across 500 simulated worlds, centered
-just right of zero, annotated mean optimism plus 0.030 RMSE, median plus 0.019,
+just right of zero, annotated mean optimism plus 0.025 RMSE, median plus 0.015,
 worse than its crowning score in 64 percent of worlds, with an arrow noting 4 worlds
 beyond plus 0.3 and the largest at plus 1.86."}
 
@@ -218,9 +218,11 @@ at +1.86, because a wildly flexible fit happened to win selection and then swung
 hard outside its data. Those worlds are not noise to trim away. They are the
 procedure's real risk showing itself, and any average you report has to own them.
 The honest summary names all three things: the lean (the mean), the typical case
-(the median), and the tail (how bad, how often). In the companion notebook, raise
-the noise (the `.35`) and watch all three grow: the noisier the world, the more the
-winner owes to luck.
+(the median), and the tail (how bad, how often). In the companion notebook, rerun
+the simulation at several noise levels (the `.35`) and compare the mean, the
+median, the frequency, and the maximum separately. The average optimism grows
+with noise; a single seeded extreme, like this run's +1.86, need not move the
+same way, because one world's worst luck is not a summary of the procedure.
 
 ## The Colab laboratory
 

@@ -309,7 +309,9 @@ no title). **Chapter review is FROZEN until Architecture v1 (D35;
 .venv/bin/python scripts/build_book_sim_figures.py        # seeded sim figures (if sims changed)
 .venv/bin/python scripts/voice_lint_book.py               # BOOK_VOICE_POLICY tells (D28)
 .venv/bin/python scripts/validate_book_sync.py            # chapter↔notebook links, both directions
-quarto render book/    # AFTER the site render; book-pt/ + book-es/ FROZEN (D36)
+quarto render book/    # AFTER the site render
+quarto render book-pt/ && quarto render book-es/  # SOURCES frozen (D36), but the
+                       # site render PRUNES docs/book-*; re-render to restore
 ```
 
 ---

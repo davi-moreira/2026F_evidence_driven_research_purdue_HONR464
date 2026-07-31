@@ -293,15 +293,24 @@ chance.*
    them, such as a comparison group chosen badly, the whole curve leans together and
    agreement proves nothing. Name that shared threat in a sentence, since your curve
    cannot test it.
-6. Add one null check, and name it correctly. If your study randomized, run an
-   assignment-based null check: re-draw the assignment the way the study actually did
-   it, many times, and collect the fake gaps; that pile is what nothing-going-on looks
-   like through your machinery, and it is not a pile of zeros. If your data are
-   observational, do not shuffle — you have no assignment procedure to copy. Use a
-   negative control instead: an outcome your cause could not touch, or a period before
-   it existed. Either way, ask whether your real number is ordinary in that pile or
-   stands far outside it, and treat one the pile produces routinely as a warning about
-   your machinery.
+6. Add one null check, and name it with the chapter's three labels, because each
+   label comes with its own procedure and its own reading. If your study
+   randomized, run an assignment-based null check: re-draw the assignment the way
+   the study actually did it, many times, and collect the fake gaps. That pile is
+   what nothing-going-on looks like through your machinery, and it is not a pile
+   of zeros. Ask whether your real number is ordinary in that pile or stands far
+   outside it, and treat a number the pile produces routinely as a warning about
+   your machinery. If your data are observational, you have no assignment
+   procedure to copy. Shuffle labels only if you can defend in writing why your
+   groups were exchangeable under the null; call it a permutation check and state
+   that assumption beside the result. Otherwise use a negative control: an
+   outcome your cause could not touch, or a period before it existed, running
+   through the same bias pathways as your real analysis. A negative control does
+   not build a pile for your headline number to sit in. It produces its own
+   estimate, which should be near zero, so estimate that contrast the same way
+   you estimated your headline and report how far it lands from zero given its
+   own uncertainty. A clearly nonzero negative control is your machinery
+   inventing signal, and that concern attaches to your headline too.
 7. Read back your AI cycle log and mark any re-prompt that followed a disappointing
    number. Every version you actually ran belongs in the report, including the ones that
    did not help you.

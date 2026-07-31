@@ -11,17 +11,31 @@
 #
 # Contract (verified by `--self-test`, which is the mutation test): reinserting any
 # `rejects:` phrase into any declared surface MUST make the validator exit non-zero.
+# The self-test runs against an ISOLATED SNAPSHOT of the surfaces — it never
+# mutates a real repository file (round-4 finding G3).
 #
-# Fields
+# Fields (schema-enforced; a missing field fails the build)
 #   id           stable slug, referenced by BOOK_DESIGN_ACCEPTANCE A5
 #   defect       one line: what was being taught wrongly
+#   estimand     what the correct teaching is actually about (A5)
+#   counterexample
+#                where the executable/worked counterexample lives (A5)
+#   concept_check
+#                where a reader is asked to prove they hold the correction (A5)
 #   rejects      exact phrases that must NOT appear (case-insensitive substring)
 #   reject_patterns
 #                regex FAMILIES targeting the claim rather than one wording, so a
 #                paraphrase cannot drift through. Each carries `catches:` (drift
 #                sentences the pattern must flag) and `permits:` (legitimate
 #                phrasings it must NOT flag); --self-test asserts both.
-#   allow        exceptions — passages that name a phrase in order to refute it
+#   allow        exceptions — passages that name a phrase in order to refute it.
+#                Every allow entry must contain its REFUTATION, not just the
+#                quotation: a bare quotation span can be reused to launder an
+#                endorsement (round-4 finding G3).
+#   allow_reversals
+#                adversarial endorsements that reuse allowed material and MUST
+#                still be caught; required whenever `allow:` exists, asserted by
+#                --self-test.
 #   requires     phrases that MUST appear somewhere in `surfaces` (the correction
 #                is present, not merely the error absent)
 #   numbers      figures whose prose value must match the seeded computation
@@ -32,10 +46,15 @@ defaults:
   # files FAILS the build: a gate that silently skips a surface class reports
   # "clean" about material it never opened (round-3 finding R3-7).
   #
-  # NOTE on canonical sources: `_production_kit/nb_sources/*.py` is GITIGNORED,
-  # so it does not exist in a fresh CI checkout. It is scanned when present
-  # (required: false) — and the tracked, generated notebooks below carry the
-  # same prose, so CI still reads the content even when the sources are absent.
+  # HONESTY NOTE on what a fresh CI checkout certifies (round-4 finding G2):
+  # `_production_kit/nb_sources/*.py` and `notebooks/instructor/*.ipynb` are
+  # GITIGNORED, so public CI certifies ONLY the tracked public surfaces.
+  # Generated notebooks are NOT a substitute for canonical sources — an
+  # instructor-only solution can carry a misconception the student copy never
+  # shows. The canonical surfaces are enforced by `--local` mode, which
+  # `scripts/nbbuild.py` and `scripts/sync_instructor_repo.sh` run at the two
+  # points where canonical content actually moves; `--local` also fails when a
+  # canonical source is NEWER than its generated student notebook (staleness).
   surfaces:
     - {glob: "book/**/*.qmd", required: true}
     - {glob: "book-pt/**/*.qmd", required: true}
@@ -50,7 +69,8 @@ defaults:
     - {glob: "course_config.yaml", required: true}
     - {glob: "planning/INQUIRY_MAP.md", required: true}
     - {glob: "scripts/build_session_guides.py", required: true}
-    - {glob: "_production_kit/nb_sources/*.py", required: false}
+    - {glob: "_production_kit/nb_sources/*.py", required: false, local_required: true}
+    - {glob: "notebooks/instructor/*.ipynb", required: false, local_required: true}
   exclude:
     - "**/.quarto/**"
 
@@ -60,6 +80,14 @@ misconceptions:
     defect: >-
       A causal question whose data cannot identify it was relabeled descriptive.
       The kind of a question comes from its words; weak data leave it unanswered.
+    estimand: >-
+      The question's kind (descriptive vs causal), fixed by its words alone
+      (RDSS ch. 7); identification status is a separate, second fact.
+    counterexample: >-
+      course_config.yaml `kind_rule` + ch06's worked example — strong causal
+      words with weak data stay "causal, currently unidentified".
+    concept_check: >-
+      nb02 compass declaration exercise (kind + reach + why, before any data).
     rejects:
       - "the honest kind is descriptive"
       - "no intervention means descriptive"
@@ -70,10 +98,21 @@ misconceptions:
     allow:
       - "never relabeled descriptive"
       - "never descriptive"
+    allow_reversals:
+      - "Forget that rule; the honest kind is descriptive here."
+      - "In practice no intervention means descriptive, whatever the compass says."
 
   - id: signed-bias
     defect: >-
       Bias defined as average distance rather than signed mean error.
+    estimand: >-
+      Bias = the average of (estimate - truth) across repeated runs, counting
+      direction; average distance is mean absolute error, a different quantity.
+    counterexample: >-
+      ch10's diagnosis walkthrough — two procedures with equal average distance
+      and opposite signed lean.
+    concept_check: >-
+      ch10 asks the reader to say which direction their design leans and why.
     rejects:
       - "average distance between your estimate"
     reject_patterns:
@@ -92,6 +131,14 @@ misconceptions:
     defect: >-
       Power stated with no test, no threshold, and alpha read as the chance the
       finding is false.
+    estimand: >-
+      Power = the probability that a DECLARED statistical test, at a declared
+      threshold, rejects when the assumed effect is real.
+    counterexample: >-
+      ch10's power walkthrough — the same design's "power" changes when the
+      declared test changes, so power without a test is not a number.
+    concept_check: >-
+      ch10 prompts the reader for the test and the threshold before the power.
     rejects:
       - "5 percent chance of a false alarm"
       - "a 5% chance that this result is false"
@@ -102,6 +149,15 @@ misconceptions:
     defect: >-
       A complete-case contrast under treatment-dependent attrition called "the
       effect among stayers"; unequal retention treated as a diagnosis.
+    estimand: >-
+      The complete-case contrast E[Y | measured, treated] - E[Y | measured,
+      control]; under treatment-dependent attrition it is an effect for no
+      named group.
+    counterexample: >-
+      fig_ch15_attrition (seeded, SEED=464) — truth 5, complete-case contrast
+      8.1, because treatment changed who stayed measurable.
+    concept_check: >-
+      nb09's ledger exemplar asks whose outcome the surviving rows describe.
     rejects:
       - "the effect among stayers"
       - "effect among those who stayed"
@@ -116,11 +172,12 @@ misconceptions:
           - "It is also not automatically an effect for any shared group of stayers."
           - "Listen for: evidence that the people who stayed silent resemble the people who answered."
           - "It is tempting to hand the 9-point gap to the patients who stayed. Be careful with that sentence."
-      - pattern: "not the effect among stayers[^.]{0,20}(except|unless|but whenever|save when)"
+      - pattern: "not the effect among stayers[^.]{0,25}(except|unless|but (whenever|it is)|yet it is|save when)"
         why: "the correction stated and then immediately taken back"
         catches:
           - "It is not the effect among stayers—except whenever retention differs."
           - "It is not the effect among stayers unless retention is equal."
+          - "It is not the effect among stayers, but it is close enough to treat as one."
         permits:
           - "It is not the effect among stayers, because each arm produced its own."
     requires:
@@ -129,11 +186,22 @@ misconceptions:
       - "not the effect among stayers,"
       - "not the effect among stayers either"
       - "not automatically an effect"
+    allow_reversals:
+      - "It is not the effect among stayers, but it is close enough to treat as one."
+      - "It is not the effect among stayers, yet it is what we report as one."
 
   - id: adjustment-set
     defect: >-
       "Adjust for every confounder you can measure" — adjusting for mediators or
       colliders manufactures bias.
+    estimand: >-
+      The causal contrast identified under a SUFFICIENT adjustment set; adding a
+      mediator or collider to the set changes the estimand or manufactures bias.
+    counterexample: >-
+      ch12's collider example — conditioning on a consequence of both cause and
+      outcome creates an association that was never there.
+    concept_check: >-
+      ch12 asks adjust-or-not for each named variable, with the reason.
     rejects:
       - "every confounder you can measure"
       - "each factor of confusion that you can measure"
@@ -144,6 +212,14 @@ misconceptions:
     defect: >-
       Model chosen on the same holdout that reports final performance; the
       winner's crowning score reported as final.
+    estimand: >-
+      The generalization error of the ONE pre-committed final model, scored on
+      data that never touched fitting or selection.
+    counterexample: >-
+      fig_ch14 (seeded, SEED=464) — across 500 worlds the winner's true error
+      exceeds its crowning selection score by +0.025 RMSE on average.
+    concept_check: >-
+      ch14's three-role split question — which data may fit, choose, and score.
     rejects:
       - "honest best"
       - "the only honest test"
@@ -163,6 +239,14 @@ misconceptions:
     defect: >-
       "Two halves of one sample" offered as split-half reliability; splitting
       respondents measures sampling variation, not the instrument.
+    estimand: >-
+      Internal consistency of the INSTRUMENT — agreement between item halves
+      within each respondent, not between respondent halves.
+    counterexample: >-
+      ch18's items-vs-people contrast — respondent halves agree even when the
+      items measure nothing coherent.
+    concept_check: >-
+      ch18 asks the reader to say what a respondent split would actually measure.
     rejects:
       - "two halves of one sample"
     requires:
@@ -172,6 +256,15 @@ misconceptions:
     defect: >-
       A same-sign specification curve read as robustness; the min-max span
       reported as an uncertainty interval; versions mixing estimands.
+    estimand: >-
+      One estimand per commensurable panel; the within-panel spread measures
+      what the analyst's CHOICES did, never what chance could do.
+    counterexample: >-
+      ch21's worked example (three panels, one span each) and ms09's executable
+      grid — a cross-panel range compares net-of-tax to gross numbers.
+    concept_check: >-
+      ch21 IYT step 4 requires a span per commensurable panel plus a separate
+      uncertainty statement.
     rejects:
       - "its spread is your honest range"
       - "the honest range is"
@@ -188,13 +281,27 @@ misconceptions:
         permits:
           - "A curve that stays entirely on one side of zero shows that your answer is stable across the choices you listed."
     allow:
-      - 'Collapsing them into "the honest range is'
-      - 'Collapsing the two into "the honest range is'
+      # The full refuting sentence, never the bare quotation: a quotation-only
+      # span was reused to launder an endorsement (round-4 G3 bypass).
+      - 'Collapsing them into "the honest range is eight to fifteen" quietly claims a precision nobody computed'
+    allow_reversals:
+      - 'Collapsing them into "the honest range is 8 to 15" is correct.'
+      - 'Collapsing them into "the honest range is eight to fifteen" is the right call.'
 
   - id: exact-zero
     defect: >-
       Negative tests expected to return exactly zero; a pass read as ruling out
-      an artifact; a simulated band used as a decision rule.
+      an artifact; a simulated band used as a decision rule; a negative
+      control's own estimate collapsed into a permutation-style pile.
+    estimand: >-
+      The null DISTRIBUTION of a continuous estimator (never a point at zero);
+      a negative control is its own estimate read against its own uncertainty,
+      not a member of an assignment or permutation pile.
+    counterexample: >-
+      fig_ch22 (seeded, SEED=464) — 2,000 true-null runs, zero exact zeros,
+      62 rounding to 0.00, spread -0.29 to +0.27.
+    concept_check: >-
+      ch22's read-the-histogram question and ch21 IYT step 6's three branches.
     rejects:
       - "state the exact zero I should expect"
       - "make sure it says zero"
@@ -216,6 +323,7 @@ misconceptions:
           - "This rules out one specific worry."
           - "That rules out the artifact."
           - "The placebo rules out a procedural artifact."
+          - "It rules out artifacts, whatever the caveats say."
         permits:
           - "Random assignment rules out confounding by any pre-treatment trait."
           - 'Watch out for "it rules out artifacts" and for expecting an exact zero.'
@@ -226,13 +334,21 @@ misconceptions:
           - "This shows the gap is not an artifact."
         permits:
           - "You cannot conclude the result is not an artifact from a single quiet control."
-      - pattern: "(confirm|check|verify|ensure)[^.]{0,50}(returns?|comes? back|reads?|says?|sits? at)[^.]{0,25}(exactly|precisely) zero"
+      - pattern: "(confirm|check|verify|ensure|expect)[^.]{0,50}(returns?|comes? back|reads?|says?|sits? at|to (return|come back|read))[^.]{0,25}(exactly|precisely) zero"
         why: "demanding an exact zero from a continuous estimator"
         catches:
           - "Confirm the control returns precisely zero before you continue."
           - "Check that it comes back exactly zero."
+          - "Expect the reading to come back exactly zero."
         permits:
           - "Reject any answer that asks for a reading of exactly zero."
+      - pattern: "negative control[^.]{0,60}(ordinary in (that|the) pile|(?<!not )builds? (a|the|the same) pile|sits? in (that|the) pile)"
+        why: "a negative control collapsed into a permutation-style pile; it produces its own estimate (round-4 F1)"
+        catches:
+          - "A negative control builds the same pile of fake gaps."
+          - "Even for a negative control, ask whether your real number is ordinary in that pile."
+        permits:
+          - "A negative control does not build a pile for your headline number to sit in."
     requires:
       - "reduces your concern"
     allow:
@@ -240,11 +356,24 @@ misconceptions:
       - "Reject any answer that asks for a reading of exactly zero"
       - 'watch out for "it rules out artifacts"'
       - "expecting an exact zero"
+    allow_reversals:
+      - "You can conclude the result is not an artifact after one quiet control."
+      - "Check that the control reads exactly zero before continuing."
+      - "It rules out artifacts, whatever the caveats say."
+      - "Expect the reading to come back exactly zero."
 
   - id: locf-truncation
     defect: >-
       Last-observation-carried-forward for a post-treatment death called an
       equally defensible rule; the resulting spread called an honest range.
+    estimand: >-
+      A DECLARED estimand under truncation by death (for example a survivor
+      description with its stratum named), never a rule-shopping spread.
+    counterexample: >-
+      ch32's dead-larvae walkthrough — LOCF invents outcomes for units that no
+      longer have them, so the two "rules" answer different questions.
+    concept_check: >-
+      ch32 asks which estimand each handling rule actually estimates.
     rejects:
       - "an equally defensible rule"
       - "equally defensible alternative, and the gap"
@@ -252,11 +381,21 @@ misconceptions:
       - "post-treatment event"
     allow:
       - "Resist calling that an equally defensible"
+    allow_reversals:
+      - "That is an equally defensible rule despite the objections."
 
   - id: ai-cannot-execute
     defect: >-
       "An AI tool cannot run the code" — capability depends on the environment;
       what is missing from a bare claim is the execution record.
+    estimand: >-
+      A capability claim scoped to the CONFIGURED environment; the researcher
+      demands the execution record, not a blanket denial.
+    counterexample: >-
+      ch32's verification move — ask for the run's inputs, outputs, and seed
+      instead of asserting the tool cannot run anything.
+    concept_check: >-
+      ch32's "demand the execution record" prompt.
     reject_patterns:
       - pattern: "(an? ai|the tool|the model|neither|it|a chatbot)\\b[^.]{0,25}((cannot|can't|could not|can never)|(?<=neither )can) (run|execute)[^.]{0,15}(the )?code"
         why: "a blanket capability denial; an agent with an execution environment can run code"
@@ -270,14 +409,69 @@ misconceptions:
     requires:
       - "execution record"
 
+  - id: artifact-verbs
+    defect: >-
+      One verb doing three jobs — redesigns said to "detect" artifacts, and
+      checks said to lower "the chance" an existing result is an artifact.
+      Design prevents or removes; diagnostics detect; checks update concern.
+    estimand: >-
+      Three distinct actions — a redesign PREVENTS or REMOVES an artifact, a
+      sensitive diagnostic DETECTS it, and a post-hoc check UPDATES CONCERN as
+      far as its sensitivity reaches. A produced result's status is fixed;
+      only the evidence about it moves (round-4 S1).
+    counterexample: >-
+      ch13's slot study — the redesign renders every slot identically and logs
+      impressions server-side (prevention), while the probes that follow are
+      diagnostics.
+    concept_check: >-
+      nb07's drafting move — name the artifact your design guards against by
+      design or probes with a sensitive diagnostic.
+    reject_patterns:
+      - pattern: "(redesigns?|the design)[^.]{0,40}\\b(detects?|able to detect)\\b[^.]{0,45}(artifact|artefact|demand|instrument)"
+        why: "a redesign prevents or removes an artifact; detection is a diagnostic's job"
+        catches:
+          - "Could each redesign actually detect the artifact it targets?"
+          - "The design must be able to detect demand effects."
+        permits:
+          - "Does each redesign prevent or remove the artifact it targets?"
+          - "The redesign renders every slot identically and logs impressions server-side."
+          # POWER language is legitimate: a design detecting a real EFFECT is
+          # statistics, not the artifact confusion this family targets.
+          - "Power is how often the design detects a real effect, and it means nothing until you say how you would decide."
+          - "Power: how often the design would actually detect the effect, under a stated decision rule."
+      - pattern: "lowers? the chance that (your|the) result"
+        why: "a check cannot change whether an existing result is an artifact; it updates concern/evidence"
+        catches:
+          - "How do you lower the chance that your result is an artifact of your procedure?"
+          - "The shuffle lowers the chance that the result is an artifact."
+        permits:
+          - "How do you lower your concern, as far as the checks were sensitive, that your result is an artifact of your procedure?"
+    requires:
+      - "prevent or remove"
+
 numbers:
-  # prose value -> the seeded computation that must produce it
+  # prose value -> the seeded computation that must produce it.
+  # Round-4 G4: EVERY numeric component gets a claim — both figure-panel
+  # endpoints, counts, extrema, and the alt-text copies, not just the headline
+  # mean. A drift in any single key must fail on its own.
   - id: ch14-optimism
     file: book/part3-pathways/14-prediction-and-generalization.qmd
     claims:
+      # prose
       - {text: "0.025 RMSE on average", source: "fig_ch14.mean_gap", tolerance: 0.0005}
       - {text: "median 0.015", source: "fig_ch14.median_gap", tolerance: 0.0005}
       - {text: "64 percent of worlds", source: "fig_ch14.pct_worse", tolerance: 0.5}
+      - {text: "In 4 of the 500 worlds", value: 4, source: "fig_ch14.n_overflow", tolerance: 0}
+      - {text: "topping out at +1.86", value: 1.86, source: "fig_ch14.max_gap", tolerance: 0.005}
+      - {text: "like this run's +1.86", value: 1.86, source: "fig_ch14.max_gap", tolerance: 0.005}
+      - {text: "bottoms out near degree six", value: 6, source: "fig_ch14.chosen", tolerance: 0}
+      # alt text (round-4 F4: the stale alt text escaped the evaluator)
+      - {text: "mean optimism plus 0.025 RMSE", source: "fig_ch14.mean_gap", tolerance: 0.0005}
+      - {text: "median plus 0.015", source: "fig_ch14.median_gap", tolerance: 0.0005}
+      - {text: "worse than its crowning score in 64 percent", value: 64, source: "fig_ch14.pct_worse", tolerance: 0.5}
+      - {text: "4 worlds beyond plus 0.3", value: 4, source: "fig_ch14.n_overflow", tolerance: 0}
+      - {text: "the largest at plus 1.86", value: 1.86, source: "fig_ch14.max_gap", tolerance: 0.005}
+      - {text: "line at degree six labeled chosen", value: 6, source: "fig_ch14.chosen", tolerance: 0}
   - id: ch15-attrition
     file: book/part3-pathways/15-experimental-causal-research.qmd
     claims:
@@ -285,8 +479,17 @@ numbers:
   - id: ch22-null
     file: book/part4-credible-evidence/22-diagnostics-and-negative-tests.qmd
     claims:
-      # `value:` is explicit because the prose spells the number out.
+      # `value:` is explicit where the prose spells the number out.
       - {text: "Sixty-two of them round to 0.00", value: 62, source: "fig_ch22.rounded_zeros", tolerance: 0}
       - {text: "not one reading came back exactly zero", value: 0, source: "fig_ch22.exact_zeros", tolerance: 0}
+      # both endpoints of both ranges (round-4 G4: one-endpoint claims let the
+      # other endpoint drift free)
       - {text: "-0.29 to +0.27 mm", value: -0.29, source: "fig_ch22.lo", tolerance: 0.005}
+      - {text: "to +0.27 mm", value: 0.27, source: "fig_ch22.hi", tolerance: 0.005}
       - {text: "roughly -0.48 and +0.47", value: -0.48, source: "fig_ch22.obs_min", tolerance: 0.005}
+      - {text: "and +0.47", value: 0.47, source: "fig_ch22.obs_max", tolerance: 0.005}
+      # the first-run value, prose and alt
+      - {text: "happened to return -0.03", value: -0.03, source: "fig_ch22.first", tolerance: 0.005}
+      - {text: "read -0.03", value: -0.03, source: "fig_ch22.first", tolerance: 0.005}
+      # alt-text range (stated loosely in the alt; wide tolerance on purpose)
+      - {text: "spanning roughly -0.4 to +0.4 millimetres", value: -0.4, source: "fig_ch22.obs_min", tolerance: 0.1}

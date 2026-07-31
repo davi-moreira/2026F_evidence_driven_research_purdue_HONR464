@@ -245,6 +245,14 @@ def main() -> None:
     if built_topic and "--no-badges" not in sys.argv:
         subprocess.run([sys.executable,
                         str(REPO / "scripts" / "update_schedule_badges.py")], check=True)
+    # A5 misconception gate over the CANONICAL surfaces (round-4 G2): public CI
+    # cannot see gitignored sources or instructor notebooks, so the gate runs
+    # here — the point where canonical content moves. --no-numbers keeps the
+    # seeded simulations out of the notebook-build path; chapter edits run the
+    # full evaluator via CI and the pre-render checks.
+    subprocess.run([sys.executable,
+                    str(REPO / "scripts" / "validate_misconceptions.py"),
+                    "--local", "--no-numbers"], check=True)
 
 
 if __name__ == "__main__":

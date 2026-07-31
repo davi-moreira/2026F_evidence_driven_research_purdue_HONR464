@@ -15,10 +15,17 @@ replace it.
 
 ## A. Already stale at the freeze (pre-existing debt)
 
-1. **ch14 (PT/ES)** — round-4 verdict §6: signedness errors and Portuguese
-   fitting errors in the propagated wording. Both editions show the corrected
-   EN figure beside prose that must be re-verified sentence-by-sentence
-   against the settled EN ch14.
+1. **ch14 (PT/ES)** — round-4 verdict §6 (T1), exact fixes:
+   - PT "o modelo **acerta** os coeficientes" → "ajusta"/"estima" (training
+     fits coefficients; it does not get them right by definition).
+   - PT `distância` / ES `distancia` for model-selection bias → "diferença
+     com sinal entre..." / "diferencia con signo entre..." (the code computes
+     a SIGNED gap; 36.4% of worlds are negative).
+   - The noise-extension sentence (EN's old "raise the noise and watch all
+     three grow") → the corrected EN wording: rerun several noise levels and
+     compare mean, median, frequency, and maximum separately; a single seeded
+     extreme need not move monotonically (verified: max FALLS at noise 0.70).
+   - Then re-verify the whole chapter sentence-by-sentence against settled EN.
 2. **ch21, ch22 (PT/ES)** — NEVER crossed. Both hold pre-correction text
    (spec-curve/estimand and null-spread content). Translate from settled EN
    only; round 4 explicitly gated their crossing.
@@ -27,6 +34,12 @@ replace it.
    removed). `book-es/index.qmd` (~line with "37 secciones") and
    `book-pt/index.qmd` (lines ~79–86, "as 37 seções … caminho completo")
    still make the retired claim.
+4. **ch25 grammar + emphasis (PT/ES)** — round-4 T2: `status é não
+   identificada` / `estado es no identificada` attach a feminine participle
+   to a masculine noun → `não identificado` / `no identificado` (or make
+   resposta/respuesta the explicit noun). Also remove the repeated bold card
+   labels and italicized status phrase (BOOK_VOICE_POLICY: bold at first
+   definition only).
 
 ## B. Structural changes accumulating during the freeze (Phases 2–4)
 
@@ -58,6 +71,10 @@ replace it.
 12. **Misconception gate over PT/ES** — extend/verify
     `planning/MISCONCEPTION_MANIFEST.yml` translated `rejects` families
     against the resynchronized text; `validate_misconceptions.py` green.
+    Round-4 G4 addition: the `numbers:` evaluator must gain PER-EDITION
+    claims — PT/ES numeric prose AND localized alt text for ch14/ch15/ch22
+    (and any new seeded figure) — so a decimal-rendering drift in one
+    language fails on its own.
 13. **Sync validator over all three editions** — `validate_book_sync.py`
     restored to three-edition scope (EN-only scope during the freeze).
 14. **Remove the freeze apparatus** — delete the development notices from

@@ -24,7 +24,10 @@ jobs:
           python-version: "3.11"
 
       - name: Install static-check dependencies
-        run: pip install nbformat pyyaml
+        # numpy/matplotlib are pinned because the misconception gate's numbers
+        # evaluator EXECUTES the seeded simulations (round-4 G4: an undeclared
+        # dependency passes only while the runner image happens to supply it).
+        run: pip install nbformat pyyaml "numpy==1.26.4" "matplotlib==3.8.4"
 
       - name: Calendar backbone (43 = 41 in-person + 2 async)
         run: python3 scripts/validate_calendar.py --emit-csv
@@ -47,14 +50,20 @@ jobs:
       - name: Citation-integrity audit
         run: python3 scripts/audit_sources.py
 
-      # A5 (D35): corrected methods misconceptions must not reappear anywhere —
-      # chapters, prompts, canonical notebook sources, config, translations.
-      # --self-test is the mutation test: if reinserting a rejected phrase does
-      # not fail the scan, the gate is not a gate.
-      - name: Misconception manifest — mutation test
+      # A5 (D35): corrected methods misconceptions must not reappear.
+      # HONESTY (round-4 G2): this checkout is public, so these two steps
+      # certify ONLY tracked public surfaces — chapters, generated notebooks,
+      # rubrics, config, translations. The gitignored canonical sources and
+      # instructor notebooks are enforced by `--local`, which runs inside
+      # scripts/nbbuild.py (every build) and scripts/sync_instructor_repo.sh
+      # (every private-repo sync) — the two points where canonical content
+      # actually moves. --self-test is the mutation test, run against an
+      # isolated snapshot: if reinserting a rejected phrase does not fail the
+      # scan, the gate is not a gate.
+      - name: Misconception manifest — mutation test (isolated snapshot)
         run: python3 scripts/validate_misconceptions.py --self-test
 
-      - name: Misconception manifest — scan
+      - name: Misconception manifest — scan (tracked public surfaces)
         run: python3 scripts/validate_misconceptions.py
 
       - name: Book manifest + chapter sync (37 chapters ↔ 16 notebooks)
