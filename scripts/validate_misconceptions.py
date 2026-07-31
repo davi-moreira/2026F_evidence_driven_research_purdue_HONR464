@@ -379,18 +379,27 @@ def self_test() -> int:
             print("   ", b)
         return 1
 
-    target = REPO / "book/part4-credible-evidence/22-diagnostics-and-negative-tests.qmd"
-    original = target.read_text()
+    # Mutations go into a SCRATCH surface, never a shipped file. An earlier
+    # version appended fixtures to the real ch22 and restored it afterwards;
+    # one interrupted run left two fixture sentences in the published chapter.
+    # A test that can corrupt what it tests is not a test.
+    scratch_dir = REPO / "book" / "_selftest"
+    scratch = scratch_dir / "probe.qmd"
 
     def mutate_and_scan(snippet: str) -> bool:
         """True when the production scan catches the mutation."""
-        target.write_text(original + "\n\n" + snippet + "\n")
+        scratch_dir.mkdir(exist_ok=True)
+        scratch.write_text("---\ntitle: scratch\n---\n\n" + snippet + "\n")
         try:
             # numbers are exercised separately in guarantee 4; skipping the
             # simulations here keeps ~45 mutations from re-running them all
             return bool(run(check_nums=False))
         finally:
-            target.write_text(original)
+            scratch.unlink(missing_ok=True)
+            try:
+                scratch_dir.rmdir()
+            except OSError:
+                pass
 
     # 1. every literal rejected phrase, through the real scan
     for m in data["misconceptions"]:
@@ -419,8 +428,12 @@ def self_test() -> int:
             failures.append("zero-match required glob did NOT fail the scan")
     finally:
         mpath.write_text(manifest_src)
+        if mpath.read_text() != manifest_src:
+            failures.append("CRITICAL: the manifest was not restored after mutation")
 
-    # 4. structural guarantee: a drifted prose number must FAIL
+    # 4. structural guarantee: a drifted prose number must FAIL.
+    # These three mutate real files because they test file-specific rules;
+    # each restores in `finally` AND verifies the restore byte-for-byte.
     ch14 = REPO / "book/part3-pathways/14-prediction-and-generalization.qmd"
     ch14_src = ch14.read_text()
     try:
@@ -430,6 +443,8 @@ def self_test() -> int:
             failures.append("drifted prose number did NOT fail the scan")
     finally:
         ch14.write_text(ch14_src)
+        if ch14.read_text() != ch14_src:
+            failures.append("CRITICAL: ch14 was not restored after mutation")
 
     # 5. structural guarantee: deleting a required correction must FAIL
     ch21 = REPO / "book/part4-credible-evidence/21-robustness-and-sensitivity.qmd"
@@ -440,6 +455,8 @@ def self_test() -> int:
             failures.append("deleted required correction did NOT fail the scan")
     finally:
         ch21.write_text(ch21_src)
+        if ch21.read_text() != ch21_src:
+            failures.append("CRITICAL: ch21 was not restored after mutation")
 
     if failures:
         print("✗ self-test failed — the gate does not gate:")

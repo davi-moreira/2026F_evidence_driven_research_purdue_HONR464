@@ -119,3 +119,4 @@ scratch_*.ipynb
 # Quarto book cache
 book/.quarto/
 book/_freeze/
+_selftest/
