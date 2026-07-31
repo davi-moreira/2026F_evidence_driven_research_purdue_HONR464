@@ -76,6 +76,17 @@ def _normalize(text: str) -> tuple[str, list[int]]:
     return "".join(out), lines
 
 
+def _allow_spans(norm: str, allow: list[str]) -> list[tuple[int, int]]:
+    spans = []
+    for a in allow:
+        an = " ".join(a.lower().split())
+        start = 0
+        while (i := norm.find(an, start)) != -1:
+            spans.append((i, i + len(an)))
+            start = i + 1
+    return spans
+
+
 def scan_file(text: str, phrase: str, allow: list[str]) -> list[int]:
     """Line numbers where `phrase` appears outside an allowed corrective use.
 
@@ -84,13 +95,7 @@ def scan_file(text: str, phrase: str, allow: list[str]) -> list[int]:
     """
     norm, linemap = _normalize(text)
     needle = " ".join(phrase.lower().split())
-    allow_spans = []
-    for a in allow:
-        an = " ".join(a.lower().split())
-        start = 0
-        while (i := norm.find(an, start)) != -1:
-            allow_spans.append((i, i + len(an)))
-            start = i + 1
+    allow_spans = _allow_spans(norm, allow)
 
     hits, start = [], 0
     while (i := norm.find(needle, start)) != -1:
@@ -99,6 +104,25 @@ def scan_file(text: str, phrase: str, allow: list[str]) -> list[int]:
         if not covered:
             hits.append(linemap[i] if i < len(linemap) else 0)
         start = i + 1
+    return hits
+
+
+def scan_pattern(text: str, pattern: str, allow: list[str]) -> list[int]:
+    """Same as scan_file but for a regex FAMILY, not a literal phrase.
+
+    Literal phrases only catch the wording that was already fixed. Paraphrase
+    is how a misconception actually returns — "eliminates that artifact",
+    "returns precisely zero", "if every specification agrees, it is robust".
+    These patterns target the CLAIM, so drift is caught too.
+    """
+    norm, linemap = _normalize(text)
+    allow_spans = _allow_spans(norm, allow)
+    hits = []
+    for m in re.finditer(pattern, norm):
+        span = m.span()
+        if any(s <= span[0] and span[1] <= e for s, e in allow_spans):
+            continue
+        hits.append(linemap[m.start()] if m.start() < len(linemap) else 0)
     return hits
 
 
@@ -119,6 +143,14 @@ def run(verbose: bool = False) -> list[str]:
                     problems.append(
                         f"[{mid}] rejected phrase {phrase!r} — "
                         f"{f.relative_to(REPO)}:{ln}")
+
+        for pat in m.get("reject_patterns", []):
+            rx, why = pat["pattern"], pat.get("why", "")
+            for f, text in texts.items():
+                for ln in scan_pattern(text, rx, allow):
+                    problems.append(
+                        f"[{mid}] rejected CLAIM ({why}) — "
+                        f"{f.relative_to(REPO)}:{ln}  [/{rx}/]")
 
         for phrase in m.get("requires", []):
             needle = " ".join(phrase.lower().split())
@@ -144,16 +176,37 @@ def self_test() -> int:
             for phrase in m.get("rejects", []):
                 probe = Path(td) / "probe.qmd"
                 probe.write_text(f"An innocent sentence.\n{phrase}\nAnother line.\n")
-                hits = scan_file(probe.read_text(), phrase, allow)
-                if not hits:
+                if not scan_file(probe.read_text(), phrase, allow):
                     failures.append(f"[{m['id']}] mutation NOT caught: {phrase!r}")
+            # Paraphrase drift: each pattern ships example sentences that a
+            # careless author might actually write. All must be caught.
+            for pat in m.get("reject_patterns", []):
+                for ex in pat.get("catches", []):
+                    if not scan_pattern(" ".join(ex.lower().split()),
+                                        pat["pattern"], allow):
+                        failures.append(
+                            f"[{m['id']}] DRIFT not caught: {ex!r} "
+                            f"(pattern /{pat['pattern']}/)")
+                for ex in pat.get("permits", []):
+                    if scan_pattern(" ".join(ex.lower().split()),
+                                    pat["pattern"], allow):
+                        failures.append(
+                            f"[{m['id']}] FALSE POSITIVE on: {ex!r} "
+                            f"(pattern /{pat['pattern']}/)")
     if failures:
         print("✗ mutation test failed — the gate does not gate:")
         for f in failures:
             print("   ", f)
         return 1
     total = sum(len(m.get("rejects", [])) for m in data["misconceptions"])
-    print(f"✓ mutation test: all {total} rejected phrases are caught when reinserted")
+    drift = sum(len(pt.get("catches", []))
+                for m in data["misconceptions"]
+                for pt in m.get("reject_patterns", []))
+    guard = sum(len(pt.get("permits", []))
+                for m in data["misconceptions"]
+                for pt in m.get("reject_patterns", []))
+    print(f"✓ mutation test: {total} literal phrases caught, {drift} paraphrase "
+          f"drifts caught, {guard} legitimate phrasings correctly permitted")
     return 0
 
 

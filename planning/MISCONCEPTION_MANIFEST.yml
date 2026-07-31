@@ -15,7 +15,12 @@
 # Fields
 #   id           stable slug, referenced by BOOK_DESIGN_ACCEPTANCE A5
 #   defect       one line: what was being taught wrongly
-#   rejects      phrases that must NOT appear (case-insensitive substring)
+#   rejects      exact phrases that must NOT appear (case-insensitive substring)
+#   reject_patterns
+#                regex FAMILIES targeting the claim rather than one wording, so a
+#                paraphrase cannot drift through. Each carries `catches:` (drift
+#                sentences the pattern must flag) and `permits:` (legitimate
+#                phrasings it must NOT flag); --self-test asserts both.
 #   allow        exceptions — passages that name a phrase in order to refute it
 #   requires     phrases that MUST appear somewhere in `surfaces` (the correction
 #                is present, not merely the error absent)
@@ -78,6 +83,17 @@ misconceptions:
     rejects:
       - "the effect among stayers"
       - "effect among those who stayed"
+    reject_patterns:
+      - pattern: "(gap|difference|number|estimate|contrast)[^.]{0,40}(describes|is the effect for|gives you)[^.]{0,25}(only )?(the )?(patients|people|units|larvae)[^.]{0,20}(who (remained|stayed)(?! silent)|remaining)"
+        why: "hands the number to the units that remained, which no contrast delivers"
+        catches:
+          - "The gap therefore describes the patients who remained in the study."
+          - "That difference is the effect for the people who stayed."
+        permits:
+          - "Their difference is a complete-case contrast, a comparison of whoever happened to be measured in each arm."
+          - "It is also not automatically an effect for any shared group of stayers."
+          - "Listen for: evidence that the people who stayed silent resemble the people who answered."
+          - "It is tempting to hand the 9-point gap to the patients who stayed. Be careful with that sentence."
     requires:
       - "complete-case contrast"
     allow:
@@ -101,6 +117,15 @@ misconceptions:
     rejects:
       - "honest best"
       - "the only honest test"
+    reject_patterns:
+      - pattern: "(pick|choose|choosing|select|selecting|keep)[^.]{0,50}(best|lowest|smallest|winning)[^.]{0,40}(on|from|using)[^.]{0,25}(the )?(test|holdout|held-out|final)"
+        why: "choosing a model on the data that reports final performance"
+        catches:
+          - "Pick whichever model scores best on the test rows."
+          - "Choose the degree with the lowest error on the holdout."
+        permits:
+          - "Fit on training, choose on selection, then score your one choice on the final holdout."
+          - "The selection set is separate data you use to choose among candidates."
     requires:
       - "selection set"
 
@@ -124,6 +149,14 @@ misconceptions:
     requires:
       - "specification spread"
       - "Shared bias"
+    reject_patterns:
+      - pattern: "(if|when)[^.]{0,60}(every|all)[^.]{0,40}(specification|version|dot)s?[^.]{0,40}(agree|positive|same sign|one side)[^.]{0,40}(robust|holds|confirmed|solid)"
+        why: "same-sign agreement read as robustness; a shared bias tilts them together"
+        catches:
+          - "If every specification agrees, the finding is robust."
+          - "When all versions are positive, the direction is robust."
+        permits:
+          - "A curve that stays entirely on one side of zero shows that your answer is stable across the choices you listed."
     allow:
       - 'Collapsing them into "the honest range is'
       - 'Collapsing the two into "the honest range is'
@@ -138,6 +171,21 @@ misconceptions:
       - "rules out one specific artifact"
       - "rules out a procedural artifact"
       - "which rules out the one worry"
+    reject_patterns:
+      - pattern: "(passing|passed|clean|a) (negative test|control|placebo)[^.]{0,60}(rules? out|eliminates?|proves? (the )?absence|certifies|guarantees)"
+        why: "a passed negative test bounded only by the check's sensitivity"
+        catches:
+          - "A passing negative test eliminates that artifact entirely."
+          - "A clean control rules out the artifact."
+        permits:
+          - "A passed negative test reduces your concern about one specific artifact, as far as that check could have detected it."
+      - pattern: "(confirm|check|verify|ensure)[^.]{0,50}(returns?|comes? back|reads?|says?|sits? at)[^.]{0,25}(exactly|precisely) zero"
+        why: "demanding an exact zero from a continuous estimator"
+        catches:
+          - "Confirm the control returns precisely zero before you continue."
+          - "Check that it comes back exactly zero."
+        permits:
+          - "Reject any answer that asks for a reading of exactly zero."
     requires:
       - "reduces your concern"
     allow:

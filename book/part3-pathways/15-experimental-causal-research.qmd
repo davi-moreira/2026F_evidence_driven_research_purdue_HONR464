@@ -85,8 +85,8 @@ final measurement. **Attrition** is a unit's outcome going missing after assignm
 Example: patients who change phone numbers, move away, or quietly drop out, so their
 final refill rate is never recorded.
 
-Here is the part that trips people. It is tempting to say the 9-point gap now
-describes "the patients who stayed." Be careful with that sentence. When the
+Here is the part that trips people. It is tempting to hand the 9-point gap to
+"the patients who stayed." Be careful with that sentence. When the
 treatment itself can change who stays, the reminder arm shows you patients who
 stayed *with* reminders while the control arm shows you patients who stayed
 *without* them, and those two observed groups need not be the same kind of people.
@@ -314,9 +314,9 @@ reminder raised on-time refills by 12 points, and the effect is significant." Th
 code runs without a single error. Here is the trap. A third of the reminder arm,
 the patients whose blood pressure was worst, stopped answering follow-up and left
 the study, so the tool computed the gap among the patients who *stayed* and labeled
-it "the effect of the reminder." That is a silent scope change. The number now
-describes only the healthier patients who remained, not everyone you enrolled, and
-dropping the worst cases pushed it up.
+it "the effect of the reminder." That is a silent scope change. The number is a
+complete-case contrast: it is not the effect for everyone you enrolled, and dropping
+the sickest patients from one arm pushed it up.
 
 You catch it by checking retention by arm and who was lost, not by re-reading the
 fluent paragraph. The reminder arm lost far more patients, and the ones it lost were
