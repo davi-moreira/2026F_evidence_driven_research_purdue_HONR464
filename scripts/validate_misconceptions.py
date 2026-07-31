@@ -32,8 +32,68 @@ REPO = Path(__file__).resolve().parent.parent
 MANIFEST = REPO / "planning" / "MISCONCEPTION_MANIFEST.yml"
 
 
+class _DupKeyLoader(yaml.SafeLoader):
+    """A loader that REFUSES duplicate mapping keys.
+
+    PyYAML silently keeps the last of a duplicated key. That is how a whole
+    `reject_patterns:` block vanished from this manifest without a word: two
+    blocks under one misconception, the first dropped, the rule it carried
+    quietly unenforced while the scan still reported clean.
+    """
+
+
+def _no_duplicates(loader, node, deep=False):
+    mapping = {}
+    for key_node, value_node in node.value:
+        key = loader.construct_object(key_node, deep=deep)
+        if key in mapping:
+            raise yaml.constructor.ConstructorError(
+                "while constructing a mapping", node.start_mark,
+                f"duplicate key {key!r} — the earlier block would be silently "
+                f"discarded", key_node.start_mark)
+        mapping[key] = loader.construct_object(value_node, deep=deep)
+    return mapping
+
+
+_DupKeyLoader.add_constructor(
+    yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, _no_duplicates)
+
+
+def check_schema(data) -> list[str]:
+    """Structural checks on the manifest itself, before it gates anything."""
+    problems = []
+    ids = [m.get("id") for m in data.get("misconceptions", [])]
+    for i in ids:
+        if not i:
+            problems.append("schema: a misconception has no id")
+    dupes = {i for i in ids if ids.count(i) > 1}
+    for d in dupes:
+        problems.append(f"schema: duplicate misconception id {d!r}")
+    for m in data.get("misconceptions", []):
+        mid = m.get("id", "?")
+        if not (m.get("rejects") or m.get("reject_patterns")):
+            problems.append(f"schema[{mid}]: no rejects and no reject_patterns")
+        if not m.get("requires"):
+            problems.append(f"schema[{mid}]: no `requires` — absence of the error "
+                            f"is not presence of the correction")
+        if not m.get("defect"):
+            problems.append(f"schema[{mid}]: no `defect` description")
+        for pt in m.get("reject_patterns", []):
+            if not pt.get("catches"):
+                problems.append(f"schema[{mid}]: a pattern ships no `catches:` "
+                                f"fixtures, so nothing proves it fires")
+            if not pt.get("permits"):
+                problems.append(f"schema[{mid}]: a pattern ships no `permits:` "
+                                f"fixtures, so nothing guards against false failures")
+            try:
+                re.compile(pt["pattern"])
+            except re.error as e:
+                problems.append(f"schema[{mid}]: bad regex {pt['pattern']!r} ({e})")
+    return problems
+
+
 def load():
-    return yaml.safe_load(MANIFEST.read_text())
+    return yaml.load(MANIFEST.read_text(), Loader=_DupKeyLoader)
 
 
 _TEXT_CACHE: dict[tuple, str] = {}
@@ -181,7 +241,7 @@ def scan_pattern(text: str, pattern: str, allow: list[str]) -> list[int]:
 def run(verbose: bool = False, check_nums: bool = True) -> list[str]:
     data = load()
     defaults = data["defaults"]
-    problems: list[str] = []
+    problems: list[str] = check_schema(data)
 
     for m in data["misconceptions"]:
         mid = m["id"]

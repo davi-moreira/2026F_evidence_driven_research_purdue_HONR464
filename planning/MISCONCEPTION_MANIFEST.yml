@@ -116,9 +116,6 @@ misconceptions:
           - "It is also not automatically an effect for any shared group of stayers."
           - "Listen for: evidence that the people who stayed silent resemble the people who answered."
           - "It is tempting to hand the 9-point gap to the patients who stayed. Be careful with that sentence."
-    requires:
-      - "complete-case contrast"
-    reject_patterns:
       - pattern: "not the effect among stayers[^.]{0,20}(except|unless|but whenever|save when)"
         why: "the correction stated and then immediately taken back"
         catches:
@@ -126,6 +123,8 @@ misconceptions:
           - "It is not the effect among stayers unless retention is equal."
         permits:
           - "It is not the effect among stayers, because each arm produced its own."
+    requires:
+      - "complete-case contrast"
     allow:
       - "not the effect among stayers,"
       - "not the effect among stayers either"
