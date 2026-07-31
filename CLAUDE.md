@@ -295,16 +295,21 @@ no title). **Chapter review is FROZEN until Architecture v1 (D35;
    The "AI can review AI — but the last decision is human" rule lives in the
    Verification Guide appendix and wherever chapters verify.
 6. **Translations:** `book-pt/` (PT-BR) and `book-es/` (ES) are generated from
-   the English edition (the source of truth) and must be resynchronized after
-   any EN chapter edit. Render all three books on any book change:
+   the English edition (the source of truth). **D36 (2026-07-31): translation
+   is FROZEN until the end of the D35 build** — edit and render ENGLISH ONLY;
+   the PT/ES books stay online behind per-page development notices (injected
+   by their `_lang-switcher.html`), and every deferred item is logged in
+   `planning/TRANSLATION_BACKLOG.md`. The resynchronize-on-every-edit rule
+   resumes at project end, after Davi's manual EN review; translations may
+   not ship *as current* before that sync. During the freeze:
 
 ```bash
-.venv/bin/python scripts/build_book_notebooks.py          # 111 companion notebooks + rubrics
+.venv/bin/python scripts/build_book_notebooks.py          # companion notebooks + rubrics
 .venv/bin/python scripts/update_chapter_review_banners.py # banners from BOOK_REVIEW_STATUS.yml
 .venv/bin/python scripts/build_book_sim_figures.py        # seeded sim figures (if sims changed)
 .venv/bin/python scripts/voice_lint_book.py               # BOOK_VOICE_POLICY tells (D28)
 .venv/bin/python scripts/validate_book_sync.py            # chapter↔notebook links, both directions
-quarto render book/ && quarto render book-pt/ && quarto render book-es/  # AFTER the site render
+quarto render book/    # AFTER the site render; book-pt/ + book-es/ FROZEN (D36)
 ```
 
 ---
@@ -397,7 +402,15 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 6.2 — the D35 book-design ruling + Phase 1 (2026-07-30, DECISIONS.md
+**Version:** 6.3 — the D36 translation freeze + autonomous build-out
+(2026-07-31, DECISIONS.md D36): PT/ES frozen online behind per-page
+development notices until the D35 build completes — EN is the sole edited and
+rendered edition; deferred work (round-4 PT/ES ch14 errors, ch21/ch22
+crossing, preface fix, human PT/ES methods review) logged in
+`planning/TRANSLATION_BACKLOG.md`; Phases 1–4 execute autonomously via the
+two-role Codex loop; course readings regenerate from the machine-verified
+crosswalk; translation happens once, after Davi's manual EN review.
+(6.2 — the D35 book-design ruling + Phase 1 (2026-07-30, DECISIONS.md
 D35, from the task-#20 evaluation: two ultra Codex rounds + the Batch-A/B/C
 correction loop): EDR|AI Architecture v0 ruled — independence axiom binding, 39
 lessons, 12 provisional practice stations, versioned Research Contract, four
@@ -514,5 +527,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

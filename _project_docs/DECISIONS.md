@@ -1124,3 +1124,46 @@ independence axiom is what keeps the fix from importing Purdue's calendar into
 a manual meant for any reader anywhere. Timing: none of this blocks the Fall
 2026 launch — the course notebooks are separate artifacts and the early
 milestone anchors are identical under both architectures.
+
+## Decision 36: Translation deferred to project end; autonomous completion of Phases 1–4 (2026-07-31)
+
+**Decision (Davi's directive, this date):**
+
+1. **PT/ES translation is FROZEN until the end of the D35 build.** English is
+   the only edition edited and rendered through Phases 1–4. The PT/ES books
+   stay online, and every PT/ES page carries a prominent development notice
+   (injected via each edition's `_lang-switcher.html` include) stating that
+   the translation is under development and that the English edition is the
+   version of reference, with a link to it. Language buttons remain on every
+   page in all editions; a reader who clicks Português or Español lands on a
+   page carrying the notice. Once Phase-3 insertions make the EN structure
+   diverge, the PT/ES buttons on EN pages route to the PT/ES index rather
+   than the per-page counterpart.
+2. **Every deferred item is logged in `planning/TRANSLATION_BACKLOG.md`**,
+   created by this decision — including the round-4 PT/ES ch14 errors, the
+   never-crossed ch21/ch22, the PT/ES preface bounded-claim fix, and the
+   round-4-required human PT/ES methods review. This amends D23's
+   resynchronize-on-every-edit rule for the duration of the build. The 6.2
+   release blocker transfers to the backlog unchanged: translations still may
+   not ship *as current* before syncing — the per-page notice is what makes
+   the interim state honest.
+3. **Autonomous completion mandate:** the assistant executes Phases 1–4
+   end-to-end without stopping for approval, running the two-role Codex loop
+   (mirror-mode partner + adversarial critique, xhigh; ultra only on Davi's
+   explicit word) on every substantive unit. Davi reviews the finished
+   English artifact manually at the end.
+4. **Course readings update from the machine-verified crosswalk** (Phase 2,
+   re-run after the Phase-3 lessons land). Topics change only if the
+   validator proves a change necessary, and every such change is logged for
+   Davi's review.
+5. **Endpoint and order:** Phases 1–4 complete in English → hand-off → Davi's
+   manual review → translation, performed once, after the review settles the
+   text.
+
+**Rationale:** four adversarial review rounds showed that every English change
+forces a PT/ES propagation whose fidelity no English-substring scanner can
+certify (rounds 3–4), tripling work-in-progress while the architecture
+redesign is still moving the text. Freezing translation until the text stops
+moving removes triple maintenance during Phases 2–4, and matches round 4's own
+requirement of a human methods reader per language — which is only worth
+staging once, on settled prose.
