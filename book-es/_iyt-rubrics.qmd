@@ -243,7 +243,7 @@ Cada fila vale **0** (ausente), **1** (intentada pero incompleta, genérica o si
 
 ### Cap. 18 — Medición y operacionalización
 
-Cada fila vale **0** (ausente), **1** (intentada pero incompleta, genérica o sin verificar) o **2** (completa, específica de tu propio proyecto y verificada donde aplique una comprobación). **14 puntos en total.**
+Cada fila vale **0** (ausente), **1** (intentada pero incompleta, genérica o sin verificar) o **2** (completa, específica de tu propio proyecto y verificada donde aplique una comprobación). **16 puntos en total.**
 
 | # | Criterio | 0–2 |
 |---|---|---|
@@ -251,8 +251,9 @@ Cada fila vale **0** (ausente), **1** (intentada pero incompleta, genérica o si
 | Paso 2 | Debajo de cada concepto marcado escribe el constructo que de verdad vas a medir, más una línea sobre por qué esa faceta y no una vecina | |
 | Paso 3 | Debajo de cada constructo escribe el indicador: el procedimiento exacto y el número exacto que produce, lo bastante específico como para que alguien… | |
 | Paso 4 | Debajo de cada indicador completa esta oración con tus propias palabras: "este número no captura ___" | |
-| Paso 5 | Planea una comprobación de confiabilidad que de verdad puedas correr, y luego córrela: las mismas unidades medidas dos veces, dos personas… | |
-| Paso 6 | Registra el paso en tu AI Research Ledger (registro de investigación con IA) y verifica al menos una medida con un método nombrado de la Guía de… | |
+| Paso 5 | Escribe una oración que diga qué significa tu número y otra que diga qué vas a hacer con él | |
+| Paso 6 | Planea una comprobación de confiabilidad que corresponda a una fuente de error que de verdad te preocupe, y luego córrela: las mismas unidades… | |
+| Paso 7 | Registra el paso en tu AI Research Ledger (registro de investigación con IA) y verifica al menos una medida con un método nombrado de la Guía de… | |
 | + | Cuidado y registro de verificación: uso de IA registrado en tu AI Research Ledger, afirmaciones declaradas con su incertidumbre, y cada afirmación clave verificada con un método nombrado | |
 
 ### Cap. 19 — La IA como programadora

@@ -138,6 +138,22 @@ population, outcome definition, or scale changes; (4) exclusion or separate
 treatment of groups defined by a post-treatment outcome. Stricter where causal
 meaning is at stake, less falsely rigid where it is not.
 
+**Implemented (2026-07-30).** `planning/MISCONCEPTION_MANIFEST.yml` +
+`scripts/validate_misconceptions.py`, running in CI. Eleven misconceptions, 28
+literal rejected phrases, and **regex claim-families** so a paraphrase cannot
+drift through: literal matching only catches the wording already fixed, which is
+not how a misconception returns. `--self-test` asserts both directions — every
+drift sentence is caught, every legitimate phrasing is permitted — because a
+validator that cannot fail is not a gate, and one that fails wrongly is worse.
+
+Evidence it works: on first run it caught 7 live remnants that manual greps had
+missed (including `nb06` and `nb12`, which no review had flagged); a line-wrap
+bug in the matcher then hid 2 more, one of them a regression introduced minutes
+earlier when a ch21 rewrite deleted the very term it was teaching; and adding the
+regex families caught 3 further genuine instances that had survived two full
+review rounds, including ch15's failure case still asserting the contrast
+"describes only the healthier patients who remained."
+
 **Executable manifest (required before Phase 1 is declared complete).** A5 is not
 met by prose. Each defect needs one row in an executable manifest carrying: the
 declared estimand, the positive case, the boundary case, the converse case, the
