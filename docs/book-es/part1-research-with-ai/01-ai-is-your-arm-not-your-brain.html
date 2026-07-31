@@ -471,12 +471,25 @@ ul.task-list li input[type="checkbox"] {
   .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
   .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
     color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+  .edrai-translation-notice { margin: .6rem .9rem .2rem .9rem;
+    padding: .55rem .9rem; border: 1px solid #e0b95a; border-left: 4px solid #d19c1d;
+    border-radius: 6px; background: #fdf6e3; color: #543f0e;
+    font-size: .85rem; line-height: 1.45;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-translation-notice a { color: #6b4e00; font-weight: 600; }
 </style>
 <div class="edrai-lang">
   <span class="edrai-globe" aria-hidden="true">🌐</span>
   <a href="#" data-lang="book" lang="en" title="English edition">English</a>
   <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
   <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
+</div>
+<div class="edrai-translation-notice" role="note" lang="es">
+  <strong>⚠️ Traducción en desarrollo.</strong> Esta edición en español aún no
+  incorpora las revisiones más recientes y puede contener pasajes
+  desactualizados. La <a href="#" class="edrai-en-index">edición en inglés</a>
+  es la versión de referencia.
 </div>
 <script>
 (function () {
@@ -493,6 +506,10 @@ ul.task-list li input[type="checkbox"] {
     if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
     a.href = here.replace("/" + cur + "/", "/" + t + "/");
   }
+  var en = document.querySelectorAll(".edrai-en-index");
+  var base = (cur === null) ? "../book/index.html"
+    : here.slice(0, here.indexOf("/" + cur + "/")) + "/book/index.html";
+  for (var k = 0; k < en.length; k++) { en[k].href = base; }
 })();
 </script>
 
