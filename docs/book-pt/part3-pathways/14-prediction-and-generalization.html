@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>14&nbsp; Predição e Generalização – EDR|AI — Pesquisa Orientada por Evidências na Era da IA</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../part3-pathways/15-experimental-causal-research.html" rel="next">
+<link href="../part3-pathways/13-experimental-descriptive-research.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5ccb035bea26c1e21f80f44cf7c27909.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part3-pathways/11-observational-descriptive-research.html">Parte III — Trilhas de pesquisa</a></li><li class="breadcrumb-item"><a href="../part3-pathways/14-prediction-and-generalization.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Predição e Generalização</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">EDR|AI — Pesquisa Orientada por Evidências na Era da IA</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefácio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sobre o Autor</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part1-research-with-ai/part1-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Parte I — Pesquisa quando a IA faz "tudo"</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">A IA É o Seu Braço, Não o Seu Cérebro</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/02-the-student-as-research-director.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">O Estudante como Diretor de Pesquisa</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Especificar, Delegar, Interrogar, Inspecionar, Verificar, Documentar, Defender</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Responsabilidade na Pesquisa e Propriedade Intelectual</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte II — Da curiosidade ao desenho de pesquisa</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Da Curiosidade a um Problema de Pesquisa</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Perguntas Descritivas, Preditivas e Causais</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/07-research-builds-on-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">A Pesquisa se Constrói sobre a Pesquisa</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Encontrar e Verificar Evidência Prévia</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Modelo, Indagação, Estratégia de Dados e Estratégia de Resposta</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Declarar e Diagnosticar um Desenho de Pesquisa</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte III — Trilhas de pesquisa</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/11-observational-descriptive-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Pesquisa Observacional Descritiva</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/12-observational-causal-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pesquisa Observacional Causal</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/13-experimental-descriptive-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Pesquisa Descritiva Experimental</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/14-prediction-and-generalization.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Predição e Generalização</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/15-experimental-causal-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Pesquisa Causal Experimental</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part3-pathways/16-hybrid-and-complex-designs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Desenhos Híbridos e Complexos</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte IV — Produzindo evidência crível com IA</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Proveniência e Qualidade dos Dados</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/18-measurement-and-operationalization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Mensuração e Operacionalização</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/19-ai-as-programmer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">A IA como Programadora</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/20-ai-as-analytical-assistant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">A IA como Assistente Analítica</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Robustez e Sensibilidade</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Diagnósticos e Testes Negativos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/23-ai-as-adversarial-reviewer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">A IA como Revisora Adversária</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part4-credible-evidence/24-recognizing-false-confidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Reconhecendo a Falsa Confiança</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte V — Comunicando e defendendo a pesquisa</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/25-from-results-to-claims.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Dos Resultados às Alegações</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/26-claim-evidence-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Tabelas Alegação–Evidência</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/27-research-posters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Pôsteres de Pesquisa</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/28-poster-criticism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Crítica de Pôsteres</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/29-research-pitches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Pitches de Pesquisa</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/30-difficult-questions-and-uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Perguntas Difíceis e Incerteza</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part5-communicating/31-ai-disclosure-and-research-integrity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Declaração de Uso de IA e Integridade em Pesquisa</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte VI — A pesquisa depois da conferência</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/32-replication-and-reproduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Replicação e Reprodução</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/33-from-poster-to-research-note.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Do Pôster à Nota de Pesquisa</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/34-open-and-reusable-research-packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Pacotes de Pesquisa Abertos e Reutilizáveis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/35-managing-multiple-ai-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Gerenciando Vários Agentes de IA</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/36-conflicting-agents-and-human-escalation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Agentes em Conflito e Escalonamento Humano</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part6-after-conference/37-final-research-and-ai-management-portfolio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Pesquisa Final e Portfólio de Gestão de IA</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../verification-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">O Guia de Verificação</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../for-instructors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Para Instrutores</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#por-que-essa-decisão-importa" id="toc-por-que-essa-decisão-importa" class="nav-link active" data-scroll-target="#por-que-essa-decisão-importa"><span class="header-section-number">14.1</span> Por que essa decisão importa</a></li>
+  <li><a href="#o-conceito" id="toc-o-conceito" class="nav-link" data-scroll-target="#o-conceito"><span class="header-section-number">14.2</span> O conceito</a></li>
+  <li><a href="#um-exemplo-trabalhado" id="toc-um-exemplo-trabalhado" class="nav-link" data-scroll-target="#um-exemplo-trabalhado"><span class="header-section-number">14.3</span> Um exemplo trabalhado</a></li>
+  <li><a href="#uma-simulação-com-semente" id="toc-uma-simulação-com-semente" class="nav-link" data-scroll-target="#uma-simulação-com-semente"><span class="header-section-number">14.4</span> Uma simulação com semente</a></li>
+  <li><a href="#o-laboratório-em-colab" id="toc-o-laboratório-em-colab" class="nav-link" data-scroll-target="#o-laboratório-em-colab"><span class="header-section-number">14.5</span> O laboratório em Colab</a></li>
+  <li><a href="#prompts-de-ia-recomendados" id="toc-prompts-de-ia-recomendados" class="nav-link" data-scroll-target="#prompts-de-ia-recomendados"><span class="header-section-number">14.6</span> Prompts de IA recomendados</a></li>
+  <li><a href="#um-caso-de-falha-da-ia" id="toc-um-caso-de-falha-da-ia" class="nav-link" data-scroll-target="#um-caso-de-falha-da-ia"><span class="header-section-number">14.7</span> Um caso de falha da IA</a></li>
+  <li><a href="#agora-é-a-sua-vez" id="toc-agora-é-a-sua-vez" class="nav-link" data-scroll-target="#agora-é-a-sua-vez"><span class="header-section-number">14.8</span> Agora é a sua vez</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<style>
+  .edrai-lang { display: flex; justify-content: flex-end; align-items: center;
+    gap: .4rem; margin: .55rem .9rem .1rem 0; font-size: .8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-lang .edrai-globe { opacity: .55; font-size: .9rem; margin-right: .1rem; }
+  .edrai-lang a { border: 1px solid #d0d7de; border-radius: 999px;
+    padding: .2rem .75rem; text-decoration: none; color: #444;
+    background: #fff; line-height: 1.2; letter-spacing: .01em;
+    transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
+  .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
+    color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+  .edrai-translation-notice { margin: .6rem .9rem .2rem .9rem;
+    padding: .55rem .9rem; border: 1px solid #e0b95a; border-left: 4px solid #d19c1d;
+    border-radius: 6px; background: #fdf6e3; color: #543f0e;
+    font-size: .85rem; line-height: 1.45;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-translation-notice a { color: #6b4e00; font-weight: 600; }
+</style>
+<div class="edrai-lang">
+  <span class="edrai-globe" aria-hidden="true">🌐</span>
+  <a href="#" data-lang="book" lang="en" title="English edition">English</a>
+  <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
+  <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
+</div>
+<div class="edrai-translation-notice" role="note" lang="pt-BR">
+  <strong>⚠️ Tradução em desenvolvimento.</strong> Esta edição em português
+  ainda não incorporou as revisões mais recentes e pode conter trechos
+  desatualizados. A <a href="#" class="edrai-en-index">edição em inglês</a> é a
+  versão de referência.
+</div>
+<script>
+(function () {
+  var here = window.location.pathname;
+  var dirs = ["book-pt", "book-es", "book"];
+  var cur = null;
+  for (var i = 0; i < dirs.length; i++) {
+    if (here.indexOf("/" + dirs[i] + "/") !== -1) { cur = dirs[i]; break; }
+  }
+  var links = document.querySelectorAll(".edrai-lang a");
+  for (var j = 0; j < links.length; j++) {
+    var a = links[j], t = a.getAttribute("data-lang");
+    if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
+    if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
+    a.href = here.replace("/" + cur + "/", "/" + t + "/");
+  }
+  var en = document.querySelectorAll(".edrai-en-index");
+  var base = (cur === null) ? "../book/index.html"
+    : here.slice(0, here.indexOf("/" + cur + "/")) + "/book/index.html";
+  for (var k = 0; k < en.length; k++) { en[k].href = base; }
+})();
+</script>
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part3-pathways/11-observational-descriptive-research.html">Parte III — Trilhas de pesquisa</a></li><li class="breadcrumb-item"><a href="../part3-pathways/14-prediction-and-generalization.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Predição e Generalização</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Predição e Generalização</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="review-pending callout callout-style-default callout-warning callout-titled" title="Em desenvolvimento">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Em desenvolvimento
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Este capítulo faz parte de um livro em desenvolvimento ativo e ainda não passou pela revisão do autor. O conteúdo pode mudar conforme a revisão avança.</p>
+</div>
+</div>
+<p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/pt/ch14_prediction_and_generalization.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a></p>
+<blockquote class="blockquote">
+<p><strong>A decisão de pesquisa.</strong> Decida se a sua pergunta é mesmo uma <em>previsão</em> sobre casos que ninguém viu ainda e, se for, assine um contrato de quatro partes antes de ajustar qualquer coisa: alvo, linha de base, divisão, métrica, mais uma checagem de vazamento. É esse contrato que permite defender uma pontuação modesta e honesta e dizer em voz alta onde a sua previsão para de funcionar.</p>
+</blockquote>
+<section id="por-que-essa-decisão-importa" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="por-que-essa-decisão-importa"><span class="header-section-number">14.1</span> Por que essa decisão importa</h2>
+<p><strong>A decisão em jogo: se você está prevendo casos não vistos e, se estiver, qual pontuação você aceitaria como honesta.</strong></p>
+<p>Imagine uma gestora de saúde pública municipal que precisa decidir, semana a semana, se emite um alerta contra o banho em um lago. Florações de cianobactérias podem transformar uma praia segura em risco à saúde em poucos dias. Chega um fornecedor com um modelo que sinaliza florações nocivas “com 94% de acurácia”.</p>
+<blockquote class="blockquote">
+<p><em>“Noventa e quatro por cento comparado a O QUÊ? Na maioria das semanas este lago está bem, então, se eu simplesmente disser ‘sem floração’ toda santa semana, já acerto umas oitenta e cinco por cento das vezes. Se o seu modelo não superar isso com folga, e provar que superou em semanas que ele nunca estudou, eu não fecho uma praia pública na palavra dele.”</em> — uma gestora de saúde pública que já se queimou com um número de aparência impressionante</p>
+</blockquote>
+<p>Essa gestora faz as duas perguntas que este capítulo treina você a responder antes de confiar em qualquer previsão. Ela é melhor que a regra honesta mais burra? E foi conquistada em casos que o modelo nunca viu? Erre isso e você grita “lobo!” ou deixa passar um risco real.</p>
+</section>
+<section id="o-conceito" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="o-conceito"><span class="header-section-number">14.2</span> O conceito</h2>
+<p>Uma <strong>predição</strong> é o melhor palpite sobre um caso cujo desfecho você ainda não consegue ver. Exemplo: prever se um lago vai ter floração na semana que vem, antes de a semana que vem existir. Predição é descritiva, não causal. Ela prevê <em>o que</em> vai acontecer, nunca <em>por quê</em>.</p>
+<p>O que faz da predição uma pergunta própria é o seu <strong>alcance</strong>, os casos que uma alegação pretende cobrir. O alcance da predição são os <strong>casos não vistos</strong>, unidades que não estão nos seus dados e cujo desfecho ainda é desconhecido, como as amostras do mês que vem. A prima dela é a <strong>generalização</strong>, o alcance que vai da sua amostra para uma população mais ampla, como dos doze lagos que você mediu para todos os lagos da bacia. As duas vão além dos dados em mãos, e as duas só são honestas quando você consegue nomear o cruzamento que as autoriza.</p>
+<p>Uma previsão ganha confiança sob um <strong>contrato</strong> de quatro partes, em ordem fixa. O <strong>alvo</strong> é a única coluna que você prevê, por exemplo <code>bloom_next_week</code>. A <strong>linha de base</strong> é a regra honesta mais burra que você precisa superar, em geral “sempre chutar a resposta mais comum”; se 85% das semanas não têm floração, essa regra marca 85% de graça, então 85% é a régua. A <strong>métrica</strong> é como você conta pontos, casada com o alvo; a acurácia engana quando florações são raras, então a revocação na classe “floração”, a fatia das florações reais que o modelo pega, costuma importar mais. Escolha a que escolher, pontue a linha de base e cada candidato com a mesma métrica, ou a comparação não significa nada.</p>
+<p>A <strong>divisão</strong> é onde a maioria das previsões de aparência honesta se perde, então ela ganha três partes em vez de duas. O <strong>conjunto de treino</strong> são os dados com que cada modelo candidato aprende. Exemplo: o modelo acerta os coeficientes dele no seu primeiro verão. O <strong>conjunto de seleção</strong> são dados separados que você usa para escolher entre candidatos. Exemplo: você compara três listas de variáveis e escolhe uma no segundo verão. O <strong>holdout final</strong> são os dados que você tranca e abre uma vez só, depois que toda escolha está feita. Exemplo: só o modelo que você já escolheu chega a tocar o terceiro verão.</p>
+<p>Rode nessa ordem. Ajuste no treino, escolha na seleção, depois pontue a sua única escolha no holdout final. A razão do passo do meio é fácil de perder. Quando você tenta doze modelos e fica com a melhor nota que viu, essa nota vencedora está lisonjeada pela sorte, em média: algum modelo sempre ia parecer o melhor naqueles dados específicos, em parte porque os erros dele calharam de cair de um jeito gentil ali. Em qualquer divisão isolada a lisonja pode ser grande, pequena ou até invertida; ao longo de muitas divisões ela aponta para cima. O <strong>viés de seleção de modelo</strong> é essa lisonja, a distância entre a nota de um vencedor nos dados que o coroaram e a nota honesta dele em dados que ele nunca encontrou. Relate a nota da coroação como final e você vai prometer um desempenho que o modelo não entrega.</p>
+<p>Uma consequência vale ser dita com todas as letras. Se o holdout final fizer você voltar e mudar uma variável, um limiar ou um modelo, ele entrou no desenvolvimento e deixou de ser prova. Você então precisa de dados novos e intocados para a próxima checagem final. No fluxo simples que este livro ensina, ver a nota final lacra a análise; qualquer mudança depois disso quebra o lacre. Especialistas têm técnicas para reuso cuidadoso, e elas ficam fora deste capítulo, então segure a regra simples até ter uma razão defendida para não segurar.</p>
+<p>Uma armadilha está acima de todas as outras. <strong>Vazamento de dados</strong> é informação que chega ao seu modelo, ou à sua escolha de modelo, que não estaria disponível no momento real da previsão. Exemplo: a concentração de toxinas medida <em>durante</em> a floração. Uma variável vazada infla a sua pontuação nos dados de hoje e desaba nos de amanhã, porque ela não vai existir quando você realmente precisar da previsão. Escolher o seu modelo no holdout final é a mesma falha com outra roupa, já que aquela nota devia representar dados que você nunca viu.</p>
+<p>O tempo carrega a própria versão dessa armadilha. Quando o seu alvo é a semana que vem, as suas semanas de prova deveriam vir depois das semanas com que você aprendeu. Dividir as semanas ao acaso entrega agosto ao modelo e pede que ele preveja julho, o que responde o quanto ele preenche semanas passadas espalhadas, e não o quanto ele prevê a próxima. Mantenha os blocos em ordem de calendário, e deixe o bloco mais recente ser o que você tranca. Esse é o padrão que imita como a previsão vai realmente ser usada; especialistas o relaxam em casos estreitos e argumentados, e nenhum deles começa embaralhando o calendário.</p>
+</section>
+<section id="um-exemplo-trabalhado" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="um-exemplo-trabalhado"><span class="header-section-number">14.3</span> Um exemplo trabalhado</h2>
+<p>Suponha que você queira avisar quem nada no lago com uma semana de antecedência. O seu <strong>alvo</strong> é <code>bloom_next_week</code>, um se o lago ultrapassa o limiar do alerta e zero caso contrário. Ao longo de três verões de amostras semanais, 85% das semanas estão limpas, então a sua <strong>linha de base</strong>, “sempre dizer que não há floração”, marca 0,85 sem modelo nenhum.</p>
+<p>Você mantém variáveis genuinamente conhecidas com uma semana de antecedência: temperatura da água, chuva recente, carga de fósforo rio acima. Os três verões dão a você os seus três papéis sem embaralhar nada. O verão um treina os seus modelos candidatos. O verão dois escolhe entre eles. O verão três fica trancado até a escolha estar feita. Você ajusta um modelo logístico (um classificador padrão de sim ou não) e compara algumas listas de variáveis no verão dois. Depois abre o verão três uma vez só, para o vencedor sozinho. Pontuado na mesma métrica da linha de base, a acurácia, o modelo fica em torno de 0,88 contra os 0,85 da linha de base (estas notas são construídas para o exemplo). Essa vantagem de três pontos parece pequena, e a pequenez dela é o resultado honesto: uma vitória verdadeira e modesta vale mais que uma vitória falsa e dramática. Você ainda relata a revocação ao lado, já que a acurácia sozinha esconde as florações perdidas.</p>
+<p>Aí uma colaboradora bem-intencionada acrescenta <code>chlorophyll_a</code>, a leitura do pigmento. A pontuação salta para 0,97. Empolgante, até você perguntar <em>quando</em> a clorofila é medida: durante a própria floração que você está prevendo. É o desfecho usando outro crachá. Tire a variável e a pontuação volta para 0,88. Quem decide é o teste de temporalidade, não a acurácia. E, como você treinou em um lago raso, você nomeia a fronteira em voz alta: em um reservatório fundo e frio o padrão pode não valer, então a previsão ainda não generaliza para lá.</p>
+</section>
+<section id="uma-simulação-com-semente" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="uma-simulação-com-semente"><span class="header-section-number">14.4</span> Uma simulação com semente</h2>
+<p>O capítulo alega duas coisas ao mesmo tempo, e o código abaixo mostra as duas. Um modelo pode ficar melhor nos dados que já viu enquanto piora nos casos que nunca viu. E a nota que coroou o seu vencedor o lisonjeia, em média. A semente torna a rodada reproduzível: o mesmo código sempre sorteia os mesmos mundos.</p>
+<p>A primeira metade constrói um mundo (uma curva senoidal mais ruído) e roda o protocolo que você acabou de aprender: doze polinômios ajustados no treino, comparados na seleção, e o vencedor sozinho pontuado uma vez em um holdout final. A segunda metade mede o viés de seleção de modelo do jeito que a definição exige, como uma média ao longo de repetições. Em cada um de 500 mundos novos ela pergunta: como o erro verdadeiro do vencedor se compara com a nota de seleção que o coroou? Ninguém mede o erro verdadeiro de um modelo com exatidão, então o código o representa com dez mil pontos novos, uma aproximação de alta precisão nesta simulação e muito mais do que qualquer estudo real teria. Cada metade reinicia a semente, então você pode rodar qualquer uma sozinha e obter estes mesmos números.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>graus <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">13</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mundo(rng, n):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> rng.uniform(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, n)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x, np.sin(<span class="fl">1.5</span> <span class="op">*</span> x) <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">.35</span>, n)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rmse(coefs, dados):</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    x, y <span class="op">=</span> dados</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sqrt(np.mean((np.polyval(coefs, x) <span class="op">-</span> y) <span class="op">**</span> <span class="dv">2</span>))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Primeira metade: um mundo, os três papéis.</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>treino, selecao, final <span class="op">=</span> (mundo(rng, <span class="dv">40</span>) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ajustes <span class="op">=</span> [np.polyfit(treino[<span class="dv">0</span>], treino[<span class="dv">1</span>], g) <span class="cf">for</span> g <span class="kw">in</span> graus]</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>err_sel <span class="op">=</span> np.array([rmse(c, selecao) <span class="cf">for</span> c <span class="kw">in</span> ajustes])</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>escolhido <span class="op">=</span> <span class="bu">int</span>(np.argmin(err_sel))       <span class="co"># escolhido na SELEÇÃO, nunca no final</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"grau escolhido:"</span>, graus[escolhido])</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"nota de seleção que o escolheu:"</span>, <span class="bu">round</span>(<span class="bu">float</span>(err_sel[escolhido]), <span class="dv">3</span>))</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a sua única nota no holdout final:"</span>, <span class="bu">round</span>(rmse(ajustes[escolhido], final), <span class="dv">3</span>))</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Segunda metade: otimismo em expectativa. Reinicie a semente para que este</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># estudo se reproduza sozinho.</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>diferencas <span class="op">=</span> []</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">500</span>):</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    tr, sel, grande <span class="op">=</span> mundo(rng, <span class="dv">40</span>), mundo(rng, <span class="dv">40</span>), mundo(rng, <span class="dv">10_000</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> [np.polyfit(tr[<span class="dv">0</span>], tr[<span class="dv">1</span>], g) <span class="cf">for</span> g <span class="kw">in</span> graus]</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    se <span class="op">=</span> np.array([rmse(c, sel) <span class="cf">for</span> c <span class="kw">in</span> f])</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    pick <span class="op">=</span> <span class="bu">int</span>(np.argmin(se))</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    diferencas.append(rmse(f[pick], grande) <span class="op">-</span> se[pick])   <span class="co"># verdadeiro menos a coroa</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>diferencas <span class="op">=</span> np.asarray(diferencas)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"otimismo médio:"</span>, <span class="bu">round</span>(<span class="bu">float</span>(diferencas.mean()), <span class="dv">3</span>), <span class="st">"RMSE"</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"mediana:"</span>, <span class="bu">round</span>(<span class="bu">float</span>(np.median(diferencas)), <span class="dv">3</span>))</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"vencedor de fato pior que a nota da coroação em"</span>,</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>      <span class="bu">round</span>(<span class="dv">100</span> <span class="op">*</span> <span class="bu">float</span>((diferencas <span class="op">&gt;</span> <span class="dv">0</span>).mean()), <span class="dv">1</span>), <span class="st">"</span><span class="sc">% d</span><span class="st">os mundos"</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"maior diferença isolada:"</span>, <span class="bu">round</span>(<span class="bu">float</span>(diferencas.<span class="bu">max</span>()), <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/sims/ch14_overfitting.png" class="img-fluid figure-img" alt="Gráfico de dois painéis. À esquerda: uma linha azul de erro de treino caindo de forma constante pelos graus polinomiais 1 a 12, uma linha laranja de erro de seleção caindo até o grau seis e depois subindo, uma linha vertical pontilhada no grau seis rotulada escolhido na seleção, e um losango preto rotulado holdout final acima da curva de seleção. À direita: um histograma do erro verdadeiro do vencedor menos a sua nota de seleção vencedora ao longo de 500 mundos simulados, centrado logo à direita de zero, anotado otimismo médio mais 0,025 RMSE, mediana mais 0,015, pior que a nota da coroação em 64 por cento dos mundos, com uma seta indicando 4 mundos além de mais 0,3 e o maior em mais 1,86."></p>
+<figcaption>À esquerda: o erro de treino cai sem parar enquanto o erro de seleção sobe depois do grau seis, onde o modelo é escolhido; um losango marca a sua única nota de holdout final. À direita: ao longo de 500 mundos, o erro verdadeiro do vencedor excede a nota que o coroou, em média, com uma cauda longa à direita.</figcaption>
+</figure>
+</div>
+<p>Leia o painel da esquerda primeiro. O erro de treino azul só cai: cada grau extra de flexibilidade deixa o modelo se dobrar para mais perto de pontos que ele já viu. O erro de seleção laranja cai enquanto o modelo está aprendendo sinal, chega ao fundo perto do grau seis e sobe quando o modelo começa a decorar ruído. Nada na linha azul sozinha diria a você para parar no seis. Só dados que o ajuste nunca tocou dizem isso.</p>
+<p>Agora o painel da direita, e leia-o como uma média, porque é isso que o viés é. Ao longo de 500 mundos o erro verdadeiro do vencedor excede a nota que o coroou em 0,025 RMSE em média (mediana 0,015), e o vencedor sai pior que a nota da coroação em 64 por cento dos mundos. No outro terço a sorte correu para o outro lado, e é por isso que nenhuma divisão isolada mostra o viés a você: ele é uma inclinação na pilha, não uma propriedade de cada rodada.</p>
+<p>Depois olhe a seta. Em 4 dos 500 mundos a diferença passou de mais 0,3, chegando a mais 1,86, porque um ajuste absurdamente flexível calhou de vencer a seleção e depois disparou para fora dos seus dados. Esses mundos não são ruído para aparar. São o risco real do procedimento se mostrando, e qualquer média que você relate tem de assumi-los. O resumo honesto nomeia as três coisas: a inclinação (a média), o caso típico (a mediana) e a cauda (quão ruim, com que frequência). No notebook companheiro, aumente o ruído (o <code>.35</code>) e veja as três crescerem: quanto mais ruidoso o mundo, mais o vencedor deve à sorte.</p>
+</section>
+<section id="o-laboratório-em-colab" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="o-laboratório-em-colab"><span class="header-section-number">14.5</span> O laboratório em Colab</h2>
+<p>Este capítulo tem o seu próprio <strong>notebook companheiro</strong> — abra-o no Colab pelo selo acima. O notebook reúne os prompts e o código do capítulo e termina com o espaço de trabalho <strong>Agora é a sua vez</strong>, para você completar a etapa do capítulo no seu projeto sem sair do Colab. O laboratório completo de sala de aula por trás deste capítulo é o notebook do curso <strong>nb08 — Prediction: generalizing to unseen cases</strong> (<a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb">abrir no Colab</a>), parte do curso companheiro apresentado no apêndice <a href="../for-instructors.html">Para instrutores</a>. No laboratório você assina o contrato de quatro partes em um conjunto de dados real, pontua primeiro uma linha de base honesta e depois <em>constrói um vazamento de propósito</em>, para sentir uma pontuação falsa subir e aprender a caçá-la por correlação e por temporalidade antes de retreinar limpo.</p>
+</section>
+<section id="prompts-de-ia-recomendados" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="prompts-de-ia-recomendados"><span class="header-section-number">14.6</span> Prompts de IA recomendados</h2>
+<p>Comprometa-se com a sua própria resposta primeiro, depois delegue. Cole saída de verdade, nunca um número que você lembra. Espere rodar cada prompt mais de uma vez: leia a resposta, nomeie a parte em que você não acredita, devolva essa objeção para dentro do prompt e rode de novo. Ferramentas que rodam esse loop sozinhas, ajustando e reajustando um modelo ao longo de várias voltas, tornam a pergunta sobre vazamento mais urgente, não menos. Ninguém no loop além de você sabe quando os seus dados foram registrados.</p>
+<pre><code>Act as a Python tutor. Here is a cell that holds out 25% of my weekly
+lake samples, scores a majority-class baseline on them, then scores a
+logistic model on the SAME held-out weeks: [paste cell]. Explain, line
+by line, what the split does and why it must happen before any fitting.
+Then give me one independent way to confirm the held-out weeks were
+never in training.</code></pre>
+<p><em>Depois de rodar, verifique: leia a linha de base, o modelo e a margem na sua própria saída impressa e confirme que os números da ferramenta batem, e não que ela os chutou. Enfrenta a <strong>fabricação confiante</strong>, uma explicação fluente que cita uma margem que o seu código nunca produziu.</em></p>
+<pre><code>Here is the outcome I want to predict and the moment I need the forecast:
+a bloom next week, decided by next week's samples. Here is my candidate
+feature list with when each value is recorded: [list]. For each feature,
+say whether its value is settled before, at, or after the outcome, and
+flag any that could not exist at prediction time.</code></pre>
+<p><em>Depois de rodar, verifique: refaça você mesmo o raciocínio de temporalidade da variável que ela liberar com mais confiança. Se alguma variável só se define no momento da floração ou depois dela, rejeite-a, diga a ferramenta o que disser. Enfrenta a <strong>ilusão de completude</strong>, uma lista bem arrumada que omite justamente a variável tardia que condena a previsão.</em></p>
+<pre><code>Act as a hostile reviewer. Attack this headline: "Our model forecasts
+blooms with 88% held-out accuracy." Name every reason a skeptic would
+distrust it, including the baseline it beat, the metric, and any hidden
+leak.</code></pre>
+<p><em>Depois de rodar, verifique: confronte cada objeção com a sua saída impressa e guarde as que os seus números sustentam. Enfrenta a <strong>concordância bajuladora</strong>, em que uma assistente predisposta a ajudar elogia uma manchete que você mesmo escreveu.</em></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Não delegue">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Não delegue
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quatro decisões continuam sendo suas. <strong>O alvo</strong>: o que você prevê e por que isso importa. <strong>A linha de base</strong>: a regra honesta que o modelo precisa superar. <strong>A temporalidade de cada variável</strong>: se o valor existiria de verdade no momento da previsão, algo que só você, que conhece a linha do tempo dos seus dados, consegue resolver. E <strong>o veredito</strong> sobre se o seu projeto deveria prever alguma coisa. Uma ferramenta que nunca viu a sua linha do tempo não pode tomar essas decisões por você.</p>
+</div>
+</div>
+</section>
+<section id="um-caso-de-falha-da-ia" class="level2" data-number="14.7">
+<h2 data-number="14.7" class="anchored" data-anchor-id="um-caso-de-falha-da-ia"><span class="header-section-number">14.7</span> Um caso de falha da IA</h2>
+<p>Você cola a sua lista de variáveis e pergunta a uma parceria de IA quais são seguras de usar. Ela responde com confiança: “<code>chlorophyll_a</code> é o seu preditor mais forte, mantenha.” O raciocínio soa impecável, porque a clorofila se correlaciona quase perfeitamente com as florações. Essa correlação quase perfeita é exatamente o sinal. Esta é a falha do <strong>método plausível, porém errado</strong>: a ferramenta ordenou a variável pelo quanto ela <em>se ajusta</em> ao passado, não pelo quanto ela poderia <em>existir a tempo</em> de uma previsão. Você pega isso com uma pergunta que a estatística sozinha não responde. Quando a clorofila é medida? Durante a floração, então nenhuma previsão feita uma semana antes poderia tê-la. Tire a variável, veja a pontuação voltar para 0,88 e fique com o modelo honesto.</p>
+</section>
+<section id="agora-é-a-sua-vez" class="level2" data-number="14.8">
+<h2 data-number="14.8" class="anchored" data-anchor-id="agora-é-a-sua-vez"><span class="header-section-number">14.8</span> Agora é a sua vez</h2>
+<p><em>O seu desenho está declarado e diagnosticado. Este passo decide se o seu projeto está mesmo prevendo casos que ninguém viu ainda e, se estiver, coloca essa previsão sob contrato antes de você ajustar um único modelo.</em></p>
+<ol type="1">
+<li>Faça a versão direta da sua pergunta: o seu projeto precisa adivinhar o desfecho de um caso cujo desfecho ainda não existe? Escreva sim ou não, e a frase única que justifica a sua resposta.</li>
+<li>Se for sim, assine o contrato de quatro partes, em ordem. Nomeie a coluna-alvo, a linha de base honesta mais burra que ele tem que superar, a divisão que mantém uma fatia de casos não vista e a métrica casada com o quanto o seu desfecho é raro.</li>
+<li>Liste as suas variáveis e escreva ao lado de cada uma o momento em que o valor dela se define. Circule tudo que se define no momento do desfecho ou depois dele. Esse conjunto circulado é a sua lista de vazamento, e ele pertence ao seu texto final, tendo você descartado ou não as variáveis que estão nela.</li>
+<li>Escreva a fronteira em uma frase: os casos que a sua previsão cobre e os que quem lê não deve supor que ela cobre. Seja específico sobre o que os torna diferentes.</li>
+<li>Se predição não for a sua pergunta, escreva a linha que diz isso com todas as letras e depois rode o passo 3 assim mesmo. Uma variável que só se define depois do desfecho também afunda, em silêncio, trabalhos descritivos e causais.</li>
+<li>Registre o passo no seu <strong>AI Research Ledger</strong> (registro de pesquisa com IA), e verifique pelo menos uma saída com um método nomeado do <a href="../verification-guide.html">Guia de Verificação</a>. Para um modelo ajustado, o método é a amostra separada para teste: nunca relate uma pontuação calculada em linhas com que o modelo treinou. Um revisor de IA pode rodar a checagem com você; a decisão de aceitar ou rejeitar continua sendo sua.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../part3-pathways/13-experimental-descriptive-research.html" class="pagination-link" aria-label="Pesquisa Descritiva Experimental">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Pesquisa Descritiva Experimental</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../part3-pathways/15-experimental-causal-research.html" class="pagination-link" aria-label="Pesquisa Causal Experimental">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Pesquisa Causal Experimental</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
