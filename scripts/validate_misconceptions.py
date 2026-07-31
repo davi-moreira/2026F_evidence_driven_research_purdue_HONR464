@@ -786,11 +786,13 @@ def self_test() -> int:
     permit = sum(len(pt.get("permits", []))
                  for m in data["misconceptions"] for pt in m.get("reject_patterns", []))
     rev = sum(len(m.get("allow_reversals", [])) for m in data["misconceptions"])
+    ncases = sum(len(m.get("cases", [])) for m in data["misconceptions"])
     print(f"✓ isolated end-to-end mutation test: {lit} literals and {drift} drifts "
           f"caught by their own rules, {permit} benign phrasings permitted, "
-          f"{rev} allow-reversals refused laundering, plus zero-match-glob, "
-          f"drifted-number, deleted-correction, and stale-source guarantees "
-          f"— no real file was touched")
+          f"{rev} allow-reversals refused laundering, {ncases} A5 cases "
+          f"executable, plus zero-match-glob, drifted-number, "
+          f"deleted-correction, pin-invalidation, stale-source, flipped-case, "
+          f"and deleted-case guarantees — no real file was touched")
     return 0
 
 

@@ -355,7 +355,7 @@ misconceptions:
           - "It is not the effect among stayers unless retention is equal."
           - "It is not the effect among stayers, but it is close enough to treat as one."
         permits:
-          - "It is not the effect among stayers, because each arm produced its own."
+          - "It is not an effect for any named group, because each arm produced its own survivors."
     requires:
       - "complete-case contrast"
     # (former allows deleted as inert — no live hit needed them, round-5 G-B)
@@ -751,8 +751,9 @@ misconceptions:
           - "The placebo rules out a procedural artifact."
           - "It rules out artifacts, whatever the caveats say."
         permits:
+          # (the corrective nb10 quotation lives behind a PIN, not here — a
+          # pinned sentence cannot be probe-tested as a permit)
           - "Random assignment rules out confounding by any pre-treatment trait."
-          - 'Watch out for "it rules out artifacts" and for expecting an exact zero.'
       - pattern: "(is|was|are|were) not an artifact"
         why: "a clean check reframed as proof the result is genuine"
         catches:
