@@ -1,0 +1,284 @@
+# BOOK_STATIONS.yml — authored content for the 12 practice stations (D35 §3)
+#
+# Two grains: lessons are READING units (BOOK_ARCHITECTURE.yml), stations are
+# PRACTICE units. This file holds what a station TEACHES YOU TO DO; station
+# identity, checkpoint ids, and lesson membership live in the architecture
+# manifest and are never restated here.
+#
+# `scripts/build_station_pages.py` generates one page per station into
+# book/stations/ plus its workbook notebook, and the architecture validator
+# requires every station in the manifest to have an entry here.
+#
+# Every station page carries the same spine:
+#   purpose  -> what you can defend when you leave
+#   produces -> the versioned checkpoint artifact (never a locked pass, D35)
+#   steps    -> the practice, in order, each one a thing you write or run
+#   rails    -> how the four persistent rails apply HERE (specifics only;
+#               the generator states the rails themselves)
+#   revisit  -> what later evidence sends you back to this station
+#
+# D35: checkpoints are VERSIONED, not irreversible. A checkpoint produces
+# v0, v1, v2 with reasons attached. Anything else contradicts the book's own
+# declare -> diagnose -> redesign method.
+
+schema_version: "1.0"
+
+stations:
+  - id: govern-the-work
+    purpose: >-
+      Decide how you and your tools will work before there is anything at
+      stake, so the rules exist when the pressure arrives.
+    produces: >-
+      A responsibility statement naming what you will never delegate, your
+      AI and data-handling rules, your opened AI Research Ledger, and an
+      early red-flag screen of your project idea.
+    steps:
+      - Write your responsibility statement: the decisions that stay yours no matter how good the tool gets.
+      - Write your AI working rules: what you will delegate, what you will always verify, and how you will record both.
+      - Open your AI Research Ledger and enter your first row, today, for any tool you have already used on this project.
+      - Run the red-flag screen on your idea: is it answerable, is it yours to ask, and could you defend attempting it.
+    rails:
+      ethics: State now what data you expect to touch, so the ethics station has something to check against.
+      evidence: Decide where your project's files will live before you have any.
+      ai: This station opens the ledger every other station appends to.
+      uncertainty: Write what you currently believe about your question, so later revisions are visible as revisions.
+    revisit: >-
+      Any change in your tools, your data source, or your collaborators
+      sends you back here for a new version.
+
+  - id: frame-the-inquiry
+    purpose: >-
+      Turn a curiosity into a question whose answer you could recognize, and
+      say what kind of answer it would be.
+    produces: >-
+      An objective, your units, outcomes and conditions, your target and
+      reach, and a provisional claim boundary.
+    steps:
+      - State your objective in one sentence a stranger could repeat back.
+      - Name your units, your outcome, and the conditions you are comparing or describing.
+      - Declare kind and reach, and write the words in your question that fix each one.
+      - Write your provisional claim boundary: the sentence you hope to defend, and the sentence you will not be able to.
+    rails:
+      ethics: Note whether answering this question requires people, and flag it now.
+      evidence: Nothing here is settled until Station 3 checks it against what is already known.
+      ai: If AI helped shape the question, the ledger records what you kept and what you rejected.
+      uncertainty: A question with no recognizable answer cannot carry uncertainty; fix the question first.
+    revisit: >-
+      Station 3 almost always sends you back here. That is the design, not
+      a setback.
+
+  - id: ground-in-evidence
+    purpose: >-
+      Find out what is already known, verify that it is actually known, and
+      let it change your question.
+    produces: >-
+      An evidence registry of verified sources, your search log, an evidence
+      map, and an explicit revision of your Station 2 declaration.
+    steps:
+      - Search deliberately and log every search: where you looked, what terms, what you found and did not.
+      - Verify each source you intend to cite by retrieving and reading it, never by trusting a summary.
+      - Build the evidence map: what is settled, what is contested, what is missing.
+      - Write the revision: how your question changed, or a defended statement of why it did not.
+    rails:
+      ethics: Record the licence and terms of any dataset you found here, before you plan to use it.
+      evidence: This station IS the evidence rail's home; every later citation traces to this registry.
+      ai: Every AI-suggested source is unverified until you have opened it yourself.
+      uncertainty: Note where the literature disagrees; that disagreement is uncertainty you inherit.
+    revisit: >-
+      New evidence found at any later station is registered here, not
+      appended informally to a draft.
+
+  - id: declare-and-diagnose
+    purpose: >-
+      Write your design down as something specific enough to be diagnosed,
+      then find out how it behaves before it costs you anything.
+    produces: >-
+      Research Contract v0 — objective, target estimand, population, setting
+      and time, data strategy, measurement, warrant, answer strategy and
+      uncertainty statement — plus your diagnosands, your permission status,
+      and a redesign record.
+    steps:
+      - Write the four MIDA parts of your design so a stranger could run them.
+      - State your estimand and estimator, and describe in words what would differ if the procedure ran again.
+      - Diagnose the design: what is its bias, how much does it wobble, and how often would it detect what you are looking for.
+      - Run the permission determination and declare one status; if it is anything but cleared, name the authority and the date you asked.
+      - Minimise your columns against the declared analysis, and check what a re-identification test would find.
+      - Write the redesign record - what you changed after diagnosing, and why. A diagnosis that changed nothing is a diagnosis you should distrust.
+    rails:
+      ethics: The permission status produced here gates every later station; nothing downstream may proceed past a stop.
+      evidence: Your data strategy names actual sources from the Station 3 registry, not source types.
+      ai: Diagnosis is delegable; the choice of what to fix is not.
+      uncertainty: This is where your uncertainty statement is first written down and first tested.
+    revisit: >-
+      Route diagnosis, measurement changes, permission rulings, and the
+      realized data each produce a new Contract version with its reason.
+
+  - id: develop-the-pathway
+    purpose: >-
+      Commit to the research pathway your question and your licence actually
+      support, and say what that pathway can and cannot establish.
+    produces: >-
+      Research Contract v1: objective by target and reach by data strategy by
+      warrant, with the pathway declared and its limits written before any
+      result exists.
+    steps:
+      - Read the pathway lesson that matches your design, and at least one that does not, so you can say why yours fits.
+      - Declare your pathway and write the crossing that licenses it: what makes your comparison mean what you claim.
+      - Write the limits: what this pathway cannot establish no matter how clean the execution.
+      - Update your claim boundary to match the pathway, and mark the change as a new Contract version.
+    rails:
+      ethics: A change of pathway can change your permission status; recheck rather than assume.
+      evidence: Name the prior work that used this pathway on a comparable question.
+      ai: Ask an assistant to argue for a different pathway, then answer the argument yourself.
+      uncertainty: Different pathways carry different sources of uncertainty; name yours here.
+    revisit: >-
+      Realized data that will not support the declared pathway sends you
+      back here before analysis, not after.
+
+  - id: govern-data-measurement
+    purpose: >-
+      Establish where your numbers came from and whether they measure what
+      you say they measure.
+    produces: >-
+      Provenance documentation, a data-management record, your measurement
+      specification, and a route-specific permission recheck.
+    steps:
+      - Document provenance for every source: who produced it, how, when, and under what terms.
+      - Write your measurement specification: the construct, the operationalization, and the gap between them.
+      - Assess reliability and validity for your own instrument, on the evidence you actually have.
+      - Recheck permissions against the data as they actually arrived, not as planned.
+    rails:
+      ethics: Data that arrived differently from the plan can carry permissions the plan did not cover.
+      evidence: Provenance is the evidence rail applied to your own data.
+      ai: An assistant can describe a dataset it has never seen; verify every claim against the file.
+      uncertainty: Measurement error is uncertainty; state it alongside sampling uncertainty, not instead of it.
+    revisit: >-
+      Any measurement change is a Contract version, because it changes what
+      your estimand refers to.
+
+  - id: first-analysis
+    purpose: >-
+      Produce one honest result you can reproduce from a clean start, with
+      its uncertainty attached.
+    produces: >-
+      A route-specific result with an uncertainty statement, a restart-and-run-all
+      verification, an environment record, and a claim-to-output check.
+    steps:
+      - Write the analysis you declared, and only that analysis, before looking at anything else.
+      - Produce the result with its uncertainty statement, in the form your Contract specified.
+      - Restart and run everything from a clean state; if the numbers move, the pipeline is the finding.
+      - Record your environment, and check that every claim you plan to make traces to a specific output.
+    rails:
+      ethics: What you send to a tool during analysis is a disclosure decision each time.
+      evidence: Every number in your result traces to a data cell and a line of code.
+      ai: Delegate the writing of code freely; verify every returned number against the data yourself.
+      uncertainty: A result reported without uncertainty is not yet a result.
+    revisit: >-
+      Failing to reproduce your own analysis sends you back here before any
+      stress-testing is meaningful.
+
+  - id: stress-test
+    purpose: >-
+      Attack your own result the way a hostile reviewer would, and record
+      what survived.
+    produces: >-
+      A pre-listed robustness grid, negative tests with their assumptions
+      stated, diagnostics, an adversarial-review record, and your adjudication
+      of what survived.
+    steps:
+      - Pre-list your checks before you run any of them, and commit to reporting all of them.
+      - Run the robustness grid and report a span within each commensurable panel, never across panels.
+      - Run the null check that your design licenses, and name it correctly.
+      - Put your finding to adversarial reviewers, human and AI, and confirm or refute each flag with a data check.
+      - Write the adjudication: what survived, what did not, and what you still cannot rule out.
+    rails:
+      ethics: Report the checks that hurt your finding as fully as the ones that helped.
+      evidence: A flag is real when a check confirms it, not when the reviewer sounds certain.
+      ai: An AI reviewer is another critique, not independent verification.
+      uncertainty: Specification spread measures your choices; it is not an uncertainty interval.
+    revisit: >-
+      A finding that does not survive its own pre-listed checks returns to
+      Station 5 or 7, not to the writing station.
+
+  - id: write-bound-disclose
+    purpose: >-
+      Write the claim you can defend, bounded by what your evidence supports,
+      with your AI use disclosed.
+    produces: >-
+      A stand-alone research note or report draft, a claim-to-evidence table,
+      and your AI disclosure statement.
+    steps:
+      - Write your claim as one sentence, with its boundary attached in the same sentence.
+      - Build the claim-to-evidence table: every claim, the output that supports it, and the check that verified it.
+      - State your uncertainty and your limitations in the words a reader outside your field would use.
+      - Write your AI disclosure from your ledger, not from memory.
+    rails:
+      ethics: Disclosure includes what you sent to tools, not only what they produced.
+      evidence: A claim with no row in the table does not appear in the draft.
+      ai: The sentence that ships is yours, whatever drafted it.
+      uncertainty: Findings are never communicated as certainties.
+    revisit: >-
+      A claim you cannot fit in the table is a claim to cut or a check to
+      run, and both send you back a station.
+
+  - id: adapt-and-defend
+    purpose: >-
+      Adapt one defensible claim to one audience and rehearse defending it
+      against real questions.
+    produces: >-
+      One chosen genre adaptation - poster, talk, brief, or another - plus a
+      defense rehearsal record. This is not yet public release.
+    steps:
+      - Choose your genre and read its lesson, then say what your claim must lose to fit it.
+      - Build the adaptation, keeping every number traceable to the claim-evidence table.
+      - Rehearse the defense against the three hardest questions you can construct.
+      - Record which questions you could not answer; those are your next station's agenda.
+    rails:
+      ethics: An adaptation that drops the limitations is not a shorter version, it is a different claim.
+      evidence: Every figure that travels carries its verification with it.
+      ai: Use AI to generate hostile questions; answer them yourself.
+      uncertainty: The shorter the format, the more explicit the boundary has to be.
+    revisit: >-
+      A question you cannot answer in rehearsal is evidence, and it sends
+      you back to the station that owns it.
+
+  - id: reproduce-and-package
+    purpose: >-
+      Prove that someone who is not you can obtain your result from your
+      materials.
+    produces: >-
+      An independent cold-run record and a reusable research package.
+    steps:
+      - Run your own package cold, from a clean environment, following only your written instructions.
+      - Have someone else run it without your help, and log every place they had to ask you a question.
+      - Fix what the cold run exposed; every question they asked is a missing line in your documentation.
+      - Assemble the package: data or its access route, code, environment, documentation, and licence.
+    rails:
+      ethics: What can be shared is set by your permissions, and the package says so explicitly.
+      evidence: Reproduction is the evidence rail's final test.
+      ai: An assistant can generate documentation; only a cold human run can validate it.
+      uncertainty: Reproduce the uncertainty statement, not only the point estimate.
+    revisit: >-
+      A failed cold run is a finding about your work, and it precedes any
+      release.
+
+  - id: release-next-cycle
+    purpose: >-
+      Decide whether this work is ready to leave your hands, and say what
+      the next study should be.
+    produces: >-
+      A release audit, your final dossier, an explicit stopping rule, and
+      your next-study agenda.
+    steps:
+      - Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants.
+      - Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history.
+      - Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision.
+      - Write the next-study agenda: the question this work opened, and what you would do differently.
+    rails:
+      ethics: Release is the last point at which a permission problem can still be prevented.
+      evidence: The dossier is the evidence rail made assemblable.
+      ai: Your AI ledger closes here as a complete record, not a summary.
+      uncertainty: State what you still do not know as clearly as what you found.
+    revisit: >-
+      The next-study agenda is the revisit; a research cycle ends by
+      declaring the next one.

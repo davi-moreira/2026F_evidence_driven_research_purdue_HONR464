@@ -1,0 +1,58 @@
+---
+title: "Station 6: Govern data and measurement"
+---
+
+::: {.callout-warning .review-pending title="Under development"}
+This station is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station06_govern_data_measurement.ipynb){target="_blank"}
+
+> **What you can defend when you leave.** Establish where your numbers came from and whether they measure what you say they measure.
+
+## What this station produces
+
+Provenance documentation, a data-management record, your measurement specification, and a route-specific permission recheck.
+
+This is a **versioned checkpoint**, not a pass. You date it, number it, and
+attach the reason for the version. When later evidence changes it, you write
+the next version rather than editing the last one, because the sequence of
+changes is itself part of your research record.
+
+## The reading behind it
+
+- [Ch. 19 — Data Provenance and Data Quality](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html)
+- [Ch. 20 — Measurement and Operationalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html)
+
+Read these before you work the station. The station is where you do the thing
+the lessons describe, on your own project.
+
+## The practice
+
+1. {'Document provenance for every source': 'who produced it, how, when, and under what terms.'}
+2. {'Write your measurement specification': 'the construct, the operationalization, and the gap between them.'}
+3. Assess reliability and validity for your own instrument, on the evidence you actually have.
+4. Recheck permissions against the data as they actually arrived, not as planned.
+
+## The four rails, here
+
+Four concerns cross every station in this book. At this station they take
+these specific forms.
+
+- **Ethics, permissions, and data exposure.** Data that arrived differently from the plan can carry permissions the plan did not cover.
+- **Evidence, provenance, and reproducibility.** Provenance is the evidence rail applied to your own data.
+- **AI activity, verification, and human decisions.** An assistant can describe a dataset it has never seen; verify every claim against the file.
+- **Uncertainty, claim boundary, and revision history.** Measurement error is uncertainty; state it alongside sampling uncertainty, not instead of it.
+
+## What sends you back
+
+Any measurement change is a Contract version, because it changes what your estimand refers to.
+
+## Your workbook
+
+Open the workbook with the badge above. It walks these steps with a cell for
+each one, ends by writing your checkpoint version with its reason, and adds
+the rows this station contributes to your AI Research Ledger and your Research
+Dossier.

@@ -180,6 +180,8 @@ def check_toc(arch) -> list[str]:
     from book_manifest import active_lessons
     toc_path = REPO / "book" / "_quarto.yml"
     text = toc_path.read_text()
+    # only LESSON entries (part*/) participate; station pages live under
+    # stations/ and are generated from the manifest by build_station_pages.py
     listed = re.findall(r"^\s*-\s+(part\d[\w-]*/[\w.-]+\.qmd)\s*$", text, re.M)
     expected = [l["source"] for l in active_lessons(arch)]
     if listed != expected:
@@ -195,6 +197,39 @@ def check_toc(arch) -> list[str]:
         return [f"toc: book/_quarto.yml disagrees with the manifest — "
                 + "; ".join(detail)]
     return []
+
+
+def check_stations(arch) -> list[str]:
+    """Every manifest station needs authored content, a generated page, and a
+    workbook; and every station page must be listed in the TOC."""
+    p: list[str] = []
+    spec_path = REPO / "planning" / "BOOK_STATIONS.yml"
+    if not spec_path.exists():
+        return ["stations: planning/BOOK_STATIONS.yml is missing"]
+    spec = {s["id"]: s for s in yaml.safe_load(spec_path.read_text())["stations"]}
+    toc = (REPO / "book" / "_quarto.yml").read_text()
+    for st in arch.get("stations", []):
+        sid, n = st["id"], st["rank"]
+        if sid not in spec:
+            p.append(f"stations[{sid}]: no authored entry in BOOK_STATIONS.yml")
+            continue
+        for field in ("purpose", "produces", "steps", "rails", "revisit"):
+            if not spec[sid].get(field):
+                p.append(f"stations[{sid}]: missing authored `{field}`")
+        page = REPO / "book" / "stations" / f"station{n:02d}-{sid}.qmd"
+        wb = (REPO / "notebooks" / "book" / "stations" /
+              f"station{n:02d}_{sid.replace('-', '_')}.ipynb")
+        if not page.exists():
+            p.append(f"stations[{sid}]: page missing — run build_station_pages.py")
+        elif f"stations/station{n:02d}-{sid}.qmd" not in toc:
+            p.append(f"stations[{sid}]: page not listed in book/_quarto.yml")
+        if not wb.exists():
+            p.append(f"stations[{sid}]: workbook missing — run build_station_pages.py")
+    extra = {f.name for f in (REPO / "book" / "stations").glob("*.qmd")} - {
+        f"station{st['rank']:02d}-{st['id']}.qmd" for st in arch.get("stations", [])}
+    for e in sorted(extra):
+        p.append(f"stations: ORPHAN page not in the manifest: book/stations/{e}")
+    return p
 
 
 def check_crosswalk(arch, cw) -> list[str]:
@@ -427,6 +462,7 @@ def main() -> int:
     manifest_problems = []
     manifest_problems += check_architecture(arch)
     manifest_problems += check_toc(arch)
+    manifest_problems += check_stations(arch)
     manifest_problems += check_crosswalk(arch, cw)
     manifest_problems += check_schedule(cw)
     manifest_problems += check_assessments(arch, assess)

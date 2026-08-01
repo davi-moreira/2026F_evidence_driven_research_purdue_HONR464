@@ -79,3 +79,6 @@ jobs:
 
       - name: Milestone Book Anchors projection freshness
         run: python3 scripts/build_milestone_anchors.py --check
+
+      - name: Station pages + workbooks projection freshness
+        run: python3 scripts/build_station_pages.py --check

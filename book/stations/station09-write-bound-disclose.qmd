@@ -1,0 +1,60 @@
+---
+title: "Station 9: Write, bound, and disclose"
+---
+
+::: {.callout-warning .review-pending title="Under development"}
+This station is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station09_write_bound_disclose.ipynb){target="_blank"}
+
+> **What you can defend when you leave.** Write the claim you can defend, bounded by what your evidence supports, with your AI use disclosed.
+
+## What this station produces
+
+A stand-alone research note or report draft, a claim-to-evidence table, and your AI disclosure statement.
+
+This is a **versioned checkpoint**, not a pass. You date it, number it, and
+attach the reason for the version. When later evidence changes it, you write
+the next version rather than editing the last one, because the sequence of
+changes is itself part of your research record.
+
+## The reading behind it
+
+- [Ch. 27 — From Results to Claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html)
+- [Ch. 28 — Claim–Evidence Tables](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html)
+- [Ch. 33 — AI Disclosure and Research Integrity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html)
+- [Ch. 35 — From Poster to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html)
+
+Read these before you work the station. The station is where you do the thing
+the lessons describe, on your own project.
+
+## The practice
+
+1. Write your claim as one sentence, with its boundary attached in the same sentence.
+2. {'Build the claim-to-evidence table': 'every claim, the output that supports it, and the check that verified it.'}
+3. State your uncertainty and your limitations in the words a reader outside your field would use.
+4. Write your AI disclosure from your ledger, not from memory.
+
+## The four rails, here
+
+Four concerns cross every station in this book. At this station they take
+these specific forms.
+
+- **Ethics, permissions, and data exposure.** Disclosure includes what you sent to tools, not only what they produced.
+- **Evidence, provenance, and reproducibility.** A claim with no row in the table does not appear in the draft.
+- **AI activity, verification, and human decisions.** The sentence that ships is yours, whatever drafted it.
+- **Uncertainty, claim boundary, and revision history.** Findings are never communicated as certainties.
+
+## What sends you back
+
+A claim you cannot fit in the table is a claim to cut or a check to run, and both send you back a station.
+
+## Your workbook
+
+Open the workbook with the badge above. It walks these steps with a cell for
+each one, ends by writing your checkpoint version with its reason, and adds
+the rows this station contributes to your AI Research Ledger and your Research
+Dossier.

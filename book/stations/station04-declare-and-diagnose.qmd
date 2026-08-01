@@ -1,0 +1,62 @@
+---
+title: "Station 4: Declare and diagnose provisionally"
+---
+
+::: {.callout-warning .review-pending title="Under development"}
+This station is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station04_declare_and_diagnose.ipynb){target="_blank"}
+
+> **What you can defend when you leave.** Write your design down as something specific enough to be diagnosed, then find out how it behaves before it costs you anything.
+
+## What this station produces
+
+Research Contract v0 — objective, target estimand, population, setting and time, data strategy, measurement, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record.
+
+This is a **versioned checkpoint**, not a pass. You date it, number it, and
+attach the reason for the version. When later evidence changes it, you write
+the next version rather than editing the last one, because the sequence of
+changes is itself part of your research record.
+
+## The reading behind it
+
+- [Ch. 9 — Model, Inquiry, Data Strategy, and Answer Strategy](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html)
+- [Ch. 10 — Uncertainty Before You Need It](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/uncertainty-foundations.html)
+- [Ch. 11 — Declaring and Diagnosing a Research Design](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html)
+- [Ch. 12 — Research Ethics and Data Governance](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/research-ethics-and-data-governance.html)
+
+Read these before you work the station. The station is where you do the thing
+the lessons describe, on your own project.
+
+## The practice
+
+1. Write the four MIDA parts of your design so a stranger could run them.
+2. State your estimand and estimator, and describe in words what would differ if the procedure ran again.
+3. {'Diagnose the design': 'what is its bias, how much does it wobble, and how often would it detect what you are looking for.'}
+4. Run the permission determination and declare one status; if it is anything but cleared, name the authority and the date you asked.
+5. Minimise your columns against the declared analysis, and check what a re-identification test would find.
+6. Write the redesign record - what you changed after diagnosing, and why. A diagnosis that changed nothing is a diagnosis you should distrust.
+
+## The four rails, here
+
+Four concerns cross every station in this book. At this station they take
+these specific forms.
+
+- **Ethics, permissions, and data exposure.** The permission status produced here gates every later station; nothing downstream may proceed past a stop.
+- **Evidence, provenance, and reproducibility.** Your data strategy names actual sources from the Station 3 registry, not source types.
+- **AI activity, verification, and human decisions.** Diagnosis is delegable; the choice of what to fix is not.
+- **Uncertainty, claim boundary, and revision history.** This is where your uncertainty statement is first written down and first tested.
+
+## What sends you back
+
+Route diagnosis, measurement changes, permission rulings, and the realized data each produce a new Contract version with its reason.
+
+## Your workbook
+
+Open the workbook with the badge above. It walks these steps with a cell for
+each one, ends by writing your checkpoint version with its reason, and adds
+the rows this station contributes to your AI Research Ledger and your Research
+Dossier.

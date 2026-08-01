@@ -63,6 +63,20 @@ book:
         - part6-after-conference/35-managing-multiple-ai-agents.qmd
         - part6-after-conference/36-conflicting-agents-and-human-escalation.qmd
         - part6-after-conference/37-final-research-and-ai-management-portfolio.qmd
+    - part: "The practice stations"
+      chapters:
+        - stations/station01-govern-the-work.qmd
+        - stations/station02-frame-the-inquiry.qmd
+        - stations/station03-ground-in-evidence.qmd
+        - stations/station04-declare-and-diagnose.qmd
+        - stations/station05-develop-the-pathway.qmd
+        - stations/station06-govern-data-measurement.qmd
+        - stations/station07-first-analysis.qmd
+        - stations/station08-stress-test.qmd
+        - stations/station09-write-bound-disclose.qmd
+        - stations/station10-adapt-and-defend.qmd
+        - stations/station11-reproduce-and-package.qmd
+        - stations/station12-release-next-cycle.qmd
   appendices:
     - verification-guide.qmd
     - for-instructors.qmd

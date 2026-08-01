@@ -1,0 +1,62 @@
+---
+title: "Station 5: Develop the pathway"
+---
+
+::: {.callout-warning .review-pending title="Under development"}
+This station is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station05_develop_the_pathway.ipynb){target="_blank"}
+
+> **What you can defend when you leave.** Commit to the research pathway your question and your licence actually support, and say what that pathway can and cannot establish.
+
+## What this station produces
+
+Research Contract v1: objective by target and reach by data strategy by warrant, with the pathway declared and its limits written before any result exists.
+
+This is a **versioned checkpoint**, not a pass. You date it, number it, and
+attach the reason for the version. When later evidence changes it, you write
+the next version rather than editing the last one, because the sequence of
+changes is itself part of your research record.
+
+## The reading behind it
+
+- [Ch. 13 — Observational Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/11-observational-descriptive-research.html)
+- [Ch. 14 — Observational Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/12-observational-causal-research.html)
+- [Ch. 15 — Experimental Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/13-experimental-descriptive-research.html)
+- [Ch. 16 — Prediction and Generalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/14-prediction-and-generalization.html)
+- [Ch. 17 — Experimental Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/15-experimental-causal-research.html)
+- [Ch. 18 — Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html)
+
+Read these before you work the station. The station is where you do the thing
+the lessons describe, on your own project.
+
+## The practice
+
+1. Read the pathway lesson that matches your design, and at least one that does not, so you can say why yours fits.
+2. {'Declare your pathway and write the crossing that licenses it': 'what makes your comparison mean what you claim.'}
+3. {'Write the limits': 'what this pathway cannot establish no matter how clean the execution.'}
+4. Update your claim boundary to match the pathway, and mark the change as a new Contract version.
+
+## The four rails, here
+
+Four concerns cross every station in this book. At this station they take
+these specific forms.
+
+- **Ethics, permissions, and data exposure.** A change of pathway can change your permission status; recheck rather than assume.
+- **Evidence, provenance, and reproducibility.** Name the prior work that used this pathway on a comparable question.
+- **AI activity, verification, and human decisions.** Ask an assistant to argue for a different pathway, then answer the argument yourself.
+- **Uncertainty, claim boundary, and revision history.** Different pathways carry different sources of uncertainty; name yours here.
+
+## What sends you back
+
+Realized data that will not support the declared pathway sends you back here before analysis, not after.
+
+## Your workbook
+
+Open the workbook with the badge above. It walks these steps with a cell for
+each one, ends by writing your checkpoint version with its reason, and adds
+the rows this station contributes to your AI Research Ledger and your Research
+Dossier.

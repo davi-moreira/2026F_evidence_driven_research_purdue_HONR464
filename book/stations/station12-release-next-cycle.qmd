@@ -1,0 +1,59 @@
+---
+title: "Station 12: Release and direct the next cycle"
+---
+
+::: {.callout-warning .review-pending title="Under development"}
+This station is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station12_release_next_cycle.ipynb){target="_blank"}
+
+> **What you can defend when you leave.** Decide whether this work is ready to leave your hands, and say what the next study should be.
+
+## What this station produces
+
+A release audit, your final dossier, an explicit stopping rule, and your next-study agenda.
+
+This is a **versioned checkpoint**, not a pass. You date it, number it, and
+attach the reason for the version. When later evidence changes it, you write
+the next version rather than editing the last one, because the sequence of
+changes is itself part of your research record.
+
+## The reading behind it
+
+- [Ch. 37 — Managing Multiple AI Agents](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html)
+- [Ch. 38 — Conflicting Agents and Human Escalation](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html)
+- [Ch. 39 — Final Research and AI-Management Portfolio](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html)
+
+Read these before you work the station. The station is where you do the thing
+the lessons describe, on your own project.
+
+## The practice
+
+1. {'Run the release audit': 'permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants.'}
+2. {'Assemble the dossier': 'contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history.'}
+3. {'Write your stopping rule': 'why you are stopping here rather than running one more check, stated as a decision.'}
+4. {'Write the next-study agenda': 'the question this work opened, and what you would do differently.'}
+
+## The four rails, here
+
+Four concerns cross every station in this book. At this station they take
+these specific forms.
+
+- **Ethics, permissions, and data exposure.** Release is the last point at which a permission problem can still be prevented.
+- **Evidence, provenance, and reproducibility.** The dossier is the evidence rail made assemblable.
+- **AI activity, verification, and human decisions.** Your AI ledger closes here as a complete record, not a summary.
+- **Uncertainty, claim boundary, and revision history.** State what you still do not know as clearly as what you found.
+
+## What sends you back
+
+The next-study agenda is the revisit; a research cycle ends by declaring the next one.
+
+## Your workbook
+
+Open the workbook with the badge above. It walks these steps with a cell for
+each one, ends by writing your checkpoint version with its reason, and adds
+the rows this station contributes to your AI Research Ledger and your Research
+Dossier.
