@@ -796,19 +796,36 @@ def self_test() -> int:
                 failures.append("drifted prose number did NOT fail the scan")
             ch14.write_text(ch14_src)
 
-            # 6. structural guarantee: deleting a required correction must FAIL
-            ch21 = snap / "book/part4-credible-evidence/21-robustness-and-sensitivity.qmd"
-            ch21_src = ch21.read_text()
-            ch21.write_text(ch21_src.replace("specification\nspread", "REMOVED TERM"))
+            # 6. structural guarantee: a required correction that disappears
+            # from EVERY declared surface must FAIL. It must be removed
+            # everywhere, not from one file: the same correction legitimately
+            # appears in several places (a lesson and its station), so a
+            # single-file deletion proves nothing.
+            needle = "specification spread"
+            touched: dict[Path, str] = {}
+            for f, _empty in [(x, None) for x in surfaces(
+                    {}, load()["defaults"])[0]]:
+                try:
+                    raw = f.read_text()
+                except (OSError, UnicodeDecodeError):
+                    continue
+                if needle in raw.lower():
+                    touched[f] = raw
+                    f.write_text(re.sub(needle, "REMOVED TERM", raw,
+                                        flags=re.I))
+            _TEXT_CACHE.clear()
             if not any("required correction" in p for p in run(check_nums=False)):
                 failures.append("deleted required correction did NOT fail the scan")
-            ch21.write_text(ch21_src)
+            for f, raw in touched.items():
+                f.write_text(raw)
+            _TEXT_CACHE.clear()
 
             # 6b. structural guarantees on the PIN model (rounds 5-6): the
             # exception must die under (i) an edit inside the quotation's
             # paragraph, (ii) an endorsement in the NEXT paragraph, (iii) an
             # endorsement in the PREVIOUS paragraph, and (iv) a duplicated
             # copy of the pinned paragraph in the same file.
+            ch21 = snap / "book/part4-credible-evidence/21-robustness-and-sensitivity.qmd"
             ch21_src2 = ch21.read_text()
             pin_probes = [
                 ("in-paragraph edit",
