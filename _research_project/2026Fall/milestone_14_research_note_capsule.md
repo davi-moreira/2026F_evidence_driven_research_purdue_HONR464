@@ -30,7 +30,7 @@ Due: **Friday, December 4, 11:59 PM** (you work on it at that Friday's studio).
 | 1 | **`lastname_m14_research_note.pdf`** *or* a shared Colab notebook link | Your research-note draft: the problem–gap–question spine in prose, your results hierarchy with the headline finding at its real boundary, your limitations sized to the evidence, and your AI-edit log. This is the graded prose artifact. |
 | 2 | **`lastname_m14_capsule.ipynb`** *or* a shared Colab notebook link | Your reproducibility capsule: a notebook that passes restart-and-run-all, its data-provenance note, a fixed seed, a decision log, and your finalized AI-use ledger — audited against the five package sins. |
 | 3 | **The table-read margin notes + your revision** | The two margin notes each reader left on your draft (sharpest sentence, weakest claim) and the revision you made in response. |
-| 4 | **EDR\|AI "It is your turn" — ch. 34, ch. 35** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 4 | **EDR\|AI "It is your turn" — ch. 35, ch. 36** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure the capsule runs top to bottom when opened cold. Attach your **AI
@@ -46,8 +46,8 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 34 — [From Poster to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch33_from_poster_to_research_note.ipynb)
-- Ch. 35 — [Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch34_open_and_reusable_research_packages.ipynb)
+- Ch. 35 — [From Poster to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch33_from_poster_to_research_note.ipynb)
+- Ch. 36 — [Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch34_open_and_reusable_research_packages.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's 37 "It is your turn" sections chain into your final

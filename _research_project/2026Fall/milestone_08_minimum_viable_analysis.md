@@ -24,7 +24,7 @@ Due: **Friday, October 23, 11:59 PM** (you work on it at that Friday's studio).
 |---|---|---|
 | 1 | **A shared Colab notebook link** *(the reproducible artifact)* | Your minimum viable analysis: a seeded notebook that reruns end to end and produces the one number you report. It carries the five-part spine below in its markdown, plus your AI Research Ledger rows. This is the graded artifact and it becomes the **reproducible Colab notebook** in your dossier. |
 | 2 | **`lastname_m08_minimum_viable_analysis.pdf`** *(optional companion)* | If you prefer to write the five-part spine as a 1–2 page PDF, submit it alongside the link. The notebook link is still required, because the number has to reproduce. |
-| 3 | **EDR\|AI "It is your turn" — ch. 16, ch. 17, ch. 21** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 3 | **EDR\|AI "It is your turn" — ch. 17, ch. 18, ch. 22** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. Confirm the
 number in your write-up matches what the notebook prints when run top to bottom.
@@ -38,9 +38,9 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 16 — [Experimental Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/15-experimental-causal-research.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch15_experimental_causal_research.ipynb)
-- Ch. 17 — [Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch16_hybrid_and_complex_designs.ipynb)
-- Ch. 21 — [AI as Analytical Assistant](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch20_ai_as_analytical_assistant.ipynb)
+- Ch. 17 — [Experimental Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/15-experimental-causal-research.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch15_experimental_causal_research.ipynb)
+- Ch. 18 — [Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch16_hybrid_and_complex_designs.ipynb)
+- Ch. 22 — [AI as Analytical Assistant](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch20_ai_as_analytical_assistant.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's 37 "It is your turn" sections chain into your final

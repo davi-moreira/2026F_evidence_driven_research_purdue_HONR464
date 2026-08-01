@@ -196,7 +196,7 @@ lessons:
      source: part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.qmd,
      companion: ch10_declaring_and_diagnosing_a_research_design.ipynb,
      url_path: part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html}
-  - {id: ethics-data-governance,    state: planned, rank: 105, part: part2,
+  - {id: ethics-data-governance,    state: active, rank: 105, part: part2,
      station: declare-and-diagnose, role: core,
      title_en: "Research ethics and data governance: the permission status of your study",
      source: part2-curiosity-to-design/research-ethics-and-data-governance.qmd,

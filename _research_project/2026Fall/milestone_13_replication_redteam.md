@@ -34,7 +34,7 @@ runs on the course discussion board over the break).
 |---|---|---|
 | 1 | **`lastname_m13_redteam.pdf`** *or* a shared Colab notebook link | The five-part **Replication and Red-Team Report** below on your assigned peer package: your reproduction log, your claim-to-output trace, one alternative specification and one hidden assumption, your verified GenAI Studio pass, and your prioritized recommendations. This is the graded artifact. |
 | 2 | **The board post + one reply** | Post your single **most-threatening weakness** (with the check that would settle it) to the async board, and reply substantively to **one** classmate's post. Both are part of the grade. |
-| 3 | **EDR\|AI "It is your turn" — ch. 33** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 3 | **EDR\|AI "It is your turn" — ch. 34** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and make
 sure every reproduction cell runs top to bottom when opened. Attach your **AI
@@ -51,7 +51,7 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 33 — [Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch32_replication_and_reproduction.ipynb)
+- Ch. 34 — [Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch32_replication_and_reproduction.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's 37 "It is your turn" sections chain into your final

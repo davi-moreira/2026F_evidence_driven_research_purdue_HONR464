@@ -1,0 +1,406 @@
+---
+title: "Research Ethics and Data Governance"
+---
+
+::: {.callout-warning .review-pending title="Under development"}
+This chapter is part of a book in active development and has not yet
+been through the author's review. Content may change as the review
+advances.
+:::
+
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/research_ethics_and_data_governance.ipynb){target="_blank"}
+
+> **The research decision.** Whether you are permitted to collect the data your design
+> calls for, who decides that, and how you will hold the data once you have them. You
+> settle this before collection starts, because it is the one design flaw no later
+> analysis can repair.
+
+**The decision on the table: your project's permission status, and the handling rules
+that follow from it.**
+
+> *"I do not need you to be a lawyer. I need you to know which questions are not yours
+> to answer, and to have asked them before you knocked on the first door."*
+> — a **research-integrity officer**, in the meeting nobody wants to have afterwards
+
+## Why this decision matters
+
+Every other mistake in this book is recoverable. A bad estimator can be swapped. A
+weak design can be redesigned. Data collected without permission cannot be fixed by
+any amount of later care, because the thing that went wrong already happened to
+someone.
+
+That is the whole reason this decision sits here, right after your design becomes
+executable and right before you execute it.
+
+There is a second reason, less noble and just as real. Work collected without the
+right permissions often cannot be published, presented, or even shown at a
+conference. Students discover this at the worst possible moment, holding data they
+are not allowed to use.
+
+> **A question that often comes up here:** *"Is this not overkill for a student
+> project?"* The size of the project does not change what happens to the person you
+> interviewed. Small projects get lighter review, not no review, and finding out which
+> one applies to you takes far less time than you expect.
+
+## The concept
+
+Your project has a **permission status**: a statement of whether you may collect, who
+decided, and what you are waiting on. There are four, and your job in this chapter is
+to land on exactly one of them and write it down.
+
+**Cleared** means no formal determination is needed and you can say why in one
+sentence. Example: you are analyzing a published national statistics table with no
+individual records in it.
+
+**Formal determination required** means a competent authority has to rule before you
+collect. Example: you plan to interview people about their experience of unemployment.
+
+**Pending** means you asked and are waiting. Work that does not touch people or their
+data may continue. Example: you have submitted your protocol and are refining your
+interview guide while you wait.
+
+**Not authorized — stop** means you may not proceed as planned. Example: you wanted to
+use a dataset whose licence forbids the use you have in mind. Stopping is a design
+decision, not a failure, and this chapter ends with what to do instead.
+
+The **competent authority** is whoever, at your institution, is empowered to make this
+ruling. The name differs by country and campus: an ethics committee, a review board, a
+data protection officer, a supervisor holding delegated authority. Find out which one
+covers student projects at your institution before you need it.
+
+::: {.callout-note title="What this chapter is not"}
+This chapter is not legal advice, and it does not tell you what any specific rule
+requires where you are. Rules differ by country, institution, and data source, and
+they change. What this chapter gives you is the ability to recognize which situation
+you are in and to ask the right person the right question early.
+:::
+
+### Running the determination
+
+Frameworks differ in wording, but the determination almost always turns on the same
+three questions. Answer them about your own project, in order.
+
+**First: are you producing knowledge meant to travel beyond this project?** Research
+that is intended to be generalized is treated differently from a class exercise or an
+internal report you will never share. Your poster and your research note are meant to
+travel. Answer honestly.
+
+**Second: do living people, or data about identifiable living people, enter your
+study?** This includes interviews and surveys, and it also includes records, logs, and
+existing datasets in which individuals can be picked out. It does not stop being about
+people because the file arrived as a spreadsheet.
+
+**Third: how do the data reach you?** Collecting directly from people is treated
+differently from using data someone else already collected, and both are treated
+differently again when the data are sensitive: health, finances, immigration status,
+political views, anything that could harm someone if it escaped.
+
+If the first two answers are yes, assume **formal determination required** until your
+competent authority tells you otherwise. Do not talk yourself out of asking. The cost
+of asking is an email; the cost of not asking is your project.
+
+### The cases undergraduates get wrong
+
+Five situations look exempt and usually are not.
+
+**Public social media posts.** Public does not mean unrestricted. People posted to an
+audience, and platform terms often restrict collection regardless of what a review
+board says.
+
+**Data about your classmates.** Convenience makes it feel informal. Your classmates
+are human subjects, and the power relationship inside a classroom makes consent
+harder, not easier.
+
+**Interviewing professionals about their job.** Sometimes this is genuinely outside
+the scope, because you are collecting facts about an organization rather than about a
+person. It flips the moment you ask about their own experience, opinions, or conduct.
+
+**A public dataset with individual records.** "Publicly available" is a statement about
+access, not about identifiability, and not about the licence terms that govern your
+particular use.
+
+**Anything above, plus an AI tool.** Adding an assistant does not simplify the
+determination. It adds a party to the handling of the data, which the next section is
+about.
+
+## A worked example
+
+A political-science student wants to know whether first-generation students use
+campus advising differently from other students. She plans a short survey of 800
+students, and to protect them she promises to remove names before analyzing anything.
+
+That promise sounds sufficient. Watch what it actually buys.
+
+**De-identification** means removing enough information that a person cannot
+reasonably be picked out of the data. Deleting names is not de-identification, because
+the remaining columns can still single someone out.
+
+```{python}
+#| eval: false
+import numpy as np
+from collections import Counter
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 800
+dept    = rng.integers(0, 12, n)      # 12 departments
+year    = rng.integers(1, 5, n)       # 4 class years
+country = rng.choice(np.arange(28), size=n,
+                     p=np.r_[0.45, 0.10, 0.07, 0.05, 0.04, np.full(23, 0.29 / 23)])
+age     = np.clip(rng.normal(20.5, 2.2, n).round().astype(int), 17, 35)
+
+def share_unique(*cols):
+    keys = list(zip(*cols))
+    counts = Counter(keys)
+    return sum(1 for k in keys if counts[k] == 1) / len(keys)
+
+print(f"unique on department alone:            {share_unique(dept):.1%}")
+print(f"unique on department + year:           {share_unique(dept, year):.1%}")
+print(f"unique on department + year + country: {share_unique(dept, year, country):.1%}")
+print(f"and adding age:                        {share_unique(dept, year, country, age):.1%}")
+```
+
+Department alone singles out nobody. Department and year together still single out
+nobody. Add country of origin and 30.2% of respondents are alone in their combination.
+Add age and 67.6% are.
+
+Two in three respondents are uniquely described by four ordinary columns, in a file
+with no names in it. Anyone who knows one respondent's department, year, country, and
+age can find that person's answers.
+
+Now look at who carries that risk.
+
+```{python}
+#| eval: false
+rare = country >= 5                    # students from less-common countries
+common = country == 0                  # students from the most common one
+
+print(f"unique among less-common-country students: "
+      f"{share_unique(dept[rare], year[rare], country[rare], age[rare]):.1%}")
+print(f"unique among most-common-country students: "
+      f"{share_unique(dept[common], year[common], country[common], age[common]):.1%}")
+```
+
+Among students from the most common country, 40.3% are unique. Among students from
+less common ones, 97.2% are. Nearly every one of them is individually identifiable in
+a file described as anonymous.
+
+That is the part worth sitting with. The protection failed unevenly, and it failed
+most for the people with the least common characteristics, who are often exactly the
+people a study about belonging is asking about. A privacy measure that works for the
+majority and fails for a minority is not a privacy measure.
+
+The fix is not more deleting. It is deciding, before collection, which columns you
+actually need. If the analysis compares first-generation and continuing-generation
+students, you may not need country at all, and you may need age only as a range.
+**Data minimisation** means collecting only what your declared analysis requires, so
+the risky combination never exists.
+
+## Consent is a process
+
+A signature captures one moment. **Informed consent** is the ongoing condition that a
+participant understands what is happening and agrees to it, which means it can be
+withdrawn later and has to be maintained, not filed.
+
+Three things make it real rather than ceremonial. The person understands what you will
+do with their words or numbers, in language they actually use. The person can decline
+without cost, which is hardest exactly where you have any power over them. The person
+can come back afterwards and withdraw, which means you must know which data are theirs
+long enough to be able to remove them.
+
+That last requirement sits in tension with anonymity, and you should notice the
+tension rather than paper over it. If you truly cannot link a response to a person,
+you cannot honour a withdrawal request either. Decide which one your study needs, and
+tell participants the truth about it.
+
+## AI and the exposure question
+
+Here is the rule that surprises people. Pasting data into an AI tool can be a
+**disclosure**: passing data to a third party who is not covered by the permission you
+were granted. Your participants agreed to share with you and your project, not with
+whatever service you found convenient.
+
+That does not make AI unusable on a real project. It makes the boundary matter.
+
+Work with the AI on the **shape** of your data, not its contents. Column names, types,
+ranges, and the analysis you intend are usually safe to describe; individual records
+usually are not. Ask it to write the code and run the code yourself, which is the
+pattern this book teaches everywhere else anyway.
+
+If you need to show it real values, use a synthetic sample that shares the structure
+and none of the people. Generating a fake dataset with the same columns is a few lines
+of code, and it debugs your pipeline just as well.
+
+Check what your institution and your data source actually permit before you paste
+anything, because some agreements prohibit third-party processing outright and no
+setting inside the tool changes that.
+
+Finally, record it. Your **AI Research Ledger** should show what you sent, not only
+what came back, so the exposure question has an answer you can produce on request.
+
+## Data governance for a small project
+
+Four decisions, all of which you can make in ten minutes and none of which you can
+retrofit.
+
+**Where the data live.** One named location, backed up, not scattered across a laptop,
+a personal cloud folder, and three email attachments.
+
+**Who can open it.** Name the people. On a student project this is usually you and
+your supervisor, and "the group chat" is not an access-control policy.
+
+**How long you keep it.** Set a date now. Data you no longer need is pure risk, and
+"forever, just in case" is a decision you are making whether or not you notice.
+
+**What happens at the end.** Deletion, or transfer to your supervisor, or deposit in a
+repository under whatever licence you promised participants. Write down which.
+
+## Four situations that must stop or wait
+
+Read these as diagnoses. Each one has a tell the student could have caught earlier.
+
+**Scraping a support forum.** A business student collects posts from a public
+forum where people discuss debt problems, planning to code emotional language. It is
+public, so it feels cleared. It is not: the posts are about identifiable people
+discussing sensitive circumstances, and the forum's terms may forbid collection.
+**Formal determination required**, and probably a different data source. *The tell:*
+you would not read those posts aloud with the authors' names attached.
+
+**The classmate survey.** An economics student surveys her own study group about
+family income to pilot her instrument. It is a pilot, so it feels informal. Sensitive
+data plus a personal relationship plus no determination is the combination that ends
+projects. **Formal determination required.** *The tell:* you can name every
+respondent.
+
+**The pasted spreadsheet.** A student receives an administrative dataset from a
+campus office under an agreement that limits use to their approved project, then
+pastes 200 rows into an AI tool to ask why a merge is failing. The disclosure has
+already happened by the time the answer comes back. **Not authorized — stop**, and
+report it. *The tell:* you accepted an agreement you did not read before you needed it.
+
+**The interview that turned.** A student interviews a manager about their firm's
+hiring process, which was scoped as organizational fact-gathering. Twenty minutes in,
+the manager begins describing their own experience of discrimination at the company.
+The study just became something else. **Pause and ask**, before transcribing. *The
+tell:* your question was about the organization and the answer was about a person.
+
+When the answer is stop, you are not out of a project. You are one design decision
+away from a different one: published aggregate statistics instead of individual
+records, a simulated dataset for a methods demonstration, a study of organizations
+instead of people, or the same question asked of willing participants under a
+protocol. The question you care about usually survives. The data source does not.
+
+### Check yourself
+
+A student plans to analyze a public dataset of 5,000 hospital discharge records with
+names and addresses already removed, to study readmission patterns. Which is right?
+
+A. Cleared — the data are public and already de-identified.
+
+B. Cleared — hospital records are administrative data, not human subjects.
+
+C. Formal determination required — the records describe identifiable living people
+regardless of what was deleted, and the reach of the analysis is public.
+
+D. Not authorized — stop, because health data can never be used by students.
+
+The answer is C. Option A treats deleting direct identifiers as de-identification,
+which the simulation above should have made hard to believe. Option B assumes the file
+format changes what the data are about. Option D overcorrects into a rule nobody has:
+health data are used by students constantly, under determinations and agreements.
+
+## The Colab laboratory
+
+This chapter has its own **companion notebook** — open it in Colab with the badge above.
+The notebook collects the chapter's prompts and code and ends with the **It is your
+turn** workspace, so you can complete the chapter's step of your project without leaving
+Colab. The full classroom laboratory behind this chapter is course notebook **nb04 — The
+anatomy of a research design: MIDA + declare → diagnose → redesign** ([open in
+Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb)),
+part of the companion course presented in the [For instructors](../for-instructors.qmd)
+appendix. There you run the re-identification check on your own planned columns and
+find out which ones you can drop.
+
+## Recommended AI prompts
+
+> 💡 **AI Prompt:** "Here is my research question, who my units are, and exactly how I
+> plan to obtain data about them: [paste yours]. Ask me the questions a research ethics
+> committee would ask about this plan. Do not tell me whether I need approval, and do
+> not reassure me — just produce the questions, including the uncomfortable ones."
+>
+> **After running, verify:**
+> - [ ] Answer each question in writing yourself. A question you cannot answer is the
+>   one to bring to your competent authority first.
+> - [ ] Check whether any question reveals data you planned to collect but do not need.
+>   Drop those columns now, while dropping them is free.
+> - [ ] Take the determination to a human. A tool cannot rule on your project, and a
+>   confident answer from one is worth nothing in a meeting.
+> - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
+
+> 💡 **AI Prompt:** "Here are the column names, types, and value ranges of my dataset —
+> no actual records: [paste the schema only]. Write code that checks how many rows are
+> unique on each combination of my quasi-identifier columns, and flag combinations that
+> single out fewer than five people."
+>
+> **After running, verify:**
+> - [ ] Confirm you pasted a schema and not data. If you pasted values, treat it as a
+>   disclosure and record it.
+> - [ ] Run the code yourself on your own machine and read the counts. The risk is in
+>   your data, not in the tool's description of it.
+> - [ ] Decide which columns to coarsen or drop. That decision is a research decision
+>   about what your analysis needs.
+> - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
+
+::: {.callout-important title="Do not delegate"}
+- **The determination.** Only your competent authority can rule on your project. No
+  tool, and no confident classmate, can do it for you.
+- **What you promise participants.** You will be held to those words, so they must be
+  yours.
+- **What leaves your machine.** Every paste is a decision about somebody else's data.
+:::
+
+## An AI failure case
+
+Describe a study to an assistant and ask whether you need approval, and you will
+usually get a fluent, specific, reassuring answer:
+
+> "Since your data are publicly available and you are removing names, this would
+> typically qualify as exempt research and would not require full review."
+
+Three things are wrong at once. The tool does not know your jurisdiction or your
+institution's rules for student projects. It does not know your data source's licence.
+And it has stated a conclusion, which is the one thing in this chapter that is not
+yours or its to state.
+
+The failure is worse than an ordinary wrong answer, because it is exactly the answer
+you were hoping for, delivered in the register of someone who knows. The verification
+move is structural, not factual: an answer to "do I need approval" is only worth
+anything from the body that grants it. Use the tool to generate the questions. Take the
+questions to the person who decides.
+
+## It is your turn
+
+Write your project's permission status and its handling rules. This goes in your
+dossier, and every later stage of the project depends on it being honest.
+
+1. **Run the determination.** Answer the three questions in writing: is your knowledge
+   meant to travel, do identifiable living people enter your study, and how do the data
+   reach you.
+2. **Declare one permission status** — cleared, formal determination required, pending,
+   or not authorized — and name the competent authority at your institution who covers
+   student projects. If your status is anything but cleared, write the date you
+   contacted them.
+3. **List your columns and minimise them.** Write every variable you plan to collect,
+   then cross out the ones your declared analysis does not require. For anything left
+   that could single someone out, say how you will coarsen it.
+4. **Run the uniqueness check** on your planned quasi-identifiers, using the companion
+   notebook. Report the share of units that would be unique, and say which group in
+   your data carries the most risk.
+5. **Write your AI boundary** in two lines: what you will send to an AI tool on this
+   project, and what you will never send. Then write the ledger field you will use to
+   record each send.
+6. **Write your four governance decisions** — where the data live, who can open them,
+   how long you keep them, and what happens at the end. Give the retention date as an
+   actual date.
+7. **Write your stop plan.** In one sentence: if your determination comes back "not
+   authorized", what is the version of this question you would ask instead?

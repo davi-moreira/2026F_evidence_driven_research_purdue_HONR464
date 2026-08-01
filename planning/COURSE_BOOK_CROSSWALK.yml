@@ -84,7 +84,7 @@ rows:
       - {lesson: mida,             requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
       - {lesson: uncertainty-foundations, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
       - {lesson: declare-diagnose, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
-    planned_home_anchor: [ethics-data-governance]
+      - {lesson: ethics-data-governance, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
     # D35 correction: both planned lessons take nb04 as primary lab when active
     station_events:
       - {station: declare-and-diagnose, event: checkpoint, checkpoint: contract-v0, at: milestone-submission}
