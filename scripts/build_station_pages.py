@@ -58,6 +58,8 @@ def station_page(st: dict, spec: dict, lessons: list[dict], n: int) -> str:
     rails = "\n".join(f"- **{RAILS[k]}.** {v}" for k, v in spec["rails"].items()
                       if k in RAILS)
     slug = st["id"]
+    route_block = (f"## Choosing your pathway\n\n{spec['route_guide']}\n"
+                   if spec.get("route_guide") else "")
     return f"""---
 title: "Station {n}: {st['title']}"
 ---
@@ -76,7 +78,7 @@ attach the reason for the version. When later evidence changes it, you write
 the next version rather than editing the last one, because the sequence of
 changes is itself part of your research record.
 
-## The reading behind it
+{route_block}## The reading behind it
 
 {reading}
 

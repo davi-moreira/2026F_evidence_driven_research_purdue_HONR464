@@ -21,6 +21,28 @@ attach the reason for the version. When later evidence changes it, you write
 the next version rather than editing the last one, because the sequence of
 changes is itself part of your research record.
 
+## Choosing your pathway
+
+Five pathways run through this part of the book, and your question plus
+what you are allowed to do picks one. Read the row that fits, then read
+one that does not, so you can say why yours is right.
+
+| If your question asks | and you | your pathway is |
+|---|---|---|
+| how much, how many, or how distributed something is | observe the world as you find it | **observational descriptive** |
+| whether one thing causes another | observe the world as you find it | **observational causal** |
+| how much of a property exists, measured cleanly | assign conditions yourself to measure it | **experimental descriptive** |
+| whether an intervention works | assign conditions yourself | **experimental causal** |
+| what will happen to cases nobody has seen | fit and honestly score a forecast | **prediction** |
+
+Two cautions. Assigning conditions does not make your question causal:
+a randomized study can be measuring a property the world already has.
+And a causal question whose data cannot identify it stays causal — it
+becomes "causal, currently unidentified", never quietly descriptive.
+
+If your project combines pieces of several rows, read the complex-designs
+lesson as an overlay after you have declared your primary pathway.
+
 ## The reading behind it
 
 - [Ch. 13 — Observational Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/11-observational-descriptive-research.html)
@@ -35,7 +57,7 @@ the lessons describe, on your own project.
 
 ## The practice
 
-1. Read the pathway lesson that matches your design, and at least one that does not, so you can say why yours fits.
+1. Use the route guide above to choose your pathway, then read that lesson and at least one that does not fit, so you can say why yours does.
 2. {'Declare your pathway and write the crossing that licenses it': 'what makes your comparison mean what you claim.'}
 3. {'Write the limits': 'what this pathway cannot establish no matter how clean the execution.'}
 4. Update your claim boundary to match the pathway, and mark the change as a new Contract version.

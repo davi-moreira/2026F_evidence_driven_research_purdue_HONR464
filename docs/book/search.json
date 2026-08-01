@@ -3744,11 +3744,22 @@
     ]
   },
   {
+    "objectID": "stations/station05-develop-the-pathway.html#choosing-your-pathway",
+    "href": "stations/station05-develop-the-pathway.html#choosing-your-pathway",
+    "title": "44  Station 5: Develop the pathway",
+    "section": "44.2 Choosing your pathway",
+    "text": "44.2 Choosing your pathway\nFive pathways run through this part of the book, and your question plus what you are allowed to do picks one. Read the row that fits, then read one that does not, so you can say why yours is right.\n\n\n\n\n\n\n\n\nIf your question asks\nand you\nyour pathway is\n\n\n\n\nhow much, how many, or how distributed something is\nobserve the world as you find it\nobservational descriptive\n\n\nwhether one thing causes another\nobserve the world as you find it\nobservational causal\n\n\nhow much of a property exists, measured cleanly\nassign conditions yourself to measure it\nexperimental descriptive\n\n\nwhether an intervention works\nassign conditions yourself\nexperimental causal\n\n\nwhat will happen to cases nobody has seen\nfit and honestly score a forecast\nprediction\n\n\n\nTwo cautions. Assigning conditions does not make your question causal: a randomized study can be measuring a property the world already has. And a causal question whose data cannot identify it stays causal — it becomes “causal, currently unidentified”, never quietly descriptive.\nIf your project combines pieces of several rows, read the complex-designs lesson as an overlay after you have declared your primary pathway.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
+    ]
+  },
+  {
     "objectID": "stations/station05-develop-the-pathway.html#the-reading-behind-it",
     "href": "stations/station05-develop-the-pathway.html#the-reading-behind-it",
     "title": "44  Station 5: Develop the pathway",
-    "section": "44.2 The reading behind it",
-    "text": "44.2 The reading behind it\n\nCh. 13 — Observational Descriptive Research\nCh. 14 — Observational Causal Research\nCh. 15 — Experimental Descriptive Research\nCh. 16 — Prediction and Generalization\nCh. 17 — Experimental Causal Research\nCh. 18 — Hybrid and Complex Designs\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "section": "44.3 The reading behind it",
+    "text": "44.3 The reading behind it\n\nCh. 13 — Observational Descriptive Research\nCh. 14 — Observational Causal Research\nCh. 15 — Experimental Descriptive Research\nCh. 16 — Prediction and Generalization\nCh. 17 — Experimental Causal Research\nCh. 18 — Hybrid and Complex Designs\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
     "crumbs": [
       "The practice stations",
       "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
@@ -3758,8 +3769,8 @@
     "objectID": "stations/station05-develop-the-pathway.html#the-practice",
     "href": "stations/station05-develop-the-pathway.html#the-practice",
     "title": "44  Station 5: Develop the pathway",
-    "section": "44.3 The practice",
-    "text": "44.3 The practice\n\nRead the pathway lesson that matches your design, and at least one that does not, so you can say why yours fits.\n{‘Declare your pathway and write the crossing that licenses it’: ‘what makes your comparison mean what you claim.’}\n{‘Write the limits’: ‘what this pathway cannot establish no matter how clean the execution.’}\nUpdate your claim boundary to match the pathway, and mark the change as a new Contract version.",
+    "section": "44.4 The practice",
+    "text": "44.4 The practice\n\nUse the route guide above to choose your pathway, then read that lesson and at least one that does not fit, so you can say why yours does.\n{‘Declare your pathway and write the crossing that licenses it’: ‘what makes your comparison mean what you claim.’}\n{‘Write the limits’: ‘what this pathway cannot establish no matter how clean the execution.’}\nUpdate your claim boundary to match the pathway, and mark the change as a new Contract version.",
     "crumbs": [
       "The practice stations",
       "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
@@ -3769,8 +3780,8 @@
     "objectID": "stations/station05-develop-the-pathway.html#the-four-rails-here",
     "href": "stations/station05-develop-the-pathway.html#the-four-rails-here",
     "title": "44  Station 5: Develop the pathway",
-    "section": "44.4 The four rails, here",
-    "text": "44.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. A change of pathway can change your permission status; recheck rather than assume.\nEvidence, provenance, and reproducibility. Name the prior work that used this pathway on a comparable question.\nAI activity, verification, and human decisions. Ask an assistant to argue for a different pathway, then answer the argument yourself.\nUncertainty, claim boundary, and revision history. Different pathways carry different sources of uncertainty; name yours here.",
+    "section": "44.5 The four rails, here",
+    "text": "44.5 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. A change of pathway can change your permission status; recheck rather than assume.\nEvidence, provenance, and reproducibility. Name the prior work that used this pathway on a comparable question.\nAI activity, verification, and human decisions. Ask an assistant to argue for a different pathway, then answer the argument yourself.\nUncertainty, claim boundary, and revision history. Different pathways carry different sources of uncertainty; name yours here.",
     "crumbs": [
       "The practice stations",
       "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
@@ -3780,8 +3791,8 @@
     "objectID": "stations/station05-develop-the-pathway.html#what-sends-you-back",
     "href": "stations/station05-develop-the-pathway.html#what-sends-you-back",
     "title": "44  Station 5: Develop the pathway",
-    "section": "44.5 What sends you back",
-    "text": "44.5 What sends you back\nRealized data that will not support the declared pathway sends you back here before analysis, not after.",
+    "section": "44.6 What sends you back",
+    "text": "44.6 What sends you back\nRealized data that will not support the declared pathway sends you back here before analysis, not after.",
     "crumbs": [
       "The practice stations",
       "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
@@ -3791,8 +3802,8 @@
     "objectID": "stations/station05-develop-the-pathway.html#your-workbook",
     "href": "stations/station05-develop-the-pathway.html#your-workbook",
     "title": "44  Station 5: Develop the pathway",
-    "section": "44.6 Your workbook",
-    "text": "44.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "section": "44.7 Your workbook",
+    "text": "44.7 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
     "crumbs": [
       "The practice stations",
       "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
