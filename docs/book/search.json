@@ -987,7 +987,7 @@
     "href": "part2-curiosity-to-design/research-ethics-and-data-governance.html#the-concept",
     "title": "12  Research Ethics and Data Governance",
     "section": "12.2 The concept",
-    "text": "12.2 The concept\nYour project has a permission status: a statement of whether you may collect, who decided, and what you are waiting on. There are four, and your job in this chapter is to land on exactly one of them and write it down.\nCleared means no formal determination is needed and you can say why in one sentence. Example: you are analyzing a published national statistics table with no individual records in it.\nFormal determination required means a competent authority has to rule before you collect. Example: you plan to interview people about their experience of unemployment.\nPending means you asked and are waiting. Work that does not touch people or their data may continue. Example: you have submitted your protocol and are refining your interview guide while you wait.\nNot authorized — stop means you may not proceed as planned. Example: you wanted to use a dataset whose licence forbids the use you have in mind. Stopping is a design decision, not a failure, and this chapter ends with what to do instead.\nThe competent authority is whoever, at your institution, is empowered to make this ruling. The name differs by country and campus: an ethics committee, a review board, a data protection officer, a supervisor holding delegated authority. Find out which one covers student projects at your institution before you need it.\n\n\n\n\n\n\nNoteWhat this chapter is not\n\n\n\nThis chapter is not legal advice, and it does not tell you what any specific rule requires where you are. Rules differ by country, institution, and data source, and they change. What this chapter gives you is the ability to recognize which situation you are in and to ask the right person the right question early.\n\n\n\n12.2.1 Running the determination\nFrameworks differ in wording, but the determination almost always turns on the same three questions. Answer them about your own project, in order.\nFirst: are you producing knowledge meant to travel beyond this project? Research that is intended to be generalized is treated differently from a class exercise or an internal report you will never share. Your poster and your research note are meant to travel. Answer honestly.\nSecond: do living people, or data about identifiable living people, enter your study? This includes interviews and surveys, and it also includes records, logs, and existing datasets in which individuals can be picked out. It does not stop being about people because the file arrived as a spreadsheet.\nThird: how do the data reach you? Collecting directly from people is treated differently from using data someone else already collected, and both are treated differently again when the data are sensitive: health, finances, immigration status, political views, anything that could harm someone if it escaped.\nIf the first two answers are yes, assume formal determination required until your competent authority tells you otherwise. Do not talk yourself out of asking. The cost of asking is an email; the cost of not asking is your project.\n\n\n12.2.2 The cases undergraduates get wrong\nFive situations look exempt and usually are not.\nPublic social media posts. Public does not mean unrestricted. People posted to an audience, and platform terms often restrict collection regardless of what a review board says.\nData about your classmates. Convenience makes it feel informal. Your classmates are human subjects, and the power relationship inside a classroom makes consent harder, not easier.\nInterviewing professionals about their job. Sometimes this is genuinely outside the scope, because you are collecting facts about an organization rather than about a person. It flips the moment you ask about their own experience, opinions, or conduct.\nA public dataset with individual records. “Publicly available” is a statement about access, not about identifiability, and not about the licence terms that govern your particular use.\nAnything above, plus an AI tool. Adding an assistant does not simplify the determination. It adds a party to the handling of the data, which the next section is about.",
+    "text": "12.2 The concept\nYour project has a permission status: a statement of whether you may collect, who decided, and what you are waiting on. There are four, and your job in this chapter is to land on exactly one of them and write it down.\nCleared means no formal determination is needed and you can say why in one sentence. Example: you are analyzing a published national statistics table with no individual records in it.\nFormal determination required means a competent authority has to rule before you collect. Example: you plan to interview people about their experience of unemployment.\nPending means you asked and are waiting. Work that does not touch people or their data may continue. Example: you have submitted your protocol and are refining your interview guide while you wait.\nNot authorized — stop means you may not proceed as planned. Example: you wanted to use a dataset whose licence forbids the use you have in mind. Stopping is a design decision, not a failure, and this chapter ends with what to do instead.\nThe competent authority is whoever, at your institution, is empowered to make this ruling. The name differs by country and campus: an ethics committee, a review board, a data protection officer, a supervisor holding delegated authority. Find out which one covers student projects at your institution before you need it.\n\n\n\n\n\n\nNoteWhat this chapter is not\n\n\n\nThis chapter is not legal advice, and it does not tell you what any specific rule requires where you are. Rules differ by country, institution, and data source, and they change. What this chapter gives you is the ability to recognize which situation you are in and to ask the right person the right question early.\n\n\n\n12.2.1 Running the determination\nFrameworks differ in wording, but the determination almost always turns on the same three questions. Answer them about your own project, in order.\nFirst: is this a systematic investigation meant to produce knowledge that generalizes? Not “will I publish it”. Whether you intend to publish is not the test in every framework, and some national policies place course-based student research expressly inside their scope. If you are following a method to learn something that would hold beyond your own case, answer yes and let the authority decide the rest.\nSecond: do living people, or data about identifiable living people, enter your study? This includes interviews and surveys, and it also includes records, logs, and existing datasets in which individuals can be picked out. It does not stop being about people because the file arrived as a spreadsheet.\nThird: how do the data reach you? Collecting directly from people is treated differently from using data someone else already collected, and both are treated differently again when the data are sensitive: health, finances, immigration status, political views, anything that could harm someone if it escaped.\nIf the first two answers are yes, assume formal determination required until your competent authority tells you otherwise. Do not talk yourself out of asking. The cost of asking is an email; the cost of not asking is your project.\n\n\n12.2.2 The cases undergraduates get wrong\nSix situations look exempt and often are not.\nPublic social media posts. Public availability and permission are separate questions, and some frameworks require BOTH public availability and the absence of any reasonable expectation of privacy before a public-information exemption applies. People posted to an audience, not to a researcher, and platform terms often restrict collection regardless of what any review board says.\nData about your classmates. Convenience makes it feel informal. Your classmates are human subjects, and the power relationship inside a classroom makes consent harder, not easier.\nInterviewing professionals about their job. Sometimes this is genuinely outside the scope, because you are collecting facts about an organization rather than about a person. It flips the moment you ask about their own experience, opinions, or conduct.\nA public dataset with individual records. “Publicly available” is a statement about access, not about identifiability, and not about the licence terms that govern your particular use.\n“I am not going to publish it.” This is the most common escape hatch and the weakest. Frameworks generally turn on what kind of activity you are running, not on where the output lands, so a study you never publish can still need a determination.\nAnything above, plus an AI tool. Adding an assistant does not simplify the determination. It adds a party to the handling of the data, which the next section is about.",
     "crumbs": [
       "Part II — From curiosity to research design",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Research Ethics and Data Governance</span>"
@@ -1020,7 +1020,7 @@
     "href": "part2-curiosity-to-design/research-ethics-and-data-governance.html#ai-and-the-exposure-question",
     "title": "12  Research Ethics and Data Governance",
     "section": "12.5 AI and the exposure question",
-    "text": "12.5 AI and the exposure question\nHere is the rule that surprises people. Pasting data into an AI tool can be a disclosure: passing data to a third party who is not covered by the permission you were granted. Your participants agreed to share with you and your project, not with whatever service you found convenient.\nThat does not make AI unusable on a real project. It makes the boundary matter.\nWork with the AI on the shape of your data, not its contents. Column names, types, ranges, and the analysis you intend are usually safe to describe; individual records usually are not. Ask it to write the code and run the code yourself, which is the pattern this book teaches everywhere else anyway.\nIf you need to show it real values, use a synthetic sample that shares the structure and none of the people. Generating a fake dataset with the same columns is a few lines of code, and it debugs your pipeline just as well.\nCheck what your institution and your data source actually permit before you paste anything, because some agreements prohibit third-party processing outright and no setting inside the tool changes that.\nFinally, record it. Your AI Research Ledger should show what you sent, not only what came back, so the exposure question has an answer you can produce on request.",
+    "text": "12.5 AI and the exposure question\nHere is the rule that surprises people. Pasting data into an AI tool can be a disclosure: passing data to a third party who is not covered by the permission you were granted. Your participants agreed to share with you and your project, not with whatever service you found convenient.\nThat does not make AI unusable on a real project. It makes the boundary matter.\nWork with the AI on the shape of your data, not its contents. Column names, types, ranges, and the analysis you intend are usually safe to describe; individual records usually are not. Ask it to write the code and run the code yourself, which is the pattern this book teaches everywhere else anyway.\nIf you need to show it real values, use a synthetic sample that shares the structure and none of the people. Generating a fake dataset with the same columns is a few lines of code, and it debugs your pipeline just as well.\nCheck what your institution and your data source actually permit before you paste anything, because some agreements prohibit third-party processing outright and no setting inside the tool changes that.\nBefore you use a tool on a real project, check what it does with what you send: retention of prompts and outputs, whether inputs train the model, whether humans review them, and where the data are stored. An institution-provided tool is not automatically approved for every dataset either, so confirm which categories of information it covers rather than assuming the licence settles it.\nWhen a transfer is authorized, send the smallest fragment that does the job, and strip identifiers that the task does not need.\nRecord it. Your AI Research Ledger should show what you sent, not only what came back, so the exposure question has an answer you can produce on request.\nAnd if you paste something you should not have, the recovery is procedural, not private. Stop sharing further, write down exactly what went where and when, and tell your supervisor and your competent authority promptly. Do not conceal it, and do not assume that deleting the conversation undid it.",
     "crumbs": [
       "Part II — From curiosity to research design",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Research Ethics and Data Governance</span>"
@@ -3466,6 +3466,798 @@
     "crumbs": [
       "Part VI — Research after the conference",
       "<span class='chapter-number'>39</span>  <span class='chapter-title'>Final Research and AI-Management Portfolio</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station01-govern-the-work.html",
+    "href": "stations/station01-govern-the-work.html",
+    "title": "40  Station 1: Govern the work",
+    "section": "",
+    "text": "40.1 What this station produces\nA responsibility statement naming what you will never delegate, your AI and data-handling rules, your opened AI Research Ledger, and an early red-flag screen of your project idea.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Station 1: Govern the work</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station01-govern-the-work.html#the-reading-behind-it",
+    "href": "stations/station01-govern-the-work.html#the-reading-behind-it",
+    "title": "40  Station 1: Govern the work",
+    "section": "40.2 The reading behind it",
+    "text": "40.2 The reading behind it\n\nCh. 1 — AI Is Your Arm, Not Your Brain\nCh. 2 — The Student as Research Director\nCh. 3 — Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend\nCh. 4 — Research Responsibility and Intellectual Ownership\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Station 1: Govern the work</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station01-govern-the-work.html#the-practice",
+    "href": "stations/station01-govern-the-work.html#the-practice",
+    "title": "40  Station 1: Govern the work",
+    "section": "40.3 The practice",
+    "text": "40.3 The practice\n\n{‘Write your responsibility statement’: ‘the decisions that stay yours no matter how good the tool gets.’}\n{‘Write your AI working rules’: ‘what you will delegate, what you will always verify, and how you will record both.’}\nOpen your AI Research Ledger and enter your first row, today, for any tool you have already used on this project.\n{‘Run the red-flag screen on your idea’: ‘is it answerable, is it yours to ask, and could you defend attempting it.’}",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Station 1: Govern the work</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station01-govern-the-work.html#the-four-rails-here",
+    "href": "stations/station01-govern-the-work.html#the-four-rails-here",
+    "title": "40  Station 1: Govern the work",
+    "section": "40.4 The four rails, here",
+    "text": "40.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. State now what data you expect to touch, so the ethics station has something to check against.\nEvidence, provenance, and reproducibility. Decide where your project’s files will live before you have any.\nAI activity, verification, and human decisions. This station opens the ledger every other station appends to.\nUncertainty, claim boundary, and revision history. Write what you currently believe about your question, so later revisions are visible as revisions.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Station 1: Govern the work</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station01-govern-the-work.html#what-sends-you-back",
+    "href": "stations/station01-govern-the-work.html#what-sends-you-back",
+    "title": "40  Station 1: Govern the work",
+    "section": "40.5 What sends you back",
+    "text": "40.5 What sends you back\nAny change in your tools, your data source, or your collaborators sends you back here for a new version.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Station 1: Govern the work</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station01-govern-the-work.html#your-workbook",
+    "href": "stations/station01-govern-the-work.html#your-workbook",
+    "title": "40  Station 1: Govern the work",
+    "section": "40.6 Your workbook",
+    "text": "40.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>Station 1: Govern the work</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station02-frame-the-inquiry.html",
+    "href": "stations/station02-frame-the-inquiry.html",
+    "title": "41  Station 2: Frame the inquiry",
+    "section": "",
+    "text": "41.1 What this station produces\nAn objective, your units, outcomes and conditions, your target and reach, and a provisional claim boundary.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Station 2: Frame the inquiry</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station02-frame-the-inquiry.html#the-reading-behind-it",
+    "href": "stations/station02-frame-the-inquiry.html#the-reading-behind-it",
+    "title": "41  Station 2: Frame the inquiry",
+    "section": "41.2 The reading behind it",
+    "text": "41.2 The reading behind it\n\nCh. 5 — From Curiosity to a Research Problem\nCh. 6 — Descriptive, Predictive, and Causal Questions\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Station 2: Frame the inquiry</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station02-frame-the-inquiry.html#the-practice",
+    "href": "stations/station02-frame-the-inquiry.html#the-practice",
+    "title": "41  Station 2: Frame the inquiry",
+    "section": "41.3 The practice",
+    "text": "41.3 The practice\n\nState your objective in one sentence a stranger could repeat back.\nName your units, your outcome, and the conditions you are comparing or describing.\nDeclare kind and reach, and write the words in your question that fix each one.\n{‘Write your provisional claim boundary’: ‘the sentence you hope to defend, and the sentence you will not be able to.’}",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Station 2: Frame the inquiry</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station02-frame-the-inquiry.html#the-four-rails-here",
+    "href": "stations/station02-frame-the-inquiry.html#the-four-rails-here",
+    "title": "41  Station 2: Frame the inquiry",
+    "section": "41.4 The four rails, here",
+    "text": "41.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. Note whether answering this question requires people, and flag it now.\nEvidence, provenance, and reproducibility. Nothing here is settled until Station 3 checks it against what is already known.\nAI activity, verification, and human decisions. If AI helped shape the question, the ledger records what you kept and what you rejected.\nUncertainty, claim boundary, and revision history. A question with no recognizable answer cannot carry uncertainty; fix the question first.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Station 2: Frame the inquiry</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station02-frame-the-inquiry.html#what-sends-you-back",
+    "href": "stations/station02-frame-the-inquiry.html#what-sends-you-back",
+    "title": "41  Station 2: Frame the inquiry",
+    "section": "41.5 What sends you back",
+    "text": "41.5 What sends you back\nStation 3 almost always sends you back here. That is the design, not a setback.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Station 2: Frame the inquiry</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station02-frame-the-inquiry.html#your-workbook",
+    "href": "stations/station02-frame-the-inquiry.html#your-workbook",
+    "title": "41  Station 2: Frame the inquiry",
+    "section": "41.6 Your workbook",
+    "text": "41.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>Station 2: Frame the inquiry</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station03-ground-in-evidence.html",
+    "href": "stations/station03-ground-in-evidence.html",
+    "title": "42  Station 3: Ground it in verified evidence",
+    "section": "",
+    "text": "42.1 What this station produces\nAn evidence registry of verified sources, your search log, an evidence map, and an explicit revision of your Station 2 declaration.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Station 3: Ground it in verified evidence</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station03-ground-in-evidence.html#the-reading-behind-it",
+    "href": "stations/station03-ground-in-evidence.html#the-reading-behind-it",
+    "title": "42  Station 3: Ground it in verified evidence",
+    "section": "42.2 The reading behind it",
+    "text": "42.2 The reading behind it\n\nCh. 7 — Research Builds on Research\nCh. 8 — Finding and Verifying Prior Evidence\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Station 3: Ground it in verified evidence</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station03-ground-in-evidence.html#the-practice",
+    "href": "stations/station03-ground-in-evidence.html#the-practice",
+    "title": "42  Station 3: Ground it in verified evidence",
+    "section": "42.3 The practice",
+    "text": "42.3 The practice\n\n{‘Search deliberately and log every search’: ‘where you looked, what terms, what you found and did not.’}\nVerify each source you intend to cite by retrieving and reading it, never by trusting a summary.\n{‘Build the evidence map’: ‘what is settled, what is contested, what is missing.’}\n{‘Write the revision’: ‘how your question changed, or a defended statement of why it did not.’}",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Station 3: Ground it in verified evidence</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station03-ground-in-evidence.html#the-four-rails-here",
+    "href": "stations/station03-ground-in-evidence.html#the-four-rails-here",
+    "title": "42  Station 3: Ground it in verified evidence",
+    "section": "42.4 The four rails, here",
+    "text": "42.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. Record the licence and terms of any dataset you found here, before you plan to use it.\nEvidence, provenance, and reproducibility. This station IS the evidence rail’s home; every later citation traces to this registry.\nAI activity, verification, and human decisions. Every AI-suggested source is unverified until you have opened it yourself.\nUncertainty, claim boundary, and revision history. Note where the literature disagrees; that disagreement is uncertainty you inherit.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Station 3: Ground it in verified evidence</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station03-ground-in-evidence.html#what-sends-you-back",
+    "href": "stations/station03-ground-in-evidence.html#what-sends-you-back",
+    "title": "42  Station 3: Ground it in verified evidence",
+    "section": "42.5 What sends you back",
+    "text": "42.5 What sends you back\nNew evidence found at any later station is registered here, not appended informally to a draft.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Station 3: Ground it in verified evidence</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station03-ground-in-evidence.html#your-workbook",
+    "href": "stations/station03-ground-in-evidence.html#your-workbook",
+    "title": "42  Station 3: Ground it in verified evidence",
+    "section": "42.6 Your workbook",
+    "text": "42.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>Station 3: Ground it in verified evidence</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station04-declare-and-diagnose.html",
+    "href": "stations/station04-declare-and-diagnose.html",
+    "title": "43  Station 4: Declare and diagnose provisionally",
+    "section": "",
+    "text": "43.1 What this station produces\nResearch Contract v0 — objective, target estimand, population, setting and time, data strategy, measurement, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Station 4: Declare and diagnose provisionally</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station04-declare-and-diagnose.html#the-reading-behind-it",
+    "href": "stations/station04-declare-and-diagnose.html#the-reading-behind-it",
+    "title": "43  Station 4: Declare and diagnose provisionally",
+    "section": "43.2 The reading behind it",
+    "text": "43.2 The reading behind it\n\nCh. 9 — Model, Inquiry, Data Strategy, and Answer Strategy\nCh. 10 — Uncertainty Before You Need It\nCh. 11 — Declaring and Diagnosing a Research Design\nCh. 12 — Research Ethics and Data Governance\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Station 4: Declare and diagnose provisionally</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station04-declare-and-diagnose.html#the-practice",
+    "href": "stations/station04-declare-and-diagnose.html#the-practice",
+    "title": "43  Station 4: Declare and diagnose provisionally",
+    "section": "43.3 The practice",
+    "text": "43.3 The practice\n\nWrite the four MIDA parts of your design so a stranger could run them.\nState your estimand and estimator, and describe in words what would differ if the procedure ran again.\n{‘Diagnose the design’: ‘what is its bias, how much does it wobble, and how often would it detect what you are looking for.’}\nRun the permission determination and declare one status; if it is anything but cleared, name the authority and the date you asked.\nMinimise your columns against the declared analysis, and check what a re-identification test would find.\nWrite the redesign record - what you changed after diagnosing, and why. A diagnosis that changed nothing is a diagnosis you should distrust.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Station 4: Declare and diagnose provisionally</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station04-declare-and-diagnose.html#the-four-rails-here",
+    "href": "stations/station04-declare-and-diagnose.html#the-four-rails-here",
+    "title": "43  Station 4: Declare and diagnose provisionally",
+    "section": "43.4 The four rails, here",
+    "text": "43.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. The permission status produced here gates every later station; nothing downstream may proceed past a stop.\nEvidence, provenance, and reproducibility. Your data strategy names actual sources from the Station 3 registry, not source types.\nAI activity, verification, and human decisions. Diagnosis is delegable; the choice of what to fix is not.\nUncertainty, claim boundary, and revision history. This is where your uncertainty statement is first written down and first tested.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Station 4: Declare and diagnose provisionally</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station04-declare-and-diagnose.html#what-sends-you-back",
+    "href": "stations/station04-declare-and-diagnose.html#what-sends-you-back",
+    "title": "43  Station 4: Declare and diagnose provisionally",
+    "section": "43.5 What sends you back",
+    "text": "43.5 What sends you back\nRoute diagnosis, measurement changes, permission rulings, and the realized data each produce a new Contract version with its reason.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Station 4: Declare and diagnose provisionally</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station04-declare-and-diagnose.html#your-workbook",
+    "href": "stations/station04-declare-and-diagnose.html#your-workbook",
+    "title": "43  Station 4: Declare and diagnose provisionally",
+    "section": "43.6 Your workbook",
+    "text": "43.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>Station 4: Declare and diagnose provisionally</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station05-develop-the-pathway.html",
+    "href": "stations/station05-develop-the-pathway.html",
+    "title": "44  Station 5: Develop the pathway",
+    "section": "",
+    "text": "44.1 What this station produces\nResearch Contract v1: objective by target and reach by data strategy by warrant, with the pathway declared and its limits written before any result exists.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station05-develop-the-pathway.html#the-reading-behind-it",
+    "href": "stations/station05-develop-the-pathway.html#the-reading-behind-it",
+    "title": "44  Station 5: Develop the pathway",
+    "section": "44.2 The reading behind it",
+    "text": "44.2 The reading behind it\n\nCh. 13 — Observational Descriptive Research\nCh. 14 — Observational Causal Research\nCh. 15 — Experimental Descriptive Research\nCh. 16 — Prediction and Generalization\nCh. 17 — Experimental Causal Research\nCh. 18 — Hybrid and Complex Designs\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station05-develop-the-pathway.html#the-practice",
+    "href": "stations/station05-develop-the-pathway.html#the-practice",
+    "title": "44  Station 5: Develop the pathway",
+    "section": "44.3 The practice",
+    "text": "44.3 The practice\n\nRead the pathway lesson that matches your design, and at least one that does not, so you can say why yours fits.\n{‘Declare your pathway and write the crossing that licenses it’: ‘what makes your comparison mean what you claim.’}\n{‘Write the limits’: ‘what this pathway cannot establish no matter how clean the execution.’}\nUpdate your claim boundary to match the pathway, and mark the change as a new Contract version.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station05-develop-the-pathway.html#the-four-rails-here",
+    "href": "stations/station05-develop-the-pathway.html#the-four-rails-here",
+    "title": "44  Station 5: Develop the pathway",
+    "section": "44.4 The four rails, here",
+    "text": "44.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. A change of pathway can change your permission status; recheck rather than assume.\nEvidence, provenance, and reproducibility. Name the prior work that used this pathway on a comparable question.\nAI activity, verification, and human decisions. Ask an assistant to argue for a different pathway, then answer the argument yourself.\nUncertainty, claim boundary, and revision history. Different pathways carry different sources of uncertainty; name yours here.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station05-develop-the-pathway.html#what-sends-you-back",
+    "href": "stations/station05-develop-the-pathway.html#what-sends-you-back",
+    "title": "44  Station 5: Develop the pathway",
+    "section": "44.5 What sends you back",
+    "text": "44.5 What sends you back\nRealized data that will not support the declared pathway sends you back here before analysis, not after.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station05-develop-the-pathway.html#your-workbook",
+    "href": "stations/station05-develop-the-pathway.html#your-workbook",
+    "title": "44  Station 5: Develop the pathway",
+    "section": "44.6 Your workbook",
+    "text": "44.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>Station 5: Develop the pathway</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station06-govern-data-measurement.html",
+    "href": "stations/station06-govern-data-measurement.html",
+    "title": "45  Station 6: Govern data and measurement",
+    "section": "",
+    "text": "45.1 What this station produces\nProvenance documentation, a data-management record, your measurement specification, and a route-specific permission recheck.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Station 6: Govern data and measurement</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station06-govern-data-measurement.html#the-reading-behind-it",
+    "href": "stations/station06-govern-data-measurement.html#the-reading-behind-it",
+    "title": "45  Station 6: Govern data and measurement",
+    "section": "45.2 The reading behind it",
+    "text": "45.2 The reading behind it\n\nCh. 19 — Data Provenance and Data Quality\nCh. 20 — Measurement and Operationalization\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Station 6: Govern data and measurement</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station06-govern-data-measurement.html#the-practice",
+    "href": "stations/station06-govern-data-measurement.html#the-practice",
+    "title": "45  Station 6: Govern data and measurement",
+    "section": "45.3 The practice",
+    "text": "45.3 The practice\n\n{‘Document provenance for every source’: ‘who produced it, how, when, and under what terms.’}\n{‘Write your measurement specification’: ‘the construct, the operationalization, and the gap between them.’}\nAssess reliability and validity for your own instrument, on the evidence you actually have.\nRecheck permissions against the data as they actually arrived, not as planned.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Station 6: Govern data and measurement</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station06-govern-data-measurement.html#the-four-rails-here",
+    "href": "stations/station06-govern-data-measurement.html#the-four-rails-here",
+    "title": "45  Station 6: Govern data and measurement",
+    "section": "45.4 The four rails, here",
+    "text": "45.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. Data that arrived differently from the plan can carry permissions the plan did not cover.\nEvidence, provenance, and reproducibility. Provenance is the evidence rail applied to your own data.\nAI activity, verification, and human decisions. An assistant can describe a dataset it has never seen; verify every claim against the file.\nUncertainty, claim boundary, and revision history. Measurement error is uncertainty; state it alongside sampling uncertainty, not instead of it.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Station 6: Govern data and measurement</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station06-govern-data-measurement.html#what-sends-you-back",
+    "href": "stations/station06-govern-data-measurement.html#what-sends-you-back",
+    "title": "45  Station 6: Govern data and measurement",
+    "section": "45.5 What sends you back",
+    "text": "45.5 What sends you back\nAny measurement change is a Contract version, because it changes what your estimand refers to.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Station 6: Govern data and measurement</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station06-govern-data-measurement.html#your-workbook",
+    "href": "stations/station06-govern-data-measurement.html#your-workbook",
+    "title": "45  Station 6: Govern data and measurement",
+    "section": "45.6 Your workbook",
+    "text": "45.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>Station 6: Govern data and measurement</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station07-first-analysis.html",
+    "href": "stations/station07-first-analysis.html",
+    "title": "46  Station 7: Produce a reproducible first analysis",
+    "section": "",
+    "text": "46.1 What this station produces\nA route-specific result with an uncertainty statement, a restart-and-run-all verification, an environment record, and a claim-to-output check.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Station 7: Produce a reproducible first analysis</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station07-first-analysis.html#the-reading-behind-it",
+    "href": "stations/station07-first-analysis.html#the-reading-behind-it",
+    "title": "46  Station 7: Produce a reproducible first analysis",
+    "section": "46.2 The reading behind it",
+    "text": "46.2 The reading behind it\n\nCh. 21 — AI as Programmer\nCh. 22 — AI as Analytical Assistant\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Station 7: Produce a reproducible first analysis</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station07-first-analysis.html#the-practice",
+    "href": "stations/station07-first-analysis.html#the-practice",
+    "title": "46  Station 7: Produce a reproducible first analysis",
+    "section": "46.3 The practice",
+    "text": "46.3 The practice\n\nWrite the analysis you declared, and only that analysis, before looking at anything else.\nProduce the result with its uncertainty statement, in the form your Contract specified.\nRestart and run everything from a clean state; if the numbers move, the pipeline is the finding.\nRecord your environment, and check that every claim you plan to make traces to a specific output.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Station 7: Produce a reproducible first analysis</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station07-first-analysis.html#the-four-rails-here",
+    "href": "stations/station07-first-analysis.html#the-four-rails-here",
+    "title": "46  Station 7: Produce a reproducible first analysis",
+    "section": "46.4 The four rails, here",
+    "text": "46.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. What you send to a tool during analysis is a disclosure decision each time.\nEvidence, provenance, and reproducibility. Every number in your result traces to a data cell and a line of code.\nAI activity, verification, and human decisions. Delegate the writing of code freely; verify every returned number against the data yourself.\nUncertainty, claim boundary, and revision history. A result reported without uncertainty is not yet a result.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Station 7: Produce a reproducible first analysis</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station07-first-analysis.html#what-sends-you-back",
+    "href": "stations/station07-first-analysis.html#what-sends-you-back",
+    "title": "46  Station 7: Produce a reproducible first analysis",
+    "section": "46.5 What sends you back",
+    "text": "46.5 What sends you back\nFailing to reproduce your own analysis sends you back here before any stress-testing is meaningful.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Station 7: Produce a reproducible first analysis</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station07-first-analysis.html#your-workbook",
+    "href": "stations/station07-first-analysis.html#your-workbook",
+    "title": "46  Station 7: Produce a reproducible first analysis",
+    "section": "46.6 Your workbook",
+    "text": "46.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>Station 7: Produce a reproducible first analysis</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station08-stress-test.html",
+    "href": "stations/station08-stress-test.html",
+    "title": "47  Station 8: Stress-test and adjudicate",
+    "section": "",
+    "text": "47.1 What this station produces\nA pre-listed robustness grid, negative tests with their assumptions stated, diagnostics, an adversarial-review record, and your adjudication of what survived.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Station 8: Stress-test and adjudicate</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station08-stress-test.html#the-reading-behind-it",
+    "href": "stations/station08-stress-test.html#the-reading-behind-it",
+    "title": "47  Station 8: Stress-test and adjudicate",
+    "section": "47.2 The reading behind it",
+    "text": "47.2 The reading behind it\n\nCh. 23 — Robustness and Sensitivity\nCh. 24 — Diagnostics and Negative Tests\nCh. 25 — AI as Adversarial Reviewer\nCh. 26 — Recognizing False Confidence\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Station 8: Stress-test and adjudicate</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station08-stress-test.html#the-practice",
+    "href": "stations/station08-stress-test.html#the-practice",
+    "title": "47  Station 8: Stress-test and adjudicate",
+    "section": "47.3 The practice",
+    "text": "47.3 The practice\n\nPre-list your checks before you run any of them, and commit to reporting all of them.\nRun the robustness grid and report a span within each commensurable panel, never across panels.\nRun the null check that your design licenses, and name it correctly.\nPut your finding to adversarial reviewers, human and AI, and confirm or refute each flag with a data check.\n{‘Write the adjudication’: ‘what survived, what did not, and what you still cannot rule out.’}",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Station 8: Stress-test and adjudicate</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station08-stress-test.html#the-four-rails-here",
+    "href": "stations/station08-stress-test.html#the-four-rails-here",
+    "title": "47  Station 8: Stress-test and adjudicate",
+    "section": "47.4 The four rails, here",
+    "text": "47.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. Report the checks that hurt your finding as fully as the ones that helped.\nEvidence, provenance, and reproducibility. A flag is real when a check confirms it, not when the reviewer sounds certain.\nAI activity, verification, and human decisions. An AI reviewer is another critique, not independent verification.\nUncertainty, claim boundary, and revision history. Specification spread measures your choices; it is not an uncertainty interval.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Station 8: Stress-test and adjudicate</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station08-stress-test.html#what-sends-you-back",
+    "href": "stations/station08-stress-test.html#what-sends-you-back",
+    "title": "47  Station 8: Stress-test and adjudicate",
+    "section": "47.5 What sends you back",
+    "text": "47.5 What sends you back\nA finding that does not survive its own pre-listed checks returns to Station 5 or 7, not to the writing station.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Station 8: Stress-test and adjudicate</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station08-stress-test.html#your-workbook",
+    "href": "stations/station08-stress-test.html#your-workbook",
+    "title": "47  Station 8: Stress-test and adjudicate",
+    "section": "47.6 Your workbook",
+    "text": "47.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>Station 8: Stress-test and adjudicate</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station09-write-bound-disclose.html",
+    "href": "stations/station09-write-bound-disclose.html",
+    "title": "48  Station 9: Write, bound, and disclose",
+    "section": "",
+    "text": "48.1 What this station produces\nA stand-alone research note or report draft, a claim-to-evidence table, and your AI disclosure statement.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Station 9: Write, bound, and disclose</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station09-write-bound-disclose.html#the-reading-behind-it",
+    "href": "stations/station09-write-bound-disclose.html#the-reading-behind-it",
+    "title": "48  Station 9: Write, bound, and disclose",
+    "section": "48.2 The reading behind it",
+    "text": "48.2 The reading behind it\n\nCh. 27 — From Results to Claims\nCh. 28 — Claim–Evidence Tables\nCh. 33 — AI Disclosure and Research Integrity\nCh. 35 — From Poster to Research Note\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Station 9: Write, bound, and disclose</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station09-write-bound-disclose.html#the-practice",
+    "href": "stations/station09-write-bound-disclose.html#the-practice",
+    "title": "48  Station 9: Write, bound, and disclose",
+    "section": "48.3 The practice",
+    "text": "48.3 The practice\n\nWrite your claim as one sentence, with its boundary attached in the same sentence.\n{‘Build the claim-to-evidence table’: ‘every claim, the output that supports it, and the check that verified it.’}\nState your uncertainty and your limitations in the words a reader outside your field would use.\nWrite your AI disclosure from your ledger, not from memory.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Station 9: Write, bound, and disclose</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station09-write-bound-disclose.html#the-four-rails-here",
+    "href": "stations/station09-write-bound-disclose.html#the-four-rails-here",
+    "title": "48  Station 9: Write, bound, and disclose",
+    "section": "48.4 The four rails, here",
+    "text": "48.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. Disclosure includes what you sent to tools, not only what they produced.\nEvidence, provenance, and reproducibility. A claim with no row in the table does not appear in the draft.\nAI activity, verification, and human decisions. The sentence that ships is yours, whatever drafted it.\nUncertainty, claim boundary, and revision history. Findings are never communicated as certainties.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Station 9: Write, bound, and disclose</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station09-write-bound-disclose.html#what-sends-you-back",
+    "href": "stations/station09-write-bound-disclose.html#what-sends-you-back",
+    "title": "48  Station 9: Write, bound, and disclose",
+    "section": "48.5 What sends you back",
+    "text": "48.5 What sends you back\nA claim you cannot fit in the table is a claim to cut or a check to run, and both send you back a station.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Station 9: Write, bound, and disclose</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station09-write-bound-disclose.html#your-workbook",
+    "href": "stations/station09-write-bound-disclose.html#your-workbook",
+    "title": "48  Station 9: Write, bound, and disclose",
+    "section": "48.6 Your workbook",
+    "text": "48.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>Station 9: Write, bound, and disclose</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station10-adapt-and-defend.html",
+    "href": "stations/station10-adapt-and-defend.html",
+    "title": "49  Station 10: Adapt and defend",
+    "section": "",
+    "text": "49.1 What this station produces\nOne chosen genre adaptation - poster, talk, brief, or another - plus a defense rehearsal record. This is not yet public release.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Station 10: Adapt and defend</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station10-adapt-and-defend.html#the-reading-behind-it",
+    "href": "stations/station10-adapt-and-defend.html#the-reading-behind-it",
+    "title": "49  Station 10: Adapt and defend",
+    "section": "49.2 The reading behind it",
+    "text": "49.2 The reading behind it\n\nCh. 29 — Research Posters\nCh. 30 — Poster Criticism\nCh. 31 — Research Pitches\nCh. 32 — Difficult Questions and Uncertainty\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Station 10: Adapt and defend</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station10-adapt-and-defend.html#the-practice",
+    "href": "stations/station10-adapt-and-defend.html#the-practice",
+    "title": "49  Station 10: Adapt and defend",
+    "section": "49.3 The practice",
+    "text": "49.3 The practice\n\nChoose your genre and read its lesson, then say what your claim must lose to fit it.\nBuild the adaptation, keeping every number traceable to the claim-evidence table.\nRehearse the defense against the three hardest questions you can construct.\nRecord which questions you could not answer; those are your next station’s agenda.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Station 10: Adapt and defend</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station10-adapt-and-defend.html#the-four-rails-here",
+    "href": "stations/station10-adapt-and-defend.html#the-four-rails-here",
+    "title": "49  Station 10: Adapt and defend",
+    "section": "49.4 The four rails, here",
+    "text": "49.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. An adaptation that drops the limitations is not a shorter version, it is a different claim.\nEvidence, provenance, and reproducibility. Every figure that travels carries its verification with it.\nAI activity, verification, and human decisions. Use AI to generate hostile questions; answer them yourself.\nUncertainty, claim boundary, and revision history. The shorter the format, the more explicit the boundary has to be.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Station 10: Adapt and defend</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station10-adapt-and-defend.html#what-sends-you-back",
+    "href": "stations/station10-adapt-and-defend.html#what-sends-you-back",
+    "title": "49  Station 10: Adapt and defend",
+    "section": "49.5 What sends you back",
+    "text": "49.5 What sends you back\nA question you cannot answer in rehearsal is evidence, and it sends you back to the station that owns it.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Station 10: Adapt and defend</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station10-adapt-and-defend.html#your-workbook",
+    "href": "stations/station10-adapt-and-defend.html#your-workbook",
+    "title": "49  Station 10: Adapt and defend",
+    "section": "49.6 Your workbook",
+    "text": "49.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>Station 10: Adapt and defend</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station11-reproduce-and-package.html",
+    "href": "stations/station11-reproduce-and-package.html",
+    "title": "50  Station 11: Reproduce and package",
+    "section": "",
+    "text": "50.1 What this station produces\nAn independent cold-run record and a reusable research package.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Station 11: Reproduce and package</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station11-reproduce-and-package.html#the-reading-behind-it",
+    "href": "stations/station11-reproduce-and-package.html#the-reading-behind-it",
+    "title": "50  Station 11: Reproduce and package",
+    "section": "50.2 The reading behind it",
+    "text": "50.2 The reading behind it\n\nCh. 34 — Replication and Reproduction\nCh. 36 — Open and Reusable Research Packages\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Station 11: Reproduce and package</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station11-reproduce-and-package.html#the-practice",
+    "href": "stations/station11-reproduce-and-package.html#the-practice",
+    "title": "50  Station 11: Reproduce and package",
+    "section": "50.3 The practice",
+    "text": "50.3 The practice\n\nRun your own package cold, from a clean environment, following only your written instructions.\nHave someone else run it without your help, and log every place they had to ask you a question.\nFix what the cold run exposed; every question they asked is a missing line in your documentation.\n{‘Assemble the package’: ‘data or its access route, code, environment, documentation, and licence.’}",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Station 11: Reproduce and package</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station11-reproduce-and-package.html#the-four-rails-here",
+    "href": "stations/station11-reproduce-and-package.html#the-four-rails-here",
+    "title": "50  Station 11: Reproduce and package",
+    "section": "50.4 The four rails, here",
+    "text": "50.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. What can be shared is set by your permissions, and the package says so explicitly.\nEvidence, provenance, and reproducibility. Reproduction is the evidence rail’s final test.\nAI activity, verification, and human decisions. An assistant can generate documentation; only a cold human run can validate it.\nUncertainty, claim boundary, and revision history. Reproduce the uncertainty statement, not only the point estimate.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Station 11: Reproduce and package</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station11-reproduce-and-package.html#what-sends-you-back",
+    "href": "stations/station11-reproduce-and-package.html#what-sends-you-back",
+    "title": "50  Station 11: Reproduce and package",
+    "section": "50.5 What sends you back",
+    "text": "50.5 What sends you back\nA failed cold run is a finding about your work, and it precedes any release.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Station 11: Reproduce and package</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station11-reproduce-and-package.html#your-workbook",
+    "href": "stations/station11-reproduce-and-package.html#your-workbook",
+    "title": "50  Station 11: Reproduce and package",
+    "section": "50.6 Your workbook",
+    "text": "50.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>Station 11: Reproduce and package</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station12-release-next-cycle.html",
+    "href": "stations/station12-release-next-cycle.html",
+    "title": "51  Station 12: Release and direct the next cycle",
+    "section": "",
+    "text": "51.1 What this station produces\nA release audit, your final dossier, an explicit stopping rule, and your next-study agenda.\nThis is a versioned checkpoint, not a pass. You date it, number it, and attach the reason for the version. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>Station 12: Release and direct the next cycle</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station12-release-next-cycle.html#the-reading-behind-it",
+    "href": "stations/station12-release-next-cycle.html#the-reading-behind-it",
+    "title": "51  Station 12: Release and direct the next cycle",
+    "section": "51.2 The reading behind it",
+    "text": "51.2 The reading behind it\n\nCh. 37 — Managing Multiple AI Agents\nCh. 38 — Conflicting Agents and Human Escalation\nCh. 39 — Final Research and AI-Management Portfolio\n\nRead these before you work the station. The station is where you do the thing the lessons describe, on your own project.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>Station 12: Release and direct the next cycle</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station12-release-next-cycle.html#the-practice",
+    "href": "stations/station12-release-next-cycle.html#the-practice",
+    "title": "51  Station 12: Release and direct the next cycle",
+    "section": "51.3 The practice",
+    "text": "51.3 The practice\n\n{‘Run the release audit’: ‘permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants.’}\n{‘Assemble the dossier’: ‘contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history.’}\n{‘Write your stopping rule’: ‘why you are stopping here rather than running one more check, stated as a decision.’}\n{‘Write the next-study agenda’: ‘the question this work opened, and what you would do differently.’}",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>Station 12: Release and direct the next cycle</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station12-release-next-cycle.html#the-four-rails-here",
+    "href": "stations/station12-release-next-cycle.html#the-four-rails-here",
+    "title": "51  Station 12: Release and direct the next cycle",
+    "section": "51.4 The four rails, here",
+    "text": "51.4 The four rails, here\nFour concerns cross every station in this book. At this station they take these specific forms.\n\nEthics, permissions, and data exposure. Release is the last point at which a permission problem can still be prevented.\nEvidence, provenance, and reproducibility. The dossier is the evidence rail made assemblable.\nAI activity, verification, and human decisions. Your AI ledger closes here as a complete record, not a summary.\nUncertainty, claim boundary, and revision history. State what you still do not know as clearly as what you found.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>Station 12: Release and direct the next cycle</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station12-release-next-cycle.html#what-sends-you-back",
+    "href": "stations/station12-release-next-cycle.html#what-sends-you-back",
+    "title": "51  Station 12: Release and direct the next cycle",
+    "section": "51.5 What sends you back",
+    "text": "51.5 What sends you back\nThe next-study agenda is the revisit; a research cycle ends by declaring the next one.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>Station 12: Release and direct the next cycle</span>"
+    ]
+  },
+  {
+    "objectID": "stations/station12-release-next-cycle.html#your-workbook",
+    "href": "stations/station12-release-next-cycle.html#your-workbook",
+    "title": "51  Station 12: Release and direct the next cycle",
+    "section": "51.6 Your workbook",
+    "text": "51.6 Your workbook\nOpen the workbook with the badge above. It walks these steps with a cell for each one, ends by writing your checkpoint version with its reason, and adds the rows this station contributes to your AI Research Ledger and your Research Dossier.",
+    "crumbs": [
+      "The practice stations",
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>Station 12: Release and direct the next cycle</span>"
     ]
   },
   {
