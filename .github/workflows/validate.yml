@@ -82,3 +82,6 @@ jobs:
 
       - name: Station pages + workbooks projection freshness
         run: python3 scripts/build_station_pages.py --check
+
+      - name: Lesson station pointers projection freshness
+        run: python3 scripts/build_station_pointers.py --check
