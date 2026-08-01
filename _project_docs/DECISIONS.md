@@ -1167,3 +1167,47 @@ redesign is still moving the text. Freezing translation until the text stops
 moving removes triple maintenance during Phases 2–4, and matches round 4's own
 requirement of a human methods reader per language — which is only worth
 staging once, on settled prose.
+
+## Decision 37: Architecture v1 FROZEN — the two grains are real, chapter review reopens (2026-08-01)
+
+**Decision.** EDR|AI Architecture is frozen at **v1**. The structural questions
+D35 left provisional are settled and machine-enforced, so the shape of the book
+stops moving and **chapter review reopens** (D35's freeze is lifted).
+
+**What v1 fixes, all validator-enforced:**
+
+1. **Two grains, both real.** 39 lessons (reading) and 12 practice stations
+   (doing). Stations exist as generated pages and workbooks with authored
+   practice content, versioned checkpoints, the four rails in station-specific
+   form, and authored rubrics. The preface teaches the distinction and every
+   lesson points to the station its work feeds.
+2. **Identity is immutable and proven.** Lesson ids, `url_path`, and companion
+   paths survive insertion — demonstrated twice in the live repository by
+   activating the two new lessons, with every projection (briefs, BOOK_MAP,
+   material page, companions, TOC) regenerating itself. `identity_epoch`
+   enforces it: a rename or URL move fails the build.
+3. **One validated loader.** Every book consumer reads
+   `scripts/book_manifest.py`; nothing derives identity from a filename
+   prefix or a display number; orphan artifacts are rejected in both
+   directions.
+4. **Institution-agnostic bodies.** The A2 leakage scan reports zero and is a
+   HARD GATE. The lesson-to-lab mapping lives in the For Instructors appendix
+   as a generated table.
+5. **The two load-bearing lessons ship**: uncertainty foundations (before
+   ch10, which needed it) and research ethics and data governance.
+
+**What v1 does NOT claim.** Acceptance test A1 was RUN on 2026-08-01 and
+returned **No**: a solo reader reaches a defensible plan, not an original
+empirical claim. The three causes are recorded and fixed
+(`planning/BOOK_DESIGN_ACCEPTANCE.md`), including the architectural gap the
+pilot exposed — nothing acquired data, so Station 6 now opens with an
+acquisition route keyed to permission status. P1 stays BOUNDED and the preface
+says what the book actually delivers. Freezing the architecture is not
+claiming the promise; it is fixing the shape so the remaining work is content,
+not structure.
+
+**Open, tracked, not blocking the freeze:** station workbooks still need worked
+examples, starter data, and faded scaffolds (A4); route/genre rubric addenda
+and exemplar pairs are unauthored (A6, and exemplars need real consented
+student work); Part VI's retitle; PT/ES remain frozen under D36 with their
+backlog; prediction's book-wide classification still needs Davi's ruling.

@@ -33,10 +33,10 @@ stations:
       AI and data-handling rules, your opened AI Research Ledger, and an
       early red-flag screen of your project idea.
     steps:
-      - Write your responsibility statement: the decisions that stay yours no matter how good the tool gets.
-      - Write your AI working rules: what you will delegate, what you will always verify, and how you will record both.
+      - "Write your responsibility statement: the decisions that stay yours no matter how good the tool gets."
+      - "Write your AI working rules: what you will delegate, what you will always verify, and how you will record both."
       - Open your AI Research Ledger and enter your first row, today, for any tool you have already used on this project.
-      - Run the red-flag screen on your idea: is it answerable, is it yours to ask, and could you defend attempting it.
+      - "Run the red-flag screen on your idea: is it answerable, is it yours to ask, and could you defend attempting it."
     rails:
       ethics: State now what data you expect to touch, so the ethics station has something to check against.
       evidence: Decide where your project's files will live before you have any.
@@ -57,7 +57,7 @@ stations:
       - State your objective in one sentence a stranger could repeat back.
       - Name your units, your outcome, and the conditions you are comparing or describing.
       - Declare kind and reach, and write the words in your question that fix each one.
-      - Write your provisional claim boundary: the sentence you hope to defend, and the sentence you will not be able to.
+      - "Write your provisional claim boundary: the sentence you hope to defend, and the sentence you will not be able to."
     rails:
       ethics: Note whether answering this question requires people, and flag it now.
       evidence: Nothing here is settled until Station 3 checks it against what is already known.
@@ -75,10 +75,10 @@ stations:
       An evidence registry of verified sources, your search log, an evidence
       map, and an explicit revision of your Station 2 declaration.
     steps:
-      - Search deliberately and log every search: where you looked, what terms, what you found and did not.
+      - "Search deliberately and log every search: where you looked, what terms, what you found and did not."
       - Verify each source you intend to cite by retrieving and reading it, never by trusting a summary.
-      - Build the evidence map: what is settled, what is contested, what is missing.
-      - Write the revision: how your question changed, or a defended statement of why it did not.
+      - "Build the evidence map: what is settled, what is contested, what is missing."
+      - "Write the revision: how your question changed, or a defended statement of why it did not."
     rails:
       ethics: Record the licence and terms of any dataset you found here, before you plan to use it.
       evidence: This station IS the evidence rail's home; every later citation traces to this registry.
@@ -100,7 +100,7 @@ stations:
     steps:
       - Write the four MIDA parts of your design so a stranger could run them.
       - State your estimand and estimator, and describe in words what would differ if the procedure ran again.
-      - Diagnose the design: what is its bias, how much does it wobble, and how often would it detect what you are looking for.
+      - "Diagnose the design: what is its bias, how much does it wobble, and how often would it detect what you are looking for."
       - Run the permission determination and declare one status; if it is anything but cleared, name the authority and the date you asked.
       - Minimise your columns against the declared analysis, and check what a re-identification test would find.
       - Write the redesign record - what you changed after diagnosing, and why. A diagnosis that changed nothing is a diagnosis you should distrust.
@@ -143,8 +143,8 @@ stations:
       lesson as an overlay after you have declared your primary pathway.
     steps:
       - Use the route guide above to choose your pathway, then read that lesson and at least one that does not fit, so you can say why yours does.
-      - Declare your pathway and write the crossing that licenses it: what makes your comparison mean what you claim.
-      - Write the limits: what this pathway cannot establish no matter how clean the execution.
+      - "Declare your pathway and write the crossing that licenses it: what makes your comparison mean what you claim."
+      - "Write the limits: what this pathway cannot establish no matter how clean the execution."
       - Update your claim boundary to match the pathway, and mark the change as a new Contract version.
     rails:
       ethics: A change of pathway can change your permission status; recheck rather than assume.
@@ -162,9 +162,34 @@ stations:
     produces: >-
       Provenance documentation, a data-management record, your measurement
       specification, and a route-specific permission recheck.
+    acquisition_note: |
+      This station assumes data have reached you, and the cold pilot found
+      that nothing before it made that happen. Settle acquisition first, in
+      writing, before the steps below.
+
+      Your permission status from Station 4 decides your route.
+
+      - **Cleared or formal determination granted.** Name your sampling
+        frame, how you will reach those units, and what you will do about
+        the ones you cannot reach. Non-response is a design fact, not an
+        accident.
+      - **Pending.** Do everything that does not touch people: build and
+        pilot the instrument on yourself, write the analysis code against
+        simulated data of the shape you expect, and wait.
+      - **No authority to ask, or not authorized.** Take the no-permission
+        route, which reaches every method in this book: published aggregate
+        statistics, an openly licensed dataset with no individual records,
+        or data you simulate yourself. Write down which you chose and what
+        it costs you, because a simulated dataset can demonstrate a method
+        but cannot support a claim about the world.
+
+      Whichever route you take, record where the data actually came from
+      before you touch them. That record is the first row of the provenance
+      documentation this station produces.
     steps:
-      - Document provenance for every source: who produced it, how, when, and under what terms.
-      - Write your measurement specification: the construct, the operationalization, and the gap between them.
+      - "Settle your acquisition route first, using the guidance above, and write down which route you took and why."
+      - "Document provenance for every source: who produced it, how, when, and under what terms."
+      - "Write your measurement specification: the construct, the operationalization, and the gap between them."
       - Assess reliability and validity for your own instrument, on the evidence you actually have.
       - Recheck permissions against the data as they actually arrived, not as planned.
     rails:
@@ -210,7 +235,7 @@ stations:
       - Run the robustness grid and report a span within each commensurable panel, never across panels.
       - Run the null check that your design licenses, and name it correctly.
       - Put your finding to adversarial reviewers, human and AI, and confirm or refute each flag with a data check.
-      - Write the adjudication: what survived, what did not, and what you still cannot rule out.
+      - "Write the adjudication: what survived, what did not, and what you still cannot rule out."
     rails:
       ethics: Report the checks that hurt your finding as fully as the ones that helped.
       evidence: A flag is real when a check confirms it, not when the reviewer sounds certain.
@@ -229,7 +254,7 @@ stations:
       and your AI disclosure statement.
     steps:
       - Write your claim as one sentence, with its boundary attached in the same sentence.
-      - Build the claim-to-evidence table: every claim, the output that supports it, and the check that verified it.
+      - "Build the claim-to-evidence table: every claim, the output that supports it, and the check that verified it."
       - State your uncertainty and your limitations in the words a reader outside your field would use.
       - Write your AI disclosure from your ledger, not from memory.
     rails:
@@ -272,7 +297,7 @@ stations:
       - Run your own package cold, from a clean environment, following only your written instructions.
       - Have someone else run it without your help, and log every place they had to ask you a question.
       - Fix what the cold run exposed; every question they asked is a missing line in your documentation.
-      - Assemble the package: data or its access route, code, environment, documentation, and licence.
+      - "Assemble the package: data or its access route, code, environment, documentation, and licence."
     rails:
       ethics: What can be shared is set by your permissions, and the package says so explicitly.
       evidence: Reproduction is the evidence rail's final test.
@@ -290,10 +315,10 @@ stations:
       A release audit, your final dossier, an explicit stopping rule, and
       your next-study agenda.
     steps:
-      - Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants.
-      - Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history.
-      - Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision.
-      - Write the next-study agenda: the question this work opened, and what you would do differently.
+      - "Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants."
+      - "Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history."
+      - "Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision."
+      - "Write the next-study agenda: the question this work opened, and what you would do differently."
     rails:
       ethics: Release is the last point at which a permission problem can still be prevented.
       evidence: The dossier is the evidence rail made assemblable.

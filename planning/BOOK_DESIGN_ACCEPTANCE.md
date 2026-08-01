@@ -1,7 +1,7 @@
 # BOOK_DESIGN_ACCEPTANCE — what EDR|AI promises, and how we test it (D35)
 
-**Architecture version:** v0 (provisional, ruled 2026-07-30)
-**Status:** chapter review FROZEN until v1
+**Architecture version:** v1 (FROZEN 2026-08-01 — see D37)
+**Status:** chapter review OPEN; the structure is stable
 **Governing decision:** `_project_docs/DECISIONS.md` D35
 **Evaluation record:** private task #20, Records 1–6
 
@@ -19,16 +19,16 @@ because its test has not passed.
 
 | # | Promise | Status | Gate |
 |---|---|---|---|
-| P1 | A reader with no quantitative background can go from curiosity to a defensible, written empirical claim using this book alone. | **BOUNDED** — preface says "a guided path for designing, testing, and communicating a quantitative empirical project" until A1 passes | A1 |
-| P2 | The book works with no course, no institution, no calendar, no peers, and no conference attached. | **BOUNDED** — leakage present (Part VI title, ch33 poster-first, ch37 portfolio, SRL appendix, per-chapter course-lab paragraph) | A2, A3 |
-| P3 | Every practice unit contains real work: a worked example, faded practice, an executable or structured task, and a verification test. | **FAILED as built** — 33 of 37 companions contain only a generated scratch cell | A4 |
-| P4 | Every methods claim the book teaches is correct at the level it is taught. | **FAILED as built** — seven confirmed defects (F2/F3) | A5 |
-| P5 | Assessment criteria represent what is actually being learned, across all five pathway forms and all communication genres. | **FAILED as built** — rubrics are first-sentence checklists truncated at 150 characters | A6 |
-| P6 | A reader never undertakes data work they are not authorized to do, and never exposes restricted data to an AI service. | **MISSING** — no ethics, consent, privacy, permission, or data-governance treatment anywhere in the repository | A7 |
+| P1 | A reader with no quantitative background can go from curiosity to a defensible, written empirical claim using this book alone. | **BOUNDED — A1 RUN 2026-08-01, RESULT NO** (see below); the preface says "a guided path", names what the reader needs, and states plainly where other people are required | A1 |
+| P2 | The book works with no course, no institution, no calendar, no peers, and no conference attached. | **PASSES A2** — de-coursing sweep 2026-08-01 cleared all 41 hits; A2 is now a HARD GATE (planted-leakage probe fails the build). ch33 derives the note from the dossier, ch37 opens on a release audit, SRL is out. Part VI retitle remains | A2, A3 |
+| P3 | Every practice unit contains real work: a worked example, faded practice, an executable or structured task, and a verification test. | **PARTIAL** — the practice grain now exists (12 station pages + workbooks, generated from the manifest, each with its checkpoint and authored rubric). The cold pilot confirms workbooks still lack worked examples, starter data, and faded scaffolds | A4 |
+| P4 | Every methods claim the book teaches is correct at the level it is taught. | **PASSES A5** — Phase 1 closed 2026-07-31 after six adversarial rounds; 12 misconceptions carry executable positive/boundary/converse cases, and the gate runs on every scan | A5 |
+| P5 | Assessment criteria represent what is actually being learned, across all five pathway forms and all communication genres. | **PARTIAL** — 60 authored criteria across the 12 checkpoints, with criterion-specific 0/1/2 descriptors and blocking permission gates, replace the truncated auto-derived rubrics. Route/genre addenda and exemplar pairs remain unauthored | A6 |
+| P6 | A reader never undertakes data work they are not authorized to do, and never exposes restricted data to an AI service. | **PASSES A7** — the ethics and data-governance lesson ships: four permission states, a three-question determination, six misconception cases, a seeded re-identification demonstration, AI-exposure rules with incident response, and a no-permission route for unaffiliated readers | A7 |
 | P7 | No claim is published before its computation has been regenerated from its own files in a clean environment. | **MISSING** — the lifecycle publishes at Station 10 and reproduces at Station 11 only if the gate is added | A8 |
-| P8 | The three editions say the same thing, and every factual claim is retrievable. | **PARTIAL** — no bibliography; three factual errors identified (F9); translation freshness unenforced | A9 |
-| P9 | Chapter identity, URLs, and citations survive the insertion of new lessons. | **AT RISK** — generator and validator hard-code 37 and derive identity from numeric filename prefixes | A10 |
-| P10 | The book is usable solo, on a modest device, without paid AI. | **UNSPECIFIED** — several exercises require peers, mentors, or live audiences; Colab presumes connectivity | A11 |
+| P8 | The three editions say the same thing, and every factual claim is retrievable. | **BOUNDED BY D36** — EN carries a verified `references.bib` (every entry read, none asserted from an AI summary) and the F9 errors are fixed; PT/ES are deliberately frozen behind per-page notices, with all deferred work ledgered in TRANSLATION_BACKLOG.md | A9 |
+| P9 | Chapter identity, URLs, and citations survive the insertion of new lessons. | **PASSES A10** — proven twice in the live repo: inserting two lessons preserved every id, url_path, and companion path while the projections regenerated themselves. identity_epoch enforced; a rename or URL move fails the build | A10 |
+| P10 | The book is usable solo, on a modest device, without paid AI. | **PARTIAL, now specified** — the preface states what the reader needs, gives a no-AI path, and names where other people are genuinely required; the cold pilot found and fixed the peer-check and AI-access stalls. Remaining solo gaps are listed under A1 | A11 |
 
 ---
 
@@ -298,3 +298,52 @@ Recorded so they are not mistaken for settled:
   research while RDSS spans quantitative, qualitative, and mixed methods, so
   "translates RDSS" overclaims. A coverage matrix (adopted · adapted · omitted ·
   EDR|AI-original) is owed before the preface language is finalized.
+
+
+---
+
+## A1 — the cold pilot was RUN (2026-08-01). Result: **No.**
+
+A novice-reader pilot walked the book-only path from the home page through
+Station 5 and into Station 6, producing real artifacts at each checkpoint.
+Full record: `_adm/codex_reviews/2026-08-01_cold-pilot-A1/verdict.md`.
+
+**The verdict, quoted:** *"The book carried me from curiosity to a thoughtful,
+bounded plan. It did not carry me, on its own, to an empirical result or
+defensible research claim."*
+
+**The three findings that produced that answer, and what was done:**
+
+1. **The first blocking stall was Chapter 1** — the book required an AI tool
+   it never named, priced, or offered an alternative to. FIXED: the preface
+   now has a "What you need before you start" section giving the Colab route,
+   the AI-assistant options, and an explicit no-AI path that keeps the method
+   and loses only the tool practice.
+2. **The ethics requirement is correct and is genuinely blocking for an
+   unaffiliated reader.** A book cannot substitute for a competent authority.
+   FIXED, without weakening the rule: the ethics lesson now carries an
+   explicit no-permission route — published aggregates, openly licensed
+   record-free data, or simulation — which reaches every method the book
+   teaches, and says plainly that a simulated dataset demonstrates a method
+   but cannot support a claim about the world.
+3. **Nothing in the architecture acquired data.** Station 6 assumed data had
+   arrived; for a course student the course supplies them, for a solo reader
+   nothing did. FIXED: Station 6 now opens with an acquisition route keyed to
+   the reader's permission status, and its first practice step is settling
+   and recording that route.
+
+**Also fixed from the same pilot:** a generator bug rendering station steps as
+raw Python dicts; "walk it past a colleague" with no solo substitute (now: put
+it away, re-sort cold, compare — and an AI cannot be the peer, because your own
+consistency is what is being tested); and ch12 naming
+difference-in-differences, regression discontinuity, and instrumental variables
+as if the book had taught them (now bounded to naming and defending what you
+would have to learn).
+
+**The honest standing position.** With these fixes a solo reader can reach a
+defensible *plan*, a declared design, a permission determination, and — on the
+no-permission route — an executed analysis with stated uncertainty. What has
+not been demonstrated end to end is an unaffiliated reader reaching an original
+empirical claim about the world. P1 therefore stays BOUNDED, and the preface
+says what the book actually delivers. A second pilot on the no-permission route
+is the test that could lift it.

@@ -81,6 +81,8 @@ book:
     - verification-guide.qmd
     - for-instructors.qmd
 
+bibliography: references.bib
+
 format:
   html:
     theme: cosmo

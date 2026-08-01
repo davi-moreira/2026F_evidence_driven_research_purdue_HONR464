@@ -96,6 +96,40 @@ companion notebooks, and the [Verification Guide](verification-guide.qmd) are
 the whole path, at your own pace. Bring the curiosity; the book supplies the
 discipline.
 
+### What you need before you start
+
+**A way to run Python.** Every companion notebook opens in Google Colab from
+the badge at the top of its page, which needs a free Google account and
+nothing installed. If you would rather work locally, any Python setup with
+numpy, pandas, and matplotlib runs the same code.
+
+**An AI assistant.** The book asks you to delegate work to one and then
+verify what comes back. Any general assistant with a free tier will do, and
+so will one your institution provides. If you have no access to one at all,
+every AI prompt in this book still works as a thinking exercise: write the
+answer you would expect first, which is what the book asks you to do anyway,
+then treat the prompt as a checklist of what a good answer would have to
+contain. You lose the practice of interrogating a tool; you lose none of the
+research method.
+
+**A place to keep your work.** One folder, backed up. Station 1 makes you
+decide where.
+
+**What you do not need:** a course, an instructor, a subscription, or
+institutional database access. Where the book asks for something you cannot
+get on your own — a research-ethics authority, a peer reviewer, restricted
+data — it says so and gives you the solo route.
+
+::: {.callout-note title="If you are working entirely on your own"}
+Two things in this book genuinely require other people. Human-subjects
+research needs a **competent authority** to rule on it, and no book can
+stand in for that; if you have no institutional affiliation, take the
+public-data or simulation route the ethics lesson describes, which reaches
+the same methods without collecting data from people. And some checks call
+for a reader who is not you; where that matters, the book names a solo
+substitute rather than pretending an AI can be your peer.
+:::
+
 ## For instructors
 
 EDR|AI grew out of a semester-long undergraduate seminar, and the appendix

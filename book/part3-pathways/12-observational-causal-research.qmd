@@ -214,7 +214,7 @@ either gets its identification argument in writing, or gets an honest boundary i
    variable you can think of that pushes on both. Circle the confounder you most fear.
    Then write, in one line, whether you can measure it.
 4. Name your leverage and its price. Selection on observables, a natural experiment,
-   difference-in-differences, regression discontinuity, or instrumental variables, and
+   difference-in-differences, regression discontinuity, or instrumental variables (this book does not teach these, so name the one your situation seems to fit and say what you would have to learn and defend before using it, rather than reaching for it now), and
    underneath it the short list of load-bearing assumptions it rests on, each in
    plain language a skeptic could argue with. Start with the one you most doubt. If you have no leverage, write the causal-language boundary
    sentence instead: what your comparison shows, and the *because* you are declining to

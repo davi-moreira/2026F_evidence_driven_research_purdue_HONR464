@@ -4,7 +4,8 @@
 # review state follows the lesson, never its current display number), plus
 # part1_overview for the Part I page. Every unreviewed lesson carries the
 # under-development banner. When Davi reports one reviewed: set reviewed:
-# true + the date, run scripts/update_chapter_review_banners.py, re-render
+# true + the date, run scripts/update_chapter_review_banners.py, re-render.
+# D37 (2026-08-01): Architecture v1 is frozen, so chapter review is OPEN.
 # (site first, then book/; PT/ES only when unfrozen, D36).
 lessons:
   part1_overview: {reviewed: false, date: null}
