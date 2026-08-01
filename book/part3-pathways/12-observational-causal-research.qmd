@@ -120,16 +120,7 @@ boundary is what this chapter teaches you to see and to say.
 This chapter has its own **companion notebook** — open it in Colab with the badge above.
 The notebook collects the chapter's prompts and code and ends with the **It is your
 turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab. The full classroom laboratory behind this chapter is course notebook **nb06 —
-Observational causal research** ([open in
-Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_observational_causal_student.ipynb)),
-part of the companion course presented in the [For instructors](../for-instructors.qmd)
-appendix. In the lab you build a small world where *you* set coffee's true effect, plant
-a hidden confounder, and watch a naive comparison inflate a true +1.0 to about +3.1,
-then recover the truth by adjusting for the confounder you can see. You then analyze a
-*real* natural experiment, the Hajj visa lottery from Clingingsmith, Khwaja and Kremer
-(RDSS ch. 16), as a difference in means and state exactly what its as-if-random
-assignment lets you claim, and over whom.
+Colab.
 
 
 ## Recommended AI prompts

@@ -91,14 +91,7 @@ the inflated figure and the word "success."
 This chapter has its own **companion notebook** — open it in Colab with the badge above.
 The notebook collects the chapter's prompts and code and ends with the **It is your
 turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab. The full classroom laboratory behind this chapter is course notebook **nb10 —
-Share the research and attack the analysis** ([open in
-Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb)),
-part of the companion course presented in the [For instructors](../for-instructors.qmd)
-appendix. In the lab you pre-list a robustness grid, run placebo and influence
-checks on a finding, then adjudicate three confident AI reviewers against the
-data and watch two of their three flags dissolve the moment a check touches
-them — confidence meeting evidence, which is this chapter's whole subject.
+Colab.
 
 
 ## Recommended AI prompts

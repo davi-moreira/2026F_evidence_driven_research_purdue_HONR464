@@ -85,3 +85,6 @@ jobs:
 
       - name: Lesson station pointers projection freshness
         run: python3 scripts/build_station_pointers.py --check
+
+      - name: Course-adoption de-coursing freshness
+        run: python3 scripts/build_course_adoption.py --check

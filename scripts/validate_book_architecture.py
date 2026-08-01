@@ -14,7 +14,7 @@ Modes:
                      both directions — the C1 migration exception is retired);
                      A2 leakage reported as an advisory count (it becomes a
                      hard gate at the Architecture-v1 freeze).
-  --a2               run the BOOK_LEAKAGE_POLICY scan as a hard gate.
+  --a2-advisory      downgrade the A2 scan to advisory (escape hatch).
 
 On success (default mode) writes planning/.crosswalk_lock.json — hashes of the
 three manifests + validator version — the machine-readable "verified" flag the
@@ -449,8 +449,10 @@ def a2_scan(arch, leak, hard: bool) -> list[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--a2", action="store_true",
-                    help="run the leakage scan as a hard gate")
+    ap.add_argument("--a2-advisory", action="store_true",
+                    help="downgrade the A2 leakage scan to advisory; it is a "
+                         "HARD GATE by default since the Phase-4 de-coursing "
+                         "sweep cleared the chapter bodies")
     args = ap.parse_args()
 
     arch, cw, assess, leak = load(ARCH), load(CW), load(ASSESS), load(LEAK)
@@ -466,7 +468,7 @@ def main() -> int:
     manifest_problems += check_crosswalk(arch, cw)
     manifest_problems += check_schedule(cw)
     manifest_problems += check_assessments(arch, assess)
-    manifest_problems += a2_scan(arch, leak, hard=args.a2)
+    manifest_problems += a2_scan(arch, leak, hard=not args.a2_advisory)
 
     if manifest_problems:
         print(f"✗ book architecture validation: {len(manifest_problems)} problem(s)")

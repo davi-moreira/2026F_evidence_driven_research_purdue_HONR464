@@ -113,14 +113,7 @@ data confirmed.
 This chapter has its own **companion notebook** — open it in Colab with the badge above.
 The notebook collects the chapter's prompts and code and ends with the **It is your
 turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab. The full classroom laboratory behind this chapter is course notebook **nb09 —
-Experimental causal research** ([open in
-Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb)),
-part of the companion course presented in the [For instructors](../for-instructors.qmd)
-appendix. There you take a real get-out-the-vote field experiment and hand your
-assistant the first pass — the headline estimate, the balance and attrition
-checks — then verify each returned number against the data before it enters
-your ledger, which is this chapter's division of labor run live.
+Colab.
 
 
 ## Recommended AI prompts

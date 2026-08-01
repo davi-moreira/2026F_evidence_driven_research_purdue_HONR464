@@ -93,13 +93,7 @@ reviewers' agreement worth more than a head count.
 This chapter has its own **companion notebook** — open it in Colab with the badge above.
 The notebook collects the chapter's prompts and code and ends with the **It is your
 turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab. The full classroom laboratory behind this chapter is course notebook **nb16 —
-Managing multiple AI agents + the final defense** ([open in
-Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb)),
-part of the companion course presented in the [For instructors](../for-instructors.qmd)
-appendix. There you wire a worker-critic team, run a seeded simulation showing four
-look-alike reviewers miss a real flaw far more often than four independent ones, then
-draft the four parts of your own portfolio and stage your evidence defense.
+Colab.
 
 
 ## Recommended AI prompts

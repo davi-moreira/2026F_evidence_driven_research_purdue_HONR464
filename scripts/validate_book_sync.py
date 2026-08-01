@@ -8,8 +8,9 @@ number-misbound artifacts passed) and checks the book both directions:
 
   1. every ACTIVE lesson has its source file and its companion notebook
      (paths from the manifest — never derived from numeric prefixes)
-  2. every chapter file links its OWN companion notebook (the chapter badge)
-     AND still names its PRIMARY course notebook (the crosswalk home anchor)
+  2. every chapter file links its OWN companion notebook (the chapter badge);
+     the lesson-to-lab mapping lives in the For Instructors appendix, not in
+     chapter bodies (D35 Phase 4 de-coursing)
   3. every registered notebook (nb01-nb16) is the primary of >= 1 lesson
   4. every chapter carries the required element headings
   5. the For-instructors appendix exists in all three editions and the EN
@@ -68,10 +69,8 @@ def main() -> None:
             errs.append(f"{l['id']}: companion missing: "
                         f"notebooks/book/{l['companion']}")
         text = src.read_text()
-        nb = primary.get(l["id"], "")
-        if nb and student_filename(int(nb[2:])).replace("_student.ipynb", "") \
-                not in text and nb not in text:
-            errs.append(f"{l['id']}: does not name its primary {nb}")
+        # D35 Phase 4: chapter BODIES are de-coursed — the lesson-to-lab
+        # mapping lives in the For Instructors appendix, checked below.
         if f"notebooks/book/{l['companion']}" not in text:
             errs.append(f"{l['id']}: no link to its companion "
                         f"notebooks/book/{l['companion']}")
@@ -89,6 +88,10 @@ def main() -> None:
         for n in NOTEBOOKS:
             if student_filename(n) not in fi_text:
                 errs.append(f"For-instructors appendix does not link nb{n:02d}")
+        for l in lessons:                      # every lesson mapped to its lab
+            if f"| Ch. {l['display']} |" not in fi_text:
+                errs.append(f"{l['id']}: missing from the For-instructors "
+                            f"adoption table")
 
     # (6) localized companion links (frozen editions: verify only, D36)
     for edition, sub in (("book-pt", "pt"), ("book-es", "es")):

@@ -121,14 +121,7 @@ but a common cause could explain it.
 This chapter has its own **companion notebook** — open it in Colab with the badge above.
 The notebook collects the chapter's prompts and code and ends with the **It is your
 turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab. The full classroom laboratory behind this chapter is course notebook **nb04 — The
-anatomy of a research design: MIDA + declare → diagnose → redesign** ([open in
-Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb)),
-part of the companion course presented in the [For instructors](../for-instructors.qmd)
-appendix. In the lab you declare the notebook's mentoring design in a few lines of
-Python, run it thousands of times to read its bias, variance, and power with your own
-eyes, then watch one redesign rescue a fair-but-powerless study while a confounded twin
-stays wrong at any sample size.
+Colab.
 
 
 ## Recommended AI prompts

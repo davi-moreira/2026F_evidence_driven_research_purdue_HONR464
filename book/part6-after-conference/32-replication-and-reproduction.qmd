@@ -120,14 +120,7 @@ an effect exists.
 This chapter has its own **companion notebook** — open it in Colab with the badge above.
 The notebook collects the chapter's prompts and code and ends with the **It is your
 turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab. The full classroom laboratory behind this chapter is course notebook **nb14 —
-replication and red-team of another researcher's package** ([open in
-Colab](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb)),
-part of the companion course presented in the [For instructors](../for-instructors.qmd)
-appendix. There you cold-reproduce a real field experiment's headline number from its
-files alone, then run the same three audits you just saw: you line each written claim
-against the output behind it, move the number with an undisclosed specification, and
-widen its interval by respecting the clustering the write-up ignored.
+Colab.
 
 
 ## Recommended AI prompts
@@ -201,7 +194,7 @@ size, measurement noise, and a call for future work. Every sentence is fluent. T
 tool never once flags that 240 larvae came from only six tanks. It has quietly
 mistaken a long list for a complete one.
 
-You catch it by refusing to grade the paragraph and grading the design instead. You
+You catch it by refusing to judge the paragraph and judging the design instead. You
 ask what the experimental unit actually was, then recompute the interval at the tank
 level. When the lower bound drops to zero, the "clear effect" the tool endorsed
 turns out to rest on a certainty the data never earned. A green check and a polished
