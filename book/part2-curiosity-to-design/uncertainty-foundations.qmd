@@ -115,6 +115,10 @@ exists to say. Where the pile sits. How wide it is. What range covers nearly all
 The spread of that pile has a name. The **standard error** is the typical distance
 between one run's estimate and the centre of the pile. For our survey it is about 72.
 
+Notice what it does not tell you. It does not say how wrong today's estimate is, and a
+tightly packed pile can still sit centred on the wrong quantity. Width and aim are two
+different facts, and the next chapter gives the second one its own name.
+
 You cannot see the pile from one survey, but you can estimate its width from one
 survey, and then build a range around your single estimate. That range has a name too.
 A **confidence interval** is a range built by a recipe that catches the estimand a
@@ -122,7 +126,8 @@ stated share of the time, when the same recipe is repeated.
 
 Read that definition slowly, because the obvious paraphrase of it is false. The
 interval you actually computed either contains the truth or it does not. There is no
-chance left in it. What has a 95% property is the **recipe**, not your one range.
+chance left in it. What has a 95% property is the **recipe**, and only while its
+assumptions hold, not your one range.
 
 That distinction sounds pedantic until you check it, which you can do, because
 "catches the truth 95% of the time" is a claim about repetition and repetition is
@@ -212,14 +217,44 @@ buildings, the recipe's usual multiplier of 1.96 is too narrow. Widening it to t
 value appropriate for 12 groups gets 94.5%. Surveying 40 buildings instead, at 5 flats
 each, gets 94.2% with the ordinary multiplier.
 
-That is the practical lesson, and it is not about arithmetic. Sixty flats in 12
-buildings carry roughly the information of 14 independent flats. What buys you
-precision here is **more buildings**, not more flats per building.
+That is the practical lesson, and it is not about arithmetic. In this design, sixty
+flats in 12 buildings carry roughly the information of 14 independent flats. That
+number comes from these data, not from a rule: it is not "divide by the group size",
+and a different dependence structure gives a different answer.
+
+The direction is not automatic either. Here the flats in a building resemble each
+other, which widens the pile, and the honest fix is a wider interval. A design that
+deliberately balances within each group can move the pile the other way and produce a
+narrower one. So "my observations are dependent" does not tell you which way to
+correct. Only the structure does. What buys you precision in this design is **more
+buildings**, not more flats per building.
 
 > **A question that often comes up here:** *"How would I know my data have this
 > problem?"* Ask how the data were collected, not what they look like. If units were
 > selected in groups, measured repeatedly, or connected to each other, the dependence
 > is in the design, and the design is something you know before you see a number.
+
+### Check yourself
+
+A survey reports an approximate 95% interval for average rent, from 1,470 to 1,771.
+Which reading is warranted?
+
+A. There is a 95% probability that the true average rent lies between 1,470 and 1,771.
+
+B. About 95% of households in the town pay between 1,470 and 1,771.
+
+C. Under its assumptions, this interval procedure catches the true average in about 95
+of every 100 repeated surveys.
+
+D. About 95% of future survey estimates will land inside this particular range.
+
+The answer is C. Option A is the misreading this chapter exists to prevent: it hands
+the procedure's repetition rate to one finished interval. Option B confuses uncertainty
+about a town-wide average with the spread among households, which is far wider. Option
+D swaps a moving sequence of intervals for one fixed range.
+
+If you want to write the answer out fully: this interval either contains the true
+average or it does not, and the 95% describes what the recipe does across repeats.
 
 ## The Colab laboratory
 
