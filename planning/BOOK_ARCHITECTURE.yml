@@ -184,7 +184,7 @@ lessons:
      source: part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.qmd,
      companion: ch09_model_inquiry_data_strategy_and_answer_strategy.ipynb,
      url_path: part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html}
-  - {id: uncertainty-foundations,   state: planned, rank: 95,  part: part2,
+  - {id: uncertainty-foundations,   state: active, rank: 95,  part: part2,
      station: declare-and-diagnose, role: core,
      title_en: "Uncertainty before you need it: estimand, estimator, and the shape of chance",
      source: part2-curiosity-to-design/uncertainty-foundations.qmd,

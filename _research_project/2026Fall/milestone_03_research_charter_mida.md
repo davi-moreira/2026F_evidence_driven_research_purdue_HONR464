@@ -23,7 +23,7 @@ Due: **Friday, September 18, 11:59 PM** (you work on it at that Friday's studio)
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m03_charter.pdf`** *or* a shared Colab notebook link | Your research charter: the four **MIDA** parts of your design (Model, Inquiry, Data strategy, Answer strategy), a 3-node **DAG** image, your **diagnosis** naming the biggest threat as bias, variance, or power plus the one **redesign** it demands, your **compass position and claim boundary**, and your AI Research Ledger rows. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 9, ch. 10** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 9, ch. 10, ch. 11** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
 open it, and that the DAG figure renders when the notebook is run.
@@ -38,7 +38,8 @@ is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
 - Ch. 9 — [Model, Inquiry, Data Strategy, and Answer Strategy](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch09_model_inquiry_data_strategy_and_answer_strategy.ipynb)
-- Ch. 10 — [Declaring and Diagnosing a Research Design](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch10_declaring_and_diagnosing_a_research_design.ipynb)
+- Ch. 10 — [Uncertainty Before You Need It](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/uncertainty-foundations.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/uncertainty_foundations.ipynb)
+- Ch. 11 — [Declaring and Diagnosing a Research Design](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch10_declaring_and_diagnosing_a_research_design.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's 37 "It is your turn" sections chain into your final

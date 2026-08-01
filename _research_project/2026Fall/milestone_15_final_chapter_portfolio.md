@@ -35,7 +35,7 @@ not extend the deadline.
 | 1 | **`lastname_m15_chapter.pdf`** | Your **final research chapter**: the whole arc finalized, your headline claim stated at its boundary, uncertainty and limitations throughout, every claim traced and verified. This expands the M14 research note. |
 | 2 | **`lastname_m15_portfolio.pdf`** *(or a clearly-marked section of the chapter PDF)* | Your **AI-management portfolio**: the decomposition, the conflict-and-override log, the stopping rule and never-automate list, and the independence check, built from your full-semester ledger. |
 | 3 | **`lastname_m15_chapter.ipynb`** | The runnable notebook behind the chapter (the reproducibility capsule finalized from M14). It passes **restart-and-run-all** and every headline number reruns from it. |
-| 4 | **EDR\|AI "It is your turn" — ch. 35, ch. 36, ch. 37** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 4 | **EDR\|AI "It is your turn" — ch. 36, ch. 37, ch. 38** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 *Submit all three, or a single zip containing them. Your finalized full-semester
 **AI Research Ledger** appears inside the portfolio. The **Evidence Defense** is
@@ -50,9 +50,9 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 35 — [Managing Multiple AI Agents](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch35_managing_multiple_ai_agents.ipynb)
-- Ch. 36 — [Conflicting Agents and Human Escalation](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch36_conflicting_agents_and_human_escalation.ipynb)
-- Ch. 37 — [Final Research and AI-Management Portfolio](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch37_final_research_and_ai_management_portfolio.ipynb)
+- Ch. 36 — [Managing Multiple AI Agents](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch35_managing_multiple_ai_agents.ipynb)
+- Ch. 37 — [Conflicting Agents and Human Escalation](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch36_conflicting_agents_and_human_escalation.ipynb)
+- Ch. 38 — [Final Research and AI-Management Portfolio](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch37_final_research_and_ai_management_portfolio.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's 37 "It is your turn" sections chain into your final

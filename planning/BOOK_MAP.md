@@ -25,31 +25,32 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 | II | 7 | Research Builds on Research | nb03 |
 | II | 8 | Finding and Verifying Prior Evidence | nb03 |
 | II | 9 | Model, Inquiry, Data Strategy, and Answer Strategy | nb04 |
-| II | 10 | Declaring and Diagnosing a Research Design | nb04 |
-| III — Research pathways | 11 | Observational Descriptive Research | nb05 |
-| III | 12 | Observational Causal Research | nb06 |
-| III | 13 | Experimental Descriptive Research | nb07 |
-| III | 14 | Prediction and Generalization | nb08 |
-| III | 15 | Experimental Causal Research | nb09 |
-| III | 16 | Hybrid and Complex Designs | nb09 |
-| IV — Producing credible evidence with AI | 17 | Data Provenance and Data Quality | nb03 |
-| IV | 18 | Measurement and Operationalization | nb05 |
-| IV | 19 | AI as Programmer | nb05 |
-| IV | 20 | AI as Analytical Assistant | nb09 |
-| IV | 21 | Robustness and Sensitivity | nb10 |
-| IV | 22 | Diagnostics and Negative Tests | nb10 |
-| IV | 23 | AI as Adversarial Reviewer | nb10 |
-| IV | 24 | Recognizing False Confidence | nb10 |
-| V — Communicating and defending research | 25 | From Results to Claims | nb11 |
-| V | 26 | Claim–Evidence Tables | nb11 |
-| V | 27 | Research Posters | nb11 |
-| V | 28 | Poster Criticism | nb11 |
-| V | 29 | Research Pitches | nb12 |
-| V | 30 | Difficult Questions and Uncertainty | nb12 |
-| V | 31 | AI Disclosure and Research Integrity | nb13 |
-| VI — Research after the conference | 32 | Replication and Reproduction | nb14 |
-| VI | 33 | From Poster to Research Note | nb15 |
-| VI | 34 | Open and Reusable Research Packages | nb15 |
-| VI | 35 | Managing Multiple AI Agents | nb16 |
-| VI | 36 | Conflicting Agents and Human Escalation | nb16 |
-| VI | 37 | Final Research and AI-Management Portfolio | nb16 |
+| II | 10 | Uncertainty Before You Need It | nb04 |
+| II | 11 | Declaring and Diagnosing a Research Design | nb04 |
+| III — Research pathways | 12 | Observational Descriptive Research | nb05 |
+| III | 13 | Observational Causal Research | nb06 |
+| III | 14 | Experimental Descriptive Research | nb07 |
+| III | 15 | Prediction and Generalization | nb08 |
+| III | 16 | Experimental Causal Research | nb09 |
+| III | 17 | Hybrid and Complex Designs | nb09 |
+| IV — Producing credible evidence with AI | 18 | Data Provenance and Data Quality | nb03 |
+| IV | 19 | Measurement and Operationalization | nb05 |
+| IV | 20 | AI as Programmer | nb05 |
+| IV | 21 | AI as Analytical Assistant | nb09 |
+| IV | 22 | Robustness and Sensitivity | nb10 |
+| IV | 23 | Diagnostics and Negative Tests | nb10 |
+| IV | 24 | AI as Adversarial Reviewer | nb10 |
+| IV | 25 | Recognizing False Confidence | nb10 |
+| V — Communicating and defending research | 26 | From Results to Claims | nb11 |
+| V | 27 | Claim–Evidence Tables | nb11 |
+| V | 28 | Research Posters | nb11 |
+| V | 29 | Poster Criticism | nb11 |
+| V | 30 | Research Pitches | nb12 |
+| V | 31 | Difficult Questions and Uncertainty | nb12 |
+| V | 32 | AI Disclosure and Research Integrity | nb13 |
+| VI — Research after the conference | 33 | Replication and Reproduction | nb14 |
+| VI | 34 | From Poster to Research Note | nb15 |
+| VI | 35 | Open and Reusable Research Packages | nb15 |
+| VI | 36 | Managing Multiple AI Agents | nb16 |
+| VI | 37 | Conflicting Agents and Human Escalation | nb16 |
+| VI | 38 | Final Research and AI-Management Portfolio | nb16 |

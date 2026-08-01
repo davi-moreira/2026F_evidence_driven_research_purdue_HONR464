@@ -29,7 +29,7 @@ them and submit by the same-day deadline.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m06_measurement_protocol.pdf`** *or* a shared Colab notebook link | The six-part deliverable below: your construct and measurement design, the descriptive quantity it reports, your measurement DAG (image), your artifact plan, your two-sentence claim boundary, your URC abstract, and your AI Research Ledger rows. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 13** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 14** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 confirm the measurement-DAG figure renders when the notebook is run.
@@ -43,7 +43,7 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 13 — [Experimental Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/13-experimental-descriptive-research.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch13_experimental_descriptive_research.ipynb)
+- Ch. 14 — [Experimental Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/13-experimental-descriptive-research.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch13_experimental_descriptive_research.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's 37 "It is your turn" sections chain into your final

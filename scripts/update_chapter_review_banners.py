@@ -70,6 +70,13 @@ def main() -> None:
             if key not in status:
                 sys.exit(f"✗ {path}: no entry {key} in BOOK_REVIEW_STATUS.yml")
             reviewed = bool(status[key].get("reviewed"))
+            if not path.exists():
+                if write_ok:
+                    sys.exit(f"✗ {path}: missing in the current edition")
+                # D36: a lesson added to EN after the freeze has no counterpart
+                # in a frozen edition; language navigation routes to that
+                # edition's index until the translation pass.
+                continue
             text = path.read_text()
             has = BANNER_RE.search(text) is not None
             if reviewed and has:
@@ -99,7 +106,7 @@ def main() -> None:
                 kept += 1
     reviewed_n = sum(1 for v in status.values() if v.get("reviewed"))
     print(f"✓ review banners: {added} added, {removed} removed, {kept} unchanged "
-          f"({reviewed_n}/37 chapters marked reviewed)")
+          f"({reviewed_n}/{len(status)} pages marked reviewed)")
 
 
 if __name__ == "__main__":

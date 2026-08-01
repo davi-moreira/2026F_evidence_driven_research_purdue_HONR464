@@ -171,6 +171,32 @@ def check_architecture(arch) -> list[str]:
     return p
 
 
+def check_toc(arch) -> list[str]:
+    """The EN _quarto.yml chapter list must equal the manifest's active
+    lessons in rank order. Otherwise the TOC is a second, hand-maintained
+    ordering source that can silently disagree with identity (Phase-2
+    critique, migration step 5)."""
+    sys.path.insert(0, str(REPO / "scripts"))
+    from book_manifest import active_lessons
+    toc_path = REPO / "book" / "_quarto.yml"
+    text = toc_path.read_text()
+    listed = re.findall(r"^\s*-\s+(part\d[\w-]*/[\w.-]+\.qmd)\s*$", text, re.M)
+    expected = [l["source"] for l in active_lessons(arch)]
+    if listed != expected:
+        missing = [x for x in expected if x not in listed]
+        extra = [x for x in listed if x not in expected]
+        detail = []
+        if missing:
+            detail.append(f"missing from the TOC: {missing}")
+        if extra:
+            detail.append(f"in the TOC but not an active lesson: {extra}")
+        if not detail:
+            detail.append("same files, different ORDER than manifest rank")
+        return [f"toc: book/_quarto.yml disagrees with the manifest — "
+                + "; ".join(detail)]
+    return []
+
+
 def check_crosswalk(arch, cw) -> list[str]:
     p: list[str] = []
     lessons = {l["id"]: l for l in arch["lessons"]}
@@ -400,6 +426,7 @@ def main() -> int:
     # could never run (deadlock found by the N2 activation fixture).
     manifest_problems = []
     manifest_problems += check_architecture(arch)
+    manifest_problems += check_toc(arch)
     manifest_problems += check_crosswalk(arch, cw)
     manifest_problems += check_schedule(cw)
     manifest_problems += check_assessments(arch, assess)
