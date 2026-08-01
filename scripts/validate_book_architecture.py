@@ -6,17 +6,14 @@ meeting schedule, and the milestone briefs. Per D35(7) THE VALIDATOR IS THE
 ARBITER: until this passes, nothing generated may consume the crosswalk.
 
     .venv/bin/python scripts/validate_book_architecture.py
-    .venv/bin/python scripts/validate_book_architecture.py --migration-audit
     .venv/bin/python scripts/validate_book_architecture.py --a2
 
 Modes:
-  (default)          structural + cross-file + schedule/brief freshness checks;
+  (default)          structural + cross-file + schedule + brief-agreement
+                     checks (briefs must equal the crosswalk on BOTH surfaces,
+                     both directions — the C1 migration exception is retired);
                      A2 leakage reported as an advisory count (it becomes a
                      hard gate at the Architecture-v1 freeze).
-  --migration-audit  one-time: diff the crosswalk's home anchors against the
-                     PRE-D35 milestone briefs and require EXACTLY the five
-                     ruled differences (C1) — ch16 M3→M8, ch20 M9→M8,
-                     ch24 M0→M9, and the two planned lessons.
   --a2               run the BOOK_LEAKAGE_POLICY scan as a hard gate.
 
 On success (default mode) writes planning/.crosswalk_lock.json — hashes of the
@@ -283,12 +280,7 @@ def _brief_anchor_map() -> dict[str, set[int]]:
         # graded requirements).
         bullets = {int(c) for c in
                    re.findall(r"^- Ch\.\s*(\d{1,2})\b", text, re.M)}
-        if bullets and row and bullets != row:
-            raise SystemExit(
-                f"✗ {brief.name}: the submission row lists chapters "
-                f"{sorted(row)} but the Book Anchor bullets list "
-                f"{sorted(bullets)} — a brief may not contradict itself")
-        out[mi] = row | bullets
+        out[mi] = (row, bullets)
     return out
 
 
@@ -307,34 +299,31 @@ def _crosswalk_chapter_map(arch, cw) -> dict[str, set[int]]:
     return out
 
 
-EXPECTED_MIGRATION = {
-    ("M3", "M8", 16),   # hybrid-complex-designs
-    ("M9", "M8", 20),   # ai-analytical-assistant
-    ("M0", "M9", 24),   # false-confidence
-}
-
-
-def migration_audit(arch, cw) -> list[str]:
-    """Brief agreement. Two legal states (C1): PRE-migration, the briefs carry
-    the old anchors and must differ by EXACTLY the ruled moves; POST-migration
-    (briefs regenerated/aligned), zero differences. Anything else fails."""
+def brief_agreement(arch, cw) -> list[str]:
+    """Every brief's BOTH surfaces must equal the crosswalk EXACTLY, in both
+    directions (round-9 N1: omissions in crosswalk-minus-brief and a full
+    pre-migration reversion previously passed). The C1 migration exception is
+    RETIRED — migration completed 2026-07-31; there is one legal state."""
     p: list[str] = []
     briefs = _brief_anchor_map()
     cwmap = _crosswalk_chapter_map(arch, cw)
-    diffs = set()
-    for mi in cwmap:
-        b, c = briefs.get(mi, set()), cwmap.get(mi, set())
-        for ch in b - c:
-            dest = next((m2 for m2, s in cwmap.items() if ch in s), None)
-            diffs.add((mi, dest, ch))
-    if not diffs:
-        print("  ✓ milestone briefs agree with the crosswalk (post-migration)")
-    elif diffs == EXPECTED_MIGRATION:
-        print(f"  ✓ migration audit: exactly the {len(EXPECTED_MIGRATION)} "
-              f"ruled moves (pre-migration state)")
-    else:
-        p.append(f"migration: anchor differences are neither empty nor the "
-                 f"ruled set: {sorted(diffs)}")
+    for mi, expected in cwmap.items():
+        if not expected:
+            continue
+        if mi not in briefs:
+            p.append(f"briefs[{mi}]: no brief found for a crosswalk milestone")
+            continue
+        row, bullets = briefs[mi]
+        for name, got in (("submission row", row), ("Book Anchor bullets", bullets)):
+            if not got:
+                p.append(f"briefs[{mi}]: the {name} surface is MISSING — both "
+                         f"student-facing surfaces must state the anchors")
+            elif got != expected:
+                p.append(f"briefs[{mi}]: {name} lists {sorted(got)} but the "
+                         f"crosswalk anchors {sorted(expected)} — the brief "
+                         f"is a projection and may not drift")
+    if not p:
+        print("  ✓ milestone briefs equal the crosswalk on both surfaces")
     return p
 
 
@@ -397,7 +386,6 @@ def a2_scan(arch, leak, hard: bool) -> list[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--migration-audit", action="store_true")
     ap.add_argument("--a2", action="store_true",
                     help="run the leakage scan as a hard gate")
     args = ap.parse_args()
@@ -409,7 +397,7 @@ def main() -> int:
     problems += check_schedule(cw)
     problems += check_assessments(arch, assess)
     problems += a2_scan(arch, leak, hard=args.a2)
-    problems += migration_audit(arch, cw)   # legal in both C1 states
+    problems += brief_agreement(arch, cw)
 
     if problems:
         print(f"✗ book architecture validation: {len(problems)} problem(s)")

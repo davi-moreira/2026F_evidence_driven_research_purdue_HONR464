@@ -409,8 +409,11 @@ def check_freshness() -> list[str]:
         import notebooks_map as _nm
         active_stems = {v[0] for v in _nm.NOTEBOOKS.values()} | \
                        {v[0] for v in _nm.MS_NOTEBOOKS.values()}
-    except Exception:
-        pass                                    # registry unavailable: fall back
+    except Exception as e:
+        # FAIL CLOSED (round-9 N3): a broken registry would silently disable
+        # the source-deletion protection if we fell back to file discovery.
+        return [f"local: notebook registry unavailable ({e!r}) — freshness "
+                f"cannot be certified; fix scripts/notebooks_map.py"]
 
     # Iterate the REGISTERED stems, not the files that happen to exist
     # (round-8 P2: looping glob("*.py") let a deleted canonical source
