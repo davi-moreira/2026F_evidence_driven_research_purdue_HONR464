@@ -142,8 +142,7 @@ That promise sounds sufficient. Watch what it actually buys.
 reasonably be picked out of the data. Deleting names is not de-identification, because
 the remaining columns can still single someone out.
 
-```{python}
-#| eval: false
+```python
 import numpy as np
 from collections import Counter
 SEED = 464
@@ -177,8 +176,7 @@ age can find that person's answers.
 
 Now look at who carries that risk.
 
-```{python}
-#| eval: false
+```python
 rare = country >= 5                    # students from less-common countries
 common = country == 0                  # students from the most common one
 

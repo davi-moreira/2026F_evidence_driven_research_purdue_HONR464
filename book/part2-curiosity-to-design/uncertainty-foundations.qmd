@@ -78,8 +78,7 @@ not of any one run.
 
 Here is that pile, built from a town whose true average rent is 1,568.
 
-```{python}
-#| eval: false
+```python
 import numpy as np
 SEED = 464
 rng = np.random.default_rng(SEED)
@@ -129,12 +128,13 @@ interval you actually computed either contains the truth or it does not. There i
 chance left in it. What has a 95% property is the **recipe**, and only while its
 assumptions hold, not your one range.
 
-That distinction sounds pedantic until you check it, which you can do, because
-"catches the truth 95% of the time" is a claim about repetition and repetition is
-something you can run.
+That distinction sounds pedantic until you check it, which you can do here, because
+this town is one we built. In an example where the population is known, simulation lets
+you watch the pile directly. In a real study you never see it: the pile is implied by
+your sampling plan and your stated assumptions. Simulation checks what those
+assumptions imply. It does not prove the world obeys them.
 
-```{python}
-#| eval: false
+```python
 rng = np.random.default_rng(SEED)
 n, runs, hits = 60, 2000, 0
 
@@ -158,18 +158,20 @@ makes a probability claim about a fixed number, and fixed numbers do not have ch
 
 ## A worked example
 
-A business-school team wants the average monthly rent tenants pay in a mid-sized town,
-to price a housing product. They cannot survey everyone, so they plan to survey 60
-tenants and report an interval.
+A business-school team wants the average monthly rent paid by renting households in a
+mid-sized town this month, to price a housing product. They cannot survey everyone, so
+they plan to survey 60 households and report an interval.
 
-Their estimand: average monthly rent across all households in the town this month.
-Their estimator: the mean of 60 randomly drawn households. Their uncertainty statement:
-a 95% interval built from the spread inside their own sample.
+Their estimand: the average monthly rent across all renting households in the town this
+month. Their estimator: the mean of 60 households drawn at random from the town's list
+of rented dwellings. Their uncertainty statement: a 95% interval built from the spread
+inside their own sample.
 
 Then the field team makes a reasonable-sounding change. Knocking on 60 doors scattered
-across town is expensive, so they pick 12 apartment buildings and survey 5 flats in
-each. Same 60 tenants, much cheaper. Nothing about the estimand changed. Nothing about
-the arithmetic changed.
+across town is expensive, so they draw 12 apartment buildings at random from that same
+list and survey 5 rented flats in each. Still 60 households from the same population,
+much cheaper. Nothing about the estimand changed. Nothing about the arithmetic
+changed.
 
 Everything about the uncertainty changed.
 
@@ -177,13 +179,13 @@ Everything about the uncertainty changed.
 
 Flats in one building share a landlord, a neighbourhood, a heating system, a rent
 schedule. When you learn one flat's rent, you have already learned a lot about the
-other four. **Dependence** means observations carry overlapping information, so each
-new one adds less than a fresh independent observation would.
+other four. **Dependence** means that learning one observation changes what you should
+expect about another. Here the flats in a building tend to move together, so another
+flat in the same building adds less than a fresh independent flat would.
 
 The arithmetic does not notice. The procedure's honesty does.
 
-```{python}
-#| eval: false
+```python
 rng = np.random.default_rng(SEED)
 B, K, truth, runs = 12, 5, 2000.0, 2000      # 12 buildings, 5 flats each
 naive_hits = cluster_hits = 0
@@ -226,8 +228,15 @@ The direction is not automatic either. Here the flats in a building resemble eac
 other, which widens the pile, and the honest fix is a wider interval. A design that
 deliberately balances within each group can move the pile the other way and produce a
 narrower one. So "my observations are dependent" does not tell you which way to
-correct. Only the structure does. What buys you precision in this design is **more
-buildings**, not more flats per building.
+correct. The direction depends on the sampling design, the estimator, and the pattern
+of relationships among your observations.
+
+With the variability this example assumes, extra buildings buy far more precision than
+extra flats inside a building you have already entered. Doubling the flats per building
+from five to ten moves the spread from about 77 to about 76. Doubling the buildings
+instead moves it to about 54. Extra flats are not worthless, they just run into sharply
+diminishing returns, because the part of the wobble that comes from which buildings you
+picked is untouched by measuring more flats inside them.
 
 > **A question that often comes up here:** *"How would I know my data have this
 > problem?"* Ask how the data were collected, not what they look like. If units were
@@ -286,16 +295,17 @@ move when you change one of them.
 > - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
 
 > 💡 **AI Prompt:** "Here is how my units were selected and measured: [paste yours].
-> Tell me which observations in my data are likely to carry overlapping information,
-> and why, based only on the collection procedure I described. Then tell me what my
-> effective independent unit probably is."
+> Identify the levels at which my observations were sampled, repeated, or connected.
+> For each level, say what dependence is plausible and what more you would need to know
+> before choosing how to compute uncertainty. Do not infer a single effective sample
+> size from my description."
 >
 > **After running, verify:**
 > - [ ] Confirm each claimed dependence against your actual collection procedure. A
 >   tool cannot see your fieldwork; it is guessing from your description.
-> - [ ] If it names a unit you had not considered, ask yourself how many of that unit
->   you actually have. That count, not your row count, drives your precision.
-> - [ ] Decide the unit yourself and write down why. This is a design judgment.
+> - [ ] If it names a level you had not considered, count how many units you have at
+>   that level. Your row count is rarely the number that drives your precision.
+> - [ ] Decide the structure yourself and write down why. This is a design judgment.
 > - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
 
 ::: {.callout-important title="Do not delegate"}
@@ -336,11 +346,14 @@ its diagnosis on, so make it specific to your own project rather than generic.
    will compute from it. Someone else should be able to follow it without asking you
    a question.
 3. **Name what would differ on a repeat.** Write the two or three things that would
-   come out differently if the same procedure ran again next month. This is your
-   sampling distribution, described in words before you can see it.
-4. **Name your independent unit and count it.** Say what your units are, whether any
-   of them carry overlapping information, and how many independent ones you actually
-   have. If that number is much smaller than your row count, say so here.
+   come out differently if selection and measurement ran again for the same target
+   population, setting, and time. This describes your sampling distribution in words,
+   before you can see it. Keep the period fixed: a repeat next month would also change
+   the quantity you are chasing, which is a different kind of movement.
+4. **Name your dependence structure.** List the levels at which your observations
+   were sampled, repeated, or connected, and how many units you have at each level.
+   Then say which units your uncertainty calculation will treat as independent, and
+   the assumption that lets you treat them that way.
 5. **Write your uncertainty sentence, and then write the wrong version of it.** State
    what your interval will and will not claim. Then write the tempting false version
    beside it, and one line on how you would catch yourself saying it.

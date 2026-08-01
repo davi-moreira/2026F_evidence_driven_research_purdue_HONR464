@@ -136,8 +136,8 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 |---|---|---|
 | Step 1 | **State your estimand** in one sentence, as a quantity in the world with a population, a setting, and a time | |
 | Step 2 | **State your estimator** as a recipe: what you will collect, and exactly what you will compute from it | |
-| Step 3 | **Name what would differ on a repeat.** Write the two or three things that would come out differently if the same procedure ran again next month | |
-| Step 4 | **Name your independent unit and count it.** Say what your units are, whether any of them carry overlapping information, and how many independent… | |
+| Step 3 | **Name what would differ on a repeat.** Write the two or three things that would come out differently if selection and measurement ran again for the… | |
+| Step 4 | **Name your dependence structure.** List the levels at which your observations were sampled, repeated, or connected, and how many units you have at… | |
 | Step 5 | **Write your uncertainty sentence, and then write the wrong version of it.** State what your interval will and will not claim | |
 | Step 6 | **Log it.** Add your AI Research Ledger rows for anything you delegated here, and record which decisions you kept | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
