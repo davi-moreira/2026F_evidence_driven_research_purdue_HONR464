@@ -76,3 +76,6 @@ jobs:
 
       - name: BOOK_MAP projection freshness
         run: python3 scripts/build_book_map.py --check
+
+      - name: Milestone Book Anchors projection freshness
+        run: python3 scripts/build_milestone_anchors.py --check

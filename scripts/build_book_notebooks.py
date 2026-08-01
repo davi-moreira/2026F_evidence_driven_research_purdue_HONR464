@@ -33,6 +33,8 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO / "scripts"))
+from book_manifest import active_lessons, require_lock  # noqa: E402
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
 
 EDITIONS = [
@@ -454,11 +456,14 @@ def chapter_files(book_dir: Path) -> list[Path]:
 
 
 def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
-                   rubrics: list | None = None) -> dict:
+                   rubrics: list | None = None,
+                   lesson: dict | None = None) -> dict:
     title, body = parse_front_matter(path.read_text())
     part_dir = path.parent.name
-    n = int(path.stem[:2])
-    url = f"{ed['site_base']}/{part_dir}/{path.stem}.html"
+    # Display number and canonical URL come from the MANIFEST (round-9 N2);
+    # nothing is parsed out of the filename's numeric prefix.
+    n = lesson["display"]
+    url = f"{ed['site_base']}/{lesson['url_path']}"
     home = f"{ed['site_base']}/index.html"
     vg = f"{ed['site_base']}/verification-guide.html"
 
@@ -555,32 +560,39 @@ def main() -> None:
                     help="editions to generate (default en — D36 freeze)")
     sel = ap.parse_args().editions
     active = [ed for ed in EDITIONS if sel == "all" or ed["code"] == sel]
+    # Identity comes from the validated manifest: active lessons in rank
+    # order, with explicit source / url_path / companion paths. Activating a
+    # planned lesson changes the count with no code edit (round-9 N2).
+    require_lock()
+    lessons = active_lessons()
     total = 0
     for ed in active:
         book_dir = REPO / ed["book_dir"]
         out_dir = REPO / "notebooks" / "book" / ed["out_sub"]
         out_dir.mkdir(parents=True, exist_ok=True)
-        files = chapter_files(book_dir)
-        if len(files) != 37:
-            sys.exit(f"✗ {ed['book_dir']}: found {len(files)} chapters, expected 37")
+        missing = [l["id"] for l in lessons
+                   if not (book_dir / l["source"]).exists()]
+        if missing:
+            sys.exit(f"✗ {ed['book_dir']}: manifest lessons without a source "
+                     f"file: {missing}")
         rubrics: list[tuple[int, str, str]] = []
-        for k, path in enumerate(files):
+        for k, lesson in enumerate(lessons):
+            path = book_dir / lesson["source"]
             nxt = None
-            if k + 1 < len(files):
-                np_ = files[k + 1]
-                nxt_title, _ = parse_front_matter(np_.read_text())
-                nxt = (f"{ed['site_base']}/{np_.parent.name}/{np_.stem}.html",
-                       nxt_title)
-            nb = build_notebook(ed, path, nxt, rubrics)
-            slug = f"ch{path.stem[:2]}_{path.stem[3:].replace('-', '_')}"
-            out = out_dir / f"{slug}.ipynb"
+            if k + 1 < len(lessons):
+                nxt_lesson = lessons[k + 1]
+                nxt_path = book_dir / nxt_lesson["source"]
+                nxt_title, _ = parse_front_matter(nxt_path.read_text())
+                nxt = (f"{ed['site_base']}/{nxt_lesson['url_path']}", nxt_title)
+            nb = build_notebook(ed, path, nxt, rubrics, lesson)
+            out = out_dir / lesson["companion"]
             out.write_text(json.dumps(nb, ensure_ascii=False, indent=1) + "\n")
             total += 1
         inc = [ed["appendix_title"], "", ed["appendix_intro"], ""]
         for n, title, rubric in rubrics:
             inc += [f"### {ed['ch_word']} {n} — {title}", "", rubric, ""]
         (book_dir / "_iyt-rubrics.qmd").write_text("\n".join(inc))
-        print(f"✓ {ed['book_dir']}: {len(files)} companion notebooks → "
+        print(f"✓ {ed['book_dir']}: {len(lessons)} companion notebooks → "
               f"{out_dir.relative_to(REPO)}/ + _iyt-rubrics.qmd")
     print(f"✓ {total} book companion notebooks built")
 

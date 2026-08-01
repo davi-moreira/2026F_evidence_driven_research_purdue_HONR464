@@ -285,13 +285,15 @@ def _brief_anchor_map() -> dict[str, set[int]]:
 
 
 def _crosswalk_chapter_map(arch, cw) -> dict[str, set[int]]:
-    """milestone -> chapter numbers implied by home anchors (via the legacy
-    numeric prefix of each lesson's source — migration-era data only)."""
-    num = {}
-    for l in arch["lessons"]:
-        m = re.match(r"(\d{2})-", Path(l["source"]).name)
-        if m:
-            num[l["id"]] = int(m.group(1))
+    """milestone -> DISPLAY chapter numbers implied by home anchors.
+
+    Display numbers are derived from manifest rank among active lessons
+    (round-9 N2): the legacy filename prefix is not identity, and a lesson
+    without one (every future insertion) would silently vanish from this map.
+    """
+    sys.path.insert(0, str(REPO / "scripts"))
+    from book_manifest import active_lessons
+    num = {l["id"]: l["display"] for l in active_lessons(arch)}
     out = {}
     for r in cw.get("rows", []):
         out[r["milestone"]] = {num[a["lesson"]] for a in r.get("assignments", [])
@@ -391,20 +393,26 @@ def main() -> int:
     args = ap.parse_args()
 
     arch, cw, assess, leak = load(ARCH), load(CW), load(ASSESS), load(LEAK)
-    problems = []
-    problems += check_architecture(arch)
-    problems += check_crosswalk(arch, cw)
-    problems += check_schedule(cw)
-    problems += check_assessments(arch, assess)
-    problems += a2_scan(arch, leak, hard=args.a2)
-    problems += brief_agreement(arch, cw)
+    # MANIFEST-level checks certify the manifests themselves; the lock is
+    # written on their success. PROJECTION checks (briefs, and elsewhere
+    # BOOK_MAP/material) verify generated artifacts are fresh — they fail the
+    # run but must not withhold the lock, or the generators that FIX them
+    # could never run (deadlock found by the N2 activation fixture).
+    manifest_problems = []
+    manifest_problems += check_architecture(arch)
+    manifest_problems += check_crosswalk(arch, cw)
+    manifest_problems += check_schedule(cw)
+    manifest_problems += check_assessments(arch, assess)
+    manifest_problems += a2_scan(arch, leak, hard=args.a2)
 
-    if problems:
-        print(f"✗ book architecture validation: {len(problems)} problem(s)")
-        for x in problems:
+    if manifest_problems:
+        print(f"✗ book architecture validation: {len(manifest_problems)} problem(s)")
+        for x in manifest_problems:
             print("   ", x)
         LOCK.unlink(missing_ok=True)
         return 1
+
+    projection_problems = brief_agreement(arch, cw)
 
     LOCK.write_text(json.dumps({
         "validator_version": VALIDATOR_VERSION,
@@ -413,9 +421,15 @@ def main() -> int:
     }, indent=2) + "\n")
     n_active = sum(1 for l in arch["lessons"] if l["state"] == "active")
     n_planned = sum(1 for l in arch["lessons"] if l["state"] == "planned")
+    if projection_problems:
+        print(f"✗ generated projections are STALE: {len(projection_problems)} "
+              f"problem(s) — manifests are valid (lock written); regenerate")
+        for x in projection_problems:
+            print("   ", x)
+        return 1
     print(f"✓ book architecture consistent — {n_active} active + {n_planned} "
-          f"planned lessons, 12 stations, home anchors partition, schedule + "
-          f"assessments aligned; lock written")
+          f"planned lessons, {len(arch['stations'])} stations, home anchors "
+          f"partition, schedule + assessments aligned; lock written")
     return 0
 
 
