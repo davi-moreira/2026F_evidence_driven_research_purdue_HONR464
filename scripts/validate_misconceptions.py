@@ -801,18 +801,19 @@ def self_test() -> int:
             # everywhere, not from one file: the same correction legitimately
             # appears in several places (a lesson and its station), so a
             # single-file deletion proves nothing.
-            needle = "specification spread"
+            # whitespace-tolerant: the phrase is line-wrapped in ch21 and
+            # on one line in the station page, and a raw-substring removal
+            # silently missed the wrapped copy
+            needle_rx = re.compile(r"specification\s+spread", re.I)
             touched: dict[Path, str] = {}
-            for f, _empty in [(x, None) for x in surfaces(
-                    {}, load()["defaults"])[0]]:
+            for f in surfaces({}, load()["defaults"])[0]:
                 try:
                     raw = f.read_text()
                 except (OSError, UnicodeDecodeError):
                     continue
-                if needle in raw.lower():
+                if needle_rx.search(raw):
                     touched[f] = raw
-                    f.write_text(re.sub(needle, "REMOVED TERM", raw,
-                                        flags=re.I))
+                    f.write_text(needle_rx.sub("REMOVED TERM", raw))
             _TEXT_CACHE.clear()
             if not any("required correction" in p for p in run(check_nums=False)):
                 failures.append("deleted required correction did NOT fail the scan")
