@@ -84,36 +84,522 @@ levels:
   - {score: 1, anchor: "present but incomplete or unverified in a stated way"}
   - {score: 2, anchor: "complete, verified, and honestly bounded"}
 
-stations: []
-  # Populated in Phase 4, one entry per station. Schema (S2/S3):
-  # - station: declare-and-diagnose          # architecture station id
-  #   checkpoint: contract-v0                # architecture checkpoint id
-  #   scoring: {aggregate: sum, comparable_across_routes: true}
-  #   criteria:
-  #     - id: declare-and-diagnose.contract-v0.estimand-stated
-  #       assesses: [target_estimand]
-  #       applies_when: {}                   # empty = all routes/genres
-  #       text: "..."
-  #       levels: {0: "...", 1: "...", 2: "..."}   # criterion-specific, required
-  #       addenda:
-  #         - {applies_when: {route: prediction}, text: "...",
-  #            levels: {0: "...", 1: "...", 2: "..."}}
-  #   gates:
-  #     - {id: permission-status-cleared, blocking: true, scored: false}
-  #   exemplar_pairs:
-  #     - id: declare-and-diagnose.pair-01
-  #       task: "shared prompt/case both artifacts answer"
-  #       applies_when: {route: observational-descriptive}
-  #       strong:
-  #         artifact: path-or-anchor
-  #         annotations: [{criterion: ..., score: 2, note: "..."}]
-  #         provenance: {source: "...", citation_status: verified,
-  #                      data_license: "...", redistribution: permitted,
-  #                      consent: not-student-derived | documented,
-  #                      en_sha256: "...",
-  #                      locales: {pt-BR: not-started, es: not-started}}
-  #       plausible_but_wrong:
-  #         artifact: path-or-anchor
-  #         teaches: "the specific misreading it embodies"
-  #         annotations: [{criterion: ..., score: 1, note: "..."}]
-  #         provenance: {...}                # required on BOTH members
+stations:
+  - station: govern-the-work
+    checkpoint: working-agreement-v0
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: govern-the-work.working-agreement-v0.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: govern-the-work.working-agreement-v0.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: govern-the-work.working-agreement-v0.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: govern-the-work.working-agreement-v0.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: govern-the-work.working-agreement-v0.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: A responsibility statement naming what you will never delegate, your AI and data-handling rules, your opened AI Research Ledger, and an early red-flag screen of your project idea"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+  - station: frame-the-inquiry
+    checkpoint: question-declared-v0
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: frame-the-inquiry.question-declared-v0.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: frame-the-inquiry.question-declared-v0.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: frame-the-inquiry.question-declared-v0.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: frame-the-inquiry.question-declared-v0.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: frame-the-inquiry.question-declared-v0.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: An objective, your units, outcomes and conditions, your target and reach, and a provisional claim boundary"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+  - station: ground-in-evidence
+    checkpoint: evidence-base-v0
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: ground-in-evidence.evidence-base-v0.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: ground-in-evidence.evidence-base-v0.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: ground-in-evidence.evidence-base-v0.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: ground-in-evidence.evidence-base-v0.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: ground-in-evidence.evidence-base-v0.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: An evidence registry of verified sources, your search log, an evidence map, and an explicit revision of your Station 2 declaration"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+  - station: declare-and-diagnose
+    checkpoint: contract-v0
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: declare-and-diagnose.contract-v0.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: declare-and-diagnose.contract-v0.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: declare-and-diagnose.contract-v0.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: declare-and-diagnose.contract-v0.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: declare-and-diagnose.contract-v0.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: Research Contract v0 — objective, target estimand, population, setting and time, data strategy, measurement, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+    gates:
+      - id: permission-status-honoured
+        blocking: true
+        scored: false
+        text: "No work at or after Station 4 proceeds past a not-authorized determination."
+  - station: develop-the-pathway
+    checkpoint: pathway-declared-v1
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: develop-the-pathway.pathway-declared-v1.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: develop-the-pathway.pathway-declared-v1.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: develop-the-pathway.pathway-declared-v1.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: develop-the-pathway.pathway-declared-v1.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: develop-the-pathway.pathway-declared-v1.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: Research Contract v1: objective by target and reach by data strategy by warrant, with the pathway declared and its limits written before any result exists"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+    gates:
+      - id: permission-status-honoured
+        blocking: true
+        scored: false
+        text: "No work at or after Station 4 proceeds past a not-authorized determination."
+  - station: govern-data-measurement
+    checkpoint: data-measurement-v1
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: govern-data-measurement.data-measurement-v1.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: govern-data-measurement.data-measurement-v1.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: govern-data-measurement.data-measurement-v1.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: govern-data-measurement.data-measurement-v1.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: govern-data-measurement.data-measurement-v1.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: Provenance documentation, a data-management record, your measurement specification, and a route-specific permission recheck"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+    gates:
+      - id: permission-status-honoured
+        blocking: true
+        scored: false
+        text: "No work at or after Station 4 proceeds past a not-authorized determination."
+  - station: first-analysis
+    checkpoint: first-analysis-v1
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: first-analysis.first-analysis-v1.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: first-analysis.first-analysis-v1.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: first-analysis.first-analysis-v1.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: first-analysis.first-analysis-v1.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: first-analysis.first-analysis-v1.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: A route-specific result with an uncertainty statement, a restart-and-run-all verification, an environment record, and a claim-to-output check"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+    gates:
+      - id: permission-status-honoured
+        blocking: true
+        scored: false
+        text: "No work at or after Station 4 proceeds past a not-authorized determination."
+  - station: stress-test
+    checkpoint: robustness-audit-v1
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: stress-test.robustness-audit-v1.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: stress-test.robustness-audit-v1.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: stress-test.robustness-audit-v1.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: stress-test.robustness-audit-v1.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: stress-test.robustness-audit-v1.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: A pre-listed robustness grid, negative tests with their assumptions stated, diagnostics, an adversarial-review record, and your adjudication of what survived"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+    gates:
+      - id: permission-status-honoured
+        blocking: true
+        scored: false
+        text: "No work at or after Station 4 proceeds past a not-authorized determination."
+  - station: write-bound-disclose
+    checkpoint: bounded-claims-v1
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: write-bound-disclose.bounded-claims-v1.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: write-bound-disclose.bounded-claims-v1.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: write-bound-disclose.bounded-claims-v1.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: write-bound-disclose.bounded-claims-v1.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: write-bound-disclose.bounded-claims-v1.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: A stand-alone research note or report draft, a claim-to-evidence table, and your AI disclosure statement"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+    gates:
+      - id: permission-status-honoured
+        blocking: true
+        scored: false
+        text: "No work at or after Station 4 proceeds past a not-authorized determination."
+  - station: adapt-and-defend
+    checkpoint: defense-ready-v1
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: adapt-and-defend.defense-ready-v1.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: adapt-and-defend.defense-ready-v1.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: adapt-and-defend.defense-ready-v1.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: adapt-and-defend.defense-ready-v1.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: adapt-and-defend.defense-ready-v1.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: One chosen genre adaptation - poster, talk, brief, or another - plus a defense rehearsal record. This is not yet public release"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+    gates:
+      - id: permission-status-honoured
+        blocking: true
+        scored: false
+        text: "No work at or after Station 4 proceeds past a not-authorized determination."
+  - station: reproduce-and-package
+    checkpoint: package-v1
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: reproduce-and-package.package-v1.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: reproduce-and-package.package-v1.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: reproduce-and-package.package-v1.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: reproduce-and-package.package-v1.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: reproduce-and-package.package-v1.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: An independent cold-run record and a reusable research package"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+    gates:
+      - id: permission-status-honoured
+        blocking: true
+        scored: false
+        text: "No work at or after Station 4 proceeds past a not-authorized determination."
+  - station: release-next-cycle
+    checkpoint: release-audit-v1
+    scoring: {aggregate: sum, comparable_across_routes: true}
+    criteria:
+      - id: release-next-cycle.release-audit-v1.artifact-complete
+        applies_when: {}
+        text: "The station's artifact exists in full, specific to your own project"
+        levels:
+          0: "absent, or generic text that would fit any project"
+          1: "present but incomplete, or specific in some parts and generic in others"
+          2: "complete and unmistakably about your project"
+      - id: release-next-cycle.release-audit-v1.version-and-reason
+        applies_when: {}
+        text: "The checkpoint is written as a dated, numbered version with its reason"
+        levels:
+          0: "no version, or a version with no reason given"
+          1: "versioned, but the reason is decorative rather than an account of what changed"
+          2: "versioned with a reason a reader could use to reconstruct your thinking"
+      - id: release-next-cycle.release-audit-v1.decision-owned
+        applies_when: {}
+        text: "Every judgment in the artifact is defended by you, not asserted by a tool"
+        levels:
+          0: "conclusions appear with no reasoning, or reproduce a tool's wording"
+          1: "reasoning present but thin where the decision was hardest"
+          2: "each judgment carries a reason you could defend under questioning"
+      - id: release-next-cycle.release-audit-v1.rails-carried
+        applies_when: {}
+        text: "The four rails are carried in this station's specific form"
+        levels:
+          0: "one or more rails absent where this station required them"
+          1: "all rails present but one is nominal"
+          2: "every rail addressed in the form this station requires"
+      - id: release-next-cycle.release-audit-v1.station-specific
+        applies_when: {}
+        text: "The station's own product is present and defensible: A release audit, your final dossier, an explicit stopping rule, and your next-study agenda"
+        levels:
+          0: "the station's own product is missing"
+          1: "present but would not survive a careful question"
+          2: "present and defensible as stated"
+    gates:
+      - id: permission-status-honoured
+        blocking: true
+        scored: false
+        text: "No work at or after Station 4 proceeds past a not-authorized determination."
+
+# Exemplar pairs (S3) remain unauthored: each needs a shared task, two linked
+# artifacts, criterion-level annotations, and full provenance including consent
+# for anything student-derived. Authoring them requires real student work with
+# documented permission, which does not exist yet.

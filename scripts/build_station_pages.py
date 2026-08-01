@@ -29,6 +29,7 @@ from book_manifest import (active_lessons, load_architecture,  # noqa: E402
                            require_lock)
 
 STATIONS_YML = REPO / "planning" / "BOOK_STATIONS.yml"
+ASSESS_YML = REPO / "planning" / "BOOK_ASSESSMENTS.yml"
 OUT_DIR = REPO / "book" / "stations"
 NB_DIR = REPO / "notebooks" / "book" / "stations"
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
@@ -49,7 +50,28 @@ BANNER = ('::: {.callout-warning .review-pending title="Under development"}\n'
           ":::\n")
 
 
-def station_page(st: dict, spec: dict, lessons: list[dict], n: int) -> str:
+def rubric_md(entry: dict | None) -> str:
+    """The AUTHORED rubric for this checkpoint (D35 §4 retires the
+    auto-derived, first-sentence rubrics)."""
+    if not entry:
+        return ""
+    rows = ["| # | Criterion | 0 | 1 | 2 |", "|---|---|---|---|---|"]
+    for i, c in enumerate(entry["criteria"], 1):
+        lv = c["levels"]
+        rows.append(f"| {i} | {c['text']} | {lv[0]} | {lv[1]} | {lv[2]} |")
+    total = 2 * len(entry["criteria"])
+    out = ("## How this checkpoint is assessed\n\n"
+           f"Each row scores **0**, **1**, or **2**. **{total} points total.**\n\n"
+           + "\n".join(rows) + "\n")
+    for gate in entry.get("gates", []):
+        out += (f"\n::: {{.callout-important title=\"Blocking gate\"}}\n"
+                f"{gate['text']} This is not scored and cannot be averaged "
+                f"away.\n:::\n")
+    return out
+
+
+def station_page(st: dict, spec: dict, lessons: list[dict], n: int,
+                 rubric: dict | None = None) -> str:
     cps = ", ".join(f"`{c['id']}`" for c in st["checkpoints"])
     reading = "\n".join(
         f"- [Ch. {l['display']} — {l['title']}]({SITE}/book/{l['url_path']})"
@@ -60,6 +82,7 @@ def station_page(st: dict, spec: dict, lessons: list[dict], n: int) -> str:
     slug = st["id"]
     route_block = (f"## Choosing your pathway\n\n{spec['route_guide']}\n"
                    if spec.get("route_guide") else "")
+    rubric_block = rubric_md(rubric)
     return f"""---
 title: "Station {n}: {st['title']}"
 ---
@@ -100,6 +123,8 @@ these specific forms.
 
 {spec['revisit']}
 
+{rubric_block}
+
 ## Your workbook
 
 Open the workbook with the badge above. It walks these steps with a cell for
@@ -109,7 +134,7 @@ Dossier.
 """
 
 
-def workbook(st: dict, spec: dict, n: int) -> dict:
+def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
     def md(i, s):
         return {"cell_type": "markdown", "id": f"m{i:03d}", "metadata": {},
                 "source": s.splitlines(keepends=True)}
@@ -135,6 +160,8 @@ def workbook(st: dict, spec: dict, n: int) -> dict:
     i += 1
     cells.append(md(i, "✍️ **Checkpoint version.** Double-click and write it here.\n"))
     i += 1
+    if rubric:
+        cells.append(md(i, rubric_md(rubric))); i += 1
     cells.append(md(i, "## Before you leave\n\nAdd this station's rows to your "
                       "**AI Research Ledger** — task, tool, prompt, output "
                       "summary, decision, verification method, remaining "
@@ -152,6 +179,8 @@ def render_all() -> dict[Path, str]:
     arch = load_architecture()
     spec_by_id = {s["id"]: s for s in yaml.safe_load(
         STATIONS_YML.read_text())["stations"]}
+    rubric_by_station = {r["station"]: r for r in
+                         (yaml.safe_load(ASSESS_YML.read_text()).get("stations") or [])}
     lessons = active_lessons(arch)
     titles = {}
     for l in lessons:
@@ -168,10 +197,11 @@ def render_all() -> dict[Path, str]:
         n = st["rank"]
         mine = [l for l in lessons if l["station"] == st["id"]]
         slug = st["id"].replace("-", "_")
+        rb = rubric_by_station.get(st["id"])
         out[OUT_DIR / f"station{n:02d}-{st['id']}.qmd"] = station_page(
-            st, spec, mine, n)
+            st, spec, mine, n, rb)
         out[NB_DIR / f"station{n:02d}_{slug}.ipynb"] = json.dumps(
-            workbook(st, spec, n), ensure_ascii=False, indent=1) + "\n"
+            workbook(st, spec, n, rb), ensure_ascii=False, indent=1) + "\n"
     return out
 
 
