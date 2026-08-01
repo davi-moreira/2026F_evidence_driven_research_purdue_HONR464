@@ -80,10 +80,11 @@ you are in and to ask the right person the right question early.
 Frameworks differ in wording, but the determination almost always turns on the same
 three questions. Answer them about your own project, in order.
 
-**First: are you producing knowledge meant to travel beyond this project?** Research
-that is intended to be generalized is treated differently from a class exercise or an
-internal report you will never share. Your poster and your research note are meant to
-travel. Answer honestly.
+**First: is this a systematic investigation meant to produce knowledge that
+generalizes?** Not "will I publish it". Whether you intend to publish is not the test
+in every framework, and some national policies place course-based student research
+expressly inside their scope. If you are following a method to learn something that
+would hold beyond your own case, answer yes and let the authority decide the rest.
 
 **Second: do living people, or data about identifiable living people, enter your
 study?** This includes interviews and surveys, and it also includes records, logs, and
@@ -101,11 +102,13 @@ of asking is an email; the cost of not asking is your project.
 
 ### The cases undergraduates get wrong
 
-Five situations look exempt and usually are not.
+Six situations look exempt and often are not.
 
-**Public social media posts.** Public does not mean unrestricted. People posted to an
-audience, and platform terms often restrict collection regardless of what a review
-board says.
+**Public social media posts.** Public availability and permission are separate
+questions, and some frameworks require BOTH public availability and the absence of any
+reasonable expectation of privacy before a public-information exemption applies. People
+posted to an audience, not to a researcher, and platform terms often restrict
+collection regardless of what any review board says.
 
 **Data about your classmates.** Convenience makes it feel informal. Your classmates
 are human subjects, and the power relationship inside a classroom makes consent
@@ -118,6 +121,10 @@ person. It flips the moment you ask about their own experience, opinions, or con
 **A public dataset with individual records.** "Publicly available" is a statement about
 access, not about identifiability, and not about the licence terms that govern your
 particular use.
+
+**"I am not going to publish it."** This is the most common escape hatch and the
+weakest. Frameworks generally turn on what kind of activity you are running, not on
+where the output lands, so a study you never publish can still need a determination.
 
 **Anything above, plus an AI tool.** Adding an assistant does not simplify the
 determination. It adds a party to the handling of the data, which the next section is
@@ -235,8 +242,22 @@ Check what your institution and your data source actually permit before you past
 anything, because some agreements prohibit third-party processing outright and no
 setting inside the tool changes that.
 
-Finally, record it. Your **AI Research Ledger** should show what you sent, not only
-what came back, so the exposure question has an answer you can produce on request.
+Before you use a tool on a real project, check what it does with what you send:
+retention of prompts and outputs, whether inputs train the model, whether humans
+review them, and where the data are stored. An institution-provided tool is not
+automatically approved for every dataset either, so confirm which categories of
+information it covers rather than assuming the licence settles it.
+
+When a transfer is authorized, send the smallest fragment that does the job, and strip
+identifiers that the task does not need.
+
+Record it. Your **AI Research Ledger** should show what you sent, not only what came
+back, so the exposure question has an answer you can produce on request.
+
+And if you paste something you should not have, the recovery is procedural, not
+private. Stop sharing further, write down exactly what went where and when, and tell
+your supervisor and your competent authority promptly. Do not conceal it, and do not
+assume that deleting the conversation undid it.
 
 ## Data governance for a small project
 

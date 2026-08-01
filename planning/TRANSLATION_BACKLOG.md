@@ -82,3 +82,26 @@ replace it.
     repointed to the PT/ES index (Phase 3) back to per-page counterparts,
     restore CLAUDE.md §6 to the resynchronize-on-every-edit rule, and mark
     this file CLEARED with the closing commit hash.
+
+---
+
+## D. Verification queue (not translation — logged here for visibility)
+
+**Regulatory anchors for the ethics lesson, UNVERIFIED by the assistant.** A
+partner run retrieved and quoted primary sources (US Common Rule §46.101/.102/
+.116 on eCFR; EU GDPR Arts. 3–6, 9, 28, 32, 89 + Recitals 26/159 on EUR-Lex;
+Canada TCPS 2 Introduction and Chapters 2–3) supporting four claims: that
+course-based student research is expressly in scope in at least one national
+framework; that intent to publish is not the test; that a public-information
+exemption can require BOTH public availability and no reasonable expectation
+of privacy; and that "processing" includes disclosure by transmission.
+
+The assistant could NOT independently retrieve these (ethics.gc.ca returned a
+certificate error; ecfr.gov redirected to an unblock page), so **no regulatory
+text or citation was added to the chapter**. The chapter teaches the
+principles jurisdiction-generally instead, which is correct either way.
+
+If Davi wants the chapter to name and cite frameworks — which would strengthen
+it — the sources must be retrieved and read first. The partner transcript with
+its quotes and URLs is at
+`_adm/codex_collab/2026-07-31_ethics-lesson/partner_raw.txt`.
