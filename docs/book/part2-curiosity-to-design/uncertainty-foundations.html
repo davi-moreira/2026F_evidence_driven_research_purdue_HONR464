@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>22&nbsp; Robustness and Sensitivity – EDR|AI — Evidence-Driven Research in the Age of AI</title>
+<title>10&nbsp; Uncertainty Before You Need It – EDR|AI — Evidence-Driven Research in the Age of AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -33,8 +68,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html" rel="next">
-<link href="../part4-credible-evidence/20-ai-as-analytical-assistant.html" rel="prev">
+<link href="../part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html" rel="next">
+<link href="../part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -85,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html">Part IV — Producing credible evidence with AI</a></li><li class="breadcrumb-item"><a href="../part4-credible-evidence/21-robustness-and-sensitivity.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Robustness and Sensitivity</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html">Part II — From curiosity to research design</a></li><li class="breadcrumb-item"><a href="../part2-curiosity-to-design/uncertainty-foundations.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Uncertainty Before You Need It</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -198,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part2-curiosity-to-design/uncertainty-foundations.html" class="sidebar-item-text sidebar-link">
+  <a href="../part2-curiosity-to-design/uncertainty-foundations.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Uncertainty Before You Need It</span></span></a>
   </div>
 </li>
@@ -292,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="sidebar-item-text sidebar-link active">
+  <a href="../part4-credible-evidence/21-robustness-and-sensitivity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Robustness and Sensitivity</span></span></a>
   </div>
 </li>
@@ -449,13 +484,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">22.1</span> Why this decision matters</a></li>
-  <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">22.2</span> The concept</a></li>
-  <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">22.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">22.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">22.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">22.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">22.7</span> It is your turn</a></li>
+  <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">10.1</span> Why this decision matters</a></li>
+  <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">10.2</span> The concept</a>
+  <ul class="collapse">
+  <li><a href="#the-shape-of-chance" id="toc-the-shape-of-chance" class="nav-link" data-scroll-target="#the-shape-of-chance"><span class="header-section-number">10.2.1</span> The shape of chance</a></li>
+  <li><a href="#standard-error-and-interval" id="toc-standard-error-and-interval" class="nav-link" data-scroll-target="#standard-error-and-interval"><span class="header-section-number">10.2.2</span> Standard error and interval</a></li>
+  </ul></li>
+  <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">10.3</span> A worked example</a>
+  <ul class="collapse">
+  <li><a href="#dependence-and-what-it-costs" id="toc-dependence-and-what-it-costs" class="nav-link" data-scroll-target="#dependence-and-what-it-costs"><span class="header-section-number">10.3.1</span> Dependence, and what it costs</a></li>
+  </ul></li>
+  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">10.4</span> The Colab laboratory</a></li>
+  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">10.5</span> Recommended AI prompts</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">10.6</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">10.7</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -499,9 +541,9 @@ ul.task-list li input[type="checkbox"] {
 })();
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part4-credible-evidence/17-data-provenance-and-data-quality.html">Part IV — Producing credible evidence with AI</a></li><li class="breadcrumb-item"><a href="../part4-credible-evidence/21-robustness-and-sensitivity.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Robustness and Sensitivity</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html">Part II — From curiosity to research design</a></li><li class="breadcrumb-item"><a href="../part2-curiosity-to-design/uncertainty-foundations.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Uncertainty Before You Need It</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Robustness and Sensitivity</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Uncertainty Before You Need It</span></h1>
 </div>
 
 
@@ -531,80 +573,135 @@ ul.task-list li input[type="checkbox"] {
 <p>This chapter is part of a book in active development and has not yet been through the author’s review. Content may change as the review advances.</p>
 </div>
 </div>
-<p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch21_robustness_and_sensitivity.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a></p>
+<p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/uncertainty_foundations.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a></p>
 <blockquote class="blockquote">
-<p><strong>The research decision.</strong> You decide <strong>the full list of robustness and sensitivity checks you will run, and you decide it before you look at a single result</strong>, then report every one of them. Two things separate a defensible finding from a lucky slice: each version has to be a valid analysis on its own, and the looking has to come after the deciding. Pre-listing protects the second; nothing rescues the first. A check you think of later is still worth running, as long as you label it as one you added after seeing results and report it with the rest.</p>
+<p><strong>The research decision.</strong> What quantity you are actually after, what recipe you will use to guess it, and what you will say about how much that guess could have moved. You decide all three before the data arrive, because each one changes what the others are allowed to mean.</p>
 </blockquote>
-<section id="why-this-decision-matters" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">22.1</span> Why this decision matters</h2>
-<p><strong>The decision on the table: which alternative versions of your analysis you commit to running and reporting, chosen before you see any of their answers.</strong></p>
+<p><strong>The decision on the table: the quantity, the recipe, and the honest statement of how much the recipe wobbles.</strong></p>
 <blockquote class="blockquote">
-<p><em>“Everyone shows me the version of the analysis that worked. I assume that one exists. My real question is what happened to all the reasonable versions you could have run instead, and whether you looked at them before or after you saw this answer.”</em> — a <strong>journal reviewer</strong>, opening the first serious read your work will get</p>
+<p><em>“Your number is not wrong. It is just alone. Show me what else it could have been, and I will know how much to trust it.”</em> — a <strong>journal editor</strong>, on the first revision of a paper that reported one estimate and no uncertainty</p>
 </blockquote>
-<p>That reviewer is not accusing you of cheating. They are naming a plain fact about analysis. Almost every real estimate depends on choices you could have made differently, and any single choice can flatter the result. If you report only the version that worked, you have handed over a number with no way to tell a delicate truth from a lucky slice. This chapter gives you the habit that answers the question before it gets asked.</p>
+<section id="why-this-decision-matters" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="why-this-decision-matters"><span class="header-section-number">10.1</span> Why this decision matters</h2>
+<p>Every result you will ever produce comes from a procedure that could have come out differently. Different households answered. Different weeks got sampled. A coin came up heads for this village and tails for that one. The number you hold is one draw from a process, and the honest question is not “is my number right?” but “how much does a number from this procedure move around?”</p>
+<p>That question has an answer you can see. Not guess, not intuit — see, by running the same procedure again and again and looking at the pile of answers it produces. That pile is the whole subject of this chapter. Everything else here is vocabulary for talking about its shape.</p>
+<p>You need this before the next chapter, not after. The next chapter asks you to diagnose a design by its <strong>bias</strong>, its <strong>power</strong>, and its <strong>coverage</strong>, and every one of those words is a statement about a pile of repeated answers. Meet the pile first and those words stop being jargon.</p>
+<blockquote class="blockquote">
+<p><strong>A question that often comes up here:</strong> <em>“I only get to run my study once. What good is imagining a thousand runs?”</em> You run it once. The uncertainty statement is not about your run, it is about your procedure, and a procedure can be studied by repetition even when your study cannot be repeated. That is exactly why you can report uncertainty from a single sample.</p>
+</blockquote>
 </section>
-<section id="the-concept" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">22.2</span> The concept</h2>
-<p>An <strong>estimate</strong> is not one number. It is one number that depends on several choices, and a critic attacks the choices. So you attack them first. Two named attacks do this work, and people mix them up constantly.</p>
-<p>A <strong>robustness check</strong> is re-running the same finding under a different but equally defensible choice, to see whether the answer stays. Example: you reported an average order value, so you also compute it after dropping the one account that turned out to be a wholesale buyer, and confirm the story holds. A <strong>sensitivity check</strong>, which some fields call a <strong>sensitivity analysis</strong>, is deliberately changing an assumption to see how far the answer moves. Example: you assumed the checkout system logged every purchase, so you ask how much your result would shift if it quietly missed two percent of them.</p>
-<p>Both attacks aim at the same target, the <strong>headline estimate</strong>: the single number that stands in for your whole finding. You attack it from four handles, and any honest plan turns one or more of them. The <strong>sample</strong> is which data you keep. The <strong>measurement</strong> is how you turn a concept into a number. The <strong>specification</strong> is the bundle of modeling choices behind the estimate. The <strong>metric</strong> is the yardstick you report.</p>
-<p>Turning every handle at once and plotting the results gives a <strong>specification curve</strong>: a picture of one estimate under many defensible choices side by side.</p>
-<p>Before anything goes on that curve, it has to pass a gate with three parts. First, every version must test the <strong>same substantive claim</strong>, the one research question the curve is about, such as “does the offer raise shoppers’ spending?” Second, the dots inside one panel must be <strong>commensurable</strong>: measured in the same units, about the same group of people, for the same kind of quantity, so that reading them side by side means something. A choice that changes who is counted, what the outcome means, or what scale it is on does not disqualify the analysis, but it belongs in its own labeled panel, not mixed silently into this one. Third, one rule is strict: no version on this curve may define its group by something the treatment itself could have changed. “Average order value among the shoppers who actually bought something” fails that test, because whether someone bought is downstream of the offer. That comparison may be worth reporting, in its own place, clearly labeled for what it is. It is not another answer to the offer question, and folding it into the curve makes the curve unreadable. (Specialists do define careful causal quantities for post-treatment subgroups, but they need different assumptions and different machinery than a robustness curve; what is ruled out here is treating a raw survivor-style contrast as one more dot.)</p>
-<p>Two more things the curve does not do. A curve that stays entirely on one side of zero shows that your answer is stable across the choices you listed. It cannot see a flaw that every one of those choices shares. If your comparison group was wrong to begin with, all sixteen versions inherit that error and lean the same way together, and the picture looks reassuring precisely when it should not. <strong>Shared bias</strong> is that common error running underneath an entire curve.</p>
-<p>And the distance from the lowest dot to the highest answers only one question: how much did your analysis choices move the number? Call it the <strong>specification spread</strong>, the span your answer covered across the versions you ran. It says nothing about chance. Every single dot still carries sampling wobble of its own, the uncertainty a later chapter teaches you to state properly, and the spread is not a substitute for it. Report the spread as what your choices did, and keep the uncertainty of your lead estimate a separate, labeled thing.</p>
-<p>The danger has a name. <strong>Specification searching</strong> is running many analyses and reporting only the one that gave the result you wanted, without disclosing the search. Its most notorious version, hunting for a statistically significant result, is what researchers call p-hacking. Its opposite is <strong>pre-listed checks</strong>: writing down every check you will run, and committing to report all of them, before you see any result.</p>
-<p>That distinction is under new pressure, and you should know why. Working with an AI assistant means working in a <strong>loop</strong>: prompt, read, interrogate, refine, run again, with agentic tools now spinning those cycles on their own. Each turn of the loop can change a filter, a variable, or a model, which means each turn is a new specification. Twenty turns is twenty analyses. If you kept re-prompting because the number was disappointing, you ran a specification search and the tool kept no record of it for you. Keep your own log of the cycles, and your pre-listed plan survives contact with the loop.</p>
+<section id="the-concept" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">10.2</span> The concept</h2>
+<p>Three words get confused constantly, and separating them fixes most of the confusion in this whole area.</p>
+<p>An <strong>estimand</strong> is the quantity you want, defined in the world before any data exist. Example: the average monthly rent paid by all 4,000 households in one town, in one month. Notice that it is a number about the world, not about your data. It would have a value even if you never ran a survey.</p>
+<p>An <strong>estimator</strong> is the recipe you apply to data to guess the estimand. Example: draw 60 households at random and take their average rent. The recipe is a procedure, so it is the thing that can be repeated.</p>
+<p>An <strong>estimate</strong> is what one run of the recipe returns. Example: 1,621. One number, from one run, on one day.</p>
+<p>The estimand does not move. The estimate does. The distance between those two facts is where uncertainty lives.</p>
+<section id="the-shape-of-chance" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="the-shape-of-chance"><span class="header-section-number">10.2.1</span> The shape of chance</h3>
+<p>Run the recipe again on the same town and you get a different estimate. Run it 2,000 times and you get 2,000 estimates, and they form a shape. That shape has a name.</p>
+<p>The <strong>sampling distribution</strong> is the pile of estimates you would get if you repeated your whole procedure many times in the same world. It is a property of the procedure, not of any one run.</p>
+<p>Here is that pile, built from a town whose true average rent is 1,568.</p>
+<div id="21cd7da8" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>town <span class="op">=</span> rng.lognormal(mean<span class="op">=</span><span class="fl">7.3</span>, sigma<span class="op">=</span><span class="fl">0.35</span>, size<span class="op">=</span><span class="dv">4000</span>)   <span class="co"># every household's rent</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>estimand <span class="op">=</span> town.mean()                                   <span class="co"># the quantity we want</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># the recipe: survey 60 households at random, take the mean</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>means <span class="op">=</span> np.array([rng.choice(town, size<span class="op">=</span><span class="dv">60</span>, replace<span class="op">=</span><span class="va">False</span>).mean()</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2000</span>)])</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"estimand (true average rent): </span><span class="sc">{</span>estimand<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"one survey said: </span><span class="sc">{</span>means[<span class="dv">0</span>]<span class="sc">:,.0f}</span><span class="ss">; another said: </span><span class="sc">{</span>means[<span class="dv">1</span>]<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"centre of the pile: </span><span class="sc">{</span>means<span class="sc">.</span>mean()<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"spread of the pile: </span><span class="sc">{</span>means<span class="sc">.</span>std(ddof<span class="op">=</span><span class="dv">1</span>)<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"middle 95% of the pile: </span><span class="sc">{</span>np<span class="sc">.</span>percentile(means, <span class="fl">2.5</span>)<span class="sc">:,.0f}</span><span class="ss">"</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f" to </span><span class="sc">{</span>np<span class="sc">.</span>percentile(means, <span class="fl">97.5</span>)<span class="sc">:,.0f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The true average is 1,568. The first survey said 1,621. The second said 1,655. Neither is a mistake. Both are what this recipe does.</p>
+<p>The pile centres on 1,569, almost exactly the truth, which tells you the recipe aims true. The pile spreads by about 72, which tells you how far a single survey typically lands from the centre. And the middle 95% of the pile runs from 1,431 to 1,713, which tells you the range this procedure produces almost all of the time.</p>
+<p>Read those three facts again, because they are the three things uncertainty language exists to say. Where the pile sits. How wide it is. What range covers nearly all of it.</p>
 </section>
-<section id="a-worked-example" class="level2" data-number="22.3">
-<h2 data-number="22.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">22.3</span> A worked example</h2>
-<p>Your team randomly assigns a loyalty discount to shoppers and asks one question: does the offer raise spending? Your target, fixed before anything ran, is 30-day spending per shopper you assigned, counting the shoppers who spent nothing. Your headline: shoppers offered the discount spent about twelve percent more than those who were not (the numbers in this example are constructed). Before you defend that number, you attack it across the four handles.</p>
-<ul>
-<li><strong>Sample.</strong> All shoppers, or all shoppers except the one account that turned out to be a wholesale buyer placing bulk orders through the retail site, which is a legitimate exclusion on your definition of a customer, not a convenient one.</li>
-<li><strong>Measurement.</strong> Order value read as the total amount charged, or read with shipping and taxes stripped out.</li>
-<li><strong>Specification.</strong> Spending averaged with no adjustment, or adjusted for how much each shopper spent in the weeks <em>before</em> the offer.</li>
-<li><strong>Metric.</strong> The gain in dollars, or the gain as a percent.</li>
-</ul>
-<p>Notice what is missing. Averaging only over shoppers who actually placed an order does not belong here, because the discount can change who places an order. That comparison answers a different question about a different group, so it goes in its own section with its own label, not on this curve.</p>
-<p>You pre-list the combinations, run them, and sort them into panels before you plot anything. The adjustment choice keeps the same people, the same outcome, and the same units, so its versions share one panel. Dropping the wholesale account changes who is counted, so it opens a second panel. Stripping shipping and taxes changes what “spending” means, so it opens a third. Dollars versus percent is one comparison shown on two scales, not two pieces of evidence, so it never adds a dot at all.</p>
-<p>Now the reporting rule that follows from those panels: <strong>one span per panel, never a span across them.</strong> In the main panel, all versions come back positive and the estimates run about plus eight to plus twelve percent. Say it that way, panel by panel: “In our primary panel, spending was higher under the offer in every version we pre-listed, with estimates spanning eight to twelve percent; our lead estimate is twelve percent, and its own sampling uncertainty is stated with it. Excluding the wholesale account, the same versions ran ten to fifteen percent.” A single eight-to-fifteen range stretched across all three panels would compare a net-of-tax number to a gross one, over different sets of shoppers, and mean nothing. The span says what your choices did. The uncertainty statement, built with tools a later chapter adds, says what chance could do. Collapsing them into “the honest range is eight to fifteen” quietly claims a precision nobody computed.</p>
-<p>Then you run one more attack, and its name matters, because three different checks get muddled together in practice.</p>
-<p>An <strong>assignment-based null check</strong>, which statisticians call randomization inference, re-runs the assignment your study actually performed. Keep every enrolled shopper and their observed outcomes, re-draw who is “offered” using the exact procedure the real study used, with the same group sizes and the same blocking, and recompute the gap. Do that many times. One redraw proves nothing, because two randomly formed groups always differ a little by chance, so what you build is a pile of fake gaps: what your machinery produces when the offer does nothing at all. This move needs a real assignment procedure to copy, so it belongs to randomized studies.</p>
-<p>A <strong>permutation check</strong> shuffles labels that were not randomly assigned. It answers something only if you can argue that the groups were exchangeable to begin with, and in most observational data you cannot. Shuffling anyway builds a pile describing a world you never had.</p>
-<p>A <strong>negative control</strong>, sometimes called a placebo, is different from both: it points your analysis at an exposure, outcome, or period that should be causally null while still running through the same measurement and bias pathways. Example: check for an “effect” of the offer in the weeks before it launched. That is what catches a pipeline inventing signal, and it works whether or not anything was randomized.</p>
-<p>For this randomized trial, use the first. Comparing your real gap with that pile is the beginning of a formal argument the uncertainty chapter finishes; here it is a smell test, and a real gap the no-effect pile produces routinely is a warning that your machinery, not the discount, may be doing the work.</p>
+<section id="standard-error-and-interval" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="standard-error-and-interval"><span class="header-section-number">10.2.2</span> Standard error and interval</h3>
+<p>The spread of that pile has a name. The <strong>standard error</strong> is the typical distance between one run’s estimate and the centre of the pile. For our survey it is about 72.</p>
+<p>You cannot see the pile from one survey, but you can estimate its width from one survey, and then build a range around your single estimate. That range has a name too. A <strong>confidence interval</strong> is a range built by a recipe that catches the estimand a stated share of the time, when the same recipe is repeated.</p>
+<p>Read that definition slowly, because the obvious paraphrase of it is false. The interval you actually computed either contains the truth or it does not. There is no chance left in it. What has a 95% property is the <strong>recipe</strong>, not your one range.</p>
+<p>That distinction sounds pedantic until you check it, which you can do, because “catches the truth 95% of the time” is a claim about repetition and repetition is something you can run.</p>
+<div id="5fea933a" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>n, runs, hits <span class="op">=</span> <span class="dv">60</span>, <span class="dv">2000</span>, <span class="dv">0</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(runs):</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> rng.choice(town, size<span class="op">=</span>n, replace<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    se <span class="op">=</span> s.std(ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> np.sqrt(n)          <span class="co"># width estimated from ONE survey</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    lo, hi <span class="op">=</span> s.mean() <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> se, s.mean() <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> se</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    hits <span class="op">+=</span> lo <span class="op">&lt;=</span> estimand <span class="op">&lt;=</span> hi</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"share of intervals that caught the truth: </span><span class="sc">{</span>hits <span class="op">/</span> runs<span class="sc">:.1%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>It catches the truth 94.8% of the time. The recipe does what it promises. Any one interval, though, either caught 1,568 or missed it, and you would never know which.</p>
+<p>So the honest sentence about your own study is: “my estimate is 1,621, from a procedure whose 95% intervals catch the true average about 95 times in 100.” The dishonest one, the one you will hear constantly, is “there is a 95% chance the true average is between 1,470 and 1,771.” The first describes a procedure. The second makes a probability claim about a fixed number, and fixed numbers do not have chances.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="22.4">
-<h2 data-number="22.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">22.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook <strong>nb10 — Share the research + attack the analysis</strong> (<a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb">open in Colab</a>), part of the companion course presented in the <a href="../for-instructors.html">For instructors</a> appendix. There you rerun one headline gap across a pre-listed grid and read its specification curve, watch specification searching manufacture a “significant” result from data with no real effect, and run a null check and a leave-one-out influence check on seeded code so you feel the difference between a robust finding and a fragile one.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="22.5">
-<h2 data-number="22.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">22.5</span> Recommended AI prompts</h2>
-<p>Commit your own answer first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
-<p><strong>Locate the standard checks.</strong></p>
-<pre class="text"><code>Act as a methods assistant for a two-group comparison of average customer spending.
-Before any code, name the standard families of robustness and sensitivity checks for
-this design and the four things I can vary to stress the estimate. Cite a real methods
-reference you are confident exists; if you are unsure a source is real, say so.</code></pre>
-<p>After running, verify: open the reference and confirm the checks and the source exist. Counters <em>confident fabrication</em> (an invented method or citation arrives as confidently as a real one).</p>
-<p><strong>Delegate, with a list to verify.</strong></p>
-<pre class="text"><code>Here is my pre-listed robustness grid for one estimate of the offer's effect on
-30-day spending per assigned shopper: I vary the sample (all shoppers / drop the
-wholesale account), the measurement (total charged / shipping and taxes stripped
-out, in its own labeled panel), and the specification (no adjustment / adjusted for
-each shopper's pre-offer spending). Name up to three additional, equally defensible
-versions I did NOT list, flag any of my versions that changes the outcome
-definition or conditions on something the offer could have caused, and for each
-suggestion say which direction you expect it to push the estimate.</code></pre>
-<p>After running, verify: check each suggestion against the gate (same claim, commensurable within its panel, nothing conditioned on a post-treatment outcome) and add only the ones you can actually run on your own data. Counters <em>illusion of completeness</em> (a tidy grid that quietly omits the one choice that would break the claim).</p>
-<p><strong>Red-team your span.</strong></p>
-<pre class="text"><code>Here is my claim: "higher spending in every version we pre-listed; within my primary
-panel, which holds population, outcome and units fixed, the estimates spanned 8 to 12
-percent." Act as a hostile reviewer of a retail pricing study. Name the single worst
-way this could be specification searching rather than robustness, and the one check
-that would expose it. Also check whether my span mixes versions that changed the
-population, the outcome definition, or the scale; those belong in separate labeled
-panels with their own spans. Do not rewrite the claim for me.</code></pre>
-<p>After running, verify: run the check it names against your own data; the flaw is real only if your numbers confirm it. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p>
+<section id="a-worked-example" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">10.3</span> A worked example</h2>
+<p>A business-school team wants the average monthly rent tenants pay in a mid-sized town, to price a housing product. They cannot survey everyone, so they plan to survey 60 tenants and report an interval.</p>
+<p>Their estimand: average monthly rent across all households in the town this month. Their estimator: the mean of 60 randomly drawn households. Their uncertainty statement: a 95% interval built from the spread inside their own sample.</p>
+<p>Then the field team makes a reasonable-sounding change. Knocking on 60 doors scattered across town is expensive, so they pick 12 apartment buildings and survey 5 flats in each. Same 60 tenants, much cheaper. Nothing about the estimand changed. Nothing about the arithmetic changed.</p>
+<p>Everything about the uncertainty changed.</p>
+<section id="dependence-and-what-it-costs" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="dependence-and-what-it-costs"><span class="header-section-number">10.3.1</span> Dependence, and what it costs</h3>
+<p>Flats in one building share a landlord, a neighbourhood, a heating system, a rent schedule. When you learn one flat’s rent, you have already learned a lot about the other four. <strong>Dependence</strong> means observations carry overlapping information, so each new one adds less than a fresh independent observation would.</p>
+<p>The arithmetic does not notice. The procedure’s honesty does.</p>
+<div id="86b87124" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>B, K, truth, runs <span class="op">=</span> <span class="dv">12</span>, <span class="dv">5</span>, <span class="fl">2000.0</span>, <span class="dv">2000</span>      <span class="co"># 12 buildings, 5 flats each</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>naive_hits <span class="op">=</span> cluster_hits <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(runs):</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    building_effect <span class="op">=</span> rng.normal(<span class="dv">0</span>, <span class="dv">260</span>, B)   <span class="co"># landlord/neighbourhood effect</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> np.array([truth <span class="op">+</span> building_effect[b] <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="dv">120</span>, K)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                     <span class="cf">for</span> b <span class="kw">in</span> <span class="bu">range</span>(B)])</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    flats <span class="op">=</span> data.ravel()                      <span class="co"># pretend: 60 independent flats</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    se_naive <span class="op">=</span> flats.std(ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> np.sqrt(<span class="dv">60</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    naive_hits <span class="op">+=</span> (flats.mean() <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> se_naive <span class="op">&lt;=</span> truth</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                   <span class="op">&lt;=</span> flats.mean() <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> se_naive)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    b_means <span class="op">=</span> data.mean(axis<span class="op">=</span><span class="dv">1</span>)               <span class="co"># honest: 12 independent buildings</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    se_cluster <span class="op">=</span> b_means.std(ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> np.sqrt(B)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    cluster_hits <span class="op">+=</span> (b_means.mean() <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> se_cluster <span class="op">&lt;=</span> truth</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                     <span class="op">&lt;=</span> b_means.mean() <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> se_cluster)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"treating 60 flats as independent: </span><span class="sc">{</span>naive_hits <span class="op">/</span> runs<span class="sc">:.1%}</span><span class="ss"> caught the truth"</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"treating 12 buildings as the unit: </span><span class="sc">{</span>cluster_hits <span class="op">/</span> runs<span class="sc">:.1%}</span><span class="ss"> caught the truth"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The interval that treats 60 flats as 60 independent observations catches the truth 63.2% of the time. It promised 95%. It is not a little optimistic, it is wrong about one case in three, and nothing in the output would have told the team.</p>
+<p>Switching to buildings as the unit brings it to 91.7%. Better by a lot, and still shy of 95, which is worth being honest about rather than rounding away. With only 12 buildings, the recipe’s usual multiplier of 1.96 is too narrow. Widening it to the value appropriate for 12 groups gets 94.5%. Surveying 40 buildings instead, at 5 flats each, gets 94.2% with the ordinary multiplier.</p>
+<p>That is the practical lesson, and it is not about arithmetic. Sixty flats in 12 buildings carry roughly the information of 14 independent flats. What buys you precision here is <strong>more buildings</strong>, not more flats per building.</p>
+<blockquote class="blockquote">
+<p><strong>A question that often comes up here:</strong> <em>“How would I know my data have this problem?”</em> Ask how the data were collected, not what they look like. If units were selected in groups, measured repeatedly, or connected to each other, the dependence is in the design, and the design is something you know before you see a number.</p>
+</blockquote>
+</section>
+</section>
+<section id="the-colab-laboratory" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">10.4</span> The Colab laboratory</h2>
+<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab. The full classroom laboratory behind this chapter is course notebook <strong>nb04 — The anatomy of a research design: MIDA + declare → diagnose → redesign</strong> (<a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb">open in Colab</a>), part of the companion course presented in the <a href="../for-instructors.html">For instructors</a> appendix. There you write your own design’s four parts and watch the pile of answers move when you change one of them.</p>
+</section>
+<section id="recommended-ai-prompts" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">10.5</span> Recommended AI prompts</h2>
+<blockquote class="blockquote">
+<p>💡 <strong>AI Prompt:</strong> “Here is my research question and how I plan to collect data: [paste yours]. State my estimand in one sentence, as a quantity in the world that would have a value even if I never collected data. Then state my estimator as a recipe someone else could follow. Do not give me any numbers or advice yet.”</p>
+<p><strong>After running, verify:</strong> - [ ] Check the estimand is about the world, not about your sample. “The average among my respondents” is a sample fact; “the average among all town households” is an estimand. - [ ] Check the estimator is a procedure, not a result. If you cannot hand it to someone and have them run it, it is not yet a recipe. - [ ] Rewrite both in your own words before you keep them. The wording that ships is yours. - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>💡 <strong>AI Prompt:</strong> “Here is how my units were selected and measured: [paste yours]. Tell me which observations in my data are likely to carry overlapping information, and why, based only on the collection procedure I described. Then tell me what my effective independent unit probably is.”</p>
+<p><strong>After running, verify:</strong> - [ ] Confirm each claimed dependence against your actual collection procedure. A tool cannot see your fieldwork; it is guessing from your description. - [ ] If it names a unit you had not considered, ask yourself how many of that unit you actually have. That count, not your row count, drives your precision. - [ ] Decide the unit yourself and write down why. This is a design judgment. - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.</p>
+</blockquote>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -615,27 +712,33 @@ panels with their own spans. Do not rewrite the claim for me.</code></pre>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Three calls stay yours. You decide <strong>which checks you commit to before you look</strong>, <strong>which flagged issues the data actually confirms</strong>, and <strong>the final claim, with its per-panel span and its boundary, that you defend</strong>. A reviewer, human or AI, proposes. You verify against your own data, and the evidence decides.</p>
+<ul>
+<li><strong>The estimand.</strong> What you are trying to learn is a research decision, not a modelling detail. Nobody can hand it to you.</li>
+<li><strong>The claim your interval makes.</strong> You are responsible for the sentence that goes in the paper, including refusing the flattering version of it.</li>
+<li><strong>The independent unit.</strong> Only you know how your data were really collected.</li>
+</ul>
 </div>
 </div>
 </section>
-<section id="an-ai-failure-case" class="level2" data-number="22.6">
-<h2 data-number="22.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">22.6</span> An AI failure case</h2>
-<p>You paste your four-handle grid and ask an AI to write your robustness section. Back comes a long, well-organized passage that runs the sample handle, the specification handle, and the metric handle, and closes with “the twelve percent result is robust across all standard specifications.” It reads as thorough and complete. The trap is that it never listed the <strong>measurement</strong> handle, the total amount charged versus shipping and taxes stripped out, and that is precisely the choice that moves your estimate the most. The section looks exhaustive while omitting the one check a reviewer would reach for first.</p>
-<p>You catch it because you pre-listed all four handles yourself before opening the tool. Reading its section against your own list, you notice measurement is missing, run that comparison, and watch the estimate slide toward the low end of your range. A passage that looks complete is not the same as one that is complete. You check its list against yours, not against how finished it sounds.</p>
+<section id="an-ai-failure-case" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">10.6</span> An AI failure case</h2>
+<p>Ask an assistant to interpret an interval and you will very often get this, fluently and confidently:</p>
+<blockquote class="blockquote">
+<p>“The 95% confidence interval is 1,470 to 1,771, meaning there is a 95% probability that the true average rent falls within this range.”</p>
+</blockquote>
+<p>The number is fine. The sentence is not. The true average is a fixed quantity, and your computed range is now fixed too, so no probability is left to assign between them. What is 95% is the long-run catching rate of the recipe that produced the range.</p>
+<p>This one matters more than it looks. A researcher who believes the wrong version will also believe that a range which “just misses” a value is weak evidence against it, and will start reading single intervals as verdicts. The verification move is small: ask what would be repeated, and if nothing in the sentence could be repeated, the sentence is about the wrong thing.</p>
 </section>
-<section id="it-is-your-turn" class="level2" data-number="22.7">
-<h2 data-number="22.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">22.7</span> It is your turn</h2>
-<p><em>Your project has an analysis you ran with an assistant and a headline number you re-derived yourself. This step tries to break that number before a reviewer gets the chance.</em></p>
+<section id="it-is-your-turn" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">10.7</span> It is your turn</h2>
+<p>Write your project’s uncertainty foundation. This is the piece the next chapter builds its diagnosis on, so make it specific to your own project rather than generic.</p>
 <ol type="1">
-<li>Write your headline estimate in one sentence. Then list its four handles: the sample you kept, the measurement you chose, the specification you fit, and the metric you report. For each, name one alternative you could defend just as well as the one you picked.</li>
-<li>Pre-list the checks you will run, at least two, aimed at the handles a hostile reader would attack first. Write them down before you run any of them, and commit now to reporting all of them however they come out.</li>
-<li>Before you run anything, run your list through the gate. Every version tests your one substantive claim; versions that change the outcome’s definition or scale get their own labeled panel; and any version that keeps only units whose status your treatment could have changed comes off the curve entirely and is reported separately for what it is.</li>
-<li>Run every check on your list. Report two things, not one. First, the direction and a span computed <strong>within each commensurable panel</strong>, never across them (“in the primary panel, positive in all four versions, between eight and twelve percent”), with any panel that changed the population, the outcome definition, or the scale given its own labeled span. Second, your lead estimate with its own uncertainty stated beside it, built with the tools the uncertainty chapter gives you. The span measures your choices, not chance, and neither alone is an honest report.</li>
-<li>Ask what every version on your list has in common. If one flaw sits underneath all of them, such as a comparison group chosen badly, the whole curve leans together and agreement proves nothing. Name that shared threat in a sentence, since your curve cannot test it.</li>
-<li>Add one null check, and name it with the chapter’s three labels, because each label comes with its own procedure and its own reading. If your study randomized, run an assignment-based null check: re-draw the assignment the way the study actually did it, many times, and collect the fake gaps. That pile is what nothing-going-on looks like through your machinery, and it is not a pile of zeros. Ask whether your real number is ordinary in that pile or stands far outside it, and treat a number the pile produces routinely as a warning about your machinery. If your data are observational, you have no assignment procedure to copy. Shuffle labels only if you can defend in writing why your groups were exchangeable under the null; call it a permutation check and state that assumption beside the result. Otherwise use a negative control: an outcome your cause could not touch, or a period before it existed, running through the same bias pathways as your real analysis. A negative control does not build a pile for your headline number to sit in. It produces its own estimate, which should be near zero, so estimate that contrast the same way you estimated your headline and report how far it lands from zero given its own uncertainty. A clearly nonzero negative control is your machinery inventing signal, and that concern attaches to your headline too.</li>
-<li>Read back your AI cycle log and mark any re-prompt that followed a disappointing number. Every version you actually ran belongs in the report, including the ones that did not help you.</li>
-<li>Log the pre-listed plan and its full results in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. A <strong>counterexample</strong> hunt suits a robustness claim: try honestly to build one defensible specification that flips the sign, and if you find it, that specification goes in your report. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><strong>State your estimand</strong> in one sentence, as a quantity in the world with a population, a setting, and a time. It must be something that would have a value if you never collected data.</li>
+<li><strong>State your estimator</strong> as a recipe: what you will collect, and exactly what you will compute from it. Someone else should be able to follow it without asking you a question.</li>
+<li><strong>Name what would differ on a repeat.</strong> Write the two or three things that would come out differently if the same procedure ran again next month. This is your sampling distribution, described in words before you can see it.</li>
+<li><strong>Name your independent unit and count it.</strong> Say what your units are, whether any of them carry overlapping information, and how many independent ones you actually have. If that number is much smaller than your row count, say so here.</li>
+<li><strong>Write your uncertainty sentence, and then write the wrong version of it.</strong> State what your interval will and will not claim. Then write the tempting false version beside it, and one line on how you would catch yourself saying it.</li>
+<li><strong>Log it.</strong> Add your AI Research Ledger rows for anything you delegated here, and record which decisions you kept.</li>
 </ol>
 
 
@@ -1044,13 +1147,13 @@ panels with their own spans. Do not rewrite the claim for me.</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../part4-credible-evidence/20-ai-as-analytical-assistant.html" class="pagination-link" aria-label="AI as Analytical Assistant">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">AI as Analytical Assistant</span></span>
+      <a href="../part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html" class="pagination-link" aria-label="Model, Inquiry, Data Strategy, and Answer Strategy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Model, Inquiry, Data Strategy, and Answer Strategy</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../part4-credible-evidence/22-diagnostics-and-negative-tests.html" class="pagination-link" aria-label="Diagnostics and Negative Tests">
-        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Diagnostics and Negative Tests</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html" class="pagination-link" aria-label="Declaring and Diagnosing a Research Design">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Declaring and Diagnosing a Research Design</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
