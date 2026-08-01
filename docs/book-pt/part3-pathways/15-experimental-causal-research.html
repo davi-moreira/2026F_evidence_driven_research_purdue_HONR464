@@ -492,6 +492,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+<style>
+  .edrai-lang { display: flex; justify-content: flex-end; align-items: center;
+    gap: .4rem; margin: .55rem .9rem .1rem 0; font-size: .8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-lang .edrai-globe { opacity: .55; font-size: .9rem; margin-right: .1rem; }
+  .edrai-lang a { border: 1px solid #d0d7de; border-radius: 999px;
+    padding: .2rem .75rem; text-decoration: none; color: #444;
+    background: #fff; line-height: 1.2; letter-spacing: .01em;
+    transition: background .15s ease, border-color .15s ease, color .15s ease; }
+  .edrai-lang a:hover { background: #f0f2f5; border-color: #9aa4af; color: #111; }
+  .edrai-lang a.active { background: #1a1a19; border-color: #1a1a19;
+    color: #fff; font-weight: 600; pointer-events: none; cursor: default; }
+  .edrai-translation-notice { margin: .6rem .9rem .2rem .9rem;
+    padding: .55rem .9rem; border: 1px solid #e0b95a; border-left: 4px solid #d19c1d;
+    border-radius: 6px; background: #fdf6e3; color: #543f0e;
+    font-size: .85rem; line-height: 1.45;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif; }
+  .edrai-translation-notice a { color: #6b4e00; font-weight: 600; }
+</style>
+<div class="edrai-lang">
+  <span class="edrai-globe" aria-hidden="true">🌐</span>
+  <a href="#" data-lang="book" lang="en" title="English edition">English</a>
+  <a href="#" data-lang="book-pt" lang="pt-BR" title="Edição em português (Brasil)">Português</a>
+  <a href="#" data-lang="book-es" lang="es" title="Edición en español">Español</a>
+</div>
+<div class="edrai-translation-notice" role="note" lang="pt-BR">
+  <strong>⚠️ Tradução em desenvolvimento.</strong> Esta edição em português
+  ainda não incorporou as revisões mais recentes e pode conter trechos
+  desatualizados. A <a href="#" class="edrai-en-index">edição em inglês</a> é a
+  versão de referência.
+</div>
+<script>
+(function () {
+  var here = window.location.pathname;
+  var dirs = ["book-pt", "book-es", "book"];
+  var cur = null;
+  for (var i = 0; i < dirs.length; i++) {
+    if (here.indexOf("/" + dirs[i] + "/") !== -1) { cur = dirs[i]; break; }
+  }
+  var links = document.querySelectorAll(".edrai-lang a");
+  for (var j = 0; j < links.length; j++) {
+    var a = links[j], t = a.getAttribute("data-lang");
+    if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
+    if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
+    a.href = here.replace("/" + cur + "/", "/" + t + "/");
+  }
+  var en = document.querySelectorAll(".edrai-en-index");
+  var base = (cur === null) ? "../book/index.html"
+    : here.slice(0, here.indexOf("/" + cur + "/")) + "/book/index.html";
+  for (var k = 0; k < en.length; k++) { en[k].href = base; }
+})();
+</script>
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part3-pathways/11-observational-descriptive-research.html">Parte III — Trilhas de pesquisa</a></li><li class="breadcrumb-item"><a href="../part3-pathways/15-experimental-causal-research.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Pesquisa Causal Experimental</span></a></li></ol></nav>
 <div class="quarto-title">
