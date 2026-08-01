@@ -128,7 +128,21 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the draft in your AI Research Ledger, then verify the alignment claim with a named method from the Verification Guide; peer reasoning or a causal… | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 10 — Declaring and Diagnosing a Research Design
+### Ch. 10 — Uncertainty Before You Need It
+
+Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
+
+| # | Criterion | 0–2 |
+|---|---|---|
+| Step 1 | **State your estimand** in one sentence, as a quantity in the world with a population, a setting, and a time | |
+| Step 2 | **State your estimator** as a recipe: what you will collect, and exactly what you will compute from it | |
+| Step 3 | **Name what would differ on a repeat.** Write the two or three things that would come out differently if the same procedure ran again next month | |
+| Step 4 | **Name your independent unit and count it.** Say what your units are, whether any of them carry overlapping information, and how many independent… | |
+| Step 5 | **Write your uncertainty sentence, and then write the wrong version of it.** State what your interval will and will not claim | |
+| Step 6 | **Log it.** Add your AI Research Ledger rows for anything you delegated here, and record which decisions you kept | |
+| + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
+
+### Ch. 11 — Declaring and Diagnosing a Research Design
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -142,7 +156,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log both diagnoses in your AI Research Ledger, and verify the key number with a named method from the Verification Guide; simulation is the method… | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 11 — Observational Descriptive Research
+### Ch. 12 — Observational Descriptive Research
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -156,7 +170,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the work in your AI Research Ledger, and verify the key claim with a named method from the Verification Guide; simulation fits here, because the… | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 12 — Observational Causal Research
+### Ch. 13 — Observational Causal Research
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **16 points total.**
 
@@ -171,7 +185,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 7 | Log all of it in your AI Research Ledger, and verify with a named method from the Verification Guide; the causal diagram is the method built for this… | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 13 — Experimental Descriptive Research
+### Ch. 14 — Experimental Descriptive Research
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -185,7 +199,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the step in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 14 — Prediction and Generalization
+### Ch. 15 — Prediction and Generalization
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -199,7 +213,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the step in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 15 — Experimental Causal Research
+### Ch. 16 — Experimental Causal Research
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -213,7 +227,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the step in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 16 — Hybrid and Complex Designs
+### Ch. 17 — Hybrid and Complex Designs
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -227,7 +241,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the step in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 17 — Data Provenance and Data Quality
+### Ch. 18 — Data Provenance and Data Quality
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -241,7 +255,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the step in your AI Research Ledger, and verify at least one entry with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 18 — Measurement and Operationalization
+### Ch. 19 — Measurement and Operationalization
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **16 points total.**
 
@@ -256,7 +270,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 7 | Log the step in your AI Research Ledger, and verify at least one measure with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 19 — AI as Programmer
+### Ch. 20 — AI as Programmer
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -270,7 +284,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log this first number in your AI Research Ledger, and verify it with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 20 — AI as Analytical Assistant
+### Ch. 21 — AI as Analytical Assistant
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -284,7 +298,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the analysis in your AI Research Ledger, cycle log attached, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 21 — Robustness and Sensitivity
+### Ch. 22 — Robustness and Sensitivity
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **18 points total.**
 
@@ -300,7 +314,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 8 | Log the pre-listed plan and its full results in your AI Research Ledger, and verify at least one output with a named method from the Verification… | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 22 — Diagnostics and Negative Tests
+### Ch. 23 — Diagnostics and Negative Tests
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -314,7 +328,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log both tests in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 23 — AI as Adversarial Reviewer
+### Ch. 24 — AI as Adversarial Reviewer
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -328,7 +342,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the review and every adjudicated flag in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 24 — Recognizing False Confidence
+### Ch. 25 — Recognizing False Confidence
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -342,7 +356,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the audit in your AI Research Ledger, and verify your headline number with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 25 — From Results to Claims
+### Ch. 26 — From Results to Claims
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **12 points total.**
 
@@ -355,7 +369,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 5 | Log it in your AI Research Ledger, and verify at least one claim with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 26 — Claim–Evidence Tables
+### Ch. 27 — Claim–Evidence Tables
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **12 points total.**
 
@@ -368,7 +382,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 5 | Log it in your AI Research Ledger, and verify at least one traced number with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 27 — Research Posters
+### Ch. 28 — Research Posters
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **12 points total.**
 
@@ -381,7 +395,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 5 | Log it in your AI Research Ledger, and verify at least one number on the page with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 28 — Poster Criticism
+### Ch. 29 — Poster Criticism
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **12 points total.**
 
@@ -394,7 +408,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 5 | Log it in your AI Research Ledger, and verify at least one fixed number with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 29 — Research Pitches
+### Ch. 30 — Research Pitches
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **12 points total.**
 
@@ -407,7 +421,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 5 | Log it in your AI Research Ledger, and verify at least one compressed sentence with a named method from the Verification Guide, such as peer reasoning | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 30 — Difficult Questions and Uncertainty
+### Ch. 31 — Difficult Questions and Uncertainty
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **12 points total.**
 
@@ -420,7 +434,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 5 | Log it in your AI Research Ledger, and verify at least one prepared answer with a named method from the Verification Guide, such as peer reasoning | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 31 — AI Disclosure and Research Integrity
+### Ch. 32 — AI Disclosure and Research Integrity
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **12 points total.**
 
@@ -433,7 +447,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 5 | Log it in your AI Research Ledger, and verify the finished statement with a named method from the Verification Guide, such as peer reasoning | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 32 — Replication and Reproduction
+### Ch. 33 — Replication and Reproduction
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **16 points total.**
 
@@ -448,7 +462,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 7 | Log the audit in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 33 — From Poster to Research Note
+### Ch. 34 — From Poster to Research Note
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -462,7 +476,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the drafting round in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 34 — Open and Reusable Research Packages
+### Ch. 35 — Open and Reusable Research Packages
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -476,7 +490,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the packaging round in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 35 — Managing Multiple AI Agents
+### Ch. 36 — Managing Multiple AI Agents
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -490,7 +504,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log every loop in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 36 — Conflicting Agents and Human Escalation
+### Ch. 37 — Conflicting Agents and Human Escalation
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
@@ -504,7 +518,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 6 | Log the conflict, the diagnosis, and the override in your AI Research Ledger, and verify at least one output with a named method from the… | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
-### Ch. 37 — Final Research and AI-Management Portfolio
+### Ch. 38 — Final Research and AI-Management Portfolio
 
 Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
