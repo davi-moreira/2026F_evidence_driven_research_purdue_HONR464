@@ -32,16 +32,16 @@ confidence as worth nothing until you have checked what sits under it.
 ## The concept
 
 The trap has a name. **False confidence** is when fluent, detailed output makes you
-feel sure of something you never actually verified. Example: an AI summary reports
+feel sure of something you never actually verified [@ji2023hallucination]. Example: an AI summary reports
 that a stream cleanup "cut nitrate by roughly 40 percent," and the crisp figure and
 smooth wording make the claim feel settled before you have looked at a single
 measurement.
 
 Two habits make the trap dangerous. **Automation bias** is the tendency to over-trust
 an automated system and stop checking, precisely because a machine produced the
-answer. Example: you would double-check a lab partner's arithmetic, but you paste the
+answer [@goddard2012automation]. Example: you would double-check a lab partner's arithmetic, but you paste the
 AI's percentage straight into your report because "the tool computed it." **Illusion
-of understanding** is mistaking a smooth explanation for real comprehension. Example:
+of understanding** is mistaking a smooth explanation for real comprehension [@rozenblit2002illusion]. Example:
 you nod along as the AI walks you line by line through its calculation, then realize
 you could not defend the number to the agency reviewer without rerunning it
 yourself.

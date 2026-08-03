@@ -41,7 +41,7 @@ Start with the unit you are actually managing. **The AI loop** is the cycle you 
 been running since the beginning of this book: you prompt, you read the output, you
 interrogate it, you refine the ask, you run it again. One loop, one job, one person
 watching. **Agentic tools** are AI systems that run that loop on their own, deciding
-their own next step and calling their own tools between your turns. Example: you ask
+their own next step and calling their own tools between your turns [@yao2023react]. Example: you ask
 for the citations to be checked and the tool searches, reads, rechecks, and revises
 across several turns before it comes back to you. It is faster, and every turn you did
 not read is a turn you did not supervise.
@@ -52,7 +52,7 @@ each other. You orchestrate loops, not prompts.
 
 The move that turns a crowd of loops into a workflow you can defend is **task
 decomposition**: breaking one large job into smaller subtasks, each with a single
-clear owner. Example: instead of asking a tool to "improve my draft," you split the
+clear owner [@malone1994coordination]. Example: instead of asking a tool to "improve my draft," you split the
 work into check the design, check the citations, and tighten the prose. Each piece
 now has a pass-or-fail you can judge.
 
@@ -74,7 +74,7 @@ Example: a critic cannot attack a draft the worker has not written yet. Roles wi
 dependency between them run at the same time. Roles joined by one run in order.
 
 The chain of dependencies you cannot shorten is the **critical path**: the longest run
-of must-follow-must steps in your workflow. Example: worker drafts, then critic
+of must-follow-must steps in your workflow [@kelley1961critical]. Example: worker drafts, then critic
 attacks, then you integrate is three steps that cannot collapse into fewer. That chain
 sets the minimum number of rounds your workflow takes. Reading the critical path off
 your own design, instead of guessing it, is the skill this chapter drills. Count it in

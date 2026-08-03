@@ -74,7 +74,7 @@ particular data, partly because its errors happened to fall kindly there. On any
 one split the flattery can be large, small, or even reversed; over many splits it
 points up. **Model-selection
 bias** is that flattery, the gap between a winner's score on the data that crowned
-it and its honest score on data it has never met. Report the crowning score as
+it and its honest score on data it has never met [@varma2006bias]. Report the crowning score as
 final and you will promise performance the model cannot deliver.
 
 One consequence is worth stating plainly. If the final holdout makes you go back and
@@ -86,7 +86,7 @@ they are beyond this chapter, so hold the simple rule until you have a defended
 reason not to.
 
 One trap sits above all others. **Data leakage** is information reaching your model,
-or your choice of model, that would not be available at the real forecast moment.
+or your choice of model, that would not be available at the real forecast moment [@kaufman2011leakage].
 Example: the toxin concentration measured *during* the bloom. A leaked feature
 inflates your score on today's data and collapses on tomorrow's, because it will not
 exist when you truly need the forecast. Choosing your model on the final holdout is
@@ -110,7 +110,7 @@ otherwise. Across three summers of weekly samples, 85% of weeks are clear, so yo
 
 You keep features genuinely known a week early: water temperature, recent rainfall,
 upstream phosphorus load. The three summers give you your three roles without any
-shuffling. Summer one trains your candidate models. Summer two chooses between them.
+shuffling [@hastie2009elements]. Summer one trains your candidate models. Summer two chooses between them.
 Summer three stays locked until the choice is made. You fit a logistic model (a
 standard yes-or-no classifier) and compare a few feature lists on summer two. Then
 you open summer three once, for the winner alone. Scored on the same metric as the

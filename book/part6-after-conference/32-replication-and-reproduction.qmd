@@ -35,7 +35,7 @@ finds them in your own work.
 ## The concept
 
 Two words sound alike and mean different things. **Reproduction** is getting the
-same number from the *same* data and code a study shipped. Example: you open another
+same number from the *same* data and code a study shipped [@nasem2019reproducibility]. Example: you open another
 researcher's notebook, run it top to bottom, and check that the same growth figure
 comes back. **Replication** is getting a similar result from a *new* study or new
 data. Example: a second lab runs its own experiment and sees the same effect. This
@@ -47,7 +47,7 @@ any random seed, and the write-up. The one figure the main claim rests on is the
 **headline number**. Example: "the supplement raised larval growth by 0.5 mm." You
 rebuild that first, using **restart-and-run-all**, which means clearing the
 notebook's memory and running every cell from the top with no manual fixes. If a
-number only appears when cells run out of order, it is not reproducible.
+number only appears when cells run out of order, it is not reproducible [@wilson2017goodenough].
 
 A clean run proves the code executes. It never proves the write-up is true, so you
 run three audits on top of it. **Claims-vs-computation agreement** checks that
@@ -58,7 +58,7 @@ choice. A **hidden assumption** is a claim the analysis quietly relies on and ne
 states, which the result would collapse without. The most dangerous one in biology
 has a name: **pseudoreplication**, treating repeated measurements from the same
 animal, plate, or tank as independent data points when the real experimental unit
-is the animal, plate, or tank (Hurlbert, 1984).
+is the animal, plate, or tank (Hurlbert, 1984) [@hurlbert1984pseudoreplication].
 
 ## A worked example
 

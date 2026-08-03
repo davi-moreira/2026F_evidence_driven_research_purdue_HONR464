@@ -47,7 +47,7 @@ large reading, so no cutoff turns this into a verdict. Demand exact zeros and yo
 will "fail" perfectly healthy machinery, or worse, tinker until a readout prints 0.00
 and call the tinkering a fix.
 
-A good negative control has to satisfy three conditions, and all three matter. Your
+A good negative control has to satisfy three conditions, and all three matter [@lipsitch2010negative]. Your
 proposed cause must not be able to reach it, or it is not negative. The artifact you
 fear must be able to reach it, or it is not a test: a control your pipeline never
 touches cannot catch your pipeline. Example: if the worry is that your solvent kills
@@ -84,7 +84,7 @@ test asks whether your procedure invents signal. Leave-one-out asks whether your
 rests on a single point.
 
 The negative tests all share one move: aim the machinery where the answer must be
-zero, and check that what comes back is ordinary for a world where it is. Here is the
+zero, and check that what comes back is ordinary for a world where it is [@rosenbaum2002observational]. Here is the
 boundary you must never blur. A passed negative test **reduces your concern about one
 specific artifact, as far as that check could have detected it**. It does not prove
 the artifact is absent, it does not prove your effect is real, and it never turns a

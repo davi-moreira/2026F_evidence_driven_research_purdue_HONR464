@@ -52,7 +52,7 @@ points straight at the claim you need to check.
 the agreement proves nothing. Example: three reviewers built from the same base model
 all miss the same flaw because they share the blind spot. The question to ask is
 simple: could they be wrong the *same* way? If yes, their consensus is one signal,
-not three.
+not three [@peker2023collective].
 
 **False consensus** is when the roles agree only because your prompt framed the task
 so they had to. Example: you ask "confirm my draft is ready," and every role
@@ -60,12 +60,12 @@ obliges. You led all the witnesses. Reframe the ask neutrally and run it again.
 
 The tool that tells these apart is an **independence check**: a test that makes
 agreement worth more than a head-count, either an independent method you run yourself
-or a way you force two roles to be genuinely independent. Example: two roles bless a
+or a way you force two roles to be genuinely independent [@hong2004diverse]. Example: two roles bless a
 cited number, so you open the source and recompute it yourself before trusting either.
 
 Then comes the decision only you can make. **Escalation to human judgment** is the
 moment an AI output would *settle* rather than *inform* a decision that is yours, so
-you stop and decide it yourself. Example: a role proposes calling your result
+you stop and decide it yourself [@bansal2021whole]. Example: a role proposes calling your result
 "causal," which would settle your claim boundary, so it escalates to you. What you do
 at that moment is a **human override**: you take the pen back and make the call in
 your own words, backed by your own check, even when the roles agreed on something

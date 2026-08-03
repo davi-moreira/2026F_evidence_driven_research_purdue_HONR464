@@ -51,7 +51,7 @@ would change, so it is causal, and it stays causal no matter which data you
 managed to collect.
 
 Your **identification status** is whether this design can actually deliver that
-answer. Example: if you watched who already chose to walk, nothing separates the
+answer [@blair2023rdss]. Example: if you watched who already chose to walk, nothing separates the
 walking from the kind of person who walks, so your status is *not identified by this
 design under the assumptions I can defend*. Notice what that status does not say. It
 never repeats the word "causal", because the kind belongs to the question and the
@@ -72,14 +72,14 @@ Written out, the four fields make a card you can reuse on any project:
 Your **claim boundary** is what those three together license you to write, and it
 lives in the headline verb. Example: with no identification argument, you write "was
 associated with lower," never "lowered." Read the condition carefully: what earns a
-causal verb is a defended identification argument. Randomizing is the cleanest way
+causal verb is a defended identification argument [@hernan2020whatif]. Randomizing is the cleanest way
 to get one, and a later chapter shows observational designs that carry causal
 answers when their assumptions are argued and defended. What you may never do is
 use the verb without the argument.
 
 One more idea makes the claim's honesty visible. **Uncertainty in the
 same eye-span** means the interval or caveat sits right beside the claim, not in a
-footnote. Example: "about 6 points lower (95% interval: 1 to 11)" printed under the
+footnote [@wasserstein2016asa]. Example: "about 6 points lower (95% interval: 1 to 11)" printed under the
 headline, so a reader meets the doubt at the same moment as the number. The numbers
 in this chapter's examples are constructed to make the point; a later chapter builds
 intervals properly. A bound a

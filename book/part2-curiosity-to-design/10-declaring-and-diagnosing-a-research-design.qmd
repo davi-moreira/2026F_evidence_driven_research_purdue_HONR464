@@ -33,7 +33,7 @@ answer your question.
 
 In chapter 9 you built the four parts of a design. This chapter puts them to the test
 with a three-step loop this book borrows from RDSS (*Research Design in the Social
-Sciences: Declare, Diagnose, Redesign*).
+Sciences: Declare, Diagnose, Redesign*) [@blair2023rdss].
 
 **Declare** means writing your four design parts as something a computer can run: a
 model that generates fake data, an inquiry it can compute on that fake data, a plan
@@ -60,7 +60,7 @@ Collecting more of the same kind of data, from the same design, usually shrinks 
 wobble. It is the one problem size reliably helps.
 
 **Power** is how often the design detects a real effect, and it means nothing until
-you say how you would decide. A **statistical test** is the rule you use to decide
+you say how you would decide [@greenland2016misinterpretations]. A **statistical test** is the rule you use to decide
 whether your data conflict enough with "no effect" to call the result real.
 *Example:* in the checkout study, a difference-in-means rule: declare an effect when
 the gap between the two groups is more than about twice its typical run-to-run
@@ -81,7 +81,7 @@ their share. **Coverage** is how often the range you report around your estimate
 actually contains the truth. *Example:* if you report a range meant to be right 95
 times out of 100, coverage checks whether it really is. A design can be unbiased and
 still miss badly every time, which is exactly why one number is never the whole
-diagnosis. A later chapter builds these ranges properly; here you only need to know
+diagnosis [@morris2019simulation]. A later chapter builds these ranges properly; here you only need to know
 that a diagnosis can ask about them.
 
 **Redesign** means changing exactly one part in response to the diagnosis, then

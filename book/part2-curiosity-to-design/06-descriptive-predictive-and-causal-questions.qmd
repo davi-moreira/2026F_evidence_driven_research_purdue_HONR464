@@ -53,7 +53,7 @@ about the data at hand. **Generalization** is descriptive about a population, an
 must pay for its reach with a sampling design that lets the units you saw stand in for
 the ones you did not. **Prediction** is descriptive about unseen cases; it forecasts a
 new case from a pattern. Prediction is still descriptive, not causal: guessing who
-will drop out is not the same as knowing what makes them drop out. **Causal
+will drop out is not the same as knowing what makes them drop out [@shmueli2010explain]. **Causal
 reasoning** is the causal kind, the only position that earns the word "because."
 
 Those four names are labels, not boxes that answer anything for you. Causal questions
@@ -65,7 +65,7 @@ the effect of a second register on the twelve lunch periods you timed is not the
 quantity as its effect on every weekday lunch this term.
 
 Now the rule that keeps the whole compass honest, and it is the one most often broken.
-Your data never change what kind of question you asked. A question about what an
+Your data never change what kind of question you asked [@blair2023rdss]. A question about what an
 intervention would change stays causal even when your evidence cannot answer it. When
 your design cannot isolate that answer, the honest status is **currently
 unidentified**, meaning the question is still causal and this design does not reach

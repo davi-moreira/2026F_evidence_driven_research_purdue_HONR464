@@ -55,16 +55,16 @@ your measurement lying.
 
 The habit that keeps an attack honest is order. **Specification searching** means
 trying many versions of an analysis and reporting only the one that gave the answer
-you wanted, without disclosing the search. Its everyday name is **p-hacking**.
+you wanted, without disclosing the search [@simmons2011falsepositive]. Its everyday name is **p-hacking**.
 Example: you measure ten different hours and show only the hour where your change
 wins. The cure is a set of **pre-listed checks**, the full list you will run,
-committed to before you see any result. Example: you write down three time blocks and
+committed to before you see any result [@nosek2018preregistration]. Example: you write down three time blocks and
 one placebo, then run all four and report every number, including the ones that did
 not help.
 
 One more failure earns a name because AI reviewers make it constantly. **Correlated
 error** is two reviewers wrong in the same way, so their agreement is an echo, not a
-confirmation. Example: two AI models share a blind spot and both flag the same
+confirmation [@peker2023collective]. Example: two AI models share a blind spot and both flag the same
 non-issue with equal confidence.
 
 ### An agentic reviewer still does not get a vote

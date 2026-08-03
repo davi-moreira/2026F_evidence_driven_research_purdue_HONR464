@@ -45,7 +45,7 @@ Example: that same gap written as a paragraph naming what prior studies covered,
 they skipped, and why the missing piece matters. Turning one into the other is not
 adding words. It is making the reasoning visible.
 
-A note carries that reasoning on a backbone. The **problem–gap–question spine** is
+A note carries that reasoning on a backbone [@mensh2017structuring]. The **problem–gap–question spine** is
 three linked pieces: the real trouble your work responds to, the specific thing prior
 retrievable work has not established, and the answerable question that closes exactly
 that gap. Example: customers give up and leave during the morning rush (problem);
@@ -64,11 +64,11 @@ the back, labeled exploratory. Your limitations follow the same discipline, stat
 proportion to what actually threatens the claim: "measured on a simulated arrival
 pattern, not a real Saturday rush," not a generic "more research is needed."
 
-Finally, a note a reader cannot rerun is half a claim. The other half is a
+Finally, a note a reader cannot rerun is half a claim [@nasem2019reproducibility]. The other half is a
 **reproducibility capsule**, everything a stranger needs to rebuild your number and
 nothing they must guess: a notebook that passes **restart-and-run-all** (clear
 everything, run every cell top to bottom, and the headline number returns), pinned
-data and tool versions, a fixed seed, a decision log, and your AI-use ledger.
+data and tool versions, a fixed seed, a decision log, and your AI-use ledger [@wilson2017goodenough].
 
 ## A worked example
 

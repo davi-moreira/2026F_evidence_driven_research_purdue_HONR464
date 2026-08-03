@@ -35,7 +35,7 @@ you the habit that survives that question.
 ## The concept
 
 An **AI analytical assistant** is an AI tool you hand a well-specified analytical task,
-never your judgment. Example: you say "recompute this gap after dropping the three
+never your judgment [@vaithilingam2022expectation]. Example: you say "recompute this gap after dropping the three
 people who enrolled with an offer already in hand," and it writes and runs that one
 check. The task is checkable. The verdict is not its job.
 
@@ -45,10 +45,10 @@ about 0.7 standard deviations sooner." Before you defend that number, you try to
 it, and breaking it is the labor you delegate.
 
 Two attacks do most of the work. A **robustness check** re-runs the same finding under a
-different but equally defensible choice and asks whether the answer holds. Example: you
+different but equally defensible choice and asks whether the answer holds [@simonsohn2020specification]. Example: you
 reported a mean time to first offer, so you also compute the median and check the story
 survives. A **placebo test** runs your exact analysis where the effect cannot exist and asks
-whether what comes back is ordinary for a world with nothing in it. Example: you
+whether what comes back is ordinary for a world with nothing in it [@lipsitch2010negative]. Example: you
 shuffle the "program" and "no program" labels at random, many times, and look at the
 pile of fake gaps your machinery produces. Random labels always differ a little, so
 the pile is not zeros; what matters is whether your real gap looks ordinary in it or

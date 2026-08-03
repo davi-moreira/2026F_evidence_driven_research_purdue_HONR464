@@ -44,7 +44,7 @@ going — a repository, a supervisor, a journal, a course. The audit does not ch
 with the destination.
 
 **A research portfolio** is the assembled body of your finished work: your claims, the
-evidence behind them, and the verification that makes each one defensible. Example: for
+evidence behind them, and the verification that makes each one defensible [@allea2023code]. Example: for
 a lab project it holds your headline result, the measurements behind it, and the check
 you ran to confirm the number is right.
 
@@ -56,8 +56,8 @@ a claim you could not support, and that you alone chose the claim boundary.
 
 The decision that closes both is your **stopping rule**, a written statement of what
 "done" means, phrased around your own verified confidence rather than the tools'
-agreement. Example: "I stop when I can defend each surviving claim to a hostile reviewer
-with a check I ran myself." A stopping rule of "when the roles all agree" is a trap,
+agreement [@nosek2018preregistration]. Example: "I stop when I can defend each surviving claim to a hostile reviewer
+with a check I ran myself [@nasem2019reproducibility]." A stopping rule of "when the roles all agree" is a trap,
 because a team of look-alike tools can agree loudly and be wrong together.
 
 That trap has a name you will guard against: **false consensus**, agreement that exists

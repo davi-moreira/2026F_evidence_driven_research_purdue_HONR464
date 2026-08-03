@@ -54,7 +54,7 @@ programmer's side of the desk, and this chapter is about holding them.
 Here is the trap the chapter closes. A tool can compute a flawless share over the wrong
 frame, and the code still finishes with a green check. **A clean run is not a correct
 result**: a cell can execute with no error and still compute a different number than
-your question needs.
+your question needs [@vaithilingam2022expectation].
 
 ### Coding with AI is a loop, not a wish
 
@@ -72,8 +72,8 @@ The number just gets prettier.
 So verification runs per cycle, not per session. Every time the code changes, you ask
 the same two questions again: what quantity, over which cases? When a tool runs the
 cycles for you, make it surrender the choices it made along the way, and read the code
-rather than its summary of the code. You own two things the programmer cannot. First,
-you define the quantity of interest and the frame in plain words, before you delegate.
+rather than its summary of the code [@sandve2013ten]. You own two things the programmer cannot. First,
+you define the quantity of interest and the frame in plain words, before you delegate [@blair2023rdss].
 Second, you confirm that the code sitting in front of you *right now* computes that
 quantity over that frame, and not a plausible neighbor.
 

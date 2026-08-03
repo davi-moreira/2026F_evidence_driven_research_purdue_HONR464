@@ -81,7 +81,7 @@ Frameworks differ in wording, but the determination almost always turns on the s
 three questions. Answer them about your own project, in order.
 
 **First: is this a systematic investigation meant to produce knowledge that
-generalizes?** Not "will I publish it". Whether you intend to publish is not the test
+generalizes?** Not "will I publish it" [@usdhhs2026commonrule]. Whether you intend to publish is not the test
 in every framework, and some national policies place course-based student research
 expressly inside their scope. If you are following a method to learn something that
 would hold beyond your own case, answer yes and let the authority decide the rest.
@@ -106,7 +106,7 @@ Six situations look exempt and often are not.
 
 **Public social media posts.** Public availability and permission are separate
 questions, and some frameworks require BOTH public availability and the absence of any
-reasonable expectation of privacy before a public-information exemption applies. People
+reasonable expectation of privacy before a public-information exemption applies [@franzke2020aoir]. People
 posted to an audience, not to a researcher, and platform terms often restrict
 collection regardless of what any review board says.
 
@@ -140,7 +140,7 @@ That promise sounds sufficient. Watch what it actually buys.
 
 **De-identification** means removing enough information that a person cannot
 reasonably be picked out of the data. Deleting names is not de-identification, because
-the remaining columns can still single someone out.
+the remaining columns can still single someone out [@sweeney2000demographics].
 
 ```python
 import numpy as np
@@ -199,13 +199,13 @@ The fix is not more deleting. It is deciding, before collection, which columns y
 actually need. If the analysis compares first-generation and continuing-generation
 students, you may not need country at all, and you may need age only as a range.
 **Data minimisation** means collecting only what your declared analysis requires, so
-the risky combination never exists.
+the risky combination never exists [@eu2016gdpr].
 
 ## Consent is a process
 
 A signature captures one moment. **Informed consent** is the ongoing condition that a
 participant understands what is happening and agrees to it, which means it can be
-withdrawn later and has to be maintained, not filed.
+withdrawn later and has to be maintained, not filed [@belmont1979].
 
 Three things make it real rather than ceremonial. The person understands what you will
 do with their words or numbers, in language they actually use. The person can decline

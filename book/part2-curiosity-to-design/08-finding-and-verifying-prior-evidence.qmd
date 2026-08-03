@@ -38,7 +38,7 @@ belongs to and add one honest sentence to it.
 
 Every source you keep passes through one habit. The **retrieval-verification loop**
 is four steps: ask any tool to surface leads, retrieve the actual source yourself,
-verify it exists and says what was claimed, and document where you found it. A
+verify it exists and says what was claimed, and document where you found it [@snyder2019literature]. A
 **lead** is a candidate source you have not confirmed yet. A lead stays a lead until
 retrieval and verification promote it to a source.
 
@@ -47,7 +47,7 @@ an AI inventing a source that does not exist, dressed in a real-sounding author 
 a recent year, and a plausible journal. A **mischaracterized source** is a real paper
 cited for a claim it never makes, such as a study that reports a correlation being
 cited as proof of a cause. A source can be real and still be mischaracterized, so
-"does it exist" and "does it say this" are two separate checks. Run both.
+"does it exist" and "does it say this" are two separate checks [@ji2023hallucination]. Run both.
 
 Once you hold one verified source, you grow the rest by **snowballing**: walking its
 links in two directions. A **backward citation search** reads the source's own
@@ -59,7 +59,7 @@ That is also how you earn the word gap. A **genuine gap** is a question your ver
 sources actually leave unanswered, confirmed by looking. An **unfinished search** is a
 question you simply stopped chasing. They feel identical from your desk, and only one
 is a real contribution. The test is retrieval. You have earned the word gap only after
-real sources, followed forward and backward, still stay silent on your question.
+real sources, followed forward and backward, still stay silent on your question [@greenhalgh2005search].
 
 ## A worked example
 

@@ -37,7 +37,7 @@ borrow: where did it come from, and is it any good for what I need it for.
 ## The concept
 
 **Data provenance** is the documented origin of a value and every hand it passed
-through before it reached you. Example: a turnout figure in a news story, traced
+through before it reached you [@lebo2013provo] [@wilkinson2016fair]. Example: a turnout figure in a news story, traced
 back through a state summary table to the county election office that certified the
 count.
 
@@ -49,7 +49,7 @@ entry, or a data aggregator that copies the county's number. A value is only as
 trustworthy as the primary source at the end of its chain.
 
 **Data quality** is whether a value is fit for *your* specific use: real, produced
-by a method you can name, and defined the way your question needs. Example: a
+by a method you can name, and defined the way your question needs [@wang1996beyond]. Example: a
 turnout rate computed over registered voters is high quality for a question about
 whether registered people showed up, and the wrong number for a question about how
 much of the adult population takes part. A **mischaracterized value** is a real

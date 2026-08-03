@@ -55,8 +55,8 @@ hall selects for people who eat there at lunch. **Nonresponse** is the units you
 who never gave you data. Example: of 500 people contacted, 300 reply, and the 200
 silent ones are rarely a random slice. When either process relates to the very thing
 you are measuring, your summary drifts from the truth, and no amount of extra data
-pulls it back. Size shrinks the sample-to-sample wobble. It does nothing to a
-systematic tilt in who you reached.
+pulls it back [@bethlehem2010selection]. Size shrinks the sample-to-sample wobble. It does nothing to a
+systematic tilt in who you reached [@meng2018paradises].
 
 ## A worked example
 
@@ -67,7 +67,7 @@ subscriber list, emails a short survey to a random draw from that list, and coun
 many report a wrong charge in the past year. The survey reports 2%, and the headline
 writes itself: *"the service has a 2% billing-error rate."*
 
-Now walk the boxes. The **target population** is every customer the service bills. The
+Now walk the boxes. The **target population** is every customer the service bills [@groves2009survey]. The
 **sampling frame** is the current subscriber list, because only people on that list
 receive the survey. Here is the trap: the customers hit hardest by billing errors, the
 ones charged twice or charged after canceling, are also the ones most likely to have

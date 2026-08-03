@@ -43,7 +43,7 @@ next step, and each beat is a term worth defining once.
 An **uncertainty statement** is a sentence saying how much your number could
 wobble, and why. Example: "with 812 people, my estimate could sit a few points
 higher or lower." A **limitation** is a true sentence about what your design
-cannot show. Example: "I measured that two things went together, so I cannot say
+cannot show [@wasserstein2016asa]. Example: "I measured that two things went together, so I cannot say
 one caused the other." A **next step** is the study that would resolve that
 limitation. Delivered together, ULN sounds like expertise, because you are naming
 the edge of your evidence on purpose.
@@ -53,10 +53,10 @@ finding under self-erasure like "honestly this is probably all wrong, my sample'
 tiny." The fix is to choose **precision**, naming the exact boundary, over
 **hedging**, vague self-protection that blurs where the claim stops. "This is one
 campus sample" is precision. "Sort of, take it with a grain of salt" is hedging.
-Precision informs the listener; hedging only protects you.
+Precision informs the listener; hedging only protects you [@vanderbles2019uncertainty].
 
 The second instrument is the **question bank**: a short written list of the
-hardest fair questions a visitor could ask, each with a prepared answer. Five
+hardest fair questions a visitor could ask, each with a prepared answer [@bourne2007oral]. Five
 covers the space, one per recurring type (method, alternative explanation,
 so-what, generalization, AI-use). When you cannot fully answer one, you deliver an
 **honest don't-know**: an admission with content, naming what you cannot say, the

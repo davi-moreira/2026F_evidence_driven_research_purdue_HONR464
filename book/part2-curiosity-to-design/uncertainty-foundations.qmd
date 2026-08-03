@@ -52,7 +52,7 @@ and those words stop being jargon.
 Three words get confused constantly, and separating them fixes most of the confusion
 in this whole area.
 
-An **estimand** is the quantity you want, defined in the world before any data exist.
+An **estimand** is the quantity you want, defined in the world before any data exist [@morris2019simulation].
 Example: the average monthly rent paid by all 4,000 households in one town, in one
 month. Notice that it is a number about the world, not about your data. It would have
 a value even if you never ran a survey.
@@ -124,7 +124,7 @@ A **confidence interval** is a range built by a recipe that catches the estimand
 stated share of the time, when the same recipe is repeated.
 
 Read that definition slowly, because the obvious paraphrase of it is false. The
-interval you actually computed either contains the truth or it does not. There is no
+interval you actually computed either contains the truth or it does not [@greenland2016misinterpretations]. There is no
 chance left in it. What has a 95% property is the **recipe**, and only while its
 assumptions hold, not your one range.
 
@@ -210,7 +210,7 @@ print(f"treating 12 buildings as the unit: {cluster_hits / runs:.1%} caught the 
 ```
 
 The interval that treats 60 flats as 60 independent observations catches the truth
-63.2% of the time. It promised 95%. It is not a little optimistic, it is wrong about
+63.2% of the time [@donner2000cluster]. It promised 95%. It is not a little optimistic, it is wrong about
 one case in three, and nothing in the output would have told the team.
 
 Switching to buildings as the unit brings it to 91.7%. Better by a lot, and still shy

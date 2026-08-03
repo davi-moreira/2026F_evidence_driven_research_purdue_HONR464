@@ -37,7 +37,7 @@ Three terms carry the idea. Meet them one at a time.
 
 - **Latent characteristic**: a real property you cannot read off directly, so a
   design has to reveal it. Example: how much a search interface's *position* pulls
-  clicks, apart from how good each result is.
+  clicks, apart from how good each result is [@joachims2005clickthrough].
 - **Controlled stimulus**: a version of a prompt, item, or setting that you fix on
   purpose and assign by chance, so any difference in response pins to the version
   rather than to who received it. Example: the same result shown in slot 1 for some
@@ -51,11 +51,11 @@ A measurement can be confident and still wrong, because the setup itself is one 
 the ingredients. Two artifacts do most of the damage. A **demand effect** is when
 the people being measured guess what you are looking for and drift toward it;
 example: users who notice they are in a study click more carefully than they would
-at home. An **instrument effect** is when the measuring device or wording moves the
+at home [@orne1962demand]. An **instrument effect** is when the measuring device or wording moves the
 reading on its own; example: slot 1 renders a larger thumbnail, so the logger
 credits position with attention the picture earned. Both threaten **construct
 validity**, the degree to which your number estimates the concept you meant rather
-than something adjacent. Randomizing *who* sees what does nothing about a bias that
+than something adjacent [@cronbach1955construct]. Randomizing *who* sees what does nothing about a bias that
 hits every unit alike, which is why you design these out separately.
 
 ## A worked example

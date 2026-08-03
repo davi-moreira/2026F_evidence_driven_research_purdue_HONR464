@@ -44,7 +44,7 @@ builds all four from scratch. This chapter takes them somewhere harder.
 
 A **complex, or hybrid, design** is a research design whose four MIDA parts have more
 than one moving piece: several measurements, stages, or sub-questions stitched into a
-single answer. Example: computing a market's concentration score from two separate
+single answer [@blair2023rdss]. Example: computing a market's concentration score from two separate
 measurements, each drawn from its own source and carrying its own error.
 
 Two ideas decide whether such a design holds together. The first is **alignment**,
@@ -52,7 +52,7 @@ meaning all four parts point at the same single quantity. Complexity breaks it i
 fresh way: two carefully built sub-measurements can each be fine yet quietly target
 slightly different quantities that never combine into the one you named. The second is
 **error propagation**, meaning each measured input's uncertainty flows into the final
-answer, sometimes amplified. Example: if your answer depends on the *square* of a
+answer, sometimes amplified [@jcgm2008gum]. Example: if your answer depends on the *square* of a
 measured share, a 1% error in that share becomes roughly a 2% error in the result.
 
 Keep the lab's two failure words close. **Bias** is a systematic tilt that more data
@@ -64,7 +64,7 @@ a small systematic error hide behind an impressively small random one.
 You want to know how concentrated your city's grocery market is: does a handful of
 chains dominate it, or is it split among many sellers? The standard answer is a
 **concentration index**, a single score that rises as a market's sales pile up in
-fewer hands. You compute it by squaring each seller's market share and adding the
+fewer hands [@dojftc2023merger]. You compute it by squaring each seller's market share and adding the
 squares, where a seller's `share = its revenue / total market revenue`. That one
 formula is a complex design in miniature. It stitches two sub-measurements into one
 answer: each chain's `revenue`, which you take from a monthly industry survey, and the

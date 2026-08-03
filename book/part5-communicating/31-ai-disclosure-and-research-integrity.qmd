@@ -35,16 +35,16 @@ honest under questioning.
 ## The concept
 
 **AI disclosure** is a truthful statement of where and how you used an AI tool in
-your work. Example: "I used Gemini to draft the code that computed my coverage ratio,
+your work [@icmje2026recommendations]. Example: "I used Gemini to draft the code that computed my coverage ratio,
 and I recomputed that number by hand before reporting it." **Research integrity** is
 the practice of keeping your work honest and traceable, so a reader can see where each
-result came from and trust it. Example: a claim that names its source and its check
+result came from and trust it [@allea2023code]. Example: a claim that names its source and its check
 has integrity; a claim that names neither does not.
 
 The tool that makes disclosure easy is the one you have kept since the first chapter:
 the **AI Research Ledger**, a running table with one row per AI use, recording the
 task, the tool, your decision, and the verification method. A complete disclosure is
-not written from scratch at the end. It is read straight off your ledger.
+not written from scratch at the end. It is read straight off your ledger [@munafo2017manifesto].
 
 Three parts make a disclosure complete, and each maps to a ledger column: **which
 tool** you used, **for which task**, and **how you verified** the output. Drop any one

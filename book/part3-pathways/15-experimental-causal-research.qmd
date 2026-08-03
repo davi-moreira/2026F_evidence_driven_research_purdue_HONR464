@@ -49,7 +49,7 @@ time if she gets the texts. The **potential outcome Y(0)** is what the *same* un
 would show *without* it. Example: whether that same Ms. R refills if she gets
 nothing. The causal effect for her is Y(1) minus Y(0). Now the rule that governs
 the whole field, the **fundamental problem of causal inference**: for any one unit
-you only ever see one of those two numbers. Ms. R was either texted or not, never
+you only ever see one of those two numbers [@holland1986causal]. Ms. R was either texted or not, never
 both, so her individual effect is unrecoverable.
 
 So you give up the individual and chase the average. The **average treatment
@@ -176,7 +176,7 @@ buys truth on average.
 ## What attrition does to that promise
 
 The code below keeps the coin flip exactly as honest as before and changes one
-thing: who is still measurable at the end. Every one of 2,000 patients gets a
+thing: who is still measurable at the end [@nrc2010missing]. Every one of 2,000 patients gets a
 true benefit of 5 points. Under control, patients drop out only if their health
 is poor. Under the reminder, the cut is harsher, so more of the sickest patients
 go unmeasured. Then the study is re-randomized 2,000 times, and each time we take
@@ -304,7 +304,7 @@ final sentence, its boundary, and its uncertainty.
    ```python
    My claim: "the reminder raised on-time refills by 9 points." Act as a hostile
    clinical-trial reviewer. Name every way dropout, noncompliance, or spillover could
-   make this number describe a different group than everyone I enrolled. Do not
+   make this number describe a different group than everyone I enrolled [@gerber2012field]. Do not
    rewrite the claim for me.
    ```
 

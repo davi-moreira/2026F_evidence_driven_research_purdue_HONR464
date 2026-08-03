@@ -31,7 +31,7 @@ running and reporting, chosen before you see any of their answers.**
 That reviewer is not accusing you of cheating. They are naming a plain fact about
 analysis. Almost every real estimate depends on choices you could have made differently,
 and any single choice can flatter the result. If you report only the version that worked,
-you have handed over a number with no way to tell a delicate truth from a lucky slice.
+you have handed over a number with no way to tell a delicate truth from a lucky slice [@simmons2011falsepositive].
 This chapter gives you the habit that answers the question before it gets asked.
 
 ## The concept
@@ -45,7 +45,7 @@ defensible choice, to see whether the answer stays. Example: you reported an ave
 order value, so you also compute it after dropping the one account that turned out to be
 a wholesale buyer, and confirm the story holds. A **sensitivity check**, which some
 fields call a **sensitivity analysis**, is deliberately changing an assumption to see how
-far the answer moves. Example: you assumed the checkout system logged every purchase, so
+far the answer moves [@rosenbaum2002observational]. Example: you assumed the checkout system logged every purchase, so
 you ask how much your result would shift if it quietly missed two percent of them.
 
 Both attacks aim at the same target, the **headline estimate**: the single number that
@@ -55,7 +55,7 @@ how you turn a concept into a number. The **specification** is the bundle of mod
 choices behind the estimate. The **metric** is the yardstick you report.
 
 Turning every handle at once and plotting the results gives a **specification curve**: a
-picture of one estimate under many defensible choices side by side.
+picture of one estimate under many defensible choices side by side [@simonsohn2020specification] [@steegen2016multiverse].
 
 Before anything goes on that curve, it has to pass a gate with three parts. First,
 every version must test the **same substantive claim**, the one research question the

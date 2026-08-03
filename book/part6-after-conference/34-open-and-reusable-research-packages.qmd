@@ -35,7 +35,7 @@ really means.
 ## The concept
 
 A **reproducibility capsule** is everything a stranger needs to rebuild your numbers
-and nothing they would have to guess. Example: a folder holding your notebook, your
+and nothing they would have to guess [@wilson2017goodenough]. Example: a folder holding your notebook, your
 data, and a short record of every by-hand choice. It has five parts, each defined
 once.
 
@@ -43,9 +43,9 @@ once.
   kernel and run every cell top to bottom with no memory of earlier clicks. Example:
   Runtime, Restart and run all, and your headline number reappears.
 - A **data-provenance note**: where each dataset came from, its version, and how it
-  may be used. Example: the download URL, the date, and the licence.
+  may be used [@wilkinson2016fair]. Example: the download URL, the date, and the licence.
 - A **fixed seed**, a starting number that makes every random step return the same
-  values on every run. Example: `SEED = 464` feeding each resample.
+  values on every run [@sandve2013ten]. Example: `SEED = 464` feeding each resample.
 - A **decision log**: the by-hand choices that shaped the result, each with its
   reason. Example: every row you dropped, and why.
 - An **AI-use ledger**: every tool, its task, and how you verified its output.

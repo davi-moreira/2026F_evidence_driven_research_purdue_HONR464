@@ -45,7 +45,7 @@ letter each.
 - **Answer strategy**: your plan for turning the data into an estimate of the inquiry.
   Example: "accept rate in the new group minus accept rate in the old group."
 
-The four are not a checklist you fill in any order. They must **align**, meaning your
+The four are not a checklist you fill in any order [@blair2023rdss]. They must **align**, meaning your
 data and answer strategies actually reach the inquiry your model makes askable.
 Example of misalignment: a causal inquiry ("the lift the recommender *causes*") served
 by a data strategy where the people who see the new version differ systematically from
@@ -58,7 +58,7 @@ simply does not reach it. Nor does the absence of randomizing settle the matter:
 observational designs can carry causal answers when they bring a defended
 identification argument suited to the design, which is the whole subject of a later
 chapter. The honest diagnosis names the gap: causal inquiry, currently unidentified
-under this data and answer strategy. Naming that on paper is the whole job here.
+under this data and answer strategy [@hernan2020whatif]. Naming that on paper is the whole job here.
 
 ## A worked example
 

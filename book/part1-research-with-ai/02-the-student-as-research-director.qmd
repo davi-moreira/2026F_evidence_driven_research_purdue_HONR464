@@ -58,7 +58,7 @@ three buckets before you start.
 A **never-delegate decision** is any call that defines the science itself: the
 question you pursue, the design and the people or samples it covers, what your
 measures mean, the ethics, the boundary of your claim, and the uncertainty you
-report. **Verification** is the step that earns trust: confirming a result yourself,
+report [@nasem2017integrity]. **Verification** is the step that earns trust: confirming a result yourself,
 by a named method, before you put your name on it.
 
 One thing about delegation has changed, and your triage has to keep up. Handing a task
@@ -67,7 +67,7 @@ drafts, runs, reads its own error, rewrites, and runs again. Increasingly the to
 closes that loop by itself and shows you only the tidy result at the end. A loop you
 did not watch is not a loop you verified. So when you drop a task into "delegate then
 verify," decide right then what you will inspect when the loop stops, rather than
-deciding later whether the final answer looks plausible.
+deciding later whether the final answer looks plausible [@nist2024genai].
 
 ## A worked example
 

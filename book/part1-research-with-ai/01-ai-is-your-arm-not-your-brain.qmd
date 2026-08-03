@@ -46,7 +46,7 @@ that the result is actually true. Example: you open the statistical agency's rea
 table and read the number yourself instead of trusting what the tool typed.
 
 Verification cannot be skipped because a wrong AI answer looks exactly like a right
-one. A **hallucination** is confident, polished output that is simply made up, such as
+one [@ji2023hallucination]. A **hallucination** is confident, polished output that is simply made up, such as
 a citation to a report that does not exist. Example: a tool quotes a median starting
 salary and attributes it to a "National Graduate Earnings Survey" that was never
 published. Tone is identical for real and invented, so tone cannot be your filter.
@@ -60,7 +60,7 @@ Example: a tool may list several ways to adjust old prices for inflation, but de
 which one your analysis requires is yours to own. The habit that ties this together is
 short: **Ask, then Verify, then Document.** Use the tool ambitiously, confirm every
 fact and number yourself, then log the tool, the task, and the check in a record that
-travels with your work.
+travels with your work [@nist2024genai].
 
 Why draw the line exactly there? A short answer comes from the history of discovery.
 Albert Einstein once sketched research as a cycle: you start from experience, you leap

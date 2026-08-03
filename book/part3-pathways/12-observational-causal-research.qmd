@@ -73,12 +73,12 @@ blood pressure throws away part of the very effect you are estimating. A
 and long life might each raise the chance of appearing in a "healthy aging" study,
 so adjusting for study membership creates a link between them that exists nowhere
 in the world. Draw the diagram first; adjust for common causes, and leave mediators
-and colliders alone.
+and colliders alone [@pearl2009causality].
 
 Whichever move you use, you owe a reader an **identification argument**: your written
 reason that the comparison recovers a real effect. Every design in this family rests
 on a short list of **load-bearing assumptions** the data can never fully confirm,
-only make plausible. Selection on observables needs the adjustment set to be
+only make plausible [@hernan2020whatif]. Selection on observables needs the adjustment set to be
 sufficient and the groups to overlap. A visa-lottery design needs the lottery to be
 genuinely random and to touch lifespans only through the trip. Name your design's
 list; a single sentence per assumption is enough. When you cannot make that

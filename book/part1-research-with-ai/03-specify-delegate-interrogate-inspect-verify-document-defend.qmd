@@ -48,7 +48,7 @@ the name is only the first letter of each one: Specify, Delegate, Interrogate,
 Inspect, Verify, Document, Defend.
 
 Run it the way a pilot runs a preflight checklist. Not because you have forgotten how
-to fly, but because the item you would have skipped is the one that bites.
+to fly, but because the item you would have skipped is the one that bites [@degani1993checklists].
 
 The seven steps, each defined once with an example:
 
@@ -126,7 +126,7 @@ For the follow-up they described the experiment to an AI coding agent in plain l
 and let it drive the tool. The agent offered different ways to word a condition, ran
 pilots, sent the whole design to three models at once, and read the raw answers back to
 flag the ones that broke the pattern. The published study reports 126,000 conversations,
-and the persuasion tactics lifted compliance from about 35 percent to about 51 percent.
+and the persuasion tactics lifted compliance from about 35 percent to about 51 percent [@meincke2026persuading].
 
 Look at which steps changed hands. Configuring the runs, launching them in parallel, and
 taking the first pass over the transcripts: all delegated. Writing the plain request,
