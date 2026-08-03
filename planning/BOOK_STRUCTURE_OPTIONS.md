@@ -255,3 +255,99 @@ end-state candidate.**
   examples, starter data, faded scaffolds — A4) matters more for the
   book's promise than either hierarchy. Both tracks and the critique
   agree on this.
+
+---
+
+## Re-adjudication WITHOUT the T&F constraint (2026-08-03, at Davi's instruction)
+
+Davi instructed the loop to re-rule excluding the publisher proposal
+entirely. Full verdict:
+`_adm/codex_reviews/2026-08-03_structure-verdict-no-tf/verdict.md`. Claude's
+independent re-derivation, written before reading it, reached the same
+conclusion.
+
+**The ruling flips: adopt AMENDED OPTION 1.**
+
+> "Make the twelve Stations the book's twelve navigational parts... The
+> reader's primary unit should match the book's completion promise: one
+> Station produces one versioned research artifact."
+
+Why the prior ruling does not survive without the calendar, in the
+re-adjudicator's own accounting:
+
+1. **The comparative-testing precondition was too strong.** The six-part
+   spine is not validated either — it is the condition under which the
+   pilot's navigation failure occurred. Requiring unavailable real novices
+   before a reversible, currently-cheap change privileges the unvalidated
+   status quo. Simulated pilots are proportionate engineering tests now;
+   real-novice evidence gates release claims, not a development-stage
+   architecture.
+2. **Option 1's unique costs were inflated.** The single-page `#checkpoint`
+   device (the critique's own invention) removes the closer-page schema
+   migration entirely; the station page becomes the part opener, URL kept.
+3. **Option 5 is ALMOST a subset of Option 1** — its value-bearing work
+   (two relocations, navigation graph, anchors, route-aware links) is
+   common, and its one unique piece (the custom grouped sidebar) is a
+   dead-end projection Option 1 never needs.
+4. **The window is at its cheapest**: nothing reviewed, PT/ES frozen, the
+   translation backlog already anticipating a spine reorganization.
+   Deferral creates a second structural migration after review and
+   translation.
+
+### The amended Option 1, precisely
+
+Stations become the 12 parts; **keep the name "Station"** (Studio collides
+with the course's Friday studios); each existing station page = its part
+opener with a `#checkpoint` return anchor (no closer pages, no schema
+change); the six old parts survive as non-navigational intellectual arcs in
+the overview; an explicit **route graph** (entry / sequence / branch /
+optional-overlay / join / checkpoint / continue) becomes authoritative for
+BOTH HTML and companion-notebook navigation; ch33 fixed to `role: core`,
+retitled "From Dossier to Research Note"; A4 (station-kit completeness)
+stays a separate release gate — embedding does not solve it.
+
+### The ordered work plan (each step gated)
+
+1. Manifest-driven ToC generator, first reproducing today's ToC
+   byte-for-byte (behavior-neutral); retire the scaffold writer that can
+   overwrite `_quarto.yml`.
+2. Encode the route graph + single-page checkpoint protocol; generated
+   navigation replaces Quarto's default where they conflict. Gate:
+   automatic traversal of all five Station-5 routes (± overlay) and the
+   Station-10 genre routes — no unrelated branch, no cycles, no dead ends.
+3. The station-first flip as ONE atomic green migration (two relocations,
+   ch33 fix, 12-part ToC, preface/pointer rewrite). Gate: positions 29–35
+   exactly as D35 orders; seven display labels change; zero URL changes.
+4. Regenerate and verify every projection and rendered path, including
+   metadata links; declare HTML canonical or test PDF/Word projections
+   (Quarto ignores parts in Word/EPUB — linear formats get a generated
+   checkpoint block, no new URLs).
+5. Simulated pilots across the routes (failures = implementation defects);
+   THEN complete the A4 station kits; only then refreeze (v2) and resume
+   chapter review.
+6. PT/ES synchronized once, last, from the settled spine.
+
+### What would flip it back
+
+A same-content novice comparison favoring the six-part spine at Stations 5
+and 10; the lesson→station partition breaking down; or production testing
+showing station parts cannot project accessibly across required formats.
+
+## FINAL RECOMMENDATION (the loop's, unanimous without the calendar)
+
+**Amended Option 1 — the Twelve Stations become the book.**
+
+The options as they now stand, for Davi's D38 ruling:
+
+| Option | Standing | When it is the right choice |
+|---|---|---|
+| **1′ Amended Option 1** | **RECOMMENDED** — both partner tracks AND the re-adjudication | If the T&F proposal ToC may be revised before submission (consequence, not blocker: the "12 stations → 1 defensible project" ToC is arguably the stronger pitch) |
+| Option 5 (operational stations, six-part spine) | The fallback, fully specified | If the proposal must stay byte-identical through submission; ~90% of the work is shared and nothing is wasted by starting with it |
+| Option 2 (weave) | documented, not competitive | — |
+| Option 3 (path + field guide) | documented, rejected for novices | — |
+| Option 4 (merge) | rejected | — |
+
+**The one decision that is genuinely Davi's:** whether to revise the T&F
+proposal ToC before submission. Everything else follows mechanically from
+that answer, and steps 1–2 of the work plan are identical under both
+options, so work can begin before the ruling without prejudice.
