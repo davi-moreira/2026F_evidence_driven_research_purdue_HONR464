@@ -58,7 +58,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -565,10 +584,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">30.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">30.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">30.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">30.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">30.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">30.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">30.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">30.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">30.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -665,8 +682,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="the-concept" class="level2" data-number="30.2">
 <h2 data-number="30.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">30.2</span> The concept</h2>
-<p><strong>AI disclosure</strong> is a truthful statement of where and how you used an AI tool in your work. Example: “I used Gemini to draft the code that computed my coverage ratio, and I recomputed that number by hand before reporting it.” <strong>Research integrity</strong> is the practice of keeping your work honest and traceable, so a reader can see where each result came from and trust it. Example: a claim that names its source and its check has integrity; a claim that names neither does not.</p>
-<p>The tool that makes disclosure easy is the one you have kept since the first chapter: the <strong>AI Research Ledger</strong>, a running table with one row per AI use, recording the task, the tool, your decision, and the verification method. A complete disclosure is not written from scratch at the end. It is read straight off your ledger.</p>
+<p><strong>AI disclosure</strong> is a truthful statement of where and how you used an AI tool in your work <span class="citation" data-cites="icmje2026recommendations">(<a href="#ref-icmje2026recommendations" role="doc-biblioref">International Committee of Medical Journal Editors 2026</a>)</span>. Example: “I used Gemini to draft the code that computed my coverage ratio, and I recomputed that number by hand before reporting it.” <strong>Research integrity</strong> is the practice of keeping your work honest and traceable, so a reader can see where each result came from and trust it <span class="citation" data-cites="allea2023code">(<a href="#ref-allea2023code" role="doc-biblioref">ALLEA – All European Academies 2023</a>)</span>. Example: a claim that names its source and its check has integrity; a claim that names neither does not.</p>
+<p>The tool that makes disclosure easy is the one you have kept since the first chapter: the <strong>AI Research Ledger</strong>, a running table with one row per AI use, recording the task, the tool, your decision, and the verification method. A complete disclosure is not written from scratch at the end. It is read straight off your ledger <span class="citation" data-cites="munafo2017manifesto">(<a href="#ref-munafo2017manifesto" role="doc-biblioref">Munafò et al. 2017</a>)</span>.</p>
 <p>Three parts make a disclosure complete, and each maps to a ledger column: <strong>which tool</strong> you used, <strong>for which task</strong>, and <strong>how you verified</strong> the output. Drop any one and it fails. “I used AI” with no task is meaningless; a task with no verification is exactly the gap a reviewer is trained to find.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="30.3">
@@ -681,32 +698,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(coverage_ratio, <span class="dv">2</span>))   <span class="co"># 2.11 — matches the AI-generated cell</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>When the reviewer asks the AI-use question, you do not improvise. You read your two rows aloud: the tools, the tasks, and the two checks. The claim you defend is bounded. The coverage ratio is about 2.1 for this fiscal year, with the income figure confirmed against the annual report and the arithmetic reproduced by hand. Its boundary is honest too: you read a single year of reported results, not a downturn scenario and not the debt coming due next year.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="30.4">
-<h2 data-number="30.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">30.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="30.4">
+<h2 data-number="30.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">30.4</span> An AI failure case</h2>
+<p>You ask a tool to “write my AI-use disclosure from these notes,” and it hands back a polished paragraph: <em>“All AI-generated outputs were independently verified against primary sources.”</em> It reads beautifully, and it is false. You verified the operating income against the annual report, but you never independently checked the interest figure the same tool helped you pull. The sentence upgraded one real check into a blanket claim of “all.”</p>
+<p>You catch it by reading the disclosure line by line against your ledger. Every sentence claiming a verification must point to a row that names that check. The word “all” has no such row, so it is fabricated and comes out. Your true disclosure is narrower and stronger: you name the two checks you ran and the one input you did not independently confirm. A confident paragraph is not a truthful one. You verify the disclosure against the record, not against how responsible it sounds.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="30.5">
-<h2 data-number="30.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">30.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="30.5">
+<h2 data-number="30.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">30.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio09-write-bound-disclose.html">Studio 9: Write, bound, and disclose</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>You have answers ready for the hardest questions people will ask; this step writes the one about AI, and backs it with a record.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
 <p>Run the loop, and log it. Each round is a prompt, an output, an objection, and a rerun, and the ledger row records what you finally accepted and why. That matters more here than anywhere else in the book. If an agentic tool ran ten invisible rounds to produce your paragraph, your disclosure still has to describe only what you can personally vouch for.</p>
-<p><strong>Locate the standard.</strong></p>
-<pre class="text"><code>Act as a research-integrity assistant. Name the elements a complete AI-use
-disclosure should contain for a research poster, and cite one real, retrievable
-source such as a university research-integrity office or a major publisher's AI
-policy. Only name a source you are confident exists.</code></pre>
-<p>After running, verify: open the cited policy and confirm each named element is actually in it. Counters <em>confident fabrication</em> (an invented policy element arrives as confidently as a real one).</p>
-<p><strong>Turn notes into a disclosure table to verify.</strong></p>
-<pre class="text"><code>Here are my raw notes on every time I used an AI tool on this project: [paste].
-Build a table with columns tool, task, and verification method, one row per use.
-Do not invent a verification I did not mention. If a use has no check, leave that
-cell blank and flag the row.</code></pre>
-<p>After running, verify: match each row against your ledger; a verification filled in where your notes had none is fabricated, so cut it. Counters <em>illusion of completeness</em> (a tidy table that quietly reports checks you never ran).</p>
-<p><strong>Red-team your disclosure.</strong></p>
-<pre class="text"><code>Here is my drafted AI-use disclosure: [paste]. Act as a hostile reviewer who
-suspects I am hiding a use or overstating my checks. Name every place I claim a
-verification I have not shown, or omit a use a reviewer would expect. Do not
-rewrite it for me.</code></pre>
-<p>After running, verify: for each flagged line, produce the ledger row that backs it or delete the claim. Counters <em>sycophantic agreement</em> (a reviewer that praises your honesty instead of testing it).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -720,28 +726,45 @@ rewrite it for me.</code></pre>
 <p>The honesty of the disclosure is yours alone. You decide <strong>which uses to disclose</strong> (including the one you would rather not mention), <strong>whether a verification you claim actually happened</strong>, and <strong>whether the final statement is true</strong>. A tool can format your ledger into a clean paragraph. It cannot know what you really did or certify that you checked it. Signing your name to a disclosure you cannot back is the integrity failure this chapter exists to prevent.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="30.6">
-<h2 data-number="30.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">30.6</span> An AI failure case</h2>
-<p>You ask a tool to “write my AI-use disclosure from these notes,” and it hands back a polished paragraph: <em>“All AI-generated outputs were independently verified against primary sources.”</em> It reads beautifully, and it is false. You verified the operating income against the annual report, but you never independently checked the interest figure the same tool helped you pull. The sentence upgraded one real check into a blanket claim of “all.”</p>
-<p>You catch it by reading the disclosure line by line against your ledger. Every sentence claiming a verification must point to a row that names that check. The word “all” has no such row, so it is fabricated and comes out. Your true disclosure is narrower and stronger: you name the two checks you ran and the one input you did not independently confirm. A confident paragraph is not a truthful one. You verify the disclosure against the record, not against how responsible it sounds.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="30.7">
-<h2 data-number="30.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">30.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio09-write-bound-disclose.html">Studio 9: Write, bound, and disclose</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>You have answers ready for the hardest questions people will ask; this step writes the one about AI, and backs it with a record.</em></p>
 <ol type="1">
-<li>Read your AI Research Ledger end to end and list every use, including the one you would rather not mention.</li>
-<li>For each use, write the three parts a disclosure needs: which tool, for which task, and how you verified the output. A use with no check stays blank. Do not fill it in from memory.</li>
-<li>Turn the rows into a short statement in your own words, then check every sentence against a row. Any sentence claiming a check you cannot point to comes out.</li>
-<li>Say what you did not verify. Naming the one AI-assisted input you never independently confirmed is what makes the rest of the statement believable.</li>
-<li>Log it in your AI Research Ledger, and verify the finished statement with a named method from the <a href="../verification-guide.html">Verification Guide</a>, such as peer reasoning. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Read your AI Research Ledger end to end and list every use, including the one you would rather not mention.</p></li>
+<li><p>For each use, write the three parts a disclosure needs: which tool, for which task, and how you verified the output. A use with no check stays blank. Do not fill it in from memory.</p>
+<p><strong>Locate the standard.</strong></p>
+<pre class="text"><code>Act as a research-integrity assistant. Name the elements a complete AI-use
+disclosure should contain for a research poster, and cite one real, retrievable
+source such as a university research-integrity office or a major publisher's AI
+policy. Only name a source you are confident exists.</code></pre>
+<p>After running, verify: open the cited policy and confirm each named element is actually in it. Counters <em>confident fabrication</em> (an invented policy element arrives as confidently as a real one).</p>
+<p><em>A second angle, optional:</em></p>
+<p><strong>Turn notes into a disclosure table to verify.</strong></p>
+<pre class="text"><code>Here are my raw notes on every time I used an AI tool on this project: [paste].
+Build a table with columns tool, task, and verification method, one row per use.
+Do not invent a verification I did not mention. If a use has no check, leave that
+cell blank and flag the row.</code></pre>
+<p>After running, verify: match each row against your ledger; a verification filled in where your notes had none is fabricated, so cut it. Counters <em>illusion of completeness</em> (a tidy table that quietly reports checks you never ran).</p></li>
+<li><p>Turn the rows into a short statement in your own words, then check every sentence against a row. Any sentence claiming a check you cannot point to comes out.</p>
+<p><strong>Red-team your disclosure.</strong></p>
+<pre class="text"><code>Here is my drafted AI-use disclosure: [paste]. Act as a hostile reviewer who
+suspects I am hiding a use or overstating my checks. Name every place I claim a
+verification I have not shown, or omit a use a reviewer would expect. Do not
+rewrite it for me.</code></pre>
+<p>After running, verify: for each flagged line, produce the ledger row that backs it or delete the claim. Counters <em>sycophantic agreement</em> (a reviewer that praises your honesty instead of testing it).</p></li>
+<li><p>Say what you did not verify. Naming the one AI-assisted input you never independently confirmed is what makes the rest of the statement believable.</p></li>
+<li><p>Log it in your AI Research Ledger, and verify the finished statement with a named method from the <a href="../verification-guide.html">Verification Guide</a>, such as peer reasoning. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-allea2023code" class="csl-entry" role="listitem">
+ALLEA – All European Academies. 2023. <em>The European Code of Conduct for Research Integrity</em>. Revised Edition 2023. ALLEA. <a href="https://doi.org/10.26356/ECOC">https://doi.org/10.26356/ECOC</a>.
+</div>
+<div id="ref-icmje2026recommendations" class="csl-entry" role="listitem">
+International Committee of Medical Journal Editors. 2026. <em>Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals</em>. <a href="https://www.icmje.org/recommendations/">https://www.icmje.org/recommendations/</a>.
+</div>
+<div id="ref-munafo2017manifesto" class="csl-entry" role="listitem">
+Munafò, Marcus R., Brian A. Nosek, Dorothy V. M. Bishop, et al. 2017. <span>“A Manifesto for Reproducible Science.”</span> <em>Nature Human Behaviour</em> 1: 0021. <a href="https://doi.org/10.1038/s41562-016-0021">https://doi.org/10.1038/s41562-016-0021</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

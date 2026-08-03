@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">32.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">32.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">32.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">32.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">32.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">32.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">32.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">32.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">32.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -632,13 +649,13 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="32.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">32.2</span> The concept</h2>
 <p>The decision is one judgment made four ways, and each way has a name.</p>
 <ul>
-<li><strong>Headline claim.</strong> The one sentence you want a reader to leave with. Its verb carries the whole meaning. Example: “Version B raised our sales” promises far more than “Version B sold slightly more.”</li>
+<li><strong>Headline claim.</strong> The one sentence you want a reader to leave with <span class="citation" data-cites="erren2007poster">(<a href="#ref-erren2007poster" role="doc-biblioref">Erren and Bourne 2007</a>)</span>. Its verb carries the whole meaning. Example: “Version B raised our sales” promises far more than “Version B sold slightly more.”</li>
 <li><strong>Claim boundary.</strong> The line between what your evidence licenses and what it does not. Example: an observational comparison may say “is associated with,” never “causes.”</li>
 <li><strong>Compass position.</strong> The kind and reach of the question your project answered, which fixes what the headline is allowed to say. Example: a descriptive question about the weeks you measured, not a causal claim about why.</li>
 <li><strong>Figure honesty.</strong> The rule that a figure’s picture cannot say more than its data. Example: if the real gap is three points, the bars should look about three points apart, not twice as tall.</li>
 <li><strong>Truncated axis.</strong> An axis that starts above the bottom of its scale instead of at the floor. Example: a completion-rate axis running 70 to 76 instead of 0 to 100 magnifies a small difference into a cliff.</li>
-<li><strong>Uncertainty on the page.</strong> The interval or caveat printed in the same glance as the claim, not buried in a footnote. Example: a “±4 points” error bar drawn right on the headline figure.</li>
-<li><strong>Accessibility.</strong> Whether your message reaches readers who perceive differently. Example: a red-green bar pair carries nothing for a red-green color-blind reader, roughly 1 in 12 men.</li>
+<li><strong>Uncertainty on the page.</strong> The interval or caveat printed in the same glance as the claim, not buried in a footnote <span class="citation" data-cites="alley2013craft">(<a href="#ref-alley2013craft" role="doc-biblioref">Alley 2013</a>)</span>. Example: a “±4 points” error bar drawn right on the headline figure.</li>
+<li><strong>Accessibility.</strong> Whether your message reaches readers who perceive differently <span class="citation" data-cites="crameri2020colour">(<a href="#ref-crameri2020colour" role="doc-biblioref">Crameri et al. 2020</a>)</span>. Example: a red-green bar pair carries nothing for a red-green color-blind reader, roughly 1 in 12 men.</li>
 <li><strong>Redundant encoding.</strong> Carrying the same distinction in more than one channel, so no single channel is load-bearing. Example: label each bar with its value and give each a pattern, so color becomes a bonus, not the only signal.</li>
 </ul>
 <p>A poster that fails any one of these overclaims, even when its numbers are exactly right.</p>
@@ -649,31 +666,21 @@ ul.task-list li input[type="checkbox"] {
 <p>Now run the decision. <strong>Figure honesty:</strong> the real gap is 3 points, but on an axis floored at 70 the taller bar is drawn four times the height of the shorter one, so the picture claims a landslide the data never delivered. <strong>Uncertainty on the page:</strong> the intervals overlap, so a difference the figure sells as decisive might be noise, and nothing on the board shows it. <strong>Claim boundary:</strong> “BOOSTS” is a decisive, causal verb for a three-point, overlapping gap. <strong>Accessibility:</strong> told apart by red and green alone, the bars carry no information for a color-blind reader, and a screen reader reads no value off the image.</p>
 <p>The fixed figure keeps every number and changes only the honesty. You run the axis 0 to 100, print each mean as a label on its bar, draw the ±4-point interval on top, separate the bars with a color-blind-safe pair plus a hatch pattern, and soften the headline to “Version B completed about 3 points higher, within overlapping intervals.” Same data, a picture that now tells the truth.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="32.4">
-<h2 data-number="32.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">32.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="32.4">
+<h2 data-number="32.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">32.4</span> An AI failure case</h2>
+<p>You paste the described figure and ask your AI for the hardest reviewer questions. It returns a confident, well-organized list of six: sample size, how many weeks were sampled, generalization to other product pages, seasonal traffic, and two more. Every question is reasonable, and not one mentions the truncated axis, the single worst flaw on the board. The list looks complete, so it is tempting to trust it and move on.</p>
+<p>You catch it by mapping each returned question to an audit. Claim boundary, sampling, and methods all draw questions; figure honesty draws none. That empty row is the finding. You check the number your own cell printed, the exaggeration the floored axis creates, and you add the figure-honesty hit the tidy list skipped. Fluency is not completeness. The check lives in your own audit list, the one you wrote before you asked.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="32.5">
-<h2 data-number="32.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">32.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="32.5">
+<h2 data-number="32.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">32.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio10-adapt-and-defend.html">Studio 10: Adapt and defend</a>.</strong> This lesson adapts your work to the <strong>poster</strong> format. Work the format your venue actually asks for; the studio page routes you. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your claims now have rows and traces; this step turns them into the one page, or the one-figure summary, that a stranger meets first.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own audit first, then delegate. Each prompt below is a checkable job, not a request for a verdict.</p>
 <p>Run these as a loop. First answer, then your objection, then the sharper answer. The second and third rounds are usually where the useful criticism shows up, because a first pass tends to be generic. If your tool runs its own rounds before replying, you get the polish without seeing the drafts, so your own audit list matters more, not less.</p>
-<p><strong>Locate the color-only channels.</strong></p>
-<pre class="text"><code>Here is the code that draws my poster's headline figure: [paste the cell].
-List every place this figure encodes a meaningful distinction using color.
-For each, tell me exactly what a red-green color-blind reader and a
-screen-reader user would fail to receive. Do not rewrite the figure.</code></pre>
-<p>After running, verify: render your figure and check each named channel against the picture you can see. Counters <em>plausible-but-wrong-method</em> (generic accessibility advice that does not match how your figure is actually drawn).</p>
-<p><strong>List the skeptic’s questions, then map them to audits.</strong></p>
-<pre class="text"><code>Act as a hostile poster reviewer. My headline figure is a bar chart of mean
-checkout completion rate for two page versions, y-axis 70 to 76, red versus green
-bars, no interval shown, titled "Version B BOOSTS completion." Generate the six
-hardest questions you would ask, then name the one this figure cannot answer at all.</code></pre>
-<p>After running, verify: map each question to one audit (claim boundary, figure honesty, uncertainty, accessibility); an audit with no question is the gap, and the truncated axis had better appear. Counters <em>illusion of completeness</em> (a long, tidy list that quietly skips the flaw that matters most).</p>
-<p><strong>Red-team the headline verb.</strong></p>
-<pre class="text"><code>Here is my headline: "[paste it]" and my compass position: "[descriptive /
-associational / causal]". Act as a skeptical reviewer and find every word that
-claims more than that position licenses. List the exact words. Do not soften them.</code></pre>
-<p>After running, verify: if it praises the headline or finds nothing, push back and demand the single worst word, then check each flagged word against your interval. Counters <em>sycophantic agreement</em> (praise that reviews your nerve, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -687,28 +694,44 @@ claims more than that position licenses. List the exact words. Do not soften the
 <p>The words of your headline and the verb that carries its boundary are yours. So is the judgment that the figure’s impression matches its number, the call that the uncertainty is visible in the same glance, and the decision that the page is honest enough to lock. AI can generate the skeptic’s questions and scan your code for color-only channels. It cannot see your board, and it cannot decide the claim was earned. Those stay with you.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="32.6">
-<h2 data-number="32.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">32.6</span> An AI failure case</h2>
-<p>You paste the described figure and ask your AI for the hardest reviewer questions. It returns a confident, well-organized list of six: sample size, how many weeks were sampled, generalization to other product pages, seasonal traffic, and two more. Every question is reasonable, and not one mentions the truncated axis, the single worst flaw on the board. The list looks complete, so it is tempting to trust it and move on.</p>
-<p>You catch it by mapping each returned question to an audit. Claim boundary, sampling, and methods all draw questions; figure honesty draws none. That empty row is the finding. You check the number your own cell printed, the exaggeration the floored axis creates, and you add the figure-honesty hit the tidy list skipped. Fluency is not completeness. The check lives in your own audit list, the one you wrote before you asked.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="32.7">
-<h2 data-number="32.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">32.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio10-adapt-and-defend.html">Studio 10: Adapt and defend</a>.</strong> This lesson adapts your work to the <strong>poster</strong> format. Work the format your venue actually asks for; the studio page routes you. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your claims now have rows and traces; this step turns them into the one page, or the one-figure summary, that a stranger meets first.</em></p>
 <ol type="1">
-<li>Choose the single figure that carries your lead claim, and draw it with the axis running the full scale of the measure.</li>
-<li>Print each value as a label on the mark it belongs to, and draw the interval right on the figure so the uncertainty arrives in the same glance as the number.</li>
-<li>Carry every meaningful distinction in at least two channels, so color is never the only signal a reader can lose.</li>
-<li>Write the headline above the figure using the verb your claim boundary allows, and lay out the rest of the page so a stranger finds that headline in under a minute.</li>
-<li>Log it in your AI Research Ledger, and verify at least one number on the page with a named method from the <a href="../verification-guide.html">Verification Guide</a>. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Choose the single figure that carries your lead claim, and draw it with the axis running the full scale of the measure.</p></li>
+<li><p>Print each value as a label on the mark it belongs to, and draw the interval right on the figure so the uncertainty arrives in the same glance as the number.</p></li>
+<li><p>Carry every meaningful distinction in at least two channels, so color is never the only signal a reader can lose.</p>
+<p><strong>Locate the color-only channels.</strong></p>
+<pre class="text"><code>Here is the code that draws my poster's headline figure: [paste the cell].
+List every place this figure encodes a meaningful distinction using color.
+For each, tell me exactly what a red-green color-blind reader and a
+screen-reader user would fail to receive. Do not rewrite the figure.</code></pre>
+<p>After running, verify: render your figure and check each named channel against the picture you can see. Counters <em>plausible-but-wrong-method</em> (generic accessibility advice that does not match how your figure is actually drawn).</p></li>
+<li><p>Write the headline above the figure using the verb your claim boundary allows, and lay out the rest of the page so a stranger finds that headline in under a minute.</p>
+<p><strong>List the skeptic’s questions, then map them to audits.</strong></p>
+<pre class="text"><code>Act as a hostile poster reviewer. My headline figure is a bar chart of mean
+checkout completion rate for two page versions, y-axis 70 to 76, red versus green
+bars, no interval shown, titled "Version B BOOSTS completion." Generate the six
+hardest questions you would ask, then name the one this figure cannot answer at all.</code></pre>
+<p>After running, verify: map each question to one audit (claim boundary, figure honesty, uncertainty, accessibility); an audit with no question is the gap, and the truncated axis had better appear. Counters <em>illusion of completeness</em> (a long, tidy list that quietly skips the flaw that matters most).</p>
+<p><em>A second angle, optional:</em></p>
+<p><strong>Red-team the headline verb.</strong></p>
+<pre class="text"><code>Here is my headline: "[paste it]" and my compass position: "[descriptive /
+associational / causal]". Act as a skeptical reviewer and find every word that
+claims more than that position licenses. List the exact words. Do not soften them.</code></pre>
+<p>After running, verify: if it praises the headline or finds nothing, push back and demand the single worst word, then check each flagged word against your interval. Counters <em>sycophantic agreement</em> (praise that reviews your nerve, not your evidence).</p></li>
+<li><p>Log it in your AI Research Ledger, and verify at least one number on the page with a named method from the <a href="../verification-guide.html">Verification Guide</a>. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-alley2013craft" class="csl-entry" role="listitem">
+Alley, Michael. 2013. <em>The Craft of Scientific Presentations: Critical Steps to Succeed and Critical Errors to Avoid</em>. 2nd ed. Springer. <a href="https://doi.org/10.1007/978-1-4419-8279-7">https://doi.org/10.1007/978-1-4419-8279-7</a>.
+</div>
+<div id="ref-crameri2020colour" class="csl-entry" role="listitem">
+Crameri, Fabio, Grace E. Shephard, and Philip J. Heron. 2020. <span>“The Misuse of Colour in Science Communication.”</span> <em>Nature Communications</em> 11: 5444. <a href="https://doi.org/10.1038/s41467-020-19160-7">https://doi.org/10.1038/s41467-020-19160-7</a>.
+</div>
+<div id="ref-erren2007poster" class="csl-entry" role="listitem">
+Erren, Thomas C., and Philip E. Bourne. 2007. <span>“Ten Simple Rules for a Good Poster Presentation.”</span> <em>PLOS Computational Biology</em> 3 (5): e102. <a href="https://doi.org/10.1371/journal.pcbi.0030102">https://doi.org/10.1371/journal.pcbi.0030102</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

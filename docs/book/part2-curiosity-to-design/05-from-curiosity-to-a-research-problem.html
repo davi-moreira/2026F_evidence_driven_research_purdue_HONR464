@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">6.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">6.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">6.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">6.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">6.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">6.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">6.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">6.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">6.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -628,7 +645,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-concept" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">6.2</span> The concept</h2>
-<p>Turning curiosity into a problem is a funnel with four stops. Each stop throws away vagueness the stop above it still allowed.</p>
+<p>Turning curiosity into a problem is a funnel with four stops. Each stop throws away vagueness the stop above it still allowed <span class="citation" data-cites="booth2024craft">(<a href="#ref-booth2024craft" role="doc-biblioref">Booth et al. 2024</a>)</span>.</p>
 <ul>
 <li><strong>Curiosity</strong>: a felt interest with no edges yet. Example: <em>“why do some small businesses make it through a downturn when others close?”</em> You cannot collect evidence on it, because it never says who or what to look at.</li>
 <li><strong>Topic</strong>: a curiosity with edges, a territory someone could gather evidence inside. Example: <em>“cash reserves and survival among independent restaurants.”</em></li>
@@ -641,7 +658,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Target population</strong>: the full group the question is really about, beyond the handful you reach. Example: all independent restaurants in that city, not only the thirty whose owners answered you.</li>
 <li><strong>Outcome</strong>: the observable thing that varies, the quantity you actually record. Example: whether the restaurant was still open in 2022. It must be measurable, even if imperfectly.</li>
 </ul>
-<p>Finally, three tests decide whether a candidate problem is worth months of your work. <strong>Importance</strong> asks whether anyone beyond you would care about the answer. <strong>Feasibility</strong> asks whether you can actually get the evidence, with the access and time you have. <strong>Contribution</strong> asks whether the answer adds something not already settled, since a ten-minute search that finds it already known kills the contribution.</p>
+<p>Finally, three tests decide whether a candidate problem is worth months of your work <span class="citation" data-cites="hulley2013designing">(<a href="#ref-hulley2013designing" role="doc-biblioref">Hulley et al. 2013</a>)</span>. <strong>Importance</strong> asks whether anyone beyond you would care about the answer. <strong>Feasibility</strong> asks whether you can actually get the evidence, with the access and time you have. <strong>Contribution</strong> asks whether the answer adds something not already settled, since a ten-minute search that finds it already known kills the contribution.</p>
 <p>One more lens sharpens all three, and it comes from information theory. A 2026 essay in <em>Science</em>, “Advancing science by designing for surprise” (Evans, Petroff, and King 2026), starts from a blunt fact: an answer that confirms what everyone already believes teaches almost nothing. <strong>Surprise</strong> is the distance between what informed people expect and what the evidence shows, and it is what makes an answer informative. Example: if everyone advising first-years already assumes more walking goes with better sleep, confirming the link changes no advice, while finding no link would change it overnight. The essay points to large studies of published papers in which the most surprising ones were about five times more likely to land among the most-cited work. That is an association in citation data, not a law of research quality: citations measure attention, the studies state their own limits, and a surprising answer can still be wrong. It also comes with a warning you should carry: the more surprising the claim, the more evidence it takes to support it, so surprise is a place to aim your question, never a license to inflate your answer.</p>
 <p>The essay suggests a discipline you can adopt today. Before you look at any evidence, write down the answer you expect, and name the person for whom a different answer would be genuinely surprising. That written sentence is your <strong>expected answer</strong>: the prediction your evidence will later confirm or, more valuably, overturn. Example: “I expect heavier walkers to sleep better, and a residence-life advisor would be surprised if they did not.” When you reach your results, the gap between that sentence and what you found is the most honest measure of what your project taught anyone.</p>
 <p>Once you have a question, you will also classify what <em>kind</em> of answer it wants. That is the inquiry compass, and it is the whole job of the next chapter. For now, the work is the funnel.</p>
@@ -652,30 +669,20 @@ ul.task-list li input[type="checkbox"] {
 <p>Now sharpen it into an <strong>answerable question</strong>: <em>“among residence-hall first-years, do those who average more than 8,000 steps a day report better sleep quality than those who average fewer than 4,000?”</em> The three carried terms snap into place. The <strong>unit</strong> is one first-year. The <strong>outcome</strong> is a sleep-quality rating, say a 1-to-10 self-report you collect on a phone. The <strong>population</strong> is residence-hall first-years, not the whole campus.</p>
 <p>Now run the three tests. It clears <strong>importance</strong> (anyone advising sleep-deprived first-years wants the answer), <strong>feasibility</strong> (step counts and a nightly rating are both collectable in a few weeks), and <strong>contribution</strong> (the activity-and-sleep link is studied broadly in adults but far less in this dorm-living, first-year group). The curiosity is now a problem you could defend.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">6.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">6.4</span> An AI failure case</h2>
+<p>You ask a tool to <em>“turn my curiosity about sleep and health into a research question.”</em> It replies, with total confidence: <em>“Does blue-light exposure before bed reduce REM sleep in college undergraduates? Studies show blue light suppresses melatonin.”</em> It sounds authoritative, and it is wrong for you.</p>
+<p>It fails in two ways. First, it silently changed your scope. You never chose blue light or REM sleep, yet the question now hangs on both. That is a <strong>silent scope change</strong>, and you catch it by reading the tool’s units, outcome, and population against the ones you committed. Yours were steps and a sleep rating, not screens and REM. Second, the melatonin line is stated as settled fact with no source. Before repeating it, you find and open a real study yourself, and if you cannot, you treat it as <strong>confident fabrication</strong> and drop it.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">6.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">6.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio02-frame-the-inquiry.html">Studio 2: Frame the inquiry</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your three curiosities are still only curiosities. This step turns one of them into something evidence can actually answer.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first. Only then open the tool, so its output has something of yours to disagree with. And plan on going around more than once. The first list of candidate problems is almost never the useful one; you narrow, re-ask, and narrow again. The one thing that must not drift across those cycles is whose curiosity is being scoped.</p>
-<p><strong>Locate what is already known</strong> (before you claim your problem is new):</p>
-<pre><code>Act as a research-scoping assistant. My topic is [your topic]. List what is
-already reasonably well established about it and where a genuine open question
-might remain. For every established fact, give one real, retrievable source I
-can open myself. Mark anything you are unsure exists.</code></pre>
-<p><em>After running, verify:</em> open each source before you trust it. This counters <strong>confident fabrication</strong>, where a fluent answer cites a real-sounding study that does not exist.</p>
-<p><strong>Widen a curiosity into candidates you check:</strong></p>
-<pre><code>Here is my curiosity: [one sentence]. Produce five candidate research problems
-inside it. For each, name its units of analysis, its outcome, and its target
-population, in a table. Do not add any topic I did not mention.</code></pre>
-<p><em>After running, verify:</em> check each row against the curiosity you actually wrote. This counters <strong>silent scope change</strong>, where the tool quietly answers a nearby question and hands it back as yours.</p>
-<p><strong>Red-team the problem you chose:</strong></p>
-<pre><code>Act as a hostile grant reviewer. Here is the research problem I want to commit
-months of work to: [paste it]. Argue the strongest case that it is not worth
-doing. Attack it on importance, on feasibility, and on whether it adds anything
-new.</code></pre>
-<p><em>After running, verify:</em> keep only the objections that survive your own reasoning. This counters <strong>sycophantic agreement</strong>, where a tool praises your idea because you proposed it.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -689,30 +696,42 @@ new.</code></pre>
 <p>Three calls stay yours alone. <strong>Which problem</strong> you commit to. <strong>How you word</strong> the question, including its units, outcome, and population. And the <strong>judgment</strong> on whether it is important and genuinely new. A tool can widen your options and attack your choice. It cannot make the choice, because only you carry the reasons you will have to give when someone asks why this problem and not another.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">6.6</span> An AI failure case</h2>
-<p>You ask a tool to <em>“turn my curiosity about sleep and health into a research question.”</em> It replies, with total confidence: <em>“Does blue-light exposure before bed reduce REM sleep in college undergraduates? Studies show blue light suppresses melatonin.”</em> It sounds authoritative, and it is wrong for you.</p>
-<p>It fails in two ways. First, it silently changed your scope. You never chose blue light or REM sleep, yet the question now hangs on both. That is a <strong>silent scope change</strong>, and you catch it by reading the tool’s units, outcome, and population against the ones you committed. Yours were steps and a sleep rating, not screens and REM. Second, the melatonin line is stated as settled fact with no source. Before repeating it, you find and open a real study yourself, and if you cannot, you treat it as <strong>confident fabrication</strong> and drop it.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">6.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio02-frame-the-inquiry.html">Studio 2: Frame the inquiry</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your three curiosities are still only curiosities. This step turns one of them into something evidence can actually answer.</em></p>
 <ol type="1">
-<li>Take the strongest of your three and walk it down the funnel in writing: curiosity, topic, research problem, answerable question. One line per stop, so you can see where the vagueness leaves.</li>
-<li>Under the question, name its three carried terms out loud: what one unit is, exactly what you would record as the outcome, and the population the answer is meant to speak for.</li>
-<li>Score it on importance, feasibility, and contribution, one honest sentence each. Feasibility means the access, data, and time you actually have, not the ones you wish you had.</li>
-<li>Write a second candidate problem from the same curiosity and scope it the same way. Then choose between them, and write one sentence on why the other one lost.</li>
-<li>Under the question you kept, write your expected answer in one sentence, and name one real person or role for whom a different answer would be genuinely surprising. Keep this sentence; late in the book you will hold your evidence up against it.</li>
-<li>Ask an AI to attack your chosen problem on all three tests, and keep only the objections that survive your own reasoning.</li>
-<li>Log it in your AI Research Ledger, and verify your question with a named method from the <a href="../verification-guide.html">Verification Guide</a>. The fitting method here is peer reasoning: hand the single sentence to someone who knows nothing about your project and ask them to tell you, from that sentence alone, what one unit is, what you would record, and who the answer is about. If they stall, the missing term is your next revision. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Take the strongest of your three and walk it down the funnel in writing: curiosity, topic, research problem, answerable question. One line per stop, so you can see where the vagueness leaves.</p></li>
+<li><p>Under the question, name its three carried terms out loud: what one unit is, exactly what you would record as the outcome, and the population the answer is meant to speak for.</p></li>
+<li><p>Score it on importance, feasibility, and contribution, one honest sentence each. Feasibility means the access, data, and time you actually have, not the ones you wish you had.</p>
+<p><strong>Locate what is already known</strong> (before you claim your problem is new):</p>
+<pre><code>Act as a research-scoping assistant. My topic is [your topic]. List what is
+already reasonably well established about it and where a genuine open question
+might remain. For every established fact, give one real, retrievable source I
+can open myself. Mark anything you are unsure exists.</code></pre>
+<p><em>After running, verify:</em> open each source before you trust it. This counters <strong>confident fabrication</strong>, where a fluent answer cites a real-sounding study that does not exist.</p></li>
+<li><p>Write a second candidate problem from the same curiosity and scope it the same way. Then choose between them, and write one sentence on why the other one lost.</p>
+<p><strong>Widen a curiosity into candidates you check:</strong></p>
+<pre><code>Here is my curiosity: [one sentence]. Produce five candidate research problems
+inside it. For each, name its units of analysis, its outcome, and its target
+population, in a table. Do not add any topic I did not mention.</code></pre>
+<p><em>After running, verify:</em> check each row against the curiosity you actually wrote. This counters <strong>silent scope change</strong>, where the tool quietly answers a nearby question and hands it back as yours.</p></li>
+<li><p>Under the question you kept, write your expected answer in one sentence, and name one real person or role for whom a different answer would be genuinely surprising. Keep this sentence; late in the book you will hold your evidence up against it.</p></li>
+<li><p>Ask an AI to attack your chosen problem on all three tests, and keep only the objections that survive your own reasoning.</p>
+<p><strong>Red-team the problem you chose:</strong></p>
+<pre><code>Act as a hostile grant reviewer. Here is the research problem I want to commit
+months of work to: [paste it]. Argue the strongest case that it is not worth
+doing. Attack it on importance, on feasibility, and on whether it adds anything
+new.</code></pre>
+<p><em>After running, verify:</em> keep only the objections that survive your own reasoning. This counters <strong>sycophantic agreement</strong>, where a tool praises your idea because you proposed it.</p></li>
+<li><p>Log it in your AI Research Ledger, and verify your question with a named method from the <a href="../verification-guide.html">Verification Guide</a>. The fitting method here is peer reasoning: hand the single sentence to someone who knows nothing about your project and ask them to tell you, from that sentence alone, what one unit is, what you would record, and who the answer is about. If they stall, the missing term is your next revision. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-booth2024craft" class="csl-entry" role="listitem">
+Booth, Wayne C., Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, and William T. FitzGerald. 2024. <em>The Craft of Research</em>. 5th ed. University of Chicago Press. <a href="https://press.uchicago.edu/ucp/books/book/chicago/C/bo215874008.html">https://press.uchicago.edu/ucp/books/book/chicago/C/bo215874008.html</a>.
+</div>
+<div id="ref-hulley2013designing" class="csl-entry" role="listitem">
+Hulley, Stephen B., Steven R. Cummings, Warren S. Browner, Deborah G. Grady, and Thomas B. Newman. 2013. <em>Designing Clinical Research</em>. 4th ed. Lippincott Williams &amp; Wilkins. <a href="https://books.google.com/books?id=_b62TBnoppYC">https://books.google.com/books?id=_b62TBnoppYC</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

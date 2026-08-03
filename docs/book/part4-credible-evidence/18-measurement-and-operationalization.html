@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">21.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">21.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">21.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">21.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">21.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">21.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">21.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">21.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">21.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -637,10 +654,10 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Indicator</strong>: the exact number a procedure produces. Example: the mean response to the item “I would recommend this company as a place to work,” rated from 1 (strongly disagree) to 7 (strongly agree), averaged over everyone who answered.</li>
 </ul>
 <p>Two questions decide whether the swap holds, and both are questions about a claim you intend to make, not badges an instrument earns once.</p>
-<p><strong>Measurement validity</strong> asks whether accumulated evidence supports the specific meaning you attach to your number, for the specific use you have in mind. Example: a site’s mean recommend-a-friend rating may well support “employees who answered expressed more willingness to recommend this workplace.” That same number does not by itself support “employees here are more engaged,” because engagement includes burnout and whether people feel their work matters; a broader argument, with more evidence, might eventually reach further. Validity is not a stamp the rating carries around. It belongs to a claim: this number, read this way, used for this purpose, with evidence behind it. Change the reading or the use and you need evidence again.</p>
+<p><strong>Measurement validity</strong> asks whether accumulated evidence supports the specific meaning you attach to your number, for the specific use you have in mind <span class="citation" data-cites="aera2014standards">(<a href="#ref-aera2014standards" role="doc-biblioref">American Educational Research Association et al. 2014</a>)</span>. Example: a site’s mean recommend-a-friend rating may well support “employees who answered expressed more willingness to recommend this workplace.” That same number does not by itself support “employees here are more engaged,” because engagement includes burnout and whether people feel their work matters; a broader argument, with more evidence, might eventually reach further. Validity is not a stamp the rating carries around. It belongs to a claim: this number, read this way, used for this purpose, with evidence behind it. Change the reading or the use and you need evidence again.</p>
 <p><strong>Measurement reliability</strong> asks whether your number holds still when you repeat the measurement, and it means nothing until you say <em>what</em> repeats. Repeat the occasion: re-ask the same people two weeks later and see whether their answers land in about the same place. That check only means something if the thing you measure should have held still over those two weeks, and if the first asking did not change the second answer; for a fast-moving mood, a different answer is news, not error. Repeat the rater: have two trained coders score the same speeches and compare. Repeat the items: for a questionnaire with many questions about one construct, split those questions into two comparable halves, score each half for every respondent, and see whether the two halves agree. That last one is <strong>split-half reliability</strong>, agreement between two halves of the items on the same people. Example: a twelve-item scale gives each employee an odd-item score and an even-item score, and you check that a person scoring high on one scores high on the other. Two cautions come with it. The halves have to be comparable, not just odd-and-even by accident of order. And each half is only half as long as the real scale, so the raw agreement between them understates the full scale’s reliability; statisticians apply a standard length correction to get from one to the other.</p>
 <p>One warning saves a common wasted afternoon. You split items, never people. Comparing the average of one half of your respondents against the other half tells you how much a group average wobbles between samples of people, which is a real thing to know and an entirely different question. It says nothing about whether your instrument reads consistently.</p>
-<p>Reliability feeds validity without settling it. An indicator can be perfectly reliable and still support the wrong claim: a bathroom scale reads your weight the same way five times in a row, and weight is still a poor stand-in for “fitness.”</p>
+<p>Reliability feeds validity without settling it. An indicator can be perfectly reliable and still support the wrong claim: a bathroom scale reads your weight the same way five times in a row, and weight is still a poor stand-in for “fitness <span class="citation" data-cites="cronbach1955construct">(<a href="#ref-cronbach1955construct" role="doc-biblioref">Cronbach and Meehl 1955</a>)</span>.”</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="21.3">
 <h2 data-number="21.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">21.3</span> A worked example</h2>
@@ -649,31 +666,20 @@ ul.task-list li input[type="checkbox"] {
 <p>Before you trust a single reading, you check reliability. You re-ask a random tenth of respondents two weeks later and compare their two answers. They land close, so the item is repeatable rather than a coin flip dressed as data. Then you begin the validity argument by naming what the indicator ignores. Naming omissions starts that argument; it does not finish it. A recommend-a-friend rating says nothing about burnout, about whether pay feels fair, or about whether people believe their work matters. It also cannot hear from the people who already quit, which is exactly the group an engagement question most wants to reach. It is one true facet, not the whole of engagement.</p>
 <p>That honesty sets your claim boundary. You can defend this: “the pilot sites averaged higher willingness to recommend the company than the comparison sites, one facet of engagement, measured with a repeatable single item.” You cannot defend “the pilot made employees more engaged,” because you never measured the facets your indicator skips, and you never heard from the people who left. The number is real, and its meaning stops exactly where the construct stops.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="21.4">
-<h2 data-number="21.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">21.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="21.4">
+<h2 data-number="21.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">21.4</span> An AI failure case</h2>
+<p>You ask, “operationalize employee engagement for my pilot study,” and the tool answers with total confidence: “Ask whether people would recommend the company on a 0 to 10 scale and take the share who answer 9 or 10. That is engagement.” The recipe is clean, correct-sounding, and easy to field. Here is the trap. Engagement is a broad concept with several independent facets, and the tool silently narrowed it to one construct, then handed you the indicator as if it were the whole idea. This is a scope change wearing the costume of a complete answer.</p>
+<p>You catch it by reading the answer’s claim next to your question, word for word. Your question was about “engagement”; the answer is about “would recommend,” and those are not the same box. Then you confirm it with a real source: open a published engagement framework and find the several facets the recipe never mentioned. A confident recipe is not a valid operationalization. You verify the construct, not the fluency of the paragraph that proposed it.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="21.5">
-<h2 data-number="21.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">21.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="21.5">
+<h2 data-number="21.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">21.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio06-govern-data-measurement.html">Studio 6: Govern data and measurement</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>You know where your data come from. This step pins down what your numbers actually mean, and what they do not.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own draft first, then delegate. Each prompt is a checkable job, not a verdict to trust. Run them as a loop: the first answer names the obvious instruments, and the useful pass is the second one, where you say which facet the tool skipped and ask it to try again. Agentic tools will happily go three or four rounds and return a polished measurement plan. Polish is not validity, and the sentence naming what your number leaves out still has to be written by you.</p>
-<p><strong>Locate the standard indicators.</strong></p>
-<pre class="text"><code>Act as a survey-methods assistant. I want to measure the construct "willingness to
-recommend one's workplace" in an organizational study. Name the standard, published
-instruments researchers use for this construct, with the instrument name, how it is
-scored, and a real source I can open. Only list instruments you are confident
-exist; mark anything uncertain.</code></pre>
-<p>After running, verify: open one named source and confirm the instrument exists and measures what the tool says it does. Counters <em>confident fabrication</em> (an invented scale name arrives as fluently as a real one).</p>
-<p><strong>List the limits, so you can verify them.</strong></p>
-<pre class="text"><code>Here is my operationalization: concept = employee engagement, construct =
-willingness to recommend the workplace, indicator = mean of a single 1-7 agreement
-item. Return a table of every facet of engagement this indicator does NOT capture,
-one row each, with why it matters and who it fails to hear from.</code></pre>
-<p>After running, verify: check the table against a published engagement framework you retrieve yourself. Counters <em>illusion of completeness</em> (a tidy list that still omits the facet that most threatens your claim).</p>
-<p><strong>Red-team the swap.</strong></p>
-<pre class="text"><code>Act as a hostile reviewer. Here is my claim: "the pilot sites are more engaged,
-because more people there would recommend the company." Name every place my
-indicator fails to support the word "engaged." Do not rewrite the claim for me.</code></pre>
-<p>After running, verify: if it only praises the design, push back and demand the single worst gap. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your measurement).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -687,27 +693,32 @@ indicator fails to support the word "engaged." Do not rewrite the claim for me.<
 <p>Which <strong>concept</strong> your question is about, which <strong>construct</strong> honestly stands for it, and where your <strong>indicator’s</strong> meaning must stop are yours alone. The tool can list instruments and name limitations, but only you decide that a recommend-a-friend rating is a fair stand-in for the facet of engagement you actually care about, and only you write the sentence that refuses to call one facet the whole concept. Naming what your number leaves out is the researcher’s job, not the model’s.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="21.6">
-<h2 data-number="21.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">21.6</span> An AI failure case</h2>
-<p>You ask, “operationalize employee engagement for my pilot study,” and the tool answers with total confidence: “Ask whether people would recommend the company on a 0 to 10 scale and take the share who answer 9 or 10. That is engagement.” The recipe is clean, correct-sounding, and easy to field. Here is the trap. Engagement is a broad concept with several independent facets, and the tool silently narrowed it to one construct, then handed you the indicator as if it were the whole idea. This is a scope change wearing the costume of a complete answer.</p>
-<p>You catch it by reading the answer’s claim next to your question, word for word. Your question was about “engagement”; the answer is about “would recommend,” and those are not the same box. Then you confirm it with a real source: open a published engagement framework and find the several facets the recipe never mentioned. A confident recipe is not a valid operationalization. You verify the construct, not the fluency of the paragraph that proposed it.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="21.7">
-<h2 data-number="21.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">21.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio06-govern-data-measurement.html">Studio 6: Govern data and measurement</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>You know where your data come from. This step pins down what your numbers actually mean, and what they do not.</em></p>
 <ol type="1">
-<li>List every concept your question contains and circle the abstract ones, the words no instrument reads: engagement, health, participation, quality, competitiveness. Those are the ones that need a ladder.</li>
-<li>Under each circled concept write the construct you will really measure, plus one line on why that facet and not a neighboring one. Choosing a facet is not cheating. Pretending you measured the whole concept is.</li>
-<li>Under each construct write the indicator: the exact procedure and the exact number it produces, specific enough that a stranger could repeat it and get a comparable value.</li>
-<li>Under each indicator finish this sentence in your own words: “this number does not capture ___.” Use the facet that worries you most, and add who your measurement never reaches.</li>
-<li>Write one sentence saying what your number means and one saying what you will do with it. Then name the strongest rival reading: what else could produce the same number? That pair, plus the rival, is what your evidence has to support.</li>
-<li>Plan one reliability check that matches an error source you actually worry about, then run it: the same units measured twice (occasions), two coders on the same material (raters), or two halves of your <em>items</em> scored for the same people (split-half). Do not compare two halves of your respondents and call it reliability. That measures how a group average moves between samples of people, which is a different question. If your indicator is a single item measured once, split-half is unavailable and the other two may be too; “no defensible reliability check is available for this measure and use” is an honest finding. Write it down, and then either narrow what you claim or choose a different instrument.</li>
-<li>Log the step in your AI Research Ledger, and verify at least one measure with a named method from the <a href="../verification-guide.html">Verification Guide</a>. Primary-source reading fits this chapter: find the published instrument or method behind your indicator and open it. What you get there is evidence, not a verdict. Published validation was done on some population, for some use; check how close those are to yours, and treat the distance as part of your claim boundary. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>List every concept your question contains and circle the abstract ones, the words no instrument reads: engagement, health, participation, quality, competitiveness. Those are the ones that need a ladder.</p></li>
+<li><p>Under each circled concept write the construct you will really measure, plus one line on why that facet and not a neighboring one. Choosing a facet is not cheating. Pretending you measured the whole concept is.</p></li>
+<li><p>Under each construct write the indicator: the exact procedure and the exact number it produces, specific enough that a stranger could repeat it and get a comparable value.</p>
+<p><strong>Locate the standard indicators.</strong></p>
+<pre class="text"><code>Act as a survey-methods assistant. I want to measure the construct "willingness to
+recommend one's workplace" in an organizational study. Name the standard, published
+instruments researchers use for this construct, with the instrument name, how it is
+scored, and a real source I can open. Only list instruments you are confident
+exist; mark anything uncertain.</code></pre>
+<p>After running, verify: open one named source and confirm the instrument exists and measures what the tool says it does. Counters <em>confident fabrication</em> (an invented scale name arrives as fluently as a real one).</p></li>
+<li><p>Under each indicator finish this sentence in your own words: “this number does not capture ___.” Use the facet that worries you most, and add who your measurement never reaches.</p>
+<p><strong>List the limits, so you can verify them.</strong></p>
+<pre class="text"><code>Here is my operationalization: concept = employee engagement, construct =
+willingness to recommend the workplace, indicator = mean of a single 1-7 agreement
+item. Return a table of every facet of engagement this indicator does NOT capture,
+one row each, with why it matters and who it fails to hear from.</code></pre>
+<p>After running, verify: check the table against a published engagement framework you retrieve yourself. Counters <em>illusion of completeness</em> (a tidy list that still omits the facet that most threatens your claim).</p></li>
+<li><p>Write one sentence saying what your number means and one saying what you will do with it. Then name the strongest rival reading: what else could produce the same number? That pair, plus the rival, is what your evidence has to support.</p>
+<p><strong>Red-team the swap.</strong></p>
+<pre class="text"><code>Act as a hostile reviewer. Here is my claim: "the pilot sites are more engaged,
+because more people there would recommend the company." Name every place my
+indicator fails to support the word "engaged." Do not rewrite the claim for me.</code></pre>
+<p>After running, verify: if it only praises the design, push back and demand the single worst gap. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your measurement).</p></li>
+<li><p>Plan one reliability check that matches an error source you actually worry about, then run it: the same units measured twice (occasions), two coders on the same material (raters), or two halves of your <em>items</em> scored for the same people (split-half). Do not compare two halves of your respondents and call it reliability. That measures how a group average moves between samples of people, which is a different question. If your indicator is a single item measured once, split-half is unavailable and the other two may be too; “no defensible reliability check is available for this measure and use” is an honest finding. Write it down, and then either narrow what you claim or choose a different instrument.</p></li>
+<li><p>Log the step in your AI Research Ledger, and verify at least one measure with a named method from the <a href="../verification-guide.html">Verification Guide</a>. Primary-source reading fits this chapter: find the published instrument or method behind your indicator and open it. What you get there is evidence, not a verdict. Published validation was done on some population, for some use; check how close those are to yours, and treat the distance as part of your claim boundary. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 <!-- studio-continue:begin -->
 <blockquote class="blockquote">
@@ -715,6 +726,14 @@ indicator fails to support the word "engaged." Do not rewrite the claim for me.<
 </blockquote>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-aera2014standards" class="csl-entry" role="listitem">
+American Educational Research Association, American Psychological Association, and National Council on Measurement in Education. 2014. <em>Standards for Educational and Psychological Testing</em>. American Educational Research Association. <a href="https://www.aera.net/Publications/Books/Standards-for-Educational-Psychological-Testing-2014-Edition">https://www.aera.net/Publications/Books/Standards-for-Educational-Psychological-Testing-2014-Edition</a>.
+</div>
+<div id="ref-cronbach1955construct" class="csl-entry" role="listitem">
+Cronbach, Lee J., and Paul E. Meehl. 1955. <span>“Construct Validity in Psychological Tests.”</span> <em>Psychological Bulletin</em> 52 (4): 281–302. <a href="https://doi.org/10.1037/h0040957">https://doi.org/10.1037/h0040957</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

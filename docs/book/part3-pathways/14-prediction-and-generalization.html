@@ -58,7 +58,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -566,10 +585,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">17.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">17.3</span> A worked example</a></li>
   <li><a href="#a-seeded-simulation" id="toc-a-seeded-simulation" class="nav-link" data-scroll-target="#a-seeded-simulation"><span class="header-section-number">17.4</span> A seeded simulation</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">17.5</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">17.6</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">17.7</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">17.8</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">17.5</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">17.6</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -671,15 +688,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>What makes prediction its own question is its <strong>reach</strong>, the cases a claim is meant to cover. Prediction’s reach is <strong>unseen cases</strong>, units not in your data whose outcome is still unknown, such as next month’s samples. Its cousin is <strong>generalization</strong>, reach from your sample to a broader population, such as from the twelve lakes you measured to every lake in the watershed. Both go beyond the data in hand, and both are honest only when you can name the crossing that licenses them.</p>
 <p>A forecast earns trust under a four-part <strong>contract</strong>, in fixed order. The <strong>target</strong> is the one column you predict, for example <code>bloom_next_week</code>. The <strong>baseline</strong> is the dumbest honest rule you must beat, usually “always guess the most common answer”; if 85% of weeks have no bloom, that rule scores 85% for free, so 85% is the bar. The <strong>metric</strong> is how you keep score, matched to the target; accuracy misleads when blooms are rare, so recall on the bloom class, the share of real blooms the model catches, often matters more. Whichever you choose, score the baseline and every candidate on the same metric, or the comparison means nothing.</p>
 <p>The <strong>split</strong> is where most honest-looking forecasts go wrong, so it gets three parts rather than two. The <strong>training set</strong> is the data each candidate model learns from. Example: the model works out its coefficients from your first summer. The <strong>selection set</strong> is separate data you use to choose among candidates. Example: you compare three feature lists and pick one on your second summer. The <strong>final holdout</strong> is data you lock away and open exactly once, after every choice is settled. Example: only the model you already chose ever touches your third summer.</p>
-<p>Run them in that order. Fit on training, choose on selection, then score your one choice on the final holdout. The reason for the middle step is easy to miss. When you try twelve models and keep the best score you saw, that winning score is flattered by luck on average: some model was always going to look best on that particular data, partly because its errors happened to fall kindly there. On any one split the flattery can be large, small, or even reversed; over many splits it points up. <strong>Model-selection bias</strong> is that flattery, the gap between a winner’s score on the data that crowned it and its honest score on data it has never met. Report the crowning score as final and you will promise performance the model cannot deliver.</p>
+<p>Run them in that order. Fit on training, choose on selection, then score your one choice on the final holdout. The reason for the middle step is easy to miss. When you try twelve models and keep the best score you saw, that winning score is flattered by luck on average: some model was always going to look best on that particular data, partly because its errors happened to fall kindly there. On any one split the flattery can be large, small, or even reversed; over many splits it points up. <strong>Model-selection bias</strong> is that flattery, the gap between a winner’s score on the data that crowned it and its honest score on data it has never met <span class="citation" data-cites="varma2006bias">(<a href="#ref-varma2006bias" role="doc-biblioref">Varma and Simon 2006</a>)</span>. Report the crowning score as final and you will promise performance the model cannot deliver.</p>
 <p>One consequence is worth stating plainly. If the final holdout makes you go back and change a feature, a threshold, or a model, it has joined development and stopped being an exam. You then need fresh untouched data for the next final check. In the simple workflow this book teaches, seeing the final score seals the analysis; any change after it breaks the seal. Specialists have techniques for careful reuse, and they are beyond this chapter, so hold the simple rule until you have a defended reason not to.</p>
-<p>One trap sits above all others. <strong>Data leakage</strong> is information reaching your model, or your choice of model, that would not be available at the real forecast moment. Example: the toxin concentration measured <em>during</em> the bloom. A leaked feature inflates your score on today’s data and collapses on tomorrow’s, because it will not exist when you truly need the forecast. Choosing your model on the final holdout is the same failure wearing different clothes, since that score was supposed to stand in for data you have never seen.</p>
+<p>One trap sits above all others. <strong>Data leakage</strong> is information reaching your model, or your choice of model, that would not be available at the real forecast moment <span class="citation" data-cites="kaufman2011leakage">(<a href="#ref-kaufman2011leakage" role="doc-biblioref">Kaufman et al. 2011</a>)</span>. Example: the toxin concentration measured <em>during</em> the bloom. A leaked feature inflates your score on today’s data and collapses on tomorrow’s, because it will not exist when you truly need the forecast. Choosing your model on the final holdout is the same failure wearing different clothes, since that score was supposed to stand in for data you have never seen.</p>
 <p>Time carries its own version of this trap. When your target is next week, your exam weeks should come after the weeks you learned from. Splitting weeks at random hands the model August while asking it to forecast July, which answers how well it fills in scattered past weeks rather than how well it forecasts the next one. Keep the blocks in calendar order, and let the latest block be the one you lock. That is the default that mimics how the forecast will actually be used; specialists relax it in narrow, argued cases, and none of them starts by shuffling the calendar.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="17.3">
 <h2 data-number="17.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">17.3</span> A worked example</h2>
 <p>Suppose you want to warn swimmers a week ahead. Your <strong>target</strong> is <code>bloom_next_week</code>, one if the lake exceeds the advisory threshold and zero otherwise. Across three summers of weekly samples, 85% of weeks are clear, so your <strong>baseline</strong>, “always say no bloom,” scores 0.85 with no model at all.</p>
-<p>You keep features genuinely known a week early: water temperature, recent rainfall, upstream phosphorus load. The three summers give you your three roles without any shuffling. Summer one trains your candidate models. Summer two chooses between them. Summer three stays locked until the choice is made. You fit a logistic model (a standard yes-or-no classifier) and compare a few feature lists on summer two. Then you open summer three once, for the winner alone. Scored on the same metric as the baseline, accuracy, the model lands around 0.88 against the baseline’s 0.85 (these scores are constructed for the example). That three-point edge feels small, and its smallness is the honest result: a modest true win beats a dramatic fake one. You still report recall beside it, since accuracy alone hides the missed blooms.</p>
+<p>You keep features genuinely known a week early: water temperature, recent rainfall, upstream phosphorus load. The three summers give you your three roles without any shuffling <span class="citation" data-cites="hastie2009elements">(<a href="#ref-hastie2009elements" role="doc-biblioref">Hastie et al. 2009</a>)</span>. Summer one trains your candidate models. Summer two chooses between them. Summer three stays locked until the choice is made. You fit a logistic model (a standard yes-or-no classifier) and compare a few feature lists on summer two. Then you open summer three once, for the winner alone. Scored on the same metric as the baseline, accuracy, the model lands around 0.88 against the baseline’s 0.85 (these scores are constructed for the example). That three-point edge feels small, and its smallness is the honest result: a modest true win beats a dramatic fake one. You still report recall beside it, since accuracy alone hides the missed blooms.</p>
 <p>Then a well-meaning collaborator adds <code>chlorophyll_a</code>, the pigment reading. The score leaps to 0.97. Exciting, until you ask when chlorophyll is measured: during the very bloom you are forecasting. It is the outcome wearing a different label. Drop it, and the score falls back to 0.88. The timing test, not the accuracy, decides. And because you trained on one shallow lake, you name the boundary out loud: on a deep, cold reservoir the pattern may not hold, so the forecast does not yet generalize there.</p>
 </section>
 <section id="a-seeded-simulation" class="level2" data-number="17.4">
@@ -736,33 +753,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Now the right panel, and read it as an average, because that is what the bias is. Across 500 worlds the winner’s true error exceeds the score that crowned it by 0.025 RMSE on average (median 0.015), and the winner comes out worse than its crowning score in 64 percent of worlds. In the other third, luck ran the other way, which is why no single split can show you the bias: it is a lean in the pile, not a property of each run.</p>
 <p>Then look at the arrow. In 4 of the 500 worlds the gap blew past +0.3, topping out at +1.86, because a wildly flexible fit happened to win selection and then swung hard outside its data. Those worlds are not noise to trim away. They are the procedure’s real risk showing itself, and any average you report has to own them. The honest summary names all three things: the lean (the mean), the typical case (the median), and the tail (how bad, how often). In the companion notebook, rerun the simulation at several noise levels (the <code>.35</code>) and compare the mean, the median, the frequency, and the maximum separately. The average optimism grows with noise; a single seeded extreme, like this run’s +1.86, need not move the same way, because one world’s worst luck is not a summary of the procedure.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="17.5">
-<h2 data-number="17.5" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">17.5</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="17.5">
+<h2 data-number="17.5" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">17.5</span> An AI failure case</h2>
+<p>You paste your feature list and ask an AI partner which features are safe to use. It answers with confidence: “<code>chlorophyll_a</code> is your strongest predictor, keep it.” The reasoning sounds airtight, because chlorophyll correlates almost perfectly with blooms. That near-perfect correlation is exactly the tell. This is the <strong>plausible-but-wrong-method</strong> failure: the tool ranked the feature on how well it <em>fits</em> the past, not on whether it could <em>exist in time</em> for a forecast. You catch it with one question statistics alone cannot answer. When is chlorophyll measured? During the bloom, so no forecast made a week earlier could have it. Drop it, watch the score fall back to 0.88, and keep the honest model.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="17.6">
-<h2 data-number="17.6" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">17.6</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="17.6">
+<h2 data-number="17.6" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">17.6</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio05-develop-the-pathway.html">Studio 5: Develop the pathway</a>.</strong> This lesson serves the <strong>prediction</strong> pathway. If your declared pathway is different, skim it and work the lesson that matches; the studio page routes you. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your design is declared and diagnosed. This step decides whether your project is really forecasting cases nobody has seen yet, and if it is, puts that forecast under contract before you fit a single model.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Paste real output, never a number you remember. Expect to run each prompt more than once: read the answer, name the part you do not believe, put that objection back into the prompt, run it again. Tools that run that loop by themselves, fitting and refitting a model across several turns, make the leakage question below more urgent rather than less. Nobody in the loop but you knows when your data were recorded.</p>
-<pre><code>Act as a Python tutor. Here is my forecasting workflow: [paste the cells
-that split, fit, compare, and score]. Audit the three data roles one by
-one. Which rows fit the candidates? Which rows chose between them? Which
-rows produced the final score, and had any model already seen them, even
-indirectly through my choices? If my target is about a later time, check
-whether every training row is earlier than the rows it is scored on.
-Then give me one independent way to confirm the final rows never touched
-training or selection.</code></pre>
-<p><em>After running, verify: read the baseline, model, and margin off your own printout and confirm the tool’s numbers match, not ones it guessed. If the audit finds a role missing, that is the finding; do not argue the score. Counters <strong>confident fabrication</strong>, a fluent walkthrough quoting a margin your code never produced.</em></p>
-<pre><code>Here is the outcome I want to predict and the moment I need the forecast:
-a bloom next week, decided by next week's samples. Here is my candidate
-feature list with when each value is recorded: [list]. For each feature,
-say whether its value is settled before, at, or after the outcome, and
-flag any that could not exist at prediction time.</code></pre>
-<p><em>After running, verify: re-derive the timing of the one feature it clears most confidently. If any feature is settled at or after the bloom, reject it whatever the tool says. Counters <strong>illusion of completeness</strong>, a tidy list omitting the one late-settled feature that dooms the forecast.</em></p>
-<pre><code>Act as a hostile reviewer. Attack this headline: "Our model forecasts
-blooms with 88% held-out accuracy." Name every reason a skeptic would
-distrust it, including the baseline it beat, the metric, and any hidden
-leak.</code></pre>
-<p><em>After running, verify: check each objection against your printout and keep the ones your numbers support. Counters <strong>sycophantic agreement</strong>, where an assistant primed to help praises a headline you wrote.</em></p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -776,28 +779,50 @@ leak.</code></pre>
 <p>Four calls stay yours. <strong>The target</strong>: what you forecast and why it matters. <strong>The baseline</strong>: the honest rule the model must beat. <strong>The timing of every feature</strong>: whether a value would truly exist at the forecast moment, which only you, who knows your data’s timeline, can settle. And <strong>the verdict</strong> on whether your project should predict at all. A tool that has never seen your timeline cannot make these calls for you.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="17.7">
-<h2 data-number="17.7" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">17.7</span> An AI failure case</h2>
-<p>You paste your feature list and ask an AI partner which features are safe to use. It answers with confidence: “<code>chlorophyll_a</code> is your strongest predictor, keep it.” The reasoning sounds airtight, because chlorophyll correlates almost perfectly with blooms. That near-perfect correlation is exactly the tell. This is the <strong>plausible-but-wrong-method</strong> failure: the tool ranked the feature on how well it <em>fits</em> the past, not on whether it could <em>exist in time</em> for a forecast. You catch it with one question statistics alone cannot answer. When is chlorophyll measured? During the bloom, so no forecast made a week earlier could have it. Drop it, watch the score fall back to 0.88, and keep the honest model.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="17.8">
-<h2 data-number="17.8" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">17.8</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio05-develop-the-pathway.html">Studio 5: Develop the pathway</a>.</strong> This lesson serves the <strong>prediction</strong> pathway. If your declared pathway is different, skim it and work the lesson that matches; the studio page routes you. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your design is declared and diagnosed. This step decides whether your project is really forecasting cases nobody has seen yet, and if it is, puts that forecast under contract before you fit a single model.</em></p>
 <ol type="1">
-<li>Ask the blunt version of your question: does your project need to guess an outcome for a case whose outcome does not exist yet? Write yes or no, and the one sentence that justifies your answer.</li>
-<li>If yes, sign the four-part contract, in order. Name the target column, the dumbest honest baseline it has to beat, the split, and the metric matched to how rare your outcome is. Give the split all three of its roles: which data fit your candidates, which data choose between them, and which data stay locked for the single final score. If your target is about a later time, order those three blocks by the calendar and lock the latest one.</li>
-<li>List your features and write beside each one the moment its value is settled. Circle anything settled at or after the outcome. That circled set is your leakage list, and it belongs in your write-up whether or not you drop the features on it.</li>
-<li>Write the boundary in one sentence: the cases your forecast covers, and the ones a reader should not assume it covers. Be specific about what makes them different.</li>
-<li>If prediction is not your question, write the line that says so plainly, then run step 3 anyway. A variable settled after the outcome quietly sinks descriptive and causal work too.</li>
-<li>Log the step in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. For a fitted model the method is a locked final holdout: never report a score computed on rows the model trained on, and never report the score that chose the model as though it were the final one. Write down how many candidates you compared, since a reader cannot judge selection optimism without that number. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Ask the blunt version of your question: does your project need to guess an outcome for a case whose outcome does not exist yet? Write yes or no, and the one sentence that justifies your answer.</p></li>
+<li><p>If yes, sign the four-part contract, in order. Name the target column, the dumbest honest baseline it has to beat, the split, and the metric matched to how rare your outcome is. Give the split all three of its roles: which data fit your candidates, which data choose between them, and which data stay locked for the single final score. If your target is about a later time, order those three blocks by the calendar and lock the latest one.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre><code>Act as a Python tutor. Here is my forecasting workflow: [paste the cells
+that split, fit, compare, and score]. Audit the three data roles one by
+one. Which rows fit the candidates? Which rows chose between them? Which
+rows produced the final score, and had any model already seen them, even
+indirectly through my choices? If my target is about a later time, check
+whether every training row is earlier than the rows it is scored on.
+Then give me one independent way to confirm the final rows never touched
+training or selection.</code></pre>
+<p><em>After running, verify: read the baseline, model, and margin off your own printout and confirm the tool’s numbers match, not ones it guessed. If the audit finds a role missing, that is the finding; do not argue the score. Counters <strong>confident fabrication</strong>, a fluent walkthrough quoting a margin your code never produced.</em></p></li>
+<li><p>List your features and write beside each one the moment its value is settled. Circle anything settled at or after the outcome. That circled set is your leakage list, and it belongs in your write-up whether or not you drop the features on it.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre><code>Here is the outcome I want to predict and the moment I need the forecast:
+a bloom next week, decided by next week's samples. Here is my candidate
+feature list with when each value is recorded: [list]. For each feature,
+say whether its value is settled before, at, or after the outcome, and
+flag any that could not exist at prediction time.</code></pre>
+<p><em>After running, verify: re-derive the timing of the one feature it clears most confidently. If any feature is settled at or after the bloom, reject it whatever the tool says. Counters <strong>illusion of completeness</strong>, a tidy list omitting the one late-settled feature that dooms the forecast.</em></p></li>
+<li><p>Write the boundary in one sentence: the cases your forecast covers, and the ones a reader should not assume it covers. Be specific about what makes them different.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre><code>Act as a hostile reviewer. Attack this headline: "Our model forecasts
+blooms with 88% held-out accuracy." Name every reason a skeptic would
+distrust it, including the baseline it beat, the metric, and any hidden
+leak.</code></pre>
+<p><em>After running, verify: check each objection against your printout and keep the ones your numbers support. Counters <strong>sycophantic agreement</strong>, where an assistant primed to help praises a headline you wrote.</em></p></li>
+<li><p>If prediction is not your question, write the line that says so plainly, then run step 3 anyway. A variable settled after the outcome quietly sinks descriptive and causal work too.</p></li>
+<li><p>Log the step in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. For a fitted model the method is a locked final holdout: never report a score computed on rows the model trained on, and never report the score that chose the model as though it were the final one. Write down how many candidates you compared, since a reader cannot judge selection optimism without that number. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-hastie2009elements" class="csl-entry" role="listitem">
+Hastie, Trevor, Robert Tibshirani, and Jerome Friedman. 2009. <em>The Elements of Statistical Learning: Data Mining, Inference, and Prediction</em>. 2nd ed. Springer. <a href="https://doi.org/10.1007/978-0-387-84858-7">https://doi.org/10.1007/978-0-387-84858-7</a>.
+</div>
+<div id="ref-kaufman2011leakage" class="csl-entry" role="listitem">
+Kaufman, Shachar, Saharon Rosset, and Claudia Perlich. 2011. <span>“Leakage in Data Mining: Formulation, Detection, and Avoidance.”</span> <em>Proceedings of the 17th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em>, 556–63. <a href="https://doi.org/10.1145/2020408.2020496">https://doi.org/10.1145/2020408.2020496</a>.
+</div>
+<div id="ref-varma2006bias" class="csl-entry" role="listitem">
+Varma, Sudhir, and Richard Simon. 2006. <span>“Bias in Error Estimation When Using Cross-Validation for Model Selection.”</span> <em>BMC Bioinformatics</em> 7: 91. <a href="https://doi.org/10.1186/1471-2105-7-91">https://doi.org/10.1186/1471-2105-7-91</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

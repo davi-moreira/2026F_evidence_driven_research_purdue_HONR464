@@ -58,7 +58,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -567,10 +586,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">18.3</span> A worked example</a></li>
   <li><a href="#a-seeded-simulation" id="toc-a-seeded-simulation" class="nav-link" data-scroll-target="#a-seeded-simulation"><span class="header-section-number">18.4</span> A seeded simulation</a></li>
   <li><a href="#what-attrition-does-to-that-promise" id="toc-what-attrition-does-to-that-promise" class="nav-link" data-scroll-target="#what-attrition-does-to-that-promise"><span class="header-section-number">18.5</span> What attrition does to that promise</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">18.6</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">18.7</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">18.8</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">18.9</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">18.6</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">18.7</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -668,7 +685,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-concept" class="level2" data-number="18.2">
 <h2 data-number="18.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">18.2</span> The concept</h2>
 <p>Start with a <strong>causal question</strong>, a question about what would change if you intervened rather than what merely goes together. Example: “does a text reminder <em>raise</em> the share of patients who refill on time?”, not “do patients who got reminders refill more?”</p>
-<p>For one unit, one patient, write two numbers. The <strong>potential outcome Y(1)</strong> is what that unit would show <em>with</em> the treatment. Example: whether Ms.&nbsp;R refills on time if she gets the texts. The <strong>potential outcome Y(0)</strong> is what the <em>same</em> unit would show <em>without</em> it. Example: whether that same Ms.&nbsp;R refills if she gets nothing. The causal effect for her is Y(1) minus Y(0). Now the rule that governs the whole field, the <strong>fundamental problem of causal inference</strong>: for any one unit you only ever see one of those two numbers. Ms.&nbsp;R was either texted or not, never both, so her individual effect is unrecoverable.</p>
+<p>For one unit, one patient, write two numbers. The <strong>potential outcome Y(1)</strong> is what that unit would show <em>with</em> the treatment. Example: whether Ms.&nbsp;R refills on time if she gets the texts. The <strong>potential outcome Y(0)</strong> is what the <em>same</em> unit would show <em>without</em> it. Example: whether that same Ms.&nbsp;R refills if she gets nothing. The causal effect for her is Y(1) minus Y(0). Now the rule that governs the whole field, the <strong>fundamental problem of causal inference</strong>: for any one unit you only ever see one of those two numbers <span class="citation" data-cites="holland1986causal">(<a href="#ref-holland1986causal" role="doc-biblioref">Holland 1986</a>)</span>. Ms.&nbsp;R was either texted or not, never both, so her individual effect is unrecoverable.</p>
 <p>So you give up the individual and chase the average. The <strong>average treatment effect (ATE)</strong> is the average of Y(1) minus Y(0) across all your units, the typical effect rather than any one unit’s. Example: on average, the reminder raised on-time refills by a few points. One move unlocks an honest estimate of it. <strong>Random assignment</strong> lets pure chance, a coin flip, decide which units get treated. Example: a computer flips a fair coin for each patient. Chance knows nothing about health or organization, so the two groups it builds are alike on average, and the untreated group’s outcome honestly stands in for what the treated group would have done untreated. That is what random assignment defeats: a <strong>confounder</strong>, a third trait that pushes on both who gets treated and the outcome. Example: more organized patients both refill anyway and are easier to enroll, so a reminder looks effective even when it did nothing. Randomizing breaks the link between any trait and who gets treated, and that broken link is the entire reason an experiment can say <em>because</em>.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="18.3">
@@ -719,7 +736,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="what-attrition-does-to-that-promise" class="level2" data-number="18.5">
 <h2 data-number="18.5" class="anchored" data-anchor-id="what-attrition-does-to-that-promise"><span class="header-section-number">18.5</span> What attrition does to that promise</h2>
-<p>The code below keeps the coin flip exactly as honest as before and changes one thing: who is still measurable at the end. Every one of 2,000 patients gets a true benefit of 5 points. Under control, patients drop out only if their health is poor. Under the reminder, the cut is harsher, so more of the sickest patients go unmeasured. Then the study is re-randomized 2,000 times, and each time we take the plain difference between the patients we can still see.</p>
+<p>The code below keeps the coin flip exactly as honest as before and changes one thing: who is still measurable at the end <span class="citation" data-cites="nrc2010missing">(<a href="#ref-nrc2010missing" role="doc-biblioref">National Research Council 2010</a>)</span>. Every one of 2,000 patients gets a true benefit of 5 points. Under control, patients drop out only if their health is poor. Under the reminder, the cut is harsher, so more of the sickest patients go unmeasured. Then the study is re-randomized 2,000 times, and each time we take the plain difference between the patients we can still see.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -752,32 +769,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Look at where the dashed line sits. The truth is 5 points, and not one of the 2,000 re-randomizations produced a contrast anywhere near it. They pile up around 8.1. Nothing here is a fluke of one unlucky sample, and no amount of extra data would pull the pile leftward, because the tilt is not noise. Dropping the sickest patients from one arm raises that arm’s average, and the gap inherits the lift.</p>
 <p>Notice what the simulation did <em>not</em> do. It never touched the coin flip, and it never made the reminder work better than 5 points for anybody. Random assignment did its whole job. The damage happened afterward, when outcomes went missing in a way the treatment itself controlled. That is why retention by arm belongs in your report before any effect does: 59 percent of the reminder arm was still measured against 80 percent of the control arm. Read that gap as a warning light, not a verdict. What biased this contrast was not the unequal rates themselves but the fact that leaving was tied to health, which also drives the outcome. A design can lose different shares of similar patients almost harmlessly, and equal shares of very different patients disastrously. The rates tell you where to dig; the digging is the sensitivity work from the honesty test above.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="18.6">
-<h2 data-number="18.6" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">18.6</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="18.6">
+<h2 data-number="18.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">18.6</span> An AI failure case</h2>
+<p>You paste your trial into the tool and it reports, with full confidence, “the reminder raised on-time refills by 12 points, and the effect is significant.” The code runs without a single error. Here is the trap. A third of the reminder arm, the patients whose blood pressure was worst, stopped answering follow-up and left the study, so the tool computed the gap among the patients who <em>stayed</em> and labeled it “the effect of the reminder.” That is a silent scope change. The number is a complete-case contrast: it is not the effect for everyone you enrolled, and dropping the sickest patients from one arm pushed it up.</p>
+<p>You catch it by checking retention by arm and who was lost, not by re-reading the fluent paragraph. The reminder arm lost far more patients, and the ones it lost were the sickest, so who stayed was tied to what the outcome would have been. That makes the 12 points a complete-case contrast: not the effect for everyone enrolled, and not automatically an effect for any shared group of stayers, since each arm produced its own. A green check is not a correct result. You rewrite the sentence to report retention in both arms, to say plainly that this trial as run does not deliver the effect for everyone enrolled, and to run the what-if from the honesty test: how low would the missing patients’ refill rates have to be before the finding flips?</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="18.7">
-<h2 data-number="18.7" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">18.7</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="18.7">
+<h2 data-number="18.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">18.7</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio05-develop-the-pathway.html">Studio 5: Develop the pathway</a>.</strong> This lesson serves the <strong>experimental-causal</strong> pathway. If your declared pathway is different, skim it and work the lesson that matches; the studio page routes you. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your design is declared and diagnosed. This step asks whether it has earned the word “because”, and makes you say out loud whose effect your number is.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Each prompt below is a checkable job, not a request for a verdict. Work them as a loop. The first answer is a draft: find the claim you cannot check, say so in your next message, and run it again. Some tools will run that whole loop unattended and hand you a finished analysis. The finished look is exactly what makes the questions in this chapter worth asking before you accept it.</p>
-<p><strong>Locate the standard tool.</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Act <span class="im">as</span> a statistics assistant. I ran a two<span class="op">-</span>arm randomized trial <span class="kw">and</span> computed a</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plain difference <span class="kw">in</span> on<span class="op">-</span>time refill rates between a reminder arm <span class="kw">and</span> a control arm.</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Before <span class="bu">any</span> code, name the standard way to attach a <span class="dv">95</span><span class="op">%</span> interval to a difference <span class="kw">in</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>two proportions, <span class="kw">and</span> one resampling alternative, citing where each <span class="kw">is</span> documented.</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Only name methods you are confident exist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>After running, verify: open the cited documentation and confirm the method and its formula exist as described. Counters <em>confident fabrication</em> (an invented method name arrives as confidently as a real one).</p>
-<p><strong>List the assumptions to verify.</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Here <span class="kw">is</span> my analysis of a randomized reminder trial: [paste your cell]. List, <span class="im">as</span> a</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>table, every assumption my causal reading rests on: that assignment was truly</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>random, that no one dropped out <span class="kw">in</span> a way tied to the outcome, that the control arm</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>got no treatment. For each, say what I would check <span class="kw">in</span> my own data to confirm it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>After running, verify: check each listed assumption against your actual design and retention numbers before you accept the causal reading. Counters <em>silent scope change</em> (an association quietly reported as a settled cause).</p>
-<p><strong>Red-team your effect.</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>My claim: <span class="st">"the reminder raised on-time refills by 9 points."</span> Act <span class="im">as</span> a hostile</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>clinical<span class="op">-</span>trial reviewer. Name every way dropout, noncompliance, <span class="kw">or</span> spillover could</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>make this number describe a different group than everyone I enrolled. Do <span class="kw">not</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>rewrite the claim <span class="cf">for</span> me.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>After running, verify: if it only praises the design, push back and demand the single worst threat, then test it against your retention by arm. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -791,29 +796,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Three calls never leave your hands. You decide <strong>whether random assignment actually happened</strong> in your study, because a tool cannot see how you sorted the arms. You decide <strong>which quantity your number estimates and for whom</strong>, the effect for everyone enrolled, or whether attrition has left you without a causal number at all until you state an assumption and test how much it matters. And you decide <strong>whether the effect is large enough to act on</strong>, and whether it is even ethical to randomize real patients and withhold something from the control arm. You own the final sentence, its boundary, and its uncertainty.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="18.8">
-<h2 data-number="18.8" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">18.8</span> An AI failure case</h2>
-<p>You paste your trial into the tool and it reports, with full confidence, “the reminder raised on-time refills by 12 points, and the effect is significant.” The code runs without a single error. Here is the trap. A third of the reminder arm, the patients whose blood pressure was worst, stopped answering follow-up and left the study, so the tool computed the gap among the patients who <em>stayed</em> and labeled it “the effect of the reminder.” That is a silent scope change. The number is a complete-case contrast: it is not the effect for everyone you enrolled, and dropping the sickest patients from one arm pushed it up.</p>
-<p>You catch it by checking retention by arm and who was lost, not by re-reading the fluent paragraph. The reminder arm lost far more patients, and the ones it lost were the sickest, so who stayed was tied to what the outcome would have been. That makes the 12 points a complete-case contrast: not the effect for everyone enrolled, and not automatically an effect for any shared group of stayers, since each arm produced its own. A green check is not a correct result. You rewrite the sentence to report retention in both arms, to say plainly that this trial as run does not deliver the effect for everyone enrolled, and to run the what-if from the honesty test: how low would the missing patients’ refill rates have to be before the finding flips?</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="18.9">
-<h2 data-number="18.9" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">18.9</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio05-develop-the-pathway.html">Studio 5: Develop the pathway</a>.</strong> This lesson serves the <strong>experimental-causal</strong> pathway. If your declared pathway is different, skim it and work the lesson that matches; the studio page routes you. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your design is declared and diagnosed. This step asks whether it has earned the word “because”, and makes you say out loud whose effect your number is.</em></p>
 <ol type="1">
-<li>Write your treatment and your outcome as two short phrases. Then write one sentence on how a unit ends up treated. If the answer is anything other than “a chance device decided,” this pathway is not yours yet.</li>
-<li>Take one real unit from your study and write Y(1) and Y(0) for it in plain words. Circle the one you will actually get to see. That circle is the fundamental problem of causal inference in your own project’s handwriting.</li>
-<li>Name the quantity your estimate targets and for whom, in one sentence a stranger could repeat back to you correctly. “Everyone I enrolled” is the default. “Only those who complied” and “only those who stayed” are both groups your treatment may have helped create, so neither is available from a simple subgroup comparison: naming one commits you to assumptions you must state. If attrition touched your data, say what you assume about the people you did not measure, and show how the conclusion moves when that assumption bends.</li>
-<li>Name the threat nearest your design, whether attrition, noncompliance, or spillover, and the check you will run in your own data to see how bad it is: retention by arm, take-up by arm, contact between arms.</li>
-<li>If you cannot randomize, run steps 1 to 4 as a drill, then name the confounder that random assignment would have killed for you and the observational move you will use in its place.</li>
-<li>Log the step in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. This chapter’s result deserves two: alternative code, recomputing your difference by hand and landing on the same number, and simulation, shuffling the treatment labels thousands of times to see how rarely chance alone produces a gap as big as yours. An AI reviewer may run the checks with you; the decision to accept or reject stays yours.</li>
+<li><p>Write your treatment and your outcome as two short phrases. Then write one sentence on how a unit ends up treated. If the answer is anything other than “a chance device decided,” this pathway is not yours yet.</p></li>
+<li><p>Take one real unit from your study and write Y(1) and Y(0) for it in plain words. Circle the one you will actually get to see. That circle is the fundamental problem of causal inference in your own project’s handwriting.</p></li>
+<li><p>Name the quantity your estimate targets and for whom, in one sentence a stranger could repeat back to you correctly. “Everyone I enrolled” is the default. “Only those who complied” and “only those who stayed” are both groups your treatment may have helped create, so neither is available from a simple subgroup comparison: naming one commits you to assumptions you must state. If attrition touched your data, say what you assume about the people you did not measure, and show how the conclusion moves when that assumption bends.</p>
+<p><strong>Red-team your effect.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>My claim: <span class="st">"the reminder raised on-time refills by 9 points."</span> Act <span class="im">as</span> a hostile</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>clinical<span class="op">-</span>trial reviewer. Name every way dropout, noncompliance, <span class="kw">or</span> spillover could</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>make this number describe a different group than everyone I enrolled [<span class="op">@</span>gerber2012field]. Do <span class="kw">not</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>rewrite the claim <span class="cf">for</span> me.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After running, verify: if it only praises the design, push back and demand the single worst threat, then test it against your retention by arm. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p></li>
+<li><p>Name the threat nearest your design, whether attrition, noncompliance, or spillover, and the check you will run in your own data to see how bad it is: retention by arm, take-up by arm, contact between arms.</p>
+<p><strong>List the assumptions to verify.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Here <span class="kw">is</span> my analysis of a randomized reminder trial: [paste your cell]. List, <span class="im">as</span> a</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>table, every assumption my causal reading rests on: that assignment was truly</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>random, that no one dropped out <span class="kw">in</span> a way tied to the outcome, that the control arm</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>got no treatment. For each, say what I would check <span class="kw">in</span> my own data to confirm it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After running, verify: check each listed assumption against your actual design and retention numbers before you accept the causal reading. Counters <em>silent scope change</em> (an association quietly reported as a settled cause).</p></li>
+<li><p>If you cannot randomize, run steps 1 to 4 as a drill, then name the confounder that random assignment would have killed for you and the observational move you will use in its place.</p></li>
+<li><p>Log the step in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. This chapter’s result deserves two: alternative code, recomputing your difference by hand and landing on the same number, and simulation, shuffling the treatment labels thousands of times to see how rarely chance alone produces a gap as big as yours. An AI reviewer may run the checks with you; the decision to accept or reject stays yours.</p>
+<p><strong>Locate the standard tool.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Act <span class="im">as</span> a statistics assistant. I ran a two<span class="op">-</span>arm randomized trial <span class="kw">and</span> computed a</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plain difference <span class="kw">in</span> on<span class="op">-</span>time refill rates between a reminder arm <span class="kw">and</span> a control arm.</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Before <span class="bu">any</span> code, name the standard way to attach a <span class="dv">95</span><span class="op">%</span> interval to a difference <span class="kw">in</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>two proportions, <span class="kw">and</span> one resampling alternative, citing where each <span class="kw">is</span> documented.</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Only name methods you are confident exist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After running, verify: open the cited documentation and confirm the method and its formula exist as described. Counters <em>confident fabrication</em> (an invented method name arrives as confidently as a real one).</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-holland1986causal" class="csl-entry" role="listitem">
+Holland, Paul W. 1986. <span>“Statistics and Causal Inference.”</span> <em>Journal of the American Statistical Association</em> 81 (396): 945–60. <a href="https://doi.org/10.1080/01621459.1986.10478354">https://doi.org/10.1080/01621459.1986.10478354</a>.
+</div>
+<div id="ref-nrc2010missing" class="csl-entry" role="listitem">
+National Research Council. 2010. <em>The Prevention and Treatment of Missing Data in Clinical Trials</em>. The National Academies Press. <a href="https://doi.org/10.17226/12955">https://doi.org/10.17226/12955</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

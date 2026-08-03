@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,6 +92,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -530,10 +578,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">35.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">35.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">35.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">35.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">35.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">35.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">35.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">35.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">35.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -631,39 +677,30 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-concept" class="level2" data-number="35.2">
 <h2 data-number="35.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">35.2</span> The concept</h2>
 <p>The move that turns a limit into a strength has a name: the <strong>ULN move</strong>, a three-beat way to speak a boundary. It runs uncertainty, then limitation, then next step, and each beat is a term worth defining once.</p>
-<p>An <strong>uncertainty statement</strong> is a sentence saying how much your number could wobble, and why. Example: “with 812 people, my estimate could sit a few points higher or lower.” A <strong>limitation</strong> is a true sentence about what your design cannot show. Example: “I measured that two things went together, so I cannot say one caused the other.” A <strong>next step</strong> is the study that would resolve that limitation. Delivered together, ULN sounds like expertise, because you are naming the edge of your evidence on purpose.</p>
-<p>The failure ULN prevents is the <strong>apology spiral</strong>: burying a real, defensible finding under self-erasure like “honestly this is probably all wrong, my sample’s tiny.” The fix is to choose <strong>precision</strong>, naming the exact boundary, over <strong>hedging</strong>, vague self-protection that blurs where the claim stops. “This is one campus sample” is precision. “Sort of, take it with a grain of salt” is hedging. Precision informs the listener; hedging only protects you.</p>
-<p>The second instrument is the <strong>question bank</strong>: a short written list of the hardest fair questions a visitor could ask, each with a prepared answer. Five covers the space, one per recurring type (method, alternative explanation, so-what, generalization, AI-use). When you cannot fully answer one, you deliver an <strong>honest don’t-know</strong>: an admission with content, naming what you cannot say, the thing you <em>can</em> stand on, and the method that would settle it.</p>
+<p>An <strong>uncertainty statement</strong> is a sentence saying how much your number could wobble, and why. Example: “with 812 people, my estimate could sit a few points higher or lower.” A <strong>limitation</strong> is a true sentence about what your design cannot show <span class="citation" data-cites="wasserstein2016asa">(<a href="#ref-wasserstein2016asa" role="doc-biblioref">Wasserstein and Lazar 2016</a>)</span>. Example: “I measured that two things went together, so I cannot say one caused the other.” A <strong>next step</strong> is the study that would resolve that limitation. Delivered together, ULN sounds like expertise, because you are naming the edge of your evidence on purpose.</p>
+<p>The failure ULN prevents is the <strong>apology spiral</strong>: burying a real, defensible finding under self-erasure like “honestly this is probably all wrong, my sample’s tiny.” The fix is to choose <strong>precision</strong>, naming the exact boundary, over <strong>hedging</strong>, vague self-protection that blurs where the claim stops. “This is one campus sample” is precision. “Sort of, take it with a grain of salt” is hedging. Precision informs the listener; hedging only protects you <span class="citation" data-cites="vanderbles2019uncertainty">(<a href="#ref-vanderbles2019uncertainty" role="doc-biblioref">Bles et al. 2019</a>)</span>.</p>
+<p>The second instrument is the <strong>question bank</strong>: a short written list of the hardest fair questions a visitor could ask, each with a prepared answer <span class="citation" data-cites="bourne2007oral">(<a href="#ref-bourne2007oral" role="doc-biblioref">Bourne 2007</a>)</span>. Five covers the space, one per recurring type (method, alternative explanation, so-what, generalization, AI-use). When you cannot fully answer one, you deliver an <strong>honest don’t-know</strong>: an admission with content, naming what you cannot say, the thing you <em>can</em> stand on, and the method that would settle it.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="35.3">
 <h2 data-number="35.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">35.3</span> A worked example</h2>
 <p>You work with usage logs from a small software company’s app. Comparing customers who chose the compact toolbar against those who kept the expanded one, compact users found the target page a median of six seconds faster. At the poster, a visitor asks the question you feared: “so the compact toolbar <em>causes</em> faster navigation?”</p>
 <p>Your study cannot say that. Users picked their own toolbar, so power users may have chosen compact and would have been fast with any layout. That self-selection is a <strong>confound</strong>, a third factor that shapes both the choice and the outcome. So you deliver the two-beat reply. First the truth: “I can’t say it causes the speed, because compact users may already be power users.” Then the interest: “the study that would answer you is randomly assigning the toolbar to new users, and that’s what I’d run next.” You refused the word “causes,” and handed the visitor a real research question rather than a wall.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="35.4">
-<h2 data-number="35.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">35.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="35.4">
+<h2 data-number="35.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">35.4</span> An AI failure case</h2>
+<p>You paste your limitation into an AI tool and ask it to “make this sound more confident for the poster.” It returns a fluent, polished sentence: “The compact toolbar improves navigation speed, with strong results across users.” It runs clean, it reads well, and it is wrong. The tool quietly swapped “was associated with faster times” for “improves,” and “improves” is a causal verb your observational logs cannot support. This is a silent scope change dressed as helpful editing.</p>
+<p>You catch it by reading the AI’s verb against your poster’s headline, word for word. Your headline says “associated with.” The rewrite says “improves.” The kind of claim moved while the sentence got prettier. You keep your own verb, and log that the polish inflated the claim.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="35.5">
-<h2 data-number="35.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">35.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="35.5">
+<h2 data-number="35.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">35.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio10-adapt-and-defend.html">Studio 10: Adapt and defend</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>You can say your claim at two lengths now; this step prepares the part of the conversation you do not control.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Each prompt below is a checkable job, not a request for approval.</p>
 <p>These work best as a conversation. Ask, read, then name what the answer avoided and ask again. A question bank built over three rounds is noticeably harder than one built in a single pass. When a tool runs those rounds itself, the questions arrive already polished, which is why you check the list against the question you actually dread rather than the other way around.</p>
-<p><strong>List your hardest questions, to verify against your own fear.</strong></p>
-<pre class="text"><code>Play a skeptical but fair conference visitor. My project: "[one-paragraph summary
-of question, design, and headline finding]". Write the single hardest FAIR question
-for each type: method, alternative explanation, why-it-matters, generalization,
-AI-use. For each, flag whether an honest two-sentence answer exists.</code></pre>
-<p>After running, verify: compare the five against the one question you wrote down that you most dread. If it is missing, the set is not complete. Counters <em>illusion of completeness</em> (a tidy five that omits the exact question you fear).</p>
-<p><strong>Force the uncertainty into the open.</strong></p>
-<pre class="text"><code>Here is my headline number and how I got it: "[paste]". Do not restate it.
-List what is missing before I can state its uncertainty honestly: the sample
-size, the source of wobble, and the one limitation a reviewer would raise first.</code></pre>
-<p>After running, verify: confirm each item against your own data before you speak it. Counters <em>missing uncertainty</em> (a clean number reported with no bound).</p>
-<p><strong>Red-team your reply.</strong></p>
-<pre class="text"><code>Here is my two-sentence reply to "does it cause it?": "[paste]". Act as a hostile
-reviewer. Name every word that still claims more than an association supports.
-Do not rewrite it for me.</code></pre>
-<p>After running, verify: if it only praises the reply, push back and demand the single worst word. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -677,25 +714,28 @@ Do not rewrite it for me.</code></pre>
 <p>Three decisions never leave your hands: <strong>which claim your evidence actually supports</strong>, <strong>where that claim must stop</strong>, and <strong>how you acknowledge its uncertainty and limitations</strong>. The tool can draft a question or flag a word, but only you decide the compass position your design can bear and the one word you must refuse aloud. Your honest don’t-know is yours to mean, not to recite.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="35.6">
-<h2 data-number="35.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">35.6</span> An AI failure case</h2>
-<p>You paste your limitation into an AI tool and ask it to “make this sound more confident for the poster.” It returns a fluent, polished sentence: “The compact toolbar improves navigation speed, with strong results across users.” It runs clean, it reads well, and it is wrong. The tool quietly swapped “was associated with faster times” for “improves,” and “improves” is a causal verb your observational logs cannot support. This is a silent scope change dressed as helpful editing.</p>
-<p>You catch it by reading the AI’s verb against your poster’s headline, word for word. Your headline says “associated with.” The rewrite says “improves.” The kind of claim moved while the sentence got prettier. You keep your own verb, and log that the polish inflated the claim.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="35.7">
-<h2 data-number="35.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">35.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio10-adapt-and-defend.html">Studio 10: Adapt and defend</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>You can say your claim at two lengths now; this step prepares the part of the conversation you do not control.</em></p>
 <ol type="1">
-<li>Write the five hardest fair questions someone could ask you, one for each type: method, alternative explanation, why-it-matters, generalization, AI use.</li>
-<li>Draft a two-sentence answer to each and mark it defend or concede. A concede answer names the narrower claim you would retreat to on the spot.</li>
-<li>Write your uncertainty-and-limitations statement in ULN form: how much your number could wobble and why, the one thing your design cannot show, and the study that would settle it.</li>
-<li>Read it aloud and cut every self-erasing word, replacing each with the exact boundary it was hiding. Then write one honest don’t-know in full, for the question you dread most.</li>
-<li>Log it in your AI Research Ledger, and verify at least one prepared answer with a named method from the <a href="../verification-guide.html">Verification Guide</a>, such as peer reasoning. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Write the five hardest fair questions someone could ask you, one for each type: method, alternative explanation, why-it-matters, generalization, AI use.</p>
+<p><strong>List your hardest questions, to verify against your own fear.</strong></p>
+<pre class="text"><code>Play a skeptical but fair conference visitor. My project: "[one-paragraph summary
+of question, design, and headline finding]". Write the single hardest FAIR question
+for each type: method, alternative explanation, why-it-matters, generalization,
+AI-use. For each, flag whether an honest two-sentence answer exists.</code></pre>
+<p>After running, verify: compare the five against the one question you wrote down that you most dread. If it is missing, the set is not complete. Counters <em>illusion of completeness</em> (a tidy five that omits the exact question you fear).</p></li>
+<li><p>Draft a two-sentence answer to each and mark it defend or concede. A concede answer names the narrower claim you would retreat to on the spot.</p>
+<p><strong>Red-team your reply.</strong></p>
+<pre class="text"><code>Here is my two-sentence reply to "does it cause it?": "[paste]". Act as a hostile
+reviewer. Name every word that still claims more than an association supports.
+Do not rewrite it for me.</code></pre>
+<p>After running, verify: if it only praises the reply, push back and demand the single worst word. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p></li>
+<li><p>Write your uncertainty-and-limitations statement in ULN form: how much your number could wobble and why, the one thing your design cannot show, and the study that would settle it.</p>
+<p><strong>Force the uncertainty into the open.</strong></p>
+<pre class="text"><code>Here is my headline number and how I got it: "[paste]". Do not restate it.
+List what is missing before I can state its uncertainty honestly: the sample
+size, the source of wobble, and the one limitation a reviewer would raise first.</code></pre>
+<p>After running, verify: confirm each item against your own data before you speak it. Counters <em>missing uncertainty</em> (a clean number reported with no bound).</p></li>
+<li><p>Read it aloud and cut every self-erasing word, replacing each with the exact boundary it was hiding. Then write one honest don’t-know in full, for the question you dread most.</p></li>
+<li><p>Log it in your AI Research Ledger, and verify at least one prepared answer with a named method from the <a href="../verification-guide.html">Verification Guide</a>, such as peer reasoning. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 <!-- studio-continue:begin -->
 <blockquote class="blockquote">
@@ -703,6 +743,17 @@ Do not rewrite it for me.</code></pre>
 </blockquote>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-vanderbles2019uncertainty" class="csl-entry" role="listitem">
+Bles, Anne Marthe van der, Sander van der Linden, Alexandra L. J. Freeman, et al. 2019. <span>“Communicating Uncertainty about Facts, Numbers and Science.”</span> <em>Royal Society Open Science</em> 6: 181870. <a href="https://doi.org/10.1098/rsos.181870">https://doi.org/10.1098/rsos.181870</a>.
+</div>
+<div id="ref-bourne2007oral" class="csl-entry" role="listitem">
+Bourne, Philip E. 2007. <span>“Ten Simple Rules for Making Good Oral Presentations.”</span> <em>PLOS Computational Biology</em> 3 (4): e77. <a href="https://doi.org/10.1371/journal.pcbi.0030077">https://doi.org/10.1371/journal.pcbi.0030077</a>.
+</div>
+<div id="ref-wasserstein2016asa" class="csl-entry" role="listitem">
+Wasserstein, Ronald L., and Nicole A. Lazar. 2016. <span>“The <span>ASA</span>’s Statement on <span class="math inline">\(p\)</span>-Values: Context, Process, and Purpose.”</span> <em>The American Statistician</em> 70 (2): 129–33. <a href="https://doi.org/10.1080/00031305.2016.1154108">https://doi.org/10.1080/00031305.2016.1154108</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

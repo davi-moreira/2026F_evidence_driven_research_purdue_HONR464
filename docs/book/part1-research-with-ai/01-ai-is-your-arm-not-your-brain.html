@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -533,10 +552,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">2.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">2.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">2.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">2.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">2.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">2.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">2.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">2.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">2.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -633,8 +650,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="2.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">2.2</span> The concept</h2>
 <p>The rule that names the chapter is <strong>AI as your arm, not your brain</strong>: the tool can reach, fetch, draft, and compute for you, but it does not get to decide what is true or what you claim. Example: you let it draft a summary of a government statistics release, then confirm every number in that summary yourself.</p>
 <p>Two moves put the rule into practice. <strong>Delegation</strong> is handing a well-specified task to the tool, such as “find three published sources for last year’s county unemployment rate.” <strong>Verification</strong> is an independent check, run by a method outside the model, that the result is actually true. Example: you open the statistical agency’s real data table and read the number yourself instead of trusting what the tool typed.</p>
-<p>Verification cannot be skipped because a wrong AI answer looks exactly like a right one. A <strong>hallucination</strong> is confident, polished output that is simply made up, such as a citation to a report that does not exist. Example: a tool quotes a median starting salary and attributes it to a “National Graduate Earnings Survey” that was never published. Tone is identical for real and invented, so tone cannot be your filter. Retrievability is. A source is <strong>retrievable</strong> when you can open the actual document and confirm it, such as finding the real report through a library and reading the line.</p>
-<p>Some judgments never get delegated. A <strong>never-delegate decision</strong> is a call that stays yours no matter how good the tool becomes: which question you pursue, what your evidence licenses, the ethics of the work, and how you state your uncertainty. Example: a tool may list several ways to adjust old prices for inflation, but deciding which one your analysis requires is yours to own. The habit that ties this together is short: <strong>Ask, then Verify, then Document.</strong> Use the tool ambitiously, confirm every fact and number yourself, then log the tool, the task, and the check in a record that travels with your work.</p>
+<p>Verification cannot be skipped because a wrong AI answer looks exactly like a right one <span class="citation" data-cites="ji2023hallucination">(<a href="#ref-ji2023hallucination" role="doc-biblioref">Ji et al. 2023</a>)</span>. A <strong>hallucination</strong> is confident, polished output that is simply made up, such as a citation to a report that does not exist. Example: a tool quotes a median starting salary and attributes it to a “National Graduate Earnings Survey” that was never published. Tone is identical for real and invented, so tone cannot be your filter. Retrievability is. A source is <strong>retrievable</strong> when you can open the actual document and confirm it, such as finding the real report through a library and reading the line.</p>
+<p>Some judgments never get delegated. A <strong>never-delegate decision</strong> is a call that stays yours no matter how good the tool becomes: which question you pursue, what your evidence licenses, the ethics of the work, and how you state your uncertainty. Example: a tool may list several ways to adjust old prices for inflation, but deciding which one your analysis requires is yours to own. The habit that ties this together is short: <strong>Ask, then Verify, then Document.</strong> Use the tool ambitiously, confirm every fact and number yourself, then log the tool, the task, and the check in a record that travels with your work <span class="citation" data-cites="nist2024genai">(<a href="#ref-nist2024genai" role="doc-biblioref">Autio et al. 2024</a>)</span>.</p>
 <p>Why draw the line exactly there? A short answer comes from the history of discovery. Albert Einstein once sketched research as a cycle: you start from experience, you leap to an idea that could explain it, and then you reason back down to predictions you can check. The leap upward has a name. <strong>Abduction</strong> is the act of inventing a new explanation for a surprising observation, a cause nobody handed you. Example: sales at a shop dip every third week, and you guess that a payday cycle is behind it, a hypothesis that appears in no dataset. Here is that cycle in one picture:</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -659,30 +676,21 @@ ul.task-list li input[type="checkbox"] {
 <p>Sort the work. You can <em>delegate</em> locating candidate published price series and listing the inputs an inflation adjustment needs. You <em>keep</em> three things: deciding that a consumer price index (not a producer or wholesale index) is the right measure for what households pay, choosing the base year you convert every price into, and judging whether a source is authoritative. You ask an AI assistant for the series and it returns “consumer prices rose roughly 23 percent between 2019 and 2025,” citing a statistical agency.</p>
 <p>Now verify. You open the agency’s actual data table, read the two index values yourself, and recompute the percentage change by hand. If it confirms the number, you log a verified input. If it shows a different value, or cannot be found at all, the number the tool handed you was never evidence. Either way, your comparison rests on a number you retrieved, not one a model typed.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">2.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">2.4</span> An AI failure case</h2>
+<p>You ask for the median starting salary of graduates in your field and a source. The tool returns a crisp value and attributes it to “the 2024 National Graduate Earnings Survey, Table 3.” It reads like every real citation you have seen: an official-sounding survey, a year, a table. It is fabricated, or the number is not on that page.</p>
+<p>Here is exactly how you catch it. You do not trust the citation as delivered. You search for the survey in a library catalog and, if it opens, turn to the named table and read the line. If the survey does not exist, or has no such value, the confident citation collapses. Fabricated sources sound just as authoritative as real ones, so the only reliable filter is opening the document.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">2.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">2.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio01-govern-the-work.html">Studio 1: Govern the work</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your project starts here. There is no question yet and no data, only the two things everything else will rest on: the record you keep and the habit of checking.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. And expect a loop rather than a single shot: you ask, you read what comes back, you push on the part that looks thin, you ask again. That back-and-forth is how real AI work goes, and it is fine. What matters is where the loop stops. It stops when you have run the check yourself, not when the tool finally sounds sure.</p>
 <p>Each prompt below hands out a task you can check, with a verify note naming the failure it defends against.</p>
-<p><strong>Locate candidate sources (you verify each one).</strong></p>
-<pre class="text"><code>Act as an economic-research assistant. I need annual consumer price index values
-for 2019 and 2025. List 3 candidate published sources, each with the exact table
-or series name and the agency that publishes it. Only include documents you are
-confident exist; mark anything uncertain.</code></pre>
-<p>After running, verify (counters <em>confident fabrication</em>): open each document yourself and read the number. A table you cannot retrieve is invented until you find it.</p>
-<p><strong>Turn a decision into a checklist (you audit the list).</strong></p>
-<pre class="text"><code>For converting a 2019 restaurant price into 2025 dollars, list every input my
-calculation needs. For each, say why it belongs and which single choice most
-governs the result.</code></pre>
-<p>After running, verify (counters <em>illusion of completeness</em>): a long, tidy list can still omit the choice that governs your answer. Compare it against a checklist you wrote first, and confirm the governing choice is really the one the comparison rests on.</p>
-<p><strong>Red-team your own choice (you keep the decision).</strong></p>
-<pre class="text"><code>Here is my price index and base year for comparing 2019 and 2025 menu prices:
-[paste it]. Act as a hostile referee. Name every place the choice reaches past my
-evidence. Do not rewrite it for me; list the weaknesses.</code></pre>
-<p>After running, verify (counters <em>sycophantic agreement</em>): if every objection is mild or it calls your choice “well-balanced,” push back and ask for the single worst flaw.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -696,28 +704,39 @@ evidence. Do not rewrite it for me; list the weaknesses.</code></pre>
 <p>These stay yours, no matter how fluent the tool sounds. Deciding which measure fits your question and which base year the comparison requires. Judging whether a source is authoritative enough to build on. Setting the claim you will defend and stating its uncertainty. The tool gathers options and drafts prose; choosing among them, and answering for the choice, is the researcher’s job.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">2.6</span> An AI failure case</h2>
-<p>You ask for the median starting salary of graduates in your field and a source. The tool returns a crisp value and attributes it to “the 2024 National Graduate Earnings Survey, Table 3.” It reads like every real citation you have seen: an official-sounding survey, a year, a table. It is fabricated, or the number is not on that page.</p>
-<p>Here is exactly how you catch it. You do not trust the citation as delivered. You search for the survey in a library catalog and, if it opens, turn to the named table and read the line. If the survey does not exist, or has no such value, the confident citation collapses. Fabricated sources sound just as authoritative as real ones, so the only reliable filter is opening the document.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">2.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio01-govern-the-work.html">Studio 1: Govern the work</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your project starts here. There is no question yet and no data, only the two things everything else will rest on: the record you keep and the habit of checking.</em></p>
 <ol type="1">
-<li>Open a blank spreadsheet or document and title it <strong>AI Research Ledger</strong>. Give it eight columns: task delegated, tool used, prompt, output summary, decision, verification method, remaining concern, and responsible researcher. Put your own name in that last column now, and leave it there for the rest of the book.</li>
-<li>Write down three genuine curiosities from your own life, work, or field. One sentence each. Not three topics you think sound impressive: three things you actually wonder about and would like a real answer to.</li>
-<li>Under each one, write the single fact you would need to know before you could take that curiosity seriously as a project.</li>
-<li>Pick the curiosity you cannot stop thinking about, and ask an AI tool for three published sources that speak to that fact. Before you read the reply, write down what you expect it to say.</li>
-<li>Log the exchange in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. For a citation the method is primary-source reading: open the document and read the line. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Open a blank spreadsheet or document and title it <strong>AI Research Ledger</strong>. Give it eight columns: task delegated, tool used, prompt, output summary, decision, verification method, remaining concern, and responsible researcher. Put your own name in that last column now, and leave it there for the rest of the book.</p></li>
+<li><p>Write down three genuine curiosities from your own life, work, or field. One sentence each. Not three topics you think sound impressive: three things you actually wonder about and would like a real answer to.</p></li>
+<li><p>Under each one, write the single fact you would need to know before you could take that curiosity seriously as a project.</p>
+<p><strong>Turn a decision into a checklist (you audit the list).</strong></p>
+<pre class="text"><code>For converting a 2019 restaurant price into 2025 dollars, list every input my
+calculation needs. For each, say why it belongs and which single choice most
+governs the result.</code></pre>
+<p>After running, verify (counters <em>illusion of completeness</em>): a long, tidy list can still omit the choice that governs your answer. Compare it against a checklist you wrote first, and confirm the governing choice is really the one the comparison rests on.</p></li>
+<li><p>Pick the curiosity you cannot stop thinking about, and ask an AI tool for three published sources that speak to that fact. Before you read the reply, write down what you expect it to say.</p>
+<p><strong>Locate candidate sources (you verify each one).</strong></p>
+<pre class="text"><code>Act as an economic-research assistant. I need annual consumer price index values
+for 2019 and 2025. List 3 candidate published sources, each with the exact table
+or series name and the agency that publishes it. Only include documents you are
+confident exist; mark anything uncertain.</code></pre>
+<p>After running, verify (counters <em>confident fabrication</em>): open each document yourself and read the number. A table you cannot retrieve is invented until you find it.</p></li>
+<li><p>Log the exchange in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. For a citation the method is primary-source reading: open the document and read the line. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p>
+<p><strong>Red-team your own choice (you keep the decision).</strong></p>
+<pre class="text"><code>Here is my price index and base year for comparing 2019 and 2025 menu prices:
+[paste it]. Act as a hostile referee. Name every place the choice reaches past my
+evidence. Do not rewrite it for me; list the weaknesses.</code></pre>
+<p>After running, verify (counters <em>sycophantic agreement</em>): if every objection is mild or it calls your choice “well-balanced,” push back and ask for the single worst flaw.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-nist2024genai" class="csl-entry" role="listitem">
+Autio, Chloe, Reva Schwartz, Jesse Dunietz, et al. 2024. <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em>. NIST AI 600-1. National Institute of Standards; Technology. <a href="https://doi.org/10.6028/NIST.AI.600-1">https://doi.org/10.6028/NIST.AI.600-1</a>.
+</div>
+<div id="ref-ji2023hallucination" class="csl-entry" role="listitem">
+Ji, Ziwei, Nayeon Lee, Rita Frieske, et al. 2023. <span>“Survey of Hallucination in Natural Language Generation.”</span> <em>ACM Computing Surveys</em> 55 (12): 1–38. <a href="https://doi.org/10.1145/3571730">https://doi.org/10.1145/3571730</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

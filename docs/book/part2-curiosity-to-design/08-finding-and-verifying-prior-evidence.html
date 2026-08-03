@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">9.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">9.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">9.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">9.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">9.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">9.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">9.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">9.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">9.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -628,10 +645,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-concept" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">9.2</span> The concept</h2>
 <p>A field is a <strong>cumulative conversation</strong>: a running argument where each study answers, extends, or challenges the ones before it. One team reports that a soil treatment raises crop yield; the next tests whether the effect holds in a different climate. Your job is not to invent an island. It is to find the conversation your question belongs to and add one honest sentence to it.</p>
-<p>Every source you keep passes through one habit. The <strong>retrieval-verification loop</strong> is four steps: ask any tool to surface leads, retrieve the actual source yourself, verify it exists and says what was claimed, and document where you found it. A <strong>lead</strong> is a candidate source you have not confirmed yet. A lead stays a lead until retrieval and verification promote it to a source.</p>
-<p>Two named failures are what the loop exists to catch. A <strong>citation hallucination</strong> is an AI inventing a source that does not exist, dressed in a real-sounding author pair, a recent year, and a plausible journal. A <strong>mischaracterized source</strong> is a real paper cited for a claim it never makes, such as a study that reports a correlation being cited as proof of a cause. A source can be real and still be mischaracterized, so “does it exist” and “does it say this” are two separate checks. Run both.</p>
+<p>Every source you keep passes through one habit. The <strong>retrieval-verification loop</strong> is four steps: ask any tool to surface leads, retrieve the actual source yourself, verify it exists and says what was claimed, and document where you found it <span class="citation" data-cites="snyder2019literature">(<a href="#ref-snyder2019literature" role="doc-biblioref">Snyder 2019</a>)</span>. A <strong>lead</strong> is a candidate source you have not confirmed yet. A lead stays a lead until retrieval and verification promote it to a source.</p>
+<p>Two named failures are what the loop exists to catch. A <strong>citation hallucination</strong> is an AI inventing a source that does not exist, dressed in a real-sounding author pair, a recent year, and a plausible journal. A <strong>mischaracterized source</strong> is a real paper cited for a claim it never makes, such as a study that reports a correlation being cited as proof of a cause. A source can be real and still be mischaracterized, so “does it exist” and “does it say this” are two separate checks <span class="citation" data-cites="ji2023hallucination">(<a href="#ref-ji2023hallucination" role="doc-biblioref">Ji et al. 2023</a>)</span>. Run both.</p>
 <p>Once you hold one verified source, you grow the rest by <strong>snowballing</strong>: walking its links in two directions. A <strong>backward citation search</strong> reads the source’s own reference list to find the older work it built on. A <strong>forward citation search</strong> finds the newer works that cite it, through a “Cited by” trail. Two solid sources, snowballed both ways, become ten.</p>
-<p>That is also how you earn the word gap. A <strong>genuine gap</strong> is a question your verified sources actually leave unanswered, confirmed by looking. An <strong>unfinished search</strong> is a question you simply stopped chasing. They feel identical from your desk, and only one is a real contribution. The test is retrieval. You have earned the word gap only after real sources, followed forward and backward, still stay silent on your question.</p>
+<p>That is also how you earn the word gap. A <strong>genuine gap</strong> is a question your verified sources actually leave unanswered, confirmed by looking. An <strong>unfinished search</strong> is a question you simply stopped chasing. They feel identical from your desk, and only one is a real contribution. The test is retrieval. You have earned the word gap only after real sources, followed forward and backward, still stay silent on your question <span class="citation" data-cites="greenhalgh2005search">(<a href="#ref-greenhalgh2005search" role="doc-biblioref">Greenhalgh and Peacock 2005</a>)</span>.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="9.3">
 <h2 data-number="9.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">9.3</span> A worked example</h2>
@@ -639,26 +656,19 @@ ul.task-list li input[type="checkbox"] {
 <p>Here is the decision on the table. Is the missing study proof that “nobody has tested biochar in sandy soil, so my gap is real”? No.&nbsp;Three things could be true. The AI <strong>fabricated</strong> the study whole, and there is nothing to find. It <strong>garbled</strong> a real source, right idea but wrong author or year, so you search the claim itself and the likely real authors. Or the paper is real but <strong>paywalled or obscure</strong>, reachable through your library or by emailing the author. Your next move is the same in all three: the lead stays out of your verified column until retrieval succeeds.</p>
 <p>So you do the work. You retrieve four real soil-science studies through the library database, read each one, and snowball. Backward from one 2019 field trial you find the older greenhouse study it built on. Forward through “Cited by” you find two newer trials that tested the same idea in loam and clay. Now you can see the conversation: biochar helps yield in some soils, the size of the effect varies, and none of the four you retrieved ran the trial in the sandy soil your county farms. <em>That</em> quiet spot, ringed by sources you opened yourself, is a gap you can defend.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">9.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">9.4</span> An AI failure case</h2>
+<p>The failure to expect here is confident fabrication. Ask a general-purpose tool for “the most-cited study on biochar and maize yield in sandy soil” and it will often produce one, complete with a DOI-shaped string and a real journal name, because producing a fluent citation is exactly what it is built to do. The detail is not evidence of existence. You catch it the moment you try to retrieve it: paste the exact title in quotation marks into the library database and Google Scholar. If nothing resolves anywhere it should live, the citation is fabricated until proven otherwise, and it never enters your ledger. The fluency was the trap; the empty search result is the tell.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">9.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">9.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio03-ground-in-evidence.html">Studio 3: Ground it in verified evidence</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>You came in with a candidate list of leads. You leave with an evidence base you have personally opened, and a gap you can defend out loud.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Verification is not one prompt either. It is a loop: you ask, you read the output against the paper, you tell the tool exactly where it overreached, and you ask again. The second pass is usually where the honest answer shows up, because the first one is still trying to please you.</p>
-<pre class="text"><code>My research question is: [paste it]. The claim I need sources for is:
-[paste the claim]. List the five published studies most relevant to this
-claim, each with authors, year, exact title, and venue, so I can retrieve
-and verify each one myself.</code></pre>
-<p><em>After running, verify:</em> search each exact title in quotes before believing it exists. This counters <strong>confident fabrication</strong> (a real-sounding citation for a paper that was never written).</p>
-<pre class="text"><code>Here are the five sources I retrieved and read: [paste them]. For each, state
-the single claim its evidence actually supports, and flag any where my
-one-line summary reaches further than the study does.</code></pre>
-<p><em>After running, verify:</em> read each flagged claim against the paper’s own results section. This counters the <strong>mischaracterized source</strong> and <strong>silent scope change</strong> (a correlation quietly reported as a cause).</p>
-<pre class="text"><code>Here is my research question and the gap I placed: [paste them]. Argue the gap
-is NOT real: name up to three published studies that may already fill it, with
-authors, year, title, and venue. Do not reassure me.</code></pre>
-<p><em>After running, verify:</em> retrieve every study it names; a source you cannot open closes nothing. This counters <strong>sycophantic agreement</strong> (a partner that praises your gap has flattered you, not tested it).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -672,25 +682,29 @@ authors, year, title, and venue. Do not reassure me.</code></pre>
 <p>Two calls stay yours alone, because your name goes on the map. First, <strong>whether a source counts as verified</strong>: you retrieved it, opened it, and read the claim yourself, so no AI summary substitutes for the paper. Second, <strong>whether your gap is genuine</strong>: you walked one backward and one forward link from each verified source and the question still stands unanswered. An AI can point; only you can vouch.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="9.6">
-<h2 data-number="9.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">9.6</span> An AI failure case</h2>
-<p>The failure to expect here is confident fabrication. Ask a general-purpose tool for “the most-cited study on biochar and maize yield in sandy soil” and it will often produce one, complete with a DOI-shaped string and a real journal name, because producing a fluent citation is exactly what it is built to do. The detail is not evidence of existence. You catch it the moment you try to retrieve it: paste the exact title in quotation marks into the library database and Google Scholar. If nothing resolves anywhere it should live, the citation is fabricated until proven otherwise, and it never enters your ledger. The fluency was the trap; the empty search result is the tell.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="9.7">
-<h2 data-number="9.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">9.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio03-ground-in-evidence.html">Studio 3: Ground it in verified evidence</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>You came in with a candidate list of leads. You leave with an evidence base you have personally opened, and a gap you can defend out loud.</em></p>
 <ol type="1">
-<li>Try to retrieve every candidate on your list. Search the exact title in quotation marks in your library database and in Google Scholar. Anything that does not resolve stays a lead and never enters your evidence base. Note why it failed.</li>
-<li>Open the ones that resolve and read them. At minimum: the abstract, the design section, and the results. Then write each source’s central claim in one sentence in your own words. If you cannot write that sentence, you have not read it yet.</li>
-<li>Criticize each one. Name the population it studied, the design it used, and the one thing you would <em>not</em> conclude from it. A source you cannot criticize is a source you have not understood.</li>
-<li>Draw your evidence map: one node per verified source, lines between the ones that agree, and a marked line between any two that disagree. Contradictions get drawn, never smoothed over.</li>
-<li>Find the quiet spot on the map and write your gap as one bounded sentence: “Across the sources I retrieved and verified, ___ has not been established for ___.” If the honest version is “my search is still unfinished,” write that instead. That is a finding about your search, not a failure.</li>
-<li>Log the verification work in your AI Research Ledger, naming the method you used from the <a href="../verification-guide.html">Verification Guide</a>; primary-source reading is the one that fits every citation. An AI reviewer may try to argue your gap away with you; the decision to keep it or drop it stays yours.</li>
+<li><p>Try to retrieve every candidate on your list. Search the exact title in quotation marks in your library database and in Google Scholar. Anything that does not resolve stays a lead and never enters your evidence base. Note why it failed.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>My research question is: [paste it]. The claim I need sources for is:
+[paste the claim]. List the five published studies most relevant to this
+claim, each with authors, year, exact title, and venue, so I can retrieve
+and verify each one myself.</code></pre>
+<p><em>After running, verify:</em> search each exact title in quotes before believing it exists. This counters <strong>confident fabrication</strong> (a real-sounding citation for a paper that was never written).</p></li>
+<li><p>Open the ones that resolve and read them. At minimum: the abstract, the design section, and the results. Then write each source’s central claim in one sentence in your own words. If you cannot write that sentence, you have not read it yet.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Here are the five sources I retrieved and read: [paste them]. For each, state
+the single claim its evidence actually supports, and flag any where my
+one-line summary reaches further than the study does.</code></pre>
+<p><em>After running, verify:</em> read each flagged claim against the paper’s own results section. This counters the <strong>mischaracterized source</strong> and <strong>silent scope change</strong> (a correlation quietly reported as a cause).</p></li>
+<li><p>Criticize each one. Name the population it studied, the design it used, and the one thing you would <em>not</em> conclude from it. A source you cannot criticize is a source you have not understood.</p></li>
+<li><p>Draw your evidence map: one node per verified source, lines between the ones that agree, and a marked line between any two that disagree. Contradictions get drawn, never smoothed over.</p></li>
+<li><p>Find the quiet spot on the map and write your gap as one bounded sentence: “Across the sources I retrieved and verified, ___ has not been established for ___.” If the honest version is “my search is still unfinished,” write that instead. That is a finding about your search, not a failure.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Here is my research question and the gap I placed: [paste them]. Argue the gap
+is NOT real: name up to three published studies that may already fill it, with
+authors, year, title, and venue. Do not reassure me.</code></pre>
+<p><em>After running, verify:</em> retrieve every study it names; a source you cannot open closes nothing. This counters <strong>sycophantic agreement</strong> (a partner that praises your gap has flattered you, not tested it).</p></li>
+<li><p>Log the verification work in your AI Research Ledger, naming the method you used from the <a href="../verification-guide.html">Verification Guide</a>; primary-source reading is the one that fits every citation. An AI reviewer may try to argue your gap away with you; the decision to keep it or drop it stays yours.</p></li>
 </ol>
 <!-- studio-continue:begin -->
 <blockquote class="blockquote">
@@ -698,6 +712,17 @@ authors, year, title, and venue. Do not reassure me.</code></pre>
 </blockquote>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-greenhalgh2005search" class="csl-entry" role="listitem">
+Greenhalgh, Trisha, and Richard Peacock. 2005. <span>“Effectiveness and Efficiency of Search Methods in Systematic Reviews of Complex Evidence: Audit of Primary Sources.”</span> <em>BMJ</em> 331: 1064–65. <a href="https://doi.org/10.1136/bmj.38636.593461.68">https://doi.org/10.1136/bmj.38636.593461.68</a>.
+</div>
+<div id="ref-ji2023hallucination" class="csl-entry" role="listitem">
+Ji, Ziwei, Nayeon Lee, Rita Frieske, et al. 2023. <span>“Survey of Hallucination in Natural Language Generation.”</span> <em>ACM Computing Surveys</em> 55 (12): 1–38. <a href="https://doi.org/10.1145/3571730">https://doi.org/10.1145/3571730</a>.
+</div>
+<div id="ref-snyder2019literature" class="csl-entry" role="listitem">
+Snyder, Hannah. 2019. <span>“Literature Review as a Research Methodology: An Overview and Guidelines.”</span> <em>Journal of Business Research</em> 104: 333–39. <a href="https://doi.org/10.1016/j.jbusres.2019.07.039">https://doi.org/10.1016/j.jbusres.2019.07.039</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

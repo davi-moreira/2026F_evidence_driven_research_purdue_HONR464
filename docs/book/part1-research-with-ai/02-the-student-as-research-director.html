@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">3.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">3.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">3.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">3.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">3.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">3.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">3.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">3.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">3.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -638,8 +655,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Delegate then verify</strong>: fine to hand out, but you must confirm the result with a real check before you trust it. Example: asking the tool to locate a lab protocol, then opening the actual protocol to confirm it exists and says what the tool claimed.</li>
 <li><strong>Never delegate</strong>: a judgment that stays yours no matter how capable the tool becomes. Example: deciding whether your evidence actually supports the claim you want to make.</li>
 </ul>
-<p>A <strong>never-delegate decision</strong> is any call that defines the science itself: the question you pursue, the design and the people or samples it covers, what your measures mean, the ethics, the boundary of your claim, and the uncertainty you report. <strong>Verification</strong> is the step that earns trust: confirming a result yourself, by a named method, before you put your name on it.</p>
-<p>One thing about delegation has changed, and your triage has to keep up. Handing a task to a modern tool rarely means one prompt and one answer. It means a loop: the tool drafts, runs, reads its own error, rewrites, and runs again. Increasingly the tool closes that loop by itself and shows you only the tidy result at the end. A loop you did not watch is not a loop you verified. So when you drop a task into “delegate then verify,” decide right then what you will inspect when the loop stops, rather than deciding later whether the final answer looks plausible.</p>
+<p>A <strong>never-delegate decision</strong> is any call that defines the science itself: the question you pursue, the design and the people or samples it covers, what your measures mean, the ethics, the boundary of your claim, and the uncertainty you report <span class="citation" data-cites="nasem2017integrity">(<a href="#ref-nasem2017integrity" role="doc-biblioref">National Academies of Sciences, Engineering, and Medicine 2017</a>)</span>. <strong>Verification</strong> is the step that earns trust: confirming a result yourself, by a named method, before you put your name on it.</p>
+<p>One thing about delegation has changed, and your triage has to keep up. Handing a task to a modern tool rarely means one prompt and one answer. It means a loop: the tool drafts, runs, reads its own error, rewrites, and runs again. Increasingly the tool closes that loop by itself and shows you only the tidy result at the end. A loop you did not watch is not a loop you verified. So when you drop a task into “delegate then verify,” decide right then what you will inspect when the loop stops, rather than deciding later whether the final answer looks plausible <span class="citation" data-cites="nist2024genai">(<a href="#ref-nist2024genai" role="doc-biblioref">Autio et al. 2024</a>)</span>.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">3.3</span> A worked example</h2>
@@ -648,30 +665,19 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Delegate then verify.</strong> Locating a standard protocol for reading bacterial growth curves, and drafting the formula for <strong>doubling time</strong>, the hours a population takes to double in number. You hand these out, then confirm each: you open the actual protocol, and you recompute one doubling time by hand from two printed OD values.</p>
 <p><strong>Never delegate.</strong> Deciding that the concentrations you test are biologically meaningful and safe. Deciding whether a gap between the treated and untreated curves licenses the word “inhibits.” Stating how uncertain that conclusion is, given three plates and one strain. No tool makes those calls. The moment you let it, you become a reader of someone else’s guess.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">3.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">3.4</span> An AI failure case</h2>
+<p>You paste your eight tasks in and ask the tool to sort them. Back comes a clean, confident table. Seven rows look right. But one reads: <em>“Decide whether the growth difference is biologically meaningful: delegate then verify, just apply the standard effect-size cutoff.”</em> It sounds authoritative, and it hides a scope change. A judgment about what counts as meaningful in your specific system has been swapped for a mechanical lookup, and the “standard cutoff” it names is one no source will confirm. You catch it two ways. You wrote your own triage before you asked, and your version had that row as never delegate, so the mismatch jumps out. Then you try to retrieve the “standard cutoff,” and nothing real supports it. The row goes back where it belongs.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">3.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">3.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio01-govern-the-work.html">Studio 1: Govern the work</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>You have a ledger and three curiosities. Now you take the job of the person who decides who does what.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Each prompt below is <strong>commit-first</strong>: write your own answer before you open the tool, so its reply has something of yours to disagree with. Expect to run each one more than once. You read the reply, find the weak spot, sharpen the prompt, and go again. The loop is normal; stopping the loop before you have checked anything is the mistake.</p>
-<p><strong>Locate a bench resource (delegable).</strong></p>
-<pre class="text"><code>Act as a lab-methods assistant in microbiology. I am measuring bacterial growth
-by optical density (OD600). List 3 published, retrievable protocols or textbook
-methods for reading a growth curve. For each, give authors or source, year, and
-where it appears. Only include work you are confident exists; mark anything
-uncertain. Then tell me which one to verify first.</code></pre>
-<p>After running, verify (counters <em>confident fabrication</em>): open each protocol yourself before you cite it; a source you cannot retrieve is invented until it opens.</p>
-<p><strong>Turn your triage into a checkable list.</strong></p>
-<pre class="text"><code>Here are eight tasks in my project: [paste your list]. For each, label it "safe to
-delegate," "delegate then verify," or "never delegate," and give a one-line reason.
-Return it as a table so I can audit each row on its own.</code></pre>
-<p>After running, verify (counters <em>illusion of completeness</em>): compare the table against the triage you wrote first and against the never-delegate checklist; a tidy table can quietly mis-file the one decision that mattered.</p>
-<p><strong>Red-team your own boundary.</strong></p>
-<pre class="text"><code>I marked this task "never delegate": [paste one task]. Act as a hostile reviewer
-and argue that it is actually safe to hand to an AI. Give your strongest case. Do
-not agree with me.</code></pre>
-<p>After running, verify (counters <em>sycophantic agreement</em>): if the reviewer folds and praises your call, push back, then take its strongest objection to a colleague or mentor rather than trusting the tool’s approval.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -685,28 +691,41 @@ not agree with me.</code></pre>
 <p>The buckets themselves are yours to fill, and three calls never leave the “never delegate” bucket: <strong>which question your project pursues</strong>, <strong>whether your evidence supports the claim you want to make</strong>, and <strong>how much uncertainty you report</strong>. You may ask a tool to lay out options, but choosing among them, and answering for the choice, is the job that makes you the director.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">3.6</span> An AI failure case</h2>
-<p>You paste your eight tasks in and ask the tool to sort them. Back comes a clean, confident table. Seven rows look right. But one reads: <em>“Decide whether the growth difference is biologically meaningful: delegate then verify, just apply the standard effect-size cutoff.”</em> It sounds authoritative, and it hides a scope change. A judgment about what counts as meaningful in your specific system has been swapped for a mechanical lookup, and the “standard cutoff” it names is one no source will confirm. You catch it two ways. You wrote your own triage before you asked, and your version had that row as never delegate, so the mismatch jumps out. Then you try to retrieve the “standard cutoff,” and nothing real supports it. The row goes back where it belongs.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">3.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio01-govern-the-work.html">Studio 1: Govern the work</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>You have a ledger and three curiosities. Now you take the job of the person who decides who does what.</em></p>
 <ol type="1">
-<li>Pick the curiosity from Chapter 1 you are most drawn to, and list every task the project around it would need: finding sources, gathering or cleaning data, choosing measures, computing, drafting, interpreting, deciding. Aim for at least ten lines, and do not filter yet.</li>
-<li>Sort every line into safe to delegate, delegate then verify, or never delegate, with a one-line reason beside it. That sorted list is your director’s task list, and you will keep amending it for the rest of the book.</li>
-<li>For each “delegate then verify” line, name the check now, while it is cheap: which document you will open, which number you will recompute, which second method you will run.</li>
-<li>Star the two lines you would defend hardest as never-delegate, and write one sentence each on why those calls are what make the project yours.</li>
-<li>Hand the same list to an AI tool, ask it to argue with your placements, and keep only the changes you can justify out loud.</li>
-<li>Log that exchange in your AI Research Ledger, and verify at least one placement with a named method from the <a href="../verification-guide.html">Verification Guide</a>. A triage is a judgment, so the fitting method is peer reasoning: walk your three buckets past a colleague or mentor and let them challenge a placement. Working alone, use the solo substitute: put the list away for a day, re-sort it cold, and compare with your first sort. Every item that moved is a judgment you had not actually settled. An AI reviewer may run either version with you, but it cannot be the peer, because what you are testing is your own consistency. The decision to accept or reject stays yours.</li>
+<li><p>Pick the curiosity from Chapter 1 you are most drawn to, and list every task the project around it would need: finding sources, gathering or cleaning data, choosing measures, computing, drafting, interpreting, deciding. Aim for at least ten lines, and do not filter yet.</p></li>
+<li><p>Sort every line into safe to delegate, delegate then verify, or never delegate, with a one-line reason beside it. That sorted list is your director’s task list, and you will keep amending it for the rest of the book.</p>
+<p><strong>Turn your triage into a checkable list.</strong></p>
+<pre class="text"><code>Here are eight tasks in my project: [paste your list]. For each, label it "safe to
+delegate," "delegate then verify," or "never delegate," and give a one-line reason.
+Return it as a table so I can audit each row on its own.</code></pre>
+<p>After running, verify (counters <em>illusion of completeness</em>): compare the table against the triage you wrote first and against the never-delegate checklist; a tidy table can quietly mis-file the one decision that mattered.</p></li>
+<li><p>For each “delegate then verify” line, name the check now, while it is cheap: which document you will open, which number you will recompute, which second method you will run.</p>
+<p><strong>Locate a bench resource (delegable).</strong></p>
+<pre class="text"><code>Act as a lab-methods assistant in microbiology. I am measuring bacterial growth
+by optical density (OD600). List 3 published, retrievable protocols or textbook
+methods for reading a growth curve. For each, give authors or source, year, and
+where it appears. Only include work you are confident exists; mark anything
+uncertain. Then tell me which one to verify first.</code></pre>
+<p>After running, verify (counters <em>confident fabrication</em>): open each protocol yourself before you cite it; a source you cannot retrieve is invented until it opens.</p></li>
+<li><p>Star the two lines you would defend hardest as never-delegate, and write one sentence each on why those calls are what make the project yours.</p></li>
+<li><p>Hand the same list to an AI tool, ask it to argue with your placements, and keep only the changes you can justify out loud.</p>
+<p><strong>Red-team your own boundary.</strong></p>
+<pre class="text"><code>I marked this task "never delegate": [paste one task]. Act as a hostile reviewer
+and argue that it is actually safe to hand to an AI. Give your strongest case. Do
+not agree with me.</code></pre>
+<p>After running, verify (counters <em>sycophantic agreement</em>): if the reviewer folds and praises your call, push back, then take its strongest objection to a colleague or mentor rather than trusting the tool’s approval.</p></li>
+<li><p>Log that exchange in your AI Research Ledger, and verify at least one placement with a named method from the <a href="../verification-guide.html">Verification Guide</a>. A triage is a judgment, so the fitting method is peer reasoning: walk your three buckets past a colleague or mentor and let them challenge a placement. Working alone, use the solo substitute: put the list away for a day, re-sort it cold, and compare with your first sort. Every item that moved is a judgment you had not actually settled. An AI reviewer may run either version with you, but it cannot be the peer, because what you are testing is your own consistency. The decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-nist2024genai" class="csl-entry" role="listitem">
+Autio, Chloe, Reva Schwartz, Jesse Dunietz, et al. 2024. <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em>. NIST AI 600-1. National Institute of Standards; Technology. <a href="https://doi.org/10.6028/NIST.AI.600-1">https://doi.org/10.6028/NIST.AI.600-1</a>.
+</div>
+<div id="ref-nasem2017integrity" class="csl-entry" role="listitem">
+National Academies of Sciences, Engineering, and Medicine. 2017. <em>Fostering Integrity in Research</em>. The National Academies Press. <a href="https://doi.org/10.17226/21896">https://doi.org/10.17226/21896</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

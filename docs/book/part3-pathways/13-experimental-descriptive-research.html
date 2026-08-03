@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">16.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">16.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">16.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">16.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">16.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">16.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">16.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">16.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">16.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -629,39 +646,30 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="16.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">16.2</span> The concept</h2>
 <p>Three terms carry the idea. Meet them one at a time.</p>
 <ul>
-<li><strong>Latent characteristic</strong>: a real property you cannot read off directly, so a design has to reveal it. Example: how much a search interface’s <em>position</em> pulls clicks, apart from how good each result is.</li>
+<li><strong>Latent characteristic</strong>: a real property you cannot read off directly, so a design has to reveal it. Example: how much a search interface’s <em>position</em> pulls clicks, apart from how good each result is <span class="citation" data-cites="joachims2005clickthrough">(<a href="#ref-joachims2005clickthrough" role="doc-biblioref">Joachims et al. 2005</a>)</span>.</li>
 <li><strong>Controlled stimulus</strong>: a version of a prompt, item, or setting that you fix on purpose and assign by chance, so any difference in response pins to the version rather than to who received it. Example: the same result shown in slot 1 for some sessions and slot 5 for others, chosen at random.</li>
 <li><strong>Experiment as a measurement instrument</strong>: using randomly assigned controlled stimuli to expose a latent characteristic and report it as a plain description. The number you report is the <strong>estimand</strong>, the exact quantity the design is built to state, and here it describes the world as it stands.</li>
 </ul>
-<p>A measurement can be confident and still wrong, because the setup itself is one of the ingredients. Two artifacts do most of the damage. A <strong>demand effect</strong> is when the people being measured guess what you are looking for and drift toward it; example: users who notice they are in a study click more carefully than they would at home. An <strong>instrument effect</strong> is when the measuring device or wording moves the reading on its own; example: slot 1 renders a larger thumbnail, so the logger credits position with attention the picture earned. Both threaten <strong>construct validity</strong>, the degree to which your number estimates the concept you meant rather than something adjacent. Randomizing <em>who</em> sees what does nothing about a bias that hits every unit alike, which is why you design these out separately.</p>
+<p>A measurement can be confident and still wrong, because the setup itself is one of the ingredients. Two artifacts do most of the damage. A <strong>demand effect</strong> is when the people being measured guess what you are looking for and drift toward it; example: users who notice they are in a study click more carefully than they would at home <span class="citation" data-cites="orne1962demand">(<a href="#ref-orne1962demand" role="doc-biblioref">Orne 1962</a>)</span>. An <strong>instrument effect</strong> is when the measuring device or wording moves the reading on its own; example: slot 1 renders a larger thumbnail, so the logger credits position with attention the picture earned. Both threaten <strong>construct validity</strong>, the degree to which your number estimates the concept you meant rather than something adjacent <span class="citation" data-cites="cronbach1955construct">(<a href="#ref-cronbach1955construct" role="doc-biblioref">Cronbach and Meehl 1955</a>)</span>. Randomizing <em>who</em> sees what does nothing about a bias that hits every unit alike, which is why you design these out separately.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="16.3">
 <h2 data-number="16.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">16.3</span> A worked example</h2>
 <p>A music-streaming team wants to pin down a latent property of its “Recommended for you” shelf: how much of a track’s play count comes from <em>where it sits</em> versus how well it matches the listener. Nobody prints that number anywhere, so they build an instrument. For a random slice of sessions they insert one fixed probe track, identical audio and identical artwork, and assign its shelf position at random across six slots, then record the play rate by slot. Because the track never changes and the slot is dealt by chance, the spread in play rate across slots isolates the pull of position alone. The estimand is the shelf’s <strong>attention curve</strong>: how much each rank commands, described for these sessions.</p>
 <p>Here is where the decision bites. Inside the study there truly is a causal effect of slot on clicks, but the team’s question was descriptive, and the honest report says so: “for these sessions, slot 1 drew about three times the plays of slot 5, at equal quality.” The forbidden sentence is “promoting tracks to slot 1 will triple their plays,” because that is a causal, deployable claim the design never tested. And before trusting even the descriptive number, the team guards against two artifacts by design: a demand effect if the probe looks like an ad, and an instrument effect if slot 1’s larger art or a slot-keyed logger inflates the count. The redesign renders every slot identically and logs impressions server-side.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="16.4">
-<h2 data-number="16.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">16.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">16.4</span> An AI failure case</h2>
+<p>You paste your attention-curve result into an AI tool and ask it to write the findings sentence. It returns something fluent: “Moving tracks to the top slot causes a 3x lift in plays, so the team should promote its best matches to slot 1.” It reads like a win, but it is a <strong>silent scope change</strong>: you asked how attention is distributed, and the tool quietly answered a causal, deployable question about what promoting would do. You catch it by laying its sentence beside yours, word for word. Yours asked <em>how much</em> position pulls; its answer asked <em>what to do</em>. The tells are “causes,” “should,” and the imagined “lift” from an intervention you never ran. Reject it, and rewrite the claim bounded to the units you observed.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="16.5">
-<h2 data-number="16.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">16.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">16.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio05-develop-the-pathway.html">Studio 5: Develop the pathway</a>.</strong> This lesson serves the <strong>experimental-descriptive</strong> pathway. If your declared pathway is different, skim it and work the lesson that matches; the studio page routes you. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your design is declared and diagnosed. This step asks a narrower question of it: is your study measuring a property the world already has, and if so, can it do that honestly?</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Each prompt below ends with a check you run yourself. And treat each one as the opening move of a loop, not a one-shot request: read the output, push back on the weakest part, sharpen the prompt, run it again. Agentic tools now run several turns of that loop on their own, which does not retire your check. It just means more output arrives between your checks.</p>
-<pre class="text"><code>Act as a literature scout. List three real, published experiments used to MEASURE
-a latent characteristic (position bias in a ranking interface, a hidden prevalence,
-a preference weight) rather than to test a deployable intervention. For each give
-authors, year, venue, and the single quantity measured, in a table. Only include
-work you are confident exists; mark any row you are unsure about.</code></pre>
-<p>After running, verify: open a database and retrieve each study yourself; any row you cannot find in a minute is a <strong>confident fabrication</strong>, so cut it.</p>
-<pre class="text"><code>Here is code that estimates an interface's attention curve as the difference in
-play rate across randomly assigned slots: [paste]. Name every assumption this
-estimator needs to be valid, and for each, one concrete way it could fail in my
-logs.</code></pre>
-<p>After running, verify: check each assumption against your actual pipeline; an estimator that sounds standard but assumes something your data break is a <strong>plausible-but-wrong method</strong>.</p>
-<pre class="text"><code>Act as a hostile measurement reviewer. Here is my construct and how I measure it:
-[plan]. List every demand effect and instrument effect that could produce my number
-even if the true value were different, and the redesign that rules each one out.</code></pre>
-<p>After running, verify: compare the list against the one artifact you wrote down first; if yours is missing, the tidy output just failed the <strong>illusion of completeness</strong> test, so add it back.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -675,28 +683,45 @@ even if the true value were different, and the redesign that rules each one out.
 <p>Three calls stay yours. Whether your inquiry is <strong>descriptive or causal</strong>, because the kind lives in your question’s words and no tool can read your intent. Whether the design actually measures <strong>your</strong> construct rather than something adjacent, which is a judgment about meaning, not about code. And which <strong>artifacts</strong> you are willing to stake your name on having ruled out. An AI partner can draft, locate, and attack. You declare and defend.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="16.6">
-<h2 data-number="16.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">16.6</span> An AI failure case</h2>
-<p>You paste your attention-curve result into an AI tool and ask it to write the findings sentence. It returns something fluent: “Moving tracks to the top slot causes a 3x lift in plays, so the team should promote its best matches to slot 1.” It reads like a win, but it is a <strong>silent scope change</strong>: you asked how attention is distributed, and the tool quietly answered a causal, deployable question about what promoting would do. You catch it by laying its sentence beside yours, word for word. Yours asked <em>how much</em> position pulls; its answer asked <em>what to do</em>. The tells are “causes,” “should,” and the imagined “lift” from an intervention you never ran. Reject it, and rewrite the claim bounded to the units you observed.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="16.7">
-<h2 data-number="16.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">16.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio05-develop-the-pathway.html">Studio 5: Develop the pathway</a>.</strong> This lesson serves the <strong>experimental-descriptive</strong> pathway. If your declared pathway is different, skim it and work the lesson that matches; the studio page routes you. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your design is declared and diagnosed. This step asks a narrower question of it: is your study measuring a property the world already has, and if so, can it do that honestly?</em></p>
 <ol type="1">
-<li>Read your lead question aloud and underline the verb. Does it ask how much of something already sits out there, or what would change if you intervened? Write the answer in one line. That line decides whether this pathway is yours.</li>
-<li>If it is yours, name the latent characteristic your project has to reveal, the property nobody publishes anywhere, and the controlled stimulus you will assign by chance to reveal it.</li>
-<li>Write your estimand in one sentence: the exact quantity, for which units, described as it stands. Underneath it, write the causal sentence you forbid yourself, the one that starts with “if we”.</li>
-<li>Name the one demand effect and the one instrument effect you most fear, each with the redesign that rules it out.</li>
-<li>If this pathway is not yours, run steps 2 to 4 as a drill anyway, treating your question as if you had to measure it rather than intervene. What breaks is your evidence that the pathway you chose fits better. Write that in two lines.</li>
-<li>Log the step in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. A falsification test fits this chapter well: set the true effect to exactly zero in a toy version of your design and confirm your instrument reports about zero. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Read your lead question aloud and underline the verb. Does it ask how much of something already sits out there, or what would change if you intervened? Write the answer in one line. That line decides whether this pathway is yours.</p></li>
+<li><p>If it is yours, name the latent characteristic your project has to reveal, the property nobody publishes anywhere, and the controlled stimulus you will assign by chance to reveal it.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Act as a literature scout. List three real, published experiments used to MEASURE
+a latent characteristic (position bias in a ranking interface, a hidden prevalence,
+a preference weight) rather than to test a deployable intervention. For each give
+authors, year, venue, and the single quantity measured, in a table. Only include
+work you are confident exists; mark any row you are unsure about.</code></pre>
+<p>After running, verify: open a database and retrieve each study yourself; any row you cannot find in a minute is a <strong>confident fabrication</strong>, so cut it.</p></li>
+<li><p>Write your estimand in one sentence: the exact quantity, for which units, described as it stands. Underneath it, write the causal sentence you forbid yourself, the one that starts with “if we”.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Here is code that estimates an interface's attention curve as the difference in
+play rate across randomly assigned slots: [paste]. Name every assumption this
+estimator needs to be valid, and for each, one concrete way it could fail in my
+logs.</code></pre>
+<p>After running, verify: check each assumption against your actual pipeline; an estimator that sounds standard but assumes something your data break is a <strong>plausible-but-wrong method</strong>.</p></li>
+<li><p>Name the one demand effect and the one instrument effect you most fear, each with the redesign that rules it out.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Act as a hostile measurement reviewer. Here is my construct and how I measure it:
+[plan]. List every demand effect and instrument effect that could produce my number
+even if the true value were different, and the redesign that rules each one out.</code></pre>
+<p>After running, verify: compare the list against the one artifact you wrote down first; if yours is missing, the tidy output just failed the <strong>illusion of completeness</strong> test, so add it back.</p></li>
+<li><p>If this pathway is not yours, run steps 2 to 4 as a drill anyway, treating your question as if you had to measure it rather than intervene. What breaks is your evidence that the pathway you chose fits better. Write that in two lines.</p></li>
+<li><p>Log the step in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. A falsification test fits this chapter well: set the true effect to exactly zero in a toy version of your design and confirm your instrument reports about zero. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-cronbach1955construct" class="csl-entry" role="listitem">
+Cronbach, Lee J., and Paul E. Meehl. 1955. <span>“Construct Validity in Psychological Tests.”</span> <em>Psychological Bulletin</em> 52 (4): 281–302. <a href="https://doi.org/10.1037/h0040957">https://doi.org/10.1037/h0040957</a>.
+</div>
+<div id="ref-joachims2005clickthrough" class="csl-entry" role="listitem">
+Joachims, Thorsten, Laura Granka, Bing Pan, Helene Hembrooke, and Geri Gay. 2005. <span>“Accurately Interpreting Clickthrough Data as Implicit Feedback.”</span> <em>Proceedings of the 28th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval</em>, 154–61. <a href="https://doi.org/10.1145/1076034.1076063">https://doi.org/10.1145/1076034.1076063</a>.
+</div>
+<div id="ref-orne1962demand" class="csl-entry" role="listitem">
+Orne, Martin T. 1962. <span>“On the Social Psychology of the Psychological Experiment: With Particular Reference to Demand Characteristics and Their Implications.”</span> <em>American Psychologist</em> 17 (11): 776–83. <a href="https://doi.org/10.1037/h0043424">https://doi.org/10.1037/h0043424</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

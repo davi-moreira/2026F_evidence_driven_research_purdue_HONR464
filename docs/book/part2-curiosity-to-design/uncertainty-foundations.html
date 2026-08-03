@@ -58,7 +58,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -573,10 +592,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#dependence-and-what-it-costs" id="toc-dependence-and-what-it-costs" class="nav-link" data-scroll-target="#dependence-and-what-it-costs"><span class="header-section-number">11.3.1</span> Dependence, and what it costs</a></li>
   <li><a href="#check-yourself" id="toc-check-yourself" class="nav-link" data-scroll-target="#check-yourself"><span class="header-section-number">11.3.2</span> Check yourself</a></li>
   </ul></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">11.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">11.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">11.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">11.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">11.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">11.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -679,7 +696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-concept" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">11.2</span> The concept</h2>
 <p>Three words get confused constantly, and separating them fixes most of the confusion in this whole area.</p>
-<p>An <strong>estimand</strong> is the quantity you want, defined in the world before any data exist. Example: the average monthly rent paid by all 4,000 households in one town, in one month. Notice that it is a number about the world, not about your data. It would have a value even if you never ran a survey.</p>
+<p>An <strong>estimand</strong> is the quantity you want, defined in the world before any data exist <span class="citation" data-cites="morris2019simulation">(<a href="#ref-morris2019simulation" role="doc-biblioref">Morris et al. 2019</a>)</span>. Example: the average monthly rent paid by all 4,000 households in one town, in one month. Notice that it is a number about the world, not about your data. It would have a value even if you never ran a survey.</p>
 <p>An <strong>estimator</strong> is the recipe you apply to data to guess the estimand. Example: draw 60 households at random and take their average rent. The recipe is a procedure, so it is the thing that can be repeated.</p>
 <p>An <strong>estimate</strong> is what one run of the recipe returns. Example: 1,621. One number, from one run, on one day.</p>
 <p>The estimand does not move. The estimate does. The distance between those two facts is where uncertainty lives.</p>
@@ -714,7 +731,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The spread of that pile has a name. The <strong>standard error</strong> is the typical distance between one run’s estimate and the centre of the pile. For our survey it is about 72.</p>
 <p>Notice what it does not tell you. It does not say how wrong today’s estimate is, and a tightly packed pile can still sit centred on the wrong quantity. Width and aim are two different facts, and the next chapter gives the second one its own name.</p>
 <p>You cannot see the pile from one survey, but you can estimate its width from one survey, and then build a range around your single estimate. That range has a name too. A <strong>confidence interval</strong> is a range built by a recipe that catches the estimand a stated share of the time, when the same recipe is repeated.</p>
-<p>Read that definition slowly, because the obvious paraphrase of it is false. The interval you actually computed either contains the truth or it does not. There is no chance left in it. What has a 95% property is the <strong>recipe</strong>, and only while its assumptions hold, not your one range.</p>
+<p>Read that definition slowly, because the obvious paraphrase of it is false. The interval you actually computed either contains the truth or it does not <span class="citation" data-cites="greenland2016misinterpretations">(<a href="#ref-greenland2016misinterpretations" role="doc-biblioref">Greenland et al. 2016</a>)</span>. There is no chance left in it. What has a 95% property is the <strong>recipe</strong>, and only while its assumptions hold, not your one range.</p>
 <p>That distinction sounds pedantic until you check it, which you can do here, because this town is one we built. In an example where the population is known, simulation lets you watch the pile directly. In a real study you never see it: the pile is implied by your sampling plan and your stated assumptions. Simulation checks what those assumptions imply. It does not prove the world obeys them.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>n, runs, hits <span class="op">=</span> <span class="dv">60</span>, <span class="dv">2000</span>, <span class="dv">0</span></span>
@@ -761,7 +778,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"treating 60 flats as independent: </span><span class="sc">{</span>naive_hits <span class="op">/</span> runs<span class="sc">:.1%}</span><span class="ss"> caught the truth"</span>)</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"treating 12 buildings as the unit: </span><span class="sc">{</span>cluster_hits <span class="op">/</span> runs<span class="sc">:.1%}</span><span class="ss"> caught the truth"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The interval that treats 60 flats as 60 independent observations catches the truth 63.2% of the time. It promised 95%. It is not a little optimistic, it is wrong about one case in three, and nothing in the output would have told the team.</p>
+<p>The interval that treats 60 flats as 60 independent observations catches the truth 63.2% of the time <span class="citation" data-cites="donner2000cluster">(<a href="#ref-donner2000cluster" role="doc-biblioref">Donner and Klar 2000</a>)</span>. It promised 95%. It is not a little optimistic, it is wrong about one case in three, and nothing in the output would have told the team.</p>
 <p>Switching to buildings as the unit brings it to 91.7%. Better by a lot, and still shy of 95, which is worth being honest about rather than rounding away. With only 12 buildings, the recipe’s usual multiplier of 1.96 is too narrow. Widening it to the value appropriate for 12 groups gets 94.5%. Surveying 40 buildings instead, at 5 flats each, gets 94.2% with the ordinary multiplier.</p>
 <p>That is the practical lesson, and it is not about arithmetic. In this design, sixty flats in 12 buildings carry roughly the information of 14 independent flats. That number comes from these data, not from a rule: it is not “divide by the group size”, and a different dependence structure gives a different answer.</p>
 <p>The direction is not automatic either. Here the flats in a building resemble each other, which widens the pile, and the honest fix is a wider interval. A design that deliberately balances within each group can move the pile the other way and produce a narrower one. So “my observations are dependent” does not tell you which way to correct. The direction depends on the sampling design, the estimator, and the pattern of relationships among your observations.</p>
@@ -781,20 +798,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If you want to write the answer out fully: this interval either contains the true average or it does not, and the 95% describes what the recipe does across repeats.</p>
 </section>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">11.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">11.4</span> An AI failure case</h2>
+<p>Ask an assistant to interpret an interval and you will very often get this, fluently and confidently:</p>
+<blockquote class="blockquote">
+<p>“The 95% confidence interval is 1,470 to 1,771, meaning there is a 95% probability that the true average rent falls within this range.”</p>
+</blockquote>
+<p>The number is fine. The sentence is not. The true average is a fixed quantity, and your computed range is now fixed too, so no probability is left to assign between them. What is 95% is the long-run catching rate of the recipe that produced the range.</p>
+<p>This one matters more than it looks. A researcher who believes the wrong version will also believe that a range which “just misses” a value is weak evidence against it, and will start reading single intervals as verdicts. The verification move is small: ask what would be repeated, and if nothing in the sentence could be repeated, the sentence is about the wrong thing.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">11.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">11.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
 <blockquote class="blockquote">
-<p>💡 <strong>AI Prompt:</strong> “Here is my research question and how I plan to collect data: [paste yours]. State my estimand in one sentence, as a quantity in the world that would have a value even if I never collected data. Then state my estimator as a recipe someone else could follow. Do not give me any numbers or advice yet.”</p>
-<p><strong>After running, verify:</strong> - [ ] Check the estimand is about the world, not about your sample. “The average among my respondents” is a sample fact; “the average among all town households” is an estimand. - [ ] Check the estimator is a procedure, not a result. If you cannot hand it to someone and have them run it, it is not yet a recipe. - [ ] Rewrite both in your own words before you keep them. The wording that ships is yours. - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.</p>
+<p><strong>You are working inside <a href="../studios/studio04-declare-and-diagnose.html">Studio 4: Declare and diagnose provisionally</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
 </blockquote>
-<blockquote class="blockquote">
-<p>💡 <strong>AI Prompt:</strong> “Here is how my units were selected and measured: [paste yours]. Identify the levels at which my observations were sampled, repeated, or connected. For each level, say what dependence is plausible and what more you would need to know before choosing how to compute uncertainty. Do not infer a single effective sample size from my description.”</p>
-<p><strong>After running, verify:</strong> - [ ] Confirm each claimed dependence against your actual collection procedure. A tool cannot see your fieldwork; it is guessing from your description. - [ ] If it names a level you had not considered, count how many units you have at that level. Your row count is rarely the number that drives your precision. - [ ] Decide the structure yourself and write down why. This is a design judgment. - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.</p>
-</blockquote>
+<p>Write your project’s uncertainty foundation. This is the piece the next chapter builds its diagnosis on, so make it specific to your own project rather than generic.</p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -812,33 +832,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="11.6">
-<h2 data-number="11.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">11.6</span> An AI failure case</h2>
-<p>Ask an assistant to interpret an interval and you will very often get this, fluently and confidently:</p>
-<blockquote class="blockquote">
-<p>“The 95% confidence interval is 1,470 to 1,771, meaning there is a 95% probability that the true average rent falls within this range.”</p>
-</blockquote>
-<p>The number is fine. The sentence is not. The true average is a fixed quantity, and your computed range is now fixed too, so no probability is left to assign between them. What is 95% is the long-run catching rate of the recipe that produced the range.</p>
-<p>This one matters more than it looks. A researcher who believes the wrong version will also believe that a range which “just misses” a value is weak evidence against it, and will start reading single intervals as verdicts. The verification move is small: ask what would be repeated, and if nothing in the sentence could be repeated, the sentence is about the wrong thing.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="11.7">
-<h2 data-number="11.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">11.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio04-declare-and-diagnose.html">Studio 4: Declare and diagnose provisionally</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p>Write your project’s uncertainty foundation. This is the piece the next chapter builds its diagnosis on, so make it specific to your own project rather than generic.</p>
 <ol type="1">
-<li><strong>State your estimand</strong> in one sentence, as a quantity in the world with a population, a setting, and a time. It must be something that would have a value if you never collected data.</li>
-<li><strong>State your estimator</strong> as a recipe: what you will collect, and exactly what you will compute from it. Someone else should be able to follow it without asking you a question.</li>
-<li><strong>Name what would differ on a repeat.</strong> Write the two or three things that would come out differently if selection and measurement ran again for the same target population, setting, and time. This describes your sampling distribution in words, before you can see it. Keep the period fixed: a repeat next month would also change the quantity you are chasing, which is a different kind of movement.</li>
-<li><strong>Name your dependence structure.</strong> List the levels at which your observations were sampled, repeated, or connected, and how many units you have at each level. Then say which units your uncertainty calculation will treat as independent, and the assumption that lets you treat them that way.</li>
-<li><strong>Write your uncertainty sentence, and then write the wrong version of it.</strong> State what your interval will and will not claim. Then write the tempting false version beside it, and one line on how you would catch yourself saying it.</li>
-<li><strong>Log it.</strong> Add your AI Research Ledger rows for anything you delegated here, and record which decisions you kept.</li>
+<li><p><strong>State your estimand</strong> in one sentence, as a quantity in the world with a population, a setting, and a time. It must be something that would have a value if you never collected data.</p></li>
+<li><p><strong>State your estimator</strong> as a recipe: what you will collect, and exactly what you will compute from it. Someone else should be able to follow it without asking you a question.</p>
+<blockquote class="blockquote">
+<p>💡 <strong>AI Prompt:</strong> “Here is my research question and how I plan to collect data: [paste yours]. State my estimand in one sentence, as a quantity in the world that would have a value even if I never collected data. Then state my estimator as a recipe someone else could follow. Do not give me any numbers or advice yet.”</p>
+<strong>After running, verify:</strong>
+<ul class="task-list">
+<li><label><input type="checkbox">Check the estimand is about the world, not about your sample. “The average among my respondents” is a sample fact; “the average among all town households” is an estimand.</label></li>
+<li><label><input type="checkbox">Check the estimator is a procedure, not a result. If you cannot hand it to someone and have them run it, it is not yet a recipe.</label></li>
+<li><label><input type="checkbox">Rewrite both in your own words before you keep them. The wording that ships is yours.</label></li>
+<li><label><input type="checkbox">Log this use in your AI Research Ledger: task, tool, decision, verification.</label></li>
+</ul>
+</blockquote></li>
+<li><p><strong>Name what would differ on a repeat.</strong> Write the two or three things that would come out differently if selection and measurement ran again for the same target population, setting, and time. This describes your sampling distribution in words, before you can see it. Keep the period fixed: a repeat next month would also change the quantity you are chasing, which is a different kind of movement.</p></li>
+<li><p><strong>Name your dependence structure.</strong> List the levels at which your observations were sampled, repeated, or connected, and how many units you have at each level. Then say which units your uncertainty calculation will treat as independent, and the assumption that lets you treat them that way.</p>
+<blockquote class="blockquote">
+<p>💡 <strong>AI Prompt:</strong> “Here is how my units were selected and measured: [paste yours]. Identify the levels at which my observations were sampled, repeated, or connected. For each level, say what dependence is plausible and what more you would need to know before choosing how to compute uncertainty. Do not infer a single effective sample size from my description.”</p>
+<strong>After running, verify:</strong>
+<ul class="task-list">
+<li><label><input type="checkbox">Confirm each claimed dependence against your actual collection procedure. A tool cannot see your fieldwork; it is guessing from your description.</label></li>
+<li><label><input type="checkbox">If it names a level you had not considered, count how many units you have at that level. Your row count is rarely the number that drives your precision.</label></li>
+<li><label><input type="checkbox">Decide the structure yourself and write down why. This is a design judgment.</label></li>
+<li><label><input type="checkbox">Log this use in your AI Research Ledger: task, tool, decision, verification.</label></li>
+</ul>
+</blockquote></li>
+<li><p><strong>Write your uncertainty sentence, and then write the wrong version of it.</strong> State what your interval will and will not claim. Then write the tempting false version beside it, and one line on how you would catch yourself saying it.</p></li>
+<li><p><strong>Log it.</strong> Add your AI Research Ledger rows for anything you delegated here, and record which decisions you kept.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-donner2000cluster" class="csl-entry" role="listitem">
+Donner, Allan, and Neil Klar. 2000. <em>Design and Analysis of Cluster Randomization Trials in Health Research</em>. John Wiley &amp; Sons. <a href="https://www.wiley-vch.de/en/areas-interest/medicine-health-care/design-and-analysis-of-cluster-randomization-trials-in-health-research-978-0-470-71100-2">https://www.wiley-vch.de/en/areas-interest/medicine-health-care/design-and-analysis-of-cluster-randomization-trials-in-health-research-978-0-470-71100-2</a>.
+</div>
+<div id="ref-greenland2016misinterpretations" class="csl-entry" role="listitem">
+Greenland, Sander, Stephen J. Senn, Kenneth J. Rothman, et al. 2016. <span>“Statistical Tests, p Values, Confidence Intervals, and Power: A Guide to Misinterpretations.”</span> <em>European Journal of Epidemiology</em> 31: 337–50. <a href="https://doi.org/10.1007/s10654-016-0149-3">https://doi.org/10.1007/s10654-016-0149-3</a>.
+</div>
+<div id="ref-morris2019simulation" class="csl-entry" role="listitem">
+Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. <span>“Using Simulation Studies to Evaluate Statistical Methods.”</span> <em>Statistics in Medicine</em> 38 (11): 2074–102. <a href="https://doi.org/10.1002/sim.8086">https://doi.org/10.1002/sim.8086</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

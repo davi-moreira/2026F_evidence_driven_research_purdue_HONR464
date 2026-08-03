@@ -58,7 +58,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -576,10 +595,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#check-yourself" id="toc-check-yourself" class="nav-link" data-scroll-target="#check-yourself"><span class="header-section-number">13.7.1</span> Check yourself</a></li>
   </ul></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">13.8</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">13.9</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">13.10</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">13.11</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">13.8</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">13.9</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -703,7 +720,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="running-the-determination" class="level3" data-number="13.2.1">
 <h3 data-number="13.2.1" class="anchored" data-anchor-id="running-the-determination"><span class="header-section-number">13.2.1</span> Running the determination</h3>
 <p>Frameworks differ in wording, but the determination almost always turns on the same three questions. Answer them about your own project, in order.</p>
-<p><strong>First: is this a systematic investigation meant to produce knowledge that generalizes?</strong> Not “will I publish it”. Whether you intend to publish is not the test in every framework, and some national policies place course-based student research expressly inside their scope. If you are following a method to learn something that would hold beyond your own case, answer yes and let the authority decide the rest.</p>
+<p><strong>First: is this a systematic investigation meant to produce knowledge that generalizes?</strong> Not “will I publish it” <span class="citation" data-cites="usdhhs2026commonrule">(<a href="#ref-usdhhs2026commonrule" role="doc-biblioref">U.S. Department of Health and Human Services 2026</a>)</span>. Whether you intend to publish is not the test in every framework, and some national policies place course-based student research expressly inside their scope. If you are following a method to learn something that would hold beyond your own case, answer yes and let the authority decide the rest.</p>
 <p><strong>Second: do living people, or data about identifiable living people, enter your study?</strong> This includes interviews and surveys, and it also includes records, logs, and existing datasets in which individuals can be picked out. It does not stop being about people because the file arrived as a spreadsheet.</p>
 <p><strong>Third: how do the data reach you?</strong> Collecting directly from people is treated differently from using data someone else already collected, and both are treated differently again when the data are sensitive: health, finances, immigration status, political views, anything that could harm someone if it escaped.</p>
 <p>If the first two answers are yes, assume <strong>formal determination required</strong> until your competent authority tells you otherwise. Do not talk yourself out of asking. The cost of asking is an email; the cost of not asking is your project.</p>
@@ -711,7 +728,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-cases-undergraduates-get-wrong" class="level3" data-number="13.2.2">
 <h3 data-number="13.2.2" class="anchored" data-anchor-id="the-cases-undergraduates-get-wrong"><span class="header-section-number">13.2.2</span> The cases undergraduates get wrong</h3>
 <p>Six situations look exempt and often are not.</p>
-<p><strong>Public social media posts.</strong> Public availability and permission are separate questions, and some frameworks require BOTH public availability and the absence of any reasonable expectation of privacy before a public-information exemption applies. People posted to an audience, not to a researcher, and platform terms often restrict collection regardless of what any review board says.</p>
+<p><strong>Public social media posts.</strong> Public availability and permission are separate questions, and some frameworks require BOTH public availability and the absence of any reasonable expectation of privacy before a public-information exemption applies <span class="citation" data-cites="franzke2020aoir">(<a href="#ref-franzke2020aoir" role="doc-biblioref">Franzke et al. 2020</a>)</span>. People posted to an audience, not to a researcher, and platform terms often restrict collection regardless of what any review board says.</p>
 <p><strong>Data about your classmates.</strong> Convenience makes it feel informal. Your classmates are human subjects, and the power relationship inside a classroom makes consent harder, not easier.</p>
 <p><strong>Interviewing professionals about their job.</strong> Sometimes this is genuinely outside the scope, because you are collecting facts about an organization rather than about a person. It flips the moment you ask about their own experience, opinions, or conduct.</p>
 <p><strong>A public dataset with individual records.</strong> “Publicly available” is a statement about access, not about identifiability, and not about the licence terms that govern your particular use.</p>
@@ -723,7 +740,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="13.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">13.3</span> A worked example</h2>
 <p>A political-science student wants to know whether first-generation students use campus advising differently from other students. She plans a short survey of 800 students, and to protect them she promises to remove names before analyzing anything.</p>
 <p>That promise sounds sufficient. Watch what it actually buys.</p>
-<p><strong>De-identification</strong> means removing enough information that a person cannot reasonably be picked out of the data. Deleting names is not de-identification, because the remaining columns can still single someone out.</p>
+<p><strong>De-identification</strong> means removing enough information that a person cannot reasonably be picked out of the data. Deleting names is not de-identification, because the remaining columns can still single someone out <span class="citation" data-cites="sweeney2000demographics">(<a href="#ref-sweeney2000demographics" role="doc-biblioref">Sweeney 2000</a>)</span>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
@@ -757,11 +774,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>share_unique(dept[common], year[common], country[common], age[common])<span class="sc">:.1%}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Among students from the most common country, 40.3% are unique. Among students from less common ones, 97.2% are. Nearly every one of them is individually identifiable in a file described as anonymous.</p>
 <p>That is the part worth sitting with. The protection failed unevenly, and it failed most for the people with the least common characteristics, who are often exactly the people a study about belonging is asking about. A privacy measure that works for the majority and fails for a minority is not a privacy measure.</p>
-<p>The fix is not more deleting. It is deciding, before collection, which columns you actually need. If the analysis compares first-generation and continuing-generation students, you may not need country at all, and you may need age only as a range. <strong>Data minimisation</strong> means collecting only what your declared analysis requires, so the risky combination never exists.</p>
+<p>The fix is not more deleting. It is deciding, before collection, which columns you actually need. If the analysis compares first-generation and continuing-generation students, you may not need country at all, and you may need age only as a range. <strong>Data minimisation</strong> means collecting only what your declared analysis requires, so the risky combination never exists <span class="citation" data-cites="eu2016gdpr">(<a href="#ref-eu2016gdpr" role="doc-biblioref">European Parliament and Council of the European Union 2016</a>)</span>.</p>
 </section>
 <section id="consent-is-a-process" class="level2" data-number="13.4">
 <h2 data-number="13.4" class="anchored" data-anchor-id="consent-is-a-process"><span class="header-section-number">13.4</span> Consent is a process</h2>
-<p>A signature captures one moment. <strong>Informed consent</strong> is the ongoing condition that a participant understands what is happening and agrees to it, which means it can be withdrawn later and has to be maintained, not filed.</p>
+<p>A signature captures one moment. <strong>Informed consent</strong> is the ongoing condition that a participant understands what is happening and agrees to it, which means it can be withdrawn later and has to be maintained, not filed <span class="citation" data-cites="belmont1979">(<a href="#ref-belmont1979" role="doc-biblioref">National Commission for the Protection of Human Subjects of Biomedical and Behavioral Research 1979</a>)</span>.</p>
 <p>Three things make it real rather than ceremonial. The person understands what you will do with their words or numbers, in language they actually use. The person can decline without cost, which is hardest exactly where you have any power over them. The person can come back afterwards and withdraw, which means you must know which data are theirs long enough to be able to remove them.</p>
 <p>That last requirement sits in tension with anonymity, and you should notice the tension rather than paper over it. If you truly cannot link a response to a person, you cannot honour a withdrawal request either. Decide which one your study needs, and tell participants the truth about it.</p>
 </section>
@@ -816,20 +833,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The answer is C. Option A treats deleting direct identifiers as de-identification, which the simulation above should have made hard to believe. Option B assumes the file format changes what the data are about. Option D overcorrects into a rule nobody has: health data are used by students constantly, under determinations and agreements.</p>
 </section>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="13.8">
-<h2 data-number="13.8" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">13.8</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="13.8">
+<h2 data-number="13.8" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">13.8</span> An AI failure case</h2>
+<p>Describe a study to an assistant and ask whether you need approval, and you will usually get a fluent, specific, reassuring answer:</p>
+<blockquote class="blockquote">
+<p>“Since your data are publicly available and you are removing names, this would typically qualify as exempt research and would not require full review.”</p>
+</blockquote>
+<p>Three things are wrong at once. The tool does not know your jurisdiction or your institution’s rules for student projects. It does not know your data source’s licence. And it has stated a conclusion, which is the one thing in this chapter that is not yours or its to state.</p>
+<p>The failure is worse than an ordinary wrong answer, because it is exactly the answer you were hoping for, delivered in the register of someone who knows. The verification move is structural, not factual: an answer to “do I need approval” is only worth anything from the body that grants it. Use the tool to generate the questions. Take the questions to the person who decides.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="13.9">
-<h2 data-number="13.9" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">13.9</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="13.9">
+<h2 data-number="13.9" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">13.9</span> It is your turn</h2>
+<!-- station-pointer:begin -->
 <blockquote class="blockquote">
-<p>💡 <strong>AI Prompt:</strong> “Here is my research question, who my units are, and exactly how I plan to obtain data about them: [paste yours]. Ask me the questions a research ethics committee would ask about this plan. Do not tell me whether I need approval, and do not reassure me — just produce the questions, including the uncomfortable ones.”</p>
-<p><strong>After running, verify:</strong> - [ ] Answer each question in writing yourself. A question you cannot answer is the one to bring to your competent authority first. - [ ] Check whether any question reveals data you planned to collect but do not need. Drop those columns now, while dropping them is free. - [ ] Take the determination to a human. A tool cannot rule on your project, and a confident answer from one is worth nothing in a meeting. - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.</p>
+<p><strong>You are working inside <a href="../studios/studio04-declare-and-diagnose.html">Studio 4: Declare and diagnose provisionally</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
 </blockquote>
-<blockquote class="blockquote">
-<p>💡 <strong>AI Prompt:</strong> “Here are the column names, types, and value ranges of my dataset — no actual records: [paste the schema only]. Write code that checks how many rows are unique on each combination of my quasi-identifier columns, and flag combinations that single out fewer than five people.”</p>
-<p><strong>After running, verify:</strong> - [ ] Confirm you pasted a schema and not data. If you pasted values, treat it as a disclosure and record it. - [ ] Run the code yourself on your own machine and read the counts. The risk is in your data, not in the tool’s description of it. - [ ] Decide which columns to coarsen or drop. That decision is a research decision about what your analysis needs. - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.</p>
-</blockquote>
+<p>Write your project’s permission status and its handling rules. This goes in your dossier, and every later stage of the project depends on it being honest.</p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -847,31 +867,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="13.10">
-<h2 data-number="13.10" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">13.10</span> An AI failure case</h2>
-<p>Describe a study to an assistant and ask whether you need approval, and you will usually get a fluent, specific, reassuring answer:</p>
-<blockquote class="blockquote">
-<p>“Since your data are publicly available and you are removing names, this would typically qualify as exempt research and would not require full review.”</p>
-</blockquote>
-<p>Three things are wrong at once. The tool does not know your jurisdiction or your institution’s rules for student projects. It does not know your data source’s licence. And it has stated a conclusion, which is the one thing in this chapter that is not yours or its to state.</p>
-<p>The failure is worse than an ordinary wrong answer, because it is exactly the answer you were hoping for, delivered in the register of someone who knows. The verification move is structural, not factual: an answer to “do I need approval” is only worth anything from the body that grants it. Use the tool to generate the questions. Take the questions to the person who decides.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="13.11">
-<h2 data-number="13.11" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">13.11</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio04-declare-and-diagnose.html">Studio 4: Declare and diagnose provisionally</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p>Write your project’s permission status and its handling rules. This goes in your dossier, and every later stage of the project depends on it being honest.</p>
 <ol type="1">
-<li><strong>Run the determination.</strong> Answer the three questions in writing: is your knowledge meant to travel, do identifiable living people enter your study, and how do the data reach you.</li>
-<li><strong>Declare one permission status</strong> — cleared, formal determination required, pending, or not authorized — and name the competent authority at your institution who covers student projects. If your status is anything but cleared, write the date you contacted them.</li>
-<li><strong>List your columns and minimise them.</strong> Write every variable you plan to collect, then cross out the ones your declared analysis does not require. For anything left that could single someone out, say how you will coarsen it.</li>
-<li><strong>Run the uniqueness check</strong> on your planned quasi-identifiers, using the companion notebook. Report the share of units that would be unique, and say which group in your data carries the most risk.</li>
-<li><strong>Write your AI boundary</strong> in two lines: what you will send to an AI tool on this project, and what you will never send. Then write the ledger field you will use to record each send.</li>
-<li><strong>Write your four governance decisions</strong> — where the data live, who can open them, how long you keep them, and what happens at the end. Give the retention date as an actual date.</li>
-<li><strong>Write your stop plan.</strong> In one sentence: if your determination comes back “not authorized”, what is the version of this question you would ask instead?</li>
+<li><p><strong>Run the determination.</strong> Answer the three questions in writing: is your knowledge meant to travel, do identifiable living people enter your study, and how do the data reach you.</p>
+<blockquote class="blockquote">
+<p>💡 <strong>AI Prompt:</strong> “Here is my research question, who my units are, and exactly how I plan to obtain data about them: [paste yours]. Ask me the questions a research ethics committee would ask about this plan. Do not tell me whether I need approval, and do not reassure me — just produce the questions, including the uncomfortable ones.”</p>
+<strong>After running, verify:</strong>
+<ul class="task-list">
+<li><label><input type="checkbox">Answer each question in writing yourself. A question you cannot answer is the one to bring to your competent authority first.</label></li>
+<li><label><input type="checkbox">Check whether any question reveals data you planned to collect but do not need. Drop those columns now, while dropping them is free.</label></li>
+<li><label><input type="checkbox">Take the determination to a human. A tool cannot rule on your project, and a confident answer from one is worth nothing in a meeting.</label></li>
+<li><label><input type="checkbox">Log this use in your AI Research Ledger: task, tool, decision, verification.</label></li>
+</ul>
+</blockquote></li>
+<li><p><strong>Declare one permission status</strong> — cleared, formal determination required, pending, or not authorized — and name the competent authority at your institution who covers student projects. If your status is anything but cleared, write the date you contacted them.</p></li>
+<li><p><strong>List your columns and minimise them.</strong> Write every variable you plan to collect, then cross out the ones your declared analysis does not require. For anything left that could single someone out, say how you will coarsen it.</p></li>
+<li><p><strong>Run the uniqueness check</strong> on your planned quasi-identifiers, using the companion notebook. Report the share of units that would be unique, and say which group in your data carries the most risk.</p>
+<blockquote class="blockquote">
+<p>💡 <strong>AI Prompt:</strong> “Here are the column names, types, and value ranges of my dataset — no actual records: [paste the schema only]. Write code that checks how many rows are unique on each combination of my quasi-identifier columns, and flag combinations that single out fewer than five people.”</p>
+<strong>After running, verify:</strong>
+<ul class="task-list">
+<li><label><input type="checkbox">Confirm you pasted a schema and not data. If you pasted values, treat it as a disclosure and record it.</label></li>
+<li><label><input type="checkbox">Run the code yourself on your own machine and read the counts. The risk is in your data, not in the tool’s description of it.</label></li>
+<li><label><input type="checkbox">Decide which columns to coarsen or drop. That decision is a research decision about what your analysis needs.</label></li>
+<li><label><input type="checkbox">Log this use in your AI Research Ledger: task, tool, decision, verification.</label></li>
+</ul>
+</blockquote></li>
+<li><p><strong>Write your AI boundary</strong> in two lines: what you will send to an AI tool on this project, and what you will never send. Then write the ledger field you will use to record each send.</p></li>
+<li><p><strong>Write your four governance decisions</strong> — where the data live, who can open them, how long you keep them, and what happens at the end. Give the retention date as an actual date.</p></li>
+<li><p><strong>Write your stop plan.</strong> In one sentence: if your determination comes back “not authorized”, what is the version of this question you would ask instead?</p></li>
 </ol>
 <!-- studio-continue:begin -->
 <blockquote class="blockquote">
@@ -879,6 +902,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-eu2016gdpr" class="csl-entry" role="listitem">
+European Parliament and Council of the European Union. 2016. <em>Regulation (EU) 2016/679 (General Data Protection Regulation)</em>. Official Journal of the European Union, L 119, 1–88. <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">https://eur-lex.europa.eu/eli/reg/2016/679/oj</a>.
+</div>
+<div id="ref-franzke2020aoir" class="csl-entry" role="listitem">
+Franzke, Aline Shakti, Anja Bechmann, Michael Zimmer, Charles M. Ess, and Association of Internet Researchers. 2020. <em>Internet Research: Ethical Guidelines 3.0</em>. Association of Internet Researchers. <a href="https://aoir.org/reports/ethics3.pdf">https://aoir.org/reports/ethics3.pdf</a>.
+</div>
+<div id="ref-belmont1979" class="csl-entry" role="listitem">
+National Commission for the Protection of Human Subjects of Biomedical and Behavioral Research. 1979. <em>The Belmont Report: Ethical Principles and Guidelines for the Protection of Human Subjects of Research</em>. U.S. Department of Health; Human Services. <a href="https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html">https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html</a>.
+</div>
+<div id="ref-sweeney2000demographics" class="csl-entry" role="listitem">
+Sweeney, Latanya. 2000. <em>Simple Demographics Often Identify People Uniquely</em>. Data Privacy Working Paper 3. Carnegie Mellon University, Data Privacy Laboratory. <a href="https://dataprivacylab.org/projects/identifiability/paper1.pdf">https://dataprivacylab.org/projects/identifiability/paper1.pdf</a>.
+</div>
+<div id="ref-usdhhs2026commonrule" class="csl-entry" role="listitem">
+U.S. Department of Health and Human Services. 2026. <em>Protection of Human Subjects: Definitions, 45 c.f.r. Section 46.102</em>. <a href="https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-46/subpart-A/section-46.102">https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-46/subpart-A/section-46.102</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

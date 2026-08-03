@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">40.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">40.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">40.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">40.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">40.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">40.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">40.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">40.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">40.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -632,9 +649,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="40.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">40.2</span> The concept</h2>
 <p>Your final submission has two halves, and this chapter builds both.</p>
 <p>This chapter’s real subject is the <strong>release audit</strong>: the last check you run before work leaves your hands, asking whether every promise the work makes is one the evidence, the permissions, and the record can still support. What you assemble for that audit is your dossier, and how you package it depends on where the work is going — a repository, a supervisor, a journal, a course. The audit does not change with the destination.</p>
-<p><strong>A research portfolio</strong> is the assembled body of your finished work: your claims, the evidence behind them, and the verification that makes each one defensible. Example: for a lab project it holds your headline result, the measurements behind it, and the check you ran to confirm the number is right.</p>
+<p><strong>A research portfolio</strong> is the assembled body of your finished work: your claims, the evidence behind them, and the verification that makes each one defensible <span class="citation" data-cites="allea2023code">(<a href="#ref-allea2023code" role="doc-biblioref">ALLEA – All European Academies 2023</a>)</span>. Example: for a lab project it holds your headline result, the measurements behind it, and the check you ran to confirm the number is right.</p>
 <p>Alongside it sits <strong>an AI-management portfolio</strong>, the honest record of how you ran your AI team from the first curiosity to the last check: which tasks you delegated, where you took the decision back, and which calls you never handed to a tool. Example: it shows a reviewer role drafted your limitations, that you overrode it when it softened a claim you could not support, and that you alone chose the claim boundary.</p>
-<p>The decision that closes both is your <strong>stopping rule</strong>, a written statement of what “done” means, phrased around your own verified confidence rather than the tools’ agreement. Example: “I stop when I can defend each surviving claim to a hostile reviewer with a check I ran myself.” A stopping rule of “when the roles all agree” is a trap, because a team of look-alike tools can agree loudly and be wrong together.</p>
+<p>The decision that closes both is your <strong>stopping rule</strong>, a written statement of what “done” means, phrased around your own verified confidence rather than the tools’ agreement <span class="citation" data-cites="nosek2018preregistration">(<a href="#ref-nosek2018preregistration" role="doc-biblioref">Nosek et al. 2018</a>)</span>. Example: “I stop when I can defend each surviving claim to a hostile reviewer with a check I ran myself <span class="citation" data-cites="nasem2019reproducibility">(<a href="#ref-nasem2019reproducibility" role="doc-biblioref">National Academies of Sciences, Engineering, and Medicine 2019</a>)</span>.” A stopping rule of “when the roles all agree” is a trap, because a team of look-alike tools can agree loudly and be wrong together.</p>
 <p>That trap has a name you will guard against: <strong>false consensus</strong>, agreement that exists only because the tools shared a blind spot or you asked a leading question. Example: you ask three reviewers to “confirm my draft is ready,” and all three oblige, so the chorus tells you nothing. The cure is <strong>an independence check</strong>, a step that makes agreement worth more than a head count: a check you run yourself, outside the tools.</p>
 <p>The whole thing ends in <strong>an evidence defense</strong>, a short public defense of your claims at their boundaries, followed by questions you cannot rehearse for. Example: you state what you found, name exactly what you do not claim, and answer each question from your own record.</p>
 </section>
@@ -644,31 +661,20 @@ ul.task-list li input[type="checkbox"] {
 <p>You run three AI reviewer roles on your draft. A reviewer role praises your headline sentence, “Lettuce seed germinates at 88%.” A diagnostician role flags the same sentence for reaching past your evidence: you tested one packet in three trays, not lettuce seed in general. That disagreement is a gift, because it points straight at the boundary decision. You take the pen back and rewrite the claim to what your data hold: “This packet, tested in three trays of 50, averaged 88% germination, with the trays spanning 84% to 92%.” The narrower sentence is the one you will defend.</p>
 <p>Then you run an independence check the tools cannot fake. The packet’s own label states a germination rate of 85%, so you compare your 88% against that value by hand. The two numbers land close, which is real reassurance because the label was never part of your AI workflow. Your stopping rule is now satisfied, so you stop. Into the AI-management portfolio go four things: the roles you ran, the reviewer-versus-diagnostician conflict and your override, this stopping rule, and the label comparison that made your reviewers’ agreement worth more than a head count.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="40.4">
-<h2 data-number="40.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">40.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="40.4">
+<h2 data-number="40.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">40.4</span> An AI failure case</h2>
+<p>You send your finished draft to three reviewer roles and ask each to “confirm it is ready to submit.” All three return the same verdict: “Looks solid, no major problems.” It feels like three confirmations. It is one. The three roles run on the same base model, you gave them the same leading prompt, and they share a blind spot: none flags that your headline number carries no uncertainty, no range across your three trays. That is false consensus, and trusting it would send an overclaimed result into your defense.</p>
+<p>You catch it with a reframe and a check the tools cannot see. First you drop the leading ask and run a neutral one: “List the three weakest claims in this draft and why.” Now a role names the missing range. Then you leave the tools entirely and recompute the spread of your trays yourself, which hands you the 84% to 92% boundary the reviewers all skipped. The lesson is blunt: agreement is worth only the independence behind it. Count the checks you ran yourself, never the roles that nodded.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="40.5">
-<h2 data-number="40.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">40.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="40.5">
+<h2 data-number="40.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">40.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio12-release-next-cycle.html">Studio 12: Release and direct the next cycle</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your project already has a note, a capsule, a managed AI team, and escalation rules you wrote down; this last step assembles all of it into the artifact you hand over and the defense you give.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Each prompt hands the tool reach, not the decision, and each one opens a loop rather than ending in a single answer: you read what comes back, push on the weakest part, and run it again. Closing the loop is your move, not the tool’s.</p>
-<p><strong>Locate the real benchmark.</strong></p>
-<pre><code>Act as a research assistant in plant biology. I measured the germination rate of one
-packet of lettuce seed. I want a published or label-stated reference value to compare
-against. Give the value, the exact source it comes from, and a link. Only state a
-figure you are confident is real; if you are unsure, say so and tell me where to
-look.</code></pre>
-<p>After running, verify: open the source or read the packet yourself before you trust the number (primary-source reading). Counters <strong>confident fabrication</strong>, a reference value quoted with an invented source.</p>
-<p><strong>List every claim to verify.</strong></p>
-<pre><code>Here is my draft: [paste]. List every empirical claim in it as a table: the claim,
-the number or measurement it rests on, and whether that claim stays inside my single
-sample or reaches past it. Do not add any new claims.</code></pre>
-<p>After running, verify: check the table against your own list of what you measured, and confirm nothing reaches past your data unmarked. Counters <strong>illusion of completeness</strong>, a tidy list that omits the one claim quietly overreaching.</p>
-<p><strong>Red-team the defense.</strong></p>
-<pre><code>Act as a hostile but fair cross-examiner at a research defense. Here is my headline
-claim, its boundary, and my two weakest verification steps: [paste]. Ask me the five
-hardest questions you can, each tied to a specific claim or check. Do not soften them,
-and do not answer them for me.</code></pre>
-<p>After running, verify: if every question is gentle or your claim is called “well-supported,” push back and demand the weakest link. Counters <strong>sycophantic agreement</strong>, a partner that rehearses your ego instead of your defense.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -682,26 +688,31 @@ and do not answer them for me.</code></pre>
 <p>The tools may draft, review, and surface hard questions. They may never decide which claims you put your name on, where a claim like “88% germination” must stop, whether your reviewers were ever independent, what your stopping rule is, or a single word of the public defense. When agreeing roles bless a claim, deciding whether that agreement is real or just correlated is yours. So is the answer you give when the room asks how you know.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="40.6">
-<h2 data-number="40.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">40.6</span> An AI failure case</h2>
-<p>You send your finished draft to three reviewer roles and ask each to “confirm it is ready to submit.” All three return the same verdict: “Looks solid, no major problems.” It feels like three confirmations. It is one. The three roles run on the same base model, you gave them the same leading prompt, and they share a blind spot: none flags that your headline number carries no uncertainty, no range across your three trays. That is false consensus, and trusting it would send an overclaimed result into your defense.</p>
-<p>You catch it with a reframe and a check the tools cannot see. First you drop the leading ask and run a neutral one: “List the three weakest claims in this draft and why.” Now a role names the missing range. Then you leave the tools entirely and recompute the spread of your trays yourself, which hands you the 84% to 92% boundary the reviewers all skipped. The lesson is blunt: agreement is worth only the independence behind it. Count the checks you ran yourself, never the roles that nodded.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="40.7">
-<h2 data-number="40.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">40.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio12-release-next-cycle.html">Studio 12: Release and direct the next cycle</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your project already has a note, a capsule, a managed AI team, and escalation rules you wrote down; this last step assembles all of it into the artifact you hand over and the defense you give.</em></p>
 <ol type="1">
-<li>Finish the research artifact itself: your paper, note, or poster, with each claim stated at its boundary and your uncertainty in the same sentence as your headline number. This is the document with your name on it.</li>
-<li>Assemble your AI-management portfolio in four parts: the decomposition of loops you ran, one real conflict and the override you made with its non-AI check, your stopping rule and your never-delegate list, and one independence check that made an agreement worth more than a head count.</li>
-<li>Write your stopping rule as a sentence you could read aloud, phrased around what you have verified rather than what your tools approved. “Every surviving claim has a check I ran myself” is a stopping rule. “The reviewers agreed” is not.</li>
-<li>Rehearse the defense in three movements: your claim and its boundary, the central choice you made and the road you did not take, and the verification you lead with. Then have someone ask you the question you least want to be asked.</li>
-<li>Read the whole artifact once more against your ledger and cut anything you cannot trace to a check. What is left is what you can defend.</li>
-<li>Close the ledger with the last entry, and verify your headline claim one final time with a named method from the <a href="../verification-guide.html">Verification Guide</a>. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Finish the research artifact itself: your paper, note, or poster, with each claim stated at its boundary and your uncertainty in the same sentence as your headline number. This is the document with your name on it.</p></li>
+<li><p>Assemble your AI-management portfolio in four parts: the decomposition of loops you ran, one real conflict and the override you made with its non-AI check, your stopping rule and your never-delegate list, and one independence check that made an agreement worth more than a head count.</p>
+<p><strong>Locate the real benchmark.</strong></p>
+<pre><code>Act as a research assistant in plant biology. I measured the germination rate of one
+packet of lettuce seed. I want a published or label-stated reference value to compare
+against. Give the value, the exact source it comes from, and a link. Only state a
+figure you are confident is real; if you are unsure, say so and tell me where to
+look.</code></pre>
+<p>After running, verify: open the source or read the packet yourself before you trust the number (primary-source reading). Counters <strong>confident fabrication</strong>, a reference value quoted with an invented source.</p></li>
+<li><p>Write your stopping rule as a sentence you could read aloud, phrased around what you have verified rather than what your tools approved. “Every surviving claim has a check I ran myself” is a stopping rule. “The reviewers agreed” is not.</p></li>
+<li><p>Rehearse the defense in three movements: your claim and its boundary, the central choice you made and the road you did not take, and the verification you lead with. Then have someone ask you the question you least want to be asked.</p>
+<p><strong>Red-team the defense.</strong></p>
+<pre><code>Act as a hostile but fair cross-examiner at a research defense. Here is my headline
+claim, its boundary, and my two weakest verification steps: [paste]. Ask me the five
+hardest questions you can, each tied to a specific claim or check. Do not soften them,
+and do not answer them for me.</code></pre>
+<p>After running, verify: if every question is gentle or your claim is called “well-supported,” push back and demand the weakest link. Counters <strong>sycophantic agreement</strong>, a partner that rehearses your ego instead of your defense.</p></li>
+<li><p>Read the whole artifact once more against your ledger and cut anything you cannot trace to a check. What is left is what you can defend.</p>
+<p><strong>List every claim to verify.</strong></p>
+<pre><code>Here is my draft: [paste]. List every empirical claim in it as a table: the claim,
+the number or measurement it rests on, and whether that claim stays inside my single
+sample or reaches past it. Do not add any new claims.</code></pre>
+<p>After running, verify: check the table against your own list of what you measured, and confirm nothing reaches past your data unmarked. Counters <strong>illusion of completeness</strong>, a tidy list that omits the one claim quietly overreaching.</p></li>
+<li><p>Close the ledger with the last entry, and verify your headline claim one final time with a named method from the <a href="../verification-guide.html">Verification Guide</a>. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 <p>That is the whole book. You started with a curiosity you could not yet answer, and you now have a finished piece of research, a record of every tool that touched it, and a set of claims you can defend at their edges. The tools were fast. The judgment was yours the entire way, and that is the part that makes it your work.</p>
 <!-- studio-continue:begin -->
@@ -710,6 +721,17 @@ and do not answer them for me.</code></pre>
 </blockquote>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-allea2023code" class="csl-entry" role="listitem">
+ALLEA – All European Academies. 2023. <em>The European Code of Conduct for Research Integrity</em>. Revised Edition 2023. ALLEA. <a href="https://doi.org/10.26356/ECOC">https://doi.org/10.26356/ECOC</a>.
+</div>
+<div id="ref-nasem2019reproducibility" class="csl-entry" role="listitem">
+National Academies of Sciences, Engineering, and Medicine. 2019. <em>Reproducibility and Replicability in Science</em>. The National Academies Press. <a href="https://doi.org/10.17226/25303">https://doi.org/10.17226/25303</a>.
+</div>
+<div id="ref-nosek2018preregistration" class="csl-entry" role="listitem">
+Nosek, Brian A., Charles R. Ebersole, Alexander C. DeHaven, and David T. Mellor. 2018. <span>“The Preregistration Revolution.”</span> <em>Proceedings of the National Academy of Sciences</em> 115 (11): 2600–2606. <a href="https://doi.org/10.1073/pnas.1708274114">https://doi.org/10.1073/pnas.1708274114</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

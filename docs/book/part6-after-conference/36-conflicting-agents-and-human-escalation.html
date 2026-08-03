@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">39.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">39.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">39.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">39.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">39.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">39.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">39.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">39.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">39.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -632,10 +649,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="39.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">39.2</span> The concept</h2>
 <p>When your roles do not match, the first move is not to pick a winner. It is <strong>reconciling conflicting outputs</strong>: deciding what to believe by first diagnosing <em>why</em> the roles differ. Example: before you side with the reviewer over the methodologist, you ask what would make each of them right. There are three cases, and they call for opposite responses.</p>
 <p><strong>Real disagreement</strong> is when the roles genuinely read the evidence differently. Example: your reviewer calls a sentence clear and strong while your methodologist flags that same sentence as reaching past your data. This is the good case. The clash points straight at the claim you need to check.</p>
-<p><strong>Correlated error</strong> is when the roles agree, but on the same wrong assumption, so the agreement proves nothing. Example: three reviewers built from the same base model all miss the same flaw because they share the blind spot. The question to ask is simple: could they be wrong the <em>same</em> way? If yes, their consensus is one signal, not three.</p>
+<p><strong>Correlated error</strong> is when the roles agree, but on the same wrong assumption, so the agreement proves nothing. Example: three reviewers built from the same base model all miss the same flaw because they share the blind spot. The question to ask is simple: could they be wrong the <em>same</em> way? If yes, their consensus is one signal, not three <span class="citation" data-cites="peker2023collective">(<a href="#ref-peker2023collective" role="doc-biblioref">Peker 2023</a>)</span>.</p>
 <p><strong>False consensus</strong> is when the roles agree only because your prompt framed the task so they had to. Example: you ask “confirm my draft is ready,” and every role obliges. You led all the witnesses. Reframe the ask neutrally and run it again.</p>
-<p>The tool that tells these apart is an <strong>independence check</strong>: a test that makes agreement worth more than a head-count, either an independent method you run yourself or a way you force two roles to be genuinely independent. Example: two roles bless a cited number, so you open the source and recompute it yourself before trusting either.</p>
-<p>Then comes the decision only you can make. <strong>Escalation to human judgment</strong> is the moment an AI output would <em>settle</em> rather than <em>inform</em> a decision that is yours, so you stop and decide it yourself. Example: a role proposes calling your result “causal,” which would settle your claim boundary, so it escalates to you. What you do at that moment is a <strong>human override</strong>: you take the pen back and make the call in your own words, backed by your own check, even when the roles agreed on something else. A decision that just counted the roles is not a decision. It is a vote, and votes among look-alike models are meaningless.</p>
+<p>The tool that tells these apart is an <strong>independence check</strong>: a test that makes agreement worth more than a head-count, either an independent method you run yourself or a way you force two roles to be genuinely independent <span class="citation" data-cites="hong2004diverse">(<a href="#ref-hong2004diverse" role="doc-biblioref">Hong and Page 2004</a>)</span>. Example: two roles bless a cited number, so you open the source and recompute it yourself before trusting either.</p>
+<p>Then comes the decision only you can make. <strong>Escalation to human judgment</strong> is the moment an AI output would <em>settle</em> rather than <em>inform</em> a decision that is yours, so you stop and decide it yourself <span class="citation" data-cites="bansal2021whole">(<a href="#ref-bansal2021whole" role="doc-biblioref">Bansal et al. 2021</a>)</span>. Example: a role proposes calling your result “causal,” which would settle your claim boundary, so it escalates to you. What you do at that moment is a <strong>human override</strong>: you take the pen back and make the call in your own words, backed by your own check, even when the roles agreed on something else. A decision that just counted the roles is not a decision. It is a vote, and votes among look-alike models are meaningless.</p>
 <p>Escalation is also the one moment where the loops have to stop. An agentic tool left running will keep looking for a next step, and if nobody halts it, it will take the decision by default, not because you delegated it but because the loop had nowhere else to go. So write your triggers down before you start the round: the specific decisions where the loops pause and wait for you. A trigger you decide in the moment, with three tidy reviews in front of you, is not a trigger. It is a mood.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="39.3">
@@ -645,30 +662,20 @@ ul.task-list li input[type="checkbox"] {
 <p>Diagnose before you celebrate. Every one of those roles already expects a number near 4%, because that is the range the familiar headline rates sit in, so each one pattern-matches your estimate to the value it walked in with and blesses it without checking how you got there. That is <strong>correlated error</strong> wearing the mask of confirmation: they share one blind spot, the anchor to the familiar figure, and it hides your actual mistake. You asked only 250 people, so the luck of who happened to walk by is worth a couple of percentage points on its own, and you asked them on weekday afternoons outside a library, where almost nobody who was at work all day could appear. The tidy “4.0%” was luck riding on an honest-looking method.</p>
 <p>This is where you <strong>escalate</strong>. The reviewers’ agreement would <em>settle</em> your headline claim, and that claim is yours, so you take the pen back. You recompute the rate from your raw responses yourself and carry the uncertainty of a 250-person sample through the arithmetic, and the honest result is 4.0% ± 2.4 percentage points, from a group that could not include most of the people who were working. Consistent with the official rate, but nowhere near as precise as you wrote. You <strong>override</strong> three “looks great” verdicts and rewrite the claim with its real uncertainty. The roles counted the answer as correct. You checked whether it was earned.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="39.4">
-<h2 data-number="39.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">39.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="39.4">
+<h2 data-number="39.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">39.4</span> An AI failure case</h2>
+<p>You send your draft to four AI roles and all four reply “no major problems.” It feels like overwhelming confirmation, and it is confidently wrong. The four share a base model and read the same draft with the same instructions, so they share a blind spot. Whenever your one real flaw falls inside that blind spot, all four miss it together. Their unanimous “fine” is close to a single voice, not four. Running each loop longer does not rescue you either. Four loops with the same blind spot, given more turns, return the same verdict with better paragraphs around it.</p>
+<p>You catch it by refusing to treat agreement as evidence. You run an independence check: re-read the flagged claim against your own inquiry declaration, or hand the draft to a role with a different framing and different context. In the lab you will see the size of this trap measured. Four correlated reviewers miss a real flaw about seven times as often as four independent ones, and piling on more correlated roles cannot close the gap.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="39.5">
-<h2 data-number="39.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">39.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="39.5">
+<h2 data-number="39.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">39.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio12-release-next-cycle.html">Studio 12: Release and direct the next cycle</a>.</strong> This lesson is an optional overlay: work it when your project needs it, and skip it without guilt when it does not. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your project already has a small AI team running on one section; this step decides in advance where those loops must stop and hand the call back to you.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own diagnosis first, then delegate. Each prompt starts a loop, and with several loops in play the discipline is the same as with one: read the output, interrogate it, refine, run again, and never let a loop close a question that belongs to you. Each prompt is a checkable job, not a request for a verdict.</p>
-<p><strong>Locate the decisions that must escalate.</strong></p>
-<pre class="text"><code>Act as a research-integrity assistant. Here is my draft's headline claim and the three
-never-delegate decisions I think it contains: [paste]. Using standard research-defense
-criteria, list which decisions in this draft an AI output should never be allowed to
-settle, and which of my three I mislabeled. Do not settle any of them for me.</code></pre>
-<p>After running, verify: check its list against the escalation triggers you wrote yourself; a decision it omits is the one to guard hardest. Counters <em>illusion of completeness</em> (a tidy list that quietly drops the call that matters most).</p>
-<p><strong>List the agreements to verify.</strong></p>
-<pre class="text"><code>Here are three reviewer outputs on the same draft: [paste all three]. For each pair,
-name one specific way they could be wrong the SAME way: a shared assumption, a shared
-anchor, or a shared prompt. Rank the pairs from most to least likely to share a blind
-spot.</code></pre>
-<p>After running, verify: for the top pair, rerun one role with a different framing and different context and see whether the agreement survives. Counters <em>correlated errors across tools or roles</em> (agreement that is one flaw echoed back).</p>
-<p><strong>Red-team the consensus.</strong></p>
-<pre class="text"><code>Act as a hostile reviewer who believes my three roles only agreed because my prompt led
-them. Argue that their consensus is manufactured, name the leading words in my original
-ask, and give me a neutral rewrite. Do not reassure me.</code></pre>
-<p>After running, verify: if it cannot find a single leading word, push back and demand the worst one, then rerun the review neutrally. Counters <em>sycophantic agreement</em> (praise that rehearses your ego, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -682,29 +689,44 @@ ask, and give me a neutral rewrite. Do not reassure me.</code></pre>
 <p>Which claims your draft can defend, where each claim must stop, whether an agreement among your roles was ever independent, and the moment to escalate: those stay yours. No role decides its own trustworthiness, and no head-count of roles decides your claim boundary or your ethics. When an AI output would <em>settle</em> one of those rather than inform it, you stop and you decide.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="39.6">
-<h2 data-number="39.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">39.6</span> An AI failure case</h2>
-<p>You send your draft to four AI roles and all four reply “no major problems.” It feels like overwhelming confirmation, and it is confidently wrong. The four share a base model and read the same draft with the same instructions, so they share a blind spot. Whenever your one real flaw falls inside that blind spot, all four miss it together. Their unanimous “fine” is close to a single voice, not four. Running each loop longer does not rescue you either. Four loops with the same blind spot, given more turns, return the same verdict with better paragraphs around it.</p>
-<p>You catch it by refusing to treat agreement as evidence. You run an independence check: re-read the flagged claim against your own inquiry declaration, or hand the draft to a role with a different framing and different context. In the lab you will see the size of this trap measured. Four correlated reviewers miss a real flaw about seven times as often as four independent ones, and piling on more correlated roles cannot close the gap.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="39.7">
-<h2 data-number="39.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">39.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio12-release-next-cycle.html">Studio 12: Release and direct the next cycle</a>.</strong> This lesson is an optional overlay: work it when your project needs it, and skip it without guilt when it does not. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your project already has a small AI team running on one section; this step decides in advance where those loops must stop and hand the call back to you.</em></p>
 <ol type="1">
-<li>Write your escalation rules before the next round starts. List the specific decisions no loop may close: your claim boundary, your uncertainty, which sources are real, what counts as done, and anything with an ethical edge. Keep the list short enough to remember under pressure.</li>
-<li>Add the stopping conditions that are not about content. How many turns a loop may run before you read it, and what an agentic tool is allowed to change without asking you first.</li>
-<li>Find one real disagreement in what your roles have already returned, and diagnose it on the record: real disagreement, correlated error, or a consensus your own prompt manufactured. Say which and why.</li>
-<li>Resolve it yourself with a check the loops cannot run: recompute the number, open the source, or compare against a figure that was never in any prompt. Write the resolution and the check together, because one without the other is just an opinion.</li>
-<li>Take one place your roles agreed on something that mattered and test whether the agreement was independent. Rerun one of them with a different framing and different context, or verify the point yourself outside the tools.</li>
-<li>Log the conflict, the diagnosis, and the override in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Write your escalation rules before the next round starts. List the specific decisions no loop may close: your claim boundary, your uncertainty, which sources are real, what counts as done, and anything with an ethical edge. Keep the list short enough to remember under pressure.</p>
+<p><strong>Locate the decisions that must escalate.</strong></p>
+<pre class="text"><code>Act as a research-integrity assistant. Here is my draft's headline claim and the three
+never-delegate decisions I think it contains: [paste]. Using standard research-defense
+criteria, list which decisions in this draft an AI output should never be allowed to
+settle, and which of my three I mislabeled. Do not settle any of them for me.</code></pre>
+<p>After running, verify: check its list against the escalation triggers you wrote yourself; a decision it omits is the one to guard hardest. Counters <em>illusion of completeness</em> (a tidy list that quietly drops the call that matters most).</p></li>
+<li><p>Add the stopping conditions that are not about content. How many turns a loop may run before you read it, and what an agentic tool is allowed to change without asking you first.</p></li>
+<li><p>Find one real disagreement in what your roles have already returned, and diagnose it on the record: real disagreement, correlated error, or a consensus your own prompt manufactured. Say which and why.</p>
+<p><strong>Red-team the consensus.</strong></p>
+<pre class="text"><code>Act as a hostile reviewer who believes my three roles only agreed because my prompt led
+them. Argue that their consensus is manufactured, name the leading words in my original
+ask, and give me a neutral rewrite. Do not reassure me.</code></pre>
+<p>After running, verify: if it cannot find a single leading word, push back and demand the worst one, then rerun the review neutrally. Counters <em>sycophantic agreement</em> (praise that rehearses your ego, not your evidence).</p></li>
+<li><p>Resolve it yourself with a check the loops cannot run: recompute the number, open the source, or compare against a figure that was never in any prompt. Write the resolution and the check together, because one without the other is just an opinion.</p></li>
+<li><p>Take one place your roles agreed on something that mattered and test whether the agreement was independent. Rerun one of them with a different framing and different context, or verify the point yourself outside the tools.</p>
+<p><strong>List the agreements to verify.</strong></p>
+<pre class="text"><code>Here are three reviewer outputs on the same draft: [paste all three]. For each pair,
+name one specific way they could be wrong the SAME way: a shared assumption, a shared
+anchor, or a shared prompt. Rank the pairs from most to least likely to share a blind
+spot.</code></pre>
+<p>After running, verify: for the top pair, rerun one role with a different framing and different context and see whether the agreement survives. Counters <em>correlated errors across tools or roles</em> (agreement that is one flaw echoed back).</p></li>
+<li><p>Log the conflict, the diagnosis, and the override in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bansal2021whole" class="csl-entry" role="listitem">
+Bansal, Gagan, Tongshuang Wu, Joyce Zhou, et al. 2021. <span>“Does the Whole Exceed Its Parts? The Effect of <span>AI</span> Explanations on Complementary Team Performance.”</span> <em>Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems</em> (New York, NY), 1–16. <a href="https://doi.org/10.1145/3411764.3445717">https://doi.org/10.1145/3411764.3445717</a>.
+</div>
+<div id="ref-hong2004diverse" class="csl-entry" role="listitem">
+Hong, Lu, and Scott E. Page. 2004. <span>“Groups of Diverse Problem Solvers Can Outperform Groups of High-Ability Problem Solvers.”</span> <em>Proceedings of the National Academy of Sciences</em> 101 (46): 16385–89. <a href="https://doi.org/10.1073/pnas.0403723101">https://doi.org/10.1073/pnas.0403723101</a>.
+</div>
+<div id="ref-peker2023collective" class="csl-entry" role="listitem">
+Peker, Cem. 2023. <span>“Extracting the Collective Wisdom in Probabilistic Judgments.”</span> <em>Theory and Decision</em> 94: 467–501. <a href="https://doi.org/10.1007/s11238-022-09899-4">https://doi.org/10.1007/s11238-022-09899-4</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -533,10 +552,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#coding-with-ai-is-a-loop-not-a-wish" id="toc-coding-with-ai-is-a-loop-not-a-wish" class="nav-link" data-scroll-target="#coding-with-ai-is-a-loop-not-a-wish"><span class="header-section-number">22.2.1</span> Coding with AI is a loop, not a wish</a></li>
   </ul></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">22.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">22.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">22.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">22.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">22.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">22.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">22.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -640,12 +657,12 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Frame</strong>: the concrete set of cases your data actually covers, which is often smaller than the group your question is about. Example: only the cities that publish through an open-data portal.</li>
 <li><strong>Convenience sample</strong>: a set of cases collected because they were easy to reach, not drawn to stand in for a population. Example: those portal cities, which tend to be the largest and best-staffed in the state.</li>
 </ul>
-<p>Here is the trap the chapter closes. A tool can compute a flawless share over the wrong frame, and the code still finishes with a green check. <strong>A clean run is not a correct result</strong>: a cell can execute with no error and still compute a different number than your question needs.</p>
+<p>Here is the trap the chapter closes. A tool can compute a flawless share over the wrong frame, and the code still finishes with a green check. <strong>A clean run is not a correct result</strong>: a cell can execute with no error and still compute a different number than your question needs <span class="citation" data-cites="vaithilingam2022expectation">(<a href="#ref-vaithilingam2022expectation" role="doc-biblioref">Vaithilingam et al. 2022</a>)</span>.</p>
 <section id="coding-with-ai-is-a-loop-not-a-wish" class="level3" data-number="22.2.1">
 <h3 data-number="22.2.1" class="anchored" data-anchor-id="coding-with-ai-is-a-loop-not-a-wish"><span class="header-section-number">22.2.1</span> Coding with AI is a loop, not a wish</h3>
 <p>Nobody gets working analysis code from one prompt, and you should not try to. Real AI-assisted coding is a <strong>loop</strong>: you prompt, you read the output, you interrogate it, you refine, and you run it again. Agentic tools now run that loop by themselves. They write, execute, read the error, patch the code, rerun, and hand you a tidy end state with a paragraph about how well it went.</p>
 <p>The loop is a real gain in speed. It is also where your frame goes missing. Any turn can add a filter, drop a join, or reach for a different column, and the code you finally read may not be the code you specified three turns ago. Nothing announces the change. The number just gets prettier.</p>
-<p>So verification runs per cycle, not per session. Every time the code changes, you ask the same two questions again: what quantity, over which cases? When a tool runs the cycles for you, make it surrender the choices it made along the way, and read the code rather than its summary of the code. You own two things the programmer cannot. First, you define the quantity of interest and the frame in plain words, before you delegate. Second, you confirm that the code sitting in front of you <em>right now</em> computes that quantity over that frame, and not a plausible neighbor.</p>
+<p>So verification runs per cycle, not per session. Every time the code changes, you ask the same two questions again: what quantity, over which cases? When a tool runs the cycles for you, make it surrender the choices it made along the way, and read the code rather than its summary of the code <span class="citation" data-cites="sandve2013ten">(<a href="#ref-sandve2013ten" role="doc-biblioref">Sandve et al. 2013</a>)</span>. You own two things the programmer cannot. First, you define the quantity of interest and the frame in plain words, before you delegate <span class="citation" data-cites="blair2023rdss">(<a href="#ref-blair2023rdss" role="doc-biblioref">Blair et al. 2023</a>)</span>. Second, you confirm that the code sitting in front of you <em>right now</em> computes that quantity over that frame, and not a plausible neighbor.</p>
 </section>
 </section>
 <section id="a-worked-example" class="level2" data-number="22.3">
@@ -656,35 +673,20 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Turn three.</strong> You re-anchor to your <strong>quantity of interest</strong>: the share over <em>every</em> municipality on the state roster, with unretrievable records flagged instead of dropped. You refine the prompt to say precisely that, run again, and the picture changes. At most one in six municipalities is <em>confirmed</em> to post on time, and for most of the state you simply do not know. That “do not know” is a finding, not a gap to paper over.</p>
 <p>Now notice what would have happened if an agentic tool had run all three turns on its own. It would have handed you the polished 95% with a confident paragraph, and the decision that shrank your state to 40 cities would have happened inside a step you never saw. The tool wrote correct code for the wrong question. You did the research by deciding what the code was allowed to count.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="22.4">
-<h2 data-number="22.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">22.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="22.4">
+<h2 data-number="22.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">22.4</span> An AI failure case</h2>
+<p>You ask for the on-time share and the tool returns tidy code that prints, with full confidence, “<strong>95% of councils post minutes on time. Compliance is strong.</strong>” The code has no error and reads beautifully. The trap is buried in two lines: the input dataframe was already limited to cities with an open-data portal, and a <code>.dropna()</code> silently removed the towns where no posting date came back. The share is real arithmetic over the wrong set.</p>
+<p>You catch it by reading the code, not its summary. Printing the dataframe’s shape shows 40 municipalities, not 240. Printing the row count before and after <code>.dropna()</code> shows how many towns vanished, and looking at which ones reveals the smallest governments in the state. Recompute over the full roster, flag the unretrievable records instead of deleting them, and the reassuring 95% collapses. A green check certified that the code ran, never that it answered your question.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="22.5">
-<h2 data-number="22.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">22.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="22.5">
+<h2 data-number="22.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">22.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio07-first-analysis.html">Studio 7: Produce a reproducible first analysis</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your project has a design, a documented data source, and defined measurements. This step turns them into your first real numbers, and into the habit of never trusting code you have not read.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Each prompt is a checkable job, not a request for a verdict, and each one is a turn in a loop you keep running until the code says what you meant.</p>
-<p><strong>Locate the standard idiom.</strong></p>
-<pre class="text"><code>Act as a Python data assistant. I need the share of rows above a threshold,
-computed only over a subset I will name. Before any code, name the standard pandas
-idiom for a threshold share over a filtered subset and the exact argument that
-controls whether missing values are dropped. Only name functions you are sure exist.</code></pre>
-<p>After running, verify: open the pandas docs and confirm the method and that argument exist and default as described. Counters <em>confident fabrication</em> (an invented method or argument arrives as confidently as a real one).</p>
-<p><strong>Delegate, then demand the choices back as a table.</strong></p>
-<pre class="text"><code>Write code that returns the share of municipalities that posted council minutes
-within seven days of the meeting. Then return a table of every choice you made:
-which rows you kept, whether you dropped any and why, the exact set the share is
-computed over, and whether you reported a share or an average.</code></pre>
-<p>After running, verify: check the row count before and after the code, and confirm the set it computed over is the one your question names. Counters <em>silent scope change</em> (a share quietly computed over the portal cities, not the state).</p>
-<p><strong>Make the loop show its work.</strong></p>
-<pre class="text"><code>You revised this code three times. For each revision, tell me in one line what changed
-about which rows are included or excluded, and which revision changed the set the
-number is computed over. Show me the code, not a summary of it.</code></pre>
-<p>After running, verify: put the first and the last version side by side and confirm the filters match what the tool reported. Counters <em>silent scope change</em> in its sneakiest form, a frame that narrows one revision at a time.</p>
-<p><strong>Red-team the number.</strong></p>
-<pre class="text"><code>Here is my claim: "95% of city councils post their minutes within seven days."
-Act as a hostile open-records reviewer. Name every way this code could have counted
-the wrong quantity or this share could mislead. Do not rewrite the claim for me.</code></pre>
-<p>After running, verify: if it only praises the number, push back and demand the single worst flaw. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -698,29 +700,50 @@ the wrong quantity or this share could mislead. Do not rewrite the claim for me.
 <p>You define <strong>what quantity the code computes</strong> and <strong>which set of cases it runs over</strong>, and you decide <strong>what the number is allowed to claim</strong>. The tool can write the filter, the aggregation, and the plot, and it can run its own loop until everything is clean. It cannot decide that 40 portal cities speak for a state of 240, or that a compliance rate with the unreachable towns deleted is honest. You own the final sentence, its frame, and its boundary.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="22.6">
-<h2 data-number="22.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">22.6</span> An AI failure case</h2>
-<p>You ask for the on-time share and the tool returns tidy code that prints, with full confidence, “<strong>95% of councils post minutes on time. Compliance is strong.</strong>” The code has no error and reads beautifully. The trap is buried in two lines: the input dataframe was already limited to cities with an open-data portal, and a <code>.dropna()</code> silently removed the towns where no posting date came back. The share is real arithmetic over the wrong set.</p>
-<p>You catch it by reading the code, not its summary. Printing the dataframe’s shape shows 40 municipalities, not 240. Printing the row count before and after <code>.dropna()</code> shows how many towns vanished, and looking at which ones reveals the smallest governments in the state. Recompute over the full roster, flag the unretrievable records instead of deleting them, and the reassuring 95% collapses. A green check certified that the code ran, never that it answered your question.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="22.7">
-<h2 data-number="22.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">22.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio07-first-analysis.html">Studio 7: Produce a reproducible first analysis</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your project has a design, a documented data source, and defined measurements. This step turns them into your first real numbers, and into the habit of never trusting code you have not read.</em></p>
 <ol type="1">
-<li>Write your quantity of interest in one sentence, and the frame it runs over in a second. Be concrete: not “my data,” but the exact list of cases a stranger could reconstruct without asking you.</li>
-<li>Prompt an AI tool for the code that computes that quantity over that frame. Save the transcript. This is turn one of a loop, not a finished answer.</li>
-<li>Read the returned code line by line and ask what each line removes. Interrogate every filter, join, and missing-value call. Then refine your prompt and run the loop again, as many times as it takes.</li>
-<li>Print the shape of the data the number was computed over, and the row count before and after anything that can drop rows. A number without its row count is not a result yet.</li>
-<li>Write one sentence naming what this number does <em>not</em> cover: the cases your frame left out, and what you therefore cannot say about them.</li>
-<li>Log this first number in your AI Research Ledger, and verify it with a named method from the <a href="../verification-guide.html">Verification Guide</a>. <strong>Alternative code</strong> is the natural pick here: recompute the same quantity a second way and confirm the two roads give one answer. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Write your quantity of interest in one sentence, and the frame it runs over in a second. Be concrete: not “my data,” but the exact list of cases a stranger could reconstruct without asking you.</p></li>
+<li><p>Prompt an AI tool for the code that computes that quantity over that frame. Save the transcript. This is turn one of a loop, not a finished answer.</p>
+<p><strong>Locate the standard idiom.</strong></p>
+<pre class="text"><code>Act as a Python data assistant. I need the share of rows above a threshold,
+computed only over a subset I will name. Before any code, name the standard pandas
+idiom for a threshold share over a filtered subset and the exact argument that
+controls whether missing values are dropped. Only name functions you are sure exist.</code></pre>
+<p>After running, verify: open the pandas docs and confirm the method and that argument exist and default as described. Counters <em>confident fabrication</em> (an invented method or argument arrives as confidently as a real one).</p>
+<p><em>A second angle, optional:</em></p>
+<p><strong>Delegate, then demand the choices back as a table.</strong></p>
+<pre class="text"><code>Write code that returns the share of municipalities that posted council minutes
+within seven days of the meeting. Then return a table of every choice you made:
+which rows you kept, whether you dropped any and why, the exact set the share is
+computed over, and whether you reported a share or an average.</code></pre>
+<p>After running, verify: check the row count before and after the code, and confirm the set it computed over is the one your question names. Counters <em>silent scope change</em> (a share quietly computed over the portal cities, not the state).</p></li>
+<li><p>Read the returned code line by line and ask what each line removes. Interrogate every filter, join, and missing-value call. Then refine your prompt and run the loop again, as many times as it takes.</p>
+<p><strong>Make the loop show its work.</strong></p>
+<pre class="text"><code>You revised this code three times. For each revision, tell me in one line what changed
+about which rows are included or excluded, and which revision changed the set the
+number is computed over. Show me the code, not a summary of it.</code></pre>
+<p>After running, verify: put the first and the last version side by side and confirm the filters match what the tool reported. Counters <em>silent scope change</em> in its sneakiest form, a frame that narrows one revision at a time.</p></li>
+<li><p>Print the shape of the data the number was computed over, and the row count before and after anything that can drop rows. A number without its row count is not a result yet.</p></li>
+<li><p>Write one sentence naming what this number does <em>not</em> cover: the cases your frame left out, and what you therefore cannot say about them.</p>
+<p><strong>Red-team the number.</strong></p>
+<pre class="text"><code>Here is my claim: "95% of city councils post their minutes within seven days."
+Act as a hostile open-records reviewer. Name every way this code could have counted
+the wrong quantity or this share could mislead. Do not rewrite the claim for me.</code></pre>
+<p>After running, verify: if it only praises the number, push back and demand the single worst flaw. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your evidence).</p></li>
+<li><p>Log this first number in your AI Research Ledger, and verify it with a named method from the <a href="../verification-guide.html">Verification Guide</a>. <strong>Alternative code</strong> is the natural pick here: recompute the same quantity a second way and confirm the two roads give one answer. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-blair2023rdss" class="csl-entry" role="listitem">
+Blair, Graeme, Alexander Coppock, and Macartan Humphreys. 2023. <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em>. Princeton University Press. <a href="https://book.declaredesign.org">https://book.declaredesign.org</a>.
+</div>
+<div id="ref-sandve2013ten" class="csl-entry" role="listitem">
+Sandve, Geir Kjetil, Anton Nekrutenko, James Taylor, and Eivind Hovig. 2013. <span>“Ten Simple Rules for Reproducible Computational Research.”</span> <em>PLOS Computational Biology</em> 9 (10): e1003285. <a href="https://doi.org/10.1371/journal.pcbi.1003285">https://doi.org/10.1371/journal.pcbi.1003285</a>.
+</div>
+<div id="ref-vaithilingam2022expectation" class="csl-entry" role="listitem">
+Vaithilingam, Priyan, Tianyi Zhang, and Elena L. Glassman. 2022. <span>“Expectation Vs. Experience: Evaluating the Usability of Code Generation Tools Powered by Large Language Models.”</span> <em>Extended Abstracts of the 2022 CHI Conference on Human Factors in Computing Systems</em> (New York, NY), 1–7. <a href="https://doi.org/10.1145/3491101.3519665">https://doi.org/10.1145/3491101.3519665</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

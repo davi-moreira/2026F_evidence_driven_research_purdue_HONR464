@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">27.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">27.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">27.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">27.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">27.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">27.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">27.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">27.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">27.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -627,8 +644,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-concept" class="level2" data-number="27.2">
 <h2 data-number="27.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">27.2</span> The concept</h2>
-<p>The trap has a name. <strong>False confidence</strong> is when fluent, detailed output makes you feel sure of something you never actually verified. Example: an AI summary reports that a stream cleanup “cut nitrate by roughly 40 percent,” and the crisp figure and smooth wording make the claim feel settled before you have looked at a single measurement.</p>
-<p>Two habits make the trap dangerous. <strong>Automation bias</strong> is the tendency to over-trust an automated system and stop checking, precisely because a machine produced the answer. Example: you would double-check a lab partner’s arithmetic, but you paste the AI’s percentage straight into your report because “the tool computed it.” <strong>Illusion of understanding</strong> is mistaking a smooth explanation for real comprehension. Example: you nod along as the AI walks you line by line through its calculation, then realize you could not defend the number to the agency reviewer without rerunning it yourself.</p>
+<p>The trap has a name. <strong>False confidence</strong> is when fluent, detailed output makes you feel sure of something you never actually verified <span class="citation" data-cites="ji2023hallucination">(<a href="#ref-ji2023hallucination" role="doc-biblioref">Ji et al. 2023</a>)</span>. Example: an AI summary reports that a stream cleanup “cut nitrate by roughly 40 percent,” and the crisp figure and smooth wording make the claim feel settled before you have looked at a single measurement.</p>
+<p>Two habits make the trap dangerous. <strong>Automation bias</strong> is the tendency to over-trust an automated system and stop checking, precisely because a machine produced the answer <span class="citation" data-cites="goddard2012automation">(<a href="#ref-goddard2012automation" role="doc-biblioref">Goddard et al. 2012</a>)</span>. Example: you would double-check a lab partner’s arithmetic, but you paste the AI’s percentage straight into your report because “the tool computed it.” <strong>Illusion of understanding</strong> is mistaking a smooth explanation for real comprehension <span class="citation" data-cites="rozenblit2002illusion">(<a href="#ref-rozenblit2002illusion" role="doc-biblioref">Rozenblit and Keil 2002</a>)</span>. Example: you nod along as the AI walks you line by line through its calculation, then realize you could not defend the number to the agency reviewer without rerunning it yourself.</p>
 <p>The loop makes this worse, not better. You rarely stop at a first answer now. You prompt, read, refine, and run again, and agentic tools spin those cycles on their own. Each pass comes back cleaner and surer than the last, and that polish <em>feels</em> like convergence on the truth. It is nothing of the kind. A number that was wrong on turn one is usually still wrong on turn six, only better dressed. Confidence grows across the loop whether or not accuracy does, so check the number on the turn you actually intend to use.</p>
 <p>The rule that beats all of this is short: <strong>verify the number, not the paragraph.</strong> <strong>Verification</strong> is an independent check, run by a method outside the model, that a result is actually true. Example: instead of trusting the AI’s “40 percent,” you recompute the average nitrate before and after the cleanup from the raw readings and see what the data really show. Code that runs without errors is not the same as code that is correct, and a summary that reads beautifully is not the same as a summary that is right.</p>
 </section>
@@ -638,29 +655,20 @@ ul.task-list li input[type="checkbox"] {
 <p>You ask an AI to summarize the dataset. It returns: <em>“The riparian buffer reduced average nitrate by about 40 percent, a clear environmental success.”</em> The sentence is fluent and sure. Here is where false confidence would win: you feel the relief of a clean result and reach to quote it.</p>
 <p>Instead you verify the number. You compute the mean nitrate for the “before” weeks and for the “after” weeks, then subtract. Suppose the before-mean is 8.1 mg/L and the after-mean is 6.9 mg/L. The real drop is 1.2 mg/L, about 15 percent, not 40. The confident summary overstated the change by more than double. A second problem also hid behind the polish: the readings come from one site with no comparison stream, so even the true 15 percent cannot be pinned on the buffer alone. A wet spring or a change in fertilizer practice upstream could move nitrate just as much. You keep the finding you can defend, “nitrate fell about 15 percent at this site over one year,” and you drop both the inflated figure and the word “success.”</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="27.4">
-<h2 data-number="27.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">27.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="27.4">
+<h2 data-number="27.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">27.4</span> An AI failure case</h2>
+<p>You ask the AI to “summarize what this water-quality dataset shows,” and it hands back a confident paragraph ending in “a 40 percent reduction, a clear success.” Every part reads like a finding you could quote: a round figure, a firm verdict, no hedging.</p>
+<p>Here is exactly how you catch it. You do not repeat the paragraph. You compute the two group means from the raw readings and subtract, and the real change is about 15 percent, not 40. Then you ask what the design licenses: one site, no control stream, a single year, so even the honest 15 percent could come from the weather rather than the buffer. The confident summary failed twice, once on the number and once on the causal reach, and both failures were invisible until you checked outside the model.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="27.5">
-<h2 data-number="27.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">27.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="27.5">
+<h2 data-number="27.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">27.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio08-stress-test.html">Studio 8: Stress-test and adjudicate</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your project has an estimate, a range, negative tests, and an adversarial review behind it. This step turns the audit on yourself and produces the one sentence your evidence can actually carry.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own expectation first, then delegate. Each prompt hands out a task you can check, with a verify note naming the failure it defends against.</p>
-<p><strong>Point to the real number (you recompute it).</strong></p>
-<pre class="text"><code>Here is a cell that computes average nitrate before and after a buffer was
-installed and prints both means: [paste it]. Tell me which single printed number
-is the actual change, and state plainly whether a "40 percent reduction" summary
-is or is not that number. Do not rerun it; I will read my own output and compare.</code></pre>
-<p>After running, verify (counters <em>confident fabrication</em>): a fluent summary can state a number the data never produced. Read the two means your cell printed and compute the change yourself. If it does not match the AI’s figure, trust your printout.</p>
-<p><strong>Force the uncertainty out (you check the bound).</strong></p>
-<pre class="text"><code>For the before/after nitrate change in my data, rate how firm the estimate is.
-Give a plausible range, and name what drives the uncertainty: the sample size, the
-week-to-week scatter, and the lack of a comparison stream.</code></pre>
-<p>After running, verify (counters <em>missing uncertainty</em>): if a result arrives as a clean fact with no bound, assume the uncertainty was dropped, not that there was none. Confirm the range against the spread you can see in your own readings.</p>
-<p><strong>Red-team your finding (you keep the claim).</strong></p>
-<pre class="text"><code>Here is my finding: "[paste your sentence]." Act as a hostile reviewer for a state
-fisheries agency. Name every place it reaches past one site and one year of data.
-Do not rewrite it for me; list the weaknesses.</code></pre>
-<p>After running, verify (counters <em>sycophantic agreement</em>): if every objection is mild, or it calls your sentence “well-balanced,” push back and ask for the single worst flaw.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -674,26 +682,30 @@ Do not rewrite it for me; list the weaknesses.</code></pre>
 <p>These stay yours, no matter how sure the tool sounds. Deciding what claim the verified number actually supports, and how far that claim reaches. Judging whether your design lets you credit the buffer for the change, or only lets you report that nitrate fell. Stating the uncertainty and the limits in your own words. The tool can draft a summary; deciding whether that summary is true, and answering for it, is the researcher’s job.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="27.6">
-<h2 data-number="27.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">27.6</span> An AI failure case</h2>
-<p>You ask the AI to “summarize what this water-quality dataset shows,” and it hands back a confident paragraph ending in “a 40 percent reduction, a clear success.” Every part reads like a finding you could quote: a round figure, a firm verdict, no hedging.</p>
-<p>Here is exactly how you catch it. You do not repeat the paragraph. You compute the two group means from the raw readings and subtract, and the real change is about 15 percent, not 40. Then you ask what the design licenses: one site, no control stream, a single year, so even the honest 15 percent could come from the weather rather than the buffer. The confident summary failed twice, once on the number and once on the causal reach, and both failures were invisible until you checked outside the model.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="27.7">
-<h2 data-number="27.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">27.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio08-stress-test.html">Studio 8: Stress-test and adjudicate</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your project has an estimate, a range, negative tests, and an adversarial review behind it. This step turns the audit on yourself and produces the one sentence your evidence can actually carry.</em></p>
 <ol type="1">
-<li>List every number currently in your project that you have not personally recomputed. The list is usually longer than you expect. Recompute each one or take it out.</li>
-<li>For your headline number, write down where your confidence in it actually comes from: your own recomputation, a tool’s fluent summary, or the fact that it matched what you were hoping for. Only the first one counts as a reason.</li>
-<li>Write your boundary sentence, the claim your design licenses and nothing beyond it. Name the unit, the setting, the time span, and whether you can credit a cause or can only report that something changed.</li>
-<li>Name the one place you are most likely to let a confident answer past unchecked, and write it down. That admission is where automation bias gets managed.</li>
-<li>Adopt a standing rule for the rest of the project: no AI-reported number reaches your paper, note, or poster until you have recomputed it by a second method.</li>
-<li>Log the audit in your AI Research Ledger, and verify your headline number with a named method from the <a href="../verification-guide.html">Verification Guide</a>. <strong>Direct calculation</strong> is the one this chapter is built on: recompute the means by hand, subtract, and see whether the confident figure survives. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>List every number currently in your project that you have not personally recomputed. The list is usually longer than you expect. Recompute each one or take it out.</p>
+<p><strong>Point to the real number (you recompute it).</strong></p>
+<pre class="text"><code>Here is a cell that computes average nitrate before and after a buffer was
+installed and prints both means: [paste it]. Tell me which single printed number
+is the actual change, and state plainly whether a "40 percent reduction" summary
+is or is not that number. Do not rerun it; I will read my own output and compare.</code></pre>
+<p>After running, verify (counters <em>confident fabrication</em>): a fluent summary can state a number the data never produced. Read the two means your cell printed and compute the change yourself. If it does not match the AI’s figure, trust your printout.</p></li>
+<li><p>For your headline number, write down where your confidence in it actually comes from: your own recomputation, a tool’s fluent summary, or the fact that it matched what you were hoping for. Only the first one counts as a reason.</p></li>
+<li><p>Write your boundary sentence, the claim your design licenses and nothing beyond it. Name the unit, the setting, the time span, and whether you can credit a cause or can only report that something changed.</p>
+<p><strong>Force the uncertainty out (you check the bound).</strong></p>
+<pre class="text"><code>For the before/after nitrate change in my data, rate how firm the estimate is.
+Give a plausible range, and name what drives the uncertainty: the sample size, the
+week-to-week scatter, and the lack of a comparison stream.</code></pre>
+<p>After running, verify (counters <em>missing uncertainty</em>): if a result arrives as a clean fact with no bound, assume the uncertainty was dropped, not that there was none. Confirm the range against the spread you can see in your own readings.</p>
+<p><em>A second angle, optional:</em></p>
+<p><strong>Red-team your finding (you keep the claim).</strong></p>
+<pre class="text"><code>Here is my finding: "[paste your sentence]." Act as a hostile reviewer for a state
+fisheries agency. Name every place it reaches past one site and one year of data.
+Do not rewrite it for me; list the weaknesses.</code></pre>
+<p>After running, verify (counters <em>sycophantic agreement</em>): if every objection is mild, or it calls your sentence “well-balanced,” push back and ask for the single worst flaw.</p></li>
+<li><p>Name the one place you are most likely to let a confident answer past unchecked, and write it down. That admission is where automation bias gets managed.</p></li>
+<li><p>Adopt a standing rule for the rest of the project: no AI-reported number reaches your paper, note, or poster until you have recomputed it by a second method.</p></li>
+<li><p>Log the audit in your AI Research Ledger, and verify your headline number with a named method from the <a href="../verification-guide.html">Verification Guide</a>. <strong>Direct calculation</strong> is the one this chapter is built on: recompute the means by hand, subtract, and see whether the confident figure survives. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 <!-- studio-continue:begin -->
 <blockquote class="blockquote">
@@ -701,6 +713,17 @@ Do not rewrite it for me; list the weaknesses.</code></pre>
 </blockquote>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-goddard2012automation" class="csl-entry" role="listitem">
+Goddard, Kate, Abdul Roudsari, and Jeremy C. Wyatt. 2012. <span>“Automation Bias: A Systematic Review of Frequency, Effect Mediators, and Mitigators.”</span> <em>Journal of the American Medical Informatics Association</em> 19 (1): 121–27. <a href="https://doi.org/10.1136/amiajnl-2011-000089">https://doi.org/10.1136/amiajnl-2011-000089</a>.
+</div>
+<div id="ref-ji2023hallucination" class="csl-entry" role="listitem">
+Ji, Ziwei, Nayeon Lee, Rita Frieske, et al. 2023. <span>“Survey of Hallucination in Natural Language Generation.”</span> <em>ACM Computing Surveys</em> 55 (12): 1–38. <a href="https://doi.org/10.1145/3571730">https://doi.org/10.1145/3571730</a>.
+</div>
+<div id="ref-rozenblit2002illusion" class="csl-entry" role="listitem">
+Rozenblit, Leonid, and Frank Keil. 2002. <span>“The Misunderstood Limits of Folk Science: An Illusion of Explanatory Depth.”</span> <em>Cognitive Science</em> 26 (5): 521–62. <a href="https://doi.org/10.1207/S15516709COG2605_1">https://doi.org/10.1207/S15516709COG2605_1</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

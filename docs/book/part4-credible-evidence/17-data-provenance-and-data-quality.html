@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">20.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">20.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">20.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">20.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">20.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">20.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">20.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">20.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">20.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -631,9 +648,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-concept" class="level2" data-number="20.2">
 <h2 data-number="20.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">20.2</span> The concept</h2>
-<p><strong>Data provenance</strong> is the documented origin of a value and every hand it passed through before it reached you. Example: a turnout figure in a news story, traced back through a state summary table to the county election office that certified the count.</p>
+<p><strong>Data provenance</strong> is the documented origin of a value and every hand it passed through before it reached you <span class="citation" data-cites="lebo2013provo">(<a href="#ref-lebo2013provo" role="doc-biblioref">Lebo et al. 2013</a>)</span> <span class="citation" data-cites="wilkinson2016fair">(<a href="#ref-wilkinson2016fair" role="doc-biblioref"><span class="nocase">Wilkinson et al.</span> 2016</a>)</span>. Example: a turnout figure in a news story, traced back through a state summary table to the county election office that certified the count.</p>
 <p>That chain has two kinds of links. A <strong>primary source</strong> is the original record where a value was first produced. Example: the county’s certified canvass, the official document reporting the final vote totals. A <strong>secondary source</strong> re-reports a value it did not produce. Example: a newspaper table, an encyclopedia entry, or a data aggregator that copies the county’s number. A value is only as trustworthy as the primary source at the end of its chain.</p>
-<p><strong>Data quality</strong> is whether a value is fit for <em>your</em> specific use: real, produced by a method you can name, and defined the way your question needs. Example: a turnout rate computed over registered voters is high quality for a question about whether registered people showed up, and the wrong number for a question about how much of the adult population takes part. A <strong>mischaracterized value</strong> is a real number attached to the wrong definition or method. Example: a survey’s self-reported turnout presented as an official count, or a registered-voter rate cited as though it covered everyone eligible.</p>
+<p><strong>Data quality</strong> is whether a value is fit for <em>your</em> specific use: real, produced by a method you can name, and defined the way your question needs <span class="citation" data-cites="wang1996beyond">(<a href="#ref-wang1996beyond" role="doc-biblioref">Wang and Strong 1996</a>)</span>. Example: a turnout rate computed over registered voters is high quality for a question about whether registered people showed up, and the wrong number for a question about how much of the adult population takes part. A <strong>mischaracterized value</strong> is a real number attached to the wrong definition or method. Example: a survey’s self-reported turnout presented as an official count, or a registered-voter rate cited as though it covered everyone eligible.</p>
 <p>Whole datasets carry the same two questions, column by column. Who produced this variable, who cleaned it, what did they drop, and does the definition behind the column match the one in your question? A file that lands in your folder with no answers to those questions is not yet data. It is a rumor in a spreadsheet.</p>
 <p>You settle all of it with one habit, the <strong>retrieval-verification loop</strong>: <strong>Ask</strong> a tool to surface a value and its source, <strong>Retrieve</strong> the primary source yourself, <strong>Verify</strong> that it exists and reports that value under that definition, and <strong>Document</strong> where you found it. A citation you have not opened is a lead, not a source, however confident the tool that handed it to you.</p>
 </section>
@@ -644,33 +661,19 @@ ul.task-list li input[type="checkbox"] {
 <p>Then, <strong>quality</strong>. You open the canvass and read what the percentage is <em>of</em>. Is the denominator registered voters, all adults, or adults eligible to vote, which excludes noncitizens and, in some states, people with certain felony convictions? Those three denominators produce three different turnout numbers for the same election, and the gaps between them are not small. You also ask whether the figure was <em>counted</em> or <em>estimated</em>. Ballots cast are counted. Eligible-population denominators are estimated from census data. Survey turnout is self-reported, and people reliably overstate whether they voted, so it is a third kind of number again.</p>
 <p>You cross-check against an independent source that documents its own methods. Two worth knowing: the United States Elections Project, which publishes voting-eligible-population turnout estimates and explains exactly how it builds the denominator, and the Census Bureau’s Current Population Survey Voting and Registration Supplement, which reports self-reported turnout from a large national survey. When the certified canvass and an independent reference agree on both the count and the definition, the number has earned a place in your project. When they disagree, the disagreement <em>is</em> the finding. You report both, name the definition behind each, and say which one your question needs and why.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="20.4">
-<h2 data-number="20.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">20.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="20.4">
+<h2 data-number="20.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">20.4</span> An AI failure case</h2>
+<p>You ask for county turnout and the tool returns “72 percent,” with a citation to a real state elections page. Seven details look right, so it is tempting to paste it straight in. You open the page instead, and the table header reads <em>percent of registered voters</em>, not percent of everyone eligible. The number is real. The denominator is the wrong one for your question, and the tool swapped it silently. You catch it two ways. You had written your own expectation first, so a figure that sits well above what you knew about participation in that county already looked suspect. Then you read the actual column header rather than the tool’s summary of it, and the mismatch is plain. The value goes into your notes as a registered-voter rate, and your original question stays open.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="20.5">
-<h2 data-number="20.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">20.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="20.5">
+<h2 data-number="20.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">20.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio06-govern-data-measurement.html">Studio 6: Govern data and measurement</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your design is settled and your measurements come next. Before either can be trusted, this step pins down where your data actually came from.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Each prompt is <strong>commit-first</strong>: write down the value or source you already believe, then let the tool disagree with something of yours. Treat every one as the start of a loop rather than a single request. The first answer gives you leads; your second message names the lead that did not survive retrieval and asks again. Tools that run the search loop on their own will hand you a longer, tidier list of sources. Longer and tidier does not mean opened, and opening them is still your job.</p>
-<p><strong>Locate the primary source (delegable).</strong></p>
-<pre class="text"><code>Act as a research-data assistant. I have this figure: [paste the value, the place,
-the year, and how it is expressed]. Name the primary source that FIRST reported it,
-with the issuing body, the exact document title, the year, and the definition used,
-including what the denominator is. Only list sources you are confident exist, mark
-anything uncertain, and say for each whether it is the original record or a
-re-report.</code></pre>
-<p>After running, verify (counters <em>confident fabrication</em>): open every source yourself before you trust it; a source you cannot retrieve is invented until it opens.</p>
-<p><strong>Turn borrowed numbers into a provenance table (delegable).</strong></p>
-<pre class="text"><code>Here are five numbers my project borrows: [paste them]. For each, return a row with
-the value, its exact definition (which population, which time window, which
-denominator), the primary source, and whether the value was counted, estimated, or
-self-reported. Return it as a table so I can audit each row on its own.</code></pre>
-<p>After running, verify (counters <em>silent scope change</em>): read each row’s definition against the definition your question actually needs; a number built on a different population can be handed to you as if it were yours.</p>
-<p><strong>Red-team the number you like (delegable).</strong></p>
-<pre class="text"><code>I plan to build on this figure: [paste value and source]. Act as a hostile reviewer
-and argue it is unreliable for a claim about [your population and time window]:
-wrong denominator, self-reported rather than counted, or copied through a chain of
-summaries. Do not reassure me.</code></pre>
-<p>After running, verify (counters <em>sycophantic agreement</em>): if the reviewer only praises your number, push back, then take its strongest objection to the primary source or to someone who knows the data better than you do rather than trusting easy approval.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -684,28 +687,47 @@ summaries. Do not reassure me.</code></pre>
 <p>Three calls stay yours. <strong>Whether a value counts as verified</strong> is settled by a source you opened, not by the tool’s confidence. <strong>Whether its definition fits your use</strong> is a judgment about your specific question, and no lookup makes it for you. And <strong>how much uncertainty you report</strong> when your sources disagree is yours to state and defend, because your name goes on the claim the number supports.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="20.6">
-<h2 data-number="20.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">20.6</span> An AI failure case</h2>
-<p>You ask for county turnout and the tool returns “72 percent,” with a citation to a real state elections page. Seven details look right, so it is tempting to paste it straight in. You open the page instead, and the table header reads <em>percent of registered voters</em>, not percent of everyone eligible. The number is real. The denominator is the wrong one for your question, and the tool swapped it silently. You catch it two ways. You had written your own expectation first, so a figure that sits well above what you knew about participation in that county already looked suspect. Then you read the actual column header rather than the tool’s summary of it, and the mismatch is plain. The value goes into your notes as a registered-voter rate, and your original question stays open.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="20.7">
-<h2 data-number="20.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">20.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio06-govern-data-measurement.html">Studio 6: Govern data and measurement</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your design is settled and your measurements come next. Before either can be trusted, this step pins down where your data actually came from.</em></p>
 <ol type="1">
-<li>List every dataset, table, and borrowed number your project uses. Include the ones a collaborator handed you and the ones you downloaded months ago and stopped thinking about.</li>
-<li>For each, write four things: who produced it, when, from what original record, and every hand it passed through on the way to you. Where a link in that chain is missing, write “unknown” instead of guessing. Unknown is a finding.</li>
-<li>Open the primary source behind the entry your headline claim leans on hardest. Read the line that reports the value and the line that defines it, not a summary of either.</li>
-<li>Beside each entry, write its definition in your own words and mark whether it matches the definition your question needs. Anything marked “no” gets dropped or gets reported with the mismatch stated out loud.</li>
-<li>Save the record as a file that travels with your project, and note the date you retrieved each source. Sources get revised, and a retrieval date is what lets a reader tell whether they are looking at your version.</li>
-<li>Log the step in your AI Research Ledger, and verify at least one entry with a named method from the <a href="../verification-guide.html">Verification Guide</a>. Primary-source reading is the method this chapter is built on, and any borrowed number that will reach your final write-up deserves a second one: a benchmark result against an independent reference. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>List every dataset, table, and borrowed number your project uses. Include the ones a collaborator handed you and the ones you downloaded months ago and stopped thinking about.</p></li>
+<li><p>For each, write four things: who produced it, when, from what original record, and every hand it passed through on the way to you. Where a link in that chain is missing, write “unknown” instead of guessing. Unknown is a finding.</p>
+<p><strong>Turn borrowed numbers into a provenance table (delegable).</strong></p>
+<pre class="text"><code>Here are five numbers my project borrows: [paste them]. For each, return a row with
+the value, its exact definition (which population, which time window, which
+denominator), the primary source, and whether the value was counted, estimated, or
+self-reported. Return it as a table so I can audit each row on its own.</code></pre>
+<p>After running, verify (counters <em>silent scope change</em>): read each row’s definition against the definition your question actually needs; a number built on a different population can be handed to you as if it were yours.</p></li>
+<li><p>Open the primary source behind the entry your headline claim leans on hardest. Read the line that reports the value and the line that defines it, not a summary of either.</p>
+<p><strong>Locate the primary source (delegable).</strong></p>
+<pre class="text"><code>Act as a research-data assistant. I have this figure: [paste the value, the place,
+the year, and how it is expressed]. Name the primary source that FIRST reported it,
+with the issuing body, the exact document title, the year, and the definition used,
+including what the denominator is. Only list sources you are confident exist, mark
+anything uncertain, and say for each whether it is the original record or a
+re-report.</code></pre>
+<p>After running, verify (counters <em>confident fabrication</em>): open every source yourself before you trust it; a source you cannot retrieve is invented until it opens.</p></li>
+<li><p>Beside each entry, write its definition in your own words and mark whether it matches the definition your question needs. Anything marked “no” gets dropped or gets reported with the mismatch stated out loud.</p>
+<p><strong>Red-team the number you like (delegable).</strong></p>
+<pre class="text"><code>I plan to build on this figure: [paste value and source]. Act as a hostile reviewer
+and argue it is unreliable for a claim about [your population and time window]:
+wrong denominator, self-reported rather than counted, or copied through a chain of
+summaries. Do not reassure me.</code></pre>
+<p>After running, verify (counters <em>sycophantic agreement</em>): if the reviewer only praises your number, push back, then take its strongest objection to the primary source or to someone who knows the data better than you do rather than trusting easy approval.</p></li>
+<li><p>Save the record as a file that travels with your project, and note the date you retrieved each source. Sources get revised, and a retrieval date is what lets a reader tell whether they are looking at your version.</p></li>
+<li><p>Log the step in your AI Research Ledger, and verify at least one entry with a named method from the <a href="../verification-guide.html">Verification Guide</a>. Primary-source reading is the method this chapter is built on, and any borrowed number that will reach your final write-up deserves a second one: a benchmark result against an independent reference. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-lebo2013provo" class="csl-entry" role="listitem">
+Lebo, Timothy, Satya Sahoo, and Deborah McGuinness. 2013. <em><span>PROV-O</span>: The <span>PROV</span> Ontology</em>. {W3C} Recommendation. World Wide Web Consortium. <a href="https://www.w3.org/TR/prov-o/">https://www.w3.org/TR/prov-o/</a>.
+</div>
+<div id="ref-wang1996beyond" class="csl-entry" role="listitem">
+Wang, Richard Y., and Diane M. Strong. 1996. <span>“Beyond Accuracy: What Data Quality Means to Data Consumers.”</span> <em>Journal of Management Information Systems</em> 12 (4): 5–33. <a href="https://doi.org/10.1080/07421222.1996.11518099">https://doi.org/10.1080/07421222.1996.11518099</a>.
+</div>
+<div id="ref-wilkinson2016fair" class="csl-entry" role="listitem">
+<span class="nocase">Wilkinson, Mark D., Michel Dumontier, IJsbrand Jan Aalbersberg, et al.</span> 2016. <span>“The <span>FAIR</span> Guiding Principles for Scientific Data Management and Stewardship.”</span> <em>Scientific Data</em> 3: 160018. <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">38.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">38.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">38.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">38.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">38.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">38.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">38.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">38.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">38.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -630,13 +647,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-concept" class="level2" data-number="38.2">
 <h2 data-number="38.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">38.2</span> The concept</h2>
-<p>Start with the unit you are actually managing. <strong>The AI loop</strong> is the cycle you have been running since the beginning of this book: you prompt, you read the output, you interrogate it, you refine the ask, you run it again. One loop, one job, one person watching. <strong>Agentic tools</strong> are AI systems that run that loop on their own, deciding their own next step and calling their own tools between your turns. Example: you ask for the citations to be checked and the tool searches, reads, rechecks, and revises across several turns before it comes back to you. It is faster, and every turn you did not read is a turn you did not supervise.</p>
+<p>Start with the unit you are actually managing. <strong>The AI loop</strong> is the cycle you have been running since the beginning of this book: you prompt, you read the output, you interrogate it, you refine the ask, you run it again. One loop, one job, one person watching. <strong>Agentic tools</strong> are AI systems that run that loop on their own, deciding their own next step and calling their own tools between your turns <span class="citation" data-cites="yao2023react">(<a href="#ref-yao2023react" role="doc-biblioref">Yao et al. 2023</a>)</span>. Example: you ask for the citations to be checked and the tool searches, reads, rechecks, and revises across several turns before it comes back to you. It is faster, and every turn you did not read is a turn you did not supervise.</p>
 <p>So the real management question is not how many prompts you write. It is how many loops you have running, what each one is allowed to touch, and where they hand off to each other. You orchestrate loops, not prompts.</p>
-<p>The move that turns a crowd of loops into a workflow you can defend is <strong>task decomposition</strong>: breaking one large job into smaller subtasks, each with a single clear owner. Example: instead of asking a tool to “improve my draft,” you split the work into check the design, check the citations, and tighten the prose. Each piece now has a pass-or-fail you can judge.</p>
+<p>The move that turns a crowd of loops into a workflow you can defend is <strong>task decomposition</strong>: breaking one large job into smaller subtasks, each with a single clear owner <span class="citation" data-cites="malone1994coordination">(<a href="#ref-malone1994coordination" role="doc-biblioref">Malone and Crowston 1994</a>)</span>. Example: instead of asking a tool to “improve my draft,” you split the work into check the design, check the citations, and tighten the prose. Each piece now has a pass-or-fail you can judge.</p>
 <p>Each piece becomes a <strong>scoped role</strong>: an AI job narrow enough to state in one sentence and check in one pass. Example: “flag every sentence in my results section that claims more than my sample can support.” A scoped role has a clear finish line. “Make it better” does not. That finish line is what makes the role’s loop safe to run: the loop stops when the job is done, and you can tell from the outside whether it is.</p>
 <p>The backbone that keeps roles honest is the <strong>worker-critic pair</strong>: one role produces something and a second, separate role attacks what the first produced. Example: a worker drafts your limitations paragraph, then a critic hunts for the limitation the worker left out. A worker alone is confident about its own quality, which is exactly the blind spot it cannot see from the inside.</p>
 <p>Wiring the roles means deciding what waits on what. A <strong>dependency</strong> is a required order between two subtasks, where one needs the other’s output before it can start. Example: a critic cannot attack a draft the worker has not written yet. Roles with no dependency between them run at the same time. Roles joined by one run in order.</p>
-<p>The chain of dependencies you cannot shorten is the <strong>critical path</strong>: the longest run of must-follow-must steps in your workflow. Example: worker drafts, then critic attacks, then you integrate is three steps that cannot collapse into fewer. That chain sets the minimum number of rounds your workflow takes. Reading the critical path off your own design, instead of guessing it, is the skill this chapter drills. Count it in loops, not in messages. A single role may take four turns of prompting to finish its one job, and it still occupies one node on the path.</p>
+<p>The chain of dependencies you cannot shorten is the <strong>critical path</strong>: the longest run of must-follow-must steps in your workflow <span class="citation" data-cites="kelley1961critical">(<a href="#ref-kelley1961critical" role="doc-biblioref">Kelley 1961</a>)</span>. Example: worker drafts, then critic attacks, then you integrate is three steps that cannot collapse into fewer. That chain sets the minimum number of rounds your workflow takes. Reading the critical path off your own design, instead of guessing it, is the skill this chapter drills. Count it in loops, not in messages. A single role may take four turns of prompting to finish its one job, and it still occupies one node on the path.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="38.3">
 <h2 data-number="38.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">38.3</span> A worked example</h2>
@@ -646,30 +663,20 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Keep one step human.</strong> The integrate step is yours, and it is the one node with no loop attached to it. When the methodologist says your walk-and-heart-rate result is only an association and the clarity reviewer loved the sentence that called it an effect, no role settles that clash. You do. The decision about what the write-up claims never enters the workflow as a delegated task.</p>
 <p>The tools drafted, flagged, and polished. You split the job, set the order, decided when each loop had run long enough, and owned the claim that carries your name.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="38.4">
-<h2 data-number="38.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">38.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="38.4">
+<h2 data-number="38.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">38.4</span> An AI failure case</h2>
+<p>You ask a tool to design your multi-agent workflow, and it returns a confident, well-formatted plan: run the worker, the methodologist, the skeptic, and the editor all in parallel to “save rounds.” The plan runs in your head without a hitch. Here is the trap. The editor and the skeptic have nothing to read yet, because the worker has not drafted anything. The tool scheduled three roles to start before the input they depend on exists, and dressed it up as efficiency. Hand that plan to an agentic tool that executes it for you and the failure gets quieter, not louder: three loops run on an empty draft and return three confident reviews of nothing.</p>
+<p>You catch it by drawing the arrows and asking one question at each role: does this role’s input exist at the moment it starts? The editor’s input is the integrated draft, which does not exist until the end, so “editor in parallel with worker” is impossible. Redrawn honestly, the plan is a critical path three arrows deep, not one. A green, tidy plan is not a valid one. You check the dependencies, not the confidence.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="38.5">
-<h2 data-number="38.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">38.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="38.5">
+<h2 data-number="38.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">38.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio12-release-next-cycle.html">Studio 12: Release and direct the next cycle</a>.</strong> This lesson is an optional overlay: work it when your project needs it, and skip it without guilt when it does not. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your project already has a research note and a reusable capsule; this step sets up the small AI team that will help you revise them, without handing the team your judgment.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Each prompt below opens a loop you supervise, and one of them is a loop about your other loops. Read what comes back, push on the weak part, run it again. Each prompt is a checkable job, not a request for a verdict.</p>
-<p><strong>Decompose, then hand back the human step.</strong></p>
-<pre class="text"><code>I am splitting the review of my health write-up into scoped AI roles. Here are my
-section headings and one line on each: [paste them]. Propose a table with one row
-per role: the role's one-sentence scoped task, the draft or input it needs, whether
-it can run in parallel or must wait on another role, and the single decision it must
-hand back to me.</code></pre>
-<p>After running, verify: check that every “hand back to me” cell names a real never-delegate decision, not one invented to look cautious. Counters <em>illusion of completeness</em> (a tidy role table that reads thorough while omitting the check that matters).</p>
-<p><strong>Confirm the wiring has no early error slipping past.</strong></p>
-<pre class="text"><code>Here is my proposed workflow as a list of "role A feeds role B" arrows: [paste them].
-For each role, tell me exactly what input it depends on, and name any role I have
-scheduled to start before the input it needs actually exists.</code></pre>
-<p>After running, verify: draw the arrows yourself and trace whether each role’s input exists when it starts. Counters <em>plausible-but-wrong-method</em> (a confident wiring that lets a role run before its input is ready).</p>
-<p><strong>Red-team the decomposition.</strong></p>
-<pre class="text"><code>Act as a hostile reviewer of my AI workflow, not of my draft. Name every place an
-early mistake in one role could flow downstream unchecked, and every role whose job
-overlaps another so much that it adds no independent check. Do not rewrite my plan.</code></pre>
-<p>After running, verify: if it only praises your plan, push back and demand the single worst wiring flaw. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your workflow).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -683,29 +690,44 @@ overlaps another so much that it adds no independent check. Do not rewrite my pl
 <p>The split and the order can be informed by a tool, but three calls stay yours alone. You decide <strong>which jobs are worth their own loop</strong> and which just multiply output you cannot supervise. You decide <strong>the order</strong>, so that no role settles a question a role upstream of it should have answered first. And you keep <strong>the integrate step</strong> human: when two roles disagree about what your draft claims, you make that call in your own words. A workflow that hands the claim to a tool is not a workflow you can defend. The rule scales with the number of loops rather than bending to it. More agents does not mean looser command; it means the same command discipline, repeated.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="38.6">
-<h2 data-number="38.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">38.6</span> An AI failure case</h2>
-<p>You ask a tool to design your multi-agent workflow, and it returns a confident, well-formatted plan: run the worker, the methodologist, the skeptic, and the editor all in parallel to “save rounds.” The plan runs in your head without a hitch. Here is the trap. The editor and the skeptic have nothing to read yet, because the worker has not drafted anything. The tool scheduled three roles to start before the input they depend on exists, and dressed it up as efficiency. Hand that plan to an agentic tool that executes it for you and the failure gets quieter, not louder: three loops run on an empty draft and return three confident reviews of nothing.</p>
-<p>You catch it by drawing the arrows and asking one question at each role: does this role’s input exist at the moment it starts? The editor’s input is the integrated draft, which does not exist until the end, so “editor in parallel with worker” is impossible. Redrawn honestly, the plan is a critical path three arrows deep, not one. A green, tidy plan is not a valid one. You check the dependencies, not the confidence.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="38.7">
-<h2 data-number="38.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">38.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio12-release-next-cycle.html">Studio 12: Release and direct the next cycle</a>.</strong> This lesson is an optional overlay: work it when your project needs it, and skip it without guilt when it does not. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your project already has a research note and a reusable capsule; this step sets up the small AI team that will help you revise them, without handing the team your judgment.</em></p>
 <ol type="1">
-<li>Pick one real section of your project to revise: your methods, your results, or your limitations. Everything below applies to that section only.</li>
-<li>Set up three loops, each with a one-sentence job you could grade. A <strong>writer</strong> that drafts or rewrites. A <strong>skeptic</strong> that attacks what the writer produced and looks for the claim reaching past your evidence. An <strong>auditor</strong> that checks your numbers, your citations, and whether each sentence matches an output you actually have.</li>
-<li>Wire them. Write down which loops can run at the same time and which must wait for another’s output, then trace the longest chain of must-follow steps. That chain is the minimum number of rounds your revision will take.</li>
-<li>Name the one node you keep human, the step where the loops’ work becomes your claim, and write down why no role is allowed to take it.</li>
-<li>Run the round. For each loop, record how many turns it took, what you rejected, and what you kept. A loop whose output you accepted without reading is a loop you did not manage.</li>
-<li>Log every loop in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Pick one real section of your project to revise: your methods, your results, or your limitations. Everything below applies to that section only.</p></li>
+<li><p>Set up three loops, each with a one-sentence job you could grade. A <strong>writer</strong> that drafts or rewrites. A <strong>skeptic</strong> that attacks what the writer produced and looks for the claim reaching past your evidence. An <strong>auditor</strong> that checks your numbers, your citations, and whether each sentence matches an output you actually have.</p>
+<p><strong>Decompose, then hand back the human step.</strong></p>
+<pre class="text"><code>I am splitting the review of my health write-up into scoped AI roles. Here are my
+section headings and one line on each: [paste them]. Propose a table with one row
+per role: the role's one-sentence scoped task, the draft or input it needs, whether
+it can run in parallel or must wait on another role, and the single decision it must
+hand back to me.</code></pre>
+<p>After running, verify: check that every “hand back to me” cell names a real never-delegate decision, not one invented to look cautious. Counters <em>illusion of completeness</em> (a tidy role table that reads thorough while omitting the check that matters).</p></li>
+<li><p>Wire them. Write down which loops can run at the same time and which must wait for another’s output, then trace the longest chain of must-follow steps. That chain is the minimum number of rounds your revision will take.</p>
+<p><strong>Confirm the wiring has no early error slipping past.</strong></p>
+<pre class="text"><code>Here is my proposed workflow as a list of "role A feeds role B" arrows: [paste them].
+For each role, tell me exactly what input it depends on, and name any role I have
+scheduled to start before the input it needs actually exists.</code></pre>
+<p>After running, verify: draw the arrows yourself and trace whether each role’s input exists when it starts. Counters <em>plausible-but-wrong-method</em> (a confident wiring that lets a role run before its input is ready).</p></li>
+<li><p>Name the one node you keep human, the step where the loops’ work becomes your claim, and write down why no role is allowed to take it.</p></li>
+<li><p>Run the round. For each loop, record how many turns it took, what you rejected, and what you kept. A loop whose output you accepted without reading is a loop you did not manage.</p>
+<p><strong>Red-team the decomposition.</strong></p>
+<pre class="text"><code>Act as a hostile reviewer of my AI workflow, not of my draft. Name every place an
+early mistake in one role could flow downstream unchecked, and every role whose job
+overlaps another so much that it adds no independent check. Do not rewrite my plan.</code></pre>
+<p>After running, verify: if it only praises your plan, push back and demand the single worst wiring flaw. Counters <em>sycophantic agreement</em> (praise that reviews your ego, not your workflow).</p></li>
+<li><p>Log every loop in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-kelley1961critical" class="csl-entry" role="listitem">
+Kelley, Jr., James E. 1961. <span>“Critical-Path Planning and Scheduling: Mathematical Basis.”</span> <em>Operations Research</em> 9 (3): 296–320. <a href="https://doi.org/10.1287/opre.9.3.296">https://doi.org/10.1287/opre.9.3.296</a>.
+</div>
+<div id="ref-malone1994coordination" class="csl-entry" role="listitem">
+Malone, Thomas W., and Kevin Crowston. 1994. <span>“The Interdisciplinary Study of Coordination.”</span> <em>ACM Computing Surveys</em> 26 (1): 87–119. <a href="https://doi.org/10.1145/174666.174668">https://doi.org/10.1145/174666.174668</a>.
+</div>
+<div id="ref-yao2023react" class="csl-entry" role="listitem">
+Yao, Shunyu, Jeffrey Zhao, Dian Yu, et al. 2023. <span>“<span>ReAct</span>: Synergizing Reasoning and Acting in Language Models.”</span> <em>The Eleventh International Conference on Learning Representations</em>. <a href="https://openreview.net/forum?id=WE_vluYUL-X">https://openreview.net/forum?id=WE_vluYUL-X</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

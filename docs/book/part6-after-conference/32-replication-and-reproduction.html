@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">36.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">36.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">36.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">36.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">36.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">36.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">36.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">36.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">36.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -630,9 +647,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-concept" class="level2" data-number="36.2">
 <h2 data-number="36.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">36.2</span> The concept</h2>
-<p>Two words sound alike and mean different things. <strong>Reproduction</strong> is getting the same number from the <em>same</em> data and code a study shipped. Example: you open another researcher’s notebook, run it top to bottom, and check that the same growth figure comes back. <strong>Replication</strong> is getting a similar result from a <em>new</em> study or new data. Example: a second lab runs its own experiment and sees the same effect. This chapter is about reproduction. You test the package, not the world.</p>
-<p>What you test is a <strong>reproducibility package</strong>: the full bundle a study ships so someone else can rebuild its numbers, meaning the data, the code, the run order, any random seed, and the write-up. The one figure the main claim rests on is the <strong>headline number</strong>. Example: “the supplement raised larval growth by 0.5 mm.” You rebuild that first, using <strong>restart-and-run-all</strong>, which means clearing the notebook’s memory and running every cell from the top with no manual fixes. If a number only appears when cells run out of order, it is not reproducible.</p>
-<p>A clean run proves the code executes. It never proves the write-up is true, so you run three audits on top of it. <strong>Claims-vs-computation agreement</strong> checks that every sentence the write-up asserts is backed by a number the code actually prints. An <strong>alternative specification</strong> is a different but equally defensible way to compute the same headline, to see whether the answer depends on an undisclosed choice. A <strong>hidden assumption</strong> is a claim the analysis quietly relies on and never states, which the result would collapse without. The most dangerous one in biology has a name: <strong>pseudoreplication</strong>, treating repeated measurements from the same animal, plate, or tank as independent data points when the real experimental unit is the animal, plate, or tank (Hurlbert, 1984).</p>
+<p>Two words sound alike and mean different things. <strong>Reproduction</strong> is getting the same number from the <em>same</em> data and code a study shipped <span class="citation" data-cites="nasem2019reproducibility">(<a href="#ref-nasem2019reproducibility" role="doc-biblioref">National Academies of Sciences, Engineering, and Medicine 2019</a>)</span>. Example: you open another researcher’s notebook, run it top to bottom, and check that the same growth figure comes back. <strong>Replication</strong> is getting a similar result from a <em>new</em> study or new data. Example: a second lab runs its own experiment and sees the same effect. This chapter is about reproduction. You test the package, not the world.</p>
+<p>What you test is a <strong>reproducibility package</strong>: the full bundle a study ships so someone else can rebuild its numbers, meaning the data, the code, the run order, any random seed, and the write-up. The one figure the main claim rests on is the <strong>headline number</strong>. Example: “the supplement raised larval growth by 0.5 mm.” You rebuild that first, using <strong>restart-and-run-all</strong>, which means clearing the notebook’s memory and running every cell from the top with no manual fixes. If a number only appears when cells run out of order, it is not reproducible <span class="citation" data-cites="wilson2017goodenough">(<a href="#ref-wilson2017goodenough" role="doc-biblioref">Wilson et al. 2017</a>)</span>.</p>
+<p>A clean run proves the code executes. It never proves the write-up is true, so you run three audits on top of it. <strong>Claims-vs-computation agreement</strong> checks that every sentence the write-up asserts is backed by a number the code actually prints. An <strong>alternative specification</strong> is a different but equally defensible way to compute the same headline, to see whether the answer depends on an undisclosed choice. A <strong>hidden assumption</strong> is a claim the analysis quietly relies on and never states, which the result would collapse without. The most dangerous one in biology has a name: <strong>pseudoreplication</strong>, treating repeated measurements from the same animal, plate, or tank as independent data points when the real experimental unit is the animal, plate, or tank (Hurlbert, 1984) <span class="citation" data-cites="hurlbert1984pseudoreplication">(<a href="#ref-hurlbert1984pseudoreplication" role="doc-biblioref">Hurlbert 1984</a>)</span>.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="36.3">
 <h2 data-number="36.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">36.3</span> A worked example</h2>
@@ -644,33 +661,20 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Test the hidden assumption.</strong> The package reports its gap as if all 240 larvae were independent, producing a tight interval well above zero. They are not independent. The probiotic was assigned by tank, so larvae sharing a tank share water, food, and crowding. The real experimental unit is the tank, and there are only six. Recompute at the tank level, averaging each tank first and comparing three treated tanks against three controls, and the interval widens until its lower edge touches zero. The point estimate barely moved. The honest uncertainty around it exploded. That is pseudoreplication, and it is the weakness with teeth.</p>
 <p><strong>Rank by threat.</strong> Pseudoreplication comes first, because it can dissolve the “clear effect” claim. The undisclosed handling of dead larvae comes second, because it decides which larvae the number even describes. The 0.43-reported-as-0.5 mismatch comes third: real, and a genuine reporting failure, but the smallest threat to whether an effect exists.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="36.4">
-<h2 data-number="36.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">36.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="36.4">
+<h2 data-number="36.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">36.4</span> An AI failure case</h2>
+<p>You paste the whole package into a general AI tool and ask, “Does this study reproduce, and are its limitations complete?” It answers with total confidence: yes, the code runs, and the limitations paragraph looks thorough, covering sample size, measurement noise, and a call for future work. Every sentence is fluent. The tool never once flags that 240 larvae came from only six tanks. It has quietly mistaken a long list for a complete one.</p>
+<p>You catch it by refusing to judge the paragraph and judging the design instead. You ask what the experimental unit actually was, then recompute the interval at the tank level. When the lower bound drops to zero, the “clear effect” the tool endorsed turns out to rest on a certainty the data never earned. A green check and a polished paragraph are not a reproduced result. You verify the number and its match to the claim, never the confident story about them.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="36.5">
-<h2 data-number="36.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">36.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="36.5">
+<h2 data-number="36.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">36.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio11-reproduce-and-package.html">Studio 11: Reproduce and package</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your project already has claims you can defend and a written disclosure of how AI helped you reach them; this step turns all of it into files a stranger could run without you in the room.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. None of these is a single shot. You send the prompt, read what comes back, interrogate it, sharpen the ask, and run it again. That is the loop, and an audit usually takes two or three turns of it before the tool stops guessing and starts pointing at real lines. Each prompt is a checkable job, not a verdict you hand off.</p>
-<p><strong>Locate every missing input.</strong></p>
-<pre class="text"><code>Act as a cold reproducibility auditor. Here is everything a peer's package
-shipped: [paste the README, the data description, the code, and the headline
-claim]. List every input or step a stranger needs and might not find: the data
-file and its version, the exact run order, any random seed, any hard-coded path.
-Put it in a table with the item, whether the package supplies it, and the cell
-where I should check.</code></pre>
-<p>After running, verify: map each item to a real cell, then ask “what is the single most important thing you left out?” Counters <em>illusion of completeness</em> (a tidy gap list can still omit the one missing pointer that blocks the whole run).</p>
-<p><strong>Walk the headline cell, then confirm it independently.</strong></p>
-<pre class="text"><code>Here is the cell that computes the package's headline number: [paste the cell].
-Explain line by line what it computes, and name which printed value is the
-headline a reader should compare against the write-up. Then give me one
-independent way to confirm that value without rerunning this exact code.</code></pre>
-<p>After running, verify: confirm the value it names matches the number your run actually printed, then run its independent check yourself. Counters <em>confident fabrication</em> (a fluent walkthrough can describe a number the code never produced).</p>
-<p><strong>Red-team the hidden assumption.</strong></p>
-<pre class="text"><code>This analysis treats every measured larva as an independent observation, though
-the probiotic was assigned by tank. Act as a hostile methods reviewer. Name the
-one assumption most likely to inflate the reported certainty, say what the honest
-experimental unit is, and do not reassure me the design is fine.</code></pre>
-<p>After running, verify: recompute the interval at the tank level yourself and see whether it reaches zero. Counters <em>plausible-but-wrong-method</em> (an independent-observations assumption on clustered data silently shrinks every interval).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -684,30 +688,48 @@ experimental unit is, and do not reassure me the design is fine.</code></pre>
 <p>An AI tool connected to an execution environment <em>can</em> run the code, and asking it to is reasonable. What it cannot do is stand behind the result. So demand the evidence of the run rather than the summary of it: the commands, the environment and package versions, the exact version of the code and data it ran (a commit hash, if the package has one), whether each command exited cleanly or errored, the raw output, and which files it actually touched. A confident “it reproduces” with no execution record tells you nothing about whether the released package ran, a modified copy ran, or nothing ran at all. Then reproduce the headline yourself from a clean start, because the verdict carries your name. You also keep three judgments: <strong>which weakness most threatens the claim</strong>, <strong>how you rank the recommendations</strong>, and <strong>the final verdict</strong> on what the package can and cannot support. A tool proposes suspects. You decide which ones the evidence convicts.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="36.6">
-<h2 data-number="36.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">36.6</span> An AI failure case</h2>
-<p>You paste the whole package into a general AI tool and ask, “Does this study reproduce, and are its limitations complete?” It answers with total confidence: yes, the code runs, and the limitations paragraph looks thorough, covering sample size, measurement noise, and a call for future work. Every sentence is fluent. The tool never once flags that 240 larvae came from only six tanks. It has quietly mistaken a long list for a complete one.</p>
-<p>You catch it by refusing to judge the paragraph and judging the design instead. You ask what the experimental unit actually was, then recompute the interval at the tank level. When the lower bound drops to zero, the “clear effect” the tool endorsed turns out to rest on a certainty the data never earned. A green check and a polished paragraph are not a reproduced result. You verify the number and its match to the claim, never the confident story about them.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="36.7">
-<h2 data-number="36.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">36.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio11-reproduce-and-package.html">Studio 11: Reproduce and package</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your project already has claims you can defend and a written disclosure of how AI helped you reach them; this step turns all of it into files a stranger could run without you in the room.</em></p>
 <ol type="1">
-<li>Gather everything into one folder: the data, the code, the run order, the random seed, and a short write-up that states your headline number in words.</li>
-<li>Reproduce yourself cold. Clear the kernel, run every cell from the top with no manual fixes, and ideally do it somewhere other than the machine you built it on. Write down whether your headline number came back exactly, roughly, or not at all.</li>
-<li>Line every sentence of your write-up against a number your code actually prints. Flag each mismatch, including the rounding you did not mean to hide.</li>
-<li>Change one defensible choice you never disclosed, an exclusion rule or a cutoff or a subset, and record how far your headline moves. Report the spread across those versions, not the friendlier end of it, and check first that each version still answers the same question about the same units. Any version that changes the question, especially one that keeps only units your treatment could have selected, gets reported on its own rather than folded into a range.</li>
-<li>Classify every missing value before you fill any of them. Ask whether the number exists and simply was not recorded, or whether an event such as death or dropout means it never existed at all. If treatment could have caused that event, report the event by group first, and label any comparison among the units that remain as exactly that.</li>
-<li>Name the assumption your result would collapse without, and rank everything you found by threat to the claim rather than by ease of repair. If you have a peer, swap folders and rerun each other’s cold. The number they get, set beside the number you reported, is your reproduction evidence.</li>
-<li>Log the audit in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Gather everything into one folder: the data, the code, the run order, the random seed, and a short write-up that states your headline number in words.</p>
+<p><strong>Locate every missing input.</strong></p>
+<pre class="text"><code>Act as a cold reproducibility auditor. Here is everything a peer's package
+shipped: [paste the README, the data description, the code, and the headline
+claim]. List every input or step a stranger needs and might not find: the data
+file and its version, the exact run order, any random seed, any hard-coded path.
+Put it in a table with the item, whether the package supplies it, and the cell
+where I should check.</code></pre>
+<p>After running, verify: map each item to a real cell, then ask “what is the single most important thing you left out?” Counters <em>illusion of completeness</em> (a tidy gap list can still omit the one missing pointer that blocks the whole run).</p></li>
+<li><p>Reproduce yourself cold. Clear the kernel, run every cell from the top with no manual fixes, and ideally do it somewhere other than the machine you built it on. Write down whether your headline number came back exactly, roughly, or not at all.</p></li>
+<li><p>Line every sentence of your write-up against a number your code actually prints. Flag each mismatch, including the rounding you did not mean to hide.</p>
+<p><strong>Walk the headline cell, then confirm it independently.</strong></p>
+<pre class="text"><code>Here is the cell that computes the package's headline number: [paste the cell].
+Explain line by line what it computes, and name which printed value is the
+headline a reader should compare against the write-up. Then give me one
+independent way to confirm that value without rerunning this exact code.</code></pre>
+<p>After running, verify: confirm the value it names matches the number your run actually printed, then run its independent check yourself. Counters <em>confident fabrication</em> (a fluent walkthrough can describe a number the code never produced).</p></li>
+<li><p>Change one defensible choice you never disclosed, an exclusion rule or a cutoff or a subset, and record how far your headline moves. Report the spread across those versions, not the friendlier end of it, and check first that each version still answers the same question about the same units. Any version that changes the question, especially one that keeps only units your treatment could have selected, gets reported on its own rather than folded into a range.</p></li>
+<li><p>Classify every missing value before you fill any of them. Ask whether the number exists and simply was not recorded, or whether an event such as death or dropout means it never existed at all. If treatment could have caused that event, report the event by group first, and label any comparison among the units that remain as exactly that.</p></li>
+<li><p>Name the assumption your result would collapse without, and rank everything you found by threat to the claim rather than by ease of repair. If you have a peer, swap folders and rerun each other’s cold. The number they get, set beside the number you reported, is your reproduction evidence.</p>
+<p><strong>Red-team the hidden assumption.</strong></p>
+<pre class="text"><code>This analysis treats every measured larva as an independent observation, though
+the probiotic was assigned by tank. Act as a hostile methods reviewer. Name the
+one assumption most likely to inflate the reported certainty, say what the honest
+experimental unit is, and do not reassure me the design is fine.</code></pre>
+<p>After running, verify: recompute the interval at the tank level yourself and see whether it reaches zero. Counters <em>plausible-but-wrong-method</em> (an independent-observations assumption on clustered data silently shrinks every interval).</p></li>
+<li><p>Log the audit in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-hurlbert1984pseudoreplication" class="csl-entry" role="listitem">
+Hurlbert, Stuart H. 1984. <span>“Pseudoreplication and the Design of Ecological Field Experiments.”</span> <em>Ecological Monographs</em> 54 (2): 187–211. <a href="https://doi.org/10.2307/1942661">https://doi.org/10.2307/1942661</a>.
+</div>
+<div id="ref-nasem2019reproducibility" class="csl-entry" role="listitem">
+National Academies of Sciences, Engineering, and Medicine. 2019. <em>Reproducibility and Replicability in Science</em>. The National Academies Press. <a href="https://doi.org/10.17226/25303">https://doi.org/10.17226/25303</a>.
+</div>
+<div id="ref-wilson2017goodenough" class="csl-entry" role="listitem">
+Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal. 2017. <span>“Good Enough Practices in Scientific Computing.”</span> <em>PLOS Computational Biology</em> 13 (6): e1005510. <a href="https://doi.org/10.1371/journal.pcbi.1005510">https://doi.org/10.1371/journal.pcbi.1005510</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

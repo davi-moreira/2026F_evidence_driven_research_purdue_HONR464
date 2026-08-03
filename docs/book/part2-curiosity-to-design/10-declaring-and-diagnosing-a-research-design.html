@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">12.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">12.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">12.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">12.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">12.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">12.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">12.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">12.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">12.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -627,13 +644,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-concept" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">12.2</span> The concept</h2>
-<p>In chapter 9 you built the four parts of a design. This chapter puts them to the test with a three-step loop this book borrows from RDSS (<em>Research Design in the Social Sciences: Declare, Diagnose, Redesign</em>).</p>
+<p>In chapter 9 you built the four parts of a design. This chapter puts them to the test with a three-step loop this book borrows from RDSS (<em>Research Design in the Social Sciences: Declare, Diagnose, Redesign</em>) <span class="citation" data-cites="blair2023rdss">(<a href="#ref-blair2023rdss" role="doc-biblioref">Blair et al. 2023</a>)</span>.</p>
 <p><strong>Declare</strong> means writing your four design parts as something a computer can run: a model that generates fake data, an inquiry it can compute on that fake data, a plan for sampling and assigning conditions, and a rule for turning data into an estimate. <em>Example:</em> code that invents 40 shoppers, flips a coin to give each the new checkout screen, and subtracts the two group averages.</p>
 <p><strong>Diagnose</strong> means running that declared design many times on fresh simulated worlds and watching how its estimate behaves. <em>Example:</em> run the coin-flip study 2,000 times and collect all 2,000 estimates. Three numbers start the story, and each answers a different worry.</p>
 <p><strong>Bias</strong> is the average of your errors across the runs, counting direction: each estimate minus the truth, averaged. A design is unbiased when its estimates center on the true answer. <em>Example:</em> the truth is 2, and five runs return 0, 1, 2, 3, and 4. The errors are -2, -1, 0, +1, +2, which average to zero, so bias is zero even though only one run landed on 2. Direction is what makes bias different from plain distance: misses that cancel tell you the design is aimed correctly, while misses that all lean one way tell you it is tilted.</p>
 <p><strong>Variance</strong> is how much the estimate wobbles from one run to the next. <em>Example:</em> estimates swinging between -5 and +9 around a true value of 2 have high variance. Collecting more of the same kind of data, from the same design, usually shrinks this wobble. It is the one problem size reliably helps.</p>
-<p><strong>Power</strong> is how often the design detects a real effect, and it means nothing until you say how you would decide. A <strong>statistical test</strong> is the rule you use to decide whether your data conflict enough with “no effect” to call the result real. <em>Example:</em> in the checkout study, a difference-in-means rule: declare an effect when the gap between the two groups is more than about twice its typical run-to-run wobble. The test’s <strong>threshold</strong> is how demanding that rule is, and it is read across imagined repetitions: at the usual 5 percent setting, a design whose true effect is ZERO would still cry effect in about 5 runs out of 100. The threshold is a property of the rule over many runs, never the chance that your one finding is false. <em>Example:</em> a design that clears that rule in 8 of 100 runs, when the true effect is 2, has 8% power, which is almost useless. Power moves with everything in the declaration: the test, the threshold, the effect you planted, the sample size, and how the world makes noise. Report the whole card beside the number.</p>
-<p>Those three do not exhaust the pile, and fuller diagnoses add more. Two worth knowing by name. <strong>Root mean-squared error</strong> is the typical size of a miss, with big misses weighted extra. <em>Example:</em> in the five-run example above, the plain average distance is 1.2, but the RMSE is about 1.4, because the two 2-point misses count for more than their share. <strong>Coverage</strong> is how often the range you report around your estimate actually contains the truth. <em>Example:</em> if you report a range meant to be right 95 times out of 100, coverage checks whether it really is. A design can be unbiased and still miss badly every time, which is exactly why one number is never the whole diagnosis. A later chapter builds these ranges properly; here you only need to know that a diagnosis can ask about them.</p>
+<p><strong>Power</strong> is how often the design detects a real effect, and it means nothing until you say how you would decide <span class="citation" data-cites="greenland2016misinterpretations">(<a href="#ref-greenland2016misinterpretations" role="doc-biblioref">Greenland et al. 2016</a>)</span>. A <strong>statistical test</strong> is the rule you use to decide whether your data conflict enough with “no effect” to call the result real. <em>Example:</em> in the checkout study, a difference-in-means rule: declare an effect when the gap between the two groups is more than about twice its typical run-to-run wobble. The test’s <strong>threshold</strong> is how demanding that rule is, and it is read across imagined repetitions: at the usual 5 percent setting, a design whose true effect is ZERO would still cry effect in about 5 runs out of 100. The threshold is a property of the rule over many runs, never the chance that your one finding is false. <em>Example:</em> a design that clears that rule in 8 of 100 runs, when the true effect is 2, has 8% power, which is almost useless. Power moves with everything in the declaration: the test, the threshold, the effect you planted, the sample size, and how the world makes noise. Report the whole card beside the number.</p>
+<p>Those three do not exhaust the pile, and fuller diagnoses add more. Two worth knowing by name. <strong>Root mean-squared error</strong> is the typical size of a miss, with big misses weighted extra. <em>Example:</em> in the five-run example above, the plain average distance is 1.2, but the RMSE is about 1.4, because the two 2-point misses count for more than their share. <strong>Coverage</strong> is how often the range you report around your estimate actually contains the truth. <em>Example:</em> if you report a range meant to be right 95 times out of 100, coverage checks whether it really is. A design can be unbiased and still miss badly every time, which is exactly why one number is never the whole diagnosis <span class="citation" data-cites="morris2019simulation">(<a href="#ref-morris2019simulation" role="doc-biblioref">Morris et al. 2019</a>)</span>. A later chapter builds these ranges properly; here you only need to know that a diagnosis can ask about them.</p>
 <p><strong>Redesign</strong> means changing exactly one part in response to the diagnosis, then diagnosing again. Low power from high variance calls for more data. A tilt built into the design, such as who ends up in which group, calls for a different design: more data makes a tilted estimate steadier, not truer.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="12.3">
@@ -642,27 +659,19 @@ ul.task-list li input[type="checkbox"] {
 <p>You <strong>declare</strong> it: build shoppers whose baseline checkout times vary a lot, because some browse and some race; flip a coin to assign the button; subtract the two group averages. You <strong>diagnose</strong> a pilot of 12 shoppers per version. The result is sobering. Bias is near zero, so the design aims true, but the spread is huge because per-person times vary so much, and power comes back under 10%. The design is honest and useless at once. It points at the 8-second gain on average and almost never gets close enough on any single run to prove it.</p>
 <p>Now <strong>redesign</strong>. Variance is the problem, so you raise the sample to 400 per version and diagnose again. Power jumps past 90% and the spread collapses toward the truth. That is variance cured by size. But run one more design as a warning: drop the coin flip and let shoppers opt into the new button themselves. The shoppers who opt in are the frequent, practiced ones who check out faster anyway, so the button gets credit for speed that habit delivered. This confounded design is just as tight at 400 per version, yet it centers on a 14-second gain instead of 8, and no amount of extra data moves it. That gap names the last idea. A randomized design can <strong>identify</strong> the button’s effect, meaning pin the time gap on the button and rule out other causes, while the confounded one shows only an <strong>association</strong>, where the two move together but a common cause could explain it.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">12.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">12.4</span> An AI failure case</h2>
+<p>You paste your confounded observational design and ask, “My estimate is noisy. What should I do?” The tool answers with confidence: “Collect more observations to tighten your estimate.” That sounds obviously right and is exactly wrong for your case. Your problem is <strong>bias</strong> from self-selection, not variance, and more data only makes a biased estimate a more <em>precise</em> wrong number. You catch it the way this chapter teaches: run the confounded design in simulation at a large sample and watch the estimates cluster tightly around 14 seconds when the truth is 8. The spread shrank; the error did not. That is the <code>plausible-but-wrong-method</code> failure, and your own diagnosis unmasks it.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">12.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">12.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio04-declare-and-diagnose.html">Studio 4: Declare and diagnose provisionally</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>You have four design parts on paper. This step asks whether they would survive contact with the world, while a bad answer is still free.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own expectation first, then delegate. Each prompt below leaves you a draft you still have to check. Simulation is where the loop gets fastest and most dangerous at once: modern coding assistants will write the script, run it, read the error, and patch it without waiting for you, and they will happily converge on code that runs cleanly while declaring a different design than yours. Let the tool own the typing. Keep ownership of the true effect you plant and the numbers you read out.</p>
-<pre class="text"><code>Act as a simulation assistant. Here is my declared design in words:
-[model, inquiry, data strategy, answer strategy]. Write the smallest Python
-that builds a world where I set the true effect, runs the design many times,
-and reports bias, variance, and power. List every assumption your code makes
-about my design that I did not state.</code></pre>
-<p>After running, verify (counters <em>plausible-but-wrong-method</em>): re-run it with the true effect set to zero and confirm it “detects” an effect only about as often as your significance threshold allows. A simulation that fires on a zero effect is declaring a different design than yours.</p>
-<pre class="text"><code>Here is my diagnosed design and its numbers: [bias, variance, power]. List the
-threats to any conclusion from one run as a table: threat, whether it is a
-bias / variance / power problem, and the single redesign that reduces it most.</code></pre>
-<p>After running, verify (counters <em>illusion of completeness</em>): check the table against your own printed diagnosis. The killer your numbers already proved must be the top row; a tidy six-threat list that never names it missed the point.</p>
-<pre class="text"><code>Argue against my claim that this design is strong enough to run. As a hostile
-methodologist, name the one diagnosand I am most likely fooling myself about,
-and the observation that would expose it.</code></pre>
-<p>After running, verify (counters <em>sycophantic agreement</em>): if it praises the design without a single objection, discard the answer and diagnose again yourself.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -676,28 +685,44 @@ and the observation that would expose it.</code></pre>
 <p>Three calls stay yours. <strong>Which world your question assumes</strong>, the model you declare, is a claim about reality no tool can make for you. <strong>Which single quantity you name as your inquiry</strong> decides what “success” even means. And <strong>the honest call of whether to run a design your own diagnosis says is too weak</strong> is a judgment you sign your name to. An AI can propose threats and draft simulation code, but it cannot decide that your under-powered study is worth months of your life anyway.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">12.6</span> An AI failure case</h2>
-<p>You paste your confounded observational design and ask, “My estimate is noisy. What should I do?” The tool answers with confidence: “Collect more observations to tighten your estimate.” That sounds obviously right and is exactly wrong for your case. Your problem is <strong>bias</strong> from self-selection, not variance, and more data only makes a biased estimate a more <em>precise</em> wrong number. You catch it the way this chapter teaches: run the confounded design in simulation at a large sample and watch the estimates cluster tightly around 14 seconds when the truth is 8. The spread shrank; the error did not. That is the <code>plausible-but-wrong-method</code> failure, and your own diagnosis unmasks it.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">12.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio04-declare-and-diagnose.html">Studio 4: Declare and diagnose provisionally</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>You have four design parts on paper. This step asks whether they would survive contact with the world, while a bad answer is still free.</em></p>
 <ol type="1">
-<li>Declare your design as something that can be run. If you can code it, write the smallest script that builds a world where <em>you</em> set the true effect, draws your sample, applies your answer strategy, and prints one estimate. If you cannot code it yet, declare it in words precise enough that someone else could: state the true effect you are assuming, the number of units, and the exact arithmetic.</li>
-<li>Diagnose it. Run it a few thousand times and read three numbers: bias (do the estimates center on the truth you planted?), variance (how wide is the spread?), and power (how often does it clear your stated threshold?). Write down the test and threshold you used, or the power number means nothing. If you cannot simulate yet, record each number as “not estimated” and reason in words about direction instead: which way you expect the tilt, and what would widen the spread. Label that reasoning as reasoning. A number you did not compute is not a diagnosis.</li>
-<li>Name the worst of the three, and say which kind of problem it is. Wobble and low power often yield to a bigger sample, though not only to it: sharper measurement, better-balanced groups, and a stronger treatment contrast all buy power too. A tilt in who ends up where is a design problem, and a bigger sample makes it more precise rather than less wrong.</li>
-<li>Redesign once. Change exactly one thing, the one your diagnosis points at, and diagnose again. Record both diagnoses side by side so the improvement is visible.</li>
-<li>Make the honest call in one sentence: run it as redesigned, redesign again, or narrow the claim to what this design can actually deliver. All three are respectable outcomes. Pretending you never checked is not.</li>
-<li>Log both diagnoses in your AI Research Ledger, and verify the key number with a named method from the <a href="../verification-guide.html">Verification Guide</a>; simulation is the method for a claim about how a procedure behaves, and a causal diagram is the second check if your inquiry uses the word <em>causes</em>. An AI reviewer may run the diagnosis with you; the decision to run, fix, or narrow stays yours.</li>
+<li><p>Declare your design as something that can be run. If you can code it, write the smallest script that builds a world where <em>you</em> set the true effect, draws your sample, applies your answer strategy, and prints one estimate. If you cannot code it yet, declare it in words precise enough that someone else could: state the true effect you are assuming, the number of units, and the exact arithmetic.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Act as a simulation assistant. Here is my declared design in words:
+[model, inquiry, data strategy, answer strategy]. Write the smallest Python
+that builds a world where I set the true effect, runs the design many times,
+and reports bias, variance, and power. List every assumption your code makes
+about my design that I did not state.</code></pre>
+<p>After running, verify (counters <em>plausible-but-wrong-method</em>): re-run it with the true effect set to zero and confirm it “detects” an effect only about as often as your significance threshold allows. A simulation that fires on a zero effect is declaring a different design than yours.</p></li>
+<li><p>Diagnose it. Run it a few thousand times and read three numbers: bias (do the estimates center on the truth you planted?), variance (how wide is the spread?), and power (how often does it clear your stated threshold?). Write down the test and threshold you used, or the power number means nothing. If you cannot simulate yet, record each number as “not estimated” and reason in words about direction instead: which way you expect the tilt, and what would widen the spread. Label that reasoning as reasoning. A number you did not compute is not a diagnosis.</p></li>
+<li><p>Name the worst of the three, and say which kind of problem it is. Wobble and low power often yield to a bigger sample, though not only to it: sharper measurement, better-balanced groups, and a stronger treatment contrast all buy power too. A tilt in who ends up where is a design problem, and a bigger sample makes it more precise rather than less wrong.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Here is my diagnosed design and its numbers: [bias, variance, power]. List the
+threats to any conclusion from one run as a table: threat, whether it is a
+bias / variance / power problem, and the single redesign that reduces it most.</code></pre>
+<p>After running, verify (counters <em>illusion of completeness</em>): check the table against your own printed diagnosis. The killer your numbers already proved must be the top row; a tidy six-threat list that never names it missed the point.</p></li>
+<li><p>Redesign once. Change exactly one thing, the one your diagnosis points at, and diagnose again. Record both diagnoses side by side so the improvement is visible.</p></li>
+<li><p>Make the honest call in one sentence: run it as redesigned, redesign again, or narrow the claim to what this design can actually deliver. All three are respectable outcomes. Pretending you never checked is not.</p>
+<p><em>When you are ready to delegate this step:</em></p>
+<pre class="text"><code>Argue against my claim that this design is strong enough to run. As a hostile
+methodologist, name the one diagnosand I am most likely fooling myself about,
+and the observation that would expose it.</code></pre>
+<p>After running, verify (counters <em>sycophantic agreement</em>): if it praises the design without a single objection, discard the answer and diagnose again yourself.</p></li>
+<li><p>Log both diagnoses in your AI Research Ledger, and verify the key number with a named method from the <a href="../verification-guide.html">Verification Guide</a>; simulation is the method for a claim about how a procedure behaves, and a causal diagram is the second check if your inquiry uses the word <em>causes</em>. An AI reviewer may run the diagnosis with you; the decision to run, fix, or narrow stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-blair2023rdss" class="csl-entry" role="listitem">
+Blair, Graeme, Alexander Coppock, and Macartan Humphreys. 2023. <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em>. Princeton University Press. <a href="https://book.declaredesign.org">https://book.declaredesign.org</a>.
+</div>
+<div id="ref-greenland2016misinterpretations" class="csl-entry" role="listitem">
+Greenland, Sander, Stephen J. Senn, Kenneth J. Rothman, et al. 2016. <span>“Statistical Tests, p Values, Confidence Intervals, and Power: A Guide to Misinterpretations.”</span> <em>European Journal of Epidemiology</em> 31: 337–50. <a href="https://doi.org/10.1007/s10654-016-0149-3">https://doi.org/10.1007/s10654-016-0149-3</a>.
+</div>
+<div id="ref-morris2019simulation" class="csl-entry" role="listitem">
+Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. <span>“Using Simulation Studies to Evaluate Statistical Methods.”</span> <em>Statistics in Medicine</em> 38 (11): 2074–102. <a href="https://doi.org/10.1002/sim.8086">https://doi.org/10.1002/sim.8086</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

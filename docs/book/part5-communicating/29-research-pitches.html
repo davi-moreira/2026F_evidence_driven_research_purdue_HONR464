@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">34.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">34.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">34.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">34.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">34.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">34.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">34.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">34.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">34.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -630,8 +647,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-concept" class="level2" data-number="34.2">
 <h2 data-number="34.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">34.2</span> The concept</h2>
-<p>A <strong>pitch</strong> is a short, prepared spoken version of your project, built to fit a fixed slice of time. Example: the thirty seconds you give a visitor who pauses, and the guided tour you give the one who stays, are two pitches of different lengths.</p>
-<p>Every pitch shares one skeleton, the <strong>pitch architecture</strong>: the fixed set of beats each version moves through, which is hook, claim, evidence, boundary, invitation.</p>
+<p>A <strong>pitch</strong> is a short, prepared spoken version of your project, built to fit a fixed slice of time <span class="citation" data-cites="bourne2007oral">(<a href="#ref-bourne2007oral" role="doc-biblioref">Bourne 2007</a>)</span>. Example: the thirty seconds you give a visitor who pauses, and the guided tour you give the one who stays, are two pitches of different lengths.</p>
+<p>Every pitch shares one skeleton, the <strong>pitch architecture</strong>: the fixed set of beats each version moves through, which is hook, claim, evidence, boundary, invitation <span class="citation" data-cites="alley2013craft">(<a href="#ref-alley2013craft" role="doc-biblioref">Alley 2013</a>)</span>.</p>
 <ul>
 <li><strong>Hook</strong>: one sentence a stranger outside your field cares about. Example: “a help desk drowns in tickets every morning and cannot tell which will drag on.”</li>
 <li><strong>Claim</strong>: your headline, said plainly and inside its limits.</li>
@@ -654,30 +671,21 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Watch the two ways this goes wrong when you speak it. Drop the words “held-out” and you have claimed the model works on any ticket, which your test never showed. Swap “precision” for “accuracy” and you have quoted a number your poster does not report. Both are the excited-mouth upgrade, and both feel natural because the shorter sentence sounds cleaner. The fix is mechanical: mark the boundary sentence and say it at every length, even the 30-second one.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="34.4">
-<h2 data-number="34.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">34.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="34.4">
+<h2 data-number="34.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">34.4</span> An AI failure case</h2>
+<p>You paste your 90-second walk and ask a tool to compress it to a 30-second hook. Back comes a crisp, confident line: “My model predicts slow help-desk tickets 78% of the time.” It reads beautifully, and it is wrong twice. It dropped “held-out,” so it now claims the model works on any ticket, and it turned precision into a general “78% of the time,” a number your poster never reports. The sentence is shorter and smoother than yours, which is exactly the trap.</p>
+<p>You catch it by putting the compressed line next to your poster’s boundary sentence and reading them word for word. “Predicts … 78% of the time” does not match “precision on a held-out slice.” Then you say the line to a friend, who asks, “so it’s right 78% of the time on any ticket?” That question is the widened claim coming back at you. You keep your own boundary sentence and drop the tool’s version.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="34.5">
-<h2 data-number="34.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">34.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="34.5">
+<h2 data-number="34.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">34.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio10-adapt-and-defend.html">Studio 10: Adapt and defend</a>.</strong> This lesson adapts your work to the <strong>talk</strong> format. Work the format your venue actually asks for; the studio page routes you. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your draft is finished and criticized; this step is the version you say out loud, at two lengths, without the claim growing on the way.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own version first, then delegate. Each prompt is a checkable job, not a request for a verdict.</p>
 <p>Expect two or three rounds each. The first compression is usually too smooth, so you point at the qualifier it dropped and ask again. Agentic tools will iterate toward whatever sounds best on its own terms, which is exactly the pressure that widens claims, so your boundary sentence has to be something you hold rather than something you delegate.</p>
-<p><strong>Locate the jargon and translate it.</strong></p>
-<pre class="text"><code>Here is one sentence from my poster: "[paste it]". My headline claim and its
-boundary are: "[paste them]". List every word a curious stranger with no training
-in my field could not decode. Then give two plain rewrites a first-year in any
-major would follow, each keeping my claim exactly as narrow as it is now.</code></pre>
-<p>After running, verify: read each rewrite next to your boundary and reject any that dropped a qualifier like “held-out” or turned “flagged” into “predicts.” Counters <em>silent scope change</em> (a “plain” rewrite that quietly widens the claim while it simplifies).</p>
-<p><strong>List the words that inflate my claim.</strong></p>
-<pre class="text"><code>Here is my 30-second hook: "[paste it]". Here is my poster's boundary sentence:
-"[paste it]". Play a hurried visitor. List every word in the hook that says
-something bigger than the boundary allows. Rewrite nothing; just name the words.</code></pre>
-<p>After running, verify: if it flags nothing and calls the hook “strong,” push back and demand the single worst offender. Counters <em>sycophantic agreement</em> (praise reviews your ego, not your words).</p>
-<p><strong>Red-team the pitch as a hurried stranger.</strong></p>
-<pre class="text"><code>Play a skeptical conference visitor with thirty seconds of patience, from outside
-my field. Here is my full pitch: "[paste it]". Name the exact sentence where you
-lose interest or stop believing me, and the single place I promise more than I show.</code></pre>
-<p>After running, verify: check its answer against a real practice run with a friend, and ask it “what is the one thing you left out?” Counters <em>illusion of completeness</em> (a polished “it’s clear” that skips the moment a stranger actually drifts).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -691,28 +699,40 @@ lose interest or stop believing me, and the single place I promise more than I s
 <p>Three calls stay yours. You decide <strong>which claim your evidence actually supports</strong>, <strong>where the claim must stop</strong> (the exact boundary sentence), and <strong>whether a compressed sentence still says what the poster says</strong>. A tool can trim words and flag jargon. It cannot decide the shorter sentence is still true, and it will not be standing at the board when the stranger asks. You say the sentence. You own it.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="34.6">
-<h2 data-number="34.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">34.6</span> An AI failure case</h2>
-<p>You paste your 90-second walk and ask a tool to compress it to a 30-second hook. Back comes a crisp, confident line: “My model predicts slow help-desk tickets 78% of the time.” It reads beautifully, and it is wrong twice. It dropped “held-out,” so it now claims the model works on any ticket, and it turned precision into a general “78% of the time,” a number your poster never reports. The sentence is shorter and smoother than yours, which is exactly the trap.</p>
-<p>You catch it by putting the compressed line next to your poster’s boundary sentence and reading them word for word. “Predicts … 78% of the time” does not match “precision on a held-out slice.” Then you say the line to a friend, who asks, “so it’s right 78% of the time on any ticket?” That question is the widened claim coming back at you. You keep your own boundary sentence and drop the tool’s version.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="34.7">
-<h2 data-number="34.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">34.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio10-adapt-and-defend.html">Studio 10: Adapt and defend</a>.</strong> This lesson adapts your work to the <strong>talk</strong> format. Work the format your venue actually asks for; the studio page routes you. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your draft is finished and criticized; this step is the version you say out loud, at two lengths, without the claim growing on the way.</em></p>
 <ol type="1">
-<li>Write your boundary sentence first, on its own line, and mark it. It is the beat that gets dropped under pressure, so it goes in before anything else.</li>
-<li>Build the 30-second version: hook, claim, boundary, invitation, with no evidence beats yet.</li>
-<li>Build the 3-minute version: the same skeleton with two or three evidence beats and the same boundary sentence, word for word.</li>
-<li>Say both out loud to someone outside your field and have them repeat your claim back to you. If what comes back is bigger than what you wrote, the words they added are your revision list.</li>
-<li>Log it in your AI Research Ledger, and verify at least one compressed sentence with a named method from the <a href="../verification-guide.html">Verification Guide</a>, such as peer reasoning. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Write your boundary sentence first, on its own line, and mark it. It is the beat that gets dropped under pressure, so it goes in before anything else.</p></li>
+<li><p>Build the 30-second version: hook, claim, boundary, invitation, with no evidence beats yet.</p>
+<p><strong>Locate the jargon and translate it.</strong></p>
+<pre class="text"><code>Here is one sentence from my poster: "[paste it]". My headline claim and its
+boundary are: "[paste them]". List every word a curious stranger with no training
+in my field could not decode. Then give two plain rewrites a first-year in any
+major would follow, each keeping my claim exactly as narrow as it is now.</code></pre>
+<p>After running, verify: read each rewrite next to your boundary and reject any that dropped a qualifier like “held-out” or turned “flagged” into “predicts.” Counters <em>silent scope change</em> (a “plain” rewrite that quietly widens the claim while it simplifies).</p>
+<p><em>A second angle, optional:</em></p>
+<p><strong>List the words that inflate my claim.</strong></p>
+<pre class="text"><code>Here is my 30-second hook: "[paste it]". Here is my poster's boundary sentence:
+"[paste it]". Play a hurried visitor. List every word in the hook that says
+something bigger than the boundary allows. Rewrite nothing; just name the words.</code></pre>
+<p>After running, verify: if it flags nothing and calls the hook “strong,” push back and demand the single worst offender. Counters <em>sycophantic agreement</em> (praise reviews your ego, not your words).</p></li>
+<li><p>Build the 3-minute version: the same skeleton with two or three evidence beats and the same boundary sentence, word for word.</p></li>
+<li><p>Say both out loud to someone outside your field and have them repeat your claim back to you. If what comes back is bigger than what you wrote, the words they added are your revision list.</p>
+<p><strong>Red-team the pitch as a hurried stranger.</strong></p>
+<pre class="text"><code>Play a skeptical conference visitor with thirty seconds of patience, from outside
+my field. Here is my full pitch: "[paste it]". Name the exact sentence where you
+lose interest or stop believing me, and the single place I promise more than I show.</code></pre>
+<p>After running, verify: check its answer against a real practice run with a friend, and ask it “what is the one thing you left out?” Counters <em>illusion of completeness</em> (a polished “it’s clear” that skips the moment a stranger actually drifts).</p></li>
+<li><p>Log it in your AI Research Ledger, and verify at least one compressed sentence with a named method from the <a href="../verification-guide.html">Verification Guide</a>, such as peer reasoning. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-alley2013craft" class="csl-entry" role="listitem">
+Alley, Michael. 2013. <em>The Craft of Scientific Presentations: Critical Steps to Succeed and Critical Errors to Avoid</em>. 2nd ed. Springer. <a href="https://doi.org/10.1007/978-1-4419-8279-7">https://doi.org/10.1007/978-1-4419-8279-7</a>.
+</div>
+<div id="ref-bourne2007oral" class="csl-entry" role="listitem">
+Bourne, Philip E. 2007. <span>“Ten Simple Rules for Making Good Oral Presentations.”</span> <em>PLOS Computational Biology</em> 3 (4): e77. <a href="https://doi.org/10.1371/journal.pcbi.0030077">https://doi.org/10.1371/journal.pcbi.0030077</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -530,10 +549,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-this-decision-matters" id="toc-why-this-decision-matters" class="nav-link active" data-scroll-target="#why-this-decision-matters"><span class="header-section-number">5.1</span> Why this decision matters</a></li>
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">5.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">5.3</span> A worked example</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">5.4</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">5.5</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">5.6</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">5.7</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">5.4</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">5.5</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -630,9 +647,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-concept" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">5.2</span> The concept</h2>
-<p><strong>Intellectual ownership</strong> is being the author of, and answerable for, every claim that appears under your name, whatever tool helped produce it. Example: if an AI drafts your methods paragraph and it states that creek chloride exceeded a safety threshold, you own that sentence, and if it is wrong, the mistake is yours.</p>
-<p>Ownership rests on <strong>accountability</strong>, being the person who answers for the work’s correctness and integrity when it is questioned. Example: at your defense, when someone asks how you know a number, “the AI computed it” is not an answer. “I recomputed it from my own measurements, and here is the check” is.</p>
-<p>The habit that makes accountability visible is <strong>AI-use disclosure</strong>, a short, honest record of which AI tool did which task and how you verified its output. Example: “an AI assistant located candidate sources; I retrieved and confirmed each one in the library catalog.” Disclosure is not a confession. It protects you, because it shows exactly where your own judgment entered the work.</p>
+<p><strong>Intellectual ownership</strong> is being the author of, and answerable for, every claim that appears under your name, whatever tool helped produce it <span class="citation" data-cites="icmje2026recommendations">(<a href="#ref-icmje2026recommendations" role="doc-biblioref">International Committee of Medical Journal Editors 2026</a>)</span>. Example: if an AI drafts your methods paragraph and it states that creek chloride exceeded a safety threshold, you own that sentence, and if it is wrong, the mistake is yours.</p>
+<p>Ownership rests on <strong>accountability</strong>, being the person who answers for the work’s correctness and integrity when it is questioned <span class="citation" data-cites="nasem2017integrity">(<a href="#ref-nasem2017integrity" role="doc-biblioref">National Academies of Sciences, Engineering, and Medicine 2017</a>)</span>. Example: at your defense, when someone asks how you know a number, “the AI computed it” is not an answer. “I recomputed it from my own measurements, and here is the check” is.</p>
+<p>The habit that makes accountability visible is <strong>AI-use disclosure</strong>, a short, honest record of which AI tool did which task and how you verified its output <span class="citation" data-cites="allen2014credit">(<a href="#ref-allen2014credit" role="doc-biblioref">Allen et al. 2014</a>)</span>. Example: “an AI assistant located candidate sources; I retrieved and confirmed each one in the library catalog.” Disclosure is not a confession. It protects you, because it shows exactly where your own judgment entered the work.</p>
 <p>Disclosure has gotten harder in one specific way, and it is worth naming. You rarely send one prompt anymore. You run a loop: you ask, you read, you push back, you ask again, and sometimes an agentic tool runs dozens of those cycles on its own and hands you a finished result. “I used AI for analysis” describes none of that. An honest disclosure says what you specified going in, roughly what the loop did, and what you opened and checked when it stopped. Your ledger is what makes writing that sentence possible, because nobody remembers cycle eleven a month later.</p>
 <p>Some calls never move to the tool at all. A <strong>never-delegate decision</strong> is a judgment that stays yours no matter how capable the tool becomes: which question you pursue, what your evidence licenses, the ethics of the study, and the decision to put your name on the work. Example: an AI can list candidate measures of water quality, but choosing the one you will defend is yours.</p>
 <p>Put together, the rule is simple. Use AI freely for reach and speed. Keep ownership, accountability, and honest disclosure for yourself.</p>
@@ -644,29 +661,20 @@ ul.task-list li input[type="checkbox"] {
 <p>You split it into pieces you can own. The mean of your ten samples is a number you can recompute in a minute, so you do, and you get 297, not 310. The EPA criterion is a published value, so you open the EPA’s National Recommended Water Quality Criteria and confirm the real figure yourself rather than trust the tool’s number. The word “unsafe” claims something about the whole creek all winter, from ten samples on one day, so you narrow it to what your evidence licenses: elevated chloride in these samples, at this site, on this date.</p>
 <p>Now your disclosure writes itself: the tool drafted the paragraph, and you did the checking, retrieving, and rewriting that made the claim yours. You own the corrected sentence. You would not have owned the original.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">5.4</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">5.4</span> An AI failure case</h2>
+<p>You ask the tool to write your AI-use disclosure for you. It produces a tidy, confident sentence: “AI was used only for minor language editing.” It sounds professional, and it is false. The tool actually drafted your entire results paragraph, including the 310 mg/L figure and the “unsafe” claim. Left unchecked, that disclosure understates the tool’s role and overstates your ownership, which is exactly the integrity problem disclosure exists to prevent.</p>
+<p>You catch it with a record the tool cannot see: your own AI Research Ledger. Lay the one-line disclosure next to your ledger rows and the mismatch is plain. The ledger says the tool drafted the analysis; the disclosure says it only edited language. You rewrite the disclosure to match what happened. The lesson is blunt: never let a tool describe its own role. You describe it, from your record.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">5.5</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">5.5</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio01-govern-the-work.html">Studio 1: Govern the work</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>You have a ledger, a director’s task list, and one delegation you ran end to end. This step puts your name on all of it, on purpose, in writing.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Each prompt below hands the tool reach, not judgment.</p>
-<p><strong>Locate the real source.</strong></p>
-<pre><code>Act as a research assistant in freshwater ecology. I need the current U.S. EPA
-aquatic-life criterion for chloride. Give the exact value, the document it comes
-from, and a link. Only state a figure you are confident is published; if you are
-unsure, say so and tell me where to look.</code></pre>
-<p>After running, verify: open the EPA document and read the figure yourself (primary-source reading). Counters <strong>confident fabrication</strong>, a number quoted with a made-up source.</p>
-<p><strong>List every claim to verify.</strong></p>
-<pre><code>Here is my draft results paragraph: [paste]. List every empirical claim in it as a
-table: the claim, the number or source it rests on, and whether that number came from
-my data or from you. Do not add any new claims.</code></pre>
-<p>After running, verify: check the table against your own list of what you actually measured. Counters <strong>illusion of completeness</strong>, a claim the draft slipped in that never shows up in the tool’s own accounting.</p>
-<p><strong>Red-team your ownership.</strong></p>
-<pre><code>Act as a hostile reviewer. Read my draft and name every sentence I could NOT defend
-myself if someone asked how I know it is true. Do not rewrite anything. List the weak
-spots.</code></pre>
-<p>After running, verify: for each flagged sentence, either produce your own check or cut the claim. Counters <strong>sycophantic agreement</strong>, praise that reviews your ego instead of your evidence.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -680,26 +688,30 @@ spots.</code></pre>
 <p>The tool may fetch, draft, and compute. It may never decide which claims you put your name on, whether your evidence supports a word like “unsafe,” the ethics of your sampling, how you state your uncertainty, or what your AI-use disclosure says. Authorship is a responsibility, not a task, and it does not transfer.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">5.6</span> An AI failure case</h2>
-<p>You ask the tool to write your AI-use disclosure for you. It produces a tidy, confident sentence: “AI was used only for minor language editing.” It sounds professional, and it is false. The tool actually drafted your entire results paragraph, including the 310 mg/L figure and the “unsafe” claim. Left unchecked, that disclosure understates the tool’s role and overstates your ownership, which is exactly the integrity problem disclosure exists to prevent.</p>
-<p>You catch it with a record the tool cannot see: your own AI Research Ledger. Lay the one-line disclosure next to your ledger rows and the mismatch is plain. The ledger says the tool drafted the analysis; the disclosure says it only edited language. You rewrite the disclosure to match what happened. The lesson is blunt: never let a tool describe its own role. You describe it, from your record.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">5.7</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio01-govern-the-work.html">Studio 1: Govern the work</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>You have a ledger, a director’s task list, and one delegation you ran end to end. This step puts your name on all of it, on purpose, in writing.</em></p>
 <ol type="1">
-<li>Write your <strong>ownership statement</strong>: three or four sentences naming the work you intend to put your name on, what you will personally answer for, and what you will not claim to have done.</li>
-<li>Write your <strong>never-delegate list</strong> for this specific project. Five lines is plenty. Make each one a call, not a topic: which question you pursue, what counts as a fair comparison, where the claim stops. Keep the list somewhere you will actually see it.</li>
-<li>Draft the AI-use disclosure you would attach to your work as it stands today, built from your ledger rows rather than from memory. Name each tool, what it did, and how you checked it. If an agent ran a long loop on your behalf, say so, and say what you opened and inspected when it finished.</li>
-<li>Read the disclosure and the ledger side by side. Wherever they disagree, the ledger is right. Fix the disclosure.</li>
-<li>Find one sentence you have already written that you could not defend if someone asked how you know it is true. Produce the check, or cut the sentence.</li>
-<li>Log all of it in your AI Research Ledger, and verify at least one surviving claim with a named method from the <a href="../verification-guide.html">Verification Guide</a>: primary-source reading if it rests on a source, direct calculation if it rests on a number. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Write your <strong>ownership statement</strong>: three or four sentences naming the work you intend to put your name on, what you will personally answer for, and what you will not claim to have done.</p></li>
+<li><p>Write your <strong>never-delegate list</strong> for this specific project. Five lines is plenty. Make each one a call, not a topic: which question you pursue, what counts as a fair comparison, where the claim stops. Keep the list somewhere you will actually see it.</p></li>
+<li><p>Draft the AI-use disclosure you would attach to your work as it stands today, built from your ledger rows rather than from memory. Name each tool, what it did, and how you checked it. If an agent ran a long loop on your behalf, say so, and say what you opened and inspected when it finished.</p></li>
+<li><p>Read the disclosure and the ledger side by side. Wherever they disagree, the ledger is right. Fix the disclosure.</p></li>
+<li><p>Find one sentence you have already written that you could not defend if someone asked how you know it is true. Produce the check, or cut the sentence.</p>
+<p><strong>List every claim to verify.</strong></p>
+<pre><code>Here is my draft results paragraph: [paste]. List every empirical claim in it as a
+table: the claim, the number or source it rests on, and whether that number came from
+my data or from you. Do not add any new claims.</code></pre>
+<p>After running, verify: check the table against your own list of what you actually measured. Counters <strong>illusion of completeness</strong>, a claim the draft slipped in that never shows up in the tool’s own accounting.</p>
+<p><em>A second angle, optional:</em></p>
+<p><strong>Red-team your ownership.</strong></p>
+<pre><code>Act as a hostile reviewer. Read my draft and name every sentence I could NOT defend
+myself if someone asked how I know it is true. Do not rewrite anything. List the weak
+spots.</code></pre>
+<p>After running, verify: for each flagged sentence, either produce your own check or cut the claim. Counters <strong>sycophantic agreement</strong>, praise that reviews your ego instead of your evidence.</p></li>
+<li><p>Log all of it in your AI Research Ledger, and verify at least one surviving claim with a named method from the <a href="../verification-guide.html">Verification Guide</a>: primary-source reading if it rests on a source, direct calculation if it rests on a number. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p>
+<p><strong>Locate the real source.</strong></p>
+<pre><code>Act as a research assistant in freshwater ecology. I need the current U.S. EPA
+aquatic-life criterion for chloride. Give the exact value, the document it comes
+from, and a link. Only state a figure you are confident is published; if you are
+unsure, say so and tell me where to look.</code></pre>
+<p>After running, verify: open the EPA document and read the figure yourself (primary-source reading). Counters <strong>confident fabrication</strong>, a number quoted with a made-up source.</p></li>
 </ol>
 <!-- studio-continue:begin -->
 <blockquote class="blockquote">
@@ -707,6 +719,17 @@ spots.</code></pre>
 </blockquote>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-allen2014credit" class="csl-entry" role="listitem">
+Allen, Liz, Amy Brand, Jo Scott, Micah Altman, and Marjorie Hlava. 2014. <span>“Publishing: Credit Where Credit Is Due.”</span> <em>Nature</em> 508: 312–13. <a href="https://doi.org/10.1038/508312a">https://doi.org/10.1038/508312a</a>.
+</div>
+<div id="ref-icmje2026recommendations" class="csl-entry" role="listitem">
+International Committee of Medical Journal Editors. 2026. <em>Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals</em>. <a href="https://www.icmje.org/recommendations/">https://www.icmje.org/recommendations/</a>.
+</div>
+<div id="ref-nasem2017integrity" class="csl-entry" role="listitem">
+National Academies of Sciences, Engineering, and Medicine. 2017. <em>Fostering Integrity in Research</em>. The National Academies Press. <a href="https://doi.org/10.17226/21896">https://doi.org/10.17226/21896</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

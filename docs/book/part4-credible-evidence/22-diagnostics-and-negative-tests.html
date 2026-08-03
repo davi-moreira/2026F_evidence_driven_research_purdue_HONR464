@@ -58,7 +58,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -566,10 +585,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#the-concept" id="toc-the-concept" class="nav-link" data-scroll-target="#the-concept"><span class="header-section-number">25.2</span> The concept</a></li>
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">25.3</span> A worked example</a></li>
   <li><a href="#a-seeded-simulation" id="toc-a-seeded-simulation" class="nav-link" data-scroll-target="#a-seeded-simulation"><span class="header-section-number">25.4</span> A seeded simulation</a></li>
-  <li><a href="#the-colab-laboratory" id="toc-the-colab-laboratory" class="nav-link" data-scroll-target="#the-colab-laboratory"><span class="header-section-number">25.5</span> The Colab laboratory</a></li>
-  <li><a href="#recommended-ai-prompts" id="toc-recommended-ai-prompts" class="nav-link" data-scroll-target="#recommended-ai-prompts"><span class="header-section-number">25.6</span> Recommended AI prompts</a></li>
-  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">25.7</span> An AI failure case</a></li>
-  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">25.8</span> It is your turn</a></li>
+  <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">25.5</span> An AI failure case</a></li>
+  <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">25.6</span> It is your turn</a></li>
   </ul>
 </nav>
     </div>
@@ -667,7 +684,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-concept" class="level2" data-number="25.2">
 <h2 data-number="25.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">25.2</span> The concept</h2>
 <p>A <strong>negative test</strong> is a check that runs your exact analysis on a situation where the true answer has to be zero. Example: measuring your “effect” in a group that received no treatment at all. Be precise about what “zero” means there, because this is where the test is most often misread. The TRUE answer is zero; the number your sample returns will almost never be exactly zero, because different samples wobble. What a clean pass looks like is a reading small enough to sit comfortably among the readings your own procedure produces when nothing is happening. What should worry you is a reading far out from that pile, big enough that ordinary wobble is a strained explanation. Notice the hedge in both sentences: chance does occasionally produce a large reading, so no cutoff turns this into a verdict. Demand exact zeros and you will “fail” perfectly healthy machinery, or worse, tinker until a readout prints 0.00 and call the tinkering a fix.</p>
-<p>A good negative control has to satisfy three conditions, and all three matter. Your proposed cause must not be able to reach it, or it is not negative. The artifact you fear must be able to reach it, or it is not a test: a control your pipeline never touches cannot catch your pipeline. Example: if the worry is that your solvent kills bacteria, the control disk must carry the solvent, prepared and measured exactly like the real ones, minus only the extract. And the check must be <strong>sensitive</strong> enough to show an artifact that would actually matter: run too few plates, or measure too coarsely, and a control sits near zero no matter what is going on. A quiet control from an insensitive check is not evidence of a clean pipeline; it is no evidence at all. Three members of this family show up in almost every audit.</p>
+<p>A good negative control has to satisfy three conditions, and all three matter <span class="citation" data-cites="lipsitch2010negative">(<a href="#ref-lipsitch2010negative" role="doc-biblioref">Lipsitch et al. 2010</a>)</span>. Your proposed cause must not be able to reach it, or it is not negative. The artifact you fear must be able to reach it, or it is not a test: a control your pipeline never touches cannot catch your pipeline. Example: if the worry is that your solvent kills bacteria, the control disk must carry the solvent, prepared and measured exactly like the real ones, minus only the extract. And the check must be <strong>sensitive</strong> enough to show an artifact that would actually matter: run too few plates, or measure too coarsely, and a control sits near zero no matter what is going on. A quiet control from an insensitive check is not evidence of a clean pipeline; it is no evidence at all. Three members of this family show up in almost every audit.</p>
 <ul>
 <li><strong>Placebo test</strong>: you replace the real cause with a fake one that cannot act, and confirm the effect disappears. Example: swap the real treatment and control labels for a coin flip, and check that the estimate collapses toward zero.</li>
 <li><strong>Falsification test</strong>: you check a consequence that must be false if your explanation is right, and confirm it is false. Example: your compound can only act after you add it, so a reading taken <em>before</em> you added it should show nothing.</li>
@@ -675,7 +692,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>One term earns its own line. A <strong>vehicle control</strong> is the negative control matched to how you delivered the cause: the carrier with the active ingredient left out. Example: if you dissolved your extract in ethanol, the vehicle control is a disk soaked in ethanol alone. What every one of these tests hunts for is an <strong>artifact</strong>, a signal produced by your procedure rather than by the thing you study. Example: a clear ring caused by the solvent, not the extract.</p>
 <p>Alongside them sits the cheapest diagnostic in research, the <strong>leave-one-out check</strong>: drop each case in turn, recompute, and see whether one observation is quietly carrying your whole finding. It answers a different question from a negative test. The negative test asks whether your procedure invents signal. Leave-one-out asks whether your result rests on a single point.</p>
-<p>The negative tests all share one move: aim the machinery where the answer must be zero, and check that what comes back is ordinary for a world where it is. Here is the boundary you must never blur. A passed negative test <strong>reduces your concern about one specific artifact, as far as that check could have detected it</strong>. It does not prove the artifact is absent, it does not prove your effect is real, and it never turns a correlation into a cause. Report what the check could and could not have caught, not just that it passed.</p>
+<p>The negative tests all share one move: aim the machinery where the answer must be zero, and check that what comes back is ordinary for a world where it is <span class="citation" data-cites="rosenbaum2002observational">(<a href="#ref-rosenbaum2002observational" role="doc-biblioref">Rosenbaum 2002</a>)</span>. Here is the boundary you must never blur. A passed negative test <strong>reduces your concern about one specific artifact, as far as that check could have detected it</strong>. It does not prove the artifact is absent, it does not prove your effect is real, and it never turns a correlation into a cause. Report what the check could and could not have caught, not just that it passed.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="25.3">
 <h2 data-number="25.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">25.3</span> A worked example</h2>
@@ -715,32 +732,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>That pile is what you compare against, and building your own is the useful habit: simulate your null world at your own sample size, look at the readings it produces, and then ask where your real control sits among them. A reading of -0.03 is unremarkable there. A reading of +1.2 mm sits far outside anything this null world produced, and now you have something to investigate.</p>
 <p>Two limits keep this honest. The pile is only as trustworthy as the assumptions that built it, and it is an illustration of ordinary variation, never a pass line. Do not turn “inside the middle 95 percent” into a rule: that band excludes one honest experiment in twenty by construction, and drawing a cutoff there is a statistical decision this book has not equipped you to make yet. Ask the three questions instead. Could my cause have reached this control? Could the artifact I fear have reached it? Could this check have detected an artifact big enough to matter? A later chapter gives uncertainty its proper machinery, and then “how far outside is too far” becomes a question you can answer rather than guess.</p>
 </section>
-<section id="the-colab-laboratory" class="level2" data-number="25.5">
-<h2 data-number="25.5" class="anchored" data-anchor-id="the-colab-laboratory"><span class="header-section-number">25.5</span> The Colab laboratory</h2>
-<p>This chapter has its own <strong>companion notebook</strong> — open it in Colab with the badge above. The notebook collects the chapter’s prompts and code and ends with the <strong>It is your turn</strong> workspace, so you can complete the chapter’s step of your project without leaving Colab.</p>
+<section id="an-ai-failure-case" class="level2" data-number="25.5">
+<h2 data-number="25.5" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">25.5</span> An AI failure case</h2>
+<p>You ask an AI to design a negative control for your ethanol-based assay. It answers, with complete confidence, “use a disk soaked in sterile water.” You run it, the water disk comes back perfectly clean, and the tidy conclusion writes itself: control passed, effect confirmed. Here is the trap. Water is not the vehicle you used. You delivered the extract in ethanol, so the artifact you needed to catch is ethanol toxicity, and a water disk can never show it. The clean result told you nothing at all.</p>
+<p>You catch it with one question the tool never asked itself: which artifact could this control actually have detected? A valid vehicle control matches how you delivered the cause, solvent for solvent. The moment you see the mismatch you swap water for 70% ethanol and run the test that can genuinely fail. This is a <em>plausible-but-wrong-method</em>: the advice sounded like textbook practice and was wrong for your case.</p>
 </section>
-<section id="recommended-ai-prompts" class="level2" data-number="25.6">
-<h2 data-number="25.6" class="anchored" data-anchor-id="recommended-ai-prompts"><span class="header-section-number">25.6</span> Recommended AI prompts</h2>
+<section id="it-is-your-turn" class="level2" data-number="25.6">
+<h2 data-number="25.6" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">25.6</span> It is your turn</h2>
+<!-- station-pointer:begin -->
+<blockquote class="blockquote">
+<p><strong>You are working inside <a href="../studios/studio08-stress-test.html">Studio 8: Stress-test and adjudicate</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
+</blockquote>
+<p><em>Your project has a headline estimate with a range around it. This step points two checks at places where the answer must be zero, so you find out whether the world produced your result or your own pipeline did.</em></p>
+<p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own expectation first, then delegate a checkable job. Expect to work in cycles: propose, interrogate, refine, ask again. One judgment never improves by re-prompting, though, and that is whether your control is genuinely null. You settle that once, from the mechanism, and no amount of looping settles it for you.</p>
-<p><strong>Locate the standard control.</strong></p>
-<pre class="text"><code>Act as a lab-methods assistant. I ran an antibiotic disk-diffusion assay with a
-plant extract dissolved in 70% ethanol. Before any advice, name the standard
-negative (vehicle) control for this assay and cite a protocol or textbook where it
-appears. Only name controls you are confident are standard practice.</code></pre>
-<p>After running, verify: open the cited protocol and confirm the control is real and standard before you use it. Counters <em>confident fabrication</em> (an invented “standard” control arrives as confidently as a real one).</p>
-<p><strong>List candidate negative tests, then verify each.</strong></p>
-<pre class="text"><code>Here is my analysis: [one-sentence design, your cause, your outcome]. Propose three
-negative tests: a placebo label, a falsification outcome measured where the effect
-cannot yet exist, and a negative-control outcome my cause could not plausibly affect.
-For each, name the quantity that is truly zero, and say what reading would count as
-ordinary versus large enough to worry about at my sample size.</code></pre>
-<p>After running, verify: for each test, confirm two things. Your cause genuinely <em>cannot</em> touch the negative control, or it is not null. And the artifact you fear genuinely <em>can</em> touch it, or the test cannot catch anything. Reject any answer that asks for a reading of exactly zero. Counters <em>plausible-but-wrong-method</em> (a “negative control” that is not actually null, or that your pipeline never touches).</p>
-<p><strong>Red-team a clean pass.</strong></p>
-<pre class="text"><code>Here is a negative test I ran and its result: [describe the control and its
-near-zero outcome]. Act as a hostile reviewer. Name every reason this test could
-read as zero for the WRONG reason: too few samples to detect anything, a control too
-weak to carry the artifact, a zero I would have gotten no matter what. Do not reassure me.</code></pre>
-<p>After running, verify: if it only praises the clean result, push back and demand the single way the test is uninformative. Counters <em>sycophantic agreement</em> (praise that reviews your relief, not your evidence).</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -754,29 +759,44 @@ weak to carry the artifact, a zero I would have gotten no matter what. Do not re
 <p>You decide <strong>which negative test your design actually needs</strong>, <strong>whether the control is genuinely null</strong> (a place your cause truly cannot reach), and <strong>what a clean pass licenses you to claim</strong>. A tool can list candidate controls, but only you know the mechanism well enough to certify that your cause cannot touch the one you chose. The judgment about what a passed negative test bought you, and how far its sensitivity reached, stays yours.</p>
 </div>
 </div>
-</section>
-<section id="an-ai-failure-case" class="level2" data-number="25.7">
-<h2 data-number="25.7" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">25.7</span> An AI failure case</h2>
-<p>You ask an AI to design a negative control for your ethanol-based assay. It answers, with complete confidence, “use a disk soaked in sterile water.” You run it, the water disk comes back perfectly clean, and the tidy conclusion writes itself: control passed, effect confirmed. Here is the trap. Water is not the vehicle you used. You delivered the extract in ethanol, so the artifact you needed to catch is ethanol toxicity, and a water disk can never show it. The clean result told you nothing at all.</p>
-<p>You catch it with one question the tool never asked itself: which artifact could this control actually have detected? A valid vehicle control matches how you delivered the cause, solvent for solvent. The moment you see the mismatch you swap water for 70% ethanol and run the test that can genuinely fail. This is a <em>plausible-but-wrong-method</em>: the advice sounded like textbook practice and was wrong for your case.</p>
-</section>
-<section id="it-is-your-turn" class="level2" data-number="25.8">
-<h2 data-number="25.8" class="anchored" data-anchor-id="it-is-your-turn"><span class="header-section-number">25.8</span> It is your turn</h2>
-<!-- station-pointer:begin -->
-<blockquote class="blockquote">
-<p><strong>You are working inside <a href="../studios/studio08-stress-test.html">Studio 8: Stress-test and adjudicate</a>.</strong> Keep what you write here; the studio is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
-</blockquote>
-<p><em>Your project has a headline estimate with a range around it. This step points two checks at places where the answer must be zero, so you find out whether the world produced your result or your own pipeline did.</em></p>
 <ol type="1">
-<li>Name the artifact you are most afraid of: the one way your procedure, rather than your subject, could have manufactured your result. One sentence, written down before you go looking.</li>
-<li>Choose the negative test that could catch it, whether that is a placebo label, a falsification outcome measured where the effect cannot yet exist, or a negative control your cause could not possibly touch. Then confirm the control is genuinely null. If your cause can reach it, it is not a negative test and it will fail quietly.</li>
-<li>Before you run anything, write down two things. First, how big an artifact would actually matter for your claim: a shift of what size would change what you conclude? Second, what ordinary looks like: simulate your null world at your own sample size and see the range of readings it produces, so you are comparing against a pile rather than against 0.00. Then commit to reporting your result whichever way it lands.</li>
-<li>Run one diagnostic beside it. Leave-one-out is the cheapest: drop each case in turn, recompute, and find out whether a single observation is carrying your finding.</li>
-<li>Record what you got against what you predicted, and if the estimate moved, say by how much. Then write your boundary in one line: the artifact this pass makes less likely, how far its sensitivity reached, and the causal or general claim it still does not establish.</li>
-<li>Log both tests in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. <strong>Simulation</strong> is the one useful tool for a negative test: build a dataset by hand where no effect exists, run your test machinery on it many times, and see the readings scatter around zero. Note how large they get by chance, then judge your real control against that pile rather than against 0.00. Pair it with a positive control to show the system responds at all, and then with a check aimed at the smallest artifact that would change your conclusion, since responding to a strong signal does not prove the assay would notice a weak one. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</li>
+<li><p>Name the artifact you are most afraid of: the one way your procedure, rather than your subject, could have manufactured your result. One sentence, written down before you go looking.</p></li>
+<li><p>Choose the negative test that could catch it, whether that is a placebo label, a falsification outcome measured where the effect cannot yet exist, or a negative control your cause could not possibly touch. Then confirm the control is genuinely null. If your cause can reach it, it is not a negative test and it will fail quietly.</p>
+<p><strong>Locate the standard control.</strong></p>
+<pre class="text"><code>Act as a lab-methods assistant. I ran an antibiotic disk-diffusion assay with a
+plant extract dissolved in 70% ethanol. Before any advice, name the standard
+negative (vehicle) control for this assay and cite a protocol or textbook where it
+appears. Only name controls you are confident are standard practice.</code></pre>
+<p>After running, verify: open the cited protocol and confirm the control is real and standard before you use it. Counters <em>confident fabrication</em> (an invented “standard” control arrives as confidently as a real one).</p>
+<p><em>A second angle, optional:</em></p>
+<p><strong>List candidate negative tests, then verify each.</strong></p>
+<pre class="text"><code>Here is my analysis: [one-sentence design, your cause, your outcome]. Propose three
+negative tests: a placebo label, a falsification outcome measured where the effect
+cannot yet exist, and a negative-control outcome my cause could not plausibly affect.
+For each, name the quantity that is truly zero, and say what reading would count as
+ordinary versus large enough to worry about at my sample size.</code></pre>
+<p>After running, verify: for each test, confirm two things. Your cause genuinely <em>cannot</em> touch the negative control, or it is not null. And the artifact you fear genuinely <em>can</em> touch it, or the test cannot catch anything. Reject any answer that asks for a reading of exactly zero. Counters <em>plausible-but-wrong-method</em> (a “negative control” that is not actually null, or that your pipeline never touches).</p></li>
+<li><p>Before you run anything, write down two things. First, how big an artifact would actually matter for your claim: a shift of what size would change what you conclude? Second, what ordinary looks like: simulate your null world at your own sample size and see the range of readings it produces, so you are comparing against a pile rather than against 0.00. Then commit to reporting your result whichever way it lands.</p></li>
+<li><p>Run one diagnostic beside it. Leave-one-out is the cheapest: drop each case in turn, recompute, and find out whether a single observation is carrying your finding.</p></li>
+<li><p>Record what you got against what you predicted, and if the estimate moved, say by how much. Then write your boundary in one line: the artifact this pass makes less likely, how far its sensitivity reached, and the causal or general claim it still does not establish.</p>
+<p><strong>Red-team a clean pass.</strong></p>
+<pre class="text"><code>Here is a negative test I ran and its result: [describe the control and its
+near-zero outcome]. Act as a hostile reviewer. Name every reason this test could
+read as zero for the WRONG reason: too few samples to detect anything, a control too
+weak to carry the artifact, a zero I would have gotten no matter what. Do not reassure me.</code></pre>
+<p>After running, verify: if it only praises the clean result, push back and demand the single way the test is uninformative. Counters <em>sycophantic agreement</em> (praise that reviews your relief, not your evidence).</p></li>
+<li><p>Log both tests in your AI Research Ledger, and verify at least one output with a named method from the <a href="../verification-guide.html">Verification Guide</a>. <strong>Simulation</strong> is the one useful tool for a negative test: build a dataset by hand where no effect exists, run your test machinery on it many times, and see the readings scatter around zero. Note how large they get by chance, then judge your real control against that pile rather than against 0.00. Pair it with a positive control to show the system responds at all, and then with a check aimed at the smallest artifact that would change your conclusion, since responding to a strong signal does not prove the assay would notice a weak one. An AI reviewer may run the check with you; the decision to accept or reject stays yours.</p></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-lipsitch2010negative" class="csl-entry" role="listitem">
+Lipsitch, Marc, Eric Tchetgen Tchetgen, and Ted Cohen. 2010. <span>“Negative Controls: A Tool for Detecting Confounding and Bias in Observational Studies.”</span> <em>Epidemiology</em> 21 (3): 383–88. <a href="https://doi.org/10.1097/EDE.0b013e3181d61eeb">https://doi.org/10.1097/EDE.0b013e3181d61eeb</a>.
+</div>
+<div id="ref-rosenbaum2002observational" class="csl-entry" role="listitem">
+Rosenbaum, Paul R. 2002. <em>Observational Studies</em>. 2nd ed. Springer. <a href="https://doi.org/10.1007/978-1-4757-3692-2">https://doi.org/10.1007/978-1-4757-3692-2</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
