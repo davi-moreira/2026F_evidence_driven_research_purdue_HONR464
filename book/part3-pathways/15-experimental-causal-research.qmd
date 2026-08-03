@@ -118,6 +118,8 @@ treatment reaching the control arm, like a texted patient reminding an untreated
 friend. Each one leaves the coin flip untouched and still changes which quantity
 your number describes. Naming that quantity is the decision this chapter equips.
 
+That you can never see both outcomes for the same unit, which is why the comparison has to be built by design, is the fundamental problem of causal inference [@holland1986causal].
+
 The block below runs the trial twice over the same patients: once on everyone randomized, once on only those still measurable at the end. Watch the retention line while you read the second gap.
 
 ```python

@@ -86,6 +86,30 @@ in fertilizer practice upstream could move nitrate just as much. You keep the fi
 can defend, "nitrate fell about 15 percent at this site over one year," and you drop both
 the inflated figure and the word "success."
 
+Over-trusting a confident automated output, and stopping the check once it sounds right, is a documented and well-named failure [@goddard2012automation].
+
+The block below builds the two years of readings and recomputes the drop, which is the whole verification. It takes about as long as reading the confident sentence did.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+weeks = np.arange(104)
+season = 1.1 * np.sin(2 * np.pi * weeks / 52)
+after = weeks >= 52
+nitrate = 8.1 - 1.35 * after + season + rng.normal(0, 0.6, size=104)
+
+before_mean, after_mean = nitrate[~after].mean(), nitrate[after].mean()
+drop = before_mean - after_mean
+print(f"before-planting mean : {before_mean:.1f} mg/L")
+print(f"after-planting mean  : {after_mean:.1f} mg/L")
+print(f"drop                 : {drop:.1f} mg/L, {drop/before_mean*100:.0f}%")
+print("the confident summary said: 40%")
+print("\nand the number you just computed still cannot be pinned on the buffer:")
+print("one site, no comparison stream, and a wet spring would look the same")
+```
+
 ## An AI failure case
 
 You ask the AI to "summarize what this water-quality dataset shows," and it hands back

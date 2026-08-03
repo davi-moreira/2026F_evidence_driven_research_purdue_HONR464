@@ -86,7 +86,7 @@ through the line faster. Before you defend that, you attack it. First, one term.
 **p95 wait time** is the wait that 95 out of 100 customers come in under, a fairer
 summary than the average because it captures the long waits people actually complain
 about. Example: a p95 of 210 seconds means only the slowest 5 percent waited longer
-than that. Your headline is a p95 drop from 210 seconds to 140.
+than that. Your headline is a p95 drop from 210 seconds to 137.
 
 You hand the result to three adversarial reviewers, and each names a different fatal
 flaw. The first says the win is driven by a single unusually quiet morning. The
@@ -107,6 +107,47 @@ survives is one no further measurement can remove and none of the three raised: 
 ran at one store on weekdays, not across the chain. So the honest claim is bounded.
 You measured a p95 improvement for these three customer mixes at this store, not a
 guarantee for every location your company runs.
+
+Committing to the checks before seeing the results is what keeps this from becoming a search for the version you liked [@nosek2018preregistration].
+
+The block below runs each reviewer's objection as a check. Notice that the checks, not the reviewers' confidence, decide which flaw survives.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+def waits(n, scale, staffed):
+    return rng.gamma(2.2, scale * (1.0 if staffed else 1.18), size=n)
+
+mornings = 20
+old = pd.DataFrame({"morning": np.repeat(np.arange(mornings), 60),
+                    "wait": np.concatenate([waits(60, 40, m % 5 != 0)
+                                            for m in range(mornings)]),
+                    "mix": np.tile(["commuter", "shopper", "family"], 400)})
+new = pd.DataFrame({"morning": np.repeat(np.arange(mornings), 60),
+                    "wait": np.concatenate([waits(60, 27, m % 5 != 0)
+                                            for m in range(mornings)]),
+                    "mix": np.tile(["commuter", "shopper", "family"], 400)})
+p95 = lambda d: np.quantile(d.wait, 0.95)
+print(f"headline p95: {p95(old):.0f} s  ->  {p95(new):.0f} s")
+
+# flaw 1: one unusually quiet morning is carrying the win
+loo = [p95(new[new.morning != m]) for m in range(mornings)]
+print(f"\nleave-one-out p95 range : {min(loo):.0f}-{max(loo):.0f} s "
+      f"(the drop survives dropping any single morning)")
+
+# flaw 2: it only holds for one customer mix
+by_mix = pd.DataFrame({"old p95": old.groupby("mix").wait.quantile(0.95),
+                       "new p95": new.groupby("mix").wait.quantile(0.95)}).round(0)
+print("\n" + by_mix.to_string())
+
+# flaw 3: the placebo — two stretches of the OLD layout against each other
+placebo = p95(old[old.morning < 10]) - p95(old[old.morning >= 10])
+print(f"\nplacebo, old layout vs itself : {placebo:+.0f} s "
+      f"({'clean' if abs(placebo) < 25 else 'the machinery manufactures gaps'})")
+print("three confident reviewers, three checks, and only the checks decide")
+```
 
 ## An AI failure case
 

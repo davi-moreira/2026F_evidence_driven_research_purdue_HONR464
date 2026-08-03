@@ -121,6 +121,38 @@ facet of engagement, measured with a repeatable single item." You cannot defend
 indicator skips, and you never heard from the people who left. The number is real,
 and its meaning stops exactly where the construct stops.
 
+That validity is an argument about a particular interpretation and use, and never a property the instrument owns, is the position of the testing standards [@aera2014standards].
+
+The block below builds the sixteen sites, reads the indicator, and runs the retest. Watch what the reliability number does and does not license.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n_per_site, sites = 60, 16
+pilot = np.repeat([True] * 8 + [False] * 8, n_per_site)
+site = np.repeat(np.arange(sites), n_per_site)
+
+# The construct is willingness to recommend; the indicator is one 1-7 item.
+site_effect = rng.normal(0, 0.25, size=sites)
+person = (4.3 + 0.35 * pilot + site_effect[site]
+          + rng.normal(0, 1.2, size=len(site)))          # people differ, stably
+item = np.clip(np.round(person + rng.normal(0, 0.5, size=len(person))), 1, 7)
+
+# Reliability: re-ask a random tenth two weeks later. Same PEOPLE, same item.
+retest_idx = rng.choice(len(item), size=len(item) // 10, replace=False)
+retest = np.clip(np.round(person[retest_idx]
+                          + rng.normal(0, 0.5, size=len(retest_idx))), 1, 7)
+r = np.corrcoef(item[retest_idx], retest)[0, 1]
+
+print(pd.DataFrame({"pilot site": pilot, "item": item})
+      .groupby("pilot site")["item"].agg(["size", "mean"]).round(2).to_string())
+print(f"\ntest-retest correlation on the re-asked tenth : {r:.2f}")
+print("that number says the item is repeatable. it says NOTHING about whether")
+print("recommend-a-friend captures engagement, or about the people who quit")
+```
+
 ## An AI failure case
 
 You ask, "operationalize employee engagement for my pilot study," and the tool

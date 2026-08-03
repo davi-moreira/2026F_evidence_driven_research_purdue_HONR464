@@ -78,6 +78,34 @@ that would answer you is randomly assigning the toolbar to new users, and that's
 what I'd run next." You refused the word "causes," and handed the visitor a real
 research question rather than a wall.
 
+Stating uncertainty plainly rather than hiding it does not cost you the audience's trust, which is what the evidence on communicating uncertainty finds [@vanderbles2019uncertainty].
+
+The block below builds users in which the toolbar does nothing at all and then measures the six seconds anyway. That is the honest version of the answer you owe the visitor.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 1200
+power_user = rng.random(n) < 0.35        # fast with ANY layout
+compact = rng.random(n) < np.where(power_user, 0.72, 0.28)   # they self-select
+seconds = (34 - 13.5 * power_user
+           + rng.normal(0, 6, size=n))   # the toolbar itself does nothing
+
+observed = np.median(seconds[~compact]) - np.median(seconds[compact])
+within = [np.median(seconds[~compact & g]) - np.median(seconds[compact & g])
+          for g in (power_user, ~power_user)]
+print(f"observed median gap            : {observed:.0f} s faster for compact")
+print(f"true effect of the toolbar     : 0 s")
+print(f"gap among power users only     : {within[0]:+.0f} s")
+print(f"gap among everyone else        : {within[1]:+.0f} s")
+print(f"share of compact users who are power users : "
+      f"{power_user[compact].mean()*100:.0f}%")
+print("\nthe six seconds are real and the toolbar did not cause them. that is")
+print("exactly the sentence the two-beat reply has to carry")
+```
+
 ## An AI failure case
 
 You paste your limitation into an AI tool and ask it to "make this sound more

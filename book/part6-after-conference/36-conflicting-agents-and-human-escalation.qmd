@@ -109,6 +109,36 @@ official rate, but nowhere near as precise as you wrote. You **override** three 
 great" verdicts and rewrite the claim with its real uncertainty. The roles counted the
 answer as correct. You checked whether it was earned.
 
+Agreement is worth something only when the agreeing parties can fail independently, which is why diversity of approach, not headcount, is what makes a group better than its members [@hong2004diverse].
+
+The block below builds the survey and computes the rate two defensible ways. Neither number is the one the reviewers blessed, and both come from the same afternoon outside the library.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# 250 adults asked outside the library on three weekday afternoons.
+n = 250
+employed_ft = rng.random(n) < 0.58     # daytime library sample skews non-working
+wants_work = np.where(employed_ft, False, rng.random(n) < 0.24)
+looking = wants_work & (rng.random(n) < 0.20)   # only some are actively looking
+
+labour_force = employed_ft.sum() + looking.sum()
+your_rate = looking.sum() / labour_force
+official_style = wants_work.sum() / (employed_ft.sum() + wants_work.sum())
+
+print(f"respondents            : {n}")
+print(f"in your labour force   : {labour_force}")
+print(f"counted as unemployed  : {looking.sum()}")
+print(f"your rate              : {your_rate*100:.1f}%")
+print(f"same people, counting everyone who WANTS work: "
+      f"{official_style*100:.1f}%")
+print("\ntwo defensible definitions, two different numbers, from one sample")
+print("that never met anyone at work on a weekday afternoon. three reviewers")
+print("who only checked whether the answer LOOKED right caught none of it")
+```
+
 ## An AI failure case
 
 You send your draft to four AI roles and all four reply "no major problems." It feels

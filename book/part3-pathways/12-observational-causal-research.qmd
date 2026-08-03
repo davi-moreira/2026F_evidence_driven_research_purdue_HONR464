@@ -115,6 +115,8 @@ that the microbe is *associated with* leanness, and the causal question waits fo
 real intervention, such as colonizing genetically identical, identically fed mice. That
 boundary is what this chapter teaches you to see and to say.
 
+Which variables you must adjust for, and which adjustments open new paths rather than closing them, is decided by the diagram, not by what you happen to have measured [@pearl2009causality].
+
 The block below builds mice in which the microbe does nothing at all, and then measures the gap a naive comparison reports. Run it before you trust any carrier-versus-noncarrier number, including your own.
 
 ```python

@@ -65,7 +65,7 @@ reads "turnout in these precincts was 61.3 percent." Before the file goes to the
 printer, you build the table.
 
 **Row 1 (the headline).** Claim: "turnout was 61.3 ± 1.8 percent." Evidence: 30
-sampled precincts, 48,900 ballots cast against 79,800 registered voters, with the
+sampled precincts, 47,871 ballots cast against 78,117 registered voters, with the
 spread of the 30 precinct-level rates giving the interval. Trace: cell 16, the line
 `turnout = ballots.sum() / registered.sum()`. Boundary: one county, one midterm,
 registered voters only, so nothing is claimed about statewide turnout or about
@@ -84,6 +84,31 @@ looser rolls that keep long-inactive registrations.
 
 Two claims, two rows, every number walked back to a cell, every boundary written
 down. That table is the thing that lets your work survive a pointed finger.
+
+Requiring every reported claim to trace to the line that produced it is the practical core of the reproducibility reforms [@munafo2017manifesto].
+
+The block below is the traced cell itself. Run it, and the number it prints is the only one Row 1 may carry.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Thirty sampled precincts: ballots cast and registered voters.
+registered = rng.integers(2300, 3000, size=30)
+rate = np.clip(rng.normal(0.625, 0.050, size=30), 0.35, 0.85)
+ballots = np.round(registered * rate).astype(int)
+
+turnout = ballots.sum() / registered.sum()                  # the traced line
+spread = 1.96 * rate.std(ddof=1) / np.sqrt(len(rate)) * 100
+
+print(f"precincts sampled  : {len(registered)}")
+print(f"ballots cast       : {ballots.sum():,}")
+print(f"registered voters  : {registered.sum():,}")
+print(f"turnout            : {turnout*100:.1f} ± {spread:.1f} percent")
+print("\nthat is the number your Trace cell must point at. any figure on the")
+print("board that this line does not produce is untraceable, whoever published it")
+```
 
 ## An AI failure case
 

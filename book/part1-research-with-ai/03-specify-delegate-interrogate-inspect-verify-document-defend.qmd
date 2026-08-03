@@ -182,6 +182,8 @@ during a sale, and I have not looked at mobile traffic separately."
 
 The tool did the typing. You did the research.
 
+Running a fixed checklist rather than trusting recall is an old and well-studied safeguard in high-stakes work [@degani1993checklists].
+
 The block below builds the session log and computes the number both ways. The pooled row is what the tool's script reported; the week-2 row is what survived Inspect and Verify.
 
 ```python

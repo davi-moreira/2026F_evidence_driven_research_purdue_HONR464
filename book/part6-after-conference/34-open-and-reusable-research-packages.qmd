@@ -86,6 +86,41 @@ missing-registration precincts might be a bad rule cleanly logged. Runnable is n
 correct. That gap is exactly why your capsule is exercised by a person, not only by a
 script.
 
+Every repair in the clean capsule, pinned seed included, is on the published list of rules for reproducible computational work [@sandve2013ten].
+
+The block below is the clean capsule's analysis cell. Every repair the sinful version did by hand happens here in code, and the seed makes the interval the same on every run.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464                       # sin four, fixed: the seed is pinned
+rng = np.random.default_rng(SEED)
+
+# Twelve counties of precinct turnout, with the two data problems the sinful
+# capsule handled silently: a duplicated precinct name and missing registrations.
+precincts = pd.DataFrame({
+    "county": np.repeat([f"county {i:02d}" for i in range(1, 13)], 25),
+    "precinct": [f"P{i:04d}" for i in range(300)],
+    "turnout": np.clip(rng.normal(0.44, 0.09, size=300), 0.05, 0.95),
+})
+precincts.loc[17, "precinct"] = precincts.loc[16, "precinct"]     # the duplicate
+precincts.loc[rng.choice(300, 14, replace=False), "turnout"] = np.nan
+
+deduped = precincts.drop_duplicates("precinct")
+missing = deduped.turnout.isna().sum()
+below = (deduped.turnout < 0.40).sum() / deduped.turnout.notna().sum()
+
+boot = [(rng.choice(deduped.turnout.dropna(), deduped.turnout.notna().sum())
+         < 0.40).mean() for _ in range(2000)]
+lo, hi = np.percentile(boot, [2.5, 97.5])
+
+print(f"precincts loaded         : {len(precincts)}")
+print(f"duplicate names removed  : {len(precincts) - len(deduped)}")
+print(f"registrations missing    : {missing} (reported, not silently dropped)")
+print(f"share below 40% turnout  : {below*100:.1f}% [{lo*100:.1f}%, {hi*100:.1f}%]")
+print("\nrerun this cell: the interval does not move, because the seed is")
+print("pinned and every repair above happens in code a clean run repeats")
+```
+
 ## An AI failure case
 
 You paste your notebook into your AI and ask, "will this run cold and produce my

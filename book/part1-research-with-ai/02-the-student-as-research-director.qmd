@@ -91,6 +91,8 @@ licenses the word "inhibits." Stating how uncertain that conclusion is, given th
 plates and one strain. No tool makes those calls. The moment you let it, you become a
 reader of someone else's guess.
 
+The line this triage draws, between work you may hand out and judgments that stay with the named researcher, is the one research-integrity guidance draws too [@nasem2017integrity].
+
 The block below builds this example's data and prints the numbers this section quotes. Run it, then change one input and watch which sentence above stops being true.
 
 ```python

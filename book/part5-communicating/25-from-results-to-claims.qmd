@@ -123,6 +123,32 @@ lower resting systolic blood pressure (95% interval: 1 to 11); this is an observ
 association, and this design does not identify whether walking caused the drop." Same result, a claim that
 survives the judge.
 
+What licenses a causal verb is the identification argument, not the size of the gap you observed [@hernan2020whatif].
+
+The block below builds the forty volunteers and prints the gap along with one thing the poster never showed: how the two groups differ before you compare them.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Forty volunteers who CHOSE how much they walk. Age drives both.
+n = 40
+age = np.r_[rng.normal(31, 7, 20), rng.normal(43, 7, 20)]   # active are younger
+active = np.r_[np.ones(20, bool), np.zeros(20, bool)]
+systolic = np.round(112 + 0.5 * age + rng.normal(0, 6, n))
+
+gap = systolic[~active].mean() - systolic[active].mean()
+print(f"active group mean systolic      : {systolic[active].mean():.0f}")
+print(f"less-active group mean systolic : {systolic[~active].mean():.0f}")
+print(f"observed gap                    : {gap:.0f} points")
+print(f"mean age, active vs less-active : {age[active].mean():.0f} vs "
+      f"{age[~active].mean():.0f}")
+print("\nnobody was assigned to walk. the age line is one difference you can")
+print("see; the design leaves every unseen one untouched, so the verb stays")
+print("'is associated with'")
+```
+
 ## An AI failure case
 
 You paste your honest headline into a tool and ask it to make it "punchier." It

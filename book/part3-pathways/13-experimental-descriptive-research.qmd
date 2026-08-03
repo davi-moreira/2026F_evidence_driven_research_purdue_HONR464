@@ -81,6 +81,8 @@ instrument effect if slot 1's larger art or a slot-keyed logger inflates the
 count. The redesign renders every slot identically and logs impressions
 server-side.
 
+Randomizing position while holding the item identical is the standard way to separate presentation from quality in ranked interfaces [@joachims2005clickthrough].
+
 The block below deals the probe track's slot at random and reports the attention curve. The randomization is real; the claim it licenses is still descriptive.
 
 ```python

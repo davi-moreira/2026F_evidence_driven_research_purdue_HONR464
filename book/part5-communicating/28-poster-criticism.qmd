@@ -93,6 +93,41 @@ travels farthest, because a reviewer who catches one causal overreach distrusts 
 whole board, so you lock the associational verb first. That single decision, made by
 you and defended out loud, is the work of this chapter.
 
+The audit's accessibility item is not optional politeness: color-only encoding loses readers whose vision it never reaches [@crameri2020colour].
+
+The block below rebuilds the poster's data, prints the interval the board left off, and redraws the figure from zero. The last printed line is the one the headline's verb depends on.
+
+```python
+import numpy as np, pandas as pd
+import matplotlib.pyplot as plt
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Fields the GROWER chose. Richer fields got the compost.
+n_plots = 60
+soil_quality = rng.normal(0, 1, size=n_plots)
+composted = soil_quality > np.median(soil_quality)          # not randomized
+yield_bu = 184 + 4.5 * soil_quality + rng.normal(0, 11, size=n_plots)
+
+means = np.array([yield_bu[~composted].mean(), yield_bu[composted].mean()])
+ci = np.array([1.96 * yield_bu[g].std(ddof=1) / np.sqrt(g.sum())
+               for g in (~composted, composted)])
+print(f"no compost : {means[0]:.0f} bu/ac ± {ci[0]:.0f}")
+print(f"composted  : {means[1]:.0f} bu/ac ± {ci[1]:.0f}")
+print(f"gap        : {means[1]-means[0]:.0f} bu/ac")
+print(f"mean soil quality, composted vs not : "
+      f"{soil_quality[composted].mean():+.1f} vs {soil_quality[~composted].mean():+.1f}")
+
+fig, ax = plt.subplots(figsize=(4.2, 3.2))
+ax.bar(["no compost", "composted"], means, yerr=ci, capsize=6,
+       color=["#4a4a4a", "#a8a8a8"], hatch=["", "//"], edgecolor="black")
+ax.set_ylim(0, 230)
+ax.set_ylabel("grain yield (bu/ac)")
+ax.set_title("Yield by compost status (grower-chosen fields)")
+plt.tight_layout()
+plt.show()
+```
+
 ## An AI failure case
 
 You describe your compost figure to your AI and ask for the hardest skeptic

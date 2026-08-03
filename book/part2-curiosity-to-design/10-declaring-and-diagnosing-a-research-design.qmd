@@ -116,6 +116,8 @@ button's effect, meaning pin the time gap on the button and rule out other cause
 while the confounded one shows only an **association**, where the two move together
 but a common cause could explain it.
 
+Diagnosing a design by simulating it many times before running it once is standard practice for evaluating statistical methods [@morris2019simulation].
+
 The block below declares all three designs and diagnoses each one, which is the whole loop this chapter teaches. Read the bias column and the power column as two different questions.
 
 ```python

@@ -78,7 +78,7 @@ claim you can defend.
 
 **Rank the findings.** Across a thousand customer arrivals from a seeded simulation of
 the morning rush, the median wait time dropped about 38%, with a tight interval around
-it. You also noticed one pre-ordering customer who was served almost instantly, a 95%
+it. You also noticed one pre-ordering customer who was served almost instantly, a 99%
 drop. The surprising number is the single customer; the defensible one is the median
 over a thousand arrivals. So the median leads, and the lone customer goes to the back,
 labeled as one observation, not a result.
@@ -94,6 +94,34 @@ shorter wait your simulation never tested.
 library versions, logs that you excluded the first order of the morning and why, and
 passes restart-and-run-all so the 38% returns on a clean kernel. The note is now
 readable and runnable.
+
+Carrying the argument on one clear problem-gap-question spine, so the prose stands without you beside it, is the standard structure for a paper [@mensh2017structuring].
+
+The block below runs the arrivals and prints the ranked findings: the median with its interval first, the single lucky customer last.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 1000
+service = rng.gamma(2.0, 55.0, size=n)                  # ordinary counter service
+preorder = rng.gamma(2.0, 36.0, size=n)                 # mobile pre-order
+
+med_drop = 1 - np.median(preorder) / np.median(service)
+boot = [1 - np.median(rng.choice(preorder, n)) / np.median(rng.choice(service, n))
+        for _ in range(2000)]
+lo, hi = np.percentile(boot, [2.5, 97.5])
+luckiest = 1 - preorder.min() / np.median(service)
+
+print(f"median wait, ordinary service : {np.median(service):.0f} s")
+print(f"median wait, mobile pre-order : {np.median(preorder):.0f} s")
+print(f"median drop                   : {med_drop*100:.0f}% "
+      f"[{lo*100:.0f}%, {hi*100:.0f}%]")
+print(f"the single luckiest customer  : {luckiest*100:.0f}% faster")
+print("\nthe headline is the first number with its interval. the last one is")
+print("one observation, and it goes at the back of the note labelled as such")
+```
 
 ## An AI failure case
 

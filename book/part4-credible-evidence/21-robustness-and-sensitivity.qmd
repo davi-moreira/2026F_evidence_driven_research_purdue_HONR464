@@ -175,6 +175,56 @@ the beginning of a formal argument the uncertainty chapter finishes; here it is 
 smell test, and a real gap the no-effect pile produces routinely is a warning that
 your machinery, not the discount, may be doing the work.
 
+That the curve's rows must all estimate the SAME quantity, or the spread means nothing, is the condition the method rests on [@simonsohn2020specification].
+
+The block below turns all four handles and prints the whole grid, plus the one comparison that must stay off it. Check that every row answers the same question before you read any of the numbers.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 4000
+offered = rng.random(n) < 0.5
+prior = rng.gamma(2.0, 30.0, size=n)                    # spending before the offer
+ordered = rng.random(n) < (0.42 + 0.025 * offered)      # the offer moves WHO orders
+spend = np.where(ordered, rng.gamma(2.0, 33.0, size=n) * (1 + 0.12 * offered)
+                 + 0.25 * prior, 0.0)                   # past spending carries over
+ship_tax = np.where(ordered, 6.0 + 0.07 * spend, 0.0)
+gross = spend + ship_tax
+wholesale = np.zeros(n, dtype=bool); wholesale[0] = True
+gross[0] = 9_400.0                                      # the bulk buyer
+
+df = pd.DataFrame({"offered": offered, "gross": gross, "net": spend,
+                   "prior": prior, "ordered": ordered, "wholesale": wholesale})
+
+def pct_gain(d, col, adjust=False):
+    v = d[col] - (np.polyval(np.polyfit(d.prior, d[col], 1), d.prior)
+                  if adjust else 0)
+    a, b = v[d.offered].mean(), v[~d.offered].mean()
+    base = d.loc[~d.offered, col].mean()
+    return (a - b) / base * 100
+
+grid = []
+for s_label, d in (("all shoppers", df), ("minus the wholesale account",
+                                          df[~df.wholesale])):
+    for m_label, col in (("charged total", "gross"), ("net of shipping/tax", "net")):
+        for sp_label, adj in (("unadjusted", False), ("adj. prior spend", True)):
+            grid.append({"sample": s_label, "measurement": m_label,
+                         "specification": sp_label,
+                         "gain %": round(pct_gain(d, col, adj), 1)})
+g = pd.DataFrame(grid)
+print(g.to_string(index=False))
+print(f"\nall eight share ONE estimand: spending per shopper ASSIGNED.")
+print(f"range {g['gain %'].min():.1f}% to {g['gain %'].max():.1f}% — a spread of "
+      f"defensible answers, not a confidence interval")
+
+# the specification that does NOT belong: conditioning on ordering
+bad = pct_gain(df[df.ordered], "gross")
+print(f"\naveraging over ORDERERS only: {bad:.1f}% — a different estimand, on a")
+print("group the offer itself selected. it does not belong on the curve")
+```
+
 ## An AI failure case
 
 You paste your four-handle grid and ask an AI to write your robustness section. Back

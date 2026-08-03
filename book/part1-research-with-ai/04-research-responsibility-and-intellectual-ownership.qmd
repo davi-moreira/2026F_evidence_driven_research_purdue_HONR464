@@ -90,6 +90,8 @@ Now your disclosure writes itself: the tool drafted the paragraph, and you did t
 checking, retrieving, and rewriting that made the claim yours. You own the corrected
 sentence. You would not have owned the original.
 
+That authorship cannot be delegated to a tool, and that the named author answers for every claim, is the position taken by editorial guidance on AI use [@icmje2026recommendations].
+
 The block below builds the ten samples and recomputes the mean, which is the whole of the one-minute check. Run it before you read the next line.
 
 ```python

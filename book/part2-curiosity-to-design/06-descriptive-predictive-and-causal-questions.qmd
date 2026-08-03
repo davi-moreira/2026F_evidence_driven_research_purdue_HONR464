@@ -133,6 +133,8 @@ One move finishes the skill. A project partner offers what they call one questio
 comparison of question 4, and no single design answers both. You split it, and each
 half keeps its own position.
 
+That predicting well and explaining why are different goals, not stages of one goal, is argued in detail in the statistics literature [@shmueli2010explain].
+
 The block below builds this example's data and prints the numbers this section quotes. Run it, then change one input and watch which sentence above stops being true.
 
 ```python

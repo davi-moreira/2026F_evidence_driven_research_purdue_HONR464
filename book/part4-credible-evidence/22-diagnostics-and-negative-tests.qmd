@@ -129,6 +129,38 @@ works inside a living animal, or which molecule is responsible. It lowered your
 worry about one artifact, as far as this assay could detect it, and that modesty is
 the point.
 
+A negative control earns its name only under stated conditions: it must share the suspected bias and be unable to show the real effect [@lipsitch2010negative].
+
+The block below reads all four plates at once, because a negative control means nothing until you have also seen that the assay can detect something.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Zone of inhibition (mm) on identical plates, ten replicates each.
+conditions = {
+    "plant extract in 70% ethanol": 14.0,   # what you want to claim
+    "vehicle only (70% ethanol)": 0.0,      # negative control: must be bare
+    "standard antibiotic": 22.0,            # positive control: must show a ring
+    "extract in 20% ethanol": 11.5,         # the redo at lower solvent
+}
+plates = {c: np.clip(rng.normal(mu, 1.2, size=10), 0, None)
+          for c, mu in conditions.items()}
+print(pd.DataFrame({"condition": list(plates),
+                    "mean zone (mm)": [v.mean().round(1) for v in plates.values()],
+                    "max zone (mm)": [v.max().round(1) for v in plates.values()]})
+      .to_string(index=False))
+
+vehicle, positive = plates["vehicle only (70% ethanol)"], plates["standard antibiotic"]
+print(f"\nnegative control ring : {vehicle.mean():.1f} mm  -> "
+      f"{'PASS' if vehicle.mean() < 1 else 'FAIL, the solvent is doing work'}")
+print(f"positive control ring : {positive.mean():.1f} mm  -> "
+      f"{'PASS' if positive.mean() > 5 else 'FAIL, the assay cannot detect anything'}")
+print("\nboth controls must be read before the extract's ring means anything.")
+print("a negative control that passes on a broken assay proves nothing")
+```
+
 ## A seeded simulation
 
 So what does "the vehicle did nothing" actually look like on paper? Not a row of

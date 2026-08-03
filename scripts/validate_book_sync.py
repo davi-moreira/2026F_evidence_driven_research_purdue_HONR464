@@ -47,35 +47,12 @@ REQUIRED_ELEMENTS = [
 # "It is your turn".
 RETIRED_HEADINGS = ["## Recommended AI prompts", "## The Colab laboratory"]
 
-# D38: "worked examples must come with data and evidence." Chapters below
-# still await their seeded data block (data) or their citation (evidence);
-# the lists SHRINK as upgrades land and new entries are forbidden. An empty
-# list retires itself.
-DATA_PENDING: set[str] = {         # lesson ids awaiting a data-backed example
-    "ai-adversarial-reviewer", "ai-analytical-assistant",
-    "ai-as-programmer", "claim-evidence-tables", "conflicting-agents", "data-provenance",
-    "difficult-questions",
-    "false-confidence", "final-portfolio",
-    "managing-ai-agents", "measurement", "negative-tests", "poster-criticism",
-    "poster-to-note",
-    "replication-reproduction",
-    "research-packages", "research-pitches", "research-posters", "results-to-claims", "robustness-sensitivity",
-}
-EVIDENCE_PENDING: set[str] = {     # lesson ids awaiting an in-example citation
-    "ai-arm-not-brain", "research-director", "sdiivdd",
-    "responsibility-ownership", "curiosity-to-problem", "question-kinds",
-    "research-builds", "verifying-prior-evidence", "mida",
-    "declare-diagnose", "observational-causal",
-    "experimental-descriptive",
-    "experimental-causal", "data-provenance",
-    "measurement", "ai-as-programmer", "ai-analytical-assistant",
-    "robustness-sensitivity", "negative-tests", "ai-adversarial-reviewer",
-    "false-confidence", "results-to-claims", "claim-evidence-tables",
-    "research-posters", "poster-criticism", "research-pitches",
-    "difficult-questions", "ai-disclosure", "replication-reproduction",
-    "poster-to-note", "research-packages", "managing-ai-agents",
-    "conflicting-agents", "final-portfolio",
-}
+# D38: "worked examples must come with data and evidence." Both lists are
+# now EMPTY — every worked example carries a seeded data block and cites
+# published evidence, and these gates keep it that way. Never add an id
+# here to make a new chapter pass; give the chapter its data and its source.
+DATA_PENDING: set[str] = set()     # empty: every worked example carries data
+EVIDENCE_PENDING: set[str] = set()  # empty: every worked example cites its evidence
 
 
 def main() -> None:

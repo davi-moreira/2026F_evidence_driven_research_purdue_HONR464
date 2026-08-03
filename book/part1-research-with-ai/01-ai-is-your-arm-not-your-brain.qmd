@@ -112,6 +112,8 @@ log a verified input. If it shows a different value, or cannot be found at all, 
 number the tool handed you was never evidence. Either way, your comparison rests on a
 number you retrieved, not one a model typed.
 
+The habit this example drills, opening the source rather than trusting the sentence, is the documented defense against fluent invented detail [@ji2023hallucination].
+
 The block below builds this example's data and runs the adjustment. Notice what it cannot do for you: the two index values are inputs you retrieve and verify, and the code takes them on faith exactly as the tool did.
 
 ```python

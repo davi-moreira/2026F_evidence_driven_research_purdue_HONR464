@@ -115,6 +115,46 @@ decides which larvae the number even describes. The 0.43-reported-as-0.5 mismatc
 comes third: real, and a genuine reporting failure, but the smallest threat to whether
 an effect exists.
 
+Treating larvae in a shared tank as independent units is the classic analysis error this example is built to catch [@hurlbert1984pseudoreplication].
+
+The block below builds the package's data and computes the difference three defensible ways. Run it before you accept any single number, including the one printed on the poster.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+tanks = pd.DataFrame({"tank": range(6), "probiotic": [True]*3 + [False]*3})
+rows = []
+for _, t in tanks.iterrows():
+    n = 40
+    tank_effect = rng.normal(0, 0.25)                  # tanks differ, larvae cluster
+    length = (4.60 + 0.25 * t.probiotic + tank_effect
+              + rng.normal(0, 0.35, size=n))
+    # death is a POST-TREATMENT event, and the probiotic changes who dies
+    died = rng.random(n) < np.where(t.probiotic, 0.06, 0.18) * (length < 4.6)
+    rows.append(pd.DataFrame({"tank": t.tank, "probiotic": t.probiotic,
+                              "length": length, "died": died}))
+larvae = pd.concat(rows, ignore_index=True)
+
+alive = larvae[~larvae.died]
+gap_survivors = (alive[alive.probiotic].length.mean()
+                 - alive[~alive.probiotic].length.mean())
+gap_all = (larvae[larvae.probiotic].length.mean()
+           - larvae[~larvae.probiotic].length.mean())
+by_tank = alive.groupby(["probiotic", "tank"]).length.mean()
+gap_tank = (by_tank[True].mean() - by_tank[False].mean())
+
+print(f"the write-up claims          : 0.50 mm")
+print(f"survivors, larva by larva    : {gap_survivors:.2f} mm")
+print(f"everyone, including the dead : {gap_all:.2f} mm")
+print(f"tank means (n = 3 vs 3)      : {gap_tank:.2f} mm")
+print(f"\ndeaths: {larvae[larvae.probiotic].died.sum()} treated vs "
+      f"{larvae[~larvae.probiotic].died.sum()} control")
+print("three defensible numbers, none of them 0.50, and the unit of")
+print("randomization was the TANK, not the larva")
+```
+
 ## An AI failure case
 
 You paste the whole package into a general AI tool and ask, "Does this study

@@ -90,6 +90,38 @@ separate the bars with a color-blind-safe pair plus a hatch pattern, and soften 
 headline to "Version B completed about 3 points higher, within overlapping intervals."
 Same data, a picture that now tells the truth.
 
+Designing so the message survives a color-blind reader and a grayscale print is a documented requirement, not a courtesy [@crameri2020colour].
+
+The block below computes both means with their intervals and draws the honest version of the figure: a zero baseline, the intervals visible, and a pattern so the bars survive a color-blind reader and a grayscale printer.
+
+```python
+import numpy as np, pandas as pd
+import matplotlib.pyplot as plt
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+weeks = 12
+a = rng.normal(0.68, 0.070, size=weeks)
+b = np.random.default_rng(SEED + 1).normal(0.705, 0.070, size=weeks)
+means = np.array([a.mean(), b.mean()]) * 100
+ci = np.array([1.96 * v.std(ddof=1) / np.sqrt(weeks) for v in (a, b)]) * 100
+print(f"Version A: {means[0]:.0f}% ± {ci[0]:.0f}   "
+      f"Version B: {means[1]:.0f}% ± {ci[1]:.0f}   gap {means[1]-means[0]:.0f} pts")
+print(f"intervals overlap: {means[0] + ci[0] > means[1] - ci[1]}")
+
+# the honest figure: zero baseline, intervals drawn, pattern not colour alone
+fig, ax = plt.subplots(figsize=(4.2, 3.2))
+ax.bar(["Version A", "Version B"], means, yerr=ci, capsize=6,
+       color=["#4a4a4a", "#a8a8a8"], hatch=["", "//"], edgecolor="black")
+ax.set_ylim(0, 100)
+ax.set_ylabel("completion rate (%)")
+ax.set_title("Completion rate by checkout version")
+for i, (m, e) in enumerate(zip(means, ci)):
+    ax.text(i, m + e + 3, f"{m:.0f}% ± {e:.0f}", ha="center", fontsize=9)
+plt.tight_layout()
+plt.show()
+```
+
 ## An AI failure case
 
 You paste the described figure and ask your AI for the hardest reviewer questions. It

@@ -108,6 +108,37 @@ decision that shrank your state to 40 cities would have happened inside a step y
 saw. The tool wrote correct code for the wrong question. You did the research by
 deciding what the code was allowed to count.
 
+Code that runs cleanly while answering the wrong question is the documented risk when generated code is accepted on its output alone [@vaithilingam2022expectation].
+
+The block below reproduces all three turns on the same roster, including the rows the scraper never returned. The 95% is real; read what it is 95% of.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+roster = 240
+big = np.arange(roster) < 40                    # the open-data portal cities
+on_time = np.zeros(roster, dtype=bool)
+on_time[rng.choice(np.where(big)[0], 38, replace=False)] = True    # 38 of 40
+on_time[rng.choice(np.where(~big)[0], 110, replace=False)] = True  # 110 of 200
+# the scraper comes back empty exactly where clerical staff is thinnest
+scraped = rng.random(roster) < np.where(big, 0.92, 0.62)
+
+portal_only = on_time[big].mean()
+after_dropna = on_time[big & scraped].mean()
+best_case = (on_time | ~scraped).mean()         # unretrievable counted as on time
+worst_case = (on_time & scraped).mean()         # unretrievable counted as late
+
+print(f"turn one, portal cities only        : {portal_only*100:.0f}%")
+print(f"the same after .dropna()            : {after_dropna*100:.0f}%")
+print(f"whole roster, unretrievable flagged : between "
+      f"{worst_case*100:.0f}% and {best_case*100:.0f}%")
+print(f"records the scraper never returned  : {(~scraped).sum()} of {roster}")
+print("\nthe clean run was never wrong about its own rows. it was answering")
+print("a different question than the one you asked")
+```
+
 ## An AI failure case
 
 You ask for the on-time share and the tool returns tidy code that prints, with full
