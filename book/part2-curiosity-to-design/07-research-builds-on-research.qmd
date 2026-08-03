@@ -89,6 +89,29 @@ concentrates in neighborhoods without a car, may be genuine. You will be able to
 defend it only because you gathered the sources around it, and because you are about
 to open every one.
 
+The block below stands in for the reading you do by hand: six retrieved records, what each one found, and the one variable that explains why they disagree. It plants no citations, because a fabricated source is the thing this chapter is teaching you to catch.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Six retrieved records on polling-place distance and turnout. NO fabricated
+# citations appear here: these are anonymous stand-ins for records you open
+# yourself. The one thing that differs is what each record measured.
+measured_switching = np.array([False, False, False, True, True, True])
+effects = np.round(np.where(measured_switching, -0.2, -1.5)
+                   + rng.normal(0, 0.35, size=6), 2)
+print(pd.DataFrame({"record": [f"record {i}" for i in range(1, 7)],
+                    "turnout change (pp)": effects,
+                    "measured mail switching": measured_switching}).to_string(index=False))
+print(f"\nmean where switching was ignored : "
+      f"{effects[~measured_switching].mean():+.2f} pp")
+print(f"mean where switching was measured: "
+      f"{effects[measured_switching].mean():+.2f} pp")
+print("\nthe live disagreement is not noise. it tracks what each record measured")
+```
+
 ## An AI failure case
 
 The most common failure here is **citation hallucination**, the taxonomy's *confident

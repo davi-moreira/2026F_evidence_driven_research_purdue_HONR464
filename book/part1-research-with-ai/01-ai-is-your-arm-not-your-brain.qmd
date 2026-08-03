@@ -112,6 +112,27 @@ log a verified input. If it shows a different value, or cannot be found at all, 
 number the tool handed you was never evidence. Either way, your comparison rests on a
 number you retrieved, not one a model typed.
 
+The block below builds this example's data and runs the adjustment. Notice what it cannot do for you: the two index values are inputs you retrieve and verify, and the code takes them on faith exactly as the tool did.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Thirty 2019 menu prices from restaurants near campus.
+prices_2019 = np.round(rng.normal(12.50, 2.10, size=30), 2)
+
+# These two index values are the input you must RETRIEVE yourself, from the
+# agency's own table. They stand in until you do; replace them and rerun.
+cpi_2019, cpi_2025 = 100.0, 123.0
+
+adjusted = prices_2019 * cpi_2025 / cpi_2019
+print(f"index 2019 {cpi_2019}  ->  index 2025 {cpi_2025}")
+print(f"price change implied      : {(cpi_2025 / cpi_2019 - 1) * 100:.0f}%")
+print(f"mean 2019 menu price      : ${prices_2019.mean():.2f}")
+print(f"same meal in 2025 dollars : ${adjusted.mean():.2f}")
+```
+
 ## An AI failure case
 
 You ask for the median starting salary of graduates in your field and a source. The

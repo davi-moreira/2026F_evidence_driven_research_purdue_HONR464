@@ -83,6 +83,29 @@ across everyone billed is almost certainly higher, because the worst-hit custome
 were gone before the survey went out. That gap between the box you measured and the
 box you named is the subject of this chapter.
 
+The block below builds the whole customer base, lets the worst-hit customers quit, and then reports what a perfect survey of the remaining list would find. Nothing here is a sampling error.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 50_000
+# Everyone the service bills. Wrong charges are what we want to count.
+wrong_charge = rng.random(n) < 0.060
+# Customers hit by a wrong charge quit far more often — and quitters leave the
+# subscriber list, which is the frame the survey draws from.
+quit = rng.random(n) < np.where(wrong_charge, 0.70, 0.09)
+
+target_rate = wrong_charge.mean()
+frame_rate = wrong_charge[~quit].mean()
+print(f"target population (everyone billed)   : {target_rate*100:.1f}%")
+print(f"sampling frame (current subscribers)  : {frame_rate*100:.1f}%")
+print(f"customers who left the frame          : {quit.mean()*100:.0f}%")
+print("\nthe survey can only ever see the second number. no sample size,")
+print("and no random draw from that list, closes the gap to the first")
+```
+
 ## A seeded simulation
 
 The worked example argues that *who you reach* tilts *what you measure*, and

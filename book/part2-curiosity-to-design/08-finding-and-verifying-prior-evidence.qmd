@@ -87,6 +87,29 @@ biochar helps yield in some soils, the size of the effect varies, and none of th
 you retrieved ran the trial in the sandy soil your county farms. *That* quiet spot,
 ringed by sources you opened yourself, is a gap you can defend.
 
+The block below tallies what happened to twelve leads. It carries no citations at all, real or invented; the statuses are the evidence, and the tally is the number that decides whether you have earned the word gap.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Twelve leads returned by a search, each with what happened when you tried to
+# retrieve it. The statuses are anonymous: no citation appears here, real or
+# invented. Four opened; the rest are still leads.
+status = rng.permutation(["retrieved"] * 4
+                         + ["garbled (real, wrong metadata)"] * 3
+                         + ["paywalled (request sent)"] * 2
+                         + ["nothing found"] * 3)
+leads = pd.DataFrame({"lead": range(1, 13), "retrieval status": status})
+print(leads.to_string(index=False))
+counts = pd.Series(status).value_counts()
+print("\n" + counts.to_string())
+print(f"\nverified column           : {counts.get('retrieved', 0)}")
+print("everything else stays OUT until retrieval succeeds — a lead you could")
+print("not open is not evidence that nobody has studied your question")
+```
+
 ## An AI failure case
 
 The failure to expect here is confident fabrication. Ask a general-purpose tool for

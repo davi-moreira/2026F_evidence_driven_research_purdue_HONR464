@@ -115,6 +115,34 @@ that the microbe is *associated with* leanness, and the causal question waits fo
 real intervention, such as colonizing genetically identical, identically fed mice. That
 boundary is what this chapter teaches you to see and to say.
 
+The block below builds mice in which the microbe does nothing at all, and then measures the gap a naive comparison reports. Run it before you trust any carrier-versus-noncarrier number, including your own.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 10_000
+# Diet drives BOTH the microbe and leanness. The microbe itself does nothing.
+high_fiber = rng.random(n) < 0.5
+microbe = rng.random(n) < np.where(high_fiber, 0.75, 0.25)
+leanness = 20 - 3.0 * high_fiber + rng.normal(0, 1.5, size=n)   # lower = leaner
+df = pd.DataFrame({"high_fiber": high_fiber, "microbe": microbe,
+                   "leanness": leanness})
+
+naive = df[df.microbe].leanness.mean() - df[~df.microbe].leanness.mean()
+within = (df.groupby("high_fiber")
+            .apply(lambda g: g[g.microbe].leanness.mean()
+                             - g[~g.microbe].leanness.mean(), include_groups=False))
+print(f"true microbe effect              : {0.0:+.2f}")
+print(f"naive carrier-vs-noncarrier gap  : {naive:+.2f}")
+print(f"within high-fiber mice           : {within[True]:+.2f}")
+print(f"within low-fiber mice            : {within[False]:+.2f}")
+print(f"average of the two within-diet gaps: {within.mean():+.2f}")
+print("\nthe naive gap is the DIET gap wearing the microbe's name;")
+print("ten thousand mice make it precise, not true")
+```
+
 ## An AI failure case
 
 You paste your mouse comparison into a chatbot and ask, "Is this a natural experiment,

@@ -52,18 +52,14 @@ RETIRED_HEADINGS = ["## Recommended AI prompts", "## The Colab laboratory"]
 # the lists SHRINK as upgrades land and new entries are forbidden. An empty
 # list retires itself.
 DATA_PENDING: set[str] = {         # lesson ids awaiting a data-backed example
-    "ai-adversarial-reviewer", "ai-analytical-assistant", "ai-arm-not-brain",
-    "ai-as-programmer", "claim-evidence-tables", "conflicting-agents",
-    "curiosity-to-problem", "data-provenance", "declare-diagnose",
-    "difficult-questions", "experimental-causal", "experimental-descriptive",
-    "false-confidence", "final-portfolio", "hybrid-complex-designs",
-    "managing-ai-agents", "measurement", "mida", "negative-tests",
-    "observational-causal", "observational-descriptive", "poster-criticism",
-    "poster-to-note", "prediction-generalization", "question-kinds",
-    "replication-reproduction", "research-builds", "research-director",
-    "research-packages", "research-pitches", "research-posters",
-    "responsibility-ownership", "results-to-claims", "robustness-sensitivity",
-    "sdiivdd", "verifying-prior-evidence",
+    "ai-adversarial-reviewer", "ai-analytical-assistant",
+    "ai-as-programmer", "claim-evidence-tables", "conflicting-agents", "data-provenance",
+    "difficult-questions",
+    "false-confidence", "final-portfolio",
+    "managing-ai-agents", "measurement", "negative-tests", "poster-criticism",
+    "poster-to-note",
+    "replication-reproduction",
+    "research-packages", "research-pitches", "research-posters", "results-to-claims", "robustness-sensitivity",
 }
 EVIDENCE_PENDING: set[str] = {     # lesson ids awaiting an in-example citation
     "ai-arm-not-brain", "research-director", "sdiivdd",

@@ -81,17 +81,43 @@ industry survey covers the chains, but not the independent corner stores or the
 online grocery deliveries, so the `total market revenue` you divide by is
 systematically too small. Every share is therefore systematically too large, and
 because shares are squared, that tilt is amplified straight into the index. Your data
-strategy and your model have drifted apart. An index that reads 2,850 and never
+strategy and your model have drifted apart. An index that reads 2,862 and never
 wobbles is not a correct index, only a confidently wrong one, and it can push a market
 across the line competition authorities treat as highly concentrated. The fix is a
 redesign of the data strategy, taking the denominator from a source built to cover
 every seller, such as a government economic census, not one more year of the same
 survey.
 
+The block below computes the index both ways, with the survey's total and with the true one. Rerun it with different months and watch how little the wrong number moves.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+months = 12
+chains = {"chain A": 38.5, "chain B": 29.5, "chain C": 21.0, "chain D": 13.5}
+uncovered = 22.0     # independents + online delivery: real sales, never surveyed
+
+avg = {c: rng.normal(rev, rev * 0.09, size=months).mean()
+       for c, rev in chains.items()}
+surveyed_total = sum(avg.values())
+
+def index(total):
+    return sum((rev / total * 100) ** 2 for rev in avg.values())
+
+print(pd.DataFrame({"avg monthly revenue ($m)":
+                    pd.Series(avg).round(1)}).to_string())
+print(f"\nindex using the SURVEYED total : {index(surveyed_total):,.0f}")
+print(f"index using the true total     : {index(surveyed_total + uncovered):,.0f}")
+print("\naveraging twelve months bought precision, not correctness. the")
+print("denominator is missing sales, so every share, and the index, tilts up")
+```
+
 ## An AI failure case
 
 You paste your revenue table into an AI tool and ask for the concentration index. It
-returns, with total confidence, `index = 2,850 ± 18`. The number looks plausible for a
+returns, with total confidence, `index = 2,862 ± 18`. The number looks plausible for a
 market with a few big chains, the interval is tiny, and the code ran without an error.
 It is wrong. The tool propagated only the *month-to-month* revenue variance, the part
 you already crushed by averaging twelve months, and never modeled the *systematic* bias

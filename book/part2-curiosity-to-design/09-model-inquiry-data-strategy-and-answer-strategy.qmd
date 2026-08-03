@@ -83,6 +83,36 @@ what it was: the caused lift. What changes is the claim this evidence supports,
 which drops from "causes" to "is associated with," leaving the inquiry itself
 causal and currently unidentified. Same question, broken alignment.
 
+The block below runs both data strategies against the same model and the same inquiry. Watch the second number miss a truth the first one finds.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n = 4000
+# MODEL: each listener has two accept rates; the new recommender adds 4 points.
+heavy = rng.random(n) < 0.45              # heavy listeners accept more anyway
+accept_old = 0.30 + 0.18 * heavy
+accept_new = accept_old + 0.04
+
+# DATA STRATEGY 1 — random bucketing: nothing about the listener decides arm.
+new_arm = rng.random(n) < 0.5
+kept = np.where(new_arm, rng.random(n) < accept_new, rng.random(n) < accept_old)
+randomized = kept[new_arm].mean() - kept[~new_arm].mean()
+
+# DATA STRATEGY 2 — the shortcut: ship "new" to new users, who differ.
+is_new_user = ~heavy                       # new users are the lighter listeners
+kept2 = np.where(is_new_user, rng.random(n) < accept_new, rng.random(n) < accept_old)
+shortcut = kept2[is_new_user].mean() - kept2[~is_new_user].mean()
+
+print(f"true caused lift             : {0.04:+.3f}")
+print(f"randomized buckets           : {randomized:+.3f}")
+print(f"new-vs-existing users        : {shortcut:+.3f}")
+print("\nsame inquiry both times. the second design does not answer it —")
+print("the inquiry stays causal and is now unidentified")
+```
+
 ## An AI failure case
 
 You paste your streaming question and ask for MIDA. The tool returns four confident,

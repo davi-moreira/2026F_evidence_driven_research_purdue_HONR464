@@ -182,6 +182,29 @@ during a sale, and I have not looked at mobile traffic separately."
 
 The tool did the typing. You did the research.
 
+The block below builds the session log and computes the number both ways. The pooled row is what the tool's script reported; the week-2 row is what survived Inspect and Verify.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# A constructed session log: exact purchase counts per cell, shuffled into
+# session order. Week 1 is the site-wide sale, and only version A was live.
+cells = [("A", 1, 5000, 105), ("A", 2, 5000, 200), ("B", 2, 5000, 212)]
+log = pd.concat([
+    pd.DataFrame({"version": v, "week": w,
+                  "bought": rng.permutation(np.r_[np.ones(b), np.zeros(n - b)])})
+    for v, w, n, b in cells])
+
+pooled = log.groupby("version")["bought"].mean()
+week2 = log[log.week == 2].groupby("version")["bought"].mean()
+print(f"pooled over both weeks : A {pooled['A']*100:.2f}%   B {pooled['B']*100:.2f}%"
+      f"   -> {(pooled['B']-pooled['A'])/pooled['A']*100:+.0f}% relative")
+print(f"week 2, both live      : A {week2['A']*100:.2f}%   B {week2['B']*100:.2f}%"
+      f"   -> {(week2['B']-week2['A'])/week2['A']*100:+.0f}% relative")
+```
+
 ## An AI failure case
 
 You ask for the analysis and the tool reports, with total confidence, "the new

@@ -120,6 +120,24 @@ are both collectable in a few weeks), and **contribution** (the activity-and-sle
 link is studied broadly in adults but far less in this dorm-living, first-year
 group). The curiosity is now a problem you could defend.
 
+The block below builds this example's data and prints the numbers this section quotes. Run it, then change one input and watch which sentence above stops being true.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# Sixty residence-hall first-years: average daily steps and a 1-10 sleep rating.
+steps = rng.normal(6200, 2300, size=60).clip(1000, 15000)
+sleep = np.clip(4.6 + 0.00035 * steps + rng.normal(0, 1.1, size=60), 1, 10)
+
+group = np.where(steps > 8000, "more than 8,000 steps",
+                 np.where(steps < 4000, "fewer than 4,000 steps", "in between"))
+print(pd.DataFrame({"group": group, "sleep rating": sleep})
+      .groupby("group")["sleep rating"].agg(["size", "mean"]).round(2).to_string())
+print("\nthe question asks about the two edge groups; the middle is neither")
+```
+
 ## An AI failure case
 
 You ask a tool to *"turn my curiosity about sleep and health into a research

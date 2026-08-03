@@ -81,6 +81,29 @@ instrument effect if slot 1's larger art or a slot-keyed logger inflates the
 count. The redesign renders every slot identically and logs impressions
 server-side.
 
+The block below deals the probe track's slot at random and reports the attention curve. The randomization is real; the claim it licenses is still descriptive.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n_sessions = 12_000
+# The probe track is identical every time; only its slot is dealt by chance.
+slot = rng.integers(1, 7, size=n_sessions)
+attention = {1: 0.150, 2: 0.104, 3: 0.081, 4: 0.066, 5: 0.055, 6: 0.043}
+played = rng.random(n_sessions) < np.array([attention[s] for s in slot])
+
+by_slot = (pd.DataFrame({"slot": slot, "played": played})
+           .groupby("slot")["played"].agg(sessions="size", play_rate="mean"))
+by_slot["play_rate"] = (by_slot.play_rate * 100).round(1)
+print(by_slot.to_string())
+r1, r5 = by_slot.play_rate[1], by_slot.play_rate[5]
+print(f"\nslot 1 vs slot 5 : {r1/r5:.1f}x, at identical audio and artwork")
+print("descriptive, for these sessions. it does not say what promoting a")
+print("DIFFERENT track to slot 1 would do")
+```
+
 ## An AI failure case
 
 You paste your attention-curve result into an AI tool and ask it to write the

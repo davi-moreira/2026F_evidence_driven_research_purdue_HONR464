@@ -116,6 +116,39 @@ button's effect, meaning pin the time gap on the button and rule out other cause
 while the confounded one shows only an **association**, where the two move together
 but a common cause could explain it.
 
+The block below declares all three designs and diagnoses each one, which is the whole loop this chapter teaches. Read the bias column and the power column as two different questions.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+TRUE_EFFECT = -8.0        # seconds the button really saves
+
+def run(n_per_arm, randomize, runs=2000):
+    """Declare a design once, then diagnose it by running it many times."""
+    out = []
+    for _ in range(runs):
+        base = rng.normal(150, 32, size=2 * n_per_arm)     # people differ a lot
+        if randomize:
+            treated = rng.random(2 * n_per_arm) < 0.5
+        else:                       # shoppers opt in — the fast ones do
+            treated = rng.random(2 * n_per_arm) < 1 / (
+                1 + np.exp((base - 150) / 170))
+        secs = base + TRUE_EFFECT * treated + rng.normal(0, 8, size=2 * n_per_arm)
+        out.append(secs[treated].mean() - secs[~treated].mean())
+    est = np.array(out)
+    se = est.std(ddof=1)
+    return {"estimate": est.mean(), "bias": est.mean() - TRUE_EFFECT,
+            "power": float((np.abs(est) > 1.96 * se).mean())}
+
+designs = {"pilot, randomized, 12/arm": run(12, True),
+           "randomized, 400/arm": run(400, True),
+           "opt-in, 400/arm": run(400, False)}
+print(pd.DataFrame(designs).T.round(2).to_string())
+print("\nsize cured the variance. it did nothing for the opt-in design's bias")
+```
+
 ## An AI failure case
 
 You paste your confounded observational design and ask, "My estimate is noisy. What

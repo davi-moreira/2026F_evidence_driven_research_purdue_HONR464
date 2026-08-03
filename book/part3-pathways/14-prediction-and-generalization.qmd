@@ -126,6 +126,41 @@ and the score falls back to 0.88. The timing test, not the accuracy, decides. An
 boundary out loud: on a deep, cold reservoir the pattern may not hold, so the
 forecast does not yet generalize there.
 
+The block below builds the three summers, keeps the last one locked, and scores the honest model and the leaking one on the same rows. The scores are constructed for the example; the ordering is the lesson.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+# 120 weekly samples across three summers, 40 weeks each, six bloom weeks per
+# summer (15%). The calendar order is the design: it decides the three roles.
+summer = np.repeat([1, 2, 3], 40)
+bloom = np.zeros(120, dtype=bool)
+for s in (1, 2, 3):
+    weeks = np.where(summer == s)[0]
+    bloom[rng.choice(weeks, 6, replace=False)] = True
+
+temp = 22 + 3.0 * bloom + rng.normal(0, 2.0, size=120)     # known a week early
+rain = 20 + 4.0 * bloom + rng.normal(0, 6.0, size=120)     # known a week early
+chl = 5 + 30 * bloom + rng.normal(0, 8.0, size=120)        # measured DURING it
+
+train, locked = summer == 1, summer == 3
+z = lambda v: (v - v[train].mean()) / v[train].std()
+acc = lambda pred: float((pred == bloom[locked]).mean())
+
+baseline = acc(np.zeros(locked.sum(), dtype=bool))         # always "no bloom"
+score = 0.55 * z(temp) + 0.35 * z(rain)
+honest = acc(score[locked] > np.quantile(score[train], 0.85))
+leaky = acc(chl[locked] > np.quantile(chl[train], 0.85))
+
+print(f"baseline, always say 'no bloom' : {baseline:.2f}")
+print(f"honest features, locked summer  : {honest:.2f}")
+print(f"with chlorophyll_a added        : {leaky:.2f}")
+print("\nthe third number is not skill. chlorophyll is measured during the")
+print("bloom you claim to forecast, so it cannot exist at prediction time")
+```
+
 ## A seeded simulation
 
 The chapter claims two things at once, and the code below shows both. A model can

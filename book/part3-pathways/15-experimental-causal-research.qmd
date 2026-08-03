@@ -118,6 +118,42 @@ treatment reaching the control arm, like a texted patient reminding an untreated
 friend. Each one leaves the coin flip untouched and still changes which quantity
 your number describes. Naming that quantity is the decision this chapter equips.
 
+The block below runs the trial twice over the same patients: once on everyone randomized, once on only those still measurable at the end. Watch the retention line while you read the second gap.
+
+```python
+import numpy as np, pandas as pd
+SEED = 464
+rng = np.random.default_rng(SEED)
+
+n_arm = 400
+arms = {}
+for arm, refills, dropout_if_disorganized in (("reminder", 284, 0.16),
+                                              ("control", 248, 0.38)):
+    organized = rng.random(n_arm) < 0.5        # a trait you never observe
+    priority = organized + rng.normal(0, 0.6, size=n_arm)
+    refill = np.zeros(n_arm, dtype=bool)
+    refill[np.argsort(-priority)[:refills]] = True
+    # attrition the TREATMENT changes: reminders keep disorganized patients in
+    dropped = rng.random(n_arm) < np.where(organized, 0.04,
+                                           dropout_if_disorganized)
+    arms[arm] = {"refill": refill, "seen": ~dropped, "organized": organized}
+
+r, c = arms["reminder"], arms["control"]
+print(f"reminder arm, everyone randomized : {r['refill'].mean()*100:.0f}%")
+print(f"control arm, everyone randomized  : {c['refill'].mean()*100:.0f}%")
+print(f"gap                               : "
+      f"{(r['refill'].mean() - c['refill'].mean())*100:+.0f} pp")
+cc = r["refill"][r["seen"]].mean() - c["refill"][c["seen"]].mean()
+print(f"\ngap among those still measurable  : {cc*100:+.0f} pp")
+print(f"retention                         : {r['seen'].mean()*100:.0f}% vs "
+      f"{c['seen'].mean()*100:.0f}%")
+print(f"organized share of those seen     : "
+      f"{r['organized'][r['seen']].mean()*100:.0f}% vs "
+      f"{c['organized'][c['seen']].mean()*100:.0f}%")
+print("\nthe last line is the problem: the two arms no longer describe the")
+print("same kind of patient, so the second gap is not an effect on anyone")
+```
+
 ## A seeded simulation
 
 Randomization is a promise about *procedure*: assign treatment by coin flip,
