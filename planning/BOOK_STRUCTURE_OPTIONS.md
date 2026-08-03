@@ -3,8 +3,8 @@
 **For Davi's ruling (would be D38).** Prepared 2026-08-03 by the two-track
 loop: an independent Codex design run (mirror mode, no seeding) and an
 independent Claude analysis, verified against each other and merged; then an
-adversarial critique of this memo (result appended at the end). Nothing here
-is implemented.
+adversarial critique of this memo — its verdict and the resulting revision
+are in the final section. Nothing here is implemented.
 
 **The question (Davi's):** the book has 6 parts, 39 chapters, 12 practice
 stations. For a learning-by-doing undergrad textbook with AI as partner,
@@ -26,8 +26,9 @@ either track alone.
    groupings; a part can be a page (Part I's overview already is). Lesson
    ids, url_paths, and companion paths stay untouched, so the identity
    epoch is satisfied — the A10 machinery was built for exactly this move.
-3. **Station-first changes the reading order in exactly 7 places**, all in
-   the Parts V–VI region — and every move enacts what D35 already ruled:
+3. **Station-first relocates exactly TWO lessons** (disclosure and the
+   research note), which changes seven display positions in the Parts V–VI
+   region — and every change enacts what D35 already ruled:
    disclosure (ch31) and the note (ch33) come BEFORE the genre adaptations
    (posters ch27–28, pitches ch29), Difficult Questions (ch30) comes after
    a chosen genre exists, and replication/packaging (ch32+ch34) reunite in
@@ -41,8 +42,10 @@ either track alone.
    schema review). Renumbering ch29–35 regenerates every projection
    (briefs, BOOK_MAP, material page, adoption table) mechanically; the
    course crosswalk keys off lesson ids and is unaffected.
-6. **Quarto parts cannot nest**, so anything above stations can only be
-   cosmetic (title prefixes, overview prose) — never a real third level.
+6. **Quarto book parts cannot nest** — but Quarto DOES support custom
+   sidebar sections with nested navigation independent of the part
+   structure, which means a station-grouped sidebar is achievable WITHOUT
+   making stations into parts (this fact is what enables Option 5 below).
 
 ---
 
@@ -173,3 +176,80 @@ One caution both tracks flagged: **embedding fixes wayfinding, not the A4
 gap** — station workbooks still need worked examples, starter data, and
 faded scaffolds before the completion promise is real. The restructure makes
 that gap more visible, which is a feature, not a risk.
+
+
+---
+
+## The adversarial critique ruled AGAINST Option 1 (2026-08-03)
+
+Full verdict: `_adm/codex_reviews/2026-08-03_structure-memo-critique/verdict.md`.
+Its corrections are folded into the text above. The material findings:
+
+1. **The T&F proposal constrains the timeline decisively.** The proposal
+   (v2, filled 2026-08-03) states the six-part structure was frozen on
+   Aug 1, schedules the ToC freeze for Aug 31, and internal submission in
+   early September. Adopting Option 1 now would falsify the proposal weeks
+   before submission.
+2. **The migration is smaller than the memo claimed in one way** (two
+   relocations, not seven) **and larger in others**: the opener/closer
+   split is a schema migration, not a page split (the validator would
+   reject closer pages as orphans; numbering policy is undefined); and the
+   decisive branching promise needs an explicit **navigation graph**
+   (entry/branch/join/checkpoint/continue edges) that the manifest does not
+   yet carry — without it, twelve parts still chain a prediction reader
+   into the causal pathway, in HTML and in the companions.
+3. **The pilot supports the diagnosis, not this remedy.** It judged the
+   two-grain concept sound and proposed boundary navigation; no evidence
+   compares 12 studios against 6 parts for this audience. The
+   learning-science case (problem-centred tasks, worked examples, fading)
+   argues for completing the station KITS (A4), not for changing the ToC.
+4. **"Studio" collides with the course's own "Friday studio"** terminology.
+5. It found three live repo defects while checking the memo's claims
+   (stale material/instructor projections; a hand-kept lab table in For
+   Instructors still carrying pre-D35 anchors; the EN language switcher
+   404ing into the frozen editions for the 14 new pages). All three are
+   fixed as of this revision — independent of the ruling.
+
+### Option 5 — the critique's counter-proposal (operational stations, six-part spine)
+
+1. Keep the six parts as the publication/proposal spine.
+2. Relocate ONLY disclosure and the note, enacting D35's order (both
+   tracks want this regardless).
+3. One page and one URL per station: opener + a `#checkpoint` return
+   anchor — no closer pages, no schema migration.
+4. Add the **navigation graph** to the manifest and generate explicit
+   entry/branch/join/checkpoint/continue links for both HTML and
+   companion notebooks — this, not the hierarchy, is what actually stops
+   a prediction reader from being marched into the causal chapter.
+5. Station-grouped custom sidebar (Quarto supports it without parts).
+6. Keep the name **Station** pending reader/publisher testing.
+7. Prototype-compare Options 1 and 5 at the two branch-heavy seams
+   (Stations 5 and 10) with target novices before any freeze reversal.
+
+## Revised recommendation (post-critique synthesis — Claude's, labeled as such)
+
+The two independent tracks agree on the destination — the station journey
+becomes the reader's primary experience — and disagree on whether the
+PUBLICATION HIERARCHY must change to deliver it. The critique demonstrated
+it does not have to yet, and that the T&F calendar punishes changing it now.
+
+**Recommendation: adopt Option 5 now; hold Option 1 as the tested
+end-state candidate.**
+
+- **Now (before the Aug 31 ToC freeze):** the two-lesson relocation, the
+  station navigation graph, sidebar grouping, checkpoint anchors, and the
+  boundary Next-links (Ch 4 → Station 1 → Ch 5). This is D38 if ruled: it
+  keeps every statement in the proposal true, captures most of the
+  pedagogical value, and none of it is thrown away if Option 1 wins later —
+  the navigation graph is prerequisite work for Option 1 anyway.
+- **After submission:** run the critique's comparison protocol (Options 1
+  vs 5 prototyped at Stations 5 and 10, five routes and the genre paths,
+  cold novices, wrong-route clicks and time-to-next-task measured). If
+  Option 1 wins with readers and the publisher, adopt it as the v3
+  architecture in coordination with T&F — a 12-studio ToC may well be the
+  stronger trade identity, but that is a decision to make WITH the
+  publisher, on evidence, not against the proposal calendar.
+- **Independent of the ruling:** completing the station kits (worked
+  examples, starter data, faded scaffolds — A4) matters more for the
+  book's promise than either hierarchy. Both tracks and the critique
+  agree on this.

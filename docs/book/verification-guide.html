@@ -580,6 +580,13 @@ ul.task-list li input[type="checkbox"] {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
     if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
+    if (cur === "book" && t !== "book") {
+      // D36: EN has diverged from the frozen PT/ES editions (new lessons and
+      // station pages have no counterparts), so route to that edition's
+      // index — never to a per-page path that may 404.
+      a.href = here.slice(0, here.indexOf("/" + cur + "/")) + "/" + t + "/index.html";
+      continue;
+    }
     a.href = here.replace("/" + cur + "/", "/" + t + "/");
   }
 })();

@@ -623,6 +623,13 @@ ul.task-list li input[type="checkbox"] {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
     if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
+    if (cur === "book" && t !== "book") {
+      // D36: EN has diverged from the frozen PT/ES editions (new lessons and
+      // station pages have no counterparts), so route to that edition's
+      // index — never to a per-page path that may 404.
+      a.href = here.slice(0, here.indexOf("/" + cur + "/")) + "/" + t + "/index.html";
+      continue;
+    }
     a.href = here.replace("/" + cur + "/", "/" + t + "/");
   }
 })();
@@ -674,80 +681,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-course-lab-notebooks" class="level2" data-number="B.4">
 <h2 data-number="B.4" class="anchored" data-anchor-id="the-course-lab-notebooks"><span class="header-section-number">B.4</span> The course lab notebooks</h2>
 <p>One lab per week, nb01–nb16, each derived from the chapters it teaches. These are the classroom counterparts of the book’s companion notebooks — richer simulations, SRL lead briefs, and session structure — and any of them opens in free Colab.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Course lab (opens in Colab)</th>
-<th>Derived from chapters</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb01_ai_arm_not_brain_student.ipynb" target="_blank">nb01 — Research in the age of AI: your arm, your RA, not your brain</a></td>
-<td>1–4, 24</td>
-</tr>
-<tr class="even">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb02_curiosity_to_problem_student.ipynb" target="_blank">nb02 — From curiosity to a research problem</a></td>
-<td>5, 6</td>
-</tr>
-<tr class="odd">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb03_research_builds_on_research_student.ipynb" target="_blank">nb03 — Research builds on research</a></td>
-<td>7, 8, 17</td>
-</tr>
-<tr class="even">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb04_anatomy_of_design_student.ipynb" target="_blank">nb04 — The anatomy of a research design</a></td>
-<td>9, 10, 16</td>
-</tr>
-<tr class="odd">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb05_observational_descriptive_student.ipynb" target="_blank">nb05 — Observational descriptive research</a></td>
-<td>11, 18, 19</td>
-</tr>
-<tr class="even">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb06_observational_causal_student.ipynb" target="_blank">nb06 — Observational causal research</a></td>
-<td>12</td>
-</tr>
-<tr class="odd">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb07_experimental_descriptive_student.ipynb" target="_blank">nb07 — Experimental descriptive research</a></td>
-<td>13</td>
-</tr>
-<tr class="even">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb08_prediction_student.ipynb" target="_blank">nb08 — Prediction: generalizing to unseen cases</a></td>
-<td>14</td>
-</tr>
-<tr class="odd">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb09_experimental_causal_student.ipynb" target="_blank">nb09 — Experimental causal research</a></td>
-<td>15</td>
-</tr>
-<tr class="even">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb10_attack_the_analysis_student.ipynb" target="_blank">nb10 — Share the research + attack the analysis</a></td>
-<td>20–23</td>
-</tr>
-<tr class="odd">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_criticism_lock_student.ipynb" target="_blank">nb11 — Poster criticism + final poster lock</a></td>
-<td>25–28</td>
-</tr>
-<tr class="even">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb12_poster_delivery_student.ipynb" target="_blank">nb12 — Poster delivery: pitches, uncertainty, difficult questions</a></td>
-<td>29, 30</td>
-</tr>
-<tr class="odd">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb13_conference_student.ipynb" target="_blank">nb13 — Final conference preparation, presentation + reflection</a></td>
-<td>31</td>
-</tr>
-<tr class="even">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb" target="_blank">nb14 — Async module: replication + red-team of a peer’s package</a></td>
-<td>32</td>
-</tr>
-<tr class="odd">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb15_poster_to_research_note_student.ipynb" target="_blank">nb15 — From poster to research note</a></td>
-<td>33, 34</td>
-</tr>
-<tr class="even">
-<td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb16_managing_ai_agents_student.ipynb" target="_blank">nb16 — Managing multiple AI agents + the final defense</a></td>
-<td>35–37</td>
-</tr>
-</tbody>
-</table>
+<p>Every lab is linked, with what it does, in the lesson-to-lab adoption table below — that table is generated from the course crosswalk, so it cannot drift from the book’s structure the way a hand-kept list can.</p>
 </section>
 <section id="adopting-or-adapting" class="level2" data-number="B.5">
 <h2 data-number="B.5" class="anchored" data-anchor-id="adopting-or-adapting"><span class="header-section-number">B.5</span> Adopting or adapting</h2>
