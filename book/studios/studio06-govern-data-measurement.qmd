@@ -1,18 +1,20 @@
 ---
-title: "Station 6: Govern data and measurement"
+title: "Studio 6: Govern data and measurement"
+aliases:
+  - /stations/station06-govern-data-measurement.html
 ---
 
 ::: {.callout-warning .review-pending title="Under development"}
-This station is part of a book in active development and has not yet
+This studio is part of a book in active development and has not yet
 been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station06_govern_data_measurement.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio06_govern_data_measurement.ipynb){target="_blank"}
 
 > **What you can defend when you leave.** Establish where your numbers came from and whether they measure what you say they measure.
 
-## What this station produces
+## What this studio produces
 
 Provenance documentation, a data-management record, your measurement specification, and a route-specific permission recheck.
 
@@ -21,13 +23,13 @@ attach the reason for the version. When later evidence changes it, you write
 the next version rather than editing the last one, because the sequence of
 changes is itself part of your research record.
 
-## Before you can work this station
+## Before you can work this studio
 
-This station assumes data have reached you, and the cold pilot found
+This studio assumes data have reached you, and the cold pilot found
 that nothing before it made that happen. Settle acquisition first, in
 writing, before the steps below.
 
-Your permission status from Station 4 decides your route.
+Your permission status from Studio 4 decides your route.
 
 - **Cleared or formal determination granted.** Name your sampling
   frame, how you will reach those units, and what you will do about
@@ -45,17 +47,18 @@ Your permission status from Station 4 decides your route.
 
 Whichever route you take, record where the data actually came from
 before you touch them. That record is the first row of the provenance
-documentation this station produces.
+documentation this studio produces.
 
-## The reading behind it
+## The lessons in this studio
 
-- [Ch. 19 — Data Provenance and Data Quality](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html)
-- [Ch. 20 — Measurement and Operationalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html)
+- [Lesson 19 — Data Provenance and Data Quality](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html)
+- [Lesson 20 — Measurement and Operationalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html)
 
-Read these before you work the station. The station is where you do the thing
-the lessons describe, on your own project.
+They follow this page. Read them in order, doing each lesson's **It is your
+turn** as you go, and then come back here: the studio is where those pieces
+become one artifact you can defend.
 
-## The practice
+## The practice {#checkpoint}
 
 1. Settle your acquisition route first, using the guidance above, and write down which route you took and why.
 2. Document provenance for every source: who produced it, how, when, and under what terms.
@@ -65,7 +68,7 @@ the lessons describe, on your own project.
 
 ## The four rails, here
 
-Four concerns cross every station in this book. At this station they take
+Four concerns cross every studio in this book. At this studio they take
 these specific forms.
 
 - **Ethics, permissions, and data exposure.** Data that arrived differently from the plan can carry permissions the plan did not cover.
@@ -98,5 +101,5 @@ No work at or after Station 4 proceeds past a not-authorized determination. This
 
 Open the workbook with the badge above. It walks these steps with a cell for
 each one, ends by writing your checkpoint version with its reason, and adds
-the rows this station contributes to your AI Research Ledger and your Research
+the rows this studio contributes to your AI Research Ledger and your Research
 Dossier.

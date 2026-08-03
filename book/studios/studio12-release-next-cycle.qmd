@@ -1,18 +1,20 @@
 ---
-title: "Station 12: Release and direct the next cycle"
+title: "Studio 12: Release and direct the next cycle"
+aliases:
+  - /stations/station12-release-next-cycle.html
 ---
 
 ::: {.callout-warning .review-pending title="Under development"}
-This station is part of a book in active development and has not yet
+This studio is part of a book in active development and has not yet
 been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station12_release_next_cycle.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio12_release_next_cycle.ipynb){target="_blank"}
 
 > **What you can defend when you leave.** Decide whether this work is ready to leave your hands, and say what the next study should be.
 
-## What this station produces
+## What this studio produces
 
 A release audit, your final dossier, an explicit stopping rule, and your next-study agenda.
 
@@ -21,16 +23,17 @@ attach the reason for the version. When later evidence changes it, you write
 the next version rather than editing the last one, because the sequence of
 changes is itself part of your research record.
 
-## The reading behind it
+## The lessons in this studio
 
-- [Ch. 37 — Managing Multiple AI Agents](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html)
-- [Ch. 38 — Conflicting Agents and Human Escalation](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html)
-- [Ch. 39 — Final Research and AI-Management Portfolio](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html)
+- [Lesson 37 — Managing Multiple AI Agents](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html)
+- [Lesson 38 — Conflicting Agents and Human Escalation](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html)
+- [Lesson 39 — Final Research and AI-Management Portfolio](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html)
 
-Read these before you work the station. The station is where you do the thing
-the lessons describe, on your own project.
+They follow this page. Read them in order, doing each lesson's **It is your
+turn** as you go, and then come back here: the studio is where those pieces
+become one artifact you can defend.
 
-## The practice
+## The practice {#checkpoint}
 
 1. Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants.
 2. Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history.
@@ -39,7 +42,7 @@ the lessons describe, on your own project.
 
 ## The four rails, here
 
-Four concerns cross every station in this book. At this station they take
+Four concerns cross every studio in this book. At this studio they take
 these specific forms.
 
 - **Ethics, permissions, and data exposure.** Release is the last point at which a permission problem can still be prevented.
@@ -72,5 +75,5 @@ No work at or after Station 4 proceeds past a not-authorized determination. This
 
 Open the workbook with the badge above. It walks these steps with a cell for
 each one, ends by writing your checkpoint version with its reason, and adds
-the rows this station contributes to your AI Research Ledger and your Research
+the rows this studio contributes to your AI Research Ledger and your Research
 Dossier.

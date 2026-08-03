@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
-"""build_station_pointers.py — every lesson names the station it feeds.
+"""build_station_pointers.py — every lesson names the studio it works inside.
 
-Cold-pilot finding (A1): the practice grain was undiscoverable. A solo reader
-met 39 lessons, each ending with "It is your turn", and nothing told them the
-twelve stations existed or which one their work fed into. The stations looked
-like a parallel book.
+Cold-pilot finding (A1): the practice grain was undiscoverable. D38 then made
+the twelve Studios the book's parts, so each lesson now sits INSIDE its
+studio. This keeps two generated blocks in sync across the 39 lessons:
 
-This inserts (and keeps in sync) one generated line at the top of each
-lesson's "It is your turn" section:
+  1. At the top of "It is your turn": a role-aware pointer —
+       core     -> "You are working inside Studio N"
+       branch   -> the same, plus its pathway/genre and the skim permission
+       optional -> the same, plus "work it when your project needs it"
+  2. At the end of the studio's LAST lesson: the checkpoint return —
+     back to the studio page's `#checkpoint` anchor to produce the artifact.
 
-    > **This work feeds [Station N: Title](...).** <one line on the checkpoint>
-
-Managed between HTML markers so it is rewritten, never duplicated.
+Managed between HTML markers so they are rewritten, never duplicated. (The
+marker strings keep the historical "station" token — they are machine-layer,
+invisible to readers, and changing them would churn 39 files for nothing.)
 
     .venv/bin/python scripts/build_station_pointers.py            # write
     .venv/bin/python scripts/build_station_pointers.py --check    # CI: fresh?
@@ -28,36 +31,76 @@ from book_manifest import active_lessons, load_architecture, require_lock  # noq
 
 BEGIN = "<!-- station-pointer:begin -->"
 END = "<!-- station-pointer:end -->"
+CBEGIN = "<!-- studio-continue:begin -->"
+CEND = "<!-- studio-continue:end -->"
 IYT_RE = re.compile(r"^## It is your turn\s*$", re.M)
 BLOCK_RE = re.compile(re.escape(BEGIN) + r".*?" + re.escape(END) + r"\n\n?", re.S)
+CBLOCK_RE = re.compile(r"\n*" + re.escape(CBEGIN) + r".*?" + re.escape(CEND) + r"\n?",
+                       re.S)
+
+ROUTE_WORDS = {
+    "observational-descriptive": "observational-descriptive",
+    "observational-causal": "observational-causal",
+    "experimental-descriptive": "experimental-descriptive",
+    "experimental-causal": "experimental-causal",
+    "prediction": "prediction",
+}
 
 
-def pointer(station: dict, n: int) -> str:
-    rel = f"../stations/station{n:02d}-{station['id']}.qmd"
-    return (f"{BEGIN}\n"
-            f"> **This work feeds [Station {n}: {station['title']}]({rel}).**\n"
-            f"> Keep what you write here; the station is where it joins the "
-            f"other lessons' pieces into one artifact you can defend.\n"
-            f"{END}\n\n")
+def pointer(lesson: dict, station: dict, n: int) -> str:
+    rel = f"../studios/studio{n:02d}-{station['id']}.qmd"
+    head = f"> **You are working inside [Studio {n}: {station['title']}]({rel}).**"
+    if lesson.get("role") == "branch" and lesson.get("route"):
+        tail = (f"> This lesson serves the **{ROUTE_WORDS[lesson['route']]}**\n"
+                f"> pathway. If your declared pathway is different, skim it and\n"
+                f"> work the lesson that matches; the studio page routes you.")
+    elif lesson.get("role") == "branch" and lesson.get("genre"):
+        tail = (f"> This lesson adapts your work to the **{lesson['genre']}**\n"
+                f"> format. Work the format your venue actually asks for; the\n"
+                f"> studio page routes you.")
+    elif lesson.get("role") == "optional":
+        tail = ("> This lesson is an optional overlay: work it when your\n"
+                "> project needs it, and skip it without guilt when it does not.")
+    else:
+        tail = ("> Keep what you write here; the studio is where it joins the\n"
+                "> other lessons' pieces into one artifact you can defend.")
+    return f"{BEGIN}\n{head}\n{tail}\n{END}\n\n"
+
+
+def continue_block(station: dict, n: int) -> str:
+    rel = f"../studios/studio{n:02d}-{station['id']}.qmd"
+    return (f"\n\n{CBEGIN}\n"
+            f"> **Checkpoint.** This was the last lesson of Studio {n}. Return\n"
+            f"> to [the studio's practice]({rel}#checkpoint) and produce its\n"
+            f"> versioned artifact before you move on.\n"
+            f"{CEND}\n")
 
 
 def render_all() -> dict[Path, str]:
     require_lock()
     arch = load_architecture()
     stations = {s["id"]: s for s in arch["stations"]}
+    lessons = active_lessons(arch)
+    last_in_station = {}
+    for l in lessons:                       # rank order -> last one wins
+        last_in_station[l["station"]] = l["id"]
     out: dict[Path, str] = {}
-    for lesson in active_lessons(arch):
+    for lesson in lessons:
         path = REPO / "book" / lesson["source"]
         text = path.read_text()
         st = stations[lesson["station"]]
+        n = st["rank"]
         text = BLOCK_RE.sub("", text)
+        text = CBLOCK_RE.sub("", text)
         m = IYT_RE.search(text)
         if not m:
             continue                      # lesson without an IYT section
         insert_at = m.end() + 1
         while insert_at < len(text) and text[insert_at] == "\n":
             insert_at += 1
-        text = text[:insert_at] + pointer(st, st["rank"]) + text[insert_at:]
+        text = (text[:insert_at] + pointer(lesson, st, n) + text[insert_at:])
+        if last_in_station[lesson["station"]] == lesson["id"]:
+            text = text.rstrip("\n") + continue_block(st, n)
         out[path] = text
     return out
 
@@ -74,12 +117,12 @@ def main() -> int:
                 path.write_text(content)
     if check:
         if stale:
-            print(f"✗ station pointers are STALE in {len(stale)} lesson(s): "
+            print(f"✗ studio pointers are STALE in {len(stale)} lesson(s): "
                   f"{', '.join(stale[:3])}… — run scripts/build_station_pointers.py")
             return 1
-        print(f"✓ station pointers are fresh ({len(rendered)} lessons)")
+        print(f"✓ studio pointers are fresh ({len(rendered)} lessons)")
         return 0
-    print(f"✓ station pointers written into {len(rendered)} lessons")
+    print(f"✓ studio pointers written into {len(rendered)} lessons")
     return 0
 
 

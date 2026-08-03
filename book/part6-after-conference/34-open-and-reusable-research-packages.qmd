@@ -165,8 +165,9 @@ executing it, not by reading a paragraph about executing it.
 ## It is your turn
 
 <!-- station-pointer:begin -->
-> **This work feeds [Station 11: Reproduce and package](../stations/station11-reproduce-and-package.qmd).**
-> Keep what you write here; the station is where it joins the other lessons' pieces into one artifact you can defend.
+> **You are working inside [Studio 11: Reproduce and package](../studios/studio11-reproduce-and-package.qmd).**
+> Keep what you write here; the studio is where it joins the
+> other lessons' pieces into one artifact you can defend.
 <!-- station-pointer:end -->
 
 *Your project already has a research note and a folder that runs; this step turns the
@@ -190,3 +191,9 @@ two into one capsule someone could pick up a year from now and reuse.*
 6. Log the packaging round in your AI Research Ledger, and verify at least one output
    with a named method from the [Verification Guide](../verification-guide.qmd). An AI
    reviewer may run the check with you; the decision to accept or reject stays yours.
+
+<!-- studio-continue:begin -->
+> **Checkpoint.** This was the last lesson of Studio 11. Return
+> to [the studio's practice](../studios/studio11-reproduce-and-package.qmd#checkpoint) and produce its
+> versioned artifact before you move on.
+<!-- studio-continue:end -->

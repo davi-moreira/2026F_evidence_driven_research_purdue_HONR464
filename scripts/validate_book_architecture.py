@@ -172,63 +172,63 @@ def check_architecture(arch) -> list[str]:
 
 
 def check_toc(arch) -> list[str]:
-    """The EN _quarto.yml chapter list must equal the manifest's active
-    lessons in rank order. Otherwise the TOC is a second, hand-maintained
-    ordering source that can silently disagree with identity (Phase-2
-    critique, migration step 5)."""
+    """The EN _quarto.yml chapters block must be byte-identical to what
+    scripts/build_book_toc.py renders from the manifest (D38: the TOC is a
+    generated projection — twelve studio parts in (studio rank, lesson rank)
+    order). Otherwise the TOC is a second, hand-maintained ordering source
+    that can silently disagree with identity (Phase-2 critique, step 5)."""
     sys.path.insert(0, str(REPO / "scripts"))
-    from book_manifest import active_lessons
-    toc_path = REPO / "book" / "_quarto.yml"
-    text = toc_path.read_text()
-    # only LESSON entries (part*/) participate; station pages live under
-    # stations/ and are generated from the manifest by build_station_pages.py
-    listed = re.findall(r"^\s*-\s+(part\d[\w-]*/[\w.-]+\.qmd)\s*$", text, re.M)
-    expected = [l["source"] for l in active_lessons(arch)]
-    if listed != expected:
-        missing = [x for x in expected if x not in listed]
-        extra = [x for x in listed if x not in expected]
-        detail = []
-        if missing:
-            detail.append(f"missing from the TOC: {missing}")
-        if extra:
-            detail.append(f"in the TOC but not an active lesson: {extra}")
-        if not detail:
-            detail.append("same files, different ORDER than manifest rank")
-        return [f"toc: book/_quarto.yml disagrees with the manifest — "
-                + "; ".join(detail)]
+    import build_book_toc
+    if (REPO / "book" / "_quarto.yml").read_text() != build_book_toc.render_file():
+        return ["toc: book/_quarto.yml disagrees with the manifest — run "
+                "scripts/build_book_toc.py"]
     return []
 
 
-def check_stations(arch) -> list[str]:
-    """Every manifest station needs authored content, a generated page, and a
-    workbook; and every station page must be listed in the TOC."""
+def check_station_specs(arch) -> list[str]:
+    """MANIFEST-level: every manifest station needs authored content in
+    BOOK_STATIONS.yml (the studio pages are built from it)."""
     p: list[str] = []
     spec_path = REPO / "planning" / "BOOK_STATIONS.yml"
     if not spec_path.exists():
         return ["stations: planning/BOOK_STATIONS.yml is missing"]
     spec = {s["id"]: s for s in yaml.safe_load(spec_path.read_text())["stations"]}
-    toc = (REPO / "book" / "_quarto.yml").read_text()
     for st in arch.get("stations", []):
-        sid, n = st["id"], st["rank"]
+        sid = st["id"]
         if sid not in spec:
             p.append(f"stations[{sid}]: no authored entry in BOOK_STATIONS.yml")
             continue
         for field in ("purpose", "produces", "steps", "rails", "revisit"):
             if not spec[sid].get(field):
                 p.append(f"stations[{sid}]: missing authored `{field}`")
-        page = REPO / "book" / "stations" / f"station{n:02d}-{sid}.qmd"
-        wb = (REPO / "notebooks" / "book" / "stations" /
-              f"station{n:02d}_{sid.replace('-', '_')}.ipynb")
+    return p
+
+
+def check_station_pages(arch) -> list[str]:
+    """PROJECTION-level: every studio's generated page + workbook exist at
+    the D38 paths (book/studios/, notebooks/book/studios/). Generated
+    artifacts must not withhold the lock, or the generators that fix them
+    could never run (the N2 deadlock)."""
+    p: list[str] = []
+    for st in arch.get("stations", []):
+        sid, n = st["id"], st["rank"]
+        page = REPO / "book" / "studios" / f"studio{n:02d}-{sid}.qmd"
+        wb = (REPO / "notebooks" / "book" / "studios" /
+              f"studio{n:02d}_{sid.replace('-', '_')}.ipynb")
         if not page.exists():
-            p.append(f"stations[{sid}]: page missing — run build_station_pages.py")
-        elif f"stations/station{n:02d}-{sid}.qmd" not in toc:
-            p.append(f"stations[{sid}]: page not listed in book/_quarto.yml")
+            p.append(f"studios[{sid}]: page missing — run build_station_pages.py")
         if not wb.exists():
-            p.append(f"stations[{sid}]: workbook missing — run build_station_pages.py")
-    extra = {f.name for f in (REPO / "book" / "stations").glob("*.qmd")} - {
-        f"station{st['rank']:02d}-{st['id']}.qmd" for st in arch.get("stations", [])}
+            p.append(f"studios[{sid}]: workbook missing — run build_station_pages.py")
+    studio_dir = REPO / "book" / "studios"
+    extra = ({f.name for f in studio_dir.glob("*.qmd")} if studio_dir.exists()
+             else set()) - {
+        f"studio{st['rank']:02d}-{st['id']}.qmd" for st in arch.get("stations", [])}
     for e in sorted(extra):
-        p.append(f"stations: ORPHAN page not in the manifest: book/stations/{e}")
+        p.append(f"studios: ORPHAN page not in the manifest: book/studios/{e}")
+    legacy = REPO / "book" / "stations"
+    if legacy.exists() and any(legacy.glob("*.qmd")):
+        p.append("studios: legacy book/stations/*.qmd still present — D38 "
+                 "renamed the pages to book/studios/ (aliases cover old URLs)")
     return p
 
 
@@ -463,8 +463,7 @@ def main() -> int:
     # could never run (deadlock found by the N2 activation fixture).
     manifest_problems = []
     manifest_problems += check_architecture(arch)
-    manifest_problems += check_toc(arch)
-    manifest_problems += check_stations(arch)
+    manifest_problems += check_station_specs(arch)
     manifest_problems += check_crosswalk(arch, cw)
     manifest_problems += check_schedule(cw)
     manifest_problems += check_assessments(arch, assess)
@@ -477,7 +476,11 @@ def main() -> int:
         LOCK.unlink(missing_ok=True)
         return 1
 
+    # PROJECTION checks: the TOC block and the studio pages are generated
+    # artifacts (D38) — stale ones fail the run but never withhold the lock.
     projection_problems = brief_agreement(arch, cw)
+    projection_problems += check_toc(arch)
+    projection_problems += check_station_pages(arch)
 
     LOCK.write_text(json.dumps({
         "validator_version": VALIDATOR_VERSION,

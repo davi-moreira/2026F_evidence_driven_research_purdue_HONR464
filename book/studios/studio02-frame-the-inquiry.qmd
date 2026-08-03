@@ -1,18 +1,20 @@
 ---
-title: "Station 2: Frame the inquiry"
+title: "Studio 2: Frame the inquiry"
+aliases:
+  - /stations/station02-frame-the-inquiry.html
 ---
 
 ::: {.callout-warning .review-pending title="Under development"}
-This station is part of a book in active development and has not yet
+This studio is part of a book in active development and has not yet
 been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station02_frame_the_inquiry.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio02_frame_the_inquiry.ipynb){target="_blank"}
 
 > **What you can defend when you leave.** Turn a curiosity into a question whose answer you could recognize, and say what kind of answer it would be.
 
-## What this station produces
+## What this studio produces
 
 An objective, your units, outcomes and conditions, your target and reach, and a provisional claim boundary.
 
@@ -21,15 +23,16 @@ attach the reason for the version. When later evidence changes it, you write
 the next version rather than editing the last one, because the sequence of
 changes is itself part of your research record.
 
-## The reading behind it
+## The lessons in this studio
 
-- [Ch. 5 — From Curiosity to a Research Problem](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html)
-- [Ch. 6 — Descriptive, Predictive, and Causal Questions](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html)
+- [Lesson 5 — From Curiosity to a Research Problem](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html)
+- [Lesson 6 — Descriptive, Predictive, and Causal Questions](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html)
 
-Read these before you work the station. The station is where you do the thing
-the lessons describe, on your own project.
+They follow this page. Read them in order, doing each lesson's **It is your
+turn** as you go, and then come back here: the studio is where those pieces
+become one artifact you can defend.
 
-## The practice
+## The practice {#checkpoint}
 
 1. State your objective in one sentence a stranger could repeat back.
 2. Name your units, your outcome, and the conditions you are comparing or describing.
@@ -38,17 +41,17 @@ the lessons describe, on your own project.
 
 ## The four rails, here
 
-Four concerns cross every station in this book. At this station they take
+Four concerns cross every studio in this book. At this studio they take
 these specific forms.
 
 - **Ethics, permissions, and data exposure.** Note whether answering this question requires people, and flag it now.
-- **Evidence, provenance, and reproducibility.** Nothing here is settled until Station 3 checks it against what is already known.
+- **Evidence, provenance, and reproducibility.** Nothing here is settled until Studio 3 checks it against what is already known.
 - **AI activity, verification, and human decisions.** If AI helped shape the question, the ledger records what you kept and what you rejected.
 - **Uncertainty, claim boundary, and revision history.** A question with no recognizable answer cannot carry uncertainty; fix the question first.
 
 ## What sends you back
 
-Station 3 almost always sends you back here. That is the design, not a setback.
+Studio 3 almost always sends you back here. That is the design, not a setback.
 
 ## How this checkpoint is assessed
 
@@ -67,5 +70,5 @@ Each row scores **0**, **1**, or **2**. **10 points total.**
 
 Open the workbook with the badge above. It walks these steps with a cell for
 each one, ends by writing your checkpoint version with its reason, and adds
-the rows this station contributes to your AI Research Ledger and your Research
+the rows this studio contributes to your AI Research Ledger and your Research
 Dossier.

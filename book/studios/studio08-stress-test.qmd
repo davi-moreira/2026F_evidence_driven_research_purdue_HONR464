@@ -1,18 +1,20 @@
 ---
-title: "Station 8: Stress-test and adjudicate"
+title: "Studio 8: Stress-test and adjudicate"
+aliases:
+  - /stations/station08-stress-test.html
 ---
 
 ::: {.callout-warning .review-pending title="Under development"}
-This station is part of a book in active development and has not yet
+This studio is part of a book in active development and has not yet
 been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station08_stress_test.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio08_stress_test.ipynb){target="_blank"}
 
 > **What you can defend when you leave.** Attack your own result the way a hostile reviewer would, and record what survived.
 
-## What this station produces
+## What this studio produces
 
 A pre-listed robustness grid, negative tests with their assumptions stated, diagnostics, an adversarial-review record, and your adjudication of what survived.
 
@@ -21,17 +23,18 @@ attach the reason for the version. When later evidence changes it, you write
 the next version rather than editing the last one, because the sequence of
 changes is itself part of your research record.
 
-## The reading behind it
+## The lessons in this studio
 
-- [Ch. 23 — Robustness and Sensitivity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/21-robustness-and-sensitivity.html)
-- [Ch. 24 — Diagnostics and Negative Tests](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/22-diagnostics-and-negative-tests.html)
-- [Ch. 25 — AI as Adversarial Reviewer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/23-ai-as-adversarial-reviewer.html)
-- [Ch. 26 — Recognizing False Confidence](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/24-recognizing-false-confidence.html)
+- [Lesson 23 — Robustness and Sensitivity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/21-robustness-and-sensitivity.html)
+- [Lesson 24 — Diagnostics and Negative Tests](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/22-diagnostics-and-negative-tests.html)
+- [Lesson 25 — AI as Adversarial Reviewer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/23-ai-as-adversarial-reviewer.html)
+- [Lesson 26 — Recognizing False Confidence](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/24-recognizing-false-confidence.html)
 
-Read these before you work the station. The station is where you do the thing
-the lessons describe, on your own project.
+They follow this page. Read them in order, doing each lesson's **It is your
+turn** as you go, and then come back here: the studio is where those pieces
+become one artifact you can defend.
 
-## The practice
+## The practice {#checkpoint}
 
 1. Pre-list your checks before you run any of them, and commit to reporting all of them.
 2. Run the robustness grid and report a span within each commensurable panel, never across panels.
@@ -41,7 +44,7 @@ the lessons describe, on your own project.
 
 ## The four rails, here
 
-Four concerns cross every station in this book. At this station they take
+Four concerns cross every studio in this book. At this studio they take
 these specific forms.
 
 - **Ethics, permissions, and data exposure.** Report the checks that hurt your finding as fully as the ones that helped.
@@ -51,7 +54,7 @@ these specific forms.
 
 ## What sends you back
 
-A finding that does not survive its own pre-listed checks returns to Station 5 or 7, not to the writing station.
+A finding that does not survive its own pre-listed checks returns to Studio 5 or 7, not to the writing studio.
 
 ## How this checkpoint is assessed
 
@@ -74,5 +77,5 @@ No work at or after Station 4 proceeds past a not-authorized determination. This
 
 Open the workbook with the badge above. It walks these steps with a cell for
 each one, ends by writing your checkpoint version with its reason, and adds
-the rows this station contributes to your AI Research Ledger and your Research
+the rows this studio contributes to your AI Research Ledger and your Research
 Dossier.

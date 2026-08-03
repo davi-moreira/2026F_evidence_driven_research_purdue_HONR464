@@ -1211,3 +1211,48 @@ examples, starter data, and faded scaffolds (A4); route/genre rubric addenda
 and exemplar pairs are unauthored (A6, and exemplars need real consented
 student work); Part VI's retitle; PT/ES remain frozen under D36 with their
 backlog; prediction's book-wide classification still needs Davi's ruling.
+
+## Decision 38: The Twelve Studios become the book — amended Option 1, "Studio" naming, the practice-first chapter template, real bibliography (2026-08-03)
+
+**Ruling (Davi).** Implement the structure loop's final recommendation
+(`planning/BOOK_STRUCTURE_OPTIONS.md`): the twelve practice units become the
+book's twelve navigational parts. Four modifications rule the implementation:
+
+1. **"Studio", not "Station."** The reader-facing word is **Studio**
+   everywhere (pages, pointers, preface, workbooks, proposal). The machine
+   layer keeps the immutable `station` ids and YAML keys — display is derived,
+   identity never moves (A10). Studio pages live at
+   `book/studios/studioNN-<id>.html`; the old `stations/stationNN-*.html`
+   URLs stay alive via per-page aliases.
+2. **The chapter template turns practice-first.** The standalone
+   "Recommended AI prompts" section is retired — every AI prompt attaches to
+   the exercise/practice step it serves inside "It is your turn". "The Colab
+   laboratory" section is removed; its companion-notebook introduction folds
+   into "It is your turn" (the section Davi prefers). **Worked examples must
+   come with data and evidence** — a seeded code block or named real dataset
+   generating the numbers the prose quotes, plus a citation to real published
+   material.
+3. **A real reference apparatus.** Chapters carry in-text citations to real,
+   independently retrieved published material (`book/references.bib`);
+   every entry is opened before it is cited; unverifiable candidates queue,
+   never ship.
+4. **The T&F proposal follows the book.** The filled proposal DOCX's ToC +
+   abstracts section is regenerated to the twelve-Studio structure; Davi's
+   manually reviewed sections before it are preserved untouched.
+
+**Mechanics shipped with this ruling:** `scripts/build_book_toc.py` generates
+the `chapters:` block of `book/_quarto.yml` from the manifest (the last
+hand-maintained ordering source closes); the TOC and studio pages are
+PROJECTION-level validator checks (stale ones fail the run but never withhold
+the lock — the N2 deadlock class); two lessons re-rank into their studio
+(`ai-disclosure` 310→262, `poster-to-note` 330→264 — the only two order moves,
+both enacting D35's dossier-first adjudication); `poster-to-note` becomes
+`role: core` retitled "From Dossier to Research Note" (url_path immutable);
+studio openers carry the `#checkpoint` anchor and each studio's last lesson
+routes the reader back to it; lesson pointers are role-aware (core / branch
+pathway or genre / optional overlay); the six former parts survive as
+non-navigational arcs on the "How this book is organized" front page
+(repurposed part1-overview.qmd, same URL). Display numbers 29–35 relabel;
+projections regenerate mechanically. PT/ES stay frozen (D36) and now also
+diverge structurally — the translation pass will regenerate their TOCs from
+the same manifest.

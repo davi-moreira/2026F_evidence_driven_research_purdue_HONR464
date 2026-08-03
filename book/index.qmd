@@ -34,14 +34,17 @@ through every verification step, collected in the
 a second model is a real auditor of the first, but the last decision is
 always human.
 
-The book has six parts: research when AI does "everything"; from curiosity
-to research design; the research pathways (observational and experimental,
-descriptive and causal, and prediction); producing credible evidence with
-AI; communicating and defending research; and research after the conference.
-Blair, Coppock and Humphreys' *Research Design in the Social Sciences*
-(RDSS, free at [book.declaredesign.org](https://book.declaredesign.org)) is
-the theory text that EDR|AI translates for the undergraduate audience; read
-the matching RDSS chapters whenever you want more depth.
+The book is built as **twelve studios** — govern the work, frame the
+inquiry, ground it in evidence, declare and diagnose, develop the pathway,
+and so on to the public release of a finished project. Each studio opens by
+naming the artifact you will produce, hands you its lessons, and brings you
+back to produce a dated, versioned checkpoint of that artifact. The page
+[How this book is organized](part1-research-with-ai/part1-overview.qmd)
+draws the whole road. Blair, Coppock and Humphreys' *Research Design in the
+Social Sciences* (RDSS, free at
+[book.declaredesign.org](https://book.declaredesign.org)) is the theory text
+that EDR|AI translates for the undergraduate audience; read the matching
+RDSS chapters whenever you want more depth.
 
 ## Why this book
 
@@ -73,25 +76,22 @@ hands the work back to you. The hands-on half lives in the chapter's
 Run the chapter's code there, work the AI prompts, and complete the closing
 **It is your turn** section without leaving the browser.
 
-The book has two grains, and knowing which one you are in makes it much
-easier to use.
+The book has two grains, and the table of contents holds them in one spine.
 
-**Lessons** are what you read. Each one takes a single research decision,
-works an example, and ends with an **It is your turn** section that applies
-it to your own project.
-
-**Stations** are what you do. There are twelve of them, gathered in their own
-part of this book, and each collects the lessons around one stretch of real
-work: govern the work, frame the inquiry, ground it in evidence, declare and
-diagnose, develop the pathway, and so on to release. A station is where the
-pieces you wrote in the lessons become one artifact you could defend, and
-each station produces a dated, numbered version of that artifact rather than
-a box you tick. When later evidence changes your mind, you write the next
+**Studios** are what you do. There are twelve, and they ARE the book's
+parts. Each studio opens with the artifact you will produce, and closes with
+a **checkpoint**: a dated, numbered version of that artifact rather than a
+box you tick. When later evidence changes your mind, you write the next
 version and say why. That record of changes is part of the research, not an
 admission of failure.
 
-The practical rhythm is: read a station's lessons, then work its station, then
-move on. If you are studying on your own, the lessons, the stations, the
+**Lessons** are what you read, inside each studio. Each one takes a single
+research decision, works an example, and ends with an **It is your turn**
+section that applies it to your own project.
+
+The practical rhythm is baked into the page order: read the studio's opener,
+work through its lessons, then return to the opener's checkpoint and produce
+the artifact. If you are studying on your own, the studios, the lessons, the
 companion notebooks, and the [Verification Guide](verification-guide.qmd) are
 the whole path, at your own pace. Bring the curiosity; the book supplies the
 discipline.
@@ -112,7 +112,7 @@ then treat the prompt as a checklist of what a good answer would have to
 contain. You lose the practice of interrogating a tool; you lose none of the
 research method.
 
-**A place to keep your work.** One folder, backed up. Station 1 makes you
+**A place to keep your work.** One folder, backed up. Studio 1 makes you
 decide where.
 
 **What you do not need:** a course, an instructor, a subscription, or

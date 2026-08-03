@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
-"""build_station_pages.py — the 12 practice-station pages + workbooks (D35 §3).
+"""build_station_pages.py — the 12 Studio opener pages + workbooks (D38).
 
-Two grains: lessons are reading units, stations are PRACTICE units. This
-generator writes one page per station into `book/stations/` and one workbook
-notebook into `notebooks/book/stations/`, from:
+D38 made the twelve Studios the book's twelve parts: each studio's page OPENS
+its part (its lessons follow it in the TOC) and carries the `#checkpoint`
+anchor the last lesson routes the reader back to. Reader-facing vocabulary is
+"Studio" (Davi's D38 ruling); the machine layer keeps the immutable station
+ids. This generator writes one page per studio into `book/studios/` and one
+workbook notebook into `notebooks/book/studios/`, from:
 
   - planning/BOOK_ARCHITECTURE.yml — station identity, rank, checkpoint ids,
-    and which lessons belong to the station (never restated by hand)
+    and which lessons belong to the studio (never restated by hand)
   - planning/BOOK_STATIONS.yml — the authored practice content
 
-Checkpoints are VERSIONED, not locked passes (D35): every station page says so
+Old `stations/stationNN-*.html` URLs stay alive through per-page aliases.
+Checkpoints are VERSIONED, not locked passes (D35): every studio page says so
 and every workbook records a version with its reason.
 
     .venv/bin/python scripts/build_station_pages.py            # write
@@ -30,11 +34,11 @@ from book_manifest import (active_lessons, load_architecture,  # noqa: E402
 
 STATIONS_YML = REPO / "planning" / "BOOK_STATIONS.yml"
 ASSESS_YML = REPO / "planning" / "BOOK_ASSESSMENTS.yml"
-OUT_DIR = REPO / "book" / "stations"
-NB_DIR = REPO / "notebooks" / "book" / "stations"
+OUT_DIR = REPO / "book" / "studios"
+NB_DIR = REPO / "notebooks" / "book" / "studios"
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
 COLAB = ("https://colab.research.google.com/github/davi-moreira/"
-         "2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations")
+         "2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios")
 
 RAILS = {
     "ethics": "Ethics, permissions, and data exposure",
@@ -44,7 +48,7 @@ RAILS = {
 }
 
 BANNER = ('::: {.callout-warning .review-pending title="Under development"}\n'
-          "This station is part of a book in active development and has not yet\n"
+          "This studio is part of a book in active development and has not yet\n"
           "been through the author's review. Content may change as the review\n"
           "advances.\n"
           ":::\n")
@@ -74,7 +78,7 @@ def station_page(st: dict, spec: dict, lessons: list[dict], n: int,
                  rubric: dict | None = None) -> str:
     cps = ", ".join(f"`{c['id']}`" for c in st["checkpoints"])
     reading = "\n".join(
-        f"- [Ch. {l['display']} — {l['title']}]({SITE}/book/{l['url_path']})"
+        f"- [Lesson {l['display']} — {l['title']}]({SITE}/book/{l['url_path']})"
         for l in lessons)
     steps = "\n".join(f"{i}. {s}" for i, s in enumerate(spec["steps"], 1))
     rails = "\n".join(f"- **{RAILS[k]}.** {v}" for k, v in spec["rails"].items()
@@ -83,19 +87,21 @@ def station_page(st: dict, spec: dict, lessons: list[dict], n: int,
     route_block = (f"## Choosing your pathway\n\n{spec['route_guide']}\n"
                    if spec.get("route_guide") else "")
     rubric_block = rubric_md(rubric)
-    acq_block = (f"## Before you can work this station\n\n"
+    acq_block = (f"## Before you can work this studio\n\n"
                  f"{spec['acquisition_note']}\n"
                  if spec.get("acquisition_note") else "")
     return f"""---
-title: "Station {n}: {st['title']}"
+title: "Studio {n}: {st['title']}"
+aliases:
+  - /stations/station{n:02d}-{slug}.html
 ---
 
 {BANNER}
-[![](https://colab.research.google.com/assets/colab-badge.svg){{fig-alt="Open In Colab"}}]({COLAB}/station{n:02d}_{slug.replace('-', '_')}.ipynb){{target="_blank"}}
+[![](https://colab.research.google.com/assets/colab-badge.svg){{fig-alt="Open In Colab"}}]({COLAB}/studio{n:02d}_{slug.replace('-', '_')}.ipynb){{target="_blank"}}
 
 > **What you can defend when you leave.** {spec['purpose']}
 
-## What this station produces
+## What this studio produces
 
 {spec['produces']}
 
@@ -104,20 +110,21 @@ attach the reason for the version. When later evidence changes it, you write
 the next version rather than editing the last one, because the sequence of
 changes is itself part of your research record.
 
-{route_block}{acq_block}## The reading behind it
+{route_block}{acq_block}## The lessons in this studio
 
 {reading}
 
-Read these before you work the station. The station is where you do the thing
-the lessons describe, on your own project.
+They follow this page. Read them in order, doing each lesson's **It is your
+turn** as you go, and then come back here: the studio is where those pieces
+become one artifact you can defend.
 
-## The practice
+## The practice {{#checkpoint}}
 
 {steps}
 
 ## The four rails, here
 
-Four concerns cross every station in this book. At this station they take
+Four concerns cross every studio in this book. At this studio they take
 these specific forms.
 
 {rails}
@@ -132,7 +139,7 @@ these specific forms.
 
 Open the workbook with the badge above. It walks these steps with a cell for
 each one, ends by writing your checkpoint version with its reason, and adds
-the rows this station contributes to your AI Research Ledger and your Research
+the rows this studio contributes to your AI Research Ledger and your Research
 Dossier.
 """
 
@@ -141,9 +148,9 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
     def md(i, s):
         return {"cell_type": "markdown", "id": f"m{i:03d}", "metadata": {},
                 "source": s.splitlines(keepends=True)}
-    cells = [md(0, f"# Station {n}: {st['title']}\n\n"
+    cells = [md(0, f"# Studio {n}: {st['title']}\n\n"
                    f"**What you can defend when you leave.** {spec['purpose']}\n\n"
-                   f"**This station produces.** {spec['produces']}\n\n"
+                   f"**This studio produces.** {spec['produces']}\n\n"
                    f"A checkpoint is a *version*, not a pass. Date it, number it, "
                    f"and write why this version exists.\n")]
     i = 1
@@ -153,7 +160,7 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
                            f"cell and write your answer here.\n")); i += 1
     cells.append({"cell_type": "code", "id": "c001", "metadata": {},
                   "execution_count": None, "outputs": [],
-                  "source": ["# Scratch space — any code this station's steps need.\n"]})
+                  "source": ["# Scratch space — any code this studio's steps need.\n"]})
     cps = ", ".join(c["id"] for c in st["checkpoints"])
     cells.append(md(i, f"## Write your checkpoint version\n\n"
                        f"Checkpoint: `{cps}`\n\n"
@@ -165,7 +172,7 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
     i += 1
     if rubric:
         cells.append(md(i, rubric_md(rubric))); i += 1
-    cells.append(md(i, "## Before you leave\n\nAdd this station's rows to your "
+    cells.append(md(i, "## Before you leave\n\nAdd this studio's rows to your "
                       "**AI Research Ledger** — task, tool, prompt, output "
                       "summary, decision, verification method, remaining "
                       "concern, and you as the responsible researcher — and "
@@ -201,9 +208,9 @@ def render_all() -> dict[Path, str]:
         mine = [l for l in lessons if l["station"] == st["id"]]
         slug = st["id"].replace("-", "_")
         rb = rubric_by_station.get(st["id"])
-        out[OUT_DIR / f"station{n:02d}-{st['id']}.qmd"] = station_page(
+        out[OUT_DIR / f"studio{n:02d}-{st['id']}.qmd"] = station_page(
             st, spec, mine, n, rb)
-        out[NB_DIR / f"station{n:02d}_{slug}.ipynb"] = json.dumps(
+        out[NB_DIR / f"studio{n:02d}_{slug}.ipynb"] = json.dumps(
             workbook(st, spec, n, rb), ensure_ascii=False, indent=1) + "\n"
     return out
 

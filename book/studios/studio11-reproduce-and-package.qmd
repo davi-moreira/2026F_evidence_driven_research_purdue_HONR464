@@ -1,18 +1,20 @@
 ---
-title: "Station 11: Reproduce and package"
+title: "Studio 11: Reproduce and package"
+aliases:
+  - /stations/station11-reproduce-and-package.html
 ---
 
 ::: {.callout-warning .review-pending title="Under development"}
-This station is part of a book in active development and has not yet
+This studio is part of a book in active development and has not yet
 been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station11_reproduce_and_package.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio11_reproduce_and_package.ipynb){target="_blank"}
 
 > **What you can defend when you leave.** Prove that someone who is not you can obtain your result from your materials.
 
-## What this station produces
+## What this studio produces
 
 An independent cold-run record and a reusable research package.
 
@@ -21,15 +23,16 @@ attach the reason for the version. When later evidence changes it, you write
 the next version rather than editing the last one, because the sequence of
 changes is itself part of your research record.
 
-## The reading behind it
+## The lessons in this studio
 
-- [Ch. 34 — Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html)
-- [Ch. 36 — Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html)
+- [Lesson 35 — Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html)
+- [Lesson 36 — Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html)
 
-Read these before you work the station. The station is where you do the thing
-the lessons describe, on your own project.
+They follow this page. Read them in order, doing each lesson's **It is your
+turn** as you go, and then come back here: the studio is where those pieces
+become one artifact you can defend.
 
-## The practice
+## The practice {#checkpoint}
 
 1. Run your own package cold, from a clean environment, following only your written instructions.
 2. Have someone else run it without your help, and log every place they had to ask you a question.
@@ -38,7 +41,7 @@ the lessons describe, on your own project.
 
 ## The four rails, here
 
-Four concerns cross every station in this book. At this station they take
+Four concerns cross every studio in this book. At this studio they take
 these specific forms.
 
 - **Ethics, permissions, and data exposure.** What can be shared is set by your permissions, and the package says so explicitly.
@@ -71,5 +74,5 @@ No work at or after Station 4 proceeds past a not-authorized determination. This
 
 Open the workbook with the badge above. It walks these steps with a cell for
 each one, ends by writing your checkpoint version with its reason, and adds
-the rows this station contributes to your AI Research Ledger and your Research
+the rows this studio contributes to your AI Research Ledger and your Research
 Dossier.

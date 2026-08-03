@@ -1,18 +1,20 @@
 ---
-title: "Station 9: Write, bound, and disclose"
+title: "Studio 9: Write, bound, and disclose"
+aliases:
+  - /stations/station09-write-bound-disclose.html
 ---
 
 ::: {.callout-warning .review-pending title="Under development"}
-This station is part of a book in active development and has not yet
+This studio is part of a book in active development and has not yet
 been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station09_write_bound_disclose.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio09_write_bound_disclose.ipynb){target="_blank"}
 
 > **What you can defend when you leave.** Write the claim you can defend, bounded by what your evidence supports, with your AI use disclosed.
 
-## What this station produces
+## What this studio produces
 
 A stand-alone research note or report draft, a claim-to-evidence table, and your AI disclosure statement.
 
@@ -21,17 +23,18 @@ attach the reason for the version. When later evidence changes it, you write
 the next version rather than editing the last one, because the sequence of
 changes is itself part of your research record.
 
-## The reading behind it
+## The lessons in this studio
 
-- [Ch. 27 — From Results to Claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html)
-- [Ch. 28 — Claim–Evidence Tables](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html)
-- [Ch. 33 — AI Disclosure and Research Integrity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html)
-- [Ch. 35 — From Poster to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html)
+- [Lesson 27 — From Results to Claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html)
+- [Lesson 28 — Claim–Evidence Tables](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html)
+- [Lesson 29 — AI Disclosure and Research Integrity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html)
+- [Lesson 30 — From Poster to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html)
 
-Read these before you work the station. The station is where you do the thing
-the lessons describe, on your own project.
+They follow this page. Read them in order, doing each lesson's **It is your
+turn** as you go, and then come back here: the studio is where those pieces
+become one artifact you can defend.
 
-## The practice
+## The practice {#checkpoint}
 
 1. Write your claim as one sentence, with its boundary attached in the same sentence.
 2. Build the claim-to-evidence table: every claim, the output that supports it, and the check that verified it.
@@ -40,7 +43,7 @@ the lessons describe, on your own project.
 
 ## The four rails, here
 
-Four concerns cross every station in this book. At this station they take
+Four concerns cross every studio in this book. At this studio they take
 these specific forms.
 
 - **Ethics, permissions, and data exposure.** Disclosure includes what you sent to tools, not only what they produced.
@@ -50,7 +53,7 @@ these specific forms.
 
 ## What sends you back
 
-A claim you cannot fit in the table is a claim to cut or a check to run, and both send you back a station.
+A claim you cannot fit in the table is a claim to cut or a check to run, and both send you back a studio.
 
 ## How this checkpoint is assessed
 
@@ -73,5 +76,5 @@ No work at or after Station 4 proceeds past a not-authorized determination. This
 
 Open the workbook with the badge above. It walks these steps with a cell for
 each one, ends by writing your checkpoint version with its reason, and adds
-the rows this station contributes to your AI Research Ledger and your Research
+the rows this studio contributes to your AI Research Ledger and your Research
 Dossier.

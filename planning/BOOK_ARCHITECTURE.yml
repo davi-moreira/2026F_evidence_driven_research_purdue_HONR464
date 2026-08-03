@@ -310,11 +310,13 @@ lessons:
      source: part5-communicating/30-difficult-questions-and-uncertainty.qmd,
      companion: ch30_difficult_questions_and_uncertainty.ipynb,
      url_path: part5-communicating/30-difficult-questions-and-uncertainty.html}
-  - {id: ai-disclosure,             state: active, rank: 310, part: part5,
+  - {id: ai-disclosure,             state: active, rank: 262, part: part5,
      station: write-bound-disclose, role: core,
      source: part5-communicating/31-ai-disclosure-and-research-integrity.qmd,
      companion: ch31_ai_disclosure_and_research_integrity.ipynb,
      url_path: part5-communicating/31-ai-disclosure-and-research-integrity.html}
+     # D38 re-rank (310 -> 262): disclosure is written WITH the claims, inside
+     # studio write-bound-disclose, before the genre-adaptation studio
 
   # ---- Part VI · Stations write-bound-disclose / reproduce / release ------
   - {id: replication-reproduction,  state: active, rank: 320, part: part6,
@@ -322,12 +324,14 @@ lessons:
      source: part6-after-conference/32-replication-and-reproduction.qmd,
      companion: ch32_replication_and_reproduction.ipynb,
      url_path: part6-after-conference/32-replication-and-reproduction.html}
-  - {id: poster-to-note,            state: active, rank: 330, part: part6,
-     station: write-bound-disclose, role: branch, genre: note,
+  - {id: poster-to-note,            state: active, rank: 264, part: part6,
+     station: write-bound-disclose, role: core,
      source: part6-after-conference/33-from-poster-to-research-note.qmd,
      companion: ch33_from_poster_to_research_note.ipynb,
      url_path: part6-after-conference/33-from-poster-to-research-note.html}
-     # Phase-4 rewrite: dossier-to-note (the poster-first spine retires)
+     # D38: the research NOTE is studio write-bound-disclose's CORE artifact
+     # (D35 adjudication) — role core, re-ranked 330 -> 264 into its studio;
+     # retitled "From Dossier to Research Note" (url_path immutable, A10)
   - {id: research-packages,         state: active, rank: 340, part: part6,
      station: reproduce-and-package, role: core,
      source: part6-after-conference/34-open-and-reusable-research-packages.qmd,

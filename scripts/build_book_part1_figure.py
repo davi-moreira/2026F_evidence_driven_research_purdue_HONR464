@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""build_book_part1_figure.py — the Part I overview figure (D27).
+"""build_book_part1_figure.py — the book-organization figure (D27, D38).
 
-Replaces the retired mermaid flowchart with a designed, monochrome figure in
-the book cover's aesthetic: the four Part I chapters chained inside a Part I
-frame, and the Part II–VI road beneath. Localized per edition, written to
+A designed, monochrome figure in the book cover's aesthetic: the four
+operating-rule lessons chained inside the Studio 1 frame, and the road of
+Studios 2–12 beneath. Localized per edition, written to
 
     book/images/part1_arc.png   book-pt/images/...   book-es/images/...
+
+(The filename keeps its historical name; the page that embeds it is the
+"How this book is organized" front page.) Frozen editions (D36) are skipped.
 
 Rerun after editing the labels here:
     .venv/bin/python scripts/build_book_part1_figure.py
@@ -24,54 +27,59 @@ INK, SOFT, FILL = "#1a1a19", "#8a8a86", "#f4f4f3"
 
 L = {
     "book": {
-        "container": "PART I  ·  Research when AI does “everything”",
+        "container": "STUDIO 1  ·  Govern the work — the operating rules",
         "chapters": [
-            ("Ch. 1 · The principle", "AI is your arm,\nnot your brain"),
-            ("Ch. 2 · Your role", "the research\ndirector"),
-            ("Ch. 3 · The protocol", "SDIIVDD, the loop of\nevery delegation"),
-            ("Ch. 4 · The ownership", "your name\non the claim"),
+            ("Lesson 1 · The principle", "AI is your arm,\nnot your brain"),
+            ("Lesson 2 · Your role", "the research\ndirector"),
+            ("Lesson 3 · The protocol", "SDIIVDD, the loop of\nevery delegation"),
+            ("Lesson 4 · The ownership", "your name\non the claim"),
         ],
         "parts": [
-            ("PART II", "From curiosity to\nresearch design"),
-            ("PART III", "Research\npathways"),
-            ("PART IV", "Credible evidence\nwith AI"),
-            ("PART V", "Communicating and\ndefending research"),
-            ("PART VI", "Research after\nthe conference"),
+            ("STUDIOS 2–4", "frame the question,\nground it, declare it"),
+            ("STUDIOS 5–6", "develop the pathway,\ngovern the data"),
+            ("STUDIOS 7–8", "first analysis,\nstress-test it"),
+            ("STUDIOS 9–10", "write and bound,\nadapt and defend"),
+            ("STUDIOS 11–12", "reproduce, package,\nrelease"),
         ],
     },
     "book-pt": {
-        "container": "PARTE I  ·  Pesquisa quando a IA faz “tudo”",
+        "container": "ESTÚDIO 1  ·  Governar o trabalho — as regras de operação",
         "chapters": [
-            ("Cap. 1 · O princípio", "a IA é o seu braço,\nnão o seu cérebro"),
-            ("Cap. 2 · O seu papel", "quem dirige\na pesquisa"),
-            ("Cap. 3 · O protocolo", "SDIIVDD, o ciclo de\ncada delegação"),
-            ("Cap. 4 · A propriedade", "o seu nome\nna alegação"),
+            ("Lição 1 · O princípio", "a IA é o seu braço,\nnão o seu cérebro"),
+            ("Lição 2 · O seu papel", "quem dirige\na pesquisa"),
+            ("Lição 3 · O protocolo", "SDIIVDD, o ciclo de\ncada delegação"),
+            ("Lição 4 · A propriedade", "o seu nome\nna alegação"),
         ],
         "parts": [
-            ("PARTE II", "Da curiosidade ao\ndesenho de pesquisa"),
-            ("PARTE III", "Trilhas de\npesquisa"),
-            ("PARTE IV", "Evidência crível\ncom IA"),
-            ("PARTE V", "Comunicar e defender\na pesquisa"),
-            ("PARTE VI", "A pesquisa depois\nda conferência"),
+            ("ESTÚDIOS 2–4", "formular a pergunta,\nfundamentar, declarar"),
+            ("ESTÚDIOS 5–6", "desenvolver a trilha,\ngovernar os dados"),
+            ("ESTÚDIOS 7–8", "primeira análise,\nteste de estresse"),
+            ("ESTÚDIOS 9–10", "escrever e delimitar,\nadaptar e defender"),
+            ("ESTÚDIOS 11–12", "reproduzir, empacotar,\nliberar"),
         ],
     },
     "book-es": {
-        "container": "PARTE I  ·  Investigar cuando la IA lo hace “todo”",
+        "container": "ESTUDIO 1  ·  Gobernar el trabajo — las reglas de operación",
         "chapters": [
-            ("Cap. 1 · El principio", "la IA es tu brazo,\nno tu cerebro"),
-            ("Cap. 2 · Tu papel", "quien dirige la\ninvestigación"),
-            ("Cap. 3 · El protocolo", "SDIIVDD, el ciclo de\ncada delegación"),
-            ("Cap. 4 · La propiedad", "tu nombre en\nla afirmación"),
+            ("Lección 1 · El principio", "la IA es tu brazo,\nno tu cerebro"),
+            ("Lección 2 · Tu papel", "quien dirige la\ninvestigación"),
+            ("Lección 3 · El protocolo", "SDIIVDD, el ciclo de\ncada delegación"),
+            ("Lección 4 · La propiedad", "tu nombre en\nla afirmación"),
         ],
         "parts": [
-            ("PARTE II", "De la curiosidad al\ndiseño de investigación"),
-            ("PARTE III", "Rutas de\ninvestigación"),
-            ("PARTE IV", "Evidencia creíble\ncon IA"),
-            ("PARTE V", "Comunicar y defender\nla investigación"),
-            ("PARTE VI", "La investigación\ntras la conferencia"),
+            ("ESTUDIOS 2–4", "formular la pregunta,\nfundamentar, declarar"),
+            ("ESTUDIOS 5–6", "desarrollar la ruta,\ngobernar los datos"),
+            ("ESTUDIOS 7–8", "primer análisis,\nprueba de estrés"),
+            ("ESTUDIOS 9–10", "escribir y delimitar,\nadaptar y defender"),
+            ("ESTUDIOS 11–12", "reproducir, empaquetar,\nliberar"),
         ],
     },
 }
+
+# D36: frozen editions are never regenerated; their figures stay at the
+# snapshot. The labels above are kept current so the translation pass can
+# simply re-run this script with the freeze lifted.
+ACTIVE_EDITIONS = ("book",)
 
 
 def box(ax, cx, cy, w, h, fc, ec, lw=1.1, r=0.018):
@@ -128,6 +136,9 @@ def build(strings: dict, out: Path) -> None:
 
 def main() -> None:
     for edition, strings in L.items():
+        if edition not in ACTIVE_EDITIONS:
+            print(f"— {edition}: frozen (D36), skipped")
+            continue
         out = REPO / edition / "images" / "part1_arc.png"
         out.parent.mkdir(parents=True, exist_ok=True)
         build(strings, out)

@@ -1,18 +1,20 @@
 ---
-title: "Station 5: Develop the pathway"
+title: "Studio 5: Develop the pathway"
+aliases:
+  - /stations/station05-develop-the-pathway.html
 ---
 
 ::: {.callout-warning .review-pending title="Under development"}
-This station is part of a book in active development and has not yet
+This studio is part of a book in active development and has not yet
 been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/stations/station05_develop_the_pathway.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio05_develop_the_pathway.ipynb){target="_blank"}
 
 > **What you can defend when you leave.** Commit to the research pathway your question and your licence actually support, and say what that pathway can and cannot establish.
 
-## What this station produces
+## What this studio produces
 
 Research Contract v1: objective by target and reach by data strategy by warrant, with the pathway declared and its limits written before any result exists.
 
@@ -43,19 +45,20 @@ becomes "causal, currently unidentified", never quietly descriptive.
 If your project combines pieces of several rows, read the complex-designs
 lesson as an overlay after you have declared your primary pathway.
 
-## The reading behind it
+## The lessons in this studio
 
-- [Ch. 13 — Observational Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/11-observational-descriptive-research.html)
-- [Ch. 14 — Observational Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/12-observational-causal-research.html)
-- [Ch. 15 — Experimental Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/13-experimental-descriptive-research.html)
-- [Ch. 16 — Prediction and Generalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/14-prediction-and-generalization.html)
-- [Ch. 17 — Experimental Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/15-experimental-causal-research.html)
-- [Ch. 18 — Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html)
+- [Lesson 13 — Observational Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/11-observational-descriptive-research.html)
+- [Lesson 14 — Observational Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/12-observational-causal-research.html)
+- [Lesson 15 — Experimental Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/13-experimental-descriptive-research.html)
+- [Lesson 16 — Prediction and Generalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/14-prediction-and-generalization.html)
+- [Lesson 17 — Experimental Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/15-experimental-causal-research.html)
+- [Lesson 18 — Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html)
 
-Read these before you work the station. The station is where you do the thing
-the lessons describe, on your own project.
+They follow this page. Read them in order, doing each lesson's **It is your
+turn** as you go, and then come back here: the studio is where those pieces
+become one artifact you can defend.
 
-## The practice
+## The practice {#checkpoint}
 
 1. Use the route guide above to choose your pathway, then read that lesson and at least one that does not fit, so you can say why yours does.
 2. Declare your pathway and write the crossing that licenses it: what makes your comparison mean what you claim.
@@ -64,7 +67,7 @@ the lessons describe, on your own project.
 
 ## The four rails, here
 
-Four concerns cross every station in this book. At this station they take
+Four concerns cross every studio in this book. At this studio they take
 these specific forms.
 
 - **Ethics, permissions, and data exposure.** A change of pathway can change your permission status; recheck rather than assume.
@@ -97,5 +100,5 @@ No work at or after Station 4 proceeds past a not-authorized determination. This
 
 Open the workbook with the badge above. It walks these steps with a cell for
 each one, ends by writing your checkpoint version with its reason, and adds
-the rows this station contributes to your AI Research Ledger and your Research
+the rows this studio contributes to your AI Research Ledger and your Research
 Dossier.

@@ -172,8 +172,9 @@ Verify the number, not the tidy interval beside it.
 ## It is your turn
 
 <!-- station-pointer:begin -->
-> **This work feeds [Station 5: Develop the pathway](../stations/station05-develop-the-pathway.qmd).**
-> Keep what you write here; the station is where it joins the other lessons' pieces into one artifact you can defend.
+> **You are working inside [Studio 5: Develop the pathway](../studios/studio05-develop-the-pathway.qmd).**
+> This lesson is an optional overlay: work it when your
+> project needs it, and skip it without guilt when it does not.
 <!-- station-pointer:end -->
 
 *You have now walked all four pathways. This step decides whether your own project
@@ -201,3 +202,9 @@ needs more than one moving piece, and makes you justify the answer either way.*
    piece, run the whole thing many times, and watch the variance shrink while the
    bias sits exactly where you put it. An AI reviewer may run the check with you;
    the decision to accept or reject stays yours.
+
+<!-- studio-continue:begin -->
+> **Checkpoint.** This was the last lesson of Studio 5. Return
+> to [the studio's practice](../studios/studio05-develop-the-pathway.qmd#checkpoint) and produce its
+> versioned artifact before you move on.
+<!-- studio-continue:end -->

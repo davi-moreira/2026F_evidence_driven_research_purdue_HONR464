@@ -44,13 +44,13 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 | IV | 26 | Recognizing False Confidence | nb10 |
 | V — Communicating and defending research | 27 | From Results to Claims | nb11 |
 | V | 28 | Claim–Evidence Tables | nb11 |
-| V | 29 | Research Posters | nb11 |
-| V | 30 | Poster Criticism | nb11 |
-| V | 31 | Research Pitches | nb12 |
-| V | 32 | Difficult Questions and Uncertainty | nb12 |
-| V | 33 | AI Disclosure and Research Integrity | nb13 |
-| VI — Research after the conference | 34 | Replication and Reproduction | nb14 |
-| VI | 35 | From Poster to Research Note | nb15 |
+| V | 29 | AI Disclosure and Research Integrity | nb13 |
+| VI — Research after the conference | 30 | From Poster to Research Note | nb15 |
+| V — Communicating and defending research | 31 | Research Posters | nb11 |
+| V | 32 | Poster Criticism | nb11 |
+| V | 33 | Research Pitches | nb12 |
+| V | 34 | Difficult Questions and Uncertainty | nb12 |
+| VI — Research after the conference | 35 | Replication and Reproduction | nb14 |
 | VI | 36 | Open and Reusable Research Packages | nb15 |
 | VI | 37 | Managing Multiple AI Agents | nb16 |
 | VI | 38 | Conflicting Agents and Human Escalation | nb16 |
