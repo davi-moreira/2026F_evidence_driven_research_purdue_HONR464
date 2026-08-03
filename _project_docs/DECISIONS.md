@@ -1256,3 +1256,18 @@ non-navigational arcs on the "How this book is organized" front page
 projections regenerate mechanically. PT/ES stay frozen (D36) and now also
 diverge structurally — the translation pass will regenerate their TOCs from
 the same manifest.
+
+**D38 implementation record (2026-08-03).** All four parts shipped:
+(A) the Studio migration — generated TOC, `book/studios/` with aliases,
+`#checkpoint` anchors, role-aware pointers, two re-ranks, ch33 core;
+(B) the practice-first template across all 39 chapters — prompts attached to
+their IYT steps (mapping from a Codex partner run; 3 duplicates dropped),
+"The Colab laboratory" folded into "It is your turn"; (C) 108 verified
+citations from 67 new bibliography entries, each independently resolved
+before inclusion (93 direct, 14 via Crossref, Belmont via archival copies);
+(D) 39/39 worked examples now carry seeded data AND published evidence, with
+`DATA_PENDING`/`EVIDENCE_PENDING` empty and enforcing. Where code and prose
+disagreed, the prose was corrected to the executed output. The T&F proposal
+DOCX was regenerated from the ToC heading down (12 studios, renumbered
+abstracts); every paragraph above that heading is byte-identical to Davi's
+reviewed text, machine-verified.
