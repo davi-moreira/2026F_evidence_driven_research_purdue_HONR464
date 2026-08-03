@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -661,6 +696,31 @@ div.csl-indent {
 <p>You run three AI reviewer roles. All three return the same verdict: “Looks solid. Matches the published figure.” Is that three confirmations?</p>
 <p>Diagnose before you celebrate. Every one of those roles already expects a number near 4%, because that is the range the familiar headline rates sit in, so each one pattern-matches your estimate to the value it walked in with and blesses it without checking how you got there. That is <strong>correlated error</strong> wearing the mask of confirmation: they share one blind spot, the anchor to the familiar figure, and it hides your actual mistake. You asked only 250 people, so the luck of who happened to walk by is worth a couple of percentage points on its own, and you asked them on weekday afternoons outside a library, where almost nobody who was at work all day could appear. The tidy “4.0%” was luck riding on an honest-looking method.</p>
 <p>This is where you <strong>escalate</strong>. The reviewers’ agreement would <em>settle</em> your headline claim, and that claim is yours, so you take the pen back. You recompute the rate from your raw responses yourself and carry the uncertainty of a 250-person sample through the arithmetic, and the honest result is 4.0% ± 2.4 percentage points, from a group that could not include most of the people who were working. Consistent with the official rate, but nowhere near as precise as you wrote. You <strong>override</strong> three “looks great” verdicts and rewrite the claim with its real uncertainty. The roles counted the answer as correct. You checked whether it was earned.</p>
+<p>Agreement is worth something only when the agreeing parties can fail independently, which is why diversity of approach, not headcount, is what makes a group better than its members <span class="citation" data-cites="hong2004diverse">(<a href="#ref-hong2004diverse" role="doc-biblioref">Hong and Page 2004</a>)</span>.</p>
+<p>The block below builds the survey and computes the rate two defensible ways. Neither number is the one the reviewers blessed, and both come from the same afternoon outside the library.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 250 adults asked outside the library on three weekday afternoons.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">250</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>employed_ft <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> <span class="fl">0.58</span>     <span class="co"># daytime library sample skews non-working</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>wants_work <span class="op">=</span> np.where(employed_ft, <span class="va">False</span>, rng.random(n) <span class="op">&lt;</span> <span class="fl">0.24</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>looking <span class="op">=</span> wants_work <span class="op">&amp;</span> (rng.random(n) <span class="op">&lt;</span> <span class="fl">0.20</span>)   <span class="co"># only some are actively looking</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>labour_force <span class="op">=</span> employed_ft.<span class="bu">sum</span>() <span class="op">+</span> looking.<span class="bu">sum</span>()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>your_rate <span class="op">=</span> looking.<span class="bu">sum</span>() <span class="op">/</span> labour_force</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>official_style <span class="op">=</span> wants_work.<span class="bu">sum</span>() <span class="op">/</span> (employed_ft.<span class="bu">sum</span>() <span class="op">+</span> wants_work.<span class="bu">sum</span>())</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"respondents            : </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"in your labour force   : </span><span class="sc">{</span>labour_force<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"counted as unemployed  : </span><span class="sc">{</span>looking<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"your rate              : </span><span class="sc">{</span>your_rate<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"same people, counting everyone who WANTS work: "</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>official_style<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">two defensible definitions, two different numbers, from one sample"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"that never met anyone at work on a weekday afternoon. three reviewers"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"who only checked whether the answer LOOKED right caught none of it"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="39.4">
 <h2 data-number="39.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">39.4</span> An AI failure case</h2>

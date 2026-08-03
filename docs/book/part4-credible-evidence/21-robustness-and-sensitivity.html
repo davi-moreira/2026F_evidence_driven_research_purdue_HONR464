@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -674,6 +709,51 @@ div.csl-indent {
 <p>A <strong>permutation check</strong> shuffles labels that were not randomly assigned. It answers something only if you can argue that the groups were exchangeable to begin with, and in most observational data you cannot. Shuffling anyway builds a pile describing a world you never had.</p>
 <p>A <strong>negative control</strong>, sometimes called a placebo, is different from both: it points your analysis at an exposure, outcome, or period that should be causally null while still running through the same measurement and bias pathways. Example: check for an “effect” of the offer in the weeks before it launched. That is what catches a pipeline inventing signal, and it works whether or not anything was randomized.</p>
 <p>For this randomized trial, use the first. Comparing your real gap with that pile is the beginning of a formal argument the uncertainty chapter finishes; here it is a smell test, and a real gap the no-effect pile produces routinely is a warning that your machinery, not the discount, may be doing the work.</p>
+<p>That the curve’s rows must all estimate the SAME quantity, or the spread means nothing, is the condition the method rests on <span class="citation" data-cites="simonsohn2020specification">(<a href="#ref-simonsohn2020specification" role="doc-biblioref">Simonsohn et al. 2020</a>)</span>.</p>
+<p>The block below turns all four handles and prints the whole grid, plus the one comparison that must stay off it. Check that every row answers the same question before you read any of the numbers.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">4000</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>offered <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> <span class="fl">0.5</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>prior <span class="op">=</span> rng.gamma(<span class="fl">2.0</span>, <span class="fl">30.0</span>, size<span class="op">=</span>n)                    <span class="co"># spending before the offer</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ordered <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> (<span class="fl">0.42</span> <span class="op">+</span> <span class="fl">0.025</span> <span class="op">*</span> offered)      <span class="co"># the offer moves WHO orders</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>spend <span class="op">=</span> np.where(ordered, rng.gamma(<span class="fl">2.0</span>, <span class="fl">33.0</span>, size<span class="op">=</span>n) <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> <span class="fl">0.12</span> <span class="op">*</span> offered)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                 <span class="op">+</span> <span class="fl">0.25</span> <span class="op">*</span> prior, <span class="fl">0.0</span>)                   <span class="co"># past spending carries over</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ship_tax <span class="op">=</span> np.where(ordered, <span class="fl">6.0</span> <span class="op">+</span> <span class="fl">0.07</span> <span class="op">*</span> spend, <span class="fl">0.0</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>gross <span class="op">=</span> spend <span class="op">+</span> ship_tax</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>wholesale <span class="op">=</span> np.zeros(n, dtype<span class="op">=</span><span class="bu">bool</span>)<span class="op">;</span> wholesale[<span class="dv">0</span>] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>gross[<span class="dv">0</span>] <span class="op">=</span> <span class="fl">9_400.0</span>                                      <span class="co"># the bulk buyer</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">"offered"</span>: offered, <span class="st">"gross"</span>: gross, <span class="st">"net"</span>: spend,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"prior"</span>: prior, <span class="st">"ordered"</span>: ordered, <span class="st">"wholesale"</span>: wholesale})</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pct_gain(d, col, adjust<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> d[col] <span class="op">-</span> (np.polyval(np.polyfit(d.prior, d[col], <span class="dv">1</span>), d.prior)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">if</span> adjust <span class="cf">else</span> <span class="dv">0</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> v[d.offered].mean(), v[<span class="op">~</span>d.offered].mean()</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    base <span class="op">=</span> d.loc[<span class="op">~</span>d.offered, col].mean()</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (a <span class="op">-</span> b) <span class="op">/</span> base <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> []</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> s_label, d <span class="kw">in</span> ((<span class="st">"all shoppers"</span>, df), (<span class="st">"minus the wholesale account"</span>,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                                          df[<span class="op">~</span>df.wholesale])):</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> m_label, col <span class="kw">in</span> ((<span class="st">"charged total"</span>, <span class="st">"gross"</span>), (<span class="st">"net of shipping/tax"</span>, <span class="st">"net"</span>)):</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> sp_label, adj <span class="kw">in</span> ((<span class="st">"unadjusted"</span>, <span class="va">False</span>), (<span class="st">"adj. prior spend"</span>, <span class="va">True</span>)):</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>            grid.append({<span class="st">"sample"</span>: s_label, <span class="st">"measurement"</span>: m_label,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"specification"</span>: sp_label,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>                         <span class="st">"gain %"</span>: <span class="bu">round</span>(pct_gain(d, col, adj), <span class="dv">1</span>)})</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> pd.DataFrame(grid)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(g.to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">all eight share ONE estimand: spending per shopper ASSIGNED."</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"range </span><span class="sc">{</span>g[<span class="st">'gain %'</span>]<span class="sc">.</span><span class="bu">min</span>()<span class="sc">:.1f}</span><span class="ss">% to </span><span class="sc">{</span>g[<span class="st">'gain %'</span>]<span class="sc">.</span><span class="bu">max</span>()<span class="sc">:.1f}</span><span class="ss">% — a spread of "</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"defensible answers, not a confidence interval"</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="co"># the specification that does NOT belong: conditioning on ordering</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>bad <span class="op">=</span> pct_gain(df[df.ordered], <span class="st">"gross"</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">averaging over ORDERERS only: </span><span class="sc">{</span>bad<span class="sc">:.1f}</span><span class="ss">% — a different estimand, on a"</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"group the offer itself selected. it does not belong on the curve"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="24.4">
 <h2 data-number="24.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">24.4</span> An AI failure case</h2>

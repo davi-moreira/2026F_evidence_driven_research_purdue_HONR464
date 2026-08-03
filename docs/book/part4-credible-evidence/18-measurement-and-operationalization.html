@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -665,6 +700,33 @@ div.csl-indent {
 <p>You start at the <strong>concept</strong>, employee engagement, and admit right away that no instrument reads “engagement.” So you drop to a <strong>construct</strong>. Of the several honest facets of engagement, you choose willingness to recommend the workplace, because someone who would tell a friend to work here is telling you something real about their attachment to the job. Now you name the <strong>indicator</strong>: the mean response to a single agreement item, one to seven, collected from every employee at the eight pilot sites and the eight comparison sites.</p>
 <p>Before you trust a single reading, you check reliability. You re-ask a random tenth of respondents two weeks later and compare their two answers. They land close, so the item is repeatable rather than a coin flip dressed as data. Then you begin the validity argument by naming what the indicator ignores. Naming omissions starts that argument; it does not finish it. A recommend-a-friend rating says nothing about burnout, about whether pay feels fair, or about whether people believe their work matters. It also cannot hear from the people who already quit, which is exactly the group an engagement question most wants to reach. It is one true facet, not the whole of engagement.</p>
 <p>That honesty sets your claim boundary. You can defend this: “the pilot sites averaged higher willingness to recommend the company than the comparison sites, one facet of engagement, measured with a repeatable single item.” You cannot defend “the pilot made employees more engaged,” because you never measured the facets your indicator skips, and you never heard from the people who left. The number is real, and its meaning stops exactly where the construct stops.</p>
+<p>That validity is an argument about a particular interpretation and use, and never a property the instrument owns, is the position of the testing standards <span class="citation" data-cites="aera2014standards">(<a href="#ref-aera2014standards" role="doc-biblioref">American Educational Research Association et al. 2014</a>)</span>.</p>
+<p>The block below builds the sixteen sites, reads the indicator, and runs the retest. Watch what the reliability number does and does not license.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>n_per_site, sites <span class="op">=</span> <span class="dv">60</span>, <span class="dv">16</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>pilot <span class="op">=</span> np.repeat([<span class="va">True</span>] <span class="op">*</span> <span class="dv">8</span> <span class="op">+</span> [<span class="va">False</span>] <span class="op">*</span> <span class="dv">8</span>, n_per_site)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>site <span class="op">=</span> np.repeat(np.arange(sites), n_per_site)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># The construct is willingness to recommend; the indicator is one 1-7 item.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>site_effect <span class="op">=</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.25</span>, size<span class="op">=</span>sites)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>person <span class="op">=</span> (<span class="fl">4.3</span> <span class="op">+</span> <span class="fl">0.35</span> <span class="op">*</span> pilot <span class="op">+</span> site_effect[site]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>          <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">1.2</span>, size<span class="op">=</span><span class="bu">len</span>(site)))          <span class="co"># people differ, stably</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>item <span class="op">=</span> np.clip(np.<span class="bu">round</span>(person <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.5</span>, size<span class="op">=</span><span class="bu">len</span>(person))), <span class="dv">1</span>, <span class="dv">7</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Reliability: re-ask a random tenth two weeks later. Same PEOPLE, same item.</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>retest_idx <span class="op">=</span> rng.choice(<span class="bu">len</span>(item), size<span class="op">=</span><span class="bu">len</span>(item) <span class="op">//</span> <span class="dv">10</span>, replace<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>retest <span class="op">=</span> np.clip(np.<span class="bu">round</span>(person[retest_idx]</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                          <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.5</span>, size<span class="op">=</span><span class="bu">len</span>(retest_idx))), <span class="dv">1</span>, <span class="dv">7</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.corrcoef(item[retest_idx], retest)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame({<span class="st">"pilot site"</span>: pilot, <span class="st">"item"</span>: item})</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>      .groupby(<span class="st">"pilot site"</span>)[<span class="st">"item"</span>].agg([<span class="st">"size"</span>, <span class="st">"mean"</span>]).<span class="bu">round</span>(<span class="dv">2</span>).to_string())</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">test-retest correlation on the re-asked tenth : </span><span class="sc">{</span>r<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"that number says the item is repeatable. it says NOTHING about whether"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"recommend-a-friend captures engagement, or about the people who quit"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="21.4">
 <h2 data-number="21.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">21.4</span> An AI failure case</h2>

@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -654,6 +689,36 @@ div.csl-indent {
 <p>A plant-biology poster carries the headline “Compost RAISES corn yield.” Its center figure is a bar chart of mean grain yield for plots that received a compost amendment against plots that did not, drawn as a red bar and a green bar. The means are 185 and 191 bushels per acre, a gap of 6. The y-axis starts at 180, and no interval is shown. The plots were not randomized; the grower chose which fields got compost.</p>
 <p>Walk the gallery audit across it. The claim-boundary audit catches the verb first: “raises” is causal, but nothing was randomized, so a naturally richer field could have received both the compost and the higher yield. The honest headline is “compost is associated with about 6 more bushels per acre.” The figure-honesty audit catches the axis, floored at 180, which draws a 6-bushel gap several times taller than it truly is, so run it from 0. The uncertainty audit catches the missing interval: a 95% interval of roughly ±9 bushels per acre swamps a 6-bushel gap, so it has to ride beside the headline. The accessibility audit catches the red-green pair, which a reviewer who is red-green color-blind, roughly one man in twelve, cannot tell apart, so you add value labels and a hatch pattern.</p>
 <p>You cannot fix everything before printing, so you decide. The claim-boundary hit travels farthest, because a reviewer who catches one causal overreach distrusts the whole board, so you lock the associational verb first. That single decision, made by you and defended out loud, is the work of this chapter.</p>
+<p>The audit’s accessibility item is not optional politeness: color-only encoding loses readers whose vision it never reaches <span class="citation" data-cites="crameri2020colour">(<a href="#ref-crameri2020colour" role="doc-biblioref">Crameri et al. 2020</a>)</span>.</p>
+<p>The block below rebuilds the poster’s data, prints the interval the board left off, and redraws the figure from zero. The last printed line is the one the headline’s verb depends on.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Fields the GROWER chose. Richer fields got the compost.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>n_plots <span class="op">=</span> <span class="dv">60</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>soil_quality <span class="op">=</span> rng.normal(<span class="dv">0</span>, <span class="dv">1</span>, size<span class="op">=</span>n_plots)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>composted <span class="op">=</span> soil_quality <span class="op">&gt;</span> np.median(soil_quality)          <span class="co"># not randomized</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>yield_bu <span class="op">=</span> <span class="dv">184</span> <span class="op">+</span> <span class="fl">4.5</span> <span class="op">*</span> soil_quality <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="dv">11</span>, size<span class="op">=</span>n_plots)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>means <span class="op">=</span> np.array([yield_bu[<span class="op">~</span>composted].mean(), yield_bu[composted].mean()])</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ci <span class="op">=</span> np.array([<span class="fl">1.96</span> <span class="op">*</span> yield_bu[g].std(ddof<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> np.sqrt(g.<span class="bu">sum</span>())</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>               <span class="cf">for</span> g <span class="kw">in</span> (<span class="op">~</span>composted, composted)])</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"no compost : </span><span class="sc">{</span>means[<span class="dv">0</span>]<span class="sc">:.0f}</span><span class="ss"> bu/ac ± </span><span class="sc">{</span>ci[<span class="dv">0</span>]<span class="sc">:.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"composted  : </span><span class="sc">{</span>means[<span class="dv">1</span>]<span class="sc">:.0f}</span><span class="ss"> bu/ac ± </span><span class="sc">{</span>ci[<span class="dv">1</span>]<span class="sc">:.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"gap        : </span><span class="sc">{</span>means[<span class="dv">1</span>]<span class="op">-</span>means[<span class="dv">0</span>]<span class="sc">:.0f}</span><span class="ss"> bu/ac"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mean soil quality, composted vs not : "</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>soil_quality[composted]<span class="sc">.</span>mean()<span class="sc">:+.1f}</span><span class="ss"> vs </span><span class="sc">{</span>soil_quality[<span class="op">~</span>composted]<span class="sc">.</span>mean()<span class="sc">:+.1f}</span><span class="ss">"</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="fl">4.2</span>, <span class="fl">3.2</span>))</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>ax.bar([<span class="st">"no compost"</span>, <span class="st">"composted"</span>], means, yerr<span class="op">=</span>ci, capsize<span class="op">=</span><span class="dv">6</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>       color<span class="op">=</span>[<span class="st">"#4a4a4a"</span>, <span class="st">"#a8a8a8"</span>], hatch<span class="op">=</span>[<span class="st">""</span>, <span class="st">"//"</span>], edgecolor<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>, <span class="dv">230</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"grain yield (bu/ac)"</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Yield by compost status (grower-chosen fields)"</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="33.4">
 <h2 data-number="33.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">33.4</span> An AI failure case</h2>

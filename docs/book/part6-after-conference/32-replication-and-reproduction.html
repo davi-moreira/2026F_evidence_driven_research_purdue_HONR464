@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -660,6 +695,41 @@ div.csl-indent {
 <p>What you report instead is survival by tank type first, then final length among surviving larvae, labeled exactly that way. Say plainly what that pair does and does not do. It is an honest description of what happened in the tanks. It does not deliver an overall causal effect of the probiotic on day-30 length, and no rearrangement of these numbers will, because day-30 length does not exist for a larva that died. Note too that matching survival percentages do not rescue the comparison: two tanks can lose the same fraction and still lose different kinds of larvae. If the study needs one headline outcome, the fix is upstream — predefine a combined outcome before analysis, such as survived-and-reached-a-given-length, and defend why that ordering answers the biological question.</p>
 <p><strong>Test the hidden assumption.</strong> The package reports its gap as if all 240 larvae were independent, producing a tight interval well above zero. They are not independent. The probiotic was assigned by tank, so larvae sharing a tank share water, food, and crowding. The real experimental unit is the tank, and there are only six. Recompute at the tank level, averaging each tank first and comparing three treated tanks against three controls, and the interval widens until its lower edge touches zero. The point estimate barely moved. The honest uncertainty around it exploded. That is pseudoreplication, and it is the weakness with teeth.</p>
 <p><strong>Rank by threat.</strong> Pseudoreplication comes first, because it can dissolve the “clear effect” claim. The undisclosed handling of dead larvae comes second, because it decides which larvae the number even describes. The 0.43-reported-as-0.5 mismatch comes third: real, and a genuine reporting failure, but the smallest threat to whether an effect exists.</p>
+<p>Treating larvae in a shared tank as independent units is the classic analysis error this example is built to catch <span class="citation" data-cites="hurlbert1984pseudoreplication">(<a href="#ref-hurlbert1984pseudoreplication" role="doc-biblioref">Hurlbert 1984</a>)</span>.</p>
+<p>The block below builds the package’s data and computes the difference three defensible ways. Run it before you accept any single number, including the one printed on the poster.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tanks <span class="op">=</span> pd.DataFrame({<span class="st">"tank"</span>: <span class="bu">range</span>(<span class="dv">6</span>), <span class="st">"probiotic"</span>: [<span class="va">True</span>]<span class="op">*</span><span class="dv">3</span> <span class="op">+</span> [<span class="va">False</span>]<span class="op">*</span><span class="dv">3</span>})</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> []</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _, t <span class="kw">in</span> tanks.iterrows():</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">40</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    tank_effect <span class="op">=</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.25</span>)                  <span class="co"># tanks differ, larvae cluster</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    length <span class="op">=</span> (<span class="fl">4.60</span> <span class="op">+</span> <span class="fl">0.25</span> <span class="op">*</span> t.probiotic <span class="op">+</span> tank_effect</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>              <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.35</span>, size<span class="op">=</span>n))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># death is a POST-TREATMENT event, and the probiotic changes who dies</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    died <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> np.where(t.probiotic, <span class="fl">0.06</span>, <span class="fl">0.18</span>) <span class="op">*</span> (length <span class="op">&lt;</span> <span class="fl">4.6</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    rows.append(pd.DataFrame({<span class="st">"tank"</span>: t.tank, <span class="st">"probiotic"</span>: t.probiotic,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                              <span class="st">"length"</span>: length, <span class="st">"died"</span>: died}))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>larvae <span class="op">=</span> pd.concat(rows, ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>alive <span class="op">=</span> larvae[<span class="op">~</span>larvae.died]</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>gap_survivors <span class="op">=</span> (alive[alive.probiotic].length.mean()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                 <span class="op">-</span> alive[<span class="op">~</span>alive.probiotic].length.mean())</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>gap_all <span class="op">=</span> (larvae[larvae.probiotic].length.mean()</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>           <span class="op">-</span> larvae[<span class="op">~</span>larvae.probiotic].length.mean())</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>by_tank <span class="op">=</span> alive.groupby([<span class="st">"probiotic"</span>, <span class="st">"tank"</span>]).length.mean()</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>gap_tank <span class="op">=</span> (by_tank[<span class="va">True</span>].mean() <span class="op">-</span> by_tank[<span class="va">False</span>].mean())</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"the write-up claims          : 0.50 mm"</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"survivors, larva by larva    : </span><span class="sc">{</span>gap_survivors<span class="sc">:.2f}</span><span class="ss"> mm"</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"everyone, including the dead : </span><span class="sc">{</span>gap_all<span class="sc">:.2f}</span><span class="ss"> mm"</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"tank means (n = 3 vs 3)      : </span><span class="sc">{</span>gap_tank<span class="sc">:.2f}</span><span class="ss"> mm"</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">deaths: </span><span class="sc">{</span>larvae[larvae.probiotic]<span class="sc">.</span>died<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> treated vs "</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>larvae[<span class="op">~</span>larvae.probiotic]<span class="sc">.</span>died<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> control"</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"three defensible numbers, none of them 0.50, and the unit of"</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"randomization was the TANK, not the larva"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="36.4">
 <h2 data-number="36.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">36.4</span> An AI failure case</h2>

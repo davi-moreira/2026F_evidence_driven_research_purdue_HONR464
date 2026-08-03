@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -695,6 +730,27 @@ window.Quarto = {
 <p>The result is that 6-point gap. The claim is the decision. The draft headline reads “Walking LOWERS blood pressure,” drawn as two bars on an axis that starts at 125, which makes the small gap look like a cliff, with the two groups told apart by red and green alone.</p>
 <p>Walk the decision. The question behind this study is causal, and it stays causal: you want to know whether walking lowers blood pressure. What the design cannot do is answer it. Nobody was assigned to walk, so the active group may differ in age, diet, or baseline health, and the comparison leaves that untouched. Fill the card: question kind causal, identification status not identified by this design, result an observed association. Those three together fix what the claim may say. The verb “lowers” claims a crossing the design never paid for, and the honest verb is “was associated with lower.” The truncated axis is the next problem: bars encode magnitude, so starting them at 125 makes a 6-point gap look like a cliff. Start the bars at a meaningful zero, or better, plot the two group averages as points with their intervals on a blood-pressure scale a clinician would recognize. The interval reported here runs roughly 1 to 11 points (constructed for the example), wide enough that the honest headline must carry it in the same eye-span. And each bar gets a direct value label, so a color-blind or screen-reader reader receives the number, not just the hue.</p>
 <p>The locked claim: “In this sample, more-active volunteers averaged about 6 points lower resting systolic blood pressure (95% interval: 1 to 11); this is an observed association, and this design does not identify whether walking caused the drop.” Same result, a claim that survives the judge.</p>
+<p>What licenses a causal verb is the identification argument, not the size of the gap you observed <span class="citation" data-cites="hernan2020whatif">(<a href="#ref-hernan2020whatif" role="doc-biblioref">Hernán and Robins 2020</a>)</span>.</p>
+<p>The block below builds the forty volunteers and prints the gap along with one thing the poster never showed: how the two groups differ before you compare them.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Forty volunteers who CHOSE how much they walk. Age drives both.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">40</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> np.r_[rng.normal(<span class="dv">31</span>, <span class="dv">7</span>, <span class="dv">20</span>), rng.normal(<span class="dv">43</span>, <span class="dv">7</span>, <span class="dv">20</span>)]   <span class="co"># active are younger</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>active <span class="op">=</span> np.r_[np.ones(<span class="dv">20</span>, <span class="bu">bool</span>), np.zeros(<span class="dv">20</span>, <span class="bu">bool</span>)]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>systolic <span class="op">=</span> np.<span class="bu">round</span>(<span class="dv">112</span> <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> age <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="dv">6</span>, n))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>gap <span class="op">=</span> systolic[<span class="op">~</span>active].mean() <span class="op">-</span> systolic[active].mean()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"active group mean systolic      : </span><span class="sc">{</span>systolic[active]<span class="sc">.</span>mean()<span class="sc">:.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"less-active group mean systolic : </span><span class="sc">{</span>systolic[<span class="op">~</span>active]<span class="sc">.</span>mean()<span class="sc">:.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"observed gap                    : </span><span class="sc">{</span>gap<span class="sc">:.0f}</span><span class="ss"> points"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mean age, active vs less-active : </span><span class="sc">{</span>age[active]<span class="sc">.</span>mean()<span class="sc">:.0f}</span><span class="ss"> vs "</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>age[<span class="op">~</span>active]<span class="sc">.</span>mean()<span class="sc">:.0f}</span><span class="ss">"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">nobody was assigned to walk. the age line is one difference you can"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"see; the design leaves every unseen one untouched, so the verb stays"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"'is associated with'"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="28.4">
 <h2 data-number="28.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">28.4</span> An AI failure case</h2>

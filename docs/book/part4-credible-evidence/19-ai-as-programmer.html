@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -672,6 +707,32 @@ div.csl-indent {
 <p><strong>Turn two.</strong> You interrogate it: which rows are in here, and what did you drop? Two things surface. The dataframe holds only the 40 municipalities that publish through an open-data portal, the largest and best-staffed in the state. There are 240 on the roster. That is a <strong>convenience sample</strong> standing in silently for all of them. The code also calls <code>.dropna()</code>, and the dropped rows are the towns where the scraper came back empty, which are exactly the small places with the thinnest clerical staff. The 95% describes the best-resourced cities with their worst records deleted.</p>
 <p><strong>Turn three.</strong> You re-anchor to your <strong>quantity of interest</strong>: the share over <em>every</em> municipality on the state roster, with unretrievable records flagged instead of dropped. You refine the prompt to say precisely that, run again, and the picture changes. At most one in six municipalities is <em>confirmed</em> to post on time, and for most of the state you simply do not know. That “do not know” is a finding, not a gap to paper over.</p>
 <p>Now notice what would have happened if an agentic tool had run all three turns on its own. It would have handed you the polished 95% with a confident paragraph, and the decision that shrank your state to 40 cities would have happened inside a step you never saw. The tool wrote correct code for the wrong question. You did the research by deciding what the code was allowed to count.</p>
+<p>Code that runs cleanly while answering the wrong question is the documented risk when generated code is accepted on its output alone <span class="citation" data-cites="vaithilingam2022expectation">(<a href="#ref-vaithilingam2022expectation" role="doc-biblioref">Vaithilingam et al. 2022</a>)</span>.</p>
+<p>The block below reproduces all three turns on the same roster, including the rows the scraper never returned. The 95% is real; read what it is 95% of.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>roster <span class="op">=</span> <span class="dv">240</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>big <span class="op">=</span> np.arange(roster) <span class="op">&lt;</span> <span class="dv">40</span>                    <span class="co"># the open-data portal cities</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>on_time <span class="op">=</span> np.zeros(roster, dtype<span class="op">=</span><span class="bu">bool</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>on_time[rng.choice(np.where(big)[<span class="dv">0</span>], <span class="dv">38</span>, replace<span class="op">=</span><span class="va">False</span>)] <span class="op">=</span> <span class="va">True</span>    <span class="co"># 38 of 40</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>on_time[rng.choice(np.where(<span class="op">~</span>big)[<span class="dv">0</span>], <span class="dv">110</span>, replace<span class="op">=</span><span class="va">False</span>)] <span class="op">=</span> <span class="va">True</span>  <span class="co"># 110 of 200</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># the scraper comes back empty exactly where clerical staff is thinnest</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>scraped <span class="op">=</span> rng.random(roster) <span class="op">&lt;</span> np.where(big, <span class="fl">0.92</span>, <span class="fl">0.62</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>portal_only <span class="op">=</span> on_time[big].mean()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>after_dropna <span class="op">=</span> on_time[big <span class="op">&amp;</span> scraped].mean()</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>best_case <span class="op">=</span> (on_time <span class="op">|</span> <span class="op">~</span>scraped).mean()         <span class="co"># unretrievable counted as on time</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>worst_case <span class="op">=</span> (on_time <span class="op">&amp;</span> scraped).mean()         <span class="co"># unretrievable counted as late</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"turn one, portal cities only        : </span><span class="sc">{</span>portal_only<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"the same after .dropna()            : </span><span class="sc">{</span>after_dropna<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"whole roster, unretrievable flagged : between "</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>worst_case<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">% and </span><span class="sc">{</span>best_case<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"records the scraper never returned  : </span><span class="sc">{</span>(<span class="op">~</span>scraped)<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> of </span><span class="sc">{</span>roster<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the clean run was never wrong about its own rows. it was answering"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a different question than the one you asked"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="22.4">
 <h2 data-number="22.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">22.4</span> An AI failure case</h2>

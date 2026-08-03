@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -675,6 +710,24 @@ div.csl-indent {
 <p>You want to know whether meals at restaurants near you got more expensive after a local minimum-wage increase in 2019. You cannot compare a 2019 menu price to today’s price as they stand, because a dollar buys less now than it did then. To compare them you need the <strong>Consumer Price Index (CPI)</strong>, a published number that tracks what a typical household’s basket of goods costs over time, where a higher value means the same basket costs more.</p>
 <p>Sort the work. You can <em>delegate</em> locating candidate published price series and listing the inputs an inflation adjustment needs. You <em>keep</em> three things: deciding that a consumer price index (not a producer or wholesale index) is the right measure for what households pay, choosing the base year you convert every price into, and judging whether a source is authoritative. You ask an AI assistant for the series and it returns “consumer prices rose roughly 23 percent between 2019 and 2025,” citing a statistical agency.</p>
 <p>Now verify. You open the agency’s actual data table, read the two index values yourself, and recompute the percentage change by hand. If it confirms the number, you log a verified input. If it shows a different value, or cannot be found at all, the number the tool handed you was never evidence. Either way, your comparison rests on a number you retrieved, not one a model typed.</p>
+<p>The habit this example drills, opening the source rather than trusting the sentence, is the documented defense against fluent invented detail <span class="citation" data-cites="ji2023hallucination">(<a href="#ref-ji2023hallucination" role="doc-biblioref">Ji et al. 2023</a>)</span>.</p>
+<p>The block below builds this example’s data and runs the adjustment. Notice what it cannot do for you: the two index values are inputs you retrieve and verify, and the code takes them on faith exactly as the tool did.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Thirty 2019 menu prices from restaurants near campus.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>prices_2019 <span class="op">=</span> np.<span class="bu">round</span>(rng.normal(<span class="fl">12.50</span>, <span class="fl">2.10</span>, size<span class="op">=</span><span class="dv">30</span>), <span class="dv">2</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># These two index values are the input you must RETRIEVE yourself, from the</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># agency's own table. They stand in until you do; replace them and rerun.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>cpi_2019, cpi_2025 <span class="op">=</span> <span class="fl">100.0</span>, <span class="fl">123.0</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>adjusted <span class="op">=</span> prices_2019 <span class="op">*</span> cpi_2025 <span class="op">/</span> cpi_2019</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"index 2019 </span><span class="sc">{</span>cpi_2019<span class="sc">}</span><span class="ss">  -&gt;  index 2025 </span><span class="sc">{</span>cpi_2025<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"price change implied      : </span><span class="sc">{</span>(cpi_2025 <span class="op">/</span> cpi_2019 <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> <span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mean 2019 menu price      : $</span><span class="sc">{</span>prices_2019<span class="sc">.</span>mean()<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"same meal in 2025 dollars : $</span><span class="sc">{</span>adjusted<span class="sc">.</span>mean()<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">2.4</span> An AI failure case</h2>

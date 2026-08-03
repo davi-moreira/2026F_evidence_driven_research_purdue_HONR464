@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -663,6 +698,36 @@ div.csl-indent {
 <p>The <strong>sinful capsule</strong> loads <code>~/Desktop/turnout_clean.csv</code>, a file only your laptop has. It bootstraps a confidence interval for that share with no seed, so the interval shifts on every run. It patches one duplicated precinct name by hand in a cell no clean run repeats. It silently drops every precinct whose registered-voter count was missing, with no note on why. And its data was downloaded “sometime last spring,” before the state certified the count, with no version recorded. Five sins, and every one breaks the rerun.</p>
 <p>The <strong>clean capsule</strong> loads the certified file through its public URL, with the source, the download date, and the terms of use in the provenance note. It fixes <code>SEED = 464</code> before the bootstrap. It records the one relabel in the decision log with its reason. It keeps the precincts with missing registration counts, or drops them by a logged, pre-declared rule. Now a stranger clears the kernel, runs top to bottom, and your share of precincts below 40% comes back. Same number, no guessing.</p>
 <p>Here is the honesty check the auditor cannot do for you. The clean capsule can still be <em>wrong</em>: your seed might be fixed on the wrong subset, or dropping the missing-registration precincts might be a bad rule cleanly logged. Runnable is not correct. That gap is exactly why your capsule is exercised by a person, not only by a script.</p>
+<p>Every repair in the clean capsule, pinned seed included, is on the published list of rules for reproducible computational work <span class="citation" data-cites="sandve2013ten">(<a href="#ref-sandve2013ten" role="doc-biblioref">Sandve et al. 2013</a>)</span>.</p>
+<p>The block below is the clean capsule’s analysis cell. Every repair the sinful version did by hand happens here in code, and the seed makes the interval the same on every run.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span>                       <span class="co"># sin four, fixed: the seed is pinned</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Twelve counties of precinct turnout, with the two data problems the sinful</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># capsule handled silently: a duplicated precinct name and missing registrations.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>precincts <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"county"</span>: np.repeat([<span class="ss">f"county </span><span class="sc">{</span>i<span class="sc">:02d}</span><span class="ss">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">13</span>)], <span class="dv">25</span>),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"precinct"</span>: [<span class="ss">f"P</span><span class="sc">{</span>i<span class="sc">:04d}</span><span class="ss">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">300</span>)],</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"turnout"</span>: np.clip(rng.normal(<span class="fl">0.44</span>, <span class="fl">0.09</span>, size<span class="op">=</span><span class="dv">300</span>), <span class="fl">0.05</span>, <span class="fl">0.95</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>precincts.loc[<span class="dv">17</span>, <span class="st">"precinct"</span>] <span class="op">=</span> precincts.loc[<span class="dv">16</span>, <span class="st">"precinct"</span>]     <span class="co"># the duplicate</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>precincts.loc[rng.choice(<span class="dv">300</span>, <span class="dv">14</span>, replace<span class="op">=</span><span class="va">False</span>), <span class="st">"turnout"</span>] <span class="op">=</span> np.nan</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>deduped <span class="op">=</span> precincts.drop_duplicates(<span class="st">"precinct"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>missing <span class="op">=</span> deduped.turnout.isna().<span class="bu">sum</span>()</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>below <span class="op">=</span> (deduped.turnout <span class="op">&lt;</span> <span class="fl">0.40</span>).<span class="bu">sum</span>() <span class="op">/</span> deduped.turnout.notna().<span class="bu">sum</span>()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>boot <span class="op">=</span> [(rng.choice(deduped.turnout.dropna(), deduped.turnout.notna().<span class="bu">sum</span>())</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>         <span class="op">&lt;</span> <span class="fl">0.40</span>).mean() <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2000</span>)]</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>lo, hi <span class="op">=</span> np.percentile(boot, [<span class="fl">2.5</span>, <span class="fl">97.5</span>])</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"precincts loaded         : </span><span class="sc">{</span><span class="bu">len</span>(precincts)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"duplicate names removed  : </span><span class="sc">{</span><span class="bu">len</span>(precincts) <span class="op">-</span> <span class="bu">len</span>(deduped)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"registrations missing    : </span><span class="sc">{</span>missing<span class="sc">}</span><span class="ss"> (reported, not silently dropped)"</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"share below 40% turnout  : </span><span class="sc">{</span>below<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">% [</span><span class="sc">{</span>lo<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%, </span><span class="sc">{</span>hi<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%]"</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">rerun this cell: the interval does not move, because the seed is"</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"pinned and every repair above happens in code a clean run repeats"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="37.4">
 <h2 data-number="37.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">37.4</span> An AI failure case</h2>

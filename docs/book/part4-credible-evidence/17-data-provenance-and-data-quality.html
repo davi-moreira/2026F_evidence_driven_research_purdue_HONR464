@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -660,6 +695,29 @@ div.csl-indent {
 <p>You run the loop instead of copying the number. First, <strong>provenance</strong>. You search the exact title of the source. If it resolves nowhere, the value is orphaned and you drop it. If the page is real, you ask whether it <em>produced</em> that number or merely republished it. That question usually sends you one link further back, to the state’s official results summary, and behind that to the county clerk’s certified canvass, which is where the totals were actually settled.</p>
 <p>Then, <strong>quality</strong>. You open the canvass and read what the percentage is <em>of</em>. Is the denominator registered voters, all adults, or adults eligible to vote, which excludes noncitizens and, in some states, people with certain felony convictions? Those three denominators produce three different turnout numbers for the same election, and the gaps between them are not small. You also ask whether the figure was <em>counted</em> or <em>estimated</em>. Ballots cast are counted. Eligible-population denominators are estimated from census data. Survey turnout is self-reported, and people reliably overstate whether they voted, so it is a third kind of number again.</p>
 <p>You cross-check against an independent source that documents its own methods. Two worth knowing: the United States Elections Project, which publishes voting-eligible-population turnout estimates and explains exactly how it builds the denominator, and the Census Bureau’s Current Population Survey Voting and Registration Supplement, which reports self-reported turnout from a large national survey. When the certified canvass and an independent reference agree on both the count and the definition, the number has earned a place in your project. When they disagree, the disagreement <em>is</em> the finding. You report both, name the definition behind each, and say which one your question needs and why.</p>
+<p>That a value’s usefulness depends on its documented origin and on fitness for the specific use, not on precision alone, is the standard framing of data quality <span class="citation" data-cites="wang1996beyond">(<a href="#ref-wang1996beyond" role="doc-biblioref">Wang and Strong 1996</a>)</span>.</p>
+<p>The block below is not a simulation. It is the same numerator divided by the three denominators a real turnout figure might be resting on, so you can see how much of the answer the label decides.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span>   <span class="co"># no random draw here: provenance is a chain, not a sample</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># One county, one election, three denominators — each a real kind of published</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># figure, each answering a different question. Replace these with the numbers</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># you retrieve from the canvass and the census table you name.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>ballots_cast <span class="op">=</span> <span class="dv">214_318</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>denominators <span class="op">=</span> {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"registered voters (clerk's canvass)"</span>: <span class="dv">297_664</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"voting-age population (census estimate)"</span>: <span class="dv">341_902</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"voting-eligible population (estimate)"</span>: <span class="dv">312_540</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> [{<span class="st">"denominator"</span>: k, <span class="st">"count"</span>: v,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>         <span class="st">"turnout %"</span>: <span class="bu">round</span>(ballots_cast <span class="op">/</span> v <span class="op">*</span> <span class="dv">100</span>, <span class="dv">1</span>)}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> k, v <span class="kw">in</span> denominators.items()]</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame(rows).to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">spread across the three : "</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span><span class="bu">max</span>(r[<span class="st">'turnout %'</span>] <span class="cf">for</span> r <span class="kw">in</span> rows) <span class="op">-</span> <span class="bu">min</span>(r[<span class="st">'turnout %'</span>] <span class="cf">for</span> r <span class="kw">in</span> rows)<span class="sc">:.1f}</span><span class="ss"> "</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"percentage points"</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"one election, one numerator, three published turnout numbers."</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a figure with no stated denominator is not yet evidence"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="20.4">
 <h2 data-number="20.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">20.4</span> An AI failure case</h2>

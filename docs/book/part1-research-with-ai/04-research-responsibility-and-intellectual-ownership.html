@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -658,8 +693,21 @@ div.csl-indent {
 <h2 data-number="5.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">5.3</span> A worked example</h2>
 <p>Picture a small freshwater-biology project. You are testing whether winter road salt raises <strong>chloride</strong>, a dissolved salt ion that harms freshwater life above certain levels, in a creek behind campus. You collect ten water samples and ask an AI tool to help write up the result.</p>
 <p>The tool returns a fluent paragraph: “Mean chloride was 310 mg/L, well above the U.S. EPA chronic aquatic-life criterion of 230 mg/L, so the creek is unsafe for aquatic life.” It reads like a finished result. Here is the ownership decision: which parts of that sentence will you personally stand behind?</p>
-<p>You split it into pieces you can own. The mean of your ten samples is a number you can recompute in a minute, so you do, and you get 297, not 310. The EPA criterion is a published value, so you open the EPA’s National Recommended Water Quality Criteria and confirm the real figure yourself rather than trust the tool’s number. The word “unsafe” claims something about the whole creek all winter, from ten samples on one day, so you narrow it to what your evidence licenses: elevated chloride in these samples, at this site, on this date.</p>
+<p>You split it into pieces you can own. The mean of your ten samples is a number you can recompute in a minute, so you do, and you get 304, not 310. The EPA criterion is a published value, so you open the EPA’s National Recommended Water Quality Criteria and confirm the real figure yourself rather than trust the tool’s number. The word “unsafe” claims something about the whole creek all winter, from ten samples on one day, so you narrow it to what your evidence licenses: elevated chloride in these samples, at this site, on this date.</p>
 <p>Now your disclosure writes itself: the tool drafted the paragraph, and you did the checking, retrieving, and rewriting that made the claim yours. You own the corrected sentence. You would not have owned the original.</p>
+<p>That authorship cannot be delegated to a tool, and that the named author answers for every claim, is the position taken by editorial guidance on AI use <span class="citation" data-cites="icmje2026recommendations">(<a href="#ref-icmje2026recommendations" role="doc-biblioref">International Committee of Medical Journal Editors 2026</a>)</span>.</p>
+<p>The block below builds the ten samples and recomputes the mean, which is the whole of the one-minute check. Run it before you read the next line.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ten chloride samples (mg/L) from one site, on one day.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>chloride <span class="op">=</span> np.<span class="bu">round</span>(rng.normal(<span class="dv">297</span>, <span class="dv">18</span>, size<span class="op">=</span><span class="dv">10</span>), <span class="dv">1</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame({<span class="st">"sample"</span>: <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"chloride mg/L"</span>: chloride}).to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">mean of your ten samples : </span><span class="sc">{</span>chloride<span class="sc">.</span>mean()<span class="sc">:.0f}</span><span class="ss"> mg/L"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"the drafted paragraph said: 310 mg/L"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"the criterion it quoted   : retrieve it yourself, then compare"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">5.4</span> An AI failure case</h2>

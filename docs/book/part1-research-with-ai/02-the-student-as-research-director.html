@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -664,6 +699,32 @@ div.csl-indent {
 <p><strong>Safe to delegate.</strong> Reformatting three plates of raw OD600 numbers into one tidy table, and drafting a plain-language version of your methods paragraph. If a value lands in the wrong column, one glance catches it, so the stakes are low.</p>
 <p><strong>Delegate then verify.</strong> Locating a standard protocol for reading bacterial growth curves, and drafting the formula for <strong>doubling time</strong>, the hours a population takes to double in number. You hand these out, then confirm each: you open the actual protocol, and you recompute one doubling time by hand from two printed OD values.</p>
 <p><strong>Never delegate.</strong> Deciding that the concentrations you test are biologically meaningful and safe. Deciding whether a gap between the treated and untreated curves licenses the word “inhibits.” Stating how uncertain that conclusion is, given three plates and one strain. No tool makes those calls. The moment you let it, you become a reader of someone else’s guess.</p>
+<p>The line this triage draws, between work you may hand out and judgments that stay with the named researcher, is the one research-integrity guidance draws too <span class="citation" data-cites="nasem2017integrity">(<a href="#ref-nasem2017integrity" role="doc-biblioref">National Academies of Sciences, Engineering, and Medicine 2017</a>)</span>.</p>
+<p>The block below builds this example’s data and prints the numbers this section quotes. Run it, then change one input and watch which sentence above stops being true.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>hours <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">8</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plates(doubling_hours, n_plates<span class="op">=</span><span class="dv">3</span>, od0<span class="op">=</span><span class="fl">0.05</span>):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Three plates read hourly; the culture doubles every `doubling_hours`."""</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    true_curve <span class="op">=</span> od0 <span class="op">*</span> <span class="dv">2</span> <span class="op">**</span> (hours <span class="op">/</span> doubling_hours)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> true_curve <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.01</span>, size<span class="op">=</span>(n_plates, <span class="bu">len</span>(hours)))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>control, benzoate <span class="op">=</span> plates(<span class="fl">1.5</span>), plates(<span class="fl">2.4</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame({<span class="st">"hour"</span>: hours,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"control OD600"</span>: control.mean(<span class="dv">0</span>).<span class="bu">round</span>(<span class="dv">3</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"benzoate OD600"</span>: benzoate.mean(<span class="dv">0</span>).<span class="bu">round</span>(<span class="dv">3</span>)}).to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># The check you run by hand, from two printed OD values four hours apart.</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> doubling_time(od_a, od_b, hours_apart):</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> hours_apart <span class="op">*</span> np.log(<span class="dv">2</span>) <span class="op">/</span> np.log(od_b <span class="op">/</span> od_a)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">control doubling time : "</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>doubling_time(control.mean(<span class="dv">0</span>)[<span class="dv">2</span>], control.mean(<span class="dv">0</span>)[<span class="dv">6</span>], <span class="dv">4</span>)<span class="sc">:.2f}</span><span class="ss"> h"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"benzoate doubling time: "</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>doubling_time(benzoate.mean(<span class="dv">0</span>)[<span class="dv">2</span>], benzoate.mean(<span class="dv">0</span>)[<span class="dv">6</span>], <span class="dv">4</span>)<span class="sc">:.2f}</span><span class="ss"> h"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">3.4</span> An AI failure case</h2>

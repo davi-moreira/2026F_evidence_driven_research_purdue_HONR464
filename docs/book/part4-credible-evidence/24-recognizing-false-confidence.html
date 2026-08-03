@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -654,6 +689,25 @@ div.csl-indent {
 <p>You are studying a small stream where a <strong>riparian buffer</strong> (a strip of trees and grasses planted along a bank to filter runoff) was installed last year. You have weekly <strong>nitrate</strong> readings (nitrate is a nutrient from fertilizer that, in excess, fuels algal blooms and starves the water of oxygen), measured in milligrams per liter, for the year before planting and the year after. The agency cares because low oxygen kills the trout the restoration was meant to bring back.</p>
 <p>You ask an AI to summarize the dataset. It returns: <em>“The riparian buffer reduced average nitrate by about 40 percent, a clear environmental success.”</em> The sentence is fluent and sure. Here is where false confidence would win: you feel the relief of a clean result and reach to quote it.</p>
 <p>Instead you verify the number. You compute the mean nitrate for the “before” weeks and for the “after” weeks, then subtract. Suppose the before-mean is 8.1 mg/L and the after-mean is 6.9 mg/L. The real drop is 1.2 mg/L, about 15 percent, not 40. The confident summary overstated the change by more than double. A second problem also hid behind the polish: the readings come from one site with no comparison stream, so even the true 15 percent cannot be pinned on the buffer alone. A wet spring or a change in fertilizer practice upstream could move nitrate just as much. You keep the finding you can defend, “nitrate fell about 15 percent at this site over one year,” and you drop both the inflated figure and the word “success.”</p>
+<p>Over-trusting a confident automated output, and stopping the check once it sounds right, is a documented and well-named failure <span class="citation" data-cites="goddard2012automation">(<a href="#ref-goddard2012automation" role="doc-biblioref">Goddard et al. 2012</a>)</span>.</p>
+<p>The block below builds the two years of readings and recomputes the drop, which is the whole verification. It takes about as long as reading the confident sentence did.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>weeks <span class="op">=</span> np.arange(<span class="dv">104</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>season <span class="op">=</span> <span class="fl">1.1</span> <span class="op">*</span> np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> weeks <span class="op">/</span> <span class="dv">52</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>after <span class="op">=</span> weeks <span class="op">&gt;=</span> <span class="dv">52</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>nitrate <span class="op">=</span> <span class="fl">8.1</span> <span class="op">-</span> <span class="fl">1.35</span> <span class="op">*</span> after <span class="op">+</span> season <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.6</span>, size<span class="op">=</span><span class="dv">104</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>before_mean, after_mean <span class="op">=</span> nitrate[<span class="op">~</span>after].mean(), nitrate[after].mean()</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>drop <span class="op">=</span> before_mean <span class="op">-</span> after_mean</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"before-planting mean : </span><span class="sc">{</span>before_mean<span class="sc">:.1f}</span><span class="ss"> mg/L"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"after-planting mean  : </span><span class="sc">{</span>after_mean<span class="sc">:.1f}</span><span class="ss"> mg/L"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"drop                 : </span><span class="sc">{</span>drop<span class="sc">:.1f}</span><span class="ss"> mg/L, </span><span class="sc">{</span>drop<span class="op">/</span>before_mean<span class="op">*</span><span class="dv">100</span><span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"the confident summary said: 40%"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">and the number you just computed still cannot be pinned on the buffer:"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"one site, no comparison stream, and a wet spring would look the same"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="27.4">
 <h2 data-number="27.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">27.4</span> An AI failure case</h2>

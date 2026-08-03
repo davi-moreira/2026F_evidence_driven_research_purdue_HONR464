@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -668,6 +703,21 @@ div.csl-indent {
 <p>Start with a health curiosity: <em>“does moving more actually help you sleep?”</em> It is a real feeling, but you cannot study it, because it names no one and measures nothing. Give it edges and it becomes a <strong>topic</strong>: physical activity and sleep quality in undergraduates. Push further to a <strong>research problem</strong>: we do not know whether more daily walking goes with better-rated sleep among first-years living in residence halls. That points at one missing piece, not a whole subject.</p>
 <p>Now sharpen it into an <strong>answerable question</strong>: <em>“among residence-hall first-years, do those who average more than 8,000 steps a day report better sleep quality than those who average fewer than 4,000?”</em> The three carried terms snap into place. The <strong>unit</strong> is one first-year. The <strong>outcome</strong> is a sleep-quality rating, say a 1-to-10 self-report you collect on a phone. The <strong>population</strong> is residence-hall first-years, not the whole campus.</p>
 <p>Now run the three tests. It clears <strong>importance</strong> (anyone advising sleep-deprived first-years wants the answer), <strong>feasibility</strong> (step counts and a nightly rating are both collectable in a few weeks), and <strong>contribution</strong> (the activity-and-sleep link is studied broadly in adults but far less in this dorm-living, first-year group). The curiosity is now a problem you could defend.</p>
+<p>The funnel from curiosity to an answerable question, and the tests it has to survive, follow the standard treatment of research problems <span class="citation" data-cites="booth2024craft">(<a href="#ref-booth2024craft" role="doc-biblioref">Booth et al. 2024</a>)</span>.</p>
+<p>The block below builds this example’s data and prints the numbers this section quotes. Run it, then change one input and watch which sentence above stops being true.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Sixty residence-hall first-years: average daily steps and a 1-10 sleep rating.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>steps <span class="op">=</span> rng.normal(<span class="dv">6200</span>, <span class="dv">2300</span>, size<span class="op">=</span><span class="dv">60</span>).clip(<span class="dv">1000</span>, <span class="dv">15000</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>sleep <span class="op">=</span> np.clip(<span class="fl">4.6</span> <span class="op">+</span> <span class="fl">0.00035</span> <span class="op">*</span> steps <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">1.1</span>, size<span class="op">=</span><span class="dv">60</span>), <span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>group <span class="op">=</span> np.where(steps <span class="op">&gt;</span> <span class="dv">8000</span>, <span class="st">"more than 8,000 steps"</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                 np.where(steps <span class="op">&lt;</span> <span class="dv">4000</span>, <span class="st">"fewer than 4,000 steps"</span>, <span class="st">"in between"</span>))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame({<span class="st">"group"</span>: group, <span class="st">"sleep rating"</span>: sleep})</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      .groupby(<span class="st">"group"</span>)[<span class="st">"sleep rating"</span>].agg([<span class="st">"size"</span>, <span class="st">"mean"</span>]).<span class="bu">round</span>(<span class="dv">2</span>).to_string())</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the question asks about the two edge groups; the middle is neither"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">6.4</span> An AI failure case</h2>

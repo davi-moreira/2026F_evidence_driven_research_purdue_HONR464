@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -666,6 +701,31 @@ div.csl-indent {
 <p>Bring this into a biology lab. You study wild-derived mice and notice a striking pattern: individuals whose gut carries a particular fiber-digesting bacterium are, on average, leaner than mice without it. The headline writes itself: “the microbe causes leanness.” Would you stake a thesis on it?</p>
 <p>Draw three boxes first: <em>microbe</em>, <em>leanness</em>, and a third box for anything that could drive both. That third box fills in fast. Diet is a confounder. Mice that forage on high-fiber plants both harbor more of the fiber-digesting bacterium <em>and</em> stay leaner for reasons unrelated to the microbe. Diet points into both boxes, opening a back door, so a naive microbe-versus-no-microbe comparison mostly measures the <em>diet</em> gap and credits it to the bacterium. A colony of ten thousand mice would make that wrong number beautifully precise and no less wrong, because a larger sample shrinks noise, not confounding.</p>
 <p>Now the fix. If you <em>recorded</em> each mouse’s diet, use selection on observables: compare carriers to non-carriers <em>within</em> the high-fiber group, then <em>within</em> the low-fiber group, and average the two honest within-diet differences. If the gap collapses toward zero, the microbe was mostly a passenger of diet. The catch is honest: this works only for the confounder you measured. If mice also differ in an unrecorded trait, say a temperament that drives both foraging and metabolism, that trait keeps the back door open and “we controlled for diet” is not identification. Then your defensible claim is that the microbe is <em>associated with</em> leanness, and the causal question waits for a real intervention, such as colonizing genetically identical, identically fed mice. That boundary is what this chapter teaches you to see and to say.</p>
+<p>Which variables you must adjust for, and which adjustments open new paths rather than closing them, is decided by the diagram, not by what you happen to have measured <span class="citation" data-cites="pearl2009causality">(<a href="#ref-pearl2009causality" role="doc-biblioref">Pearl 2009</a>)</span>.</p>
+<p>The block below builds mice in which the microbe does nothing at all, and then measures the gap a naive comparison reports. Run it before you trust any carrier-versus-noncarrier number, including your own.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10_000</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Diet drives BOTH the microbe and leanness. The microbe itself does nothing.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>high_fiber <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> <span class="fl">0.5</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>microbe <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> np.where(high_fiber, <span class="fl">0.75</span>, <span class="fl">0.25</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>leanness <span class="op">=</span> <span class="dv">20</span> <span class="op">-</span> <span class="fl">3.0</span> <span class="op">*</span> high_fiber <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">1.5</span>, size<span class="op">=</span>n)   <span class="co"># lower = leaner</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">"high_fiber"</span>: high_fiber, <span class="st">"microbe"</span>: microbe,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"leanness"</span>: leanness})</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>naive <span class="op">=</span> df[df.microbe].leanness.mean() <span class="op">-</span> df[<span class="op">~</span>df.microbe].leanness.mean()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>within <span class="op">=</span> (df.groupby(<span class="st">"high_fiber"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            .<span class="bu">apply</span>(<span class="kw">lambda</span> g: g[g.microbe].leanness.mean()</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                             <span class="op">-</span> g[<span class="op">~</span>g.microbe].leanness.mean(), include_groups<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"true microbe effect              : </span><span class="sc">{</span><span class="fl">0.0</span><span class="sc">:+.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"naive carrier-vs-noncarrier gap  : </span><span class="sc">{</span>naive<span class="sc">:+.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"within high-fiber mice           : </span><span class="sc">{</span>within[<span class="va">True</span>]<span class="sc">:+.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"within low-fiber mice            : </span><span class="sc">{</span>within[<span class="va">False</span>]<span class="sc">:+.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"average of the two within-diet gaps: </span><span class="sc">{</span>within<span class="sc">.</span>mean()<span class="sc">:+.2f}</span><span class="ss">"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the naive gap is the DIET gap wearing the microbe's name;"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"ten thousand mice make it precise, not true"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="15.4">
 <h2 data-number="15.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">15.4</span> An AI failure case</h2>

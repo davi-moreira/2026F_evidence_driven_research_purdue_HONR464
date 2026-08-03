@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -659,6 +694,33 @@ div.csl-indent {
 <p>Take a music-streaming company testing whether a new autoplay recommender raises how often listeners keep the suggested track. Walk the four parts.</p>
 <p>The <strong>model</strong> says each listener has two possible accept rates, one under the old recommender and one under the new, and the new one could be higher, lower, or the same. The <strong>inquiry</strong> is the average difference between those two rates across all listeners, one number, causal in kind. The <strong>data strategy</strong> buckets each incoming session at random into old or new, so nothing about the listener decides which version they get. The <strong>answer strategy</strong> computes the accept rate in each bucket and subtracts.</p>
 <p>Now audit alignment. The inquiry asks for a caused difference. Random bucketing is what licenses that word, because it breaks any link between who the listener is and which version they see. So the four parts agree. Contrast a tempting shortcut: ship the new recommender to new users and compare them against existing users on the old one. That data strategy no longer aligns with a causal inquiry, because new and existing users differ in ways that also move accept rate. The inquiry stays exactly what it was: the caused lift. What changes is the claim this evidence supports, which drops from “causes” to “is associated with,” leaving the inquiry itself causal and currently unidentified. Same question, broken alignment.</p>
+<p>Declaring a design as these four linked parts, so that misalignment becomes visible before data collection, is the approach set out in the design-declaration literature <span class="citation" data-cites="blair2023rdss">(<a href="#ref-blair2023rdss" role="doc-biblioref">Blair et al. 2023</a>)</span>.</p>
+<p>The block below runs both data strategies against the same model and the same inquiry. Watch the second number miss a truth the first one finds.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">4000</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># MODEL: each listener has two accept rates; the new recommender adds 4 points.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>heavy <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> <span class="fl">0.45</span>              <span class="co"># heavy listeners accept more anyway</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>accept_old <span class="op">=</span> <span class="fl">0.30</span> <span class="op">+</span> <span class="fl">0.18</span> <span class="op">*</span> heavy</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>accept_new <span class="op">=</span> accept_old <span class="op">+</span> <span class="fl">0.04</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># DATA STRATEGY 1 — random bucketing: nothing about the listener decides arm.</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>new_arm <span class="op">=</span> rng.random(n) <span class="op">&lt;</span> <span class="fl">0.5</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>kept <span class="op">=</span> np.where(new_arm, rng.random(n) <span class="op">&lt;</span> accept_new, rng.random(n) <span class="op">&lt;</span> accept_old)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>randomized <span class="op">=</span> kept[new_arm].mean() <span class="op">-</span> kept[<span class="op">~</span>new_arm].mean()</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># DATA STRATEGY 2 — the shortcut: ship "new" to new users, who differ.</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>is_new_user <span class="op">=</span> <span class="op">~</span>heavy                       <span class="co"># new users are the lighter listeners</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>kept2 <span class="op">=</span> np.where(is_new_user, rng.random(n) <span class="op">&lt;</span> accept_new, rng.random(n) <span class="op">&lt;</span> accept_old)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>shortcut <span class="op">=</span> kept2[is_new_user].mean() <span class="op">-</span> kept2[<span class="op">~</span>is_new_user].mean()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"true caused lift             : </span><span class="sc">{</span><span class="fl">0.04</span><span class="sc">:+.3f}</span><span class="ss">"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"randomized buckets           : </span><span class="sc">{</span>randomized<span class="sc">:+.3f}</span><span class="ss">"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"new-vs-existing users        : </span><span class="sc">{</span>shortcut<span class="sc">:+.3f}</span><span class="ss">"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">same inquiry both times. the second design does not answer it —"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"the inquiry stays causal and is now unidentified"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="10.4">
 <h2 data-number="10.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">10.4</span> An AI failure case</h2>

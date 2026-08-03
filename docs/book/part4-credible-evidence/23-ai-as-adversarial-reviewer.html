@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -662,10 +697,46 @@ div.csl-indent {
 </section>
 <section id="a-worked-example" class="level2" data-number="26.3">
 <h2 data-number="26.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">26.3</span> A worked example</h2>
-<p>Your store installed a new self-checkout layout, and your data say customers got through the line faster. Before you defend that, you attack it. First, one term. <strong>p95 wait time</strong> is the wait that 95 out of 100 customers come in under, a fairer summary than the average because it captures the long waits people actually complain about. Example: a p95 of 210 seconds means only the slowest 5 percent waited longer than that. Your headline is a p95 drop from 210 seconds to 140.</p>
+<p>Your store installed a new self-checkout layout, and your data say customers got through the line faster. Before you defend that, you attack it. First, one term. <strong>p95 wait time</strong> is the wait that 95 out of 100 customers come in under, a fairer summary than the average because it captures the long waits people actually complain about. Example: a p95 of 210 seconds means only the slowest 5 percent waited longer than that. Your headline is a p95 drop from 210 seconds to 137.</p>
 <p>You hand the result to three adversarial reviewers, and each names a different fatal flaw. The first says the win is driven by a single unusually quiet morning. The second says you cherry-picked the one customer mix where the layout helps. The third says you compared a fully staffed week against a short-handed one, so you measured staffing, not the layout. All three are confident, and all three disagree.</p>
 <p>You do not trust the loudest voice. You turn each flaw into a check. Leave-one-out drops the quiet morning and recomputes the p95: it barely moves, so the first flaw is refuted. Your pre-listed specification grid reruns the drop across three customer mixes, and it holds in all three, so the second is refuted too. The placebo compares two stretches of the old layout against each other. An improvement between two identical stretches would prove the third reviewer right, but it comes back near zero, so the machinery is clean.</p>
 <p>The two loudest flags dissolved the moment a check touched them. The flaw that survives is one no further measurement can remove and none of the three raised: this ran at one store on weekdays, not across the chain. So the honest claim is bounded. You measured a p95 improvement for these three customer mixes at this store, not a guarantee for every location your company runs.</p>
+<p>Committing to the checks before seeing the results is what keeps this from becoming a search for the version you liked <span class="citation" data-cites="nosek2018preregistration">(<a href="#ref-nosek2018preregistration" role="doc-biblioref">Nosek et al. 2018</a>)</span>.</p>
+<p>The block below runs each reviewer’s objection as a check. Notice that the checks, not the reviewers’ confidence, decide which flaw survives.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> waits(n, scale, staffed):</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> rng.gamma(<span class="fl">2.2</span>, scale <span class="op">*</span> (<span class="fl">1.0</span> <span class="cf">if</span> staffed <span class="cf">else</span> <span class="fl">1.18</span>), size<span class="op">=</span>n)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>mornings <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>old <span class="op">=</span> pd.DataFrame({<span class="st">"morning"</span>: np.repeat(np.arange(mornings), <span class="dv">60</span>),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"wait"</span>: np.concatenate([waits(<span class="dv">60</span>, <span class="dv">40</span>, m <span class="op">%</span> <span class="dv">5</span> <span class="op">!=</span> <span class="dv">0</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                                            <span class="cf">for</span> m <span class="kw">in</span> <span class="bu">range</span>(mornings)]),</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"mix"</span>: np.tile([<span class="st">"commuter"</span>, <span class="st">"shopper"</span>, <span class="st">"family"</span>], <span class="dv">400</span>)})</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>new <span class="op">=</span> pd.DataFrame({<span class="st">"morning"</span>: np.repeat(np.arange(mornings), <span class="dv">60</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"wait"</span>: np.concatenate([waits(<span class="dv">60</span>, <span class="dv">27</span>, m <span class="op">%</span> <span class="dv">5</span> <span class="op">!=</span> <span class="dv">0</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                                            <span class="cf">for</span> m <span class="kw">in</span> <span class="bu">range</span>(mornings)]),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"mix"</span>: np.tile([<span class="st">"commuter"</span>, <span class="st">"shopper"</span>, <span class="st">"family"</span>], <span class="dv">400</span>)})</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>p95 <span class="op">=</span> <span class="kw">lambda</span> d: np.quantile(d.wait, <span class="fl">0.95</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"headline p95: </span><span class="sc">{</span>p95(old)<span class="sc">:.0f}</span><span class="ss"> s  -&gt;  </span><span class="sc">{</span>p95(new)<span class="sc">:.0f}</span><span class="ss"> s"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># flaw 1: one unusually quiet morning is carrying the win</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>loo <span class="op">=</span> [p95(new[new.morning <span class="op">!=</span> m]) <span class="cf">for</span> m <span class="kw">in</span> <span class="bu">range</span>(mornings)]</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">leave-one-out p95 range : </span><span class="sc">{</span><span class="bu">min</span>(loo)<span class="sc">:.0f}</span><span class="ss">-</span><span class="sc">{</span><span class="bu">max</span>(loo)<span class="sc">:.0f}</span><span class="ss"> s "</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"(the drop survives dropping any single morning)"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># flaw 2: it only holds for one customer mix</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>by_mix <span class="op">=</span> pd.DataFrame({<span class="st">"old p95"</span>: old.groupby(<span class="st">"mix"</span>).wait.quantile(<span class="fl">0.95</span>),</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"new p95"</span>: new.groupby(<span class="st">"mix"</span>).wait.quantile(<span class="fl">0.95</span>)}).<span class="bu">round</span>(<span class="dv">0</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> by_mix.to_string())</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># flaw 3: the placebo — two stretches of the OLD layout against each other</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>placebo <span class="op">=</span> p95(old[old.morning <span class="op">&lt;</span> <span class="dv">10</span>]) <span class="op">-</span> p95(old[old.morning <span class="op">&gt;=</span> <span class="dv">10</span>])</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">placebo, old layout vs itself : </span><span class="sc">{</span>placebo<span class="sc">:+.0f}</span><span class="ss"> s "</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"(</span><span class="sc">{</span><span class="st">'clean'</span> <span class="cf">if</span> <span class="bu">abs</span>(placebo) <span class="op">&lt;</span> <span class="dv">25</span> <span class="cf">else</span> <span class="st">'the machinery manufactures gaps'</span><span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"three confident reviewers, three checks, and only the checks decide"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="26.4">
 <h2 data-number="26.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">26.4</span> An AI failure case</h2>

@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -656,6 +691,26 @@ div.csl-indent {
 <p>You ask an AI for the key studies. It hands you a confident citation: two plausible author names, a 2019 date, and a journal whose title reads like a longer, more official version of the real <em>Electoral Studies</em>. You go to read it. The exact title returns nothing in your library portal, nothing on Google Scholar, nothing on the publisher’s site. That journal does not exist. The citation was manufactured, and it took four minutes to find out.</p>
 <p>So you run the loop properly. You retrieve one real review of polling-place location and turnout, read it, and snowball. Its reference list points backward to the older work on the costs of voting that it builds on. Its “Cited by” trail points forward to recent studies using precinct-level administrative records. Within an hour your list holds a half-dozen real sources and one live disagreement: some studies find that relocating a polling place shaves a point or two off turnout, others find that voters switch to mail ballots and total turnout barely moves. That disagreement is the live edge of the field, and it tells you the question is unsettled.</p>
 <p>Now the decision that is yours. The broad question “does distance affect turnout” is no gap; the literature is enormous. But your narrower question, whether the drop concentrates in neighborhoods without a car, may be genuine. You will be able to defend it only because you gathered the sources around it, and because you are about to open every one.</p>
+<p>Snowballing backward and forward from one retrieved source is a documented search method, and for some questions it finds what database queries miss <span class="citation" data-cites="greenhalgh2005search">(<a href="#ref-greenhalgh2005search" role="doc-biblioref">Greenhalgh and Peacock 2005</a>)</span>.</p>
+<p>The block below stands in for the reading you do by hand: six retrieved records, what each one found, and the one variable that explains why they disagree. It plants no citations, because a fabricated source is the thing this chapter is teaching you to catch.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Six retrieved records on polling-place distance and turnout. NO fabricated</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># citations appear here: these are anonymous stand-ins for records you open</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># yourself. The one thing that differs is what each record measured.</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>measured_switching <span class="op">=</span> np.array([<span class="va">False</span>, <span class="va">False</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">True</span>, <span class="va">True</span>])</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>effects <span class="op">=</span> np.<span class="bu">round</span>(np.where(measured_switching, <span class="op">-</span><span class="fl">0.2</span>, <span class="op">-</span><span class="fl">1.5</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                   <span class="op">+</span> rng.normal(<span class="dv">0</span>, <span class="fl">0.35</span>, size<span class="op">=</span><span class="dv">6</span>), <span class="dv">2</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.DataFrame({<span class="st">"record"</span>: [<span class="ss">f"record </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)],</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"turnout change (pp)"</span>: effects,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"measured mail switching"</span>: measured_switching}).to_string(index<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">mean where switching was ignored : "</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>effects[<span class="op">~</span>measured_switching]<span class="sc">.</span>mean()<span class="sc">:+.2f}</span><span class="ss"> pp"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"mean where switching was measured: "</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"</span><span class="sc">{</span>effects[measured_switching]<span class="sc">.</span>mean()<span class="sc">:+.2f}</span><span class="ss"> pp"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">the live disagreement is not noise. it tracks what each record measured"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">8.4</span> An AI failure case</h2>
