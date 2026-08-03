@@ -93,75 +93,6 @@ travels farthest, because a reviewer who catches one causal overreach distrusts 
 whole board, so you lock the associational verb first. That single decision, made by
 you and defended out loud, is the work of this chapter.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own audit first, then delegate. Each prompt hands the tool a job you
-can check, with a verify note naming the failure it defends against.
-
-Treat each prompt as an opening move. When the answer comes back thin, say what it
-missed and ask again. Reviewers get sharper on the second pass, human and machine
-alike. Some tools now run that loop internally and return only the final critique,
-which is convenient and also hides the reasoning you would otherwise get to
-question.
-
-**Generate the hostile questions (you map each to an audit).**
-
-```text
-Act as a hostile poster reviewer. My headline figure is a bar chart comparing
-mean corn yield for compost-amended versus control plots on a y-axis that starts
-at 180, titled "Compost RAISES corn yield," with no interval shown and the two
-bars told apart by red versus green only. Generate the six hardest skeptic
-questions you would ask, then name the single flaw this figure cannot answer.
-```
-
-After running, verify (counters *illusion of completeness*): map each question to
-one audit (claim boundary, figure honesty, read path, uncertainty, accessibility).
-An entire audit the tidy list skips is the gap. Then check the survivors against the
-real gap and exaggeration factor your own notebook cell printed.
-
-**List the color encodings to verify (you check against the rendered figure).**
-
-```text
-Here is the code that draws my poster's headline figure: [paste the cell]. List
-every place it encodes a meaningful distinction with color, and for each, say what
-a red-green color-blind reader and a screen-reader user would fail to receive.
-Then propose one redundant encoding that carries the same distinction.
-```
-
-After running, verify (counters *plausible-but-wrong-method*): read each encoding
-it names against your rendered figure. Generic accessibility advice that does not
-match how your figure is actually drawn is wrong for your case, so trust the picture
-you can see, and re-render after applying one proposed fix.
-
-**Red-team your spoken answer (you keep the words).**
-
-```text
-Here is my written headline: "[paste it]". Here is what I plan to say when a
-skeptic asks whether something else could explain it: "[paste it]". Find every
-place my spoken answer claims more than my written headline. Do not rewrite it;
-list the exact words.
-```
-
-After running, verify (counters *silent scope change*): read each flagged phrase
-next to your compass position. Keep every catch of a spoken "causes" your written
-poster never said, and reject any push to concede a point your design does license.
-
-::: {.callout-important title="Do not delegate"}
-These stay yours, however fluent the tool sounds. The words of your headline claim,
-and the verb that keeps it inside your compass position. The call, made out loud, to
-defend a point or concede it. And the decision that the poster is honest enough to
-lock. The tool can generate hard questions and scan a figure for color traps;
-deciding what your evidence licenses, and answering for it at the board, is yours.
-:::
-
 ## An AI failure case
 
 You describe your compost figure to your AI and ask for the hardest skeptic
@@ -194,15 +125,78 @@ bushels you computed. The completeness check is yours, not the tool's.
 *You have a draft page and a headline figure; this step is the audit that decides
 whether either one survives a hostile stranger.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own audit first, then delegate. Each prompt hands the tool a job you
+can check, with a verify note naming the failure it defends against.
+
+Treat each prompt as an opening move. When the answer comes back thin, say what it
+missed and ask again. Reviewers get sharper on the second pass, human and machine
+alike. Some tools now run that loop internally and return only the final critique,
+which is convenient and also hides the reasoning you would otherwise get to
+question.
+
+::: {.callout-important title="Do not delegate"}
+These stay yours, however fluent the tool sounds. The words of your headline claim,
+and the verb that keeps it inside your compass position. The call, made out loud, to
+defend a point or concede it. And the decision that the poster is honest enough to
+lock. The tool can generate hard questions and scan a figure for color traps;
+deciding what your evidence licenses, and answering for it at the board, is yours.
+:::
+
 1. Run the gallery-walk audit on your own draft as if you had never seen it: claim
    boundary, figure honesty, read path, uncertainty, accessibility. Write down every
    hit, located precisely enough to fix.
+
+   **Generate the hostile questions (you map each to an audit).**
+
+   ```text
+   Act as a hostile poster reviewer. My headline figure is a bar chart comparing
+   mean corn yield for compost-amended versus control plots on a y-axis that starts
+   at 180, titled "Compost RAISES corn yield," with no interval shown and the two
+   bars told apart by red versus green only. Generate the six hardest skeptic
+   questions you would ask, then name the single flaw this figure cannot answer.
+   ```
+
+   After running, verify (counters *illusion of completeness*): map each question to
+   one audit (claim boundary, figure honesty, read path, uncertainty, accessibility).
+   An entire audit the tidy list skips is the gap. Then check the survivors against the
+   real gap and exaggeration factor your own notebook cell printed.
+
+   *A second angle, optional:*
+
+   **List the color encodings to verify (you check against the rendered figure).**
+
+   ```text
+   Here is the code that draws my poster's headline figure: [paste the cell]. List
+   every place it encodes a meaningful distinction with color, and for each, say what
+   a red-green color-blind reader and a screen-reader user would fail to receive.
+   Then propose one redundant encoding that carries the same distinction.
+   ```
+
+   After running, verify (counters *plausible-but-wrong-method*): read each encoding
+   it names against your rendered figure. Generic accessibility advice that does not
+   match how your figure is actually drawn is wrong for your case, so trust the picture
+   you can see, and re-render after applying one proposed fix.
 2. Rank the hits by how far the error travels. A causal verb your design never
    bought travels farthest, because a reader who catches one overreach stops
    trusting everything else.
 3. Field the three lenses out loud: an outsider, a specialist, and a skeptic with a
    rival explanation. For each question, decide defend or concede, and write the
    narrower wording you would concede to.
+
+   **Red-team your spoken answer (you keep the words).**
+
+   ```text
+   Here is my written headline: "[paste it]". Here is what I plan to say when a
+   skeptic asks whether something else could explain it: "[paste it]". Find every
+   place my spoken answer claims more than my written headline. Do not rewrite it;
+   list the exact words.
+   ```
+
+   After running, verify (counters *silent scope change*): read each flagged phrase
+   next to your compass position. Keep every catch of a spoken "causes" your written
+   poster never said, and reject any push to concede a point your design does license.
 4. Revise once, fixing the hits in ranked order, then make the lock call. Every
    number traced and every citation opened, or not yet.
 5. Log it in your AI Research Ledger, and verify at least one fixed number with a

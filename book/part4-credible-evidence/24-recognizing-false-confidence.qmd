@@ -86,65 +86,6 @@ in fertilizer practice upstream could move nitrate just as much. You keep the fi
 can defend, "nitrate fell about 15 percent at this site over one year," and you drop both
 the inflated figure and the word "success."
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own expectation first, then delegate. Each prompt hands out a task you can
-check, with a verify note naming the failure it defends against.
-
-**Point to the real number (you recompute it).**
-
-```text
-Here is a cell that computes average nitrate before and after a buffer was
-installed and prints both means: [paste it]. Tell me which single printed number
-is the actual change, and state plainly whether a "40 percent reduction" summary
-is or is not that number. Do not rerun it; I will read my own output and compare.
-```
-
-After running, verify (counters *confident fabrication*): a fluent summary can state a
-number the data never produced. Read the two means your cell printed and compute the
-change yourself. If it does not match the AI's figure, trust your printout.
-
-**Force the uncertainty out (you check the bound).**
-
-```text
-For the before/after nitrate change in my data, rate how firm the estimate is.
-Give a plausible range, and name what drives the uncertainty: the sample size, the
-week-to-week scatter, and the lack of a comparison stream.
-```
-
-After running, verify (counters *missing uncertainty*): if a result arrives as a clean
-fact with no bound, assume the uncertainty was dropped, not that there was none.
-Confirm the range against the spread you can see in your own readings.
-
-**Red-team your finding (you keep the claim).**
-
-```text
-Here is my finding: "[paste your sentence]." Act as a hostile reviewer for a state
-fisheries agency. Name every place it reaches past one site and one year of data.
-Do not rewrite it for me; list the weaknesses.
-```
-
-After running, verify (counters *sycophantic agreement*): if every objection is mild,
-or it calls your sentence "well-balanced," push back and ask for the single worst
-flaw.
-
-::: {.callout-important title="Do not delegate"}
-These stay yours, no matter how sure the tool sounds. Deciding what claim the verified
-number actually supports, and how far that claim reaches. Judging whether your design
-lets you credit the buffer for the change, or only lets you report that nitrate fell.
-Stating the uncertainty and the limits in your own words. The tool can draft a
-summary; deciding whether that summary is true, and answering for it, is the
-researcher's job.
-:::
-
 ## An AI failure case
 
 You ask the AI to "summarize what this water-quality dataset shows," and it hands back
@@ -170,14 +111,67 @@ reach, and both failures were invisible until you checked outside the model.
 it. This step turns the audit on yourself and produces the one sentence your evidence can
 actually carry.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own expectation first, then delegate. Each prompt hands out a task you can
+check, with a verify note naming the failure it defends against.
+
+::: {.callout-important title="Do not delegate"}
+These stay yours, no matter how sure the tool sounds. Deciding what claim the verified
+number actually supports, and how far that claim reaches. Judging whether your design
+lets you credit the buffer for the change, or only lets you report that nitrate fell.
+Stating the uncertainty and the limits in your own words. The tool can draft a
+summary; deciding whether that summary is true, and answering for it, is the
+researcher's job.
+:::
+
 1. List every number currently in your project that you have not personally recomputed.
    The list is usually longer than you expect. Recompute each one or take it out.
+
+   **Point to the real number (you recompute it).**
+
+   ```text
+   Here is a cell that computes average nitrate before and after a buffer was
+   installed and prints both means: [paste it]. Tell me which single printed number
+   is the actual change, and state plainly whether a "40 percent reduction" summary
+   is or is not that number. Do not rerun it; I will read my own output and compare.
+   ```
+
+   After running, verify (counters *confident fabrication*): a fluent summary can state a
+   number the data never produced. Read the two means your cell printed and compute the
+   change yourself. If it does not match the AI's figure, trust your printout.
 2. For your headline number, write down where your confidence in it actually comes from:
    your own recomputation, a tool's fluent summary, or the fact that it matched what you
    were hoping for. Only the first one counts as a reason.
 3. Write your boundary sentence, the claim your design licenses and nothing beyond it.
    Name the unit, the setting, the time span, and whether you can credit a cause or can
    only report that something changed.
+
+   **Force the uncertainty out (you check the bound).**
+
+   ```text
+   For the before/after nitrate change in my data, rate how firm the estimate is.
+   Give a plausible range, and name what drives the uncertainty: the sample size, the
+   week-to-week scatter, and the lack of a comparison stream.
+   ```
+
+   After running, verify (counters *missing uncertainty*): if a result arrives as a clean
+   fact with no bound, assume the uncertainty was dropped, not that there was none.
+   Confirm the range against the spread you can see in your own readings.
+
+   *A second angle, optional:*
+
+   **Red-team your finding (you keep the claim).**
+
+   ```text
+   Here is my finding: "[paste your sentence]." Act as a hostile reviewer for a state
+   fisheries agency. Name every place it reaches past one site and one year of data.
+   Do not rewrite it for me; list the weaknesses.
+   ```
+
+   After running, verify (counters *sycophantic agreement*): if every objection is mild,
+   or it calls your sentence "well-balanced," push back and ask for the single worst
+   flaw.
 4. Name the one place you are most likely to let a confident answer past unchecked, and
    write it down. That admission is where automation bias gets managed.
 5. Adopt a standing rule for the rest of the project: no AI-reported number reaches your

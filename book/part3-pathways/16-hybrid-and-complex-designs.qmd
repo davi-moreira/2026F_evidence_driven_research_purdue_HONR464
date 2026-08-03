@@ -88,70 +88,6 @@ redesign of the data strategy, taking the denominator from a source built to cov
 every seller, such as a government economic census, not one more year of the same
 survey.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt is a checkable job, not a
-request for a verdict. Run them as a loop rather than a single shot: the second
-pass, where you hand back the piece the tool skipped and ask again, is usually the
-one that finds the uncharacterized step. Agentic tools that chain those passes
-themselves will assemble a complete-looking error budget in one go. A complete look
-is the failure mode this chapter is about.
-
-**Locate the real rule.**
-
-```text
-Act as an industrial-organization research assistant. For a market concentration index
-computed as the sum of every seller's squared market share, name two things and cite a
-real, retrievable source for each: (1) the index thresholds competition authorities use
-to call a market moderately or highly concentrated, and (2) the standard rule for
-propagating the uncertainty in the measured revenues and the market total into the
-index. Only state values you are confident exist.
-```
-After running, verify: open the cited source and confirm the thresholds and the
-propagation rule actually appear there. Counters *confident fabrication* (an invented
-threshold arrives as confidently as a real one).
-
-**Decompose the design into pieces you can check.**
-
-```text
-Here is my combined design: [paste your model, inquiry, and how you measure each
-seller's revenue and the total market revenue]. Break it into sub-designs. For each
-sub-measurement, name which MIDA part it lives in, the one assumption it depends on,
-and how its error enters the final index. Return a table.
-```
-After running, verify: set the table beside your own decomposition. Any sub-design or
-assumption it skipped is exactly the gap to chase. Counters *illusion of completeness*
-(a tidy table that omits the one uncharacterized step).
-
-**Red-team the combined result.**
-
-```text
-Act as a hostile antitrust economist. Here is my measured concentration index and its
-stated uncertainty: [paste]. Name the single systematic error that more months of data
-can never fix and the place my four MIDA parts fail to point at the same quantity. Do
-not fix it for me.
-```
-After running, verify: if it only praises your precision, push back and demand the one
-worst systematic error. Counters *sycophantic agreement* (praise that reviews your ego,
-not your error budget).
-
-::: {.callout-important title="Do not delegate"}
-Three calls stay yours. You decide **what single quantity your inquiry names** (which
-market, over what geography and time window), **whether each sub-design actually
-targets that same quantity** so the parts align, and **whether to trust a combined number your diagnosis
-says a systematic error dominates**. A tool can propagate the arithmetic, but it cannot
-decide that a precise number is a correct one. That judgment is the whole point of the
-chapter, and it is yours.
-:::
-
 ## An AI failure case
 
 You paste your revenue table into an AI tool and ask for the concentration index. It
@@ -180,15 +116,61 @@ Verify the number, not the tidy interval beside it.
 *You have now walked all four pathways. This step decides whether your own project
 needs more than one moving piece, and makes you justify the answer either way.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt is a checkable job, not a
+request for a verdict. Run them as a loop rather than a single shot: the second
+pass, where you hand back the piece the tool skipped and ask again, is usually the
+one that finds the uncharacterized step. Agentic tools that chain those passes
+themselves will assemble a complete-looking error budget in one go. A complete look
+is the failure mode this chapter is about.
+
+::: {.callout-important title="Do not delegate"}
+Three calls stay yours. You decide **what single quantity your inquiry names** (which
+market, over what geography and time window), **whether each sub-design actually
+targets that same quantity** so the parts align, and **whether to trust a combined number your diagnosis
+says a systematic error dominates**. A tool can propagate the arithmetic, but it cannot
+decide that a precise number is a correct one. That judgment is the whole point of the
+chapter, and it is yours.
+:::
+
 1. Write your design as an ordered list of the measurements and stages it takes to
    get from raw data to your answer. One line means a simple design. Two or more
    means you are running a hybrid, whether you meant to or not.
 2. For each line, name which MIDA part it lives in and the single quantity it
    targets. Then hold the list against your inquiry. Do all the pieces point at the
    same quantity, or has one quietly drifted to a neighboring one?
+
+   **Decompose the design into pieces you can check.**
+
+   ```text
+   Here is my combined design: [paste your model, inquiry, and how you measure each
+   seller's revenue and the total market revenue]. Break it into sub-designs. For each
+   sub-measurement, name which MIDA part it lives in, the one assumption it depends on,
+   and how its error enters the final index. Return a table.
+   ```
+
+   After running, verify: set the table beside your own decomposition. Any sub-design or
+   assumption it skipped is exactly the gap to chase. Counters *illusion of completeness*
+   (a tidy table that omits the one uncharacterized step).
 3. Pick the piece whose error would hurt most and trace how its uncertainty reaches
    your final answer. Flag any step that squares, divides, or ratios a measured
    value, because a small tilt gets amplified exactly there.
+
+   **Locate the real rule.**
+
+   ```text
+   Act as an industrial-organization research assistant. For a market concentration index
+   computed as the sum of every seller's squared market share, name two things and cite a
+   real, retrievable source for each: (1) the index thresholds competition authorities use
+   to call a market moderately or highly concentrated, and (2) the standard rule for
+   propagating the uncertainty in the measured revenues and the market total into the
+   index. Only state values you are confident exist.
+   ```
+
+   After running, verify: open the cited source and confirm the thresholds and the
+   propagation rule actually appear there. Counters *confident fabrication* (an invented
+   threshold arrives as confidently as a real one).
 4. Decide, and write the one-sentence justification. Either "this piece buys me
    something a single measurement cannot, and I can characterize its error," or
    "this piece adds a step I cannot characterize, so I am cutting it and narrowing
@@ -196,6 +178,19 @@ needs more than one moving piece, and makes you justify the answer either way.*
 5. Name the systematic error in what remains that more data will never shrink, and
    what you would have to change instead: a different source, a wider sampling
    frame, a better instrument.
+
+   **Red-team the combined result.**
+
+   ```text
+   Act as a hostile antitrust economist. Here is my measured concentration index and its
+   stated uncertainty: [paste]. Name the single systematic error that more months of data
+   can never fix and the place my four MIDA parts fail to point at the same quantity. Do
+   not fix it for me.
+   ```
+
+   After running, verify: if it only praises your precision, push back and demand the one
+   worst systematic error. Counters *sycophantic agreement* (praise that reviews your ego,
+   not your error budget).
 6. Log the step in your AI Research Ledger, and verify at least one output with a
    named method from the [Verification Guide](../verification-guide.qmd).
    Simulation is the natural check for a stitched design: plant a known bias in one

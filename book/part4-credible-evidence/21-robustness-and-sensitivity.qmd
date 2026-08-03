@@ -175,70 +175,6 @@ the beginning of a formal argument the uncertainty chapter finishes; here it is 
 smell test, and a real gap the no-effect pile produces routinely is a warning that
 your machinery, not the discount, may be doing the work.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt is a checkable job, not a
-request for a verdict.
-
-**Locate the standard checks.**
-
-```text
-Act as a methods assistant for a two-group comparison of average customer spending.
-Before any code, name the standard families of robustness and sensitivity checks for
-this design and the four things I can vary to stress the estimate. Cite a real methods
-reference you are confident exists; if you are unsure a source is real, say so.
-```
-After running, verify: open the reference and confirm the checks and the source
-exist. Counters *confident fabrication* (an invented method or citation arrives as
-confidently as a real one).
-
-**Delegate, with a list to verify.**
-
-```text
-Here is my pre-listed robustness grid for one estimate of the offer's effect on
-30-day spending per assigned shopper: I vary the sample (all shoppers / drop the
-wholesale account), the measurement (total charged / shipping and taxes stripped
-out, in its own labeled panel), and the specification (no adjustment / adjusted for
-each shopper's pre-offer spending). Name up to three additional, equally defensible
-versions I did NOT list, flag any of my versions that changes the outcome
-definition or conditions on something the offer could have caused, and for each
-suggestion say which direction you expect it to push the estimate.
-```
-After running, verify: check each suggestion against the gate (same claim,
-commensurable within its panel, nothing conditioned on a post-treatment outcome)
-and add only the ones you can actually run on your own data. Counters *illusion of completeness* (a
-tidy grid that quietly omits the one choice that would break the claim).
-
-**Red-team your span.**
-
-```text
-Here is my claim: "higher spending in every version we pre-listed; within my primary
-panel, which holds population, outcome and units fixed, the estimates spanned 8 to 12
-percent." Act as a hostile reviewer of a retail pricing study. Name the single worst
-way this could be specification searching rather than robustness, and the one check
-that would expose it. Also check whether my span mixes versions that changed the
-population, the outcome definition, or the scale; those belong in separate labeled
-panels with their own spans. Do not rewrite the claim for me.
-```
-After running, verify: run the check it names against your own data; the flaw is real
-only if your numbers confirm it. Counters *sycophantic agreement* (praise that
-reviews your ego, not your evidence).
-
-::: {.callout-important title="Do not delegate"}
-Three calls stay yours. You decide **which checks you commit to before you look**,
-**which flagged issues the data actually confirms**, and **the final claim, with its
-per-panel span and its boundary, that you defend**. A reviewer, human or AI, proposes. You
-verify against your own data, and the evidence decides.
-:::
-
 ## An AI failure case
 
 You paste your four-handle grid and ask an AI to write your robustness section. Back
@@ -268,6 +204,18 @@ against yours, not against how finished it sounds.
 re-derived yourself. This step tries to break that number before a reviewer gets the
 chance.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt is a checkable job, not a
+request for a verdict.
+
+::: {.callout-important title="Do not delegate"}
+Three calls stay yours. You decide **which checks you commit to before you look**,
+**which flagged issues the data actually confirms**, and **the final claim, with its
+per-panel span and its boundary, that you defend**. A reviewer, human or AI, proposes. You
+verify against your own data, and the evidence decides.
+:::
+
 1. Write your headline estimate in one sentence. Then list its four handles: the sample
    you kept, the measurement you chose, the specification you fit, and the metric you
    report. For each, name one alternative you could defend just as well as the one you
@@ -275,6 +223,39 @@ chance.*
 2. Pre-list the checks you will run, at least two, aimed at the handles a hostile reader
    would attack first. Write them down before you run any of them, and commit now to
    reporting all of them however they come out.
+
+   **Locate the standard checks.**
+
+   ```text
+   Act as a methods assistant for a two-group comparison of average customer spending.
+   Before any code, name the standard families of robustness and sensitivity checks for
+   this design and the four things I can vary to stress the estimate. Cite a real methods
+   reference you are confident exists; if you are unsure a source is real, say so.
+   ```
+
+   After running, verify: open the reference and confirm the checks and the source
+   exist. Counters *confident fabrication* (an invented method or citation arrives as
+   confidently as a real one).
+
+   *A second angle, optional:*
+
+   **Delegate, with a list to verify.**
+
+   ```text
+   Here is my pre-listed robustness grid for one estimate of the offer's effect on
+   30-day spending per assigned shopper: I vary the sample (all shoppers / drop the
+   wholesale account), the measurement (total charged / shipping and taxes stripped
+   out, in its own labeled panel), and the specification (no adjustment / adjusted for
+   each shopper's pre-offer spending). Name up to three additional, equally defensible
+   versions I did NOT list, flag any of my versions that changes the outcome
+   definition or conditions on something the offer could have caused, and for each
+   suggestion say which direction you expect it to push the estimate.
+   ```
+
+   After running, verify: check each suggestion against the gate (same claim,
+   commensurable within its panel, nothing conditioned on a post-treatment outcome)
+   and add only the ones you can actually run on your own data. Counters *illusion of completeness* (a
+   tidy grid that quietly omits the one choice that would break the claim).
 3. Before you run anything, run your list through the gate. Every version tests your
    one substantive claim; versions that change the outcome's definition or scale get
    their own labeled panel; and any version that keeps only units whose status your
@@ -287,6 +268,22 @@ chance.*
    given its own labeled span. Second, your lead estimate with its own uncertainty
    stated beside it, built with the tools the uncertainty chapter gives you. The span
    measures your choices, not chance, and neither alone is an honest report.
+
+   **Red-team your span.**
+
+   ```text
+   Here is my claim: "higher spending in every version we pre-listed; within my primary
+   panel, which holds population, outcome and units fixed, the estimates spanned 8 to 12
+   percent." Act as a hostile reviewer of a retail pricing study. Name the single worst
+   way this could be specification searching rather than robustness, and the one check
+   that would expose it. Also check whether my span mixes versions that changed the
+   population, the outcome definition, or the scale; those belong in separate labeled
+   panels with their own spans. Do not rewrite the claim for me.
+   ```
+
+   After running, verify: run the check it names against your own data; the flaw is real
+   only if your numbers confirm it. Counters *sycophantic agreement* (praise that
+   reviews your ego, not your evidence).
 5. Ask what every version on your list has in common. If one flaw sits underneath all of
    them, such as a comparison group chosen badly, the whole curve leans together and
    agreement proves nothing. Name that shared threat in a sentence, since your curve

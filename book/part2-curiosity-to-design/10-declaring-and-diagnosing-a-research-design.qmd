@@ -116,61 +116,6 @@ button's effect, meaning pin the time gap on the button and rule out other cause
 while the confounded one shows only an **association**, where the two move together
 but a common cause could explain it.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own expectation first, then delegate. Each prompt below leaves you a draft
-you still have to check. Simulation is where the loop gets fastest and most dangerous
-at once: modern coding assistants will write the script, run it, read the error, and
-patch it without waiting for you, and they will happily converge on code that runs
-cleanly while declaring a different design than yours. Let the tool own the typing.
-Keep ownership of the true effect you plant and the numbers you read out.
-
-```text
-Act as a simulation assistant. Here is my declared design in words:
-[model, inquiry, data strategy, answer strategy]. Write the smallest Python
-that builds a world where I set the true effect, runs the design many times,
-and reports bias, variance, and power. List every assumption your code makes
-about my design that I did not state.
-```
-After running, verify (counters *plausible-but-wrong-method*): re-run it with the true
-effect set to zero and confirm it "detects" an effect only about as often as your
-significance threshold allows. A simulation that fires on a zero effect is declaring a
-different design than yours.
-
-```text
-Here is my diagnosed design and its numbers: [bias, variance, power]. List the
-threats to any conclusion from one run as a table: threat, whether it is a
-bias / variance / power problem, and the single redesign that reduces it most.
-```
-After running, verify (counters *illusion of completeness*): check the table against
-your own printed diagnosis. The killer your numbers already proved must be the top
-row; a tidy six-threat list that never names it missed the point.
-
-```text
-Argue against my claim that this design is strong enough to run. As a hostile
-methodologist, name the one diagnosand I am most likely fooling myself about,
-and the observation that would expose it.
-```
-After running, verify (counters *sycophantic agreement*): if it praises the design
-without a single objection, discard the answer and diagnose again yourself.
-
-::: {.callout-important title="Do not delegate"}
-Three calls stay yours. **Which world your question assumes**, the model you declare,
-is a claim about reality no tool can make for you. **Which single quantity you name as
-your inquiry** decides what "success" even means. And **the honest call of whether to
-run a design your own diagnosis says is too weak** is a judgment you sign your name
-to. An AI can propose threats and draft simulation code, but it cannot decide that
-your under-powered study is worth months of your life anyway.
-:::
-
 ## An AI failure case
 
 You paste your confounded observational design and ask, "My estimate is noisy. What
@@ -194,11 +139,44 @@ diagnosis unmasks it.
 *You have four design parts on paper. This step asks whether they would survive
 contact with the world, while a bad answer is still free.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own expectation first, then delegate. Each prompt below leaves you a draft
+you still have to check. Simulation is where the loop gets fastest and most dangerous
+at once: modern coding assistants will write the script, run it, read the error, and
+patch it without waiting for you, and they will happily converge on code that runs
+cleanly while declaring a different design than yours. Let the tool own the typing.
+Keep ownership of the true effect you plant and the numbers you read out.
+
+::: {.callout-important title="Do not delegate"}
+Three calls stay yours. **Which world your question assumes**, the model you declare,
+is a claim about reality no tool can make for you. **Which single quantity you name as
+your inquiry** decides what "success" even means. And **the honest call of whether to
+run a design your own diagnosis says is too weak** is a judgment you sign your name
+to. An AI can propose threats and draft simulation code, but it cannot decide that
+your under-powered study is worth months of your life anyway.
+:::
+
 1. Declare your design as something that can be run. If you can code it, write the
    smallest script that builds a world where *you* set the true effect, draws your
    sample, applies your answer strategy, and prints one estimate. If you cannot code
    it yet, declare it in words precise enough that someone else could: state the true
    effect you are assuming, the number of units, and the exact arithmetic.
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Act as a simulation assistant. Here is my declared design in words:
+   [model, inquiry, data strategy, answer strategy]. Write the smallest Python
+   that builds a world where I set the true effect, runs the design many times,
+   and reports bias, variance, and power. List every assumption your code makes
+   about my design that I did not state.
+   ```
+
+   After running, verify (counters *plausible-but-wrong-method*): re-run it with the true
+   effect set to zero and confirm it "detects" an effect only about as often as your
+   significance threshold allows. A simulation that fires on a zero effect is declaring a
+   different design than yours.
 2. Diagnose it. Run it a few thousand times and read three numbers: bias (do the
    estimates center on the truth you planted?), variance (how wide is the spread?),
    and power (how often does it clear your stated threshold?). Write down the test and
@@ -211,11 +189,34 @@ contact with the world, while a bad answer is still free.*
    better-balanced groups, and a stronger treatment contrast all buy power too. A
    tilt in who ends up where is a design problem, and a bigger sample makes it more
    precise rather than less wrong.
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Here is my diagnosed design and its numbers: [bias, variance, power]. List the
+   threats to any conclusion from one run as a table: threat, whether it is a
+   bias / variance / power problem, and the single redesign that reduces it most.
+   ```
+
+   After running, verify (counters *illusion of completeness*): check the table against
+   your own printed diagnosis. The killer your numbers already proved must be the top
+   row; a tidy six-threat list that never names it missed the point.
 4. Redesign once. Change exactly one thing, the one your diagnosis points at, and
    diagnose again. Record both diagnoses side by side so the improvement is visible.
 5. Make the honest call in one sentence: run it as redesigned, redesign again, or
    narrow the claim to what this design can actually deliver. All three are respectable
    outcomes. Pretending you never checked is not.
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Argue against my claim that this design is strong enough to run. As a hostile
+   methodologist, name the one diagnosand I am most likely fooling myself about,
+   and the observation that would expose it.
+   ```
+
+   After running, verify (counters *sycophantic agreement*): if it praises the design
+   without a single objection, discard the answer and diagnose again yourself.
 6. Log both diagnoses in your AI Research Ledger, and verify the key number with a
    named method from the [Verification Guide](../verification-guide.qmd); simulation
    is the method for a claim about how a procedure behaves, and a causal diagram is

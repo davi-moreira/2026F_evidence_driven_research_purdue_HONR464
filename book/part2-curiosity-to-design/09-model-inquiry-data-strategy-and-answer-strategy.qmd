@@ -83,61 +83,6 @@ what it was: the caused lift. What changes is the claim this evidence supports,
 which drops from "causes" to "is associated with," leaving the inquiry itself
 causal and currently unidentified. Same question, broken alignment.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Write your own draft of each part first, then ask. Committing first gives the AI
-output something to disagree with. And expect to go around more than once: draft,
-read the reply, correct the one part it got wrong, paste your correction back, ask
-again. Each turn should sharpen the inquiry into fewer words, not more.
-
-```
-Act as a research-design tutor. Here is my research question: [paste it].
-Draft the four MIDA parts as a labeled list — Model, Inquiry, Data strategy,
-Answer strategy. State the Inquiry as one exact quantity. Mark each part
-"confident" or "guessing." Do not smooth over gaps.
-```
-After running, verify: read the drafted Inquiry's words next to your question's words.
-Do the kind and reach match? This counters **silent scope change**, where the tool
-answers an easier, adjacent question than the one you asked.
-
-```
-Act as a hostile methodologist. Here are my four MIDA parts: [paste them].
-Name the single worst misalignment — a place where my data or answer strategy
-cannot reach my stated inquiry. Give one concrete way my design fails, not
-praise.
-```
-After running, verify: check the objection against your own alignment note. This
-counters **sycophantic agreement**, where the tool calls a design sound because you
-proposed it.
-
-```
-Find one real, published study that used a design like mine to answer a similar
-question. Give title, authors, year, and venue. If you are not confident it
-exists, say so instead of inventing one.
-```
-After running, verify: open a library database and locate the exact study before
-citing it. This counters **confident fabrication**, where the tool returns a plausible
-citation for a paper that does not exist.
-
-::: {.callout-important title="Do not delegate"}
-Three choices stay yours. **Which world your question assumes** (the model, and so
-what could confound it). **Which single quantity you want** (the inquiry, named in
-your words, not the AI's paraphrase). **Whether your four parts align**, and therefore
-whether your claim boundary is *causes*, only *is associated with*, or *causal but not
-yet identified by this design*. That third state is a real answer, and keeping your
-question while admitting the design cannot reach it is more honest than shrinking the
-question to fit the data. An AI can draft candidate parts. Deciding they agree, and
-owning the claim that follows, is research judgment you cannot hand off.
-:::
-
 ## An AI failure case
 
 You paste your streaming question and ask for MIDA. The tool returns four confident,
@@ -165,6 +110,24 @@ the accept rate. That open arrow is the confounder the fluent draft never mentio
 *You have a question and a gap you can defend. This step turns them into a design, on
 one page, in four parts that have to agree with each other.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Write your own draft of each part first, then ask. Committing first gives the AI
+output something to disagree with. And expect to go around more than once: draft,
+read the reply, correct the one part it got wrong, paste your correction back, ask
+again. Each turn should sharpen the inquiry into fewer words, not more.
+
+::: {.callout-important title="Do not delegate"}
+Three choices stay yours. **Which world your question assumes** (the model, and so
+what could confound it). **Which single quantity you want** (the inquiry, named in
+your words, not the AI's paraphrase). **Whether your four parts align**, and therefore
+whether your claim boundary is *causes*, only *is associated with*, or *causal but not
+yet identified by this design*. That third state is a real answer, and keeping your
+question while admitting the design cannot reach it is more honest than shrinking the
+question to fit the data. An AI can draft candidate parts. Deciding they agree, and
+owning the claim that follows, is research judgment you cannot hand off.
+:::
+
 1. Write your **model** in three or four sentences of plain language. Which units
    exist, what could affect what, and what is allowed to vary. No equations required.
    Then draw it as boxes and arrows, even badly.
@@ -176,11 +139,49 @@ one page, in four parts that have to agree with each other.*
    whether the world assigned conditions for you.
 4. Write your **answer strategy**: the arithmetic that turns your data into your
    inquiry. A subtraction of two averages counts. Simple is a feature here.
+
+   *When you are ready to delegate this step:*
+
+   ```
+   Act as a research-design tutor. Here is my research question: [paste it].
+   Draft the four MIDA parts as a labeled list — Model, Inquiry, Data strategy,
+   Answer strategy. State the Inquiry as one exact quantity. Mark each part
+   "confident" or "guessing." Do not smooth over gaps.
+   ```
+
+   After running, verify: read the drafted Inquiry's words next to your question's words.
+   Do the kind and reach match? This counters **silent scope change**, where the tool
+   answers an easier, adjacent question than the one you asked.
 5. Audit the alignment yourself and write the one sentence that matters: "Because my
    data strategy is ___, the strongest honest wording of my result is ___." If that
    sentence lands on *is associated with* rather than *causes*, you have not failed;
    you have found your claim boundary early, which is the point.
+
+   *When you are ready to delegate this step:*
+
+   ```
+   Act as a hostile methodologist. Here are my four MIDA parts: [paste them].
+   Name the single worst misalignment — a place where my data or answer strategy
+   cannot reach my stated inquiry. Give one concrete way my design fails, not
+   praise.
+   ```
+
+   After running, verify: check the objection against your own alignment note. This
+   counters **sycophantic agreement**, where the tool calls a design sound because you
+   proposed it.
 6. Log the draft in your AI Research Ledger, then verify the alignment claim with a
    named method from the [Verification Guide](../verification-guide.qmd); peer
    reasoning or a causal diagram both fit. An AI reviewer may argue the misalignment
    with you; the decision to accept or reject the objection stays yours.
+
+   *When you are ready to delegate this step:*
+
+   ```
+   Find one real, published study that used a design like mine to answer a similar
+   question. Give title, authors, year, and venue. If you are not confident it
+   exists, say so instead of inventing one.
+   ```
+
+   After running, verify: open a library database and locate the exact study before
+   citing it. This counters **confident fabrication**, where the tool returns a plausible
+   citation for a paper that does not exist.

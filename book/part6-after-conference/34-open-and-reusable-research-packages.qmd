@@ -86,68 +86,6 @@ missing-registration precincts might be a bad rule cleanly logged. Runnable is n
 correct. That gap is exactly why your capsule is exercised by a person, not only by a
 script.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Packaging is a loop you will run more
-than once: you ask, you fix what comes back, you rerun the capsule cold, and the rerun
-surfaces the next gap. Some tools will now run that loop themselves, editing files and
-rerunning until nothing errors. A loop that ends with no errors has proved the code
-executes. It has not proved the numbers are right, and only you can tell the
-difference. Each prompt is a checkable job, not a verdict.
-
-**Locate the standard tool.**
-
-```text
-Act as a reproducibility assistant. Name the standard file and format for recording
-the exact package versions a notebook needs in order to rerun, and cite the official
-documentation. Only name tools you are confident exist.
-```
-
-After running, verify: open the official docs and confirm the file and its syntax
-exist. Counters *confident fabrication* (an invented tool name arrives as confidently
-as a real one).
-
-**List so you can verify (the cold replicator).**
-
-```text
-Here are the key lines of my capsule: [paste]. Playing a replicator who has only
-these lines and none of my memory, list every input, file, or by-hand step you would
-need to rerun my headline number and might not find here.
-```
-
-After running, verify: match each named gap against what your own `audit_capsule` run
-actually flagged, and drop any gap that maps to no real missing line. Counters
-*illusion of completeness* (a tidy capsule that looks whole while one input is
-missing).
-
-**Red-team the claim.**
-
-```text
-My claim is: "a stranger can rerun this capsule and get my number." Act as a hostile
-replication reviewer and name every way it could fail on a machine that is not mine.
-Do not fix it for me.
-```
-
-After running, verify: if it only reassures you, push back and demand the single
-worst failure. Counters *sycophantic agreement* (praise that reviews your ego, not
-your package).
-
-::: {.callout-important title="Do not delegate"}
-You decide **what goes in the capsule** and whether the sentence "this reproduces" is
-honest. The tool can list gaps and pin versions, but it cannot record your true data
-provenance, judge whether an exclusion's logged reason is a *good* reason, or certify
-that your analysis is correct rather than merely runnable. The name on the folder,
-and the claim that a stranger can trust it, are yours.
-:::
-
 ## An AI failure case
 
 You paste your notebook into your AI and ask, "will this run cold and produce my
@@ -173,18 +111,72 @@ executing it, not by reading a paragraph about executing it.
 *Your project already has a research note and a folder that runs; this step turns the
 two into one capsule someone could pick up a year from now and reuse.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Packaging is a loop you will run more
+than once: you ask, you fix what comes back, you rerun the capsule cold, and the rerun
+surfaces the next gap. Some tools will now run that loop themselves, editing files and
+rerunning until nothing errors. A loop that ends with no errors has proved the code
+executes. It has not proved the numbers are right, and only you can tell the
+difference. Each prompt is a checkable job, not a verdict.
+
+::: {.callout-important title="Do not delegate"}
+You decide **what goes in the capsule** and whether the sentence "this reproduces" is
+honest. The tool can list gaps and pin versions, but it cannot record your true data
+provenance, judge whether an exclusion's logged reason is a *good* reason, or certify
+that your analysis is correct rather than merely runnable. The name on the folder,
+and the claim that a stranger can trust it, are yours.
+:::
+
 1. Assemble the five parts for your own project: the runnable notebook, the
    data-provenance note, the fixed seed, the decision log, and your AI-use ledger.
    Anything a reader would otherwise have to guess belongs in one of the five.
+
+   **Locate the standard tool.**
+
+   ```text
+   Act as a reproducibility assistant. Name the standard file and format for recording
+   the exact package versions a notebook needs in order to rerun, and cite the official
+   documentation. Only name tools you are confident exist.
+   ```
+
+   After running, verify: open the official docs and confirm the file and its syntax
+   exist. Counters *confident fabrication* (an invented tool name arrives as confidently
+   as a real one).
 2. Run the chapter's audit on your own key lines and fix what it flags, starting with
    the sin you were most tempted to leave alone. Hard-coded paths and missing seeds
    are the two that break strangers most often.
+
+   **List so you can verify (the cold replicator).**
+
+   ```text
+   Here are the key lines of my capsule: [paste]. Playing a replicator who has only
+   these lines and none of my memory, list every input, file, or by-hand step you would
+   need to rerun my headline number and might not find here.
+   ```
+
+   After running, verify: match each named gap against what your own `audit_capsule` run
+   actually flagged, and drop any gap that maps to no real missing line. Counters
+   *illusion of completeness* (a tidy capsule that looks whole while one input is
+   missing).
 3. Write the README a stranger reads first: what the project asks, what the headline
    number is, which file produces it, and in what order to run things.
 4. Rerun it cold in a second environment, a clean Colab session or a machine that is
    not yours, and check the headline returns within rounding. A number that travels is
    reproducible. A number that does not means something you carried by hand was doing
    quiet work you never packaged.
+
+   **Red-team the claim.**
+
+   ```text
+   My claim is: "a stranger can rerun this capsule and get my number." Act as a hostile
+   replication reviewer and name every way it could fail on a machine that is not mine.
+   Do not fix it for me.
+   ```
+
+   After running, verify: if it only reassures you, push back and demand the single
+   worst failure. Counters *sycophantic agreement* (praise that reviews your ego, not
+   your package).
 5. Write one honest sentence about the limit of all this: your capsule is runnable,
    which is not the same as correct, and name the choice inside it you would most want
    a reviewer to question.

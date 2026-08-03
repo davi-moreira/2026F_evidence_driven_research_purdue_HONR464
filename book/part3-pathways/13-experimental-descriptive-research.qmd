@@ -81,61 +81,6 @@ instrument effect if slot 1's larger art or a slot-keyed logger inflates the
 count. The redesign renders every slot identically and logs impressions
 server-side.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt below ends with a check
-you run yourself. And treat each one as the opening move of a loop, not a
-one-shot request: read the output, push back on the weakest part, sharpen the
-prompt, run it again. Agentic tools now run several turns of that loop on their
-own, which does not retire your check. It just means more output arrives between
-your checks.
-
-```text
-Act as a literature scout. List three real, published experiments used to MEASURE
-a latent characteristic (position bias in a ranking interface, a hidden prevalence,
-a preference weight) rather than to test a deployable intervention. For each give
-authors, year, venue, and the single quantity measured, in a table. Only include
-work you are confident exists; mark any row you are unsure about.
-```
-After running, verify: open a database and retrieve each study yourself; any row
-you cannot find in a minute is a **confident fabrication**, so cut it.
-
-```text
-Here is code that estimates an interface's attention curve as the difference in
-play rate across randomly assigned slots: [paste]. Name every assumption this
-estimator needs to be valid, and for each, one concrete way it could fail in my
-logs.
-```
-After running, verify: check each assumption against your actual pipeline; an
-estimator that sounds standard but assumes something your data break is a
-**plausible-but-wrong method**.
-
-```text
-Act as a hostile measurement reviewer. Here is my construct and how I measure it:
-[plan]. List every demand effect and instrument effect that could produce my number
-even if the true value were different, and the redesign that rules each one out.
-```
-After running, verify: compare the list against the one artifact you wrote down
-first; if yours is missing, the tidy output just failed the **illusion of
-completeness** test, so add it back.
-
-::: {.callout-important title="Do not delegate"}
-Three calls stay yours. Whether your inquiry is **descriptive or causal**, because
-the kind lives in your question's words and no tool can read your intent. Whether
-the design actually measures **your** construct rather than something adjacent,
-which is a judgment about meaning, not about code. And which **artifacts** you are
-willing to stake your name on having ruled out. An AI partner can draft, locate,
-and attack. You declare and defend.
-:::
-
 ## An AI failure case
 
 You paste your attention-curve result into an AI tool and ask it to write the
@@ -161,17 +106,73 @@ ran. Reject it, and rewrite the claim bounded to the units you observed.
 is your study measuring a property the world already has, and if so, can it do
 that honestly?*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt below ends with a check
+you run yourself. And treat each one as the opening move of a loop, not a
+one-shot request: read the output, push back on the weakest part, sharpen the
+prompt, run it again. Agentic tools now run several turns of that loop on their
+own, which does not retire your check. It just means more output arrives between
+your checks.
+
+::: {.callout-important title="Do not delegate"}
+Three calls stay yours. Whether your inquiry is **descriptive or causal**, because
+the kind lives in your question's words and no tool can read your intent. Whether
+the design actually measures **your** construct rather than something adjacent,
+which is a judgment about meaning, not about code. And which **artifacts** you are
+willing to stake your name on having ruled out. An AI partner can draft, locate,
+and attack. You declare and defend.
+:::
+
 1. Read your lead question aloud and underline the verb. Does it ask how much of
    something already sits out there, or what would change if you intervened? Write
    the answer in one line. That line decides whether this pathway is yours.
 2. If it is yours, name the latent characteristic your project has to reveal, the
    property nobody publishes anywhere, and the controlled stimulus you will assign
    by chance to reveal it.
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Act as a literature scout. List three real, published experiments used to MEASURE
+   a latent characteristic (position bias in a ranking interface, a hidden prevalence,
+   a preference weight) rather than to test a deployable intervention. For each give
+   authors, year, venue, and the single quantity measured, in a table. Only include
+   work you are confident exists; mark any row you are unsure about.
+   ```
+
+   After running, verify: open a database and retrieve each study yourself; any row
+   you cannot find in a minute is a **confident fabrication**, so cut it.
 3. Write your estimand in one sentence: the exact quantity, for which units,
    described as it stands. Underneath it, write the causal sentence you forbid
    yourself, the one that starts with "if we".
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Here is code that estimates an interface's attention curve as the difference in
+   play rate across randomly assigned slots: [paste]. Name every assumption this
+   estimator needs to be valid, and for each, one concrete way it could fail in my
+   logs.
+   ```
+
+   After running, verify: check each assumption against your actual pipeline; an
+   estimator that sounds standard but assumes something your data break is a
+   **plausible-but-wrong method**.
 4. Name the one demand effect and the one instrument effect you most fear, each
    with the redesign that rules it out.
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Act as a hostile measurement reviewer. Here is my construct and how I measure it:
+   [plan]. List every demand effect and instrument effect that could produce my number
+   even if the true value were different, and the redesign that rules each one out.
+   ```
+
+   After running, verify: compare the list against the one artifact you wrote down
+   first; if yours is missing, the tidy output just failed the **illusion of
+   completeness** test, so add it back.
 5. If this pathway is not yours, run steps 2 to 4 as a drill anyway, treating your
    question as if you had to measure it rather than intervene. What breaks is your
    evidence that the pathway you chose fits better. Write that in two lines.

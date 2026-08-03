@@ -188,69 +188,6 @@ Could this check have detected an artifact big enough to matter? A later chapter
 gives uncertainty its proper machinery, and then "how far outside is too far"
 becomes a question you can answer rather than guess.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own expectation first, then delegate a checkable job. Expect to work in
-cycles: propose, interrogate, refine, ask again. One judgment never improves by
-re-prompting, though, and that is whether your control is genuinely null. You settle
-that once, from the mechanism, and no amount of looping settles it for you.
-
-**Locate the standard control.**
-
-```text
-Act as a lab-methods assistant. I ran an antibiotic disk-diffusion assay with a
-plant extract dissolved in 70% ethanol. Before any advice, name the standard
-negative (vehicle) control for this assay and cite a protocol or textbook where it
-appears. Only name controls you are confident are standard practice.
-```
-After running, verify: open the cited protocol and confirm the control is real and
-standard before you use it. Counters *confident fabrication* (an invented "standard"
-control arrives as confidently as a real one).
-
-**List candidate negative tests, then verify each.**
-
-```text
-Here is my analysis: [one-sentence design, your cause, your outcome]. Propose three
-negative tests: a placebo label, a falsification outcome measured where the effect
-cannot yet exist, and a negative-control outcome my cause could not plausibly affect.
-For each, name the quantity that is truly zero, and say what reading would count as
-ordinary versus large enough to worry about at my sample size.
-```
-After running, verify: for each test, confirm two things. Your cause genuinely
-*cannot* touch the negative control, or it is not null. And the artifact you fear
-genuinely *can* touch it, or the test cannot catch anything. Reject any answer that
-asks for a reading of exactly zero. Counters *plausible-but-wrong-method* (a
-"negative control" that is not actually null, or that your pipeline never touches).
-
-**Red-team a clean pass.**
-
-```text
-Here is a negative test I ran and its result: [describe the control and its
-near-zero outcome]. Act as a hostile reviewer. Name every reason this test could
-read as zero for the WRONG reason: too few samples to detect anything, a control too
-weak to carry the artifact, a zero I would have gotten no matter what. Do not reassure me.
-```
-After running, verify: if it only praises the clean result, push back and demand the
-single way the test is uninformative. Counters *sycophantic agreement* (praise that
-reviews your relief, not your evidence).
-
-::: {.callout-important title="Do not delegate"}
-You decide **which negative test your design actually needs**, **whether the control
-is genuinely null** (a place your cause truly cannot reach), and **what a clean pass
-licenses you to claim**. A tool can list candidate controls, but only you know the
-mechanism well enough to certify that your cause cannot touch the one you chose. The
-judgment about what a passed negative test bought you, and how far its sensitivity
-reached, stays yours.
-:::
-
 ## An AI failure case
 
 You ask an AI to design a negative control for your ethanol-based assay. It answers,
@@ -278,6 +215,22 @@ the advice sounded like textbook practice and was wrong for your case.
 checks at places where the answer must be zero, so you find out whether the world
 produced your result or your own pipeline did.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own expectation first, then delegate a checkable job. Expect to work in
+cycles: propose, interrogate, refine, ask again. One judgment never improves by
+re-prompting, though, and that is whether your control is genuinely null. You settle
+that once, from the mechanism, and no amount of looping settles it for you.
+
+::: {.callout-important title="Do not delegate"}
+You decide **which negative test your design actually needs**, **whether the control
+is genuinely null** (a place your cause truly cannot reach), and **what a clean pass
+licenses you to claim**. A tool can list candidate controls, but only you know the
+mechanism well enough to certify that your cause cannot touch the one you chose. The
+judgment about what a passed negative test bought you, and how far its sensitivity
+reached, stays yours.
+:::
+
 1. Name the artifact you are most afraid of: the one way your procedure, rather than
    your subject, could have manufactured your result. One sentence, written down before
    you go looking.
@@ -285,6 +238,37 @@ produced your result or your own pipeline did.*
    falsification outcome measured where the effect cannot yet exist, or a negative
    control your cause could not possibly touch. Then confirm the control is genuinely
    null. If your cause can reach it, it is not a negative test and it will fail quietly.
+
+   **Locate the standard control.**
+
+   ```text
+   Act as a lab-methods assistant. I ran an antibiotic disk-diffusion assay with a
+   plant extract dissolved in 70% ethanol. Before any advice, name the standard
+   negative (vehicle) control for this assay and cite a protocol or textbook where it
+   appears. Only name controls you are confident are standard practice.
+   ```
+
+   After running, verify: open the cited protocol and confirm the control is real and
+   standard before you use it. Counters *confident fabrication* (an invented "standard"
+   control arrives as confidently as a real one).
+
+   *A second angle, optional:*
+
+   **List candidate negative tests, then verify each.**
+
+   ```text
+   Here is my analysis: [one-sentence design, your cause, your outcome]. Propose three
+   negative tests: a placebo label, a falsification outcome measured where the effect
+   cannot yet exist, and a negative-control outcome my cause could not plausibly affect.
+   For each, name the quantity that is truly zero, and say what reading would count as
+   ordinary versus large enough to worry about at my sample size.
+   ```
+
+   After running, verify: for each test, confirm two things. Your cause genuinely
+   *cannot* touch the negative control, or it is not null. And the artifact you fear
+   genuinely *can* touch it, or the test cannot catch anything. Reject any answer that
+   asks for a reading of exactly zero. Counters *plausible-but-wrong-method* (a
+   "negative control" that is not actually null, or that your pipeline never touches).
 3. Before you run anything, write down two things. First, how big an artifact would
    actually matter for your claim: a shift of what size would change what you
    conclude? Second, what ordinary looks like: simulate your null world at your own
@@ -297,6 +281,19 @@ produced your result or your own pipeline did.*
    much. Then write your boundary in one line: the artifact this pass makes less
    likely, how far its sensitivity reached, and the causal or general claim it still
    does not establish.
+
+   **Red-team a clean pass.**
+
+   ```text
+   Here is a negative test I ran and its result: [describe the control and its
+   near-zero outcome]. Act as a hostile reviewer. Name every reason this test could
+   read as zero for the WRONG reason: too few samples to detect anything, a control too
+   weak to carry the artifact, a zero I would have gotten no matter what. Do not reassure me.
+   ```
+
+   After running, verify: if it only praises the clean result, push back and demand the
+   single way the test is uninformative. Counters *sycophantic agreement* (praise that
+   reviews your relief, not your evidence).
 6. Log both tests in your AI Research Ledger, and verify at least one output with a named
    method from the [Verification Guide](../verification-guide.qmd). **Simulation** is the
    one useful tool for a negative test: build a dataset by hand where no effect exists,

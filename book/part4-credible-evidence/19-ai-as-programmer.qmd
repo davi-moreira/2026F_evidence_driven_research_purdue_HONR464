@@ -108,75 +108,6 @@ decision that shrank your state to 40 cities would have happened inside a step y
 saw. The tool wrote correct code for the wrong question. You did the research by
 deciding what the code was allowed to count.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt is a checkable job, not a
-request for a verdict, and each one is a turn in a loop you keep running until the code
-says what you meant.
-
-**Locate the standard idiom.**
-
-```text
-Act as a Python data assistant. I need the share of rows above a threshold,
-computed only over a subset I will name. Before any code, name the standard pandas
-idiom for a threshold share over a filtered subset and the exact argument that
-controls whether missing values are dropped. Only name functions you are sure exist.
-```
-After running, verify: open the pandas docs and confirm the method and that argument
-exist and default as described. Counters *confident fabrication* (an invented method
-or argument arrives as confidently as a real one).
-
-**Delegate, then demand the choices back as a table.**
-
-```text
-Write code that returns the share of municipalities that posted council minutes
-within seven days of the meeting. Then return a table of every choice you made:
-which rows you kept, whether you dropped any and why, the exact set the share is
-computed over, and whether you reported a share or an average.
-```
-After running, verify: check the row count before and after the code, and confirm the
-set it computed over is the one your question names. Counters *silent scope change*
-(a share quietly computed over the portal cities, not the state).
-
-**Make the loop show its work.**
-
-```text
-You revised this code three times. For each revision, tell me in one line what changed
-about which rows are included or excluded, and which revision changed the set the
-number is computed over. Show me the code, not a summary of it.
-```
-After running, verify: put the first and the last version side by side and confirm the
-filters match what the tool reported. Counters *silent scope change* in its sneakiest
-form, a frame that narrows one revision at a time.
-
-**Red-team the number.**
-
-```text
-Here is my claim: "95% of city councils post their minutes within seven days."
-Act as a hostile open-records reviewer. Name every way this code could have counted
-the wrong quantity or this share could mislead. Do not rewrite the claim for me.
-```
-After running, verify: if it only praises the number, push back and demand the single
-worst flaw. Counters *sycophantic agreement* (praise that reviews your ego, not your
-evidence).
-
-::: {.callout-important title="Do not delegate"}
-You define **what quantity the code computes** and **which set of cases it runs
-over**, and you decide **what the number is allowed to claim**. The tool can write the
-filter, the aggregation, and the plot, and it can run its own loop until everything is
-clean. It cannot decide that 40 portal cities speak for a state of 240, or that a
-compliance rate with the unreachable towns deleted is honest. You own the final
-sentence, its frame, and its boundary.
-:::
-
 ## An AI failure case
 
 You ask for the on-time share and the tool returns tidy code that prints, with full
@@ -205,18 +136,85 @@ that it answered your question.
 step turns them into your first real numbers, and into the habit of never trusting code
 you have not read.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt is a checkable job, not a
+request for a verdict, and each one is a turn in a loop you keep running until the code
+says what you meant.
+
+::: {.callout-important title="Do not delegate"}
+You define **what quantity the code computes** and **which set of cases it runs
+over**, and you decide **what the number is allowed to claim**. The tool can write the
+filter, the aggregation, and the plot, and it can run its own loop until everything is
+clean. It cannot decide that 40 portal cities speak for a state of 240, or that a
+compliance rate with the unreachable towns deleted is honest. You own the final
+sentence, its frame, and its boundary.
+:::
+
 1. Write your quantity of interest in one sentence, and the frame it runs over in a
    second. Be concrete: not "my data," but the exact list of cases a stranger could
    reconstruct without asking you.
 2. Prompt an AI tool for the code that computes that quantity over that frame. Save the
    transcript. This is turn one of a loop, not a finished answer.
+
+   **Locate the standard idiom.**
+
+   ```text
+   Act as a Python data assistant. I need the share of rows above a threshold,
+   computed only over a subset I will name. Before any code, name the standard pandas
+   idiom for a threshold share over a filtered subset and the exact argument that
+   controls whether missing values are dropped. Only name functions you are sure exist.
+   ```
+
+   After running, verify: open the pandas docs and confirm the method and that argument
+   exist and default as described. Counters *confident fabrication* (an invented method
+   or argument arrives as confidently as a real one).
+
+   *A second angle, optional:*
+
+   **Delegate, then demand the choices back as a table.**
+
+   ```text
+   Write code that returns the share of municipalities that posted council minutes
+   within seven days of the meeting. Then return a table of every choice you made:
+   which rows you kept, whether you dropped any and why, the exact set the share is
+   computed over, and whether you reported a share or an average.
+   ```
+
+   After running, verify: check the row count before and after the code, and confirm the
+   set it computed over is the one your question names. Counters *silent scope change*
+   (a share quietly computed over the portal cities, not the state).
 3. Read the returned code line by line and ask what each line removes. Interrogate every
    filter, join, and missing-value call. Then refine your prompt and run the loop again,
    as many times as it takes.
+
+   **Make the loop show its work.**
+
+   ```text
+   You revised this code three times. For each revision, tell me in one line what changed
+   about which rows are included or excluded, and which revision changed the set the
+   number is computed over. Show me the code, not a summary of it.
+   ```
+
+   After running, verify: put the first and the last version side by side and confirm the
+   filters match what the tool reported. Counters *silent scope change* in its sneakiest
+   form, a frame that narrows one revision at a time.
 4. Print the shape of the data the number was computed over, and the row count before and
    after anything that can drop rows. A number without its row count is not a result yet.
 5. Write one sentence naming what this number does *not* cover: the cases your frame
    left out, and what you therefore cannot say about them.
+
+   **Red-team the number.**
+
+   ```text
+   Here is my claim: "95% of city councils post their minutes within seven days."
+   Act as a hostile open-records reviewer. Name every way this code could have counted
+   the wrong quantity or this share could mislead. Do not rewrite the claim for me.
+   ```
+
+   After running, verify: if it only praises the number, push back and demand the single
+   worst flaw. Counters *sycophantic agreement* (praise that reviews your ego, not your
+   evidence).
 6. Log this first number in your AI Research Ledger, and verify it with a named method
    from the [Verification Guide](../verification-guide.qmd). **Alternative code** is the
    natural pick here: recompute the same quantity a second way and confirm the two roads

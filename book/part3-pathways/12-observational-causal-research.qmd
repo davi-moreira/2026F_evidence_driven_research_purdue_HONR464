@@ -115,69 +115,6 @@ that the microbe is *associated with* leanness, and the causal question waits fo
 real intervention, such as colonizing genetically identical, identically fed mice. That
 boundary is what this chapter teaches you to see and to say.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first every time, then delegate. Treat each of these as the
-opening move of a loop, not a single question. Ask, read, name the one thing the reply
-got wrong about your setting, and ask again with that correction in hand. On causal
-questions the second pass matters more than anywhere else in this book, because the
-first reply almost always accepts your framing, and your framing is exactly what needs
-attacking.
-
-**Locate a real design (commit your own guess at the leverage first).**
-
-```
-Act as a research librarian in biology. Find peer-reviewed observational studies
-that used a natural experiment or a discontinuity to estimate the causal effect of
-a gut microbe on a host trait. For each: title, authors, year, venue, and the
-as-if-random source. Only include work you are confident exists; mark anything
-uncertain.
-```
-*After running, verify (counters **confident fabrication**): open each source and read
-the line yourself before citing it, which is primary-source reading. Cut any you cannot
-find.*
-
-**List the confounders to verify (commit your own list first).**
-
-```
-I claim a gut microbe causes leanness in wild mice. List traits that plausibly raise
-both microbe presence and leanness, in a table with the trait and the direction it
-would bias a naive comparison. Then, as a hostile reviewer, name the one trait you
-are most likely wrong to include and the important one you left out.
-```
-*After running, verify (counters **illusion of completeness**): compare the list to the
-one you committed first, and map each trait to a back-door path (trait → microbe, trait
-→ leanness). A trait with only one arrow is not a confounder.*
-
-**Red-team the causal sentence you wrote (write the sentence yourself, do not let AI draft it).**
-
-```
-Here is a causal sentence I wrote: "[paste your sentence]." Act as a hostile peer
-reviewer. Name every place it over-reaches or claims more than my observational
-design identifies. Do not rewrite it for me; list the weaknesses so I fix them.
-```
-*After running, verify (counters **sycophantic agreement**): if the objections are all
-mild, push back with "assume the sentence is wrong; name the single worst flaw." Praise
-without an objection is a red flag.*
-
-::: {.callout-important title="Do not delegate"}
-Three decisions stay yours alone. **Whether your design identifies a causal effect** is
-a judgment about how treatment was really assigned, and only you know that. **Which
-confounder most threatens your comparison** turns on the mechanism, which a model
-cannot see in your data. And **whether your finding earns *because* or must stop at
-*associated with*** is the whole skill of this chapter. A tool will happily call your
-comparison a "natural experiment" because you typed the words. Earning *because* is
-your signature, not the model's.
-:::
-
 ## An AI failure case
 
 You paste your mouse comparison into a chatbot and ask, "Is this a natural experiment,
@@ -205,6 +142,25 @@ earned. Say *associated with*, and log why.
 *Your design is declared and diagnosed. This pathway chapter is where a causal question
 either gets its identification argument in writing, or gets an honest boundary instead.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first every time, then delegate. Treat each of these as the
+opening move of a loop, not a single question. Ask, read, name the one thing the reply
+got wrong about your setting, and ask again with that correction in hand. On causal
+questions the second pass matters more than anywhere else in this book, because the
+first reply almost always accepts your framing, and your framing is exactly what needs
+attacking.
+
+::: {.callout-important title="Do not delegate"}
+Three decisions stay yours alone. **Whether your design identifies a causal effect** is
+a judgment about how treatment was really assigned, and only you know that. **Which
+confounder most threatens your comparison** turns on the mechanism, which a model
+cannot see in your data. And **whether your finding earns *because* or must stop at
+*associated with*** is the whole skill of this chapter. A tool will happily call your
+comparison a "natural experiment" because you typed the words. Earning *because* is
+your signature, not the model's.
+:::
+
 1. Decide which case you are in. If your inquiry asks what *would happen if* something
    changed, and nobody randomized the change, this is your pathway. If your inquiry is
    descriptive, predictive, or genuinely experimental, it is not, and you run the drill
@@ -215,12 +171,53 @@ either gets its identification argument in writing, or gets an honest boundary i
 3. Draw the causal diagram. Put treatment and outcome at the ends and add every third
    variable you can think of that pushes on both. Circle the confounder you most fear.
    Then write, in one line, whether you can measure it.
+
+   **List the confounders to verify (commit your own list first).**
+
+   ```
+   I claim a gut microbe causes leanness in wild mice. List traits that plausibly raise
+   both microbe presence and leanness, in a table with the trait and the direction it
+   would bias a naive comparison. Then, as a hostile reviewer, name the one trait you
+   are most likely wrong to include and the important one you left out.
+   ```
+
+   *After running, verify (counters **illusion of completeness**): compare the list to the
+   one you committed first, and map each trait to a back-door path (trait → microbe, trait
+   → leanness). A trait with only one arrow is not a confounder.*
 4. Name your leverage and its price. Selection on observables, a natural experiment,
    difference-in-differences, regression discontinuity, or instrumental variables (this book does not teach these, so name the one your situation seems to fit and say what you would have to learn and defend before using it, rather than reaching for it now), and
    underneath it the short list of load-bearing assumptions it rests on, each in
    plain language a skeptic could argue with. Start with the one you most doubt. If you have no leverage, write the causal-language boundary
    sentence instead: what your comparison shows, and the *because* you are declining to
    claim.
+
+   **Locate a real design (commit your own guess at the leverage first).**
+
+   ```
+   Act as a research librarian in biology. Find peer-reviewed observational studies
+   that used a natural experiment or a discontinuity to estimate the causal effect of
+   a gut microbe on a host trait. For each: title, authors, year, venue, and the
+   as-if-random source. Only include work you are confident exists; mark anything
+   uncertain.
+   ```
+
+   *After running, verify (counters **confident fabrication**): open each source and read
+   the line yourself before citing it, which is primary-source reading. Cut any you cannot
+   find.*
+
+   *A second angle, optional:*
+
+   **Red-team the causal sentence you wrote (write the sentence yourself, do not let AI draft it).**
+
+   ```
+   Here is a causal sentence I wrote: "[paste your sentence]." Act as a hostile peer
+   reviewer. Name every place it over-reaches or claims more than my observational
+   design identifies. Do not rewrite it for me; list the weaknesses so I fix them.
+   ```
+
+   *After running, verify (counters **sycophantic agreement**): if the objections are all
+   mild, push back with "assume the sentence is wrong; name the single worst flaw." Praise
+   without an objection is a red flag.*
 5. Write down one number you would recompute by a second route to check any estimate a
    collaborator or an AI hands you, and say what result would make you abandon the
    causal reading entirely.

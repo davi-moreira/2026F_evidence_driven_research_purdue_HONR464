@@ -78,66 +78,6 @@ that would answer you is randomly assigning the toolbar to new users, and that's
 what I'd run next." You refused the word "causes," and handed the visitor a real
 research question rather than a wall.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt below is a checkable job,
-not a request for approval.
-
-These work best as a conversation. Ask, read, then name what the answer avoided and
-ask again. A question bank built over three rounds is noticeably harder than one
-built in a single pass. When a tool runs those rounds itself, the questions arrive
-already polished, which is why you check the list against the question you actually
-dread rather than the other way around.
-
-**List your hardest questions, to verify against your own fear.**
-
-```text
-Play a skeptical but fair conference visitor. My project: "[one-paragraph summary
-of question, design, and headline finding]". Write the single hardest FAIR question
-for each type: method, alternative explanation, why-it-matters, generalization,
-AI-use. For each, flag whether an honest two-sentence answer exists.
-```
-After running, verify: compare the five against the one question you wrote down
-that you most dread. If it is missing, the set is not complete. Counters *illusion
-of completeness* (a tidy five that omits the exact question you fear).
-
-**Force the uncertainty into the open.**
-
-```text
-Here is my headline number and how I got it: "[paste]". Do not restate it.
-List what is missing before I can state its uncertainty honestly: the sample
-size, the source of wobble, and the one limitation a reviewer would raise first.
-```
-After running, verify: confirm each item against your own data before you speak
-it. Counters *missing uncertainty* (a clean number reported with no bound).
-
-**Red-team your reply.**
-
-```text
-Here is my two-sentence reply to "does it cause it?": "[paste]". Act as a hostile
-reviewer. Name every word that still claims more than an association supports.
-Do not rewrite it for me.
-```
-After running, verify: if it only praises the reply, push back and demand the
-single worst word. Counters *sycophantic agreement* (praise that reviews your ego,
-not your evidence).
-
-::: {.callout-important title="Do not delegate"}
-Three decisions never leave your hands: **which claim your evidence actually
-supports**, **where that claim must stop**, and **how you acknowledge its
-uncertainty and limitations**. The tool can draft a question or flag a word, but
-only you decide the compass position your design can bear and the one word you must
-refuse aloud. Your honest don't-know is yours to mean, not to recite.
-:::
-
 ## An AI failure case
 
 You paste your limitation into an AI tool and ask it to "make this sound more
@@ -164,13 +104,68 @@ that the polish inflated the claim.
 *You can say your claim at two lengths now; this step prepares the part of the
 conversation you do not control.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt below is a checkable job,
+not a request for approval.
+
+These work best as a conversation. Ask, read, then name what the answer avoided and
+ask again. A question bank built over three rounds is noticeably harder than one
+built in a single pass. When a tool runs those rounds itself, the questions arrive
+already polished, which is why you check the list against the question you actually
+dread rather than the other way around.
+
+::: {.callout-important title="Do not delegate"}
+Three decisions never leave your hands: **which claim your evidence actually
+supports**, **where that claim must stop**, and **how you acknowledge its
+uncertainty and limitations**. The tool can draft a question or flag a word, but
+only you decide the compass position your design can bear and the one word you must
+refuse aloud. Your honest don't-know is yours to mean, not to recite.
+:::
+
 1. Write the five hardest fair questions someone could ask you, one for each type:
    method, alternative explanation, why-it-matters, generalization, AI use.
+
+   **List your hardest questions, to verify against your own fear.**
+
+   ```text
+   Play a skeptical but fair conference visitor. My project: "[one-paragraph summary
+   of question, design, and headline finding]". Write the single hardest FAIR question
+   for each type: method, alternative explanation, why-it-matters, generalization,
+   AI-use. For each, flag whether an honest two-sentence answer exists.
+   ```
+
+   After running, verify: compare the five against the one question you wrote down
+   that you most dread. If it is missing, the set is not complete. Counters *illusion
+   of completeness* (a tidy five that omits the exact question you fear).
 2. Draft a two-sentence answer to each and mark it defend or concede. A concede
    answer names the narrower claim you would retreat to on the spot.
+
+   **Red-team your reply.**
+
+   ```text
+   Here is my two-sentence reply to "does it cause it?": "[paste]". Act as a hostile
+   reviewer. Name every word that still claims more than an association supports.
+   Do not rewrite it for me.
+   ```
+
+   After running, verify: if it only praises the reply, push back and demand the
+   single worst word. Counters *sycophantic agreement* (praise that reviews your ego,
+   not your evidence).
 3. Write your uncertainty-and-limitations statement in ULN form: how much your
    number could wobble and why, the one thing your design cannot show, and the study
    that would settle it.
+
+   **Force the uncertainty into the open.**
+
+   ```text
+   Here is my headline number and how I got it: "[paste]". Do not restate it.
+   List what is missing before I can state its uncertainty honestly: the sample
+   size, the source of wobble, and the one limitation a reviewer would raise first.
+   ```
+
+   After running, verify: confirm each item against your own data before you speak
+   it. Counters *missing uncertainty* (a clean number reported with no bound).
 4. Read it aloud and cut every self-erasing word, replacing each with the exact
    boundary it was hiding. Then write one honest don't-know in full, for the
    question you dread most.

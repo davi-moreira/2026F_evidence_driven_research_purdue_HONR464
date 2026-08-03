@@ -89,70 +89,6 @@ concentrates in neighborhoods without a car, may be genuine. You will be able to
 defend it only because you gathered the sources around it, and because you are about
 to open every one.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. And do not treat these as one-shot
-requests. A search is a loop: you prompt, you read what came back, you tell the tool
-what was off-target and why, and you ask again. Two or three passes beat one long
-prompt every time. Some tools now run that loop themselves, browsing and re-searching
-without asking you between steps. That changes who types the queries; it does not
-change who opens the papers. Each pass earns you a better list. None of them earns
-your trust.
-
-**Locate.** Ask for leads to chase, not a finished bibliography.
-
-```text
-Act as a literature scout in [your field]. My question is: [paste it].
-List the five published studies most relevant to it, each with authors,
-year, exact title, and venue, so I can retrieve and verify each myself.
-Only include work you are confident exists; mark anything uncertain.
-```
-
-*After running, verify:* retrieve every citation by searching its exact title in
-quotes before you believe it exists. Counters **confident fabrication** (a
-real-sounding citation for a paper that was never written).
-
-**List-to-verify (snowball).** Start from one source you have already read.
-
-```text
-Here is one source I have verified: [authors, year, exact title, venue].
-Name three older works from its reference list it likely built on, and
-three newer works that likely cite it, each with authors, year, title,
-and venue, plus one line on why it belongs on the chain.
-```
-
-*After running, verify:* cross-check the "backward" names against the seed's real
-reference list and retrieve the rest. A tidy chain can quietly omit the one
-contradicting study. Counters **illusion of completeness**.
-
-**Red-team.** Make the tool attack your gap, not flatter it.
-
-```text
-Here is my question and the gap I placed: [one or two sentences].
-Argue that this gap is NOT real. Name up to three published studies that
-may already answer it, with authors, year, title, and venue, and say what
-each would have to show to close it. Do not reassure me.
-```
-
-*After running, verify:* if it just agrees the gap is open and names nothing, push
-back and make it try to close the gap; then retrieve every study it names. Counters
-**sycophantic agreement**.
-
-::: {.callout-important title="Do not delegate"}
-Two decisions never leave your hands. Whether a source counts as **verified**: only
-reading it yourself settles that. And whether your **gap is real**: only retrieval
-that comes up empty earns the word. What your project may claim follows from those
-two. An AI can point; it cannot certify.
-:::
-
 ## An AI failure case
 
 The most common failure here is **citation hallucination**, the taxonomy's *confident
@@ -175,6 +111,23 @@ fabricated until you prove otherwise.
 with the conversation it belongs to: a pool of candidate sources, gathered fast, with
 AI doing the legwork.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. And do not treat these as one-shot
+requests. A search is a loop: you prompt, you read what came back, you tell the tool
+what was off-target and why, and you ask again. Two or three passes beat one long
+prompt every time. Some tools now run that loop themselves, browsing and re-searching
+without asking you between steps. That changes who types the queries; it does not
+change who opens the papers. Each pass earns you a better list. None of them earns
+your trust.
+
+::: {.callout-important title="Do not delegate"}
+Two decisions never leave your hands. Whether a source counts as **verified**: only
+reading it yourself settles that. And whether your **gap is real**: only retrieval
+that comes up empty earns the word. What your project may claim follows from those
+two. An AI can point; it cannot certify.
+:::
+
 1. Write your lead question at the top of a fresh page. Underneath it, write the one
    sentence you already believe the literature says. That belief is what your search
    will either confirm or embarrass.
@@ -185,9 +138,35 @@ AI doing the legwork.*
    exact title, and venue. Then run the loop: read what came back, tell the tool which
    two are off-target and why, and ask again. Stop when a pass stops adding anything
    new.
+
+   **Locate.** Ask for leads to chase, not a finished bibliography.
+
+   ```text
+   Act as a literature scout in [your field]. My question is: [paste it].
+   List the five published studies most relevant to it, each with authors,
+   year, exact title, and venue, so I can retrieve and verify each myself.
+   Only include work you are confident exists; mark anything uncertain.
+   ```
+
+   *After running, verify:* retrieve every citation by searching its exact title in
+   quotes before you believe it exists. Counters **confident fabrication** (a
+   real-sounding citation for a paper that was never written).
 4. Snowball your seed by hand. Read its reference list backward for the older work it
    builds on, and follow its "Cited by" trail forward for the newer work. Add
    everything that touches your question.
+
+   **List-to-verify (snowball).** Start from one source you have already read.
+
+   ```text
+   Here is one source I have verified: [authors, year, exact title, venue].
+   Name three older works from its reference list it likely built on, and
+   three newer works that likely cite it, each with authors, year, title,
+   and venue, plus one line on why it belongs on the chain.
+   ```
+
+   *After running, verify:* cross-check the "backward" names against the seed's real
+   reference list and retrieve the rest. A tidy chain can quietly omit the one
+   contradicting study. Counters **illusion of completeness**.
 5. Put all of them in one candidate list with a status column, and write `lead` in
    every row. Nothing here is a source yet. The next chapter is where they earn the
    promotion.

@@ -102,71 +102,6 @@ count and the definition, the number has earned a place in your project. When th
 disagree, the disagreement *is* the finding. You report both, name the definition
 behind each, and say which one your question needs and why.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Each prompt is **commit-first**: write down the value or source you already believe,
-then let the tool disagree with something of yours. Treat every one as the start of
-a loop rather than a single request. The first answer gives you leads; your second
-message names the lead that did not survive retrieval and asks again. Tools that
-run the search loop on their own will hand you a longer, tidier list of sources.
-Longer and tidier does not mean opened, and opening them is still your job.
-
-**Locate the primary source (delegable).**
-
-```text
-Act as a research-data assistant. I have this figure: [paste the value, the place,
-the year, and how it is expressed]. Name the primary source that FIRST reported it,
-with the issuing body, the exact document title, the year, and the definition used,
-including what the denominator is. Only list sources you are confident exist, mark
-anything uncertain, and say for each whether it is the original record or a
-re-report.
-```
-
-After running, verify (counters *confident fabrication*): open every source yourself
-before you trust it; a source you cannot retrieve is invented until it opens.
-
-**Turn borrowed numbers into a provenance table (delegable).**
-
-```text
-Here are five numbers my project borrows: [paste them]. For each, return a row with
-the value, its exact definition (which population, which time window, which
-denominator), the primary source, and whether the value was counted, estimated, or
-self-reported. Return it as a table so I can audit each row on its own.
-```
-
-After running, verify (counters *silent scope change*): read each row's definition
-against the definition your question actually needs; a number built on a different
-population can be handed to you as if it were yours.
-
-**Red-team the number you like (delegable).**
-
-```text
-I plan to build on this figure: [paste value and source]. Act as a hostile reviewer
-and argue it is unreliable for a claim about [your population and time window]:
-wrong denominator, self-reported rather than counted, or copied through a chain of
-summaries. Do not reassure me.
-```
-
-After running, verify (counters *sycophantic agreement*): if the reviewer only praises
-your number, push back, then take its strongest objection to the primary source or to
-someone who knows the data better than you do rather than trusting easy approval.
-
-::: {.callout-important title="Do not delegate"}
-Three calls stay yours. **Whether a value counts as verified** is settled by a source
-you opened, not by the tool's confidence. **Whether its definition fits your use** is
-a judgment about your specific question, and no lookup makes it for you. And **how
-much uncertainty you report** when your sources disagree is yours to state and
-defend, because your name goes on the claim the number supports.
-:::
-
 ## An AI failure case
 
 You ask for county turnout and the tool returns "72 percent," with a citation to a
@@ -191,18 +126,75 @@ registered-voter rate, and your original question stays open.
 *Your design is settled and your measurements come next. Before either can be
 trusted, this step pins down where your data actually came from.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Each prompt is **commit-first**: write down the value or source you already believe,
+then let the tool disagree with something of yours. Treat every one as the start of
+a loop rather than a single request. The first answer gives you leads; your second
+message names the lead that did not survive retrieval and asks again. Tools that
+run the search loop on their own will hand you a longer, tidier list of sources.
+Longer and tidier does not mean opened, and opening them is still your job.
+
+::: {.callout-important title="Do not delegate"}
+Three calls stay yours. **Whether a value counts as verified** is settled by a source
+you opened, not by the tool's confidence. **Whether its definition fits your use** is
+a judgment about your specific question, and no lookup makes it for you. And **how
+much uncertainty you report** when your sources disagree is yours to state and
+defend, because your name goes on the claim the number supports.
+:::
+
 1. List every dataset, table, and borrowed number your project uses. Include the
    ones a collaborator handed you and the ones you downloaded months ago and
    stopped thinking about.
 2. For each, write four things: who produced it, when, from what original record,
    and every hand it passed through on the way to you. Where a link in that chain
    is missing, write "unknown" instead of guessing. Unknown is a finding.
+
+   **Turn borrowed numbers into a provenance table (delegable).**
+
+   ```text
+   Here are five numbers my project borrows: [paste them]. For each, return a row with
+   the value, its exact definition (which population, which time window, which
+   denominator), the primary source, and whether the value was counted, estimated, or
+   self-reported. Return it as a table so I can audit each row on its own.
+   ```
+
+   After running, verify (counters *silent scope change*): read each row's definition
+   against the definition your question actually needs; a number built on a different
+   population can be handed to you as if it were yours.
 3. Open the primary source behind the entry your headline claim leans on hardest.
    Read the line that reports the value and the line that defines it, not a summary
    of either.
+
+   **Locate the primary source (delegable).**
+
+   ```text
+   Act as a research-data assistant. I have this figure: [paste the value, the place,
+   the year, and how it is expressed]. Name the primary source that FIRST reported it,
+   with the issuing body, the exact document title, the year, and the definition used,
+   including what the denominator is. Only list sources you are confident exist, mark
+   anything uncertain, and say for each whether it is the original record or a
+   re-report.
+   ```
+
+   After running, verify (counters *confident fabrication*): open every source yourself
+   before you trust it; a source you cannot retrieve is invented until it opens.
 4. Beside each entry, write its definition in your own words and mark whether it
    matches the definition your question needs. Anything marked "no" gets dropped or
    gets reported with the mismatch stated out loud.
+
+   **Red-team the number you like (delegable).**
+
+   ```text
+   I plan to build on this figure: [paste value and source]. Act as a hostile reviewer
+   and argue it is unreliable for a claim about [your population and time window]:
+   wrong denominator, self-reported rather than counted, or copied through a chain of
+   summaries. Do not reassure me.
+   ```
+
+   After running, verify (counters *sycophantic agreement*): if the reviewer only praises
+   your number, push back, then take its strongest objection to the primary source or to
+   someone who knows the data better than you do rather than trusting easy approval.
 5. Save the record as a file that travels with your project, and note the date you
    retrieved each source. Sources get revised, and a retrieval date is what lets a
    reader tell whether they are looking at your version.

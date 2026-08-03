@@ -4,7 +4,7 @@
 EDR|AI and the course are different artifacts: every book chapter ships its own
 companion notebook, so a reader can run the chapter's code and complete the
 chapter's "It is your turn" section from the chapter's Colab badge, with no
-course involved. This generator parses each edition's 37 chapter .qmd files
+course involved. This generator parses each edition's chapter .qmd files
 (EN book/, PT book-pt/, ES book-es/) and writes one workbook per chapter:
 
     notebooks/book/chNN_<slug>.ipynb        (English)
@@ -12,13 +12,14 @@ course involved. This generator parses each edition's 37 chapter .qmd files
     notebooks/book/es/chNN_<slug>.ipynb     (Español)
 
 Each workbook carries: the chapter header + how-to, the research-decision
-quote, any runnable code blocks from the chapter body, the "Recommended AI
-prompts" with a response cell per prompt, the "Do not delegate" callout, the
-full "It is your turn" section with a work cell per step, and the section's
-grading RUBRIC (D26) — one 0/1/2 row per step plus a standing craft-and-
-verification row, derived mechanically from the step text. The same rubrics
-are collected into <edition>/_iyt-rubrics.qmd, included at the end of each
-edition's password-protected For-instructors appendix for grading.
+quote, any runnable code blocks from the chapter body, the full "It is your
+turn" section with a work cell per step (D38: AI prompts live INSIDE the
+step they serve — prompt-bearing steps also get a response cell), and the
+section's grading RUBRIC (D26) — one 0/1/2 row per step plus a standing
+craft-and-verification row, derived mechanically from the step text. The
+same rubrics are collected into <edition>/_iyt-rubrics.qmd, included in the
+For-instructors appendix for grading. Branch/optional lessons close with a
+studio-junction note instead of a bare Next link (D38 route graph).
 
 Cell ids are deterministic so regeneration produces clean git diffs. Re-run
 after ANY chapter edit (the book-first loop):
@@ -34,7 +35,8 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
-from book_manifest import active_lessons, require_lock  # noqa: E402
+from book_manifest import (active_lessons, load_architecture,  # noqa: E402
+                           require_lock)
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
 
 EDITIONS = [
@@ -109,7 +111,10 @@ EDITIONS = [
                     "from the [Verification Guide]({vg}). AI can review AI — but the "
                     "last decision is human."),
         "next_line": "Next: [{chapter_word} {n} — {title}]({url}).",
-        "last_line": ("This was the last chapter: the 37 **It is your turn** sections "
+        "branch_note": ("That chapter may not be on your route — [Studio {sn}: "
+                        "{stitle}]({surl}) is the junction; follow the lesson "
+                        "that matches your own project."),
+        "last_line": ("This was the last chapter: the **It is your turn** sections "
                       "you worked are your research project. Assemble the portfolio, "
                       "and defend it."),
     },
@@ -191,7 +196,7 @@ EDITIONS = [
                     "com um método nomeado do [Guia de Verificação]({vg}). IA pode "
                     "revisar IA — mas a última decisão é humana."),
         "next_line": "A seguir: [{chapter_word} {n} — {title}]({url}).",
-        "last_line": ("Este era o último capítulo: as 37 seções **Agora é a sua vez** "
+        "last_line": ("Este era o último capítulo: as seções **Agora é a sua vez** "
                       "que você trabalhou são o seu projeto de pesquisa. Monte o "
                       "portfólio, e defenda-o."),
     },
@@ -273,7 +278,8 @@ EDITIONS = [
                     "método nombrado de la [Guía de Verificación]({vg}). La IA puede "
                     "revisar a la IA — pero la última decisión es humana."),
         "next_line": "Siguiente: [{chapter_word} {n} — {title}]({url}).",
-        "last_line": ("Este era el último capítulo: las 37 secciones **Ahora te toca "
+        "branch_note": ("Ese capítulo puede no estar en tu ruta — [Estudio {sn}: {stitle}]({surl}) es el cruce; sigue la lección que corresponde a tu proyecto."),
+        "last_line": ("Este era el último capítulo: las secciones **Ahora te toca "
                       "a ti** que trabajaste son tu proyecto de investigación. Arma "
                       "el portafolio, y defiéndelo."),
     },
@@ -457,7 +463,8 @@ def chapter_files(book_dir: Path) -> list[Path]:
 
 def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
                    rubrics: list | None = None,
-                   lesson: dict | None = None) -> dict:
+                   lesson: dict | None = None,
+                   station: dict | None = None) -> dict:
     title, body = parse_front_matter(path.read_text())
     part_dir = path.parent.name
     # Display number and canonical URL come from the MANIFEST (round-9 N2);
@@ -503,6 +510,9 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
             add_code(block)
             add_md(ed["code_reading"])
 
+    # D38: the standalone prompts section is retired — prompts live inside
+    # the IYT steps they serve. (The lookup stays for the frozen PT/ES
+    # sources until the translation pass regenerates them.)
     prompts = by_name.get(ed["prompts_heading"], "")
     if prompts:
         add_md(f"## {ed['prompts_heading']}")
@@ -519,6 +529,8 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
         for k, step in enumerate(steps, 1):
             add_md(f"**{ed['step_word']} {k}.** {prep(step)}")
             add_md(ed["work_cell"].format(i=k))
+            if "```" in step or "💡" in step:   # the step carries an AI prompt
+                add_md(ed["response_cell"])
     else:
         add_md(ed["work_cell_generic"])
     rubric = rubric_table(ed, steps)
@@ -532,6 +544,13 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
         nxt_url, nxt_title = nxt
         closing += "\n\n" + ed["next_line"].format(
             chapter_word=ed["chapter_word"], n=n + 1, title=nxt_title, url=nxt_url)
+        # D38 route graph: a branch/optional lesson's physical successor may
+        # not be on the reader's route — name the studio as the junction.
+        if lesson and lesson.get("role") in ("branch", "optional") and station:
+            closing += " " + ed["branch_note"].format(
+                sn=station["rank"], stitle=station["title"],
+                surl=(f"{ed['site_base']}/studios/"
+                      f"studio{station['rank']:02d}-{station['id']}.html"))
     else:
         closing += "\n\n" + ed["last_line"]
     add_md(closing)
@@ -565,6 +584,7 @@ def main() -> None:
     # planned lesson changes the count with no code edit (round-9 N2).
     require_lock()
     lessons = active_lessons()
+    stations_by_id = {s["id"]: s for s in load_architecture()["stations"]}
     total = 0
     for ed in active:
         book_dir = REPO / ed["book_dir"]
@@ -584,7 +604,8 @@ def main() -> None:
                 nxt_path = book_dir / nxt_lesson["source"]
                 nxt_title, _ = parse_front_matter(nxt_path.read_text())
                 nxt = (f"{ed['site_base']}/{nxt_lesson['url_path']}", nxt_title)
-            nb = build_notebook(ed, path, nxt, rubrics, lesson)
+            nb = build_notebook(ed, path, nxt, rubrics, lesson,
+                                stations_by_id.get(lesson["station"]))
             out = out_dir / lesson["companion"]
             out.write_text(json.dumps(nb, ensure_ascii=False, indent=1) + "\n")
             total += 1

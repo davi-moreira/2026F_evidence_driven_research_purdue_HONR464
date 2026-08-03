@@ -83,70 +83,6 @@ against the annual report and the arithmetic reproduced by hand. Its boundary is
 honest too: you read a single year of reported results, not a downturn scenario and
 not the debt coming due next year.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt is a checkable job, not a
-request for a verdict.
-
-Run the loop, and log it. Each round is a prompt, an output, an objection, and a
-rerun, and the ledger row records what you finally accepted and why. That matters
-more here than anywhere else in the book. If an agentic tool ran ten invisible rounds
-to produce your paragraph, your disclosure still has to describe only what you can
-personally vouch for.
-
-**Locate the standard.**
-
-```text
-Act as a research-integrity assistant. Name the elements a complete AI-use
-disclosure should contain for a research poster, and cite one real, retrievable
-source such as a university research-integrity office or a major publisher's AI
-policy. Only name a source you are confident exists.
-```
-After running, verify: open the cited policy and confirm each named element is
-actually in it. Counters *confident fabrication* (an invented policy element arrives
-as confidently as a real one).
-
-**Turn notes into a disclosure table to verify.**
-
-```text
-Here are my raw notes on every time I used an AI tool on this project: [paste].
-Build a table with columns tool, task, and verification method, one row per use.
-Do not invent a verification I did not mention. If a use has no check, leave that
-cell blank and flag the row.
-```
-After running, verify: match each row against your ledger; a verification filled in
-where your notes had none is fabricated, so cut it. Counters *illusion of
-completeness* (a tidy table that quietly reports checks you never ran).
-
-**Red-team your disclosure.**
-
-```text
-Here is my drafted AI-use disclosure: [paste]. Act as a hostile reviewer who
-suspects I am hiding a use or overstating my checks. Name every place I claim a
-verification I have not shown, or omit a use a reviewer would expect. Do not
-rewrite it for me.
-```
-After running, verify: for each flagged line, produce the ledger row that backs it or
-delete the claim. Counters *sycophantic agreement* (a reviewer that praises your
-honesty instead of testing it).
-
-::: {.callout-important title="Do not delegate"}
-The honesty of the disclosure is yours alone. You decide **which uses to disclose**
-(including the one you would rather not mention), **whether a verification you claim
-actually happened**, and **whether the final statement is true**. A tool can format
-your ledger into a clean paragraph. It cannot know what you really did or certify that
-you checked it. Signing your name to a disclosure you cannot back is the integrity
-failure this chapter exists to prevent.
-:::
-
 ## An AI failure case
 
 You ask a tool to "write my AI-use disclosure from these notes," and it hands back a
@@ -174,13 +110,74 @@ disclosure against the record, not against how responsible it sounds.
 *You have answers ready for the hardest questions people will ask; this step writes
 the one about AI, and backs it with a record.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt is a checkable job, not a
+request for a verdict.
+
+Run the loop, and log it. Each round is a prompt, an output, an objection, and a
+rerun, and the ledger row records what you finally accepted and why. That matters
+more here than anywhere else in the book. If an agentic tool ran ten invisible rounds
+to produce your paragraph, your disclosure still has to describe only what you can
+personally vouch for.
+
+::: {.callout-important title="Do not delegate"}
+The honesty of the disclosure is yours alone. You decide **which uses to disclose**
+(including the one you would rather not mention), **whether a verification you claim
+actually happened**, and **whether the final statement is true**. A tool can format
+your ledger into a clean paragraph. It cannot know what you really did or certify that
+you checked it. Signing your name to a disclosure you cannot back is the integrity
+failure this chapter exists to prevent.
+:::
+
 1. Read your AI Research Ledger end to end and list every use, including the one you
    would rather not mention.
 2. For each use, write the three parts a disclosure needs: which tool, for which
    task, and how you verified the output. A use with no check stays blank. Do not
    fill it in from memory.
+
+   **Locate the standard.**
+
+   ```text
+   Act as a research-integrity assistant. Name the elements a complete AI-use
+   disclosure should contain for a research poster, and cite one real, retrievable
+   source such as a university research-integrity office or a major publisher's AI
+   policy. Only name a source you are confident exists.
+   ```
+
+   After running, verify: open the cited policy and confirm each named element is
+   actually in it. Counters *confident fabrication* (an invented policy element arrives
+   as confidently as a real one).
+
+   *A second angle, optional:*
+
+   **Turn notes into a disclosure table to verify.**
+
+   ```text
+   Here are my raw notes on every time I used an AI tool on this project: [paste].
+   Build a table with columns tool, task, and verification method, one row per use.
+   Do not invent a verification I did not mention. If a use has no check, leave that
+   cell blank and flag the row.
+   ```
+
+   After running, verify: match each row against your ledger; a verification filled in
+   where your notes had none is fabricated, so cut it. Counters *illusion of
+   completeness* (a tidy table that quietly reports checks you never ran).
 3. Turn the rows into a short statement in your own words, then check every sentence
    against a row. Any sentence claiming a check you cannot point to comes out.
+
+   **Red-team your disclosure.**
+
+   ```text
+   Here is my drafted AI-use disclosure: [paste]. Act as a hostile reviewer who
+   suspects I am hiding a use or overstating my checks. Name every place I claim a
+   verification I have not shown, or omit a use a reviewer would expect. Do not
+   rewrite it for me.
+   ```
+
+   After running, verify: for each flagged line, produce the ledger row that backs it or
+   delete the claim. Counters *sycophantic agreement* (a reviewer that praises your
+   honesty instead of testing it).
 4. Say what you did not verify. Naming the one AI-assisted input you never
    independently confirmed is what makes the rest of the statement believable.
 5. Log it in your AI Research Ledger, and verify the finished statement with a named

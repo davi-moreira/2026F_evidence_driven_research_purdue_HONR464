@@ -95,71 +95,6 @@ Both are the excited-mouth upgrade, and both feel natural because the shorter
 sentence sounds cleaner. The fix is mechanical: mark the boundary sentence and say it
 at every length, even the 30-second one.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own version first, then delegate. Each prompt is a checkable job, not a
-request for a verdict.
-
-Expect two or three rounds each. The first compression is usually too smooth, so you
-point at the qualifier it dropped and ask again. Agentic tools will iterate toward
-whatever sounds best on its own terms, which is exactly the pressure that widens
-claims, so your boundary sentence has to be something you hold rather than something
-you delegate.
-
-**Locate the jargon and translate it.**
-
-```text
-Here is one sentence from my poster: "[paste it]". My headline claim and its
-boundary are: "[paste them]". List every word a curious stranger with no training
-in my field could not decode. Then give two plain rewrites a first-year in any
-major would follow, each keeping my claim exactly as narrow as it is now.
-```
-
-After running, verify: read each rewrite next to your boundary and reject any that
-dropped a qualifier like "held-out" or turned "flagged" into "predicts." Counters
-*silent scope change* (a "plain" rewrite that quietly widens the claim while it
-simplifies).
-
-**List the words that inflate my claim.**
-
-```text
-Here is my 30-second hook: "[paste it]". Here is my poster's boundary sentence:
-"[paste it]". Play a hurried visitor. List every word in the hook that says
-something bigger than the boundary allows. Rewrite nothing; just name the words.
-```
-
-After running, verify: if it flags nothing and calls the hook "strong," push back
-and demand the single worst offender. Counters *sycophantic agreement* (praise
-reviews your ego, not your words).
-
-**Red-team the pitch as a hurried stranger.**
-
-```text
-Play a skeptical conference visitor with thirty seconds of patience, from outside
-my field. Here is my full pitch: "[paste it]". Name the exact sentence where you
-lose interest or stop believing me, and the single place I promise more than I show.
-```
-
-After running, verify: check its answer against a real practice run with a friend,
-and ask it "what is the one thing you left out?" Counters *illusion of completeness*
-(a polished "it's clear" that skips the moment a stranger actually drifts).
-
-::: {.callout-important title="Do not delegate"}
-Three calls stay yours. You decide **which claim your evidence actually supports**,
-**where the claim must stop** (the exact boundary sentence), and **whether a
-compressed sentence still says what the poster says**. A tool can trim words and
-flag jargon. It cannot decide the shorter sentence is still true, and it will not be
-standing at the board when the stranger asks. You say the sentence. You own it.
-:::
-
 ## An AI failure case
 
 You paste your 90-second walk and ask a tool to compress it to a 30-second hook.
@@ -187,15 +122,74 @@ back at you. You keep your own boundary sentence and drop the tool's version.
 *Your draft is finished and criticized; this step is the version you say out loud, at
 two lengths, without the claim growing on the way.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own version first, then delegate. Each prompt is a checkable job, not a
+request for a verdict.
+
+Expect two or three rounds each. The first compression is usually too smooth, so you
+point at the qualifier it dropped and ask again. Agentic tools will iterate toward
+whatever sounds best on its own terms, which is exactly the pressure that widens
+claims, so your boundary sentence has to be something you hold rather than something
+you delegate.
+
+::: {.callout-important title="Do not delegate"}
+Three calls stay yours. You decide **which claim your evidence actually supports**,
+**where the claim must stop** (the exact boundary sentence), and **whether a
+compressed sentence still says what the poster says**. A tool can trim words and
+flag jargon. It cannot decide the shorter sentence is still true, and it will not be
+standing at the board when the stranger asks. You say the sentence. You own it.
+:::
+
 1. Write your boundary sentence first, on its own line, and mark it. It is the beat
    that gets dropped under pressure, so it goes in before anything else.
 2. Build the 30-second version: hook, claim, boundary, invitation, with no evidence
    beats yet.
+
+   **Locate the jargon and translate it.**
+
+   ```text
+   Here is one sentence from my poster: "[paste it]". My headline claim and its
+   boundary are: "[paste them]". List every word a curious stranger with no training
+   in my field could not decode. Then give two plain rewrites a first-year in any
+   major would follow, each keeping my claim exactly as narrow as it is now.
+   ```
+
+   After running, verify: read each rewrite next to your boundary and reject any that
+   dropped a qualifier like "held-out" or turned "flagged" into "predicts." Counters
+   *silent scope change* (a "plain" rewrite that quietly widens the claim while it
+   simplifies).
+
+   *A second angle, optional:*
+
+   **List the words that inflate my claim.**
+
+   ```text
+   Here is my 30-second hook: "[paste it]". Here is my poster's boundary sentence:
+   "[paste it]". Play a hurried visitor. List every word in the hook that says
+   something bigger than the boundary allows. Rewrite nothing; just name the words.
+   ```
+
+   After running, verify: if it flags nothing and calls the hook "strong," push back
+   and demand the single worst offender. Counters *sycophantic agreement* (praise
+   reviews your ego, not your words).
 3. Build the 3-minute version: the same skeleton with two or three evidence beats and
    the same boundary sentence, word for word.
 4. Say both out loud to someone outside your field and have them repeat your claim
    back to you. If what comes back is bigger than what you wrote, the words they
    added are your revision list.
+
+   **Red-team the pitch as a hurried stranger.**
+
+   ```text
+   Play a skeptical conference visitor with thirty seconds of patience, from outside
+   my field. Here is my full pitch: "[paste it]". Name the exact sentence where you
+   lose interest or stop believing me, and the single place I promise more than I show.
+   ```
+
+   After running, verify: check its answer against a real practice run with a friend,
+   and ask it "what is the one thing you left out?" Counters *illusion of completeness*
+   (a polished "it's clear" that skips the moment a stranger actually drifts).
 5. Log it in your AI Research Ledger, and verify at least one compressed sentence
    with a named method from the [Verification Guide](../verification-guide.qmd), such
    as peer reasoning. An AI reviewer may run the check with you; the decision to

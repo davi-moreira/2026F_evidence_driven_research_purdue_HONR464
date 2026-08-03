@@ -90,62 +90,6 @@ Now your disclosure writes itself: the tool drafted the paragraph, and you did t
 checking, retrieving, and rewriting that made the claim yours. You own the corrected
 sentence. You would not have owned the original.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt below hands the tool reach,
-not judgment.
-
-**Locate the real source.**
-
-```
-Act as a research assistant in freshwater ecology. I need the current U.S. EPA
-aquatic-life criterion for chloride. Give the exact value, the document it comes
-from, and a link. Only state a figure you are confident is published; if you are
-unsure, say so and tell me where to look.
-```
-
-After running, verify: open the EPA document and read the figure yourself (primary-source
-reading). Counters **confident fabrication**, a number quoted with a made-up source.
-
-**List every claim to verify.**
-
-```
-Here is my draft results paragraph: [paste]. List every empirical claim in it as a
-table: the claim, the number or source it rests on, and whether that number came from
-my data or from you. Do not add any new claims.
-```
-
-After running, verify: check the table against your own list of what you actually
-measured. Counters **illusion of completeness**, a claim the draft slipped in that never
-shows up in the tool's own accounting.
-
-**Red-team your ownership.**
-
-```
-Act as a hostile reviewer. Read my draft and name every sentence I could NOT defend
-myself if someone asked how I know it is true. Do not rewrite anything. List the weak
-spots.
-```
-
-After running, verify: for each flagged sentence, either produce your own check or cut the
-claim. Counters **sycophantic agreement**, praise that reviews your ego instead of your
-evidence.
-
-::: {.callout-important title="Do not delegate"}
-The tool may fetch, draft, and compute. It may never decide which claims you put your
-name on, whether your evidence supports a word like "unsafe," the ethics of your
-sampling, how you state your uncertainty, or what your AI-use disclosure says.
-Authorship is a responsibility, not a task, and it does not transfer.
-:::
-
 ## An AI failure case
 
 You ask the tool to write your AI-use disclosure for you. It produces a tidy,
@@ -172,6 +116,18 @@ describe its own role. You describe it, from your record.
 *You have a ledger, a director's task list, and one delegation you ran end to end.
 This step puts your name on all of it, on purpose, in writing.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt below hands the tool reach,
+not judgment.
+
+::: {.callout-important title="Do not delegate"}
+The tool may fetch, draft, and compute. It may never decide which claims you put your
+name on, whether your evidence supports a word like "unsafe," the ethics of your
+sampling, how you state your uncertainty, or what your AI-use disclosure says.
+Authorship is a responsibility, not a task, and it does not transfer.
+:::
+
 1. Write your **ownership statement**: three or four sentences naming the work you
    intend to put your name on, what you will personally answer for, and what you will
    not claim to have done.
@@ -186,11 +142,50 @@ This step puts your name on all of it, on purpose, in writing.*
    is right. Fix the disclosure.
 5. Find one sentence you have already written that you could not defend if someone
    asked how you know it is true. Produce the check, or cut the sentence.
+
+   **List every claim to verify.**
+
+   ```
+   Here is my draft results paragraph: [paste]. List every empirical claim in it as a
+   table: the claim, the number or source it rests on, and whether that number came from
+   my data or from you. Do not add any new claims.
+   ```
+
+   After running, verify: check the table against your own list of what you actually
+   measured. Counters **illusion of completeness**, a claim the draft slipped in that never
+   shows up in the tool's own accounting.
+
+   *A second angle, optional:*
+
+   **Red-team your ownership.**
+
+   ```
+   Act as a hostile reviewer. Read my draft and name every sentence I could NOT defend
+   myself if someone asked how I know it is true. Do not rewrite anything. List the weak
+   spots.
+   ```
+
+   After running, verify: for each flagged sentence, either produce your own check or cut the
+   claim. Counters **sycophantic agreement**, praise that reviews your ego instead of your
+   evidence.
 6. Log all of it in your AI Research Ledger, and verify at least one surviving claim
    with a named method from the [Verification Guide](../verification-guide.qmd):
    primary-source reading if it rests on a source, direct calculation if it rests on a
    number. An AI reviewer may run the check with you; the decision to accept or reject
    stays yours.
+
+
+   **Locate the real source.**
+
+   ```
+   Act as a research assistant in freshwater ecology. I need the current U.S. EPA
+   aquatic-life criterion for chloride. Give the exact value, the document it comes
+   from, and a link. Only state a figure you are confident is published; if you are
+   unsure, say so and tell me where to look.
+   ```
+
+   After running, verify: open the EPA document and read the figure yourself (primary-source
+   reading). Counters **confident fabrication**, a number quoted with a made-up source.
 
 <!-- studio-continue:begin -->
 > **Checkpoint.** This was the last lesson of Studio 1. Return

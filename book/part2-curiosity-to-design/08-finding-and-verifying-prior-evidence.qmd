@@ -87,57 +87,6 @@ biochar helps yield in some soils, the size of the effect varies, and none of th
 you retrieved ran the trial in the sandy soil your county farms. *That* quiet spot,
 ringed by sources you opened yourself, is a gap you can defend.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Verification is not one prompt either.
-It is a loop: you ask, you read the output against the paper, you tell the tool
-exactly where it overreached, and you ask again. The second pass is usually where the
-honest answer shows up, because the first one is still trying to please you.
-
-```text
-My research question is: [paste it]. The claim I need sources for is:
-[paste the claim]. List the five published studies most relevant to this
-claim, each with authors, year, exact title, and venue, so I can retrieve
-and verify each one myself.
-```
-*After running, verify:* search each exact title in quotes before believing it exists.
-This counters **confident fabrication** (a real-sounding citation for a paper that was
-never written).
-
-```text
-Here are the five sources I retrieved and read: [paste them]. For each, state
-the single claim its evidence actually supports, and flag any where my
-one-line summary reaches further than the study does.
-```
-*After running, verify:* read each flagged claim against the paper's own results
-section. This counters the **mischaracterized source** and **silent scope change** (a
-correlation quietly reported as a cause).
-
-```text
-Here is my research question and the gap I placed: [paste them]. Argue the gap
-is NOT real: name up to three published studies that may already fill it, with
-authors, year, title, and venue. Do not reassure me.
-```
-*After running, verify:* retrieve every study it names; a source you cannot open
-closes nothing. This counters **sycophantic agreement** (a partner that praises your
-gap has flattered you, not tested it).
-
-::: {.callout-important title="Do not delegate"}
-Two calls stay yours alone, because your name goes on the map. First, **whether a
-source counts as verified**: you retrieved it, opened it, and read the claim yourself,
-so no AI summary substitutes for the paper. Second, **whether your gap is genuine**:
-you walked one backward and one forward link from each verified source and the
-question still stands unanswered. An AI can point; only you can vouch.
-:::
-
 ## An AI failure case
 
 The failure to expect here is confident fabrication. Ask a general-purpose tool for
@@ -161,12 +110,52 @@ the tell.
 *You came in with a candidate list of leads. You leave with an evidence base you have
 personally opened, and a gap you can defend out loud.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Verification is not one prompt either.
+It is a loop: you ask, you read the output against the paper, you tell the tool
+exactly where it overreached, and you ask again. The second pass is usually where the
+honest answer shows up, because the first one is still trying to please you.
+
+::: {.callout-important title="Do not delegate"}
+Two calls stay yours alone, because your name goes on the map. First, **whether a
+source counts as verified**: you retrieved it, opened it, and read the claim yourself,
+so no AI summary substitutes for the paper. Second, **whether your gap is genuine**:
+you walked one backward and one forward link from each verified source and the
+question still stands unanswered. An AI can point; only you can vouch.
+:::
+
 1. Try to retrieve every candidate on your list. Search the exact title in quotation
    marks in your library database and in Google Scholar. Anything that does not
    resolve stays a lead and never enters your evidence base. Note why it failed.
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   My research question is: [paste it]. The claim I need sources for is:
+   [paste the claim]. List the five published studies most relevant to this
+   claim, each with authors, year, exact title, and venue, so I can retrieve
+   and verify each one myself.
+   ```
+
+   *After running, verify:* search each exact title in quotes before believing it exists.
+   This counters **confident fabrication** (a real-sounding citation for a paper that was
+   never written).
 2. Open the ones that resolve and read them. At minimum: the abstract, the design
    section, and the results. Then write each source's central claim in one sentence in
    your own words. If you cannot write that sentence, you have not read it yet.
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Here are the five sources I retrieved and read: [paste them]. For each, state
+   the single claim its evidence actually supports, and flag any where my
+   one-line summary reaches further than the study does.
+   ```
+
+   *After running, verify:* read each flagged claim against the paper's own results
+   section. This counters the **mischaracterized source** and **silent scope change** (a
+   correlation quietly reported as a cause).
 3. Criticize each one. Name the population it studied, the design it used, and the one
    thing you would *not* conclude from it. A source you cannot criticize is a source
    you have not understood.
@@ -177,6 +166,18 @@ personally opened, and a gap you can defend out loud.*
    the sources I retrieved and verified, ___ has not been established for ___." If the
    honest version is "my search is still unfinished," write that instead. That is a
    finding about your search, not a failure.
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Here is my research question and the gap I placed: [paste them]. Argue the gap
+   is NOT real: name up to three published studies that may already fill it, with
+   authors, year, title, and venue. Do not reassure me.
+   ```
+
+   *After running, verify:* retrieve every study it names; a source you cannot open
+   closes nothing. This counters **sycophantic agreement** (a partner that praises your
+   gap has flattered you, not tested it).
 6. Log the verification work in your AI Research Ledger, naming the method you used
    from the [Verification Guide](../verification-guide.qmd); primary-source reading is
    the one that fits every citation. An AI reviewer may try to argue your gap away

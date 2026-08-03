@@ -232,74 +232,6 @@ lose different shares of similar patients almost harmlessly, and equal shares of
 very different patients disastrously. The rates tell you where to dig; the digging
 is the sensitivity work from the honesty test above.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt below is a checkable job,
-not a request for a verdict. Work them as a loop. The first answer is a draft: find
-the claim you cannot check, say so in your next message, and run it again. Some
-tools will run that whole loop unattended and hand you a finished analysis. The
-finished look is exactly what makes the questions in this chapter worth asking
-before you accept it.
-
-**Locate the standard tool.**
-
-```python
-Act as a statistics assistant. I ran a two-arm randomized trial and computed a
-plain difference in on-time refill rates between a reminder arm and a control arm.
-Before any code, name the standard way to attach a 95% interval to a difference in
-two proportions, and one resampling alternative, citing where each is documented.
-Only name methods you are confident exist.
-```
-
-After running, verify: open the cited documentation and confirm the method and its
-formula exist as described. Counters *confident fabrication* (an invented method
-name arrives as confidently as a real one).
-
-**List the assumptions to verify.**
-
-```python
-Here is my analysis of a randomized reminder trial: [paste your cell]. List, as a
-table, every assumption my causal reading rests on: that assignment was truly
-random, that no one dropped out in a way tied to the outcome, that the control arm
-got no treatment. For each, say what I would check in my own data to confirm it.
-```
-
-After running, verify: check each listed assumption against your actual design and
-retention numbers before you accept the causal reading. Counters *silent scope
-change* (an association quietly reported as a settled cause).
-
-**Red-team your effect.**
-
-```python
-My claim: "the reminder raised on-time refills by 9 points." Act as a hostile
-clinical-trial reviewer. Name every way dropout, noncompliance, or spillover could
-make this number describe a different group than everyone I enrolled. Do not
-rewrite the claim for me.
-```
-
-After running, verify: if it only praises the design, push back and demand the
-single worst threat, then test it against your retention by arm. Counters
-*sycophantic agreement* (praise that reviews your ego, not your evidence).
-
-::: {.callout-important title="Do not delegate"}
-Three calls never leave your hands. You decide **whether random assignment actually
-happened** in your study, because a tool cannot see how you sorted the arms. You
-decide **which quantity your number estimates and for whom**, the effect for
-everyone enrolled, or whether attrition has left you without a causal number at all
-until you state an assumption and test how much it matters. And you decide
-**whether the effect is large enough to act on**, and whether it is even ethical to
-randomize real patients and withhold something from the control arm. You own the
-final sentence, its boundary, and its uncertainty.
-:::
-
 ## An AI failure case
 
 You paste your trial into the tool and it reports, with full confidence, "the
@@ -333,6 +265,26 @@ would the missing patients' refill rates have to be before the finding flips?
 *Your design is declared and diagnosed. This step asks whether it has earned the
 word "because", and makes you say out loud whose effect your number is.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt below is a checkable job,
+not a request for a verdict. Work them as a loop. The first answer is a draft: find
+the claim you cannot check, say so in your next message, and run it again. Some
+tools will run that whole loop unattended and hand you a finished analysis. The
+finished look is exactly what makes the questions in this chapter worth asking
+before you accept it.
+
+::: {.callout-important title="Do not delegate"}
+Three calls never leave your hands. You decide **whether random assignment actually
+happened** in your study, because a tool cannot see how you sorted the arms. You
+decide **which quantity your number estimates and for whom**, the effect for
+everyone enrolled, or whether attrition has left you without a causal number at all
+until you state an assumption and test how much it matters. And you decide
+**whether the effect is large enough to act on**, and whether it is even ethical to
+randomize real patients and withhold something from the control arm. You own the
+final sentence, its boundary, and its uncertainty.
+:::
+
 1. Write your treatment and your outcome as two short phrases. Then write one
    sentence on how a unit ends up treated. If the answer is anything other than
    "a chance device decided," this pathway is not yours yet.
@@ -346,9 +298,35 @@ word "because", and makes you say out loud whose effect your number is.*
    comparison: naming one commits you to assumptions you must state. If attrition
    touched your data, say what you assume about the people you did not measure, and
    show how the conclusion moves when that assumption bends.
+
+   **Red-team your effect.**
+
+   ```python
+   My claim: "the reminder raised on-time refills by 9 points." Act as a hostile
+   clinical-trial reviewer. Name every way dropout, noncompliance, or spillover could
+   make this number describe a different group than everyone I enrolled. Do not
+   rewrite the claim for me.
+   ```
+
+   After running, verify: if it only praises the design, push back and demand the
+   single worst threat, then test it against your retention by arm. Counters
+   *sycophantic agreement* (praise that reviews your ego, not your evidence).
 4. Name the threat nearest your design, whether attrition, noncompliance, or
    spillover, and the check you will run in your own data to see how bad it is:
    retention by arm, take-up by arm, contact between arms.
+
+   **List the assumptions to verify.**
+
+   ```python
+   Here is my analysis of a randomized reminder trial: [paste your cell]. List, as a
+   table, every assumption my causal reading rests on: that assignment was truly
+   random, that no one dropped out in a way tied to the outcome, that the control arm
+   got no treatment. For each, say what I would check in my own data to confirm it.
+   ```
+
+   After running, verify: check each listed assumption against your actual design and
+   retention numbers before you accept the causal reading. Counters *silent scope
+   change* (an association quietly reported as a settled cause).
 5. If you cannot randomize, run steps 1 to 4 as a drill, then name the confounder
    that random assignment would have killed for you and the observational move you
    will use in its place.
@@ -359,3 +337,17 @@ word "because", and makes you say out loud whose effect your number is.*
    labels thousands of times to see how rarely chance alone produces a gap as big
    as yours. An AI reviewer may run the checks with you; the decision to accept or
    reject stays yours.
+
+   **Locate the standard tool.**
+
+   ```python
+   Act as a statistics assistant. I ran a two-arm randomized trial and computed a
+   plain difference in on-time refill rates between a reminder arm and a control arm.
+   Before any code, name the standard way to attach a 95% interval to a difference in
+   two proportions, and one resampling alternative, citing where each is documented.
+   Only name methods you are confident exist.
+   ```
+
+   After running, verify: open the cited documentation and confirm the method and its
+   formula exist as described. Counters *confident fabrication* (an invented method
+   name arrives as confidently as a real one).

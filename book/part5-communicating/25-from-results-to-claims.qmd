@@ -123,71 +123,6 @@ lower resting systolic blood pressure (95% interval: 1 to 11); this is an observ
 association, and this design does not identify whether walking caused the drop." Same result, a claim that
 survives the judge.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt is a checkable job, never
-a request for a verdict.
-
-Expect to run each one more than once. You read what comes back, name the part that
-is wrong, and ask again with that correction in the prompt. That back-and-forth is
-the method, not a sign you prompted badly. Some tools now run several rounds on
-their own before showing you anything, which raises the stakes on your last step
-rather than lowering them, because more of the reasoning happened where you could
-not watch it.
-
-**Locate the real source behind a physiology claim.**
-
-```text
-Act as a literature assistant in human physiology. My headline claims regular
-walking is linked to lower blood pressure. Name up to three peer-reviewed sources
-or clinical guidelines that support this, with title, authors, year, and venue.
-Only list work you are confident exists; mark anything uncertain.
-```
-After running, verify: open each source in a library database and confirm it exists
-and says what you claim. Counters *confident fabrication* (an invented citation
-arrives as confidently as a real one).
-
-**Turn your result into a checklist of hard questions.**
-
-```text
-Here is my headline claim: "[paste it]". My question is causal, my design is
-observational and does not identify it, and what I actually estimated is a
-descriptive association. Generate the eight hardest questions a skeptic would ask,
-and mark which single audit each one belongs to: claim boundary, figure honesty,
-uncertainty, or accessibility.
-```
-After running, verify: map every question to an audit and check it against your
-printed numbers; a missing audit is a gap the tidy list hid. Counters *illusion of
-completeness* (a long, organized list that skips the one flaw that matters most).
-
-**Red-team the verb.**
-
-```text
-Here is my written headline: "[paste it]." Act as a hostile reviewer and find every
-place the verb claims more than an observational design licenses. Do not rewrite it
-for me; list the exact words so I can fix them myself.
-```
-After running, verify: read each flagged word against your compass position and keep
-only the objections your design actually forces. Counters *silent scope change* (a
-claim quietly upgraded from association to cause).
-
-::: {.callout-important title="Do not delegate"}
-Three calls stay yours. You choose the **verb in your headline**, the one word that
-fixes your claim boundary. You make the **defend-or-concede call** when a question
-pushes on that boundary out loud. And you make the **lock decision**: the judgment
-that every number is traced, every citation resolves, and the claim is ready to be
-final. A tool can draft questions and hunt sources, but it cannot decide what your
-evidence licenses or when your claim is earned.
-:::
-
 ## An AI failure case
 
 You paste your honest headline into a tool and ask it to make it "punchier." It
@@ -214,16 +149,76 @@ rewrite reviewed your style; only you can review your claim.
 *After the last chapter you know where your confidence actually stops; this step
 turns each of your results into a sentence you would print and defend.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt is a checkable job, never
+a request for a verdict.
+
+Expect to run each one more than once. You read what comes back, name the part that
+is wrong, and ask again with that correction in the prompt. That back-and-forth is
+the method, not a sign you prompted badly. Some tools now run several rounds on
+their own before showing you anything, which raises the stakes on your last step
+rather than lowering them, because more of the reasoning happened where you could
+not watch it.
+
+::: {.callout-important title="Do not delegate"}
+Three calls stay yours. You choose the **verb in your headline**, the one word that
+fixes your claim boundary. You make the **defend-or-concede call** when a question
+pushes on that boundary out loud. And you make the **lock decision**: the judgment
+that every number is traced, every citation resolves, and the claim is ready to be
+final. A tool can draft questions and hunt sources, but it cannot decide what your
+evidence licenses or when your claim is earned.
+:::
+
 1. List every result you might put in front of a reader, then write the claim
    sentence each one licenses.
 2. Check every verb against what your design established, and downgrade the ones
    that reach too far. "Caused" becomes "was associated with"; "predicts" becomes
    "flagged."
+
+   **Red-team the verb.**
+
+   ```text
+   Here is my written headline: "[paste it]." Act as a hostile reviewer and find every
+   place the verb claims more than an observational design licenses. Do not rewrite it
+   for me; list the exact words so I can fix them myself.
+   ```
+
+   After running, verify: read each flagged word against your compass position and keep
+   only the objections your design actually forces. Counters *silent scope change* (a
+   claim quietly upgraded from association to cause).
 3. Write a boundary line beside each claim naming what it does not establish, and
    put the uncertainty in the same eye-span as the number.
+
+   **Turn your result into a checklist of hard questions.**
+
+   ```text
+   Here is my headline claim: "[paste it]". My question is causal, my design is
+   observational and does not identify it, and what I actually estimated is a
+   descriptive association. Generate the eight hardest questions a skeptic would ask,
+   and mark which single audit each one belongs to: claim boundary, figure honesty,
+   uncertainty, or accessibility.
+   ```
+
+   After running, verify: map every question to an audit and check it against your
+   printed numbers; a missing audit is a gap the tidy list hid. Counters *illusion of
+   completeness* (a long, organized list that skips the one flaw that matters most).
 4. Trace every number back to the cell that produced it and cut the ones you cannot
    walk back. Then pick your lead claim, the sentence you would say first if you had
    ten seconds.
 5. Log it in your AI Research Ledger, and verify at least one claim with a named
    method from the [Verification Guide](../verification-guide.qmd). An AI reviewer
    may run the check with you; the decision to accept or reject stays yours.
+
+   **Locate the real source behind a physiology claim.**
+
+   ```text
+   Act as a literature assistant in human physiology. My headline claims regular
+   walking is linked to lower blood pressure. Name up to three peer-reviewed sources
+   or clinical guidelines that support this, with title, authors, year, and venue.
+   Only list work you are confident exists; mark anything uncertain.
+   ```
+
+   After running, verify: open each source in a library database and confirm it exists
+   and says what you claim. Counters *confident fabrication* (an invented citation
+   arrives as confidently as a real one).

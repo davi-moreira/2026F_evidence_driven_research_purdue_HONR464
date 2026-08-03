@@ -120,68 +120,6 @@ are both collectable in a few weeks), and **contribution** (the activity-and-sle
 link is studied broadly in adults but far less in this dorm-living, first-year
 group). The curiosity is now a problem you could defend.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first. Only then open the tool, so its output has something
-of yours to disagree with. And plan on going around more than once. The first list
-of candidate problems is almost never the useful one; you narrow, re-ask, and narrow
-again. The one thing that must not drift across those cycles is whose curiosity is
-being scoped.
-
-**Locate what is already known** (before you claim your problem is new):
-
-```
-Act as a research-scoping assistant. My topic is [your topic]. List what is
-already reasonably well established about it and where a genuine open question
-might remain. For every established fact, give one real, retrievable source I
-can open myself. Mark anything you are unsure exists.
-```
-
-*After running, verify:* open each source before you trust it. This counters
-**confident fabrication**, where a fluent answer cites a real-sounding study that
-does not exist.
-
-**Widen a curiosity into candidates you check:**
-
-```
-Here is my curiosity: [one sentence]. Produce five candidate research problems
-inside it. For each, name its units of analysis, its outcome, and its target
-population, in a table. Do not add any topic I did not mention.
-```
-
-*After running, verify:* check each row against the curiosity you actually wrote.
-This counters **silent scope change**, where the tool quietly answers a nearby
-question and hands it back as yours.
-
-**Red-team the problem you chose:**
-
-```
-Act as a hostile grant reviewer. Here is the research problem I want to commit
-months of work to: [paste it]. Argue the strongest case that it is not worth
-doing. Attack it on importance, on feasibility, and on whether it adds anything
-new.
-```
-
-*After running, verify:* keep only the objections that survive your own reasoning.
-This counters **sycophantic agreement**, where a tool praises your idea because you
-proposed it.
-
-::: {.callout-important title="Do not delegate"}
-Three calls stay yours alone. **Which problem** you commit to. **How you word** the
-question, including its units, outcome, and population. And the **judgment** on
-whether it is important and genuinely new. A tool can widen your options and attack
-your choice. It cannot make the choice, because only you carry the reasons you will
-have to give when someone asks why this problem and not another.
-:::
-
 ## An AI failure case
 
 You ask a tool to *"turn my curiosity about sleep and health into a research
@@ -208,6 +146,22 @@ cannot, you treat it as **confident fabrication** and drop it.
 *Your three curiosities are still only curiosities. This step turns one of them into
 something evidence can actually answer.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first. Only then open the tool, so its output has something
+of yours to disagree with. And plan on going around more than once. The first list
+of candidate problems is almost never the useful one; you narrow, re-ask, and narrow
+again. The one thing that must not drift across those cycles is whose curiosity is
+being scoped.
+
+::: {.callout-important title="Do not delegate"}
+Three calls stay yours alone. **Which problem** you commit to. **How you word** the
+question, including its units, outcome, and population. And the **judgment** on
+whether it is important and genuinely new. A tool can widen your options and attack
+your choice. It cannot make the choice, because only you carry the reasons you will
+have to give when someone asks why this problem and not another.
+:::
+
 1. Take the strongest of your three and walk it down the funnel in writing: curiosity,
    topic, research problem, answerable question. One line per stop, so you can see
    where the vagueness leaves.
@@ -217,13 +171,51 @@ something evidence can actually answer.*
 3. Score it on importance, feasibility, and contribution, one honest sentence each.
    Feasibility means the access, data, and time you actually have, not the ones you
    wish you had.
+
+   **Locate what is already known** (before you claim your problem is new):
+
+   ```
+   Act as a research-scoping assistant. My topic is [your topic]. List what is
+   already reasonably well established about it and where a genuine open question
+   might remain. For every established fact, give one real, retrievable source I
+   can open myself. Mark anything you are unsure exists.
+   ```
+
+   *After running, verify:* open each source before you trust it. This counters
+   **confident fabrication**, where a fluent answer cites a real-sounding study that
+   does not exist.
 4. Write a second candidate problem from the same curiosity and scope it the same way.
    Then choose between them, and write one sentence on why the other one lost.
+
+   **Widen a curiosity into candidates you check:**
+
+   ```
+   Here is my curiosity: [one sentence]. Produce five candidate research problems
+   inside it. For each, name its units of analysis, its outcome, and its target
+   population, in a table. Do not add any topic I did not mention.
+   ```
+
+   *After running, verify:* check each row against the curiosity you actually wrote.
+   This counters **silent scope change**, where the tool quietly answers a nearby
+   question and hands it back as yours.
 5. Under the question you kept, write your expected answer in one sentence, and name
    one real person or role for whom a different answer would be genuinely surprising.
    Keep this sentence; late in the book you will hold your evidence up against it.
 6. Ask an AI to attack your chosen problem on all three tests, and keep only the
    objections that survive your own reasoning.
+
+   **Red-team the problem you chose:**
+
+   ```
+   Act as a hostile grant reviewer. Here is the research problem I want to commit
+   months of work to: [paste it]. Argue the strongest case that it is not worth
+   doing. Attack it on importance, on feasibility, and on whether it adds anything
+   new.
+   ```
+
+   *After running, verify:* keep only the objections that survive your own reasoning.
+   This counters **sycophantic agreement**, where a tool praises your idea because you
+   proposed it.
 7. Log it in your AI Research Ledger, and verify your question with a named method from
    the [Verification Guide](../verification-guide.qmd). The fitting method here is peer
    reasoning: hand the single sentence to someone who knows nothing about your project

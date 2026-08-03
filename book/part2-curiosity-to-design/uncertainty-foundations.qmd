@@ -265,52 +265,6 @@ D swaps a moving sequence of intervals for one fixed range.
 If you want to write the answer out fully: this interval either contains the true
 average or it does not, and the 95% describes what the recipe does across repeats.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-## Recommended AI prompts
-
-> 💡 **AI Prompt:** "Here is my research question and how I plan to collect data:
-> [paste yours]. State my estimand in one sentence, as a quantity in the world that
-> would have a value even if I never collected data. Then state my estimator as a
-> recipe someone else could follow. Do not give me any numbers or advice yet."
->
-> **After running, verify:**
-> - [ ] Check the estimand is about the world, not about your sample. "The average
->   among my respondents" is a sample fact; "the average among all town households"
->   is an estimand.
-> - [ ] Check the estimator is a procedure, not a result. If you cannot hand it to
->   someone and have them run it, it is not yet a recipe.
-> - [ ] Rewrite both in your own words before you keep them. The wording that ships
->   is yours.
-> - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
-
-> 💡 **AI Prompt:** "Here is how my units were selected and measured: [paste yours].
-> Identify the levels at which my observations were sampled, repeated, or connected.
-> For each level, say what dependence is plausible and what more you would need to know
-> before choosing how to compute uncertainty. Do not infer a single effective sample
-> size from my description."
->
-> **After running, verify:**
-> - [ ] Confirm each claimed dependence against your actual collection procedure. A
->   tool cannot see your fieldwork; it is guessing from your description.
-> - [ ] If it names a level you had not considered, count how many units you have at
->   that level. Your row count is rarely the number that drives your precision.
-> - [ ] Decide the structure yourself and write down why. This is a design judgment.
-> - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
-
-::: {.callout-important title="Do not delegate"}
-- **The estimand.** What you are trying to learn is a research decision, not a
-  modelling detail. Nobody can hand it to you.
-- **The claim your interval makes.** You are responsible for the sentence that goes
-  in the paper, including refusing the flattering version of it.
-- **The independent unit.** Only you know how your data were really collected.
-:::
-
 ## An AI failure case
 
 Ask an assistant to interpret an interval and you will very often get this, fluently
@@ -340,12 +294,37 @@ sentence is about the wrong thing.
 Write your project's uncertainty foundation. This is the piece the next chapter builds
 its diagnosis on, so make it specific to your own project rather than generic.
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+::: {.callout-important title="Do not delegate"}
+- **The estimand.** What you are trying to learn is a research decision, not a
+  modelling detail. Nobody can hand it to you.
+- **The claim your interval makes.** You are responsible for the sentence that goes
+  in the paper, including refusing the flattering version of it.
+- **The independent unit.** Only you know how your data were really collected.
+:::
+
 1. **State your estimand** in one sentence, as a quantity in the world with a
    population, a setting, and a time. It must be something that would have a value if
    you never collected data.
 2. **State your estimator** as a recipe: what you will collect, and exactly what you
    will compute from it. Someone else should be able to follow it without asking you
    a question.
+
+   > 💡 **AI Prompt:** "Here is my research question and how I plan to collect data:
+   > [paste yours]. State my estimand in one sentence, as a quantity in the world that
+   > would have a value even if I never collected data. Then state my estimator as a
+   > recipe someone else could follow. Do not give me any numbers or advice yet."
+   >
+   > **After running, verify:**
+   > - [ ] Check the estimand is about the world, not about your sample. "The average
+   >   among my respondents" is a sample fact; "the average among all town households"
+   >   is an estimand.
+   > - [ ] Check the estimator is a procedure, not a result. If you cannot hand it to
+   >   someone and have them run it, it is not yet a recipe.
+   > - [ ] Rewrite both in your own words before you keep them. The wording that ships
+   >   is yours.
+   > - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
 3. **Name what would differ on a repeat.** Write the two or three things that would
    come out differently if selection and measurement ran again for the same target
    population, setting, and time. This describes your sampling distribution in words,
@@ -355,6 +334,20 @@ its diagnosis on, so make it specific to your own project rather than generic.
    were sampled, repeated, or connected, and how many units you have at each level.
    Then say which units your uncertainty calculation will treat as independent, and
    the assumption that lets you treat them that way.
+
+   > 💡 **AI Prompt:** "Here is how my units were selected and measured: [paste yours].
+   > Identify the levels at which my observations were sampled, repeated, or connected.
+   > For each level, say what dependence is plausible and what more you would need to know
+   > before choosing how to compute uncertainty. Do not infer a single effective sample
+   > size from my description."
+   >
+   > **After running, verify:**
+   > - [ ] Confirm each claimed dependence against your actual collection procedure. A
+   >   tool cannot see your fieldwork; it is guessing from your description.
+   > - [ ] If it names a level you had not considered, count how many units you have at
+   >   that level. Your row count is rarely the number that drives your precision.
+   > - [ ] Decide the structure yourself and write down why. This is a design judgment.
+   > - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
 5. **Write your uncertainty sentence, and then write the wrong version of it.** State
    what your interval will and will not claim. Then write the tempting false version
    beside it, and one line on how you would catch yourself saying it.

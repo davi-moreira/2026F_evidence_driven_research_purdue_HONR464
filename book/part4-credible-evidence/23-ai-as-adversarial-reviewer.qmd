@@ -108,74 +108,6 @@ ran at one store on weekdays, not across the chain. So the honest claim is bound
 You measured a p95 improvement for these three customer mixes at this store, not a
 guarantee for every location your company runs.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own read of the result first, then let a reviewer attack it. Each prompt
-below hands out a task you can check, with a verify note naming the failure it
-defends against.
-
-**Red-team the result (you run the check it names).**
-
-```text
-Act as a hostile operations reviewer, not a cheerleader. Here is a one-paragraph
-summary of my wait-time study and its headline claim: [paste your summary]. Name the
-single most serious flaw you can find, and state the exact measurement I could run
-that would confirm or refute it. Do not rewrite my study and do not list more than
-one flaw.
-```
-
-After running, verify (counters *sycophantic agreement*): if it calls your setup
-"sound" or offers only mild praise, push back and ask for the worst problem assuming
-the result is fake. A flaw is real only once you run the named measurement and your
-own numbers confirm it.
-
-**List the specifications you left off (you audit the list).**
-
-```text
-Here is my pre-listed robustness grid for one wait-time result: I vary the customer
-mix, the time of day, and whether the store was fully staffed. Name up to three
-additional, equally defensible specifications I did NOT list that could move the
-result, and for each say which direction you expect it to push.
-```
-
-After running, verify (counters *illusion of completeness*): a long, tidy grid can
-still omit the one setting that breaks the claim. Add and re-run the suggestions you
-can actually operationalize, and discard the rest.
-
-**Collapse the panel's flags (you keep the verdict).**
-
-```text
-Three reviewers each named one "most serious flaw" in my analysis: [A], [B], [C].
-For each, give the single data check that would confirm or refute it, in one line.
-Then tell me which two of the three are most likely the same underlying concern in
-different words, and which one is genuinely separate.
-```
-
-After running, verify (counters *correlated errors*): three reviewers echoing one
-blind spot can feel like three confirmations. Run each check against your own output
-before believing any flag, and treat unanimous agreement as a candidate to check,
-never as the check itself.
-
-::: {.callout-important title="Do not delegate"}
-These stay yours, no matter how fluent the reviewer sounds. Which robustness checks
-you commit to before you look, because only those carry confirmatory weight. A check
-you think of after seeing the result is still worth running; it is exploratory, and
-it counts only if you label it that way and report it with the rest. Which flagged flaws your data actually confirm, decided
-by the measurement and not by the confidence. Whether a flaw is a claim-boundary
-problem that no further measurement can fix and only a narrower claim can answer. And
-the one bounded result you will defend, with its uncertainty stated. A reviewer
-proposes;
-you verify, and the evidence decides.
-:::
-
 ## An AI failure case
 
 You paste your wait-time summary into an AI reviewer, and it answers with total
@@ -202,6 +134,24 @@ settled it.
 step hands the whole thing to a reviewer whose only job is to break it, and makes you
 the one who decides what broke.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own read of the result first, then let a reviewer attack it. Each prompt
+below hands out a task you can check, with a verify note naming the failure it
+defends against.
+
+::: {.callout-important title="Do not delegate"}
+These stay yours, no matter how fluent the reviewer sounds. Which robustness checks
+you commit to before you look, because only those carry confirmatory weight. A check
+you think of after seeing the result is still worth running; it is exploratory, and
+it counts only if you label it that way and report it with the rest. Which flagged flaws your data actually confirm, decided
+by the measurement and not by the confidence. Whether a flaw is a claim-boundary
+problem that no further measurement can fix and only a narrower claim can answer. And
+the one bounded result you will defend, with its uncertainty stated. A reviewer
+proposes;
+you verify, and the evidence decides.
+:::
+
 1. Write a one-paragraph summary of your design, your headline claim, and the checks you
    have already run. A reviewer who does not know what you did will invent flaws you
    ruled out last week.
@@ -209,8 +159,37 @@ the one who decides what broke.*
    that would confirm or refute it. Do this at least twice, with different framings or
    different tools, and treat two matching answers as one candidate to check rather than
    as two confirmations.
+
+   **Red-team the result (you run the check it names).**
+
+   ```text
+   Act as a hostile operations reviewer, not a cheerleader. Here is a one-paragraph
+   summary of my wait-time study and its headline claim: [paste your summary]. Name the
+   single most serious flaw you can find, and state the exact measurement I could run
+   that would confirm or refute it. Do not rewrite my study and do not list more than
+   one flaw.
+   ```
+
+   After running, verify (counters *sycophantic agreement*): if it calls your setup
+   "sound" or offers only mild praise, push back and ask for the worst problem assuming
+   the result is fake. A flaw is real only once you run the named measurement and your
+   own numbers confirm it.
 3. Take the three hardest points you got back. For each, write the one data check that
    would settle it, in a single line.
+
+   **Collapse the panel's flags (you keep the verdict).**
+
+   ```text
+   Three reviewers each named one "most serious flaw" in my analysis: [A], [B], [C].
+   For each, give the single data check that would confirm or refute it, in one line.
+   Then tell me which two of the three are most likely the same underlying concern in
+   different words, and which one is genuinely separate.
+   ```
+
+   After running, verify (counters *correlated errors*): three reviewers echoing one
+   blind spot can feel like three confirmations. Run each check against your own output
+   before believing any flag, and treat unanimous agreement as a candidate to check,
+   never as the check itself.
 4. Run all three checks against your own data. Mark each flag confirmed or refuted by
    your own output, never by how certain the reviewer sounded. Save the most confident
    wrong flag you caught; it tells you something about the tool you will use again

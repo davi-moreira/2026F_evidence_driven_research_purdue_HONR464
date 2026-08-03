@@ -115,76 +115,6 @@ decides which larvae the number even describes. The 0.43-reported-as-0.5 mismatc
 comes third: real, and a genuine reporting failure, but the smallest threat to whether
 an effect exists.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. None of these is a single shot. You send
-the prompt, read what comes back, interrogate it, sharpen the ask, and run it again.
-That is the loop, and an audit usually takes two or three turns of it before the tool
-stops guessing and starts pointing at real lines. Each prompt is a checkable job, not
-a verdict you hand off.
-
-**Locate every missing input.**
-
-```text
-Act as a cold reproducibility auditor. Here is everything a peer's package
-shipped: [paste the README, the data description, the code, and the headline
-claim]. List every input or step a stranger needs and might not find: the data
-file and its version, the exact run order, any random seed, any hard-coded path.
-Put it in a table with the item, whether the package supplies it, and the cell
-where I should check.
-```
-After running, verify: map each item to a real cell, then ask "what is the single
-most important thing you left out?" Counters *illusion of completeness* (a tidy gap
-list can still omit the one missing pointer that blocks the whole run).
-
-**Walk the headline cell, then confirm it independently.**
-
-```text
-Here is the cell that computes the package's headline number: [paste the cell].
-Explain line by line what it computes, and name which printed value is the
-headline a reader should compare against the write-up. Then give me one
-independent way to confirm that value without rerunning this exact code.
-```
-After running, verify: confirm the value it names matches the number your run
-actually printed, then run its independent check yourself. Counters *confident
-fabrication* (a fluent walkthrough can describe a number the code never produced).
-
-**Red-team the hidden assumption.**
-
-```text
-This analysis treats every measured larva as an independent observation, though
-the probiotic was assigned by tank. Act as a hostile methods reviewer. Name the
-one assumption most likely to inflate the reported certainty, say what the honest
-experimental unit is, and do not reassure me the design is fine.
-```
-After running, verify: recompute the interval at the tank level yourself and see
-whether it reaches zero. Counters *plausible-but-wrong-method* (an
-independent-observations assumption on clustered data silently shrinks every
-interval).
-
-::: {.callout-important title="Do not delegate"}
-An AI tool connected to an execution environment *can* run the code, and asking it to
-is reasonable. What it cannot do is stand behind the result. So demand the evidence of
-the run rather than the summary of it: the commands, the environment and package
-versions, the exact version of the code and data it ran (a commit hash, if the
-package has one), whether each command exited cleanly or errored, the raw output,
-and which files it actually touched. A confident "it
-reproduces" with no execution record tells you nothing about whether the released
-package ran, a modified copy ran, or nothing ran at all. Then reproduce the headline
-yourself from a clean start, because the verdict carries your name. You also keep three
-judgments: **which weakness most threatens the claim**, **how you rank the
-recommendations**, and **the final verdict** on what the package can and cannot
-support. A tool proposes suspects. You decide which ones the evidence convicts.
-:::
-
 ## An AI failure case
 
 You paste the whole package into a general AI tool and ask, "Does this study
@@ -213,13 +143,64 @@ claim, never the confident story about them.
 helped you reach them; this step turns all of it into files a stranger could run
 without you in the room.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. None of these is a single shot. You send
+the prompt, read what comes back, interrogate it, sharpen the ask, and run it again.
+That is the loop, and an audit usually takes two or three turns of it before the tool
+stops guessing and starts pointing at real lines. Each prompt is a checkable job, not
+a verdict you hand off.
+
+::: {.callout-important title="Do not delegate"}
+An AI tool connected to an execution environment *can* run the code, and asking it to
+is reasonable. What it cannot do is stand behind the result. So demand the evidence of
+the run rather than the summary of it: the commands, the environment and package
+versions, the exact version of the code and data it ran (a commit hash, if the
+package has one), whether each command exited cleanly or errored, the raw output,
+and which files it actually touched. A confident "it
+reproduces" with no execution record tells you nothing about whether the released
+package ran, a modified copy ran, or nothing ran at all. Then reproduce the headline
+yourself from a clean start, because the verdict carries your name. You also keep three
+judgments: **which weakness most threatens the claim**, **how you rank the
+recommendations**, and **the final verdict** on what the package can and cannot
+support. A tool proposes suspects. You decide which ones the evidence convicts.
+:::
+
 1. Gather everything into one folder: the data, the code, the run order, the random
    seed, and a short write-up that states your headline number in words.
+
+   **Locate every missing input.**
+
+   ```text
+   Act as a cold reproducibility auditor. Here is everything a peer's package
+   shipped: [paste the README, the data description, the code, and the headline
+   claim]. List every input or step a stranger needs and might not find: the data
+   file and its version, the exact run order, any random seed, any hard-coded path.
+   Put it in a table with the item, whether the package supplies it, and the cell
+   where I should check.
+   ```
+
+   After running, verify: map each item to a real cell, then ask "what is the single
+   most important thing you left out?" Counters *illusion of completeness* (a tidy gap
+   list can still omit the one missing pointer that blocks the whole run).
 2. Reproduce yourself cold. Clear the kernel, run every cell from the top with no
    manual fixes, and ideally do it somewhere other than the machine you built it on.
    Write down whether your headline number came back exactly, roughly, or not at all.
 3. Line every sentence of your write-up against a number your code actually prints.
    Flag each mismatch, including the rounding you did not mean to hide.
+
+   **Walk the headline cell, then confirm it independently.**
+
+   ```text
+   Here is the cell that computes the package's headline number: [paste the cell].
+   Explain line by line what it computes, and name which printed value is the
+   headline a reader should compare against the write-up. Then give me one
+   independent way to confirm that value without rerunning this exact code.
+   ```
+
+   After running, verify: confirm the value it names matches the number your run
+   actually printed, then run its independent check yourself. Counters *confident
+   fabrication* (a fluent walkthrough can describe a number the code never produced).
 4. Change one defensible choice you never disclosed, an exclusion rule or a cutoff or
    a subset, and record how far your headline moves. Report the spread across those
    versions, not the friendlier end of it, and check first that each version still
@@ -235,6 +216,20 @@ without you in the room.*
    found by threat to the claim rather than by ease of repair. If you have a peer,
    swap folders and rerun each other's cold. The number they get, set beside the
    number you reported, is your reproduction evidence.
+
+   **Red-team the hidden assumption.**
+
+   ```text
+   This analysis treats every measured larva as an independent observation, though
+   the probiotic was assigned by tank. Act as a hostile methods reviewer. Name the
+   one assumption most likely to inflate the reported certainty, say what the honest
+   experimental unit is, and do not reassure me the design is fine.
+   ```
+
+   After running, verify: recompute the interval at the tank level yourself and see
+   whether it reaches zero. Counters *plausible-but-wrong-method* (an
+   independent-observations assumption on clustered data silently shrinks every
+   interval).
 7. Log the audit in your AI Research Ledger, and verify at least one output with a
    named method from the [Verification Guide](../verification-guide.qmd). An AI
    reviewer may run the check with you; the decision to accept or reject stays yours.

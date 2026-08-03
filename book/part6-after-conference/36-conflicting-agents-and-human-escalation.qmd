@@ -109,64 +109,6 @@ official rate, but nowhere near as precise as you wrote. You **override** three 
 great" verdicts and rewrite the claim with its real uncertainty. The roles counted the
 answer as correct. You checked whether it was earned.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own diagnosis first, then delegate. Each prompt starts a loop, and with
-several loops in play the discipline is the same as with one: read the output,
-interrogate it, refine, run again, and never let a loop close a question that belongs
-to you. Each prompt is a checkable job, not a request for a verdict.
-
-**Locate the decisions that must escalate.**
-
-```text
-Act as a research-integrity assistant. Here is my draft's headline claim and the three
-never-delegate decisions I think it contains: [paste]. Using standard research-defense
-criteria, list which decisions in this draft an AI output should never be allowed to
-settle, and which of my three I mislabeled. Do not settle any of them for me.
-```
-After running, verify: check its list against the escalation triggers you wrote
-yourself; a decision it omits is the one to guard hardest. Counters *illusion of
-completeness* (a tidy list that quietly drops the call that matters most).
-
-**List the agreements to verify.**
-
-```text
-Here are three reviewer outputs on the same draft: [paste all three]. For each pair,
-name one specific way they could be wrong the SAME way: a shared assumption, a shared
-anchor, or a shared prompt. Rank the pairs from most to least likely to share a blind
-spot.
-```
-After running, verify: for the top pair, rerun one role with a different framing and
-different context and see whether the agreement survives. Counters *correlated errors
-across tools or roles* (agreement that is one flaw echoed back).
-
-**Red-team the consensus.**
-
-```text
-Act as a hostile reviewer who believes my three roles only agreed because my prompt led
-them. Argue that their consensus is manufactured, name the leading words in my original
-ask, and give me a neutral rewrite. Do not reassure me.
-```
-After running, verify: if it cannot find a single leading word, push back and demand the
-worst one, then rerun the review neutrally. Counters *sycophantic agreement* (praise
-that rehearses your ego, not your evidence).
-
-::: {.callout-important title="Do not delegate"}
-Which claims your draft can defend, where each claim must stop, whether an agreement
-among your roles was ever independent, and the moment to escalate: those stay yours. No
-role decides its own trustworthiness, and no head-count of roles decides your claim
-boundary or your ethics. When an AI output would *settle* one of those rather than
-inform it, you stop and you decide.
-:::
-
 ## An AI failure case
 
 You send your draft to four AI roles and all four reply "no major problems." It feels
@@ -195,16 +137,56 @@ gap.
 *Your project already has a small AI team running on one section; this step decides in
 advance where those loops must stop and hand the call back to you.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own diagnosis first, then delegate. Each prompt starts a loop, and with
+several loops in play the discipline is the same as with one: read the output,
+interrogate it, refine, run again, and never let a loop close a question that belongs
+to you. Each prompt is a checkable job, not a request for a verdict.
+
+::: {.callout-important title="Do not delegate"}
+Which claims your draft can defend, where each claim must stop, whether an agreement
+among your roles was ever independent, and the moment to escalate: those stay yours. No
+role decides its own trustworthiness, and no head-count of roles decides your claim
+boundary or your ethics. When an AI output would *settle* one of those rather than
+inform it, you stop and you decide.
+:::
+
 1. Write your escalation rules before the next round starts. List the specific
    decisions no loop may close: your claim boundary, your uncertainty, which sources
    are real, what counts as done, and anything with an ethical edge. Keep the list
    short enough to remember under pressure.
+
+   **Locate the decisions that must escalate.**
+
+   ```text
+   Act as a research-integrity assistant. Here is my draft's headline claim and the three
+   never-delegate decisions I think it contains: [paste]. Using standard research-defense
+   criteria, list which decisions in this draft an AI output should never be allowed to
+   settle, and which of my three I mislabeled. Do not settle any of them for me.
+   ```
+
+   After running, verify: check its list against the escalation triggers you wrote
+   yourself; a decision it omits is the one to guard hardest. Counters *illusion of
+   completeness* (a tidy list that quietly drops the call that matters most).
 2. Add the stopping conditions that are not about content. How many turns a loop may
    run before you read it, and what an agentic tool is allowed to change without
    asking you first.
 3. Find one real disagreement in what your roles have already returned, and diagnose
    it on the record: real disagreement, correlated error, or a consensus your own
    prompt manufactured. Say which and why.
+
+   **Red-team the consensus.**
+
+   ```text
+   Act as a hostile reviewer who believes my three roles only agreed because my prompt led
+   them. Argue that their consensus is manufactured, name the leading words in my original
+   ask, and give me a neutral rewrite. Do not reassure me.
+   ```
+
+   After running, verify: if it cannot find a single leading word, push back and demand the
+   worst one, then rerun the review neutrally. Counters *sycophantic agreement* (praise
+   that rehearses your ego, not your evidence).
 4. Resolve it yourself with a check the loops cannot run: recompute the number, open
    the source, or compare against a figure that was never in any prompt. Write the
    resolution and the check together, because one without the other is just an
@@ -212,6 +194,19 @@ advance where those loops must stop and hand the call back to you.*
 5. Take one place your roles agreed on something that mattered and test whether the
    agreement was independent. Rerun one of them with a different framing and different
    context, or verify the point yourself outside the tools.
+
+   **List the agreements to verify.**
+
+   ```text
+   Here are three reviewer outputs on the same draft: [paste all three]. For each pair,
+   name one specific way they could be wrong the SAME way: a shared assumption, a shared
+   anchor, or a shared prompt. Rank the pairs from most to least likely to share a blind
+   spot.
+   ```
+
+   After running, verify: for the top pair, rerun one role with a different framing and
+   different context and see whether the agreement survives. Counters *correlated errors
+   across tools or roles* (agreement that is one flaw echoed back).
 6. Log the conflict, the diagnosis, and the override in your AI Research Ledger, and
    verify at least one output with a named method from the
    [Verification Guide](../verification-guide.qmd). An AI reviewer may run the check

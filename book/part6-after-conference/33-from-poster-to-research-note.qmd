@@ -95,73 +95,6 @@ library versions, logs that you excluded the first order of the morning and why,
 passes restart-and-run-all so the 38% returns on a clean kernel. The note is now
 readable and runnable.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Writing with an AI tool is a loop, not a
-single ask: you send the prompt, read the output, push back on the part that is wrong,
-and run it again. Keep the loop pointed at your own text. The moment it starts
-producing sentences you did not think of and cannot check, you are no longer editing,
-you are being edited. Each prompt below is a checkable job, not a request for a
-verdict.
-
-**Locate real sources for the gap.**
-
-```text
-Act as a literature assistant in service operations. List peer-reviewed or
-official sources that measure customer wait times or the effect of pre-ordering
-on queues, in a table with title, authors, venue, year, and one-line finding.
-Only include work you are confident exists; mark anything uncertain. Do not
-write my gap paragraph.
-```
-
-After running, verify: retrieve each source yourself before it enters the note; a
-source you cannot open in seconds is fabricated until proven otherwise. Counters
-*confident fabrication* (an invented citation arrives as confidently as a real one).
-
-**List every over-reach to verify.**
-
-```text
-Here is my discussion paragraph and the cell that printed my median wait-time
-drop with its interval: [paste both]. List every sentence that claims more than
-the printout supports: a bigger number, a wider setting, or "faster for everyone"
-where I measured one simulated demand pattern. List them; do not rewrite them.
-```
-
-After running, verify: check each flagged sentence against your printout and keep only
-edits that shrink a claim to fit the evidence. Counters *silent scope change* (a
-sharper sentence that upgrades "on this arrival pattern" to "for everyone" has quietly
-answered a different question).
-
-**Red-team the capsule.**
-
-```text
-Here are the key lines of my reproducibility capsule: [paste them]. Playing a cold
-replicator who has only these lines, list every input, version, or by-hand step you
-would need to rerun my number and might not find here. Then name one problem this
-line-scan can never catch that only a person running it cold would hit.
-```
-
-After running, verify: match each gap against what you can actually see missing, and
-confirm the "cannot catch" problem is real by rereading your own lines. Counters
-*illusion of completeness* (a capsule can look complete and still omit the one input a
-stranger needs).
-
-::: {.callout-important title="Do not delegate"}
-Three calls stay yours no matter how fluent the tool is. **Which finding is your
-headline**, **how big that claim is allowed to be**, and **which sources are real**
-are never delegated. An AI can sharpen a sentence, but a sharper sentence is not a
-bigger finding, and clean prose is exactly how an overclaim sneaks in. You own the
-words you put your name on, their boundary, and their uncertainty.
-:::
-
 ## An AI failure case
 
 You paste your discussion into your AI and ask it to make the writing sharper. It hands
@@ -190,20 +123,79 @@ claim, not the polish.
 analysis and claim ledgers — plus whatever you presented, and a folder someone could
 rerun; this step turns that summary into prose that stands on its own page.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Writing with an AI tool is a loop, not a
+single ask: you send the prompt, read the output, push back on the part that is wrong,
+and run it again. Keep the loop pointed at your own text. The moment it starts
+producing sentences you did not think of and cannot check, you are no longer editing,
+you are being edited. Each prompt below is a checkable job, not a request for a
+verdict.
+
+::: {.callout-important title="Do not delegate"}
+Three calls stay yours no matter how fluent the tool is. **Which finding is your
+headline**, **how big that claim is allowed to be**, and **which sources are real**
+are never delegated. An AI can sharpen a sentence, but a sharper sentence is not a
+bigger finding, and clean prose is exactly how an overclaim sneaks in. You own the
+words you put your name on, their boundary, and their uncertainty.
+:::
+
 1. Write your problem–gap–question spine as three short paragraphs. Name the trouble,
    name what prior retrievable work has not established, and name the question that
    closes exactly that gap. Every sentence in the gap paragraph rests on a source a
    reader can open.
+
+   **Locate real sources for the gap.**
+
+   ```text
+   Act as a literature assistant in service operations. List peer-reviewed or
+   official sources that measure customer wait times or the effect of pre-ordering
+   on queues, in a table with title, authors, venue, year, and one-line finding.
+   Only include work you are confident exists; mark anything uncertain. Do not
+   write my gap paragraph.
+   ```
+
+   After running, verify: retrieve each source yourself before it enters the note; a
+   source you cannot open in seconds is fabricated until proven otherwise. Counters
+   *confident fabrication* (an invented citation arrives as confidently as a real one).
 2. Order your findings, best-supported first. Whatever you can defend with the most
    data leads. Anything that rests on one observation or one lucky run goes to the
    back and wears the word exploratory.
 3. Write your headline claim in one sentence, with its boundary inside the same
    sentence: the setting, the sample, and the population it does not cover. Then write
    the inflated version you refuse, so you can recognize it if it sneaks back in.
+
+   **List every over-reach to verify.**
+
+   ```text
+   Here is my discussion paragraph and the cell that printed my median wait-time
+   drop with its interval: [paste both]. List every sentence that claims more than
+   the printout supports: a bigger number, a wider setting, or "faster for everyone"
+   where I measured one simulated demand pattern. List them; do not rewrite them.
+   ```
+
+   After running, verify: check each flagged sentence against your printout and keep only
+   edits that shrink a claim to fit the evidence. Counters *silent scope change* (a
+   sharper sentence that upgrades "on this arrival pattern" to "for everyone" has quietly
+   answered a different question).
 4. Size your limitations to what actually threatens the claim. Cut anything that reads
    like "more research is needed" and keep what a hostile reader would raise first.
 5. Attach your folder to the note and confirm the two agree: the number in your lead
    sentence is the number a cold restart-and-run-all prints.
+
+   **Red-team the capsule.**
+
+   ```text
+   Here are the key lines of my reproducibility capsule: [paste them]. Playing a cold
+   replicator who has only these lines, list every input, version, or by-hand step you
+   would need to rerun my number and might not find here. Then name one problem this
+   line-scan can never catch that only a person running it cold would hit.
+   ```
+
+   After running, verify: match each gap against what you can actually see missing, and
+   confirm the "cannot catch" problem is real by rereading your own lines. Counters
+   *illusion of completeness* (a capsule can look complete and still omit the one input a
+   stranger needs).
 6. Log the drafting round in your AI Research Ledger, and verify at least one output
    with a named method from the [Verification Guide](../verification-guide.qmd). An AI
    reviewer may run the check with you; the decision to accept or reject stays yours.

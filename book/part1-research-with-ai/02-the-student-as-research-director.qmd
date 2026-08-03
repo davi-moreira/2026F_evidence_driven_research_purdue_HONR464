@@ -91,66 +91,6 @@ licenses the word "inhibits." Stating how uncertain that conclusion is, given th
 plates and one strain. No tool makes those calls. The moment you let it, you become a
 reader of someone else's guess.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Each prompt below is **commit-first**: write your own answer before you open the tool,
-so its reply has something of yours to disagree with. Expect to run each one more than
-once. You read the reply, find the weak spot, sharpen the prompt, and go again. The
-loop is normal; stopping the loop before you have checked anything is the mistake.
-
-**Locate a bench resource (delegable).**
-
-```text
-Act as a lab-methods assistant in microbiology. I am measuring bacterial growth
-by optical density (OD600). List 3 published, retrievable protocols or textbook
-methods for reading a growth curve. For each, give authors or source, year, and
-where it appears. Only include work you are confident exists; mark anything
-uncertain. Then tell me which one to verify first.
-```
-
-After running, verify (counters *confident fabrication*): open each protocol
-yourself before you cite it; a source you cannot retrieve is invented until it opens.
-
-**Turn your triage into a checkable list.**
-
-```text
-Here are eight tasks in my project: [paste your list]. For each, label it "safe to
-delegate," "delegate then verify," or "never delegate," and give a one-line reason.
-Return it as a table so I can audit each row on its own.
-```
-
-After running, verify (counters *illusion of completeness*): compare the table
-against the triage you wrote first and against the never-delegate checklist; a tidy
-table can quietly mis-file the one decision that mattered.
-
-**Red-team your own boundary.**
-
-```text
-I marked this task "never delegate": [paste one task]. Act as a hostile reviewer
-and argue that it is actually safe to hand to an AI. Give your strongest case. Do
-not agree with me.
-```
-
-After running, verify (counters *sycophantic agreement*): if the reviewer folds and
-praises your call, push back, then take its strongest objection to a colleague or
-mentor rather than trusting the tool's approval.
-
-::: {.callout-important title="Do not delegate"}
-The buckets themselves are yours to fill, and three calls never leave the "never
-delegate" bucket: **which question your project pursues**, **whether your evidence
-supports the claim you want to make**, and **how much uncertainty you report**. You
-may ask a tool to lay out options, but choosing among them, and answering for the
-choice, is the job that makes you the director.
-:::
-
 ## An AI failure case
 
 You paste your eight tasks in and ask the tool to sort them. Back comes a clean,
@@ -174,6 +114,21 @@ that row as never delegate, so the mismatch jumps out. Then you try to retrieve 
 *You have a ledger and three curiosities. Now you take the job of the person who
 decides who does what.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Each prompt below is **commit-first**: write your own answer before you open the tool,
+so its reply has something of yours to disagree with. Expect to run each one more than
+once. You read the reply, find the weak spot, sharpen the prompt, and go again. The
+loop is normal; stopping the loop before you have checked anything is the mistake.
+
+::: {.callout-important title="Do not delegate"}
+The buckets themselves are yours to fill, and three calls never leave the "never
+delegate" bucket: **which question your project pursues**, **whether your evidence
+supports the claim you want to make**, and **how much uncertainty you report**. You
+may ask a tool to lay out options, but choosing among them, and answering for the
+choice, is the job that makes you the director.
+:::
+
 1. Pick the curiosity from Chapter 1 you are most drawn to, and list every task the
    project around it would need: finding sources, gathering or cleaning data, choosing
    measures, computing, drafting, interpreting, deciding. Aim for at least ten lines,
@@ -181,13 +136,50 @@ decides who does what.*
 2. Sort every line into safe to delegate, delegate then verify, or never delegate, with
    a one-line reason beside it. That sorted list is your director's task list, and you
    will keep amending it for the rest of the book.
+
+   **Turn your triage into a checkable list.**
+
+   ```text
+   Here are eight tasks in my project: [paste your list]. For each, label it "safe to
+   delegate," "delegate then verify," or "never delegate," and give a one-line reason.
+   Return it as a table so I can audit each row on its own.
+   ```
+
+   After running, verify (counters *illusion of completeness*): compare the table
+   against the triage you wrote first and against the never-delegate checklist; a tidy
+   table can quietly mis-file the one decision that mattered.
 3. For each "delegate then verify" line, name the check now, while it is cheap: which
    document you will open, which number you will recompute, which second method you
    will run.
+
+   **Locate a bench resource (delegable).**
+
+   ```text
+   Act as a lab-methods assistant in microbiology. I am measuring bacterial growth
+   by optical density (OD600). List 3 published, retrievable protocols or textbook
+   methods for reading a growth curve. For each, give authors or source, year, and
+   where it appears. Only include work you are confident exists; mark anything
+   uncertain. Then tell me which one to verify first.
+   ```
+
+   After running, verify (counters *confident fabrication*): open each protocol
+   yourself before you cite it; a source you cannot retrieve is invented until it opens.
 4. Star the two lines you would defend hardest as never-delegate, and write one
    sentence each on why those calls are what make the project yours.
 5. Hand the same list to an AI tool, ask it to argue with your placements, and keep
    only the changes you can justify out loud.
+
+   **Red-team your own boundary.**
+
+   ```text
+   I marked this task "never delegate": [paste one task]. Act as a hostile reviewer
+   and argue that it is actually safe to hand to an AI. Give your strongest case. Do
+   not agree with me.
+   ```
+
+   After running, verify (counters *sycophantic agreement*): if the reviewer folds and
+   praises your call, push back, then take its strongest objection to a colleague or
+   mentor rather than trusting the tool's approval.
 6. Log that exchange in your AI Research Ledger, and verify at least one placement with
    a named method from the [Verification Guide](../verification-guide.qmd). A triage is
    a judgment, so the fitting method is peer reasoning: walk your three buckets past a

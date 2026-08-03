@@ -95,69 +95,6 @@ portfolio go four things: the roles you ran, the reviewer-versus-diagnostician c
 and your override, this stopping rule, and the label comparison that made your
 reviewers' agreement worth more than a head count.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt hands the tool reach, not the
-decision, and each one opens a loop rather than ending in a single answer: you read
-what comes back, push on the weakest part, and run it again. Closing the loop is your
-move, not the tool's.
-
-**Locate the real benchmark.**
-
-```
-Act as a research assistant in plant biology. I measured the germination rate of one
-packet of lettuce seed. I want a published or label-stated reference value to compare
-against. Give the value, the exact source it comes from, and a link. Only state a
-figure you are confident is real; if you are unsure, say so and tell me where to
-look.
-```
-
-After running, verify: open the source or read the packet yourself before you trust the
-number (primary-source reading). Counters **confident fabrication**, a reference value
-quoted with an invented source.
-
-**List every claim to verify.**
-
-```
-Here is my draft: [paste]. List every empirical claim in it as a table: the claim,
-the number or measurement it rests on, and whether that claim stays inside my single
-sample or reaches past it. Do not add any new claims.
-```
-
-After running, verify: check the table against your own list of what you measured, and
-confirm nothing reaches past your data unmarked. Counters **illusion of completeness**,
-a tidy list that omits the one claim quietly overreaching.
-
-**Red-team the defense.**
-
-```
-Act as a hostile but fair cross-examiner at a research defense. Here is my headline
-claim, its boundary, and my two weakest verification steps: [paste]. Ask me the five
-hardest questions you can, each tied to a specific claim or check. Do not soften them,
-and do not answer them for me.
-```
-
-After running, verify: if every question is gentle or your claim is called
-"well-supported," push back and demand the weakest link. Counters **sycophantic
-agreement**, a partner that rehearses your ego instead of your defense.
-
-::: {.callout-important title="Do not delegate"}
-The tools may draft, review, and surface hard questions. They may never decide which
-claims you put your name on, where a claim like "88% germination" must stop, whether
-your reviewers were ever independent, what your stopping rule is, or a single word of
-the public defense. When agreeing roles bless a claim, deciding whether that agreement
-is real or just correlated is yours. So is the answer you give when the room asks how
-you know.
-:::
-
 ## An AI failure case
 
 You send your finished draft to three reviewer roles and ask each to "confirm it is
@@ -187,6 +124,22 @@ Count the checks you ran yourself, never the roles that nodded.
 you wrote down; this last step assembles all of it into the artifact you hand over and
 the defense you give.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt hands the tool reach, not the
+decision, and each one opens a loop rather than ending in a single answer: you read
+what comes back, push on the weakest part, and run it again. Closing the loop is your
+move, not the tool's.
+
+::: {.callout-important title="Do not delegate"}
+The tools may draft, review, and surface hard questions. They may never decide which
+claims you put your name on, where a claim like "88% germination" must stop, whether
+your reviewers were ever independent, what your stopping rule is, or a single word of
+the public defense. When agreeing roles bless a claim, deciding whether that agreement
+is real or just correlated is yours. So is the answer you give when the room asks how
+you know.
+:::
+
 1. Finish the research artifact itself: your paper, note, or poster, with each claim
    stated at its boundary and your uncertainty in the same sentence as your headline
    number. This is the document with your name on it.
@@ -194,14 +147,53 @@ the defense you give.*
    ran, one real conflict and the override you made with its non-AI check, your
    stopping rule and your never-delegate list, and one independence check that made an
    agreement worth more than a head count.
+
+   **Locate the real benchmark.**
+
+   ```
+   Act as a research assistant in plant biology. I measured the germination rate of one
+   packet of lettuce seed. I want a published or label-stated reference value to compare
+   against. Give the value, the exact source it comes from, and a link. Only state a
+   figure you are confident is real; if you are unsure, say so and tell me where to
+   look.
+   ```
+
+   After running, verify: open the source or read the packet yourself before you trust the
+   number (primary-source reading). Counters **confident fabrication**, a reference value
+   quoted with an invented source.
 3. Write your stopping rule as a sentence you could read aloud, phrased around what
    you have verified rather than what your tools approved. "Every surviving claim has
    a check I ran myself" is a stopping rule. "The reviewers agreed" is not.
 4. Rehearse the defense in three movements: your claim and its boundary, the central
    choice you made and the road you did not take, and the verification you lead with.
    Then have someone ask you the question you least want to be asked.
+
+   **Red-team the defense.**
+
+   ```
+   Act as a hostile but fair cross-examiner at a research defense. Here is my headline
+   claim, its boundary, and my two weakest verification steps: [paste]. Ask me the five
+   hardest questions you can, each tied to a specific claim or check. Do not soften them,
+   and do not answer them for me.
+   ```
+
+   After running, verify: if every question is gentle or your claim is called
+   "well-supported," push back and demand the weakest link. Counters **sycophantic
+   agreement**, a partner that rehearses your ego instead of your defense.
 5. Read the whole artifact once more against your ledger and cut anything you cannot
    trace to a check. What is left is what you can defend.
+
+   **List every claim to verify.**
+
+   ```
+   Here is my draft: [paste]. List every empirical claim in it as a table: the claim,
+   the number or measurement it rests on, and whether that claim stays inside my single
+   sample or reaches past it. Do not add any new claims.
+   ```
+
+   After running, verify: check the table against your own list of what you measured, and
+   confirm nothing reaches past your data unmarked. Counters **illusion of completeness**,
+   a tidy list that omits the one claim quietly overreaching.
 6. Close the ledger with the last entry, and verify your headline claim one final time
    with a named method from the [Verification Guide](../verification-guide.qmd). An AI
    reviewer may run the check with you; the decision to accept or reject stays yours.

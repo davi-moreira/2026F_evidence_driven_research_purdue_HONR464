@@ -111,68 +111,6 @@ never enters the workflow as a delegated task.
 The tools drafted, flagged, and polished. You split the job, set the order, decided
 when each loop had run long enough, and owned the claim that carries your name.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Each prompt below opens a loop you
-supervise, and one of them is a loop about your other loops. Read what comes back,
-push on the weak part, run it again. Each prompt is a checkable job, not a request for
-a verdict.
-
-**Decompose, then hand back the human step.**
-
-```text
-I am splitting the review of my health write-up into scoped AI roles. Here are my
-section headings and one line on each: [paste them]. Propose a table with one row
-per role: the role's one-sentence scoped task, the draft or input it needs, whether
-it can run in parallel or must wait on another role, and the single decision it must
-hand back to me.
-```
-After running, verify: check that every "hand back to me" cell names a real
-never-delegate decision, not one invented to look cautious. Counters *illusion of
-completeness* (a tidy role table that reads thorough while omitting the check that
-matters).
-
-**Confirm the wiring has no early error slipping past.**
-
-```text
-Here is my proposed workflow as a list of "role A feeds role B" arrows: [paste them].
-For each role, tell me exactly what input it depends on, and name any role I have
-scheduled to start before the input it needs actually exists.
-```
-After running, verify: draw the arrows yourself and trace whether each role's input
-exists when it starts. Counters *plausible-but-wrong-method* (a confident wiring that
-lets a role run before its input is ready).
-
-**Red-team the decomposition.**
-
-```text
-Act as a hostile reviewer of my AI workflow, not of my draft. Name every place an
-early mistake in one role could flow downstream unchecked, and every role whose job
-overlaps another so much that it adds no independent check. Do not rewrite my plan.
-```
-After running, verify: if it only praises your plan, push back and demand the single
-worst wiring flaw. Counters *sycophantic agreement* (praise that reviews your ego,
-not your workflow).
-
-::: {.callout-important title="Do not delegate"}
-The split and the order can be informed by a tool, but three calls stay yours alone.
-You decide **which jobs are worth their own loop** and which just multiply output you
-cannot supervise. You decide **the order**, so that no role settles a question a role
-upstream of it should have answered first. And you keep **the integrate step** human:
-when two roles disagree about what your draft claims, you make that call in your own
-words. A workflow that hands the claim to a tool is not a workflow you can defend. The
-rule scales with the number of loops rather than bending to it. More agents does not
-mean looser command; it means the same command discipline, repeated.
-:::
-
 ## An AI failure case
 
 You ask a tool to design your multi-agent workflow, and it returns a confident,
@@ -202,20 +140,77 @@ A green, tidy plan is not a valid one. You check the dependencies, not the confi
 the small AI team that will help you revise them, without handing the team your
 judgment.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Each prompt below opens a loop you
+supervise, and one of them is a loop about your other loops. Read what comes back,
+push on the weak part, run it again. Each prompt is a checkable job, not a request for
+a verdict.
+
+::: {.callout-important title="Do not delegate"}
+The split and the order can be informed by a tool, but three calls stay yours alone.
+You decide **which jobs are worth their own loop** and which just multiply output you
+cannot supervise. You decide **the order**, so that no role settles a question a role
+upstream of it should have answered first. And you keep **the integrate step** human:
+when two roles disagree about what your draft claims, you make that call in your own
+words. A workflow that hands the claim to a tool is not a workflow you can defend. The
+rule scales with the number of loops rather than bending to it. More agents does not
+mean looser command; it means the same command discipline, repeated.
+:::
+
 1. Pick one real section of your project to revise: your methods, your results, or
    your limitations. Everything below applies to that section only.
 2. Set up three loops, each with a one-sentence job you could grade. A **writer** that
    drafts or rewrites. A **skeptic** that attacks what the writer produced and looks
    for the claim reaching past your evidence. An **auditor** that checks your numbers,
    your citations, and whether each sentence matches an output you actually have.
+
+   **Decompose, then hand back the human step.**
+
+   ```text
+   I am splitting the review of my health write-up into scoped AI roles. Here are my
+   section headings and one line on each: [paste them]. Propose a table with one row
+   per role: the role's one-sentence scoped task, the draft or input it needs, whether
+   it can run in parallel or must wait on another role, and the single decision it must
+   hand back to me.
+   ```
+
+   After running, verify: check that every "hand back to me" cell names a real
+   never-delegate decision, not one invented to look cautious. Counters *illusion of
+   completeness* (a tidy role table that reads thorough while omitting the check that
+   matters).
 3. Wire them. Write down which loops can run at the same time and which must wait for
    another's output, then trace the longest chain of must-follow steps. That chain is
    the minimum number of rounds your revision will take.
+
+   **Confirm the wiring has no early error slipping past.**
+
+   ```text
+   Here is my proposed workflow as a list of "role A feeds role B" arrows: [paste them].
+   For each role, tell me exactly what input it depends on, and name any role I have
+   scheduled to start before the input it needs actually exists.
+   ```
+
+   After running, verify: draw the arrows yourself and trace whether each role's input
+   exists when it starts. Counters *plausible-but-wrong-method* (a confident wiring that
+   lets a role run before its input is ready).
 4. Name the one node you keep human, the step where the loops' work becomes your
    claim, and write down why no role is allowed to take it.
 5. Run the round. For each loop, record how many turns it took, what you rejected, and
    what you kept. A loop whose output you accepted without reading is a loop you did
    not manage.
+
+   **Red-team the decomposition.**
+
+   ```text
+   Act as a hostile reviewer of my AI workflow, not of my draft. Name every place an
+   early mistake in one role could flow downstream unchecked, and every role whose job
+   overlaps another so much that it adds no independent check. Do not rewrite my plan.
+   ```
+
+   After running, verify: if it only praises your plan, push back and demand the single
+   worst wiring flaw. Counters *sycophantic agreement* (praise that reviews your ego,
+   not your workflow).
 6. Log every loop in your AI Research Ledger, and verify at least one output with a
    named method from the [Verification Guide](../verification-guide.qmd). An AI
    reviewer may run the check with you; the decision to accept or reject stays yours.

@@ -133,74 +133,6 @@ One move finishes the skill. A project partner offers what they call one questio
 comparison of question 4, and no single design answers both. You split it, and each
 half keeps its own position.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first in every case. Write your classification down before you
-open the tool, so its reply has something of yours to disagree with. And treat a
-disagreement as the start of a loop rather than a verdict: if the tool assigns a
-different position, ask it which word in your sentence drove that reading, rewrite the
-sentence, and ask again. Two or three passes usually show whether the argument is
-about your wording or about your design.
-
-Classify, after you have classified it yourself:
-
-```text
-Act as a research-methods tutor. I have already classified my question:
-[paste your question and your own kind + reach]. For my question, give its
-KIND (descriptive or causal) and REACH (data at hand, a population, or
-unseen cases), name the single word that most influenced you, and say
-whether answering it needs an intervention or only a pattern. Use a table.
-```
-
-*After running, verify (counters **silent scope change**):* reread the position it
-returns against the two definitions, using the words of your question and not the data
-you happen to have. If it calls your question causal, ask whether your design can
-isolate that answer. If it cannot, the status is causal and currently unidentified,
-never descriptive.
-
-Split a question you suspect is double-barreled:
-
-```text
-Here is a question I think secretly asks two things: [paste it]. Split it
-into exactly two clean questions. For each half name its KIND and REACH. Do
-not add any unit, outcome, or population that was not in my sentence.
-```
-
-*After running, verify (counters **illusion of completeness**):* a tidy split can
-quietly drop a half or smuggle in a new variable. Confirm both halves together cover
-your whole sentence and that neither added anything you did not write.
-
-Red-team your own placement:
-
-```text
-Act as a hostile methodologist. Here is my question and the compass position
-I assigned it: [paste both]. Argue the strongest case that I classified it
-wrong. If you claim it is causal, name the method you would use and the one
-assumption that method needs, in a table.
-```
-
-*After running, verify (counters **sycophantic agreement** and **plausible-but-wrong
-method**):* praise with no objection is a red flag, so force the objection. For any
-method it names, check whether your data can actually meet the assumption it lists.
-An assumption you cannot meet turns a confident method into a wrong one.
-
-::: {.callout-important title="Do not delegate"}
-Three decisions stay yours: which problem you will study, how you word your question,
-and which compass position it belongs to. A tool can offer a label, but only you can
-decide what answer your question truly wants, and only you can defend the placement
-when someone challenges it. If you cannot classify your question cleanly yet, that is
-a finding, not a failure; a question that will not sit in one box is usually still
-double-barreled, and naming that is progress.
-:::
-
 ## An AI failure case
 
 Suppose your project only records wait times at counters that already run two
@@ -234,14 +166,66 @@ actually answer, write down that you changed it, and stop using the word "effect
 *You have one scoped research problem. This step decides what kind of answer it is
 asking for, which fixes what your evidence will ever be allowed to say.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first in every case. Write your classification down before you
+open the tool, so its reply has something of yours to disagree with. And treat a
+disagreement as the start of a loop rather than a verdict: if the tool assigns a
+different position, ask it which word in your sentence drove that reading, rewrite the
+sentence, and ask again. Two or three passes usually show whether the argument is
+about your wording or about your design.
+
+Classify, after you have classified it yourself:
+
+Split a question you suspect is double-barreled:
+
+Red-team your own placement:
+
+::: {.callout-important title="Do not delegate"}
+Three decisions stay yours: which problem you will study, how you word your question,
+and which compass position it belongs to. A tool can offer a label, but only you can
+decide what answer your question truly wants, and only you can defend the placement
+when someone challenges it. If you cannot classify your question cleanly yet, that is
+a finding, not a failure; a question that will not sit in one box is usually still
+double-barreled, and naming that is progress.
+:::
+
 1. Write your research problem out as questions, three or four of them, each a
    sentence evidence could answer and be wrong about. Problems almost always hide more
    than one.
 2. Classify each question on both axes, kind and reach, and name the position. Beside
    each, write one line of reasoning based on the answer the question wants, not on
    the words it happens to use.
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Act as a research-methods tutor. I have already classified my question:
+   [paste your question and your own kind + reach]. For my question, give its
+   KIND (descriptive or causal) and REACH (data at hand, a population, or
+   unseen cases), name the single word that most influenced you, and say
+   whether answering it needs an intervention or only a pattern. Use a table.
+   ```
+
+   *After running, verify (counters **silent scope change**):* reread the position it
+   returns against the two definitions, using the words of your question and not the data
+   you happen to have. If it calls your question causal, ask whether your design can
+   isolate that answer. If it cannot, the status is causal and currently unidentified,
+   never descriptive.
 3. Hunt the double-barrels. Any sentence with an "and" hiding a second question of a
    different kind gets split into two clean questions, each with its own position.
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Here is a question I think secretly asks two things: [paste it]. Split it
+   into exactly two clean questions. For each half name its KIND and REACH. Do
+   not add any unit, outcome, or population that was not in my sentence.
+   ```
+
+   *After running, verify (counters **illusion of completeness**):* a tidy split can
+   quietly drop a half or smuggle in a new variable. Confirm both halves together cover
+   your whole sentence and that neither added anything you did not write.
 4. Pick your **lead question**, the one your project will be built around. Write one
    sentence on why it and not the others, and one sentence naming a claim its position
    forbids you even if the answer comes out beautifully.
@@ -257,6 +241,21 @@ asking for, which fixes what your evidence will ever be allowed to say.*
    a second, independent check by drawing a causal diagram and confirming the effect is
    actually identified. An AI reviewer may run either check with you; the decision to
    accept or reject stays yours.
+
+
+   *When you are ready to delegate this step:*
+
+   ```text
+   Act as a hostile methodologist. Here is my question and the compass position
+   I assigned it: [paste both]. Argue the strongest case that I classified it
+   wrong. If you claim it is causal, name the method you would use and the one
+   assumption that method needs, in a table.
+   ```
+
+   *After running, verify (counters **sycophantic agreement** and **plausible-but-wrong
+   method**):* praise with no objection is a red flag, so force the objection. For any
+   method it names, check whether your data can actually meet the assumption it lists.
+   An assumption you cannot meet turns a confident method into a wrong one.
 
 <!-- studio-continue:begin -->
 > **Checkpoint.** This was the last lesson of Studio 2. Return

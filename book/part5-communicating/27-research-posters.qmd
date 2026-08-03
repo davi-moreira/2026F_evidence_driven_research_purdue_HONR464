@@ -90,70 +90,6 @@ separate the bars with a color-blind-safe pair plus a hatch pattern, and soften 
 headline to "Version B completed about 3 points higher, within overlapping intervals."
 Same data, a picture that now tells the truth.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own audit first, then delegate. Each prompt below is a checkable job, not
-a request for a verdict.
-
-Run these as a loop. First answer, then your objection, then the sharper answer. The
-second and third rounds are usually where the useful criticism shows up, because a
-first pass tends to be generic. If your tool runs its own rounds before replying, you
-get the polish without seeing the drafts, so your own audit list matters more, not
-less.
-
-**Locate the color-only channels.**
-
-```text
-Here is the code that draws my poster's headline figure: [paste the cell].
-List every place this figure encodes a meaningful distinction using color.
-For each, tell me exactly what a red-green color-blind reader and a
-screen-reader user would fail to receive. Do not rewrite the figure.
-```
-After running, verify: render your figure and check each named channel against the
-picture you can see. Counters *plausible-but-wrong-method* (generic accessibility
-advice that does not match how your figure is actually drawn).
-
-**List the skeptic's questions, then map them to audits.**
-
-```text
-Act as a hostile poster reviewer. My headline figure is a bar chart of mean
-checkout completion rate for two page versions, y-axis 70 to 76, red versus green
-bars, no interval shown, titled "Version B BOOSTS completion." Generate the six
-hardest questions you would ask, then name the one this figure cannot answer at all.
-```
-After running, verify: map each question to one audit (claim boundary, figure
-honesty, uncertainty, accessibility); an audit with no question is the gap, and the
-truncated axis had better appear. Counters *illusion of completeness* (a long, tidy
-list that quietly skips the flaw that matters most).
-
-**Red-team the headline verb.**
-
-```text
-Here is my headline: "[paste it]" and my compass position: "[descriptive /
-associational / causal]". Act as a skeptical reviewer and find every word that
-claims more than that position licenses. List the exact words. Do not soften them.
-```
-After running, verify: if it praises the headline or finds nothing, push back and
-demand the single worst word, then check each flagged word against your interval.
-Counters *sycophantic agreement* (praise that reviews your nerve, not your evidence).
-
-::: {.callout-important title="Do not delegate"}
-The words of your headline and the verb that carries its boundary are yours. So is
-the judgment that the figure's impression matches its number, the call that the
-uncertainty is visible in the same glance, and the decision that the page is honest
-enough to lock. AI can generate the skeptic's questions and scan your code for
-color-only channels. It cannot see your board, and it cannot decide the claim was
-earned. Those stay with you.
-:::
-
 ## An AI failure case
 
 You paste the described figure and ask your AI for the hardest reviewer questions. It
@@ -181,14 +117,75 @@ asked.
 *Your claims now have rows and traces; this step turns them into the one page, or the
 one-figure summary, that a stranger meets first.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own audit first, then delegate. Each prompt below is a checkable job, not
+a request for a verdict.
+
+Run these as a loop. First answer, then your objection, then the sharper answer. The
+second and third rounds are usually where the useful criticism shows up, because a
+first pass tends to be generic. If your tool runs its own rounds before replying, you
+get the polish without seeing the drafts, so your own audit list matters more, not
+less.
+
+::: {.callout-important title="Do not delegate"}
+The words of your headline and the verb that carries its boundary are yours. So is
+the judgment that the figure's impression matches its number, the call that the
+uncertainty is visible in the same glance, and the decision that the page is honest
+enough to lock. AI can generate the skeptic's questions and scan your code for
+color-only channels. It cannot see your board, and it cannot decide the claim was
+earned. Those stay with you.
+:::
+
 1. Choose the single figure that carries your lead claim, and draw it with the axis
    running the full scale of the measure.
 2. Print each value as a label on the mark it belongs to, and draw the interval right
    on the figure so the uncertainty arrives in the same glance as the number.
 3. Carry every meaningful distinction in at least two channels, so color is never the
    only signal a reader can lose.
+
+   **Locate the color-only channels.**
+
+   ```text
+   Here is the code that draws my poster's headline figure: [paste the cell].
+   List every place this figure encodes a meaningful distinction using color.
+   For each, tell me exactly what a red-green color-blind reader and a
+   screen-reader user would fail to receive. Do not rewrite the figure.
+   ```
+
+   After running, verify: render your figure and check each named channel against the
+   picture you can see. Counters *plausible-but-wrong-method* (generic accessibility
+   advice that does not match how your figure is actually drawn).
 4. Write the headline above the figure using the verb your claim boundary allows, and
    lay out the rest of the page so a stranger finds that headline in under a minute.
+
+   **List the skeptic's questions, then map them to audits.**
+
+   ```text
+   Act as a hostile poster reviewer. My headline figure is a bar chart of mean
+   checkout completion rate for two page versions, y-axis 70 to 76, red versus green
+   bars, no interval shown, titled "Version B BOOSTS completion." Generate the six
+   hardest questions you would ask, then name the one this figure cannot answer at all.
+   ```
+
+   After running, verify: map each question to one audit (claim boundary, figure
+   honesty, uncertainty, accessibility); an audit with no question is the gap, and the
+   truncated axis had better appear. Counters *illusion of completeness* (a long, tidy
+   list that quietly skips the flaw that matters most).
+
+   *A second angle, optional:*
+
+   **Red-team the headline verb.**
+
+   ```text
+   Here is my headline: "[paste it]" and my compass position: "[descriptive /
+   associational / causal]". Act as a skeptical reviewer and find every word that
+   claims more than that position licenses. List the exact words. Do not soften them.
+   ```
+
+   After running, verify: if it praises the headline or finds nothing, push back and
+   demand the single worst word, then check each flagged word against your interval.
+   Counters *sycophantic agreement* (praise that reviews your nerve, not your evidence).
 5. Log it in your AI Research Ledger, and verify at least one number on the page with
    a named method from the [Verification Guide](../verification-guide.qmd). An AI
    reviewer may run the check with you; the decision to accept or reject stays yours.

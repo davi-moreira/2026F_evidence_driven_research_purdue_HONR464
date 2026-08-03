@@ -42,6 +42,46 @@ REQUIRED_ELEMENTS = [
     "failure", "It is your turn",
 ]
 
+# D38 practice-first template: these section headings are RETIRED in EN —
+# prompts attach to the IYT step they serve; the companion intro lives in
+# "It is your turn".
+RETIRED_HEADINGS = ["## Recommended AI prompts", "## The Colab laboratory"]
+
+# D38: "worked examples must come with data and evidence." Chapters below
+# still await their seeded data block (data) or their citation (evidence);
+# the lists SHRINK as upgrades land and new entries are forbidden. An empty
+# list retires itself.
+DATA_PENDING: set[str] = {         # lesson ids awaiting a data-backed example
+    "ai-adversarial-reviewer", "ai-analytical-assistant", "ai-arm-not-brain",
+    "ai-as-programmer", "claim-evidence-tables", "conflicting-agents",
+    "curiosity-to-problem", "data-provenance", "declare-diagnose",
+    "difficult-questions", "experimental-causal", "experimental-descriptive",
+    "false-confidence", "final-portfolio", "hybrid-complex-designs",
+    "managing-ai-agents", "measurement", "mida", "negative-tests",
+    "observational-causal", "observational-descriptive", "poster-criticism",
+    "poster-to-note", "prediction-generalization", "question-kinds",
+    "replication-reproduction", "research-builds", "research-director",
+    "research-packages", "research-pitches", "research-posters",
+    "responsibility-ownership", "results-to-claims", "robustness-sensitivity",
+    "sdiivdd", "verifying-prior-evidence",
+}
+EVIDENCE_PENDING: set[str] = {     # lesson ids awaiting an in-example citation
+    "ai-arm-not-brain", "research-director", "sdiivdd",
+    "responsibility-ownership", "curiosity-to-problem", "question-kinds",
+    "research-builds", "verifying-prior-evidence", "mida",
+    "uncertainty-foundations", "declare-diagnose", "ethics-data-governance",
+    "observational-descriptive", "observational-causal",
+    "experimental-descriptive", "prediction-generalization",
+    "experimental-causal", "hybrid-complex-designs", "data-provenance",
+    "measurement", "ai-as-programmer", "ai-analytical-assistant",
+    "robustness-sensitivity", "negative-tests", "ai-adversarial-reviewer",
+    "false-confidence", "results-to-claims", "claim-evidence-tables",
+    "research-posters", "poster-criticism", "research-pitches",
+    "difficult-questions", "ai-disclosure", "replication-reproduction",
+    "poster-to-note", "research-packages", "managing-ai-agents",
+    "conflicting-agents", "final-portfolio",
+}
+
 
 def main() -> None:
     strict = "--strict" in sys.argv          # kept for CI compatibility
@@ -77,6 +117,40 @@ def main() -> None:
         missing = [e for e in REQUIRED_ELEMENTS if e.lower() not in text.lower()]
         if missing:
             warns.append(f"{l['id']}: missing element(s) {missing}")
+        # (4b) D38 practice-first template
+        for h in RETIRED_HEADINGS:
+            if h in text:
+                errs.append(f"{l['id']}: retired section survives: {h!r} — "
+                            f"prompts attach to IYT steps (D38)")
+        iyt_at = text.find("## It is your turn")
+        if iyt_at >= 0:
+            iyt = text[iyt_at:]
+            if "companion notebook" not in iyt:
+                errs.append(f"{l['id']}: IYT lost the companion-notebook fold")
+            stray = text.count("After running, verify") - \
+                iyt.count("After running, verify")
+            if stray:
+                errs.append(f"{l['id']}: {stray} prompt verify note(s) outside "
+                            f"the IYT section")
+        # (4c) worked example: data + evidence (D38)
+        we_at = text.find("## A worked example")
+        nxt = text.find("\n## ", we_at + 1) if we_at >= 0 else -1
+        we = text[we_at:nxt] if we_at >= 0 else ""
+        has_data = "```python" in we or "load_course_data" in we
+        has_cite = "[@" in we
+        if we:
+            if not has_data and l["id"] not in DATA_PENDING:
+                errs.append(f"{l['id']}: worked example has no data block and "
+                            f"is not on DATA_PENDING (D38)")
+            if has_data and l["id"] in DATA_PENDING:
+                errs.append(f"{l['id']}: has a data block — remove from "
+                            f"DATA_PENDING")
+            if not has_cite and l["id"] not in EVIDENCE_PENDING:
+                errs.append(f"{l['id']}: worked example cites nothing and is "
+                            f"not on EVIDENCE_PENDING (D38)")
+            if has_cite and l["id"] in EVIDENCE_PENDING:
+                errs.append(f"{l['id']}: has a citation — remove from "
+                            f"EVIDENCE_PENDING")
 
     # (5) For-instructors appendix
     for edition in ("book", "book-pt", "book-es"):
@@ -125,9 +199,13 @@ def main() -> None:
             print("  " + e)
         sys.exit(1)
     n_planned = sum(1 for l in arch["lessons"] if l["state"] == "planned")
+    pend = ""
+    if DATA_PENDING or EVIDENCE_PENDING:
+        pend = (f"; D38 pending: {len(DATA_PENDING)} worked examples await "
+                f"data, {len(EVIDENCE_PENDING)} await a citation")
     print(f"✓ book manifest consistent — {len(lessons)} active lessons "
           f"(+{n_planned} planned), all {len(NOTEBOOKS)} notebooks covered, "
-          f"no orphans")
+          f"no orphans{pend}")
 
 
 if __name__ == "__main__":

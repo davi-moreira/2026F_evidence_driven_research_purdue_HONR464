@@ -338,51 +338,6 @@ which the simulation above should have made hard to believe. Option B assumes th
 format changes what the data are about. Option D overcorrects into a rule nobody has:
 health data are used by students constantly, under determinations and agreements.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-## Recommended AI prompts
-
-> 💡 **AI Prompt:** "Here is my research question, who my units are, and exactly how I
-> plan to obtain data about them: [paste yours]. Ask me the questions a research ethics
-> committee would ask about this plan. Do not tell me whether I need approval, and do
-> not reassure me — just produce the questions, including the uncomfortable ones."
->
-> **After running, verify:**
-> - [ ] Answer each question in writing yourself. A question you cannot answer is the
->   one to bring to your competent authority first.
-> - [ ] Check whether any question reveals data you planned to collect but do not need.
->   Drop those columns now, while dropping them is free.
-> - [ ] Take the determination to a human. A tool cannot rule on your project, and a
->   confident answer from one is worth nothing in a meeting.
-> - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
-
-> 💡 **AI Prompt:** "Here are the column names, types, and value ranges of my dataset —
-> no actual records: [paste the schema only]. Write code that checks how many rows are
-> unique on each combination of my quasi-identifier columns, and flag combinations that
-> single out fewer than five people."
->
-> **After running, verify:**
-> - [ ] Confirm you pasted a schema and not data. If you pasted values, treat it as a
->   disclosure and record it.
-> - [ ] Run the code yourself on your own machine and read the counts. The risk is in
->   your data, not in the tool's description of it.
-> - [ ] Decide which columns to coarsen or drop. That decision is a research decision
->   about what your analysis needs.
-> - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
-
-::: {.callout-important title="Do not delegate"}
-- **The determination.** Only your competent authority can rule on your project. No
-  tool, and no confident classmate, can do it for you.
-- **What you promise participants.** You will be held to those words, so they must be
-  yours.
-- **What leaves your machine.** Every paste is a decision about somebody else's data.
-:::
-
 ## An AI failure case
 
 Describe a study to an assistant and ask whether you need approval, and you will
@@ -413,9 +368,33 @@ questions to the person who decides.
 Write your project's permission status and its handling rules. This goes in your
 dossier, and every later stage of the project depends on it being honest.
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+::: {.callout-important title="Do not delegate"}
+- **The determination.** Only your competent authority can rule on your project. No
+  tool, and no confident classmate, can do it for you.
+- **What you promise participants.** You will be held to those words, so they must be
+  yours.
+- **What leaves your machine.** Every paste is a decision about somebody else's data.
+:::
+
 1. **Run the determination.** Answer the three questions in writing: is your knowledge
    meant to travel, do identifiable living people enter your study, and how do the data
    reach you.
+
+   > 💡 **AI Prompt:** "Here is my research question, who my units are, and exactly how I
+   > plan to obtain data about them: [paste yours]. Ask me the questions a research ethics
+   > committee would ask about this plan. Do not tell me whether I need approval, and do
+   > not reassure me — just produce the questions, including the uncomfortable ones."
+   >
+   > **After running, verify:**
+   > - [ ] Answer each question in writing yourself. A question you cannot answer is the
+   >   one to bring to your competent authority first.
+   > - [ ] Check whether any question reveals data you planned to collect but do not need.
+   >   Drop those columns now, while dropping them is free.
+   > - [ ] Take the determination to a human. A tool cannot rule on your project, and a
+   >   confident answer from one is worth nothing in a meeting.
+   > - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
 2. **Declare one permission status** — cleared, formal determination required, pending,
    or not authorized — and name the competent authority at your institution who covers
    student projects. If your status is anything but cleared, write the date you
@@ -426,6 +405,20 @@ dossier, and every later stage of the project depends on it being honest.
 4. **Run the uniqueness check** on your planned quasi-identifiers, using the companion
    notebook. Report the share of units that would be unique, and say which group in
    your data carries the most risk.
+
+   > 💡 **AI Prompt:** "Here are the column names, types, and value ranges of my dataset —
+   > no actual records: [paste the schema only]. Write code that checks how many rows are
+   > unique on each combination of my quasi-identifier columns, and flag combinations that
+   > single out fewer than five people."
+   >
+   > **After running, verify:**
+   > - [ ] Confirm you pasted a schema and not data. If you pasted values, treat it as a
+   >   disclosure and record it.
+   > - [ ] Run the code yourself on your own machine and read the counts. The risk is in
+   >   your data, not in the tool's description of it.
+   > - [ ] Decide which columns to coarsen or drop. That decision is a research decision
+   >   about what your analysis needs.
+   > - [ ] Log this use in your AI Research Ledger: task, tool, decision, verification.
 5. **Write your AI boundary** in two lines: what you will send to an AI tool on this
    project, and what you will never send. Then write the ledger field you will use to
    record each send.

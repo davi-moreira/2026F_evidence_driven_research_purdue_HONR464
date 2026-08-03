@@ -108,74 +108,6 @@ offer, so your claim must stay about speed of placement, not wages or fit.
 The assistant did the arithmetic. You decided which checks counted and which flags the
 data confirmed.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own expectation first, then delegate. Each prompt is a checkable job, not a
-request for a verdict.
-
-**Propose the checks you might have missed.**
-
-```text
-Here is my robustness grid for one estimate: I vary the sample (all enrollees /
-drop those who enrolled with an offer in hand), the measurement (mean / median
-weeks to first offer), and the specification (raw gap / adjusted for prior work
-experience). Act as a hostile reviewer. Name up to three additional, equally
-defensible checks I did NOT list, and for each say which direction you expect it
-to move the estimate.
-```
-After running, verify: check each proposal against your four handles and confirm
-you can actually compute it in your data. Counters *illusion of completeness* (a
-tidy grid that still omits the one check that would break the claim).
-
-**Delegate the computation, keep the numbers checkable.**
-
-```text
-Recompute my time-to-offer gap under each row of this grid and return a table:
-row label, the gap, and the exact columns and filter used for that row.
-Do not summarize; show one number and its code path per row.
-```
-After running, verify: recompute two rows by hand with a second expression and
-confirm they match the table. Counters *plausible-but-wrong-method* (a row whose
-label and code quietly disagree).
-
-**Make the loop confess.**
-
-```text
-Before I accept this table: list every version of this analysis you ran while
-producing it, in order, with what changed each time and why. If you tried a
-variant and set it aside, it goes on the list too.
-```
-After running, verify: compare its list against your own cycle log and re-run any
-variant it mentions that you never saw. Counters an *unlogged specification search*
-(the loop quietly trying options until one looks good).
-
-**Red-team the surviving claim.**
-
-```text
-Here is my claim: "the program gets people to a first offer about 0.7 SD sooner."
-Act as a hostile reviewer of labor-market program evaluations. Name the single
-worst way this result could mislead, and the exact data check that would confirm
-or kill it. Do not rewrite my claim.
-```
-After running, verify: run the check it names, and treat the flaw as real only if
-your own output confirms it. Counters *sycophantic agreement* (praise that reviews
-your ego, not your evidence).
-
-::: {.callout-important title="Do not delegate"}
-Three calls never leave your hands. You decide **which checks count** for the claim
-you want to make, **which flagged problems the data actually confirm**, and **the
-final claim you defend**, with its boundary and its range. The assistant proposes
-and computes. The evidence decides, and you are the one who reads the evidence.
-:::
-
 ## An AI failure case
 
 You hand an assistant your grid and it returns a polished eight-row table, every
@@ -203,6 +135,18 @@ correct result.
 with an assistant beside you, and keeps the receipts for every turn of the loop so your
 analysis stays one analysis instead of a quiet search.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own expectation first, then delegate. Each prompt is a checkable job, not a
+request for a verdict.
+
+::: {.callout-important title="Do not delegate"}
+Three calls never leave your hands. You decide **which checks count** for the claim
+you want to make, **which flagged problems the data actually confirm**, and **the
+final claim you defend**, with its boundary and its range. The assistant proposes
+and computes. The evidence decides, and you are the one who reads the evidence.
+:::
+
 1. Before the assistant touches anything, write your headline estimate in one sentence
    and the answer you expect. You are committing on the record so a surprising result
    surprises you.
@@ -211,14 +155,52 @@ analysis stays one analysis instead of a quiet search.*
 3. Keep a cycle log as you go: one line per turn with what you asked, what came back,
    and what you changed and why. If an agentic tool ran turns you did not see, make it
    list them and add them to your log.
+
+   **Make the loop confess.**
+
+   ```text
+   Before I accept this table: list every version of this analysis you ran while
+   producing it, in order, with what changed each time and why. If you tried a
+   variant and set it aside, it goes on the list too.
+   ```
+
+   After running, verify: compare its list against your own cycle log and re-run any
+   variant it mentions that you never saw. Counters an *unlogged specification search*
+   (the loop quietly trying options until one looks good).
 4. Re-derive at least two numbers yourself, by hand or with a second simple expression,
    before any of them enter a claim.
+
+   **Delegate the computation, keep the numbers checkable.**
+
+   ```text
+   Recompute my time-to-offer gap under each row of this grid and return a table:
+   row label, the gap, and the exact columns and filter used for that row.
+   Do not summarize; show one number and its code path per row.
+   ```
+
+   After running, verify: recompute two rows by hand with a second expression and
+   confirm they match the table. Counters *plausible-but-wrong-method* (a row whose
+   label and code quietly disagree).
 5. Run a placebo: shuffle your group labels, re-run the same code unchanged, and confirm
    the fake gap lands in the ordinary part of that pile.
 6. Log the analysis in your AI Research Ledger, cycle log attached, and verify at least
    one output with a named method from the [Verification Guide](../verification-guide.qmd).
    **Alternative code** fits a computed gap well. An AI reviewer may run the check with
    you; the decision to accept or reject stays yours.
+
+
+   **Red-team the surviving claim.**
+
+   ```text
+   Here is my claim: "the program gets people to a first offer about 0.7 SD sooner."
+   Act as a hostile reviewer of labor-market program evaluations. Name the single
+   worst way this result could mislead, and the exact data check that would confirm
+   or kill it. Do not rewrite my claim.
+   ```
+
+   After running, verify: run the check it names, and treat the flaw as real only if
+   your own output confirms it. Counters *sycophantic agreement* (praise that reviews
+   your ego, not your evidence).
 
 <!-- studio-continue:begin -->
 > **Checkpoint.** This was the last lesson of Studio 7. Return

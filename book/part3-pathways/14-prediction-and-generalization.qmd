@@ -224,72 +224,6 @@ median, the frequency, and the maximum separately. The average optimism grows
 with noise; a single seeded extreme, like this run's +1.86, need not move the
 same way, because one world's worst luck is not a summary of the procedure.
 
-## The Colab laboratory
-
-This chapter has its own **companion notebook** — open it in Colab with the badge above.
-The notebook collects the chapter's prompts and code and ends with the **It is your
-turn** workspace, so you can complete the chapter's step of your project without leaving
-Colab.
-
-
-## Recommended AI prompts
-
-Commit your own answer first, then delegate. Paste real output, never a number you
-remember. Expect to run each prompt more than once: read the answer, name the part
-you do not believe, put that objection back into the prompt, run it again. Tools
-that run that loop by themselves, fitting and refitting a model across several
-turns, make the leakage question below more urgent rather than less. Nobody in the
-loop but you knows when your data were recorded.
-
-```
-Act as a Python tutor. Here is my forecasting workflow: [paste the cells
-that split, fit, compare, and score]. Audit the three data roles one by
-one. Which rows fit the candidates? Which rows chose between them? Which
-rows produced the final score, and had any model already seen them, even
-indirectly through my choices? If my target is about a later time, check
-whether every training row is earlier than the rows it is scored on.
-Then give me one independent way to confirm the final rows never touched
-training or selection.
-```
-
-*After running, verify: read the baseline, model, and margin off your own printout
-and confirm the tool's numbers match, not ones it guessed. If the audit finds a
-role missing, that is the finding; do not argue the score. Counters **confident
-fabrication**, a fluent walkthrough quoting a margin your code never produced.*
-
-```
-Here is the outcome I want to predict and the moment I need the forecast:
-a bloom next week, decided by next week's samples. Here is my candidate
-feature list with when each value is recorded: [list]. For each feature,
-say whether its value is settled before, at, or after the outcome, and
-flag any that could not exist at prediction time.
-```
-
-*After running, verify: re-derive the timing of the one feature it clears most
-confidently. If any feature is settled at or after the bloom, reject it whatever
-the tool says. Counters **illusion of completeness**, a tidy list omitting the one
-late-settled feature that dooms the forecast.*
-
-```
-Act as a hostile reviewer. Attack this headline: "Our model forecasts
-blooms with 88% held-out accuracy." Name every reason a skeptic would
-distrust it, including the baseline it beat, the metric, and any hidden
-leak.
-```
-
-*After running, verify: check each objection against your printout and keep the
-ones your numbers support. Counters **sycophantic agreement**, where an assistant
-primed to help praises a headline you wrote.*
-
-::: {.callout-important title="Do not delegate"}
-Four calls stay yours. **The target**: what you forecast and why it matters. **The
-baseline**: the honest rule the model must beat. **The timing of every feature**:
-whether a value would truly exist at the forecast moment, which only you, who knows
-your data's timeline, can settle. And **the verdict** on whether your project
-should predict at all. A tool that has never seen your timeline cannot make these
-calls for you.
-:::
-
 ## An AI failure case
 
 You paste your feature list and ask an AI partner which features are safe to use.
@@ -315,6 +249,24 @@ the score fall back to 0.88, and keep the honest model.
 really forecasting cases nobody has seen yet, and if it is, puts that forecast
 under contract before you fit a single model.*
 
+The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
+
+Commit your own answer first, then delegate. Paste real output, never a number you
+remember. Expect to run each prompt more than once: read the answer, name the part
+you do not believe, put that objection back into the prompt, run it again. Tools
+that run that loop by themselves, fitting and refitting a model across several
+turns, make the leakage question below more urgent rather than less. Nobody in the
+loop but you knows when your data were recorded.
+
+::: {.callout-important title="Do not delegate"}
+Four calls stay yours. **The target**: what you forecast and why it matters. **The
+baseline**: the honest rule the model must beat. **The timing of every feature**:
+whether a value would truly exist at the forecast moment, which only you, who knows
+your data's timeline, can settle. And **the verdict** on whether your project
+should predict at all. A tool that has never seen your timeline cannot make these
+calls for you.
+:::
+
 1. Ask the blunt version of your question: does your project need to guess an
    outcome for a case whose outcome does not exist yet? Write yes or no, and the
    one sentence that justifies your answer.
@@ -324,13 +276,59 @@ under contract before you fit a single model.*
    candidates, which data choose between them, and which data stay locked for the
    single final score. If your target is about a later time, order those three
    blocks by the calendar and lock the latest one.
+
+   *When you are ready to delegate this step:*
+
+   ```
+   Act as a Python tutor. Here is my forecasting workflow: [paste the cells
+   that split, fit, compare, and score]. Audit the three data roles one by
+   one. Which rows fit the candidates? Which rows chose between them? Which
+   rows produced the final score, and had any model already seen them, even
+   indirectly through my choices? If my target is about a later time, check
+   whether every training row is earlier than the rows it is scored on.
+   Then give me one independent way to confirm the final rows never touched
+   training or selection.
+   ```
+
+   *After running, verify: read the baseline, model, and margin off your own printout
+   and confirm the tool's numbers match, not ones it guessed. If the audit finds a
+   role missing, that is the finding; do not argue the score. Counters **confident
+   fabrication**, a fluent walkthrough quoting a margin your code never produced.*
 3. List your features and write beside each one the moment its value is settled.
    Circle anything settled at or after the outcome. That circled set is your
    leakage list, and it belongs in your write-up whether or not you drop the
    features on it.
+
+   *When you are ready to delegate this step:*
+
+   ```
+   Here is the outcome I want to predict and the moment I need the forecast:
+   a bloom next week, decided by next week's samples. Here is my candidate
+   feature list with when each value is recorded: [list]. For each feature,
+   say whether its value is settled before, at, or after the outcome, and
+   flag any that could not exist at prediction time.
+   ```
+
+   *After running, verify: re-derive the timing of the one feature it clears most
+   confidently. If any feature is settled at or after the bloom, reject it whatever
+   the tool says. Counters **illusion of completeness**, a tidy list omitting the one
+   late-settled feature that dooms the forecast.*
 4. Write the boundary in one sentence: the cases your forecast covers, and the
    ones a reader should not assume it covers. Be specific about what makes them
    different.
+
+   *When you are ready to delegate this step:*
+
+   ```
+   Act as a hostile reviewer. Attack this headline: "Our model forecasts
+   blooms with 88% held-out accuracy." Name every reason a skeptic would
+   distrust it, including the baseline it beat, the metric, and any hidden
+   leak.
+   ```
+
+   *After running, verify: check each objection against your printout and keep the
+   ones your numbers support. Counters **sycophantic agreement**, where an assistant
+   primed to help praises a headline you wrote.*
 5. If prediction is not your question, write the line that says so plainly, then
    run step 3 anyway. A variable settled after the outcome quietly sinks
    descriptive and causal work too.
