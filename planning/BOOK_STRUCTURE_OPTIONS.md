@@ -12,9 +12,11 @@ should the 6 parts / 39 chapters be embedded INSIDE the 12 stations? Goal: a
 business/econ/polsci/biology undergrad produces high-level research
 artifacts by completing the book.
 
-**Both tracks converged on yes — embed.** They differed on one design point
-(ch33's home, resolved below) and the merged recommendation is stronger than
-either track alone.
+**The arc of this memo:** both independent tracks first converged on
+embedding (Option 1); the adversarial critique then ruled against adopting
+it now and proposed Option 5; the final section carries the corrections,
+the counter-proposal, and the post-critique synthesis. Read the end before
+the middle if you only have five minutes.
 
 ---
 
@@ -51,7 +53,7 @@ either track alone.
 
 ## The options
 
-### Option 1 — Twelve Studios containing the lessons  ← RECOMMENDED
+### Option 1 — Twelve Studios containing the lessons  ← both partner tracks' original pick; see the post-critique synthesis at the end
 
 The stations become the book's parts. Each studio is a complete
 read-a-little/do-a-lot unit:
@@ -121,7 +123,7 @@ modularity D35 deliberately created, leaves per-lesson companions homeless.
 | Route/genre legibility | choice inside studio | buried in parts | good | buried in mega-chapter |
 | Enacts D35's A3 ordering | yes | only if resequenced | yes | yes |
 | Identity/urls | unchanged | unchanged | unchanged | broken/hidden |
-| Migration cost | TOC + 7 ranks + generators | same resequencing + less payoff | new nav layer | prohibitive |
+| Migration cost | TOC + 2 relocations + generators + nav graph + schema for closers | 2 relocations + nav, less payoff | new nav layer | prohibitive |
 | Trade pitch | "12 studios → 1 project" | "39 chapters" | "manual + reference" | "12 long chapters" |
 
 ---
@@ -141,7 +143,7 @@ Dossier to Research Note" (mutable; url unchanged).
 
 **Changes:** `_quarto.yml` becomes GENERATED from the manifest (new
 `build_book_toc.py` — closing the last hand-maintained ordering source, as
-the Phase-2 critique already asked); re-rank the 7 moved lessons (ranks are
+the Phase-2 critique already asked); re-rank the two relocated lessons (ranks are
 mutable by design); split station output into opener (existing page, url
 kept) + generated Checkpoint closer; make companion-notebook **Next links
 station-aware** (a branch lesson's Next returns to its studio, never chains
