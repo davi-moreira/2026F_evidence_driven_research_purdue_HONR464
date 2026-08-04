@@ -26,14 +26,17 @@ instructions and rubrics live one page per milestone, like this one.
 ## What to Submit on Brightspace
 
 Due: **Friday, October 16, 11:59 PM** (you work on it at that Friday's studio).
+That studio is a **clean-restart verification exchange**: you rerun your
+pipeline in a fresh runtime, chase every number that moved, and run the
+required **Prediction & Leakage Auditor** before you submit.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m07_analysis_protocol.pdf`** *or* a shared Colab notebook link | The declared analysis protocol below: your prediction verdict (the four-part contract, or a defended reason prediction is the wrong question), your leakage trace, your honesty-check plan with retract triggers, your one-sentence claim boundary, your Prediction & Leakage Auditor critique with your written fixes, and your AI Research Ledger rows. This is the graded artifact. |
+| 1 | **A shared Colab notebook link** *(the verified pipeline notebook)* | The seven-part record below, carried in the notebook's markdown or in an optional companion **`lastname_m07_verified_analysis.pdf`**: your clean-restart record, your claim-to-output trace, the reproduced uncertainty, one independent re-derivation, the leakage audit with the auditor's flags and your written fixes, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 22** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
-If you submit a notebook link, set sharing so the instructor can open it, and make
-sure any cell you reference actually runs.
+Set sharing so the instructor can open **and rerun** the notebook. The rerun is
+the milestone: confirm it reproduces before you submit.
 
 ---
 
@@ -57,211 +60,170 @@ Dossier.
 
 ## Purpose
 
-A **declared analysis protocol** is a written statement of exactly how you will
-analyze your data, fixed **before you touch it**. Writing it early is not
-bureaucracy. It is the one move that stops a result from being reverse-engineered
-into a flattering method. Once you have seen which model or which metric happens to
-win on your data, you can no longer honestly claim you would have chosen it anyway.
-Declaring the plan first is how you keep that honesty.
+At M6 your declared analysis became a pipeline and produced its first number.
+The declaring came first for a reason: a target fixed, a baseline named, and a
+metric chosen before any score could flatter you is the only method a reader
+has to trust. Your pipeline kept that pre-commitment. This week decides whether
+its output deserves the word **verified**: a result that survives checks you
+did not design it to pass.
 
-This milestone is where the prediction week (Topic 08) becomes your own project's
-spine. Prediction is one of the four compass positions, and it is the one most
-likely to fool you: a score can look impressive because the model quietly read the
-answer, not because it learned anything. So the protocol you declare has to say, in
-order, what you are predicting, the dumbest honest rule you must beat, how you will
-hold out an honest test, how you will keep score, and how you will catch a fake win
-before you report it.
+The central move is the **clean restart**: a rerun from a fresh runtime, with
+all memory cleared, using Restart & Run All from the top. It matters because
+notebooks accumulate **hidden state** — values left in memory by cells you
+edited or ran out of order, silently feeding later results. You rename a
+column, but the old one still lives in memory; every cell below keeps working,
+and every number below may be wrong. A notebook that ran once is a draft. A
+notebook that runs from nothing is evidence.
 
-Not every project predicts, and that is fine. If your real question is description,
-generalization, or a cause, your protocol says so, names the design that actually
-answers it, and confirms it makes **no unlicensed prediction claim**. Deciding that
-prediction is the wrong tool is a real, gradable finding — you are judged on the
-reasoning behind the verdict, not on whether the verdict is "yes."
+Verification here is five checks, not one. The restart must match. Every claim
+must trace to its cell. The uncertainty itself must reproduce. One key number
+must survive an independent re-derivation. And a required auditor must find no
+leak and no unlicensed generalization in what you plan to say. If any number
+moves on the restart, the pipeline is the finding: you explain and fix every
+discrepancy before any claim goes forward.
 
-> **A question that often comes up here:** *"My project is descriptive (or causal).
-> Why am I writing a prediction protocol?"* Because the same discipline protects
-> every design. The habit you are practicing is declaring your analysis before the
-> data can tempt you, and naming the boundary your evidence stops at. A causal
-> project still has to rule out a measure that quietly contains its own outcome; a
-> descriptive project still has to keep its language inside the reach its sample
-> bought. The prediction spine is the sharpest place to learn the move, and the
-> **Prediction & Leakage Auditor** confirms your protocol claims nothing your design
-> cannot buy, whichever position you declared.
+> **A question that often comes up here:** *"My numbers matched on the first
+> restart. Am I done?"* A match is the entry ticket, not the milestone. A
+> pipeline can reproduce a wrong number perfectly, run after run. The
+> claim-to-output trace catches the number you misquoted, the re-derivation
+> catches the bug both runs shared, and the leakage audit catches the sentence
+> that quietly claims more than the pipeline computed. All five checks together
+> are what "verified" means here.
 
 ## Components
 
-### 1. The prediction verdict
+### 1. The clean-restart record
 
-State whether your project has a real prediction question. A **prediction** is a
-best guess about a case whose outcome you cannot see yet, an **unseen case**. It is
-descriptive, not causal: it forecasts *who* or *what*, never *why*.
+Restart your runtime so memory is empty, then Restart & Run All. Record three
+things: the environment you ran in (one cell that prints your Python and
+library versions), the headline numbers before and after, and the verdict. If
+the numbers match, say so, to the digit you report. If any number moves,
+explain the discrepancy, fix its cause, and restart again until the pipeline is
+stable. "Close enough" is not a category. A moved digit has a cause: hidden
+state, an out-of-order cell, or an unseeded draw. Finding it is a real result
+about your own evidence machine.
 
-**If yes**, write the four-part **contract**, in order, because the order is not
-negotiable:
+### 2. The claim-to-output trace
 
-- **Target** — the one thing you are predicting, a single column named before
-  anything else.
-- **Baseline** — the dumbest honest rule you must beat, usually "always guess the
-  most common answer." If 60% of cases are "yes," always guessing "yes" scores 60%
-  for free, so 60% (the **base rate**) is the bar. A score with no baseline beside
-  it is not yet an achievement.
-- **Split** — how you divide your rows into a **training set** the model learns from
-  and a **held-out set** it never touches during training. The held-out set is your
-  only honest exam.
-- **Metric** — how you keep score, chosen to match the target. Accuracy works when
-  the classes are roughly balanced and lies when one outcome is rare. When one error
-  costs more than the other, name the metric from the **confusion matrix** that fits
-  the decision (for example, **recall** on the class you are trying to catch, or
-  **precision** on the class you flag).
+Build the **claim-to-output trace**: a table pointing every number you plan to
+report to the specific cell that produces it. One row per number: the sentence
+it appears in, the number, the cell. This is what lets a reader (and a future
+you) audit your writing against your code in minutes. A figure with no cell
+behind it is an **untraceable number**, and it caps your Verification score.
 
-**If no**, write one sentence on why prediction is the wrong question for your
-project, name the question it really asks (description, generalization, or a cause)
-and the design that answers it, then name the too-good-to-be-true trap nearest your
-approach — a measure that quietly contains its own outcome — and your check for it.
+### 3. The uncertainty, verified
 
-### 2. The leakage trace
+The interval must reproduce, not just the point estimate. Rerun from the clean
+start and confirm that the uncertainty statement your Contract specified (the
+interval, spread, or standard error) comes back to the same values. If your
+interval comes from resampling or simulation, the seed (`SEED = 464`) is what
+makes that possible. A result whose uncertainty does not reproduce is not
+verified, and a result without uncertainty is not yet a result.
 
-**Data leakage** is a feature that carries information you would not actually have
-at the moment you need the forecast; its value is only settled at or after the
-outcome it is supposed to predict. In the book's declare-diagnose-redesign grammar,
-leakage is a **data-strategy violation**: the plan for how evidence comes to exist
-quietly let the answer sneak into the inputs.
+### 4. One independent re-derivation
 
-Name the one feature (or measure) in your data whose value could be settled at or
-after your outcome, and the two checks that rule it out:
+Recompute one key number by a route that shares none of the original code: by
+hand from a small table, with a different library, or from the raw definition
+in a fresh cell. That is an **independent re-derivation** — the same number
+reached twice by unrelated paths. For example, recompute your pipeline's
+difference in means from two group averages you calculate with plain
+arithmetic. If the routes agree, your belief in the number no longer rests on
+one script. If they disagree, you just found the bug this milestone exists to
+catch, and the fix goes in the clean-restart record.
 
-- **The timing check** — is the feature's value known *before* the prediction
-  moment, or only settled *at or after* the outcome? Timing, not accuracy, decides.
-- **The correlation check** — does the suspect feature track the outcome so tightly
-  it is almost a copy of the answer?
+### 5. The leakage audit (required reviewer role)
 
-A feature that fails the timing check is dropped or re-timed, no matter how much it
-helps the score. A leak inflates the score on *this* data and collapses on *new*
-data, because the leaky value will not exist when you actually need a forecast.
+Submit your verified draft to the **Prediction & Leakage Auditor** (the
+required GenAI Studio reviewer role for M7; full briefing in
+`genai_studio/roles/prediction_leakage_auditor.md`). Its focus depends on your
+route.
 
-### 3. The honesty checks and their retract triggers
+- **If your route predicts**, the auditor hunts **data leakage**: a feature
+  whose value is only settled at or after the outcome it is supposed to
+  predict. Settle each flag with two checks in your own pipeline — the **timing
+  check** (is the feature's value known before the prediction moment?) and the
+  **correlation check** (does the feature track the outcome so tightly it is
+  almost a copy of the answer?). A feature that fails the timing check is
+  dropped or re-timed, no matter how much it helps the score.
+- **For every other route**, the auditor's focus is your language: it hunts any
+  **out-of-sample or generalization claim** — a sentence that quietly extends
+  your result to units, times, or populations your design never reached. Every
+  flagged sentence gets bounded or cut.
 
-A single held-out number is a start, not a verdict. Name which of the five checks
-apply to your design, and for each one you will run, the result that would make you
-**retract** the claim:
-
-- **Overfitting** — a large gap between a high training score and a low held-out
-  score, meaning the model memorized rows instead of learning a pattern that
-  carries.
-- **Cross-validation** — several held-out scores instead of one lucky split; the
-  win has to survive the average, not ride on one draw.
-- **Calibration** — whether the model's stated probabilities mean what they say
-  (among the cases it calls 70% likely, about 70% actually happen).
-- **Subgroup performance** — the metric checked separately within groups that
-  matter, so a good overall score cannot hide a group the model fails.
-- **Distribution shift** — whether the cases you deploy on differ from the cases you
-  trained on, which is where a fair-looking model degrades in the real world.
-
-Then state your **model-selection rule**: the written standard for keeping or
-rejecting a model, fixed *before* you see which one you happen to like (for example,
-"keep a model only if it beats the baseline under cross-validation and survives the
-leakage check"). Finish by naming the criteria under which you would declare the
-analysis **not useful** — it does not beat the baseline out-of-sample, the win
-vanishes under cross-validation, the win depends on a leaked feature, it is badly
-calibrated, or it fails on the subgroup or shifted population you care about. A
-"not useful" verdict, honestly reached, earns full credit.
-
-### 4. The claim boundary
-
-Write **one sentence**: the exact forecast or finding your protocol would license,
-worded to stop where your evidence stops, carrying its **uncertainty** — the
-cross-validation spread, a subgroup gap, or the distribution-shift boundary. Then
-name the crossing your protocol does **not** license.
-
-The forbidden crossing for a prediction is reading a cause off the model. **Interpretability**
-is noticing which features a model leaned on. **Explanation** is knowing what
-actually causes the outcome. They are not the same, and a leak can fake the first
-while telling you nothing about the second. State, in writing, that you make **no
-causal reading of any weight**: prediction answers *who*, never *why*.
-
-> **A question that often comes up here:** *"How is a claim boundary different from
-> just reporting my result?"* A result that respects its boundary names the baseline
-> it beat, the margin, and the uncertainty, and stops there. An overclaim keeps the
-> confident tone but swaps in a bigger subject: "my model scores 0.65 held-out"
-> becomes "my model predicts turnout," or "the top feature is X" becomes "X drives
-> the outcome." Nothing in the wording flags that the reach just grew. Catching that
-> upgrade in your own draft, and forbidding it in writing, is the skill this
-> milestone grades.
-
-### 5. Prediction & Leakage Auditor critique, with your fixes
-
-Submit your protocol to the **Prediction & Leakage Auditor** (the required GenAI
-Studio reviewer role for M7; full briefing in
-`genai_studio/roles/prediction_leakage_auditor.md`). Paste its **leakage trace** and
-its **held-out and baseline check**, and for every flag it raises, write your fix:
-the leak you traced and dropped, the baseline you added, or the reason a flag does
-not apply in your pipeline. A purely descriptive or causal project still runs the
-auditor to confirm it makes **no unlicensed prediction claim**, and that
-confirmation is itself the ledgered result.
-
-Then name **one recompute**: the single number you would recompute yourself to check
-any AI or collaborator, and how you would do it (recompute by hand, alternative
-code, or a primary-source read). The auditor can miss a real leak or invent a false
-one, so the trace it returns is a set of hypotheses to test in your own pipeline,
-not a verdict.
+For every flag, write your fix or your refutation, each settled by a check in
+your own pipeline. The auditor can miss a real leak and invent a false one; its
+flags are hypotheses to test, never verdicts.
 
 ### 6. AI Research Ledger rows
 
-Every use of AI in building this protocol gets a row in your **AI Research Ledger**
+Every use of AI in this verification gets a row in your **AI Research Ledger**
 (the eight-field table: task delegated · tool used · prompt · output summary ·
 decision · verification method · remaining concern · responsible researcher).
-Widening a leakage-suspect list, drafting the contract's wording, and running the
-Prediction & Leakage Auditor are all delegable tasks, and each one you delegated
-needs a row that names how you verified the result. "No AI used" is a legitimate
-entry if it is true.
+Writing the environment-record cell, proposing re-derivation routes, and
+running the Prediction & Leakage Auditor are all delegable tasks, and each one
+you delegated needs a row naming how you verified the result. "No AI used" is a
+legitimate entry if it is true.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 7. Dossier update line
+### 7. The dossier update line and the version line
 
-End with one line recording what this milestone finalizes in your **Research Project
-Dossier**: your declared-analysis-protocol component now carries a prediction verdict
-(the four-part contract or a defended non-prediction verdict), a leakage trace, an
-honesty-check plan with retract triggers, and a one-sentence claim boundary. Name the
-file or section in your dossier where each now lives.
+Open the artifact with its version line: **Book Milestone 7, version 2
+(clean-restart verified)**, dated, with the reason: what changed since version
+1, and why. Then end with one line recording what this milestone finalizes in
+your **Research Project Dossier**: the **reproducible Colab notebook**
+component now exists, verified rather than merely executable, together with its
+claim-to-output trace. Name the file or section where each now lives.
 
 ---
 
-## Submission Expectations
+## Definition of Done
+
+You are done when your submission carries all of the following. Use this as a
+pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Length** | The seven-part protocol + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
-| **Order** | The contract stated in order (target → baseline → split → metric), or the defended non-prediction verdict; the boundary as one explicit sentence with its uncertainty |
-| **Studio work** | Worked at the Friday studio (Oct 16) with your AI assistant; recommended Prediction & Leakage Auditor review; submitted the same day |
-| **Style** | Plain language; every technical term used as defined above; no causal reading of any model weight |
-| **Filename** | `lastname_m07_analysis_protocol.pdf` (or a shared Colab link) |
+| **Clean-restart record** | Fresh runtime; Restart & Run All; environment recorded; numbers match to the digit reported, or every discrepancy explained and fixed |
+| **Claim-to-output trace** | Every number you plan to report pointed to the cell that produces it |
+| **Uncertainty** | The interval itself reproduces from the clean start, seeded (`SEED = 464`) |
+| **Re-derivation** | One key number recomputed by an independent route; the agreement, or the bug it exposed, reported |
+| **Leakage audit** | Prediction & Leakage Auditor run; every flag fixed or refuted by a check in your own pipeline |
+| **Version line** | Book Milestone 7, version 2, dated, with a reason a reader could reconstruct |
+| **Permission status** | Your permission determination is still authorized; blocked work does not proceed |
+| **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
+| **Dossier line** | The verified reproducible notebook and its trace located by file or section |
+| **Studio work** | Worked at the Friday studio (Oct 16) with your AI assistant; required auditor review logged; submitted the same day |
+| **Filename** | A shared Colab link (required); optional `lastname_m07_verified_analysis.pdf` companion |
 | **Location** | Brightspace → Assignments → M07 |
 
 ---
 
 ## Grading Rubric (100 points)
 
-Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTURE.md`).
+Four bands on the course's five shared virtues
+(`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
+criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
+`first-analysis-v1`, version 2).
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Protocol correctness & compass/pathway alignment** (30) | The four-part contract stated in order (or a defended non-prediction verdict + the design that answers the question); the leakage timing check present; the five honesty checks named with retract triggers; a model-selection rule fixed before the scores; protocol stays inside its claim boundary (26–30) | Contract and checks correct; one step or one retract trigger thin or under-argued (21–25) | Contract present but out of order, a honesty check missing, or the model-selection rule chosen after peeking (13–20) | No baseline, no held-out split, or a protocol whose method was reverse-engineered from the result (0–12) |
-| **Evidence integrity & provenance** (15) | Every dataset, feature, and source is real and retrievable; each feature's measurement-timing traces to its origin (13–15) | Real and traceable; one provenance or timing link thin (10–12) | A claimed feature or source asserted without a locatable origin (5–9) | A cited source, dataset, or feature that does not exist or is not what you claim (0–4) |
-| **Verification of AI-assisted parts** (20) | Every AI-assisted step is ledgered with a named, non-vague verification; the Prediction & Leakage Auditor's trace is pasted with your written fix for each flag; the one recompute is named and real (18–20) | Ledger present; one verification vague or one auditor flag unaddressed (14–17) | Ledger thin; AI outputs used but verification not named, or a flagged leak waved past (8–13) | AI output reproduced without any verification, or a leak flagged and left in the protocol (0–7) |
-| **Uncertainty & claim boundary** (20) | The one-sentence boundary carries its uncertainty (cross-validation spread, subgroup gap, or shift boundary); the forbidden crossing named; no causal reading of any weight (18–20) | Boundary present; uncertainty or the forbidden crossing stated loosely (14–17) | A boundary with no uncertainty, or a score reported without the baseline it beat (8–13) | No boundary, an overclaimed certainty, or a cause read off a model weight (0–7) |
-| **Craft, ledger & communication** (15) | On-format, on-time, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; ledger complete (10–12) | Missing pieces or a rushed walkthrough (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+| **Compass & pathway alignment** (15) | The verified result still answers the declared question in the declared form; no out-of-sample or generalization language survives past the route's licence (13–15) | Aligned; one boundary sentence loose (10–12) | The result drifts from the declared form, or one flagged generalization is left unbounded (5–9) | The claim answers a different question than the project declared, or keeps a generalization the audit flagged (0–4) |
+| **Evidence integrity & provenance** (20) | Every reported number traces to its cell; the environment and data source are recorded; a reader can follow every figure to its origin (18–20) | Traceable; one trace row or the environment record thin (14–17) | A reported figure whose cell takes real effort to locate, or an incomplete trace (8–13) | A number with no path back to the notebook, or a source that does not exist (0–7) |
+| **Verification** (30) | The clean restart is run and recorded; every discrepancy explained and fixed; the re-derivation is genuinely independent; every auditor flag settled by a named check; every AI-assisted step ledgered with a non-vague verification (27–30) | All five checks present; one recorded loosely (21–26) | A restart claimed but not recorded, a re-derivation that reuses the original code, or a flag answered without a check (14–20) | No clean restart, a discrepancy left unexplained, or an auditor flag pasted in or dismissed unverified (0–13) |
+| **Uncertainty & claim boundary** (20) | The interval reproduces and is read correctly; the result is never worded as settled certainty; the claim stops where the evidence stops (18–20) | Interval reproduces; one reading or boundary sentence loose (14–17) | Only the point estimate verified, or uncertainty reported but never read (8–13) | No uncertainty, or a verified point estimate narrated as a certain finding (0–7) |
+| **Craft, ledger & communication** (15) | Versioned with its reason, on-format, on-time, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; ledger complete (10–12) | Missing pieces or a rushed record (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
-- A **fabricated or unretrievable source** caps *Evidence integrity & provenance*
-  at Beginning.
-- An **untraceable number** — a reported figure with no path back to your data —
-  caps *Verification of AI-assisted parts* at Beginning.
-- A **non-reproducing result** — a headline metric that does not rerun from your
-  protocol or notebook — caps *Verification of AI-assisted parts* at Beginning.
+- A **fabricated or unretrievable source** caps *Evidence integrity &
+  provenance* at Beginning.
+- An **untraceable number** — a reported figure with no path back to your
+  notebook — caps *Verification* at Beginning.
+- A **non-reproducing result** — a headline number or interval that does not
+  rerun from a fresh runtime — caps *Verification* at Beginning.
 - A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
   **0** and the submission is **returned** unread until it is supplied.
 
@@ -272,31 +234,33 @@ days of feedback recovers up to half the lost points.
 
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
-- Any dataset, feature, or source you cite that turns out not to exist or not to be
-  what you claim: *Evidence integrity & provenance* scores Beginning regardless of
-  the rest — the course's evidence-integrity rule with teeth.
-- Missing AI Research Ledger entry: *Craft* scores 0 and the submission is returned
-  for completion before grading.
+- Any dataset, feature, or source you cite that turns out not to exist or not
+  to be what you claim: *Evidence integrity & provenance* scores Beginning
+  regardless of the rest — the course's evidence-integrity rule with teeth.
+- A headline number or interval that does not rerun from a fresh runtime:
+  *Verification* scores Beginning — a number you cannot regenerate is not
+  evidence.
+- Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
+  returned for completion before grading.
 
 ## Common Pitfalls
 
-1. **The protocol reverse-engineered from the result.** Fitting several models,
-   seeing which one wins, and then writing the "declared" plan to match it. The
-   whole value of declaring first is that the method cannot be chosen to flatter the
-   answer. Fix the target, baseline, split, and metric before you touch the data,
-   and write the model-selection rule before you see a single score.
-2. **The leaky feature waved past.** Listing a feature settled at or after your
-   outcome and calling its timing "probably fine" without the check. Leakage inflates
-   the score on your data and collapses on new cases. Run the timing check and the
-   correlation check, and drop or re-time any feature that fails.
-3. **The score reported without its baseline or its boundary.** A metric with no
-   dumb rule beside it and no claim boundary is an overclaim wearing a lab coat. Name
-   the baseline your model must beat, end with the one sentence your evidence
-   licenses and its uncertainty, and make no causal reading of any weight.
+1. **The restart that never happened.** Trusting the in-session numbers because
+   the notebook "just ran." Hidden state — an edited cell, an out-of-order run,
+   an unseeded draw — can keep a wrong number alive for weeks. Restart from a
+   clean runtime, run everything, and record what printed.
+2. **The discrepancy waved past.** A number moves on the restart and you call
+   it "close enough." Every moved digit has a cause, and until you find it you
+   do not know which of the two numbers is yours. Explain it, fix it, and
+   restart again; if the numbers move, the pipeline is the finding.
+3. **The auditor treated as a verdict, or as noise.** Pasting the auditor's
+   flags into your record unexamined, or dismissing them unexamined, are the
+   same mistake. Each flag is a hypothesis; only a timing check, a correlation
+   check, or a boundary rewrite in your own pipeline settles it.
 
 ---
 
-*Previous: [M06 — Experimental Measurement or Data-Acquisition Protocol + URC Abstract internal gate](milestone_06_experimental_measurement_protocol.md) ·
-Next: [M08 — Minimum Viable Analysis](milestone_08_minimum_viable_analysis.md) —
-your declared protocol meets the data for the first time, and you run it end to end
-to produce first evidence before the poster phase begins.*
+*Previous: [M06 — First Executable Analysis (+ URC Abstract Internal Gate)](milestone_06_experimental_measurement_protocol.md) ·
+Next: [M08 — Robustness Audit](milestone_08_minimum_viable_analysis.md) —
+your verified result now gets attacked on purpose: pre-listed checks, a named
+negative test, and an adversarial review decide what survives.*

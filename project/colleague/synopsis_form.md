@@ -24,8 +24,18 @@ by the instructor before release and carries a permanent "simulated case"
 banner. If you pivot your project, submit a revised synopsis and your
 colleague regenerates from the new question forward.
 
+**Your choices.** Personalization is optional. You may instead choose the
+**generic case** — a shared, non-personalized colleague on a stock project —
+with no grade consequence; audits are scored identically. You may switch to
+the generic case at any point in the semester by telling the instructor.
+Synopses and generated artifacts are kept by the instructor for the
+semester plus the grade-appeal window, then deleted.
+
 **Approval.** I approve this synopsis as the basis for my course practice
-case. I understand the colleague's artifacts are simulated training
-material, are never evidence, and may not be reused in my own work.
+case (or I have checked the generic-case option below). I understand the
+colleague's artifacts are simulated training material, are never evidence,
+and may not be reused in my own work.
+
+☐ I choose the generic (non-personalized) case instead.
 
 Name: ______________________  Date: ____________

@@ -26,14 +26,18 @@ instructions and rubrics live one page per milestone, like this one.
 ## What to Submit on Brightspace
 
 Due: **Friday, September 25, 11:59 PM** (you work on it at that Friday's studio).
+As you assemble the declaration, run the **Causal Identification Skeptic**
+GenAI Studio reviewer (**required** at this milestone) against your
+identification argument or your descriptive-boundary defense, and answer what
+it finds in writing. The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m04_descriptive_audit.pdf`** *or* a shared Colab notebook link | The five-part audit below: your population/frame/sample stack, your selection DAG (image), your concept→construct→indicator measurement plan with its coverage risk, your one-sentence generalization boundary with the crossing it forbids, and your AI Research Ledger rows. This is the graded artifact. |
+| 1 | **`lastname_m04_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration (with the required Causal Identification Skeptic critique answered), the mandated contrast, your jigsaw advocate summary, the Contract delta issuing Research Contract v1, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 13, ch. 14, ch. 15, ch. 16, ch. 17, ch. 18** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
-open it, and that the selection-DAG figure renders when the notebook is run.
+open it, and check that every section reads cleanly when the notebook is run.
 
 ---
 
@@ -62,137 +66,140 @@ Dossier.
 
 ## Purpose
 
-Every project in this course has a **descriptive layer**, no matter where it
-ends up on the compass. Before you can claim your data predict, generalize, or
-identify a cause, you have to be honest about the simpler question underneath:
-**who is actually in your data, what did you measure about them, and how far can
-a plain description of them travel?** This milestone audits exactly that layer.
+Five research pathways run through this part of the book, and this week they
+all meet in one room. A **research pathway** is the family of designs that
+turns your kind of question into evidence: the road from what you ask to what
+you can claim. The five roads are **observational descriptive**,
+**observational causal**, **experimental descriptive**, **experimental
+causal**, and **prediction**. Your question, plus what you are permitted to
+do, picks exactly one as your project's primary road. This milestone makes
+that commitment explicit, in writing, before any result exists.
 
-You treat your own project, right now, as an **observational descriptive
-design** — a study that *observes* units as they are (no intervention) and
-*describes* what it finds. A **design audit** is a structured self-inspection:
-you lay the design's parts on the table and mark where each one is sound and
-where it leaks. The skill you are practicing is the course's signature move,
-applied to yourself: draw the boundary of what your description can support, and
-refuse to step over it.
+Declaring a pathway means writing its limits at the same moment. Every
+pathway holds a **crossing licence** — the earned right to make one kind of
+claim. Sampling from a named frame licenses a claim about a population. An
+honest held-out test licenses a claim about unseen cases. Assignment, or an
+argued identification strategy, licenses a claim about cause. Your
+declaration names the licence your route holds and the one it does not, plus
+what your route can never establish no matter how clean the execution. A
+result can only be defended from inside the pathway that produced it, so the
+limits you write now are the defense you will stand on in November.
 
-This is not a detour from a predictive or causal project. It is the floor every
-later claim stands on. If you cannot say who your data speak for, no amount of
-modeling later will rescue the claim. At the Friday studio you walk the class
-through the audit in three minutes; a partner and an assigned AI reviewer attack
-your generalization sentence and your DAG's arrows, and you revise from what
-survives.
+You also spend this week arguing for roads that are not yours. At the studio
+you play the **route jigsaw**: each of you advocates one assigned pathway to
+the group, independent of your own project's route. In the brief you write
+the **mandated contrast** — a one-page engagement with the contrasting route
+assigned to you, taken seriously on its merits. The logic is simple: you can
+only defend a choice you can compare. And the declaration is versioned, not
+carved in stone: realized data that will not support the declared pathway
+send you back to this decision before analysis, never after.
 
-> **A question that often comes up here:** *"My project is going to be causal
-> (or predictive). Why am I doing a descriptive audit?"* Because the descriptive
-> layer is where your units, your measure, and your reach are decided, and those
-> decisions constrain every later claim. A causal estimate on a biased sample is
-> a biased causal estimate. A prediction from a frame that misses half your
-> target population predicts for the half you kept. Auditing description first is
-> how you find the leak before it contaminates the fancy claim on top of it.
+> **A question that often comes up here:** *"My question is causal, but the
+> data I can reach give me no leverage to identify the effect. Do I switch to
+> a descriptive route?"* No. A question's kind lives in its words, not in
+> your data. A causal question with weak data stays **causal, currently
+> unidentified**: you declare the observational causal route, name the
+> leverage you lack, and keep your claims on the *associated with* side until
+> identification is earned. Quietly relabeling the question descriptive to
+> dodge the problem is the one move this milestone forbids. The honest
+> declaration is a passing answer; the silent relabel is not.
 
 ## Components
 
-### 1. Population / frame / sample stack
+Declaring the design and target population is a never-delegate decision. Your
+AI assistant can argue routes with you, and the required Skeptic will attack
+what you wrote, but the pathway you submit has to be reasoned and owned by
+you.
 
-Name the four layers, in order, and say exactly how each one narrows the one
-above it.
+### 1. The route declaration
 
-- **Target population** — the full set of units your question is ultimately
-  about (for example, *all first-year Purdue undergraduates in Fall 2026*).
-- **Accessible population** — the part of the target you could realistically
-  reach given time, access, and permissions (for example, *first-years in the
-  three residence halls you can survey*).
-- **Sampling frame** — the concrete list or mechanism your units actually come
-  from (for example, *the hall listserv you were given access to*). The frame is
-  a real object, not an aspiration.
-- **Sample** — the units that ended up in your data after the frame, plus who
-  responded.
+Commit to one primary pathway and defend the commitment in four short moves.
 
-Then name the **silent exclusion**: the units your frame drops without
-announcing it. A listserv misses everyone who opted out of email. A subreddit
-scrape misses lurkers who never post. Write one sentence naming who your frame
-silently drops and why it matters for your question.
+- **The pathway, named.** One of the five, chosen with the studio's route
+  guide: what your question asks, crossed with whether you observe the world
+  as you find it, assign conditions yourself, or honestly score a forecast.
+- **Why it fits.** Two sentences: why your question's **kind** and **reach**
+  point at this road, and why your M3 **permission status** supports it. A
+  change of pathway can change your permission status; recheck rather than
+  assume.
+- **The licence held and the licence lacked.** The crossing licence your
+  route holds, and the tempting one it does not. Then the hard sentence:
+  what this route can never establish, no matter how clean the execution.
+- **The anchor study.** Name one real, retrievable prior study that used
+  this pathway on a question comparable to yours, so your declaration
+  stands on precedent, not preference.
 
-> **A question that often comes up here:** *"Aren't the population and the frame
-> basically the same?"* Almost never, and the gap between them is the whole
-> point. The **population** is who you *mean*; the **frame** is who you can
-> actually *list and reach*. Every gap between the two is a group your answer
-> quietly stops covering. Naming the gap out loud is what separates an honest
-> description from an accidental overclaim.
+Two cautions, both drilled this week. Assigning conditions does not make a
+question causal: a randomized study can be measuring a property the world
+already has, which is the experimental descriptive road. And a causal
+question that lacks identification stays causal, currently unidentified; it
+never quietly becomes descriptive.
 
-### 2. A selection DAG
+**The Skeptic test (required).** Run the **Causal Identification Skeptic**
+(a GenAI Studio role) against this part before you submit. On a causal
+route, paste your identification leverage and let it attack. On every other
+route, paste your **descriptive-boundary defense** — your argument for why
+your claims stop short of cause — and let it hunt for causal language you
+did not notice. Answer every ranked attack in writing: rule it out, or
+carry it as a named limitation. It supplies the attack; you supply the
+defense. The critique and your answers ride inside this part and get a
+ledger row.
 
-Draw the process by which a unit ends up in your data. A **DAG** (directed
-acyclic graph) is a diagram of arrows, where each arrow means *this influences
-that*. A **selection DAG** shows what drives a unit into your sample, so you can
-see which forces bend your description away from the population.
+### 2. The mandated contrast
 
-Your DAG must show, at minimum: the path from target population to accessible
-population to frame to responded-and-recorded, and at least one **selection
-influence** — a trait that affects *both* whether a unit shows up in your data
-*and* the thing you are measuring. That double arrow is where description gets
-dangerous, because it means the units you kept differ systematically from the
-ones you lost on the very variable you care about.
+Engage the contrasting route assigned to you in \~one page, on its merits.
+Three questions, answered honestly:
 
-Submit the DAG as an **image** (a clear hand drawing photographed, or the
-notebook-generated figure from the studio notebook, edited to your project). A
-DAG that only draws the tidy funnel and hides the selection influence has
-skipped the reason the tool exists.
+- **What would it require?** The data, the assignment power, or the
+  permissions the contrast needs that your project would have to obtain.
+- **What would it license?** The crossing licence the contrast holds — the
+  claim it could make that your route cannot.
+- **Why is it not yours?** The specific mismatch with your question or your
+  licence. If the contrast partly fits, say instead what adopting it would
+  change in your Contract, your data strategy, and your claim boundary.
 
-### 3. Measurement plan for your key construct
+A contrast dismissed in one sentence is a strawman, and a strawman defends
+nothing. The page earns its place when a reader could finish it believing
+you would have taken the other road if the facts had pointed there.
 
-Climb the **concept → construct → indicator** ladder for the one construct at
-the center of your description.
+### 3. The jigsaw advocate summary
 
-- **Concept** — the abstract idea (for example, *sense of belonging*).
-- **Construct** — the specific, targetable version of it (for example,
-  *belonging to one's residence-hall floor community*).
-- **Indicator** — the concrete thing you can actually record (for example, *a
-  1–5 self-report item on the hall survey*).
+Summarize the route you represented at the studio's route jigsaw in **five
+sentences a non-specialist could repeat**: what the route asks, what it
+requires, what claim its licence buys, what it can never establish, and one
+study you would run with it. The jigsaw assigns routes independently of your
+project on purpose. Advocating a road you will not take is how you learn the
+whole map, not just your lane.
 
-Each rung must visibly narrow the one above it. Then name the dominant **data
-risk** to that indicator, using the right word for it:
+### 4. The Contract delta (v0 → v1)
 
-- **Coverage** — units the frame never reaches at all.
-- **Nonresponse** — units in the frame who were asked but did not answer.
-- **Missingness** — values that are blank for units you did keep.
+Name exactly which fields of your **Research Contract v0** this declaration
+revises, and issue the result as **Research Contract v1**: your objective
+matched to its target, your reach matched to your data strategy, and your
+**warrant** — the stated reason your evidence will license your claim — now
+carried by a declared pathway with written limits. Two disciplines apply:
 
-State which of the three most threatens your measure, and whether it is likely
-to be random or to run in a direction (systematic). One paragraph.
-
-### 4. The generalization boundary
-
-This is the heart of the audit. Write **two sentences**.
-
-- **The population sentence your frame licenses**: the strongest description
-  your design actually supports, naming the population the frame reaches and the
-  uncertainty around it. Begin it with *"In the units my frame reaches, …"* or
-  *"For [the specific population], with the uncertainty that …"*.
-- **The crossing your design does NOT license**: the tempting sentence a careless
-  reader might walk away with, which your design cannot support. Name the
-  **silent upgrade** you are forbidding. A silent upgrade is when a sentence
-  about your frame is quietly rewritten as a sentence about the whole target
-  population, or about cause, without any new license being bought.
-
-> **A question that often comes up here:** *"How is a silent upgrade different
-> from just stating my finding?"* A finding stays inside the license your design
-> bought. A silent upgrade swaps the subject of the sentence while keeping the
-> same confident tone. "Students in my three halls report high belonging"
-> becomes "Purdue first-years feel they belong" with no new sampling license,
-> and now the sentence covers people your frame never touched. The upgrade is
-> silent because nothing in the wording flags that the reach just grew. Your job
-> is to catch it in your own draft and forbid it in writing.
+- **Version with a reason.** The delta is a dated, numbered version whose
+  reason a reader could use to reconstruct your thinking. "Updated after
+  week 5" is not a reason; "declared observational descriptive because my
+  permission status forbids assignment" is.
+- **Update the uncertainty statement.** Different pathways carry different
+  sources of uncertainty: sampling error on a descriptive road, confounding
+  on an observational causal road, drift between past and future cases on a
+  prediction road. Name the sources your route carries.
 
 ### 5. AI Research Ledger rows
 
-Every use of AI in building this audit gets a row in your **AI Research Ledger**
-(the eight-field table: task delegated · tool used · prompt · output summary ·
-decision · verification method · remaining concern · responsible researcher).
-Locating a frame, drafting an exclusion list, generating the DAG scaffold, and
-critiquing your boundary sentence are all delegable tasks, and each one that you
-delegated needs a row that names how you verified the result. "No AI used" is a
-legitimate entry if it is true.
+Every use of AI in building this declaration gets a row in your **AI
+Research Ledger** (the eight fixed fields: task delegated · tool used ·
+prompt · output summary · decision · verification method · remaining concern
+· responsible researcher). One row is mandatory beyond the Skeptic: ask your
+AI assistant to argue for a different pathway than the one you chose, then
+answer the argument yourself, in your own words. Drafting the contrast's
+requirements and hunting the anchor study are also delegable tasks, and each
+step you delegated needs a row naming how you verified the result. "No AI
+used" is a legitimate entry only where it is true, and it cannot be true of
+the two required runs above.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
@@ -201,45 +208,64 @@ Research Ledger entry scores the Craft criterion **0** and the submission is
 ### 6. Dossier update line
 
 End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your data + measurement documentation now carries a declared
-frame, a selection DAG, a measurement ladder, and a stated generalization
-boundary. Name the file or section in your dossier where each now lives.
+Project Dossier**: your Contract / MIDA declaration component now carries a
+declared pathway, its written limits, the mandated contrast, and Research
+Contract v1. Name the file or section in your dossier where each now lives.
 
 ---
 
-## Submission Expectations
+## Definition of Done
+
+You are done when your submission carries all of the following. Use this as a
+pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Length** | The five-part audit + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
-| **Figure** | The selection DAG as a legible image; funnel plus at least one selection-influence arrow |
-| **Studio work** | Worked at the Friday studio (Sep 25) with your AI assistant; submitted the same day |
-| **Style** | Plain language; every technical term used as defined above; the generalization boundary stated as two explicit sentences |
-| **Filename** | `lastname_m04_descriptive_audit.pdf` (or a shared Colab link) |
+| **Route declaration** | One pathway named; kind × reach fit argued; permission status rechecked; the licence held and the licence lacked both written |
+| **Route limits** | What the route can never establish, stated plainly, no matter how clean the execution |
+| **Anchor study** | One real, retrievable prior study that used this pathway on a comparable question |
+| **Skeptic test** | The required Causal Identification Skeptic run logged; every ranked attack answered or carried as a named limitation |
+| **Mandated contrast** | The assigned route in \~one page: what it would require, what it would license, why it is not yours (or what adopting it would change) |
+| **Jigsaw summary** | Your advocated route in five sentences a non-specialist could repeat |
+| **Contract delta** | The Contract v0 fields revised and issued as a dated, numbered Contract v1 with a usable reason; uncertainty sources updated to the route |
+| **AI Research Ledger** | One row per AI-assisted step, including the counter-pathway argument; every verification method named and non-vague |
+| **Dossier line** | The Contract / MIDA component located by file or section |
+| **Studio work** | Worked at the Friday studio with your AI assistant; your jigsaw route advocated in class |
+| **Filename** | `lastname_m04_pathway_declaration.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M04 |
 
 ---
 
 ## Grading Rubric (100 points)
 
-Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTURE.md`).
+Four bands on the course's five shared virtues
+(`planning/ASSESSMENT_ARCHITECTURE.md`).
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Design-audit correctness** (30) | Population/frame/sample stack correct and its silent exclusion named; DAG shows a real selection influence, not just the funnel; measurement ladder narrows at every rung (26–30) | Stack and DAG correct; one rung or one arrow thin or under-argued (21–25) | Stack or DAG present but a layer collapsed, or the selection influence missing (13–20) | Frame described as if it were the population; DAG decorative or absent (0–12) |
-| **Evidence integrity & provenance** (20) | Every named frame, indicator, and source is real and retrievable; the reader can trace each to its origin (18–20) | Real and traceable; one provenance link thin (14–17) | A claimed frame or indicator asserted without a locatable source (8–13) | A cited source or survey item that does not exist or does not say what you claim (0–7) |
-| **Verification of AI-assisted parts** (20) | Every AI-assisted step (frame list, DAG scaffold, boundary critique) has a ledger row with a named, non-vague verification method (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used but verification not named (8–13) | AI output reproduced without any verification, or the boundary caveat written by AI and unchecked (0–7) |
-| **Uncertainty & generalization boundary** (20) | Both boundary sentences present; the licensed population sentence carries its uncertainty; the forbidden silent upgrade is named precisely (18–20) | Both sentences present; uncertainty or the forbidden crossing stated loosely (14–17) | Only one sentence, or the boundary asserted without the crossing it forbids (8–13) | No boundary, or a description silently upgraded to the whole population or to cause (0–7) |
-| **Craft, ledger & communication** (10) | On-format, on-time, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces or a rushed walkthrough (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Pathway & compass alignment** (30) | Pathway fits the question's kind × reach and the permission status; the licence held and the licence lacked both named; the declaration complete and unmistakably about your project; a causal question without leverage declared causal, currently unidentified (26–30) | Fit argued and licences named; one limit or one licence stated loosely (21–25) | Pathway declared but the fit asserted rather than argued, or parts generic enough to fit any project (13–20) | A relabeled question, a pathway the permission status forbids, or generic text that would fit any project (0–12) |
+| **Evidence integrity & provenance** (20) | The anchor study is real, retrievable, and genuinely uses the pathway; the contrast's requirements are grounded in the route lessons; every factual claim traces to its origin (18–20) | Real and traceable; one provenance link thin (14–17) | An anchor study or a contrast requirement asserted without a locatable source (8–13) | A cited study that does not exist or does not use the pathway you claim (0–7) |
+| **Verification & decision ownership** (20) | The required Skeptic run logged with every ranked attack answered or honestly carried; the counter-pathway argument answered in your own words; no judgment reproduces a tool's wording (18–20) | Skeptic run and answers present; one attack answered loosely or one reply leaning on the tool's phrasing (14–17) | Skeptic run logged but attacks left unanswered, or the counter-pathway row missing (8–13) | No Skeptic run, or a declaration that reproduces a tool's wording with no reasoning of your own (0–7) |
+| **Uncertainty & the route's limits** (20) | The never-establish sentence stated plainly; the pathway's own uncertainty sources named in the Contract; the contrast's licence honestly priced (18–20) | Limits and sources present; one stated loosely (14–17) | Limits gestured at without saying what they cost the claim, or uncertainty sources generic (8–13) | No limits, or a declaration that concedes nothing its route cannot do (0–7) |
+| **Craft, ledger & communication** (10) | On-format, on-time; Contract delta a dated, numbered version with a usable reason; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces, or a version with a decorative reason (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
-- A **fabricated or unretrievable source** caps *Evidence integrity & provenance*
+- A **relabeled question** — a causal question quietly rewritten as
+  descriptive to dodge identification — caps *Pathway & compass alignment*
   at Beginning.
-- An **untraceable number** — a figure with no path back to your data — caps
-  *Verification of AI-assisted parts* at Beginning.
-- A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
-  **0** and the submission is **returned** unread until it is supplied.
+- A **fabricated or unretrievable source** caps *Evidence integrity &
+  provenance* at Beginning.
+- A **missing or unanswered Skeptic run** — the required role skipped, or its
+  top attack left standing with no reply — caps *Verification & decision
+  ownership* at Beginning.
+- A **missing AI Research Ledger entry** scores *Craft, ledger &
+  communication* **0** and the submission is **returned** unread until it is
+  supplied.
+
+**Blocking gate:** no work at or after M3 proceeds past a **not-authorized**
+permission determination. A declaration that does is returned ungraded until
+the determination is resolved; this is a gate, not a deduction.
 
 **Revision:** eligible under the standing policy — a revised submission within 7
 days of feedback recovers up to half the lost points.
@@ -248,31 +274,40 @@ days of feedback recovers up to half the lost points.
 
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
-- Any frame, indicator, or source you cite that turns out not to exist or not to
-  say what you claim: *Evidence integrity & provenance* scores Beginning
-  regardless of the rest — the course's evidence-integrity rule with teeth.
+- Any study, requirement, or source you cite that turns out not to exist or
+  not to say what you claim: *Evidence integrity & provenance* scores
+  Beginning regardless of the rest — the course's evidence-integrity rule
+  with teeth.
+- A declared pathway that requires permissions your M3 determination does not
+  grant: the submission is returned until the determination is rechecked —
+  the blocking gate, not a point deduction.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 
 ## Common Pitfalls
 
-1. **The frame described as the population.** Writing "my sample represents
-   first-year students" when your frame is three residence halls on one campus.
-   The frame is who you could reach; say who that leaves out before a reviewer
-   says it for you.
-2. **The DAG that decorates instead of shows selection.** A neat funnel from
-   population to sample with every arrow pointing the same way looks tidy and
-   teaches nothing. The DAG earns its place only when it draws the selection
-   influence — the trait that bends both who shows up and what you measure.
-3. **The caveat written by AI and left unverified.** Asking a tool to "write my
-   limitations paragraph" and pasting it in. A boundary you did not reason to is
-   a boundary you cannot defend at the studio, and an unverified AI caveat with
-   no ledger row caps your verification score. Draft the boundary yourself, then
-   use AI to attack it.
+1. **The relabeled question.** Your question asks whether one thing causes
+   another, your data offer no leverage, and the declaration quietly calls
+   the project descriptive. The kind belongs to the question's words. Declare
+   the causal route, name it currently unidentified, and keep your language
+   at *associated with*; that is the honest, full-credit road.
+2. **The strawman contrast.** Dispatching the assigned route in one
+   dismissive sentence so your own choice looks inevitable. The contrast
+   earns credit only when it is priced honestly: what it would require, what
+   its licence would buy, and the specific mismatch that rules it out. A
+   reader should believe you would have taken it if the facts had pointed
+   there.
+3. **The tool-declared pathway.** Asking your AI assistant which route your
+   project should take and submitting its answer. Declaring the design is one
+   of the seven never-delegate decisions, and route choice is exactly what a
+   fluent tool will do confidently and shallowly. Choose the road yourself,
+   make the tool argue for a different one, and answer that argument on the
+   record.
 
 ---
 
-*Previous: [M03 — Research Charter & MIDA Declaration](milestone_03_research_charter_mida.md) ·
-Next: [M05 — Causal Identification Strategy or Causal-Language Boundary](milestone_05_causal_identification.md) —
-your defended description becomes the baseline a causal question either earns the
-right to cross, or is explicitly forbidden from crossing.*
+*Previous: [M03 — Research Contract v0 and Permission Determination](milestone_03_research_charter_mida.md) ·
+Next: [M05 — Data and Measurement Governance](milestone_05_causal_identification.md) —
+your declared pathway now needs something trustworthy to run on: data whose
+origin is documented and measures that measure what your Contract says they
+measure.*

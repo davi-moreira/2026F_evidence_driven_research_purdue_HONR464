@@ -24,21 +24,19 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, October 9, 11:59 PM**. That Friday is a **protocol clinic and
-abstract workshop**: you bring a near-final draft, walk a partner and an AI
-reviewer (your AI, or optionally the **Experimental Design Reviewer** role in
-GenAI Studio) through your
-measurement protocol, and clear the internal gate on your URC abstract before it
-can go out. The red-team notes from that studio feed the grade; you polish from
-them and submit by the same-day deadline.
+Due: **Friday, October 9, 11:59 PM**. That Friday is a **pipeline clinic and
+abstract workshop**: you bring your running notebook, walk your first result and
+your AI-code verification record past your AI assistant's review, and clear the
+internal gate on your URC abstract before it can go out. You polish from the
+clinic notes and submit by the same-day deadline.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m06_measurement_protocol.pdf`** *or* a shared Colab notebook link | The six-part deliverable below: your construct and measurement design, the descriptive quantity it reports, your measurement DAG (image), your artifact plan, your two-sentence claim boundary, your URC abstract, and your AI Research Ledger rows. This is the graded artifact. |
+| 1 | **A shared Colab notebook link** *or* **`lastname_m06_first_analysis.ipynb`** | The pipeline notebook carrying the six-part deliverable below: the seeded pipeline itself, your first result with its uncertainty (labeled provisional), your AI-code verification record, your URC abstract draft, your AI Research Ledger rows, and your dossier line. If you prefer the written parts as a PDF, attach **`lastname_m06_first_analysis.pdf`** alongside; the notebook is still required. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 21** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
-If you submit a notebook link, set sharing so the instructor can open it, and
-confirm the measurement-DAG figure renders when the notebook is run.
+Set sharing so the instructor can open **and rerun** the notebook. Confirm the
+result in your write-up matches what the notebook prints when run top to bottom.
 
 ---
 
@@ -62,189 +60,167 @@ Dossier.
 
 ## Purpose
 
-Every project needs a way to **get the number it is built to report**. M4 asked
-who is in your data; M5 asked whether your design earns the word *because*. M6
-asks the question underneath both: **how will you actually measure the thing at
-the center of your project, and how far can that measurement travel?**
+Everything your project has said so far, it has said in words. Your Contract
+names the question, your route declaration names the design, and your
+measurement plan names how each concept becomes a column. This week the words
+become running code, and your project produces its first number.
 
-This week you learned the surprise that anchors the milestone: an experiment can
-be a **measurement instrument**, not a causal test. An **experiment as a
-measurement system** uses randomly assigned, controlled stimuli to reveal a
-**latent characteristic** — a real property you cannot read off directly, like
-how much discrimination a job market holds or how sensitive an attitude is to how
-it is framed. The audit experiment, the list experiment, the conjoint, the
-behavioral game, the calibration protocol, the A/B instrument test: each points a
-randomized stimulus at a standing feature of the world and reports a **descriptive
-quantity**. Random assignment is a measuring trick there, not a causal claim.
+The artifact is a **pipeline notebook**: a seeded notebook that starts at your
+raw data and runs top to bottom to your reported result, with no step done by
+hand in between. Its one discipline is simple to state and hard to keep: it
+implements the analysis you **declared**, and nothing else. You fixed that
+analysis before you could see any results, because a method chosen after seeing
+which one flatters your data proves nothing. The pipeline is where that
+pre-commitment gets kept, in code a reader can run.
 
-So the deliverable has two honest jobs. First, write the **protocol**: the design
-that will produce your project's key number, with the artifacts that could fake
-that number named and guarded against. Not every project runs an experiment; if
-yours acquires data by another route (a scrape, an archive, a survey, an
-instrument reading), you write the **data-acquisition protocol** for that route,
-and you still name the threats to **construct validity** the same way. Second,
-clear the **URC abstract internal gate**: the short public description of your
-project, worded so it does not promise more than your protocol can deliver. A
-number with no named procedure behind it, or an abstract that overclaims, is not
-a protocol.
+The number the pipeline produces this week is a **provisional result**: a result
+you report while its verification is still pending. You attach its uncertainty
+and you label it provisional, because next week's clean restart (M7) decides
+whether it deserves the word verified. Reporting it now, honestly labeled, is
+how research actually moves; reporting it as settled would be the overclaim.
 
-> **A question that often comes up here:** *"My project doesn't run an
-> experiment. Does this milestone still apply?"* Yes, and the shape is the same.
-> Whether you assign a stimulus or pull rows from an archive, you are building an
-> instrument that reads a construct, and every instrument can be fooled. The
-> experimental-measurement path and the data-acquisition path both end at the
-> same two things: the descriptive quantity your design reports, and the boundary
-> around it. Pick the path your question needs and write that one.
+The same Friday carries a second, fixed anchor: the **URC abstract internal
+gate**. The abstract is the short public description of your project, and it
+leaves the course on the conference's calendar, not on your verification
+schedule. So it clears an internal check now, with the provisional label doing
+the honesty work.
+
+> **A question that often comes up here:** *"The notebook ran and printed a
+> number. Why can't I call the result final?"* Because a notebook that ran once
+> is not yet a notebook that runs. Cells executed out of order can leave stale
+> values in memory that silently feed later results. Until the pipeline survives
+> a restart from a clean state, the number is a strong draft, and the
+> provisional label is what keeps your claim honest in the meantime.
 
 ## Components
 
-### 1. The construct and the measurement design
+### 1. The pipeline notebook
 
-Name the **latent characteristic** at the center of your project: the one real
-property you cannot read off directly and must reveal through a design (a level of
-some attitude, a prevalence, a preference weight, a detection threshold).
-Then declare how you will measure it, and why that route fits.
+Build the seeded notebook (`SEED = 464`) that runs top to bottom: data in,
+declared analysis, result out. Three rules govern it.
 
-- If an experiment serves it best, name which one and why: an **audit
-  experiment**, a **list experiment**, a **conjoint experiment**, a **behavioral
-  game**, a **calibration protocol**, or an **A/B instrument test**. Say what the
-  **controlled stimulus** is (the thing you set on purpose and assign by chance)
-  and how assignment happens.
-- If a direct measure or another data-acquisition route serves it better, name the
-  source, the instrument, and how a unit's value gets recorded.
+- **It implements the declared analysis, and nothing else.** Write the analysis
+  your Contract and route declaration commit you to, before you look at
+  anything else. Exploration that touches the reported result is not
+  exploration; it is an undeclared analysis.
+- **It loads data from the source your M5 governance record documents**, so a
+  reader can follow the pipeline all the way back to provenance.
+- **Every number it reports traces to a data cell and a line of code.** No
+  number appears in your prose that the notebook does not compute.
 
-One short paragraph. The test is that a reader could see, from your words, exactly
-how a single unit's measurement comes to exist.
+### 2. The first result, with its uncertainty
 
-### 2. The descriptive quantity it reports (the estimand)
+Report the one result your declared analysis produces, in the form your
+Contract specified, with its **uncertainty statement** attached: the interval,
+spread, or standard error your route provides. A result reported without
+uncertainty is not yet a result. Label it in writing, next to the number:
+*provisional pending the clean-restart verification (M7)*. Then read it in one
+sentence: what the number says, for which units, and what it does not cover.
 
-State the exact number your design is built to report, and the units it is in. In
-this course that number is the **estimand**: the quantity the design exists to
-measure. Keep it **descriptive** — a level, a prevalence, a weight, or a
-threshold **for the units you observe** — not the effect of an intervention you
-would deploy.
+### 3. The AI-code verification record
 
-Name it in one sentence, with its units. For example: *"the share of respondents
-who hold [sensitive attitude], on a 0-to-1 scale, for the units in my sample,"*
-or *"the average detection threshold, in decibels, for the listeners I test."*
-If a random assignment sits in your design, say in one line why it serves this
-**descriptive** measurement and does not turn the inquiry causal.
+Delegate the writing of code as freely as you like; verify every returned
+number yourself. For anything AI wrote in your pipeline, record two checks:
 
-> **A question that often comes up here:** *"I randomize a stimulus — doesn't that
-> make my question causal?"* Not by itself. The word that fixes the kind is your
-> **question**, not your **procedure**. When the target is a property of the world
-> as it stands, the inquiry is descriptive even though you shuffled. Naming the
-> descriptive quantity out loud is how you keep the coin flip from smuggling in a
-> causal claim you cannot defend.
+- **The known-answer test** — run the code on a tiny input where you already
+  know the right output, and confirm it returns exactly that. For example, feed
+  your group-difference function two three-row groups you can average by hand.
+- **The line review** — read every AI-written line and say in your own words
+  what it does. Any line you cannot explain gets rewritten or removed; you
+  cannot defend a pipeline you cannot narrate.
 
-### 3. The measurement DAG and the artifact plan
+Both checks live in the notebook, next to the code they verify, with a ledger
+row each.
 
-Draw the machinery as a **DAG** (a directed acyclic graph: a picture of arrows
-where each arrow means *this influences that*). Your measurement DAG must show, at
-minimum: the **randomized stimulus** (or your data source) feeding the measured
-response, the **latent characteristic** feeding it too (the thing you actually
-want), and at least one **artifact arrow**, drawn dashed, feeding the response
-without any truth value.
+### 4. The URC abstract draft (the internal gate)
 
-Then write the **artifact plan**. Name the two threats to **construct validity**
-your design most fears, using the right words:
+Write the abstract you would submit to the **Undergraduate Research
+Conference**, roughly 150–250 words, describing your project as it now stands:
+the question, what you measure, the analysis your pipeline executes, the first
+result labeled provisional, and the boundary around the claim. This is an
+**internal gate**: the abstract must clear the instructor's check at the studio
+before it goes out externally. The gate has one non-negotiable rule — the
+abstract must stay inside the claim your evidence can support. An abstract that
+promises a causal finding your route does not license, that reaches a
+population your data never touched, or that reports the provisional number as
+settled, does not clear the gate.
 
-- **Demand effect** — respondents shift their answer toward what they think you
-  want, so the reading moves for a reason that is not the construct.
-- **Instrument effect** — the tool or wording itself pushes the reading, so the
-  procedure, not the construct, produces part of the number.
+> **A question that often comes up here:** *"Why write the abstract now, while
+> the result is still provisional?"* Because the abstract's clock is external
+> and this Friday is its fixed anchor. The skill being graded is writing a
+> public description that is both true today and safe tomorrow: bounded to your
+> route, labeled provisional where it must be, and worded so no verification
+> outcome can make it retroactively false.
 
-For each, name the one **redesign** move that defuses it (blinding the
-administrator, neutral wording, an unobtrusive measure, a counterbalanced order,
-a calibration check), and tie each redesign to a dashed arrow in your DAG. For a
-data-acquisition project, name the acquisition threats to construct validity in
-the same shape (a source that self-selects, a field that means something other
-than your construct) and the move that guards each. Submit the DAG as an
-**image**.
+### 5. AI Research Ledger rows
 
-### 4. The claim boundary (two sentences)
-
-This is the heart of the protocol. Write **two sentences**.
-
-- **The descriptive claim your design licenses**, worded for the units observed
-  and carrying its **uncertainty**. Begin it with *"For the units I measure,
-  [descriptive quantity] is around ___, with the uncertainty that ___."* The
-  uncertainty names your interval, your standard error, or the artifact you could
-  not fully rule out.
-- **The sentence your design does NOT license**: the tempting **causal** or
-  **population** claim a careless reader might walk away with. Name it and forbid
-  it. "We randomized, therefore we have a causal effect," or a measurement number
-  reported as if it covered a population your design never reached, is exactly the
-  overreach this week exists to catch.
-
-### 5. The URC abstract (internal gate)
-
-Write the abstract you would submit to the **Undergraduate Research Conference**,
-roughly 150–250 words, describing your project as it now stands: the question, the
-construct, the descriptive quantity your protocol will measure, and the boundary
-around it. This is an **internal gate**: it must clear the instructor's check at
-the studio before it goes out externally. The gate has one non-negotiable rule —
-**the abstract must stay inside the boundary you wrote in Component 4.** An
-abstract that promises a causal finding, or a population claim your design cannot
-buy, does not clear the gate.
-
-### 6. AI Research Ledger rows and dossier update line
-
-Every use of AI in building this protocol gets a row in your **AI Research
+Every use of AI in building this milestone gets a row in your **AI Research
 Ledger** (the eight-field table: task delegated · tool used · prompt · output
 summary · decision · verification method · remaining concern · responsible
-researcher). Scouting real measurement studies in your field, extending the DAG
-code, and red-teaming your boundary or your abstract are all delegable tasks, and
-each one you delegated needs a row naming how you verified the result. "No AI
-used" is a legitimate entry if it is true.
+researcher). Drafting pipeline code, debugging an error message, and
+red-teaming your abstract are all delegable tasks, and each one you delegated
+needs a row naming how you verified the result. "No AI used" is a legitimate
+entry if it is true.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your data and measurement documentation now carries a declared
-measurement design, a measurement DAG, an artifact plan, a stated claim boundary,
-and a gated URC abstract. Name the file or section where each now lives.
+### 6. The dossier update line and the version line
+
+Open the artifact with its version line: **Book Milestone 7, version 1
+(executable first run)**, dated, with the reason a reader could use to
+reconstruct your thinking. Then end with one line recording what this milestone
+adds to your **Research Project Dossier**: the reproducible-analysis component
+now exists in executable form, carrying a provisional first result and a gated
+URC abstract. Name the file or section where each now lives.
 
 ---
 
-## Submission Expectations
+## Definition of Done
+
+You are done when your submission carries all of the following. Use this as a
+pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Length** | The six-part protocol + abstract + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
-| **Figure** | The measurement DAG as a legible image: stimulus (or source) and latent characteristic into the response, plus at least one dashed artifact arrow |
-| **Studio work** | Worked at the Friday studio (Oct 9) with your AI assistant; URC abstract gate cleared; submitted the same day |
-| **Style** | Plain language; every technical term used as defined this week; the claim boundary stated as two explicit sentences; the abstract inside that boundary |
-| **Filename** | `lastname_m06_measurement_protocol.pdf` (or a shared Colab link) |
+| **Pipeline notebook** | Seeded (`SEED = 464`); runs top to bottom from data to result; implements the declared analysis and nothing else |
+| **First result** | Reported in the form your Contract specified, with its uncertainty statement, labeled provisional pending the M7 clean restart |
+| **AI-code verification** | Known-answer test run and reported; every AI-written line reviewed and explained in your own words |
+| **URC abstract** | Roughly 150–250 words; inside the claim your evidence supports; the internal gate cleared at the studio |
+| **Version line** | Book Milestone 7, version 1, dated, with its reason |
+| **Permission status** | Your M3/M5 permission determination is still authorized; blocked work does not proceed |
+| **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
+| **Dossier line** | The executable pipeline and the gated abstract located by file or section |
+| **Studio work** | Worked at the Friday studio (Oct 9) with your AI assistant; abstract gate cleared; submitted the same day |
+| **Filename** | A shared Colab link or `lastname_m06_first_analysis.ipynb`; optional `lastname_m06_first_analysis.pdf` companion |
 | **Location** | Brightspace → Assignments → M06 |
 
 ---
 
 ## Grading Rubric (100 points)
 
-Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTURE.md`).
+Four bands on the course's five shared virtues
+(`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
+criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
+`first-analysis-v1`).
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass & pathway alignment** (30) | The design is declared as experimental-descriptive or data-acquisition; the descriptive quantity is named with units; any random assignment is shown to serve measurement, not a causal claim; the boundary matches (26–30) | Design and quantity correct; one link between assignment and descriptive inquiry stated loosely (21–25) | Design or quantity present but the descriptive-vs-causal line blurred, or the quantity vague (13–20) | Random assignment read as a causal effect, or no named descriptive quantity (0–12) |
-| **Evidence integrity & provenance** (20) | Every construct, instrument, and cited measurement study is real and retrievable; the descriptive quantity traces to the design that produces it (18–20) | Real and traceable; one provenance link thin (14–17) | A claimed instrument or study asserted without a locatable source (8–13) | A cited source or measurement study that does not exist or does not say what you claim (0–7) |
-| **Verification of AI-assisted parts** (20) | Every AI-assisted step (study scout, DAG scaffold, boundary or abstract critique) has a ledger row with a named, non-vague verification method; the AI reviewer's critique is resolved in writing (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used but verification not named (8–13) | AI output reproduced without any verification, or the boundary or abstract written by AI and unchecked (0–7) |
-| **Uncertainty & artifact boundary** (20) | Both boundary sentences present; the licensed sentence carries its uncertainty; the artifact plan names a real demand effect and instrument effect, each with a redesign tied to a dashed DAG arrow; the forbidden causal or population sentence is named precisely (18–20) | Both sentences present; uncertainty or one artifact stated loosely (14–17) | Only one sentence, or an artifact named with no redesign, or the boundary without the crossing it forbids (8–13) | No boundary, or a measurement upgraded to a causal or population claim the design cannot buy (0–7) |
-| **Craft, ledger & abstract gate** (10) | On-format, on-time, URC abstract inside the boundary, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; abstract and ledger complete (7–8) | Missing pieces, a rushed walkthrough, or an abstract that drifts past the boundary (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Compass & pathway alignment** (20) | The pipeline implements exactly the declared analysis; the result answers the declared question in the declared form; the abstract stays inside the route's licence (18–20) | Declared analysis implemented; one link between the result and the declaration loose (14–17) | Undeclared extras feed the reported result, or the result drifts from the declared form (8–13) | The pipeline answers a different question than the project declared (0–7) |
+| **Evidence integrity & provenance** (20) | Data loaded from the documented M5 source; every reported number traces to a data cell and a line of code (18–20) | Traceable; one provenance link thin (14–17) | A dataset or number asserted without a locatable origin (8–13) | A source that does not exist, or a number with no path back to data (0–7) |
+| **Verification of AI-assisted parts** (25) | The known-answer test and the line review are both real and recorded; every AI-assisted step is ledgered with a named, non-vague verification; every judgment is defended in your words, not the tool's (22–25) | Both checks present; one verification vague or one step unlogged (18–21) | AI code used with the known-answer test or the line review missing (11–17) | AI output reproduced without any verification, or code in the pipeline you cannot explain (0–10) |
+| **Uncertainty & provisional boundary** (20) | The uncertainty statement is attached and read correctly; the provisional label is present; the abstract makes no promise the evidence cannot keep (18–20) | Uncertainty and label present; one stated loosely (14–17) | A point estimate with no uncertainty, or the provisional label missing (8–13) | The first run reported as a settled finding, or an abstract that overclaims past the route (0–7) |
+| **Craft, ledger & abstract gate** (15) | Versioned with its reason, on-format, on-time, gate cleared, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; abstract and ledger complete (10–12) | Missing pieces, a rushed clinic walkthrough, or an ungated abstract (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
-- A **fabricated or unretrievable source** — a cited measurement study or
-  instrument that does not exist or does not say what you claim — caps *Evidence
-  integrity & provenance* at Beginning.
-- An **untraceable number** — a descriptive quantity or interval with no path back
-  to the design or data that produced it — caps *Verification of AI-assisted
-  parts* at Beginning.
-- A **non-reproducing result** — a simulated or computed figure in your protocol
-  that does not rerun from the notebook it came from — caps *Verification of
-  AI-assisted parts* at Beginning.
+- A **fabricated or unretrievable source** caps *Evidence integrity &
+  provenance* at Beginning.
+- An **untraceable number** — a reported figure with no path back to your data —
+  caps *Verification of AI-assisted parts* at Beginning.
+- A **non-reproducing result** — a reported number that does not rerun from your
+  seeded notebook — caps *Verification of AI-assisted parts* at Beginning.
 - A **missing AI Research Ledger entry** scores *Craft, ledger & abstract gate*
   **0** and the submission is **returned** unread until it is supplied.
 
@@ -255,35 +231,36 @@ days of feedback recovers up to half the lost points.
 
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
-- Any instrument, measurement study, or source you cite that turns out not to
-  exist or not to say what you claim: *Evidence integrity & provenance* scores
-  Beginning regardless of the rest — the course's evidence-integrity rule with
-  teeth.
-- A measurement reported as a causal effect, or as a population claim your design
-  never reached: the *Uncertainty & artifact boundary* criterion scores Beginning
-  regardless of the rest.
+- Any dataset or source you cite that turns out not to exist or not to be what
+  you claim: *Evidence integrity & provenance* scores Beginning regardless of
+  the rest — the course's evidence-integrity rule with teeth.
+- A reported number that does not rerun from your seeded notebook:
+  *Verification of AI-assisted parts* scores Beginning — a number you cannot
+  regenerate is not evidence.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 
 ## Common Pitfalls
 
-1. **The randomized-therefore-causal slip.** Writing "I randomized the stimulus,
-   so this is a causal effect" when your target is a standing property of the
-   world. Random assignment here is a measuring trick. Name the descriptive
-   quantity your design reports, and keep the verb inside it.
-2. **The DAG that hides the artifact.** Drawing a tidy stimulus-to-response arrow
-   and stopping. That funnel teaches nothing. The DAG earns its place only when it
-   draws the dashed **demand-effect** and **instrument-effect** arrows and your
-   redesign confronts them by name.
-3. **The abstract that outruns the protocol.** Writing a URC abstract that
-   promises a causal finding or a population claim while your protocol licenses
-   only a descriptive quantity for the units you measure. The abstract must sit
-   inside the Component 4 boundary; an abstract that overclaims does not clear the
-   internal gate.
+1. **The pipeline that does more than you declared.** Running several
+   specifications "to see what happens," then reporting the one that looks
+   best. The whole value of declaring first is that the method cannot be chosen
+   to flatter the answer. Implement the declared analysis and nothing else; any
+   exploration that feeds the reported result undoes your pre-commitment.
+2. **The number pasted from a chat.** An estimate that lives in an AI reply,
+   with no cell that produces it. If the notebook does not compute it on a
+   rerun, it is not your result, and it caps your Verification score. Put every
+   reported figure behind a line of code, and run the known-answer test on the
+   code that produced it.
+3. **The abstract that outruns the pipeline.** A URC abstract that promises a
+   causal finding, or a population claim, while your pipeline licenses a
+   provisional result for the units you analyzed. The abstract must sit inside
+   the claim your evidence supports; an abstract that overclaims does not clear
+   the internal gate.
 
 ---
 
-*Previous: [M05 — Causal Identification Strategy or Causal-Language Boundary](milestone_05_causal_identification.md) ·
-Next: [M07 — Declared Analysis Protocol](milestone_07_declared_analysis_protocol.md) —
-your gated measurement design becomes the exact, named procedure that turns the
-data it produces into your project's reported number.*
+*Previous: [M05 — Data and Measurement Governance](milestone_05_causal_identification.md) ·
+Next: [M07 — Clean-Restart Verified Analysis](milestone_07_declared_analysis_protocol.md) —
+your provisional first result faces a fresh runtime, and either every number
+reproduces or the discrepancy becomes the finding.*

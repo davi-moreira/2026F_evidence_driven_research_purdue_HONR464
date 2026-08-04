@@ -1,7 +1,7 @@
 # Storyboard Protocol — M29 (Mon Nov 2)
 
 *The method for building your poster's storyboard before you build the poster.
-The read-path decision it produces underlies your poster draft 1
+The read-path decision it produces underlies your poster adaptation at M10
 ([milestone_09 — Poster Draft 1 and Research Audit](../../_research_project/2026Fall/milestone_09_poster_draft_research_audit.md))
 and the poster you lock at
 [milestone_10 — Final Poster Lock](../../_research_project/2026Fall/milestone_10_final_poster_lock.md).
@@ -19,7 +19,7 @@ expensive to change in production week.
 ## Materials
 
 - The storyboard grid (one printed sheet per person — the template below).
-- Your M9 poster-draft evidence: every table, figure, and number you produced.
+- Your M9 research-note v0 evidence: every table, figure, and number your note and poster content brief carry.
 - Your inquiry declaration (`project/templates/INQUIRY_DECLARATION.md`),
   open to §4–5 (what your compass position can and cannot establish).
 - A pen for you; a second colored pen for whoever reads your read-path.

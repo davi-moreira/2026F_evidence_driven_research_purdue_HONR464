@@ -15,9 +15,9 @@ artifact, your project notebook, and the book's current Studio page.
 | 6 | **Calibrate** | 2′ | Defend one element that LOOKED suspicious but is actually sound, and say how you confirmed it. This move is scored — false alarms cost you. |
 | 7 | **Accuracy lock** | 2′ | The SRL synthesizes the room's findings; the instructor confirms the seeded flaw and states the corrected version. Correct your record now, before anything enters a ledger. |
 
-**After class (2 minutes, not homework):** carry one line into your own
-project — the same check, applied to your own current artifact — and log
-it in your AI Research Ledger.
+**In the session's transfer block (the closing minutes, in class):** carry
+one line into your own project — the same check, applied to your own
+current artifact — and log it in your AI Research Ledger before you leave.
 
 Two standing rules:
 

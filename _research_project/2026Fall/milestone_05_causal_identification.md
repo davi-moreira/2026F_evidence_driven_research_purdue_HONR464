@@ -25,17 +25,15 @@ instructions and rubrics live one page per milestone, like this one.
 ## What to Submit on Brightspace
 
 Due: **Friday, October 2, 11:59 PM** (you work on it at that Friday's studio).
-As you assemble the deliverable, run the **Causal Identification Skeptic**
-GenAI Studio reviewer (recommended) against your identification argument and
-patch the weakest point it finds. The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m05_causal_identification.pdf`** *or* a shared Colab notebook link | The six-part deliverable below: your causal question and estimand, your confounding causal diagram (image), your identification argument **or** your honest causal-language boundary, the Causal Identification Skeptic critique with your written resolutions, your one recompute, and your AI Research Ledger rows. This is the graded artifact. |
+| 1 | **`lastname_m05_data_governance.pdf`** *or* a shared Colab notebook link | The six parts below: your acquisition and provenance record with the permission recheck, your measurement plan (the concept → construct → indicator table with its reliability and validity case), your column minimization with the re-identification check, the Contract revision that settles your operationalization, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 19, ch. 20** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
-open it, and that the causal-diagram figure renders when the notebook is run.
+open it, and that the provenance and measurement tables render when the
+notebook is run.
 
 ---
 
@@ -60,213 +58,211 @@ Dossier.
 
 ## Purpose
 
-Last week you audited what your data can plainly **describe**, and you drew the
-boundary that description cannot cross. This week you meet the hardest word in
-research: **because**. A **causal question** asks what would change if you
-intervened, not just what goes with what. This milestone decides, honestly and
-in writing, whether your project earns that word.
+Last week you declared your pathway. This week you govern what it runs on.
+**Data and measurement governance** is written control over your evidence's
+raw material: where every dataset comes from, what you are permitted to do
+with it, and whether each measure captures the concept you claim it does.
+Results inherit the quality of the data and the measures beneath them, and no
+later check can repair what goes wrong here. The work is deliberately
+unglamorous. It is also where more projects quietly fail than anywhere else
+in the course.
 
-You do one of two things, and you do exactly one of them for real:
+Governance starts before the first column, with the question no earlier week
+settled: how do data actually reach you? You answer it in writing, as an
+**acquisition route** — the declared path by which your data come to exist,
+decided by your M3 permission status. Cleared means you name your frame and
+plan for the units you cannot reach. Pending means you build and wait without
+touching people. No permission means aggregates, open data, or simulation,
+with the cost stated. Then every source gets **provenance**, the documented
+origin of a dataset: who produced it, how, when, and under what terms.
+"Downloaded from the county election office's results portal, open-data
+licence, October 1" is provenance; "found a CSV online" is not.
 
-- If your setting gives you leverage — an argument that your comparison isolates
-  the effect and not something else — you write an **identification argument**
-  and hand it to a skeptic to attack.
-- If it does not, you write the **causal-language boundary**: the sentence that
-  keeps your claim on the honest *associated with* side of the line, and names
-  the confounder you cannot rule out.
+The second half settles what M3 deliberately left provisional: your
+**operationalization**, the exact path from each concept you care about to
+the indicator you actually record. You climb the concept → construct →
+indicator ladder for every measured concept. You check **reliability**,
+whether your instrument reads consistently, on its items. You argue
+**validity**, whether your scores support the interpretation you put on them,
+as a property of interpretation and use rather than a stamp on the
+instrument. And because a changed measure changes what your estimand refers
+to, the settled operationalization ships as a new Contract version.
 
-Both outcomes are passing outcomes. What is *not* passing is **design mimicry**:
-borrowing the vocabulary of a causal method to decorate a comparison whose one
-untestable assumption was never stated or probed. Writing "difference-in-
-differences" does not make parallel trends true; calling something a "natural
-experiment" does not make the assignment as-if random. The word *because* is
-earned by an argued and probed assumption, never by the name of a method.
-
-> **A question that often comes up here:** *"What if my project turns out to be
-> descriptive or predictive, not causal at all?"* Then your deliverable is the
-> causal-language boundary, and writing it well is a full-credit answer. Most
-> honors projects this semester will land here, and that is correct, not a
-> shortfall. The failure this milestone catches is not "my design is only
-> descriptive." It is "my design is only descriptive, but my sentences quietly
-> say *because* anyway." Catch that in your own draft before a skeptic does.
+> **A question that often comes up here:** *"My data have not arrived yet, or
+> I have no permission to collect any. How do I govern data I do not have?"*
+> You govern the route your permission status assigns. Pending means you
+> pilot the instrument on yourself and write your analysis code against
+> simulated data of the shape you expect, while you wait. No authority to ask
+> means the no-permission route, which reaches every method in this course:
+> published aggregate statistics, an openly licensed dataset with no
+> individual records, or data you simulate yourself. Write down which you
+> chose and what it costs you. A simulated dataset can demonstrate a method,
+> but it cannot support a claim about the world.
 
 ## Components
 
-Draft every piece yourself first. AI may critique what you wrote afterward, and
-the Causal Identification Skeptic is a recommended reviewer, but the strategy you
-submit has to be reasoned by you. Whether your design earns a causal claim is a
-never-delegate decision.
+Choosing measures and judging data quality is a never-delegate decision. Your
+AI assistant can hunt licences, draft tables, and attack your privacy check,
+but whether a measure measures your concept is a judgment you own. One trap
+governs the whole week: an assistant can describe a dataset it has never
+seen, fluently and wrongly, so every AI claim about your data is verified
+against the file itself.
 
-### 1. The causal question and estimand
+### 1. The acquisition and provenance record
 
-State three things, one line each.
+Settle acquisition first, in writing, before anything below it.
 
-- **Treatment** — the thing being tested, the intervention whose effect you want
-  (for example, *making the Hajj pilgrimage*, *joining a mentoring program*).
-- **Outcome** — what you measure afterward (for example, *views toward
-  outsiders*, *first-year retention*).
-- **Estimand** — the exact quantity you are after, written down before you
-  compute anything: the **average causal effect** of the treatment on the
-  outcome, the average of Y(1) minus Y(0) across your group. Y(1) is the outcome
-  with the treatment, Y(0) the outcome without it. Naming the estimand keeps you
-  honest about what number would actually answer your question.
+- **The route, declared.** Which of the three routes your M3 permission
+  status assigns, and why. **Cleared** (or formal determination granted):
+  name your sampling frame, how you will reach those units, and what you
+  will do about the ones you cannot reach; non-response is a design fact,
+  not an accident. **Pending**: do everything that does not touch people —
+  build and pilot the instrument on yourself, write the analysis code
+  against simulated data of the expected shape, and wait. **No authority to
+  ask, or not authorized**: take the no-permission route and state its cost.
+- **Provenance for every source.** One entry per dataset and per borrowed
+  number: who produced it, how, when, and under what terms — the licence or
+  terms of use, named, not assumed. Open and read the primary source behind
+  your headline claim, not a summary of it.
+- **The permission recheck.** Hold your M3 determination against the data as
+  they actually arrived, not as you planned them. Data that arrive
+  differently from the plan can carry permissions the plan did not cover.
+  Declare one outcome: still cleared, or what changed and what you did
+  about it.
 
-Then, in one sentence, name the **counterfactual** at the heart of the claim:
-the outcome that would have happened under the choice a treated unit did *not*
-make, which you never observe. This is the **fundamental problem of causal
-inference**, and naming it is what forces the rest of the deliverable.
+### 2. The measurement plan
 
-### 2. The confounding causal diagram
+Climb the **concept → construct → indicator** ladder for every concept your
+analysis measures, one table row each.
 
-Draw the arrows among your **treatment**, your **outcome**, and the one
-**confounder** you most fear. A **confounder** is a third factor that pushes on
-*both* who gets the treatment and the outcome (for example, a health-conscious
-lifestyle drives both a coffee habit and a longer life). When it points into
-both, it opens a **back door**: a path connecting treatment and outcome that
-runs through the confounder instead of through a real effect, manufacturing
-correlation that is not cause.
+- **The ladder itself.** Concept (the abstract idea), construct (the
+  specific, targetable version of it), indicator (the concrete thing you
+  record). Each rung must visibly narrow the one above it, and the **gap**
+  between construct and indicator is named, not smoothed over.
+- **A meaning sentence per number.** For each indicator, one sentence saying
+  what a single recorded value actually asserts (for example, *"a 4 on this
+  item asserts that this respondent, on this day, placed their floor
+  community at 4 of 5 on belonging"*). If you cannot write the sentence, you
+  do not yet know what your number means.
+- **Reliability, checked on items.** **Reliability** is whether your
+  instrument reads consistently. Check it on the instrument's items —
+  agreement among the items of a scale, or repeated readings of the same
+  unit — never by splitting your respondents into halves and comparing
+  group summaries, which measures sampling, not your instrument. Plan one
+  reliability check you can actually run on the evidence you have.
+- **Validity, argued as interpretation and use.** **Validity** is whether
+  your scores support the interpretation you put on them, for the use you
+  put them to. It is not a stamp the instrument carries. State the
+  interpretation, state the use, and name where the construct–indicator gap
+  could break them.
 
-Your diagram must show, at minimum: the arrow from treatment to outcome you want
-to estimate, and at least one confounder with arrows into *both* treatment and
-outcome. That double arrow is the whole reason the tool exists. It names the
-**selection into treatment** — the process that decided who got treated — that
-your identification argument must close or your boundary must confess.
+### 3. Column minimization and the re-identification check
 
-Submit the diagram as an **image** (a clear hand drawing photographed, or the
-notebook-generated figure from the studio notebook, edited to your project). A
-diagram that draws only the treatment-to-outcome arrow and hides the confounder
-has skipped the reason you drew it.
+Govern what you keep, not just what you gather.
 
-### 3. The identification argument — OR — the honest causal-language boundary
+- **Minimize against the declared analysis.** **Data minimization** means
+  keeping only the columns your declared analysis needs. Hold every column
+  in your dataset against the analysis your Contract declares; a column
+  with no analysis behind it is risk carried for nothing. Record what you
+  dropped or coarsened.
+- **Run the re-identification check.** A **re-identification check** asks
+  whether someone could plausibly combine your kept columns to pick out an
+  individual. A table with no names can still identify a person when a few
+  columns intersect: hall, major, and hometown can be one student. Report
+  the check's result and what you changed because of it.
 
-Do exactly one of these, for your real project.
+### 4. The Contract revision
 
-**If you have leverage, write the identification argument (three sentences).**
-An **identification argument** is your written reason that a comparison recovers
-a causal effect, not a formula you apply. Name your leverage from what the week
-taught, and it must be one you can defend:
+Your operationalization was provisional at M3 by design. It is provisional no
+longer. Issue the settled measurement plan as a new, dated, numbered version
+of your **Research Contract**, with a reason a reader could use to
+reconstruct your thinking. Any measurement change is a Contract version,
+because it changes what your estimand refers to. Two lines are mandatory in
+the revision:
 
-- **Selection on observables** — you adjust for the confounders you can *see* and
-  argue no unobserved confounder remains. Its assumption is exactly that: no
-  hidden confounder. "We controlled for everything" is a claim to distrust,
-  because controlling for the confounders you happen to observe is not the same
-  as identifying the effect.
-- **A natural experiment** — a chance-like force outside your control assigned the
-  treatment, so assignment is **as-if random** and treated and untreated are
-  comparable (a lottery, a birthday cutoff).
-- **Difference-in-differences (DiD)** — compare the change over time in a treated
-  group to the change in an untreated group. **Untestable assumption: parallel
-  trends** — absent the treatment, the two groups would have moved in parallel.
-- **Regression discontinuity (RDD)** — treatment switches on at a sharp **cutoff**,
-  so units just below and just above are nearly identical. **Untestable
-  assumption: as-if random at the cutoff** — nothing else jumps at the line and
-  units cannot precisely nudge their own score across it.
-- **Instrumental variables (IV)** — a **nudge** (an instrument) pushes some units
-  toward treatment but reaches the outcome only through treatment. **Untestable
-  assumption: exclusion** — the nudge touches the outcome through treatment
-  alone, with no back door of its own.
+- **The measurement fields, settled.** The indicator, its meaning sentence,
+  and the planned reliability check, written into the Contract.
+- **Measurement error as uncertainty.** State measurement error alongside
+  your sampling uncertainty, not instead of it. A perfectly computed
+  interval around a poorly measured quantity is still a poorly measured
+  quantity.
 
-Your three sentences: (1) the estimand you want; (2) why your comparison is a
-valid counterfactual, naming the design and its **one untestable assumption**;
-(3) what therefore follows, stated with uncertainty. An **untestable
-assumption** is a claim the design depends on that the data can never confirm,
-only make plausible. Name how a skeptic would attack it.
+### 5. AI Research Ledger rows
 
-**If you have no leverage, write the causal-language boundary (one sentence).**
-The **causal-language boundary** is the point past which your evidence stops
-earning *because* and must switch to *associated with*. Write: "My design does
-not identify an effect because [the confounder I cannot rule out], so my claim
-stops at *associated with*." This is a finding, not a failure. It tells you which
-assumption you would still have to defend, or that your claim belongs on the
-*associated with* side of the line.
-
-### 4. The Causal Identification Skeptic critique and your resolutions
-
-The **Causal Identification Skeptic** (a GenAI Studio role) is a **recommended**
-reviewer for this milestone. Paste your identification argument or your boundary
-to it and ask it to attack. It returns a ranked **Threats to identification**
-list and any **Language-boundary flags**. Do not accept the attack as
-automatically right, and do not let it decide your design; it supplies the
-attack, you supply the defense.
-
-Then **answer every ranked threat in writing.** For each threat, either show why
-your design rules it out (a lottery or a cutoff you already have) or acknowledge
-it as a limitation you carry. An unanswered top threat is an open hole in your
-claim. These threats and your resolutions are the required M5 content of your AI
-Research Ledger (a critique-task row), and they are what the Skeptic
-review continues.
-
-### 5. One recompute
-
-Name the single number in your deliverable that you would **recompute yourself**
-to check any AI's or collaborator's estimate, and say exactly how. A **recompute**
-is an independent redo by a second route: the same difference computed by
-hand-filtering each group and subtracting, an interval recomputed from the raw
-numbers, an adjusted estimate rebuilt one step at a time. Every reported number
-needs a path back to the data that produced it. **Code running without errors is
-not the same as code being correct** — a cell can execute cleanly and still
-compute the wrong quantity.
-
-### 6. AI Research Ledger rows and dossier update line
-
-Every use of AI in building this deliverable gets a row in your **AI Research
-Ledger** (the eight-field table: task delegated · tool used · prompt · output
-summary · decision · verification method · remaining concern · responsible
-researcher). Red-teaming your causal sentence, having the Skeptic rank threats,
-and asking your AI to name a confounder you might have missed are all delegable
-tasks, and each one you delegated needs a row naming how you verified the result.
-"No AI used" is a legitimate entry if it is true.
+Every use of AI in building this record gets a row in your **AI Research
+Ledger** (the eight fixed fields: task delegated · tool used · prompt ·
+output summary · decision · verification method · remaining concern ·
+responsible researcher). Hunting a licence, drafting the provenance table,
+proposing indicator wordings, and red-teaming your re-identification check
+are all delegable tasks, and each one you delegated needs a row naming how
+you verified the result against the actual file or page. "No AI used" is a
+legitimate entry if it is true.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
+### 6. Dossier update line
+
 End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your MIDA declaration's **identification / assignment**
-component now carries a causal question, a confounding diagram, and either a
-defended identification argument or a written causal-language boundary. Name the
-file or section in your dossier where each now lives.
+Project Dossier**: your **data and measurement documentation** component now
+exists — acquisition route, provenance record, measurement specification,
+permission recheck, and the settled Contract revision. Name the file or
+section in your dossier where each now lives.
 
 ---
 
-## Submission Expectations
+## Definition of Done
+
+You are done when your submission carries all of the following. Use this as a
+pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Length** | The six-part deliverable + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
-| **Figure** | The confounding causal diagram as a legible image: the treatment-to-outcome arrow plus at least one confounder with arrows into both |
-| **Studio work** | Worked at the Friday studio (Oct 2) with your AI assistant; recommended Causal Identification Skeptic review logged; submitted the same day |
-| **Style** | Plain language; every technical term used as defined above; your language matched to the license your design actually holds |
-| **Filename** | `lastname_m05_causal_identification.pdf` (or a shared Colab link) |
+| **Acquisition route** | One of the three routes declared in writing (cleared / pending / no permission), with its reason and, where it applies, its stated cost |
+| **Provenance record** | One entry per dataset and borrowed number: who produced it, how, when, under what terms; the primary source behind your headline claim opened and read |
+| **Permission recheck** | The M3 determination held against the data as they actually arrived; one declared outcome |
+| **Measurement ladder** | Concept → construct → indicator for every measured concept; each rung narrows; the construct–indicator gap named |
+| **Meaning sentences** | One per indicator, saying what a single recorded value asserts |
+| **Reliability & validity** | One reliability check planned on items, never on split respondents; validity argued as interpretation and use |
+| **Minimization & re-identification** | Every kept column tied to the declared analysis; the re-identification check run and its result reported |
+| **Contract revision** | The operationalization settled and issued as a dated, numbered Contract version with a usable reason; measurement error stated alongside sampling uncertainty |
+| **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
+| **Dossier line** | The data and measurement documentation component located by file or section |
+| **Studio work** | Worked at the Friday studio with your AI assistant |
+| **Filename** | `lastname_m05_data_governance.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M05 |
 
 ---
 
 ## Grading Rubric (100 points)
 
-Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTURE.md`).
+Four bands on the course's five shared virtues
+(`planning/ASSESSMENT_ARCHITECTURE.md`).
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Causal-identification correctness** (compass/pathway alignment) (30) | Question, estimand, and confounding diagram correct; the identification argument names one real untestable assumption and how a skeptic attacks it, **or** the causal-language boundary is stated with the confounder it confesses; language matches the license held (26–30) | Argument or boundary correct; one assumption or one diagram arrow thin or under-argued (21–25) | Argument or boundary present but the untestable assumption unnamed, or the confounder missing from the diagram (13–20) | Design mimicry: a causal label or the word *because* with no stated, probed assumption; or a confounder-free diagram (0–12) |
-| **Evidence integrity & provenance** (20) | Every dataset, study, and number named is real and retrievable; the reader can trace each to its origin (18–20) | Real and traceable; one provenance link thin (14–17) | A claimed dataset, estimate, or study asserted without a locatable source (8–13) | A cited source, dataset, or figure that does not exist or does not say what you claim (0–7) |
-| **Verification of AI-assisted parts** (20) | Every AI-assisted step (Skeptic critique, confounder brainstorm, sentence red-team) has a ledger row with a named, non-vague verification method; the one recompute is stated with its route (18–20) | Ledger present; one verification method vague, or the recompute named but its route thin (14–17) | Ledger thin; AI outputs used but verification not named, or no recompute (8–13) | An AI output or number reproduced with no verification, or an identification argument written by AI and left unchecked (0–7) |
-| **Uncertainty & causal-language boundary** (20) | Uncertainty stated around the estimate; every ranked Skeptic threat answered in writing; the boundary between *because* and *associated with* drawn precisely and the language stays inside it (18–20) | Uncertainty and threats present; one threat answered loosely or one caveat stated loosely (14–17) | Some threats unanswered, or uncertainty asserted without the boundary it implies (8–13) | No uncertainty, an unanswered top threat, or causal language the design does not license (0–7) |
-| **Craft, ledger & communication** (10) | On-format, on-time, clear 90-second statement, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces or a rushed statement (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Governance correctness (provenance & measurement)** (30) | Acquisition route settled in writing; provenance complete for every source with its terms named; the measurement ladder narrows at every rung; reliability planned on items; validity argued as interpretation and use; minimization tied to the declared analysis and the re-identification check run (26–30) | All parts present; one rung, one source's terms, or one check thin (21–25) | A governance piece missing or malformed: reliability by respondent-splitting, columns kept with no analysis behind them, or provenance that stops at a link (13–20) | No acquisition route declared, or a measurement plan that never descends below the concept (0–12) |
+| **Evidence integrity & provenance** (20) | Every dataset, licence, and borrowed number is real and retrievable; the primary source behind your headline claim was opened and read; a reader can trace each entry to its origin (18–20) | Real and traceable; one provenance entry thin (14–17) | A dataset, licence, or number asserted without a locatable source (8–13) | A cited dataset, licence, or source that does not exist or does not say what you claim (0–7) |
+| **Verification of AI-assisted parts** (20) | Every AI claim about your data verified against the file itself; every ledger row's verification method named and non-vague (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used but the against-the-file check not named (8–13) | An AI description of your dataset, or an AI-asserted licence, pasted in and never checked against the file (0–7) |
+| **Uncertainty & measurement error** (20) | Measurement error stated alongside sampling uncertainty; the construct–indicator gap named with what it could cost the claim; the Contract revision versioned with a usable reason (18–20) | Error and gap present; one stated loosely, or the version reason thin (14–17) | Measurement error mentioned but not connected to the claim, or the gap declared closed by assertion (8–13) | No measurement-error statement, or a revision with no version and no reason (0–7) |
+| **Craft, ledger & communication** (10) | On-format, on-time; tables complete and readable; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces or a rushed record (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
-- **Design mimicry** — a causal claim carrying language its design does not
-  license, or a causal-method label with its untestable assumption never stated
-  or probed — caps *Causal-identification correctness* at Beginning.
-- A **fabricated or unretrievable source** caps *Evidence integrity &
-  provenance* at Beginning.
-- An **untraceable number** — a figure with no path back to your data — caps
-  *Verification of AI-assisted parts* at Beginning.
-- A **non-reproducing result** — a headline number that does not rerun from the
-  work behind it — caps *Verification of AI-assisted parts* at Beginning.
-- A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
-  **0** and the submission is **returned** unread until it is supplied.
+- A **fabricated or unretrievable source** — a dataset, licence, or number
+  that does not exist or does not say what you claim — caps *Evidence
+  integrity & provenance* at Beginning.
+- An **unchecked AI description** — any claim about your data taken from an
+  assistant and never verified against the file — caps *Verification of
+  AI-assisted parts* at Beginning.
+- A **missing AI Research Ledger entry** scores *Craft, ledger &
+  communication* **0** and the submission is **returned** unread until it is
+  supplied.
+
+**Blocking gate:** no work at or after M3 proceeds past a **not-authorized**
+permission determination. A record that does is returned ungraded until the
+determination is resolved; this is a gate, not a deduction.
 
 **Revision:** eligible under the standing policy — a revised submission within 7
 days of feedback recovers up to half the lost points.
@@ -275,38 +271,37 @@ days of feedback recovers up to half the lost points.
 
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
-- Any dataset, study, or number you cite that turns out not to exist, not to say
-  what you claim, or not to rerun: the relevant integrity or verification
-  criterion scores Beginning regardless of the rest — the course's evidence-
-  integrity rule with teeth.
-- A causal claim whose one untestable assumption is never stated or probed
-  (design mimicry): *Causal-identification correctness* scores Beginning.
+- Any dataset, licence, or source you cite that turns out not to exist or not
+  to say what you claim: *Evidence integrity & provenance* scores Beginning
+  regardless of the rest — the course's evidence-integrity rule with teeth.
+- Work that proceeds past a **not-authorized** permission determination is
+  returned ungraded until the determination is resolved — the blocking gate,
+  not a point deduction.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 
 ## Common Pitfalls
 
-1. **Design mimicry — the label without the argument.** Writing "natural
-   experiment," "difference-in-differences," or "regression discontinuity" over a
-   comparison whose one untestable assumption you never stated. The vocabulary is
-   not the argument. A skeptic reads past the label straight to the assumption,
-   and so should you: name parallel trends, the clean cutoff, or exclusion, and
-   say how it could fail.
-2. **"We controlled for everything."** Treating adjustment for the confounders you
-   happen to *observe* as if it identified the effect, when an unobserved
-   confounder still opens the back door. Adjustment works only for the confounder
-   you can see. Name the one variable whose absence would break your
-   identification, and say how you would know you were missing it.
-3. **The AI-written identification argument.** Asking your AI to judge whether your
-   design earns *because*, or pasting a fluent caveat you did not reason to.
-   Judging identification is the whole skill this milestone teaches, and it is
-   exactly what an AI fakes best. Draft the argument or the boundary yourself,
-   then use the Skeptic to attack it, and log both.
+1. **The dataset described by an assistant that never saw it.** Asking AI
+   what a dataset contains, what its licence allows, or how a variable is
+   coded, and writing the answer down. An assistant can describe a dataset it
+   has never seen, in confident detail. Open the file: count the rows, read
+   the codebook, read the licence page. Then log how you checked.
+2. **Reliability by splitting respondents.** Splitting your sample into
+   halves, comparing the two groups' summaries, and calling the agreement
+   reliability. That measures sampling variation, not your instrument.
+   Reliability lives in the items: agreement among the items of a scale, or
+   repeated readings of the same unit.
+3. **The keep-everything table.** Keeping every column you managed to collect
+   "just in case." Every kept column is a promise to protect it and a surface
+   for re-identification, and a column with no declared analysis behind it
+   buys you nothing. Minimize against the Contract, run the re-identification
+   check, and record what you dropped.
 
 ---
 
-*Previous: [M04 — Observational Descriptive Design Audit](milestone_04_observational_descriptive_audit.md) ·
-Next: [M06 — Experimental Measurement or Data-Acquisition Protocol + URC Abstract internal gate](milestone_06_experimental_measurement_protocol.md) —
-your defended causal line meets the design that would let you assign the
-treatment yourself, or the protocol that would bring your observational data
-into being.*
+*Previous: [M04 — Pathway Declaration and Mandated Contrast](milestone_04_observational_descriptive_audit.md) ·
+Next: [M06 — First Executable Analysis + URC Abstract Internal Gate](milestone_06_experimental_measurement_protocol.md) —
+your governed data and settled measures meet the code that executes your
+declared analysis and produces your first result, with its uncertainty
+attached.*

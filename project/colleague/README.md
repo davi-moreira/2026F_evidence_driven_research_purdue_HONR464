@@ -20,10 +20,13 @@ then apply the same check to your own project before it needs it.
 You learn to verify by verifying. The research you will do after this
 course arrives exactly like your colleague's work does: plausible,
 confident, mostly right, and wrong somewhere that matters. Studying flawed
-work with the errors found and fixed is one of the best-documented ways to
-learn a skill deeply — and it trains the one habit this course cares most
-about: **never trusting an output you have not checked, including your
-own.**
+work with the errors found and fixed has strong experimental support in the
+learning sciences (the erroneous-worked-examples literature — for example
+Große & Renkl 2007, *Learning and Instruction*; McLaren, Adams & Mayer
+2015, *IJAIED*; full verified citations in
+`planning/COURSE_REFRAME_OPTIONS.md`) — and it trains the one habit this
+course cares most about: **never trusting an output you have not checked,
+including your own.**
 
 Three ground rules keep the device honest:
 
