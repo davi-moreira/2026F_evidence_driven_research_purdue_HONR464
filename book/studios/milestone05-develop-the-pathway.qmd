@@ -1,0 +1,76 @@
+# Milestone 5: Your pathway, declared {.unnumbered}
+
+::: {.callout-warning .review-pending title="Under development"}
+This milestone chapter is part of a book in active development and has not
+yet been through the author's review. Content may change as the
+review advances.
+:::
+
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio05_develop_the_pathway.ipynb){target="_blank"}
+
+**This chapter closes [Studio 5: Develop the pathway](studio05-develop-the-pathway.qmd).** Its lessons each ended at **It is your turn**; what you wrote there arrives here as working material, and this is where the pieces become one artifact you can defend.
+
+**What this milestone produces.** Research Contract v1: objective by target and reach by data strategy by warrant, with the pathway declared and its limits written before any result exists.
+
+## What you bring
+
+Check you are carrying each piece before you start. If one is missing, go back and work that lesson's **It is your turn** first; the practice below assumes it.
+
+- [Lesson 13 — Observational Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/11-observational-descriptive-research.html): either your four boxes and selection diagram, if this is your pathway, or the classification drill that rules it out.
+- [Lesson 14 — Observational Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/12-observational-causal-research.html): either your causal diagram with its leverage named and priced, or the drill that shows why this road is not yours.
+- [Lesson 15 — Experimental Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/13-experimental-descriptive-research.html): either your revealed-characteristic estimand with its demand and instrument threats named, or the drill run on your own question.
+- [Lesson 16 — Prediction and Generalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/14-prediction-and-generalization.html): either your signed four-part forecasting contract with its boundary, or the plain line saying prediction is not your question.
+- [Lesson 17 — Experimental Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/15-experimental-causal-research.html): either your treatment, outcome, and potential outcomes with the nearest threat named, or the drill plus the confounder that blocks the causal reading.
+- [Lesson 18 — Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html): if your design has stages: the stage-by-stage map, its weakest link, and the one-sentence justification for keeping or cutting it.
+
+## The practice {#milestone}
+
+1. Use the route guide above to choose your pathway, then read that lesson and at least one that does not fit, so you can say why yours does.
+2. Declare your pathway and write the crossing that licenses it: what makes your comparison mean what you claim.
+3. Write the limits: what this pathway cannot establish no matter how clean the execution.
+4. Update your claim boundary to match the pathway, and mark the change as a new Contract version.
+
+## A version, not a pass
+
+Your milestone artifact is a dated, numbered **version** with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.
+
+## The four rails, here
+
+Four concerns cross every studio in this book. At this milestone they take these specific forms.
+
+- **Ethics, permissions, and data exposure.** A change of pathway can change your permission status; recheck rather than assume.
+- **Evidence, provenance, and reproducibility.** Name the prior work that used this pathway on a comparable question.
+- **AI activity, verification, and human decisions.** Ask an assistant to argue for a different pathway, then answer the argument yourself.
+- **Uncertainty, claim boundary, and revision history.** Different pathways carry different sources of uncertainty; name yours here.
+
+## Where this milestone sits
+
+You arrived carrying [Milestone 4: Your research contract, v0](milestone04-declare-and-diagnose.qmd). Milestone 6 puts data and measurement under governance so the declared pathway has something trustworthy to run on. The chain ends at [Milestone 12: Your release and next cycle](milestone12-release-next-cycle.qmd), where the versions close into your finished research artifact, released and defended.
+
+## What sends you back
+
+Realized data that will not support the declared pathway sends you back here before analysis, not after.
+
+## How this milestone is assessed
+
+Each row scores **0**, **1**, or **2**. **10 points total.**
+
+| # | Criterion | 0 | 1 | 2 |
+|---|---|---|---|---|
+| 1 | The milestone artifact exists in full, specific to your own project | absent, or generic text that would fit any project | present but incomplete, or specific in some parts and generic in others | complete and unmistakably about your project |
+| 2 | The milestone is written as a dated, numbered version with its reason | no version, or a version with no reason given | versioned, but the reason is decorative rather than an account of what changed | versioned with a reason a reader could use to reconstruct your thinking |
+| 3 | Every judgment in the artifact is defended by you, not asserted by a tool | conclusions appear with no reasoning, or reproduce a tool's wording | reasoning present but thin where the decision was hardest | each judgment carries a reason you could defend under questioning |
+| 4 | The four rails are carried in the form this studio requires | one or more rails absent where this studio required them | all rails present but one is nominal | every rail addressed in the form this studio requires |
+| 5 | The milestone's own product is present and defensible: Research Contract v1: objective by target and reach by data strategy by warrant, with the pathway declared and its limits written before any result exists | the milestone's own product is missing | present but would not survive a careful question | present and defensible as stated |
+
+::: {.callout-important title="Blocking gate"}
+No work at or after Studio 4 proceeds past a not-authorized determination. This is not scored and cannot be averaged away.
+:::
+
+
+## Your workbook
+
+Open the workbook with the badge above. It walks these steps with a cell for
+each one, ends by writing your milestone version with its reason, and adds
+the rows this studio contributes to your AI Research Ledger and your Research
+Dossier.

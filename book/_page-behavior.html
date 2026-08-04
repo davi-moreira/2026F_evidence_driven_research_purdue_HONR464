@@ -1,0 +1,37 @@
+<script>
+// Two page behaviors for every book page:
+//
+// 1. Every hyperlink in the page body opens in a new tab, so the book never
+//    navigates away from the reader's place. Navigation chrome (sidebar,
+//    TOC, breadcrumbs, next/previous) and same-page anchors keep native
+//    behavior.
+// 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
+//    demote it to <h2> so the chapter title stays the page's only h1.
+(function () {
+  var main = document.getElementById("quarto-document-content");
+  if (!main) return;
+  var links = main.querySelectorAll("a[href]");
+  for (var i = 0; i < links.length; i++) {
+    var a = links[i];
+    var href = a.getAttribute("href");
+    if (!href || href.charAt(0) === "#") continue;
+    if (href.lastIndexOf("mailto:", 0) === 0) continue;
+    if (a.closest("nav")) continue;
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "noopener");
+  }
+  var bibSection = main.querySelector("section#bibliography");
+  if (bibSection) {
+    bibSection.classList.remove("level1");
+    bibSection.classList.add("level2");
+    var h1 = bibSection.querySelector("h1");
+    if (h1) {
+      var h2 = document.createElement("h2");
+      h2.className = h1.className;
+      if (h1.id) h2.id = h1.id;
+      while (h1.firstChild) h2.appendChild(h1.firstChild);
+      h1.parentNode.replaceChild(h2, h1);
+    }
+  }
+})();
+</script>
