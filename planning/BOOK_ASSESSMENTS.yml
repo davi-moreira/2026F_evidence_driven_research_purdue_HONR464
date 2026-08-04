@@ -500,11 +500,11 @@ stations:
           2: "every rail addressed in the form this studio requires"
       - id: adapt-and-defend.defense-ready-v1.station-specific
         applies_when: {}
-        text: "The milestone's own product is present and defensible: One chosen format adaptation - poster, talk, brief, or another - plus a defense rehearsal record. This is not yet public release"
+        text: "The milestone's own product is present and defensible: A short venue contract, one chosen-format adaptation that satisfies it - poster, talk, brief, or another - a content map tracing every load-bearing claim and number, and a defense rehearsal record. This is not yet public release"
         levels:
-          0: "the milestone's own product is missing"
-          1: "present but would not survive a careful question"
-          2: "present and defensible as stated"
+          0: "contract, adaptation, content map, or rehearsal absent, or a load-bearing claim exceeds its evidence"
+          1: "all pieces present, but one load-bearing number, boundary, accessibility path, or mode test is incomplete"
+          2: "the adaptation satisfies its declared contract, every load-bearing claim and number is traceable, uncertainty travels with the claim, and the rehearsal records defensible responses plus the unresolved work"
     gates:
       - id: permission-status-honoured
         blocking: true
@@ -588,16 +588,20 @@ stations:
           2: "every rail addressed in the form this studio requires"
       - id: release-next-cycle.release-audit-v1.station-specific
         applies_when: {}
-        text: "The milestone's own product is present and defensible: A release audit, your final dossier, an explicit stopping rule, and your next-study agenda"
+        text: "The milestone's own product is present and defensible: A release audit recording release or withhold-pending-a-named-repair, your final dossier with a complete manifest, an explicit stopping rule, and your next-study agenda"
         levels:
-          0: "the milestone's own product is missing"
-          1: "present but would not survive a careful question"
-          2: "present and defensible as stated"
+          0: "release claimed despite a stale cold run or a blocking item, or the dossier manifest or next-study agenda is absent"
+          1: "components present, but one audit disposition is unsupported or the next study is generic"
+          2: "every disposition is traceable, blocking items are honored, the manifest is complete or explicitly accounts for absences, and the next study follows from a documented unresolved issue"
     gates:
       - id: permission-status-honoured
         blocking: true
         scored: false
         text: "No work at or after Studio 4 proceeds past a not-authorized determination."
+      - id: package-current-with-cold-run
+        blocking: true
+        scored: false
+        text: "Release requires the package to match its Studio 11 cold run; any change since that run means withhold pending a repeat."
 
 # Exemplar pairs (S3) remain unauthored: each needs a shared task, two linked
 # artifacts, criterion-level annotations, and full provenance including consent

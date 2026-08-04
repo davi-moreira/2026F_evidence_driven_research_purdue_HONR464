@@ -482,34 +482,49 @@ stations:
       Adapt one defensible claim to one audience and rehearse defending it
       against real questions.
     produces: >-
-      One chosen format adaptation - poster, talk, brief, or another - plus a
-      defense rehearsal record. This is not yet public release.
+      A short venue contract, one chosen-format adaptation that satisfies
+      it - poster, talk, brief, or another - a content map tracing every
+      load-bearing claim and number, and a defense rehearsal record. This
+      is not yet public release.
     genre_guide: |
-      Your venue picks your format, and the lessons cover every route to it.
-      Read the row that fits, then work the lessons it names.
+      Start with a **venue contract**: your written record of what the
+      audience will receive and what the venue allows. Name the audience,
+      the medium, the length or space limit, the required elements, the
+      accessibility needs, the submission rule, and the question channel.
+      One line each is enough. Example: a five-minute recorded talk, six
+      slides, captions required, no live questions.
 
-      | If your venue asks for | build it with | then audit and rehearse with |
+      Every format carries the same research core: the bounded claim, the
+      evidence that earns it, uncertainty and limitations, traceable
+      numbers and citations, and whatever disclosure or permission
+      information the audience needs. The format only decides where those
+      pieces live. Choose the row that fits your venue, work the lessons it
+      names, and when you borrow a technique from another row, name the
+      technique rather than claiming the whole lesson transfers.
+
+      | If your venue asks for | build it with | then test and rehearse |
       |---|---|---|
       | a poster | Research Posters | Poster Criticism, then Difficult Questions |
-      | a talk or pitch | Research Pitches; slides follow the poster lesson's figure rules | Poster Criticism's audit, run on your slides, then Difficult Questions |
-      | a written brief or one-pager | Research Posters' one-figure discipline, in page form | Poster Criticism's audit, run on the page, then Difficult Questions |
-      | another format | the nearest row above, and name what transfers | the same audit, then Difficult Questions |
+      | a live talk or pitch | Research Pitches | Difficult Questions, spoken |
+      | a talk with slides | Research Pitches; every quantitative visual follows the poster lesson's figure rules | Difficult Questions, spoken |
+      | a written brief or one-pager | your Studio 9 note compressed to the contract, with the poster lesson's figure rules for any figure | Difficult Questions, in writing |
+      | another format | the venue contract plus the nearest row, naming what transfers | Difficult Questions, in the venue's own mode |
 
-      The poster is this book's fully worked example because it is the
-      hardest case: one surface, no narrator, every number exposed. The
-      audit taught in Poster Criticism (claim against boundary, hits ranked
-      by how far the error travels, three lenses, one revision, the lock
-      call) transfers to any format that carries your claim. Difficult
-      Questions is for everyone: whatever you build, you will answer for it.
+      The poster lessons are this book's fully worked example: one surface,
+      no narrator, every number exposed. Difficult Questions is for
+      everyone. If your venue has no live questions, the rehearsal still
+      happens: have a peer or an AI reviewer send you hard questions in
+      writing, and record defend, concede, or do-not-know for each.
     steps:
-      - Choose your format with the guide above and work the lessons its row names, then say what your claim must lose to fit that format.
-      - Build the adaptation, keeping every number traceable to the claim-evidence table.
-      - Rehearse the defense against the three hardest questions you can construct.
-      - Record which questions you could not answer; those are your next studio's agenda.
+      - Write your venue contract using the guide above, then say what your claim must lose to fit that format.
+      - "Build a content map before you build the artifact: where the claim, the evidence, the boundary, the uncertainty, and the disclosure will each live."
+      - Build the adaptation, keeping every load-bearing number, figure, and citation traceable to the claim-evidence table.
+      - "Test it in its actual mode: scan the poster at gallery distance, time the talk aloud, advance the deck without narrating, or hand the page to a cold reader."
+      - Rehearse the defense against the three hardest questions you can construct, and record which you could not answer; those are your next studio's agenda.
     rails:
       ethics: An adaptation that drops the limitations is not a shorter version, it is a different claim.
       evidence: Every figure that travels carries its verification with it.
-      ai: Use AI to generate hostile questions; answer them yourself.
+      ai: If AI edits the artifact or generates questions, record what changed and verify the result; every defend-or-concede decision remains yours.
       uncertainty: The shorter the format, the more explicit the boundary has to be.
     revisit: >-
       A question you cannot answer in rehearsal is evidence, and it sends
@@ -520,8 +535,9 @@ stations:
       audiences do not read contracts. They read posters, hear talks, scan
       briefs, and ask hard questions. This milestone adapts your bounded
       claims to the format your venue asks for and rehearses the defense
-      before it counts. The poster lessons carry the worked example; their
-      audit transfers to whichever format you build. The rehearsal record
+      before it counts. The poster lessons carry the fully worked example;
+      the milestone's venue contract and content map carry every other
+      format. The rehearsal record
       matters as much as the artifact: the questions you cannot answer yet
       are the truest map of what remains.
     hands_forward: >-
@@ -529,13 +545,13 @@ stations:
       is the one test rehearsal cannot give you.
     contributions:
       research-posters: >-
-        if your venue is a poster (or your format borrows its one-figure
-        discipline): the draft with labeled values, intervals drawn, and a
+        if your venue is a poster, or your format carries a quantitative
+        figure: the draft with labeled values, intervals drawn, and a
         headline verbed to your boundary
       poster-criticism: >-
-        the audit of your chosen format's draft, hits ranked by how far
-        the error travels, fixed once, and the lock call; the method is
-        taught on the poster and transfers to any format
+        if your venue is a poster: the gallery-walk audit of your draft,
+        hits ranked by how far the error travels, fixed once, and the
+        lock call
       research-pitches: >-
         if you will speak: your 30-second and 3-minute pitches, built
         boundary-first and tested aloud on an outsider
@@ -589,22 +605,25 @@ stations:
 
   - id: release-next-cycle
     purpose: >-
-      Close the cycle as its director: run the final revision under your
-      own rules, decide whether the work is ready to leave your hands, and
-      say what the next study should be.
+      Close the cycle as its director: run the final review under your own
+      rules, decide whether the work is ready to leave your hands, and
+      turn the largest unresolved limitation into the next study.
     produces: >-
-      A release audit, your final dossier, an explicit stopping rule, and
-      your next-study agenda.
+      A release audit recording release or withhold-pending-a-named-repair,
+      your final dossier with a complete manifest, an explicit stopping
+      rule, and your next-study agenda.
     steps:
       - "Check that nothing moved since your Studio 11 cold run: any change to the package — a number, a claim, the data, the code, the environment record, or the instructions a stranger would follow — makes that run stale. Repeat it before you release."
-      - "Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants."
-      - "Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history."
+      - "Record your review mode — no AI, one assistant, or several agent loops — and attach only the evidence that mode produces; never invent activity to fill a record."
+      - "Run the release audit and mark each item clear, pending, or blocking: permissions, participant promises, disclosure, package-matches-cold-run, reproducibility, claim boundaries, and uncertainty."
+      - "Make the release decision. A blocking item means withhold pending the named repair, written as this version's reason — not a euphemistic release."
+      - "Assemble the dossier with a manifest: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history — each marked present, absent with reason, or not applicable."
       - "Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision."
-      - "Write the next-study agenda: the question this work opened, and what you would do differently."
+      - "Write the next-study agenda: tie the next question to an unresolved limitation, a warrant gap, or something this cycle's evidence opened."
     rails:
       ethics: Release is the last point at which a permission problem can still be prevented.
       evidence: The dossier is the evidence rail made assemblable.
-      ai: Your AI ledger closes here as a complete record, not a summary.
+      ai: Close the AI record that actually exists — loop wiring if you ran several, a verified ledger if you ran one assistant, a one-line scope statement if you ran none.
       uncertainty: State what you still do not know as clearly as what you found.
     revisit: >-
       The next-study agenda is the revisit; a research cycle ends by
@@ -612,28 +631,32 @@ stations:
     milestone_title: "Your release and next cycle"
     milestone_reason: >-
       The book opened with one rule: AI is your arm, not your brain. This
-      studio is where the rule graduates. In the closing revision you may
-      direct several arms at once (a writer, a skeptic, an auditor), and
-      the two agent lessons show you how to wire them and when to overrule
-      them; if you work with a single assistant, or with none, the same
-      discipline closes your ledger just as well. What no tool can do is
-      make the two decisions this milestone exists for: whether this work
-      is ready to leave your hands, and what should be asked next. It is
-      the last milestone, and it produces what the other eleven were
-      building toward: your finished research artifact, released,
-      defended, and pointing at its successor.
+      studio is where the rule graduates. In the final review your tool
+      count may be zero, one, or many — a single assistant, or a directed
+      team of writer, skeptic, and auditor that the two agent lessons show
+      you how to wire and when to overrule — and the release standard does
+      not change with the count. Every public claim must sit inside its
+      evidence and permissions, and the package must still match the cold
+      run that tested it; the agent lessons add records when you used
+      several loops, never a substitute for the audit. What no tool can do
+      is make the two decisions this milestone exists for: whether this
+      work is ready to leave your hands, and what should be asked next.
+      The book closes where it began: tools extend your reach, and the
+      decision about what leaves your hands remains yours.
     hands_forward: >-
-      This is where the chain closes. The artifact leaves your hands, and
-      the next-study agenda opens the cycle that follows.
+      This is where the chain closes, on a decision. If the audit clears,
+      the artifact leaves your hands; if it does not, this version names
+      the repair that still blocks release. Either way the next-study
+      agenda opens the cycle that follows.
     contributions:
       managing-ai-agents: >-
-        if you ran agent loops: your three-loop round with its wiring, its
-        turn counts, and the one node you kept human
+        if you ran several agent loops in your final review: their scoped
+        jobs, the wiring and turn counts, and the one node you kept human
       conflicting-agents: >-
-        if your loops disagreed: your escalation rules, one conflict
-        diagnosed and resolved by your own check, and the override on
-        record
+        if several roles returned a load-bearing verdict: your escalation
+        rules, and one agreement or disagreement diagnosed and settled by
+        your own check, with any override on record
       final-portfolio: >-
         your finished research artifact with every claim bounded, your
-        four-part AI-management portfolio, and the rehearsed
-        three-movement defense
+        AI-management portfolio in the form your review mode produced, and
+        the rehearsed three-movement defense

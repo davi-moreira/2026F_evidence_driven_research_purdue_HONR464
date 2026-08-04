@@ -48,11 +48,13 @@ evidence behind them, and the verification that makes each one defensible [@alle
 a lab project it holds your headline result, the measurements behind it, and the check
 you ran to confirm the number is right.
 
-Alongside it sits **an AI-management portfolio**, the honest record of how you ran your
-AI team from the first curiosity to the last check: which tasks you delegated, where
-you took the decision back, and which calls you never handed to a tool. Example: it
-shows a reviewer role drafted your limitations, that you overrode it when it softened
-a claim you could not support, and that you alone chose the claim boundary.
+Alongside it sits **an AI-management portfolio**, the honest record of how you ran
+your AI work from the first curiosity to the last check — one assistant or a
+directed team, whichever your project actually used: which tasks you delegated,
+where you took the decision back, and which calls you never handed to a tool.
+Example: it shows a reviewer role drafted your limitations, that you overrode it
+when it softened a claim you could not support, and that you alone chose the
+claim boundary.
 
 The decision that closes both is your **stopping rule**, a written statement of what
 "done" means, phrased around your own verified confidence rather than the tools'
@@ -146,9 +148,10 @@ Count the checks you ran yourself, never the roles that nodded.
 > you can defend.
 <!-- station-pointer:end -->
 
-*Your project already has a note, a capsule, a managed AI team, and escalation rules
-you wrote down; this last step assembles all of it into the artifact you hand over and
-the defense you give.*
+*Your project already has a note, a capsule, and a record of the AI work you
+directed — loop wiring and escalation rules if you ran a team, a verified ledger
+if you ran one assistant; this last step assembles all of it into the artifact
+you hand over and the defense you give.*
 
 The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
 
@@ -169,10 +172,15 @@ you know.
 1. Finish the research artifact itself: your paper, note, or poster, with each claim
    stated at its boundary and your uncertainty in the same sentence as your headline
    number. This is the document with your name on it.
-2. Assemble your AI-management portfolio in four parts: the decomposition of loops you
-   ran, one real conflict and the override you made with its non-AI check, your
-   stopping rule and your never-delegate list, and one independence check that made an
-   agreement worth more than a head count.
+2. Assemble your AI-management portfolio in the form your review mode actually
+   produced. If you ran several loops: their decomposition, one conflict or
+   suspicious agreement settled by your own non-AI check, your stopping rule and
+   never-delegate list, and one independence check that made an agreement worth
+   more than a head count. If you ran one assistant: your verified ledger with
+   the delegations you took back, the same stopping rule and never-delegate
+   list, and the one place you overrode the tool. If you used no AI, state that
+   scope in one line; an empty record honestly labeled is worth more than an
+   invented one.
 
    **Locate the real benchmark.**
 
@@ -189,7 +197,9 @@ you know.
    quoted with an invented source.
 3. Write your stopping rule as a sentence you could read aloud, phrased around what
    you have verified rather than what your tools approved. "Every surviving claim has
-   a check I ran myself" is a stopping rule. "The reviewers agreed" is not.
+   a check I ran myself" is a stopping rule. "The reviewers agreed" is not. Beside
+   it, write your next-study agenda: the question this work opened, tied to the
+   limitation you could not resolve.
 4. Rehearse the defense in three movements: your claim and its boundary, the central
    choice you made and the road you did not take, and the verification you lead with.
    Then have someone ask you the question you least want to be asked.

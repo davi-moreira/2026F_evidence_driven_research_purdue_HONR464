@@ -781,7 +781,7 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p><em>“When a presenter tells me, unprompted, exactly what their study can’t show, I trust everything else they said more. When they insist it’s airtight, I start looking for the crack myself.”</em> — a <strong>policy stakeholder</strong> who has heard a thousand poster pitches</p>
 </blockquote>
-<p>Your poster is finished and honest. The danger now is your own mouth. Under pressure, a nervous presenter does one of two things, and both misstate the evidence. One buries a real finding under apology. The other, caught in the moment, upgrades a careful “went together” into a confident “caused.” The stakeholder above is not testing your confidence. She is testing whether you know where your claim stops. This chapter gives you the answer that survives her hardest question.</p>
+<p>Your adaptation is finished and honest, whether it is a poster, a talk, or a page. The danger now is your own mouth. Under pressure, a nervous presenter does one of two things, and both misstate the evidence. One buries a real finding under apology. The other, caught in the moment, upgrades a careful “went together” into a confident “caused.” The stakeholder above is not testing your confidence. She is testing whether you know where your claim stops. This chapter gives you the answer that survives her hardest question.</p>
 </section>
 <section id="the-concept" class="level2" data-number="35.2">
 <h2 data-number="35.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">35.2</span> The concept</h2>
@@ -829,7 +829,7 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p><strong>You are working inside <a href="../studios/studio10-adapt-and-defend.html">Studio 10: Adapt and defend</a>.</strong> Keep what you write here; the studio’s milestone chapter is where it joins the other lessons’ pieces into one artifact you can defend. <!-- station-pointer:end --></p>
 </blockquote>
-<p><em>You can say your claim at two lengths now; this step prepares the part of the conversation you do not control.</em></p>
+<p><em>You can say your claim at two lengths now; this step prepares the part of the conversation you do not control. If your venue has no live questions, the drill still runs: collect the hard questions in writing, from a peer or an AI reviewer, and answer them on paper.</em></p>
 <p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Each prompt below is a checkable job, not a request for approval.</p>
 <p>These work best as a conversation. Ask, read, then name what the answer avoided and ask again. A question bank built over three rounds is noticeably harder than one built in a single pass. When a tool runs those rounds itself, the questions arrive already polished, which is why you check the list against the question you actually dread rather than the other way around.</p>
@@ -904,8 +904,9 @@ Wasserstein, Ronald L., and Nicole A. Lazar. 2016. <span>“The <span>ASA</span>
 //    Quarto's link-external-icon marks truly external links visibly.
 // 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
-//    (The id is derived from the section title; the old #bibliography id is
-//    kept as a fallback so a stale render still gets the demotion.)
+//    (Pandoc keeps the section id #bibliography whatever the visible title;
+//    the primary lookup is the stable div#refs container, so the behavior
+//    survives retitles and localized editions.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -940,7 +941,9 @@ Wasserstein, Ronald L., and Nicole A. Lazar. 2016. <span>“The <span>ASA</span>
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#references, section#bibliography");
+  var refs = main.querySelector("div#refs");
+  var bibSection = refs ? refs.closest("section")
+    : main.querySelector("section#bibliography, section#references");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");

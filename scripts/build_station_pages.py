@@ -139,8 +139,8 @@ def chain_paragraph(stations: list[dict], specs: dict, idx: int) -> str:
         lspec = specs[last["id"]]
         parts.append(f"The chain ends at [Milestone {last['rank']}: "
                      f"{lspec['milestone_title']}]({milestone_rel(last)}), "
-                     "where the versions close into your finished research "
-                     "artifact, released and defended.")
+                     "where you decide whether your finished research "
+                     "artifact leaves your hands.")
     return " ".join(parts)
 
 
@@ -189,6 +189,8 @@ def milestone_page(st: dict, spec: dict, lessons: list[dict], n: int,
                       if k in RAILS)
     slug = st["id"]
     rubric_block = rubric_md(rubric)
+    genre_block = (f"## Choosing your format\n\n{spec['genre_guide']}\n\n"
+                   if spec.get("genre_guide") else "")
     return f"""# Milestone {n}: {spec['milestone_title']} {{.unnumbered}}
 
 {banner("milestone chapter")}
@@ -202,7 +204,7 @@ def milestone_page(st: dict, spec: dict, lessons: list[dict], n: int,
 
 {bring_block(spec, lessons)}
 
-## The practice {{#milestone}}
+{genre_block}## The practice {{#milestone}}
 
 {steps}
 
@@ -246,6 +248,9 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
                    f"A milestone is a *version*, not a pass. Date it, number it, "
                    f"and write why this version exists.\n")]
     i = 1
+    if spec.get("genre_guide"):
+        cells.append(md(i, f"## Choosing your format\n\n{spec['genre_guide']}\n"))
+        i += 1
     for k, step in enumerate(spec["steps"], 1):
         cells.append(md(i, f"## Step {k}\n\n{step}\n")); i += 1
         cells.append(md(i, f"✍️ **Your work for step {k}.** Double-click this "

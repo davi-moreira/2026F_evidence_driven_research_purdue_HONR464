@@ -219,6 +219,18 @@ def check_station_specs(arch) -> list[str]:
         for lid in sorted(contrib - mine):
             p.append(f"stations[{sid}]: `contributions` names {lid}, which is "
                      f"not an active lesson of this studio")
+        # D42: a studio whose branch lessons split by route/genre must carry
+        # the matching authored chooser on its pages.
+        active = [l for l in arch.get("lessons", [])
+                  if l.get("station") == sid and l.get("state") == "active"]
+        if any(l.get("role") == "branch" and l.get("route") for l in active) \
+                and not spec[sid].get("route_guide"):
+            p.append(f"stations[{sid}]: route-branch lessons but no authored "
+                     f"`route_guide`")
+        if any(l.get("role") == "branch" and l.get("genre") for l in active) \
+                and not spec[sid].get("genre_guide"):
+            p.append(f"stations[{sid}]: genre-branch lessons but no authored "
+                     f"`genre_guide`")
     return p
 
 

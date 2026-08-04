@@ -832,7 +832,7 @@ criteria, list which decisions in this draft an AI output should never be allowe
 settle, and which of my three I mislabeled. Do not settle any of them for me.</code></pre>
 <p>After running, verify: check its list against the escalation triggers you wrote yourself; a decision it omits is the one to guard hardest. Counters <em>illusion of completeness</em> (a tidy list that quietly drops the call that matters most).</p></li>
 <li><p>Add the stopping conditions that are not about content. How many turns a loop may run before you read it, and what an agentic tool is allowed to change without asking you first.</p></li>
-<li><p>Find one real disagreement in what your roles have already returned, and diagnose it on the record: real disagreement, correlated error, or a consensus your own prompt manufactured. Say which and why.</p>
+<li><p>Take one load-bearing pair of outputs your roles have returned, whether they agree or disagree, and diagnose it on the record: real disagreement, correlated error, genuinely independent agreement, or a consensus your own prompt manufactured. Say which and why.</p>
 <p><strong>Red-team the consensus.</strong></p>
 <pre class="text"><code>Act as a hostile reviewer who believes my three roles only agreed because my prompt led
 them. Argue that their consensus is manufactured, name the leading words in my original
@@ -879,8 +879,9 @@ Peker, Cem. 2023. <span>“Extracting the Collective Wisdom in Probabilistic Jud
 //    Quarto's link-external-icon marks truly external links visibly.
 // 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
-//    (The id is derived from the section title; the old #bibliography id is
-//    kept as a fallback so a stale render still gets the demotion.)
+//    (Pandoc keeps the section id #bibliography whatever the visible title;
+//    the primary lookup is the stable div#refs container, so the behavior
+//    survives retitles and localized editions.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -915,7 +916,9 @@ Peker, Cem. 2023. <span>“Extracting the Collective Wisdom in Probabilistic Jud
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#references, section#bibliography");
+  var refs = main.querySelector("div#refs");
+  var bibSection = refs ? refs.closest("section")
+    : main.querySelector("section#bibliography, section#references");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");

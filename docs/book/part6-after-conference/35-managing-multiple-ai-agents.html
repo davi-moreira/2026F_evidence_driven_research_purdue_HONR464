@@ -808,7 +808,7 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p><strong>You are working inside <a href="../studios/studio12-release-next-cycle.html">Studio 12: Release and direct the next cycle</a>.</strong> This lesson is an optional overlay: work it when your project needs it, and skip it without guilt when it does not. <!-- station-pointer:end --></p>
 </blockquote>
-<p><em>Your project already has a research note and a reusable capsule; this step sets up the small AI team that will help you revise them, without handing the team your judgment.</em></p>
+<p><em>Your project already has a research note and a reusable capsule. Work this step when your final review benefits from several scoped loops; one well-run assistant is a complete answer for many projects. If you do run the team, this step sets it up without handing it your judgment.</em></p>
 <p>The hands-on half of this section lives in the chapter’s <strong>companion notebook</strong>: open it in Colab with the badge at the top, and work the steps there.</p>
 <p>Commit your own answer first, then delegate. Each prompt below opens a loop you supervise, and one of them is a loop about your other loops. Read what comes back, push on the weak part, run it again. Each prompt is a checkable job, not a request for a verdict.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Do not delegate">
@@ -880,8 +880,9 @@ Yao, Shunyu, Jeffrey Zhao, Dian Yu, et al. 2023. <span>“<span>ReAct</span>: Sy
 //    Quarto's link-external-icon marks truly external links visibly.
 // 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
-//    (The id is derived from the section title; the old #bibliography id is
-//    kept as a fallback so a stale render still gets the demotion.)
+//    (Pandoc keeps the section id #bibliography whatever the visible title;
+//    the primary lookup is the stable div#refs container, so the behavior
+//    survives retitles and localized editions.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -916,7 +917,9 @@ Yao, Shunyu, Jeffrey Zhao, Dian Yu, et al. 2023. <span>“<span>ReAct</span>: Sy
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#references, section#bibliography");
+  var refs = main.querySelector("div#refs");
+  var bibSection = refs ? refs.closest("section")
+    : main.querySelector("section#bibliography, section#references");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");

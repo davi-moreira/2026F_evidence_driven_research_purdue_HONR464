@@ -202,8 +202,9 @@ inform it, you stop and you decide.
 2. Add the stopping conditions that are not about content. How many turns a loop may
    run before you read it, and what an agentic tool is allowed to change without
    asking you first.
-3. Find one real disagreement in what your roles have already returned, and diagnose
-   it on the record: real disagreement, correlated error, or a consensus your own
+3. Take one load-bearing pair of outputs your roles have returned, whether they
+   agree or disagree, and diagnose it on the record: real disagreement,
+   correlated error, genuinely independent agreement, or a consensus your own
    prompt manufactured. Say which and why.
 
    **Red-team the consensus.**

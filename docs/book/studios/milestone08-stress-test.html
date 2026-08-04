@@ -729,7 +729,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="where-this-milestone-sits" class="level2">
 <h2 class="anchored" data-anchor-id="where-this-milestone-sits">Where this milestone sits</h2>
-<p>You arrived carrying <a href="../studios/milestone07-first-analysis.html">Milestone 7: Your first reproducible analysis</a>. Milestone 9 writes down only the claims this audit licenses, at the strength it licenses them. The chain ends at <a href="../studios/milestone12-release-next-cycle.html">Milestone 12: Your release and next cycle</a>, where the versions close into your finished research artifact, released and defended.</p>
+<p>You arrived carrying <a href="../studios/milestone07-first-analysis.html">Milestone 7: Your first reproducible analysis</a>. Milestone 9 writes down only the claims this audit licenses, at the strength it licenses them. The chain ends at <a href="../studios/milestone12-release-next-cycle.html">Milestone 12: Your release and next cycle</a>, where you decide whether your finished research artifact leaves your hands.</p>
 </section>
 <section id="what-sends-you-back" class="level2">
 <h2 class="anchored" data-anchor-id="what-sends-you-back">What sends you back</h2>
@@ -827,8 +827,9 @@ ul.task-list li input[type="checkbox"] {
 //    Quarto's link-external-icon marks truly external links visibly.
 // 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
-//    (The id is derived from the section title; the old #bibliography id is
-//    kept as a fallback so a stale render still gets the demotion.)
+//    (Pandoc keeps the section id #bibliography whatever the visible title;
+//    the primary lookup is the stable div#refs container, so the behavior
+//    survives retitles and localized editions.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -863,7 +864,9 @@ ul.task-list li input[type="checkbox"] {
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#references, section#bibliography");
+  var refs = main.querySelector("div#refs");
+  var bibSection = refs ? refs.closest("section")
+    : main.querySelector("section#bibliography, section#references");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");

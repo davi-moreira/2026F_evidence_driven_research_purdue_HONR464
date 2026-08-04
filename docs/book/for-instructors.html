@@ -2812,7 +2812,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Step 3</td>
-<td>Find one real disagreement in what your roles have already returned, and diagnose it on the record: real disagreement, correlated error, or a…</td>
+<td>Take one load-bearing pair of outputs your roles have returned, whether they agree or disagree, and diagnose it on the record: real disagreement,…</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -2862,7 +2862,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Step 2</td>
-<td>Assemble your AI-management portfolio in four parts: the decomposition of loops you ran, one real conflict and the override you made with its non-AI…</td>
+<td>Assemble your AI-management portfolio in the form your review mode actually produced</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -3123,8 +3123,9 @@ ul.task-list li input[type="checkbox"] {
 //    Quarto's link-external-icon marks truly external links visibly.
 // 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
-//    (The id is derived from the section title; the old #bibliography id is
-//    kept as a fallback so a stale render still gets the demotion.)
+//    (Pandoc keeps the section id #bibliography whatever the visible title;
+//    the primary lookup is the stable div#refs container, so the behavior
+//    survives retitles and localized editions.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -3159,7 +3160,9 @@ ul.task-list li input[type="checkbox"] {
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#references, section#bibliography");
+  var refs = main.querySelector("div#refs");
+  var bibSection = refs ? refs.closest("section")
+    : main.querySelector("section#bibliography, section#references");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");
