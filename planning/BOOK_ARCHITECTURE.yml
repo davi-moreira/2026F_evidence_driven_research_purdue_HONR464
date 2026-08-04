@@ -103,7 +103,7 @@ stations:
   # Research Contract events a reader can reach (revisit is always allowed —
   # versioned, never irreversible, D35 §3). `workbook: pending` flips to a
   # file path as Phase 3/4 lands each station workbook.
-  - {id: govern-the-work,         rank: 1,  title: "Govern the work",
+  - {id: govern-the-work,         rank: 1,  title: "Begin the research and govern the work",
      checkpoints: [{id: working-agreement-v0}], workbook: pending}
   - {id: frame-the-inquiry,       rank: 2,  title: "Frame the inquiry",
      checkpoints: [{id: question-declared-v0}], workbook: pending}

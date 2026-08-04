@@ -1,0 +1,68 @@
+# Cold-test protocols — the first mile, and the second A1 pilot (D43)
+
+Two observational instruments, prepared under D43. Running them needs
+Davi's go (participant, timing); nothing here executes by itself.
+
+## Protocol 1 — the first-mile test (45–60 minutes, one novice reader)
+
+**Question.** Does the revised opening read as *research with AI*, not the
+other way around, and does the first-AI invariant hold in a real reader's
+hands?
+
+**Participant.** One undergraduate (or comparable novice) who has not seen
+the book and has no quantitative background. A real reader, not a
+simulated one; an AI-simulated pass may be run as a cheap pre-check but
+never substitutes for the human session.
+
+**Materials.** The rendered book from the preface through Chapter 1's "It
+is your turn", plus a blank sheet for the opening move; a screen the
+observer can see; no coaching beyond the script.
+
+**Script.**
+1. "Read from the preface. Work anything the book asks you to work.
+   Think aloud when you decide to skip something." (0–35 min)
+2. Stop the reading at the end of Chapter 1's core cycle. Ask, in order:
+   - "In one sentence, what is this book about?"
+   - "What was the first thing the book asked you to DO?"
+   - "When you used the AI tool, what did the book make you do first, and
+     after?"
+   - "Whose job is it to decide what the final claim says?"
+3. Collect the artifacts: the opening-move page, the ledger, the three
+   curiosities.
+
+**Observation checklist (mark each yes/no with a timestamp).**
+- Reader writes the opening move before opening any tool.
+- Reader opens the ledger before the first prompt.
+- Reader runs the verify step of the citation catch without prompting.
+- Reader can state the book's subject as research (their words) rather
+  than AI.
+- Reader identifies the never-delegate boundary unprompted or when asked.
+- Any point where the reader stalls, rereads twice, or skips: note where.
+
+**Pass signals.** Answers to (2) name research/curiosity first; the
+first-AI invariant held without observer intervention; the opening felt
+to the reader like starting a project, not reading a policy. **Fail
+signals.** "It's a book about AI"; prompt-before-ledger; the opening move
+skipped as decorative.
+
+**Output.** One page: checklist, quotes, artifact photos, and the repair
+list. File under `_adm/cold_tests/` (gitignored) with the date.
+
+## Protocol 2 — the second A1 pilot (end-to-end, no-permission route)
+
+The instrument is already specified in `planning/BOOK_DESIGN_ACCEPTANCE.md`
+(A1: a solo reader, working the studios in order on the no-permission
+route — published aggregates, an open dataset, or simulated data — must
+reach an executed analysis and a written, bounded claim). D43 adds only
+the operational frame:
+
+- Run AFTER the D43 opening changes and the Studio 1–4 practice kits are
+  in place, so the pilot tests the current on-ramp.
+- The pilot reader works without maintainer help; every stall is logged
+  with its studio and step, as in the first pilot.
+- Success lifts A1's bounded promise per the acceptance document's own
+  terms; failure feeds the next repair list, not a relabeling.
+
+**Davi rules on:** who runs each protocol, when, and whether the first
+mile passes. The evidence standard for lifting P1 stays the acceptance
+document's.

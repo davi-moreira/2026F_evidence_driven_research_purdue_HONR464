@@ -28,7 +28,7 @@ Due: **Friday, August 28, 11:59 PM** (you work on it at that Friday's studio).
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m00_research_ai_baseline.pdf`** *or* a shared Colab notebook link | The four-part baseline below: your three curiosities with one defended pick, your AI baseline (two things you assume AI is good at with the check for each, and two decisions you will not delegate), a screenshot of nb01's readiness checks, and your first AI Research Ledger row from the citation catch in EDR\|AI ch. 1's "It is your turn" (companion notebook). This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 1, ch. 2, ch. 3, ch. 4** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 1, ch. 2, ch. 3, ch. 4** | The pieces Book Milestone 1's checklist names, from each chapter's "It is your turn": your opened ledger with its first verified row (ch. 1), your delegation map (ch. 2), one complete SDIIVDD run (ch. 3), and your ownership statement with its never-delegate list (ch. 4) — worked in the companion Colab notebooks (share the links) or included in your artifact. Prompts the chapters mark *Optional depth* are not required. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.

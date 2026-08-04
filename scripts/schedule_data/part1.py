@@ -24,7 +24,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M1
     {
         "meeting": 1, "date": "2026-08-24", "day": "Mon", "modality": "in-person",
-        "unit": "Week 1 — Studio 1: Govern the work",
+        "unit": "Week 1 — Studio 1: Begin the research and govern the work",
         "title": "Your arm and your research assistant, not your brain: the course promise and a live citation-catch",
         "driving_question": "What does research even mean when an AI can generate the code and the prose for you?",
         "secondary_questions": "What will you build this semester? Where is the line between AI assistance and intellectual substitution? What does 'AI may propose, the researcher must verify' demand of you on day one?",
@@ -58,7 +58,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M2
     {
         "meeting": 2, "date": "2026-08-26", "day": "Wed", "modality": "in-person",
-        "unit": "Week 1 — Studio 1: Govern the work",
+        "unit": "Week 1 — Studio 1: Begin the research and govern the work",
         "title": "Automation bias, false confidence, and the first full Ask -> Verify -> Document cycle",
         "driving_question": "Why do smart people trust a wrong machine, and what discipline keeps you from joining them?",
         "secondary_questions": "What is automation bias? How does fluent AI prose manufacture false confidence and the illusion of understanding? Which research decisions must stay human? What are the seven moves of Specify -> Delegate -> Interrogate -> Inspect -> Verify -> Document -> Defend?",
@@ -92,7 +92,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M3
     {
         "meeting": 3, "date": "2026-08-28", "day": "Fri", "modality": "in-person",
-        "unit": "Week 1 — Studio 1: Govern the work",
+        "unit": "Week 1 — Studio 1: Begin the research and govern the work",
         "title": "Studio Friday — AI baselines and first curiosities: M0 due, M1 kickoff",
         "driving_question": "Can you name what you assume about AI, pitch a curiosity in 30 seconds, and leave with a plan to map a research opportunity?",
         "secondary_questions": "What did your baseline reveal about where you over-trust AI? What does the M1 brief ask for (a research opportunity landscape), and how is it graded?",

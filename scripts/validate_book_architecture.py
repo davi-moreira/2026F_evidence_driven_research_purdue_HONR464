@@ -231,6 +231,13 @@ def check_station_specs(arch) -> list[str]:
                 and not spec[sid].get("genre_guide"):
             p.append(f"stations[{sid}]: genre-branch lessons but no authored "
                      f"`genre_guide`")
+        # D43/A4: a practice kit, where present, must be complete.
+        kit = spec[sid].get("practice_kit")
+        if kit is not None:
+            for field in ("worked_example", "faded_task", "starter",
+                          "verification"):
+                if not kit.get(field):
+                    p.append(f"stations[{sid}]: practice_kit missing `{field}`")
     return p
 
 

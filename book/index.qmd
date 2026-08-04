@@ -14,13 +14,16 @@ that is why. Questions and suggestions are welcome.
 
 **EDR|AI** — *Evidence-Driven Research in the Age of AI: How to Design,
 Analyze, Verify, and Defend* — is an open research manual for undergraduate
-students who want to produce research they can defend. AI can now draft the
-code, the prose, the citations, and the figures. What it cannot do is decide
-what your question is, what counts as evidence for it, or whether a claim
-deserves your name. This book teaches those decisions. It was first written
-for an Honors research seminar at Purdue University, and it is deliberately
-institution-agnostic: any instructor or student, anywhere, is welcome to
-adopt it.
+students who want to produce research they can defend. It starts where
+research starts: with something you genuinely want to understand, and with
+what would count as evidence for an answer. AI can now draft the code, the
+prose, the citations, and the figures, and this book will put all of that
+drafting power in your hands. What AI cannot do is decide what your question
+is, what counts as evidence for it, or whether a claim deserves your name.
+This book teaches those decisions first, and keeps them yours to the last
+page. It was first written for an Honors research seminar at Purdue
+University, and it is deliberately institution-agnostic: any instructor or
+student, anywhere, is welcome to adopt it.
 
 Its one message: *AI is your arm and your research assistant, not your
 brain.* You will direct AI tools through the
@@ -34,9 +37,9 @@ through every verification step, collected in the
 a second model is a real auditor of the first, but the last decision is
 always human.
 
-The book is built as **twelve studios** — govern the work, frame the
-inquiry, ground it in evidence, declare and diagnose, develop the pathway,
-and so on to the public release of a finished project. Each studio opens by
+The book is built as **twelve studios** — begin the research and govern the
+work, frame the inquiry, ground it in evidence, declare and diagnose,
+develop the pathway, and so on to the public release of a finished project. Each studio opens by
 naming the milestone ahead and why it matters, hands you its lessons, and
 closes with a **milestone chapter** where you produce a dated, versioned
 record of the studio's artifact. The page
@@ -44,7 +47,9 @@ record of the studio's artifact. The page
 draws the whole road. Blair, Coppock and Humphreys' *Research Design in the
 Social Sciences* (RDSS, free at
 [book.declaredesign.org](https://book.declaredesign.org)) is the theory text
-that EDR|AI translates for the undergraduate audience; read the matching
+EDR|AI draws its design framework from, adapted for the undergraduate
+audience and for quantitative empirical projects (the coverage matrix in the
+repository records what is adopted, adapted, and omitted); read the matching
 RDSS chapters whenever you want more depth.
 
 ## Why this book

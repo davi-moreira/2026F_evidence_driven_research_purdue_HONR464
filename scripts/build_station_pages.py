@@ -144,6 +144,15 @@ def chain_paragraph(stations: list[dict], specs: dict, idx: int) -> str:
     return " ".join(parts)
 
 
+def opening_block(spec: dict) -> str:
+    """D43: the human-only opening move, before any tool and before the
+    milestone anticipation."""
+    if not spec.get("opening_move"):
+        return ""
+    return (f"## Start without a tool {{#opening-move}}\n\n"
+            f"{spec['opening_move'].strip()}\n\n")
+
+
 def opener_page(st: dict, spec: dict, lessons: list[dict], n: int) -> str:
     rails_names = " · ".join(RAILS[k] for k in ("ethics", "evidence"))
     slug = st["id"]
@@ -163,7 +172,7 @@ aliases:
 {banner("studio")}
 > **What you can defend when you leave.** {spec['purpose']}
 
-## The milestone ahead {{#checkpoint}}
+{opening_block(spec)}## The milestone ahead {{#checkpoint}}
 
 {spec['milestone_reason'].strip()}
 
@@ -248,8 +257,27 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
                    f"A milestone is a *version*, not a pass. Date it, number it, "
                    f"and write why this version exists.\n")]
     i = 1
+    if spec.get("opening_move"):
+        cells.append(md(i, f"## Start without a tool\n\n"
+                          f"{spec['opening_move'].strip()}\n"))
+        i += 1
+        cells.append(md(i, "✍️ **Your opening move.** Double-click this cell "
+                          "and write the three lines here, before any other "
+                          "cell in this workbook.\n"))
+        i += 1
     if spec.get("genre_guide"):
         cells.append(md(i, f"## Choosing your format\n\n{spec['genre_guide']}\n"))
+        i += 1
+    kit = spec.get("practice_kit")
+    if kit:
+        cells.append(md(i, f"## A worked example\n\n{kit['worked_example'].strip()}\n"))
+        i += 1
+        cells.append(md(i, f"## Now you, half the way\n\n{kit['faded_task'].strip()}\n"))
+        i += 1
+        cells.append(md(i, "✍️ **Your finish of the faded task.** Double-click "
+                          "and complete it here.\n"))
+        i += 1
+        cells.append(md(i, f"## Your starter\n\n{kit['starter'].strip()}\n"))
         i += 1
     for k, step in enumerate(spec["steps"], 1):
         cells.append(md(i, f"## Step {k}\n\n{step}\n")); i += 1
@@ -258,6 +286,9 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
     cells.append({"cell_type": "code", "id": "c001", "metadata": {},
                   "execution_count": None, "outputs": [],
                   "source": ["# Scratch space — any code this milestone's steps need.\n"]})
+    if kit:
+        cells.append(md(i, f"## Check yourself\n\n{kit['verification'].strip()}\n"))
+        i += 1
     cps = ", ".join(c["id"] for c in st["checkpoints"])
     cells.append(md(i, f"## Write your milestone version\n\n"
                        f"Milestone record: `{cps}`\n\n"

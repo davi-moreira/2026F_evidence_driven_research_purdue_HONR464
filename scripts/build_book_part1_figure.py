@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""build_book_part1_figure.py — the book-organization figure (D27, D38).
+"""build_book_part1_figure.py — the book-organization figure (D27, D38, D43).
 
-A designed, monochrome figure in the book cover's aesthetic: the four
-operating-rule lessons chained inside the Studio 1 frame, and the road of
-Studios 2–12 beneath. Localized per edition, written to
+D43 retired the Studio-1-contains-the-book frame. The figure is now the
+research road: the reader's curiosity enters on the left, six road stages
+(Studio 1 through Studios 11–12) carry it to a released claim on the right,
+and the four persistent rails run beneath the whole road. Monochrome, in
+the book cover's aesthetic. Localized per edition, written to
 
     book/images/part1_arc.png   book-pt/images/...   book-es/images/...
 
@@ -27,51 +29,60 @@ INK, SOFT, FILL = "#1a1a19", "#8a8a86", "#f4f4f3"
 
 L = {
     "book": {
-        "container": "STUDIO 1  ·  Govern the work — the operating rules",
-        "chapters": [
-            ("Lesson 1 · The principle", "AI is your arm,\nnot your brain"),
-            ("Lesson 2 · Your role", "the research\ndirector"),
-            ("Lesson 3 · The protocol", "SDIIVDD, the loop of\nevery delegation"),
-            ("Lesson 4 · The ownership", "your name\non the claim"),
-        ],
-        "parts": [
+        "start": ("YOUR CURIOSITY", "a question that\nwill not leave\nyou alone"),
+        "end": ("YOUR CLAIM", "released, defended,\npointing at the\nnext study"),
+        "road": [
+            ("STUDIO 1", "begin the research,\ngovern the work"),
             ("STUDIOS 2–4", "frame the question,\nground it, declare it"),
             ("STUDIOS 5–6", "develop the pathway,\ngovern the data"),
             ("STUDIOS 7–8", "first analysis,\nstress-test it"),
             ("STUDIOS 9–10", "write and bound,\nadapt and defend"),
             ("STUDIOS 11–12", "reproduce, package,\nrelease"),
         ],
+        "rails_title": "Four rails cross every studio",
+        "rails": [
+            "Ethics, permissions, and data exposure",
+            "Evidence, provenance, and reproducibility",
+            "AI activity, verification, and human decisions",
+            "Uncertainty, claim boundary, and revision history",
+        ],
     },
     "book-pt": {
-        "container": "ESTÚDIO 1  ·  Governar o trabalho — as regras de operação",
-        "chapters": [
-            ("Lição 1 · O princípio", "a IA é o seu braço,\nnão o seu cérebro"),
-            ("Lição 2 · O seu papel", "quem dirige\na pesquisa"),
-            ("Lição 3 · O protocolo", "SDIIVDD, o ciclo de\ncada delegação"),
-            ("Lição 4 · A propriedade", "o seu nome\nna alegação"),
-        ],
-        "parts": [
+        "start": ("SUA CURIOSIDADE", "uma pergunta que\nnão sai da\nsua cabeça"),
+        "end": ("SUA ALEGAÇÃO", "publicada, defendida,\napontando o\npróximo estudo"),
+        "road": [
+            ("ESTÚDIO 1", "começar a pesquisa,\ngovernar o trabalho"),
             ("ESTÚDIOS 2–4", "formular a pergunta,\nfundamentar, declarar"),
             ("ESTÚDIOS 5–6", "desenvolver a trilha,\ngovernar os dados"),
             ("ESTÚDIOS 7–8", "primeira análise,\nteste de estresse"),
             ("ESTÚDIOS 9–10", "escrever e delimitar,\nadaptar e defender"),
             ("ESTÚDIOS 11–12", "reproduzir, empacotar,\nliberar"),
         ],
+        "rails_title": "Quatro trilhos cruzam todos os estúdios",
+        "rails": [
+            "Ética, permissões e exposição de dados",
+            "Evidência, proveniência e reprodutibilidade",
+            "Atividade de IA, verificação e decisões humanas",
+            "Incerteza, fronteira da alegação e histórico de revisão",
+        ],
     },
     "book-es": {
-        "container": "ESTUDIO 1  ·  Gobernar el trabajo — las reglas de operación",
-        "chapters": [
-            ("Lección 1 · El principio", "la IA es tu brazo,\nno tu cerebro"),
-            ("Lección 2 · Tu papel", "quien dirige la\ninvestigación"),
-            ("Lección 3 · El protocolo", "SDIIVDD, el ciclo de\ncada delegación"),
-            ("Lección 4 · La propiedad", "tu nombre en\nla afirmación"),
-        ],
-        "parts": [
+        "start": ("TU CURIOSIDAD", "una pregunta que\nno te deja\nen paz"),
+        "end": ("TU AFIRMACIÓN", "publicada, defendida,\nseñalando el\npróximo estudio"),
+        "road": [
+            ("ESTUDIO 1", "comenzar la investigación,\ngobernar el trabajo"),
             ("ESTUDIOS 2–4", "formular la pregunta,\nfundamentar, declarar"),
             ("ESTUDIOS 5–6", "desarrollar la ruta,\ngobernar los datos"),
             ("ESTUDIOS 7–8", "primer análisis,\nprueba de estrés"),
             ("ESTUDIOS 9–10", "escribir y delimitar,\nadaptar y defender"),
             ("ESTUDIOS 11–12", "reproducir, empaquetar,\nliberar"),
+        ],
+        "rails_title": "Cuatro rieles cruzan todos los estudios",
+        "rails": [
+            "Ética, permisos y exposición de datos",
+            "Evidencia, procedencia y reproducibilidad",
+            "Actividad de IA, verificación y decisiones humanas",
+            "Incertidumbre, frontera de la afirmación y revisión",
         ],
     },
 }
@@ -96,38 +107,46 @@ def arrow(ax, x0, y0, x1, y1):
 
 
 def build(strings: dict, out: Path) -> None:
-    fig, ax = plt.subplots(figsize=(9.2, 5.0))
+    fig, ax = plt.subplots(figsize=(10.2, 4.6))
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
 
-    # Part I frame
-    box(ax, .5, .715, .92, .47, "white", INK, lw=1.5, r=0.025)
-    ax.text(.5, .895, strings["container"], ha="center", va="center",
-            fontsize=11.5, fontweight="bold", color=INK)
+    road_y = .66
+    # start capsule: the reader's curiosity
+    box(ax, .072, road_y, .112, .30, "white", INK, lw=1.5, r=0.03)
+    ax.text(.072, road_y + .085, strings["start"][0], ha="center",
+            va="center", fontsize=8.0, fontweight="bold", color=INK)
+    ax.text(.072, road_y - .05, strings["start"][1], ha="center",
+            va="center", fontsize=7.0, color="#444440", linespacing=1.3)
 
-    # the four chapters, chained
-    cxs = [.155, .385, .615, .845]
-    for i, (cx, (head, sub)) in enumerate(zip(cxs, strings["chapters"])):
-        box(ax, cx, .66, .195, .27, "white", SOFT, lw=1.0)
-        ax.text(cx, .715, head, ha="center", va="center", fontsize=9.3,
-                fontweight="bold", color=INK)
-        ax.text(cx, .615, sub, ha="center", va="center", fontsize=8.4,
-                color="#444440", linespacing=1.35)
-        if i:
-            arrow(ax, cxs[i - 1] + .0975, .66, cx - .0975, .66)
+    # the six road stages
+    rxs = [.2017 + i * .1242 for i in range(6)]
+    prev_right = .072 + .056
+    for i, (rx, (head, sub)) in enumerate(zip(rxs, strings["road"])):
+        box(ax, rx, road_y, .110, .26, FILL, SOFT, lw=1.0)
+        ax.text(rx, road_y + .07, head, ha="center", va="center",
+                fontsize=8.0, fontweight="bold", color=INK)
+        ax.text(rx, road_y - .045, sub, ha="center", va="center",
+                fontsize=6.8, color="#444440", linespacing=1.3)
+        arrow(ax, prev_right, road_y, rx - .055, road_y)
+        prev_right = rx + .055
 
-    # down to the road
-    arrow(ax, .124, .48, .124, .315)
+    # end capsule: the released claim
+    box(ax, .944, road_y, .100, .30, "white", INK, lw=1.5, r=0.03)
+    ax.text(.944, road_y + .085, strings["end"][0], ha="center",
+            va="center", fontsize=7.8, fontweight="bold", color=INK)
+    ax.text(.944, road_y - .05, strings["end"][1], ha="center",
+            va="center", fontsize=6.8, color="#444440", linespacing=1.3)
+    arrow(ax, prev_right, road_y, .944 - .050, road_y)
 
-    # Parts II–VI
-    pxs = [.124, .312, .5, .688, .876]
-    for i, (px, (head, sub)) in enumerate(zip(pxs, strings["parts"])):
-        box(ax, px, .175, .168, .225, FILL, SOFT, lw=1.0)
-        ax.text(px, .225, head, ha="center", va="center", fontsize=9.3,
-                fontweight="bold", color=INK)
-        ax.text(px, .135, sub, ha="center", va="center", fontsize=8.0,
-                color="#444440", linespacing=1.35)
-        if i:
-            arrow(ax, pxs[i - 1] + .084, .175, px - .084, .175)
+    # the four rails, running under the whole road
+    ax.text(.5, .40, strings["rails_title"], ha="center", va="center",
+            fontsize=9.0, fontweight="bold", color=INK)
+    rail_ys = [.325, .255, .185, .115]
+    for ry, label in zip(rail_ys, strings["rails"]):
+        ax.plot([.06, .96], [ry, ry], color=SOFT, lw=1.0, zorder=1)
+        ax.text(.5, ry + .028, label, ha="center", va="center",
+                fontsize=7.6, color="#444440",
+                bbox=dict(facecolor="white", edgecolor="none", pad=1.2))
 
     fig.tight_layout(pad=0.4)
     fig.savefig(out, dpi=150, facecolor="white")
