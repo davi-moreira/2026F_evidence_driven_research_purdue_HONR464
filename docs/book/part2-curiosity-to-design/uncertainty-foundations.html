@@ -705,6 +705,7 @@ div.csl-indent {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
     if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
+    a.target = "_blank"; a.rel = "noopener";
     if (cur === "book" && t !== "book") {
       // D36: EN has diverged from the frozen PT/ES editions (new lessons and
       // station pages have no counterparts), so route to that edition's
@@ -952,13 +953,15 @@ Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. <span>“Using Simu
 </section>
 
 </main> <!-- /main -->
+<span id="edrai-new-tab-note" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">opens in a new tab</span>
 <script>
 // Two page behaviors for every book page:
 //
 // 1. Every hyperlink in the page body opens in a new tab, so the book never
 //    navigates away from the reader's place. Navigation chrome (sidebar,
 //    TOC, breadcrumbs, next/previous) and same-page anchors keep native
-//    behavior.
+//    behavior. Treated links carry an assistive-technology note (W3C G201);
+//    Quarto's link-external-icon marks truly external links visibly.
 // 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
 (function () {
@@ -969,10 +972,21 @@ Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. <span>“Using Simu
     var a = links[i];
     var href = a.getAttribute("href");
     if (!href || href.charAt(0) === "#") continue;
-    if (href.lastIndexOf("mailto:", 0) === 0) continue;
+    if (/^(mailto:|tel:|javascript:)/i.test(href)) continue;
+    if (a.hasAttribute("download")) continue;
     if (a.closest("nav")) continue;
+    try {
+      var u = new URL(href, window.location.href);
+      if (u.origin === location.origin && u.pathname === location.pathname &&
+          u.search === location.search) continue;   // same-document link
+    } catch (e) { /* unparseable href: treat as cross-document */ }
     a.setAttribute("target", "_blank");
-    a.setAttribute("rel", "noopener");
+    var rel = (a.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
+    if (rel.indexOf("noopener") === -1) rel.push("noopener");
+    a.setAttribute("rel", rel.join(" "));
+    var desc = (a.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+    if (desc.indexOf("edrai-new-tab-note") === -1) desc.push("edrai-new-tab-note");
+    a.setAttribute("aria-describedby", desc.join(" "));
   }
   var bibSection = main.querySelector("section#bibliography");
   if (bibSection) {
@@ -1076,6 +1090,13 @@ Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. <span>“Using Simu
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

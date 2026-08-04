@@ -31,6 +31,7 @@
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
     if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
+    a.target = "_blank"; a.rel = "noopener";
     if (cur === "book" && t !== "book") {
       // D36: EN has diverged from the frozen PT/ES editions (new lessons and
       // station pages have no counterparts), so route to that edition's

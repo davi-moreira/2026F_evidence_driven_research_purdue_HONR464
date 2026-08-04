@@ -236,7 +236,7 @@ stations:
           2: "every rail addressed in the form this studio requires"
       - id: declare-and-diagnose.contract-v0.station-specific
         applies_when: {}
-        text: "The milestone's own product is present and defensible: Research Contract v0 — objective, target estimand, population, setting and time, data strategy, measurement, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record"
+        text: "The milestone's own product is present and defensible: Research Contract v0 — objective, target estimand, population, setting and time, data strategy, a provisional operationalization marked for revision, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record"
         levels:
           0: "the milestone's own product is missing"
           1: "present but would not survive a careful question"

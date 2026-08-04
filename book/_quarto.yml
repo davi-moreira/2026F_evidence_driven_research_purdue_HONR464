@@ -102,6 +102,8 @@ format:
   html:
     theme: cosmo
     toc: true
+    link-external-newwindow: true
+    link-external-icon: true
     include-before-body: _lang-switcher.html
     include-after-body: _page-behavior.html
 

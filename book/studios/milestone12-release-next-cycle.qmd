@@ -22,10 +22,11 @@ Check you are carrying each piece before you start. If one is missing, go back a
 
 ## The practice {#milestone}
 
-1. Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants.
-2. Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history.
-3. Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision.
-4. Write the next-study agenda: the question this work opened, and what you would do differently.
+1. Check that nothing moved since your Studio 11 cold run: any change to a number, a claim, the data, or the code makes that run stale — repeat it before you release.
+2. Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants.
+3. Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history.
+4. Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision.
+5. Write the next-study agenda: the question this work opened, and what you would do differently.
 
 ## A version, not a pass
 

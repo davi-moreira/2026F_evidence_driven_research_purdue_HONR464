@@ -639,6 +639,7 @@ ul.task-list li input[type="checkbox"] {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
     if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
+    a.target = "_blank"; a.rel = "noopener";
     if (cur === "book" && t !== "book") {
       // D36: EN has diverged from the frozen PT/ES editions (new lessons and
       // station pages have no counterparts), so route to that edition's
@@ -688,8 +689,8 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <section id="checkpoint" class="level2">
 <h2 class="anchored" data-anchor-id="checkpoint">The milestone ahead</h2>
-<p>This is the hinge of the book. Everything before it shaped a question; everything after it executes a design. The contract you write here (objective, estimand, population, data strategy, measurement, warrant, answer strategy, uncertainty) is declared before any result exists, so that later changes are visibly design or visibly drift. Diagnosing it on simulated data now, while changing your mind is still free, is what makes the declaration honest rather than decorative.</p>
-<p>This studio closes with <strong><a href="../studios/milestone04-declare-and-diagnose.html">Milestone 4: Your research contract, v0</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> Research Contract v0 — objective, target estimand, population, setting and time, data strategy, measurement, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record.</p>
+<p>This is the hinge of the book. Everything before it shaped a question; everything after it executes a design. The contract you write here (objective, estimand, population, data strategy, a provisional operationalization, warrant, answer strategy, uncertainty) is declared before any result exists, so that later changes are visibly design or visibly drift. Diagnosing it on simulated data now, while changing your mind is still free, is what makes the declaration honest rather than decorative.</p>
+<p>This studio closes with <strong><a href="../studios/milestone04-declare-and-diagnose.html">Milestone 4: Your research contract, v0</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> Research Contract v0 — objective, target estimand, population, setting and time, data strategy, a provisional operationalization you mark for revision, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record. Measurement proper is taught and assessed in Studio 6; here you only commit to a starting choice and say why it is defensible for now.</p>
 <p>Milestone 5 commits the contract to one research pathway and writes what that pathway can and cannot establish. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
 </section>
 <section id="the-lessons-in-this-studio" class="level2">
@@ -707,13 +708,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<span id="edrai-new-tab-note" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">opens in a new tab</span>
 <script>
 // Two page behaviors for every book page:
 //
 // 1. Every hyperlink in the page body opens in a new tab, so the book never
 //    navigates away from the reader's place. Navigation chrome (sidebar,
 //    TOC, breadcrumbs, next/previous) and same-page anchors keep native
-//    behavior.
+//    behavior. Treated links carry an assistive-technology note (W3C G201);
+//    Quarto's link-external-icon marks truly external links visibly.
 // 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
 (function () {
@@ -724,10 +727,21 @@ ul.task-list li input[type="checkbox"] {
     var a = links[i];
     var href = a.getAttribute("href");
     if (!href || href.charAt(0) === "#") continue;
-    if (href.lastIndexOf("mailto:", 0) === 0) continue;
+    if (/^(mailto:|tel:|javascript:)/i.test(href)) continue;
+    if (a.hasAttribute("download")) continue;
     if (a.closest("nav")) continue;
+    try {
+      var u = new URL(href, window.location.href);
+      if (u.origin === location.origin && u.pathname === location.pathname &&
+          u.search === location.search) continue;   // same-document link
+    } catch (e) { /* unparseable href: treat as cross-document */ }
     a.setAttribute("target", "_blank");
-    a.setAttribute("rel", "noopener");
+    var rel = (a.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
+    if (rel.indexOf("noopener") === -1) rel.push("noopener");
+    a.setAttribute("rel", rel.join(" "));
+    var desc = (a.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+    if (desc.indexOf("edrai-new-tab-note") === -1) desc.push("edrai-new-tab-note");
+    a.setAttribute("aria-describedby", desc.join(" "));
   }
   var bibSection = main.querySelector("section#bibliography");
   if (bibSection) {
@@ -831,6 +845,13 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

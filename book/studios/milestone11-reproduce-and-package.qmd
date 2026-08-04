@@ -22,7 +22,7 @@ Check you are carrying each piece before you start. If one is missing, go back a
 ## The practice {#milestone}
 
 1. Run your own package cold, from a clean environment, following only your written instructions.
-2. Have someone else run it without your help, and log every place they had to ask you a question.
+2. Have someone else run it without your help, and log every place they had to ask you a question. Working alone? Rerun it yourself after a real break, instructions only, and label the record 'solo proxy; external cold run pending' — a proxy never becomes a claim of independent reproduction.
 3. Fix what the cold run exposed; every question they asked is a missing line in your documentation.
 4. Assemble the package: data or its access route, code, environment, documentation, and licence.
 

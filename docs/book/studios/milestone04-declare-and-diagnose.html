@@ -645,6 +645,7 @@ ul.task-list li input[type="checkbox"] {
     var a = links[j], t = a.getAttribute("data-lang");
     if (cur === null) { a.href = "../" + t + "/index.html"; continue; }
     if (t === cur) { a.classList.add("active"); a.removeAttribute("href"); continue; }
+    a.target = "_blank"; a.rel = "noopener";
     if (cur === "book" && t !== "book") {
       // D36: EN has diverged from the frozen PT/ES editions (new lessons and
       // station pages have no counterparts), so route to that edition's
@@ -691,7 +692,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio04_declare_and_diagnose.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a></p>
 <p><strong>This chapter closes <a href="../studios/studio04-declare-and-diagnose.html">Studio 4: Declare and diagnose provisionally</a>.</strong> Its lessons each ended at <strong>It is your turn</strong>; what you wrote there arrives here as working material, and this is where the pieces become one artifact you can defend.</p>
-<p><strong>What this milestone produces.</strong> Research Contract v0 — objective, target estimand, population, setting and time, data strategy, measurement, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record.</p>
+<p><strong>What this milestone produces.</strong> Research Contract v0 — objective, target estimand, population, setting and time, data strategy, a provisional operationalization you mark for revision, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record. Measurement proper is taught and assessed in Studio 6; here you only commit to a starting choice and say why it is defensible for now.</p>
 <section id="what-you-bring" class="level2">
 <h2 class="anchored" data-anchor-id="what-you-bring">What you bring</h2>
 <p>Check you are carrying each piece before you start. If one is missing, go back and work that lesson’s <strong>It is your turn</strong> first; the practice below assumes it.</p>
@@ -786,7 +787,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>The milestone’s own product is present and defensible: Research Contract v0 — objective, target estimand, population, setting and time, data strategy, measurement, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record</td>
+<td>The milestone’s own product is present and defensible: Research Contract v0 — objective, target estimand, population, setting and time, data strategy, a provisional operationalization marked for revision, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record</td>
 <td>the milestone’s own product is missing</td>
 <td>present but would not survive a careful question</td>
 <td>present and defensible as stated</td>
@@ -815,13 +816,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<span id="edrai-new-tab-note" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">opens in a new tab</span>
 <script>
 // Two page behaviors for every book page:
 //
 // 1. Every hyperlink in the page body opens in a new tab, so the book never
 //    navigates away from the reader's place. Navigation chrome (sidebar,
 //    TOC, breadcrumbs, next/previous) and same-page anchors keep native
-//    behavior.
+//    behavior. Treated links carry an assistive-technology note (W3C G201);
+//    Quarto's link-external-icon marks truly external links visibly.
 // 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
 (function () {
@@ -832,10 +835,21 @@ ul.task-list li input[type="checkbox"] {
     var a = links[i];
     var href = a.getAttribute("href");
     if (!href || href.charAt(0) === "#") continue;
-    if (href.lastIndexOf("mailto:", 0) === 0) continue;
+    if (/^(mailto:|tel:|javascript:)/i.test(href)) continue;
+    if (a.hasAttribute("download")) continue;
     if (a.closest("nav")) continue;
+    try {
+      var u = new URL(href, window.location.href);
+      if (u.origin === location.origin && u.pathname === location.pathname &&
+          u.search === location.search) continue;   // same-document link
+    } catch (e) { /* unparseable href: treat as cross-document */ }
     a.setAttribute("target", "_blank");
-    a.setAttribute("rel", "noopener");
+    var rel = (a.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
+    if (rel.indexOf("noopener") === -1) rel.push("noopener");
+    a.setAttribute("rel", rel.join(" "));
+    var desc = (a.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+    if (desc.indexOf("edrai-new-tab-note") === -1) desc.push("edrai-new-tab-note");
+    a.setAttribute("aria-describedby", desc.join(" "));
   }
   var bibSection = main.querySelector("section#bibliography");
   if (bibSection) {
@@ -939,6 +953,13 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

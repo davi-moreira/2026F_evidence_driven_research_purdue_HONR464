@@ -160,9 +160,11 @@ stations:
       then find out how it behaves before it costs you anything.
     produces: >-
       Research Contract v0 — objective, target estimand, population, setting
-      and time, data strategy, measurement, warrant, answer strategy and
-      uncertainty statement — plus your diagnosands, your permission status,
-      and a redesign record.
+      and time, data strategy, a provisional operationalization you mark for
+      revision, warrant, answer strategy and uncertainty statement — plus
+      your diagnosands, your permission status, and a redesign record.
+      Measurement proper is taught and assessed in Studio 6; here you only
+      commit to a starting choice and say why it is defensible for now.
     steps:
       - Write the four MIDA parts of your design so a stranger could run them.
       - State your estimand and estimator, and describe in words what would differ if the procedure ran again.
@@ -182,10 +184,10 @@ stations:
     milestone_reason: >-
       This is the hinge of the book. Everything before it shaped a
       question; everything after it executes a design. The contract you
-      write here (objective, estimand, population, data strategy,
-      measurement, warrant, answer strategy, uncertainty) is declared
-      before any result exists, so that later changes are visibly design
-      or visibly drift. Diagnosing it on simulated data now, while
+      write here (objective, estimand, population, data strategy, a
+      provisional operationalization, warrant, answer strategy,
+      uncertainty) is declared before any result exists, so that later
+      changes are visibly design or visibly drift. Diagnosing it on simulated data now, while
       changing your mind is still free, is what makes the declaration
       honest rather than decorative.
     hands_forward: >-
@@ -528,7 +530,7 @@ stations:
       An independent cold-run record and a reusable research package.
     steps:
       - Run your own package cold, from a clean environment, following only your written instructions.
-      - Have someone else run it without your help, and log every place they had to ask you a question.
+      - "Have someone else run it without your help, and log every place they had to ask you a question. Working alone? Rerun it yourself after a real break, instructions only, and label the record 'solo proxy; external cold run pending' — a proxy never becomes a claim of independent reproduction."
       - Fix what the cold run exposed; every question they asked is a missing line in your documentation.
       - "Assemble the package: data or its access route, code, environment, documentation, and licence."
     rails:
@@ -568,6 +570,7 @@ stations:
       A release audit, your final dossier, an explicit stopping rule, and
       your next-study agenda.
     steps:
+      - "Check that nothing moved since your Studio 11 cold run: any change to a number, a claim, the data, or the code makes that run stale — repeat it before you release."
       - "Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants."
       - "Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history."
       - "Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision."
