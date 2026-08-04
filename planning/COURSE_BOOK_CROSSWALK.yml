@@ -259,7 +259,7 @@ rows:
     station_events:
       - {station: reproduce-and-package, event: practice, at: studio}
     book_milestones:
-      - {station: reproduce-and-package, relationship: practice, version_label: "version 1 — peer cold-run record",
+      - {station: reproduce-and-package, relationship: practice, version_label: "peer cold-run practice — precedes version 1",
          contribution_refs: [replication-reproduction]}
 
   - milestone: M14
@@ -278,7 +278,7 @@ rows:
     book_milestones:
       - {station: write-bound-disclose, relationship: revisit, version_label: "version 2 — post-conference bounded note",
          contribution_refs: [results-to-claims, claim-evidence-tables, ai-disclosure, poster-to-note]}
-      - {station: reproduce-and-package, relationship: checkpoint, version_label: "version 2 — reusable package",
+      - {station: reproduce-and-package, relationship: checkpoint, version_label: "version 1 — reusable package",
          contribution_refs: [replication-reproduction, research-packages]}
 
   - milestone: M15

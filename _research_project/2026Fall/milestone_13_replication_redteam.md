@@ -1,4 +1,10 @@
-# Milestone 13 — Replication and Red-Team Report
+# Course milestone M13 — Replication and Red-Team Report
+
+<!-- book-milestone-bridge:begin -->
+> **Book Milestone bridge (D41)** — course milestone **M13**.
+> This submission presents **Book Milestone 11 — Your reproducible package** (peer cold-run practice — precedes version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html#milestone).
+> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
+<!-- book-milestone-bridge:end -->
 
 ## About the Research Project
 
@@ -54,7 +60,7 @@ work inside your project notebook):
 - Ch. 35 — [Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch32_replication_and_reproduction.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's 37 "It is your turn" sections chain into your final
+semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
 research chapter, so what you complete here is a draft piece of your final
 artifact. Include the completed sections in this milestone's submission (see
 the submission table above) and carry them forward in your Research Project

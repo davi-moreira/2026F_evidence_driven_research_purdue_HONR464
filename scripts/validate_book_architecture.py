@@ -41,7 +41,7 @@ STATIONS = REPO / "planning" / "BOOK_STATIONS.yml"
 SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.csv"
 BRIEFS = REPO / "_research_project" / "2026Fall"
 LOCK = REPO / "planning" / ".crosswalk_lock.json"
-VALIDATOR_VERSION = "1.0"
+VALIDATOR_VERSION = "1.1"
 
 EVENTS = {"introduce", "practice", "checkpoint", "revisit"}
 ATS = {"reading-due", "studio", "milestone-submission"}
@@ -267,6 +267,8 @@ def check_crosswalk(arch, cw) -> list[str]:
     anchors: list[str] = []
     planned_anchors: list[str] = []
     milestones, nbs = [], []
+    cp_fired: dict[tuple, list[int]] = {}
+    cp_revisited: dict[tuple, list[int]] = {}
     for r in cw.get("rows", []):
         mi = r.get("milestone", "?")
         milestones.append(mi)
@@ -302,34 +304,105 @@ def check_crosswalk(arch, cw) -> list[str]:
             for f in ("id", "requires", "before_event", "evidence", "blocking"):
                 if f not in g:
                     p.append(f"cw[{mi}]: gate missing `{f}`")
-        # ---- schema 1.1 (D41): the D40 naming-bridge blocks --------------
+        # ---- schema 1.1 (D41, hardened per the review round) -------------
+        # The bridge is load-bearing (it generates student-facing text), so
+        # its semantics are ENFORCED, not merely shape-checked: every
+        # milestone-submission checkpoint/revisit event needs a matching
+        # bridge and vice versa; a checkpoint fires exactly once file-wide;
+        # a revisit may only follow its checkpoint; route policy is tied to
+        # route-required assignments; gates are typed.
         lessons_of_station = {}
         for l in arch["lessons"]:
             if l["state"] == "active":
                 lessons_of_station.setdefault(l["station"], set()).add(l["id"])
-        for b in r.get("book_milestones", []):
+        mnum = int(mi[1:]) if mi[1:].isdigit() else -1
+        row_sub_events = {(e.get("station"), e.get("event"))
+                          for e in r.get("station_events", [])
+                          if e.get("at") == "milestone-submission"}
+        row_event_stations = {e.get("station")
+                              for e in r.get("station_events", [])}
+        bridges = r.get("book_milestones", [])
+        for b in bridges:
             st = b.get("station")
             if st not in stations:
                 p.append(f"cw[{mi}]: book_milestones unknown station {st!r}")
                 continue
-            if b.get("relationship") not in ("checkpoint", "revisit", "practice"):
+            rel = b.get("relationship")
+            if rel not in ("checkpoint", "revisit", "practice"):
                 p.append(f"cw[{mi}/{st}]: bad book_milestones relationship "
-                         f"{b.get('relationship')!r}")
+                         f"{rel!r}")
+            elif rel in ("checkpoint", "revisit") and (st, rel) not in row_sub_events:
+                p.append(f"cw[{mi}/{st}]: bridge says {rel!r} but the row has "
+                         f"no matching milestone-submission station event")
+            elif rel == "practice" and st not in row_event_stations:
+                p.append(f"cw[{mi}/{st}]: practice bridge without any station "
+                         f"event for that station")
             if not b.get("version_label"):
                 p.append(f"cw[{mi}/{st}]: book_milestones missing version_label")
-            bad = set(b.get("contribution_refs", [])) - lessons_of_station.get(st, set())
+            refs = b.get("contribution_refs", [])
+            if not refs:
+                p.append(f"cw[{mi}/{st}]: contribution_refs is empty")
+            bad = set(refs) - lessons_of_station.get(st, set())
             if bad:
                 p.append(f"cw[{mi}/{st}]: contribution_refs outside the "
                          f"station: {sorted(bad)}")
+        bridged = {b.get("station") for b in bridges}
+        for st, ev in row_sub_events:
+            if ev in ("checkpoint", "revisit") and st not in bridged:
+                p.append(f"cw[{mi}/{st}]: milestone-submission {ev} has no "
+                         f"book_milestones bridge")
         for sg in r.get("supporting_gate_milestones", []):
-            if sg.get("station") not in stations:
-                p.append(f"cw[{mi}]: supporting_gate unknown station "
-                         f"{sg.get('station')!r}")
+            sgs = sg.get("station")
+            if sgs not in stations:
+                p.append(f"cw[{mi}]: supporting_gate unknown station {sgs!r}")
+            elif sgs not in row_event_stations:
+                p.append(f"cw[{mi}/{sgs}]: supporting_gate station has no "
+                         f"station event in the row")
             if not sg.get("use"):
                 p.append(f"cw[{mi}]: supporting_gate missing `use`")
         rs = r.get("route_selection")
-        if rs is not None and not rs.get("rule"):
-            p.append(f"cw[{mi}]: route_selection missing `rule`")
+        has_route_req = any(a.get("requirement") == "route-required"
+                            for a in r.get("assignments", []))
+        if rs is not None:
+            if not rs.get("rule"):
+                p.append(f"cw[{mi}]: route_selection missing `rule`")
+            if not has_route_req:
+                p.append(f"cw[{mi}]: route_selection on a row without "
+                         f"route-required assignments")
+        elif has_route_req:
+            p.append(f"cw[{mi}]: route-required assignments without a "
+                     f"route_selection policy")
+        for g in r.get("gates", []):
+            if "blocking" in g and not isinstance(g["blocking"], bool):
+                p.append(f"cw[{mi}]: gate `{g.get('id')}` blocking must be "
+                         f"a YAML boolean, got {g['blocking']!r}")
+        for a in r.get("assignments", []):
+            if a.get("purpose") == "first-read" and not a.get("home_anchor"):
+                p.append(f"cw[{mi}/{a.get('lesson')}]: a first-read must be "
+                         f"the lesson's home anchor (re-reads are revisits)")
+        for e in r.get("station_events", []):
+            if e.get("event") == "checkpoint":
+                cp_fired.setdefault((e.get("station"), e.get("checkpoint")),
+                                    []).append(mnum)
+            if e.get("event") == "revisit":
+                cp_revisited.setdefault((e.get("station"), e.get("checkpoint")),
+                                        []).append(mnum)
+    if cw.get("schema_version") != "1.1":
+        p.append(f"cw: schema_version must be \"1.1\", got "
+                 f"{cw.get('schema_version')!r}")
+    for key, fired in cp_fired.items():
+        if len(fired) > 1:
+            p.append(f"cw: checkpoint {key[0]}/{key[1]} fires "
+                     f"{len(fired)} times (milestones {sorted(fired)}) — a "
+                     f"checkpoint fires ONCE; later versions are revisits")
+    for key, revs in cp_revisited.items():
+        fired = cp_fired.get(key)
+        if not fired:
+            p.append(f"cw: {key[0]}/{key[1]} is revisited but never fires "
+                     f"a checkpoint")
+        elif min(revs) <= min(fired):
+            p.append(f"cw: {key[0]}/{key[1]} revisited at M{min(revs)} "
+                     f"before/at its checkpoint M{min(fired)}")
     dup = {a for a in anchors if anchors.count(a) > 1}
     if dup:
         p.append(f"cw: lesson home-anchored more than once: {dup}")

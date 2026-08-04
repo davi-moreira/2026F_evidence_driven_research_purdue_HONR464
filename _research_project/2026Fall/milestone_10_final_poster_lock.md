@@ -1,4 +1,12 @@
-# Milestone 10 — Final Poster Lock
+# Course milestone M10 — Final Poster Lock
+
+<!-- book-milestone-bridge:begin -->
+> **Book Milestone bridge (D41)** — course milestone **M10**.
+> This submission presents **Book Milestone 10 — Your defense, ready** (version 1 — poster edition, labeled preliminary): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
+> **Gate work (no artifact presented):** Book Milestone 11 — Your reproducible package (author self reproduction before poster lock).
+> **Gate work (no artifact presented):** Book Milestone 12 — Your release and next cycle (release preflight before poster lock).
+> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
+<!-- book-milestone-bridge:end -->
 
 ## About the Research Project
 
@@ -56,7 +64,7 @@ work inside your project notebook):
 - Ch. 32 — [Poster Criticism](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch28_poster_criticism.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's 37 "It is your turn" sections chain into your final
+semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
 research chapter, so what you complete here is a draft piece of your final
 artifact. Include the completed sections in this milestone's submission (see
 the submission table above) and carry them forward in your Research Project

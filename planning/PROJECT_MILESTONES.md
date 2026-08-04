@@ -19,7 +19,7 @@ tag `v1-compass-build`.
 **Kickoff cadence.** Every milestone is kicked off from its Brightspace brief
 at the opening of a Friday studio's sprint block, developed across Mon/Wed
 lectures (project-transfer moments) and the studio sprint, red-teamed by peers
-+ an assigned GenAI Studio reviewer role where designated (M5, M7, M9, M13),
++ an assigned GenAI Studio reviewer role where designated (M4, M7, M10, M13),
 and submitted at studio close. Kickoff exceptions: M0 (assigned in class on
 day 1), M11 (kicked off Monday of conference-prep week), M13 (packages
 exchanged at the Week-13 studio), M14 (brief posted with the async module).
@@ -44,8 +44,8 @@ are `M0…M15`.
 | M10 | Final poster lock | M28–M30 | Poster Criticism I gallery (M29) + Criticism II oral defense (M30) | Fri Nov 6, 5:00 PM — TERMINAL | 10 — Your defense, ready (v1, poster edition, labeled preliminary) |
 | M11 | Defense-ready presentation package | M32–M33 | mock poster symposium (M34) | Fri Nov 13 | 10 (v2, defense-rehearsed) |
 | M12 | Conference reflection and defense revision | M35–M36 | reflection story round (M36); the Expo (Tue Nov 17: present + evaluate ≥3 posters) is a graded component | Fri Nov 20 | 10 (v3, publicly tested) |
-| M13 | Replication and red-team report | M36–M37 | async board exchange (module week) | Sun Nov 29 | 11 — Your reproducible package (v1, peer cold-run record) |
-| M14 | Research note v1 and reusable package | M37–M39 | table read with margin notes (M40) | Fri Dec 4 | 11 (v2, reusable package) + 9 (v2, post-conference note) |
+| M13 | Replication and red-team report | M36–M37 | async board exchange (module week) | Sun Nov 29 | 11 — Your reproducible package (practice: peer cold-run, precedes v1) |
+| M14 | Research note v1 and reusable package | M37–M39 | table read with margin notes (M40) | Fri Dec 4 | 11 (v1, reusable package) + 9 (v2, post-conference note) |
 | M15 | Release audit, final chapter, and AI-management portfolio | M40–M42 | final defenses (M42–M43) + submission ceremony | Fri Dec 11 — TERMINAL | 12 — Your release and next cycle (v1) |
 
 ## Dossier mapping

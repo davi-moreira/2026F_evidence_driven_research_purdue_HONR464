@@ -106,7 +106,10 @@ def adoption_table(notes: dict) -> str:
     return (f"{BEGIN}\n\n### Which lab goes with which lesson\n\n"
             "Each lesson's companion notebook belongs to the book. The table\n"
             "below maps every lesson to the classroom lab that carries it in the\n"
-            "companion course, and says what that lab does.\n\n"
+            "companion course, and says what that lab does. (D41 rebuild in\n"
+            "progress: labs nb05–nb16 are being rebuilt to the Studio\n"
+            "structure; a lab's current interior content may still follow\n"
+            "the previous topic order until the rebuild lands.)\n\n"
             + "\n".join(rows) + revisit_para + f"\n\n{END}")
 
 

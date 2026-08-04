@@ -53,6 +53,70 @@ def title_of(lesson: dict) -> str:
     return m.group(1) if m else lesson.get("title_en", lesson["id"])
 
 
+BRIDGE_BEGIN = "<!-- book-milestone-bridge:begin -->"
+BRIDGE_END = "<!-- book-milestone-bridge:end -->"
+BRIDGE_RE = re.compile(re.escape(BRIDGE_BEGIN) + r".*?" + re.escape(BRIDGE_END),
+                       re.S)
+
+
+def station_info() -> dict[str, dict]:
+    """station id -> {rank, milestone_title} from the two manifests."""
+    import yaml
+    arch = yaml.safe_load((REPO / "planning" / "BOOK_ARCHITECTURE.yml").read_text())
+    spec = yaml.safe_load((REPO / "planning" / "BOOK_STATIONS.yml").read_text())
+    titles = {s["id"]: s.get("milestone_title", s["id"]) for s in spec["stations"]}
+    return {s["id"]: {"rank": s["rank"], "title": titles.get(s["id"], s["id"])}
+            for s in arch["stations"]}
+
+
+def bridge_block(row: dict, stations: dict[str, dict]) -> str:
+    """The D41 naming-bridge projection for one course milestone.
+
+    Line discipline: no line may start with '- Ch. ' and no line may contain
+    the string 'EDR' — both are anchor-surface parse tokens in
+    validate_book_architecture's brief checker.
+    """
+    mi = row["milestone"]
+    lines = [BRIDGE_BEGIN,
+             f"> **Book Milestone bridge (D41)** — course milestone **{mi}**."]
+    for b in row.get("book_milestones", []):
+        st = stations[b["station"]]
+        page = (f"{SITE}/book/studios/"
+                f"milestone{st['rank']:02d}-{b['station']}.html#milestone")
+        lines.append(f"> This submission presents **Book Milestone "
+                     f"{st['rank']} — {st['title']}** ({b['version_label']}): "
+                     f"work from its [milestone page]({page}).")
+        if b.get("relationship") == "revisit":
+            lines.append("> It is a *revisit*: the next version of an "
+                         "artifact whose first version already exists.")
+    if row.get("route_selection"):
+        lines.append("> **Route-conditional reading:** complete YOUR declared "
+                     "route's chapter plus the instructor-assigned contrast; "
+                     "the other route chapters are jigsaw material, and the "
+                     "hybrid/complex overlay applies only when your design "
+                     "has stages.")
+    for sg in row.get("supporting_gate_milestones", []):
+        st = stations[sg["station"]]
+        lines.append(f"> **Gate work (no artifact presented):** Book "
+                     f"Milestone {st['rank']} — {st['title']} "
+                     f"({sg['use'].replace('-', ' ')}).")
+    lines.append("> *(D41 rebuild note: this brief's artifact spec is being "
+                 "rebuilt to the Studio structure and is updated before its "
+                 "kickoff.)*")
+    lines.append(BRIDGE_END)
+    return "\n".join(lines)
+
+
+def apply_bridge(text: str, block: str) -> str:
+    if BRIDGE_RE.search(text):
+        return BRIDGE_RE.sub(block, text)
+    lines = text.split("\n")
+    for i, line in enumerate(lines):
+        if line.startswith("# "):
+            return "\n".join(lines[:i + 1] + ["", block] + lines[i + 1:])
+    return text + "\n\n" + block + "\n"
+
+
 def render(text: str, picked: list[dict]) -> str:
     if not picked:
         return text
@@ -76,6 +140,8 @@ def main() -> int:
     check = "--check" in sys.argv
     require_lock()
     anchors = anchors_by_milestone()
+    stations = station_info()
+    rows = {r["milestone"]: r for r in load_crosswalk()["rows"]}
     stale, written = [], 0
     for brief in sorted(BRIEFS.glob("milestone_*.md")):
         m = re.match(r"milestone_(\d+)_", brief.name)
@@ -88,6 +154,8 @@ def main() -> int:
             stale.append(f"{brief.name} (bullet surface missing)")
             continue
         new = render(src, picked)
+        if mi in rows:
+            new = apply_bridge(new, bridge_block(rows[mi], stations))
         if new == src:
             continue
         if check:

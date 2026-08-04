@@ -1,4 +1,11 @@
-# Milestone 04 — Observational Descriptive Design Audit
+# Course milestone M4 — Pathway Declaration and Mandated Contrast
+
+<!-- book-milestone-bridge:begin -->
+> **Book Milestone bridge (D41)** — course milestone **M4**.
+> This submission presents **Book Milestone 5 — Your pathway, declared** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone05-develop-the-pathway.html#milestone).
+> **Route-conditional reading:** complete YOUR declared route's chapter plus the instructor-assigned contrast; the other route chapters are jigsaw material, and the hybrid/complex overlay applies only when your design has stages.
+> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
+<!-- book-milestone-bridge:end -->
 
 ## About the Research Project
 
@@ -45,7 +52,7 @@ work inside your project notebook):
 - Ch. 18 — [Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch16_hybrid_and_complex_designs.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's 37 "It is your turn" sections chain into your final
+semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
 research chapter, so what you complete here is a draft piece of your final
 artifact. Include the completed sections in this milestone's submission (see
 the submission table above) and carry them forward in your Research Project

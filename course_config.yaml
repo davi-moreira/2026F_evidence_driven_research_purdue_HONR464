@@ -116,21 +116,21 @@ inquiry_framework:
       reach: "sample"
       can_establish: "what is observed in the data at hand; patterns, distributions, differences"
       cannot_establish: "reach beyond these units; causal effects"
-      taught_in: "nb02 (classification), nb05 (design deep dive)"
+      taught_in: "nb02 (classification), nb05 (W5 route hub)"
     generalization:
       label: "generalization (statistical/observational inference)"
       kind: "descriptive"
       reach: "population"
       can_establish: "estimates about a population with quantified uncertainty, for the frame the sampling design reaches"
       cannot_establish: "a causal effect (association is not causation); reach past the frame"
-      taught_in: "nb02 (classification), nb05 (design deep dive)"
+      taught_in: "nb02 (classification), nb05 (W5 route hub)"
     prediction:
       label: "prediction (descriptive inquiries about unseen cases)"
       kind: "descriptive"
       reach: "unseen"
       can_establish: "out-of-sample forecasts for new observations, against a stated baseline + metric"
       cannot_establish: "explanation or causation; performance != understanding"
-      taught_in: "nb02 (classification), nb08 (design deep dive)"
+      taught_in: "nb02 (classification), nb05 (W5 route hub)"
       note: "a distinct answer objective — never forced into the descriptive-vs-causal or observational-vs-experimental grids"
     causal:
       label: "causal reasoning"
@@ -139,7 +139,7 @@ inquiry_framework:
       can_establish: "an effect of an intervention under a stated identification argument"
       cannot_establish: "effects when identification assumptions fail or no design supplies leverage"
       identification_status: "declared per project: identified | causal target, currently unidentified — the kind NEVER changes with the data (D35)"
-      taught_in: "nb02 (classification), nb06 + nb09 (design deep dives)"
+      taught_in: "nb02 (classification), nb05 (W5 route hub)"
   kind_rule: >-
     The question's kind is fixed by its words (counterfactual contrast or not).
     Data inadequacy never relabels a causal question descriptive; the honest
@@ -254,7 +254,7 @@ sources:
     title: "Evidence-Driven Research in the Age of AI: How to Design, Analyze, Verify, and Defend"
     acronym: "EDR|AI"
     status: "work in progress — under development across the semester"
-    reading_model: "EDR|AI chapters are the REQUIRED reading; the matching RDSS chapters are RECOMMENDED (EDR|AI translates RDSS to the undergraduate audience)"
+    reading_model: "EDR|AI chapters are the REQUIRED reading; the matching RDSS chapters are RECOMMENDED (EDR|AI translates RDSS to the undergraduate audience). Route lessons (D41): your own route plus one assigned contrast; hybrid/complex only when the design has stages"
     translations: ["pt-BR (book-pt/ -> docs/book-pt)", "es (book-es/ -> docs/book-es)"]
     format: "Quarto book, 39 lessons in 12 Studios, each closed by a generated Book Milestone chapter (D38/D40), rendered to docs/book/"
     sync: "chapters synchronized with nb01–nb16 + site (validate_book_sync.py)"

@@ -1,4 +1,12 @@
-# Milestone 14 — Research-Note Draft and Reproducibility Capsule
+# Course milestone M14 — Research Note v1 and Reusable Package
+
+<!-- book-milestone-bridge:begin -->
+> **Book Milestone bridge (D41)** — course milestone **M14**.
+> This submission presents **Book Milestone 9 — Your bounded claims** (version 2 — post-conference bounded note): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html#milestone).
+> It is a *revisit*: the next version of an artifact whose first version already exists.
+> This submission presents **Book Milestone 11 — Your reproducible package** (version 1 — reusable package): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html#milestone).
+> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
+<!-- book-milestone-bridge:end -->
 
 ## About the Research Project
 
@@ -49,7 +57,7 @@ work inside your project notebook):
 - Ch. 36 — [Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch34_open_and_reusable_research_packages.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's 37 "It is your turn" sections chain into your final
+semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
 research chapter, so what you complete here is a draft piece of your final
 artifact. Include the completed sections in this milestone's submission (see
 the submission table above) and carry them forward in your Research Project

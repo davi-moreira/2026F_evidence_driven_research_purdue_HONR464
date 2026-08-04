@@ -1421,3 +1421,34 @@ implementation; the transition is disclosed here and in the crosswalk
 header instead. Deferred validator hardening: `validate_coverage.py`
 exactly-one-nb-token rule; lock validator-version rejection in
 `require_lock()`.
+
+**D41 review-round record (2026-08-04).** The Codex diff review
+(gpt-5.6-sol, xhigh, read-only; verdict in
+`_adm/codex_collab/2026-08-03_option2-implementation/review_verdict.md`)
+returned do-not-ship with six findings — a session auto-commit had shipped
+the structural phase mid-review as `a3faef8`; this corrective commit applies
+every confirmed finding: (1) the naming bridge is now GENERATED — 
+`build_milestone_anchors.py` renders a marked Book-Milestone-bridge block
+into every brief (book Milestone number/title/version from the crosswalk +
+BOOK_STATIONS, route-conditional reading on M4, revisit and gate lines, and
+a D41 rebuild note), and all sixteen briefs are retitled "Course milestone
+MN — <D41 title>" so bare "Milestone N" stays book vocabulary; (2) the
+Material page, adoption table, and every brief carry an explicit
+rebuild-in-progress notice until the nb05–nb16 content cutover, replacing
+the false "derived from" claims; (3) schema-1.1 validation is a real state
+machine (bridge↔event agreement both directions, checkpoint fires exactly
+once, revisit only after its checkpoint, route policy tied to
+route-required rows, first-read ⇒ home anchor, typed gate booleans,
+schema_version enforced; VALIDATOR_VERSION 1.1) — all ten corruption
+fixtures, including the review's seven, are caught; (4) Book Milestone 11
+corrected: M13 is peer cold-run PRACTICE preceding version 1, M14's
+checkpoint is v1; (5) `taught_in`, the reading-model fields, the master
+plan's Week-7 sentence, and the kickoff reviewer set (M4/M7/M10/M13) no
+longer contradict the route policy, and the stale "37 It is your turn
+sections" sentence is fixed in all sixteen briefs; (6) `require_lock()`
+verifies the COMPLETE locked manifest set (assessments + leakage policy
+included). Queued counter-proposals for Phase B: structured
+version/status fields instead of free-form version_label; one typed loader
+generating the milestone registry, PROJECT table, brief bridges, and
+adoption labels; separating lesson ownership / student assignment /
+version contribution, which `home_anchor` currently overloads.

@@ -1,4 +1,10 @@
-# Milestone 02 — Verified Evidence and Contribution Map
+# Course milestone M2 — Verified Evidence and Contribution Map
+
+<!-- book-milestone-bridge:begin -->
+> **Book Milestone bridge (D41)** — course milestone **M2**.
+> This submission presents **Book Milestone 3 — Your evidence base** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone03-ground-in-evidence.html#milestone).
+> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
+<!-- book-milestone-bridge:end -->
 
 ## About the Research Project
 
@@ -42,7 +48,7 @@ work inside your project notebook):
 - Ch. 8 — [Finding and Verifying Prior Evidence](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch08_finding_and_verifying_prior_evidence.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's 37 "It is your turn" sections chain into your final
+semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
 research chapter, so what you complete here is a draft piece of your final
 artifact. Include the completed sections in this milestone's submission (see
 the submission table above) and carry them forward in your Research Project

@@ -147,7 +147,7 @@ the rest; `hybrid-complex-designs` binds only when the design has stages).
 **Prediction is its own answer objective** (generalization to unseen
 observations), never forced into the descriptive-vs-causal or
 observational-vs-experimental grid. **Experimental assignment does not imply a
-causal inquiry**: experimental *descriptive* designs exist (Week 7). A student
+causal inquiry**: experimental *descriptive* designs exist (a Week-5 route). A student
 moves from Layer 1 to Layer 2 by carrying a classified question into a matched
 pathway; the crossing-license and claim-boundary machinery from v1 carries over
 intact.
@@ -224,7 +224,8 @@ since D40 each Studio closes with a generated **Milestone chapter**
 authored rubric, and workbook badge. The book is presented to students as a
 **work in progress**, under development across the semester. **RDSS remains
 the theory text**; EDR|AI chapters are the REQUIRED reading and the matching
-RDSS chapters are RECOMMENDED. Course adoption is machine-defined: the
+RDSS chapters are RECOMMENDED (route lessons: own route + one assigned
+contrast; hybrid when the design has stages — D41). Course adoption is machine-defined: the
 **crosswalk** (`planning/COURSE_BOOK_CROSSWALK.yml`, schema 1.1) maps every
 lesson to exactly one home milestone (39-lesson bijection), fires every
 studio checkpoint, and carries the D40 naming bridge (course milestones

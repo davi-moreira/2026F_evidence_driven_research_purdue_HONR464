@@ -1,8 +1,8 @@
 {
-  "validator_version": "1.0",
+  "validator_version": "1.1",
   "manifests": {
     "BOOK_ARCHITECTURE.yml": "4b23ef6985d82f83b182c885e723decc7ad5322f00e94b48f7f8fb9986bee166",
-    "COURSE_BOOK_CROSSWALK.yml": "4dcfb853f0369aef428165cf7b22c3dcbacbd92ca7ca88e2ebd9edd34870e28b",
+    "COURSE_BOOK_CROSSWALK.yml": "928ae2ffef3c017d800da21d276351361c79d41426a93a37e3b499fd9df5e619",
     "BOOK_ASSESSMENTS.yml": "b86f85be1539bfff34cc35d28ecc5b438e628f445b07cd2fd75bc81bc3fc6127",
     "BOOK_LEAKAGE_POLICY.yml": "6d7aeb8bf8f420ae5c8fa1d71b4bdc8d884fecccc36d1c4ed5a67db7f92e18cf",
     "BOOK_STATIONS.yml": "90ed0237d1f25c4471f38106c76746cf4f6a8e54433282d634c3f1f54f7d3cbd"

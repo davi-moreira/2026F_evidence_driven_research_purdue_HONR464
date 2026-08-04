@@ -63,10 +63,15 @@ def require_lock() -> None:
         raise SystemExit("✗ no crosswalk lock — run "
                          "scripts/validate_book_architecture.py first")
     lock = json.loads(LOCK.read_text())
-    # BOOK_STATIONS joined the lock set with D41 — D40 made its authored
-    # fields (milestone_title, contributions) a generator input.
+    # The COMPLETE locked manifest set is checked (D41 review round): a
+    # consumer must not run against ANY manifest that moved past the lock —
+    # BOOK_ASSESSMENTS feeds the station/rubric pages, LEAKAGE the A2 gate.
     for name in ("BOOK_ARCHITECTURE.yml", "COURSE_BOOK_CROSSWALK.yml",
-                 "BOOK_STATIONS.yml"):
+                 "BOOK_STATIONS.yml", "BOOK_ASSESSMENTS.yml",
+                 "BOOK_LEAKAGE_POLICY.yml"):
+        if name not in lock.get("manifests", {}):
+            raise SystemExit(f"✗ lock predates {name} coverage — re-run "
+                             "scripts/validate_book_architecture.py")
         p = REPO / "planning" / name
         if hashlib.sha256(p.read_bytes()).hexdigest() != lock["manifests"][name]:
             raise SystemExit(f"✗ {name} changed since the last validator pass "
