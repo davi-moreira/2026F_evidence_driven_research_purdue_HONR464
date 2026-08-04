@@ -100,9 +100,9 @@ Three uses, all inside the Ask → Verify → Document loop.
 
 ---
 
-## The four required milestone touchpoints
+## The five required milestone touchpoints
 
-Most role use is optional support. At four milestones, consulting a specific
+Most role use is optional support. At five milestones, consulting a specific
 role is **required**, and a named output section goes into your **AI Research
 Ledger** (`ai_resources/ai_research_ledger_template.md`). Milestone definitions
 are the v2 chain in `planning/PROJECT_MILESTONES.md` and
@@ -110,9 +110,10 @@ are the v2 chain in `planning/PROJECT_MILESTONES.md` and
 
 | Milestone | Due | Required role(s) | What you submit to the role |
 |---|---|---|---|
-| **M5** — Causal identification strategy or causal-language boundary | Fri Oct 2 | Causal Identification Skeptic | Your identification argument, or your defense that your language stays descriptive |
-| **M7** — Declared analysis protocol | Fri Oct 16 | Prediction & Leakage Auditor | Your declared analysis protocol, focusing on any out-of-sample / prediction claim |
-| **M9** — Poster draft 1 and research audit | Fri Oct 30 | Poster Critic **and** Robustness & Sensitivity Reviewer | Your poster draft, and your claim-and-evidence table with robustness checks |
+| **M4** — Pathway declaration and mandated contrast | Fri Sep 25 | Causal Identification Skeptic | Your route declaration: the identification argument your route claims, or your defense that your language stays descriptive |
+| **M7** — Clean-restart verified analysis | Fri Oct 16 | Prediction & Leakage Auditor | Your verified analysis, focusing on any out-of-sample / prediction claim |
+| **M8** — Robustness audit | Fri Oct 23 | Robustness & Sensitivity Reviewer | Your claim-and-evidence table with the pre-listed robustness checks you ran |
+| **M10** — Final poster lock | Fri Nov 6, 5 PM | Poster Critic | Your poster before the lock: claim boundary, traceable numbers, uncertainty |
 | **M13** — Replication and red-team report | Sun Nov 29 (async) | Reproducibility Auditor | The peer reproducibility package you are replicating |
 
 Each of these five role files carries a **"Milestone scope"** statement naming
@@ -135,14 +136,14 @@ Student Use, and Instructor Use.
 | `roles/evidence_citation_verifier.md` | Whether a citation is specific enough to be checkable (you still retrieve it) | Week 3 · M2 |
 | `roles/research_question_diagnostician.md` | Question classification on the compass (kind × reach) and scope | Week 2 · M1 |
 | `roles/mida_design_reviewer.md` | Your MIDA declaration (Model, Inquiry, Data, Answer) and diagnosis plan | Week 4 · M3 |
-| `roles/observational_descriptive_auditor.md` | Sampling frame, coverage, index construction, generalization boundary | Week 5 · M4 |
-| `roles/causal_identification_skeptic.md` | Identification assumptions and causal-language boundary **(M5 touchpoint)** | Week 6 · M5 |
-| `roles/experimental_design_reviewer.md` | Assignment, blocking, randomization checks, experiment ethics | Weeks 7 & 9 · M6/M8 |
-| `roles/prediction_leakage_auditor.md` | Leakage, baseline, held-out honesty, metric choice **(M7 touchpoint)** | Week 8 · M7 |
-| `roles/robustness_sensitivity_reviewer.md` | Specification robustness and sensitivity of a claim **(M9 touchpoint)** | Week 10 · M9 |
-| `roles/poster_critic.md` | Claim boundary, untraceable numbers, uncertainty, data-ink **(M9 touchpoint)** | Week 11 · M9/M10 |
+| `roles/observational_descriptive_auditor.md` | Sampling frame, coverage, index construction, generalization boundary | Weeks 5–6 · M4/M5 |
+| `roles/causal_identification_skeptic.md` | Identification assumptions and causal-language boundary **(M4 touchpoint)** | Week 5 · M4 |
+| `roles/experimental_design_reviewer.md` | Assignment, blocking, randomization checks, experiment ethics | Week 5 route hub + experiment routes · M4 |
+| `roles/prediction_leakage_auditor.md` | Leakage, baseline, held-out honesty, metric choice **(M7 touchpoint)** | Weeks 7–8 · M6/M7 |
+| `roles/robustness_sensitivity_reviewer.md` | Specification robustness and sensitivity of a claim **(M8 touchpoint)** | Week 9 · M8 |
+| `roles/poster_critic.md` | Claim boundary, untraceable numbers, uncertainty, data-ink **(M10 touchpoint)** | Week 11 · M10 |
 | `roles/reproducibility_auditor.md` | Whether a package reproduces from scratch **(M13 touchpoint)** | Weeks 14–15 · M13/M14 |
-| `roles/research_note_reviewer.md` | Research-note structure, uncertainty/limitations, claim traceability | Week 15 · M14 |
+| `roles/research_note_reviewer.md` | Research-note structure, uncertainty/limitations, claim traceability | Weeks 10 & 15 · M9/M14 |
 | `roles/ai_research_team_orchestrator.md` | Which roles to consult next — a level-4 planning aid, not an agent | Week 16 · M15 |
 
 ---

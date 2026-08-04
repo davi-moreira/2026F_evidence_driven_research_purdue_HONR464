@@ -64,9 +64,10 @@ editor: visual
 Forty-three Monday/Wednesday/Friday meetings (42 in person, 1 asynchronous
 online). The weekly rhythm: **Monday and Wednesday are lectures** (new content,
 one notebook per topic), and **every Friday is a studio** — a short
-multiple-choice quiz on the week's topic, a research stand-up, the next project
-milestone presented, and the rest of the class spent working on your milestone
-and research project. Open each notebook in Colab
+multiple-choice quiz on the week's topic, a research stand-up, the next
+project milestone kicked off from its brief, and the rest of the class spent
+working on your milestone and research project. Each course milestone
+presents a book Milestone version (the bridge is stated in its brief). Open each notebook in Colab
 from its badge; milestone instructions and rubrics are on Brightspace. Topic
 resources are also cataloged on the [Material](material.qmd) page, and every
 dataset the course uses is in the
@@ -81,7 +82,7 @@ FOOTER = '''
 **Fri Nov 6** · **Purdue Fall Undergraduate Research Expo: Tue Nov 17**
 (required poster presentation) · Evidence Defenses **Dec 7 & 9** · Final
 dossier **Fri Dec 11**. No class: Sep 7 (Labor Day), Oct 12 (October Break),
-Nov 25/27 (Thanksgiving). Async-online meetings: Oct 2 and Nov 23.
+Nov 25/27 (Thanksgiving). Async-online meeting: Mon Nov 23.
 
 ## Core Course References
 
@@ -135,8 +136,13 @@ def build() -> str:
             title = f"{title} *(Lecture {i}/{total})*"
 
         mile = r["milestone_developed"]
-        mile = re.sub(r" — [^|]*", "", mile)  # compact: IDs only on the site
+        # compact for the site: keep the course id + any "Book Milestone N"
+        # bridge token; drop the long title between them (D41)
+        bm = re.search(r"Book Milestone \d+[^|)]*", mile)
+        mile = re.sub(r" — [^|]*", "", mile).strip()
         mile = mile.replace("(presented + submitted)", "").strip()
+        if bm:
+            mile = f"{mile} · {bm.group(0).strip()}" if mile else bm.group(0).strip()
 
         reading = r["rdss_reading"]
         reading = re.sub(r"\s*\(book\.declaredesign\.org\)", "", reading)

@@ -196,7 +196,20 @@ rather than evidence, and blaming the AI tool. "The AI gave me that" is never a
 defense. You verified, or you did not. The full format lives in
 `project/final_dossier/evidence_defense_protocol.md`.
 
-### 4. The finalized full-semester AI Research Ledger
+### 4. The release audit
+
+Before anything ships, you run the book's **release audit** on your own
+package. Three checks, each a line in your submission: (1) the
+**stale-run check** — if ANYTHING changed since your last clean rerun (a
+number, a claim, data, code, the environment record, even a README
+instruction), you rerun from the packaged files and record the date; a
+changed package with an old run is not released. (2) The **claim sweep** —
+every quantitative claim in the chapter resolves to an output your latest
+rerun produced. (3) The **next-cycle statement** — your stopping reason and
+the next study your evidence points to, written as *directions*, never as
+findings: what you would ask next is not something you showed.
+
+### 5. The finalized full-semester AI Research Ledger
 
 Your portfolio is built from your ledger, so the ledger appears inside it,
 complete and reconciled: every AI-assisted task across the semester as one row
@@ -209,7 +222,7 @@ Verification columns carry the weight.
 Research Ledger scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 5. Dossier update line
+### 6. Dossier update line
 
 End with one line recording what M15 finalizes in your **Research Project
 Dossier**: your record now carries a final research chapter with a justified

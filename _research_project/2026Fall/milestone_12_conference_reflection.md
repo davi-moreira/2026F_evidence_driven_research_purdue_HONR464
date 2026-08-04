@@ -161,7 +161,18 @@ is "warm reception, but no one probed my weakest claim, so I still do not know i
 it holds," say that too — that is the most useful reflection of all. Name whether
 what the Expo exposed lives in your **claims** or your **communication**.
 
-### 5. The poster-criticism portfolio
+### 5. The defense revision record
+
+Public questioning is evidence about your claim. Record what it changed:
+the one or two places where an Expo question revealed a boundary you had
+not stated, a number you could not trace on the spot, or an answer that
+widened your claim under pressure. For each, write the **revision** — the
+corrected sentence, boundary, or defense you will carry into the research
+note v1 at M14 — and the reason. "Nothing changed" is a legal entry only
+with a defense: name the hardest question you received and show your
+existing boundary already answered it.
+
+### 6. The poster-criticism portfolio
 
 Three structured, kind-but-critical readings of the peers' posters you evaluated.
 Each practices **structured criticism**, which means feedback tied to a specific
@@ -186,7 +197,7 @@ in the portfolio.
 > peer's evidence stops short, on a stated axis, is precisely what you want in
 > return. Kind-but-critical means the target is always the claim, never the person.
 
-### 6. The self-evaluation
+### 7. The self-evaluation
 
 Two honest lines, judged against the evidence and not the applause: **one thing
 your own presentation did well** and **one thing you would do differently.** This
@@ -195,7 +206,7 @@ yours to write; no tool can do it honestly for you. Measure yourself against you
 counts — the recurring doubt you could not answer, the figure that drew a
 communication question three times — not against how warm the room felt.
 
-### 7. AI Research Ledger rows
+### 8. AI Research Ledger rows
 
 Every use of AI in building this package gets a row in your **AI Research Ledger**
 (the eight-field table: task delegated · tool used · prompt · output summary ·
@@ -210,7 +221,7 @@ true.
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 8. Dossier update line
+### 9. Dossier update line
 
 End with one line recording what this milestone finalizes in your **Research
 Project Dossier**: your communication record now carries a coded audience tally, a

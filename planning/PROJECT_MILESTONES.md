@@ -19,7 +19,7 @@ tag `v1-compass-build`.
 **Kickoff cadence.** Every milestone is kicked off from its Brightspace brief
 at the opening of a Friday studio's sprint block, developed across Mon/Wed
 lectures (project-transfer moments) and the studio sprint, red-teamed by peers
-+ an assigned GenAI Studio reviewer role where designated (M4, M7, M10, M13),
++ an assigned GenAI Studio reviewer role where designated (M4, M7, M8, M10, M13),
 and submitted at studio close. Kickoff exceptions: M0 (assigned in class on
 day 1), M11 (kicked off Monday of conference-prep week), M13 (packages
 exchanged at the Week-13 studio), M14 (brief posted with the async module).

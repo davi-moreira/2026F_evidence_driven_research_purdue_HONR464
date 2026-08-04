@@ -24,7 +24,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M1
     {
         "meeting": 1, "date": "2026-08-24", "day": "Mon", "modality": "in-person",
-        "unit": "Week 1 — Research in the age of AI",
+        "unit": "Week 1 — Studio 1: Govern the work",
         "title": "Your arm and your research assistant, not your brain: the course promise and a live citation-catch",
         "driving_question": "What does research even mean when an AI can generate the code and the prose for you?",
         "secondary_questions": "What will you build this semester? Where is the line between AI assistance and intellectual substitution? What does 'AI may propose, the researcher must verify' demand of you on day one?",
@@ -45,7 +45,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb01 practice: for three AI-generated claims, mark which you could defend right now and which need a source you would have to retrieve first.",
         "discussion_prompt": "When has a confident answer, from a person or a tool, turned out to be wrong for you — and what would have caught it earlier?",
         "project_connection": "The semester project starts today: everyone leaves set up in Colab, logged into the course tools, and holding the M0 baseline assignment.",
-        "milestone_developed": "M0 — Research and AI baseline (kickoff)",
+        "milestone_developed": "M0 — Research and AI baseline, Book Milestone 1 v1 (kickoff)",
         "milestone_work_time": "5 min (M0 brief walkthrough + first baseline-belief jotting)",
         "milestone_presentation_review": "none (kickoff)",
         "student_prep": "Bring a laptop; be able to log into Google (Colab), Brightspace, and genai.rcac.purdue.edu.",
@@ -58,7 +58,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M2
     {
         "meeting": 2, "date": "2026-08-26", "day": "Wed", "modality": "in-person",
-        "unit": "Week 1 — Research in the age of AI",
+        "unit": "Week 1 — Studio 1: Govern the work",
         "title": "Automation bias, false confidence, and the first full Ask -> Verify -> Document cycle",
         "driving_question": "Why do smart people trust a wrong machine, and what discipline keeps you from joining them?",
         "secondary_questions": "What is automation bias? How does fluent AI prose manufacture false confidence and the illusion of understanding? Which research decisions must stay human? What are the seven moves of Specify -> Delegate -> Interrogate -> Inspect -> Verify -> Document -> Defend?",
@@ -79,7 +79,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb01 practice: match five research tasks to 'safe to delegate', 'delegate then verify', or 'never delegate', and justify each in a phrase.",
         "discussion_prompt": "Describe a time a detailed, confident explanation made you stop checking. What would automation bias look like in your own project?",
         "project_connection": "The Ledger row you complete today is the template for every AI use you will document in the project dossier.",
-        "milestone_developed": "M0 — Research and AI baseline (dev)",
+        "milestone_developed": "M0 — Research and AI baseline, Book Milestone 1 v1 (dev)",
         "milestone_work_time": "5 min (draft one real Ledger entry from your own AI use this week)",
         "milestone_presentation_review": "none (baseline is a studio submission)",
         "student_prep": "M0 in progress (baseline beliefs + curiosities started); RDSS ch. 2 skimmed; laptop ready.",
@@ -92,7 +92,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M3
     {
         "meeting": 3, "date": "2026-08-28", "day": "Fri", "modality": "in-person",
-        "unit": "Week 1 — Research in the age of AI",
+        "unit": "Week 1 — Studio 1: Govern the work",
         "title": "Studio Friday — AI baselines and first curiosities: M0 due, M1 kickoff",
         "driving_question": "Can you name what you assume about AI, pitch a curiosity in 30 seconds, and leave with a plan to map a research opportunity?",
         "secondary_questions": "What did your baseline reveal about where you over-trust AI? What does the M1 brief ask for (a research opportunity landscape), and how is it graded?",
@@ -113,7 +113,7 @@ MEETINGS_P1 = [
         "practice": "📝 studio log: record one AI suggestion you kept, one you rejected, and the reason for each.",
         "discussion_prompt": "Whose 30-second curiosity would you follow for a semester, and what is the first thing you would need to know to start?",
         "project_connection": "M0 closes today; the candidate problem areas widened in the sprint open the M1 opportunity landscape.",
-        "milestone_developed": "M0 — Research and AI baseline (worked + due); M1 — Research opportunity landscape (kickoff)",
+        "milestone_developed": "M0 — Research and AI baseline, Book Milestone 1 v1 (worked + due); M1 — Research opportunity landscape, Book Milestone 2 v1 (kickoff)",
         "milestone_work_time": "30 min studio block",
         "milestone_presentation_review": "M0 worked at the studio and submitted (no class presentation)",
         "student_prep": "M0 complete (baseline, curiosities, tool-readiness screenshots, Ledger entries); 30-second pitch ready; laptop ready.",
@@ -126,7 +126,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M4
     {
         "meeting": 4, "date": "2026-08-31", "day": "Mon", "modality": "in-person",
-        "unit": "Week 2 — From curiosity to a research problem",
+        "unit": "Week 2 — Studio 2: Frame the inquiry",
         "title": "From curiosity to a research problem: the funnel, and what makes a problem worth doing",
         "driving_question": "How does a curiosity become a research problem someone would fund a semester of your life to study?",
         "secondary_questions": "What separates a topic from a research problem from a question? What do importance, feasibility, and contribution each demand? What are units of analysis, target populations, and outcomes?",
@@ -147,7 +147,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb02 practice: sort six statements into curiosity / topic / problem / question, then name the units, population, and outcome hiding in one of them.",
         "discussion_prompt": "When is 'this matters to everyone' a strength for a research problem, and when is it a warning that the problem is not yet specific?",
         "project_connection": "The funnel output — a candidate problem with units, population, and outcome — is the spine of the M1 opportunity landscape.",
-        "milestone_developed": "M1 — Research opportunity landscape (dev)",
+        "milestone_developed": "M1 — Research opportunity landscape, Book Milestone 2 v1 (dev)",
         "milestone_work_time": "7 min (funnel your own curiosity to a candidate problem)",
         "milestone_presentation_review": "SRL-led puzzle debrief (no formal presentation)",
         "student_prep": "M0 submitted; a curiosity in hand; RDSS ch. 4 skimmed; laptop ready.",
@@ -160,7 +160,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M5
     {
         "meeting": 5, "date": "2026-09-02", "day": "Wed", "modality": "in-person",
-        "unit": "Week 2 — From curiosity to a research problem",
+        "unit": "Week 2 — Studio 2: Frame the inquiry",
         "title": "The inquiry compass: descriptive, predictive, or causal — kind x reach",
         "driving_question": "What KIND of answer does your question ask for, and how far is it trying to reach?",
         "secondary_questions": "How do descriptive, predictive, and causal questions differ? Why is prediction a descriptive question about unseen cases, not a causal one? What goes wrong when a single question tries to do two jobs at once?",
@@ -181,7 +181,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb02 practice: for eight questions, name the kind + reach AND rewrite the one that improperly combines two objectives into two clean questions.",
         "discussion_prompt": "Why is 'predicting who will drop out' a descriptive question about unseen cases and not a causal one, and what would make it causal?",
         "project_connection": "Each student leaves with a first compass position for their own question, recorded in the M1 landscape.",
-        "milestone_developed": "M1 — Research opportunity landscape (dev; compass position added)",
+        "milestone_developed": "M1 — Research opportunity landscape, Book Milestone 2 v1 (dev; compass position added)",
         "milestone_work_time": "6 min (classify own question by kind + reach; note it in the landscape)",
         "milestone_presentation_review": "peer defense: partner tries to reclassify your question",
         "student_prep": "Candidate problem from Monday; RDSS ch. 7 opening skimmed; laptop ready.",
@@ -194,7 +194,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M6
     {
         "meeting": 6, "date": "2026-09-04", "day": "Fri", "modality": "in-person",
-        "unit": "Week 2 — From curiosity to a research problem",
+        "unit": "Week 2 — Studio 2: Frame the inquiry",
         "title": "Studio Friday — Opportunity landscapes: M1 due, M2 kickoff",
         "driving_question": "Does your research opportunity landscape hold up — real problems, honest feasibility, a clear compass position — and can you pitch the one you will pursue?",
         "secondary_questions": "Which of your candidate problems is most worth doing? What does the M2 brief ask for (verified evidence and a contribution map), and how is it graded?",
@@ -215,7 +215,7 @@ MEETINGS_P1 = [
         "practice": "📝 studio log: record the lead problem you committed to and the single feasibility risk that most threatens it.",
         "discussion_prompt": "Which classmate's lead problem would you switch your own project to, and what makes it feel doable in one semester?",
         "project_connection": "M1 closes today; the lead problem and evidence leads from the sprint open the M2 verified-evidence map.",
-        "milestone_developed": "M1 — Research opportunity landscape (worked + due); M2 — Verified evidence and contribution map (kickoff)",
+        "milestone_developed": "M1 — Research opportunity landscape, Book Milestone 2 v1 (worked + due); M2 — Verified evidence and contribution map, Book Milestone 3 v1 (kickoff)",
         "milestone_work_time": "30 min studio block",
         "milestone_presentation_review": "M1 worked at the studio and submitted",
         "student_prep": "M1 opportunity landscape complete; Purdue Libraries login working; laptop ready.",
@@ -228,7 +228,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M7
     {
         "meeting": 7, "date": "2026-09-09", "day": "Wed", "modality": "in-person",
-        "unit": "Week 3 — Research builds on research",
+        "unit": "Week 3 — Studio 3: Ground it in verified evidence",
         "title": "Research builds on research: verified evidence, citation chains, and real gaps",
         "driving_question": "How do you find what is actually known, prove each source is real, and tell a genuine gap from a search you simply gave up on?",
         "secondary_questions": "How is a field a cumulative conversation (replication, extension, synthesis, comparison, boundary conditions)? What are forward and backward citation searches? Why must every citation be retrieved and its claim checked before you use it?",
@@ -249,7 +249,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb03 practice: turn your question into two search strings (one database, one AI tool) and predict how their failure modes differ; then label three source-claims as aligned, mischaracterized, or unverifiable.",
         "discussion_prompt": "An AI summary cites a perfect study you cannot find. What are the three possible explanations, and what do you do next?",
         "project_connection": "The verified evidence and the provisional gap started today are the backbone of M2, due at this Friday's studio.",
-        "milestone_developed": "M2 — Verified evidence and contribution map (dev)",
+        "milestone_developed": "M2 — Verified evidence and contribution map, Book Milestone 3 v1 (dev)",
         "milestone_work_time": "23 min block (own-question searches + verified source log + evidence map)",
         "milestone_presentation_review": "peer defense: partner challenges your gap placement",
         "student_prep": "M1 submitted; Purdue Libraries login working; laptop ready.",
@@ -262,7 +262,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M8
     {
         "meeting": 8, "date": "2026-09-11", "day": "Fri", "modality": "in-person",
-        "unit": "Week 3 — Research builds on research",
+        "unit": "Week 3 — Studio 3: Ground it in verified evidence",
         "title": "Studio Friday — Evidence-map gallery: M2 due, M3 kickoff",
         "driving_question": "Does your evidence map survive a room of skeptics, and is the gap you placed still real once every source is checked?",
         "secondary_questions": "Where do your sources agree and disagree? What does the M3 brief ask for (a research charter and MIDA declaration), and how is it graded?",
@@ -283,7 +283,7 @@ MEETINGS_P1 = [
         "practice": "📝 studio log: record the challenge you incorporated and what changed on your map because of it.",
         "discussion_prompt": "On your neighbor's map: is the gap they placed real, or does one of their own verified sources already fill it?",
         "project_connection": "M2 closes today; the confirmed gap and contribution seed the M3 research charter and MIDA declaration.",
-        "milestone_developed": "M2 — Verified evidence and contribution map (worked + due); M3 — Research charter and MIDA declaration (kickoff)",
+        "milestone_developed": "M2 — Verified evidence and contribution map, Book Milestone 3 v1 (worked + due); M3 — Research Contract v0 and permission determination, Book Milestone 4 v1 (kickoff)",
         "milestone_work_time": "30 min studio block",
         "milestone_presentation_review": "M2 worked at the studio and submitted",
         "student_prep": "Evidence map built from ≥6 verified sources; source log current; laptop ready.",
@@ -296,7 +296,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M9
     {
         "meeting": 9, "date": "2026-09-14", "day": "Mon", "modality": "in-person",
-        "unit": "Week 4 — The anatomy of a research design",
+        "unit": "Week 4 — Studio 4: Declare and diagnose provisionally",
         "title": "The anatomy of a research design: MIDA — Model, Inquiry, Data strategy, Answer strategy",
         "driving_question": "What are the four parts every research design must have, and what must the world be like for your question to have an answer?",
         "secondary_questions": "What is a model, and how does a DAG say 'I believe X could affect Y'? What is an inquiry (estimand), and why must it be named before data arrive? What does it mean for the four MIDA parts to align?",
@@ -317,7 +317,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb04 practice: for three questions, write the potential-outcomes pair it implicitly compares; for two more, write the inquiry in words and name its units.",
         "discussion_prompt": "Your DAG has an arrow your partner's does not. What evidence, even in principle, could settle whose world is closer to true?",
         "project_connection": "Each project leaves with a first DAG and a one-sentence inquiry — the Model and Inquiry halves of the M3 declaration.",
-        "milestone_developed": "M3 — Research charter and MIDA declaration (dev)",
+        "milestone_developed": "M3 — Research Contract v0 and permission determination, Book Milestone 4 v1 (dev)",
         "milestone_work_time": "10 min (own-project DAG + inquiry sentence)",
         "milestone_presentation_review": "pair DAG challenge",
         "student_prep": "M2 submitted; RDSS ch. 2 read; laptop ready for the DAG cell.",
@@ -330,7 +330,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M10
     {
         "meeting": 10, "date": "2026-09-16", "day": "Wed", "modality": "in-person",
-        "unit": "Week 4 — The anatomy of a research design",
+        "unit": "Week 4 — Studio 4: Declare and diagnose provisionally",
         "title": "Declare, diagnose, redesign: assumptions, bias, variance, power, and threats to validity",
         "driving_question": "Once your design is declared, how do you find out whether it actually works before you spend a semester running it?",
         "secondary_questions": "What does it mean to declare a design in full? What is design diagnosis, and what do bias, variance, and power tell you? What threats to validity would a skeptic raise, and how does redesign answer them?",
@@ -351,7 +351,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb04 practice: for three designs, label the biggest threat (bias, variance, or power) and name the one redesign that most reduces it.",
         "discussion_prompt": "Your diagnosis says the design will miss the effect most of the time. Is running it anyway unethical, merely risky, or defensible with the right framing?",
         "project_connection": "The diagnosis and redesign done today complete the M3 declaration — a design that states what it can and cannot support.",
-        "milestone_developed": "M3 — Research charter and MIDA declaration (dev; diagnosis + redesign added)",
+        "milestone_developed": "M3 — Research Contract v0 and permission determination, Book Milestone 4 v1 (dev; diagnosis + redesign added)",
         "milestone_work_time": "11 min (diagnose own design draft + name one redesign)",
         "milestone_presentation_review": "peer defense: partner names one threat to your design; you answer with a redesign",
         "student_prep": "DAG + inquiry from Monday; RDSS ch. 5 read; laptop ready for the simulation cells.",
@@ -364,7 +364,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M11
     {
         "meeting": 11, "date": "2026-09-18", "day": "Fri", "modality": "in-person",
-        "unit": "Week 4 — The anatomy of a research design",
+        "unit": "Week 4 — Studio 4: Declare and diagnose provisionally",
         "title": "Studio Friday — Research charter + MIDA declarations: M3 due, M4 kickoff",
         "driving_question": "Can you declare your whole design — model, inquiry, data strategy, answer strategy — in a few minutes, and take a question on each part?",
         "secondary_questions": "Do your four MIDA parts agree with each other? What does the M4 brief ask for (an observational descriptive design audit), and how is it graded?",
@@ -385,7 +385,7 @@ MEETINGS_P1 = [
         "practice": "📝 studio log: record the clarifying question that stung most and how your declaration will change because of it.",
         "discussion_prompt": "Which classmate's declaration could you repeat back word for word, and what made its inquiry so easy to hold onto?",
         "project_connection": "M3 closes today; the declared design opens the design-library phase, beginning with the M4 observational descriptive audit.",
-        "milestone_developed": "M3 — Research charter and MIDA declaration (worked + due); M4 — Observational descriptive design audit (kickoff)",
+        "milestone_developed": "M3 — Research Contract v0 and permission determination, Book Milestone 4 v1 (worked + due); M4 — Pathway declaration and mandated contrast, Book Milestone 5 v1 (kickoff)",
         "milestone_work_time": "30 min studio block",
         "milestone_presentation_review": "M3 worked at the studio and submitted",
         "student_prep": "3-minute M3 declaration rehearsed; nb04 cells complete; laptop ready.",

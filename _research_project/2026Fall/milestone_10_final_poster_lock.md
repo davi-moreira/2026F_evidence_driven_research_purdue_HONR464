@@ -44,7 +44,8 @@ submit at the end of the block.
 | 1 | **`lastname_m10_poster.pdf`** | The print-ready **locked poster**, with your **AI-use disclosure block** and your **signed final-lock checklist** included (last page or companion). The headline sits inside its compass position, the uncertainty rides in the same eye-span as the claim, every number traces to a cell, and every citation resolves. |
 | 2 | **`lastname_m10_lock_record.pdf`** *or* the same as notebook sections | Your **gallery-walk audit record** and **oral-defense record**: the four audits plus accessibility run on your own poster with located hits and fixes, and the three-lens defense with your defend-versus-concede calls and softened claims. |
 | 3 | **`lastname_m10_poster.ipynb`** *or* a shared Colab link | The seeded (`SEED = 464`) notebook that produces every number on the poster. **Every figure and statistic on the board traces to a cell here**, and it reruns top to bottom. |
-| 4 | **EDR\|AI "It is your turn" — ch. 31, ch. 32** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 4 | **`lastname_m10_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number reproduced) and your **release preflight** (permissions status, AI disclosure present, claim boundary checked, no stale numbers). **The poster does not lock without both.** |
+| 5 | **EDR\|AI "It is your turn" — ch. 31, ch. 32** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 confirm every figure renders when the notebook runs top to bottom. Submit the
@@ -73,6 +74,16 @@ Dossier.
 ---
 
 ## Purpose
+
+Two framings govern this lock. First, **the poster adapts the note** — your
+M9 research-note v0 already fixed the claim, its boundary, and its
+uncertainty; the poster is that same content shaped for a board, and any
+claim that appears here without a note sentence behind it is new material
+smuggled in at the worst possible week. Second, the locked poster is a
+**preliminary presentation, labeled as such**: your project's full package
+closes in December, so the poster presents a bounded, reproduced,
+honestly-labeled version of where the evidence stands now. That label is a
+strength at the Expo, not an apology.
 
 Everything the poster milestones built converges here. The M9 draft's evidence,
 the gallery walk's located hits, and the oral defense's softened claims are

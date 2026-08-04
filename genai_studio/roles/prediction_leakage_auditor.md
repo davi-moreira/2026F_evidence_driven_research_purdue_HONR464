@@ -26,7 +26,7 @@ prediction-time honesty of the protocol, not your modeling craft.
 
 ## Milestone scope (M7 — required)
 
-**M7 — Declared analysis protocol (due Fri Oct 16).** You submit your **declared
+**M7 — Clean-restart verified analysis (due Fri Oct 16).** You submit your **declared
 analysis protocol** to this role, with any out-of-sample or prediction claim in
 focus: your target, your features and where each is measured in time, your
 train/held-out split, your baseline, and your metric. The role's **"Leakage

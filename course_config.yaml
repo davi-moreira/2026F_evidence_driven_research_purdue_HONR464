@@ -277,10 +277,11 @@ genai_studio:
   capability_levels_implemented: [prompted_role, custom_model, rag_assistant, sequential_workflow]
   not_available: [autonomous_agents, native_orchestration]
   student_touchpoints: {M4: "Causal Identification Skeptic", M7: "Prediction & Leakage Auditor",
-                        M10: "Poster Critic + Robustness & Sensitivity Reviewer", M13: "Reproducibility Auditor"}
-                        # D41 remap: identification is adjudicated at the W5 route
-                        # declaration (M4); the poster critic reviews at the lock
-                        # (M10). Role specs re-anchored in the D41 content phase.
+                        M8: "Robustness & Sensitivity Reviewer", M10: "Poster Critic",
+                        M13: "Reproducibility Auditor"}
+                        # D41 content phase: the old M9 pairing split — robustness
+                        # is its own milestone (M8) under Option 2, the poster
+                        # critic reviews at the lock (M10). Five touchpoints.
 
 # Notebook conventions (adapted from MGMT474; ML-isms removed).
 notebooks:

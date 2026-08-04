@@ -65,6 +65,12 @@ Dossier.
 
 ## Purpose
 
+This package is your **defense-ready** artifact — the second version of the
+same Book Milestone your locked poster started (the bridge above names it).
+The rule that governs every piece: **a pitch compresses the claim, it never
+expands it.** Anything you say in ninety seconds must fit inside the
+boundary your note and poster already declared.
+
 A visitor at the Expo does not read your poster and then talk to you. They talk
 to you *instead* of reading it, so **your voice becomes the poster**. Speaking is
 faster than reading, so you will compress. The one rule that governs every layer

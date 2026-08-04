@@ -9,23 +9,24 @@ Grading rewards correctness, transparency, reproducibility, question-design
 (compass) alignment, and responsible interpretation — **never coding elegance**
 (no computing background is assumed; all machinery is provided).
 
-The v1 six-component / M00–M23 system is preserved at git tag `v1-compass-build`;
-this file replaces it. Component weights match `course_config.yaml assessment:`
-and the syllabus Assessments table exactly, and are a **proposal pending
-instructor confirmation**. Every internal sub-weight below is likewise
-**provisional** and marked so.
+The v1 six-component / M00–M23 system is preserved at git tag `v1-compass-build`.
+Component weights were **CONFIRMED 2026-07-27 (D22)**, split attendance/
+participation **2026-07-29 (D31)**, and match `course_config.yaml assessment:`
+and the syllabus Assessments table exactly. The seven-component proposal this
+file originally carried is superseded; its within-group weighting notes below
+remain as drafting history for the milestone rubrics.
 
-## The seven components (100%)
+## The confirmed components (100%) — D22/D31, colleague audits per D41
 
 | Component | Weight | What it contains |
 |---|---:|---|
-| **1. Daily notebook preparation & engagement** | **10%** | Notebook completion (executed cells + written responses), Claim Tickets on assigned readings, in-class investigation and studio participation, red-team / cross-examination citizenship |
-| **2. Student Research Lead (SRL) performance** | **15%** | Five flipped-lecture leads, each scored live on the 100-point SRL rubric (`project/srl/srl_rubric.md`) |
-| **3. Milestone development & revisions (M0–M9)** | **25%** | The ten develop→present→submit→revise milestones that build the design and first evidence |
-| **4. Poster & Expo (M10–M12)** | **20%** | M10 final poster lock (terminal), M11 presentation package, M12 conference reflection + poster-criticism portfolio incl. the required Expo presentation |
-| **5. Replication & red-team (M13)** | **5%** | Reproduce a peer's anonymized package, attest the headline result, report fragility |
-| **6. Research note, final chapter & portfolio, and defense (M14–M15)** | **15%** | M14 research-note draft + reproducibility capsule; M15 final chapter + AI-management portfolio + live evidence defense (terminal) |
-| **7. Claim analyses & concept checks** | **10%** | Short concept checks across the term + structured claim-analysis exercises |
+| **Attendance** (iClicker) | **1%** | 85% attendance target |
+| **Participation** (rubric) | **9%** | Notebook completion (executed cells + written responses), feedback surveys, in-class exercises — and the **colleague audits** (D41): best 10 of the 12 scored Studio audits on the simulated colleague's artifacts (`project/colleague/audit_rubric.md`) |
+| **Quizzes** | **20%** | Weekly Friday printed MC topic quizzes |
+| **Student Research Lead (SRL) performance** | **20%** | Flipped-lecture leads scored on the SRL rubric (`project/srl/srl_rubric.md`) |
+| **Final Project Milestones** | **20%** | M0–M15 submissions (each presenting a book Milestone version; kick off → develop → submit → revise) |
+| **Final Project** | **20%** | The locked poster, Expo presentation, and evidence defense |
+| **Research artifact** (paper/chapter/note) | **10%** | The research note v1 grown into the final chapter |
 | | **100%** | |
 
 ## Provisional within-group weighting

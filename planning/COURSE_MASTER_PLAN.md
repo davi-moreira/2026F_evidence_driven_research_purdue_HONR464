@@ -174,10 +174,10 @@ through a fixed set of moves:
 - **Defend Your Decision** — a claim the student can defend, with its boundary.
 
 **GenAI Studio reviewer bench.** Purdue GenAI Studio supplies custom reviewer
-roles at designated milestones (`genai_studio.student_touchpoints`, D41 remap): **M4 Causal
+roles at designated milestones (`genai_studio.student_touchpoints`, D41): **M4 Causal
 Identification Skeptic** (route declaration), **M7 Prediction & Leakage
-Auditor**, **M10 Poster Critic + Robustness Reviewer** (at the lock), **M13
-Reproducibility Auditor**. Gemini remains the
+Auditor**, **M8 Robustness & Sensitivity Reviewer**, **M10 Poster Critic**
+(at the lock), **M13 Reproducibility Auditor**. Gemini remains the
 primary in-notebook tool; the reviewer bench is an adversarial second opinion the
 student must answer, not obey. Studio capability is implemented only at levels
 1–4 (prompted role → custom model → RAG assistant → sequential workflow); a

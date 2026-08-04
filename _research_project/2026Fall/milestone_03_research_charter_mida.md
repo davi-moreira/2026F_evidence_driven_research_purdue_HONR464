@@ -28,7 +28,7 @@ Due: **Friday, September 18, 11:59 PM** (you work on it at that Friday's studio)
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m03_charter.pdf`** *or* a shared Colab notebook link | Your research charter: the four **MIDA** parts of your design (Model, Inquiry, Data strategy, Answer strategy), a 3-node **DAG** image, your **diagnosis** naming the biggest threat as bias, variance, or power plus the one **redesign** it demands, your **compass position and claim boundary**, and your AI Research Ledger rows. This is the graded artifact. |
+| 1 | **`lastname_m03_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: the four **MIDA** parts of your design (Model, Inquiry, Data strategy, Answer strategy), a 3-node **DAG** image, your **diagnosis** naming the biggest threat as bias, variance, or power plus the one **redesign** it demands, your **uncertainty statement**, your **permission determination** (one declared status, with the authority named if anything is pending), your **compass position and claim boundary**, and your AI Research Ledger rows. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 9, ch. 10, ch. 11, ch. 12** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
@@ -58,6 +58,14 @@ Dossier.
 ---
 
 ## Purpose
+
+This milestone assembles your **Research Contract v0** — the book's name for
+the declaration you produce here. **Version 0 means version 0.** Your
+**operationalization** (exactly how each concept becomes a measured
+indicator) is *provisional* at this milestone by design: you settle and
+version it at M5, when data and measurement get their own week. What may not
+be provisional is the shape: a Contract a stranger could run, a diagnosis
+that changed something, and a permission status you actually declared.
 
 This is the milestone where your question stops floating and gets a **design** to
 live in. In nb04 you learned that every study, from a two-person survey to a
@@ -191,7 +199,20 @@ Rigor is a diagnosed property, not a vibe. A design whose four parts quietly
 point at different quantities, or one you never diagnosed, makes no promises no
 matter how rigorous it sounds. This is that promise, written down and bounded.
 
-### 7. AI Research Ledger rows
+### 7. The permission determination
+
+Every project declares exactly one **permission status** before any data
+work: **cleared** (you may proceed), **formal determination required** (an
+authority such as the IRB must rule), **pending** (you asked and are
+waiting), or **not authorized — stop**. Declaring it is not an ethics
+essay. It is three questions from the book's ethics lesson: does your data
+involve people, is it yours to use under its licence and terms, and could
+your use expose anyone. If your status is anything but cleared, name the
+**authority** who can decide and the date you asked. A rubric cannot clear
+you; only the right authority can — and safe public or synthetic
+feasibility work stays open to you while you wait.
+
+### 8. AI Research Ledger rows
 
 Every use of AI in building this charter gets a row in your **AI Research
 Ledger** (the eight-field table: task delegated · tool used · prompt · output
@@ -205,7 +226,7 @@ result. "No AI used" is a legitimate entry if it is true.
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 8. Dossier update line
+### 9. Dossier update line
 
 End with one line recording what this milestone finalizes in your **Research
 Project Dossier**: your MIDA declaration now carries a model with a DAG, a

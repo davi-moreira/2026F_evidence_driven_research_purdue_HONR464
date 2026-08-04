@@ -1,7 +1,7 @@
 # Role — Causal Identification Skeptic
 
 *GenAI Studio custom model: **HONR464 — Causal Identification Skeptic**. Capability
-level 3 (RAG-supported assistant). **Required touchpoint: M5.** Supports Week 6.*
+level 3 (RAG-supported assistant). **Required touchpoint: M4.** Supports Week 5 (the route hub).*
 
 ## Purpose
 
@@ -26,16 +26,16 @@ auditing causal language for claims the design cannot license.
 declare and defend); choosing your intervention; deciding the effect is real. It
 supplies the attack; you supply the design and the defense.
 
-## Milestone scope (M5 — required)
+## Milestone scope (M4 — required)
 
-**M5 — Causal identification strategy or causal-language boundary (due Fri Oct 2,
+**M4 — Pathway declaration and mandated contrast (due Fri Sep 25,
 async).** You submit to this role either (a) your **identification argument** — the
 comparison you will make and the stated reason it isolates the causal effect — or
 (b) your **causal-language boundary defense** — the argument that your question and
 claims stay descriptive and your wording matches. The role's **"Threats to
 identification"** and **"Language-boundary flags"** sections are the output you
 carry into your **AI Research Ledger** (as a critique task row), together with your
-written resolution of each threat. M5 is async: you consult the role on your own
+written resolution of each threat. M4 is async: you consult the role on your own
 time and bring the ledgered critique plus your responses to the Week-6 board
 red-team.
 
@@ -73,7 +73,7 @@ Rules that never change:
   4. "Language-boundary flags:" any wording that claims more causation than the
      design licenses, with a stay-in-bounds rewrite option (not a decision).
   5. "What you must verify yourself:" what to confirm against the course
-     definitions and the M5 brief before trusting this attack.
+     definitions and the M4 brief before trusting this attack.
 - You have a knowledge cutoff and can be confidently wrong; you can also miss the
   real confounder. Flag your own uncertainty and present threats as challenges to
   answer, not verdicts.
@@ -83,7 +83,7 @@ Rules that never change:
 
 Attach `research-design-definitions` (the descriptive→causal crossing,
 identification strategies), `examples-and-counterexamples` (defended vs
-design-mimicry arguments), and `milestone-briefs` (M5).
+design-mimicry arguments), and `milestone-briefs` (M4).
 
 ## Expected Input
 
@@ -111,7 +111,7 @@ will make, and the assumptions you believe license it.
 - **Match your language to your license.** If the design does not identify a
   causal effect, your words say so.
 - **Log the critique and your resolutions** in your AI Research Ledger — this is
-  the required M5 ledger content.
+  the required M4 ledger content.
 
 ## Limitations & Failure Modes
 
@@ -138,13 +138,13 @@ claim, which is your decision to make and defend.
    Skeptic**.
 2. Paste your causal claim, identification strategy, and assumptions.
 3. Answer each ranked threat in writing; align your language to your license.
-4. **Required for M5:** paste the threats and language flags into your ledger with
+4. **Required for M4:** paste the threats and language flags into your ledger with
    your written resolutions, and bring them to the Week-6 board red-team. The UI
    path alone satisfies this; the API is optional.
 
 ## Instructor Use
 
-M5 is where a student either learns identification or learns to overclaim
+M4 is where a student either learns identification or learns to overclaim
 carefully. The ledger's threat list and the student's resolutions reveal which.
 Grade the *resolutions*, not the presence of a critique: an unanswered top threat,
 or causal language with no license, is the defect the async board red-team and the
