@@ -31,7 +31,7 @@ revise, update your ledger, and submit at studio close.
 |---|---|---|
 | 1 | **`lastname_m09_note.pdf`** *or* a shared Colab notebook link | **Research note v0**: one to two pages stating your question, your method in one paragraph, your results with their uncertainty, your bounded headline claim, your limitations, and your references. This is the graded prose artifact. |
 | 2 | **`lastname_m09_claims.pdf`** *or* the same file's closing sections | Your **claim–evidence table** (every claim a row: claim · evidence · verification · boundary) and your **AI disclosure statement**, drafted from your ledger. |
-| 3 | **`lastname_m09_poster_brief.pdf`** *or* a one-page closing section | The **poster content brief**: the claim, the one figure, and the numbers that will travel to the poster, each with its cell trace. Content only; poster craft is graded at M10. |
+| 3 | *(nothing to submit)* | The **poster content brief** — the claim, the one figure, and the numbers that will travel to the poster, each with its cell trace — is shaped at the studio and HANDED OFF ungraded to next week's M10 kickoff. The note and the claim–evidence table are what this milestone grades. |
 | 4 | **EDR\|AI "It is your turn" — ch. 27, ch. 28, ch. 29, ch. 30** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -199,11 +199,11 @@ pre-submission checklist.
 | **Verification column** | Each row names a real check (clean-restart trace, pre-listed audit check), never a bare "verified" |
 | **References** | All retrievable; each says what the note claims it says |
 | **AI disclosure** | Drafted from the ledger; includes what you sent to tools; names what you did not verify |
-| **Poster content brief** | Claim, one figure, and numbers with cell traces; nothing beyond what the note contains |
+| **Poster content brief (ungraded handoff)** | Drafted at the studio: claim, one figure, numbers with cell traces; nothing beyond what the note contains; graded nowhere — it seeds M10 |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | Note v0, claim–evidence table, and disclosure located by file or section |
 | **Studio work** | Note red-teamed by peers at the Friday studio; the poster content brief shaped there |
-| **Filenames** | `lastname_m09_note.pdf`, `lastname_m09_claims.pdf`, `lastname_m09_poster_brief.pdf` (or the equivalent sections of one file / notebook) |
+| **Filenames** | `lastname_m09_note.pdf`, `lastname_m09_claims.pdf` (or the equivalent sections of one file / notebook) |
 | **Location** | Brightspace → Assignments → M09 |
 
 ---

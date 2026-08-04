@@ -71,9 +71,9 @@ COMPASS_CHEAT_SHEET = """\
 - **REACH** — the data at hand · a population beyond the data · cases not yet
   seen.
 - **Positions (classified in nb02):** Description · Generalization · Prediction
-  · Causal reasoning. Design pathways deep-dive in nb05–nb09 (observational
-  descriptive · observational causal · experimental descriptive · prediction ·
-  experimental causal).
+  · Causal reasoning. All five design pathways meet at nb05's route hub (own
+  route + one assigned contrast, D41); nb06–nb09 then govern data, build and
+  verify the first analysis, and stress-test it.
 - **Claim upgrades & warrants:** these units→a population = sampling design +
   uncertainty (*silent upgrade* if unpaid) · observed→unseen = prediction-time
   honesty + held-out check (*leakage* if unpaid) · "associated"→"causes" =

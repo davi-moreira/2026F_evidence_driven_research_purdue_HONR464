@@ -53,10 +53,14 @@ Three ground rules keep the device honest:
   M1), you approve a short synopsis of your project (see
   `synopsis_form.md`). Only that synopsis — never your data, never your
   drafts — is used to create your colleague.
-- **Week 3 onward — one artifact per Studio.** Your colleague "submits"
-  its version of each Studio's milestone artifact around the start of each
-  sprint. You audit it in class, inside the normal Monday/Wednesday
-  blocks, using the protocol in `audit_protocol.md`.
+- **Week 2 onward — one artifact per audited Studio.** Week 2's audit uses
+  a shared declared-question card; your personal colleague takes over in
+  Week 3. Ten audits are scored across the semester (Studios 2–10 and 12 —
+  Studio 1 is the modeled Case 464, and Studio 11's cold-run skill is
+  graded through the replication milestone itself). You audit in class,
+  inside the normal Monday/Wednesday blocks, using the protocol in
+  `audit_protocol.md`; the defense and revision weeks add unscored
+  practice rounds.
 - **Debrief, same session.** Every audit ends with the instructor's
   accuracy lock: the seeded flaw is confirmed, the corrected version is
   stated, and nothing wrong is left standing in anyone's notes.
@@ -66,7 +70,7 @@ Three ground rules keep the device honest:
 ## Grading
 
 Audits are scored on the four-row rubric in `audit_rubric.md` (0–2 per
-row). Your **best 10 of the 12 scored Studio audits** count inside the
+row). Your **best 8 of the 10 scored Studio audits** count inside the
 participation component of the syllabus grade. Audits replace the generic
 AI-output interrogation exercises — they are not extra homework, and no
 colleague work is ever due on a Friday: Fridays belong to your own

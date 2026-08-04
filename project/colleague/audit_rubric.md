@@ -1,6 +1,6 @@
 # Colleague Audit Rubric — four rows, 0–2 each (8 points per audit)
 
-Scored live or from your submitted audit sheet. Your **best 10 of the 12
+Scored live or from your submitted audit sheet. Your **best 8 of the 10
 scored Studio audits** count inside the participation grade. The rubric
 rewards verified findings and calibrated judgment — not suspicion volume.
 
@@ -13,9 +13,11 @@ rewards verified findings and calibrated judgment — not suspicion volume.
 
 **Scoring policy.**
 
-- 12 audits are scored across the semester (one per Studio); the best 10
-  count. The two unscored continuation beats (defense week, revision week)
-  are practice only.
+- 10 audits are scored across the semester (Studios 2–10 and 12; Studio 1
+  is the modeled Case 464 and Studio 11 is graded through the replication
+  milestone). The best 8 count. The unscored continuation beats (the
+  pipeline preview, defense week, public-criticism week, repair week) are
+  practice only.
 - Finding the seeded flaw is not required for a strong score: a verified,
   well-diagnosed audit that catches a DIFFERENT genuine weakness scores on
   its merits. The instructor key lists likely false positives, and the

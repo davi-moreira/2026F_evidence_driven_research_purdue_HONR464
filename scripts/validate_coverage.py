@@ -91,7 +91,8 @@ def main() -> None:
 
     # 5: provenance shape
     for r in rows:
-        if r["provenance"].count("|") != 3:
+        # structural delimiter is " | " — a literal "EDR|AI" is content
+        if r["provenance"].count(" | ") != 3:
             errs.append(f"M{r['meeting']}: provenance needs 4 pipe-separated "
                         f"segments: {r['provenance']!r}")
 

@@ -31,7 +31,7 @@ required **Prediction & Leakage Auditor** before you submit.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **A shared Colab notebook link** *(the verified pipeline notebook)* | The seven-part record below, carried in the notebook's markdown or in an optional companion **`lastname_m07_verified_analysis.pdf`**: your clean-restart record, your claim-to-output trace, the reproduced uncertainty, one independent re-derivation, the leakage audit with the auditor's flags and your written fixes, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
+| 1 | **A shared Colab notebook link** *(the verified pipeline notebook)* | The seven-part record below, carried in the notebook's markdown or in an optional companion **`lastname_m07_verified_analysis.pdf`**: your clean-restart record, your claim-to-output trace, the reproduced uncertainty, two independent re-derivations, the leakage audit with the auditor's flags and your written fixes, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 22** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. The rerun is
@@ -60,7 +60,7 @@ Dossier.
 ## Purpose
 
 At M6 your declared analysis became a pipeline and produced its first number.
-The declaring came first for a reason: a target fixed, a baseline named, and a
+The declaring came first for a reason: your route's precommitments fixed (for prediction routes: target, baseline, and metric; for the other routes: estimand, estimator, and uncertainty form) and a
 metric chosen before any score could flatter you is the only method a reader
 has to trust. Your pipeline kept that pre-commitment. This week decides whether
 its output deserves the word **verified**: a result that survives checks you
@@ -76,7 +76,7 @@ notebook that runs from nothing is evidence.
 
 Verification here is five checks, not one. The restart must match. Every claim
 must trace to its cell. The uncertainty itself must reproduce. One key number
-must survive an independent re-derivation. And a required auditor must find no
+must survive two independent re-derivations. And a required auditor must find no
 leak and no unlicensed generalization in what you plan to say. If any number
 moves on the restart, the pipeline is the finding: you explain and fix every
 discrepancy before any claim goes forward.
@@ -119,7 +119,10 @@ interval comes from resampling or simulation, the seed (`SEED = 464`) is what
 makes that possible. A result whose uncertainty does not reproduce is not
 verified, and a result without uncertainty is not yet a result.
 
-### 4. One independent re-derivation
+### 4. Two independent re-derivations
+
+Do this for TWO key numbers, not one — the week's notebook and the
+studio both practice the pair.
 
 Recompute one key number by a route that shares none of the original code: by
 hand from a small table, with a different library, or from the raw definition
@@ -211,7 +214,7 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 |---|---|---|---|---|
 | **Compass & pathway alignment** (15) | The verified result still answers the declared question in the declared form; no out-of-sample or generalization language survives past the route's licence (13–15) | Aligned; one boundary sentence loose (10–12) | The result drifts from the declared form, or one flagged generalization is left unbounded (5–9) | The claim answers a different question than the project declared, or keeps a generalization the audit flagged (0–4) |
 | **Evidence integrity & provenance** (20) | Every reported number traces to its cell; the environment and data source are recorded; a reader can follow every figure to its origin (18–20) | Traceable; one trace row or the environment record thin (14–17) | A reported figure whose cell takes real effort to locate, or an incomplete trace (8–13) | A number with no path back to the notebook, or a source that does not exist (0–7) |
-| **Verification** (30) | The clean restart is run and recorded; every discrepancy explained and fixed; the re-derivation is genuinely independent; every auditor flag settled by a named check; every AI-assisted step ledgered with a non-vague verification (27–30) | All five checks present; one recorded loosely (21–26) | A restart claimed but not recorded, a re-derivation that reuses the original code, or a flag answered without a check (14–20) | No clean restart, a discrepancy left unexplained, or an auditor flag pasted in or dismissed unverified (0–13) |
+| **Verification** (30) | The clean restart is run and recorded; every discrepancy explained and fixed; both re-derivations are genuinely independent; every auditor flag settled by a named check; every AI-assisted step ledgered with a non-vague verification (27–30) | All five checks present; one recorded loosely (21–26) | A restart claimed but not recorded, a re-derivation that reuses the original code, or a flag answered without a check (14–20) | No clean restart, a discrepancy left unexplained, or an auditor flag pasted in or dismissed unverified (0–13) |
 | **Uncertainty & claim boundary** (20) | The interval reproduces and is read correctly; the result is never worded as settled certainty; the claim stops where the evidence stops (18–20) | Interval reproduces; one reading or boundary sentence loose (14–17) | Only the point estimate verified, or uncertainty reported but never read (8–13) | No uncertainty, or a verified point estimate narrated as a certain finding (0–7) |
 | **Craft, ledger & communication** (15) | Versioned with its reason, on-format, on-time, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; ledger complete (10–12) | Missing pieces or a rushed record (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
 

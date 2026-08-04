@@ -21,7 +21,7 @@ remain as drafting history for the milestone rubrics.
 | Component | Weight | What it contains |
 |---|---:|---|
 | **Attendance** (iClicker) | **1%** | 85% attendance target |
-| **Participation** (rubric) | **9%** | Notebook completion (executed cells + written responses), feedback surveys, in-class exercises — and the **colleague audits** (D41): best 10 of the 12 scored Studio audits on the simulated colleague's artifacts (`project/colleague/audit_rubric.md`) |
+| **Participation** (rubric) | **9%** | Notebook completion (executed cells + written responses), feedback surveys, in-class exercises — and the **colleague audits** (D41): best 8 of the 10 scored Studio audits on the simulated colleague's artifacts (`project/colleague/audit_rubric.md`) |
 | **Quizzes** | **20%** | Weekly Friday printed MC topic quizzes |
 | **Student Research Lead (SRL) performance** | **20%** | Flipped-lecture leads scored on the SRL rubric (`project/srl/srl_rubric.md`) |
 | **Final Project Milestones** | **20%** | M0–M15 submissions (each presenting a book Milestone version; kick off → develop → submit → revise) |

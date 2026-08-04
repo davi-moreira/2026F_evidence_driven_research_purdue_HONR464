@@ -174,9 +174,10 @@ bench. Students **must** consult an assigned reviewer role at four milestones:
 
 | Milestone | Required reviewer role |
 |---|---|
-| M5  | Causal Identification Skeptic |
+| M4  | Causal Identification Skeptic (route declaration) |
 | M7  | Prediction & Leakage Auditor |
-| M9  | Poster Critic + Robustness & Sensitivity Reviewer |
+| M8  | Robustness & Sensitivity Reviewer |
+| M10 | Poster Critic (before the lock) |
 | M13 | Reproducibility Auditor |
 
 Before the first class:
