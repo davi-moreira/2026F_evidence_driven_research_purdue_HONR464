@@ -687,7 +687,7 @@ window.Quarto = {
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">35.3</span> A worked example</a></li>
   <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">35.4</span> An AI failure case</a></li>
   <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">35.5</span> It is your turn</a></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 </nav>
     </div>
@@ -877,7 +877,7 @@ size, the source of wobble, and the one limitation a reviewer would raise first.
 
 </section>
 <section id="bibliography" class="level1 unnumbered">
-<h1 class="unnumbered">Bibliography</h1>
+<h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-vanderbles2019uncertainty" class="csl-entry" role="listitem">
 Bles, Anne Marthe van der, Sander van der Linden, Alexandra L. J. Freeman, et al. 2019. <span>“Communicating Uncertainty about Facts, Numbers and Science.”</span> <em>Royal Society Open Science</em> 6: 181870. <a href="https://doi.org/10.1098/rsos.181870">https://doi.org/10.1098/rsos.181870</a>.
@@ -902,8 +902,10 @@ Wasserstein, Ronald L., and Nicole A. Lazar. 2016. <span>“The <span>ASA</span>
 //    TOC, breadcrumbs, next/previous) and same-page anchors keep native
 //    behavior. Treated links carry an assistive-technology note (W3C G201);
 //    Quarto's link-external-icon marks truly external links visibly.
-// 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
+// 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
+//    (The id is derived from the section title; the old #bibliography id is
+//    kept as a fallback so a stale render still gets the demotion.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -938,7 +940,7 @@ Wasserstein, Ronald L., and Nicole A. Lazar. 2016. <span>“The <span>ASA</span>
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#bibliography");
+  var bibSection = main.querySelector("section#references, section#bibliography");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");

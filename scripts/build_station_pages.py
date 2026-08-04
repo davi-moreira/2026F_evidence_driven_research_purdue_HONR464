@@ -149,6 +149,8 @@ def opener_page(st: dict, spec: dict, lessons: list[dict], n: int) -> str:
     slug = st["id"]
     route_block = (f"## Choosing your pathway\n\n{spec['route_guide']}\n\n"
                    if spec.get("route_guide") else "")
+    genre_block = (f"## Choosing your format\n\n{spec['genre_guide']}\n\n"
+                   if spec.get("genre_guide") else "")
     acq_block = (f"## Before you can work this studio\n\n"
                  f"{spec['acquisition_note']}\n\n"
                  if spec.get("acquisition_note") else "")
@@ -169,7 +171,7 @@ This studio closes with **[Milestone {n}: {spec['milestone_title']}]({milestone_
 
 {spec['hands_forward'].strip()} The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.
 
-{route_block}{acq_block}## The lessons in this studio
+{route_block}{genre_block}{acq_block}## The lessons in this studio
 
 Read them in order, working each lesson's **It is your turn** as you go. Each one builds a piece of Milestone {n}; beside each lesson is the piece it hands you.
 

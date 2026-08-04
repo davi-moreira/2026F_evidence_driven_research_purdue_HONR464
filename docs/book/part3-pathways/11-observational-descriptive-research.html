@@ -659,7 +659,7 @@ div.csl-indent {
   <li><a href="#a-seeded-simulation" id="toc-a-seeded-simulation" class="nav-link" data-scroll-target="#a-seeded-simulation"><span class="header-section-number">14.4</span> A seeded simulation</a></li>
   <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">14.5</span> An AI failure case</a></li>
   <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">14.6</span> It is your turn</a></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 </nav>
     </div>
@@ -882,7 +882,7 @@ title, authors, year, and venue, and mark any you are not confident exist.</code
 
 </section>
 <section id="bibliography" class="level1 unnumbered">
-<h1 class="unnumbered">Bibliography</h1>
+<h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-bethlehem2010selection" class="csl-entry" role="listitem">
 Bethlehem, Jelke. 2010. <span>“Selection Bias in Web Surveys.”</span> <em>International Statistical Review</em> 78 (2): 161–88. <a href="https://doi.org/10.1111/j.1751-5823.2010.00112.x">https://doi.org/10.1111/j.1751-5823.2010.00112.x</a>.
@@ -907,8 +907,10 @@ Meng, Xiao-Li. 2018. <span>“Statistical Paradises and Paradoxes in Big Data (i
 //    TOC, breadcrumbs, next/previous) and same-page anchors keep native
 //    behavior. Treated links carry an assistive-technology note (W3C G201);
 //    Quarto's link-external-icon marks truly external links visibly.
-// 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
+// 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
+//    (The id is derived from the section title; the old #bibliography id is
+//    kept as a fallback so a stale render still gets the demotion.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -943,7 +945,7 @@ Meng, Xiao-Li. 2018. <span>“Statistical Paradises and Paradoxes in Big Data (i
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#bibliography");
+  var bibSection = main.querySelector("section#references, section#bibliography");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");

@@ -658,7 +658,7 @@ div.csl-indent {
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">37.3</span> A worked example</a></li>
   <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">37.4</span> An AI failure case</a></li>
   <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">37.5</span> It is your turn</a></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 </nav>
     </div>
@@ -861,7 +861,7 @@ Do not fix it for me.</code></pre>
 
 </section>
 <section id="bibliography" class="level1 unnumbered">
-<h1 class="unnumbered">Bibliography</h1>
+<h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-sandve2013ten" class="csl-entry" role="listitem">
 Sandve, Geir Kjetil, Anton Nekrutenko, James Taylor, and Eivind Hovig. 2013. <span>“Ten Simple Rules for Reproducible Computational Research.”</span> <em>PLOS Computational Biology</em> 9 (10): e1003285. <a href="https://doi.org/10.1371/journal.pcbi.1003285">https://doi.org/10.1371/journal.pcbi.1003285</a>.
@@ -886,8 +886,10 @@ Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and
 //    TOC, breadcrumbs, next/previous) and same-page anchors keep native
 //    behavior. Treated links carry an assistive-technology note (W3C G201);
 //    Quarto's link-external-icon marks truly external links visibly.
-// 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
+// 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
+//    (The id is derived from the section title; the old #bibliography id is
+//    kept as a fallback so a stale render still gets the demotion.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -922,7 +924,7 @@ Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#bibliography");
+  var bibSection = main.querySelector("section#references, section#bibliography");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");

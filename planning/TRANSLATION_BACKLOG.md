@@ -73,12 +73,12 @@ replace it.
     studio/milestone), the preface and "How this book is organized" milestone
     prose, the studio-continue pointer blocks in the last lesson of every
     studio, and the For Instructors milestone-disambiguation note.
-13. **D40 page behaviors** — `book/_page-behavior.html` (body links open in a
-    new tab; Bibliography heading demoted to h2) and the `_quarto.yml` lines
-    `reference-section-title: Bibliography` + `include-after-body:
-    _page-behavior.html` must be mirrored into `book-pt/` and `book-es/`
-    (localized section title: "Bibliografia" / "Bibliografía") when the
-    freeze lifts.
+13. **D40/D42 page behaviors** — `book/_page-behavior.html` (body links open
+    in a new tab; References heading demoted to h2) and the `_quarto.yml`
+    lines `reference-section-title: References` (D42 renamed it from
+    Bibliography) + `include-after-body: _page-behavior.html` must be
+    mirrored into `book-pt/` and `book-es/` (localized section title:
+    "Referências" / "Referencias") when the freeze lifts.
 
 ## C. Verification required before the freeze lifts
 

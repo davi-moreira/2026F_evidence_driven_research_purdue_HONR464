@@ -658,7 +658,7 @@ div.csl-indent {
   <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">6.3</span> A worked example</a></li>
   <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">6.4</span> An AI failure case</a></li>
   <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">6.5</span> It is your turn</a></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 </nav>
     </div>
@@ -850,7 +850,7 @@ new.</code></pre>
 
 </section>
 <section id="bibliography" class="level1 unnumbered">
-<h1 class="unnumbered">Bibliography</h1>
+<h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-booth2024craft" class="csl-entry" role="listitem">
 Booth, Wayne C., Gregory G. Colomb, Joseph M. Williams, Joseph Bizup, and William T. FitzGerald. 2024. <em>The Craft of Research</em>. 5th ed. University of Chicago Press. <a href="https://press.uchicago.edu/ucp/books/book/chicago/C/bo215874008.html">https://press.uchicago.edu/ucp/books/book/chicago/C/bo215874008.html</a>.
@@ -872,8 +872,10 @@ Hulley, Stephen B., Steven R. Cummings, Warren S. Browner, Deborah G. Grady, and
 //    TOC, breadcrumbs, next/previous) and same-page anchors keep native
 //    behavior. Treated links carry an assistive-technology note (W3C G201);
 //    Quarto's link-external-icon marks truly external links visibly.
-// 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
+// 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
+//    (The id is derived from the section title; the old #bibliography id is
+//    kept as a fallback so a stale render still gets the demotion.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -908,7 +910,7 @@ Hulley, Stephen B., Steven R. Cummings, Warren S. Browner, Deborah G. Grady, and
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#bibliography");
+  var bibSection = main.querySelector("section#references, section#bibliography");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");

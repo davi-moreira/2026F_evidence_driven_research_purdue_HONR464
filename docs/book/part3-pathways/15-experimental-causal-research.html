@@ -660,7 +660,7 @@ div.csl-indent {
   <li><a href="#what-attrition-does-to-that-promise" id="toc-what-attrition-does-to-that-promise" class="nav-link" data-scroll-target="#what-attrition-does-to-that-promise"><span class="header-section-number">18.5</span> What attrition does to that promise</a></li>
   <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">18.6</span> An AI failure case</a></li>
   <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">18.7</span> It is your turn</a></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 </nav>
     </div>
@@ -934,7 +934,7 @@ div.csl-indent {
 
 </section>
 <section id="bibliography" class="level1 unnumbered">
-<h1 class="unnumbered">Bibliography</h1>
+<h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-holland1986causal" class="csl-entry" role="listitem">
 Holland, Paul W. 1986. <span>“Statistics and Causal Inference.”</span> <em>Journal of the American Statistical Association</em> 81 (396): 945–60. <a href="https://doi.org/10.1080/01621459.1986.10478354">https://doi.org/10.1080/01621459.1986.10478354</a>.
@@ -956,8 +956,10 @@ National Research Council. 2010. <em>The Prevention and Treatment of Missing Dat
 //    TOC, breadcrumbs, next/previous) and same-page anchors keep native
 //    behavior. Treated links carry an assistive-technology note (W3C G201);
 //    Quarto's link-external-icon marks truly external links visibly.
-// 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
+// 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
+//    (The id is derived from the section title; the old #bibliography id is
+//    kept as a fallback so a stale render still gets the demotion.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -992,7 +994,7 @@ National Research Council. 2010. <em>The Prevention and Treatment of Missing Dat
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#bibliography");
+  var bibSection = main.querySelector("section#references, section#bibliography");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");

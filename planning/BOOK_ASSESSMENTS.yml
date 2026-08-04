@@ -500,7 +500,7 @@ stations:
           2: "every rail addressed in the form this studio requires"
       - id: adapt-and-defend.defense-ready-v1.station-specific
         applies_when: {}
-        text: "The milestone's own product is present and defensible: One chosen genre adaptation - poster, talk, brief, or another - plus a defense rehearsal record. This is not yet public release"
+        text: "The milestone's own product is present and defensible: One chosen format adaptation - poster, talk, brief, or another - plus a defense rehearsal record. This is not yet public release"
         levels:
           0: "the milestone's own product is missing"
           1: "present but would not survive a careful question"

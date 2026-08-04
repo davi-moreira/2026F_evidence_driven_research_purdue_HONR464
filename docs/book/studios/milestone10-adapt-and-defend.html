@@ -692,7 +692,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio10_adapt_and_defend.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a></p>
 <p><strong>This chapter closes <a href="../studios/studio10-adapt-and-defend.html">Studio 10: Adapt and defend</a>.</strong> Its lessons each ended at <strong>It is your turn</strong>; what you wrote there arrives here as working material, and this is where the pieces become one artifact you can defend.</p>
-<p><strong>What this milestone produces.</strong> One chosen genre adaptation - poster, talk, brief, or another - plus a defense rehearsal record. This is not yet public release.</p>
+<p><strong>What this milestone produces.</strong> One chosen format adaptation - poster, talk, brief, or another - plus a defense rehearsal record. This is not yet public release.</p>
 <section id="what-you-bring" class="level2">
 <h2 class="anchored" data-anchor-id="what-you-bring">What you bring</h2>
 <p>Check you are carrying each of these before you start. If one is missing, go back and work that lesson’s <strong>It is your turn</strong> first; the practice below assumes it.</p>
@@ -701,15 +701,15 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>These pieces are conditional. Bring each one when its condition is yours; when it is not, the lesson’s own drill or a plain skip is the right call, and the milestone does not require the piece.</p>
 <ul>
-<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html">Lesson 31 — Research Posters</a>: if your venue is a poster: the one-figure draft with labeled values, intervals drawn, and a headline verbed to your boundary.</li>
-<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html">Lesson 32 — Poster Criticism</a>: the gallery-walk audit of your own draft, hits ranked by how far the error travels, fixed once, and the lock call.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html">Lesson 31 — Research Posters</a>: if your venue is a poster (or your format borrows its one-figure discipline): the draft with labeled values, intervals drawn, and a headline verbed to your boundary.</li>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html">Lesson 32 — Poster Criticism</a>: the audit of your chosen format’s draft, hits ranked by how far the error travels, fixed once, and the lock call; the method is taught on the poster and transfers to any format.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html">Lesson 33 — Research Pitches</a>: if you will speak: your 30-second and 3-minute pitches, built boundary-first and tested aloud on an outsider.</li>
 </ul>
 </section>
 <section id="milestone" class="level2">
 <h2 class="anchored" data-anchor-id="milestone">The practice</h2>
 <ol type="1">
-<li>Choose your genre and read its lesson, then say what your claim must lose to fit it.</li>
+<li>Choose your format with the guide above and work the lessons its row names, then say what your claim must lose to fit that format.</li>
 <li>Build the adaptation, keeping every number traceable to the claim-evidence table.</li>
 <li>Rehearse the defense against the three hardest questions you can construct.</li>
 <li>Record which questions you could not answer; those are your next studio’s agenda.</li>
@@ -788,7 +788,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>5</td>
-<td>The milestone’s own product is present and defensible: One chosen genre adaptation - poster, talk, brief, or another - plus a defense rehearsal record. This is not yet public release</td>
+<td>The milestone’s own product is present and defensible: One chosen format adaptation - poster, talk, brief, or another - plus a defense rehearsal record. This is not yet public release</td>
 <td>the milestone’s own product is missing</td>
 <td>present but would not survive a careful question</td>
 <td>present and defensible as stated</td>
@@ -827,8 +827,10 @@ ul.task-list li input[type="checkbox"] {
 //    TOC, breadcrumbs, next/previous) and same-page anchors keep native
 //    behavior. Treated links carry an assistive-technology note (W3C G201);
 //    Quarto's link-external-icon marks truly external links visibly.
-// 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
+// 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
+//    (The id is derived from the section title; the old #bibliography id is
+//    kept as a fallback so a stale render still gets the demotion.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -863,7 +865,7 @@ ul.task-list li input[type="checkbox"] {
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#bibliography");
+  var bibSection = main.querySelector("section#references, section#bibliography");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");

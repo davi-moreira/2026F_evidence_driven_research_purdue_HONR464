@@ -666,7 +666,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#an-ai-failure-case" id="toc-an-ai-failure-case" class="nav-link" data-scroll-target="#an-ai-failure-case"><span class="header-section-number">11.4</span> An AI failure case</a></li>
   <li><a href="#it-is-your-turn" id="toc-it-is-your-turn" class="nav-link" data-scroll-target="#it-is-your-turn"><span class="header-section-number">11.5</span> It is your turn</a></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 </nav>
     </div>
@@ -938,7 +938,7 @@ div.csl-indent {
 
 </section>
 <section id="bibliography" class="level1 unnumbered">
-<h1 class="unnumbered">Bibliography</h1>
+<h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-donner2000cluster" class="csl-entry" role="listitem">
 Donner, Allan, and Neil Klar. 2000. <em>Design and Analysis of Cluster Randomization Trials in Health Research</em>. John Wiley &amp; Sons. <a href="https://www.wiley-vch.de/en/areas-interest/medicine-health-care/design-and-analysis-of-cluster-randomization-trials-in-health-research-978-0-470-71100-2">https://www.wiley-vch.de/en/areas-interest/medicine-health-care/design-and-analysis-of-cluster-randomization-trials-in-health-research-978-0-470-71100-2</a>.
@@ -963,8 +963,10 @@ Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. <span>“Using Simu
 //    TOC, breadcrumbs, next/previous) and same-page anchors keep native
 //    behavior. Treated links carry an assistive-technology note (W3C G201);
 //    Quarto's link-external-icon marks truly external links visibly.
-// 2. The citeproc-generated "Bibliography" section arrives as a second <h1>;
+// 2. The citeproc-generated "References" section arrives as a second <h1>;
 //    demote it to <h2> so the chapter title stays the page's only h1.
+//    (The id is derived from the section title; the old #bibliography id is
+//    kept as a fallback so a stale render still gets the demotion.)
 (function () {
   var main = document.getElementById("quarto-document-content");
   if (!main) return;
@@ -999,7 +1001,7 @@ Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. <span>“Using Simu
       a.appendChild(mark);
     }
   }
-  var bibSection = main.querySelector("section#bibliography");
+  var bibSection = main.querySelector("section#references, section#bibliography");
   if (bibSection) {
     bibSection.classList.remove("level1");
     bibSection.classList.add("level2");
