@@ -1327,5 +1327,19 @@ anticipation section.
 **Process.** Built through the two-role Codex loop: a mirror-mode partner
 run (gpt-5.6-sol, xhigh, read-only) ran the same assignment in parallel;
 its material is merged with attribution in
-`_adm/codex_collab/2026-08-03_studio-milestones-links-bib/`, and the
-implementation diff goes through a Codex review round.
+`_adm/codex_collab/2026-08-03_studio-milestones-links-bib/`. The partner
+merge adopted the link-accessibility layer, the native external baseline,
+and three integrity repairs (Studio 4's measurement inversion — Contract
+v0 carries a provisional operationalization, measurement is assessed in
+Studio 6; Studio 11's solo-proxy label; Studio 12's stale-run gate). The
+review round (same model/effort, `review --base e9eb85a`) returned four
+findings, all confirmed and applied: the stale-run gate widened to any
+package change, the milestone checklist made role-aware (branch/optional
+pieces bind only when their condition holds), the solo proxy aligned with
+Studio 11's produces and rubric, and a visible new-tab cue added beside
+the assistive note. Declined partner recommendations (recorded for Davi):
+"References" as section title with a per-chapter static include; rank-free
+milestone URLs and un-numbered milestone titles; the per-lesson IYT gap
+list, manifest-level milestone identity, `_iyt-rubrics` retirement, and
+the release-bundle final-artifact definition stay queued for the chapter
+review.
