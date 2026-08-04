@@ -1607,3 +1607,69 @@ with an override only when one occurred; and the transfer notes restore
 the interval-OR-caveat formulation (uncertainty shown where the design
 licenses it) instead of demanding intervals on every quantitative
 visual, in ch27, ch29, and the Studio 10 contribution line.
+
+## Decision 43: The research-first on-ramp — curiosity before the tools, kits before the milestones (2026-08-04)
+
+**Ruling (Davi).** Implement `planning/BOOK_OPENING_OPTIONS.md`'s
+recommendation (Option 4) and its adjustments 1, 3, 4, and 5; adjustment 2
+(the author-review gate) stays with Davi, to start after this lands. Also:
+update the Studio 1 and Studio 2 content in the filled T&F/CRC proposal.
+The experienced sequence is now: **human curiosity → ledger and rules →
+verified AI assistance → formal research question.**
+
+**The on-ramp.** Studio 1's opener and workbook open with a human-only
+**opening move** (authored `opening_move` field; generator renders it as
+"Start without a tool"): four handwritten lines — what you want to
+understand, why it matters, your starting belief, and the evidence that
+would revise it — with a hard no-AI stop. Studio 1 is retitled **"Begin
+the research and govern the work"** (display only; id, rank, URLs
+unchanged). Ch1 bridges from the committed curiosity and widens it; the
+preface leads research-first; the organization figure is rebuilt as the
+research road (curiosity capsule → six stages → a DECISION endpoint that
+honors D42's release-or-withhold, four rails beneath). Course side: the
+Week-1 units and master plan carry the new title, and nb01 visibly
+creates the ledger before its first prompt (instructor repo synced). The
+first-AI invariant — human commitment → ledger opened → AI prompt →
+independent check → ledger row — is now explicit on every surface.
+
+**Practice kits (A4 tranche, Studios 1–4).** Authored `practice_kit`
+fields (worked example · half-finished faded task · starter · verification
+check) render into the four studio workbooks, threaded on the book's own
+restaurant-prices running example from ch1; completeness is
+validator-enforced. The partner run's alternative kit thread (Indianapolis
+hot-days, NCEI) is recorded as a candidate for the analysis studios.
+
+**Tiered opening.** Each Studio 1 lesson keeps ONE core AI cycle (ch1
+locate-and-verify sources — the citation catch; ch2 the boundary
+red-team; ch3 the SDIIVDD delegation; ch4 list-every-claim-to-verify, the
+partner run's argued flip); the other eight prompts carry an *Optional
+depth* label. M0 requires the Book Milestone 1 checklist's named
+contributions, not prompt count, in both the submission row and the Book
+Anchor intro.
+
+**Instruments and positioning.** `planning/COLD_TEST_PROTOCOLS.md`: the
+45–60-minute first-mile protocol (hard prompt-before-ledger gate,
+five-move reconstruction, numerator reporting, IRB determination flag)
+and the second-A1-pilot frame (unaffiliated reader, book-only,
+no-permission route, claim-or-evidence-based-withhold pass; toys never
+lift A1). `planning/RDSS_COVERAGE_MATRIX.md`: the
+adopted/adapted/omitted/EDR|AI-original map; the preface now says EDR|AI
+"draws its design framework from" RDSS (MIDA, declare-diagnose-redesign),
+a companion and on-ramp, never a translation. CAUGHT for Davi: official
+RDSS ch. 4 is the DeclareDesign/R quickstart, so `READING_MAP.md`'s
+"RDSS ch. 4 §literature" citation conflicts with the official contents
+and needs his correction.
+
+**The proposal DOCX.** Studio 1 and Studio 2 passages inserted after the
+Part I/II headers; the structure preamble names the twelve Studios and
+Milestone chapters; ch1/ch5 abstracts carry the research-first opening
+(backup saved beside the file). FLAGGED for Davi: the FILLED proposal's
+ToC is still the six-part structure frozen Aug 1 — it never received the
+twelve-studio regeneration D38's record describes; regenerating it is a
+decision, not done silently.
+
+**Process.** Two-role Codex loop (gpt-5.6-sol, xhigh, read-only): mirror
+partner drafts merged with attribution
+(`_adm/codex_collab/2026-08-04_d43-implementation/`); kept over
+counter-proposals: the restaurant-prices kit thread (continuity) and
+ch2's boundary red-team as core. PT/ES: replay entries only (D36).

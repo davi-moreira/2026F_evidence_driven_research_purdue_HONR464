@@ -79,6 +79,15 @@ replace it.
     Bibliography) + `include-after-body: _page-behavior.html` must be
     mirrored into `book-pt/` and `book-es/` (localized section title:
     "Referências" / "Referencias") when the freeze lifts.
+14. **D43 research-first on-ramp** — localize: the Studio 1 `opening_move`
+    (four lines, no-AI stop) + retitle ("Begin the research and govern the
+    work"), the ch1 bridge and widened step 2, the preface's research-first
+    paragraphs and the narrowed RDSS sentence (MIDA, companion-not-
+    substitute), the road-and-rails figure (labels already staged in
+    `build_book_part1_figure.py` L dicts — rerun with the freeze lifted),
+    the *Optional depth* labels on eight Studio 1 prompts, and the
+    Studio 1–4 `practice_kit` blocks (worked example / faded task /
+    starter / verification).
 
 ## C. Verification required before the freeze lifts
 
