@@ -30,7 +30,7 @@ INK, SOFT, FILL = "#1a1a19", "#8a8a86", "#f4f4f3"
 L = {
     "book": {
         "start": ("YOUR CURIOSITY", "a question that\nwill not leave\nyou alone"),
-        "end": ("YOUR CLAIM", "released, defended,\npointing at the\nnext study"),
+        "end": ("YOUR DECISION", "release, defended,\nor honestly withheld;\nthe next study opens"),
         "road": [
             ("STUDIO 1", "begin the research,\ngovern the work"),
             ("STUDIOS 2–4", "frame the question,\nground it, declare it"),

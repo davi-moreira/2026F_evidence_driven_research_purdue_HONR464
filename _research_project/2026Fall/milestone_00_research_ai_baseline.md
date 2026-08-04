@@ -44,9 +44,12 @@ you before you put your name on it.
 ## The Book Anchor — "It Is Your Turn"
 
 This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
-below as you develop the milestone, and complete each chapter's closing **"It
-is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
+below as you develop the milestone, and complete the named contribution each
+chapter's closing **"It is your turn"** section builds, in its companion
+Colab notebook (or carry the same work inside your project notebook). You do
+not have to run every prompt: each lesson marks one core AI cycle, and the
+prompts labeled *Optional depth* are exactly that. The Studio 1 milestone
+checklist, not prompt count, defines completion:
 
 - Ch. 1 — [AI Is Your Arm, Not Your Brain](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch01_ai_is_your_arm_not_your_brain.ipynb)
 - Ch. 2 — [The Student as Research Director](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/02-the-student-as-research-director.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch02_the_student_as_research_director.ipynb)

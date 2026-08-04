@@ -9,10 +9,11 @@ Davi's go (participant, timing); nothing here executes by itself.
 other way around, and does the first-AI invariant hold in a real reader's
 hands?
 
-**Participant.** One undergraduate (or comparable novice) who has not seen
-the book and has no quantitative background. A real reader, not a
-simulated one; an AI-simulated pass may be run as a cheap pre-check but
-never substitutes for the human session.
+**Participants.** One undergraduate (or comparable novice) minimum; 5–8
+with mixed AI habits is the diagnostic ideal. Real readers, not simulated
+ones; an AI-simulated pass may be run as a cheap pre-check but never
+substitutes for the human sessions. Before recruiting, Davi determines the
+applicable consent and institutional-review requirements.
 
 **Materials.** The rendered book from the preface through Chapter 1's "It
 is your turn", plus a blank sheet for the opening move; a screen the
@@ -39,11 +40,19 @@ observer can see; no coaching beyond the script.
 - Reader identifies the never-delegate boundary unprompted or when asked.
 - Any point where the reader stalls, rereads twice, or skips: note where.
 
-**Pass signals.** Answers to (2) name research/curiosity first; the
-first-AI invariant held without observer intervention; the opening felt
-to the reader like starting a project, not reading a policy. **Fail
-signals.** "It's a book about AI"; prompt-before-ledger; the opening move
-skipped as decorative.
+Two additions to the script, from the partner track: at the end, ask the
+reader to reconstruct, without looking back, the order of their first five
+moves (curiosity → ledger → prompt → check → row); and note every point
+where they ask "do I have to do this?".
+
+**Pass signals.** HARD GATE: zero readers run a prompt before opening the
+ledger. Then, reported as numerators over denominators: most readers (aim
+≥80%) complete the opening move without AI, carry their own curiosity into
+Chapter 1, independently open a source rather than asking the AI to check
+itself, reconstruct the five-move order, distinguish core from optional
+depth, and describe the book unaided as doing research with governed AI.
+**Fail signals.** "It's a book about AI"; prompt-before-ledger; the
+opening move skipped as decorative.
 
 **Output.** One page: checklist, quotes, artifact photos, and the repair
 list. File under `_adm/cold_tests/` (gitignored) with the date.
@@ -58,10 +67,20 @@ the operational frame:
 
 - Run AFTER the D43 opening changes and the Studio 1–4 practice kits are
   in place, so the pilot tests the current on-ramp.
-- The pilot reader works without maintainer help; every stall is logged
-  with its studio and step, as in the first pilot.
-- Success lifts A1's bounded promise per the acceptance document's own
-  terms; failure feeds the next repair list, not a relabeling.
+- The reader is unaffiliated with the book's development, works from the
+  book alone (no instructor, no hidden local knowledge, no paid AI
+  dependency), starts from an original human curiosity, and takes the
+  public/open no-permission route with real data whose provenance and
+  terms are recorded.
+- All twelve milestones are versioned; solo substitutes are labeled as
+  proxies; the close is a complete note (methods, results, uncertainty,
+  discussion, claim boundary, references, AI disclosure), a clean package
+  run in a fresh environment, and a release-or-withhold decision.
+- Every stall is logged with the studio and step that owns the missing
+  instruction.
+- PASS: a defensible original empirical claim, or an evidence-based
+  withhold with the failed gate and redesign documented. A toy
+  calculation or constructed-data walkthrough does not lift A1.
 
 **Davi rules on:** who runs each protocol, when, and whether the first
 mile passes. The evidence standard for lifting P1 stays the acceptance

@@ -19,7 +19,7 @@ EDR|AI's scope · *EDR|AI-original* = no RDSS counterpart.
 | 1 | Preface | adapted | EDR|AI preface: same declare-diagnose-redesign spirit, reframed for the AI age |
 | 2 | What is a research design? | adopted | ch. 9 (MIDA): the four-component definition is taken over directly |
 | 3 | Research design principles | adapted | distributed across Studios 2–4 openers and the four rails; principles become practice steps |
-| 4 | Getting started | adapted | ch. 5 (curiosity → problem) carries the on-ramp, joined to the D43 opening move |
+| 4 | Getting started | omitted | RDSS ch. 4 is the DeclareDesign/R software quickstart (verified against the official contents); EDR|AI companions use plain Python. NOTE: `READING_MAP.md` cites "RDSS ch. 4 §literature" for the evidence weeks, which conflicts with the official chapter and needs Davi's correction |
 | 5 | Declaring designs | adapted | ch. 11: declaration taught conceptually and by seeded simulation, not via the DeclareDesign package |
 | 6 | Specifying the model | adapted | ch. 9's M, in plain language |
 | 7 | Defining the inquiry | adapted | ch. 6 + ch. 9: the inquiry compass (kind × reach) is EDR|AI's rendering |
@@ -28,7 +28,7 @@ EDR|AI's scope · *EDR|AI-original* = no RDSS counterpart.
 | 10 | Diagnosing designs (incl. power) | adapted | ch. 11: bias, wobble, power read from simulation |
 | 11 | Redesigning | adopted | ch. 11's redesign move plus the milestone versioning rule (a version, not a pass) |
 | 12 | Design example | omitted | instructor reference only; EDR|AI carries its own worked examples |
-| 13 | Designing in code | omitted | DeclareDesign-in-R is not taught; companions use plain Python |
+| 13 | Designing in code | adapted | the declare-in-code idea survives in ch. 11's seeded simulations and the Python companions; DeclareDesign-in-R itself is not taught |
 | 15 | Observational: descriptive | adapted | ch. 13, with the selection diagram and claim boundary |
 | 16 | Observational: causal | adapted | ch. 14: confounding, diagrams, identification leverage |
 | 17 | Experimental: descriptive | adapted | ch. 15: randomized probes as measurement |

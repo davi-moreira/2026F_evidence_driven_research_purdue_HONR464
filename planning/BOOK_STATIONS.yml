@@ -26,19 +26,23 @@ schema_version: "1.0"
 stations:
   - id: govern-the-work
     purpose: >-
-      Put your own curiosity on the page first, then decide how you and
-      your tools will work while nothing is yet at stake, so the rules
-      exist when the pressure arrives.
+      Begin with a curiosity you own, then decide how you and your tools
+      will work while nothing is yet at stake, so the rules exist when
+      the pressure arrives.
     opening_move: |
       Research starts with something that will not leave you alone: a
       pattern you keep noticing, a contradiction, a decision you want to
-      understand. Before you open any tool, write three lines by hand.
+      understand. Close every AI tool; this first move is yours. Write
+      four lines by hand.
 
       1. One thing you genuinely want to understand, in one sentence.
       2. Why an answer would matter, and to whom.
-      3. What evidence could change what you currently believe about it.
+      3. What you currently think the answer might be. A starting belief,
+         not a claim.
+      4. One kind of evidence that could make you revise that belief.
 
-      No AI on this page. Keep what you wrote: Lesson 1 widens it into
+      No AI on this page: do not ask a tool to generate, improve, or rank
+      your curiosity. Keep what you wrote. Lesson 1 widens it into
       candidate curiosities, and every rule this studio sets exists to
       protect it.
     produces: >-
