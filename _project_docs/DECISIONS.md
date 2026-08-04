@@ -1672,4 +1672,13 @@ decision, not done silently.
 partner drafts merged with attribution
 (`_adm/codex_collab/2026-08-04_d43-implementation/`); kept over
 counter-proposals: the restaurant-prices kit thread (continuity) and
-ch2's boundary red-team as core. PT/ES: replay entries only (D36).
+ch2's boundary red-team as core. PT/ES: replay entries only (D36). Diff
+review round (same model/effort): five findings, all confirmed and
+applied — the S3 faded task now audits LIVE AI output instead of implying
+a planted citation (D16); the S2 worked example's reach is bounded to the
+retrievable panel (no silent upgrade toward the group, per INQUIRY_MAP);
+the S4 redesign stops pretending a fixed panel removes price-dependent
+survival and narrows the estimand instead; the workbook opening-move cell
+asks for all four lines with a field template; and the cold-test protocol
+gains participant data management (IDs, redaction, consent for quotes and
+photos, approved storage, deletion date) required before recruitment.

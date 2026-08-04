@@ -57,6 +57,14 @@ opening move skipped as decorative.
 **Output.** One page: checklist, quotes, artifact photos, and the repair
 list. File under `_adm/cold_tests/` (gitignored) with the date.
 
+**Participant data management (required before recruitment).** Assign a
+participant ID and redact names from artifacts before filing; obtain
+written consent for any quotation or photo; store session materials in
+the institution-approved location (the gitignored path only keeps them
+out of git, it is not a privacy control); set and record a deletion date.
+Davi completes the consent and institutional-review determination before
+anyone is recruited.
+
 ## Protocol 2 — the second A1 pilot (end-to-end, no-permission route)
 
 The instrument is already specified in `planning/BOOK_DESIGN_ACCEPTANCE.md`

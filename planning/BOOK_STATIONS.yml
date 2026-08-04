@@ -182,10 +182,12 @@ stations:
         **Units.** Menu items at restaurants within walking distance.
         **Outcome.** The listed price. **Conditions.** 2019 versus 2025.
         **Kind.** Descriptive: the words ask "how much more," not "what
-        caused it." **Reach.** The data at hand, offered carefully toward
-        nearby restaurants as a group. **Claim boundary.** Hope to
-        defend: local menu prices rose faster than the overall index.
-        Cannot defend: the wage increase caused the difference.
+        caused it." **Reach.** The data at hand: the menu items
+        retrievable for both years, and only those. **Claim boundary.**
+        Hope to defend: on this panel of menus, prices rose faster than
+        the overall index. Cannot defend: that nearby restaurants as a
+        group did (that claim needs a sampling story this design does
+        not have), and not that the wage increase caused anything.
       faded_task: |
         The exercise-and-sleep curiosity is half declared: objective,
         units, and outcome are done. Kind, reach, and both boundary
@@ -268,12 +270,13 @@ stations:
         The dropped third row is the point: a source that cannot be
         retrieved is not evidence, however fluent the suggestion was.
       faded_task: |
-        One registry row has a blank status: a promising article an AI
-        suggested, complete with authors and year. Decide its status the
-        only way that counts, by trying to retrieve it, and write the
-        search-log line for the attempt. Then finish the revision
-        sentence: "After the map, my Studio 2 declaration changes (or
-        holds) because…"
+        Your registry needs one more candidate, and this time the AI
+        supplies it live: ask your own AI tool for one additional
+        published source on your question, with authors, year, and title.
+        Take whatever row it returns and decide its status the only way
+        that counts, by trying to retrieve it, and write the search-log
+        line for the attempt. Then finish the revision sentence: "After
+        the map, my Studio 2 declaration changes (or holds) because…"
       starter: |
         Your registry columns: source · what it is · status (verified /
         could not retrieve / pending), with one search-log line per
@@ -352,10 +355,13 @@ stations:
         interval: archived menus survive selectively. **Permission
         status.** Cleared: prices, not people.
 
-        **Diagnosis note.** On simulated menus, selective survival biased
-        the growth estimate upward, because pricier restaurants archive
-        more. **Redesign.** A fixed panel: only restaurants present in
-        both years. **The honest call.** Run it as redesigned.
+        **Diagnosis note.** On simulated menus, price-dependent archiving
+        biased the growth estimate upward: pricier restaurants archive
+        more, and no restriction inside these data removes that
+        selection. **Redesign.** Narrow the estimand to the retrievable
+        panel and say so in the claim; the coverage caveat stays.
+        **The honest call.** Run it on the panel, bounded, and name what
+        more data of the same kind could never fix.
       faded_task: |
         The exercise-and-sleep contract is half written: objective,
         population, data strategy, and answer strategy are done. The

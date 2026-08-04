@@ -262,8 +262,12 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
                           f"{spec['opening_move'].strip()}\n"))
         i += 1
         cells.append(md(i, "✍️ **Your opening move.** Double-click this cell "
-                          "and write the three lines here, before any other "
-                          "cell in this workbook.\n"))
+                          "and write the four lines here, before any other "
+                          "cell in this workbook:\n\n"
+                          "1. What you genuinely want to understand:\n"
+                          "2. Why an answer would matter, and to whom:\n"
+                          "3. Your starting belief (not a claim):\n"
+                          "4. The evidence that would revise it:\n"))
         i += 1
     if spec.get("genre_guide"):
         cells.append(md(i, f"## Choosing your format\n\n{spec['genre_guide']}\n"))
