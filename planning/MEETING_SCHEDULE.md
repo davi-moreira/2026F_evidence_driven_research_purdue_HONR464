@@ -935,362 +935,362 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Instructor prep:** Print the week11 quiz; confirm the printing/portal submission mechanics; confirm the Poster Critic role is provisioned; consult-rotation timer; backup PDF-to-Brightspace plan; the M11 brief staged for Monday.
 - **Risks / contingency:** Printing or the portal fails → the PDF submitted to Brightspace timestamps the 5:00 PM deadline, and physical printing resolves next week before the Expo. A gate is still blocked at the studio → the repair happens first, in the sprint, and the lock waits for the log — never for a better result. A citation will not resolve → the claim it supports is cut or re-sourced before the lock, never shipped unverified.
 
-## Week 12 — Poster delivery
+## Week 12 — Studio 10: Pitch and defense rehearsal
 
-### M32 — Mon 2026-11-09 (in-person) — Poster delivery I: the 30-second, 90-second, and full pitch — compression without inflation
+### M32 — Mon 2026-11-09 (in-person) — Pitch and defense I: the 30-second and 3-minute layers — compression without inflation
 
 - **Student Research Lead slot:** SRL slot 19 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: two visitors stop at the same poster for a few seconds each — one leaves intrigued, one leaves confused. What did the first ten words do differently?
-- **Driving question:** A stranger gives you thirty seconds, then maybe three minutes. What do you say in each, and how do you keep every version honest?
-- **Secondary questions:** How do the 30-second, 90-second, and full pitches differ in job? How do you explain your method without jargon? Where does the claim boundary live when you are speaking, not writing?
-- **Inquiry:** all positions (communication)
-- **Claim PERMITTED:** "In my sample, X was associated with Y — spoken exactly as the poster says it, compressed but never upgraded."
-- **Claim NOT permitted:** "X causes Y" said aloud at the poster when the poster only claims association (the excited-mouth upgrade).
-- **RDSS reading:** (no new reading — delivery unit; bring your final poster and your inquiry declaration boundary)
-- **Other material:** nb12 student notebook (poster delivery) §1–2 (Colab); project/conference/presentation_plan_protocol.md; M11 brief on Brightspace
-- **Provenance:** presentation_plan_protocol.md + fresh pitch architectures | delivery unit | 30-sec / 90-sec / full-pitch scripts + jargon audit | fresh
-- **Concepts:** pitch architecture (hook, claim, evidence, boundary, invitation); the 30-second hook vs the 90-second walk vs the full 3-to-5-minute version; audience adaptation; explaining method without jargon; compression-never-inflation
+- **SRL puzzle focus:** Puzzle: the colleague's 30-second pitch sounds cleaner than their locked poster — and somewhere in the compression the limitation vanished and the claim quietly grew. Which words did it?
+- **Driving question:** A stranger gives you thirty seconds, then maybe three minutes. What do you say in each — and how do you keep every compressed version exactly as honest as the locked poster?
+- **Secondary questions:** How do the 30-second and 3-minute layers differ in job? What must a pitch keep that compression tempts you to drop? How do you explain your method without jargon, boundary-first?
+- **Inquiry:** all positions (communication — Studio 10 revisit)
+- **Claim PERMITTED:** "In my sample, X was associated with Y — spoken exactly as the poster says it, boundary in the same breath, compressed but never upgraded."
+- **Claim NOT permitted:** "X causes Y" said aloud at the poster when the poster only claims association (the excited-mouth upgrade); a pitch that drops the limitation is not a shorter version, it is a different claim.
+- **RDSS reading:** Required EDR|AI: research-pitches (first read); research-posters revisited. No new RDSS — the pitch layers are built boundary-first from your locked preliminary poster.
+- **Other material:** nb12 student notebook (pitch and defense rehearsal) §1–2 (Colab); project/conference/presentation_plan_protocol.md; the colleague's Week-11 poster artifact (unscored continuation); M11 brief on Brightspace
+- **Provenance:** crosswalk M11 + BOOK_STATIONS adapt-and-defend revisit + presentation_plan_protocol.md | S10 defense-rehearsal unit | boundary-first 30-sec + 3-min pitch layers + outsider test + unscored colleague continuation beat | adapted
+- **Concepts:** pitch architecture (hook, claim, evidence, boundary, invitation); the 30-second hook vs the 3-minute walk; boundary-first construction; audience adaptation and the outsider test; explaining method without jargon; compression-never-inflation; the adaptation-loss rule
 - **Python dependency:** none
-- **Dataset / simulation:** each student's own poster
-- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead plays two visitors at one poster (a few-second stopper and a three-minute stayer) and the room names what the opening ten words must do differently for each; 9–31 guided AI research-partner investigation: draft your three pitch layers with AI as a rehearsal partner — the 30-second hook, the 90-second walk, the full pitch — then have AI flag every sentence that upgrades a claim or hides behind jargon; 31–43 human verification + instructor formalization: you check each AI flag against your poster's boundary yourself (AI proposes, you verify), and the instructor formalizes the pitch architecture — hook, claim, evidence, boundary, invitation — and the compression-never-inflation rule; 43–50 decision & defense: log the delivery decisions and their verification in the ledger and write the Claim Ticket.
-- **Hands-on activity:** Draft and deliver all three pitch layers (30-second, 90-second, full), and catch a partner's spoken claim-upgrades and jargon.
-- **Practice:** 📝 nb12 practice: compress one evidence block into a single spoken sentence at three lengths without inflating the claim; rewrite one jargon sentence in plain words a stranger outside your field would follow.
+- **Dataset / simulation:** each student's own locked preliminary poster (+ the reused colleague S10 artifact)
+- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead plays the colleague's polished 30-second pitch against their locked poster and the room hunts the vanished limitation — the unscored continuation of the Week-11 audit; 9–31 guided AI research-partner investigation: build your two pitch layers boundary-first with AI as a rehearsal partner — the 30-second hook and the 3-minute walk — then have AI flag every sentence that upgrades a claim or hides behind jargon, and test the short layer on an outsider's ear; 31–43 human verification + instructor formalization: you check each AI flag against your poster's claim boundary yourself (AI proposes, you verify), and the instructor formalizes the pitch architecture — hook, claim, evidence, boundary, invitation — and the compression-never-inflation rule; 43–50 decision & defense: log the delivery decisions and their verification in the ledger and write the Claim Ticket.
+- **Hands-on activity:** Build and deliver both pitch layers boundary-first, catch a partner's spoken claim-upgrades and jargon, and open the M11 rehearsal record.
+- **Practice:** 📝 nb12 practice: compress one evidence block into a single spoken sentence at two lengths without inflating the claim; rewrite one jargon sentence in plain words a stranger outside your field would follow.
 - **Discussion prompt:** Where in a classmate's pitch did a technical word do real work, and where was it a wall a visitor could not climb?
-- **Project connection:** M11 (presentation package) begins: your three pitch layers are its first component, all sized to the poster you already locked.
-- **Milestone developed:** M11 — Presentation Package
-- **Milestone work time:** 15 min (scripting the three pitch layers)
+- **Project connection:** M11 (defense-ready presentation package — poster edition v2) begins: the two pitch layers and the rehearsal record are its first components, all sized to the poster you locked at M10.
+- **Milestone developed:** M11 — Defense-ready presentation package, Book Milestone 10 v2 (kickoff — Monday exception)
+- **Milestone work time:** 15 min (scripting the two pitch layers)
 - **Milestone presentation/review:** partner delivery rounds with upgrade-and-jargon flagging
-- **Student prep:** Final poster content internalized; headline claim sayable cold; inquiry declaration boundary at hand.
-- **Student artifact:** Three drafted pitch layers with the boundary sentence marked + partner feedback
+- **Student prep:** Locked M10 poster internalized; headline claim sayable cold; claim boundary at hand.
+- **Student artifact:** Two drafted pitch layers with the boundary sentence marked + rehearsal-record opening + partner feedback
 - **Exit ticket:** Claim Ticket #32: my boundary sentence, exactly as I will say it out loud.
-- **Homework / next milestone:** Rehearse all three pitch layers aloud. Lecture 2 builds the harder half of delivery — spoken uncertainty and the difficult questions you fear.
-- **Instructor prep:** Rehearse the well-said / inflated pitch demo pair; print the pitch-architecture templates; stage the M11 brief on Brightspace.
+- **Homework / next milestone:** Rehearse both layers aloud on someone outside the course and log what they missed. Lecture 2 builds the harder half of the defense — the five hardest fair questions, spoken uncertainty, and defend-or-concede.
+- **Instructor prep:** Rehearse the well-said / inflated pitch demo pair; stage the colleague pitch fragment (reused S10 artifact, key private); print the pitch-architecture templates; stage the M11 brief on Brightspace.
 - **Risks / contingency:** Stage fright surfaces → the two-attempt structure makes everyone's first delivery officially a draft, and solo rehearsal is offered in office hours.
 
-### M33 — Wed 2026-11-11 (in-person) — Poster delivery II: uncertainty spoken like a scientist, and the hard question you fear
+### M33 — Wed 2026-11-11 (in-person) — Pitch and defense II: the five hardest fair questions, spoken uncertainty, and defend-or-concede
 
 - **Student Research Lead slot:** SRL slot 20 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: a stranger asks 'so does it CAUSE it?' about a study that only measured association — what is the one sentence that stays honest and still keeps them interested?
+- **SRL puzzle focus:** Puzzle: a visitor asks the colleague 'so does it CAUSE it?' about a poster that only claims association — what is the one sentence that stays honest and still keeps the visitor interested?
 - **Driving question:** Can you say what your study cannot show — and answer the hardest fair question — without either bluffing or apologizing your findings away?
-- **Secondary questions:** What does an honest 'I don't know' contain? How do you separate evidence from speculation out loud? When a visitor asks 'but does it CAUSE it?' about a noncausal project, what do you say?
-- **Inquiry:** all positions (communication)
+- **Secondary questions:** What does an honest 'I don't know' contain? When do you defend and when do you concede? What goes on the unanswered-question agenda — and why is that agenda itself evidence?
+- **Inquiry:** all positions (communication — Studio 10 revisit)
 - **Claim PERMITTED:** "I don't know — but here is what I do know that bears on it, and here is how one would find out."
 - **Claim NOT permitted:** Bluffing an answer you do not have — the one move that can destroy a presenter's credibility on the spot.
-- **RDSS reading:** (no new reading — delivery unit; bring your uncertainty line and your poster's claim boundary)
-- **Other material:** nb12 student notebook (poster delivery) §3–4 (Colab); project/conference/uncertainty_limitations_protocol.md; project/conference/hard_questions_protocol.md; M11 brief on Brightspace
-- **Provenance:** uncertainty_limitations_protocol.md + hard_questions_protocol.md | delivery unit | ULN move + five-type question bank + honest-don't-know formula | fresh
-- **Concepts:** the uncertainty-limitations-next-step (ULN) move; the five hard-question types (method, alternative explanation, so-what, generalization, AI-use); the honest-don't-know formula; separating evidence from speculation; defend-vs-concede judgment; professional conference interaction
+- **RDSS reading:** Required EDR|AI: difficult-questions (first read); poster-criticism revisited. No new RDSS — bring your uncertainty line and your poster's claim boundary.
+- **Other material:** nb12 student notebook (pitch and defense rehearsal) §3–4 (Colab); project/conference/uncertainty_limitations_protocol.md; project/conference/hard_questions_protocol.md; the colleague's poster artifact (unscored continuation); M11 brief on Brightspace
+- **Provenance:** uncertainty_limitations_protocol.md + hard_questions_protocol.md + BOOK_STATIONS adapt-and-defend step 3 | S10 defense-rehearsal unit | ULN move + five-hardest-fair-questions bank + defend-or-concede record + unanswered-question agenda | adapted
+- **Concepts:** the five hard-question types (method, alternative explanation, so-what, generalization, AI-use); the uncertainty-limitations-next-step (ULN) move; the honest-don't-know formula; defend-vs-concede judgment; the unanswered-question agenda (questions you cannot answer are your next studio's agenda); separating evidence from speculation
 - **Python dependency:** none
-- **Dataset / simulation:** each student's own findings, spoken
-- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the lead fires a causal question at a deliberately noncausal finding ('so it CAUSES it?') and the room drafts the one sentence that stays honest and keeps the visitor interested; 7–30 intensive applied AI laboratory: build your five-question bank (one per type) with AI generating hostile-but-fair versions you did not think of, draft the ULN paragraph and the honest-don't-know answer for the worst one, then deliver your ULN to two partners in rotation; 30–38 peer defense + adversarial questioning: sit a 3-minute hot seat drawn from your bank plus surprises while classmates probe, defending from the ledger or conceding cleanly; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer + ledger + Claim Ticket: revise the bank from what the hot seat exposed, log the AI-use decision and its verification, and write the ticket.
-- **Hands-on activity:** Survive a 3-minute hot seat on your five-question bank, delivering the ULN move and at least one honest 'I don't know' without bluffing.
+- **Dataset / simulation:** each student's own findings, spoken (+ the reused colleague S10 artifact)
+- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the lead fires the causal question at the colleague's deliberately noncausal poster (the unscored continuation audit) and the room drafts the one sentence that stays honest and keeps the visitor interested; 7–30 intensive applied AI laboratory: build your five-hardest-fair-questions bank (one per type) with AI generating hostile-but-fair versions you did not think of, draft the ULN paragraph and the honest-don't-know answer for the worst one, mark each bank entry defend or concede, then deliver your ULN to two partners in rotation; 30–38 peer defense + adversarial questioning: sit a 3-minute hot seat drawn from your bank plus surprises while classmates probe, defending from the ledger or conceding cleanly; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer + ledger + Claim Ticket: write the unanswered-question agenda from what the hot seat exposed, log the AI-use decision and its verification, and write the ticket.
+- **Hands-on activity:** Survive a 3-minute hot seat on your five-question bank, delivering the ULN move, at least one honest 'I don't know', and at least one clean concession.
 - **Practice:** 📝 nb12 practice: convert three apology-spiral sentences into ULN form; for one causal question aimed at a noncausal finding, write the two-sentence honest reply.
 - **Discussion prompt:** Which classmate's hot-seat save impressed you most, and what exactly did they do to turn a stumble into a grounded answer?
-- **Project connection:** M11 completes its intellectual armor: the pitch layers plus the uncertainty statement and question bank are the package you carry to the Expo.
-- **Milestone developed:** M11 — Presentation Package (uncertainty statement + question bank)
+- **Project connection:** M11 completes its intellectual armor: the pitch layers plus the question bank, ULN statement, defend-or-concede record, and unanswered-question agenda are the package you carry to the Expo.
+- **Milestone developed:** M11 — Defense-ready presentation package, Book Milestone 10 v2 (dev; question bank + ULN + defend-or-concede record added)
 - **Milestone work time:** 15 min (bank-building + ULN drafting)
 - **Milestone presentation/review:** hot-seat rounds + ULN partner rounds with strength-not-apology scoring
 - **Student prep:** Pitch layers rehearsed from Lecture 1; findings and their limits at hand.
-- **Student artifact:** Five-question bank + ULN paragraph + hot-seat performance
+- **Student artifact:** Five-question bank with defend-or-concede calls + ULN paragraph + unanswered-question agenda + hot-seat performance
 - **Exit ticket:** Claim Ticket #33: the question I most fear at the Expo, and my first sentence in reply.
-- **Homework / next milestone:** Finish M11 (three pitch layers + uncertainty statement + question bank) for Friday's studio, where the mock poster symposium drills it and M11 is due that night.
-- **Instructor prep:** Surprise-question deck per project; three ULN demos including a null finding; timer for the hot seats.
+- **Homework / next milestone:** Finish M11 (both pitch layers + question bank + ULN statement + rehearsal record) for Friday's studio, where the mock poster symposium drills it and M11 is due that night.
+- **Instructor prep:** Surprise-question deck per project; three ULN demos including a null finding; the colleague poster fragment staged; timer for the hot seats.
 - **Risks / contingency:** A hot seat runs hot emotionally → the instructor becomes questioner-of-record and slows the cadence; the drill's purpose, safety through practice, is named aloud.
 
-### M34 — Fri 2026-11-13 (in-person) — Studio Friday — the mock poster symposium: your package under live fire, M11 due
+### M34 — Fri 2026-11-13 (in-person) — Studio Friday — the mock poster symposium: the defense-ready package under live fire, M11 due
 
-- **Driving question:** Can your whole delivery package survive a room of strangers rotating through your poster — and is it ready to submit tonight?
-- **Secondary questions:** Does the full walk land inside time? Do the pitch, the ULN, and the question bank hold together under real traffic? What is still soft before the Expo (Tuesday)?
-- **Inquiry:** all positions (communication)
+- **Driving question:** Can your whole defense-ready package survive a room of strangers rotating through your poster — and is it ready to submit tonight?
+- **Secondary questions:** Does the 3-minute walk land inside time? Do the pitch layers, the ULN, and the question bank hold together under real traffic? What is still soft before the Expo (Tuesday)?
+- **Inquiry:** all positions (communication — studio)
 - **Claim PERMITTED:** "Every claim I spoke at my station matched what my poster shows — I compressed, I never upgraded."
 - **Claim NOT permitted:** "I'll figure out the hard questions live at the Expo" (the symposium is the rehearsal that makes that unnecessary).
-- **RDSS reading:** (no new reading — studio Friday; bring your poster, all three pitches, and your question bank)
-- **Other material:** nb12 student notebook (poster delivery) §5 symposium + visitor role cards (Colab); project/conference/dress_rehearsal_protocol.md (station-round format); M11 due tonight; M12 brief on Brightspace
-- **Provenance:** presentation_plan_protocol.md + hard_questions_protocol.md + fresh symposium protocol | delivery unit | mock symposium station rounds with visitor role cards as the studio work block | fresh
-- **Concepts:** the mock poster symposium; station-round format; the visitor role card (the five question types spread across visits); critical-but-kind feedback; delivery under live traffic
+- **RDSS reading:** (no new reading — studio Friday; bring your poster, both pitch layers, and your question bank)
+- **Other material:** week12 quiz; nb12 student notebook (pitch and defense rehearsal) §5 symposium + visitor role cards (Colab); project/conference/dress_rehearsal_protocol.md (station-round format); M11 due tonight; M12 brief on Brightspace
+- **Provenance:** presentation_plan_protocol.md + hard_questions_protocol.md + symposium protocol | S10 defense-rehearsal unit | mock symposium station rounds with visitor role cards as the studio work block | adapted
+- **Concepts:** the mock poster symposium; station-round format; the visitor role card (the five question types spread across visits); critical-but-kind feedback; delivery under live traffic; the rehearsal record as a graded artifact
 - **Python dependency:** none
 - **Dataset / simulation:** each student's own poster and package
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: one line each — the claim your package is built to defend and the one delivery move you are still unsure of; 15–45 milestone kickoff + symposium rounds: the instructor presents the M12 conference-reflection-and-portfolio brief (present at the Expo on Tuesday, plus evaluate at least three colleagues' posters), then the MOCK SYMPOSIUM runs as the work block — stations go live in rotation, presenters deliver the 30-second and full pitches while everyone else works the visitor role card across the five question types; 45–50 revise, ledger, submit + Claim Ticket: lock the package, log the verification, submit M11 tonight, and write the ticket.
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: one line each — the claim your package is built to defend and the one delivery move you are still unsure of; 15–45 milestone kickoff + symposium rounds: the instructor presents the M12 conference-reflection-and-defense-revision brief (present at the Expo on Tuesday, evaluate at least three colleagues' posters, then revise the claim or its defense from what the public asks), then the MOCK SYMPOSIUM runs as the work block — stations go live in rotation, presenters deliver the 30-second and 3-minute layers while everyone else works the visitor role card across the five question types; 45–50 revise, ledger, submit + Claim Ticket: lock the package and rehearsal record, log the verification, submit M11 tonight, and write the ticket.
 - **Hands-on activity:** Stand your poster through live symposium rounds and visit others as a critical-but-kind stranger, working all five question types across your visits.
 - **Practice:** 📝 (embedded) the visitor role card: ask at least one method, one alternative-explanation, one so-what, one generalization, and one AI-use question across your visits.
 - **Discussion prompt:** Which classmate's station made you stay longer than you meant to, and what specifically kept you there?
-- **Project connection:** M11 submits tonight; the package you drilled today is exactly what you carry to the Expo (Tuesday), where M12 begins.
-- **Milestone developed:** M11 — Presentation Package (due TONIGHT) → kickoff M12
+- **Project connection:** M11 submits tonight; the package you drilled today is exactly what you carry to the Expo (Tuesday), where M12 begins its public test.
+- **Milestone developed:** M11 — Defense-ready presentation package, Book Milestone 10 v2 (worked + due); M12 — Conference reflection and defense revision, Book Milestone 10 v3 (kickoff)
 - **Milestone work time:** 30 min studio block (symposium rounds + bank revision)
 - **Milestone presentation/review:** the mock symposium IS the presentation/review
-- **Student prep:** M11 drafted from the week: three pitch layers, uncertainty statement, question bank.
+- **Student prep:** M11 drafted from the week: both pitch layers, question bank, ULN statement, rehearsal record.
 - **Student artifact:** Revised package + symposium performance + submitted M11
 - **Exit ticket:** Claim Ticket #34: the one delivery move I will do differently at the Expo because of today.
-- **Homework / next milestone:** Submit M11 tonight, 11:59 PM. Monday is final conference preparation; the Expo follows on Tuesday — carry a coding sheet and capture every question you are asked.
+- **Homework / next milestone:** Submit M11 tonight, 11:59 PM. Monday is the final dress rehearsal; the Expo follows on Tuesday — carry a coding sheet and capture every question you are asked.
 - **Instructor prep:** Room set as stations; visitor role cards printed; timer; M12 brief staged on Brightspace; confirm Expo logistics to communicate.
 - **Risks / contingency:** A poster's print is not ready → present full-screen today and trigger the backup print run so it is in hand before the Expo (Tuesday).
 
-## Week 13 — Conference week
+## Week 13 — Studio 10: Public test at the Expo + reflection
 
-### M35 — Mon 2026-11-16 (in-person) — Conference week: final preparation and the full dress rehearsal
+### M35 — Mon 2026-11-16 (in-person) — Public test week: the full dress rehearsal and the Expo capture plan
 
 - **Student Research Lead slot:** SRL slot 21 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: everything is 'basically ready' — so why do half of rehearsed talks still run over time and freeze on question two? Find the piece that is not actually ready.
-- **Driving question:** The Expo is tomorrow. Is every piece — poster, pitches, question bank, logistics, and the coding sheet you will carry — actually ready?
-- **Secondary questions:** Does the full walk land inside time? What must be locked before tomorrow: location, call time, materials, backup file? What will you capture at the Expo so Friday's reflection has real data?
-- **Inquiry:** all positions (communication)
-- **Claim PERMITTED:** "Readiness audited: rehearsed twice inside time, question bank drilled, logistics confirmed, coding sheet in hand."
-- **Claim NOT permitted:** "I'll wing it tomorrow" (rehearsal is the difference between nerves and panic).
-- **RDSS reading:** (no new reading — rehearsal day; bring your poster, all three pitches, and your question bank cold)
-- **Other material:** nb13 student notebook (conference prep) §1 readiness audit + visitor role card (Colab); project/conference/dress_rehearsal_protocol.md; project/conference/conference_reflection_protocol.md (the capture method); audience-coding sheet; M12 brief on Brightspace
-- **Provenance:** dress_rehearsal_protocol.md + conference_reflection_protocol.md capture method | conference unit | full-dress station simulation + readiness audit + Expo capture plan | fresh
-- **Concepts:** full-dress simulation; readiness auditing; the visitor role card; capturing audience questions as data (the coding sheet); logistics discipline; professional conference interaction
+- **SRL puzzle focus:** Puzzle: the colleague's poster took a public criticism that sounds devastating — read it twice: does it touch the evidence, or only the presentation? What would each verdict change?
+- **Driving question:** The Expo is tomorrow. Is every piece — poster, pitch layers, question bank, logistics, and the coding sheet you will carry — actually ready for the public test?
+- **Secondary questions:** Does the 3-minute walk land inside time? What must be locked before tomorrow: location, call time, materials, backup file? What will you capture at the Expo so Friday's reflection has real data — and how will you tell criticism of your evidence from criticism of your presentation?
+- **Inquiry:** all positions (communication — Studio 10 public test)
+- **Claim PERMITTED:** "Readiness audited: rehearsed twice inside time, question bank drilled, logistics confirmed, coding sheet in hand and pre-tagged."
+- **Claim NOT permitted:** "I'll wing it tomorrow" (rehearsal is the difference between nerves and panic); "that criticism destroyed the project" before sorting whether it touched the evidence at all.
+- **RDSS reading:** Revisit-only week (no new lesson): research-posters, poster-criticism, research-pitches, difficult-questions — bring the pitch layers and the bank cold.
+- **Other material:** nb13 student notebook (public test + reflection) §1 readiness audit + visitor role card (Colab); project/conference/dress_rehearsal_protocol.md; project/conference/conference_reflection_protocol.md (the capture method); audience-coding sheet; the colleague's criticized poster (unscored continuation); M12 brief on Brightspace
+- **Provenance:** dress_rehearsal_protocol.md + conference_reflection_protocol.md capture method + colleague continuation | S10 public-test unit | full-dress station simulation + readiness audit + Expo capture plan + evidence-vs-presentation sort | adapted
+- **Concepts:** full-dress simulation; readiness auditing; the visitor role card; capturing audience questions as data (the coding sheet, pre-tagged claims-vs-communication); the evidence-vs-presentation sort; logistics discipline; professional conference interaction
 - **Python dependency:** none
-- **Dataset / simulation:** each student's own complete conference package
-- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead surfaces the gap between 'basically ready' and actually ready — the room lists what freezes a rehearsed presenter on question two and names the piece that is usually not ready; 9–31 guided full dress-run rotation: two station rounds where posters go live in turn while everyone else plus the instructor rotate as conference visitors, exercising the short pitch, the full walk, hard questions from the bank, and the ULN moment under time; 31–43 human verification + instructor formalization: sign the readiness audit (rehearsed / drilled / logistics / materials), and the instructor formalizes the Expo capture plan — the coding sheet each presenter carries to log every question in the moment; 43–50 decision & defense: confirm call time and logistics, log the readiness decision in the ledger, and write the Claim Ticket.
-- **Hands-on activity:** Stand your poster through a full dress-run round, visit others with the five-type role card, and sign your readiness audit.
-- **Practice:** 📝 nb13 practice: fill the readiness audit honestly (an unchecked box is tonight's task, not a failure); write the one-line coding-sheet format you will use tomorrow.
+- **Dataset / simulation:** each student's own complete conference package (+ the reused colleague S10 artifact)
+- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead reads the persuasive-sounding public criticism of the colleague's poster (the unscored continuation beat) and the room sorts it — evidence or presentation — naming what each verdict would change in the claim or its defense; 9–31 guided full dress-run rotation: two station rounds where posters go live in turn while everyone else plus the instructor rotate as conference visitors, exercising the 30-second layer, the 3-minute walk, hard questions from the bank, and the ULN moment under time; 31–43 human verification + instructor formalization: sign the readiness audit (rehearsed / drilled / logistics / materials), and the instructor formalizes the Expo capture plan — the coding sheet each presenter carries to log every question in the moment, pre-tagged claims-vs-communication; 43–50 decision & defense: confirm call time and logistics, log the readiness decision in the ledger, and write the Claim Ticket.
+- **Hands-on activity:** Stand your poster through a full dress-run round, visit others with the five-type role card, sort one public criticism as evidence-or-presentation, and sign your readiness audit.
+- **Practice:** 📝 nb13 practice: fill the readiness audit honestly (an unchecked box is tonight's task, not a failure); write the one-line coding-sheet format you will use tomorrow, with its claims-vs-communication tag.
 - **Discussion prompt:** One thing you saw a classmate do in the dress run that you are stealing for the Expo tomorrow?
-- **Project connection:** M12 begins here: the readiness audit is the last gate before the Expo (Tuesday), and the coding sheet you leave with captures the audience data M12's reflection needs.
-- **Milestone developed:** M12 — Conference Reflection and Poster-Criticism Portfolio (kickoff; the Expo presentation is a graded component)
+- **Project connection:** M12 begins its public test: the readiness audit is the last gate before the Expo (Tuesday), and the pre-tagged coding sheet you leave with captures the audience data M12's reflection and defense revision need.
+- **Milestone developed:** M12 — Conference reflection and defense revision, Book Milestone 10 v3 (dev; readiness audit + Expo capture plan)
 - **Milestone work time:** 22 min (full dress-run rotation) + 4 min (readiness audit)
 - **Milestone presentation/review:** the full dress-run rotation IS the presentation/review
-- **Student prep:** M11 submitted; poster ready (printed or presentable); all three pitches and question bank cold.
-- **Student artifact:** Signed readiness audit + dress-run performance + prepared coding sheet
+- **Student prep:** M11 submitted; poster ready (printed or presentable); both pitch layers and question bank cold.
+- **Student artifact:** Signed readiness audit + dress-run performance + prepared pre-tagged coding sheet
 - **Exit ticket:** Claim Ticket #35: the one thing I will do differently at the Expo because of today's dress run.
 - **Homework / next milestone:** The Expo is tomorrow (Tuesday): present, and evaluate at least three colleagues' posters on the structured criticism forms. Carry your coding sheet and capture every question you are asked. There is no class Wednesday; Friday's studio is the structured reflection.
-- **Instructor prep:** Room set as stations; visitor role cards; audience-coding sheets and structured poster-criticism forms printed; confirm and communicate the Expo call time; M12 brief staged.
+- **Instructor prep:** Room set as stations; visitor role cards; audience-coding sheets and structured poster-criticism forms printed; the colleague criticism fragment staged (key private); confirm and communicate the Expo call time; M12 brief staged.
 - **Risks / contingency:** A poster's print failed → present full-screen in the dress run today and resolve the emergency print before the Expo (Tuesday); the backup plan is pre-arranged.
 
-### M36 — Fri 2026-11-20 (in-person) — Studio Friday — conference reflection: your Expo questions become data, M12 due
+### M36 — Fri 2026-11-20 (in-person) — Studio Friday — conference reflection: Expo questions become data, the defense revises, M12 due
 
-- **Driving question:** What did strangers' questions at the Expo reveal about your project that friends' questions never could?
-- **Secondary questions:** Which questions recurred? Was the most repeated one about your claims or your clarity? What new research idea did the Expo hand you, and how honest are your self-evaluation and your portfolio of the three posters you evaluated?
+- **Driving question:** What did strangers' questions at the Expo reveal about your project that friends' questions never could — and which revision does that evidence license: the claim, or its defense?
+- **Secondary questions:** Which questions recurred? Was the most repeated one about your claims or your clarity? Which revision does the tally license — the claim, the defense, or neither? How honest are your self-evaluation and your portfolio of the three posters you evaluated?
 - **Inquiry:** all positions (reflection, applied to your own project)
-- **Claim PERMITTED:** "The most repeated question at my poster was about my [claims / communication] — the count says so, not my mood."
+- **Claim PERMITTED:** "The most repeated question at my poster was about my [claims / communication] — the count says so, not my mood — and here is the revision it licenses."
 - **Claim NOT permitted:** "People liked it, so my findings held up" (applause measures your communication, not the truth of your claims).
 - **RDSS reading:** (no new reading — studio Friday; bring your Expo coding sheet and your three completed poster-criticism forms)
-- **Other material:** nb13 student notebook (conference prep) §2–3 reflection tally (Colab); project/conference/conference_reflection_protocol.md; M12 due tonight; M13 brief + the anonymized replication packages on Brightspace
-- **Provenance:** conference_reflection_protocol.md + fresh studio protocol | conference unit | audience-question coding + criticism portfolio as the studio work block + M13 exchange kickoff | fresh
-- **Concepts:** feedback as data; the claims-vs-communication split; recurring-question analysis; misunderstandings and weaknesses exposed; self-evaluation; the poster-criticism portfolio (three posters, structured); the anonymized replication-package exchange
+- **Other material:** week13 quiz; nb13 student notebook (public test + reflection) §2–3 reflection tally (Colab); project/conference/conference_reflection_protocol.md; M12 due tonight; M13 brief + the anonymized replication packages on Brightspace
+- **Provenance:** conference_reflection_protocol.md + crosswalk M12 (adapt-and-defend revisit + release-next-cycle practice) | S10 reflection unit | audience-question coding + defense revision + criticism portfolio + M13 exchange kickoff | adapted
+- **Concepts:** feedback as data; the claims-vs-communication split; recurring-question analysis; the licensed revision (claim vs defense vs neither); self-evaluation; the poster-criticism portfolio (three posters, structured); the release-practice note; the anonymized replication-package exchange
 - **Python dependency:** none (a provided tally cell if wanted)
 - **Dataset / simulation:** each student's collected Expo questions + the three posters they evaluated
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: the single most surprising moment at your poster, in one line each; 15–45 milestone kickoff + reflection sprint: the instructor kicks off M13 by handing out the ANONYMIZED replication packages for the Thanksgiving async exchange, then the reflection runs as the work block — code every Expo question into the tally (type, target: claims vs communication, recurrence), find your pattern, and assemble the criticism portfolio from the three posters you evaluated; 45–50 revise, ledger, submit + Claim Ticket: write the honest reflection paragraph, submit M12 tonight, and write the ticket.
-- **Hands-on activity:** Code your Expo questions like data, find the recurring pattern, and assemble your three-poster criticism portfolio.
-- **Practice:** 📝 nb13 practice: classify six received questions as claims-signal, communication-signal, or noise; name the one that recurred and what its repetition evidences.
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: the single most surprising moment at your poster, in one line each; 15–45 milestone kickoff + reflection sprint: the instructor kicks off M13 by handing out the ANONYMIZED replication packages for the Thanksgiving async exchange (with the privacy and no-author-help rules), then the reflection runs as the work block — code every Expo question into the tally (type, target: claims vs communication, recurrence), find your pattern, decide the revision the evidence licenses to the claim or its defense (poster edition v3, publicly tested), assemble the criticism portfolio from the three posters you evaluated, and jot the release-practice note on what the public test taught you about release readiness; 45–50 revise, ledger, submit + Claim Ticket: write the honest reflection paragraph, submit M12 tonight, and write the ticket.
+- **Hands-on activity:** Code your Expo questions like data, find the recurring pattern, decide the licensed revision to your claim or its defense, and assemble your three-poster criticism portfolio.
+- **Practice:** 📝 nb13 practice: classify six received questions as claims-signal, communication-signal, or noise; name the one that recurred and the revision (if any) its repetition licenses.
 - **Discussion prompt:** What question did you get at the Expo that none of our hot seats predicted, and why did we miss it?
-- **Project connection:** M12 submits tonight (reflection + portfolio, with the Expo presentation graded); M13 launches now — over break you reproduce and red-team a classmate's anonymized package.
-- **Milestone developed:** M12 — Conference Reflection and Poster-Criticism Portfolio (due TONIGHT) → kickoff M13
-- **Milestone work time:** 30 min studio block (coding + portfolio assembly)
+- **Project connection:** M12 submits tonight (reflection + defense revision + portfolio, with the Expo presentation graded); M13 launches now — over break you cold-run and red-team a classmate's anonymized package.
+- **Milestone developed:** M12 — Conference reflection and defense revision, Book Milestone 10 v3 (worked + due); M13 — Replication and red-team report, Book Milestone 11 practice (kickoff; anonymized packages exchanged)
+- **Milestone work time:** 30 min studio block (coding + revision decision + portfolio assembly)
 - **Milestone presentation/review:** story round + partner tally-pattern read
 - **Student prep:** Expo presented; every question captured on the coding sheet; three poster-criticism forms completed at the Expo.
-- **Student artifact:** Coded question tally + criticism portfolio + reflection paragraph (submitted as M12) + assigned replication package
+- **Student artifact:** Coded question tally + licensed-revision decision + criticism portfolio + release-practice note (submitted as M12) + assigned replication package
 - **Exit ticket:** Claim Ticket #36: the most repeated question at my poster, and whether it challenged my evidence or my clarity.
-- **Homework / next milestone:** Submit M12 tonight, 11:59 PM. Monday is asynchronous (Thanksgiving week): the replication and red-team module on the anonymized package assigned today; the report is due Sunday night.
-- **Instructor prep:** Own Expo observation notes per student; tally template checked; anonymize and assign the replication packages; M13 brief staged on Brightspace.
+- **Homework / next milestone:** Submit M12 tonight, 11:59 PM. Monday is asynchronous (Thanksgiving week): the peer cold-run and red-team module on the anonymized package assigned today; the report is due Sunday night.
+- **Instructor prep:** Own Expo observation notes per student; tally template checked; anonymize, clear, and assign the replication packages; M13 brief staged on Brightspace.
 - **Risks / contingency:** A student missed the Expo for a documented reason → the make-up presentation path runs and the reflection uses dress-run data meanwhile. Post-conference deflation → the story round names it as every researcher's post-conference dip.
 
-## Week 14 — Thanksgiving async: replication and red-team
+## Week 14 — Studio 11: Async peer cold run + red-team
 
-### M37 — Mon 2026-11-23 (async-online) — ASYNC — Replication and red-team: rebuild a stranger's findings, then audit them
+### M37 — Mon 2026-11-23 (async-online) — ASYNC — Peer cold run and red-team: rebuild a stranger's findings, then hand back the repairs
 
-- **Driving question:** Hand yourself a classmate's package: can you rebuild the headline number — and where does it quietly not hold?
-- **Secondary questions:** Does the notebook run end to end? Can you trace the data and code lineage? Do the poster's claims match what the computation actually shows? What hidden assumptions and AI-related weaknesses hide behind an illusion of completeness?
-- **Inquiry:** all positions (replication + red-team, applied to a peer's project)
-- **Claim PERMITTED:** "I reproduced the headline number from the package alone, and here are the three weaknesses I ranked by how much they threaten the claim."
-- **Claim NOT permitted:** "It ran, so it's fine" (a clean run is not agreement between the poster's claims and the computational evidence).
-- **RDSS reading:** (no new reading — self-contained async module; the reproducibility-audit protocol stands in for the reading)
-- **Other material:** nb14 student notebook — fully self-contained async module (Colab); project/final_dossier/reproducibility_audit_protocol.md; the assigned anonymized replication package; GenAI Studio 'Reproducibility Auditor' role (genai.rcac.purdue.edu); async discussion board; M13 due Sunday night; M14 brief posted on Brightspace
-- **Provenance:** reproducibility_audit_protocol.md + GenAI Studio Reproducibility Auditor touchpoint | replication + red-team unit | self-contained reproduce-and-audit module with a recommended GenAI Studio role pass | fresh
-- **Concepts:** AI-assisted replication; restart-and-run-all execution; data and code lineage; alternative specifications; hidden assumptions; claims-vs-computation agreement; AI-related weaknesses; the illusion of completeness; prioritized (triaged) recommendations
+- **Driving question:** Hand yourself a classmate's package: can you rebuild the headline number and its uncertainty from the materials alone — and where does it quietly not hold?
+- **Secondary questions:** Does the package run in a recreated environment? Can you trace the data and code lineage? Do the claims match what the computation actually shows? Which questions did you have to ask the author — and why is each one a missing line of documentation?
+- **Inquiry:** all positions (Studio 11 practice — cold run + red-team of a peer's project)
+- **Claim PERMITTED:** "I cold-ran the package without the author's help, reproduced the headline number and its uncertainty, and here are the three weaknesses I ranked by how much they threaten the claim."
+- **Claim NOT permitted:** "It ran, so it's fine" (a clean run is not agreement between claims and computation) — and "independently reproduced" said of any run the author assisted.
+- **RDSS reading:** Required EDR|AI: replication-reproduction (first read) — the module is self-contained; this is Studio 11 PRACTICE, preceding your own package's version 1.
+- **Other material:** nb14 student notebook — fully self-contained async module (Colab); project/final_dossier/reproducibility_audit_protocol.md; the assigned anonymized replication package + the shared calibration package; GenAI Studio 'Reproducibility Auditor' role (genai.rcac.purdue.edu); async discussion board; M13 due Sunday night; M14 brief posted on Brightspace
+- **Provenance:** reproducibility_audit_protocol.md + GenAI Studio Reproducibility Auditor touchpoint + crosswalk M13 (reproduce-and-package practice) | S11 practice unit | privacy intake + cold reproduction + red-team + repair handoff | adapted
+- **Concepts:** the peer cold run (practice, not checkpoint — precedes your package's v1); the privacy/intake check; environment recreation; restart-and-run-all; data and code lineage; reproducing the uncertainty, not only the point estimate; reproduction vs independent verification; hidden assumptions and AI-related weaknesses; the undocumented-question log; the repair handoff (triaged by threat to the claim)
 - **Python dependency:** pandas/numpy (execute the peer's package end to end); scikit-learn if the package uses it
-- **Dataset / simulation:** a classmate's anonymized replication package
-- **50-minute dynamic:** ASYNC (~50 min self-paced, no live meeting): 0–6 module orientation + open the assigned anonymized package; 6–20 cold reproduction — restart-and-run-all, trace the data and code lineage, and try to reproduce the headline number, logging every break; 20–32 red-team audit — check the poster's claims against what the computation actually shows, probe one alternative specification, and surface the hidden assumptions and AI-related weaknesses; 32–42 REQUIRED GenAI Studio pass — run the package summary through the 'Reproducibility Auditor' role, then verify its findings yourself and log the pass in your AI-use ledger (the role proposes, you confirm); 42–48 write the prioritized recommendations, ranked by threat to the claim, not by ease of fixing; 48–50 (async board) post the single weakness you ranked most threatening and reply to one classmate.
-- **Hands-on activity:** Reproduce a classmate's anonymized headline number, red-team it for hidden assumptions and AI weaknesses, and run the recommended GenAI Studio Reproducibility Auditor pass.
+- **Dataset / simulation:** a classmate's anonymized replication package (+ the shared calibration package as the worked example)
+- **50-minute dynamic:** ASYNC (~50 min self-paced, no live meeting): 0–6 module orientation + privacy/intake check — confirm the assigned package is cleared and identity-stripped, then skim the shared calibration package as the worked example of what a good handoff looks like; 6–20 cold reproduction — recreate the environment from its record, restart-and-run-all, trace the data and code lineage, and try to rebuild the headline number AND its uncertainty from the materials alone, logging every break and every question you would have to ask the author; 20–32 red-team audit — check the claims against what the computation actually shows, probe one alternative specification, and surface the hidden assumptions and AI-related weaknesses behind the illusion of completeness; 32–42 REQUIRED GenAI Studio pass — run the package summary through the 'Reproducibility Auditor' role, then verify its findings yourself and log the pass in your AI Research Ledger (the role proposes, you confirm — and a run the author assisted is never 'independent'); 42–48 write the repair handoff — prioritized recommendations ranked by threat to the claim, not by ease of fixing, plus the undocumented-question log the author will need next week; 48–50 (async board) post the single weakness you ranked most threatening and reply to one classmate.
+- **Hands-on activity:** Cold-run a classmate's anonymized package without author help, reproduce the headline number and its uncertainty, red-team it, and write the repair handoff the author will work from.
 - **Practice:** 📝 nb14 practice: for one sample package, list three ways a clean run can still hide a broken claim, then rank them by threat.
 - **Discussion prompt:** (async board) The weakness you ranked most threatening in your assigned package: post it, and reply to one classmate with a check that would confirm or dissolve theirs.
-- **Project connection:** M13 is a full red-team report on a peer's work — the skill you will want turned on your own dossier next; M14 (your research note) is posted today to read over break.
-- **Milestone developed:** M13 — Replication and Red-Team Report (due Sunday night)
+- **Project connection:** M13 is Studio 11 practice on a peer's work — the cold run your own package faces next week, when M14 turns the repair handoff you WRITE into the repair handoff you RECEIVE.
+- **Milestone developed:** M13 — Replication and red-team report, Book Milestone 11 practice — peer cold-run preceding v1 (worked + due Sunday night); M14 — Research note v1 and reusable package, Book Milestone 9 v2 + Book Milestone 11 v1 (kickoff; brief posted with the module)
 - **Milestone work time:** the whole module is milestone work (~50 min self-paced)
 - **Milestone presentation/review:** async board: most-threatening-weakness post + one reply
 - **Student prep:** M12 submitted; the assigned anonymized package downloaded; GenAI Studio access confirmed.
-- **Student artifact:** Reproduction log + red-team audit + GenAI Studio Auditor pass (verified, ledgered) + prioritized recommendations
+- **Student artifact:** Cold-run reproduction log (number + uncertainty) + red-team audit + GenAI Studio Auditor pass (verified, ledgered) + repair handoff with undocumented-question log
 - **Exit ticket:** (embedded) Claim Ticket #37: the weakness that most threatens my assigned package's headline claim, and the check that would settle it.
-- **Homework / next milestone:** Happy Thanksgiving. Submit M13 by Sunday night, 11:59 PM. Class resumes in person next Monday with the research-note unit (M14, posted today).
-- **Instructor prep:** Anonymize and assign packages so no one audits their own; verify each package runs unattended; confirm the GenAI Studio Reproducibility Auditor role is live; seed the discussion board; holiday-proof the Sunday deadline in Brightspace.
-- **Risks / contingency:** Holiday-week attrition → the module is doable in one sitting, the deadline is Sunday, and a mid-week progress-checkpoint reminder goes out. A package will not run at all → that failure, documented with the exact break, IS valid red-team evidence.
+- **Homework / next milestone:** Happy Thanksgiving. Submit M13 by Sunday night, 11:59 PM. Class resumes in person next Monday with the note-revision unit (M14, posted today): your Expo tally and the handoff you receive become the evidence for note v1.
+- **Instructor prep:** Anonymize and assign packages so no one audits their own; verify each package runs unattended; confirm the GenAI Studio Reproducibility Auditor role is live; stage the shared calibration package; seed the discussion board; holiday-proof the Sunday deadline in Brightspace.
+- **Risks / contingency:** Holiday-week attrition → the module is doable in one sitting, the deadline is Sunday, and a mid-week progress-checkpoint reminder goes out. A package will not run at all → that failure, documented with the exact break, IS valid cold-run evidence and belongs in the handoff.
 
-## Week 15 — From poster to research note
+## Week 15 — Studios 9 + 11: Research note v1 + reusable package
 
-### M38 — Mon 2026-11-30 (in-person) — From poster to research note I: paper logic, and the problem–gap–question spine
+### M38 — Mon 2026-11-30 (in-person) — Note v1 I: adjudicate the public test and the cold run, then revise the bounded note
 
 - **Student Research Lead slot:** SRL slot 22 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: the poster said it in six boxes; the research note needs six pages. What does the note have to add that the poster was allowed to leave out?
-- **Driving question:** Your poster said it in six boxes. What does a research note have to add that the poster was allowed to leave out?
-- **Secondary questions:** How does paper logic differ from poster logic? How do you build the problem–gap–question spine in prose? What does honest literature synthesis look like, and how dense should the evidence be?
-- **Inquiry:** all positions (communication)
-- **Claim PERMITTED:** "My note earns each claim in prose — problem, gap, question, design, evidence — with every source real and retrieved."
-- **Claim NOT permitted:** "As everyone knows…" standing in for a literature synthesis that cites nothing a reader could retrieve.
-- **RDSS reading:** (no new reading — research-note unit; bring your poster, claim ledger, and evidence map)
-- **Other material:** nb15 student notebook (poster to research note) §1–2 (Colab); project/final_dossier/research_brief_template.md (the compression cousin of the note); M14 brief on Brightspace
-- **Provenance:** research_brief_template.md + fresh research-note method | research-note unit | poster-vs-paper logic + problem–gap–question spine + synthesis discipline | fresh
-- **Concepts:** poster logic vs paper logic; the problem–gap–question spine; literature synthesis (real, retrievable sources only); explaining the research design in prose; evidence density
-- **Python dependency:** none
-- **Dataset / simulation:** each student's own project and its verified sources
-- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead puts a poster box next to the paragraph it becomes and the room names what the paragraph must add — the reasoning the box only implied; 9–31 guided AI research-partner investigation: draft your problem–gap–question spine and a first literature-synthesis paragraph with AI, then make AI list every citation it produced so you can mark which ones you have actually retrieved and confirmed exist; 31–43 human verification + instructor formalization: you verify each source yourself before it stays in the note (AI proposes, you confirm the source is real), and the instructor formalizes paper logic, the problem–gap–question spine, and evidence density; 43–50 decision & defense: log the sourcing decisions and their verification in the ledger and write the Claim Ticket.
-- **Hands-on activity:** Draft the problem–gap–question spine and one synthesis paragraph, and verify every source in it is real and retrievable before it stays.
-- **Practice:** 📝 nb15 practice: turn one poster box into a paragraph that adds the reasoning the box left implicit; for one synthesis sentence, retrieve and confirm the source or cut the sentence.
-- **Discussion prompt:** Where did a classmate's note add reasoning the poster only gestured at, and where did it just restate the box in longer words?
-- **Project connection:** M14 (research-note draft + reproducibility capsule) begins: the spine and synthesis are its opening sections.
-- **Milestone developed:** M14 — Research-Note Draft and Reproducibility Capsule
-- **Milestone work time:** 15 min (spine + synthesis drafting)
-- **Milestone presentation/review:** none (lecture day; drafting studio sits inside the lab block)
-- **Student prep:** Poster and claim ledger in hand; source list ready to verify.
-- **Student artifact:** Problem–gap–question spine + one verified synthesis paragraph
-- **Exit ticket:** Claim Ticket #38: the one thing my note must argue that my poster was allowed to only imply.
-- **Homework / next milestone:** Extend the draft. Lecture 2 covers the results hierarchy, limitations, and using AI as a writing critic without surrendering authorship.
-- **Instructor prep:** A poster-box-to-paragraph example pair; a real-vs-fake citation demonstration; M14 brief staged on Brightspace.
-- **Risks / contingency:** A student has thin literature → the synthesis narrows to the two or three sources genuinely adjacent to the gap, each verified, rather than padding with unretrieved names.
+- **SRL puzzle focus:** Puzzle: a public criticism sounds serious — repeated, confident, specific — yet changes nothing the claim licenses. What is the honest response that is neither capitulation nor dismissal?
+- **Driving question:** The public asked, and a stranger ran your code. Which criticisms change your claim, which change only its defense — and what does the revised note now say?
+- **Secondary questions:** How do you adjudicate feedback without capitulating to it? What goes in the note change log? What does claim-evidence table v2 add? Why do the course's 'research note v1' and the book's Milestone 9 'version 2' name the same artifact?
+- **Inquiry:** all positions (communication — Studio 9 revisit)
+- **Claim PERMITTED:** "I adjudicated every captured criticism and cold-run finding: this one changed my claim, this one changed my defense, this one changed nothing — and my change log says why."
+- **Claim NOT permitted:** "I addressed all feedback" meaning every criticism produced a revision (adjudication is judgment, not compliance — and un-adjudicated criticism is not addressed either).
+- **RDSS reading:** Revisits for the note revision: results-to-claims, claim-evidence-tables, poster-to-note, ai-disclosure. No new lesson today — the evidence for revision is your Expo tally and the cold-run handoff you received.
+- **Other material:** nb15 student notebook (note revision + reusable package) §1–2 (Colab); project/final_dossier/research_brief_template.md; your M12 tally + the M13 repair handoff you received; M14 brief on Brightspace
+- **Provenance:** crosswalk M14 (write-bound-disclose revisit) + conference_reflection_protocol.md outputs | S9 revisit unit | feedback adjudication + note change log + claim-evidence table v2 + naming bridge | fresh
+- **Concepts:** feedback adjudication (accept, rebut, or bound); the note change log; claim-evidence table v2; the bounded-note revision; the naming bridge (course research note v1 = Book Milestone 9 version 2, the post-conference bounded note); criticism as evidence about the claim vs about its communication
+- **Python dependency:** none (verified outputs consulted, not re-run)
+- **Dataset / simulation:** each student's own Expo tally, received cold-run handoff, and note v0
+- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead reads one serious-sounding public criticism that does not change the claim license and the room drafts the honest response that neither capitulates nor dismisses; 9–31 guided AI research-partner investigation: adjudicate your own captured feedback with AI as devil's advocate — for each Expo question and each cold-run finding, decide accept, rebut, or bound, then have AI argue the other side of your two hardest calls before you commit; 31–43 human verification + instructor formalization: you verify that every accepted change traces to evidence and every rebuttal is argued, not felt (AI proposes, you decide), and the instructor formalizes the change log, claim-evidence table v2, and the naming bridge — the note you revise to course v1 is the book's Milestone 9 version 2; 43–50 decision & defense: log the adjudication decisions and their verification in the ledger and write the Claim Ticket.
+- **Hands-on activity:** Adjudicate every captured criticism and cold-run finding into accept / rebut / bound, then open the note change log and claim-evidence table v2.
+- **Practice:** 📝 nb15 practice: classify four criticisms as claim-changing, defense-changing, or non-binding, and write the change-log line for one of each.
+- **Discussion prompt:** Which criticism did a classmate rebut that you would have accepted, and whose adjudication had the better evidence?
+- **Project connection:** M14's note half advances: the adjudication table and change log become research note v1 (Book Milestone 9 v2), due at Friday's studio.
+- **Milestone developed:** M14 — Research note v1 and reusable package, Book Milestone 9 v2 (dev; feedback adjudication + note change log)
+- **Milestone work time:** 15 min (adjudication + change-log drafting)
+- **Milestone presentation/review:** none (lecture day; the adjudication runs inside the investigation block)
+- **Student prep:** M13 submitted; Expo tally and the repair handoff you received in hand; note v0 open.
+- **Student artifact:** Adjudication table (accept / rebut / bound) + note change log opened + claim-evidence table v2 started
+- **Exit ticket:** Claim Ticket #38: the one criticism that changed my claim — or the hardest one I rebutted, and on what evidence.
+- **Homework / next milestone:** Extend the revision toward note v1. Lecture 2 turns to the package: repairing what the cold run exposed and assembling reusable package v1.
+- **Instructor prep:** Route each student's received repair handoff before class; a worked accept/rebut/bound example triple; M14 brief staged on Brightspace.
+- **Risks / contingency:** A student received a harsh or thin cold-run report → the adjudication frame treats both identically (findings are evidence, not verdicts) and the instructor moderates calibration; a report that arrived late → adjudicate the Expo tally today and the handoff at Wednesday's lab.
 
-### M39 — Wed 2026-12-02 (in-person) — From poster to research note II: results hierarchy, limitations, and AI as critic (not author)
+### M39 — Wed 2026-12-02 (in-person) — Package v1: repair what the cold run exposed and assemble the reusable package
 
 - **Student Research Lead slot:** SRL slot 23 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: an AI rewrite makes your discussion sound more confident and more publishable — and quietly upgrades one claim past its evidence. Which sentence, and how would a reader catch it?
-- **Driving question:** Can you rank your results, own your limitations, and let an AI sharpen your prose — without letting it upgrade a single claim or take the pen?
-- **Secondary questions:** What earns the top of the results hierarchy? How do limitations and implications stay sized to the evidence? What does a reproducibility capsule contain? Where is the line between AI as critic and AI as author?
-- **Inquiry:** all positions (communication)
-- **Claim PERMITTED:** "Every sentence in my discussion is sized to my evidence, and every AI edit I kept, I verified and own."
-- **Claim NOT permitted:** "The AI improved my conclusion" when the improvement quietly upgraded a claim past its evidence (a sharper sentence is not a bigger finding).
-- **RDSS reading:** (no new reading — research-note unit; bring your draft and your reproducibility-capsule stub)
-- **Other material:** nb15 student notebook (poster to research note) §3–4 reproducibility capsule (Colab); project/final_dossier/reproducibility_audit_protocol.md (the capsule anatomy); the course AI-use ledger; M14 due Friday; M15 brief on Brightspace
-- **Provenance:** reproducibility_audit_protocol.md capsule anatomy + fresh discussion-craft method | research-note unit | results hierarchy + limitations discipline + AI-critic-not-author boundary | fresh
-- **Concepts:** the results hierarchy; limitations and implications sized to evidence; avoiding inflated contributions; AI as a writing critic without surrendering authorship; the reproducibility capsule (runnable notebook, provenance, seed, decision log, AI-use ledger)
-- **Python dependency:** own notebook hygiene (restart-and-run-all for the capsule)
-- **Dataset / simulation:** each student's own draft and project package
-- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the lead shows an AI rewrite that sounds more publishable and upgrades one claim past its evidence — the room finds the sentence; 7–30 intensive applied AI laboratory: order your results into a hierarchy, draft limitations and implications sized to the evidence, then run your discussion through AI as a critic — keep the edits that sharpen, reject the ones that inflate, and assemble your reproducibility capsule with restart-and-run-all; 30–38 peer defense + adversarial questioning: a partner probes your discussion for any inflated contribution and any AI edit you cannot defend as your own; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer + ledger + Claim Ticket: log which AI edits you kept, changed, or rejected and why, and write the ticket.
-- **Hands-on activity:** Use AI to critique your discussion section, keep only the edits that sharpen without inflating, and pass restart-and-run-all on your reproducibility capsule.
-- **Practice:** 📝 nb15 practice: take three AI-suggested edits to one paragraph — accept the one that clarifies, reject the two that upgrade the claim, and say why for each.
-- **Discussion prompt:** What is the difference between an AI edit that makes your writing better and one that makes your claim bigger, and how did you tell them apart today?
-- **Project connection:** M14 nears completion: the note plus a runnable reproducibility capsule are due at Friday's studio.
-- **Milestone developed:** M14 — Research-Note Draft and Reproducibility Capsule
-- **Milestone work time:** 15 min (results/limitations drafting) + capsule restart-and-run-all
-- **Milestone presentation/review:** partner discussion-probe rounds
-- **Student prep:** Draft extended from Lecture 1; project notebook runnable.
-- **Student artifact:** Ranked results + limitations/implications + a reproducibility capsule that passes restart-and-run-all + AI-edit decision log
-- **Exit ticket:** Claim Ticket #39: one AI edit I rejected because it would have made my claim bigger than my evidence.
-- **Homework / next milestone:** Finish the research note and the reproducibility capsule for Friday's studio, where M14 is due and M15 (final chapter + AI-management portfolio) kicks off.
-- **Instructor prep:** An AI-rewrite-with-a-hidden-upgrade example; the reproducibility-capsule checklist; M15 brief staged on Brightspace.
-- **Risks / contingency:** A capsule fails restart-and-run-all in class → the break is logged as capsule evidence and the fix routes to Friday's studio consults.
+- **SRL puzzle focus:** Puzzle: the colleague's package ran for its cold runner — after one question to the author. One question. Why does that single question demote the run, and which missing line caused it?
+- **Driving question:** A stranger ran your code and had to ask you questions. Can you repair the package so the next stranger never has to?
+- **Secondary questions:** What belongs in the README and the data-access recipe? What makes an environment record sufficient? Which licence and permissions travel with the package? What does the second clean run prove that the first could not?
+- **Inquiry:** all positions (reproducibility — Studio 11 checkpoint)
+- **Claim PERMITTED:** "My package carries data or its access recipe, code, environment, README, and licence — and a second clean run passed with no author question."
+- **Claim NOT permitted:** "It runs for me" — or a package whose cold run needed the author in the room (a run the author assisted is never independent).
+- **RDSS reading:** Required EDR|AI: research-packages (first read); replication-reproduction revisited. Bring the repair handoff you received.
+- **Other material:** nb15 student notebook (note revision + reusable package) §3–4 (Colab); project/final_dossier/reproducibility_audit_protocol.md (package anatomy); the colleague's cold-run fragment (unscored continuation); M14 due Friday; M15 brief on Brightspace
+- **Provenance:** reproducibility_audit_protocol.md package anatomy + crosswalk M14 (reproduce-and-package checkpoint) + colleague continuation | S11 checkpoint unit | cold-run repair + package assembly + second clean run | adapted
+- **Concepts:** the reusable package (data or its access recipe, code, environment, README, licence); repair as documentation (every author question is a missing line); the second clean run; permissions set what can be shared; solo-proxy honesty ('external cold run pending'); package v1 = Book Milestone 11 version 1
+- **Python dependency:** own package repair + restart-and-run-all (the second clean run)
+- **Dataset / simulation:** each student's own package and received handoff (+ the reused colleague S11 artifact)
+- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the lead shows the colleague's cold run that needed exactly one author question (the unscored continuation beat) and the room finds the missing documentation line that caused it; 7–30 intensive applied AI laboratory: repair your own package from the handoff you received — fix what the cold run exposed, write the README and access recipe with AI drafting and you verifying every instruction against the actual files, complete the environment record and the licence/permissions line — then run the second clean run with restart-and-run-all; 30–38 peer defense + adversarial questioning: a partner probes your package choices — why this licence, why this access recipe, what a stranger still cannot do without you; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer + ledger + Claim Ticket: log the repair decisions and the second-run result, and write the ticket.
+- **Hands-on activity:** Repair your package from the cold-run handoff, assemble the five package components, and pass a second clean run.
+- **Practice:** 📝 nb15 practice: convert three author-questions from a cold-run log into the exact README lines that would have prevented them.
+- **Discussion prompt:** Which README line in your package did you only write because a stranger stumbled, and why did you not see the gap yourself?
+- **Project connection:** M14's package half advances: reusable package v1 (Book Milestone 11 v1) joins note v1 for Friday's studio, where M14 is due.
+- **Milestone developed:** M14 — Research note v1 and reusable package, Book Milestone 11 v1 (dev; cold-run repair + package assembly)
+- **Milestone work time:** 15 min (repair + assembly) + the second clean run
+- **Milestone presentation/review:** partner package-probe rounds
+- **Student prep:** Adjudication and change log from Lecture 1; the repair handoff you received in hand; project notebook runnable.
+- **Student artifact:** Repaired package (data or access recipe, code, environment, README, licence) + second-clean-run log
+- **Exit ticket:** Claim Ticket #39: the documentation line I added that I am most sure the next stranger needs.
+- **Homework / next milestone:** Finish note v1 and package v1 for Friday's studio, where M14 is due and M15 (release audit, final chapter, and AI-management portfolio) kicks off.
+- **Instructor prep:** Stage the colleague cold-run fragment (reused S11 artifact, key private); the package-anatomy checklist; M15 brief staged on Brightspace.
+- **Risks / contingency:** The second clean run fails in class → the break is logged as package evidence and the fix routes to Friday's studio consults; an access-restricted dataset → the access recipe replaces the data and says exactly who can obtain it and how.
 
-### M40 — Fri 2026-12-04 (in-person) — Studio Friday — research-note table read: every note sharpened, M14 due, M15 launched
+### M40 — Fri 2026-12-04 (in-person) — Studio Friday — table read and package check: note v1 + package v1, M14 due, M15 launched
 
-- **Driving question:** Does your research note do justice to the semester — and is its reproducibility capsule one a stranger could actually run?
-- **Secondary questions:** Where does the note still overclaim, underexplain, or lose the reader? Does the capsule pass a partner's restart-and-run-all? What does the final chapter and AI-management portfolio (M15) ask of you next week?
-- **Inquiry:** all positions (communication)
-- **Claim PERMITTED:** "Every claim in my note traces to my ledger, and my capsule ran clean on a machine that was not mine."
+- **Driving question:** Does the revised note do justice to the public test — and is the package one a stranger could run with no one to ask?
+- **Secondary questions:** Where does the note still overclaim, underexplain, or lose the reader? Does the package pass a partner's cold check? What does M15 — the release audit, final chapter, and AI-management portfolio — ask of you next week?
+- **Inquiry:** all positions (communication + reproducibility — studio)
+- **Claim PERMITTED:** "Every claim in note v1 traces to my ledger, and my package ran for a partner who had no one to ask."
 - **Claim NOT permitted:** "It runs for me" offered as reproducibility no stranger ever exercised.
-- **RDSS reading:** (no new reading — studio Friday; bring your polished note and runnable capsule)
-- **Other material:** nb15 student notebook (poster to research note) §5 table read (Colab); project/final_dossier/research_brief_template.md (the table-read margin-note procedure); M14 due tonight; M15 brief on Brightspace
-- **Provenance:** research_brief_template.md table-read procedure + reproducibility_audit_protocol.md | research-note unit | note table read + partner capsule run as the studio work block + M15 kickoff + defense-order draw | fresh
-- **Concepts:** the table read with two-question margin notes; ledger-traceable prose; a partner reproducibility check on the capsule; avoiding inflated contributions; the defense-order draw
-- **Python dependency:** partner runs your reproducibility capsule (restart-and-run-all)
-- **Dataset / simulation:** each student's own note and capsule
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: your note's sharpest sentence and the claim you are least sure survives, one line each; 15–45 milestone kickoff + AI-supported sprint: the instructor presents the M15 brief (final research chapter + AI-management portfolio, staged for the multi-agent workflow next week) and draws the Evidence-Defense order for next week, then the TABLE READ runs as the work block — each note passes left, three minutes per read, a two-question margin note (sharpest sentence, weakest claim) on each, full rotation; 45–50 revise, ledger, submit + Claim Ticket: revise from the margin notes, submit M14 tonight, and write the ticket.
-- **Hands-on activity:** Run the full-rotation table read with margin notes, and reproduce a partner's capsule cold before signing that it ran.
+- **RDSS reading:** (no new reading — studio Friday; bring your revised note and assembled package)
+- **Other material:** week15 quiz; nb15 student notebook (note revision + reusable package) §5 table read (Colab); project/final_dossier/research_brief_template.md (the table-read margin-note procedure); M14 due tonight; M15 brief on Brightspace
+- **Provenance:** research_brief_template.md table-read procedure + reproducibility_audit_protocol.md | S9+S11 closing unit | note table read + partner cold check as the studio work block + M15 kickoff + defense-order draw | adapted
+- **Concepts:** the table read with two-question margin notes; ledger-traceable prose; the partner cold check on the package; avoiding inflated contributions; the defense-order draw
+- **Python dependency:** partner opens your package cold (README first, restart-and-run-all)
+- **Dataset / simulation:** each student's own note v1 and package v1
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: your note's sharpest revision and the claim you are least sure survives, one line each; 15–45 milestone kickoff + table read: the instructor presents the M15 brief (release audit, final chapter, and AI-management portfolio — TERMINAL, due next Friday) and draws the Evidence-Defense order for next week, then the TABLE READ runs as the work block — each note passes left, three minutes per read, a two-question margin note (sharpest revision, weakest claim) on each, full rotation — while package pairs run a quick cold check (open the README, follow it, note the first question you would have to ask the author); 45–50 revise, ledger, submit + Claim Ticket: revise from the margin notes, submit M14 tonight, and write the ticket.
+- **Hands-on activity:** Run the full-rotation table read with margin notes, and cold-check a partner's package before signing that it ran with no author question.
 - **Practice:** 📝 nb15 practice: for one sample note sentence, trace it to a ledger row or catch that it cannot be traced.
 - **Discussion prompt:** Which classmate's note taught you a compression or framing move, and what exactly was it?
-- **Project connection:** M14 submits tonight; the note and capsule become the backbone the final chapter (M15) expands next week.
-- **Milestone developed:** M14 — Research-Note Draft and Reproducibility Capsule (due TONIGHT) → kickoff M15
-- **Milestone work time:** 30 min studio block (table read + capsule exchange + revision)
-- **Milestone presentation/review:** table-read margin notes (all-read-all) + partner capsule run
-- **Student prep:** Full note polished; reproducibility capsule assembled and runnable.
-- **Student artifact:** Margin-annotated note + partner capsule-run log + revision + submitted M14
+- **Project connection:** M14 submits tonight; note v1 and package v1 become the body the release audit interrogates next week, and the final chapter (M15) expands.
+- **Milestone developed:** M14 — Research note v1 and reusable package, Book Milestone 9 v2 + Book Milestone 11 v1 (worked + due); M15 — Release audit, final chapter, and AI-management portfolio, Book Milestone 12 v1 (kickoff — TERMINAL, no revision window)
+- **Milestone work time:** 30 min studio block (table read + partner cold check + revision)
+- **Milestone presentation/review:** table-read margin notes (all-read-all) + partner cold check
+- **Student prep:** Note v1 polished; package v1 assembled with its second-clean-run log.
+- **Student artifact:** Margin-annotated note + partner cold-check log + revision + submitted M14
 - **Exit ticket:** Claim Ticket #40: the claim a margin note flagged as weakest, and how I resized it.
-- **Homework / next milestone:** Submit M14 tonight, 11:59 PM. Monday begins the final unit — managing multiple AI agents to expand your note into the final research chapter.
-- **Instructor prep:** Margin-note slips; an annotated exemplar note; defense order-draw slips; confirm partner capsule-run pairings; M15 brief staged on Brightspace.
-- **Risks / contingency:** A capsule will not run for the partner → the exact break is logged as reproducibility evidence and fixed in a consult; the note table read proceeds regardless.
+- **Homework / next milestone:** Submit M14 tonight, 11:59 PM. Monday opens the terminal week: is the package still reproducible, does the release audit pass, and is the dossier complete?
+- **Instructor prep:** Margin-note slips; an annotated exemplar note; defense order-draw slips; confirm partner cold-check pairings; M15 brief staged on Brightspace.
+- **Risks / contingency:** A package will not run for the partner → the exact break is logged as reproducibility evidence and fixed in a consult; the note table read proceeds regardless.
 
-## Week 16 — Managing multiple AI agents
+## Week 16 — Studio 12: Release and direct the next cycle
 
-### M41 — Mon 2026-12-07 (in-person) — Managing multiple AI agents I: decomposition, specialization, and the worker–critic workflow
+### M41 — Mon 2026-12-07 (in-person) — Release I: the stale-run test, the five-part release audit, and the dossier
 
 - **Student Research Lead slot:** SRL slot 24 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: you have one chapter draft and four AI roles — reviewer, methodologist, skeptic, editor. Who works first, who works in parallel, and which output do you trust when two disagree?
-- **Driving question:** You have one chapter draft and several AI roles. Who works first, who works in parallel, and how do you keep them from all making the same mistake?
-- **Secondary questions:** How do you decompose a chapter task into roles? What does agent specialization and context allocation buy you? When is work parallel versus sequential, and what does a worker–critic structure add?
-- **Inquiry:** all positions (AI-workflow management)
-- **Claim PERMITTED:** "I assigned each AI role a scoped task and an independent reviewer, and I can name what each one did and did not touch."
-- **Claim NOT permitted:** "The agents handled it" — a workflow whose outputs no human scoped, traced, or owned.
-- **RDSS reading:** (no new reading — AI-management unit; bring your research note as the chapter draft to expand)
-- **Other material:** nb16 student notebook (managing AI agents) §1–2 (Colab); GenAI Studio sequential-workflow roles (genai.rcac.purdue.edu, Colab API or UI); the course AI-use ledger; M15 brief on Brightspace
-- **Provenance:** GenAI Studio sequential-workflow capability + fresh multi-agent method | AI-management unit | task decomposition + worker–critic roles run against the student's own chapter | fresh
-- **Concepts:** task decomposition; agent specialization; context allocation; parallel vs sequential work; dependencies; independent review; the worker–critic structure
-- **Python dependency:** GenAI Studio roles via the OpenAI-compatible API or UI (requests / provided client cells)
-- **Dataset / simulation:** each student's own research note, being expanded into the final chapter
-- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead lays out one chapter draft and four AI roles (reviewer, methodologist, skeptic, editor) and the room decides the order, what runs in parallel, and which output wins when two disagree; 9–31 guided AI research-partner investigation: with AI, decompose your chapter task into scoped roles with allocated context and a dependency order, then stand up a real sequential worker–critic pass against your own note using GenAI Studio roles; 31–43 human verification + instructor formalization: you inspect each role's output for what it actually changed (the tool proposes, you verify), and the instructor formalizes decomposition, specialization, and the worker–critic structure; 43–50 decision & defense: log each role, its task, and your verification in the ledger and write the Claim Ticket.
-- **Hands-on activity:** Decompose your chapter into scoped AI roles and run a real sequential worker–critic pass against your own note using GenAI Studio.
-- **Practice:** 📝 nb16 practice: for one chapter section, assign three AI roles, set their order and dependencies, and mark which decision each is allowed to touch.
-- **Discussion prompt:** Where did specializing an AI role make its output sharper, and where did narrowing its context make it miss something a generalist would have caught?
-- **Project connection:** M15 (final research chapter + AI-management portfolio) begins: today's decomposition and role log are the portfolio's first entries.
-- **Milestone developed:** M15 — Final Research Chapter and AI-Management Portfolio
-- **Milestone work time:** 22 min (decomposition + first worker–critic pass)
-- **Milestone presentation/review:** none (lecture day; the workflow runs inside the lab block)
-- **Student prep:** Research note in hand as the chapter's starting draft; GenAI Studio access confirmed.
-- **Student artifact:** Task decomposition + role assignments + first sequential worker–critic pass, logged
-- **Exit ticket:** Claim Ticket #41: the one chapter decision I will keep human no matter how good the AI roles get, and why.
-- **Homework / next milestone:** Extend the chapter with your workflow. Lecture 2 confronts conflicting outputs, correlated errors, false consensus, and stopping rules — and stages the first defenses.
-- **Instructor prep:** Confirm the GenAI Studio sequential-workflow roles are live; the provided API/UI cells tested; M15 brief staged on Brightspace.
-- **Risks / contingency:** GenAI Studio API friction → the UI path and the provided cells are the fallback, and the workflow logic is graded, not the plumbing.
+- **SRL puzzle focus:** Puzzle: one sentence in the note changed after the last cold run — a wording fix, the author says. Is the run stale? Find the rule that decides, and what being wrong would cost.
+- **Driving question:** One sentence changed since your last cold run. Is that run now stale — and would your work pass the audit that decides whether it may leave your hands?
+- **Secondary questions:** What makes a cold run stale? What do the five audit parts check — permissions, disclosure, reproducibility, claim boundaries, promises to participants? What belongs in the final dossier, and what is still missing from yours?
+- **Inquiry:** all positions (release — Studio 12)
+- **Claim PERMITTED:** "Nothing moved since my last cold run — or something did, and I reran before calling the work release-ready."
+- **Claim NOT permitted:** "The package passed its cold run" said of a package that changed since that run (a stale run verifies the past, not the release).
+- **RDSS reading:** Required EDR|AI: final-portfolio and managing-ai-agents (first read). Bring the M14 package and every ledger you have kept.
+- **Other material:** nb16 student notebook (release and next cycle) §1–2 release audit + dossier manifest (Colab); project/final_dossier/evidence_defense_protocol.md; the course AI Research Ledger and claim ledger; M15 brief on Brightspace
+- **Provenance:** BOOK_STATIONS release-next-cycle steps 1–3 + crosswalk M15 | S12 release unit | stale-run rule + five-part release audit + dossier manifest | fresh
+- **Concepts:** the stale-run rule (any change to the package — a number, a claim, the data, the code, the environment record, or the instructions — makes the last cold run stale); the five-part release audit (permissions, disclosure, reproducibility, claim boundaries, promises to participants); the dossier manifest (contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, revision history); release as a decision, not a deadline
+- **Python dependency:** own package rerun (restart-and-run-all) if the stale-run test demands it
+- **Dataset / simulation:** each student's own package, ledgers, and dossier components
+- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead presents the one-changed-sentence case and the room derives the stale-run rule — which kinds of change invalidate a cold run, what rerunning costs, and what releasing stale would cost instead; 9–31 guided AI research-partner investigation: run the stale-run test on your own package (list every change since the Studio-11 cold run, then decide rerun-or-stand), and walk the five-part release audit with AI as checklist interrogator — permissions, disclosure, reproducibility, claim boundaries, promises to participants — collecting every gap it flags for YOUR verification; 31–43 human verification + instructor formalization: you confirm or dismiss each flagged gap against your own records (AI proposes, you verify), and the instructor formalizes the stale-run rule, the five audit parts, and the dossier manifest; 43–50 decision & defense: record the rerun decision and audit result in the ledger and write the Claim Ticket.
+- **Hands-on activity:** Run the stale-run test and the five-part release audit on your own package, and open the dossier manifest with every component present or named as missing.
+- **Practice:** 📝 nb16 practice: for five changes to a project (a wording fix, a new figure, a data correction, a seed change, a README edit), rule each stale or not-stale and say why.
+- **Discussion prompt:** Which audit part would your project fail today, and what is the smallest honest repair before Friday?
+- **Project connection:** M15 begins in earnest: the rerun decision, the audit record, and the dossier manifest are its first components; the final chapter and AI-management portfolio build on them through the week.
+- **Milestone developed:** M15 — Release audit, final chapter, and AI-management portfolio, Book Milestone 12 v1 (dev; stale-run test + release audit + dossier manifest — TERMINAL Friday)
+- **Milestone work time:** 22 min (stale-run test + audit walk)
+- **Milestone presentation/review:** none (lecture day; the audit runs inside the investigation block)
+- **Student prep:** M14 submitted; package, note, and all ledgers at hand; defense order known.
+- **Student artifact:** Stale-run decision + five-part audit record + dossier manifest v0
+- **Exit ticket:** Claim Ticket #41: my stale-run verdict, and the audit part I am least sure my project passes.
+- **Homework / next milestone:** Close the audit gaps and extend the final chapter. Lecture 2 confronts your AI helpers directly — conflicting outputs, false consensus, the stopping rule — and stages the first defenses.
+- **Instructor prep:** The one-changed-sentence demo case; audit checklists printed; the dossier-manifest template; confirm the defense order is posted.
+- **Risks / contingency:** A stale-run test demands a rerun that cannot finish in class → the rerun is queued as tonight's task and the audit proceeds on the rest; a failed audit part is a finding — the repair, not concealment, is the deliverable.
 
-### M42 — Wed 2026-12-09 (in-person) — Managing multiple AI agents II: conflicting outputs, false consensus, and staging the defense
+### M42 — Wed 2026-12-09 (in-person) — Release II: conflicting agents, false consensus, the stopping rule — and the first defenses
 
 - **Student Research Lead slot:** SRL slot 25 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: three AI reviewers agree your chapter is fine. Is that three independent confirmations or one correlated error repeated three times — and how would you tell?
-- **Driving question:** Three AI reviewers agree your chapter is fine. Is that three confirmations or one error repeated three times — and when do you overrule all of them?
-- **Secondary questions:** How do you reconcile conflicting outputs? What makes agreement false consensus (correlated errors)? What is your stopping rule, and which decisions should never be automated at all?
+- **SRL puzzle focus:** Puzzle: four agreeing agents praise the same chapter — and share the same blind spot. What structural fact about how they were built predicts they fail together, and what check exposes it?
+- **Driving question:** Four AI reviewers agree your chapter is ready. Is that four confirmations or one blind spot shared four ways — and when do you overrule them all and stop?
+- **Secondary questions:** How do you wire worker–critic roles without inheriting their shared blind spots? What makes agreement false consensus (correlated errors)? What is a stopping rule stated as a decision — and which decisions should never be automated at all?
 - **Inquiry:** all positions (synthesis — AI-workflow management + defense)
-- **Claim PERMITTED:** "Where my AI roles conflicted, I made the call and can defend it; where they agreed, I checked the agreement was not one error repeated."
-- **Claim NOT permitted:** "All the agents agreed, so it must be right" (correlated errors manufacture false consensus).
-- **RDSS reading:** (no new reading — AI-management unit; bring your chapter draft and your three weakest claim-ledger rows)
-- **Other material:** nb16 student notebook (managing AI agents) §3–4 (Colab); project/final_dossier/evidence_defense_protocol.md (defense format + cross-examination norms); the course AI-use ledger; the defense order (drawn at Friday's M15 kickoff); M15 due Friday
-- **Provenance:** GenAI Studio sequential-workflow + evidence_defense_protocol.md | AI-management unit | conflict reconciliation + false-consensus check + defense staging (first defenses) | fresh
-- **Concepts:** reconciling conflicting outputs; correlated errors and false consensus; escalation to human judgment; human override; stopping rules; decisions that should never be automated; the Evidence Defense format (10-min defense + 5-min cross-examination)
-- **Python dependency:** GenAI Studio roles via the API or UI (reconcile conflicting role outputs)
-- **Dataset / simulation:** each student's own chapter draft + claim ledger
-- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the lead shows three AI reviews that agree and one that dissents on the same chapter — the room decides whether the agreement is confirmation or correlated error, and what would tell them apart; 7–30 intensive applied AI laboratory: run your multi-role workflow to the point of conflict, reconcile the disagreements yourself, test each agreement for false consensus, and mark your stopping rule and the decisions you refuse to automate (M15 portfolio); 30–42 peer defense + adversarial questioning: the first Evidence Defenses run here in compressed staging form (a tightened defense + rapid cross-examination) so all five defenders fit across the two meetings, with every non-defender asking at least one ledger-grounded question; 42–50 transfer + ledger + Claim Ticket: finalize the AI-management portfolio log and write the ticket.
-- **Hands-on activity:** Reconcile your AI roles' conflicting outputs, test their agreements for false consensus, and either defend (if staged today) or cross-examine a classmate's defense.
+- **Claim PERMITTED:** "Where my AI roles conflicted, I made the call and can defend it; where they agreed, I checked the agreement was not one error repeated — and my stopping rule is stated as a decision."
+- **Claim NOT permitted:** "All the agents agreed, so it must be right" (correlated errors manufacture false consensus, and consensus is not verification).
+- **RDSS reading:** Required EDR|AI: conflicting-agents (first read); managing-ai-agents continues. Bring your chapter draft and your three weakest claim-ledger rows.
+- **Other material:** nb16 student notebook (release and next cycle) §3–4 (Colab); GenAI Studio sequential-workflow roles (genai.rcac.purdue.edu, Colab API or UI); project/final_dossier/evidence_defense_protocol.md (defense format + cross-examination norms); the drawn defense order; M15 due Friday
+- **Provenance:** GenAI Studio sequential-workflow + evidence_defense_protocol.md + BOOK_STATIONS release-next-cycle steps 4–5 | S12 release unit | worker–critic wiring + false-consensus check + stopping rule + defense staging (first defenses) | adapted
+- **Concepts:** worker–critic wiring; agent specialization and its blind-spot cost; reconciling conflicting outputs; correlated errors and false consensus; escalation to human judgment and the override on record; the stopping rule stated as a decision; decisions that should never be automated; the next-study agenda; the Evidence Defense format (compressed staging + cross-examination)
+- **Python dependency:** GenAI Studio roles via the API or UI + the provided seeded reviewer-simulation cells (SEED = 464)
+- **Dataset / simulation:** each student's own chapter draft + a seeded correlated-vs-diverse reviewer simulation (SEED = 464)
+- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the lead shows four agreeing AI reviews of one chapter and the room hunts the shared blind spot, then predicts what a differently built reviewer would catch; 7–30 intensive applied AI laboratory: wire your worker–critic roles against your own chapter with GenAI Studio, run them to the point of conflict, reconcile the disagreements yourself, test each agreement for false consensus against the seeded correlated-vs-diverse reviewer simulation (SEED = 464), then write your stopping rule as a decision plus the list of decisions you refuse to automate; 30–38 peer defense + adversarial questioning: the first Evidence Defenses run in compressed staging form (a tightened defense + rapid cross-examination), every non-defender asking at least one ledger-grounded question; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer + ledger + Claim Ticket: log the escalations, overrides, and stopping rule in the AI-management portfolio, draft the next-study agenda, and write the ticket.
+- **Hands-on activity:** Run your roles to conflict, catch one false consensus with the seeded simulation, write your stopping rule as a decision, and either defend (if staged today) or cross-examine a classmate's defense.
 - **Practice:** 📝 nb16 practice: given three agreeing AI outputs and one dissent, decide whether the agreement is confirmation or correlated error, and name the check that decides.
 - **Discussion prompt:** When did you overrule every AI role at once today, and what did you know that they did not?
-- **Project connection:** M15 advances and the defenses begin: today's conflict-reconciliation log is a core portfolio entry, and the first defenders perform in the drawn order.
-- **Milestone developed:** M15 — Final Research Chapter and AI-Management Portfolio (defense staging: first defenses)
-- **Milestone work time:** 23 min (conflict-reconciliation lab) + 12 min (first defenses)
+- **Project connection:** M15 advances and the defenses begin: the conflict log, the override record, and the stopping rule are core portfolio entries, and the first defenders perform in the drawn order.
+- **Milestone developed:** M15 — Release audit, final chapter, and AI-management portfolio, Book Milestone 12 v1 (dev; stopping rule + first defenses — TERMINAL Friday)
+- **Milestone work time:** 23 min (conflict-reconciliation lab) + 8 min (first defenses)
 - **Milestone presentation/review:** first Evidence Defenses (compressed staging) + cross-examination
-- **Student prep:** Chapter workflow advanced; three weakest ledger rows prepped; defense order drawn.
-- **Student artifact:** Conflict-reconciliation + false-consensus log + delivered defense or logged cross-examination
-- **Exit ticket:** Claim Ticket #42: the moment my AI roles reached false consensus, and how I caught it.
-- **Homework / next milestone:** Finish the final chapter and AI-management portfolio. The remaining defenses and the submission ceremony are Friday, when M15 is due.
-- **Instructor prep:** Defense rubrics per defender; timer; the cross-examination norms card; confirm the drawn order; GenAI Studio roles live for the conflict lab.
-- **Risks / contingency:** Five full 10+5 defenses do not fit two 50-minute meetings → defenses run in compressed staging form (a tightened defense + rapid cross-examination) split across today and Friday; any defense that needs the full length gets an office-hours overflow slot the rubric notes.
+- **Student prep:** Audit gaps closed; chapter advanced; three weakest ledger rows prepped; defense order known.
+- **Student artifact:** Conflict-reconciliation + false-consensus log + stopping rule + delivered defense or logged cross-examination
+- **Exit ticket:** Claim Ticket #42: my stopping rule in one sentence — why here, and not one more check.
+- **Homework / next milestone:** Finish the final chapter, the AI-management portfolio, and the dossier. The remaining defenses and the release ceremony are Friday, when M15 is due — TERMINAL, no revision window.
+- **Instructor prep:** Defense rubrics per defender; timer; the cross-examination norms card; GenAI Studio roles live; the seeded reviewer simulation tested; confirm the drawn order.
+- **Risks / contingency:** Five full-length defenses do not fit the two meetings → compressed staging splits them across today and Friday, and any defense needing full length gets an office-hours overflow slot the rubric notes; GenAI Studio API friction → the UI path and the provided cells are the fallback, and the reconciliation logic is graded, not the plumbing.
 
-### M43 — Fri 2026-12-11 (in-person) — Studio Friday (terminal) — the final defenses and the submission ceremony, M15 due
+### M43 — Fri 2026-12-11 (in-person) — Studio Friday (terminal) — the final defenses and the release ceremony, M15 due
 
-- **Driving question:** You began with a curiosity and end with a defended, reproducible, honestly-bounded chapter. Does the evidence hold, and is it in?
-- **Secondary questions:** Do the remaining defenses survive cross-examination? Is your AI-management portfolio honest about what you automated and what you kept human? Is every number in the chapter traceable before you submit?
+- **Driving question:** You began with a curiosity and end with a released, defended, reproducible body of work. Does the evidence hold, is the run fresh, and is it in?
+- **Secondary questions:** Do the remaining defenses survive cross-examination? Is the dossier complete and every ledger closed as a record, not a summary? Can you say your stopping rule aloud — and what should the next study ask?
 - **Inquiry:** all positions (synthesis)
-- **Claim PERMITTED:** "I can classify my question, match it to a design, state what my answer can and cannot establish, and defend every claim from a verified ledger."
+- **Claim PERMITTED:** "My release audit passed, my last cold run is not stale, my stopping rule is stated as a decision, and I can defend every claim from a verified ledger."
 - **Claim NOT permitted:** "The AI wrote my chapter" (you directed, verified, and own it — or you did not, and the defense shows which).
 - **RDSS reading:** (no new reading — terminal studio; RDSS ch. 24 'Epilogue' offered as an optional send-off, not required; book.declaredesign.org)
-- **Other material:** nb16 student notebook (managing AI agents) §5 synthesis (Colab); project/final_dossier/evidence_defense_protocol.md (final defenses + the submission checklist); course-reflection survey; M15 due tonight
-- **Provenance:** evidence_defense_protocol.md + fresh ceremony protocol | AI-management + synthesis unit | remaining Evidence Defenses + submission ceremony as the terminal studio work block | fresh
-- **Concepts:** the Evidence Defense under cross-examination; the AI-management portfolio (what was automated, escalated, and overridden); ledger-traceable claims; number-to-cell traceability; the submission ceremony; verification as a habit that outlasts the course
-- **Python dependency:** none (defenders may open the chapter's capsule live if probed)
-- **Dataset / simulation:** each student's own chapter, ledger, and AI-management portfolio
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: the AI decision you are proudest of overruling, one line each; 15–45 milestone kickoff + defense rounds: the instructor runs the final-dossier checklist one last time, then the REMAINING EVIDENCE DEFENSES run as the work block in the drawn order (compressed 10+5 format so all five defenders fit across the two meetings), every non-defender asking at least one ledger-grounded question; 45–50 revise, ledger, submit + Claim Ticket: submit M15 and confirm it on screen, take the reflection survey, and write the final Claim Ticket.
-- **Hands-on activity:** Deliver or cross-examine the final defenses, run a last traceability spot-check on your own chapter, and submit M15.
-- **Practice:** 📝 (retrospective) the exit self-assessment: classify, match, bound, verify — rate yourself at the start of the semester versus now.
+- **Other material:** week16 quiz; nb16 student notebook (release and next cycle) §5 synthesis (Colab); project/final_dossier/evidence_defense_protocol.md (final defenses + the release checklist); course-reflection survey; M15 due tonight
+- **Provenance:** evidence_defense_protocol.md + BOOK_STATIONS release-next-cycle close | S12 terminal unit | remaining Evidence Defenses + release ceremony as the terminal studio work block | adapted
+- **Concepts:** the Evidence Defense under cross-examination; the release ceremony; the closed dossier and closed ledgers (complete records, not summaries); the AI-management portfolio (what was automated, escalated, and overridden); the stopping rule said aloud; the next-study agenda (a research cycle ends by declaring the next one); number-to-cell traceability; verification as a habit that outlasts the course
+- **Python dependency:** none (defenders may open the package live if probed)
+- **Dataset / simulation:** each student's own chapter, dossier, ledgers, and AI-management portfolio
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: the AI decision you are proudest of overruling, one line each; 15–45 milestone kickoff + defense rounds: the instructor runs the release checklist one last time (stale-run status, the five audit parts, the dossier manifest), then the REMAINING EVIDENCE DEFENSES run as the work block in the drawn order (compressed staging so all five defenders fit across the two meetings), every non-defender asking at least one ledger-grounded question, and each defender closing with the stopping rule said aloud and the next-study agenda in one sentence; 45–50 revise, ledger, submit + Claim Ticket: submit M15 and confirm it on screen, take the reflection survey, and write the final Claim Ticket.
+- **Hands-on activity:** Deliver or cross-examine the final defenses, run a last stale-run and traceability spot-check on your own chapter, and release: submit M15.
+- **Practice:** 📝 (retrospective) the exit self-assessment: classify, match, bound, verify, release — rate yourself at the start of the semester versus now.
 - **Discussion prompt:** What claim did you believe at the start of the semester that you would now demand evidence for, and what evidence would satisfy you?
-- **Project connection:** M15 — the final research chapter, claim ledger, and AI-management portfolio — is submitted; the semester's complete, defended, reproducible artifact is in.
-- **Milestone developed:** M15 — Final Research Chapter and AI-Management Portfolio (SUBMITTED TODAY)
-- **Milestone work time:** 30 min studio block (final defenses + submission ceremony)
+- **Project connection:** M15 — the release audit, final chapter, closed dossier, and AI-management portfolio — is submitted; the semester's complete, defended, reproducible artifact leaves your hands pointing at its successor.
+- **Milestone developed:** M15 — Release audit, final chapter, and AI-management portfolio, Book Milestone 12 v1 (worked + due TONIGHT — TERMINAL, no revision window)
+- **Milestone work time:** 30 min studio block (final defenses + release ceremony)
 - **Milestone presentation/review:** the remaining Evidence Defenses ARE the presentation/review
-- **Student prep:** Chapter, ledger, and AI-management portfolio complete; capsule runnable; ready to defend or cross-examine.
+- **Student prep:** Chapter, dossier, and AI-management portfolio complete; package cold run fresh (not stale); ready to defend or cross-examine.
 - **Student artifact:** Delivered defense or logged cross-examination + submitted M15 + exit self-assessment + reflection survey
 - **Exit ticket:** Claim Ticket #43 (the last): one claim I will carry carefully for the rest of my life, and the evidence I hold it on.
-- **Homework / next milestone:** None. It is done. (Grades follow the posted rubric timeline.)
+- **Homework / next milestone:** None. It is done. The next-study agenda you wrote is where the cycle reopens, whenever you choose. (Grades follow the posted rubric timeline.)
 - **Instructor prep:** Rubrics per remaining defender; the overflow slot in reserve; the strongest-defenses synthesis list; survey link live; submission mechanics confirmed; celebration logistics.
-- **Risks / contingency:** A chapter misses the ceremony → the tonight deadline governs and the published late policy applies; the ceremony celebrates, the deadline grades. A defense needs the full length → the office-hours overflow slot absorbs it before the deadline.
+- **Risks / contingency:** A chapter misses the ceremony → the tonight deadline governs and the published late policy applies; a defense needs the full length → the office-hours overflow slot absorbs it before the deadline; a last-minute stale run → release with the rerun queued and DECLARED, never silently stale.
