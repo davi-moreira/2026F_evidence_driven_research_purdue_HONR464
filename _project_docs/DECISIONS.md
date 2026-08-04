@@ -1489,3 +1489,39 @@ review round over the content diff (in flight at this record); GenAI role
 spec deep rewrite and SRL handbook refresh remain adequate-but-unpolished;
 first live generation of the five colleague personas happens when student
 synopses arrive (Week 2).
+
+**D41 review-round record — content phases (2026-08-04).** The closing
+Codex review (gpt-5.6-sol, xhigh, read-only; verdict in
+`_adm/codex_collab/2026-08-04_d41-content-phases/review_verdict.md`)
+returned do-not-ship with nine confirmed findings; all nine are applied:
+(1) the consolidated quiz ANSWER_KEY regenerated wholesale from the weekly
+key files (it had kept pre-cutover questions for W5/W8/W10) and its
+week-6-async header error fixed; (2) nb05's three methods defects repaired
+— the Hajj card relabeled as the intention-to-treat effect of WINNING the
+lottery (the file has no attendance variable; the pilgrimage's own effect
+needs IV), the Bonilla card stripped of its equivalence-from-failure-to-
+reject verdict ("did not detect a frame effect of this size" replaces
+"frame-STABLE"; the frames are named as a real intervention used to
+measure), and the retrieval prompt's "unfound in a minute = fabricated"
+replaced with unresolved-as-status; (3) the audit cadence made REAL: ten
+scored beats now scheduled (W2-W6, W8-W11, W16 Wednesdays; Studio 1 is the
+modeled Case 464, Studio 11 is graded through M13 itself) and every surface
+says best 8 of 10; (4) required GenAI touchpoints say "required" on the
+schedule surfaces and the instructor guide's table carries the five current
+roles; (5) M4's reading burden made route-conditional on both graded
+surfaces and W5's meeting openers aligned to the notebook; (6) nb09's
+primary panel split — unadjusted marginal contrast alone, covariate-
+adjusted contrasts in their own labeled panel, the "does the target
+quantity change?" gate added; (7) nb10's claim ladder replaced with the
+kind-x-reach claim-license matrix and results ordering re-anchored to the
+predeclared primary (interval width demoted to one input); (8) M7 requires
+two independent re-derivations with a pre-declared tolerance and route-
+conditional precommitment language; M9's poster content brief is an
+ungraded handoff to M10 kickoff (note-first made operational); (9)
+`validate_coverage.py`'s pipe-parser fixed (structural " | ", so "EDR|AI"
+is content) and the gate is GREEN for the first time this build — the
+earlier completion record's "full validator suite green" claim was wrong
+by omission of this gate, corrected here. Queued counter-proposals: one
+typed registry for audit events/touchpoints/artifact lists; route/estimand
+cards for teaching cases; canonical structured quiz items rendering both
+bank and key.
