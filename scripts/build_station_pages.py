@@ -100,6 +100,28 @@ def contribution_lines(spec: dict, lessons: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def bring_block(spec: dict, lessons: list[dict]) -> str:
+    """The milestone's "What you bring" checklist, role-aware: core pieces
+    are prerequisites; branch/optional pieces bind only when their condition
+    is the reader's (skimming a non-matching pathway or overlay is using the
+    book correctly — the lesson pointers say so)."""
+    core = [l for l in lessons if l.get("role", "core") == "core"]
+    cond = [l for l in lessons if l.get("role", "core") != "core"]
+    out = []
+    if core:
+        out.append("Check you are carrying each of these before you start. "
+                   "If one is missing, go back and work that lesson's **It "
+                   "is your turn** first; the practice below assumes it.")
+        out.append(contribution_lines(spec, core))
+    if cond:
+        out.append("These pieces are conditional. Bring each one when its "
+                   "condition is yours; when it is not, the lesson's own "
+                   "drill or a plain skip is the right call, and the "
+                   "milestone does not require the piece.")
+        out.append(contribution_lines(spec, cond))
+    return "\n\n".join(out)
+
+
 def chain_paragraph(stations: list[dict], specs: dict, idx: int) -> str:
     st = stations[idx]
     spec = specs[st["id"]]
@@ -176,9 +198,7 @@ def milestone_page(st: dict, spec: dict, lessons: list[dict], n: int,
 
 ## What you bring
 
-Check you are carrying each piece before you start. If one is missing, go back and work that lesson's **It is your turn** first; the practice below assumes it.
-
-{contribution_lines(spec, lessons)}
+{bring_block(spec, lessons)}
 
 ## The practice {{#milestone}}
 

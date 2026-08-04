@@ -14,9 +14,9 @@ review advances.
 
 ## The milestone ahead {#checkpoint}
 
-Research that only runs on your machine, with you present, is testimony rather than evidence. This milestone proves that someone who is not you can obtain your result from your materials alone: a cold run, a stranger's run, and a package that carries data access, code, environment, documentation, and licence. It is the boundary between work you finished and work others can build on.
+Research that only runs on your machine, with you present, is testimony rather than evidence. This milestone proves that someone who is not you can obtain your result from your materials alone: a cold run, a stranger's run (or, working alone, its honestly labeled solo proxy), and a package that carries data access, code, environment, documentation, and licence. It is the boundary between work you finished and work others can build on.
 
-This studio closes with **[Milestone 11: Your reproducible package](milestone11-reproduce-and-package.qmd)**, a short chapter of its own after the lessons. **What it asks you to produce.** An independent cold-run record and a reusable research package.
+This studio closes with **[Milestone 11: Your reproducible package](milestone11-reproduce-and-package.qmd)**, a short chapter of its own after the lessons. **What it asks you to produce.** An independent cold-run record and a reusable research package. Working alone, the record is a clean-environment rerun labeled "solo proxy; external cold run pending" — the label, and the honesty it enforces, are part of the artifact.
 
 Milestone 12 decides whether the packaged work is ready to leave your hands, and what the next cycle should ask. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.
 

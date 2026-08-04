@@ -528,6 +528,9 @@ stations:
       materials.
     produces: >-
       An independent cold-run record and a reusable research package.
+      Working alone, the record is a clean-environment rerun labeled
+      "solo proxy; external cold run pending" — the label, and the honesty
+      it enforces, are part of the artifact.
     steps:
       - Run your own package cold, from a clean environment, following only your written instructions.
       - "Have someone else run it without your help, and log every place they had to ask you a question. Working alone? Rerun it yourself after a real break, instructions only, and label the record 'solo proxy; external cold run pending' — a proxy never becomes a claim of independent reproduction."
@@ -546,8 +549,9 @@ stations:
       Research that only runs on your machine, with you present, is
       testimony rather than evidence. This milestone proves that someone
       who is not you can obtain your result from your materials alone: a
-      cold run, a stranger's run, and a package that carries data access,
-      code, environment, documentation, and licence. It is the boundary
+      cold run, a stranger's run (or, working alone, its honestly labeled
+      solo proxy), and a package that carries data access, code,
+      environment, documentation, and licence. It is the boundary
       between work you finished and work others can build on.
     hands_forward: >-
       Milestone 12 decides whether the packaged work is ready to leave
@@ -570,7 +574,7 @@ stations:
       A release audit, your final dossier, an explicit stopping rule, and
       your next-study agenda.
     steps:
-      - "Check that nothing moved since your Studio 11 cold run: any change to a number, a claim, the data, or the code makes that run stale — repeat it before you release."
+      - "Check that nothing moved since your Studio 11 cold run: any change to the package — a number, a claim, the data, the code, the environment record, or the instructions a stranger would follow — makes that run stale. Repeat it before you release."
       - "Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants."
       - "Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history."
       - "Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision."

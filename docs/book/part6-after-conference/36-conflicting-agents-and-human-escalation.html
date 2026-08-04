@@ -868,6 +868,7 @@ Peker, Cem. 2023. <span>“Extracting the Collective Wisdom in Probabilistic Jud
 
 </main> <!-- /main -->
 <span id="edrai-new-tab-note" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">opens in a new tab</span>
+<style>.edrai-newtab-mark{font-size:.7em;vertical-align:super;opacity:.55;margin-left:.12em;text-decoration:none}</style>
 <script>
 // Two page behaviors for every book page:
 //
@@ -901,6 +902,16 @@ Peker, Cem. 2023. <span>“Extracting the Collective Wisdom in Probabilistic Jud
     var desc = (a.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
     if (desc.indexOf("edrai-new-tab-note") === -1) desc.push("edrai-new-tab-note");
     a.setAttribute("aria-describedby", desc.join(" "));
+    // Visible new-context cue (W3C G201) for links Quarto's external icon
+    // does not already mark; the hidden note above covers assistive tech.
+    if (!a.querySelector("i.bi") && !a.querySelector(".edrai-newtab-mark") &&
+        !a.querySelector("img")) {
+      var mark = document.createElement("span");
+      mark.className = "edrai-newtab-mark";
+      mark.setAttribute("aria-hidden", "true");
+      mark.textContent = "↗︎";
+      a.appendChild(mark);
+    }
   }
   var bibSection = main.querySelector("section#bibliography");
   if (bibSection) {

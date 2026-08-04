@@ -544,7 +544,7 @@ stations:
           2: "every rail addressed in the form this studio requires"
       - id: reproduce-and-package.package-v1.station-specific
         applies_when: {}
-        text: "The milestone's own product is present and defensible: An independent cold-run record and a reusable research package"
+        text: "The milestone's own product is present and defensible: An independent cold-run record (working alone: a clean-environment rerun labeled 'solo proxy; external cold run pending') and a reusable research package"
         levels:
           0: "the milestone's own product is missing"
           1: "present but would not survive a careful question"

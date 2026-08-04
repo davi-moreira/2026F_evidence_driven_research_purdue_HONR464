@@ -695,17 +695,20 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>What this milestone produces.</strong> A release audit, your final dossier, an explicit stopping rule, and your next-study agenda.</p>
 <section id="what-you-bring" class="level2">
 <h2 class="anchored" data-anchor-id="what-you-bring">What you bring</h2>
-<p>Check you are carrying each piece before you start. If one is missing, go back and work that lesson’s <strong>It is your turn</strong> first; the practice below assumes it.</p>
+<p>Check you are carrying each of these before you start. If one is missing, go back and work that lesson’s <strong>It is your turn</strong> first; the practice below assumes it.</p>
+<ul>
+<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html">Lesson 39 — Final Research and AI-Management Portfolio</a>: your finished research artifact with every claim bounded, your four-part AI-management portfolio, and the rehearsed three-movement defense.</li>
+</ul>
+<p>These pieces are conditional. Bring each one when its condition is yours; when it is not, the lesson’s own drill or a plain skip is the right call, and the milestone does not require the piece.</p>
 <ul>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html">Lesson 37 — Managing Multiple AI Agents</a>: if you ran agent loops: your three-loop round with its wiring, its turn counts, and the one node you kept human.</li>
 <li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html">Lesson 38 — Conflicting Agents and Human Escalation</a>: if your loops disagreed: your escalation rules, one conflict diagnosed and resolved by your own check, and the override on record.</li>
-<li><a href="https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html">Lesson 39 — Final Research and AI-Management Portfolio</a>: your finished research artifact with every claim bounded, your four-part AI-management portfolio, and the rehearsed three-movement defense.</li>
 </ul>
 </section>
 <section id="milestone" class="level2">
 <h2 class="anchored" data-anchor-id="milestone">The practice</h2>
 <ol type="1">
-<li>Check that nothing moved since your Studio 11 cold run: any change to a number, a claim, the data, or the code makes that run stale — repeat it before you release.</li>
+<li>Check that nothing moved since your Studio 11 cold run: any change to the package — a number, a claim, the data, the code, the environment record, or the instructions a stranger would follow — makes that run stale. Repeat it before you release.</li>
 <li>Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants.</li>
 <li>Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history.</li>
 <li>Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision.</li>
@@ -815,6 +818,7 @@ ul.task-list li input[type="checkbox"] {
 
 </main> <!-- /main -->
 <span id="edrai-new-tab-note" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">opens in a new tab</span>
+<style>.edrai-newtab-mark{font-size:.7em;vertical-align:super;opacity:.55;margin-left:.12em;text-decoration:none}</style>
 <script>
 // Two page behaviors for every book page:
 //
@@ -848,6 +852,16 @@ ul.task-list li input[type="checkbox"] {
     var desc = (a.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
     if (desc.indexOf("edrai-new-tab-note") === -1) desc.push("edrai-new-tab-note");
     a.setAttribute("aria-describedby", desc.join(" "));
+    // Visible new-context cue (W3C G201) for links Quarto's external icon
+    // does not already mark; the hidden note above covers assistive tech.
+    if (!a.querySelector("i.bi") && !a.querySelector(".edrai-newtab-mark") &&
+        !a.querySelector("img")) {
+      var mark = document.createElement("span");
+      mark.className = "edrai-newtab-mark";
+      mark.setAttribute("aria-hidden", "true");
+      mark.textContent = "↗︎";
+      a.appendChild(mark);
+    }
   }
   var bibSection = main.querySelector("section#bibliography");
   if (bibSection) {

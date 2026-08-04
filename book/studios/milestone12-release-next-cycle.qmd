@@ -14,15 +14,18 @@ review advances.
 
 ## What you bring
 
-Check you are carrying each piece before you start. If one is missing, go back and work that lesson's **It is your turn** first; the practice below assumes it.
+Check you are carrying each of these before you start. If one is missing, go back and work that lesson's **It is your turn** first; the practice below assumes it.
+
+- [Lesson 39 — Final Research and AI-Management Portfolio](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html): your finished research artifact with every claim bounded, your four-part AI-management portfolio, and the rehearsed three-movement defense.
+
+These pieces are conditional. Bring each one when its condition is yours; when it is not, the lesson's own drill or a plain skip is the right call, and the milestone does not require the piece.
 
 - [Lesson 37 — Managing Multiple AI Agents](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html): if you ran agent loops: your three-loop round with its wiring, its turn counts, and the one node you kept human.
 - [Lesson 38 — Conflicting Agents and Human Escalation](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html): if your loops disagreed: your escalation rules, one conflict diagnosed and resolved by your own check, and the override on record.
-- [Lesson 39 — Final Research and AI-Management Portfolio](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html): your finished research artifact with every claim bounded, your four-part AI-management portfolio, and the rehearsed three-movement defense.
 
 ## The practice {#milestone}
 
-1. Check that nothing moved since your Studio 11 cold run: any change to a number, a claim, the data, or the code makes that run stale — repeat it before you release.
+1. Check that nothing moved since your Studio 11 cold run: any change to the package — a number, a claim, the data, the code, the environment record, or the instructions a stranger would follow — makes that run stale. Repeat it before you release.
 2. Run the release audit: permissions, disclosure, reproducibility, claim boundaries, and every promise you made to participants.
 3. Assemble the dossier: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history.
 4. Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision.
