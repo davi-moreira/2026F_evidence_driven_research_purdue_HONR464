@@ -332,610 +332,608 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Instructor prep:** Timer; declaration order; clarifying-question norms card; M4 Brightspace brief on screen; consult rotation.
 - **Risks / contingency:** Declarations exceed time → move the last declaration to the top of the sprint and protect the M4 start; questions drift into debate → enforce the one-clarifying-question norm.
 
-## Week 5 — Observational descriptive research
+## Week 5 — Studio 5: Develop the pathway (route hub)
 
-### M12 — Mon 2026-09-21 (in-person) — Observational descriptive designs: population, frame, sample — who your data can speak for
+### M12 — Mon 2026-09-21 (in-person) — The route hub: five pathways, and the one your Contract licenses
 
 - **Student Research Lead slot:** SRL slot 06 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: a campus poll of dining-hall diners reports 'what Purdue students think' — name every gap between the diners observed and the students meant.
-- **Driving question:** When you can only observe, never intervene, what can a description honestly claim, and about whom?
-- **Secondary questions:** What separates the population you care about from the one your frame can reach? Where does selection quietly enter? How do you declare an observational descriptive design before collecting a single row?
-- **Inquiry:** Description -> Generalization — descriptive kind · data-at-hand and population reach (observational pathway, Lecture 1)
-- **Claim PERMITTED:** "In the units my sampling frame actually reaches, the share with characteristic X is [estimate], described exactly as observed."
-- **Claim NOT permitted:** "This describes the whole population" when the frame misses part of it, or "X causes Y" from a description that never intervened.
-- **RDSS reading:** RDSS ch. 15 'Observational: descriptive' (book.declaredesign.org), population/frame/sample sections; the observational-descriptive entries in the DeclareDesign design library
-- **Calling Bullshit (optional):** optional: callingbullshit.org module on selection bias
-- **Other material:** nb05 student notebook (observational descriptive), §1–3 (Colab); la_voter_file attribution note
-- **Provenance:** RDSS ch.15 + DeclareDesign library (observational descriptive) + rdss la_voter_file | population/frame/sample stack + declaring an observational design | frame-and-sample draw simulated from the voter file (seed 464) | translated (R→Python)
-- **Concepts:** target population vs accessible population; sampling frame; sample; selection; coverage; the observational descriptive design declared as Model + Inquiry + Data strategy; a selection DAG (arrows into 'observed'); simulating a frame -> sample draw
-- **Python dependency:** pandas (read the voter file as a frame), numpy (seeded sampling, seed 464), matplotlib (frame vs sample comparison)
-- **Dataset / simulation:** la_voter_file.csv used as a sampling frame (1,000 rows); seeded repeated draws from it (seed 464)
-- **50-minute dynamic:** 0–9 SRL-led research puzzle: the SRL hands the room a dining-hall poll claiming to speak for all Purdue students, and the class lists every gap between who was observed and who was meant; 9–31 guided AI research-partner investigation in the notebook: with AI as research partner, load la_voter_file as a frame, draw repeated seeded samples, and ask AI to name the population each draw can and cannot speak for while you check its answer against the data; 31–43 human verification + instructor formalization: the instructor formalizes target population vs accessible population vs frame vs sample and draws the selection DAG, and the class verifies AI's claims against what the draws actually show; 43–50 decision & defense: log the AI Research Ledger entry (what AI proposed, how you verified) and write the Claim Ticket.
-- **Hands-on activity:** With AI as research partner, use la_voter_file as a sampling frame, draw repeated seeded samples, and state for each the population it can honestly describe and the gap the frame leaves out.
-- **Practice:** 📝 nb05 practice: for four observational STEM settings (environmental monitoring, a biodiversity survey, materials characterization, app usage telemetry), name the target population, the accessible population, and the selection that separates them.
-- **Discussion prompt:** Think about the data you can actually get for your project. Who is in your reachable frame, who is silently left out, and does that gap line up with the people your question is really about?
-- **Project connection:** The population/frame/sample stack and first selection DAG you draft today become the spine of the M4 observational descriptive design audit.
-- **Milestone developed:** M4 — Observational descriptive design audit
-- **Milestone work time:** 7 min (draft your project's population/frame/sample stack + first selection DAG into the M4 audit)
-- **Milestone presentation/review:** none (lecture day)
-- **Student prep:** Read the RDSS ch. 15 opener on observational descriptive designs; bring the research question from your M3 declaration.
-- **Student artifact:** Executed frame-and-sample cells + your project's population/frame/sample stack + first selection DAG
-- **Exit ticket:** Claim Ticket #12: the population my project's frame can honestly describe, and the one it cannot reach.
-- **Homework / next milestone:** Finish nb05 §1–3 and keep building the M4 audit. For Wednesday, read the RDSS ch. 15 measurement and nonresponse sections.
-- **Instructor prep:** Confirm la_voter_file.csv loads from the raw URL; pre-seed the sampling draws (seed 464); prepare the selection DAG build; brief the SRL on the dining-hall puzzle.
-- **Risks / contingency:** Voter file slow to load in Colab → nb05 subsamples on load (seeded) with the full-file path documented; the DAG discussion runs long → the measurement preview moves to Lecture 2.
+- **SRL puzzle focus:** Colleague puzzle: your colleague picked the most sophisticated-looking method on the shelf, not the route their Contract licenses — what signal did they ignore?
+- **Driving question:** Which of the five research routes do your question and your license actually support — and what can that route never establish?
+- **Secondary questions:** What signals separate the five routes? Why does assigning conditions not make a question causal? Why does a causal question with weak data stay causal ('causal, currently unidentified') instead of quietly becoming descriptive?
+- **Inquiry:** the five-route hub (design-library layer): observational descriptive, observational causal, experimental descriptive, experimental causal, prediction
+- **Claim PERMITTED:** "My route is [pathway] because my question asks [signal] and my data strategy is [observe / assign / forecast] — and here is what this route can never establish."
+- **Claim NOT permitted:** A causal, predictive, or population claim licensed only by the topic's importance or the software used — a route is earned by the question and the license, never by the tool.
+- **RDSS reading:** Required EDR|AI: your project's route lesson (one of the five pathway lessons), read before today; the instructor-assigned contrast lesson is due Wednesday; the hybrid/complex-designs lesson binds only if your design has stages. Recommended RDSS: the design-library chapter matching your route (ch. 15–18, book.declaredesign.org; the prediction route's EDR|AI lesson stands alone).
+- **Calling Bullshit (optional):** optional: callingbullshit.org module on correlation and causation
+- **Other material:** nb05 §Lecture 1 (Colab); your Contract v0; the released colleague route artifact; M4 brief
+- **Provenance:** EDR|AI Studio 5 (BOOK_STATIONS develop-the-pathway route guide) + crosswalk M4 route_selection + course datasets | the route hub | route-signal matrix over five shallow dataset cards + colleague route diagnosis | newly-constructed-from-source-concept
+- **Concepts:** the five routes (observational descriptive, observational causal, experimental descriptive, experimental causal, prediction); route signals (what the question asks x what you are allowed to do); claim license and claim boundary; assignment does not imply a causal inquiry; a causal question that cannot yet be identified stays causal; the hybrid-stage overlay
+- **Python dependency:** pandas (open five shallow route cards; no model fitting)
+- **Dataset / simulation:** shallow route cards drawn from the course datasets (lapop_brazil, cliningsmith_etal, bonilla_tillery, la_voter_file, foos_etal) — metadata and one summary each, no analysis
+- **50-minute dynamic:** 0–9 colleague research puzzle: the SRL opens the colleague's Contract next to its sophisticated-but-wrong method choice, and the class names the route signal the colleague ignored; 9–31 guided AI research-partner investigation in nb05: with AI as research partner, work the route-signal matrix across five shallow dataset cards — for each, what the question asks, what the researcher may do, and which route that licenses — asking AI to argue each call and verifying its reasons against the route guide; 31–43 human verification + instructor formalization: the instructor formalizes the five routes and the two cautions (assignment is not causality; an unidentified causal question stays causal), and the class settles the colleague diagnosis; 43–50 decision & defense: commit your provisional route with its warrant, log the Ledger entry, and write the Claim Ticket.
+- **Hands-on activity:** Complete the route-signal matrix across five dataset cards, then make and defend a provisional route call for your own Contract.
+- **Practice:** 📝 nb05 practice: for each of the five routes, complete the pair: this route estimates ___ and can never establish ___.
+- **Discussion prompt:** What would have to change in your Contract — the question, the data, or the permission — before a neighboring route became the defensible one?
+- **Project connection:** Your provisional route, its warrant, and its boundary sentence open the M4 pathway declaration due at this Friday's studio.
+- **Milestone developed:** M4 — Pathway declaration and mandated contrast, Book Milestone 5 v1 (dev)
+- **Milestone work time:** 7 min (provisional route + warrant sentence into M4)
+- **Milestone presentation/review:** one oral route defense during the closing block
+- **Student prep:** Read your route lesson; bring your Contract v0; know which contrast lesson the instructor assigned you.
+- **Student artifact:** Completed route-signal matrix + provisional route with warrant and boundary sentence + colleague diagnosis note
+- **Exit ticket:** Claim Ticket #12: my route is ___ because ___, and it can never establish ___.
+- **Homework / next milestone:** Read the instructor-assigned contrast lesson for Wednesday's jigsaw; draft the route section of M4.
+- **Instructor prep:** Release the week's colleague artifacts with keys filed; prepare the five route cards; assign contrast lessons so all five routes are covered; brief the SRL on the wrong-route puzzle.
+- **Risks / contingency:** Route cards run long → protect the personal route decision and move the extra cards below the notebook's optional-depth line; a Contract fits two routes → declare the primary route and mark the hybrid overlay for Wednesday.
 
-### M13 — Wed 2026-09-23 (in-person) — Reading an observational description: measurement, missingness, and the generalization boundary
+### M13 — Wed 2026-09-23 (in-person) — The route jigsaw: defend your pathway by ruling out its mandated contrast
 
 - **Student Research Lead slot:** SRL slot 07 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: a survey with 40% nonresponse reports a precise national estimate — what license is missing, and what would restore it?
-- **Driving question:** Once the data are in, how do you summarize them honestly, and how far past your sample may the summary reach?
-- **Secondary questions:** How do nonresponse and missingness bend a description? What do distributions, relationships, and indices each reveal? When does a sample description become a population claim, and what licenses that crossing?
-- **Inquiry:** Generalization — descriptive kind · population reach (observational pathway, Lecture 2)
-- **Claim PERMITTED:** "Given what my frame and response rate allow, the population estimate is [value] with stated uncertainty and named coverage limits."
-- **Claim NOT permitted:** "The average in my respondents is the population average" when nonresponse is related to the very thing being measured.
-- **RDSS reading:** RDSS ch. 15 'Observational: descriptive' (book.declaredesign.org), measurement and nonresponse sections
-- **Other material:** nb05 student notebook (observational descriptive), §4–6 (Colab); lapop_brazil attribution + resample-caveat note
-- **Provenance:** RDSS ch.15 + rdss lapop_brazil | measurement, nonresponse, distributions/relationships/indices, the generalization boundary | sample-survey exploration + seeded nonresponse stress-test (seed 464) | adapted
-- **Concepts:** measurement of a construct; coverage; nonresponse; missingness (and why it is rarely random); distributions; relationships between variables; indices as combined measures; generalization from sample to population; the lapop_brazil resample caveat; diagnose -> redesign the observational design
-- **Python dependency:** pandas (describe, groupby, missingness audit), numpy (seeded nonresponse filter, seed 464), matplotlib (distributions, an index)
-- **Dataset / simulation:** lapop_brazil.csv as a sample survey (10,000-row resample, taught as a provenance lesson); seeded nonresponse filter (seed 464)
-- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the SRL puts up a headline population estimate built on 40% nonresponse and asks the room what license is missing; 7–30 intensive applied AI laboratory: with AI as research partner, explore lapop_brazil (a distribution, one relationship, one index), then delete the least-trusting respondents and watch the estimate move, asking AI to draft the coverage caveat while you check it against the numbers; 30–38 peer defense + adversarial questioning: partners attack each other's generalization sentence — does the frame and response rate actually license it?; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to the final project + ledger + Claim Ticket: write your project's measurement-and-coverage note, log the ledger entry, and write the Claim Ticket.
-- **Hands-on activity:** Explore lapop_brazil, build a distribution/relationship/index, then simulate nonresponse and measure how far it moves the estimate you would have reported.
-- **Practice:** 📝 nb05 practice: rewrite three sample-only summaries into population claims that name their coverage limits, or explain why the crossing is not licensed.
-- **Discussion prompt:** For your own project, what is the one measurement you most worry is missing not-at-random, and how would you even notice if it were?
-- **Project connection:** Your measurement-and-coverage note and the diagnosed nonresponse risk complete the M4 audit you present at this Friday's studio.
-- **Milestone developed:** M4 — Observational descriptive design audit (final development)
-- **Milestone work time:** 10 min (measurement-and-coverage note + diagnosed nonresponse risk added to the M4 audit)
-- **Milestone presentation/review:** none (lecture day)
-- **Student prep:** Read the RDSS ch. 15 measurement and nonresponse sections; bring your population/frame/sample stack from the previous lecture.
-- **Student artifact:** Executed lapop_brazil exploration + nonresponse stress-test + your measurement-and-coverage note
-- **Exit ticket:** Claim Ticket #13: my project's headline description, worded to stop exactly where my frame and response rate stop.
-- **Homework / next milestone:** Finish the M4 observational descriptive design audit and rehearse a 3-minute walkthrough for this Friday's studio.
-- **Instructor prep:** Verify lapop_brazil.csv loads; pre-seed the nonresponse filter (seed 464); prepare the index example; brief the SRL on the nonresponse puzzle.
-- **Risks / contingency:** Two explorations crowd the lab → the index build ships as a provided cell and the nonresponse reveal stays live; load fails → nb05's embedded 500-row fallback carries the class.
+- **SRL puzzle focus:** Colleague challenge: a fresh claim from your colleague quietly borrows the license of a neighboring route — find the borrowed verb.
+- **Driving question:** Why does your declared route fit your Contract better than the contrast the instructor assigned you to rule out?
+- **Secondary questions:** Which claim verbs change when the route changes? Does your design genuinely have stages, or does the hybrid overlay not apply? What evidence would force a route change rather than a robustness note?
+- **Inquiry:** route comparison and pathway warrant (design-library layer)
+- **Claim PERMITTED:** "My route is [pathway]; the mandated contrast would answer [other question]; my Contract asks [my question], so the contrast is ruled out — and here is my claim boundary."
+- **Claim NOT permitted:** A route declared from convenience, familiarity, or results already glimpsed — the declaration precedes the data, and the contrast must be genuinely engaged, never strawmanned.
+- **RDSS reading:** Required EDR|AI: the instructor-assigned contrast lesson (read before today); the hybrid/complex-designs lesson only when your design has stages. Recommended RDSS: skim the contrast route's design-library chapter (ch. 15–18, book.declaredesign.org).
+- **Other material:** nb05 §Lecture 2 (Colab); the route-signal matrix from Monday; the colleague route artifact; M4 brief
+- **Provenance:** crosswalk M4 route_selection (own-route-plus-one-contrast; five-route jigsaw, advocates independent of project routes) + EDR|AI Studio 5 | the route jigsaw | advocate rounds + mandated-contrast warrant + scored colleague audit | newly-constructed-from-source-concept
+- **Concepts:** the mandated contrast; the five-route jigsaw (advocate roles independent of project routes); the pathway warrant; boundary verbs (the claim language each route licenses); the hybrid-stage decision; route change vs robustness check
+- **Python dependency:** none beyond Monday's loaded route cards
+- **Dataset / simulation:** the same five route cards (no new analysis; the argument is the work)
+- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: name the five routes and their signals from memory, then the SRL opens the colleague claim with the borrowed verb; 7–30 intensive applied AI laboratory: the five-route jigsaw — each student advocates ONE route (assigned independent of their project) for a shared case, then turns to their own Contract to write the mandated-contrast warrant, and runs the colleague audit (find the seeded flaw, defend the decision that only looks wrong, repair with the smallest defensible correction), with AI pressed to argue the contrast side; 30–38 peer defense + adversarial questioning: partners attack each other's warrant — does the contrast get ruled out, or merely dismissed?; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to the final project + Ledger + Claim Ticket: finalize the route declaration, contrast warrant, and hybrid decision for M4.
+- **Hands-on activity:** Advocate one route in the jigsaw, then write your own mandated-contrast warrant and hybrid-stage decision, with AI pressed to argue the other side.
+- **Practice:** 📝 nb05 practice: complete the pair for your own project: my contrast route would answer ___, but my Contract asks ___.
+- **Discussion prompt:** What evidence, arriving mid-semester, would force you to change routes rather than add a robustness check — and what would you owe your Contract if it did?
+- **Project connection:** The route declaration, contrast warrant, and hybrid decision finish the M4 draft you work and submit at this Friday's studio.
+- **Milestone developed:** M4 — Pathway declaration and mandated contrast, Book Milestone 5 v1 (dev; contrast warrant + hybrid decision)
+- **Milestone work time:** 8 min (contrast warrant + hybrid decision into M4)
+- **Milestone presentation/review:** peer defense of route, contrast, and boundary; colleague audit sheet due
+- **Student prep:** Read the assigned contrast lesson; bring Monday's route matrix and your provisional route.
+- **Student artifact:** Route declaration v1 + contrast warrant + hybrid decision + colleague audit sheet
+- **Exit ticket:** Claim Ticket #13: one tempting alternative route I ruled out, and the Contract sentence that ruled it out.
+- **Homework / next milestone:** Bring the complete M4 draft (route, warrant, contrast, boundary, hybrid decision) to Friday's studio.
+- **Instructor prep:** Assign jigsaw advocate roles so every route is represented; hold the colleague keys and the likely clean traps; brief the SRL on the borrowed-verb challenge.
+- **Risks / contingency:** A project genuinely lacks the information to declare → allow a versioned provisional route with the missing decision named; the jigsaw overruns → the own-Contract warrant is protected and the shared case closes early.
 
-### M14 — Fri 2026-09-25 (in-person) — Studio Friday — observational descriptive audits present; the causal question opens (M4 due, M5 kicks off)
+### M14 — Fri 2026-09-25 (in-person) — Studio Friday — pathway declarations: M4 due, M5 kickoff
 
-- **Driving question:** Can you walk a skeptic through your observational design and show exactly where its description must stop?
-- **Secondary questions:** What makes a population claim defensible out loud? Now that description is on the table, what does it take to ask a causal question honestly?
-- **Inquiry:** Description + Generalization -> the causal turn (studio hand-off)
-- **Claim PERMITTED:** "Here is my population, my frame, my measurement, and the exact boundary past which my description cannot go."
-- **Claim NOT permitted:** "The design is standard, so it needs no audit" — every observational description hides a selection and a coverage decision someone can question.
-- **RDSS reading:** (no new reading — studio Friday; bring your M4 audit and a 3-minute walkthrough)
-- **Other material:** nb05 (observational descriptive) for the recap; M5 Brightspace brief (causal identification strategy or causal-language boundary)
-- **Provenance:** course studio protocol + M4/M5 Brightspace briefs | studio Friday | 3-minute audit walkthrough + two-line peer review slips + causal-question kickoff | newly-constructed-from-source-concept
-- **Concepts:** defending an observational description aloud; the selection/coverage audit; the descriptive-to-causal boundary; milestone hand-off (M4 -> M5)
-- **Python dependency:** none required (walkthroughs + peer review; nb05 open for reference)
-- **Dataset / simulation:** student's own project data plans (no shared dataset today)
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each project states its population, its frame, and the one coverage worry it could not shake this week; 15–45 milestone kickoff from the Brightspace brief + AI-supported sprint: present the M5 deliverable and rubric (a causal identification strategy or an honest causal-language boundary), then run five 3-minute M4 walkthroughs with AI-assisted note-taking; 45–50 revise, update ledger + dossier, submit + Claim Ticket: patch the weakest boundary, update the dossier and ledger, submit M4, and write the Claim Ticket.
-- **Hands-on activity:** Deliver a 3-minute M4 walkthrough, collect two-line peer reviews, run an AI overclaim-check, and open your M5 causal question.
-- **Practice:** 📝 while listening: for each walkthrough, note the strongest boundary line and the one place the description quietly overreaches.
-- **Discussion prompt:** Which classmate's coverage limit would you steal for your own project, and what does admitting it buy you?
-- **Project connection:** M4 presents and submits; M5 (a causal identification strategy or a defended causal-language boundary) kicks off from its Brightspace brief.
-- **Milestone developed:** M4 — Observational descriptive design audit (worked + submitted); M5 — Causal identification strategy or causal-language boundary (kickoff)
-- **Milestone work time:** 23-min kickoff + sprint within the studio block (M5 opens, M4 walkthroughs)
-- **Milestone presentation/review:** M4 worked at the studio and submitted
-- **Student prep:** M4 audit complete; 3-minute walkthrough rehearsed; nb05 finished.
-- **Student artifact:** Delivered walkthrough + peer reviews given/received + M5 causal question drafted
-- **Exit ticket:** Claim Ticket #14: one coverage limit I heard today that I will adopt, and the causal question I am tempted to ask next.
-- **Homework / next milestone:** Submit M4 tonight on Brightspace. For Monday, read the RDSS ch. 16 opener on observational causal designs and bring a candidate causal question.
-- **Instructor prep:** Print two-line review slips; stage the M5 Brightspace brief; timer; consult order; confirm the AI overclaim-check prompt is ready.
-- **Risks / contingency:** Walkthroughs overrun → peer reviews go silent-written and the M5 kickoff brief is posted to Brightspace, read before the next studio sprint.
+- **Driving question:** Can you submit a pathway declaration whose warrant and claim boundary survive the mandated contrast?
+- **Secondary questions:** Are all the M4 pieces present — route, warrant, contrast, boundary, hybrid decision? What does the M5 brief ask for (a governed data and measurement record)?
+- **Inquiry:** pathway declaration (studio)
+- **Claim PERMITTED:** "My pathway is declared: route, warrant, ruled-out contrast, claim boundary, and hybrid decision — versioned before any result exists."
+- **Claim NOT permitted:** A route label without a Contract-based warrant, or a boundary sentence that quietly keeps verbs the route does not license.
+- **RDSS reading:** (no new reading — studio Friday; bring your complete M4 draft)
+- **Other material:** week05 quiz (printed); nb05 student notebook (route hub) — recap reference (Colab); M5 Brightspace brief
+- **Provenance:** course studio protocol + crosswalk M4 + M4/M5 Brightspace briefs + GenAI Studio reviewer bench | weekly Friday studio | pathway-declaration assembly + recommended Causal Identification Skeptic review + M5 kickoff | newly-constructed-from-source-concept
+- **Concepts:** the pathway declaration as a versioned commitment; the M4 checklist (route, warrant, contrast, boundary, hybrid); the recommended GenAI Studio 'Causal Identification Skeptic' pass; the M5 deliverable (data + measurement governance); milestone hand-off (M4 -> M5)
+- **Python dependency:** none required (declaration assembly; nb05 open for reference)
+- **Dataset / simulation:** student's own project materials (no shared dataset today)
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each project states its route, its ruled-out contrast, and one unresolved risk; 15–45 milestone kickoff from the Brightspace brief + AI-supported sprint: present the M5 deliverable and rubric (how data reach you, provenance, permission, measurement), then work the M4 checklist — route, warrant, contrast, boundary, hybrid decision — and run the recommended GenAI Studio 'Causal Identification Skeptic' review on the declaration (the identification argument your route claims, or your defense that your language stays descriptive); 45–50 revise, update Ledger + dossier, submit M4 + Claim Ticket.
+- **Hands-on activity:** Apply the M4 checklist to your declaration, run the recommended Causal Identification Skeptic review, patch the weakest sentence, and submit M4.
+- **Practice:** 📝 studio log: record the one word in your boundary sentence the skeptic review attacked, and the verb you replaced it with.
+- **Discussion prompt:** Which sentence in your Contract did the most work in selecting your route — and what does that tell you about where your project's risk lives?
+- **Project connection:** M4 closes today; the declared pathway decides what the M5 governed-data record must cover, starting Monday with acquisition and provenance.
+- **Milestone developed:** M4 — Pathway declaration and mandated contrast, Book Milestone 5 v1 (worked + due); M5 — Data and measurement governance, Book Milestone 6 v1 (kickoff)
+- **Milestone work time:** 30 min studio block
+- **Milestone presentation/review:** M4 worked at the studio and submitted; recommended GenAI Studio 'Causal Identification Skeptic' review logged in the Ledger
+- **Student prep:** M4 draft complete (route, warrant, contrast, boundary, hybrid decision); current Contract in hand; laptop ready.
+- **Student artifact:** Submitted M4 + skeptic-review log + first M5 acquisition notes
+- **Exit ticket:** Claim Ticket #14: the one route boundary I will carry unchanged into analysis, however inconvenient it gets.
+- **Homework / next milestone:** Submit M4 tonight (11:59 PM). Weekend: read the data-provenance lesson — Week 6 governs how data reach you and what your measures mean.
+- **Instructor prep:** Print the week05 quiz and M4 rubric; stage the M5 Brightspace brief; confirm the Causal Identification Skeptic role is live; prepare route-specific coaching prompts; consult order.
+- **Risks / contingency:** Route uncertainty threatens submission time → accept a marked provisional route with the missing evidence named; skeptic reviews queue → run the declarations closest to causal language first and log the rest after class.
 
-## Week 6 — Observational causal research
+## Week 6 — Studio 6: Govern data and measurement
 
-### M15 — Mon 2026-09-28 (in-person) — Observational causal designs: counterfactuals, confounding, and the DAG that earns 'because'
+### M15 — Mon 2026-09-28 (in-person) — How data reach you: acquisition routes, provenance, and permission
 
 - **Student Research Lead slot:** SRL slot 08 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: coffee drinkers live longer in the data — draw the DAG that makes that correlation a trap, and the one that would make it a cause.
-- **Driving question:** Without an experiment, what would let you say an intervention caused an outcome, and what quietly forbids it?
-- **Secondary questions:** What is the counterfactual at the heart of every causal claim? What is a confounder, drawn as a DAG? When does adjusting for observed variables identify an effect, and when does it only pretend to?
-- **Inquiry:** Causal reasoning — causal kind · observational pathway (Lecture 1)
-- **Claim PERMITTED:** "Under the identification argument I stated and probed, the estimated effect of [treatment] on [outcome] is [value] with uncertainty."
-- **Claim NOT permitted:** "We controlled for everything, so this is the causal effect" — adjustment on observed variables is not identification when an unobserved confounder remains.
-- **RDSS reading:** RDSS ch. 16 'Observational: causal' (book.declaredesign.org), counterfactuals, confounding, and selection-on-observables sections; the observational-causal entries in the DeclareDesign design library
-- **Calling Bullshit (optional):** optional: callingbullshit.org module on correlation and causation
-- **Other material:** nb06 student notebook (observational causal), §1–3 (Colab); cliningsmith_etal attribution note
-- **Provenance:** RDSS ch.16 + DeclareDesign library (observational causal) + rdss cliningsmith_etal | counterfactuals, treatment/outcome/estimand, confounding, selection into treatment, DAGs, selection-on-observables | potential-outcomes simulation with a hidden confounder (seed 464) + a real natural experiment for context | translated (R→Python)
-- **Concepts:** counterfactual reasoning (the outcome you cannot see); treatment; outcome; estimand (the effect you are after); confounding; selection into treatment; identification; causal diagrams (DAGs); selection on observables; why 'controlling for' is not identifying
-- **Python dependency:** numpy (potential-outcomes simulation with a hidden confounder, seed 464), pandas, networkx (draw the DAG)
-- **Dataset / simulation:** inline potential-outcomes simulation with a planted confounder (seed 464) + cliningsmith_etal.csv (natural-experiment context)
-- **50-minute dynamic:** 0–9 SRL-led research puzzle: the SRL shows that coffee drinkers live longer in the data and asks the room to draw the DAG that makes the correlation a trap and the DAG that would make it a cause; 9–31 guided AI research-partner investigation in the notebook: with AI as research partner, simulate potential outcomes with a hidden confounder, watch a naive comparison miss the true estimand, then ask AI which variables would have to be observed to identify it and check its DAG reasoning against the simulation; 31–43 human verification + instructor formalization: the instructor formalizes counterfactuals, estimand, confounding, and selection-on-observables, and the class verifies where AI's identification story holds and where it breaks; 43–50 decision & defense: log the ledger entry and write the Claim Ticket.
-- **Hands-on activity:** Simulate a causal effect with a hidden confounder, show a naive comparison missing the estimand, and draw the DAG that says which variables identification would require.
-- **Practice:** 📝 nb06 practice: for three observational STEM claims (fertilizer and yield, exposure and disease, a policy and an outcome), draw the confounding DAG and name the variable whose absence breaks identification.
-- **Discussion prompt:** For your own project, if you cannot run an experiment, what is the one unobserved variable most likely to be confounding your comparison, and can you get it?
-- **Project connection:** Your project's causal DAG and candidate identification argument (or the honest note that none is available) begin the M5 deliverable.
-- **Milestone developed:** M5 — Causal identification strategy or causal-language boundary
-- **Milestone work time:** 8 min (draft your causal DAG + candidate identification argument into M5)
+- **SRL puzzle focus:** Colleague puzzle: your colleague's dataset arrived as a bare download link — the analysis is polished, but no one can say who produced the data, when, or under what terms.
+- **Driving question:** Where do your numbers actually come from — and what are you allowed to do with them?
+- **Secondary questions:** Which acquisition route does your permission status put you on: cleared, pending, or no-permission? What must a provenance record document? Why can a simulated dataset demonstrate a method but never support a claim about the world?
+- **Inquiry:** all routes (data governance: acquisition, provenance, permission)
+- **Claim PERMITTED:** "My data reached me by [route], produced by [source] under [terms], and here is the record that proves it" — a provenance-backed acquisition claim.
+- **Claim NOT permitted:** "The data were on the internet, so they are fine to use" — availability is not permission, and a dataset with no provenance record cannot underwrite any claim.
+- **RDSS reading:** Required EDR|AI: the data-provenance lesson (read before today). Recommended RDSS: the data-strategy discussion in your route's design-library chapter (ch. 15–18, book.declaredesign.org).
+- **Other material:** nb06 §Lecture 1 (Colab); your Contract v0 permission determination (from M3); the released colleague acquisition artifact; M5 brief
+- **Provenance:** EDR|AI Studio 6 (BOOK_STATIONS govern-data-measurement acquisition note) + crosswalk M5 + rdss lapop_brazil | acquisition routes, provenance, permission | acquisition-route decision + provenance interrogation of a real survey file + labeled-simulation contrast (seed 464) | newly-constructed-from-source-concept
+- **Concepts:** the three acquisition routes (cleared or determination granted; pending; no authority to ask); sampling frame and non-response as design facts; provenance (who produced it, how, when, under what terms); permission recheck against the data as they actually arrived; the no-permission route (published aggregates, openly licensed data, labeled simulation); why simulated data demonstrate a method but cannot support a claim about the world
+- **Python dependency:** pandas (open the file and its documentation trail), numpy (labeled-simulation contrast, seed 464)
+- **Dataset / simulation:** lapop_brazil.csv interrogated as an acquisition case (the 10,000-row resample caveat IS the provenance lesson); a small labeled simulation (seed 464) for the no-permission contrast
+- **50-minute dynamic:** 0–9 colleague research puzzle: the SRL opens the colleague's polished analysis sitting on a bare download link, and the class lists what a provenance record would have to say before any number is usable; 9–31 guided AI research-partner investigation in nb06: with AI as research partner, interrogate lapop_brazil's provenance — who produced it, how, when, under what terms, including the course resample caveat — then settle YOUR acquisition route from your permission status, asking AI what each route forbids and verifying its answers against the acquisition guidance; 31–43 human verification + instructor formalization: the instructor formalizes the three acquisition routes, the provenance record, and the simulation boundary, and the class settles the colleague diagnosis; 43–50 decision & defense: commit your acquisition route in writing, log the Ledger entry, and write the Claim Ticket.
+- **Hands-on activity:** Interrogate a real survey file's provenance end to end, then commit your own acquisition route in writing — cleared, pending, or no-permission — with the first row of your provenance record.
+- **Practice:** 📝 nb06 practice: for three arrival stories (an emailed spreadsheet, a scraped table, an openly licensed archive), write the provenance row each requires and name the one that cannot yet be used.
+- **Discussion prompt:** Your permission status is 'pending'. What can you honestly build this week without touching people — and what must wait?
+- **Project connection:** Your acquisition route and first provenance rows open the M5 governed-data record due at this Friday's studio.
+- **Milestone developed:** M5 — Data and measurement governance, Book Milestone 6 v1 (dev)
+- **Milestone work time:** 7 min (acquisition route + first provenance rows into M5)
 - **Milestone presentation/review:** none (lecture day)
-- **Student prep:** Read the RDSS ch. 16 opener on observational causal designs; bring a candidate causal question.
-- **Student artifact:** Executed confounding simulation + your project's causal DAG + candidate identification argument
-- **Exit ticket:** Claim Ticket #15: the causal effect my project is after, and the one confounder that most threatens it.
-- **Homework / next milestone:** Continue the M5 identification strategy. For Wednesday, read the RDSS ch. 16 sections on difference-in-differences, instrumental variables, and regression discontinuity.
-- **Instructor prep:** Pre-seed the potential-outcomes simulation (seed 464); prepare the confounding DAG build in networkx; confirm cliningsmith_etal.csv loads; brief the SRL on the coffee puzzle.
-- **Risks / contingency:** networkx DAG plotting fails in Colab → nb06 ships the DAGs as static images with the code shown but not required; the simulation runs long → the hidden-confounder reveal is pre-computed.
+- **Student prep:** Read the data-provenance lesson; bring your M3 Contract v0 with its permission determination; know how your data are supposed to reach you.
+- **Student artifact:** Committed acquisition route + provenance record started + colleague diagnosis note
+- **Exit ticket:** Claim Ticket #15: my acquisition route, and the one provenance fact I still cannot document.
+- **Homework / next milestone:** Grow the provenance record to every source your project touches. For Wednesday, read the measurement lesson and bring the concept your project most needs to measure.
+- **Instructor prep:** Release the week's colleague artifacts at sprint start with keys filed; verify lapop_brazil.csv loads and its resample caveat is visible in nb06; brief the SRL on the download-link puzzle.
+- **Risks / contingency:** A student's data have not arrived → the pending and no-permission routes are the lesson, not the exception: build against a labeled simulation and record the route; provenance search stalls → the instructor's worked lapop_brazil record is the fallback example.
 
-### M16 — Wed 2026-09-30 (in-person) — When nature assigns: difference-in-differences, IV, regression discontinuity, and the assumptions you cannot test
+### M16 — Wed 2026-09-30 (in-person) — Do your measures measure your concepts? Construct, indicator, reliability, validity — and a Contract version
 
 - **Student Research Lead slot:** SRL slot 09 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: a lottery decides who gets a scarce opportunity — why is that luck a research gift, and what would ruin the as-if-random logic?
-- **Driving question:** When you cannot randomize, what does each natural-experiment design exploit, and what must you take on faith?
-- **Secondary questions:** What does difference-in-differences assume about trends? What does an instrument require? What does regression discontinuity buy near the cutoff? Which of these assumptions can data never confirm?
-- **Inquiry:** Causal reasoning — causal kind · observational pathway, natural experiments (Lecture 2)
-- **Claim PERMITTED:** "Because [natural-experiment feature] plausibly assigns [treatment] as-if at random, the estimated effect is [value]; here is the assumption a skeptic would attack."
-- **Claim NOT permitted:** A difference-in-differences, IV, or regression-discontinuity label decorating a comparison whose key assumption was never stated or probed.
-- **RDSS reading:** RDSS ch. 16 'Observational: causal' (book.declaredesign.org), difference-in-differences, instrumental-variables, and regression-discontinuity sections
-- **Other material:** nb06 student notebook (observational causal), §4–6 (Colab); cliningsmith_etal attribution note
-- **Provenance:** RDSS ch.16 + rdss cliningsmith_etal | difference-in-differences, instrumental variables, regression discontinuity, natural experiments, untestable assumptions, causal-language boundaries | the Hajj-lottery natural experiment analyzed as a difference-in-means; DiD/IV/RDD as intuition pictures | translated (R→Python)
-- **Concepts:** difference-in-differences (and the parallel-trends assumption); instrumental variables (relevance + exclusion); regression discontinuity (as-if random near the cutoff); natural experiments; untestable assumptions; the causal-language boundary — what earns 'because' and what stops at 'associated with'
-- **Python dependency:** pandas, numpy (difference-in-means + interval on the lottery data, seed 464), matplotlib (parallel-trends and cutoff intuition pictures, provided)
-- **Dataset / simulation:** cliningsmith_etal.csv (Hajj-lottery natural experiment) analyzed as a difference-in-means; provided DiD/RDD/IV intuition figures
-- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the SRL asks why a lottery for a scarce opportunity is a research gift, and what would ruin the as-if-random logic; 7–30 intensive applied AI laboratory: with AI as research partner, analyze the real lottery natural experiment (balance check, effect estimate, interval), then for each of difference-in-differences, IV, and regression discontinuity ask AI to state the one untestable assumption and check whether it holds here; 30–38 peer defense + adversarial questioning: partners attack each other's identification argument at its weakest assumption; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to the final project + ledger + Claim Ticket: write your project's identification paragraph or its honest causal-language boundary, log the ledger, and write the Claim Ticket.
-- **Hands-on activity:** Analyze a real lottery natural experiment end-to-end, then match difference-in-differences, IV, and regression discontinuity to the untestable assumption each would require.
-- **Practice:** 📝 nb06 practice: for each of difference-in-differences, IV, and regression discontinuity, write the one sentence a skeptic would attack first, and how you would probe it.
-- **Discussion prompt:** For your own project, is there any natural experiment hiding in how your treatment gets assigned — a lottery, a cutoff, a rule change — or must your claim stop at association?
-- **Project connection:** Today you write your project's identification paragraph or its honest causal-language boundary — the core of the M5 deliverable due at this Friday's studio.
-- **Milestone developed:** M5 — Causal identification strategy or causal-language boundary (final development)
-- **Milestone work time:** 10 min (identification paragraph or causal-language boundary drafted into M5)
-- **Milestone presentation/review:** none (lecture day)
-- **Student prep:** Read the RDSS ch. 16 difference-in-differences, IV, and regression-discontinuity sections; bring your causal DAG from the previous lecture.
-- **Student artifact:** Analyzed lottery natural experiment + your identification paragraph (or honest causal-language boundary)
-- **Exit ticket:** Claim Ticket #16: my project's causal status in one sentence — identified by ___, or honestly stopping at association.
-- **Homework / next milestone:** At this Friday's studio: complete nb06, run the recommended GenAI Studio 'Causal Identification Skeptic' review, and submit M5 by the posted time. Budget about 50 minutes.
-- **Instructor prep:** Verify cliningsmith_etal.csv loads and the effect reproduces; check the DiD/RDD intuition figures render; brief the SRL on the lottery puzzle; confirm nb06's module cells are staged.
-- **Risks / contingency:** Intuition pictures crowd the lab → the DiD/RDD/IV block compresses to the three figures and nb06 carries the depth; content overruns → the identification paragraph moves into Friday's studio.
+- **SRL puzzle focus:** Colleague challenge: your colleague measures 'trust in institutions' with a single yes/no question and reports the result to two decimals — what is actually wrong, and what only looks wrong?
+- **Driving question:** When you write a number next to a concept, what evidence says the number means what you claim it means?
+- **Secondary questions:** What separates a concept, a construct, and an indicator? What do reliability and validity each ask of your instrument? Why is any measurement change a Contract version?
+- **Inquiry:** all routes (measurement: construct -> indicator, reliability, validity)
+- **Claim PERMITTED:** "My indicator [X] operationalizes construct [Y]; here is the gap between them, the reliability evidence I have, and what my interpretation is licensed to say."
+- **Claim NOT permitted:** "The variable is named trust, so it measures trust" — a column name is not an operationalization, and precision is not validity.
+- **RDSS reading:** Required EDR|AI: the measurement lesson (read before today). Recommended RDSS: the measurement discussion in your route's design-library chapter (ch. 15–18, book.declaredesign.org).
+- **Other material:** nb06 §Lecture 2 (Colab); your Contract v0 operationalization; the colleague measurement artifact; M5 brief
+- **Provenance:** EDR|AI Studio 6 (BOOK_STATIONS govern-data-measurement) + crosswalk M5 (the D40 Contract revisit) + rdss lapop_brazil | construct -> indicator, reliability, validity, measurement as a Contract version | trust-index build with an item-agreement check + seeded noisy-indicator simulation (seed 464) + scored colleague audit | newly-constructed-from-source-concept
+- **Concepts:** concept vs construct vs indicator; operationalization and the construct-indicator gap; the meaning sentence for each number; reliability (do the items agree with each other); validity (does the interpretation and use hold up); measurement error as uncertainty alongside sampling uncertainty, not instead of it; any measurement change is a Contract version
+- **Python dependency:** pandas (build an index from items), numpy (seeded noisy-indicator simulation, seed 464), matplotlib (item-agreement picture)
+- **Dataset / simulation:** lapop_brazil.csv trust items combined into an index with an item-agreement check; a seeded noisy-indicator simulation (seed 464) showing a reliable-but-invalid measure
+- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: name Monday's three acquisition routes from memory, then the SRL opens the colleague's one-item trust measure; 7–30 intensive applied AI laboratory: with AI as research partner, write your measurement specification (construct, indicator, and the gap between them), build the trust index from real items and check whether the items agree, then run the colleague audit — find the seeded measurement flaw, defend the decision that only looks wrong, and repair the flaw with the smallest defensible correction; 30–38 peer defense + adversarial questioning: partners attack each other's measurement specification at the construct-indicator gap; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to the final project + Ledger + Claim Ticket: settle your Contract's provisional operationalization, mark the change as a Contract version, and log the Ledger entry.
+- **Hands-on activity:** Write your measurement specification, test a real multi-item index for item agreement, audit the colleague's seeded measurement flaw, and version your Contract's operationalization.
+- **Practice:** 📝 nb06 practice: for three indicator choices (a GPA for 'learning', a follower count for 'influence', a self-report for 'exercise'), write the meaning sentence and name the gap a skeptic would attack.
+- **Discussion prompt:** Your instrument is reliable — the items agree beautifully. What would it take for it still to be measuring the wrong thing?
+- **Project connection:** Your measurement specification and the versioned Contract operationalization complete the M5 governed-data record for this Friday's studio.
+- **Milestone developed:** M5 — Data and measurement governance, Book Milestone 6 v1 (dev; measurement specification + Contract revisit)
+- **Milestone work time:** 8 min (measurement specification + Contract version note into M5)
+- **Milestone presentation/review:** peer defense: partner attacks your construct-indicator gap; colleague audit sheet due
+- **Student prep:** Read the measurement lesson; bring Monday's acquisition route and provenance rows plus your Contract v0 operationalization.
+- **Student artifact:** Measurement specification + item-agreement check + colleague audit sheet + Contract version note
+- **Exit ticket:** Claim Ticket #16: my key indicator, the construct it claims to measure, and the gap I will disclose rather than hide.
+- **Homework / next milestone:** Assemble the full M5 governed-data record (acquisition route, provenance, measurement specification, permission recheck) for this Friday's studio.
+- **Instructor prep:** Verify the trust-item index cells run (seed 464); stage the item-agreement picture; hold the colleague keys for the audit debrief; brief the SRL on the one-item-trust challenge.
+- **Risks / contingency:** Reliability intuition stalls → exaggerate the seeded noise until the item disagreement is unmissable, then dial back; the audit runs long → the repair step ships as a written fix and the debrief moves to Friday's stand-up.
 
-### M17 — Fri 2026-10-02 (in-person) — Studio Friday — causal identification sprint: the skeptic reviews your design (M5 submits, M6 brief posts)
+### M17 — Fri 2026-10-02 (in-person) — Studio Friday — data and measurement governed: M5 due, M6 kickoff
 
-- **Driving question:** Can your causal claim survive a skeptic you cannot argue back to in real time?
-- **Secondary questions:** Does your identification argument state its untestable assumption plainly? Where would a hostile reviewer break it? If no identification is available, is your causal-language boundary honest and explicit?
-- **Inquiry:** Causal reasoning — causal kind · observational pathway (claim defense)
-- **Claim PERMITTED:** "My design identifies the effect by [argument]; the assumption it rests on is [X]; a skeptic's strongest objection is [Y], and here is my answer."
-- **Claim NOT permitted:** A causal claim submitted without naming its untestable assumption, or a boundary that quietly keeps causal language it has not earned.
-- **RDSS reading:** RDSS ch. 16 'Observational: causal' (book.declaredesign.org), assumption-probing sections (read before Monday)
-- **Calling Bullshit (optional):** optional: one callingbullshit.org case of your choice from the module linked in nb06
-- **Other material:** nb06 — self-contained module (Colab); GenAI Studio 'Causal Identification Skeptic' role; M6 Brightspace brief (posted today)
-- **Provenance:** RDSS ch.16 + course studio protocol + GenAI Studio reviewer bench | self-contained causal claim defense | studio sprint + recommended skeptic role review | newly-constructed-from-source-concept
-- **Concepts:** stating an untestable assumption plainly; adversarial review of an identification argument; the recommended GenAI Studio 'Causal Identification Skeptic' pass; honest causal-language boundaries; defending an identification argument
-- **Python dependency:** pandas (one small recompute of your own estimate)
-- **Dataset / simulation:** student's own project data plans + the nb06 lottery example for reference
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper; 10–15 research stand-up: state your causal question and your candidate identification argument in one sentence each; 15–45 milestone kickoff from the course Brightspace page + AI-supported sprint: work nb06's module cells and assemble your M5 — the identification paragraph (or honest causal-language boundary), its untestable assumption, and one recompute of your own estimate; run the recommended GenAI Studio 'Causal Identification Skeptic' review and patch the weakest point it finds; 45–50 finalize M5, update the dossier and AI Research Ledger, and submit with your Claim Ticket.
-- **Hands-on activity:** Complete the self-contained causal module: recompute your own estimate, run the recommended GenAI Studio 'Causal Identification Skeptic' review, and submit M5.
-- **Practice:** 📝 nb06 practice: classify three published causal headlines by whether they name their identifying assumption, and rewrite one to stop at what it earns.
-- **Discussion prompt:** State your identification argument and its untestable assumption, then name the single assumption a skeptic would attack first — and your answer to that attack.
-- **Project connection:** M5 submits and the causal branch of your design is locked or honestly bounded; the M6 brief opens the experimental-measurement question.
-- **Milestone developed:** M5 — Causal identification strategy or causal-language boundary (submitted at the studio); M6 — Experimental measurement or data-acquisition protocol (brief posted)
-- **Milestone work time:** module includes a 20-min M5 assembly block + the recommended GenAI Studio skeptic review
-- **Milestone presentation/review:** M5 worked at the studio and submitted; recommended GenAI Studio 'Causal Identification Skeptic' review logged in the ledger
-- **Student prep:** nb06 lectures complete; identification paragraph (or causal-language boundary) drafted; GenAI Studio account access confirmed.
-- **Student artifact:** Completed nb06 module: recompute cell + skeptic-review log + submitted M5 + board stand-up
-- **Exit ticket:** (embedded in the module) Claim Ticket #17: the assumption the skeptic attacked hardest, and how I answered or conceded it.
-- **Homework / next milestone:** Submit M5 and the nb06 module by the posted time. For Monday, read the RDSS ch. 17 opener on experimental descriptive designs; the M6 brief is on Brightspace.
-- **Instructor prep:** Final-check nb06 runs end-to-end; confirm the GenAI Studio 'Causal Identification Skeptic' role is live with its instructions in the module; post the M6 brief; seed the discussion board for the studio.
-- **Risks / contingency:** A student stalls on the identification argument → nb06 embeds hints behind expandable cells and rotating consults reach every student; GenAI Studio unavailable → a provided AI fallback skeptic prompt stands in and the required review is logged when the service returns.
+- **Driving question:** Can you show where every number came from, what it measures, and under what permission — before any analysis runs?
+- **Secondary questions:** Does your provenance record cover every source? Does your measurement specification survive a skeptic? What does the M6 brief ask for (a first executable analysis, with the URC abstract internal gate next Friday)?
+- **Inquiry:** all routes (studio: the governed-data checkpoint + Contract revisit)
+- **Claim PERMITTED:** "My data are governed: acquisition route recorded, provenance documented, measures specified with their gaps named, permissions rechecked against the data as they arrived."
+- **Claim NOT permitted:** "The data are fine — I will document them later" — a result computed on ungoverned data inherits every problem you declined to record.
+- **RDSS reading:** (no new reading — studio Friday; bring your complete M5 governed-data record)
+- **Other material:** week06 quiz (printed); nb06 student notebook (data + measurement governance) — recap reference (Colab); M6 Brightspace brief
+- **Provenance:** course studio protocol + crosswalk M5 (Contract revisit at the studio) + M5/M6 Brightspace briefs | weekly Friday studio | governed-data assembly + Contract versioning + M6 kickoff | newly-constructed-from-source-concept
+- **Concepts:** the governed-data record as a submission; the Contract operationalization settled and versioned; the permission recheck; the M6 deliverable (first executable analysis + URC abstract internal gate); milestone hand-off (M5 -> M6)
+- **Python dependency:** none new (own milestone work; nb06 open for reference)
+- **Dataset / simulation:** student's own governed data (or a labeled simulation on the no-permission route)
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each project states its acquisition route, the provenance fact it is proudest of, and the measurement gap it is disclosing; 15–45 milestone kickoff from the Brightspace brief + AI-supported sprint: present the M6 deliverable and rubric (a first executable analysis, with the URC abstract internal gate at next Friday's studio), then assemble the M5 governed-data record — provenance rows completed, measurement specification attached, permissions rechecked, Contract version logged; 45–50 revise, update Ledger + dossier, submit M5 + Claim Ticket.
+- **Hands-on activity:** Assemble and submit the M5 governed-data record, settle the Contract operationalization as a logged version, and open your M6 analysis plan.
+- **Practice:** 📝 studio log: record the one provenance or measurement hole a partner found in your record, and how you closed or disclosed it.
+- **Discussion prompt:** Which classmate's provenance record would survive an audit by a stranger — and what does yours still assume the reader will take on faith?
+- **Project connection:** M5 closes today; the governed data it locks are what your M6 first executable analysis is licensed to run on.
+- **Milestone developed:** M5 — Data and measurement governance, Book Milestone 6 v1 (worked + due); M6 — First executable analysis + URC abstract internal gate, Book Milestone 7 v1 (kickoff)
+- **Milestone work time:** 30 min studio block
+- **Milestone presentation/review:** M5 worked at the studio and submitted; Contract v0 operationalization revisited and versioned
+- **Student prep:** M5 governed-data record complete (acquisition route, provenance, measurement specification, permission recheck); laptop ready.
+- **Student artifact:** Submitted M5 + logged Contract version + M6 analysis-plan notes
+- **Exit ticket:** Claim Ticket #17: the provenance fact or measurement gap I disclosed today that I was most tempted to leave out.
+- **Homework / next milestone:** Submit M5 tonight (11:59 PM). Weekend: read the AI-as-programmer lesson; for Monday, bring your Contract and governed-data record — Week 7 turns your declared analysis into running code.
+- **Instructor prep:** Print the week06 quiz and M5 rubric; stage the M6 Brightspace brief; prepare route-specific governance coaching prompts; consult order.
+- **Risks / contingency:** A record is incomplete at close → submit with the gaps named as gaps (a disclosed hole beats a silent one) and book an office-hours repair; quiz or stand-up overruns → protect the 30-minute sprint block.
 
-## Week 7 — Experimental descriptive research
+## Week 7 — Studio 7: Produce a reproducible first analysis (build)
 
-### M18 — Mon 2026-10-05 (in-person) — Experiments as measurement: when random assignment serves a descriptive question
+### M18 — Mon 2026-10-05 (in-person) — From Contract to executable pipeline: does the code run YOUR analysis?
 
 - **Student Research Lead slot:** SRL slot 10 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: a study randomizes résumé names to measure discrimination — the assignment is random, so why is the inquiry descriptive, not causal?
-- **Driving question:** If you randomize a stimulus but only want to measure something, is your inquiry causal or descriptive, and why does the answer matter?
-- **Secondary questions:** How does an experiment become a measurement instrument for a latent characteristic? What do audit and list experiments measure that a survey cannot? Why does random assignment alone not make an inquiry causal?
-- **Inquiry:** Description — descriptive kind · experimental pathway, measurement (Lecture 1)
-- **Claim PERMITTED:** "Using randomized stimuli as a measurement instrument, the latent characteristic I estimate is [value], described for the units observed."
-- **Claim NOT permitted:** "We randomized, therefore we have a causal effect" — random assignment can serve a purely descriptive measurement inquiry, and calling it causal misreads the question.
-- **RDSS reading:** RDSS ch. 17 'Experimental: descriptive' (book.declaredesign.org), measurement-experiment sections; the experimental-descriptive entries in the DeclareDesign design library
-- **Other material:** nb07 student notebook (experimental descriptive), §1–3 (Colab); bonilla_tillery attribution note
-- **Provenance:** RDSS ch.17 + DeclareDesign library (experimental descriptive) + rdss bonilla_tillery | experiments as measurement systems, latent characteristics, controlled stimuli, audit + list experiments, construct validity, assignment != causal inquiry | a real survey experiment analyzed as measurement + a seeded list-experiment simulation (seed 464) | translated (R→Python)
-- **Concepts:** experiments used as measurement systems; experimental data strategy serving a descriptive inquiry; latent characteristics; controlled stimuli; audit experiments; list experiments; construct validity; why experimental assignment does not automatically imply a causal inquiry
-- **Python dependency:** pandas, numpy (list-experiment estimate + seeded simulation, seed 464), matplotlib
-- **Dataset / simulation:** bonilla_tillery.csv (survey experiment, treatment Z) analyzed as a measurement instrument + a seeded list-experiment simulation (seed 464, optional depth)
-- **50-minute dynamic:** 0–9 SRL-led research puzzle: the SRL presents a résumé-name audit study and asks why, though assignment is random, the inquiry is descriptive rather than causal; 9–31 guided AI research-partner investigation in the notebook: with AI as research partner, analyze the real survey experiment as a measurement of a latent attitude and ask AI to state what construct the design measures and what threatens its validity, checking against the data (the seeded list-experiment simulation waits below the ⏸ line as optional depth); 31–43 human verification + instructor formalization: the instructor formalizes experiments-as-measurement, latent characteristics, audit and list experiments, and the assignment-is-not-a-causal-inquiry point, and the class verifies AI's construct claims; 43–50 decision & defense: log the ledger entry and write the Claim Ticket.
-- **Hands-on activity:** Analyze a real survey experiment as a measurement instrument, naming the latent characteristic it estimates and the validity threat it faces (the list-experiment simulation is optional depth).
-- **Practice:** 📝 nb07 practice: for three randomized-stimulus studies, decide whether the inquiry is descriptive (measurement) or causal, and justify the call from the question's words.
-- **Discussion prompt:** Could an experiment measure something in your own project that a direct question never could, and would that make your inquiry descriptive or causal?
-- **Project connection:** You decide whether an experiment could serve a measurement need in your project, starting the M6 experimental-measurement or data-acquisition protocol.
-- **Milestone developed:** M6 — Experimental measurement or data-acquisition protocol
-- **Milestone work time:** 8 min (draft whether and how an experiment measures a construct in your project, into M6)
-- **Milestone presentation/review:** none (lecture day)
-- **Student prep:** Read the RDSS ch. 17 opener on experimental descriptive designs; bring one construct your project needs to measure.
-- **Student artifact:** Analyzed survey experiment + your project's measurement-experiment note
-- **Exit ticket:** Claim Ticket #18: a construct my project must measure, and whether an experiment or a direct measure serves it better.
-- **Homework / next milestone:** Continue the M6 protocol. For Wednesday, read the RDSS ch. 17 sections on conjoint experiments and behavioral games, plus demand and instrument effects.
-- **Instructor prep:** Confirm bonilla_tillery.csv loads; prepare the audit-study example (the list-experiment simulation is optional depth); brief the SRL on the résumé-name puzzle.
-- **Risks / contingency:** Survey-experiment analysis confuses → nb07 wraps the estimate in a helper that prints only the measured quantity and its uncertainty; time short → trim the second framing comparison (the list-experiment simulation is already optional depth).
+- **SRL puzzle focus:** Colleague puzzle: your colleague's notebook runs top to bottom without an error — and estimates a quantity the Contract never declared.
+- **Driving question:** Does each step of the code execute the analysis you declared — or a nearby analysis that merely runs?
+- **Secondary questions:** Where can delegated code silently change the inquiry, the data, or the answer? What belongs in a pipeline map? When is a coding correction also a Contract version?
+- **Inquiry:** all routes (the declaration-to-execution trace)
+- **Claim PERMITTED:** "Each code block implements a named Contract field, and I inspected the delegated lines — my pipeline runs the analysis I declared."
+- **Claim NOT permitted:** "It executed cleanly, so it answers my question" — successful execution proves the code runs, not that it runs YOUR analysis.
+- **RDSS reading:** Required EDR|AI: the AI-as-programmer lesson (read before today); revisit your route lesson as your analysis needs it. Recommended RDSS: revisit ch. 5 'Declaring designs' (book.declaredesign.org) if your declared analysis needs re-anchoring.
+- **Other material:** nb07 §Lecture 1 (Colab); your Contract + M5 governed-data record; the colleague pipeline artifact (unscored preview); M6 brief
+- **Provenance:** EDR|AI Studio 7 steps 1–2 (BOOK_STATIONS first-analysis) + crosswalk M6 + rdss foos_etal | Contract-to-pipeline mapping | annotate-every-block correspondence exercise on a real field experiment + colleague pipeline diagnosis | newly-constructed-from-source-concept
+- **Concepts:** the pipeline (input -> transformation -> estimate); declared analysis vs nearby analysis; the pipeline map (each code block annotated with the Contract field it implements); delegated-code inspection; the execution record; a coding correction as a Contract version
+- **Python dependency:** pandas, numpy (seed 464); route-specific libraries only where already declared
+- **Dataset / simulation:** foos_etal.csv as the common demonstration pipeline; the student's own governed data for the transfer
+- **50-minute dynamic:** 0–9 colleague research puzzle: the SRL runs the colleague's clean-running notebook next to its Contract, and the class hunts the line where the estimated quantity stops being the declared one; 9–31 guided AI research-partner investigation in nb07: with AI as research partner, walk the common foos_etal pipeline and annotate every code block with the Contract field it implements, asking AI to explain each delegated line and verifying the explanation against what the code actually does; 31–43 human verification + instructor formalization: the instructor formalizes the pipeline map and the execution record, and the class settles where the colleague's pipeline diverged; 43–50 decision & defense: draft your own pipeline map, log the Ledger entry, and write the Claim Ticket.
+- **Hands-on activity:** Annotate every block of a real pipeline with the Contract field it implements, then map your own declared analysis block by block.
+- **Practice:** 📝 nb07 practice: given four code steps, identify the first point where the estimand changes — and the annotation that would have caught it.
+- **Discussion prompt:** When is a coding correction just a bug fix, and when does it change what your estimand refers to — and so demand a Contract version?
+- **Project connection:** Your pipeline map is the skeleton of the M6 first executable analysis due at this Friday's studio.
+- **Milestone developed:** M6 — First executable analysis + URC abstract internal gate, Book Milestone 7 v1 (dev)
+- **Milestone work time:** 7 min (pipeline map for your declared analysis into M6)
+- **Milestone presentation/review:** one oral defense of your highest-risk code step
+- **Student prep:** Read the AI-as-programmer lesson; bring your Contract, your M5 governed-data record, and any analysis code you already have.
+- **Student artifact:** Annotated common pipeline + own pipeline map + first code scaffold + colleague diagnosis note
+- **Exit ticket:** Claim Ticket #18: the code step most likely to change my answer, and how I will inspect it.
+- **Homework / next milestone:** Bring a runnable first-analysis scaffold to Wednesday; keep every delegated block annotated as you build.
+- **Instructor prep:** Verify the foos_etal scaffold runs in Colab; prepare the contract-code mismatch with verified output; release the colleague pipeline preview (unscored — its scored S7 audit runs in Week 8); brief the SRL on the clean-but-wrong puzzle.
+- **Risks / contingency:** Environments fail in class → the printed execution trace carries the mapping work and the code runs at home; annotation drags → annotate the three highest-risk blocks and mark the rest for the scaffold homework.
 
-### M19 — Wed 2026-10-07 (in-person) — Conjoint, behavioral games, and calibration: designing a measurement experiment that survives its own artifacts
+### M19 — Wed 2026-10-07 (in-person) — Execute, attach uncertainty, and trace the result to its output
 
 - **Student Research Lead slot:** SRL slot 11 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: two labs calibrate the same sensor and get different readings — is that the world, the instrument, or the design?
-- **Driving question:** How do you design an experiment whose measurement is not an artifact of demand effects or the instrument itself?
-- **Secondary questions:** What do conjoint experiments and behavioral games measure? How do calibration and A/B instrument tests work as measurement in STEM? What are demand effects and instrument effects, and how do you diagnose and redesign around them?
-- **Inquiry:** Description — descriptive kind · experimental pathway, measurement design (Lecture 2)
-- **Claim PERMITTED:** "My measurement experiment estimates [construct] while controlling for demand and instrument effects, verified by [check]."
-- **Claim NOT permitted:** A measurement number reported without checking whether participants guessed the hypothesis or the instrument itself moved the result.
-- **RDSS reading:** RDSS ch. 17 'Experimental: descriptive' (book.declaredesign.org), conjoint, behavioral-game, and validity-threat sections
-- **Other material:** nb07 student notebook (experimental descriptive), §4–6 (Colab); bonilla_tillery attribution note
-- **Provenance:** RDSS ch.17 + rdss bonilla_tillery | conjoint experiments, behavioral games, STEM measurement experiments (calibration, A/B instrument tests, psychophysics), demand effects, instrument effects, construct validity | seeded measurement simulation (seed 464) declared -> diagnosed -> redesigned | extended
-- **Concepts:** conjoint experiments; behavioral games; STEM measurement experiments (calibration protocols, A/B instrument tests, psychophysics); demand effects; instrument effects; construct validity; declare -> diagnose -> redesign a measurement experiment
-- **Python dependency:** numpy (seeded conjoint/measurement simulation, seed 464), pandas, matplotlib
-- **Dataset / simulation:** seeded measurement-experiment simulation (seed 464) with planted demand and instrument effects; bonilla_tillery.csv for reference
-- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the SRL shows two labs calibrating one sensor to different readings and asks whether the gap is the world, the instrument, or the design; 7–30 intensive applied AI laboratory: with AI as research partner, declare a small measurement experiment, diagnose it under planted demand and instrument effects, and redesign to shrink the artifact, asking AI for candidate fixes and verifying each by simulation; 30–38 peer defense + adversarial questioning: partners attack each other's measurement design for the artifact it failed to rule out; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to the final project + ledger + Claim Ticket: draft your project's measurement-experiment or data-acquisition protocol, log the ledger, and write the Claim Ticket.
-- **Hands-on activity:** Declare, diagnose, and redesign a measurement experiment under demand and instrument effects, verifying each redesign by simulation.
-- **Practice:** 📝 nb07 practice: spoken retrieval drill, from memory: Monday's decision rule in one line, one claim it permits, one it does not (the artifact/redesign drill is optional depth).
-- **Discussion prompt:** For your own project, what is the one way your participants or your instrument could produce your result even if the real effect were zero?
-- **Project connection:** Your measurement-experiment or data-acquisition protocol completes the M6 deliverable, and your URC abstract draft begins for this Friday's internal gate.
-- **Milestone developed:** M6 — Experimental measurement or data-acquisition protocol (final development); URC abstract draft begun for the internal gate
-- **Milestone work time:** 10 min (measurement/data-acquisition protocol into M6 + first URC abstract lines)
-- **Milestone presentation/review:** none (lecture day)
-- **Student prep:** Read the RDSS ch. 17 conjoint and behavioral-game sections; bring your measurement-experiment note from the previous lecture.
-- **Student artifact:** Declare-diagnose-redesign measurement simulation + your M6 protocol + URC abstract draft started
-- **Exit ticket:** Claim Ticket #19: the artifact most likely to fake my project's measurement, and the design choice that guards against it.
-- **Homework / next milestone:** Finish the M6 protocol and draft the 150–250-word URC abstract — the internal gate is this Friday's studio. No new reading.
-- **Instructor prep:** Pre-seed the measurement simulation with demand/instrument effects (seed 464); prepare the calibration example; post the URC abstract template; brief the SRL on the sensor puzzle.
-- **Risks / contingency:** Simulation too abstract → anchor every term to a cell and use the calibration example as the running case; time short → the redesign step ships as a provided comparison and the protocol drafting moves to the Friday studio.
+- **SRL puzzle focus:** Puzzle: a polished first result reports one confident number — no uncertainty, no execution record. What, exactly, has been established?
+- **Driving question:** What first result does your declared analysis produce — and where is its uncertainty?
+- **Secondary questions:** Can you verify a delegated number without re-deriving everything? What belongs in an environment record? How does a claim name the exact output that supports it?
+- **Inquiry:** all routes (first result + uncertainty + claim-output trace)
+- **Claim PERMITTED:** "My first result is [estimate] with [uncertainty], produced by the declared pipeline, and this claim traces to output [X], which I verified by [check]."
+- **Claim NOT permitted:** A result claim inferred from fluent AI explanation or code appearance alone — a number nobody recomputed is a rumor with decimals.
+- **RDSS reading:** Required EDR|AI: the AI-as-programmer lesson's verification sections; revisit your route lesson for the uncertainty form your result takes.
+- **Other material:** nb07 §Lecture 2 (Colab); your analysis scaffold; M6 brief
+- **Provenance:** EDR|AI Studio 7 (BOOK_STATIONS first-analysis + the D16 verification rule) + crosswalk M6 + rdss foos_etal | execute, uncertainty, trace | predict-then-execute common run + claim-output row + environment record | newly-constructed-from-source-concept
+- **Concepts:** the point estimate and its uncertainty statement; a result reported without uncertainty is not yet a result; expected-vs-actual output comparison; the environment record; the claim-output trace; verifying delegated numbers against the data
+- **Python dependency:** pandas, numpy (seed 464), matplotlib (the uncertainty picture)
+- **Dataset / simulation:** foos_etal.csv common run (predict the output before executing); the student's own governed data for the transfer
+- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: name Monday's pipeline-map rule from memory, then the SRL opens the confident-number-with-no-uncertainty result; 7–30 intensive applied AI laboratory: with AI as research partner, predict the common run's output, execute, compare expected against actual, attach the uncertainty statement in your Contract's form, and build one claim-output row — verifying one delegated number by recomputing it against the data; 30–38 peer defense + adversarial questioning: partners each verify one of the other's delegated lines and one reported number; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to the final project + Ledger + Claim Ticket: produce your own first result with uncertainty, environment record, and trace row.
+- **Hands-on activity:** Predict, execute, and verify the common run, then produce your own first result with its uncertainty statement, environment record, and claim-output row.
+- **Practice:** 📝 nb07 practice: write one result sentence containing all four parts — estimate, uncertainty, population, and design boundary — for your own project.
+- **Discussion prompt:** What would make an output real but unusable for your declared claim — and how would your trace row catch it?
+- **Project connection:** Today's result, environment record, and trace row are the core of the M6 package due at this Friday's studio, where the URC abstract also faces its internal gate.
+- **Milestone developed:** M6 — First executable analysis + URC abstract internal gate, Book Milestone 7 v1 (dev; first result + uncertainty + abstract draft)
+- **Milestone work time:** 8 min (own result + trace row into M6; first URC abstract lines)
+- **Milestone presentation/review:** peer verification: partner recomputes one delegated line and one reported number
+- **Student prep:** Bring your runnable scaffold and a written expected-output prediction; read the AI-as-programmer verification sections.
+- **Student artifact:** Executed result with uncertainty + environment record + claim-output row + verified-number note
+- **Exit ticket:** Claim Ticket #19: my first result traces to output ___, and I verified it by ___.
+- **Homework / next milestone:** Assemble the complete executable v1 package for Friday and draft the 150–250-word URC abstract — the internal gate is at the studio.
+- **Instructor prep:** Verify the common run reproduces in the supported environment; prepare no-tool fallback outputs; post the URC abstract template; brief the SRL on the no-uncertainty puzzle.
+- **Risks / contingency:** A student's project code does not run → the diagnosed failure plus the verified common-run trace is the honest submission path — never invent a result; execution drags → the uncertainty attachment happens on the common run and the own-project result moves to Friday's sprint.
 
-### M20 — Fri 2026-10-09 (in-person) — Studio Friday — measurement protocols present and the URC abstract clears its internal gate (M6 due, M7 kicks off)
+### M20 — Fri 2026-10-09 (in-person) — Studio Friday — first executable analysis and the abstract gate: M6 due, M7 kickoff
 
-- **Driving question:** Is your measurement protocol defensible, and is your Expo abstract honest enough to submit?
-- **Secondary questions:** Does your protocol rule out its worst artifact? Does your abstract already carry uncertainty and reach? What does the declared analysis protocol (M7) ask of you next?
-- **Inquiry:** Description (experimental measurement) -> declared analysis (studio hand-off)
-- **Claim PERMITTED:** "My protocol measures [construct] with named artifact controls, and my abstract states the estimate, its uncertainty, and its reach."
-- **Claim NOT permitted:** An abstract that promises what the design cannot deliver, or a protocol whose worst artifact was never named.
-- **RDSS reading:** (no new reading — studio Friday; bring your M6 protocol and your URC abstract draft)
-- **Other material:** nb07 (experimental descriptive) for the recap; URC abstract template + internal-gate checklist; M7 Brightspace brief (declared analysis protocol); URC Expo abstract specs
-- **Provenance:** course studio protocol + URC abstract specs + M6/M7 Brightspace briefs | studio Friday | protocol clinic + URC abstract internal gate (draft, verify, submit internally) + M7 kickoff | newly-constructed-from-source-concept
-- **Concepts:** defending a measurement protocol; the URC abstract as a public, uncertainty-bearing commitment; internal-gate verification (every claim traces to evidence); milestone hand-off (M6 -> M7)
-- **Python dependency:** none required (protocol clinic + abstract workshop; nb07 open for reference)
-- **Dataset / simulation:** student's own project data plans (no shared dataset today)
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each project states the construct it measures and the artifact it most fears; 15–45 milestone kickoff from the Brightspace brief + AI-supported sprint: present the M7 deliverable and rubric (a declared analysis protocol), then run the URC abstract workshop with AI-assisted tightening against the uncertainty-and-reach checklist; 45–50 revise, update ledger + dossier, submit + Claim Ticket: verify every abstract claim traces to evidence, submit M6, clear the abstract at the internal gate, update the ledger, and write the Claim Ticket.
-- **Hands-on activity:** Run the uncertainty-and-reach checklist on your URC abstract with a partner and AI, verify each claim traces to evidence, submit M6, and clear the abstract at the internal gate.
+- **Driving question:** Do you have one executable result with uncertainty and a defensible trace — and an abstract that claims no more than it?
+- **Secondary questions:** Does every abstract sentence use only claims the current result licenses? What does the M7 brief ask for (a clean-restart verified analysis)?
+- **Inquiry:** the first-analysis checkpoint (studio + URC abstract internal gate)
+- **Claim PERMITTED:** "My M6 package holds one executable result with uncertainty and a trace, and my abstract states the estimate, its uncertainty, and its reach — nothing more."
+- **Claim NOT permitted:** A polished abstract that outruns the executed evidence — the gate reads the abstract against the result as it exists today, not as hoped.
+- **RDSS reading:** (no new reading — studio Friday; bring your executable package and your URC abstract draft)
+- **Other material:** week07 quiz (printed); nb07 student notebook (first-analysis build) — recap reference (Colab); URC abstract internal-gate checklist; M7 Brightspace brief
+- **Provenance:** course studio protocol + crosswalk M6 (the fixed Oct 9 internal gate) + M6/M7 Brightspace briefs | weekly Friday studio | M6 assembly + URC abstract internal gate + M7 kickoff | newly-constructed-from-source-concept
+- **Concepts:** the executable-first-run checkpoint; the URC abstract as an uncertainty-bearing public commitment; the internal gate (every abstract claim traces to the current result); the M7 deliverable (clean-restart verification); milestone hand-off (M6 -> M7)
+- **Python dependency:** student's route-specific environment (one final run of the package; nb07 open for reference)
+- **Dataset / simulation:** student's own governed data (or a labeled simulation on the no-permission route)
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each project states its result, its uncertainty, and its blocker in one line each; 15–45 milestone kickoff from the Brightspace brief + AI-supported sprint: present the M7 deliverable and rubric (does the result survive a clean restart?), then run the M6 submission checklist from code input through abstract claim, reading each abstract verb against the result as it exists today; 45–50 revise, update Ledger + dossier, submit M6, pass or document the abstract gate + Claim Ticket.
+- **Hands-on activity:** Run the submission checklist from code input to abstract claim, verify every abstract sentence against the executed result, submit M6, and clear (or honestly document) the internal gate.
 - **Practice:** 📝 abstract drill: find the one sentence a skimming reader would over-believe in your abstract, and defuse it.
-- **Discussion prompt:** Read your partner's abstract cold — what did you believe that their design cannot actually deliver?
-- **Project connection:** M6 submits and the URC abstract clears its internal gate (drafted, verified, submitted internally); M7 (declared analysis protocol) kicks off from its Brightspace brief.
-- **Milestone developed:** M6 — Experimental measurement or data-acquisition protocol (worked + submitted) + URC abstract internal gate (cleared today); M7 — Declared analysis protocol (kickoff)
-- **Milestone work time:** 23-min kickoff + sprint within the studio block (M7 opens, URC abstract workshop)
-- **Milestone presentation/review:** M6 worked at the studio and submitted (URC abstract gate cleared)
-- **Student prep:** M6 protocol complete; URC abstract drafted (150–250 words); nb07 finished.
-- **Student artifact:** Submitted M6 + abstract cleared at the internal gate + M7 declared-analysis kickoff notes
-- **Exit ticket:** Claim Ticket #20: the uncertainty phrase that now protects my abstract's reader, and the artifact control I am proudest of.
-- **Homework / next milestone:** Submit M6 tonight and confirm your abstract cleared the internal gate. No class Monday (October Break). For Wednesday, read the course-authored 'Observational: predictive' library entry and bring your analysis question.
-- **Instructor prep:** Stage the M7 Brightspace brief; print the uncertainty-and-reach checklist; confirm the URC internal-gate mechanics (the internal gate binds today regardless of the external portal); consult order.
-- **Risks / contingency:** External URC portal shifts → the internal gate stands; abstracts go to Brightspace and are forwarded when the portal opens; the clinic overruns → the M7 kickoff brief is posted to Brightspace and read before the sprint continues.
+- **Discussion prompt:** Which verb in your abstract is licensed by the result as it exists today — and which one is still a promise?
+- **Project connection:** M6 closes and the abstract clears its internal gate; the exact submitted package is frozen for Week 8's clean restart, which is what M7 will test.
+- **Milestone developed:** M6 — First executable analysis + URC abstract internal gate, Book Milestone 7 v1 (worked + due); M7 — Clean-restart verified analysis, Book Milestone 7 v2 (kickoff)
+- **Milestone work time:** 30 min studio block
+- **Milestone presentation/review:** M6 worked at the studio and submitted; URC abstract internal gate cleared or documented
+- **Student prep:** Runnable package with result and uncertainty; URC abstract drafted (150–250 words); nb07 finished.
+- **Student artifact:** Submitted M6 + abstract-gate record + M7 kickoff notes
+- **Exit ticket:** Claim Ticket #20: my gate status — pass / revise / not yet evidenced — and the sentence that decided it.
+- **Homework / next milestone:** Submit M6 tonight (11:59 PM) and preserve the EXACT submitted package untouched — Week 8 restarts it clean. No class Monday (October Break). For Wednesday, read the AI-as-analytical-assistant lesson.
+- **Instructor prep:** Print the week07 quiz and the internal-gate checklist; stage the M7 Brightspace brief; confirm the internal-gate mechanics (the gate binds today regardless of the external portal); consult order.
+- **Risks / contingency:** External URC portal shifts → the internal gate stands and abstracts forward when the portal opens; a failed execution at the deadline → it is submitted as the diagnosed finding it is, never converted into a claimed result.
 
-## Week 8 — Prediction
+## Week 8 — Studio 7: Verify the first analysis (clean restart)
 
-### M21 — Wed 2026-10-14 (in-person) — Prediction: beat an honest baseline on unseen cases, and know when the win is fake
+### M21 — Wed 2026-10-14 (in-person) — The clean restart: does your result survive, and does every claim still trace?
 
 - **Student Research Lead slot:** SRL slot 12 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: a model scores 99% at predicting who already voted — impressive, or is a column of the answer hiding in the inputs?
-- **Driving question:** Can you forecast new cases better than the dumbest honest rule, and would you notice if your score were leaking?
-- **Secondary questions:** How is prediction different from description, explanation, and causation? Why must a baseline and a held-out test come first? How do overfitting, leakage, and distribution shift each fake or break a score? When should you declare a model NOT useful?
-- **Inquiry:** Prediction — descriptive kind · unseen-cases reach (course-authored observational-predictive pathway, single lecture)
-- **Claim PERMITTED:** "On held-out cases, my model beats the baseline by [margin] on [metric]; I checked for leakage; I make no causal reading of its weights."
-- **Claim NOT permitted:** Any performance number computed on data the model already saw, or "the top feature is X, so X drives the outcome" — importance is not explanation, and leakage fakes importance.
-- **RDSS reading:** the course-authored 'Observational: predictive' library entry, written in the RDSS declare-diagnose-redesign format (modeled on the DeclareDesign design library at book.declaredesign.org/library); RDSS Part III stops before prediction, so its descriptive generalization logic carries over but no RDSS chapter covers this pathway
+- **SRL puzzle focus:** Colleague challenge: a fresh run of your colleague's frozen package changes the headline number — and the prediction branch is also quietly feeding the model information from the future.
+- **Driving question:** Does the submitted result reappear from a clean state — and if a number moves, what is the finding?
+- **Secondary questions:** Which of your values can be independently rederived? What does a discrepancy diagnose — data, environment, order, code, or the claim trace? If your route is prediction, is your language backed by unseen-case evidence, or is a leak feeding the score?
+- **Inquiry:** all routes (reproducibility + claim trace); the prediction route adds the leakage branch
+- **Claim PERMITTED:** "My result survived a clean restart: fresh run, matching outputs, two independently rederived numbers, every claim traced — or here is the discrepancy, diagnosed and owned as the finding."
+- **Claim NOT permitted:** "The earlier (or later) output is the right one" argued from its order alone — a discrepancy is diagnosed, never adjudicated by preference.
+- **RDSS reading:** Required EDR|AI: the AI-as-analytical-assistant lesson (read before today); revisit the AI-as-programmer lesson's verification sections.
 - **Calling Bullshit (optional):** optional: callingbullshit.org module on big-data and algorithm hype
-- **Other material:** nb08 student notebook (prediction), §1–5 (Colab); scikit-learn (linked docs); the course-authored 'Observational: predictive' library entry
-- **Provenance:** course-authored 'Observational: predictive' library entry (declare-diagnose-redesign format) + scikit-learn + rdss la_voter_file | prediction vs description/explanation/causation, baselines, train/validation/test, cross-validation, metrics, calibration, overfitting, leakage, distribution shift, subgroup performance, model-selection and not-useful rules | baseline-vs-model on held-out voter-file rows with a planted leaky feature (seed 464) | fresh
-- **Concepts:** prediction distinguished from description, explanation, and causation; baseline rule; training/validation/test split; cross-validation; performance metrics; calibration; overfitting; data leakage as a data-strategy violation; generalization to unseen cases; distribution shift; interpretability vs explanation; subgroup performance; model-selection rules; criteria for declaring a model NOT useful
-- **Python dependency:** scikit-learn (train_test_split, DummyClassifier, LogisticRegression, cross_val_score, calibration), pandas, numpy (seed 464)
-- **Dataset / simulation:** la_voter_file.csv (predict 2012 turnout from voter-file fields; one deliberately leaky feature engineered in; seed 464)
-- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the SRL shows a model scoring 99% at predicting who already voted and asks whether a column of the answer is hiding in the inputs; 7–30 intensive applied AI laboratory: with AI as research partner, declare the prediction task, score an honest baseline on held-out voter-file rows, try to beat it with a simple model under cross-validation, then find the planted leak, retrain clean, and report the leaky-vs-clean delta, closing with the compact cross-validation and distribution-shift probe before the verdict (the calibration and subgroup labs wait below the ⏸ line as optional depth); 30–38 peer defense + adversarial questioning: partners attack each other's score for leakage, overfitting, or a metric that flatters; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to the final project + ledger + Claim Ticket: write your project's prediction verdict — a target, baseline, and metric, or the honest reason prediction is the wrong column — log the ledger, and write the Claim Ticket.
-- **Hands-on activity:** Beat (or fail to beat) an honest baseline on held-out cases under cross-validation, catch a planted leak, and close with the compact cross-validation and shift probe (calibration and subgroup labs are optional depth).
-- **Practice:** 📝 nb08 practice: choose the right metric for three targets (a rare event, balanced classes, costly false negatives), and rank four candidate features by leakage risk.
-- **Discussion prompt:** The baseline got 78% and your model got 80%. Write the honest headline, then the dishonest one you almost wrote.
-- **Project connection:** You confirm or rule out your project's predictive component with reasons and name its nearest leakage risk — the spine of the M7 declared analysis protocol due at this Friday's studio.
-- **Milestone developed:** M7 — Declared analysis protocol
-- **Milestone work time:** 10 min (prediction verdict + target/baseline/metric or a reasoned no, into M7)
-- **Milestone presentation/review:** none (lecture day)
-- **Student prep:** Read the course-authored 'Observational: predictive' library entry; bring the analysis question your project needs to answer.
-- **Student artifact:** Baseline-vs-model held-out comparison + leaky-vs-clean delta + your project's prediction verdict
-- **Exit ticket:** Claim Ticket #21: my project's prediction verdict (has an angle / wrong column) and the leakage risk nearest my data.
-- **Homework / next milestone:** Finish nb08 and assemble the M7 declared analysis protocol for this Friday's studio, where it faces a prediction-and-leakage audit. No new reading.
-- **Instructor prep:** Verify la_voter_file predictive cells run fast; pre-compute the baseline for a snappy reveal; engineer the leaky feature so discovery takes about ten minutes; brief the SRL on the turnout-leak puzzle.
-- **Risks / contingency:** sklearn friction → all model code is provided and you choose the target column and read outputs; the leak found too fast → nb08's second, subtler temporal leak is the extension path.
+- **Other material:** nb08 (Colab); your frozen M6 package + environment record; the colleague verification artifact (scored audit); M7 brief
+- **Provenance:** EDR|AI Studio 7 steps 3–4 (BOOK_STATIONS first-analysis) + crosswalk M7 + rdss foos_etal + rdss la_voter_file | clean restart, rederivation, leakage | restart-and-run-all with output comparison + two independent rederivations + planted prediction leak (seed 464) + scored colleague audit | newly-constructed-from-source-concept
+- **Concepts:** the clean restart (restart and run all from a fresh state); run history and the environment record; independent rederivation; the discrepancy taxonomy (data, environment, order, code, claim-trace); if the numbers move, the pipeline is the finding; data leakage as unseen-case dishonesty; the verified claim-output table
+- **Python dependency:** the same declared environment, recreated from its record; pandas, numpy (seed 464); scikit-learn on the prediction branch
+- **Dataset / simulation:** foos_etal.csv common clean run; la_voter_file.csv prediction branch with a planted leak (seed 464); the student's frozen package
+- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: name the four parts of a result sentence from memory, then the SRL opens the colleague package whose fresh run changed the number; 7–30 intensive applied AI laboratory: with AI as research partner, restart the common package and run all, compare outputs against the frozen record, independently recompute two quantities, and run the scored colleague audit — diagnose the changed number, and on the prediction branch find the planted leak — classifying every discrepancy by its taxonomy; 30–38 peer defense + adversarial questioning: partners defend one discrepancy diagnosis and one independently recomputed number against attack; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to the final project + Ledger + Claim Ticket: restart your own frozen package, log the run history, and start the M7 verification record.
+- **Hands-on activity:** Restart and run everything clean, compare against the frozen record, independently recompute two quantities, and diagnose every discrepancy — catching the planted leak if prediction is your route.
+- **Practice:** 📝 nb08 practice: classify five discrepancy stories as data, environment, order, code, or claim-trace failures — and name the one that is actually a finding.
+- **Discussion prompt:** When does a clean-restart difference stop being a bug and become the finding your project reports?
+- **Project connection:** Your clean-run log, rederivations, and discrepancy decisions are the M7 verification record due at this Friday's studio.
+- **Milestone developed:** M7 — Clean-restart verified analysis, Book Milestone 7 v2 (dev)
+- **Milestone work time:** 8 min (own-package restart started + run history into M7)
+- **Milestone presentation/review:** peer defense of one discrepancy diagnosis and one rederived number; colleague audit sheet due
+- **Student prep:** Bring the frozen M6 package and its environment record UNTOUCHED since submission; read the AI-as-analytical-assistant lesson.
+- **Student artifact:** Clean-run log + two independent rederivations + discrepancy diagnoses + colleague audit sheet
+- **Exit ticket:** Claim Ticket #21: my result did / did not survive the clean restart, because ___.
+- **Homework / next milestone:** Complete the M7 verification record (run history, rederivations, discrepancy decisions, verified claim-output table) for Friday's studio.
+- **Instructor prep:** Prepare the clean environment and the altered-output fallback; engineer the prediction leak (seed 464); release the scored colleague verification artifacts with keys filed; brief the SRL on the changed-number challenge.
+- **Risks / contingency:** Local environments will not recreate → a fresh hosted runtime stands in and the environment change is recorded, never hidden; the leak is found too fast → the subtler second discrepancy in the colleague artifact extends the audit.
 
-### M22 — Fri 2026-10-16 (in-person) — Studio Friday — declared analysis protocols audited by the prediction-and-leakage reviewer (M7 due, M8 kicks off)
+### M22 — Fri 2026-10-16 (in-person) — Studio Friday — the verified first result: M7 due, M8 kickoff
 
-- **Driving question:** Does your declared analysis protocol survive an auditor built to hunt leakage and overclaiming?
-- **Secondary questions:** Is every analysis step declared before the data are touched? Where could leakage or a flattering metric sneak in? What does the minimum viable analysis (M8) ask you to actually run?
-- **Inquiry:** Prediction + all positions (declared-analysis studio)
-- **Claim PERMITTED:** "My analysis is declared in full before I touch the data; here is the auditor's hardest hit and my fix."
-- **Claim NOT permitted:** A protocol declared loosely enough to let leakage or a favorable metric slip in after seeing the results.
-- **RDSS reading:** (no new reading — studio Friday; bring your declared analysis protocol)
-- **Other material:** nb08 (prediction) for the recap; GenAI Studio 'Prediction & Leakage Auditor' role; M7 declared-analysis template; M8 Brightspace brief (minimum viable analysis)
-- **Provenance:** course studio protocol + GenAI Studio reviewer bench + M7/M8 Brightspace briefs | studio Friday | declared-analysis assembly + required Prediction & Leakage Auditor review + M8 kickoff | newly-constructed-from-source-concept
-- **Concepts:** declaring an analysis before touching data; the GenAI Studio 'Prediction & Leakage Auditor' review; leakage and overclaiming audit; milestone hand-off (M7 -> M8)
-- **Python dependency:** none required (assembly + auditor review; nb08 open for reference)
-- **Dataset / simulation:** student's own project data plans (no shared dataset today)
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each project states its analysis question and the one place leakage could enter; 15–45 milestone kickoff from the Brightspace brief + AI-supported sprint: present the M8 deliverable and rubric (a minimum viable analysis), then assemble the declared analysis protocol from the template; 45–50 revise, update ledger + dossier, submit + Claim Ticket: patch the auditor's hardest hit, log the review in the ledger, submit M7, and write the Claim Ticket.
-- **Hands-on activity:** Assemble your declared analysis protocol, run the recommended GenAI Studio 'Prediction & Leakage Auditor' review, patch its hardest hit, and submit M7.
-- **Practice:** 📝 during the sprint: for a partner's protocol, name the one step where leakage or an after-the-fact metric choice could still sneak in.
-- **Discussion prompt:** What did the Prediction & Leakage Auditor catch in your protocol that you had not seen, and why did you miss it?
-- **Project connection:** M7 (declared analysis protocol) submits after its auditor review; M8 (minimum viable analysis) kicks off from its Brightspace brief.
-- **Milestone developed:** M7 — Declared analysis protocol (worked + submitted); M8 — Minimum viable analysis (kickoff)
-- **Milestone work time:** 23-min kickoff + sprint within the studio block (M8 opens, declared-analysis assembly)
-- **Milestone presentation/review:** M7 worked at the studio and submitted; recommended GenAI Studio 'Prediction & Leakage Auditor' review
-- **Student prep:** Declared analysis protocol drafted; nb08 complete; GenAI Studio access confirmed.
-- **Student artifact:** Submitted M7 + logged Prediction & Leakage Auditor review + M8 kickoff notes
-- **Exit ticket:** Claim Ticket #22: the leakage or overclaim risk the auditor caught in my protocol, and how I closed it.
-- **Homework / next milestone:** Submit M7 tonight on Brightspace. Start the M8 minimum viable analysis this weekend; for Monday, bring your first executed analysis cell.
-- **Instructor prep:** Confirm the GenAI Studio 'Prediction & Leakage Auditor' role is live with its rubric; stage the M8 Brightspace brief; print the declared-analysis template; consult order.
-- **Risks / contingency:** GenAI Studio unavailable → a provided AI fallback auditor prompt stands in and the review is logged when the service returns; assembly overruns → the auditor review runs on the strongest protocols and the rest after class, with submission tonight.
+- **Driving question:** Can another clean run recover your result and its uncertainty — and does your verification record prove it?
+- **Secondary questions:** Are your discrepancies resolved or honestly bounded? What does the M8 brief ask for (a robustness audit whose checks are pre-listed before any run)?
+- **Inquiry:** the first-analysis revisit (studio: clean-restart verification)
+- **Claim PERMITTED:** "My verified result stands on a clean-run record: run history, two independent rederivations, discrepancies resolved or bounded, every claim traced to a verified output."
+- **Claim NOT permitted:** A reproducibility claim without an execution record — 'it ran for me' is testimony, not verification.
+- **RDSS reading:** (no new reading — studio Friday; bring your complete M7 verification record)
+- **Other material:** week08 quiz (printed); nb08 student notebook (clean-restart verification) — recap reference (Colab); GenAI Studio 'Prediction & Leakage Auditor' role; M8 Brightspace brief
+- **Provenance:** course studio protocol + crosswalk M7 + GenAI Studio reviewer bench + M7/M8 Brightspace briefs | weekly Friday studio | verification-record assembly + recommended Prediction & Leakage Auditor review + M8 kickoff | newly-constructed-from-source-concept
+- **Concepts:** the verification record as a submission; discrepancies resolved vs honestly bounded; the recommended GenAI Studio 'Prediction & Leakage Auditor' pass (out-of-sample and prediction claims); pre-listing stress tests before running them; milestone hand-off (M7 -> M8)
+- **Python dependency:** student's declared environment (final verification run; nb08 open for reference)
+- **Dataset / simulation:** student's own frozen package and verification record
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each project reports its clean-run status and one remaining concern; 15–45 milestone kickoff from the Brightspace brief + AI-supported sprint: present the M8 deliverable and rubric (a robustness audit whose checks are pre-listed before any run), then finish the M7 verification record — resolve or bound the last discrepancy, lock the claim-output table, and run the recommended GenAI Studio 'Prediction & Leakage Auditor' review on any out-of-sample or prediction claim; 45–50 revise, update Ledger + dossier, submit M7 + Claim Ticket.
+- **Hands-on activity:** Resolve or honestly bound your final discrepancy, lock the claim-output trace, run the recommended Prediction & Leakage Auditor review, and submit M7.
+- **Practice:** 📝 during the sprint: name the part of your result that remains least independently checked — and what one more check would cost.
+- **Discussion prompt:** What did the auditor — human or AI — catch in your verification record that you had stopped seeing, and why had you stopped seeing it?
+- **Project connection:** M7 closes the first-analysis arc as Book Milestone 7 v2; M8 opens the stress-test week, whose checks you pre-list before running anything.
+- **Milestone developed:** M7 — Clean-restart verified analysis, Book Milestone 7 v2 (worked + due); M8 — Robustness audit, Book Milestone 8 v1 (kickoff)
+- **Milestone work time:** 30 min studio block
+- **Milestone presentation/review:** M7 worked at the studio and submitted; recommended GenAI Studio 'Prediction & Leakage Auditor' review logged in the Ledger
+- **Student prep:** M7 verification record complete (run history, rederivations, discrepancy decisions, claim-output table); GenAI Studio access confirmed.
+- **Student artifact:** Submitted M7 + auditor-review log + first pre-listed stress tests
+- **Exit ticket:** Claim Ticket #22: the strongest evidence that my result is reproducible, and the discrepancy I bounded rather than resolved.
+- **Homework / next milestone:** Submit M7 tonight (11:59 PM). Weekend: pre-list your first proposed stress tests WITHOUT running any of them, and read the robustness and sensitivity lesson for Monday.
+- **Instructor prep:** Print the week08 quiz and M7 rubric; stage the M8 Brightspace brief; confirm the Prediction & Leakage Auditor role is live; consult order.
+- **Risks / contingency:** GenAI Studio unavailable → a provided AI fallback auditor prompt stands in and the review is logged when the service returns; an unresolved discrepancy at the deadline → it is reported as unresolved and blocks stronger downstream claims, never papered over.
 
-## Week 9 — Experimental causal research
+## Week 9 — Studio 8: Stress-test and adjudicate
 
-### M23 — Mon 2026-10-19 (in-person) — Experimental causal research I: potential outcomes, random assignment, and what an experiment actually estimates
+### M23 — Mon 2026-10-19 (in-person) — Stress-test I: pre-list your checks before you run them — the robustness grid and commensurable panels
 
 - **Student Research Lead slot:** SRL slot 13 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: a get-out-the-vote canvass reached some households and not others, and the canvassed ones voted more — but what has to be true about WHO got canvassed before that gap is the effect of canvassing?
-- **Driving question:** If you could run the world twice — once with the treatment, once without — what would you compare, and why does randomizing let you fake that comparison?
-- **Secondary questions:** What are the potential outcomes Y(1) and Y(0), and why can you never see both for one unit? What exactly does random assignment buy you? What is an average treatment effect, and how does randomization inference put an interval around it? When is a study too small to detect the effect it is looking for?
-- **Inquiry:** CAUSAL — causal kind (experimental design)
-- **Claim PERMITTED:** "Because assignment was randomized and I checked balance, the difference in means estimates the average treatment effect, reported with a randomization-inference interval."
-- **Claim NOT permitted:** "The treated group did better, so the treatment worked" — with no check that assignment, not the kind of people in each group, produced the gap.
-- **RDSS reading:** RDSS ch. 18 'Experimental: causal' (book.declaredesign.org); declaration_18.1 (two-arm trial)
-- **Other material:** nb09 student notebook (experimental causal research), §1–3 (Colab); AI in Colab as the in-class research partner
-- **Provenance:** RDSS ch.18 + declaration_18.1.R + rdss foos_etal | experimental causal design | two-arm trial, difference-in-means, and randomization inference translated to the course's Python helpers | translated (R→Python)
-- **Concepts:** potential outcomes Y(1)/Y(0) and the fundamental problem of causal inference; random assignment as the counterfactual-maker; treatment and control conditions; the average treatment effect (ATE); randomization inference; statistical power and the minimum detectable effect
-- **Python dependency:** numpy/pandas (difference-in-means + randomization-inference interval on foos_etal); matplotlib (the sharp-null reference distribution, provided)
-- **Dataset / simulation:** foos_etal.csv (real get-out-the-vote field experiment) + inline seeded simulation of a two-arm trial for the power demonstration
-- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead stands the canvassing gap and presses the class — is this the effect of canvassing, or the effect of who happens to answer the door?; 9–31 guided AI research-partner investigation in the notebook: nb09 defines Y(1)/Y(0) on a toy world, then analyzes the real foos_etal experiment (balance check, difference in means, randomization-inference interval) with AI proposing each step and the class inspecting its output; 31–43 human verification + instructor formalization: recompute the interval against the helper, name the ATE the number estimates, and run the power / minimum-detectable-effect cell to see when a true effect would go undetected; 43–50 decision & defense: ledger entry (what AI proposed, how it was verified) + Claim Ticket.
-- **Hands-on activity:** Analyze a real randomized field experiment end to end — balance, ATE, randomization-inference interval — and read a power curve to find the smallest effect the design could have caught.
-- **Practice:** 📝 nb09 practice: for three described studies, write Y(1) and Y(0) for one unit and mark which is observed; then say whether each study is powered to detect a small, medium, or only a large effect.
-- **Discussion prompt:** You get a p-value below 0.05 from twelve participants. Why should a randomization-inference interval, not the p-value alone, decide whether you believe the effect?
-- **Project connection:** Every project that declared an experimental (or experiment-like) pathway begins its M8 minimum viable analysis here; projects on other pathways run the branch their declaration named.
-- **Milestone developed:** M8 — Minimum viable analysis
-- **Milestone work time:** 8 min (start your branch's first computed estimate)
+- **SRL puzzle focus:** Colleague puzzle: a colleague's robustness section lists five checks that all flatter the finding — and the file history shows the checks were chosen after the results ran. What would an honest, pre-listed grid have contained?
+- **Driving question:** If your result only holds under one way of slicing the data, is it a finding — or an accident you went looking for?
+- **Secondary questions:** What is a robustness check versus a sensitivity check? Why must every check be pre-listed, with its prediction written, before any of them run? What makes two specifications commensurable, and why is a span reported within a panel, never across panels? What separates honest robustness from specification searching?
+- **Inquiry:** all routes (stress-testing your own verified result)
+- **Claim PERMITTED:** "My claim survives the checks I pre-listed before running any of them; where it moves, I report the direction and the size of the move."
+- **Claim NOT permitted:** Reporting the one specification that 'worked' after quietly trying many, or quoting a span across panels that estimate different quantities — both are specification searching wearing robustness's clothes.
+- **RDSS reading:** Required EDR|AI: the robustness-and-sensitivity lesson (pre-listing, the grid, commensurable panels); start the false-confidence lesson for Wednesday. Recommended RDSS: revisit ch. 10 'Diagnosing designs' (book.declaredesign.org)
+- **Calling Bullshit (optional):** optional: callingbullshit.org — a 'the result vanished under reanalysis' case
+- **Other material:** nb09 student notebook (stress-test and adjudicate), §Lecture 1 (Colab); your frozen clean-restart verified analysis (M7); M8 Brightspace brief; the Studio 8 colleague artifact (course platform)
+- **Provenance:** crosswalk M8 + BOOK_STATIONS stress-test steps 1–2 + the course robustness-grid and specification-curve cells | stress-test and adjudicate | pre-registration card + same-estimand specification panels on the LAPOP teaching resample | reused + fresh
+- **Concepts:** robustness vs sensitivity; pre-listing before running, and committing to report all of it; the robustness grid; commensurable panels (a span is read within a panel that estimates one quantity, never across panels); the specification curve; the choice-sensitivity verdict; robustness vs specification searching; specification spread measures your choices — it is not an uncertainty interval
+- **Python dependency:** numpy/pandas (rerun the estimate across a pre-listed grid); matplotlib (the same-estimand specification curve, provided)
+- **Dataset / simulation:** lapop_brazil.csv teaching resample for the shared grid demonstration (no substantive claims from the resample) + each student's own verified result
+- **50-minute dynamic:** 0–9 SRL-led colleague puzzle: the colleague's flattering five-check robustness section on screen — the class reconstructs what an honest, pre-listed grid would have contained; 9–31 guided AI research-partner investigation in nb09: write the pre-registration card FIRST (every check, its prediction, and the commitment to report all of them), then run the grid on the shared example and read the specification curve panel by panel — your AI assistant proposes candidate checks and you rule each in or out before anything runs; 31–43 human verification + instructor formalization: the instructor formalizes commensurable panels (a span within a panel that estimates one quantity, never across panels) and the class separates pre-committed checks from after-the-fact fishing; 43–50 decision & defense: pre-list your own project's grid + ledger + Claim Ticket.
+- **Hands-on activity:** Write your pre-registration card before any check runs, then execute the pre-listed grid on the shared example and read its specification curve within each commensurable panel.
+- **Practice:** 📝 nb09 practice: label six analyses as robustness check or specification search; then sort eight specifications into commensurable panels and mark the one span it would be dishonest to report.
+- **Discussion prompt:** You ran ten specifications and report the one that is significant. Write the sentence that turns that from p-hacking into honest robustness — what would you have had to do first?
+- **Project connection:** The M8 robustness audit begins: your pre-registration card — every check named and predicted before it runs — is the audit's spine.
+- **Milestone developed:** M8 — Robustness audit, Book Milestone 8 v1 (dev)
+- **Milestone work time:** 7 min (pre-list your own grid + write one prediction per check)
 - **Milestone presentation/review:** none (lecture day)
-- **Student prep:** RDSS ch. 18 read; your declared analysis protocol (M7) at hand so you know which branch your M8 runs.
-- **Student artifact:** Analyzed foos_etal experiment + first computed estimate started on your own project's branch
-- **Exit ticket:** Claim Ticket #23: "The number my M8 will report is an average treatment effect only because assignment was random — and here is the balance check that earns me the word."
-- **Homework / next milestone:** Finish nb09's potential-outcomes and power practice cells; Wednesday we take on what breaks a clean experiment — attrition, noncompliance, spillovers — and keep building M8.
-- **Instructor prep:** Verify foos_etal loads and the ATE + randomization-inference interval reproduce; pre-run the power cell so the curve renders fast; brief the SRL on the canvassing puzzle.
-- **Risks / contingency:** Randomization inference feels abstract → the toy two-unit world grounds it first, and the helper does the resampling; students choose the outcome column and read the interval, they do not code the loop.
+- **Student prep:** M7 submitted; your frozen verified result at hand; the stress test you pre-listed over the weekend, still unrun.
+- **Student artifact:** Your pre-registration card (checks + predictions, committed before running) + the shared grid executed with its panel-by-panel reading
+- **Exit ticket:** Claim Ticket #23: "The check most likely to hurt my finding is [check]; my written prediction is [x]; I commit to reporting it whatever it shows."
+- **Homework / next milestone:** Run your pre-listed grid on your own result before Wednesday, recording every move with its direction and size; Wednesday adds negative tests, adversarial reviewers, and your adjudication of every flag.
+- **Instructor prep:** Verify the shared grid and specification-curve cells run fast in Colab; release the Studio 8 colleague artifacts (one seeded flaw each, keys held privately); brief the SRL on the flattering-five-checks puzzle.
+- **Risks / contingency:** The grid balloons → three pre-listed checks maximum in class, the rest as project work; the pre-listing rule is the point, not the count. A student's own result is not runnable → they pre-list on the shared example and run their own grid at the Friday studio.
 
-### M24 — Wed 2026-10-21 (in-person) — Experimental causal research II: blocking, clusters, factorials, and the things that break a clean experiment
+### M24 — Wed 2026-10-21 (in-person) — Stress-test II: negative tests, adversarial reviewers, and adjudicating every flag against the data
 
 - **Student Research Lead slot:** SRL slot 14 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: the treatment 'worked' but a third of participants dropped out before the outcome was measured — what did we actually estimate, and for whom?
-- **Driving question:** Your randomization was perfect on paper — then a third of participants dropped out and neighbors talked to each other. What did you actually estimate?
-- **Secondary questions:** How do blocking and cluster randomization change what you can learn? What does a factorial design test at once? How do attrition, noncompliance, spillovers, and interference each bias or reinterpret the effect? When many outcomes are tested, why does at least one 'work' by chance — and what is a heterogeneous effect?
-- **Inquiry:** CAUSAL — causal kind (experimental design, real-world threats)
-- **Claim PERMITTED:** "After accounting for [attrition / noncompliance / clustering], my estimate is the effect for [this well-defined group], with its uncertainty and its limits stated."
-- **Claim NOT permitted:** Reporting a clean average treatment effect while attrition, noncompliance, or spillovers silently changed which units and which quantity the number describes.
-- **RDSS reading:** RDSS ch. 18 'Experimental: causal' (continued — blocking, clustering, and the complications sections; book.declaredesign.org)
-- **Other material:** nb09 student notebook (experimental causal research), §4–6 (Colab); AI in Colab as the applied-lab partner
-- **Provenance:** RDSS ch.18 (blocking/cluster/factorial + attrition/noncompliance/spillover sections) + foos_etal | experimental causal complications | design variants and threat diagnostics translated to seeded Python simulations | translated (R→Python)
-- **Concepts:** blocking; cluster randomization; factorial designs; attrition; noncompliance (and the local effect it leaves you); spillovers and interference; multiple-outcome testing; heterogeneous treatment effects; the ethical and practical limits of experimenting on people
-- **Python dependency:** numpy/pandas (seeded simulations of attrition and spillover on the two-arm world; subgroup estimates for heterogeneity)
-- **Dataset / simulation:** foos_etal.csv (subgroup / heterogeneity reading) + inline seeded simulations that inject attrition, noncompliance, and spillover to show each threat's footprint
-- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the lead replays yesterday's clean estimate, then breaks it — a third of units vanish before measurement — and challenges the class to say what the number now means; 7–30 intensive applied AI laboratory: in nb09, use AI to simulate blocking and clustering (does the interval tighten or widen?), run a factorial cell, then inject attrition, noncompliance, and spillover and watch the estimate move — inspecting and correcting every AI step; 30–38 peer defense + adversarial questioning: in pairs, each student defends 'my M8 estimate survives these threats because…' while the partner plays the spillover-and-attrition skeptic; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to your own project + ledger + Claim Ticket.
-- **Hands-on activity:** Simulate blocking, clustering, and a factorial design, then inject attrition, noncompliance, and spillover into the same experiment and report how each one changes the effect you can honestly claim.
-- **Practice:** 📝 nb09 practice: match four broken experiments to the threat that broke them (attrition / noncompliance / spillover / multiple-outcome fishing); for one, name the group your surviving estimate actually describes.
-- **Discussion prompt:** A study reports the one outcome out of twenty that reached significance. What did the other nineteen tests do to that claim, and how would an honest report show them?
-- **Project connection:** M8 advances: each project names the single threat nearest its own design and states how the minimum viable analysis handles or bounds it.
-- **Milestone developed:** M8 — Minimum viable analysis
-- **Milestone work time:** 16 min (run your branch's estimate + name and bound its nearest threat)
-- **Milestone presentation/review:** peer defense rounds (adversarial pairs; the 60-second pitches come at this Friday's M8-due studio)
-- **Student prep:** RDSS ch. 18 complications sections read; Monday's foos_etal analysis at hand; M8 branch running.
-- **Student artifact:** Threat-injected simulations + own M8 estimate with its nearest threat named and bounded
-- **Exit ticket:** Claim Ticket #24: "My M8's biggest threat is [attrition / noncompliance / spillover / multiplicity], and here is the group and quantity my estimate honestly describes once I account for it."
-- **Homework / next milestone:** Finish your minimum viable analysis; it is due at this Friday's studio, where you pitch it in 60 seconds and kick off the poster draft (M9).
-- **Instructor prep:** Verify the attrition/noncompliance/spillover simulation cells run in seconds; prep the adversarial-pair prompt cards; brief the SRL on the drop-out puzzle.
-- **Risks / contingency:** The complication list overwhelms → the lab commits to attrition + spillover as the two everyone simulates; blocking, clustering, and factorial run as read-and-inspect demos, with nb09 carrying the depth.
+- **SRL puzzle focus:** Challenge: three confident reviewers disagree about a finding's worst flaw — the lead presses the class on what could settle it, and why confidence settles nothing.
+- **Driving question:** Three confident reviewers — one human, two AI — name three different fatal flaws in your analysis. Which one is real, and how do you tell without trusting the loudest?
+- **Secondary questions:** What does a negative test check, and why is its prediction written before the run? Why is the licensed null check read against a reference spread, not exact zero? What does a multi-model AI panel reveal that a single reviewer hides? What turns a reviewer's flag into evidence?
+- **Inquiry:** all routes (negative tests + adversarial adjudication)
+- **Claim PERMITTED:** "I predicted each negative test before running it, commissioned adversarial review, and confirmed or refuted every flag with a data check — here is what survived."
+- **Claim NOT permitted:** Accepting (or dismissing) a reviewer's verdict on its confidence — a flag becomes real only when a check confirms it, and an AI review is another critique, never independent verification.
+- **RDSS reading:** Required EDR|AI: the negative-tests, ai-adversarial-reviewer, and false-confidence lessons
+- **Other material:** nb09 student notebook (stress-test and adjudicate), §Lecture 2 (Colab); Purdue GenAI Studio — the multi-model comparison + adversarial-reviewer bench; the Studio 8 colleague artifact (scored audit); AI Research Ledger template
+- **Provenance:** crosswalk M8 + BOOK_STATIONS stress-test steps 3–5 + the course adversarial-review adjudication cells | stress-test and adjudicate | negative tests with pre-written predictions + null-reference spread + multi-model flag adjudication | reused + fresh
+- **Concepts:** negative tests with predictions written before the run; the licensed null check and its reference spread (not exact zero); placebo and falsification logic; human vs AI reviewer flags; multi-model comparison (agreement, disagreement, confident error); adjudication — confirm or refute each flag with a data check; the confidence audit (where belief in the headline number actually comes from)
+- **Python dependency:** numpy/pandas (negative-test and null-spread cells on the shared example); matplotlib (the null reference distribution, provided)
+- **Dataset / simulation:** lapop_brazil.csv teaching resample for the shared negative test + each student's own gridded result and its reviewer flags
+- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the lead replays Monday's pre-listing rule, then stands three confident, conflicting reviewer verdicts on one finding and asks what could settle them; 7–30 intensive applied AI laboratory: in nb09, write your negative-test prediction, run the test and the licensed null check (reading the reference as a spread, not exact zero), commission the GenAI Studio adversarial reviewers on your own finding, and open the scored colleague audit — the colleague's robustness audit hides one seeded flaw, and every flag, theirs and yours, must be adjudicated against a data check; 30–38 peer defense + adversarial questioning: each student defends one confirmed flag and one refuted flag while the partner presses "what check makes you sure?"; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to your own project: draft the adjudication — what survived, what did not, what you still cannot rule out — + ledger + Claim Ticket.
+- **Hands-on activity:** Predict, then run, your negative test and licensed null check; commission adversarial review on your own finding; and adjudicate every flag — yours and the colleague's seeded one — against a data check.
+- **Practice:** 📝 nb09 practice: given three conflicting 'top flaws' from three reviewers on a sample analysis, design the one data check that would confirm or kill each — then mark the flag no check can reach.
+- **Discussion prompt:** An AI reviewer flagged a flaw your human reviewer missed — and invented one that is not there. What does that pattern tell you about how to use it?
+- **Project connection:** M8 advances: the audit now carries your negative tests with their pre-written predictions and an adversarial-review record with every flag adjudicated.
+- **Milestone developed:** M8 — Robustness audit, Book Milestone 8 v1 (dev; adjudication drafted)
+- **Milestone work time:** 8 min (draft the adjudication: survived / did not survive / cannot yet rule out)
+- **Milestone presentation/review:** peer defense rounds (one confirmed + one refuted flag each); scored colleague audit filed
+- **Student prep:** Your pre-listed grid run on your own result; Monday's pre-registration card at hand; GenAI Studio access confirmed.
+- **Student artifact:** Negative test + null check with pre-written predictions, an adversarial-review record, the scored colleague-audit sheet, and a drafted adjudication
+- **Exit ticket:** Claim Ticket #24: "The realest flag on my finding is [flaw], confirmed by [check]; the most confident wrong flag was [x], refuted by [check]."
+- **Homework / next milestone:** Finish the adjudication and the confidence audit (where does belief in your headline number come from?); M8 is due at this Friday's studio, where you walk the room through your robustness audit.
+- **Instructor prep:** Confirm the GenAI Studio adversarial-reviewer bench is live; verify the null-spread cells; hold the colleague keys for the accuracy lock; brief the SRL on the three-reviewers challenge.
+- **Risks / contingency:** GenAI Studio access fails → saved transcripts of three models reviewing a sample analysis carry the comparison and live reviews move to the Friday studio; the lesson (compare, then verify) survives without live access.
 
-### M25 — Fri 2026-10-23 (in-person) — Studio Friday — minimum viable analysis due: first real evidence, and the poster draft begins
+### M25 — Fri 2026-10-23 (in-person) — Studio Friday — robustness audits due: what survived, what did not, and the bounded note begins
 
-- **Driving question:** You have your first computed estimate on your own question. Can you say what it shows, what it cannot, and pitch it in 60 seconds?
-- **Secondary questions:** What makes a minimum viable analysis 'viable' rather than final? What does the M9 poster draft + research audit ask of your compass position? Where does your poster's headline claim start?
-- **Inquiry:** all positions (first computed evidence → communication)
-- **Claim PERMITTED:** "Here is my first real estimate, the check that makes me trust it, and the boundary my compass position puts on what it means."
-- **Claim NOT permitted:** A pitch of a result with no verification and no stated limit — a number is not yet evidence until you have checked it and bounded it.
-- **RDSS reading:** (no new reading — studio Friday; bring your executed minimum viable analysis)
-- **Other material:** nb09 student notebook (experimental causal) for the recap; M9 Brightspace brief (poster draft 1 + research audit); project/poster/storyboard_protocol.md (headline-claim preview); 60-second pitch timer
-- **Provenance:** week's nb09 material + M9 Brightspace brief + project/poster/storyboard_protocol.md | studio Friday | 60-second evidence pitch + poster-draft kickoff | fresh
-- **Concepts:** the minimum viable analysis as first honest evidence; verifying before believing your own output; the poster draft as the week ahead; the research audit that will attack it
-- **Python dependency:** none required (analysis helpers stay open for consults)
-- **Dataset / simulation:** each student's own project data (M8 estimate)
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each student's one-line status on their minimum viable analysis (what ran, what is shaky); 15–45 milestone kickoff + AI-supported sprint: present the M9 brief on Brightspace — poster draft 1 plus a research audit — then a supported sprint to finalize the M8 estimate and verify it, AI on call for the stubborn cell; 45–50 revise, log the ledger, submit M8 tonight + Claim Ticket.
-- **Hands-on activity:** Deliver your 60-second evidence pitch with its verification and boundary, take the red-team's one hit, and submit your minimum viable analysis.
-- **Practice:** 📝 during consults: write the poster headline claim your M8 evidence could support today — ≤ 15 words, inside your compass position's boundary.
-- **Discussion prompt:** Which classmate's estimate did you most want to believe but could not yet — and what one check would have won you over?
-- **Project connection:** M8 submits tonight; every project leaves with a headline-claim seed and a locked plan for the M9 poster draft + research audit.
-- **Milestone developed:** M8 — Minimum viable analysis (due tonight) → M9 — Poster draft 1 and research audit (kickoff)
+- **Driving question:** You attacked your own result the way a hostile reviewer would. Can you walk the room through what survived, what did not, and what you still cannot rule out?
+- **Secondary questions:** What does a complete robustness audit contain? What does the designated Robustness & Sensitivity Reviewer add before submission? What does the M9 brief ask for (a bounded research-note v0), and why does the note precede the poster?
+- **Inquiry:** all routes (robustness-audit studio)
+- **Claim PERMITTED:** "Here is my pre-listed grid with every result reported, my negative tests with their written predictions, and my adjudication — the checks that hurt my finding reported as fully as the ones that helped."
+- **Claim NOT permitted:** An audit with no hits — either it was not run honestly, or it was not run at all; and a span quoted across panels that estimate different quantities.
+- **RDSS reading:** (no new reading — studio Friday; bring your executed robustness audit)
+- **Other material:** week09 quiz (printed); nb09 student notebook (stress-test and adjudicate) for the recap; M9 Brightspace brief (bounded research-note v0); Purdue GenAI Studio — designated Robustness & Sensitivity Reviewer role, logged in the ledger
+- **Provenance:** crosswalk M8 checkpoint (robustness-audit-v1) + M9 Brightspace brief + GenAI Studio reviewer bench | studio Friday | audit walkthrough + designated-role review + note-v0 kickoff | fresh
+- **Concepts:** the robustness audit as a graded artifact; the audit walkthrough; the designated Robustness & Sensitivity Reviewer, adjudicated before submission; what survives licenses what ships — the note writes only the claims this audit supports, at the strength it supports them
+- **Python dependency:** none required (the audit cells stay open for consults)
+- **Dataset / simulation:** each student's own audited result
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each student's one-line audit status (what survived, what is still open); 15–45 milestone kickoff + AI-supported sprint: present the M9 brief on Brightspace — the bounded research-note v0 that writes down only what the audit licenses — then each student walks the room through their audit in two minutes, runs the designated GenAI Studio Robustness & Sensitivity Reviewer on their audit table, and adjudicates its flags before submission; 45–50 revise, log the ledger, submit M8 tonight + Claim Ticket.
+- **Hands-on activity:** Deliver your two-minute robustness-audit walkthrough, run the designated Robustness & Sensitivity Reviewer, adjudicate its flags, and submit your audit.
+- **Practice:** 📝 during the sprint: write the one sentence your audit now licenses that Monday's you would have overclaimed — and the check that changed it.
+- **Discussion prompt:** Whose audit reported a check that clearly hurt their finding — and did reporting it make you trust the finding less, or more?
+- **Project connection:** M8 submits tonight; every project enters the writing week knowing exactly which claims its audit licenses and at what strength.
+- **Milestone developed:** M8 — Robustness audit, Book Milestone 8 v1 (worked + due); M9 — Bounded research-note v0, Book Milestone 9 v1 (kickoff)
 - **Milestone work time:** 30 min studio block
-- **Milestone presentation/review:** M8 worked at the studio and submitted
-- **Student prep:** Minimum viable analysis executed (any state of polish); pitch rehearsed once; verification note ready.
-- **Student artifact:** Delivered pitch + red-team hit logged + submitted M8
-- **Exit ticket:** Claim Ticket #25: "My poster's headline claim starts as [≤ 15 words], and my M8 evidence backs exactly that much — no more."
-- **Homework / next milestone:** Submit M8 tonight on Brightspace. Monday begins the attack on your own analysis — robustness and sensitivity before the poster; bring your estimate and your worst worry about it.
-- **Instructor prep:** Pitch timer; consult order; M9 brief staged on Brightspace; keep the analysis helpers loadable; storyboard preview ready.
-- **Risks / contingency:** An analysis is not done → the pitch still happens on what runs (the submission deadline is tonight, not the pitch); overflow verification moves to office hours.
+- **Milestone presentation/review:** M8 worked at the studio and submitted; robustness-audit walkthrough; designated GenAI Studio Robustness & Sensitivity Reviewer review
+- **Student prep:** Robustness audit executed (grid results, negative tests, drafted adjudication); walkthrough rehearsed once.
+- **Student artifact:** Delivered walkthrough + adjudicated designated-role review + submitted M8
+- **Exit ticket:** Claim Ticket #25: "What survived my audit is [claim, at strength]; what I still cannot rule out is [x] — and my note will say both."
+- **Homework / next milestone:** Submit M8 tonight on Brightspace. Weekend: read the results-to-claims and claim-evidence-tables lessons; Monday you write the sentence your evidence can actually carry.
+- **Instructor prep:** Print the week09 quiz; walkthrough order + timer; confirm the Robustness & Sensitivity Reviewer role is provisioned; stage the M9 brief on Brightspace.
+- **Risks / contingency:** An audit is incomplete → the walkthrough still happens on what ran (submission is tonight, not the walkthrough); the designated review runs on the strongest section and the rest is logged from home.
 
-## Week 10 — Share the research and attack the analysis
+## Week 10 — Studio 9: Write, bound, and disclose
 
-### M26 — Mon 2026-10-26 (in-person) — Attack the analysis I: robustness, sensitivity, and the line between them and p-hacking
+### M26 — Mon 2026-10-26 (in-person) — Write and bound I: from audited result to the claim your evidence can carry
 
 - **Student Research Lead slot:** SRL slot 15 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: our headline result is significant under one specification and vanishes under another — is the result fragile, or did we just find the one specification that worked?
-- **Driving question:** If your result only holds one way of slicing the data, is it a finding — or an accident you went looking for?
-- **Secondary questions:** What is a robustness check versus a sensitivity check? What do placebo, falsification, and negative tests each try to break? How do alternative samples, measurements, specifications, and metrics stress a claim? What separates honest robustness from specification searching?
-- **Inquiry:** all positions (attacking your own analysis)
-- **Claim PERMITTED:** "My claim survives these pre-listed robustness and placebo checks; where it moves, I report by how much and why."
-- **Claim NOT permitted:** Reporting the one specification that 'worked' after quietly trying many, without disclosing the search — the definition of specification searching.
-- **RDSS reading:** (no new RDSS chapter — attack-the-analysis week; the readings are the robustness/red-team protocols and your own declared analysis protocol)
-- **Calling Bullshit (optional):** optional: callingbullshit.org — a 'the result vanished under reanalysis' case
-- **Other material:** nb10 student notebook (attack the analysis), §1–3 (Colab); AI in Colab as the robustness-lab partner; project/poster/redteam_review_protocol.md (the four-audit vocabulary, previewed)
-- **Provenance:** fresh (robustness/sensitivity protocol) + course honest-analysis discipline | attack-the-analysis unit | placebo/falsification/negative tests + alternative-specification grid built as seeded Python cells | fresh
-- **Concepts:** robustness vs sensitivity; placebo tests; falsification tests; negative tests; alternative samples, measurements, specifications, and metrics; outlier and influence analysis; robustness vs specification searching (the pre-listed-checks discipline)
-- **Python dependency:** numpy/pandas (rerun the estimate across a pre-listed robustness grid; leave-one-out influence cells); matplotlib (the specification curve, provided)
-- **Dataset / simulation:** each student's own M8 estimate rerun under alternative specifications + a shared demonstration dataset with one influential outlier (optional depth)
-- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead shows one result that lives or dies by a single specification choice and asks the class to rule fragile vs cherry-picked; 9–31 guided AI research-partner investigation in the notebook: nb10 pre-lists the checks first, then reruns the estimate across alternative samples, measurements, specifications, and metrics, and reads the specification curve — AI proposing checks, the class inspecting each (the placebo and leave-one-out influence cells wait below the ⏸ line as optional depth); 31–43 human verification + instructor formalization: separate the checks that were pre-committed from the ones that would be fishing, and name the honest headline the surviving evidence supports; 43–50 decision & defense: ledger entry + Claim Ticket.
-- **Hands-on activity:** Pre-list your robustness checks, then rerun your own estimate across alternative specifications and report where the claim holds and where it moves (the placebo and influence tests are optional depth).
-- **Practice:** 📝 nb10 practice: label six analyses as robustness check or specification search, including one where a single influential point manufactures the reported correlation.
-- **Discussion prompt:** You ran ten specifications and report the one that is significant. Write the sentence that turns that from p-hacking into honest robustness — what would you have had to do first?
-- **Project connection:** M9 poster draft + research audit begins: each project pre-lists its robustness checks and runs the first ones against its own M8 estimate.
-- **Milestone developed:** M9 — Poster draft 1 and research audit
-- **Milestone work time:** 10 min (pre-list your checks + run the first robustness rerun)
-- **Milestone presentation/review:** none (lecture day)
-- **Student prep:** M8 submitted; the estimate you most want to stress-test at hand.
-- **Student artifact:** Pre-listed robustness checks + first alternative-specification rerun of own estimate
-- **Exit ticket:** Claim Ticket #26: "My result holds or moves under my pre-listed checks; the one that stresses it most is [check], and here is what it did."
-- **Homework / next milestone:** Carry your pre-listed checks into the M9 studio work (nb10's placebo and influence cells are there as optional depth); Wednesday you turn AI reviewers loose on your own analysis and compare what they catch.
-- **Instructor prep:** Verify the robustness-grid cells run fast (the placebo/influence cells are optional depth); build the shared one-outlier dataset; brief the SRL on the fragile-specification puzzle.
-- **Risks / contingency:** The specification grid balloons → students commit to three pre-listed checks maximum for class, the rest as studio work or optional depth; the pre-listing rule is the point, not the count.
+- **SRL puzzle focus:** Colleague puzzle: a colleague's note upgrades a robust association into a causal conclusion — every check passed, so what exactly is still missing?
+- **Driving question:** What sentence can your design and your surviving checks actually support?
+- **Secondary questions:** Which claim verbs overstate your route? Why must the boundary live in the same sentence as the claim? Where do population, uncertainty, and limitation lines belong? When is 'causal, currently unidentified' the honest label?
+- **Inquiry:** all routes (results to bounded claims)
+- **Claim PERMITTED:** "A bounded claim: estimate, population, route boundary, and uncertainty in one sentence — at the strength my audit licenses and no more."
+- **Claim NOT permitted:** A claim strengthened by precision, significance, or reviewer confidence alone — surviving robustness checks makes an association sturdy, not causal.
+- **RDSS reading:** Required EDR|AI: the results-to-claims and claim-evidence-tables lessons
+- **Other material:** nb10 student notebook (write, bound, and disclose), §Lecture 1 (Colab); M9 brief; your M8 robustness audit; the Studio 9 colleague artifact (course platform)
+- **Provenance:** crosswalk M9 + BOOK_STATIONS write-bound-disclose steps 1–3 + the course claim-boundary discipline | write, bound, and disclose | claim-verb ladder + boundary-in-the-sentence + LAPOP instructional example | fresh
+- **Concepts:** claim verbs and what each one requires; the bounded claim (boundary attached in the same sentence); population and uncertainty limits; limitations in a reader's words; the claim ladder — downgrade the verb until the design and audit license it; 'causal, currently unidentified' as the honest label (a causal question with weak identification is never relabeled descriptive)
+- **Python dependency:** pandas only (the bounded-claim teaching example; no new modeling)
+- **Dataset / simulation:** lapop_brazil.csv instructional example (teaching resample, no substantive claims) + each student's own audited result
+- **50-minute dynamic:** 0–9 SRL-led colleague puzzle: the colleague's association-to-causation upgrade on screen — every check passed, and the class must name what is still missing; 9–31 guided AI research-partner investigation in nb10: work the claim ladder on four overclaims, downgrading each verb until the design and audit license it, with your AI assistant proposing alternative phrasings you accept or reject against the evidence; 31–43 human verification + instructor formalization: the instructor formalizes the bounded claim (boundary in the same sentence) and the kind rule — a causal question with weak identification stays causal, currently unidentified, never quietly descriptive; 43–50 decision & defense: draft your own headline bounded claim + ledger + Claim Ticket.
+- **Hands-on activity:** Downgrade four overclaims until each matches its design and evidence, then write your own headline claim with estimate, population, route boundary, and uncertainty in one sentence.
+- **Practice:** 📝 nb10 practice: for six claim sentences, circle the verb, name what it would require, and rewrite the two your own audit could not license.
+- **Discussion prompt:** Which word in your current claim carries the largest evidentiary burden?
+- **Project connection:** The headline bounded claim drafted today is the sentence everything else in note v0 exists to support.
+- **Milestone developed:** M9 — Bounded research-note v0, Book Milestone 9 v1 (dev)
+- **Milestone work time:** 7 min (headline bounded-claim transfer)
+- **Milestone presentation/review:** one oral claim defense during the close
+- **Student prep:** M8 submitted; your audit's adjudication at hand; the results-to-claims lesson read.
+- **Student artifact:** Bounded headline claim + claim-verb audit of four overclaims + ledger row
+- **Exit ticket:** Claim Ticket #26: "I changed [verb] to [verb] because my design establishes [x] — and my boundary now lives in the same sentence."
+- **Homework / next milestone:** Bring the bounded claim and its evidence trace Wednesday; read the ai-disclosure and poster-to-note lessons — the note's spine and disclosure come next.
+- **Instructor prep:** Prepare the claim ladder and one real-output LAPOP teaching example with its caveat visible; release the Studio 9 colleague artifacts; brief the SRL on the upgrade puzzle.
+- **Risks / contingency:** No result survived M8 → the defensible note reports that outcome — a survived-nothing note with honest boundaries beats an invented claim, and the project returns to the owning studio for its next cycle.
 
-### M27 — Wed 2026-10-28 (in-person) — Attack the analysis II: human versus AI reviewers, and adversarial review of your own work
+### M27 — Wed 2026-10-28 (in-person) — Write and bound II: the claim-evidence table, the ledger-derived disclosure, and the note spine
 
 - **Student Research Lead slot:** SRL slot 16 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: three AI reviewers named three different 'most serious flaws' in our analysis — which one is real, and how would we tell without just trusting the most confident one?
-- **Driving question:** When a human reviewer, one AI, and a panel of AIs read the same analysis, who catches what — and would you have caught it yourself?
-- **Secondary questions:** How does AI reviewer feedback differ from a peer's? What does a multi-model comparison reveal that a single model hides? How do you run an adversarial-reviewer role against your own analysis without letting it write your conclusions? Where do AI reviewers confidently mislead?
-- **Inquiry:** all positions (adversarial review)
-- **Claim PERMITTED:** "I ran my analysis past a human reviewer and a multi-model AI panel, verified their hits against the data, and folded the real ones into my audit — with a note on what they got wrong."
-- **Claim NOT permitted:** Accepting an AI reviewer's verdict as authority (or blaming it for a miss) — the reviewer proposes, you verify; a flaw is real only if the data show it.
-- **RDSS reading:** (no new RDSS chapter — attack-the-analysis week; the readings are the red-team protocol and your AI Research Ledger)
-- **Other material:** nb10 student notebook (attack the analysis), §4–5 (Colab); Purdue GenAI Studio — the multi-model comparison + an adversarial-reviewer role (today's designated GenAI Studio touchpoint); AI Research Ledger template
-- **Provenance:** fresh + GenAI Studio reviewer bench | attack-the-analysis unit | multi-model reviewer comparison + adversarial-reviewer role protocol | fresh
-- **Concepts:** human vs AI reviewer feedback; multi-model comparison (agreement, disagreement, and confident error); the adversarial-reviewer role; verifying AI-flagged issues against the data; documenting AI review in the ledger
-- **Python dependency:** none new (GenAI Studio runs alongside; every flagged issue is re-checked in the student's own notebook)
-- **Dataset / simulation:** each student's own analysis + its written summary, submitted to the reviewers
-- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the lead recaps yesterday's honest-robustness line and challenges the class — can an AI reviewer tell robustness from p-hacking?; 7–30 intensive applied AI laboratory: in GenAI Studio, run your analysis summary through a single reviewer, then a multi-model panel, then an adversarial-reviewer role instructed to find its worst flaw — logging every hit and disagreement in the ledger; 30–38 peer defense + adversarial questioning: pair up, trade the AI panels' verdicts, and defend which flags are real (checked against your data) versus confident nonsense; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to your project + ledger + Claim Ticket.
-- **Hands-on activity:** Run your own analysis through a human reviewer and a GenAI Studio multi-model panel plus an adversarial-reviewer role, then verify each flagged issue against your data and record which were real.
-- **Practice:** 📝 nb10 practice: given three AI reviewers' conflicting 'top flaws' on a sample analysis, design the one data check that would confirm or kill each.
-- **Discussion prompt:** An AI reviewer flagged a flaw your human reviewer missed — and invented one that is not there. What does that pattern tell you about how to use it?
-- **Project connection:** M9 research audit takes shape: each project's audit now carries verified human + multi-model AI review, with the real hits triaged and the false ones noted.
-- **Milestone developed:** M9 — Poster draft 1 and research audit
-- **Milestone work time:** 16 min (run the multi-model + adversarial review on your own analysis, log it)
-- **Milestone presentation/review:** peer defense rounds (real-vs-confident-nonsense triage; the studio pitches come at this Friday's M9-due studio)
-- **Student prep:** Robustness checks from Monday run; a one-paragraph written summary of your analysis ready to hand a reviewer.
-- **Student artifact:** Human + multi-model AI review logged in the ledger, each hit verified real or refuted
-- **Exit ticket:** Claim Ticket #27: "The realest flaw any reviewer found in my analysis is [flaw]; I confirmed it with [check]; the most confident wrong flag was [x]."
-- **Homework / next milestone:** Fold the verified hits into your poster draft and research audit; both are due at this Friday's studio, where you present the draft and log the recommended GenAI Studio Poster Critic and Robustness reviews.
-- **Instructor prep:** Confirm GenAI Studio access and that the adversarial-reviewer and multi-model roles are live; verify the RCAC endpoint; prep the conflicting-reviewers practice case; brief the SRL.
-- **Risks / contingency:** GenAI Studio access fails → the multi-model comparison runs on provided saved transcripts of three models reviewing a sample analysis; the lesson (compare, then verify) survives without live access.
+- **SRL puzzle focus:** Challenge: a colleague's note cites a plausible source that was never retrieved — the lead asks how the claim-evidence table would have caught it before a reader did.
+- **Driving question:** Can every sentence in your note name its evidence, its verification, and its boundary?
+- **Secondary questions:** What goes in a claim-evidence row, and why does a claim with no row not ship? What did AI receive and return, and which suggestions remain unresolved? Why is the disclosure written from the ledger, not from memory? What orders the note spine?
+- **Inquiry:** all routes (bounded writing and disclosure)
+- **Claim PERMITTED:** "Every claim in my note has a complete evidence row — claim, output, check — and my disclosure is derived from the ledger, including what I did not verify."
+- **Claim NOT permitted:** A citation or factual claim supported only by an AI suggestion — an unretrieved source is an unresolved suggestion, not evidence, however plausible it reads.
+- **RDSS reading:** Required EDR|AI: the ai-disclosure and poster-to-note lessons
+- **Other material:** nb10 student notebook (write, bound, and disclose), §Lecture 2 (Colab); M9 brief; your AI Research Ledger; the Studio 9 colleague artifact (scored audit)
+- **Provenance:** crosswalk M9 + BOOK_STATIONS write-bound-disclose steps 2–4 + the D16 evidence-integrity rule | write, bound, and disclose | claim-evidence table + ledger-derived disclosure + note spine | fresh
+- **Concepts:** the claim-evidence table (one row per claim: claim, output, trace, boundary); a claim with no row does not ship; unresolved suggestions vs verified citations; the AI disclosure written from the ledger — including what was sent to tools and what was never verified; the note spine: problem, gap, question, findings ordered by support, headline claim with its boundary inside
+- **Python dependency:** none required beyond opening your verified outputs
+- **Dataset / simulation:** each student's own verified outputs and evidence registry
+- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: yesterday's bounded claim recited from memory, then the colleague's plausible-but-never-retrieved source — how would the table have caught it?; 7–30 intensive applied AI laboratory: in nb10, build a claim-evidence row for every candidate claim in your note and cut any claim that cannot complete its row, then convert your ledger into a disclosure draft — while the scored colleague audit hunts the seeded flaw in the colleague's note; 30–38 peer defense + adversarial questioning: partners each verify one claim-evidence row and one disclosure sentence against the actual output and ledger; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer: assemble problem, gap, question, findings, boundary, and disclosure into your note spine + ledger + Claim Ticket.
+- **Hands-on activity:** Build a claim-evidence row for every candidate claim, cut the claims that cannot complete a row, and write your disclosure from the ledger — not from memory.
+- **Practice:** 📝 nb10 practice: convert one ledger entry into a precise disclosure sentence; then label three source-claims as verified, mischaracterized, or unresolved.
+- **Discussion prompt:** What belongs in your disclosure even when no AI wording survives in the note?
+- **Project connection:** Note v0 takes shape: spine assembled, every surviving claim traced, disclosure drafted — due at this Friday's studio.
+- **Milestone developed:** M9 — Bounded research-note v0, Book Milestone 9 v1 (dev; spine + table assembled)
+- **Milestone work time:** 8 min (note-spine transfer)
+- **Milestone presentation/review:** peer defense (one evidence row + one disclosure sentence verified each); scored colleague audit filed
+- **Student prep:** Bounded headline claim from Monday; evidence registry and AI Research Ledger current; the ai-disclosure lesson read.
+- **Student artifact:** Claim-evidence table + note spine + ledger-derived disclosure draft + scored colleague-audit sheet
+- **Exit ticket:** Claim Ticket #27: "One sentence I cut or marked unresolved was [x], because its evidence row could not be completed."
+- **Homework / next milestone:** Complete note v0 (spine, table, disclosure); it is due at this Friday's studio, where the note is red-teamed and the poster week is briefed.
+- **Instructor prep:** Supply only retrieved real-source examples or explicitly unresolved suggestions — never a fabricated citation (D16); hold the colleague keys; brief the SRL on the never-retrieved-source challenge.
+- **Risks / contingency:** A source cannot be retrieved in class → it keeps its unresolved status and leaves the evidence table; the claim it supported is cut or re-scoped, never shipped on the suggestion.
 
-### M28 — Fri 2026-10-30 (in-person) — Studio Friday — poster draft 1 and research audit due: your analysis, attacked and defended
+### M28 — Fri 2026-10-30 (in-person) — Studio Friday — bounded research-note v0 due: the note red-team, and the poster week is briefed
 
-- **Driving question:** Your poster draft is on screen and your analysis has been audited. What survived the attack, and what did you change?
-- **Secondary questions:** What does a completed research audit contain? What do the GenAI Studio Poster Critic and Robustness reviewers add to it? What will next week's poster criticism demand of this draft?
-- **Inquiry:** all positions (draft + audit)
-- **Claim PERMITTED:** "Here is my poster draft, the audit that stress-tested it, and the two things the AI critics changed my mind about — verified, not just accepted."
-- **Claim NOT permitted:** Submitting a draft whose research audit is a formality — an audit with no hits either was not run honestly or was not run at all.
-- **RDSS reading:** (no new reading — studio Friday; bring your poster draft and your robustness results)
-- **Other material:** nb10 student notebook (attack the analysis) for the recap; M10 Brightspace brief (final poster lock); Purdue GenAI Studio — REQUIRED Poster Critic + Robustness & Sensitivity Reviewer roles, logged in the ledger; project/poster/redteam_review_protocol.md (four-audit slip); AI Research Ledger template
-- **Provenance:** week's nb10 material + M10 Brightspace brief + GenAI Studio reviewer bench + project/poster/redteam_review_protocol.md | studio Friday | poster-draft review + required-role AI audit + poster-lock kickoff | fresh
-- **Concepts:** the research audit as a graded artifact; recommended GenAI Studio Poster Critic + Robustness reviews; verifying AI critique before acting on it; the four-audit peer red-team; the poster-criticism and lock week ahead
-- **Python dependency:** none required (robustness results carried from the week)
-- **Dataset / simulation:** each student's own poster draft + audited analysis
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each student's one-line status on their poster draft and audit; 15–45 milestone kickoff + AI-supported sprint: present the M10 brief on Brightspace — the final poster lock and the criticism week that leads to it — then a sprint where every student runs the REQUIRED GenAI Studio Poster Critic and Robustness & Sensitivity Reviewer roles against their own draft and logs both in the ledger; 45–50 revise, log the ledger, submit M9 tonight + Claim Ticket.
-- **Hands-on activity:** Run the recommended GenAI Studio Poster Critic and Robustness reviews on your own draft, log them, then red-team a peer's draft with the four-audit slip and submit your poster draft plus research audit.
-- **Practice:** 📝 during the sprint: for each required AI reviewer, write one hit you verified and acted on, and one you checked and rejected.
-- **Discussion prompt:** Where did the GenAI Studio Poster Critic and your human peer disagree about your draft — and whose hit did the data side with?
-- **Project connection:** M9 submits tonight; every project enters poster-criticism week with an audited draft and a documented, verified AI review trail.
-- **Milestone developed:** M9 — Poster draft 1 and research audit (due tonight) → M10 — Final poster lock (kickoff)
+- **Driving question:** Does your note stand alone — every claim traced, bounded, and disclosed — before a single poster pixel exists?
+- **Secondary questions:** What does the note red-team check? Why does the note lock before poster adaptation begins? What do the M10 gates — author self-reproduction and the release preflight — demand next week?
+- **Inquiry:** all routes (bounded-note studio)
+- **Claim PERMITTED:** "A stand-alone note v0: headline claim bounded in-sentence, every claim with a complete evidence row, disclosure from the ledger — the only source the poster may draw from."
+- **Claim NOT permitted:** A poster-first claim — anything appearing on next week's poster that is absent from tonight's note; and an unresolved source presented as evidence.
+- **RDSS reading:** (no new reading — studio Friday; bring your complete note v0)
+- **Other material:** week10 quiz (printed); nb10 student notebook (write, bound, and disclose) for the recap; M10 Brightspace brief (final poster lock + the two gates); note-v0 checklist
+- **Provenance:** crosswalk M9 checkpoint (bounded-claims-v1; the note precedes the poster) + M10 Brightspace brief | studio Friday | note red-team + poster content brief + gates preview | fresh
+- **Concepts:** the note red-team; note-before-poster (the poster adapts the note, never the reverse); the M10 gate preview — author self-reproduction and the release preflight, both blocking before the lock; the terminal lock ahead
+- **Python dependency:** none required (verified outputs open for the red-team's checks)
+- **Dataset / simulation:** each student's own note v0 and evidence registry
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each student reads their headline claim and its boundary aloud; 15–45 milestone kickoff + AI-supported sprint: present the M10 brief on Brightspace — the final poster lock, its criticism week, and the two blocking gates (author self-reproduction + release preflight) — then the note red-team: pairs attack each other's claim-evidence tables and disclosures, and each student patches what the attack found; 45–50 revise, log the ledger, submit M9 tonight + Claim Ticket.
+- **Hands-on activity:** Run the note-v0 checklist, take a partner's red-team on your claim-evidence table and disclosure, patch the real hits, and submit your note.
+- **Practice:** 📝 during the sprint: record one red-team hit you patched and one you rejected — with the check that decided each.
+- **Discussion prompt:** Which note sentence would be most dangerous to carry unchanged onto a poster?
+- **Project connection:** M9 submits tonight; the note is the poster's only source — next week adapts it, criticizes it, gates it, and locks it.
+- **Milestone developed:** M9 — Bounded research-note v0, Book Milestone 9 v1 (worked + due); M10 — Final poster lock, Book Milestone 10 v1 (kickoff)
 - **Milestone work time:** 30 min studio block
-- **Milestone presentation/review:** M9 worked at the studio and submitted; four audits run on own draft; recommended GenAI Studio Poster Critic and Robustness reviews
-- **Student prep:** Poster draft built and on screen; robustness and AI-review results from the week at hand.
-- **Student artifact:** Submitted poster draft + research audit + logged GenAI Studio Poster Critic and Robustness reviews + one peer red-team slip
-- **Exit ticket:** Claim Ticket #28: "The one change the required AI reviews made to my poster — and the check that convinced me it was right, not just confident."
-- **Homework / next milestone:** Submit M9 tonight on Brightspace. Monday begins poster criticism — bring your draft ready to be walked, questioned, and defended before the Friday lock.
-- **Instructor prep:** Confirm the GenAI Studio Poster Critic + Robustness roles are provisioned; print the four-audit red-team slips; M10 brief staged on Brightspace; consult order.
-- **Risks / contingency:** GenAI Studio is down → the required reviews use each student's own draft run through saved role transcripts prepared in advance, and the live run is rescheduled to office hours; the ledger records the substitution.
+- **Milestone presentation/review:** M9 worked at the studio and submitted; note red-team in pairs; poster content brief presented
+- **Student prep:** Note v0 complete (spine, claim-evidence table, disclosure); headline claim ready to read aloud.
+- **Student artifact:** Submitted M9 note v0 + red-team slip given and received + ledger row
+- **Exit ticket:** Claim Ticket #28: "The claim now safe to adapt to the poster is [claim] — and nothing outside my note will appear on it."
+- **Homework / next milestone:** Submit M9 tonight on Brightspace. Weekend: read the research-posters lesson; Monday you decide what your claim must lose to fit a poster — and begin the one-figure draft.
+- **Instructor prep:** Print the week10 quiz; stage the M10 brief with the two gate definitions; red-team pairing plan; note-v0 checklist copies.
+- **Risks / contingency:** A note is thin → the red-team runs on what exists and the submission stands tonight (M9 is revisable; M10 is not); a missing evidence row removes its claim rather than becoming a Friday research task.
 
-## Week 11 — Poster criticism and final poster lock
+## Week 11 — Studio 10: Adapt the poster and pass the release gates
 
-### M29 — Mon 2026-11-02 (in-person) — Poster criticism I: the gallery walk — audit every poster's questions, claims, evidence, uncertainty, and accessibility
+### M29 — Mon 2026-11-02 (in-person) — Poster adaptation and criticism I: what the claim must lose, the one-figure draft, and the gallery walk
 
 - **Student Research Lead slot:** SRL slot 17 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: this poster's figure looks convincing from across the room, but does its impression match its number — and would a color-blind reader or a screen-reader user get the same message?
-- **Driving question:** Walking the room as a stranger would, does each poster's evidence actually earn its headline — and can everyone read it?
-- **Secondary questions:** What does a gallery-walk audit check: the research question, the claims, the evidence hierarchy, the visible uncertainty, the visual design, the accessibility? Where do posters most often overclaim or exclude a reader? How do AI-generated skeptic questions sharpen a human critique?
-- **Inquiry:** all positions (poster criticism)
-- **Claim PERMITTED:** "On this poster, the headline is inside or outside its evidence, the uncertainty is visible or buried, and the design reaches or excludes these readers — here is the specific hit."
-- **Claim NOT permitted:** A gallery-walk 'looks great' with no named hit — politeness is not a review, and a criticism round with no findings failed the poster, not spared it.
-- **RDSS reading:** Course book chapter 28 'Poster Criticism' — the gallery-walk audit plus accessibility; also project/poster/redteam_review_protocol.md (the four audits + accessibility) and the milestone_10 poster rubric
-- **Other material:** nb11 student notebook (poster criticism and final lock), §1–2 (Colab); project/poster/redteam_review_protocol.md (four-audit + accessibility slip); the milestone_10 poster rubric (the five graded rows, incl. the AI Research Ledger); AI for AI-generated skeptic questions per poster
-- **Provenance:** project/poster/redteam_review_protocol.md + milestone_10 poster rubric + fresh gallery-walk method | poster-criticism unit | four-audit + accessibility gallery walk with AI-generated skeptic prompts | fresh
-- **Concepts:** the gallery-walk audit; the four audits (claim boundary, figure honesty, read path, uncertainty) plus visual design and accessibility; impression-versus-number; accessibility as a claim reaching every reader; AI-generated skeptic questions as a critique aid
-- **Python dependency:** none required (figure re-checks optional, matplotlib)
-- **Dataset / simulation:** the class's own five poster drafts on display
-- **50-minute dynamic:** 0–9 SRL-led research puzzle: the lead opens with one poster's figure and presses the room — does the visual impression match the actual number, and who cannot read it?; 9–31 structured gallery walk (the investigation block): every poster on display, each student walks all five with the four-audit slip plus a visual-design and accessibility check, and pastes AI-generated skeptic questions beside each to sharpen the critique; 31–43 human verification + instructor formalization: the room consolidates the hits per poster, separating real evidence-and-access problems from stylistic quibbles and checking each AI-generated question against the poster; 43–50 decision & defense: ledger entry + Claim Ticket.
-- **Hands-on activity:** Run a full gallery-walk audit of all five posters — claims, evidence, uncertainty, visual design, accessibility — sharpened by AI-generated skeptic questions you verify against each poster.
-- **Practice:** 📝 nb11 practice: on a sample poster with planted flaws, catch at least one claim-boundary, one figure-honesty, and one accessibility problem; mark which AI-generated skeptic question would have surfaced each.
+- **SRL puzzle focus:** Colleague puzzle: two figures of the same colleague result — the more dramatic one changes what the finding appears to say. Which one is honest, and how do you tell?
+- **Driving question:** A poster gives your claim one figure and thirty seconds of a stranger's attention — what must it lose, and what may it never lose?
+- **Secondary questions:** What does adapting a bounded claim to the poster genre drop, and what must survive (the boundary, the uncertainty, the preliminary label)? Does the figure's impression match its number? What does the gallery-walk audit check — claims, evidence, uncertainty, visual design, accessibility?
+- **Inquiry:** all routes (genre adaptation + poster criticism)
+- **Claim PERMITTED:** "My poster says less than my note and claims nothing my note does not — headline verbed to my boundary, intervals drawn, preliminary label on."
+- **Claim NOT permitted:** An adaptation that drops the limitations — that is not a shorter version of the claim, it is a different claim; and a figure whose impression outruns its number.
+- **RDSS reading:** Required EDR|AI: the research-posters lesson (the one-figure adaptation)
+- **Other material:** nb11 student notebook (poster adaptation and release gates), §Lecture 1 (Colab); your M9 note; project/poster/redteam_review_protocol.md (four-audit + accessibility slip); the Studio 10 colleague artifact (course platform)
+- **Provenance:** crosswalk M10 + BOOK_STATIONS adapt-and-defend steps 1–2 + the course gallery-walk method | poster adaptation and criticism | one-figure adaptation + visual-honesty audit + four-audit gallery walk | reused + fresh
+- **Concepts:** genre adaptation — what the claim must lose to fit, and what it may never lose; the one-figure draft with labeled values and intervals drawn; visual honesty (impression versus number); the preliminary-edition label; the gallery-walk audit (claim boundary, figure honesty, read path, uncertainty) plus visual design and accessibility
+- **Python dependency:** matplotlib (re-export your note's key figure at poster scale; provided cell)
+- **Dataset / simulation:** each student's own note v0 and its verified outputs (+ the colleague pair of figures for the puzzle)
+- **50-minute dynamic:** 0–9 SRL-led colleague puzzle: the two figures of one colleague result side by side — the class rules which is honest and names what the dramatic one changed; 9–31 guided AI research-partner investigation in nb11: name what your claim must lose to fit the genre (and what it may never lose), then build the one-figure draft from your note — labeled values, intervals drawn, headline verbed to your boundary, preliminary label on — with your AI assistant proposing layouts you accept or reject against the note; 31–43 human verification + gallery walk: drafts up, every student walks all of them with the four-audit + accessibility slip, and the room consolidates the real hits per poster, separating evidence problems from stylistic quibbles; 43–50 decision & defense: log your draft's ranked hits + ledger + Claim Ticket.
+- **Hands-on activity:** Build the one-figure poster draft from your note, then walk the gallery and audit every draft — claim boundary, figure honesty, read path, uncertainty, accessibility.
+- **Practice:** 📝 nb11 practice: on a sample poster with planted flaws, catch one claim-boundary, one figure-honesty, and one accessibility problem — then name what its dramatic figure changed about the apparent finding.
 - **Discussion prompt:** Which accessibility problem did the gallery walk catch that a fast reader never would — and how many strangers at the Expo would it have lost?
-- **Project connection:** M10 final poster lock advances: each project leaves with a consolidated list of audited hits and the AI-generated hard questions its poster must answer.
-- **Milestone developed:** M10 — Final poster lock
-- **Milestone work time:** 8 min (log the audited hits your own poster received)
-- **Milestone presentation/review:** gallery-walk audit (structured peer criticism of every poster)
-- **Student prep:** M9 poster draft on display; four-audit slip and rubric reviewed.
-- **Student artifact:** Completed gallery-walk audit slips given + the consolidated hit list for your own poster
-- **Exit ticket:** Claim Ticket #29: "The gallery walk's most serious hit on my poster is [hit]; it threatens my claim boundary, uncertainty, or accessibility, and my fix is [x]."
-- **Homework / next milestone:** Apply the gallery-walk hits to your poster; Wednesday you defend it out loud against interdisciplinary, methods, and skeptical-reviewer questions before Friday's lock.
-- **Instructor prep:** Mount all five drafts for the walk; print the four-audit + accessibility slips; verify the AI skeptic-question prompts produce usable output; brief the SRL on the impression-vs-number puzzle.
-- **Risks / contingency:** A draft is not display-ready → that student audits others (the obligation stands) and posts their storyboard grid in its place for critique.
+- **Project connection:** M10 advances: each project leaves with a preliminary-labeled one-figure draft and its consolidated, ranked hit list.
+- **Milestone developed:** M10 — Final poster lock, Book Milestone 10 v1 (dev)
+- **Milestone work time:** 8 min (log and rank the audited hits your own draft received)
+- **Milestone presentation/review:** gallery-walk audit (structured peer criticism of every draft)
+- **Student prep:** M9 note submitted and at hand; the research-posters lesson read; a draft or storyboard started over the weekend.
+- **Student artifact:** One-figure preliminary-labeled draft + gallery-walk slips given + your own draft's ranked hit list
+- **Exit ticket:** Claim Ticket #29: "The gallery's most serious hit on my draft is [hit]; my fix is [x] — and the fix changes my figure, not my claim."
+- **Homework / next milestone:** Fix your draft once against the ranked hits; Wednesday you defend it aloud, then prove its numbers reproduce from a clean start and pass the release preflight — both gates block Friday's lock.
+- **Instructor prep:** Verify the poster-scale figure cell; print the four-audit + accessibility slips; prepare the colleague figure pair with its key; brief the SRL on the two-figures puzzle.
+- **Risks / contingency:** A draft is not display-ready → that student audits others (the obligation stands) and posts the one-figure storyboard in its place; the fix log still opens from the walk's hits.
 
-### M30 — Wed 2026-11-04 (in-person) — Poster criticism II: the oral defense — face interdisciplinary, methods, and skeptical-reviewer questions
+### M30 — Wed 2026-11-04 (in-person) — Poster criticism II: the oral defense, the author self-reproduction, and the release preflight
 
 - **Student Research Lead slot:** SRL slot 18 (randomly assigned at semester start)
-- **SRL puzzle focus:** Puzzle: a skeptic asks 'couldn't something else explain this?' and a methods reviewer asks 'why this specification?' — do they take the same answer, or do they need different defenses?
-- **Driving question:** Standing at your poster, can you answer the outsider, the methodologist, and the skeptic — and concede gracefully where you must?
-- **Secondary questions:** How does an interdisciplinary question differ from a methods question or a skeptic's? What does a strong 'I don't know' contain? When do you defend and when do you concede? How does the oral defense expose gaps the written poster hid?
-- **Inquiry:** all positions (oral poster defense)
-- **Claim PERMITTED:** "Asked as an outsider, a methodologist, and a skeptic, I defended what my evidence licenses and conceded what it does not — on the record, at the poster."
-- **Claim NOT permitted:** Bluffing an answer you do not have or upgrading the claim under pressure — the spoken defense must stay inside the poster's written boundary.
-- **RDSS reading:** Course book chapter 28 'Poster Criticism', the oral-defense section; also project/poster/redteam_review_protocol.md and a three-lens question deck for the interdisciplinary, methods, and skeptic lenses
-- **Other material:** nb11 student notebook (poster criticism and final lock), §3 (Colab); project/poster/redteam_review_protocol.md; a three-lens question deck (interdisciplinary / methods / skeptic); AI for generating additional hard questions per poster
-- **Provenance:** project/poster/redteam_review_protocol.md (oral-defense adaptation) + fresh three-lens question protocol | poster-criticism unit | oral defense rounds with interdisciplinary/methods/skeptic questioning | fresh
-- **Concepts:** oral poster defense; interdisciplinary vs methods vs skeptical questions; the honest-don't-know formula; defend-versus-concede judgment; the spoken claim boundary
-- **Python dependency:** none required (defender may open the notebook if a number is probed)
-- **Dataset / simulation:** each student's own poster (defended live)
-- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the lead sorts three sample questions into interdisciplinary, methods, and skeptic, and challenges the class on which needs which kind of answer; 7–30 intensive oral-defense rounds: each presenter stands their poster for a timed round of questions drawn from all three lenses (peers, instructor, and AI-generated skeptic prompts), practicing the honest-don't-know formula; 30–38 peer defense + adversarial questioning: in pairs, drill the hardest unanswered question from each defense and rehearse the defend-or-concede call; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to Friday's lock + ledger + Claim Ticket.
-- **Hands-on activity:** Defend your poster live against interdisciplinary, methods, and skeptical questions, then drill the hardest question each defense exposed and decide where to defend and where to concede.
-- **Practice:** 📝 nb11 practice: classify six audience questions by lens (interdisciplinary / methods / skeptic) and draft the honest-don't-know answer for the one you would least like to get.
+- **SRL puzzle focus:** Challenge: a colleague's poster looks finished and answers questions well — but its headline number does not reproduce from a clean start. What may Friday's lock do with it?
+- **Driving question:** Your poster looks ready and defends well — but do its numbers reproduce from a clean start, and would it survive a release audit? Both gates block Friday's lock.
+- **Secondary questions:** How do interdisciplinary, methods, and skeptic questions each test the poster? What does author self-reproduction prove — and what can it never prove (it is not independent verification)? What do the four preflight checks cover — permissions, disclosure, reproducibility, claim boundary?
+- **Inquiry:** all routes (oral defense + release gates)
+- **Claim PERMITTED:** "Defended across three lenses, fixed once against the log, self-reproduced from a clean start, and preflight-passed — my poster has earned Friday's lock."
+- **Claim NOT permitted:** "It reproduced on my machine, so it is verified" — author self-reproduction is a gate you must pass, not independent verification; and bluffing an answer under questioning upgrades no claim.
+- **RDSS reading:** Required EDR|AI: the poster-criticism lesson (the defense and the gates)
+- **Other material:** nb11 student notebook (poster adaptation and release gates), §Lecture 2 (Colab); the three-lens question deck (interdisciplinary / methods / skeptic); the reproduction-log and release-preflight templates; the Studio 10 colleague artifact (scored audit)
+- **Provenance:** crosswalk M10 gates (reproduce-before-publish + release-preflight-before-publish, both blocking) + BOOK_STATIONS adapt-and-defend steps 3–4 + the course three-lens defense | poster criticism and release gates | oral defense + fix log + author self-reproduction + four-check preflight | reused + fresh
+- **Concepts:** the three-lens defense (interdisciplinary, methods, skeptic) and the honest don't-know; defend-versus-concede judgment; the fix log — fixed once, then the lock call; author self-reproduction from a clean start (a blocking gate, and not independent verification); the release preflight (permissions, disclosure, reproducibility, claim boundary); gate evidence: the reproduction log and the preflight log
+- **Python dependency:** your own notebook, restarted clean (run-all for the self-reproduction gate)
+- **Dataset / simulation:** each student's own poster draft + runnable notebook (+ the colleague's non-reproducing poster for the audit)
+- **50-minute dynamic:** 0–7 SRL-led retrieval & challenge: the colleague's finished-looking poster whose headline number will not reproduce from a clean start — the class rules what Friday's lock may do with it; 7–30 intensive applied AI laboratory: timed defense rounds against the three-lens deck (peers, instructor, and AI-generated skeptic questions), each defender logging fixes — then every student restarts clean, runs all, and checks the poster's numbers against the fresh outputs (the reproduction log), while the scored colleague audit traces where the colleague's number diverged; 30–38 peer defense + adversarial questioning: pairs drill the hardest unanswered question and run each other's release preflight — permissions, disclosure, reproducibility, claim boundary; 38–42 SRL synthesis + instructor accuracy lock: the lead states the room's conclusion and its uncertainty, and the instructor corrects any claim that survived challenge but is wrong before it can enter a ledger; 42–50 transfer to Friday's lock: record gate status (pass / blocked, with the evidence) + ledger + Claim Ticket.
+- **Hands-on activity:** Defend your poster across three lenses, fix once against the log, self-reproduce its numbers from a clean restart, and run the four-check release preflight — recording both gate logs.
+- **Practice:** 📝 nb11 practice: classify six audience questions by lens and draft the honest don't-know for the one you least want; then mark which preflight check would catch a dropped limitation.
 - **Discussion prompt:** Which classmate's concession made their project MORE credible, not less — and what exactly did they concede?
-- **Project connection:** M10 nears lock: every project has faced live questioning across three lenses and knows the exact claims it must soften before Friday.
-- **Milestone developed:** M10 — Final poster lock
-- **Milestone work time:** 16 min (revise the claims your oral defense exposed as too strong)
-- **Milestone presentation/review:** oral poster defense rounds (three-lens questioning)
-- **Student prep:** Gallery-walk hits applied; poster ready to stand and defend; question bank started.
-- **Student artifact:** Delivered oral defense + logged hardest questions + the list of claims to soften before the lock
-- **Exit ticket:** Claim Ticket #30: "The question I could not fully answer today is [q]; before Friday's lock I will answer it or soften the claim it exposed."
-- **Homework / next milestone:** Make every claim-softening your defense exposed; Friday is the terminal production studio — arrive with a print-ready file, because the poster locks and goes for printing that day, with no revision after.
-- **Instructor prep:** Assemble the three-lens question deck per project; timer; verify the AI hard-question prompts; brief the SRL on the two-kinds-of-question puzzle.
-- **Risks / contingency:** A defense stalls → the instructor steps in as question-asker-of-record, slows the cadence, and the presenter gets a second short round after watching a peer model a save.
+- **Project connection:** M10 nears lock: every project holds a defense record, a fix log, and its two gate logs — pass, or blocked with a named repair.
+- **Milestone developed:** M10 — Final poster lock, Book Milestone 10 v1 (dev; self-reproduction + release-preflight gates run)
+- **Milestone work time:** 8 min (record gate status + the claims your defense exposed as too strong)
+- **Milestone presentation/review:** oral defense rounds (three-lens questioning); scored colleague audit filed
+- **Student prep:** Draft fixed once against Monday's hits; notebook runnable for the clean restart; gallery hit list at hand.
+- **Student artifact:** Defense record + fix log + reproduction log + release-preflight log (both gates dated)
+- **Exit ticket:** Claim Ticket #30: "My gates read [pass / blocked]: the number that had to reproduce was [x], and the preflight check closest to failing was [y]."
+- **Homework / next milestone:** Close any blocked gate before Friday — a blocked gate blocks the lock, no exceptions; arrive with a print-ready file, because the poster locks and goes for printing at 5:00 PM, with no revision after.
+- **Instructor prep:** Assemble the three-lens deck per project; timer; verify a clean Colab runtime reproduces the shared example; hold the colleague key (where the number diverges); brief the SRL on the will-not-reproduce challenge.
+- **Risks / contingency:** A clean run will not finish in class → the gate runs to completion in a hosted runtime after class and the log is filed before Friday's lock; a defense stalls → the instructor steps in as question-asker-of-record and the presenter gets a second short round.
 
-### M31 — Fri 2026-11-06 (in-person) — Studio Friday — final production and poster lock: citations verified, claims traced, submitted for printing by 5:00 PM
+### M31 — Fri 2026-11-06 (in-person) — Studio Friday — final production and the terminal poster lock: gates green, citations verified, submitted for printing by 5:00 PM
 
-- **Driving question:** Is every claim on this poster one you can defend to a stranger at the Expo, every number traced to a cell, every source real — with no 'after' to fix it?
-- **Secondary questions:** Does every citation resolve to a real, retrievable source? Does every claim trace to its evidence and sit inside its boundary? Is the AI-use disclosure block complete? Is the file print-ready to URC spec?
-- **Inquiry:** all positions (production and lock)
-- **Claim PERMITTED:** "Locked: every number traces to a notebook cell, every citation resolves to a real source, every claim sits inside its boundary, and the AI-use disclosure is on the record."
-- **Claim NOT permitted:** "I'll fix it after submission" — there is no after; the poster is terminal and the Expo audience reads the submitted version.
-- **RDSS reading:** (no new reading — studio Friday; bring your print-ready poster file and your notebook, runnable)
-- **Other material:** nb11 student notebook (poster criticism and final lock), §4 final checklist (Colab); project/poster/production_checklist.md; the milestone_10 poster rubric (self-score against the five graded rows); the course citation-verification discipline (every source retrieved and confirmed); URC poster spec + submission instructions on Brightspace
-- **Provenance:** project/poster/production_checklist.md + milestone_10 poster rubric + course evidence-integrity discipline | studio Friday (terminal) | final production checklist + citation/claim/disclosure audit + poster lock | fresh
-- **Concepts:** citation verification (every source real and retrievable); claim–evidence traceability (every number to a cell); the AI-use disclosure block; print-spec compliance; the terminal lock
+- **Driving question:** Is every claim on this poster one you can defend to a stranger at the Expo, every number traced and freshly reproduced, every source real — with no 'after' to fix it?
+- **Secondary questions:** Are both gate logs green — author self-reproduction and the release preflight? Does every citation resolve to a real, retrievable source? Does every claim trace to its evidence and sit inside its boundary? Are the preliminary label and the AI-use disclosure block on, and is the file print-ready to URC spec?
+- **Inquiry:** all routes (terminal lock studio)
+- **Claim PERMITTED:** "Locked: gates green, every number freshly reproduced and traced to a cell, every citation resolving, every claim inside its boundary, the preliminary label and disclosure on the record."
+- **Claim NOT permitted:** "I'll fix it after submission" — there is no after; a blocked gate, an unresolved citation, or an untraceable number blocks the lock, and the Expo audience reads the submitted version.
+- **RDSS reading:** (no new reading — studio Friday; bring your print-ready file, both gate logs, and your runnable notebook)
+- **Other material:** week11 quiz (printed); nb11 student notebook (poster adaptation and release gates), final checklist (Colab); project/poster/production_checklist.md; Purdue GenAI Studio — designated Poster Critic role, logged in the ledger; URC poster spec + submission instructions on Brightspace
+- **Provenance:** crosswalk M10 checkpoint (defense-ready-v1, poster edition labeled preliminary; both gates blocking) + project/poster/production_checklist.md + the course evidence-integrity discipline | studio Friday (terminal) | final production + gate check + citation/claim/disclosure audit + poster lock | reused + fresh
+- **Concepts:** the terminal lock; gate evidence checked at the door (reproduction log + preflight log); citation verification (every source real and retrievable); claim-evidence traceability (every number to a cell); the preliminary-edition label; the AI-use disclosure block; print-spec compliance
 - **Python dependency:** none required (figure re-exports at print resolution as needed)
 - **Dataset / simulation:** each student's own final poster + runnable notebook
-- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each student's one-line readiness call (what is left before the file locks); 15–32 final production sprint: silent studio with rotating instructor checklist consults — print-spec, figure resolution, uncertainty visible, headline inside its boundary — while each student runs the citation-verification pass (every source retrieved and confirmed) and completes the AI-use disclosure block; 45–50 lock, submit for printing, close the ledger + Claim Ticket. The deadline is today, 5:00 PM.
-- **Hands-on activity:** Run the final checklist, verify every citation resolves to a real source, trace one number to its cell under a partner's eyes, complete the AI-use disclosure, and submit the poster for printing.
-- **Practice:** 📝 (embedded in the checklist) verify: fonts ≥ minimum size at print scale; every figure carries its uncertainty or caveat; every citation opens to the source it names.
-- **Discussion prompt:** (brief, during consults) Which audit almost caught you — a citation that did not resolve, a number that did not trace, or a claim that outran its evidence?
-- **Project connection:** M10 final poster LOCKED and submitted for printing — the URC artifact is terminal; everything after this is delivery and depth (M11 kicks off Monday).
-- **Milestone developed:** M10 — Final poster lock (LOCKED + submitted for printing by 5:00 PM, terminal — no revision)
+- **50-minute dynamic:** 0–10 weekly topic quiz: five multiple-choice questions on the week's topic, answered solo on paper and handed in; 10–15 research stand-up: each student's readiness call — gate status and what is left before the file locks; 15–45 final production sprint: gate logs checked at the door (a blocked gate goes to repair first), then silent studio with rotating instructor checklist consults — print spec, figure resolution, uncertainty visible, headline inside its boundary, preliminary label on — while each student runs the citation-verification pass, traces one number to its cell under a partner's eyes, runs the designated GenAI Studio Poster Critic and adjudicates its flags, and completes the AI-use disclosure block; 45–50 lock, submit for printing, close the ledger + Claim Ticket. The deadline is today, 5:00 PM.
+- **Hands-on activity:** Show both gate logs green, run the final checklist, verify every citation resolves to a real source, trace one number to its cell under a partner's eyes, adjudicate the designated Poster Critic's flags, and submit the poster for printing.
+- **Practice:** 📝 (embedded in the checklist) verify: fonts ≥ minimum size at print scale; every figure carries its uncertainty or caveat; every citation opens to the source it names; the preliminary label is on the print file.
+- **Discussion prompt:** (brief, during consults) Which audit almost caught you — a gate, a citation that did not resolve, a number that did not trace, or a claim that outran its evidence?
+- **Project connection:** M10 final poster LOCKED and submitted for printing — the Expo artifact is terminal; next week turns the locked poster into a rehearsed defense (M11 kicks off Monday).
+- **Milestone developed:** M10 — Final poster lock, Book Milestone 10 v1 — poster edition, labeled preliminary (LOCKED + submitted for printing by 5:00 PM, terminal — no revision)
 - **Milestone work time:** 30 min studio block (production sprint + audit pairs)
-- **Milestone presentation/review:** instructor checklist consults + pair citation/claim/disclosure audit
-- **Student prep:** All oral-defense claim-softenings applied; print-ready file staged; notebook runnable.
-- **Student artifact:** Locked poster submitted for printing + signed production checklist + citation-verification + claim-traceability + disclosure audit
+- **Milestone presentation/review:** gate-log check + instructor checklist consults + pair citation/claim/disclosure audit + designated GenAI Studio Poster Critic review
+- **Student prep:** Both gate logs green (or the repair done); all defense claim-softenings applied; print-ready file staged; notebook runnable.
+- **Student artifact:** Locked poster submitted for printing + signed production checklist + both gate logs + citation-verification, traceability, and disclosure audit
 - **Exit ticket:** Claim Ticket #31: "One claim I softened before the lock, and why the softer version is the one I can defend at the Expo."
-- **Homework / next milestone:** Rest this weekend — the poster is locked. Monday begins poster delivery: the pitches, spoken uncertainty, and hard questions that turn this poster into a performance (M11).
-- **Instructor prep:** Confirm the printing/portal submission mechanics; consult-rotation timer; backup PDF-to-Brightspace plan; the M11 delivery brief staged for Monday.
-- **Risks / contingency:** Printing or the portal fails → the PDF submitted to Brightspace timestamps the 5:00 PM deadline; physical printing resolves next week before the Expo. A citation will not resolve → the claim it supports is cut or re-sourced before the lock, never shipped unverified.
+- **Homework / next milestone:** Rest this weekend — the poster is locked. Monday begins the defense rehearsal: pitch layers, hard questions, and spoken uncertainty (M11 kicks off Monday of conference-prep week).
+- **Instructor prep:** Print the week11 quiz; confirm the printing/portal submission mechanics; confirm the Poster Critic role is provisioned; consult-rotation timer; backup PDF-to-Brightspace plan; the M11 brief staged for Monday.
+- **Risks / contingency:** Printing or the portal fails → the PDF submitted to Brightspace timestamps the 5:00 PM deadline, and physical printing resolves next week before the Expo. A gate is still blocked at the studio → the repair happens first, in the sprint, and the lock waits for the log — never for a better result. A citation will not resolve → the claim it supports is cut or re-sourced before the lock, never shipped unverified.
 
 ## Week 12 — Poster delivery
 

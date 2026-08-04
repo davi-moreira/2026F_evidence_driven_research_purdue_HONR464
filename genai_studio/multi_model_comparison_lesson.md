@@ -1,7 +1,7 @@
 # The model-disagreement laboratory
 
 *A lesson protocol for GenAI Studio's multi-model comparison. The lab runs in
-Week 10's adversarial-review lecture (nb10); it is an optional companion in Week
+Week 9's adversarial-review lecture (nb09, D41); it is an optional companion in Week
 16 (nb16) for anyone extending the correlated-error lesson into the final defense.
 You run the same prompt across two or more models, study where they disagree, and
 — the harder lesson — learn why their **agreement is not proof**.*
@@ -126,7 +126,7 @@ responsible researcher.
 
 ## Where this lab is used
 
-- **Week 10 (nb10), "Share the research and attack the analysis."** You run
+- **Week 9 (nb09), "Studio 8: Stress-test and adjudicate."** You run
   Protocol A on a claim from your own project during the adversarial-review
   lecture, feeding the M9 research audit. Disagreement between models becomes a
   list of things to stress-test with the Robustness & Sensitivity Reviewer.
