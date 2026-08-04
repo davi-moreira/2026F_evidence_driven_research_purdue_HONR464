@@ -238,7 +238,8 @@ inform it, you stop and you decide.
    After running, verify: for the top pair, rerun one role with a different framing and
    different context and see whether the agreement survives. Counters *correlated errors
    across tools or roles* (agreement that is one flaw echoed back).
-6. Log the conflict, the diagnosis, and the override in your AI Research Ledger, and
+6. Log the pair you examined, your diagnosis, and the check that settled it in
+   your AI Research Ledger, with the override on record when you made one, and
    verify at least one output with a named method from the
    [Verification Guide](../verification-guide.qmd). An AI reviewer may run the check
    with you; the decision to accept or reject stays yours.

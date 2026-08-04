@@ -158,7 +158,9 @@ The hands-on half of this section lives in the chapter's **companion notebook**:
 Commit your own answer first, then delegate. Each prompt hands the tool reach, not the
 decision, and each one opens a loop rather than ending in a single answer: you read
 what comes back, push on the weakest part, and run it again. Closing the loop is your
-move, not the tool's.
+move, not the tool's. If your review mode is no-AI, skip the prompts, run each
+check yourself, and close your ledger with the one-line scope statement;
+nothing below requires a tool.
 
 ::: {.callout-important title="Do not delegate"}
 The tools may draft, review, and surface hard questions. They may never decide which

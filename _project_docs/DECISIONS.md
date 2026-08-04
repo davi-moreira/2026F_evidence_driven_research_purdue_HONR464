@@ -1599,4 +1599,11 @@ ch37 retitle to "Release Audit and the Next Study" (kept the
 AI-management-portfolio identity the course deliverable depends on;
 mode-adaptive wording achieves the same coherence); strict criterion-5 ↔
 produces machine-sync (texts legitimately diverge in explanatory tails).
-Diff review round appended below.
+Diff review round (same model/effort, `review --base a6389a7`): three
+findings, all confirmed and applied — ch37's IYT now tells the no-AI mode
+to skip the prompts, run the checks manually, and close the ledger with
+the scope line; ch36's closing step logs the pair, diagnosis, and check,
+with an override only when one occurred; and the transfer notes restore
+the interval-OR-caveat formulation (uncertainty shown where the design
+licenses it) instead of demanding intervals on every quantitative
+visual, in ch27, ch29, and the Studio 10 contribution line.

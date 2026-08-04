@@ -546,8 +546,9 @@ stations:
     contributions:
       research-posters: >-
         if your venue is a poster, or your format carries a quantitative
-        figure: the draft with labeled values, intervals drawn, and a
-        headline verbed to your boundary
+        figure: the draft with labeled values, uncertainty shown as the
+        design licenses (interval or caveat), and a headline verbed to
+        your boundary
       poster-criticism: >-
         if your venue is a poster: the gallery-walk audit of your draft,
         hits ranked by how far the error travels, fixed once, and the
