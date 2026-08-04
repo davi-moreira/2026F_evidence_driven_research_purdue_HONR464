@@ -36,8 +36,11 @@ rules:
     pattern: "\\b(genai ?studio|genai\\.rcac|rcac\\.purdue)\\b"
     why: "campus AI platform — chapters say 'your AI reviewer bench'"
   - id: course-milestones
-    pattern: "\\bmilestone ?m?\\d{1,2}\\b|\\bm\\d{1,2} (brief|milestone)\\b"
-    why: "milestone machinery is course-side; chapters chain IYT sections instead"
+    pattern: "\\bmilestone ?m\\d{1,2}\\b|\\bm\\d{1,2} (brief|milestone)\\b|\\bmilestone_\\d{2}\\b"
+    why: >-
+      course milestone CODES (M0–M15, brief slugs) are course-side. The
+      book's own Milestone chapters (D40) legitimately say "Milestone N";
+      only the course-coded forms leak.
   - id: course-notebooks
     pattern: "\\bnb\\d{2}\\b|\\bms\\d{2}\\b"
     why: "course lab ids; the chapter's own companion notebook is the book artifact"

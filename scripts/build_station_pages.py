@@ -1,20 +1,27 @@
 #!/usr/bin/env python3
-"""build_station_pages.py — the 12 Studio opener pages + workbooks (D38).
+"""build_station_pages.py — 12 Studio openers + 12 Milestone chapters + workbooks.
 
-D38 made the twelve Studios the book's twelve parts: each studio's page OPENS
-its part (its lessons follow it in the TOC) and carries the `#checkpoint`
-anchor the last lesson routes the reader back to. Reader-facing vocabulary is
-"Studio" (Davi's D38 ruling); the machine layer keeps the immutable station
-ids. This generator writes one page per studio into `book/studios/` and one
-workbook notebook into `notebooks/book/studios/`, from:
+D38 made the twelve Studios the book's twelve parts. D40 splits each studio
+into TWO generated pages: the OPENER (before the lessons) anticipates the
+studio's milestone — the goal, the reasoning, how it connects to the whole
+book — and lists the lessons with the piece each one hands the milestone;
+the MILESTONE CHAPTER (after the lessons, last in the part) carries the
+working details — the practice steps, the versioned record, the four rails,
+the rubric, and the workbook. Reader-facing vocabulary is "Studio" and
+"Milestone"; the machine layer keeps the immutable station ids and
+checkpoint ids. Sources:
 
   - planning/BOOK_ARCHITECTURE.yml — station identity, rank, checkpoint ids,
     and which lessons belong to the studio (never restated by hand)
-  - planning/BOOK_STATIONS.yml — the authored practice content
+  - planning/BOOK_STATIONS.yml — the authored practice content, including
+    the D40 milestone fields (milestone_title, milestone_reason,
+    hands_forward, contributions)
+  - planning/BOOK_ASSESSMENTS.yml — the authored rubric per checkpoint
 
-Old `stations/stationNN-*.html` URLs stay alive through per-page aliases.
-Checkpoints are VERSIONED, not locked passes (D35): every studio page says so
-and every workbook records a version with its reason.
+Old `stations/stationNN-*.html` URLs stay alive through opener aliases, and
+the historical `#checkpoint` anchor lands on the opener's milestone
+anticipation. Milestones are VERSIONED, not locked passes (D35): every
+milestone page says so and every workbook records a version with its reason.
 
     .venv/bin/python scripts/build_station_pages.py            # write
     .venv/bin/python scripts/build_station_pages.py --check    # CI: fresh?
@@ -22,6 +29,7 @@ and every workbook records a version with its reason.
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -47,15 +55,24 @@ RAILS = {
     "uncertainty": "Uncertainty, claim boundary, and revision history",
 }
 
-BANNER = ('::: {.callout-warning .review-pending title="Under development"}\n'
-          "This studio is part of a book in active development and has not yet\n"
-          "been through the author's review. Content may change as the review\n"
-          "advances.\n"
-          ":::\n")
+def banner(noun: str) -> str:
+    return ('::: {.callout-warning .review-pending title="Under development"}\n'
+            f"This {noun} is part of a book in active development and has not\n"
+            "yet been through the author's review. Content may change as the\n"
+            "review advances.\n"
+            ":::\n")
+
+
+def milestone_rel(st: dict) -> str:
+    return f"milestone{st['rank']:02d}-{st['id']}.qmd"
+
+
+def opener_rel(st: dict) -> str:
+    return f"studio{st['rank']:02d}-{st['id']}.qmd"
 
 
 def rubric_md(entry: dict | None) -> str:
-    """The AUTHORED rubric for this checkpoint (D35 §4 retires the
+    """The AUTHORED rubric for this milestone (D35 §4 retires the
     auto-derived, first-sentence rubrics)."""
     if not entry:
         return ""
@@ -64,7 +81,7 @@ def rubric_md(entry: dict | None) -> str:
         lv = c["levels"]
         rows.append(f"| {i} | {c['text']} | {lv[0]} | {lv[1]} | {lv[2]} |")
     total = 2 * len(entry["criteria"])
-    out = ("## How this checkpoint is assessed\n\n"
+    out = ("## How this milestone is assessed\n\n"
            f"Each row scores **0**, **1**, or **2**. **{total} points total.**\n\n"
            + "\n".join(rows) + "\n")
     for gate in entry.get("gates", []):
@@ -74,21 +91,44 @@ def rubric_md(entry: dict | None) -> str:
     return out
 
 
-def station_page(st: dict, spec: dict, lessons: list[dict], n: int,
-                 rubric: dict | None = None) -> str:
-    cps = ", ".join(f"`{c['id']}`" for c in st["checkpoints"])
-    reading = "\n".join(
-        f"- [Lesson {l['display']} — {l['title']}]({SITE}/book/{l['url_path']})"
-        for l in lessons)
-    steps = "\n".join(f"{i}. {s}" for i, s in enumerate(spec["steps"], 1))
-    rails = "\n".join(f"- **{RAILS[k]}.** {v}" for k, v in spec["rails"].items()
-                      if k in RAILS)
+def contribution_lines(spec: dict, lessons: list[dict]) -> str:
+    lines = []
+    for l in lessons:
+        c = spec["contributions"][l["id"]].rstrip(".")
+        lines.append(f"- [Lesson {l['display']} — {l['title']}]"
+                     f"({SITE}/book/{l['url_path']}): {c}.")
+    return "\n".join(lines)
+
+
+def chain_paragraph(stations: list[dict], specs: dict, idx: int) -> str:
+    st = stations[idx]
+    spec = specs[st["id"]]
+    last = stations[-1]
+    parts = []
+    if idx == 0:
+        parts.append("This is the first of the book's twelve milestones.")
+    else:
+        prev = stations[idx - 1]
+        pspec = specs[prev["id"]]
+        parts.append(f"You arrived carrying [Milestone {prev['rank']}: "
+                     f"{pspec['milestone_title']}]({milestone_rel(prev)}).")
+    parts.append(spec["hands_forward"].strip())
+    if idx < len(stations) - 1:
+        lspec = specs[last["id"]]
+        parts.append(f"The chain ends at [Milestone {last['rank']}: "
+                     f"{lspec['milestone_title']}]({milestone_rel(last)}), "
+                     "where the versions close into your finished research "
+                     "artifact, released and defended.")
+    return " ".join(parts)
+
+
+def opener_page(st: dict, spec: dict, lessons: list[dict], n: int) -> str:
+    rails_names = " · ".join(RAILS[k] for k in ("ethics", "evidence"))
     slug = st["id"]
-    route_block = (f"## Choosing your pathway\n\n{spec['route_guide']}\n"
+    route_block = (f"## Choosing your pathway\n\n{spec['route_guide']}\n\n"
                    if spec.get("route_guide") else "")
-    rubric_block = rubric_md(rubric)
     acq_block = (f"## Before you can work this studio\n\n"
-                 f"{spec['acquisition_note']}\n"
+                 f"{spec['acquisition_note']}\n\n"
                  if spec.get("acquisition_note") else "")
     return f"""---
 title: "Studio {n}: {st['title']}"
@@ -96,38 +136,67 @@ aliases:
   - /stations/station{n:02d}-{slug}.html
 ---
 
-{BANNER}
-[![](https://colab.research.google.com/assets/colab-badge.svg){{fig-alt="Open In Colab"}}]({COLAB}/studio{n:02d}_{slug.replace('-', '_')}.ipynb){{target="_blank"}}
-
+{banner("studio")}
 > **What you can defend when you leave.** {spec['purpose']}
 
-## What this studio produces
+## The milestone ahead {{#checkpoint}}
 
-{spec['produces']}
+{spec['milestone_reason'].strip()}
 
-This is a **versioned checkpoint**, not a pass. You date it, number it, and
-attach the reason for the version. When later evidence changes it, you write
-the next version rather than editing the last one, because the sequence of
-changes is itself part of your research record.
+This studio closes with **[Milestone {n}: {spec['milestone_title']}]({milestone_rel(st)})**, a short chapter of its own after the lessons. **What it asks you to produce.** {spec['produces'].strip()}
+
+{spec['hands_forward'].strip()} The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.
 
 {route_block}{acq_block}## The lessons in this studio
 
-{reading}
+Read them in order, working each lesson's **It is your turn** as you go. Each one builds a piece of Milestone {n}; beside each lesson is the piece it hands you.
 
-They follow this page. Read them in order, doing each lesson's **It is your
-turn** as you go, and then come back here: the studio is where those pieces
-become one artifact you can defend.
+{contribution_lines(spec, lessons)}
 
-## The practice {{#checkpoint}}
+When the last lesson closes, the milestone chapter is next. Nothing you write in a lesson is busywork: every piece above is on the milestone's checklist.
+"""
+
+
+def milestone_page(st: dict, spec: dict, lessons: list[dict], n: int,
+                   stations: list[dict], specs: dict, idx: int,
+                   rubric: dict | None = None) -> str:
+    steps = "\n".join(f"{i}. {s}" for i, s in enumerate(spec["steps"], 1))
+    rails = "\n".join(f"- **{RAILS[k]}.** {v}" for k, v in spec["rails"].items()
+                      if k in RAILS)
+    slug = st["id"]
+    rubric_block = rubric_md(rubric)
+    return f"""# Milestone {n}: {spec['milestone_title']} {{.unnumbered}}
+
+{banner("milestone chapter")}
+[![](https://colab.research.google.com/assets/colab-badge.svg){{fig-alt="Open In Colab"}}]({COLAB}/studio{n:02d}_{slug.replace('-', '_')}.ipynb){{target="_blank"}}
+
+**This chapter closes [Studio {n}: {st['title']}]({opener_rel(st)}).** Its lessons each ended at **It is your turn**; what you wrote there arrives here as working material, and this is where the pieces become one artifact you can defend.
+
+**What this milestone produces.** {spec['produces'].strip()}
+
+## What you bring
+
+Check you are carrying each piece before you start. If one is missing, go back and work that lesson's **It is your turn** first; the practice below assumes it.
+
+{contribution_lines(spec, lessons)}
+
+## The practice {{#milestone}}
 
 {steps}
 
+## A version, not a pass
+
+Your milestone artifact is a dated, numbered **version** with the reason for the version attached. When later evidence changes it, you write the next version rather than editing the last one, because the sequence of changes is itself part of your research record.
+
 ## The four rails, here
 
-Four concerns cross every studio in this book. At this studio they take
-these specific forms.
+Four concerns cross every studio in this book. At this milestone they take these specific forms.
 
 {rails}
+
+## Where this milestone sits
+
+{chain_paragraph(stations, specs, idx)}
 
 ## What sends you back
 
@@ -138,7 +207,7 @@ these specific forms.
 ## Your workbook
 
 Open the workbook with the badge above. It walks these steps with a cell for
-each one, ends by writing your checkpoint version with its reason, and adds
+each one, ends by writing your milestone version with its reason, and adds
 the rows this studio contributes to your AI Research Ledger and your Research
 Dossier.
 """
@@ -148,10 +217,11 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
     def md(i, s):
         return {"cell_type": "markdown", "id": f"m{i:03d}", "metadata": {},
                 "source": s.splitlines(keepends=True)}
-    cells = [md(0, f"# Studio {n}: {st['title']}\n\n"
+    cells = [md(0, f"# Milestone {n}: {spec['milestone_title']}\n\n"
+                   f"The milestone chapter of **Studio {n}: {st['title']}**.\n\n"
                    f"**What you can defend when you leave.** {spec['purpose']}\n\n"
-                   f"**This studio produces.** {spec['produces']}\n\n"
-                   f"A checkpoint is a *version*, not a pass. Date it, number it, "
+                   f"**What this milestone produces.** {spec['produces']}\n\n"
+                   f"A milestone is a *version*, not a pass. Date it, number it, "
                    f"and write why this version exists.\n")]
     i = 1
     for k, step in enumerate(spec["steps"], 1):
@@ -160,19 +230,19 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
                            f"cell and write your answer here.\n")); i += 1
     cells.append({"cell_type": "code", "id": "c001", "metadata": {},
                   "execution_count": None, "outputs": [],
-                  "source": ["# Scratch space — any code this studio's steps need.\n"]})
+                  "source": ["# Scratch space — any code this milestone's steps need.\n"]})
     cps = ", ".join(c["id"] for c in st["checkpoints"])
-    cells.append(md(i, f"## Write your checkpoint version\n\n"
-                       f"Checkpoint: `{cps}`\n\n"
+    cells.append(md(i, f"## Write your milestone version\n\n"
+                       f"Milestone record: `{cps}`\n\n"
                        f"Record: the version number, today's date, what this "
                        f"version says, and **why it differs from the previous "
                        f"one**. A first version says why you are starting here.\n"))
     i += 1
-    cells.append(md(i, "✍️ **Checkpoint version.** Double-click and write it here.\n"))
+    cells.append(md(i, "✍️ **Milestone version.** Double-click and write it here.\n"))
     i += 1
     if rubric:
         cells.append(md(i, rubric_md(rubric))); i += 1
-    cells.append(md(i, "## Before you leave\n\nAdd this studio's rows to your "
+    cells.append(md(i, "## Before you leave\n\nAdd this milestone's rows to your "
                       "**AI Research Ledger** — task, tool, prompt, output "
                       "summary, decision, verification method, remaining "
                       "concern, and you as the responsible researcher — and "
@@ -192,24 +262,28 @@ def render_all() -> dict[Path, str]:
     rubric_by_station = {r["station"]: r for r in
                          (yaml.safe_load(ASSESS_YML.read_text()).get("stations") or [])}
     lessons = active_lessons(arch)
-    titles = {}
     for l in lessons:
         src = REPO / "book" / l["source"]
-        import re
         m = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', src.read_text(), re.M)
-        titles[l["id"]] = m.group(1) if m else l["id"]
-        l["title"] = titles[l["id"]]
+        l["title"] = m.group(1) if m else l["id"]
+    stations = sorted(arch["stations"], key=lambda s: s["rank"])
     out: dict[Path, str] = {}
-    for st in sorted(arch["stations"], key=lambda s: s["rank"]):
+    for idx, st in enumerate(stations):
         if st["id"] not in spec_by_id:
             sys.exit(f"✗ station {st['id']} has no entry in BOOK_STATIONS.yml")
         spec = spec_by_id[st["id"]]
         n = st["rank"]
         mine = [l for l in lessons if l["station"] == st["id"]]
+        missing = [l["id"] for l in mine if l["id"] not in
+                   (spec.get("contributions") or {})]
+        if missing:
+            sys.exit(f"✗ station {st['id']}: no authored `contributions` "
+                     f"entry for lesson(s) {', '.join(missing)}")
         slug = st["id"].replace("-", "_")
         rb = rubric_by_station.get(st["id"])
-        out[OUT_DIR / f"studio{n:02d}-{st['id']}.qmd"] = station_page(
-            st, spec, mine, n, rb)
+        out[OUT_DIR / opener_rel(st)] = opener_page(st, spec, mine, n)
+        out[OUT_DIR / milestone_rel(st)] = milestone_page(
+            st, spec, mine, n, stations, spec_by_id, idx, rb)
         out[NB_DIR / f"studio{n:02d}_{slug}.ipynb"] = json.dumps(
             workbook(st, spec, n, rb), ensure_ascii=False, indent=1) + "\n"
     return out
@@ -231,9 +305,11 @@ def main() -> int:
             print(f"✗ station pages are STALE ({len(stale)}): "
                   f"{', '.join(stale[:4])}… — run scripts/build_station_pages.py")
             return 1
-        print(f"✓ station pages and workbooks are fresh ({len(rendered) // 2} stations)")
+        print(f"✓ studio openers, milestone chapters, and workbooks are fresh "
+              f"({len(rendered) // 3} studios)")
         return 0
-    print(f"✓ {len(rendered) // 2} station pages + workbooks generated")
+    print(f"✓ {len(rendered) // 3} studio openers + milestone chapters + "
+          f"workbooks generated")
     return 0
 
 

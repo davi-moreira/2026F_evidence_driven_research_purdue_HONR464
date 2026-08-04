@@ -25,9 +25,13 @@ import re
 import sys
 from pathlib import Path
 
+import yaml
+
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 from book_manifest import active_lessons, load_architecture, require_lock  # noqa: E402
+
+STATIONS_YML = REPO / "planning" / "BOOK_STATIONS.yml"
 
 BEGIN = "<!-- station-pointer:begin -->"
 END = "<!-- station-pointer:end -->"
@@ -62,17 +66,19 @@ def pointer(lesson: dict, station: dict, n: int) -> str:
         tail = ("> This lesson is an optional overlay: work it when your\n"
                 "> project needs it, and skip it without guilt when it does not.")
     else:
-        tail = ("> Keep what you write here; the studio is where it joins the\n"
-                "> other lessons' pieces into one artifact you can defend.")
+        tail = ("> Keep what you write here; the studio's milestone chapter is\n"
+                "> where it joins the other lessons' pieces into one artifact\n"
+                "> you can defend.")
     return f"{BEGIN}\n{head}\n{tail}\n{END}\n\n"
 
 
-def continue_block(station: dict, n: int) -> str:
-    rel = f"../studios/studio{n:02d}-{station['id']}.qmd"
+def continue_block(station: dict, n: int, milestone_title: str) -> str:
+    rel = f"../studios/milestone{n:02d}-{station['id']}.qmd"
     return (f"\n\n{CBEGIN}\n"
-            f"> **Checkpoint.** This was the last lesson of Studio {n}. Return\n"
-            f"> to [the studio's practice]({rel}#checkpoint) and produce its\n"
-            f"> versioned artifact before you move on.\n"
+            f"> **Milestone next.** This was the last lesson of Studio {n}.\n"
+            f"> [Milestone {n}: {milestone_title}]({rel}#milestone) is where\n"
+            f"> the lessons' pieces become the studio's versioned artifact.\n"
+            f"> Produce it before you move on.\n"
             f"{CEND}\n")
 
 
@@ -80,6 +86,8 @@ def render_all() -> dict[Path, str]:
     require_lock()
     arch = load_architecture()
     stations = {s["id"]: s for s in arch["stations"]}
+    spec_by_id = {s["id"]: s for s in yaml.safe_load(
+        STATIONS_YML.read_text())["stations"]}
     lessons = active_lessons(arch)
     last_in_station = {}
     for l in lessons:                       # rank order -> last one wins
@@ -100,7 +108,8 @@ def render_all() -> dict[Path, str]:
             insert_at += 1
         text = (text[:insert_at] + pointer(lesson, st, n) + text[insert_at:])
         if last_in_station[lesson["station"]] == lesson["id"]:
-            text = text.rstrip("\n") + continue_block(st, n)
+            mt = spec_by_id[lesson["station"]]["milestone_title"]
+            text = text.rstrip("\n") + continue_block(st, n, mt)
         out[path] = text
     return out
 

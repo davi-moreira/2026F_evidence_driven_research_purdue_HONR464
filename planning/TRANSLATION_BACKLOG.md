@@ -61,6 +61,24 @@ replace it.
 11. **PT/ES companion notebooks** (`notebooks/book/pt/`, `notebooks/book/es/`)
     — regenerate with `scripts/build_book_notebooks.py` ONLY after the PT/ES
     chapters are resynchronized (the generator skips PT/ES during the freeze).
+12. **D40 milestone restructure (2026-08-03)** — each studio now has TWO
+    generated pages: the opener (milestone anticipation, `#checkpoint` legacy
+    anchor, lessons with per-lesson contribution lines) and a **Milestone
+    chapter** closing the part (practice steps, versioned record, rails,
+    rubric, workbook badge). PT/ES must regenerate both page sets from
+    `build_station_pages.py` + localized `BOOK_STATIONS.yml` milestone fields
+    (`milestone_title`, `milestone_reason`, `hands_forward`, `contributions`),
+    regenerate their TOCs (milestone chapter last in each part), and replay
+    the reworded rubric texts in `BOOK_ASSESSMENTS.yml` (station/checkpoint →
+    studio/milestone), the preface and "How this book is organized" milestone
+    prose, the studio-continue pointer blocks in the last lesson of every
+    studio, and the For Instructors milestone-disambiguation note.
+13. **D40 page behaviors** — `book/_page-behavior.html` (body links open in a
+    new tab; Bibliography heading demoted to h2) and the `_quarto.yml` lines
+    `reference-section-title: Bibliography` + `include-after-body:
+    _page-behavior.html` must be mirrored into `book-pt/` and `book-es/`
+    (localized section title: "Bibliografia" / "Bibliografía") when the
+    freeze lifts.
 
 ## C. Verification required before the freeze lifts
 

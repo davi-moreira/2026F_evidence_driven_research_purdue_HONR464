@@ -45,6 +45,33 @@ stations:
     revisit: >-
       Any change in your tools, your data source, or your collaborators
       sends you back here for a new version.
+    milestone_title: "Your working agreement"
+    milestone_reason: >-
+      Every studio after this one asks you to delegate real work to AI and
+      then stand behind the result under your own name. The rules for that
+      cannot be improvised under deadline pressure; they have to exist
+      before anything is at stake. This first milestone writes them down:
+      what stays yours, what gets delegated, and how every delegation gets
+      recorded and checked. The rest of the book leans on it. Every later
+      milestone appends to the ledger you open here, and your final defense
+      in Studio 12 reads this agreement back to you.
+    hands_forward: >-
+      Milestone 2 takes the idea that survived your red-flag screen and,
+      under these working rules, turns it into a question whose answer you
+      could recognize.
+    contributions:
+      ai-arm-not-brain: >-
+        your opened AI Research Ledger, three genuine curiosities, and one
+        first AI exchange already logged and verified
+      research-director: >-
+        your delegation map: the road's tasks sorted into safe to delegate,
+        delegate then verify, and never delegate
+      sdiivdd: >-
+        one complete SDIIVDD run on a checkable claim, with the
+        verification you ran and what it caught
+      responsibility-ownership: >-
+        your ownership statement, your never-delegate list, and a first
+        draft of your AI-use disclosure
 
   - id: frame-the-inquiry
     purpose: >-
@@ -66,6 +93,25 @@ stations:
     revisit: >-
       Studio 3 almost always sends you back here. That is the design, not
       a setback.
+    milestone_title: "Your question, declared"
+    milestone_reason: >-
+      A research project is only defensible if its question fixes what
+      would count as an answer. This milestone is where the fixing happens:
+      you declare your objective, your units and outcome, your kind and
+      reach, and the boundary of the claim you hope to make. Everything
+      that follows revises this declaration rather than starting over. The
+      contract in Studio 4, the pathway in Studio 5, and the claims in
+      Studio 9 all trace back to the words you commit here.
+    hands_forward: >-
+      Milestone 3 holds this declaration up against what is already known,
+      and it will usually send back a sharper version.
+    contributions:
+      curiosity-to-problem: >-
+        your chosen research problem, scored on importance, feasibility,
+        and contribution, red-teamed, with your expected answer on record
+      question-kinds: >-
+        your lead question placed by kind and reach, double-barrels split,
+        with its comparison world written out if the question is causal
 
   - id: ground-in-evidence
     purpose: >-
@@ -87,6 +133,26 @@ stations:
     revisit: >-
       New evidence found at any later studio is registered here, not
       appended informally to a draft.
+    milestone_title: "Your evidence base"
+    milestone_reason: >-
+      No question is asked in an empty room. Before you spend months
+      answering yours, this milestone makes you find out what is already
+      known, verify that it is actually known rather than merely repeated,
+      and let the verified record change your question. It is also where
+      the book's evidence rail becomes physical: the registry you assemble
+      here is what every later citation traces back to, all the way to the
+      release audit in Studio 12.
+    hands_forward: >-
+      Milestone 4 takes your revised question and the gap your evidence
+      map exposed, and writes them into a research contract that can be
+      diagnosed.
+    contributions:
+      research-builds: >-
+        your candidate source list with a status column, seeded by your own
+        search, an AI sweep, and hand snowballing, with a lead source marked
+      verifying-prior-evidence: >-
+        your verified sources, your evidence map with its quiet spot, and
+        your gap written as one bounded sentence
 
   - id: declare-and-diagnose
     purpose: >-
@@ -112,6 +178,32 @@ stations:
     revisit: >-
       Route diagnosis, measurement changes, permission rulings, and the
       realized data each produce a new Contract version with its reason.
+    milestone_title: "Your research contract, v0"
+    milestone_reason: >-
+      This is the hinge of the book. Everything before it shaped a
+      question; everything after it executes a design. The contract you
+      write here (objective, estimand, population, data strategy,
+      measurement, warrant, answer strategy, uncertainty) is declared
+      before any result exists, so that later changes are visibly design
+      or visibly drift. Diagnosing it on simulated data now, while
+      changing your mind is still free, is what makes the declaration
+      honest rather than decorative.
+    hands_forward: >-
+      Milestone 5 commits the contract to one research pathway and writes
+      what that pathway can and cannot establish.
+    contributions:
+      mida: >-
+        your MIDA declaration: model, inquiry, data strategy, and answer
+        strategy, with the alignment sentence that ties them together
+      uncertainty-foundations: >-
+        your estimand and estimator, the repeat-run story behind them, and
+        your uncertainty sentence next to its wrong twin
+      declare-diagnose: >-
+        your design diagnosis: bias, wobble, and power read from
+        simulation, one redesign, and the honest call that followed
+      ethics-data-governance: >-
+        your declared permission status, your minimised column list, your
+        AI boundary, and your four governance decisions
 
   - id: develop-the-pathway
     purpose: >-
@@ -154,6 +246,37 @@ stations:
     revisit: >-
       Realized data that will not support the declared pathway sends you
       back here before analysis, not after.
+    milestone_title: "Your pathway, declared"
+    milestone_reason: >-
+      Five pathways run through this book, and your project takes exactly
+      one as its primary road. This milestone makes the commitment
+      explicit: which pathway, what licenses it, and what it cannot
+      establish no matter how clean the execution. Declaring it now
+      protects you later, because a result can only be defended from
+      inside the pathway that produced it.
+    hands_forward: >-
+      Milestone 6 puts data and measurement under governance so the
+      declared pathway has something trustworthy to run on.
+    contributions:
+      observational-descriptive: >-
+        either your four boxes and selection diagram, if this is your
+        pathway, or the classification drill that rules it out
+      observational-causal: >-
+        either your causal diagram with its leverage named and priced, or
+        the drill that shows why this road is not yours
+      experimental-descriptive: >-
+        either your revealed-characteristic estimand with its demand and
+        instrument threats named, or the drill run on your own question
+      prediction-generalization: >-
+        either your signed four-part forecasting contract with its
+        boundary, or the plain line saying prediction is not your question
+      experimental-causal: >-
+        either your treatment, outcome, and potential outcomes with the
+        nearest threat named, or the drill plus the confounder that blocks
+        the causal reading
+      hybrid-complex-designs: >-
+        if your design has stages: the stage-by-stage map, its weakest
+        link, and the one-sentence justification for keeping or cutting it
 
   - id: govern-data-measurement
     purpose: >-
@@ -200,6 +323,24 @@ stations:
     revisit: >-
       Any measurement change is a Contract version, because it changes what
       your estimand refers to.
+    milestone_title: "Your data and measurement, governed"
+    milestone_reason: >-
+      Results inherit the quality of the data and the measures beneath
+      them, and no later check can repair what goes wrong here. This
+      milestone settles how data reach you, where every number came from,
+      and whether your instruments measure what your contract says they
+      measure. The work is deliberately unglamorous. It is also where more
+      projects quietly fail than anywhere else in the book.
+    hands_forward: >-
+      Milestone 7 runs the declared analysis on these governed data and
+      produces your first reproducible result.
+    contributions:
+      data-provenance: >-
+        your provenance record for every dataset and borrowed number, with
+        the primary source behind your headline claim opened and read
+      measurement: >-
+        your measurement specification: concept, construct, indicator, the
+        meaning sentence for each number, and one planned reliability check
 
   - id: first-analysis
     purpose: >-
@@ -221,6 +362,25 @@ stations:
     revisit: >-
       Failing to reproduce your own analysis sends you back here before any
       stress-testing is meaningful.
+    milestone_title: "Your first reproducible analysis"
+    milestone_reason: >-
+      This is where your project produces its first real number. The
+      milestone asks for less than you might expect: one honest result,
+      with its uncertainty attached, reproducible from a clean start. The
+      point is not volume. It is a result you can trace from claim to
+      output to data cell, because every number you will ever defend in
+      this project passes through the discipline you set here.
+    hands_forward: >-
+      Milestone 8 exists to attack this result; the cleaner your record
+      here, the more the attack can teach you.
+    contributions:
+      ai-as-programmer: >-
+        your first computed number, its delegated code read line by line,
+        and the sentence naming what the number does not cover
+      ai-analytical-assistant: >-
+        your headline estimate with its cycle log, two independently
+        re-derived numbers, and a placebo run
+
 
   - id: stress-test
     purpose: >-
@@ -244,6 +404,31 @@ stations:
     revisit: >-
       A finding that does not survive its own pre-listed checks returns to
       Studio 5 or 7, not to the writing studio.
+    milestone_title: "Your robustness audit"
+    milestone_reason: >-
+      A result you have not tried to break is a result you do not yet
+      know. This milestone attacks your own finding the way a hostile
+      reviewer would: pre-listed robustness checks, negative tests with
+      predictions written before the run, an adversarial review, and an
+      audit of where your confidence actually comes from. What survives,
+      you can defend. What does not, you now know before a reader finds
+      it for you.
+    hands_forward: >-
+      Milestone 9 writes down only the claims this audit licenses, at the
+      strength it licenses them.
+    contributions:
+      robustness-sensitivity: >-
+        your pre-listed robustness grid with its full results, direction
+        and size, plus the named null check
+      negative-tests: >-
+        your negative test and diagnostic, each with the prediction you
+        wrote before running it
+      ai-adversarial-reviewer: >-
+        your commissioned adversarial review with every flag adjudicated
+        against the data, confirmed or refuted
+      false-confidence: >-
+        your confidence audit: the not-yet-recomputed list, where belief
+        in the headline number comes from, and your boundary sentence
 
   - id: write-bound-disclose
     purpose: >-
@@ -265,6 +450,30 @@ stations:
     revisit: >-
       A claim you cannot fit in the table is a claim to cut or a check to
       run, and both send you back a studio.
+    milestone_title: "Your bounded claims"
+    milestone_reason: >-
+      Writing is where research leaves your head and can first be misread.
+      This milestone turns your audited results into claims a stranger can
+      weigh: each one bounded by what the design established, traced to
+      the output that supports it, and accompanied by an honest account of
+      what AI did along the way. The discipline is simple and strict. A
+      claim with no row in the evidence table does not ship.
+    hands_forward: >-
+      Milestone 10 adapts these bounded claims to a real audience and
+      rehearses their defense.
+    contributions:
+      results-to-claims: >-
+        your claims with verbs downgraded to what the design established,
+        each carrying its boundary line
+      claim-evidence-tables: >-
+        your claim-evidence table, one row per claim with claim, evidence,
+        trace, and boundary, every number traced to its output
+      ai-disclosure: >-
+        your AI-use disclosure, written from the ledger and naming what
+        you did not verify
+      poster-to-note: >-
+        your research-note spine: problem, gap, question, findings ordered
+        by support, and the headline claim with its boundary inside
 
   - id: adapt-and-defend
     purpose: >-
@@ -286,6 +495,30 @@ stations:
     revisit: >-
       A question you cannot answer in rehearsal is evidence, and it sends
       you back to the studio that owns it.
+    milestone_title: "Your defense, ready"
+    milestone_reason: >-
+      A claim becomes public the moment an audience can question it, and
+      audiences do not read contracts. They read posters, hear talks, and
+      ask hard questions. This milestone adapts your bounded claims to the
+      genre your venue asks for and rehearses the defense before it
+      counts. The rehearsal record matters as much as the artifact: the
+      questions you cannot answer yet are the truest map of what remains.
+    hands_forward: >-
+      Milestone 11 lets strangers rerun what you have just defended, which
+      is the one test rehearsal cannot give you.
+    contributions:
+      research-posters: >-
+        if your venue is a poster: the one-figure draft with labeled
+        values, intervals drawn, and a headline verbed to your boundary
+      poster-criticism: >-
+        the gallery-walk audit of your own draft, hits ranked by how far
+        the error travels, fixed once, and the lock call
+      research-pitches: >-
+        if you will speak: your 30-second and 3-minute pitches, built
+        boundary-first and tested aloud on an outsider
+      difficult-questions: >-
+        your five hardest fair questions with defend-or-concede answers,
+        and your uncertainty-and-limitations statement in ULN form
 
   - id: reproduce-and-package
     purpose: >-
@@ -306,6 +539,26 @@ stations:
     revisit: >-
       A failed cold run is a finding about your work, and it precedes any
       release.
+    milestone_title: "Your reproducible package"
+    milestone_reason: >-
+      Research that only runs on your machine, with you present, is
+      testimony rather than evidence. This milestone proves that someone
+      who is not you can obtain your result from your materials alone: a
+      cold run, a stranger's run, and a package that carries data access,
+      code, environment, documentation, and licence. It is the boundary
+      between work you finished and work others can build on.
+    hands_forward: >-
+      Milestone 12 decides whether the packaged work is ready to leave
+      your hands, and what the next cycle should ask.
+    contributions:
+      replication-reproduction: >-
+        your cold reproduction record: every number re-run from the top,
+        one undisclosed choice varied, and missingness classified before
+        any filling
+      research-packages: >-
+        your research capsule: notebook, data or its access recipe,
+        environment record, README, and a cold rerun in a second
+        environment
 
   - id: release-next-cycle
     purpose: >-
@@ -327,3 +580,28 @@ stations:
     revisit: >-
       The next-study agenda is the revisit; a research cycle ends by
       declaring the next one.
+    milestone_title: "Your release and next cycle"
+    milestone_reason: >-
+      Every research cycle ends with two decisions no tool can make for
+      you: whether this work is ready to leave your hands, and what should
+      be asked next. This milestone runs the release audit, closes your
+      dossier and your AI ledger as complete records, and writes the
+      stopping rule you can say aloud. It is the last milestone, and it
+      produces what the other eleven were building toward: your finished
+      research artifact, released, defended, and pointing at its
+      successor.
+    hands_forward: >-
+      This is where the chain closes. The artifact leaves your hands, and
+      the next-study agenda opens the cycle that follows.
+    contributions:
+      managing-ai-agents: >-
+        if you ran agent loops: your three-loop round with its wiring, its
+        turn counts, and the one node you kept human
+      conflicting-agents: >-
+        if your loops disagreed: your escalation rules, one conflict
+        diagnosed and resolved by your own check, and the override on
+        record
+      final-portfolio: >-
+        your finished research artifact with every claim bounded, your
+        four-part AI-management portfolio, and the rehearsed
+        three-movement defense

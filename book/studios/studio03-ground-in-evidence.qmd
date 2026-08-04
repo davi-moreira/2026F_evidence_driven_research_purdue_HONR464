@@ -5,70 +5,26 @@ aliases:
 ---
 
 ::: {.callout-warning .review-pending title="Under development"}
-This studio is part of a book in active development and has not yet
-been through the author's review. Content may change as the review
-advances.
+This studio is part of a book in active development and has not
+yet been through the author's review. Content may change as the
+review advances.
 :::
-
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio03_ground_in_evidence.ipynb){target="_blank"}
 
 > **What you can defend when you leave.** Find out what is already known, verify that it is actually known, and let it change your question.
 
-## What this studio produces
+## The milestone ahead {#checkpoint}
 
-An evidence registry of verified sources, your search log, an evidence map, and an explicit revision of your Studio 2 declaration.
+No question is asked in an empty room. Before you spend months answering yours, this milestone makes you find out what is already known, verify that it is actually known rather than merely repeated, and let the verified record change your question. It is also where the book's evidence rail becomes physical: the registry you assemble here is what every later citation traces back to, all the way to the release audit in Studio 12.
 
-This is a **versioned checkpoint**, not a pass. You date it, number it, and
-attach the reason for the version. When later evidence changes it, you write
-the next version rather than editing the last one, because the sequence of
-changes is itself part of your research record.
+This studio closes with **[Milestone 3: Your evidence base](milestone03-ground-in-evidence.qmd)**, a short chapter of its own after the lessons. **What it asks you to produce.** An evidence registry of verified sources, your search log, an evidence map, and an explicit revision of your Studio 2 declaration.
+
+Milestone 4 takes your revised question and the gap your evidence map exposed, and writes them into a research contract that can be diagnosed. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.
 
 ## The lessons in this studio
 
-- [Lesson 7 — Research Builds on Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/07-research-builds-on-research.html)
-- [Lesson 8 — Finding and Verifying Prior Evidence](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html)
+Read them in order, working each lesson's **It is your turn** as you go. Each one builds a piece of Milestone 3; beside each lesson is the piece it hands you.
 
-They follow this page. Read them in order, doing each lesson's **It is your
-turn** as you go, and then come back here: the studio is where those pieces
-become one artifact you can defend.
+- [Lesson 7 — Research Builds on Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/07-research-builds-on-research.html): your candidate source list with a status column, seeded by your own search, an AI sweep, and hand snowballing, with a lead source marked.
+- [Lesson 8 — Finding and Verifying Prior Evidence](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html): your verified sources, your evidence map with its quiet spot, and your gap written as one bounded sentence.
 
-## The practice {#checkpoint}
-
-1. Search deliberately and log every search: where you looked, what terms, what you found and did not.
-2. Verify each source you intend to cite by retrieving and reading it, never by trusting a summary.
-3. Build the evidence map: what is settled, what is contested, what is missing.
-4. Write the revision: how your question changed, or a defended statement of why it did not.
-
-## The four rails, here
-
-Four concerns cross every studio in this book. At this studio they take
-these specific forms.
-
-- **Ethics, permissions, and data exposure.** Record the licence and terms of any dataset you found here, before you plan to use it.
-- **Evidence, provenance, and reproducibility.** This studio IS the evidence rail's home; every later citation traces to this registry.
-- **AI activity, verification, and human decisions.** Every AI-suggested source is unverified until you have opened it yourself.
-- **Uncertainty, claim boundary, and revision history.** Note where the literature disagrees; that disagreement is uncertainty you inherit.
-
-## What sends you back
-
-New evidence found at any later studio is registered here, not appended informally to a draft.
-
-## How this checkpoint is assessed
-
-Each row scores **0**, **1**, or **2**. **10 points total.**
-
-| # | Criterion | 0 | 1 | 2 |
-|---|---|---|---|---|
-| 1 | The station's artifact exists in full, specific to your own project | absent, or generic text that would fit any project | present but incomplete, or specific in some parts and generic in others | complete and unmistakably about your project |
-| 2 | The checkpoint is written as a dated, numbered version with its reason | no version, or a version with no reason given | versioned, but the reason is decorative rather than an account of what changed | versioned with a reason a reader could use to reconstruct your thinking |
-| 3 | Every judgment in the artifact is defended by you, not asserted by a tool | conclusions appear with no reasoning, or reproduce a tool's wording | reasoning present but thin where the decision was hardest | each judgment carries a reason you could defend under questioning |
-| 4 | The four rails are carried in this station's specific form | one or more rails absent where this station required them | all rails present but one is nominal | every rail addressed in the form this station requires |
-| 5 | The station's own product is present and defensible: An evidence registry of verified sources, your search log, an evidence map, and an explicit revision of your Station 2 declaration | the station's own product is missing | present but would not survive a careful question | present and defensible as stated |
-
-
-## Your workbook
-
-Open the workbook with the badge above. It walks these steps with a cell for
-each one, ends by writing your checkpoint version with its reason, and adds
-the rows this studio contributes to your AI Research Ledger and your Research
-Dossier.
+When the last lesson closes, the milestone chapter is next. Nothing you write in a lesson is busywork: every piece above is on the milestone's checklist.

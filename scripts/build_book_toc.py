@@ -63,6 +63,8 @@ def render_chapters_block(arch: dict | None = None) -> str:
         lines.append("      chapters:")
         for l in by_station.get(st["id"], []):   # already rank-ordered
             lines.append(f"        - {l['source']}")
+        # D40: the studio's milestone chapter closes its part
+        lines.append(f"        - studios/milestone{st['rank']:02d}-{st['id']}.qmd")
     return "\n".join(lines) + "\n"
 
 

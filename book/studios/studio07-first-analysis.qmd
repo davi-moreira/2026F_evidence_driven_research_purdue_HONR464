@@ -5,74 +5,26 @@ aliases:
 ---
 
 ::: {.callout-warning .review-pending title="Under development"}
-This studio is part of a book in active development and has not yet
-been through the author's review. Content may change as the review
-advances.
+This studio is part of a book in active development and has not
+yet been through the author's review. Content may change as the
+review advances.
 :::
-
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios/studio07_first_analysis.ipynb){target="_blank"}
 
 > **What you can defend when you leave.** Produce one honest result you can reproduce from a clean start, with its uncertainty attached.
 
-## What this studio produces
+## The milestone ahead {#checkpoint}
 
-A route-specific result with an uncertainty statement, a restart-and-run-all verification, an environment record, and a claim-to-output check.
+This is where your project produces its first real number. The milestone asks for less than you might expect: one honest result, with its uncertainty attached, reproducible from a clean start. The point is not volume. It is a result you can trace from claim to output to data cell, because every number you will ever defend in this project passes through the discipline you set here.
 
-This is a **versioned checkpoint**, not a pass. You date it, number it, and
-attach the reason for the version. When later evidence changes it, you write
-the next version rather than editing the last one, because the sequence of
-changes is itself part of your research record.
+This studio closes with **[Milestone 7: Your first reproducible analysis](milestone07-first-analysis.qmd)**, a short chapter of its own after the lessons. **What it asks you to produce.** A route-specific result with an uncertainty statement, a restart-and-run-all verification, an environment record, and a claim-to-output check.
+
+Milestone 8 exists to attack this result; the cleaner your record here, the more the attack can teach you. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.
 
 ## The lessons in this studio
 
-- [Lesson 21 — AI as Programmer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html)
-- [Lesson 22 — AI as Analytical Assistant](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html)
+Read them in order, working each lesson's **It is your turn** as you go. Each one builds a piece of Milestone 7; beside each lesson is the piece it hands you.
 
-They follow this page. Read them in order, doing each lesson's **It is your
-turn** as you go, and then come back here: the studio is where those pieces
-become one artifact you can defend.
+- [Lesson 21 — AI as Programmer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html): your first computed number, its delegated code read line by line, and the sentence naming what the number does not cover.
+- [Lesson 22 — AI as Analytical Assistant](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html): your headline estimate with its cycle log, two independently re-derived numbers, and a placebo run.
 
-## The practice {#checkpoint}
-
-1. Write the analysis you declared, and only that analysis, before looking at anything else.
-2. Produce the result with its uncertainty statement, in the form your Contract specified.
-3. Restart and run everything from a clean state; if the numbers move, the pipeline is the finding.
-4. Record your environment, and check that every claim you plan to make traces to a specific output.
-
-## The four rails, here
-
-Four concerns cross every studio in this book. At this studio they take
-these specific forms.
-
-- **Ethics, permissions, and data exposure.** What you send to a tool during analysis is a disclosure decision each time.
-- **Evidence, provenance, and reproducibility.** Every number in your result traces to a data cell and a line of code.
-- **AI activity, verification, and human decisions.** Delegate the writing of code freely; verify every returned number against the data yourself.
-- **Uncertainty, claim boundary, and revision history.** A result reported without uncertainty is not yet a result.
-
-## What sends you back
-
-Failing to reproduce your own analysis sends you back here before any stress-testing is meaningful.
-
-## How this checkpoint is assessed
-
-Each row scores **0**, **1**, or **2**. **10 points total.**
-
-| # | Criterion | 0 | 1 | 2 |
-|---|---|---|---|---|
-| 1 | The station's artifact exists in full, specific to your own project | absent, or generic text that would fit any project | present but incomplete, or specific in some parts and generic in others | complete and unmistakably about your project |
-| 2 | The checkpoint is written as a dated, numbered version with its reason | no version, or a version with no reason given | versioned, but the reason is decorative rather than an account of what changed | versioned with a reason a reader could use to reconstruct your thinking |
-| 3 | Every judgment in the artifact is defended by you, not asserted by a tool | conclusions appear with no reasoning, or reproduce a tool's wording | reasoning present but thin where the decision was hardest | each judgment carries a reason you could defend under questioning |
-| 4 | The four rails are carried in this station's specific form | one or more rails absent where this station required them | all rails present but one is nominal | every rail addressed in the form this station requires |
-| 5 | The station's own product is present and defensible: A route-specific result with an uncertainty statement, a restart-and-run-all verification, an environment record, and a claim-to-output check | the station's own product is missing | present but would not survive a careful question | present and defensible as stated |
-
-::: {.callout-important title="Blocking gate"}
-No work at or after Station 4 proceeds past a not-authorized determination. This is not scored and cannot be averaged away.
-:::
-
-
-## Your workbook
-
-Open the workbook with the badge above. It walks these steps with a cell for
-each one, ends by writing your checkpoint version with its reason, and adds
-the rows this studio contributes to your AI Research Ledger and your Research
-Dossier.
+When the last lesson closes, the milestone chapter is next. Nothing you write in a lesson is busywork: every piece above is on the milestone's checklist.

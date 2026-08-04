@@ -22,20 +22,24 @@ book:
         - part1-research-with-ai/02-the-student-as-research-director.qmd
         - part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.qmd
         - part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.qmd
+        - studios/milestone01-govern-the-work.qmd
     - part: studios/studio02-frame-the-inquiry.qmd
       chapters:
         - part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.qmd
         - part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.qmd
+        - studios/milestone02-frame-the-inquiry.qmd
     - part: studios/studio03-ground-in-evidence.qmd
       chapters:
         - part2-curiosity-to-design/07-research-builds-on-research.qmd
         - part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.qmd
+        - studios/milestone03-ground-in-evidence.qmd
     - part: studios/studio04-declare-and-diagnose.qmd
       chapters:
         - part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.qmd
         - part2-curiosity-to-design/uncertainty-foundations.qmd
         - part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.qmd
         - part2-curiosity-to-design/research-ethics-and-data-governance.qmd
+        - studios/milestone04-declare-and-diagnose.qmd
     - part: studios/studio05-develop-the-pathway.qmd
       chapters:
         - part3-pathways/11-observational-descriptive-research.qmd
@@ -44,51 +48,61 @@ book:
         - part3-pathways/14-prediction-and-generalization.qmd
         - part3-pathways/15-experimental-causal-research.qmd
         - part3-pathways/16-hybrid-and-complex-designs.qmd
+        - studios/milestone05-develop-the-pathway.qmd
     - part: studios/studio06-govern-data-measurement.qmd
       chapters:
         - part4-credible-evidence/17-data-provenance-and-data-quality.qmd
         - part4-credible-evidence/18-measurement-and-operationalization.qmd
+        - studios/milestone06-govern-data-measurement.qmd
     - part: studios/studio07-first-analysis.qmd
       chapters:
         - part4-credible-evidence/19-ai-as-programmer.qmd
         - part4-credible-evidence/20-ai-as-analytical-assistant.qmd
+        - studios/milestone07-first-analysis.qmd
     - part: studios/studio08-stress-test.qmd
       chapters:
         - part4-credible-evidence/21-robustness-and-sensitivity.qmd
         - part4-credible-evidence/22-diagnostics-and-negative-tests.qmd
         - part4-credible-evidence/23-ai-as-adversarial-reviewer.qmd
         - part4-credible-evidence/24-recognizing-false-confidence.qmd
+        - studios/milestone08-stress-test.qmd
     - part: studios/studio09-write-bound-disclose.qmd
       chapters:
         - part5-communicating/25-from-results-to-claims.qmd
         - part5-communicating/26-claim-evidence-tables.qmd
         - part5-communicating/31-ai-disclosure-and-research-integrity.qmd
         - part6-after-conference/33-from-poster-to-research-note.qmd
+        - studios/milestone09-write-bound-disclose.qmd
     - part: studios/studio10-adapt-and-defend.qmd
       chapters:
         - part5-communicating/27-research-posters.qmd
         - part5-communicating/28-poster-criticism.qmd
         - part5-communicating/29-research-pitches.qmd
         - part5-communicating/30-difficult-questions-and-uncertainty.qmd
+        - studios/milestone10-adapt-and-defend.qmd
     - part: studios/studio11-reproduce-and-package.qmd
       chapters:
         - part6-after-conference/32-replication-and-reproduction.qmd
         - part6-after-conference/34-open-and-reusable-research-packages.qmd
+        - studios/milestone11-reproduce-and-package.qmd
     - part: studios/studio12-release-next-cycle.qmd
       chapters:
         - part6-after-conference/35-managing-multiple-ai-agents.qmd
         - part6-after-conference/36-conflicting-agents-and-human-escalation.qmd
         - part6-after-conference/37-final-research-and-ai-management-portfolio.qmd
+        - studios/milestone12-release-next-cycle.qmd
   appendices:
     - verification-guide.qmd
     - for-instructors.qmd
 
 bibliography: references.bib
+reference-section-title: Bibliography
 
 format:
   html:
     theme: cosmo
     toc: true
     include-before-body: _lang-switcher.html
+    include-after-body: _page-behavior.html
 
 editor: visual

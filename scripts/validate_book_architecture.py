@@ -193,14 +193,31 @@ def check_station_specs(arch) -> list[str]:
     if not spec_path.exists():
         return ["stations: planning/BOOK_STATIONS.yml is missing"]
     spec = {s["id"]: s for s in yaml.safe_load(spec_path.read_text())["stations"]}
+    active_by_station: dict[str, set[str]] = {}
+    for l in arch.get("lessons", []):
+        if l.get("state") == "active":
+            active_by_station.setdefault(l["station"], set()).add(l["id"])
     for st in arch.get("stations", []):
         sid = st["id"]
         if sid not in spec:
             p.append(f"stations[{sid}]: no authored entry in BOOK_STATIONS.yml")
             continue
-        for field in ("purpose", "produces", "steps", "rails", "revisit"):
+        for field in ("purpose", "produces", "steps", "rails", "revisit",
+                      "milestone_title", "milestone_reason", "hands_forward",
+                      "contributions"):
             if not spec[sid].get(field):
                 p.append(f"stations[{sid}]: missing authored `{field}`")
+        # D40 scaffold gate: every active lesson of the studio must have an
+        # authored contribution line (its IYT piece on the milestone's
+        # checklist), and none may point at a lesson outside the studio.
+        contrib = set((spec[sid].get("contributions") or {}))
+        mine = active_by_station.get(sid, set())
+        for lid in sorted(mine - contrib):
+            p.append(f"stations[{sid}]: lesson {lid} has no `contributions` "
+                     f"entry — its IYT feeds no milestone piece")
+        for lid in sorted(contrib - mine):
+            p.append(f"stations[{sid}]: `contributions` names {lid}, which is "
+                     f"not an active lesson of this studio")
     return p
 
 
@@ -213,16 +230,23 @@ def check_station_pages(arch) -> list[str]:
     for st in arch.get("stations", []):
         sid, n = st["id"], st["rank"]
         page = REPO / "book" / "studios" / f"studio{n:02d}-{sid}.qmd"
+        ms = REPO / "book" / "studios" / f"milestone{n:02d}-{sid}.qmd"
         wb = (REPO / "notebooks" / "book" / "studios" /
               f"studio{n:02d}_{sid.replace('-', '_')}.ipynb")
         if not page.exists():
             p.append(f"studios[{sid}]: page missing — run build_station_pages.py")
+        if not ms.exists():
+            p.append(f"studios[{sid}]: milestone chapter missing — run "
+                     f"build_station_pages.py")
         if not wb.exists():
             p.append(f"studios[{sid}]: workbook missing — run build_station_pages.py")
     studio_dir = REPO / "book" / "studios"
+    expected = {f"studio{st['rank']:02d}-{st['id']}.qmd"
+                for st in arch.get("stations", [])} | {
+               f"milestone{st['rank']:02d}-{st['id']}.qmd"
+                for st in arch.get("stations", [])}
     extra = ({f.name for f in studio_dir.glob("*.qmd")} if studio_dir.exists()
-             else set()) - {
-        f"studio{st['rank']:02d}-{st['id']}.qmd" for st in arch.get("stations", [])}
+             else set()) - expected
     for e in sorted(extra):
         p.append(f"studios: ORPHAN page not in the manifest: book/studios/{e}")
     legacy = REPO / "book" / "stations"
