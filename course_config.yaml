@@ -4,8 +4,13 @@
 # scripts/validate_calendar.py. Keep this file and that script in agreement.
 # v2 (2026-07-23): prompt-architecture rebuild — 16 weekly topics nb01–nb16,
 # milestones M0–M15, Student Research Lead flipped classroom, SDIIVDD AI
-# discipline, GenAI Studio reviewer bench, 37-chapter course book. v1 preserved
+# discipline, GenAI Studio reviewer bench, course book. v1 preserved
 # at git tag v1-compass-build.
+# v3 (2026-08-03, D41): Option 2 — the studio-first route-selective semester.
+# Weeks follow the book's 12 Studios (D38/D40); W5 is the route hub (all five
+# pathway lessons, route-required, own route + one assigned contrast); W6=S6,
+# W7–8=S7, W9=S8, W10=S9. Course milestones M0–M15 present book Milestones
+# 1–12 as versions (COURSE_BOOK_CROSSWALK.yml book_milestones blocks).
 
 course:
   number: "HONR 46400"
@@ -150,12 +155,16 @@ inquiry_framework:
     association_to_cause:
       warrant: "an assignment strategy (RDSS ch. 8, 18) or a defended observational identification argument (ch. 16)"
       violation: "after-therefore-because; design mimicry"
-  pathways:                        # the design-library layer (Weeks 5–9)
+  pathways:                        # the design-library layer — ALL routes at the W5 hub (D41)
+    # Option 2 route policy: each student reads their OWN route lesson plus one
+    # instructor-assigned contrast; class time runs a five-route jigsaw with
+    # route advocates independent of project routes. hybrid-complex-designs is
+    # optional-when-the-design-has-stages (the book's role condition).
     observational_descriptive: {week: 5, notebook: "nb05", rdss: "ch. 15", example_designs: "sample surveys, indices, case selection"}
-    observational_causal:      {week: 6, notebook: "nb06", rdss: "ch. 16", example_designs: "selection-on-observables, DiD, IV, RDD, natural experiments"}
-    experimental_descriptive:  {week: 7, notebook: "nb07", rdss: "ch. 17", example_designs: "audit, list, conjoint experiments; behavioral games; measurement experiments"}
-    prediction:                {week: 8, notebook: "nb08", rdss: "course-authored library entry (declare-diagnose-redesign format)", example_designs: "baseline vs model, held-out evaluation, calibration"}
-    experimental_causal:       {week: 9, notebook: "nb09", rdss: "ch. 18", example_designs: "two-arm trials, blocking, cluster + factorial designs"}
+    observational_causal:      {week: 5, notebook: "nb05", rdss: "ch. 16", example_designs: "selection-on-observables, DiD, IV, RDD, natural experiments"}
+    experimental_descriptive:  {week: 5, notebook: "nb05", rdss: "ch. 17", example_designs: "audit, list, conjoint experiments; behavioral games; measurement experiments"}
+    prediction:                {week: 5, notebook: "nb05", rdss: "course-authored library entry (declare-diagnose-redesign format)", example_designs: "baseline vs model, held-out evaluation, calibration"}
+    experimental_causal:       {week: 5, notebook: "nb05", rdss: "ch. 18", example_designs: "two-arm trials, blocking, cluster + factorial designs"}
 
 # The course operating system (declaration→diagnosis→redesign as a student loop).
 operating_system:
@@ -174,36 +183,36 @@ weeks:
   - {week: 2,  notebook: "nb02", lectures: 2, topic: "From curiosity to a research problem: descriptive, predictive, causal", milestone: "M1"}
   - {week: 3,  notebook: "nb03", lectures: 1, topic: "Research builds on research: verified evidence and real gaps", milestone: "M2"}
   - {week: 4,  notebook: "nb04", lectures: 2, topic: "The anatomy of a research design: MIDA, declaration, diagnosis", milestone: "M3"}
-  - {week: 5,  notebook: "nb05", lectures: 2, topic: "Observational descriptive research", milestone: "M4"}
-  - {week: 6,  notebook: "nb06", lectures: 2, topic: "Observational causal research", milestone: "M5"}
-  - {week: 7,  notebook: "nb07", lectures: 2, topic: "Experimental descriptive research", milestone: "M6"}
-  - {week: 8,  notebook: "nb08", lectures: 1, topic: "Prediction", milestone: "M7"}
-  - {week: 9,  notebook: "nb09", lectures: 2, topic: "Experimental causal research", milestone: "M8"}
-  - {week: 10, notebook: "nb10", lectures: 2, topic: "Share the research and attack the analysis", milestone: "M9"}
-  - {week: 11, notebook: "nb11", lectures: 2, topic: "Poster criticism and final poster lock", milestone: "M10"}
-  - {week: 12, notebook: "nb12", lectures: 2, topic: "Poster delivery: pitches, uncertainty, difficult questions", milestone: "M11"}
-  - {week: 13, notebook: "nb13", lectures: 1, topic: "Final conference preparation, presentation, and reflection", milestone: "M12"}
-  - {week: 14, notebook: "nb14", lectures: 0, topic: "Thanksgiving async: replication and red-team", milestone: "M13"}   # async module
-  - {week: 15, notebook: "nb15", lectures: 2, topic: "From poster to research note", milestone: "M14"}
-  - {week: 16, notebook: "nb16", lectures: 2, topic: "Managing multiple AI agents; the final defense", milestone: "M15"}
+  - {week: 5,  notebook: "nb05", lectures: 2, topic: "Studio 5 — Develop the pathway: route hub, five lenses, one commitment", milestone: "M4"}
+  - {week: 6,  notebook: "nb06", lectures: 2, topic: "Studio 6 — Govern data and measurement", milestone: "M5"}
+  - {week: 7,  notebook: "nb07", lectures: 2, topic: "Studio 7 — Produce a reproducible first analysis (build)", milestone: "M6"}
+  - {week: 8,  notebook: "nb08", lectures: 1, topic: "Studio 7 — Verify the first analysis (clean restart)", milestone: "M7"}
+  - {week: 9,  notebook: "nb09", lectures: 2, topic: "Studio 8 — Stress-test and adjudicate", milestone: "M8"}
+  - {week: 10, notebook: "nb10", lectures: 2, topic: "Studio 9 — Write, bound, and disclose: the research note v0", milestone: "M9"}
+  - {week: 11, notebook: "nb11", lectures: 2, topic: "Studio 10 — Poster adaptation, reproduction gate, and final lock", milestone: "M10"}
+  - {week: 12, notebook: "nb12", lectures: 2, topic: "Studio 10 — Pitch and defense rehearsal", milestone: "M11"}
+  - {week: 13, notebook: "nb13", lectures: 1, topic: "Studio 10 — Public test at the Expo and reflection", milestone: "M12"}
+  - {week: 14, notebook: "nb14", lectures: 0, topic: "Studio 11 — Thanksgiving async: peer cold run and red-team", milestone: "M13"}   # async module
+  - {week: 15, notebook: "nb15", lectures: 2, topic: "Studios 9 + 11 — Research note v1 and reusable package", milestone: "M14"}
+  - {week: 16, notebook: "nb16", lectures: 2, topic: "Studio 12 — Release and direct the next cycle", milestone: "M15"}
 
 milestones:
   M0:  {title: "Research and AI baseline",                     due: "2026-08-28", kind: "studio"}
   M1:  {title: "Research opportunity landscape",               due: "2026-09-04", kind: "studio"}
   M2:  {title: "Verified evidence and contribution map",       due: "2026-09-11", kind: "studio"}
-  M3:  {title: "Research charter and MIDA declaration",        due: "2026-09-18", kind: "studio"}
-  M4:  {title: "Observational descriptive design audit",       due: "2026-09-25", kind: "studio"}
-  M5:  {title: "Causal identification strategy or causal-language boundary", due: "2026-10-02", kind: "studio"}
-  M6:  {title: "Experimental measurement or data-acquisition protocol (+ URC abstract internal gate)", due: "2026-10-09", kind: "studio"}
-  M7:  {title: "Declared analysis protocol",                   due: "2026-10-16", kind: "studio"}
-  M8:  {title: "Minimum viable analysis",                      due: "2026-10-23", kind: "studio"}
-  M9:  {title: "Poster draft 1 and research audit",            due: "2026-10-30", kind: "studio"}
+  M3:  {title: "Research Contract v0 and permission determination",        due: "2026-09-18", kind: "studio"}
+  M4:  {title: "Pathway declaration and mandated contrast",       due: "2026-09-25", kind: "studio"}
+  M5:  {title: "Data and measurement governance", due: "2026-10-02", kind: "studio"}
+  M6:  {title: "First executable analysis (+ URC abstract internal gate)", due: "2026-10-09", kind: "studio"}
+  M7:  {title: "Clean-restart verified analysis",                   due: "2026-10-16", kind: "studio"}
+  M8:  {title: "Robustness audit",                      due: "2026-10-23", kind: "studio"}
+  M9:  {title: "Bounded research-note v0",            due: "2026-10-30", kind: "studio"}
   M10: {title: "Final poster lock",                            due: "2026-11-06", kind: "terminal", note: "5:00 PM, submitted for printing"}
-  M11: {title: "Presentation package",                         due: "2026-11-13", kind: "studio", note: "Friday = mock poster symposium"}
-  M12: {title: "Conference reflection and poster-criticism portfolio", due: "2026-11-20", kind: "studio", note: "Expo Tue Nov 17 presentation is a graded component"}
+  M11: {title: "Defense-ready presentation package",                         due: "2026-11-13", kind: "studio", note: "Friday = mock poster symposium"}
+  M12: {title: "Conference reflection and defense revision", due: "2026-11-20", kind: "studio", note: "Expo Tue Nov 17 presentation is a graded component"}
   M13: {title: "Replication and red-team report",              due: "2026-11-29", kind: "async", note: "peer's anonymized package; Sunday due date"}
-  M14: {title: "Research-note draft and reproducibility capsule", due: "2026-12-04", kind: "studio"}
-  M15: {title: "Final research chapter and AI-management portfolio", due: "2026-12-11", kind: "terminal"}
+  M14: {title: "Research note v1 and reusable package", due: "2026-12-04", kind: "studio"}
+  M15: {title: "Release audit, final chapter, and AI-management portfolio", due: "2026-12-11", kind: "terminal"}
 
 # The cumulative Research Project Dossier (every milestone updates it).
 dossier_components:
@@ -239,7 +248,7 @@ sources:
     local_root: "_adm/_references/book/"
     r_package: "rdss"           # CRAN v1.0.14, MIT license; wraps DeclareDesign
     license: "MIT"
-    library: "https://book.declaredesign.org/library/"   # Weeks 5–9 backbone
+    library: "https://book.declaredesign.org/library/"   # W5 route-hub backbone (D41)
   course_book:
     key: "EDRAI"
     title: "Evidence-Driven Research in the Age of AI: How to Design, Analyze, Verify, and Defend"
@@ -247,7 +256,7 @@ sources:
     status: "work in progress — under development across the semester"
     reading_model: "EDR|AI chapters are the REQUIRED reading; the matching RDSS chapters are RECOMMENDED (EDR|AI translates RDSS to the undergraduate audience)"
     translations: ["pt-BR (book-pt/ -> docs/book-pt)", "es (book-es/ -> docs/book-es)"]
-    format: "Quarto book, 37 chapters in six parts, rendered to docs/book/"
+    format: "Quarto book, 39 lessons in 12 Studios, each closed by a generated Book Milestone chapter (D38/D40), rendered to docs/book/"
     sync: "chapters synchronized with nb01–nb16 + site (validate_book_sync.py)"
   secondary_book:
     key: "CB"
@@ -267,8 +276,11 @@ genai_studio:
   api: "https://genai.rcac.purdue.edu/api/chat/completions"   # OpenAI-compatible
   capability_levels_implemented: [prompted_role, custom_model, rag_assistant, sequential_workflow]
   not_available: [autonomous_agents, native_orchestration]
-  student_touchpoints: {M5: "Causal Identification Skeptic", M7: "Prediction & Leakage Auditor",
-                        M9: "Poster Critic + Robustness & Sensitivity Reviewer", M13: "Reproducibility Auditor"}
+  student_touchpoints: {M4: "Causal Identification Skeptic", M7: "Prediction & Leakage Auditor",
+                        M10: "Poster Critic + Robustness & Sensitivity Reviewer", M13: "Reproducibility Auditor"}
+                        # D41 remap: identification is adjudicated at the W5 route
+                        # declaration (M4); the poster critic reviews at the lock
+                        # (M10). Role specs re-anchored in the D41 content phase.
 
 # Notebook conventions (adapted from MGMT474; ML-isms removed).
 notebooks:

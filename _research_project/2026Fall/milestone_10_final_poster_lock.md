@@ -36,7 +36,7 @@ submit at the end of the block.
 | 1 | **`lastname_m10_poster.pdf`** | The print-ready **locked poster**, with your **AI-use disclosure block** and your **signed final-lock checklist** included (last page or companion). The headline sits inside its compass position, the uncertainty rides in the same eye-span as the claim, every number traces to a cell, and every citation resolves. |
 | 2 | **`lastname_m10_lock_record.pdf`** *or* the same as notebook sections | Your **gallery-walk audit record** and **oral-defense record**: the four audits plus accessibility run on your own poster with located hits and fixes, and the three-lens defense with your defend-versus-concede calls and softened claims. |
 | 3 | **`lastname_m10_poster.ipynb`** *or* a shared Colab link | The seeded (`SEED = 464`) notebook that produces every number on the poster. **Every figure and statistic on the board traces to a cell here**, and it reruns top to bottom. |
-| 4 | **EDR\|AI "It is your turn" — ch. 27, ch. 28, ch. 31, ch. 32** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 4 | **EDR\|AI "It is your turn" — ch. 31, ch. 32** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 confirm every figure renders when the notebook runs top to bottom. Submit the
@@ -52,8 +52,6 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 27 — [From Results to Claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch25_from_results_to_claims.ipynb)
-- Ch. 28 — [Claim–Evidence Tables](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch26_claim_evidence_tables.ipynb)
 - Ch. 31 — [Research Posters](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch27_research_posters.ipynb)
 - Ch. 32 — [Poster Criticism](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch28_poster_criticism.ipynb)
 

@@ -29,23 +29,23 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 | II | 11 | Declaring and Diagnosing a Research Design | nb04 |
 | II | 12 | Research Ethics and Data Governance | nb04 |
 | III — Research pathways | 13 | Observational Descriptive Research | nb05 |
-| III | 14 | Observational Causal Research | nb06 |
-| III | 15 | Experimental Descriptive Research | nb07 |
-| III | 16 | Prediction and Generalization | nb08 |
-| III | 17 | Experimental Causal Research | nb09 |
-| III | 18 | Hybrid and Complex Designs | nb09 |
-| IV — Producing credible evidence with AI | 19 | Data Provenance and Data Quality | nb03 |
-| IV | 20 | Measurement and Operationalization | nb05 |
-| IV | 21 | AI as Programmer | nb05 |
-| IV | 22 | AI as Analytical Assistant | nb09 |
-| IV | 23 | Robustness and Sensitivity | nb10 |
-| IV | 24 | Diagnostics and Negative Tests | nb10 |
-| IV | 25 | AI as Adversarial Reviewer | nb10 |
-| IV | 26 | Recognizing False Confidence | nb10 |
-| V — Communicating and defending research | 27 | From Results to Claims | nb11 |
-| V | 28 | Claim–Evidence Tables | nb11 |
-| V | 29 | AI Disclosure and Research Integrity | nb13 |
-| VI — Research after the conference | 30 | From Poster to Research Note | nb15 |
+| III | 14 | Observational Causal Research | nb05 |
+| III | 15 | Experimental Descriptive Research | nb05 |
+| III | 16 | Prediction and Generalization | nb05 |
+| III | 17 | Experimental Causal Research | nb05 |
+| III | 18 | Hybrid and Complex Designs | nb05 |
+| IV — Producing credible evidence with AI | 19 | Data Provenance and Data Quality | nb06 |
+| IV | 20 | Measurement and Operationalization | nb06 |
+| IV | 21 | AI as Programmer | nb07 |
+| IV | 22 | AI as Analytical Assistant | nb08 |
+| IV | 23 | Robustness and Sensitivity | nb09 |
+| IV | 24 | Diagnostics and Negative Tests | nb09 |
+| IV | 25 | AI as Adversarial Reviewer | nb09 |
+| IV | 26 | Recognizing False Confidence | nb09 |
+| V — Communicating and defending research | 27 | From Results to Claims | nb10 |
+| V | 28 | Claim–Evidence Tables | nb10 |
+| V | 29 | AI Disclosure and Research Integrity | nb10 |
+| VI — Research after the conference | 30 | From Dossier to Research Note | nb10 |
 | V — Communicating and defending research | 31 | Research Posters | nb11 |
 | V | 32 | Poster Criticism | nb11 |
 | V | 33 | Research Pitches | nb12 |

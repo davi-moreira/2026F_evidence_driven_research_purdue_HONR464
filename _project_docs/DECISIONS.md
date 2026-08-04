@@ -1343,3 +1343,81 @@ milestone URLs and un-numbered milestone titles; the per-lesson IYT gap
 list, manifest-level milestone identity, `_iyt-rubrics` retirement, and
 the release-bundle final-artifact definition stay queued for the chapter
 review.
+
+## Decision 41: Option 2 — the studio-first route-selective semester (2026-08-03, ruled; structural phase shipped 2026-08-04)
+
+**Ruling (Davi).** The course adopts **Option 2** of
+`planning/COURSE_REFRAME_OPTIONS.md` (studio-first, route-selective), updated
+for the post-D40 book. The course is conditioned on the book, never the
+reverse; the book does not change. (No D39 exists — the number was reserved
+by the options memo and the book took D40 first; the gap is deliberate.)
+
+**What the ruling fixes:**
+
+1. **The weekly spine is the Studio arc.** W1–W4 = Studios 1–4; **W5 is the
+   route hub** (Studio 5): all five pathway lessons anchor there as
+   `route-required` — each student reads their OWN route plus one
+   instructor-assigned contrast, class runs a five-route jigsaw with
+   advocate roles independent of project routes, and
+   `hybrid-complex-designs` binds only when the design has stages (the
+   course's blanket adopt-optional-as-required policy bends for
+   route-conditional lessons). W6=S6, W7–8=S7 (build / clean-restart
+   verify), W9=S8, W10=S9, W11–13=S10 (poster / defense / public test),
+   W14–15=S11 (+S9 close), W16=S12.
+2. **The three repairs are binding**: pathway declared at M4; the bounded
+   research-note v0 (M9) exists BEFORE poster adaptation; author
+   self-reproduction AND a release preflight gate the Nov 6 poster lock
+   (two blocking gates on the M10 row).
+3. **The D40 naming bridge.** Course milestones M0–M15 stay the
+   submission/Brightspace ids and each presents a **book Milestone
+   version**: M6+M7 are versions 1–2 of Book Milestone 7, M10–M12 versions
+   1–3 of Book Milestone 10, M13+M14 versions 1–2 of Book Milestone 11,
+   M14 also closes Book Milestone 9 (v2). "Course milestone M#" and "Book
+   Milestone N" are never abbreviated to a bare shared "Milestone N" in
+   course surfaces. The bridge is machine-readable: crosswalk schema 1.1's
+   `book_milestones:` blocks (+ `route_selection:`,
+   `supporting_gate_milestones:`), validated per row.
+4. **Checkpoint semantics**: a checkpoint FIRES once (first version) and
+   later submissions are `revisit` events. M12/nb13 is a legal
+   **revisit-only calendar container** (the Expo week presents no new
+   lesson); `validate_book_sync.py` check 3 now requires ≥1 assignment of
+   any purpose per notebook, and the For Instructors adoption table lists
+   revisit-only labs explicitly.
+5. **Identity is untouched**: calendar, 50-minute frames (D22/D33/D34),
+   assessment weights (1/9/20/20/20/20/10), notebook slugs and student
+   filenames (permanent compatibility ids), brief filenames, lesson and
+   station ids, book URLs. Notebook display titles change only when their
+   content is rebuilt.
+
+**Structural phase (shipped with this record):** crosswalk rewritten
+(39-lesson bijection: pathway lessons 5+1 → M4; data-provenance +
+measurement → M5 with the D40 Contract-operationalization revisit;
+ai-as-programmer → M6; ai-analytical-assistant → M7; the four stress-test
+lessons → M8; the four Studio 9 lessons incl. poster-to-note + ai-disclosure
+→ M9; difficult-questions → M11; research-packages alone anchors M14);
+BOOK_STATIONS.yml joined the crosswalk lock; schema-1.1 validation added;
+briefs' Book Anchors, BOOK_MAP, the For Instructors adoption table, and the
+Material/Instructor pages regenerated; course_config v3 (weeks, milestone
+titles, pathways at W5, GenAI touchpoints remapped M4/M7/M10/M13);
+PROJECT_MILESTONES chain retitled with the Book Milestone column;
+COURSE_MASTER_PLAN v3 (§2 studio table, §4 route hub, §7 attendance/
+participation split, §8 post-D40 book description); M1's broken M2 link
+fixed. Process: two-role Codex loop — mirror-mode partner blueprint +
+diff review (gpt-5.6-sol, xhigh, read-only), artifacts in
+`_adm/codex_collab/2026-08-03_option2-implementation/`.
+
+**Content phase (tracked, before the Aug 24 launch):** (B) milestone-brief
+prose rebuild M3–M15 (titles/artifacts/rubrics; retitle only, never
+re-slug) + quiz banks W5–W12 + GenAI role spec re-anchoring + SRL briefs;
+(C) `scripts/schedule_data/` meeting rewrite (m12–m43 semantic fields, all
+34 columns) + regenerated schedule/guides + `update_schedule_badges.py`
+milestone-label handling + nb05–nb16 source rebuild via
+`_production_kit/nb_sources/` with display titles updated at cutover;
+(D) Synthetic Colleague infrastructure (persona templates, per-studio
+generation workflow, audit rubric, Case 464), per the memo's device
+section. Declined from the partner run (recorded): staging the crosswalk
+as an inactive candidate until notebook cutover — Davi ordered
+implementation; the transition is disclosed here and in the crosswalk
+header instead. Deferred validator hardening: `validate_coverage.py`
+exactly-one-nb-token rule; lock validator-version rejection in
+`require_lock()`.

@@ -11,7 +11,8 @@ number-misbound artifacts passed) and checks the book both directions:
   2. every chapter file links its OWN companion notebook (the chapter badge);
      the lesson-to-lab mapping lives in the For Instructors appendix, not in
      chapter bodies (D35 Phase 4 de-coursing)
-  3. every registered notebook (nb01-nb16) is the primary of >= 1 lesson
+  3. every registered notebook (nb01-nb16) carries >= 1 crosswalk assignment
+     (first-read or revisit; revisit-only calendar containers are legal, D41)
   4. every chapter carries the required element headings
   5. the For-instructors appendix exists in all three editions and the EN
      edition links every course lab nb01-nb16 (D25)
@@ -32,7 +33,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 from notebooks_map import NOTEBOOKS, student_filename  # noqa: E402
 from book_manifest import (active_lessons, load_architecture,  # noqa: E402
-                           primary_nb_by_lesson)
+                           load_crosswalk, primary_nb_by_lesson)
 
 BOOK_DIR = REPO / "book"
 NB_BOOK = REPO / "notebooks" / "book"
@@ -62,11 +63,16 @@ def main() -> None:
     primary = primary_nb_by_lesson()
     errs, warns = [], []
 
-    # (3) coverage both directions, from the crosswalk home anchors
-    covered = {int(primary[l["id"]][2:]) for l in lessons if l["id"] in primary}
+    # (3) coverage both directions, from the crosswalk. A notebook owns a
+    # week when it carries >= 1 assignment of ANY purpose — D41's Option 2
+    # rows made nb13 a revisit-only calendar container (the Expo week
+    # presents no new lesson), which is a legal state.
+    assigned = {int(r["nb"][2:]) for r in load_crosswalk()["rows"]
+                if r.get("assignments")}
     for n in NOTEBOOKS:
-        if n not in covered:
-            errs.append(f"nb{n:02d} is not the primary notebook of any lesson")
+        if n not in assigned:
+            errs.append(f"nb{n:02d} carries no crosswalk assignment "
+                        f"(first-read or revisit)")
     for l in lessons:
         if l["id"] not in primary:
             errs.append(f"{l['id']}: no home anchor in the crosswalk")

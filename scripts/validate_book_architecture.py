@@ -37,6 +37,7 @@ ARCH = REPO / "planning" / "BOOK_ARCHITECTURE.yml"
 CW = REPO / "planning" / "COURSE_BOOK_CROSSWALK.yml"
 ASSESS = REPO / "planning" / "BOOK_ASSESSMENTS.yml"
 LEAK = REPO / "planning" / "BOOK_LEAKAGE_POLICY.yml"
+STATIONS = REPO / "planning" / "BOOK_STATIONS.yml"
 SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.csv"
 BRIEFS = REPO / "_research_project" / "2026Fall"
 LOCK = REPO / "planning" / ".crosswalk_lock.json"
@@ -301,6 +302,34 @@ def check_crosswalk(arch, cw) -> list[str]:
             for f in ("id", "requires", "before_event", "evidence", "blocking"):
                 if f not in g:
                     p.append(f"cw[{mi}]: gate missing `{f}`")
+        # ---- schema 1.1 (D41): the D40 naming-bridge blocks --------------
+        lessons_of_station = {}
+        for l in arch["lessons"]:
+            if l["state"] == "active":
+                lessons_of_station.setdefault(l["station"], set()).add(l["id"])
+        for b in r.get("book_milestones", []):
+            st = b.get("station")
+            if st not in stations:
+                p.append(f"cw[{mi}]: book_milestones unknown station {st!r}")
+                continue
+            if b.get("relationship") not in ("checkpoint", "revisit", "practice"):
+                p.append(f"cw[{mi}/{st}]: bad book_milestones relationship "
+                         f"{b.get('relationship')!r}")
+            if not b.get("version_label"):
+                p.append(f"cw[{mi}/{st}]: book_milestones missing version_label")
+            bad = set(b.get("contribution_refs", [])) - lessons_of_station.get(st, set())
+            if bad:
+                p.append(f"cw[{mi}/{st}]: contribution_refs outside the "
+                         f"station: {sorted(bad)}")
+        for sg in r.get("supporting_gate_milestones", []):
+            if sg.get("station") not in stations:
+                p.append(f"cw[{mi}]: supporting_gate unknown station "
+                         f"{sg.get('station')!r}")
+            if not sg.get("use"):
+                p.append(f"cw[{mi}]: supporting_gate missing `use`")
+        rs = r.get("route_selection")
+        if rs is not None and not rs.get("rule"):
+            p.append(f"cw[{mi}]: route_selection missing `rule`")
     dup = {a for a in anchors if anchors.count(a) > 1}
     if dup:
         p.append(f"cw: lesson home-anchored more than once: {dup}")
@@ -509,7 +538,7 @@ def main() -> int:
     LOCK.write_text(json.dumps({
         "validator_version": VALIDATOR_VERSION,
         "manifests": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
-                      for p in (ARCH, CW, ASSESS, LEAK)},
+                      for p in (ARCH, CW, ASSESS, LEAK, STATIONS)},
     }, indent=2) + "\n")
     n_active = sum(1 for l in arch["lessons"] if l["state"] == "active")
     n_planned = sum(1 for l in arch["lessons"] if l["state"] == "planned")

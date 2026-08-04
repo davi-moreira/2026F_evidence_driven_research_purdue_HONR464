@@ -31,7 +31,8 @@ import yaml
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
-from book_manifest import active_lessons, primary_nb_by_lesson, require_lock  # noqa: E402
+from book_manifest import (active_lessons, load_crosswalk,  # noqa: E402
+                           primary_nb_by_lesson, require_lock)
 from notebooks_map import NOTEBOOKS, student_filename  # noqa: E402
 
 NOTES = REPO / "planning" / "COURSE_LAB_NOTES.yml"
@@ -85,11 +86,28 @@ def adoption_table(notes: dict) -> str:
         link = f"[{nb}]({COURSE_NB}/{student_filename(n)})"
         note = notes.get(l["id"], "") or "—"
         rows.append(f"| Ch. {l['display']} | {link} — {title} | {note} |")
+    # Revisit-only labs (D41): a course week may carry no first-read lesson
+    # — its notebook still exists and is listed here so the course lab set
+    # stays complete (nb13 is the public-test/Expo week).
+    anchored_nbs = {int(nb[2:]) for nb in primary.values()}
+    revisit_lines = []
+    for r in load_crosswalk()["rows"]:
+        n = int(r["nb"][2:])
+        if n in anchored_nbs or not r.get("assignments"):
+            continue
+        title = NOTEBOOKS[n][1] if n in NOTEBOOKS else r["nb"]
+        revisit_lines.append(
+            f"[{r['nb']}]({COURSE_NB}/{student_filename(n)}) — {title}")
+    revisit_para = ""
+    if revisit_lines:
+        revisit_para = ("\n\nRevisit-only labs (no new lesson; the week "
+                        "revisits earlier chapters): "
+                        + "; ".join(revisit_lines) + ".")
     return (f"{BEGIN}\n\n### Which lab goes with which lesson\n\n"
             "Each lesson's companion notebook belongs to the book. The table\n"
             "below maps every lesson to the classroom lab that carries it in the\n"
             "companion course, and says what that lab does.\n\n"
-            + "\n".join(rows) + f"\n\n{END}")
+            + "\n".join(rows) + revisit_para + f"\n\n{END}")
 
 
 def render() -> tuple[dict[Path, str], str]:

@@ -63,7 +63,10 @@ def require_lock() -> None:
         raise SystemExit("✗ no crosswalk lock — run "
                          "scripts/validate_book_architecture.py first")
     lock = json.loads(LOCK.read_text())
-    for name in ("BOOK_ARCHITECTURE.yml", "COURSE_BOOK_CROSSWALK.yml"):
+    # BOOK_STATIONS joined the lock set with D41 — D40 made its authored
+    # fields (milestone_title, contributions) a generator input.
+    for name in ("BOOK_ARCHITECTURE.yml", "COURSE_BOOK_CROSSWALK.yml",
+                 "BOOK_STATIONS.yml"):
         p = REPO / "planning" / name
         if hashlib.sha256(p.read_bytes()).hexdigest() != lock["manifests"][name]:
             raise SystemExit(f"✗ {name} changed since the last validator pass "

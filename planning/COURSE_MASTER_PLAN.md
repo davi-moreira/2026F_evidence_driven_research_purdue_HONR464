@@ -61,24 +61,33 @@ the student commits to that week.
 | No class — Thanksgiving | — | Wed/Fri Nov 25 & 27 |
 | URC Expo — required poster presentation (not an MWF meeting) | — | Tue Nov 17 |
 
-| Wk | Notebook (slug · title) | Lec | Milestone · due | The week's research decision |
+Since D41 the weekly spine IS the book's Studio arc (D38/D40): each week runs
+one Studio sprint (Studios 7 and 10 span two and three weeks; W15 closes
+Studios 9 and 11 together), and each course milestone presents a **book
+Milestone version** (the bridge column lives in
+`planning/PROJECT_MILESTONES.md` and the crosswalk's `book_milestones:`
+blocks). Notebook slugs are permanent compatibility ids; nb05–nb16 display
+titles and cell content are rebuilt to the studio topics in the D41 content
+phase (before launch).
+
+| Wk | Studio sprint (notebook) | Lec | Milestone · due | The week's research decision |
 |---|---|---|---|---|
-| 1 | `nb01` · Research in the age of AI: your arm, your RA, not your brain | 2 | M0 · Fri Aug 28 | What am I curious about, and how will I work with AI? |
-| 2 | `nb02` · From curiosity to a research problem: descriptive, predictive, causal | 2 | M1 · Fri Sep 4 | Which questions in my area are answerable, and what is each one's kind and reach? |
-| 3 | `nb03` · Research builds on research: verified evidence + real gaps | 1 | M2 · Fri Sep 11 | What is genuinely known, and where is the real gap? |
-| 4 | `nb04` · The anatomy of a research design: MIDA + declare → diagnose → redesign | 2 | M3 · Fri Sep 18 | What are my model, inquiry, data strategy, and answer strategy? |
-| 5 | `nb05` · Observational descriptive research | 2 | M4 · Fri Sep 25 | Is my question observational-descriptive, and does the design hold? |
-| 6 | `nb06` · Observational causal research | 2 | M5 · Fri Oct 2 | Can I identify a causal effect observationally, or must I stay descriptive? |
-| 7 | `nb07` · Experimental descriptive research | 2 | M6 · Fri Oct 9 | How will I measure or acquire data — experimentally or not? |
-| 8 | `nb08` · Prediction: generalizing to unseen cases | 1 | M7 · Fri Oct 16 | What is my declared analysis protocol, baseline, metric, and honesty check? |
-| 9 | `nb09` · Experimental causal research | 2 | M8 · Fri Oct 23 | What does my minimum viable analysis show? |
-| 10 | `nb10` · Share the research + attack the analysis | 2 | M9 · Fri Oct 30 | Does my analysis survive robustness checks and red-teaming? |
-| 11 | `nb11` · Poster criticism + final poster lock | 2 | M10 · Fri Nov 6, 5 PM (terminal) | What claim, with what boundary, goes on the poster? |
-| 12 | `nb12` · Poster delivery: pitches, uncertainty, difficult questions | 2 | M11 · Fri Nov 13 | How do I pitch under uncertainty and field hard questions? |
-| 13 | `nb13` · Final conference preparation, presentation + reflection | 1 | M12 · Fri Nov 20 | How did the claim hold up under public criticism at the Expo (Tue Nov 17)? |
-| 14 | `nb14` · Async module: replication + red-team of a peer's package | 0 | M13 · Sun Nov 29 (async) | Does a peer's evidence reproduce, and where is it fragile? |
-| 15 | `nb15` · From poster to research note | 2 | M14 · Fri Dec 4 | What is the written, reproducible version of my claim? |
-| 16 | `nb16` · Managing multiple AI agents + the final defense | 2 | M15 · Fri Dec 11 (terminal) | Can I defend the whole project and my AI collaboration? |
+| 1 | S1 Govern the work (`nb01`) | 2 | M0 · Fri Aug 28 | What stays human, what may be delegated, and how will every delegation be checked and recorded? |
+| 2 | S2 Frame the inquiry (`nb02`) | 2 | M1 · Fri Sep 4 | What exactly am I asking — kind, reach, units, outcome, and claim boundary? |
+| 3 | S3 Ground it in verified evidence (`nb03`) | 1 | M2 · Fri Sep 11 | What is genuinely known, what is unresolved, and how must my question change? |
+| 4 | S4 Declare and diagnose provisionally (`nb04`) | 2 | M3 · Fri Sep 18 | What is my provisional Contract v0 — MIDA, operationalization, uncertainty, permission status? |
+| 5 | S5 Develop the pathway — route hub (`nb05`) | 2 | M4 · Fri Sep 25 | Which route do my question and licence support, what does the mandated contrast rule out, and what can my route never establish? |
+| 6 | S6 Govern data and measurement (`nb06`) | 2 | M5 · Fri Oct 2 | How do data reach me, under what permission, and do my measures measure my concepts? |
+| 7 | S7 Produce a reproducible first analysis — build (`nb07`) | 2 | M6 · Fri Oct 9 | What code executes my declared analysis, and what first result does it produce with uncertainty? |
+| 8 | S7 Verify the first analysis — clean restart (`nb08`) | 1 | M7 · Fri Oct 16 | Does the result survive a clean restart, and does every claim trace to a verified output? |
+| 9 | S8 Stress-test and adjudicate (`nb09`) | 2 | M8 · Fri Oct 23 | Which checks were pre-listed, what survived them, and what remains unruled-out? |
+| 10 | S9 Write, bound, and disclose — note v0 (`nb10`) | 2 | M9 · Fri Oct 30 | What bounded claim can I write down, with every sentence traced to evidence and disclosure? |
+| 11 | S10 Poster adaptation + reproduction gate + lock (`nb11`) | 2 | M10 · Fri Nov 6, 5 PM (terminal) | Which labeled-preliminary claim goes on the poster, and has it passed self-reproduction and the release preflight? |
+| 12 | S10 Pitch and defense rehearsal (`nb12`) | 2 | M11 · Fri Nov 13 | How do I compress without inflating, and answer the hardest fair questions? |
+| 13 | S10 Public test at the Expo + reflection (`nb13`) | 1 | M12 · Fri Nov 20 | What did public questioning reveal, and what must change in the claim or its defense (Expo Tue Nov 17)? |
+| 14 | S11 Async: peer cold run + red-team (`nb14`) | 0 | M13 · Sun Nov 29 (async) | Does a peer's evidence reproduce without author help, and where is it fragile? |
+| 15 | S9+S11 Research note v1 + reusable package (`nb15`) | 2 | M14 · Fri Dec 4 | What changed after public criticism and the cold run, and is the revised package reusable? |
+| 16 | S12 Release and direct the next cycle (`nb16`) | 2 | M15 · Fri Dec 11 (terminal) | Is the latest package still reproduced, why am I stopping, and what should the next study ask? |
 
 ## 3. The flipped classroom — the Student Research Lead (SRL) system
 
@@ -128,13 +137,15 @@ because, design mimicry) are drilled by name. Full treatment in
 `planning/INQUIRY_MAP.md`.
 
 **Layer 2 — the DeclareDesign design library (RDSS ch. 15–18): organizes
-DESIGNS.** It gives Weeks 5–9 their sequence, organizing designs by **inquiry
-kind × data strategy**: observational descriptive (Wk 5, `nb05`, ch. 15),
-observational causal (Wk 6, `nb06`, ch. 16), experimental descriptive (Wk 7,
-`nb07`, ch. 17), experimental causal (Wk 9, `nb09`, ch. 18). **Prediction is its
-own answer objective** (generalization to unseen observations) — a
-course-authored library entry in the book's declare-diagnose-redesign format
-(Wk 8, `nb08`), never forced into the descriptive-vs-causal or
+DESIGNS.** Since D41 it powers the **Week 5 route hub** (Studio 5): all five
+pathway lessons meet in one week — observational descriptive (ch. 15),
+observational causal (ch. 16), experimental descriptive (ch. 17), prediction
+(course-authored library entry), experimental causal (ch. 18) — and each
+student commits to ONE route (own route-required lesson + one
+instructor-assigned contrast; a five-route jigsaw with advocate roles covers
+the rest; `hybrid-complex-designs` binds only when the design has stages).
+**Prediction is its own answer objective** (generalization to unseen
+observations), never forced into the descriptive-vs-causal or
 observational-vs-experimental grid. **Experimental assignment does not imply a
 causal inquiry**: experimental *descriptive* designs exist (Week 7). A student
 moves from Layer 1 to Layer 2 by carrying a classified question into a matched
@@ -163,9 +174,10 @@ through a fixed set of moves:
 - **Defend Your Decision** — a claim the student can defend, with its boundary.
 
 **GenAI Studio reviewer bench.** Purdue GenAI Studio supplies custom reviewer
-roles at designated milestones (`genai_studio.student_touchpoints`): **M5 Causal
-Identification Skeptic**, **M7 Prediction & Leakage Auditor**, **M9 Poster Critic
-+ Robustness Reviewer**, **M13 Reproducibility Auditor**. Gemini remains the
+roles at designated milestones (`genai_studio.student_touchpoints`, D41 remap): **M4 Causal
+Identification Skeptic** (route declaration), **M7 Prediction & Leakage
+Auditor**, **M10 Poster Critic + Robustness Reviewer** (at the lock), **M13
+Reproducibility Auditor**. Gemini remains the
 primary in-notebook tool; the reviewer bench is an adversarial second opinion the
 student must answer, not obey. Studio capability is implemented only at levels
 1–4 (prompted role → custom model → RAG assistant → sequential workflow); a
@@ -192,32 +204,33 @@ alignment, and responsible interpretation — never coding elegance.
 
 | Component | Weight |
 |---|---|
-| Lecture Notebook Completion | 10 |
+| Attendance (iClicker) | 1 |
+| Participation (notebook completion + in-class activities + surveys) | 9 |
 | Quizzes (weekly Friday MC topic quizzes) | 20 |
 | Student Research Lead performance | 20 |
 | Final Project Milestones | 20 |
 | Final Project | 20 |
 | Research artifact (paper/chapter/note) | 10 |
 
-## 8. The course book — 37 chapters, six parts
+## 8. The course book — EDR|AI: 39 lessons, 12 Studios, 12 Milestone chapters
 
-The course ships its own open text, **EDR|AI — Evidence-Driven Research in the Age of AI: How to Design, Analyze,
-Verify, and Defend** (**EDR|AI**), a Quarto book of **37 chapters
-in six parts** rendered to `docs/book/` and synchronized with the notebooks by
-`validate_book_sync.py`. The book is presented to students as a **work in
-progress**, under development across the semester. An appendix chapter
-(`book/srl.qmd`) carries the Student Research Lead guide. **RDSS remains the theory text**;
-EDR|AI is the course-authored narrative that translates RDSS to the undergraduate audience: EDR|AI chapters are the REQUIRED reading and the matching RDSS chapters are RECOMMENDED. It is the narrative that walks students through the same
-material at the honors-undergraduate reading level. Part-to-notebook synchronization:
-
-| Part | EDR|AI chapters | Notebooks |
-|---|---|---|
-| I — Foundations: research and AI | 1–4 | `nb01` |
-| II — From curiosity to a classified question | 5–10 | `nb02`–`nb04` |
-| III — Designs I: observational & the compass in practice | 11–16 | `nb05`–`nb09` |
-| IV — Designs II: experiments, prediction, robustness | 17–24 | `nb08`–`nb10` + cross-cutting |
-| V — Communicating and defending evidence | 25–31 | `nb11`–`nb13` |
-| VI — Replication, the research note, managing AI | 32–37 | `nb14`–`nb16` |
+The course ships its own open text, **EDR|AI — Evidence-Driven Research in the
+Age of AI: How to Design, Analyze, Verify, and Defend** (**EDR|AI**), a Quarto
+book rendered to `docs/book/` and synchronized with the notebooks by
+`validate_book_sync.py`. Since D38 the book's twelve **Studios** are its
+navigational parts (39 lessons partitioned 4/2/2/4/6/2/2/4/4/4/2/3), and
+since D40 each Studio closes with a generated **Milestone chapter**
+("Milestone N: <artifact-first title>") carrying the practice steps, rails,
+authored rubric, and workbook badge. The book is presented to students as a
+**work in progress**, under development across the semester. **RDSS remains
+the theory text**; EDR|AI chapters are the REQUIRED reading and the matching
+RDSS chapters are RECOMMENDED. Course adoption is machine-defined: the
+**crosswalk** (`planning/COURSE_BOOK_CROSSWALK.yml`, schema 1.1) maps every
+lesson to exactly one home milestone (39-lesson bijection), fires every
+studio checkpoint, and carries the D40 naming bridge (course milestones
+M0–M15 present book Milestones 1–12 as versions). Studio↔week alignment is
+§2's table; per-lesson detail is the generated `planning/BOOK_MAP.md` and
+the For Instructors adoption table.
 
 The book is the largest scope item and is sequenced last in the build, gated by
 its sync validator. Bergstrom & West, *Calling Bullshit*, is optional/parallel
@@ -231,6 +244,15 @@ claims trace to a real, retrievable source; results are verified before reported
 decisions are documented, not just outcomes (`scripts/audit_sources.py`,
 `scripts/voice_lint_notebooks.py` enforce this).
 
+- **v3 (2026-08-03, D41)** — Option 2: the studio-first route-selective
+  semester. Weekly spine = the book's 12 Studios (D38/D40); W5 route hub
+  (own route + one assigned contrast, five-route jigsaw); W6=S6, W7–8=S7
+  (build/verify), W9=S8, W10=S9 note v0 before the poster; release
+  preflight + author self-reproduction gate before the Nov 6 lock;
+  crosswalk schema 1.1 with the book-Milestone naming bridge; milestone
+  chain retitled; Synthetic Colleague device (COURSE_REFRAME_OPTIONS.md)
+  at standard intensity. Content phase (briefs prose, schedule_data,
+  quizzes, SRL briefs, nb05–nb16 rebuild) tracked in D41.
 - **v2 (2026-07-23)** — Prompt-architecture rebuild per instructor ruling
   (`SOURCE_AUDIT_V2.md` §3): 16 weekly topics `nb01`–`nb16`; milestones M0–M15;
   Student Research Lead flipped classroom; SDIIVDD AI discipline + AI Research

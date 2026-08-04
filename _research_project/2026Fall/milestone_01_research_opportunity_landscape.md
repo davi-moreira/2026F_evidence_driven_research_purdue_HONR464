@@ -265,6 +265,6 @@ days of feedback recovers up to half the lost points.
 ---
 
 *Previous: [M00 — Research and AI Baseline](milestone_00_research_ai_baseline.md) ·
-Next: [M02 — Verified Evidence & Contribution Map](milestone_02_verified_evidence_contribution_map.md) —
+Next: [M02 — Verified Evidence & Contribution Map](milestone_02_verified_evidence_map.md) —
 your one-line contribution case grows into a verified source ledger and a mapped
 field, and the gap you suspect becomes a gap you can prove.*
