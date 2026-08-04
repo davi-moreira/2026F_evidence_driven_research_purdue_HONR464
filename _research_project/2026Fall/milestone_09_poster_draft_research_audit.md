@@ -24,20 +24,20 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, October 30, 11:59 PM**. At the Friday studio that day you present
-your draft is audited on the **four audits** by two
-peers and by the two recommended GenAI Studio reviewer roles (the **Poster Critic** and
-the **Robustness & Sensitivity Reviewer**).
+Due: **Friday, October 30, 11:59 PM**. At the Friday studio that day your note
+is red-teamed by your peers and your poster content brief takes shape; you
+revise, update your ledger, and submit at studio close.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m09_poster_draft.pdf`** | **Poster draft 1**: your project laid out as a first poster — question, evidence, and one bounded headline claim. A rough draft, not the locked poster. |
-| 2 | **`lastname_m09_audit.pdf`** *or* the same as notebook sections | **The research audit**: the four-part written record of how hard you tried to break your own claim and what survived. This is the graded core. |
-| 3 | **`lastname_m09_audit.ipynb`** *or* a shared Colab link | The runnable audit notebook — seeded, reruns end to end. **Every number on your poster draft and in your audit traces to a cell here.** |
+| 1 | **`lastname_m09_note.pdf`** *or* a shared Colab notebook link | **Research note v0**: one to two pages stating your question, your method in one paragraph, your results with their uncertainty, your bounded headline claim, your limitations, and your references. This is the graded prose artifact. |
+| 2 | **`lastname_m09_claims.pdf`** *or* the same file's closing sections | Your **claim–evidence table** (every claim a row: claim · evidence · verification · boundary) and your **AI disclosure statement**, drafted from your ledger. |
+| 3 | **`lastname_m09_poster_brief.pdf`** *or* a one-page closing section | The **poster content brief**: the claim, the one figure, and the numbers that will travel to the poster, each with its cell trace. Content only; poster craft is graded at M10. |
 | 4 | **EDR\|AI "It is your turn" — ch. 27, ch. 28, ch. 29, ch. 30** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
-confirm every figure renders when the notebook is run top to bottom.
+confirm that every number in the note still traces to the notebook cell that
+produced it.
 
 ---
 
@@ -64,113 +64,125 @@ Dossier.
 
 ## Purpose
 
-This is the milestone where you stop producing evidence and start **attacking
-it** — first yourself, then in front of a room. You take the first real estimate
-you computed at M8 and you try to break it on purpose, before a stranger at the
-Expo does it for you. The skill you are practicing is the one every later defense
-rests on: **a number you have not tried to break is a number you cannot yet
-defend.**
+This is the milestone where your project stops living in a notebook and becomes
+a **claim in writing**. A **research note** is a short, self-contained account
+of a study: what you asked, what you did, what you found, and how far the
+finding reaches. Yours is version 0, one to two pages, written for a stranger
+who has only the page.
 
-A **research audit** is the graded record of that attempt. It lays out the
-robustness and placebo checks you committed to *before* you looked, what your
-headline claim looks like after those checks, which flaws a human and an AI panel
-found that survived a data check, and the one limitation no check could fix. It is
-the difference between a result you went looking for and a result that survived a
-test you set in advance.
+Writing is where research leaves your head and can first be misread. Until this
+week your results lived in notebooks you could explain in person. On the page a
+verb does the explaining for you, and a verb one size too strong turns an
+honest finding into an **overclaim**: a sentence that asserts more than the
+design established. "Trust drives support" from an observational comparison is
+the classic case. The discipline this week is simple and strict. Every sentence
+is sized to the evidence beneath it, and a claim with no row in your
+claim–evidence table does not ship.
 
-Alongside the audit you assemble **poster draft 1**: the same evidence, shaped for
-the first time into a poster that reads from question to bounded claim. This is
-draft 1 on purpose. The full poster-craft treatment — read path, data-ink, figure
-honesty — arrives next week at M10. Here the draft exists early so your evidence
-and its boundary can be attacked while there is still time to change them.
+Your evidence base already exists, and you built it on purpose. The M8
+robustness audit told you which claim survived your pre-listed checks, what
+range it carries, and which limitation no check could fix. The note is where
+that surviving claim gets written down, bounded, and traced, with your AI use
+disclosed beside it. You are not producing new evidence this week; you are
+producing the sentences your evidence licenses.
 
-> **A question that often comes up here:** *"If the poster gets its real polish at
-> M10, why draft it now at all?"* Because the fastest way to find an overclaim is
-> to try to fit it on a poster. A headline that will not sit inside its compass
-> boundary in one line, or a number you cannot trace to a cell when a reviewer
-> points at it, is a problem you want surfaced this week — not at the Expo. The
-> draft is bait for the red-team; the audit is what you learned from letting them
-> bite.
+The order is the point. The note exists **before** the poster, and next week's
+poster will be an adaptation of this note, never the other way around. That is
+why the fourth part of this milestone is a poster **content** brief: you decide
+now what claim, figure, and numbers will travel to the poster, while the craft
+of displaying them waits for M10.
+
+> **A question that often comes up here:** *"The Expo is the deadline that
+> counts. Shouldn't I build the poster first and write the note after?"* No,
+> and the reason is protective. A poster is a compression, and compressing a
+> claim that does not yet exist in defensible written form lets the poster's
+> space constraints author your claim for you. The fastest way to manufacture
+> an overclaim is to shrink a result that was never bounded in prose. Write the
+> note first, and the poster can only ever say less than the note — never more.
 
 ## Components
 
-### 1. Poster draft 1
+### 1. The research note v0
 
-A first full draft of your poster: your research **question**, your **evidence**,
-and **one bounded headline claim**. Three things are graded here, and all three
-are skills you have already practiced:
+One to two pages, opening with a dated version line and its reason (for
+example: *"v0, October 30 — first bounded write-up of the claim that survived
+the M8 audit"*). A version with no reason is decoration; write the reason a
+reader could use to reconstruct your thinking. Then five moves, in order:
 
-- **One headline claim, inside its boundary.** State your finding in one sentence
-  that carries its **compass kind** (descriptive or causal) and its **range**, not
-  a single flattering number. "In the units my data reach, the gap runs about 0.6
-  to 0.9 SD" is a bounded headline. "Trust drives support" on an observational
-  design is an **overclaim** the draft must not make: it reports an observational
-  association with the grammar of a cause.
-- **Every number traces to a cell.** Each figure and number on the draft points to
-  the cell in your audit notebook that produced it. A number with no cell behind it
-  is an **untraceable number**, and the Poster Critic role is tuned to hunt for
-  exactly these.
-- **Uncertainty is visible, not buried.** The headline's range or interval appears
-  on the draft, in the same eye-span as the claim.
+- **The question**, exactly as your Research Contract declares it, with its
+  compass position.
+- **The method, in one paragraph.** Plain language a reader outside your field
+  could follow: the data, the route, and the analysis you declared, without
+  code.
+- **The results, with uncertainty in the same eye-span.** Every number appears
+  with its interval or range beside it, in the same sentence or the same line,
+  never in a footnote the eye must travel to.
+- **The bounded headline claim.** One sentence that carries its **compass
+  kind** (descriptive or causal) and its **range**, not a single flattering
+  number. "In the counties my data reach, the gap runs about 0.6 to 0.9 SD" is
+  a bounded headline. Every verb is downgraded to what the design established:
+  *is associated with*, not *drives*, unless your route earned the causal verb.
+- **The limitations, then the references.** The two or three limitations that
+  actually threaten the claim, led by the one your M8 audit could not fix, each
+  stated as expertise rather than apology. Every reference is **retrievable**:
+  a reader can locate the source and confirm it says what you claim.
 
-Poster *craft* (the read path, the data-ink, the axis honesty) is previewed by the
-four-audit red-team this week and graded fully at M10. Draft 1 is judged on whether
-the claim, its traceability, and its uncertainty are honest — not on polish.
+### 2. The claim–evidence table
 
-### 2. The research audit (the four-part spine)
+Every claim in the note gets a row with four columns: **claim / evidence /
+verification / boundary**. This table is your **claim ledger**, the instrument
+that records what your research asserts (it is a separate record from the AI
+Research Ledger, which records what AI did). The evidence column points to the
+output that supports the claim; the verification column names the real check
+that vouches for it, such as your M7 clean-restart trace or the M8 pre-listed
+check it survived; the boundary column says how far the claim reaches and no
+further.
 
-The heart of this milestone. Write the four pieces you drafted in the week's
-notebook, now finalized for *your* project. A reader who has never seen your work
-should be able to tell exactly how far you pushed on your own number.
+The rule the table enforces: **a claim with no row does not appear in the
+note.** A claim you cannot fit in the table is a claim to cut or a check to
+run, and both send you back before the note ships.
 
-- **Pre-listed checks.** The **three** robustness or placebo checks you committed
-  to *before* you looked at any of their results, each tied to the reviewer attack
-  it answers. Name each check by what it varies — the **sample**, the
-  **measurement**, the **specification**, or the **metric** — or name it as a
-  **placebo test** or a **leave-one-out influence** check. Pre-listing is the whole
-  discipline that separates honest robustness from a **specification search**.
-- **What survived.** Your headline claim after the checks ran, worded to carry its
-  **range** and its **compass boundary**. If a check moved the estimate, say which
-  one and by how much. A **specification curve** that stays positive across every
-  defensible choice is a direction plus a range, never a single number.
-- **The verified AI-review trail.** The real flaws your human reviewer and your
-  multi-model AI panel found, each marked **confirmed or refuted by a data check** —
-  not by how confident the reviewer sounded. Include the single most confident
-  **wrong** flag you caught, and name it: an AI reviewer that asserts a flaw the
-  data refute is **confident fabrication**, and two reviewers wrong the same way are
-  **correlated errors**, not a confirmation.
-- **The remaining limitation.** The one weakness no check could fix, stated as
-  expertise, not hidden. A limitation you name yourself is a strength; one a
-  reviewer finds for you at the Expo is a wound.
+### 3. The AI disclosure statement
 
-### 3. The audit notebook (traceability)
+A short statement, drafted **from your ledger, never from memory**. It covers
+what you delegated and what came back, and it must include what you *sent* to
+tools, not only what they produced. It also names anything you did not verify.
+A disclosure that only lists polished outputs is incomplete; the reader is
+entitled to know what raw material of yours the tools saw.
 
-A seeded notebook (`SEED = 464`) that reruns top to bottom and reproduces every
-number you report. Your pre-listed checks live here as runnable cells. This is what
-makes the audit checkable rather than merely asserted: a result that will not rerun
-from this notebook is not yet a result.
+### 4. The poster content brief
 
-### 4. AI Research Ledger rows
+One page deciding what will travel from the note to the poster: the headline
+claim word for word, the one figure that carries it, and the numbers that will
+appear, each with the cell trace that produced it. Two rules govern it.
+Nothing appears in the brief that does not appear in the note, and every number
+keeps its trace; a figure with no cell behind it is an **untraceable number**,
+and the Expo will ask. The poster itself is a **labeled-preliminary**
+adaptation: it presents work in progress and says so. Craft questions such as
+the read path, data-ink, and axis honesty arrive next week; this brief settles
+content while there is still time to change it.
 
-Every use of AI in building this audit and draft gets a row in your **AI Research
-Ledger** (the eight fixed fields: task delegated · tool used · prompt · output
-summary · decision · verification method · remaining concern · responsible
-researcher). Proposing an extra specification, red-teaming your headline sentence,
-running the Poster Critic on your draft, and adjudicating a multi-model panel are
-all delegable tasks, and each one you delegated needs a row naming how you verified
-it against your own data. "No AI used" is a legitimate entry if it is true.
+### 5. AI Research Ledger rows
+
+Every use of AI in building this note gets a row in your **AI Research Ledger**
+(the eight fixed fields: task delegated · tool used · prompt · output summary ·
+decision · verification method · remaining concern · responsible researcher).
+Red-teaming your headline sentence, generating hostile questions about the
+note, and tightening prose are all delegable tasks, and each one you delegated
+needs a row naming how you verified the result. The standing rule holds
+whatever drafted a sentence: the sentence that ships is yours. "No AI used" is
+a legitimate entry if it is true.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 5. Dossier update line
+### 6. Dossier update line
 
 End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your **robustness and diagnostic record** now exists (the
-pre-listed checks and their results), and your **claim–evidence table** now carries
-its audited row — claim, evidence, verification, boundary, and what survived
-sensitivity. Name the file or section where each now lives.
+Project Dossier**: your **research note v0** and your **claim–evidence table**
+now exist, and your AI disclosure statement is on record. Name the file or
+section where each now lives.
 
 ---
 
@@ -181,16 +193,18 @@ pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Poster draft 1** | Question → evidence → one bounded headline claim; uncertainty visible; every number traceable to a cell |
-| **Pre-listed checks** | Three checks, named and tied to the reviewer attack each answers, committed before looking |
-| **What survived** | Headline reworded to carry its range and compass boundary; any check that moved it reported by how much |
-| **Verified AI-review trail** | Each flag marked confirmed or refuted by a data check; the loudest wrong flag named |
-| **Remaining limitation** | The one weakness no check fixed, stated plainly |
-| **Notebook** | Seeded (`SEED = 464`); reruns top to bottom; every reported number traces to a cell |
+| **Note v0** | One to two pages; question, one-paragraph method, results, headline, limitations, references; opens with a dated version line and its reason |
+| **Headline claim** | One sentence carrying its compass kind and its range; every verb sized to what the design established |
+| **Uncertainty** | Every result's interval or range in the same eye-span as the number |
+| **Claim–evidence table** | Every claim a row (claim · evidence · verification · boundary); no claim in the note lacks a row |
+| **Verification column** | Each row names a real check (clean-restart trace, pre-listed audit check), never a bare "verified" |
+| **References** | All retrievable; each says what the note claims it says |
+| **AI disclosure** | Drafted from the ledger; includes what you sent to tools; names what you did not verify |
+| **Poster content brief** | Claim, one figure, and numbers with cell traces; nothing beyond what the note contains |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
-| **Dossier line** | Robustness/diagnostic record and claim–evidence row located by file or section |
-| **Studio work** | Worked at the Friday studio with your AI assistant; four audits run on your own draft; recommended Poster Critic + Robustness reviews logged |
-| **Filenames** | `lastname_m09_poster_draft.pdf`, `lastname_m09_audit.pdf` (or notebook sections), `lastname_m09_audit.ipynb` |
+| **Dossier line** | Note v0, claim–evidence table, and disclosure located by file or section |
+| **Studio work** | Note red-teamed by peers at the Friday studio; the poster content brief shaped there |
+| **Filenames** | `lastname_m09_note.pdf`, `lastname_m09_claims.pdf`, `lastname_m09_poster_brief.pdf` (or the equivalent sections of one file / notebook) |
 | **Location** | Brightspace → Assignments → M09 |
 
 ---
@@ -202,11 +216,11 @@ Four bands on the course's five shared virtues
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass & pathway alignment** (20) | Headline claim stays inside its declared compass kind and reach; the poster draft and the audit both carry the range, never a single flattering number; no overclaim past the declared boundary (18–20) | Inside the boundary; range stated but loosely, or one sentence reaches slightly past the design (14–17) | Boundary present but the headline drifts toward a claim the design does not license (8–13) | Overclaim: an observational correlation narrated as a cause, or a sample described as a population (0–7) |
-| **Evidence integrity & provenance** (20) | Every number on the draft and in the audit traces to a real cell, dataset, or retrievable source; a reader can follow each to its origin (18–20) | Traceable; one number's path thin or one source under-linked (14–17) | A claimed figure or source asserted without a locatable origin (8–13) | A fabricated or unretrievable source, or a headline number with no path back to the data (0–7) |
-| **Verification & robustness** (25) | Three pre-listed checks run and reported in full; each AI-flagged issue confirmed or refuted by a named data check; the loudest wrong flag caught; the notebook reruns and every number reproduces (23–25) | Checks run and mostly reported; one verification vague, or one flag acted on without a named check (18–22) | A single generic "I checked it" line, or checks run after the result was chosen and relabeled as pre-listed (11–17) | Specification searching reported as robustness, an AI flag pasted in unverified, or a headline number that does not rerun from the notebook (0–10) |
-| **Uncertainty & limitations** (20) | The surviving headline carries its range or interval; the one limitation no check fixed is stated as expertise, calibrated, neither hidden nor spiraling (18–20) | Uncertainty and limitation both present but one stated loosely (14–17) | Only a point estimate, or a limitation gestured at without saying what it costs the claim (8–13) | No uncertainty stated, or the result reported as settled certainty (0–7) |
-| **Craft, ledger & communication** (15) | Poster draft 1 assembled and legible, on-format, on-time; four-audit feedback incorporated; complete AI Research Ledger; dossier line present (14–15) | Minor format lapses; ledger complete (11–13) | Missing pieces or a rushed walkthrough; feedback not incorporated (6–10) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–5) |
+| **Compass & pathway alignment** (20) | The headline carries its compass kind and range in one sentence; every verb in the note is sized to what the design established; the poster brief never reaches past the note (18–20) | Inside the boundary; one verb slightly strong, or the range stated loosely (14–17) | Boundary present but the prose drifts toward a claim the design does not license (8–13) | Overclaim: an observational association written as a cause, or a sample written as a population (0–7) |
+| **Evidence integrity & provenance** (20) | Every claim in the note has a table row; every reference is retrievable and says what is claimed; a reader can trace each sentence to its origin (18–20) | Traceable; one row thin or one reference under-linked (14–17) | A claim in the note with no row, or a reference asserted without a locatable origin (8–13) | A fabricated or unretrievable source, or a headline claim with no evidence row at all (0–7) |
+| **Verification & robustness** (25) | Every table row names a real check; every number carries its cell trace; the disclosure is drafted from the ledger and names what was not verified; the version line carries a usable reason (23–25) | Checks mostly named; one row vague, or the version reason decorative (18–22) | Generic "I checked it" entries, or a disclosure written from memory (11–17) | A number with no path back to a cell, or a claimed verification that never happened (0–10) |
+| **Uncertainty & limitations** (20) | Uncertainty sits in the same eye-span as every result; limitations are proportional to what threatens the claim, led by the one the M8 audit could not fix, stated as expertise (18–20) | Both present; one stated loosely (14–17) | A point estimate with no interval somewhere, or limitations generic (8–13) | No uncertainty stated, or the finding written as settled certainty (0–7) |
+| **Craft, ledger & communication** (15) | On-format, on-time, one to two pages a stranger can follow; studio red-team feedback incorporated; complete AI Research Ledger; dossier line present (14–15) | Minor format lapses; ledger complete (11–13) | Missing pieces, or studio feedback ignored (6–10) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–5) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -214,8 +228,8 @@ Four bands on the course's five shared virtues
   at Beginning.
 - An **untraceable number** — a figure with no path back to your data — caps
   *Verification & robustness* at Beginning.
-- A **non-reproducing result** — a headline number that does not rerun from your
-  submitted notebook — caps *Verification & robustness* at Beginning.
+- A **non-reproducing result** — a headline number that does not rerun from the
+  notebook it traces to — caps *Verification & robustness* at Beginning.
 - A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
   **0** and the submission is **returned** unread until it is supplied.
 
@@ -229,32 +243,33 @@ days of feedback recovers up to half the lost points.
 - Any source you cite that turns out not to exist or not to say what you claim:
   *Evidence integrity & provenance* scores Beginning regardless of the rest — the
   course's evidence-integrity rule with teeth.
-- A headline number that does not reproduce from your submitted notebook:
+- A headline number that does not rerun from the notebook it traces to:
   *Verification & robustness* scores Beginning regardless of the rest.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is returned
   for completion before grading.
 
 ## Common Pitfalls
 
-1. **The specification search dressed as robustness.** Quietly running many
-   versions of your analysis and putting only the one that reached significance on
-   the poster, with the search never disclosed. Same table, opposite integrity. The
-   only defense is the order on the record: pre-list your checks, run all of them,
-   and report the whole picture — including the ones that showed nothing.
-2. **The unverified AI flag.** Pasting a reviewer's confident critique into your
-   audit as a real finding, or its caveat into your limitations, without running the
-   data check that settles it. A flaw is real when your own output confirms it, not
-   when a model sounds sure. Two models agreeing can be correlated error, not
-   confirmation. Draft your claim yourself, then let AI attack it, then verify the
-   attack.
-3. **The orphan number on the poster.** A headline figure with no cell behind it,
-   or an "in the sample" result quietly upgraded to "in general" or "causes" once it
-   is shrunk to poster size. If you cannot point to the cell that produced a number,
-   you cannot defend it — and the Expo will ask.
+1. **The claim that outgrew its table.** Writing the note first and back-filling
+   the table after, so a persuasive sentence stands with no row beneath it. The
+   order is the protection: build the table from your M8 audit first, then write
+   only the sentences its rows license. A claim you cannot fit in the table is a
+   claim to cut or a check to run, and both send you back before the note ships.
+2. **The verb upgrade under compression.** "In my sample" quietly becomes "in
+   general", or *is associated with* becomes *drives*, the moment a finding is
+   shrunk to a headline or a poster line. A shorter, cleaner sentence is not a
+   bigger finding. Check every verb in the headline and the poster brief against
+   the compass kind your table declares.
+3. **The disclosure from memory.** A vague "AI was used for editing" written at
+   the end, from recollection. The statement is drafted from your ledger rows,
+   includes what you sent to tools, and names what you did not verify. If the
+   ledger has no row, the disclosure has nothing honest to draw on — and the
+   Craft rule (scored 0, returned) applies.
 
 ---
 
-*Previous: [M08 — Minimum Viable Analysis](milestone_08_minimum_viable_analysis.md) ·
-Next: [M10 — Final Poster Lock](milestone_10_final_poster_lock.md) — the audited
-claim that survived this week becomes the single defensible headline your locked
-poster carries to the Expo, with no revision window behind it.*
+*Previous: [M08 — Robustness Audit](milestone_08_minimum_viable_analysis.md) ·
+Next: [M10 — Final Poster Lock](milestone_10_final_poster_lock.md) — the poster
+content brief you just wrote meets poster craft, and the note's bounded claim
+becomes the labeled-preliminary headline your locked poster carries to the
+Expo.*
