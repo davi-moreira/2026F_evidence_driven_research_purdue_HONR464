@@ -1525,3 +1525,78 @@ by omission of this gate, corrected here. Queued counter-proposals: one
 typed registry for audit events/touchpoints/artifact lists; route/estimand
 cards for teaching cases; canonical structured quiz items rendering both
 bank and key.
+
+## Decision 42: References sections; Studio 10 venue contracts; Studio 12 closes mode-neutral with its agent lessons kept (2026-08-04)
+
+**Ruling (Davi).** Three directives: (1) the chapter bibliography section is
+titled **References**, not Bibliography; (2) Studio 10 must honestly serve
+formats beyond the poster; (3) the Studio 12 lessons-vs-description mismatch
+is evaluated and resolved whichever way is better for the book, with a
+stated preference for keeping something about AI agents.
+
+**1. References.** `reference-section-title: References` (amends D40's
+Bibliography choice). Toolchain fact, verified twice: Pandoc keeps the
+section id `#bibliography` whatever the visible title, so no anchors moved;
+the demotion include now keys on the stable `div#refs` container, which
+also survives the future localized titles (Referências / Referencias —
+TRANSLATION_BACKLOG item 13 updated).
+
+**2. Studio 10 — the venue contract is the universal scaffold.** No new
+lesson; all four lesson classifications unchanged. The studio's authored
+content now opens with a **venue contract** (audience, medium, limits,
+required elements, accessibility, submission rule, question channel) and a
+**content map** locating claim, evidence, boundary, uncertainty, and
+disclosure; a format table routes poster / live talk / talk-with-slides /
+written brief / other through the existing lessons, transferring named
+techniques rather than whole lessons. The guide renders on the opener, the
+milestone chapter, and the workbook (the practice references it). Practice
+steps: contract → content map → build with trace → test in the format's
+actual mode → rehearse (written questions when the venue has no live ones).
+Rubric criterion 5 resynced with diagnostic 0/1/2 levels. Chapter touch-ups:
+ch27 names what travels with a figure vs what is poster-only; ch28 separates
+the audit's universal spine from poster procedure; ch29 adds the
+slides-serve-the-spoken-spine paragraph; ch30 is de-postered and admits
+written questions. Poster-criticism's milestone contribution returned to an
+honest poster-only condition — the milestone, not the lesson, owns the
+general audit.
+
+**3. Studio 12 — lessons kept, description made true.** Ruled direction:
+keep the two optional agent lessons in place (they need a mature draft, so
+earlier placement fails; ch37 consumes their outputs; moving them would
+ripple through station ranks, TOC, and the M15 bridge for no content gain)
+and make the studio genuinely mode-neutral. The confirmed defect the
+partner run exposed: ch37's core IYT required a multi-agent portfolio
+(loop decomposition, conflict + override, independence check) that a
+reader who correctly skips the optional lessons cannot produce. Now: the
+practice records a **review mode** (no AI / one assistant / several
+loops) and attaches only the evidence that mode produces; ch37's portfolio
+step is producible in all three modes; ch35's setup is conditional; ch36
+diagnoses a load-bearing pair whether it agrees or disagrees. The release
+audit marks items clear / pending / **blocking**, the decision is release
+or **withhold pending a named repair** (a valid final version under D35's
+version-not-pass rule), the dossier carries a manifest, and a
+package-current-with-cold-run blocking gate joined the rubric. The
+milestone chain sentence on every page now ends on the decision ("whether
+your finished research artifact leaves your hands"), not a promised
+"released and defended". The studio's framing closes the ch01 thesis:
+zero, one, or many tools — the release standard does not change.
+
+**Machine layer.** `build_station_pages.py` renders `genre_guide` on all
+three studio surfaces and the decision-honest chain; the architecture
+validator requires route/genre chooser guides wherever a studio has
+route/genre-branch lessons. Course ripple: zero briefs changed (titles
+stable); BOOK_STATIONS/ASSESSMENTS re-locked.
+
+**Process.** Two-role Codex loop (gpt-5.6-sol, xhigh, read-only): mirror
+partner run merged with attribution
+(`_adm/codex_collab/2026-08-04_refs-studio10-studio12/`) — Codex-only
+contributions: the stable-id toolchain fact, the venue-contract scaffold,
+the ch37 impossibility, the guide-placement gap, the withhold semantics;
+Claude-only: the References implementation, thesis-closure framing, course
+ripple check. Declined/queued: a dedicated policy-brief lesson (generic
+venue-contract path suffices until Davi wants the genre taught in depth);
+ch37 retitle to "Release Audit and the Next Study" (kept the
+AI-management-portfolio identity the course deliverable depends on;
+mode-adaptive wording achieves the same coherence); strict criterion-5 ↔
+produces machine-sync (texts legitimately diverge in explanatory tails).
+Diff review round appended below.
