@@ -1,10 +1,15 @@
 # COURSE_REFRAME_OPTIONS — matching the course to the Twelve Studios
 
-**For Davi's ruling (would be D39).** Prepared 2026-08-03 by the two-track
+**RULED (Davi, 2026-08-03): Option 2 adopted — see the D40 revision section
+at the end and the D41 implementation record in `_project_docs/DECISIONS.md`.**
+
+Prepared 2026-08-03 by the two-track
 loop: an independent Codex partner run (mirror mode, gpt-5.6-sol, xhigh, no
 seeding) and an independent Claude analysis, verified against each other and
-merged. Nothing here is implemented. Run artifacts:
-`_adm/codex_collab/2026-08-03_course-reframe-studios/`.
+merged. Run artifacts:
+`_adm/codex_collab/2026-08-03_course-reframe-studios/` (options),
+`_adm/codex_collab/2026-08-03_option2-implementation/` (implementation
+blueprint + review).
 
 **The question (Davi's):** the book is now the Twelve Studios (D38). Reframe
 the course to follow it — the course is conditioned on the book, never the
@@ -326,3 +331,59 @@ weights, BOOK_ASSESSMENTS status, workbook flags).
 8. **Dates:** confirm the exact Expo session (Tue Nov 17) and the Nov 6,
    5 PM lock from organizer communications (public Purdue material confirms
    only the Nov 16–20 week).
+
+---
+
+## Revision after D40, and the ruling (2026-08-03)
+
+The book moved again after this memo was written. **D40** closed every
+studio with a generated **Milestone chapter** — the book now carries its own
+numbered milestone chain, **Milestones 1–12**, with artifact-first titles
+("Milestone 2: Your question, declared"), a "What you bring" checklist, the
+practice steps, the rails, the authored rubric, and the workbook badge.
+`BOOK_STATIONS.yml` gained four authored fields per studio
+(`milestone_title`, `milestone_reason`, `hands_forward`, and a
+per-lesson `contributions:` map naming the exact "It is your turn" piece
+each lesson hands its milestone), validator-gated.
+
+**What D40 changes in this memo's analysis:**
+
+1. **The course's anchor problem is solved by the book itself.** Every
+   course submission can now open from a book Milestone chapter instead of
+   a course-invented artifact description. The naming bridge becomes:
+   course submissions keep their M0–M15 ids (Brightspace/calendar
+   identity) and each presents a **book Milestone version** — 16
+   submissions over 12 book milestones, with M6+M7, M9+M14, M10–M12, and
+   M13+M14 carrying successive versions/events of Book Milestones 7, 9,
+   10, and 11 respectively.
+2. **Open question 6 (renumber the milestones?) is largely answered by
+   the book**: keep M0–M15 as submission ids; the book's Milestone 1–12
+   numbering is the student-facing arc. The For Instructors appendix
+   already disambiguates the two.
+3. **The `contributions` map feeds the briefs.** Book Anchor sections can
+   now state not just which chapters a milestone reads but WHICH IYT piece
+   each chapter hands the milestone — the anchor generator gains a richer
+   source.
+4. **Two D40 integrity fixes sharpen the Option 2 week split**: Contract
+   v0 (Week 4) carries a *provisional* operationalization with measurement
+   assessed in Studio 6 (Week 6), and Studio 12's stale-run gate widens
+   the release-preflight requirement Option 2's Repair 3 already imposed
+   before the poster lock.
+5. **A2 note:** bare "Milestone N" is now BOOK vocabulary; the leakage
+   scanner bans only course-CODED forms (`milestone M4`, `M4 brief`,
+   `milestone_04`) in book surfaces. The colleague device and all course
+   artifacts remain course-side only.
+
+**The ruling.** Davi ruled **Option 2 — Studio-first, route-selective
+semester** (not the Fall-2026-conservative Option 1 both tracks had
+ranked first; the deciding argument was the one this memo already
+recorded: Option 2 is the cleanest expression of D38, and choosing it
+now avoids teaching one structure while the book argues another). The
+implementation is phased — structure first (crosswalk, master plan,
+milestone chain, config: **D41**), then content (briefs, schedule data,
+quiz banks, SRL briefs, nb05–nb10 rebuild), then the Synthetic Colleague
+infrastructure. Option 2's route-selective reading resolves open question
+2: each student's pathway lesson is **route-required**, the other four
+branches join the route-hub jigsaw with one mandated contrast, and
+`hybrid-complex-designs` moves from blanket-required to recommended (a
+recorded course-policy change).
