@@ -1271,3 +1271,61 @@ disagreed, the prose was corrected to the executed output. The T&F proposal
 DOCX was regenerated from the ToC heading down (12 studios, renumbered
 abstracts); every paragraph above that heading is byte-identical to Davi's
 reviewed text, machine-verified.
+
+## Decision 40: Milestone chapters close every studio; new-tab links; titled bibliographies (2026-08-03)
+
+**Ruling (Davi).** Three directives, all book-side:
+
+1. **Book hyperlinks always open in a new tab.** Implemented as
+   `book/_page-behavior.html` (include-after-body): every link in the page
+   BODY gets `target="_blank" rel="noopener"`; navigation chrome (sidebar,
+   TOC, breadcrumbs, next/previous) and same-page anchors keep native
+   behavior, so the book never navigates away from the reader's place. The
+   include also demotes the citeproc-generated bibliography heading to h2.
+2. **Chapter bibliographies live in a titled section.**
+   `reference-section-title: Bibliography` in `book/_quarto.yml`: chapters
+   that cite get a "Bibliography" section above their reference list;
+   pages without citations get none.
+3. **The studio "checkpoint" becomes a Milestone chapter.** Each studio is
+   now TWO generated pages: the OPENER anticipates the milestone (the
+   authored `milestone_reason`, what it produces, the `hands_forward`
+   chain sentence, and a per-lesson list of the piece each lesson's "It is
+   your turn" hands the milestone) and keeps route/acquisition guidance
+   plus the legacy `#checkpoint` anchor; the **Milestone chapter**
+   (`book/studios/milestoneNN-<id>.qmd`, unnumbered, LAST in its part)
+   carries the details — "What you bring" checklist, practice steps
+   (`#milestone`), the version-not-a-pass rule, the four rails, "Where
+   this milestone sits" (the 12-milestone chain ending in the released
+   research artifact), revisit, the authored rubric, and the workbook
+   badge. Reader-facing titles are artifact-first ("Milestone 2: Your
+   question, declared").
+
+**Scaffold guarantee.** BOOK_STATIONS.yml gains four authored fields per
+station — `milestone_title`, `milestone_reason`, `hands_forward`,
+`contributions` (lesson id → the IYT piece it hands the milestone; 39
+lines authored from the actual IYT steps) — and the architecture validator
+gains a scaffold gate: an active lesson with no contribution entry, or a
+contribution naming a lesson outside the studio, fails the build. The
+milestone chain (1→12) is generated on every milestone page and stated in
+the preface and the organization page.
+
+**Mechanics.** `build_station_pages.py` emits opener + milestone chapter +
+workbook (workbooks retitled "Milestone N", same immutable paths);
+`build_book_toc.py` appends each milestone chapter to its part;
+`build_station_pointers.py` routes each studio's last lesson to
+`milestoneNN-<id>.qmd#milestone` and rewords the core pointer; rubric
+texts in BOOK_ASSESSMENTS.yml resworded station/checkpoint →
+studio/milestone (ids untouched); the A2 leakage rule `course-milestones`
+narrowed to course-CODED forms (`milestone M4`, `M4 brief`,
+`milestone_04`) since bare "Milestone N" is now book vocabulary; the For
+Instructors appendix disambiguates book Milestones 1–12 from course
+milestones M0–M15; PT/ES replay steps logged in TRANSLATION_BACKLOG.md
+items 12–13. Identity untouched: station ids, lesson urls, and workbook
+paths are unchanged; old `#checkpoint` deep links land on the opener's
+anticipation section.
+
+**Process.** Built through the two-role Codex loop: a mirror-mode partner
+run (gpt-5.6-sol, xhigh, read-only) ran the same assignment in parallel;
+its material is merged with attribution in
+`_adm/codex_collab/2026-08-03_studio-milestones-links-bib/`, and the
+implementation diff goes through a Codex review round.
