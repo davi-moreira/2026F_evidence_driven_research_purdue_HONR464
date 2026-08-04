@@ -3,7 +3,6 @@
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M1**.
 > This submission presents **Book Milestone 2 — Your question, declared** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone02-frame-the-inquiry.html#milestone).
-> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project

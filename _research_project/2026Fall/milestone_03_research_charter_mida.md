@@ -3,7 +3,6 @@
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M3**.
 > This submission presents **Book Milestone 4 — Your research contract, v0** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone04-declare-and-diagnose.html#milestone).
-> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project

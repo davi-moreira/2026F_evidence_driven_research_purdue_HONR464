@@ -3,7 +3,6 @@
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M0**.
 > This submission presents **Book Milestone 1 — Your working agreement** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone01-govern-the-work.html#milestone).
-> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project

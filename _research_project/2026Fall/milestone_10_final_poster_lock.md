@@ -5,7 +5,6 @@
 > This submission presents **Book Milestone 10 — Your defense, ready** (version 1 — poster edition, labeled preliminary): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 > **Gate work (no artifact presented):** Book Milestone 11 — Your reproducible package (author self reproduction before poster lock).
 > **Gate work (no artifact presented):** Book Milestone 12 — Your release and next cycle (release preflight before poster lock).
-> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project

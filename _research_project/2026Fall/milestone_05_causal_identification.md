@@ -3,7 +3,6 @@
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M5**.
 > This submission presents **Book Milestone 6 — Your data and measurement, governed** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone06-govern-data-measurement.html#milestone).
-> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project

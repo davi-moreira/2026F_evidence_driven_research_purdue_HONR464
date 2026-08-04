@@ -100,9 +100,6 @@ def bridge_block(row: dict, stations: dict[str, dict]) -> str:
         lines.append(f"> **Gate work (no artifact presented):** Book "
                      f"Milestone {st['rank']} — {st['title']} "
                      f"({sg['use'].replace('-', ' ')}).")
-    lines.append("> *(D41 rebuild note: this brief's artifact spec is being "
-                 "rebuilt to the Studio structure and is updated before its "
-                 "kickoff.)*")
     lines.append(BRIDGE_END)
     return "\n".join(lines)
 

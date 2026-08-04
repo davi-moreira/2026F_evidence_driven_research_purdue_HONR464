@@ -5,7 +5,6 @@
 > This submission presents **Book Milestone 9 — Your bounded claims** (version 2 — post-conference bounded note): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html#milestone).
 > It is a *revisit*: the next version of an artifact whose first version already exists.
 > This submission presents **Book Milestone 11 — Your reproducible package** (version 1 — reusable package): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html#milestone).
-> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project

@@ -1452,3 +1452,40 @@ version/status fields instead of free-form version_label; one typed loader
 generating the milestone registry, PROJECT table, brief bridges, and
 adoption labels; separating lesson ownership / student assignment /
 version contribution, which `home_anchor` currently overloads.
+
+**D41 content-phase completion record (2026-08-04).** Phases B, C, and D
+are COMPLETE and the transition state is closed. Shipped through the
+two-role Codex loop (a 1,620-line mirror-mode content blueprint —
+redistribution maps with cell-level reuse, eight full draft meeting dicts,
+forty draft quiz items, the cutover sequence — merged with an independent
+Claude track and executed by coordinated subagents, every artifact
+machine-gated): (B) all 16 briefs carry the studio-first artifacts; quiz
+banks W5–W12 rebuilt + the missing week06 created, all parity-gated, keys
+teaching the guarded formulations with misconceptions as distractors only;
+the five-touchpoint GenAI bench (M4/M7/M8/M10/M13 — the old M9 pairing
+split); SRL-adjacent protocols re-anchored. (C) `scripts/schedule_data/`
+parts 1–4 fully studio-first (43 meetings × 34 fields; colleague beats per
+the kit cadence; naming bridges in every milestone field); ALL 16 course
+notebooks rebuilt or adapted (nb05 route hub with five verified route
+cards; nb06 governance; nb07/nb08 the build/verify pair; nb09 stress-test
+with the pre-registration card; nb10 the bounded-note week; nb11 gates;
+nb12 pitch; nb13 revisit-only public test; nb14 practice-not-checkpoint
+cold run; nb15 note-v1+package; nb16 release audit) plus all 16 ms studio
+sources; display titles cut over (nb14 keeps the "Async module" prefix the
+async validator keys on); the three rebuild notices removed and every
+projection regenerated; instructor repo synced (32 notebooks, 16 guides).
+(D) the Synthetic Colleague kit: public `project/colleague/` (README with
+sourced learning-science claims, 7-move audit protocol, 4-row rubric,
+synopsis form with generic-case/withdrawal/retention consent, Case 464)
+and the private generation kit (error menus for all 12 studios keyed to
+the misconception manifest, generation workflow with pre-release
+verification, persona template, Case 464 key); syllabus disclosure inside
+Participation. Full validator suite green (architecture, sync, milestones,
+calendar, adoption, anchors, book map, badges, misconceptions local,
+citation audit, voice ×16). Session-limit interruption mid-build was
+recovered by state assessment + targeted repair (nb12's corrupted cell,
+one voice violation) + one relaunch. Remaining known work: the Codex
+review round over the content diff (in flight at this record); GenAI role
+spec deep rewrite and SRL handbook refresh remain adequate-but-unpolished;
+first live generation of the five colleague personas happens when student
+synopses arrive (Week 2).

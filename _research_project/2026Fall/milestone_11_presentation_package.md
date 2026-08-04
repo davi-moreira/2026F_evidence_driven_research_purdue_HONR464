@@ -4,7 +4,6 @@
 > **Book Milestone bridge (D41)** — course milestone **M11**.
 > This submission presents **Book Milestone 10 — Your defense, ready** (version 2 — defense-rehearsed edition): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 > It is a *revisit*: the next version of an artifact whose first version already exists.
-> *(D41 rebuild note: this brief's artifact spec is being rebuilt to the Studio structure and is updated before its kickoff.)*
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project
