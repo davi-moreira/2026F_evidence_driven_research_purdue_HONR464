@@ -527,7 +527,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 |---|---|---|
 | Step 1 | Write your escalation rules before the next round starts | |
 | Step 2 | Add the stopping conditions that are not about content | |
-| Step 3 | Find one real disagreement in what your roles have already returned, and diagnose it on the record: real disagreement, correlated error, or a… | |
+| Step 3 | Take one load-bearing pair of outputs your roles have returned, whether they agree or disagree, and diagnose it on the record: real disagreement,… | |
 | Step 4 | Resolve it yourself with a check the loops cannot run: recompute the number, open the source, or compare against a figure that was never in any prompt | |
 | Step 5 | Take one place your roles agreed on something that mattered and test whether the agreement was independent | |
 | Step 6 | Log the conflict, the diagnosis, and the override in your AI Research Ledger, and verify at least one output with a named method from the… | |
@@ -540,7 +540,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | # | Criterion | 0–2 |
 |---|---|---|
 | Step 1 | Finish the research artifact itself: your paper, note, or poster, with each claim stated at its boundary and your uncertainty in the same sentence as… | |
-| Step 2 | Assemble your AI-management portfolio in four parts: the decomposition of loops you ran, one real conflict and the override you made with its non-AI… | |
+| Step 2 | Assemble your AI-management portfolio in the form your review mode actually produced | |
 | Step 3 | Write your stopping rule as a sentence you could read aloud, phrased around what you have verified rather than what your tools approved | |
 | Step 4 | Rehearse the defense in three movements: your claim and its boundary, the central choice you made and the road you did not take, and the verification… | |
 | Step 5 | Read the whole artifact once more against your ledger and cut anything you cannot trace to a check | |
