@@ -1908,5 +1908,14 @@ partner adopted the structure with guardrails (ch6 and the new lesson
 own different decisions; no duplicated field-card work; load-neutral in
 practice) and contributed the retitle package, the contribution thread,
 the reject-drill faded task, and the progression moves. Merged with
-attribution (`_adm/codex_collab/2026-08-05_d46-studio2-balance/`).
-Review round appended below.
+attribution (`_adm/codex_collab/2026-08-05_d46-studio2-balance/`). Diff
+review round (same model/effort): five findings, all confirmed and
+applied — ch6's new decision block had named prediction a third KIND
+(fixed: descriptive or causal, prediction as its own compass position);
+the worked example now computes the comparison its sentence asserts (a
+retrieved overall-index benchmark in the code) and wording B is labeled
+as what its rows measure; the declaration gains a required
+uncertainty-and-limitations step (IYT, studio step, contribution, and
+rubric criterion); the wording prompt carries the full field card so
+show-what-changed can actually be enforced; and the canonical lesson
+counts (CLAUDE.md, COURSE_MASTER_PLAN partition) now say 40.
