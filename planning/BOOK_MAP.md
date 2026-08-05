@@ -16,12 +16,12 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 
 | Part | Ch | Title | Primary notebook |
 |---|---|---|---|
-| I — Research when AI can produce almost everything | 1 | AI Is Your Arm, Not Your Brain | nb01 |
-| I | 2 | The Student as Research Director | nb01 |
-| I | 3 | Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend | nb01 |
-| I | 4 | Research Responsibility and Intellectual Ownership | nb01 |
-| II — From curiosity to research design | 5 | From Curiosity to a Research Problem | nb02 |
-| II | 6 | Descriptive, Predictive, and Causal Questions | nb02 |
+| II — From curiosity to research design | 1 | From Curiosity to a Research Problem | nb01 |
+| I — Research when AI can produce almost everything | 2 | AI Is Your Arm, Not Your Brain | nb02 |
+| I | 3 | The Student as Research Director | nb02 |
+| I | 4 | Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend | nb02 |
+| I | 5 | Research Responsibility and Intellectual Ownership | nb02 |
+| II — From curiosity to research design | 6 | Descriptive, Predictive, and Causal Questions | nb02 |
 | II | 7 | Research Builds on Research | nb03 |
 | II | 8 | Finding and Verifying Prior Evidence | nb03 |
 | II | 9 | Model, Inquiry, Data Strategy, and Answer Strategy | nb04 |
@@ -48,7 +48,7 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 | VI — Research after the conference | 30 | From Dossier to Research Note | nb10 |
 | V — Communicating and defending research | 31 | Research Posters | nb11 |
 | V | 32 | Poster Criticism | nb11 |
-| V | 33 | Research Pitches | nb12 |
+| V | 33 | Research Pitches, Talks, and Seminars | nb12 |
 | V | 34 | Difficult Questions and Uncertainty | nb12 |
 | VI — Research after the conference | 35 | Replication and Reproduction | nb14 |
 | VI | 36 | Open and Reusable Research Packages | nb15 |

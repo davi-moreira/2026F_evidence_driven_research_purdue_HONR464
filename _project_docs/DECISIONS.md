@@ -1837,5 +1837,15 @@ mirror partner VERIFIED the structural design, contributed the ch5/ch1/
 ch6 narrative drafts, the transitions, the S10 routing, and the sweep's
 fix list, and caught a duplicate-numbering defect and a jump-attribution
 overreach ("no tool can" → Zahavy's argued position) in the base. Merged
-with attribution (`_adm/codex_collab/2026-08-05_d45-flip-s1s2/`). Review
-round appended below.
+with attribution (`_adm/codex_collab/2026-08-05_d45-flip-s1s2/`). Diff
+review round (same model/effort): five findings, all confirmed and
+applied — the For Instructors adoption table and BOOK_MAP regenerated
+(two freshness gates the pipeline had missed); M0's checklist, purpose,
+and chapter references reconciled with the curiosity milestone (a
+version-zero commitment, not "nothing is a commitment"); ch5's step-5
+prompt and closing verification made problem-level (no field card before
+Studio 2); the cold-test protocol re-scoped to the ruled flow (receipted
+brainstorm before the ledger; retrospective first row; new hard gate: no
+tool-chosen problem, no receipt-less exchange); and the legacy
+`/stations/stationNN-*` URLs from before the flip now alias-redirect
+alongside the studio ones.

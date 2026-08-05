@@ -27,17 +27,19 @@ Due: **Friday, August 28, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m00_research_ai_baseline.pdf`** *or* a shared Colab notebook link | The four-part baseline below: your three curiosities with one defended pick, your AI baseline (two things you assume AI is good at with the check for each, and two decisions you will not delegate), a screenshot of nb01's readiness checks, and your first AI Research Ledger row from the citation catch in EDR\|AI ch. 1's "It is your turn" (companion notebook). This is the graded artifact. |
+| 1 | **`lastname_m00_research_ai_baseline.pdf`** *or* a shared Colab notebook link | The four-part baseline below: your three curiosities with one defended pick, your AI baseline (two things you assume AI is good at with the check for each, and two decisions you will not delegate), a screenshot of nb01's readiness checks, and your brainstorm exchange receipt from EDR\|AI ch. 1's "It is your turn" (the curiosity stretch; it becomes your AI Research Ledger's first row at M1). This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 1** | The piece Book Milestone 1's checklist names, from ch. 1's "It is your turn": your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer — worked in the companion Colab notebook (share the link) or included in your artifact. Prompts marked *Optional depth* are not required. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.
 
 This is the smallest, warmest, lowest-stakes milestone of the whole chain, on
-purpose. Nothing here is a commitment. You are not choosing your project today.
-You are opening three doors, checking that your tools turn on, and installing the
-one habit the whole course runs on: use AI hard, then verify everything it hands
-you before you put your name on it.
+purpose. Your pick is a version-zero commitment, not a contract: the book's
+milestones are dated versions, and later evidence can and will revise this one
+on the record. You are opening three doors, choosing the one you would walk
+through first, checking that your tools turn on, and installing the one habit
+the whole course runs on: use AI hard, then verify everything it hands you
+before you put your name on it.
 
 ---
 
@@ -81,13 +83,13 @@ lost to setup and no later claim rests on an unchecked machine guess.
 
 You stress-test your citation catch and your never-delegate list with your AI reviewer. The two
 curiosities you did *not* pitch, and the boundary you drew, become the raw
-material M1 narrows into a single answerable question.
+material M1's formal declaration builds on.
 
 > **A question that often comes up here:** *"Does a curiosity have to be
 > 'academic'?"* No. The strongest projects often start somewhere personal: a
 > program you were part of, a claim in a news feed that annoyed you, a pattern
 > you noticed at home. What matters is that it is *yours* and that, in principle,
-> evidence could speak to some version of it. You test whether it is studyable
+> evidence could speak to some version of it. The formal declaration tests it
 > next week; today, chase what actually interests you.
 
 ## Components
@@ -97,8 +99,9 @@ material M1 narrows into a single answerable question.
 Write **three genuine curiosities** from any field you care about: three
 *different* doors, not three phrasings of one. For each, in two or three
 sentences, say what pulls you in and what small corner of it you could imagine
-looking at more closely. A curiosity is allowed to be broad and unpolished here;
-the funnel from curiosity to a question is M1's job, not today's.
+looking at more closely. A curiosity is allowed to start broad; ch. 1 walks
+your pick down the funnel to a chosen research problem this same week, and the
+FORMAL question (units, outcome, kind, reach) is declared at M1, not today.
 
 Then **mark the one you would currently carry** and defend it in a short
 paragraph: why this one, and what would make it a *bad* choice you should watch

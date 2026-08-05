@@ -28,13 +28,15 @@ observer can see; no coaching beyond the script.
    - "When you used the AI tool, what did the book make you do first, and
      after?"
    - "Whose job is it to decide what the final claim says?"
-3. Collect the artifacts: the opening-move page, the ledger, the three
-   curiosities.
+3. Collect the artifacts: the opening-move page, the brainstorm receipt
+   with its NEW labels, and the chosen problem with its reasons.
 
 **Observation checklist (mark each yes/no with a timestamp).**
-- Reader writes the opening move before opening any tool.
-- Reader opens the ledger before the first prompt.
-- Reader runs the verify step of the citation catch without prompting.
+- Reader writes the opening move before opening any tool, and every AI
+  exchange afterward leaves a receipt (task, tool, kept and rejected,
+  check).
+- Reader audits the brainstorm's NEW elements without prompting, and can
+  say which stretch they rejected and why.
 - Reader can state the book's subject as research (their words) rather
   than AI.
 - Reader identifies the never-delegate boundary unprompted or when asked.
@@ -42,16 +44,20 @@ observer can see; no coaching beyond the script.
 
 Two additions to the script, from the partner track: at the end, ask the
 reader to reconstruct, without looking back, the order of their first five
-moves (curiosity → ledger → prompt → check → row); and note every point
+moves (curiosity committed → stretched with a receipt → problem chosen →
+ledger opened with the retrospective row → first verified catch); and note
+every point
 where they ask "do I have to do this?".
 
-**Pass signals.** HARD GATE: zero readers run a prompt before opening the
-ledger. Then, reported as numerators over denominators: most readers (aim
+**Pass signals.** HARD GATE: zero readers carry forward a tool-chosen
+problem they cannot defend as their own, and no AI exchange goes without a
+receipt. Then, reported as numerators over denominators: most readers (aim
 ≥80%) complete the opening move without AI, carry their own curiosity into
 Chapter 1, independently open a source rather than asking the AI to check
 itself, reconstruct the five-move order, distinguish core from optional
 depth, and describe the book unaided as doing research with governed AI.
-**Fail signals.** "It's a book about AI"; prompt-before-ledger; the
+**Fail signals.** "It's a book about AI"; a receipt-less exchange; a
+tool-chosen problem; the
 opening move skipped as decorative.
 
 **Output.** One page: checklist, quotes, artifact photos, and the repair

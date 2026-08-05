@@ -249,8 +249,10 @@ have to give when someone asks why this problem and not another.
 
    ```
    Here is my curiosity: [one sentence]. Produce five candidate research problems
-   inside it. For each, name its units of analysis, its outcome, and its target
-   population, in a table. Do not add any topic I did not mention.
+   inside it. For each, name the unknown it targets, who would care about the
+   answer, and roughly what evidence could speak to it, in a table. Label
+   anything you introduce that my sentence did not contain as NEW. Do not add
+   any topic I did not mention.
    ```
 
    *After running, verify:* check each row against the curiosity you actually
@@ -278,10 +280,11 @@ have to give when someone asks why this problem and not another.
    proposed it.
 8. Add it to the simple exchange log you started (the next studio's ledger inherits every line), and verify your chosen problem with a named method from
    the [Verification Guide](../verification-guide.qmd). The fitting method here is peer
-   reasoning: hand the single sentence to someone who knows nothing about your project
-   and ask them to tell you, from that sentence alone, what one unit is, what you would
-   record, and who the answer is about. If they stall, the missing term is your next
-   revision. An AI reviewer may run the check with you; the decision to accept or
+   reasoning: hand the problem sentence to someone who knows nothing about
+   your project and ask them to say, from that sentence alone, what is
+   unknown, why an answer would matter, and roughly what evidence could
+   speak to it. If they stall, the missing piece is your next revision. An
+   AI reviewer may run the check with you; the decision to accept or
    reject stays yours.
 
 You have chosen a problem worth pursuing. Before AI performs consequential

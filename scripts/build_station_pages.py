@@ -169,6 +169,7 @@ def opener_page(st: dict, spec: dict, lessons: list[dict], n: int) -> str:
                  f"{spec['acquisition_note']}\n\n"
                  if spec.get("acquisition_note") else "")
     legacy = "".join(f"\n  - /studios/studio{r:02d}-{slug}.html"
+                     f"\n  - /stations/station{r:02d}-{slug}.html"
                      for r in LEGACY_RANKS.get(slug, []))
     return f"""---
 title: "Studio {n}: {st['title']}"
