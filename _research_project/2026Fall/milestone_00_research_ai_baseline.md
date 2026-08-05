@@ -2,7 +2,7 @@
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M0**.
-> This submission presents **Book Milestone 1 — Your working agreement** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone01-govern-the-work.html#milestone).
+> This submission presents **Book Milestone 1 — Your curiosity, committed** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone01-frame-the-inquiry.html#milestone).
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project
@@ -28,7 +28,7 @@ Due: **Friday, August 28, 11:59 PM** (you work on it at that Friday's studio).
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m00_research_ai_baseline.pdf`** *or* a shared Colab notebook link | The four-part baseline below: your three curiosities with one defended pick, your AI baseline (two things you assume AI is good at with the check for each, and two decisions you will not delegate), a screenshot of nb01's readiness checks, and your first AI Research Ledger row from the citation catch in EDR\|AI ch. 1's "It is your turn" (companion notebook). This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 1, ch. 2, ch. 3, ch. 4** | The pieces Book Milestone 1's checklist names, from each chapter's "It is your turn": your opened ledger with its first verified row (ch. 1), your delegation map (ch. 2), one complete SDIIVDD run (ch. 3), and your ownership statement with its never-delegate list (ch. 4) — worked in the companion Colab notebooks (share the links) or included in your artifact. Prompts the chapters mark *Optional depth* are not required. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 1** | The piece Book Milestone 1's checklist names, from ch. 1's "It is your turn": your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer — worked in the companion Colab notebook (share the link) or included in your artifact. Prompts marked *Optional depth* are not required. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.
@@ -51,10 +51,7 @@ not have to run every prompt: each lesson marks one core AI cycle, and the
 prompts labeled *Optional depth* are exactly that. The Studio 1 milestone
 checklist, not prompt count, defines completion:
 
-- Ch. 1 — [AI Is Your Arm, Not Your Brain](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch01_ai_is_your_arm_not_your_brain.ipynb)
-- Ch. 2 — [The Student as Research Director](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/02-the-student-as-research-director.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch02_the_student_as_research_director.ipynb)
-- Ch. 3 — [Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch03_specify_delegate_interrogate_inspect_verify_document_defend.ipynb)
-- Ch. 4 — [Research Responsibility and Intellectual Ownership](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch04_research_responsibility_and_intellectual_ownership.ipynb)
+- Ch. 1 — [From Curiosity to a Research Problem](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch05_from_curiosity_to_a_research_problem.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final

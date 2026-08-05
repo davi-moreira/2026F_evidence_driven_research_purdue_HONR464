@@ -32,8 +32,8 @@ L = {
         "start": ("YOUR CURIOSITY", "a question that\nwill not leave\nyou alone"),
         "end": ("YOUR DECISION", "release, defended,\nor honestly withheld;\nthe next study opens"),
         "road": [
-            ("STUDIO 1", "begin the research,\ngovern the work"),
-            ("STUDIOS 2–4", "frame the question,\nground it, declare it"),
+            ("STUDIO 1", "begin with\nyour curiosity"),
+            ("STUDIOS 2–4", "govern, declare the\nquestion, ground it"),
             ("STUDIOS 5–6", "develop the pathway,\ngovern the data"),
             ("STUDIOS 7–8", "first analysis,\nstress-test it"),
             ("STUDIOS 9–10", "write and bound,\nready the artifact"),
@@ -51,8 +51,8 @@ L = {
         "start": ("SUA CURIOSIDADE", "uma pergunta que\nnão sai da\nsua cabeça"),
         "end": ("SUA DECISÃO", "publicar, defendida,\nou reter com honestidade;\no próximo estudo abre"),
         "road": [
-            ("ESTÚDIO 1", "começar a pesquisa,\ngovernar o trabalho"),
-            ("ESTÚDIOS 2–4", "formular a pergunta,\nfundamentar, declarar"),
+            ("ESTÚDIO 1", "comece com a\nsua curiosidade"),
+            ("ESTÚDIOS 2–4", "governar, declarar a\npergunta, fundamentar"),
             ("ESTÚDIOS 5–6", "desenvolver a trilha,\ngovernar os dados"),
             ("ESTÚDIOS 7–8", "primeira análise,\nteste de estresse"),
             ("ESTÚDIOS 9–10", "escrever e delimitar,\npreparar o artefato"),
@@ -70,8 +70,8 @@ L = {
         "start": ("TU CURIOSIDAD", "una pregunta que\nno te deja\nen paz"),
         "end": ("TU DECISIÓN", "publicar, defendida,\no retener con honestidad;\nel próximo estudio abre"),
         "road": [
-            ("ESTUDIO 1", "comenzar la investigación,\ngobernar el trabajo"),
-            ("ESTUDIOS 2–4", "formular la pregunta,\nfundamentar, declarar"),
+            ("ESTUDIO 1", "comienza con\ntu curiosidad"),
+            ("ESTUDIOS 2–4", "gobernar, declarar la\npregunta, fundamentar"),
             ("ESTUDIOS 5–6", "desarrollar la ruta,\ngobernar los datos"),
             ("ESTUDIOS 7–8", "primer análisis,\nprueba de estrés"),
             ("ESTUDIOS 9–10", "escribir y delimitar,\npreparar el artefacto"),

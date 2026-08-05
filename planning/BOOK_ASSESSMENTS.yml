@@ -119,46 +119,53 @@ stations:
           2: "every rail addressed in the form this studio requires"
       - id: govern-the-work.working-agreement-v0.station-specific
         applies_when: {}
-        text: "The milestone's own product is present and defensible: A responsibility statement naming what you will never delegate, your AI and data-handling rules, your opened AI Research Ledger, and an early red-flag screen of your project idea"
+        text: "The milestone's own product is present and defensible: Your working agreement (responsibility statement, working rules, opened AI Research Ledger, delegation map, and the red-flag screen of your chosen problem) and your question, formally declared: objective, units, outcomes and conditions, kind and reach, and a provisional claim boundary"
         levels:
           0: "the milestone's own product is missing"
           1: "present but would not survive a careful question"
           2: "present and defensible as stated"
+      - id: govern-the-work.working-agreement-v0.question-declared
+        applies_when: {}
+        text: "The declared question is fixed by its own words: kind and reach match the sentence, double-barrels are split, and the claim boundary states both the defensible and the forbidden sentence"
+        levels:
+          0: "no declaration, or a kind or reach the question's words do not fix"
+          1: "declared, but one term is loose enough that a stranger could not say what gets recorded or who the answer is about"
+          2: "declared so a stranger could restate unit, record, and audience, with both boundary sentences present"
   - station: frame-the-inquiry
-    checkpoint: question-declared-v0
+    checkpoint: curiosity-committed-v0
     scoring: {aggregate: sum, comparable_across_routes: true}
     criteria:
-      - id: frame-the-inquiry.question-declared-v0.artifact-complete
+      - id: frame-the-inquiry.curiosity-committed-v0.artifact-complete
         applies_when: {}
         text: "The milestone artifact exists in full, specific to your own project"
         levels:
           0: "absent, or generic text that would fit any project"
           1: "present but incomplete, or specific in some parts and generic in others"
           2: "complete and unmistakably about your project"
-      - id: frame-the-inquiry.question-declared-v0.version-and-reason
+      - id: frame-the-inquiry.curiosity-committed-v0.version-and-reason
         applies_when: {}
         text: "The milestone is written as a dated, numbered version with its reason"
         levels:
           0: "no version, or a version with no reason given"
           1: "versioned, but the reason is decorative rather than an account of what changed"
           2: "versioned with a reason a reader could use to reconstruct your thinking"
-      - id: frame-the-inquiry.question-declared-v0.decision-owned
+      - id: frame-the-inquiry.curiosity-committed-v0.decision-owned
         applies_when: {}
         text: "Every judgment in the artifact is defended by you, not asserted by a tool"
         levels:
           0: "conclusions appear with no reasoning, or reproduce a tool's wording"
           1: "reasoning present but thin where the decision was hardest"
           2: "each judgment carries a reason you could defend under questioning"
-      - id: frame-the-inquiry.question-declared-v0.rails-carried
+      - id: frame-the-inquiry.curiosity-committed-v0.rails-carried
         applies_when: {}
         text: "The four rails are carried in the form this studio requires"
         levels:
           0: "one or more rails absent where this studio required them"
           1: "all rails present but one is nominal"
           2: "every rail addressed in the form this studio requires"
-      - id: frame-the-inquiry.question-declared-v0.station-specific
+      - id: frame-the-inquiry.curiosity-committed-v0.station-specific
         applies_when: {}
-        text: "The milestone's own product is present and defensible: An objective, your units, outcomes and conditions, your target and reach, and a provisional claim boundary"
+        text: "The milestone's own product is present and defensible: Your committed curiosity with its starting belief and revising evidence, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, and one chosen research problem, scored and red-teamed, with your expected answer on record"
         levels:
           0: "the milestone's own product is missing"
           1: "present but would not survive a careful question"

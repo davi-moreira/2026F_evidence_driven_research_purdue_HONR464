@@ -24,16 +24,16 @@
 schema_version: "1.0"
 
 stations:
-  - id: govern-the-work
+  - id: frame-the-inquiry
     purpose: >-
-      Begin with a curiosity you own, then decide how you and your tools
-      will work while nothing is yet at stake, so the rules exist when
-      the pressure arrives.
+      Start from the one thing AI cannot supply: a curiosity you own.
+      Commit it, stretch it with your tools, and choose the research
+      problem worth months of your work.
     opening_move: |
       Research starts with something that will not leave you alone: a
       pattern you keep noticing, a contradiction, a decision you want to
-      understand. Close every AI tool; this first move is yours. Write
-      four lines by hand.
+      understand. This first move is yours alone. Write four lines by
+      hand.
 
       1. One thing you genuinely want to understand, in one sentence.
       2. Why an answer would matter, and to whom.
@@ -41,178 +41,215 @@ stations:
          not a claim.
       4. One kind of evidence that could make you revise that belief.
 
-      No AI on this page: do not ask a tool to generate, improve, or rank
-      your curiosity. Keep what you wrote. Lesson 1 widens it into
-      candidate curiosities, and every rule this studio sets exists to
-      protect it.
+      Keep what you wrote. Lesson 1 shows why this page is the one thing
+      no tool can write for you, then helps you stretch it, with AI
+      welcome at the table, into the problem your project will chase.
     produces: >-
-      A responsibility statement naming what you will never delegate, your
-      AI and data-handling rules, your opened AI Research Ledger, and an
-      early red-flag screen of your project idea.
+      Your committed curiosity with its starting belief and the evidence
+      that would revise it, the brainstormed candidates with what you
+      kept and rejected and why, and one chosen research problem, scored
+      and red-teamed, with your expected answer on record.
+    steps:
+      - Copy your opening move's four lines as the artifact's version zero, dated.
+      - "Widen the curiosity: write two candidate directions yourself, then run the structured brainstorm and mark everything it introduced as NEW."
+      - Choose the research problem and score it honestly on importance, feasibility, and contribution, one sentence each.
+      - Write your expected answer and name one real person or role for whom a different answer would be genuinely surprising.
+      - "Keep the trail: candidates kept and rejected, each with its reason, and the NEW elements you adopted as your own."
+    rails:
+      ethics: Note now whether chasing this curiosity would require people, and flag it before anything is designed.
+      evidence: Your starting belief is a claim to check, not to defend; write it so evidence can move it.
+      ai: Brainstorm freely, and mark every AI stretch NEW; start a simple exchange log now, and Studio 2 turns it into your AI Research Ledger.
+      uncertainty: Write what would change your mind while nothing is yet at stake; that sentence is the seed of every later boundary.
+    revisit: >-
+      Studio 3's evidence map and Studio 4's diagnosis both send curiosity
+      back here. A revised curiosity is progress on the record, not a
+      restart.
+    milestone_title: "Your curiosity, committed"
+    milestone_reason: >-
+      Research begins with a jump no tool can make for you. Einstein
+      sketched discovery as a cycle: you start from experience, you leap
+      to an idea that could explain it, and you reason down to
+      predictions you can check. The leap has a name, abduction, and a
+      recent Google DeepMind position paper argues that today's AI cannot
+      make it: the tools have mastered patterns and derivations, but they
+      have only text about the world, not the experience the jump starts
+      from. The jump is yours. This first milestone puts it on the
+      record: the curiosity you committed by hand, the candidates you and
+      your tools stretched it into, and the one research problem you
+      chose to chase.
+    hands_forward: >-
+      Milestone 2 sets the rules that protect this curiosity, opens the
+      ledger that records every delegation, verifies your first AI
+      assistance, and closes the arc by declaring your formal research
+      question.
+    contributions:
+      curiosity-to-problem: >-
+        your committed curiosity, the brainstormed candidates with NEW
+        elements marked and kept or rejected with reasons, your chosen
+        research problem scored and red-teamed, and your expected answer
+    practice_kit:
+      worked_example: |
+        A reader's opening move, worked to a chosen problem.
+
+        **The four lines.** "I keep wondering whether eating out near
+        campus has really gotten more expensive faster than everything
+        else." · It matters to every student budgeting a semester, and
+        to the restaurants pricing for them. · Starting belief: "menu
+        prices outran overall inflation since 2019." · Revising
+        evidence: "price records showing menus tracked the overall
+        index."
+
+        **The stretch.** The brainstorm returned five directions; two
+        introduced NEW elements (delivery fees; a second town). The
+        reader kept the delivery-fee direction as a fallback, rejected
+        the second town (no access), and wrote both reasons down.
+
+        **The choice.** Chosen problem: how menu prices near campus
+        moved against overall prices, 2019 to 2025. Importance: every
+        budget feels it. Feasibility: archived menus plus a public
+        index. Contribution: nobody has looked at this campus. Expected
+        answer: menus outran the index; a flat result would surprise
+        the reader most.
+      faded_task: |
+        Here is the same kit half-finished for a different opening move:
+        "do students who exercise sleep better?" The four lines and the
+        brainstorm exist; the choice, the scores, and the expected
+        answer are blank. Finish them, and notice what feasibility does
+        to this one: it studies people, and Studio 2's red-flag screen
+        will ask you about that before any design exists.
+      starter: |
+        Copy this skeleton: your four lines, dated (version zero) · two
+        directions of your own · the brainstorm's candidates with NEW
+        marks · kept and rejected, with reasons · the chosen problem ·
+        three scores, one sentence each · your expected answer and who
+        would be surprised.
+      verification: |
+        The ownership test: read your chosen problem and ask whether you
+        would chase it if every AI tool disappeared tomorrow. If the
+        answer is no, the choice was the tool's, not yours; go back one
+        step. Then hand the problem sentence to someone who knows
+        nothing about it and ask what they think you would measure;
+        where they stall, your next revision lives.
+
+  - id: govern-the-work
+    purpose: >-
+      Set how you and your tools will work while the stakes are still
+      small, verify your first AI assistance, and close by declaring the
+      question your evidence will answer.
+    produces: >-
+      Your working agreement (a responsibility statement, your working
+      rules, your opened AI Research Ledger, your delegation map, and the
+      red-flag screen of your chosen problem) and your question, formally
+      declared: objective, units, outcomes and conditions, kind and
+      reach, and a provisional claim boundary.
     steps:
       - "Write your responsibility statement: the decisions that stay yours no matter how good the tool gets."
-      - "Write your AI working rules: what you will delegate, what you will always verify, and how you will record both."
-      - Open your AI Research Ledger and enter your first row, today, for any tool you have already used on this project.
-      - "Run the red-flag screen on your idea: is it answerable, is it yours to ask, and could you defend attempting it."
+      - "Write your working rules: what you will delegate, what you will always verify, and how you will record both."
+      - Open your AI Research Ledger and give its first rows to the exchanges you have already run, the Studio 1 brainstorm included.
+      - "Run the red-flag screen on your chosen problem: is it answerable, is it yours to ask, and could you defend attempting it."
+      - Declare your objective, your units, your outcome, and the conditions you are comparing or describing.
+      - Declare kind and reach, and write the words in your question that fix each one.
+      - "Write your provisional claim boundary: the sentence you hope to defend, and the sentence you will not be able to."
     rails:
-      ethics: State now what data you expect to touch, so the ethics studio has something to check against.
-      evidence: Decide where your project's files will live before you have any.
-      ai: This studio opens the ledger every other studio appends to.
-      uncertainty: Write what you currently believe about your question, so later revisions are visible as revisions.
+      ethics: The red-flag screen runs here, and a problem that studies people leaves this studio with that fact attached.
+      evidence: Nothing here is settled until Studio 3 checks it against what is already known.
+      ai: The ledger opens here and every earlier exchange gets its row; from now on, no delegation goes unrecorded.
+      uncertainty: A question with no recognizable answer cannot carry uncertainty; fix the question before you leave.
     revisit: >-
-      Any change in your tools, your data source, or your collaborators
-      sends you back here for a new version.
-    milestone_title: "Your working agreement"
+      Studio 3 almost always sends the question back here for a sharper
+      version, and any change in your tools, your data source, or your
+      collaborators reopens the agreement.
+    milestone_title: "Your rules and your question"
     milestone_reason: >-
-      These first two studios run in four beats: your human curiosity,
-      then your ledger and rules, then verified AI assistance, then a
-      formal research question. This studio owns the first two beats and
-      opens the third. Every studio after it asks you to delegate real
-      work to AI and stand behind the result under your own name; the
-      rules for that cannot be improvised under deadline pressure. This
-      first milestone writes them down: what stays yours, what gets
-      delegated, and how every delegation gets recorded and checked. Once
-      the ledger exists, AI joins, and its first job may be a brainstorm
-      that stretches your curiosity, under your rules. The rest of the
-      book leans on this agreement, and your final defense in Studio 12
-      reads it back to you.
+      Your curiosity is committed; this studio owns the arc's other three
+      beats. First the ledger and rules: every studio after this one asks
+      you to delegate real work to AI and stand behind the result under
+      your own name, and those rules cannot be improvised under deadline
+      pressure. Then the first verified AI assistance: one delegation on
+      your own problem, checked by a method outside the tool, logged as
+      the pattern every later exchange follows. And then the close: with
+      rules standing and assistance verified, you declare the formal
+      research question, because a project is only defensible if its
+      question fixes what would count as an answer. Every later milestone
+      appends to the ledger opened here, the claims of Studio 9 trace to
+      the words declared here, and your Studio 12 defense reads this
+      agreement back to you.
     hands_forward: >-
-      Milestone 2 takes the curiosity that survived your red-flag screen,
-      stretched by whatever brainstorming you licensed, and turns it into
-      the arc's fourth beat: a formal question whose answer you could
-      recognize.
+      Milestone 3 holds the declared question up against what is already
+      known, and it will usually send back a sharper version.
     contributions:
       ai-arm-not-brain: >-
-        your opened AI Research Ledger, three genuine curiosities, and one
-        first AI exchange already logged and verified
+        your opened AI Research Ledger with its first verified exchange,
+        run on your own problem's key fact
       research-director: >-
-        your delegation map: the road's tasks sorted into safe to delegate,
-        delegate then verify, and never delegate
+        your delegation map: the road's tasks sorted into safe to
+        delegate, delegate then verify, and never delegate
       sdiivdd: >-
         one complete SDIIVDD run on a checkable claim, with the
         verification you ran and what it caught
       responsibility-ownership: >-
         your ownership statement, your never-delegate list, and a first
         draft of your AI-use disclosure
+      question-kinds: >-
+        your lead question placed by kind and reach, double-barrels
+        split, with its comparison world written out if the question is
+        causal: the arc's fourth beat, closed
     practice_kit:
       worked_example: |
-        A reader chasing the restaurant-prices curiosity from Lesson 1
-        wrote this working agreement.
+        The restaurant-prices reader's working agreement, then the
+        declaration it protects.
 
         **Responsibility statement (excerpt).** "I decide which price
         measure fits what households pay, which base year anchors the
         comparison, and what the final claim says. No tool signs for me."
 
         **Working rules.** Delegate freely: locating candidate series,
-        drafting summaries. Delegate then verify: any number, any
-        citation, any code. Never delegate: the measure choice, the base
-        year, the claim and its uncertainty.
+        drafting summaries, brainstorming directions. Delegate then
+        verify: any number, any citation, any code. Never delegate: the
+        measure choice, the base year, the claim and its uncertainty.
 
-        **First ledger row.** Task: find candidate price-index sources ·
-        tool: chat assistant · prompt: saved · output: three candidates ·
-        decision: kept the statistical agency's series · verification:
-        opened the agency's table and read both values · remaining
-        concern: menu prices near campus may not track the national
-        basket · responsible researcher: the reader's own name.
+        **First ledger rows.** Row one is the Studio 1 brainstorm,
+        logged after the fact: task, tool, kept and rejected, and the
+        NEW elements adopted. Row two is the first verified exchange:
+        find candidate price-index sources · chat assistant · three
+        candidates · kept the statistical agency's series · opened the
+        agency's table and read both values · concern: campus menus may
+        not track the national basket.
 
-        **Red-flag screen.** Answerable with public data; studies prices,
-        not people; defensible to attempt.
+        **Red-flag screen.** Answerable with public data; studies
+        prices, not people; defensible to attempt.
+
+        **The declaration.** Objective: describe how much more eating
+        out near campus costs than in 2019, relative to overall prices.
+        Units: menu items retrievable for both years. Outcome: listed
+        price. Conditions: 2019 versus 2025. Kind: descriptive ("how
+        much more," not "what caused it"). Reach: the data at hand.
+        Boundary: on this panel, prices rose faster than the index;
+        cannot defend the group claim or any cause.
       faded_task: |
-        Here is the same agreement half-finished for a different
-        curiosity: "do students who exercise sleep better?" The
-        responsibility statement and the first ledger row are done; the
-        never-delegate list and the red-flag screen are blank. Finish
-        both. The screen should catch what the finished parts missed:
-        this curiosity studies people. Write what that changes.
+        The exercise-and-sleep reader's agreement is half done: the
+        responsibility statement and first ledger rows exist; the
+        never-delegate list, the red-flag screen, and the whole
+        declaration are blank. Finish them. The screen should catch what
+        the finished parts missed: this problem studies people. Then
+        declare anyway, honestly: kind and reach as the words fix them,
+        and the boundary sentence the reach will not let you say.
       starter: |
-        Copy this skeleton for your own agreement and fill it top to
-        bottom: a responsibility statement (two to four sentences) · your
-        working rules (three lists: delegate freely, delegate then
-        verify, never delegate) · ledger row one (all eight fields) ·
-        the red-flag screen (answerable? yours to ask? defensible to
-        attempt?).
+        Copy this skeleton top to bottom: responsibility statement (two
+        to four sentences) · working rules (three lists) · ledger rows
+        for every exchange so far (all eight fields) · red-flag screen
+        (answerable? yours to ask? defensible?) · objective · units ·
+        outcome · conditions · kind, with its fixing words · reach, with
+        its fixing words · the sentence you hope to defend · the
+        sentence you will not be able to defend.
       verification: |
-        Read your agreement against Lesson 2's delegation map: every
-        starred never-delegate line there must appear in your rules here.
-        Then run one check from the Verification Guide now: hand your
-        responsibility statement to a peer or an AI reviewer and ask what
-        it PERMITS. If their reading licenses something you meant to
-        forbid, the sentence is not finished. The last decision is yours.
-
-  - id: frame-the-inquiry
-    purpose: >-
-      Turn a curiosity into a question whose answer you could recognize, and
-      say what kind of answer it would be.
-    produces: >-
-      An objective, your units, outcomes and conditions, your target and
-      reach, and a provisional claim boundary.
-    steps:
-      - State your objective in one sentence a stranger could repeat back.
-      - Name your units, your outcome, and the conditions you are comparing or describing.
-      - Declare kind and reach, and write the words in your question that fix each one.
-      - "Write your provisional claim boundary: the sentence you hope to defend, and the sentence you will not be able to."
-    rails:
-      ethics: Note whether answering this question requires people, and flag it now.
-      evidence: Nothing here is settled until Studio 3 checks it against what is already known.
-      ai: If AI helped shape the question, the ledger records what you kept and what you rejected.
-      uncertainty: A question with no recognizable answer cannot carry uncertainty; fix the question first.
-    revisit: >-
-      Studio 3 almost always sends you back here. That is the design, not
-      a setback.
-    milestone_title: "Your question, declared"
-    milestone_reason: >-
-      The four-beat arc that began with your curiosity closes here: the
-      curiosity you committed, governed, and stretched becomes a formal
-      research question. A research project is only defensible if its
-      question fixes what would count as an answer, and this milestone is
-      where the fixing happens:
-      you declare your objective, your units and outcome, your kind and
-      reach, and the boundary of the claim you hope to make. Everything
-      that follows revises this declaration rather than starting over. The
-      contract in Studio 4, the pathway in Studio 5, and the claims in
-      Studio 9 all trace back to the words you commit here.
-    hands_forward: >-
-      Milestone 3 holds this declaration up against what is already known,
-      and it will usually send back a sharper version.
-    contributions:
-      curiosity-to-problem: >-
-        your chosen research problem, scored on importance, feasibility,
-        and contribution, red-teamed, with your expected answer on record
-      question-kinds: >-
-        your lead question placed by kind and reach, double-barrels split,
-        with its comparison world written out if the question is causal
-    practice_kit:
-      worked_example: |
-        The restaurant-prices curiosity, declared.
-
-        **Objective.** Describe how much more eating out near campus
-        costs than it did in 2019, relative to overall prices.
-        **Units.** Menu items at restaurants within walking distance.
-        **Outcome.** The listed price. **Conditions.** 2019 versus 2025.
-        **Kind.** Descriptive: the words ask "how much more," not "what
-        caused it." **Reach.** The data at hand: the menu items
-        retrievable for both years, and only those. **Claim boundary.**
-        Hope to defend: on this panel of menus, prices rose faster than
-        the overall index. Cannot defend: that nearby restaurants as a
-        group did (that claim needs a sampling story this design does
-        not have), and not that the wage increase caused anything.
-      faded_task: |
-        The exercise-and-sleep curiosity is half declared: objective,
-        units, and outcome are done. Kind, reach, and both boundary
-        sentences are blank, and it is tempting to write "causal."
-        Read the question's words, place it honestly, and write the
-        sentence its declared kind will not let you say.
-      starter: |
-        Your declaration, one line per field: objective · units ·
-        outcome · conditions · kind (with the words that fix it) · reach
-        (with the words that fix it) · the sentence you hope to defend ·
-        the sentence you will not be able to defend.
-      verification: |
-        Run the stranger test from Lesson 5: hand the single question
-        sentence to someone who knows nothing about your project and ask
-        them to tell you, from that sentence alone, what one unit is,
-        what you would record, and who the answer is about. Where they
-        stall, the missing term is your next revision.
+        Two checks. First, the agreement against Lesson 3's delegation
+        map: every starred never-delegate line there appears in your
+        rules here. Second, the stranger test on the declared question:
+        hand the single sentence to someone who knows nothing about your
+        project and ask what one unit is, what you would record, and who
+        the answer is about. Where they stall, revise before you
+        version.
 
   - id: ground-in-evidence
     purpose: >-

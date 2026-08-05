@@ -10,10 +10,10 @@ advances.
 
 [![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch05_from_curiosity_to_a_research_problem.ipynb){target="_blank"}
 
-> **The research decision.** Out of everything your curiosity could become, you commit
-> to one research problem. You state it as a single answerable question that names its
-> units, its outcome, and the population it speaks for, and you defend it as
-> important, feasible, and genuinely new.
+> **The research decision.** Research starts with a jump no tool can make for you:
+> a curiosity you own. This first lesson of the book commits yours, stretches it
+> with every tool at the table, and lands on the one research problem that gets
+> months of your work — defended as important, feasible, and genuinely new.
 
 ## Why this decision matters
 
@@ -33,7 +33,43 @@ straighten it.
 
 ## The concept
 
-Turning curiosity into a problem is a funnel with four stops. Each stop throws
+Before the funnel, the jump. Albert Einstein once sketched research as a cycle:
+you start from experience, you leap to an idea that could explain it, and then
+you reason back down to predictions you can check. The leap upward has a name.
+**Abduction** is the act of inventing a new explanation for a surprising
+observation, a cause nobody handed you. Example: sales at a shop dip every third
+week, and you guess that a payday cycle is behind it, a hypothesis that appears
+in no dataset. Here is that cycle in one picture:
+
+```{mermaid}
+flowchart LR
+  E["Experience<br/>what you observe"] -- "the jump: a new idea<br/>(abduction, yours to make)" --> A["Ideas and assumptions<br/>what could explain it"]
+  A -- "derivation<br/>(delegable, then checked)" --> P["Predictions"]
+  P -- "verification against evidence<br/>(delegable, then checked)" --> E
+```
+
+Why open a book about AI-driven research here? Because the jump is the one move
+today's AI cannot make for you. A 2026 position paper from Google DeepMind, *LLMs
+can't jump* (Zahavy 2026), argues that current AI has mastered finding patterns
+in data and is fast conquering step-by-step derivation, but cannot yet make the
+jump, because it has no experience of the world to leap from, only text about
+the world. Its case study is Einstein himself: when he began building general
+relativity, no pile of failed measurements was pushing him — Newton's physics
+fit the data almost perfectly. The new idea came from imagining what falling
+feels like, not from compressing observations. Treat that as an argued position,
+not a settled boundary; position papers exist to be tested, and tools keep
+improving. But it is why this book starts with YOUR curiosity: whatever the
+tools conquer next, you answer for the claim, so the jump is yours to make and
+to defend.
+
+And the jump is not a solo performance after its first line is written. Once
+your curiosity is on the page, AI is welcome at the table: it can stretch the
+curiosity, propose directions you had not named, and argue against your
+favorite. What it cannot do is care. You choose what you would chase even if
+every tool disappeared tomorrow.
+
+With the jump committed, the rest of this lesson is the reasoning DOWN:
+turning curiosity into a problem is a funnel with four stops. Each stop throws
 away vagueness the stop above it still allowed [@booth2024craft].
 
 - **Curiosity**: a felt interest with no edges yet. Example: *"why do some small
@@ -158,16 +194,15 @@ cannot, you treat it as **confident fabrication** and drop it.
 ## It is your turn
 
 <!-- station-pointer:begin -->
-> **You are working inside [Studio 2: Frame the inquiry](../studios/studio02-frame-the-inquiry.qmd).**
+> **You are working inside [Studio 1: Begin with your curiosity](../studios/studio01-frame-the-inquiry.qmd).**
 > Keep what you write here; the studio's milestone chapter is
 > where it joins the other lessons' pieces into one artifact
 > you can defend.
 <!-- station-pointer:end -->
 
-*Your three curiosities — committed by hand, governed by your ledger, and
-stretched by whatever brainstorming you licensed — are still only
-curiosities. This step opens the arc's last beat: turning one of them into
-something evidence can actually answer.*
+*The studio page's opening move put your curiosity on paper. This practice
+stretches it, with AI welcome at the table, and lands on the research problem
+your project will chase.*
 
 The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
 
@@ -185,7 +220,30 @@ your choice. It cannot make the choice, because only you carry the reasons you w
 have to give when someone asks why this problem and not another.
 :::
 
-1. Take the strongest of your three and walk it down the funnel in writing: curiosity,
+1. Start from your opening move's four lines, then stretch before you narrow.
+   Write two candidate directions yourself. Then brainstorm with your AI:
+
+   **Stretch your curiosity (a structured brainstorm; you choose).**
+
+   ```text
+   Here is my curiosity: [your one sentence]. Act as a divergence partner,
+   not as the author of my research question. Ask me five questions that
+   stretch it: nearby populations I have not named, outcomes I could watch
+   instead, a sharper version of the same wonder, and what answer would
+   genuinely surprise me. Label anything you introduce that was absent
+   from my sentence as NEW. Do not rank, do not choose for me, do not
+   claim anything is novel, and do not cite sources in this round.
+   ```
+
+   After running, verify: answer the five questions in your own words,
+   circle every NEW element, and reject any stretch that silently changes
+   who, what, or why. The curiosity you carry forward must be one you would
+   chase without the tool; this counters **sycophantic agreement**, where
+   the tool inflates whatever you brought. Keep a simple log of this
+   exchange (task, tool, what you kept, how you checked); the next studio
+   opens your AI Research Ledger, and this log becomes its first row.
+
+2. Take the strongest curiosity you now hold and walk it down the funnel in writing: curiosity,
    topic, research problem, answerable question. One line per stop, so you can see
    where the vagueness leaves.
 2. Under the question, name its three carried terms out loud: what one unit is, exactly
@@ -241,10 +299,17 @@ have to give when someone asks why this problem and not another.
    *After running, verify:* keep only the objections that survive your own reasoning.
    This counters **sycophantic agreement**, where a tool praises your idea because you
    proposed it.
-7. Log it in your AI Research Ledger, and verify your question with a named method from
+7. Add it to the simple exchange log you started (the next studio's ledger inherits every line), and verify your question with a named method from
    the [Verification Guide](../verification-guide.qmd). The fitting method here is peer
    reasoning: hand the single sentence to someone who knows nothing about your project
    and ask them to tell you, from that sentence alone, what one unit is, what you would
    record, and who the answer is about. If they stall, the missing term is your next
    revision. An AI reviewer may run the check with you; the decision to accept or
    reject stays yours.
+
+<!-- studio-continue:begin -->
+> **Milestone next.** This was the last lesson of Studio 1.
+> [Milestone 1: Your curiosity, committed](../studios/milestone01-frame-the-inquiry.qmd#milestone) is where
+> the lessons' pieces become the studio's versioned artifact.
+> Produce it before you move on.
+<!-- studio-continue:end -->

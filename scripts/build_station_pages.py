@@ -48,6 +48,11 @@ SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HON
 COLAB = ("https://colab.research.google.com/github/davi-moreira/"
          "2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/studios")
 
+# D45: the S1/S2 flip moved studio ranks, and rank lives in the page
+# filenames — these stations' pages once lived at other rank-numbered URLs.
+# Openers and milestone chapters emit aliases for every legacy rank.
+LEGACY_RANKS = {"govern-the-work": [1], "frame-the-inquiry": [2]}
+
 RAILS = {
     "ethics": "Ethics, permissions, and data exposure",
     "evidence": "Evidence, provenance, and reproducibility",
@@ -163,10 +168,12 @@ def opener_page(st: dict, spec: dict, lessons: list[dict], n: int) -> str:
     acq_block = (f"## Before you can work this studio\n\n"
                  f"{spec['acquisition_note']}\n\n"
                  if spec.get("acquisition_note") else "")
+    legacy = "".join(f"\n  - /studios/studio{r:02d}-{slug}.html"
+                     for r in LEGACY_RANKS.get(slug, []))
     return f"""---
 title: "Studio {n}: {st['title']}"
 aliases:
-  - /stations/station{n:02d}-{slug}.html
+  - /stations/station{n:02d}-{slug}.html{legacy}
 ---
 
 {banner("studio")}
@@ -200,7 +207,10 @@ def milestone_page(st: dict, spec: dict, lessons: list[dict], n: int,
     rubric_block = rubric_md(rubric)
     genre_block = (f"## Choosing your format\n\n{spec['genre_guide']}\n\n"
                    if spec.get("genre_guide") else "")
-    return f"""# Milestone {n}: {spec['milestone_title']} {{.unnumbered}}
+    legacy = "".join(f"\n  - /studios/milestone{r:02d}-{slug}.html"
+                     for r in LEGACY_RANKS.get(slug, []))
+    front = (f"---\naliases:{legacy}\n---\n\n" if legacy else "")
+    return f"""{front}# Milestone {n}: {spec['milestone_title']} {{.unnumbered}}
 
 {banner("milestone chapter")}
 [![](https://colab.research.google.com/assets/colab-badge.svg){{fig-alt="Open In Colab"}}]({COLAB}/studio{n:02d}_{slug.replace('-', '_')}.ipynb){{target="_blank"}}

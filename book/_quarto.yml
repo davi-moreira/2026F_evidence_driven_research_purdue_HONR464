@@ -16,18 +16,18 @@ book:
     - index.qmd
     - author.qmd
     - part1-research-with-ai/part1-overview.qmd
-    - part: studios/studio01-govern-the-work.qmd
+    - part: studios/studio01-frame-the-inquiry.qmd
+      chapters:
+        - part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.qmd
+        - studios/milestone01-frame-the-inquiry.qmd
+    - part: studios/studio02-govern-the-work.qmd
       chapters:
         - part1-research-with-ai/01-ai-is-your-arm-not-your-brain.qmd
         - part1-research-with-ai/02-the-student-as-research-director.qmd
         - part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.qmd
         - part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.qmd
-        - studios/milestone01-govern-the-work.qmd
-    - part: studios/studio02-frame-the-inquiry.qmd
-      chapters:
-        - part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.qmd
         - part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.qmd
-        - studios/milestone02-frame-the-inquiry.qmd
+        - studios/milestone02-govern-the-work.qmd
     - part: studios/studio03-ground-in-evidence.qmd
       chapters:
         - part2-curiosity-to-design/07-research-builds-on-research.qmd

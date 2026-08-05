@@ -62,32 +62,12 @@ short: **Ask, then Verify, then Document.** Use the tool ambitiously, confirm ev
 fact and number yourself, then log the tool, the task, and the check in a record that
 travels with your work [@nist2024genai].
 
-Why draw the line exactly there? A short answer comes from the history of discovery.
-Albert Einstein once sketched research as a cycle: you start from experience, you leap
-to an idea that could explain it, and then you reason back down to predictions you can
-check. The leap upward has a name. **Abduction** is the act of inventing a new
-explanation for a surprising observation, a cause nobody handed you. Example: sales at
-a shop dip every third week, and you guess that a payday cycle is behind it, a
-hypothesis that appears in no dataset. Here is that cycle in one picture:
-
-```{mermaid}
-flowchart LR
-  E["Experience<br/>what you observe"] -- "the jump: a new idea<br/>(abduction, yours to make)" --> A["Ideas and assumptions<br/>what could explain it"]
-  A -- "derivation<br/>(delegable, then checked)" --> P["Predictions"]
-  P -- "verification against evidence<br/>(delegable, then checked)" --> E
-```
-
-Recent AI research draws the same line. A 2026 position paper from Google DeepMind,
-*LLMs can't jump* (Zahavy 2026), argues that today's AI has mastered finding patterns
-in data and is fast conquering step-by-step derivation, but cannot yet make the jump,
-because it has no experience of the world to leap from, only text about the world. Its
-case study is Einstein himself. When he began building general relativity, no pile of
-failed measurements was pushing him; Newton's physics fit the data almost perfectly.
-The new idea came from imagining what falling feels like, not from compressing
-observations. Treat that as an argued position, not a settled boundary. Position papers
-exist to be tested, and tools keep improving. This book keeps the question, the claim,
-and the judgment on your side of the desk for a reason that holds either way: you
-answer for the claim, so the jump is yours to make and to defend.
+Why draw the line exactly there? Lesson 1 opened this book with the answer:
+Einstein's jump, the leap from experience to a new idea, is the one move the
+DeepMind position paper argues today's AI cannot make for you. You made your
+jump there and chose a problem. This chapter owns everything after the jump:
+the reaching, fetching, drafting, and computing that CAN be delegated, and the
+checking that turns what comes back into evidence.
 
 ## A worked example
 
@@ -151,15 +131,16 @@ the only reliable filter is opening the document.
 ## It is your turn
 
 <!-- station-pointer:begin -->
-> **You are working inside [Studio 1: Begin the research and govern the work](../studios/studio01-govern-the-work.qmd).**
+> **You are working inside [Studio 2: Govern the work and declare your question](../studios/studio02-govern-the-work.qmd).**
 > Keep what you write here; the studio's milestone chapter is
 > where it joins the other lessons' pieces into one artifact
 > you can defend.
 <!-- station-pointer:end -->
 
-*Your project is already started: the studio's opening move put a curiosity on
-the page. There are no data yet, only the curiosity and the two things
-everything else will rest on: the record you keep and the habit of checking.*
+*You arrive from Studio 1 with a chosen research problem. There are no data
+yet, only the problem and the two things everything else will rest on: the
+record you keep and the habit of checking. This practice opens the record and
+runs your first verified delegation, on your own problem.*
 
 The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
 
@@ -184,38 +165,12 @@ answering for the choice, is the researcher's job.
    eight columns: task delegated, tool used, prompt, output summary, decision,
    verification method, remaining concern, and responsible researcher. Put your own
    name in that last column now, and leave it there for the rest of the book.
-2. Widen your opening move into three genuine curiosities from your own life,
-   work, or field. One sentence each. Not three topics you think sound
-   impressive: three things you actually wonder about and would like a real
-   answer to. Keep the curiosity you committed on the studio page among them,
-   or let a better one replace it and say why. And now that your ledger
-   exists, brainstorming is a legal delegation: if a curiosity feels thin,
-   this is the sanctioned way to stretch it.
-
-   *Use the stretch when your curiosity needs it; the milestone does not
-   require it.*
-
-   **Stretch a curiosity (a structured brainstorm; you choose).**
-
-   ```text
-   Here is my curiosity: [your one sentence]. Act as a divergence partner,
-   not as the author of my research question. Ask me five questions that
-   stretch it: nearby populations I have not named, outcomes I could watch
-   instead, a sharper version of the same wonder, and what answer would
-   genuinely surprise me. Label anything you introduce that was absent
-   from my sentence as NEW. Do not rank, do not choose for me, do not
-   claim anything is novel, and do not cite sources in this round.
-   ```
-
-   After running, verify: answer the five questions in your own words,
-   circle every NEW element, and reject any stretch that silently changes
-   who, what, or why; keep a changed boundary only when you can write the
-   reason yourself. The curiosity you carry forward must be one you would
-   chase without the tool; this counters **sycophantic agreement**, where
-   the tool inflates whatever you brought. Log the exchange in your AI
-   Research Ledger.
-3. Under each one, write the single fact you would need to know before you could take
-   that curiosity seriously as a project.
+2. Open your ledger's first row backward: the Studio 1 brainstorm you already
+   ran. Task, tool, what you kept and rejected, and how you checked it. A
+   delegation that happened before the ledger existed still belongs to the
+   record; that is what the record is for.
+3. Under your chosen problem, write the single fact you would need to know
+   before you could take it further.
 
    *Optional depth. The milestone needs only this lesson's core cycle; run this second angle when you want more practice.*
 
@@ -231,8 +186,8 @@ answering for the choice, is the researcher's job.
    still omit the choice that governs your answer. Compare it against a checklist you
    wrote first, and confirm the governing choice is really the one the comparison rests
    on.
-4. Pick the curiosity you cannot stop thinking about, and ask an AI tool for three
-   published sources that speak to that fact. Before you read the reply, write down
+4. Take the fact you just named, and ask an AI tool for three published
+   sources that speak to it. Before you read the reply, write down
    what you expect it to say.
 
    **Locate candidate sources (you verify each one).**

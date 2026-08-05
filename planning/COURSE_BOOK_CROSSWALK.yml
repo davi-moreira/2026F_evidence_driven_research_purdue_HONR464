@@ -58,26 +58,27 @@ rows:
   - milestone: M0
     nb: nb01
     assignments:
-      - {lesson: ai-arm-not-brain,         requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
-      - {lesson: research-director,        requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
-      - {lesson: sdiivdd,                  requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
-      - {lesson: responsibility-ownership, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: curiosity-to-problem, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
     station_events:
-      - {station: govern-the-work, event: checkpoint, checkpoint: working-agreement-v0, at: milestone-submission}
+      - {station: frame-the-inquiry, event: checkpoint, checkpoint: curiosity-committed-v0, at: milestone-submission}
     book_milestones:
-      - {station: govern-the-work, relationship: checkpoint, version_label: "version 1",
-         contribution_refs: [ai-arm-not-brain, research-director, sdiivdd, responsibility-ownership]}
+      - {station: frame-the-inquiry, relationship: checkpoint, version_label: "version 1",
+         contribution_refs: [curiosity-to-problem]}
 
   - milestone: M1
     nb: nb02
     assignments:
-      - {lesson: curiosity-to-problem, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
-      - {lesson: question-kinds,       requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: ai-arm-not-brain,         requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: research-director,        requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: sdiivdd,                  requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: responsibility-ownership, requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
+      - {lesson: question-kinds,           requirement: required, purpose: first-read, primary_lab: true, home_anchor: true}
     station_events:
-      - {station: frame-the-inquiry, event: checkpoint, checkpoint: question-declared-v0, at: milestone-submission}
+      - {station: govern-the-work, event: checkpoint, checkpoint: working-agreement-v0, at: milestone-submission}
+      - {station: govern-the-work, event: checkpoint, checkpoint: question-declared-v0, at: milestone-submission}
     book_milestones:
-      - {station: frame-the-inquiry, relationship: checkpoint, version_label: "version 1",
-         contribution_refs: [curiosity-to-problem, question-kinds]}
+      - {station: govern-the-work, relationship: checkpoint, version_label: "version 1",
+         contribution_refs: [ai-arm-not-brain, research-director, sdiivdd, responsibility-ownership, question-kinds]}
 
   - milestone: M2
     nb: nb03

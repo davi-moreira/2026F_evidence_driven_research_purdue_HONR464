@@ -24,7 +24,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M1
     {
         "meeting": 1, "date": "2026-08-24", "day": "Mon", "modality": "in-person",
-        "unit": "Week 1 — Studio 1: Begin the research and govern the work",
+        "unit": "Week 1 — Studio 1: Begin with your curiosity",
         "title": "Your arm and your research assistant, not your brain: the course promise and a live citation-catch",
         "driving_question": "What does research even mean when an AI can generate the code and the prose for you?",
         "secondary_questions": "What will you build this semester? Where is the line between AI assistance and intellectual substitution? What does 'AI may propose, the researcher must verify' demand of you on day one?",
@@ -58,7 +58,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M2
     {
         "meeting": 2, "date": "2026-08-26", "day": "Wed", "modality": "in-person",
-        "unit": "Week 1 — Studio 1: Begin the research and govern the work",
+        "unit": "Week 1 — Studio 1: Begin with your curiosity",
         "title": "Automation bias, false confidence, and the first full Ask -> Verify -> Document cycle",
         "driving_question": "Why do smart people trust a wrong machine, and what discipline keeps you from joining them?",
         "secondary_questions": "What is automation bias? How does fluent AI prose manufacture false confidence and the illusion of understanding? Which research decisions must stay human? What are the seven moves of Specify -> Delegate -> Interrogate -> Inspect -> Verify -> Document -> Defend?",
@@ -92,7 +92,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M3
     {
         "meeting": 3, "date": "2026-08-28", "day": "Fri", "modality": "in-person",
-        "unit": "Week 1 — Studio 1: Begin the research and govern the work",
+        "unit": "Week 1 — Studio 1: Begin with your curiosity",
         "title": "Studio Friday — AI baselines and first curiosities: M0 due, M1 kickoff",
         "driving_question": "Can you name what you assume about AI, pitch a curiosity in 30 seconds, and leave with a plan to map a research opportunity?",
         "secondary_questions": "What did your baseline reveal about where you over-trust AI? What does the M1 brief ask for (a research opportunity landscape), and how is it graded?",
@@ -126,7 +126,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M4
     {
         "meeting": 4, "date": "2026-08-31", "day": "Mon", "modality": "in-person",
-        "unit": "Week 2 — Studio 2: Frame the inquiry",
+        "unit": "Week 2 — Studio 2: Govern the work and declare your question",
         "title": "From curiosity to a research problem: the funnel, and what makes a problem worth doing",
         "driving_question": "How does a curiosity become a research problem someone would fund a semester of your life to study?",
         "secondary_questions": "What separates a topic from a research problem from a question? What do importance, feasibility, and contribution each demand? What are units of analysis, target populations, and outcomes?",
@@ -160,7 +160,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M5
     {
         "meeting": 5, "date": "2026-09-02", "day": "Wed", "modality": "in-person",
-        "unit": "Week 2 — Studio 2: Frame the inquiry",
+        "unit": "Week 2 — Studio 2: Govern the work and declare your question",
         "title": "The inquiry compass: descriptive, predictive, or causal — kind x reach",
         "driving_question": "What KIND of answer does your question ask for, and how far is it trying to reach?",
         "secondary_questions": "How do descriptive, predictive, and causal questions differ? Why is prediction a descriptive question about unseen cases, not a causal one? What goes wrong when a single question tries to do two jobs at once?",
@@ -194,7 +194,7 @@ MEETINGS_P1 = [
     # ------------------------------------------------------------------ M6
     {
         "meeting": 6, "date": "2026-09-04", "day": "Fri", "modality": "in-person",
-        "unit": "Week 2 — Studio 2: Frame the inquiry",
+        "unit": "Week 2 — Studio 2: Govern the work and declare your question",
         "title": "Studio Friday — Opportunity landscapes: M1 due, M2 kickoff",
         "driving_question": "Does your research opportunity landscape hold up — real problems, honest feasibility, a clear compass position — and can you pitch the one you will pursue?",
         "secondary_questions": "Which of your candidate problems is most worth doing? What does the M2 brief ask for (verified evidence and a contribution map), and how is it graded?",

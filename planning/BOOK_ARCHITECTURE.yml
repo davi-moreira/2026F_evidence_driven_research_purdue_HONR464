@@ -103,10 +103,10 @@ stations:
   # Research Contract events a reader can reach (revisit is always allowed —
   # versioned, never irreversible, D35 §3). `workbook: pending` flips to a
   # file path as Phase 3/4 lands each station workbook.
-  - {id: govern-the-work,         rank: 1,  title: "Begin the research and govern the work",
-     checkpoints: [{id: working-agreement-v0}], workbook: pending}
-  - {id: frame-the-inquiry,       rank: 2,  title: "Frame the inquiry",
-     checkpoints: [{id: question-declared-v0}], workbook: pending}
+  - {id: frame-the-inquiry,       rank: 1,  title: "Begin with your curiosity",
+     checkpoints: [{id: curiosity-committed-v0}], workbook: pending}
+  - {id: govern-the-work,         rank: 2,  title: "Govern the work and declare your question",
+     checkpoints: [{id: working-agreement-v0}, {id: question-declared-v0}], workbook: pending}
   - {id: ground-in-evidence,      rank: 3,  title: "Ground it in verified evidence",
      checkpoints: [{id: evidence-base-v0}], workbook: pending}
   - {id: declare-and-diagnose,    rank: 4,  title: "Declare and diagnose provisionally",
@@ -159,13 +159,13 @@ lessons:
      url_path: part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html}
 
   # ---- Part II · Stations frame-the-inquiry → declare-and-diagnose --------
-  - {id: curiosity-to-problem,      state: active, rank: 50,  part: part2,
+  - {id: curiosity-to-problem,      state: active, rank: 5,  part: part2,
      station: frame-the-inquiry, role: core,
      source: part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.qmd,
      companion: ch05_from_curiosity_to_a_research_problem.ipynb,
      url_path: part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html}
   - {id: question-kinds,            state: active, rank: 60,  part: part2,
-     station: frame-the-inquiry, role: core,
+     station: govern-the-work, role: core,
      source: part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.qmd,
      companion: ch06_descriptive_predictive_and_causal_questions.ipynb,
      url_path: part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html}
