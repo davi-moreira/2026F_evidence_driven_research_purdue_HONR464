@@ -169,8 +169,11 @@ A green, tidy plan is not a valid one. You check the dependencies, not the confi
 
 *Your project already has a research note and a reusable capsule. This step
 sets up the small AI team that runs your closing review — the studio's core
-practice. One well-run assistant playing the roles in turn is a legal team;
-the wiring discipline is the same, and none of it hands over your judgment.*
+practice. First state who chooses each next step: you, a fixed script, or an
+agent that plans and calls tools; never call a manually sequenced chat
+autonomous. One well-run assistant playing the roles in turn is a legal
+team; the wiring discipline is the same, and none of it hands over your
+judgment.*
 
 The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
 

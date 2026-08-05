@@ -707,6 +707,7 @@ stations:
       concede, or do-not-know for each.
     steps:
       - Write your venue contract using the guide above, then say what your claim must lose to fit that format.
+      - "Write a transformation memo from your Studio 9 note: what expands, what compresses, what moves, what becomes visual, and what becomes spoken."
       - "Build a content map before you build the artifact: where the claim, the evidence, the boundary, the uncertainty, and the disclosure will each live."
       - Build the artifact to its venue contract, keeping every load-bearing number, figure, and citation traceable to the claim-evidence table.
       - "Test it in its actual mode: scan the poster at gallery distance, time the talk aloud, advance the deck without narrating, or hand the manuscript to a cold reader."
@@ -810,7 +811,7 @@ stations:
       and your next-study agenda.
     steps:
       - "Check that nothing moved since your Studio 11 cold run: any change to the package — a number, a claim, the data, the code, the environment record, or the instructions a stranger would follow — makes that run stale. Repeat it before you release."
-      - "Run the closing review as a directed team: scoped loops (a writer, a skeptic, an auditor at minimum), wired so each role's input exists before it starts, escalation rules written first, one node kept human. A single well-run assistant playing the roles in turn is a legal team; record what you actually ran, never invented activity."
+      - "Run the closing review as a directed team: scoped loops (a writer, a skeptic, an auditor at minimum), wired so each role's input exists before it starts, escalation rules written first, one node kept human. Declare who chooses each next step — you, a fixed script, or an agent that plans and calls tools — and never call a manually sequenced chat autonomous. A single well-run assistant playing the roles in turn is a legal team; record what you actually ran, never invented activity."
       - "Run the release audit and mark each item clear, pending, or blocking: permissions, participant promises, disclosure, package-matches-cold-run, reproducibility, claim boundaries, and uncertainty."
       - "Make the release decision. A blocking item means withhold pending the named repair, written as this version's reason — not a euphemistic release."
       - "Assemble the dossier with a manifest: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history — each marked present, absent with reason, or not applicable."

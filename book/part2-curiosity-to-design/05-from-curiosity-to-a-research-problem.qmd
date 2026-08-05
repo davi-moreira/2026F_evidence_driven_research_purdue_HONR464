@@ -218,9 +218,11 @@ have to give when someone asks why this problem and not another.
    population, in a table. Do not add any topic I did not mention.
    ```
 
-   *After running, verify:* check each row against the curiosity you actually wrote.
-   This counters **silent scope change**, where the tool quietly answers a nearby
-   question and hands it back as yours.
+   *After running, verify:* check each row against the curiosity you actually
+   wrote, and mark every element the table introduced that your curiosity did
+   not contain. Keep or reject each marked element with a reason; that trail
+   is part of your declaration. This counters **silent scope change**, where
+   the tool quietly answers a nearby question and hands it back as yours.
 5. Under the question you kept, write your expected answer in one sentence, and name
    one real person or role for whom a different answer would be genuinely surprising.
    Keep this sentence; late in the book you will hold your evidence up against it.

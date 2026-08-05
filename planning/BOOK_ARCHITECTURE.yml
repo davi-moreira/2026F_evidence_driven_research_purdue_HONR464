@@ -121,7 +121,7 @@ stations:
      checkpoints: [{id: robustness-audit-v1}], workbook: pending}
   - {id: write-bound-disclose,    rank: 9,  title: "Write, bound, and disclose",
      checkpoints: [{id: bounded-claims-v1}], workbook: pending}
-  - {id: adapt-and-defend,        rank: 10, title: "Adapt and defend",
+  - {id: adapt-and-defend,        rank: 10, title: "Prepare to publish or present",
      checkpoints: [{id: defense-ready-v1}], workbook: pending}
   - {id: reproduce-and-package,   rank: 11, title: "Reproduce and package",
      checkpoints: [{id: package-v1}], workbook: pending}

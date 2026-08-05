@@ -290,5 +290,5 @@ rows:
     station_events:
       - {station: release-next-cycle, event: checkpoint, checkpoint: release-audit-v1, at: milestone-submission}
     book_milestones:
-      - {station: release-next-cycle, relationship: checkpoint, version_label: "version 1 — released artifact",
+      - {station: release-next-cycle, relationship: checkpoint, version_label: "version 1 — release decision and next-cycle record",
          contribution_refs: [managing-ai-agents, conflicting-agents, final-portfolio]}

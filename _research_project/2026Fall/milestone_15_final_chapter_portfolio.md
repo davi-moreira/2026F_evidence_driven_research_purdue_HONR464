@@ -2,7 +2,7 @@
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M15**.
-> This submission presents **Book Milestone 12 — Your release and next cycle** (version 1 — released artifact): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html#milestone).
+> This submission presents **Book Milestone 12 — Your release and next cycle** (version 1 — release decision and next-cycle record): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html#milestone).
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project
@@ -168,9 +168,11 @@ parts.
 > **A question that often comes up here:** *"My ledger has no override. Is that a
 > good sign?"* It is a warning sign, not a badge. A full-semester ledger with zero
 > escalations usually means AI was never used on anything that mattered, or a
-> boundary was crossed without anyone noticing. If you cannot name one real
-> override, that is a finding: go make the escalation your ledger is missing, and
-> log it, before you defend.
+> boundary was crossed without anyone noticing. Do not manufacture an override to
+> fill the gap — an invented escalation is worse than none. Instead, take one
+> load-bearing output you kept and show the independent check that earned its
+> place; if that check fails, you have found your real escalation, and you log
+> what actually happened.
 
 ### 3. The Evidence Defense (live)
 

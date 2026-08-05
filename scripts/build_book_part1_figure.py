@@ -36,8 +36,8 @@ L = {
             ("STUDIOS 2–4", "frame the question,\nground it, declare it"),
             ("STUDIOS 5–6", "develop the pathway,\ngovern the data"),
             ("STUDIOS 7–8", "first analysis,\nstress-test it"),
-            ("STUDIOS 9–10", "write and bound,\nadapt and defend"),
-            ("STUDIOS 11–12", "reproduce, package;\ndirect agents, release"),
+            ("STUDIOS 9–10", "write and bound,\nready the artifact"),
+            ("STUDIOS 11–12", "reproduce, package;\nagentic review, decide"),
         ],
         "rails_title": "Four rails cross every studio",
         "rails": [
@@ -55,8 +55,8 @@ L = {
             ("ESTÚDIOS 2–4", "formular a pergunta,\nfundamentar, declarar"),
             ("ESTÚDIOS 5–6", "desenvolver a trilha,\ngovernar os dados"),
             ("ESTÚDIOS 7–8", "primeira análise,\nteste de estresse"),
-            ("ESTÚDIOS 9–10", "escrever e delimitar,\nadaptar e defender"),
-            ("ESTÚDIOS 11–12", "reproduzir, empacotar;\ndirigir agentes, liberar"),
+            ("ESTÚDIOS 9–10", "escrever e delimitar,\npreparar o artefato"),
+            ("ESTÚDIOS 11–12", "reproduzir, empacotar;\nrevisão agêntica, decidir"),
         ],
         "rails_title": "Quatro trilhos cruzam todos os estúdios",
         "rails": [
@@ -74,8 +74,8 @@ L = {
             ("ESTUDIOS 2–4", "formular la pregunta,\nfundamentar, declarar"),
             ("ESTUDIOS 5–6", "desarrollar la ruta,\ngobernar los datos"),
             ("ESTUDIOS 7–8", "primer análisis,\nprueba de estrés"),
-            ("ESTUDIOS 9–10", "escribir y delimitar,\nadaptar y defender"),
-            ("ESTUDIOS 11–12", "reproducir, empaquetar;\ndirigir agentes, liberar"),
+            ("ESTUDIOS 9–10", "escribir y delimitar,\npreparar el artefacto"),
+            ("ESTUDIOS 11–12", "reproducir, empaquetar;\nrevisión agéntica, decidir"),
         ],
         "rails_title": "Cuatro rieles cruzan todos los estudios",
         "rails": [

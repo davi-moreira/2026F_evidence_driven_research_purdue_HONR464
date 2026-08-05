@@ -95,9 +95,17 @@ def main() -> None:
                     kept += 1
                     continue
                 m = FRONT_RE.match(text)
-                if not m:
-                    sys.exit(f"✗ {path}: no YAML front matter to anchor banner")
-                insert_at = m.end()
+                if m:
+                    insert_at = m.end()
+                else:
+                    # D44: front-matter pages may use an H1 with .unnumbered
+                    # instead of YAML (e.g. part1-overview) — anchor on the
+                    # first heading line then.
+                    h = re.search(r"^# .+$\n", text, re.M)
+                    if not h:
+                        sys.exit(f"✗ {path}: no YAML front matter or H1 to "
+                                 f"anchor banner")
+                    insert_at = h.end()
                 body = text[insert_at:].lstrip("\n")
                 path.write_text(text[:m.end(1)].rstrip("\n") + "\n\n"
                                 + banner + "\n" + body)
