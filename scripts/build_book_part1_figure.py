@@ -46,6 +46,23 @@ L = {
             "AI activity, verification, and human decisions",
             "Uncertainty, claim boundary, and revision history",
         ],
+        "paths": {
+            "spine1": ("STUDIOS 1–4", "curiosity, rules,\nquestion, evidence,\ncontract"),
+            "hub": "Studio 5 — your declared pathway picks one road",
+            "routes": [
+                "observational\ndescriptive",
+                "observational\ncausal",
+                "experimental\ndescriptive",
+                "prediction &\ngeneralization",
+                "experimental\ncausal",
+            ],
+            "overlay": "hybrid & complex designs\n(optional overlay)",
+            "spine2": ("STUDIOS 6–9", "govern data, analyze,\nstress-test, write and\nbound the claims"),
+            "fmt": "Studio 10 — your venue picks the format",
+            "formats": ["paper /\nresearch note", "seminar /\ntalk", "poster", "another\nformat"],
+            "spine3": ("STUDIOS 11–12", "reproduce, package;\nagentic review, decide"),
+            "end": ("YOUR ARTIFACT", "released or honestly\nwithheld; the next\nstudy opens"),
+        },
     },
     "book-pt": {
         "start": ("SUA CURIOSIDADE", "uma pergunta que\nnão sai da\nsua cabeça"),
@@ -153,6 +170,66 @@ def build(strings: dict, out: Path) -> None:
     plt.close(fig)
 
 
+def build_paths(strings: dict, out: Path) -> None:
+    """D47: every path through the book — one spine, a five-way pathway
+    branch at Studio 5, a four-way format branch at Studio 10."""
+    P = strings["paths"]
+    fig, ax = plt.subplots(figsize=(10.2, 6.2))
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+    # spine capsules
+    def capsule(cx, cy, head, sub, w=.13, h=.24, strong=True):
+        box(ax, cx, cy, w, h, "white" if strong else FILL,
+            INK if strong else SOFT, lw=1.4 if strong else 1.0, r=0.03)
+        ax.text(cx, cy + .062, head, ha="center", va="center",
+                fontsize=8.0, fontweight="bold", color=INK)
+        ax.text(cx, cy - .045, sub, ha="center", va="center",
+                fontsize=6.6, color="#444440", linespacing=1.3)
+
+    mid = .5
+    capsule(.075, mid, *P["spine1"])
+    capsule(.475, mid, *P["spine2"])
+    capsule(.838, mid, *P["spine3"], w=.115)
+    box(ax, .952, mid, .082, .26, "white", INK, lw=1.5, r=0.03)
+    ax.text(.952, mid + .07, P["end"][0], ha="center", va="center",
+            fontsize=6.2, fontweight="bold", color=INK)
+    ax.text(.952, mid - .04, P["end"][1], ha="center", va="center",
+            fontsize=5.5, color="#444440", linespacing=1.25)
+
+    # five-way route fan between spine1 and spine2
+    ax.text(.275, .955, P["hub"], ha="center", va="center",
+            fontsize=8.2, fontweight="bold", color=INK)
+    rys = [.86, .68, .50, .32, .14]
+    for ry, label in zip(rys, P["routes"]):
+        box(ax, .275, ry, .155, .13, FILL, SOFT, lw=1.0)
+        ax.text(.275, ry, label, ha="center", va="center",
+                fontsize=7.0, color=INK, linespacing=1.25)
+        arrow(ax, .075 + .068, mid + (.02 if ry > mid else -.02)
+              if abs(ry - mid) < .2 else mid + (.09 if ry > mid else -.09),
+              .275 - .080, ry)
+        arrow(ax, .275 + .080, ry, .475 - .068, mid + (.09 if ry > mid else
+              (-.09 if ry < mid else 0)))
+    ax.text(.275, .045, P["overlay"], ha="center", va="center",
+            fontsize=6.6, color="#444440", style="italic")
+
+    # four-way format fan between spine2 and spine3
+    ax.text(.67, .955, P["fmt"], ha="center", va="center",
+            fontsize=8.2, fontweight="bold", color=INK)
+    fys = [.80, .60, .40, .20]
+    for fy, label in zip(fys, P["formats"]):
+        box(ax, .67, fy, .125, .12, FILL, SOFT, lw=1.0)
+        ax.text(.67, fy, label, ha="center", va="center",
+                fontsize=7.0, color=INK, linespacing=1.25)
+        arrow(ax, .475 + .068, mid + (.07 if fy > mid else -.07),
+              .67 - .065, fy)
+        arrow(ax, .67 + .065, fy, .838 - .06, mid + (.07 if fy > mid else -.07))
+    arrow(ax, .838 + .058, mid, .952 - .041, mid)
+
+    fig.tight_layout(pad=0.4)
+    fig.savefig(out, dpi=150, facecolor="white")
+    plt.close(fig)
+
+
 def main() -> None:
     for edition, strings in L.items():
         if edition not in ACTIVE_EDITIONS:
@@ -162,6 +239,10 @@ def main() -> None:
         out.parent.mkdir(parents=True, exist_ok=True)
         build(strings, out)
         print(f"✓ {out.relative_to(REPO)}")
+        if "paths" in strings:
+            out2 = REPO / edition / "images" / "part1_paths.png"
+            build_paths(strings, out2)
+            print(f"✓ {out2.relative_to(REPO)}")
 
 
 if __name__ == "__main__":

@@ -512,6 +512,44 @@ stations:
         if your design has stages: the stage-by-stage map, its weakest
         link, and the one-sentence justification for keeping or cutting it
 
+    practice_kit:
+      worked_example: |
+        The restaurant-prices reader declares a pathway.
+
+        **The inquiry's words.** "How much more" — a quantity, observed
+        as the world offers it. That is observational descriptive.
+
+        **The four boxes.** Target: campus-area menu items, 2019 and
+        2025. Frame: menus that were archived. Sample: items retrievable
+        in both years. Claim: bounded to that panel.
+
+        **The contrast drill (observational causal).** "Did the wage
+        increase raise prices?" would need a comparison world without
+        the increase; city-wide inflation confounds it, and no menu
+        archive removes that. The question stays causal, currently
+        unidentified — it is not quietly relabeled descriptive.
+
+        **Contract v1 line.** Pathway declared: observational
+        descriptive; the license is the retrievable panel; the limit is
+        that no cause of any gap can be established here.
+      faded_task: |
+        The exercise-and-sleep reader is mid-declaration: the inquiry
+        words point at "goes with", but the reader keeps writing
+        "improves". Finish the declaration honestly: name the pathway
+        the words support, write the crossing that licenses it, and
+        write the limit line for the causal reading the reader wants but
+        this design cannot pay for.
+      starter: |
+        Your route row, one line each: the inquiry's own words · the
+        pathway they support · the crossing that licenses it · what the
+        pathway cannot establish · the contract v1 sentence recording
+        the declaration.
+      verification: |
+        Read your contract v0 inquiry aloud. If its words ask what would
+        happen IF something changed, your pathway cannot be descriptive,
+        whatever your data look like; the kind rule cuts both ways. Then
+        check the contrast: can you say, in one sentence, why the
+        neighboring pathway is not yours?
   - id: govern-data-measurement
     purpose: >-
       Establish where your numbers came from and whether they measure what
@@ -576,6 +614,42 @@ stations:
         your measurement specification: concept, construct, indicator, the
         meaning sentence for each number, and one planned reliability check
 
+    practice_kit:
+      worked_example: |
+        Two rows of the restaurant-prices provenance record, then the
+        measurement spec.
+
+        **Provenance.** Archived menus: captured by a public web
+        archive, dates recorded per menu, terms open, original record
+        the restaurant's own page. Index series: the statistical
+        agency's published table, retrieved directly, terms open.
+
+        **Measurement.** Construct: the menu price level. Indicator: the
+        listed price of a standard dinner entree. Meaning sentence:
+        "this number is what the menu asked, not what anyone paid."
+        Reliability check: twenty menus double-entered; two
+        transcription errors caught and corrected.
+
+        **Permission recheck.** Prices, not people; the archive's terms
+        permit research use; nothing changed on arrival.
+      faded_task: |
+        One provenance row arrived incomplete: a dataset of delivery
+        fees a classmate shared, producer unknown, terms blank. Finish
+        the row the only honest ways: locate the original record and its
+        terms, or mark the row unusable and say what its loss does to
+        wording B's feasibility. Then write the meaning sentence its
+        indicator would need.
+      starter: |
+        Provenance columns: source · producer · when · original record ·
+        terms · date you retrieved it. Measurement skeleton: construct ·
+        indicator · exact procedure · meaning sentence ("this number
+        does/does not…") · one planned reliability check.
+      verification: |
+        Open one primary source again from your own citation alone, as a
+        stranger would. Then reread your contract's provisional
+        operationalization against the indicator you just specified:
+        if they differ, that is a contract version with a reason, not a
+        silent swap.
   - id: first-analysis
     purpose: >-
       Produce one honest result you can reproduce from a clean start, with
@@ -616,6 +690,43 @@ stations:
         re-derived numbers, and a placebo run
 
 
+    practice_kit:
+      worked_example: |
+        The restaurant-prices reader's declared analysis, run once,
+        honestly. The declared quantity: mean growth of the panel's
+        entree prices, 2019 to 2025, against the retrieved index. The
+        result as reported: "panel mean growth 24.1% against index
+        growth 18.0%: a gap of 6.1 points, with the coverage caveat
+        that archived menus survive selectively." One number, its
+        benchmark, its caveat — and a restart-and-run-all record dated
+        the same day.
+      faded_task: |
+        The environment record is half done: Python version and package
+        list are there; the data files with their retrieval dates are
+        blank, and one claim-to-output row points at a cell that no
+        longer exists. Complete the record and repair the trace; if the
+        number cannot be traced, the claim does not ship.
+      starter: |
+        Starter code for your own declared quantity — replace the
+        simulated block with your data and keep the discipline:
+
+        ```python
+        import numpy as np, pandas as pd
+        SEED = 464
+        rng = np.random.default_rng(SEED)
+        # TODO: replace this simulated frame with YOUR data load
+        df = pd.DataFrame({"group": rng.choice(["a", "b"], 200),
+                           "value": rng.normal(10, 2, 200)})
+        # TODO: compute the quantity your contract declared — only that
+        result = df.groupby("group")["value"].mean()
+        print(result)
+        # TODO: print the uncertainty or the honest caveat beside it
+        # then: Runtime -> Restart and run all; numbers must match
+        ```
+      verification: |
+        Restart and run everything from a clean state. If the printed
+        numbers differ from your report by even a little, the pipeline
+        is the finding; fix it before any stress test means anything.
   - id: stress-test
     purpose: >-
       Attack your own result the way a hostile reviewer would, and record
@@ -664,6 +775,35 @@ stations:
         your confidence audit: the not-yet-recomputed list, where belief
         in the headline number comes from, and your boundary sentence
 
+    practice_kit:
+      worked_example: |
+        The restaurant-prices robustness grid, pre-listed before any
+        check ran: drop each cuisine category in turn; swap the deflator
+        (all-items index versus food-at-home); entree-only versus
+        all-items. Results reported as direction and size, together.
+        The negative test, predicted first: nationally priced bottled
+        drinks should show little local drift — and did. The
+        adversarial review returned three flags; two were confirmed
+        against the data, one refuted with the leave-one-out table. The
+        adjudication: the gap survives every pre-listed check except the
+        smallest cuisine category, and that limit is now part of the
+        claim.
+      faded_task: |
+        The grid is filled but the adjudication is blank, and one
+        reviewer flag ("the archive over-samples chains") sits
+        unadjudicated. Write the adjudication: what survived, what did
+        not, what cannot be ruled out — and settle the flag with a data
+        check, not a feeling.
+      starter: |
+        Your grid: rows pre-listed with dates BEFORE running · check ·
+        prediction · direction and size found · survives? Plus one named
+        null check and the three hardest reviewer flags with their
+        checks.
+      verification: |
+        Compare the grid's pre-list date against the run dates: any row
+        added after a disappointing result is reported as exploratory,
+        never as a pre-listed check. Spans stay within commensurable
+        panels.
   - id: write-bound-disclose
     purpose: >-
       Write the claim you can defend, bounded by what your evidence supports,
@@ -709,6 +849,35 @@ stations:
         your research-note spine: problem, gap, question, findings ordered
         by support, and the headline claim with its boundary inside
 
+    practice_kit:
+      worked_example: |
+        Two rows of the restaurant-prices claim-evidence table.
+
+        Row 1 — claim: "on this panel, listed entree prices rose 6.1
+        points faster than the overall index." Evidence: the growth
+        comparison with its caveat. Trace: notebook cell 14's printed
+        output. Boundary: no claim about affordability, fees, or cause.
+
+        Row 2 — claim: "the gap survives dropping any single cuisine
+        except the smallest." Evidence: the leave-one-out table. Trace:
+        cell 21. Boundary: the smallest category is a stated limit.
+
+        The disclosure names the tools, the drafting they did, and the
+        two numbers the reader re-derived by hand.
+      faded_task: |
+        A third row claims "students noticed the increase" — its
+        evidence cell is empty and no output supports it. Do what the
+        discipline requires: trace it or cut it, and write one sentence
+        on which you did and why.
+      starter: |
+        Table columns: claim · evidence (result plus uncertainty) ·
+        trace (the exact cell or source) · boundary. Note spine:
+        problem, gap, question · findings ordered by support · headline
+        with its boundary inside · limitations sized to the claim.
+      verification: |
+        Pick one row at random, reopen its traced output, and read the
+        number again. A table you have not spot-checked is a list of
+        hopes.
   - id: adapt-and-defend
     purpose: >-
       Turn your bounded claims into an artifact ready for publication or
@@ -802,6 +971,32 @@ stations:
         your five hardest fair questions with defend-or-concede answers,
         and your uncertainty-and-limitations statement in ULN form
 
+    practice_kit:
+      worked_example: |
+        The restaurant-prices venue contract: a twelve-minute class
+        seminar, slides allowed, live questions. Transformation memo:
+        the note's methods compress to one spoken minute; the growth
+        figure becomes the only slide with numbers; the caveat moves
+        into the spoken spine, right after the headline. Mode test: the
+        talk ran 11:40 aloud, and the one figure survived the
+        back-of-room squint. Rehearsal: five hard questions drafted;
+        four defended, one conceded ("cause? — outside these words").
+      faded_task: |
+        The contract and memo exist for a poster venue, but the content
+        map is half done: uncertainty and disclosure have no location
+        yet. Place them where the audience actually meets them, and
+        answer one hard question in writing with defend, concede, or
+        do-not-know.
+      starter: |
+        Venue contract fields: audience · medium · limits · required
+        elements · accessibility · submission rule · question channel.
+        Content map: where the claim, evidence, boundary, uncertainty,
+        and disclosure each live. Then the mode test and the rehearsal
+        record.
+      verification: |
+        Every number on the artifact traces to a claim-table row — walk
+        them once. Then run the mode test for real: time the talk, scan
+        the poster at distance, or hand the manuscript to a cold reader.
   - id: reproduce-and-package
     purpose: >-
       Prove that someone who is not you can obtain your result from your
@@ -846,6 +1041,31 @@ stations:
         environment record, README, and a cold rerun in a second
         environment
 
+    practice_kit:
+      worked_example: |
+        The restaurant-prices capsule, five parts: the runnable
+        notebook; the panel data with its access note (archive URLs and
+        retrieval dates, since the archive itself is public); the
+        environment record; a README whose first three lines say what
+        the project asks, what the headline found, and how to run
+        everything; the licence. The cold-run record: a clean Colab
+        session, instructions only, numbers matched — labeled "solo
+        proxy; external cold run pending."
+      faded_task: |
+        The README is missing its run order, and one notebook cell
+        loads data from a hard-coded local path no stranger has. Fix
+        both, rerun cold, and add the line the record now needs: what
+        changed and why the rerun date moved.
+      starter: |
+        Capsule checklist: runnable notebook · data or its access
+        recipe · environment record · README (what it asks, what it
+        found, how to run) · licence · the cold-run record with its
+        honest label.
+      verification: |
+        Rerun in a second clean environment following only the README.
+        Every number in the note must match the rerun's output; a
+        mismatch is a finding about the package, and it precedes any
+        release.
   - id: release-next-cycle
     purpose: >-
       The book's special topic, turned onto your finished project: direct
@@ -911,3 +1131,35 @@ stations:
         your finished research artifact with every claim bounded, your
         AI-management portfolio with the team record inside, and the
         rehearsed three-movement defense
+    practice_kit:
+      worked_example: |
+        The restaurant-prices closing review, capability-honest. Review
+        mode: one assistant playing three roles in turn (writer,
+        skeptic, auditor), sequenced by the reader — recorded exactly
+        so, never as autonomous. The audit rows: permissions clear;
+        disclosure clear; package-matches-cold-run clear;
+        reproducibility clear; claim boundaries clear; uncertainty
+        clear; archive-terms citation PENDING (the archive's research
+        clause needs the exact link). The decision: withhold pending
+        that one named repair — written as this version's reason, not a
+        failure. Stopping rule: "every surviving claim has a check I ran
+        myself." Next-study agenda: the delivery-fee question wording B
+        opened.
+      faded_task: |
+        The audit rows are filled and one is BLOCKING: a number in the
+        note changed after the cold run. Write the decision the gates
+        force, the version reason, and the one-line plan that turns the
+        withhold into a release.
+      starter: |
+        Audit checklist: permissions · participant promises ·
+        disclosure · package-matches-cold-run · reproducibility · claim
+        boundaries · uncertainty, each clear / pending / blocking.
+        Dossier manifest: contract versions · evidence registry ·
+        permissions · measurement · ledgers · artifacts · package ·
+        revision history, each present / absent-with-reason / n-a.
+      verification: |
+        Check the package-current gate against your Studio 11 record by
+        date and content, and read your review-mode declaration once
+        more: if a manually sequenced chat is described as an agent
+        deciding its own next step, correct the record before you
+        decide anything else.
