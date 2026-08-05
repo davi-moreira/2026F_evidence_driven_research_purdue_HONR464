@@ -500,7 +500,7 @@ stations:
           2: "every rail addressed in the form this studio requires"
       - id: adapt-and-defend.defense-ready-v1.station-specific
         applies_when: {}
-        text: "The milestone's own product is present and defensible: A short venue contract, one chosen-format adaptation that satisfies it - poster, talk, brief, or another - a content map tracing every load-bearing claim and number, and a defense rehearsal record. This is not yet public release"
+        text: "The milestone's own product is present and defensible: A short venue contract and one artifact ready for publication or presentation that satisfies it - a paper or research note, a seminar or conference talk, a poster, or another venue's format - with a content map tracing every load-bearing claim and number, and a defense rehearsal record. This is not yet public release"
         levels:
           0: "contract, adaptation, content map, or rehearsal absent, or a load-bearing claim exceeds its evidence"
           1: "all pieces present, but one load-bearing number, boundary, accessibility path, or mode test is incomplete"
@@ -588,7 +588,7 @@ stations:
           2: "every rail addressed in the form this studio requires"
       - id: release-next-cycle.release-audit-v1.station-specific
         applies_when: {}
-        text: "The milestone's own product is present and defensible: A release audit recording release or withhold-pending-a-named-repair, your final dossier with a complete manifest, an explicit stopping rule, and your next-study agenda"
+        text: "The milestone's own product is present and defensible: A review-management record for your directed AI team, a release audit recording release or withhold-pending-a-named-repair, your final dossier with a complete manifest, an explicit stopping rule, and your next-study agenda"
         levels:
           0: "release claimed despite a stale cold run or a blocking item, or the dossier manifest or next-study agenda is absent"
           1: "components present, but one audit disposition is unsupported or the next study is generic"

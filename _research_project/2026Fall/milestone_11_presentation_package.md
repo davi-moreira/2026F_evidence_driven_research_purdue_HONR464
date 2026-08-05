@@ -2,7 +2,7 @@
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M11**.
-> This submission presents **Book Milestone 10 — Your defense, ready** (version 2 — defense-rehearsed edition): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
+> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (version 2 — defense-rehearsed edition): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 > It is a *revisit*: the next version of an artifact whose first version already exists.
 <!-- book-milestone-bridge:end -->
 

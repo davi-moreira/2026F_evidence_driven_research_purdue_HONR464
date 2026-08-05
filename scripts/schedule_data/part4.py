@@ -354,7 +354,7 @@ MEETINGS_P4 = [
     # ------------------------------------------------------------------ M41
     {
         "meeting": 41, "date": "2026-12-07", "day": "Mon", "modality": "in-person",
-        "unit": "Week 16 — Studio 12: Release and direct the next cycle",
+        "unit": "Week 16 — Studio 12 (special topic): Agentic AI, release, and the next cycle",
         "title": "Release I: the stale-run test, the five-part release audit, and the dossier",
         "driving_question": "One sentence changed since your last cold run. Is that run now stale — and would your work pass the audit that decides whether it may leave your hands?",
         "secondary_questions": "What makes a cold run stale? What do the five audit parts check — permissions, disclosure, reproducibility, claim boundaries, promises to participants? What belongs in the final dossier, and what is still missing from yours?",
@@ -388,7 +388,7 @@ MEETINGS_P4 = [
     # ------------------------------------------------------------------ M42
     {
         "meeting": 42, "date": "2026-12-09", "day": "Wed", "modality": "in-person",
-        "unit": "Week 16 — Studio 12: Release and direct the next cycle",
+        "unit": "Week 16 — Studio 12 (special topic): Agentic AI, release, and the next cycle",
         "title": "Release II: conflicting agents, false consensus, the stopping rule — and the first defenses",
         "driving_question": "Four AI reviewers agree your chapter is ready. Is that four confirmations or one blind spot shared four ways — and when do you overrule them all and stop?",
         "secondary_questions": "How do you wire worker–critic roles without inheriting their shared blind spots? What makes agreement false consensus (correlated errors)? What is a stopping rule stated as a decision — and which decisions should never be automated at all?",
@@ -422,7 +422,7 @@ MEETINGS_P4 = [
     # ------------------------------------------------------------------ M43
     {
         "meeting": 43, "date": "2026-12-11", "day": "Fri", "modality": "in-person",
-        "unit": "Week 16 — Studio 12: Release and direct the next cycle",
+        "unit": "Week 16 — Studio 12 (special topic): Agentic AI, release, and the next cycle",
         "title": "Studio Friday (terminal) — the final defenses and the release ceremony, M15 due",
         "driving_question": "You began with a curiosity and end with a released, defended, reproducible body of work. Does the evidence hold, is the run fresh, and is it in?",
         "secondary_questions": "Do the remaining defenses survive cross-examination? Is the dossier complete and every ledger closed as a record, not a summary? Can you say your stopping rule aloud — and what should the next study ask?",

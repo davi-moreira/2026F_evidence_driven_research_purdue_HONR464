@@ -1205,7 +1205,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Instructor prep:** Margin-note slips; an annotated exemplar note; defense order-draw slips; confirm partner cold-check pairings; M15 brief staged on Brightspace.
 - **Risks / contingency:** A package will not run for the partner → the exact break is logged as reproducibility evidence and fixed in a consult; the note table read proceeds regardless.
 
-## Week 16 — Studio 12: Release and direct the next cycle
+## Week 16 — Studio 12 (special topic): Agentic AI, release, and the next cycle
 
 ### M41 — Mon 2026-12-07 (in-person) — Release I: the stale-run test, the five-part release audit, and the dossier
 

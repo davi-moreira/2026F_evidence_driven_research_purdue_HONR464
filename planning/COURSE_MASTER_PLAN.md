@@ -87,7 +87,7 @@ phase (before launch).
 | 13 | S10 Public test at the Expo + reflection (`nb13`) | 1 | M12 · Fri Nov 20 | What did public questioning reveal, and what must change in the claim or its defense (Expo Tue Nov 17)? |
 | 14 | S11 Async: peer cold run + red-team (`nb14`) | 0 | M13 · Sun Nov 29 (async) | Does a peer's evidence reproduce without author help, and where is it fragile? |
 | 15 | S9+S11 Research note v1 + reusable package (`nb15`) | 2 | M14 · Fri Dec 4 | What changed after public criticism and the cold run, and is the revised package reusable? |
-| 16 | S12 Release and direct the next cycle (`nb16`) | 2 | M15 · Fri Dec 11 (terminal) | Is the latest package still reproduced, why am I stopping, and what should the next study ask? |
+| 16 | S12 Special topic: agentic AI, release, and the next cycle (`nb16`) | 2 | M15 · Fri Dec 11 (terminal) | Is the latest package still reproduced, why am I stopping, and what should the next study ask? |
 
 ## 3. The flipped classroom — the Student Research Lead (SRL) system
 

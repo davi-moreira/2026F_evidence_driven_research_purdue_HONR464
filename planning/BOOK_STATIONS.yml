@@ -64,18 +64,23 @@ stations:
       sends you back here for a new version.
     milestone_title: "Your working agreement"
     milestone_reason: >-
-      Every studio after this one asks you to delegate real work to AI and
-      then stand behind the result under your own name. The rules for that
-      cannot be improvised under deadline pressure; they have to exist
-      before anything is at stake. This first milestone writes them down:
-      what stays yours, what gets delegated, and how every delegation gets
-      recorded and checked. The rest of the book leans on it. Every later
-      milestone appends to the ledger you open here, and your final defense
-      in Studio 12 reads this agreement back to you.
+      These first two studios run in four beats: your human curiosity,
+      then your ledger and rules, then verified AI assistance, then a
+      formal research question. This studio owns the first two beats and
+      opens the third. Every studio after it asks you to delegate real
+      work to AI and stand behind the result under your own name; the
+      rules for that cannot be improvised under deadline pressure. This
+      first milestone writes them down: what stays yours, what gets
+      delegated, and how every delegation gets recorded and checked. Once
+      the ledger exists, AI joins, and its first job may be a brainstorm
+      that stretches your curiosity, under your rules. The rest of the
+      book leans on this agreement, and your final defense in Studio 12
+      reads it back to you.
     hands_forward: >-
-      Milestone 2 takes the idea that survived your red-flag screen and,
-      under these working rules, turns it into a question whose answer you
-      could recognize.
+      Milestone 2 takes the curiosity that survived your red-flag screen,
+      stretched by whatever brainstorming you licensed, and turns it into
+      the arc's fourth beat: a formal question whose answer you could
+      recognize.
     contributions:
       ai-arm-not-brain: >-
         your opened AI Research Ledger, three genuine curiosities, and one
@@ -156,8 +161,11 @@ stations:
       a setback.
     milestone_title: "Your question, declared"
     milestone_reason: >-
-      A research project is only defensible if its question fixes what
-      would count as an answer. This milestone is where the fixing happens:
+      The four-beat arc that began with your curiosity closes here: the
+      curiosity you committed, governed, and stretched becomes a formal
+      research question. A research project is only defensible if its
+      question fixes what would count as an answer, and this milestone is
+      where the fixing happens:
       you declare your objective, your units and outcome, your kind and
       reach, and the boundary of the claim you hope to make. Everything
       that follows revises this declaration rather than starting over. The
@@ -655,20 +663,24 @@ stations:
 
   - id: adapt-and-defend
     purpose: >-
-      Adapt one defensible claim to one audience and rehearse defending it
-      against real questions.
+      Turn your bounded claims into an artifact ready for publication or
+      presentation, and rehearse defending it against real questions.
     produces: >-
-      A short venue contract, one chosen-format adaptation that satisfies
-      it - poster, talk, brief, or another - a content map tracing every
-      load-bearing claim and number, and a defense rehearsal record. This
-      is not yet public release.
+      A short venue contract and one artifact ready for publication or
+      presentation that satisfies it - a paper or research note, a seminar
+      or conference talk, a poster, or another venue's format - with a
+      content map tracing every load-bearing claim and number, and a
+      defense rehearsal record. This is not yet public release.
     genre_guide: |
-      Start with a **venue contract**: your written record of what the
-      audience will receive and what the venue allows. Name the audience,
-      the medium, the length or space limit, the required elements, the
-      accessibility needs, the submission rule, and the question channel.
-      One line each is enough. Example: a five-minute recorded talk, six
-      slides, captions required, no live questions.
+      The goal of this studio is an artifact ready for publication or
+      presentation: a manuscript a venue could receive, a talk a room
+      could hear, a poster a conference could hang. Start with a **venue
+      contract**: your written record of what the audience will receive
+      and what the venue allows. Name the audience, the medium, the
+      length or space limit, the required elements, the accessibility
+      needs, the submission rule, and the question channel. One line each
+      is enough. Example: a five-minute recorded talk, six slides,
+      captions required, no live questions.
 
       Every format carries the same research core: the bounded claim, the
       evidence that earns it, uncertainty and limitations, traceable
@@ -680,22 +692,24 @@ stations:
 
       | If your venue asks for | build it with | then test and rehearse |
       |---|---|---|
+      | a paper or research note | your Studio 9 note, developed to the venue contract: sections, length, references, and the figure rules for any figure | the audit on the manuscript; Difficult Questions in writing |
+      | a seminar or conference talk | Research Pitches' spine, expanded section by section to the venue's length; slides follow the poster lesson's figure rules | the audit on the deck; Difficult Questions, spoken |
+      | a short pitch | Research Pitches | Difficult Questions, spoken |
       | a poster | Research Posters | Poster Criticism, then Difficult Questions |
-      | a live talk or pitch | Research Pitches | Difficult Questions, spoken |
-      | a talk with slides | Research Pitches; every quantitative visual follows the poster lesson's figure rules | Difficult Questions, spoken |
-      | a written brief or one-pager | your Studio 9 note compressed to the contract, with the poster lesson's figure rules for any figure | Difficult Questions, in writing |
       | another format | the venue contract plus the nearest row, naming what transfers | Difficult Questions, in the venue's own mode |
 
-      The poster lessons are this book's fully worked example: one surface,
-      no narrator, every number exposed. Difficult Questions is for
-      everyone. If your venue has no live questions, the rehearsal still
-      happens: have a peer or an AI reviewer send you hard questions in
-      writing, and record defend, concede, or do-not-know for each.
+      The poster lessons are this book's fully worked visual example: one
+      surface, no narrator, every number exposed. The paper route runs on
+      your Studio 9 note; the seminar route runs on the pitches lesson's
+      spine. Difficult Questions is for everyone. If your venue has no
+      live questions, the rehearsal still happens: have a peer or an AI
+      reviewer send you hard questions in writing, and record defend,
+      concede, or do-not-know for each.
     steps:
       - Write your venue contract using the guide above, then say what your claim must lose to fit that format.
       - "Build a content map before you build the artifact: where the claim, the evidence, the boundary, the uncertainty, and the disclosure will each live."
-      - Build the adaptation, keeping every load-bearing number, figure, and citation traceable to the claim-evidence table.
-      - "Test it in its actual mode: scan the poster at gallery distance, time the talk aloud, advance the deck without narrating, or hand the page to a cold reader."
+      - Build the artifact to its venue contract, keeping every load-bearing number, figure, and citation traceable to the claim-evidence table.
+      - "Test it in its actual mode: scan the poster at gallery distance, time the talk aloud, advance the deck without narrating, or hand the manuscript to a cold reader."
       - Rehearse the defense against the three hardest questions you can construct, and record which you could not answer; those are your next studio's agenda.
     rails:
       ethics: An adaptation that drops the limitations is not a shorter version, it is a different claim.
@@ -705,17 +719,19 @@ stations:
     revisit: >-
       A question you cannot answer in rehearsal is evidence, and it sends
       you back to the studio that owns it.
-    milestone_title: "Your defense, ready"
+    milestone_title: "Your artifact, ready to publish or present"
     milestone_reason: >-
       A claim becomes public the moment an audience can question it, and
-      audiences do not read contracts. They read posters, hear talks, scan
-      briefs, and ask hard questions. This milestone adapts your bounded
-      claims to the format your venue asks for and rehearses the defense
-      before it counts. The poster lessons carry the fully worked example;
-      the milestone's venue contract and content map carry every other
-      format. The rehearsal record
-      matters as much as the artifact: the questions you cannot answer yet
-      are the truest map of what remains.
+      audiences do not read contracts. They read papers, hear seminars,
+      scan posters, and ask hard questions. This milestone produces the
+      artifact itself, ready for publication or presentation: a
+      manuscript a venue could receive, a talk a room could hear, a
+      poster a conference could hang, each satisfying its venue contract.
+      The poster lessons carry the fully worked visual example; the paper
+      route develops your Studio 9 note; the venue contract and content
+      map carry every format. The rehearsal record matters as much as the
+      artifact: the questions you cannot answer yet are the truest map of
+      what remains.
     hands_forward: >-
       Milestone 11 lets strangers rerun what you have just defended, which
       is the one test rehearsal cannot give you.
@@ -730,8 +746,9 @@ stations:
         hits ranked by how far the error travels, fixed once, and the
         lock call
       research-pitches: >-
-        if you will speak: your 30-second and 3-minute pitches, built
-        boundary-first and tested aloud on an outsider
+        if you will speak, whether a pitch, a seminar, or a conference
+        talk: your 30-second and 3-minute spines, built boundary-first,
+        tested aloud on an outsider, and expanded to the venue's length
       difficult-questions: >-
         your five hardest fair questions with defend-or-concede answers,
         and your uncertainty-and-limitations statement in ULN form
@@ -782,16 +799,18 @@ stations:
 
   - id: release-next-cycle
     purpose: >-
-      Close the cycle as its director: run the final review under your own
-      rules, decide whether the work is ready to leave your hands, and
-      turn the largest unresolved limitation into the next study.
+      The book's special topic, turned onto your finished project: direct
+      an agentic AI review under your own rules, adjudicate what the
+      agents return, decide whether the work leaves your hands, and turn
+      the largest unresolved limitation into the next study.
     produces: >-
-      A release audit recording release or withhold-pending-a-named-repair,
-      your final dossier with a complete manifest, an explicit stopping
-      rule, and your next-study agenda.
+      A review-management record for your directed AI team, a release
+      audit recording release or withhold-pending-a-named-repair, your
+      final dossier with a complete manifest, an explicit stopping rule,
+      and your next-study agenda.
     steps:
       - "Check that nothing moved since your Studio 11 cold run: any change to the package — a number, a claim, the data, the code, the environment record, or the instructions a stranger would follow — makes that run stale. Repeat it before you release."
-      - "Record your review mode — no AI, one assistant, or several agent loops — and attach only the evidence that mode produces; never invent activity to fill a record."
+      - "Run the closing review as a directed team: scoped loops (a writer, a skeptic, an auditor at minimum), wired so each role's input exists before it starts, escalation rules written first, one node kept human. A single well-run assistant playing the roles in turn is a legal team; record what you actually ran, never invented activity."
       - "Run the release audit and mark each item clear, pending, or blocking: permissions, participant promises, disclosure, package-matches-cold-run, reproducibility, claim boundaries, and uncertainty."
       - "Make the release decision. A blocking item means withhold pending the named repair, written as this version's reason — not a euphemistic release."
       - "Assemble the dossier with a manifest: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history — each marked present, absent with reason, or not applicable."
@@ -800,7 +819,7 @@ stations:
     rails:
       ethics: Release is the last point at which a permission problem can still be prevented.
       evidence: The dossier is the evidence rail made assemblable.
-      ai: Close the AI record that actually exists — loop wiring if you ran several, a verified ledger if you ran one assistant, a one-line scope statement if you ran none.
+      ai: This studio is the ledger's graduation — loop wiring, conflicts, overrides, and independence checks all land as rows before it closes; record the team you actually ran.
       uncertainty: State what you still do not know as clearly as what you found.
     revisit: >-
       The next-study agenda is the revisit; a research cycle ends by
@@ -808,18 +827,22 @@ stations:
     milestone_title: "Your release and next cycle"
     milestone_reason: >-
       The book opened with one rule: AI is your arm, not your brain. This
-      studio is where the rule graduates. In the final review your tool
-      count may be zero, one, or many — a single assistant, or a directed
-      team of writer, skeptic, and auditor that the two agent lessons show
-      you how to wire and when to overrule — and the release standard does
-      not change with the count. Every public claim must sit inside its
-      evidence and permissions, and the package must still match the cold
-      run that tested it; the agent lessons add records when you used
-      several loops, never a substitute for the audit. What no tool can do
-      is make the two decisions this milestone exists for: whether this
-      work is ready to leave your hands, and what should be asked next.
-      The book closes where it began: tools extend your reach, and the
-      decision about what leaves your hands remains yours.
+      last studio is its special topic, and the rule's graduation:
+      advanced practice in directing AI for research — several scoped
+      agents at once, wired so each role's input exists before it starts,
+      adversarial by design, escalated to you when they conflict or agree
+      too easily — turned onto your own finished project as its closing
+      review. The two agent lessons teach the wiring and the escalation;
+      a single well-run assistant playing the roles in turn runs the same
+      discipline. The release standard does not change with the tool
+      count: every public claim must sit inside its evidence and
+      permissions, the package must still match the cold run that tested
+      it, and the team's records land in the audit, never in place of it.
+      What no agent can do is make the two decisions this milestone
+      exists for: whether this work is ready to leave your hands, and
+      what should be asked next. The book closes where it began: tools
+      extend your reach, and the decision about what leaves your hands
+      remains yours.
     hands_forward: >-
       This is where the chain closes, on a decision. If the audit clears,
       the artifact leaves your hands; if it does not, this version names
@@ -827,13 +850,13 @@ stations:
       agenda opens the cycle that follows.
     contributions:
       managing-ai-agents: >-
-        if you ran several agent loops in your final review: their scoped
-        jobs, the wiring and turn counts, and the one node you kept human
+        your closing-review team: the loops' scoped jobs, the dependency
+        wiring and turn counts, and the one node you kept human
       conflicting-agents: >-
-        if several roles returned a load-bearing verdict: your escalation
-        rules, and one agreement or disagreement diagnosed and settled by
-        your own check, with any override on record
+        your escalation rules, and one load-bearing pair of outputs
+        (agreeing or not) diagnosed and settled by your own check, with
+        any override on record
       final-portfolio: >-
         your finished research artifact with every claim bounded, your
-        AI-management portfolio in the form your review mode produced, and
-        the rehearsed three-movement defense
+        AI-management portfolio with the team record inside, and the
+        rehearsed three-movement defense

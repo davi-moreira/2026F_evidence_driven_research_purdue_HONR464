@@ -125,7 +125,7 @@ stations:
      checkpoints: [{id: defense-ready-v1}], workbook: pending}
   - {id: reproduce-and-package,   rank: 11, title: "Reproduce and package",
      checkpoints: [{id: package-v1}], workbook: pending}
-  - {id: release-next-cycle,     rank: 12, title: "Release and direct the next cycle",
+  - {id: release-next-cycle,     rank: 12, title: "Special topic: agentic AI, release, and the next cycle",
      checkpoints: [{id: release-audit-v1}], workbook: pending}
 
 lessons:
@@ -338,12 +338,12 @@ lessons:
      companion: ch34_open_and_reusable_research_packages.ipynb,
      url_path: part6-after-conference/34-open-and-reusable-research-packages.html}
   - {id: managing-ai-agents,        state: active, rank: 350, part: part6,
-     station: release-next-cycle, role: optional,
+     station: release-next-cycle, role: core,
      source: part6-after-conference/35-managing-multiple-ai-agents.qmd,
      companion: ch35_managing_multiple_ai_agents.ipynb,
      url_path: part6-after-conference/35-managing-multiple-ai-agents.html}
   - {id: conflicting-agents,        state: active, rank: 360, part: part6,
-     station: release-next-cycle, role: optional,
+     station: release-next-cycle, role: core,
      source: part6-after-conference/36-conflicting-agents-and-human-escalation.qmd,
      companion: ch36_conflicting_agents_and_human_escalation.ipynb,
      url_path: part6-after-conference/36-conflicting-agents-and-human-escalation.html}

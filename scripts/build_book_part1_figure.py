@@ -37,7 +37,7 @@ L = {
             ("STUDIOS 5–6", "develop the pathway,\ngovern the data"),
             ("STUDIOS 7–8", "first analysis,\nstress-test it"),
             ("STUDIOS 9–10", "write and bound,\nadapt and defend"),
-            ("STUDIOS 11–12", "reproduce, package,\nrelease"),
+            ("STUDIOS 11–12", "reproduce, package;\ndirect agents, release"),
         ],
         "rails_title": "Four rails cross every studio",
         "rails": [
@@ -49,14 +49,14 @@ L = {
     },
     "book-pt": {
         "start": ("SUA CURIOSIDADE", "uma pergunta que\nnão sai da\nsua cabeça"),
-        "end": ("SUA ALEGAÇÃO", "publicada, defendida,\napontando o\npróximo estudo"),
+        "end": ("SUA DECISÃO", "publicar, defendida,\nou reter com honestidade;\no próximo estudo abre"),
         "road": [
             ("ESTÚDIO 1", "começar a pesquisa,\ngovernar o trabalho"),
             ("ESTÚDIOS 2–4", "formular a pergunta,\nfundamentar, declarar"),
             ("ESTÚDIOS 5–6", "desenvolver a trilha,\ngovernar os dados"),
             ("ESTÚDIOS 7–8", "primeira análise,\nteste de estresse"),
             ("ESTÚDIOS 9–10", "escrever e delimitar,\nadaptar e defender"),
-            ("ESTÚDIOS 11–12", "reproduzir, empacotar,\nliberar"),
+            ("ESTÚDIOS 11–12", "reproduzir, empacotar;\ndirigir agentes, liberar"),
         ],
         "rails_title": "Quatro trilhos cruzam todos os estúdios",
         "rails": [
@@ -68,14 +68,14 @@ L = {
     },
     "book-es": {
         "start": ("TU CURIOSIDAD", "una pregunta que\nno te deja\nen paz"),
-        "end": ("TU AFIRMACIÓN", "publicada, defendida,\nseñalando el\npróximo estudio"),
+        "end": ("TU DECISIÓN", "publicar, defendida,\no retener con honestidad;\nel próximo estudio abre"),
         "road": [
             ("ESTUDIO 1", "comenzar la investigación,\ngobernar el trabajo"),
             ("ESTUDIOS 2–4", "formular la pregunta,\nfundamentar, declarar"),
             ("ESTUDIOS 5–6", "desarrollar la ruta,\ngobernar los datos"),
             ("ESTUDIOS 7–8", "primer análisis,\nprueba de estrés"),
             ("ESTUDIOS 9–10", "escribir y delimitar,\nadaptar y defender"),
-            ("ESTUDIOS 11–12", "reproducir, empaquetar,\nliberar"),
+            ("ESTUDIOS 11–12", "reproducir, empaquetar;\ndirigir agentes, liberar"),
         ],
         "rails_title": "Cuatro rieles cruzan todos los estudios",
         "rails": [

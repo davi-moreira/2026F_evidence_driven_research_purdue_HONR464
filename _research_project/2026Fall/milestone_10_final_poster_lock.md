@@ -2,7 +2,7 @@
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M10**.
-> This submission presents **Book Milestone 10 — Your defense, ready** (version 1 — poster edition, labeled preliminary): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
+> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (version 1 — poster edition, labeled preliminary): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 > **Gate work (no artifact presented):** Book Milestone 11 — Your reproducible package (author self reproduction before poster lock).
 > **Gate work (no artifact presented):** Book Milestone 12 — Your release and next cycle (release preflight before poster lock).
 <!-- book-milestone-bridge:end -->
