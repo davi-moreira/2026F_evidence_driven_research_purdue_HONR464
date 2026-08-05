@@ -1919,3 +1919,69 @@ uncertainty-and-limitations step (IYT, studio step, contribution, and
 rubric criterion); the wording prompt carries the full field card so
 show-what-changed can actually be enforced; and the canonical lesson
 counts (CLAUDE.md, COURSE_MASTER_PLAN partition) now say 40.
+
+## Decision 47: The completeness pass — every workbook developed, the chain explicit, every path drawn (2026-08-06)
+
+**Ruling (Davi).** Assuming the book's goal — anyone, especially an
+undergraduate, finishes with a fully developed research artifact after
+completing every "It is your turn" and every studio milestone — ensure:
+(1) IYT material and companion notebooks are fully developed and aligned
+with their studio milestone; (2) all milestone material, especially the
+workbook notebooks, is complete and fully developed; (3) completing all
+milestones delivers what the book promises; (4) a figure presents every
+path through the book, in "How this book is organized", matching the
+existing figure's standard.
+
+**Workbooks (A4 complete, 12/12).** Practice kits authored for Studios
+5–12, continuing the restaurant-prices thread down the whole road: route
+declaration with a causal-contrast drill (S5), provenance + measurement
+(S6), declared-analysis result with seeded starter CODE (S7), pre-listed
+robustness grid (S8), claim-evidence rows with a trace-or-cut drill
+(S9), venue contract with a real mode test (S10), the five-part capsule
+with the solo-proxy label (S11), and a capability-honest closing review
+whose worked example WITHHOLDS pending a named repair (S12). Simulated
+teaching records are labeled as such.
+
+**Alignment (the partner audit, applied).** The 12-studio IYT ↔
+contribution ↔ milestone audit found most alignments exact; every
+confirmed repair shipped — highlights: ch5 dates the opening lines as
+version zero; ch3 records a check's outcome even when nothing changed;
+S3 carries the revised declaration; S4's MIDA carries every Contract v0
+field; S5's prediction contrast is a real drill and its milestone
+carries the bounded skip rule (primary + ONE contrast, resolving the
+route-guide/checklist contradiction); ch17 closes with acquisition,
+data-management, and the realized permission recheck; ch20's
+contribution carries the restart/environment/trace closes; ch33 now
+assembles the FULL stand-alone note (methods, results with uncertainty,
+discussion, references, disclosure, package pointer); ch29 expands to
+venue length; S11 assembles-then-runs and freezes a dated manifest;
+ch35 declares each role's capability.
+
+**The chain, explicit.** Every milestone's "What you bring" opens with a
+generated carry-forward line naming the previous milestone's artifact as
+an input, and authored `bring_note` rules bound the skip logic (S5) and
+name the format inputs (S10). Completing the twelve milestones now
+demonstrably assembles: the bounded note (M9) → the publication- or
+presentation-ready artifact (M10) → the reproducible package (M11) → the
+release-or-withhold decision with dossier and next-study agenda (M12).
+
+**The all-paths figure.** `part1_paths.png`, generated beside the road
+figure in the same monochrome standard: one spine (Studios 1–4), the
+five-way pathway branch at Studio 5 with the optional overlay, the
+rejoin (6–9), the four-way format branch at Studio 10, the close on YOUR
+ARTIFACT. A new "Choose your path" section presents it: five pathways
+in, four formats out, twenty end-to-end roads, one spine.
+
+**QUEUED (tracked, not silently claimed):** route-specific Studio 7
+analysis variants — the five A1 pilot paths need worked analysis
+recipes beyond the observational-descriptive thread; a content tranche
+for Davi to schedule. The second A1 pilot (D43 protocol) remains the
+evidence standard for lifting the preface's bounded promise.
+
+**Process.** Two-role Codex loop (gpt-5.6-sol, xhigh, read-only): the
+partner's audit table and promise-chain findings were merged with my
+kit authoring and figure implementation; its `receives:`/`bring_rule:`
+design was adopted as the generated carry-forward + `bring_note`
+mechanism. Attribution in
+`_adm/codex_collab/2026-08-06_d47-completeness/`. Review round appended
+below.
