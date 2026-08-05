@@ -1682,3 +1682,76 @@ survival and narrows the estimand instead; the workbook opening-move cell
 asks for all four lines with a field template; and the cold-test protocol
 gains participant data management (IDs, redaction, consent for quotes and
 photos, approved storage, deletion date) required before recruitment.
+
+## Decision 44: Front-matter numbering; the arc made experiential; publication-ready Studio 10; Studio 12 as the agentic special topic (2026-08-05)
+
+**Ruling (Davi).** Four directives: (1) "How this book is organized" must
+not be enumerated — only Studios and lessons carry numbers; (2) the D43
+arc must be PRESENTED inside Studios 1–2 and their lessons, with AI
+brainstorming licensed as a structured way to push the curiosity toward
+its later formalization; (3) Studio 10 must cover formats beyond the
+poster — the goal is an artifact ready for publication and/or
+presentation (paper, seminar, talk, poster, other); (4) Studio 12 becomes
+a special topic whose core is advanced AI and agentic-AI research
+practice, with the organization figure and prose reviewed afterward.
+
+**1. Numbering.** The organization page is H1 `{.unnumbered}` front
+matter. Side effect deliberately banked: Quarto's chapter numbers now
+equal the manifest's Lesson N labels (chapter 1 = Lesson 1; the old
+off-by-one is gone). The banner updater re-anchors on an H1 when a page
+has no YAML (partner-run catch).
+
+**2. The arc, experienced.** Studio 1's milestone_reason narrates the
+four beats (curiosity → ledger and rules → verified AI assistance →
+formal question) and Studio 2's closes them; ch5/ch6 bridges anchor
+their beats. ch1 gains the licensed **structured brainstorm** after the
+ledger: a divergence-partner prompt (five stretching questions,
+NEW-labeled introductions, no ranking, no choosing, no novelty claims,
+no citations) with an audit verify note; ch5's widening prompt gains the
+same kept-or-rejected trail. The first-AI invariant holds; the brainstorm
+is licensed, not required. Partner counter-proposal recorded: placing the
+first brainstorm in Lesson 5 instead (the memo's decision trail into
+Milestone 2) — declined for ch1 placement per Davi's "push their
+curiosity … later formalize".
+
+**3. Studio 10 = "Prepare to publish or present."** Retitled (display
+only). The milestone produces the artifact itself, ready to submit or
+deliver: the format guide's first-class rows are paper/research note
+(developed from the Studio 9 note), seminar/conference talk (the pitches
+spine expanded; ch29 teaches the expansion), short pitch, poster, other;
+a transformation-memo step (what expands, compresses, moves, becomes
+visual or spoken) precedes the content map; milestone retitled "Your
+artifact, ready to publish or present" (course briefs re-bridged
+mechanically). Course stays poster-focused (D41).
+
+**4. Studio 12 = "Special topic: agentic AI, release, and the next
+cycle."** ch35/36 flip to role: core (the milestone checklist now lists
+their products as prerequisites; course M15 already required them, so
+book and course align). The closing review runs as a directed team with
+**capability honesty**: declare who chooses each next step — you, a
+fixed script, or an agent that plans and calls tools — and never call a
+manually sequenced chat autonomous (GenAI Studio supports human-sequenced
+workflows; agentic execution waits on a verified platform). ch35/37 IYT
+recentered on the team record; the no-backfill rule stands; the release
+audit, dossier, stopping rule, and release-or-withhold decision remain
+the milestone's practice with the blocking gates intact. M15 integrity
+repairs: the manufactured-override advice replaced by an
+independent-check drill; the crosswalk version label "released artifact"
+corrected to "release decision and next-cycle record". QUEUED for Davi:
+the advanced agentic authoring tranche (workflow-vs-agent lesson content,
+planner/replanner loops, tool-using agents with permissions and
+receipts, layered guardrails, observability, a risk-based role menu) —
+substantive new chapter material, scheduled, never smuggled into
+contribution language.
+
+**Figure and prose.** Road stages 5–6 relabeled ("write and bound, ready
+the artifact"; "reproduce, package; agentic review, decide"); the
+organization page opens and closes on the release DECISION, matching
+D42's withhold semantics; PT/ES labels staged (D36 replay).
+
+**Process.** Two-role Codex loop (gpt-5.6-sol, xhigh, read-only): mirror
+partner merged with attribution
+(`_adm/codex_collab/2026-08-05_d44-opening-s10-s12/`). Declined and
+recorded: Lesson-5-first brainstorm; "Special topic: Agentic-AI research
+practice" as the S12 title; the ch37 retitle (course deliverable
+anchor). Review round appended below.
