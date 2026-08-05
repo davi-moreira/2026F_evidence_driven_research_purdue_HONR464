@@ -309,7 +309,8 @@ fair or the claim was earned. Those are yours.
    evidence).
 6. **Document** the whole run in your AI Research Ledger, naming the verification
    method you used from the [Verification Guide](../verification-guide.qmd) and the
-   step where you caught something the tool got wrong. An AI reviewer may run the check
+   check's outcome — the step where you caught something the tool got wrong, or
+   the record that the check agreed, which is a result too. An AI reviewer may run the check
    with you; the decision to accept or reject stays yours.
 
 A workflow can be technically correct and still leave authorship vague. The

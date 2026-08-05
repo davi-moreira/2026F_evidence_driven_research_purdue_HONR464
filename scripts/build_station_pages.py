@@ -300,8 +300,22 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
         cells.append(md(i, "✍️ **Your finish of the faded task.** Double-click "
                           "and complete it here.\n"))
         i += 1
-        cells.append(md(i, f"## Your starter\n\n{kit['starter'].strip()}\n"))
-        i += 1
+        starter = kit["starter"].strip()
+        if "```python" in starter:
+            intro, rest = starter.split("```python", 1)
+            code, _, tail = rest.partition("```")
+            cells.append(md(i, f"## Your starter\n\n{intro.strip()}\n"))
+            i += 1
+            cells.append({"cell_type": "code", "id": f"k{i:03d}",
+                          "metadata": {}, "execution_count": None,
+                          "outputs": [],
+                          "source": code.strip("\n").splitlines(keepends=True)})
+            i += 1
+            if tail.strip():
+                cells.append(md(i, tail.strip() + "\n")); i += 1
+        else:
+            cells.append(md(i, f"## Your starter\n\n{starter}\n"))
+            i += 1
     for k, step in enumerate(spec["steps"], 1):
         cells.append(md(i, f"## Step {k}\n\n{step}\n")); i += 1
         cells.append(md(i, f"✍️ **Your work for step {k}.** Double-click this "

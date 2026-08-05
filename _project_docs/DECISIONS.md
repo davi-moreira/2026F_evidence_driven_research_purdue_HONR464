@@ -1983,5 +1983,11 @@ partner's audit table and promise-chain findings were merged with my
 kit authoring and figure implementation; its `receives:`/`bring_rule:`
 design was adopted as the generated carry-forward + `bring_note`
 mechanism. Attribution in
-`_adm/codex_collab/2026-08-06_d47-completeness/`. Review round appended
-below.
+`_adm/codex_collab/2026-08-06_d47-completeness/`. Diff review round
+(same model/effort): three findings, all confirmed and applied — the
+Studio 7 starter now lands as a REAL executable code cell in the
+workbook (generator splits fenced starters; the cell was executed as a
+test), ch3's document step records the check's outcome either way (an
+agreeing check no longer makes the workflow impossible), and Studio 5's
+contrast rule names its own selection (any other route the reader
+chooses) instead of pointing at a mapping the route guide never had.
