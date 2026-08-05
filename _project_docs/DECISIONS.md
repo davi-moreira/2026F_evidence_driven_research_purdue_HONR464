@@ -1849,3 +1849,64 @@ brainstorm before the ledger; retrospective first row; new hard gate: no
 tool-chosen problem, no receipt-less exchange); and the legacy
 `/stations/stationNN-*` URLs from before the flip now alias-redirect
 alongside the studio ones.
+
+## Decision 46: Studio 2 rebalanced — the declaration gets its own lesson (2026-08-05)
+
+**Ruling (Davi).** Studio 2 carried four governance lessons against one
+question lesson. Rebalance it, connect the two purposes, rename freely,
+rewrite as needed — and do not be lazy.
+
+**Structure.** A new core lesson, **"Declare Your Research Question"**
+(`declare-your-question`, rank 62, semantic source and URL — the
+D37-proven insertion path), closes the studio. It takes the
+formal-declaration material D45 had stuffed into ch6 and performs the
+declaration as GOVERNED WRITING: the field card first (freezing the
+human decisions), then AI-drafted candidate wordings under a
+**show-what-changed** discipline (every differing word accounted for, no
+new topics, the tool never chooses), the boundary pair, the stranger
+test, and a dated version zero. Its seeded worked example proves "the
+sentence chooses the rows" (one simulated menu world; wording A counts
+listed entree prices, wording B counts what a student pays; two different
+growth numbers); its AI failure case is declaration-level silent scope
+change. ch6 returns to its compass identity and is retitled **"Choose
+Your Question's Kind and Reach"** (the old title presented prediction as
+a third kind, against the inquiry framework). The studio is retitled
+**"Set your rules, shape your question"**, its steps interleave rule
+beats and question beats, and its milestone_reason states the connection:
+the rules are not a preface to the question; they govern how it is
+written.
+
+**Threading.** ch2's delegation map covers the declaration work
+(candidate wordings delegable; kind, reach, and boundary never); ch3's
+SDIIVDD run targets a claim the reader's starting belief makes; ch4's
+ownership statement starts with the question's words. Contributions
+rewritten to carry the thread; the practice kit's faded task now plants
+an AI candidate wording that silently adds a population, which the reader
+must reject with a written reason. Assessment progressions corrected:
+objective, setting_time, and claim_boundary are defined by the
+declaration lesson.
+
+**Course.** Crosswalk M1 anchors the new lesson (home anchor; six
+lessons at W2 — the partner run measured the load at ~11.6k words before
+the insertion and specified load controls: staged reading, ch6 + the
+declaration treated as one two-stage question lab, M1 graded as one
+integrated artifact, never six notebook submissions). M1's display title
+is "Your Rules and Your Question" (slug immutable) in the brief, master
+plan, and course_config; briefs, adoption table, BOOK_MAP, TOC,
+pointers, companions, schedule, and guides regenerated; displays after
+rank 62 shift by one. RECORDED for the flagged course-content phase
+(with nb01/nb02 from D45): the M1 brief's hand-authored body, the nb02
+source, and the W2 quiz/SRL rebalance.
+
+**Declined, recorded:** Codex's ch2/ch4 retitles ("Decide What AI May
+Do", "Put Your Name on the Work") — the research-director and ownership
+vocabulary anchors course material; its full alternative chapter draft
+(equivalent coverage; mine was validator-clean first).
+
+**Process.** Two-role Codex loop (gpt-5.6-sol, xhigh, read-only): the
+partner adopted the structure with guardrails (ch6 and the new lesson
+own different decisions; no duplicated field-card work; load-neutral in
+practice) and contributed the retitle package, the contribution thread,
+the reject-drill faded task, and the progression moves. Merged with
+attribution (`_adm/codex_collab/2026-08-05_d46-studio2-balance/`).
+Review round appended below.
