@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# pre-commit — refuse to commit a pruned book edition, whoever is committing.
+#
+# The Stop-hook guard covers the automated path. This covers the MANUAL one:
+# a human (or an agent) running `git commit -m "build: Render Quarto site"`
+# in the window after the site render pruned docs/book* and before the three
+# book renders restored them. That path has caused real outages, and it never
+# touches the Stop hook.
+#
+# NOT ACTIVE UNTIL YOU OPT IN:
+#     git config core.hooksPath .githooks
+# To turn it off again:
+#     git config --unset core.hooksPath
+#
+# Deliberately FAIL-OPEN when the checker is unavailable. A pre-commit hook
+# that hard-fails on a missing file makes the repository uncommittable — e.g.
+# after `git checkout v1-compass-build`, a tag that predates this guard. The
+# Stop-hook guard fails CLOSED, so the automated path stays protected either way.
+#
+# Bypass for a genuine deletion:  git commit --no-verify
+
+set -uo pipefail
+
+root="$(git rev-parse --show-toplevel 2>/dev/null)" || exit 0
+guard="$root/scripts/check_docs_prune.sh"
+
+[ -r "$guard" ] || exit 0          # checker absent (old checkout) -> allow
+
+bash "$guard" --index >/dev/null 2>&1
+case $? in
+  0|3) exit 0 ;;                   # safe, or nothing published yet
+  1)   bash "$guard" --index >/dev/null   # re-run loudly so the reason shows
+       echo "[pre-commit] refusing: this commit would publish a pruned book edition." >&2
+       echo "[pre-commit] re-render the books, or bypass with: git commit --no-verify" >&2
+       exit 1 ;;
+  *)   exit 0 ;;                   # checker malfunctioned -> do not brick commits
+esac
