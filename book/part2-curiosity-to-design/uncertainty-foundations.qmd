@@ -12,7 +12,7 @@ advances.
 
 > **The research decision.** What quantity you are actually after, what recipe you
 > will use to guess it, and what you will say about how much that guess could have
-> moved. You decide all three before the data arrive, because each one changes what
+> moved. You decide all three before you inspect the outcomes, because each one changes what
 > the others are allowed to mean.
 
 **The decision on the table: the quantity, the recipe, and the honest statement of
@@ -52,7 +52,7 @@ and those words stop being jargon.
 Three words get confused constantly, and separating them fixes most of the confusion
 in this whole area.
 
-An **estimand** is the quantity you want, defined in the world before any data exist [@morris2019simulation].
+An **estimand** is the quantity you want, defined in the world before you touch the outcome data [@morris2019simulation].
 Example: the average monthly rent paid by all 4,000 households in one town, in one
 month. Notice that it is a number about the world, not about your data. It would have
 a value even if you never ran a survey.

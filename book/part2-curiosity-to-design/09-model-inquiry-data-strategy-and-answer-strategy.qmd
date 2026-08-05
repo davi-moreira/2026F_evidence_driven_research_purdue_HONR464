@@ -25,7 +25,7 @@ Her worry is simple: "Show me the exact number you are after, then show me that 
 way you collect and crunch the data can actually reach that number. If those two
 drift apart, every result you bring me answers a question I never asked." A design
 that skips this step is not rigorous. It is a hope with good formatting. Getting the
-four parts to agree, on paper, before any data exist, is the cheapest quality check
+four parts to agree, on paper, before you inspect any outcome-bearing field or compute the answer, is the cheapest quality check
 you will ever run.
 
 ## The concept
@@ -36,7 +36,7 @@ letter each.
 - **Model**: your written picture of how the world could work, meaning which things
   exist and what could affect what. Example: "a listener's chance of accepting a
   recommended song runs from 0 to 1, and a new recommender could nudge it up."
-- **Inquiry**: the one exact quantity you want from that world, named before any data
+- **Inquiry**: the one exact quantity you want from that world, named before any outcome
   arrive. Example: "the average lift in accept rate the new recommender causes across
   listeners."
 - **Data strategy**: your plan for how the data come to exist, meaning who gets

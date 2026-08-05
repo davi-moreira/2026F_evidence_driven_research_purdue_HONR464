@@ -231,7 +231,11 @@ and computes. The evidence decides, and you are the one who reads the evidence.
    label and code quietly disagree).
 5. Run a placebo: shuffle your group labels, re-run the same code unchanged, and confirm
    the fake gap lands in the ordinary part of that pile.
-6. Log the analysis in your AI Research Ledger, cycle log attached, and verify at least
+6. Close with the milestone's three checks: restart and run everything from
+   a clean state and confirm the headline numbers match, record your
+   environment (versions, packages, data files), and trace your provisional
+   claim to the exact output that supports it.
+7. Log the analysis in your AI Research Ledger, cycle log attached, and verify at least
    one output with a named method from the [Verification Guide](../verification-guide.qmd).
    **Alternative code** fits a computed gap well. An AI reviewer may run the check with
    you; the decision to accept or reject stays yours.

@@ -10,129 +10,109 @@ advances.
 
 [![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch05_from_curiosity_to_a_research_problem.ipynb){target="_blank"}
 
-> **The research decision.** Research starts with a jump no tool can make for you:
-> a curiosity you own. This first lesson of the book commits yours, stretches it
-> with every tool at the table, and lands on the one research problem that gets
-> months of your work — defended as important, feasible, and genuinely new.
+> **The research decision.** Begin with an experience that will not leave you
+> alone. Decide which curiosity you are willing to own, let AI widen the
+> possibilities without choosing for you, and commit to one research problem
+> with your reasons attached. The formal research question comes later, after
+> your working rules and ledger exist.
 
 ## Why this decision matters
 
 **The decision on the table: which one research problem, out of everything your
 curiosity could become, gets months of your work.**
 
-Picture a research mentor reading your one-line pitch before your first meeting.
-They do not ask about your data or your software. They ask one thing: *"What,
-exactly, is the question?"* Their reason: *"I can tell in a paragraph whether someone
-knows what they are asking. If they do not, nothing downstream saves the project."*
+Imagine finding a restaurant menu from 2019. A meal that once cost eleven
+dollars now costs sixteen. Your first reaction may be immediate: prices near
+campus have exploded.
 
-Everything you do later sits below this decision. A vague question makes every
-later choice arbitrary, because any data and any answer will seem to fit. A sharp
-question tells you what evidence you need and what would count as being wrong. Pick
-the problem well and the work has a spine. Pick it badly and no analysis will
-straighten it.
+That reaction is useful. It is also not yet a finding. Perhaps restaurant
+prices rose faster than prices generally. Perhaps the old menu was unusually
+cheap. Perhaps portions changed. Perhaps fees moved out of the listed price.
+Perhaps the example is memorable precisely because it is unusual. Research
+begins when the first explanation stops being the only explanation you can
+see.
+
+You do not need a polished question yet. You need a curiosity strong enough to
+survive alternatives. AI can help here: it can propose explanations,
+comparisons, affected groups, or implications you did not think to name. Use
+that help, mark what the tool introduced, and preserve the exchange. The final
+commitment remains yours, because you will be the one who must pursue, revise,
+and defend it.
 
 ## The concept
 
-Before the funnel, the jump. Albert Einstein once sketched research as a cycle:
-you start from experience, you leap to an idea that could explain it, and then
-you reason back down to predictions you can check. The leap upward has a name.
-**Abduction** is the act of inventing a new explanation for a surprising
-observation, a cause nobody handed you. Example: sales at a shop dip every third
-week, and you guess that a payday cycle is behind it, a hypothesis that appears
-in no dataset. Here is that cycle in one picture:
+In the account of scientific discovery that Zahavy develops from Einstein,
+inquiry moves through a cycle [@zahavy2026jump]:
 
 ```{mermaid}
 flowchart LR
-  E["Experience<br/>what you observe"] -- "the jump: a new idea<br/>(abduction, yours to make)" --> A["Ideas and assumptions<br/>what could explain it"]
-  A -- "derivation<br/>(delegable, then checked)" --> P["Predictions"]
+  E["Experience<br/>something in the world catches"] -- "the jump: a possible explanation<br/>(abduction, yours to make)" --> J["Ideas and assumptions<br/>what could explain it"]
+  J -- "derivation<br/>(delegable, then checked)" --> P["Predictions<br/>what else should be true"]
   P -- "verification against evidence<br/>(delegable, then checked)" --> E
 ```
 
-Why open a book about AI-driven research here? Because the jump is the one move
-today's AI cannot make for you. A 2026 position paper from Google DeepMind, *LLMs
-can't jump* (Zahavy 2026), argues that current AI has mastered finding patterns
-in data and is fast conquering step-by-step derivation, but cannot yet make the
-jump, because it has no experience of the world to leap from, only text about
-the world. Its case study is Einstein himself: when he began building general
-relativity, no pile of failed measurements was pushing him — Newton's physics
-fit the data almost perfectly. The new idea came from imagining what falling
-feels like, not from compressing observations. Treat that as an argued position,
-not a settled boundary; position papers exist to be tested, and tools keep
-improving. But it is why this book starts with YOUR curiosity: whatever the
-tools conquer next, you answer for the claim, so the jump is yours to make and
-to defend.
+Experience does not logically dictate one explanation; the researcher makes a
+jump toward an idea that could make sense of it. The jump has a name.
+**Abduction** is proposing what might explain a pattern in the first place,
+where deduction asks what must follow if an explanation is true and induction
+looks for patterns across observations. Abduction creates a candidate, not
+proof. Example: restaurant prices seem to change every third week, and "payday
+timing moves menu updates" is an abductive possibility. It gives you something
+to check; it does not become evidence by sounding plausible.
 
-And the jump is not a solo performance after its first line is written. Once
-your curiosity is on the page, AI is welcome at the table: it can stretch the
-curiosity, propose directions you had not named, and argue against your
-favorite. What it cannot do is care. You choose what you would chase even if
-every tool disappeared tomorrow.
+Why does a book about AI-driven research open here? Zahavy's position paper,
+written at Google DeepMind, uses Einstein's route to general relativity to
+argue that important scientific jumps do not always begin with a loud error
+signal: Newtonian physics already fit the data well, and the reorganizing idea
+came from thought experiments about falling observers, not from compressing
+observations. On that basis the paper argues that current language models are
+strong at recombining learned patterns and increasingly useful for derivation,
+while lacking the grounding in experience from which this kind of jump begins
+[@zahavy2026jump]. Treat that as an argued position, not a settled boundary;
+position papers exist to be tested, and tools keep improving. The practical
+point holds either way: you answer for the claim, so the jump is yours to make
+and to defend, and this book begins with yours.
 
-With the jump committed, the rest of this lesson is the reasoning DOWN:
-turning curiosity into a problem is a funnel with four stops. Each stop throws
-away vagueness the stop above it still allowed [@booth2024craft].
+The jump is not a solo performance after its first line is written. Once your
+curiosity is on the page, AI is welcome at the table as a divergence partner:
+ask it for alternative explanations, overlooked comparisons, or questions that
+would challenge your starting belief. Mark every person, population, outcome,
+mechanism, or comparison it introduces as NEW, accept no novelty claim or
+citation without checking, and keep or reject each direction with a reason.
+What the tool cannot do is care; you choose what you would chase even if every
+tool disappeared tomorrow.
 
-- **Curiosity**: a felt interest with no edges yet. Example: *"why do some small
-  businesses make it through a downturn when others close?"* You cannot collect
-  evidence on it, because it never says who or what to look at.
-- **Topic**: a curiosity with edges, a territory someone could gather evidence
-  inside. Example: *"cash reserves and survival among independent restaurants."*
-- **Research problem**: one specific unknown inside that territory whose absence
-  matters. Example: *"we do not know whether restaurants that entered the 2020
-  downturn with more cash on hand were more likely to still be open two years
-  later."*
-- **Answerable question**: the single sentence evidence can answer, and be wrong
-  about. Example: *"among independent restaurants in one city, did those holding at
-  least three months of operating cash in January 2020 stay open through 2022 at a
-  higher rate than those holding less?"*
+With the jump committed, the rest of the lesson reasons downward, in four
+moves [@booth2024craft]:
 
-A good question also carries three things it must name, or you will not know what
-to record.
+1. **Experience.** What happened, or what did you notice?
+2. **Curiosity.** What do you want to understand about it?
+3. **Topic.** What area of inquiry contains that curiosity?
+4. **Research problem.** What is not yet understood well enough for the
+   decision, explanation, or audience you care about?
 
-- **Units of analysis**: the who or what each row of your evidence stands for.
-  Example: one restaurant. If you cannot say what one unit is, you cannot count
-  anything.
-- **Target population**: the full group the question is really about, beyond the
-  handful you reach. Example: all independent restaurants in that city, not only the
-  thirty whose owners answered you.
-- **Outcome**: the observable thing that varies, the quantity you actually record.
-  Example: whether the restaurant was still open in 2022. It must be measurable, even
-  if imperfectly.
+Stop there. Units, outcomes, conditions, question kind, and claim reach belong
+to the formal declaration that closes the next studio.
 
-Finally, three tests decide whether a candidate problem is worth months of your work [@hulley2013designing].
-**Importance** asks whether anyone beyond you would care about the answer.
-**Feasibility** asks whether you can actually get the evidence, with the access
-and time you have. **Contribution** asks whether the answer adds something not
-already settled, since a ten-minute search that finds it already known kills the
-contribution.
+Then test the problem three ways [@hulley2013designing]. **Importance** asks
+who could use the answer, and for what. **Feasibility** asks whether you can
+reach suitable evidence with the time, skills, and permissions you actually
+have. **Possible contribution** asks what the project might add — and stays
+provisional, because you cannot know a gap is real until Studio 3 maps the
+existing evidence.
 
-One more lens sharpens all three, and it comes from information theory. A 2026
-essay in *Science*, "Advancing science by designing for surprise" (Evans, Petroff,
-and King 2026), starts from a blunt fact: an answer that confirms what everyone
-already believes teaches almost nothing. **Surprise** is the distance between what
-informed people expect and what the evidence shows, and it is what makes an answer
-informative. Example: if everyone advising first-years already assumes more walking
-goes with better sleep, confirming the link changes no advice, while finding no link
-would change it overnight. The essay points to large studies of
-published papers in which the most surprising ones were about five times more likely
-to land among the most-cited work. That is an association in citation data, not a law
-of research quality: citations measure attention, the studies state their own limits,
-and a surprising answer can still be wrong. It also comes with a warning you should
-carry: the more surprising the claim, the more evidence it takes to support it, so
-surprise is a place to aim your question, never a license to inflate your answer.
-
-The essay suggests a discipline you can adopt today. Before you look at any
-evidence, write down the answer you expect, and name the person for whom a
-different answer would be genuinely surprising. That written sentence is your
-**expected answer**: the prediction your evidence will later confirm or, more
-valuably, overturn. Example: "I expect heavier walkers to sleep better, and a
-residence-life advisor would be surprised if they did not." When you reach your
-results, the gap between that sentence and what you found is the most honest
-measure of what your project taught anyone.
-
-Once you have a question, you will also classify what *kind* of answer it wants.
-That is the inquiry compass, and it is the whole job of the next chapter. For now,
-the work is the funnel.
+One more lens sharpens all three. A 2026 essay in *Science*, "Advancing
+science by designing for surprise," starts from a blunt fact: an answer that
+confirms what everyone already believes teaches almost nothing
+[@evans2026surprise]. **Surprise** is the distance between what informed
+people expect and what the evidence shows. So before you look at any
+evidence, write the answer you currently expect and name the person for whom
+a different answer would be genuinely surprising. That written sentence is
+your **expected answer**, and the gap between it and what you eventually find
+is the most honest measure of what your project taught anyone. The essay's
+warning travels with the tool: the more surprising the claim, the more
+evidence it takes, so surprise is a place to aim your question, never a
+license to inflate your answer.
 
 ## A worked example
 
@@ -143,20 +123,15 @@ quality in undergraduates. Push further to a **research problem**: we do not kno
 whether more daily walking goes with better-rated sleep among first-years living
 in residence halls. That points at one missing piece, not a whole subject.
 
-Now sharpen it into an **answerable question**: *"among residence-hall first-years,
-do those who average more than 8,000 steps a day report better sleep quality than
-those who average fewer than 4,000?"* The three carried terms snap into place. The
-**unit** is one first-year. The **outcome** is a sleep-quality rating, say a
-1-to-10 self-report you collect on a phone. The **population** is residence-hall
-first-years, not the whole campus.
-
 Now run the three tests. It clears **importance** (anyone advising sleep-deprived
 first-years wants the answer), **feasibility** (step counts and a nightly rating
 are both collectable in a few weeks), and **contribution** (the activity-and-sleep
 link is studied broadly in adults but far less in this dorm-living, first-year
-group). The curiosity is now a problem you could defend.
+group). The curiosity is now a problem you could defend. Sharpening it into the
+formal question — the sentence that fixes units, outcome, and reach — is the
+close of the next studio, after your rules and ledger exist.
 
-The funnel from curiosity to an answerable question, and the tests it has to survive, follow the standard treatment of research problems [@booth2024craft].
+The funnel from curiosity to a research problem, and the tests it has to survive, follow the standard treatment of research problems [@booth2024craft].
 
 The block below builds this example's data and prints the numbers this section quotes. Run it, then change one input and watch which sentence above stops being true.
 
@@ -243,13 +218,15 @@ have to give when someone asks why this problem and not another.
    exchange (task, tool, what you kept, how you checked); the next studio
    opens your AI Research Ledger, and this log becomes its first row.
 
-2. Take the strongest curiosity you now hold and walk it down the funnel in writing: curiosity,
-   topic, research problem, answerable question. One line per stop, so you can see
-   where the vagueness leaves.
-2. Under the question, name its three carried terms out loud: what one unit is, exactly
-   what you would record as the outcome, and the population the answer is meant to
-   speak for.
-3. Score it on importance, feasibility, and contribution, one honest sentence each.
+2. Take the strongest curiosity you now hold and walk it down the funnel in
+   writing: experience, curiosity, topic, research problem. One line per stop,
+   so you can see where the vagueness leaves. Stop at the problem; the formal
+   question belongs to the next studio.
+3. Run the ownership test on the problem you are converging on: would you
+   still chase it if every AI tool disappeared tomorrow, and is the scope one
+   you chose rather than one the tool drifted you into? Write the one-line
+   answer to each.
+4. Score it on importance, feasibility, and contribution, one honest sentence each.
    Feasibility means the access, data, and time you actually have, not the ones you
    wish you had.
 
@@ -265,7 +242,7 @@ have to give when someone asks why this problem and not another.
    *After running, verify:* open each source before you trust it. This counters
    **confident fabrication**, where a fluent answer cites a real-sounding study that
    does not exist.
-4. Write a second candidate problem from the same curiosity and scope it the same way.
+5. Write a second candidate problem from the same curiosity and scope it the same way.
    Then choose between them, and write one sentence on why the other one lost.
 
    **Widen a curiosity into candidates you check:**
@@ -281,10 +258,10 @@ have to give when someone asks why this problem and not another.
    not contain. Keep or reject each marked element with a reason; that trail
    is part of your declaration. This counters **silent scope change**, where
    the tool quietly answers a nearby question and hands it back as yours.
-5. Under the question you kept, write your expected answer in one sentence, and name
+6. Under the problem you kept, write your expected answer in one sentence, and name
    one real person or role for whom a different answer would be genuinely surprising.
    Keep this sentence; late in the book you will hold your evidence up against it.
-6. Ask an AI to attack your chosen problem on all three tests, and keep only the
+7. Ask an AI to attack your chosen problem on all three tests, and keep only the
    objections that survive your own reasoning.
 
    **Red-team the problem you chose:**
@@ -299,13 +276,17 @@ have to give when someone asks why this problem and not another.
    *After running, verify:* keep only the objections that survive your own reasoning.
    This counters **sycophantic agreement**, where a tool praises your idea because you
    proposed it.
-7. Add it to the simple exchange log you started (the next studio's ledger inherits every line), and verify your question with a named method from
+8. Add it to the simple exchange log you started (the next studio's ledger inherits every line), and verify your chosen problem with a named method from
    the [Verification Guide](../verification-guide.qmd). The fitting method here is peer
    reasoning: hand the single sentence to someone who knows nothing about your project
    and ask them to tell you, from that sentence alone, what one unit is, what you would
    record, and who the answer is about. If they stall, the missing term is your next
    revision. An AI reviewer may run the check with you; the decision to accept or
    reject stays yours.
+
+You have chosen a problem worth pursuing. Before AI performs consequential
+work on it, give every exchange a record and every output a standard of
+verification; that is the next studio's job.
 
 <!-- studio-continue:begin -->
 > **Milestone next.** This was the last lesson of Studio 1.

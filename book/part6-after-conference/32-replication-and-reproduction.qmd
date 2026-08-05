@@ -181,7 +181,9 @@ claim, never the confident story about them.
 <!-- station-pointer:end -->
 
 *Your project already has claims you can defend and a written disclosure of how AI
-helped you reach them; this step turns all of it into files a stranger could run
+helped you reach them; this step turns all of it into files built for a
+stranger to run. Your own cold restart is the solo proxy for that stranger,
+and it is labeled as such until someone who is not you actually runs it
 without you in the room.*
 
 The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.

@@ -10,15 +10,18 @@ advances.
 
 [![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch01_ai_is_your_arm_not_your_brain.ipynb){target="_blank"}
 
-> **The research decision.** An AI tool can hand you a fact, a number, a citation,
-> or a finished paragraph in seconds. None of it is evidence yet. Your decision in
-> this chapter is what has to happen in between: which check turns an output into
-> something you would put your name on, and what you do when that check fails.
+> **The research decision.** Decide what must happen between an AI output and
+> evidence you are willing to use. Name the check, record the exchange, and
+> keep responsibility for the result.
 
 ## Why this decision matters
 
 **The decision on the table: what has to happen to an AI's output before you are
 willing to call it evidence.**
+
+You arrive with a curiosity commitment and, if you used AI to widen it, a
+receipt for that exchange. Now the stakes change: a brainstorm can produce a
+possibility, but it cannot make a factual statement reliable.
 
 Picture an audit review. A **certified public accountant (CPA)** is an accountant
 licensed to sign off on a company's financial statements, and that signature makes
@@ -62,12 +65,16 @@ short: **Ask, then Verify, then Document.** Use the tool ambitiously, confirm ev
 fact and number yourself, then log the tool, the task, and the check in a record that
 travels with your work [@nist2024genai].
 
-Why draw the line exactly there? Lesson 1 opened this book with the answer:
-Einstein's jump, the leap from experience to a new idea, is the one move the
-DeepMind position paper argues today's AI cannot make for you. You made your
-jump there and chose a problem. This chapter owns everything after the jump:
-the reaching, fetching, drafting, and computing that CAN be delegated, and the
-checking that turns what comes back into evidence.
+Why draw the line exactly there? The curiosity studio opened with the
+discovery cycle Zahavy presents through Einstein: experience, an explanatory
+jump, predictions, and a return to evidence [@zahavy2026jump]. There you
+worked the upstream side of inquiry, where a possible explanation begins.
+This lesson starts downstream. Once an idea exists, AI can help locate
+evidence, draft text, transform data, or inspect code, and those abilities
+are valuable precisely when their products are verified. That is why the
+ledger opens now: if you used AI in the curiosity studio, its receipt becomes
+the ledger's first row, marked retrospective, because the date a ledger opens
+does not erase an earlier delegation.
 
 ## A worked example
 
@@ -220,3 +227,6 @@ answering for the choice, is the researcher's job.
 
    After running, verify (counters *sycophantic agreement*): if every objection is mild
    or it calls your choice "well-balanced," push back and ask for the single worst flaw.
+
+The ledger tells you what happened. The next decision is what should be
+handed to a tool in the first place.

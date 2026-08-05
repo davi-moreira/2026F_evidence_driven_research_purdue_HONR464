@@ -10,11 +10,11 @@ advances.
 
 [![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch27_research_posters.ipynb){target="_blank"}
 
-> **The research decision.** One figure will do most of your talking. Decide whether
-> it is honest: whether its visual impression matches its actual number, whether its
-> uncertainty sits in the same glance as the claim, and whether every reader,
-> including a color-blind or screen-reader reader, can receive it. You own the
-> headline verb, and you own the call that the picture never says more than the data.
+> **The research decision.** If your artifact carries a quantitative visual,
+> decide what that visual must let the audience see and what uncertainty must
+> stay visible. If your venue is a poster, also decide how the figure
+> participates in the page's scan path. You own the headline verb, and you own
+> the call that the picture never says more than the data.
 
 ## Why this decision matters
 
@@ -26,7 +26,11 @@ what its numbers say, and nothing more.**
 > I read a word of your methods, and now I distrust the whole board."*
 > — a **skeptical peer** walking a poster session
 
-At a poster session a stranger gives you ninety seconds and one glance. The figure
+A journal reader can study a figure for minutes. A seminar audience may see
+it for thirty seconds. A poster visitor may first meet it from four feet
+away. The venue changes the viewing conditions; it never excuses an unlabeled
+axis, a hidden denominator, an inaccessible color choice, or uncertainty
+detached from the claim. At a poster session a stranger gives you ninety seconds and one glance. The figure
 does most of the talking, and a figure can lie with true numbers. An axis that
 starts just below your data turns a rounding-error gap into a landslide. A reader
 who cannot tell your red bar from your green one receives no message at all. This
