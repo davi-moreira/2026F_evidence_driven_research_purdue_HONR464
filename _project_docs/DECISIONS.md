@@ -1760,3 +1760,82 @@ on reinsertion (used the computed anchor; path regression-tested); Studio
 12's purpose line is capability-honest ("agentic where your tools truly
 plan and act, human-sequenced otherwise"); and the road figure's alt text
 was resynchronized with its visible labels.
+
+## Decision 45: The flip — the book opens with your curiosity (2026-08-05)
+
+**Ruling (Davi), overruling D43's Option-4 middle path and parts of D44.**
+Studios 1 and 2 are FLIPPED so the studio-and-lesson reading order itself
+realizes the arc *human curiosity → ledger and rules → verified AI
+assistance → formal research question*, with fluid transitions and an
+engaging undergraduate narrative; the curiosity opening is grounded in the
+Einstein scientific-discovery framework as presented by the Google
+DeepMind position paper "LLMs can't jump" (Zahavy 2026); and AI is allowed
+at EVERY step of the book — the reader keeps the final decision, and for
+brainstorming in particular AI must be usable from the first page, before
+the ledger formally exists (relaxing D43's ledger-before-prompt invariant
+by ruling; the pre-ledger exchange keeps a simple receipt that becomes the
+ledger's first row, marked retrospective). Also ruled: Studio 10's D44
+identity must reach its chapters, and every studio's lessons must visibly
+connect to the studio's proposal.
+
+**Structure (identity preserved).** Station `frame-the-inquiry` takes rank
+1, retitled "Begin with your curiosity", holding `curiosity-to-problem`
+(ch5, rank 5 → the book's Lesson/Chapter 1) with NEW checkpoint
+`curiosity-committed-v0` and milestone "Your curiosity, committed".
+Station `govern-the-work` takes rank 2, retitled "Govern the work and
+declare your question", holding ch1–ch4 plus `question-kinds` (station
+move, D38 precedent) as the arc-closing lesson; checkpoint
+`question-declared-v0` moved with it (the station now carries both
+checkpoints, presented sequentially) and the milestone is "Your rules and
+your question". Studio/milestone page URLs moved with the ranks; legacy
+URLs alias-redirect both directions (generator `LEGACY_RANKS`). Rubrics:
+the curiosity checkpoint got authored criteria; governance criterion 5
+covers both artifacts plus a dedicated declaration criterion.
+
+**Content.** ch5 rebuilt as the opening lesson: the Zahavy/Einstein
+discovery cycle (cited, attributed as a position, never a capability
+theorem), abduction, AI as divergence partner from page one (the
+structured brainstorm with NEW-labeling lives here), the four-move funnel
+that STOPS at the research problem — units, outcomes, conditions, kind,
+and reach belong to ch6's formal declaration, which now owns a field-card
+"formal declaration" section and closes the arc as Studio 2's last
+lesson. ch1 opens downstream of the jump, receives the brainstorm receipt
+retrospectively into the fresh ledger, and runs the first verified
+delegation on the reader's own problem. Six authored transition sentences
+join ch5→1→2→3→4→6→7. Preface, organization page, and road figure follow
+("Studio 1: begin with your curiosity").
+
+**Studio 10 chapters** now route by format: ch27 opens on venue viewing
+conditions (paper/talk/poster) with the poster as the scan-path case;
+ch28 declares the gallery walk and print lock poster procedure (a
+manuscript cold read and a timed rehearsal are not gallery walks); ch29
+is "Research Pitches, Talks, and Seminars" with the
+not-one-artifact-at-different-speeds decision; ch30's decision block is
+channel-aware (live, reviewer report, editor query, written response).
+
+**Alignment sweep (12 studios, applied):** ch8 closes by revising or
+defending the declared question against the map; ch9/uncertainty
+foundations say "before you inspect outcome-bearing fields", honest for
+existing-data projects; ch16 says primary-pathway-plus-contrast, not "all
+four"; ch17 keeps the contract provisional; ch20 closes with the
+milestone's restart/environment/trace checks; ch31's bridge stands on the
+claim table; ch32 labels the author's cold restart a solo proxy; ch33
+stops presuming the Studio 11 capsule; ch37's no-AI bypass removed (the
+honest minimum mode is one assistant playing the review roles — D44's
+core ruling). Studio 8 needed nothing.
+
+**Course.** Crosswalk re-mapped: M0 = ch5, `frame-the-inquiry`,
+curiosity checkpoint (its authored curiosity-map substance fit the flip
+naturally); M1 = ch1–4 + ch6, both governance checkpoints; W1/W2 units,
+master plan, and M0/M1 submission rows re-anchored; bridges regenerated.
+FLAGGED follow-on, not done: the nb01/nb02 SOURCE content rebuild (their
+instructional identities are still the pre-flip sequence; generated
+course surfaces carry the D41 rebuild-in-progress notice).
+
+**Process.** Two-role Codex loop (gpt-5.6-sol, xhigh, read-only): the
+mirror partner VERIFIED the structural design, contributed the ch5/ch1/
+ch6 narrative drafts, the transitions, the S10 routing, and the sweep's
+fix list, and caught a duplicate-numbering defect and a jump-attribution
+overreach ("no tool can" → Zahavy's argued position) in the base. Merged
+with attribution (`_adm/codex_collab/2026-08-05_d45-flip-s1s2/`). Review
+round appended below.
