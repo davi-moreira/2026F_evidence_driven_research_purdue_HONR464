@@ -171,7 +171,7 @@ lessons:
      url_path: part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html}
   - {id: declare-your-question,     state: active, rank: 62,  part: part2,
      station: govern-the-work, role: core,
-     title_en: "Declaring Your Research Question",
+     title_en: "Declare Your Research Question",
      source: part2-curiosity-to-design/declare-your-question.qmd,
      companion: declare_your_question.ipynb,
      url_path: part2-curiosity-to-design/declare-your-question.html}

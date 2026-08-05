@@ -73,7 +73,7 @@ phase (before launch).
 | Wk | Studio sprint (notebook) | Lec | Milestone · due | The week's research decision |
 |---|---|---|---|---|
 | 1 | S1 Begin with your curiosity (`nb01`) | 2 | M0 · Fri Aug 28 | What stays human, what may be delegated, and how will every delegation be checked and recorded? |
-| 2 | S2 Govern the work and declare your question (`nb02`) | 2 | M1 · Fri Sep 4 | What exactly am I asking — kind, reach, units, outcome, and claim boundary? |
+| 2 | S2 Set your rules, shape your question (`nb02`) | 2 | M1 · Fri Sep 4 | Which rules will govern AI-assisted work, and what exact question will those rules let me sign? |
 | 3 | S3 Ground it in verified evidence (`nb03`) | 1 | M2 · Fri Sep 11 | What is genuinely known, what is unresolved, and how must my question change? |
 | 4 | S4 Declare and diagnose provisionally (`nb04`) | 2 | M3 · Fri Sep 18 | What is my provisional Contract v0 — MIDA, operationalization, uncertainty, permission status? |
 | 5 | S5 Develop the pathway — route hub (`nb05`) | 2 | M4 · Fri Sep 25 | Which route do my question and licence support, what does the mandated contrast rule out, and what can my route never establish? |

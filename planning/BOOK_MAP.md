@@ -21,8 +21,8 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 | I | 3 | The Student as Research Director | nb02 |
 | I | 4 | Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend | nb02 |
 | I | 5 | Research Responsibility and Intellectual Ownership | nb02 |
-| II — From curiosity to research design | 6 | Descriptive, Predictive, and Causal Questions | nb02 |
-| II | 7 | Declaring Your Research Question | nb02 |
+| II — From curiosity to research design | 6 | Choose Your Question's Kind and Reach | nb02 |
+| II | 7 | Declare Your Research Question | nb02 |
 | II | 8 | Research Builds on Research | nb03 |
 | II | 9 | Finding and Verifying Prior Evidence | nb03 |
 | II | 10 | Model, Inquiry, Data Strategy, and Answer Strategy | nb04 |

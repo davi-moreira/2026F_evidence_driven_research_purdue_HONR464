@@ -39,8 +39,8 @@ status: skeleton-revised
 
 contract_fields:
   # The versioned Research Contract (D35 §3), atomic per S1.
-  - {field: objective,             progression: {defined_by: question-kinds,
-      worked_example_by: question-kinds, faded_practice_by: tbd-phase-3}}
+  - {field: objective,             progression: {defined_by: declare-your-question,
+      worked_example_by: declare-your-question, faded_practice_by: tbd-phase-3}}
   - {field: target_estimand,       progression: {defined_by: uncertainty-foundations,
       worked_example_by: uncertainty-foundations, faded_practice_by: tbd-phase-3}}
       # S1 correction: "estimand" is NOT taught by ch06; D35 assigns it to
@@ -48,7 +48,7 @@ contract_fields:
       # criterion assessing this field must fail the timing check.
   - {field: population,            progression: {defined_by: question-kinds,
       worked_example_by: mida, faded_practice_by: tbd-phase-3}}
-  - {field: setting_time,          progression: {defined_by: question-kinds,
+  - {field: setting_time,          progression: {defined_by: declare-your-question,
       worked_example_by: mida, faded_practice_by: tbd-phase-3}}
   - {field: data_strategy,         progression: {defined_by: mida,
       worked_example_by: declare-diagnose, faded_practice_by: tbd-phase-3}}
@@ -73,7 +73,7 @@ contract_fields:
       # the four permission states; also a BLOCKING gate, never a score
   - {field: ai_activity_provenance, progression: {defined_by: sdiivdd,
       worked_example_by: sdiivdd, faded_practice_by: tbd-phase-4}}
-  - {field: claim_boundary,        progression: {defined_by: question-kinds,
+  - {field: claim_boundary,        progression: {defined_by: declare-your-question,
       worked_example_by: results-to-claims, faded_practice_by: tbd-phase-4}}
 
 levels:
