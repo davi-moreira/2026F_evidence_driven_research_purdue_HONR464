@@ -1754,4 +1754,9 @@ partner merged with attribution
 (`_adm/codex_collab/2026-08-05_d44-opening-s10-s12/`). Declined and
 recorded: Lesson-5-first brainstorm; "Special topic: Agentic-AI research
 practice" as the S12 title; the ch37 retitle (course deliverable
-anchor). Review round appended below.
+anchor). Diff review round (same model/effort): three findings, all
+confirmed and applied — the banner updater's H1 branch no longer crashes
+on reinsertion (used the computed anchor; path regression-tested); Studio
+12's purpose line is capability-honest ("agentic where your tools truly
+plan and act, human-sequenced otherwise"); and the road figure's alt text
+was resynchronized with its visible labels.

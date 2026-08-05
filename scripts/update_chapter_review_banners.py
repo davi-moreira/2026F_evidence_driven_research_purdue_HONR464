@@ -107,7 +107,7 @@ def main() -> None:
                                  f"anchor banner")
                     insert_at = h.end()
                 body = text[insert_at:].lstrip("\n")
-                path.write_text(text[:m.end(1)].rstrip("\n") + "\n\n"
+                path.write_text(text[:insert_at].rstrip("\n") + "\n\n"
                                 + banner + "\n" + body)
                 added += 1
             else:
