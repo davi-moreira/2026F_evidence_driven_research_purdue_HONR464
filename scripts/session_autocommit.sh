@@ -44,6 +44,37 @@ if git diff --quiet && git diff --cached --quiet; then
 fi
 
 QUARTO="/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto"
+GUARD="$PROJECT_DIR/scripts/check_docs_prune.sh"
+
+# Run the docs-prune guard. Keyed on the EXIT CODE, never on stdout: a guard
+# that dies (CRLF, lost exec bit, bad interpreter) prints nothing, and treating
+# silence as "safe" is exactly the failure this guard exists to prevent.
+#   0 -> verified safe;  1 -> prune, names on stdout;  anything else -> unknown.
+# Unknown blocks too. A skipped auto-commit costs nothing; the next turn picks
+# it up. A bad push takes the published books offline.
+guard_or_block() {
+  local mode="$1" out rc
+  [ -r "$GUARD" ] || { log "guard missing ($GUARD) — refusing to publish docs/"; return 1; }
+  out="$(bash "$GUARD" "$mode" 2>/dev/null)"; rc=$?
+  case "$rc" in
+    0) return 0 ;;
+    1) bash "$GUARD" "$mode" >/dev/null   # re-run loudly, so the reason is visible
+       log "BLOCKED: pruned book edition(s):$(printf ' %s' $out)"
+       return 1 ;;
+    3) return 0 ;;                        # nothing published yet — nothing to protect
+    *) bash "$GUARD" "$mode" >/dev/null
+       log "BLOCKED: guard error (rc=$rc) — not publishing docs/"
+       return 1 ;;
+  esac
+}
+
+# A Quarto render already in flight means docs/ is mid-rewrite. Committing now
+# captures a half-written site, and starting a second render on the same output
+# directory manufactures the very corruption we are trying to detect.
+if pgrep -f 'quarto.*render' >/dev/null 2>&1; then
+  log "a quarto render is in flight — not committing this turn"
+  exit 1
+fi
 
 # Which tracked files changed (working tree + already-staged), excluding rendered output.
 changed="$(printf '%s\n%s\n' "$(git diff --name-only)" "$(git diff --cached --name-only)" | sort -u)"
@@ -64,6 +95,15 @@ if [ -n "$needs_render" ]; then
   fi
 fi
 
+# Before staging anything: is the published site whole? This is the check the
+# 2026-08-05 incident needed. The render block above only runs when NON-docs
+# content changed, so a tree containing nothing but a pruned docs/book* skipped
+# it entirely and committed 268 deletions.
+if [ "$DRY" != "1" ] && ! guard_or_block --worktree; then
+  log "RESULT: blocked-docs-prune — re-render the books, then the next turn will commit"
+  exit 1
+fi
+
 # Stage tracked modifications/deletions only.
 run "git add -u"
 # Rendering can create NEW files under docs/; stage those (scoped to docs/ only — safe).
@@ -78,6 +118,16 @@ if [ "$DRY" = "1" ]; then
 fi
 if git diff --cached --quiet; then
   exit 0
+fi
+
+# Last line of defence: judge what is actually STAGED, which is what would be
+# published. Catches anything that slipped in between the worktree check and
+# here, including pages staged as zero bytes by a truncated render.
+if ! guard_or_block --index; then
+  log "unstaging docs/ and leaving the tree untouched"
+  git reset -q -- docs 2>/dev/null || true
+  log "RESULT: blocked-docs-prune (staged)"
+  exit 1
 fi
 
 git commit -m "chore: Session auto commit (Claude Code Stop hook)
