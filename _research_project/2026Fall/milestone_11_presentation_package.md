@@ -50,7 +50,7 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 33 — [Research Pitches](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch29_research_pitches.ipynb)
+- Ch. 33 — [Research Pitches, Talks, and Seminars](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch29_research_pitches.ipynb)
 - Ch. 34 — [Difficult Questions and Uncertainty](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch30_difficult_questions_and_uncertainty.ipynb)
 
 These sections are the point of the reading, not extra work: across the
