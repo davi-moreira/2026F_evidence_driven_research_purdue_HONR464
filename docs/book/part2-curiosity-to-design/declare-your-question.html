@@ -768,7 +768,7 @@ div.csl-indent {
 <section id="a-worked-example" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">7.3</span> A worked example</h2>
 <p>The restaurant-prices reader arrives with a classified lead question: <em>“did menu prices near campus rise faster than overall prices between 2019 and 2025?”</em> Descriptive kind, data-at-hand reach. Now the declaration.</p>
-<p>Watch what the wording decides. The block below builds a tiny menu world and asks the question two ways. Wording A pins the outcome to listed dinner-entree prices. Wording B asks what a student actually pays, which quietly includes delivery fees and every item type. Same world, two questions, two different answers:</p>
+<p>Watch what the wording decides. The block below builds a tiny menu world and asks the question two ways against the same overall-price benchmark. Wording A pins the outcome to listed dinner-entree prices. Wording B counts the listed price plus its delivery fee, across every item type. Same world, two questions, two different answers:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">464</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(SEED)</span>
@@ -791,15 +791,22 @@ div.csl-indent {
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> df.groupby(<span class="st">"year"</span>)[col].mean()</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">100</span> <span class="op">*</span> (m[<span class="dv">2025</span>] <span class="op">/</span> m[<span class="dv">2019</span>] <span class="op">-</span> <span class="dv">1</span>)</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> items[items[<span class="st">"kind"</span>] <span class="op">==</span> <span class="st">"entree"</span>].copy()</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>wording_a <span class="op">=</span> growth_pct(a, <span class="st">"price"</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>items[<span class="st">"paid"</span>] <span class="op">=</span> items[<span class="st">"price"</span>] <span class="op">+</span> items[<span class="st">"fee"</span>]</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>wording_b <span class="op">=</span> growth_pct(items, <span class="st">"paid"</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Wording A — listed dinner-entree prices : </span><span class="sc">{</span>wording_a<span class="sc">:5.1f}</span><span class="ss">% growth"</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Wording B — what a student pays         : </span><span class="sc">{</span>wording_b<span class="sc">:5.1f}</span><span class="ss">% growth"</span>)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">same world, two sentences, two answers: the sentence chooses the rows"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># The overall index is an INPUT you retrieve from the agency's table</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># (Lesson 2's discipline); this stand-in says overall prices rose 18%.</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>overall_index_growth <span class="op">=</span> <span class="fl">18.0</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> items[items[<span class="st">"kind"</span>] <span class="op">==</span> <span class="st">"entree"</span>].copy()</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>wording_a <span class="op">=</span> growth_pct(a, <span class="st">"price"</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>items[<span class="st">"paid"</span>] <span class="op">=</span> items[<span class="st">"price"</span>] <span class="op">+</span> items[<span class="st">"fee"</span>]</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>wording_b <span class="op">=</span> growth_pct(items, <span class="st">"paid"</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"overall index (retrieved input)          : </span><span class="sc">{</span>overall_index_growth<span class="sc">:5.1f}</span><span class="ss">% growth"</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Wording A — listed dinner-entree prices  : </span><span class="sc">{</span>wording_a<span class="sc">:5.1f}</span><span class="ss">% growth"</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Wording B — listed price plus fee, all   : </span><span class="sc">{</span>wording_b<span class="sc">:5.1f}</span><span class="ss">% growth"</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">A beats the index by </span><span class="sc">{</span>wording_a <span class="op">-</span> overall_index_growth<span class="sc">:.1f}</span><span class="ss"> points; "</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"B beats it by </span><span class="sc">{</span>wording_b <span class="op">-</span> overall_index_growth<span class="sc">:.1f}</span><span class="ss">."</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"same world, two sentences, two answers: the sentence chooses the rows"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Fixing the outcome and the units before any analysis is the standard craft of question formulation, and it is what keeps the two wordings from blurring into one claim later <span class="citation" data-cites="booth2024craft">(<a href="#ref-booth2024craft" role="doc-biblioref">Booth et al. 2024</a>)</span>.</p>
-<p>The reader picks wording A, and the field card records why: objective, describe menu-price growth against the overall index; unit, a menu item retrievable in both years; outcome, the listed price; conditions, 2019 versus 2025; kind, descriptive; reach, the data at hand. The boundary pair: hope to defend, “on this panel, listed prices rose faster than the index”; will not defend, “eating near campus became less affordable,” because fees, portions, and wages are outside these words. Wording B is not wrong. It is a different project, and the card is what keeps the two from blurring later.</p>
+<p>The reader picks wording A, and the field card records why: objective, describe menu-price growth against the overall index; unit, a menu item retrievable in both years; outcome, the listed price; conditions, 2019 versus 2025; kind, descriptive; reach, the data at hand. The comparison in the sentence is now visible in the code: both wordings outran the retrieved index in this world, by different margins. The boundary pair: hope to defend, “on this panel, listed prices rose faster than the index”; will not defend, “eating near campus became less affordable,” because fees, portions, and wages are outside these words. Wording B is not wrong. It is a different project, and the card is what keeps the two from blurring later.</p>
 </section>
 <section id="an-ai-failure-case" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="an-ai-failure-case"><span class="header-section-number">7.4</span> An AI failure case</h2>
@@ -832,15 +839,18 @@ div.csl-indent {
 <li><p>Write your field card first, from your own lead question as it stands: objective, unit of analysis, outcome, conditions, kind, reach. One line each.</p></li>
 <li><p>Delegate the wording, under show-what-changed:</p>
 <p><strong>Candidate wordings (you choose; the tool accounts for itself).</strong></p>
-<pre class="text"><code>Here is my research question: [your sentence]. Draft five candidate
-wordings that keep my units, outcome, conditions, kind, and reach
-exactly as they are. For each candidate, list every word that differs
-from my sentence and say what the change does to the question's
-meaning. Do not add topics, populations, or outcomes I did not name,
-and do not change what kind of question it is.</code></pre>
+<pre class="text"><code>Here is my research question: [your sentence]. Here is its field card:
+[paste your six one-line fields]. Draft five candidate wordings that
+keep the sentence and the card in agreement: units, outcome,
+conditions, kind, and reach exactly as the card states them. For each
+candidate, list every word that differs from my sentence, say what the
+change does to the question's meaning, and check it against the card.
+Do not add topics, populations, or outcomes I did not name, and do not
+change what kind of question it is.</code></pre>
 <p>After running, verify: account for every changed word yourself, and reject any candidate whose changes you cannot explain in one sentence. This counters <strong>silent scope change</strong>, where a sharper-sounding sentence is quietly a different study. Log the exchange, kept and rejected, in your AI Research Ledger.</p></li>
 <li><p>Choose the final wording and write one sentence on why it beat the others, including yours if yours lost.</p></li>
 <li><p>Write the boundary pair: the sentence you hope to defend, and the stronger sentence you will not be able to defend, each in one line.</p></li>
+<li><p>Write the declaration’s uncertainty-and-limitations line: the key limitation you already foresee in answering these words with the evidence you can reach, and the uncertainty any answer will have to carry. It travels with the question from day one; a declaration without it is not complete.</p></li>
 <li><p>Run the stranger test on the declaration: hand the question and the card to someone who knows nothing about the project, and ask them to say what one unit is, what gets recorded, and who the answer is about. Where they stall, revise before you version.</p></li>
 <li><p>Log the declaration in your AI Research Ledger and date it: this is version zero of the sentence your whole project answers to, and the milestone files it beside your working agreement.</p></li>
 </ol>

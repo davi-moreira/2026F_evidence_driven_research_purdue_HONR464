@@ -228,7 +228,7 @@ Notebooks load data via `load_course_data()` (GitHub raw first, local fallback).
 ## 🚨 CRITICAL RULE — The EDR|AI Book-First Loop  *(D20, amended D23/D24/D25/D26/D35)*
 
 The course book is **EDR|AI** (*Evidence-Driven Research in the Age of AI*;
-`book/`, 37 chapters + Part I overview — 39 lessons and 12 practice stations
+`book/`, 37 chapters + Part I overview — 40 lessons and 12 practice stations
 under D35's Architecture v0, provisional; front matter: Preface then About the
 Author; appendices: Verification Guide, For Instructors (SRL retired to
 `project/srl/`, D35); rendered to `docs/book/`; book author is "Davi Moreira",

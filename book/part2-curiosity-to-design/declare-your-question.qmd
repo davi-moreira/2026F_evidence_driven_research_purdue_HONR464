@@ -74,10 +74,10 @@ menu prices near campus rise faster than overall prices between 2019 and
 2025?"* Descriptive kind, data-at-hand reach. Now the declaration.
 
 Watch what the wording decides. The block below builds a tiny menu world and
-asks the question two ways. Wording A pins the outcome to listed
-dinner-entree prices. Wording B asks what a student actually pays, which
-quietly includes delivery fees and every item type. Same world, two
-questions, two different answers:
+asks the question two ways against the same overall-price benchmark.
+Wording A pins the outcome to listed dinner-entree prices. Wording B counts
+the listed price plus its delivery fee, across every item type. Same world,
+two questions, two different answers:
 
 ```python
 import numpy as np, pandas as pd
@@ -102,13 +102,20 @@ def growth_pct(df, col):
     m = df.groupby("year")[col].mean()
     return 100 * (m[2025] / m[2019] - 1)
 
+# The overall index is an INPUT you retrieve from the agency's table
+# (Lesson 2's discipline); this stand-in says overall prices rose 18%.
+overall_index_growth = 18.0
+
 a = items[items["kind"] == "entree"].copy()
 wording_a = growth_pct(a, "price")
 items["paid"] = items["price"] + items["fee"]
 wording_b = growth_pct(items, "paid")
-print(f"Wording A — listed dinner-entree prices : {wording_a:5.1f}% growth")
-print(f"Wording B — what a student pays         : {wording_b:5.1f}% growth")
-print("\nsame world, two sentences, two answers: the sentence chooses the rows")
+print(f"overall index (retrieved input)          : {overall_index_growth:5.1f}% growth")
+print(f"Wording A — listed dinner-entree prices  : {wording_a:5.1f}% growth")
+print(f"Wording B — listed price plus fee, all   : {wording_b:5.1f}% growth")
+print(f"\nA beats the index by {wording_a - overall_index_growth:.1f} points; "
+      f"B beats it by {wording_b - overall_index_growth:.1f}.")
+print("same world, two sentences, two answers: the sentence chooses the rows")
 ```
 
 Fixing the outcome and the units before any analysis is the standard craft
@@ -118,11 +125,13 @@ into one claim later [@booth2024craft].
 The reader picks wording A, and the field card records why: objective,
 describe menu-price growth against the overall index; unit, a menu item
 retrievable in both years; outcome, the listed price; conditions, 2019
-versus 2025; kind, descriptive; reach, the data at hand. The boundary pair:
-hope to defend, "on this panel, listed prices rose faster than the index";
-will not defend, "eating near campus became less affordable," because fees,
-portions, and wages are outside these words. Wording B is not wrong. It is a
-different project, and the card is what keeps the two from blurring later.
+versus 2025; kind, descriptive; reach, the data at hand. The comparison in
+the sentence is now visible in the code: both wordings outran the retrieved
+index in this world, by different margins. The boundary pair: hope to
+defend, "on this panel, listed prices rose faster than the index"; will not
+defend, "eating near campus became less affordable," because fees, portions,
+and wages are outside these words. Wording B is not wrong. It is a different
+project, and the card is what keeps the two from blurring later.
 
 ## An AI failure case
 
@@ -172,12 +181,14 @@ what the project promises is the researcher's job.
    **Candidate wordings (you choose; the tool accounts for itself).**
 
    ```text
-   Here is my research question: [your sentence]. Draft five candidate
-   wordings that keep my units, outcome, conditions, kind, and reach
-   exactly as they are. For each candidate, list every word that differs
-   from my sentence and say what the change does to the question's
-   meaning. Do not add topics, populations, or outcomes I did not name,
-   and do not change what kind of question it is.
+   Here is my research question: [your sentence]. Here is its field card:
+   [paste your six one-line fields]. Draft five candidate wordings that
+   keep the sentence and the card in agreement: units, outcome,
+   conditions, kind, and reach exactly as the card states them. For each
+   candidate, list every word that differs from my sentence, say what the
+   change does to the question's meaning, and check it against the card.
+   Do not add topics, populations, or outcomes I did not name, and do not
+   change what kind of question it is.
    ```
 
    After running, verify: account for every changed word yourself, and
@@ -189,11 +200,16 @@ what the project promises is the researcher's job.
    others, including yours if yours lost.
 4. Write the boundary pair: the sentence you hope to defend, and the
    stronger sentence you will not be able to defend, each in one line.
-5. Run the stranger test on the declaration: hand the question and the card
+5. Write the declaration's uncertainty-and-limitations line: the key
+   limitation you already foresee in answering these words with the evidence
+   you can reach, and the uncertainty any answer will have to carry. It
+   travels with the question from day one; a declaration without it is not
+   complete.
+6. Run the stranger test on the declaration: hand the question and the card
    to someone who knows nothing about the project, and ask them to say what
    one unit is, what gets recorded, and who the answer is about. Where they
    stall, revise before you version.
-6. Log the declaration in your AI Research Ledger and date it: this is
+7. Log the declaration in your AI Research Ledger and date it: this is
    version zero of the sentence your whole project answers to, and the
    milestone files it beside your working agreement.
 

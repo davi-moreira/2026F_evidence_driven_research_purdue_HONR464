@@ -126,7 +126,7 @@ stations:
           2: "present and defensible as stated"
       - id: govern-the-work.working-agreement-v0.question-declared
         applies_when: {}
-        text: "The declared question is fixed by its own words: kind and reach match the sentence, double-barrels are split, and the claim boundary states both the defensible and the forbidden sentence"
+        text: "The declared question is fixed by its own words: kind and reach match the sentence, double-barrels are split, and the claim boundary states the defensible sentence, the forbidden sentence, and the uncertainty-and-limitations line the answer must carry"
         levels:
           0: "no declaration, or a kind or reach the question's words do not fix"
           1: "declared, but one term is loose enough that a stranger could not say what gets recorded or who the answer is about"

@@ -212,13 +212,13 @@ alignment, and responsible interpretation — never coding elegance.
 | Final Project | 20 |
 | Research artifact (paper/chapter/note) | 10 |
 
-## 8. The course book — EDR|AI: 39 lessons, 12 Studios, 12 Milestone chapters
+## 8. The course book — EDR|AI: 40 lessons, 12 Studios, 12 Milestone chapters
 
 The course ships its own open text, **EDR|AI — Evidence-Driven Research in the
 Age of AI: How to Design, Analyze, Verify, and Defend** (**EDR|AI**), a Quarto
 book rendered to `docs/book/` and synchronized with the notebooks by
 `validate_book_sync.py`. Since D38 the book's twelve **Studios** are its
-navigational parts (39 lessons partitioned 4/2/2/4/6/2/2/4/4/4/2/3), and
+navigational parts (40 lessons partitioned 1/6/2/4/6/2/2/4/4/4/2/3 after the D45 flip and the D46 declaration lesson), and
 since D40 each Studio closes with a generated **Milestone chapter**
 ("Milestone N: <artifact-first title>") carrying the practice steps, rails,
 authored rubric, and workbook badge. The book is presented to students as a
