@@ -10,10 +10,11 @@ advances.
 
 [![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch06_descriptive_predictive_and_causal_questions.ipynb){target="_blank"}
 
-> **The research decision.** Declare the formal question your project will
-> answer. Record its objective, units, outcome, conditions, kind, reach, and
-> provisional claim boundary — the close of the arc that began with your
-> curiosity.
+> **The research decision.** Place your question on the inquiry compass:
+> what KIND of answer it wants (descriptive, predictive, causal) and what
+> REACH the answer may claim. The classification fixes what your evidence
+> will ever be allowed to say; the next lesson turns the classified question
+> into the formal declaration.
 
 ## Why this decision matters
 
@@ -36,25 +37,6 @@ inside the box those two answers draw. Misclassify your question and every later
 method aims at the wrong target, because a method that describes what is there cannot
 tell you what an intervention would change. The compass fixes what your evidence may
 claim before you spend months collecting it.
-
-## The formal declaration
-
-A **research objective** states what the study intends to describe, predict,
-compare, explain, or estimate. A **unit of analysis** is the kind of entity
-about which the answer will make a claim. An **outcome** is the feature,
-event, quantity, or judgment the project will try to understand.
-**Conditions** identify the setting, comparison, time, or exposure that give
-the outcome meaning. The question's **kind** and **reach** — the compass this
-chapter teaches — say what sort of answer it wants and whom the answer may
-speak for.
-
-Do not force every field into one overloaded sentence. Your declaration is
-the lead question plus a field card: objective · unit of analysis · outcome ·
-conditions or comparison · kind · intended reach · provisional claim
-boundary. AI may help generate alternative wordings or challenge a
-classification; ask it to show what changed between versions. You decide
-which sentence governs the project, because you will later defend every word
-against the design and the evidence.
 
 ## The concept
 
@@ -203,17 +185,17 @@ actually answer, write down that you changed it, and stop using the word "effect
 ## It is your turn
 
 <!-- station-pointer:begin -->
-> **You are working inside [Studio 2: Govern the work and declare your question](../studios/studio02-govern-the-work.qmd).**
+> **You are working inside [Studio 2: Set your rules, shape your question](../studios/studio02-govern-the-work.qmd).**
 > Keep what you write here; the studio's milestone chapter is
 > where it joins the other lessons' pieces into one artifact
 > you can defend.
 <!-- station-pointer:end -->
 
 *You arrive with a committed problem, a working agreement, an AI Research
-Ledger, and one verified delegation. This step closes the opening arc: the
-formal question, declared. AI is welcome for candidate wordings,
-classification, and red-team review; the final choice of kind, reach, and
-boundary is a recorded research decision of yours.*
+Ledger, and one verified delegation. This step classifies: kind and reach,
+fixed by the question's own words. AI is welcome to challenge a placement;
+the final call is a recorded research decision of yours, and the next lesson
+turns the classified question into the formal declaration.*
 
 The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
 
@@ -239,12 +221,10 @@ a finding, not a failure; a question that will not sit in one box is usually sti
 double-barreled, and naming that is progress.
 :::
 
-1. Write your field card first: objective, unit of analysis, outcome, and
-   the conditions or comparison that give it meaning. One line each.
-2. Write your research problem out as questions, three or four of them, each a
+1. Write your research problem out as questions, three or four of them, each a
    sentence evidence could answer and be wrong about. Problems almost always hide more
    than one.
-3. Classify each question on both axes, kind and reach, and name the position. Beside
+2. Classify each question on both axes, kind and reach, and name the position. Beside
    each, write one line of reasoning based on the answer the question wants, not on
    the words it happens to use.
 
@@ -263,7 +243,7 @@ double-barreled, and naming that is progress.
    you happen to have. If it calls your question causal, ask whether your design can
    isolate that answer. If it cannot, the status is causal and currently unidentified,
    never descriptive.
-4. Hunt the double-barrels. Any sentence with an "and" hiding a second question of a
+3. Hunt the double-barrels. Any sentence with an "and" hiding a second question of a
    different kind gets split into two clean questions, each with its own position.
 
    *When you are ready to delegate this step:*
@@ -277,17 +257,15 @@ double-barreled, and naming that is progress.
    *After running, verify (counters **illusion of completeness**):* a tidy split can
    quietly drop a half or smuggle in a new variable. Confirm both halves together cover
    your whole sentence and that neither added anything you did not write.
-5. Pick your **lead question**, the one your project will be built around. Write one
+4. Pick your **lead question**, the one your project will be built around. Write one
    sentence on why it and not the others, and one sentence naming a claim its position
    forbids you even if the answer comes out beautifully.
-6. If your lead question is causal, describe the comparison world it needs: the
+5. If your lead question is causal, describe the comparison world it needs: the
    version of events that did not happen and that your design will have to stand in
    for. Then say whether your design can stand in for it. If it cannot yet, write
    "causal, currently unidentified" and keep the question. That is a design finding,
    not a reason to relabel what you asked.
-7. Write your provisional claim boundary: the sentence your declaration
-   lets you hope to defend, and the stronger sentence it will not support.
-8. Log the declaration in your AI Research Ledger, and verify it with a named method from
+6. Log the classification in your AI Research Ledger, and verify it with a named method from
    the [Verification Guide](../verification-guide.qmd). A classification is a judgment,
    so use peer reasoning: walk someone through the two definitions and your argument,
    and see whether it survives their hardest question. If your position is causal, add
@@ -310,12 +288,6 @@ double-barreled, and naming that is progress.
    method it names, check whether your data can actually meet the assumption it lists.
    An assumption you cannot meet turns a confident method into a wrong one.
 
-A declared question is a commitment, not a shield against evidence. The next
-studio holds it up against what other researchers already know.
-
-<!-- studio-continue:begin -->
-> **Milestone next.** This was the last lesson of Studio 2.
-> [Milestone 2: Your rules and your question](../studios/milestone02-govern-the-work.qmd#milestone) is where
-> the lessons' pieces become the studio's versioned artifact.
-> Produce it before you move on.
-<!-- studio-continue:end -->
+Your lead question now knows what kind of answer it wants and whom it may
+speak for. The next lesson writes it down for keeps: the formal declaration,
+under your rules.

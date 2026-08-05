@@ -44,7 +44,7 @@ submit at the end of the block.
 | 2 | **`lastname_m10_lock_record.pdf`** *or* the same as notebook sections | Your **gallery-walk audit record** and **oral-defense record**: the four audits plus accessibility run on your own poster with located hits and fixes, and the three-lens defense with your defend-versus-concede calls and softened claims. |
 | 3 | **`lastname_m10_poster.ipynb`** *or* a shared Colab link | The seeded (`SEED = 464`) notebook that produces every number on the poster. **Every figure and statistic on the board traces to a cell here**, and it reruns top to bottom. |
 | 4 | **`lastname_m10_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number reproduced) and your **release preflight** (permissions status, AI disclosure present, claim boundary checked, no stale numbers). **The poster does not lock without both.** |
-| 5 | **EDR\|AI "It is your turn" — ch. 31, ch. 32** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 5 | **EDR\|AI "It is your turn" — ch. 32, ch. 33** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 confirm every figure renders when the notebook runs top to bottom. Submit the
@@ -60,8 +60,8 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 31 — [Research Posters](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch27_research_posters.ipynb)
-- Ch. 32 — [Poster Criticism](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch28_poster_criticism.ipynb)
+- Ch. 32 — [Research Posters](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch27_research_posters.ipynb)
+- Ch. 33 — [Poster Criticism](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch28_poster_criticism.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final

@@ -32,7 +32,7 @@ clinic notes and submit by the same-day deadline.
 | # | File | Description |
 |---|---|---|
 | 1 | **A shared Colab notebook link** *or* **`lastname_m06_first_analysis.ipynb`** | The pipeline notebook carrying the six-part deliverable below: the seeded pipeline itself, your first result with its uncertainty (labeled provisional), your AI-code verification record, your URC abstract draft, your AI Research Ledger rows, and your dossier line. If you prefer the written parts as a PDF, attach **`lastname_m06_first_analysis.pdf`** alongside; the notebook is still required. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 21** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 22** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. Confirm the
 result in your write-up matches what the notebook prints when run top to bottom.
@@ -46,7 +46,7 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 21 — [AI as Programmer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch19_ai_as_programmer.ipynb)
+- Ch. 22 — [AI as Programmer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch19_ai_as_programmer.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final

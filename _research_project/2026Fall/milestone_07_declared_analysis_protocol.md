@@ -32,7 +32,7 @@ required **Prediction & Leakage Auditor** before you submit.
 | # | File | Description |
 |---|---|---|
 | 1 | **A shared Colab notebook link** *(the verified pipeline notebook)* | The seven-part record below, carried in the notebook's markdown or in an optional companion **`lastname_m07_verified_analysis.pdf`**: your clean-restart record, your claim-to-output trace, the reproduced uncertainty, two independent re-derivations, the leakage audit with the auditor's flags and your written fixes, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 22** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 23** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. The rerun is
 the milestone: confirm it reproduces before you submit.
@@ -46,7 +46,7 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 22 — [AI as Analytical Assistant](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch20_ai_as_analytical_assistant.ipynb)
+- Ch. 23 — [AI as Analytical Assistant](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch20_ai_as_analytical_assistant.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final

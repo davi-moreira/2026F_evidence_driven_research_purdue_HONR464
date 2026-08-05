@@ -105,7 +105,7 @@ stations:
   # file path as Phase 3/4 lands each station workbook.
   - {id: frame-the-inquiry,       rank: 1,  title: "Begin with your curiosity",
      checkpoints: [{id: curiosity-committed-v0}], workbook: pending}
-  - {id: govern-the-work,         rank: 2,  title: "Govern the work and declare your question",
+  - {id: govern-the-work,         rank: 2,  title: "Set your rules, shape your question",
      checkpoints: [{id: working-agreement-v0}, {id: question-declared-v0}], workbook: pending}
   - {id: ground-in-evidence,      rank: 3,  title: "Ground it in verified evidence",
      checkpoints: [{id: evidence-base-v0}], workbook: pending}
@@ -169,6 +169,13 @@ lessons:
      source: part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.qmd,
      companion: ch06_descriptive_predictive_and_causal_questions.ipynb,
      url_path: part2-curiosity-to-design/06-descriptive-predictive-and-causal-questions.html}
+  - {id: declare-your-question,     state: active, rank: 62,  part: part2,
+     station: govern-the-work, role: core,
+     title_en: "Declaring Your Research Question",
+     source: part2-curiosity-to-design/declare-your-question.qmd,
+     companion: declare_your_question.ipynb,
+     url_path: part2-curiosity-to-design/declare-your-question.html}
+     # D46: the declaration lesson closes Studio 2 (insertion, D37 path)
   - {id: research-builds,           state: active, rank: 70,  part: part2,
      station: ground-in-evidence, role: core,
      source: part2-curiosity-to-design/07-research-builds-on-research.qmd,

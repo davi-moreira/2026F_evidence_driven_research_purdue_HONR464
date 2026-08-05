@@ -28,7 +28,7 @@ Due: **Friday, October 2, 11:59 PM** (you work on it at that Friday's studio).
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m05_data_governance.pdf`** *or* a shared Colab notebook link | The six parts below: your acquisition and provenance record with the permission recheck, your measurement plan (the concept → construct → indicator table with its reliability and validity case), your column minimization with the re-identification check, the Contract revision that settles your operationalization, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 19, ch. 20** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 20, ch. 21** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
 open it, and that the provenance and measurement tables render when the
@@ -43,8 +43,8 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 19 — [Data Provenance and Data Quality](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch17_data_provenance_and_data_quality.ipynb)
-- Ch. 20 — [Measurement and Operationalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch18_measurement_and_operationalization.ipynb)
+- Ch. 20 — [Data Provenance and Data Quality](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/17-data-provenance-and-data-quality.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch17_data_provenance_and_data_quality.ipynb)
+- Ch. 21 — [Measurement and Operationalization](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/18-measurement-and-operationalization.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch18_measurement_and_operationalization.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
