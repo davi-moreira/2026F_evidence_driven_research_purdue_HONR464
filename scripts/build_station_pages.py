@@ -105,7 +105,8 @@ def contribution_lines(spec: dict, lessons: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def bring_block(spec: dict, lessons: list[dict]) -> str:
+def bring_block(spec: dict, lessons: list[dict], prev_spec: dict | None = None,
+                prev_n: int | None = None) -> str:
     """The milestone's "What you bring" checklist, role-aware: core pieces
     are prerequisites; branch/optional pieces bind only when their condition
     is the reader's (skimming a non-matching pathway or overlay is using the
@@ -113,6 +114,11 @@ def bring_block(spec: dict, lessons: list[dict]) -> str:
     core = [l for l in lessons if l.get("role", "core") == "core"]
     cond = [l for l in lessons if l.get("role", "core") != "core"]
     out = []
+    if prev_spec is not None:
+        out.append(f"You also carry forward the last milestone's artifact: "
+                   f"**Milestone {prev_n}: {prev_spec['milestone_title']}**. "
+                   f"This one builds on it, and the chain assumes it is "
+                   f"versioned and filed.")
     if core:
         out.append("Check you are carrying each of these before you start. "
                    "If one is missing, go back and work that lesson's **It "
@@ -124,6 +130,8 @@ def bring_block(spec: dict, lessons: list[dict]) -> str:
                    "drill or a plain skip is the right call, and the "
                    "milestone does not require the piece.")
         out.append(contribution_lines(spec, cond))
+    if spec.get("bring_note"):
+        out.append(spec["bring_note"].strip())
     return "\n\n".join(out)
 
 
@@ -222,7 +230,7 @@ def milestone_page(st: dict, spec: dict, lessons: list[dict], n: int,
 
 ## What you bring
 
-{bring_block(spec, lessons)}
+{bring_block(spec, lessons, specs[stations[idx - 1]["id"]] if idx else None, stations[idx - 1]["rank"] if idx else None)}
 
 {genre_block}## The practice {{#milestone}}
 

@@ -14,17 +14,19 @@ review advances.
 
 ## What you bring
 
+You also carry forward the last milestone's artifact: **Milestone 10: Your artifact, ready to publish or present**. This one builds on it, and the chain assumes it is versioned and filed.
+
 Check you are carrying each of these before you start. If one is missing, go back and work that lesson's **It is your turn** first; the practice below assumes it.
 
 - [Lesson 36 — Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html): your cold reproduction record: every number re-run from the top, one undisclosed choice varied, and missingness classified before any filling.
-- [Lesson 37 — Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html): your research capsule: notebook, data or its access recipe, environment record, README, and a cold rerun in a second environment.
+- [Lesson 37 — Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html): your research capsule: notebook, data or its access recipe, environment record, README, licence with its reuse boundary and restrictions, the exact output locations, and a cold rerun in a second environment.
 
 ## The practice {#milestone}
 
-1. Run your own package cold, from a clean environment, following only your written instructions.
-2. Have someone else run it without your help, and log every place they had to ask you a question. Working alone? Rerun it yourself after a real break, instructions only, and label the record 'solo proxy; external cold run pending' — a proxy never becomes a claim of independent reproduction.
-3. Fix what the cold run exposed; every question they asked is a missing line in your documentation.
-4. Assemble the package: data or its access route, code, environment, documentation, and licence.
+1. Assemble the draft package first: data or its access route, code, environment, documentation, and licence.
+2. Run your own package cold, from a clean environment, following only your written instructions.
+3. Then the external test: have someone else run it without your help, and log every place they had to ask you a question. Working alone? Rerun it yourself after a real break, instructions only, and label the record 'solo proxy; external cold run pending' — a proxy never becomes a claim of independent reproduction.
+4. Fix what the runs exposed — every question asked is a missing line in your documentation — and freeze the final manifest with its date.
 
 ## A version, not a pass
 

@@ -8,7 +8,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 
 | # | Criterion | 0–2 |
 |---|---|---|
-| Step 1 | Start from your opening move's four lines, then stretch before you narrow | |
+| Step 1 | Copy your opening move's four lines here, date them, and label them version zero: the first entry of your project's record | |
 | Step 2 | Take the strongest curiosity you now hold and walk it down the funnel in writing: experience, curiosity, topic, research problem | |
 | Step 3 | Run the ownership test on the problem you are converging on: would you still chase it if every AI tool disappeared tomorrow, and is the scope one you… | |
 | Step 4 | Score it on importance, feasibility, and contribution, one honest sentence each | |
@@ -54,7 +54,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 1 | Pick one genuine, checkable claim — your opening move's starting belief is the natural choice, because checking it sharpens the question you will… | |
 | Step 2 | **Specify.** Before you open any tool, write your own expected answer and what a fair way of getting it would look like | |
 | Step 3 | **Delegate, Interrogate, Inspect.** Hand the task over | |
-| Step 4 | **Verify.** Run one independent check | |
+| Step 4 | **Verify.** Run one independent check and write its outcome down either way — "nothing changed" is a result worth recording | |
 | Step 5 | **Defend.** With the tool closed, write one sentence stating the result in your own words, and one sentence naming what it does not establish | |
 | Step 6 | **Document** the whole run in your AI Research Ledger, naming the verification method you used from the Verification Guide and the step where you… | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
@@ -275,7 +275,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 
 ### Ch. 20 — Data Provenance and Data Quality
 
-Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
+Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **16 points total.**
 
 | # | Criterion | 0–2 |
 |---|---|---|
@@ -284,7 +284,8 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 3 | Open the primary source behind the entry your headline claim leans on hardest | |
 | Step 4 | Beside each entry, write its definition in your own words and mark whether it matches the definition your question needs | |
 | Step 5 | Save the record as a file that travels with your project, and note the date you retrieved each source | |
-| Step 6 | Log the step in your AI Research Ledger, and verify at least one entry with a named method from the Verification Guide | |
+| Step 6 | Close with the studio's governance trio: write and date your acquisition route, update where the data live and who can open them, and recheck the… | |
+| Step 7 | Log the step in your AI Research Ledger, and verify at least one entry with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
 ### Ch. 21 — Measurement and Operationalization
@@ -430,7 +431,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 
 ### Ch. 31 — From Dossier to Research Note
 
-Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
+Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **16 points total.**
 
 | # | Criterion | 0–2 |
 |---|---|---|
@@ -438,8 +439,9 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | Step 2 | Order your findings, best-supported first | |
 | Step 3 | Write your headline claim in one sentence, with its boundary inside the same sentence: the setting, the sample, and the population it does not cover | |
 | Step 4 | Size your limitations to what actually threatens the claim | |
-| Step 5 | Attach your folder to the note and confirm the two agree: the number in your lead sentence is the number a cold restart-and-run-all prints | |
-| Step 6 | Log the drafting round in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
+| Step 5 | Assemble the full note, not only its spine: methods (what you did, so a stranger could follow), results with their uncertainty, a discussion sized to… | |
+| Step 6 | Attach your folder to the note and confirm the two agree: the number in your lead sentence is the number a cold restart-and-run-all prints | |
+| Step 7 | Log the drafting round in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
 ### Ch. 32 — Research Posters
@@ -449,7 +451,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 | # | Criterion | 0–2 |
 |---|---|---|
 | Step 1 | Choose the single figure that carries your lead claim, and draw it with the axis running the full scale of the measure | |
-| Step 2 | Print each value as a label on the mark it belongs to, and draw the interval right on the figure so the uncertainty arrives in the same glance as the… | |
+| Step 2 | Print each value as a label on the mark it belongs to, and show the uncertainty the design licenses right on the figure so the uncertainty arrives in… | |
 | Step 3 | Carry every meaningful distinction in at least two channels, so color is never the only signal a reader can lose | |
 | Step 4 | Write the headline above the figure using the verb your claim boundary allows, and lay out the rest of the page so a stranger finds that headline in… | |
 | Step 5 | Log it in your AI Research Ledger, and verify at least one number on the page with a named method from the Verification Guide | |
@@ -470,15 +472,16 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 
 ### Ch. 34 — Research Pitches, Talks, and Seminars
 
-Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **12 points total.**
+Each row scores **0** (missing), **1** (attempted but incomplete, generic, or unverified), or **2** (complete, specific to your own project, and verified where a check applies). **14 points total.**
 
 | # | Criterion | 0–2 |
 |---|---|---|
 | Step 1 | Write your boundary sentence first, on its own line, and mark it | |
 | Step 2 | Build the 30-second version: hook, claim, boundary, invitation, with no evidence beats yet | |
 | Step 3 | Build the 3-minute version: the same skeleton with two or three evidence beats and the same boundary sentence, word for word | |
-| Step 4 | Say both out loud to someone outside your field and have them repeat your claim back to you | |
-| Step 5 | Log it in your AI Research Ledger, and verify at least one compressed sentence with a named method from the Verification Guide, such as peer reasoning | |
+| Step 4 | Expand to your venue's actual length: grow the 3-minute spine section by section (problem and gap, question, method, evidence, boundary and… | |
+| Step 5 | Say the versions out loud to someone outside your field and have them repeat your claim back to you | |
+| Step 6 | Log it in your AI Research Ledger, and verify at least one compressed sentence with a named method from the Verification Guide, such as peer reasoning | |
 | + | Craft and verification record: AI use logged in your AI Research Ledger, claims stated with their uncertainty, and each key claim verified with a named method | |
 
 ### Ch. 35 — Difficult Questions and Uncertainty
@@ -531,7 +534,7 @@ Each row scores **0** (missing), **1** (attempted but incomplete, generic, or un
 |---|---|---|
 | Step 1 | Pick one real section of your project to revise: your methods, your results, or your limitations | |
 | Step 2 | Set up three loops, each with a one-sentence job you could grade | |
-| Step 3 | Wire them | |
+| Step 3 | Wire them, and declare each role's capability while you do: who executes it, who chooses its next step (you, a script, or the tool), what tools it… | |
 | Step 4 | Name the one node you keep human, the step where the loops' work becomes your claim, and write down why no role is allowed to take it | |
 | Step 5 | Run the round | |
 | Step 6 | Log every loop in your AI Research Ledger, and verify at least one output with a named method from the Verification Guide | |

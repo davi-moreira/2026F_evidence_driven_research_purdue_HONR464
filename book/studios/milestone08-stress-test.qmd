@@ -14,6 +14,8 @@ review advances.
 
 ## What you bring
 
+You also carry forward the last milestone's artifact: **Milestone 7: Your first reproducible analysis**. This one builds on it, and the chain assumes it is versioned and filed.
+
 Check you are carrying each of these before you start. If one is missing, go back and work that lesson's **It is your turn** first; the practice below assumes it.
 
 - [Lesson 24 — Robustness and Sensitivity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/21-robustness-and-sensitivity.html): your pre-listed robustness grid with its full results, direction and size, plus the named null check.
@@ -26,7 +28,7 @@ Check you are carrying each of these before you start. If one is missing, go bac
 1. Pre-list your checks before you run any of them, and commit to reporting all of them.
 2. Run the robustness grid and report a span within each commensurable panel, never across panels.
 3. Run the null check that your design licenses, and name it correctly.
-4. Put your finding to adversarial reviewers, human and AI, and confirm or refute each flag with a data check.
+4. Commission at least one adversarial review, and add a human reviewer when one is available. Neither review is independent verification: confirm or refute every flag with a data check.
 5. Write the adjudication: what survived, what did not, and what you still cannot rule out.
 
 ## A version, not a pass

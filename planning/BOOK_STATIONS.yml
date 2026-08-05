@@ -189,7 +189,8 @@ stations:
         question, kind, reach, and boundary stay yours
       sdiivdd: >-
         one complete SDIIVDD run on a checkable claim your starting
-        belief makes, including what the independent check changed
+        belief makes, with the check's outcome on record — including
+        "nothing changed" when the check agreed
       responsibility-ownership: >-
         your ownership statement, never-delegate list, and first AI-use
         disclosure, with the research question named as the first
@@ -300,8 +301,9 @@ stations:
         your candidate source list with a status column, seeded by your own
         search, an AI sweep, and hand snowballing, with a lead source marked
       verifying-prior-evidence: >-
-        your verified sources, your evidence map with its quiet spot, and
-        your gap written as one bounded sentence
+        your verified sources, your evidence map with its quiet spot,
+        your gap written as one bounded sentence, and your revised
+        declaration — or the defended reason it holds
     practice_kit:
       worked_example: |
         Three rows from the restaurant-prices evidence registry, with the
@@ -385,10 +387,13 @@ stations:
     contributions:
       mida: >-
         your MIDA declaration: model, inquiry, data strategy, and answer
-        strategy, with the alignment sentence that ties them together
+        strategy, with the alignment sentence that ties them together —
+        carrying population, setting and time, the provisional
+        operationalization, and the warrant into Contract v0
       uncertainty-foundations: >-
-        your estimand and estimator, the repeat-run story behind them, and
-        your uncertainty sentence next to its wrong twin
+        your estimand and estimator, the repeat-run story behind them,
+        your dependence structure, and your uncertainty sentence next to
+        its wrong twin
       declare-diagnose: >-
         your design diagnosis: bias, wobble, and power read from
         simulation, one redesign, and the honest call that followed
@@ -503,7 +508,9 @@ stations:
         instrument threats named, or the drill run on your own question
       prediction-generalization: >-
         either your signed four-part forecasting contract with its
-        boundary, or the plain line saying prediction is not your question
+        boundary, or the contrast drill: the plain rejection line, the
+        prediction-time leakage check run on your own features, and two
+        sentences on why prediction answers a different question
       experimental-causal: >-
         either your treatment, outcome, and potential outcomes with the
         nearest threat named, or the drill plus the confounder that blocks
@@ -511,6 +518,11 @@ stations:
       hybrid-complex-designs: >-
         if your design has stages: the stage-by-stage map, its weakest
         link, and the one-sentence justification for keeping or cutting it
+    bring_note: >-
+      One bound on the skip rule here: this milestone requires your
+      PRIMARY pathway's full piece plus ONE contrast drill from a
+      neighboring route — the route guide says which; skipping the rest
+      is correct. The overlay binds only when your design has stages.
 
     practice_kit:
       worked_example: |
@@ -608,11 +620,16 @@ stations:
       produces your first reproducible result.
     contributions:
       data-provenance: >-
-        your provenance record for every dataset and borrowed number, with
-        the primary source behind your headline claim opened and read
+        your acquisition route, written and dated, your provenance record
+        for every dataset and borrowed number (the primary source behind
+        your headline claim opened and read), your data-management update,
+        and the permission recheck against the data as they actually
+        arrived
       measurement: >-
-        your measurement specification: concept, construct, indicator, the
-        meaning sentence for each number, and one planned reliability check
+        your measurement specification: concept, construct, indicator,
+        the meaning sentence for each number, the reliability check's
+        result, the indicator-to-use validity argument with its strongest
+        rival reading, and the boundary that follows
 
     practice_kit:
       worked_example: |
@@ -686,14 +703,17 @@ stations:
         your first computed number, its delegated code read line by line,
         and the sentence naming what the number does not cover
       ai-analytical-assistant: >-
-        your headline estimate with its cycle log, two independently
-        re-derived numbers, and a placebo run
+        your headline estimate with its uncertainty statement and cycle
+        log, two independently re-derived numbers, a placebo run where
+        licensed, the clean-restart record, the environment record, and
+        the claim-to-output trace
 
 
     practice_kit:
       worked_example: |
         The restaurant-prices reader's declared analysis, run once,
-        honestly. The declared quantity: mean growth of the panel's
+        honestly. (A simulated teaching record: the numbers demonstrate
+        the form; yours will be your own.) The declared quantity: mean growth of the panel's
         entree prices, 2019 to 2025, against the retrieved index. The
         result as reported: "panel mean growth 24.1% against index
         growth 18.0%: a gap of 6.1 points, with the coverage caveat
@@ -739,7 +759,7 @@ stations:
       - Pre-list your checks before you run any of them, and commit to reporting all of them.
       - Run the robustness grid and report a span within each commensurable panel, never across panels.
       - Run the null check that your design licenses, and name it correctly.
-      - Put your finding to adversarial reviewers, human and AI, and confirm or refute each flag with a data check.
+      - "Commission at least one adversarial review, and add a human reviewer when one is available. Neither review is independent verification: confirm or refute every flag with a data check."
       - "Write the adjudication: what survived, what did not, and what you still cannot rule out."
     rails:
       ethics: Report the checks that hurt your finding as fully as the ones that helped.
@@ -777,8 +797,8 @@ stations:
 
     practice_kit:
       worked_example: |
-        The restaurant-prices robustness grid, pre-listed before any
-        check ran: drop each cuisine category in turn; swap the deflator
+        The restaurant-prices robustness grid, a simulated teaching
+        record, pre-listed before any check ran: drop each cuisine category in turn; swap the deflator
         (all-items index versus food-at-home); entree-only versus
         all-items. Results reported as direction and size, together.
         The negative test, predicted first: nationally priced bottled
@@ -846,12 +866,17 @@ stations:
         your AI-use disclosure, written from the ledger and naming what
         you did not verify
       poster-to-note: >-
-        your research-note spine: problem, gap, question, findings ordered
-        by support, and the headline claim with its boundary inside
+        your stand-alone note draft: the problem-gap-question spine,
+        methods, results with uncertainty, discussion, ordered findings
+        with the headline claim's boundary inside, references, your
+        disclosure placed, and the pointer to the package Studio 11 will
+        freeze
 
     practice_kit:
       worked_example: |
-        Two rows of the restaurant-prices claim-evidence table.
+        Two rows of the restaurant-prices claim-evidence table (a
+        simulated teaching record; the discipline, not the numbers, is
+        what transfers).
 
         Row 1 — claim: "on this panel, listed entree prices rose 6.1
         points faster than the overall index." Evidence: the growth
@@ -970,11 +995,17 @@ stations:
       difficult-questions: >-
         your five hardest fair questions with defend-or-concede answers,
         and your uncertainty-and-limitations statement in ULN form
+    bring_note: >-
+      Your format decides one more input. For a paper or research note,
+      bring your Milestone 9 note; for a seminar or talk, the pitch
+      spine; for a poster, the visual pieces above; for another format,
+      the nearest row's input plus your venue contract. Difficult
+      Questions is everyone's.
 
     practice_kit:
       worked_example: |
-        The restaurant-prices venue contract: a twelve-minute class
-        seminar, slides allowed, live questions. Transformation memo:
+        The restaurant-prices venue contract, worked as a simulated
+        teaching record: a twelve-minute class seminar, slides allowed, live questions. Transformation memo:
         the note's methods compress to one spoken minute; the growth
         figure becomes the only slide with numbers; the caveat moves
         into the spoken spine, right after the headline. Mode test: the
@@ -1007,10 +1038,10 @@ stations:
       "solo proxy; external cold run pending" — the label, and the honesty
       it enforces, are part of the artifact.
     steps:
+      - "Assemble the draft package first: data or its access route, code, environment, documentation, and licence."
       - Run your own package cold, from a clean environment, following only your written instructions.
-      - "Have someone else run it without your help, and log every place they had to ask you a question. Working alone? Rerun it yourself after a real break, instructions only, and label the record 'solo proxy; external cold run pending' — a proxy never becomes a claim of independent reproduction."
-      - Fix what the cold run exposed; every question they asked is a missing line in your documentation.
-      - "Assemble the package: data or its access route, code, environment, documentation, and licence."
+      - "Then the external test: have someone else run it without your help, and log every place they had to ask you a question. Working alone? Rerun it yourself after a real break, instructions only, and label the record 'solo proxy; external cold run pending' — a proxy never becomes a claim of independent reproduction."
+      - "Fix what the runs exposed — every question asked is a missing line in your documentation — and freeze the final manifest with its date."
     rails:
       ethics: What can be shared is set by your permissions, and the package says so explicitly.
       evidence: Reproduction is the evidence rail's final test.
@@ -1038,8 +1069,9 @@ stations:
         any filling
       research-packages: >-
         your research capsule: notebook, data or its access recipe,
-        environment record, README, and a cold rerun in a second
-        environment
+        environment record, README, licence with its reuse boundary and
+        restrictions, the exact output locations, and a cold rerun in a
+        second environment
 
     practice_kit:
       worked_example: |

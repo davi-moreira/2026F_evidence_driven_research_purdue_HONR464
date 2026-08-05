@@ -288,7 +288,8 @@ fair or the claim was earned. Those are yours.
    After running, verify: recompute one version's rate for a single day by hand and check
    that it matches. Counters *plausible-but-wrong-method* (a calculation that quietly
    compares unequal conditions).
-4. **Verify.** Run one independent check. If the check and the output disagree, do not
+4. **Verify.** Run one independent check and write its outcome down either
+   way — "nothing changed" is a result worth recording. If the check and the output disagree, do not
    average them; find out which one is wrong.
 5. **Defend.** With the tool closed, write one sentence stating the result in your own
    words, and one sentence naming what it does not establish.
