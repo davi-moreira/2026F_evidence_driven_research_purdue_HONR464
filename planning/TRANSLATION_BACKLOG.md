@@ -89,6 +89,16 @@ replace it.
     Studio 1–4 `practice_kit` blocks (worked example / faded task /
     starter / verification).
 
+19. **Lesson title de-coursed (2026-08-05).** "The Student as Research
+    Director" → **"You as a Research Director"**, matching the book's
+    second-person voice rule and the CRC proposal's ToC. EN only; PT/ES
+    still carry the third-person title. Identity is unchanged and must
+    stay so: the file
+    `part1-research-with-ai/02-the-student-as-research-director.qmd`, the
+    companion `ch02_the_student_as_research_director.ipynb`, and the
+    `url_path` keep the old slug (D35 P9 — a rename or URL move fails the
+    build). Translate the display title only.
+
 ## C. Verification required before the freeze lifts
 
 12. **Human PT/ES methods review** — required by round 4: an English

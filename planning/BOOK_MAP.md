@@ -18,7 +18,7 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 |---|---|---|---|
 | II — From curiosity to research design | 1 | From Curiosity to a Research Problem | nb01 |
 | I — Research when AI can produce almost everything | 2 | AI Is Your Arm, Not Your Brain | nb02 |
-| I | 3 | The Student as Research Director | nb02 |
+| I | 3 | You as a Research Director | nb02 |
 | I | 4 | Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend | nb02 |
 | I | 5 | Research Responsibility and Intellectual Ownership | nb02 |
 | II — From curiosity to research design | 6 | Choose Your Question's Kind and Reach | nb02 |
