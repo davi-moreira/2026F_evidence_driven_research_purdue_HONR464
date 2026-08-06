@@ -760,14 +760,20 @@ div.csl-indent {
 </section>
 <section id="the-concept" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">14.2</span> The concept</h2>
-<p><strong>Observational descriptive research</strong> means you watch and record what is there without changing anyone’s experience, then summarize it. Example: you pull the roll call records of every member of a legislature and report how often each one crossed party lines. You never assign a treatment, so this pathway can describe, and with care generalize, but it cannot by itself say one thing caused another.</p>
-<p>Four nested groups keep such a description honest. Picture four boxes, each smaller than the last.</p>
+<p>This chapter follows the observational-descriptive pathway of the design library in RDSS <span class="citation" data-cites="blair2023rdss">(<a href="#ref-blair2023rdss" role="doc-biblioref">Blair et al. 2023</a>)</span>. <strong>Observational descriptive research</strong> means you sample and measure without assigning anyone a condition, then summarize what you found. Example: you pull the roll call records of every member of a legislature and report how often each one crossed party lines. Because no treatment is assigned, this pathway can describe, and with care generalize to a population, but it cannot by itself say one thing caused another.</p>
+<p>Four groups keep such a description honest <span class="citation" data-cites="groves2009survey">(<a href="#ref-groves2009survey" role="doc-biblioref">Groves et al. 2009</a>)</span>. They are often drawn as boxes inside boxes, and that picture is worth knowing along with the place it lies.</p>
 <ul>
-<li><strong>Target population</strong>: everyone your question is about. Example: every customer a streaming service will ever bill. This is the outermost box, the group you wish you could study.</li>
+<li><strong>Target population</strong>: everyone your question is about. Example: every customer a streaming service will ever bill. This is the group you wish you could study.</li>
 <li><strong>Accessible population</strong>: the part of the target you could reach in principle, given time and cost. Example: the customers you can actually contact with a survey this quarter.</li>
-<li><strong>Sampling frame</strong>: the concrete list you draw from. Example: the current subscriber list your survey tool pulls from. Whatever is not on that list cannot be sampled.</li>
-<li><strong>Sample</strong>: the customers you actually survey. The innermost box.</li>
+<li><strong>Sampling frame</strong>: the concrete list you actually draw from. Example: the current subscriber list your survey tool pulls from. This is the box that misbehaves. A frame can miss people who belong in your target, and it can also carry people who do not belong at all, plus duplicates that give one person two chances of being picked. Treating the frame as a clean slice of the population above it is one of the quietest ways a description goes wrong.</li>
+<li><strong>Sample</strong>: the customers you actually survey, drawn from the frame and no wider.</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/concepts/sampling_groups.png" class="img-fluid figure-img" alt="Diagram of four overlapping regions labeled target population, accessible population, sampling frame, and sample. The frame region extends partly outside the accessible population to show ineligible units, and part of the accessible population falls outside the frame to show eligible people the frame misses. The sample sits inside the frame."></p>
+<figcaption>The four groups a description has to keep straight. Only the sample is drawn from the frame, and the frame is not a tidy slice of the population above it: it misses eligible people and carries ineligible ones and duplicates.</figcaption>
+</figure>
+</div>
 <p>A claim is honest only when the box it describes matches the box it names. Two processes decide how the boxes differ. <strong>Selection</strong> is any process that decides who lands in your data instead of chance alone. Example: a survey taken outside one dining hall selects for people who eat there at lunch. <strong>Nonresponse</strong> is the units you drew who never gave you data. Example: of 500 people contacted, 300 reply, and the 200 silent ones are rarely a random slice. When either process relates to the very thing you are measuring, your summary drifts from the truth, and no amount of extra data pulls it back <span class="citation" data-cites="bethlehem2010selection">(<a href="#ref-bethlehem2010selection" role="doc-biblioref">Bethlehem 2010</a>)</span>. Size shrinks the sample-to-sample wobble. It does nothing to a systematic tilt in who you reached <span class="citation" data-cites="meng2018paradises">(<a href="#ref-meng2018paradises" role="doc-biblioref">Meng 2018</a>)</span>.</p>
 </section>
 <section id="a-worked-example" class="level2" data-number="14.3">
@@ -892,6 +898,9 @@ title, authors, year, and venue, and mark any you are not confident exist.</code
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-bethlehem2010selection" class="csl-entry" role="listitem">
 Bethlehem, Jelke. 2010. <span>“Selection Bias in Web Surveys.”</span> <em>International Statistical Review</em> 78 (2): 161–88. <a href="https://doi.org/10.1111/j.1751-5823.2010.00112.x">https://doi.org/10.1111/j.1751-5823.2010.00112.x</a>.
+</div>
+<div id="ref-blair2023rdss" class="csl-entry" role="listitem">
+Blair, Graeme, Alexander Coppock, and Macartan Humphreys. 2023. <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em>. Princeton University Press. <a href="https://book.declaredesign.org">https://book.declaredesign.org</a>.
 </div>
 <div id="ref-groves2009survey" class="csl-entry" role="listitem">
 Groves, Robert M., Jr. Fowler Floyd J., Mick P. Couper, James M. Lepkowski, Eleanor Singer, and Roger Tourangeau. 2009. <em>Survey Methodology</em>. 2nd ed. John Wiley &amp; Sons. <a href="https://books.google.com/books?id=HXoSpXvo3s4C">https://books.google.com/books?id=HXoSpXvo3s4C</a>.

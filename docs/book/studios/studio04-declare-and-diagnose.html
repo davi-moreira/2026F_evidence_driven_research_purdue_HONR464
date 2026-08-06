@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -607,6 +626,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link active" data-scroll-target="#checkpoint">The milestone ahead</a></li>
   <li><a href="#the-lessons-in-this-studio" id="toc-the-lessons-in-this-studio" class="nav-link" data-scroll-target="#the-lessons-in-this-studio">The lessons in this studio</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 </nav>
     </div>
@@ -695,8 +715,8 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <section id="checkpoint" class="level2">
 <h2 class="anchored" data-anchor-id="checkpoint">The milestone ahead</h2>
-<p>This is the hinge of the book. Everything before it shaped a question; everything after it executes a design. The contract you write here (objective, estimand, population, data strategy, a provisional operationalization, warrant, answer strategy, uncertainty) is declared before any result exists, so that later changes are visibly design or visibly drift. Diagnosing it on simulated data now, while changing your mind is still free, is what makes the declaration honest rather than decorative.</p>
-<p>This studio closes with <strong><a href="../studios/milestone04-declare-and-diagnose.html">Milestone 4: Your research contract, v0</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> Research Contract v0 — objective, target estimand, population, setting and time, data strategy, a provisional operationalization you mark for revision, warrant, answer strategy and uncertainty statement — plus your diagnosands, your permission status, and a redesign record. Measurement proper is taught and assessed in Studio 6; here you only commit to a starting choice and say why it is defensible for now.</p>
+<p>This is the hinge of the book. Everything before it shaped a question; everything after it executes a design. The contract you write here (objective, estimand, population, data strategy, a provisional operationalization, warrant, answer strategy, uncertainty) is declared before any result exists, so that later changes are visibly design or visibly drift. Diagnosing it on simulated data now, while changing your mind is still free, is what makes the declaration honest rather than decorative. The four MIDA parts you declare here, and the declare-and-diagnose loop you run on them, were introduced by Blair, Cooper, Coppock, and Humphreys <span class="citation" data-cites="blair2019declaring blair2023rdss">(<a href="#ref-blair2019declaring" role="doc-biblioref">Blair et al. 2019</a>, <a href="#ref-blair2023rdss" role="doc-biblioref">2023</a>)</span>; this book puts them in plain language and joins them to a governed AI workflow.</p>
+<p>This studio closes with <strong><a href="../studios/milestone04-declare-and-diagnose.html">Milestone 4: Your research contract, v0</a></strong>, a short chapter of its own after the lessons. <strong>What it asks you to produce.</strong> Research Contract v0 — objective, target estimand, population, setting and time, data strategy, a provisional operationalization you mark for revision, warrant, answer strategy and uncertainty statement — plus the design properties you diagnosed (its bias, its wobble, and how often it would detect what you are looking for), your permission status, and a redesign record. Measurement proper is taught and assessed in Studio 6; here you only commit to a starting choice and say why it is defensible for now.</p>
 <p>Milestone 5 commits the contract to one research pathway and writes what that pathway can and cannot establish. The milestone chapter keeps the working details: the practice steps, the versioned record, and how the artifact is assessed.</p>
 </section>
 <section id="the-lessons-in-this-studio" class="level2">
@@ -711,6 +731,17 @@ ul.task-list li input[type="checkbox"] {
 <p>When the last lesson closes, the milestone chapter is next. Nothing you write in a lesson is busywork: every piece above is on the milestone’s checklist.</p>
 
 
+</section>
+<section id="bibliography" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-blair2019declaring" class="csl-entry" role="listitem">
+Blair, Graeme, Jasper Cooper, Alexander Coppock, and Macartan Humphreys. 2019. <span>“Declaring and Diagnosing Research Designs.”</span> <em>American Political Science Review</em> 113 (3): 838–59. <a href="https://doi.org/10.1017/S0003055419000194">https://doi.org/10.1017/S0003055419000194</a>.
+</div>
+<div id="ref-blair2023rdss" class="csl-entry" role="listitem">
+Blair, Graeme, Alexander Coppock, and Macartan Humphreys. 2023. <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em>. Princeton University Press. <a href="https://book.declaredesign.org">https://book.declaredesign.org</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

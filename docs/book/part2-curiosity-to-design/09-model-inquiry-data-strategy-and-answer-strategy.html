@@ -759,13 +759,19 @@ div.csl-indent {
 </section>
 <section id="the-concept" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">10.2</span> The concept</h2>
-<p>Every research design has the same four parts. This book calls them <strong>MIDA</strong>, one letter each.</p>
+<p>Every research design has the same four parts. Blair, Cooper, Coppock, and Humphreys named that framework <strong>MIDA</strong>, one letter each, and developed it at book length in <em>Research Design in the Social Sciences</em> <span class="citation" data-cites="blair2019declaring blair2023rdss">(<a href="#ref-blair2019declaring" role="doc-biblioref">Blair et al. 2019</a>, <a href="#ref-blair2023rdss" role="doc-biblioref">2023</a>)</span>. This book adopts their four labels and puts them in plain language for a first quantitative project.</p>
 <ul>
 <li><strong>Model</strong>: your written picture of how the world could work, meaning which things exist and what could affect what. Example: “a listener’s chance of accepting a recommended song runs from 0 to 1, and a new recommender could nudge it up.”</li>
 <li><strong>Inquiry</strong>: the one exact quantity you want from that world, named before any outcome arrive. Example: “the average lift in accept rate the new recommender causes across listeners.”</li>
-<li><strong>Data strategy</strong>: your plan for how the data come to exist, meaning who gets sampled and who gets which condition. Example: “randomly send each session to the old or new recommender, then log every accept.”</li>
-<li><strong>Answer strategy</strong>: your plan for turning the data into an estimate of the inquiry. Example: “accept rate in the new group minus accept rate in the old group.”</li>
+<li><strong>Data strategy</strong>: every procedure that makes your data exist, meaning who gets sampled, who gets which condition when you assign one, and how each outcome is measured. Example: “randomly send each session to the old or new recommender, then log every accept.”</li>
+<li><strong>Answer strategy</strong>: the whole procedure that turns those data into an answer, meaning how you prepare them, the estimate you compute, how you state the uncertainty around it, and how you read what comes back. Example: “accept rate in the new group minus accept rate in the old group, reported with an interval.”</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/concepts/mida_map.png" class="img-fluid figure-img" alt="Diagram with four rounded boxes in two rows. Top row, labeled on paper: Model, how the world could work, with an arrow labeled makes askable pointing to Inquiry, the one quantity you want from it. Bottom row, labeled in the world: Data strategy, every procedure that makes the data, with an arrow labeled feeds pointing to Answer strategy, how those data become an answer. A dashed arrow runs upward from Answer strategy to Inquiry, labeled alignment: does the answer reach the inquiry?"></p>
+<figcaption>The four parts of a design. The top row is what you assert on paper; the bottom row is what you actually run. The dashed arrow is the check that matters: your answer strategy has to reach the inquiry you named.</figcaption>
+</figure>
+</div>
 <p>The four are not a checklist you fill in any order <span class="citation" data-cites="blair2023rdss">(<a href="#ref-blair2023rdss" role="doc-biblioref">Blair et al. 2023</a>)</span>. They must <strong>align</strong>, meaning your data and answer strategies actually reach the inquiry your model makes askable. Example of misalignment: a causal inquiry (“the lift the recommender <em>causes</em>”) served by a data strategy where the people who see the new version differ systematically from those who do not. What that comparison delivers is an <strong>association</strong>, meaning two things move together without proof that one caused the other.</p>
 <p>Read that carefully, because it is easy to draw the wrong lesson. Alignment does not mean your data get to rewrite your question. The inquiry is still causal; this design simply does not reach it. Nor does the absence of randomizing settle the matter: observational designs can carry causal answers when they bring a defended identification argument suited to the design, which is the whole subject of a later chapter. The honest diagnosis names the gap: causal inquiry, currently unidentified under this data and answer strategy <span class="citation" data-cites="hernan2020whatif">(<a href="#ref-hernan2020whatif" role="doc-biblioref">Hernán and Robins 2020</a>)</span>. Naming that on paper is the whole job here.</p>
 </section>
@@ -859,6 +865,9 @@ exists, say so instead of inventing one.</code></pre>
 <section id="bibliography" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-blair2019declaring" class="csl-entry" role="listitem">
+Blair, Graeme, Jasper Cooper, Alexander Coppock, and Macartan Humphreys. 2019. <span>“Declaring and Diagnosing Research Designs.”</span> <em>American Political Science Review</em> 113 (3): 838–59. <a href="https://doi.org/10.1017/S0003055419000194">https://doi.org/10.1017/S0003055419000194</a>.
+</div>
 <div id="ref-blair2023rdss" class="csl-entry" role="listitem">
 Blair, Graeme, Alexander Coppock, and Macartan Humphreys. 2023. <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em>. Princeton University Press. <a href="https://book.declaredesign.org">https://book.declaredesign.org</a>.
 </div>

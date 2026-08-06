@@ -764,6 +764,7 @@ div.csl-indent {
 </section>
 <section id="the-concept" class="level2" data-number="17.2">
 <h2 data-number="17.2" class="anchored" data-anchor-id="the-concept"><span class="header-section-number">17.2</span> The concept</h2>
+<p>This pathway is the book’s own addition. The four pathways around it adapt RDSS’s design library; prediction extends that library rather than adapting a part of it, because a forecast is judged by how it performs on cases nobody has seen yet <span class="citation" data-cites="blair2023rdss">(<a href="#ref-blair2023rdss" role="doc-biblioref">Blair et al. 2023</a>)</span>.</p>
 <p>A <strong>prediction</strong> is a best guess about a case whose outcome you cannot see yet. Example: forecasting whether a lake blooms next week, before next week exists. Prediction is descriptive, not causal. It forecasts <em>what</em> will happen, never <em>why</em>.</p>
 <p>What makes prediction its own question is its <strong>reach</strong>, the cases a claim is meant to cover. Prediction’s reach is <strong>unseen cases</strong>, units not in your data whose outcome is still unknown, such as next month’s samples. Its cousin is <strong>generalization</strong>, reach from your sample to a broader population, such as from the twelve lakes you measured to every lake in the watershed. Both go beyond the data in hand, and both are honest only when you can name the crossing that licenses them.</p>
 <p>A forecast earns trust under a four-part <strong>contract</strong>, in fixed order. The <strong>target</strong> is the one column you predict, for example <code>bloom_next_week</code>. The <strong>baseline</strong> is the dumbest honest rule you must beat, usually “always guess the most common answer”; if 85% of weeks have no bloom, that rule scores 85% for free, so 85% is the bar. The <strong>metric</strong> is how you keep score, matched to the target; accuracy misleads when blooms are rare, so recall on the bloom class, the share of real blooms the model catches, often matters more. Whichever you choose, score the baseline and every candidate on the same metric, or the comparison means nothing.</p>
@@ -927,6 +928,9 @@ leak.</code></pre>
 <section id="bibliography" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-blair2023rdss" class="csl-entry" role="listitem">
+Blair, Graeme, Alexander Coppock, and Macartan Humphreys. 2023. <em>Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign</em>. Princeton University Press. <a href="https://book.declaredesign.org">https://book.declaredesign.org</a>.
+</div>
 <div id="ref-hastie2009elements" class="csl-entry" role="listitem">
 Hastie, Trevor, Robert Tibshirani, and Jerome Friedman. 2009. <em>The Elements of Statistical Learning: Data Mining, Inference, and Prediction</em>. 2nd ed. Springer. <a href="https://doi.org/10.1007/978-0-387-84858-7">https://doi.org/10.1007/978-0-387-84858-7</a>.
 </div>
