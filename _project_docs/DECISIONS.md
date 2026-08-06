@@ -2152,3 +2152,85 @@ three companion notebooks on its first run, all fixed at the chapter source.
 5. A full near-verbatim comparison against the entire Princeton text remains
    **UNVERIFIED**; both passes checked changed passages, known RDSS surfaces,
    and repository assets, not every sentence against a licensed corpus.
+
+## Decision 49: One Studio per week — the course realigned to the 40-lesson book (2026-08-05)
+
+**Ruling (Davi).** Three directives:
+
+1. **Update the course to the book's new version, structure, and design.**
+   The book moved past the D41 alignment: 40 lessons (D46 added
+   `declare-your-question`), Studio 1 is now the reader's curiosity alone
+   (D45's flip), Studio 2 absorbed the question lessons, Studio 10 became
+   venue-neutral and publication-ready (D42/D44), Studio 12 is the agentic
+   special topic (D44), every workbook is developed (D47), and attribution
+   is governed (D48).
+2. **Every lecture from Week 1 Wednesday to the last lecture of Week 16 is
+   updated and rewritten as needed.** Week 1 Monday stays the
+   instructor-led orientation and is the only lecture exempt.
+3. **One Studio per week.** Monday and Wednesday teach that Studio's
+   LESSONS together with their "It is your turn" work; **Friday IS that
+   Studio's MILESTONE.** The exceptions are Week 1 and the date-driven
+   weeks.
+
+**The mapping this produces — Studios 1–12 on Weeks 1–12.** It is not an
+accident that this fits: the fixed dates land exactly where the book
+already wants them.
+
+| Wk | Studio | Course M | Book M | The fixed date it carries |
+|---|---|---|---|---|
+| 1 | S1 Frame the inquiry | M0 | 1 | Mon = orientation (exempt) |
+| 2 | S2 Govern the work | M1 | 2 | — |
+| 3 | S3 Ground in evidence | M2 | 3 | short week (Labor Day) |
+| 4 | S4 Declare and diagnose | M3 | 4 | — |
+| 5 | S5 Develop the pathway | M4 | 5 | — |
+| 6 | S6 Govern data and measurement | M5 | 6 | — |
+| 7 | S7 First reproducible analysis | M6 | 7 | **URC abstract gate, Fri Oct 9** |
+| 8 | S8 Stress-test and adjudicate | M7 | 8 | short week (October break) |
+| 9 | S9 Write, bound, disclose | M8 | 9 | — |
+| 10 | S10 Adapt and defend | M9 | 10 | — |
+| 11 | S11 Reproduce and package | M10 | 11 | **poster lock, Fri Nov 6, TERMINAL** |
+| 12 | S12 Release and next cycle | M11 | 12 | — |
+| 13 | *(revisits)* public test | M12 | 10 v2 | **Expo, Tue Nov 17** |
+| 14 | *(practice)* peer cold run | M13 | 11 practice | **async, Mon Nov 23** |
+| 15 | *(revisits)* note v1 + package | M14 | 9 v2 + 11 v2 | — |
+| 16 | *(revisits)* defenses + release | M15 | 12 v2 | **terminal, Fri Dec 11** |
+
+**Why the fixed dates fall right.** The URC abstract needs a result, and
+Studio 7 produces the first one (Week 7 Friday = Oct 9). The poster lock
+needs reproduced numbers, and Studio 11 is the reproduction gate — so the
+numbers that lock onto the poster on Nov 6 are the numbers that just
+reproduced from a clean package. And Studio 12's release audit sits the
+week BEFORE the Expo, which makes the Expo the release rather than a
+rehearsal: you audit release before you release. The four post-studio
+weeks then do what only they can — the public test, the peer cold run
+(on someone else's package, since your own already exists), the revision
+that adjudicates both streams of evidence, and the defense.
+
+**Course policy recorded in the crosswalk, never inferred from the book:**
+the five pathway lessons stay route-required (own route + one assigned
+contrast; hybrid only for staged designs), and BOTH Studio 10 genre
+branches are required because this course's venue contract mandates a
+poster (the Expo) and an oral evidence defense.
+
+**Load, stated honestly.** Two weeks carry more than their meetings do
+comfortably: Week 2 teaches six lessons in two lectures (Monday takes the
+four governance lessons as one arc, Wednesday the two question lessons),
+and Week 8 teaches four lessons in ONE lecture because October break
+removes its Monday. Week 8's lecture teaches the spine that unifies the
+four — pre-list, run commensurable panels, read a negative test against
+the null reference spread, adjudicate every flag against a real check —
+and the four chapters carry their depth through their IYT sections. This
+is the price of one-studio-per-week and it is recorded, not hidden.
+
+**Identity untouched:** the calendar, the 50-minute frames (D22/D33/D34),
+assessment weights, notebook slugs and filenames, course milestone ids
+M0–M15, lesson and station ids, and every book URL. Display titles and
+artifact specs change; identifiers never do.
+
+**Process.** Built through the two-role Codex loop plus multi-agent
+orchestration: a mirror-mode Codex design partner ran the same assignment
+independently while a 16-agent workflow wrote one teaching spec per week
+and a semester-coherence critic audited them together; implementation ran
+as further workflows over the briefs, the schedule, and the notebooks;
+a Codex review round closes the build. Artifacts in
+`_adm/codex_collab/2026-08-05_d49-one-studio-per-week/`.

@@ -2,7 +2,8 @@
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M15**.
-> This submission presents **Book Milestone 12 — Your release and next cycle** (version 1 — release decision and next-cycle record): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html#milestone).
+> This submission presents **Book Milestone 12 — Your release and next cycle** (version 2 - the final release, dossier, and portfolio): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html#milestone).
+> It is a *revisit*: the next version of an artifact whose first version already exists.
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project

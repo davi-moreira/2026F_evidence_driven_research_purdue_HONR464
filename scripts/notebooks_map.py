@@ -20,22 +20,22 @@ NB_RE = re.compile(r"nb(\d\d)")
 
 # nb number -> (file slug, short site title). One notebook per WEEK (v2).
 NOTEBOOKS = {
-    1:  ("nb01_ai_arm_not_brain", "Research in the age of AI: your arm, your RA, not your brain"),
-    2:  ("nb02_curiosity_to_problem", "From curiosity to a research problem: descriptive, predictive, causal"),
-    3:  ("nb03_research_builds_on_research", "Research builds on research: verified evidence + real gaps"),
-    4:  ("nb04_anatomy_of_design", "The anatomy of a research design: MIDA + declare → diagnose → redesign"),
-    5:  ("nb05_observational_descriptive", "Studio 5: Choose and defend your research pathway"),
+    1:  ("nb01_ai_arm_not_brain", "Studio 1: Frame the inquiry — from curiosity to a research problem"),
+    2:  ("nb02_curiosity_to_problem", "Studio 2: Govern the work — your rules and your question"),
+    3:  ("nb03_research_builds_on_research", "Studio 3: Ground it in verified evidence"),
+    4:  ("nb04_anatomy_of_design", "Studio 4: Declare and diagnose provisionally"),
+    5:  ("nb05_observational_descriptive", "Studio 5: Develop the pathway — the route hub"),
     6:  ("nb06_observational_causal", "Studio 6: Govern data and measurement"),
-    7:  ("nb07_experimental_descriptive", "Studio 7: Build a reproducible first analysis"),
-    8:  ("nb08_prediction", "Studio 7: Verify your analysis from a clean restart"),
-    9:  ("nb09_experimental_causal", "Studio 8: Stress-test and adjudicate"),
-    10: ("nb10_attack_the_analysis", "Studio 9: Write, bound, and disclose"),
-    11: ("nb11_poster_criticism_lock", "Studio 10: Adapt the poster and pass the release gates"),
-    12: ("nb12_poster_delivery", "Studio 10: Pitch and defend without inflating"),
-    13: ("nb13_conference", "Studio 10: Public test and reflection"),
-    14: ("nb14_replication_redteam", "Async module: Studio 11 peer cold run + red-team of a peer's package"),
-    15: ("nb15_poster_to_research_note", "Studios 9 + 11: Revise the note and package the work"),
-    16: ("nb16_managing_ai_agents", "Studio 12: Release the work and direct the next cycle"),
+    7:  ("nb07_experimental_descriptive", "Studio 7: Produce a reproducible first analysis"),
+    8:  ("nb08_prediction", "Studio 8: Stress-test and adjudicate"),
+    9:  ("nb09_experimental_causal", "Studio 9: Write, bound, and disclose"),
+    10: ("nb10_attack_the_analysis", "Studio 10: Adapt and defend — the venue contract and the artifact"),
+    11: ("nb11_poster_criticism_lock", "Studio 11: Reproduce and package"),
+    12: ("nb12_poster_delivery", "Studio 12: Release and direct the next cycle"),
+    13: ("nb13_conference", "Public test: the Expo and the reflection studio"),
+    14: ("nb14_replication_redteam", "Async module: cold-run and red-team a peer's package"),
+    15: ("nb15_poster_to_research_note", "Revision: research note v1 and the repaired package"),
+    16: ("nb16_managing_ai_agents", "The close: Evidence Defenses, release, and portfolio"),
 }
 
 REPO_SLUG = "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
@@ -46,23 +46,23 @@ REPO_SLUG = "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
 # no schedule badge, and no per-lecture structure. Built ad hoc as each milestone
 # package ships; not every id is present until P4 completes.
 MS_NOTEBOOKS = {
-    0:  ("ms00_research_ai_baseline", "M0 studio — research and AI baseline"),
-    1:  ("ms01_research_opportunity_landscape", "M1 studio — research opportunity landscape"),
+    0:  ("ms00_research_ai_baseline", "M0 studio — curiosity committed and the research problem"),
+    1:  ("ms01_research_opportunity_landscape", "M1 studio — your rules and your question"),
     2:  ("ms02_verified_evidence_map", "M2 studio — verified evidence and contribution map"),
     3:  ("ms03_research_charter_mida", "M3 studio — Research Contract v0 and permission determination"),
     4:  ("ms04_observational_descriptive_audit",
         "M4 studio — pathway declaration and mandated contrast"),
     5:  ("ms05_causal_identification", "M5 studio — data and measurement governance"),
-    6:  ("ms06_experimental_measurement_protocol", "M6 studio — first executable analysis + abstract gate"),
-    7:  ("ms07_declared_analysis_protocol", "M7 studio — clean-restart verified analysis"),
-    8:  ("ms08_minimum_viable_analysis", "M8 studio — robustness audit"),
-    9:  ("ms09_poster_draft_research_audit", "M9 studio — bounded research-note v0"),
-    10: ("ms10_final_poster_lock", "M10 studio — final poster lock (terminal)"),
-    11: ("ms11_presentation_package", "M11 studio — defense-ready package + mock symposium"),
+    6:  ("ms06_experimental_measurement_protocol", "M6 studio — first reproducible analysis + abstract gate"),
+    7:  ("ms07_declared_analysis_protocol", "M7 studio — robustness audit"),
+    8:  ("ms08_minimum_viable_analysis", "M8 studio — bounded research note and claim-evidence table"),
+    9:  ("ms09_poster_draft_research_audit", "M9 studio — venue contract and the publication-ready artifact"),
+    10: ("ms10_final_poster_lock", "M10 studio — reproducible package and the final poster lock (terminal)"),
+    11: ("ms11_presentation_package", "M11 studio — release audit and next-cycle agenda"),
     12: ("ms12_conference_reflection", "M12 studio — conference reflection and defense revision"),
     13: ("ms13_replication_redteam", "M13 module — replication and red-team (async)"),
     14: ("ms14_research_note_capsule", "M14 studio — research note v1 and reusable package"),
-    15: ("ms15_final_chapter_portfolio", "M15 studio — final chapter, portfolio + ceremony (terminal)"),
+    15: ("ms15_final_chapter_portfolio", "M15 studio — final chapter, defense, and portfolio (terminal)"),
 }
 
 

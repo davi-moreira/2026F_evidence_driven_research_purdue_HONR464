@@ -72,8 +72,8 @@ COMPASS_CHEAT_SHEET = """\
   seen.
 - **Positions (classified in nb02):** Description · Generalization · Prediction
   · Causal reasoning. All five design pathways meet at nb05's route hub (own
-  route + one assigned contrast, D41); nb06–nb09 then govern data, build and
-  verify the first analysis, and stress-test it.
+  route + one assigned contrast, D49); nb06 then governs data and measurement,
+  nb07 builds and verifies the first analysis, and nb08 stress-tests it.
 - **Claim upgrades & warrants:** these units→a population = sampling design +
   uncertainty (*silent upgrade* if unpaid) · observed→unseen = prediction-time
   honesty + held-out check (*leakage* if unpaid) · "associated"→"causes" =

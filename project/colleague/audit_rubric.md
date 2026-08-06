@@ -13,9 +13,9 @@ rewards verified findings and calibrated judgment — not suspicion volume.
 
 **Scoring policy.**
 
-- 10 audits are scored across the semester (Studios 2–10 and 12; Studio 1
-  is the modeled Case 464 and Studio 11 is graded through the replication
-  milestone). The best 8 count. The unscored continuation beats (the
+- 10 audits are scored across the semester — Weeks 2–10 and Week 12, one
+  per studio (each week is one studio). Week 1 is the modeled Case 464 and
+  Studio 11 is graded through the Week-14 peer replication. The best 8 count. The unscored continuation beats (the
   pipeline preview, defense week, public-criticism week, repair week) are
   practice only.
 - Finding the seeded flaw is not required for a strong score: a verified,

@@ -2,7 +2,7 @@
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M9**.
-> This submission presents **Book Milestone 9 — Your bounded claims** (version 1 — bounded research-note v0): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html#milestone).
+> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project
@@ -32,7 +32,7 @@ revise, update your ledger, and submit at studio close.
 | 1 | **`lastname_m09_note.pdf`** *or* a shared Colab notebook link | **Research note v0**: one to two pages stating your question, your method in one paragraph, your results with their uncertainty, your bounded headline claim, your limitations, and your references. This is the graded prose artifact. |
 | 2 | **`lastname_m09_claims.pdf`** *or* the same file's closing sections | Your **claim–evidence table** (every claim a row: claim · evidence · verification · boundary) and your **AI disclosure statement**, drafted from your ledger. |
 | 3 | *(nothing to submit)* | The **poster content brief** — the claim, the one figure, and the numbers that will travel to the poster, each with its cell trace — is shaped at the studio and HANDED OFF ungraded to next week's M10 kickoff. The note and the claim–evidence table are what this milestone grades. |
-| 4 | **EDR\|AI "It is your turn" — ch. 28, ch. 29, ch. 30, ch. 31** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 confirm that every number in the note still traces to the notebook cell that
@@ -47,10 +47,10 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 28 — [From Results to Claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch25_from_results_to_claims.ipynb)
-- Ch. 29 — [Claim–Evidence Tables](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch26_claim_evidence_tables.ipynb)
-- Ch. 30 — [AI Disclosure and Research Integrity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch31_ai_disclosure_and_research_integrity.ipynb)
-- Ch. 31 — [From Dossier to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch33_from_poster_to_research_note.ipynb)
+- Ch. 32 — [Research Posters](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch27_research_posters.ipynb)
+- Ch. 33 — [Poster Criticism](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch28_poster_criticism.ipynb)
+- Ch. 34 — [Research Pitches, Talks, and Seminars](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch29_research_pitches.ipynb)
+- Ch. 35 — [Difficult Questions and Uncertainty](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch30_difficult_questions_and_uncertainty.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final

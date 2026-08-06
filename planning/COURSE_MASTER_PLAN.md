@@ -61,33 +61,36 @@ the student commits to that week.
 | No class — Thanksgiving | — | Wed/Fri Nov 25 & 27 |
 | URC Expo — required poster presentation (not an MWF meeting) | — | Tue Nov 17 |
 
-Since D41 the weekly spine IS the book's Studio arc (D38/D40): each week runs
-one Studio sprint (Studios 7 and 10 span two and three weeks; W15 closes
-Studios 9 and 11 together), and each course milestone presents a **book
-Milestone version** (the bridge column lives in
-`planning/PROJECT_MILESTONES.md` and the crosswalk's `book_milestones:`
-blocks). Notebook slugs are permanent compatibility ids; nb05–nb16 display
-titles and cell content are rebuilt to the studio topics in the D41 content
-phase (before launch).
+Since **D49** the weekly spine IS the book's Studio arc, one Studio per week:
+**Monday and Wednesday teach that Studio's lessons together with their "It is
+your turn" work, and Friday IS that Studio's milestone.** Studios 1–12 fall on
+Weeks 1–12, which puts every fixed date where the book already wants it — the
+URC abstract gate (Fri Oct 9) on Studio 7's first result, the terminal poster
+lock (Fri Nov 6) on Studio 11's reproduction gate, and Studio 12's release
+audit the week *before* the Expo, so the Expo is the release. Weeks 13–16 are
+the four date-driven exception weeks; they anchor no new lesson and revisit
+what the studios built. Week 1's Monday is the instructor-led orientation, the
+one other exception. Course milestone M(n) presents book Milestone (n+1)
+through M11 (`planning/COURSE_BOOK_CROSSWALK.yml`).
 
-| Wk | Studio sprint (notebook) | Lec | Milestone · due | The week's research decision |
+| Wk | Studio (notebook) | Lec | Milestone · due | The week's research decision |
 |---|---|---|---|---|
-| 1 | S1 Begin with your curiosity (`nb01`) | 2 | M0 · Fri Aug 28 | What stays human, what may be delegated, and how will every delegation be checked and recorded? |
-| 2 | S2 Set your rules, shape your question (`nb02`) | 2 | M1 · Fri Sep 4 | Which rules will govern AI-assisted work, and what exact question will those rules let me sign? |
+| 1 | S1 Frame the inquiry (`nb01`) | 2 | M0 · Fri Aug 28 | What am I curious about, what do I already believe, and what evidence would change my mind? |
+| 2 | S2 Govern the work (`nb02`) | 2 | M1 · Fri Sep 4 | How will my tools and I work — and what exactly am I asking, in what kind and reach? |
 | 3 | S3 Ground it in verified evidence (`nb03`) | 1 | M2 · Fri Sep 11 | What is genuinely known, what is unresolved, and how must my question change? |
-| 4 | S4 Declare and diagnose provisionally (`nb04`) | 2 | M3 · Fri Sep 18 | What is my provisional Contract v0 — MIDA, operationalization, uncertainty, permission status? |
-| 5 | S5 Develop the pathway — route hub (`nb05`) | 2 | M4 · Fri Sep 25 | Which route do my question and licence support, what does the mandated contrast rule out, and what can my route never establish? |
-| 6 | S6 Govern data and measurement (`nb06`) | 2 | M5 · Fri Oct 2 | How do data reach me, under what permission, and do my measures measure my concepts? |
-| 7 | S7 Produce a reproducible first analysis — build (`nb07`) | 2 | M6 · Fri Oct 9 | What code executes my declared analysis, and what first result does it produce with uncertainty? |
-| 8 | S7 Verify the first analysis — clean restart (`nb08`) | 1 | M7 · Fri Oct 16 | Does the result survive a clean restart, and does every claim trace to a verified output? |
-| 9 | S8 Stress-test and adjudicate (`nb09`) | 2 | M8 · Fri Oct 23 | Which checks were pre-listed, what survived them, and what remains unruled-out? |
-| 10 | S9 Write, bound, and disclose — note v0 (`nb10`) | 2 | M9 · Fri Oct 30 | What bounded claim can I write down, with every sentence traced to evidence and disclosure? |
-| 11 | S10 Poster adaptation + reproduction gate + lock (`nb11`) | 2 | M10 · Fri Nov 6, 5 PM (terminal) | Which labeled-preliminary claim goes on the poster, and has it passed self-reproduction and the release preflight? |
-| 12 | S10 Pitch and defense rehearsal (`nb12`) | 2 | M11 · Fri Nov 13 | How do I compress without inflating, and answer the hardest fair questions? |
-| 13 | S10 Public test at the Expo + reflection (`nb13`) | 1 | M12 · Fri Nov 20 | What did public questioning reveal, and what must change in the claim or its defense (Expo Tue Nov 17)? |
-| 14 | S11 Async: peer cold run + red-team (`nb14`) | 0 | M13 · Sun Nov 29 (async) | Does a peer's evidence reproduce without author help, and where is it fragile? |
-| 15 | S9+S11 Research note v1 + reusable package (`nb15`) | 2 | M14 · Fri Dec 4 | What changed after public criticism and the cold run, and is the revised package reusable? |
-| 16 | S12 Special topic: agentic AI, release, and the next cycle (`nb16`) | 2 | M15 · Fri Dec 11 (terminal) | Is the latest package still reproduced, why am I stopping, and what should the next study ask? |
+| 4 | S4 Declare and diagnose provisionally (`nb04`) | 2 | M3 · Fri Sep 18 | What is my Contract v0 — MIDA, uncertainty, provisional measures, permission status? |
+| 5 | S5 Develop the pathway — route hub (`nb05`) | 2 | M4 · Fri Sep 25 | Which route do my question and licence support, and what can it never establish? |
+| 6 | S6 Govern data and measurement (`nb06`) | 2 | M5 · Fri Oct 2 | How did the data reach me, under what permission, and do my measures measure my concepts? |
+| 7 | S7 Produce a reproducible first analysis (`nb07`) | 2 | M6 · Fri Oct 9 | What does my declared analysis actually produce, with what uncertainty, traceable to which cell? |
+| 8 | S8 Stress-test and adjudicate (`nb08`) | 1 | M7 · Fri Oct 16 | Which checks did I pre-list, what survived them, and what remains unruled-out? |
+| 9 | S9 Write, bound, and disclose (`nb09`) | 2 | M8 · Fri Oct 23 | What bounded claim can I write down, with every sentence traced to evidence and disclosure? |
+| 10 | S10 Adapt and defend (`nb10`) | 2 | M9 · Fri Oct 30 | What does my venue require, and what artifact satisfies it without inflating the claim? |
+| 11 | S11 Reproduce and package (`nb11`) | 2 | M10 · Fri Nov 6, 5 PM (terminal) | Does my work reproduce from a clean package — and is that what locks onto the poster? |
+| 12 | S12 Release and direct the next cycle (`nb12`) | 2 | M11 · Fri Nov 13 | Do I release or withhold pending a named repair, and what should the next study ask? |
+| 13 | Public test: the Expo + reflection (`nb13`) | 1 | M12 · Fri Nov 20 | What did public questioning reveal, and does it change the claim or the defense (Expo Tue Nov 17)? |
+| 14 | Async: peer cold run + red-team (`nb14`) | 0 | M13 · Sun Nov 29 (async) | Does someone else's evidence reproduce without their help, and where is it fragile? |
+| 15 | Revision: note v1 + repaired package (`nb15`) | 2 | M14 · Fri Dec 4 | What did I accept, rebut, or bound from public criticism and the cold run? |
+| 16 | The close: defenses, release, portfolio (`nb16`) | 2 | M15 · Fri Dec 11 (terminal) | Can I defend the whole project, my claim boundary, and my AI collaboration? |
 
 ## 3. The flipped classroom — the Student Research Lead (SRL) system
 
@@ -245,6 +248,12 @@ claims trace to a real, retrievable source; results are verified before reported
 decisions are documented, not just outcomes (`scripts/audit_sources.py`,
 `scripts/voice_lint_notebooks.py` enforce this).
 
+- **v4 (2026-08-05, D49)** — Realigned to the book's current 40-lesson,
+  12-Studio design (D42–D48) and ruled to **one Studio per week**: MW teach
+  the studio's lessons with their IYT, Friday is the studio milestone.
+  Studios 1–12 → Weeks 1–12 (so M(n) presents book Milestone (n+1));
+  Weeks 13–16 are the date-driven exception weeks. Every notebook from
+  Week 1 Wednesday to Week 16 rewritten to its new studio.
 - **v3 (2026-08-03, D41)** — Option 2: the studio-first route-selective
   semester. Weekly spine = the book's 12 Studios (D38/D40); W5 route hub
   (own route + one assigned contrast, five-route jigsaw); W6=S6, W7–8=S7

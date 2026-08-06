@@ -38,21 +38,21 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 | IV — Producing credible evidence with AI | 20 | Data Provenance and Data Quality | nb06 |
 | IV | 21 | Measurement and Operationalization | nb06 |
 | IV | 22 | AI as Programmer | nb07 |
-| IV | 23 | AI as Analytical Assistant | nb08 |
-| IV | 24 | Robustness and Sensitivity | nb09 |
-| IV | 25 | Diagnostics and Negative Tests | nb09 |
-| IV | 26 | AI as Adversarial Reviewer | nb09 |
-| IV | 27 | Recognizing False Confidence | nb09 |
-| V — Communicating and defending research | 28 | From Results to Claims | nb10 |
-| V | 29 | Claim–Evidence Tables | nb10 |
-| V | 30 | AI Disclosure and Research Integrity | nb10 |
-| VI — Research after the conference | 31 | From Dossier to Research Note | nb10 |
-| V — Communicating and defending research | 32 | Research Posters | nb11 |
-| V | 33 | Poster Criticism | nb11 |
-| V | 34 | Research Pitches, Talks, and Seminars | nb12 |
-| V | 35 | Difficult Questions and Uncertainty | nb12 |
-| VI — Research after the conference | 36 | Replication and Reproduction | nb14 |
-| VI | 37 | Open and Reusable Research Packages | nb15 |
-| VI | 38 | Managing Multiple AI Agents | nb16 |
-| VI | 39 | Conflicting Agents and Human Escalation | nb16 |
-| VI | 40 | Final Research and AI-Management Portfolio | nb16 |
+| IV | 23 | AI as Analytical Assistant | nb07 |
+| IV | 24 | Robustness and Sensitivity | nb08 |
+| IV | 25 | Diagnostics and Negative Tests | nb08 |
+| IV | 26 | AI as Adversarial Reviewer | nb08 |
+| IV | 27 | Recognizing False Confidence | nb08 |
+| V — Communicating and defending research | 28 | From Results to Claims | nb09 |
+| V | 29 | Claim–Evidence Tables | nb09 |
+| V | 30 | AI Disclosure and Research Integrity | nb09 |
+| VI — Research after the conference | 31 | From Dossier to Research Note | nb09 |
+| V — Communicating and defending research | 32 | Research Posters | nb10 |
+| V | 33 | Poster Criticism | nb10 |
+| V | 34 | Research Pitches, Talks, and Seminars | nb10 |
+| V | 35 | Difficult Questions and Uncertainty | nb10 |
+| VI — Research after the conference | 36 | Replication and Reproduction | nb11 |
+| VI | 37 | Open and Reusable Research Packages | nb11 |
+| VI | 38 | Managing Multiple AI Agents | nb12 |
+| VI | 39 | Conflicting Agents and Human Escalation | nb12 |
+| VI | 40 | Final Research and AI-Management Portfolio | nb12 |

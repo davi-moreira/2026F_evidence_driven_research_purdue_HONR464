@@ -2,7 +2,7 @@
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M13**.
-> This submission presents **Book Milestone 11 — Your reproducible package** (peer cold-run practice — precedes version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html#milestone).
+> This submission presents **Book Milestone 11 — Your reproducible package** (peer cold-run practice, applied to another researcher's package): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html#milestone).
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project

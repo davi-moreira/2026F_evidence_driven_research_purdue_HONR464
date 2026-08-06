@@ -2,8 +2,7 @@
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M11**.
-> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (version 2 — defense-rehearsed edition): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
-> It is a *revisit*: the next version of an artifact whose first version already exists.
+> This submission presents **Book Milestone 12 — Your release and next cycle** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html#milestone).
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project
@@ -36,7 +35,7 @@ that same night.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m11_presentation_package.pdf`** *or* a shared Colab notebook link | The full presentation package below: your three pitch layers (30-second hook with the boundary sentence marked, 90-second walk, full pitch), your poster-walk map, your spoken uncertainty-and-limitations statement, your five-type question bank, your AI-use answer, and your AI Research Ledger rows. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 34, ch. 35** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 38, ch. 39, ch. 40** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any figure you reference renders when the notebook is run.
@@ -50,8 +49,9 @@ below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook):
 
-- Ch. 34 — [Research Pitches, Talks, and Seminars](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/29-research-pitches.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch29_research_pitches.ipynb)
-- Ch. 35 — [Difficult Questions and Uncertainty](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch30_difficult_questions_and_uncertainty.ipynb)
+- Ch. 38 — [Managing Multiple AI Agents](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/35-managing-multiple-ai-agents.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch35_managing_multiple_ai_agents.ipynb)
+- Ch. 39 — [Conflicting Agents and Human Escalation](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/36-conflicting-agents-and-human-escalation.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch36_conflicting_agents_and_human_escalation.ipynb)
+- Ch. 40 — [Final Research and AI-Management Portfolio](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/37-final-research-and-ai-management-portfolio.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch37_final_research_and_ai_management_portfolio.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
