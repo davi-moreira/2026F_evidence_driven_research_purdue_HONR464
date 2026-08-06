@@ -43,6 +43,7 @@ ALLOWED_DOMAINS = {
     "blogs.worldbank.org",         # nb01: professor's World Bank work
     "www.youtube.com",             # nb01 + author page: Palmeiras video (D24, instructor-provided)
     "genai.rcac.purdue.edu",       # Purdue GenAI Studio (course AI reviewer bench)
+    "doi.org",                     # DOI resolver for verified journal articles
 }
 
 # Works verified real during the build (each was independently confirmed to
@@ -57,6 +58,10 @@ VERIFIED = [
     r"Foos et al\.|Foos, F",                          # rdss replication dataset
     r"Clingingsmith.{0,30}(Khwaja|Kremer)?",          # rdss replication dataset
     r"Bonilla.{0,15}Tillery",                         # rdss replication dataset
+    # Verified against the PDFs held in _adm/_references/papers/ai-research/
+    # (same works cited in book/references.bib, whose notes record the check).
+    r"Zahavy, T\.{0,2} \(2026\)",                      # LLMs Can't Jump (DeepMind)
+    r"Evans, J\..{0,40}King, G\. \(2026\)",            # Science 393(6808), designing for surprise
 ]
 
 # Fake-citation blocklist (D16): these names were once planted fakes; they must

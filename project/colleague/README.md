@@ -55,11 +55,10 @@ Three ground rules keep the device honest:
   drafts — is used to create your colleague.
 - **Week 2 onward — one artifact per audited Studio.** Week 2's audit uses
   a shared declared-question card; your personal colleague takes over in
-  Week 3. Ten audits are scored across the semester — **Weeks 2 through 10 and
-  Week 12** (one per studio; since each week is one studio, the week
-  number and the studio number are the same). Week 1 is the modeled
-  Case 464, and Studio 11's cold-run skill is graded through the peer
-  replication in Week 14 instead. You audit in class,
+  Week 3. Ten audits are scored across the semester: **Weeks 2–6 and 8–12** — ten scored audits, one per studio week except Week 1 (the modeled Case 464) and Week 7 (an unscored preview while the first analysis is still being built). Weeks 13,
+  15 and 16 add unscored practice rounds on artifacts you have already
+  audited, and Week 14 grades the cold-run skill through the peer
+  replication itself rather than through an audit. You audit in class,
   inside the normal Monday/Wednesday blocks, using the protocol in
   `audit_protocol.md`; the defense and revision weeks add unscored
   practice rounds.

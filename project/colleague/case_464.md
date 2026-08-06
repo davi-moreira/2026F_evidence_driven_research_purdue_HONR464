@@ -6,10 +6,10 @@
 > decisions that look aggressive are sound. Your job is to tell them apart.
 
 Before you have a personal AI colleague, the whole class audits this one
-case together. It is a **working agreement** — the artifact Book
-Milestone 1 asks for — submitted by a simulated student, Casey Rivera,
-whose project asks whether campus dining-hall wait times differ across the
-week.
+case together. It is a **working agreement**, the artifact Book Milestone 2
+asks for next week, submitted by a simulated student, Casey Rivera, whose
+project asks whether campus dining-hall wait times differ across the week.
+Read it as a preview of what you will write, and as something to audit.
 
 ---
 
