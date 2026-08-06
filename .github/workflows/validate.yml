@@ -5,6 +5,13 @@ name: validate
 # They mirror the local hooks so a contributor WITHOUT the hooks still cannot
 # merge a schedule/milestone/voice/citation regression. Notebook execution and
 # the Quarto render remain local (see CLAUDE.md "Commit AND Render").
+#
+# BEFORE changing a gate, run it the way this job will:
+#     .venv/bin/python scripts/ci_gates_local.py
+# It exports HEAD tracked-files-only (what actions/checkout gives the runner)
+# and runs the steps below from THIS file. A gate that reads a gitignored path
+# is green on the authoring machine and red here — that divergence kept this
+# workflow failing for a week (round-10 P1).
 
 on:
   push:
@@ -59,7 +66,11 @@ jobs:
       # (every private-repo sync) — the two points where canonical content
       # actually moves. --self-test is the mutation test, run against an
       # isolated snapshot: if reinserting a rejected phrase does not fail the
-      # scan, the gate is not a gate.
+      # scan, the gate is not a gate. The self-test's three `--local` probes
+      # (stale source, instructor stamp, deleted artifact) cannot run on a
+      # public checkout — no canonical sources to mutate — so they are skipped
+      # HERE, by name, and printed; they run when `--self-test` runs on the
+      # authoring machine.
       - name: Misconception manifest — mutation test (isolated snapshot)
         run: python3 scripts/validate_misconceptions.py --self-test
 

@@ -746,14 +746,40 @@ def self_test() -> int:
     validator root is pointed there, and every mutation happens on the copy.
     Each mutation must be caught, BY ITS OWN misconception id, AT the probe
     path. Killing this process at any moment leaves the real tree untouched.
+
+    Round-10 P1: probes 7/7b/7d exercise `--local`, which reads the GITIGNORED
+    canonical sources and instructor notebooks. A public checkout (CI) carries
+    neither, so `check_freshness()` stops at "nb_sources missing" and those
+    probes cannot fail-then-pass — they can only fail. They are skipped where
+    `--local` is unrunnable, BY NAME and printed, because a silent skip is the
+    same unrunnable probe wearing a green check.
     """
     failures: list[str] = []
+    skipped: list[str] = []
+    ran_local: list[str] = []   # which --local probes actually executed
 
     with tempfile.TemporaryDirectory(prefix="misconception-selftest-") as td:
         snap = Path(td)
         _snapshot(snap)
         set_root(snap)
+        local_reason: str | None = None
         try:
+            # `--local` needs the canonical sources, which are gitignored:
+            # present on the author's machine, absent in CI. And a mutation
+            # probe is only a test when the UNMUTATED state is clean —
+            # otherwise it "catches" a problem that was already there.
+            _src_dir = snap / "_production_kit" / "nb_sources"
+            if not (_src_dir.is_dir() and any(_src_dir.glob("*.py"))):
+                local_reason = ("no canonical sources in this checkout, so "
+                                "`--local` certifies nothing here — expected "
+                                "on public CI")
+            else:
+                _base_local = check_freshness()
+                local_reason = (f"the --local baseline is already dirty "
+                                f"({_base_local[0]}) — probes would be vacuous"
+                                if _base_local else None)
+            local_capable = local_reason is None
+
             data = load()
 
             baseline = run(check_nums=False)
@@ -900,7 +926,12 @@ def self_test() -> int:
                 (s for s in candidates
                  if (snap / "notebooks/student" / f"{s.stem}_student.ipynb").exists()),
                 None)
-            if fresh_pair is not None:
+            if not local_capable:
+                skipped.append("7 stale-source")
+            elif fresh_pair is None:
+                skipped.append("7 stale-source (no source/student pair)")
+            if local_capable and fresh_pair is not None:
+                ran_local.append("stale-source")
                 import os
                 src_bytes = fresh_pair.read_bytes()
                 st = fresh_pair.stat()
@@ -915,7 +946,12 @@ def self_test() -> int:
             # --local even while the student copy is valid (round-6 F4)
             instr_nb = next(iter(sorted(
                 (snap / "notebooks/instructor").glob("*_instructor.ipynb"))), None)
-            if instr_nb is not None:
+            if not local_capable:
+                skipped.append("7b instructor-stamp")
+            elif instr_nb is None:
+                skipped.append("7b instructor-stamp (no instructor notebook)")
+            if local_capable and instr_nb is not None:
+                ran_local.append("instructor-stamp")
                 instr_src = instr_nb.read_text()
                 nbj = json.loads(instr_src)
                 nbj.setdefault("metadata", {}).setdefault(
@@ -945,7 +981,12 @@ def self_test() -> int:
             # 7d. structural guarantee: a DELETED student artifact of an
             # active notebook must fail --local by name (round-7 P2)
             del_target = snap / "notebooks/student/nb05_observational_descriptive_student.ipynb"
-            if del_target.exists():
+            if not local_capable:
+                skipped.append("7d deleted-artifact")
+            elif not del_target.exists():
+                skipped.append("7d deleted-artifact (nb05 student copy absent)")
+            if local_capable and del_target.exists():
+                ran_local.append("deleted-artifact")
                 del_bytes = del_target.read_bytes()
                 del_target.unlink()
                 if not any("MISSING generated artifact" in p and "nb05" in p
@@ -988,12 +1029,22 @@ def self_test() -> int:
                  for m in data["misconceptions"] for pt in m.get("reject_patterns", []))
     rev = sum(len(m.get("allow_reversals", [])) for m in data["misconceptions"])
     ncases = sum(len(m.get("cases", [])) for m in data["misconceptions"])
+    # Name the structural guarantees this RUN actually executed — the three
+    # --local probes are listed only when they ran.
+    ran = ", ".join(["zero-match-glob", "drifted-number", "deleted-correction",
+                     "pin-invalidation", "anchor", *ran_local,
+                     "flipped-case", "and deleted-case"])
     print(f"✓ isolated end-to-end mutation test: {lit} literals and {drift} drifts "
           f"caught by their own rules, {permit} benign phrasings permitted, "
           f"{rev} allow-reversals refused laundering, {ncases} A5 cases "
-          f"executable, plus zero-match-glob, drifted-number, "
-          f"deleted-correction, pin-invalidation, stale-source, flipped-case, "
-          f"and deleted-case guarantees — no real file was touched")
+          f"executable, plus {ran} guarantees — no real file was touched")
+    if skipped:
+        # Named, never silent: a skipped probe certifies nothing, and the
+        # reader must be able to see WHICH coverage this run did not have.
+        why = local_reason or "the fixture that probe needs is absent"
+        print(f"  ⓘ --local probes NOT run here ({why}): "
+              f"{', '.join(skipped)}. Run `--self-test` on the authoring "
+              f"machine, where the canonical sources live, to exercise them.")
     return 0
 
 
