@@ -25,6 +25,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # FULL history, not the default single commit: the A10 identity gate
+          # in validate_book_architecture.py reads BOOK_ARCHITECTURE.yml AT
+          # `identity_epoch` (`git show <epoch>:...`). On a shallow checkout
+          # that object is absent and the gate fails for a reason that has
+          # nothing to do with the code being validated.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
