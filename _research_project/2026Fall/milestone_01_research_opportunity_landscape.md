@@ -27,7 +27,7 @@ Due: **Friday, September 4, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m01_rules_question.pdf`** *or* a shared Colab notebook link | Both halves below, dated as version zero with the reason for the version. Half A, your working agreement: your responsibility statement, your working rules, your delegation map, your opened AI Research Ledger with its retrospective rows plus one verified factual hinge and one complete SDIIVDD run, and the red-flag screen of your chosen problem. Half B, your declared question: the lead question with its kind and its reach, the words in your own sentence that fix each, the field card with its stranger-test result, and your provisional claim boundary with its uncertainty-and-limitations line. Close with the cross-read of the two halves. This is the graded artifact. |
+| 1 | **`lastname_m01_rules_question.pdf`** *or* a shared Colab notebook link | Both halves below, dated as version zero with the reason for the version. Half A, your working agreement: your responsibility statement, your working rules, your delegation map, your opened AI Research Ledger with its retrospective rows plus one verified factual hinge and one complete SDIIVDD run, and the red-flag screen of your chosen problem. Half B, your declared question: the lead question with its kind and its reach, the words in your own sentence that fix each, the field card with its stranger-test record (what your reader misunderstood, and what you revised because of it), and your provisional claim boundary with its uncertainty-and-limitations line. Close with the cross-read of the two halves. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 2, ch. 3, ch. 4, ch. 5, ch. 6, ch. 7** | The pieces Book Milestone 2's checklist names, from each chapter's "It is your turn": your opened AI Research Ledger with its first verified exchange (ch. 2), your delegation map (ch. 3), one complete SDIIVDD run (ch. 4), your ownership statement with its never-delegate list (ch. 5), your lead question placed by kind and reach (ch. 6), and your formal declaration with its field card and boundary pair (ch. 7) — worked in the companion Colab notebooks (share the links) or included in your artifact. Prompts marked *Optional depth* are not required. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -264,9 +264,18 @@ of:
   2025; the terms before and after the policy).
 
 Then run the **stranger test**. Hand the single question sentence to someone who
-knows nothing about your project and ask them three things: what one unit is, what
-you would record, and who the answer is about. Write down where they stalled. That
-is your next revision, and reporting it is part of the grade.
+knows nothing about your project, a classmate at the studio included, and tell
+them nothing else first. Ask them three things: what one unit is, what you would
+record, and who the answer is about.
+
+This test replaces a class presentation at this milestone, so its record is what
+gets graded, and it has two parts. First, **what your reader misunderstood**:
+where they stalled, guessed, or answered something you never asked, quoted in
+their words rather than summarized in yours. Second, **what you revised because
+of it**: the exact wording you changed, or a sentence saying why the
+misunderstanding was the reader's and not the sentence's. A report that says
+only "it was clear" is not evidence, because the test cannot pass without
+something your reader actually said.
 
 ### 8. Your provisional claim boundary
 
@@ -316,7 +325,7 @@ Name the file or section where each now lives.
 | Item | Specification |
 |---|---|
 | **Length** | Both halves plus the ledger rows (typically 2–3 pages PDF, or the equivalent notebook sections) |
-| **Pitch** | 2 minutes at the Friday studio (Sep 4): you swap working agreements with a partner, then read your declared question aloud for the room to place by kind and reach, and you respond to any disagreement — part of the grade |
+| **Stranger-test record** | There is no class presentation at this milestone. What is graded instead is the documented evidence from the stranger test you run at the Friday studio: the exact sentence you handed your reader, the three questions you asked, what they misunderstood or stalled on in their own words, and the revision you made because of it. "Nothing to fix" is only credible if you can quote what they said |
 | **Style** | Plain language; version line and date at the top; the two halves clearly separated and each component headed; every technical term used as this week's lessons define it; any source retrievable; any code cell you keep seeded with `SEED = 464` |
 | **Filename** | `lastname_m01_rules_question.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M01 |
@@ -335,7 +344,7 @@ Milestone 2 assesses. Both halves are graded, and neither can carry the other.
 | **The working agreement** (20) | Responsibility statement names real decisions from your project; the three rule lists have real entries; the delegation map covers this week's own declaration; all three red-flag questions answered, with human participants flagged if present (18–20) | Agreement complete; one list generic, or the map silent on the declaration (14–17) | A statement that would fit any project, or a rule list with no never-delegate entries, or the red-flag screen skipped (8–13) | No agreement, or rules that delegate a decision the course reserves to you (0–7) |
 | **Verification of AI-assisted parts** (20) | The ledger is open with retrospective rows, one verified factual hinge, and one complete SDIIVDD run whose outcome is on record; every verification method is named and non-vague (18–20) | Ledger present; one verification method vague or one exchange unlogged (14–17) | Ledger thin, or AI outputs used with verification not named, or the SDIIVDD run recorded with no outcome (8–13) | AI output reproduced with no verification anywhere, or the kind and reach taken from a tool and never checked against the definitions (0–7) |
 | **Uncertainty & claim boundary** (20) | All three boundary sentences present; the forbidden upgrade named precisely as one of the three (silent upgrade, leakage, after-therefore-because); the uncertainty-and-limitations line says what is imprecise, unmeasured, and uncovered (18–20) | Boundary present; the forbidden sentence or the limitations line stated loosely (14–17) | Only the defensible sentence, with no forbidden upgrade, or no limitations line (8–13) | No boundary, or a claim already upgraded past its reach with no caveat (0–7) |
-| **Craft, version, ledger & communication** (10) | Dated version zero with a usable reason; both halves separated and complete; the cross-read reported; on-format, on-time; clear 2-minute pitch; dossier line present (9–10) | Minor format lapses, or a version whose reason is decorative; ledger complete (7–8) | Missing pieces, no version line, no cross-read, or a rushed pitch (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Craft, version, ledger & communication** (10) | Dated version zero with a usable reason; both halves separated and complete; the cross-read reported; on-format, on-time; the stranger-test record quotes what your reader misunderstood and names the revision you made because of it; dossier line present (9–10) | Minor format lapses, or a version whose reason is decorative; the stranger-test record names the misunderstanding but not the revision; ledger complete (7–8) | Missing pieces, no version line, no cross-read, or a stranger-test record that reports "it was clear" with nothing your reader actually said (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 

@@ -2243,3 +2243,77 @@ and a semester-coherence critic audited them together; implementation ran
 as further workflows over the briefs, the schedule, and the notebooks;
 a Codex review round closes the build. Artifacts in
 `_adm/codex_collab/2026-08-05_d49-one-studio-per-week/`.
+
+**D49 implementation and review record (2026-08-06).** The realignment
+shipped in full and both review legs are applied.
+
+**Built:** the machine layer (crosswalk rewritten as a 40-lesson bijection
+with twelve checkpoints firing once and the exception weeks carrying
+revisits; config v4; milestone chain and master plan v4); all 16 milestone
+briefs rewritten to their studios' `produces`; **all 16 course notebooks
+and all 16 studio notebooks rebuilt**, every one executed clean and
+validated; all 43 meeting dictionaries and the 16 generated session
+guides; the 15 weekly quiz banks re-scoped and parity-gated; the colleague
+cadence re-derived (studio N = week N, so the ten scored audits are simply
+Weeks 2–6 and 8–12, Week 1 modeled and Week 7 an unscored preview).
+
+**Orchestration.** A mirror-mode Codex design partner ran the same
+assignment independently and converged on the identical week↔Studio map —
+then caught a gap worth the whole run: the Nov 6 lock and the Expo each
+materially change a book artifact but carried no bridge, so those
+artifacts would have changed silently. Book Milestone 10 now versions
+v1 (artifact ready, M9) → v2 (locked print edition, M10) → v3 (publicly
+presented, M12), and Book Milestone 12 v1 (release decision, M11) → v2
+(released, M12) → v3 (final, M15). Implementation ran as six workflows:
+16 week specs plus a semester-coherence critic, 16 briefs, three notebook
+waves, the schedule, the studio notebooks and quizzes, and two fix passes.
+
+**The semester critic found seven defects**, all applied: eleven scored
+colleague audits scheduled against a ten-audit rule (ruled and derived
+once, with a standing rule never to hand-number an audit again); Week 14
+still telling students their package work lay ahead when D49 has them
+building it in Week 11; Week 13's Milestone version labels contradicting
+the crosswalk on a criterion every station rubric grades; the `foos_etal`
+example re-revealing the same surprise across five weeks (one owner per
+beat now); the preliminary-edition label graded in Week 11 but taught
+nowhere (it belongs to Studio 10's venue genre); and Book Milestone 10 v2
+having no home in the lock week.
+
+**The Codex review round returned fix-forward with eight findings**, all
+applied. The five that mattered: Week 8's quiz and workbook collapsed a
+negative CONTROL into a permutation-style null pile and called an
+inside-the-spread reading a "clean pass" — both prohibited by the
+misconception manifest, and invisible to the gate because quiz banks are
+gitignored and the phrasing evaded the regex (the two checks are now
+taught and assessed as different objects, with a bounded verdict replacing
+"clean pass" here and in the Week 8 lecture notebook); the M7 workbook
+stated the commensurability rule and then pooled sample and measurement
+changes into one spread panel; Week 8's Friday could not fit its work, so
+Wednesday now ends with a frozen unrun scaffold and Friday executes and
+adjudicates only, with pending recorded honestly as pending; the M10 gate
+code compared every poster number against one shared value and demanded an
+inferential bound on all of them, so two estimates could never both pass;
+and the Reproducibility Auditor was mandatory at M10 in the schedule while
+the registry, brief, and workbook never required it — removed, since no AI
+reviewer can make an author's own rerun independent, and kept required at
+M13 where the package is someone else's.
+
+**A gate that had stopped gating.** The misconception self-test deletes a
+required correction from every surface and demands the scan fail, but it
+mutated raw file text while the scanner reads normalized notebook JSON, so
+a phrase that wrapped across notebook source lines survived the deletion
+probe. The probe now mutates per cell on the joined source, and the full
+self-test passes again.
+
+**Left for Davi, deliberately not changed:** `book/part4-credible-evidence/22-diagnostics-and-negative-tests.qmd`
+uses the same "clean pass" wording for a negative test. The passage teaches
+the correct rule (read against the spread, never exact zero) and the
+wording is a nuance, but the book is fixed under D49 and frozen for chapter
+review under D35, so the call is his.
+
+**Standing after the build:** all validators green — 16 student + 16
+instructor + 16 studio notebooks structurally valid and voice-clean, the
+misconception gate clean and self-proving, citation integrity clean across
+16 notebooks and 41 chapters, book architecture and sync consistent at 40
+lessons, coverage clean across 43 meetings, calendar invariants holding,
+and the milestone system consistent with every fixed date anchored.
