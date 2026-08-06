@@ -2104,3 +2104,51 @@ in mirror mode, merged with my own close-text track; artifacts and the merged
 findings report in `_adm/codex_collab/2026-08-06_d48-plagiarism-audit/`.
 PT/ES replay logged as TRANSLATION_BACKLOG item 20 (D36 freeze holds; the
 figure script already carries PT and ES labels).
+
+**Review round (same day).** Codex reviewed the pass as a research-integrity
+specialist (gpt-5.6-sol, xhigh, read-only) and cleared the three new figures as
+independent expression, but not the pass as a whole. Twelve findings, all
+applied. Eight were errors in my own new text: Jasper Cooper was made an author
+of the 2023 book (he coauthored the 2019 article only); the diagnosand
+etymology ran backwards; MIDA was asserted as a universal rather than a named
+framework; RDSS's subtitle was printed wrong; the MIDA figure's row labels
+implied D and A are execution rather than declaration; the sampling figure put
+"ineligible units" inside the target population and drew duplicates as a
+region; ch11 blamed its causal limit on the absence of assignment, which is
+also true of the observational-causal pathway; and ch5 called a student's
+expected answer a measure of what the project taught anyone, where the Science
+essay's gap is audience-level. Four were surfaces the first pass never reached:
+`index.qmd` still said the book "translates RDSS" and called it an "open text";
+Studio 5's route table, nb04, and nb05 taught borrowed vocabulary uncredited;
+the LICENSE did not separate notebook code cells from notebook prose cells; and
+WCAG's normative scope is web content, not printed boards.
+
+**The lint (Codex's counter-proposal, adopted in part).** Codex argued that
+scattered prose edits regress because studio pages and notebooks are generated
+and drift silently, and proposed a rights-and-lineage manifest as the source of
+truth with a lint over it. The full manifest is a project-sized task and is
+queued below; the lint is not, so it shipped:
+`scripts/audit_attribution.py` fails if any public teaching surface uses
+**MIDA** or **diagnosand** without naming its source in the same file. It found
+three companion notebooks on its first run, all fixed at the chapter source.
+
+**QUEUED for Davi (flagged, not silently resolved).**
+1. **The upstream data rights chain.** The `rdss` package's MIT licence covers
+   the packaging, not each original investigator's authorization to
+   redistribute their study data publicly, and the package documentation limits
+   the LAPOP-derived resample to teaching use. `notebooks/data/README.md` and
+   `planning/SOURCE_AUDIT.md` §8 now say exactly that instead of claiming the
+   question is settled. Resolving it means a per-file manifest (archive/DOI,
+   owner, licence or permission, allowed transformations, hash against the
+   source archive), or replacing files with openly licensed or synthetic
+   equivalents.
+2. **The book's licence choice.** All-rights-reserved-but-free-to-read is a
+   placeholder. A deliberate Creative Commons licence (CC BY, or CC BY-NC if
+   commercial reuse is the worry) is available whenever Davi wants it.
+3. **The Palmeiras crest** on the author page has no documented brand-use
+   basis. Left in place because it is Davi's own bio page and his call.
+4. **The rights-and-lineage manifest** covering every framework, dataset,
+   quotation, and image.
+5. A full near-verbatim comparison against the entire Princeton text remains
+   **UNVERIFIED**; both passes checked changed passages, known RDSS surfaces,
+   and repository assets, not every sentence against a licensed corpus.
