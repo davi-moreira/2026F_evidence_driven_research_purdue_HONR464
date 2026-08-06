@@ -46,6 +46,7 @@ research chapter, an AI-management portfolio, and an oral evidence defense.
 | `project/srl/` | Student Research Lead handbook, templates, rubric |
 | `genai_studio/` | GenAI Studio role specs, KB strategy, Colab PoC |
 | `CONVERSATION_LOG.md` | Project history and prior decisions |
+| `scripts/ci_gates_local.py` | Before changing a validator or `.github/workflows/validate.yml` — runs the CI gates on a tracked-files-only checkout, where `_production_kit/` and `notebooks/instructor/` do not exist |
 
 **Canonical notebook reference:** `notebooks/student/nb05_observational_descriptive_student.ipynb`
 (the v2 gold standard, built as the Phase-2 prototype) — match its formatting
