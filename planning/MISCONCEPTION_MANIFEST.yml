@@ -291,7 +291,9 @@ misconceptions:
       fig_ch15_attrition (seeded, SEED=464) — truth 5, complete-case contrast
       8.1, because treatment changed who stayed measurable.
     concept_check:
-      anchor: {file: "notebooks/student/nb09_experimental_causal_student.ipynb", locator: "complete-case contrast"}
+      anchor: {file: "notebooks/student/nb08_prediction_student.ipynb", locator: "complete-case contrast"}
+      # D49: the attrition guard is taught in the Studio 8 stress-test week,
+      # which is nb08 now (nb09 became Studio 9, write-bound-disclose)
       question: >-
         Treatment made more low-scorers drop out before the final measure.
         Whose effect does the complete-case gap estimate?
