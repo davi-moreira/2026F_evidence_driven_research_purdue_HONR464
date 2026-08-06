@@ -77,8 +77,10 @@ BRIEF_RE = re.compile(r"^\s*###[^\n]*SRL Lead Brief", re.M)
 LECTURE_RE = re.compile(r"^\s*#\s*Lecture\s+\d", re.M)
 
 # Communication/performance weeks satisfy the runnable move with structured
-# criticism or delivery rounds instead (template §7 Variants).
-RUNNABLE_EXEMPT = {11, 12, 13}
+# criticism or delivery rounds instead (template §7 Variants). D49: nb12 is no
+# longer a communication week — Studio 12 runs three seeded cells per its own
+# lectures, so it satisfies the runnable move directly and loses its exemption.
+RUNNABLE_EXEMPT = {11, 13}
 
 # D33: the whole seven-move path runs INSIDE the 50-minute lecture — every
 # move (and the lecture's 📒 ledger row) must sit ABOVE that lecture's
