@@ -29,24 +29,39 @@ for a group your data never touched.
 
 ## The concept
 
-**Observational descriptive research** means you watch and record what is there
-without changing anyone's experience, then summarize it. Example: you pull the roll
-call records of every member of a legislature and report how often each one crossed
-party lines. You never assign a treatment, so this pathway can describe, and with care
-generalize, but it cannot by itself say one thing caused another.
+This chapter follows the observational-descriptive pathway of the design library in
+RDSS [@blair2023rdss]. **Observational descriptive research** means you sample and
+measure without assigning anyone a condition, then summarize what you found. Example:
+you pull the roll call records of every member of a legislature and report how often
+each one crossed party lines. Because no treatment is assigned, this pathway can
+describe, and with care generalize to a population, but it cannot by itself say one
+thing caused another.
 
-Four nested groups keep such a description honest. Picture four boxes, each smaller
-than the last.
+Four groups keep such a description honest [@groves2009survey]. They are often drawn
+as boxes inside boxes, and that picture is worth knowing along with the place it
+lies.
 
 - **Target population**: everyone your question is about. Example: every customer a
-  streaming service will ever bill. This is the outermost box, the group you wish you
-  could study.
+  streaming service will ever bill. This is the group you wish you could study.
 - **Accessible population**: the part of the target you could reach in principle,
   given time and cost. Example: the customers you can actually contact with a survey
   this quarter.
-- **Sampling frame**: the concrete list you draw from. Example: the current subscriber
-  list your survey tool pulls from. Whatever is not on that list cannot be sampled.
-- **Sample**: the customers you actually survey. The innermost box.
+- **Sampling frame**: the concrete list you actually draw from. Example: the current
+  subscriber list your survey tool pulls from. This is the box that misbehaves. A
+  frame can miss people who belong in your target, and it can also carry people who
+  do not belong at all, plus duplicates that give one person two chances of being
+  picked. Treating the frame as a clean slice of the population above it is one of
+  the quietest ways a description goes wrong.
+- **Sample**: the customers you actually survey, drawn from the frame and no wider.
+
+![The four groups a description has to keep straight. Only the sample is drawn from
+the frame, and the frame is not a tidy slice of the population above it: it misses
+eligible people and carries ineligible ones and
+duplicates.](../images/concepts/sampling_groups.png){fig-alt="Diagram of four
+overlapping regions labeled target population, accessible population, sampling frame,
+and sample. The frame region extends partly outside the accessible population to show
+ineligible units, and part of the accessible population falls outside the frame to
+show eligible people the frame misses. The sample sits inside the frame."}
 
 A claim is honest only when the box it describes matches the box it names. Two
 processes decide how the boxes differ. **Selection** is any process that decides who

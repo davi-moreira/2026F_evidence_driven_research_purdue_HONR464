@@ -73,6 +73,11 @@ effect is 2, has 8% power, which is almost useless. Power moves with everything 
 the declaration: the test, the threshold, the effect you planted, the sample size,
 and how the world makes noise. Report the whole card beside the number.
 
+Bias, variance, and power are all the same kind of thing: a property of the design
+read across many simulated runs, never off a single study. Blair, Cooper, Coppock,
+and Humphreys introduced the term **diagnosand** for such a property, and the loop's
+middle step takes its name from it [@blair2019declaring; @blair2023rdss].
+
 Those three do not exhaust the pile, and fuller diagnoses add more. Two worth knowing
 by name. **Root mean-squared error** is the typical size of a miss, with big misses
 weighted extra. *Example:* in the five-run example above, the plain average distance
@@ -88,6 +93,16 @@ that a diagnosis can ask about them.
 diagnosing again. Low power from high variance calls for more data. A tilt built into
 the design, such as who ends up in which group, calls for a different design: more
 data makes a tilted estimate steadier, not truer.
+
+![The loop, and the call that ends it. You can go around as many times as the
+diagnosis asks, changing one thing each time, but the decision to run, revise, or
+narrow the claim is never inside the
+loop.](../images/concepts/diagnose_loop.png){fig-alt="Three boxes left to right,
+Declare, Diagnose, and Redesign, joined by arrows, with a return line running from
+Redesign back to Declare beneath them, labeled one change at a time. Above the middle
+box: read out, bias, wobble, how often it detects. A wide box beneath reads: the
+honest call, run it as declared, redesign again, or narrow the claim to what this
+design can deliver."}
 
 ## A worked example
 

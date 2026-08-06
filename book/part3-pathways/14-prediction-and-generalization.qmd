@@ -38,6 +38,11 @@ cases the model never saw? Get those wrong and you cry wolf or miss a real hazar
 
 ## The concept
 
+This pathway is the book's own addition. The four pathways around it adapt RDSS's
+design library; prediction extends that library rather than adapting a part of it,
+because a forecast is judged by how it performs on cases nobody has seen yet
+[@blair2023rdss].
+
 A **prediction** is a best guess about a case whose outcome you cannot see yet.
 Example: forecasting whether a lake blooms next week, before next week exists.
 Prediction is descriptive, not causal. It forecasts *what* will happen, never *why*.

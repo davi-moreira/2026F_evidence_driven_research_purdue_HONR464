@@ -36,11 +36,13 @@ apart and diagnose the whole before you trust its number.
 
 ## The concept
 
-Every research design has four parts, and this book names them **MIDA**: the
-**Model** (your written picture of how the world could work), the **Inquiry** (the one
-exact quantity you want from it), the **Data strategy** (how the data come to exist),
-and the **Answer strategy** (how you turn that data into an estimate). The Colab lab
-builds all four from scratch. This chapter takes them somewhere harder.
+Every research design has four parts, named **MIDA** by Blair, Cooper, Coppock, and
+Humphreys [@blair2019declaring; @blair2023rdss]: the **Model** (your written picture of how the
+world could work), the **Inquiry** (the one exact quantity you want from it), the
+**Data strategy** (every procedure that makes the data, from sampling to measurement),
+and the **Answer strategy** (the whole procedure that turns those data into an answer,
+uncertainty included). The Colab lab builds all four from scratch. This chapter takes
+them somewhere harder.
 
 A **complex, or hybrid, design** is a research design whose four MIDA parts have more
 than one moving piece: several measurements, stages, or sub-questions stitched into a

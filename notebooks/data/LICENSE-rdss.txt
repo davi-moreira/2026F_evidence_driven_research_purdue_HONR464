@@ -1,0 +1,45 @@
+The CSV datasets distributed in this folder are redistributed from the `rdss`
+R package (version 1.0.14), the companion package to Blair, Coppock &
+Humphreys, "Research Design in the Social Sciences: Declaration, Diagnosis,
+and Redesign" (Princeton University Press, 2023). The package is released
+under the MIT License, whose terms require this notice to travel with every
+copy. It is reproduced below verbatim.
+
+Source: https://cran.r-project.org/package=rdss
+
+---
+
+YEAR: 2021
+COPYRIGHT HOLDER: Graeme Blair, Alexander Coppock, and Macartan Humphreys
+
+---
+
+MIT License
+
+Copyright (c) 2021 Graeme Blair, Alexander Coppock, and Macartan Humphreys
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+The studies behind these datasets are the work of their original authors, who
+are credited in the table in README.md and cited in the book where each
+dataset is used. The MIT notice above covers the packaged distribution; it
+does not transfer any rights the original investigators hold in their own
+research materials.

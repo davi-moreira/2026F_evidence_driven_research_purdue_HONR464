@@ -26,7 +26,10 @@ STAMP = (2026, 8, 24, 0, 0, 0)  # first day of class
 
 
 def main() -> None:
-    files = sorted(DATA.glob("*.csv")) + [DATA / "README.md"]
+    # D48: the upstream MIT notice ships with every copy of the data, because
+    # that is what the MIT License actually requires. Never drop it.
+    files = (sorted(DATA.glob("*.csv"))
+             + [DATA / "README.md", DATA / "LICENSE-rdss.txt"])
     missing = [f.name for f in files if not f.exists()]
     if missing:
         raise SystemExit(f"✗ missing dataset files: {missing}")

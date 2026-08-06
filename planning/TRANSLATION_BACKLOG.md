@@ -99,6 +99,46 @@ replace it.
     `url_path` keep the old slug (D35 P9 — a rename or URL move fails the
     build). Translate the display title only.
 
+20. **D48 attribution pass (2026-08-05).** The plagiarism-risk audit's
+    corrections were applied to ENGLISH ONLY; PT/ES still carry the
+    uncredited text and must replay every item when the freeze lifts:
+    - **Point-of-use framework credit** where each pathway is first
+      taught: ch11, ch12, ch13, ch15 gained an opening sentence naming
+      RDSS's design library; ch14 gained the sentence saying prediction
+      is EDR|AI's own fifth pathway, extending rather than adapting it.
+    - **MIDA credited to its authors** at first teaching in ch9 and
+      ch16 (Blair, Cooper, Coppock & Humphreys), and **diagnosand**
+      credited as their coined term in ch10.
+    - **Two definitions widened for fidelity** in ch9: the data strategy
+      now includes measurement, the answer strategy now includes
+      uncertainty and interpretation. ch16's one-line MIDA gloss matches.
+    - **ch11's four groups are no longer "nested"** — the frame can miss
+      eligible units and carry ineligible ones and duplicates, with the
+      Groves citation moved up to the definitions.
+    - **ch5**: the surprise definition reworded away from the *Science*
+      essay's own phrasing, and an adaptation credit added under the
+      Einstein/Zahavy cycle diagram.
+    - **ch27** cites WCAG 2.2 for the accessibility standard (Crameri
+      keeps the color-vision evidence); **ch31** separates what ICMJE
+      requires (tool + purpose) from the book's own verification column;
+      **uncertainty-foundations** gained the RDSS inquiry/estimand
+      lineage sentence.
+    - **Generated pages** (from `planning/BOOK_STATIONS.yml`): Studio 1's
+      milestone reason names Tom Zahavy and cites the position paper;
+      Studio 4's milestone reason credits MIDA and the
+      declare-and-diagnose loop; the MIDA step carries a parenthetical
+      credit; "diagnosands" was replaced by plain language in the
+      produces line and the Milestone 4 rubric
+      (`planning/BOOK_ASSESSMENTS.yml`).
+    - **New bibliography records** to localize: `blair2019declaring`
+      (APSR, CC BY 4.0) and `w3c2024wcag22`; the `blair2023rdss` note no
+      longer says EDR|AI "translates" RDSS.
+    - **Three new generated figures** (`scripts/build_book_concept_figures.py`):
+      `mida_map.png` (ch9), `diagnose_loop.png` (ch10),
+      `sampling_groups.png` (ch11). PT and ES label dictionaries are
+      already written in the script; rerun it with the freeze lifted and
+      the localized figures build themselves.
+
 ## C. Verification required before the freeze lifts
 
 12. **Human PT/ES methods review** — required by round 4: an English

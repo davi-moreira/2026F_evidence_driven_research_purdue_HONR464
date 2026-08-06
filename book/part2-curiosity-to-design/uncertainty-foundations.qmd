@@ -67,6 +67,12 @@ from one run, on one day.
 The estimand does not move. The estimate does. The distance between those two facts
 is where uncertainty lives.
 
+One bridge back to the design vocabulary. In RDSS the inquiry is the question your
+design asks, and the estimand is the value that question has in the world
+[@blair2023rdss]. This chapter pairs that distinction with the standard
+estimator-and-estimate vocabulary, which is common statistical usage rather than
+anyone's coinage [@morris2019simulation].
+
 ### The shape of chance
 
 Run the recipe again on the same town and you get a different estimate. Run it 2,000

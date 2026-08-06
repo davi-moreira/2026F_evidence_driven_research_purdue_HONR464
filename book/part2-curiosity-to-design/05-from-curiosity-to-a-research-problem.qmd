@@ -51,6 +51,10 @@ flowchart LR
   P -- "verification against evidence<br/>(delegable, then checked)" --> E
 ```
 
+*The cycle is redrawn from Zahavy's reconstruction of Einstein's account of
+discovery; the notes on the arrows, marking what you may delegate and what you
+may not, are this book's [@zahavy2026jump].*
+
 Experience does not logically dictate one explanation; the researcher makes a
 jump toward an idea that could make sense of it. The jump has a name.
 **Abduction** is proposing what might explain a pattern in the first place,
@@ -104,10 +108,11 @@ existing evidence.
 One more lens sharpens all three. A 2026 essay in *Science*, "Advancing
 science by designing for surprise," starts from a blunt fact: an answer that
 confirms what everyone already believes teaches almost nothing
-[@evans2026surprise]. **Surprise** is the distance between what informed
-people expect and what the evidence shows. So before you look at any
-evidence, write the answer you currently expect and name the person for whom
-a different answer would be genuinely surprising. That written sentence is
+[@evans2026surprise]. The essay makes the idea usable: elicit informed
+predictions first, then compare them with what the evidence actually shows.
+**Surprise** is what that comparison measures. Before you look at any evidence,
+then, write the answer you currently expect and name the person for whom a
+different answer would be genuinely surprising. That written sentence is
 your **expected answer**, and the gap between it and what you eventually find
 is the most honest measure of what your project taught anyone. The essay's
 warning travels with the tool: the more surprising the claim, the more

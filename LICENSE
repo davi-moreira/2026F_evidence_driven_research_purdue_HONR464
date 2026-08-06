@@ -1,4 +1,30 @@
-MIT License
+RIGHTS IN THIS REPOSITORY
+=========================
+
+This repository holds three kinds of material, and they are not licensed the
+same way.
+
+1. CODE AND INFRASTRUCTURE — the scripts, build tooling, configuration,
+   notebooks, and course infrastructure — are licensed under the MIT License
+   reproduced below.
+
+2. BOOK AND COURSE TEXT — the prose of EDR|AI (Evidence-Driven Research in the
+   Age of AI, in all editions), the course chapters, milestone briefs, and
+   planning documents — is Copyright (c) 2025-2026 Davi Moreira. All rights
+   reserved. It is published for reading and teaching use; it is not covered by
+   the MIT License below.
+
+3. THIRD-PARTY MATERIAL — quotations, figures, datasets, photographs, and any
+   other credited material originating elsewhere — is excluded from both of the
+   above and remains governed by the terms of its own source. Frameworks the
+   book adapts are credited at the point of use; nothing in this repository
+   grants rights over material the author does not hold.
+
+Questions about reuse of the text should go to the author.
+
+---
+
+MIT License (applies to item 1 above)
 
 Copyright (c) 2025 Davi Moreira
 

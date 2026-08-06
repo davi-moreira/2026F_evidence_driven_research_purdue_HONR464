@@ -1991,3 +1991,113 @@ test), ch3's document step records the check's outcome either way (an
 agreeing check no longer makes the workflow impossible), and Studio 5's
 contrast rule names its own selection (any other route the reader
 chooses) instead of pointing at a mapping the route guide never had.
+
+---
+
+## D48 — The plagiarism and attribution pass (2026-08-05)
+
+**Ruling.** Davi asked for an audit of the book's plagiarism exposure,
+especially where EDR|AI incorporates and "translates" the approach published
+in RDSS (Blair, Coppock & Humphreys, *Research Design in the Social
+Sciences*), with findings presented BEFORE any edit. After reviewing them he
+ruled: apply everything necessary, replace the copied figures with our own
+drawn in the house style of the "How this book is organized" figure, and have
+Codex review the result.
+
+**What the audit found.** Two independent tracks (a Codex research-integrity
+audit in mirror mode and my own close-text comparison against RDSS pages
+fetched verbatim) agree: **there is no verbatim or near-verbatim RDSS prose
+anywhere in `book/*.qmd`.** The book's expression is its own. The real
+exposure was attribution and licensing, in five kinds:
+
+1. **A positioning statement that contradicted D43.** `references.bib` called
+   RDSS "the theory text EDR|AI translates". The preface says the opposite,
+   correctly. Now: "EDR|AI draws on and adapts its research-design framework."
+2. **Two close conceptual paraphrases** at the openers of ch11 and ch13,
+   tracking RDSS's distinctive framing of the observational-descriptive and
+   experimental-descriptive pathways with no citation in either chapter.
+3. **Framework use without point-of-use credit.** MIDA was introduced as
+   "this book calls them MIDA"; "diagnosand", a term its authors coined, was
+   used as assumed vocabulary; the pathway chapters and the Studio 4 pages
+   taught an adapted design library with no local credit. A preface nod does
+   not cover independently linkable pages.
+4. **Citation-accuracy defects.** The *Science* surprise essay's authors were
+   wrong in the bibliography (Michael Petroff / Molly King, for **Casey**
+   Petroff and **Gary** King); ch31 attributed the book's own
+   verification-disclosure rule to ICMJE, which requires only tool and
+   purpose; ch27's screen-reader claim rested on a color-vision paper rather
+   than WCAG; ch11 taught the four sampling groups as strictly nested, which
+   a sampling frame is not.
+5. **Licensing.** Eighteen exact RDSS figure conversions were committed to a
+   public repository, and the repo's only license was MIT pointed at
+   everything, with no statement covering book prose or third-party material.
+
+**What was applied.** Point-of-use credit at every first teaching surface
+(ch9, ch10, ch11, ch12, ch13, ch15, ch16, Studio 1, Studio 4 on both its
+opener and its milestone step); the two paraphrases reworded to name and cite
+the pathway they follow; ch14 now says plainly that prediction is EDR|AI's
+own fifth pathway, extending rather than adapting RDSS's library, and
+uncertainty-foundations carries the inquiry/estimand lineage sentence. Two
+definitions were widened for fidelity, not just credit: a data strategy
+includes **measurement**, and an answer strategy includes **uncertainty and
+interpretation** — the 2019 article states both, and the narrower versions
+were teaching less than the labels promise. "Diagnosands" left the Studio 4
+produces line and the Milestone 4 rubric in favour of the book's own plain
+language (bias, wobble, and how often it would detect), with the coinage
+credited where ch10 actually teaches it. Bibliography: authors corrected with
+DOI added, plus two verified new records — `blair2019declaring` (APSR 113(3),
+838–859, **CC BY 4.0**, the article that introduces both MIDA and diagnosands)
+and `w3c2024wcag22`.
+
+**The figures: the book draws its own.** The 18 `rdss_fig_*.png` files were
+deleted. Attribution in a README is not permission, and the MIT license on the
+`rdss` R package does not establish redistribution rights for converted book
+figures. Nothing referenced them (their assignments pointed at v1 notebooks,
+retired at tag `v1-compass-build`). In their place,
+`scripts/build_book_concept_figures.py` generates three diagrams in the
+monochrome house style of `build_book_part1_figure.py`, localized per edition
+and frozen-edition aware: **`mida_map.png`** (ch9 — the four parts split into
+what you assert on paper and what you run, with the alignment check as a
+dashed arrow), **`diagnose_loop.png`** (ch10 — declare, diagnose, redesign,
+with the honest call sitting outside the loop), and **`sampling_groups.png`**
+(ch11 — the four groups drawn honestly, the frame overlapping rather than
+nesting inside the accessible population). The standing rule, restored in
+`planning/SOURCE_AUDIT.md` §8: re-implement, never embed.
+
+**The datasets: the MIT notice now travels with the copies.** A live exposure
+neither the preface nor the audit brief anticipated: the five CSVs in
+`notebooks/data/` are redistributed from the MIT-licensed `rdss` package, and
+MIT requires its notice to accompany every copy. Prose credit alone does not
+satisfy it. `notebooks/data/LICENSE-rdss.txt` now reproduces the upstream
+notice verbatim (YEAR 2021; Graeme Blair, Alexander Coppock, and Macartan
+Humphreys, verified on CRAN) and `make_dataset_zip.py` ships it inside
+`honr46400_datasets.zip`.
+
+**Rights.** `LICENSE` now separates three kinds of material: code and
+infrastructure under MIT; book and course text under the author's copyright,
+all rights reserved; third-party quotations, figures, and datasets excluded
+and governed by their own sources. **The all-rights-reserved default for the
+text is a placeholder Davi can loosen** (a Creative Commons option was
+offered); it forfeits nothing in the meantime.
+
+**Verification discipline.** Every new bibliography claim was opened before it
+was written. The 2019 APSR PDF was retrieved and read rather than trusted:
+it confirmed the page range, the CC BY 4.0 licence, that the article
+introduces both MIDA and "diagnosands", and — usefully — that measurement
+belongs to the data strategy, which is what the ch9 fidelity fix now teaches.
+Codex's proposed WCAG record carried the wrong year (2023); the published
+Recommendation is dated 12 December 2024, and the record says so. Two Codex
+claims that could not be verified (the pages and licence of the 2019 article
+from the landing page alone) were verified from the PDF rather than repeated
+on trust.
+
+**Not applied.** Nothing was deferred silently. Codex's optional
+Ask-Verify-Document clarification was judged unnecessary: the book presents
+the mnemonic as its own habit, which it is, and its NIST citation supports the
+underlying guidance.
+
+**Process.** Codex partner audit (gpt-5.6-sol, xhigh, read-only, web enabled)
+in mirror mode, merged with my own close-text track; artifacts and the merged
+findings report in `_adm/codex_collab/2026-08-06_d48-plagiarism-audit/`.
+PT/ES replay logged as TRANSLATION_BACKLOG item 20 (D36 freeze holds; the
+figure script already carries PT and ES labels).

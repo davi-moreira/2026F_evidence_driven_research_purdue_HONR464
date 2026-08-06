@@ -71,13 +71,15 @@ stations:
       sketched discovery as a cycle: you start from experience, you leap
       to an idea that could explain it, and you reason down to
       predictions you can check. The leap has a name, abduction, and a
-      recent Google DeepMind position paper argues that today's AI cannot
-      make it: the tools have mastered patterns and derivations, but they
-      have only text about the world, not the experience the jump starts
-      from. The jump is yours. This first milestone puts it on the
-      record: the curiosity you committed by hand, the candidates you and
-      your tools stretched it into, and the one research problem you
-      chose to chase.
+      Google DeepMind position paper by Tom Zahavy argues that today's AI
+      cannot make it: the tools have mastered patterns and derivations,
+      but they have only text about the world, not the experience the
+      jump starts from [@zahavy2026jump]. Take that as an argued
+      position rather than a settled boundary. Either way the jump is
+      yours, because you are the one who answers for the claim. This
+      first milestone puts it on the record: the curiosity you committed
+      by hand, the candidates you and your tools stretched it into, and
+      the one research problem you chose to chase.
     hands_forward: >-
       Milestone 2 sets the rules that protect this curiosity, opens the
       ledger that records every delegation, verifies your first AI
@@ -353,11 +355,13 @@ stations:
       Research Contract v0 — objective, target estimand, population, setting
       and time, data strategy, a provisional operationalization you mark for
       revision, warrant, answer strategy and uncertainty statement — plus
-      your diagnosands, your permission status, and a redesign record.
+      the design properties you diagnosed (its bias, its wobble, and how
+      often it would detect what you are looking for), your permission
+      status, and a redesign record.
       Measurement proper is taught and assessed in Studio 6; here you only
       commit to a starting choice and say why it is defensible for now.
     steps:
-      - Write the four MIDA parts of your design so a stranger could run them.
+      - "Write the four MIDA parts of your design so a stranger could run them. (MIDA is Blair, Cooper, Coppock, and Humphreys' framework, developed at book length in RDSS.)"
       - State your estimand and estimator, and describe in words what would differ if the procedure ran again.
       - "Diagnose the design: what is its bias, how much does it wobble, and how often would it detect what you are looking for."
       - Run the permission determination and declare one status; if it is anything but cleared, name the authority and the date you asked.
@@ -380,7 +384,11 @@ stations:
       uncertainty) is declared before any result exists, so that later
       changes are visibly design or visibly drift. Diagnosing it on simulated data now, while
       changing your mind is still free, is what makes the declaration
-      honest rather than decorative.
+      honest rather than decorative. The four MIDA parts you declare here,
+      and the declare-and-diagnose loop you run on them, were introduced by
+      Blair, Cooper, Coppock, and Humphreys [@blair2019declaring;
+      @blair2023rdss]; this book puts them in plain language and joins them
+      to a governed AI workflow.
     hands_forward: >-
       Milestone 5 commits the contract to one research pathway and writes
       what that pathway can and cannot establish.

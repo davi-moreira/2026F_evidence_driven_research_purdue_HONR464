@@ -38,6 +38,10 @@ the discipline to say who it applies to.
 
 ## The concept
 
+This chapter follows the experimental-causal pathway of the design library in RDSS,
+where you assign the conditions yourself; the potential-outcomes vocabulary below
+follows Holland [@blair2023rdss; @holland1986causal].
+
 Start with a **causal question**, a question about what would change if you
 intervened rather than what merely goes together. Example: "does a text reminder
 *raise* the share of patients who refill on time?", not "do patients who got

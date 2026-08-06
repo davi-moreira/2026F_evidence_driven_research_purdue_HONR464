@@ -46,9 +46,9 @@ the **AI Research Ledger**, a running table with one row per AI use, recording t
 task, the tool, your decision, and the verification method. A complete disclosure is
 not written from scratch at the end. It is read straight off your ledger [@munafo2017manifesto].
 
-Three parts make a disclosure complete, and each maps to a ledger column: **which
-tool** you used, **for which task**, and **how you verified** the output. Drop any one
-and it fails. "I used AI" with no task is meaningless; a task with no verification is
+Three parts make a disclosure complete by this book's standard, and each maps to a
+ledger column: **which tool** you used, **for which task**, and **how you verified**
+the output. Drop any one and it fails. "I used AI" with no task is meaningless; a task with no verification is
 exactly the gap a reviewer is trained to find.
 
 ## A worked example
@@ -63,7 +63,12 @@ to write the short calculation that turns that income and its interest expense i
 coverage ratio. Both are honest uses, and neither is safe until it is disclosed and
 verified.
 
-What a disclosure must contain, and that the tool can never be an author, is set out in current editorial guidance [@icmje2026recommendations].
+Know where each part of that rule comes from. Current editorial guidance requires you
+to name which tool you used and for what purpose, and it keeps responsibility for the
+accuracy and attribution of the work with you; a tool can never be an author
+[@icmje2026recommendations]. The third column, how you verified the output, is this
+book's own requirement on top of that guidance, because a disclosure that cannot say
+how something was checked leaves a reader nothing to trust.
 
 Your ledger already holds two rows. For the reported figure, the verification method
 is **primary-source reading**: you opened the company's published annual report and

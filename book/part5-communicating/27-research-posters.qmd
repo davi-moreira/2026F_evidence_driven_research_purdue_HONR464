@@ -59,9 +59,12 @@ The decision is one judgment made four ways, and each way has a name.
 - **Uncertainty on the page.** The interval or caveat printed in the same glance as
   the claim, not buried in a footnote [@alley2013craft]. Example: a "±4 points" error bar drawn right
   on the headline figure.
-- **Accessibility.** Whether your message reaches readers who perceive differently [@crameri2020colour].
-  Example: a red-green bar pair carries nothing for a red-green color-blind reader,
-  roughly 1 in 12 men.
+- **Accessibility.** Whether your message reaches readers who perceive differently.
+  The published standard is WCAG 2.2: color is never the only visual means of
+  carrying information, and every informative image needs a text alternative that
+  serves the same purpose [@w3c2024wcag22]. Example: a red-green bar pair carries
+  nothing for a red-green color-blind reader, roughly 1 in 12 men
+  [@crameri2020colour].
 - **Redundant encoding.** Carrying the same distinction in more than one channel, so
   no single channel is load-bearing. Example: label each bar with its value and give
   each a pattern, so color becomes a bonus, not the only signal.

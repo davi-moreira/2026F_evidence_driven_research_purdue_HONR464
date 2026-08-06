@@ -105,6 +105,15 @@ the CSVs with an attribution note (see §8).
   companion to* Research Design in the Social Sciences *(2023)."*
 - **Book text:** copyrighted — **paraphrase and transform**; never reproduce long
   passages. Figures: re-implement in Python rather than embedding the book PDFs.
+  *(A 2026-07-18 decision to embed converted RDSS figure PDFs briefly overrode
+  this rule; D48 reversed it on 2026-08-05, deleted the 18 committed
+  `rdss_fig_*.png` files, and restored re-implementation as the standing rule.
+  The book now draws its own diagrams via
+  `scripts/build_book_concept_figures.py`.)*
+- **`rdss` datasets shipped in `notebooks/data/`:** the MIT license requires its
+  notice to accompany every copy, so `notebooks/data/LICENSE-rdss.txt` reproduces
+  it verbatim and rides inside `honr46400_datasets.zip` (D48). Prose attribution
+  alone does not satisfy MIT.
 - Calling Bullshit: cite the book; use only openly-licensed callingbullshit.org material.
 - Keep `_adm/_references/` gitignored (already is).
 

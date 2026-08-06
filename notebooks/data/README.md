@@ -3,9 +3,15 @@
 All five CSVs ship from the **`rdss` R package v1.0.14** (Blair, Coppock &
 Humphreys, **MIT License**), the companion package to *Research Design in the
 Social Sciences: Declaration, Diagnosis, and Redesign* (Princeton University
-Press, 2023; free online at book.declaredesign.org). Redistribution with
-attribution is permitted by the MIT license. Files are byte-identical to the
-book's replication archive.
+Press, 2023; free online at book.declaredesign.org). Files are byte-identical
+to the book's replication archive.
+
+The MIT license permits this redistribution and requires that its notice travel
+with every copy, so the upstream notice is reproduced verbatim in
+[`LICENSE-rdss.txt`](LICENSE-rdss.txt) and ships inside the dataset zip. A
+prose credit alone does not satisfy the license. The studies behind these files
+belong to their original investigators, named in the table below and cited in
+the book wherever a dataset is used.
 
 > **Attribution line (used in every notebook that loads these files):**
 > *Dataset from the `rdss` package (Blair, Coppock & Humphreys, MIT License),

@@ -30,8 +30,11 @@ you will ever run.
 
 ## The concept
 
-Every research design has the same four parts. This book calls them **MIDA**, one
-letter each.
+Every research design has the same four parts. Blair, Cooper, Coppock, and Humphreys
+named that framework **MIDA**, one letter each, and developed it at book length in
+*Research Design in the Social Sciences* [@blair2019declaring; @blair2023rdss]. This
+book adopts their four labels and puts them in plain language for a first
+quantitative project.
 
 - **Model**: your written picture of how the world could work, meaning which things
   exist and what could affect what. Example: "a listener's chance of accepting a
@@ -39,11 +42,25 @@ letter each.
 - **Inquiry**: the one exact quantity you want from that world, named before any outcome
   arrive. Example: "the average lift in accept rate the new recommender causes across
   listeners."
-- **Data strategy**: your plan for how the data come to exist, meaning who gets
-  sampled and who gets which condition. Example: "randomly send each session to the
-  old or new recommender, then log every accept."
-- **Answer strategy**: your plan for turning the data into an estimate of the inquiry.
-  Example: "accept rate in the new group minus accept rate in the old group."
+- **Data strategy**: every procedure that makes your data exist, meaning who gets
+  sampled, who gets which condition when you assign one, and how each outcome is
+  measured. Example: "randomly send each session to the old or new recommender, then
+  log every accept."
+- **Answer strategy**: the whole procedure that turns those data into an answer,
+  meaning how you prepare them, the estimate you compute, how you state the
+  uncertainty around it, and how you read what comes back. Example: "accept rate in
+  the new group minus accept rate in the old group, reported with an interval."
+
+![The four parts of a design. The top row is what you assert on paper; the bottom
+row is what you actually run. The dashed arrow is the check that matters: your
+answer strategy has to reach the inquiry you
+named.](../images/concepts/mida_map.png){fig-alt="Diagram with four rounded boxes in
+two rows. Top row, labeled on paper: Model, how the world could work, with an arrow
+labeled makes askable pointing to Inquiry, the one quantity you want from it. Bottom
+row, labeled in the world: Data strategy, every procedure that makes the data, with
+an arrow labeled feeds pointing to Answer strategy, how those data become an answer.
+A dashed arrow runs upward from Answer strategy to Inquiry, labeled alignment: does
+the answer reach the inquiry?"}
 
 The four are not a checklist you fill in any order [@blair2023rdss]. They must **align**, meaning your
 data and answer strategies actually reach the inquiry your model makes askable.
