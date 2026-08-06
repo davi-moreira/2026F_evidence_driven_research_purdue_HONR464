@@ -188,25 +188,30 @@ you would have taken the other road if the facts had pointed there.
 
 ### 3. The jigsaw advocate summary
 
-Summarize the route you represented at the studio's route jigsaw in **five
+Summarize the route you represented in this week's route jigsaw in **five
 sentences a non-specialist could repeat**: what the route asks, what it
 requires, what claim its licence buys, what it can never establish, and one
 study you would run with it. The jigsaw assigns routes independently of your
 project on purpose. Advocating a road you will not take is how you learn the
 whole map, not just your lane.
 
-### 4. The Contract delta (v0 → v1)
+### 4. Research Contract v1
 
-Name exactly which fields of your **Research Contract v0** this declaration
-revises, and issue the result as **Research Contract v1**: your objective
+This is the milestone's own product, and the other five parts exist to feed
+it. Name exactly which fields of your **Research Contract v0** this declaration
+revises, then issue the result as **Research Contract v1**: your objective
 matched to its target, your reach matched to your data strategy, and your
-**warrant** — the stated reason your evidence will license your claim — now
-carried by a declared pathway with written limits. Two disciplines apply:
+warrant now carried by a declared pathway with written limits. Three
+disciplines apply:
 
 - **Version with a reason.** The delta is a dated, numbered version whose
   reason a reader could use to reconstruct your thinking. "Updated after
   week 5" is not a reason; "declared observational descriptive because my
   permission status forbids assignment" is.
+- **Redraw the claim boundary.** Your **claim boundary** is the pair of
+  sentences saying what your evidence will and will not support. Rewrite both
+  so they match the licence your route actually holds. If the route lost you a
+  claim you were hoping for, the boundary is where that loss becomes visible.
 - **Update the uncertainty statement.** Different pathways carry different
   sources of uncertainty: sampling error on a descriptive road, confounding
   on an observational causal road, drift between past and future cases on a

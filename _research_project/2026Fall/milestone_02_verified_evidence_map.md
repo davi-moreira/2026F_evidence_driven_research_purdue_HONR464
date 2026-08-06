@@ -102,60 +102,82 @@ registered here too, not appended informally to a draft.
 ## Components
 
 Draft every piece yourself first. AI may surface leads and critique what you
-wrote, but whether a source counts as verified and whether your gap is real are
-**never-delegable** decisions, because your name goes on the map.
+wrote, but whether a source counts as verified, and whether your gap is real,
+are **never-delegable** decisions, because your name goes on the map.
 
-### 1. Verified source ledger (at least six sources)
+### 1. The candidate list, with its status column
 
-A table of **at least six sources you personally retrieved and read**. For each,
-four things:
+Everything you found, before any of it is trusted. Seed the list three ways, and
+say in a phrase which route produced each row:
+
+- **Your own search** — a database or repository you queried yourself.
+- **One AI sweep** — a single prompt asking your AI assistant for published work
+  on your question, with authors, year, and title.
+- **Hand snowballing** — following the reference list of a source you already
+  trust, and the newer works that cite it. For example, one lead source's
+  bibliography hands you three more names to check.
+
+Mark one row as your **lead source**: the single most useful source you have so
+far, the one whose reference list you actually walked.
+
+Every row carries a **status**, and only three values are allowed: *verified*
+(you retrieved and read it), *could not retrieve* (you looked and it did not
+resolve), or *pending* (you have not tried yet). Rows never disappear from this
+list. A dropped row stays visible, marked *could not retrieve*, because the
+attempt is part of your record.
+
+### 2. The search log, including the searches that found nothing
+
+A **search log** is the record of how you looked, not of what you found. One
+line per search, four fields: **where** you looked, the exact **terms** you
+used, **what came back and what did not**, and the **date**.
+
+Log the empty searches. A query that returns nothing usable is a result, and it
+is the only evidence that separates a real gap from a search you gave up on. A
+log with only successes in it cannot support any claim about what is missing.
+
+> **A worked log line:** *Sep 8 · where: the university library's economics
+> database · terms: "campus dining prices" AND "inflation" · result: 4 hits, all
+> about national chains, none campus-level; nothing usable retrieved.* That line
+> is short, dated, and reusable by a stranger who wants to repeat the search.
+
+### 3. The evidence registry of verified sources
+
+The registry holds only the rows that survived verification, and it needs **at
+least six**. Verification has exactly one meaning here: you retrieved the source
+and read it. An AI summary of a paper is not the paper, and a row built from one
+does not belong in the registry.
+
+Each registry row carries five fields:
 
 - **Full citation** — author, year, title, venue.
 - **Where you retrieved it** — the concrete database, journal, or repository page
-  where you opened it, never "an AI told me about it." A source you only read an
-  AI's summary of does not count and must not appear.
-- **Central claim in your own words** — what the source actually asserts, in one
-  sentence. Its claim, not its topic. "Heavy social-media use is linked to lower
-  trust" is a claim; "social media and trust" is only a topic.
+  where you opened it, never "an AI told me about it."
+- **Central claim in your own words** — what the source asserts, in one sentence.
+  Its claim, not its topic. "Heavy social-media use is linked to lower trust" is
+  a claim; "social media and trust" is only a topic.
 - **Evidence type** — the kind of claim the source's evidence actually supports:
   **descriptive** (a pattern in the data at hand), a **generalization** (a claim
   reaching a population beyond the sample), **predictive** (a claim about unseen
   cases), or **causal** (a because-claim). Type it by the evidence the source
   really has, so a descriptive survey pattern is not written up as a causal law.
+- **Licence and terms**, for any dataset in the row — who may use these data and
+  under what conditions, recorded now, before you plan any analysis on them. A
+  dataset with no licence line is not yet available to you.
 
-> **A worked ledger row:** *Blair, Coppock & Humphreys (2023),* Research Design in
-> the Social Sciences, *ch. 4 — retrieved from book.declaredesign.org, read in
+> **A worked registry row:** *Blair, Coppock & Humphreys (2023),* Research Design
+> in the Social Sciences, *ch. 4 — retrieved from book.declaredesign.org, read in
 > full.* **Central claim (my words):** a research design is situated in a
 > literature by naming the inquiry it answers, not by listing what came before.
 > **Evidence type:** descriptive (a framework claim, not a population
 > generalization). That row proves retrieval, states the claim plainly, and types
 > the evidence honestly.
 
-### 2. The evidence map, with your gap placed on it
-
-Using the builder from nb03, fill the claims table and the relationships table and
-run the graph cell so the map draws itself. **Nodes are claims** drawn from your
-verified ledger. **Edges mark how two claims relate** — they **agree** when they
-point the same way, **contradict** when they clash, and **qualify** when one
-narrows the other. One node is your **gap**: the marked spot where no source
-reaches.
-
-Draw your contradictions; do not hide them. A contradiction is data, not a
-verdict: two verified sources can reach opposite findings because they sampled
-different populations, measured the construct differently, or used different
-designs. Name that design difference in a sentence, and the contradiction becomes
-a place a new question can live.
-
-Submit the map as an **image** (the notebook-generated figure edited to your
-project). Every node and every edge must answer to a row in your ledger. A map
-with nodes you cannot trace to a source, or edges you drew for looks, was drawn,
-not built.
-
-> **A question that often comes up here:** *"Two of my verified sources flatly
-> contradict each other — is one of them wrong?"* Usually neither. Ask what would
-> make them *both* right: a different population, measure, time window, or method.
-> That question is where new gaps are born, so log the contradiction on your map
-> instead of smoothing it away.
+Then run the **retrievability audit** on the registry you built. Take each row
+marked verified and try to open its source again from the citation alone, the way
+a stranger with only your bibliography would. A row you cannot reopen goes back
+to *pending*, whatever you remember about reading it. This audit is what makes
+the registry usable by anyone but you.
 
 ### 3. Your gap, placed honestly, and the contribution line
 

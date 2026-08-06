@@ -33,13 +33,13 @@ syllabus; instructions and rubrics live one page per milestone, like this one.
 ## What to Submit on Brightspace
 
 Due: **Friday, November 20, 11:59 PM**. You present at the **Expo on Tuesday,
-November 17** (a graded component, below), then bring your coded feedback to the
-**Friday reflection story round (Nov 20)** where you tell your round and read the
-pattern off your counts.
+November 17** (a graded component, below), then bring your coding sheet to the
+**Friday reflection studio (Nov 20)**, where you code your questions, find your
+pattern, and write the revision that pattern licenses.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m12_reflection.pdf`** *or* a shared Colab notebook link | The six-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your three-entry poster-criticism portfolio, your self-evaluation, and your AI Research Ledger rows. This is the graded written artifact. |
+| 1 | **`lastname_m12_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-evaluation, with your AI Research Ledger rows attached. This is the graded written artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 29** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 The **Expo presentation (Tuesday, November 17)** is a separate graded component
