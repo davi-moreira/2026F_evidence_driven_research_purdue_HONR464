@@ -66,53 +66,84 @@ Dossier.
 
 ## Purpose
 
-Every defended claim in December started as a vague itch in August, and every
-credible claim in this course survived a verification step before it was spoken
-aloud. This milestone does two things at once. It **catches three of your
-curiosities** before they evaporate, and it **installs your working relationship
-with AI**: what you will let it do, what you will never hand it, and how you
-check what comes back.
+Every claim defended in December started as something that would not leave
+someone alone in August. This milestone catches that thing before it evaporates,
+and then it makes you choose. By Friday you have a **committed curiosity** on the
+record and one **research problem** you are willing to chase for a semester.
 
-That second half is the spine of the course. In nb01 you met the one rule
-everything rests on: **AI is your arm and your research assistant, not your
-brain.** You saw why a fabricated source sounds exactly like a real one, so you
-verify by retrieving. You named the ways a fluent partner fools careful people,
-and you ran one claim through the habit the course trains: **Ask → Verify →
-Document**. M0 is where you write that down for *your* start, so no later week is
-lost to setup and no later claim rests on an unchecked machine guess.
+The course runs one **studio** per week: a themed week of the course book whose
+lessons you work Monday and Wednesday and whose milestone you build and submit on
+Friday. This week is Studio 1, and its milestone is this one. A **research
+problem** is a specific unknown inside a territory you care about, plus one line
+on why its absence matters. "Food prices near campus" is a territory. "How much
+faster menu prices near campus rose than overall prices since 2019" is a problem.
+The second one can be worked; the first one cannot.
 
-You stress-test your citation catch and your never-delegate list with your AI reviewer. The two
-curiosities you did *not* pitch, and the boundary you drew, become the raw
-material M1's formal declaration builds on.
+Two moves make this different from picking a topic. First, you write down what
+you already believe, before you look, so later evidence has something to move.
+Second, you write down the evidence that would revise that belief, while nothing
+is yet at stake and the sentence is still cheap to write. That sentence is the
+seed of every claim boundary you draw for the rest of the semester.
+
+Use AI hard here. Brainstorming is one of the tasks a research assistant is
+genuinely good at, and this studio wants you to use it. What it may not do is
+hand you the curiosity. The jump from "here is something I noticed" to "here is
+what might explain it" is yours, because you are the one who will answer for the
+claim.
 
 > **A question that often comes up here:** *"Does a curiosity have to be
 > 'academic'?"* No. The strongest projects often start somewhere personal: a
 > program you were part of, a claim in a news feed that annoyed you, a pattern
 > you noticed at home. What matters is that it is *yours* and that, in principle,
-> evidence could speak to some version of it. The formal declaration tests it
-> next week; today, chase what actually interests you.
+> evidence could speak to some version of it. Your rules and your formal question
+> arrive next week; today, chase what actually interests you.
 
 ## Components
 
-### 1. Three curiosities, one defended pick
+The artifact has four moving parts and a wrapper: the four lines you started
+from, the stretch that widened them, the problem you chose, and the answer you
+expect, all carried inside a dated version with its reason. Give each component
+below its own labeled section.
 
-Write **three genuine curiosities** from any field you care about: three
-*different* doors, not three phrasings of one. For each, in two or three
-sentences, say what pulls you in and what small corner of it you could imagine
-looking at more closely. A curiosity is allowed to start broad; ch. 1 walks
-your pick down the funnel to a chosen research problem this same week, and the
-FORMAL question (units, outcome, kind, reach) is declared at M1, not today.
+### 1. Version zero: your four lines
 
-Then **mark the one you would currently carry** and defend it in a short
-paragraph: why this one, and what would make it a *bad* choice you should watch
-for. Name a real risk from the three nb01 gave you: **too broad to finish**, **no
-reachable data**, or **already settled**. You are not locked in. You are
-practicing the move: choose, and say why.
+Copy the four lines you wrote by hand at the studio's opening move, dated. Do not
+polish them into something that sounds like a published paper. Version zero is a
+record of where you actually started, and its value is that it is honest.
 
-> **A question that often comes up here:** *"Should I write a polished research
-> question now?"* No, and a polished question here often boxes you in. Stay broad.
-> Naming a real risk in your pick is worth more today than pretending you have
-> already narrowed it. Breadth now buys you a good choice at M1.
+- **The curiosity.** One sentence naming the thing you genuinely want to
+  understand.
+- **Why an answer would matter, and to whom.** Name a real person or role, not
+  "society". "Anyone budgeting a semester near campus" is a real audience.
+- **Your starting belief.** What you currently think the answer might be. A
+  belief is what you would say if someone asked you today, not a claim you have
+  evidence for.
+- **The revising evidence.** One kind of evidence that would make you change your
+  mind. "Price records showing menus tracked the overall index" is a real answer.
+  "Better data" is not.
+
+Write the starting belief so evidence can move it. A belief stated so loosely
+that nothing could ever contradict it is not a belief you can research.
+
+> **A question that often comes up here:** *"What if my starting belief turns out
+> to be wrong?"* Then the project worked. You are graded on whether the belief was
+> written honestly and checkably, never on whether it survived contact with
+> evidence.
+
+### 2. The stretch: your candidates, with everything NEW marked
+
+Widen the curiosity before you narrow it. Write **two candidate directions of
+your own first**. Then run the structured brainstorm from ch. 1's "It is your
+turn" and mark every element the tool introduced as **NEW**. A NEW element is any
+angle, population, comparison, or variable that was not already in your own two.
+
+Then keep the trail. List what you **kept** and what you **rejected**, each with
+its reason in one sentence. "Rejected the second-town comparison: no access to
+its price records" is a reason. "Not interesting" is not.
+
+Your own two come first for a reason. If you open the tool before you have
+written anything down, its framing quietly becomes your framing, and by Friday
+you will not be able to tell which ideas were yours.
 
 ### 2. Your AI baseline
 

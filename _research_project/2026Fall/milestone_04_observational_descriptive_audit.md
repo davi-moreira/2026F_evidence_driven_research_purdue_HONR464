@@ -25,14 +25,17 @@ instructions and rubrics live one page per milestone, like this one.
 ## What to Submit on Brightspace
 
 Due: **Friday, September 25, 11:59 PM** (you work on it at that Friday's studio).
-As you assemble the declaration, run the **Causal Identification Skeptic**
-GenAI Studio reviewer (**required** at this milestone) against your
-identification argument or your descriptive-boundary defense, and answer what
-it finds in writing. The written document is what is graded.
+This week's two lectures teach the five pathway lessons, and Friday is their
+milestone. What you submit is **Research Contract v1**: your Contract v0
+revised so that it now carries a declared pathway and that pathway's written
+limits. As you assemble it, run the **Causal Identification Skeptic** GenAI
+Studio reviewer (**required** at this milestone) against your identification
+argument or your descriptive-boundary defense, and answer what it finds in
+writing. The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m04_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration (with the required Causal Identification Skeptic critique answered), the mandated contrast, your jigsaw advocate summary, the Contract delta issuing Research Contract v1, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
+| 1 | **`lastname_m04_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration with its hybrid-stage test and the required Causal Identification Skeptic critique answered, the mandated contrast, your jigsaw advocate summary, **Research Contract v1** with its delta and its updated claim boundary, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 14, ch. 15, ch. 16, ch. 17, ch. 18, ch. 19** | **Route-conditional:** the completed "It is your turn" sections of YOUR declared route's chapter and the instructor-assigned contrast chapter only (the hybrid chapter in addition only when your design has stages), worked in their companion Colab notebooks (share the links) or included in your artifact. The other route chapters are jigsaw material, not graded reading. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
@@ -67,33 +70,47 @@ Dossier.
 
 ## Purpose
 
-Five research pathways run through this part of the book, and this week they
-all meet in one room. A **research pathway** is the family of designs that
-turns your kind of question into evidence: the road from what you ask to what
-you can claim. The five roads are **observational descriptive**,
-**observational causal**, **experimental descriptive**, **experimental
-causal**, and **prediction**. Your question, plus what you are permitted to
-do, picks exactly one as your project's primary road. This milestone makes
-that commitment explicit, in writing, before any result exists.
+This is the route-hub week. Five research pathways run through this part of
+the book, and this week they all meet in one room. A **research pathway** is
+the family of designs that turns your kind of question into evidence: the road
+from what you ask to what you can claim. The five roads are **observational
+descriptive**, **observational causal**, **experimental descriptive**,
+**experimental causal**, and **prediction**. Your question, plus what you are
+permitted to do, picks exactly one as your project's primary road.
 
-Declaring a pathway means writing its limits at the same moment. Every
-pathway holds a **crossing licence** — the earned right to make one kind of
-claim. Sampling from a named frame licenses a claim about a population. An
-honest held-out test licenses a claim about unseen cases. Assignment, or an
-argued identification strategy, licenses a claim about cause. Your
-declaration names the licence your route holds and the one it does not, plus
-what your route can never establish no matter how clean the execution. A
-result can only be defended from inside the pathway that produced it, so the
-limits you write now are the defense you will stand on in November.
+What you hand in is not an essay about roads. It is **Research Contract v1**,
+your Contract v0 revised on four fronts at once: your objective matched to its
+target, your reach matched to your data strategy, your **warrant** carried by a
+declared pathway, and your claim boundary redrawn to fit. The warrant is the
+stated reason your evidence will license your claim. All of it gets written
+before any result exists, which is the only moment at which those limits cost
+you nothing to admit.
 
-You also spend this week arguing for roads that are not yours. At the studio
-you play the **route jigsaw**: each of you advocates one assigned pathway to
-the group, independent of your own project's route. In the brief you write
-the **mandated contrast** — a one-page engagement with the contrasting route
-assigned to you, taken seriously on its merits. The logic is simple: you can
-only defend a choice you can compare. And the declaration is versioned, not
-carved in stone: realized data that will not support the declared pathway
+Declaring a pathway means writing its limits at the same moment. Every pathway
+holds a **crossing licence**, the earned right to make one kind of claim.
+Sampling from a named frame licenses a claim about a population. An honest
+held-out test licenses a claim about unseen cases. Assignment, or an argued
+identification strategy, licenses a claim about cause. Your declaration names
+the licence your route holds and the one it does not, plus what your route can
+never establish no matter how clean the execution. A result can only be
+defended from inside the pathway that produced it, so the limits you write now
+are the defense you will stand on in November.
+
+You also spend this week arguing for roads that are not yours. In class you
+play the **route jigsaw**: each of you advocates one assigned pathway to the
+group, independent of your own project's route. In the brief you write the
+**mandated contrast**, a one-page engagement with the contrasting route your
+instructor assigns you, taken seriously on its merits. The logic is simple:
+you can only defend a choice you can compare. And the declaration is versioned,
+not carved in stone: realized data that will not support the declared pathway
 send you back to this decision before analysis, never after.
+
+Your reading this week is **route-conditional**, and that is deliberate. You
+work the "It is your turn" section of your own route's lesson in full, plus
+the one your assigned contrast comes from. The hybrid lesson joins those two
+only when your design runs in stages. The remaining roads reach you through the
+jigsaw, in your classmates' voices, which is enough to compare against and far
+less than a road you intend to travel.
 
 > **A question that often comes up here:** *"My question is causal, but the
 > data I can reach give me no leverage to identify the effect. Do I switch to
@@ -114,9 +131,9 @@ you.
 
 ### 1. The route declaration
 
-Commit to one primary pathway and defend the commitment in four short moves.
+Commit to one primary pathway and defend the commitment in five short moves.
 
-- **The pathway, named.** One of the five, chosen with the studio's route
+- **The pathway, named.** One of the five, chosen with the book's route
   guide: what your question asks, crossed with whether you observe the world
   as you find it, assign conditions yourself, or honestly score a forecast.
 - **Why it fits.** Two sentences: why your question's **kind** and **reach**
@@ -129,6 +146,12 @@ Commit to one primary pathway and defend the commitment in four short moves.
 - **The anchor study.** Name one real, retrievable prior study that used
   this pathway on a question comparable to yours, so your declaration
   stands on precedent, not preference.
+- **The hybrid-stage test.** Answer one question in writing: does your design
+  run in **stages**, meaning one part of it feeds a later part, such as a
+  screening survey that selects who enters an experiment? If the answer is no,
+  say so in a sentence and stop. If yes, add the stage-by-stage map, name the
+  weakest link in the chain, and justify keeping or cutting that stage in one
+  sentence.
 
 Two cautions, both drilled this week. Assigning conditions does not make a
 question causal: a randomized study can be measuring a property the world
@@ -148,8 +171,8 @@ ledger row.
 
 ### 2. The mandated contrast
 
-Engage the contrasting route assigned to you in \~one page, on its merits.
-Three questions, answered honestly:
+Engage the contrasting route your instructor assigned you in \~one page, on
+its merits. Three questions, answered honestly:
 
 - **What would it require?** The data, the assignment power, or the
   permissions the contrast needs that your project would have to obtain.
