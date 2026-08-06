@@ -211,7 +211,7 @@ milestones:
   M8:  {title: "Bounded research note and claim-evidence table",                      due: "2026-10-23", kind: "studio"}
   M9:  {title: "Venue contract and the publication-ready artifact",            due: "2026-10-30", kind: "studio"}
   M10: {title: "Reproducible package and the final poster lock",                            due: "2026-11-06", kind: "terminal", note: "5:00 PM, submitted for printing"}
-  M11: {title: "Release audit and next-cycle agenda",                         due: "2026-11-13", kind: "studio", note: "Friday = mock poster symposium"}
+  M11: {title: "Release audit and next-cycle agenda",                         due: "2026-11-13", kind: "studio", note: "Friday = the release audit and next-cycle agenda"}
   M12: {title: "Conference reflection and defense revision", due: "2026-11-20", kind: "studio", note: "Expo Tue Nov 17 presentation is a graded component"}
   M13: {title: "Replication and red-team report",              due: "2026-11-29", kind: "async", note: "peer's anonymized package; Sunday due date"}
   M14: {title: "Research note v1 and reusable package", due: "2026-12-04", kind: "studio"}
@@ -259,7 +259,7 @@ sources:
     status: "work in progress — under development across the semester"
     reading_model: "EDR|AI chapters are the REQUIRED reading; the matching RDSS chapters are RECOMMENDED (EDR|AI translates RDSS to the undergraduate audience). Route lessons (D41): your own route plus one assigned contrast; hybrid/complex only when the design has stages"
     translations: ["pt-BR (book-pt/ -> docs/book-pt)", "es (book-es/ -> docs/book-es)"]
-    format: "Quarto book, 39 lessons in 12 Studios, each closed by a generated Book Milestone chapter (D38/D40), rendered to docs/book/"
+    format: "Quarto book, 40 lessons in 12 Studios, each closed by a generated Book Milestone chapter (D38/D40), rendered to docs/book/"
     sync: "chapters synchronized with nb01–nb16 + site (validate_book_sync.py)"
   secondary_book:
     key: "CB"

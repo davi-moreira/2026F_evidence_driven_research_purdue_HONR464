@@ -230,7 +230,7 @@ the theory text**; EDR|AI chapters are the REQUIRED reading and the matching
 RDSS chapters are RECOMMENDED (route lessons: own route + one assigned
 contrast; hybrid when the design has stages — D41). Course adoption is machine-defined: the
 **crosswalk** (`planning/COURSE_BOOK_CROSSWALK.yml`, schema 1.1) maps every
-lesson to exactly one home milestone (39-lesson bijection), fires every
+lesson to exactly one home milestone (40-lesson bijection), fires every
 studio checkpoint, and carries the D40 naming bridge (course milestones
 M0–M15 present book Milestones 1–12 as versions). Studio↔week alignment is
 §2's table; per-lesson detail is the generated `planning/BOOK_MAP.md` and
