@@ -23,16 +23,20 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, September 11, 11:59 PM** (you present a contribution-map gallery
-walk at the Friday studio that day).
+Due: **Friday, September 11, 11:59 PM** (you work on it at that Friday's
+studio). Week 3 is short: Labor Day takes Monday, so one Wednesday lecture
+carries both of this studio's lessons and Friday is the milestone itself. That
+studio is an **evidence-map gallery walk**: your registry and your map go up
+for the room to challenge, you carry one challenge into the artifact, and you
+submit the same day.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m02_evidence_map.pdf`** *or* a shared Colab notebook link | The four-part map below: your verified source ledger (at least six sources you personally retrieved), your evidence map with your gap placed on it (image), your bounded contribution line with its honesty-test sentence, the peer challenge you incorporated at the gallery walk, and your AI Research Ledger rows. This is the graded artifact. |
+| 1 | **`lastname_m02_evidence_base.pdf`** *or* a shared Colab notebook link | The evidence base below: your candidate source list with its status column, your search log including the searches that found nothing, your registry of verified sources, your evidence map of what is settled, contested, and missing with your bounded gap sentence, and your explicit revision of the question you declared at M1 — together with the gallery-walk challenge you incorporated, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 8, ch. 9** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
-If you submit a notebook link, make sure sharing is set so the instructor can
-open it, and that the evidence-map figure renders when the notebook is run.
+If you submit a notebook link, set sharing so the instructor can open it, and
+confirm that the evidence-map figure renders when the notebook is run.
 
 ---
 
@@ -57,38 +61,43 @@ Dossier.
 
 ## Purpose
 
-M1 gave you one answerable question resting on a one-line contribution case. This
-milestone turns that toehold into a **map of what your field actually asserts and
-on what evidence** — and pins your gap to a spot on that map where no verified
-source already sits.
+No question is asked in an empty room. M1 left you with a declared question and
+a one-line hunch about whether anyone had already answered it. This milestone
+replaces the hunch with an **evidence base**: the verified record of what is
+actually known about your question, assembled by you, plus the revision that
+record forces on your declaration.
+
+The artifact has four working parts and one consequence. The parts are a
+**candidate list** of everything you found, a **search log** of how you looked,
+a **registry** of the sources that survived verification, and an **evidence
+map** sorting the verified claims into what is settled, what is contested, and
+what is missing. The consequence is the revision: your question either changes
+because of what you read, or holds for a reason you can defend.
 
 The discipline that makes this milestone matter is the course's spine:
-**evidence integrity**. Every source on your ledger is one *you personally
-retrieved and read*, from a place you can name, whose central claim you can state
-in your own words. In nb03 you ran the **retrieval-verification loop** — treat any
-suggested source as a lead, retrieve it yourself, confirm it exists and says what
-was claimed — and you watched a tidy pile of fifteen AI citations collapse to the
-handful that survived retrieval. Here you turn that same reflex on your own
-reading list.
+**evidence integrity**. A source counts as verified only when you retrieved it
+yourself and read it, from a place you can name, and can state its central claim
+in your own words. In nb03 you ran that loop on a pile of AI-suggested citations
+and watched most of them fail to resolve. Here you run it on your own reading
+list.
 
-A map of claims is **not proof**. It shows what the field *asserts*, not what is
-*true*, and a source you never opened is not on the map at all. The point of
-drawing it is to *see* the shape of the conversation your question joins: where
-sources agree, where two of them genuinely contradict each other, and where the
-map goes quiet. That quiet spot, surrounded by sources you retrieved, is the only
-honest place to put a gap.
+A source you cannot retrieve stays out of the registry, and that is a finding,
+not a failure. Write it down as a dropped row with the search that failed. The
+absence of a source you were confidently told existed is information about the
+literature, and about the tool that offered it.
 
-At the Friday studio your map goes on a screen, the class circulates with
-sticky-note challenges, and you incorporate one challenge live. The map you leave
-with is the backbone M3 builds its research charter and MIDA declaration on.
+This registry is where the course's evidence rail becomes physical. Every
+citation you make for the rest of the semester traces back to a row you built
+here, all the way to the release audit at M11. Sources found later get
+registered here too, not appended informally to a draft.
 
 > **A question that often comes up here:** *"An AI tool gave me a
-> perfect-sounding source I can't find anywhere — do I list it?"* No, and this is
-> the whole lesson. A citation you cannot retrieve is either a **citation
-> hallucination** (invented whole) or a garbled version of a real source. Either
-> way it is not evidence. Log the search you ran, note that it failed
-> verification, and move on. Found → retrieved → read → claim stated: skip a
-> step and the source is not yet real.
+> perfect-sounding source I can't find anywhere — do I list it?"* Not as
+> evidence, and this is the whole lesson. A citation you cannot retrieve is
+> either a **citation hallucination** (invented whole) or a garbled version of a
+> real source. Either way it is not evidence yet. It belongs in your candidate
+> list marked *could not retrieve*, with the search you ran beside it. Found →
+> retrieved → read → claim stated: skip a step and the source is not yet real.
 
 ## Components
 

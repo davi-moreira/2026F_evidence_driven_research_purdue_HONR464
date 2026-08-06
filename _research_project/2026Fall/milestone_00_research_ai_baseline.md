@@ -27,19 +27,19 @@ Due: **Friday, August 28, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m00_research_ai_baseline.pdf`** *or* a shared Colab notebook link | The four-part baseline below: your three curiosities with one defended pick, your AI baseline (two things you assume AI is good at with the check for each, and two decisions you will not delegate), a screenshot of nb01's readiness checks, and your brainstorm exchange receipt from EDR\|AI ch. 1's "It is your turn" (the curiosity stretch; it becomes your AI Research Ledger's first row at M1). This is the graded artifact. |
+| 1 | **`lastname_m00_curiosity.pdf`** *or* a shared Colab notebook link | Your committed curiosity, dated as version zero with the reason for the version: the four lines you wrote by hand, your own two candidate directions plus the brainstormed ones with every NEW element marked and each candidate kept or rejected with its reason, the research problem you chose with its three scores and your red-team of it, your expected answer and the person a different answer would surprise, the four rails in the forms named below, your readiness screenshot, and your AI Research Ledger row. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 1** | The piece Book Milestone 1's checklist names, from ch. 1's "It is your turn": your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer — worked in the companion Colab notebook (share the link) or included in your artifact. Prompts marked *Optional depth* are not required. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.
 
 This is the smallest, warmest, lowest-stakes milestone of the whole chain, on
-purpose. Your pick is a version-zero commitment, not a contract: the book's
-milestones are dated versions, and later evidence can and will revise this one
-on the record. You are opening three doors, choosing the one you would walk
-through first, checking that your tools turn on, and installing the one habit
-the whole course runs on: use AI hard, then verify everything it hands you
-before you put your name on it.
+purpose. What you commit to is a version-zero commitment, not a contract: every
+milestone in this chain is a dated version, and later evidence can and will
+revise this one on the record. You are catching a curiosity before it
+evaporates, choosing one problem out of the several it could become, checking
+that your tools turn on, and installing the habit the whole course runs on. Use
+AI hard, then verify everything it hands you before you put your name on it.
 
 ---
 

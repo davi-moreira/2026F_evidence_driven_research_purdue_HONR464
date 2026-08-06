@@ -23,19 +23,21 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, October 9, 11:59 PM**. That Friday is a **pipeline clinic and
-abstract workshop**: you bring your running notebook, walk your first result and
-your AI-code verification record past your AI assistant's review, and clear the
-internal gate on your URC abstract before it can go out. You polish from the
-clinic notes and submit by the same-day deadline.
+Due: **Friday, October 9, 11:59 PM**. That Friday is Studio 7's milestone
+session, run as a **pipeline clinic and abstract workshop**: you bring your
+running notebook, restart it from empty in front of your own eyes, walk the
+verification record past your AI assistant's review, and clear the internal gate
+on your URC abstract before it can go out. You repair what the clinic exposes
+and submit by the same-day deadline.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **A shared Colab notebook link** *or* **`lastname_m06_first_analysis.ipynb`** | The pipeline notebook carrying the six-part deliverable below: the seeded pipeline itself, your first result with its uncertainty (labeled provisional), your AI-code verification record, your URC abstract draft, your AI Research Ledger rows, and your dossier line. If you prefer the written parts as a PDF, attach **`lastname_m06_first_analysis.pdf`** alongside; the notebook is still required. This is the graded artifact. |
+| 1 | **A shared Colab notebook link** *or* **`lastname_m06_first_analysis.ipynb`** | The nine-part deliverable below, carried in the notebook itself or in an optional companion **`lastname_m06_first_analysis.pdf`**: the seeded pipeline, your route-specific result with its uncertainty statement, the clean-restart record with your environment record, the claim-to-output trace, two independent re-derivations judged against a tolerance you declared first, the leakage audit with every flag settled, your gated URC abstract, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
-Set sharing so the instructor can open **and rerun** the notebook. Confirm the
-result in your write-up matches what the notebook prints when run top to bottom.
+Set sharing so the instructor can open **and rerun** the notebook. The rerun is
+part of the milestone: confirm the result in your write-up matches what the
+notebook prints from a fresh runtime, top to bottom, before you submit.
 
 ---
 
