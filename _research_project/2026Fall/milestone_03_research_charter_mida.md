@@ -1,7 +1,7 @@
 # Course milestone M3 — Research Contract v0 and Permission Determination
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M3**.
+> **Book Milestone bridge** — course milestone **M3**.
 > This submission presents **Book Milestone 4 — Your research contract, v0** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone04-declare-and-diagnose.html#milestone).
 <!-- book-milestone-bridge:end -->
 

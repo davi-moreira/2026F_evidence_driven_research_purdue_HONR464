@@ -233,12 +233,21 @@ rows:
     assignments:
       - {lesson: replication-reproduction,  requirement: required,       purpose: first-read,  primary_lab: true,   home_anchor: true}
       - {lesson: research-packages,         requirement: required,       purpose: first-read,  primary_lab: true,   home_anchor: true}
+      - {lesson: research-posters,            requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: poster-criticism,            requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: research-pitches,            requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: difficult-questions,         requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
     station_events:
       - {station: reproduce-and-package, event: checkpoint, checkpoint: package-v1, at: milestone-submission}
+      - {station: adapt-and-defend, event: revisit, checkpoint: defense-ready-v1, at: milestone-submission}
+        # the lock is a materially later version of the Studio 10 artifact: it goes
+        # to print, so it gets a bridge instead of changing silently
       - {station: release-next-cycle, event: introduce, at: reading-due}
     book_milestones:
       - {station: reproduce-and-package, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [replication-reproduction, research-packages]}
+      - {station: adapt-and-defend, relationship: revisit, version_label: "version 2 - the locked print edition",
+         contribution_refs: [research-posters, poster-criticism, research-pitches, difficult-questions]}
     supporting_gate_milestones:
       - {station: reproduce-and-package, use: author-self-reproduction-before-poster-lock}
       - {station: release-next-cycle, use: release-preflight-before-poster-lock}
@@ -281,14 +290,19 @@ rows:
       - {lesson: poster-criticism,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
       - {lesson: research-pitches,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
       - {lesson: difficult-questions,       requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: managing-ai-agents,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: conflicting-agents,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: final-portfolio,             requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
     station_events:
       - {station: adapt-and-defend, event: revisit, checkpoint: defense-ready-v1, at: milestone-submission}
-      - {station: release-next-cycle, event: practice, at: studio}
+      - {station: release-next-cycle, event: revisit, checkpoint: release-audit-v1, at: milestone-submission}
+        # the audit decided to release at M11; here the release EXECUTES, and what
+        # public exposure returns is recorded as its next version
     book_milestones:
-      - {station: adapt-and-defend, relationship: revisit, version_label: "version 2 - publicly presented edition",
+      - {station: adapt-and-defend, relationship: revisit, version_label: "version 3 - the publicly presented edition",
          contribution_refs: [research-posters, poster-criticism, research-pitches, difficult-questions]}
-      - {station: release-next-cycle, relationship: practice, version_label: "the release event itself, with its post-release notes",
-         contribution_refs: [final-portfolio]}
+      - {station: release-next-cycle, relationship: revisit, version_label: "version 2 - released, with what the public test returned",
+         contribution_refs: [managing-ai-agents, conflicting-agents, final-portfolio]}
 
   - milestone: M13
     nb: nb14
@@ -337,5 +351,5 @@ rows:
     station_events:
       - {station: release-next-cycle, event: revisit, checkpoint: release-audit-v1, at: milestone-submission}
     book_milestones:
-      - {station: release-next-cycle, relationship: revisit, version_label: "version 2 - the final release, dossier, and portfolio",
+      - {station: release-next-cycle, relationship: revisit, version_label: "version 3 - the final release, dossier, and portfolio",
          contribution_refs: [managing-ai-agents, conflicting-agents, final-portfolio]}

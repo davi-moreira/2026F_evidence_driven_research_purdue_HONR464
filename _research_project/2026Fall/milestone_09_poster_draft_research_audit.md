@@ -1,7 +1,7 @@
 # Course milestone M9 — Venue Contract and the Publication-Ready Artifact
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M9**.
+> **Book Milestone bridge** — course milestone **M9**.
 > This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 <!-- book-milestone-bridge:end -->
 

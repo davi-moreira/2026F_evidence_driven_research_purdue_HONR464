@@ -1,7 +1,7 @@
 # Course milestone M2 — Verified Evidence and Contribution Map
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M2**.
+> **Book Milestone bridge** — course milestone **M2**.
 > This submission presents **Book Milestone 3 — Your evidence base** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone03-ground-in-evidence.html#milestone).
 <!-- book-milestone-bridge:end -->
 

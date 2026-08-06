@@ -1,7 +1,7 @@
 # Course milestone M4 — Pathway Declaration and Mandated Contrast
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M4**.
+> **Book Milestone bridge** — course milestone **M4**.
 > This submission presents **Book Milestone 5 — Your pathway, declared** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone05-develop-the-pathway.html#milestone).
 > **Route-conditional reading:** complete YOUR declared route's chapter plus the instructor-assigned contrast; the other route chapters are jigsaw material, and the hybrid/complex overlay applies only when your design has stages.
 <!-- book-milestone-bridge:end -->

@@ -1,7 +1,7 @@
 # Course milestone M0 — Curiosity Committed and the Research Problem
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M0**.
+> **Book Milestone bridge** — course milestone **M0**.
 > This submission presents **Book Milestone 1 — Your curiosity, committed** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone01-frame-the-inquiry.html#milestone).
 <!-- book-milestone-bridge:end -->
 

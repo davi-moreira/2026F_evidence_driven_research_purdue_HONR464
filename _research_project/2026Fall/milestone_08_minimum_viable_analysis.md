@@ -1,7 +1,7 @@
 # Course milestone M8 — Bounded Research Note and Claim-Evidence Table
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M8**.
+> **Book Milestone bridge** — course milestone **M8**.
 > This submission presents **Book Milestone 9 — Your bounded claims** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html#milestone).
 <!-- book-milestone-bridge:end -->
 

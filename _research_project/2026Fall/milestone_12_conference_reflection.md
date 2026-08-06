@@ -1,10 +1,11 @@
 # Course milestone M12 — Conference Reflection and Defense Revision
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M12**.
-> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (version 2 - publicly presented edition): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
+> **Book Milestone bridge** — course milestone **M12**.
+> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (version 3 - the publicly presented edition): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 > It is a *revisit*: the next version of an artifact whose first version already exists.
-> This submission presents **Book Milestone 12 — Your release and next cycle** (the release event itself, with its post-release notes): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html#milestone).
+> This submission presents **Book Milestone 12 — Your release and next cycle** (version 2 - released, with what the public test returned): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html#milestone).
+> It is a *revisit*: the next version of an artifact whose first version already exists.
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project

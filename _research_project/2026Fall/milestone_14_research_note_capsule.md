@@ -1,7 +1,7 @@
 # Course milestone M14 — Research Note v1 and Reusable Package
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M14**.
+> **Book Milestone bridge** — course milestone **M14**.
 > This submission presents **Book Milestone 9 — Your bounded claims** (version 2 - the research note after public criticism): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone09-write-bound-disclose.html#milestone).
 > It is a *revisit*: the next version of an artifact whose first version already exists.
 > This submission presents **Book Milestone 11 — Your reproducible package** (version 2 - the package repaired against the cold run): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html#milestone).

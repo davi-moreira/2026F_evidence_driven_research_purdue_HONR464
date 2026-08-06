@@ -2227,6 +2227,15 @@ assessment weights, notebook slugs and filenames, course milestone ids
 M0–M15, lesson and station ids, and every book URL. Display titles and
 artifact specs change; identifiers never do.
 
+**Merged from the partner run (adopted).** The independent Codex design
+converged on the same week↔Studio map, which is itself evidence the
+mapping is right, and caught one real gap: the poster lock and the Expo
+each change a book artifact materially, so both now carry bridges instead
+of changing it silently. Book Milestone 10 runs v1 (artifact ready, M9) →
+v2 (the locked print edition, M10) → v3 (publicly presented, M12), and
+Book Milestone 12 runs v1 (the release decision, M11) → v2 (released, with
+what the public test returned, M12) → v3 (the final release, M15).
+
 **Process.** Built through the two-role Codex loop plus multi-agent
 orchestration: a mirror-mode Codex design partner ran the same assignment
 independently while a 16-agent workflow wrote one teaching spec per week

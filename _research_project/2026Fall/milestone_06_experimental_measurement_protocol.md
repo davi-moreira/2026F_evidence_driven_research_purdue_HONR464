@@ -1,7 +1,7 @@
 # Course milestone M6 — First Reproducible Analysis (+ URC Abstract Internal Gate)
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M6**.
+> **Book Milestone bridge** — course milestone **M6**.
 > This submission presents **Book Milestone 7 — Your first reproducible analysis** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone07-first-analysis.html#milestone).
 <!-- book-milestone-bridge:end -->
 

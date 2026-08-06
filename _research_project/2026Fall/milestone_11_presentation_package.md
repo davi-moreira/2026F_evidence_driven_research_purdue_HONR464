@@ -1,7 +1,7 @@
 # Course milestone M11 — Release Audit and Next-Cycle Agenda
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M11**.
+> **Book Milestone bridge** — course milestone **M11**.
 > This submission presents **Book Milestone 12 — Your release and next cycle** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html#milestone).
 <!-- book-milestone-bridge:end -->
 

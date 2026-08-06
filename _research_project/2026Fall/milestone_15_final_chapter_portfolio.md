@@ -1,8 +1,8 @@
 # Course milestone M15 — Final Research Chapter, Defense, and AI-Management Portfolio
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M15**.
-> This submission presents **Book Milestone 12 — Your release and next cycle** (version 2 - the final release, dossier, and portfolio): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html#milestone).
+> **Book Milestone bridge** — course milestone **M15**.
+> This submission presents **Book Milestone 12 — Your release and next cycle** (version 3 - the final release, dossier, and portfolio): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone12-release-next-cycle.html#milestone).
 > It is a *revisit*: the next version of an artifact whose first version already exists.
 <!-- book-milestone-bridge:end -->
 

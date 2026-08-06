@@ -1,8 +1,10 @@
 # Course milestone M10 — Reproducible Package and the Final Poster Lock
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M10**.
+> **Book Milestone bridge** — course milestone **M10**.
 > This submission presents **Book Milestone 11 — Your reproducible package** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone11-reproduce-and-package.html#milestone).
+> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (version 2 - the locked print edition): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
+> It is a *revisit*: the next version of an artifact whose first version already exists.
 > **Gate work (no artifact presented):** Book Milestone 11 — Your reproducible package (author self reproduction before poster lock).
 > **Gate work (no artifact presented):** Book Milestone 12 — Your release and next cycle (release preflight before poster lock).
 <!-- book-milestone-bridge:end -->

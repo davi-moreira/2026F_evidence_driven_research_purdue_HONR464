@@ -70,7 +70,7 @@ def station_info() -> dict[str, dict]:
 
 
 def bridge_block(row: dict, stations: dict[str, dict]) -> str:
-    """The D41 naming-bridge projection for one course milestone.
+    """The naming-bridge projection for one course milestone (D40/D41; D49 mapping).
 
     Line discipline: no line may start with '- Ch. ' and no line may contain
     the string 'EDR' — both are anchor-surface parse tokens in
@@ -78,7 +78,7 @@ def bridge_block(row: dict, stations: dict[str, dict]) -> str:
     """
     mi = row["milestone"]
     lines = [BRIDGE_BEGIN,
-             f"> **Book Milestone bridge (D41)** — course milestone **{mi}**."]
+             f"> **Book Milestone bridge** — course milestone **{mi}**."]
     for b in row.get("book_milestones", []):
         st = stations[b["station"]]
         page = (f"{SITE}/book/studios/"

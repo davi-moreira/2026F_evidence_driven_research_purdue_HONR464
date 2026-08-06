@@ -1,7 +1,7 @@
 # Course milestone M7 — Robustness Audit
 
 <!-- book-milestone-bridge:begin -->
-> **Book Milestone bridge (D41)** — course milestone **M7**.
+> **Book Milestone bridge** — course milestone **M7**.
 > This submission presents **Book Milestone 8 — Your robustness audit** (version 1): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone08-stress-test.html#milestone).
 <!-- book-milestone-bridge:end -->
 
