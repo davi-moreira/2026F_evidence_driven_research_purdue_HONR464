@@ -182,3 +182,5 @@ If Davi wants the chapter to name and cite frameworks — which would strengthen
 it — the sources must be retrieved and read first. The partner transcript with
 its quotes and URLs is at
 `_adm/codex_collab/2026-07-31_ethics-lesson/partner_raw.txt`.
+
+**Review round (2026-08-05).** Codex reviewed the D48 pass: 12 findings applied (see DECISIONS D48 review round). New EN-only items to replay in PT/ES beyond item 20 above: the corrected MIDA figure row labels ("what you want to learn" / "how you will learn it" — PT/ES strings already in the figure script), the redrawn sampling figure with undercoverage / overcoverage / duplicate (PT/ES strings also in the script), ch11's three coverage terms, ch5's audience-level surprise framing, ch10's corrected RDSS subtitle, ch27's WCAG web-scope qualification, Studio 5's route-table credit, and the ch9/ch10/ch16 "It is your turn" credit sentences.
