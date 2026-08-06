@@ -1,4 +1,4 @@
-# Course milestone M7 — Clean-Restart Verified Analysis
+# Course milestone M7 — Robustness Audit
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M7**.
@@ -24,17 +24,19 @@ instructions and rubrics live one page per milestone, like this one.
 ## What to Submit on Brightspace
 
 Due: **Friday, October 16, 11:59 PM** (you work on it at that Friday's studio).
-That studio is a **clean-restart verification exchange**: you rerun your
-pipeline in a fresh runtime, chase every number that moved, and run the
-required **Prediction & Leakage Auditor** before you submit.
+October break shortens this week to one lecture and the studio, so the audit is
+planned before it is run. That studio is Studio 8's milestone session, an
+**audit walkthrough and adjudication round**: you present your pre-list, show
+what survived, and defend every reviewer flag you confirmed or refuted.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **A shared Colab notebook link** *(the verified pipeline notebook)* | The seven-part record below, carried in the notebook's markdown or in an optional companion **`lastname_m07_verified_analysis.pdf`**: your clean-restart record, your claim-to-output trace, the reproduced uncertainty, two independent re-derivations, the leakage audit with the auditor's flags and your written fixes, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
+| 1 | **A shared Colab notebook link** *or* **`lastname_m07_audit.ipynb`** | The eight-part audit record below, carried in the notebook itself or in an optional companion **`lastname_m07_audit.pdf`**: your dated pre-list of three checks with the attack each one answers, the run and what survived, your licensed null check, your reworded claim with its range and compass boundary, the verified AI-review trail, the one limitation no check could fix, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 24, ch. 25, ch. 26, ch. 27** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
-Set sharing so the instructor can open **and rerun** the notebook. The rerun is
-the milestone: confirm it reproduces before you submit.
+Set sharing so the instructor can open **and rerun** the notebook. Every check
+you report has to run from it, so confirm the audit reproduces before you
+submit.
 
 ---
 
@@ -61,125 +63,189 @@ Dossier.
 
 ## Purpose
 
-At M6 your declared analysis became a pipeline and produced its first number.
-The declaring came first for a reason: your route's precommitments fixed (for prediction routes: target, baseline, and metric; for the other routes: estimand, estimator, and uncertainty form) and a
-metric chosen before any score could flatter you is the only method a reader
-has to trust. Your pipeline kept that pre-commitment. This week decides whether
-its output deserves the word **verified**: a result that survives checks you
-did not design it to pass.
+At M6 your declared analysis became a pipeline, produced a number, and survived
+a clean restart. That makes the number reproducible. It does not yet make it
+true. A result you have not tried to break is a result you do not yet know, and
+this week you attack your own finding the way a hostile reviewer would.
 
-The central move is the **clean restart**: a rerun from a fresh runtime, with
-all memory cleared, using Restart & Run All from the top. It matters because
-notebooks accumulate **hidden state** — values left in memory by cells you
-edited or ran out of order, silently feeding later results. You rename a
-column, but the old one still lives in memory; every cell below keeps working,
-and every number below may be wrong. A notebook that ran once is a draft. A
-notebook that runs from nothing is evidence.
+The artifact is your **robustness audit**: the record of what you tried to break,
+what held, and what you still cannot rule out. Its spine has four parts, and
+their order is the point.
 
-Verification here is five checks, not one. The restart must match. Every claim
-must trace to its cell. The uncertainty itself must reproduce. One key number
-must survive two independent re-derivations. And a required auditor must find no
-leak and no unlicensed generalization in what you plan to say. If any number
-moves on the restart, the pipeline is the finding: you explain and fix every
-discrepancy before any claim goes forward.
+1. **The pre-list.** Three checks written down before you look at any of their
+   results, each one named with the reviewer attack it answers.
+2. **What survived.** The checks run and all of them reported, with your claim
+   reworded to carry its range and its compass boundary.
+3. **The verified AI-review trail.** Every flag an adversarial reviewer raised,
+   confirmed or refuted by a check in your own data, including the loudest wrong
+   flag it gave you.
+4. **The remaining limitation.** The one weakness no check could fix, written by
+   you before a reader finds it.
 
-> **A question that often comes up here:** *"My numbers matched on the first
-> restart. Am I done?"* A match is the entry ticket, not the milestone. A
-> pipeline can reproduce a wrong number perfectly, run after run. The
-> claim-to-output trace catches the number you misquoted, the re-derivation
-> catches the bug both runs shared, and the leakage audit catches the sentence
-> that quietly claims more than the pipeline computed. All five checks together
-> are what "verified" means here.
+The pre-list comes first because a check invented after a disappointing result
+is not a check. It is a search. **Pre-listing** means committing to your checks
+and to reporting all of them, whichever way they come out, and dating that
+commitment. A grid that shows only the runs that agreed with you tells a reader
+nothing except that you were selective.
+
+October break shortens this week, so the planning matters more than usual. You
+write the pre-list before the studio, and the studio is where the checks meet
+the reviewer and your claim gets rewritten to fit what actually survived.
+
+> **A question that often comes up here:** *"All three of my checks agreed with
+> the original result. Isn't that the answer?"* It is a good sign and a narrow
+> one. Checks can only find the errors they were built to find, and three
+> versions of one flawed comparison will lean the same way together. Agreement
+> across your grid tells you the result is stable under the choices you listed.
+> It cannot see a mistake all of them share, which is why the remaining
+> limitation is a required part of the artifact rather than a confession.
 
 ## Components
 
-### 1. The clean-restart record
+### 1. The pre-list: three checks, written before you look
 
-Restart your runtime so memory is empty, then Restart & Run All. Record three
-things: the environment you ran in (one cell that prints your Python and
-library versions), the headline numbers before and after, and the verdict. If
-the numbers match, say so, to the digit you report. If any number moves,
-explain the discrepancy, fix its cause, and restart again until the pipeline is
-stable. "Close enough" is not a category. A moved digit has a cause: hidden
-state, an out-of-order cell, or an unseeded draw. Finding it is a real result
-about your own evidence machine.
+Write down three checks before you run any of them, and date the list. For each
+one, record two things in the same row: the check itself, and the **reviewer
+attack** it answers, meaning the specific objection a skeptical reader would
+raise about your result. A check with no attack behind it is decoration.
 
-### 2. The claim-to-output trace
+Pick checks that turn a real handle on your analysis. The **sample** is which
+data you keep, for example dropping the largest category and rerunning. The
+**measurement** is how a concept becomes a number, for example swapping one
+defensible index for another. The **specification** is the bundle of modeling
+choices behind the estimate, for example changing a cutoff or a control.
 
-Build the **claim-to-output trace**: a table pointing every number you plan to
-report to the specific cell that produces it. One row per number: the sentence
-it appears in, the number, the cell. This is what lets a reader (and a future
-you) audit your writing against your code in minutes. A figure with no cell
-behind it is an **untraceable number**, and it caps your Verification score.
+Two rules bind the list. You commit to reporting all three results, including
+the ones that hurt. And no check may define its comparison group by something
+your treatment or exposure could itself have changed; that comparison may be
+worth reporting, in its own place, clearly labeled for what it is.
 
-### 3. The uncertainty, verified
+### 2. The run, and what survived
 
-The interval must reproduce, not just the point estimate. Rerun from the clean
-start and confirm that the uncertainty statement your Contract specified (the
-interval, spread, or standard error) comes back to the same values. If your
-interval comes from resampling or simulation, the seed (`SEED = 464`) is what
-makes that possible. A result whose uncertainty does not reproduce is not
-verified, and a result without uncertainty is not yet a result.
+Run all three and report every one, as **direction and size** together. Direction
+is which way the number moved; size is how far. "The gap stayed positive and
+ranged from 4.1 to 6.8 points" is a report. "Robust" is not.
 
-### 4. Two independent re-derivations
+Three guard-rails govern how you read the grid.
 
-Do this for TWO key numbers, not one — the week's notebook and the
-studio both practice the pair.
+- **A same-sign spread is a direction plus a range, never an uncertainty
+  interval.** The **specification spread** is the span your answer covered
+  across the versions you ran, and it measures your choices, not chance. Each
+  version still carries its own sampling uncertainty from M6, and the spread is
+  not a substitute for it. Report both, and never write the spread with the
+  words that belong to an interval.
+- **Compare only what is comparable.** Results belong in the same panel when
+  they are measured in the same units, about the same group, for the same kind
+  of quantity. A check that changes who is counted or what the outcome means
+  gets its own labeled panel, and you report a span within a panel, never across
+  panels.
+- **A complete-case contrast is never "the effect among stayers."** A
+  **complete-case contrast** is what you get when you compare only the units
+  with complete data, after some dropped out or went missing. Whoever remains is
+  a group selected by whatever caused the missingness, so the contrast is not
+  the effect for the people who stayed and not the effect for everyone you
+  started with. Report it as what it is: a comparison among complete cases, with
+  the missingness described.
 
-Recompute one key number by a route that shares none of the original code: by
-hand from a small table, with a different library, or from the raw definition
-in a fresh cell. That is an **independent re-derivation** — the same number
-reached twice by unrelated paths. For example, recompute your pipeline's
-difference in means from two group averages you calculate with plain
-arithmetic. If the routes agree, your belief in the number no longer rests on
-one script. If they disagree, you just found the bug this milestone exists to
-catch, and the fix goes in the clean-restart record.
+### 3. The null check your design licenses
 
-### 5. The leakage audit (required reviewer role)
+Run one **negative test**, a check that runs your exact analysis where the true
+answer has to be zero. For example, run the same comparison in a period before
+your cause could have acted, or with the group labels replaced by a coin flip.
+Write the prediction before the run: what you expect to see if your pipeline is
+clean.
 
-Submit your verified draft to the **Prediction & Leakage Auditor** (the
-required GenAI Studio reviewer role for M7; full briefing in
-`genai_studio/roles/prediction_leakage_auditor.md`). Its focus depends on your
-route.
+Read the result against the **null reference spread**, the range of readings
+your own procedure produces when nothing is happening. The true answer is zero;
+your sample will almost never return exactly zero, because samples wobble. A
+clean pass is a reading that sits comfortably inside that spread. What should
+worry you is a reading far outside it, big enough that ordinary wobble is a
+strained explanation. Demand exact zeros and you will fail healthy machinery, or
+worse, tinker until the readout prints 0.00 and call the tinkering a fix.
 
-- **If your route predicts**, the auditor hunts **data leakage**: a feature
-  whose value is only settled at or after the outcome it is supposed to
-  predict. Settle each flag with two checks in your own pipeline — the **timing
-  check** (is the feature's value known before the prediction moment?) and the
-  **correlation check** (does the feature track the outcome so tightly it is
-  almost a copy of the answer?). A feature that fails the timing check is
-  dropped or re-timed, no matter how much it helps the score.
-- **For every other route**, the auditor's focus is your language: it hunts any
-  **out-of-sample or generalization claim** — a sentence that quietly extends
-  your result to units, times, or populations your design never reached. Every
-  flagged sentence gets bounded or cut.
+Name the test correctly, too. A placebo test replaces the real cause with one
+that cannot act. A falsification test checks a consequence that must be false if
+your explanation is right. A negative control points your machinery at an
+outcome your cause could not touch. State which one you ran, and state the
+assumption it rests on.
 
-For every flag, write your fix or your refutation, each settled by a check in
-your own pipeline. The auditor can miss a real leak and invent a false one; its
-flags are hypotheses to test, never verdicts.
+### 4. The reworded claim, with its range and its boundary
 
-### 6. AI Research Ledger rows
+Rewrite your headline claim so it carries what the audit found. Two things must
+appear in the sentence.
 
-Every use of AI in this verification gets a row in your **AI Research Ledger**
-(the eight-field table: task delegated · tool used · prompt · output summary ·
+- **The range.** Not the single best number, but the span it held across your
+  pre-listed checks, with its uncertainty reported alongside and labeled as the
+  separate thing it is.
+- **The compass boundary.** Name your claim's **kind**, meaning descriptive or
+  causal, and its **reach**, meaning the data at hand, a population, or unseen
+  cases. Then say what the audit does not license. For example: "Among the units
+  in this sample, the difference ranged from 4.1 to 6.8 points across the three
+  checks; this is a descriptive comparison for the data at hand, and it does not
+  license a causal reading or a claim about units outside the sample."
+
+A claim that gets narrower after an audit is a claim that got better. Narrowing
+it now is cheaper than defending it later.
+
+### 5. The verified AI-review trail (required reviewer role)
+
+Commission an adversarial review from the **Robustness & Sensitivity Reviewer**,
+the required GenAI Studio reviewer role for this milestone (full briefing in
+`genai_studio/roles/robustness_sensitivity_reviewer.md`). Give it your result,
+your checks, and your claim, and ask what would break them. Add a peer reviewer
+at the studio when one is available; a second human attack finds different
+things than a model does.
+
+Neither review is independent verification. An AI reviewer is another critique,
+and a confident critique is still just a critique. So every flag gets settled
+**by a data check in your own pipeline**, and your trail records four fields per
+flag: the flag as raised, the check you ran, the output that check produced, and
+your verdict of confirmed or refuted.
+
+Name the **loudest wrong flag**: the objection the reviewer stated most
+confidently that your data refuted. Keep it in the record. It is the cheapest
+lesson available about the tool you will use again next week, and it is the
+reason confidence never counts as evidence here.
+
+### 6. The confidence audit and the one remaining limitation
+
+Close the audit with an honest account of where your belief actually comes from.
+Write two short lists and one sentence.
+
+- **The not-yet-recomputed list.** Every number in your artifact that you have
+  not recomputed yourself, by hand or by an independent route. Naming them is
+  the point; you are not required to have finished them all.
+- **The source of your confidence in the headline number.** Your own
+  recomputation, a tool's fluent summary, or the fact that it matched what you
+  hoped for. Only the first one counts as a reason, and saying so plainly is
+  part of the grade.
+- **The one limitation no check could fix.** One weakness your audit could not
+  reach, stated in one sentence, with what it would take to address it. A
+  limitation you volunteer is a boundary. The same limitation found by a reader
+  is a hole.
+
+### 7. AI Research Ledger rows
+
+Every use of AI in this audit gets a row in your **AI Research Ledger** (the
+eight-field table: task delegated · tool used · prompt · output summary ·
 decision · verification method · remaining concern · responsible researcher).
-Writing the environment-record cell, proposing re-derivation routes, and
-running the Prediction & Leakage Auditor are all delegable tasks, and each one
-you delegated needs a row naming how you verified the result. "No AI used" is a
-legitimate entry if it is true.
+Proposing candidate checks, writing the code for a robustness run, running the
+Robustness & Sensitivity Reviewer, and drafting the reworded claim are all
+delegable tasks, and each one you delegated needs a row naming how you verified
+the result. "No AI used" is a legitimate entry if it is true.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 7. The dossier update line and the version line
+### 8. The dossier update line and the version line
 
-Open the artifact with its version line: **Book Milestone 7, version 2
-(clean-restart verified)**, dated, with the reason: what changed since version
-1, and why. Then end with one line recording what this milestone finalizes in
-your **Research Project Dossier**: the **reproducible Colab notebook**
-component now exists, verified rather than merely executable, together with its
-claim-to-output trace. Name the file or section where each now lives.
+Open the artifact with its version line: **Book Milestone 8, version 1
+(robustness audit)**, dated, with the reason: what the audit changed about your
+claim, and why. Then end with one line recording what this milestone finalizes
+in your **Research Project Dossier**: the robustness and diagnostic record now
+exists, together with the reworded claim it licenses and the limitation it could
+not remove. Name the file or section where each now lives.
 
 ---
 
@@ -190,17 +256,21 @@ pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Clean-restart record** | Fresh runtime; Restart & Run All; environment recorded; numbers match to the digit reported, or every discrepancy explained and fixed |
-| **Claim-to-output trace** | Every number you plan to report pointed to the cell that produces it |
-| **Uncertainty** | The interval itself reproduces from the clean start, seeded (`SEED = 464`) |
-| **Re-derivation** | One key number recomputed by an independent route; the agreement, or the bug it exposed, reported |
-| **Leakage audit** | Prediction & Leakage Auditor run; every flag fixed or refuted by a check in your own pipeline |
-| **Version line** | Book Milestone 7, version 2, dated, with a reason a reader could reconstruct |
+| **Pre-list** | Three checks written and dated before any of them ran, each paired with the reviewer attack it answers |
+| **Full reporting** | All three results reported, including the ones that hurt; anything added later labeled exploratory |
+| **Direction and size** | Every check reported as which way the number moved and by how much, within commensurable panels |
+| **Spread discipline** | The specification spread reported as a direction plus a range, never as an uncertainty interval |
+| **Complete-case honesty** | Any comparison restricted to complete cases labeled as such, with the missingness described, never as the effect among those who stayed |
+| **Null check** | One negative test, named correctly, with the prediction written before the run and the result read against the null reference spread |
+| **Reworded claim** | The headline claim carrying its range, its uncertainty, its kind and reach, and what the audit does not license |
+| **AI-review trail** | Robustness & Sensitivity Reviewer run; every flag settled by a data check with its output; the loudest wrong flag named |
+| **Confidence audit** | The not-yet-recomputed list, the source of your belief in the headline number, and the one limitation no check could fix |
+| **Version line** | Book Milestone 8, version 1, dated, with a reason a reader could reconstruct |
 | **Permission status** | Your permission determination is still authorized; blocked work does not proceed |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
-| **Dossier line** | The verified reproducible notebook and its trace located by file or section |
-| **Studio work** | Worked at the Friday studio (Oct 16) with your AI assistant; required auditor review logged; submitted the same day |
-| **Filename** | A shared Colab link (required); optional `lastname_m07_verified_analysis.pdf` companion |
+| **Dossier line** | The audit record and the reworded claim located by file or section |
+| **Studio work** | Worked at the Friday studio (Oct 16) with your AI assistant; required reviewer role logged; submitted the same day |
+| **Filename** | A shared Colab link or `lastname_m07_audit.ipynb`; optional `lastname_m07_audit.pdf` companion |
 | **Location** | Brightspace → Assignments → M07 |
 
 ---
@@ -210,24 +280,24 @@ pre-submission checklist.
 Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
 criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
-`first-analysis-v1`, version 2).
+`robustness-audit-v1`).
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass & pathway alignment** (15) | The verified result still answers the declared question in the declared form; no out-of-sample or generalization language survives past the route's licence (13–15) | Aligned; one boundary sentence loose (10–12) | The result drifts from the declared form, or one flagged generalization is left unbounded (5–9) | The claim answers a different question than the project declared, or keeps a generalization the audit flagged (0–4) |
-| **Evidence integrity & provenance** (20) | Every reported number traces to its cell; the environment and data source are recorded; a reader can follow every figure to its origin (18–20) | Traceable; one trace row or the environment record thin (14–17) | A reported figure whose cell takes real effort to locate, or an incomplete trace (8–13) | A number with no path back to the notebook, or a source that does not exist (0–7) |
-| **Verification** (30) | The clean restart is run and recorded; every discrepancy explained and fixed; both re-derivations are genuinely independent; every auditor flag settled by a named check; every AI-assisted step ledgered with a non-vague verification (27–30) | All five checks present; one recorded loosely (21–26) | A restart claimed but not recorded, a re-derivation that reuses the original code, or a flag answered without a check (14–20) | No clean restart, a discrepancy left unexplained, or an auditor flag pasted in or dismissed unverified (0–13) |
-| **Uncertainty & claim boundary** (20) | The interval reproduces and is read correctly; the result is never worded as settled certainty; the claim stops where the evidence stops (18–20) | Interval reproduces; one reading or boundary sentence loose (14–17) | Only the point estimate verified, or uncertainty reported but never read (8–13) | No uncertainty, or a verified point estimate narrated as a certain finding (0–7) |
+| **Compass & pathway alignment** (15) | Every check tests the same substantive claim; panels are commensurable; the reworded claim names its kind and reach and stops there (13–15) | Aligned; one panel or boundary sentence loose (10–12) | A check that answers a different question is folded in, or the reworded claim drifts past the route (5–9) | The audit tests something other than the declared claim, or the claim keeps a reach the design never had (0–4) |
+| **Evidence integrity & full reporting** (20) | The pre-list is dated before the runs; all three results reported, including the unfavorable ones; every reported figure traces to its output (18–20) | Complete; one trace row or one date thin (14–17) | A result omitted, or a check added later and presented as pre-listed without a label (8–13) | Selective reporting, a fabricated source, or a post-hoc check reported as pre-listed (0–7) |
+| **Verification & adjudication** (30) | Every reviewer flag settled by a data check with its output shown; confirmed and refuted flags both present; the loudest wrong flag named; the null check run with its prediction written first; every AI-assisted step ledgered with a non-vague verification (27–30) | All flags settled; one check or one prediction recorded loosely (21–26) | A flag answered by argument rather than by a check, or a null check run without a prior prediction (14–20) | Reviewer flags pasted in or dismissed unverified, or no null check at all (0–13) |
+| **Uncertainty & claim boundary** (20) | The spread is reported as a direction plus a range and never as an interval; the negative test is read against the null reference spread; any complete-case contrast is labeled honestly; the remaining limitation is named (18–20) | Present; one of the three guard-rails stated loosely (14–17) | The spread and the uncertainty blurred together, or the negative test judged against exact zero (8–13) | The spread sold as an uncertainty interval, a complete-case contrast reported as the effect among stayers, or no limitation at all (0–7) |
 | **Craft, ledger & communication** (15) | Versioned with its reason, on-format, on-time, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; ledger complete (10–12) | Missing pieces or a rushed record (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
-- A **fabricated or unretrievable source** caps *Evidence integrity &
-  provenance* at Beginning.
-- An **untraceable number** — a reported figure with no path back to your
-  notebook — caps *Verification* at Beginning.
-- A **non-reproducing result** — a headline number or interval that does not
-  rerun from a fresh runtime — caps *Verification* at Beginning.
+- A **fabricated or unretrievable source** caps *Evidence integrity & full
+  reporting* at Beginning.
+- A **post-hoc check reported as pre-listed**, or a check you ran and did not
+  report, caps *Evidence integrity & full reporting* at Beginning.
+- A **specification spread presented as an uncertainty interval** caps
+  *Uncertainty & claim boundary* at Beginning.
 - A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
   **0** and the submission is **returned** unread until it is supplied.
 
@@ -238,33 +308,44 @@ days of feedback recovers up to half the lost points.
 
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
-- Any dataset, feature, or source you cite that turns out not to exist or not
-  to be what you claim: *Evidence integrity & provenance* scores Beginning
+- Any dataset, result, or source you cite that turns out not to exist or not to
+  be what you claim: *Evidence integrity & full reporting* scores Beginning
   regardless of the rest — the course's evidence-integrity rule with teeth.
-- A headline number or interval that does not rerun from a fresh runtime:
-  *Verification* scores Beginning — a number you cannot regenerate is not
-  evidence.
+- A check you ran and did not report, or one added after a disappointing result
+  and presented as pre-listed: *Evidence integrity & full reporting* scores
+  Beginning — selective reporting is the failure this milestone exists to
+  prevent.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 
 ## Common Pitfalls
 
-1. **The restart that never happened.** Trusting the in-session numbers because
-   the notebook "just ran." Hidden state — an edited cell, an out-of-order run,
-   an unseeded draw — can keep a wrong number alive for weeks. Restart from a
-   clean runtime, run everything, and record what printed.
-2. **The discrepancy waved past.** A number moves on the restart and you call
-   it "close enough." Every moved digit has a cause, and until you find it you
-   do not know which of the two numbers is yours. Explain it, fix it, and
-   restart again; if the numbers move, the pipeline is the finding.
-3. **The auditor treated as a verdict, or as noise.** Pasting the auditor's
-   flags into your record unexamined, or dismissing them unexamined, are the
-   same mistake. Each flag is a hypothesis; only a timing check, a correlation
-   check, or a boundary rewrite in your own pipeline settles it.
+1. **The check invented after the result.** Running versions until one looks
+   reassuring, then presenting that set as the plan. Dates are what separate an
+   audit from a search. Write and date the three checks first, report all three,
+   and label anything you add afterwards as exploratory.
+2. **The spread sold as an interval.** Writing "the effect is between 4.1 and
+   6.8 points" when that span came from your analysis choices. The spread says
+   how much your decisions moved the number; the uncertainty says how much
+   chance could. Report them as two different quantities, because they answer
+   two different questions.
+3. **The negative test judged against exact zero.** Declaring a clean pipeline
+   because a placebo returned 0.03, or condemning it because one returned 0.4,
+   with no idea what your own procedure produces when nothing is happening.
+   Build the null reference spread first, then read the reading against it.
+4. **The dropped rows renamed as a finding.** Reporting a complete-case contrast
+   as "the effect among the people who stayed." Whoever stayed was selected by
+   whatever caused the missingness, so that sentence names a group you did not
+   choose and cannot describe. Label the contrast for what it is and describe
+   the missingness.
+5. **The flag settled by tone.** Accepting a reviewer's objection because it
+   sounded certain, or dropping one because it sounded odd. Confidence is not
+   evidence, and the loudest flag is often the wrong one. Turn every flag into a
+   check, show the output, and let only the output decide.
 
 ---
 
-*Previous: [M06 — First Executable Analysis (+ URC Abstract Internal Gate)](milestone_06_experimental_measurement_protocol.md) ·
-Next: [M08 — Robustness Audit](milestone_08_minimum_viable_analysis.md) —
-your verified result now gets attacked on purpose: pre-listed checks, a named
-negative test, and an adversarial review decide what survives.*
+*Previous: [M06 — First Reproducible Analysis (+ URC Abstract Internal Gate)](milestone_06_experimental_measurement_protocol.md) ·
+Next: [M08 — Bounded Research Note and Claim-Evidence Table](milestone_08_minimum_viable_analysis.md) —
+what survived this audit becomes a written claim, every sentence traced to the
+evidence that licenses it.*

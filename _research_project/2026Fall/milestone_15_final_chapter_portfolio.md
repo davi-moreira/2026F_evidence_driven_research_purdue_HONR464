@@ -1,4 +1,4 @@
-# Course milestone M15 — Release Audit, Final Chapter, and AI-Management Portfolio
+# Course milestone M15 — Final Research Chapter, Defense, and AI-Management Portfolio
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M15**.
@@ -31,21 +31,21 @@ AI-management portfolio you defend.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, December 11, 11:59 PM**. The final-defenses studio runs the two
-meetings before the deadline, and the submission ceremony runs at the Friday
-studio on the day the chapter is due. The ceremony confirms submission; it does
-not extend the deadline.
+Due: **Friday, December 11, 11:59 PM**. Your live **Evidence Defense** runs at
+the Monday and Wednesday meetings of this week, and the Friday studio is the
+submission ceremony. The ceremony confirms submission; it does not extend the
+deadline.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m15_chapter.pdf`** | Your **final research chapter**: the whole arc finalized, your headline claim stated at its boundary, uncertainty and limitations throughout, every claim traced and verified. This expands the M14 research note. |
-| 2 | **`lastname_m15_portfolio.pdf`** *(or a clearly-marked section of the chapter PDF)* | Your **AI-management portfolio**: the decomposition, the conflict-and-override log, the stopping rule and never-automate list, and the independence check, built from your full-semester ledger. |
-| 3 | **`lastname_m15_chapter.ipynb`** | The runnable notebook behind the chapter (the reproducibility capsule finalized from M14). It passes **restart-and-run-all** and every headline number reruns from it. |
+| 1 | **`lastname_m15_chapter.pdf`** | Your **final research chapter**: the whole arc finalized, your headline claim stated at its boundary, uncertainty and limitations throughout, every claim traced and verified. It grows out of the M14 research note, and it closes with two marked sections: your **final release audit** (with its release decision, stopping rule, and next-study agenda) and your **dossier manifest**. |
+| 2 | **`lastname_m15_portfolio.pdf`** *(or a clearly-marked section of the chapter PDF)* | Your **AI-management portfolio**: the decomposition, the conflict-and-override log, the never-automate list, and the independence check, with your finalized full-semester **AI Research Ledger** inside it. |
+| 3 | **`lastname_m15_chapter.ipynb`** | The runnable notebook behind the chapter, finalized from the M14 package. It passes **restart-and-run-all**, and every headline number in the chapter reruns from it. |
 | 4 | **EDR\|AI "It is your turn" — ch. 38, ch. 39, ch. 40** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
-*Submit all three, or a single zip containing them. Your finalized full-semester
-**AI Research Ledger** appears inside the portfolio. The **Evidence Defense** is
-performed live at the final-defenses studio and is graded there.*
+*Submit all three, or a single zip containing them. The **Evidence Defense** is
+performed live at your assigned meeting this week and is graded in the room, so
+it is never a Brightspace upload. Nothing in M15 has a revision window.*
 
 ---
 
@@ -77,19 +77,26 @@ could do for your research. You end able to classify a question on the compass,
 match it to a design, say what an answer can and cannot establish, and defend
 every claim from a verified ledger.
 
-Two things make M15 different from every milestone before it. First, the object
-you defend is not just a finding. It is **how you ran a team of AI roles** across
-the semester and where you took the pen back. All term you used AI as one
-research partner. In the final week you learned to run several roles at once, to
-tell real disagreement from correlated error and false consensus, and to
-escalate to your own judgment at the decisions that carry your name. The
-**AI-management portfolio** is the record of that, and it is read partly for
-whether you recognized those boundaries and owned the overrides.
+Three things make M15 different from every milestone before it. The first is that
+you make a **release decision**. You ran a release audit at M11, before the Expo,
+on a project that was still moving. You run it again now, against the finished
+artifact, and this time nothing comes after it. The audit either clears, and the
+work leaves your hands, or one item blocks it, and you write the named repair
+that holds it back. A blocking item written as a soft "mostly ready" is the one
+disposition this milestone will not accept.
 
-Second, this is **terminal**. There is no Monday fix. The chapter you submit and
-the defense you deliver are the last word. Assemble to the Definition of Done
-below before you submit, and bring a chapter you would hand to a stranger and
-trust them to reach your conclusions.
+The second is that the object you defend is not only a finding. It is **how you
+directed a team of AI roles** and where you took the pen back. You learned that
+skill in Week 12, at the release studio: scoped roles wired so each one's input
+exists before it starts, escalation rules written first, and one node kept human.
+This week you do not learn it again. You use it on your finished project, and the
+**AI-management portfolio** is the record of what you actually ran.
+
+The third is that M15 is **terminal**. There is no Monday fix, no resubmission,
+and no revision window. The chapter you submit and the defense you deliver are
+the last word. Assemble to the Definition of Done below before you submit, and
+bring a chapter you would hand to a stranger and trust them to reach your
+conclusions from the page alone.
 
 > **A question that often comes up here:** *"My poster and my research note
 > already made the point. Why a whole chapter and portfolio on top?"* Because the
@@ -97,14 +104,14 @@ trust them to reach your conclusions.
 > you stayed in charge of the tools that helped you write it. A reader cannot tell
 > a verified claim from a lucky-sounding guess by looking at the claim. They can
 > only tell by looking at how it was checked and who checked it. The chapter shows
-> the claim; the portfolio and ledger show the check.
+> the claim; the portfolio and the ledger show the check.
 
 ## Components
 
 ### 1. The final research chapter
 
-Expand your M14 research note into a chapter that carries the whole arc in order
-and reconciles it with everything the defense rehearsals taught you:
+Grow your M14 research note into a chapter that carries the whole arc in order,
+with every verdict from your adjudication record already reflected in the prose:
 
 - **Question and inquiry declaration (final form).** Your research question and
   the compass position it demands, classified by **kind** (descriptive or causal)
@@ -121,7 +128,7 @@ and reconciles it with everything the defense rehearsals taught you:
   retrievable source or a reproducible computation in your notebook, and records
   how it was checked.
 
-The runnable notebook behind the chapter (your M14 capsule, finalized) passes
+The runnable notebook behind the chapter, finalized from your M14 package, passes
 **restart-and-run-all**, so every headline number reruns from it.
 
 > **A question that often comes up here:** *"My project is predictive (or causal).
@@ -133,11 +140,61 @@ The runnable notebook behind the chapter (your M14 capsule, finalized) passes
 > your evidence bought. Naming the position out loud is how you keep the claim
 > honest.
 
-### 2. The AI-management portfolio
+### 2. The final release audit and the release decision
 
-This is the deliverable the final week built, and the one that is new here. Draw
-it from your **full-semester AI Research Ledger** and write it so a skeptic who
-has never seen your project could follow how you ran your AI team. It has four
+You ran the release audit once already, at M11, on a project that was still
+moving. Run it again now against the finished artifact, and mark this version
+with its date and the reason it exists. Four parts.
+
+**The stale-run check.** Your last clean run was the second run you recorded at
+M14. If anything changed after it, you rerun from the packaged files and record
+the new date. Anything means anything: a number, a claim, the data, the code, the
+environment record, or one line of the instructions a stranger would follow. A
+finished chapter vouched for by a run that predates its last edit is not
+released.
+
+**The claim sweep.** Take every quantitative claim in the chapter, one at a time,
+and resolve it to an output your latest rerun produced. Not to a screenshot, not
+to a number you remember, and not to an earlier version of the notebook. A claim
+that cannot be resolved is either cut or rewritten to what the output supports,
+before you submit.
+
+**The audit rows.** Mark each item **clear**, **pending**, or **blocking**:
+permissions, promises made to any participant, AI disclosure, whether the package
+still matches the run that vouches for it, reproducibility, claim boundaries, and
+uncertainty. Then make the **release decision**. If everything clears, the work leaves your hands. If one
+item blocks, you withhold pending the repair you name, written as this version's
+reason. A blocking item smoothed into a soft release is the failure this
+component exists to catch.
+
+**The stopping rule and the next-study agenda.** Your **stopping rule** is one
+sentence saying why you are stopping here rather than running one more check,
+phrased around a check you actually ran. Your **next-study agenda** ties the next
+question to an unresolved limitation, a gap in your warrant, or something this
+cycle's evidence opened. Write it as *directions*, never as findings: what you
+would ask next is not something you showed.
+
+### 3. The dossier and its manifest
+
+Your dossier grew all semester, one milestone at a time. Close it with a
+**manifest**: an inventory that lists every component and marks each one
+**present**, **absent with a reason**, or **not applicable**. The components are
+your contract versions, your evidence registry, your permission determinations,
+your measurement documentation, your analysis and claim ledgers, your AI Research
+Ledger, your artifacts (poster and note), your package, and your revision
+history.
+
+"Absent with a reason" is a legitimate row, and an honest one beats a blank. "Not
+applicable" is legitimate too, when the component never belonged to your project.
+What is not legitimate is a manifest that lists a component you cannot point to.
+Every present row sends a reader to the file or section where the thing actually
+lives.
+
+### 4. The AI-management portfolio
+
+Draw the portfolio from your **full-semester AI Research Ledger**, and write it so
+a skeptic who has never seen your project can follow how you directed your AI
+team. Report the team you actually ran, never invented activity. It has four
 parts.
 
 - **The decomposition.** The scoped AI roles you ran on your chapter and across
@@ -145,7 +202,10 @@ parts.
   and check in one pass. For each role, name its scoped task, whether it ran in
   **parallel** (at the same time, needing no other role's output) or in
   **sequential** order (waiting on another role's output, a **dependency**), and
-  the one **node you kept human**: the integrator no AI role can replace.
+  the one **node you kept human**: the integrator no AI role can replace. Then
+  declare who chose each next step, you or a fixed script or a tool that plans
+  and acts on its own. One assistant playing three roles in turn is a legal team,
+  and it is recorded as exactly that, never as something autonomous.
 - **The conflict-and-override log.** At least one real conflict between your
   roles, your **diagnosis** of it, and the **human override** you made. Diagnose
   each conflict as one of three cases: **real disagreement** (the roles read the
@@ -154,12 +214,10 @@ parts.
   agreement proves nothing), or **false consensus** (they agree only because your
   prompt framed the task so they had to). A human override is the moment you took
   the pen back and decided in your own words, backed by a **non-AI verification**.
-- **The stopping rule and never-automate list.** Your written **stopping rule**:
-  one sentence naming what has to be true about *your* verified confidence before
-  you submit, phrased around a check you ran, not around the roles agreeing. Plus
-  the **decisions you refuse to automate** on this project (which research problem
-  to pursue, the claim boundary, an ethical judgment, the public defense), each
-  with one line on why it carries your name and not a tool's.
+- **The never-automate list.** The **decisions you refuse to automate** on this
+  project: which research problem to pursue, the claim boundary, an ethical
+  judgment, the release decision, the public defense. Give each one line on why it
+  carries your name and not a tool's.
 - **The independence check.** For at least one place where your roles **agreed**
   on something that mattered, show how you confirmed the agreement was worth more
   than one voice: an independent check you ran yourself, or a way you made two
@@ -170,25 +228,25 @@ parts.
 > good sign?"* It is a warning sign, not a badge. A full-semester ledger with zero
 > escalations usually means AI was never used on anything that mattered, or a
 > boundary was crossed without anyone noticing. Do not manufacture an override to
-> fill the gap — an invented escalation is worse than none. Instead, take one
-> load-bearing output you kept and show the independent check that earned its
-> place; if that check fails, you have found your real escalation, and you log
+> fill the gap, because an invented escalation is worse than none. Instead, take
+> one load-bearing output you kept and show the independent check that earned its
+> place. If that check fails, you have found your real escalation, and you log
 > what actually happened.
 
-### 3. The Evidence Defense (live)
+### 5. The Evidence Defense (live)
 
 Perform a **ten-minute defense followed by a five-minute cross-examination** at
-the final-defenses studio. You defend not just *what* you claim but *why* your
-compass position, your data, and your checks license it. Your ten minutes have
-three movements, in order:
+your assigned meeting this week. You defend not just *what* you claim but *why*
+your compass position, your data, and your checks license it. Your ten minutes
+have three movements, in order:
 
 - **Claims (about three minutes):** your headline claim and the exact edge it
   stops at.
 - **Choices (about four minutes):** why this compass position, this data
   strategy, this operationalization, and the road you did not take.
 - **Verification (about three minutes):** how you checked, what survived, which
-  sources you confirmed real. Verification is the spine of the defense, not an
-  afterthought.
+  sources you confirmed real, and how the release audit came out. Verification is
+  the spine of the defense, not an afterthought.
 
 Where your ledger says a claim reaches too far, **concede gracefully**: say so
 precisely and name the smaller true claim. Conceding the right point on time is
@@ -198,20 +256,7 @@ rather than evidence, and blaming the AI tool. "The AI gave me that" is never a
 defense. You verified, or you did not. The full format lives in
 `project/final_dossier/evidence_defense_protocol.md`.
 
-### 4. The release audit
-
-Before anything ships, you run the book's **release audit** on your own
-package. Three checks, each a line in your submission: (1) the
-**stale-run check** — if ANYTHING changed since your last clean rerun (a
-number, a claim, data, code, the environment record, even a README
-instruction), you rerun from the packaged files and record the date; a
-changed package with an old run is not released. (2) The **claim sweep** —
-every quantitative claim in the chapter resolves to an output your latest
-rerun produced. (3) The **next-cycle statement** — your stopping reason and
-the next study your evidence points to, written as *directions*, never as
-findings: what you would ask next is not something you showed.
-
-### 5. The finalized full-semester AI Research Ledger
+### 6. The finalized full-semester AI Research Ledger
 
 Your portfolio is built from your ledger, so the ledger appears inside it,
 complete and reconciled: every AI-assisted task across the semester as one row
@@ -224,13 +269,14 @@ Verification columns carry the weight.
 Research Ledger scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 6. Dossier update line
+### 7. The closing dossier line
 
 End with one line recording what M15 finalizes in your **Research Project
-Dossier**: your record now carries a final research chapter with a justified
-compass position and bounded claims, a runnable notebook behind it, and an
-AI-management portfolio built from your full-semester ledger. Name the file or
-section where each now lives. This line closes the dossier.
+Dossier**: a final research chapter with a justified compass position and bounded
+claims, the runnable notebook behind it, the release audit with its decision and
+next-study agenda, the manifest, and the AI-management portfolio built from your
+full-semester ledger. Name the file or section where each now lives. This line
+closes the dossier.
 
 ---
 
@@ -249,14 +295,25 @@ how well each is argued.
   reproducible computation, and how it was checked, for each.
 - [ ] **Notebook reruns clean** — restart-and-run-all, every headline number
   reproduces from it, no manual steps.
-- [ ] **Portfolio assembled** — decomposition, conflict-and-override log with at
-  least one real override, stopping rule, never-automate list, and one
-  independence check.
+- [ ] **Stale-run check done** — nothing changed since the run that vouches for
+  the package, or you reran and recorded the new date.
+- [ ] **Claim sweep complete** — every quantitative claim in the chapter resolved
+  to an output your latest rerun produced.
+- [ ] **Release decision made** — every audit row marked clear, pending, or
+  blocking, and the decision written: release, or withhold pending a named
+  repair.
+- [ ] **Stopping rule and next-study agenda written** — the rule phrased around a
+  check you ran, the agenda written as directions rather than findings.
+- [ ] **Manifest closed** — every dossier component marked present, absent with a
+  reason, or not applicable, each present row pointing to where it lives.
+- [ ] **Portfolio assembled** — decomposition with the human node and the honest
+  mode declaration, conflict-and-override log with at least one real override,
+  never-automate list, and one independence check.
 - [ ] **Ledger finalized** — full-semester, reconciled, at least one escalation
   row, every verification method named.
 - [ ] **Defense ready** — three movements timed, one graceful concession
   identified from your ledger, the three forbidden moves rehearsed out.
-- [ ] **Dossier update line** written, naming where each finalized piece lives.
+- [ ] **Closing dossier line** written, naming where each finalized piece lives.
 
 ---
 
@@ -265,10 +322,12 @@ how well each is argued.
 | Item | Specification |
 |---|---|
 | **Chapter** | The finalized arc: justified compass position, headline claim at its boundary, uncertainty throughout, every claim verified |
-| **Portfolio** | Decomposition, conflict-and-override log, stopping rule and never-automate list, independence check, built from the full-semester ledger |
-| **Notebook** | Reproducibility capsule finalized from M14; passes restart-and-run-all; headline numbers rerun |
-| **Defense** | Ten-minute defense + five-minute cross-examination, three movements, at the final-defenses studio |
-| **Style** | Plain language; every technical term used as defined in the M15 notebook; claims stated at their boundaries |
+| **Release audit** | Stale-run check, claim sweep, audit rows marked clear / pending / blocking, the release decision with its reason, the stopping rule, and the next-study agenda |
+| **Manifest** | Every dossier component marked present, absent with a reason, or not applicable; present rows located |
+| **Portfolio** | Decomposition, conflict-and-override log, never-automate list, independence check, built from the full-semester ledger |
+| **Notebook** | Finalized from the M14 package; passes restart-and-run-all; headline numbers rerun |
+| **Defense** | Ten-minute defense + five-minute cross-examination, three movements, at your assigned meeting this week |
+| **Style** | Plain language; every technical term used as you defined it; claims stated at their boundaries |
 | **Filenames** | `lastname_m15_chapter.pdf` + `lastname_m15_portfolio.pdf` + `lastname_m15_chapter.ipynb` (or a zip with all three) |
 | **Location** | Brightspace → Assignments → M15 |
 
@@ -280,20 +339,24 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass alignment & workflow pathway** (20) | Compass position justified by kind and reach; the headline claim stays inside its boundary; the AI-workflow pathway (which roles ran parallel, which sequential, the human node kept) is named and defensible (18–20) | Position justified and boundary held; the workflow pathway thinly described (14–17) | Position asserted without a kind-and-reach justification, or one claim steps outside its boundary (8–13) | Compass position unjustified or contradicted; the claim silently upgraded to a bigger population or to cause (0–7) |
-| **Evidence integrity & provenance** (20) | Every source, number, and claim is real and retrievable, and the reader can trace each to its origin (18–20) | Traceable and real; one provenance link thin (14–17) | A claim or source asserted without a locatable origin (8–13) | A cited source that does not exist or does not say what you claim (0–7) |
-| **Verification & AI-management independence** (25) | Every headline number reruns from the notebook; the conflict-and-override log diagnoses at least one conflict correctly and records a non-AI check; the independence check shows an agreement confirmed by more than a head-count (23–25) | Numbers rerun; the override log or the independence check present but one verification vague (18–22) | Verification uneven, or agreement among roles reported as if it were confirmation with no independent check (11–17) | A headline number that does not rerun, an untraceable figure, or an AI output trusted with no verification (0–10) |
-| **Uncertainty & limitations** (15) | Stated next to each claim, calibrated; the headline carries its uncertainty and the chapter names what it cannot establish (13–15) | Present, occasionally soft (10–12) | Confined to a closing paragraph (6–9) | Absent; the chapter overclaims certainty (0–5) |
+| **Compass alignment & workflow pathway** (20) | Compass position justified by kind and reach; the headline claim stays inside its boundary; the AI-workflow pathway (which roles ran parallel, which sequential, the human node kept, who chose each next step) is named honestly and defensibly (18–20) | Position justified and boundary held; the workflow pathway thinly described (14–17) | Position asserted without a kind-and-reach justification, or one claim steps outside its boundary (8–13) | Compass position unjustified or contradicted; the claim silently upgraded to a bigger population or to cause; a manually sequenced chat reported as autonomous (0–7) |
+| **Evidence integrity & provenance** (20) | Every source, number, and claim is real and retrievable, and the reader can trace each to its origin; the manifest marks every dossier component present, absent with a reason, or not applicable (18–20) | Traceable and real; one provenance link or one manifest row thin (14–17) | A claim or source asserted without a locatable origin, or a manifest that lists what you cannot point to (8–13) | A cited source that does not exist or does not say what you claim (0–7) |
+| **Verification, release audit & AI-management independence** (25) | Every headline number reruns from the notebook and the claim sweep resolves each quantitative claim to that rerun's output; the stale-run check is current and every audit disposition is traceable, with blocking items honored; the override log diagnoses at least one conflict correctly and records a non-AI check; the independence check shows an agreement confirmed by more than a head-count (23–25) | Numbers rerun and the audit is complete; one disposition, one override, or one independence check thinly verified (18–22) | Verification uneven, one quantitative claim unresolved by the sweep, or agreement among roles reported as confirmation with no independent check (11–17) | A headline number that does not rerun, an untraceable figure, release claimed despite a stale run or a blocking item, or an AI output trusted with no verification (0–10) |
+| **Uncertainty & limitations** (15) | Stated next to each claim, calibrated; the headline carries its uncertainty; the chapter names what it cannot establish and the next-study agenda states directions rather than findings (13–15) | Present, occasionally soft (10–12) | Confined to a closing paragraph, or a next study written as though it were already shown (6–9) | Absent; the chapter overclaims certainty (0–5) |
 | **Craft, AI Research Ledger & defense** (20) | Assembled, on-format, on-time; notebook runs; the full-semester ledger is complete with an escalation row; the ten-minute defense keeps its three movements, concedes gracefully, and avoids the forbidden moves (18–20) | Minor lapses; ledger complete; defense sound with a rough edge (14–17) | Disorganized, or a defense that missed a movement or leaned on a forbidden move once (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–7) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
 - A **fabricated or unretrievable source** caps *Evidence integrity & provenance*
   at Beginning.
-- An **untraceable number** — a figure with no path back to your data — caps
-  *Verification & AI-management independence* at Beginning.
-- A **non-reproducing result** — a headline number that does not rerun from your
-  notebook — caps *Verification & AI-management independence* at Beginning.
+- An **untraceable number**, a figure with no path back to your data, caps
+  *Verification, release audit & AI-management independence* at Beginning.
+- A **non-reproducing result**, a headline number that does not rerun from your
+  notebook, caps the same row at Beginning.
+- A **released-anyway disposition**, meaning release claimed while the run is
+  stale or an audit item is blocking, caps the same row at Beginning.
+- A **missing manifest or missing next-study agenda** caps *Evidence integrity &
+  provenance* at Developing.
 - A **missing AI Research Ledger** scores *Craft, AI Research Ledger & defense*
   **0** and the submission is **returned** unread until it is supplied.
 
@@ -309,8 +372,11 @@ you submit.
 - Any source you cite that turns out not to exist or not to say what you claim:
   *Evidence integrity & provenance* scores Beginning regardless of the rest.
 - A headline number that does not rerun from your notebook, or a figure with no
-  path back to your data: *Verification & AI-management independence* scores
-  Beginning.
+  path back to your data: *Verification, release audit & AI-management
+  independence* scores Beginning.
+- A release claimed over a stale run or a blocking audit item: the same row
+  scores Beginning. Withholding pending a repair you name honestly never triggers
+  this; the cap is for the false clear.
 - Missing AI Research Ledger: *Craft* scores 0 and the submission is returned.
 - A **forbidden move** in the defense (inventing a claim under pressure,
   un-conceding by insistence, or blaming the AI) drops the *Craft, AI Research
@@ -319,14 +385,15 @@ you submit.
 ## Common Pitfalls
 
 1. **The false chorus mistaken for confirmation.** Writing "all my AI roles
-   agreed, so the claim is solid" in the portfolio. Roles built the same way,
-   asked the same way, echo one error with great confidence. Agreement is worth
+   agreed, so the claim is solid" in the portfolio. Roles built the same way and
+   asked the same way echo one error with great confidence. Agreement is worth
    only the independence behind it. Show the independent check you ran or the
    override you made, not the head-count.
-2. **The portfolio with no override.** A full-semester ledger where AI was never
-   overruled once. Either the tools never touched a decision that mattered, or a
-   boundary was crossed and no one caught it. Name one real escalation, what you
-   decided instead, and the non-AI check that backed you, before you defend.
+2. **The euphemistic release.** An audit row that is genuinely blocking, written
+   up as "essentially ready" so the decision line can say released. The book
+   allows exactly one honest response to a blocking item: withhold pending the
+   repair you name. Naming a repair costs you nothing here and protects everything
+   you claim; a false clear is the one disposition this milestone refuses.
 3. **Blaming the tool under cross-examination.** Answering a hard question with
    "the AI gave me that." It is a forbidden move precisely because the room can
    tell: you verified the claim, or you did not. Answer from a real ledger row, or
@@ -334,6 +401,6 @@ you submit.
 
 ---
 
-*Previous: [M14 — Research-Note Draft & Reproducibility Capsule](milestone_14_research_note_capsule.md) ·
-Next: nothing — it is done. The Evidence Defense and this chapter are the
-semester's capstone. You ran the team. You own the chapter.*
+*Previous: [M14 — Research Note v1 and Reusable Package](milestone_14_research_note_capsule.md) ·
+Next: nothing, and that is the point. The chain closes on a decision you made and
+a defense you delivered. You directed the team. You own the chapter.*

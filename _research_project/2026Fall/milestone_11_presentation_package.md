@@ -1,4 +1,4 @@
-# Course milestone M11 — Defense-Ready Presentation Package
+# Course milestone M11 — Release Audit and Next-Cycle Agenda
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M11**.
@@ -27,18 +27,23 @@ Expo floor.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, November 13, 11:59 PM.** The instructor kicks this milestone off
-on Monday of conference-prep week; Friday's studio is the **mock poster
-symposium**, where your whole package meets a room of strangers and you submit
-that same night.
+Due: **Friday, November 13, 11:59 PM.** Monday and Wednesday taught this week's
+three lessons: managing multiple AI agents, then conflicting agents and human
+escalation, then the final research and AI-management portfolio. Friday's studio
+is this milestone. You wire the review bench, run the audit, make the release
+decision, and write what the next cycle should ask.
+
+The order matters more here than anywhere else in the semester. **You audit
+release before you release**, and the Expo on Tuesday, November 17 is the
+release.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m11_presentation_package.pdf`** *or* a shared Colab notebook link | The full presentation package below: your three pitch layers (30-second hook with the boundary sentence marked, 90-second walk, full pitch), your poster-walk map, your spoken uncertainty-and-limitations statement, your five-type question bank, your AI-use answer, and your AI Research Ledger rows. This is the graded artifact. |
+| 1 | **`lastname_m11_release_audit.pdf`** *or* a shared Colab notebook link | The full record below: your **review-management record** for the AI team you directed, your **independence check**, your **release audit** with every row marked clear, pending, or blocking, your **release decision** written as a dated version with its reason, your **dossier v1 manifest**, your **stopping rule**, your **next-cycle agenda**, and your AI Research Ledger rows. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 38, ch. 39, ch. 40** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
-make sure any figure you reference renders when the notebook is run.
+make sure every figure or table you reference renders when the notebook is run.
 
 ---
 
@@ -64,158 +69,243 @@ Dossier.
 
 ## Purpose
 
-This package is your **defense-ready** artifact — the second version of the
-same Book Milestone your locked poster started (the bridge above names it).
-The rule that governs every piece: **a pitch compresses the claim, it never
-expands it.** Anything you say in ninety seconds must fit inside the
-boundary your note and poster already declared.
+Last week your work reproduced from a clean package. This week you decide whether
+it leaves your hands, and the order of those two things is the lesson. **A
+release audit runs before the release, never after it.** The Expo on Tuesday,
+November 17 is your release: once strangers read your board and hear your claim,
+the work is public, and no audit run afterward can call any of it back.
 
-A visitor at the Expo does not read your poster and then talk to you. They talk
-to you *instead* of reading it, so **your voice becomes the poster**. Speaking is
-faster than reading, so you will compress. The one rule that governs every layer
-of this package is **compression without inflation**: every word leaving your
-mouth must sit inside the exact compass boundary your poster's headline already
-sits inside.
+A **release audit** is a short, honest check of everything that would embarrass
+the work in public, made item by item, with a disposition on each item. The
+dispositions are **clear**, **pending**, or **blocking**, and the words mean what
+they say. Clear means checked and fine. Pending means a repair you have named and
+will finish. Blocking means the work does not go out until the repair is done.
 
-This milestone builds the two spoken architectures a poster session demands and
-the armor for the questions that follow:
+The audit's first row is the one that catches most projects. **If anything moved
+since your last clean rerun, that rerun is stale.** A number, a claim, the data,
+the code, the environment record, or a line in the instructions a stranger would
+follow: any of these makes the cold run behind your package a description of a
+version that no longer exists. The repair is not an argument, it is a rerun.
 
-- the **three pitch layers** — the 30-second hook that decides whether a passing
-  visitor stops, the 90-second walk for the visitor who lingers, and the full
-  pitch for the one who wants the whole tour; and
-- the **spoken uncertainty-and-limitations statement** plus the **question bank**
-  — so your study's limits arrive as expertise, and a stranger's hardest fair
-  question meets a sentence you already wrote.
+The review that feeds the audit is run by a team you direct. A **directed AI
+team** is two or more scoped AI roles you assign, sequence, and adjudicate
+yourself, rather than one open-ended conversation. The minimum bench is a
+**worker**, which drafts or checks something concrete, and a **critic**, which
+attacks the worker's output on stated grounds. You write the escalation rules
+before you start, and you keep one node human, which is the decision itself.
 
-The single most common failure of poster presenters is the **excited-mouth
-upgrade**: saying "causes" out loud while the poster says "is associated with."
-This milestone exists to catch that move before the Expo does.
+Here is the trap this milestone exists to catch. **Agreement among correlated
+reviewers is not independent verification.** Two reviewers are **correlated** when
+they share a model, a prompt, or a source, so their mistakes repeat instead of
+cancelling. Ask the same assistant twice, in two windows, from the same summary of
+your note, and two confident agreements arrive that never touched your data. That
+is one opinion delivered twice. Independent verification means a check whose path
+to the answer does not run through the thing being checked.
 
-> **A question that often comes up here:** *"My poster is done. Why is the
-> talking a whole graded milestone?"* Because the talking is where the claim goes
-> to die. Under a stranger's eye contact, a rehearsed presenter compresses and,
-> compressing, quietly upgrades — the sample becomes the population, the
-> association becomes a cause, the interval vanishes because it is less fun to
-> say. The package you build here is the discipline that keeps your spoken claim
-> inside the boundary your evidence bought. A poster is a claim you can stand
-> behind; a pitch is a claim you can stand beside, cold, under pressure.
+Capability honesty is part of the record. Say plainly who chose each next step:
+you, a fixed script you wrote, or a tool that genuinely plans and calls other
+tools. A manually sequenced chat is a perfectly legitimate way to run this bench,
+and calling it autonomous is a false claim about your method. Record the team you
+actually ran, never invented activity.
+
+Two decisions in this milestone belong to no tool. The first is whether the work
+is ready to leave your hands. The second is what the next cycle should ask. Your
+**next-cycle agenda** is written as **directions**, never as findings: it names
+the question the next study should ask and the evidence that would settle it. A
+finding is a claim about the world, and the claims a next study would test are
+exactly the ones your current evidence has not earned.
+
+State what you still do not know as clearly as what you found. A **withhold
+pending a named repair** is a legitimate, fully creditable outcome of an honest
+audit. The failure mode is the opposite move: a soft release that describes a
+blocking problem in gentle language and ships anyway.
+
+> **A question that often comes up here:** *"My poster is locked and printed.
+> What is actually left to decide?"* The paper is decided; the claims are not.
+> Release is a decision about what you assert in public, under whose permission,
+> from which version of the evidence. You can still add a caveat to what you say,
+> withhold a figure whose permission is unclear, or correct a number that moved
+> after your last clean run. That is the whole point of auditing on Friday the
+> 13th rather than on the Expo floor the following Tuesday.
 
 ## Components
 
-### 1. The three pitch layers
+### 1. The review-management record
 
-Build all three, each sized to the same locked poster and each sitting inside the
-same compass boundary.
+The record of the AI team you directed for the closing review, written so a reader
+can reconstruct what actually ran. It has five parts:
 
-- **The 30-second hook.** The 60-to-90-word version that earns a stop, built as
-  **hook → claim → boundary sentence → invitation**. **Mark the boundary
-  sentence** — the exact words that hold the claim inside your compass position
-  (description, generalization, prediction, or causal reasoning). That sentence is
-  the one you rehearse until it is automatic, because pressure will try to drop it.
-- **The 90-second walk.** The hook plus two or three evidence blocks and the
-  honest bound, ordered the way your hand would move across the poster.
-- **The full pitch (3 to 5 minutes).** The same spine, all your evidence in
-  ranked order, ending on uncertainty and an invitation to look closer.
+- **The roles and their scopes.** At minimum a worker, a critic, and an auditor,
+  each with a one-sentence job. An **auditor** checks the record rather than the
+  claim, asking whether what you say happened is what the logs show.
+- **The wiring.** The order the roles ran in, and why each role's input existed
+  before it started. A critic that runs before the draft exists is reviewing
+  nothing.
+- **The escalation rules, written first.** The conditions under which you take
+  the decision back: the roles conflict, they agree too quickly, or an output
+  touches a claim on your poster.
+- **The human node.** The one step you never delegated, named explicitly. The
+  release decision is the natural candidate.
+- **The capability declaration.** Who chose each next step: you, a fixed script,
+  or a tool that plans and calls tools. Do not describe a manually sequenced chat
+  as an agent deciding for itself.
 
-A good spoken claim, compressed but not upgraded:
+Record one **load-bearing pair of outputs**, meaning a place where two roles
+addressed the same question and something on your poster depended on the answer.
+Say whether they agreed, how you diagnosed the disagreement or the agreement, and
+what your own check found. If you overrode a role, the override goes on record
+with its reason.
 
-- ✓ **Matches the poster:** *"In my sample of 812 commuters, longer commutes go
-  hand in hand with lower attendance. That is an association, not proof that
-  commuting causes it, and here is the pattern."*
-- ⚠️ **The excited-mouth upgrade:** *"Basically, long commutes make people skip
-  class."* The poster says *is associated with*; the mouth said *make*. That is
-  the exact word the boundary sentence exists to prevent.
+### 2. The independence check
 
-> **A question that often comes up here:** *"Isn't compressing to 30 seconds the
-> same as dumbing it down?"* No. Compression drops detail; it never changes the
-> claim's reach or kind. You can say less, but the smaller thing you say must be
-> a true subset of what the poster already claims. The moment the shorter version
-> covers people your frame never touched, or asserts a cause your design never
-> earned, you have inflated, not compressed.
+Name at least one place in your closing review where **agreement was not
+verification**, and say what you did about it. This is a required part of the
+artifact, not an optional confession.
 
-### 2. The poster-walk map
+- **Name the correlation.** Same model, same prompt, same source document, or the
+  same summary of your work standing in for the work itself.
+- **Say what the agreement was worth.** Usually one opinion, repeated. Write it in
+  that language rather than "two reviewers confirmed."
+- **Name the human check you ran instead.** Recomputing a number yourself, opening
+  the cited source, rerunning a cell, or comparing against the printed output of
+  your package. A check whose path to the answer avoids the thing being checked is
+  the only kind that adds evidence.
 
-A small diagram or annotated list: **what you point at, and when.** For each beat
-of the 90-second walk (and the full pitch), name the element of the poster your
-hand or eye is on — headline, the key figure, the interval, the limitation. This
-is what turns a script into a walk a visitor can follow with their eyes instead
-of a paragraph read aloud at them.
+> **A question that often comes up here:** *"If three roles all pass my claim, why
+> is that not stronger evidence than one?"* Because they may all be repeating the
+> same input. Three readers who share a model and a prompt fail in the same places
+> at the same time, so their agreement measures their similarity rather than your
+> claim's strength. Two genuinely different checks that disagree are worth more
+> than three identical ones that nod. This is the same reason your package needed
+> a cold run rather than a second run by you.
 
-### 3. The spoken uncertainty-and-limitations statement (the ULN move)
+### 3. The release audit
 
-Write the spoken statement your visitor hears when you reach the honest bound.
-Use the **ULN move**: name the **U**ncertainty, name your single most threatening
-**L**imitation, and end on the **N**ext step. Deliver it as a straight spine —
-**precision over hedging**, and never the **apology spiral** (a pile of
-self-erasing words — *sorry, just, probably, I'm no expert, not sure* — that
-deletes your finding instead of bounding it). The uncertainty must be *spoken*,
-not buried because it is less exciting to say.
+Seven rows, each marked **clear**, **pending**, or **blocking**, and each
+disposition supported by a sentence saying what you checked:
 
-> **A question that often comes up here:** *"If I lead with what my study can't
-> do, don't I just talk myself out of my own finding?"* Only if you apologize
-> instead of bound. "I'm not really sure, this is probably wrong" erases the
-> finding. "This holds in my sample; whether it reaches the wider population is
-> the open question, and here is the check that would settle it" states the same
-> limit as a scientist. Same honesty, opposite effect. The ULN move is how a
-> boundary reads as command of your material rather than a confession.
+- **Permissions.** Everything you are about to present is inside your permission
+  determination, and nothing identifiable appears that should not.
+- **Participant promises.** Anything you told a person about how their data would
+  be used still holds in what you are releasing.
+- **Disclosure.** The AI-use disclosure is accurate and present on the artifact
+  the public will see.
+- **Package matches the cold run.** Nothing moved since your last clean rerun. If
+  something did, the row is blocking until you repeat the run.
+- **Reproducibility.** The package still runs from its written instructions and
+  produces the numbers you are about to present.
+- **Claim boundaries.** Every public claim sits inside its compass position and
+  inside the evidence you actually have.
+- **Uncertainty.** The bound travels with the estimate everywhere it appears, on
+  the board and in what you say aloud.
 
-### 4. The five-type question bank
+An unsupported disposition is worth nothing. "Clear" with no sentence behind it
+is an assertion, and this course grades checks rather than assertions.
 
-Build one hard, fair question per type, with a two-line answer sketch for each,
-and mark each answer **defend** or **concede** consistent with your **claim
-ledger**:
+### 4. The release decision, as a version with its reason
 
-- **Method** — why your design can support the claim at all.
-- **Alternative explanation** — what else could produce your pattern.
-- **So-what** — why the finding matters.
-- **Generalization** — how far the finding reaches beyond your data.
-- **AI-use** — what you delegated to AI and how you checked it.
+One short section that states the decision in plain words: **release**, or
+**withhold pending a named repair**. Write it as a dated, numbered version of your
+project record, with a reason a reader could use to reconstruct your thinking.
 
-At least one answer must be a prepared **honest don't-know**: for a question you
-truly cannot fully answer, the full form is *acknowledge the limit → say what
-would answer it → say what you can still stand behind*. A prepared don't-know is
-command; an improvised one is a fumble. Your bank must also handle the **causal
-question aimed at a noncausal project** without bluffing — you name the boundary
-rather than reaching for a cause your design never earned.
+- If you release, say which version of the package and which version of the claim
+  set is going public, and name the audit rows that made that defensible.
+- If you withhold, name the exact repair, the row that blocked, and the one-line
+  plan that turns the withhold into a release.
+- Never write a soft release. "Mostly fine" and "with minor caveats" are not
+  dispositions, and a blocking row described gently is still blocking.
 
-### 5. The AI-use answer and AI Research Ledger rows
+Your poster is already printed, so a blocking row at this stage rarely stops the
+paper. It changes what you claim beside it: the sentence you say aloud, the caveat
+you add to your spoken bound, or the figure you decline to discuss until its
+permission is confirmed.
 
-Your bank's **AI-use** answer points a visitor at your ledger and your
-verification step, because a disclosed, verified AI use is a **strength** and an
-undisclosed one is an integrity problem. Every use of AI in building this package
-also gets a row in your **AI Research Ledger** (the eight-field table:
-task delegated · tool used · prompt · output summary · decision · verification
-method · remaining concern · responsible researcher). Stress-testing a pitch for
-a spoken upgrade, running the apology-spiral check on your ULN, and generating
-hostile questions are all delegable tasks, and each one you delegated needs a row
-naming how you verified the result **against reality** — the notebook's printed
-count, not the AI's prediction. "No AI used" is a legitimate entry if it is true.
+### 5. Your dossier v1 and its manifest
+
+Your **Research Project Dossier** reaches version 1 here, assembled with a
+**manifest**, which is a list of its components with the state of each one. Mark
+every item **present**, **absent with reason**, or **not applicable**, and say
+where the present ones live:
+
+- Contract versions, from v0 through the current one.
+- The evidence registry, with every source you actually used.
+- Permissions and the determination behind them.
+- Measurement documentation.
+- The analysis ledger and the claim ledger.
+- The AI Research Ledger.
+- Artifacts: the poster and any note or figure you released.
+- The reproducibility package and its cold-run record.
+- The revision history, which is the sequence of versions and the reason for each.
+
+An honest "absent with reason" beats a checkbox that is not true. The manifest is
+the evidence rail made assemblable: it is what lets a reader go from any claim you
+make to the record behind it.
+
+### 6. The stopping rule and the next-cycle agenda
+
+Two short pieces, and they belong together.
+
+- **The stopping rule.** One paragraph saying why you are stopping here instead of
+  running one more check. State it as a decision with a reason, such as "every
+  surviving claim has a check I ran myself, and the remaining questions need data
+  I do not have." Research does not end when the questions run out.
+- **The next-cycle agenda.** Two or three items, each written as a **direction**:
+  the question the next study should ask, the unresolved limitation or warrant gap
+  it comes from, and the evidence that would settle it. Tie each item to something
+  documented in this cycle, so the agenda reads as a consequence of your work
+  rather than a wish list.
+
+Write directions, never findings. "Test whether the pattern holds where hiring is
+centralized, using the personnel records I could not obtain this term" is a
+direction. "The pattern is probably stronger where hiring is centralized" is a
+finding, and it is one your evidence has not earned.
+
+### 7. AI Research Ledger rows
+
+This milestone is the ledger's graduation, so the wiring itself lands as rows in
+your **AI Research Ledger** (the eight fixed fields: task delegated · tool used ·
+prompt · output summary · decision · verification method · remaining concern ·
+responsible researcher). Log the review loops you ran, the conflicts you
+escalated, every override you made, and each independence check with what it
+found. The verification field names the check you ran against reality, such as the
+printed output of your package, not the confidence of the role that produced the
+output.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 6. Dossier update line
+### 8. Dossier update line
 
 End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your poster-and-presentation materials now carry three sized
-pitch layers, a poster-walk map, a spoken ULN statement, and a five-type question
-bank drilled under live fire. Name the file or section in your dossier where each
-now lives.
+Project Dossier**: the dossier now stands at version 1 with a dated manifest, and
+it carries your review-management record, your independence check, your release
+audit with its decision, your stopping rule, and your next-cycle agenda. Name the
+file or section where each now lives.
 
 ---
 
-## Submission Expectations
+## Definition of Done
+
+You are done when your submission carries all of the following. Use this as a
+pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Pitch layers** | All three (30-second hook with the boundary sentence marked, 90-second walk, full pitch), each inside the poster's compass boundary |
-| **Walk map** | What you point at, beat by beat, mapped to poster elements |
-| **ULN statement** | Uncertainty, one limitation, next step — a straight spine, no apology spiral |
-| **Question bank** | Five types, each with a two-line answer marked defend or concede, plus one prepared honest don't-know |
-| **Delivery** | 30-second hook delivered and drilled at the mock symposium (Friday); partner and AI reviewer flag every spoken upgrade — part of the grade |
-| **Style** | Plain language; every technical term used as defined above; the boundary sentence marked in the hook |
-| **Filename** | `lastname_m11_presentation_package.pdf` (or a shared Colab link) |
+| **Review-management record** | Roles and scopes, wiring, escalation rules written first, the one human node, and an honest capability declaration |
+| **Load-bearing pair** | One pair of outputs on the same question, diagnosed and settled by your own check, with any override on record |
+| **Independence check** | At least one named place where agreement among correlated reviewers was not verification, with the human check you ran instead |
+| **Release audit** | Seven rows marked clear, pending, or blocking, each disposition supported by what you checked |
+| **Stale-run check** | The package-matches-cold-run row is answered by date and content; anything that moved since the last clean rerun forces a repeat before release |
+| **Release decision** | Release, or withhold pending a named repair, written as a dated version with its reason and no softening language |
+| **Dossier v1 manifest** | Every component marked present, absent with reason, or not applicable, with locations for the present ones |
+| **Stopping rule** | Why you are stopping here rather than running one more check, stated as a decision |
+| **Next-cycle agenda** | Two or three items, each a direction tied to a documented unresolved issue, never a finding |
+| **Uncertainty** | What you still do not know stated as clearly as what you found, in the audit and in the agenda |
+| **AI Research Ledger** | One row per AI-assisted step, including loop wiring, conflicts, overrides, and independence checks; every verification method named and non-vague |
+| **Dossier line** | Review record, audit, decision, stopping rule, and agenda located by file or section |
+| **Studio work** | Bench wired and audit run in the Friday studio, with the decision made before you leave |
+| **Filename** | `lastname_m11_release_audit.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M11 |
 
 ---
@@ -226,59 +316,70 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass alignment — boundary discipline, spoken = written** (25) | Every spoken claim across all three pitch layers sits inside the poster's compass boundary; the 30-second hook's boundary sentence is marked and sharp; no excited-mouth upgrade anywhere (22–25) | Inside the boundary; boundary sentence present but soft, or one layer's bound under-stated (18–21) | One spoken upgrade past the poster's claim, or the boundary sentence unmarked (11–17) | Spoken claims routinely inflate the poster's compass position; the excited-mouth upgrade is uncaught (0–10) |
-| **Evidence integrity & provenance** (15) | Every number and source named in any pitch layer, the ULN, or the question bank is real and retrievable; a listener could trace each to its origin in the poster or dossier (14–15) | Real and traceable; one provenance link thin (11–13) | A spoken figure or source asserted without a locatable path (6–10) | A cited source or number that does not exist or does not say what you claim (0–5) |
-| **Verification of AI-assisted parts** (20) | Every AI-assisted step (pitch stress-test, apology-spiral check, question generation) has a ledger row with a named, non-vague verification method; pacing and apology-spiral counts verified against the notebook's printed output, not the AI's prediction (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | AI outputs used but verification not named, or a predicted count trusted over the printed one (8–13) | AI output reproduced without verification, or a pitch or answer written by AI and unchecked (0–7) |
-| **Uncertainty & limitations — the ULN move** (20) | The spoken ULN statement names uncertainty, the single most threatening limitation, and a next step in a straight spine; uncertainty is spoken, not buried; the honest don't-know is prepared (18–20) | ULN present; uncertainty or the limitation stated loosely, or the next step thin (14–17) | The ULN hedges or apology-spirals, or the honest don't-know is missing (8–13) | Uncertainty absent from the spoken delivery, or limitations replaced by apology (0–7) |
-| **Craft, ledger & communication** (20) | Three pitch layers built to architecture and sized to the poster; poster-walk map maps every beat to a poster element; five-type question bank complete with defend/concede marks; on-format, on-time; complete AI Research Ledger; dossier line present; delivered at the mock symposium (18–20) | Minor format lapses; one bank entry thin or one map beat vague; ledger complete (14–17) | A pitch layer or the question bank incomplete, or the map missing beats (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned), or the package substantially incomplete (0–7) |
+| **Compass alignment — claims released inside their boundary** (20) | Every claim cleared for release sits inside its declared compass position, and the claim-boundary row names what you checked; nothing you plan to say aloud outruns the poster (18–20) | Inside the boundary, with one row's supporting sentence thin or one spoken claim loosely bounded (14–17) | A released claim drifts past the evidence the design licenses, or the claim-boundary row is asserted without a check (8–13) | Claims released outside their compass position: an association narrated as a cause, or a sample described as a population (0–7) |
+| **Evidence integrity & provenance** (15) | Every source and number in the audit, the dossier manifest, and the agenda is real and retrievable, and the manifest shows a reader where each lives (14–15) | Real and traceable; one manifest entry thin or one location vague (11–13) | A manifest entry claimed present that a reader could not find, or a source asserted without a locatable origin (6–10) | A fabricated or unretrievable source, or a manifest that claims components that do not exist (0–5) |
+| **Verification of the review and the release** (25) | The stale-run check is answered by date and content; every audit disposition is supported by a named check; the independence check names a real correlation and the human verification you ran instead; the capability declaration matches what actually ran; every AI step is in the ledger with a non-vague verification method (23–25) | Dispositions supported, with one check named loosely or one ledger row's verification thin (18–22) | Dispositions asserted without checks, the independence check generic, or AI outputs adopted with verification not named (11–17) | Release claimed on a stale cold run or over a blocking row, agreement among correlated reviewers reported as verification, a manually sequenced chat described as autonomous, or a released number that does not rerun from the package (0–10) |
+| **Uncertainty & limitations** (20) | What you still do not know is stated as clearly as what you found; the stopping rule is an argued decision; the agenda's directions come from documented unresolved issues and claim nothing new (18–20) | Uncertainty present; the stopping rule or one direction stated loosely (14–17) | Uncertainty vague, the stopping rule decorative, or the agenda partly written as findings (8–13) | Uncertainty absent, or the work released as settled with no remaining limitation named (0–7) |
+| **Craft, ledger & communication** (20) | Review record, audit, decision, manifest, stopping rule, and agenda all present and readable; the artifact is a dated, numbered version with a reason a reader could use; complete AI Research Ledger; dossier line present; on-format and on-time (18–20) | Minor format lapses; one component thin; the version dated but its reason decorative; ledger complete (14–17) | A component missing or the artifact undated and unversioned (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned), or the package of records substantially incomplete (0–7) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
-- A **fabricated or unretrievable source** — a citation or figure that does not
-  exist or does not say what you claim — caps *Evidence integrity & provenance*
+- A **fabricated or unretrievable source** caps *Evidence integrity & provenance*
   at Beginning.
-- An **untraceable number** — a figure in your pitch, ULN, or bank with no path
-  back to your data — caps *Verification of AI-assisted parts* at Beginning.
-- A **non-reproducing result** — a number you state that your own notebook does
-  not produce on a clean rerun — caps *Verification of AI-assisted parts* at
+- An **untraceable number** in the audit, the manifest, or the agenda caps
+  *Verification of the review and the release* at Beginning.
+- A **non-reproducing result**, meaning a released number your own package does not
+  produce on a clean rerun, caps *Verification of the review and the release* at
   Beginning.
+- A **release claimed over a stale cold run or a blocking row** caps *Verification
+  of the review and the release* at Beginning.
 - A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
   **0** and the submission is **returned** unread until it is supplied.
 
-**Revision:** eligible under the standing policy — a revised submission within 7
+**The package-current gate is blocking and is not scored.** Release requires the
+package to match its cold run. Anything that changed since that run means withhold
+pending a repeat, and no strength elsewhere averages that away.
+
+**Revision:** eligible under the standing policy. A revised submission within 7
 days of feedback recovers up to half the lost points.
 
 ## Penalties
 
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
-- Any source or number in your scripts, ULN, or bank that turns out not to exist
-  or not to say what you claim: *Evidence integrity & provenance* scores Beginning
-  regardless of the rest — the course's evidence-integrity rule applies to the
-  spoken word too.
+- Any source, number, or manifest entry that turns out not to exist or not to say
+  what you claim: *Evidence integrity & provenance* scores Beginning regardless of
+  the rest, because the evidence-integrity rule applies to your records as well as
+  to your findings.
+- A release recorded over a stale cold run or a blocking audit row: *Verification
+  of the review and the release* scores Beginning regardless of the rest.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 
 ## Common Pitfalls
 
-1. **The excited-mouth upgrade.** Saying "causes," "proves," or "makes" out loud
-   while the poster says "is associated with." Compression is allowed; inflation
-   is the one move this milestone exists to catch. Mark your boundary sentence and
-   rehearse it until it survives eye contact.
-2. **The apology spiral.** Burying your finding under *sorry, just, probably, I'm
-   no expert* until nothing confident is left. A limitation is a boundary you
-   state, not a confession you make. Run the apology-spiral check, cut every
-   self-erasing word, and land the ULN on a next step.
-3. **The AI-written pitch you cannot defend.** Asking a tool to "write my
-   limitations paragraph" or "answer this question" and pasting it in. A caveat
-   you did not reason to is a caveat you will fumble at the board, and an
-   unverified AI answer with no ledger row caps your verification score. Draft
-   every layer yourself, then use AI to attack it, and log the attack.
+1. **The soft release.** A blocking row rewritten in gentle language, then shipped:
+   "permissions mostly confirmed," "one number to double-check later." A
+   disposition is a decision, not a mood. Withholding pending a named repair is a
+   fully creditable outcome, and it is what an honest audit is for.
+2. **The agreeing bench mistaken for verification.** Three roles, one model, one
+   prompt, one summary of your note, and three approvals that never touched your
+   data. That is one opinion repeated. Name the correlation, then verify by a
+   route that does not pass through the reviewer: recompute the number, open the
+   source, rerun the cell.
+3. **The stale package released anyway.** You fixed a figure on Wednesday, and the
+   audit still cites Friday-before-last's cold run. The rerun is cheap and the
+   correction after release is not. Check the run by date and by content, and
+   repeat it whenever the content moved.
+4. **The agenda that is really a finding.** "The effect is probably stronger in
+   larger firms" is a claim you did not test, dressed as a plan. Write the
+   direction instead: the question, the limitation it comes from, and the evidence
+   that would settle it.
 
 ---
 
-*Previous: [M10 — Final Poster Lock](milestone_10_final_poster_lock.md) — the
-locked poster your package stands beside · Next:
-[M12 — Conference Reflection & Poster-Criticism Portfolio](milestone_12_conference_reflection.md) —
-where the strangers' questions your bank prepared for become the data you reflect
-on after the Expo.*
+*Previous: [M10 — Reproducible Package and the Final Poster Lock](milestone_10_final_poster_lock.md) —
+the package that reproduced is the version this audit decides about · Next:
+[M12 — Conference Reflection and Defense Revision](milestone_12_conference_reflection.md) —
+where the release you authorized meets the public, and the strangers' questions
+become the evidence you reflect on.*

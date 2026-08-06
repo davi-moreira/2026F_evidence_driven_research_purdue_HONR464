@@ -70,147 +70,191 @@ Dossier.
 
 ## Purpose
 
-At M9 you wrote research note v0 and declared it the source every later
-adaptation would draw from. Since then your claim has been tested in ways no
-self-check can match: strangers questioned it at the Expo, and at M13 a peer ran
-your package cold, without you in the room. This milestone turns what those two
-tests taught you into the two artifacts your project will stand on after the
-semester ends: **research note v1** and a **reusable package**. On the book's
-ladder, the bounded-claims milestone closes here at version 2 and the
-reproducible-package milestone opens at version 1.
+Two streams of evidence about your project arrived in the last three weeks, and
+neither of them came from you. The first is **public criticism**: the questions
+strangers asked at your poster, the pattern you coded in your M12 tally, and the
+defense revision record you wrote from it. The second is the **peer cold run**.
+At M13 a classmate opened your package without you in the room, tried to rebuild
+your headline number from it alone, and returned a threat-ranked list of what
+broke, what they had to ask you, and where your claim looked fragile.
 
-Version 1 is not a polish pass. A **revision record** is a dated account of what
-changed between versions and why, and yours must tie every substantive change to
-the specific criticism or cold-run finding that caused it. Revision without a
-record is just editing; revision with one is evidence about your own work. The
-opposite failure matters as much, and it is the quiet one this milestone exists
-to catch: a disciplined, caveated finding sliding back into a clean, confident
-sentence because the clean version reads better. A sharper sentence is not a
-bigger finding. If a sentence outgrew its evidence, the evidence has to grow
-first, or the caveat stays on the page.
+This week both streams get answered. **Adjudication** means deciding each
+incoming item on its merits and writing down the decision with a reason you
+would defend out loud. One worked example: "generalization doubt, asked three
+times at the Expo → **bound**, because my sample is one campus, and the headline
+sentence now says so." Every item on the list gets exactly one verdict. Nothing
+sits there undecided, and nothing is answered with silence.
 
-The package tests the other half of trust. A note a reader believes but cannot
-rerun is still half a claim. Your peer's cold run told you exactly where your
-materials made a stranger stop and ask, and every one of those questions is a
-missing line in your documentation. This week you fix them, assemble the
-package, and then obey the one rule that governs the close: **after any change
-to the package, run it cold again.** A changed package vouched for by a stale
-run is not done. Together the note makes your work **readable**, the package
-makes it **reusable**, and only you, holding the pen, keep both sized to your
-evidence.
+What comes out is the pair of artifacts your project stands on after the
+semester ends. The first is **research note v1**, the prose a reader can weigh
+without you in the room. The second is your **repaired reusable package**, the
+materials a stranger can rerun without asking you anything. The course calls the
+note v1 because it is the first revision written after public testing. On the
+book's ladder the note is Book Milestone 9 at version 2, and the package is Book
+Milestone 11 at version 2.
 
-> **A question that often comes up here:** *"I already wrote this note at M9.
-> Isn't v1 just proofreading?"* No, because v0 was written before anyone outside
-> the course had pushed on your claim. Version 1 answers evidence that did not
-> exist in October: real questions from real readers at the Expo, and a
-> stranger's cold run of your own package. If, after all that, nothing in the
-> note needed to change, that is itself a finding — and your revision record
-> must say why the criticism you received did not move the claim.
+Version 1 is not a polish pass, and the quiet failure this milestone exists to
+catch runs the other way. A disciplined, caveated finding slides back into a
+clean, confident sentence, because the clean version reads better. A sharper
+sentence is not a bigger finding. If a sentence outgrew its evidence, the
+evidence has to grow first, or the caveat stays on the page.
+
+The package carries the other half of trust. A note a reader believes but cannot
+rerun is still half a claim. Every place your cold-runner had to stop and ask you
+something is a missing line in your documentation, and this week you write those
+lines. Then you obey the rule that governs the close: after your last change to
+the package, run it clean once more. A package changed after its last run is not
+done, and a stale record vouches for a package that no longer exists.
+
+> **A question that often comes up here:** *"I already drafted this note at M8.
+> Isn't v1 just proofreading?"* No, because that draft was written before anyone
+> outside the course had pushed on your claim. Version 1 answers evidence that
+> did not exist in October: real questions from real readers at the Expo, and a
+> stranger's cold run of your own package. If after all that nothing in the note
+> needed to change, that is itself a finding, and your adjudication record has to
+> say why the criticism you received did not move the claim.
 
 ## Components
 
-### 1. The research note v1
+### 1. The two streams, gathered into one list
 
-The same five-move spine as v0 (question, method in one paragraph, results with
-uncertainty in the same eye-span, the bounded headline claim carrying its
-compass kind and range, then limitations and retrievable references), now
-revised wherever the evidence demands it. Let the note grow where public
-questioning showed a reader needed more (usually to two to four pages), and
-nowhere else. If you report more than one finding, order them by how much
-evidence backs each: strongest first, exploratory last and clearly labeled,
-never leading. You may use an AI tool as a writing critic, never a ghostwriter;
-keep only edits that sharpen the prose while leaving the claim exactly its
-size, and reject every edit that quietly upgrades a verb or drops an "in this
-sample."
+Before you decide anything, build the inbound list. Make one numbered table
+holding every item that arrived from outside, each row tagged with its **source**
+(Expo criticism or peer cold run), the **item** stated in one sentence, and the
+part of the project it touches: the claim, the evidence, the writing, or the
+package. Pull the Expo rows from your M12 tally and defense revision record, and
+the cold-run rows from the report your peer returned, keeping their threat
+ranking visible.
 
-### 2. The revision record
+A question you were asked five times is one item with its recurrence noted, not
+five items. An item you already know you will accept still gets a row. The list
+is what makes the next component checkable: a reader can count your rows, count
+your verdicts, and see that the two numbers match.
 
-The note opens with a dated record of the revision: for each substantive
-change, what changed, which Expo question, poster-criticism hit, or M13
-cold-run finding drove it, and what it cost or bought the claim. The record
-also lists the criticisms you decided **not** to act on, each with the reason
-you own — a declined criticism with no reason is a dodge, and a claim that
-shrank under public testing is the system working, so say so plainly. This
-record is what makes v1 a versioned artifact rather than a quiet rewrite: a
-reader should be able to reconstruct your thinking from it.
+### 2. The adjudication record
 
-### 3. The reusable package
+This is the heart of the milestone, and it opens the note. For every row on your
+inbound list, record a dated verdict. There are exactly three:
 
-Assemble everything a stranger needs to rebuild your numbers, and nothing they
-would have to guess. Five parts:
+- **Accept.** The criticism was right, and you changed the note, the package, or
+  both. Say what changed and where a reader can see it. Example: "cold-run
+  finding 2 — the README never named the run order; the README now numbers the
+  three steps."
+- **Rebut.** The criticism does not hold, and you say why with evidence rather
+  than with irritation. "The reader misread the table" is the beginning of a
+  reason. The whole reason names the row they misread and the sentence you
+  rewrote so the next reader will not.
+- **Bound.** The criticism holds in part, and the honest answer is a narrower
+  claim rather than a defense or a rewrite. You state the new boundary inside the
+  claim sentence itself, not in a footnote.
+
+Each verdict carries a reason you own, in your own words, and one you could
+defend under questioning at the Friday table read. A verdict with no reason is a
+dodge. A claim that shrank under public testing is not an embarrassment to bury:
+say plainly that it shrank, and say what shrank it. This record is what makes v1
+a versioned artifact rather than a quiet rewrite, and a reader should be able to
+reconstruct your thinking from it item by item.
+
+### 3. Research note v1
+
+The same five-move spine as your first draft: the question, the method in one
+paragraph, the results with uncertainty in the same eye-span, the bounded
+headline claim carrying its compass **kind** and **reach**, then limitations and
+retrievable references. Revise it wherever an accepted or bounded verdict demands
+it. Let the note grow where public questioning showed a reader needed more,
+usually to two to four pages, and nowhere else. If you report more than one
+finding, order them by how much evidence backs each: strongest first, exploratory
+last and clearly labeled, never leading.
+
+You may use an AI tool as a writing critic, never as a ghostwriter. Keep only
+edits that sharpen the prose while leaving the claim exactly its size, and reject
+every edit that quietly upgrades a verb or drops an "in this sample". The
+sentence that ships is yours, whatever drafted it.
+
+### 4. The repaired reusable package
+
+Rebuild the package your peer ran, with their questions now answered in writing.
+Five parts:
 
 - A **README** that is the stranger's entry point: what this is, how to run it,
   and what result to expect.
 - The **seeded notebook** (`SEED = 464`) that passes **restart-and-run-all**:
-  clear the kernel, run every cell top to bottom, no manual fixes, and the
+  clear the kernel, run every cell from the top, no manual fixes, and the
   headline number comes back.
 - Your **data or its access recipe**: the files themselves where terms allow,
   otherwise the exact route a reader follows to obtain them, with version and
-  provenance. What can be shared is set by your permissions, and the package
-  says so explicitly.
+  provenance. What can be shared is set by your permissions, and the package says
+  so explicitly.
 - The **environment record**: the library versions a rerun needs.
-- The **licence / permissions note** and your decision log of by-hand choices,
-  each exclusion and cut point with its reason.
+- The **licence and permissions note**, plus your decision log of by-hand
+  choices, each exclusion and cut point with its reason.
 
 Then audit your own package against the **five package sins**: a **hard-coded
 path** that exists only on your laptop, a **missing seed** that moves every run,
-a **by-hand edit** no clean run reproduces, an **undocumented exclusion** with
-no logged reason, and **stale or unversioned data** a reader cannot reobtain.
-Report the one sin you found and fixed. Your peer's M13 report is your work
-order here: every place they had to ask you a question is a missing line in
-your documentation, fixed now or logged with the reason it stays.
+a **by-hand edit** no clean run reproduces, an **undocumented exclusion** with no
+logged reason, and **stale or unversioned data** a reader cannot reobtain. Name
+the one sin you found and fixed. Your peer's M13 report is the work order: every
+place they had to ask you something is either fixed now in the documentation or
+logged with the reason it stays.
 
-### 4. The second cold run
+### 5. The second clean run
 
-Any change to the package makes its previous cold-run record stale — a number, a
-claim, the data, the code, the environment record, or the instructions a
-stranger would follow. So after your last change, run the package cold once
-more: a clean environment, your written instructions only, restart-and-run-all.
-Record the date, the environment, and the result. Reproduce the **uncertainty
-statement**, not only the point estimate: an interval that does not come back is
-a discrepancy to explain and fix, exactly like a moved headline number.
+Any change to the package makes the previous run's record stale. A number, a
+claim, the data, the code, the environment record, or one line of the
+instructions a stranger would follow: each of those is a change. So after your
+last edit, run the package once more in a fresh environment, following only your
+written instructions, restart-and-run-all. Record the date, the environment, and
+the result.
 
-> **A question that often comes up here:** *"My package passed the cold run with
-> zero flags. Isn't it done?"* A zero-flag run proves the package is
-> **runnable**, not **correct**. No script can see that a seed is fixed on the
-> wrong sample, that a logged reason is a bad reason, or that the analysis
-> answers a different question than the one you declared. Those are failures a
-> person finds reading your work cold, which is why the M13 peer run and the
-> table read at the studio exist, and why an AI-drafted README still needs a
-> cold human run to validate it.
+Reproduce the **uncertainty statement**, not only the point estimate. An interval
+that does not come back is a discrepancy to explain and fix, exactly like a moved
+headline number. Label the record for what it honestly is, a clean rerun by the
+author, and keep your peer's M13 run beside it as the independent evidence. A
+rerun by you is never a claim of independent reproduction.
 
-### 5. The updated claim–evidence table and AI disclosure
+> **A question that often comes up here:** *"My package reran with zero errors.
+> Isn't it done?"* A clean run proves the package is **runnable**, not
+> **correct**. No script can see that a seed is fixed on the wrong sample, that a
+> logged reason is a bad reason, or that the analysis answers a different question
+> than the one you declared. Those are failures a person finds reading your work
+> cold, which is why your peer's run and the Friday table read exist, and why an
+> AI-drafted README still needs a human run to validate it.
+
+### 6. The updated claim–evidence table and AI disclosure
 
 Every sentence in the note still traces to a row in your claim–evidence table
-(claim · evidence · verification · boundary), so when a claim moved in
-revision, its row moves with it. Nothing on the page exceeds what a row
-licenses, and when you compress caveated sentences, the caveat rides along.
-Redraft your **AI disclosure statement** from the full ledger, never from
-memory: it now covers the poster weeks and the red-team as well as this
-revision, it includes what you *sent* to tools and not only what they produced,
-and it names anything you did not verify.
+(claim · evidence · verification · boundary), so when adjudication moved a claim,
+its row moves with it. Nothing on the page exceeds what a row licenses, and when
+you compress a caveated sentence, the caveat rides along. A claim with no row
+does not appear in the note.
 
-### 6. AI Research Ledger rows
+Redraft your **AI disclosure statement** from the full ledger, never from memory.
+It now covers the poster weeks and the peer exchange as well as this revision, it
+includes what you *sent* to tools and not only what they produced, and it names
+anything you did not verify.
+
+### 7. AI Research Ledger rows
 
 Every use of AI in building this note and package gets a row in your **AI
 Research Ledger** (the eight-field table: task delegated · tool used · prompt ·
 output summary · decision · verification method · remaining concern ·
-responsible researcher). Proposing revision wording, ranking limitations,
+responsible researcher). Sorting the inbound list, proposing revision wording,
 drafting README sections, and stress-reading the note with a stranger's eye are
 all delegable tasks, and each one you delegated needs a row that names how you
-verified the result. "No AI used" is a legitimate entry if it is true.
+verified the result. "No AI used" is a legitimate entry if it is true. What is
+never delegable is the verdict: accept, rebut, and bound are yours.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 7. Dossier update line
+### 8. Dossier update line
 
 End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your **research note v1** (with its revision record), your
-**reusable package** (with its fresh cold-run record), and your updated
-claim–evidence table and AI disclosure now exist. Name the file or section
-where each now lives.
+Project Dossier**: your **research note v1** with its adjudication record, your
+**repaired reusable package** with its fresh clean-run record, and your updated
+claim–evidence table and AI disclosure. Name the file or section where each now
+lives.
 
 ---
 
@@ -221,16 +265,18 @@ pre-submission checklist.
 
 | Item | Specification |
 |---|---|
+| **Inbound list** | Every item from both streams listed with its source; recurring Expo questions counted once with their recurrence, not repeated |
+| **Adjudication record** | Dated; one verdict per item (accept, rebut, or bound); every verdict carries a reason you own; no item left undecided |
 | **Note v1** | The five-move spine intact; findings ordered by support with the exploratory labeled last; grown only where public questioning demanded it |
-| **Revision record** | Dated; every substantive change tied to the criticism or cold-run finding that drove it; declined criticisms listed with owned reasons |
-| **Headline claim** | Compass kind and range carried through revision; no caveat lost between v0 and v1 |
+| **Headline claim** | Compass kind and reach carried through revision; no caveat lost between the first draft and v1 |
 | **Claim–evidence table** | Updated; every claim a row; every changed sentence re-traced to its row |
 | **AI disclosure** | Redrafted from the full ledger; includes what you sent to tools; names what you did not verify |
-| **Package** | README, seeded notebook (`SEED = 464`), data or its access recipe, environment record, licence / permissions note; the five sins audited and the one found-and-fixed named |
-| **Second cold run** | Dated after the last change to the package; restart-and-run-all passes; the headline number and its uncertainty statement reproduce |
+| **Package** | README, seeded notebook (`SEED = 464`), data or its access recipe, environment record, licence and permissions note; the five sins audited and the one found-and-fixed named |
+| **Cold-run questions answered** | Every question your M13 reader had to ask you is fixed in the documentation or logged with the reason it stays |
+| **Second clean run** | Dated after your last change to the package; restart-and-run-all passes; the headline number and its uncertainty statement reproduce; the record labeled as an author rerun |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | Note v1, package, and updated table and disclosure located by file or section |
-| **Studio work** | Worked at the Friday studio; the note table-read by a peer and the feedback weighed before you submit at studio close |
+| **Studio work** | Worked at the Friday studio: your adjudication table read by a peer, and your second clean run performed before you submit at studio close |
 | **Filenames** | `lastname_m14_note.pdf`, `lastname_m14_package.ipynb`, `lastname_m14_coldrun.pdf` (or shared links / the equivalent sections) |
 | **Location** | Brightspace → Assignments → M14 |
 
@@ -242,26 +288,29 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass / pathway alignment** (20) | The headline keeps its compass kind and range through revision; no verb grew between v0 and v1 without new evidence; findings are ordered by support with the exploratory labeled last (18–20) | Inside the boundary; one verb or one ordering choice loose (14–17) | A caveat thinned in revision, or a fragile finding leads (8–13) | A caveated v0 finding upgraded to a clean, confident claim, or an exploratory result leading as the headline (0–7) |
-| **Evidence integrity** (20) | Every source real and retrievable; every claim has its updated table row; the revision record accounts for the changes so a reader can check them (18–20) | Real and traceable; one row or provenance link thin (14–17) | A claim with no row, or a substantive change with no entry in the revision record (8–13) | A cited source that does not exist or does not say what you claim, or a revision record that misstates what changed (0–7) |
-| **Verification** (25) | The headline number and its uncertainty statement rerun cold from the package after the last change; the five sins audited with the found-and-fixed one named; every ledger row's verification method named and non-vague (22–25) | Reproduces; one part thin (a loose decision log, one vague ledger row) (18–21) | The cold-run record predates a change to the package, or restart-and-run-all needs manual fixes (11–17) | The headline number does not rerun from the package, or an AI-edited claim shipped with no verification (0–10) |
-| **Uncertainty & limitations** (20) | Uncertainty in the same eye-span as every result; limitations re-sized to what the Expo and the cold run revealed; a shrunken claim stated plainly as the system working (18–20) | Both present; one stated loosely (14–17) | The headline without its interval, or limitations generic or unchanged despite contrary findings (8–13) | No uncertainty on the headline, or a caveated finding silently upgraded (0–7) |
-| **Craft & AI Research Ledger** (15) | On-format, on-time; README a stranger can follow; table-read feedback weighed; complete AI Research Ledger; dossier line present (14–15) | Minor format lapses; ledger complete (11–13) | Missing pieces, or a rushed table read (6–10) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–5) |
+| **Compass / pathway alignment** (20) | The headline keeps its compass kind and reach through revision; no verb grew without new evidence; bound verdicts land inside the claim sentence; findings are ordered by support with the exploratory labeled last (18–20) | Inside the boundary; one verb or one ordering choice loose (14–17) | A caveat thinned in revision, or a fragile finding leads (8–13) | A caveated finding upgraded to a clean, confident claim, or an exploratory result leading as the headline (0–7) |
+| **Evidence integrity & owned verdicts** (20) | Every source real and retrievable; every claim has its updated table row; the adjudication record is dated, complete, and reasoned well enough that a reader could reconstruct your thinking item by item (18–20) | Real and traceable; one row, one provenance link, or one verdict's reason thin (14–17) | An inbound item with no verdict, a verdict whose reason is decorative, or a claim with no row (8–13) | A cited source that does not exist or does not say what you claim, or an adjudication record that misstates what changed (0–7) |
+| **Verification** (25) | The headline number and its uncertainty statement rerun clean from the package after your last change; the five sins audited with the found-and-fixed one named; every cold-run question fixed or logged; every ledger row's verification method named and non-vague (22–25) | Reproduces; one part thin (a loose decision log, one vague ledger row) (18–21) | The clean-run record predates a change to the package, or restart-and-run-all needs manual fixes (11–17) | The headline number does not rerun from the package, or an AI-edited claim shipped with no verification (0–10) |
+| **Uncertainty & limitations** (20) | Uncertainty in the same eye-span as every result; limitations re-sized to what the Expo and the cold run revealed; a shrunken claim stated plainly as the system working (18–20) | Both present; one stated loosely (14–17) | The headline without its interval, or limitations generic and unchanged despite contrary findings (8–13) | No uncertainty on the headline, or a caveated finding silently upgraded (0–7) |
+| **Craft, rails & AI Research Ledger** (15) | On-format, on-time; README a stranger can follow; the studio table read weighed; the four rails carried (what you sent to tools disclosed, a row behind every claim, the shipped sentence yours, uncertainty never dropped); complete ledger; dossier line present (14–15) | Minor format lapses; one rail nominal; ledger complete (11–13) | Missing pieces, or a rushed table read (6–10) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–5) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
-- A **fabricated or unretrievable source** caps *Evidence integrity* at Beginning.
-- An **untraceable number** — a figure with no path back to your data — caps
+- A **fabricated or unretrievable source** caps *Evidence integrity & owned
+  verdicts* at Beginning.
+- An **undecided item** (an inbound item with no verdict, or a verdict with no
+  reason you own) caps *Evidence integrity & owned verdicts* at Developing.
+- An **untraceable number**, a figure with no path back to your data, caps
   *Verification* at Beginning.
-- A **non-reproducing result** — the headline number does not rerun from your
-  package — caps *Verification* at Beginning.
-- A **stale cold-run record** — the package changed after the run that vouches
-  for it — is treated as a non-reproducing result and caps *Verification* at
+- A **non-reproducing result**, meaning the headline number does not rerun from
+  your package, caps *Verification* at Beginning.
+- A **stale run record**, meaning the package changed after the run that vouches
+  for it, is treated as a non-reproducing result and caps *Verification* at
   Beginning until a fresh record is supplied.
-- A **missing AI Research Ledger entry** scores *Craft & AI Research Ledger* **0**
-  and the submission is **returned** unread until it is supplied.
+- A **missing AI Research Ledger entry** scores *Craft, rails & AI Research
+  Ledger* **0** and the submission is **returned** unread until it is supplied.
 
-**Revision:** eligible under the standing policy — a revised submission within **7
+**Revision:** eligible under the standing policy. A revised submission within **7
 days** of feedback recovers up to half the lost points.
 
 ## Penalties
@@ -269,13 +318,13 @@ days** of feedback recovers up to half the lost points.
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
 - Any source you cite that turns out not to exist or not to say what you claim:
-  *Evidence integrity* scores Beginning regardless of the rest — the course's
-  evidence-integrity rule with teeth.
-- A headline number that does not rerun cold from your package: *Verification*
+  *Evidence integrity & owned verdicts* scores Beginning regardless of the rest.
+  That is the course's evidence-integrity rule with teeth.
+- A headline number that does not rerun clean from your package: *Verification*
   scores Beginning regardless of the rest. An honest "this part did not reproduce,
   and here is what broke" never triggers this; the cap is for the false pass.
-- A package changed after its most recent cold-run record: treated as a
-  non-reproducing result until a fresh cold run is supplied.
+- A package changed after its most recent run record: treated as a
+  non-reproducing result until a fresh clean run is supplied.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 
@@ -285,23 +334,24 @@ days** of feedback recovers up to half the lost points.
    disciplined, caveated finding reappears clean and confident in v1 because the
    clean version scans better, or an AI edit quietly turned *related* into
    *drives*. Revision after a warm Expo reception is exactly where claims grow.
-   A sharper sentence is not a bigger finding; put the caveat back, and keep only
-   edits that leave the claim its size.
-2. **The stale cold run.** "It ran cold two weeks ago" offered for a package you
-   have edited since. Any change makes that record a vouch for a package that no
-   longer exists. The rerun is cheap and the false vouch is not — and a cold run
-   means a clean environment and your written instructions only, not the
+   A sharper sentence is not a bigger finding, so put the caveat back and keep
+   only edits that leave the claim its size.
+2. **The stale run.** "It ran two weeks ago" offered for a package you have
+   edited since. Any change makes that record a vouch for a package that no
+   longer exists. The rerun is cheap and the false vouch is not, and a clean run
+   means a fresh environment and your written instructions only, never the
    click-order you remember.
-3. **The recordless revision.** Changes made silently, or every criticism waved
-   off without a written reason. The revision record is the proof that the public
-   test and the cold run actually reached your work. Declined criticisms belong
-   in it too, each with a reason you could defend aloud; "the reviewer misread
-   it" is the start of a reason, not the whole of one.
+3. **The stream you answered with silence.** Half the inbound list adjudicated
+   and half quietly dropped, or a rebuttal offered with no reason. The record is
+   the proof that the public test and the cold run actually reached your work.
+   Rebuttals belong on the list as much as acceptances, each with a reason you
+   could defend aloud; "the reader misread it" is the start of a reason, not the
+   whole of one.
 
 ---
 
 *Previous: [M13 — Replication and Red-Team Report](milestone_13_replication_redteam.md) ·
-Next: [M15 — Release Audit, Final Chapter, and AI-Management Portfolio](milestone_15_final_chapter_portfolio.md) —
-the note you just revised and the package you just sealed feed the release
-audit and expand into your final chapter, and your full-semester AI Research
-Ledger becomes the portfolio you defend.*
+Next: [M15 — Final Research Chapter, Defense, and AI-Management Portfolio](milestone_15_final_chapter_portfolio.md) —
+the note you just adjudicated grows into the final chapter, the package you just
+repaired faces the final release audit, and your full-semester AI Research Ledger
+becomes the portfolio you defend.*

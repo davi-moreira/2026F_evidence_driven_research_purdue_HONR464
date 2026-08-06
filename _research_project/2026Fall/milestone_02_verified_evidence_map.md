@@ -179,101 +179,155 @@ a stranger with only your bibliography would. A row you cannot reopen goes back
 to *pending*, whatever you remember about reading it. This audit is what makes
 the registry usable by anyone but you.
 
-### 3. Your gap, placed honestly, and the contribution line
+### 4. The evidence map: settled, contested, missing
 
-Mark where your gap sits — a spot the map shows is genuinely open — and write two
-things.
+The map sorts your verified claims into three zones, and every claim on it
+answers to a registry row.
 
-- **The bounded contribution line (one sentence):** what your project would add
-  that no verified source now provides, worded to stop exactly where your
-  retrieval stops. The bounded form is *"Based on the sources I retrieved and
-  verified, ___ has not been established for ___."* Not "nothing is known about
-  ___," which is a claim about the whole world you cannot make from your desk.
-- **The honesty-test sentence:** *"Across the sources I retrieved and verified,
-  and after walking one backward and one forward link from each, none addresses
-  [my gap]."* Backward means you read each source's own reference list;
-  **forward** means you found the newer works that cite it (its "Cited by" trail).
-  If you cannot write that sentence truthfully yet, say what retrieval it still
-  owes. That is a finding, not a failure.
+- **Settled** — claims your verified sources agree on. Say how many sources back
+  each one, because two sources agreeing is not the same as ten.
+- **Contested** — claims your verified sources genuinely disagree about. Write one
+  sentence per disagreement naming what could make both sides right: a different
+  population, measure, time window, or design.
+- **Missing** — the quiet spot, where your verified sources say nothing at all.
+
+Draw the map with the builder from nb03 if that helps you see it: fill the claims
+table and the relationships table, then run the graph cell so the figure draws
+itself. **Nodes are claims** from your registry, and **edges mark how two claims
+relate** — they **agree** when they point the same way, **contradict** when they
+clash, and **qualify** when one narrows the other. Submit the map as an **image**,
+or as a clearly labeled three-zone list if a picture adds nothing.
+
+Contested territory is uncertainty you **inherit**. Where the field disagrees,
+your project starts out unsure too, and that has to show up in what you later
+claim. Smoothing a disagreement into a tidy consensus hides an uncertainty you
+will have to defend in December.
+
+Then write your **gap** as one bounded sentence, in this shape: *"Across the
+sources I retrieved and verified, no source establishes ___ for ___."* Not
+"nothing is known about ___," which is a claim about the whole world that you
+cannot make from your desk. The bounded form stops exactly where your retrieval
+stopped, and your search log is what backs it.
 
 A **genuine gap** is a question your verified sources actually leave unanswered,
-confirmed by looking. An **unfinished search** is a question you simply stopped
-looking for. They feel identical from your desk, and only one is a real
-contribution. The map is your evidence that the gap is real: no verified node
-already covers it.
+confirmed by looking and logged. An **unfinished search** is a question you simply
+stopped looking for. They feel identical from your desk, and only the search log
+tells them apart.
 
-### 4. One incorporated peer challenge
+> **A question that often comes up here:** *"Two of my verified sources flatly
+> contradict each other — is one of them wrong?"* Usually neither. Ask what would
+> make them *both* right: a different population, measure, time window, or method.
+> That question is where new gaps are born, so put the contradiction in the
+> contested zone instead of smoothing it away.
 
-During the gallery walk, the class leaves sticky-note challenges on your map. Pick
-one, incorporate it into the map or the gap statement *before you submit*, and add
-a one- or two-sentence note naming the challenge and what you changed. "A
-classmate showed my source #4 already covers the gap I placed, so I moved the gap
-to the population my sources never reach" is exactly the move. An attack that
-changed nothing still gets a line saying why it did not land.
+### 5. The revision of your declared question
 
-### 5. AI Research Ledger rows
+This is the part the milestone is really for. Take the question you declared at
+M1, with its kind, its reach, and its claim boundary, and write what the verified
+record does to it. One short paragraph, in one of two forms:
 
-Every use of AI in building this map gets a row in your **AI Research Ledger** (the
-eight-field table: task delegated · tool used · prompt · output summary ·
-decision · verification method · remaining concern · responsible researcher).
-Surfacing candidate sources, drafting the relation edges between claims, and
+- **It changed.** Name the change and the source that forced it. "Two verified
+  sources already describe this for the national population, so my question now
+  asks it of the campus population none of them reach" is a revision a reader can
+  check.
+- **It holds.** Then defend it. Name the sources that could plausibly have
+  changed the question and say, one clause each, why they did not. A declaration
+  that survives with no reasons attached reads like a search that never happened.
+
+Close the revision with one sentence on what you are still unsure of: a zone of
+the map you could not fill, a contested claim you inherit, or a database you
+could not reach. Uncertainty stated here is the honest version of the map; an
+evidence base with no stated limits is overclaiming.
+
+### 6. One incorporated challenge from the gallery walk
+
+At the studio, the room circulates and leaves challenges on your map. Pick one,
+work it into the registry, the map, or the gap sentence *before you submit*, and
+add a one- or two-sentence note naming the challenge and what you changed. "A
+classmate showed my source #4 already covers the spot I called missing, so the
+gap moved to the population my sources never reach" is exactly the move. A
+challenge that changed nothing still gets a line saying why it did not land.
+
+### 7. AI Research Ledger rows
+
+Every use of AI in building this evidence base gets a row in your **AI Research
+Ledger** (the eight-field table: task delegated · tool used · prompt · output
+summary · decision · verification method · remaining concern · responsible
+researcher). The AI sweep, drafting the relations between claims, and
 red-teaming whether your gap is already filled are all delegable tasks, and each
-one you delegated needs a row that names how you verified the result. If AI helped
-you *locate* a source, the ledger must still show you retrieved and read it
+one you delegated needs a row naming how you verified the result. When AI helped
+you *locate* a source, the row must still show that you retrieved and read it
 yourself. "No AI used" is a legitimate entry if it is true.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 6. Dossier update line
+### 8. The dossier update line and the version line
 
-End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your **evidence map** component now carries a verified source
-ledger, a drawn evidence map with contradictions logged, a bounded contribution
-line, and its honesty-test sentence. Name the file or section in your dossier
+Open the artifact with its version line: **Book Milestone 3, version 1 (evidence
+base grounded)**, dated, with a reason a reader could use to reconstruct your
+thinking. Then end with one line recording what this milestone finalizes in your
+**Research Project Dossier**: the **evidence base** component now carries your
+candidate list, your search log, your verified registry, your three-zone map with
+its bounded gap sentence, and your revised declaration. Name the file or section
 where each now lives.
 
 ---
 
-## Submission Expectations
+## Definition of Done
+
+You are done when your submission carries all of the following. Use this as a
+pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Length** | The four-part map + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
-| **Figure** | The evidence map as a legible image: claim nodes from your ledger, agree/contradict/qualify edges, and exactly one gap node placed where the map is quiet |
+| **Candidate list** | Every source you found, seeded by your own search, one AI sweep, and hand snowballing; a lead source marked; each row carrying *verified*, *could not retrieve*, or *pending* |
+| **Search log** | One line per search: where, terms, what came back and what did not, date — the empty searches included |
+| **Evidence registry** | At least six sources you retrieved and read, each with citation, retrieval location, central claim in your words, and evidence type |
+| **Retrievability audit** | Every verified row reopened from its citation alone; any row that failed returned to pending |
+| **Licence and terms** | Recorded for any dataset in the registry, before you plan to use it |
+| **Evidence map** | Settled, contested, and missing zones, every claim traceable to a registry row; submitted as an image or a labeled three-zone list |
+| **Gap sentence** | One bounded sentence stopping where your retrieval stopped, backed by your search log |
+| **Revision** | Your M1 declaration explicitly revised, or held with named sources and reasons; closed by one uncertainty sentence |
+| **Gallery-walk challenge** | One challenge incorporated, with a note on what changed, or why it did not land |
+| **Version line** | Book Milestone 3, version 1, dated, with its reason |
+| **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
+| **Dossier line** | The evidence-base component located by file or section |
 | **Studio work** | Worked at the Friday studio (Sep 11) with your AI assistant; submitted the same day |
-| **Style** | Plain language; every technical term used as defined above; claims in your own words; every citation retrievable |
-| **Filename** | `lastname_m02_evidence_map.pdf` (or a shared Colab link) |
+| **Filename** | `lastname_m02_evidence_base.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M02 |
 
 ---
 
 ## Grading Rubric (100 points)
 
-Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTURE.md`).
+Four bands on the course's five shared virtues
+(`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
+criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
+`evidence-base-v0`).
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Contribution-map correctness** (compass/pathway alignment) (30) | Ledger has ≥6 retrieved sources, each with its evidence type; the evidence map faithfully renders agree/contradict/qualify edges from those sources; the gap is placed where the map is demonstrably open and the contribution line is bounded (26–30) | Ledger and map correct; one edge arguable or one evidence type mis-labeled (21–25) | Map or ledger present but thin: an edge you cannot trace to a source, or the gap placement over-stated (13–20) | Map decorative or absent; the gap a listed source already covers; or the map cited as if it proved the field (0–12) |
-| **Evidence integrity & provenance** (20) | Every source is personally retrieved and retrievable, its retrieval location named, its central claim matching what the source says (18–20) | Real and traceable; one claim loose or one retrieval location thin (14–17) | A claimed source asserted from an AI summary, or retrieval location unclear (8–13) | Any source that does not exist or does not say what you claim (0–7) |
-| **Verification of AI-assisted parts** (20) | Every AI-assisted step (candidate-source surfacing, relation drafting, gap red-team) has a ledger row with a named, non-vague verification method; the retrieval-verification loop is visible behind every kept source (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used but verification not named (8–13) | An AI citation pasted with no retrieval, or the map redrawn from AI suggestions never checked against the actual sources (0–7) |
-| **Uncertainty & limitations** (20) | The honesty-test sentence is present and true; the gap is stated in bounded form, not as "nothing is known"; the contribution line stops exactly where retrieval stops; the count of verified sources and what the map cannot see are both named (18–20) | Boundary present; the honesty-test sentence or the source count stated loosely (14–17) | An absolute-absence claim ("no one has studied this"), or a gap asserted without the honesty test behind it (8–13) | No boundary, or a description silently upgraded into a claim about the whole field (0–7) |
-| **Craft, ledger & communication** (10) | On-format, on-time, clear gallery-walk presentation, one peer challenge genuinely incorporated with a note, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces, challenge not incorporated, or a rushed walk (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Evidence base completeness & fit** (30) | Candidate list, search log, registry of ≥6 verified sources, three-zone map, and an explicit revision are all present and unmistakably about your project; the map's zones follow from the registry and the revision follows from the map (26–30) | All parts present and mostly connected; one zone thin or one evidence type mislabeled (21–25) | A part missing or generic enough to fit any project, or a map that does not follow from the registry (13–20) | The registry, the map, or the revision absent; or an evidence base that could belong to anyone (0–12) |
+| **Evidence integrity & provenance** (20) | Every registry source was retrieved and read by you, its retrieval location named, its central claim matching what the source says; the retrievability audit was run and its results recorded (18–20) | Real and traceable; one claim loose or one retrieval location thin (14–17) | A row asserted from an AI summary, or a retrieval location unclear (8–13) | Any source that does not exist, or does not say what you claim (0–7) |
+| **Verification of AI-assisted parts** (20) | Every AI-assisted step (the AI sweep, relation drafting, the gap red-team) has a ledger row with a named, non-vague verification method; each judgment is defended in your words, not the tool's; failed retrievals kept as dropped rows (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used with verification unnamed (8–13) | An AI citation carried into the registry with no retrieval, or a map assembled from AI suggestions never checked against the sources (0–7) |
+| **Uncertainty, contestation & claim boundary** (20) | The gap is stated in bounded form, never as "nothing is known"; the contested zone names what the field disagrees about and what your project inherits; the count of verified sources and what the map cannot see are both named (18–20) | Boundary present; the gap sentence or the source count stated loosely (14–17) | An absolute-absence claim ("no one has studied this"), or a contested zone flattened into consensus (8–13) | No boundary at all, or a claim about the whole field made from a handful of retrieved sources (0–7) |
+| **Craft, version, ledger & communication** (10) | Versioned with its reason, on-format, on-time, a clear gallery-walk presentation, one challenge genuinely incorporated with a note, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; version and ledger complete (7–8) | Missing pieces, challenge not incorporated, or a rushed walk (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
 - A **fabricated or unretrievable source** — one that does not exist, or does not
   say what you claim — caps *Evidence integrity & provenance* at Beginning,
-  regardless of the rest of the ledger's quality.
+  regardless of the rest of the registry's quality.
+- A **registry row you cannot reopen** from its citation alone, still reported as
+  verified, caps *Evidence integrity & provenance* at Beginning.
 - An **untraceable number** — any count you report (for example, "six verified
-  sources") with no path back to the ledger rows behind it — caps *Verification
+  sources") with no path back to the registry rows behind it — caps *Verification
   of AI-assisted parts* at Beginning.
-- A **non-reproducing result** — an evidence map that does not redraw from your
-  own claims and relationships tables when the cell is rerun — caps *Verification
-  of AI-assisted parts* at Beginning.
-- A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
-  **0** and the submission is **returned** unread until it is supplied.
+- A **missing AI Research Ledger entry** scores *Craft, version, ledger &
+  communication* **0** and the submission is **returned** unread until it is
+  supplied.
 
 **Revision:** eligible under the standing policy — a revised submission within 7
 days of feedback recovers up to half the lost points.
@@ -282,11 +336,11 @@ days of feedback recovers up to half the lost points.
 
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
-- **Evidence-integrity rule with teeth:** any source on your ledger that turns
+- **Evidence-integrity rule with teeth:** any source in your registry that turns
   out not to exist, or not to say what you claim it says, sends *Evidence
-  integrity & provenance* to Beginning regardless of the rest of the ledger. This
-  is the course's central habit; here it is enforced, not encouraged.
-- A reported count or a figure with no path back to the ledger or the tables that
+  integrity & provenance* to Beginning regardless of the rest. This is the
+  course's central habit; here it is enforced, not encouraged.
+- A reported count or figure with no path back to the registry or the log that
   produced it: *Verification of AI-assisted parts* scores Beginning.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
@@ -294,25 +348,25 @@ days of feedback recovers up to half the lost points.
 ## Common Pitfalls
 
 1. **The unread source.** An AI summary of a paper is not the paper. If you did
-   not open and read it, it cannot sit on your ledger — and one fabricated or
-   mischaracterized entry caps the whole evidence-integrity criterion at
-   Beginning. A confident citation is not a retrieved source.
-2. **A gap that is really an unfinished search.** "I could not find it" and "it is
-   not there" are different claims, and only retrieval upgrades the first into the
-   second. You have earned the word *gap* only after real sources, followed
-   forward and backward, still stay silent on your question. If a listed source
-   already covers the spot where you placed your gap, the gap is not open — move it
-   to where the map is genuinely quiet.
-3. **The decorative map, or "the literature proves…"** Nodes with no edges, edges
-   you cannot trace to a ledger claim, or contradictions smoothed away all mean
-   the map was drawn, not built. A map of claims is not proof; it shows what is
-   *asserted*, and by whom, on what evidence — not what is settled. Every node and
-   edge should answer to a row in your ledger, and a live disagreement between two
-   sources is the most useful thing on the page.
+   not open and read it, it cannot sit in your registry, and one fabricated or
+   mischaracterized row caps the whole evidence-integrity criterion at Beginning.
+   A confident citation is not a retrieved source. The honest move is cheap: mark
+   the row *could not retrieve* and log the search that failed.
+2. **The log that only records successes.** A search log listing the four
+   databases that worked, with nothing about the six queries that returned
+   nothing, cannot support a claim that anything is missing. "I could not find
+   it" and "it is not there" are different claims, and only a logged, deliberate
+   search upgrades the first toward the second. Keep the empty searches; they are
+   the load-bearing part of your gap.
+3. **The revision that never happens.** Submitting the M1 question untouched,
+   with no account of what the verified record did to it, is the failure this
+   milestone exists to prevent. Either the evidence changed your question, or you
+   can name the sources that could have changed it and say why they did not. A
+   silent "no change" reads as a search that was never really run.
 
 ---
 
-*Previous: [M01 — Research Opportunity Landscape](milestone_01_research_opportunity_landscape.md) ·
-Next: [M03 — Research Charter & MIDA Declaration](milestone_03_research_charter_mida.md) —
-your verified map becomes the model of the world your question lives in and the
-exact quantity your design will seek.*
+*Previous: [M01 — Your Rules and Your Question](milestone_01_research_opportunity_landscape.md) ·
+Next: [M03 — Research Contract v0 and Permission Determination](milestone_03_research_charter_mida.md) —
+your verified registry becomes the evidence a declarable design rests on, and
+your revised question becomes the objective that design is written to answer.*

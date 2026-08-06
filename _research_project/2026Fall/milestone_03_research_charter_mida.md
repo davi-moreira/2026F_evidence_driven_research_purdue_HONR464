@@ -23,15 +23,19 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, September 18, 11:59 PM** (you work on it at that Friday's studio).
+Due: **Friday, September 18, 11:59 PM** (you work on it at that Friday's
+studio). That studio is a **contract declaration round**: you declare Contract
+v0 in three minutes, take one question per listener on any field you wrote, and
+submit the same day.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m03_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: the four **MIDA** parts of your design (Model, Inquiry, Data strategy, Answer strategy), a 3-node **DAG** image, your **diagnosis** naming the biggest threat as bias, variance, or power plus the one **redesign** it demands, your **uncertainty statement**, your **permission determination** (one declared status, with the authority named if anything is pending), your **compass position and claim boundary**, and your AI Research Ledger rows. This is the graded artifact. |
+| 1 | **`lastname_m03_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: objective, target estimand, population, setting and time, data strategy, a **provisional operationalization marked for revision**, warrant, answer strategy, and uncertainty statement, with the model behind them drawn as a 3-node **DAG** image. With it comes your **diagnosis** (bias, wobble, and how often the design would detect what you are looking for), your **redesign record**, your **permission determination** (one declared status, with the authority and the date you asked if it is anything but cleared), your **claim boundary**, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 10, ch. 11, ch. 12, ch. 13** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
-If you submit a notebook link, make sure sharing is set so the instructor can
-open it, and that the DAG figure renders when the notebook is run.
+If you submit a notebook link, set sharing so the instructor can open it, and
+confirm that the DAG figure and any diagnosis output render when the notebook is
+run.
 
 ---
 
@@ -58,207 +62,320 @@ Dossier.
 
 ## Purpose
 
-This milestone assembles your **Research Contract v0** — the book's name for
-the declaration you produce here. **Version 0 means version 0.** Your
-**operationalization** (exactly how each concept becomes a measured
-indicator) is *provisional* at this milestone by design: you settle and
-version it at M5, when data and measurement get their own week. What may not
-be provisional is the shape: a Contract a stranger could run, a diagnosis
-that changed something, and a permission status you actually declared.
+This milestone assembles your **Research Contract v0**: the written design your
+whole project is held to from here on. Everything before this week shaped a
+question. Everything after it executes a design. This is the hinge, and the
+Contract is what turns the hinge.
 
-This is the milestone where your question stops floating and gets a **design** to
-live in. In nb04 you learned that every study, from a two-person survey to a
-national experiment, has the same four parts — **MIDA**: a **Model** (the world
-your question assumes), an **Inquiry** (the exact quantity you want), a **Data
-strategy** (how the data come to exist), and an **Answer strategy** (how you turn
-data into an estimate). You also learned the discipline that separates a real
-design from a hope: the four parts must **align** — all point at the same
-quantity — and the design must be **diagnosed** before you spend a semester
-running it, so you know in numbers what its answer can and cannot support.
+The Contract is declared **before any result exists**, and that timing is the
+entire point. A design written down in advance makes every later change visible
+as one of two things: **design**, a change you made for a stated reason, or
+**drift**, a change that quietly followed whichever number looked better. You
+cannot tell those apart in December unless you wrote the Contract in September.
 
-A **research charter** is that design, declared out loud and on paper, before any
-data arrive. Declaring the inquiry first is what protects you from *inquiry
-shopping* — quietly sliding toward whichever number looks best once you have seen
-results. Declaring and diagnosing the whole design first is what lets you show up
-in December standing behind a claim instead of defending a guess.
+**Version 0 means version 0.** Your **operationalization** (exactly how each
+concept becomes a measured indicator) is *provisional* here by design, and you
+mark it as such. You settle and version it at M5, when data and measurement get
+their own week. What may not be provisional is the shape: a Contract a stranger
+could run, a diagnosis that changed something, and a permission status you
+actually declared.
 
-This charter is not a detour for a project that will end up predictive or
-generalizing. MIDA is the shared machinery every later compass position reuses.
-The model, inquiry, data strategy, and answer strategy you declare here become
-the spine your descriptive audit (M4), your causal boundary (M5), and every
-protocol after it hang from. Get the four parts aligned and honestly diagnosed
-now, and the rest of the semester builds on solid ground.
+Inside the Contract sit the four **MIDA** parts you worked in nb04: a **Model**
+(the world your question assumes), an **Inquiry** (the exact quantity you want),
+a **Data strategy** (how the data come to exist), and an **Answer strategy** (how
+you turn data into an estimate). MIDA is the framework of Blair, Cooper, Coppock
+and Humphreys, developed at book length in RDSS; you are writing your own project
+into their labels. The discipline that separates a real design from a hope is
+that the four parts must **align**, all pointing at the same quantity.
+
+Then you find out how the design behaves while changing your mind is still free.
+**Diagnosing** a design means running it many times on a world you built, and
+reading what it does: whether its estimates sit off the truth, how much they
+wobble, and how often it would detect what you are looking for. A design you
+never diagnosed makes no promises, however rigorous its wording sounds.
+
+One field in this Contract can stop the project: the **permission
+determination**. It gates every later studio, and no work proceeds past a *not
+authorized* ruling. A rubric cannot clear you, and neither can an AI tool. Only
+the competent authority can.
 
 > **A question that often comes up here:** *"If your AI can draft a whole design
-> in seconds, why build it part by part myself?"* Because a design is a chain of
+> in seconds, why build it field by field myself?"* Because a design is a chain of
 > commitments, and the tool cannot make them for you. It does not know which
 > world your question assumes or which single number would actually answer it. If
 > you let it guess, you inherit its guess and defend a design you never reasoned
-> through. Building each part yourself is what lets you stand behind the whole at
-> the studio and at the defense.
+> through. Building each field yourself is what lets you stand behind the whole
+> Contract at the studio and at the defense.
 
 ## Components
 
-### 1. The Model (M) — your world, in prose and one DAG
+### 1. Research Contract v0 — the nine fields
+
+The Contract is a short document with nine named fields, one to three sentences
+each. Write them so a stranger could run your study from this page alone.
+
+- **Objective** — what you are trying to find out, in one sentence a
+  non-researcher could repeat back. Example: "Describe how menu prices near
+  campus moved against overall prices from 2019 to 2025."
+- **Target estimand** — the one quantity you want, stated as something in the
+  world that would have a value even if you never collected data. Apply the
+  **genie test**: if an all-knowing genie would still ask *"which number do you
+  mean?"*, the estimand is not written yet. "Does mentoring help?" fails; "the
+  average of Y1 minus Y0 across all first-years" passes.
+- **Population** — the full group your answer is about, named as a list someone
+  could in principle enumerate, not as a vague category.
+- **Setting and time** — where and when. The same quantity can come out
+  differently in another place or another year, so name both. "In Indiana, during
+  the 2026–2027 academic year" is a setting and time.
+- **Data strategy** — how the data come to exist: who or what gets sampled, from
+  which list, and who gets which condition, if any. Name the **actual sources
+  from your M2 registry**, by row, not source types. "A government price index"
+  is a type; the series you opened and registered is a source.
+- **Provisional operationalization, marked for revision** — how each concept
+  becomes a recorded value, in its current best guess, with the words *provisional,
+  settled at M5* written next to it. Example: "belonging = the mean of three
+  survey items, provisional, settled at M5."
+- **Warrant** — the design's reason your evidence can answer this question at
+  all. One sentence naming what makes the comparison you plan informative about
+  the estimand you named.
+- **Answer strategy** — the **estimator**, written as a recipe: what you collect
+  and exactly what you compute from it. Someone should be able to follow it
+  without asking you a question. A subtraction of two averages counts, and simple
+  is a feature here.
+- **Uncertainty statement** — what your eventual interval or spread will and will
+  not claim, plus **the wrong twin**: the tempting false version of that sentence,
+  written beside it, with one line on how you would catch yourself saying it.
+
+Any field you cannot yet fill gets written as an open question with the date you
+will close it, never left blank. A blank field is a decision you are making
+silently.
+
+### 2. The model behind the fields, and its DAG
 
 State, in a short paragraph, **what the world would have to be like for your
-question to have an answer.** Name the **units** (who or what your question is
+objective to have an answer.** Name the **units** (who or what your question is
 about), the thing that can **vary** across them, the **outcome** you care about,
-and the other forces that could plausibly move that outcome. This is a
-commitment to how the world *could* be, not yet a claim about which picture is
-true.
+and the other forces that could plausibly move that outcome. This is a commitment
+to how the world *could* be, not yet a claim about which picture is true.
 
-Then draw that world as a **DAG** — a directed acyclic graph, a diagram where a
+Then draw that world as a **DAG**: a directed acyclic graph, a diagram where a
 **node** is a variable and an **arrow** claims that one variable could directly
 influence another. Your DAG must have **three nodes**: your treatment (or the
-thing that varies), your outcome, and **at least one third variable** — a
+thing that varies), your outcome, and at least one third variable that is a
 **confounder**, a common cause with an arrow into *both* the treatment and the
 outcome. For each arrow, be ready to name the real-world mechanism it asserts.
 
 Submit the DAG as an **image** (a clear hand drawing photographed, or the
 figure from the studio notebook edited to your project).
 
-> **A question that often comes up here:** *"My question is descriptive — there
+> **A question that often comes up here:** *"My question is descriptive, and there
 > is nothing to intervene on. Do I still draw a DAG?"* Yes, and the third node
 > still earns its place. For a descriptive question your DAG shows what drives a
-> unit into your data and what moves the thing you measure; the confounder
+> unit into your data and what moves the thing you measure, and the confounder
 > becomes the trait that bends both. A model with only your treatment and your
-> outcome silently assumes nothing else moves the outcome — which is exactly the
+> outcome silently assumes nothing else moves the outcome, which is exactly the
 > assumption most descriptions get wrong.
 
-### 2. The Inquiry (I) — one estimand that passes the genie test
+### 3. The alignment check and the repeat-run story
 
-State the exact quantity you want, two ways: **in one plain sentence a
-non-researcher could repeat back**, and **as an estimand** — the target number a
-genie who could see your whole model would hand you with no missing data. Apply
-the **genie test**: if even an all-knowing genie would ask *"which number do you
-mean?"*, your inquiry is still vague. "Does mentoring help?" fails. "The average
-of Y1 minus Y0 across all first-years" passes.
+Two short pieces of writing hold the Contract together.
 
-Then classify it and name its **units**:
+**The alignment sentence.** Write the one sentence that ties your data strategy
+to your answer strategy: *"Because my data strategy is ___, the strongest honest
+wording of my result is ___."* If the two halves do not connect when you read
+them back, the Contract is not aligned. Fix the weaker half before you version
+it, rather than hoping the reader will not notice.
 
-- **Descriptive inquiry** — a summary of the world as it is (a share, an average,
-  a difference over a population you could in principle observe).
-- **Causal inquiry** — a comparison of two potential-outcome worlds for the same
-  units (any estimand with both Y1 and Y0 in it, because it reaches for the
-  counterfactual you never see).
+**The repeat-run story.** In two or three lines, say what would come out
+differently if your selection and measurement ran again over the same population,
+setting, and time. This describes your uncertainty in words before you can
+compute it. Keep the period fixed: a repeat next year would also move the
+quantity you are chasing, and that is a different kind of movement.
 
 Declare the estimand **now, before any data.** The number you name today is the
-answer key you are held to in December.
+answer key you are held to in December, and the alignment sentence is what shows
+your procedure is aimed at it.
 
-### 3. The Data strategy (D) — how your data come to exist
-
-One paragraph: **who is sampled, and who gets which condition.** Name the units
-you can actually reach and the mechanism that decides their condition — a coin
-flip, a lottery, self-selection, or plain observation of the world as it is. This
-is where a causal inquiry either earns a clean comparison (assignment you
-control) or inherits a confound (units select into treatment on their own).
-
-### 4. The Answer strategy (A) — data turned into an estimate
-
-One or two sentences: **how you turn the collected data into an estimate of your
-inquiry.** A difference in means, a share, a comparison across groups. The test
-your charter must pass is **alignment**: your answer strategy has to target the
-inquiry your model made askable, over the same units, not an easier quantity
-that happens to be nearby.
-
-### 5. The diagnosis and one redesign
+### 4. The diagnosis: bias, wobble, and detection
 
 A design earns a claim only when it is **diagnosed**, not merely argued for. In
-nb04 you declared a design and ran it many times to read three numbers:
+nb04 you declared a design, built a world where you set the true answer yourself,
+ran the design many times on it, and read three numbers:
 
-- **Bias** — the average distance between your estimate and the truth. A tilt
-  that **more data cannot fix**; only a design change moves it.
-- **Variance** — how much the estimate wobbles run to run. **More data shrinks
-  it.**
-- **Power** — how often the design would actually detect a real effect.
+- **Bias** — how far your estimates sit from the truth you planted, on average. A
+  tilt that **more data cannot fix**; only a design change moves it. Report it
+  **signed**: say which way it points, because "biased" alone does not tell a
+  reader whether you are over- or under-stating.
+- **Wobble (variance)** — how wide the spread of estimates is from run to run.
+  **More data shrinks it**, and so do sharper measurement and better-balanced
+  groups.
+- **Detection (power)** — how often the design would clear the threshold you
+  stated, when the effect you planted is really there. Write down the test and the
+  threshold you used, or the number means nothing.
 
-Write, for **your** design: which of the three is your **biggest threat**, what
-your best diagnosis (even a rough one, or a reasoned argument if you cannot yet
-simulate) says it does to your answer, and the **single redesign** that most
-improves it. The redesign must *read the diagnosis* — more units for a variance
-or power problem, a changed comparison or assignment for a bias problem. "Collect
-more data" for a confounded design is the classic wrong fix.
+Report all three for **your** design, then name the worst of them and say what it
+does to your answer. If you cannot simulate yet, record each number as *not
+estimated* and reason in words about direction instead: which way you expect the
+tilt, and what would widen the spread. Label that reasoning as reasoning. A number
+you did not compute is not a diagnosis.
 
-### 6. Compass position and claim boundary
+> **A question that often comes up here:** *"My diagnosis says the design will
+> usually miss. Do I have to change the question?"* No. Weak data never turn a
+> causal question into a descriptive one. What you write is that the question is
+> causal and **not yet identified by this design**, which is an honest state and a
+> real answer. Shrinking the question to fit the data you happen to have is the
+> move to avoid.
 
-Name your project's **compass position** — Description, Generalization,
-Prediction, or **Causal reasoning** — and write **two sentences** that draw its
-boundary:
+### 5. The redesign record
+
+Change exactly one thing, the thing your diagnosis points at, and diagnose again.
+Record both diagnoses side by side so the improvement, or its absence, is visible.
+Then write **the honest call** in one sentence: run it as redesigned, redesign
+again, or narrow the claim to what this design can actually deliver. All three
+are respectable outcomes, and pretending you never checked is not.
+
+The redesign must *read the diagnosis*. More units for a wobble or detection
+problem; a changed comparison, assignment, or sampling frame for a bias problem.
+"Collect more data" for a confounded design is the classic wrong fix, and it buys
+you a very precise estimate of the wrong quantity.
+
+A diagnosis that changed nothing is a diagnosis to distrust. If your record
+honestly ends with "nothing changed," say what evidence would have changed
+something, and why none of it appeared.
+
+### 6. The permission determination and your data governance
+
+Run the determination in writing, by answering three questions: is your knowledge
+meant to travel beyond this course, do identifiable living people enter your
+study, and how exactly do the data reach you. Then declare **exactly one
+permission status**:
+
+- **Cleared** — you may proceed.
+- **Formal determination required** — an authority such as the IRB must rule.
+- **Pending** — you asked, and you are waiting.
+- **Not authorized** — stop.
+
+If your status is anything but cleared, name the **competent authority** who can
+decide for a project like yours and the **date you asked**. A rubric cannot clear
+you, and neither can an AI tool; only the right authority can. Safe public or
+synthetic feasibility work stays open to you while you wait.
+
+Four short governance pieces travel with the status:
+
+- **Minimised columns** — list every variable you plan to record, then cross out
+  the ones your declared analysis does not require. For anything left that could
+  single someone out, say how you will coarsen it.
+- **The re-identification check** — for your planned quasi-identifiers (columns
+  like age, program, and hometown that jointly point at one person), report what
+  share of units would be unique, and which group carries the most risk. Work from
+  your schema, never from real records pasted into a tool.
+- **Your AI boundary** — two lines naming what you will send to an AI tool on this
+  project and what you will never send, plus the ledger field where you record
+  each send.
+- **The four governance decisions** — where the data live, who can open them, how
+  long you keep them, and what happens at the end. Give the retention date as an
+  actual date.
+
+Close with your **stop plan** in one sentence: if the determination comes back
+*not authorized*, which version of this question would you ask instead.
+
+### 7. The claim boundary
+
+Write **two sentences** that bound what this Contract can buy you:
 
 - **What your design can establish**: the strongest claim your declared,
   diagnosed design actually supports, stated with its uncertainty.
 - **What it cannot**: the tempting sentence your design does **not** license.
-  Name whether your design **identifies** an effect (a cause you can defend) or
-  only shows an **association** (a pattern), and forbid the **silent scope
-  change** from *associated with* to *causes* (the wording that quietly claims
-  cause your design never earned).
 
-Rigor is a diagnosed property, not a vibe. A design whose four parts quietly
-point at different quantities, or one you never diagnosed, makes no promises no
-matter how rigorous it sounds. This is that promise, written down and bounded.
+Then name which of three states your boundary sits in, and why: your design
+**identifies** an effect (a cause you can defend), it shows only an
+**association** (a pattern with no identification behind it), or your question is
+**causal but not yet identified by this design**. That third state is a real
+answer, and it is the honest one when a causal question meets data that cannot yet
+carry it.
 
-### 7. The permission determination
-
-Every project declares exactly one **permission status** before any data
-work: **cleared** (you may proceed), **formal determination required** (an
-authority such as the IRB must rule), **pending** (you asked and are
-waiting), or **not authorized — stop**. Declaring it is not an ethics
-essay. It is three questions from the book's ethics lesson: does your data
-involve people, is it yours to use under its licence and terms, and could
-your use expose anyone. If your status is anything but cleared, name the
-**authority** who can decide and the date you asked. A rubric cannot clear
-you; only the right authority can — and safe public or synthetic
-feasibility work stays open to you while you wait.
+Forbid the **silent scope change** in your own writing: the slide from *associated
+with* to *causes*, or from your sample to a population you never sampled. Rigor is
+a diagnosed property, not a vibe. A Contract whose fields quietly point at
+different quantities, or one you never diagnosed, makes no promises no matter how
+rigorous it sounds.
 
 ### 8. AI Research Ledger rows
 
-Every use of AI in building this charter gets a row in your **AI Research
+Every use of AI in building this Contract gets a row in your **AI Research
 Ledger** (the eight-field table: task delegated · tool used · prompt · output
 summary · decision · verification method · remaining concern · responsible
-researcher). Brainstorming a lurking variable, phrasing an estimand, listing
-threats to a design, and critiquing your boundary sentence are all delegable
-tasks, and each one you delegated needs a row that names how you verified the
-result. "No AI used" is a legitimate entry if it is true.
+researcher). Brainstorming a lurking variable, phrasing an estimand, writing
+simulation code for the diagnosis, listing threats to the design, and critiquing
+your boundary sentence are all delegable tasks, and each one you delegated needs
+a row naming how you verified the result. "No AI used" is a legitimate entry if
+it is true.
+
+Diagnosis is delegable; **the choice of what to fix is not**. The redesign, the
+honest call, and the permission status are yours, and a ledger row that hands any
+of them to a tool is a row that fails its own verification field.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 9. Dossier update line
+### 9. The dossier update line and the version line
 
-End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your MIDA declaration now carries a model with a DAG, a
-declared estimand, a data and answer strategy, a diagnosis with one named
-redesign, and a stated compass position and claim boundary. Name the file or
-section in your dossier where each now lives.
+Open the artifact with its version line: **Book Milestone 4, version 1 (contract
+declared and diagnosed)**, dated, with a reason a reader could use to reconstruct
+your thinking. Then end with one line recording what this milestone finalizes in
+your **Research Project Dossier**: the **Contract v0** component now carries the
+nine fields with the model and its DAG, the alignment sentence, the diagnosis and
+redesign record, the permission determination with its governance decisions, and
+the claim boundary. Name the file or section where each now lives.
 
 ---
 
-## Submission Expectations
+## Definition of Done
+
+You are done when your submission carries all of the following. Use this as a
+pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Length** | The charter's six declared parts + ledger rows (typically 2–4 pages PDF, or the equivalent notebook sections) |
-| **Figure** | The 3-node DAG as a legible image; treatment, outcome, and at least one confounder with an arrow into both |
-| **Studio work** | Worked at the Friday studio (Sep 18) with your AI assistant; submitted the same day |
-| **Style** | Plain language; every technical term used as defined in nb04; the inquiry stated both in words and as an estimand; the claim boundary stated as two explicit sentences |
-| **Filename** | `lastname_m03_charter.pdf` (or a shared Colab link) |
+| **Contract fields** | All nine written so a stranger could run the study: objective, target estimand, population, setting and time, data strategy, provisional operationalization, warrant, answer strategy, uncertainty statement |
+| **Provisional marking** | The operationalization carries the words *provisional, settled at M5* |
+| **Data strategy sources** | Named by registry row from your M2 evidence base, not as source types |
+| **Model and DAG** | The world your objective assumes, in prose, plus a legible 3-node DAG with a confounder arrowed into both treatment and outcome |
+| **Alignment sentence** | "Because my data strategy is ___, the strongest honest wording of my result is ___," and the two halves connect |
+| **Uncertainty statement** | What your interval will and will not claim, with its wrong twin written beside it |
+| **Diagnosis** | Bias reported signed, wobble, and detection with its stated test and threshold; anything not computed labeled *not estimated* and reasoned in words |
+| **Redesign record** | One thing changed, both diagnoses side by side, and the honest call in one sentence |
+| **Permission determination** | Exactly one status declared; if not cleared, the competent authority and the date you asked; minimised columns, re-identification check, AI boundary, four governance decisions with a real retention date, and the stop plan |
+| **Claim boundary** | Two sentences, plus which of the three states applies: identified, association only, or causal but not yet identified by this design |
+| **Version line** | Book Milestone 4, version 1, dated, with its reason |
+| **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
+| **Dossier line** | The Contract v0 component located by file or section |
+| **Studio work** | Worked at the Friday studio (Sep 18) with your AI assistant; declaration delivered; submitted the same day |
+| **Filename** | `lastname_m03_contract.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M03 |
 
 ---
 
 ## Grading Rubric (100 points)
 
-Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTURE.md`).
+Four bands on the course's five shared virtues
+(`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
+criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`, `contract-v0`).
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **MIDA alignment & compass fit** (30) | All four MIDA parts present and **aligned** — data and answer strategies reach the declared inquiry; the DAG shows a real confounder into both treatment and outcome, not a one-arrow model; the compass position fits the inquiry's own words (26–30) | Four parts and DAG present and mostly aligned; one part or one arrow thin or under-argued (21–25) | A MIDA part collapsed or the confounder missing, or the answer strategy targets an easier quantity than the inquiry (13–20) | One-arrow "model," or the four parts point at different quantities, or the compass position contradicts the question (0–12) |
-| **Evidence integrity & provenance** (15) | Every source, number, or prior finding cited to justify the design is real and retrievable; the reader can trace each to its origin (13–15) | Real and traceable; one provenance link thin (11–12) | A claimed source or figure asserted without a locatable origin (6–10) | A cited source or number that does not exist or does not say what you claim (0–5) |
-| **Verification of the diagnosis & AI-assisted parts** (20) | The diagnosis reruns and its numbers trace to the declared design; every AI-assisted step (variable brainstorm, estimand phrasing, threat list, boundary critique) has a ledger row with a named, non-vague verification method (18–20) | Diagnosis traceable and ledger present; one verification method vague or one step unlogged (14–17) | Diagnosis asserted but not traceable to the design, or AI outputs used with verification unnamed (8–13) | A diagnosis number with no path back to the design, or AI output reproduced with no verification (0–7) |
-| **Uncertainty, limitations & claim boundary** (20) | The diagnosis names the biggest threat (bias, variance, or power) honestly and says what it does to the answer; both boundary sentences present; the identified-vs-associated line is drawn and the silent scope change from association to cause forbidden (18–20) | Threat named and both boundary sentences present; uncertainty or the forbidden crossing stated loosely (14–17) | Only one boundary sentence, or the threat named without saying what it does, or no redesign that reads the diagnosis (8–13) | No diagnosis, no boundary, or a design whose language slides from association to cause (0–7) |
-| **Craft, ledger & communication** (15) | On-format, on-time, clear 3-minute declaration, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; ledger complete (10–12) | Missing pieces or a rushed declaration (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+| **Contract completeness & alignment** (30) | All nine fields present, specific to your project, and pointing at one quantity; the alignment sentence holds; the operationalization is marked provisional; the DAG shows a real confounder into both treatment and outcome (26–30) | Fields and DAG present and mostly aligned; one field or one arrow thin or under-argued (21–25) | A field blank or collapsed, the provisional marking missing, or the answer strategy targeting an easier quantity than the estimand (13–20) | A one-arrow "model," fields that point at different quantities, or a Contract generic enough to fit any project (0–12) |
+| **Evidence integrity & provenance** (15) | The data strategy names actual sources from your M2 registry by row; every source, number, or prior finding cited to justify the design is real and retrievable (13–15) | Real and traceable; one provenance link thin (11–12) | Sources named as types rather than rows, or a figure asserted without a locatable origin (6–10) | A cited source or number that does not exist, or does not say what you claim (0–5) |
+| **Verification of the diagnosis & AI-assisted parts** (20) | The diagnosis reruns and its numbers trace to the declared design, seeded (`SEED = 464`); every AI-assisted step has a ledger row with a named, non-vague verification method; the redesign and the honest call are argued in your words, not the tool's (18–20) | Diagnosis traceable and ledger present; one verification method vague or one step unlogged (14–17) | Diagnosis asserted but not traceable to the design, or AI outputs used with verification unnamed (8–13) | A diagnosis number with no path back to the design, or AI output reproduced with no verification (0–7) |
+| **Uncertainty, limitations & claim boundary** (20) | Bias is reported signed, detection carries its stated test and threshold, and the worst of the three is named with what it does to your answer; the uncertainty statement and its wrong twin are both present; both boundary sentences are there and the three-state call is made (18–20) | Threat named and both boundary sentences present; the uncertainty statement or the state call stated loosely (14–17) | Only one boundary sentence, a threat named without saying what it does, or a redesign that does not read the diagnosis (8–13) | No diagnosis, no boundary, a causal question relabeled descriptive to fit weak data, or language that slides from association to cause (0–7) |
+| **Craft, version, ledger & communication** (15) | Versioned with its reason, on-format, on-time, a clear 3-minute declaration that took questions on any field, complete AI Research Ledger, dossier line present (13–15) | Minor format lapses; version and ledger complete (10–12) | Missing pieces or a rushed declaration (5–9) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–4) |
+
+**Blocking gate (not scored, and it cannot be averaged away):** no work at or
+after this milestone proceeds past a **not authorized** determination. A Contract
+that plans data work under a *not authorized* or undeclared status is returned,
+whatever its other scores, until the status is settled with the competent
+authority.
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -268,8 +385,9 @@ Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTUR
   declared design or simulation — caps *Verification* at Beginning.
 - A **non-reproducing result** — a diagnosis whose numbers do not rerun from the
   design you declared — caps *Verification* at Beginning.
-- A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
-  **0** and the submission is **returned** unread until it is supplied.
+- A **missing AI Research Ledger entry** scores *Craft, version, ledger &
+  communication* **0** and the submission is **returned** unread until it is
+  supplied.
 
 **Revision:** eligible under the standing policy — a revised submission within 7
 days of feedback recovers up to half the lost points.
@@ -282,36 +400,36 @@ days of feedback recovers up to half the lost points.
   or not to say what you claim: *Evidence integrity & provenance* scores
   Beginning regardless of the rest — the course's evidence-integrity rule with
   teeth.
+- An undeclared permission status, or planned data work under a *not authorized*
+  ruling: the submission is returned before it is graded.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 
 ## Common Pitfalls
 
-1. **The one-arrow DAG, and MIDA parts that point different directions.** Drawing
-   *treatment → outcome* with nothing else is your conclusion wearing a model's
-   clothes; it silently assumes nothing else moves your outcome. The node you are
-   tempted to omit — the confounder — is usually the one that matters most. The
-   same failure at the design level is four MIDA parts that quietly serve
-   different quantities: a population inquiry chased by a convenience sample, a
-   causal inquiry with a data strategy that never varies the cause. Align them or
-   the design promises nothing.
-2. **The undiagnosed design.** A charter that declares all four parts and then
-   asserts the design "is rigorous" has skipped the only thing that earns the
-   word. Rigor is a diagnosed property. Name the biggest threat as bias,
-   variance, or power, say what it does to your answer, and bring the one
-   redesign it demands — or your declaration makes no promises.
-3. **Fixing the wrong number, or upgrading the claim.** Reaching for "more data"
-   to rescue a design whose real problem is a confound spends your budget on
-   variance while the bias sits untouched, giving you a very precise estimate of
-   the wrong quantity. Its twin is a **silent scope change**: writing "mentoring
-   *raises* belonging" when your design only shows the two are associated. Match
-   the fix to the diagnosis, and keep your language on the side of the line your
-   design actually reaches.
+1. **The Contract with a blank field, and fields that point different
+   directions.** A missing estimand or an unnamed population is a decision made
+   silently, and silence is what the Contract exists to prevent. The same failure
+   at design level is fields that quietly serve different quantities: a population
+   estimand chased by a convenience sample, or a causal estimand with a data
+   strategy that never varies the cause. Write the alignment sentence and see
+   whether its two halves connect.
+2. **The undiagnosed design, or the diagnosis that changed nothing.** A Contract
+   that declares every field and then asserts the design "is rigorous" has skipped
+   the only thing that earns the word. Report bias signed, wobble, and detection
+   with its threshold; name the worst; change the one thing it points at. A
+   redesign record that ends in "nothing changed" is usually a diagnosis that was
+   never allowed to hurt.
+3. **Fixing the wrong number, or shrinking the question to fit the data.**
+   Reaching for "more data" to rescue a confounded design spends your budget on
+   wobble while the bias sits untouched. Its twin is relabeling a causal question
+   as descriptive because the design cannot identify it. The honest move is to
+   keep the question and write *causal but not yet identified by this design*,
+   then bound the claim accordingly.
 
 ---
 
-*Previous: [M02 — Verified Evidence & Contribution Map](milestone_02_verified_evidence_map.md) ·
-Next: [M04 — Observational Descriptive Design Audit](milestone_04_observational_descriptive_audit.md) —
-your declared, diagnosed design gets its descriptive layer audited: who is
-actually in your data, what you measured, and how far a plain description of them
-can honestly travel.*
+*Previous: [M02 — Verified Evidence and Contribution Map](milestone_02_verified_evidence_map.md) ·
+Next: [M04 — Pathway Declaration and Mandated Contrast](milestone_04_observational_descriptive_audit.md) —
+your declared, diagnosed Contract commits to one research pathway, with a
+mandated contrast that shows what that route can never establish.*

@@ -42,11 +42,12 @@ pattern, and write the revision that pattern licenses.
 | 1 | **`lastname_m12_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-evaluation, with your AI Research Ledger rows attached. This is the graded written artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 29** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
-The **Expo presentation (Tuesday, November 17)** is a separate graded component
-of this milestone and is not a Brightspace upload — it happens in the room. There
-is no revision window on it (see Penalties). If you submit the written package as
-a notebook link, set sharing so the instructor can open it, and make sure your
-tally table renders when the notebook is run.
+The **Expo presentation (Tuesday, November 17)** is a graded component of this
+milestone and is not a Brightspace upload: it happens in the room, and so does
+your evaluation of at least three other posters. Neither has a revision window
+(see Penalties). If you submit the written package as a notebook link, set
+sharing so the instructor can open it, and make sure your tally table renders
+when the notebook is run.
 
 ---
 
@@ -70,13 +71,25 @@ Dossier.
 
 ## Purpose
 
-At the Expo, strangers asked you questions your friends and the class run-throughs
-never thought to ask. That is not applause to be flattered by or a bruise to carry
-home. It is **data about your project**, collected from the one audience you cannot
-assemble in a classroom. This milestone makes you treat it that way: code every
-question you received the way you would code any dataset, read the pattern off the
-counts, and turn what you learned into an honest reflection and a fair criticism
-of three peers' posters.
+Your release audit closed at M11, four days before the Expo, and the Expo was the
+release. That order is the point of the design. You decided whether this work was
+ready to leave your hands **before** it left them, so Tuesday, November 17 was not
+a rehearsal for some later public moment. It was the public moment, and strangers
+questioned a claim you had already committed to.
+
+What came back is **audience data**: the questions a room of non-specialists
+actually asked, gathered from the one audience you cannot assemble in a classroom.
+It is not applause to be flattered by or a bruise to carry home. This milestone
+makes you treat those questions as evidence. You code every one of them the way
+you would code any dataset, read the pattern off the counts, and then do the part
+that carries the most weight downstream: write down what public questioning
+changed in your claim, your boundary, or your defense.
+
+That written change is the **defense revision record**, and it is why this
+milestone exists. It is the bridge into your research note at M14. A question that
+exposed a boundary you had never stated, or a number you could not trace while a
+visitor waited, is a repair with a deadline attached, and the record is where you
+book it.
 
 The discipline being trained is the course's signature move, pointed back at your
 own reception. You separate a **communication signal** (a listener could not follow
@@ -98,22 +111,24 @@ crowd can love a poster whose central claim is wrong.
 
 ### 1. The Expo presentation and peer evaluation (Tuesday, November 17)
 
-The live half of this milestone. On the day you do two things, both graded:
+The live half of this milestone, and the release itself. Your M11 audit already
+decided this work could go public, so the Expo is not a dress run. On the day you
+do two things, both graded:
 
 - **Present your poster** and deliver a **bounded claim** out loud: state what
   your evidence shows and, in the same breath, the boundary it does not cross
-  (which reach, which kind). Answering a stranger's question in time, without
+  (which kind, which reach). Answering a stranger's question in time, without
   notes, is the skill a printed poster cannot fake.
-- **Evaluate at least three peer posters.** These are not idle walk-bys. Each one
-  is the raw material for a structured criticism in your portfolio (Component 5),
-  so take notes at the poster: the peer's central claim, the evidence shown for
-  it, and the one place the two do not line up.
+- **Evaluate at least three other posters.** These are not idle walk-bys. Each one
+  is the raw material for a structured criticism in your portfolio (Component 6),
+  so take notes at the poster itself: the presenter's central claim, the evidence
+  shown for it, and the one place the two do not line up.
 
 While you present, **capture the questions you are asked in the moment.** After
-each visitor leaves, jot one line — the question's gist plus a one-word tag — on a
-phone note or an index card. Star anything you hear more than once. That log is
-your coding sheet for Component 2, and it is the difference between real data on
-the day and a vague memory by the time reflection comes around.
+each visitor leaves, jot one line on your coding sheet: the question's gist plus a
+one-word tag. Star anything you hear more than once. That sheet is the data behind
+Components 2 through 5, and it is the difference between real evidence about the
+day and a vague memory by the time Friday arrives.
 
 > **A question that often comes up here:** *"Can I reconstruct my questions from
 > memory afterward if I forget to log them?"* No, and the notebook's seeded demo
@@ -152,30 +167,56 @@ be readable off your own counts, not felt from the mood of the room.
 
 ### 4. The honest reflection paragraph
 
-One paragraph: **what the conference changed in how you see your project.** Not
+One paragraph: **what the public test changed in how you see your project.** Not
 "it went well" or "it was stressful," but what you now believe *differently* about
 your question, your evidence, or your claim's boundary because of the audience
 data, **stated with its uncertainty and its limits.** If the honest answer is "the
 recurring generalization doubt confirmed my scope is too narrow," say that. If it
 is "warm reception, but no one probed my weakest claim, so I still do not know if
-it holds," say that too — that is the most useful reflection of all. Name whether
-what the Expo exposed lives in your **claims** or your **communication**.
+it holds," say that too, because that is the most useful reflection of all. Name
+whether what the Expo exposed lives in your **claims** or your **communication**.
 
 ### 5. The defense revision record
 
-Public questioning is evidence about your claim. Record what it changed:
-the one or two places where an Expo question revealed a boundary you had
-not stated, a number you could not trace on the spot, or an answer that
-widened your claim under pressure. For each, write the **revision** — the
-corrected sentence, boundary, or defense you will carry into the research
-note v1 at M14 — and the reason. "Nothing changed" is a legal entry only
-with a defense: name the hardest question you received and show your
-existing boundary already answered it.
+The spine of this milestone, and the piece M14 will ask for by name. Public
+questioning is evidence about your claim, so record what it changed. Walk your
+tally and find every place where the Expo exposed something: a boundary you had
+never stated aloud, a number you could not trace while a visitor waited, an answer
+that widened your claim under pressure, or a limitation someone named before you
+did.
+
+Give each exposure a row in a small table with three cells:
+
+- **What the questioning exposed.** The question, the tally rows it came from, and
+  what it revealed about the claim or the way you defend it.
+- **The revision.** The corrected sentence, the tightened boundary, or the rebuilt
+  defense you will carry into your research note at M14. Write it out in the words
+  you will actually use, not as a note to yourself about fixing something later.
+- **The reason.** Why the evidence licenses that revision and no more. A recurring
+  generalization doubt licenses a narrower reach, not a retraction; a single
+  unanswerable methods question may license a new check rather than a new claim.
+
+Say for each row which of three things moved: the **claim** (what you assert), the
+**boundary** (how far it reaches), or the **defense** (how you answer for it when
+questioned). Those are three different repairs, and confusing them is how a
+project either overcorrects or quietly hides.
+
+**"Nothing changed" is a legal entry, and only with a defense.** If your tally
+genuinely moved nothing, say so and then earn it: name the single hardest question
+you received, quote the boundary your artifact already carried, and show that the
+boundary answered the question before it was asked. An undefended "nothing
+changed" reads as a record nobody kept.
+
+> **A question that often comes up here:** *"What if a question exposed something
+> I cannot fix before December?"* Write the row anyway, with what fixing it would
+> take and what it costs the claim meanwhile. An unfixed weakness you named is a
+> limitation; an unfixed weakness you hid is a defect. M14 grades the
+> adjudication, not the absence of problems.
 
 ### 6. The poster-criticism portfolio
 
-Three structured, kind-but-critical readings of the peers' posters you evaluated.
-Each practices **structured criticism**, which means feedback tied to a specific
+Three structured, kind-but-critical readings of the posters you evaluated. Each
+practices **structured criticism**, which means feedback tied to a specific
 **axis** and to the evidence, not a vibe. A structured criticism does three things:
 
 - **Names the axis** it aims at — **claims** (the design cannot support the claim
@@ -184,7 +225,7 @@ Each practices **structured criticism**, which means feedback tied to a specific
   "the poster was confusing," but "the central claim is causal, yet the design
   only compares volunteers to non-volunteers, so the poster shows a difference,
   not a cause."
-- **Stays kind-but-critical** — you attack the claim, never the person. Vague
+- **Stays kind-but-critical.** You attack the claim, never the person. Vague
   praise leaves a peer nothing to fix; naming exactly where their evidence stops
   short is the most useful thing a reader can give.
 
@@ -197,49 +238,96 @@ in the portfolio.
 > peer's evidence stops short, on a stated axis, is precisely what you want in
 > return. Kind-but-critical means the target is always the claim, never the person.
 
-### 7. The self-evaluation
+### 7. The post-release note
+
+Half a page at most, and it closes the loop your M11 release audit opened. That
+audit cleared this work to go public under a set of named conditions. Now that it
+has gone public, three questions each get an honest line:
+
+- **Did anything move between the audit and the Expo?** Any change to the poster,
+  a number, the claim wording, or the package behind them after the audit makes
+  that audit **stale**, meaning it no longer describes what you actually released.
+  Name what moved, or state plainly that nothing did.
+- **Which audit rows did the public test touch?** Permissions, disclosure, claim
+  boundaries, and uncertainty are the rows a live audience presses hardest. Say
+  which ones came up and whether the disposition you recorded held.
+- **Does the release decision still stand?** If it does, say why in one sentence.
+  If the Expo surfaced something that would have made you withhold, write the
+  repair that now blocks the next release, in the same "withhold pending this
+  named fix" form you used at M11.
+
+This note is a record, not a second audit. You are not rerunning the checklist;
+you are saying what the release event itself taught you about a decision you had
+already made.
+
+### 8. The self-evaluation
 
 Two honest lines, judged against the evidence and not the applause: **one thing
 your own presentation did well** and **one thing you would do differently.** This
 is the never-delegate core of the milestone. Naming a weakness in your own work is
 yours to write; no tool can do it honestly for you. Measure yourself against your
-counts — the recurring doubt you could not answer, the figure that drew a
-communication question three times — not against how warm the room felt.
+counts, the recurring doubt you could not answer and the figure that drew a
+communication question three times, rather than against how warm the room felt.
 
-### 8. AI Research Ledger rows
+### 9. AI Research Ledger rows
 
 Every use of AI in building this package gets a row in your **AI Research Ledger**
 (the eight-field table: task delegated · tool used · prompt · output summary ·
 decision · verification method · remaining concern · responsible researcher).
-Flagging a possibly mis-coded row, red-teaming the new research idea your pattern
-suggests, and listing where a peer poster's evidence falls short of its claim are
-all delegable tasks, and each one you delegated needs a row that names how you
-verified the result against reality. "No AI used" is a legitimate entry if it is
+Flagging a possibly mis-coded row, drafting candidate wordings for a revision,
+red-teaming the pattern you read off the counts, and listing where a poster's
+evidence falls short of its claim are all delegable tasks. Each one you delegated
+needs a row that names how you verified the result against your own tally or
+against the poster in front of you. "No AI used" is a legitimate entry if it is
 true.
+
+One boundary is absolute here. A tool may propose wording for a revision; it may
+never decide **whether** a revision is licensed. That judgment reads your counts,
+your evidence, and your claim boundary together, and it is the judgment you will
+defend at M14. Any row where AI drafted a revision must record the check you ran
+before you accepted it.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 9. Dossier update line
+### 10. The dossier update line and the version line
 
-End with one line recording what this milestone finalizes in your **Research
+Open the artifact with its version line: **Book Milestone 10, version 2**, dated,
+with a reason a reader could use to reconstruct your thinking. Version 1 was the
+artifact you built to your venue contract; version 2 is that same artifact after a
+public audience questioned it, so the reason names what the public test changed.
+
+Then end with one line recording what this milestone finalizes in your **Research
 Project Dossier**: your communication record now carries a coded audience tally, a
-stated feedback pattern, an honest reflection with its limits, a three-entry
-criticism portfolio, and a self-evaluation. Name the file or section where each
-now lives. That line is your bridge into M13, where you reproduce and red-team a
-peer's anonymized package over the break.
+stated pattern, an honest reflection with its limits, a defense revision record, a
+three-entry criticism portfolio, a post-release note, and a self-evaluation. Name
+the file or section where each now lives. That line is your bridge into M13, where
+you cold-run and red-team a classmate's anonymized package over the break.
 
 ---
 
-## Submission Expectations
+## Definition of Done
+
+You are done when your submission carries all of the following. Use this as a
+pre-submission checklist.
 
 | Item | Specification |
 |---|---|
-| **Length** | The six-part package (tally table + pattern + reflection paragraph + three portfolio entries + self-evaluation + ledger rows) — typically 2–3 pages PDF, or the equivalent notebook sections |
-| **Table** | The tally is a real table with the three codes (type / target / recurrence) as columns; a stranger could read it |
-| **Live component** | Expo presentation + evaluation of ≥3 peer posters (Tue Nov 17); reflection story round at the Friday studio (Nov 20) — both part of the grade |
-| **Style** | Plain language; the claims-vs-communication split applied consistently; every portfolio entry names its axis and points at the evidence |
+| **Live component** | Presented at the Expo (Tue Nov 17) with a bounded claim spoken aloud, and at least three other posters evaluated on the structured forms |
+| **Coded tally** | A real table, one row per question, coded by type, target (claims vs communication), and recurrence; a stranger could read it |
+| **Pattern** | One or two sentences read straight off the counts, citing the rows behind them, plus the one claims question that recurred |
+| **Reflection** | One paragraph on what the public test changed in how you see the project, with its uncertainty and its limits |
+| **Defense revision record** | Every exposure a row: what the questioning exposed, the revision written out in full, and its reason; each row names claim, boundary, or defense; any "nothing changed" defended with the hardest question and the boundary that already answered it |
+| **Criticism portfolio** | Three entries, each naming its axis and pointing at real evidence on the actual poster |
+| **Post-release note** | Half a page: what moved since the M11 audit, which audit rows the public test touched, and whether the release decision still stands |
+| **Self-evaluation** | Two lines measured against your counts rather than the mood of the room |
+| **Version line** | Book Milestone 10, version 2, dated, with its reason |
+| **Permission status** | Your permission determination is still authorized; blocked work does not proceed |
+| **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague; no revision decided by a tool |
+| **Dossier line** | Each finalized piece located by file or section |
+| **Studio work** | Worked at the Friday reflection studio (Nov 20) with your AI assistant and submitted the same day |
+| **Length** | Typically 2–4 pages PDF, or the equivalent notebook sections |
 | **Filename** | `lastname_m12_reflection.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M12 |
 
@@ -247,15 +335,18 @@ peer's anonymized package over the break.
 
 ## Grading Rubric (100 points)
 
-Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTURE.md`).
+Four bands on the course's five shared virtues
+(`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
+criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
+`defense-ready-v1`).
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Feedback-coding & claim-boundary correctness** (30) | Every question logged and coded consistently by type/target/recurrence; the claims-vs-communication split is right; the pattern reads straight off the counts; each portfolio entry names its axis and stays inside the poster's licensed reach (26–30) | Tally nearly complete and the split mostly right; one code dimension thin or one portfolio entry under-argued (21–25) | Partial tally or one code dimension missing throughout; or a criticism that names no axis (13–20) | A list of impressions, not coded data; or reception treated as validation of the claims (0–12) |
-| **Evidence integrity** (20) | Every logged question was actually asked and every portfolio gap points at a real element on the actual poster; recurrence counts trace to the coding sheet (18–20) | Real and traceable throughout; one row or one poster gap lightly sourced (14–17) | A question or a poster flaw asserted without a path back to what was actually asked or shown (8–13) | A fabricated question you were not asked, or a poster flaw the poster does not have (0–7) |
-| **Verification of AI-assisted parts** (20) | The pattern and any shares are checked against the counts (recomputed or hand-counted, not felt); every AI-assisted step has a ledger row with a named, non-vague verification method (18–20) | Verification present; one method vague or one AI step unlogged (14–17) | Counts used but the pattern not verified against them; AI outputs used without a named check (8–13) | A reported count that does not rerun from the tally, or an AI-drafted reflection/critique reproduced with no verification (0–7) |
-| **Uncertainty & limitations** (20) | The reflection states what remains untested and names its limits (how few questions logged, the recall gap); it refuses to read a warm room as proof; the self-evaluation names a real weakness (18–20) | Honest reflection and self-evaluation; uncertainty or the warm-room caveat stated loosely (14–17) | Reflection general or performative; limits gestured at but not named (8–13) | "It went great" with no substance, or reception read as certainty about the claims (0–7) |
-| **Craft, ledger & communication** (10) | On-format, on-time; Expo presented and ≥3 posters evaluated; clear reflection story round; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces, a thin portfolio, or fewer than three posters evaluated (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Feedback coding & defense revision** (30) | Every question logged and coded consistently by type, target, and recurrence; the claims-vs-communication split is right; the pattern reads straight off the counts; every exposure carries a revision written out in full with its reason, each naming claim, boundary, or defense; any "nothing changed" is defended with the hardest question and the boundary that answered it; each portfolio entry names its axis and stays inside that poster's licensed reach (26–30) | Tally nearly complete and the split mostly right; one revision row thin, or one portfolio entry under-argued (21–25) | Partial tally, one code dimension missing throughout, a revision promised but never written out, or a criticism that names no axis (13–20) | A list of impressions rather than coded data; an undefended "nothing changed"; or reception treated as validation of the claims (0–12) |
+| **Evidence integrity** (20) | Every logged question was actually asked, every revision points back to the tally rows that prompted it, every portfolio gap points at a real element on the actual poster, and the post-release note describes the package you really released (18–20) | Real and traceable throughout; one row, one poster gap, or one post-release line lightly sourced (14–17) | A question, a revision, or a poster flaw asserted without a path back to what was asked, counted, or shown (8–13) | A fabricated question you were not asked, or a poster flaw the poster does not carry (0–7) |
+| **Verification of AI-assisted parts** (20) | The pattern and any shares are checked against the counts, recomputed or hand-counted rather than felt; every AI-assisted step has a ledger row with a named, non-vague verification method; every revision was decided by you, with any AI-drafted wording checked before acceptance (18–20) | Verification present; one method vague, or one AI step unlogged (14–17) | Counts used but the pattern not verified against them, or AI output accepted without a named check (8–13) | A reported count that does not rerun from the tally, or an AI-drafted reflection, revision, or critique reproduced with no verification (0–7) |
+| **Uncertainty & limitations** (20) | The reflection states what remains untested and names its limits (how few questions were logged, the recall gap); each revision reason says why the evidence licenses that much and no more; the post-release note names any staleness honestly; the self-evaluation names a real weakness (18–20) | Honest reflection, revision reasons, and self-evaluation; uncertainty or the warm-room caveat stated loosely (14–17) | Reflection general or performative; a revision reason that asserts rather than argues; limits gestured at but not named (8–13) | "It went great" with no substance, an overcorrection with no evidence behind it, or reception read as certainty about the claims (0–7) |
+| **Craft, ledger & communication** (10) | Versioned with its reason, on-format, on-time; Expo presented and at least three posters evaluated; post-release note present; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces, a thin portfolio, a decorative version reason, or fewer than three posters evaluated (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -282,6 +373,8 @@ revision window**.
 - **Missed Expo presentation:** the Expo is required and terminal; a missed
   presentation forfeits its share of the grade and cannot be revised or made up
   except for a documented emergency arranged in advance.
+- Fewer than three posters evaluated: the portfolio cannot be completed as
+  specified, and *Craft, ledger & communication* scores Developing at best.
 - Any question you log that you were not actually asked, or any poster flaw you
   attribute that is not on the poster: *Evidence integrity* scores Beginning
   regardless of the rest — the course's evidence-integrity rule with teeth.
@@ -293,21 +386,28 @@ revision window**.
 1. **Applause as evidence.** A warm reception measures how well you
    *communicated*, not whether your *claims* are true. Code the two targets
    separately and never let the first stand in for the second. The single loudest
-   question in the room is often a cosmetic communication fix while the recurring
+   question in the room is often a cosmetic communication fix, while the recurring
    doubt that matters aims quietly at your evidence.
-2. **The un-coded tally.** A bulleted memory of the day is not data. If you cannot
-   sort each row by type, target, and recurrence, you have not coded it — you have
+2. **The revision you promised instead of wrote.** "I should tighten my
+   generalization claim" is an intention, not a revision. M14 needs the sentence
+   itself, in the words you will use, with the reason the evidence licenses it.
+   A record of intentions gives your future self nothing to paste and nothing to
+   defend.
+3. **The un-coded tally.** A bulleted memory of the day is not data. If you cannot
+   sort each row by type, target, and recurrence, you have not coded it; you have
    transcribed applause. Capture in the moment so your reflection reads the whole
-   afternoon and not a lucky handful of it.
-3. **The criticism that decorates instead of names an axis.** "The poster was
+   afternoon rather than a lucky handful of it.
+4. **The criticism that decorates instead of naming an axis.** "The poster was
    confusing" helps no one. A structured criticism names the axis (claims or
-   communication), points at the specific evidence on the poster, and could be
-   checked by anyone. A flaw you cannot find on the actual poster is one an AI
-   tool imagined for you; cut it before it reaches your portfolio.
+   communication), points at specific evidence on the poster, and could be checked
+   by anyone. A flaw you cannot find on the actual poster is one an AI tool
+   imagined for you; cut it before it reaches your portfolio.
 
 ---
 
-*Previous: [M11 — Presentation Package](milestone_11_presentation_package.md) ·
-Next: [M13 — Replication & Red-Team Report](milestone_13_replication_redteam.md) —
-your coded reception and criticism discipline become the standard you apply to a
-peer's anonymized package, reproduced and stress-tested over the break.*
+*Previous: [M11 — Defense-Ready Presentation Package](milestone_11_presentation_package.md),
+where the release audit decided this work could leave your hands ·
+Next: [M13 — Replication and Red-Team Report](milestone_13_replication_redteam.md) —
+the coding and criticism discipline you just turned on your own reception becomes
+the standard you apply to a classmate's anonymized package, cold-run over the
+break.*

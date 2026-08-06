@@ -1,4 +1,4 @@
-# Course milestone M0 — Research and AI Baseline
+# Course milestone M0 — Curiosity Committed and the Research Problem
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M0**.
@@ -34,9 +34,9 @@ If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.
 
 This is the smallest, warmest, lowest-stakes milestone of the whole chain, on
-purpose. What you commit to is a version-zero commitment, not a contract: every
-milestone in this chain is a dated version, and later evidence can and will
-revise this one on the record. You are catching a curiosity before it
+purpose. What you commit to here is version zero, not a contract: every milestone
+in this chain is a dated version, and later evidence can and will revise this one
+on the record. You are catching a curiosity before it
 evaporates, choosing one problem out of the several it could become, checking
 that your tools turn on, and installing the habit the whole course runs on. Use
 AI hard, then verify everything it hands you before you put your name on it.
@@ -66,10 +66,11 @@ Dossier.
 
 ## Purpose
 
-Every claim defended in December started as something that would not leave
-someone alone in August. This milestone catches that thing before it evaporates,
-and then it makes you choose. By Friday you have a **committed curiosity** on the
-record and one **research problem** you are willing to chase for a semester.
+Every claim defended in December started as something that would not leave its
+researcher alone in August. This milestone catches that thing before it
+evaporates, and then it makes you choose. By Friday you have a **committed
+curiosity** on the record and one **research problem** you are willing to chase
+for a semester.
 
 The course runs one **studio** per week: a themed week of the course book whose
 lessons you work Monday and Wednesday and whose milestone you build and submit on
@@ -100,10 +101,10 @@ claim.
 
 ## Components
 
-The artifact has four moving parts and a wrapper: the four lines you started
-from, the stretch that widened them, the problem you chose, and the answer you
-expect, all carried inside a dated version with its reason. Give each component
-below its own labeled section.
+Four moving parts make up the artifact: the four lines you started from, the
+stretch that widened them, the problem you chose, and the answer you expect. The
+components below add the rails, the setup, the ledger, and the dated version that
+carries all of it. Give each one its own labeled section.
 
 ### 1. Version zero: your four lines
 
@@ -145,68 +146,107 @@ Your own two come first for a reason. If you open the tool before you have
 written anything down, its framing quietly becomes your framing, and by Friday
 you will not be able to tell which ideas were yours.
 
-### 2. Your AI baseline
+### 3. The chosen research problem, scored and red-teamed
 
-This is the half of M0 that is unique to this course. Draw the line you will
-patrol all semester, in three parts, from your nb01 Human-Only Checkpoint.
+Name the one research problem you carry forward, in a sentence that says what is
+unknown and who the answer is about. Then score it honestly, one sentence each:
 
-- **Two things you assume AI is good at** for research, and for **each one, the
-  exact check** that would confirm or break that assumption. "Good at finding
-  sources" is only half an entry; the check ("I retrieve each title in the
-  library catalog and open the real paper") is what makes it a baseline you can
-  act on.
-- **Two decisions in your own project you will NOT let AI make**, drawn from the
-  never-delegate list, with one sentence each on why it is yours to own. The full
-  list lives in
-  [`ai_resources/human_responsibility_checklist.md`](../../ai_resources/human_responsibility_checklist.md).
-- **One honest worry about your own automation bias**: where are you most likely
-  to stop checking because an answer sounded good? If you cannot yet name where
-  you over-trust the tool, say so. That is itself a finding, and it names the
-  habit to watch first.
+- **Importance** — would anyone beyond you act on the answer, or be surprised by
+  it?
+- **Feasibility** — can you actually get this evidence this term, with the
+  access, the time, and the skills you have?
+- **Contribution** — does answering it add something not already known? This
+  score is **provisional**, meaning it stands only until better information
+  arrives. M2 maps the evidence and can overturn it. Even so, any source you name
+  here must be real and retrievable today.
 
-This is the **assistance-versus-intellectual-substitution** line from nb01.
-**Assistance** speeds up work you could check and own. **Intellectual
-substitution** is letting the tool make a judgment that was yours to make. Your
-baseline says, in writing, which is which for you.
+Then **red-team your own choice**, which means arguing against it as hard as a
+skeptic would. Name the strongest reason this is a bad problem to chase. Real
+risks include **too broad to finish**, **no reachable data**, and **already
+settled**. A choice with no named risk has not been examined.
 
-### 3. Tool-readiness screenshot
+> **A question that often comes up here:** *"Am I locked into this problem?"* No.
+> This is a dated version, not a contract. M2's evidence map and M3's diagnosis
+> both send curiosity back here on purpose. A revised curiosity is progress on the
+> record, not a restart.
 
-Open **nb01** in Colab, save a copy to your Drive, and run the readiness cell.
-It ends in three ✓ marks when your environment is ready: you can run a code cell,
-the course data loads, and you have claimed your copy by name. Paste one
-screenshot showing all three ✓ marks into your submission. This is your proof
-that no later milestone will stall on setup. A setup problem you hide today
-becomes a lost class hour in September.
+### 4. Your expected answer, and who it would surprise
 
-### 4. Your first AI Research Ledger row
+Write the answer you currently expect, in one sentence. Then name **one real
+person or role for whom a different answer would be genuinely surprising**. A
+named skeptic keeps you honest. It turns your project from "let me look into
+this" into "someone's expectation is on the line".
 
-This is the first row of a ledger you keep all semester, and it doubles as your
-AI-use disclosure. Use the **citation catch** from EDR|AI ch. 1's "It is your turn": you asked your AI for
-scholarly sources, then verified each one by retrieving it yourself, recording a
-verdict of **retrieved** (you opened the real paper and the authors, year, and
-venue match), **distorted** (something real exists but a detail is wrong), or
-**not found** (nothing turns up, so treat it as invented until it does). Fill one
-full row of the eight-field ledger:
+If nobody would be surprised either way, the problem may be too settled or too
+small to carry a semester. Say so now, while changing course is free.
+
+### 5. The four rails at this milestone
+
+Four concerns cross every studio in the course book. At this milestone they take
+these specific forms, and each one needs its own line in your artifact.
+
+- **Ethics, permissions, and data exposure.** Say whether chasing this curiosity
+  would require **human participants**, meaning people whose answers, records, or
+  behavior you would collect. Flag it now, before anything is designed. Next week
+  runs the full red-flag screen.
+- **Evidence, provenance, and reproducibility.** Your starting belief is a claim
+  to check, not a position to defend. One line on how it could be checked.
+- **AI activity, verification, and human decisions.** Every AI stretch marked NEW,
+  and every exchange logged in the ledger format below.
+- **Uncertainty, claim boundary, and revision history.** Your revising evidence,
+  restated as the sentence that would make you change your mind.
+
+### 6. Your working setup
+
+Open the week's course notebook in Colab, save a copy to your Drive, and run the
+readiness cell. It ends in three ✓ marks when your environment is ready: you can
+run a code cell, the course data loads, and you have claimed your copy by name.
+Paste one screenshot showing all three ✓ marks into your submission.
+
+This is your proof that no later milestone will stall on setup. A setup problem
+you hide today becomes a lost class hour in September.
+
+### 7. Your AI Research Ledger row
+
+Every AI-assisted step in this milestone gets a row in your **AI Research
+Ledger**, the eight-field record of what you handed to a tool and how you checked
+what came back:
 
 > task delegated · tool used · prompt · output summary · decision · verification
 > method · remaining concern · responsible researcher
 
-The **decision** and **verification method** columns carry the weight: the
-output is a proposal, and the named verification is what makes it usable. "No AI
-used beyond nb01's exercise" is a legitimate entry only if it is true; because
-chapter 1's companion notebook walks you through one deliberate citation catch, you will almost certainly
-have a real row to log. An undisclosed AI contribution is an academic-integrity
-violation; a frankly logged one is graded on its honesty. The ledger template and
-worked rows live in
+The brainstorm is an AI-assisted step, so it needs a row. So does any fact or
+source a tool handed you. The **decision** and **verification method** columns
+carry the weight: the output is a proposal, and the named check is what makes it
+usable. "I searched the library catalog, opened the paper, and the authors, year,
+and venue matched" is a verification method. "Looks right" is not.
+
+Next week's studio formally opens your ledger and adopts these rows as its first
+entries, so write them in the eight-field format now and nothing will need
+redoing. An undisclosed AI contribution is an academic-integrity violation; a
+frankly logged one is graded on its honesty. The template and worked rows live in
 [`ai_resources/ai_research_ledger_template.md`](../../ai_resources/ai_research_ledger_template.md).
 
-### 5. Dossier update line
+**A missing ledger is not a minor lapse.** Per the course rule, a missing AI
+Research Ledger entry scores the Craft criterion **0** and the submission is
+**returned** for completion before it is graded.
 
-End with one line recording what M0 opens in your **Research Project Dossier**:
-your project charter now holds three candidate curiosities and a defended pick,
-and your AI-management record now holds your first baseline and your first ledger
-row. Name the file or section where each now lives. That line is your bridge into
-M1, where one curiosity funnels into a single answerable question.
+### 8. Version, reason, and the dossier update line
+
+Head the artifact as a **dated, numbered version**, for example "Curiosity,
+version 0, August 28". Add one sentence giving the reason for the version. At
+version zero the reason is simply what you committed to, and why this problem
+rather than the others you generated.
+
+Every milestone in this chain is a version, never a pass. When later evidence
+changes it, you write the next version instead of editing this one, because the
+sequence of changes is itself part of your research record.
+
+Close with one line recording what M0 opens in your **Research Project Dossier**:
+your project charter now holds a committed curiosity and a chosen research
+problem, and your AI-management record holds your first ledger rows. Name the
+file or section where each now lives. That line is your bridge into M1, where you
+set the rules you will work under and turn this problem into a declared question.
 
 ---
 
@@ -215,9 +255,9 @@ M1, where one curiosity funnels into a single answerable question.
 | Item | Specification |
 |---|---|
 | **Length** | 1–2 pages (PDF), or the equivalent notebook sections, including the screenshot and ledger row |
-| **Pitch** | 30 seconds at the Friday studio (Aug 28), one curiosity, no slides needed — part of the grade |
-| **Style** | Plain prose; three clearly separated curiosities; every technical term (assistance vs substitution, retrievable, never-delegate) used as nb01 defined it |
-| **Filename** | `lastname_m00_research_ai_baseline.pdf` (or a shared Colab link) |
+| **Pitch** | 30 seconds at the Friday studio (Aug 28): your problem and the person a different answer would surprise, no slides needed — part of the grade |
+| **Style** | Plain prose; the version line and date at the top; one labeled section per component; every source retrievable; any code cell you keep seeded with `SEED = 464` and rerunnable top to bottom |
+| **Filename** | `lastname_m00_curiosity.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M00 |
 
 ---
@@ -225,28 +265,31 @@ M1, where one curiosity funnels into a single answerable question.
 ## Grading Rubric (100 points)
 
 Four bands on the course's five shared virtues
-(`planning/ASSESSMENT_ARCHITECTURE.md`). Because this is the on-ramp, the bands
-are forgiving: real effort in good faith lands high. What is graded is that you
-showed up curious, set up to work, and drew the AI boundary honestly.
+(`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the criteria the book's
+Milestone 1 assesses. Because this is the on-ramp, the bands are forgiving: real
+effort in good faith lands high. What is graded is that you committed to
+something real, chose between candidates with reasons, and wrote down what would
+change your mind.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Curiosity map & AI-boundary framing** (30) | Three genuinely distinct curiosities, each opened so a stranger feels the pull and sees the small corner; the defended pick names a real risk; the assistance-versus-substitution boundary is drawn correctly (26–30) | Three distinct curiosities, at least lightly opened, with a pick and a boundary that mostly hold (21–25) | Two real curiosities, or three that restate one, or a boundary asserted without the assistance-versus-substitution distinction (13–20) | Bare topics with no pull stated, fewer than three, or no boundary drawn (0–12) |
-| **Evidence integrity — the citation catch** (20) | Every source in your catch carries a verdict traced to a real retrieval attempt; nothing is called "retrieved" that you did not open; any "not found" is named, not hidden (18–20) | Verdicts present and honest; one retrieval described thinly (14–17) | A verdict asserted without saying how you searched, or a source claimed real with no retrieval named (8–13) | A source presented as confirmed that does not exist or that you never retrieved (0–7) |
-| **Verification of AI-assisted parts** (20) | Both AI-strength assumptions carry a concrete, named check; the ledger's verification column names a real method, never "looks right" (18–20) | Checks and ledger present; one verification method vague (14–17) | An assumption with no check, or a ledger row whose verification is unnamed (8–13) | AI output reproduced with no verification named anywhere (0–7) |
-| **Honest baseline: uncertainty & limitations** (15) | Two never-delegate decisions with a clear why each; the automation-bias worry is specific and honest; the ledger's remaining-concern is a real concern, not blank (13–15) | Never-delegate decisions and a worry present, stated loosely (10–12) | Only one never-delegate decision, or an automation-bias worry that dodges (5–9) | No never-delegate decisions and no honest limitation named (0–4) |
-| **Craft, ledger & communication** (15) | On-format, on-time; three ✓ readiness marks shown; complete first ledger row; 30-second pitch delivered warm and on time with the room's strength/question noted (13–15) | Minor format lapses; ledger complete; pitch delivered with small overrun (10–12) | Missing pieces, unclear screenshot, or a rushed pitch (5–9) | Missing AI Research Ledger row (Craft scored 0, submission returned) (0–4) |
+| **Committed curiosity & chosen problem** (30) | The four lines are specific and unmistakably about your project; the chosen problem names what is unknown and who the answer is about; all three scores are argued in your own words; the red-team names a real risk (26–30) | Four lines and a chosen problem present and specific; scores present with one thin, or the named risk generic (21–25) | A problem that only restates the topic, or a score asserted with no reasoning, or no risk named (13–20) | A topic with no unknown named, or reasoning that reproduces a tool's wording rather than yours (0–12) |
+| **Evidence integrity — the kept trail** (20) | Your own two directions came first and are distinguishable from the brainstorm; every NEW element marked; every candidate kept or rejected with its reason; every source you name is real and retrievable (18–20) | Trail present and honest; one NEW mark missing or one reason thin (14–17) | Candidates listed with no kept-or-rejected reasons, or NEW elements unmarked, or a source named with no locatable origin (8–13) | No trail at all, or a source named that does not exist or does not say what you claim (0–7) |
+| **Verification of AI-assisted parts** (20) | Every AI-assisted step carries a ledger row with a named, non-vague verification method; anything the tool asserted as fact was retrieved and confirmed by you (18–20) | Ledger rows present; one verification method vague or one step unlogged (14–17) | AI output used with no verification named, or a row whose verification says "looks right" (8–13) | AI output reproduced with no verification named anywhere (0–7) |
+| **Uncertainty & limitations** (15) | The revising evidence is concrete and could actually be obtained; the expected answer is stated; the surprised person is real and named; the feasibility score admits what is hard (13–15) | Revising evidence and expected answer present, stated loosely (10–12) | Revising evidence vague ("better data"), or no surprised person named, or feasibility left unexamined (5–9) | No revising evidence and no limitation named anywhere (0–4) |
+| **Craft, version, ledger & communication** (15) | Dated version zero with a reason a reader could use to reconstruct your thinking; on-format, on-time; three ✓ readiness marks shown; complete ledger row; 30-second pitch delivered warm and on time (13–15) | Minor format lapses, or a version whose reason is decorative; ledger complete; pitch with a small overrun (10–12) | Missing pieces, unclear screenshot, no version line, or a rushed pitch (5–9) | Missing AI Research Ledger row (Craft scored 0, submission returned) (0–4) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
-- A **fabricated or unretrievable source** presented as retrieved caps *Evidence
+- A **fabricated or unretrievable source** presented as real caps *Evidence
   integrity* at Beginning.
-- An **untraceable number** — a readiness result or tally you cannot reproduce or
-  show — caps *Verification of AI-assisted parts* at Beginning.
+- An **untraceable number** — any figure you report with no path back to its
+  origin — caps *Verification of AI-assisted parts* at Beginning.
 - A **non-reproducing result** — a code cell you kept that does not rerun top to
   bottom — caps *Verification of AI-assisted parts* at Beginning.
-- A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
-  **0** and the submission is **returned** unread until it is supplied.
+- A **missing AI Research Ledger entry** scores *Craft, version, ledger &
+  communication* **0** and the submission is **returned** unread until it is
+  supplied.
 
 **Revision:** eligible under the standing policy. A revised submission within 7
 days of feedback recovers up to half the lost points. In practice, most of M0's
@@ -257,30 +300,30 @@ week as much as points to reclaim.
 
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
-- Any source you cite in the catch that turns out not to exist or not to say what
-  you claim: *Evidence integrity* scores Beginning regardless of the rest — the
-  course's evidence-integrity rule with teeth.
+- Any source you name that turns out not to exist or not to say what you claim:
+  *Evidence integrity* scores Beginning regardless of the rest — the course's
+  evidence-integrity rule with teeth.
 - Missing AI Research Ledger row / AI-use disclosure: *Craft* scores 0 and the
   submission is returned for completion before grading.
 
 ## Common Pitfalls
 
-1. **Three phrasings of one curiosity.** "Social media and teens," "screens and
-   kids," "phones and youth" are one door painted three colors. Open three
-   *different* doors, so you have real choices at M1.
-2. **A baseline that only praises AI.** Writing "AI is great at finding sources"
-   with no check beside it is not a baseline. The check is the whole point: name
-   the retrieval, the recomputation, or the read that would confirm or break each
-   assumption. An assumption you cannot check is one you are trusting on tone.
-3. **Treating the ledger as paperwork.** The first row is small on purpose, so
-   the habit is built before the stakes rise. An empty or absent ledger row is the
-   one thing that returns the whole submission, and a verification column that
-   says "looks right" is not a verification.
+1. **The topic mistaken for a research problem.** "Food prices near campus" is a
+   territory; a research problem names one specific unknown inside it and says who
+   the answer is about. Name the unknown before a reviewer has to ask you for it.
+2. **The brainstorm that quietly becomes the curiosity.** Open the tool before
+   writing your own two directions and its framing becomes yours, which makes the
+   NEW marks meaningless. Settle it with the ownership test: would you chase this
+   problem if every AI tool disappeared tomorrow? If not, go back one step.
+3. **A belief written so it cannot lose.** "Prices have changed somewhat" is safe
+   because no evidence could contradict it, which is exactly why it is not a
+   starting belief. Write the version you would defend at dinner, then write what
+   would make you take it back.
 
 ---
 
-*Previous: this is the first milestone — the research project begins here. ·
-Next: [M01 — Research Opportunity Landscape](milestone_01_research_opportunity_landscape.md) —
-you funnel one of these three curiosities into a single answerable question with
-a candidate compass position, and the baseline you drew today becomes the AI
-boundary you defend against a real research problem.*
+*Previous: this is the first milestone; the research project begins here. ·
+Next: [M01 — Your Rules and Your Question](milestone_01_research_opportunity_landscape.md).
+You set the rules you and your tools will work under, open your AI Research
+Ledger for real, and turn this problem into a formally declared question with its
+kind, its reach, and its claim boundary.*

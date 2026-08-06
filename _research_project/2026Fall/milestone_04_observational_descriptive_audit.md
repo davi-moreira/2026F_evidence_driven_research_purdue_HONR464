@@ -82,9 +82,9 @@ What you hand in is not an essay about roads. It is **Research Contract v1**,
 your Contract v0 revised on four fronts at once: your objective matched to its
 target, your reach matched to your data strategy, your **warrant** carried by a
 declared pathway, and your claim boundary redrawn to fit. The warrant is the
-stated reason your evidence will license your claim. All of it gets written
-before any result exists, which is the only moment at which those limits cost
-you nothing to admit.
+stated reason your evidence will license your claim. All of it is written
+before any result exists. That is the only moment when admitting a limit costs
+you nothing, which is exactly why the course puts this week here.
 
 Declaring a pathway means writing its limits at the same moment. Every pathway
 holds a **crossing licence**, the earned right to make one kind of claim.
@@ -109,8 +109,8 @@ Your reading this week is **route-conditional**, and that is deliberate. You
 work the "It is your turn" section of your own route's lesson in full, plus
 the one your assigned contrast comes from. The hybrid lesson joins those two
 only when your design runs in stages. The remaining roads reach you through the
-jigsaw, in your classmates' voices, which is enough to compare against and far
-less than a road you intend to travel.
+jigsaw, in your classmates' voices. That is enough to compare against, and less
+than you would need for a road you actually intend to travel.
 
 > **A question that often comes up here:** *"My question is causal, but the
 > data I can reach give me no leverage to identify the effect. Do I switch to
@@ -162,9 +162,9 @@ never quietly becomes descriptive.
 **The Skeptic test (required).** Run the **Causal Identification Skeptic**
 (a GenAI Studio role) against this part before you submit. On a causal
 route, paste your identification leverage and let it attack. On every other
-route, paste your **descriptive-boundary defense** — your argument for why
-your claims stop short of cause — and let it hunt for causal language you
-did not notice. Answer every ranked attack in writing: rule it out, or
+route, paste your **descriptive-boundary defense**, which is your argument
+for why your claims stop short of cause, and let it hunt for causal language
+you did not notice. Answer every ranked attack in writing: rule it out, or
 carry it as a named limitation. It supplies the attack; you supply the
 defense. The critique and your answers ride inside this part and get a
 ledger row.
@@ -197,7 +197,7 @@ whole map, not just your lane.
 
 ### 4. Research Contract v1
 
-This is the milestone's own product, and the other five parts exist to feed
+This is the milestone's own product, and the three parts above exist to feed
 it. Name exactly which fields of your **Research Contract v0** this declaration
 revises, then issue the result as **Research Contract v1**: your objective
 matched to its target, your reach matched to your data strategy, and your
@@ -222,13 +222,14 @@ disciplines apply:
 Every use of AI in building this declaration gets a row in your **AI
 Research Ledger** (the eight fixed fields: task delegated · tool used ·
 prompt · output summary · decision · verification method · remaining concern
-· responsible researcher). One row is mandatory beyond the Skeptic: ask your
-AI assistant to argue for a different pathway than the one you chose, then
-answer the argument yourself, in your own words. Drafting the contrast's
-requirements and hunting the anchor study are also delegable tasks, and each
-step you delegated needs a row naming how you verified the result. "No AI
-used" is a legitimate entry only where it is true, and it cannot be true of
-the two required runs above.
+· responsible researcher). Two rows are mandatory. The first logs the required
+Causal Identification Skeptic run and what you did with each ranked attack.
+The second logs a counter-pathway argument: ask your AI assistant to argue for
+a different pathway than the one you chose, then answer the argument yourself,
+in your own words. Drafting the contrast's requirements and hunting the anchor
+study are also delegable tasks, and each step you delegated needs a row naming
+how you verified the result. "No AI used" is a legitimate entry only where it
+is true, and it cannot be true of the two required runs above.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
@@ -237,9 +238,10 @@ Research Ledger entry scores the Craft criterion **0** and the submission is
 ### 6. Dossier update line
 
 End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your Contract / MIDA declaration component now carries a
-declared pathway, its written limits, the mandated contrast, and Research
-Contract v1. Name the file or section in your dossier where each now lives.
+Project Dossier**: your Contract component is now **Research Contract v1**,
+carrying the declared pathway, its written limits, the redrawn claim boundary,
+and the mandated contrast that priced the road you did not take. Name the file
+or section in your dossier where each now lives.
 
 ---
 
@@ -252,13 +254,15 @@ pre-submission checklist.
 |---|---|
 | **Route declaration** | One pathway named; kind × reach fit argued; permission status rechecked; the licence held and the licence lacked both written |
 | **Route limits** | What the route can never establish, stated plainly, no matter how clean the execution |
+| **Hybrid-stage test** | Answered in writing: no stages, said in a sentence; or the stage map, its weakest link, and the keep-or-cut justification |
 | **Anchor study** | One real, retrievable prior study that used this pathway on a comparable question |
 | **Skeptic test** | The required Causal Identification Skeptic run logged; every ranked attack answered or carried as a named limitation |
-| **Mandated contrast** | The assigned route in \~one page: what it would require, what it would license, why it is not yours (or what adopting it would change) |
+| **Mandated contrast** | The instructor-assigned route in \~one page: what it would require, what it would license, why it is not yours (or what adopting it would change) |
 | **Jigsaw summary** | Your advocated route in five sentences a non-specialist could repeat |
-| **Contract delta** | The Contract v0 fields revised and issued as a dated, numbered Contract v1 with a usable reason; uncertainty sources updated to the route |
-| **AI Research Ledger** | One row per AI-assisted step, including the counter-pathway argument; every verification method named and non-vague |
-| **Dossier line** | The Contract / MIDA component located by file or section |
+| **Research Contract v1** | The Contract v0 fields revised and issued as a dated, numbered v1 with a usable reason; claim boundary redrawn to the licence; uncertainty sources updated to the route |
+| **Route-conditional reading** | The "It is your turn" section completed for your own route's chapter and for the assigned contrast's chapter; the hybrid chapter too, if and only if your design has stages |
+| **AI Research Ledger** | One row per AI-assisted step, including the required Skeptic run and the counter-pathway argument; every verification method named and non-vague |
+| **Dossier line** | The Contract component located by file or section |
 | **Studio work** | Worked at the Friday studio with your AI assistant; your jigsaw route advocated in class |
 | **Filename** | `lastname_m04_pathway_declaration.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M04 |
@@ -268,15 +272,18 @@ pre-submission checklist.
 ## Grading Rubric (100 points)
 
 Four bands on the course's five shared virtues
-(`planning/ASSESSMENT_ARCHITECTURE.md`).
+(`planning/ASSESSMENT_ARCHITECTURE.md`). The rows also carry what Book
+Milestone 5 asks of the artifact: that it be complete and unmistakably yours,
+versioned with a reason, owned rather than tool-asserted, carrying the four
+rails, and defensible as Research Contract v1.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Pathway & compass alignment** (30) | Pathway fits the question's kind × reach and the permission status; the licence held and the licence lacked both named; the declaration complete and unmistakably about your project; a causal question without leverage declared causal, currently unidentified (26–30) | Fit argued and licences named; one limit or one licence stated loosely (21–25) | Pathway declared but the fit asserted rather than argued, or parts generic enough to fit any project (13–20) | A relabeled question, a pathway the permission status forbids, or generic text that would fit any project (0–12) |
-| **Evidence integrity & provenance** (20) | The anchor study is real, retrievable, and genuinely uses the pathway; the contrast's requirements are grounded in the route lessons; every factual claim traces to its origin (18–20) | Real and traceable; one provenance link thin (14–17) | An anchor study or a contrast requirement asserted without a locatable source (8–13) | A cited study that does not exist or does not use the pathway you claim (0–7) |
+| **Pathway & compass alignment** (30) | Pathway fits the question's kind × reach and the permission status; the licence held and the licence lacked both named; the hybrid-stage test answered; the declaration complete and unmistakably about your project; a causal question without leverage declared causal, currently unidentified (26–30) | Fit argued and licences named; one limit, one licence, or the stage test stated loosely (21–25) | Pathway declared but the fit asserted rather than argued, or parts generic enough to fit any project (13–20) | A relabeled question, a pathway the permission status forbids, or generic text that would fit any project (0–12) |
+| **Evidence integrity & provenance** (20) | The anchor study is real, retrievable, and genuinely uses the pathway; the contrast's requirements are grounded in the route lessons you actually worked; every factual claim traces to its origin (18–20) | Real and traceable; one provenance link thin (14–17) | An anchor study or a contrast requirement asserted without a locatable source (8–13) | A cited study that does not exist or does not use the pathway you claim (0–7) |
 | **Verification & decision ownership** (20) | The required Skeptic run logged with every ranked attack answered or honestly carried; the counter-pathway argument answered in your own words; no judgment reproduces a tool's wording (18–20) | Skeptic run and answers present; one attack answered loosely or one reply leaning on the tool's phrasing (14–17) | Skeptic run logged but attacks left unanswered, or the counter-pathway row missing (8–13) | No Skeptic run, or a declaration that reproduces a tool's wording with no reasoning of your own (0–7) |
-| **Uncertainty & the route's limits** (20) | The never-establish sentence stated plainly; the pathway's own uncertainty sources named in the Contract; the contrast's licence honestly priced (18–20) | Limits and sources present; one stated loosely (14–17) | Limits gestured at without saying what they cost the claim, or uncertainty sources generic (8–13) | No limits, or a declaration that concedes nothing its route cannot do (0–7) |
-| **Craft, ledger & communication** (10) | On-format, on-time; Contract delta a dated, numbered version with a usable reason; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces, or a version with a decorative reason (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Uncertainty & the route's limits** (20) | The never-establish sentence stated plainly; both claim-boundary sentences redrawn to the licence; the pathway's own uncertainty sources named in the Contract; the contrast's licence honestly priced (18–20) | Limits, boundary, and sources present; one stated loosely (14–17) | Limits gestured at without saying what they cost the claim, or a boundary left at its v0 wording (8–13) | No limits, or a declaration that concedes nothing its route cannot do (0–7) |
+| **Craft, ledger & communication** (10) | On-format, on-time; Contract v1 a dated, numbered version with a usable reason; the route-conditional reading completed for your route and the assigned contrast; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; reading and ledger complete (7–8) | Missing pieces, a version with a decorative reason, or only one of the two required chapters worked (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -310,6 +317,9 @@ days of feedback recovers up to half the lost points.
 - A declared pathway that requires permissions your M3 determination does not
   grant: the submission is returned until the determination is rechecked —
   the blocking gate, not a point deduction.
+- A Contract that arrives unversioned, or versioned with a decorative reason:
+  *Craft, ledger & communication* drops to Developing at best, because the
+  sequence of versions is itself part of your research record.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 
@@ -332,11 +342,21 @@ days of feedback recovers up to half the lost points.
    fluent tool will do confidently and shallowly. Choose the road yourself,
    make the tool argue for a different one, and answer that argument on the
    record.
+4. **The road declared but never read.** Working only your own route's "It is
+   your turn" section and skipping the assigned contrast's, because your
+   choice already feels settled. The two chapters are the graded reading for a
+   reason: the contrast is where the price of your road becomes visible, and a
+   contrast you never worked reads, on the page, exactly like a strawman.
+5. **The unchanged claim boundary.** Declaring a route and leaving the two
+   boundary sentences exactly as Contract v0 wrote them. A pathway that costs
+   you nothing has almost certainly not been taken seriously. Rewrite the
+   boundary to the licence your route actually holds, even where the rewrite
+   is a demotion.
 
 ---
 
 *Previous: [M03 — Research Contract v0 and Permission Determination](milestone_03_research_charter_mida.md) ·
 Next: [M05 — Data and Measurement Governance](milestone_05_causal_identification.md) —
 your declared pathway now needs something trustworthy to run on: data whose
-origin is documented and measures that measure what your Contract says they
-measure.*
+origin you can document, measures that measure what Contract v1 says they
+measure, and a permission recheck against the data as they actually arrive.*

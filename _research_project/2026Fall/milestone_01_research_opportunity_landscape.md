@@ -27,11 +27,16 @@ Due: **Friday, September 4, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m01_landscape.pdf`** *or* a shared Colab notebook link | The landscape below: your hook, your funnel with its three terms, at least two candidate problems and the one you chose (defended on importance, feasibility, contribution), your answerable question with a self-score, your compass declaration with the claim it permits and the claim it forbids, one uncertainty-and-limitations sentence, and your AI Research Ledger rows. This is the graded artifact. |
+| 1 | **`lastname_m01_rules_question.pdf`** *or* a shared Colab notebook link | Both halves below, dated as version zero with the reason for the version. Half A, your working agreement: your responsibility statement, your working rules, your delegation map, your opened AI Research Ledger with its retrospective rows plus one verified factual hinge and one complete SDIIVDD run, and the red-flag screen of your chosen problem. Half B, your declared question: the lead question with its kind and its reach, the words in your own sentence that fix each, the field card with its stranger-test result, and your provisional claim boundary with its uncertainty-and-limitations line. Close with the cross-read of the two halves. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 2, ch. 3, ch. 4, ch. 5, ch. 6, ch. 7** | The pieces Book Milestone 2's checklist names, from each chapter's "It is your turn": your opened AI Research Ledger with its first verified exchange (ch. 2), your delegation map (ch. 3), one complete SDIIVDD run (ch. 4), your ownership statement with its never-delegate list (ch. 5), your lead question placed by kind and reach (ch. 6), and your formal declaration with its field card and boundary pair (ch. 7) — worked in the companion Colab notebooks (share the links) or included in your artifact. Prompts marked *Optional depth* are not required. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.
+
+Two checkpoints fire at this milestone, which is why the artifact has two halves
+and both are graded. The rules are not a preface to the question. They govern how
+the question gets written: which parts a tool may draft, which decisions stay
+yours, what gets verified, what gets recorded, and what your name signs.
 
 ---
 
@@ -60,149 +65,249 @@ Dossier.
 
 ## Purpose
 
-This milestone turns the curiosity map you started in M0 into the **landscape of
-research opportunities** your project could pursue, then commits to one. A
-landscape is not a single question yet; it is the field of candidate problems a
-curiosity opens up, with the one you chose marked and defended. By the end you
-have walked one curiosity down the **funnel** — curiosity → topic → research
-problem → answerable question — named the three terms every question quietly
-carries, and placed your question on the **inquiry compass** so you know, before
-you gather a single source, exactly what its answer will and will not be allowed
-to claim.
+At M0 you committed to a curiosity and chose a research problem. That problem now
+needs two things at once: guardrails, and an exact sentence. This milestone
+produces both, and it grades both.
 
-Nothing here is final. M2 grows your one-line contribution case into a verified
-evidence map; M3 re-declares the question with full Model & Inquiry machinery.
-What is graded is the quality of the *current* commitment and the honesty of its
-boundary, not clairvoyance about where the project ends.
+The first half is your **working agreement**, the written rules under which you
+and your tools will work for the rest of the semester. It says what you delegate
+freely, what you delegate and then verify, and what never leaves your hands.
+Writing it now, while the stakes are still small, is the entire point. A rule you
+set before you need it is a rule you can actually keep at 2 AM in November.
 
-> **A question that often comes up here:** *"Why commit to a compass position
-> this early, before I have read the literature?"* Because the position is a
-> claim about what kind of answer your question wants, and that is decided by the
-> question's own words, not by what others have found. Classifying now is how you
-> keep the whole project pointed at one target. You will revisit the wording, but
-> the habit of drawing the boundary before you gather evidence is the habit this
-> milestone builds.
+The second half is your **declared question**, the single sentence your evidence
+will answer. To **declare** a question is to fix four things a reader would
+otherwise have to guess: what you are asking, about whom, what you will record,
+and how far the answer travels. Everything you do after this week traces back to
+that sentence.
+
+The two halves belong together because the rules govern the declaration itself.
+Candidate wordings are delegable, and a tool will happily generate a dozen good
+ones. The lead question, its kind, its reach, and its boundary are never
+delegable, because those are the decisions your name signs.
+
+Nothing here is final. Next week's evidence map usually sends the question back
+for a sharper version, and any change in your tools or your data source reopens
+the agreement. What is graded is the quality of the *current* commitment and the
+honesty of its boundary, not clairvoyance about where the project ends.
+
+> **A question that often comes up here:** *"Why declare a question before I have
+> read the literature?"* Because the declaration is a claim about what kind of
+> answer your question wants, and that is settled by the question's own words, not
+> by what other people have found. Declaring now keeps the whole project pointed
+> at one target. You will revisit the wording, and revising on the record is
+> progress; the habit being built here is drawing the boundary before you gather
+> evidence.
 
 ## Components
 
-### 1. The hook (≈3 sentences)
+Components 1 to 4 are Half A, the working agreement. Components 5 to 8 are Half B,
+the declared question. Components 9 and 10 close the artifact. Give each one its
+own labeled section, and keep the two halves visually separate.
 
-Your curiosity, stated so a stranger outside your field would care. Name the big
-thing that motivates you AND the small piece this project bites off. The big
-thing stays as your motivation; the small piece is the part narrow enough to
-answer this term.
+### 1. Your responsibility statement
 
-### 2. The funnel and its three terms
+Two to four sentences naming the decisions that stay yours no matter how good the
+tool gets. The choice of question comes first. Then add the ones your project will
+actually turn on: which measure fits the concept, which comparison counts, what
+the final claim says, and what uncertainty it carries.
 
-Walk your curiosity down the funnel and show what each stop adds:
+Write it in the first person and in your own project's terms. "I decide which
+price measure fits what households actually pay, which base year anchors the
+comparison, and what the final claim says. No tool signs for me" is a
+responsibility statement. "I will use AI responsibly" is not, because it names no
+decision.
 
-- **Curiosity** — a felt interest with no edges yet.
-- **Topic** — the curiosity with edges: a territory someone could gather evidence
-  inside.
-- **Research problem** — a specific unknown inside that territory whose absence
-  matters, plus one line on why it matters.
+The full never-delegate list lives in
+[`ai_resources/human_responsibility_checklist.md`](../../ai_resources/human_responsibility_checklist.md).
+Draw on it, but your statement has to be about your project. A statement that
+would fit anyone's project has not been written yet.
 
-Then name the **three terms** your problem must carry, each defined in nb02:
+### 2. Your working rules and your delegation map
 
-- **Units of analysis** — the who or what each row of your evidence stands for
-  (one respondent, one team, one game).
-- **Target population** — the full group your question is really about, beyond the
-  handful you can reach.
-- **Outcome** (also called the **target**) — the observable, measurable thing that
-  varies, the quantity you will actually record.
+Your **working rules** are three lists, each with real entries drawn from the work
+you can already see coming:
 
-> **A question that often comes up here:** *"Aren't the topic and the problem the
-> same thing?"* No, and the gap is the point. A **topic** points at a territory;
-> a **research problem** names one specific unknown inside it. "My topic is
-> important, so any question about it is a research problem" is exactly the move
-> this milestone forbids.
+- **Delegate freely** — work you could check trivially, or would not sign for
+  anyway. Locating candidate sources, drafting summaries, reformatting,
+  brainstorming directions.
+- **Delegate, then verify** — work a tool does faster but that you confirm before
+  it enters your artifact. Every number, every citation, every line of code.
+- **Never delegate** — the decisions from your responsibility statement.
 
-### 3. The opportunity landscape
+Your **delegation map** applies those rules to the specific work ahead, this
+milestone's own declaration included. Mark the declaration work explicitly:
+candidate wordings may travel to a tool, while the lead question, its kind, its
+reach, and its boundary may not. A map that never mentions this week's actual work
+is decoration.
 
-This is the milestone's namesake and its heart. Draft **at least two candidate
-problems** your topic could support, each naming its units, outcome, and target
-population. Then choose one and defend the choice against the three worth-doing
-tests from nb02, one short paragraph:
+> **A question that often comes up here:** *"Does 'delegate freely' mean
+> unchecked?"* No. It means you do not owe a separate verification step for that
+> item. The moment a freely delegated task produces a fact, a number, or a
+> citation that enters your artifact, it moves to the middle list and gets
+> verified like everything else there.
 
-- **Importance** — would anyone beyond you act on the answer?
-- **Feasibility** — can you actually get this evidence this term, with the access,
-  time, and skills you have?
-- **Contribution** — does answering it add something not already known? Give a
-  one-line **contribution case**: your best current sense of whether the answer is
-  already settled. Any source you name in that case must be **real and
-  retrievable** — you will build the full verified map at M2, but a citation here
-  still has to exist.
+### 3. Your AI Research Ledger, opened
 
-A problem that wins on importance but fails feasibility is a wish; one that wins
-on feasibility but fails contribution is a chore. Show which of your candidates
-survives all three.
+The ledger opens for real this week. Its first rows go to exchanges you have
+already run, last week's brainstorm included, logged after the fact. From here on
+no delegation goes unrecorded. Every row carries the same eight fields:
 
-### 4. The answerable question and its self-score
+> task delegated · tool used · prompt · output summary · decision · verification
+> method · remaining concern · responsible researcher
 
-State your project's question in its best current form: the single sentence
-evidence can answer, **and be wrong about**. Then score it yourself against the
-answerability marks nb02 teaches, one line each saying where the mark is met or
-still weak:
+Two rows have to be there beyond the retrospective ones.
 
-- **Units** named,
-- **Target population** named,
-- **Outcome** named,
-- and the question can be **wrong** (a topic dressed as a question cannot be).
+- **One verified factual hinge.** A **hinge** is a fact your problem leans on, so
+  that if it turned out to be wrong your whole framing would change. Ask a tool
+  for it, then retrieve the underlying source yourself and record what you found,
+  including a mismatch if you found one.
+- **One complete SDIIVDD run.** **SDIIVDD** is the course's seven-step loop:
+  Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend. Run it once
+  on a checkable claim your starting belief already makes, and put the check's
+  outcome on the record. "Nothing changed, the check agreed" is a real outcome and
+  counts fully.
 
-An honestly flagged weakness scores better than a mark you claim but have not
-met.
-
-### 5. The compass declaration and its claim boundary
-
-Classify your question on the **inquiry compass** and state the boundary that
-classification draws. Write it in the exact shape nb02 grades:
-
-- **The declaration:** *"My question is a [descriptive or causal] inquiry reaching
-  [the data at hand / a population / unseen cases], because the answer it wants is
-  [what]."* Name the position that reading implies (Description, Generalization,
-  Prediction, or Causal reasoning).
-- **The claim it PERMITS:** the strongest sentence this position lets you make.
-- **The claim it FORBIDS:** the tempting sentence a careless reader might walk
-  away with that your position does *not* license — a description silently
-  upgraded to a whole population, or to a cause.
-- **The giveaway word:** name the one word in your question that most signals a
-  position, and say whether it **tells the truth** about the classification or is a
-  **trap** that would fool a word-scanner (as "effective" fooled the sorter in
-  nb02).
-
-> **A question that often comes up here:** *"What if I cannot classify my question
-> cleanly yet?"* That is a finding, not a failure. A question that will not sit in
-> one box is usually still **double-barreled** — it fuses a descriptive half and a
-> causal half. Split it into two clean questions, each with its own position, and
-> say which one your project will pursue.
-
-### 6. Uncertainty and limitations
-
-One honest sentence naming what you are still unsure of about the classification
-or the problem: a giveaway word that might still trap you, a target population you
-cannot yet reach, an outcome you are not sure you can measure. A landscape with no
-stated uncertainty is overclaiming.
-
-### 7. AI Research Ledger rows
-
-Every use of AI in building this landscape gets a row in your **AI Research
-Ledger** (the eight-field table: task delegated · tool used · prompt · output
-summary · decision · verification method · remaining concern · responsible
-researcher). Widening a curiosity into candidate problems, surfacing what might
-already be known, and having a tool classify a question you already classified are
-all delegable tasks, and each one you delegated needs a row that names how you
-verified the result. "No AI used" is a legitimate entry if it is true.
+The **decision** and **verification method** columns carry the weight. The output
+is a proposal, and the named check is what makes it usable. "I opened the agency's
+table and read both values myself" is a verification method. "Looks right" is not.
+Template and worked rows:
+[`ai_resources/ai_research_ledger_template.md`](../../ai_resources/ai_research_ledger_template.md).
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 8. Dossier update line
+### 4. The red-flag screen
 
-End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your charter now carries a chosen research problem, an
-answerable question, and a declared compass position with its claim boundary.
-Name the file or section in your dossier where each now lives.
+Run three questions on your chosen problem and answer each in a sentence.
+
+- **Is it answerable?** Could evidence, in principle, settle it? A values question
+  such as "should tuition be free?" cannot be settled by evidence alone, however
+  important it is.
+- **Is it yours to ask?** Do you have, or could you legitimately get, access to
+  the evidence it needs, including permission where people are involved?
+- **Could you defend attempting it?** Would you be comfortable explaining to the
+  people it concerns why you are studying this, and how?
+
+If your problem involves **human participants**, meaning people whose answers,
+records, or behavior you would collect, say so here in plain words. That fact
+travels with the project from this point on, and M3 turns it into a formal
+permission determination. Flagging it now costs nothing. Discovering it in October
+costs weeks.
+
+### 5. Your lead question, chosen and split
+
+State the single sentence your evidence will answer. It has to be a sentence
+evidence could answer and could be **wrong** about. A topic dressed as a question
+cannot be wrong, which is the fastest way to tell the two apart.
+
+If you generated candidate wordings with a tool, say which one you chose and why,
+and name anything a candidate quietly added. Candidates often insert a population
+nobody chose, turning "people who exercise" into "first-year athletes". The
+wording reads sharper and silently changes who your answer is about. Reject that
+candidate in writing, with the reason recorded.
+
+Watch for the **double-barreled question**, meaning one sentence that asks two
+things at once. "How common is burnout, and does night work cause it?" fuses a
+headcount and a cause, and no single classification holds both. The fix is always
+the split, never a compromise label. Break it into two clean questions and say
+which one your project pursues.
+
+### 6. Kind and reach, fixed by your question's own words
+
+Place your question on the **inquiry compass**, the course's two-axis
+classification of what a question asks.
+
+- **Kind: descriptive or causal?** Does answering require a **counterfactual
+  contrast**, meaning a comparison against a world that did not happen, such as
+  what these prices would have been had the policy never passed? Or does it need
+  only the world as it is or was?
+- **Reach: for which units must the answer hold?** The data at hand, a population
+  beyond your data, or cases not yet seen.
+
+Quote the words in your own sentence that fix each axis. "How much more" fixes
+descriptive; "because of" or "would have been" fixes causal; "in these records"
+fixes the data at hand; "undergraduates nationally" fixes a population; "next
+semester's cohort" fixes unseen cases. If nothing in your sentence fixes the
+reach, the sentence is not finished yet.
+
+**The kind rule, and it is load-bearing here.** Your question's kind is fixed by
+its words, never by the data you happen to be able to get. A causal question your
+data cannot identify stays **causal, currently unidentified**. Write that status
+down and carry it: it is honest, it is gradable, and M4's route hub exists
+precisely to give such a question a design. Relabelling a causal question as
+descriptive because the evidence looks weak is the failure this milestone is built
+to catch, and it caps the first rubric row at Beginning.
+
+If your question is causal, record its **comparison world** as well: what is being
+compared to what, in one sentence.
+
+> **A question that often comes up here:** *"My question is causal and I have no
+> experiment. Should I rewrite it as descriptive?"* No. Changing your question is
+> a human decision you may make, openly, as a recorded revision. Silently
+> relabelling it is a different act: it hides the gap between what you want to
+> know and what your evidence can support. Declare it causal and currently
+> unidentified, then report the association you can see plus the warrant you are
+> missing.
+
+### 7. The field card and the stranger test
+
+Four fields, one line each, so a reader knows exactly what your evidence is made
+of:
+
+- **Objective** — what the answer is for, in one sentence.
+- **Units** — the who or what each row of your evidence stands for (one menu item,
+  one respondent, one game).
+- **Outcome** — the observable, measurable thing you will actually record.
+- **Conditions** — the comparison or the window your question sets (2019 versus
+  2025; the terms before and after the policy).
+
+Then run the **stranger test**. Hand the single question sentence to someone who
+knows nothing about your project and ask them three things: what one unit is, what
+you would record, and who the answer is about. Write down where they stalled. That
+is your next revision, and reporting it is part of the grade.
+
+### 8. Your provisional claim boundary
+
+Three sentences, written now, before you have any evidence to be tempted by:
+
+- **The sentence you hope to defend.** The strongest honest claim your question
+  and its reach would license.
+- **The stronger sentence you will not be able to defend.** The tempting upgrade a
+  careless reader might walk away with. The three named upgrades are these units
+  to a whole population (the **silent upgrade**), observed cases to unseen ones
+  (**leakage**), and association to cause (**after-therefore-because**).
+- **The uncertainty-and-limitations line** any answer will have to carry: what is
+  imprecise, what is unmeasured, and who the answer does not cover.
+
+In this course a result reported with no uncertainty and no limitations is a
+defect, not a stylistic choice. Writing the line now costs you nothing, and it is
+much harder to write honestly once you have a number you like.
+
+### 9. The cross-read
+
+Read the two halves against each other before you submit. Every never-delegate
+line in your agreement must cover a decision your declaration actually made. If
+your rules never say who decides the reach, and your declaration fixed the reach,
+the rules are the weaker document. Fix the weaker one.
+
+Report the cross-read in two or three sentences: what you checked, what you found,
+and which document you changed. Finding nothing is legitimate only if you can name
+the decisions you compared.
+
+### 10. Version, reason, and the dossier update line
+
+Head the artifact as a **dated, numbered version**, for example "Rules and
+question, version 0, September 4", with one sentence giving the reason for the
+version. Every milestone here is a version, never a pass: when later evidence
+changes it, you write the next version instead of editing this one, because the
+sequence of changes is part of your research record.
+
+Close with one line recording what M1 finalizes in your **Research Project
+Dossier**: your charter now carries a working agreement, an open AI Research
+Ledger, and a declared question with its kind, its reach, and its claim boundary.
+Name the file or section where each now lives.
 
 ---
 
@@ -210,36 +315,41 @@ Name the file or section in your dossier where each now lives.
 
 | Item | Specification |
 |---|---|
-| **Length** | The landscape + ledger rows (typically 2–3 pages PDF, or the equivalent notebook sections) |
-| **Pitch** | 2 minutes at the Friday studio (Sep 4); a partner and the room classify your question on the compass and you respond to any disagreement — part of the grade |
-| **Style** | Plain language; headings for the components; every technical term used as defined in nb02; any citation retrievable |
-| **Filename** | `lastname_m01_landscape.pdf` (or a shared Colab link) |
+| **Length** | Both halves plus the ledger rows (typically 2–3 pages PDF, or the equivalent notebook sections) |
+| **Pitch** | 2 minutes at the Friday studio (Sep 4): you swap working agreements with a partner, then read your declared question aloud for the room to place by kind and reach, and you respond to any disagreement — part of the grade |
+| **Style** | Plain language; version line and date at the top; the two halves clearly separated and each component headed; every technical term used as this week's lessons define it; any source retrievable; any code cell you keep seeded with `SEED = 464` |
+| **Filename** | `lastname_m01_rules_question.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M01 |
 
 ---
 
 ## Grading Rubric (100 points)
 
-Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTURE.md`).
+Four bands on the course's five shared virtues
+(`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the criteria the book's
+Milestone 2 assesses. Both halves are graded, and neither can carry the other.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Question formulation & compass alignment** (30) | Funnel walked with all three terms (units, target population, outcome) named; question is answerable and can be wrong; compass position correct in the M1 shape; permitted and forbidden claims both named (26–30) | Funnel and question sound; compass correct; one term thin or the forbidden claim under-argued (21–25) | Question present but one term missing or fuzzy, or the compass position asserted without the "because" reasoning (13–20) | Topic or a values question posed as a research question, or the compass position missing or contradicting the question (0–12) |
-| **Opportunity landscape & evidence integrity** (20) | Two-plus candidate problems, each naming its units/outcome/population; the choice defended on all three tests; contribution case honest and every named source real and retrievable (18–20) | Landscape and defense present; one test thin, or one provenance link loose (14–17) | Only one candidate, or the defense skips a test, or a source asserted without a locatable origin (8–13) | No landscape (a single problem with no alternative), or a cited source that does not exist or does not say what you claim (0–7) |
-| **Verification of AI-assisted parts** (20) | Every AI-assisted step (candidate-widening, contribution scan, classification check) has a ledger row with a named, non-vague verification method (18–20) | Ledger present; one verification method vague or one step unlogged (14–17) | Ledger thin; AI outputs used but verification not named (8–13) | AI output reproduced without any verification, or the compass label taken from a tool and unchecked against the definitions (0–7) |
-| **Uncertainty & claim boundary** (20) | The permitted claim carries its uncertainty; the forbidden crossing named precisely; one honest limitation stated (18–20) | Boundary and limitation present; uncertainty or the forbidden crossing stated loosely (14–17) | Only the permitted claim, with no forbidden crossing, or no limitation stated (8–13) | No boundary, or a description silently upgraded to a population or a cause with no caveat (0–7) |
-| **Craft, ledger & communication** (10) | On-format, on-time, clear 2-minute pitch, complete AI Research Ledger, dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces or a rushed pitch (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **The declared question: kind, reach, and the words that fix them** (30) | The lead question is answerable and can be wrong; kind and reach are both fixed by quoted words from your own sentence; any double-barrel is split with the pursued half named; a causal question with weak data is declared causal and currently unidentified; the field card is complete and the stranger test reported (26–30) | Question and classification sound; one axis argued from the answer rather than the words, or one field-card entry thin (21–25) | Question present but a term is fuzzy, or kind or reach asserted with no words quoted, or the stranger test skipped (13–20) | A topic or a values question posed as a research question, or a kind or reach the question's own words do not fix (0–12) |
+| **The working agreement** (20) | Responsibility statement names real decisions from your project; the three rule lists have real entries; the delegation map covers this week's own declaration; all three red-flag questions answered, with human participants flagged if present (18–20) | Agreement complete; one list generic, or the map silent on the declaration (14–17) | A statement that would fit any project, or a rule list with no never-delegate entries, or the red-flag screen skipped (8–13) | No agreement, or rules that delegate a decision the course reserves to you (0–7) |
+| **Verification of AI-assisted parts** (20) | The ledger is open with retrospective rows, one verified factual hinge, and one complete SDIIVDD run whose outcome is on record; every verification method is named and non-vague (18–20) | Ledger present; one verification method vague or one exchange unlogged (14–17) | Ledger thin, or AI outputs used with verification not named, or the SDIIVDD run recorded with no outcome (8–13) | AI output reproduced with no verification anywhere, or the kind and reach taken from a tool and never checked against the definitions (0–7) |
+| **Uncertainty & claim boundary** (20) | All three boundary sentences present; the forbidden upgrade named precisely as one of the three (silent upgrade, leakage, after-therefore-because); the uncertainty-and-limitations line says what is imprecise, unmeasured, and uncovered (18–20) | Boundary present; the forbidden sentence or the limitations line stated loosely (14–17) | Only the defensible sentence, with no forbidden upgrade, or no limitations line (8–13) | No boundary, or a claim already upgraded past its reach with no caveat (0–7) |
+| **Craft, version, ledger & communication** (10) | Dated version zero with a usable reason; both halves separated and complete; the cross-read reported; on-format, on-time; clear 2-minute pitch; dossier line present (9–10) | Minor format lapses, or a version whose reason is decorative; ledger complete (7–8) | Missing pieces, no version line, no cross-read, or a rushed pitch (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
-- A **fabricated or unretrievable source** caps *Opportunity landscape & evidence
-  integrity* at Beginning.
+- A **relabelled question** — a causal question reported as descriptive because
+  the data cannot identify it — caps *The declared question* at Beginning.
+- A **fabricated or unretrievable source** caps *Verification of AI-assisted
+  parts* at Beginning.
 - An **untraceable number** — any figure you report with no path back to its
   origin — caps *Verification of AI-assisted parts* at Beginning.
 - A **non-reproducing result** — a kept code cell whose output does not rerun from
   the notebook — caps *Verification of AI-assisted parts* at Beginning.
-- A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
-  **0** and the submission is **returned** unread until it is supplied.
+- A **missing AI Research Ledger entry** scores *Craft, version, ledger &
+  communication* **0** and the submission is **returned** unread until it is
+  supplied.
 
 **Revision:** eligible under the standing policy — a revised submission within 7
 days of feedback recovers up to half the lost points.
@@ -249,31 +359,32 @@ days of feedback recovers up to half the lost points.
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies: talk to me first, per the syllabus).
 - Any source you cite that turns out not to exist or not to say what you claim:
-  *Opportunity landscape & evidence integrity* scores Beginning regardless of the
-  rest — the course's evidence-integrity rule with teeth.
+  *Verification of AI-assisted parts* scores Beginning regardless of the rest —
+  the course's evidence-integrity rule with teeth.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 
 ## Common Pitfalls
 
-1. **The double-barreled question.** "How common is burnout, and does night work
-   cause it?" is two questions in one — a headcount and a cause — and no single
-   position holds both. The fix is always the split, never a compromise label:
-   break it into a descriptive half and a causal half, each with its own compass
-   position, and say which your project will pursue.
-2. **The topic mistaken for a problem.** "My topic is important, so any question
-   about it is a research problem." A topic points at a territory; a problem names
-   one specific unknown with its units, its outcome, and who it is about. Name that
-   unknown before a reviewer asks you to.
-3. **Classifying by giveaway words instead of the answer.** Letting "effective"
-   read as "effect," or pasting your question to a tool and accepting whatever
-   position it prints. Giveaway words are hints you check, never the verdict.
-   Classify by the answer the question actually wants, and adjudicate any
-   disagreement against the compass definitions, not against the tool.
+1. **The silent relabel.** Your question asks what caused something, your data
+   cannot identify a cause, and the tempting fix is to call the question
+   descriptive so it looks answerable. That is the one move this milestone
+   forbids. Declare it causal and currently unidentified, report the association
+   plus the missing warrant, and let M4 give it a design. Changing the question
+   openly is fine; renaming it quietly is not.
+2. **The double-barreled question.** "How common is burnout, and does night work
+   cause it?" is two questions in one: a headcount and a cause. No single
+   classification holds both. Split it, classify each half separately, and say
+   which half your project pursues.
+3. **Rules written for a generic researcher.** "I will use AI responsibly" and "I
+   will verify outputs" name no decision and constrain nothing. Your agreement is
+   only worth writing if a reader could use it to predict what you would refuse to
+   delegate next week, and if the cross-read shows it covering the decisions your
+   declaration actually made.
 
 ---
 
-*Previous: [M00 — Research and AI Baseline](milestone_00_research_ai_baseline.md) ·
-Next: [M02 — Verified Evidence & Contribution Map](milestone_02_verified_evidence_map.md) —
-your one-line contribution case grows into a verified source ledger and a mapped
-field, and the gap you suspect becomes a gap you can prove.*
+*Previous: [M00 — Curiosity Committed and the Research Problem](milestone_00_research_ai_baseline.md) ·
+Next: [M02 — Verified Evidence and Contribution Map](milestone_02_verified_evidence_map.md).
+You hold this declared question up against what is already known, verify what the
+field actually says, and let the evidence send back a sharper version.*

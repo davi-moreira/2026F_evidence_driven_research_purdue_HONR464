@@ -1,4 +1,4 @@
-# Course milestone M10 — Final Poster Lock
+# Course milestone M10 — Reproducible Package and the Final Poster Lock
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge (D41)** — course milestone **M10**.
@@ -32,22 +32,27 @@ is no "I will fix it after submission," because after this is the Expo.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, November 6, 5:00 PM (terminal — no revision window).** This
-milestone was kicked off in the week's poster-criticism lectures (the gallery
-walk and the oral defense). The Friday studio that day is the production block:
-the instructor opens it with the final-lock checklist, you produce, and you
-submit at the end of the block.
+Due: **Friday, November 6, 5:00 PM (terminal — no revision window).** Monday and
+Wednesday taught this week's two lessons, replication and reproduction and then
+open and reusable research packages, and you worked their "It is your turn"
+sections as you went. Friday's studio is this milestone. You assemble the
+package, run it cold, clear the two blocking gates, and lock the poster on the
+numbers that just came back.
+
+**The order of the rows below is the order of the work.** The package and its
+cold run come first, because the poster's numbers are their output. Nothing goes
+on the board that did not just reproduce.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m10_poster.pdf`** | The print-ready **locked poster**, with your **AI-use disclosure block** and your **signed final-lock checklist** included (last page or companion). The headline sits inside its compass position, the uncertainty rides in the same eye-span as the claim, every number traces to a cell, and every citation resolves. |
-| 2 | **`lastname_m10_lock_record.pdf`** *or* the same as notebook sections | Your **gallery-walk audit record** and **oral-defense record**: the four audits plus accessibility run on your own poster with located hits and fixes, and the three-lens defense with your defend-versus-concede calls and softened claims. |
-| 3 | **`lastname_m10_poster.ipynb`** *or* a shared Colab link | The seeded (`SEED = 464`) notebook that produces every number on the poster. **Every figure and statistic on the board traces to a cell here**, and it reruns top to bottom. |
-| 4 | **`lastname_m10_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number reproduced) and your **release preflight** (permissions status, AI disclosure present, claim boundary checked, no stale numbers). **The poster does not lock without both.** |
+| 1 | **`lastname_m10_package.zip`** *or* a shared folder or repository link | Your **reusable research package**: the seeded (`SEED = 464`) notebook, the data or a written access recipe, the environment record, a README saying what the project asks, what it found, and how to run everything, the licence with its reuse boundary, the exact output locations, and the dated frozen manifest. |
+| 2 | **`lastname_m10_coldrun.pdf`** *or* the same as notebook sections | Your **cold-run record**: the clean-environment run made from your written instructions only, every question the run raised, every documentation line you added in response, and the honest label the run earns. Working alone, that label is **"solo proxy; external cold run pending"**. |
+| 3 | **`lastname_m10_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number and every bound reproduced) and your **release preflight** (permissions, disclosure, reproducibility, claim boundary, each marked clear, pending, or blocking). **The poster does not lock without both.** |
+| 4 | **`lastname_m10_poster.pdf`** | The print-ready **locked poster**, carrying your **AI-use disclosure block** and your **signed final-lock checklist** (last page or companion). Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. |
 | 5 | **EDR\|AI "It is your turn" — ch. 36, ch. 37** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
-If you submit a notebook link, set sharing so the instructor can open it, and
-confirm every figure renders when the notebook runs top to bottom. Submit the
+If you submit a folder or notebook link, set sharing so the instructor can open
+it, and confirm the package runs top to bottom in a clean session. Submit the
 poster PDF to Brightspace **and** through the URC channel as instructed in class;
 the Brightspace timestamp governs the deadline.
 
@@ -74,159 +79,205 @@ Dossier.
 
 ## Purpose
 
-Two framings govern this lock. First, **the poster adapts the note** — your
-M9 research-note v0 already fixed the claim, its boundary, and its
-uncertainty; the poster is that same content shaped for a board, and any
-claim that appears here without a note sentence behind it is new material
-smuggled in at the worst possible week. Second, the locked poster is a
-**preliminary presentation, labeled as such**: your project's full package
-closes in December, so the poster presents a bounded, reproduced,
-honestly-labeled version of where the evidence stands now. That label is a
-strength at the Expo, not an apology.
+Two things land together this week, and the link between them is the whole
+lesson. The first is your **reproducible package**: the bundle another researcher
+needs in order to obtain your result without you in the room. The second is the
+**poster lock**, the moment your poster stops being editable and goes to print.
+One rule joins them, and it governs everything below. **The numbers that lock
+onto the poster are the numbers that just reproduced from the clean package.**
 
-Everything the poster milestones built converges here. The M9 draft's evidence,
-the gallery walk's located hits, and the oral defense's softened claims are
-assembled into a single print-ready artifact that has to stand on its own in
-front of an audience you will not get to coach. This is a **production**
-milestone, not a design one. The creative decisions were made this week; today
-you execute them to spec and verify that every claim on the board is one you can
-defend to a stranger.
+Said as a habit rather than a rule: reproduce before you publish. A number you
+have not just re-obtained is a memory of a result, and you are asking an audience
+to trust the memory. At the Expo a judge will point at one figure and ask where
+it came from. "It reran this morning from the package I submitted" is an answer.
+"I am fairly sure that is the current version" is not.
 
-The verification bar is specific and non-negotiable. **Every number on the
-poster traces to a cell in your notebook.** Every **citation resolves** to a
-real, retrievable source you opened yourself. The headline sits inside your
-**compass position**, the uncertainty is **visible in the same eye-span** as the
-claim, the poster is **reachable** by a color-blind reader and a screen-reader
-user, and the four gallery-walk audits pass. You sign a checklist attesting to
-all of it. The lock is terminal, so the honesty has to be built in before the
-file leaves your hands, never patched after.
+**Reproduction** means obtaining the same result from the same data and the same
+code, following only the written instructions. It is not **replication**, which
+gathers new data and asks whether the finding shows up again. Your package is
+tested for reproduction this week: same inputs, same steps, same numbers, a
+different session and ideally a different pair of hands.
 
-> **A question that often comes up here:** *"The poster gets its criticism this
-> week. Why is the lock a separate graded thing?"* Because a poster that reads
-> well can still hide a number no cell produces or a citation that does not
-> resolve. The gallery walk fixed how your poster **reads**; the oral defense
-> fixed what you **say** about it; the lock fixes whether the claims are actually
-> **backed**. A judge who points at one number and hears "I think that came from
-> the analysis somewhere" stops trusting the whole board. Walk one pointed finger
-> straight to its cell and you buy trust for the entire poster.
+The test itself is a **cold run**, a run made in a clean environment by someone
+following your written instructions and nothing else. A **clean environment** is
+a fresh session with nothing left over from your work, such as a brand-new Colab
+runtime where the file you uploaded last Tuesday no longer exists. Cold runs
+expose the steps you know by heart and never wrote down, and every question the
+runner has to ask you is a missing line in your documentation.
+
+The strongest version of the test is another person running your package without
+your help. Working alone, you rerun it yourself after a real break, instructions
+only, and you label the record **"solo proxy; external cold run pending"**. That
+label is part of the artifact, not a footnote. **Author self-reproduction is
+never independent verification**, because you carry the undocumented step in your
+head, and a proxy never becomes a claim that someone else reproduced your work.
+
+One more requirement decides whether the reproduction was honest.
+**Reproduce the uncertainty, not only the point estimate.** If your interval, your
+standard error, or your sensitivity range does not come back with the same value,
+your result has not reproduced, however well the headline number matched. An
+estimate without its bound is not the finding; it is half of it.
+
+Two **blocking gates** stand between your work and the print file. A blocking
+gate is a pass-or-stop check that is not scored and cannot be averaged away by
+strong work elsewhere. The first is your **author self-reproduction log**: a
+dated, clean-runtime rerun in which every number and every bound headed for the
+poster came back. The second is the **release preflight**: permissions,
+disclosure, reproducibility, and claim boundary, each marked clear, pending, or
+blocking. The poster does not lock until both records exist and both are clean.
+
+The lock is terminal, so the honesty has to be built in before the file leaves
+your hands, never patched afterward. Your poster presents a bounded, honestly
+labeled version of where your evidence stands right now, because the full project
+closes in December. That label is a strength at the Expo rather than an apology.
+
+> **A question that often comes up here:** *"I ran everything last week and it
+> worked. Why run it again the same day I lock the poster?"* Because a package is
+> only current as of its last clean run. You fixed a figure on Tuesday, changed a
+> filter on Wednesday, and the number under the headline has quietly moved. The
+> cold run is what turns "it worked when I built it" into "it works now, from
+> these files, in this order." A judge who points at a number is really asking
+> when you last saw it come out of the machine, and this milestone makes the
+> answer "today."
 
 ## Components
 
-### 1. The locked poster (URC specification)
+### 1. The reusable research package
+
+Assemble the whole bundle before you test it, so the cold run tests the thing you
+would actually hand over. A **research package** is everything another researcher
+needs to obtain your result, with nothing assumed to live on your laptop. It
+carries six parts:
+
+- **The seeded notebook.** Your analysis notebook with `SEED = 464` set through
+  `np.random.default_rng(SEED)`, running top to bottom without a manual step.
+- **The data or its access recipe.** Either the file itself, when your permissions
+  allow sharing it, or a written route to it: source, exact URL or archive record,
+  retrieval date, and any registration the reader must complete. A **data access
+  recipe** is the honest substitute for data you may not redistribute.
+- **The environment record.** The versions your run used, such as a
+  `requirements.txt` or a printed list of package versions. Without it, a future
+  run is a different experiment.
+- **The README.** Its first three lines say what the project asks, what the
+  headline found, and how to run everything. Then the run order, the expected
+  outputs, and where each output lands.
+- **The licence.** The terms under which the package may be reused, with the reuse
+  boundary and any restriction stated plainly. What you may share is set by your
+  permission determination, and the package says so explicitly.
+- **The dated, frozen manifest.** The list of files in the package, with the date
+  you froze it. That date is what makes staleness detectable later.
+
+### 2. The cold-run record
+
+The record of the test, written so a reader can see what the package did without
+you. It has four parts, and the fourth is the honest label.
+
+- **The run.** The environment you used, the date, and the instructions you
+  followed, which are only the ones in your README.
+- **The question log.** Every place the run stalled or the runner had to ask you
+  something. Log the question even when the answer was obvious to you, because
+  obvious-to-you is exactly what documentation exists to replace.
+- **The fixes.** For each question, the documentation line or code change you
+  added. A cold run that changes nothing usually means the log was not kept.
+- **The label.** Either an external cold run, naming who ran it and when, or
+  **"solo proxy; external cold run pending"** when you reran it yourself after a
+  break. Never soften the second label into the first.
+
+Record which numbers came back identical and which did not. A **mismatch** is a
+finding about your package, not an inconvenience, and it is repaired before the
+poster carries the number.
+
+### 3. Gate 1 — the author self-reproduction log (blocking)
+
+A dated log of a fresh-runtime, top-to-bottom rerun in which every number bound
+for the poster came back. Restart the runtime, run all, and copy each poster
+number next to the value the rerun produced, including its interval or bound. Mark
+each pair matched or not matched, and repair every mismatch before you lock.
+
+This log is a gate, not a claim of independent verification. It says the numbers
+are current and traceable. The cold-run record in component 2 is what speaks, as
+far as it can, to someone other than you obtaining them.
+
+### 4. Gate 2 — the release preflight (blocking)
+
+A short table taken immediately before you lock, with each row marked clear,
+pending, or blocking:
+
+- **Permissions.** Everything on the poster is inside your permission
+  determination, and nothing identifiable appears that should not.
+- **Disclosure.** The AI-use disclosure block is on or with the poster, and it is
+  accurate.
+- **Reproducibility.** The package is complete, and the poster's numbers match the
+  run recorded in Gate 1.
+- **Claim boundary.** The headline sits inside the compass position your design
+  licenses, and the uncertainty travels with it.
+
+A pending row is a repair you name and finish. A blocking row means the poster
+does not lock until the repair is done. Neither is negotiable by strong work
+elsewhere, because a blocking gate is not scored.
+
+### 5. The locked poster, built on the reproduced numbers
 
 The complete poster, sized and formatted to the URC print spec distributed in
 class: dimensions, minimum font sizes at print scale, required identifying
-elements. It must be legible at the size it will actually be printed, not just on
-your screen. Four properties are graded on the board itself, and all four are
-skills you practiced this week:
+elements. It must be legible at the size it will be printed, not only on your
+screen. Four properties are graded on the board itself:
 
 - **One headline claim, inside its compass position.** Your headline states the
-  finding in one sentence whose verb stays inside the **compass position** your
-  design licenses. A **compass position** is the kind and reach of the question
-  your project answered (descriptive vs causal; the data at hand, a population, or
-  unseen cases). An observational project says "is associated with," never
-  "causes." The 90-second reader inherits whatever the headline claims.
-- **Every number traces to a cell.** Each percentage, estimate, interval, and
-  count on the poster points to the notebook cell that produced it. A number you
-  typed from memory, rounded by hand, or carried from an old draft you have since
-  changed is an **untraceable number**, and it cannot go on the board.
+  finding in one sentence whose verb stays inside your **compass position**, the
+  kind and reach of the question your project answered. An observational project
+  says "is associated with," never "causes." The 90-second reader inherits
+  whatever the headline claims.
+- **Every number traces to a cell in the package.** Each percentage, estimate,
+  interval, and count on the poster points to the cell that produced it in the
+  notebook you just reran. A number typed from memory, rounded by hand, or carried
+  from a draft you have since changed is an **untraceable number**, and it cannot
+  go on the board.
 - **Uncertainty visible in the same eye-span as the claim.** The interval or
-  caveat around your headline sits where the reader meets it alongside the claim,
-  not exiled to a footnote the 90-second reader never reaches.
-- **Reachable by every reader.** The poster's message reaches a color-blind reader
-  and a screen-reader user, not only a fast sighted reader who leans in.
-  **Redundant encoding** — carrying each distinction in more than one channel, so
-  no single channel is load-bearing — is how a color-coded figure survives for a
-  red-green color-blind reviewer (roughly 1 in 12 men). Label each series and give
-  it a pattern, so color is a bonus, not the only signal.
+  caveat around your headline sits where the reader meets it beside the claim,
+  not exiled to a footnote the 90-second reader never reaches. Name the limitation
+  most likely to change the finding, in the reader's line of sight.
+- **Reachable by every reader.** The message reaches a color-blind reader and a
+  screen-reader user, not only a fast sighted reader who leans in. **Redundant
+  encoding** carries each distinction in more than one channel, so no single
+  channel is load-bearing. Label each series and give it a pattern, so color is a
+  bonus rather than the only signal.
 
-### 2. The gallery-walk audit record
+Two habits carry the poster through the lock, and you attest to both on a
+**signed final-lock checklist** that ships with the file:
 
-The four audits plus accessibility, run on **your own** poster, each finding
-written as a **located hit** with its fix. A hit is a specific, located finding
-with a repair ("the y-axis starts just below the shorter bar, so a half-point gap
-looks like a canyon; run it on the full scale"), not a vague "looks good."
-
-- **Claim-boundary audit.** Does the headline stay inside the poster's compass
-  position?
-- **Figure-honesty audit.** Does each figure's visual impression match its number,
-  with no truncated axis inflating a small gap?
-- **Read-path audit.** Can a stranger find the headline in 90 seconds?
-- **Uncertainty audit.** Is the bound visible in the same eye-span as the claim,
-  or buried?
-- **Accessibility.** Does the message reach a color-blind reader and a
-  screen-reader user? Name every color-only encoding and its redundant-encoding
-  fix.
-
-List the hits your poster received and, for each, what you changed. A hit a
-friendly room finds today is a hit a hostile stranger never gets to find at the
-Expo.
-
-### 3. The oral-defense record
-
-The three-lens defense, run against your own poster, recorded so a reader can see
-what you conceded and what you held. An **oral poster defense** is the live
-conversation at your board where you answer questions you cannot see coming and
-cannot edit afterward. Three lenses account for almost every hard question, and
-each needs a different answer:
-
-- **The interdisciplinary lens (the outsider).** Someone outside your field tests
-  whether your claim and its relevance survive translation.
-- **The methods lens (the specialist).** Someone who knows your tools probes your
-  **specification** — the specific design and analysis choices you made.
-- **The skeptic lens (the doubter).** Someone grants your data and proposes an
-  **alternative explanation**, a different story that fits the same evidence.
-
-For each lens, record the hardest question and your **defend-versus-concede**
-call: you **defend** when the objection asks for something your evidence already
-licenses, and you **concede** when it asks for a crossing your design never paid
-for. For the one question your evidence cannot fully answer, write your
-**honest-don't-know** answer: name what you do know, state the boundary plainly,
-and point to what evidence would settle the rest. Then list every claim your
-defense exposed as too strong, and the softer wording you locked instead. The
-failure to avoid is **upgrading** your claim under pressure — saying "causes" out
-loud because a skeptic pushed, when your written poster only ever said "is
-associated with."
-
-### 4. The final-lock checklist (traceability, citation, disclosure)
-
-Three habits carry the poster through the lock, and you attest to each on a
-**signed final-lock checklist**:
-
-- **Number-to-cell traceability.** Every number on the poster traces to the exact
-  cell that produced it. In the studio you demonstrate one such trace to a
-  partner; in principle you can demonstrate any of them.
 - **Citation verification.** Every source your poster names **resolves** to a
   real, retrievable work you opened yourself. You click the link, the work loads,
-  and it says what your poster claims it says. No fabricated or unretrievable
+  and it says what your poster says it says. No fabricated or unretrievable
   citation appears anywhere.
 - **AI-use disclosure block.** A short, honest note on or with the poster
-  recording which AI tool did which task (locate sources / operationalize / draft /
-  critique) and how you verified its output. "No AI used" is a legitimate entry if
-  it is true; an undisclosed AI contribution is an academic-integrity violation.
+  recording which AI tool did which task, such as locating sources, drafting, or
+  critiquing, and how you verified its output. "No AI used" is a legitimate entry
+  when it is true. An undisclosed AI contribution is an academic-integrity
+  violation.
 
-### 5. AI Research Ledger rows
+### 6. AI Research Ledger rows
 
-Every use of AI in producing this poster gets a row in your **AI Research Ledger**
-(the eight fixed fields: task delegated · tool used · prompt · output summary ·
-decision · verification method · remaining concern · responsible researcher).
-Generating the skeptic questions you rehearsed, scanning a figure for a
-color-only encoding, and red-teaming your spoken answer against your written
-headline are all delegable tasks, and each one you delegated needs a row naming
-how you verified it against the real poster. The AI-use disclosure block on the
-board is the compact public summary; the ledger is the full record behind it.
+Every use of AI in producing this package and this poster gets a row in your **AI
+Research Ledger** (the eight fixed fields: task delegated · tool used · prompt ·
+output summary · decision · verification method · remaining concern · responsible
+researcher). Drafting the README, generating the environment record, scanning a
+figure for a color-only encoding, and listing the steps a stranger might stumble
+on are all delegable tasks. An assistant can generate documentation; only a cold
+human run can validate it, so each row names the run or the check that tested the
+output against reality.
 
 **A missing ledger is not a minor lapse.** Per the course rule, a missing AI
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 6. Dossier update line
+### 7. Dossier update line
 
 End with one line recording what this milestone finalizes in your **Research
-Project Dossier**: your poster and presentation materials now carry a locked,
-print-ready poster whose every number traces to a cell, whose citations resolve,
-and whose uncertainty is visible, plus the gallery-walk and oral-defense records
-behind it. Name the file or section where each now lives.
+Project Dossier**: your reproducibility package with its dated manifest, your
+cold-run record with its honest label, the two gate records, and the locked poster
+whose every number came from the run those records describe. Name the file or
+section where each now lives.
 
 ---
 
@@ -237,18 +288,21 @@ pre-submission checklist.
 
 | Item | Specification |
 |---|---|
+| **Package** | Seeded notebook, data or its access recipe, environment record, README (asks / found / how to run), licence with its reuse boundary, output locations, dated frozen manifest |
+| **Cold-run record** | Clean-environment run from the written instructions only; question log; documentation fixes; labeled external run, or **"solo proxy; external cold run pending"** |
+| **Uncertainty reproduced** | Intervals, bounds, or sensitivity ranges reproduce with the point estimates, and mismatches are repaired before the lock |
+| **Gate 1 — author self-reproduction log** | Dated fresh-runtime rerun; every poster number and bound matched; blocking |
+| **Gate 2 — release preflight** | Permissions, disclosure, reproducibility, claim boundary, each clear / pending / blocking; blocking |
 | **Locked poster** | Print-ready to URC spec; legible at print scale; headline inside its compass position; uncertainty in the same eye-span as the claim; reachable by a color-blind and a screen-reader reader |
-| **Number-to-cell traceability** | Every number on the board traces to a cell; one trace demonstrated in the studio |
+| **Number-to-cell traceability** | Every number on the board traces to a cell in the package that just reran |
 | **Citation verification** | Every source resolves to a real, retrievable work you opened; none fabricated or unretrievable |
-| **Gallery-walk audit record** | The four audits plus accessibility run on your poster, each a located hit with its fix |
-| **Oral-defense record** | Three lenses; defend-or-concede call per lens; one honest-don't-know; the claims you softened |
-| **Final-lock checklist** | Signed, attesting to traceability, citation, uncertainty, the four audits, and print spec |
+| **Final-lock checklist** | Signed, attesting to traceability, citations, uncertainty placement, both gates, and print spec |
 | **AI-use disclosure block** | On or with the poster: tool, task, verify step (or "No AI used") |
-| **Notebook** | Seeded (`SEED = 464`); reruns top to bottom; every reported number reproduces from a cell |
+| **Version and reason** | The package and the cold-run record are dated and numbered as a version, with one line saying what changed and why |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
-| **Dossier line** | Poster and presentation materials located by file or section |
-| **Presentation** | Gallery-walk audit and three-lens defense delivered in class; feedback incorporated before the lock |
-| **Filenames** | `lastname_m10_poster.pdf`, `lastname_m10_lock_record.pdf` (or notebook sections), `lastname_m10_poster.ipynb` |
+| **Dossier line** | Package, cold-run record, gate records, and poster located by file or section |
+| **Studio work** | Package assembled, cold run completed, and both gates cleared in the Friday production block |
+| **Filenames** | `lastname_m10_package.zip` (or a shared link), `lastname_m10_coldrun.pdf`, `lastname_m10_gates.pdf`, `lastname_m10_poster.pdf` |
 | **Location** | Brightspace → Assignments → M10 (and the URC channel) |
 
 ---
@@ -260,66 +314,72 @@ Four bands on the course's five shared virtues
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass & pathway alignment** (20) | Every claim, headline included, sits inside its declared compass position; the claim-boundary audit passes with no upgrade of a sample to a population or an association to a cause (18–20) | Inside the boundary with one soft word or one lightly over-reaching phrase (14–17) | A claim drifts past the evidence the design licenses (8–13) | Headline or central claim outruns the compass position: an observational correlation narrated as a cause, or a sample described as a population (0–7) |
-| **Evidence integrity & provenance** (15) | Every citation on the poster resolves to a real, retrievable work you opened; a reader can trace each to its origin (14–15) | Real and traceable; one citation link thin or under-documented (11–13) | A named source asserted without a locatable, retrievable origin (6–10) | A fabricated or unretrievable citation, or a source that does not say what the poster claims (0–5) |
-| **Verification & traceability** (25) | Every number on the poster traces to a cell; the in-class trace is clean; the notebook reruns and every headline number reproduces; every AI-assisted step is disclosed and verified against the real poster (23–25) | Traceable with one number needing a hunt, or one AI step verified loosely (18–22) | Some numbers not readily traceable, or AI outputs used with verification not named (11–17) | A number with no cell behind it, a headline number that does not rerun, or an AI output placed on the board unverified (0–10) |
-| **Uncertainty & limitations** (20) | The headline's interval or caveat is visible in the same eye-span as the claim; the oral defense carries a calibrated honest-don't-know and clean defend-or-concede calls, neither hidden nor spiraling (18–20) | Uncertainty present and the defense sound, but one placement off the read path or one call stated loosely (14–17) | Uncertainty vague or off-path, or a hard question met by upgrading the claim instead of conceding (8–13) | No uncertainty on the poster, or the result reported as settled certainty (0–7) |
-| **Craft, ledger & communication** (20) | To URC spec and legible at print scale; the four audits plus accessibility pass with redundant encoding where color carried meaning; the three-lens defense delivered; complete AI Research Ledger and AI-use disclosure block; dossier line present (18–20) | Minor spec, legibility, or accessibility lapse; ledger and disclosure complete (14–17) | Off-spec or hard to read at size, an audit unaddressed, or feedback not incorporated (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–7) |
+| **Compass & pathway alignment** (20) | Every claim on the board, headline included, sits inside its declared compass position; the package's README describes the same bounded question the poster answers (18–20) | Inside the boundary with one soft word or one lightly over-reaching phrase (14–17) | A claim drifts past the evidence the design licenses (8–13) | Headline or central claim outruns the compass position: an observational association narrated as a cause, or a sample described as a population (0–7) |
+| **Evidence integrity & provenance** (15) | The package carries data or a working access recipe with source, route, and retrieval date; every citation on the poster resolves to a real, retrievable work you opened (14–15) | Real and traceable; one access route or citation thin or under-documented (11–13) | A source or data route asserted without a locatable, retrievable origin (6–10) | A fabricated or unretrievable citation, or a data route that leads nowhere (0–5) |
+| **Verification & traceability** (25) | The cold run is complete and honestly labeled, with its question log and its fixes; both gates are recorded and clean; every poster number and every bound reproduced from the clean package; each AI-assisted step is verified against a real run (23–25) | Reproduction complete with one number needing a hunt, or one question log entry thin, or one AI step verified loosely (18–22) | Some numbers not readily traceable, the cold run run from memory rather than the README, or AI outputs used with verification not named (11–17) | A number with no cell behind it, a headline number or bound that does not rerun, an author rerun presented as independent verification, or a missing gate record (0–10) |
+| **Uncertainty & limitations** (20) | The headline's interval or caveat is visible in the same eye-span as the claim; the uncertainty reproduced along with the point estimate; the poster's preliminary status and its most threatening limitation are stated plainly (18–20) | Uncertainty present and reproduced, but one placement off the read path or one limitation stated loosely (14–17) | Uncertainty vague, off-path, or reproduced only as a point estimate (8–13) | No uncertainty on the poster, or the result presented as settled certainty (0–7) |
+| **Craft, ledger & communication** (20) | Package complete and runnable by a stranger, README included, licence stated, manifest dated as a numbered version with its reason; poster to URC spec and legible at print scale with redundant encoding where color carried meaning; complete AI Research Ledger and disclosure block; dossier line present (18–20) | Minor spec, README, or accessibility lapse; ledger and disclosure complete (14–17) | Package missing a part, off-spec or hard to read at size, or the version undated and unexplained (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–7) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
 - A **fabricated or unretrievable source** caps *Evidence integrity & provenance*
   at Beginning.
-- An **untraceable number** — a figure with no path back to your data — caps
-  *Verification & traceability* at Beginning.
-- A **non-reproducing result** — a headline number that does not rerun from your
-  submitted notebook — caps *Verification & traceability* at Beginning.
+- An **untraceable number** on the poster caps *Verification & traceability* at
+  Beginning.
+- A **non-reproducing result**, meaning a poster number or bound that does not
+  rerun from your submitted package, caps *Verification & traceability* at
+  Beginning.
+- An **author rerun labeled as independent reproduction**, or a solo proxy
+  submitted without its label, caps *Verification & traceability* at Beginning.
 - A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
   **0** and the submission is **returned** unread until it is supplied.
 
-**Revision: none — this is a terminal artifact.** The deadline governs; there is
-no post-hoc revision, announced from week 1. Everything after this milestone is
-delivery and depth, and the audience on November 17 reads whatever you submit by
-5:00 PM on November 6.
+**Blocking gates are separate from the score.** A submission without both gate
+records, or with a gate row still marked blocking, is returned rather than
+graded. Neither gate can be averaged away by strong work elsewhere.
+
+**Revision: none — this is a terminal artifact.** The deadline governs and there
+is no post-hoc revision, announced from week 1. Everything after this milestone
+is delivery and depth, and the audience on November 17 reads whatever you submit
+by 5:00 PM on November 6.
 
 ## Penalties
 
 - Late: −10 points per day, up to 3 days; not accepted after (documented
   emergencies handled individually per Purdue policy). Because the artifact is
-  terminal, a late poster also risks the print timeline for November 17 — the
-  deadline is real for logistics, not only for grading.
-- Any number on the poster with no cell behind it, or any headline number that
-  does not reproduce from your submitted notebook: *Verification & traceability*
-  scores Beginning regardless of the rest.
+  terminal, a late poster also risks the print timeline for November 17, so the
+  deadline is real for logistics and not only for grading.
+- Any number on the poster with no cell behind it, or any headline number or bound
+  that does not reproduce from your submitted package: *Verification &
+  traceability* scores Beginning regardless of the rest.
 - Any cited source that does not exist or does not say what you claim: *Evidence
-  integrity & provenance* scores Beginning regardless of the rest — the course's
-  evidence-integrity rule with teeth.
+  integrity & provenance* scores Beginning regardless of the rest, which is the
+  course's evidence-integrity rule with teeth.
 - Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
   returned for completion before grading.
 
 ## Common Pitfalls
 
-1. **The orphan number on the board.** A headline figure carried from an old
-   draft after you re-ran the analysis, or an "in the sample" result quietly
-   upgraded to "in general" once it is shrunk to poster size. If you cannot point
-   to the cell that produced a number, it does not go on the poster — and the Expo
-   will ask.
-2. **The footnote uncertainty.** A confident headline with the interval hidden in
-   six-point type at the bottom. The 90-second reader never reaches footnotes, so
-   an out-of-eye-span bound reads as hiding it. Put the uncertainty where the
-   reader meets it alongside the claim.
-3. **The last-minute upgrade under deadline pressure.** As the clock runs down,
-   the headline creeps from "is associated with" to "leads to," or a color-only
-   figure ships without its redundant encoding because there was no time. Pressure
-   is exactly when the boundary and the accessibility fix matter most — you defend
-   this sentence out loud to strangers in eleven days, and a color-blind judge
-   cannot receive a claim encoded in color alone.
+1. **The package that only runs on your machine.** A hard-coded path to your
+   downloads folder, a file you uploaded by hand in a session that no longer
+   exists, a step you always do without thinking. Each one is invisible to you and
+   fatal to a stranger, which is exactly why the run has to be cold and the
+   instructions have to be the only guide.
+2. **The proxy sold as the real thing.** Rerunning your own package after lunch
+   and writing "reproduced independently." It was not independent, because you
+   knew the undocumented step. Run it after a real break, follow only the README,
+   and keep the label honest: solo proxy, external cold run pending.
+3. **The number that moved after the last clean run.** You changed a filter on
+   Wednesday, and the headline on the board still shows Tuesday's figure. The same
+   trap catches intervals: the point estimate is refreshed and the bound beside it
+   is not. Lock the poster from the run you just made, and reproduce the
+   uncertainty along with the estimate.
 
 ---
 
-*Previous: [M09 — Poster Draft 1 and Research Audit](milestone_09_poster_draft_research_audit.md) —
-the audited claim that survived last week becomes the single defensible headline
-your locked poster carries · Next:
-[M11 — Presentation Package](milestone_11_presentation_package.md) — from a
-poster that stands on its own to the pitches, uncertainty line, and hard-question
-bank you speak beside it.*
+*Previous: [M09 — Venue Contract and the Publication-Ready Artifact](milestone_09_poster_draft_research_audit.md) —
+the artifact you shaped for your venue is the poster this week reproduces and
+locks · Next:
+[M11 — Release Audit and Next-Cycle Agenda](milestone_11_presentation_package.md) —
+from a package that reproduces to the audit that decides whether the work leaves
+your hands, and what the next study should ask.*
