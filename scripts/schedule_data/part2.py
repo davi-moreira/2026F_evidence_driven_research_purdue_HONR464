@@ -241,7 +241,7 @@ MEETINGS_P2 = [
         "student_artifact": "Submitted M5 + the logged Contract version + the re-identification probe decisions + first M6 analysis-plan notes",
         "exit_ticket": "Claim Ticket #17: the provenance fact or measurement gap I disclosed today that I was most tempted to leave out.",
         "homework_next_milestone": "Submit M5 tonight (11:59 PM). Weekend: read the AI-as-programmer lesson and bring your Contract plus your governed data — Monday turns your declared analysis into running code.",
-        "instructor_prep": "Print the week06 quiz and the M5 rubric; stage the M6 Brightspace brief and state the Oct 9 abstract gate out loud; confirm the Evidence & Citation Verifier role is live and remind the room it has no internet access; set the consult order from the stand-up gaps.",
+        "instructor_prep": "Print the week06 quiz and the M5 rubric; stage the M6 Brightspace brief and state the abstract internal gate out loud; confirm the Evidence & Citation Verifier role is live and remind the room it has no internet access; set the consult order from the stand-up gaps.",
         "risks_contingency": "A record is incomplete at close → it is submitted with the gaps named as gaps, since a disclosed hole beats a silent one, and an office-hours repair is booked; a licence page cannot be closed → the row reads 'unknown' rather than a guess; the quiz or the stand-up overruns → the 30-minute sprint block is protected.",
     },
     # ------------------------------------------------------------------ M18

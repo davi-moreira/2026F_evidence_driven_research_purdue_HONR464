@@ -202,6 +202,41 @@ def read_surface(f: Path) -> str:
     return text
 
 
+def _mutate_text(path: Path, rx, repl: str) -> str | None:
+    """Rewrite `path` the way the SCANNER reads it, and return the original raw.
+
+    Notebook JSON stores a cell's text as a list of lines, so a phrase that
+    wraps across two lines is split by `","` in the raw file. A raw-substring
+    mutation therefore misses exactly the occurrences the normalizing scanner
+    still finds — which silently turns the self-test's deletion probe into a
+    no-op (found 2026-08-06: nb08 wrapped "specification spread" and the probe
+    stopped proving the gate). Mutate per cell, on the JOINED source.
+    """
+    try:
+        raw = path.read_text()
+    except (OSError, UnicodeDecodeError):
+        return None
+    if path.suffix == ".ipynb":
+        try:
+            nb = json.loads(raw)
+        except ValueError:
+            return None
+        hit = False
+        for cell in nb.get("cells", []):
+            joined = "".join(cell.get("source", []))
+            if rx.search(joined):
+                cell["source"] = [rx.sub(repl, joined)]
+                hit = True
+        if not hit:
+            return None
+        path.write_text(json.dumps(nb, indent=1, ensure_ascii=False))
+        return raw
+    if not rx.search(raw):
+        return None
+    path.write_text(rx.sub(repl, raw))
+    return raw
+
+
 def surfaces(spec, defaults, local: bool = False) -> tuple[list[Path], list[str]]:
     """Resolve globs to files, and report any REQUIRED glob that matched none.
 
@@ -807,13 +842,9 @@ def self_test() -> int:
             needle_rx = re.compile(r"specification\s+spread", re.I)
             touched: dict[Path, str] = {}
             for f in surfaces({}, load()["defaults"])[0]:
-                try:
-                    raw = f.read_text()
-                except (OSError, UnicodeDecodeError):
-                    continue
-                if needle_rx.search(raw):
+                raw = _mutate_text(f, needle_rx, "REMOVED TERM")
+                if raw is not None:
                     touched[f] = raw
-                    f.write_text(needle_rx.sub("REMOVED TERM", raw))
             _TEXT_CACHE.clear()
             if not any("required correction" in p for p in run(check_nums=False)):
                 failures.append("deleted required correction did NOT fail the scan")
