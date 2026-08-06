@@ -33,7 +33,7 @@ answer your question.
 
 In chapter 9 you built the four parts of a design. This chapter puts them to the test
 with a three-step loop this book borrows from RDSS (*Research Design in the Social
-Sciences: Declare, Diagnose, Redesign*) [@blair2023rdss].
+Sciences: Declaration, Diagnosis, and Redesign*) [@blair2023rdss].
 
 **Declare** means writing your four design parts as something a computer can run: a
 model that generates fake data, an inquiry it can compute on that fake data, a plan
@@ -75,8 +75,9 @@ and how the world makes noise. Report the whole card beside the number.
 
 Bias, variance, and power are all the same kind of thing: a property of the design
 read across many simulated runs, never off a single study. Blair, Cooper, Coppock,
-and Humphreys introduced the term **diagnosand** for such a property, and the loop's
-middle step takes its name from it [@blair2019declaring; @blair2023rdss].
+and Humphreys introduced the term **diagnosand** for a property of a design you want
+to diagnose [@blair2019declaring; @blair2023rdss]. Bias, variance, and power are three
+of them.
 
 Those three do not exhaust the pile, and fuller diagnoses add more. Two worth knowing
 by name. **Root mean-squared error** is the typical size of a miss, with big misses
@@ -188,7 +189,9 @@ diagnosis unmasks it.
 <!-- station-pointer:end -->
 
 *You have four design parts on paper. This step asks whether they would survive
-contact with the world, while a bad answer is still free.*
+contact with the world, while a bad answer is still free. The declare-and-diagnose
+loop, and the word "diagnosand" for the properties you read out of it, come from
+Blair, Cooper, Coppock, and Humphreys, developed at book length in RDSS.*
 
 The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
 

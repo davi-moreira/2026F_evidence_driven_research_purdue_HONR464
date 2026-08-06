@@ -37,7 +37,7 @@ apart and diagnose the whole before you trust its number.
 ## The concept
 
 Every research design has four parts, named **MIDA** by Blair, Cooper, Coppock, and
-Humphreys [@blair2019declaring; @blair2023rdss]: the **Model** (your written picture of how the
+Humphreys [@blair2019declaring] and developed in RDSS [@blair2023rdss]: the **Model** (your written picture of how the
 world could work), the **Inquiry** (the one exact quantity you want from it), the
 **Data strategy** (every procedure that makes the data, from sampling to measurement),
 and the **Answer strategy** (the whole procedure that turns those data into an answer,
@@ -142,7 +142,9 @@ Verify the number, not the tidy interval beside it.
 <!-- station-pointer:end -->
 
 *You have studied your primary pathway and at least one useful contrast. This step decides whether your own project
-needs more than one moving piece, and makes you justify the answer either way.*
+needs more than one moving piece, and makes you justify the answer either way. The
+four MIDA parts you are taking apart here are Blair, Cooper, Coppock, and Humphreys'
+framework, developed at book length in RDSS.*
 
 The hands-on half of this section lives in the chapter's **companion notebook**: open it in Colab with the badge at the top, and work the steps there.
 

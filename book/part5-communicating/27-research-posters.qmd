@@ -60,9 +60,11 @@ The decision is one judgment made four ways, and each way has a name.
   the claim, not buried in a footnote [@alley2013craft]. Example: a "±4 points" error bar drawn right
   on the headline figure.
 - **Accessibility.** Whether your message reaches readers who perceive differently.
-  The published standard is WCAG 2.2: color is never the only visual means of
-  carrying information, and every informative image needs a text alternative that
-  serves the same purpose [@w3c2024wcag22]. Example: a red-green bar pair carries
+  For the web version of a poster, WCAG 2.2 is the published standard: color is
+  never the only visual means of carrying information, and every informative image
+  needs a text alternative that serves the same purpose [@w3c2024wcag22]. Its
+  normative scope is web content, so treat the same two rules as good practice for
+  a printed board rather than a formal requirement. Example: a red-green bar pair carries
   nothing for a red-green color-blind reader, roughly 1 in 12 men
   [@crameri2020colour].
 - **Redundant encoding.** Carrying the same distinction in more than one channel, so

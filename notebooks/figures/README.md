@@ -31,8 +31,12 @@ it.
 1. **Professor Moreira's QM 67000 Business Analytics slides** (his own
    material): *"From Professor Moreira's QM 67000 Business Analytics slides."*
 2. **Personal photos** (nb01 introduction): Professor Moreira's own.
-3. `steve-jobs-pie.jpg`: Apple keynote photograph (2008) — a classic
-   visualization-criticism case, used in Professor Moreira's slides.
+
+`steve-jobs-pie.jpg` (an Apple keynote photograph) was **removed under D48**
+for the same reason as the RDSS conversions: no photographer, source, licence,
+or documented fair-use basis was recorded, and it was dormant. If the
+visualization-criticism case is wanted back, recreate the chart from the
+published figures and cite them.
 
 ## Assignments (file → notebook · what it shows)
 
@@ -47,7 +51,6 @@ it.
 | spread_vs_center.png | nb07 | same mean, different spread (two campaigns) |
 | shape_boxplot_map.png | nb07 | distribution shape ↔ boxplot (skew) |
 | pie-vs-bar.png | nb07 | same data as pie vs bar |
-| steve-jobs-pie.jpg | nb07 | the 2008 keynote 3-D pie (39% vs 19.5% perception) |
 | correlation_gallery.png | nb10 | reading r: −0.9 to +0.9 scatter gallery |
 | population_sample_inference.png | nb11 | population → sample → point/interval estimate (business example) |
 | ci_mechanics.png | nb11 | what "95% confident" means: 20 intervals, one misses |

@@ -113,7 +113,13 @@ the CSVs with an attribution note (see §8).
 - **`rdss` datasets shipped in `notebooks/data/`:** the MIT license requires its
   notice to accompany every copy, so `notebooks/data/LICENSE-rdss.txt` reproduces
   it verbatim and rides inside `honr46400_datasets.zip` (D48). Prose attribution
-  alone does not satisfy MIT.
+  alone does not satisfy MIT. **Open item (D48):** the package license settles
+  the packaged distribution, NOT each original investigator's authorization to
+  redistribute the underlying study data publicly, and the package documentation
+  limits the LAPOP-derived resample to teaching use. A per-file rights manifest
+  (archive/DOI, owner, license or permission, allowed transformations, hash) is
+  required before this data is treated as cleanly redistributable; the earlier
+  "redistribution with attribution is permitted" line overstated it.
 - Calling Bullshit: cite the book; use only openly-licensed callingbullshit.org material.
 - Keep `_adm/_references/` gitignored (already is).
 

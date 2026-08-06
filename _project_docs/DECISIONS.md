@@ -2039,9 +2039,12 @@ the pathway they follow; ch14 now says plainly that prediction is EDR|AI's
 own fifth pathway, extending rather than adapting RDSS's library, and
 uncertainty-foundations carries the inquiry/estimand lineage sentence. Two
 definitions were widened for fidelity, not just credit: a data strategy
-includes **measurement**, and an answer strategy includes **uncertainty and
-interpretation** — the 2019 article states both, and the narrower versions
-were teaching less than the labels promise. "Diagnosands" left the Studio 4
+includes **measurement** (stated outright in the 2019 article: "Measurement
+techniques are also a part of data strategies"), and an answer strategy
+includes **uncertainty and interpretation** (the 2019 article demonstrates the
+uncertainty outputs; RDSS 2023 is where cleaning, estimation, interpretation,
+and uncertainty are explicitly enumerated). The narrower versions were teaching
+less than the labels promise. "Diagnosands" left the Studio 4
 produces line and the Milestone 4 rubric in favour of the book's own plain
 language (bias, wobble, and how often it would detect), with the coinage
 credited where ch10 actually teaches it. Bibliography: authors corrected with

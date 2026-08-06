@@ -33,9 +33,12 @@ This chapter follows the observational-descriptive pathway of the design library
 RDSS [@blair2023rdss]. **Observational descriptive research** means you sample and
 measure without assigning anyone a condition, then summarize what you found. Example:
 you pull the roll call records of every member of a legislature and report how often
-each one crossed party lines. Because no treatment is assigned, this pathway can
-describe, and with care generalize to a population, but it cannot by itself say one
-thing caused another.
+each one crossed party lines. Because its inquiry and its answer strategy are
+descriptive, this pathway estimates distributions and relationships, and with care
+generalizes them to a population. Those estimates do not by themselves identify a
+causal effect. The next chapter takes the other road: observational data again, no
+assignment again, but a causal inquiry that has to carry an identification argument
+to earn its answer.
 
 Four groups keep such a description honest [@groves2009survey]. They are often drawn
 as boxes inside boxes, and that picture is worth knowing along with the place it
@@ -47,21 +50,27 @@ lies.
   given time and cost. Example: the customers you can actually contact with a survey
   this quarter.
 - **Sampling frame**: the concrete list you actually draw from. Example: the current
-  subscriber list your survey tool pulls from. This is the box that misbehaves. A
-  frame can miss people who belong in your target, and it can also carry people who
-  do not belong at all, plus duplicates that give one person two chances of being
-  picked. Treating the frame as a clean slice of the population above it is one of
-  the quietest ways a description goes wrong.
+  subscriber list your survey tool pulls from. This is the box that misbehaves, in
+  three ways worth naming. **Undercoverage** is people who belong in your target
+  and never make the list. **Overcoverage** is records on the list for people
+  outside your target altogether. A **duplicate** is one person listed twice, which
+  quietly gives them two chances of being picked. Treating the frame as a clean
+  slice of the population above it is one of the quietest ways a description goes
+  wrong.
 - **Sample**: the customers you actually survey, drawn from the frame and no wider.
 
-![The four groups a description has to keep straight. Only the sample is drawn from
-the frame, and the frame is not a tidy slice of the population above it: it misses
-eligible people and carries ineligible ones and
-duplicates.](../images/concepts/sampling_groups.png){fig-alt="Diagram of four
-overlapping regions labeled target population, accessible population, sampling frame,
-and sample. The frame region extends partly outside the accessible population to show
-ineligible units, and part of the accessible population falls outside the frame to
-show eligible people the frame misses. The sample sits inside the frame."}
+![The four groups a description has to keep straight. The frame crosses the edge of
+your target population, which is where the three coverage errors live: people inside
+the target who never reach the list, records on the list that fall outside the target
+altogether, and one unit listed
+twice.](../images/concepts/sampling_groups.png){fig-alt="Diagram of overlapping
+regions. A large box is the target population; inside it, a shaded box is the
+accessible population. A dashed box, the sampling frame, starts inside those and
+extends out past the right edge of the target population. The sample is a solid box
+inside the frame. Three labels point into the picture: the part of the target never
+listed on the frame is undercoverage; the part of the frame outside the target is
+overcoverage; and two joined dots inside the frame are one unit listed twice, a
+duplicate."}
 
 A claim is honest only when the box it describes matches the box it names. Two
 processes decide how the boxes differ. **Selection** is any process that decides who

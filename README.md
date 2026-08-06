@@ -51,7 +51,8 @@ a different, non-quantitative course whose curriculum is built fresh. See
 
 ## License
 
-See `LICENSE`. Three kinds of material, licensed differently: code and
-infrastructure under MIT; the book and course text under the author's copyright
-(all rights reserved); third-party quotations, figures, and datasets under
-whatever terms their own sources set.
+See `LICENSE`. Three kinds of material, licensed differently: code (including
+notebook code cells) under MIT; instructional prose (including notebook
+markdown cells) under the author's copyright, free to read and otherwise all
+rights reserved; third-party quotations, figures, and datasets under whatever
+terms their own sources set.

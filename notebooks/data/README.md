@@ -3,15 +3,25 @@
 All five CSVs ship from the **`rdss` R package v1.0.14** (Blair, Coppock &
 Humphreys, **MIT License**), the companion package to *Research Design in the
 Social Sciences: Declaration, Diagnosis, and Redesign* (Princeton University
-Press, 2023; free online at book.declaredesign.org). Files are byte-identical
-to the book's replication archive.
+Press, 2023; free online at book.declaredesign.org).
 
-The MIT license permits this redistribution and requires that its notice travel
-with every copy, so the upstream notice is reproduced verbatim in
-[`LICENSE-rdss.txt`](LICENSE-rdss.txt) and ships inside the dataset zip. A
-prose credit alone does not satisfy the license. The studies behind these files
-belong to their original investigators, named in the table below and cited in
-the book wherever a dataset is used.
+The package's MIT license requires its notice to travel with every copy, so the
+upstream notice is reproduced verbatim in
+[`LICENSE-rdss.txt`](LICENSE-rdss.txt) and ships inside the dataset zip. A prose
+credit alone does not satisfy the license. **If you download a single CSV from
+the raw URL below rather than the zip, download the notice with it** — it lives
+at the same base URL.
+
+> **Open rights question (D48, flagged for the instructor).** The package
+> license covers the packaged distribution. It does not by itself establish
+> that each original investigator authorized public redistribution of the
+> underlying study data, and the package documentation restricts the
+> LAPOP-derived resample to teaching use. Until a per-file rights record exists
+> (original archive or DOI, owner, license or permission, allowed
+> transformations, and a hash comparison against the source archive), treat
+> these files as *teaching copies whose upstream chain is not fully
+> documented*. The studies belong to their original investigators, named in the
+> table below.
 
 > **Attribution line (used in every notebook that loads these files):**
 > *Dataset from the `rdss` package (Blair, Coppock & Humphreys, MIT License),

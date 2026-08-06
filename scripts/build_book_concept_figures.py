@@ -33,7 +33,7 @@ MUTE = "#444440"
 L = {
     "book": {
         "mida": {
-            "rows": ("ON PAPER", "IN THE WORLD"),
+            "rows": ("WHAT YOU WANT TO LEARN", "HOW YOU WILL LEARN IT"),
             "cells": [
                 ("MODEL", "how the world\ncould work"),
                 ("INQUIRY", "the one quantity\nyou want from it"),
@@ -43,7 +43,7 @@ L = {
             "top_link": "makes askable",
             "bottom_link": "feeds",
             "align": "alignment: does the answer\nreach the inquiry?",
-            "foot": "Four parts, one question. A design holds together when the bottom row actually reaches the top right.",
+            "foot": "Four parts, one question. All four are written before you collect anything; the design holds together when the bottom row actually reaches the top right.",
         },
         "loop": {
             "steps": [
@@ -63,14 +63,15 @@ L = {
             "frame": "SAMPLING FRAME",
             "frame_sub": "the list you actually draw from",
             "sample": "SAMPLE",
-            "miss": "eligible people the\nframe never lists",
-            "extra": "units the frame lists that\ndo not belong, plus\nduplicates drawn twice",
+            "miss": "in your target, never on\nthe frame: undercoverage",
+            "extra": "on the frame, outside your\ntarget: overcoverage",
+            "dup": "one unit, listed twice:\na duplicate",
             "foot": "The frame is not a tidy slice of the population above it. That is where a description quietly goes wrong.",
         },
     },
     "book-pt": {
         "mida": {
-            "rows": ("NO PAPEL", "NO MUNDO"),
+            "rows": ("O QUE VOCÊ QUER SABER", "COMO VOCÊ VAI DESCOBRIR"),
             "cells": [
                 ("MODELO", "como o mundo\npoderia funcionar"),
                 ("INDAGAÇÃO", "a única quantidade\nque você quer dele"),
@@ -100,14 +101,15 @@ L = {
             "frame": "CADASTRO AMOSTRAL",
             "frame_sub": "a lista de onde você de fato sorteia",
             "sample": "AMOSTRA",
-            "miss": "gente elegível que o\ncadastro nunca lista",
-            "extra": "unidades listadas que não\npertencem, mais duplicatas\nsorteadas duas vezes",
+            "miss": "no seu alvo, nunca no\ncadastro: subcobertura",
+            "extra": "no cadastro, fora do seu\nalvo: sobrecobertura",
+            "dup": "uma unidade, listada duas\nvezes: uma duplicata",
             "foot": "O cadastro não é uma fatia limpa da população acima dele. É aí que uma descrição erra em silêncio.",
         },
     },
     "book-es": {
         "mida": {
-            "rows": ("EN EL PAPEL", "EN EL MUNDO"),
+            "rows": ("QUÉ QUIERES APRENDER", "CÓMO LO VAS A APRENDER"),
             "cells": [
                 ("MODELO", "cómo podría\nfuncionar el mundo"),
                 ("INDAGACIÓN", "la única cantidad\nque quieres de él"),
@@ -137,8 +139,9 @@ L = {
             "frame": "MARCO MUESTRAL",
             "frame_sub": "la lista de la que realmente sorteas",
             "sample": "MUESTRA",
-            "miss": "gente elegible que el\nmarco nunca lista",
-            "extra": "unidades listadas que no\ncorresponden, más duplicados\nsorteados dos veces",
+            "miss": "en tu objetivo, nunca en el\nmarco: subcobertura",
+            "extra": "en el marco, fuera de tu\nobjetivo: sobrecobertura",
+            "dup": "una unidad, listada dos\nveces: un duplicado",
             "foot": "El marco no es una rebanada limpia de la población de arriba. Ahí es donde una descripción falla en silencio.",
         },
     },
@@ -260,41 +263,53 @@ def build_groups(S: dict, out: Path) -> None:
         box(ax, (x0 + x1) / 2, (y0 + y1) / 2, x1 - x0, y1 - y0, fc, ec,
             lw=lw, r=.02, ls=ls, z=z)
 
-    region(.06, .90, .21, .93, "white", INK, 1.5)
-    ax.text(.085, .885, S["target"], ha="left", va="center", fontsize=8.2,
+    # the target population, and inside it the part you could actually reach
+    region(.07, .70, .30, .94, "white", INK, 1.5)
+    ax.text(.093, .897, S["target"], ha="left", va="center", fontsize=8.2,
             fontweight="bold", color=INK, zorder=5)
-    ax.text(.085, .852, S["target_sub"], ha="left", va="center", fontsize=6.6,
+    ax.text(.093, .864, S["target_sub"], ha="left", va="center", fontsize=6.6,
             color=MUTE, zorder=5)
 
-    region(.11, .60, .28, .80, FILL, SOFT, 1.1)
-    ax.text(.132, .762, S["accessible"], ha="left", va="center", fontsize=7.6,
+    region(.11, .55, .355, .825, FILL, SOFT, 1.1)
+    ax.text(.132, .787, S["accessible"], ha="left", va="center", fontsize=7.6,
             fontweight="bold", color=INK, zorder=5)
-    ax.text(.132, .731, S["accessible_sub"], ha="left", va="center",
+    ax.text(.132, .756, S["accessible_sub"], ha="left", va="center",
             fontsize=6.4, color=MUTE, zorder=5)
 
-    region(.40, .855, .35, .70, "none", INK, 1.4, ls="dashed", z=3)
-    ax.text(.833, .663, S["frame"], ha="right", va="center", fontsize=7.6,
+    # the frame CROSSES the target's boundary: part of what it lists is
+    # out of scope entirely, which is what overcoverage means
+    region(.37, .93, .40, .70, "none", INK, 1.4, ls="dashed", z=3)
+    ax.text(.915, .663, S["frame"], ha="right", va="center", fontsize=7.6,
             fontweight="bold", color=INK, zorder=5)
-    ax.text(.833, .632, S["frame_sub"], ha="right", va="center", fontsize=6.4,
+    ax.text(.915, .632, S["frame_sub"], ha="right", va="center", fontsize=6.4,
             color=MUTE, zorder=5)
 
-    region(.45, .57, .42, .55, INK, INK, 1.0, z=4)
-    ax.text(.51, .485, S["sample"], ha="center", va="center", fontsize=7.4,
+    region(.41, .525, .45, .58, INK, INK, 1.0, z=4)
+    ax.text(.4675, .515, S["sample"], ha="center", va="center", fontsize=7.4,
             fontweight="bold", color="white", zorder=6)
 
-    # what the overlap teaches
-    ax.annotate(S["miss"], xy=(.20, .45), xytext=(.175, .13),
-                ha="center", va="center", fontsize=6.8, color=INK,
-                linespacing=1.35, zorder=6,
-                arrowprops=dict(arrowstyle="-|>", color=INK, lw=1.0,
-                                mutation_scale=10))
-    ax.annotate(S["extra"], xy=(.735, .40), xytext=(.735, .13),
+    # a duplicate is two records for one unit, not an area
+    ax.plot([.610, .642], [.545, .545], color=INK, lw=.9, marker="o",
+            markersize=7, markerfacecolor=INK, markeredgecolor=INK, zorder=5)
+    ax.annotate(S["dup"], xy=(.626, .528), xytext=(.626, .175),
                 ha="center", va="center", fontsize=6.8, color=INK,
                 linespacing=1.35, zorder=6,
                 arrowprops=dict(arrowstyle="-|>", color=INK, lw=1.0,
                                 mutation_scale=10))
 
-    ax.text(.5, .025, S["foot"], ha="center", va="center", fontsize=7.2,
+    # the two coverage errors, each pointing at the region that creates it
+    ax.annotate(S["miss"], xy=(.185, .47), xytext=(.165, .175),
+                ha="center", va="center", fontsize=6.8, color=INK,
+                linespacing=1.35, zorder=6,
+                arrowprops=dict(arrowstyle="-|>", color=INK, lw=1.0,
+                                mutation_scale=10))
+    ax.annotate(S["extra"], xy=(.845, .47), xytext=(.868, .175),
+                ha="center", va="center", fontsize=6.8, color=INK,
+                linespacing=1.35, zorder=6,
+                arrowprops=dict(arrowstyle="-|>", color=INK, lw=1.0,
+                                mutation_scale=10))
+
+    ax.text(.5, .045, S["foot"], ha="center", va="center", fontsize=7.2,
             color=MUTE)
 
     fig.tight_layout(pad=0.4)
