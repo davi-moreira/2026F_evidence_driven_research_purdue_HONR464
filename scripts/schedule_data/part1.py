@@ -1,4 +1,4 @@
-"""Meetings M1–M11 (Weeks 1–4): Studios 1–4, the front of the research arc.
+"""Meetings M2–M17 (Weeks 1–4): Studios 1–4, the front of the research arc.
 
 Since D49 the weekly spine IS the book's Studio arc, one Studio per week:
 Monday and Wednesday teach that Studio's EDR|AI lessons together with their
@@ -19,8 +19,8 @@ lessons. Week 4 (nb04) — Studio 4, declare and diagnose provisionally: Monday
 MIDA + uncertainty foundations, Wednesday declare-diagnose + ethics and data
 governance.
 
-Course milestone M(n) presents book Milestone (n+1): M0 -> Book Milestone 1,
-M1 -> 2, M2 -> 3, M3 -> 4. Fridays are quiz-first studios (printed MC quiz +
+Course milestone M(n) presents book Milestone (n+1): M1 -> Book Milestone 1,
+M2 -> 2, M3 -> 3, M4 -> 4. Fridays are quiz-first studios (printed MC quiz +
 stand-up + the milestone kicked off from its brief, worked with the student's
 AI assistant, and submitted). The Student Research Lead slots begin at meeting
 4 and are randomly assigned at the start of the semester (no rotation, no
@@ -38,7 +38,7 @@ sources, they never invent one.
 """
 
 MEETINGS_P1 = [
-    # ------------------------------------------------------------------ M1
+    # ------------------------------------------------------------------ M2
     {
         "meeting": 1, "date": "2026-08-24", "day": "Mon", "modality": "in-person",
         "unit": "Week 1 — Studio 1: Begin with your curiosity",
@@ -63,7 +63,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb01 practice, spoken: sort three tasks — reformat a messy table, summarize a paper you have open in front of you, choose which of your two questions is worth the semester — into safe to delegate, delegate then verify, and never delegate, one phrase of justification each.",
         "discussion_prompt": "Which job in your own field would you stake your name on, and which would you hand to a tool tomorrow without losing sleep? What makes the difference?",
         "project_connection": "Everyone leaves set up in Colab, holding line 1 of the Studio 1 opening move and the Milestone 1 assignment that is built and submitted at this Friday's studio.",
-        "milestone_developed": "M0 — Curiosity committed and the research problem, Book Milestone 1 v1 (kickoff)",
+        "milestone_developed": "M1 — Curiosity committed and the research problem, Book Milestone 1 v1 (kickoff)",
         "milestone_work_time": "2 min (write line 1 of the opening move: the one thing you want to understand)",
         "milestone_presentation_review": "none (kickoff; the modeled Case 464 audit is unscored)",
         "student_prep": "Bring a laptop, and be able to sign in to Google (Colab), the course platform, and genai.rcac.purdue.edu.",
@@ -73,7 +73,7 @@ MEETINGS_P1 = [
         "instructor_prep": "Verify nb01 loads in Colab from the public repo and the readiness cell prints its ✓ lines; rehearse the word-count catch and keep an offline screenshot as backup; prepare the random SRL slot draw and the Week-2 lead's notebook brief; print Case 464 with its instructor key (the seeded flaw and the calibration catch).",
         "risks_contingency": "Monday is overloaded by design, so if the intro round or Colab readiness runs long, protect minutes 25–37 (Case 464 plus the arm-not-brain formalization) and shrink the architecture briefing to three sentences, leaving the grading table and logistics on the syllabus page; an account or Colab failure → pair on one laptop and finish readiness at home.",
     },
-    # ------------------------------------------------------------------ M2
+    # ------------------------------------------------------------------ M3
     {
         "meeting": 2, "date": "2026-08-26", "day": "Wed", "modality": "in-person",
         "unit": "Week 1 — Studio 1: Begin with your curiosity",
@@ -98,7 +98,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb01 practice: sort six statements into experience / curiosity / topic / research problem, then say what the research problem names that the topic does not.",
         "discussion_prompt": "A reply hands you a sharper question than the one you wrote. How do you tell a real improvement from a silent scope change?",
         "project_connection": "The chosen research problem, dated as version zero, is the spine of Milestone 1, worked and submitted at this Friday's studio.",
-        "milestone_developed": "M0 — Curiosity committed and the research problem, Book Milestone 1 v1 (dev)",
+        "milestone_developed": "M1 — Curiosity committed and the research problem, Book Milestone 1 v1 (dev)",
         "milestone_work_time": "8 min (your own four-line funnel plus the chosen problem sentence)",
         "milestone_presentation_review": "stranger test: a partner reads only your problem sentence and says what is unknown, why an answer would matter, and what evidence could speak to it",
         "student_prep": "Your four opening-move lines, written BY HAND with no tool; the curiosity-to-problem lesson read through its worked example; laptop ready.",
@@ -108,11 +108,11 @@ MEETINGS_P1 = [
         "instructor_prep": "Verify the lapop cell prints 5.16 / 4.43 / 4.05 and its self-check passes in Colab; have one saved brainstorm exchange ready to project if accounts fail; keep a two-row starter funnel for anyone who arrives without an opening move.",
         "risks_contingency": "A student arrives without the hand-written opening move → two minutes to write it now rather than borrow or generate it, because Friday's gate checks exactly that; the live brainstorm stalls on slow accounts → pair up so one screen serves two, since the graded skill is circling the NEW elements and rejecting silent scope changes, not the number of candidates returned.",
     },
-    # ------------------------------------------------------------------ M3
+    # ------------------------------------------------------------------ M4
     {
         "meeting": 3, "date": "2026-08-28", "day": "Fri", "modality": "in-person",
         "unit": "Week 1 — Studio 1: Begin with your curiosity",
-        "title": "Studio Friday — Milestone 1: your curiosity, committed (M0 due)",
+        "title": "Studio Friday — Milestone 1: your curiosity, committed (M1 due)",
         "driving_question": "Can you put your curiosity, your starting belief, and the problem you chose on the record — dated, scored, and red-teamed — and defend why it is worth a semester?",
         "secondary_questions": "Which candidate directions did you reject, and why? Does your problem survive a hostile reviewer on importance, on feasibility, and on whether it adds anything? What answer do you expect before you have looked at any evidence?",
         "inquiry": "all positions (studio)",
@@ -123,7 +123,7 @@ MEETINGS_P1 = [
         "rdss_reading": "(no new reading — studio Friday; bring your hand-written opening move and the problem you chose)",
         "book_reading": "curiosity-to-problem:due",
         "cb_reading": "",
-        "other_material": "week01 quiz (printed); nb01 student notebook (Studio 1) — recap reference (Colab); ms00 milestone workbook (Colab); M0 brief + rubric on the course platform; Purdue GenAI Studio — Socratic Research Tutor role, logged in the ledger",
+        "other_material": "week01 quiz (printed); nb01 student notebook (Studio 1) — recap reference (Colab); ms00 milestone workbook (Colab); M1 brief + rubric on the course platform; Purdue GenAI Studio — Socratic Research Tutor role, logged in the ledger",
         "provenance": "EDR|AI Milestone 1 'Your curiosity, committed' (checkpoint curiosity-committed-v0) + the D49 Friday studio format | Studio 1 milestone | quiz, stand-up, and the five-step milestone build with a two-pass red team | newly-constructed-from-source-concept",
         "concepts": "a version with its reason, never a pass; version zero written by hand; the widening trail (what you kept and rejected, and why); importance, feasibility, and possible contribution; the expected answer and the person a different answer would surprise; the four rails (ethics, evidence, AI, uncertainty); the two blocking gates (tool readiness and a hand-written version zero)",
         "python_r_dependency": "none new (ms00 workbook cells + your own milestone work)",
@@ -133,17 +133,17 @@ MEETINGS_P1 = [
         "practice": "📝 studio log: record one red-team objection you accepted and one you rejected, with the reason for each.",
         "discussion_prompt": "Whose research problem would you follow for a semester, and what is the first thing you would need to know before you could start?",
         "project_connection": "Milestone 1 closes today; the problem you commit to here is what Studio 2 governs and turns into a declared question.",
-        "milestone_developed": "M0 — Curiosity committed and the research problem, Book Milestone 1 v1 (worked + due)",
+        "milestone_developed": "M1 — Curiosity committed and the research problem, Book Milestone 1 v1 (worked + due)",
         "milestone_work_time": "30 min studio block",
-        "milestone_presentation_review": "M0 worked at the studio and submitted (no class presentation)",
+        "milestone_presentation_review": "M1 worked at the studio and submitted (no class presentation)",
         "student_prep": "Your four hand-written lines, your brainstorm log with NEW marks, your chosen problem, your nb01 readiness evidence, and a working GenAI Studio sign-in.",
         "student_artifact": "Submitted Milestone 1: dated version zero, the widening trail, the scored and red-teamed problem, the expected answer, and the four rails, with the ledger rows attached",
         "exit_ticket": "Claim Ticket #3: my chosen research problem in one sentence, plus the one thing I will not let any tool decide about it.",
         "homework_next_milestone": "Submit Milestone 1 tonight (11:59 PM). Before Monday read Studio 2's four governance lessons — 'AI Is Your Arm, Not Your Brain', 'You as a Research Director', the seven-move workflow lesson, and 'Research Responsibility and Intellectual Ownership'.",
-        "instructor_prep": "Print the week01 quiz; stage the M0 brief and rubric on the course platform; confirm the Socratic Research Tutor role opens from Workspace on a student account; queue the stand-up order; keep the curated fallback-topic menu for anyone still without a problem.",
+        "instructor_prep": "Print the week01 quiz; stage the M1 brief and rubric on the course platform; confirm the Socratic Research Tutor role opens from Workspace on a student account; queue the stand-up order; keep the curated fallback-topic menu for anyone still without a problem.",
         "risks_contingency": "The GenAI Studio role fails to open → run the questioning pass from a printed question list, log the failure in the ledger, and fix the account before Week 2, since the reviewer bench is leaned on from here; a version zero that a tool produced does not pass the hand-written gate → it is rewritten in the room and the artifact goes back one step rather than forward.",
     },
-    # ------------------------------------------------------------------ M4
+    # ------------------------------------------------------------------ M5
     {
         "meeting": 4, "date": "2026-08-31", "day": "Mon", "modality": "in-person",
         "unit": "Week 2 — Studio 2: Set your rules, shape your question",
@@ -168,7 +168,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb02 practice: sort five tasks into safe to delegate, delegate then verify, and never delegate — three plain-language rewrites of a survey item, choosing which of your two questions is worth the semester, summarizing a paper you have open, judging whether your data collection is fair to the people in it, and reformatting a messy table.",
         "discussion_prompt": "Where would you personally stop checking, and what would it cost you if the tool were wrong exactly there?",
         "project_connection": "The first line of your responsibility statement goes straight into your dossier and becomes the working agreement you assemble at Friday's studio.",
-        "milestone_developed": "M1 — Your rules and your question, Book Milestone 2 v1 (dev)",
+        "milestone_developed": "M2 — Your rules and your question, Book Milestone 2 v1 (dev)",
         "milestone_work_time": "6 min (responsibility statement's opening line + three never-delegate lines)",
         "milestone_presentation_review": "SRL-led puzzle debrief plus one committed design choice defended aloud",
         "student_prep": "The four governance lessons read; Milestone 1's chosen problem in hand; laptop ready.",
@@ -178,7 +178,7 @@ MEETINGS_P1 = [
         "instructor_prep": "Brief the day's SRL on the chloride puzzle and its three listen-fors; verify the voter-file cell prints 60.3% and the four band rates; post the shared simulated declared-question card with its banner; print the ledger template and the delegation-sort key.",
         "risks_contingency": "The live prompt returns a tidy table that quietly drops the direction claim → that IS the teaching moment, so read the band table aloud against it rather than rescuing the tool; the room runs long → the five-task sort becomes a spoken call-and-answer, but the ledger row is still written before anyone leaves.",
     },
-    # ------------------------------------------------------------------ M5
+    # ------------------------------------------------------------------ M6
     {
         "meeting": 5, "date": "2026-09-02", "day": "Wed", "modality": "in-person",
         "unit": "Week 2 — Studio 2: Set your rules, shape your question",
@@ -203,7 +203,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb02 practice: for eight questions name the kind and the reach, and rewrite the one that fuses two objectives into two clean questions.",
         "discussion_prompt": "Why is predicting who will drop out a descriptive question about unseen cases, and what exactly would have to change to make it causal?",
         "project_connection": "Your lead question, its kind, its reach, and the word that fixes each open the declaration you assemble at Friday's studio.",
-        "milestone_developed": "M1 — Your rules and your question, Book Milestone 2 v1 (dev; kind and reach declared)",
+        "milestone_developed": "M2 — Your rules and your question, Book Milestone 2 v1 (dev; kind and reach declared)",
         "milestone_work_time": "7 min (own lead question as version zero, with kind, reach, and the word that fixes each)",
         "milestone_presentation_review": "scored colleague audit on the four rubric rows + peer defense of your locator, your rule, your repair, and your calibration call",
         "student_prep": "The two question lessons read; the posted declared-question card read once; your chosen problem in hand; laptop ready.",
@@ -213,11 +213,11 @@ MEETINGS_P1 = [
         "instructor_prep": "Brief the SRL on the burnout split and its listen-fors; file the audit key (the kind fixed from the data, the double barrel, the 71-versus-53.5 number, and both planted sound elements); verify the midpoint-share cell; confirm the Research Question Diagnostician role opens from Workspace; print the synopsis form.",
         "risks_contingency": "The 23-minute lab is the tightest block of the week, so if it runs long the 🔁 modification is the only movable piece and drops to a named modification with no run — Verify and Calibrate are never cut; five students leave one reader unpaired at peer defense, so the SRL takes the spare while the instructor stays uncommitted for the accuracy lock.",
     },
-    # ------------------------------------------------------------------ M6
+    # ------------------------------------------------------------------ M7
     {
         "meeting": 6, "date": "2026-09-04", "day": "Fri", "modality": "in-person",
         "unit": "Week 2 — Studio 2: Set your rules, shape your question",
-        "title": "Studio Friday — Milestone 2: your rules and your question (M1 due)",
+        "title": "Studio Friday — Milestone 2: your rules and your question (M2 due)",
         "driving_question": "Do your working agreement and your declared question hold up against each other, and does either survive a stranger who knows nothing about your project?",
         "secondary_questions": "Does every never-delegate line cover a decision your declaration actually made? Which word fixes your kind, and which fixes your reach? What does your boundary pair refuse to claim?",
         "inquiry": "all four compass positions (studio)",
@@ -228,7 +228,7 @@ MEETINGS_P1 = [
         "rdss_reading": "(no new reading — studio Friday; bring your ledger, your working-agreement drafts, and your lead question)",
         "book_reading": "ai-arm-not-brain:due; research-director:due; sdiivdd:due; responsibility-ownership:due; question-kinds:due; declare-your-question:due",
         "cb_reading": "",
-        "other_material": "week02 quiz (printed); nb02 student notebook (Studio 2) — recap reference (Colab); ms01 milestone workbook (Colab); M1 brief + rubric on the course platform; Purdue GenAI Studio — Research Question Diagnostician role, logged in the ledger",
+        "other_material": "week02 quiz (printed); nb02 student notebook (Studio 2) — recap reference (Colab); ms01 milestone workbook (Colab); M2 brief + rubric on the course platform; Purdue GenAI Studio — Research Question Diagnostician role, logged in the ledger",
         "provenance": "EDR|AI Milestone 2 'Your rules and your question' (checkpoints working-agreement-v0 + question-declared-v0) + the D49 Friday studio format | Studio 2 milestone | quiz, stand-up, and a seven-pass build of the working agreement and the declaration | newly-constructed-from-source-concept",
         "concepts": "the responsibility statement; three working rules with the declaration work marked on the delegation map; the opened ledger and its retrospective first row; the red-flag screen; the six-field card; show-what-changed wording; the boundary pair and its uncertainty line; the stranger test; the three blocking checks (ledger completeness, the kind gate, the boundary pair)",
         "python_r_dependency": "none new (ms01 workbook cells + your own milestone work)",
@@ -238,17 +238,17 @@ MEETINGS_P1 = [
         "practice": "📝 studio log: record the changed word you could not explain in one sentence and the candidate wording you rejected because of it.",
         "discussion_prompt": "Hand your question and your card to someone who does not know your project. Where did they stall, and what does that stall tell you to fix first?",
         "project_connection": "Milestone 2 closes today; the declared question is what Studio 3 grounds in verified evidence, and what the evidence map may force you to revise.",
-        "milestone_developed": "M1 — Your rules and your question, Book Milestone 2 v1 (kickoff, worked + due)",
+        "milestone_developed": "M2 — Your rules and your question, Book Milestone 2 v1 (kickoff, worked + due)",
         "milestone_work_time": "30 min studio block",
-        "milestone_presentation_review": "M1 worked at the studio and submitted (no class presentation); the stranger test with a classmate replaces it",
+        "milestone_presentation_review": "M2 worked at the studio and submitted (no class presentation); the stranger test with a classmate replaces it",
         "student_prep": "Your ledger rows, Monday's responsibility lines and buckets, Wednesday's lead question, and a working GenAI Studio sign-in.",
         "student_artifact": "Submitted Milestone 2: the working agreement (statement, three rules, opened ledger, delegation map, red-flag screen) and the declaration (lead question, field card, chosen wording, boundary pair, uncertainty line)",
         "exit_ticket": "Claim Ticket #6: my declared question in one sentence, and the stronger sentence I already know I cannot defend.",
         "homework_next_milestone": "Submit Milestone 2 tonight (11:59 PM). No class Monday for Labor Day, so Week 3 has a single lecture: read both evidence lessons before Wednesday and finish the candidate list from 'Research Builds on Research', because the lecture is spent verifying rather than gathering.",
-        "instructor_prep": "Print the week02 quiz; stage the M1 brief and rubric; confirm the Research Question Diagnostician role and its knowledge collection are live on a student account; collect the signed synopsis forms; queue the stand-up order.",
+        "instructor_prep": "Print the week02 quiz; stage the M2 brief and rubric; confirm the Research Question Diagnostician role and its knowledge collection are live on a student account; collect the signed synopsis forms; queue the stand-up order.",
         "risks_contingency": "A declaration reading 'descriptive because my data are observational' fails the kind gate and comes back for a version 1, so catch it at pass 5 rather than in grading; a missing ledger row scores the Craft criterion 0 and returns the submission unread, so the 45–50 close reads the three blocking checks before anything is submitted.",
     },
-    # ------------------------------------------------------------------ M7
+    # ------------------------------------------------------------------ M8
     {
         "meeting": 7, "date": "2026-09-09", "day": "Wed", "modality": "in-person",
         "unit": "Week 3 — Studio 3: Ground it in verified evidence",
@@ -273,7 +273,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb03 practice: label three source-claims aligned, mischaracterized, or unverifiable, and name the step that decided each.",
         "discussion_prompt": "Two of your verified sources flatly contradict each other. What do you record, and what could make both of them right?",
         "project_connection": "The bounded contribution line you write today is what Friday's evidence base has to earn: the registry, the search log, and the map exist to support that one sentence.",
-        "milestone_developed": "M2 — Verified evidence and contribution map, Book Milestone 3 v1 (dev)",
+        "milestone_developed": "M3 — Verified evidence and contribution map, Book Milestone 3 v1 (dev)",
         "milestone_work_time": "6 min (own verified-versus-lead call + the bounded contribution line)",
         "milestone_presentation_review": "scored colleague audit on the four rubric rows + the peer defense that supplies the incorporated challenge the milestone requires",
         "student_prep": "Both evidence lessons read, with the candidate list already built and every row marked lead; Purdue Libraries login working; laptop ready.",
@@ -283,11 +283,11 @@ MEETINGS_P1 = [
         "instructor_prep": "Brief the SRL on the two-sentence vote and the README reveal; file the audit key with a genuinely open-access seeded source and a printed copy as the offline fallback; test the two-engine cell and the evidence-map builder in Colab; verify library-portal access from a student view.",
         "risks_contingency": "The library portal fails → Google Scholar, then the publisher's own site, then the printed PDF, and never an AI summary of the paper, which is exactly the failure this block exists to break; the lab runs long → the 🔁 modification drops to a named modification with no run and the two-engine reveal becomes a projected printout read aloud, but Verify and Calibrate are never cut.",
     },
-    # ------------------------------------------------------------------ M8
+    # ------------------------------------------------------------------ M9
     {
         "meeting": 8, "date": "2026-09-11", "day": "Fri", "modality": "in-person",
         "unit": "Week 3 — Studio 3: Ground it in verified evidence",
-        "title": "Studio Friday — Milestone 3: your evidence base (M2 due)",
+        "title": "Studio Friday — Milestone 3: your evidence base (M3 due)",
         "driving_question": "Can every row you marked verified be reopened from the citation alone, and does your gap survive once the search log shows what you actually did?",
         "secondary_questions": "Which rows are verified and which are still pending? Where do your sources agree, contradict, or qualify each other? How does your declared question change because of a specific node on this map?",
         "inquiry": "description + generalization (studio)",
@@ -298,7 +298,7 @@ MEETINGS_P1 = [
         "rdss_reading": "(no new reading — studio Friday; bring your search log and every source you have opened)",
         "book_reading": "research-builds:due; verifying-prior-evidence:due",
         "cb_reading": "",
-        "other_material": "week03 quiz (printed); nb03 student notebook (Studio 3) — recap reference (Colab); studio03 milestone workbook (Colab); M2 brief + rubric on the course platform; Purdue GenAI Studio — Evidence & Citation Verifier role, logged in the ledger; Purdue Libraries portal",
+        "other_material": "week03 quiz (printed); nb03 student notebook (Studio 3) — recap reference (Colab); studio03 milestone workbook (Colab); M3 brief + rubric on the course platform; Purdue GenAI Studio — Evidence & Citation Verifier role, logged in the ledger; Purdue Libraries portal",
         "provenance": "EDR|AI Milestone 3 'Your evidence base' (checkpoint evidence-base-v0) + the D49 Friday studio format | Studio 3 milestone | quiz, stand-up, and the registry, search log, evidence map, and retrievability audit | newly-constructed-from-source-concept",
         "concepts": "the evidence registry and its status column; the complete search log, failures included; the evidence map with agree, contradict, and qualify edges and exactly one gap node; the bounded gap sentence and its honesty test; the revision of the declared question; the licence-and-terms line; the retrievability audit",
         "python_r_dependency": "pandas + networkx (your claims and relations tables drive the map, and rerunning the cell must redraw it)",
@@ -308,17 +308,17 @@ MEETINGS_P1 = [
         "practice": "📝 studio log: record one search that found nothing, and say what that failure earns you later in this same session.",
         "discussion_prompt": "Your neighbour's gap: is it real, or does one of their own verified sources already fill it?",
         "project_connection": "Milestone 3 closes today; the verified base and the revised question are what Studio 4 turns into a research contract.",
-        "milestone_developed": "M2 — Verified evidence and contribution map, Book Milestone 3 v1 (kickoff, worked + due)",
+        "milestone_developed": "M3 — Verified evidence and contribution map, Book Milestone 3 v1 (kickoff, worked + due)",
         "milestone_work_time": "30 min studio block",
-        "milestone_presentation_review": "M2 worked at the studio and submitted (no class presentation); the required peer challenge was incorporated at Wednesday's defense",
+        "milestone_presentation_review": "M3 worked at the studio and submitted (no class presentation); the required peer challenge was incorporated at Wednesday's defense",
         "student_prep": "Your candidate list, your search log, every source you have opened, and a working GenAI Studio sign-in.",
         "student_artifact": "Submitted evidence base: registry with statuses, complete search log, drawn evidence map with exactly one gap node, the bounded gap sentence, and the revision of your declared question",
         "exit_ticket": "Claim Ticket #8: the verified claim on my map that argues hardest AGAINST my project's premise.",
         "homework_next_milestone": "Submit Milestone 3 tonight (11:59 PM). Before Monday read the two design lessons — 'Model, Inquiry, Data Strategy, and Answer Strategy' and 'Uncertainty Before You Need It'.",
-        "instructor_prep": "Print the week03 quiz; stage the M2 brief and rubric with its two hard caps named at kickoff; confirm the Evidence & Citation Verifier role is live; have the library portal and one open-access fallback ready; queue the stand-up order.",
+        "instructor_prep": "Print the week03 quiz; stage the M3 brief and rubric with its two hard caps named at kickoff; confirm the Evidence & Citation Verifier role is live; have the library portal and one open-access fallback ready; queue the stand-up order.",
         "risks_contingency": "A registry too thin to map → the complete search log carries the session and the shortfall is named in the version record rather than papered over, and the gap sentence is bounded to what was actually retrieved; the portal fails again → Google Scholar and publisher sites, with the retrievability audit run against whichever route actually worked and that route logged.",
     },
-    # ------------------------------------------------------------------ M9
+    # ------------------------------------------------------------------ M10
     {
         "meeting": 9, "date": "2026-09-14", "day": "Mon", "modality": "in-person",
         "unit": "Week 4 — Studio 4: Declare and diagnose provisionally",
@@ -343,7 +343,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb04 practice, spoken: an approximate 95% interval runs 3.90 to 4.93, so which reading is warranted, and why is the probability-about-the-truth reading the trap this lecture exists to prevent?",
         "discussion_prompt": "Your supervisor asks which of the two runs was the mistake. What do you say, and what number should have been reported next to the first one?",
         "project_connection": "Your estimand and your independent unit are Contract v0 fields, and both are written before any tool touches them.",
-        "milestone_developed": "M3 — Research Contract v0 and permission determination, Book Milestone 4 v1 (dev)",
+        "milestone_developed": "M4 — Research Contract v0 and permission determination, Book Milestone 4 v1 (dev)",
         "milestone_work_time": "8 min (own estimand as a world quantity + the independent unit and its licensing assumption)",
         "milestone_presentation_review": "SRL puzzle resolution + one committed design choice defended aloud",
         "student_prep": "Both design lessons read; your declared question and evidence base in hand; laptop ready for the simulation cells.",
@@ -353,7 +353,7 @@ MEETINGS_P1 = [
         "instructor_prep": "Brief the SRL on the two-run and cluster puzzle, noting that 4.58 and 4.23 are the real first two draws of the seeded run; verify the seeded cell prints 4.427, 0.263, 93.6%, 81.0%, and 90.2% in under 30 seconds; write the refused sentence and its true twin on the board in advance.",
         "risks_contingency": "The teaching file invites exactly the overclaim this course polices → declare the estimand as the mean over the 10,000 rows in this file, not as a fact about a country, and say the resample caveat out loud each time it is used; the pile lands abstract → rerun with an exaggerated sample size so the spread is unmissable, then dial back.",
     },
-    # ------------------------------------------------------------------ M10
+    # ------------------------------------------------------------------ M13
     {
         "meeting": 10, "date": "2026-09-16", "day": "Wed", "modality": "in-person",
         "unit": "Week 4 — Studio 4: Declare and diagnose provisionally",
@@ -378,7 +378,7 @@ MEETINGS_P1 = [
         "practice": "📝 nb04 practice: for three designs, label the biggest threat bias, wobble, or power, and name the one redesign that most reduces it.",
         "discussion_prompt": "A dataset is public and the names are gone. What has that established about your project, and what has it not?",
         "project_connection": "Three Contract v0 lines leave with you today: your diagnosed threat with its redesign, your declared permission status with its authority, and your AI boundary.",
-        "milestone_developed": "M3 — Research Contract v0 and permission determination, Book Milestone 4 v1 (dev; diagnosis + permission status)",
+        "milestone_developed": "M4 — Research Contract v0 and permission determination, Book Milestone 4 v1 (dev; diagnosis + permission status)",
         "milestone_work_time": "8 min (own diagnosed threat and redesign + the permission status with its authority and date)",
         "milestone_presentation_review": "scored colleague audit on the four rubric rows + peer defense of your locator, your check, and your repair",
         "student_prep": "Both lessons read; your estimand, your design draft, and the columns you plan to collect; laptop ready for both cells.",
@@ -388,11 +388,11 @@ MEETINGS_P1 = [
         "instructor_prep": "Brief the SRL on the five headline claims and add one question about the permission line; pre-run both cells so neither executes cold; file the audit key naming the seeded flaw AND the three expected false positives; confirm the MIDA Design Reviewer role is live.",
         "risks_contingency": "The lab is the tightest block of the semester and the ethics station is what gets squeezed → the uniqueness check prints its whole table in one call and the coarsening line is read aloud if the room is behind at minute 24, but the permission determination is never cut, because a contract nobody is allowed to run fails the milestone's blocking gate; peer defense overruns → the seeded flaw and its correction are stated anyway and the transfer block absorbs the loss, never the lock.",
     },
-    # ------------------------------------------------------------------ M11
+    # ------------------------------------------------------------------ M17
     {
         "meeting": 11, "date": "2026-09-18", "day": "Fri", "modality": "in-person",
         "unit": "Week 4 — Studio 4: Declare and diagnose provisionally",
-        "title": "Studio Friday — Milestone 4: your research contract, v0 (M3 due)",
+        "title": "Studio Friday — Milestone 4: your research contract, v0 (M4 due)",
         "driving_question": "Could a stranger run your contract, did your diagnosis change anything, and have you actually declared a permission status?",
         "secondary_questions": "Do your four MIDA parts point at the same quantity? What does your redesign record show? Which of the columns you planned to collect does your declared analysis not require?",
         "inquiry": "full MIDA + permission (studio)",
@@ -403,7 +403,7 @@ MEETINGS_P1 = [
         "rdss_reading": "(no new reading — studio Friday; bring your MIDA parts, your diagnosis, and your permission determination)",
         "book_reading": "mida:due; uncertainty-foundations:due; declare-diagnose:due; ethics-data-governance:due",
         "cb_reading": "",
-        "other_material": "week04 quiz (printed); nb04 student notebook (Studio 4) — recap reference (Colab); studio04 milestone workbook (Colab); M3 brief + rubric on the course platform; Purdue GenAI Studio — MIDA Design Reviewer role, logged in the ledger",
+        "other_material": "week04 quiz (printed); nb04 student notebook (Studio 4) — recap reference (Colab); studio04 milestone workbook (Colab); M4 brief + rubric on the course platform; Purdue GenAI Studio — MIDA Design Reviewer role, logged in the ledger",
         "provenance": "EDR|AI Milestone 4 'Your research contract, v0' (checkpoint contract-v0) + the D49 Friday studio format | Studio 4 milestone | quiz, stand-up, and a six-step contract build with an alignment red team and the permission block | newly-constructed-from-source-concept",
         "concepts": "the Contract v0 field list; the provisional operationalization marked for revision and settled at Studio 6; the alignment audit and the hostile-methodologist pass; a diagnosis recorded as not estimated with its reasoning labelled as reasoning; the redesign record; the permission determination and its four statuses; data minimisation and the four governance decisions; the stop plan; the dated version with its reason",
         "python_r_dependency": "none new for the contract itself; the workbook's scratch cell if you declare and diagnose your own design",
@@ -413,14 +413,14 @@ MEETINGS_P1 = [
         "practice": "📝 studio log: record the misalignment you accepted and the one you rejected, with the reason for each.",
         "discussion_prompt": "Your diagnosis changed nothing. Is that a design that was already right, or a diagnosis you should distrust?",
         "project_connection": "Contract v0 closes today; the declared permission status gates every studio that follows, and Studio 5 declares the pathway that Contract v1 will carry.",
-        "milestone_developed": "M3 — Research Contract v0 and permission determination, Book Milestone 4 v1 (kickoff, worked + due)",
+        "milestone_developed": "M4 — Research Contract v0 and permission determination, Book Milestone 4 v1 (kickoff, worked + due)",
         "milestone_work_time": "30 min studio block",
-        "milestone_presentation_review": "M3 worked at the studio and submitted (no class presentation); the hostile-methodologist and reviewer-role passes replace the retired declaration talk",
+        "milestone_presentation_review": "M4 worked at the studio and submitted (no class presentation); the hostile-methodologist and reviewer-role passes replace the retired declaration talk",
         "student_prep": "Your estimand, your four MIDA parts in draft, your diagnosis or its reasoned not-estimated line, the columns you plan to collect, and a working GenAI Studio sign-in.",
         "student_artifact": "Submitted Research Contract v0: objective, estimand, population, setting and time, data strategy, provisional operationalization, warrant, answer strategy, uncertainty statement, diagnosed properties, permission status, and redesign record",
         "exit_ticket": "Claim Ticket #11: my contract in one sentence — because my data strategy samples X, my answer strategy's number speaks to Y.",
         "homework_next_milestone": "Submit Contract v0 tonight (11:59 PM). Before Monday read YOUR route's pathway lesson for Studio 5's route hub, and note which contrast lesson you were assigned.",
-        "instructor_prep": "Print the week04 quiz; stage the M3 brief with the blocking gate named at kickoff; confirm the MIDA Design Reviewer role is live; assign each student's contrast route so all five routes are covered before Monday; queue the stand-up order.",
+        "instructor_prep": "Print the week04 quiz; stage the M4 brief with the blocking gate named at kickoff; confirm the MIDA Design Reviewer role is live; assign each student's contrast route so all five routes are covered before Monday; queue the stand-up order.",
         "risks_contingency": "A student cannot yet simulate their design → the diagnosis is recorded as not estimated with the direction reasoned in words and labelled as reasoning, which is correct practice and not a defect; a not-authorized determination appears → no work proceeds past it, and the studio time goes to the repair or the change of plan rather than to polishing contract text.",
     },
 ]

@@ -38,7 +38,7 @@ rules:
   - id: course-milestones
     pattern: "\\bmilestone ?m\\d{1,2}\\b|\\bm\\d{1,2} (brief|milestone)\\b|\\bmilestone_\\d{2}\\b"
     why: >-
-      course milestone CODES (M0–M15, brief slugs) are course-side. The
+      course milestone CODES (M1–M17, brief slugs) are course-side. The
       book's own Milestone chapters (D40) legitimately say "Milestone N";
       only the course-coded forms leak.
   - id: course-notebooks

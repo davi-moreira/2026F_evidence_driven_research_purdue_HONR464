@@ -90,7 +90,7 @@ def milestone_for(week: int, config: dict) -> tuple[str, dict] | tuple[None, Non
 
 
 def brief_path(key: str) -> Path | None:
-    """The milestone brief file for M0, M1, ... (numbered 00, 01, ... on disk)."""
+    """The milestone brief file for M1, M2, ... (numbered 00, 01, ... on disk)."""
     n = int(key[1:])
     hits = sorted(BRIEFS.glob(f"milestone_{n:02d}_*.md"))
     return hits[0] if hits else None
@@ -199,7 +199,7 @@ def gradebook_spec(config: dict) -> str:
         ),
         "final_project_milestones": (
             "Final Project Milestones",
-            "M0-M15, one per week; see the within-group weights in "
+            "M1-M17, one per week; see the within-group weights in "
             "planning/ASSESSMENT_ARCHITECTURE.md",
         ),
         "final_project": (
@@ -234,7 +234,7 @@ def gradebook_spec(config: dict) -> str:
         "",
         "## Items inside each category",
         "",
-        "- **Final Project Milestones** — 16 items, M0 through M15, each with the "
+        "- **Final Project Milestones** — 16 items, M1 through M17, each with the "
         "due date below. Set them all at once; sequential release controls what "
         "students can see.",
         f"- **Quizzes** — {n_quizzes()} items, one per teaching week that "
@@ -282,7 +282,7 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
       {cal['last_class']}, and make sure the start date is not *also* acting as
       a release gate that hides Week 1.
 - [ ] **Post the welcome announcement** (`announcements/week01_welcome.html`).
-- [ ] **Publish the Week 1 unit** (`units/week01.html`) with the M0 brief.
+- [ ] **Publish the Week 1 unit** (`units/week01.html`) with the M1 brief.
 - [ ] **Link the course site and the book** on Course Home:
       {SITE} and {SITE}/book/.
 - [ ] **Check preferred names** on the myPurdue Faculty tab and record them in

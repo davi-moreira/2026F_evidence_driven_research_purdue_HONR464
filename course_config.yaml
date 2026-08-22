@@ -6,9 +6,15 @@
 # milestones M0–M15, Student Research Lead flipped classroom, SDIIVDD AI
 # discipline, GenAI Studio reviewer bench, course book. v1 preserved
 # at git tag v1-compass-build.
+# v5 (2026-08-22, D50): THE CONFERENCE BLOCK — Studios 1-10 on Weeks 1-10,
+# Weeks 11-14 are the conference block (poster production, peer review, the
+# lock, presentation prep, the Expo, async reflection), and Studios 11-12 run
+# post-conference on Weeks 15-16 in the standard MW-lessons/Friday-milestone
+# frame. Course milestones renumber to M1-M17 so that M1-M10 present book
+# Milestones 1-10 one-to-one, M16 presents Milestone 11 and M17 Milestone 12.
 # v4 (2026-08-05, D49): ONE STUDIO PER WEEK — Studios 1-12 on Weeks 1-12, MW
 # teach the studio's lessons with their IYT and Friday IS the studio milestone;
-# Weeks 13-16 are the date-driven exception weeks (Expo, async, revision, close).
+# Weeks 13-16 were the date-driven exception weeks (superseded by D50).
 # v3 (2026-08-03, D41): Option 2 — the studio-first route-selective semester.
 # Weeks follow the book's 12 Studios (D38/D40); W5 is the route hub (all five
 # pathway lessons, route-required, own route + one assigned contrast); W6=S6,
@@ -45,14 +51,16 @@ calendar:
   first_class: "2026-08-24"
   last_class: "2026-12-11"
   total_meetings: 43
-  in_person: 42
-  async_meetings: ["2026-11-23"]
+  in_person: 41
+  async_meetings: ["2026-11-20", "2026-11-23"]
   no_class: ["2026-09-07", "2026-10-12", "2026-11-18", "2026-11-25", "2026-11-27"]
   events:
     urc_expo: "2026-11-17"          # Tuesday — REQUIRED poster presentation
-    poster_deadline: "2026-11-06"   # M10 final poster lock, 5:00 PM (terminal)
-    replication_due: "2026-11-29"   # Sunday — M13 replication + red-team report
-    urc_abstract_deadline: "TBD"    # external; internal completion gate = 2026-10-09
+    poster_draft_due: "2026-11-04"  # M11 poster first draft, due at class (peer review same session)
+    poster_deadline: "2026-11-08"   # M13 final poster lock, Sun 11:59 PM (terminal);
+                                    # shared print run with QM 47400, which locks the same night
+    reflection_due: "2026-11-29"    # Sunday — M15 conference reflection
+    urc_abstract_deadline: "TBD"    # external; draft gate = 2026-10-02, application = 2026-10-09
 
 # ---------------------------------------------------------------------------
 # The central pedagogical principle and the AI-collaboration discipline.
@@ -188,40 +196,47 @@ operating_system:
 # Weekly architecture: 16 topics, one notebook per week (nb01–nb16).
 # ---------------------------------------------------------------------------
 weeks:
-  - {week: 1,  notebook: "nb01", lectures: 2, topic: "Studio 1 — Frame the inquiry: from curiosity to a research problem", milestone: "M0"}
-  - {week: 2,  notebook: "nb02", lectures: 2, topic: "Studio 2 — Govern the work: your rules and your question", milestone: "M1"}
-  - {week: 3,  notebook: "nb03", lectures: 1, topic: "Studio 3 — Ground it in verified evidence", milestone: "M2"}
-  - {week: 4,  notebook: "nb04", lectures: 2, topic: "Studio 4 — Declare and diagnose provisionally", milestone: "M3"}
-  - {week: 5,  notebook: "nb05", lectures: 2, topic: "Studio 5 — Develop the pathway: the route hub", milestone: "M4"}
-  - {week: 6,  notebook: "nb06", lectures: 2, topic: "Studio 6 — Govern data and measurement", milestone: "M5"}
-  - {week: 7,  notebook: "nb07", lectures: 2, topic: "Studio 7 — Produce a reproducible first analysis", milestone: "M6"}
-  - {week: 8,  notebook: "nb08", lectures: 1, topic: "Studio 8 — Stress-test and adjudicate", milestone: "M7"}
-  - {week: 9,  notebook: "nb09", lectures: 2, topic: "Studio 9 — Write, bound, and disclose", milestone: "M8"}
-  - {week: 10, notebook: "nb10", lectures: 2, topic: "Studio 10 — Adapt and defend: the venue contract and the artifact", milestone: "M9"}
-  - {week: 11, notebook: "nb11", lectures: 2, topic: "Studio 11 — Reproduce and package (poster locks Fri Nov 6)", milestone: "M10"}
-  - {week: 12, notebook: "nb12", lectures: 2, topic: "Studio 12 — Release and direct the next cycle", milestone: "M11"}
-  - {week: 13, notebook: "nb13", lectures: 1, topic: "Public test: the Expo (Tue Nov 17) and the reflection studio", milestone: "M12"}
-  - {week: 14, notebook: "nb14", lectures: 0, topic: "Thanksgiving async: cold-run and red-team a peer's package", milestone: "M13"}   # async module
-  - {week: 15, notebook: "nb15", lectures: 2, topic: "Revision: research note v1 and the repaired package", milestone: "M14"}
-  - {week: 16, notebook: "nb16", lectures: 2, topic: "The close: Evidence Defenses, release, dossier, and portfolio", milestone: "M15"}
-
+  - {week: 1,  notebook: "nb01", lectures: 2, topic: "Studio 1 — Frame the inquiry: from curiosity to a research problem", milestone: "M1"}
+  - {week: 2,  notebook: "nb02", lectures: 2, topic: "Studio 2 — Govern the work: your rules and your question", milestone: "M2"}
+  - {week: 3,  notebook: "nb03", lectures: 1, topic: "Studio 3 — Ground it in verified evidence", milestone: "M3"}
+  - {week: 4,  notebook: "nb04", lectures: 2, topic: "Studio 4 — Declare and diagnose provisionally", milestone: "M4"}
+  - {week: 5,  notebook: "nb05", lectures: 2, topic: "Studio 5 — Develop the pathway: the route hub", milestone: "M5"}
+  - {week: 6,  notebook: "nb06", lectures: 2, topic: "Studio 6 — Govern data and measurement", milestone: "M6"}
+  - {week: 7,  notebook: "nb07", lectures: 2, topic: "Studio 7 — Produce a reproducible first analysis", milestone: "M7"}
+  - {week: 8,  notebook: "nb08", lectures: 1, topic: "Studio 8 — Stress-test and adjudicate", milestone: "M8"}
+  - {week: 9,  notebook: "nb09", lectures: 2, topic: "Studio 9 — Write, bound, and disclose", milestone: "M9"}
+  - {week: 10, notebook: "nb10", lectures: 2, topic: "Studio 10 — Adapt and defend: the venue contract and the artifact", milestone: "M10"}
+  # Weeks 11-14: the conference block (D50). No new book lesson; every reading
+  # is a revisit of Studios 9 and 10. The poster locks Sunday Nov 8.
+  - {week: 11, notebook: "nb11", lectures: 2, topic: "Poster production and peer review (poster locks Sun Nov 8)", milestone: "M11", also_due: ["M12", "M13"]}
+  - {week: 12, notebook: "nb12", lectures: 2, topic: "Presentation preparation: the pitch, the hard questions, the invitation", milestone: "M14"}
+  - {week: 13, notebook: "nb13", lectures: 1, topic: "The public test: dress rehearsal and the Expo (Tue Nov 17)", milestone: null}
+  - {week: 14, notebook: "nb14", lectures: 0, topic: "Async reflection: what the public test returned", milestone: "M15"}   # async module
+  # Weeks 15-16: the post-conference studios, standard MW-lessons/Friday-milestone frame.
+  - {week: 15, notebook: "nb15", lectures: 2, topic: "Studio 11 — Reproduce and package", milestone: "M16"}
+  - {week: 16, notebook: "nb16", lectures: 2, topic: "Studio 12 — Release and direct the next cycle", milestone: "M17"}
 milestones:
-  M0:  {title: "Curiosity committed and the research problem",                     due: "2026-08-28", kind: "studio"}
-  M1:  {title: "Your rules and your question",                 due: "2026-09-04", kind: "studio"}
-  M2:  {title: "Verified evidence and contribution map",       due: "2026-09-11", kind: "studio"}
-  M3:  {title: "Research Contract v0 and permission determination",        due: "2026-09-18", kind: "studio"}
-  M4:  {title: "Pathway declaration and mandated contrast (Contract v1)",       due: "2026-09-25", kind: "studio"}
-  M5:  {title: "Data and measurement governance", due: "2026-10-02", kind: "studio"}
-  M6:  {title: "First reproducible analysis (+ URC abstract internal gate)", due: "2026-10-09", kind: "studio"}
-  M7:  {title: "Robustness audit",                   due: "2026-10-16", kind: "studio"}
-  M8:  {title: "Bounded research note and claim-evidence table",                      due: "2026-10-23", kind: "studio"}
-  M9:  {title: "Venue contract and the publication-ready artifact",            due: "2026-10-30", kind: "studio"}
-  M10: {title: "Reproducible package and the final poster lock",                            due: "2026-11-06", kind: "terminal", note: "5:00 PM, submitted for printing"}
-  M11: {title: "Release audit and next-cycle agenda",                         due: "2026-11-13", kind: "studio", note: "Friday = the release audit and next-cycle agenda"}
-  M12: {title: "Conference reflection and defense revision", due: "2026-11-20", kind: "studio", note: "Expo Tue Nov 17 presentation is a graded component"}
-  M13: {title: "Replication and red-team report",              due: "2026-11-29", kind: "async", note: "peer's anonymized package; Sunday due date"}
-  M14: {title: "Research note v1 and reusable package", due: "2026-12-04", kind: "studio"}
-  M15: {title: "Final research chapter, defense, and AI-management portfolio", due: "2026-12-11", kind: "terminal"}
+  # M1-M10 present book Milestones 1-10 one-to-one and in order (D50).
+  M1:  {title: "Curiosity committed and the research problem",     due: "2026-08-28", kind: "studio"}
+  M2:  {title: "Your rules and your question",                     due: "2026-09-04", kind: "studio"}
+  M3:  {title: "Verified evidence and contribution map",           due: "2026-09-11", kind: "studio"}
+  M4:  {title: "Research Contract v0 and permission determination", due: "2026-09-18", kind: "studio"}
+  M5:  {title: "Pathway declaration and mandated contrast (Contract v1)", due: "2026-09-25", kind: "studio"}
+  M6:  {title: "Data and measurement governance",                  due: "2026-10-02", kind: "studio", note: "carries the URC draft abstract"}
+  M7:  {title: "First reproducible analysis",                      due: "2026-10-09", kind: "studio", note: "carries the URC conference application and its proof of submission"}
+  M8:  {title: "Robustness audit",                                 due: "2026-10-16", kind: "studio"}
+  M9:  {title: "Bounded research note and claim-evidence table",   due: "2026-10-23", kind: "studio"}
+  M10: {title: "Venue contract and the publication-ready artifact", due: "2026-10-30", kind: "studio"}
+  # Weeks 11-14: the conference block. These present no new book milestone;
+  # they carry Milestone 10 forward as versions 2, 3, and 4.
+  M11: {title: "Poster first draft",                               due: "2026-11-04", kind: "lecture",  note: "due at class Wednesday; the in-class peer review runs the same session"}
+  M12: {title: "Peer review submission",                           due: "2026-11-06", kind: "studio",   note: "your four completed review surveys; completion-graded"}
+  M13: {title: "Final poster lock",                                due: "2026-11-08", kind: "terminal", note: "Sunday 11:59 PM, one print-ready PDF; shared print run with QM 47400"}
+  M14: {title: "Go-public package: presentation plan and invitation", due: "2026-11-13", kind: "studio", note: "three timed pitches, audience analysis, question strategy, and the invitation post"}
+  M15: {title: "Conference reflection",                            due: "2026-11-29", kind: "async",    note: "Sunday; worked across the Nov 20 and Nov 23 asynchronous sessions"}
+  # Weeks 15-16: the post-conference studios present book Milestones 11 and 12.
+  M16: {title: "Reproducible package and the peer cold run",       due: "2026-12-04", kind: "studio",   note: "also carries the research note revised after public criticism"}
+  M17: {title: "Release audit, final research chapter, and AI-management portfolio", due: "2026-12-11", kind: "terminal", note: "the Evidence Defense runs across the Week 15-16 defense blocks and this session"}
 
 # The cumulative Research Project Dossier (every milestone updates it).
 dossier_components:
@@ -285,12 +300,12 @@ genai_studio:
   api: "https://genai.rcac.purdue.edu/api/chat/completions"   # OpenAI-compatible
   capability_levels_implemented: [prompted_role, custom_model, rag_assistant, sequential_workflow]
   not_available: [autonomous_agents, native_orchestration]
-  student_touchpoints: {M4: "Causal Identification Skeptic", M6: "Prediction & Leakage Auditor",
-                        M7: "Robustness & Sensitivity Reviewer", M9: "Poster Critic",
-                        M13: "Reproducibility Auditor"}
-                        # D41 content phase: the old M9 pairing split — robustness
-                        # is its own milestone (M8) under Option 2, the poster
-                        # critic reviews at the lock (M10). Five touchpoints.
+  student_touchpoints: {M5: "Causal Identification Skeptic", M7: "Prediction & Leakage Auditor",
+                        M8: "Robustness & Sensitivity Reviewer", M11: "Poster Critic",
+                        M16: "Reproducibility Auditor"}
+                        # D50 renumbering: the five touchpoints keep their pedagogical
+                        # positions. The Poster Critic moved from the lock to the poster
+                        # FIRST DRAFT (M11), where criticism can still change the poster.
 
 # Notebook conventions (adapted from MGMT474; ML-isms removed).
 notebooks:

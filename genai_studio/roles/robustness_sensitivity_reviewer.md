@@ -1,7 +1,7 @@
 # Role — Robustness & Sensitivity Reviewer
 
 *GenAI Studio custom model: **HONR464 — Robustness & Sensitivity Reviewer**.
-Capability level 3 (RAG-supported assistant). **Required touchpoint: M8.** Supports Week 9 (the stress-test studio).*
+Capability level 3 (RAG-supported assistant). **Required touchpoint: M9.** Supports Week 9 (the stress-test studio).*
 
 ## Purpose
 
@@ -25,13 +25,13 @@ a claim that survives perturbation from one that does not.
 deciding which claim your evidence justifies (never-delegate); writing your
 limitations. It proposes stress tests; you run them and judge what survives.
 
-## Milestone scope (M8 — required)
+## Milestone scope (M9 — required)
 
-**M8 — Robustness audit (due Fri Oct 23).** You submit your
+**M9 — Robustness audit (due Fri Oct 23).** You submit your
 **claim-and-evidence table with your robustness checks** to this role. Its
 **"Stress tests to run"** and **"Fragility read"** sections are the output you carry
 into your **AI Research Ledger** (as a critique task row), together with the results
-of the tests you actually ran and your revised claim boundaries. M8 requires this role. Run the stress tests yourself and
+of the tests you actually ran and your revised claim boundaries. M9 requires this role. Run the stress tests yourself and
 report what survived; a proposed test with no result is not a completed check.
 
 ## System Prompt
@@ -66,7 +66,7 @@ Rules that never change:
   4. "Uncertainty honesty:" whether the reported uncertainty reflects specification
      choices or only sampling noise, and what is missing.
   5. "What you must verify yourself:" that only the student's own re-runs settle
-     robustness, checked against the M8 brief.
+     robustness, checked against the M9 brief.
 - You have a knowledge cutoff and can be confidently wrong. Never state that a
   result is or is not robust; only the student's re-runs can. Flag your uncertainty.
 ```
@@ -101,7 +101,7 @@ already run.
 - **Confirm your uncertainty reflects specification choices**, not just sampling
   noise, checked against `project/reproducibility/` standards.
 - **Log the tests, results, and revised claims** in your AI Research Ledger —
-  required M8 content, and later fuel for the M13 red-team.
+  required M9 content, and later fuel for the M16 red-team.
 
 ## Limitations & Failure Modes
 
@@ -125,13 +125,13 @@ analysis; or a fragile result forces an honest retreat you must own and defend.
    Reviewer**.
 2. Paste your claim, specification, and any checks already run.
 3. Run the proposed stress tests yourself; record what survives; revise claims.
-4. **Required for M8 (with the Poster Critic):** paste the stress tests and your
+4. **Required for M9 (with the Poster Critic):** paste the stress tests and your
    results into your ledger with revised claim boundaries. UI-only satisfies this.
 
 ## Instructor Use
 
-M8's "research audit" is where fragility surfaces or hides. The ledger's stress
+M9's "research audit" is where fragility surfaces or hides. The ledger's stress
 tests, *their run results*, and the revised claims show whether the student
 attacked their own finding or only listed attacks. A claim reported without its
-fragility, or a proposed test never run, is the defect the M8 audit and the
+fragility, or a proposed test never run, is the defect the M9 audit and the
 rubric's verification criterion target.

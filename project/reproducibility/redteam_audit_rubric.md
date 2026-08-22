@@ -1,4 +1,4 @@
-# Replication & Red-Team Audit Rubric (100 points) — M13
+# Replication & Red-Team Audit Rubric (100 points) — M16
 
 *The quality bar for the replication and red-team report. Five rows, four bands,
 scored on the honesty and rigor of your audit, never on whether the peer's project

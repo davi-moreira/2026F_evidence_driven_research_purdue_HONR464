@@ -6,7 +6,7 @@ classification draws, and then **matching the classified question to a design
 pathway**. Two layers, one shared axis (**kind**):
 
 - **Compass (RDSS ch. 7) — classifies QUESTIONS** by kind × reach. Taught in
-  Week 2 (`nb02`); used in every declaration from M3 onward.
+  Week 2 (`nb02`); used in every declaration from M4 onward.
 - **Design library (RDSS ch. 15–18) — organizes DESIGNS** by kind × data
   strategy. Gives Weeks 5–9 (`nb05`–`nb09`) their sequence.
 
@@ -183,9 +183,9 @@ fixes the data strategy and names the warrant it must hold:
 | Causal reasoning (causal · at hand/population) | experimental | Experimental causal (`nb09`) | descriptive → causal, via randomized assignment |
 
 **How a student moves across the matrix.** They classify the question on the
-compass (M1), commit to a position and its permitted claim in the MIDA
-declaration (M3), then select the pathway whose kind matches and whose data
-strategy is feasible — auditing it against its warrant (M4 onward). The
+compass (M2), commit to a position and its permitted claim in the MIDA
+declaration (M4), then select the pathway whose kind matches and whose data
+strategy is feasible — auditing it against its warrant (M5 onward). The
 same descriptive question may be served observationally or experimentally; the
 same causal question may be identified observationally or by assignment;
 prediction sits outside both grids as its own objective. The
@@ -198,13 +198,13 @@ holds, and (3) key limitations and sources of uncertainty.
 
 | Moment | What happens |
 |---|---|
-| Week 2 (`nb02`), M1 | The compass is taught (kind + reach drills); each project question gets a classified position |
-| M3 | The MIDA declaration commits the position and its permitted claim |
-| Weeks 5–9 (`nb05`–`nb09`), M4–M8 | Each pathway is deepened; the project's design is matched and audited against its warrant |
-| M5 (GenAI Studio: Causal Identification Skeptic) | The identification paragraph — or the honest causal-language boundary — is defended |
-| M7 (GenAI Studio: Prediction & Leakage Auditor) | The declared analysis protocol; leakage and baseline honesty are audited |
-| M9 / M13 | Robustness and replication branch by position — the classification has consequences |
-| M15 (final defense) | The Evidence Defense cross-examines the classification, the pathway match, and the claim boundary |
+| Week 2 (`nb02`), M2 | The compass is taught (kind + reach drills); each project question gets a classified position |
+| M4 | The MIDA declaration commits the position and its permitted claim |
+| Weeks 5–9 (`nb05`–`nb09`), M5–M9 | Each pathway is deepened; the project's design is matched and audited against its warrant |
+| M6 (GenAI Studio: Causal Identification Skeptic) | The identification paragraph — or the honest causal-language boundary — is defended |
+| M8 (GenAI Studio: Prediction & Leakage Auditor) | The declared analysis protocol; leakage and baseline honesty are audited |
+| M10 / M16 | Robustness and replication branch by position — the classification has consequences |
+| M17 (final defense) | The Evidence Defense cross-examines the classification, the pathway match, and the claim boundary |
 
 ## Combinations (justified, not accidental)
 

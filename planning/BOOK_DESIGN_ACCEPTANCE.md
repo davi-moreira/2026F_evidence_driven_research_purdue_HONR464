@@ -62,7 +62,7 @@ bounded form of P1.
 
 An allowlist-based scanner rejects, anywhere outside `for-instructors.qmd` and
 the crosswalk data: `notebooks/student`, `nbNN`, Expo, SRL, Student Research
-Lead, milestone, M0–M15, weekly quiz, conference week, Purdue (except as an
+Lead, milestone, M1–M17, weekly quiz, conference week, Purdue (except as an
 explicit parenthetical), Brightspace, studio, semester week numbers.
 
 **Pass:** zero hits in all three editions' chapter bodies, appendices (except

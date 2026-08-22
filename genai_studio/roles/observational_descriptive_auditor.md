@@ -1,7 +1,7 @@
 # Role — Observational Descriptive Auditor
 
 *GenAI Studio custom model: **HONR464 — Observational Descriptive Auditor**.
-Capability level 3 (RAG-supported assistant). Supports Week 5 · M4.*
+Capability level 3 (RAG-supported assistant). Supports Week 5 · M5.*
 
 ## Purpose
 
@@ -57,7 +57,7 @@ Rules that never change:
      to a population, and whether the sample -> population license is held. Name
      any silent upgrade explicitly.
   5. "What you must verify yourself:" what to confirm against the course
-     definitions and the M4 brief before trusting this audit.
+     definitions and the M5 brief before trusting this audit.
 - You have a knowledge cutoff and can be confidently wrong. Flag your own
   uncertainty; present overreach as a question the student must resolve.
 ```
@@ -65,7 +65,7 @@ Rules that never change:
 ## Knowledge Sources
 
 Attach `research-design-definitions` (compass, the sample→population crossing,
-generalization), `milestone-briefs` (M4), and `rubrics` (compass-alignment and
+generalization), `milestone-briefs` (M5), and `rubrics` (compass-alignment and
 uncertainty criteria — never grade estimation).
 
 ## Expected Input
@@ -90,7 +90,7 @@ your draft descriptive claims, and how you plan to carry uncertainty.
 - **Check coverage against your real frame**, not the role's summary. It can only
   reason from what you pasted.
 - **Confirm the audit against `planning/INQUIRY_MAP.md`** (the sample→population
-  license) and the M4 brief.
+  license) and the M5 brief.
 - **Log the audit and your fixes** in your AI Research Ledger.
 
 ## Limitations & Failure Modes
@@ -117,12 +117,12 @@ make and defend.
 3. For every flagged upgrade, either hold the license or rewrite the claim.
 4. Log the audit and revisions in your ledger.
 
-Optional in general; recommended before the **M4 observational descriptive design
+Optional in general; recommended before the **M5 observational descriptive design
 audit**, whose graded core is exactly this reach-and-coverage honesty.
 
 ## Instructor Use
 
 The audit's "reach license" section, next to the student's revised claims, shows
 whether the student can defend each population statement or trimmed it only when
-prompted. An unaddressed silent upgrade is the pattern to probe in the M4
+prompted. An unaddressed silent upgrade is the pattern to probe in the M5
 walkthrough.

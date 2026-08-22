@@ -88,7 +88,7 @@ person taking responsibility, not a tool being quoted. Compare:
 Escalation is not extra credit for caution; it is the course's central habit made
 visible. A semester-long ledger with **no** escalations is a warning sign, not a
 badge. It usually means either AI was never used on anything that mattered, or a
-boundary was crossed silently. Your M15 AI-management portfolio is read partly for
+boundary was crossed silently. Your M17 AI-management portfolio is read partly for
 whether you recognized these boundaries and took the pen back when you should
 have.
 

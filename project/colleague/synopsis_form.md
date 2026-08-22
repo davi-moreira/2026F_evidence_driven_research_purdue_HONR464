@@ -1,6 +1,6 @@
 # Colleague Synopsis Form — what your colleague is built from
 
-After your question is declared (milestone M1), you approve this synopsis.
+After your question is declared (milestone M2), you approve this synopsis.
 It is the ONLY input used to create your AI colleague. Your raw data, your
 drafts, your notebooks, and anything identifiable about other people are
 never used and never leave your own workspace.

@@ -94,7 +94,7 @@ Every author (A–E) is reviewed by exactly two people across the two rounds.
 | 10–22 | **Round 1** (12 min): reviewer walks the poster aloud with the slip; **author is silent**; last 2 min, author asks clarifying questions only. |
 | 22–34 | **Round 2** (12 min): same format, new pairing. |
 | 34–46 | **Revision triage:** rank your received hits; fix the top one NOW; write the plan for the rest. |
-| 46–50 | Exit ticket (the hit I'm fixing first + what the fixed version says); log the slips into your M10 lock record. |
+| 46–50 | Exit ticket (the hit I'm fixing first + what the fixed version says); log the slips into your M13 lock record. |
 
 ## Roles
 
@@ -107,11 +107,11 @@ Professor Moreira keeps the two 12-minute rounds strict, enforces author silence
 and holds a sample poster with six planted flaws ready for the walkthrough. Each
 reviewer produces two completed slips; each author leaves with two.
 
-## What goes into your M10 lock record
+## What goes into your M13 lock record
 
 Your two given audit slips, the two slips you received, your ranked triage plan,
 and the first fix already applied to the draft. These become the gallery-walk
-audit record you submit with the locked poster at M10 (Fri Nov 6).
+audit record you submit with the locked poster at M13 (Fri Nov 6).
 
 ## Common failure modes
 

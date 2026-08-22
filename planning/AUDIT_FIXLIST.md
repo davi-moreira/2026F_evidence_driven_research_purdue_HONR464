@@ -1,5 +1,10 @@
 # AUDIT FIXLIST — Phase-7 → Stage-8 revision
 
+> **Stale after D50 (2026-08-22).** Every milestone id below is a v2/D49 id.
+> The course renumbered to M1–M17 and Weeks 11–16 were restructured; read
+> `_project_docs/DECISIONS.md` D50 before acting on any row here. This file is
+> a point-in-time audit record and is deliberately NOT renumbered.
+
 **Source:** 11 independent Phase-7 auditors, synthesized and deduplicated.
 **Date:** 2026-07-23 · **Drives:** the Stage-8 revision pass.
 **Companion:** `planning/FINAL_REPORT_V2.md`.

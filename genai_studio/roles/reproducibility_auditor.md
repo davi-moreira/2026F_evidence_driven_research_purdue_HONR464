@@ -1,8 +1,8 @@
 # Role — Reproducibility Auditor
 
 *GenAI Studio custom model: **HONR464 — Reproducibility Auditor**. Capability level
-3 (RAG-supported assistant). **Required touchpoint: M13.** Supports Weeks 14–15 ·
-M13/M14.*
+3 (RAG-supported assistant). **Required touchpoint: M16.** Supports Weeks 14–15 ·
+M16/M16.*
 
 ## Purpose
 
@@ -11,7 +11,7 @@ in someone else's hands, with nothing but what is inside it. This role reads a
 reproducibility package the way a cold replicator would: it looks for the missing
 data pointer, the unstated dependency, the hard-coded path, the step that lives
 only in the author's head, and the claim in the write-up that the package's own
-outputs do not support. It powers your M13 red-team of a peer and your own M14
+outputs do not support. It powers your M16 red-team of a peer and your own M16
 capsule.
 
 ## Scope
@@ -27,9 +27,9 @@ not a run); deciding whether the peer's science is *right* (reproducibility is
 "does it regenerate," not "is it true"); writing the red-team report for you. It
 maps the gaps; you run, confirm, and write.
 
-## Milestone scope (M13 — required)
+## Milestone scope (M16 — required)
 
-**M13 — Replication and red-team report (due Sun Nov 29, async).** You submit the
+**M16 — Replication and red-team report (due Sun Nov 29, async).** You submit the
 **anonymized peer reproducibility package** you were assigned to this role. Its
 **"Reproduction gap list"** and **"Claim-to-output trace"** sections are the output
 you carry into your **AI Research Ledger** and into your **red-team report**,
@@ -69,7 +69,7 @@ Rules that never change:
   4. "Ledger and verification read:" whether the package's AI Research Ledger shows
      how key results were checked, and where verification looks thin.
   5. "What you must verify yourself:" that only the student's own reproduction
-     attempt settles any of this, checked against the M13 brief.
+     attempt settles any of this, checked against the M16 brief.
 - You have a knowledge cutoff and can be confidently wrong; you can miss a real
   blocker or invent one. Never claim a package reproduces; only a run can. Flag
   your uncertainty.
@@ -79,13 +79,13 @@ Rules that never change:
 
 Attach `reproducibility-standards` (the capsule, cold-reproduction, and
 attestation protocol), `examples-and-counterexamples` (reproducible vs
-non-reproducible packages), and `milestone-briefs` (M13, M14).
+non-reproducible packages), and `milestone-briefs` (M16, M16).
 
 ## Expected Input
 
 Paste the package contents you can share as text: the README/run instructions, the
 code, the data description and pointers, the environment/seed information, the
-write-up's claims, and the AI Research Ledger. For an anonymized M13 peer package,
+write-up's claims, and the AI Research Ledger. For an anonymized M16 peer package,
 paste only what the instructor cleared for sharing — never any identifying header.
 
 ## Output Schema
@@ -106,7 +106,7 @@ paste only what the instructor cleared for sharing — never any identifying hea
   role's trace.
 - **Complete the cold-reproduction protocol and signed attestation** in
   `project/reproducibility/`; the audit does not replace it.
-- **Log the audit and your run results** in your AI Research Ledger — required M13
+- **Log the audit and your run results** in your AI Research Ledger — required M16
   content that feeds your red-team report.
 
 ## Limitations & Failure Modes
@@ -132,13 +132,13 @@ peer's science, which is your reasoned call.
 1. **Workspace** → open the course group's **HONR464 — Reproducibility Auditor**.
 2. Paste the cleared package contents.
 3. Use the gap list to guide your own cold-reproduction run; record every result.
-4. **Required for M13:** carry the gap list and claim trace into your ledger and
+4. **Required for M16:** carry the gap list and claim trace into your ledger and
    red-team report, with your run results and signed attestation. UI-only satisfies
    this; the API is optional.
 
 ## Instructor Use
 
-M13 tests whether a student can hold a peer's work to the standard they will be
+M16 tests whether a student can hold a peer's work to the standard they will be
 held to. The ledger's gap list plus the student's *actual run results* separate a
 real replication from a desk review. A red-team verdict with no reproduction run
-behind it is the defect the async board exchange and the M13 rubric target.
+behind it is the defect the async board exchange and the M16 rubric target.

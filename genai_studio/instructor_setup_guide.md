@@ -92,8 +92,8 @@ research_note_reviewer, ai_research_team_orchestrator.
   changes, update the corresponding custom model's system prompt to match,
   verbatim. The Colab PoC pulls prompts live from the repo, so a UI model that
   drifts from its spec will behave differently from the API path — keep them equal.
-- **Watch the touchpoint weeks.** Before M5 (Fri Oct 2), M7 (Fri Oct 16), M9
-  (Fri Oct 30), and M13 (Sun Nov 29), re-run the UI smoke test for that week's
+- **Watch the touchpoint weeks.** Before M6 (Fri Oct 2), M8 (Fri Oct 16), M10
+  (Fri Oct 30), and M16 (Sun Nov 29), re-run the UI smoke test for that week's
   role(s) so students hit a working model.
 - **Do not add student material to shared collections.** Students consult roles
   with their own pasted artifacts in their own chats; nothing they paste enters a
@@ -107,7 +107,7 @@ This is planned for, not a failure mode. GenAI Studio's explicit
 student-eligibility terms and rate limits are not publicly documented, so treat
 student API access as unconfirmed until you have verified it per student.
 
-- **Run the course UI-only.** Every milestone touchpoint (M5, M7, M9, M13) is
+- **Run the course UI-only.** Every milestone touchpoint (M6, M8, M10, M16) is
   designed to work through Workspace → the group's role model → paste → copy the
   structured output → complete the ledger row. No key required.
 - **The Week-16 sequential workflow still runs by hand.** Students open roles in

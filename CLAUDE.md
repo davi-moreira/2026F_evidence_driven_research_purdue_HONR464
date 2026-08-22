@@ -20,8 +20,8 @@ the **Specify → Delegate → Interrogate → Inspect → Verify → Document �
 workflow (everyday shorthand: **Ask → Verify → Document**), while keeping every
 research decision — problem, question, design, measurement, ethics, claims,
 uncertainty, defense — human. Deliverables: a poster presented at the **Purdue
-Fall Undergraduate Research Expo (Tue Nov 17, 2026; poster locked Fri Nov 6,
-5 PM)**, a replication + red-team report, a research note grown into a final
+Fall Undergraduate Research Expo (Tue Nov 17, 2026; poster locked Sun Nov 8,
+11:59 PM — a print run shared with QM 47400)**, a replication + red-team report, a research note grown into a final
 research chapter, an AI-management portfolio, and an oral evidence defense.
 
 - **Instructor:** Professor Davi Moreira
@@ -38,7 +38,7 @@ research chapter, an AI-management portfolio, and an oral evidence defense.
 |---|---|
 | `_project_docs/ACTIVITY_TEMPLATE.md` | Creating/restructuring a topic notebook — the machine-validated template |
 | `_project_docs/DECISIONS.md` | Before proposing convention changes — D17–D22 govern the v2 build |
-| `planning/COURSE_MASTER_PLAN.md` | Sequencing source of truth (16 weeks, nb01–nb16, M0–M15) |
+| `planning/COURSE_MASTER_PLAN.md` | Sequencing source of truth (16 weeks, nb01–nb16, M1–M17) |
 | `planning/PROJECT_MILESTONES.md` | The milestone chain (dev meetings, presentations, due dates) |
 | `planning/SOURCE_AUDIT_V2.md` | The rebuild audit: rulings, reuse map, GenAI Studio verification |
 | `planning/MEETING_SCHEDULE.md` | Per-meeting detail (43 × 34; generated from `scripts/schedule_data/`) |
@@ -195,6 +195,18 @@ staging. Fixed section frames, enforced by the session-guide generator
   ledger + dossier, submit (Claim Ticket). The Friday red-team block was
   RETIRED (D30); students WORK ON milestones at the studio (no weekly
   presentations).
+
+**D50 — the conference block.** Weeks 1–10 are Studios 1–10, so **course
+milestone M(n) presents Book Milestone (n) one-to-one for n = 1..10**. Weeks
+11–14 are the CONFERENCE BLOCK and anchor no new lesson: poster production and
+the in-class peer review (M11 draft due AT CLASS Wednesday, M12 the four review
+surveys), the **terminal poster lock Sun Nov 8, 11:59 PM (M13)**, presentation
+preparation (M14, three timed pitches + the invitation post), the Expo, and two
+ASYNCHRONOUS reflection sessions (Fri Nov 20 + Mon Nov 23) closing at M15.
+**Studios 11 and 12 run POST-conference on Weeks 15–16 in the standard frame**
+(MW teach the lessons, Friday IS the milestone): M16 presents Book Milestone 11
+and M17 presents Book Milestone 12. The peer cold run is now IN CLASS on the
+Week-15 Wednesday. Course milestones are **M1–M17**; never write M0.
 
 **All seven active-learning moves + the lecture's 📒 ledger row run INSIDE the
 50 minutes (D33)**, above each lecture's `### ⏸ Optional depth from here`
@@ -400,20 +412,34 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
   (nb01–nb16, one per week); milestone studio notebooks `msNN_topic_student.ipynb`.
 - Instructor notebooks (gitignored): `notebooks/instructor/…_instructor.ipynb`
 - Cell sources (gitignored, canonical for editing): `_production_kit/nb_sources/`
-- Milestone briefs: `_research_project/2026Fall/milestone_NN_<slug>.md` (M0–M15)
+- Milestone briefs: `_research_project/2026Fall/milestone_NN_<slug>.md` (M1–M17;
+  the two D49 briefs the renumber retired are archived under `_retired_d50/`)
 - Commit messages: `<type>: <subject>` (feat|fix|docs|chore|build|refactor) with a
   trailing `Co-Authored-By:` line. Stage specific files — never `git add .`.
 
 ---
 
-**Version:** 6.3 — the D36 translation freeze + autonomous build-out
+**Version:** 6.4 — the D50 conference block (2026-08-22, DECISIONS.md D50):
+course milestones renumbered **M0–M15 → M1–M17** so M1–M10 present Book
+Milestones 1–10 one-to-one; Weeks 11–14 become the conference block (poster
+production, in-class peer review, the terminal **Sun Nov 8** lock shared with
+QM 47400's print run, presentation preparation, the Expo, and two asynchronous
+reflection sessions); **Studios 11–12 move to Weeks 15–16** in the standard
+MW-lessons/Friday-milestone frame, with the peer cold run brought in-class;
+Fri Nov 20 becomes asynchronous (43 = 41 in-person + 2 async); imported from
+QM 47400 — the conference application with its proof PDF (previously absent
+entirely), the draft abstract, the poster template and rubric, the timed-pitch
+specification, the invitation post, the structured peer-review instrument, and
+the proof-of-presentation photograph. New notebooks nb11/nb12; Studios 11/12
+became nb15/nb16.
+(6.3 — the D36 translation freeze + autonomous build-out
 (2026-07-31, DECISIONS.md D36): PT/ES frozen online behind per-page
 development notices until the D35 build completes — EN is the sole edited and
 rendered edition; deferred work (round-4 PT/ES ch14 errors, ch21/ch22
 crossing, preface fix, human PT/ES methods review) logged in
 `planning/TRANSLATION_BACKLOG.md`; Phases 1–4 execute autonomously via the
 two-role Codex loop; course readings regenerate from the machine-verified
-crosswalk; translation happens once, after Davi's manual EN review.
+crosswalk; translation happens once, after Davi's manual EN review.)
 (6.2 — the D35 book-design ruling + Phase 1 (2026-07-30, DECISIONS.md
 D35, from the task-#20 evaluation: two ultra Codex rounds + the Batch-A/B/C
 correction loop): EDR|AI Architecture v0 ruled — independence axiom binding, 39

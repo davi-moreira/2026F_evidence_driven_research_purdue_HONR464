@@ -128,7 +128,7 @@ responsible researcher.
 
 - **Week 9 (nb09), "Studio 8: Stress-test and adjudicate."** You run
   Protocol A on a claim from your own project during the adversarial-review
-  lecture, feeding the M9 research audit. Disagreement between models becomes a
+  lecture, feeding the M10 research audit. Disagreement between models becomes a
   list of things to stress-test with the Robustness & Sensitivity Reviewer.
 - **Week 16 (nb16), "Managing multiple AI agents; the final defense" — optional
   companion.** nb16 does not run this lab, but the correlated-error lesson it

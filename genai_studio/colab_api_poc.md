@@ -12,7 +12,7 @@ standing and is the guaranteed way every milestone touchpoint works.*
 
 There are two ways to consult a reviewer role, and **neither is second-class**:
 
-- **Manual UI (guaranteed).** A browser and your Purdue login. Every M5/M7/M9/M13
+- **Manual UI (guaranteed).** A browser and your Purdue login. Every M6/M8/M10/M16
   touchpoint is designed to work this way. Jump to *Manual-UI fallback* below.
 - **API / Colab (this document, an enhancement).** Lets you call a role from code
   and script the Week-16 sequence. It needs a personal API key, which the
@@ -220,7 +220,7 @@ Getting a reply is the easy half. The response is a **proposal you must verify**
 exactly as in the UI. A role's output — however fluent — is not evidence until you
 have checked it against your own materials and named the check in the ledger's
 verification column. "It looked right" is not a verification. If the role touched a
-required touchpoint (M5, M7, M9, M13), the ledger row is required, and it is graded
+required touchpoint (M6, M8, M10, M16), the ledger row is required, and it is graded
 on the quality of your verification, not on the model's answer.
 
 Remember the correlated-error warning: if you also ran this past Gemini and the two

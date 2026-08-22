@@ -50,7 +50,7 @@ Three ground rules keep the device honest:
   class audits one shared case together (`case_464.md`), so you see the
   confirm / challenge / repair moves modeled before you are scored on them.
 - **Week 2 — your synopsis.** After you declare your question (milestone
-  M1), you approve a short synopsis of your project (see
+  M2), you approve a short synopsis of your project (see
   `synopsis_form.md`). Only that synopsis — never your data, never your
   drafts — is used to create your colleague.
 - **Week 2 onward — one artifact per audited Studio.** Week 2's audit uses

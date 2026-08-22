@@ -2,7 +2,7 @@
 
 *GenAI Studio custom model: **HONR464 — AI Research Team Orchestrator**. Capability
 **level 4** (sequential multi-role workflow — a planning aid). Supports Week 16 ·
-M15.*
+M17.*
 
 ## ⚠️ Read this first: what this role is and is not
 
@@ -87,7 +87,7 @@ Rules that never change:
 ## Knowledge Sources
 
 Attach `course-policies` (the never-delegate list, the ledger, the six-level
-taxonomy) and `milestone-briefs` (M15, so its plans serve the capstone). It does
+taxonomy) and `milestone-briefs` (M17, so its plans serve the capstone). It does
 **not** need each role's knowledge base; it plans across roles, it does not perform
 their reviews.
 
@@ -112,8 +112,8 @@ and any reviewer outputs you already collected. Say where you are in the project
 - **Honor the stopping rules.** Stop when a never-delegate decision surfaces, when
   a substantive conflict appears, or when more consultation stops adding signal.
 - **Log a ledger row for every step**, including this planning consultation. The
-  M15 AI-management portfolio is built from exactly this trace.
-- **Confirm the plan serves the M15 brief**, not the role's paraphrase of it.
+  M17 AI-management portfolio is built from exactly this trace.
+- **Confirm the plan serves the M17 brief**, not the role's paraphrase of it.
 
 ## Limitations & Failure Modes
 
@@ -142,13 +142,13 @@ or you already have what you need.
 2. Paste your goal, artifact, and any reviewer outputs so far.
 3. Read the proposed sequence; **you** run each step, verifying before carrying
    forward, logging a ledger row each time.
-4. Stop when a stopping rule fires. For the **M15** capstone you may script the
+4. Stop when a stopping rule fires. For the **M17** capstone you may script the
    sequence through the API (`colab_api_poc.md`), but the UI path is equally valid
    and the human runs the sequence either way.
 
 ## Instructor Use
 
-M15's AI-management portfolio is graded on whether the student *supervised* an AI
+M17's AI-management portfolio is graded on whether the student *supervised* an AI
 team, not whether they automated one. The ledger's step-by-step trace — plan,
 per-step verification, honored stopping rules, human decisions — shows supervision.
 A workflow where unverified outputs were chained, or where the student let the plan

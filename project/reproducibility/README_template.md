@@ -3,7 +3,7 @@
 *The front door to your research package. A stranger opens this file first and
 should learn, in one read, what you asked, how you answered it, and how to rebuild
 every number. Fill every block. Reused as the top of your reproducibility capsule
-(M14) and your final chapter's package (M15).*
+(M16) and your final chapter's package (M17).*
 
 ---
 
@@ -12,8 +12,8 @@ every number. Fill every block. Reused as the top of your reproducibility capsul
 Copy the skeleton below into a file named `README.md` at the top of your package.
 Replace every bracketed prompt with your own content, and delete the guidance
 italics. A good README lets a competent stranger run your notebook and reach your
-headline number without asking you a single question. That is the bar the M13
-red-team and the M14 capsule are checked against.
+headline number without asking you a single question. That is the bar the M16
+red-team and the M16 capsule are checked against.
 
 Keep it honest: the README describes what the package *actually does*, not what
 you meant it to do. If a step is manual, say so. If a number takes ten minutes to

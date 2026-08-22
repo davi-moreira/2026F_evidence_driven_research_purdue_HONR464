@@ -3,13 +3,13 @@
 Authoritative reconciliation of the v2 grading system for `syllabus.qmd`.
 Philosophy: **no conventional midterm or final exam.** The course assesses the
 research chain itself — a semester-long individual project carried through
-sixteen milestones (M0–M15), presented at the Purdue Fall Undergraduate Research
+sixteen milestones (M1–M17), presented at the Purdue Fall Undergraduate Research
 Expo, and closed with a public evidence defense and a reproducible final chapter.
 Grading rewards correctness, transparency, reproducibility, question-design
 (compass) alignment, and responsible interpretation — **never coding elegance**
 (no computing background is assumed; all machinery is provided).
 
-The v1 six-component / M00–M23 system is preserved at git tag `v1-compass-build`.
+The v1 six-component / M01–M23 system is preserved at git tag `v1-compass-build`.
 Component weights were **CONFIRMED 2026-07-27 (D22)**, split attendance/
 participation **2026-07-29 (D31)**, and match `course_config.yaml assessment:`
 and the syllabus Assessments table exactly. The seven-component proposal this
@@ -24,7 +24,7 @@ remain as drafting history for the milestone rubrics.
 | **Participation** (rubric) | **9%** | Notebook completion (executed cells + written responses), feedback surveys, in-class exercises — and the **colleague audits** (D41): best 8 of the 10 scored Studio audits on the simulated colleague's artifacts (`project/colleague/audit_rubric.md`) |
 | **Quizzes** | **20%** | Weekly Friday printed MC topic quizzes |
 | **Student Research Lead (SRL) performance** | **20%** | Flipped-lecture leads scored on the SRL rubric (`project/srl/srl_rubric.md`) |
-| **Final Project Milestones** | **20%** | M0–M15 submissions (each presenting a book Milestone version; kick off → develop → submit → revise) |
+| **Final Project Milestones** | **20%** | M1–M17 submissions (each presenting a book Milestone version; kick off → develop → submit → revise) |
 | **Final Project** | **20%** | The locked poster, Expo presentation, and evidence defense |
 | **Research artifact** (paper/chapter/note) | **10%** | The research note v1 grown into the final chapter |
 | | **100%** | |
@@ -35,19 +35,19 @@ Sub-weights sum to each group total; all are provisional pending instructor
 confirmation. Presentations are graded **inside** each milestone's rubric (a
 "presented + incorporated feedback" row), not as a separate ledger.
 
-**Component 3 — Milestones M0–M9 (25%).** Early scoping milestones lighter; the
+**Component 3 — Milestones M1–M10 (25%).** Early scoping milestones lighter; the
 declaration, protocol, and first-evidence milestones heavier.
 
-| M0 | M1 | M2 | M3 | M4 | M5 | M6 | M7 | M8 | M9 |
+| M1 | M2 | M3 | M4 | M5 | M6 | M7 | M8 | M9 | M10 |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 2 | 2 | 2 | 3 | 2.5 | 2.5 | 2.5 | 3 | 2.5 | 3 |
 
-**Component 4 — Poster & Expo (20%).** M10 final poster **8** · M11 presentation
-package **4** · M12 **8** (within M12: live Expo presentation **5**, reflection +
+**Component 4 — Poster & Expo (20%).** M13 final poster **8** · M17 presentation
+package **4** · M15 **8** (within M15: live Expo presentation **5**, reflection +
 poster-criticism portfolio **3**).
 
-**Component 6 — M14–M15 (15%).** M14 research note + reproducibility capsule
-**6** · M15 **9** (within M15: final chapter + AI-management portfolio **6**,
+**Component 6 — M16–M17 (15%).** M16 research note + reproducibility capsule
+**6** · M17 **9** (within M17: final chapter + AI-management portfolio **6**,
 live evidence defense **3**).
 
 **Component 1 (10%).** Notebook completion **5** · Claim Tickets **3** · studio /
@@ -62,7 +62,7 @@ if CB is skipped, the 4 points fold into an additional concept check).
 
 ## Why these weights
 
-- **Development outweighs any single artifact** (25% for M0–M9 vs 8% for the
+- **Development outweighs any single artifact** (25% for M1–M10 vs 8% for the
   poster itself): the course's claim is that the *chain* — declare, diagnose,
   redesign, verify — is the learning, and the weights say so out loud.
 - **The flipped classroom is graded at 15%** because Mon/Wed lectures *are* the
@@ -117,9 +117,9 @@ B− ≥ 80, C+ ≥ 77, C ≥ 73, C− ≥ 70, D ≥ 60, F < 60. **No curve** (n
 **Revision.** Feedback returns within 3 days of each milestone; most milestones
 accept a revised version within **7 days** of feedback for up to half the lost
 points (revising is part of the graded craft). **Terminal artifacts have no
-revision window** — the deadline governs: **M10** final poster (Fri Nov 6,
-5:00 PM), **M15** final chapter + portfolio (Fri Dec 11), and the live **Expo
-presentation** (Tue Nov 17, a graded component of M12).
+revision window** — the deadline governs: **M13** final poster (Fri Nov 6,
+5:00 PM), **M17** final chapter + portfolio (Fri Dec 11), and the live **Expo
+presentation** (Tue Nov 17, a graded component of M15).
 
 **Late.** −10% per day up to 3 days, then not accepted; documented emergencies
 handled individually per Purdue policy.
@@ -136,9 +136,9 @@ board.
   Craft criterion**, with a missing entry triggering the hard cap above. This is
   a graded habit, not a formality.
 - **Claim ledger** (what the research asserts: claim · evidence · verification ·
-  boundary · sensitivity survival) — a separate instrument, graded at **M9**
-  (research audit), **M14** (research note), and **M15** (final chapter).
-- **Reproduction sign-off** — at **M13**, a classmate attests whether the peer's
+  boundary · sensitivity survival) — a separate instrument, graded at **M10**
+  (research audit), **M16** (research note), and **M17** (final chapter).
+- **Reproduction sign-off** — at **M16**, a classmate attests whether the peer's
   headline number reproduces from the package alone.
 
 ## SRL grading pipeline

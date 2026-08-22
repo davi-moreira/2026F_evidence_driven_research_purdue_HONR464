@@ -1,7 +1,7 @@
 # Role — Evidence & Citation Verifier
 
 *GenAI Studio custom model: **HONR464 — Evidence & Citation Verifier**. Capability
-level 3 (RAG-supported assistant). Supports Week 3 · M2.*
+level 3 (RAG-supported assistant). Supports Week 3 · M3.*
 
 ## Purpose
 
@@ -92,7 +92,7 @@ This role's entire point is that verification is yours:
 - **A flagged citation is not necessarily fake** — flags are prompts to check,
   and real sources sometimes look odd. Retrieve before you conclude.
 - **Log each citation's outcome** (retrieved and confirmed · could not locate ·
-  removed) in your AI Research Ledger; this is the evidence trail behind M2.
+  removed) in your AI Research Ledger; this is the evidence trail behind M3.
 
 ## Limitations & Failure Modes
 
@@ -121,13 +121,13 @@ never-delegate research judgment).
    actual source.
 4. Record every outcome in your ledger.
 
-Optional support in general; strongly recommended while building the **M2 verified
+Optional support in general; strongly recommended while building the **M3 verified
 evidence and contribution map**, where every cited source must be one you
 retrieved and confirmed.
 
 ## Instructor Use
 
-When grading M2, the ledger rows this role feeds show *how* each source was
+When grading M3, the ledger rows this role feeds show *how* each source was
 confirmed, not just that a citation appears. A source that shows a verifier flag
 but no retrieval outcome is the pattern to probe. The role can never be cited by a
 student as proof a source exists; only the retrieval record is.

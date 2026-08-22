@@ -1,7 +1,7 @@
 # Role — Experimental Design Reviewer
 
 *GenAI Studio custom model: **HONR464 — Experimental Design Reviewer**. Capability
-level 3 (RAG-supported assistant). Supports Weeks 7 & 9 · M6/M8.*
+level 3 (RAG-supported assistant). Supports Weeks 7 & 9 · M7/M9.*
 
 ## Purpose
 
@@ -59,7 +59,7 @@ Rules that never change:
   4. "Ethics questions:" the consent, harm, deception, and debrief questions the
      design raises, as questions for the student and IRB to answer, never verdicts.
   5. "What you must verify yourself:" what to confirm against the course
-     definitions and the M6/M8 briefs before trusting this review.
+     definitions and the M7/M9 briefs before trusting this review.
 - You have a knowledge cutoff and can be confidently wrong. Flag your own
   uncertainty; present gaps as questions.
 ```
@@ -67,7 +67,7 @@ Rules that never change:
 ## Knowledge Sources
 
 Attach `research-design-definitions` (experimental pathways, the
-assignment-vs-inquiry distinction), `milestone-briefs` (M6, M8), and `rubrics`.
+assignment-vs-inquiry distinction), `milestone-briefs` (M7, M9), and `rubrics`.
 
 ## Expected Input
 
@@ -89,7 +89,7 @@ inquiry and claim, and any ethics review already done.
   a descriptive question, say so; do not let "randomized" smuggle in a causal read.
 - **Answer every ethics question yourself and with the IRB.** The role raises them;
   it never clears them. No study runs on a model's ethical say-so.
-- **Check structure choices against a real design reference** and the M6/M8 briefs.
+- **Check structure choices against a real design reference** and the M7/M9 briefs.
 - **Log the review and your decisions** in your AI Research Ledger.
 
 ## Limitations & Failure Modes
@@ -115,8 +115,8 @@ the assignment-vs-inquiry mismatch needs you to re-declare what you are asking.
 3. Resolve each structure and ethics question yourself (ethics with the IRB).
 4. Log the review and decisions in your ledger.
 
-Optional in general; recommended for the **M6 experimental measurement /
-data-acquisition protocol** and the **M8 minimum viable analysis** when the design
+Optional in general; recommended for the **M7 experimental measurement /
+data-acquisition protocol** and the **M9 minimum viable analysis** when the design
 assigns conditions.
 
 ## Instructor Use
@@ -124,4 +124,4 @@ assigns conditions.
 The "assignment read" and "ethics questions" sections show whether the student
 matched claim to assignment and faced the ethics rather than deferring them. A
 randomized design carrying an unlicensed causal claim, or an unaddressed ethics
-question, is what to probe at the M6/M8 reviews.
+question, is what to probe at the M7/M9 reviews.

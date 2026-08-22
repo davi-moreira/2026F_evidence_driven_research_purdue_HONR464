@@ -70,10 +70,10 @@ not confessing a crime.
 |---|---|
 | 0–5 | 1-minute pitch pulse (one volunteer, warm notes). |
 | 5–12 | Mini-lesson: the ULN move on three findings, including a null. |
-| 12–24 | **Writing studio:** draft your ULN paragraph (the spoken-statement core of M11). |
+| 12–24 | **Writing studio:** draft your ULN paragraph (the spoken-statement core of M17). |
 | 24–40 | **ULN rounds:** deliver to two successive partners; partners score on the 1–5 scale. |
 | 40–47 | Whole-group: the best ULN heard, re-delivered for the room. |
-| 47–50 | Exit ticket (your most important limitation in ULN form, ≤ 30 words); this ULN statement joins your M11 package, due Fri Nov 13. |
+| 47–50 | Exit ticket (your most important limitation in ULN form, ≤ 30 words); this ULN statement joins your M17 package, due Fri Nov 13. |
 
 ## Roles
 
@@ -94,4 +94,4 @@ posture with the stems on screen. Each presenter delivers twice and scores twice
 4. **Inflating to avoid the limitation.** Overclaiming to dodge the caveat is the opposite failure and a worse one.
 5. **A different limitation than the poster's.** The spoken bound must match the written one — pick the limitation that actually threatens your claim.
 
-*Paired with [hard_questions_protocol.md](hard_questions_protocol.md) — M34 builds the question bank; together they complete the M11 presentation package.*
+*Paired with [hard_questions_protocol.md](hard_questions_protocol.md) — M34 builds the question bank; together they complete the M17 presentation package.*

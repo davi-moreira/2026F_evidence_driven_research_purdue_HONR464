@@ -12,7 +12,7 @@ red-teamer.*
 A clean run is a single, uninterrupted execution of your notebook from an empty
 kernel, top to bottom, that reproduces every number you report with no human
 touching anything in between. It is the difference between believing your package
-works and knowing it does. Everything in the M13 red-team and the M14 capsule
+works and knowing it does. Everything in the M16 red-team and the M16 capsule
 rests on this passing.
 
 Do it *before* you hand the package to anyone. The whole point of the exchange is

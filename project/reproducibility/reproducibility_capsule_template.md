@@ -1,8 +1,8 @@
-# Reproducibility Capsule Template — M14 / M15
+# Reproducibility Capsule Template — M16 / M17
 
 *The frozen, self-contained bundle that lets anyone rebuild your findings after the
-course ends. You assemble it for the M14 research-note capsule and finalize it
-inside the M15 dossier. A capsule is complete when a competent stranger, with only
+course ends. You assemble it for the M16 research-note capsule and finalize it
+inside the M17 dossier. A capsule is complete when a competent stranger, with only
 what is inside it, can reproduce your headline number and read every claim back to
 its evidence.*
 
@@ -82,12 +82,12 @@ If you cannot honestly check a box, the capsule is not ready. An honest gap
 recorded in the notes is graded far better than a signed attestation a reproducer
 then disproves.
 
-## From M14 to M15
+## From M16 to M17
 
-- **At M14**, you assemble the capsule around your research note and workshop it in
+- **At M16**, you assemble the capsule around your research note and workshop it in
   the table read. Some components may still be tightening.
-- **At M15**, the capsule is frozen inside the final dossier, signed, and defended.
-  M15 is terminal; there is no revision window, so the capsule you sign is the one
+- **At M17**, the capsule is frozen inside the final dossier, signed, and defended.
+  M17 is terminal; there is no revision window, so the capsule you sign is the one
   that stands.
 
 ## Quality bar

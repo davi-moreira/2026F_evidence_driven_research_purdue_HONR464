@@ -72,7 +72,7 @@ relevant sections into GenAI Studio Knowledge uploads.
   to the never-delegate boundary.
 
 ### 2. `milestone-briefs`
-- **Contains:** the M0–M15 student-facing briefs and their submission
+- **Contains:** the M1–M17 student-facing briefs and their submission
   requirements. Sourced from `_research_project/2026Fall/milestone_NN_*.md`.
 - **Attached to:** research_question_diagnostician, ai_research_team_orchestrator,
   and each touchpoint role for the milestone it serves.

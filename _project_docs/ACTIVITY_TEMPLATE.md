@@ -252,7 +252,7 @@ implement SDIIVDD around the notebook's real work.
 
 **Where useful (defined, not hard-required):**
 - `### ⚔️ Competing AI Roles` — put two AI roles against each other (e.g.,
-  proposer vs skeptic; the GenAI Studio reviewer bench at M5/M7/M9/M13) and
+  proposer vs skeptic; the GenAI Studio reviewer bench at M6/M8/M10/M16) and
   adjudicate as the human.
 
 ### 8a. AI prompt + verification block (Ask → Verify → Document)
@@ -427,7 +427,7 @@ session guide.
 
 ## Milestone studio notebooks (msNN) — reduced required set
 
-Each milestone M0–M15 ships a light Friday studio notebook
+Each milestone M1–M17 ships a light Friday studio notebook
 `notebooks/student/msNN_<slug>_student.ipynb` (instructor version gitignored,
 same markers). Required cells, in order — nothing else is mandatory:
 
@@ -503,6 +503,6 @@ below the ⏸ line as optional depth). Every lecture logs its own 📒 ledger ro
 before the room empties. `validate_notebooks.py` enforces placement (all
 seven + 📒 above each lecture's ⏸; 🔁/🔬/🧑‍⚖️ above a ⏸ notebook-wide).
 Exempt: nb01, nb14, and nb13 (conference week: below nb13's ⏸ line is the
-conference path — Expo fieldwork plus the reflection studio, feeding M12 —
+conference path — Expo fieldwork plus the reflection studio, feeding M15 —
 not optional depth and not homework). Deep transfer work stays where it
 belongs: the Friday studio sprint and the book's "It is your turn" chain.

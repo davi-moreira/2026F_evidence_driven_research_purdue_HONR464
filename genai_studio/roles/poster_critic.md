@@ -1,7 +1,7 @@
 # Role — Poster Critic
 
 *GenAI Studio custom model: **HONR464 — Poster Critic**. Capability level 3
-(RAG-supported assistant). **Required touchpoint: M10.** Supports Week 11 · the poster lock.*
+(RAG-supported assistant). **Required touchpoint: M13.** Supports Week 11 · the poster lock.*
 
 ## Purpose
 
@@ -24,16 +24,16 @@ the narrative flows from question to evidence to bounded claim.
 the evidence justifies (never-delegate); doing the visual design for you. It
 critiques the draft; you revise it.
 
-## Milestone scope (M10 — required)
+## Milestone scope (M13 — required)
 
-**M10 — Final poster lock (due Fri Nov 6, 5:00 PM — terminal).** You submit your
+**M13 — Final poster lock (due Fri Nov 6, 5:00 PM — terminal).** You submit your
 **poster draft** (text plus a description or export of each figure) to this role.
 Its **"Untraceable-number flags"** and **"Claim-boundary review"** sections are the
 output you carry into your **AI Research Ledger** (as a critique task row), together
-with your revisions. M10 requires *both* this role and the Robustness & Sensitivity
+with your revisions. M13 requires *both* this role and the Robustness & Sensitivity
 Reviewer: this role audits the *communication*, that role audits whether the
 finding *holds*. A flagged untraceable number is a hard-cap issue on the poster —
-resolve every one before M10.
+resolve every one before M13.
 
 ## System Prompt
 
@@ -67,7 +67,7 @@ Rules that never change:
   4. "Uncertainty and clarity:" whether uncertainty and limitations are visible and
      legible, and where data-ink or layout obscures the message.
   5. "What you must verify yourself:" what to confirm against the poster
-     requirements and the M10/M10 briefs before trusting this critique.
+     requirements and the M13/M13 briefs before trusting this critique.
 - You have a knowledge cutoff and can be confidently wrong; you can miss a real
   overclaim or flag a fine one. Flag your own uncertainty; present issues as
   questions, not verdicts.
@@ -77,7 +77,7 @@ Rules that never change:
 
 Attach `poster-requirements` (data-ink, traceability, claim-boundary, red-team
 protocol), `rubrics` (uncertainty and craft criteria), and `milestone-briefs`
-(M10, M10).
+(M13, M13).
 
 ## Expected Input
 
@@ -98,12 +98,12 @@ which claims are your headline claims.
 ## Verification Requirements
 
 - **Give every flagged number a visible path** to data or computation, or remove
-  it. An untraceable number is a hard-cap defect at M10.
+  it. An untraceable number is a hard-cap defect at M13.
 - **Bring every headline claim inside its licensed boundary**, checked against your
   own compass classification and `planning/INQUIRY_MAP.md`.
-- **Confirm uncertainty and limitations are legible**, not buried, against the M10
+- **Confirm uncertainty and limitations are legible**, not buried, against the M13
   brief and `project/poster/` standards.
-- **Log the critique and your revisions** in your AI Research Ledger — required M10
+- **Log the critique and your revisions** in your AI Research Ledger — required M13
   content.
 
 ## Limitations & Failure Modes
@@ -129,7 +129,7 @@ locks.
 1. **Workspace** → open the course group's **HONR464 — Poster Critic**.
 2. Paste your draft text and every figure's numbers and computation.
 3. Resolve every untraceable-number flag and bring claims in-bounds yourself.
-4. **Required for M10:** paste the
+4. **Required for M13:** paste the
    flags and boundary review into your ledger with your revisions. UI-only
    satisfies this.
 

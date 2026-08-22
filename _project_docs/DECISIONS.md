@@ -2317,3 +2317,95 @@ misconception gate clean and self-proving, citation integrity clean across
 16 notebooks and 41 chapters, book architecture and sync consistent at 40
 lessons, coverage clean across 43 meetings, calendar invariants holding,
 and the milestone system consistent with every fixed date anchored.
+
+---
+
+## D50 — The conference block: milestone renumbering and the post-conference studios (2026-08-22)
+
+**Decision.** The course milestone track is renumbered **M0–M15 → M1–M17**, and
+Studios 11 and 12 move from Weeks 11–12 to Weeks 15–16. Weeks 11–14 become the
+**conference block**. Concretely:
+
+1. **M1–M10 present Book Milestones 1–10 one-to-one and in order.** The old
+   off-by-one (course M(n) presented Book Milestone (n+1)) is gone. The course
+   is 1-based like the book.
+2. **Weeks 11–14 anchor no new lesson.** They carry Book Milestone 10 forward as
+   versions 2, 3, and 4, and they exist to turn the Studio 10 artifact into a
+   printed poster that has already survived criticism, then to deliver it:
+   - **M11 Poster first draft** — due AT CLASS on the Week-11 Wednesday, because
+     the structured four-reviewer round runs in that same session.
+   - **M12 Peer review submission** — the four review surveys, completion-graded.
+   - **M13 Final poster lock** — **Sunday, November 8, 11:59 PM, TERMINAL**.
+   - **M14 Go-public package** — audience analysis, three timed pitches
+     (30 s ≤75 w · 90 s ≤200 w · 2 min ≤300 w), poster-integration outline,
+     question strategy, and the public invitation post.
+   - **M15 Conference reflection** — the coded audience tally and its
+     adjudication, due Sunday, November 29.
+3. **Studios 11 and 12 run POST-conference on Weeks 15–16, in the STANDARD
+   frame**: Monday and Wednesday teach the studio's lessons with their "It is
+   your turn" work, and Friday IS that studio's milestone. **M16** presents Book
+   Milestone 11 (and carries the research note revised after public criticism);
+   **M17** presents Book Milestone 12 and closes the course, terminal.
+4. **The peer cold run moves in-class.** The Thanksgiving asynchronous
+   replication module is retired. On the Week-15 Wednesday a colleague runs your
+   capsule from your written instructions alone while you run theirs, and Friday
+   is the repair block. Handing packages across a table beats doing it alone over
+   a holiday, and it makes the reproduction failure visible in the room.
+5. **Calendar.** Friday, November 20 becomes **asynchronous** (post-Expo
+   audience-data capture), joining Monday, November 23 (in-person 42 → 41,
+   async 1 → 2; total stays 43). `poster_deadline` moves from 2026-11-06 to
+   **2026-11-08**, matched to QM 47400's lock so both courses print on one run.
+
+**Rationale.**
+
+- **Packaging and release do not gate poster development.** Book Milestones 11
+  and 12 are about reproducing and releasing a finished result. Under D49 they
+  sat between the last studio and the Expo, which spent two of the four
+  pre-conference weeks on work the poster does not need, and left no room to
+  criticise the poster before it locked.
+- **The new order is more faithful to the book, not less.** Book Milestone 12 is
+  "release and next cycle", and release genuinely comes after the public test:
+  what the room returns is part of what you release. The book's twelve Studios
+  keep their own order; the course inserts a conference block between Studio 10
+  and Studio 11. The independence axiom (D35) is untouched — the book's spine
+  was never renumbered to suit the course.
+- **Peer criticism before the lock.** Four readers who did not confer are four
+  checks. A defect found in class costs an evening; the same defect found at the
+  Expo costs the claim.
+- **The print window.** Locking Sunday night gives a full working week to print
+  and hand posters back, so the Week-12 Friday studio and the Week-13 Monday
+  dress rehearsal both run on the real printed board.
+
+**Imported from QM 47400** (both courses present at the same URC Expo): the
+draft-abstract milestone (M6), the **conference application with its
+proof-of-submission PDF** (M7, which the course previously lacked entirely), the
+poster first draft on a shared template and rubric, the timed-pitch
+specification with word ceilings, the invitation post, the structured peer-review
+instrument, and the proof-of-presentation photograph. QM 47400's own poster
+deadline moved from Tue Nov 10 to Sun Nov 8 in the same pass.
+
+**Not imported:** the group contract, the intra-group peer evaluation, the
+two-round instructor/TA meeting schedule-and-confirm cycle (all group-project
+machinery; HONR 46400 projects are individual), and Poster-to-Product.
+
+**Mechanics.**
+- `course_config.yaml` — calendar, the 17-milestone map, `weeks` with `also_due`,
+  GenAI Studio touchpoints repositioned (Poster Critic moves to the DRAFT, M11,
+  where criticism can still change the poster).
+- `planning/COURSE_BOOK_CROSSWALK.yml` — 17 rows; new `also_nb:` field for a
+  milestone that spans two calendar weeks (M15 covers Weeks 13–14).
+- `scripts/schedule_data/part3.py`, `part4.py` — meetings 29–43 rebuilt; the
+  Studio 11 and Studio 12 lecture records were RELOCATED rather than rewritten.
+- Validators updated: `validate_milestones.py` (17 milestones, new anchors),
+  `validate_book_architecture.py` (M1..M17; the nb column is no longer a
+  partition), `validate_book_sync.py` (`also_nb`), `validate_session_readings.py`
+  (a studio's calendar week is READ from the crosswalk, never assumed equal to
+  its rank), `validate_calendar.py` (two async labels, the Nov 8 lock).
+- Notebooks: nb11 and nb12 are new conference-block notebooks; the Studio 11 and
+  Studio 12 notebooks became nb15 and nb16. The D49 revision and close notebooks
+  are archived at `_production_kit/nb_sources_d49_retired/`.
+- Briefs: 10 renamed +1, three new (M11, M12, M14), four repurposed, two archived
+  under `_research_project/2026Fall/_retired_d50/`.
+
+**Superseded:** D49's "Studios 1–12 on Weeks 1–12" for Weeks 11–16 only. Weeks
+1–10 are untouched, and the D49 shape still governs them.

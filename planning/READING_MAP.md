@@ -19,20 +19,20 @@ Assignments below say "skim" or "read" deliberately.
 
 | Ch. | Title | Used by |
 |---|---|---|
-| 1 | Preface | M1 |
-| 2 | What is a research design? | M1–M2 |
-| 3 | Research design principles | M3 |
-| 4 | Getting started | M4, M7–M8 |
+| 1 | Preface | M2 |
+| 2 | What is a research design? | M2–M3 |
+| 3 | Research design principles | M4 |
+| 4 | Getting started | M5, M8–M9 |
 | 5 | Declaring designs | (background for nb12 helpers) |
-| 6 | Specifying the model | M9 |
-| 7 | Defining the inquiry | M5–M6, M10 |
-| 8 | Crafting a data strategy (incl. §8.1 sampling; measurement) | M11–M12, M15–M16 |
+| 6 | Specifying the model | M10 |
+| 7 | Defining the inquiry | M6–M7, M13 |
+| 8 | Crafting a data strategy (incl. §8.1 sampling; measurement) | M17–M15, M17–M16 |
 | 9 | Choosing an answer strategy | M17–M20 |
 | 10 | Diagnosing designs (incl. power) | M22–M23 |
 | 11 | Redesigning | M24, M37 |
 | 12 | Design example | (instructor reference) |
 | 13 | Designing in code | (instructor reference; PS coding help) |
-| 15 | Observational: descriptive | M13–M14, M21 |
+| 15 | Observational: descriptive | M16–M16, M21 |
 | 16 | Observational: causal | M21, M26–M28 |
 | 17 | Experimental: descriptive | (referenced in nb07 boundary discussion) |
 | 18 | Experimental: causal (incl. §18.4 adjustment) | M27 |
@@ -46,12 +46,12 @@ Assignments below say "skim" or "read" deliberately.
 
 | Week (Mon) | Meetings | Assigned reading | Notes |
 |---|---|---|---|
-| Aug 24 | M1–M3 | RDSS ch. 1–2 skim (after M1); ch. 3 (for M3) | first exposure: read for the big idea |
-| Aug 31 | M4–M6 | RDSS ch. 4; ch. 7 (for M5–M6) | + optional CB "Criminal machine learning" case (M6) |
-| Sep 9* | M7–M8 | RDSS ch. 4 §literature (revisit) | *no class Mon Sep 7 (Labor Day) |
-| Sep 14 | M9–M11 | RDSS ch. 6; ch. 7; ch. 8 §measurement | heaviest reading fortnight — flagged in advance |
-| Sep 21 | M12–M14 | RDSS ch. 8 §measurement (cont.); ch. 15 opener | + optional CB misleading-axes case (M14) |
-| Sep 28 | M15–M17 | RDSS ch. 8 §8.1 + §assignment; ch. 9 opening (async preview) | M17 async module carries its own materials |
+| Aug 24 | M2–M4 | RDSS ch. 1–2 skim (after M2); ch. 3 (for M4) | first exposure: read for the big idea |
+| Aug 31 | M5–M7 | RDSS ch. 4; ch. 7 (for M6–M7) | + optional CB "Criminal machine learning" case (M7) |
+| Sep 9* | M8–M9 | RDSS ch. 4 §literature (revisit) | *no class Mon Sep 7 (Labor Day) |
+| Sep 14 | M10–M17 | RDSS ch. 6; ch. 7; ch. 8 §measurement | heaviest reading fortnight — flagged in advance |
+| Sep 21 | M15–M16 | RDSS ch. 8 §measurement (cont.); ch. 15 opener | + optional CB misleading-axes case (M16) |
+| Sep 28 | M17–M17 | RDSS ch. 8 §8.1 + §assignment; ch. 9 opening (async preview) | M17 async module carries its own materials |
 | Oct 5 | M18–M20 | RDSS ch. 9 (estimators, regression, uncertainty) | |
 | Oct 14* | M21–M22 | RDSS ch. 15–16 boundary; ch. 10 §power | *October break Mon Oct 12; + optional CB correlation case |
 | Oct 19 | M23–M25 | RDSS ch. 10; ch. 11 | + PS1 concepts (power) surface in nb11/nb12 |
@@ -77,8 +77,8 @@ Assignments below say "skim" or "read" deliberately.
 
 | Meeting | Case | Purpose |
 |---|---|---|
-| M6 | Criminal machine learning | prediction ≠ understanding |
-| M14 | Misleading axes | honest visualization |
+| M7 | Criminal machine learning | prediction ≠ understanding |
+| M16 | Misleading axes | honest visualization |
 | M17 (async) | student's choice from the CB case-study index | claim diagnosis practice |
 | M21 | Correlation ≠ causation | the descriptive → causal boundary |
 | M25–M26 | Big-data / algorithm hubris; machine bias | prediction's limits |

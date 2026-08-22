@@ -1,7 +1,7 @@
 # Role — Research Question Diagnostician
 
 *GenAI Studio custom model: **HONR464 — Research Question Diagnostician**.
-Capability level 3 (RAG-supported assistant). Supports Week 2 · M1.*
+Capability level 3 (RAG-supported assistant). Supports Week 2 · M2.*
 
 ## Purpose
 
@@ -67,7 +67,7 @@ Rules that never change:
 ## Knowledge Sources
 
 Attach `research-design-definitions` (the compass, positions, crossings) and
-`milestone-briefs` (so its scope check reflects what M1 actually asks for).
+`milestone-briefs` (so its scope check reflects what M2 actually asks for).
 
 ## Expected Input
 
@@ -93,7 +93,7 @@ question to do. If you have more than one candidate, paste them separately.
 - **Confirm the reading matches your true intent**, not just your current
   wording. If they diverge, the fix is yours to make.
 - **Log the consultation** and your final classification in your AI Research
-  Ledger; the classification anchors M1 and every later declaration.
+  Ledger; the classification anchors M2 and every later declaration.
 
 ## Limitations & Failure Modes
 
@@ -118,7 +118,7 @@ is genuinely ambiguous and only your intent resolves it.
 3. Read the compass reading and the flags; decide the classification yourself.
 4. Record the classification and the consultation in your ledger.
 
-Optional in general; recommended while drafting the **M1 research opportunity
+Optional in general; recommended while drafting the **M2 research opportunity
 landscape**, where a defensible compass classification is the deliverable's core.
 
 ## Instructor Use
@@ -126,4 +126,4 @@ landscape**, where a defensible compass classification is the deliverable's core
 The role's reading, next to the student's own final classification and ledger
 note, shows whether the student can defend the call or merely accepted a model's
 label. A classification with no word-level justification is the pattern to probe
-during the M1 pitch.
+during the M2 pitch.

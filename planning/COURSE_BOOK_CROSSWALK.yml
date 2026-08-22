@@ -11,7 +11,21 @@
 # generated projection). Rows reference lessons and stations by their
 # immutable ids from BOOK_ARCHITECTURE.yml, never by number.
 #
-# THE D49 SHAPE. Monday and Wednesday teach the week's studio LESSONS with
+# THE D50 SHAPE (2026-08-22, supersedes the D49 shape below for Weeks 11-16).
+# Studios 1-10 land on Weeks 1-10, so course milestone M(n) presents Book
+# Milestone (n) one-to-one for n = 1..10. Weeks 11-14 are the CONFERENCE BLOCK:
+# poster production and peer review (M11-M13, the lock terminal on Sun Nov 8),
+# presentation preparation (M14), the Expo on Tue Nov 17, and two asynchronous
+# reflection sessions (M15). They anchor no new lesson and carry Milestone 10
+# forward as versions 2, 3, and 4. Studios 11 and 12 then run POST-CONFERENCE on
+# Weeks 15-16 in the standard MW-lessons/Friday-milestone frame: M16 presents
+# Book Milestone 11 and M17 presents Book Milestone 12. The order is the lesson -
+# you package and release AFTER the public test, because what the room returns is
+# part of what you release. The independence axiom is untouched: the book's twelve
+# Studios keep their own order; the course inserts its conference block between
+# Studio 10 and Studio 11.
+#
+# THE D49 SHAPE (Weeks 1-10, still governing). Monday and Wednesday teach the week's studio LESSONS with
 # their "It is your turn" work; Friday IS that studio's MILESTONE. So each
 # row M0-M11 anchors exactly one studio and fires exactly one of its
 # checkpoints, and course milestone M(n) presents Book Milestone (n+1).
@@ -41,6 +55,8 @@
 #   - `gates:` {id, requires, before_event, evidence, blocking}.
 #   - NEW `book_milestones:` the D40 naming bridge: {station, relationship:
 #     checkpoint|revisit|practice, version_label, contribution_refs}.
+#   - NEW `also_nb:` (D50) additional notebooks a milestone spans, when a
+#     single submission covers more than one calendar week.
 #   - NEW `route_selection:` (the route-hub row only).
 #   - NEW `supporting_gate_milestones:` book milestones a course submission
 #     enacts as a GATE without presenting them as its artifact.
@@ -51,7 +67,7 @@ schema_version: "1.1"
 status: option2-active-d49
 
 rows:
-  - milestone: M0
+  - milestone: M1
     nb: nb01
     # Week 1 - Studio 1. Monday is the instructor-led orientation (not a book
     # lesson); Wednesday teaches the studio's single lesson; Friday is Milestone 1.
@@ -64,7 +80,7 @@ rows:
       - {station: frame-the-inquiry, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [curiosity-to-problem]}
 
-  - milestone: M1
+  - milestone: M2
     nb: nb02
     # Week 2 - Studio 2. Monday: the four governance lessons as one arc (how you
     # will work). Wednesday: the two question lessons (what you will ask).
@@ -82,7 +98,7 @@ rows:
       - {station: govern-the-work, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [ai-arm-not-brain, research-director, sdiivdd, responsibility-ownership, question-kinds, declare-your-question]}
 
-  - milestone: M2
+  - milestone: M3
     nb: nb03
     # Week 3 - Studio 3. SHORT WEEK (Labor Day): one Wednesday lecture carries
     # both lessons; Friday is Milestone 3.
@@ -95,7 +111,7 @@ rows:
       - {station: ground-in-evidence, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [research-builds, verifying-prior-evidence]}
 
-  - milestone: M3
+  - milestone: M4
     nb: nb04
     # Week 4 - Studio 4. Monday: MIDA + uncertainty foundations.
     # Wednesday: declare-diagnose + ethics and data governance.
@@ -112,7 +128,7 @@ rows:
       - {station: declare-and-diagnose, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [mida, uncertainty-foundations, declare-diagnose, ethics-data-governance]}
 
-  - milestone: M4
+  - milestone: M5
     nb: nb05
     # Week 5 - Studio 5, THE ROUTE HUB. Monday: route signals + five shallow
     # route cards + the licence matrix. Wednesday: jigsaw + mandated contrast
@@ -136,7 +152,7 @@ rows:
       - {station: develop-the-pathway, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [observational-descriptive, observational-causal, experimental-descriptive, prediction-generalization, experimental-causal, hybrid-complex-designs]}
 
-  - milestone: M5
+  - milestone: M6
     nb: nb06
     # Week 6 - Studio 6. Monday: provenance and acquisition keyed to permission.
     # Wednesday: measurement, and the Contract revisit that settles the
@@ -152,7 +168,7 @@ rows:
       - {station: govern-data-measurement, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [data-provenance, measurement]}
 
-  - milestone: M6
+  - milestone: M7
     nb: nb07
     # Week 7 - Studio 7. Monday: AI as programmer (Contract-to-code).
     # Wednesday: AI as analytical assistant (execute, uncertainty, clean
@@ -168,7 +184,7 @@ rows:
       - {station: first-analysis, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [ai-as-programmer, ai-analytical-assistant]}
 
-  - milestone: M7
+  - milestone: M8
     nb: nb08
     # Week 8 - Studio 8. SHORT WEEK (October break): one Wednesday lecture
     # teaches the spine that unifies four lessons - pre-list, run
@@ -186,7 +202,7 @@ rows:
       - {station: stress-test, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [robustness-sensitivity, negative-tests, ai-adversarial-reviewer, false-confidence]}
 
-  - milestone: M8
+  - milestone: M9
     nb: nb09
     # Week 9 - Studio 9. Monday: results to claims + claim-evidence tables.
     # Wednesday: AI disclosure from the ledger + from dossier to research note.
@@ -204,7 +220,7 @@ rows:
       - {station: write-bound-disclose, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [results-to-claims, claim-evidence-tables, ai-disclosure, poster-to-note]}
 
-  - milestone: M9
+  - milestone: M10
     nb: nb10
     # Week 10 - Studio 10. Monday: posters + poster criticism. Wednesday:
     # pitches/talks + difficult questions. Friday: Milestone 10, a venue
@@ -223,53 +239,139 @@ rows:
       - {station: adapt-and-defend, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [research-posters, poster-criticism, research-pitches, difficult-questions]}
 
-  - milestone: M10
+  - milestone: M11
     nb: nb11
-    # Week 11 - Studio 11, and the TERMINAL poster lock (Fri Nov 6, 5:00 PM).
-    # Monday: replication and reproduction. Wednesday: open and reusable
-    # packages. Friday: Milestone 11 - and the lock. This is the
-    # reproduce-before-publish gate made literal: the numbers that lock onto
-    # the poster are the numbers that just reproduced from a clean package.
+    # Week 11 - CONFERENCE BLOCK (D50). No new lesson; every reading is a
+    # revisit of Studios 9 and 10. Monday is a poster production lab, Wednesday
+    # the draft is due AT CLASS and the structured peer review runs in the same
+    # session, Friday is the revision studio. The poster is Studio 10's artifact
+    # carried to a reviewable draft, so it gets a bridge rather than changing
+    # silently.
+    assignments:
+      - {lesson: research-posters,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: poster-criticism,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+    station_events:
+      - {station: adapt-and-defend, event: revisit, checkpoint: defense-ready-v1, at: milestone-submission}
+    book_milestones:
+      - {station: adapt-and-defend, relationship: revisit, version_label: "version 2 - the peer-reviewed draft",
+         contribution_refs: [research-posters, poster-criticism]}
+
+  - milestone: M12
+    nb: nb11
+    # Week 11, second submission (Fri Nov 6). The four review surveys you wrote
+    # on your colleagues' drafts. This is Studio 10 criticism PRACTISED on
+    # someone else's artifact, not a new version of your own.
+    assignments:
+      - {lesson: poster-criticism,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+    station_events:
+      - {station: adapt-and-defend, event: practice, at: studio}
+    book_milestones:
+      - {station: adapt-and-defend, relationship: practice, version_label: "peer criticism, applied to four colleagues' drafts",
+         contribution_refs: [poster-criticism]}
+
+  - milestone: M13
+    nb: nb11
+    # Week 11, TERMINAL submission (Sun Nov 8, 11:59 PM). The print file. The
+    # lock is a materially later version of the Studio 10 artifact - it goes to
+    # print - so it carries its own bridge. Studios 11 and 12 are deliberately
+    # NOT prerequisites here (D50): packaging and release are post-conference
+    # work and do not gate poster development. What DOES gate the lock is the
+    # Studio 9 trace - every number on the poster reaches the run that produced
+    # it - and the disclosure block.
+    assignments:
+      - {lesson: research-posters,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: claim-evidence-tables,     requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: ai-disclosure,             requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+    station_events:
+      - {station: adapt-and-defend, event: revisit, checkpoint: defense-ready-v1, at: milestone-submission}
+    book_milestones:
+      - {station: adapt-and-defend, relationship: revisit, version_label: "version 3 - the locked print edition",
+         contribution_refs: [research-posters]}
+        # the claim-evidence trace and the disclosure block ride as blocking
+        # GATES below, not as contributions - they belong to Studio 9
+    gates:
+      - {id: every-number-traces-to-its-run,
+         requires: claim-to-output-trace,
+         before_event: poster-lock,           # Sun Nov 8 11:59 PM, course calendar
+         evidence: claim-evidence-table,
+         blocking: true}
+      - {id: disclosure-before-print,
+         requires: ai-use-disclosure-block,
+         before_event: poster-lock,
+         evidence: ai-research-ledger,
+         blocking: true}
+
+  - milestone: M14
+    nb: nb12
+    # Week 12 - CONFERENCE BLOCK. The poster is locked, so the whole week is
+    # spoken delivery: Monday plans the pitch, Wednesday delivers it under
+    # adversarial questioning, Friday rehearses on the printed poster and
+    # submits the go-public package. Pitching is Studio 10 PRACTISED, not a new
+    # version of the artifact.
+    assignments:
+      - {lesson: research-pitches,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: difficult-questions,       requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+    station_events:
+      - {station: adapt-and-defend, event: practice, at: milestone-submission}
+    book_milestones:
+      - {station: adapt-and-defend, relationship: practice, version_label: "the spoken editions - three timed pitches and the question strategy",
+         contribution_refs: [research-pitches, difficult-questions]}
+
+  - milestone: M15
+    nb: nb14
+    also_nb: [nb13]        # D50: M15 spans Weeks 13-14 - the Expo week's
+                           # notebook and the asynchronous reflection module
+    # Weeks 13-14 - CONFERENCE BLOCK. Week 13 is the public test itself:
+    # Monday's dress rehearsal, the Expo on Tuesday, November 17 (required,
+    # graded, terminal), and Friday's ASYNCHRONOUS audience-data capture. Week
+    # 14 is the second asynchronous session (Mon Nov 23), where the captured
+    # questions are adjudicated into the CLAIM or only into its DEFENCE. Due
+    # Sunday, November 29.
+    assignments:
+      - {lesson: research-posters,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: poster-criticism,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: research-pitches,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: difficult-questions,       requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+    station_events:
+      - {station: adapt-and-defend, event: revisit, checkpoint: defense-ready-v1, at: milestone-submission}
+    book_milestones:
+      - {station: adapt-and-defend, relationship: revisit, version_label: "version 4 - the publicly presented edition, with what the room returned",
+         contribution_refs: [research-posters, poster-criticism, research-pitches, difficult-questions]}
+
+  - milestone: M16
+    nb: nb15
+    # Week 15 - Studio 11, in the STANDARD frame. Monday teaches replication and
+    # reproduction, Wednesday teaches open and reusable packages AND runs the
+    # in-class package exchange (you cold-run a colleague's package from their
+    # written instructions only; they cold-run yours), Friday IS Milestone 11.
+    # The same submission carries the research note revised against what the
+    # Expo audience returned - two streams of criticism, one adjudication.
     assignments:
       - {lesson: replication-reproduction,  requirement: required,       purpose: first-read,  primary_lab: true,   home_anchor: true}
       - {lesson: research-packages,         requirement: required,       purpose: first-read,  primary_lab: true,   home_anchor: true}
-      - {lesson: research-posters,            requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: poster-criticism,            requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: research-pitches,            requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: difficult-questions,         requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: results-to-claims,         requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: claim-evidence-tables,     requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: ai-disclosure,             requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
+      - {lesson: poster-to-note,            requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
     station_events:
       - {station: reproduce-and-package, event: checkpoint, checkpoint: package-v1, at: milestone-submission}
-      - {station: adapt-and-defend, event: revisit, checkpoint: defense-ready-v1, at: milestone-submission}
-        # the lock is a materially later version of the Studio 10 artifact: it goes
-        # to print, so it gets a bridge instead of changing silently
+      - {station: write-bound-disclose, event: revisit, checkpoint: bounded-claims-v1, at: milestone-submission}
       - {station: release-next-cycle, event: introduce, at: reading-due}
     book_milestones:
       - {station: reproduce-and-package, relationship: checkpoint, version_label: "version 1",
          contribution_refs: [replication-reproduction, research-packages]}
-      - {station: adapt-and-defend, relationship: revisit, version_label: "version 2 - the locked print edition",
-         contribution_refs: [research-posters, poster-criticism, research-pitches, difficult-questions]}
-    supporting_gate_milestones:
-      - {station: reproduce-and-package, use: author-self-reproduction-before-poster-lock}
-      - {station: release-next-cycle, use: release-preflight-before-poster-lock}
-    gates:
-      - {id: reproduce-before-publish,
-         requires: author-self-reproduction,
-         before_event: poster-lock,           # Fri Nov 6 5 PM, course calendar
-         evidence: reproduction-log,
-         blocking: true}
-      - {id: release-preflight-before-publish,
-         requires: permissions-disclosure-reproducibility-claim-boundary-preflight,
-         before_event: poster-lock,
-         evidence: release-preflight-log,
-         blocking: true}
+      - {station: write-bound-disclose, relationship: revisit, version_label: "version 2 - the research note after public criticism",
+         contribution_refs: [results-to-claims, claim-evidence-tables, ai-disclosure, poster-to-note]}
 
-  - milestone: M11
-    nb: nb12
-    # Week 12 - Studio 12. Monday: managing multiple AI agents + conflicting
-    # agents and human escalation. Wednesday: the final portfolio + the
-    # release audit and its stale-run rule. Friday: Milestone 12. The order
-    # is the point - you audit release BEFORE you release, and the Expo
-    # (Tue Nov 17) is the release.
+  - milestone: M17
+    nb: nb16
+    # Week 16 - Studio 12, in the STANDARD frame, and the close. Monday teaches
+    # Lessons 38-39 (managing multiple AI agents; conflicting agents and human
+    # escalation), Wednesday teaches Lesson 40 (the final research and
+    # AI-management portfolio) as the release audit itself, Friday IS Milestone
+    # 12 and the submission ceremony. TERMINAL. The Evidence Defences run inside
+    # the Wednesday peer-defence blocks of Weeks 15 and 16 and this Friday
+    # session, so the standard frame is never broken to make room for them.
     assignments:
       - {lesson: managing-ai-agents,        requirement: required,       purpose: first-read,  primary_lab: true,   home_anchor: true}
       - {lesson: conflicting-agents,        requirement: required,       purpose: first-read,  primary_lab: true,   home_anchor: true}
@@ -278,78 +380,4 @@ rows:
       - {station: release-next-cycle, event: checkpoint, checkpoint: release-audit-v1, at: milestone-submission}
     book_milestones:
       - {station: release-next-cycle, relationship: checkpoint, version_label: "version 1",
-         contribution_refs: [managing-ai-agents, conflicting-agents, final-portfolio]}
-
-  - milestone: M12
-    nb: nb13
-    # Week 13 - EXCEPTION: the public test. No new lesson; every reading is a
-    # revisit. Monday: dress rehearsal. Tue Nov 17: the Expo. Friday: the
-    # reflection studio and the defense revision record.
-    assignments:
-      - {lesson: research-posters,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: poster-criticism,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: research-pitches,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: difficult-questions,       requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: managing-ai-agents,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: conflicting-agents,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: final-portfolio,             requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-    station_events:
-      - {station: adapt-and-defend, event: revisit, checkpoint: defense-ready-v1, at: milestone-submission}
-      - {station: release-next-cycle, event: revisit, checkpoint: release-audit-v1, at: milestone-submission}
-        # the audit decided to release at M11; here the release EXECUTES, and what
-        # public exposure returns is recorded as its next version
-    book_milestones:
-      - {station: adapt-and-defend, relationship: revisit, version_label: "version 3 - the publicly presented edition",
-         contribution_refs: [research-posters, poster-criticism, research-pitches, difficult-questions]}
-      - {station: release-next-cycle, relationship: revisit, version_label: "version 2 - released, with what the public test returned",
-         contribution_refs: [managing-ai-agents, conflicting-agents, final-portfolio]}
-
-  - milestone: M13
-    nb: nb14
-    # Week 14 - EXCEPTION: the asynchronous module (Mon Nov 23). You cold-run
-    # a PEER's package. This is Studio 11 practice applied to someone else's
-    # work - your own package was built in Week 11 - not a new checkpoint.
-    assignments:
-      - {lesson: replication-reproduction,  requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: research-packages,         requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-    station_events:
-      - {station: reproduce-and-package, event: practice, at: studio}
-    book_milestones:
-      - {station: reproduce-and-package, relationship: practice, version_label: "peer cold-run practice, applied to another researcher's package",
-         contribution_refs: [replication-reproduction, research-packages]}
-
-  - milestone: M14
-    nb: nb15
-    # Week 15 - EXCEPTION: revision. Two streams of evidence arrive at once -
-    # public criticism from the Expo and the peer cold-run findings - and both
-    # are adjudicated into the note and the package.
-    assignments:
-      - {lesson: results-to-claims,         requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: claim-evidence-tables,     requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: ai-disclosure,             requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: poster-to-note,            requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: replication-reproduction,  requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: research-packages,         requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-    station_events:
-      - {station: write-bound-disclose, event: revisit, checkpoint: bounded-claims-v1, at: milestone-submission}
-      - {station: reproduce-and-package, event: revisit, checkpoint: package-v1, at: milestone-submission}
-    book_milestones:
-      - {station: write-bound-disclose, relationship: revisit, version_label: "version 2 - the research note after public criticism",
-         contribution_refs: [results-to-claims, claim-evidence-tables, ai-disclosure, poster-to-note]}
-      - {station: reproduce-and-package, relationship: revisit, version_label: "version 2 - the package repaired against the cold run",
-         contribution_refs: [replication-reproduction, research-packages]}
-
-  - milestone: M15
-    nb: nb16
-    # Week 16 - EXCEPTION: the close. Live Evidence Defenses Monday and
-    # Wednesday; Friday is the submission ceremony. TERMINAL. The agent
-    # lessons were taught in Week 12, so this week USES that skill.
-    assignments:
-      - {lesson: managing-ai-agents,        requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: conflicting-agents,        requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-      - {lesson: final-portfolio,           requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
-    station_events:
-      - {station: release-next-cycle, event: revisit, checkpoint: release-audit-v1, at: milestone-submission}
-    book_milestones:
-      - {station: release-next-cycle, relationship: revisit, version_label: "version 3 - the final release, dossier, and portfolio",
          contribution_refs: [managing-ai-agents, conflicting-agents, final-portfolio]}

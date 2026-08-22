@@ -1,4 +1,4 @@
-# Replication and Red-Team Report Template — M13
+# Replication and Red-Team Report Template — M16
 
 *The report you write after trying to rebuild a peer's findings from their package
 alone. You receive an anonymized package, run it cold, trace its numbers, probe

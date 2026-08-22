@@ -48,7 +48,7 @@ every poster. The presenter needs to feel each type before tomorrow.
 ## The readiness audit sheet (sign in class)
 
 ```
-READINESS AUDIT — M12 Expo readiness   Name: __________________   Date: Nov 16
+READINESS AUDIT — M15 Expo readiness   Name: __________________   Date: Nov 16
 
   ☐ Rehearsed the full walk TWICE, inside 3 minutes
   ☐ Question bank DRILLED (survived a hot seat / today's visitors)

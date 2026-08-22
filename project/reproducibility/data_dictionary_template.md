@@ -3,7 +3,7 @@
 *One row per variable, so a stranger knows exactly what each column means, where
 it came from, and what a valid value looks like. A dataset without a dictionary is
 a pile of numbers no one can check. Include a completed dictionary for every
-dataset in your package (M14 capsule).*
+dataset in your package (M16 capsule).*
 
 ---
 

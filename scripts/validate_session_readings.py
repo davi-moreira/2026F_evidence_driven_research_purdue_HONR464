@@ -38,7 +38,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
-from book_manifest import load_crosswalk, require_lock  # noqa: E402
+from book_manifest import load_architecture, load_crosswalk, require_lock  # noqa: E402
 from session_readings import (by_mode, lesson_index, parse,  # noqa: E402
                               studio_titles)
 
@@ -151,13 +151,26 @@ def main() -> int:
     for r in rows:
         if r["unit"] not in units:
             units.append(r["unit"])
+    # D50: a studio's calendar week is no longer its rank. Studios 1-10 land on
+    # Weeks 1-10, the conference block occupies Weeks 11-14, and Studios 11-12
+    # run post-conference on Weeks 15-16. The mapping is READ from the crosswalk
+    # (the week whose milestone fires that station's checkpoint), never assumed.
+    station_rank = {s["id"]: s["rank"] for s in load_architecture()["stations"]}
+    studio_week: dict[int, int] = {}
+    for r in load_crosswalk().get("rows", []):
+        for bm in r.get("book_milestones", []) or []:
+            if bm.get("relationship") == "checkpoint":
+                rank = station_rank.get(bm["station"])
+                if rank is not None:
+                    studio_week[rank] = int(str(r["nb"])[2:])
     for rank, title in sorted(published.items()):
-        unit = next((u for u in units if u.startswith(f"Week {rank} —")), None)
+        week = studio_week.get(rank, rank)
+        unit = next((u for u in units if u.startswith(f"Week {week} —")), None)
         if unit is None:
-            errors.append(f"Studio {rank}: no Week {rank} unit in the schedule")
-        elif unit != f"Week {rank} — {title}":
-            errors.append(f"Week {rank} unit {unit!r} != the published studio "
-                          f"title, which requires {f'Week {rank} — {title}'!r}")
+            errors.append(f"Studio {rank}: no Week {week} unit in the schedule")
+        elif unit != f"Week {week} — {title}":
+            errors.append(f"Week {week} unit {unit!r} != the published studio "
+                          f"title, which requires {f'Week {week} — {title}'!r}")
 
     if errors:
         print(f"✗ session readings INVALID — {len(errors)} problem(s):")

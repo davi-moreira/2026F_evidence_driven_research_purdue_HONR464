@@ -124,7 +124,7 @@ with **no dates and no meeting numbers** (CLAUDE.md → Lecture Labels, Never Da
 ### Phase D — Milestone brief
 
 **D1. Author/update the brief** at `_research_project/2026Fall/milestone_NN_<slug>.md`.
-Milestones M0–M15 pair one-to-one with the weekly notebooks; the brief is what the
+Milestones M1–M17 pair one-to-one with the weekly notebooks; the brief is what the
 Friday studio kicks off and what the student submits into the Research Project
 Dossier (with a cumulative AI Research Ledger appended, D21).
 
@@ -176,7 +176,7 @@ private instructor repo + GitHub auth is the protection. Always publish through
 |---|---|---|
 | `validate_calendar.py` | the 43-meeting backbone (42 in-person + 1 async); `--emit-csv` rewrites `CALENDAR_BACKBONE.csv` | before any schedule change to the calendar |
 | `build_meeting_schedule.py` | schedule data matches the backbone (row count, columns, date/day/modality, required fields) — **fails the build on mismatch** | every schedule regeneration |
-| `validate_milestones.py` | M0–M15 present, dev-meetings precede due dates, fixed anchors, no shared due dates | after any milestone or schedule edit |
+| `validate_milestones.py` | M1–M17 present, dev-meetings precede due dates, fixed anchors, no shared due dates | after any milestone or schedule edit |
 | `validate_notebooks.py` | template conformance: Inquiry & Claim Boundary block, provenance + Sources, the active-learning moves, `SEED = 464`, no seaborn, no leaked `INSTRUCTOR SOLUTION`, markdown hygiene | inside `nbbuild.py` |
 | `voice_lint_notebooks.py` | undergrad voice: em-dash budget, no "students" in student cells, no dates / "Meeting M#" (D13/D14) | inside `nbbuild.py` + `PostToolUse` hook |
 | `audit_sources.py` | citation integrity: URL allowlist, verified-citation registry, fake-citation blocklist | before shipping any notebook |

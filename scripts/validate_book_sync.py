@@ -67,8 +67,15 @@ def main() -> None:
     # week when it carries >= 1 assignment of ANY purpose — D41's Option 2
     # rows made nb13 a revisit-only calendar container (the Expo week
     # presents no new lesson), which is a legal state.
-    assigned = {int(r["nb"][2:]) for r in load_crosswalk()["rows"]
-                if r.get("assignments")}
+    assigned = set()
+    for r in load_crosswalk()["rows"]:
+        if not r.get("assignments"):
+            continue
+        assigned.add(int(r["nb"][2:]))
+        # D50: a milestone may span two calendar weeks (the conference block's
+        # Expo week and its asynchronous reflection module share M15).
+        for extra in r.get("also_nb", []) or []:
+            assigned.add(int(str(extra)[2:]))
     for n in NOTEBOOKS:
         if n not in assigned:
             errs.append(f"nb{n:02d} carries no crosswalk assignment "

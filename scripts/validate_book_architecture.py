@@ -430,11 +430,14 @@ def check_crosswalk(arch, cw) -> list[str]:
                  f"missing {active - set(anchors)}, extra {set(anchors) - active}")
     if set(planned_anchors) != planned:
         p.append(f"cw: planned_home_anchor mismatch: {set(planned_anchors) ^ planned}")
-    if sorted(milestones) != [f"M{i}" for i in range(16)] and \
-            sorted(milestones, key=lambda m: int(m[1:])) != [f"M{i}" for i in range(16)]:
-        p.append(f"cw: milestones are not exactly M0..M15")
-    if sorted(nbs) != [f"nb{i:02d}" for i in range(1, 17)]:
-        p.append("cw: notebooks are not exactly nb01..nb16")
+    if sorted(milestones, key=lambda m: int(m[1:])) != [f"M{i}" for i in range(1, 18)]:
+        p.append("cw: milestones are not exactly M2..M17")
+    # D50: Week 11 carries three submissions off one notebook and Week 13 carries
+    # none, so the nb column is no longer a partition. It must still name only
+    # real notebooks, and every notebook that owns a milestone must be reachable.
+    if not set(nbs) <= {f"nb{i:02d}" for i in range(1, 17)}:
+        p.append(f"cw: unknown notebooks in the nb column: "
+                 f"{sorted(set(nbs) - {f'nb{i:02d}' for i in range(1, 17)})}")
     # every checkpoint reached somewhere (WARNING until Phase 4 per the manifest)
     reached = {(e["station"], e.get("checkpoint"))
                for r in cw.get("rows", []) for e in r.get("station_events", [])

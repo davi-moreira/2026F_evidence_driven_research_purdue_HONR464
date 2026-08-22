@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""validate_milestones.py — milestone-system consistency gates (v2: M0–M15).
+"""validate_milestones.py — milestone-system consistency gates (v2: M1–M17).
 
 Parses the chain table in planning/PROJECT_MILESTONES.md and checks, against
 planning/MEETING_SCHEDULE.csv and the calendar backbone:
 
-  * all 16 milestones (M0–M15) present, each with development meetings, a
+  * all 16 milestones (M1–M17) present, each with development meetings, a
     presentation moment, and a due date
   * every milestone's development meetings precede (or meet) its due date
   * every milestone ID appears in >= 1 meeting's milestone_developed column
-  * the fixed anchors hold: M6 abstract-gate Oct 9, M10 poster lock Nov 6,
-    M12 references the Expo Nov 17, M13 replication Nov 29 (Sunday),
-    M15 final chapter Dec 11
+  * the fixed anchors hold: M6 draft abstract Oct 2, M7 conference application
+    Oct 9, M11 poster draft Nov 4, M13 poster lock Nov 8 (Sunday, terminal),
+    M14 go-public Nov 13, M15 references the Expo Nov 17 and is due Nov 29
+    (Sunday), M16 package + cold run Dec 4, M17 release + chapter Dec 11
   * no two milestones share a due date
 
 Usage: python3 scripts/validate_milestones.py
@@ -29,7 +30,7 @@ SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.csv"
 BACKBONE = REPO / "planning" / "CALENDAR_BACKBONE.csv"
 
 MONTHS = {"Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
-N_MILESTONES = 16   # M0–M15
+N_MILESTONES = 17   # M1–M17 (D50)
 
 
 def parse_dates(text: str) -> list[date]:
@@ -69,9 +70,9 @@ def main() -> None:
             "name": cells[1], "dev": cells[2], "pres": cells[3], "due": cells[4],
         }
 
-    expected = set(range(N_MILESTONES))
+    expected = set(range(1, N_MILESTONES + 1))
     if set(rows) != expected:
-        errs.append(f"chain table has milestones {sorted(rows)}, expected M0–M15")
+        errs.append(f"chain table has milestones {sorted(rows)}, expected M1–M17")
 
     # --- per-milestone checks ---------------------------------------------
     due_dates = {}
@@ -94,17 +95,20 @@ def main() -> None:
 
     # --- fixed anchors -----------------------------------------------------
     anchors = {
-        6:  [date(2026, 10, 9)],    # URC abstract internal gate
-        10: [date(2026, 11, 6)],    # final poster lock (terminal)
-        13: [date(2026, 11, 29)],   # replication + red-team (Sunday)
-        14: [date(2026, 12, 4)],
-        15: [date(2026, 12, 11)],   # final chapter + portfolio (terminal)
+        6:  [date(2026, 10, 2)],    # URC draft abstract
+        7:  [date(2026, 10, 9)],    # URC conference application
+        11: [date(2026, 11, 4)],    # poster first draft, due at class
+        13: [date(2026, 11, 8)],    # final poster lock (terminal, Sunday 11:59 PM)
+        14: [date(2026, 11, 13)],
+        15: [date(2026, 11, 29)],   # conference reflection (Sunday)
+        16: [date(2026, 12, 4)],
+        17: [date(2026, 12, 11)],   # release + final chapter + portfolio (terminal)
     }
     for mid, want in anchors.items():
         if due_dates.get(mid) != want:
             errs.append(f"M{mid}: due {due_dates.get(mid)} != anchor {want}")
-    if 12 in rows and "Nov 17" not in rows[12]["pres"] + rows[12]["due"]:
-        errs.append("M12 must reference the URC Expo (Tue Nov 17) as a graded component")
+    if 15 in rows and "Nov 17" not in rows[15]["pres"] + rows[15]["due"]:
+        errs.append("M15 must reference the URC Expo (Tue Nov 17) as a graded component")
 
     # --- unique due dates --------------------------------------------------
     flat = [(mid, d) for mid, ds in due_dates.items() for d in ds]
@@ -129,9 +133,9 @@ def main() -> None:
         for e in errs:
             print("  " + e)
         sys.exit(1)
-    print("✓ milestone system consistent — 16 milestones (M0–M15), "
+    print("✓ milestone system consistent — 17 milestones (M1–M17), "
           "dev→present→submit ordering holds, anchors fixed "
-          "(Oct 9, Nov 6, Nov 17, Nov 29, Dec 4, Dec 11)")
+          "(Oct 2, Oct 9, Nov 4, Nov 8, Nov 13, Nov 17, Nov 29, Dec 4, Dec 11)")
 
 
 if __name__ == "__main__":

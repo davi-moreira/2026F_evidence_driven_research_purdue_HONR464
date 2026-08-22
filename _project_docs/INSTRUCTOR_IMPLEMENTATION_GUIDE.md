@@ -77,10 +77,10 @@ students take over in Week 2.
 One meeting is asynchronous online, a self-contained graded unit:
 
 - **Mon Nov 23 (meeting 37)** — the Thanksgiving replication + red-team module
-  (M13).
+  (M16).
 
 Fri Oct 2 (meeting 17) is a **regular in-person studio** on the standard
-10/5/30/5 frame; M5 is submitted there like any other milestone.
+10/5/30/5 frame; M6 is submitted there like any other milestone.
 
 **No class Wed Nov 18**, the day after the Expo.
 
@@ -126,19 +126,19 @@ are in the rest of the SRL suite (`project/srl/`).
 
 ## 3. Milestone grading cadence
 
-Sixteen milestones (**M0–M15**), one graded artifact each, on a **develop →
+Sixteen milestones (**M1–M17**), one graded artifact each, on a **develop →
 present → submit → revise** cadence. Due dates (all Fridays unless noted) are
 fixed in `course_config.yaml milestones:`:
 
-| M0 Aug 28 · M1 Sep 4 · M2 Sep 11 · M3 Sep 18 · M4 Sep 25 · M5 Oct 2 ·
-M6 Oct 9 · M7 Oct 16 · M8 Oct 23 · M9 Oct 30 · **M10 Nov 6, 5 PM (terminal)** ·
-M11 Nov 13 · M12 Nov 20 · M13 Nov 29 (Sun, async) · M14 Dec 4 ·
-**M15 Dec 11 (terminal)** |
+| M1 Aug 28 · M2 Sep 4 · M3 Sep 11 · M4 Sep 18 · M5 Sep 25 · M6 Oct 2 ·
+M7 Oct 9 · M8 Oct 16 · M9 Oct 23 · M10 Oct 30 · **M13 Nov 6, 5 PM (terminal)** ·
+M17 Nov 13 · M15 Nov 20 · M16 Nov 29 (Sun, async) · M16 Dec 4 ·
+**M17 Dec 11 (terminal)** |
 
 - **Return feedback within 3 days** of each milestone.
 - **Revision window: 7 days** from feedback, for up to half the lost points, on
-  every milestone **except the terminal two** (M10, M15) and the live Expo
-  presentation (M12 component). For those, the deadline governs.
+  every milestone **except the terminal two** (M13, M17) and the live Expo
+  presentation (M15 component). For those, the deadline governs.
 - Every submission must append an **AI Research Ledger** entry (8 fields) and
   update the cumulative **Research Project Dossier**. A missing ledger entry
   scores the rubric's Craft criterion 0 and the submission is **returned**.
@@ -147,7 +147,7 @@ M11 Nov 13 · M12 Nov 20 · M13 Nov 29 (Sun, async) · M14 Dec 4 ·
   `course_config.yaml assessment:`.
 
 > **Build note:** `planning/ASSESSMENT_ARCHITECTURE.md` still describes the v1
-> M00–M23 scheme and needs reconciling to the v2 weights before it is cited as
+> M01–M23 scheme and needs reconciling to the v2 weights before it is cited as
 > authoritative. `syllabus.qmd` already carries the v2 weights (pending final
 > instructor confirmation).
 
@@ -161,7 +161,7 @@ Milestone briefs and rubrics are authored **one file per milestone** in
 Friday, present the week's brief from Brightspace at the studio kickoff.
 
 > **Build note:** the files currently in `_research_project/2026Fall/` are the
-> **v1 M00–M23** briefs. The **v2 M0–M15** briefs are on the build queue (see
+> **v1 M01–M23** briefs. The **v2 M1–M17** briefs are on the build queue (see
 > the master build plan); confirm the v2 set is in place before the semester.
 > Machine anchors and due dates are validated by `scripts/validate_milestones.py`.
 
@@ -174,11 +174,11 @@ bench. Students **must** consult an assigned reviewer role at four milestones:
 
 | Milestone | Required reviewer role |
 |---|---|
-| M4  | Causal Identification Skeptic (route declaration) |
-| M7  | Prediction & Leakage Auditor |
-| M8  | Robustness & Sensitivity Reviewer |
-| M10 | Poster Critic (before the lock) |
-| M13 | Reproducibility Auditor |
+| M5  | Causal Identification Skeptic (route declaration) |
+| M8  | Prediction & Leakage Auditor |
+| M9  | Robustness & Sensitivity Reviewer |
+| M13 | Poster Critic (before the lock) |
+| M16 | Reproducibility Auditor |
 
 Before the first class:
 
@@ -204,13 +204,13 @@ Before the first class:
 Three hard anchors drive November. Miss the first and the print deadline slips;
 miss the print deadline and there is no poster to present.
 
-1. **Abstract gate — Fri Oct 9 (M6).** Internal completion gate for the URC
+1. **Abstract gate — Fri Oct 9 (M7).** Internal completion gate for the URC
    abstract (the external URC deadline is TBD; confirm and post it as soon as it
-   publishes). Run the abstract workshop in the M6 studio.
-2. **Poster lock + print submission — Fri Nov 6, 5:00 PM (M10, terminal).** The
+   publishes). Run the abstract workshop in the M7 studio.
+2. **Poster lock + print submission — Fri Nov 6, 5:00 PM (M13, terminal).** The
    poster is locked and submitted for printing. No changes after this time.
    Confirm the print vendor turnaround well before this date.
-3. **URC Expo — Tue Nov 17.** Required, graded (a component of M12). Each student
+3. **URC Expo — Tue Nov 17.** Required, graded (a component of M15). Each student
    presents their poster and **evaluates at least three colleagues' posters** on
    the course criticism instrument. **No class Wed Nov 18.** Only a documented
    emergency qualifies for a make-up, handled individually per Honors College
@@ -223,7 +223,7 @@ uncertainty-limitations, dress-rehearsal, and reflection protocols).
 
 ---
 
-## 7. The M13 replication exchange (anonymized)
+## 7. The M16 replication exchange (anonymized)
 
 The Thanksgiving async module (**Mon Nov 23**, due **Sun Nov 29**) is a
 peer replication + red-team. Run the exchange as follows:
@@ -244,11 +244,11 @@ peer replication + red-team. Run the exchange as follows:
 
 - **Final defenses — meetings 42–43 (Wed Dec 9 + Fri Dec 11).** Each student
   delivers a public **evidence defense** of the whole project and their AI
-  collaboration. Fold the defense grade into **M15**.
-- **M15 — Fri Dec 11 (terminal).** Final research chapter + AI-management
+  collaboration. Fold the defense grade into **M17**.
+- **M17 — Fri Dec 11 (terminal).** Final research chapter + AI-management
   portfolio, submitted at the closing ceremony. No revision window.
 - **End-of-term wrap:**
-  1. Grade M15 and the defenses against the shared rubric menu.
+  1. Grade M17 and the defenses against the shared rubric menu.
   2. **Archive the course:** confirm the site is rendered and pushed
      (`quarto render` → commit `docs/` → push), the instructor material is synced
      to the private repo (`scripts/sync_instructor_repo.sh`), and the v2 build

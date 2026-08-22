@@ -71,26 +71,26 @@ audit the week *before* the Expo, so the Expo is the release. Weeks 13–16 are
 the four date-driven exception weeks; they anchor no new lesson and revisit
 what the studios built. Week 1's Monday is the instructor-led orientation, the
 one other exception. Course milestone M(n) presents book Milestone (n+1)
-through M11 (`planning/COURSE_BOOK_CROSSWALK.yml`).
+through M17 (`planning/COURSE_BOOK_CROSSWALK.yml`).
 
 | Wk | Studio (notebook) | Lec | Milestone · due | The week's research decision |
 |---|---|---|---|---|
-| 1 | S1 Frame the inquiry (`nb01`) | 2 | M0 · Fri Aug 28 | What am I curious about, what do I already believe, and what evidence would change my mind? |
-| 2 | S2 Govern the work (`nb02`) | 2 | M1 · Fri Sep 4 | How will my tools and I work — and what exactly am I asking, in what kind and reach? |
-| 3 | S3 Ground it in verified evidence (`nb03`) | 1 | M2 · Fri Sep 11 | What is genuinely known, what is unresolved, and how must my question change? |
-| 4 | S4 Declare and diagnose provisionally (`nb04`) | 2 | M3 · Fri Sep 18 | What is my Contract v0 — MIDA, uncertainty, provisional measures, permission status? |
-| 5 | S5 Develop the pathway — route hub (`nb05`) | 2 | M4 · Fri Sep 25 | Which route do my question and licence support, and what can it never establish? |
-| 6 | S6 Govern data and measurement (`nb06`) | 2 | M5 · Fri Oct 2 | How did the data reach me, under what permission, and do my measures measure my concepts? |
-| 7 | S7 Produce a reproducible first analysis (`nb07`) | 2 | M6 · Fri Oct 9 | What does my declared analysis actually produce, with what uncertainty, traceable to which cell? |
-| 8 | S8 Stress-test and adjudicate (`nb08`) | 1 | M7 · Fri Oct 16 | Which checks did I pre-list, what survived them, and what remains unruled-out? |
-| 9 | S9 Write, bound, and disclose (`nb09`) | 2 | M8 · Fri Oct 23 | What bounded claim can I write down, with every sentence traced to evidence and disclosure? |
-| 10 | S10 Adapt and defend (`nb10`) | 2 | M9 · Fri Oct 30 | What does my venue require, and what artifact satisfies it without inflating the claim? |
-| 11 | S11 Reproduce and package (`nb11`) | 2 | M10 · Fri Nov 6, 5 PM (terminal) | Does my work reproduce from a clean package — and is that what locks onto the poster? |
-| 12 | S12 Release and direct the next cycle (`nb12`) | 2 | M11 · Fri Nov 13 | Do I release or withhold pending a named repair, and what should the next study ask? |
-| 13 | Public test: the Expo + reflection (`nb13`) | 1 | M12 · Fri Nov 20 | What did public questioning reveal, and does it change the claim or the defense (Expo Tue Nov 17)? |
-| 14 | Async: peer cold run + red-team (`nb14`) | 0 | M13 · Sun Nov 29 (async) | Does someone else's evidence reproduce without their help, and where is it fragile? |
-| 15 | Revision: note v1 + repaired package (`nb15`) | 2 | M14 · Fri Dec 4 | What did I accept, rebut, or bound from public criticism and the cold run? |
-| 16 | The close: defenses, release, portfolio (`nb16`) | 2 | M15 · Fri Dec 11 (terminal) | Can I defend the whole project, my claim boundary, and my AI collaboration? |
+| 1 | S1 Frame the inquiry (`nb01`) | 2 | M1 · Fri Aug 28 | What am I curious about, what do I already believe, and what evidence would change my mind? |
+| 2 | S2 Govern the work (`nb02`) | 2 | M2 · Fri Sep 4 | How will my tools and I work — and what exactly am I asking, in what kind and reach? |
+| 3 | S3 Ground it in verified evidence (`nb03`) | 1 | M3 · Fri Sep 11 | What is genuinely known, what is unresolved, and how must my question change? |
+| 4 | S4 Declare and diagnose provisionally (`nb04`) | 2 | M4 · Fri Sep 18 | What is my Contract v0 — MIDA, uncertainty, provisional measures, permission status? |
+| 5 | S5 Develop the pathway — route hub (`nb05`) | 2 | M5 · Fri Sep 25 | Which route do my question and licence support, and what can it never establish? |
+| 6 | S6 Govern data and measurement (`nb06`) | 2 | M6 · Fri Oct 2 | How did the data reach me, under what permission, and do my measures measure my concepts? |
+| 7 | S7 Produce a reproducible first analysis (`nb07`) | 2 | M7 · Fri Oct 9 | What does my declared analysis actually produce, with what uncertainty, traceable to which cell? |
+| 8 | S8 Stress-test and adjudicate (`nb08`) | 1 | M8 · Fri Oct 16 | Which checks did I pre-list, what survived them, and what remains unruled-out? |
+| 9 | S9 Write, bound, and disclose (`nb09`) | 2 | M9 · Fri Oct 23 | What bounded claim can I write down, with every sentence traced to evidence and disclosure? |
+| 10 | S10 Adapt and defend (`nb10`) | 2 | M10 · Fri Oct 30 | What does my venue require, and what artifact satisfies it without inflating the claim? |
+| 11 | S11 Reproduce and package (`nb11`) | 2 | M13 · Fri Nov 6, 5 PM (terminal) | Does my work reproduce from a clean package — and is that what locks onto the poster? |
+| 12 | S12 Release and direct the next cycle (`nb12`) | 2 | M17 · Fri Nov 13 | Do I release or withhold pending a named repair, and what should the next study ask? |
+| 13 | Public test: the Expo + reflection (`nb13`) | 1 | M15 · Fri Nov 20 | What did public questioning reveal, and does it change the claim or the defense (Expo Tue Nov 17)? |
+| 14 | Async: peer cold run + red-team (`nb14`) | 0 | M16 · Sun Nov 29 (async) | Does someone else's evidence reproduce without their help, and where is it fragile? |
+| 15 | Revision: note v1 + repaired package (`nb15`) | 2 | M16 · Fri Dec 4 | What did I accept, rebut, or bound from public criticism and the cold run? |
+| 16 | The close: defenses, release, portfolio (`nb16`) | 2 | M17 · Fri Dec 11 (terminal) | Can I defend the whole project, my claim boundary, and my AI collaboration? |
 
 ## 3. The flipped classroom — the Student Research Lead (SRL) system
 
@@ -177,10 +177,10 @@ through a fixed set of moves:
 - **Defend Your Decision** — a claim the student can defend, with its boundary.
 
 **GenAI Studio reviewer bench.** Purdue GenAI Studio supplies custom reviewer
-roles at designated milestones (`genai_studio.student_touchpoints`, D41): **M4 Causal
-Identification Skeptic** (route declaration), **M7 Prediction & Leakage
-Auditor**, **M8 Robustness & Sensitivity Reviewer**, **M10 Poster Critic**
-(at the lock), **M13 Reproducibility Auditor**. Gemini remains the
+roles at designated milestones (`genai_studio.student_touchpoints`, D41): **M5 Causal
+Identification Skeptic** (route declaration), **M8 Prediction & Leakage
+Auditor**, **M9 Robustness & Sensitivity Reviewer**, **M13 Poster Critic**
+(at the lock), **M16 Reproducibility Auditor**. Gemini remains the
 primary in-notebook tool; the reviewer bench is an adversarial second opinion the
 student must answer, not obey. Studio capability is implemented only at levels
 1–4 (prompted role → custom model → RAG assistant → sequential workflow); a
@@ -196,7 +196,7 @@ robustness and diagnostic record · AI Research Ledger · poster and presentatio
 materials · replication record · research note / chapter · AI-agent management
 portfolio. The dossier accumulates across all sixteen milestones; the AI Research
 Ledger threads through every one. The full milestone chain — develop → present →
-submit → revise cadence, kickoff rules, dossier mapping, and the M10/M15 terminal
+submit → revise cadence, kickoff rules, dossier mapping, and the M13/M17 terminal
 locks — lives in `planning/PROJECT_MILESTONES.md`.
 
 ## 7. Assessment architecture *(confirmed 2026-07-27)*
@@ -232,7 +232,7 @@ contrast; hybrid when the design has stages — D41). Course adoption is machine
 **crosswalk** (`planning/COURSE_BOOK_CROSSWALK.yml`, schema 1.1) maps every
 lesson to exactly one home milestone (40-lesson bijection), fires every
 studio checkpoint, and carries the D40 naming bridge (course milestones
-M0–M15 present book Milestones 1–12 as versions). Studio↔week alignment is
+M1–M17 present book Milestones 1–12 as versions). Studio↔week alignment is
 §2's table; per-lesson detail is the generated `planning/BOOK_MAP.md` and
 the For Instructors adoption table.
 
@@ -264,13 +264,13 @@ decisions are documented, not just outcomes (`scripts/audit_sources.py`,
   at standard intensity. Content phase (briefs prose, schedule_data,
   quizzes, SRL briefs, nb05–nb16 rebuild) tracked in D41.
 - **v2 (2026-07-23)** — Prompt-architecture rebuild per instructor ruling
-  (`SOURCE_AUDIT_V2.md` §3): 16 weekly topics `nb01`–`nb16`; milestones M0–M15;
+  (`SOURCE_AUDIT_V2.md` §3): 16 weekly topics `nb01`–`nb16`; milestones M1–M17;
   Student Research Lead flipped classroom; SDIIVDD AI discipline + AI Research
   Ledger; DeclareDesign design-library pathway weeks (5–9); GenAI Studio reviewer
-  bench; peer replication/red-team (M13); research-note genre; 37-chapter course
+  bench; peer replication/red-team (M16); research-note genre; 37-chapter course
   book. Calendar moves to 43 meetings (one fewer Wednesday lecture — flagged for
   final syllabus confirmation).
 - **v1 (compass build, 2026-07-18 → 07-20)** — 20 notebooks `nb01`–`nb19`,
-  milestones M00–M23, Friday-studio + undergraduate-voice redesign (D13–D16).
+  milestones M01–M23, Friday-studio + undergraduate-voice redesign (D13–D16).
   Preserved at git tag `v1-compass-build`; strong material (compass definitions,
   crossing-license drills, claim-boundary vocabulary) mined into v2.

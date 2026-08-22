@@ -8,7 +8,7 @@ last class, removes the official no-class days, flags the asynchronous-online
 meetings and the external events (URC Expo, poster deadline), and PROGRAMMATICALLY
 VERIFIES the counts the course design depends on:
 
-    43 total scheduled MWF meetings  =  42 in-person  +  1 asynchronous-online
+    43 total scheduled MWF meetings  =  41 in-person  +  2 asynchronous-online
 
 Run it as a gate before shipping the schedule:
 
@@ -53,7 +53,8 @@ HOLIDAYS: dict[date, str] = {
 # ruling that made it a regular in-person studio), and this validator passed
 # green throughout because it only ever checked itself.
 ASYNC_LABELS: dict[date, str] = {
-    date(2026, 11, 23): "Asynchronous online (Thanksgiving replication + red-team module)",
+    date(2026, 11, 20): "Asynchronous online (post-Expo audience-data capture)",
+    date(2026, 11, 23): "Asynchronous online (Thanksgiving reflection module)",
 }
 
 
@@ -93,14 +94,14 @@ ASYNC_DAYS: dict[date, str] = _async_days()
 # External / non-MWF events that belong on the master schedule as rows even
 # though they are not ordinary class meetings.
 EVENTS: dict[date, str] = {
-    date(2026, 11, 6):  "Final Poster production + submission deadline (in a class meeting)",
+    date(2026, 11, 8):  "FINAL POSTER LOCK, Sunday 11:59 PM — terminal (M13); shared print run with QM 47400",
     date(2026, 11, 17): "Purdue Fall Undergraduate Research Expo — REQUIRED poster presentation (Tuesday, not MWF)",
 }
 
 # Invariants the whole course design relies on.
 EXPECT_TOTAL = 43
-EXPECT_INPERSON = 42
-EXPECT_ASYNC = 1
+EXPECT_INPERSON = 41   # D50: Fri Nov 20 became asynchronous
+EXPECT_ASYNC = 2   # D50: Fri Nov 20 + Mon Nov 23
 
 
 def generate_meetings() -> list[dict]:
@@ -201,7 +202,7 @@ def main() -> int:
             print(f"  - {e}", file=sys.stderr)
         return 1
     if not args.quiet:
-        print("\n✓ calendar invariants hold (43 = 42 in-person + 1 async).")
+        print("\n✓ calendar invariants hold (43 = 41 in-person + 2 async).")
     return 0
 
 

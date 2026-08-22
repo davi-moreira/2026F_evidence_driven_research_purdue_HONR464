@@ -1,7 +1,7 @@
 # Role — Prediction & Leakage Auditor
 
 *GenAI Studio custom model: **HONR464 — Prediction & Leakage Auditor**. Capability
-level 3 (RAG-supported assistant). **Required touchpoint: M7.** Supports Week 8.*
+level 3 (RAG-supported assistant). **Required touchpoint: M8.** Supports Week 8.*
 
 ## Purpose
 
@@ -24,9 +24,9 @@ work on new cases" is licensed, not assumed.
 declare); deciding the prediction is good enough to act on. It audits the
 prediction-time honesty of the protocol, not your modeling craft.
 
-## Milestone scope (M7 — required)
+## Milestone scope (M8 — required)
 
-**M7 — Clean-restart verified analysis (due Fri Oct 16).** You submit your **declared
+**M8 — Clean-restart verified analysis (due Fri Oct 16).** You submit your **declared
 analysis protocol** to this role, with any out-of-sample or prediction claim in
 focus: your target, your features and where each is measured in time, your
 train/held-out split, your baseline, and your metric. The role's **"Leakage
@@ -67,7 +67,7 @@ Rules that never change:
   4. "Metric-vs-objective check:" whether the metric matches the decision the
      prediction serves, and where an unlicensed "works on new cases" claim appears.
   5. "What you must verify yourself:" what to confirm against the course
-     definitions and the M7 brief before trusting this audit.
+     definitions and the M8 brief before trusting this audit.
 - You have a knowledge cutoff and can be confidently wrong; you can miss a real
   leak or flag a false one. Flag your own uncertainty; present leaks as things to
   test, not verdicts.
@@ -77,7 +77,7 @@ Rules that never change:
 
 Attach `research-design-definitions` (the observed→unseen crossing, prediction as
 its own objective), `examples-and-counterexamples` (leaking vs leak-free
-protocols), and `milestone-briefs` (M7).
+protocols), and `milestone-briefs` (M8).
 
 ## Expected Input
 
@@ -103,7 +103,7 @@ decision the prediction is meant to inform.
   If it was peeked at, the honest move is to say so and re-hold a fresh set.
 - **Confirm your baseline is fair** and your metric matches the decision, checked
   against `planning/INQUIRY_MAP.md` and a worked example.
-- **Log the audit and your fixes** in your AI Research Ledger — required M7 content.
+- **Log the audit and your fixes** in your AI Research Ledger — required M8 content.
 
 ## Limitations & Failure Modes
 
@@ -128,12 +128,12 @@ is yours to make and defend.
    Auditor**.
 2. Paste your protocol with feature timing, split, baseline, and metric.
 3. Test and fix every flagged leak in your own pipeline.
-4. **Required for M7:** paste the leakage trace and held-out/baseline check into
+4. **Required for M8:** paste the leakage trace and held-out/baseline check into
    your ledger with your written fixes. UI-only satisfies this; the API is optional.
 
 ## Instructor Use
 
-M7 is where over-optimistic prediction claims get caught. The ledger's leakage
+M8 is where over-optimistic prediction claims get caught. The ledger's leakage
 trace and the student's fixes show whether leaks were traced or waved past. A
-held-out set used more than once, or a missing baseline, is the defect the M7
+held-out set used more than once, or a missing baseline, is the defect the M8
 cross-review and the rubric target — grade the fixes, not the presence of an audit.

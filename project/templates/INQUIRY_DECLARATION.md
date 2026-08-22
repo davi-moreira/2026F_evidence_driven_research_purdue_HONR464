@@ -1,7 +1,7 @@
 # Inquiry Declaration
 
-*Template — complete one for your project at M03 and keep it current through the
-semester (it is re-submitted, updated, inside M07, M09, and the final dossier).
+*Template — complete one for your project at M04 and keep it current through the
+semester (it is re-submitted, updated, inside M08, M10, and the final dossier).
 Every section is required. This document is your standing answer to the question
 "what KIND of inquiry is this, and how far does it REACH?" — the course's
 signature skill, in writing.*

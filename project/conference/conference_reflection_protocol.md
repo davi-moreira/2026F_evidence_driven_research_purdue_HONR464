@@ -67,7 +67,7 @@ whether Nov 17 challenged your evidence or your clarity.
 | 15–32 | **Coding studio:** log every question into the nb13 tally (type, target, recurrence); find your pattern. |
 | 32–44 | **Pair analysis:** swap tallies — tell your partner what their pattern says that they can't see. |
 | 44–48 | **Reflection freewrite:** the honest paragraph — what the conference changed in how you see your project. |
-| 48–50 | Exit ticket (the most repeated question + what its repetition evidences); M12 due tonight. |
+| 48–50 | Exit ticket (the most repeated question + what its repetition evidences); M15 due tonight. |
 
 ## Roles
 
@@ -81,7 +81,7 @@ tally template, and if someone missed the Expo for a documented reason, runs the
 make-up path (department session or recorded defense) with rehearsal data used
 meanwhile. Each person tells one story, codes one tally, reads one partner's.
 
-## Quality checklist (before submitting M12)
+## Quality checklist (before submitting M15)
 
 - ☐ Every captured question coded on all three dimensions.
 - ☐ The claims-vs-communication split applied — not collapsed into one pile.

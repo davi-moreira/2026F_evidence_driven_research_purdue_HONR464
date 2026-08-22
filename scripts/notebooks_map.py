@@ -30,39 +30,39 @@ NOTEBOOKS = {
     8:  ("nb08_prediction", "Studio 8: Stress-test and adjudicate"),
     9:  ("nb09_experimental_causal", "Studio 9: Write, bound, and disclose"),
     10: ("nb10_attack_the_analysis", "Studio 10: Adapt and defend — the venue contract and the artifact"),
-    11: ("nb11_poster_criticism_lock", "Studio 11: Reproduce and package"),
-    12: ("nb12_poster_delivery", "Studio 12: Release and direct the next cycle"),
-    13: ("nb13_conference", "Public test: the Expo and the reflection studio"),
-    14: ("nb14_replication_redteam", "Async module: cold-run and red-team a peer's package"),
-    15: ("nb15_poster_to_research_note", "Revision: research note v1 and the repaired package"),
-    16: ("nb16_managing_ai_agents", "The close: Evidence Defenses, release, and portfolio"),
+    11: ("nb11_poster_production_review", "Poster production and peer review"),
+    12: ("nb12_presentation_preparation", "Presentation preparation: the pitch, the hard questions, the invitation"),
+    13: ("nb13_conference", "The public test: dress rehearsal and the Expo"),
+    14: ("nb14_replication_redteam", "Async module: reflection on what the public test returned"),
+    15: ("nb15_reproduce_and_package", "Studio 11: Reproduce and package"),
+    16: ("nb16_release_next_cycle", "Studio 12: Release and direct the next cycle"),
 }
 
 REPO_SLUG = "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
 
 # Milestone studio notebooks (msNN) — the light Friday-studio companions to the
-# M0–M15 milestone briefs (ACTIVITY_TEMPLATE.md, "Milestone studio notebooks"
+# M1–M17 milestone briefs (ACTIVITY_TEMPLATE.md, "Milestone studio notebooks"
 # final section). Keyed by milestone id. These carry the reduced required set,
 # no schedule badge, and no per-lecture structure. Built ad hoc as each milestone
 # package ships; not every id is present until P4 completes.
 MS_NOTEBOOKS = {
-    0:  ("ms00_research_ai_baseline", "M0 studio — curiosity committed and the research problem"),
-    1:  ("ms01_research_opportunity_landscape", "M1 studio — your rules and your question"),
-    2:  ("ms02_verified_evidence_map", "M2 studio — verified evidence and contribution map"),
-    3:  ("ms03_research_charter_mida", "M3 studio — Research Contract v0 and permission determination"),
+    0:  ("ms00_research_ai_baseline", "M1 studio — curiosity committed and the research problem"),
+    1:  ("ms01_research_opportunity_landscape", "M2 studio — your rules and your question"),
+    2:  ("ms02_verified_evidence_map", "M3 studio — verified evidence and contribution map"),
+    3:  ("ms03_research_charter_mida", "M4 studio — Research Contract v0 and permission determination"),
     4:  ("ms04_observational_descriptive_audit",
-        "M4 studio — pathway declaration and mandated contrast"),
-    5:  ("ms05_causal_identification", "M5 studio — data and measurement governance"),
-    6:  ("ms06_experimental_measurement_protocol", "M6 studio — first reproducible analysis + abstract gate"),
-    7:  ("ms07_declared_analysis_protocol", "M7 studio — robustness audit"),
-    8:  ("ms08_minimum_viable_analysis", "M8 studio — bounded research note and claim-evidence table"),
-    9:  ("ms09_poster_draft_research_audit", "M9 studio — venue contract and the publication-ready artifact"),
-    10: ("ms10_final_poster_lock", "M10 studio — reproducible package and the final poster lock (terminal)"),
-    11: ("ms11_presentation_package", "M11 studio — release audit and next-cycle agenda"),
-    12: ("ms12_conference_reflection", "M12 studio — conference reflection and defense revision"),
-    13: ("ms13_replication_redteam", "M13 module — replication and red-team (async)"),
-    14: ("ms14_research_note_capsule", "M14 studio — research note v1 and reusable package"),
-    15: ("ms15_final_chapter_portfolio", "M15 studio — final chapter, defense, and portfolio (terminal)"),
+        "M5 studio — pathway declaration and mandated contrast"),
+    5:  ("ms05_causal_identification", "M6 studio — data and measurement governance"),
+    6:  ("ms06_experimental_measurement_protocol", "M7 studio — first reproducible analysis + conference application"),
+    7:  ("ms07_declared_analysis_protocol", "M8 studio — robustness audit"),
+    8:  ("ms08_minimum_viable_analysis", "M9 studio — bounded research note and claim-evidence table"),
+    9:  ("ms09_poster_draft_research_audit", "M10 studio — venue contract and the publication-ready artifact"),
+    10: ("ms10_final_poster_lock", "M13 studio — the final poster lock (terminal)"),
+    11: ("ms11_presentation_package", "M14 studio — the go-public package"),
+    12: ("ms12_conference_reflection", "M15 studio — conference reflection"),
+    13: ("ms13_replication_redteam", "M16 support — the peer cold run"),
+    14: ("ms14_research_note_capsule", "M16 studio — reproducible package and the peer cold run"),
+    15: ("ms15_final_chapter_portfolio", "M17 studio — release, final chapter, and portfolio (terminal)"),
 }
 
 

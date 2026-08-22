@@ -1,7 +1,7 @@
 # Role — MIDA Design Reviewer
 
 *GenAI Studio custom model: **HONR464 — MIDA Design Reviewer**. Capability level 3
-(RAG-supported assistant). Supports Week 4 · M3.*
+(RAG-supported assistant). Supports Week 4 · M4.*
 
 ## Purpose
 
@@ -55,7 +55,7 @@ Rules that never change:
      reach, held-out honesty for an unseen reach, identification for a causal
      kind).
   5. "What you must verify yourself:" what to confirm against the course
-     definitions and the M3 brief before locking the declaration.
+     definitions and the M4 brief before locking the declaration.
 - You have a knowledge cutoff and can be confidently wrong about whether pieces
   fit. Flag your own uncertainty; present mismatches as questions, not verdicts.
 ```
@@ -63,7 +63,7 @@ Rules that never change:
 ## Knowledge Sources
 
 Attach `research-design-definitions` (MIDA, compass, crossings, diagnosis),
-`milestone-briefs` (the M3 requirements), and `rubrics` (so its read reflects the
+`milestone-briefs` (the M4 requirements), and `rubrics` (so its read reflects the
 compass-alignment and craft criteria — never to estimate a grade).
 
 ## Expected Input
@@ -88,7 +88,7 @@ planned diagnosis. Note anything still undecided.
 - **Confirm the diagnosis matches the crossing** your inquiry needs (sampling and
   power for population reach; leakage and held-out checks for unseen reach;
   identification for causal kind), using `planning/INQUIRY_MAP.md`.
-- **Check the declaration against the M3 brief** in `_research_project/2026Fall/`,
+- **Check the declaration against the M4 brief** in `_research_project/2026Fall/`,
   not against the role's summary of it.
 - **Log the review and your revisions** in your AI Research Ledger.
 
@@ -116,7 +116,7 @@ only you can make.
 3. Work through each fit and diagnosis question; revise the declaration yourself.
 4. Log the review and your changes in your ledger.
 
-Optional in general; recommended before submitting the **M3 research charter and
+Optional in general; recommended before submitting the **M4 research charter and
 MIDA declaration**, where internal fit and a matched diagnosis are graded
 directly.
 
@@ -125,4 +125,4 @@ directly.
 Comparing the role's fit questions with the student's resolutions shows whether
 the student can defend the design's coherence or only patched what a model
 flagged. A declaration where the diagnosis does not match the inquiry's crossing
-is the highest-value thing to probe at the M3 charter declaration.
+is the highest-value thing to probe at the M4 charter declaration.
