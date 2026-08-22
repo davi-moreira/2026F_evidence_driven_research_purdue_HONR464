@@ -17,23 +17,37 @@ submit → revise (where eligible)**. This one is the last, and it is different:
 **M17 is terminal.** There is no revision window and no resubmission. The
 deadline governs the grade.
 
-This milestone is the capstone of the **research note, final chapter, and
-defense** component and is worth **9 points of the course grade** (within it: the
-final chapter and AI-management portfolio **6**, the live Evidence Defense
-**3**). It assembles everything you built and holds it to the course's three
-standards at once: **everything claimed is verified, everything verified is
-documented, and uncertainty and limitations are stated throughout.** Your
-full-semester **AI Research Ledger** is its spine, and this week it becomes the
-AI-management portfolio you defend.
+M17 supplies evidence for three separately recorded Final Project components:
+
+| Final Project component | Share of Final Project | Course points |
+|---|---:|---:|
+| **Final Research Artifact and Milestone Synthesis** — your final paper, chapter, or research note | 30% | 9 |
+| **Individual Research Process and AI-Management Portfolio** | 20% | 6 |
+| **Instructor Evaluation and Evidence Defense** | 20% | 6 |
+
+Together these M17 components carry **21 of the Final Project's 30 course
+points**; Peer Review and the Poster and Expo Presentation supply the other 9.
+Each has its own 0–100 rule: the artifact and portfolio use the two rubrics
+below, while Instructor Evaluation and Evidence Defense uses the 100-point
+`project/final_dossier/evidence_defense_protocol.md` rubric. M17's **milestone
+score** records terminal
+completion, timeliness, version integrity, and release-gate closure; it is not
+copied into any of those three Final Project items. This milestone assembles everything you
+built and holds it to the course's three standards at once: **everything claimed
+is verified, everything verified is documented, and uncertainty and limitations
+are stated throughout.** Your full-semester **AI Research Ledger** is its spine,
+and this week it becomes the AI-management portfolio you defend. The final
+paper/chapter/note remains a graded deliverable inside Final Project; only its
+former standalone course category has been retired.
 
 ---
 
 ## What to Submit on Brightspace
 
-Due: **Friday, December 11, 11:59 PM**. Your live **Evidence Defense** runs at
-the Monday and Wednesday meetings of this week, and the Friday studio is the
-submission ceremony. The ceremony confirms submission; it does not extend the
-deadline.
+Due: **Friday, December 11, 11:59 PM**. Your live **Evidence Defense** runs
+across the scheduled Week 15–16 defense blocks, with the final round in Friday's
+M43 session. The Friday session also closes the dossier and confirms submission;
+it does not extend the deadline.
 
 | # | File | Description |
 |---|---|---|
@@ -234,8 +248,11 @@ parts.
 
 ### 5. The Evidence Defense (live)
 
-Perform a **ten-minute defense followed by a five-minute cross-examination** at
-your assigned meeting this week. You defend not just *what* you claim but *why*
+Perform the three-movement defense in your assigned Week 15–16 block, followed
+by ledger-grounded cross-examination. A full slot is **ten minutes plus five
+minutes of cross-examination**; compressed rounds preserve the movement order
+and relative emphasis, with exact timing announced in the defense schedule. You
+defend not just *what* you claim but *why*
 your compass position, your data, and your checks license it. Your ten minutes
 have three movements, in order:
 
@@ -325,39 +342,73 @@ how well each is argued.
 | **Manifest** | Every dossier component marked present, absent with a reason, or not applicable; present rows located |
 | **Portfolio** | Decomposition, conflict-and-override log, never-automate list, independence check, built from the full-semester ledger |
 | **Notebook** | Finalized from the M16 package; passes restart-and-run-all; headline numbers rerun |
-| **Defense** | Ten-minute defense + five-minute cross-examination, three movements, at your assigned meeting this week |
+| **Defense** | Three movements plus ledger-grounded cross-examination in the assigned Week 15–16 block; the defense schedule gives the exact slot length |
 | **Style** | Plain language; every technical term used as you defined it; claims stated at their boundaries |
 | **Filenames** | `lastname_m15_chapter.pdf` + `lastname_m15_portfolio.pdf` + `lastname_m15_chapter.ipynb` (or a zip with all three) |
 | **Location** | Brightspace → Assignments → M17 |
 
 ---
 
-## Grading Rubric (100 points)
+## M17 milestone process score (100 points)
 
-Four bands on the course's five shared virtues (`planning/ASSESSMENT_ARCHITECTURE.md`).
+This score is entered only in **Final Project Milestones**.
+
+| Process criterion | Points |
+|---|---:|
+| All required files submitted by the terminal deadline and open correctly | 25 |
+| Version integrity: dated manifest, latest rerun, and submitted files agree | 25 |
+| Release audit complete, every row dispositioned, and every blocking row honored | 25 |
+| Dossier closeout and full-semester AI Research Ledger present | 25 |
+| **Total** | **100** |
+
+## Final Research Artifact rubric (100 points)
+
+This score is entered only in **Final Research Artifact and Milestone
+Synthesis**.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
-| **Compass alignment & workflow pathway** (20) | Compass position justified by kind and reach; the headline claim stays inside its boundary; the AI-workflow pathway (which roles ran parallel, which sequential, the human node kept, who chose each next step) is named honestly and defensibly (18–20) | Position justified and boundary held; the workflow pathway thinly described (14–17) | Position asserted without a kind-and-reach justification, or one claim steps outside its boundary (8–13) | Compass position unjustified or contradicted; the claim silently upgraded to a bigger population or to cause; a manually sequenced chat reported as autonomous (0–7) |
-| **Evidence integrity & provenance** (20) | Every source, number, and claim is real and retrievable, and the reader can trace each to its origin; the manifest marks every dossier component present, absent with a reason, or not applicable (18–20) | Traceable and real; one provenance link or one manifest row thin (14–17) | A claim or source asserted without a locatable origin, or a manifest that lists what you cannot point to (8–13) | A cited source that does not exist or does not say what you claim (0–7) |
-| **Verification, release audit & AI-management independence** (25) | Every headline number reruns from the notebook and the claim sweep resolves each quantitative claim to that rerun's output; the stale-run check is current and every audit disposition is traceable, with blocking items honored; the override log diagnoses at least one conflict correctly and records a non-AI check; the independence check shows an agreement confirmed by more than a head-count (23–25) | Numbers rerun and the audit is complete; one disposition, one override, or one independence check thinly verified (18–22) | Verification uneven, one quantitative claim unresolved by the sweep, or agreement among roles reported as confirmation with no independent check (11–17) | A headline number that does not rerun, an untraceable figure, release claimed despite a stale run or a blocking item, or an AI output trusted with no verification (0–10) |
-| **Uncertainty & limitations** (15) | Stated next to each claim, calibrated; the headline carries its uncertainty; the chapter names what it cannot establish and the next-study agenda states directions rather than findings (13–15) | Present, occasionally soft (10–12) | Confined to a closing paragraph, or a next study written as though it were already shown (6–9) | Absent; the chapter overclaims certainty (0–5) |
-| **Craft, AI Research Ledger & defense** (20) | Assembled, on-format, on-time; notebook runs; the full-semester ledger is complete with an escalation row; the ten-minute defense keeps its three movements, concedes gracefully, and avoids the forbidden moves (18–20) | Minor lapses; ledger complete; defense sound with a rough edge (14–17) | Disorganized, or a defense that missed a movement or leaned on a forbidden move once (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–7) |
+| **Compass and design alignment** (20) | Kind and reach are justified; the design licenses the headline claim and every supporting claim stays inside the same boundary (18–20) | Alignment is sound with one soft or under-justified phrase (14–17) | Position asserted without full kind-and-reach justification, or one claim steps outside its boundary (8–13) | Position contradicted; association narrated as cause or sample as population (0–7) |
+| **Evidence integrity and provenance** (20) | Every source, datum, number, and claim is real, retrievable, and traceable to its origin (18–20) | Traceable and real with one thin link (14–17) | A claim or source lacks a locatable origin (8–13) | A cited source does not exist or does not support the claim (0–7) |
+| **Reproducibility and verification** (25) | Notebook reruns cleanly; every headline number and figure traces to current output; verification and sensitivity checks are documented and interpreted correctly (23–25) | Results rerun; one trace or check requires a hunt (18–22) | Verification is uneven or one quantitative claim does not resolve to current output (11–17) | A headline result does not rerun, a figure is untraceable, or an output is accepted without verification (0–10) |
+| **Uncertainty and limitations** (15) | Uncertainty travels with each claim; the headline carries its bound; limitations are specific and calibrated (13–15) | Present and accurate with one loose placement or phrase (10–12) | Confined to a closing paragraph or stated generically (6–9) | Absent or contradicted by overclaiming (0–5) |
+| **Scholarly synthesis and craft** (20) | The paper/chapter/note integrates the milestone chain into one coherent argument for an outside reader; prose, figures, citations, and disclosure are precise and navigable (18–20) | Coherent and readable with minor integration or presentation lapses (14–17) | Reads like stitched milestone pieces, or a load-bearing transition/citation/disclosure is missing (8–13) | No coherent scholarly artifact or the central argument cannot be followed (0–7) |
+
+## Individual Research Process and AI-Management Portfolio rubric (100 points)
+
+This score is entered only in **Individual Research Process and AI-Management
+Portfolio**.
+
+| Criterion | Exemplary | Proficient | Developing | Beginning |
+|---|---|---|---|---|
+| **Decision trace across the milestone chain** (20) | Reconstructs the major question, design, measurement, analysis, revision, and release decisions; each change names the evidence or feedback that caused it (18–20) | Major decisions are traceable; one change or reason is thin (14–17) | Several decisions appear without their trigger or version history (8–13) | Portfolio is a product list rather than a research-process record (0–7) |
+| **AI Research Ledger completeness and provenance** (20) | Every material delegation is logged with tool, prompt, output, human decision, verification, remaining concern, and responsible researcher; portfolio claims point to ledger rows (18–20) | Ledger complete with one thin field or link (14–17) | Repeated missing fields or material AI work absent from the ledger (8–13) | Ledger missing, fabricated, or unusable as a process record (0–7) |
+| **Verification and independence** (25) | Every retained load-bearing output has a named non-vague check; at least one agreement is tested independently rather than counted as votes; correlated error is diagnosed correctly (23–25) | Checks are sound; one independence argument is thin (18–22) | Multiple checks are asserted rather than shown, or agreement is treated as weak confirmation (11–17) | AI output is trusted with no verification or look-alike reviewers are treated as independent evidence (0–10) |
+| **Conflict, escalation, and human override** (20) | Distinguishes real disagreement, correlated error, and false consensus; documents a consequential escalation and a reasoned human override backed by non-AI evidence; never-automate decisions are justified (18–20) | Conflict and override record is sound with one under-developed justification (14–17) | Conflict is listed without adjudication, or the override lacks independent support (8–13) | Decisions are delegated away, conflicts are settled by vote, or an override is invented after the fact (0–7) |
+| **Organization, disclosure, and reflective craft** (15) | Portfolio is versioned, concise, navigable, candid about tool capability and residual concern, and cross-linked to the dossier (13–15) | Clear and candid with minor navigation or disclosure lapses (10–12) | Hard to audit, overstates tool autonomy, or hides unresolved concerns (6–9) | Misrepresents how the work was produced or cannot be followed (0–5) |
+
+## Instructor Evaluation and Evidence Defense score
+
+The instructor enters the 100-point score from
+`project/final_dossier/evidence_defense_protocol.md` directly into **Instructor
+Evaluation and Evidence Defense**. The final dossier is the evidence base opened
+during that defense; there is no second blended dossier score and no copied M17
+rubric score.
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
-- A **fabricated or unretrievable source** caps *Evidence integrity & provenance*
+- A **fabricated or unretrievable source** caps the artifact's *Evidence
+  integrity and provenance*
   at Beginning.
 - An **untraceable number**, a figure with no path back to your data, caps
-  *Verification, release audit & AI-management independence* at Beginning.
+  the artifact's *Reproducibility and verification* at Beginning.
 - A **non-reproducing result**, a headline number that does not rerun from your
   notebook, caps the same row at Beginning.
 - A **released-anyway disposition**, meaning release claimed while the run is
-  stale or an audit item is blocking, caps the same row at Beginning.
-- A **missing manifest or missing next-study agenda** caps *Evidence integrity &
-  provenance* at Developing.
-- A **missing AI Research Ledger** scores *Craft, AI Research Ledger & defense*
-  **0** and the submission is **returned** unread until it is supplied.
+  stale or an audit item is blocking, caps the portfolio's *Verification and
+  independence* at Beginning.
+- A **missing AI Research Ledger** leaves the portfolio ungradable and the
+  submission is **returned** unread until it is supplied.
 
 **No revision.** M17 is **terminal**: there is no post-hoc revision or
 resubmission, announced from week 1. Assemble to the Definition of Done before
@@ -369,17 +420,18 @@ you submit.
   published late scale applies; documented emergencies are handled individually,
   talk to me first per the syllabus.
 - Any source you cite that turns out not to exist or not to say what you claim:
-  *Evidence integrity & provenance* scores Beginning regardless of the rest.
+  artifact *Evidence integrity and provenance* scores Beginning regardless of
+  the rest.
 - A headline number that does not rerun from your notebook, or a figure with no
-  path back to your data: *Verification, release audit & AI-management
-  independence* scores Beginning.
+  path back to your data: artifact *Reproducibility and verification* scores
+  Beginning.
 - A release claimed over a stale run or a blocking audit item: the same row
-  scores Beginning. Withholding pending a repair you name honestly never triggers
-  this; the cap is for the false clear.
-- Missing AI Research Ledger: *Craft* scores 0 and the submission is returned.
+  in the portfolio scores Beginning. Withholding pending a repair you name
+  honestly never triggers this; the cap is for the false clear.
+- Missing AI Research Ledger: the portfolio is returned ungraded.
 - A **forbidden move** in the defense (inventing a claim under pressure,
-  un-conceding by insistence, or blaming the AI) drops the *Craft, AI Research
-  Ledger & defense* band.
+  un-conceding by insistence, or blaming the AI) is scored under the Evidence
+  Defense Protocol rubric.
 
 ## Common Pitfalls
 

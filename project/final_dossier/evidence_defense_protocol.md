@@ -1,11 +1,15 @@
-# Evidence Defense Protocol — M42–M43 (Dec 7 & Dec 9)
+# Evidence Defense Protocol — Week 15–16 defense blocks
 
 *The oral defense of your claims, your choices, and your verification, under
 cross-examination. Governs
-[milestone_22 — Evidence Defense](../../_research_project/2026Fall/milestone_22_evidence_defense.md).
-Performed in class M42 (2–3 defenders) and M43 (remaining 2–3). The final section
-governs [milestone_23 — Final Dossier](../../_research_project/2026Fall/milestone_23_final_dossier.md),
-due Fri Dec 11.*
+[course milestone M17 — Release Audit, Final Research Chapter, and AI-Management Portfolio](../../_research_project/2026Fall/milestone_17_release_and_final_chapter.md).
+Performed across the Wednesday defense blocks in Weeks 15 and 16, with the final
+round during M43 on Friday, December 11. The final section governs the final
+dossier submitted with M17 that night. The instructor
+records the defense inside Final Project's **Instructor Evaluation and Evidence
+Defense** item (20% of Final Project, or 6 course points). The 100-point rubric
+below is the item's complete scoring rule: its raw score is entered directly,
+with the final dossier serving as the evidence base opened during the defense.*
 
 ## Purpose
 
@@ -17,13 +21,16 @@ your shield; it is also the standard you are held to.
 
 ## Materials
 
-- Your full claim ledger (claim, evidence, verification, boundary, sensitivity) and your three weakest rows, prepped first (from M41).
+- Your full claim ledger (claim, evidence, verification, boundary, sensitivity) and your three weakest rows, prepared before your assigned block.
 - Your dossier draft and reproducibility package (openable live if probed).
 - The defense schedule (drawn at M41) and the cross-examination norms card.
 
-## The 10-minute defense structure
+## The defense structure
 
-Ten minutes, three movements — in this order:
+Every slot uses three movements in this order and in roughly 3:4:3 proportions.
+A full slot gives the defense ten minutes and the cross-examination five; the
+meeting schedule may compress a round while preserving the same sequence and
+relative emphasis.
 
 1. **Claims (\~3 min)** — your headline claim and its boundary: what you assert, and the exact edge you stop at.
 2. **Choices (\~4 min)** — why this compass position, this data strategy, this operationalization; the road taken and the road not taken (MIDA).
@@ -61,36 +68,33 @@ Ten minutes, three movements — in this order:
 
 If a defense collapses, Professor Moreira converts it to a **supported walkthrough**
 — the defender is guided through their own material, and the rubric notes the
-support (it is not a zero). The defender may elect a **Wednesday (M43) redo
-slot**. The point is that a hard day becomes evidence of resilience, not a
+support (it is not a zero). The defender may elect a **redo slot** later in the
+scheduled defense sequence. The point is that a hard day becomes evidence of resilience, not a
 terminal failure.
 
 ## Procedure
 
-**M42 (Mon Dec 7, 50 min)**
+**Each Wednesday defense block (embedded in the scheduled class)**
 
 | Time | Activity |
 |---|---|
-| 0–4 | Defense norms: rigorous, respectful, ledger-grounded. |
-| 4–19 | **Defense 1** (10-min defense + 5-min cross-examination). |
-| 19–34 | **Defense 2** (same format). |
-| 34–46 | **Defense 3** if scheduled, else extended cross-examination + panel feedback. |
-| 46–50 | Defender self-assessments (strongest moment / moment to redo) + exit ticket. |
+| Opening | Defense norms: rigorous, respectful, ledger-grounded. |
+| Assigned slot | The scheduled defense movement and cross-examination. The meeting schedule determines the compressed timing for that block. |
+| Close | Defender self-assessment: strongest moment and moment to redo. |
 
-**M43 (Wed Dec 9, 50 min)**
+**M43 (Fri Dec 11, final round and submission block)**
 
 | Time | Activity |
 |---|---|
-| 0–3 | Norms recap + order. |
-| 3–33 | **Remaining defenses** (same 10+5 format). |
-| 33–43 | **Dossier checklist run** (below): mark open items, write the 48-hour plan. |
-| 43–48 | Cross-defense synthesis: what did the strongest defenses share? |
-| 48–50 | Exit ticket (biggest open dossier item + when you'll close it). |
+| Opening | Norms recap and final-round order. |
+| First block | **Remaining defenses** using the same three movements and ledger-grounded cross-examination. |
+| Second block | **Dossier checklist run** (below): close or disposition every open item before submission. |
+| Close | Cross-defense synthesis, release decision, and M17 submission. |
 
 ### Session flow (for the record)
 
-Professor Moreira draws the defense order at M41, keeps rubrics per defender, times
-the 10+5 blocks, balances cross-examination airtime, notes dossier-relevant
+Professor Moreira draws the defense order before the first block, keeps rubrics per defender, times
+the scheduled blocks, balances cross-examination airtime, notes dossier-relevant
 exposures per defender, and holds the redo slot in reserve. Every non-defender
 cross-examines at least once per session.
 
@@ -104,14 +108,14 @@ cross-examines at least once per session.
 
 ---
 
-## The Final Dossier Checklist (M43 — governs milestone_23)
+## The Final Dossier Checklist (final defense block — governs M17)
 
-Run this against your draft during the M43 checklist block; close every item by
+Run this against your draft during the final checklist block; close every item by
 Fri Dec 11, 11:59 PM. The dossier is the complete arc, with the **claim ledger as
 its spine** — every number traces.
 
 ```
-FINAL DOSSIER CHECKLIST — M23         Name: __________  Date: Dec 9
+FINAL DOSSIER CHECKLIST — M17         Name: __________  Date: __________
 
   ☐ Question & inquiry in FINAL form (declaration current, boundary stated)
   ☐ Verified source map (every source real, retrieved, and cited)
@@ -131,7 +135,7 @@ FINAL DOSSIER CHECKLIST — M23         Name: __________  Date: Dec 9
 ```
 
 A dossier that declares itself done without running this checklist is not done
-(that is the M43-forbidden move). The dossier is a **terminal artifact** — the
+(that is the final-block forbidden move). The dossier is a **terminal artifact** — the
 Dec 11 deadline governs (no post-hoc revision; see
 `planning/PROJECT_MILESTONES.md`). The M44 ceremony confirms submission and runs
 the first-vs-last Claim Ticket round; it celebrates, the deadline grades.

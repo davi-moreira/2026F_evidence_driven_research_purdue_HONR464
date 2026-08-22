@@ -2409,3 +2409,68 @@ machinery; HONR 46400 projects are individual), and Poster-to-Product.
 
 **Superseded:** D49's "Studios 1–12 on Weeks 1–12" for Weeks 11–16 only. Weeks
 1–10 are untouched, and the D49 shape still governs them.
+
+---
+
+## D51 — QM474 Final Project grading adopted for individual HONR projects (2026-08-22)
+
+**Decision.** HONR 46400 adopts the operative Fall 2026 QM474 Final Project
+proportions — **30 / 20 / 10 / 20 / 20** — while preserving this course's five
+individual projects. The standalone **Research artifact
+(paper/chapter/note) 10%** course category is retired and its ten course points
+move into **Final Project**, which rises **20% → 30%**. The top-level assessment
+contract is now Attendance 1% · Participation 9% · Quizzes 20% · Student
+Research Lead performance 20% · Final Project Milestones 20% · Final Project
+30% = **100%**.
+
+**Reference adjudication.** QM474's current canonical project reference, source
+syllabus, rendered syllabus, and Brightspace reconciliation agree on five
+components: Milestone Deliverables 30% · Peer Evaluation 20% · Peer Review 10%
+· Conference Poster Presentation 20% · Instructor/TA Evaluation 20%. Its older
+40/20/40 summary is stale and is not imported.
+
+**The individual-project mapping.** HONR keeps QM474's five proportions, but
+maps the functions to work this course already requires:
+
+| QM474 component | HONR 46400 equivalent | Share of Final Project | Course points |
+|---|---|---:|---:|
+| Milestone Deliverables | **Final Research Artifact and Milestone Synthesis** — the final paper, chapter, or research note | 30% | 9 |
+| Peer Evaluation | **Individual Research Process and AI-Management Portfolio** — accountability demonstrated by the student's own ledger, checks, conflicts, and overrides | 20% | 6 |
+| Peer Review | **Peer Review** — structured reviews of classmates' posters and a record of how criticism was used | 10% | 3 |
+| Conference Poster Presentation | **Poster and Expo Presentation** — the individual locked poster and required public presentation | 20% | 6 |
+| Instructor/TA Evaluation | **Instructor Evaluation and Evidence Defense** — the instructor evaluates integrative command of the final dossier through the individual oral defense | 20% | 6 |
+| | **Total** | **100%** | **30** |
+
+The first slot does not repeat M1–M17: HONR's developmental submissions remain
+a separate 20% top-level category, so the 30% project slot evaluates their
+integrated final scholarly artifact. Under the exact QM proportions, the final
+paper/chapter/note is directly worth 9 course points rather than the former 10;
+the entire former 10-point category still enters Final Project, and the fifths
+redistribute one point across the other terminal evidence.
+
+**Scoring determinism.** Each Final Project grade item produces an independent
+0–100 score: the M17 Final Research Artifact rubric; the M17 Individual Research
+Process and AI-Management Portfolio rubric; the M12 Final Project Peer Review
+rubric; `0.70 ×` the M13 poster-quality score plus `0.30 ×` the M15 live Expo
+presentation score; and the instructor-scored Evidence Defense Protocol rubric.
+M12/M13/M15/M17 milestone scores remain process scores and are not inputs to
+those Final Project calculations. The `70/30` split is an HONR operational
+ruling inside QM474's imported 20% Poster Presentation slot: the persistent,
+auditable poster carries the majority and public explanation/question handling
+remains material.
+
+**What does not transfer.** No group contract, intra-group peer evaluation,
+teammate score adjustment, group meeting cycle, or Poster-to-Product assessment
+is created. HONR's peer review remains cross-project criticism performed by each
+student. No TA is assumed.
+
+**Participation wording.** The public syllabus paragraph is exactly:
+`Participation includes feedback surveys, lecture-notebook completion, and other constructive contributions to the course.`
+This does not abolish the colleague audits; they remain one possible constructive
+contribution rather than a separately promised syllabus subcategory.
+
+**Implication.** `course_config.yaml`, `syllabus.qmd`,
+`planning/ASSESSMENT_ARCHITECTURE.md`, `planning/COURSE_MASTER_PLAN.md`, the
+Brightspace generator and its ignored output, nb01's grading table, and the
+M13/M15/M16/M17 grading language must remain synchronized. D22/D31/D41 remain
+historical records; D51 supersedes their assessment-weight statements only.

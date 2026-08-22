@@ -7,7 +7,8 @@ Under the studio-Friday rhythm, most presentations happen inside the Friday work
 block (20–50 min); a few sit on Mon/Wed lecture days where hard dates force it
 (M13's gallery walk and oral defense, the M17 defenses), M6 and M16 run on the
 async board, and the URC Expo (Tue Nov 17) is a scheduled performance event and a
-graded component of M15. Kickoff venues live in `PROJECT_MILESTONES.md`.
+Final Project **Poster and Expo Presentation** score. M15 separately grades the
+written reflection checkpoint. Kickoff venues live in `PROJECT_MILESTONES.md`.
 
 This map is a **planning companion** to `PROJECT_MILESTONES.md` (the chain table)
 and `course_config.yaml milestones:` (the machine-readable anchors that
@@ -37,7 +38,7 @@ for up to half the lost points).
 | M10 | **Poster-draft red-team** — the five audits (claim boundary, figure honesty, read path, uncertainty, accessibility); two peers + the required Poster Critic and Robustness & Sensitivity Reviewer roles; author triages hits | M25–M27 | M28 (studio) | Fri Oct 30 | eligible |
 | M13 | **Poster Criticism I gallery walk** (M29) + **Criticism II oral defense** (M30) — three lenses (interdisciplinary / methods / skeptic), defend-or-concede on the record; production lock at the Friday studio | M28–M30 | M29 + M30 (Mon/Wed) + M31 (studio) | **Fri Nov 6, 5:00 PM** | none (terminal) |
 | M17 | **Mock poster symposium** — the three pitch layers (30-sec hook, 90-sec walk, full pitch) under live fire; partner + AI reviewer flag every spoken upgrade | M32–M33 | M34 (studio) | Fri Nov 13 | eligible |
-| M15 | **URC Expo** (Tue Nov 17: present your poster + evaluate ≥3 peer posters, a graded component) + **reflection story round** (M36) — 90-sec surprising moment, then read the pattern off your coded tally | M35–M36 | Expo (Tue Nov 17) + M36 (studio) | Fri Nov 20 | written package eligible; Expo terminal |
+| M15 | **URC Expo** (Tue Nov 17: present your poster + evaluate ≥3 peer posters; live quality is graded only in Final Project) + **reflection story round** (M36) — 90-sec surprising moment, then read the pattern off your coded tally | M35–M36 | Expo (Tue Nov 17) + M36 (studio) | Fri Nov 20 | M15 written package eligible; Final Project live score terminal |
 | M16 | **Anonymized reproduction exchange** (async) — you rebuild a stranger's headline number cold, red-team it, and post the residual to the board | M36–M37 | async board (module week) | **Sun Nov 29** | eligible |
 | M16 | **Table read** — all five research notes read by all, margin notes (sharpest sentence / weakest claim); reproducibility capsule stub shown | M37–M39 | M40 (studio) | Fri Dec 4 | eligible |
 | M17 | **Evidence Defense** — final oral defense (claims, choices, verification) + cross-examination where every non-defender asks ≥1 ledger-grounded question; **submission ceremony** closes the term | M40–M42 | M42–M43 (Mon/Wed/Fri) | **Fri Dec 11** | none (terminal) |

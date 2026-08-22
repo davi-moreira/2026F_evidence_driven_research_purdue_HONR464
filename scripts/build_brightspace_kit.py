@@ -182,12 +182,13 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
 
 def gradebook_spec(config: dict) -> str:
     a = config["assessment"]
+    fp = config["final_project_breakdown"]
     labels = {
         "attendance": ("Attendance", "iClicker; 85% target"),
         "participation": (
             "Participation",
-            "Notebook completion, feedback surveys, in-class exercises, and the "
-            "colleague audits (best 8 of 10 scored)",
+            "Feedback surveys, lecture-notebook completion, and other "
+            "constructive contributions to the course",
         ),
         "quizzes": (
             "Quizzes",
@@ -199,20 +200,28 @@ def gradebook_spec(config: dict) -> str:
         ),
         "final_project_milestones": (
             "Final Project Milestones",
-            "M1-M17, one per week; see the within-group weights in "
+            "M1-M17; see the grading architecture in "
             "planning/ASSESSMENT_ARCHITECTURE.md",
         ),
         "final_project": (
             "Final Project",
-            "Locked poster + Expo presentation + evidence defense",
-        ),
-        "research_artifact_paper_chapter_note": (
-            "Research artifact",
-            "Research note v1 grown into the final chapter",
+            "Five graded items (30/20/10/20/20), including the final "
+            "paper/chapter/note, AI-management portfolio, peer review, "
+            "poster/Expo presentation, and Evidence Defense",
         ),
     }
+    fp_project_total = sum(item["project_share"] for item in fp.values())
+    fp_course_total = sum(item["course_share"] for item in fp.values())
+    if any(not item.get("scoring_rule") for item in fp.values()):
+        raise ValueError("Every Final Project item must define a scoring_rule")
+    if fp_project_total != 100 or fp_course_total != a["final_project"]:
+        raise ValueError(
+            "Final Project breakdown must sum to 100% of the project and "
+            f"{a['final_project']}% of the course; got "
+            f"{fp_project_total}% and {fp_course_total}%"
+        )
     lines = [
-        "# Brightspace gradebook — the seven categories",
+        f"# Brightspace gradebook — the {len(a)} categories",
         "",
         "Build these as **weighted categories** (Grades → Manage Grades → "
         "Settings → Weighted). The weights are the syllabus contract and sum "
@@ -232,9 +241,38 @@ def gradebook_spec(config: dict) -> str:
         lines.append(f"> ⚠️ Weights sum to {total}, not 100. Fix course_config.yaml.")
     lines += [
         "",
+        "## Final Project items",
+        "",
+        "Create these as five grade items inside the **Final Project** category. "
+        "The project shares preserve QM474's 30/20/10/20/20 structure; the "
+        "course shares total 30%.",
+        "",
+        "| Item | Share of Final Project | Share of course | Contains | Scoring rule |",
+        "|---|---:|---:|---|---|",
+    ]
+    for item in fp.values():
+        lines.append(
+            f"| {item['label']} | {item['project_share']}% | "
+            f"{item['course_share']}% | {item['includes']} | "
+            f"{item['scoring_rule']} |"
+        )
+    lines += [
+        "| **Total** | **100%** | "
+        f"**{fp_course_total}%** | | |",
+        "",
+        "The former standalone Research artifact category is not a gradebook "
+        "category. The final paper, chapter, or research note is graded in the "
+        "first Final Project item.",
+        "",
+        "Where a milestone supplies evidence to a Final Project item, keep two "
+        "distinct scores: the milestone process score (completion, timeliness, "
+        "versioning, and response to feedback) and the terminal-quality Final "
+        "Project score. Never copy a rubric score between categories.",
+        "",
         "## Items inside each category",
         "",
-        "- **Final Project Milestones** — 16 items, M1 through M17, each with the "
+        f"- **Final Project Milestones** — {len(config['milestones'])} items, "
+        "M1 through M17, each with the "
         "due date below. Set them all at once; sequential release controls what "
         "students can see.",
         f"- **Quizzes** — {n_quizzes()} items, one per teaching week that "
@@ -244,8 +282,9 @@ def gradebook_spec(config: dict) -> str:
         "- **Student Research Lead** — 5 items per student is wrong; create "
         "**one** item per SRL slot the student holds, or a single item scored 5 "
         "times. One item, entered after each lead, is simpler for 5 students.",
-        "- **Participation** — one item for the colleague audits (best 8 of 10) "
-        "and one for everything else, so the audit rule stays auditable.",
+        "- **Participation** — create items for feedback surveys and lecture-"
+        "notebook completion, plus an item for other constructive contributions "
+        "to the course.",
         "",
         "## Milestone due dates",
         "",
@@ -290,8 +329,8 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
 
 ## 2. Week 1 — the machinery
 
-- [ ] **Build the gradebook** from `gradebook_spec.md` (7 weighted categories).
-- [ ] **Create all 16 milestone items** with the due dates in that file, and put
+- [ ] **Build the gradebook** from `gradebook_spec.md` ({len(config['assessment'])} weighted categories).
+- [ ] **Create all {len(config['milestones'])} milestone items** with the due dates in that file, and put
       every date on the Brightspace **calendar** (Purdue's 2026-08-21 guidance
       asks for dates on all assignments).
 - [ ] **Publish units 2-16** with sequential release, or publish weekly by hand.

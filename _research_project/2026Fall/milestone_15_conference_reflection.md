@@ -19,12 +19,15 @@ cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it.
 
-This milestone is the reflection-and-criticism capstone of the **Poster & Expo**
-component. It has two graded halves. The first is the **Expo presentation
-itself** on Tuesday, November 17: you stand your poster for strangers and you
-evaluate at least three peer posters. The second is the written **reflection and
-poster-criticism portfolio** you submit that Friday, which reads your afternoon
-at the Expo as data. Milestone weights and the revision policy live in the
+This milestone records the public test and what you learned from it. The locked
+poster from M13 and your live **Expo presentation** on Tuesday, November 17
+together supply the Final Project's **Poster and Expo Presentation** component
+(20% of Final Project, or 6 course points): `70%` is the M13 poster-quality
+score and `30%` is the live-presentation score defined below. At the Expo, you stand your poster
+for strangers and evaluate at least three peer posters. The written **reflection
+and poster-criticism portfolio** reads your afternoon at the Expo as data; it is
+graded through M15 in the separate Final Project Milestones category and feeds
+the final dossier. Milestone weights and the revision policy live in the
 syllabus; instructions and rubrics live one page per milestone, like this one.
 
 ---
@@ -32,7 +35,7 @@ syllabus; instructions and rubrics live one page per milestone, like this one.
 ## What to Submit on Brightspace
 
 Due: **Sunday, November 29, 11:59 PM**, worked across the two asynchronous sessions (Friday, November 20 and Monday, November 23). You present at the **Expo on Tuesday,
-November 17** (a graded component, below), then bring your coding sheet to the
+November 17** (graded in the separate Final Project item, below), then bring your coding sheet to the
 **Friday reflection studio (Nov 20)**, where you code your questions, find your
 pattern, and write the revision that pattern licenses.
 
@@ -41,10 +44,11 @@ pattern, and write the revision that pattern licenses.
 | 1 | **`lastname_m12_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-evaluation, with your AI Research Ledger rows attached. This is the graded written artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 29** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
-The **Expo presentation (Tuesday, November 17)** is a graded component of this
-milestone and is not a Brightspace upload: it happens in the room, and so does
-your evaluation of at least three other posters. Neither has a revision window
-(see Penalties). If you submit the written package as a notebook link, set
+The **Expo presentation (Tuesday, November 17)** supplies the live 30% subscore
+of Final Project's **Poster and Expo Presentation** item; it is not part of the
+M15 milestone score and is not a Brightspace upload. It happens in the room, and
+so does your evaluation of at least three other posters. The live presentation
+has no revision window (see Penalties). If you submit the written package as a notebook link, set
 sharing so the instructor can open it, and make sure your tally table renders
 when the notebook is run.
 
@@ -332,7 +336,25 @@ pre-submission checklist.
 
 ---
 
-## Grading Rubric (100 points)
+## Final Project live Expo presentation rubric (100 points)
+
+This score is entered only through the **Poster and Expo Presentation** item.
+The item calculation is `0.70 × M13 poster-quality score + 0.30 × this live
+presentation score`.
+
+| Criterion | Exemplary | Proficient | Developing | Beginning |
+|---|---|---|---|---|
+| **Bounded explanation and research accuracy** (30) | Explains the question, design, finding, and exact claim boundary accurately at both the short and full pitch lengths; no spoken upgrade beyond the evidence (27–30) | Accurate and bounded with one thin transition or imprecise phrase (21–26) | Omits a load-bearing design choice or lets one spoken claim exceed the poster (13–20) | Cannot state the research chain accurately or presents association as cause / sample as population (0–12) |
+| **Evidence and traceability under questions** (25) | Answers from the poster, notebook, or ledger; identifies where a number came from and distinguishes what was checked from what remains assumed (23–25) | Answers are evidence-grounded; one trace requires prompting (18–22) | Relies on memory or assertion for multiple questions (11–17) | Cannot trace a central number or invents support under pressure (0–10) |
+| **Uncertainty, limitations, and concession** (20) | States uncertainty with the claim, names the most threatening limitation, and concedes a smaller true claim precisely when warranted (18–20) | Limit and uncertainty are accurate but one is delayed or loosely phrased (14–17) | Treats uncertainty as a footnote or resists a warranted concession (8–13) | Presents certainty the evidence does not support or refuses an evidence-required correction (0–7) |
+| **Audience responsiveness** (15) | Adapts the explanation to the visitor, listens before answering, and handles difficult questions directly without hiding behind jargon or AI (14–15) | Clear and responsive with one rehearsed or indirect answer (11–13) | Mostly recites the pitch regardless of the question (6–10) | Dismisses questions, blames a tool, or cannot engage the visitor (0–5) |
+| **Professional readiness and research citizenship** (10) | Present for the required window, poster ready, presentation evidence recorded, and at least three classmates' posters reviewed constructively (9–10) | Required presentation completed; one documentation or peer-review detail thin (7–8) | Late/incomplete presentation record or fewer than three peer reviews (4–6) | Required presentation not completed without an approved emergency arrangement (0–3) |
+
+## M15 milestone reflection rubric (100 points)
+
+This score is entered only in **Final Project Milestones** and evaluates the
+written reflection, criticism portfolio, and carry-forward record—not live
+presentation quality.
 
 Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`), grounded in the studio's authored
@@ -345,7 +367,7 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 | **Evidence integrity** (20) | Every logged question was actually asked, every revision points back to the tally rows that prompted it, every portfolio gap points at a real element on the actual poster, and the post-release note describes the package you really released (18–20) | Real and traceable throughout; one row, one poster gap, or one post-release line lightly sourced (14–17) | A question, a revision, or a poster flaw asserted without a path back to what was asked, counted, or shown (8–13) | A fabricated question you were not asked, or a poster flaw the poster does not carry (0–7) |
 | **Verification of AI-assisted parts** (20) | The pattern and any shares are checked against the counts, recomputed or hand-counted rather than felt; every AI-assisted step has a ledger row with a named, non-vague verification method; every revision was decided by you, with any AI-drafted wording checked before acceptance (18–20) | Verification present; one method vague, or one AI step unlogged (14–17) | Counts used but the pattern not verified against them, or AI output accepted without a named check (8–13) | A reported count that does not rerun from the tally, or an AI-drafted reflection, revision, or critique reproduced with no verification (0–7) |
 | **Uncertainty & limitations** (20) | The reflection states what remains untested and names its limits (how few questions were logged, the recall gap); each revision reason says why the evidence licenses that much and no more; the post-release note names any staleness honestly; the self-evaluation names a real weakness (18–20) | Honest reflection, revision reasons, and self-evaluation; uncertainty or the warm-room caveat stated loosely (14–17) | Reflection general or performative; a revision reason that asserts rather than argues; limits gestured at but not named (8–13) | "It went great" with no substance, an overcorrection with no evidence behind it, or reception read as certainty about the claims (0–7) |
-| **Craft, ledger & communication** (10) | Versioned with its reason, on-format, on-time; Expo presented and at least three posters evaluated; post-release note present; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces, a thin portfolio, a decorative version reason, or fewer than three posters evaluated (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
+| **Craft, ledger & communication** (10) | Versioned with its reason, on-format, on-time; proof of presentation and at least three completed poster reviews attached; post-release note present; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces, a thin portfolio, a decorative version reason, or fewer than three poster reviews documented (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -362,16 +384,17 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 
 **Revision:** the written package is eligible under the standing policy — a revised
 submission within **7 days** of feedback recovers up to half the lost points. The
-**Expo presentation is terminal**: it happens live on November 17 and has **no
-revision window**.
+**Expo presentation score is terminal** inside Final Project: it happens live on
+November 17 and has **no revision window**.
 
 ## Penalties
 
 - Late (written package): −10 points per day, up to 3 days; not accepted after
   (documented emergencies: talk to me first, per the syllabus).
-- **Missed Expo presentation:** the Expo is required and terminal; a missed
-  presentation forfeits its share of the grade and cannot be revised or made up
-  except for a documented emergency arranged in advance.
+- **Missed Expo presentation:** the Expo is required and terminal; without an
+  approved emergency arrangement, the Final Project live-presentation subscore
+  is 0. The M15 written reflection is still scored from evidence honestly
+  available to the student; presentation quality is not scored again in M15.
 - Fewer than three posters evaluated: the portfolio cannot be completed as
   specified, and *Craft, ledger & communication* scores Developing at best.
 - Any question you log that you were not actually asked, or any poster flaw you

@@ -254,15 +254,49 @@ dossier_components:
   - research note / chapter
   - AI-agent management portfolio
 
-# Grading (confirmed 2026-07-27; keep syllabus.qmd table in sync).
+# Grading (D51, 2026-08-22; keep syllabus.qmd and the Brightspace generator in sync).
 assessment:
   attendance: 1                    # iClicker; 85% attendance target
-  participation: 9                 # rubric: notebook completion + feedback surveys + in-class activities
+  participation: 9                 # feedback surveys + lecture-notebook completion + constructive contributions
   quizzes: 20                      # weekly Friday multiple-choice topic quizzes
   srl_performance: 20
   final_project_milestones: 20
-  final_project: 20
-  research_artifact_paper_chapter_note: 10
+  final_project: 30
+
+# D51 adopts QM474's operative 30/20/10/20/20 Final Project proportions while
+# translating its group-only peer-evaluation slot to HONR's individual design.
+# Project shares sum to 100; course shares sum to assessment.final_project (30).
+final_project_breakdown:
+  final_research_artifact_and_milestone_synthesis:
+    label: "Final Research Artifact and Milestone Synthesis"
+    project_share: 30
+    course_share: 9
+    includes: "the final paper, chapter, or research note synthesized from the milestone chain"
+    scoring_rule: "M17 Final Research Artifact rubric (100 points)"
+  individual_research_process_and_ai_management_portfolio:
+    label: "Individual Research Process and AI-Management Portfolio"
+    project_share: 20
+    course_share: 6
+    includes: "the individual process record, AI Research Ledger, and AI-management portfolio"
+    scoring_rule: "M17 Individual Research Process and AI-Management Portfolio rubric (100 points)"
+  peer_review:
+    label: "Peer Review"
+    project_share: 10
+    course_share: 3
+    includes: "structured reviews of classmates' posters and documented use of criticism"
+    scoring_rule: "M12 Final Project Peer Review rubric (100 points)"
+  poster_and_expo_presentation:
+    label: "Poster and Expo Presentation"
+    project_share: 20
+    course_share: 6
+    includes: "the locked individual poster and required public presentation at the Expo"
+    scoring_rule: "70% M13 poster-quality rubric + 30% M15 live Expo presentation rubric"
+  instructor_evaluation_and_evidence_defense:
+    label: "Instructor Evaluation and Evidence Defense"
+    project_share: 20
+    course_share: 6
+    includes: "the instructor's evaluation of integrative command of the final dossier through the individual oral Evidence Defense"
+    scoring_rule: "Evidence Defense Protocol rubric (100 points), scored by the instructor"
 
 # Source-of-truth materials (see planning/SOURCE_AUDIT_V2.md).
 sources:

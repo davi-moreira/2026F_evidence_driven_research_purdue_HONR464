@@ -82,7 +82,8 @@ reflection **Fri Dec 11**. No class: Sep 7 (Labor Day), Oct 12 (October Break),
 Nov 25/27 (Thanksgiving). Async-online meeting: Mon Nov 23.
 
 **The one required meeting outside the MWF pattern is the Expo, Tue Nov 17.**
-It is a graded component of M15, not an optional showcase, and it falls on a
+Its live presentation is graded in Final Project's **Poster and Expo
+Presentation** item, not in M15, and it is not an optional showcase. It falls on a
 day this section never otherwise meets. Hold the day from Week 1: you set up
 before your window, stand with your poster through it, and complete your peer
 evaluations of at least three posters on the floor, so budget well beyond one
@@ -194,7 +195,8 @@ def build() -> str:
             lines.append(
                 f"| — | Tue Nov 17 | {week} | {studio} | **🎓 Purdue Fall "
                 "Undergraduate Research Expo — REQUIRED poster presentation "
-                "(graded M15 component)** | | M15 · Book Milestone 10 v3 "
+                "(graded in Final Project)** | | M15 reflection evidence · "
+                "Final Project Poster and Expo Presentation "
                 "| *No new chapter — you present the artifact Studio 10 "
                 "built.* |"
             )

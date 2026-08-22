@@ -49,7 +49,7 @@ are `M1…M17`.
 | M12 | Peer review submission | M30–M31 | silent four-reviewer round (M30) + revision studio (M31) | Fri Nov 6, 5:00 PM | 10 — peer-criticism practice |
 | M13 | Final poster lock | M28–M31 | pre-lock gate sweep + print-scale check (M31) | Sun Nov 8, 11:59 PM — TERMINAL | 10 (v3, the locked print edition) |
 | M14 | Go-public package: presentation plan and invitation | M32–M34 | pitch drafting (M32) + typed-panel questioning (M33) + rehearsal at the printed board (M34) | Fri Nov 13, 5:00 PM | 10 — spoken-editions practice |
-| M15 | Conference reflection | M35–M37 | dress rehearsal (M35); the Expo (Tue Nov 17) is a graded component; async capture (M36) and adjudication (M37) | Sun Nov 29, 11:59 PM | 10 (v4, the publicly presented edition) |
+| M15 | Conference reflection | M35–M37 | dress rehearsal (M35); the Expo (Tue Nov 17) supplies the separate Final Project live-presentation score; M15 grades async capture (M36), adjudication (M37), and the written reflection | Sun Nov 29, 11:59 PM | 10 (v4, the publicly presented edition) |
 | M16 | Reproducible package and the peer cold run | M38–M40 | cold-run clinic + the in-class package exchange (M39) + the repair block (M40) | Fri Dec 4, 11:59 PM | 11 — Your reproducible package (v1) + 9 (v2) |
 | M17 | Release audit, final research chapter, and AI-management portfolio | M41–M43 | live Evidence Defenses (M42, M43) + release audit + submission ceremony (M43) | Fri Dec 11, 11:59 PM — TERMINAL | 12 — Your release and next cycle (v1) |
 
@@ -69,8 +69,10 @@ Ledger** accumulates across all sixteen.
 
 ## Notes
 
-- The Expo presentation (Tue Nov 17) is a graded component of M15; there is no
-  separate milestone ID for the event itself.
+- The Expo presentation (Tue Nov 17) is graded only in Final Project's **Poster
+  and Expo Presentation** item (`70%` M13 poster quality + `30%` live delivery).
+  M15 grades the reflection checkpoint and records proof of participation; there
+  is no separate milestone ID for the event itself.
 - M16's package exchange is anonymized: each student receives a peer's
   reproducibility package with identifying headers stripped by the instructor.
 - Revision policy (syllabus): all milestones except M13 and M17 are revisable

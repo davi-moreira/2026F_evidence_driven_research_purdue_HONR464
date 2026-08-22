@@ -66,7 +66,7 @@ Since **D49** the weekly spine IS the book's Studio arc, one Studio per week:
 your turn" work, and Friday IS that Studio's milestone.** Studios 1–12 fall on
 Weeks 1–12, which puts every fixed date where the book already wants it — the
 URC abstract gate (Fri Oct 9) on Studio 7's first result, the terminal poster
-lock (Fri Nov 6) on Studio 11's reproduction gate, and Studio 12's release
+lock (Sun Nov 8) on Studio 11's reproduction gate, and Studio 12's release
 audit the week *before* the Expo, so the Expo is the release. Weeks 13–16 are
 the four date-driven exception weeks; they anchor no new lesson and revisit
 what the studios built. Week 1's Monday is the instructor-led orientation, the
@@ -85,7 +85,7 @@ through M17 (`planning/COURSE_BOOK_CROSSWALK.yml`).
 | 8 | S8 Stress-test and adjudicate (`nb08`) | 1 | M8 · Fri Oct 16 | Which checks did I pre-list, what survived them, and what remains unruled-out? |
 | 9 | S9 Write, bound, and disclose (`nb09`) | 2 | M9 · Fri Oct 23 | What bounded claim can I write down, with every sentence traced to evidence and disclosure? |
 | 10 | S10 Adapt and defend (`nb10`) | 2 | M10 · Fri Oct 30 | What does my venue require, and what artifact satisfies it without inflating the claim? |
-| 11 | S11 Reproduce and package (`nb11`) | 2 | M13 · Fri Nov 6, 5 PM (terminal) | Does my work reproduce from a clean package — and is that what locks onto the poster? |
+| 11 | S11 Reproduce and package (`nb11`) | 2 | M13 · Sun Nov 8, 11:59 PM (terminal) | Does my work reproduce from a clean package — and is that what locks onto the poster? |
 | 12 | S12 Release and direct the next cycle (`nb12`) | 2 | M17 · Fri Nov 13 | Do I release or withhold pending a named repair, and what should the next study ask? |
 | 13 | Public test: the Expo + reflection (`nb13`) | 1 | M15 · Fri Nov 20 | What did public questioning reveal, and does it change the claim or the defense (Expo Tue Nov 17)? |
 | 14 | Async: peer cold run + red-team (`nb14`) | 0 | M16 · Sun Nov 29 (async) | Does someone else's evidence reproduce without their help, and where is it fragile? |
@@ -194,12 +194,12 @@ literature map · MIDA design declaration · data and measurement documentation 
 reproducible Colab notebook · declared analysis protocol · claim–evidence table ·
 robustness and diagnostic record · AI Research Ledger · poster and presentation
 materials · replication record · research note / chapter · AI-agent management
-portfolio. The dossier accumulates across all sixteen milestones; the AI Research
+portfolio. The dossier accumulates across all seventeen milestones; the AI Research
 Ledger threads through every one. The full milestone chain — develop → present →
 submit → revise cadence, kickoff rules, dossier mapping, and the M13/M17 terminal
 locks — lives in `planning/PROJECT_MILESTONES.md`.
 
-## 7. Assessment architecture *(confirmed 2026-07-27)*
+## 7. Assessment architecture *(D51, 2026-08-22)*
 
 From `course_config.yaml assessment:`; sums to 100 and matches `syllabus.qmd`.
 Grading rewards correctness, transparency, reproducibility, question-design
@@ -208,12 +208,30 @@ alignment, and responsible interpretation — never coding elegance.
 | Component | Weight |
 |---|---|
 | Attendance (iClicker) | 1 |
-| Participation (notebook completion + in-class activities + surveys) | 9 |
+| Participation (feedback surveys + lecture-notebook completion + other constructive contributions) | 9 |
 | Quizzes (weekly Friday MC topic quizzes) | 20 |
 | Student Research Lead performance | 20 |
 | Final Project Milestones | 20 |
-| Final Project | 20 |
-| Research artifact (paper/chapter/note) | 10 |
+| Final Project | 30 |
+| **Total** | **100** |
+
+Final Project uses QM474's operative 30/20/10/20/20 proportions, translated for
+individual projects: **Final Research Artifact and Milestone Synthesis 30%**,
+**Individual Research Process and AI-Management Portfolio 20%**, **Peer Review
+10%**, **Poster and Expo Presentation 20%**, and **Instructor Evaluation and
+Evidence Defense 20%**. These are shares of the 30% Final Project category,
+equivalent to 9/6/3/6/6 course points. The paper, chapter, or research note
+remains explicitly graded inside Final Project. The separate Final Project
+Milestones category grades checkpoint completion, timeliness, versioning, and
+response to feedback across M1–M17; the five Final Project items grade terminal
+quality. A rubric score is never copied between the two categories. Full mapping
+and rationale:
+`planning/ASSESSMENT_ARCHITECTURE.md`.
+
+The five independently computable Final Project scores come from the M17
+artifact rubric, M17 portfolio rubric, M12 peer-review rubric, the weighted
+poster/Expo formula (`70%` M13 poster quality + `30%` M15 live delivery), and the
+Evidence Defense Protocol rubric.
 
 ## 8. The course book — EDR|AI: 40 lessons, 12 Studios, 12 Milestone chapters
 

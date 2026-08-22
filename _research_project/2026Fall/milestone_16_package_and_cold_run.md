@@ -21,8 +21,13 @@ cumulative **Research Project Dossier** and appends at least one row to your
 checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
-This milestone is the **Research note** component. It is where your claim ledger
-is graded a second time (after M10, before M17), because a note is where a claim
+This milestone produces the graded precursor to the Final Project's **Final
+Research Artifact and Milestone Synthesis** and documents evidence used in the
+**Individual Research Process and AI-Management Portfolio**. Your research note
+is not a separate course category: it grows into the final paper, chapter, or
+note graded inside Final Project at M17. M16 itself remains graded in the
+separate Final Project Milestones category. It is where your claim ledger is
+graded a second time (after M10, before M17), because a note is where a claim
 either stays sized to its evidence or quietly grows past it. It is
 **revision-eligible** under the standing policy.
 

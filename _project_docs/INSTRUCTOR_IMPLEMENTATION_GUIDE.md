@@ -126,30 +126,33 @@ are in the rest of the SRL suite (`project/srl/`).
 
 ## 3. Milestone grading cadence
 
-Sixteen milestones (**M1–M17**), one graded artifact each, on a **develop →
-present → submit → revise** cadence. Due dates (all Fridays unless noted) are
+Seventeen milestones (**M1–M17**), one graded artifact each, on a **studio
+kickoff → develop → submit → revise where eligible** cadence. Due dates are
 fixed in `course_config.yaml milestones:`:
 
 | M1 Aug 28 · M2 Sep 4 · M3 Sep 11 · M4 Sep 18 · M5 Sep 25 · M6 Oct 2 ·
-M7 Oct 9 · M8 Oct 16 · M9 Oct 23 · M10 Oct 30 · **M13 Nov 6, 5 PM (terminal)** ·
-M17 Nov 13 · M15 Nov 20 · M16 Nov 29 (Sun, async) · M16 Dec 4 ·
+M7 Oct 9 · M8 Oct 16 · M9 Oct 23 · M10 Oct 30 · M11 Nov 4 (at class) ·
+M12 Nov 6 · **M13 Nov 8, 11:59 PM (terminal)** · M14 Nov 13 ·
+M15 Nov 29 (Sun, async) · M16 Dec 4 ·
 **M17 Dec 11 (terminal)** |
 
 - **Return feedback within 3 days** of each milestone.
 - **Revision window: 7 days** from feedback, for up to half the lost points, on
-  every milestone **except the terminal two** (M13, M17) and the live Expo
-  presentation (M15 component). For those, the deadline governs.
+  every milestone **except the terminal two** (M13, M17). The live Expo
+  presentation is separately terminal inside Final Project's Poster and Expo
+  Presentation item. For those terminal scores, the deadline governs.
 - Every submission must append an **AI Research Ledger** entry (8 fields) and
   update the cumulative **Research Project Dossier**. A missing ledger entry
   scores the rubric's Craft criterion 0 and the submission is **returned**.
 - Rubrics share a fixed criteria menu (compass alignment, evidence integrity,
-  verification, uncertainty + limitations, craft). Weighting proposal in
+  verification, uncertainty + limitations, craft). Confirmed weights live in
   `course_config.yaml assessment:`.
 
-> **Build note:** `planning/ASSESSMENT_ARCHITECTURE.md` still describes the v1
-> M01–M23 scheme and needs reconciling to the v2 weights before it is cited as
-> authoritative. `syllabus.qmd` already carries the v2 weights (pending final
-> instructor confirmation).
+The course has six weighted categories totaling 100: Attendance 1 ·
+Participation 9 · Quizzes 20 · SRL performance 20 · Final Project Milestones
+20 · Final Project 30. Final Project uses five 30/20/10/20/20 items; the exact
+QM474-to-HONR mapping is authoritative in
+`planning/ASSESSMENT_ARCHITECTURE.md`.
 
 ---
 
@@ -160,10 +163,8 @@ Milestone briefs and rubrics are authored **one file per milestone** in
 **copy-paste-ready into Brightspace** (one Brightspace page per milestone). Each
 Friday, present the week's brief from Brightspace at the studio kickoff.
 
-> **Build note:** the files currently in `_research_project/2026Fall/` are the
-> **v1 M01–M23** briefs. The **v2 M1–M17** briefs are on the build queue (see
-> the master build plan); confirm the v2 set is in place before the semester.
-> Machine anchors and due dates are validated by `scripts/validate_milestones.py`.
+The active **M1–M17** briefs are in place. Machine anchors and due dates are
+validated by `scripts/validate_milestones.py`.
 
 ---
 
@@ -207,10 +208,12 @@ miss the print deadline and there is no poster to present.
 1. **Abstract gate — Fri Oct 9 (M7).** Internal completion gate for the URC
    abstract (the external URC deadline is TBD; confirm and post it as soon as it
    publishes). Run the abstract workshop in the M7 studio.
-2. **Poster lock + print submission — Fri Nov 6, 5:00 PM (M13, terminal).** The
+2. **Poster lock + print submission — Sun Nov 8, 11:59 PM (M13, terminal).** The
    poster is locked and submitted for printing. No changes after this time.
    Confirm the print vendor turnaround well before this date.
-3. **URC Expo — Tue Nov 17.** Required, graded (a component of M15). Each student
+3. **URC Expo — Tue Nov 17.** Required. Live presentation quality supplies 30%
+   of Final Project's Poster and Expo Presentation item; M13 poster quality
+   supplies the other 70%. M15 grades the written reflection, not live quality. Each student
    presents their poster and **evaluates at least three colleagues' posters** on
    the course criticism instrument. **No class Wed Nov 18.** Only a documented
    emergency qualifies for a make-up, handled individually per Honors College
@@ -223,30 +226,35 @@ uncertainty-limitations, dress-rehearsal, and reflection protocols).
 
 ---
 
-## 7. The M16 replication exchange (anonymized)
+## 7. The M16 peer cold run
 
-The Thanksgiving async module (**Mon Nov 23**, due **Sun Nov 29**) is a
-peer replication + red-team. Run the exchange as follows:
+The peer cold run takes place in class during Week 15 and feeds M16. Run the
+exchange as follows:
 
-1. At the **Week-13 studio**, each student submits a **reproducibility package**
-   (clean-run Colab notebook + data + documentation, SEED = 464).
-2. **You anonymize:** strip identifying headers and reassign packages so no
-   student receives their own or can identify the author.
-3. Each student **reproduces** the assigned package from scratch and **attests**
-   whether the headline result runs, then red-teams where it is fragile, using
-   the GenAI Studio **Reproducibility Auditor** role as a second opinion.
-4. The **replication + red-team report** is due Sun Nov 29 (async board
-   exchange). Replication + red-team is **5%** of the course grade.
+1. Each student brings a **reproducibility package** (clean-run Colab notebook +
+   data or access recipe + environment record + README, SEED = 464).
+2. On the Week-15 Wednesday, colleagues exchange packages and run each other's
+   capsule from the written instructions alone while the author remains silent.
+3. Each runner records whether the headline result and its uncertainty reproduce,
+   every question the instructions forced them to ask, and every mismatch.
+4. Friday is the repair and submission block for M16. M16 counts in Final Project
+   Milestones and supplies evidence for the Final Project's Final Research
+   Artifact and Individual Research Process items; there is no separate 5%
+   replication category.
 
 ---
 
 ## 8. The defense schedule and end of term
 
-- **Final defenses — meetings 42–43 (Wed Dec 9 + Fri Dec 11).** Each student
-  delivers a public **evidence defense** of the whole project and their AI
-  collaboration. Fold the defense grade into **M17**.
+- **Final defenses — across the Week 15–16 defense blocks, with the final round
+  on Fri Dec 11.** Each student delivers a public **Evidence Defense** of the
+  whole project and their AI collaboration. Record it in the Final Project's
+  **Instructor Evaluation and Evidence Defense** item (20% of Final Project,
+  6 course points) and carry the evidence into M17.
 - **M17 — Fri Dec 11 (terminal).** Final research chapter + AI-management
-  portfolio, submitted at the closing ceremony. No revision window.
+  portfolio, submitted at the closing ceremony. The paper/chapter/note is the
+  Final Project's 30% internal item (9 course points), not a separate course
+  category. No revision window.
 - **End-of-term wrap:**
   1. Grade M17 and the defenses against the shared rubric menu.
   2. **Archive the course:** confirm the site is rendered and pushed

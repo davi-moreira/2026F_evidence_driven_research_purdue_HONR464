@@ -20,8 +20,11 @@ checked it. Milestone weights live in the syllabus; instructions and
 rubrics live one page per milestone, like this one.
 
 This is the one milestone in the course whose artifact is about **someone else's
-research**. It is graded on completion and on the quality of your criticism, not
-on your own poster.
+research**. The **M12 milestone score** records completion of the four-review
+cycle, the response record, timeliness, and carry-forward into your poster. The
+separate **Final Project Peer Review item** (10% of Final Project, or 3 course
+points) scores the quality of your criticism using the rubric below. The same
+score is not entered twice, and neither score evaluates your own poster.
 
 ---
 
@@ -114,7 +117,23 @@ two readers failing the same way without having discussed it.
 
 ---
 
-## Grading Rubric (100 points)
+## M12 milestone process score (100 points)
+
+This score is entered only in **Final Project Milestones**.
+
+| Process criterion | Points |
+|---|---:|
+| Four review surveys and the response record submitted by the deadline | 40 |
+| Complete cycle: every colleague covered and every received finding dispositioned | 30 |
+| Repairs carried forward into the next poster version, with the version reason recorded | 15 |
+| Required notebook work, AI Research Ledger entry, and dossier update present | 15 |
+| **Total** | **100** |
+
+## Final Project Peer Review rubric (100 points)
+
+This score is entered only in the **Peer Review** item inside Final Project. It
+evaluates the quality of the criticism and adjudication, not whether the M12
+checkpoint arrived on time.
 
 | Criterion | Excellent | Proficient | Developing | Inadequate |
 |---|---|---|---|---|

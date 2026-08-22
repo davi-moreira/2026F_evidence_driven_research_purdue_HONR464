@@ -20,9 +20,14 @@ cumulative **Research Project Dossier** and appends at least one row to your
 checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
-This milestone — the **final poster lock** — is the largest single artifact in
-the course (the 8-point slice of the Poster & Expo component). It is a
-**terminal artifact**: **the deadline governs and there is no revision window.**
+This milestone produces the locked poster later assessed inside the Final
+Project's **Poster and Expo Presentation** and **Instructor Evaluation and
+Evidence Defense** components. The M13 submission itself also counts in the
+separate **Final Project Milestones** category: that score records the on-time,
+gate-cleared lock and version record, while the Final Project items evaluate the
+poster, presentation, and defense at terminal quality. No rubric score is copied
+between categories. It is a **terminal artifact**:
+**the deadline governs and there is no revision window.**
 Sunday, November 8, 11:59 PM is the real production deadline, not a buffer. It is a print deadline: your file goes straight to the press on a run shared with QM 47400. The
 poster you submit is the poster strangers read at the Expo on November 17. There
 is no "I will fix it after submission," because after this is the Expo.
@@ -306,10 +311,25 @@ pre-submission checklist.
 
 ---
 
-## Grading Rubric (100 points)
+## M13 milestone process score (100 points)
+
+This score is entered only in **Final Project Milestones**.
+
+| Process criterion | Points |
+|---|---:|
+| Required files submitted by the terminal deadline and open correctly | 30 |
+| Both blocking gates recorded and cleared before the lock | 30 |
+| Dated package, manifest, poster version, and reason for the version agree | 20 |
+| AI Research Ledger, signed lock checklist, and dossier update present | 20 |
+| **Total** | **100** |
+
+## Final Project poster-quality rubric (100 points)
 
 Four bands on the course's five shared virtues
-(`planning/ASSESSMENT_ARCHITECTURE.md`).
+(`planning/ASSESSMENT_ARCHITECTURE.md`). This score supplies the poster-quality
+evidence for **Poster and Expo Presentation**. The Final Project item score is
+`0.70 × this poster-quality score + 0.30 × the M15 live Expo presentation
+score`. Do not enter either score as the M13 milestone score.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
@@ -340,7 +360,7 @@ graded. Neither gate can be averaged away by strong work elsewhere.
 **Revision: none — this is a terminal artifact.** The deadline governs and there
 is no post-hoc revision, announced from week 1. Everything after this milestone
 is delivery and depth, and the audience on November 17 reads whatever you submit
-by 5:00 PM on November 6.
+by 11:59 PM on November 8.
 
 ## Penalties
 

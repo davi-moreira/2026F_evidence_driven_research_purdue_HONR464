@@ -3,7 +3,7 @@
 Authoritative reconciliation of the v2 grading system for `syllabus.qmd`.
 Philosophy: **no conventional midterm or final exam.** The course assesses the
 research chain itself — a semester-long individual project carried through
-sixteen milestones (M1–M17), presented at the Purdue Fall Undergraduate Research
+seventeen milestones (M1–M17), presented at the Purdue Fall Undergraduate Research
 Expo, and closed with a public evidence defense and a reproducible final chapter.
 Grading rewards correctness, transparency, reproducibility, question-design
 (compass) alignment, and responsible interpretation — **never coding elegance**
@@ -11,67 +11,103 @@ Grading rewards correctness, transparency, reproducibility, question-design
 
 The v1 six-component / M01–M23 system is preserved at git tag `v1-compass-build`.
 Component weights were **CONFIRMED 2026-07-27 (D22)**, split attendance/
-participation **2026-07-29 (D31)**, and match `course_config.yaml assessment:`
-and the syllabus Assessments table exactly. The seven-component proposal this
-file originally carried is superseded; its within-group weighting notes below
-remain as drafting history for the milestone rubrics.
+participation **2026-07-29 (D31)**, then revised by **D51 (2026-08-22)** to
+adopt QM474's operative Final Project grading proportions. D51 removes the
+standalone Research artifact category, moves its 10 course points into Final
+Project, and preserves the paper/chapter/note as a named Final Project
+deliverable. This file, `course_config.yaml assessment:`, and the syllabus
+Assessments table must match exactly.
 
-## The confirmed components (100%) — D22/D31, colleague audits per D41
+## The confirmed course components (100%) — D51
 
 | Component | Weight | What it contains |
 |---|---:|---|
 | **Attendance** (iClicker) | **1%** | 85% attendance target |
-| **Participation** (rubric) | **9%** | Notebook completion (executed cells + written responses), feedback surveys, in-class exercises — and the **colleague audits** (D41): best 8 of the 10 scored Studio audits on the simulated colleague's artifacts (`project/colleague/audit_rubric.md`) |
+| **Participation** (rubric) | **9%** | Feedback surveys, lecture-notebook completion, and other constructive contributions to the course; colleague audits remain one form of constructive contribution |
 | **Quizzes** | **20%** | Weekly Friday printed MC topic quizzes |
 | **Student Research Lead (SRL) performance** | **20%** | Flipped-lecture leads scored on the SRL rubric (`project/srl/srl_rubric.md`) |
 | **Final Project Milestones** | **20%** | M1–M17 submissions (each presenting a book Milestone version; kick off → develop → submit → revise) |
-| **Final Project** | **20%** | The locked poster, Expo presentation, and evidence defense |
-| **Research artifact** (paper/chapter/note) | **10%** | The research note v1 grown into the final chapter |
+| **Final Project** | **30%** | Final paper/chapter/note, individual research-process and AI-management portfolio, peer review, poster and Expo presentation, instructor evaluation, and Evidence Defense |
 | | **100%** | |
 
-## Provisional within-group weighting
+## QM474 → HONR 46400 Final Project mapping
 
-Sub-weights sum to each group total; all are provisional pending instructor
-confirmation. Presentations are graded **inside** each milestone's rubric (a
-"presented + incorporated feedback" row), not as a separate ledger.
+The reference is QM474's Fall 2026 canonical project contract,
+`../../predictive_analytics/2026F_predictive_analytics_QM474/_final_project/2026F/final_project_milestone_reference.md`:
+Milestone Deliverables 30% · Peer Evaluation 20% · Peer Review 10% · Conference
+Poster Presentation 20% · Instructor/TA Evaluation 20%. HONR preserves those
+proportions, but its five projects are individual (`course.project_mode`), and
+its M1–M17 developmental chain already has a separate 20% course category.
 
-**Component 3 — Milestones M1–M10 (25%).** Early scoping milestones lighter; the
-declaration, protocol, and first-evidence milestones heavier.
+| QM474 component and function | HONR individual-project equivalent | Share of Final Project | Course points | Grading home |
+|---|---|---:|---:|---|
+| Milestone Deliverables — integrate the work produced across the project | **Final Research Artifact and Milestone Synthesis** — the final paper, chapter, or research note | 30% | 9 | M17 final research artifact; the separate M1–M17 category continues to grade development |
+| Peer Evaluation — establish accountability for the work | **Individual Research Process and AI-Management Portfolio** — the student's own ledger, decisions, checks, conflicts, and overrides | 20% | 6 | Full-semester AI Research Ledger and M17 portfolio; no teammate ratings |
+| Peer Review — improve another project's communication | **Peer Review** — each student reviews classmates' posters and records how criticism was used | 10% | 3 | M12 structured review submission and its carry-forward record |
+| Conference Poster Presentation | **Poster and Expo Presentation** — one individual poster and its required public presentation | 20% | 6 | M13 locked poster plus the live Expo presentation recorded through M15 |
+| Instructor/TA Evaluation — evaluate the finished submission | **Instructor Evaluation and Evidence Defense** — the instructor evaluates integrative command of the final dossier through the individual oral defense | 20% | 6 | Evidence Defense Protocol rubric; no TA is assumed |
+| | **Total** | **100%** | **30** | |
 
-| M1 | M2 | M3 | M4 | M5 | M6 | M7 | M8 | M9 | M10 |
-|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 2 | 2 | 2 | 3 | 2.5 | 2.5 | 2.5 | 3 | 2.5 | 3 |
+The QM474 group contract, confidential intra-group peer evaluation, group-member
+score adjustments, group meeting cycle, and Poster-to-Product assessment do not
+transfer. HONR's structured review of classmates' posters is cross-project peer
+critique, not a group-project requirement.
 
-**Component 4 — Poster & Expo (20%).** M13 final poster **8** · M17 presentation
-package **4** · M15 **8** (within M15: live Expo presentation **5**, reflection +
-poster-criticism portfolio **3**).
+## Final Project gradebook arithmetic
 
-**Component 6 — M16–M17 (15%).** M16 research note + reproducibility capsule
-**6** · M17 **9** (within M17: final chapter + AI-management portfolio **6**,
-live evidence defense **3**).
+The five project shares are exact QM474 proportions and sum to 100. Applied to
+HONR's 30% Final Project category, they contribute **9 + 6 + 3 + 6 + 6 = 30**
+course points. The final paper/chapter/note therefore remains explicitly graded
+inside Final Project at 9 course points. Davi's instruction moves all 10 points
+from the former standalone category into the 30% Final Project umbrella; the
+QM474 proportions redistribute one of those points across the other terminal
+evidence rather than preserving a separate 10-point artifact line.
 
-**Component 1 (10%).** Notebook completion **5** · Claim Tickets **3** · studio /
-red-team citizenship **2**.
+Some milestones produce evidence later assessed in a Final Project item. The
+two scores answer different questions: **Final Project Milestones** grades the
+checkpoint's completion, timeliness, versioning, and response to feedback;
+**Final Project** grades the resulting review, artifact, portfolio,
+presentation, or defense at terminal quality. Never copy the same rubric score
+into both categories. For example, M12 records completion of the four-review
+cycle and response record while the Final Project Peer Review item scores the
+quality of the criticism; M13 records the on-time, gate-cleared poster lock
+while the Poster and Expo item scores the locked poster and live presentation.
 
-**Component 2 (15%).** Five leads, **3 points each** (5 × 3 = 15); each lead's
-raw 100-point rubric score scales to its 3-point share.
+## Deterministic Final Project scoring rules
 
-**Component 7 (10%).** Short concept checks **6** · claim-analysis exercises
-**4** (Calling Bullshit–style analyses are optional per the locked CB decision;
-if CB is skipped, the 4 points fold into an additional concept check).
+Each Brightspace item receives one independently computable 0–100 score:
+
+| Final Project item | Scoring rule |
+|---|---|
+| Final Research Artifact and Milestone Synthesis | M17 **Final Research Artifact rubric** (100 points) |
+| Individual Research Process and AI-Management Portfolio | M17 **Individual Research Process and AI-Management Portfolio rubric** (100 points) |
+| Peer Review | M12 **Final Project Peer Review rubric** (100 points) |
+| Poster and Expo Presentation | `0.70 ×` M13 **poster-quality rubric** + `0.30 ×` M15 **live Expo presentation rubric** |
+| Instructor Evaluation and Evidence Defense | **Evidence Defense Protocol rubric** (100 points), scored by the instructor using the final dossier as the evidence base |
+
+The `70/30` poster/live split is an HONR operational ruling inside the imported
+20% Poster Presentation slot, not an additional QM474 weight: it gives the
+persistent, auditable poster most of the item while reserving a material share
+for public explanation and question handling. The item remains 20% of Final
+Project (6 course points).
+
+The M12/M13/M15/M17 milestone scores are separate process scores. None is an
+input to these formulas, and no Final Project score is copied into the milestone
+category.
 
 ## Why these weights
 
-- **Development outweighs any single artifact** (25% for M1–M10 vs 8% for the
-  poster itself): the course's claim is that the *chain* — declare, diagnose,
-  redesign, verify — is the learning, and the weights say so out loud.
-- **The flipped classroom is graded at 15%** because Mon/Wed lectures *are* the
-  SRL performances; leading well is a rehearsal of the Expo and the defense.
-- **Post-Expo work is substantive by construction** (20% across components 5–6
-  lands after Nov 17), enforcing that the semester does not end at the Expo.
-- **Nothing is auto-graded MC** by default; the MC option-length parity rule and
-  `audit_answer_length.py` stay dormant unless concept checks later move to
-  Brightspace auto-grading (allowed, not planned).
+- **Development and synthesis stay distinct.** The separate 20% milestone
+  category rewards the versioned research chain; the 30% Final Project rewards
+  what that chain produces and what the student can defend at the end.
+- **The final artifact remains load-bearing.** The paper/chapter/note is the
+  largest single Final Project component (9 course points), with another 6
+  points evaluating the individual process and AI-management record behind it.
+- **Public criticism matters twice without becoming group work.** Peer Review
+  grades the quality of criticism given; Poster and Expo Presentation grades the
+  individual artifact and public communication.
+- **The flipped classroom remains 20%.** Leading research investigations is a
+  repeated rehearsal of the same judgment and defense expected in the project.
 
 ## Rubric DNA — five virtues, one menu
 
@@ -117,9 +153,9 @@ B− ≥ 80, C+ ≥ 77, C ≥ 73, C− ≥ 70, D ≥ 60, F < 60. **No curve** (n
 **Revision.** Feedback returns within 3 days of each milestone; most milestones
 accept a revised version within **7 days** of feedback for up to half the lost
 points (revising is part of the graded craft). **Terminal artifacts have no
-revision window** — the deadline governs: **M13** final poster (Fri Nov 6,
-5:00 PM), **M17** final chapter + portfolio (Fri Dec 11), and the live **Expo
-presentation** (Tue Nov 17, a graded component of M15).
+revision window** — the deadline governs: **M13** final poster (Sun Nov 8,
+11:59 PM), **M17** final chapter + portfolio (Fri Dec 11), and the live **Expo
+presentation** (Tue Nov 17, recorded through M15).
 
 **Late.** −10% per day up to 3 days, then not accepted; documented emergencies
 handled individually per Purdue policy.
@@ -155,5 +191,5 @@ The Student Research Lead score (Component 2) is produced per slot:
    is the improvement window, informed by peer feedback
    (`srl_peer_feedback_form.md`) and the instructor's notes.
 
-Each slot's 100-point score scales to its 3-point course share; the five slots
-sum to the 15% component.
+Each slot's 100-point score scales to its 4-point course share; the five slots
+sum to the 20% component.
