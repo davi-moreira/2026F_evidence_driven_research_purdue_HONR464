@@ -46,7 +46,7 @@ jobs:
       - name: Calendar backbone (43 = 42 in-person + 1 async)
         run: python3 scripts/validate_calendar.py --emit-csv
 
-      - name: Meeting schedule builds against the backbone (43 x 34)
+      - name: Meeting schedule builds against the backbone (43 x 35)
         run: python3 scripts/build_meeting_schedule.py
 
       - name: Milestone system consistent (M0-M15 anchors)
