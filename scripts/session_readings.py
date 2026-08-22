@@ -168,3 +168,15 @@ def rdss_note(rdss_reading: str) -> str:
     if clause.count("(") < clause.count(")"):
         clause = clause.rstrip(")").rstrip(" ,;")
     return clause
+
+
+def studio_pages() -> dict[int, dict]:
+    """Studio rank -> {title (as published), url_path} for the studio page.
+
+    The studio page is the book's own home for that Studio, so the schedule's
+    Studio column links there rather than restating what the Studio is.
+    """
+    arch = load_architecture()
+    return {s["rank"]: {"title": f"Studio {s['rank']}: {s['title']}",
+                        "url_path": f"studios/studio{s['rank']:02d}-{s['id']}.html"}
+            for s in arch["stations"]}

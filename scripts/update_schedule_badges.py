@@ -4,8 +4,10 @@ schedule, adding a Colab badge for every topic notebook whose STUDENT file
 exists in notebooks/student/.
 
 This is the single source of truth for the public schedule page: one row per
-MWF meeting (43 rows), grouped by course week, generated from
-planning/MEETING_SCHEDULE.csv + scripts/notebooks_map.py. Badges appear
+MWF meeting (43 rows), generated from planning/MEETING_SCHEDULE.csv +
+scripts/notebooks_map.py. Week and Studio are COLUMNS repeated on every row,
+not spanning group headers, so any row read on its own still says which Studio
+it belongs to (and every row stays sortable and filterable). Badges appear
 automatically as each nbNN_*_student.ipynb is finalized — run this after
 generating a student notebook (also wired as a Claude Code PostToolUse hook).
 
@@ -27,7 +29,8 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 from notebooks_map import (NOTEBOOKS, colab_badge, student_filename,  # noqa: E402
                            nb_of, session_kind, lecture_labels)
-from session_readings import lesson_index, rdss_note, render_cell  # noqa: E402
+from session_readings import (lesson_index, rdss_note,  # noqa: E402
+                              render_cell, studio_pages)
 
 
 def tracked_students() -> set[str]:
@@ -53,10 +56,14 @@ editor: visual
   .overflow-table th, .overflow-table td {
     padding: 0.3rem; text-align: left; word-wrap: break-word; vertical-align: top;
   }
-  .overflow-table th:nth-child(1), .overflow-table td:nth-child(1) { width: 4%; }
-  .overflow-table th:nth-child(2), .overflow-table td:nth-child(2) { width: 9%; }
-  .overflow-table th:nth-child(5), .overflow-table td:nth-child(5) { width: 12%; }
-  .overflow-table th:nth-child(6), .overflow-table td:nth-child(6) { width: 30%; }
+  .overflow-table th:nth-child(1), .overflow-table td:nth-child(1) { width: 3%; }
+  .overflow-table th:nth-child(2), .overflow-table td:nth-child(2) { width: 7%; }
+  .overflow-table th:nth-child(3), .overflow-table td:nth-child(3) { width: 5%; }
+  .overflow-table th:nth-child(4), .overflow-table td:nth-child(4) { width: 13%; }
+  .overflow-table th:nth-child(5), .overflow-table td:nth-child(5) { width: 19%; }
+  .overflow-table th:nth-child(6), .overflow-table td:nth-child(6) { width: 7%; }
+  .overflow-table th:nth-child(7), .overflow-table td:nth-child(7) { width: 12%; }
+  .overflow-table th:nth-child(8), .overflow-table td:nth-child(8) { width: 34%; }
   .below-table { font-size: 0.85rem; line-height: 1.2; margin-top: 1rem; }
 </style>
 ```
@@ -123,6 +130,26 @@ def pretty_date(iso: str, day: str) -> str:
     return f"{day} {d.strftime('%b %-d')}"
 
 
+def week_studio(unit: str, studios: dict[int, dict]) -> tuple[str, str]:
+    """`unit` -> ("Week 4", the Studio cell), repeated on every row.
+
+    Weeks 1-12 are Studios 1-12 (D49), so the cell links to that Studio's own
+    page in the book; the four dated exception weeks have no Studio and carry
+    their label instead.
+    """
+    m = re.match(r"Week (\d+) — (.+)$", unit)
+    if not m:
+        return "", f"**{unit}**"
+    n, label = int(m.group(1)), m.group(2)
+    st = studios.get(n)
+    if st and st["title"] == label:
+        cell = (f"**[{label}](book/{st['url_path']})"
+                f"{{target=\"_blank\"}}**")
+    else:
+        cell = f"*{label}*"
+    return f"**Week {n}**", cell
+
+
 def build() -> str:
     with open(SCHEDULE_CSV, newline="") as f:
         rows = list(csv.DictReader(f))
@@ -131,16 +158,14 @@ def build() -> str:
     labels = lecture_labels(rows)
     lines = [HEADER, "::: overflow-table\n"]
     index = lesson_index()
-    lines.append("| # | Date | Topic | Notebook | Milestone "
+    studios = studio_pages()
+    lines.append("| # | Date | Week | Studio | Topic | Notebook | Milestone "
                  "| Required reading |")
-    lines.append("|---|------|-------|----------|-----------|-----------|")
+    lines.append("|---|------|------|--------|-------|----------|-----------"
+                 "|------------------|")
 
-    current_unit = None
     for r in rows:
-        unit = r["unit"]
-        if unit != current_unit:
-            current_unit = unit
-            lines.append(f"| | | **{unit}** | | | |")
+        week, studio = week_studio(r["unit"], studios)
 
         n = nb_of(r["other_material"])
         badge = ""
@@ -176,16 +201,18 @@ def build() -> str:
         materials = "<br>".join(b for b in blocks if b and b != "—") or "—"
 
         lines.append(
-            f"| {r['meeting']} | {pretty_date(r['date'], r['day'])} | {title} "
-            f"| {badge} | {mile} | {materials} |"
+            f"| {r['meeting']} | {pretty_date(r['date'], r['day'])} | {week} "
+            f"| {studio} | {title} | {badge} | {mile} | {materials} |"
         )
 
         # The URC Expo sits between M35 and M36 (Tue Nov 17, not an MWF meeting).
         if r["meeting"] == "35":
             lines.append(
-                "| — | Tue Nov 17 | **🎓 Purdue Fall Undergraduate Research "
-                "Expo — REQUIRED poster presentation (graded M12 component)** "
-                "| | M12 | URC Expo |"
+                f"| — | Tue Nov 17 | {week} | {studio} | **🎓 Purdue Fall "
+                "Undergraduate Research Expo — REQUIRED poster presentation "
+                "(graded M12 component)** | | M12 · Book Milestone 10 v3 "
+                "| *No new chapter — you present the artifact Studio 10 "
+                "built.* |"
             )
 
     lines.append("\n:::")
