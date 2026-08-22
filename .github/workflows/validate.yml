@@ -98,6 +98,19 @@ jobs:
       - name: Milestone Book Anchors projection freshness
         run: python3 scripts/build_milestone_anchors.py --check
 
+      # D49: the course IS the book applied, so every session on the public
+      # schedule names its chapters — in the book's own published wording.
+      # This holds those per-session sets equal to the crosswalk, and the
+      # studio titles equal to the studio pages.
+      - name: Per-session required readings ↔ crosswalk ↔ book titles
+        run: python3 scripts/validate_session_readings.py
+
+      - name: Schedule page freshness (readings + badges)
+        run: python3 scripts/update_schedule_badges.py --check
+
+      - name: Material + Instructor page freshness
+        run: python3 scripts/build_material_page.py --check
+
       - name: Station pages + workbooks projection freshness
         run: python3 scripts/build_station_pages.py --check
 

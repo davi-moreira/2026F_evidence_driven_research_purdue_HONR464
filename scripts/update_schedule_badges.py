@@ -27,6 +27,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 from notebooks_map import (NOTEBOOKS, colab_badge, student_filename,  # noqa: E402
                            nb_of, session_kind, lecture_labels)
+from session_readings import lesson_index, rdss_note, render_cell  # noqa: E402
 
 
 def tracked_students() -> set[str]:
@@ -55,6 +56,7 @@ editor: visual
   .overflow-table th:nth-child(1), .overflow-table td:nth-child(1) { width: 4%; }
   .overflow-table th:nth-child(2), .overflow-table td:nth-child(2) { width: 9%; }
   .overflow-table th:nth-child(5), .overflow-table td:nth-child(5) { width: 12%; }
+  .overflow-table th:nth-child(6), .overflow-table td:nth-child(6) { width: 30%; }
   .below-table { font-size: 0.85rem; line-height: 1.2; margin-top: 1rem; }
 </style>
 ```
@@ -67,10 +69,18 @@ one notebook per topic), and **every Friday is a studio** — a short
 multiple-choice quiz on the week's topic, a research stand-up, the next
 project milestone kicked off from its brief, and the rest of the class spent
 working on your milestone and research project. Each course milestone
-presents a book Milestone version (the bridge is stated in its brief). Open each notebook in Colab
-from its badge; milestone instructions and rubrics are on Brightspace. Topic
-resources are also cataloged on the [Material](material.qmd) page, and every
-dataset the course uses is in the
+presents a book Milestone version (the bridge is stated in its brief).
+
+**Every session names its required reading.** The course *is* the book applied:
+the **Required reading** column lists the [**EDR|AI**](book/index.html) chapters
+that session needs, by their chapter titles, each linked to the book. Read them
+**before** the session they are listed under. On Friday the week's chapters come
+back as **due**: that studio is the milestone, and you submit those chapters'
+**"It is your turn"** sections with it. RDSS chapters are the *recommended*
+companion, never a substitute. Open each notebook in Colab from its badge;
+milestone instructions and rubrics are on Brightspace. Topic resources are also
+cataloged on the [Material](material.qmd) page, and every dataset the course
+uses is in the
 [course datasets (.zip)](notebooks/data/honr46400_datasets.zip) bundle.
 
 '''
@@ -120,7 +130,9 @@ def build() -> str:
     tracked = tracked_students()
     labels = lecture_labels(rows)
     lines = [HEADER, "::: overflow-table\n"]
-    lines.append("| # | Date | Topic | Notebook | Milestone | Materials |")
+    index = lesson_index()
+    lines.append("| # | Date | Topic | Notebook | Milestone "
+                 "| Required reading |")
     lines.append("|---|------|-------|----------|-----------|-----------|")
 
     current_unit = None
@@ -147,20 +159,21 @@ def build() -> str:
         mile = r["milestone_developed"]
         # compact for the site: keep the course id + any "Book Milestone N"
         # bridge token; drop the long title between them (D41)
-        bm = re.search(r"Book Milestone \d+[^|)]*", mile)
+        bm = re.search(r"Book Milestone \d+[^|]*", mile)
         mile = re.sub(r" — [^|]*", "", mile).strip()
         mile = mile.replace("(presented + submitted)", "").strip()
         if bm:
             mile = f"{mile} · {bm.group(0).strip()}" if mile else bm.group(0).strip()
 
-        reading = r["rdss_reading"]
-        reading = re.sub(r"\s*\(book\.declaredesign\.org\)", "", reading)
-        reading = re.sub(r"\s*\(([^)]*)\)$", "", reading).strip()
-        if reading.startswith("(") or not reading:
-            reading = "—"
-        materials = reading
+        # Chapter identity is GENERATED from the book (session_readings), so
+        # the page can never paraphrase a title the book publishes.
+        blocks = [render_cell(r["book_reading"], index)]
+        rec = rdss_note(r["rdss_reading"])
+        if rec:
+            blocks.append(f"*Recommended companion — RDSS {rec}.*")
         if r["cb_reading"].strip():
-            materials += "<br>*+ optional CB case*"
+            blocks.append("*Optional: Calling Bullshit case study.*")
+        materials = "<br>".join(b for b in blocks if b and b != "—") or "—"
 
         lines.append(
             f"| {r['meeting']} | {pretty_date(r['date'], r['day'])} | {title} "

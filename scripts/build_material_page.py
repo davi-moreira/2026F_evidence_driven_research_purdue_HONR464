@@ -29,6 +29,8 @@ sys.path.insert(0, str(REPO / "scripts"))
 from notebooks_map import (NOTEBOOKS, REPO_SLUG, colab_badge,  # noqa: E402
                            instructor_filename, lecture_count,
                            load_schedule_rows, nb_of, student_filename)
+from session_readings import (by_mode, chapter_link, lesson_index,  # noqa: E402
+                              rdss_note)
 
 PRIVATE_SLUG = f"{REPO_SLUG}_instructor"
 ZIP_LINK = ("[all datasets (.zip)](notebooks/data/honr46400_datasets.zip)")
@@ -62,18 +64,21 @@ toc: false
 
 # Course Material
 
-One notebook per topic, listed in course order. Open a notebook in Colab from
-its badge (no installation needed), download every dataset the course uses in
-one bundle, and find the calendar on the [Schedule](schedule.qmd) page.
-Required readings come from the course book,
+One Studio per week, listed in course order — the week's classroom lab, its
+datasets, and **the book chapters that week requires**. Open a notebook in
+Colab from its badge (no installation needed), download every dataset the
+course uses in one bundle, and find the per-session calendar on the
+[Schedule](schedule.qmd) page.
+
+**This course is the book, applied.** Required reading comes from
 [**EDR|AI** — *Evidence-Driven Research in the Age of AI*](book/index.html){{target="_blank"}}
-(a work in progress, under development across the semester); the matching RDSS
-chapters are recommended companions. The book is a self-contained manual with
-its **own companion Colab notebook per chapter**; the notebooks below are the
-course's classroom labs, derived from the book's chapters. Each weekly
-milestone names its **book anchor** — the book chapters whose closing **"It is
-your turn"** sections you complete and submit with that milestone. Milestone
-instructions and rubrics are on Brightspace.
+(a work in progress, growing across the semester). Monday and Wednesday teach
+the Studio's chapters and the work their closing **"It is your turn"** sections
+ask for; **Friday is that Studio's milestone**, and those completed sections are
+submitted with it. Chapter titles below are the book's own — follow a link to
+land on the chapter, where a badge opens its **companion Colab notebook**. The
+matching RDSS chapters are a *recommended* companion, never a substitute.
+Milestone instructions and rubrics are on Brightspace.
 
 '''
 
@@ -110,7 +115,10 @@ toc: false
 
 # Instructor Material
 
-Instructor notebooks (with solutions) and session guides, one row per topic.
+Instructor notebooks (with solutions) and session guides, one row per Studio,
+each with the week's required **EDR|AI** chapters — the same reading students
+see on [Material](material.qmd) and [Schedule](schedule.qmd), generated from the
+book's own manifest so the three surfaces cannot drift apart.
 Both live in the **private** repository
 [`{PRIVATE_SLUG}`](https://github.com/{PRIVATE_SLUG}){{target="_blank"}} —
 opening them requires being signed in to GitHub as the instructor. One-time
@@ -157,29 +165,29 @@ BOOK_PART_SLUGS = {
 }
 
 
-def book_chapters_by_nb() -> dict[int, list[tuple[int, str]]]:
-    """nb number -> [(display chapter number, site-relative html link)].
+def book_chapters_by_nb() -> dict[int, list[dict]]:
+    """nb number -> the lessons that notebook's week owns, in book order.
 
-    Links come from BOOK_ARCHITECTURE.yml's immutable `url_path`, never from
-    globbing a numeric filename prefix (round-8 P1 / A10: display numbers are
-    derived labels; parsing them out of filenames breaks on insertion). The
+    Identity (display number, PUBLISHED title, url_path) comes from
+    session_readings/book_manifest — never from a numeric filename prefix
+    (round-8 P1 / A10: display numbers are derived labels). The
     primary-notebook mapping comes from the crosswalk's home anchors.
     """
     import yaml
-    arch = yaml.safe_load((REPO / "planning" / "BOOK_ARCHITECTURE.yml").read_text())
     cw = yaml.safe_load((REPO / "planning" / "COURSE_BOOK_CROSSWALK.yml").read_text())
-    primary: dict[str, int] = {}
+    primary: dict[str, tuple[int, str]] = {}
     for r in cw["rows"]:
         for a in r.get("assignments", []):
             if a.get("home_anchor"):
-                primary[a["lesson"]] = int(r["nb"][2:])
-    out: dict[int, list[tuple[int, str]]] = {}
-    active = sorted((l for l in arch["lessons"] if l["state"] == "active"),
-                    key=lambda l: l["rank"])
-    for i, lesson in enumerate(active, start=1):
-        nb = primary.get(lesson["id"])
-        if nb is not None:
-            out.setdefault(nb, []).append((i, f"book/{lesson['url_path']}"))
+                primary[a["lesson"]] = (int(r["nb"][2:]), a["requirement"])
+    out: dict[int, list[dict]] = {}
+    for lesson in lesson_index().values():
+        hit = primary.get(lesson["id"])
+        if hit is not None:
+            nb, requirement = hit
+            out.setdefault(nb, []).append({**lesson, "requirement": requirement})
+    for v in out.values():
+        v.sort(key=lambda l: l["display"])
     return out
 
 
@@ -192,10 +200,21 @@ def topic_info() -> list[dict]:
         n = nb_of(r["other_material"])
         if n is None:
             continue
-        d = info.setdefault(n, {"datasets": set(), "async": False, "rdss": []})
-        for ch in re.findall(r"ch\.\s*(\d+)", r["rdss_reading"]):
-            if ch not in d["rdss"]:
-                d["rdss"].append(ch)
+        d = info.setdefault(n, {"datasets": set(), "async": False, "rdss": [],
+                                "unit": r["unit"], "revisits": []})
+        rec = rdss_note(r["rdss_reading"])
+        if rec:
+            # One catalog row aggregates a whole week, and two sessions often
+            # recommend the same RDSS chapters in different words. Keep a note
+            # only when it brings a chapter the row does not already carry.
+            chs = set(re.findall(r"ch\.\s*(\d+)", rec))
+            known = set().union(*(set(re.findall(r"ch\.\s*(\d+)", n))
+                                  for n in d["rdss"])) if d["rdss"] else set()
+            if rec not in d["rdss"] and not (chs and chs <= known):
+                d["rdss"].append(rec)
+        for lid in by_mode(r["book_reading"]).get("revisit", []):
+            if lid not in d["revisits"]:
+                d["revisits"].append(lid)
         if r["modality"] == "async-online":
             d["async"] = True
         for ds in ("lapop_brazil", "la_voter_file", "foos_etal",
@@ -207,7 +226,7 @@ def topic_info() -> list[dict]:
         d = info[n]
         d["nb"] = n
         d["lectures"] = lecture_count(n, rows)
-        d["chapters"] = sorted(chapters.get(n, []))
+        d["chapters"] = chapters.get(n, [])
         ordered.append(d)
     return ordered
 
@@ -219,14 +238,33 @@ def sessions_label(d: dict) -> str:
     return f"{n} lecture{'s' if n != 1 else ''}"
 
 
-def readings_label(d: dict) -> str:
+#: Course policy on a chapter that does not bind every student (crosswalk C1).
+CONDITION = {
+    "route-required": " *— your declared route, or the contrast assigned to you*",
+    "optional": " *— only if your design has stages*",
+}
+
+
+def readings_label(d: dict, index: dict[str, dict]) -> str:
+    """Required EDR|AI chapters BY THEIR PUBLISHED TITLES, then the RDSS note.
+
+    Titles are read from each chapter's own front matter, so this page can
+    never carry a paraphrase of something the book publishes differently.
+    """
     parts = []
     if d["chapters"]:
-        links = ", ".join(f"[ch. {ch}]({href}){{target=\"_blank\"}}"
-                          for ch, href in d["chapters"])
-        parts.append(f"**EDR\\|AI** {links}")
+        links = "<br>".join(chapter_link(l) + CONDITION.get(l.get("requirement"), "")
+                            for l in d["chapters"])
+        parts.append(f"**Required — EDR\\|AI**<br>{links}")
+    if d.get("revisits"):
+        seen = [index[i] for i in d["revisits"] if i in index]
+        seen.sort(key=lambda l: l["display"])
+        if seen:
+            parts.append("**Revisited this week**<br>"
+                         + "<br>".join(chapter_link(l) for l in seen))
     if d.get("rdss"):
-        parts.append(f"*RDSS ch. {', '.join(d['rdss'])} (recommended)*")
+        parts.append("*Recommended companion — RDSS "
+                     + "; ".join(d["rdss"]) + ".*")
     return "<br>".join(parts) if parts else "—"
 
 
@@ -245,18 +283,21 @@ def build_table(instructor: bool) -> str:
         lines.append("| Topic | Sessions | Notebook | Data | Readings |")
         lines.append("|-------|----------|----------|------|----------|")
 
+    index = lesson_index()
     for d in topic_info():
         n = d["nb"]
-        title = NOTEBOOKS[n][1]
-        topic = f"**Topic {n:02d} · {title}**"
+        # The unit string is held equal to the book's published studio title
+        # by scripts/validate_session_readings.py (check F).
+        week, _, studio = d["unit"].partition(" — ")
+        topic = f"**{studio or NOTEBOOKS[n][1]}**<br>*{week} · nb{n:02d}*"
         if instructor:
             lines.append(f"| {topic} | {sessions_label(d)} | {instructor_badge(n)} "
-                         f"| {guide_link(n)} | {readings_label(d)} |")
+                         f"| {guide_link(n)} | {readings_label(d, index)} |")
         else:
             badge = (colab_badge(n) if student_filename(n) in tracked
                      else f"*nb{n:02d} (coming)*")
             lines.append(f"| {topic} | {sessions_label(d)} | {badge} "
-                         f"| {data_cell(d)} | {readings_label(d)} |")
+                         f"| {data_cell(d)} | {readings_label(d, index)} |")
     lines.append("\n:::")
     return "\n".join(lines)
 
