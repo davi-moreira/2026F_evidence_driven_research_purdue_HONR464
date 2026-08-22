@@ -26,6 +26,12 @@ course:
   crn: "25596"
   meeting_pattern: "MWF"
   meeting_minutes: 50
+  credit_hours: 3
+  # Expected out-of-class work, stated on syllabus.qmd (audit M-F3): ~6 h/week
+  # (Purdue's standard is a minimum of 2 h out-of-class per contact hour), i.e.
+  # ~9 h/week total. Verified 2026-08-22 against the myPurdue class list for
+  # CRN 25596, which records 3.0 credit hours for all five enrolled students.
+  expected_outside_hours_per_week: 6
   modality: "in-person (1 async-online meeting)"
   # Meeting time, classroom, and office-hours time/room are deliberately NOT
   # recorded here or on any public page: they ship in the course syllabus
