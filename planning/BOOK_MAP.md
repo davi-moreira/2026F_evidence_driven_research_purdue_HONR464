@@ -51,8 +51,8 @@ Book project: `book/` (Quarto book) rendered into `docs/book/`.
 | V | 33 | Poster Criticism | nb10 |
 | V | 34 | Research Pitches, Talks, and Seminars | nb10 |
 | V | 35 | Difficult Questions and Uncertainty | nb10 |
-| VI — Research after the conference | 36 | Replication and Reproduction | nb11 |
-| VI | 37 | Open and Reusable Research Packages | nb11 |
-| VI | 38 | Managing Multiple AI Agents | nb12 |
-| VI | 39 | Conflicting Agents and Human Escalation | nb12 |
-| VI | 40 | Final Research and AI-Management Portfolio | nb12 |
+| VI — Research after the conference | 36 | Replication and Reproduction | nb15 |
+| VI | 37 | Open and Reusable Research Packages | nb15 |
+| VI | 38 | Managing Multiple AI Agents | nb16 |
+| VI | 39 | Conflicting Agents and Human Escalation | nb16 |
+| VI | 40 | Final Research and AI-Management Portfolio | nb16 |
