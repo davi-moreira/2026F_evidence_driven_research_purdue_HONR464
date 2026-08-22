@@ -162,6 +162,10 @@ def build() -> str:
             title = f"{title} *(Lecture {i}/{total})*"
 
         mile = r["milestone_developed"]
+        # M17 is retained in the internal planning chain for validator and
+        # archival consistency, but it is not a student-facing course milestone.
+        if mile.startswith("M17"):
+            mile = "No milestone"
         # compact for the site: keep the course id + any "Book Milestone N"
         # bridge token; drop the long title between them (D41)
         bm = re.search(r"Book Milestone \d+[^|]*", mile)
