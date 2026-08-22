@@ -64,21 +64,9 @@ toc: false
 
 # Course Material
 
-One Studio per week, listed in course order — the week's classroom lab, its
-datasets, and **the book chapters that week requires**. Open a notebook in
-Colab from its badge (no installation needed), download every dataset the
-course uses in one bundle, and find the per-session calendar on the
-[Schedule](schedule.qmd) page.
-
-**This course is the book, applied.** Required reading comes from
-[**EDR|AI** — *Evidence-Driven Research in the Age of AI*](book/index.html){{target="_blank"}}
-(a work in progress, growing across the semester). Monday and Wednesday teach
-the Studio's chapters and the work their closing **"It is your turn"** sections
-ask for; **Friday is that Studio's milestone**, and those completed sections are
-submitted with it. Chapter titles below are the book's own — follow a link to
-land on the chapter, where a badge opens its **companion Colab notebook**. The
-matching RDSS chapters are a *recommended* companion, never a substitute.
-Milestone instructions and rubrics are on Brightspace.
+Open a notebook from its Colab badge, find the readings and datasets for each
+Studio, or use the [Schedule](schedule.qmd) page for the meeting-by-meeting
+calendar. Milestone instructions and rubrics are on Brightspace.
 
 '''
 
@@ -94,9 +82,6 @@ automatically from the course repository, so the bundle is your offline copy.
 - **Blair, G., Coppock, A., & Humphreys, M.** (2023). *Research Design in the
   Social Sciences: Declaration, Diagnosis, and Redesign*. Princeton University
   Press. Read free online: [book.declaredesign.org](https://book.declaredesign.org/){{target="_blank"}}.
-- **Bergstrom, C. T., & West, J. D.** (2020). *Calling Bullshit: The Art of
-  Skepticism in a Data-Driven World* — optional companion; public case studies
-  at [callingbullshit.org](https://callingbullshit.org/){{target="_blank"}}.
 - Course datasets ship from the MIT-licensed `rdss` package (see
   [`notebooks/data/`](https://github.com/{REPO_SLUG}/tree/main/notebooks/data){{target="_blank"}}).
 

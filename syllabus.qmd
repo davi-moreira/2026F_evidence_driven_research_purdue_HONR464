@@ -55,47 +55,13 @@ By the conclusion of this course, you will be able to:
 
 7.  Communicate results effectively in written and oral formats.
 
-## How the Course Runs
-
-The course meets **Monday, Wednesday, and Friday** in person, in 50-minute sessions, and each day of the week has a fixed job.
-
-### What this course costs you in time
-
-HONR 46400 carries **3 credit hours**. Plan on roughly **6 hours of work per week outside class**, on top of the three 50-minute meetings — about **9 hours a week in total**. That figure is not a warning; it is the honest budget for a course that asks you to build one real research project across the semester, and it is what Purdue's credit-hour standard expects of a three-credit course.
-
-The hours are not spread evenly, and knowing their shape helps you plan:
-
--   **Before Monday and Wednesday**, you read the week's chapters and come with the "It is your turn" work started. Expect 2 to 3 hours.
--   **Before Friday**, you prepare for the weekly quiz, and you arrive at the studio with your milestone far enough along to finish it in the room. Expect 2 to 3 hours.
--   **In the weeks you lead**, add 2 to 3 hours for your Student Research Lead preparation. You lead five times across the semester, and you know your dates from the first week.
-
-Two moments cost more than a normal week: the **poster lock (Friday, November 6)** and the **final defense and chapter (December)**. Both are on the schedule from day one. Plan around them early rather than absorbing them late.
-
-### One required meeting outside the MWF pattern
-
-**Tuesday, November 17, 2026 — the Purdue Fall Undergraduate Research Expo.** You present your poster and evaluate at least three peers' posters. This is a **required, graded** component of Milestone 12, not an optional showcase, and it falls on a **Tuesday** — a day this section never otherwise meets.
-
-Treat it as a **fixed block held from Week 1**. It runs longer than a class period: you arrive early to set up, you stand with your poster through your assigned presentation window, and you complete your peer evaluations on the floor. The Expo publishes the exact hours closer to the date, and they are posted to Brightspace as soon as they are known. If a Tuesday obligation — another class, work, a clinical or lab commitment — collides with that day, tell me in the **first two weeks**, while the conflict can still be worked around.
-
--   **Monday and Wednesday are flipped lectures led by a [Student Research Lead](#the-student-research-lead) (SRL).** From Week 2 on, one of you runs each lecture as a **Socratic investigation**, not a slide summary: pose a puzzle, get the room to commit to an answer before opening any AI tool, direct the AI investigation, and defend a decision at the end. The instructor monitors for accuracy and formalizes the concept.
-
--   **Friday is a project studio.** No new topic content is introduced on Fridays. Each studio opens with a short **multiple-choice quiz** on the topic covered during the week, then runs a research **stand-up** and a **milestone sprint** kicked off from that week's Brightspace brief and worked with AI support.
-
--   **One Studio per week.** The course runs on the book's twelve Studios, one per week: Monday and Wednesday teach that Studio's chapters together with their **"It is your turn"** work, and Friday **is** that Studio's milestone. Studios 1–12 fall on Weeks 1–12; the last four weeks are the dated ones — the Expo, the Thanksgiving replication module, the revision week, and the defenses.
-
-### The Student Research Lead
-
-Leading a lecture is a graded performance. Slots are randomly assigned at the beginning of the course, with no sequential assignment. You find your lead's SRL section in the notebook of the respective lecture. The recommendation is that you work on it one week ahead and submit a preparation script/notebook two days ahead, then run the room live.
-
 ## Course Materials
 
--   **Course book (free, required):** the course's own open text, [**EDR|AI** — **_Evidence-Driven Research in the Age of AI: How to Design, Analyze, Verify, and Defend_**](book/index.html){target="_blank"}, with AI generated translations in [Brazilian Portuguese](book-pt/index.html){target="_blank"} and [Spanish](book-es/index.html){target="_blank"}. It walks through the material at an undergraduate reading level, and every chapter has its **own companion Colab notebook** where you run the chapter's code and complete its closing **"It is your turn"** section. **EDR|AI is a work in progress**: it is still under development and will keep growing and improving during the semester.
+-   **Course book (free, required):** [**EDR|AI** — **_Evidence-Driven Research in the Age of AI: How to Design, Analyze, Verify, and Defend_**](book/index.html){target="_blank"}. It walks through the material at an undergraduate reading level, and every chapter has its **own companion Colab notebook** where you run the chapter's code and complete its closing **"It is your turn"** section. **EDR|AI is a work in progress**: it is still under development and will keep growing and improving during the semester.
 
--   **Theory text (free, recommended):** **Blair, Coppock & Humphreys (2023), *Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign*** (RDSS, Princeton University Press) — read **free online** at [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}; no purchase required. The course book translates RDSS to the undergraduate audience, so each week the course-book chapters are **required** and the matching RDSS chapters are **recommended**.
+-   **Recommended (free):** **Blair, Coppock & Humphreys (2023), *Research Design in the Social Sciences: Declaration, Diagnosis, and Redesign*** (RDSS, Princeton University Press). Read free online at [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}.
 
--   **Optional companion:** Bergstrom & West, *Calling Bullshit* (public case studies at [callingbullshit.org](https://callingbullshit.org/){target="_blank"}), used lightly to sharpen claim evaluation. Any additional readings are posted on Brightspace.
-
--   **Computing (required):** A laptop or desktop with internet access and a modern web browser. Course activities run in the browser through [Google Colab](https://colab.research.google.com/){target="_blank"}, with no local installation. There are **no purchases** required for this course.
+-   **Computing (required):** A laptop or desktop with internet access and a modern web browser. Course activities run in the browser through [Google Colab](https://colab.research.google.com/){target="_blank"}.
 
 -   **AI tools:** The course teaches responsible, documented AI use (see the [AI Policy](#ai-policy)). Approved tools:
 
@@ -124,15 +90,33 @@ The course assesses the research chain itself: a semester-long research project 
 | Final Project                                |        20% |
 | Research artifact (paper/chapter/note)       |        10% |
 
-Attendance is checked with iClicker, with an 85% attendance target. The
-Participation rubric incorporates lecture-notebook completion plus other
-participation activities, such as feedback surveys and in-class exercises.
-A recurring in-class activity is the **colleague audit**: each student
-reviews the work of an instructor-created, AI-assisted simulated colleague
-working a parallel project, using a fixed audit protocol and rubric; the
-best 8 of 10 scored audits count within Participation. Every simulated
-artifact is visibly marked as such, uses only real (never fabricated)
-sources, and is debriefed in class the same session.
+### Attendance (1%)
+
+Attendance is checked with iClicker. The target is attendance at 85% or more of class meetings because the course depends on live investigation, feedback, and project work that cannot be fully reconstructed afterward.
+
+### Participation (9%)
+
+Participation includes lecture-notebook completion, feedback surveys, in-class exercises, and constructive contributions to discussion and peer review. A recurring activity is the **colleague audit**: you review an instructor-created, AI-assisted simulated colleague's work with a fixed protocol and rubric. The best 8 of 10 scored audits count. Simulated artifacts are clearly marked, use only real sources, and are debriefed during the same class.
+
+### Quizzes (20%)
+
+Short multiple-choice quizzes assess the topic studied that week. They take place at the beginning of Friday's in-person class, are completed individually with closed notes, and do not permit AI use. The questions emphasize concepts and research judgment rather than memorizing software commands.
+
+### Student Research Lead Performance (20%)
+
+From Week 2 onward, Student Research Leads run assigned Monday or Wednesday lectures as Socratic investigations. Slots are randomly assigned at the beginning of the semester. Prepare from the SRL Lead Brief in the lecture notebook, work about one week ahead, and submit your preparation script or notebook two days before you lead. Your performance is assessed on preparation, disciplinary accuracy, facilitation of the investigation, inclusion of the room, and your ability to synthesize and defend the session's research decision.
+
+### Final Project Milestones (20%)
+
+Milestones move your semester project from curiosity through design, evidence, analysis, verification, and communication. Each submission captures work completed at that point in the research chain and receives feedback that should inform the next version. Instructions, deadlines, and rubrics are posted on Brightspace.
+
+### Final Project (20%)
+
+The Final Project assesses the coherence and credibility of the completed research chain. You must connect the question, design, data, analysis, verification, claims, uncertainty, limitations, and public defense so that a reader can see what the evidence supports and where it stops.
+
+### Research Artifact (10%)
+
+The research artifact is the polished paper, chapter, or research note that communicates your project to a reader outside the classroom. It must present a traceable argument, reproducible results, appropriate uncertainty and limitations, verified sources, and a transparent account of how AI contributed to the work.
 
 **Grading scale:** A ≥ 93, A− ≥ 90, B+ ≥ 87, B ≥ 83, B− ≥ 80, C+ ≥ 77, C ≥ 73, C− ≥ 70, D ≥ 60, F < 60 (no curve).
 
@@ -158,25 +142,13 @@ To challenge an assignment score:
 
 ### AI Policy
 
-This course explicitly teaches **responsible, documented AI use**. You are expected to use AI at high intensity, under tight control, and always as **your arm and your research assistant, not your brain**.
+AI is a research assistant in this course, not a substitute for your judgment. You may use approved AI tools for course work unless an activity explicitly says otherwise.
 
-**The discipline.** Every use of AI in this course follows the full workflow **Specify, Delegate, Interrogate, Inspect, Verify, Document, Defend** (the everyday shorthand is **Ask, Verify, Document**). You specify the task precisely, delegate it to the tool, interrogate and inspect what comes back, verify it against real evidence, document what you decided, and defend the result as your own.
+Follow three rules: **ask clearly, verify the output, and document what you used and decided**. Record required uses in your AI Research Ledger. Check every factual claim, citation, source, calculation, and result against real evidence. You remain responsible for everything you submit and must be able to explain and defend it.
 
-**The AI Research Ledger.** Every deliverable and every notebook session appends an entry to your **AI Research Ledger**, with eight fields: **task delegated, tool used, prompt, output summary, decision, verification method, remaining concern, and responsible researcher**. A missing ledger entry returns the submission.
+Research questions, design choices, measurement decisions, ethical judgments, claims, uncertainty, and limitations remain your decisions. Undisclosed or unverified AI output may be treated as an academic-integrity violation.
 
-**Verify everything.** AI tools routinely fabricate citations, sources, and facts. Every claim and every source you submit must be independently located and confirmed to exist and to say what you claim it says. Any errors or omissions from your use of an AI tool are your responsibility. **Undisclosed or unverified AI output is an academic-integrity violation.**
-
-**What is yours alone.** Some decisions are never delegated to an AI tool. You, and only you, are responsible for:
-
--   selecting the research problem and question;
--   declaring the research design and target population;
--   choosing measurements and evaluating data quality;
--   ethical judgments;
--   deciding which claims the evidence justifies;
--   acknowledging uncertainty and limitations;
--   defending the project publicly.
-
-**Approved tools.** Your own AI assistant is the primary in-notebook research partner. Purdue GenAI Studio supplies reviewer roles you must consult at five milestones (M5, M7, M8, M11, M16). Microsoft Copilot and other general-purpose tools are permitted with disclosure. You are **not permitted to use AI tools during any closed assessment** where its use is prohibited. Low-effort prompts produce low-quality output; refine your prompts using the course concepts.
+**AI use is not allowed during in-person quizzes.** Those quizzes are individual, closed-note assessments. Any other no-AI activity will be clearly identified in its instructions.
 
 ### Netiquette Guidelines
 

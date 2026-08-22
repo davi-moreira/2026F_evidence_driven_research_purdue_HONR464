@@ -70,26 +70,6 @@ editor: visual
 
 # Course Schedule
 
-Forty-three Monday/Wednesday/Friday meetings (42 in person, 1 asynchronous
-online). The weekly rhythm: **Monday and Wednesday are lectures** (new content,
-one notebook per topic), and **every Friday is a studio** — a short
-multiple-choice quiz on the week's topic, a research stand-up, the next
-project milestone kicked off from its brief, and the rest of the class spent
-working on your milestone and research project. Each course milestone
-presents a book Milestone version (the bridge is stated in its brief).
-
-**Every session names its required reading.** The course *is* the book applied:
-the **Required reading** column lists the [**EDR|AI**](book/index.html) chapters
-that session needs, by their chapter titles, each linked to the book. Read them
-**before** the session they are listed under. On Friday the week's chapters come
-back as **due**: that studio is the milestone, and you submit those chapters'
-**"It is your turn"** sections with it. RDSS chapters are the *recommended*
-companion, never a substitute. Open each notebook in Colab from its badge;
-milestone instructions and rubrics are on Brightspace. Topic resources are also
-cataloged on the [Material](material.qmd) page, and every dataset the course
-uses is in the
-[course datasets (.zip)](notebooks/data/honr46400_datasets.zip) bundle.
-
 '''
 
 FOOTER = '''
@@ -97,8 +77,8 @@ FOOTER = '''
 
 **Key dates:** URC abstract internal gate **Fri Oct 9** · Final poster
 **Fri Nov 6** · **Purdue Fall Undergraduate Research Expo: Tue Nov 17**
-(required poster presentation) · Evidence Defenses **Dec 7 & 9** · Final
-dossier **Fri Dec 11**. No class: Sep 7 (Labor Day), Oct 12 (October Break),
+(required poster presentation) · Evidence Defenses **Dec 7 & 9** · Course
+reflection **Fri Dec 11**. No class: Sep 7 (Labor Day), Oct 12 (October Break),
 Nov 25/27 (Thanksgiving). Async-online meeting: Mon Nov 23.
 
 **The one required meeting outside the MWF pattern is the Expo, Tue Nov 17.**
@@ -141,8 +121,8 @@ def week_studio(unit: str, studios: dict[int, dict]) -> tuple[str, str]:
     if not m:
         return "", f"**{unit}**"
     n, label = int(m.group(1)), m.group(2)
-    st = studios.get(n)
-    if st and st["title"] == label:
+    st = next((item for item in studios.values() if item["title"] == label), None)
+    if st:
         cell = (f"**[{label}](book/{st['url_path']})"
                 f"{{target=\"_blank\"}}**")
     else:
