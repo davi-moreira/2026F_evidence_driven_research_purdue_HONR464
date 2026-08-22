@@ -441,7 +441,7 @@ MEETINGS_P4 = [
         "claim_permitted": "\"This is my claim, this is exactly where it stops, this is the verification I would lead with, and this is the decision I overruled my tools on.\"",
         "claim_not_permitted": "\"The analysis shows\" with no bound spoken aloud — a defence that states a finding without its edge has not been defended, and this session is the last one where that can be corrected.",
         "rdss_reading": "No new reading.",
-        "book_reading": "final-portfolio:revisit",
+        "book_reading": "final-portfolio:due",
         "cb_reading": "",
         "other_material": "nb16 student notebook (Studio 12: release and the next cycle), §Studio (Colab); project/final_dossier/ — the closing checklist and the manifest template; your seven audit rows; your research note, package, and complete AI Research Ledger; M17 brief on Brightspace",
         "provenance": "crosswalk M17 (release-next-cycle checkpoint v1) + project/final_dossier/ + EDR|AI Lesson 40 | Week 16, Friday studio, TERMINAL | quiz + stand-up + the final Evidence Defences + the release decision and the submission ceremony | fresh (D50)",

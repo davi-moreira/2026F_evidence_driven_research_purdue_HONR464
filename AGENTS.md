@@ -1,17 +1,35 @@
-# Codex Review Instructions
+# Codex Repository Instructions
 
 ## Repository context
 
 Read CLAUDE.md for repository architecture, conventions, build commands,
 validation procedures, and project-specific constraints.
 
-CLAUDE.md describes the implementation workflow. The instructions below define
-Codex's separate review responsibilities.
+CLAUDE.md describes the shared implementation workflow. Codex has the same
+repository authority as Claude Code, subject only to the tools and permissions
+available in its current runtime.
 
-## Primary role
+## Reciprocal agent partnership
 
-Act as an independent reviewer of changes produced by Claude Code or another
-implementation agent.
+Codex and Claude Code are peer agents. Either may serve as the implementer,
+independent reviewer, or development partner. The task's caller or delegating
+agent determines the role for that task; neither agent is permanently primary
+or subordinate.
+
+- When Claude Code calls Codex, serve as the reviewer or development partner
+  requested by Claude Code.
+- When Codex calls Claude Code, Claude Code should serve as the reviewer or
+  development partner requested by Codex.
+- When the user calls Codex directly, follow the role in the user's request. If
+  no role is stated, infer it from the requested outcome: review/report requests
+  are read-only; build/fix/change requests authorize implementation.
+- An agent that implemented a change must not be its sole reviewer. When an
+  independent review is requested or required, the peer agent inspects the
+  actual work and reports its own judgment.
+- Equal authority does not bypass user instructions, repository rules, security
+  boundaries, approval requirements, or runtime tool limitations.
+
+## Review role
 
 When running a review:
 
@@ -86,4 +104,5 @@ For every actionable finding, report:
 - Recommended remediation.
 - Test or check that would verify the correction.
 
-Do not make changes unless explicitly asked to implement an approved finding.
+While assigned as reviewer, do not make changes unless explicitly asked to
+switch roles and implement an approved finding.

@@ -4,6 +4,30 @@ This file documents the rules and workflows that change Claude's behavior in thi
 repository. Reference material lives in linked files — read those when relevant,
 not by default.
 
+## Reciprocal agent partnership
+
+Claude Code and Codex are peer agents with equal repository authority, subject
+only to the tools and permissions available in each agent's current runtime.
+Either may serve as the implementer, independent reviewer, or development
+partner. The task's caller or delegating agent determines the role for that
+task; neither agent is permanently primary or subordinate.
+
+- When Codex calls Claude Code, serve as the reviewer or development partner
+  requested by Codex.
+- When Claude Code calls Codex, Codex should serve as the reviewer or
+  development partner requested by Claude Code.
+- When the user calls Claude Code directly, follow the role in the user's
+  request. If no role is stated, infer it from the requested outcome:
+  review/report requests are read-only; build/fix/change requests authorize
+  implementation.
+- An agent that implemented a change must not be its sole reviewer. When an
+  independent review is requested or required, the peer agent inspects the
+  actual work and reports its own judgment.
+- While assigned as reviewer, do not modify files unless explicitly asked to
+  switch roles and implement an approved finding.
+- Equal authority does not bypass user instructions, repository rules, security
+  boundaries, approval requirements, or runtime tool limitations.
+
 ## Project Mission
 
 **HONR 46400 — SP: Evidence-Driven Research** ("How to Design, Analyze, Verify,
