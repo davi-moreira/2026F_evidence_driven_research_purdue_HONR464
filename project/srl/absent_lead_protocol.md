@@ -29,7 +29,7 @@ from it with minutes of notice.
 
 - Hand the standby the absent lead's template: the puzzle, the commitment
   question, the three Socratic questions with anticipated answers, the exact
-  Gemini prompts with predicted right and wrong outputs, the assumption-probe,
+  AI prompts with predicted right and wrong outputs, the assumption-probe,
   the counterexample request, the closing decision, and the timing plan.
 - The standby runs it as written. They are not expected to improvise a new
   session; they are executing a colleague's plan. Grade the standby generously
@@ -50,8 +50,8 @@ scheduled one. Offer, in order of preference:
    Mon/Wed slot can be recovered, graded on the same rubric adapted to the
    studio context.
 
-Document the arrangement so each student's assigned lectures stay correct on the
-Schedule page through the end of the semester.
+Document the arrangement so each student's assigned lectures stay correct in the
+slot assignment posted on the course platform through the end of the semester.
 
 ## No preparation received — the escalation ladder
 
@@ -64,7 +64,7 @@ template. Handle it on a fixed ladder so it is predictable and fair.
   is later led.
 - **One day out, still nothing:** confirm directly whether the lead intends to
   lead. If yes, require at minimum the puzzle, the commitment question, and one
-  Gemini prompt before end of day — the irreducible core of a runnable session.
+  AI prompt before end of day — the irreducible core of a runnable session.
   If that does not arrive, treat the slot as unprepared.
 - **Day of, no usable preparation:** the **instructor leads the session** from
   the lecture notebook's SRL Lead Brief, so the room loses nothing. The student's

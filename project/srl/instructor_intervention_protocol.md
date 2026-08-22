@@ -49,7 +49,7 @@ to life.
 
 - Offer a low-stakes, named cold-call that reopens the lead's own question:
   "Let me put [name] on the spot — what did you commit to before we opened
-  Gemini?" Committed written answers make this safe, because everyone already
+  the AI?" Committed written answers make this safe, because everyone already
   has something to read.
 - Hand the thread back immediately: "Good — [lead], run with that." Do not chain
   a second cold-call; one is a jump-start, two is a takeover.
@@ -125,7 +125,7 @@ The score is shaped before the session, at two fixed touchpoints.
 - **Two days out:** the lead submits the preparation template
   (`srl_prep_template.md`). Review it for the load-bearing pieces: a puzzle with
   a real answer and tempting wrong ones, a genuine commit-before-AI moment,
-  specific Gemini prompts with honest predictions of what the AI will get wrong,
+  specific AI prompts with honest predictions of what the AI will get wrong,
   a real assumption-probe, a closing decision, and a fallback if the tool is
   down. Return notes the lead can act on. A weak template is the cheapest
   possible place to fix a session.

@@ -10,7 +10,7 @@ investigation.*
 ## The one rule underneath all the others
 
 You are teaching the room to use AI the way this course wants: as an arm, not a
-brain. That means every time you point the class at Gemini, you are staging a
+brain. That means every time you point the class at an AI tool, you are staging a
 small demonstration of good research behavior. The class commits first, asks the
 AI something specific, then checks what it gets back against real evidence, and
 only then decides. Your job is to run that loop out loud so everyone sees the
@@ -24,7 +24,7 @@ word.** A human decision is.
 You have two ways to put the room on a prompt. Choose on purpose.
 
 **Have everyone run the same prompt when** you want to expose variation. Five
-people typing the identical prompt into Gemini will often get five slightly
+people typing the identical prompt into the same AI tool will often get five slightly
 different answers, and sometimes one wildly different one. That spread is the
 lesson: it shows the room that an AI answer is not a fixed fact you looked up,
 it is a generated response that could have come out otherwise. Use this when the
@@ -33,7 +33,7 @@ point is "do not trust a single run."
 **Split the room into roles when** you want depth on a claim. Assign jobs and
 have people bring their piece back:
 
-- One person asks Gemini to **make the case** for a claim.
+- One person asks the AI to **make the case** for a claim.
 - Another asks it to **argue the opposite**.
 - Another asks it to **find the sources** and then goes to confirm they exist.
 - Another asks it to **name what it is uncertain about**.
@@ -49,7 +49,7 @@ roles to interrogate a claim from every side.**
 
 This is the signature Monday move, and it only works if the order is right.
 
-1. **Commit first.** The room writes its answer before Gemini is opened. If you
+1. **Commit first.** The room writes its answer before the AI is opened. If you
    skip this, the comparison is worthless, because the AI's answer will quietly
    become everyone's answer.
 2. **Ask the AI the same question.** Use the specific prompt from your prep

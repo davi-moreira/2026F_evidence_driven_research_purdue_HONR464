@@ -38,7 +38,7 @@ not happen, say "did not see one" — that is useful too.*
 ### 4. One suggestion for next time
 
 *The single most useful change. Frame it as a next step, not a complaint. "Give
-us five more seconds to commit before opening Gemini" is perfect.*
+us five more seconds to commit before opening the AI" is perfect.*
 
 
 

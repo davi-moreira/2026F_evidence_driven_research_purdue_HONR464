@@ -66,7 +66,7 @@ and lands on a decision it can defend.
 | Minutes | Section | What you do |
 |---|---|---|
 | **0–9** | **Your research puzzle** | Open with one concrete puzzle. Elicit prior beliefs. Get the room to commit to an answer in writing before any AI is opened. |
-| **9–31** | **Guided AI investigation** | You facilitate as the class uses Gemini as a research partner on the puzzle. You direct the prompts, run a human-versus-AI comparison, and probe what comes back. The instructor monitors for accuracy in the background. |
+| **9–31** | **Guided AI investigation** | You facilitate as the class uses its AI research partner on the puzzle. You direct the prompts, run a human-versus-AI comparison, and probe what comes back. The instructor monitors for accuracy in the background. |
 | **31–43** | **Human verification and formalization** | The instructor steps in to formalize the concept and lock down what is actually correct. You help connect it back to the class's committed answers. |
 | **43–50** | **Decision and defense** | You close by making the room commit to a decision and defend it. The class records an AI Research Ledger line and a Claim Ticket. |
 
@@ -100,11 +100,12 @@ Lead slots are **assigned at random at the beginning of the semester**, so you
 will know which lectures are yours from the first week. Nothing rotates and
 nothing shifts as the term goes on: your lectures are your lectures.
 
-Which calendar meetings you drew, and whether each one is a Monday or a
-Wednesday format, lives on the **Schedule page of the course website**. Check it
-early so you know your dates and your formats well in advance. This handbook
-never prints dates on purpose, so it never goes stale. The Schedule page is the
-single source of truth for when your slots are.
+Which calendar meetings you drew is posted on the **course platform** in
+Week 1, as the slot assignment for the whole class. That posting is the single
+source of truth for your dates. Check it early, then look each of your dates up
+on the **Schedule page of the course website**, which tells you whether the
+meeting is a Monday or a Wednesday, which notebook it uses, and what it covers.
+This handbook never prints dates on purpose, so it never goes stale.
 
 ## Your SRL Lead Brief
 
@@ -145,7 +146,7 @@ Good SRL sessions are built, not improvised. Here is the rhythm.
 
 - Submit your **preparation template** (`srl_prep_template.md`). This is your
   script: the puzzle, the commitment question, three Socratic questions with the
-  answers you expect (right and wrong), the exact Gemini prompt or prompts the
+  answers you expect (right and wrong), the exact AI prompt or prompts the
   class will run, what you expect the AI to get right and wrong, your
   assumption-probe, your counterexample request, the decision you will make the
   room defend, a timing plan, and a fallback if the AI tool is down.
@@ -154,7 +155,7 @@ Good SRL sessions are built, not improvised. Here is the rhythm.
 
 ### The day of your lead
 
-- Arrive a few minutes early. Open Colab, confirm Gemini responds, and paste your
+- Arrive a few minutes early. Open Colab, confirm your AI tool responds, and paste your
   first prompt into a scratch cell so it is ready.
 - Load your puzzle where the room can see it.
 - Have your fallback ready in case the AI tool is slow or down. A dead tool
@@ -180,7 +181,7 @@ needs.
 4. **Require commitment before AI.** Have everyone write down their answer before
    the AI is opened. This is the single most important move. Without it, the AI's
    answer becomes everyone's answer and no one learns anything.
-5. **Direct strategic AI use.** Point Gemini at one specific job with a prompt you
+5. **Direct strategic AI use.** Point the AI at one specific job with a prompt you
    chose in advance. Never let the room type "explain this topic" and read the
    result aloud. That is outsourcing the thinking.
 6. **Compare human versus AI answers.** Put the room's committed answer next to
@@ -240,7 +241,8 @@ it keeps your session accurate.
 ## Logistics, in one place
 
 - Your slots are **assigned at random at the start of the semester**, and the
-  dates are on the **Schedule page**.
+  assignment is posted on the **course platform** in Week 1. Look your dates up
+  on the **Schedule page** for the format and the notebook.
 - Your **SRL Lead Brief** is already in the lecture notebook, at the very start.
   Start reading it and the notebook **about a week ahead**.
 - You submit your **preparation template two days ahead**; the instructor sends

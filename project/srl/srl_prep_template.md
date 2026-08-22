@@ -54,7 +54,7 @@ a ceiling):*
 
 ## 4. The AI investigation
 
-> *The exact Gemini prompt or prompts the class will run. Write them as a
+> *The exact AI prompt or prompts the class will run. Write them as a
 > student would actually type them, pointed at one specific job. Then predict
 > the AI's answer honestly.*
 
@@ -132,7 +132,7 @@ transfer block; strong on Monday too):*
 ## 9. Fallback if the AI tool is down
 
 > *A dead tool must not kill your session. Name what you will run instead if
-> Gemini is slow, unavailable, or refusing to answer.*
+> your AI tool is slow, unavailable, or refusing to answer.*
 
 **If the AI is down, I will:**
 
