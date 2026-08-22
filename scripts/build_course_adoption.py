@@ -89,15 +89,23 @@ def adoption_table(notes: dict) -> str:
     # Revisit-only labs (D41): a course week may carry no first-read lesson
     # — its notebook still exists and is listed here so the course lab set
     # stays complete (nb13 is the public-test/Expo week).
+    # D50: a notebook may carry more than one milestone (Week 11 has three
+    # submissions) and a milestone may span two weeks (`also_nb`), so collect
+    # notebook NUMBERS and de-duplicate rather than emitting one line per row.
     anchored_nbs = {int(nb[2:]) for nb in primary.values()}
-    revisit_lines = []
+    revisit_nbs = []
     for r in load_crosswalk()["rows"]:
-        n = int(r["nb"][2:])
-        if n in anchored_nbs or not r.get("assignments"):
+        if not r.get("assignments"):
             continue
-        title = NOTEBOOKS[n][1] if n in NOTEBOOKS else r["nb"]
-        revisit_lines.append(
-            f"[{r['nb']}]({COURSE_NB}/{student_filename(n)}) — {title}")
+        for nb in [r["nb"], *(r.get("also_nb") or [])]:
+            n = int(str(nb)[2:])
+            if n in anchored_nbs or n in revisit_nbs:
+                continue
+            revisit_nbs.append(n)
+    revisit_lines = [
+        f"[nb{n:02d}]({COURSE_NB}/{student_filename(n)}) — "
+        f"{NOTEBOOKS[n][1] if n in NOTEBOOKS else f'nb{n:02d}'}"
+        for n in sorted(revisit_nbs)]
     revisit_para = ""
     if revisit_lines:
         revisit_para = ("\n\nRevisit-only labs (no new lesson; the week "
