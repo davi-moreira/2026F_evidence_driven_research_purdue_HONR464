@@ -2636,3 +2636,74 @@ grading scale was deleted as a duplicate — item 4 now carries that URL.
 Project section. D52's weights, component names, scoring formulas, project-mode rules,
 and Peer Evaluation mechanics all stand unchanged. D51 remains superseded. D50's
 calendar is unchanged.
+
+---
+
+## D54 — M17 is retired: the last Friday is the course reflection session (2026-08-23)
+
+**Decision.** The course runs **M1–M16**. There is no course milestone M17. The last
+Friday of the semester is the **course reflection session**, so there is no studio slot
+for an M17 submission, and nothing in the course sets M17: not the schedule, not the
+gradebook, not the handout PDFs, not the milestone mean. Week 16 is unchanged as
+teaching: Monday and Wednesday still teach Studio 12's lessons through nb16.
+
+**Instruction.** Davi, 2026-08-23: "make sure to record that we will not have m17 as we
+will use the last friday for reflection, so no need to set it in the course anywhere
+even knowing we have the material."
+
+**The material is kept, and simply unassigned.** Retiring a milestone is not deleting
+its content. These survive, unassigned:
+
+- `_research_project/2026Fall/_retired_d54/milestone_17_release_and_final_chapter.md`
+  (archived under the `_retired_*` convention D50 established)
+- `book/studios/milestone12-release-next-cycle.qmd`, the book's own Milestone 12, which
+  the book keeps in full: **no course milestone now presents Book Milestone 12**
+- `notebooks/student/nb16_release_next_cycle_student.ipynb` and
+  `notebooks/student/ms15_final_chapter_portfolio_student.ipynb`
+- the authored course-additions section for M17, parked under `retired:` in
+  `_research_project/milestone_course_additions.yml` in case a later edition revives it
+
+**What the reading chain does NOT lose.** The M17 row stays in
+`planning/COURSE_BOOK_CROSSWALK.yml` with its `assignments:` intact, because Week 16
+still teaches `managing-ai-agents`, `conflicting-agents` and `final-portfolio`, and
+each is that lesson's **home anchor**. Removing the row would break the home-anchor
+partition, drop three chapters out of `planning/READING_FEEDBACK_SCHEDULE.md`, and fail
+`validate_book_architecture.py`. The crosswalk answers *what Week 16 teaches*; it does
+not answer *what the course collects*.
+
+**One declaration, every consumer.** The live chain is the `milestones:` table in
+`course_config.yaml`. `scripts/milestone_map.py` reads it through `live_milestones()`,
+and both course-facing consumers inherit the retirement from that single edit:
+
+| Consumer | Effect |
+|---|---|
+| `scripts/build_handout_pdfs.py` | 16 milestone PDFs, not 17. No M17 handout is produced. |
+| `scripts/update_schedule_badges.py` | the three Week-16 rows print "No milestone" instead of a Book Milestone link. The suppression is no longer hardcoded to the string "M17". |
+
+A milestone dropped from `course_config.yaml` therefore disappears from the PDFs and
+from the schedule at the same moment, with no second list to remember.
+
+**Grading.** `milestone_deliverables` becomes the equally weighted mean of the
+**M1–M16** scores. No weight anywhere changes: Final Project stays 50%, and its five
+QM474 component names and 30/20/10/20/20 shares are untouched, so D52 and D53 stand.
+
+⚠ **OPEN, and it is a real one.** D52's `instructor_ta_evaluation` component (20% of the
+project, 10% of the course) was scored `50% M17 Final Research Artifact + 25% M17
+AI-management portfolio + 25% Evidence Defense`. With M17 retired, `course_config.yaml`
+now reads `100% instructor evaluation of the M13 final poster submission`. Two things
+follow and both need Davi's explicit sign-off:
+
+1. **Three named deliverables would carry no grade weight.** The final research chapter,
+   the AI-management portfolio and the individual oral Evidence Defense are named in the
+   Project Mission and in the syllabus, and under the new rule none of them is scored.
+2. **The student-facing authority still says the opposite.**
+   `_research_project/2026Fall/final_project_grading_and_project_modes.md` still tells
+   students the instructor evaluates "your **M17** final submission and your live
+   Evidence Defense" with three subscores. Under D53 that document, not
+   `course_config.yaml`, is what students are pointed at. Until it is reconciled the
+   course states two different rules for the same 10% of the grade.
+
+**Supersession boundary.** D54 supersedes only D50's milestone *count*: the chain is
+M1–M16, not M1–M17. D50's conference block, its renumbering of M1–M10 onto Book
+Milestones 1–10, and its Weeks 15–16 post-conference studios all stand. D52's weights
+and component names stand. D53's syllabus prose stands.
