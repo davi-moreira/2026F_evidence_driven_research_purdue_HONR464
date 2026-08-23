@@ -26,8 +26,12 @@ Modes:
     route          your OWN declared route's pathway lesson (D49 policy)
     route-contrast the instructor-assigned contrast route's lesson
     optional       binds only under the lesson's own condition
-    due            the week's chapters, whose "It is your turn" sections the
-                   Friday milestone submits
+
+There is no `due` mode. D57 made the "It is your turn" submission a
+PARTICIPATION assignment due at 11:59 PM on the day the chapter's reading is
+due, so the deadline rides the read modes above and is stated in their labels.
+It used to be an authored token on the Friday studio row, which named the
+wrong day the moment the submission stopped travelling with the milestone.
 
 Consumers: update_schedule_badges.py, build_material_page.py,
 validate_session_readings.py.
@@ -47,18 +51,17 @@ SITE_REL = "book"  # site-relative prefix for links on the course pages
 
 #: Order in which modes are presented inside one session's cell.
 MODE_ORDER = ["first-read", "route", "route-contrast", "assigned", "continue",
-              "revisit", "optional", "due"]
+              "revisit", "optional"]
 
 #: Student-facing lead-in for each mode.
 MODE_LABEL = {
-    "first-read": "**Required before today —** ",
+    "first-read": "**Required before today** (*It is your turn* due tonight) **—** ",
     "assigned": "**Assigned today, read for the next session —** ",
     "continue": "**Still in play from Monday —** ",
     "revisit": "**Revisit —** ",
-    "route": "**Required, your declared route —** ",
-    "route-contrast": "**Required, your assigned contrast route —** ",
-    "optional": "**Only if your design has stages —** ",
-    "due": "**Due today** (submit these chapters' *It is your turn* sections) **—** ",
+    "route": "**Required, your declared route** (*It is your turn* due tonight) **—** ",
+    "route-contrast": "**Required, your assigned contrast route** (*It is your turn* due tonight) **—** ",
+    "optional": "**Only if your design has stages** (if it binds, *It is your turn* due tonight) **—** ",
 }
 
 VALID_MODES = set(MODE_LABEL)
@@ -118,10 +121,18 @@ def by_mode(field: str) -> dict[str, list[str]]:
     return {m: grouped[m] for m in MODE_ORDER if m in grouped}
 
 
-def chapter_link(lesson: dict, prefix: str = SITE_REL) -> str:
-    """`[Ch. 12 — Declaring and Diagnosing a Research Design](book/…)`."""
-    return (f"[Ch. {lesson['display']} — {lesson['title']}]"
-            f"({prefix}/{lesson['url_path']}){{target=\"_blank\"}}")
+def chapter_link(lesson: dict, prefix: str = SITE_REL,
+                 compact: bool = False) -> str:
+    """`[Ch. 12 — Declaring and Diagnosing a Research Design](book/…)`.
+
+    `compact` gives the Schedule page's form, `[EDR|AI Ch. 12](book/…)`: the
+    schedule carries 105 of these and the chapter's own page is one click away,
+    so the title is spelled out on the Material page instead. The pipe is
+    escaped because these land inside a markdown table cell.
+    """
+    text = (f"EDR\\|AI Ch. {lesson['display']}" if compact
+            else f"Ch. {lesson['display']} — {lesson['title']}")
+    return f"[{text}]({prefix}/{lesson['url_path']}){{target=\"_blank\"}}"
 
 
 #: Marks the chapters a cell names that the same week already LINKED above.
@@ -131,12 +142,13 @@ BACKREF = "*(linked above)*"
 #: Modes whose wording already points at what the week showed earlier, so a
 #: back-reference reads naturally and no link is lost (anything NOT shown
 #: earlier is still listed in full).
-BACKREF_MODES = {"due", "continue", "revisit"}
+BACKREF_MODES = {"continue", "revisit"}
 
 
 def render_cell(field: str, index: dict[str, dict] | None = None,
                 prefix: str = SITE_REL,
-                seen: set[str] | None = None) -> str:
+                seen: set[str] | None = None,
+                compact: bool = False) -> str:
     """One schedule cell: every mode present, book wording, linked.
 
     Pass `seen` (a per-WEEK set of lesson ids, mutated in place) to collapse the
@@ -164,12 +176,13 @@ def render_cell(field: str, index: dict[str, dict] | None = None,
                 # drop their (already-shown) link. Collapsing them into a phrase
                 # like "this week's chapters" would misstate a graded submission
                 # whenever the week reads more chapters than it submits.
-                parts = [chapter_link(index[i], prefix) if i in fresh
+                parts = [chapter_link(index[i], prefix, compact) if i in fresh
                          else f"Ch. {index[i]['display']}" for i in ids]
                 blocks.append(MODE_LABEL[mode] + " · ".join(parts)
                               + f" {BACKREF}")
                 continue
-        links = " · ".join(chapter_link(index[i], prefix) for i in ids)
+        links = " · ".join(chapter_link(index[i], prefix, compact)
+                            for i in ids)
         if links:
             blocks.append(MODE_LABEL[mode] + links)
     return "<br>".join(blocks) if blocks else "—"
@@ -203,6 +216,24 @@ def rdss_note(rdss_reading: str) -> str:
     if clause.count("(") < clause.count(")"):
         clause = clause.rstrip(")").rstrip(" ,;")
     return clause
+
+
+def rdss_note_compact(rdss_reading: str) -> str:
+    """Just the RDSS chapter numbers: `ch. 10, ch. 11`, or ''.
+
+    The authored clause names each chapter's section title too. On the Schedule
+    page that is three lines of prose per row for a RECOMMENDED companion; the
+    Material page still carries the full clause.
+    """
+    clause = rdss_note(rdss_reading)
+    chapters = re.findall(r"ch\.\s*(\d+(?:\s*[–-]\s*\d+)?)", clause)
+    seen, out = set(), []
+    for c in chapters:
+        c = re.sub(r"\s*[–-]\s*", "–", c.strip())
+        if c not in seen:
+            seen.add(c)
+            out.append(f"ch. {c}")
+    return ", ".join(out)
 
 
 def studio_pages() -> dict[int, dict]:

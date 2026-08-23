@@ -30,7 +30,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 from notebooks_map import (NOTEBOOKS, colab_url, student_filename,  # noqa: E402
                            nb_of, session_kind, lecture_labels)
 from validate_calendar import no_class_days  # noqa: E402
-from session_readings import (lesson_index, rdss_note,  # noqa: E402
+from session_readings import (lesson_index, rdss_note_compact,  # noqa: E402
                               render_cell, studio_pages)
 from milestone_map import (additions, live_milestones,  # noqa: E402
                            milestone_map)
@@ -88,32 +88,31 @@ this course asks for more than that book milestone does. Its brief on
 Brightspace explains exactly what, and everything is submitted as one file,
 `lastname_mNN.pdf`.
 
-**Course data.** Every dataset the course and the book use ships in one file:
-**[data.zip](notebooks/data/data.zip)**. In Colab the notebooks load the data
-straight from the repository, so the download only matters when you work
-offline. To work offline, unzip it so that a `notebooks/data/` folder sits in
-the directory you run from: that is the path the notebooks look in. If your
-unzipper wraps everything in an extra `data/` folder, move the `notebooks/`
-folder out of it.
+**Reading column.** Each chapter's **"It is your turn"** section is a separate
+submission from the milestone, graded on whether you handed it in, with its own
+file: `LASTNAME_iyt_ch<numbers>.ipynb`. The studio feedback survey closes the
+same Sunday as that studio's milestone. Both count toward participation.
 
 ## Core Course References
 
 - **Blair, G., Coppock, A., & Humphreys, M.** (2023). *Research Design in the
   Social Sciences: Declaration, Diagnosis, and Redesign*. Princeton University
   Press. Read free online: [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}.
-- Course datasets ship from the MIT-licensed `rdss` package (see
-  [`notebooks/data/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/notebooks/data){target="_blank"}).
 
 :::
 '''.replace("{PLUS}", PLUS)
 
 
-#: The Schedule page carries 43 notebook links, one per meeting. It uses a
-#: compact TEXT link rather than the badge image the Material page shows: the
-#: href and the accessible name are identical, and the page stays inside the
-#: 65,535-character ceiling (see the size note in the module docstring).
-def colab_text_link(n: int) -> str:
-    return f"[Colab]({colab_url(n)})"
+#: The Notebook cell: the Colab badge, and under it the one dataset bundle the
+#: course and the book share, so a student never has to leave the row to find
+#: the data the notebook loads.
+DATA_ZIP = "[data.zip](notebooks/data/data.zip)"
+
+
+def notebook_cell(n: int) -> str:
+    return (f'<a href="{colab_url(n)}"><img src="https://colab.research.'
+            f'google.com/assets/colab-badge.svg" alt="Open In Colab"></a>'
+            f"<br>{DATA_ZIP}")
 
 
 DAYNAMES = {0: "Mon", 1: "Tue", 2: "Wed", 3: "Thu", 4: "Fri",
@@ -143,8 +142,8 @@ def week_studio(unit: str, studios: dict[int, dict],
     n, label = int(m.group(1)), m.group(2)
     st = next((item for item in studios.values() if item["title"] == label), None)
     if st:
-        # Repeat rows carry the short form; the full title is one or two rows
-        # above, in the same week, and is still a link on every row.
+        # The week's first row spells the title out; its repeats carry the
+        # short label, and every row keeps the link.
         text = label if first else label.split(":")[0]
         cell = f"[{text}](book/{st['url_path']})"
     else:
@@ -245,20 +244,23 @@ def milestone_cell(raw: str, mmap: dict, adds: dict) -> str:
             out.append(seg.strip())
             continue
         cid, rest = m.group(1), m.group(2)
-        st = STATE.search(rest)
-        state = st.group(1).strip() if st else ""
         key = f"M{int(cid[1:]):02d}"
         info = mmap.get(key)
         if not info or not info["books"]:
             out.append(f"**{cid}**")
             continue
         mark = f" {PLUS}" if adds.get(key, {}).get("classification") == "additions" else ""
-        links = " + ".join(
-            f"[Book Milestone {b['n']}]({b['url_path']}){{target=\"_blank\"}}"
-            for b in info["books"])
-        cell = f"**{cid}**{mark} · {links}"
-        if state:
-            cell += f" *({state})*"
+        # The course id carries the link to the Book Milestone it presents;
+        # naming both was saying the same thing twice in every row.
+        first, rest = info["books"][0], info["books"][1:]
+        cell = (f"**[{cid}]({first['url_path']}){{target=\"_blank\"}}**{mark}")
+        if rest:
+            cell += " + " + " + ".join(
+                f"[Book Milestone {b['n']}]({b['url_path']}){{target=\"_blank\"}}"
+                for b in rest)
+        # The state ("dev", "worked; DUE …") is dropped: the milestone brief on
+        # Brightspace carries it, and it was three different phrasings of the
+        # same thing repeated down the column.
         out.append(cell)
     return "<br>".join(out)
 
@@ -311,12 +313,10 @@ def build() -> str:
         n = nb_of(r["other_material"])
         badge = ""
         if n is not None:
-            badge = (colab_text_link(n) if student_filename(n) in tracked
+            badge = (notebook_cell(n) if student_filename(n) in tracked
                      else f"*nb{n:02d} (coming)*")
 
-        title = r["title"]
-        if r["modality"] == "async-online":
-            title = f"**ASYNC** — {title.replace('ASYNC — ', '')}"
+        title = r["title"].replace("ASYNC — ", "")
         lab = labels.get(int(r["meeting"]))
         if lab:
             _nb, i, total = lab
@@ -327,8 +327,8 @@ def build() -> str:
         # Chapter identity is GENERATED from the book (session_readings), so
         # the page can never paraphrase a title the book publishes.
         blocks = [render_cell(r["book_reading"], index,
-                              seen=seen_this_week)]
-        rec = rdss_note(r["rdss_reading"])
+                              seen=seen_this_week, compact=True)]
+        rec = rdss_note_compact(r["rdss_reading"])
         if rec:
             blocks.append(f"*Recommended companion — RDSS {rec}.*")
         materials = "<br>".join(b for b in blocks if b and b != "—") or "—"

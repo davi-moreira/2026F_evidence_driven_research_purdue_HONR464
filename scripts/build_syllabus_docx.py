@@ -347,9 +347,9 @@ def build_schedule_rows():
             nb_label = f"nb{n:02d} Open in Colab"
             nb_url = (f"https://colab.research.google.com/github/{REPO_SLUG}/"
                       f"blob/main/notebooks/student/{student_filename(n)}")
-        title = r["title"]
-        if r["modality"] == "async-online":
-            title = "ASYNC — " + title.replace("ASYNC — ", "")
+        # The two asynchronous November sessions are announced separately
+        # (_announcements/), so the printed schedule reads like every other row.
+        title = r["title"].replace("ASYNC — ", "")
         out.append({
             "wk": week_of(r["unit"]),
             "date": fmt_date(r["date"]),
@@ -528,7 +528,7 @@ def main():
 
     weights = [("Assessment", "Weight"), ("Attendance", "1%"),
                ("Participation", "9%"), ("Quizzes", "20%"),
-               ("Student Research Lead performance", "20%"),
+               ("Student Research Lead", "20%"),
                ("Final Project", "50%"), ("Total", "100%")]
     tw = doc.add_table(rows=len(weights), cols=2)
     tw.style = doc.styles["Grid Table 1 Light"]
@@ -547,8 +547,14 @@ def main():
               "because the course depends on live investigation, feedback, and "
               "project work that cannot be fully reconstructed afterward.",
          bold_prefix="Attendance:")
-    para(doc, " Participation includes feedback surveys, lecture-notebook "
-              "completion, and other constructive contributions to the course.",
+    para(doc, " Participation is graded as one block. It covers the required "
+              "course surveys, the book's \u201cIt is your turn\u201d "
+              "submissions, the course-closing reflection, and other "
+              "constructive contributions to the course. These items are scored "
+              "for completion and timeliness, never for the opinions they "
+              "express, and the lowest few scores are dropped automatically. "
+              "The full list, the due dates, and the submission instructions "
+              "are posted on the course page.",
          bold_prefix="Participation:")
     para(doc, " Short multiple-choice quizzes assess the topic studied that "
               "week. They take place at the beginning of Friday's in-person "
@@ -561,11 +567,11 @@ def main():
               "randomly assigned at the beginning of the semester. Prepare from "
               "the SRL Lead Brief in the lecture notebook, work about one week "
               "ahead, and submit your preparation script or notebook two days "
-              "before you lead. Your performance is assessed on preparation, "
+              "before you lead. Your leading is assessed on preparation, "
               "disciplinary accuracy, facilitation of the investigation, "
               "inclusion of the room, and your ability to synthesize and defend "
               "the session's research decision.",
-         bold_prefix="Student Research Lead Performance:")
+         bold_prefix="Student Research Lead:")
 
     # the Final Project section — QM474's text, the D53 wording, verbatim
     para(doc, " Students will complete a practical evidence-driven research "
