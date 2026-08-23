@@ -13,22 +13,7 @@ format:
 ---
 
 ```{=html}
-<style>
-  .overflow-table { font-size: 0.85rem; width: 100%; line-height: 1.2; }
-  .overflow-table td:nth-child(3), .overflow-table td:nth-child(4) { font-weight: 700; }
-  .overflow-table th, .overflow-table td {
-    padding: 0.3rem; text-align: left; word-wrap: break-word; vertical-align: top;
-  }
-  .overflow-table th:nth-child(1), .overflow-table td:nth-child(1) { width: 3%; }
-  .overflow-table th:nth-child(2), .overflow-table td:nth-child(2) { width: 7%; }
-  .overflow-table th:nth-child(3), .overflow-table td:nth-child(3) { width: 5%; }
-  .overflow-table th:nth-child(4), .overflow-table td:nth-child(4) { width: 13%; }
-  .overflow-table th:nth-child(5), .overflow-table td:nth-child(5) { width: 19%; }
-  .overflow-table th:nth-child(6), .overflow-table td:nth-child(6) { width: 7%; }
-  .overflow-table th:nth-child(7), .overflow-table td:nth-child(7) { width: 12%; }
-  .overflow-table th:nth-child(8), .overflow-table td:nth-child(8) { width: 34%; }
-  .below-table { font-size: 0.85rem; line-height: 1.2; margin-top: 1rem; }
-</style>
+<style>.overflow-table{font-size:.85rem;width:100%;line-height:1.2}.overflow-table th,.overflow-table td{padding:.3rem;text-align:left;word-wrap:break-word;vertical-align:top}.overflow-table td:nth-child(3),.overflow-table td:nth-child(4){font-weight:700}.overflow-table th:nth-child(1),.overflow-table td:nth-child(1){width:3%}.overflow-table th:nth-child(2),.overflow-table td:nth-child(2){width:7%}.overflow-table th:nth-child(3),.overflow-table td:nth-child(3){width:5%}.overflow-table th:nth-child(4),.overflow-table td:nth-child(4){width:13%}.overflow-table th:nth-child(5),.overflow-table td:nth-child(5){width:19%}.overflow-table th:nth-child(6),.overflow-table td:nth-child(6){width:7%}.overflow-table th:nth-child(7),.overflow-table td:nth-child(7){width:12%}.overflow-table th:nth-child(8),.overflow-table td:nth-child(8){width:34%}.below-table{font-size:.85rem;line-height:1.2;margin-top:1rem}</style>
 <script>document.querySelectorAll("main a[href]").forEach(function(a){a.target="_blank"})</script>
 ```
 
