@@ -2902,10 +2902,11 @@ item families, and nothing else:
 | 2 | **Studio feedback survey** — one Qualtrics link, 12 responses | 12 | 11:59 PM on the Sunday that ends the studio week | completion |
 | 3 | **Student profile survey** | 1 | Sun Aug 30, 2026 | completion |
 | 4 | **Course reflection** | 1 | Fri Dec 11, 2026 | completion |
-| | **Baseline N** | **50** | | |
+| 5 | **Scored Synthetic Colleague audits** | 10 | at each audit's session | completion |
+| | **Baseline N** | **60** | | |
 
 Credit is `1.0` on time, `0.5` within seven days, `0` otherwise. The lowest
-`d = ⌈0.10 × N⌉` credits are dropped automatically (**d = 5**), and
+`d = ⌈0.10 × N⌉` credits are dropped automatically (**d = 6**), and
 
 ```
 participation points = 9.0 × (sum of the highest N − d credits) / (N − d)
@@ -2915,7 +2916,7 @@ The syllabus clause "other constructive contributions to the course" is a
 **documented adjustment of at most ±0.9 points** on that result, never a bucket with
 its own weight.
 
-**Three things are retired.**
+**Four things are retired.**
 
 1. **The proposed internal split.** `surveys/reading_feedback_grading.md` had carried
    an unratified 5% reading feedback / 2% lecture-notebook completion / 2% class
@@ -2926,7 +2927,15 @@ its own weight.
    is collected from them and nothing is graded on them. The phrase leaves the
    syllabus, the `.docx`, `course_config.yaml`, the Brightspace kit, the assessment
    architecture and the master plan.
-3. **Per-chapter reading feedback.** Forty responses a semester was an instrument
+3. **The colleague audits' "best 8 of 10" rule.** `project/colleague/` scored ten
+   Studio audits on a four-row, eight-point rubric and counted the best eight
+   inside the 9%. That was a fifth weighted instrument hiding in an undivided
+   block. Each scored audit is now ONE participation credit like every other, and
+   the four-row rubric decides whether the credit was earned (5-8 full, 3-4 half,
+   2 or below none) rather than carrying a weight of its own. The global drop rule
+   already absorbs more than the best-8 allowance did. This raises the baseline to
+   **N = 60** and **d = 6**.
+4. **Per-chapter reading feedback.** Forty responses a semester was an instrument
    competing with the work it was meant to improve. Twelve per-studio responses
    replace them, closing the same Sunday night as that studio's milestone — one
    deadline closes the whole week. The trade is resolution: a studio-level response
@@ -2948,7 +2957,7 @@ because the row was never separately scored.
 `planning/MEETING_SCHEDULE.csv` plus the book manifest:
 
 - `planning/IYT_SUBMISSION_SCHEDULE.md` — the ONE instruction paragraph to
-  paste into every assignment, the **20** Brightspace assignments to create (one per
+  paste into every assignment, the **21** Brightspace assignments to create (one per
   due date, each collecting the chapters that share it), and all 40 chapters with
   their dates, links and companion notebooks. This is the file Davi builds from.
 - `planning/STUDIO_FEEDBACK_SCHEDULE.md` — the 12 studios and their close dates. It

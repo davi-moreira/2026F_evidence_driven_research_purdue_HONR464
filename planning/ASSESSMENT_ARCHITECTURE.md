@@ -202,10 +202,11 @@ reinstated.
 | 2 | **Studio feedback survey** (one Qualtrics link, 12 responses) | 12 | 11:59 PM on the Sunday that ends the studio week | completion |
 | 3 | **Student profile survey** | 1 | Sun Aug 30, 2026 | completion |
 | 4 | **Course reflection** | 1 | Fri Dec 11, 2026 | completion |
-| | **Baseline N** | **50** | | |
+| 5 | **Scored Synthetic Colleague audits** | 10 | at each audit's session | completion; the four-row rubric decides validity |
+| | **Baseline N** | **60** | | |
 
 Credit is `1.0` on time, `0.5` within seven days, `0` otherwise; the lowest
-`d = ⌈0.10 × N⌉` credits are dropped automatically (**d = 5**), and
+`d = ⌈0.10 × N⌉` credits are dropped automatically (**d = 6**), and
 
 ```
 participation points = 9.0 × (sum of the highest N − d credits) / (N − d)

@@ -280,7 +280,7 @@ def gradebook_spec(config: dict) -> str:
             "Quizzes",
             f"{n_quizzes()} weekly printed MC quizzes, entered by hand",
         ),
-        "student_research_lead": (
+        "srl_performance": (
             "Student Research Lead",
             "5 leads per student, scored on project/srl/srl_rubric.md",
         ),

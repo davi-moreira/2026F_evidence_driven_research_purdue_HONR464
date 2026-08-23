@@ -281,7 +281,7 @@ assessment:
   participation: 9                 # ONE undivided block (D57): see participation: below.
                                    # No internal split is published or applied.
   quizzes: 20                      # weekly Friday multiple-choice topic quizzes
-  student_research_lead: 20        # 5 flipped-lecture leads per student
+  srl_performance: 20
   final_project: 50
 
 # Participation (D57, 2026-08-23). ONE undivided 9% block: every required item
