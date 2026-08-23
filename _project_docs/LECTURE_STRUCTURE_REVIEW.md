@@ -6,6 +6,11 @@
 > addendum** at the end of this document for the corrected figures, the
 > recommendations withdrawn, and the rulings actually applied
 > (`_project_docs/DECISIONS.md` Decision 34).
+>
+> **Further superseded 2026-08-23 (D58).** The Friday printed quiz is retired for
+> this edition and the studio's opening ten minutes went to the milestone sprint,
+> so every Friday timing in the body below is historical. Monday and Wednesday are
+> unaffected.
 
 **Prepared:** 2026-07-30 · **Status:** advisory review, no rulings applied yet
 **Tracks:** private task issue #18 ("Evaluate the new MW lecture structure (D33)")
