@@ -22,9 +22,9 @@ rating: group members rate every teammate; an individual-project researcher
 is rated by two instructor-assigned project peers; nobody rates themselves. See
 [Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
 It runs through milestones
-**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
-poster session (Tuesday, November 17 — required)**, and closes with an oral
-**Evidence Defense** and a final research chapter in December. Every milestone
+**M1–M16**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+poster session (Tuesday, November 17 — required)**, and closes with the
+reproducible package and cold run in December. Every milestone
 follows the same cadence: **studio kickoff → develop across the week →
 submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
@@ -40,7 +40,7 @@ fewer when approved groups reduce the number of active projects. Group approval
 always preserves at least three active projects, so every student reviews at
 least two other live projects. Group members do not confer before submitting
 their own reviews, and each student is scored individually. The **M12 milestone
-score** is one of the seventeen scores averaged
+score** is one of the sixteen scores averaged
 inside **Milestone Deliverables**. The separate **Peer Review** component (10%
 of Final Project, or 5 course points) scores the quality of your criticism using
 the rubric below. The same score is not entered twice, and neither score

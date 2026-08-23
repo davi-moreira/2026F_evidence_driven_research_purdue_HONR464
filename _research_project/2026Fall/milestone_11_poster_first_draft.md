@@ -23,9 +23,9 @@ rating: group members rate every teammate; an individual-project researcher
 is rated by two instructor-assigned project peers; nobody rates themselves. See
 [Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
 It runs through milestones
-**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
-poster session (Tuesday, November 17 — required)**, and closes with an oral
-**Evidence Defense** and a final research chapter in December. Every milestone
+**M1–M16**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+poster session (Tuesday, November 17 — required)**, and closes with the
+reproducible package and cold run in December. Every milestone
 follows the same cadence: **studio kickoff → develop across the week →
 submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your

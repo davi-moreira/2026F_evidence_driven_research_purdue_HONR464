@@ -23,11 +23,12 @@ rating: group members rate every teammate; an individual-project researcher
 is rated by two instructor-assigned project peers; nobody rates themselves. See
 [Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
 It runs through milestones
-**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
-poster session (Tuesday, November 17 — required)**, and closes with an oral
-**Evidence Defense** and a final research chapter in December. Every milestone
+**M1–M16**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+poster session (Tuesday, November 17 — required)**, and closes with the
+reproducible package and cold run in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-submit → revise (where eligible)**. Every milestone also updates your
+work it at the Friday studio → submit Sunday, 11:59 PM → revise (where
+eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it.
@@ -42,7 +43,7 @@ an approved group, the poster-quality portion is shared, but every member must
 present and receives their own live-presentation score. At the Expo, you stand
 your poster for strangers and evaluate at least three peer posters. The written
 **reflection and poster-criticism portfolio** reads your afternoon at the Expo as
-data; its M15 score is one of the seventeen scores averaged inside **Milestone
+data; its M15 score is one of the sixteen scores averaged inside **Milestone
 Deliverables** and it feeds the final dossier. Milestone weights live in
 [Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md);
 the revision policy, instructions, and rubrics live one page per milestone,
@@ -355,7 +356,7 @@ pre-submission checklist.
 | **Permission status** | Your permission determination is still authorized; blocked work does not proceed |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague; no revision decided by a tool |
 | **Dossier line** | Each finalized piece located by file or section |
-| **Studio work** | Worked at the Friday reflection studio (Nov 20) with your AI assistant and submitted the same day |
+| **Studio work** | Worked at the Friday reflection studio (Nov 20) with your AI assistant and submitted by the Sunday, Nov 29 deadline |
 | **Length** | Typically 2–4 pages PDF, or the equivalent notebook sections |
 | **Filename** | `lastname_m15_reflection.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M15 |

@@ -24,11 +24,12 @@ rating: group members rate every teammate; an individual-project researcher
 is rated by two instructor-assigned project peers; nobody rates themselves. See
 [Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
 It runs through milestones
-**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
-poster session (Tuesday, November 17 — required)**, and closes with an oral
-**Evidence Defense** and a final research chapter in December. Every milestone
+**M1–M16**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+poster session (Tuesday, November 17 — required)**, and closes with the
+reproducible package and cold run in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-submit → revise (where eligible)**. Every milestone also updates your
+work it at the Friday studio → submit Sunday, 11:59 PM → revise (where
+eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in
@@ -36,7 +37,7 @@ checked it. Milestone weights live in
 instructions and rubrics live one page per milestone, like this one.
 
 This milestone produces the reproducibility package and research note that M17
-finalizes. Its 100-point score is one of the seventeen scores averaged inside
+finalizes. Its 100-point score is one of the sixteen scores averaged inside
 Final Project's **Milestone Deliverables** component. The final paper, chapter,
 or note, AI-management record, and reproducibility evidence also become part of
 the final submission examined under **Instructor/TA Evaluation**; they do not
@@ -49,7 +50,7 @@ stays sized to its evidence or quietly grows past it. M16 is
 
 ## What to Submit on Brightspace
 
-Due: **Friday, December 4, 11:59 PM** (the Friday studio is your adjudication
+Due: **Sunday, December 6, 11:59 PM** (the Friday studio is your adjudication
 table read and your second clean run).
 
 | # | File | Description |
@@ -295,7 +296,7 @@ pre-submission checklist.
 | **Second clean run** | Dated after your last change to the package; restart-and-run-all passes; the headline number and its uncertainty statement reproduce; the record labeled as an author rerun |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | Note v1, package, and updated table and disclosure located by file or section |
-| **Studio work** | Worked at the Friday studio: your adjudication table read by a peer, and your second clean run performed before you submit at studio close |
+| **Studio work** | Worked at the Friday studio: your adjudication table read by a peer, and your second clean run performed before you submit by Sunday, Dec 6 |
 | **Filenames** | `lastname_m16_note.pdf`, `lastname_m16_package.ipynb`, `lastname_m16_coldrun.pdf` (or shared links / the equivalent sections) |
 | **Location** | Brightspace → Assignments → M16 |
 

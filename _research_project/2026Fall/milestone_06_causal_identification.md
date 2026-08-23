@@ -22,11 +22,12 @@ rating: group members rate every teammate; an individual-project researcher
 is rated by two instructor-assigned project peers; nobody rates themselves. See
 [Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
 It runs through milestones
-**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
-poster session (Tuesday, November 17 — required)**, and closes with an oral
-**Evidence Defense** and a final research chapter in December. Every milestone
+**M1–M16**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+poster session (Tuesday, November 17 — required)**, and closes with the
+reproducible package and cold run in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-submit → revise (where eligible)**. Every milestone also updates your
+work it at the Friday studio → submit Sunday, 11:59 PM → revise (where
+eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in
@@ -37,7 +38,8 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, October 2, 11:59 PM** (you work on it at that Friday's studio).
+Due: **Sunday, October 4, 11:59 PM** (you work on it at that week's Friday
+studio and submit by Sunday night).
 This week's two lectures teach how data reach you and what your measures mean,
 and Friday is their milestone. What you submit is one **governed-data record**:
 provenance documentation, a data-management record, a permission recheck run

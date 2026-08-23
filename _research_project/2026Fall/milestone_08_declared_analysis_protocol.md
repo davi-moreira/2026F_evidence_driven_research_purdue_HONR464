@@ -22,11 +22,12 @@ rating: group members rate every teammate; an individual-project researcher
 is rated by two instructor-assigned project peers; nobody rates themselves. See
 [Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
 It runs through milestones
-**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
-poster session (Tuesday, November 17 — required)**, and closes with an oral
-**Evidence Defense** and a final research chapter in December. Every milestone
+**M1–M16**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+poster session (Tuesday, November 17 — required)**, and closes with the
+reproducible package and cold run in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-submit → revise (where eligible)**. Every milestone also updates your
+work it at the Friday studio → submit Sunday, 11:59 PM → revise (where
+eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in
@@ -37,7 +38,8 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, October 16, 11:59 PM** (you work on it at that Friday's studio).
+Due: **Sunday, October 18, 11:59 PM** (you work on it at that week's Friday
+studio and submit by Sunday night).
 October break shortens this week to one lecture and the studio, so the audit is
 planned before it is run. That studio is Studio 8's milestone session, an
 **audit walkthrough and adjudication round**: you execute the audit you froze at
@@ -338,7 +340,7 @@ pre-submission checklist.
 | **Permission status** | Your permission determination is still authorized; blocked work does not proceed |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | The audit record and the reworded claim located by file or section |
-| **Studio work** | Worked at the Friday studio (Oct 16) with your AI assistant; required reviewer role logged; submitted the same day |
+| **Studio work** | Worked at the Friday studio (Oct 16) with your AI assistant; required reviewer role logged; submitted by Sunday, Oct 18 |
 | **Filename** | A shared Colab link or `lastname_m08_audit.ipynb`; optional `lastname_m08_audit.pdf` companion |
 | **Location** | Brightspace → Assignments → M08 |
 
