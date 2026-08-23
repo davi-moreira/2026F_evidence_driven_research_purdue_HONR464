@@ -103,7 +103,7 @@ literature, and about the tool that offered it.
 
 This registry is where the course's evidence rail becomes physical. Every
 citation you make for the rest of the semester traces back to a row you built
-here, all the way to the release audit at M17. Sources found later get
+here, all the way to the poster lock at M13. Sources found later get
 registered here too, not appended informally to a draft.
 
 > **A question that often comes up here:** *"An AI tool gave me a

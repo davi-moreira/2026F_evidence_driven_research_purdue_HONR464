@@ -97,7 +97,7 @@ Dossier.
 
 ## Purpose
 
-Your release audit closed at M17, four days before the Expo, and the Expo was the
+Your poster locked at M13, nine days before the Expo, and the Expo was the
 release. That order is the point of the design. You decided whether this work was
 ready to leave your hands **before** it left them, so Tuesday, November 17 was not
 a rehearsal for some later public moment. It was the public moment, and strangers
@@ -137,7 +137,7 @@ crowd can love a poster whose central claim is wrong.
 
 ### 1. The Expo presentation and public-conference poster criticism (Tuesday, November 17)
 
-The live half of this milestone, and the release itself. Your M17 audit already
+The live half of this milestone, and the release itself. Your M13 lock already
 decided this work could go public, so the Expo is not a dress run. On the day you
 do two things, both graded:
 
@@ -269,21 +269,21 @@ in the portfolio.
 
 ### 7. The post-release note
 
-Half a page at most, and it closes the loop your M17 release audit opened. That
-audit cleared this work to go public under a set of named conditions. Now that it
+Half a page at most, and it closes the loop your M13 poster lock opened. That
+lock cleared this work to go public under a set of named conditions. Now that it
 has gone public, three questions each get an honest line:
 
-- **Did anything move between the audit and the Expo?** Any change to the poster,
-  a number, the claim wording, or the package behind them after the audit makes
-  that audit **stale**, meaning it no longer describes what you actually released.
-  Name what moved, or state plainly that nothing did.
-- **Which audit rows did the public test touch?** Permissions, disclosure, claim
+- **Did anything move between the lock and the Expo?** Any change to the poster,
+  a number, the claim wording, or the package behind them after the lock makes
+  that lock record **stale**, meaning it no longer describes what you actually
+  released. Name what moved, or state plainly that nothing did.
+- **Which lock-gate rows did the public test touch?** Permissions, disclosure, claim
   boundaries, and uncertainty are the rows a live audience presses hardest. Say
   which ones came up and whether the disposition you recorded held.
 - **Does the release decision still stand?** If it does, say why in one sentence.
   If the Expo surfaced something that would have made you withhold, write the
   repair that now blocks the next release, in the same "withhold pending this
-  named fix" form you used at M17.
+  named fix" form you used at the M13 lock gate.
 
 This note is a record, not a second audit. You are not rerunning the checklist;
 you are saying what the release event itself taught you about a decision you had
@@ -350,7 +350,7 @@ pre-submission checklist.
 | **Reflection** | One paragraph on what the public test changed in how you see the project, with its uncertainty and its limits |
 | **Defense revision record** | Every exposure a row: what the questioning exposed, the revision written out in full, and its reason; each row names claim, boundary, or defense; any "nothing changed" defended with the hardest question and the boundary that already answered it |
 | **Criticism portfolio** | Three entries, each naming its axis and pointing at real evidence on the actual poster |
-| **Post-release note** | Half a page: what moved since the M17 audit, which audit rows the public test touched, and whether the release decision still stands |
+| **Post-release note** | Half a page: what moved since the M13 lock, which lock-gate rows the public test touched, and whether the release decision still stands |
 | **Self-reflection check** | Two lines measured against your counts rather than the mood of the room; this is not the confidential Peer Evaluation component |
 | **Version line** | Book Milestone 10, version 2, dated, with its reason |
 | **Permission status** | Your permission determination is still authorized; blocked work does not proceed |

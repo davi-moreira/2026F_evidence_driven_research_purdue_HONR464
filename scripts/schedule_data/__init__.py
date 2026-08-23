@@ -1,7 +1,7 @@
 """Meeting-level schedule data for HONR 46400 (Fall 2026) — v2 rebuild.
 
 One dict per meeting, 35 fields each. Authored from the Fall 2026 master prompt
-architecture (16 weekly topics nb01–nb16, milestones M1–M17, Student Research
+architecture (16 weekly topics nb01–nb16, milestones M1–M16, Student Research
 Lead flipped classroom) + planning/CALENDAR_BACKBONE.csv; serialized by
 scripts/build_meeting_schedule.py into planning/MEETING_SCHEDULE.{csv,md}.
 

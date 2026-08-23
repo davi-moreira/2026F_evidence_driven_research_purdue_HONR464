@@ -36,15 +36,13 @@ checked it. Milestone weights live in
 [Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md);
 instructions and rubrics live one page per milestone, like this one.
 
-This milestone produces the reproducibility package and research note that M17
-finalizes. Its 100-point score is one of the sixteen scores averaged inside
-Final Project's **Milestone Deliverables** component. The final paper, chapter,
-or note, AI-management record, and reproducibility evidence also become part of
-the final submission examined under **Instructor/TA Evaluation**; they do not
-create extra Final Project components. This is where your claim ledger is graded
-a second time (after M10, before M17), because a note is where a claim either
-stays sized to its evidence or quietly grows past it. M16 is
-**revision-eligible** under the standing policy.
+This milestone closes the project: it produces the reproducibility package and
+the research note that carry your work past the Expo. It is **the last
+milestone in the chain (D54)**, and its 100-point score is one of the sixteen
+scores averaged inside Final Project's **Milestone Deliverables** component.
+This is where your claim ledger is graded a second time (after M10), because a
+note is where a claim either stays sized to its evidence or quietly grows past
+it. M16 is **revision-eligible** under the standing policy.
 
 ---
 
@@ -371,7 +369,6 @@ days** of feedback recovers up to half the lost points.
 ---
 
 *Previous: [M15 — Conference Reflection](milestone_15_conference_reflection.md) ·
-Next: [M17 — Release Audit, Final Research Chapter, and AI-Management Portfolio](milestone_17_release_and_final_chapter.md) —
-the note you just adjudicated grows into the final chapter, the package you just
-repaired faces the final release audit, and your full-semester AI Research Ledger
-becomes the portfolio you defend.*
+This is the final milestone of the chain. The last Friday of the semester,
+December 11, is the course-closing reflection session, collected under
+participation rather than as a milestone.*

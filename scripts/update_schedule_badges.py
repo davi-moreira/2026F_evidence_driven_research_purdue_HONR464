@@ -31,7 +31,8 @@ from notebooks_map import (NOTEBOOKS, colab_url, student_filename,  # noqa: E402
                            nb_of, session_kind, lecture_labels)
 from session_readings import (lesson_index, rdss_note,  # noqa: E402
                               render_cell, studio_pages)
-from milestone_map import additions, milestone_map  # noqa: E402
+from milestone_map import (additions, live_milestones,  # noqa: E402
+                           milestone_map)
 
 
 def tracked_students() -> set[str]:
@@ -196,13 +197,18 @@ STATE = re.compile(r"\(([^()]*(?:\([^()]*\)[^()]*)*)\)\s*$")
 def milestone_cell(raw: str, mmap: dict, adds: dict) -> str:
     """The Milestone column: the course id, its Book Milestone LINKED, the state.
 
-    M17 stays out of the student-facing schedule (pre-existing course policy);
-    it is kept in the planning chain for the validators.
+    A milestone the course no longer runs prints as "No milestone". That is read
+    from the live chain in course_config.yaml, never hardcoded: D54 retired M17
+    because the last Friday of the semester is the course reflection session.
+    The authored prose in scripts/schedule_data/ still names it, and the
+    crosswalk row still carries Week 16's lessons, so the suppression happens
+    here, at the page.
     """
     raw = raw.strip()
     if not raw:
         return ""
-    if raw.startswith("M17"):
+    lead = re.match(r"\s*M(\d+)", raw)
+    if lead and f"M{int(lead.group(1)):02d}" not in live_milestones():
         return "No milestone"
 
     out = []

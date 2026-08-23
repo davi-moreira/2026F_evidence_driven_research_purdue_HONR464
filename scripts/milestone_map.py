@@ -1,10 +1,22 @@
 #!/usr/bin/env python3
 """milestone_map.py — the ONE map from a course milestone to its Book Milestone.
 
-The course is the book applied, so every course milestone M1..M17 presents one
-or two of the book's twelve Book Milestones. That correspondence is declared
-once, in planning/COURSE_BOOK_CROSSWALK.yml, and read here. It is never retyped
-into course prose, exactly like the per-session readings.
+The course is the book applied, so every course milestone presents one or two of
+the book's twelve Book Milestones. That correspondence is declared once, in
+planning/COURSE_BOOK_CROSSWALK.yml, and read here. It is never retyped into
+course prose, exactly like the per-session readings.
+
+WHICH MILESTONES THE COURSE ACTUALLY RUNS is a separate question, and its answer
+is the `milestones:` table in course_config.yaml. A crosswalk row can outlive the
+milestone it was written for: D54 (2026-08-23) retired M17, because the last
+Friday of the semester is the course reflection session and there is no
+submission slot for it. Week 16 still TEACHES Studio 12's lessons on Monday and
+Wednesday, so the M17 crosswalk row keeps its `assignments:` and those three
+lessons keep their home anchor. Only the submission is gone.
+
+So this module reads BOTH files and returns only the live chain. A milestone
+dropped from course_config disappears from the handout PDFs and from the
+schedule at the same moment, with no second list to remember.
 
 Two consumers share this module so the page and the PDF can never disagree:
 
@@ -33,9 +45,21 @@ from book_manifest import load_architecture  # noqa: E402
 BRIEFS = REPO / "_research_project" / "2026Fall"
 STUDIOS = REPO / "book" / "studios"
 CROSSWALK = REPO / "planning" / "COURSE_BOOK_CROSSWALK.yml"
+COURSE_CONFIG = REPO / "course_config.yaml"
 ADDITIONS_FILE = REPO / "_research_project" / "milestone_course_additions.yml"
 
 SITE_REL = "book/studios"          # site-relative, for links on course pages
+
+
+def live_milestones() -> set[str]:
+    """"M01".."M16": the milestones the course actually runs.
+
+    Read from course_config.yaml's `milestones:` table, which is where the
+    course declares its own chain. Retiring a milestone there retires it
+    everywhere this module feeds.
+    """
+    cfg = yaml.safe_load(COURSE_CONFIG.read_text())
+    return {f"M{int(k[1:]):02d}" for k in cfg["milestones"]}
 
 
 def milestone_map() -> dict[str, dict]:
@@ -49,10 +73,15 @@ def milestone_map() -> dict[str, dict]:
     files = {int(p.name[9:11]): p for p in STUDIOS.glob("milestone*.qmd")}
     cw = yaml.safe_load(CROSSWALK.read_text())
     briefs = {b.name.split("_")[1]: b for b in BRIEFS.glob("milestone_*.md")}
+    live = live_milestones()
 
     out: dict[str, dict] = {}
     for row in cw["rows"]:
+        if not row.get("milestone"):        # D54: teaching-only rows (Week 16)
+            continue
         nn = f"{int(row['milestone'][1:]):02d}"
+        if f"M{nn}" not in live:      # retired: the row survives, the milestone does not
+            continue
         brief = briefs[nn]
         h1 = re.search(r"^# (.+)$", brief.read_text(), re.M)
         topic = (re.sub(r"^Course milestone M\d+\s*[:—-]\s*", "", h1.group(1).strip())

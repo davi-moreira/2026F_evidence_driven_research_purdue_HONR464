@@ -41,6 +41,8 @@ def anchors_by_milestone() -> dict[str, list[dict]]:
     lessons = {l["id"]: l for l in active_lessons()}
     out: dict[str, list[dict]] = {}
     for r in load_crosswalk()["rows"]:
+        if not r.get("milestone"):          # D54: teaching-only rows (Week 16)
+            continue
         picked = [lessons[a["lesson"]] for a in r.get("assignments", [])
                   if a.get("home_anchor") and a["lesson"] in lessons]
         out[r["milestone"]] = sorted(picked, key=lambda l: l["display"])
@@ -138,7 +140,8 @@ def main() -> int:
     require_lock()
     anchors = anchors_by_milestone()
     stations = station_info()
-    rows = {r["milestone"]: r for r in load_crosswalk()["rows"]}
+    rows = {r["milestone"]: r for r in load_crosswalk()["rows"]
+            if r.get("milestone")}
     stale, written = [], 0
     for brief in sorted(BRIEFS.glob("milestone_*.md")):
         m = re.match(r"milestone_(\d+)_", brief.name)

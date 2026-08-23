@@ -18,8 +18,9 @@
 # presentation preparation (M14), the Expo on Tue Nov 17, and two asynchronous
 # reflection sessions (M15). They anchor no new lesson and carry Milestone 10
 # forward as versions 2, 3, and 4. Studios 11 and 12 then run POST-CONFERENCE on
-# Weeks 15-16 in the standard MW-lessons/Friday-milestone frame: M16 presents
-# Book Milestone 11 and M17 presents Book Milestone 12. The order is the lesson -
+# Week 15 in the standard MW-lessons/Friday-milestone frame: M16 presents Book
+# Milestone 11 and closes the chain. Week 16 still TEACHES Studio 12's lessons
+# but carries NO milestone (D54), so its row has `milestone: null`. The order is the lesson -
 # you package and release AFTER the public test, because what the room returns is
 # part of what you release. The independence axiom is untouched: the book's twelve
 # Studios keep their own order; the course inserts its conference block between
@@ -363,21 +364,19 @@ rows:
       - {station: write-bound-disclose, relationship: revisit, version_label: "version 2 - the research note after public criticism",
          contribution_refs: [results-to-claims, claim-evidence-tables, ai-disclosure, poster-to-note]}
 
-  - milestone: M17
+  - milestone: null            # D54: Week 16 teaches, but carries no milestone
     nb: nb16
-    # Week 16 - Studio 12, in the STANDARD frame, and the close. Monday teaches
-    # Lessons 38-39 (managing multiple AI agents; conflicting agents and human
-    # escalation), Wednesday teaches Lesson 40 (the final research and
-    # AI-management portfolio) as the release audit itself, Friday IS Milestone
-    # 12 and the submission ceremony. TERMINAL. The Evidence Defences run inside
-    # the Wednesday peer-defence blocks of Weeks 15 and 16 and this Friday
-    # session, so the standard frame is never broken to make room for them.
+    # Week 16 - Studio 12, the teaching close. Monday teaches Lessons 38-39
+    # (managing multiple AI agents; conflicting agents and human escalation) and
+    # Wednesday teaches Lesson 40. D54 retired the course milestone that used to
+    # sit here (release audit, final research chapter, AI-management portfolio):
+    # those instruments are gone from all student-facing material. Friday,
+    # December 11, is the course-closing reflection session, collected under
+    # participation rather than as a milestone.
     assignments:
       - {lesson: managing-ai-agents,        requirement: required,       purpose: first-read,  primary_lab: true,   home_anchor: true}
       - {lesson: conflicting-agents,        requirement: required,       purpose: first-read,  primary_lab: true,   home_anchor: true}
       - {lesson: final-portfolio,           requirement: required,       purpose: first-read,  primary_lab: true,   home_anchor: true}
     station_events:
-      - {station: release-next-cycle, event: checkpoint, checkpoint: release-audit-v1, at: milestone-submission}
-    book_milestones:
-      - {station: release-next-cycle, relationship: checkpoint, version_label: "version 1",
-         contribution_refs: [managing-ai-agents, conflicting-agents, final-portfolio]}
+      - {station: release-next-cycle, event: introduce, at: reading-due}
+    book_milestones: []

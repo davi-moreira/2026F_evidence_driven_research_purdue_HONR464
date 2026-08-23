@@ -11,7 +11,7 @@
 # scripts/build_handout_pdfs.py and scripts/update_schedule_badges.py read it
 # through scripts/milestone_map.py, so the page and the PDF cannot disagree.
 #
-# `classification`      pure | additions
+# `classification`      pure | additions ('retired' entries live under `retired:`)
 # `reason`              why the call was made, against the classification test
 # `schedule_note`       <= 6 words for the narrow schedule column (additions only)
 # `additions_markdown`  the PDF section body, headings from ### down. No em
@@ -524,9 +524,10 @@ milestones:
     - 'Rubric difference in kind, not only scale: the brief''s 100-point rubric carries hard caps with no analogue on the book page (fabricated source, undecided item, untraceable number, non-reproducing result, stale run record, and a missing AI Research Ledger entry that scores Craft 0 and returns the submission unread). I summarized only the three caps a student can act on. If the book page''s 10-point rubric is now the governing instrument, decide explicitly whether the returned-submission rule and the other caps still bite.'
     - Both book pages end with a "Blocking gate" callout about a not-authorized determination at Studio 4. It is boilerplate carried into every milestone page and reads as a non sequitur this late in the chain. Worth checking before it prints in the M16 PDF.
     - The brief marks M16 revision-eligible (up to half the lost points recovered within 7 days of feedback) and sets late penalties. Neither book page mentions revision or lateness. If the standard PDF header does not carry the revision policy, this milestone loses it.
+retired:
   M17:
-    classification: additions
-    reason: Book Milestone 12 asks only for the release audit, dossier manifest, stopping rule, next-study agenda, and the artifacts carried in from Lessons 38 to 40. The course additionally requires a live, in-room Evidence Defense with a fixed three-movement format, scored cross-examination of classmates' defenses, a final in-class dossier checklist run, a submitted runnable notebook, and a terminal no-revision rule, none of which a student could infer from the book page.
+    classification: retired
+    reason: 'RETIRED as a course milestone by D54 (2026-08-23): the last Friday of the semester is the course reflection session, so there is no submission slot. Week 16 still teaches Studio 12''s lessons. The authored section below is kept unused, in case the milestone returns in a later edition. ORIGINAL CALL: Book Milestone 12 asks only for the release audit, dossier manifest, stopping rule, next-study agenda, and the artifacts carried in from Lessons 38 to 40. The course additionally requires a live, in-room Evidence Defense with a fixed three-movement format, scored cross-examination of classmates'' defenses, a final in-class dossier checklist run, a submitted runnable notebook, and a terminal no-revision rule, none of which a student could infer from the book page.'
     schedule_note: live Evidence Defense and cross-examination
     additions_markdown: '### Defend your work out loud
 
@@ -601,3 +602,4 @@ milestones:
     - The brief's Book Anchor lists ch. 38, 39, 40 with companion Colab links, but the URLs and notebook filenames still use the old ch35/ch36/ch37 numbering. Worth checking before the PDF is built.
     - The brief allows the AI-management portfolio as a separate PDF or a marked section; I wrote it as a marked section inside the single file, per the new one-file rule.
     - The final dossier checklist itself lives in project/final_dossier/evidence_defense_protocol.md and is run from a printed sheet in the last studio. My section tells the student it happens in class rather than reproducing the checklist, so if you want the PDF to be fully self-contained, the checklist box could be pasted in.
+    retired_by: D54

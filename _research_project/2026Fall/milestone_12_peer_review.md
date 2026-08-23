@@ -70,8 +70,8 @@ work inside your project notebook):
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's "It is your turn" sections — one per lesson, collected by
-the twelve Book Milestones — chain into your final research chapter, so what you
-complete here is a draft piece of your final artifact.
+the twelve Book Milestones — chain into a complete research artifact, so what
+you complete here is a draft piece of your own.
 
 ---
 
