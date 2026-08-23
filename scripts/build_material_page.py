@@ -33,7 +33,7 @@ from session_readings import (by_mode, chapter_link, lesson_index,  # noqa: E402
                               rdss_note)
 
 PRIVATE_SLUG = f"{REPO_SLUG}_instructor"
-ZIP_LINK = ("[all datasets (.zip)](notebooks/data/honr46400_datasets.zip)")
+ZIP_LINK = ("[all datasets (data.zip)](notebooks/data/data.zip)")
 
 MATERIAL_OUT = REPO / "material.qmd"
 INSTRUCTOR_OUT = REPO / "instructor.qmd"

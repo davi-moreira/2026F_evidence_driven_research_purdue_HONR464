@@ -341,11 +341,6 @@ sources:
     translations: ["pt-BR (book-pt/ -> docs/book-pt)", "es (book-es/ -> docs/book-es)"]
     format: "Quarto book, 40 lessons in 12 Studios, each closed by a generated Book Milestone chapter (D38/D40), rendered to docs/book/"
     sync: "chapters synchronized with nb01–nb16 + site (validate_book_sync.py)"
-  secondary_book:
-    key: "CB"
-    citation: "Bergstrom & West (2020). Calling Bullshit: The Art of Skepticism in a Data-Driven World."
-    local: false
-    use: "optional / parallel; light discussion; public callingbullshit.org where used"
   datasets:            # from rdss / RDSS replication (MIT); shipped as CSV under notebooks/data/
     - bonilla_tillery      # survey experiment → nb07
     - cliningsmith_etal    # natural experiment → nb06

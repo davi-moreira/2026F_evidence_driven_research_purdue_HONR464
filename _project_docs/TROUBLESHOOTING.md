@@ -139,7 +139,7 @@ gate is deliberate.
    (42 in-person + 1 async); if it fails, the meeting dates are wrong, not the data.
 2. If the **backbone is correct** and a row is wrong, fix that meeting in
    `scripts/schedule_data/partN.py` — the error names the meeting number and field.
-   `srl_slot` / `srl_focus` / `cb_reading` may be empty (studios, async, Week 1); all
+   `srl_slot` / `srl_focus` may be empty (studios, async, Week 1); all
    other fields are required.
 3. Never hand-edit `planning/MEETING_SCHEDULE.{csv,md}` — they are generated.
 

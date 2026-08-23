@@ -254,7 +254,9 @@ syllabus).
 ## 🚨 CRITICAL RULE — Dataset Distribution  *(D15; unchanged)*
 
 `notebooks/data/` is the single canonical dataset folder; everything ships in
-`notebooks/data/honr46400_datasets.zip`, linked from Material and Schedule.
+`notebooks/data/data.zip`, linked from Material and Schedule. The archive
+stores its members under `notebooks/data/`, which is the first path
+`load_course_data()` falls back to, so unzipping it makes offline runs work.
 After any dataset change:
 
 ```bash

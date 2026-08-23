@@ -39,9 +39,6 @@ incomplete; if an artifact serves no clause, it needs a justification.
 
 - **Claim Tickets (exit tickets M2–M44):** serve clauses 1, 6, 13 as the daily
   habit-former; graded inside the engagement component.
-- **Calling Bullshit optional analyses:** serve clauses 6 and 13 (claim
-  evaluation); optional by locked decision, graded inside the concept-check
-  component only when used.
 - **`translation/` R→Python parity project:** serves **no clause** — by design.
   It is the separate parallel project (locked decision #4), not course content.
 

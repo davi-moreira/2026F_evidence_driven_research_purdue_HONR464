@@ -7,10 +7,6 @@ verified against the published site and the local replication materials
 (`_adm/_references/book/`); the book's numbering skips part-divider slots (no
 ch. 14 or 20). **Never cite a chapter, declaration, or dataset not on this list.**
 
-**Optional/parallel:** Bergstrom & West (2020), *Calling Bullshit* — used lightly
-via public **callingbullshit.org** case studies only (book not required, not in
-repo). Every CB touch is optional and flagged as external provenance.
-
 **Reading load design:** honors students without a quant background; one chapter
 (or less) per week, read conceptually — the notebooks carry the operational load.
 Assignments below say "skim" or "read" deliberately.
@@ -47,15 +43,15 @@ Assignments below say "skim" or "read" deliberately.
 | Week (Mon) | Meetings | Assigned reading | Notes |
 |---|---|---|---|
 | Aug 24 | M2–M4 | RDSS ch. 1–2 skim (after M2); ch. 3 (for M4) | first exposure: read for the big idea |
-| Aug 31 | M5–M7 | RDSS ch. 4; ch. 7 (for M6–M7) | + optional CB "Criminal machine learning" case (M7) |
+| Aug 31 | M5–M7 | RDSS ch. 4; ch. 7 (for M6–M7) | |
 | Sep 9* | M8–M9 | RDSS ch. 4 §literature (revisit) | *no class Mon Sep 7 (Labor Day) |
 | Sep 14 | M10–M17 | RDSS ch. 6; ch. 7; ch. 8 §measurement | heaviest reading fortnight — flagged in advance |
-| Sep 21 | M15–M16 | RDSS ch. 8 §measurement (cont.); ch. 15 opener | + optional CB misleading-axes case (M16) |
+| Sep 21 | M15–M16 | RDSS ch. 8 §measurement (cont.); ch. 15 opener | |
 | Sep 28 | M17–M17 | RDSS ch. 8 §8.1 + §assignment; ch. 9 opening (async preview) | M17 async module carries its own materials |
 | Oct 5 | M18–M20 | RDSS ch. 9 (estimators, regression, uncertainty) | |
-| Oct 14* | M21–M22 | RDSS ch. 15–16 boundary; ch. 10 §power | *October break Mon Oct 12; + optional CB correlation case |
+| Oct 14* | M21–M22 | RDSS ch. 15–16 boundary; ch. 10 §power | *October break Mon Oct 12 |
 | Oct 19 | M23–M25 | RDSS ch. 10; ch. 11 | + PS1 concepts (power) surface in nb11/nb12 |
-| Oct 26 | M26–M28 | RDSS ch. 16 (DiD/RDD/IV intuition); declaration_18.1 context | + optional CB algorithm case (M25–M26) |
+| Oct 26 | M26–M28 | RDSS ch. 16 (DiD/RDD/IV intuition); declaration_18.1 context | |
 | Nov 2 | M29–M31 | none new — poster production | URC specs sheet |
 | Nov 9 | M32–M34 | none new — delivery practice | |
 | Nov 16 | M35 + URC (Tue 11/17) + M36–M37 | RDSS ch. 11 revisit (M37) | |
@@ -72,16 +68,3 @@ Assignments below say "skim" or "read" deliberately.
 - Declarations/diagnoses `*.R` (`…/replication-materials/code/`) — translated
   per-notebook; each use recorded in that notebook's provenance line.
 - Sample slides & syllabi — pacing sanity checks only.
-
-## Calling Bullshit optional menu (public callingbullshit.org case studies)
-
-| Meeting | Case | Purpose |
-|---|---|---|
-| M7 | Criminal machine learning | prediction ≠ understanding |
-| M16 | Misleading axes | honest visualization |
-| M17 (async) | student's choice from the CB case-study index | claim diagnosis practice |
-| M21 | Correlation ≠ causation | the descriptive → causal boundary |
-| M25–M26 | Big-data / algorithm hubris; machine bias | prediction's limits |
-
-Rule (locked): CB is optional garnish, never a spine; every CB discussion ends
-with "what can still be learned, and what evidence would be needed?"

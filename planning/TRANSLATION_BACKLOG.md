@@ -184,3 +184,13 @@ its quotes and URLs is at
 `_adm/codex_collab/2026-07-31_ethics-lesson/partner_raw.txt`.
 
 **Review round (2026-08-05).** Codex reviewed the D48 pass: 12 findings applied (see DECISIONS D48 review round). New EN-only items to replay in PT/ES beyond item 20 above: the corrected MIDA figure row labels ("what you want to learn" / "how you will learn it" — PT/ES strings already in the figure script), the redrawn sampling figure with undercoverage / overcoverage / duplicate (PT/ES strings also in the script), ch11's three coverage terms, ch5's audience-level surprise framing, ch10's corrected RDSS subtitle, ch27's WCAG web-scope qualification, Studio 5's route-table credit, and the ch9/ch10/ch16 "It is your turn" credit sentences.
+
+**Dataset bundle renamed (2026-08-23).** The student dataset bundle is now
+`notebooks/data/data.zip` (was `honr46400_datasets.zip`), and its members are
+stored under `notebooks/data/` inside the archive so the offline fallback in
+`load_course_data()` resolves. The English `book/for-instructors.qmd:51` link
+was repointed; the frozen translations still name the old file and must be
+updated when the D36 freeze lifts:
+
+- `book-pt/for-instructors.qmd:52`
+- `book-es/for-instructors.qmd:54`

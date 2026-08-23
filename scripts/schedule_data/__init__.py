@@ -34,7 +34,7 @@ COLUMNS = [
     "driving_question", "secondary_questions", "inquiry",
     "srl_slot", "srl_focus",
     "claim_permitted", "claim_not_permitted",
-    "rdss_reading", "book_reading", "cb_reading", "other_material", "provenance",
+    "rdss_reading", "book_reading", "other_material", "provenance",
     "concepts", "python_r_dependency", "dataset_simulation",
     "minute_dynamic", "hands_on_activity", "practice", "discussion_prompt",
     "project_connection", "milestone_developed", "milestone_work_time",

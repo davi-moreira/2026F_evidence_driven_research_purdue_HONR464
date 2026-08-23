@@ -26,7 +26,7 @@ The unit of production is the **week**, and its downstream artifacts are the
 | Cell source (canonical for editing) | `_production_kit/nb_sources/nbNN_<slug>.py` | ignored (local) |
 | Instructor notebook (built from source) | `notebooks/instructor/nbNN_<slug>_instructor.ipynb` | ignored (local) |
 | **Student notebook (the deliverable)** | `notebooks/student/nbNN_<slug>_student.ipynb` | **tracked / public** |
-| Datasets + downloadable bundle | `notebooks/data/…`, `notebooks/data/honr46400_datasets.zip` | tracked |
+| Datasets + downloadable bundle | `notebooks/data/…`, `notebooks/data/data.zip` | tracked |
 | Session guide | `session_guides/NN_session_guide.md` | ignored (generator tracked) |
 | Milestone brief | `_research_project/2026Fall/milestone_NN_<slug>.md` | tracked |
 | Schedule data (per meeting, incl. SRL fields) | `scripts/schedule_data/partN.py` | tracked |
@@ -150,7 +150,7 @@ bash scripts/sync_instructor_repo.sh              # notebooks/instructor/ + sess
 **E2. If a dataset changed,** regenerate the downloadable bundle before rendering:
 
 ```bash
-.venv/bin/python scripts/make_dataset_zip.py      # rebuild notebooks/data/honr46400_datasets.zip, then commit it
+.venv/bin/python scripts/make_dataset_zip.py      # rebuild notebooks/data/data.zip, then commit it
 ```
 
 **E3. Render and publish** (CLAUDE.md → Commit AND Render Webpage — the project's

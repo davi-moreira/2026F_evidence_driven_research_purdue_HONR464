@@ -30,7 +30,6 @@ REPO = Path(__file__).resolve().parent.parent
 
 ALLOWED_DOMAINS = {
     "book.declaredesign.org",      # RDSS free online edition
-    "callingbullshit.org",         # optional CB public cases (index pages)
     "colab.research.google.com",   # notebook badges
     "raw.githubusercontent.com",   # course data
     "github.com",                  # course repo
@@ -50,7 +49,6 @@ ALLOWED_DOMAINS = {
 # exist before being cited). Surname-anchored patterns, case-sensitive.
 VERIFIED = [
     r"Blair.{0,40}Coppock.{0,40}Humphreys",          # RDSS 2023 (+ rdss pkg)
-    r"Bergstrom.{0,20}West",                          # Calling Bullshit 2020
     r"Open Science Collaboration \(2015\)",           # Science 349, aac4716
     r"Tversky.{0,20}Kahneman.{0,10}\(?1974\)?",       # Judgment under Uncertainty
     r"Putnam.{0,15}\(?2000\)?",                       # Bowling Alone

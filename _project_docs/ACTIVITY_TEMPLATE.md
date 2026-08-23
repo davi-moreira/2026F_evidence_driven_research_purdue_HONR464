@@ -344,8 +344,7 @@ milestone it serves.
 borrowed element), the dataset attribution line (if data used):
 *"Dataset from the `rdss` package (Blair, Coppock & Humphreys, MIT License),
 companion to* Research Design in the Social Sciences *(2023)."*, and the reading
-citations (RDSS chapters at book.declaredesign.org; optional CB cases at
-callingbullshit.org). Only verified sources — `scripts/audit_sources.py` and
+citations (RDSS chapters at book.declaredesign.org). Only verified sources — `scripts/audit_sources.py` and
 `scripts/validate_coverage.py` cross-check citations against the verified
 inventory.
 

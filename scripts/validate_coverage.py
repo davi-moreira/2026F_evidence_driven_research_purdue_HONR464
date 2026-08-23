@@ -6,8 +6,7 @@
   2. Every referenced notebook's STUDENT file exists (skippable pre-Phase-D
      with --plan, which only checks the mapping).
   3. Readings-vs-inventory: every RDSS chapter cited in the schedule is in the
-     verified chapter inventory (the book has no ch. 14 or 20); Calling
-     Bullshit entries are optional public callingbullshit.org cases only.
+     verified chapter inventory (the book has no ch. 14 or 20).
   4. Every dataset named in the schedule is shipped in notebooks/data/ (or an
      inline simulation / the student's own data).
   5. Every schedule row's provenance field has the 4-segment form
@@ -74,10 +73,6 @@ def main() -> None:
             if int(ch) not in VALID_CHAPTERS:
                 errs.append(f"M{r['meeting']}: cites RDSS ch. {ch} — not in the "
                             f"verified inventory (book skips 14/20)")
-        cb = r["cb_reading"].strip()
-        if cb and "callingbullshit.org" not in cb:
-            errs.append(f"M{r['meeting']}: CB entry must point at public "
-                        f"callingbullshit.org material: {cb!r}")
 
     # 4: datasets
     for r in rows:

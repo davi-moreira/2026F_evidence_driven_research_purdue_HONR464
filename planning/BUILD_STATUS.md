@@ -52,8 +52,8 @@ Last updated: 2026-07-18, session end (build + revision pass COMPLETE; review-su
    its topic needs. Student committed + Colab-badged; instructor gitignored.
 2. **Milestones = markdown** (instructions + rubric) in `_research_project/2026Fall/`
    (MGMT 474 `_final_project` pattern) → professor replicates into Brightspace.
-3. **Calling Bullshit = optional / parallel**, light discussion; public
-   callingbullshit.org where used; not a spine.
+3. **No secondary companion book** — RETIRED. The course runs on EDR|AI
+   (required) with RDSS as the recommended companion; nothing else.
 4. **rdss/DeclareDesign full Python parity = separate parallel project** (roadmap in
    `translation/`, not a course blocker). Course notebooks implement RDSS concepts
    directly (numpy/pandas/scipy/statsmodels + small inline declare→diagnose→redesign

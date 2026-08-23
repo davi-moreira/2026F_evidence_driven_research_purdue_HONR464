@@ -86,8 +86,11 @@ brightspace/
 
 # Large files (exclude from repo, link instead)
 *.zip
-# ... except the student-facing dataset bundle (D15; scripts/make_dataset_zip.py)
-!notebooks/data/honr46400_datasets.zip
+# ... except the student-facing dataset bundle (D15; scripts/make_dataset_zip.py).
+# The docs/ copy is negated too: _quarto.yml copies it there at render time, and
+# without this negation GitHub Pages serves a 404 for every download link.
+!notebooks/data/data.zip
+!docs/notebooks/data/data.zip
 *.mp4
 *.mp3
 *.m4a

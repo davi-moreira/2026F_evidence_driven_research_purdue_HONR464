@@ -82,11 +82,15 @@ def ms_instructor_filename(n: int) -> str:
     return f"{MS_NOTEBOOKS[n][0]}_instructor.ipynb"
 
 
+def colab_url(n: int) -> str:
+    """The Colab URL of topic notebook nbNN's STUDENT file."""
+    return (f"https://colab.research.google.com/github/{REPO_SLUG}/"
+            f"blob/main/notebooks/student/{student_filename(n)}")
+
+
 def colab_badge(n: int) -> str:
-    url = (f"https://colab.research.google.com/github/{REPO_SLUG}/"
-           f"blob/main/notebooks/student/{student_filename(n)}")
     return (f"[![Open In Colab](https://colab.research.google.com/assets/"
-            f"colab-badge.svg)]({url}){{target=\"_blank\"}}")
+            f"colab-badge.svg)]({colab_url(n)}){{target=\"_blank\"}}")
 
 
 # --- schedule-derived helpers (D13 lecture numbering) -----------------------

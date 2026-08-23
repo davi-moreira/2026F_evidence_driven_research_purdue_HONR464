@@ -32,7 +32,6 @@ convention every schedule row and notebook must follow. Audited 2026-07-17.
   purrr, estimatr, randomizr. Suggests: DeclareDesign, testthat, etc.
 - **Ecosystem:** DeclareDesign, randomizr, fabricatr, estimatr, DesignLibrary (the
   MIDA toolchain the declarations/diagnoses depend on).
-- **Calling Bullshit:** Bergstrom & West (2020) — **not in repo** (see §9).
 
 ## 3. Table-of-contents reconstruction (from replication numbering + public structure)
 
@@ -112,7 +111,7 @@ the CSVs with an attribution note (see §8).
   `scripts/build_book_concept_figures.py`.)*
 - **`rdss` datasets shipped in `notebooks/data/`:** the MIT license requires its
   notice to accompany every copy, so `notebooks/data/LICENSE-rdss.txt` reproduces
-  it verbatim and rides inside `honr46400_datasets.zip` (D48). Prose attribution
+  it verbatim and rides inside `data.zip` (D48). Prose attribution
   alone does not satisfy MIT. **Open item (D48):** the package license settles
   the packaged distribution, NOT each original investigator's authorization to
   redistribute the underlying study data publicly, and the package documentation
@@ -120,15 +119,12 @@ the CSVs with an attribution note (see §8).
   (archive/DOI, owner, license or permission, allowed transformations, hash) is
   required before this data is treated as cleanly redistributable; the earlier
   "redistribution with attribution is permitted" line overstated it.
-- Calling Bullshit: cite the book; use only openly-licensed callingbullshit.org material.
 - Keep `_adm/_references/` gitignored (already is).
 
 ## 9. Missing or ambiguous assets
 
 - **Book chapter text** — absent (only replication code). Mitigation: reconstruct
   concepts from declarations/diagnoses/problem-sets + public structure; paraphrase.
-- **Calling Bullshit materials** — absent. Mitigation: optional/light use from public
-  callingbullshit.org; flag each CB touch as external provenance.
 - **Confirmed URC abstract deadline** — TBD; internal gate M20 (Oct 9).
 - **Prediction source** — RDSS stops short of a prediction entry in its design
   library; `nb12` authors the missing **"Observational: predictive"** entry in the

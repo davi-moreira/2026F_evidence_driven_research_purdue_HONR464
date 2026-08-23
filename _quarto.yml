@@ -12,7 +12,7 @@ project:
     - "!book-pt/"
     - "!book-es/"
   resources:
-    - "notebooks/data/honr46400_datasets.zip"
+    - "notebooks/data/data.zip"
   # No page encryption (D35): instructor-facing pages ship openly; the private
   # instructor repo + GitHub auth is the real protection.
 

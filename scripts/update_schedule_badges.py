@@ -27,10 +27,11 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
-from notebooks_map import (NOTEBOOKS, colab_badge, student_filename,  # noqa: E402
+from notebooks_map import (NOTEBOOKS, colab_url, student_filename,  # noqa: E402
                            nb_of, session_kind, lecture_labels)
 from session_readings import (lesson_index, rdss_note,  # noqa: E402
                               render_cell, studio_pages)
+from milestone_map import additions, milestone_map  # noqa: E402
 
 
 def tracked_students() -> set[str]:
@@ -48,11 +49,20 @@ HEADER = '''---
 title: "Schedule"
 author: "Davi Moreira"
 editor: visual
+format:
+  html:
+    toc: false
+    code-copy: false
+    code-annotations: false
+    anchor-sections: false
+    citations-hover: false
+    footnotes-hover: false
 ---
 
 ```{=html}
 <style>
   .overflow-table { font-size: 0.85rem; width: 100%; line-height: 1.2; }
+  .overflow-table td:nth-child(3), .overflow-table td:nth-child(4) { font-weight: 700; }
   .overflow-table th, .overflow-table td {
     padding: 0.3rem; text-align: left; word-wrap: break-word; vertical-align: top;
   }
@@ -66,28 +76,49 @@ editor: visual
   .overflow-table th:nth-child(8), .overflow-table td:nth-child(8) { width: 34%; }
   .below-table { font-size: 0.85rem; line-height: 1.2; margin-top: 1rem; }
 </style>
+<script>document.querySelectorAll("main a[href]").forEach(function(a){a.target="_blank"})</script>
 ```
 
 # Course Schedule
 
 '''
 
+PLUS = "✚"
+
+#: `{PLUS}` below is substituted at build time; FOOTER stays a plain string so
+#: the Quarto attribute braces in it need no escaping.
 FOOTER = '''
 ::: below-table
+
+**Milestone column.** Every milestone links to the Book Milestone it presents in
+[EDR|AI](book/index.html){target="_blank"}. A **{PLUS}** marks a milestone where
+this course asks for more than that book milestone does. Its brief on
+Brightspace explains exactly what, and everything is submitted as one file,
+`lastname_mNN.pdf`.
+
+**Course data.** Every dataset the course and the book use ships in one file:
+**[data.zip](notebooks/data/data.zip)**. Unzip it in your working directory and
+the notebooks find the files with no edit; in Colab they load straight from the
+repository, so the download only matters when you work offline.
 
 ## Core Course References
 
 - **Blair, G., Coppock, A., & Humphreys, M.** (2023). *Research Design in the
   Social Sciences: Declaration, Diagnosis, and Redesign*. Princeton University
   Press. Read free online: [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}.
-- **Bergstrom, C. T., & West, J. D.** (2020). *Calling Bullshit: The Art of
-  Skepticism in a Data-Driven World* (optional companion); public case studies
-  at [callingbullshit.org](https://callingbullshit.org/){target="_blank"}.
 - Course datasets ship from the MIT-licensed `rdss` package (see
   [`notebooks/data/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/notebooks/data){target="_blank"}).
 
 :::
-'''
+'''.replace("{PLUS}", PLUS)
+
+
+#: The Schedule page carries 43 notebook links, one per meeting. It uses a
+#: compact TEXT link rather than the badge image the Material page shows: the
+#: href and the accessible name are identical, and the page stays inside the
+#: 65,535-character ceiling (see the size note in the module docstring).
+def colab_text_link(n: int) -> str:
+    return f"[Open in Colab]({colab_url(n)})"
 
 
 def pretty_date(iso: str, day: str) -> str:
@@ -104,15 +135,14 @@ def week_studio(unit: str, studios: dict[int, dict]) -> tuple[str, str]:
     """
     m = re.match(r"Week (\d+) — (.+)$", unit)
     if not m:
-        return "", f"**{unit}**"
+        return "", unit
     n, label = int(m.group(1)), m.group(2)
     st = next((item for item in studios.values() if item["title"] == label), None)
     if st:
-        cell = (f"**[{label}](book/{st['url_path']})"
-                f"{{target=\"_blank\"}}**")
+        cell = f"[{label}](book/{st['url_path']})"
     else:
         cell = f"*{label}*"
-    return f"**Week {n}**", cell
+    return f"Week {n}", cell
 
 
 # ---------------------------------------------------------------------------
@@ -162,12 +192,67 @@ def no_em_dash(text: str) -> str:
     return text
 
 
+#: One "M5 — title, Book Milestone 5 v1 (state)" segment of `milestone_developed`.
+#: Only the course id and the trailing state are read from the authored prose.
+#: WHICH Book Milestone a course milestone presents is NEVER parsed from here:
+#: it comes from planning/COURSE_BOOK_CROSSWALK.yml through milestone_map, the
+#: same way chapter identity comes from the book. The two had already drifted
+#: (the authored M13 row says "Book Milestone 11"; the crosswalk says 10), and
+#: the crosswalk is the source of truth.
+SEG = re.compile(r"\s*(M\d+)\s*—\s*(.*?)\s*$")
+STATE = re.compile(r"\(([^()]*(?:\([^()]*\)[^()]*)*)\)\s*$")
+
+#: Marks a milestone whose COURSE asks for more than its Book Milestone page.
+#: Driven by _research_project/milestone_course_additions.yml, so this mark and
+#: the "What this course adds" section of the PDF can never disagree.
+#: (defined above, next to FOOTER, which prints its legend)
+
+
+def milestone_cell(raw: str, mmap: dict, adds: dict) -> str:
+    """The Milestone column: the course id, its Book Milestone LINKED, the state.
+
+    M17 stays out of the student-facing schedule (pre-existing course policy);
+    it is kept in the planning chain for the validators.
+    """
+    raw = raw.strip()
+    if not raw:
+        return ""
+    if raw.startswith("M17"):
+        return "No milestone"
+
+    out = []
+    for seg in raw.split("; M"):
+        seg = seg if seg.lstrip().startswith("M") else "M" + seg
+        m = SEG.match(seg)
+        if not m:
+            out.append(seg.strip())
+            continue
+        cid, rest = m.group(1), m.group(2)
+        st = STATE.search(rest)
+        state = st.group(1).strip() if st else ""
+        key = f"M{int(cid[1:]):02d}"
+        info = mmap.get(key)
+        if not info or not info["books"]:
+            out.append(f"**{cid}**")
+            continue
+        mark = f" {PLUS}" if adds.get(key, {}).get("classification") == "additions" else ""
+        links = " + ".join(
+            f"[Book Milestone {b['n']}]({b['url_path']}){{target=\"_blank\"}}"
+            for b in info["books"])
+        cell = f"**{cid}**{mark} · {links}"
+        if state:
+            cell += f" *({state})*"
+        out.append(cell)
+    return "<br>".join(out)
+
+
 def build() -> str:
     with open(SCHEDULE_CSV, newline="") as f:
         rows = list(csv.DictReader(f))
 
     tracked = tracked_students()
     labels = lecture_labels(rows)
+    mmap, adds = milestone_map(), additions()
     lines = [HEADER, "::: overflow-table\n"]
     index = lesson_index()
     studios = studio_pages()
@@ -176,13 +261,17 @@ def build() -> str:
     lines.append("|---|------|------|--------|-------|----------|-----------"
                  "|------------------|")
 
+    seen_this_week: set[str] = set()
+    current_unit = None
     for r in rows:
+        if r["unit"] != current_unit:
+            current_unit, seen_this_week = r["unit"], set()
         week, studio = week_studio(r["unit"], studios)
 
         n = nb_of(r["other_material"])
         badge = ""
         if n is not None:
-            badge = (colab_badge(n) if student_filename(n) in tracked
+            badge = (colab_text_link(n) if student_filename(n) in tracked
                      else f"*nb{n:02d} (coming)*")
 
         title = r["title"]
@@ -193,27 +282,15 @@ def build() -> str:
             _nb, i, total = lab
             title = f"{title} *(Lecture {i}/{total})*"
 
-        mile = r["milestone_developed"]
-        # M17 is retained in the internal planning chain for validator and
-        # archival consistency, but it is not a student-facing course milestone.
-        if mile.startswith("M17"):
-            mile = "No milestone"
-        # compact for the site: keep the course id + any "Book Milestone N"
-        # bridge token; drop the long title between them (D41)
-        bm = re.search(r"Book Milestone \d+[^|]*", mile)
-        mile = re.sub(r" — [^|]*", "", mile).strip()
-        mile = mile.replace("(presented + submitted)", "").strip()
-        if bm:
-            mile = f"{mile} · {bm.group(0).strip()}" if mile else bm.group(0).strip()
+        mile = milestone_cell(r["milestone_developed"], mmap, adds)
 
         # Chapter identity is GENERATED from the book (session_readings), so
         # the page can never paraphrase a title the book publishes.
-        blocks = [render_cell(r["book_reading"], index)]
+        blocks = [render_cell(r["book_reading"], index,
+                              seen=seen_this_week)]
         rec = rdss_note(r["rdss_reading"])
         if rec:
             blocks.append(f"*Recommended companion — RDSS {rec}.*")
-        if r["cb_reading"].strip():
-            blocks.append("*Optional: Calling Bullshit case study.*")
         materials = "<br>".join(b for b in blocks if b and b != "—") or "—"
 
         lines.append(
@@ -235,7 +312,10 @@ def build() -> str:
 
     lines.append("\n:::")
     lines.append(FOOTER)
-    return no_em_dash("\n".join(lines))
+    page = no_em_dash("\n".join(lines))
+    # New-tab behaviour is set once by the HEADER script, so the
+    # per-link attribute is stripped from every generated link.
+    return page.replace('{target="_blank"}', "")
 
 
 def main() -> None:

@@ -233,8 +233,6 @@ def meeting_section(m: dict, labels: dict[int, tuple[int, int, int]]) -> str:
     lines.append("")
     if clean(m.get("rdss_reading")):
         lines.append(f"**Reading due:** {m['rdss_reading']}")
-    if clean(m.get("cb_reading")):
-        lines.append(f"**Optional (CB):** {m['cb_reading']}")
     lines.append(f"**Materials:** {m['other_material']}")
     if clean(m.get("dataset_simulation")) and m["dataset_simulation"].lower() != "none":
         lines.append(f"**Data / simulation:** {m['dataset_simulation']}")

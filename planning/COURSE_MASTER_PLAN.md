@@ -264,8 +264,7 @@ M1–M17 present book Milestones 1–12 as versions). Studio↔week alignment is
 the For Instructors adoption table.
 
 The book is the largest scope item and is sequenced last in the build, gated by
-its sync validator. Bergstrom & West, *Calling Bullshit*, is optional/parallel
-reading used lightly to sharpen claim evaluation.
+its sync validator.
 
 ## 9. Provenance and change log
 
