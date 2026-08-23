@@ -49,5 +49,10 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    # No page on this site carries a code block. Leaving code-copy on emits the
+    # copy-button CSS into the theme bundle, and turning it off per-page forks a
+    # second 498 KB bootstrap bundle for that one page.
+    code-copy: false
+    code-annotations: false
 
 editor: visual

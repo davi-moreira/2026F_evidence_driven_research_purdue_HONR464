@@ -157,12 +157,23 @@ def main() -> int:
             }
         )
 
-    # Preparation script is due two days before the lecture (D18).
+    # Preparation script is due two days before the lecture (D18) -- but never
+    # ON a day the course does not meet. Two of the slots land their nominal
+    # due date on Labor Day and on October Break, so the deadline steps back to
+    # the previous day the class actually meets.
     import datetime
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from validate_calendar import no_class_days
+
+    closed = set(no_class_days())
 
     for r in rows:
         d = datetime.date.fromisoformat(r["date"])
-        r["prep_due"] = (d - datetime.timedelta(days=2)).isoformat()
+        due = d - datetime.timedelta(days=2)
+        while due.weekday() not in (0, 2, 4) or due.isoformat() in closed:
+            due -= datetime.timedelta(days=1)
+        r["prep_due"] = due.isoformat()
 
     if args.dry_run:
         for r in rows:

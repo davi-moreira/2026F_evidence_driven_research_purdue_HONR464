@@ -2658,18 +2658,34 @@ its content. These survive, unassigned:
   (archived under the `_retired_*` convention D50 established)
 - `book/studios/milestone12-release-next-cycle.qmd`, the book's own Milestone 12, which
   the book keeps in full: **no course milestone now presents Book Milestone 12**
-- `notebooks/student/nb16_release_next_cycle_student.ipynb` and
-  `notebooks/student/ms15_final_chapter_portfolio_student.ipynb`
+- `notebooks/student/nb16_release_next_cycle_student.ipynb`, which still teaches
+  Week 16 with its milestone framing removed
+- `notebooks/student/_retired_d54/ms11_presentation_package_student.ipynb` and
+  `notebooks/student/_retired_d54/ms15_final_chapter_portfolio_student.ipynb` — BOTH
+  held M17's release-audit / final-chapter / portfolio material. `ms11`'s entry in
+  `scripts/notebooks_map.py` claimed it was "M14 studio — the go-public package",
+  which was simply wrong: its content is M17's. **M11, M12 and M14 have no studio
+  notebook and never did**, which the map's bad label had been hiding.
 - the authored course-additions section for M17, parked under `retired:` in
   `_research_project/milestone_course_additions.yml` in case a later edition revives it
 
-**What the reading chain does NOT lose.** The M17 row stays in
+**What the reading chain does NOT lose.** The Week-16 row stays in
 `planning/COURSE_BOOK_CROSSWALK.yml` with its `assignments:` intact, because Week 16
 still teaches `managing-ai-agents`, `conflicting-agents` and `final-portfolio`, and
 each is that lesson's **home anchor**. Removing the row would break the home-anchor
 partition, drop three chapters out of `planning/READING_FEEDBACK_SCHEDULE.md`, and fail
 `validate_book_architecture.py`. The crosswalk answers *what Week 16 teaches*; it does
 not answer *what the course collects*.
+
+The row therefore survives but **loses its milestone identity**: it is now
+`milestone: null`, so no consumer can print "M17" from it, and it declares
+`teaches_station: release-next-cycle` so the session-reading validator can still map
+Studio 12 to Week 16 without a graded checkpoint. Four scripts learned to skip
+milestone-less rows: `milestone_map.py`, `build_milestone_anchors.py`,
+`validate_book_architecture.py` and `validate_session_readings.py`. The row's
+`book_milestones:` bridge is now empty and its station event is `introduce`, not
+`checkpoint` — `release-audit-v1` is deliberately never reached, which
+`validate_book_architecture.py` reports as its standing Phase-4 warning.
 
 **One declaration, every consumer.** The live chain is the `milestones:` table in
 `course_config.yaml`. `scripts/milestone_map.py` reads it through `live_milestones()`,
@@ -2687,23 +2703,179 @@ from the schedule at the same moment, with no second list to remember.
 **M1–M16** scores. No weight anywhere changes: Final Project stays 50%, and its five
 QM474 component names and 30/20/10/20/20 shares are untouched, so D52 and D53 stand.
 
-⚠ **OPEN, and it is a real one.** D52's `instructor_ta_evaluation` component (20% of the
-project, 10% of the course) was scored `50% M17 Final Research Artifact + 25% M17
-AI-management portfolio + 25% Evidence Defense`. With M17 retired, `course_config.yaml`
-now reads `100% instructor evaluation of the M13 final poster submission`. Two things
-follow and both need Davi's explicit sign-off:
+**Grading, resolved.** Davi ruled the three open questions the same day, in session:
 
-1. **Three named deliverables would carry no grade weight.** The final research chapter,
-   the AI-management portfolio and the individual oral Evidence Defense are named in the
-   Project Mission and in the syllabus, and under the new rule none of them is scored.
-2. **The student-facing authority still says the opposite.**
-   `_research_project/2026Fall/final_project_grading_and_project_modes.md` still tells
-   students the instructor evaluates "your **M17** final submission and your live
-   Evidence Defense" with three subscores. Under D53 that document, not
-   `course_config.yaml`, is what students are pointed at. Until it is reconciled the
-   course states two different rules for the same 10% of the grade.
+1. **Instructor/TA Evaluation is scored from the final poster submission.** Davi's
+   words: "the final poster submission." `course_config.yaml` and
+   `_research_project/2026Fall/final_project_grading_and_project_modes.md` both now
+   read: 100% instructor evaluation of the poster locked at **M13**, judged as
+   research communication (traceable argument, reproducible results, uncertainty and
+   limitations at the claim, verified sources, honest AI disclosure) — a different
+   judgement from the **Poster Presentation** component, which scores poster quality
+   against the M13 rubric plus the live Expo delivery.
+2. **The final research chapter and the AI-management portfolio are dropped from all
+   student-facing material.** Davi chose "Drop both". The Project Mission line in
+   `syllabus.qmd` now ends the course at the reproducible package, the bounded
+   research note, and the written reflection. Both instruments survive only in
+   `_retired_d54/`.
+3. **The last Friday's reflection is graded as its own light deliverable**, sitting
+   outside the milestone mean. It is collected under **Participation (9%)**, which
+   keeps every published weight intact and adds no sixth Final Project component, so
+   D52 and D53 are untouched. `syllabus.qmd` §Participation and
+   `course_config.yaml assessment:` both say so.
+
+⚠ **Still open — the Evidence Defense.** With Instructor/TA Evaluation moved to the
+poster, the individual oral Evidence Defense carries **no grade weight**. It is still
+scheduled as in-class practice in the Week 15 and Week 16 Wednesday peer-defence
+blocks, and the Project Mission still names "an oral evidence defense" as a course
+deliverable. Davi has not been asked whether the defense should stay as ungraded
+practice, be folded into a graded component, or be retired outright. Until he rules,
+it stays in the schedule as practice.
+
+⚠ **Worth a look — the poster now drives two components.** M13's poster supplies 70%
+of Poster Presentation (20% of the project) *and* 100% of Instructor/TA Evaluation
+(20%), so a single artifact now determines 34 of the project's 100 points. That is a
+direct consequence of ruling 1 and is recorded here so it is a choice on the record
+rather than an accident.
 
 **Supersession boundary.** D54 supersedes only D50's milestone *count*: the chain is
 M1–M16, not M1–M17. D50's conference block, its renumbering of M1–M10 onto Book
 Milestones 1–10, and its Weeks 15–16 post-conference studios all stand. D52's weights
 and component names stand. D53's syllabus prose stands.
+
+---
+
+## D55 — every milestone is due the Sunday after its Friday studio (2026-08-23)
+
+**Decision.** A milestone is **worked at its Friday studio and due that Sunday at
+11:59 PM**. The Friday studio is unchanged as the working session; what moves is the
+deadline, off the studio's own evening and onto the end of the weekend.
+
+**Instruction.** Davi, 2026-08-23: "make sure that all milestones due dates on friday
+will be updated to sunday right after it."
+
+**The shift, milestone by milestone.**
+
+| Was | Now |
+|---|---|
+| M1 Fri Aug 28 | **Sun Aug 30** |
+| M2 Fri Sep 4 | **Sun Sep 6** |
+| M3 Fri Sep 11 | **Sun Sep 13** |
+| M4 Fri Sep 18 | **Sun Sep 20** |
+| M5 Fri Sep 25 | **Sun Sep 27** |
+| M6 Fri Oct 2 | **Sun Oct 4** (carries the URC draft abstract) |
+| M7 Fri Oct 9 | **Sun Oct 11** (carries the URC application + proof) |
+| M8 Fri Oct 16 | **Sun Oct 18** |
+| M9 Fri Oct 23 | **Sun Oct 25** |
+| M10 Fri Oct 30 | **Sun Nov 1** |
+| M14 Fri Nov 13, 5:00 PM | **Sun Nov 15, 11:59 PM** |
+| M16 Fri Dec 4 | **Sun Dec 6** |
+
+**Three deadlines deliberately do NOT move**, because the conference block depends on
+their weekday position and Davi ruled each one:
+
+- **M11** stays **Wed Nov 4, at class**. It was never a Friday deadline.
+- **M12** stays **Fri Nov 6, 5:00 PM**. Its Sunday-after is Nov 8, which is the
+  terminal poster lock: peer criticism has to reach authors *before* the lock, and
+  `validate_milestones.py` hard-fails on two milestones sharing a due date. Davi's
+  call: keep Friday.
+- **M13** is already **Sun Nov 8, 11:59 PM**, terminal, and shares QM 47400's print
+  run. **M15** is already **Sun Nov 29**.
+
+**M14 was a judgement call and Davi took it.** Moving it to Sun Nov 15 leaves the
+invitation post about 36 hours of lead time before the Tue Nov 17 Expo. He chose the
+Sunday anyway; the tightened lead time is on the record.
+
+**What changed in the tree.** `course_config.yaml milestones:` is the source of truth
+and every consumer follows it. Also updated by hand, because they carry the dates in
+prose: the chain table and notes in `planning/PROJECT_MILESTONES.md`; the `Due:` line
+and the studio-work rubric row of each brief in `_research_project/2026Fall/`; the
+fixed anchors and success line in `scripts/validate_milestones.py`; the
+`milestone_developed` fields and the Friday closes in `scripts/schedule_data/part1–4.py`;
+and nb01's week-architecture cell, which now says a milestone "is due that Sunday at
+11:59 PM" without printing a calendar date (D13 still forbids dates in notebooks).
+
+**Stale antecedents this cleared.** Chasing the dates surfaced four D50 leftovers,
+all fixed: M15's post-release note pointed at a "release audit at M17, four days
+before the Expo" that no milestone created (it now points at the **M13 lock**, nine
+days before, which is genuinely the pre-Expo release decision); the Week-13 dress
+rehearsal listed "M17 submitted" as student prep (now **M14**); nb01 said the poster
+"locks the Friday before" the Expo (it locks on a Sunday, more than a week before);
+and nb16 closed with "next comes the public test" although Week 16 is after it.
+
+**Not the deadline, the work.** The studio itself is unchanged: milestones are still
+built in the room, not at midnight. Brief prose that said "submitted the same day" or
+"submit at studio close" now says "submitted by Sunday", and the Friday close still
+says submit — the Sunday is a deadline, not an instruction to wait.
+
+## D56 — One `data.zip`, the Calling Bullshit reference dropped, and the no-class days made visible (2026-08-23)
+
+Three separate rulings, taken together because they touch the same generators.
+
+**1. The student dataset bundle is `notebooks/data/data.zip`.** It supersedes
+`honr46400_datasets.zip` (D15, D48) and is the single bundle for BOTH the course and
+the book. Membership is unchanged — the five `rdss` CSVs, `README.md`, and the MIT
+notice `LICENSE-rdss.txt`, which still ships inside every copy (D48 stands). Two
+things did change:
+
+- **The archive stores its members under `notebooks/data/`.** That is the first path
+  `load_course_data()` falls back to, so a student who unzips the bundle in the
+  directory they run from can execute every notebook offline with no edit. This
+  closes `planning/AUDIT_FIXLIST.md` item L7, open since the v2 build.
+- **`.gitignore` now negates `docs/notebooks/data/data.zip` as well.** Without that
+  second negation the rendered copy was ignored, never committed, and never
+  published: the old bundle's Pages URL returned **404 for the whole life of the
+  repo**, so every "all datasets (.zip)" link on the Material page was dead. The new
+  URL is verified live.
+
+The Schedule page now carries the download link, which it never did despite CLAUDE.md
+and the data README both claiming it. The frozen PT/ES editions still name the old
+file and are logged in `planning/TRANSLATION_BACKLOG.md` (D36).
+
+**2. Bergstrom & West, *Calling Bullshit*, is dropped from the entire course.** Not
+demoted — removed. The `cb_reading` column is gone from the schedule schema, so
+`planning/MEETING_SCHEDULE.csv` is now **43 × 34**, and with it went the label, the
+`OPTIONAL_EMPTY` exemption, the session-guide emitter, the schedule-row emitter, the
+`validate_coverage.py` gate, the `callingbullshit.org` entry in `audit_sources.py`'s
+domain allowlist, the `Bergstrom.{0,20}West` entry in its verified-citation registry,
+`course_config.yaml sources.secondary_book`, and the reference itself from four
+notebook sources, the schedule footer, and seven planning documents. Order matters:
+the two `audit_sources.py` entries must be deleted LAST, after the notebooks are
+rebuilt, or the citation gate fails on its own material. Historical audit records
+(`planning/AUDIT_FIXLIST.md`, `planning/FINAL_REPORT_V2.md`) keep their mentions;
+they are point-in-time records, not live references.
+
+**3. The five no-class MWF days are printed, not silently skipped.** `Mon Sep 7`
+(Labor Day), `Mon Oct 12` (October Break), `Wed Nov 18` (the day after the Expo),
+`Wed Nov 25` and `Fri Nov 27` (Thanksgiving) carry no meeting number, so
+`planning/MEETING_SCHEDULE.csv` has no row for them and every printed calendar used
+to jump straight past them. They now appear on the Schedule page, in the schedule
+`.docx`, in the syllabus `.docx`, and in the Brightspace weekly units — which also
+stopped announcing "the three meetings" over as few as one. The wording lives once,
+in `scripts/validate_calendar.py PUBLIC_NO_CLASS_LABEL`, next to the `HOLIDAYS` set
+it must agree with; every printed surface reads it from there. A break day takes its
+Week from a meeting in the **same calendar week**, which is the only rule that files
+Fri Nov 27 under the Thanksgiving week rather than the week starting three days later.
+
+Two deadlines were landing ON closed days — SRL slots 03 and 12 had their preparation
+scripts due on Labor Day and on October Break. `scripts/assign_srl_slots.py` and
+`scripts/build_participation_schedules.py` now step the "two days ahead" deadline back
+to the previous day the class actually meets (Fri Sep 4 and Fri Oct 9).
+
+**The Schedule page is held to 65,535 characters** and had grown to 76,654 bytes. It
+is now ~62.7 KB, and `scripts/update_schedule_badges.py` FAILS if a render breaches
+the ceiling, so it cannot silently regress. What paid for it, all in generators and
+none of it costing a student any information: the page turns off the Quarto features
+it does not use (`toc`, `anchor-sections`); the Notebook column is a text link rather
+than the badge image (the Material page keeps the image); one script sets the
+new-tab behaviour instead of 186 inline attributes; the table's CSS moved to
+`styles.css`; Week and Studio are bold from CSS; a Studio's full title is spelled out
+on its week's first row and shortened on the repeats; and a reading cell that repeats
+chapters the same week already linked above NAMES them (`Ch. 40 *(linked above)*`)
+instead of relisting the links. That last one is deliberately exact: an earlier draft
+said "this week's chapters", which would have told a Week-16 student to submit three
+chapters' *It is your turn* sections when only one is due.
+
+`code-copy` and `code-annotations` are off **site-wide** rather than on the schedule
+page alone, because a page-level override forked a second 498 KB bootstrap bundle
+into `docs/` for one page. No page on this site carries a code block.

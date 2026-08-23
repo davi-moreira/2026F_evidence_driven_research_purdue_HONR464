@@ -32,6 +32,17 @@ from pathlib import Path
 
 import yaml
 
+from validate_calendar import no_class_days
+
+
+def same_week(iso: str, meetings: list[dict]) -> bool:
+    """Does this date fall in the same calendar week as one of these meetings?"""
+    wk = datetime.date.fromisoformat(iso).isocalendar()[:2]
+    return any(datetime.date.fromisoformat(m["date"]).isocalendar()[:2] == wk
+               for m in meetings)
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "course_config.yaml"
 SCHEDULE = ROOT / "planning" / "MEETING_SCHEDULE.csv"
@@ -187,9 +198,28 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
             "before you start, and work in that copy all week.</p>"
         )
 
-    add("<h3>The three meetings</h3>")
+    # The week's own meetings PLUS any no-class day that falls inside it, in
+    # date order. Weeks 3, 8, 13 and 14 do not have three meetings, and a unit
+    # that says "the three meetings" over one bullet reads like a mistake.
+    breaks = [(iso, text) for iso, text in no_class_days().items()
+              if same_week(iso, mine)]
+    entries = sorted(
+        [(m["date"], m, None) for m in mine] + [(iso, None, text)
+                                                for iso, text in breaks],
+        key=lambda e: e[0])
+    n = len(mine)
+    word = {1: "meeting", 2: "two meetings", 3: "three meetings"}.get(
+        n, f"{n} meetings")
+    add(f"<h3>{'The one ' + word if n == 1 else 'The ' + word}</h3>")
     add("<ul>")
-    for m in mine:
+    for iso, m, label in entries:
+        day = DAYNAME.get(
+            datetime.date.fromisoformat(iso).strftime("%a"),
+            datetime.date.fromisoformat(iso).strftime("%a"))
+        if m is None:
+            add(f"<li><strong>{esc(day)}, {esc(pretty(iso))}</strong> — "
+                f"<em>{esc(label)}</em></li>")
+            continue
         day = DAYNAME.get(m["day"], m["day"])
         add(
             f"<li><strong>{esc(day)}, {esc(pretty(m['date']))}</strong> — "
@@ -256,7 +286,7 @@ def gradebook_spec(config: dict) -> str:
         "final_project": (
             "Final Project",
             "One category with five QM474 component items (30/20/10/20/20); "
-            "Milestone Deliverables contains M1-M17",
+            "Milestone Deliverables contains M1-M16",
         ),
     }
     expected_fp = [
@@ -356,10 +386,10 @@ def gradebook_spec(config: dict) -> str:
         "| **Total** | **100%** | "
         f"**{fp_course_total}%** | | |",
         "",
-        "Do not create a top-level Final Project Milestones category. M1-M17 "
+        "Do not create a top-level Final Project Milestones category. M1-M16 "
         "are the source scores for the Milestone Deliverables item inside the "
         "single Final Project category. Enter that item as the equal-weight "
-        "mean of all seventeen 0-100 milestone scores. Keep the seventeen "
+        "mean of all sixteen 0-100 milestone scores. Keep the sixteen "
         "numeric source items for feedback without giving them additional "
         "weight; use a calculated item when available or enter the verified "
         "mean manually.",
@@ -432,7 +462,7 @@ def gradebook_spec(config: dict) -> str:
         "## Items inside each category",
         "",
         f"- **Final Project → Milestone Deliverables** — {len(config['milestones'])} "
-        "source items, M1 through M17, each with the due date below; the "
+        "source items, M1 through M16, each with the due date below; the "
         "component score is their equal-weight mean.",
         "- **Final Project → Peer Evaluation** — one confidential per-student "
         "item; use every teammate for approved groups and two assigned project "
@@ -446,8 +476,10 @@ def gradebook_spec(config: dict) -> str:
         "Research Conference** — one per-student item: 70% M13 poster quality "
         "+ 30% M15 live presentation.",
         "- **Final Project → Instructor/TA Evaluation** — one per-student "
-        "item: 50% M17 Final Research Artifact + 25% M17 AI-management "
-        "portfolio + 25% Evidence Defense.",
+        "item: 100% the instructor's evaluation of the final poster "
+        "submission locked at M13 (D54). The final research chapter, the "
+        "AI-management portfolio and the oral Evidence Defense no longer "
+        "carry grade weight and get no gradebook item.",
         f"- **Quizzes** — {n_quizzes()} items, one per teaching week that "
         "carries a quiz (Week 14 is asynchronous and has none). Quizzes are "
         "printed and graded on paper, so create them as **numeric grade "

@@ -1,6 +1,6 @@
 # Multi-Agent Worksheet
 
-*The Week 16 (M17) worksheet for running several AI roles on one research task,
+*The Week 16 worksheet for running several AI roles on one research task,
 then deciding for yourself when they disagree. Managing a team of AI roles is a
 skill: split the work, wire the dependencies, run it, and reconcile the outputs
 with a human override. Fill one worksheet per task and attach it to your
@@ -146,7 +146,7 @@ can happen while everyone is wrong.
 
 ---
 
-*Attach the completed worksheet to your M17 AI-management portfolio. See also:
+*Keep the completed worksheet with your AI Research Ledger. See also:
 [agent_role_cards.md](agent_role_cards.md) (the roles) ·
 [ai_error_taxonomy.md](ai_error_taxonomy.md) (correlated errors, false
 consensus) · [escalation_protocol.md](escalation_protocol.md) (when a conflict

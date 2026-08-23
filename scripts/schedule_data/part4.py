@@ -117,7 +117,7 @@ MEETINGS_P4 = [
     {
         "meeting": 34, "date": "2026-11-13", "day": "Fri", "modality": "in-person",
         "unit": "Week 12 — Conference block: presentation preparation",
-        "title": "Studio Friday — the printed poster arrives: rehearse on the real thing and go public, M14 due",
+        "title": "Studio Friday — the printed poster arrives: rehearse on the real thing and go public, M14 due Sunday",
         "driving_question": "The board is printed and it is no longer editable. What does rehearsing on paper tell you that rehearsing on a screen never did?",
         "secondary_questions": "What changed between your first and third delivery of the same thirty seconds? Which element of your board turned out to be illegible at standing distance, and what is the spoken workaround? Which detail of the official programme entry did you copy rather than remember, and why does that matter?",
         "inquiry": "all positions (rehearsal studio — conference block)",
@@ -199,7 +199,7 @@ MEETINGS_P4 = [
         "provenance": "crosswalk M15 (adapt-and-defend revisit v4) + project/conference/conference_reflection_protocol.md + QM 47400 proof-of-presentation requirement | Week 13 conference block, asynchronous session 1 | the coded question tally + the proof of presentation | fresh (D50)",
         "concepts": "audience data (a coded tally of questions asked, which is evidence, against a recollection of how it felt, which is not); the one-word tag (the coding unit: the block or the boundary the question was actually about); recurrence (a question heard more than once from readers who did not confer, which is the closest thing to an independent replication of a criticism); the proof of presentation (a photograph of you at your board, which records that the public test happened)",
         "python_r_dependency": "pandas for the tally, if you want the counts computed rather than hand-totalled; no new libraries required",
-        "dataset_simulation": "your own captured questions; no simulated data",
+        "dataset_simulation": "your own captured questions; foos_etal.csv for the replication run in nb14",
         "minute_dynamic": "ASYNC (~50 min self-paced, one sitting, no live meeting): 0–8 capture while it is still fresh — write out every question you were asked at the Expo, one per line, without editing or grouping, and add the answer you actually gave rather than the one you meant to give; 8–25 code the tally — give each question a one-word tag naming the block or the boundary it was about, star every tag that appears more than once from visitors who did not arrive together, and total the tags, so that what you end the session with is a table and not a paragraph; 25–40 the two-column split — for each starred tag, decide whether the question is asking your CLAIM to change or only your DEFENCE of it to improve, and write the one-sentence reason, leaving the adjudication itself for Monday; 40–48 upload the proof-of-presentation photograph and write the two-sentence account of what the public test cost you and what it returned; 48–50 the 📒 AI Research Ledger row — if you used any tool to group or tidy the tally, the row records the prompt, what came back, and the grouping you overruled by hand.",
         "hands_on_activity": "Write out every question verbatim, code it to a one-word tag, star the recurrences, split them into claim-facing and defence-facing, and upload the proof of presentation.",
         "practice": "📝 nb14 practice: code eight sample Expo questions to tags and mark which two are the same question in different words.",
@@ -321,7 +321,7 @@ MEETINGS_P4 = [
     {
         "meeting": 40, "date": "2026-12-04", "day": "Fri", "modality": "in-person",
         "unit": "Week 15 — Studio 11: Reproduce and package",
-        "title": "Studio Friday — the repair block: your package against a stranger's run, and the note the Expo rewrote, M16 due",
+        "title": "Studio Friday — the repair block: your package against a stranger's run, and the note the Expo rewrote, M16 due Sunday",
         "driving_question": "A colleague ran your package and stopped twice. Which of those stops is a bug in the code, and which is a sentence you never wrote?",
         "secondary_questions": "Which of your colleague’s stops was a code defect and which was a sentence you never wrote? What does a second clean run establish that the first repair alone did not? Where do the Expo criticism and the cold-run findings disagree about what your note should say?",
         "inquiry": "all positions (repair studio — Studio 11)",

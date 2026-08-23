@@ -34,6 +34,7 @@ from docx.shared import Inches, Pt, RGBColor                   # noqa: E402
 
 from build_syllabus_docx import (                              # noqa: E402
     MILESTONE_DUE, ROOT, build_schedule_rows, fmt_date)
+from validate_calendar import no_class_days                    # noqa: E402
 
 OUT = (ROOT / "_syllabus" / "2026F"
        / "2026F_evidence_driven_research_HONR464_schedule.docx")
@@ -49,13 +50,10 @@ BROWN = RGBColor(0x8E, 0x76, 0x4C)
 FONT = "Calibri"
 
 TERM_START, TERM_END = date(2026, 8, 24), date(2026, 12, 11)
-NO_CLASS_REASON = {
-    "2026-09-07": "No class — Labor Day",
-    "2026-10-12": "No class — October Break",
-    "2026-11-18": "No class — the day after the Expo, to rest and catch up",
-    "2026-11-25": "No class — Thanksgiving Break",
-    "2026-11-27": "No class — Thanksgiving Break",
-}
+# The no-class days and their student-facing wording come from the calendar
+# module, so this document, the Schedule web page and the syllabus cannot
+# disagree about when the term does not meet.
+NO_CLASS_REASON = no_class_days()
 
 MILESTONE_TITLE = {
     1: "Curiosity committed and the research problem",
@@ -73,10 +71,8 @@ MILESTONE_TITLE = {
     13: "Final poster lock (TERMINAL — no revision window)",
     14: "Go-public package: presentation plan and invitation",
     15: "Conference reflection",
-    16: "Reproducible package and the peer cold run",
-    17: "Release audit, final research chapter, and AI-management portfolio "
-        "(TERMINAL — no revision window)",
-}
+    16: "Reproducible package and the peer cold run (the final milestone)",
+}   # D54 retired M17; D55 moved every Friday deadline to the Sunday after it.
 
 
 # ── docx helpers (same techniques as QM474's generator) ─────────────────────
@@ -213,8 +209,19 @@ def tune(par, space_before=1, space_after=1, align=None):
 
 
 def week_of_date(iso: str, rows) -> str:
-    """The Wk label a no-class day belongs to: the week of the nearest meeting."""
+    """The Wk label a no-class day belongs to.
+
+    A meeting in the SAME calendar week wins, which is the only rule that puts
+    Fri Nov 27 in the Thanksgiving week rather than in the week that starts three
+    days later. Nearest-meeting is the fallback for a day with no meeting in its
+    own week. This matches the rule the Schedule page uses.
+    """
     d = date.fromisoformat(iso)
+    same_week = [r for r in rows
+                 if date.fromisoformat(r["iso"]).isocalendar()[:2]
+                 == d.isocalendar()[:2] and r["wk"]]
+    if same_week:
+        return same_week[0]["wk"]
     best, bestgap = "", 999
     for r in rows:
         gap = abs((date.fromisoformat(r["iso"]) - d).days)
@@ -348,12 +355,16 @@ def main():
     style_run(p.add_run("Final Project Milestones"), 13, bold=True)
     p = tune(doc.add_paragraph(), 0, 6)
     style_run(p.add_run(
-        "The seventeen milestones are the Milestone Deliverables item of the "
-        "Final Project. Friday milestones are submitted in the studio; M11 is "
-        "due at class on a Wednesday, and M13 and M15 fall on Sundays at "
-        "11:59 PM. The final poster lock is pinned to Sun Nov 8, nine days "
-        "before the conference and shared with QM 47400's print run. M13 and "
-        "M17 are terminal: no revision window."), 9, color=GREY)
+        "The sixteen milestones are the Milestone Deliverables item of the "
+        "Final Project. A milestone is worked at its Friday studio and due "
+        "that Sunday at 11:59 PM. Three keep weekday deadlines: M11 is due at "
+        "class on a Wednesday, M12 at 5:00 PM on Friday Nov 6 so peer "
+        "criticism reaches authors before the lock, and M13 is the terminal "
+        "poster lock, pinned to Sun Nov 8, nine days before the conference and "
+        "shared with QM 47400's print run. M13 is terminal: no revision "
+        "window. The last Friday of the semester, Dec 11, is the "
+        "course-closing reflection session, collected under participation "
+        "rather than as a milestone."), 9, color=GREY)
 
     m_tbl = doc.add_table(rows=1, cols=3)
     m_tbl.style = "Table Grid"

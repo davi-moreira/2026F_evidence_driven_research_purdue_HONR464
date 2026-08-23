@@ -90,7 +90,7 @@ verification is named, not vague. The remaining concern is honest.
    on the poster.
 5. **The ledger is a primary source for two later deliverables.** Your M16
    red-team of a peer reads *their* ledger to find where verification was thin.
-   Your M17 AI-management portfolio is built from *your* full-semester ledger.
+   Your full-semester ledger is the record you carry out of this course.
    Keep it honest now so it serves you then.
 6. **Disclose, do not hide.** Undisclosed AI use is an academic-integrity
    violation. A frankly logged weak spot is graded on its honesty; a hidden one
@@ -107,7 +107,7 @@ them.
 | One row is | One delegated task | One claim my project makes |
 | Columns | task · tool · prompt · output · decision · verification · concern · you | claim · evidence · verification · boundary · sensitivity survival |
 | Grows during | every session and milestone | the analysis and writing phases |
-| Feeds | M16 peer red-team, M17 AI portfolio | the poster, the brief, the evidence defense |
+| Feeds | M16 peer red-team and reproducible package | the poster, the brief, the evidence defense |
 
 A useful way to hold the difference: the **AI ledger** is about your *process*
 (who did the work and how you policed it). The **claim ledger** is about your

@@ -46,6 +46,11 @@ if not SCHEDULE.exists():
 READING_OUT = REPO / "planning" / "READING_FEEDBACK_SCHEDULE.md"
 SRL_OUT = REPO / "planning" / "SRL_ASSIGNMENT_SCHEDULE.md"
 
+sys.path.insert(0, str(REPO / "scripts"))
+from validate_calendar import no_class_days  # noqa: E402
+
+CLOSED = set(no_class_days())
+
 #: How a lesson's anchoring mode maps onto who owes feedback on it.
 #: `route` / `route-contrast` lessons are read by every student, but only two
 #: of the five apply to any one student: their own declared route plus the
@@ -199,7 +204,12 @@ def srl_table(meetings: list[dict]) -> str:
     for slot, r in slots:
         week, studio = week_of(r["unit"])
         d = dt.date.fromisoformat(r["date"])
-        prep = (d - dt.timedelta(days=2)).strftime("%a %b %-d")
+        # Two days ahead (D18), but never ON a day the course does not meet:
+        # two slots would otherwise fall due on Labor Day and October Break.
+        pd_ = d - dt.timedelta(days=2)
+        while pd_.weekday() not in (0, 2, 4) or pd_.isoformat() in CLOSED:
+            pd_ -= dt.timedelta(days=1)
+        prep = pd_.strftime("%a %b %-d")
         name, _ = FRAME[r["day"]]
         title = re.sub(r"\s+", " ", r["title"]).strip()
         lines.append(

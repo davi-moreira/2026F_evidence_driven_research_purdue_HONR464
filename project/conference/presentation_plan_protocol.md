@@ -3,7 +3,7 @@
 *How to build and rehearse the two spoken versions of your poster pitch.
 Governs the pitch layers of
 [milestone_11 — Presentation Package](../../_research_project/2026Fall/milestone_11_presentation_package.md).
-Scripted in class M32; the scripts and walk map feed M17, due at the mock-symposium
+Scripted in class M32; the scripts and walk map feed M14, due at the mock-symposium
 studio (M34, Fri Nov 13).*
 
 ## Purpose
@@ -18,7 +18,7 @@ claim.
 
 - Your final poster (content internalized, headline claim sayable cold).
 - Your inquiry declaration §5–6 (the boundary you must not cross aloud).
-- Your uncertainty line and the limitation you'll speak (feeds the M17 ULN statement).
+- Your uncertainty line and the limitation you'll speak (feeds the M14 ULN statement).
 - A partner and a timer for the delivery rounds.
 
 ## The two architectures
@@ -68,7 +68,7 @@ outrun it live.
 | 48–50 | Exit ticket (your boundary sentence, exactly as you'll say it). |
 
 Homework: draft the 3-minute walk; both scripts and the poster-walk map join the
-rest of your presentation package (M17), submitted at the mock-symposium studio
+rest of your presentation package (M14), submitted at the mock-symposium studio
 (M34, Fri Nov 13).
 
 ## Roles
@@ -82,7 +82,7 @@ Professor Moreira demonstrates the well/inflated pair, times the twice-through
 delivery rounds, and normalizes stage fright by making everyone's first attempt a
 draft. Each presenter delivers twice and flags for one partner.
 
-## Quality checklist (before submitting M17)
+## Quality checklist (before submitting M14)
 
 - ☐ 1-minute script has all four moves; the boundary sentence is marked.
 - ☐ 3-minute walk adds evidence blocks + a ULN moment to the same spine.

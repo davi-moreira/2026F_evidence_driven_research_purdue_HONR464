@@ -124,9 +124,9 @@ def chapter_link(lesson: dict, prefix: str = SITE_REL) -> str:
             f"({prefix}/{lesson['url_path']}){{target=\"_blank\"}}")
 
 
-#: What a cell says instead of relisting links the same week already carries.
+#: Marks the chapters a cell names that the same week already LINKED above.
 #: Used only when `seen` is threaded through render_cell().
-BACKREF = "linked in this week's rows above"
+BACKREF = "*(linked above)*"
 
 #: Modes whose wording already points at what the week showed earlier, so a
 #: back-reference reads naturally and no link is lost (anything NOT shown
@@ -160,9 +160,14 @@ def render_cell(field: str, index: dict[str, dict] | None = None,
             repeated = len(fresh) < len(ids)
             seen.update(ids)
             if mode in BACKREF_MODES and repeated:
-                links = " · ".join(chapter_link(index[i], prefix) for i in fresh)
-                tail = f"{links} · {BACKREF}" if links else BACKREF
-                blocks.append(MODE_LABEL[mode] + tail)
+                # Every chapter is still NAMED, exactly; only the repeated ones
+                # drop their (already-shown) link. Collapsing them into a phrase
+                # like "this week's chapters" would misstate a graded submission
+                # whenever the week reads more chapters than it submits.
+                parts = [chapter_link(index[i], prefix) if i in fresh
+                         else f"Ch. {index[i]['display']}" for i in ids]
+                blocks.append(MODE_LABEL[mode] + " · ".join(parts)
+                              + f" {BACKREF}")
                 continue
         links = " · ".join(chapter_link(index[i], prefix) for i in ids)
         if links:

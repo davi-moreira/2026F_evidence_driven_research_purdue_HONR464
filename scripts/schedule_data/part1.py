@@ -110,7 +110,7 @@ MEETINGS_P1 = [
     {
         "meeting": 3, "date": "2026-08-28", "day": "Fri", "modality": "in-person",
         "unit": "Week 1 — Studio 1: Begin with your curiosity",
-        "title": "Studio Friday — Milestone 1: your curiosity, committed (M1 due)",
+        "title": "Studio Friday — Milestone 1: your curiosity, committed (M1 due Sunday)",
         "driving_question": "Can you put your curiosity, your starting belief, and the problem you chose on the record — dated, scored, and red-teamed — and defend why it is worth a semester?",
         "secondary_questions": "Which candidate directions did you reject, and why? Does your problem survive a hostile reviewer on importance, on feasibility, and on whether it adds anything? What answer do you expect before you have looked at any evidence?",
         "inquiry": "all positions (studio)",
@@ -212,7 +212,7 @@ MEETINGS_P1 = [
     {
         "meeting": 6, "date": "2026-09-04", "day": "Fri", "modality": "in-person",
         "unit": "Week 2 — Studio 2: Set your rules, shape your question",
-        "title": "Studio Friday — Milestone 2: your rules and your question (M2 due)",
+        "title": "Studio Friday — Milestone 2: your rules and your question (M2 due Sunday)",
         "driving_question": "Do your working agreement and your declared question hold up against each other, and does either survive a stranger who knows nothing about your project?",
         "secondary_questions": "Does every never-delegate line cover a decision your declaration actually made? Which word fixes your kind, and which fixes your reach? What does your boundary pair refuse to claim?",
         "inquiry": "all four compass positions (studio)",
@@ -280,7 +280,7 @@ MEETINGS_P1 = [
     {
         "meeting": 8, "date": "2026-09-11", "day": "Fri", "modality": "in-person",
         "unit": "Week 3 — Studio 3: Ground it in verified evidence",
-        "title": "Studio Friday — Milestone 3: your evidence base (M3 due)",
+        "title": "Studio Friday — Milestone 3: your evidence base (M3 due Sunday)",
         "driving_question": "Can every row you marked verified be reopened from the citation alone, and does your gap survive once the search log shows what you actually did?",
         "secondary_questions": "Which rows are verified and which are still pending? Where do your sources agree, contradict, or qualify each other? How does your declared question change because of a specific node on this map?",
         "inquiry": "description + generalization (studio)",
@@ -382,7 +382,7 @@ MEETINGS_P1 = [
     {
         "meeting": 11, "date": "2026-09-18", "day": "Fri", "modality": "in-person",
         "unit": "Week 4 — Studio 4: Declare and diagnose provisionally",
-        "title": "Studio Friday — Milestone 4: your research contract, v0 (M4 due)",
+        "title": "Studio Friday — Milestone 4: your research contract, v0 (M4 due Sunday)",
         "driving_question": "Could a stranger run your contract, did your diagnosis change anything, and have you actually declared a permission status?",
         "secondary_questions": "Do your four MIDA parts point at the same quantity? What does your redesign record show? Which of the columns you planned to collect does your declared analysis not require?",
         "inquiry": "full MIDA + permission (studio)",

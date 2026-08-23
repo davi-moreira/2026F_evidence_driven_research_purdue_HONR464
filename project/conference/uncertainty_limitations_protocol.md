@@ -70,7 +70,7 @@ not confessing a crime.
 |---|---|
 | 0–5 | 1-minute pitch pulse (one volunteer, warm notes). |
 | 5–12 | Mini-lesson: the ULN move on three findings, including a null. |
-| 12–24 | **Writing studio:** draft your ULN paragraph (the spoken-statement core of M17). |
+| 12–24 | **Writing studio:** draft your ULN paragraph (the spoken-statement core of M14). |
 | 24–40 | **ULN rounds:** deliver to two successive partners; partners score on the 1–5 scale. |
 | 40–47 | Whole-group: the best ULN heard, re-delivered for the room. |
 | 47–50 | Exit ticket (your most important limitation in ULN form, ≤ 30 words); this ULN statement joins your M17 package, due Fri Nov 13. |

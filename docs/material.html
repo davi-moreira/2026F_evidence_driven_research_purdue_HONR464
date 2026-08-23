@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e14cfaa651a2b1e5413afab38cf38831.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4394a6864aa059685c8e9fb0213d7ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -283,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
 <td><strong>Conference block: poster production and peer review</strong><br><em>Week 11 · nb11</em></td>
 <td>2 lectures</td>
 <td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb11_poster_production_review_student.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a></td>
-<td><a href="notebooks/data/data.zip">all datasets (data.zip)</a></td>
+<td><code>lapop_brazil.csv</code><br><a href="notebooks/data/data.zip">all datasets (data.zip)</a></td>
 <td><strong>Revisited this week</strong><br><a href="book/part5-communicating/27-research-posters.html" target="_blank">Ch. 32 — Research Posters</a><br><a href="book/part5-communicating/28-poster-criticism.html" target="_blank">Ch. 33 — Poster Criticism</a><br><em>Recommended companion — RDSS ch.&nbsp;23 ‘Communicating’, the reporting standards section.</em></td>
 </tr>
 <tr class="even">
@@ -304,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
 <td><strong>Conference block: the public test (dress rehearsal and the Expo)</strong><br><em>Week 13 · nb14</em></td>
 <td>async module</td>
 <td><a href="https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/student/nb14_replication_redteam_student.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a></td>
-<td><a href="notebooks/data/data.zip">all datasets (data.zip)</a></td>
+<td><code>foos_etal.csv</code><br><a href="notebooks/data/data.zip">all datasets (data.zip)</a></td>
 <td><strong>Revisited this week</strong><br><a href="book/part5-communicating/28-poster-criticism.html" target="_blank">Ch. 33 — Poster Criticism</a><br><a href="book/part5-communicating/30-difficult-questions-and-uncertainty.html" target="_blank">Ch. 35 — Difficult Questions and Uncertainty</a></td>
 </tr>
 <tr class="odd">
@@ -348,68 +348,6 @@ ul.task-list li input[type="checkbox"] {
       icon: icon
     };
     anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp('/' + window.location.host + '/');

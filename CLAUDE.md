@@ -64,7 +64,7 @@ research chapter, an AI-management portfolio, and an oral evidence defense.
 |---|---|
 | `_project_docs/ACTIVITY_TEMPLATE.md` | Creating/restructuring a topic notebook — the machine-validated template |
 | `_project_docs/DECISIONS.md` | Before proposing convention changes — D17–D22 govern the v2 build |
-| `planning/COURSE_MASTER_PLAN.md` | Sequencing source of truth (16 weeks, nb01–nb16, M1–M17) |
+| `planning/COURSE_MASTER_PLAN.md` | Sequencing source of truth (16 weeks, nb01–nb16, M1–M16) |
 | `planning/PROJECT_MILESTONES.md` | The milestone chain (dev meetings, presentations, due dates) |
 | `planning/SOURCE_AUDIT_V2.md` | The rebuild audit: rulings, reuse map, GenAI Studio verification |
 | `planning/MEETING_SCHEDULE.md` | Per-meeting detail (43 × 34; generated from `scripts/schedule_data/`) |
@@ -232,8 +232,18 @@ preparation (M14, three timed pitches + the invitation post), the Expo, and two
 ASYNCHRONOUS reflection sessions (Fri Nov 20 + Mon Nov 23) closing at M15.
 **Studios 11 and 12 run POST-conference on Weeks 15–16 in the standard frame**
 (MW teach the lessons, Friday IS the milestone): M16 presents Book Milestone 11
-and M17 presents Book Milestone 12. The peer cold run is now IN CLASS on the
-Week-15 Wednesday. Course milestones are **M1–M17**; never write M0.
+and M17 presented Book Milestone 12 until **D54 retired M17**: the chain is
+**M1–M16**, Week 16 still TEACHES Studio 12 but collects nothing, and the last
+Friday (Dec 11) is the course-closing reflection, graded under participation.
+The peer cold run is IN CLASS on the Week-15 Wednesday. Course milestones are
+**M1–M16**; never write M0 and never write M17.
+
+**D55 — every milestone is due the Sunday after its Friday studio, 11:59 PM.**
+The studio is still where the work happens; the deadline is the end of that
+weekend. Three exceptions keep their weekday slots: M11 (Wed Nov 4, at class),
+M12 (Fri Nov 6, 5:00 PM, so peer criticism reaches authors before the lock) and
+M13 (Sun Nov 8, terminal). `course_config.yaml milestones:` is the source of
+truth for every due date.
 
 **All seven active-learning moves + the lecture's 📒 ledger row run INSIDE the
 50 minutes (D33)**, above each lecture's `### ⏸ Optional depth from here`
@@ -441,7 +451,7 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
   (nb01–nb16, one per week); milestone studio notebooks `msNN_topic_student.ipynb`.
 - Instructor notebooks (gitignored): `notebooks/instructor/…_instructor.ipynb`
 - Cell sources (gitignored, canonical for editing): `_production_kit/nb_sources/`
-- Milestone briefs: `_research_project/2026Fall/milestone_NN_<slug>.md` (M1–M17;
+- Milestone briefs: `_research_project/2026Fall/milestone_NN_<slug>.md` (M1–M16;
   the two D49 briefs the renumber retired are archived under `_retired_d50/`)
 - Commit messages: `<type>: <subject>` (feat|fix|docs|chore|build|refactor) with a
   trailing `Co-Authored-By:` line. Stage specific files — never `git add .`.

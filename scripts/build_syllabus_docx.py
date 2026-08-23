@@ -32,6 +32,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH                # noqa: E402
 from docx.oxml.ns import qn                                  # noqa: E402
 from docx.shared import Inches, Pt                           # noqa: E402
 from notebooks_map import REPO_SLUG, nb_of, student_filename  # noqa: E402
+from validate_calendar import no_class_days                  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 QM_DOCX = (ROOT.parent.parent / "predictive_analytics"
@@ -61,13 +62,16 @@ OFFICE = "Young Hall 1019"
 OFFICE_HOURS = ("Wednesdays: 2:30 p.m.–3:30 p.m. (EST), in person, "
                 "HCRN 1095, or by appointment.")
 
-MILESTONE_DUE = {
-    1: "2026-08-28", 2: "2026-09-04", 3: "2026-09-11", 4: "2026-09-18",
-    5: "2026-09-25", 6: "2026-10-02", 7: "2026-10-09", 8: "2026-10-16",
-    9: "2026-10-23", 10: "2026-10-30", 11: "2026-11-04", 12: "2026-11-06",
-    13: "2026-11-08", 14: "2026-11-13", 15: "2026-11-29", 16: "2026-12-04",
-    17: "2026-12-11",
-}
+# The live chain, read from the ONE declaration. Duplicating it here is how a
+# retired milestone (D54) or a moved deadline (D55) silently survives in a
+# generated .docx after the source of truth has moved on.
+def _milestone_due() -> dict[int, str]:
+    import yaml
+    cfg = yaml.safe_load((ROOT / "course_config.yaml").read_text())
+    return {int(k[1:]): v["due"] for k, v in cfg["milestones"].items()}
+
+
+MILESTONE_DUE = _milestone_due()
 
 
 # ── low-level docx helpers ──────────────────────────────────────────────────
@@ -288,31 +292,48 @@ def fmt_date(iso: str) -> str:
 # out of the planning prose. The prose is not safely parseable: several
 # milestone_developed cells carry a semicolon *inside* the parentheses, which
 # silently splits M13 away from its own deadline.
-SAME_DAY_NOTE = {
-    1: "M1 DUE", 2: "M2 DUE", 3: "M3 DUE", 4: "M4 DUE", 5: "M5 DUE",
-    6: "M6 DUE", 7: "M7 DUE", 8: "M8 DUE", 9: "M9 DUE", 10: "M10 DUE",
-    11: "M11 DUE at class",
-    12: "M12 DUE 5:00 PM",
-    14: "M14 DUE 5:00 PM",
-    16: "M16 DUE 5:00 PM",
-    17: "M17 DUE — TERMINAL, no revision window",
-}
+# Deadlines that are NOT 11:59 PM on their own date, and the terminal one.
+CLOCK_NOTE = {11: "at class", 12: "5:00 PM"}
+TERMINAL = {13: "TERMINAL, no revision window, submitted for printing"}
 
-# M13 and M15 fall on Sundays, which are not class meetings, so they are
-# announced on the last meeting before the deadline.
-FORWARD_NOTE = {
-    "2026-11-06": "M13 final poster lock due Sun Nov 8, 11:59 PM — "
-                  "TERMINAL, no revision window, submitted for printing",
-    "2026-11-23": "M15 due Sun Nov 29, 11:59 PM",
-}
+# D55 put almost every milestone on a Sunday, which is never a class meeting.
+# A milestone is therefore announced on its own date when that date IS a
+# meeting, and otherwise on the last meeting before it. Nothing is hardcoded:
+# drop a milestone from course_config.yaml and its announcement disappears with
+# it, exactly like the handout PDFs and the schedule badges.
+def _announcement_dates() -> dict[str, list[str]]:
+    meetings = sorted({r["date"] for r in
+                       csv.DictReader(open(CSV_PATH, newline=""))})
+    out: dict[str, list[str]] = {}
+    for n in sorted(MILESTONE_DUE):
+        due = MILESTONE_DUE[n]
+        d = date.fromisoformat(due)
+        label = f"M{n} DUE"
+        if due in meetings:
+            when = due
+            if n in CLOCK_NOTE:
+                label += f" {CLOCK_NOTE[n]}"
+        else:
+            earlier = [m for m in meetings if m < due]
+            if not earlier:
+                continue
+            when = earlier[-1]
+            label = (f"M{n} due {d.strftime('%a')} "
+                     f"{d.strftime('%b')} {d.day}, 11:59 PM")
+        if n in TERMINAL:
+            label += f" — {TERMINAL[n]}"
+        out.setdefault(when, []).append(label)
+    return out
+
+
+_ANNOUNCE: dict[str, list[str]] | None = None
 
 
 def milestone_note(iso: str) -> str:
-    notes = [SAME_DAY_NOTE[n] for n, d in MILESTONE_DUE.items()
-             if d == iso and n in SAME_DAY_NOTE]
-    if iso in FORWARD_NOTE:
-        notes.append(FORWARD_NOTE[iso])
-    return "; ".join(notes)
+    global _ANNOUNCE
+    if _ANNOUNCE is None:
+        _ANNOUNCE = _announcement_dates()
+    return "; ".join(_ANNOUNCE.get(iso, []))
 
 
 def build_schedule_rows():
@@ -348,6 +369,20 @@ def build_schedule_rows():
         "iso": "2026-11-17",
     }
     out.append(expo)
+
+    # The five MWF days the term does not meet. They carry no meeting number, so
+    # the CSV has no row for them, and without a row the printed schedule jumps
+    # from one meeting to the next with no sign that class was off. The Wk label
+    # comes from a meeting in the SAME calendar week.
+    for iso, label in no_class_days().items():
+        d = date.fromisoformat(iso)
+        wk = next((r["wk"] for r in out
+                   if date.fromisoformat(r["iso"]).isocalendar()[:2]
+                   == d.isocalendar()[:2] and r["wk"]), "")
+        out.append({"wk": wk, "date": fmt_date(iso), "topic": label,
+                    "nb": "—", "nb_url": None, "note": "", "iso": iso,
+                    "noclass": True})
+
     out.sort(key=lambda r: (r["iso"], r["topic"].startswith("PURDUE")))
     return out
 

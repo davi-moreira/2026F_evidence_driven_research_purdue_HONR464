@@ -3,7 +3,7 @@
 *Build your question bank, then survive a hot seat on it. Governs the
 five-type question bank in
 [milestone_11 — Presentation Package](../../_research_project/2026Fall/milestone_11_presentation_package.md).
-Drilled in class M34; the full presentation package (M17) is due that night, Fri Nov 13.*
+Drilled in class M34; the full presentation package (M14) is due Sun Nov 15, 11:59 PM.*
 
 ## Purpose
 
@@ -76,7 +76,7 @@ the credible one.
 | 12–24 | **Bank-building studio:** write your five questions (one per type) with answer sketches. |
 | 24–44 | **Hot-seat rounds:** 3 minutes per presenter (bank + surprise deck); instructor models one save. |
 | 44–48 | Bank revision from what the hot seat exposed. |
-| 48–50 | Exit ticket (the question I most fear + my first sentence in reply); M17 presentation package due tonight. |
+| 48–50 | Exit ticket (the question I most fear + my first sentence in reply); M14 presentation package due Sunight. |
 
 ## Roles
 
@@ -89,7 +89,7 @@ Professor Moreira prepares a surprise-question deck per project, times the 3-min
 seats, models one save, and slows the room if a seat runs hot. Each presenter
 sits once; each questioner asks across multiple seats.
 
-## Quality checklist (before submitting M17)
+## Quality checklist (before submitting M14)
 
 - ☐ Five questions, one per type, each hard and fair to your own poster.
 - ☐ A two-line answer sketch for each; the AI-use answer cites your ledger.

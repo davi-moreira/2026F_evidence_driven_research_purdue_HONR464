@@ -49,7 +49,7 @@ jobs:
       - name: Meeting schedule builds against the backbone (43 x 34)
         run: python3 scripts/build_meeting_schedule.py
 
-      - name: Milestone system consistent (M1-M17 anchors)
+      - name: Milestone system consistent (M1-M16 anchors)
         run: python3 scripts/validate_milestones.py
 
       - name: Coverage mapping (meetings <-> notebooks <-> readings <-> datasets)

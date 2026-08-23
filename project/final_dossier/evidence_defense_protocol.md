@@ -1,17 +1,19 @@
 # Evidence Defense Protocol — Week 15–16 defense blocks
 
 *The oral defense of your claims, your choices, and your verification, under
-cross-examination. Governs
-[course milestone M17 — Release Audit, Final Research Chapter, and AI-Management Portfolio](../../_research_project/2026Fall/milestone_17_release_and_final_chapter.md).
-Performed across the Wednesday defense blocks in Weeks 15 and 16, with the final
-round during M43 on Friday, December 11. The final section governs the final
-dossier submitted with M17 that night. The instructor records the final
-submission and defense inside Final Project's **Instructor/TA Evaluation** item
-(20% of Final Project, or 10 course points). The 100-point rubric below supplies
-only the **Evidence Defense subscore**, which is 25% of that item. The complete
-item score is `0.50 × Final Research Artifact + 0.25 × AI-management portfolio + 0.25 × Evidence Defense`;
-the first two 100-point subrubrics live in the M17 brief. Only the resulting
-weighted score is entered in the gradebook.*
+cross-examination. Performed across the Wednesday defense blocks in Weeks 15
+and 16.*
+
+> **Status under D54 (2026-08-23): the Evidence Defense is in-class practice and
+> carries no grade weight.** It used to supply 25% of Final Project's
+> **Instructor/TA Evaluation** item, alongside two subrubrics that lived in the
+> retired M17 brief. That item is now scored entirely from the instructor's
+> evaluation of the final poster submission locked at M13, so nothing on this
+> page is entered in the gradebook. The protocol is kept because the skill it
+> drills — defending a claim, its exact boundary, and the verification you would
+> lead with, under questions from readers who have your ledger — is what the
+> Expo asks of you for real. Davi has not yet ruled whether the defense should
+> stay ungraded practice, be folded into a graded component, or be retired.
 
 *Individual work is the default. For an approved group project, the shared
 Final Research Artifact subscore is common, but every member supplies a
@@ -100,7 +102,7 @@ terminal failure.
 | Opening | Norms recap and final-round order. |
 | First block | **Remaining defenses** using the same three movements and ledger-grounded cross-examination. |
 | Second block | **Dossier checklist run** (below): close or disposition every open item before submission. |
-| Close | Cross-defense synthesis, release decision, and M17 submission. |
+| Close | Cross-defense synthesis and the release decision, stated aloud. |
 
 ### Session flow (for the record)
 
@@ -119,14 +121,14 @@ cross-examines at least once per session.
 
 ---
 
-## The Final Dossier Checklist (final defense block — governs M17)
+## The Final Dossier Checklist (final defense block — no longer collected)
 
 Run this against your draft during the final checklist block; close every item by
 Fri Dec 11, 11:59 PM. The dossier is the complete arc, with the **claim ledger as
 its spine** — every number traces.
 
 ```
-FINAL DOSSIER CHECKLIST — M17         Name: __________  Date: __________
+FINAL DOSSIER CHECKLIST                Name: __________  Date: __________
 
   ☐ Question & inquiry in FINAL form (declaration current, boundary stated)
   ☐ Verified source map (every source real, retrieved, and cited)

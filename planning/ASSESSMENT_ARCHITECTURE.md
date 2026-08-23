@@ -2,9 +2,9 @@
 
 Authoritative reconciliation of the v2 grading system for `syllabus.qmd`.
 Philosophy: **no conventional midterm or final exam.** The course assesses one
-semester-long research project carried through seventeen milestones (M1–M17),
+semester-long research project carried through sixteen milestones (M1–M16),
 presented at the Purdue Fall Undergraduate Research Expo, and closed with a
-public evidence defense and a reproducible final chapter. Individual work is
+reproducible package, a bounded research note, and a written reflection. Individual work is
 the default; students may complete a group project with instructor approval.
 Grading rewards correctness, transparency, reproducibility, question-design
 (compass) alignment, and responsible interpretation — **never coding elegance**
@@ -48,11 +48,11 @@ without replacing any item:
 
 | Final Project component | Share of Final Project | Course points | HONR grading home |
 |---|---:|---:|---|
-| **Milestone Deliverables** | 30% | 15 | Equal-weight mean of M1–M17's seventeen 0–100 milestone scores |
+| **Milestone Deliverables** | 30% | 15 | Equal-weight mean of M1–M16's sixteen 0–100 milestone scores |
 | **Peer Evaluation** | 20% | 10 | Confidential per-student evaluation by every teammate (group project) or two assigned project peers (individual project) |
 | **Peer Review** | 10% | 5 | M12 Final Project Peer Review rubric; each student completes the required reviews |
 | **Poster Presentation at the Purdue Undergraduate Research Conference** | 20% | 10 | `0.70 ×` M13 poster-quality score + `0.30 ×` each student's M15 live-presentation score |
-| **Instructor/TA Evaluation** | 20% | 10 | `0.50 ×` M17 Final Research Artifact + `0.25 ×` M17 AI-management portfolio + `0.25 ×` individual Evidence Defense |
+| **Instructor/TA Evaluation** | 20% | 10 | `1.00 ×` the instructor's evaluation of the final poster submission locked at M13 (D54) |
 | **Total** | **100%** | **50** | |
 
 ## Syllabus prose — QM474 adopted verbatim (D53, 2026-08-23)
@@ -98,7 +98,7 @@ governs the operational detail.
 | Machinery removed from `syllabus.qmd` | Authoritative home now |
 |---|---|
 | The five-row component table with the share-of-course column (15 / 10 / 5 / 10 / 10) | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `brightspace/gradebook_spec.md` |
-| Per-component scoring rules: Milestone Deliverables = equal-weight mean of the seventeen M1–M17 scores; Poster item = `0.70 ×` M13 poster quality + `0.30 ×` M15 live presentation; Instructor/TA = `0.50 ×` M17 Final Research Artifact + `0.25 ×` M17 AI-management portfolio + `0.25 ×` individual Evidence Defense | the same two files, plus the "Deterministic Final Project scoring rules" table below |
+| Per-component scoring rules: Milestone Deliverables = equal-weight mean of the sixteen M1–M16 scores; Poster item = `0.70 ×` M13 poster quality + `0.30 ×` M15 live presentation; Instructor/TA = the instructor's evaluation of the M13 final poster submission | the same two files, plus the "Deterministic Final Project scoring rules" table below |
 | "How the same five components work in both project modes" (shared vs individual rows) | `_research_project/2026Fall/final_project_grading_and_project_modes.md` |
 | "Peer Evaluation is not Peer Review", including `received_rating_score = min(100, 100 × mean received rating / 3)`, `item = 0.80 × received_rating_score +` submission points, the rule that a missing rating never costs its recipient, and the neutral 80 after failed follow-up | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `project/final_dossier/peer_evaluation_instrument.md` |
 | The group-approval conditions: at most one group of two or three, at least three active projects remaining, and a feasible Peer Evaluation plan | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `course_config.yaml course.project_mode:` |
@@ -120,7 +120,7 @@ student can review at least two other live projects and permit a Peer Evaluation
 plan in which each individual researcher has two observers and every student
 has a nonempty submission set.
 
-- **Milestone Deliverables.** An individual researcher receives their own M1–M17
+- **Milestone Deliverables.** An individual researcher receives their own M1–M16
   scores. An approved group submits one shared artifact naming every member.
   Shared rubric rows receive a common score; requirements marked individual,
   including each member's AI Research Ledger evidence, are scored per member,
@@ -163,8 +163,9 @@ component. Never copy one raw rubric score into two places. M12's milestone scor
 records completion, timeliness, versioning, and response; its separate Peer
 Review rubric scores the quality of criticism. M13's milestone score records the
 on-time, gate-cleared lock; its poster-quality rubric feeds the conference item.
-M17's milestone score records the release package; its three terminal rubrics
-feed Instructor/TA Evaluation.
+M13's poster is read a second time, as research communication, for
+Instructor/TA Evaluation — a different judgement from poster quality, and the
+one place a single artifact feeds two components (D54).
 
 ## Deterministic Final Project scoring rules
 
@@ -172,14 +173,14 @@ Each component produces one 0–100 score:
 
 | Final Project item | Scoring rule |
 |---|---|
-| Milestone Deliverables | `mean(M1, M2, …, M17)`; all seventeen scores are equally weighted |
+| Milestone Deliverables | `mean(M1, M2, …, M16)`; all sixteen scores are equally weighted |
 | Peer Evaluation | `0.80 × min(100, 100 × mean received rating / 3) + submission points`, where complete required evaluations with usable comments earn 20 submission points and non-submission earns 0; documented instructor moderation may correct strategic ratings |
 | Peer Review | M12 **Final Project Peer Review rubric** (100 points) |
 | Poster Presentation at the Purdue Undergraduate Research Conference | `0.70 ×` M13 **poster-quality rubric** + `0.30 ×` M15 **live Expo presentation rubric** |
-| Instructor/TA Evaluation | `0.50 ×` M17 **Final Research Artifact rubric** + `0.25 ×` M17 **AI-management portfolio rubric** + `0.25 ×` **Evidence Defense Protocol rubric** |
+| Instructor/TA Evaluation | `1.00 ×` the instructor's evaluation of the **M13 final poster submission**, judged as research communication (D54) |
 
-The `70/30` poster/live split and the `50/25/25` final-evaluation split are HONR
-operational rules inside the imported QM474 items; they do not create additional
+The `70/30` poster/live split is an HONR
+operational rule inside the imported QM474 items; they do not create additional
 Final Project components. A normal Peer Evaluation mean of 3 (met expectations),
 plus a complete evaluation submission, yields 100. Ratings above 3 do not create
 bonus credit; ratings below 3 lower the received-rating portion. If evaluator
@@ -248,8 +249,10 @@ B− ≥ 80, C+ ≥ 77, C ≥ 73, C− ≥ 70, D ≥ 60, F < 60. **No curve** (n
 accept a revised version within **7 days** of feedback for up to half the lost
 points (revising is part of the graded craft). **Terminal artifacts have no
 revision window** — the deadline governs: **M13** final poster (Sun Nov 8,
-11:59 PM), **M17** final chapter + portfolio (Fri Dec 11), and the live **Expo
-presentation** (Tue Nov 17, recorded through M15).
+11:59 PM) and the live **Expo presentation** (Tue Nov 17, recorded through
+M15). Every other milestone is worked at its Friday studio and due the Sunday
+after, 11:59 PM (D55); M11 (Wed, at class) and M12 (Fri, 5:00 PM) keep weekday
+deadlines the conference block depends on.
 
 **Late.** −10% per day up to 3 days, then not accepted; documented emergencies
 handled individually per Purdue policy.
@@ -267,7 +270,7 @@ board.
   triggering the hard cap above. This is a graded habit, not a formality.
 - **Claim ledger** (what the research asserts: claim · evidence · verification ·
   boundary · sensitivity survival) — a separate instrument, graded at **M10**
-  (research audit), **M16** (research note), and **M17** (final chapter).
+  (research audit) and **M16** (research note, the last milestone).
 - **Reproduction sign-off** — at **M16**, a classmate attests whether the peer's
   headline number reproduces from the package alone.
 

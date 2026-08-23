@@ -3,7 +3,7 @@
 *The front door to your research package. A stranger opens this file first and
 should learn, in one read, what you asked, how you answered it, and how to rebuild
 every number. Fill every block. Reused as the top of your reproducibility capsule
-(M16) and your final chapter's package (M17).*
+(M16), the last milestone of the chain.*
 
 ---
 

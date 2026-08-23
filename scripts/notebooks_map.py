@@ -41,7 +41,7 @@ NOTEBOOKS = {
 REPO_SLUG = "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
 
 # Milestone studio notebooks (msNN) — the light Friday-studio companions to the
-# M1–M17 milestone briefs (ACTIVITY_TEMPLATE.md, "Milestone studio notebooks"
+# M1–M16 milestone briefs (ACTIVITY_TEMPLATE.md, "Milestone studio notebooks"
 # final section). Keyed by milestone id. These carry the reduced required set,
 # no schedule badge, and no per-lecture structure. Built ad hoc as each milestone
 # package ships; not every id is present until P4 completes.

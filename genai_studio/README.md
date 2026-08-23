@@ -144,7 +144,7 @@ Student Use, and Instructor Use.
 | `roles/poster_critic.md` | Claim boundary, untraceable numbers, uncertainty, data-ink **(M13 touchpoint)** | Week 11 · M13 |
 | `roles/reproducibility_auditor.md` | Whether a package reproduces from scratch **(M16 touchpoint)** | Weeks 14–15 · M16/M16 |
 | `roles/research_note_reviewer.md` | Research-note structure, uncertainty/limitations, claim traceability | Weeks 10 & 15 · M10/M16 |
-| `roles/ai_research_team_orchestrator.md` | Which roles to consult next — a level-4 planning aid, not an agent | Week 16 · M17 |
+| `roles/ai_research_team_orchestrator.md` | Which roles to consult next — a level-4 planning aid, not an agent | Week 16 |
 
 ---
 

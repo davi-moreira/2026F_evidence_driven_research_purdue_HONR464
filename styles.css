@@ -43,3 +43,22 @@ img[src*="colab-badge"] {
   max-width: none !important;
   vertical-align: middle;
 }
+
+/* ---- Schedule page table (schedule.qmd) ----------------------------------
+   Emitted inline until 2026-08-23; moved here so the rendered page stays under
+   the 65,535-character ceiling the Schedule page is held to. Only that page
+   uses .overflow-table / .below-table. */
+.overflow-table { font-size: .85rem; width: 100%; line-height: 1.2; }
+.overflow-table th, .overflow-table td {
+  padding: .3rem; text-align: left; word-wrap: break-word; vertical-align: top;
+}
+.overflow-table td:nth-child(3), .overflow-table td:nth-child(4) { font-weight: 700; }
+.overflow-table th:nth-child(1), .overflow-table td:nth-child(1) { width: 3%; }
+.overflow-table th:nth-child(2), .overflow-table td:nth-child(2) { width: 7%; }
+.overflow-table th:nth-child(3), .overflow-table td:nth-child(3) { width: 5%; }
+.overflow-table th:nth-child(4), .overflow-table td:nth-child(4) { width: 13%; }
+.overflow-table th:nth-child(5), .overflow-table td:nth-child(5) { width: 19%; }
+.overflow-table th:nth-child(6), .overflow-table td:nth-child(6) { width: 7%; }
+.overflow-table th:nth-child(7), .overflow-table td:nth-child(7) { width: 12%; }
+.overflow-table th:nth-child(8), .overflow-table td:nth-child(8) { width: 34%; }
+.below-table { font-size: .85rem; line-height: 1.2; margin-top: 1rem; }

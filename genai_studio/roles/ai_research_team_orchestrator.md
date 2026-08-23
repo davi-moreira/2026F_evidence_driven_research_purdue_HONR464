@@ -113,7 +113,7 @@ and any reviewer outputs you already collected. Say where you are in the project
   a substantive conflict appears, or when more consultation stops adding signal.
 - **Log a ledger row for every step**, including this planning consultation. The
   M17 AI-management portfolio is built from exactly this trace.
-- **Confirm the plan serves the M17 brief**, not the role's paraphrase of it.
+- **Confirm the plan serves the milestone brief you are working**, not the role's paraphrase of it.
 
 ## Limitations & Failure Modes
 

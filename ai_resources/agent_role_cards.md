@@ -131,9 +131,9 @@ and log it in your [AI Research Ledger](ai_research_ledger_template.md).
 - **Blind spots:** may smooth your writing into a stronger claim than the evidence supports; watch for the very upgrade you asked it to catch.
 - **Escalation line:** this role must hand back to you when you decide the final wording of a claim and its stated uncertainty.
 
-### AI Research Team Orchestrator *(GenAI Studio custom model — level 4, Week 16 / M17)*
+### AI Research Team Orchestrator *(GenAI Studio custom model — level 4, Week 16)*
 - **Purpose:** helps you plan how to split a task across several roles, in what order, and how to reconcile their outputs. Used in Week 16.
-- **When to consult:** M17, when running multiple roles on one task.
+- **When to consult:** Week 16, when running multiple roles on one task.
 - **Give it:** the task, the roles available, and your dependency questions.
 - **Returns:** a proposed decomposition, an order (parallel vs sequential), and a plan for logging conflicts.
 - **Blind spots:** can manufacture false consensus by having roles echo one framing; it does not resolve disagreements, you do.

@@ -127,19 +127,24 @@ are in the rest of the SRL suite (`project/srl/`).
 
 ## 3. Milestone grading cadence
 
-Seventeen milestones (**M1–M17**), one graded artifact each, on a **studio
-kickoff → develop → submit → revise where eligible** cadence. Due dates are
-fixed in `course_config.yaml milestones:`:
+Sixteen milestones (**M1–M16**), one graded artifact each, on a **studio
+kickoff → develop → work it at the Friday studio → submit Sunday → revise where
+eligible** cadence. D55 put every deadline on a Sunday at 11:59 PM except the
+three the conference block pins to weekdays. Due dates are fixed in
+`course_config.yaml milestones:`:
 
-| M1 Aug 28 · M2 Sep 4 · M3 Sep 11 · M4 Sep 18 · M5 Sep 25 · M6 Oct 2 ·
-M7 Oct 9 · M8 Oct 16 · M9 Oct 23 · M10 Oct 30 · M11 Nov 4 (at class) ·
-M12 Nov 6 · **M13 Nov 8, 11:59 PM (terminal)** · M14 Nov 13 ·
-M15 Nov 29 (Sun, async) · M16 Dec 4 ·
-**M17 Dec 11 (terminal)** |
+| M1 Sun Aug 30 · M2 Sun Sep 6 · M3 Sun Sep 13 · M4 Sun Sep 20 · M5 Sun Sep 27 ·
+M6 Sun Oct 4 · M7 Sun Oct 11 · M8 Sun Oct 18 · M9 Sun Oct 25 · M10 Sun Nov 1 ·
+**M11 Wed Nov 4 (at class)** · **M12 Fri Nov 6, 5:00 PM** ·
+**M13 Sun Nov 8, 11:59 PM (terminal)** · M14 Sun Nov 15 ·
+M15 Sun Nov 29 (async) · M16 Sun Dec 6 (the final milestone) |
+
+There is no M17: D54 retired it. The last Friday, Dec 11, is the course-closing
+reflection session, collected under participation.
 
 - **Return feedback within 3 days** of each milestone.
 - **Revision window: 7 days** from feedback, for up to half the lost points, on
-  every milestone **except the terminal two** (M13, M17). The live Expo
+  every milestone **except the terminal one** (M13). The live Expo
   presentation is separately terminal inside Final Project's Poster
   Presentation at the Purdue Undergraduate Research Conference item. For those
   terminal scores, the deadline governs.
@@ -182,12 +187,12 @@ reciprocal. Do not mix Peer Evaluation with M12 Peer Review. Use
 rating conversion, missing-rating rule, and moderation record.
 
 **Gradebook operation.** Milestone Deliverables is the equal-weight mean of the
-seventeen M1–M17 scores. An approved group submits one shared artifact naming
+sixteen M1–M16 scores. An approved group submits one shared artifact naming
 every member. Enter shared rubric-row scores in common and score requirements
 marked individual per student; a milestone score may differ only on those
 individual rows. Every student still completes Peer Review and presents live. A
-group shares the poster-quality and final-artifact subscores; live delivery, the AI-management
-portfolio, Peer Evaluation, and the Evidence Defense remain individual.
+group shares the poster-quality score and the instructor's evaluation of the
+locked poster; live delivery and Peer Evaluation remain individual.
 
 ---
 
@@ -198,7 +203,7 @@ Milestone briefs and rubrics are authored **one file per milestone** in
 **copy-paste-ready into Brightspace** (one Brightspace page per milestone). Each
 Friday, present the week's brief from Brightspace at the studio kickoff.
 
-The active **M1–M17** briefs are in place. Machine anchors and due dates are
+The active **M1–M16** briefs are in place. Machine anchors and due dates are
 validated by `scripts/validate_milestones.py`.
 
 ---
@@ -282,19 +287,18 @@ exchange as follows:
 
 ## 8. The defense schedule and end of term
 
-- **Final defenses — across the Week 15–16 defense blocks, with the final round
-  on Fri Dec 11.** Each student delivers a public **Evidence Defense** of the
-  whole project and their AI collaboration. The defense supplies 25% of Final
-  Project's **Instructor/TA Evaluation** item; record it per student and carry
-  the evidence into M17.
-- **M17 — Fri Dec 11 (terminal).** Final research chapter + AI-management
-  portfolio, submitted at the closing ceremony. M17 is one of the seventeen
-  Milestone Deliverables scores. Its Final Research Artifact rubric supplies
-  50% of Instructor/TA Evaluation, and its AI-management portfolio rubric
-  supplies 25%; the individual Evidence Defense supplies the other 25%. No
-  revision window.
+- **Evidence Defenses — the Week 15–16 Wednesday defense blocks.** Each student
+  delivers an oral **Evidence Defense** of the whole project and their AI
+  collaboration. Under D54 this is **in-class practice with no grade weight**:
+  Instructor/TA Evaluation is now the instructor's evaluation of the M13 final
+  poster submission. Davi has not yet ruled whether the defense should stay
+  ungraded, be folded into a component, or be retired.
+- **Fri Dec 11 — the course-closing reflection session.** No milestone is
+  collected. Students write the reflection in the room; it is scored under
+  **Participation**.
 - **End-of-term wrap:**
-  1. Grade M17 and the defenses against the shared rubric menu.
+  1. Grade M16 and the reflection, and enter the Instructor/TA Evaluation score
+     from the locked M13 poster.
   2. **Archive the course:** confirm the site is rendered and pushed
      (`quarto render` → commit `docs/` → push), the instructor material is synced
      to the private repo (`scripts/sync_instructor_repo.sh`), and the v2 build

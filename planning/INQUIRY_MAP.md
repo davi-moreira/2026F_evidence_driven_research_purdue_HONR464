@@ -204,7 +204,7 @@ holds, and (3) key limitations and sources of uncertainty.
 | M6 (GenAI Studio: Causal Identification Skeptic) | The identification paragraph — or the honest causal-language boundary — is defended |
 | M8 (GenAI Studio: Prediction & Leakage Auditor) | The declared analysis protocol; leakage and baseline honesty are audited |
 | M10 / M16 | Robustness and replication branch by position — the classification has consequences |
-| M17 (final defense) | The Evidence Defense cross-examines the classification, the pathway match, and the claim boundary |
+| Expo + M15 (public defense) | Public questioning cross-examines the classification, the pathway match, and the claim boundary |
 
 ## Combinations (justified, not accidental)
 

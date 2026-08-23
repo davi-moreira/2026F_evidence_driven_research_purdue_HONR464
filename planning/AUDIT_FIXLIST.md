@@ -1,7 +1,9 @@
 # AUDIT FIXLIST — Phase-7 → Stage-8 revision
 
 > **Stale after D50 (2026-08-22).** Every milestone id below is a v2/D49 id.
-> The course renumbered to M1–M17 and Weeks 11–16 were restructured; read
+> The course renumbered to M1–M17, then D54 retired M17 (the chain is M1–M16)
+> and D55 moved every Friday deadline to the Sunday after; Weeks 11–16 were
+> restructured; read
 > `_project_docs/DECISIONS.md` D50 before acting on any row here. This file is
 > a point-in-time audit record and is deliberately NOT renumbered.
 

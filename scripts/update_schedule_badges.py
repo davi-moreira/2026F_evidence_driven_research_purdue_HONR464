@@ -47,6 +47,14 @@ def tracked_students() -> set[str]:
 SCHEDULE_CSV = REPO / "planning" / "MEETING_SCHEDULE.csv"
 OUT = REPO / "schedule.qmd"
 
+#: Hard ceiling on the RENDERED schedule page. The page has to stay pasteable
+#: into a 65,535-character field, and the table only ever grows, so the limit is
+#: checked here rather than discovered by whoever pastes it. Nothing else in the
+#: build measures a rendered page, so if this check is removed the ceiling is
+#: unguarded again.
+RENDERED = REPO / "docs" / "schedule.html"
+BYTE_CEILING = 65535
+
 HEADER = '''---
 title: "Schedule"
 author: "Davi Moreira"
@@ -54,16 +62,13 @@ editor: visual
 format:
   html:
     toc: false
-    code-copy: false
-    code-annotations: false
     anchor-sections: false
     citations-hover: false
     footnotes-hover: false
 ---
 
 ```{=html}
-<style>.overflow-table{font-size:.85rem;width:100%;line-height:1.2}.overflow-table th,.overflow-table td{padding:.3rem;text-align:left;word-wrap:break-word;vertical-align:top}.overflow-table td:nth-child(3),.overflow-table td:nth-child(4){font-weight:700}.overflow-table th:nth-child(1),.overflow-table td:nth-child(1){width:3%}.overflow-table th:nth-child(2),.overflow-table td:nth-child(2){width:7%}.overflow-table th:nth-child(3),.overflow-table td:nth-child(3){width:5%}.overflow-table th:nth-child(4),.overflow-table td:nth-child(4){width:13%}.overflow-table th:nth-child(5),.overflow-table td:nth-child(5){width:19%}.overflow-table th:nth-child(6),.overflow-table td:nth-child(6){width:7%}.overflow-table th:nth-child(7),.overflow-table td:nth-child(7){width:12%}.overflow-table th:nth-child(8),.overflow-table td:nth-child(8){width:34%}.below-table{font-size:.85rem;line-height:1.2;margin-top:1rem}</style>
-<script>document.querySelectorAll("main a[href]").forEach(function(a){a.target="_blank"})</script>
+<script>addEventListener("DOMContentLoaded",function(){document.querySelectorAll("main a[href]").forEach(function(a){a.target="_blank"})})</script>
 ```
 
 # Course Schedule
@@ -84,9 +89,12 @@ Brightspace explains exactly what, and everything is submitted as one file,
 `lastname_mNN.pdf`.
 
 **Course data.** Every dataset the course and the book use ships in one file:
-**[data.zip](notebooks/data/data.zip)**. Unzip it in your working directory and
-the notebooks find the files with no edit; in Colab they load straight from the
-repository, so the download only matters when you work offline.
+**[data.zip](notebooks/data/data.zip)**. In Colab the notebooks load the data
+straight from the repository, so the download only matters when you work
+offline. To work offline, unzip it so that a `notebooks/data/` folder sits in
+the directory you run from: that is the path the notebooks look in. If your
+unzipper wraps everything in an extra `data/` folder, move the `notebooks/`
+folder out of it.
 
 ## Core Course References
 
@@ -105,7 +113,7 @@ repository, so the download only matters when you work offline.
 #: href and the accessible name are identical, and the page stays inside the
 #: 65,535-character ceiling (see the size note in the module docstring).
 def colab_text_link(n: int) -> str:
-    return f"[Open in Colab]({colab_url(n)})"
+    return f"[Colab]({colab_url(n)})"
 
 
 DAYNAMES = {0: "Mon", 1: "Tue", 2: "Wed", 3: "Thu", 4: "Fri",
@@ -117,8 +125,13 @@ def pretty_date(iso: str, day: str) -> str:
     return f"{day} {d.strftime('%b %-d')}"
 
 
-def week_studio(unit: str, studios: dict[int, dict]) -> tuple[str, str]:
+def week_studio(unit: str, studios: dict[int, dict],
+                first: bool = True) -> tuple[str, str]:
     """`unit` -> ("Week 4", the Studio cell), repeated on every row.
+
+    `first` marks the week's first row: only there does the Studio cell spell the
+    title out. Later rows keep the link and the "Studio N" label, so a row still
+    says which Studio it belongs to on its own.
 
     Weeks 1-12 are Studios 1-12 (D49), so the cell links to that Studio's own
     page in the book; the four dated exception weeks have no Studio and carry
@@ -130,9 +143,12 @@ def week_studio(unit: str, studios: dict[int, dict]) -> tuple[str, str]:
     n, label = int(m.group(1)), m.group(2)
     st = next((item for item in studios.values() if item["title"] == label), None)
     if st:
-        cell = f"[{label}](book/{st['url_path']})"
+        # Repeat rows carry the short form; the full title is one or two rows
+        # above, in the same week, and is still a link on every row.
+        text = label if first else label.split(":")[0]
+        cell = f"[{text}](book/{st['url_path']})"
     else:
-        cell = f"*{label}*"
+        cell = f"*{label}*" if first else f"*{label.split(':')[0]}*"
     return f"Week {n}", cell
 
 
@@ -213,7 +229,12 @@ def milestone_cell(raw: str, mmap: dict, adds: dict) -> str:
     if not raw:
         return ""
     lead = re.match(r"\s*M(\d+)", raw)
-    if lead and f"M{int(lead.group(1)):02d}" not in live_milestones():
+    if not lead:
+        # D54: a session that develops no milestone says so in its own words
+        # ("None — the chain closed at M16 ..."). Without this the segment
+        # loop below would re-prefix it and print "MNone".
+        return "No milestone"
+    if f"M{int(lead.group(1)):02d}" not in live_milestones():
         return "No milestone"
 
     out = []
@@ -272,15 +293,16 @@ def build() -> str:
             date.fromisoformat(r["date"]).isocalendar()[:2], r["unit"])
 
     for r in rows:
-        if r["unit"] != current_unit:
+        first_of_week = r["unit"] != current_unit
+        if first_of_week:
             current_unit, seen_this_week = r["unit"], set()
-        week, studio = week_studio(r["unit"], studios)
+        week, studio = week_studio(r["unit"], studios, first_of_week)
 
         for iso in [d for d in sorted(breaks) if d < r["date"]]:
             label = breaks.pop(iso)
             d = date.fromisoformat(iso)
             unit = unit_by_isoweek.get(d.isocalendar()[:2], r["unit"])
-            bweek, bstudio = week_studio(unit, studios)
+            bweek, bstudio = week_studio(unit, studios, False)
             lines.append(
                 f"| – | {pretty_date(iso, DAYNAMES[d.weekday()])} | {bweek} "
                 f"| {bstudio} | **{label}** | | | |"
@@ -336,6 +358,23 @@ def build() -> str:
     return page.replace('{target="_blank"}', "")
 
 
+def check_rendered_size() -> None:
+    """Fail if the last render of the schedule page breached the byte ceiling."""
+    if not RENDERED.exists():
+        print("  (docs/schedule.html not rendered yet — size unchecked)")
+        return
+    size = RENDERED.stat().st_size
+    pct = 100 * (BYTE_CEILING - size) / BYTE_CEILING
+    if size > BYTE_CEILING:
+        raise SystemExit(
+            f"✗ docs/schedule.html is {size:,} bytes — over the {BYTE_CEILING:,} "
+            f"ceiling by {size - BYTE_CEILING:,}. Shrink the page (see the "
+            f"reductions already applied in HEADER and week_studio) before shipping.")
+    flag = "⚠ " if pct < 2 else "✓ "
+    print(f"{flag}docs/schedule.html {size:,} bytes — {BYTE_CEILING - size:,} "
+          f"under the ceiling ({pct:.1f}% margin)")
+
+
 def main() -> None:
     content = build()
     if "--check" in sys.argv:
@@ -343,12 +382,14 @@ def main() -> None:
             print("✗ schedule.qmd is stale — run scripts/update_schedule_badges.py")
             sys.exit(1)
         print("✓ schedule.qmd up to date")
+        check_rendered_size()
         return
     OUT.write_text(content)
     tracked = tracked_students()
     built = sum(1 for n in NOTEBOOKS if student_filename(n) in tracked)
     print(f"✓ schedule.qmd regenerated — {built}/{len(NOTEBOOKS)} notebook "
           f"badges live (git-tracked only)")
+    check_rendered_size()
 
 
 if __name__ == "__main__":

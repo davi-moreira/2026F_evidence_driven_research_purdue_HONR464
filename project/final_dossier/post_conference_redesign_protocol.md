@@ -10,13 +10,13 @@ Run in class M37; plan submitted that night. Reading: RDSS ch. 11 'Redesigning'.
 The declare → diagnose → redesign loop that you practiced on other people's
 studies now closes on your own, with real audience data in hand. Each piece of
 feedback implicates a specific part of your design — a MIDA letter — and points
-to a specific fix. This session turns the coded tally (M17) into a triaged
+to a specific fix. This session turns the coded tally (M15) into a triaged
 redesign: what you change NOW, in the two weeks left, and what you'd change NEXT,
 in the study you'd run again.
 
 ## Materials
 
-- Your coded conference tally (M17 output).
+- Your coded conference tally (M15 output).
 - Your inquiry declaration (`project/templates/INQUIRY_DECLARATION.md`)
   and your DAG / inquiry from nb12.
 - The M18 redesign-plan template.
@@ -106,6 +106,6 @@ template. Each person declares once; NOW items become each dossier's work plan.
 2. **Skipping the letter.** Proposing a fix before naming M/I/D/A produces the wrong kind of fix.
 3. **Everything is NOW.** Overloading two weeks guarantees nothing ships. Be ruthless: most redesigns are NEXT.
 4. **Regret dressed as redesign.** "I wish I'd picked a better topic" is not a MIDA move. Extract the letter-level change or file it under NEXT.
-5. **Ignoring communication-only feedback.** If M17 tagged it communication, the fix is the poster/brief, not the design — route it accordingly.
+5. **Ignoring communication-only feedback.** If M15 tagged it communication, the fix is the poster/brief, not the design — route it accordingly.
 
 *Feeds the dossier's redesign history. Next: [reproducibility_audit_protocol.md](reproducibility_audit_protocol.md) (M39–M40).*
