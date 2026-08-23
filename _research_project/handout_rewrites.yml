@@ -1,0 +1,820 @@
+# handout_rewrites.yml — how the DATED milestone briefs become DATE-FREE handout PDFs
+#
+# `_research_project/2026Fall/milestone_NN_*.md` is the single source of truth for
+# every milestone: it carries this edition's real dates, and it is what the course
+# site and Brightspace point at. The PDFs Davi uploads to Brightspace must instead
+# be reusable in ANY future edition, so `scripts/build_handout_pdfs.py` applies the
+# rewrites below on the way to PDF. Nothing here edits the source brief.
+#
+# Rules are exact, ordered string substitutions. Every `find` is verified to occur
+# EXACTLY ONCE in its source file; the build fails loudly if that stops being true,
+# which is what tells you a brief changed under a rule.
+#
+# What the rewrites remove: calendar dates, deadline clock times, and semester/year
+# labels. What they deliberately KEEP: the Mon/Wed/Fri meeting rhythm (stable in
+# every edition and load-bearing pedagogy), whether a deadline is at-class or
+# end-of-day, bibliographic citation years, and years inside URLs.
+#
+# Authored 2026-08-23 by a 17-agent pass, one agent per brief; every replacement was
+# written to hold the briefs' student voice (second person, honors undergraduates,
+# no quantitative background).
+#
+# To add a rule: append it under its file, keep `find` byte-exact (watch U+2014 em
+# dashes and curly apostrophes), then rerun the builder.
+schema: 1
+files:
+  milestone_01_research_ai_baseline.md:
+    rules:
+    - find: '**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: '**M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester. Every milestone'
+      why: Removes the pinned Expo date ("Tuesday, November 17") and the pinned closing month ("in December"). The Expo's Tuesday is a one-off event day, not part of the stable Mon/Wed/Fri rhythm, so it goes with the date; the replacement keeps the pedagogically load-bearing fact that the Expo interrupts the normal class pattern. "required" is preserved by moving it into the bolded noun phrase, so the requirement is not softened. Removes one em dash and adds none.
+    - find: 'Due: **Friday, August 28, 11:59 PM** (you work on it at that Friday''s studio).'
+      replace: 'Due: **by the end of the day on this milestone''s Friday** (you work on it at
+
+        that Friday''s studio). Brightspace carries the exact date and time.'
+      why: 'Removes the calendar date and the clock time while preserving the two things that are instructional design, not calendar: the deadline is end-of-day (not at-class), and it lands on the milestone''s own Friday, the same Friday whose studio you work at. Adds the Brightspace pointer in the brief''s own second-person voice. No em dash added.'
+    - find: 'Every claim defended in December started as something that would not leave its
+
+        researcher alone in August. This milestone catches that thing before it
+
+        evaporates, and then it makes you choose. By Friday you have a **committed'
+      replace: 'Every claim defended at the end of the semester started as something that would
+
+        not leave its researcher alone in the opening weeks. This milestone catches that
+
+        thing before it evaporates, and then it makes you choose. By Friday you have a
+
+        **committed'
+      why: 'The opening sentence of Purpose pinned both ends of the arc to specific months ("in December" / "in August"). Recast as relative semester positions, which is what the sentence actually means. "By Friday" is kept untouched: it is the stable weekly rhythm. The find extends one line further than strictly needed so the paragraph rewraps cleanly instead of leaving a stub line.'
+    - find: you hide today becomes a lost class hour in September.
+      replace: you hide today becomes a lost class hour later in the semester.
+      why: '"in September" pins the setup warning to the Fall calendar. "later in the semester" carries the identical warning and is true in any edition, including a spring offering.'
+    - find: 'Head the artifact as a **dated, numbered version**, for example "Curiosity,
+
+        version 0, August 28". Add one sentence giving the reason for the version. At
+
+        version zero the reason is simply what you committed to, and why this problem'
+      replace: 'Head the artifact as a **dated, numbered version**, for example "Curiosity,
+
+        version 0," followed by the date you write it. Add one sentence giving the
+
+        reason for the version. At version zero the reason is simply what you committed
+
+        to, and why this problem'
+      why: The worked example baked "August 28" into the model version line. The requirement that you date the artifact is the point and must survive, so the example now shows the version label and instructs you to append your own date. Second person preserved. The find runs one line long so the paragraph rewraps without a stub line.
+    - find: '| **Pitch** | 30 seconds at the Friday studio (Aug 28): your problem and the person a different answer would surprise, no slides needed — part of the grade |'
+      replace: '| **Pitch** | 30 seconds at this milestone''s Friday studio: your problem and the person a different answer would surprise, no slides needed — part of the grade |'
+      why: Drops the parenthetical date from the Submission Expectations table while keeping the structural fact that the pitch happens live at the Friday studio. The existing em dash before "part of the grade" is preserved unchanged; none added. Table formatting and the row's meaning are untouched.
+  milestone_02_research_opportunity_landscape.md:
+    rules:
+    - find: '**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: '**M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester. Every milestone'
+      why: 'Removes the Expo''s fixed calendar date ("Tuesday, November 17") and the semester label "in December". Keeps the requirement ("required" moved into the bold event name), keeps the fact that the Expo falls outside the Mon/Wed/Fri rhythm, and keeps the closing sequence. Net em dashes: one removed, none added.'
+    - find: 'Due: **Friday, September 4, 11:59 PM** (you work on it at that Friday''s studio).'
+      replace: 'Due: **by the end of the day on this milestone''s Friday** (you work on it at that
+
+        Friday''s studio). Brightspace carries the exact date and time.'
+      why: 'Removes the date and clock time while preserving the two load-bearing facts: the deadline is an END-OF-DAY deadline (not at-class), and it lands on the milestone''s Friday, the same day as the studio. Adds the Brightspace pointer in the brief''s own voice.'
+    - find: set before you need it is a rule you can actually keep at 2 AM in November.
+      replace: 'set before you need it is a rule you can actually keep at 2 AM late in the
+
+        semester.'
+      why: 'Drops the month label "in November" and replaces it with the structural "late in the semester", which carries the same rhetorical force (the rule has to survive the crunch). "2 AM" is kept: it is an idiom about working late, not a deadline time.'
+    - find: 'permission determination. Flagging it now costs nothing. Discovering it in October
+
+        costs weeks.'
+      replace: 'permission determination. Flagging it now costs nothing. Discovering it late in
+
+        the semester costs weeks.'
+      why: Removes the month label "in October". "Late in the semester" keeps the contrast between flagging human participants now and discovering the problem after the design is committed.
+    - find: 'Head the artifact as a **dated, numbered version**, for example "Rules and
+
+        question, version 0, September 4", with one sentence giving the reason for the
+
+        version. Every milestone here is a version, never a pass: when later evidence'
+      replace: 'Head the artifact as a **numbered version carrying the date you submit it**, for
+
+        example "Rules and question, version 0", with one sentence giving the reason for
+
+        the version. Every milestone here is a version, never a pass: when later evidence'
+      why: Removes the specimen date "September 4" from the worked example. The requirement that the header carry a real date is preserved and made explicit ("the date you submit it"), so the student still writes their own date without the brief hard-coding one edition's calendar.
+  milestone_03_verified_evidence_map.md:
+    rules:
+    - find: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate
+
+        Research Expo poster session**, a single day late in the semester that falls
+
+        outside the regular class pattern, and closes with an oral **Evidence Defense**
+
+        and a final research chapter at the end of the semester. Every milestone'
+      why: Removes the Expo's calendar date ("Tuesday, November 17") and the semester-specific "in December" close. Keeps the event's proper name and the fact that it is required, and keeps the pedagogically load-bearing point that the Expo falls outside the Mon/Wed/Fri pattern. Also drops one em dash rather than adding any.
+    - find: 'Due: **Friday, September 11, 11:59 PM** (you work on it at that Friday''s
+
+        studio). Week 3 is short: Labor Day takes Monday, so one Wednesday lecture
+
+        carries both of this studio''s lessons and Friday is the milestone itself. That
+
+        studio is an **evidence-map gallery walk**: your registry and your map go up'
+      replace: 'Due: **by the end of the day on this milestone''s Friday** (you work on it at
+
+        that Friday''s studio). Brightspace carries the exact date and time. Week 3 is
+
+        short whenever a Monday holiday takes the first lecture: one Wednesday lecture
+
+        then carries both of this studio''s lessons, and Friday is the milestone itself.
+
+        That studio is an **evidence-map gallery walk**: your registry and your map go up'
+      why: Removes the calendar date and the 11:59 PM clock time while preserving that this is an END-OF-DAY deadline (not an at-class one), that it lands on the Friday studio, and that you work on it at that studio. "Labor Day" pinned the brief to one offering's academic calendar, so the compressed week is now stated conditionally; Week 3 stays because week numbering is structural in the course design. The Brightspace pointer replaces the removed date.
+    - find: '> **A worked log line:** *Sep 8 · where: the university library''s economics
+
+        > database · terms: "campus dining prices" AND "inflation" · result: 4 hits, all
+
+        > about national chains, none campus-level; nothing usable retrieved.* That line
+
+        > is short, dated, and reusable by a stranger who wants to repeat the search.'
+      replace: '> **A worked log line:** *[the date you ran it] · where: the university
+
+        > library''s economics database · terms: "campus dining prices" AND "inflation" ·
+
+        > result: 4 hits, all about national chains, none campus-level; nothing usable
+
+        > retrieved.* That line is short, dated, and reusable by a stranger who wants to
+
+        > repeat the search.'
+      why: The worked example carried a real semester date ("Sep 8") in the log's date field. A bracketed placeholder keeps the four-field shape of the log line and keeps the follow-up sentence ("short, dated, and reusable") true, without pinning the example to one offering. Lines rewrapped so no line begins with the middle dot.
+    - find: will have to defend in December.
+      replace: will have to defend at the end of the semester.
+      why: Removes the month that pins the Evidence Defense to one offering, while keeping the same warning that inherited contestation must be defended at the close of the course.
+    - find: '| **Studio work** | Worked at the Friday studio (Sep 11) with your AI assistant; submitted the same day |'
+      replace: '| **Studio work** | Worked at the Friday studio with your AI assistant; submitted the same day |'
+      why: Drops the parenthetical calendar date from the Definition-of-Done checklist. "The Friday studio" and "submitted the same day" are both structural and stay, so the row still states the requirement exactly.
+  milestone_04_research_charter_mida.md:
+    rules:
+    - find: '**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone
+
+        follows the same cadence: **Friday-studio kickoff → develop across the week →
+
+        submit → revise (where eligible)**.'
+      replace: '**M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester. Every milestone follows the same
+
+        cadence: **Friday-studio kickoff → develop across the week → submit → revise
+
+        (where eligible)**.'
+      why: Removes the pinned Expo date (Tuesday, November 17) and the pinned close month (in December) from the About-the-Research-Project overview. The Expo stays marked required and is now placed structurally (late in the semester, off the regular MW/F pattern); the close is now "at the end of the semester". The Friday-studio cadence sentence is untouched in wording and only rewrapped, and one em dash is removed rather than added.
+    - find: 'Due: **Friday, September 18, 11:59 PM** (you work on it at that Friday''s
+
+        studio). That studio is a **contract declaration round**: you declare Contract
+
+        v0 in three minutes, take one question per listener on any field you wrote, and
+
+        submit the same day.'
+      replace: 'Due: **by the end of the day on this milestone''s Friday** (you work on it at
+
+        that Friday''s studio). Brightspace carries the exact date and time. That studio
+
+        is a **contract declaration round**: you declare Contract v0 in three minutes,
+
+        take one question per listener on any field you wrote, and submit the same day.'
+      why: The only hard deadline in the brief. Drops the calendar date and the clock time while preserving the instructional distinction that this is an end-of-day deadline, not an at-class one, and preserving that the studio itself is that Friday. Adds the Brightspace pointer in the same second-person voice. The declaration-round sentences are unchanged in wording and only rewrapped.
+    - find: cannot tell those apart in December unless you wrote the Contract in September.
+      replace: 'cannot tell those apart at the end of the semester unless you wrote the
+
+        Contract before the results existed.'
+      why: 'The design-versus-drift sentence used two month names as shorthand for "late" and "early". Rewritten whole so it still lands: the contrast is now end-of-semester versus before any results existed, which also echoes the paragraph''s own opening ("declared before any result exists").'
+    - find: '  the 2026–2027 academic year" is a setting and time.'
+      replace: '  the academic year you collect the data" is a setting and time.'
+      why: The worked example of a Setting-and-time field named the current offering's academic year, which would read as stale in any later edition. The example still shows both halves (a place and a time) and now stays true whenever the course runs.
+    - find: 'answer key you are held to in December, and the alignment sentence is what shows
+
+        your procedure is aimed at it.'
+      replace: 'answer key you are held to at the end of the semester, and the alignment
+
+        sentence is what shows your procedure is aimed at it.'
+      why: Second occurrence of "in December" as a stand-in for the end of the course. Replaced with the structural phrase; the rest of the sentence is unchanged.
+    - find: '| **Studio work** | Worked at the Friday studio (Sep 18) with your AI assistant; declaration delivered; submitted the same day |'
+      replace: '| **Studio work** | Worked at the Friday studio with your AI assistant; declaration delivered; submitted the same day |'
+      why: 'Definition-of-Done row carried the date in parentheses. Removing it loses nothing: "the Friday studio" plus "submitted the same day" already fixes the timing, and the Submit section now points to Brightspace for the actual date.'
+  milestone_05_observational_descriptive_audit.md:
+    rules:
+    - find: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December.'
+      replace: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate
+
+        Research Expo poster session**, and closes with an oral **Evidence Defense**
+
+        and a final research chapter at the end of the semester. The Expo is a single
+
+        day that falls outside the regular Monday/Wednesday/Friday pattern, and
+
+        Brightspace posts its date.'
+      why: 'Removes the pinned Expo date ("Tuesday, November 17") and the semester-specific "in December". Keeps the Expo as required, keeps the pedagogically load-bearing fact that it breaks the MWF rhythm, and points to Brightspace for the actual day. Net em dashes: one removed, none added.'
+    - find: 'Due: **Friday, September 25, 11:59 PM** (you work on it at that Friday''s studio).'
+      replace: 'Due: **by the end of the day on this milestone''s Friday** (you work on it at
+
+        that Friday''s studio). Brightspace carries the exact date and time.'
+      why: 'Removes the calendar date and the clock time while preserving both structural facts: the deadline falls on the milestone''s Friday, and it is an end-of-day deadline (not an at-class one). The "you work on it at that Friday''s studio" clause is untouched.'
+    - find: are the defense you will stand on in November.
+      replace: are the defense you will stand on at the Expo poster session.
+      why: '"in November" pins the brief to one offering. Naming the occasion instead of the month keeps the forward-pointing motivation and stays true in any edition.'
+  milestone_06_causal_identification.md:
+    rules:
+    - find: '**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: '**M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the term that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester. Every milestone'
+      why: 'Removes the pinned Expo date ("Tuesday, November 17") and the pinned closing month ("in December"). The Expo is described structurally instead: it stays marked required, and the fact that it sits outside the Mon/Wed/Fri rhythm is preserved because that is the pedagogically load-bearing part. The em dash that carried "— required" is dropped rather than replaced, so the em-dash budget goes down, never up. Second person and sentence length unchanged.'
+    - find: 'Due: **Friday, October 2, 11:59 PM** (you work on it at that Friday''s studio).'
+      replace: 'Due: **by the end of the day on this milestone''s Friday** (you work on it at
+
+        that Friday''s studio). Brightspace carries the exact date and time.'
+      why: 'Removes the calendar date and clock time while preserving the two things that are instructional design, not calendar: the deadline is an END-OF-DAY deadline (not an at-class one), and it lands on the milestone''s Friday, the day you work on it at studio. The Brightspace pointer replaces the removed date without inventing any policy.'
+    - find: licence, October 1" is provenance; "found a CSV online" is not.
+      replace: licence, retrieved on [date]" is provenance; "found a CSV online" is not.
+      why: '"October 1" is an illustrative retrieval date inside a quoted provenance entry, but it still matches a calendar-date scan and would read as a real date in a reused handout. The placeholder keeps the teaching point intact — a provenance entry must carry a retrieval date — while leaving nothing date-like behind. Renders literally in Pandoc/Quarto because no matching link definition exists.'
+  milestone_07_experimental_measurement_protocol.md:
+    rules:
+    - find: '**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December.'
+      replace: '**M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester.'
+      why: Removes the pinned Expo date ("Tuesday, November 17") and the pinned closing month ("in December"). "Required" is preserved by moving it inside the bold event name, and the Expo's off-pattern, late-semester timing is stated structurally so the sentence still tells you why that day is different from a normal class day. Drops one em dash rather than adding any.
+    - find: 'Due: **Friday, October 9, 11:59 PM**. That Friday is Studio 7''s milestone'
+      replace: 'Due: **by the end of the day on this milestone''s Friday**. Brightspace carries
+
+        the exact date and time. That Friday is Studio 7''s milestone'
+      why: 'Removes the calendar date and clock time while preserving the two load-bearing facts: the deadline falls on the milestone''s Friday, and it is an end-of-day deadline rather than an at-class one. The Brightspace pointer is phrased in the same second-person, warm-but-exact voice. The following sentences ("That Friday is Studio 7''s milestone session…", "submit by the same-day deadline") still read correctly.'
+    - find: '| **Studio work** | Worked at the Friday studio (Oct 9) with your AI assistant; abstract gate cleared; submitted the same day |'
+      replace: '| **Studio work** | Worked at this milestone''s Friday studio with your AI assistant; abstract gate cleared; submitted the same day |'
+      why: Removes the parenthetical date from the Definition-of-Done checklist. "This milestone's Friday studio" keeps the weekday rhythm and the same-day submission requirement, which are structural, not calendrical.
+  milestone_08_declared_analysis_protocol.md:
+    rules:
+    - find: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester. Every milestone'
+      why: 'Removes the pinned Expo date ("Tuesday, November 17") and the pinned closing month ("in December") from the About the Research Project paragraph. Keeps the two load-bearing facts: the Expo is required, and it is a one-off day outside the Mon/Wed/Fri pattern, so you cannot treat it as a normal class meeting. The em dash inside "(Tuesday, November 17 — required)" disappears with the parenthetical; no em dash is added.'
+    - find: 'Due: **Friday, October 16, 11:59 PM** (you work on it at that Friday''s studio).'
+      replace: 'Due: **by the end of the day on this milestone''s Friday** (you work on it at
+
+        that Friday''s studio). Brightspace carries the exact date and time.'
+      why: 'Removes the calendar date and the 11:59 PM clock time while preserving the two things that are instructional design, not calendar: this is an END-OF-DAY deadline (not an at-class one), and it falls on the same Friday whose studio you work at. Adds the Brightspace pointer in the brief''s own second-person voice.'
+    - find: October break shortens this week to one lecture and the studio, so the audit is
+      replace: A campus break shortens this week to one lecture and the studio, so the audit is
+      why: 'Drops the month name but keeps the structural fact the milestone''s whole design rests on: the week is short (one lecture plus the studio), so the audit is planned before it is run. The sentence continues unchanged into "planned before it is run."'
+    - find: October break shortens this week, so the planning matters more than usual. You
+      replace: A campus break shortens this week, so the planning matters more than usual. You
+      why: Same substitution in the Purpose section's parallel sentence. Distinct from the What-to-Submit sentence because the continuations differ, so both find strings are unique.
+    - find: '| **Studio work** | Worked at the Friday studio (Oct 16) with your AI assistant; required reviewer role logged; submitted the same day |'
+      replace: '| **Studio work** | Worked at the Friday studio with your AI assistant; required reviewer role logged; submitted the same day |'
+      why: Removes the "(Oct 16)" date stamp from the Definition of Done table. "the Friday studio" and "submitted the same day" are structural and stay, so the row still carries the rule that the work happens at the studio and is submitted that day.
+  milestone_09_minimum_viable_analysis.md:
+    rules:
+    - find: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester. Every milestone'
+      why: 'Removes the Expo''s fixed calendar date ("Tuesday, November 17") and the fixed closing month ("in December"), both of which pin the brief to one offering. Keeps the pedagogically load-bearing facts: the Expo is required, it is public, and it does NOT fall on a regular Mon/Wed/Fri class day. Drops one em dash and adds none.'
+    - find: 'Due: **Friday, October 23, 11:59 PM** (you work on it at that Friday''s studio).'
+      replace: 'Due: **by the end of the day on this milestone''s Friday** (you work on it at
+
+        that Friday''s studio). Brightspace carries the exact date and time.'
+      why: 'Removes the calendar date and the clock time while preserving the two things that are instructional design, not scheduling: the deadline is end-of-day (not at-class), and it lands on the same Friday whose studio you work in. Adds the Brightspace pointer in the brief''s own voice.'
+    - find: 'One to two pages, opening with a dated version line and its reason (for example:
+
+        *"Book Milestone 9, version 1, October 23: first bounded write-up of the claim
+
+        that survived the M8 audit"*). A version with no reason is decoration. Write the
+
+        reason a reader could use to reconstruct your thinking. Then five moves, in
+
+        order:'
+      replace: 'One to two pages, opening with a dated version line and its reason (for example:
+
+        *"Book Milestone 9, version 1, [the date you write it]: first bounded write-up
+
+        of the claim that survived the M8 audit"*). A version with no reason is
+
+        decoration. Write the reason a reader could use to reconstruct your thinking.
+
+        Then five moves, in order:'
+      why: The worked example of a version line carried a hard date. The requirement to date your own version line is real work you do, so it stays; the example now shows the slot with a placeholder instead of pinning the brief to one semester. Paragraph reflowed so no line runs long.
+    - find: '| **Studio work** | Worked at the Friday studio (Oct 23) with your AI assistant;'
+      replace: '| **Studio work** | Worked at this milestone''s Friday studio with your AI assistant;'
+      why: Drops the parenthetical date from the Definition-of-Done checklist row while keeping the Friday-studio structure and the "submitted the same day" rule that follows it in the same row.
+  milestone_10_poster_draft_research_audit.md:
+    rules:
+    - find: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December.'
+      replace: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester.'
+      why: Removes the pinned Expo date ("Tuesday, November 17") and the semester label "in December" from the About the Research Project overview. Keeps the event's proper name and the fact that the Expo is required and sits outside the Mon/Wed/Fri rhythm. Also drops one em dash rather than adding any.
+    - find: 'Due: **Friday, October 30, 11:59 PM**. At the Friday studio that day your'
+      replace: 'Due: **by the end of the day on this milestone''s Friday**. Brightspace carries
+
+        the exact date and time. At that Friday''s studio your'
+      why: The submission deadline is the single most edition-specific line in the brief. The Friday-studio rhythm and the end-of-day (not at-class) character of the deadline are preserved structurally; the calendar date and clock time move to Brightspace.
+    - find: 'real and dated. Your artifact is the **Purdue Fall Undergraduate Research Expo**
+
+        poster, presented Tuesday, November 17, together with the **oral defense** you'
+      replace: 'real and fixed. Your artifact is the **Purdue Fall Undergraduate Research Expo**
+
+        poster, presented in person at the Expo, together with the **oral defense** you'
+      why: Second instance of the Expo date, inside Purpose. "dated" becomes "fixed" so the sentence still explains why part of the venue contract is already written, without promising a particular calendar day.
+    - find: 'and it stays revisable. The terminal deadline is **M13** (Sunday, November 8,
+
+        11:59 PM), where the reproducible package and the printed poster lock together.'
+      replace: 'and it stays revisable. The terminal deadline is **M13**, an end-of-day deadline
+
+        where the reproducible package and the printed poster lock together. Brightspace
+
+        posts its exact date and time.'
+      why: Removes the terminal poster-lock date and time. The brief never states the lock's timing relative to the peer-review week, so it points to Brightspace rather than inventing a relative rule. "an end-of-day deadline" preserves the instructional distinction from an at-class deadline.
+    - find: 'Several lines are fixed for you: a printed poster, presented in a hall with live
+
+        questions on Tuesday, November 17, submitted for print by Sunday, November 8 at
+
+        11:59 PM. Write the rest yourself, then close the contract with one sentence'
+      replace: 'Several lines are fixed for you: a printed poster, presented in a hall with live
+
+        questions on the Expo day, submitted for print by the end of the day at the M13
+
+        poster lock. Brightspace posts both exact dates. Write the rest yourself, then
+
+        close the contract with one sentence'
+      why: Third Expo date plus a second copy of the print-submission deadline, inside the venue-contract component. Keeps both fixed contract fields (live questions at the Expo; an end-of-day print submission) and sends the two calendar dates to Brightspace in one sentence.
+    - find: '| **Studio work** | Worked at the Friday studio (Oct 30); artifact criticism gallery run; defense rehearsed; submitted the same day |'
+      replace: '| **Studio work** | Worked at this milestone''s Friday studio; artifact criticism gallery run; defense rehearsed; submitted the same day |'
+      why: Definition-of-Done row carried the abbreviated date "(Oct 30)". The Friday-studio requirement and the same-day submission rule are load-bearing and stay; only the date leaves.
+  milestone_11_poster_first_draft.md:
+    rules:
+    - find: '**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: '**M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester. Every milestone'
+      why: Removes the pinned Expo date ("Tuesday, November 17") and the semester label "in December" from the standing About-the-Research-Project paragraph. "required" moves in front of the event name so the requirement survives the deletion of the parenthetical. The Expo's off-pattern single day is now described structurally, so the sentence still warns you it is not a normal class day. Em-dash count drops by one (18 → 17); none added.
+    - find: 'Due: **Wednesday, November 4, at the start of class.** This is a hard at-class
+
+        deadline, not a midnight one, because the structured peer review runs in that
+
+        same session. A draft that arrives after the review round cannot be reviewed,
+
+        and an unreviewed draft has nothing to revise from before Sunday''s lock.'
+      replace: 'Due: **at the start of Wednesday''s class in this milestone''s week.**
+
+        Brightspace carries the exact date. This is a hard at-class deadline, not an
+
+        end-of-day one, because the structured peer review runs in that same session. A
+
+        draft that arrives after the review round cannot be reviewed, and an unreviewed
+
+        draft has nothing to revise from before the terminal poster lock.'
+      why: Drops "November 4" but keeps "Wednesday's class" and "at the start of class" — the meeting-rhythm anchor and the at-class-versus-end-of-day distinction are both load-bearing. "not a midnight one" becomes "not an end-of-day one" so the contrast is expressed structurally rather than by clock time. "Sunday's lock" becomes "the terminal poster lock", which names the gate without asserting a weekday a future edition might move. Brightspace pointer added in the same voice. No em dashes added.
+    - find: and they are the reason this sweep happens now rather than on Sunday.
+      replace: 'and they are the reason this sweep happens now rather than at the terminal
+
+        poster lock.'
+      why: Second and last "Sunday" reference, meaning "at the lock deadline" rather than a weekday of the meeting rhythm. Naming the gate instead of the weekday keeps the urgency argument intact and matches the wording introduced in the Due block above.
+  milestone_12_peer_review.md:
+    rules:
+    - find: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester. Every milestone'
+      why: Removes the calendar date "Tuesday, November 17" and the semester label "in December". Keeps that the Expo is required and that it is a one-off day off the regular Mon/Wed/Fri rhythm, and keeps the Expo's proper name. Drops one em dash (never adds any).
+    - find: 'This is the one milestone in the course whose artifact is about **someone else''s
+
+        research**. Every student independently reviews **every other active project or
+
+        poster**. That means four reviews when all five students work individually and
+
+        fewer when approved groups reduce the number of active projects. Group approval
+
+        always preserves at least three active projects, so every student reviews at
+
+        least two other live projects. Group members do not confer before submitting
+
+        their own reviews, and each student is scored individually.'
+      replace: 'This is the one milestone in the course whose artifact is about **someone else''s
+
+        research**. You independently review **every other active project or poster**.
+
+        How many reviews you write depends on how many projects are active, and an
+
+        approved group lowers that count. Group approval always preserves at least three
+
+        active projects, so you always review at least two other live projects. If your
+
+        project is a group project, you do not confer with your teammates before
+
+        submitting your own review. You are scored individually either way.'
+      why: Not a date, but the hard-coded enrollment ("four reviews when all five students work individually") pins the brief to this one offering, since a future section will not have five researchers. The rewrite states the same rule relationally, keeps the ≥3-active-projects floor and the ≥2-reviews guarantee, keeps the no-conferring and individual-scoring rules, and fixes the third-party "students" noun that the house voice rule forbids in student-facing prose. Flagged in notes for the instructor.
+    - find: 'Due: **Friday, November 6, 5:00 PM.** The reviews are written in Wednesday''s
+
+        class, in a silent round, and finished in Friday''s studio.'
+      replace: 'Due: **on this milestone''s Friday, once the studio has ended.** This is not an
+
+        at-class deadline, and Brightspace carries the exact date and time. The reviews
+
+        are written in Wednesday''s class, in a silent round, and finished in Friday''s
+
+        studio.'
+      why: 'Removes the date and the clock time while preserving the instructional design: the deadline is NOT at the start of class, it falls after the Friday studio in which you finish the reviews. "Wednesday''s class" and "Friday''s studio" are the stable Mon/Wed/Fri rhythm and are kept verbatim. Deliberately does not say "by the end of the day", which would silently widen the real 5:00 PM window into invented policy.'
+    - find: '[M13 — Final Poster Lock](milestone_13_final_poster_lock.md) — the print file,
+
+        terminal, due Sunday, November 8, at 11:59 PM.*'
+      replace: '[M13 — Final Poster Lock](milestone_13_final_poster_lock.md) — the print file,
+
+        terminal, due by the end of the day on the Sunday right after this milestone''s
+
+        Friday. Brightspace posts the exact date and time.*'
+      why: Removes the date and the 11:59 PM clock time. The relative timing is genuinely recoverable inside this brief (M12 is due on its Friday; the lock is the immediately following Sunday), so the pointer stays informative. "By the end of the day" faithfully renders 11:59 PM. Keeps both existing em dashes and adds none.
+  milestone_13_final_poster_lock.md:
+    rules:
+    - find: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the term that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester. Every milestone'
+      why: 'Removes the Expo calendar date (Tuesday, November 17) and the semester label "in December". Keeps the event''s proper name and the fact that the Expo is required and sits off the regular Mon/Wed/Fri pattern. Net em dashes: one fewer than the original.'
+    - find: 'copied between components. It is a **terminal artifact**:
+
+        **the deadline governs and there is no revision window.**
+
+        Sunday, November 8, 11:59 PM is the real production deadline, not a buffer. It is a print deadline: your file goes straight to the press on a run shared with QM 47400. The
+
+        poster you submit is the poster strangers read at the Expo on November 17. There
+
+        is no "I will fix it after submission," because after this is the Expo.'
+      replace: 'copied between components. It is a **terminal artifact**:
+
+        **the deadline governs and there is no revision window.**
+
+        The poster lock is a real production deadline, not a buffer, and Brightspace
+
+        carries the exact date and time. It is a print deadline: your file goes straight
+
+        to the press on a run shared with QM 47400. The poster you submit is the poster
+
+        strangers read at the Expo. There is no "I will fix it after submission," because
+
+        after this is the Expo.'
+      why: Removes "Sunday, November 8, 11:59 PM" and "on November 17", replacing the first with a Brightspace pointer in the same voice. The terminal/print-deadline logic and the shared QM 47400 print run survive untouched. Also reflows the over-long source line without changing any other wording.
+    - find: 'Due: **Sunday, November 8, 11:59 PM (terminal — no revision window).** Monday and
+
+        Wednesday taught this week''s two lessons, replication and reproduction and then
+
+        open and reusable research packages, and you worked their "It is your turn"
+
+        sections as you went. Friday''s studio is this milestone. You assemble the
+
+        package, run it cold, clear the two blocking gates, and lock the poster on the
+
+        numbers that just came back.'
+      replace: 'Due: **by the end of the day on the Sunday right after this milestone''s Friday
+
+        studio (terminal — no revision window).** Brightspace carries the exact date and
+
+        time. Monday and Wednesday taught this week''s two lessons, replication and
+
+        reproduction and then open and reusable research packages, and you worked their
+
+        "It is your turn" sections as you went. Friday''s studio is this milestone. You
+
+        assemble the package, run it cold, clear the two blocking gates, and lock the
+
+        poster on the numbers that just came back.'
+      why: 'The main deadline line. Removes the date and clock time but preserves the two load-bearing facts: this is an END-OF-DAY deadline (not at-class), and it falls on the Sunday right after the Friday studio, which the same paragraph already establishes as this milestone''s studio. Adds the Brightspace pointer. Monday / Wednesday / Friday rhythm untouched; em dash count unchanged.'
+    - find: 'labeled version of where your evidence stands right now, because the full project
+
+        closes in December. That label is a strength at the Expo rather than an apology.'
+      replace: 'labeled version of where your evidence stands right now, because the full project
+
+        closes at the end of the semester. That label is a strength at the Expo rather
+
+        than an apology.'
+      why: 'Removes the semester label "in December" while keeping the pedagogical point: the poster is deliberately preliminary because the project is not finished yet.'
+    - find: '**Revision: none — this is a terminal artifact.** The deadline governs and there
+
+        is no post-hoc revision, announced from week 1. Everything after this milestone
+
+        is delivery and depth, and the audience on November 17 reads whatever you submit
+
+        by 11:59 PM on November 8.'
+      replace: '**Revision: none — this is a terminal artifact.** The deadline governs and there
+
+        is no post-hoc revision, announced from week 1. Everything after this milestone
+
+        is delivery and depth, and the Expo audience reads whatever you submit by the
+
+        lock deadline.'
+      why: Removes both the Expo date and the deadline date/time. "Announced from week 1" is a course-week reference, not a calendar date, so it stays. Em dash count unchanged.
+    - find: "  terminal, a late poster also risks the print timeline for November 17, so the\n  deadline is real for logistics and not only for grading."
+      replace: "  terminal, a late poster also risks the print timeline for the Expo, so the\n  deadline is real for logistics and not only for grading."
+      why: Removes the Expo date from the late penalty while keeping the logistical argument that lateness threatens the print run.
+  milestone_14_go_public_package.md:
+    rules:
+    - find: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate
+
+        Research Expo poster session**, a single day late in the semester that falls
+
+        outside the regular class pattern, and closes with an oral **Evidence Defense**
+
+        and a final research chapter at the end of the semester. Every milestone'
+      why: Removes the pinned Expo date ("Tuesday, November 17") and the pinned closing month ("in December") from the standing About-the-Project paragraph. The Expo stays marked required and is still described as a one-off day outside the Mon/Wed/Fri pattern, so the scheduling exception survives without a calendar. Em-dash count in the block goes from 1 to 0, so none is added.
+    - find: The poster locked on Sunday. This week the artifact is no longer a file — it is
+      replace: Your poster is locked. This week the artifact is no longer a file — it is
+      why: '"on Sunday" pins the brief to the current edition''s terminal lock day, which sits outside the stable Mon/Wed/Fri rhythm and can move between offerings. The rewrite keeps the same hand-off from M13 (the footer still names M13 — Final Poster Lock as the previous step) in second person, and keeps the existing em dash untouched.'
+    - find: 'Due: **Friday, November 13, 5:00 PM.**'
+      replace: 'Due: **on this milestone''s Friday, by the end of the working day.**
+
+        Brightspace carries the exact date and time.'
+      why: 'Removes the calendar date and clock time while preserving the two load-bearing facts: the deadline lands on the milestone''s Friday, and it is an end-of-day-style deadline rather than an at-class one. Brightspace is named as the authority for the exact date and time, so no policy is invented.'
+  milestone_15_conference_reflection.md:
+    rules:
+    - find: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December.'
+      replace: 'It runs through milestones
+
+        **M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester.'
+      why: Removes the Expo calendar date and the "in December" semester label from the standing About-the-Research-Project paragraph, while keeping the Expo's required status and its off-pattern, late-semester placement. Adds no em dash (the removed parenthetical carried the only one here).
+    - find: 'poster from M13 and your live **Expo presentation** on Tuesday, November 17
+
+        together supply the Final Project''s'
+      replace: 'poster from M13 and your live **Expo presentation**
+
+        together supply the Final Project''s'
+      why: Drops the date modifier; the sentence already names the Expo, so nothing structural is lost and the grading arithmetic that follows is untouched.
+    - find: 'Due: **Sunday, November 29, 11:59 PM**, worked across the two asynchronous sessions (Friday, November 20 and Monday, November 23). You present at the **Expo on Tuesday,
+
+        November 17** (graded through Poster Presentation at the Purdue Undergraduate
+
+        Research Conference, below),
+
+        then bring your coding sheet to the
+
+        **Friday reflection studio (Nov 20)**, where you code your questions, find your
+
+        pattern, and write the revision that pattern licenses.'
+      replace: 'Due: **by the end of the day on the Sunday that closes this milestone**, worked
+
+        across the two asynchronous sessions (that Friday and the following Monday).
+
+        Brightspace carries the exact date and time. You present at the **Expo** (graded
+
+        through Poster Presentation at the Purdue Undergraduate Research Conference,
+
+        below), then bring your coding sheet to the **Friday reflection studio**, where
+
+        you code your questions, find your pattern, and write the revision that pattern
+
+        licenses.'
+      why: 'The deadline block is the densest date cluster: a due date with a clock time, two asynchronous-session dates, and the Expo date. The end-of-day (not at-class) character of the deadline is preserved explicitly, the Friday/Monday meeting rhythm is preserved as weekdays, and the exact date is pointed to Brightspace in the brief''s own voice.'
+    - find: The **Expo presentation (Tuesday, November 17)** supplies the live 30% subscore
+      replace: The **Expo presentation** supplies the live 30% subscore
+      why: Removes the parenthetical date; the subscore rule and the 30% value are unchanged.
+    - find: 'Your release audit closed at M17, four days before the Expo, and the Expo was the
+
+        release. That order is the point of the design. You decided whether this work was
+
+        ready to leave your hands **before** it left them, so Tuesday, November 17 was not
+
+        a rehearsal for some later public moment.'
+      replace: 'Your release audit closed at M17, just before the Expo, and the Expo was the
+
+        release. That order is the point of the design. You decided whether this work was
+
+        ready to leave your hands **before** it left them, so Expo day was not
+
+        a rehearsal for some later public moment.'
+      why: '"Four days before the Expo" is an interval only this calendar produces, so it becomes "just before", which keeps the load-bearing point (the audit closed BEFORE the release). The second date becomes "Expo day", preserving the sentence''s rhythm.'
+    - find: '### 1. The Expo presentation and public-conference poster criticism (Tuesday, November 17)'
+      replace: '### 1. The Expo presentation and public-conference poster criticism'
+      why: The heading itself is kept; only its date parenthetical is dropped, since the Expo date now lives on Brightspace.
+    - find: '> I cannot fix before December?"* Write the row anyway, with what fixing it would'
+      replace: '> I cannot fix before the end of the semester?"* Write the row anyway, with what fixing it would'
+      why: '"Before December" is a semester label. "Before the end of the semester" carries the same meaning in any edition and keeps the student-voice question intact.'
+    - find: '| **Live component** | Presented at the Expo (Tue Nov 17) with a bounded claim spoken aloud,'
+      replace: '| **Live component** | Presented at the Expo with a bounded claim spoken aloud,'
+      why: 'Definition-of-Done row: the abbreviated date is removed, the requirement and its wording are untouched.'
+    - find: '| **Studio work** | Worked at the Friday reflection studio (Nov 20) with your AI assistant and submitted the same day |'
+      replace: '| **Studio work** | Worked at the Friday reflection studio with your AI assistant and submitted the same day |'
+      why: Keeps the Friday-studio structural reference and the same-day submission expectation; removes only the calendar date.
+    - find: '**Expo presentation score is terminal** inside Final Project: it happens live on
+
+        November 17 and has **no revision window**.'
+      replace: '**Expo presentation score is terminal** inside Final Project: it happens live at
+
+        the Expo and has **no revision window**.'
+      why: The revision-policy sentence loses its date while keeping the reason the score is terminal (it happens live, at the Expo).
+  milestone_16_package_and_cold_run.md:
+    rules:
+    - find: '**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes with an oral
+
+        **Evidence Defense** and a final research chapter in December. Every milestone'
+      replace: '**M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes with an oral **Evidence Defense** and a final
+
+        research chapter at the end of the semester. Every milestone'
+      why: Removes the fixed Expo date ("Tuesday, November 17") and the semester-pinned "in December". Keeps the Expo required and keeps the fact that it sits outside the Mon/Wed/Fri pattern, which is load-bearing for planning. Drops one em dash and adds none.
+    - find: 'Due: **Friday, December 4, 11:59 PM** (the Friday studio is your adjudication
+
+        table read and your second clean run).'
+      replace: 'Due: **by the end of the day on this milestone''s Friday** (the Friday studio is
+
+        your adjudication table read and your second clean run). Brightspace carries the
+
+        exact date and time.'
+      why: 'Removes the calendar date and clock time while preserving both structural facts: the deadline falls on the milestone''s Friday, and it is an end-of-day deadline rather than an at-class one. Points to Brightspace for the actual date, in the same second-person voice.'
+    - find: '> did not exist in October: real questions from real readers at the Expo, and a'
+      replace: '> did not exist then: real questions from real readers at the Expo, and a'
+      why: '"in October" pins the brief to one offering. "then" refers back to the preceding sentence ("that draft was written before anyone outside the course had pushed on your claim"), so the contrast survives intact with no added words or em dashes.'
+  milestone_17_release_and_final_chapter.md:
+    rules:
+    - find: '**M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
+
+        poster session (Tuesday, November 17 — required)**, and closes here, with an
+
+        '
+      replace: '**M1–M17**, peaks publicly at the **required Purdue Fall Undergraduate Research
+
+        Expo poster session**, a single day late in the semester that falls outside the
+
+        regular class pattern, and closes here, with an
+
+        '
+      why: 'Removes the pinned calendar date "Tuesday, November 17" while keeping the two load-bearing facts: the Expo is required, and it is a one-off day that does not sit in the Monday/Wednesday/Friday rhythm. The event''s proper name keeps its "Fall" because that is the name, not a semester label. Verified count = 1 (spans two complete lines; the en dash in "M1–M17" and the em dash in the original are copied byte-for-byte). No em dash is added; one is removed.'
+    - find: 'Due: **Friday, December 11, 11:59 PM**. Your live **Evidence Defense** runs
+
+        across the scheduled Week 15–16 defense blocks, with the final round in Friday''s
+
+        M43 session. The Friday session also closes the dossier and confirms submission;
+
+        it does not extend the deadline.
+
+        '
+      replace: 'Due: **by the end of the day on this milestone''s Friday**. Brightspace carries
+
+        the exact date and time. Your live **Evidence Defense** runs across the
+
+        scheduled Week 15–16 defense blocks, with the final round in the last Friday
+
+        session. The Friday session also closes the dossier and confirms submission;
+
+        it does not extend the deadline.
+
+        '
+      why: Removes the calendar date and the clock time, but preserves the instructional distinction that this is an end-of-day deadline (not an at-class one) and that it lands on the milestone's Friday. Adds the Brightspace pointer in the same second-person voice. Also retires "M43", a meeting number keyed to one edition's 43-meeting calendar, replacing it with the structural "the last Friday session" — same meaning, edition-stable, and consistent with the course's lecture-labels-never-dates rule. The Week 15–16 block reference and every Friday reference stay. Verified count = 1 (four complete lines; the en dash in "Week 15–16" and the curly apostrophe in "Friday's" are copied byte-for-byte).
