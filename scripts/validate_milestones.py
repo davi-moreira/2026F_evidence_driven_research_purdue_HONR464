@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""validate_milestones.py — milestone-system consistency gates (v2: M1–M17).
+"""validate_milestones.py — milestone-system consistency gates (v3: M1–M16).
 
 Parses the chain table in planning/PROJECT_MILESTONES.md and checks, against
 planning/MEETING_SCHEDULE.csv and the calendar backbone:
 
-  * all 16 milestones (M1–M17) present, each with development meetings, a
+  * all 16 milestones (M1–M16) present, each with development meetings, a
     presentation moment, and a due date
   * every milestone's development meetings precede (or meet) its due date
   * every milestone ID appears in >= 1 meeting's milestone_developed column
@@ -30,7 +30,7 @@ SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.csv"
 BACKBONE = REPO / "planning" / "CALENDAR_BACKBONE.csv"
 
 MONTHS = {"Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
-N_MILESTONES = 17   # M1–M17 (D50)
+N_MILESTONES = 16   # M1–M16 (D54 retired M17)
 
 
 def parse_dates(text: str) -> list[date]:
@@ -72,7 +72,7 @@ def main() -> None:
 
     expected = set(range(1, N_MILESTONES + 1))
     if set(rows) != expected:
-        errs.append(f"chain table has milestones {sorted(rows)}, expected M1–M17")
+        errs.append(f"chain table has milestones {sorted(rows)}, expected M1–M16")
 
     # --- per-milestone checks ---------------------------------------------
     due_dates = {}
@@ -95,14 +95,14 @@ def main() -> None:
 
     # --- fixed anchors -----------------------------------------------------
     anchors = {
-        6:  [date(2026, 10, 2)],    # URC draft abstract
-        7:  [date(2026, 10, 9)],    # URC conference application
-        11: [date(2026, 11, 4)],    # poster first draft, due at class
+        6:  [date(2026, 10, 4)],    # URC draft abstract (Sunday, D54)
+        7:  [date(2026, 10, 11)],   # URC conference application (Sunday, D54)
+        11: [date(2026, 11, 4)],    # poster first draft, due at class (Wednesday)
+        12: [date(2026, 11, 6)],    # peer review, Friday 5 PM — feeds the Nov 8 lock
         13: [date(2026, 11, 8)],    # final poster lock (terminal, Sunday 11:59 PM)
-        14: [date(2026, 11, 13)],
+        14: [date(2026, 11, 15)],   # go-public package (Sunday, D54)
         15: [date(2026, 11, 29)],   # conference reflection (Sunday)
-        16: [date(2026, 12, 4)],
-        17: [date(2026, 12, 11)],   # release + final chapter + portfolio (terminal)
+        16: [date(2026, 12, 6)],    # package + cold run (Sunday, D54) — final milestone
     }
     for mid, want in anchors.items():
         if due_dates.get(mid) != want:
@@ -133,9 +133,9 @@ def main() -> None:
         for e in errs:
             print("  " + e)
         sys.exit(1)
-    print("✓ milestone system consistent — 17 milestones (M1–M17), "
+    print("✓ milestone system consistent — 16 milestones (M1–M16), "
           "dev→present→submit ordering holds, anchors fixed "
-          "(Oct 2, Oct 9, Nov 4, Nov 8, Nov 13, Nov 17, Nov 29, Dec 4, Dec 11)")
+          "(Oct 4, Oct 11, Nov 4, Nov 6, Nov 8, Nov 15, Nov 17, Nov 29, Dec 6)")
 
 
 if __name__ == "__main__":
