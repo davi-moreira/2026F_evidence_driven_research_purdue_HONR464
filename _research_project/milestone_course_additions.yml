@@ -1,0 +1,603 @@
+# milestone_course_additions.yml — which course milestones ask for more than
+# their Book Milestone, and exactly what the extra is.
+#
+# THE RULE (instructor ruling, 2026-08-23). A course milestone is normally just
+# its Book Milestone. When that holds, the student PDF is the book's own
+# milestone page and nothing else, and the schedule links straight to it. Only
+# where the COURSE adds something the book does not ask for does the PDF carry a
+# "What this course adds" section, and only then does the schedule mark the row.
+#
+# THIS FILE IS THE SINGLE SOURCE OF TRUTH for that distinction. Both
+# scripts/build_handout_pdfs.py and scripts/update_schedule_badges.py read it
+# through scripts/milestone_map.py, so the page and the PDF cannot disagree.
+#
+# `classification`      pure | additions
+# `reason`              why the call was made, against the classification test
+# `schedule_note`       <= 6 words for the narrow schedule column (additions only)
+# `additions_markdown`  the PDF section body, headings from ### down. No em
+#                       dashes, no dates: the builder enforces both.
+# `extra_artifacts`     what genuinely cannot live inside lastname_mNN.pdf
+# `instructor_notes`    judgment calls and loose ends for Davi, never rendered
+#
+# Authored 2026-08-23 by a 17-agent pass (one agent per milestone) reading each
+# course brief against its book milestone page, with a six-agent adversarial
+# refutation pass over the marginal calls.
+#
+# TO CHANGE A CALL: edit `classification` here and rerun both scripts. Nothing
+# else needs touching.
+schema: 1
+milestones:
+  M01:
+    classification: additions
+    reason: The Book Milestone page produces the curiosity artifact in full, but the course also requires a working-setup check with a three-checkmark readiness screenshot from the course notebook and a live 30-second pitch at the Friday studio that counts toward the grade. Neither appears anywhere on the book page or its studio page, so a student reading only the book page would hand in an incomplete, unpitched submission.
+    schedule_note: readiness screenshot, 30-second studio pitch
+    additions_markdown: '### Two things to add beyond the book milestone
+
+
+      1. **Prove your working setup runs.** Open this week''s course notebook in Colab and save a copy to your own Drive. Run the readiness cell. It finishes with three ✓ marks: you can run a code cell, the course data loads, and you have claimed your copy by name. Paste one screenshot showing all three marks into your PDF. This is your proof that no later milestone stalls on setup. A setup problem you hide this week becomes a lost class hour later.
+
+
+      2. **Give a 30-second pitch at the Friday studio.** Say your research problem out loud, then name the real person for whom a different answer would be surprising. No slides. This is part of the grade, so time it once before class and keep it warm and short.
+
+
+      ### If you keep any code
+
+
+      Seed every code cell you keep with `SEED = 464`, and make sure the notebook reruns cleanly from top to bottom. A kept cell that does not rerun caps your verification score at the lowest band.
+
+
+      ### How these pieces are judged
+
+
+      Keep the whole artifact to about one or two pages, screenshot included. The screenshot and the pitch are both scored in the craft row: three legible ✓ marks and a pitch delivered on time earn full credit there.
+
+      '
+    instructor_notes:
+    - 'Rubric differs in kind, not only in scale: the course brief adds four hard caps the book page has no equivalent for (a fabricated or unretrievable source, an untraceable number, a non-reproducing kept code cell, and a missing AI Research Ledger row that scores Craft 0 and returns the submission unread). Decide whether these caps are stated on every milestone PDF, in the standard header, or only on the syllabus. I put only the non-reproducing-code cap in the section, because it attaches to a course-specific instruction (SEED = 464) that the book page does not give.'
+    - The brief's 'About the Research Project' block (individual by default, at most one approved group, peer evaluation by two assigned project peers, group artifacts naming every member) is standing project-mode policy repeated on every milestone brief. It is not an M1 addition, so I left it out. It belongs in the standard header or on the Final Project grading page.
+    - The brief currently offers 'a shared Colab notebook link' as an alternative to the PDF for both submission rows. The new one-file rule (lastname_m01.pdf) supersedes that, so the alternate-submission sentences should be removed from the brief. Note the screenshot and any kept code output then have to be pasted into the PDF rather than left live in a notebook.
+    - The late policy (-10 per day up to 3 days) and the 7-day revision window recovering up to half the lost points are standing policies. I assumed the standard header or syllabus carries them; if not, they need a home.
+    - The brief says 'the week's course notebook' without naming it. If you want the PDF to be unambiguous, give the file name (nb01) in the readiness step. I did not add it, since the brief does not state it.
+  M02:
+    classification: pure
+    reason: Every one of the course brief's ten components maps onto Book Milestone 2's own practice steps and "What you bring" list (working agreement, opened ledger with hinge and SDIIVDD run, red-flag screen, declared question with field card and stranger-test result, claim boundary, cross-read, dated version), so a student reading the Book Milestone page and told the filename would hand in exactly the right artifact. The remaining differences are the AI ledger, the "It is your turn" sections, the dossier line, and a 100-point rubric in place of the book's 12-point one, all of which the test excludes as grounds for classification.
+    instructor_notes:
+    - 'Borderline call, flagged for your judgment: the stranger test. The book page lists "the stranger-test result" in "What you bring" and Lesson 7 step 6 says only "where they stall, revise before you version." The course brief grades a much thicker record: the exact sentence handed over, the three questions asked, what the reader misunderstood quoted in their own words, and the revision made because of it, run on a classmate at the Friday studio, and it states the test replaces a class presentation. I judged this a documentation standard inside a book-owned step rather than a course addition. If you want that evidentiary bar enforced, it needs one line somewhere: either the standard PDF header or a minimal additions section.'
+    - 'Rubric difference that is arguably in KIND, not scale (per instructions, noted rather than used to classify): the course rubric carries four hard caps the book''s 12-point rubric has no analogue for. A relabelled causal question caps the declared-question row at Beginning; a fabricated or unretrievable source, an untraceable number, or a non-reproducing kept code cell each cap the verification row at Beginning; and a missing AI Research Ledger entry scores Craft 0 and returns the submission unread. If the book page''s rubric alone governs the PDF, these caps disappear from the student-facing document. The missing-ledger rule is a standing course rule (CLAUDE.md), so it likely belongs in the standard header rather than in M2''s PDF.'
+    - 'Two course-wide policies live in the brief''s boilerplate and would vanish with it: the late penalty (minus 10 points per day up to 3 days, then not accepted) and the revision policy (a revised submission within 7 days of feedback recovers up to half the lost points). Both are standing policy, not M2 content, so they belong in the standard header on every milestone PDF, not in an M2 additions section.'
+    - The brief's "About the Research Project" block states the individual-by-default project mode, the conditions for one instructor-approved group, and how Peer Evaluation ratings work. That is D52 policy repeated on every brief. It should sit in the standard header or the Final Project grading page, not in an M2 additions section.
+    - 'Two small course conventions in the brief are not on the book page: any kept code cell must be seeded with SEED = 464, and a shared Colab notebook was previously an acceptable alternative to the PDF. The seed convention is course-wide style and fits the standard header. The Colab alternative is superseded by the one-file rule, and the brief already allows the "It is your turn" work to be "included in your artifact," so nothing here needs to leave the PDF.'
+    - The brief's Book Anchor names chapters 2 through 7, while the book page names them as Lessons 2 through 7 with the same links. The numbering is consistent between the two documents, so no reconciliation is needed if the anchor list drops out with the brief.
+    - 'Content that only exists in the brief but is teaching, not requirement: the worked examples (the price-measure responsibility statement, the burnout double-barrel, the "first-year athletes" silent scope change), the three named upgrades (silent upgrade, leakage, after-therefore-because), and the three Common Pitfalls. If you want any of it kept, it is elaboration of book material and could be folded into the chapters rather than into the PDF.'
+  M03:
+    classification: additions
+    reason: 'The Book Milestone page asks for a search log, verified sources, an evidence map and a revision, but the course wraps the milestone in an in-class evidence-map gallery walk on classmates'' maps with one received challenge worked into the artifact, and it also sets requirements the book page and its two lessons never state: a floor of at least six verified sources, an evidence-type field on every registry row, and a retrievability audit. A student working from the book page alone would hand in an artifact missing all of that.'
+    schedule_note: evidence-map gallery walk, peer challenge
+    additions_markdown: '### The gallery walk at the Friday studio
+
+
+      1. Bring your registry and your evidence map in a form the room can read at a glance. A clearly labeled three-zone list works as well as a picture does.
+
+      2. Present your map briefly when the room reaches you. Say what is settled, what is contested, and where your gap sits.
+
+      3. As the room circulates, read your classmates'' maps and leave challenges on them. A challenge is one pointed question, or one source a map seems to have missed.
+
+      4. Pick one challenge you received. Work it into your registry, your map, or your gap sentence before you submit.
+
+      5. Add a note of one or two sentences naming that challenge and saying what you changed. If it changed nothing, say why it did not land.
+
+
+      You develop the artifact at that same studio with your AI assistant, and you submit it the same day.
+
+
+      ### Three extra requirements for your registry
+
+
+      1. Your registry needs at least six sources that you retrieved and read yourself.
+
+      2. Give every registry row an **evidence type**: descriptive, generalization, predictive, or causal. Type it by the evidence the source really has, so a descriptive survey pattern is not written up as a causal law.
+
+      3. Run a **retrievability audit** at the end. Take each row you marked verified and try to open the source again from your citation alone, the way a stranger holding only your bibliography would. Any row you cannot reopen returns to *pending*, whatever you remember about reading it. Record what the audit found.
+
+
+      ### How this part is judged
+
+
+      Your presentation at the walk, the challenge you incorporated, and its note all count toward the craft score. The audit protects you: a row you cannot reopen, still reported as verified, is scored as an evidence-integrity failure, so run the audit before you submit rather than after.
+
+      '
+    instructor_notes:
+    - 'Rubric difference in kind, not just scale: the book page scores five 0/1/2 rows out of 10, while the course brief adds four hard caps (a fabricated or unretrievable source, a registry row that cannot be reopened, an untraceable reported count, and a missing AI Research Ledger entry that returns the submission) plus a 7-day revision policy recovering half the lost points. Decide which instrument governs the PDF; I referenced only the reopen-failure cap, because it is what makes the retrievability audit make sense.'
+    - The brief says 'the room circulates and leaves challenges on your map' but never states how many challenges you must leave on other maps, or whether every map must be visited. I wrote the giving side without a count so as not to invent a rule.
+    - The brief allows 'a shared Colab notebook link' as an alternative to the PDF, and allows the Book Anchor 'It is your turn' sections to be shared as notebook links. Under the one-file rule everything now lives inside lastname_m03.pdf (the map as an image, the links as text), so I listed no extra artifacts. If you still want a live notebook accepted in place of the PDF, that needs its own policy line in the standard header.
+    - The course brief specifies five registry fields (full citation, retrieval location, central claim in your words, evidence type, licence and terms). Citation, retrieval, central claim and licence are already carried by the book page or its rails, so I added only the evidence-type field.
+    - 'Not carried into the section because the book page already collects them: the candidate list with its status column and lead source, the search log including empty searches, the three-zone map, the bounded gap sentence, the revision of the declaration, the licence line, the version line, the dossier line, and the AI Research Ledger rows.'
+    - The brief's Week 3 note (a lost Monday, one Wednesday carrying both lessons) is calendar-specific and was dropped; if that compression recurs every year it belongs in the schedule, not the PDF.
+  M04:
+    classification: additions
+    reason: The Book Milestone page asks only for the written, diagnosed Contract v0 artifact, but the course also requires a live three-minute contract declaration at the Friday studio that takes one question per listener, and a submitted three-node DAG image with a confounder arrowed into both treatment and outcome. Neither the milestone page nor the lessons it collects asks for a live presentation or for that specified DAG figure, so a student working from the book page alone would hand in an incomplete milestone.
+    schedule_note: live contract declaration; 3-node DAG
+    additions_markdown: '### Declare your contract out loud at the Friday studio
+
+
+      That Friday studio is a contract declaration round. You present before you submit.
+
+
+      1. Prepare a three-minute spoken declaration of Contract v0. Walk your listeners through the fields in order.
+
+      2. Take one question from each listener. Any field is fair game, so know why you wrote every one of them.
+
+      3. Write down anything a question changed in your thinking, and fix it before you submit.
+
+      4. Submit the same day, after the studio.
+
+
+      ### Draw the model as a three-node DAG
+
+
+      Your contract carries a picture of the world it assumes. A DAG is a diagram where each node is a variable and each arrow claims that one variable could directly affect another.
+
+
+      1. Draw exactly three nodes: the thing that varies (your treatment), your outcome, and one confounder.
+
+      2. Give the confounder an arrow into both the treatment and the outcome.
+
+      3. Be ready to name the real-world mechanism behind each arrow.
+
+      4. Put the drawing in your PDF as a legible image. A photographed hand drawing is fine, and so is the studio notebook figure edited to your project.
+
+
+      If your question is descriptive, you still draw it. The third node is then the trait that bends both what enters your data and what you measure.
+
+
+      ### How these two are judged
+
+
+      The declaration is judged on craft and communication: three minutes, clear, and able to answer a question on any field. The DAG is judged with contract completeness: three nodes, a real confounder arrowed into both, and arrows you can explain aloud.
+
+      '
+    instructor_notes:
+    - 'GRADING KIND, not scale: the course rubric explicitly scores two things the book page''s 10-point rubric does not assess at all, the live 3-minute declaration (Craft row) and the DAG''s confounder structure (Contract completeness row). The added section names both so the book rubric can still govern, but if you want them scored you may want a line on the book milestone page itself.'
+    - The old brief allowed 'a shared Colab notebook link' as an alternative to the PDF. The one-file rule removes that option, so the diagnosis output and the DAG figure must be pasted into the PDF. Worth saying once in the standard header if other milestones face the same change.
+    - 'The brief requires a two-sentence claim boundary plus a three-state call (identified / association only / causal but not yet identified). The book milestone page names ''claim boundary'' only as a rail heading, and the three-state call lives inside Lesson 10''s do-not-delegate box rather than the milestone practice. I did not treat this as a course addition, but it is the thinnest link in the chain: if you want it enforced at M4, add it to the book page''s practice list.'
+    - The brief's provisional-marking wording is 'provisional, settled at M6' (a course milestone number); the book page says measurement is settled in Studio 6. Same thing, two vocabularies. The book page's wording is the one the student will read.
+    - Standing policies in the old brief (late penalty, the 7-day revision window, group-mode rules, the not-authorized blocking gate) are either already on the book page (the gate) or are course-wide policy, so none of them entered the additions section.
+  M05:
+    classification: additions
+    reason: 'The Book Milestone page asks only for a declared pathway, its crossing licence, its limits, and a versioned Contract v1 built from one self-chosen contrast drill. The course adds three things the page never asks for: a live in-class route jigsaw advocating an assigned pathway plus a written five-sentence summary of it, a roughly one-page engagement with an instructor-assigned contrast (the book lets you choose any), and a required Causal Identification Skeptic reviewer run whose every ranked attack must be answered in writing.'
+    schedule_note: route jigsaw, assigned contrast, Skeptic run
+    additions_markdown: "### Advocate a route in the jigsaw\n\nYour instructor assigns you one pathway to advocate to the room this week. That\nassignment is independent of the road your own project takes. Prepare the route,\nargue it in class, and take questions on it.\n\nThen add a **jigsaw summary** to your PDF: five sentences a non-specialist could\nrepeat. Say what the route asks, what it requires, what claim its licence buys,\nwhat it can never establish, and one study you would run with it.\n\n### Work the contrast your instructor assigns\n\nThe book lets you pick any contrasting route. In this course the contrast is\nassigned to you. Complete the \"It is your turn\" section of that assigned\nchapter as well as your own route's chapter.\n\nThen write about one page on the assigned contrast, taken seriously on its\nmerits:\n\n1. **What would it require?** The data, the assignment power, or the permissions\n   your project would have to obtain.\n2. **What would it license?** The claim it could make that your route cannot.\n3. **Why is it not yours?** The specific mismatch with your question or your\n   licence. If it partly fits, say instead what adopting it would change in your\n   Contract, your data strategy, and your claim boundary.\n\nA contrast dismissed in one sentence is a strawman, and a strawman defends\nnothing. The page earns its place when a reader could finish it believing you\nwould have taken the other road if the facts had pointed there.\n\n### Run the Causal Identification Skeptic (required)\n\nBefore you submit, run the **Causal Identification Skeptic**, one of the course's\nGenAI Studio reviewer roles, against your declaration.\n\n- On a causal route, give it your identification leverage and let it attack.\n- On any other route, give it your **descriptive-boundary defense**: your\n  argument for why your claims stop short of cause. Let it hunt for causal\n  language you did not notice.\n\nAnswer every ranked attack in writing. Rule the attack out, or carry it as a\nnamed limitation. It supplies the attack; you supply the defense. The critique\nand your answers ride inside the PDF, and the run gets a row in your AI Research\nLedger.\n\n### If your question is causal but your data are weak\n\nA question's kind lives in its words, not in your data. So a causal question\nwith no leverage stays **causal, currently unidentified**. Declare the\nobservational causal route, name the leverage you lack, and keep your language\nat \"associated with\" until identification is earned. Quietly relabeling the\nquestion descriptive is the one move this milestone forbids. The honest\ndeclaration passes; the silent relabel does not.\n\n### Two more things\n\n- Answer the stage question in writing even when the answer is no. One sentence\n  saying your design has no stages is enough.\n- Work on the milestone at the Friday studio with your AI assistant.\n\n### How it is judged\n\nThe Skeptic run is not optional. Skipping it, or leaving its top attack standing\nwith no reply, counts as a failure of verification however strong the rest of\nthe work is. A relabeled question, or a cited study that turns out not to exist\nor not to use the pathway you claim, is judged the same way.\n"
+    instructor_notes:
+    - 'Direct conflict inside the single PDF: the Book Milestone page says you bring your primary pathway''s full piece plus ONE contrast drill ''from any other route you choose'', while the course assigns the contrast route. My section states the course rule explicitly, but you may want the book page''s sentence softened at the next chapter review so a reader does not follow the wrong instruction.'
+    - 'Rubric differs in kind, not only in scale: the course brief runs 100 points across five criteria with three hard caps (relabeled question, fabricated or unretrievable source, missing or unanswered Skeptic run) plus a returned-submission rule for a missing AI Research Ledger. The book page''s 10-point, five-row rubric has none of those caps. I kept the caps out of the rubric discussion and instead stated the Skeptic and relabel expectations as content rules, so nothing is lost to the student; decide whether the caps should be restored at the header or rubric level.'
+    - The brief never says WHO assigns the jigsaw route or WHEN the assignment is announced, and it does not say whether the in-class advocacy itself is scored or only the written five-sentence summary. I wrote it neutrally ('your instructor assigns'). Worth pinning down in the schedule or the session guide.
+    - The brief also does not say when the instructor-assigned contrast route is communicated. Since the assigned contrast drives graded reading (its 'It is your turn' section), it needs to reach the student early in the week.
+    - The brief's submission table allowed a shared Colab notebook link as an ALTERNATIVE to the PDF and asked for companion notebook links. Under the one-file rule, the completed 'It is your turn' sections must be pasted into the PDF or their share links listed inside it. No extra artifact is needed, but the old alternative-submission wording should be dropped from any surviving copy of the brief.
+    - 'Content already covered by the book page and deliberately omitted from my section: the anchor study (rail two), the counter-pathway AI argument (rail three), the permission recheck (rail one), route uncertainty sources (rail four), the claim-boundary rewrite, the dated numbered version with a reason, and the blocking gate on a not-authorized determination.'
+  M06:
+    classification: pure
+    reason: 'Every one of the course brief''s seven parts is already asked for by Book Milestone 6: the acquisition route, provenance record, data-management record, route-specific permission recheck, and measurement specification are its named product; the Contract version is its "A version, not a pass" and "What sends you back" sections; and the ledger and dossier lines are its AI rail and workbook. Nothing course-only survives the test: no extra artifact, no external gate, no poster or Expo work, no work on other projects, and no presentation or defense.'
+    instructor_notes:
+    - 'Rubric differs in KIND, not only scale, so flagging it here rather than classifying on it: the course brief carries three hard caps and a blocking gate that the book''s 0/1/2 rubric has no mechanism for. A fabricated or unretrievable source caps Evidence integrity at Beginning; an unchecked AI description of the dataset caps Verification at Beginning; a missing AI Research Ledger entry scores Craft 0 and returns the submission unread. The book page carries only the not-authorized blocking gate. If you want the caps to keep their teeth on the PDF, they need a home in the standard header or the course grading page, because the Book Milestone page never states them.'
+    - The course brief's revision policy (a revised submission within 7 days of feedback recovers up to half the lost points) and late penalty (minus 10 points per day, up to 3 days) appear nowhere on the book page. Confirm the standard submission header carries both, or they vanish from M6's student-facing text.
+    - 'Granularity risk worth one check: the course brief names the re-identification recheck explicitly (run again on the columns that actually arrived, with its result reported), while the book page folds it silently into "a data-management record". If Lesson 20''s "It is your turn" does not name the recheck, a student working only from the book page may skip it. This is the one substantive detail whose survival depends on the lesson page rather than the milestone page.'
+    - 'Same granularity note, lower stakes, for two measurement details the course brief spells out and the book milestone page states only at lesson level: reliability must be checked on items, occasions, or raters and never by splitting respondents; and "no defensible reliability check is available for this measure and use" is an acceptable finding when the indicator is a single item measured once. Lesson 21''s "What you bring" line does cover the reliability result and the validity argument, so this is likely already safe.'
+    - The Definition of Done row "Worked at the Friday studio with your AI assistant" is the standard weekly cadence that applies to every milestone, not an M6-specific requirement, so it did not drive the classification. It belongs in the standard header if it belongs anywhere.
+    - Submission consolidation is clean here. The old brief offered `lastname_m06_data_governance.pdf` OR a shared Colab notebook link, with the caveat about sharing permissions and rendering tables. Under the single-file rule the provenance and measurement tables live inside `lastname_m06.pdf`, so the Colab alternative and its caveat can simply be dropped; nothing is lost.
+    - The "About the Research Project" preamble (individual by default, at most one approved group, shared rows scored in common, per-member ledger scoring, Peer Evaluation ratings) is identical boilerplate across briefs and is course policy rather than M6 content. Make sure it lives in the standard header or the Final Project grading page, since the book page carries no project-mode language at all.
+    - 'Minor cross-reference mismatch, harmless but worth knowing: the book page''s blocking gate reads "no work at or after Studio 4" while the course brief reads "at or after M4". These refer to the same point under the one-to-one studio-to-milestone mapping, so no student-facing fix is needed.'
+    - The course brief's filename is `milestone_06_causal_identification.md`, but its content is data and measurement governance. The filename slug is stale from an earlier sequencing and does not match the milestone; consider renaming, and check the previous/next navigation links at the foot of the neighboring briefs, which use the same stale slugs.
+  M07:
+    classification: additions
+    reason: 'The Book Milestone page asks only for the declared analysis, the result with uncertainty, a clean restart, an environment record, and a claim-to-output trace. The course adds two things the page never mentions: a required Prediction and Leakage Auditor pass whose flags must each be settled by a check in the student''s own pipeline, and a 150 to 250 word Undergraduate Research Conference abstract that must clear an internal instructor gate at the Friday studio because its clock is external to the course.'
+    schedule_note: leakage audit, URC abstract gate
+    additions_markdown: "### The required leakage audit\n\nBefore you finalize what you will claim, submit your verified draft to the\n**Prediction & Leakage Auditor**. This is the course's required AI reviewer role\nfor this milestone; its full briefing is in\n`genai_studio/roles/prediction_leakage_auditor.md`. What it looks for depends on\nyour route.\n\n- **If your route predicts**, it hunts **data leakage**: a feature whose value is\n  only settled at or after the outcome it is supposed to predict. Settle each\n  flag with two checks inside your own pipeline. The **timing check** asks\n  whether the feature's value is known before the prediction moment. The\n  **correlation check** asks whether the feature tracks the outcome so tightly\n  that it is nearly a copy of the answer. A feature that fails the timing check\n  gets dropped or re-timed, however much it helps your score.\n- **On every other route**, it audits your language instead. It hunts any\n  sentence that quietly extends your result to units, times, or populations your\n  design never reached. Bound or cut every sentence it flags.\n\nFor each flag, write your fix or your refutation, and settle it with a check in\nyour own pipeline. The auditor can miss a real leak and invent a false one, so\ntreat its flags as hypotheses to test, never as verdicts.\n\nOne more check on code you delegated: the **known-answer test**. Run a piece of\nyour code on a tiny input whose right answer you already know. For example, feed\nyour group-difference function two three-row groups you can average by hand, and\nconfirm it returns exactly that. Keep the test in the notebook, next to the code\nit verifies.\n\n### Your conference abstract, and its internal gate\n\nThe course also asks for the abstract you would submit to the Undergraduate\nResearch Conference. Write roughly 150 to 250 words on your project as it now\nstands: the question, what you measure, the analysis your pipeline executes, the\nverified result with its uncertainty, and the boundary around the claim.\n\nThis is an **internal gate**. Bring the draft to the Friday studio, which runs as\nan abstract clinic, and clear it with me there before it goes out externally. Its\nclock belongs to the conference rather than to your research schedule, which is\nwhy it lands in this week's work.\n\nThe gate has one rule that does not bend. Your abstract may use only the claims\nyour current verified result licenses. An abstract does not clear if it promises\na causal finding your route does not license, reaches a population your data\nnever touched, or reports as settled a number no stress test has yet touched.\nYour result is verified this week and not yet attacked. The robustness work ahead\ncan narrow it, so word the abstract to survive that without becoming false.\n\n### A notebook that can be rerun\n\nYour pipeline notebook is seeded with `SEED = 464`, and it loads data from the\nsource your M6 governance record documents. Beside your PDF, share the Colab\nnotebook (or hand in the `.ipynb`) with sharing set so the instructor can open\n**and rerun** it. Before you submit, confirm that a run from a fresh runtime,\ntop to bottom, prints the numbers your write-up reports.\n\n### How this is judged\n\nThe Book Milestone rubric governs your PDF. Two course rules sit on top of it.\nAn abstract that has not cleared the gate is unfinished work. A missing AI\nResearch Ledger row scores Craft 0 and the submission is returned to you for\ncompletion before it is graded.\n"
+    extra_artifacts:
+    - name: Shared, rerunnable Colab notebook link (or lastname_m07_first_analysis.ipynb)
+      why: The milestone is graded partly by the instructor reopening the pipeline and rerunning it from a fresh runtime. A live, executable notebook with rerun permissions cannot exist inside a PDF, so the link or the .ipynb must accompany lastname_m07.pdf.
+    instructor_notes:
+    - 'Rubric mismatch in KIND, not only scale: the course brief adds four hard caps (fabricated or unretrievable source, untraceable number, non-reproducing result, missing AI Research Ledger) plus an explicit ''abstract gate'' rubric row. The Book Milestone''s five 0/1/2 rows have no home for the caps or the gate, so if the book rubric alone governs the PDF, those enforcement mechanisms disappear. I preserved only the ledger rule and the gate rule in the additions section; decide whether the caps should be restated somewhere standard, for example the common PDF header.'
+    - The course brief requires TWO independent re-derivations judged against a tolerance declared before the second run. I treated this as book-covered, because the page's 'What you bring' lists 'two independently re-derived numbers' from Lesson 23. If Lesson 23's 'It is your turn' does not actually require the declare-the-tolerance-first step, that step is orphaned and should be added to my section.
+    - 'Filename versus content mismatch: the brief lives at milestone_07_experimental_measurement_protocol.md but its content is ''First Reproducible Analysis''. The Next link also points to milestone_08_declared_analysis_protocol.md while calling it ''M08 Robustness Audit''. Legacy slugs from an earlier numbering; harmless but confusing to anyone browsing the folder.'
+    - 'Chapter numbering is inconsistent in the brief and the book page: both call these Lesson/Chapter 22 and 23, but every URL and companion notebook points at 19-ai-as-programmer / ch19 and 20-ai-as-analytical-assistant / ch20. Worth a sweep before the PDFs are built.'
+    - The auditor briefing is cited as a repository path (genai_studio/roles/prediction_leakage_auditor.md). If that path is not reachable by a student from Brightspace or the public site, replace it with a student-facing link before publishing the PDF.
+    - The brief pins the Friday studio as the moment the abstract gate is cleared in person. I kept that as weekly rhythm ('the Friday studio') with no date, per the no-dates rule, but the real conference submission deadline must be carried by Brightspace, since the PDF cannot name it.
+  M08:
+    classification: additions
+    reason: A student reading only the Book Milestone page would pre-list, run a grid, run a null check, commission an adversarial review and adjudicate, but would not know to freeze three checks as syntax-checked code with predictions at the week's lecture and run nothing until the Friday studio, to commission the course's specific required GenAI Studio reviewer role, to triage flags by damage and verify only the top one in the room while filing the rest on a pending register with the loudest wrong flag named, or to hand over a shareable notebook the instructor can rerun. The book page in fact asks for something different on adjudication (confirm or refute every flag), so the course's in-class procedure has to be stated.
+    schedule_note: in-class freeze, studio flag adjudication
+    additions_markdown: '### Freeze your three checks at the week''s lecture
+
+
+      1. Your pre-list is exactly three checks, and each one names the reviewer attack it answers.
+
+      2. At the transfer block that closes the week''s lecture, put each check into the studio workbook as the exact code you will run, in quotes.
+
+      3. The workbook parses that code for syntax and runs nothing else. What leaves the room is a commitment, not a result.
+
+      4. Run none of the three before the Friday studio. A check that occurs to you once numbers are on screen is still worth running: label it exploratory and keep it off the frozen list.
+
+
+      ### Run and adjudicate at the Friday studio
+
+
+      You execute the frozen audit at the studio, working with your AI assistant.
+
+
+      1. The adversarial review has a named reviewer here: the **Robustness & Sensitivity Reviewer** (briefing: `genai_studio/roles/robustness_sensitivity_reviewer.md`).
+
+      2. One studio does not hold enough minutes for a check per flag, so you triage. Rank the flags by how much damage each would do to your claim if it were true.
+
+      3. Verify the most damaging flag in the room. Record four fields: the flag as raised, the check you ran, the output it produced, and your verdict of confirmed or refuted.
+
+      4. Put every remaining flag on a **pending register**: the flag, its damage rating, the check that would settle it, and when you will run it. Pending is an honest state here, and it is graded as one.
+
+      5. Where one of your checks refuted a flag, name the **loudest wrong flag**: the objection the reviewer stated most confidently that your data did not support.
+
+      6. Walk the room through what survived, defend the flag you verified there, and hand over your register. Submit the same day.
+
+
+      ### Hand over a notebook that reruns
+
+
+      Your audit runs in a Colab notebook. Set sharing so the instructor can open **and rerun** it, and paste that link inside your PDF. Every check you report has to run from that notebook, so restart it and confirm the audit reproduces before you submit.
+
+
+      ### How this part is judged
+
+
+      These course pieces are read inside the Book Milestone rubric. Graders look for a scaffold frozen at the lecture, the top flag settled by a check whose output you show, a complete register for the rest, and a notebook that reruns.
+
+      '
+    extra_artifacts:
+    - name: Shared, rerunnable Colab notebook link (the audit notebook)
+      why: The brief requires the instructor to open AND rerun the audit so every reported check reproduces. A PDF cannot execute code, so the live notebook has to be shared alongside it; the link is pasted into the PDF but the runnable object itself is separate.
+    instructor_notes:
+    - 'Rubric difference in KIND, not only scale: the course brief adds hard caps that force a row to Beginning (fabricated or unretrievable source; a post-hoc check reported as pre-listed or a run-but-unreported check; a specification spread presented as an uncertainty interval or a span stitched across panels; a negative control collapsed into a pile of null draws) plus a Craft-0 return for a missing AI Research Ledger. The book page''s five-row, ten-point rubric has no caps at all. Decide explicitly which instrument governs the PDF, because the caps are the teeth of this particular milestone.'
+    - 'Direct conflict between the two documents on adjudication. The Book Milestone page, practice step 4, says to confirm or refute EVERY flag with a data check. The course brief triages: verify only the most damaging flag in the room and file the rest on a pending register. My section follows the brief, but the book page should be reconciled or a reader will see two rules.'
+    - 'The brief''s submission table names ''lastname_m08_audit.ipynb'' with an optional ''lastname_m08_audit.pdf'' companion, and calls the notebook the graded artifact. Under the one-file rule this inverts: ''lastname_m08.pdf'' is graded and the notebook is the shared rerunnable link. Confirm you still accept an uploaded .ipynb as an alternative to a share link, since the brief allowed either.'
+    - The freeze step assumes the Studio 8 workbook contains a cell that parses submitted code for syntax and executes nothing. Confirm that cell exists in the current workbook, otherwise the 'Frozen scaffold' Definition-of-Done row cannot be satisfied as written.
+    - The brief justifies the freeze-then-run split by October break shortening the week to one lecture plus the studio. I dropped that justification because dates and month names are banned, and kept the two-step rhythm on its own merit. If the break moves or disappears in a later year, the freeze procedure still reads correctly.
+    - The brief requires the pre-list to contain exactly three checks and to pair each with its reviewer attack. Neither the count nor the pairing appears on the Book Milestone page, so I carried both into the additions section. If you would rather the count float, say 'at least three' in the brief and I can soften the section.
+    - 'No external gate at M8: the URC abstract gate appears only in the link back to M7, and nothing in this brief depends on a deadline outside the course.'
+    - 'TRIMMED 2026-08-23 after an adversarial pass found overlap with the book milestone page. Cut: Finding 1, the pre-listing act. The old opener told you to come to the lecture with three checks, which reads as the instruction to pre-list. Book milestone ''The practice'' step 1 already imposes pre-listing before any run. Rewritten whole as a statement of the course''s tighter shape only: the list is exactly three, and each row names its reviewer attack.'
+  M09:
+    classification: additions
+    reason: The Book Milestone page asks only for the bounded claim, the claim-to-evidence table, uncertainty and limitations, and the AI disclosure, all written alone. The course additionally requires an in-class peer red-team of the note (reading and being read by another researcher), a trace-or-cut drill on every claim, a random-row spot-check, and same-day submission at the Friday studio, with "red-team feedback incorporated" graded; a student working from the book page alone would not do any of that.
+    schedule_note: peer red-team, trace-or-cut drill
+    additions_markdown: "### Finish this one at the Friday studio\n\nYou develop the note across the week and finish it at the Friday studio. Bring a\ncomplete draft of the note and the claim-to-evidence table with you. A partial\ndraft cannot be red-teamed, so arrive with real sentences, not an outline.\n\n1. **Trade notes with a peer.** Your peer reads your note the way a stranger\n   would, with no explanation from you. You read theirs the same way. Note every\n   place a reader stumbled or asked \"how do you know that?\".\n2. **Revise, then submit the same day.** Fold in what the red-team found, then\n   submit before the studio closes.\n\n### Two course specifics for the note\n\n- **Your numbers are not new this week.** Every figure in the note walks back to\n  a cell in the seeded analysis notebook you submitted for M7 (`SEED = 464`) and\n  to the checks you adjudicated in your M8 audit. You are writing the sentences\n  your existing evidence licenses.\n- **Keep the note to one or two pages**, written for a reader who has only that\n  page in front of them.\n\n### How this part is judged\n\nA note that ignores what the red-team found loses craft points. A headline number\nthat does not rerun from the notebook it traces to drops verification to the\nlowest band.\n"
+    instructor_notes:
+    - 'Rubric difference in KIND, not only scale: the course brief adds four hard caps the book rubric has no analogue for (fabricated or unretrievable source, untraceable number, non-reproducing headline number, missing AI Research Ledger scored 0 and returned), plus a late penalty and the 7-day revision policy. I deliberately kept only the three caps that bear on the course additions out of the section body''s judging note; confirm the standard PDF header or a course policy page carries the caps, the late penalty, and the revision rule, or they will not appear anywhere in the student-facing PDF.'
+    - The old brief split the submission into lastname_m09_note.pdf plus lastname_m09_claims.pdf, and allowed a shared Colab notebook link in place of the note. Both now become sections of the single lastname_m09.pdf, so the notebook-link route disappears. If you want to keep allowing a live notebook for the note, that needs a policy decision; I did not invent one.
+    - The brief requires the peer red-team but never says how pairs are formed, whether the reader is graded on the quality of the red-team, or what a researcher does if no peer is present that day. It is also silent on how the drill runs for the one permitted group project (do group members red-team each other, or must the group swap with another project?). Worth settling before the studio.
+    - The brief pins studio work to a specific dated Friday in the Definition of Done. The date is dropped from the PDF per the no-dates rule; Brightspace carries it.
+    - The book page's blocking gate (no work proceeds past a not-authorized permission determination) duplicates the brief's Definition of Done row on permission status, so I left it entirely to the book page.
+    - 'TRIMMED 2026-08-23 after an adversarial pass found overlap with the book milestone page. Cut: Step 2, the trace-or-cut drill on every claim (''Take each sentence of your note and find its row in your claim-to-evidence table. A claim with no row is either traced back to a real output or cut. Do this before you submit.''). The book milestone page imposes this twice: practice step 2 (''Build the claim-to-evidence table: every claim, the output that supports it, and the check that verified it'') and the four-rails section (''A claim with no row in the table does not appear in the draft''). The workbook''s faded task also drills it on a worked example. | The instruction to check every claim against the claim-to-evidence table, which was the substance of that step. Book milestone practice step 2 already requires it. | Step 3, the random-row spot-check (''Pick a row at random, reopen the output it names, and read the number again. Confirm it still matches what your note says.''). The book''s own companion workbook for this milestone ends with a ''Check yourself'' cell that says exactly this: pick one row at random, reopen its traced output, read the number again. | The sentence in the judging note reading ''A claim that appears in your note with no row in the table drops evidence integrity to the lowest band, because it was supposed to be traced or cut.'' Its requirement is the book page''s rail, and its closing clause restated the drill a third time. The course''s no-row penalty band therefore now lives only in the brief''s rubric and penalty list, not in the student PDF. If you want that specific cap visible to the student, the standard PDF header is the place for it, alongside the late penalty and the seven-day revision rule. | The numbered list shrank from four steps to two, so the surrounding lead-in was rewritten to introduce a pair of studio moves rather than a four-step procedure.'
+  M10:
+    classification: additions
+    reason: The book page leaves the venue open and makes the poster, the spoken spine, and the gallery-walk audit conditional, while the course fixes the venue as the research expo poster plus a live oral defense and requires all of those pieces. The course also adds a required AI reviewer role (Poster Critic) with adjudication, a strict "nothing new beyond the M9 note" traceability rule, five rehearsal questions instead of three, and an in-class artifact criticism gallery in which you critique other people's artifacts.
+    schedule_note: poster draft, spoken spine, criticism gallery
+    additions_markdown: "### Your venue is already decided\n\nThe book page lets you choose a format. This course chooses it for you: a\nprinted poster at the undergraduate research expo, presented with live\nquestions while you stand beside it. So the conditional pieces on the book\npage are all required for you. Work the poster lesson, the poster criticism\nlesson, the pitches lesson, and the difficult questions lesson.\n\nBuild both branches, and make them carry the same claim.\n\n1. **The poster draft.** Built to your venue contract, and labeled\n   **preliminary** where a viewer can see it. This milestone is not the lock.\n   The printed poster locks later, at M13.\n2. **The spoken spine.** A 30-second hook and a 3-minute walk, both built\n   boundary first, timed and tested aloud on someone outside your field.\n\n### Four things the course adds to the book's practice\n\n1. **Nothing on the poster may be new.** Every number, figure, and citation on\n   the board also appears in your M9 bounded note. Each one walks back through\n   your claim-to-evidence table to the cell that produced it. If the layout\n   leaves a gap, let the space stay empty.\n2. **Run the gallery-walk audit on your own draft** across five lenses: claim\n   boundary, figure honesty, read path, uncertainty, and accessibility. Rank\n   every hit by how far the error travels. Revise once in that order. Record\n   what you fixed and what you deliberately left.\n3. **Run the Poster Critic**, the required AI reviewer role for this milestone\n   (briefing in `genai_studio/roles/poster_critic.md`). Give it your text plus\n   a description or export of each figure. Then adjudicate: settle every\n   untraceable-number flag and claim-boundary flag with a check in your own\n   material. Record at least one flag you refuted, and name the check that\n   refuted it. A flag with no check behind it changes nothing.\n4. **Rehearse five hard questions, not three.** Write the five hardest fair\n   questions a visitor could ask you. Answer each in two sentences, and mark it\n   defend, concede, or do-not-know. Add your uncertainty and limitations\n   statement in ULN form: uncertainty, then limitation, then next step. Every\n   do-not-know becomes your written agenda for M13.\n\n### At the Friday studio\n\nYour draft goes through an **artifact criticism gallery**. You read your\nclassmates' artifacts the way the expo audience will, from the distance that\naudience will use, and they read yours. Then you rehearse your defense against\ntheir hardest questions, revise once, update your ledger, and submit before the\nstudio closes.\n\n### How it is judged\n\nThe book page's rubric governs your file. Two failures here are not recoverable\nby strength elsewhere. The first is a number shown on the board with no path\nback to your data, or an element the M9 note does not contain. The second is a\nclaim that grew under compression, so the board or the spine says more than the\nnote earned. A shorter sentence is not a bigger finding.\n"
+    instructor_notes:
+    - The old brief split the submission into three files (contract, artifact, defense). Those collapse cleanly into sections of lastname_m10.pdf; the poster draft is a preliminary draft, not a print file, so nothing needs to leave the PDF at this milestone. The print-spec file belongs to M13.
+    - 'Rubric difference in kind, not only scale: the course brief carries hard caps and penalties the book rubric does not (untraceable number or an element absent from the M9 note caps evidence at the lowest band; a claim larger than the M9 note''s caps alignment; Poster Critic not run caps verification; late penalty of 10 points per day up to three days; revision within 7 days recovers up to half the lost points). I stated the two substantive caps in plain language and left the point mechanics out. Decide whether the standard PDF header should carry the late and revision policy once for every milestone.'
+    - The book page's practice step 6 asks for three hardest questions, while its own 'What you bring' list from Lesson 35 asks for five. The course requires five. Worth reconciling the book page so the two lists agree.
+    - The book page's blocking gate (no work proceeds past a not-authorized permission determination) matches the brief's 'Permission status' line, so I did not repeat it.
+    - The brief's 'About the Research Project' block (individual default, at most one approved group, shared versus individual rubric rows, peer evaluation) is boilerplate repeated on every milestone. I left it out on the assumption the standard header or the Final Project grading page carries it. If it does not, it needs a home.
+    - genai_studio/roles/poster_critic.md is referenced as a repository path. Confirm students can actually reach that briefing from a public page, or replace the pointer with a Brightspace link before this PDF ships.
+  M11:
+    classification: additions
+    reason: The Book Milestone page lets the researcher choose any venue format and asks for a venue contract, adaptation, content map, and rehearsal record; the course instead requires one specific artifact, a first full poster draft on the course template at conference print spec, plus a per-number traceability sweep, a reach check, a GenAI Studio Poster Critic run, and delivery at the start of Wednesday's class so the in-class peer review round can read it. A student working only from the book page would build the wrong artifact and miss the review gate.
+    schedule_note: poster draft + traceability sweep
+    additions_markdown: "### Your format for this version is a poster\n\nThe book lets you pick a venue format. Here the course picks it for you: this\nversion of the artifact is your **first full poster draft** for the research\nconference. Build it on the course poster template, sized to the conference\nprint spec.\n\nEvery block must be on the board, even where it is still rough: title and\nauthor, the question, the design and data, the result with its uncertainty, the\nboundary, and the AI-use disclosure. Rough is fine. Missing is not, because a\nreader cannot find the defect in a block you never drew.\n\nTwo rules are checked on the board itself:\n\n1. Every number traces to the cell that produced it.\n2. The uncertainty sits in the same eye-span as the claim it qualifies.\n\n### What to do\n\n1. **Storyboard on paper first.** Sketch the six blocks in the order a\n   visitor's eye travels them, and place the headline in a position you can\n   name and defend. A board laid out inside the software takes the shape the\n   software offers.\n2. **Build the draft on the template**, at the print spec, then check it once\n   at print scale rather than screen scale. Text that reads well on a laptop is\n   often unreadable from two metres, and that is where your reader stands.\n3. **Run the traceability sweep.** List every number printed on the board with\n   the notebook and the cell that produced it. Copy each one from the run, not\n   from your earlier prose, which was rounded. Anything you cannot locate in a\n   minute goes on the list marked *blocking*.\n4. **Run the reach check.** Paste your headline sentence and its interval, and\n   ask AI for every word that reaches further than the interval licenses, with\n   no rewriting. Then confirm or dismiss each flag against your own\n   claim-evidence table.\n5. **Run the Poster Critic** in GenAI Studio on the draft. Do not ask whether\n   it looks good. Ask what a visitor would conclude from the board alone,\n   without being told your claim. Record that reading; a reading is something\n   you can act on, a compliment is not.\n6. **Hand it in at the start of Wednesday's class**, and bring a printed or\n   screen-shareable copy with you. The structured peer review runs in that same\n   session, and the review round reads the board, not the file listing.\n\nSteps 4 and 5 each get their own ledger row, with the verification method\nnamed.\n\n### What goes where\n\nYour poster draft uploads as its own file, at full print size, because it\ncannot be judged at spec inside a letter-size page. Everything else goes in\n`lastname_m11.pdf`: the storyboard sketch, the traceability sweep, and this\nmilestone's ledger rows.\n\n### How it is judged\n\nBeyond the book milestone's own rubric, your draft is read for four things:\nwhether the six blocks deliver question, result, and bound in a ninety-second\nread; whether every printed number is traced or openly named as blocking;\nwhether the uncertainty and the boundary sentence sit on the reading path; and\nwhether the board arrives complete enough, and early enough, for every reader\nfrom another active project to give you an actionable finding. A draft that\nmisses the review round has nothing to revise from before the lock.\n"
+    extra_artifacts:
+    - name: lastname_m11_poster.pdf (poster draft at print spec)
+      why: The draft must be built on the course template at full conference print dimensions and judged for legibility at print scale, so it cannot be folded into the letter-size lastname_m11.pdf. The traceability sweep and the ledger rows, which used to be separate PDFs, do fold in.
+    instructor_notes:
+    - 'Deadline is different in KIND, not just in date: M11 is due at the START of Wednesday''s class, not at midnight, because the M12 structured peer review runs in that session. The standard PDF header must carry the at-class wording, or the review round breaks.'
+    - 'Rubric differs in kind, not only in scale: the course brief scores Reading architecture (25), Traceability (25), Uncertainty placement (20), Craft/ledger/disclosure (20), and Readiness for review (10), none of which the book page''s five 0-1-2 rows assess. Decide whether the PDF prints the book rubric, the course rubric, or both; I wrote a short prose ''how it is judged'' note instead of asserting a competing point scale.'
+    - The brief's 'Book Anchor - It Is Your Turn' section contains NO chapter list (the bullets are missing between the intro line and the closing paragraph). Fill it before publishing, or the anchored chapters are unnamed for this milestone.
+    - The brief tells the student to build on 'the course template' sized to 'the URC print spec', but no poster template exists in the repo yet (a known D50 open item, needed by the Wednesday of poster-draft week). My section repeats the requirement as written; it is unusable until the template and the print spec sheet are distributed.
+    - The brief allowed the trace and ledger to be submitted 'or the same as notebook sections'. Under the one-file rule I made them sections of lastname_m11.pdf; if you still want them accepted as notebook sections, the header should say so.
+  M12:
+    classification: additions
+    reason: The Book Milestone 10 page's practice builds and rehearses the student's OWN venue artifact, while course M12 requires an independent silent-round review survey of every OTHER active project plus an adjudicated response record on the sheets the student's own project receives. Work on other people's projects, the silent independence rule, and the response record are nowhere in the book page, so a student reading only that page would hand in the wrong artifact.
+    schedule_note: review every other project + response record
+    additions_markdown: "This is the one milestone whose artifact is about **someone else's research**.\nThe Book Milestone page below teaches how to build and defend your own artifact.\nThe course asks you to turn that same criticism outward, on every other live\nproject, and then to adjudicate the criticism your own project receives. Both\nparts go in your one PDF, as two clearly labelled sections.\n\n### 1. Review every other active project\n\nYou review **every other active project or poster**, with none skipped. When all\nfive projects are individual, that is four reviews; an approved group lowers the\ncount, and you always review at least two other live projects. This is\nindividual work even if your own project is a group project.\n\nWrite one review survey per project, on the course poster rubric's four\ncriteria: reading architecture, traceability, uncertainty placement, and craft.\nOn every sheet:\n\n1. Name **at least one item that is genuinely sound**, specifically enough that\n   the author knows what to protect while revising.\n2. Give **at least two findings**. A finding names the block it lives in, the\n   defect, and the repair that would fix it.\n3. Answer the **wrong-inference test** explicitly: what did you conclude from\n   this board that the author may not actually have claimed?\n\nA preference names no block, no defect, and no repair, so it cannot be acted on\nor argued with. Your sheets are graded on findings, not preferences.\n\nThe round is silent and independent. You write in Wednesday's class, without\nconferring, and finish the sheets in the Friday studio. Readers who talk first\nproduce one shared check wearing several names. Write first, talk after. If you\nspot a defect you also have on your own board, that is useful to you and it\nchanges nothing about what you write here.\n\n### 2. Adjudicate the reviews your project receives\n\nOn the sheets your own project gets back:\n\n1. Rank every finding **blocking** or **optional**.\n2. Pair every blocking finding with the repair you made or endorsed.\n3. **Reject at least one finding and give your reason.** A record with no\n   rejections has agreed, not adjudicated.\n4. Flag any wrong inference that appears on two independent sheets. Two readers\n   failing the same way, without having spoken, is the strongest signal you get\n   before the Expo.\n5. Carry the repairs into your next poster version, and record the reason for\n   that version.\n\nDo this adjudication on your own first. If you are in an approved group,\ncoordinate the shared repair only after each member has finished their own.\n\n### How it is judged\n\nYour work here earns two separate scores, on two different things.\n\n- The **milestone score** checks the process: everything submitted on time,\n  every other project covered, every received finding dispositioned, repairs\n  carried into the next poster version with the version reason recorded, and\n  the required notebook work, ledger row, and dossier update present.\n- The **Peer Review score** judges the quality of the criticism itself: findings\n  that reach the argument and not only the layout, calibration on every sheet,\n  the wrong-inference test answered everywhere, and a response record that\n  ranks, repairs, rejects with reasons, and flags recurrence.\n\nNeither score evaluates your own poster.\n"
+    instructor_notes:
+    - 'Widest book/course divergence in the chain. Book Milestone 10 is presented TWICE: M11 presents it as the poster draft (version 2) and M12 presents it again for the peer round. M12''s course submission table asks for none of the book page''s own practice products (venue contract, transformation memo, content map, rehearsal record), so the assembled PDF will show a practice list the student is not actually asked to hand in at M12. Consider a one-line bridge in the builder saying which book practice steps M12 collects and which were already discharged at M11.'
+    - 'Two scores of genuinely different KIND, not scale: a 100-point M12 process score inside Milestone Deliverables, and the separate Peer Review component (10% of Final Project, 5 course points) scoring the quality of criticism of OTHER people''s work. The book page''s own 10-point rubric assesses the student''s own artifact and cannot carry either. I compressed both into a short ''How it is judged'' block so the second score is visible to the student; if you want the full Peer Review band table in the PDF, it must be added separately.'
+    - The brief refers to 'the course poster rubric' with four criteria (reading architecture, traceability, uncertainty placement, craft) and to a 'review survey' instrument, but never says where either lives or links them. The standard header or Brightspace must point to the instrument, otherwise the student cannot complete step 1. This connects to the open D50 gap that no poster template or rubric file exists yet.
+    - The brief's two separate PDFs (lastname_m12_reviews.pdf and lastname_m12_response.pdf) are folded into the single lastname_m12.pdf as the two labelled sections above. No content is lost.
+    - The brief's Definition of Done adds 'Recurrence' as a scored row; I carried it into the response-record list and the judging note. The 'no conferring' independence rule is also a Definition of Done row, so I stated it as a requirement rather than as advice.
+    - The book page carries a Studio 4 'not-authorized' blocking gate. It rides along in the book content and is unrelated to the peer round; no course action needed, but be aware the student sees it on this page.
+  M13:
+    classification: additions
+    reason: 'Book Milestone 10 asks the researcher to pick any venue, adapt the artifact, map its content, and rehearse a defense; the course instead fixes the venue as a print-locked poster for an external conference and adds a whole second body of work the page never mentions: a six-part reusable research package, a cold-run record with an honest label, and two blocking pass-or-stop gates that must clear before the file goes to press. A student working only from the book page would hand in an unlocked, unreproduced artifact and miss both gates.'
+    schedule_note: package, cold run, gates, poster lock
+    additions_markdown: '### Your venue is fixed, and the lock is terminal
+
+
+      The Book Milestone lets you choose a venue. Here the venue is chosen for you: a printed poster for the Purdue Undergraduate Research Expo. Write your venue contract against the URC print spec handed out in class, which sets dimensions, minimum font sizes at print scale, and the required identifying elements. The poster must be legible at printed size, not only on your screen.
+
+
+      This lock is terminal. There is no revision window, because your file goes straight to a shared print run. The poster you submit is the poster strangers read at the Expo. Late work loses 10 points per day for up to three days and is not accepted after that.
+
+
+      ### Reproduce before you publish
+
+
+      One rule governs the whole week. The numbers that lock onto the poster are the numbers that just reproduced from your clean package. So the package comes first and the poster comes last. Reproduce the uncertainty too: if an interval or bound does not come back, the result has not reproduced, however well the headline number matched. You assemble, run, and clear all of this in the Friday studio.
+
+
+      1. **Assemble your reusable research package.** It has six parts: the seeded notebook (`SEED = 464`, running top to bottom with no manual step); the data or a written access recipe (source, exact URL or archive record, retrieval date, any registration); the environment record of package versions; the README saying what the project asks, what it found, how to run everything, in what order, and where each output lands; the licence with its reuse boundary; and the dated, frozen manifest.
+
+      2. **Run it cold and write the record.** A clean environment is a fresh session with nothing left over from your work. Follow only your README. Record the environment and date, a question log of every place the run stalled, and the documentation line you added for each question. Then label it honestly. Working alone, the label is "solo proxy; external cold run pending". Never soften that into an external run.
+
+      3. **Clear Gate 1, your author self-reproduction log.** Restart the runtime, run everything, and list each poster number and each bound beside the value the rerun produced. Mark every pair matched or not matched, and repair each mismatch before you lock.
+
+      4. **Clear Gate 2, your release preflight.** This is a short table taken just before the lock, with four rows marked clear, pending, or blocking: permissions, disclosure, reproducibility, and claim boundary.
+
+      5. **Lock the poster on those numbers.** Four things are judged on the board itself: one headline claim inside your compass position; every number traceable to a cell in the package you just reran; the uncertainty visible in the same eye-span as the claim; and redundant encoding, so a color-blind or screen-reader reader gets the message too.
+
+      6. **Sign off and disclose.** Ship a signed final-lock checklist attesting to traceability, verified citations, uncertainty placement, both gates, and print spec. Put an AI-use disclosure block on or with the poster: which tool did which task, and how you checked it. "No AI used" is fine when true.
+
+
+      Both gates are blocking. They are not scored, and strong work elsewhere cannot average them away. A submission missing a gate record, or carrying a row still marked blocking, is returned rather than graded.
+
+
+      ### Two more book sections
+
+
+      Complete the "It is your turn" sections of ch. 36 (Replication and Reproduction) and ch. 37 (Open and Reusable Research Packages) in their companion notebooks, and include them.
+
+
+      ### What you hand in
+
+
+      Your single PDF carries the cold-run record, both gate records, the signed final-lock checklist, your AI Research Ledger rows, and your dossier line. Two things travel beside it: the print-ready poster file and the package itself, as a zip or a shared link set so the instructor can open it. Also send the poster through the URC channel as instructed in class; the Brightspace timestamp is what governs the deadline.
+
+
+      If you are in an approved group, the package and the poster are one shared submission naming every member. Your ledger rows, your checklist sign-off, and your dossier contribution stay individual.
+
+
+      ### How it is judged
+
+
+      Beyond the Book Milestone rubric, four failures cap a whole criterion no matter how strong the rest is: a fabricated or unretrievable source, a number on the board with no cell behind it, a poster number or bound that does not rerun from your package, and an author rerun presented as independent reproduction. A missing AI Research Ledger returns your submission before it is graded.
+
+      '
+    extra_artifacts:
+    - name: lastname_m13_poster.pdf
+      why: The print-ready poster at URC print spec. It goes straight to the press on a run shared with QM 47400, so it must ship as its own file at print dimensions and cannot be a section inside another PDF.
+    - name: lastname_m13_package.zip (or a shared folder or repository link)
+      why: 'The reusable research package must actually run in a clean session: seeded notebook, data or access recipe, environment record, README, licence, and dated manifest. A runnable bundle cannot live inside a PDF.'
+    instructor_notes:
+    - Rubric differs in KIND, not only in scale, so it is flagged here rather than used to classify. The book page scores 5 rows at 0/1/2 for 10 points. The course brief carries a 100-point M13 process score inside Milestone Deliverables PLUS a separate 100-point Final Project poster-quality rubric (0.70 of the Poster Presentation component, with M15 supplying the other 0.30), two blocking gates that are explicitly unscored, and four hard caps. Decide which rubric the merged PDF prints; my additions section states only the caps and the gates, not the point tables.
+    - The book anchor points at ch. 36 and ch. 37 (Replication and Reproduction; Open and Reusable Research Packages), but Book Milestone 10's own 'What you bring' collects lessons 32 to 35. Reproducibility and packaging are Book Milestone 11 territory ('Milestone 11 lets strangers rerun what you have just defended'). M13 is therefore effectively presenting Book Milestone 10 version 3 AND folding Book Milestone 11's core work into the same submission. Worth checking against the D50 one-to-one mapping and against what M14 and M16/M17 then carry.
+    - The brief names four submission files (package, coldrun, gates, poster). Under the one-PDF rule the cold-run record and the two gate records become sections of lastname_m13.pdf, leaving the poster file and the package outside. This changes the filenames the Definition of Done table lists, so that table needs updating if the brief survives anywhere.
+    - I wrote 'Purdue Undergraduate Research Expo' and dropped 'Fall' from the event's proper name, because 'Fall' is a semester label and the PDF is reused each year. Confirm that reads acceptably, or add the full event name via the dated Brightspace header instead.
+    - 'Two brief statements sit in tension and I reproduced both as written rather than resolving them: the artifact is ''terminal, no revision window'' yet a late penalty ladder of minus 10 per day up to three days still applies. The brief itself explains this as late submission risking the print timeline, so the ladder is real, but a reader may find it confusing.'
+    - The URC submission channel is specified only as 'as instructed in class', so my section repeats that phrasing. If a concrete channel exists, it belongs on the dated Brightspace header, not in this reusable section.
+    - The brief's 'Purpose' prose contains a good deal of teaching (what reproduction is, why a cold run works, the judge-points-at-a-number scene) that the book page does not carry. I deliberately compressed it to the operative rules to honor the length limit. If Davi wants the pedagogy kept, the natural home is nb15/nb16 or the chapters, not this supplement.
+  M14:
+    classification: additions
+    reason: 'The Book Milestone page lets you pick any venue and build one artifact to a venue contract, while the course fixes the venue to the already locked Expo poster and requires a wholly different set of products: an audience-analysis paragraph, three word-capped timed pitches with counts shown, a poster-integration outline, a typed question-and-discussion strategy, and a public invitation post copied from the official programme. The public post is also an outward, Expo-directed act the book page explicitly excludes ("This is not yet public release"), so a student reading only the book page would hand in the wrong artifact.'
+    schedule_note: three timed pitches, public invitation
+    additions_markdown: '### The venue is already chosen for you
+
+
+      The book page asks you to choose a format and write a venue contract. Here the venue is fixed: the poster session at the undergraduate research expo. Your poster print file is already locked, so nothing on the board changes now. Write your venue contract for the spoken edition of the same research: who stops, how long they stay, and what you can show them.
+
+
+      ### What to prepare
+
+
+      1. **Audience analysis, one paragraph.** Say who stops at an undergraduate research expo, what they already believe about your question, and what they will do with your answer. Write this first, because the pitches are addressed to these people.
+
+      2. **Three timed pitches, counted rather than estimated.** Write a thirty second version (at most 75 words), a ninety second version (at most 200 words), and a two minute version (at most 300 words). Show the word count on each one. Each length has its own job: earn the next ninety seconds, then deliver the finding with its bound, then add the choice you would defend.
+
+      3. **The same boundary sentence at all three lengths.** Your boundary sentence is the one line saying where your evidence stops. It appears in all three pitches, in the same words. Compression drops blocks, never bounds: no verb, quantifier, or scope word gets stronger in a shorter version than in a longer one.
+
+      4. **A poster integration outline.** For each length, name the block your hand points at, and when. A pitch that never touches the board leaves the board doing nothing.
+
+      5. **A question and discussion strategy.** Give three questions you expect, each derived from your own design, each with a one sentence answer, and each marked as a bound request or an attack. Give at least three questions you will ask the visitor, so the exchange becomes a conversation. Give one prepared "my design cannot settle that", with the smaller true claim you offer instead.
+
+      6. **One public invitation post.** Post publicly and professionally, inviting your network to your session. Carry the poster title, your name, and the date, time, and location exactly as the official programme prints them. Copy those details; never write them from memory. Put a screenshot of the posted invitation inside your PDF.
+
+      7. **Rehearse all three pitches aloud before you submit.** The word ceilings stand in for a clock, and the clock is set by your visitor rather than by you.
+
+
+      ### How the added parts are judged
+
+
+      Bound discipline under compression carries the most weight: the boundary sentence has to survive the shortest version intact. Each pitch has to sit inside its ceiling with a real count, and each has to do its own job rather than truncate the next. Your predicted questions have to come from your design, and your prepared concession has to be true. Every programme detail in the invitation has to match the official entry exactly.
+
+      '
+    instructor_notes:
+    - 'Direct conflict to resolve: the Book Milestone page states its product is "not yet public release", but course M14 requires a public invitation post. The added section instructs the post regardless; consider a one-line reconciliation in the book page or accept the course override.'
+    - The book page's practice steps 1 to 6 (venue contract, transformation memo, content map, build the artifact, test it in its mode) assume the artifact is still being built. In this course the poster locked at M13, so steps 3 and 4 are already satisfied by the locked board. My section says the board does not change and redirects the venue contract to the spoken edition; please confirm that is the intent, and decide whether you still want the transformation memo and content map from the book page as written.
+    - 'The course brief''s "Book Anchor" section has an EMPTY chapter list: the lead-in sentence promises "the chapters below" and no chapters follow. The book page''s "What you bring" names Lessons 32 to 35, so the anchor list can be filled from there or the empty section dropped.'
+    - 'Rubric differs in kind, not only in scale: the course rubric scores compression discipline, three distinct pitch architectures, question strategy, and the invitation. The book page''s five generic rows (artifact exists, versioned with a reason, judgments defended, four rails, milestone product) do not target spoken performance or the public post. If the book rubric alone governs the PDF, nothing scores the word ceilings or the invitation accuracy; you may want an M14-specific note in the book page''s row 5 or a course-side scoring line.'
+    - 'The old three-file submission collapses cleanly: the invitation screenshot and the ledger rows become sections inside lastname_m14.pdf. No content is lost.'
+    - The book page carries the Studio 4 blocking gate (no work proceeds past a not-authorized determination). That gate is on the book page and needs no course restatement.
+    - The brief's "Three Traps" (estimated word count, the generous yes, the remembered room number) were not carried over as prose to keep the supplement short. Their substance is enforced in items 2, 5, and 6.
+  M15:
+    classification: additions
+    reason: 'Book Milestone 10 asks you to build a venue contract, an artifact, a content map, and a private defense rehearsal, and states explicitly that it "is not yet public release." Course M15 is almost entirely outside that: a required live Expo presentation that is separately graded and terminal, structured evaluation of at least three OTHER students'' posters, a coded tally of real audience questions, a defense revision record, a three-entry criticism portfolio, and a post-release note. A student reading only the book page would hand in a rehearsal record, not a post-conference reflection.'
+    schedule_note: Expo presentation, audience coding, peer critiques
+    additions_markdown: "### At the conference\n\nThe Expo is required, and it is the live half of this milestone. Two things\nhappen in the room, and both are graded.\n\n1. **Present your poster and speak a bounded claim.** Say out loud what your\n   evidence shows and, in the same breath, the boundary it does not cross:\n   which kind of question, which reach. Answer visitors from your poster, your\n   notebook, or your ledger, never from memory alone.\n2. **Capture every question as it happens.** After each visitor leaves, write\n   one line on a coding sheet: the gist of the question plus a one-word tag.\n   Star anything you hear more than once. Do not rebuild this list afterward\n   from memory; a partial recall can quietly flip which pattern looks heaviest.\n3. **Evaluate at least three other posters.** Take your notes at each poster\n   itself: the presenter's central claim, the evidence shown for it, and the\n   one place the two do not line up. These public evaluations are not the\n   confidential Peer Evaluation component of your Final Project.\n\n### The written reflection package\n\nWork this after the conference, across the two asynchronous reflection\nsessions, with your AI assistant. All of it goes inside your one submission\nfile, typically two to four pages.\n\n1. **A coded question tally.** A real table, one row per question, with three\n   codes: **type** (method, alternative-explanation, so-what, generalization,\n   AI-use, or other), **target** (claims or communication, tagged where the\n   *fix* lives rather than where the sting lives), and **recurrence** (how many\n   times you heard a version of it).\n2. **The pattern.** One or two sentences read straight off the counts: which\n   type carried the most recurrence-weighted questions, and whether the heavier\n   target was claims or communication. Cite the rows behind it. Then name the\n   single claims question that recurred enough to count as a finding.\n3. **An honest reflection paragraph.** What the public test changed in how you\n   see your question, your evidence, or your boundary, stated with its\n   uncertainty and its limits. \"Warm room, but nobody probed my weakest claim,\n   so I still do not know if it holds\" is a strong answer, not a weak one.\n4. **A defense revision record.** This is the spine of the milestone. Give\n   every place the questioning exposed something its own row with three cells:\n   what it exposed (naming the tally rows behind it), the revision written out\n   in the exact words you will use, and the reason the evidence licenses that\n   much and no more. Say for each row whether the **claim**, the **boundary**,\n   or the **defense** moved. \"Nothing changed\" is a legal entry only if you\n   name the hardest question you got and quote the boundary your artifact\n   already carried.\n5. **A poster-criticism portfolio.** Three entries on the posters you\n   evaluated. Each names its axis (claims or communication), points at\n   something really on that poster, and stays kind but critical: you attack the\n   claim, never the person.\n6. **A post-release note.** Half a page answering three questions honestly. Did\n   anything move between your release audit and the conference? Which audit\n   rows did the public test press on? Does the release decision still stand? If\n   something surfaced that would have made you withhold, write the repair that\n   now blocks the next release.\n7. **A self-reflection check.** Two lines, measured against your counts rather\n   than the mood of the room: one thing your presentation did well, one thing\n   you would do differently. Write these yourself. No tool can name a weakness\n   in your own work honestly for you.\n\nAlso include, inside the same file, proof that you presented and a record of\nyour three poster reviews. A photograph or a small table is fine.\n\n### How it is judged\n\nTwo separate scores come out of this milestone.\n\n- The **live presentation** feeds your Final Project poster item, which is 70\n  percent your locked poster quality and 30 percent this live performance. It\n  happens in the room, it is terminal, and it has no revision window. Missing\n  the conference without an approved emergency arrangement scores that live\n  part 0.\n- The **written package** is the milestone score. It is eligible for revision\n  under the standing policy: a revised submission within seven days of feedback\n  recovers up to half the lost points. A late written package loses 10 points\n  per day for up to three days.\n\nTwo rules bite hard. Document fewer than three poster reviews and your craft\nscore cannot rise above Developing. Log a question you were not actually asked,\nor attribute a flaw a poster does not carry, and your evidence-integrity score\ndrops to Beginning regardless of everything else.\n"
+    instructor_notes:
+    - 'BROKEN ANTECEDENT (verified across briefs): M15''s post-release note requires you to compare against a ''release audit'' that no earlier brief creates. M15 Purpose says ''Your release audit closed at M17, four days before the Expo'', but M17 is the LAST milestone in the chain, and M17 itself says ''You ran the release audit once already, at M17, before the Expo'' (self-referential). Grep confirms neither milestone_13 nor milestone_14 contains a release audit. This is stale numbering left by the D50 renumber. I wrote the post-release note WITHOUT naming a milestone number so the PDF is not wrong; you need to decide which milestone actually authors the pre-Expo release audit and fix both M15 and M17.'
+    - 'VERSION NUMBER CONFLICT: the M15 brief''s Component 10 says the artifact opens with ''Book Milestone 10, version 2'', and the Definition of Done repeats ''Book Milestone 10, version 2'', but the milestone map for this task records M15 as REVISIT version 4 (the publicly presented edition). Pick one before the PDF ships; I did not restate the version line at all, since the book page''s ''A version, not a pass'' section already governs it.'
+    - 'RUBRIC DIFFERENCE IN KIND, not scale (flagged rather than used for classification): the course adds an entire second 100-point rubric assessing ORAL performance (bounded explanation aloud, traceability under live questioning, concession under pressure, audience responsiveness, professional readiness). The book page''s 10-point rubric assesses a written artifact only and scores nothing spoken. Two different instruments measuring two different things, both attached to one milestone.'
+    - 'FRAMING TENSION: Book Milestone 10 states plainly ''This is not yet public release.'' Course M15 treats the Expo as the release itself (''the Expo was the release''). A student reading the book page first and the course section second will meet a direct contradiction. Consider a one-line reconciliation in the brief, or moving the ''not yet public release'' sentence out of the book page''s summary.'
+    - 'UNDEFINED INSTRUMENT: the Definition of Done requires the three posters be ''evaluated on the structured forms'', and the Craft rubric row requires ''three completed poster reviews attached'', but no form is named, linked, or included anywhere in the brief. I wrote the requirement as structured notes taken at the poster. If a real form exists, link it; if not, drop the phrase ''the structured forms''.'
+    - 'SUBMISSION SIMPLIFIED: the brief''s table offers ''a shared Colab notebook link'' as an alternative to the PDF, and names the file lastname_m15_reflection.pdf. Both are superseded by the single lastname_m15.pdf rule. Everything the brief lists (tally table, portfolio, proof of presentation) fits inside one PDF, so there are no extra artifacts.'
+    - 'NOT TREATED AS ADDITIONS, per the test: the AI Research Ledger (covered by the book page''s AI rail), the ch. 29 ''It is your turn'' section (covered by ''What you bring''), the dossier update line (covered by the workbook), and the permission blocking gate (the book page carries it as a callout).'
+  M16:
+    classification: additions
+    reason: 'The submission folds two Book Milestones into one artifact (Book Milestone 11''s package plus Book Milestone 9 rewritten as version 2), and the course drives that revision from two sources no book page mentions: public criticism gathered at the Expo via the M15 tally, and a peer''s threat-ranked cold-run report. It also adds instruments the book pages never ask for: a numbered inbound list, a dated accept/rebut/bound adjudication record, a five-package-sins audit, a clean run dated after the last edit, and required Friday-studio work with a peer table read.'
+    schedule_note: adjudication record, package repair, clean rerun
+    additions_markdown: '### One submission, two book artifacts
+
+
+      Your PDF carries two artifacts from the book''s ladder. Your reproducible package is Book Milestone 11. Your research note is Book Milestone 9 written again, as version 2. Version 2 answers evidence that did not exist when you first drafted the note: real questions from readers at the Expo, and a stranger''s cold run of your own package. Work both book pages, then add the course sections below.
+
+
+      One book instruction does not apply to you. Book Milestone 11 offers a "solo proxy" label for anyone with no external runner. You have a real peer cold run, so use it.
+
+
+      ### 1. Build the inbound list
+
+
+      Two streams of outside evidence reached your project, and neither came from you. Gather them into one numbered table before you decide anything.
+
+
+      - **Expo criticism.** Pull these rows from your M15 tally and your defense revision record.
+
+      - **Your peer''s cold run.** A classmate opened your package without you in the room and returned a threat-ranked list of what broke and what they had to ask you. Keep their ranking visible.
+
+
+      Tag every row with its source, the item in one sentence, and the part it touches: claim, evidence, writing, or package. A question you were asked five times is one row with its recurrence noted, not five rows. A reader should be able to count your rows, count your verdicts, and get the same number twice.
+
+
+      ### 2. Write the adjudication record
+
+
+      This is the heart of the milestone, and it opens your note. Give every row a dated verdict, and exactly one of three.
+
+
+      1. **Accept.** The criticism was right. Say what changed and where a reader can see it.
+
+      2. **Rebut.** It does not hold. Give the evidence, not the irritation. "The reader misread the table" is the start of a reason, not the whole of one.
+
+      3. **Bound.** It holds in part, so the claim narrows. State the new boundary inside the claim sentence itself, never in a footnote.
+
+
+      Each verdict carries a reason in your own words, one you could defend aloud. Nothing sits undecided, and nothing is answered with silence. A claim that shrank under public testing is the system working, so say plainly that it shrank and what shrank it.
+
+
+      ### 3. Revise the note, then repair the package
+
+
+      Revise the five-move spine wherever an accepted or bounded verdict demands it, and nowhere else. Let the note grow only where public questioning showed a reader needed more, usually to two to four pages. Order findings by how much evidence backs each: strongest first, exploratory last and clearly labeled. An AI tool may be your writing critic, never your ghostwriter. Reject every edit that upgrades a verb or quietly drops an "in this sample".
+
+
+      Then rebuild the package your peer ran. Every place they had to stop and ask you something is a missing line in your documentation, so write those lines now, or log the reason the gap stays. Audit yourself against the five package sins: a hard-coded path, a missing seed, a by-hand edit, an undocumented exclusion, and stale or unversioned data. Name the one sin you found and fixed.
+
+
+      Redraft your AI disclosure from the full ledger rather than from memory. It now covers the poster weeks and the peer exchange as well as this revision.
+
+
+      ### 4. Run it clean a second time
+
+
+      Any change to the package makes the previous run record stale. A number, the data, the code, the environment record, or one line of the instructions a stranger follows: each of those is a change. So after your last edit, run the package once more in a fresh environment, restart-and-run-all, following only your written instructions. Record the date, the environment, and the result. The headline number has to come back, and so does its uncertainty statement. Label the record honestly as an author rerun, and keep your peer''s run beside it as the independent evidence.
+
+
+      ### 5. At the Friday studio
+
+
+      Two things happen at the studio itself, not before it. A peer reads your adjudication table and questions it. Then you perform the second clean run, and you submit at studio close.
+
+
+      ### What you hand in
+
+
+      One PDF, in this order: the inbound list, the adjudication record, the note, the updated claim-evidence table, your AI disclosure, and the clean-run record. The package cannot live inside a PDF, so share it as a link the instructor can open, holding the README, the seeded notebook, your data or its access recipe, the environment record, and the licence and permissions note. Check that it runs top to bottom when opened cold.
+
+
+      ### How it is judged
+
+
+      The book page''s rubric governs the PDF. Three failures cap a rubric row on their own: an inbound item left with no verdict, a headline number that does not rerun from your package, and a run record older than your last edit, which counts as not reproducing. An honest "this part did not reproduce, and here is what broke" never triggers a cap. The cap is for the false pass.
+
+      '
+    extra_artifacts:
+    - name: The repaired reusable package (shared Colab notebook, folder, or repository link)
+      why: 'The package must be openable and runnable top to bottom in a fresh environment: notebook, data or access recipe, environment record, README, and licence. A PDF cannot be executed, so restart-and-run-all cannot be checked inside it.'
+    instructor_notes:
+    - 'Version-number contradiction inside the brief: the Book Milestone bridge header calls the package Book Milestone 11 version 1, but the Purpose section says "the package is Book Milestone 11 at version 2". I followed the bridge header and simply named the package as Book Milestone 11 without a version number, to avoid printing the conflict. Please pick one and fix the brief.'
+    - Reciprocal peer work is unspecified. M15's closing line says M16 is "where you cold-run and red-team a classmate's anonymized package over the break", and CLAUDE.md D50 places the peer cold run in class on the Week-15 Wednesday. The M16 brief itself only describes RECEIVING a peer's report; it never instructs you to produce one, never sets a format for it, and its submission table has no row for it. I did not invent that requirement. If running a classmate's package is graded work for M16, the brief needs a component and a submission row for it.
+    - 'Filename consolidation: the brief lists three files (lastname_m16_note.pdf, lastname_m16_package.ipynb, lastname_m16_coldrun.pdf). Under the one-file rule the note and the cold-run record become sections of lastname_m16.pdf; only the package stays external. The brief''s Definition of Done "Filenames" row will contradict the new header until it is updated.'
+    - 'Rubric difference in kind, not only scale: the brief''s 100-point rubric carries hard caps with no analogue on the book page (fabricated source, undecided item, untraceable number, non-reproducing result, stale run record, and a missing AI Research Ledger entry that scores Craft 0 and returns the submission unread). I summarized only the three caps a student can act on. If the book page''s 10-point rubric is now the governing instrument, decide explicitly whether the returned-submission rule and the other caps still bite.'
+    - Both book pages end with a "Blocking gate" callout about a not-authorized determination at Studio 4. It is boilerplate carried into every milestone page and reads as a non sequitur this late in the chain. Worth checking before it prints in the M16 PDF.
+    - The brief marks M16 revision-eligible (up to half the lost points recovered within 7 days of feedback) and sets late penalties. Neither book page mentions revision or lateness. If the standard PDF header does not carry the revision policy, this milestone loses it.
+  M17:
+    classification: additions
+    reason: Book Milestone 12 asks only for the release audit, dossier manifest, stopping rule, next-study agenda, and the artifacts carried in from Lessons 38 to 40. The course additionally requires a live, in-room Evidence Defense with a fixed three-movement format, scored cross-examination of classmates' defenses, a final in-class dossier checklist run, a submitted runnable notebook, and a terminal no-revision rule, none of which a student could infer from the book page.
+    schedule_note: live Evidence Defense and cross-examination
+    additions_markdown: '### Defend your work out loud
+
+
+      Your **Evidence Defense** is performed live in class and graded in the room. It is never a file you upload.
+
+
+      1. You defend once, in the slot you are assigned. Rounds run in the Wednesday defense blocks of the last two weeks, and the final round runs in the last Friday studio.
+
+      2. A full slot gives you ten minutes to defend plus five minutes of cross-examination. A compressed round keeps the same order and the same proportions, and the defense schedule gives your exact length.
+
+      3. Use three movements, in this order. **Claims** (about three minutes): your headline claim and the exact edge it stops at. **Choices** (about four minutes): why this compass position, this data strategy, this measurement, and the road you did not take. **Verification** (about three minutes): how you checked, what survived, which sources you confirmed real, and how your release audit came out.
+
+      4. Bring your full claim ledger with your three weakest rows already marked, plus your dossier draft and your package, ready to open live if someone probes.
+
+      5. Where your ledger says a claim reaches too far, concede precisely and name the smaller true claim. A well-timed concession is scored as strength.
+
+      6. Three moves are forbidden: inventing a new claim under pressure, taking a concession back by insisting rather than by evidence, and blaming the AI tool.
+
+
+      If a defense falls apart, it converts to a supported walkthrough and you may elect a redo slot later in the sequence. That is not a zero.
+
+
+      ### Cross-examine your classmates
+
+
+      On every day you are not defending, ask the defenders at least one question. Ground it in a ledger row, a decision, or a verification step. Probe hard, stay respectful, and never make it personal. Your questioning is scored, so silence costs you.
+
+
+      ### Close the dossier in the final studio
+
+
+      The last Friday studio runs a final dossier checklist against your draft. Work through it in the room and close every open item, or write the reason it stays open, before you upload. Arrive with the work complete enough to submit at the start of that session rather than at the end.
+
+
+      ### What your submission contains
+
+
+      1. One PDF carries the whole milestone: your final research chapter, then your release audit with its decision, your dossier manifest, and your AI-management portfolio, each as a clearly marked section.
+
+      2. Upload the runnable notebook behind the chapter as well. It must pass restart-and-run-all, and every headline number in the chapter must rerun from it with no manual steps.
+
+      3. The portfolio section is always yours alone, written from your own full-semester ledger, even if your project is shared.
+
+
+      ### If your project is an approved group
+
+
+      Share the chapter and the notebook, and name every member on both. Write your own portfolio and give your own defense. Those two are scored per person, so members can finish with different scores.
+
+
+      ### This milestone is terminal
+
+
+      There is no revision window and no resubmission. The deadline governs the grade, so assemble everything before you upload.
+
+
+      ### How it is judged
+
+
+      The Book Milestone rubric that follows scores the milestone artifact. Separately, your chapter, your portfolio, and your live defense are each scored and then combined into the Instructor/TA Evaluation part of your Final Project grade. Four failures cap their own rubric row at the lowest band, however strong the rest is: a source that does not exist or does not say what you claim, a number or figure with no path back to your data, a headline number that does not rerun, and a release claimed while your run is stale or an audit row is blocking. Withholding honestly, with the repair named, never triggers that last one. A missing AI Research Ledger leaves your portfolio ungraded until you supply it.
+
+      '
+    extra_artifacts:
+    - name: lastname_m17_chapter.ipynb
+      why: The runnable notebook behind the chapter must pass restart-and-run-all and be executed by the grader, so it cannot be folded into the PDF.
+    instructor_notes:
+    - The live Evidence Defense is performed and graded in the room and is never uploaded. The standard submission header should not imply that every graded element of M17 arrives on Brightspace.
+    - 'Rubric difference in KIND, not only scale: the book page scores the milestone artifact on five 0/1/2 rows out of 10, while the course additionally runs a 100-point M17 process score plus three 100-point subrubrics (Final Research Artifact, AI-management portfolio, Evidence Defense) that feed Instructor/TA Evaluation. The defense and the portfolio subrubrics assess things the book rubric does not touch. Decide which of these tables should be printed inside the PDF; my section only names the caps.'
+    - 'Stale cross-reference in the course brief: it says twice that ''You ran the release audit once already, at M17, before the Expo'' (lines 111 and 174), which is self-referential and impossible, since M17 is the terminal milestone. milestone_15_conference_reflection.md line 99 repeats it (''Your release audit closed at M17, four days before the Expo''). These look like leftovers from the D50 renumber and should point at the earlier pre-Expo milestone. I did not carry the claim into the student section.'
+    - Peer Evaluation is a separate Brightspace item collected at the end of the course (project/final_dossier/peer_evaluation_instrument.md), not an M17 deliverable, so I deliberately left it out of the additions section. If you want the terminal PDF to remind students to submit it, tell me and I will add one line.
+    - The brief's Book Anchor lists ch. 38, 39, 40 with companion Colab links, but the URLs and notebook filenames still use the old ch35/ch36/ch37 numbering. Worth checking before the PDF is built.
+    - The brief allows the AI-management portfolio as a separate PDF or a marked section; I wrote it as a marked section inside the single file, per the new one-file rule.
+    - The final dossier checklist itself lives in project/final_dossier/evidence_defense_protocol.md and is run from a printed sheet in the last studio. My section tells the student it happens in class rather than reproducing the checklist, so if you want the PDF to be fully self-contained, the checklist box could be pasted in.

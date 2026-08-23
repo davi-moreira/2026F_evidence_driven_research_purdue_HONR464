@@ -1,0 +1,2 @@
+# PDFs are generated artifacts: never diff or merge them as text.
+*.pdf binary
