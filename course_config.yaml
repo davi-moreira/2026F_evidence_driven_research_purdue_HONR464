@@ -6,10 +6,14 @@
 # milestones M0–M15, Student Research Lead flipped classroom, SDIIVDD AI
 # discipline, GenAI Studio reviewer bench, course book. v1 preserved
 # at git tag v1-compass-build.
-# v6 (2026-08-23, D52): ONE FINAL PROJECT — individual work is the default and
-# instructor-approved group projects are allowed. The former 20% Final Project
-# Milestones category and 30% Final Project category merge into one 50% Final
-# Project with QM474's exact five 30/20/10/20/20 component items.
+# v6 (2026-08-23, D52+D53): ONE FINAL PROJECT — individual work is the default
+# and instructor-approved group projects are allowed. The former 20% Final
+# Project Milestones category and 30% Final Project category merge into one 50%
+# Final Project with QM474's exact five 30/20/10/20/20 component items. D53
+# (same day) adopts QM474's Final Project syllabus prose verbatim except six
+# documented deviations (the table lives in planning/ASSESSMENT_ARCHITECTURE.md)
+# and relocates the operational machinery to
+# _research_project/2026Fall/final_project_grading_and_project_modes.md.
 # v5 (2026-08-22, D50): THE CONFERENCE BLOCK — Studios 1-10 on Weeks 1-10,
 # Weeks 11-14 are the conference block (poster production, peer review, the
 # lock, presentation prep, the Expo, async reflection), and Studios 11-12 run
@@ -266,7 +270,9 @@ dossier_components:
   - research note / chapter
   - AI-agent management portfolio
 
-# Grading (D52, 2026-08-23; keep syllabus.qmd and the Brightspace generator in sync).
+# Grading (D52, 2026-08-23; syllabus prose D53). Keep these values in sync with
+# syllabus.qmd's Assessments table, planning/ASSESSMENT_ARCHITECTURE.md, and
+# scripts/build_brightspace_kit.py (which generates brightspace/gradebook_spec.md).
 assessment:
   attendance: 1                    # iClicker; 85% attendance target
   participation: 9                 # feedback surveys + lecture-notebook completion + constructive contributions
@@ -275,8 +281,16 @@ assessment:
   final_project: 50
 
 # D52 supersedes D51. It adopts QM474's exact five Final Project component names
-# and operative 30/20/10/20/20 shares without replacing any component. Project
-# shares sum to 100; course shares sum to assessment.final_project (50).
+# and operative 30/20/10/20/20 shares without replacing any component; the names
+# are never renamed. Project shares sum to 100; course shares sum to
+# assessment.final_project (50).
+# D53 (2026-08-23) moved the operational detail OUT of syllabus.qmd, which now
+# prints only these five names and their project_share values, as QM474 does.
+# The student-facing authority for the course_share split, the scoring_rule
+# formulas, and the project-mode rules is
+# _research_project/2026Fall/final_project_grading_and_project_modes.md, with the
+# gradebook wiring in the generated brightspace/gradebook_spec.md. The keys below
+# are the machine record of what the syllabus no longer states.
 final_project_breakdown:
   milestone_deliverables:
     label: "Milestone Deliverables"

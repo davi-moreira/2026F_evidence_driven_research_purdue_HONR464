@@ -12,10 +12,13 @@ Grading rewards correctness, transparency, reproducibility, question-design
 
 The v1 six-component / M01–M23 system is preserved at git tag `v1-compass-build`.
 Component weights were **CONFIRMED 2026-07-27 (D22)**, split attendance/
-participation **2026-07-29 (D31)**, revised by **D51 (2026-08-22)**, and then
-clarified by **D52 (2026-08-23)**. D52 supersedes D51's split between Final
-Project Milestones and Final Project. All project grading now lives in one 50%
-Final Project category, using QM474's exact five component items and shares.
+participation **2026-07-29 (D31)**, revised by **D51 (2026-08-22)**, clarified
+by **D52 (2026-08-23)**, and given their published syllabus wording by **D53
+(2026-08-23)**. D52 supersedes D51's split between Final Project Milestones and
+Final Project. All project grading now lives in one 50% Final Project category,
+using QM474's exact five component items and shares. D53 then replaced the
+syllabus prose for that category with QM474's own text and moved the
+operational machinery out of the syllabus (see "Syllabus prose" below).
 This file, `course_config.yaml assessment:`, and the syllabus Assessments table
 must match exactly.
 
@@ -51,6 +54,61 @@ without replacing any item:
 | **Poster Presentation at the Purdue Undergraduate Research Conference** | 20% | 10 | `0.70 ×` M13 poster-quality score + `0.30 ×` each student's M15 live-presentation score |
 | **Instructor/TA Evaluation** | 20% | 10 | `0.50 ×` M17 Final Research Artifact + `0.25 ×` M17 AI-management portfolio + `0.25 ×` individual Evidence Defense |
 | **Total** | **100%** | **50** | |
+
+## Syllabus prose — QM474 adopted verbatim (D53, 2026-08-23)
+
+`syllabus.qmd`'s `### Final Project (50%)` section is QM 47400's Fall 2026 Final
+Project text adopted **verbatim**, with only the six deviations recorded below.
+Any other difference between the two sections is a defect. Source of the
+wording:
+`../../../predictive_analytics/2026F_predictive_analytics_QM474/syllabus.qmd`.
+
+| # | QM 47400 | HONR 46400 | Why |
+|---|---|---|---|
+| 1 | `### Final Project (35%)` | `### Final Project (50%)` | the percentage; HONR's Final Project is 50% under D52 |
+| 2 | "In groups, students will complete a practical predictive analytics project" | "Students will complete a practical evidence-driven research project", followed by the individual-default / approved-group sentence | HONR is individual-by-default (D52), and the subject is not predictive analytics |
+| 3 | item 2, "productive teamwork" | "productive research work" | "teamwork" is false for a solo researcher |
+| 4 | item 3, "Each group will review … other teams' posters" | "Each student will review … the other projects' posters" | no teams by default |
+| 5 | item 4, "due date indicated in the syllabus" | "due date indicated in the course schedule" | D13 confines dates to `schedule.qmd` |
+| 6 | item 5, "your instructor and the TA will evaluate" | "your instructor will evaluate" | HONR has no TA (D52: "No TA is assumed") |
+
+The five internal shares — 30 / 20 / 10 / 20 / 20 — are **identical in both
+courses**, so nothing inside the numbered list changed.
+
+Two adopted QM474 sentences were verified against `planning/MEETING_SCHEDULE.csv`
+before being kept, not assumed: the class immediately after the Expo is genuinely
+cancelled (HONR meets Mon Nov 16, skips Wed Nov 18, resumes asynchronously Fri
+Nov 20), and the printed posters are genuinely distributed in a dedicated
+preparation class (meeting 34, Fri 2026-11-13, "the printed poster arrives:
+rehearse on the real thing"). One adopted sentence is a forward promise: "A
+poster template and assessment rubric will be shared" — the rubric exists
+(`project/poster/poster_rubric.md`, M13), the **template does not yet exist**.
+It is due by M11 (Wed 2026-11-04) and tracked as workstream L3 on the private
+course tracker.
+
+### What the syllabus no longer carries
+
+The syllabus now states only the five component names and their shares of the
+Final Project, exactly as QM474 does, and promises that "a comprehensive set of
+project guidelines will be provided." The operational machinery moved out of it.
+**Nothing is repealed** — D52 remains the ruling decision and every rule below
+is still in force; the syllabus governs the weights, and the guidelines document
+governs the operational detail.
+
+| Machinery removed from `syllabus.qmd` | Authoritative home now |
+|---|---|
+| The five-row component table with the share-of-course column (15 / 10 / 5 / 10 / 10) | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `brightspace/gradebook_spec.md` |
+| Per-component scoring rules: Milestone Deliverables = equal-weight mean of the seventeen M1–M17 scores; Poster item = `0.70 ×` M13 poster quality + `0.30 ×` M15 live presentation; Instructor/TA = `0.50 ×` M17 Final Research Artifact + `0.25 ×` M17 AI-management portfolio + `0.25 ×` individual Evidence Defense | the same two files, plus the "Deterministic Final Project scoring rules" table below |
+| "How the same five components work in both project modes" (shared vs individual rows) | `_research_project/2026Fall/final_project_grading_and_project_modes.md` |
+| "Peer Evaluation is not Peer Review", including `received_rating_score = min(100, 100 × mean received rating / 3)`, `item = 0.80 × received_rating_score +` submission points, the rule that a missing rating never costs its recipient, and the neutral 80 after failed follow-up | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `project/final_dossier/peer_evaluation_instrument.md` |
+| The group-approval conditions: at most one group of two or three, at least three active projects remaining, and a feasible Peer Evaluation plan | `_research_project/2026Fall/final_project_grading_and_project_modes.md`; `course_config.yaml course.project_mode:` |
+| The "Final Research Artifact" paragraph and "if no TA is assigned, the instructor records this item" | `_research_project/2026Fall/final_project_grading_and_project_modes.md` |
+
+The standalone conference-URL line that used to follow the grading scale was
+deleted as a duplicate: item 4 of the new text carries that URL.
+
+This file stays the internal reconciliation of all of it; the sections below are
+the operational detail the syllabus no longer prints.
 
 ## Individual-default and group-allowed operation
 

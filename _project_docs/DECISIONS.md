@@ -2568,3 +2568,71 @@ components, individual-only assumption, and scoring formulas. D51 remains in the
 record as the superseded decision. D22/D31 retain their historical force except
 where their assessment-weight statements conflict with D52; D50's calendar and
 milestone dates are unchanged.
+
+---
+
+## D53 — The Final Project syllabus text is QM474's, adopted verbatim (2026-08-23)
+
+**Decision.** The public syllabus section `### Final Project (50%)` is now the Fall 2026
+QM 47400 Final Project section **copied word for word**, with only the changes listed
+below. D53 changes **no weight, no component name, and no scoring rule** — D52 remains
+the governing grading decision in full. What changes is *where the operational detail
+lives* and *how the syllabus reads*.
+
+**Instruction.** Davi, 2026-08-23: "replace the Final Project section in the course
+webpage syllabus (and all syllabus related material) with exactly the same text we use
+for the qm474 course - except by the percentages." When asked how literal the copy
+should be, he chose verbatim plus the minimum edits needed to keep the text from being
+false for HONR, and chose to move the operational machinery out of the syllabus.
+
+**Source of truth.** `predictive_analytics/2026F_predictive_analytics_QM474/syllabus.qmd`,
+the `### Final Project (35%)` section and its five numbered items.
+
+**The six permitted deviations — the complete list.** Any other difference is a defect.
+
+| # | QM 47400 | HONR 46400 | Why |
+|---|---|---|---|
+| 1 | `### Final Project (35%)` | `### Final Project (50%)` | the percentage; HONR's Final Project is 50% under D52 |
+| 2 | "In groups, students will complete a practical predictive analytics project" | "Students will complete a practical evidence-driven research project", followed by the individual-default / approved-group sentence | HONR is individual-by-default (D52), and the subject is not predictive analytics |
+| 3 | item 2, "productive teamwork" | "productive research work" | "teamwork" is false for a solo researcher |
+| 4 | item 3, "Each group will review … other teams' posters" | "Each student will review … the other projects' posters" | no teams by default |
+| 5 | item 4, "due date indicated in the syllabus" | "due date indicated in the course schedule" | D13 confines dates to `schedule.qmd` |
+| 6 | item 5, "your instructor and the TA will evaluate" | "your instructor will evaluate" | HONR has no TA (D52: "No TA is assumed") |
+
+The five internal shares — 30 / 20 / 10 / 20 / 20 — are **identical in both courses**, so
+despite the instruction's wording there was nothing to change inside the list.
+
+**Sentences adopted from QM474 after verifying they are true for HONR.** Each was checked
+against the calendar before being kept, not assumed:
+
+- *"We will not hold our usual class immediately following the Poster Presentation."*
+  True. The Expo is Tue 2026-11-17; HONR meets Mon Nov 16 and then **skips Wed Nov 18**,
+  resuming Fri Nov 20 asynchronously.
+- *"printed and distributed during a dedicated Poster Presentation Preparation class."*
+  True. Meeting 34, Fri 2026-11-13 — "the printed poster arrives: rehearse on the real
+  thing."
+- *"submitted by the due date indicated in the course schedule."* True. The terminal
+  poster lock is Sun 2026-11-08, 11:59 PM (M13), a print run shared with QM 47400.
+- *"A poster template and assessment rubric will be shared."* The rubric exists. **The
+  template does not.** D53 converts a known content gap into a public syllabus promise;
+  it is due by M11 on Wed 2026-11-04 and is tracked as workstream L3 on the private
+  course tracker.
+
+**Where the removed machinery went.** The syllabus previously carried the component
+table with its share-of-course column, the four per-component scoring formulas, the
+project-mode rules, and the Peer Evaluation conversion. All of it moves to
+`_research_project/2026Fall/final_project_grading_and_project_modes.md` — the "comprehensive
+set of project guidelines" the new text promises, published to Brightspace — and to
+`brightspace/gradebook_spec.md`. **Nothing is repealed.** The syllabus governs the
+weights; the guidelines document governs the operational detail.
+
+**Implication.** `syllabus.qmd`, `planning/ASSESSMENT_ARCHITECTURE.md`,
+`_research_project/2026Fall/final_project_grading_and_project_modes.md`,
+`scripts/build_brightspace_kit.py`, nb01's grading cell, and the instructor operations
+docs must stay synchronized. The standalone conference-URL line that used to follow the
+grading scale was deleted as a duplicate — item 4 now carries that URL.
+
+**Supersession boundary.** D53 supersedes only the *syllabus prose* of D52's Final
+Project section. D52's weights, component names, scoring formulas, project-mode rules,
+and Peer Evaluation mechanics all stand unchanged. D51 remains superseded. D50's
+calendar is unchanged.

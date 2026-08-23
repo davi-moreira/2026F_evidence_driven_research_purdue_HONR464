@@ -43,9 +43,10 @@ present and receives their own live-presentation score. At the Expo, you stand
 your poster for strangers and evaluate at least three peer posters. The written
 **reflection and poster-criticism portfolio** reads your afternoon at the Expo as
 data; its M15 score is one of the seventeen scores averaged inside **Milestone
-Deliverables** and it feeds the final dossier. Milestone weights and the revision
-policy live in the syllabus; instructions and rubrics live one page per
-milestone, like this one.
+Deliverables** and it feeds the final dossier. Milestone weights live in
+[Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md);
+the revision policy, instructions, and rubrics live one page per milestone,
+like this one.
 
 ---
 

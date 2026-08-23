@@ -446,14 +446,30 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 6.5 — the D52 grading and project-mode contract (2026-08-23,
+**Version:** 6.6 — the D53 QM474 syllabus-text adoption (2026-08-23, DECISIONS.md
+D53): the public `### Final Project (50%)` syllabus section is now QM 47400's Final
+Project section copied **word for word**, with exactly six permitted deviations (the
+35%→50% header; "In groups … predictive analytics" → the individual-default
+evidence-driven framing; "teamwork" → "research work"; "each group … other teams'
+posters" → "each student … the other projects' posters"; "indicated in the syllabus" →
+"indicated in the course schedule"; and the TA dropped from item 5, since HONR has
+none). **No weight, component name, or scoring rule changed — D52 still governs those.**
+The operational machinery (the share-of-course table, the four scoring formulas, the
+project-mode rules, the Peer Evaluation conversion) moved OUT of the syllabus into
+`_research_project/2026Fall/final_project_grading_and_project_modes.md` — the
+"comprehensive set of project guidelines" the new text promises — and
+`brightspace/gradebook_spec.md`. The syllabus governs the weights; that document governs
+the detail. ⚠ The adopted text promises "a poster template and assessment rubric will be
+shared"; the rubric exists, **the template does not** and is now a public promise due by
+M11 on Wed 2026-11-04.
+(6.5 — the D52 grading and project-mode contract (2026-08-23,
 DECISIONS.md D52): one top-level Final Project at 50%, using QM474's same five
 items at 30/20/10/20/20; individual work is the default, with at most one
 instructor-approved group of two or three when at least three active projects
 and a feasible Peer Evaluation assignment remain; solo researchers receive
 confidential ratings from two assigned project peers, while group members rate
 teammates; all student-facing grading, milestone, poster, Brightspace, and
-notebook sources synchronized.
+notebook sources synchronized.)
 (6.4 — the D50 conference block (2026-08-22, DECISIONS.md D50):
 course milestones renumbered **M0–M15 → M1–M17** so M1–M10 present Book
 Milestones 1–10 one-to-one; Weeks 11–14 become the conference block (poster

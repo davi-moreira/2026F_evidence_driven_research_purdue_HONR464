@@ -234,7 +234,12 @@ an individual project. Peer Review remains each student's independent criticism
 of every other active project. The conference item combines `70%` M13 poster
 quality and `30%` individual M15 live delivery. Instructor/TA Evaluation
 combines `50%` M17 Final Research Artifact, `25%` M17 AI-management portfolio,
-and `25%` individual Evidence Defense. Full arithmetic and operational rules:
+and `25%` individual Evidence Defense. The syllabus carries only the weights
+and the five component descriptions; the "comprehensive set of project
+guidelines" it promises is the student-facing
+`_research_project/2026Fall/final_project_grading_and_project_modes.md`, its
+gradebook implementation is the generated `brightspace/gradebook_spec.md`, and
+the full arithmetic and design reconciliation is
 `planning/ASSESSMENT_ARCHITECTURE.md`.
 
 ## 8. The course book — EDR|AI: 40 lessons, 12 Studios, 12 Milestone chapters
@@ -280,7 +285,8 @@ decisions are documented, not just outcomes (`scripts/audit_sources.py`,
   semester. Weekly spine = the book's 12 Studios (D38/D40); W5 route hub
   (own route + one assigned contrast, five-route jigsaw); W6=S6, W7–8=S7
   (build/verify), W9=S8, W10=S9 note v0 before the poster; release
-  preflight + author self-reproduction gate before the Nov 6 lock;
+  preflight + author self-reproduction gate before the poster lock (Nov 6 at
+  the time; the terminal lock is Sun Nov 8, 11:59 PM since D50);
   crosswalk schema 1.1 with the book-Milestone naming bridge; milestone
   chain retitled; Synthetic Colleague device (COURSE_REFRAME_OPTIONS.md)
   at standard intensity. Content phase (briefs prose, schedule_data,

@@ -29,8 +29,9 @@ follows the same cadence: **studio kickoff → develop across the week →
 submit → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
-checked it. Milestone weights live in the syllabus; instructions and
-rubrics live one page per milestone, like this one.
+checked it. Milestone weights live in
+[Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md);
+instructions and rubrics live one page per milestone, like this one.
 
 This is the one milestone in the course whose artifact is about **someone else's
 research**. Every student independently reviews **every other active project or

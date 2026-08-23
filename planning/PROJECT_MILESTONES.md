@@ -1,8 +1,9 @@
 # PROJECT MILESTONES — HONR 46400 Fall 2026 (v2: M1–M17)
 
-Five students, five **individual** projects, one semester-long chain: every
-milestone is a graded, submittable artifact with **kick off → develop →
-submit → revise** cadence (D30 retired weekly milestone presentations; the
+Five students, **individual projects by default** (one group of two or three may
+be approved by the instructor before shared work begins), one semester-long
+chain: every milestone is a graded, submittable artifact with **kick off →
+develop → submit → revise** cadence (D30 retired weekly milestone presentations; the
 "Presented / reviewed" moments below are studio work-and-review formats).
 Exceptions: M16 due the Sunday after Thanksgiving; M13 and M17 are
 **terminal** — no revision window. Since **D49** the semester runs **one Studio per week**: Monday and Wednesday
@@ -76,7 +77,12 @@ Ledger** accumulates across all seventeen.
   is no separate milestone ID for the event itself.
 - M16's package exchange is anonymized: each student receives a peer's
   reproducibility package with identifying headers stripped by the instructor.
-- Revision policy (syllabus): all milestones except M13 and M17 are revisable
-  within 7 days of feedback for up to half the lost points.
+- Revision policy (stated in each milestone brief; the syllabus no longer
+  carries it): all milestones except M13 and M17 are revisable within 7 days of
+  feedback for up to half the lost points.
 - Hard external anchors: URC abstract internal gate Fri Oct 9 (external
   deadline TBD); poster print submission Sun Nov 8, 11:59 PM; Expo Tue Nov 17.
+- How these seventeen scores become a grade — the five Final Project components,
+  their 30/20/10/20/20 shares, and how each works in either project mode:
+  `_research_project/2026Fall/final_project_grading_and_project_modes.md`
+  (student-facing) and `planning/ASSESSMENT_ARCHITECTURE.md` (design).

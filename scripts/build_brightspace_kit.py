@@ -116,6 +116,40 @@ def brief_path(key: str) -> Path | None:
     return hits[0] if hits else None
 
 
+def week_for_milestone(key: str, config: dict) -> int | None:
+    for w in config["weeks"]:
+        if w.get("milestone") == key:
+            return w["week"]
+    return None
+
+
+def poster_template_files() -> list[Path]:
+    """Any poster template shipped in this repository.
+
+    D53 turned "a poster template and assessment rubric will be shared" into a
+    public syllabus promise, and as of that ruling the template did not exist.
+    The checklist has to say so out loud rather than quietly assume it. This
+    check keeps that warning honest: once a template lands in one of the three
+    places it would plausibly live, the warning turns into a plain to-do.
+    """
+    hits: list[Path] = []
+    dedicated = BRIEFS / "template"
+    if dedicated.is_dir():
+        hits += [
+            f
+            for f in sorted(dedicated.glob("*"))
+            if f.is_file() and not f.name.startswith(".")
+        ]
+    for root in (BRIEFS, ROOT / "project" / "poster"):
+        if root.is_dir():
+            hits += [
+                f
+                for f in sorted(root.glob("*"))
+                if f.is_file() and "template" in f.name.lower()
+            ]
+    return hits
+
+
 def unit_html(week: int, meetings: list[dict], config: dict) -> str:
     mine = [m for m in meetings if week_of(m) == week]
     if not mine:
@@ -350,6 +384,51 @@ def gradebook_spec(config: dict) -> str:
         "per student. Build the confidential Peer Evaluation form from "
         "project/final_dossier/peer_evaluation_instrument.md.",
         "",
+        "## Peer Evaluation is not Peer Review",
+        "",
+        "These are two different Final Project items and neither substitutes "
+        "for the other. **Peer Evaluation** is the confidential, per-student "
+        "accountability score awarded by the people who observed the work. "
+        "**Peer Review** is the graded quality of the structured criticism a "
+        "student gives other projects. They are submitted separately and "
+        "scored from different instruments.",
+        "",
+        "**The Peer Evaluation conversion.** Let the received-rating mean be "
+        "the mean of all valid 1-5 ratings the student receives across the "
+        "five dimensions and all evaluators, and let the submission fraction "
+        "be the number of complete evaluations that student submits divided "
+        "by the nonzero size of their submission set. A complete evaluation "
+        "carries all five ratings and both usable comments.",
+        "",
+        "```",
+        "received_rating_score = min(100, 100 * received_rating_mean / 3)",
+        "submission_points     = 20 * submission_fraction",
+        "Peer Evaluation item  = 0.80 * received_rating_score "
+        "+ submission_points",
+        "```",
+        "",
+        "- A received-rating mean of 3 with a complete submission scores "
+        "80 + 20 = 100. Ratings above 3 confirm full received-rating credit "
+        "but never create credit above 100.",
+        "- The 20 submission points are earned in full for completing every "
+        "assigned evaluation, 0 for completing none, and pro rata in "
+        "between.",
+        "- Non-submission costs the non-submitter their own submission "
+        "points and nothing else. It never lowers the score of the "
+        "classmates they were assigned to rate.",
+        "- A missing rating is never entered as a zero for its intended "
+        "recipient. Follow up with the assigned evaluator and calculate from "
+        "whatever valid ratings arrive.",
+        "- If no valid received rating survives that follow-up, use the "
+        "neutral 80-point received-rating portion, equivalent to a mean "
+        "rating of 3. Do not add a substitute evaluator after the "
+        "observation period has ended.",
+        "",
+        "Moderation of strategically inflated or deflated ratings requires a "
+        "documented evidence record; see "
+        "project/final_dossier/peer_evaluation_instrument.md for the "
+        "instrument, the five dimensions, and that record's format.",
+        "",
         "## Items inside each category",
         "",
         f"- **Final Project → Milestone Deliverables** — {len(config['milestones'])} "
@@ -394,14 +473,75 @@ def gradebook_spec(config: dict) -> str:
 def checklist(config: dict) -> str:
     c = config["course"]
     cal = config["calendar"]
+
+    guidelines = "_research_project/2026Fall/final_project_grading_and_project_modes.md"
+    poster_key = "M11"
+    poster_due = config["milestones"].get(poster_key, {}).get("due")
+    poster_when = (
+        f"{pretty(poster_due, weekday=True)}, {poster_due[:4]}" if poster_due else "TBD"
+    )
+    poster_week = week_for_milestone(poster_key, config)
+    poster_unit = f"the Week {poster_week} unit" if poster_week else "the poster-draft unit"
+    lock_due = config["milestones"].get("M13", {}).get("due", "TBD")
+    templates = poster_template_files()
+
+    if templates:
+        found = ", ".join(f"`{t.relative_to(ROOT)}`" for t in templates)
+        poster_banner = (
+            "> **Syllabus promise, item 4.** Students are promised \"a poster "
+            "template and assessment rubric\". Both now exist in the repo "
+            f"({found}); section 4 is where you publish them."
+        )
+        template_todo = (
+            f"- [ ] **Publish the poster template.** {found}. It must reach "
+            f"students in {poster_unit}, on or before {poster_key} "
+            f"({poster_when}), because the syllabus promises it."
+        )
+    else:
+        poster_banner = (
+            "> ⚠️ **OPEN SYLLABUS PROMISE — the poster template does not "
+            "exist.** Item 4 of the syllabus tells students \"a poster "
+            "template and assessment rubric will be shared\". The **rubric "
+            "exists**. The **template does not exist anywhere in this "
+            f"repository** and is due to students by {poster_key} "
+            f"({poster_when}). See section 4."
+        )
+        template_todo = (
+            "- [ ] ⚠️ **BUILD the poster template — it does not exist yet.** "
+            "Nothing in the repository matches a poster template, and "
+            "`_research_project/2026Fall/template/` is an empty directory. "
+            "The syllabus now promises one, so this is a commitment to "
+            f"students, not a nice-to-have. Deadline: in students' hands by "
+            f"{poster_key} ({poster_when}), published in {poster_unit}. Size "
+            "it for the shared print run that locks at M13 "
+            f"({lock_due}, 11:59 PM) with QM 47400."
+        )
+
+    poster_section = f"""## 4. Two promises the syllabus makes to students
+
+Syllabus item 4 says a poster template **and** an assessment rubric will be
+shared. Both are instructor deliverables with a date, not background material.
+
+{template_todo}
+- [ ] **Publish the poster assessment rubric.** `project/poster/poster_rubric.md`
+      is a pointer file: the authoritative rubric is the poster-quality rubric
+      inside `_research_project/2026Fall/milestone_13_final_poster_lock.md`.
+      Publish the rubric students will actually be graded on, in {poster_unit},
+      with the template. Say plainly that it supplies 70% of the Poster
+      Presentation item, with the M15 live presentation supplying the other 30%.
+"""
+
     return f"""# Brightspace — pre-semester checklist
 
 Ordered so the **Monday-critical** subset comes first. Everything in section 1
 must be true before **{pretty(cal['first_class'], weekday=True)}**; sections 2 and 3 can land
-during Week 1.
+during Week 1. Section 4 is dated later in the semester but is listed here
+because it is a promise the syllabus already makes.
 
 Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
 {c['credit_hours']} credit hours, {c['enrollment']} students enrolled.
+
+{poster_banner}
 
 ---
 
@@ -416,6 +556,15 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
       a release gate that hides Week 1.
 - [ ] **Post the welcome announcement** (`announcements/week01_welcome.html`).
 - [ ] **Publish the Week 1 unit** (`units/week01.html`) with the M1 brief.
+- [ ] **Publish the Final Project guidelines** — `{guidelines}` — as a page in
+      the **Week 1 unit**, next to the M1 brief, and link it from Course Home
+      and from the Final Project category description. This is the
+      "comprehensive set of project guidelines" the syllabus promises: the
+      syllabus carries only the five components and their shares, so this
+      document is the only student-facing home for the component table, the
+      four scoring formulas, the individual-versus-group rules, and the
+      Peer Evaluation conversion. Every milestone brief links to it, so it has
+      to be live before M1 is due.
 - [ ] **Link the course site and the book** on Course Home:
       {SITE} and {SITE}/book/.
 - [ ] **Check preferred names** on the myPurdue Faculty tab and record them in
@@ -445,6 +594,7 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
       (~{ (datetime.date.fromisoformat(cal['first_class']) + datetime.timedelta(days=18)).isoformat() }),
       federally mandated, in myPurdue Faculty Tools.
 
+{poster_section}
 ---
 
 ## The one thing that is easy to get wrong
