@@ -75,30 +75,13 @@ editor: visual
 FOOTER = '''
 ::: below-table
 
-**Key dates:** URC abstract internal gate **Fri Oct 9** · Final poster
-**Sun Nov 8, 11:59 PM** · **Purdue Fall Undergraduate Research Expo: Tue Nov 17**
-(required poster presentation) · Evidence Defenses **Dec 7 & 9** · Course
-reflection **Fri Dec 11**. No class: Sep 7 (Labor Day), Oct 12 (October Break),
-Nov 25/27 (Thanksgiving). Async-online meeting: Mon Nov 23.
-
-**The one required meeting outside the MWF pattern is the Expo, Tue Nov 17.**
-Its live presentation is graded in Final Project's **Poster Presentation at the
-Purdue Undergraduate Research Conference** item, not in M15, and it is not an
-optional showcase. It falls on a
-day this section never otherwise meets. Hold the day from Week 1: you set up
-before your window, stand with your poster through it, and complete your peer
-evaluations of at least three posters on the floor, so budget well beyond one
-class period. Exact hours are published by the Expo closer to the date and
-posted to Brightspace as soon as they are known. Bring a Tuesday conflict to
-the instructor in the first two weeks, while it can still be worked around.
-
 ## Core Course References
 
 - **Blair, G., Coppock, A., & Humphreys, M.** (2023). *Research Design in the
   Social Sciences: Declaration, Diagnosis, and Redesign*. Princeton University
   Press. Read free online: [book.declaredesign.org](https://book.declaredesign.org/){target="_blank"}.
 - **Bergstrom, C. T., & West, J. D.** (2020). *Calling Bullshit: The Art of
-  Skepticism in a Data-Driven World* — optional companion; public case studies
+  Skepticism in a Data-Driven World* (optional companion); public case studies
   at [callingbullshit.org](https://callingbullshit.org/){target="_blank"}.
 - Course datasets ship from the MIT-licensed `rdss` package (see
   [`notebooks/data/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/notebooks/data){target="_blank"}).
@@ -130,6 +113,53 @@ def week_studio(unit: str, studios: dict[int, dict]) -> tuple[str, str]:
     else:
         cell = f"*{label}*"
     return f"**Week {n}**", cell
+
+
+# ---------------------------------------------------------------------------
+# The schedule page carries NO em dashes (instructor request, 2026-08-23).
+#
+# Em dashes reach this page from three upstream sources that legitimately keep
+# them: authored session titles in scripts/schedule_data/, the shared reading
+# renderer in session_readings.py, and the milestone chain in
+# planning/MEETING_SCHEDULE.csv. Rewriting those would change the session
+# guides, the Material page and the planning docs too, so the page normalizes
+# on the way OUT instead: this is the last step of build().
+#
+# Ordered, most specific first. The two generic rules at the end are the net:
+# any em dash a future edit introduces becomes a middle dot rather than
+# leaking onto the page, and --check will never pass with one left.
+EM = "\u2014"
+
+DASH_RULES: list[tuple[object, str]] = [
+    # reading-mode lead-ins from session_readings.MODE_LABEL: label, then list
+    (f") **{EM}** ", "): "),
+    (f" {EM}** ", ":** "),
+    # chapter identity: "[Ch. 12 — Title]" reads as "Ch. 12: Title"
+    (re.compile(rf"\[Ch\. (\d+) {EM} "), r"[Ch. \1: "),
+    (f"companion {EM} ", "companion: "),
+    # milestone column: "; M6 — Data and measurement governance, Book …"
+    (re.compile(rf"(; M\d+) {EM} "), r"\1: "),
+    # the terminal-lock parenthetical
+    (f"11:59 PM {EM} ", "11:59 PM: "),
+    # authored titles whose dash introduces rather than separates
+    (f"indicator {EM} ", "indicator: "),
+    (f"can carry {EM} ", "can carry; "),
+    (f"for a stranger {EM} then", "for a stranger, then"),
+    (f"Course reflection {EM} ", "Course reflection: "),
+    (f"*No new chapter {EM} you present", "*No new chapter. You present"),
+    # the net
+    (f" {EM} ", " · "),
+    (EM, "·"),
+]
+
+
+def no_em_dash(text: str) -> str:
+    """Apply DASH_RULES in order; the page must contain no U+2014."""
+    for find, repl in DASH_RULES:
+        text = find.sub(repl, text) if hasattr(find, "sub") else text.replace(find, repl)
+    if EM in text:                                    # unreachable via the net
+        raise SystemExit("✗ em dash survived normalization")
+    return text
 
 
 def build() -> str:
@@ -194,7 +224,7 @@ def build() -> str:
         # The URC Expo sits between M35 and M36 (Tue Nov 17, not an MWF meeting).
         if r["meeting"] == "35":
             lines.append(
-                f"| — | Tue Nov 17 | {week} | {studio} | **🎓 Purdue Fall "
+                f"| – | Tue Nov 17 | {week} | {studio} | **🎓 Purdue Fall "
                 "Undergraduate Research Expo — REQUIRED poster presentation "
                 "(graded in Final Project)** | | M15 reflection evidence · "
                 "Final Project Poster Presentation at the Purdue "
@@ -205,7 +235,7 @@ def build() -> str:
 
     lines.append("\n:::")
     lines.append(FOOTER)
-    return "\n".join(lines)
+    return no_em_dash("\n".join(lines))
 
 
 def main() -> None:
