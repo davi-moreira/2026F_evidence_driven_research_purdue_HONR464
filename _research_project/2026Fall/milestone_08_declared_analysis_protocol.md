@@ -46,7 +46,7 @@ the room, and hand over your pending register for the flags you did not.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **A shared Colab notebook link** *or* **`lastname_m07_audit.ipynb`** | The eight-part audit record below, carried in the notebook itself or in an optional companion **`lastname_m07_audit.pdf`**: your dated pre-list of three checks with the attack each one answers, the run and what survived, your licensed null check, your reworded claim with its range and compass boundary, the verified AI-review trail, the one limitation no check could fix, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
+| 1 | **A shared Colab notebook link** *or* **`lastname_m08_audit.ipynb`** | The eight-part audit record below, carried in the notebook itself or in an optional companion **`lastname_m08_audit.pdf`**: your dated pre-list of three checks with the attack each one answers, the run and what survived, your licensed null check, your reworded claim with its range and compass boundary, the verified AI-review trail, the one limitation no check could fix, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 24, ch. 25, ch. 26, ch. 27** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. Every check
@@ -339,7 +339,7 @@ pre-submission checklist.
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | The audit record and the reworded claim located by file or section |
 | **Studio work** | Worked at the Friday studio (Oct 16) with your AI assistant; required reviewer role logged; submitted the same day |
-| **Filename** | A shared Colab link or `lastname_m07_audit.ipynb`; optional `lastname_m07_audit.pdf` companion |
+| **Filename** | A shared Colab link or `lastname_m08_audit.ipynb`; optional `lastname_m08_audit.pdf` companion |
 | **Location** | Brightspace → Assignments → M08 |
 
 ---

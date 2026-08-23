@@ -49,7 +49,7 @@ writing. The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m04_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration with its hybrid-stage test and the required Causal Identification Skeptic critique answered, the mandated contrast, your jigsaw advocate summary, **Research Contract v1** with its delta and its updated claim boundary, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
+| 1 | **`lastname_m05_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration with its hybrid-stage test and the required Causal Identification Skeptic critique answered, the mandated contrast, your jigsaw advocate summary, **Research Contract v1** with its delta and its updated claim boundary, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 14, ch. 15, ch. 16, ch. 17, ch. 18, ch. 19** | **Route-conditional:** the completed "It is your turn" sections of YOUR declared route's chapter and the instructor-assigned contrast chapter only (the hybrid chapter in addition only when your design has stages), worked in their companion Colab notebooks (share the links) or included in your artifact. The other route chapters are jigsaw material, not graded reading. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
@@ -278,7 +278,7 @@ pre-submission checklist.
 | **AI Research Ledger** | One row per AI-assisted step, including the required Skeptic run and the counter-pathway argument; every verification method named and non-vague |
 | **Dossier line** | The Contract component located by file or section |
 | **Studio work** | Worked at the Friday studio with your AI assistant; your jigsaw route advocated in class |
-| **Filename** | `lastname_m04_pathway_declaration.pdf` (or a shared Colab link) |
+| **Filename** | `lastname_m05_pathway_declaration.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M05 |
 
 ---

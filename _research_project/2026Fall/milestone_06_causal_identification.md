@@ -47,7 +47,7 @@ The written document is what is graded.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m05_data_governance.pdf`** *or* a shared Colab notebook link | The seven parts below: your acquisition route and provenance record, your data-management record, the route-specific permission recheck, your measurement specification (concept → construct → indicator, with the reliability check's result and the validity argument), the Contract version that settles your operationalization, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
+| 1 | **`lastname_m06_data_governance.pdf`** *or* a shared Colab notebook link | The seven parts below: your acquisition route and provenance record, your data-management record, the route-specific permission recheck, your measurement specification (concept → construct → indicator, with the reliability check's result and the validity argument), the Contract version that settles your operationalization, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 20, ch. 21** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
@@ -296,7 +296,7 @@ pre-submission checklist.
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named, non-vague, and run against the file or page itself |
 | **Dossier line** | The data and measurement documentation component located by file or section |
 | **Studio work** | Worked at the Friday studio with your AI assistant |
-| **Filename** | `lastname_m05_data_governance.pdf` (or a shared Colab link) |
+| **Filename** | `lastname_m06_data_governance.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M06 |
 
 ---

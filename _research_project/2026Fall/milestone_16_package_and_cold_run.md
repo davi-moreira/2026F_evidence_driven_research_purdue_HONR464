@@ -54,9 +54,9 @@ table read and your second clean run).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m14_note.pdf`** *or* a shared Colab notebook link | **Research note v1**: the note opening with its dated **adjudication record**, then the five-move spine revised where the evidence demanded it, the updated claim–evidence table, and your redrafted AI disclosure. This is the graded prose artifact. |
-| 2 | **`lastname_m14_package.ipynb`** *or* a shared folder / repository link | Your **repaired reusable package**: the seeded notebook, a README a stranger can follow, your data or its access recipe, the environment record, and the licence and permissions note. Every question your cold-runner had to ask you is answered here in writing. |
-| 3 | **`lastname_m14_coldrun.pdf`** *or* a clearly marked README section | The **second clean-run record**: a dated rerun in a fresh environment, performed *after your last change* to the package, showing the headline number and its uncertainty statement coming back, or every discrepancy explained and fixed. |
+| 1 | **`lastname_m16_note.pdf`** *or* a shared Colab notebook link | **Research note v1**: the note opening with its dated **adjudication record**, then the five-move spine revised where the evidence demanded it, the updated claim–evidence table, and your redrafted AI disclosure. This is the graded prose artifact. |
+| 2 | **`lastname_m16_package.ipynb`** *or* a shared folder / repository link | Your **repaired reusable package**: the seeded notebook, a README a stranger can follow, your data or its access recipe, the environment record, and the licence and permissions note. Every question your cold-runner had to ask you is answered here in writing. |
+| 3 | **`lastname_m16_coldrun.pdf`** *or* a clearly marked README section | The **second clean-run record**: a dated rerun in a fresh environment, performed *after your last change* to the package, showing the headline number and its uncertainty statement coming back, or every discrepancy explained and fixed. |
 | 4 | **EDR\|AI "It is your turn" — ch. 36, ch. 37** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit links, set sharing so the instructor can open them, and check that
@@ -296,7 +296,7 @@ pre-submission checklist.
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | Note v1, package, and updated table and disclosure located by file or section |
 | **Studio work** | Worked at the Friday studio: your adjudication table read by a peer, and your second clean run performed before you submit at studio close |
-| **Filenames** | `lastname_m14_note.pdf`, `lastname_m14_package.ipynb`, `lastname_m14_coldrun.pdf` (or shared links / the equivalent sections) |
+| **Filenames** | `lastname_m16_note.pdf`, `lastname_m16_package.ipynb`, `lastname_m16_coldrun.pdf` (or shared links / the equivalent sections) |
 | **Location** | Brightspace → Assignments → M16 |
 
 ---

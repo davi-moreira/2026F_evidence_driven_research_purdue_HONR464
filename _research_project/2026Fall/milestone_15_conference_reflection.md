@@ -61,7 +61,7 @@ pattern, and write the revision that pattern licenses.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m12_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-reflection check, with your AI Research Ledger rows attached. This is the graded written artifact and remains individual in either project mode. |
+| 1 | **`lastname_m15_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-reflection check, with your AI Research Ledger rows attached. This is the graded written artifact and remains individual in either project mode. |
 | 2 | **EDR\|AI "It is your turn" — ch. 29** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 The **Expo presentation (Tuesday, November 17)** supplies the live 30% subscore
@@ -357,7 +357,7 @@ pre-submission checklist.
 | **Dossier line** | Each finalized piece located by file or section |
 | **Studio work** | Worked at the Friday reflection studio (Nov 20) with your AI assistant and submitted the same day |
 | **Length** | Typically 2–4 pages PDF, or the equivalent notebook sections |
-| **Filename** | `lastname_m12_reflection.pdf` (or a shared Colab link) |
+| **Filename** | `lastname_m15_reflection.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M15 |
 
 ---

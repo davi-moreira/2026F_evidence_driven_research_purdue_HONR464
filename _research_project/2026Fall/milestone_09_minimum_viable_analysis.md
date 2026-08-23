@@ -45,8 +45,8 @@ output or cut before you submit.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m08_note.pdf`** *or* a shared Colab notebook link | **The research note**: a stand-alone account of your study, carrying the question, the method in one paragraph, the results with their uncertainty, the bounded headline claim, the limitations, and the references. This is the graded core. |
-| 2 | **`lastname_m08_claims.pdf`** *or* the same file's closing sections | Your **claim-to-evidence table** (every claim a row: claim · evidence · verification · boundary) and your **AI disclosure statement**, drafted from your ledger. |
+| 1 | **`lastname_m09_note.pdf`** *or* a shared Colab notebook link | **The research note**: a stand-alone account of your study, carrying the question, the method in one paragraph, the results with their uncertainty, the bounded headline claim, the limitations, and the references. This is the graded core. |
+| 2 | **`lastname_m09_claims.pdf`** *or* the same file's closing sections | Your **claim-to-evidence table** (every claim a row: claim · evidence · verification · boundary) and your **AI disclosure statement**, drafted from your ledger. |
 | 3 | **EDR\|AI "It is your turn" — ch. 28, ch. 29, ch. 30, ch. 31** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 Your note is prose, but its numbers are not new. Every figure in it walks back
@@ -277,7 +277,7 @@ pre-submission checklist.
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | Note, claim-to-evidence table, and disclosure located by file or section |
 | **Studio work** | Worked at the Friday studio (Oct 23) with your AI assistant; note red-teamed by a peer; the trace-or-cut drill run on every claim; submitted the same day |
-| **Filenames** | `lastname_m08_note.pdf`, `lastname_m08_claims.pdf` (or the equivalent sections of one file or notebook) |
+| **Filenames** | `lastname_m09_note.pdf`, `lastname_m09_claims.pdf` (or the equivalent sections of one file or notebook) |
 | **Location** | Brightspace → Assignments → M09 |
 
 ---

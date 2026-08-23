@@ -41,7 +41,7 @@ Due: **Friday, September 4, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m01_rules_question.pdf`** *or* a shared Colab notebook link | Both halves below, dated as version zero with the reason for the version. Half A, your working agreement: your responsibility statement, your working rules, your delegation map, your opened AI Research Ledger with its retrospective rows plus one verified factual hinge and one complete SDIIVDD run, and the red-flag screen of your chosen problem. Half B, your declared question: the lead question with its kind and its reach, the words in your own sentence that fix each, the field card with its stranger-test record (what your reader misunderstood, and what you revised because of it), and your provisional claim boundary with its uncertainty-and-limitations line. Close with the cross-read of the two halves. This is the graded artifact. |
+| 1 | **`lastname_m02_rules_question.pdf`** *or* a shared Colab notebook link | Both halves below, dated as version zero with the reason for the version. Half A, your working agreement: your responsibility statement, your working rules, your delegation map, your opened AI Research Ledger with its retrospective rows plus one verified factual hinge and one complete SDIIVDD run, and the red-flag screen of your chosen problem. Half B, your declared question: the lead question with its kind and its reach, the words in your own sentence that fix each, the field card with its stranger-test record (what your reader misunderstood, and what you revised because of it), and your provisional claim boundary with its uncertainty-and-limitations line. Close with the cross-read of the two halves. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 2, ch. 3, ch. 4, ch. 5, ch. 6, ch. 7** | The pieces Book Milestone 2's checklist names, from each chapter's "It is your turn": your opened AI Research Ledger with its first verified exchange (ch. 2), your delegation map (ch. 3), one complete SDIIVDD run (ch. 4), your ownership statement with its never-delegate list (ch. 5), your lead question placed by kind and reach (ch. 6), and your formal declaration with its field card and boundary pair (ch. 7) — worked in the companion Colab notebooks (share the links) or included in your artifact. Prompts marked *Optional depth* are not required. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -341,7 +341,7 @@ Name the file or section where each now lives.
 | **Length** | Both halves plus the ledger rows (typically 2–3 pages PDF, or the equivalent notebook sections) |
 | **Stranger-test record** | There is no class presentation at this milestone. What is graded instead is the documented evidence from the stranger test you run at the Friday studio: the exact sentence you handed your reader, the three questions you asked, what they misunderstood or stalled on in their own words, and the revision you made because of it. "Nothing to fix" is only credible if you can quote what they said |
 | **Style** | Plain language; version line and date at the top; the two halves clearly separated and each component headed; every technical term used as this week's lessons define it; any source retrievable; any code cell you keep seeded with `SEED = 464` |
-| **Filename** | `lastname_m01_rules_question.pdf` (or a shared Colab link) |
+| **Filename** | `lastname_m02_rules_question.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M02 |
 
 ---

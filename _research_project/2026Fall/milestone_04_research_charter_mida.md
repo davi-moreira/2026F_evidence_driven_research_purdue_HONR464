@@ -44,7 +44,7 @@ submit the same day.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m03_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: objective, target estimand, population, setting and time, data strategy, a **provisional operationalization marked for revision**, warrant, answer strategy, and uncertainty statement, with the model behind them drawn as a 3-node **DAG** image. With it comes your **diagnosis** (bias, wobble, and how often the design would detect what you are looking for), your **redesign record**, your **permission determination** (one declared status, with the authority and the date you asked if it is anything but cleared), your **claim boundary**, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
+| 1 | **`lastname_m04_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: objective, target estimand, population, setting and time, data strategy, a **provisional operationalization marked for revision**, warrant, answer strategy, and uncertainty statement, with the model behind them drawn as a 3-node **DAG** image. With it comes your **diagnosis** (bias, wobble, and how often the design would detect what you are looking for), your **redesign record**, your **permission determination** (one declared status, with the authority and the date you asked if it is anything but cleared), your **claim boundary**, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 10, ch. 11, ch. 12, ch. 13** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -366,7 +366,7 @@ pre-submission checklist.
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | The Contract v0 component located by file or section |
 | **Studio work** | Worked at the Friday studio (Sep 18) with your AI assistant; declaration delivered; submitted the same day |
-| **Filename** | `lastname_m03_contract.pdf` (or a shared Colab link) |
+| **Filename** | `lastname_m04_contract.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M04 |
 
 ---

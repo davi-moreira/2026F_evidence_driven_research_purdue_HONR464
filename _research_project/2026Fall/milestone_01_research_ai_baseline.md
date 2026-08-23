@@ -41,7 +41,7 @@ Due: **Friday, August 28, 11:59 PM** (you work on it at that Friday's studio).
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m00_curiosity.pdf`** *or* a shared Colab notebook link | Your committed curiosity, dated as version zero with the reason for the version: the four lines you wrote by hand, your own two candidate directions plus the brainstormed ones with every NEW element marked and each candidate kept or rejected with its reason, the research problem you chose with its three scores and your red-team of it, your expected answer and the person a different answer would surprise, the four rails in the forms named below, your readiness screenshot, and your AI Research Ledger row. This is the graded artifact. |
+| 1 | **`lastname_m01_curiosity.pdf`** *or* a shared Colab notebook link | Your committed curiosity, dated as version zero with the reason for the version: the four lines you wrote by hand, your own two candidate directions plus the brainstormed ones with every NEW element marked and each candidate kept or rejected with its reason, the research problem you chose with its three scores and your red-team of it, your expected answer and the person a different answer would surprise, the four rails in the forms named below, your readiness screenshot, and your AI Research Ledger row. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 1** | The piece Book Milestone 1's checklist names, from ch. 1's "It is your turn": your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer — worked in the companion Colab notebook (share the link) or included in your artifact. Prompts marked *Optional depth* are not required. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -271,7 +271,7 @@ set the rules you will work under and turn this problem into a declared question
 | **Length** | 1–2 pages (PDF), or the equivalent notebook sections, including the screenshot and ledger row |
 | **Pitch** | 30 seconds at the Friday studio (Aug 28): your problem and the person a different answer would surprise, no slides needed — part of the grade |
 | **Style** | Plain prose; the version line and date at the top; one labeled section per component; every source retrievable; any code cell you keep seeded with `SEED = 464` and rerunnable top to bottom |
-| **Filename** | `lastname_m00_curiosity.pdf` (or a shared Colab link) |
+| **Filename** | `lastname_m01_curiosity.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M01 |
 
 ---

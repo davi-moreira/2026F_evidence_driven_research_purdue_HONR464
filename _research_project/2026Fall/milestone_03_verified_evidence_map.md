@@ -46,7 +46,7 @@ submit the same day.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m02_evidence_base.pdf`** *or* a shared Colab notebook link | The evidence base below: your candidate source list with its status column, your search log including the searches that found nothing, your registry of verified sources, your evidence map of what is settled, contested, and missing with your bounded gap sentence, and your explicit revision of the question you declared at M2 — together with the gallery-walk challenge you incorporated, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
+| 1 | **`lastname_m03_evidence_base.pdf`** *or* a shared Colab notebook link | The evidence base below: your candidate source list with its status column, your search log including the searches that found nothing, your registry of verified sources, your evidence map of what is settled, contested, and missing with your bounded gap sentence, and your explicit revision of the question you declared at M2 — together with the gallery-walk challenge you incorporated, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
 | 2 | **EDR\|AI "It is your turn" — ch. 8, ch. 9** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
@@ -309,7 +309,7 @@ pre-submission checklist.
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | The evidence-base component located by file or section |
 | **Studio work** | Worked at the Friday studio (Sep 11) with your AI assistant; submitted the same day |
-| **Filename** | `lastname_m02_evidence_base.pdf` (or a shared Colab link) |
+| **Filename** | `lastname_m03_evidence_base.pdf` (or a shared Colab link) |
 | **Location** | Brightspace → Assignments → M03 |
 
 ---

@@ -45,9 +45,9 @@ your ledger, and submit at studio close.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m09_contract.pdf`** *or* the opening sections of one file | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo**, and your **content map**. |
-| 2 | **`lastname_m09_artifact.pdf`** *or* a shared link | **The artifact**: your Expo poster draft built to the contract, labeled preliminary, together with the spoken spine (30-second and 3-minute) that carries the same claim aloud. This is the graded core. |
-| 3 | **`lastname_m09_defense.pdf`** *or* the closing sections of the same file | Your **mode-test record**, your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
+| 1 | **`lastname_m10_contract.pdf`** *or* the opening sections of one file | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo**, and your **content map**. |
+| 2 | **`lastname_m10_artifact.pdf`** *or* a shared link | **The artifact**: your Expo poster draft built to the contract, labeled preliminary, together with the spoken spine (30-second and 3-minute) that carries the same claim aloud. This is the graded core. |
+| 3 | **`lastname_m10_defense.pdf`** *or* the closing sections of the same file | Your **mode-test record**, your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
 | 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 Nothing on the artifact may be new. Every number, figure, and citation that
@@ -275,7 +275,7 @@ pre-submission checklist.
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | Venue contract, content map, artifact, and rehearsal record located by file or section |
 | **Studio work** | Worked at the Friday studio (Oct 30); artifact criticism gallery run; defense rehearsed; submitted the same day |
-| **Filenames** | `lastname_m09_contract.pdf`, `lastname_m09_artifact.pdf`, `lastname_m09_defense.pdf` (or the equivalent sections of one file) |
+| **Filenames** | `lastname_m10_contract.pdf`, `lastname_m10_artifact.pdf`, `lastname_m10_defense.pdf` (or the equivalent sections of one file) |
 | **Location** | Brightspace → Assignments → M10 |
 
 ---

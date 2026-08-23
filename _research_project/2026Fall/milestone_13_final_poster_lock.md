@@ -64,10 +64,10 @@ on the board that did not just reproduce.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m10_package.zip`** *or* a shared folder or repository link | Your **reusable research package**: the seeded (`SEED = 464`) notebook, the data or a written access recipe, the environment record, a README saying what the project asks, what it found, and how to run everything, the licence with its reuse boundary, the exact output locations, and the dated frozen manifest. |
-| 2 | **`lastname_m10_coldrun.pdf`** *or* the same as notebook sections | Your **cold-run record**: the clean-environment run made from your written instructions only, every question the run raised, every documentation line you added in response, and the honest label the run earns. Working alone, that label is **"solo proxy; external cold run pending"**. |
-| 3 | **`lastname_m10_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number and every bound reproduced) and your **release preflight** (permissions, disclosure, reproducibility, claim boundary, each marked clear, pending, or blocking). **The poster does not lock without both.** |
-| 4 | **`lastname_m10_poster.pdf`** | The print-ready **locked poster**, carrying your **AI-use disclosure block** and your **signed final-lock checklist** (last page or companion). Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. |
+| 1 | **`lastname_m13_package.zip`** *or* a shared folder or repository link | Your **reusable research package**: the seeded (`SEED = 464`) notebook, the data or a written access recipe, the environment record, a README saying what the project asks, what it found, and how to run everything, the licence with its reuse boundary, the exact output locations, and the dated frozen manifest. |
+| 2 | **`lastname_m13_coldrun.pdf`** *or* the same as notebook sections | Your **cold-run record**: the clean-environment run made from your written instructions only, every question the run raised, every documentation line you added in response, and the honest label the run earns. Working alone, that label is **"solo proxy; external cold run pending"**. |
+| 3 | **`lastname_m13_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number and every bound reproduced) and your **release preflight** (permissions, disclosure, reproducibility, claim boundary, each marked clear, pending, or blocking). **The poster does not lock without both.** |
+| 4 | **`lastname_m13_poster.pdf`** | The print-ready **locked poster**, carrying your **AI-use disclosure block** and your **signed final-lock checklist** (last page or companion). Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. |
 | 5 | **EDR\|AI "It is your turn" — ch. 36, ch. 37** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a folder or notebook link, set sharing so the instructor can open
@@ -323,7 +323,7 @@ pre-submission checklist.
 | **AI Research Ledger** | Each member supplies personally attributable rows for every AI-assisted step they performed; every verification method is named and non-vague |
 | **Dossier line** | Package, cold-run record, gate records, and poster located by file or section |
 | **Studio work** | Package assembled, cold run completed, and both gates cleared in the Friday production block |
-| **Filenames** | `lastname_m10_package.zip` (or a shared link), `lastname_m10_coldrun.pdf`, `lastname_m10_gates.pdf`, `lastname_m10_poster.pdf` |
+| **Filenames** | `lastname_m13_package.zip` (or a shared link), `lastname_m13_coldrun.pdf`, `lastname_m13_gates.pdf`, `lastname_m13_poster.pdf` |
 | **Location** | Brightspace → Assignments → M13 (and the URC channel) |
 
 ---

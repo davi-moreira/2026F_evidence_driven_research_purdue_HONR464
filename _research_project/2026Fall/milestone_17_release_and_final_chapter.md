@@ -66,9 +66,9 @@ it does not extend the deadline.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m15_chapter.pdf`** | Your **final research chapter**: the whole arc finalized, your headline claim stated at its boundary, uncertainty and limitations throughout, every claim traced and verified. It grows out of the M16 research note, and it closes with two marked sections: your **final release audit** (with its release decision, stopping rule, and next-study agenda) and your **dossier manifest**. An approved group may share this artifact, with every member named. |
-| 2 | **`lastname_m15_portfolio.pdf`** *(or a clearly-marked section of the chapter PDF)* | Your **individual AI-management portfolio**: the decomposition, the conflict-and-override log, the never-automate list, and the independence check, with your personally attributable full-semester **AI Research Ledger** entries inside it. Every member of an approved group submits this item individually. |
-| 3 | **`lastname_m15_chapter.ipynb`** | The runnable notebook behind the chapter, finalized from the M16 package. It passes **restart-and-run-all**, and every headline number in the chapter reruns from it. An approved group may share this artifact, with every member named. |
+| 1 | **`lastname_m17_chapter.pdf`** | Your **final research chapter**: the whole arc finalized, your headline claim stated at its boundary, uncertainty and limitations throughout, every claim traced and verified. It grows out of the M16 research note, and it closes with two marked sections: your **final release audit** (with its release decision, stopping rule, and next-study agenda) and your **dossier manifest**. An approved group may share this artifact, with every member named. |
+| 2 | **`lastname_m17_portfolio.pdf`** *(or a clearly-marked section of the chapter PDF)* | Your **individual AI-management portfolio**: the decomposition, the conflict-and-override log, the never-automate list, and the independence check, with your personally attributable full-semester **AI Research Ledger** entries inside it. Every member of an approved group submits this item individually. |
+| 3 | **`lastname_m17_chapter.ipynb`** | The runnable notebook behind the chapter, finalized from the M16 package. It passes **restart-and-run-all**, and every headline number in the chapter reruns from it. An approved group may share this artifact, with every member named. |
 | 4 | **EDR\|AI "It is your turn" — ch. 38, ch. 39, ch. 40** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. These remain individual unless the instructor explicitly approves a shared response. See "The Book Anchor" below. |
 
 *Submit all three, or a single zip containing them. For an approved group, each
@@ -361,7 +361,7 @@ how well each is argued.
 | **Notebook** | Finalized from the M16 package; passes restart-and-run-all; headline numbers rerun |
 | **Defense** | Three movements plus ledger-grounded cross-examination in the assigned Week 15–16 block; the defense schedule gives the exact slot length |
 | **Style** | Plain language; every technical term used as you defined it; claims stated at their boundaries |
-| **Filenames** | `lastname_m15_chapter.pdf` + `lastname_m15_portfolio.pdf` + `lastname_m15_chapter.ipynb` (or a zip with all three) |
+| **Filenames** | `lastname_m17_chapter.pdf` + `lastname_m17_portfolio.pdf` + `lastname_m17_chapter.ipynb` (or a zip with all three) |
 | **Location** | Brightspace → Assignments → M17 |
 
 ---
