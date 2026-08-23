@@ -77,9 +77,16 @@ Ledger** accumulates across all seventeen.
   is no separate milestone ID for the event itself.
 - M16's package exchange is anonymized: each student receives a peer's
   reproducibility package with identifying headers stripped by the instructor.
-- Revision policy (stated in each milestone brief; the syllabus no longer
-  carries it): all milestones except M13 and M17 are revisable within 7 days of
-  feedback for up to half the lost points.
+- Revision policy: all milestones except M13 and M17 are revisable within 7
+  days of feedback for up to half the lost points. The policy is restated in
+  each revisable brief's **Revision:** line. It has never appeared on the
+  syllabus, so the briefs are its only student-facing statement.
+  **Open (2026-08-23):** M11, M12, and M14 carry no **Revision:** line, so for
+  those three the policy above is stated nowhere a student can read it. All
+  three sit inside the conference block, where a 7-day window would run past
+  the terminal Sun Nov 8 poster lock or the Tue Nov 17 Expo — so the omission
+  may be deliberate. Davi rules whether they are revisable; until he does, do
+  not assume either way.
 - Hard external anchors: URC abstract internal gate Fri Oct 9 (external
   deadline TBD); poster print submission Sun Nov 8, 11:59 PM; Expo Tue Nov 17.
 - How these seventeen scores become a grade — the five Final Project components,

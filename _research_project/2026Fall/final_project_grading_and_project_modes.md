@@ -41,7 +41,7 @@ milestone category and no sixth Final Project component.
 
 | Component | Individual project (default) | Approved group project |
 |---|---|---|
-| **Milestone Deliverables** | Your score is the arithmetic mean of your seventeen M1–M17 scores. | The score is the arithmetic mean of each member's seventeen M1–M17 scores. The group submits one shared artifact naming every member. Shared rubric rows receive a common score; requirements marked individual, including each member's AI Research Ledger evidence, are scored per member, so milestone scores may differ only on those rows. |
+| **Milestone Deliverables** | Your score is the arithmetic mean of your seventeen M1–M17 scores. | Each member's score is the arithmetic mean of that member's own seventeen M1–M17 scores; there is no pooled group mean. The group submits one shared artifact naming every member. Shared rubric rows receive a common score; requirements marked individual, including each member's AI Research Ledger evidence, are scored per member, so milestone scores may differ only on those rows. |
 | **Peer Evaluation** | Two instructor-assigned project peers who have observed your work in scheduled studios and checks rate you confidentially. You complete every evaluation the instructor assigns; assignments need not be reciprocal. There is no self-rating. | Every member confidentially rates every other teammate and may also be assigned to observe and rate an individual-project researcher. There is no self-rating. The score is per member, so teammates can receive different scores. |
 | **Peer Review** | You independently review every other active project or poster and submit your own structured criticism, scored with the **M12** Final Project Peer Review rubric. | Every member independently reviews every other active project or poster and submits their own criticism without conferring. This is not a teammate rating and is scored per student. |
 | **Poster Presentation at the Purdue Undergraduate Research Conference** | The poster you lock at **M13** supplies 70% of this component score, and your **M15** live presentation supplies 30%. | The shared locked **M13** poster supplies the common 70% poster-quality portion. Every member must present; each member's **M15** live presentation supplies their own 30% portion. |
@@ -99,9 +99,21 @@ people who observed your work. **Peer Review** is the quality of the structured
 criticism you give other projects. They are separate Final Project components,
 submitted separately, and neither replaces the other.
 
+**No score is counted twice.** M12, M13, M15, and M17 are milestones, so their
+milestone rubrics feed Milestone Deliverables. Those same weeks also produce
+separate terminal rubrics — your peer review, your poster quality, your live
+presentation, your final artifact, your portfolio, your defense — and those feed
+the other four components. The milestone rubric scores your process: whether the
+work arrived on time, in the right version, answering the feedback you were
+given. The terminal rubric scores the artifact itself. No single rubric score is
+ever entered into two components.
+
 Your Peer Evaluation score has two parts. Let \(\bar r\) be the mean of the
 valid 1–5 ratings you **receive**, taken across the five rating dimensions and
-all of your evaluators. The received-rating part is
+all of your evaluators. The five dimensions are **Commitment**, **Technical
+contribution**, **Communication**, **Dependability**, and **Fairness of work
+distribution**, each rated 1 to 5, where 1 is far below expectations, 3 is met
+expectations, and 5 is far above. The received-rating part is
 
 \[
 \text{received rating score} = \min\left(100,\; 100 \times \frac{\bar r}{3}\right),
@@ -124,7 +136,7 @@ own submission points and never the score of the classmates you were assigned
 to rate. A missing rating is never entered as a zero for the person it was
 meant to describe. The complete evaluation form and the full scoring rule are
 in
-[Peer Evaluation — Instrument and Logistics](../../project/final_dossier/peer_evaluation_instrument.md).
+[Peer Evaluation — Instrument and Logistics](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/project/final_dossier/peer_evaluation_instrument.md).
 If evaluator non-submission leaves no valid received rating after instructor
 follow-up, the instrument uses the neutral 80-point received-rating portion
 (equivalent to a mean rating of 3); the non-submitter still loses their own

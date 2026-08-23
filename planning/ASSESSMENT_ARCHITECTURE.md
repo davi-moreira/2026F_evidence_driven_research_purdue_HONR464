@@ -70,7 +70,7 @@ wording:
 | 3 | item 2, "productive teamwork" | "productive research work" | "teamwork" is false for a solo researcher |
 | 4 | item 3, "Each group will review … other teams' posters" | "Each student will review … the other projects' posters" | no teams by default |
 | 5 | item 4, "due date indicated in the syllabus" | "due date indicated in the course schedule" | D13 confines dates to `schedule.qmd` |
-| 6 | item 5, "your instructor and the TA will evaluate" | "your instructor will evaluate" | HONR has no TA (D52: "No TA is assumed") |
+| 6 | item 5, "your instructor and the TA will evaluate" | "your instructor will evaluate" | HONR has no TA (D52: "The instructor records the last item if no TA is assigned.") |
 
 The five internal shares — 30 / 20 / 10 / 20 / 20 — are **identical in both
 courses**, so nothing inside the numbered list changed.
