@@ -63,7 +63,6 @@ pattern, and write the revision that pattern licenses.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m15_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-reflection check, with your AI Research Ledger rows attached. This is the graded written artifact and remains individual in either project mode. |
-| 2 | **EDR\|AI "It is your turn" — ch. 29** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 The **Expo presentation (Tuesday, November 17)** supplies the live 30% subscore
 of Final Project's **Poster Presentation at the Purdue Undergraduate Research
@@ -79,19 +78,9 @@ when the notebook is run.
 
 ## The Book Anchor — "It Is Your Turn"
 
-This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
-below as you develop the milestone, and complete each chapter's closing **"It
-is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
-
-- Ch. 29 — [AI Disclosure and Research Integrity](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/31-ai-disclosure-and-research-integrity.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch31_ai_disclosure_and_research_integrity.ipynb)
-
-These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+This milestone anchors no new book chapters: the reading behind it is already
+done, and you handed in each chapter's "It is your turn" section on the date
+that chapter's reading was due.
 
 ---
 

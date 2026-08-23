@@ -48,7 +48,7 @@ submit by Sunday night.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m03_evidence_base.pdf`** *or* a shared Colab notebook link | The evidence base below: your candidate source list with its status column, your search log including the searches that found nothing, your registry of verified sources, your evidence map of what is settled, contested, and missing with your bounded gap sentence, and your explicit revision of the question you declared at M2 — together with the gallery-walk challenge you incorporated, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 8, ch. 9** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 8, ch. 9** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 confirm that the evidence-map figure renders when the notebook is run.
@@ -60,17 +60,18 @@ confirm that the evidence-map figure renders when the notebook is run.
 This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
 below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
+work inside your project notebook) **by the date that chapter's reading is
+due**:
 
 - Ch. 8 — [Research Builds on Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/07-research-builds-on-research.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch07_research_builds_on_research.ipynb)
 - Ch. 9 — [Finding and Verifying Prior Evidence](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch08_finding_and_verifying_prior_evidence.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a
+draft piece of your own. You hand each section in on the date its own reading is due, under
+**IYT Practice** — the dated list is on the course page. They are not
+collected a second time here: carry the completed work forward into this
+milestone and your Research Project Dossier.
 
 ---
 

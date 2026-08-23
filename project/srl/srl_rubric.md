@@ -1,10 +1,9 @@
-# SRL Performance Rubric (100 points)
+# SRL Rubric (100 points)
 
 *How your leading is graded. Read this before your first slot so you know what
 strong leading looks like, then aim your preparation template at it. You are
 graded live, during the session, on the nine rows below. Each lead is scored on
-its own, and together those scores make up the SRL-performance share of your
-course grade.*
+its own, and together those scores make up the SRL share of your course grade.*
 
 The rubric measures one thing from nine angles: **did you run a Socratic
 investigation that kept the room thinking, used AI as an arm rather than a

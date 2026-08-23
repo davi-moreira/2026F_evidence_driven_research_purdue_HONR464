@@ -21,7 +21,8 @@ Modes:
     first-read     read BEFORE this session (its home anchor)
     assigned       assigned today, read for the next session
     continue       still in play from earlier THIS week (its first read was
-                   an earlier session of the same Studio)
+                   an earlier session of the same Studio, which is not always
+                   the Monday: Weeks 3 and 8 start on a Wednesday)
     revisit        re-read; the lesson's home anchor was an earlier week
     route          your OWN declared route's pathway lesson (D49 policy)
     route-contrast the instructor-assigned contrast route's lesson
@@ -57,7 +58,7 @@ MODE_ORDER = ["first-read", "route", "route-contrast", "assigned", "continue",
 MODE_LABEL = {
     "first-read": "**Required before today** (*It is your turn* due tonight) **—** ",
     "assigned": "**Assigned today, read for the next session —** ",
-    "continue": "**Still in play from Monday —** ",
+    "continue": "**Still in play this week —** ",
     "revisit": "**Revisit —** ",
     "route": "**Required, your declared route** (*It is your turn* due tonight) **—** ",
     "route-contrast": "**Required, your assigned contrast route** (*It is your turn* due tonight) **—** ",
@@ -152,7 +153,7 @@ def render_cell(field: str, index: dict[str, dict] | None = None,
     """One schedule cell: every mode present, book wording, linked.
 
     Pass `seen` (a per-WEEK set of lesson ids, mutated in place) to collapse the
-    back-reference modes ("Due today", "Still in play from Monday", "Revisit")
+    back-reference modes ("Still in play this week", "Revisit")
     down to a pointer for the chapters the same week already links above.
     Chapters that appear nowhere earlier in the week are still listed in full,
     so nothing loses its link. Callers that do not pass `seen` (the Material
@@ -174,8 +175,8 @@ def render_cell(field: str, index: dict[str, dict] | None = None,
             if mode in BACKREF_MODES and repeated:
                 # Every chapter is still NAMED, exactly; only the repeated ones
                 # drop their (already-shown) link. Collapsing them into a phrase
-                # like "this week's chapters" would misstate a graded submission
-                # whenever the week reads more chapters than it submits.
+                # like "this week's chapters" would hide which chapter a student
+                # is being pointed back at.
                 parts = [chapter_link(index[i], prefix, compact) if i in fresh
                          else f"Ch. {index[i]['display']}" for i in ids]
                 blocks.append(MODE_LABEL[mode] + " · ".join(parts)

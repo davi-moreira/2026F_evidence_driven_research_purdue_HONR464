@@ -49,21 +49,14 @@ Due: **Sunday, November 15, 11:59 PM.**
 | 1 | **`lastname_m14_plan.pdf`** | Your **presentation plan**: the audience-analysis paragraph, the three timed pitches with their word counts shown, the poster-integration outline, and the question-and-discussion strategy. |
 | 2 | **`lastname_m14_invitation.pdf`** | A **screenshot of your public invitation post**, carrying the poster title, your name, and the date, time, and location exactly as the official Expo programme prints them. |
 | 3 | **`lastname_m14_ledger.pdf`** *or* the same as notebook sections | The **AI Research Ledger** rows for this milestone: the spoken-upgrade check, the question-generation prompt, and any AI-assisted wording of the invitation post. |
-| 4 | **EDR\|AI "It is your turn"** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 ---
 
 ## The Book Anchor — "It Is Your Turn"
 
-This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
-below as you develop the milestone, and complete each chapter's closing **"It
-is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
-
-These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by
-the twelve Book Milestones — chain into a complete research artifact, so what
-you complete here is a draft piece of your own.
+This milestone anchors no new book chapters: the reading behind it is already
+done, and you handed in each chapter's "It is your turn" section on the date
+that chapter's reading was due.
 
 ---
 

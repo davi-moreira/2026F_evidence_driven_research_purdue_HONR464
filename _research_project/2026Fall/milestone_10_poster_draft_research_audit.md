@@ -49,7 +49,7 @@ your ledger, and submit by Sunday night.
 | 1 | **`lastname_m10_contract.pdf`** *or* the opening sections of one file | Your **venue contract** (audience · medium · limits · required elements · accessibility · submission rule · question channel), your **transformation memo**, and your **content map**. |
 | 2 | **`lastname_m10_artifact.pdf`** *or* a shared link | **The artifact**: your Expo poster draft built to the contract, labeled preliminary, together with the spoken spine (30-second and 3-minute) that carries the same claim aloud. This is the graded core. |
 | 3 | **`lastname_m10_defense.pdf`** *or* the closing sections of the same file | Your **mode-test record**, your **Poster Critic adjudication**, and your **defense rehearsal record**: five hard questions, each marked defend, concede, or do-not-know, plus your uncertainty-and-limitations statement in ULN form. |
-| 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 4 | **EDR\|AI "It is your turn" — ch. 32, ch. 33, ch. 34, ch. 35** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 Nothing on the artifact may be new. Every number, figure, and citation that
 appears on it also appears in your M9 note, and each one walks back through your
@@ -63,7 +63,8 @@ sharing so the instructor can open it.
 This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
 below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
+work inside your project notebook) **by the date that chapter's reading is
+due**:
 
 - Ch. 32 — [Research Posters](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/27-research-posters.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch27_research_posters.ipynb)
 - Ch. 33 — [Poster Criticism](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/28-poster-criticism.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch28_poster_criticism.ipynb)
@@ -71,11 +72,11 @@ work inside your project notebook):
 - Ch. 35 — [Difficult Questions and Uncertainty](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/30-difficult-questions-and-uncertainty.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch30_difficult_questions_and_uncertainty.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a
+draft piece of your own. You hand each section in on the date its own reading is due, under
+**IYT Practice** — the dated list is on the course page. They are not
+collected a second time here: carry the completed work forward into this
+milestone and your Research Project Dossier.
 
 ---
 

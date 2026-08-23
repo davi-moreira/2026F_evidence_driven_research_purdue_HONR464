@@ -48,7 +48,7 @@ and submit by Sunday night.
 | # | File | Description |
 |---|---|---|
 | 1 | **A shared Colab notebook link** *or* **`lastname_m07_first_analysis.ipynb`** | The nine-part deliverable below, carried in the notebook itself or in an optional companion **`lastname_m07_first_analysis.pdf`**: the seeded pipeline, your route-specific result with its uncertainty statement, the clean-restart record with your environment record, the claim-to-output trace, two independent re-derivations judged against a tolerance you declared first, the leakage audit with every flag settled, your gated URC abstract, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. The rerun is
 part of the milestone: confirm the result in your write-up matches what the
@@ -61,17 +61,18 @@ notebook prints from a fresh runtime, top to bottom, before you submit.
 This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
 below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
+work inside your project notebook) **by the date that chapter's reading is
+due**:
 
 - Ch. 22 — [AI as Programmer](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/19-ai-as-programmer.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch19_ai_as_programmer.ipynb)
 - Ch. 23 — [AI as Analytical Assistant](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part4-credible-evidence/20-ai-as-analytical-assistant.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch20_ai_as_analytical_assistant.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a
+draft piece of your own. You hand each section in on the date its own reading is due, under
+**IYT Practice** — the dated list is on the course page. They are not
+collected a second time here: carry the completed work forward into this
+milestone and your Research Project Dossier.
 
 ---
 

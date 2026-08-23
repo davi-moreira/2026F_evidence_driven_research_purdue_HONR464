@@ -53,7 +53,6 @@ and an unreviewed draft has nothing to revise from before Sunday's lock.
 | 1 | **`lastname_m11_posterdraft.pdf`** | Your **first full poster draft**, built on the course template and sized to the URC print spec. Every block present — title and author, the question, the design and data, the result with its uncertainty, the boundary, and the AI-use disclosure — even where a block is still rough. |
 | 2 | **`lastname_m11_trace.pdf`** *or* the same as notebook sections | Your **traceability sweep**: every number printed on the draft, listed with the notebook and cell that produced it. Any number you cannot trace is listed and marked as blocking. |
 | 3 | **`lastname_m11_ledger.pdf`** *or* the same as notebook sections | The **AI Research Ledger** rows for this milestone, including the reach-check prompt from Monday's lecture and the Poster Critic run from Wednesday's laboratory. |
-| 4 | **EDR\|AI "It is your turn"** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 Bring a printed or screen-shareable copy to class as well — the review round
 reads the board, not the file listing.
@@ -62,15 +61,9 @@ reads the board, not the file listing.
 
 ## The Book Anchor — "It Is Your Turn"
 
-This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
-below as you develop the milestone, and complete each chapter's closing **"It
-is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
-
-These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by
-the twelve Book Milestones — chain into a complete research artifact, so what
-you complete here is a draft piece of your own.
+This milestone anchors no new book chapters: the reading behind it is already
+done, and you handed in each chapter's "It is your turn" section on the date
+that chapter's reading was due.
 
 ---
 

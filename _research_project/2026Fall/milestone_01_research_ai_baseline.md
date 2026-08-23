@@ -44,7 +44,7 @@ studio and submit by Sunday night).
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m01_curiosity.pdf`** *or* a shared Colab notebook link | Your committed curiosity, dated as version zero with the reason for the version: the four lines you wrote by hand, your own two candidate directions plus the brainstormed ones with every NEW element marked and each candidate kept or rejected with its reason, the research problem you chose with its three scores and your red-team of it, your expected answer and the person a different answer would surprise, the four rails in the forms named below, your readiness screenshot, and your AI Research Ledger row. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 1** | The piece Book Milestone 1's checklist names, from ch. 1's "It is your turn": your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer — worked in the companion Colab notebook (share the link) or included in your artifact. Prompts marked *Optional depth* are not required. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 1** | The piece Book Milestone 1's checklist names, from ch. 1's "It is your turn": your committed curiosity, the brainstormed candidates with NEW elements marked and kept or rejected with reasons, your chosen research problem scored and red-teamed, and your expected answer — already submitted on its own reading date, as an IYT Practice submission. Prompts marked *Optional depth* are not required. Not collected again here: carry the work into this milestone and your Research Project Dossier. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.
@@ -72,11 +72,11 @@ checklist, not prompt count, defines completion:
 - Ch. 1 — [From Curiosity to a Research Problem](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch05_from_curiosity_to_a_research_problem.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a
+draft piece of your own. You hand each section in on the date its own reading is due, under
+**IYT Practice** — the dated list is on the course page. They are not
+collected a second time here: carry the completed work forward into this
+milestone and your Research Project Dossier.
 
 ---
 

@@ -71,8 +71,11 @@ Three ground rules keep the device honest:
 ## Grading
 
 Audits are scored on the four-row rubric in `audit_rubric.md` (0–2 per
-row). Your **best 8 of the 10 scored Studio audits** count inside the
-participation component of the syllabus grade. Audits replace the generic
+row). Each of the **10 scored Studio audits** is one participation credit,
+and the rubric decides whether you earned it: 5 or more of 8 earns the
+credit, 3 or 4 earns half, 2 or below earns none. Participation is one
+undivided block and every credit in it counts the same (D57); the rule is
+`surveys/participation_grading.md`. Audits replace the generic
 AI-output interrogation exercises — they are not extra homework, and no
 colleague work is ever due on a Friday: Fridays belong to your own
 project.

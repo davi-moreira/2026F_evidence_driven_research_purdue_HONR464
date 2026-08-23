@@ -56,7 +56,7 @@ table read and your second clean run).
 | 1 | **`lastname_m16_note.pdf`** *or* a shared Colab notebook link | **Research note v1**: the note opening with its dated **adjudication record**, then the five-move spine revised where the evidence demanded it, the updated claim–evidence table, and your redrafted AI disclosure. This is the graded prose artifact. |
 | 2 | **`lastname_m16_package.ipynb`** *or* a shared folder / repository link | Your **repaired reusable package**: the seeded notebook, a README a stranger can follow, your data or its access recipe, the environment record, and the licence and permissions note. Every question your cold-runner had to ask you is answered here in writing. |
 | 3 | **`lastname_m16_coldrun.pdf`** *or* a clearly marked README section | The **second clean-run record**: a dated rerun in a fresh environment, performed *after your last change* to the package, showing the headline number and its uncertainty statement coming back, or every discrepancy explained and fixed. |
-| 4 | **EDR\|AI "It is your turn" — ch. 36, ch. 37** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 4 | **EDR\|AI "It is your turn" — ch. 36, ch. 37** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit links, set sharing so the instructor can open them, and check that
 the package runs top to bottom when opened cold. Attach your **AI Research
@@ -72,17 +72,18 @@ edit, because a package changed after its last run is not done.
 This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
 below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
+work inside your project notebook) **by the date that chapter's reading is
+due**:
 
 - Ch. 36 — [Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch32_replication_and_reproduction.ipynb)
 - Ch. 37 — [Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch34_open_and_reusable_research_packages.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a
+draft piece of your own. You hand each section in on the date its own reading is due, under
+**IYT Practice** — the dated list is on the course page. They are not
+collected a second time here: carry the completed work forward into this
+milestone and your Research Project Dossier.
 
 ---
 

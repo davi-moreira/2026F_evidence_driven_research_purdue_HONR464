@@ -49,7 +49,7 @@ output or cut before you submit.
 |---|---|---|
 | 1 | **`lastname_m09_note.pdf`** *or* a shared Colab notebook link | **The research note**: a stand-alone account of your study, carrying the question, the method in one paragraph, the results with their uncertainty, the bounded headline claim, the limitations, and the references. This is the graded core. |
 | 2 | **`lastname_m09_claims.pdf`** *or* the same file's closing sections | Your **claim-to-evidence table** (every claim a row: claim · evidence · verification · boundary) and your **AI disclosure statement**, drafted from your ledger. |
-| 3 | **EDR\|AI "It is your turn" — ch. 28, ch. 29, ch. 30, ch. 31** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 3 | **EDR\|AI "It is your turn" — ch. 28, ch. 29, ch. 30, ch. 31** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 Your note is prose, but its numbers are not new. Every figure in it walks back
 to a cell in the seeded analysis notebook you submitted for M7 (`SEED = 464`)
@@ -64,7 +64,8 @@ in the note still matches the cell that produced it.
 This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
 below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
+work inside your project notebook) **by the date that chapter's reading is
+due**:
 
 - Ch. 28 — [From Results to Claims](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/25-from-results-to-claims.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch25_from_results_to_claims.ipynb)
 - Ch. 29 — [Claim–Evidence Tables](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part5-communicating/26-claim-evidence-tables.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch26_claim_evidence_tables.ipynb)
@@ -72,11 +73,11 @@ work inside your project notebook):
 - Ch. 31 — [From Dossier to Research Note](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/33-from-poster-to-research-note.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch33_from_poster_to_research_note.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a
+draft piece of your own. You hand each section in on the date its own reading is due, under
+**IYT Practice** — the dated list is on the course page. They are not
+collected a second time here: carry the completed work forward into this
+milestone and your Research Project Dossier.
 
 ---
 

@@ -52,7 +52,7 @@ writing. The written document is what is graded.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m05_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration with its hybrid-stage test and the required Causal Identification Skeptic critique answered, the mandated contrast, your jigsaw advocate summary, **Research Contract v1** with its delta and its updated claim boundary, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 14, ch. 15, ch. 16, ch. 17, ch. 18, ch. 19** | **Route-conditional:** the completed "It is your turn" sections of YOUR declared route's chapter and the instructor-assigned contrast chapter only (the hybrid chapter in addition only when your design has stages), worked in their companion Colab notebooks (share the links) or included in your artifact. The other route chapters are jigsaw material, not graded reading. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 14, ch. 15, ch. 16, ch. 17, ch. 18, ch. 19** | **Route-conditional, and already submitted.** YOUR declared route's chapter and the instructor-assigned contrast chapter only (the hybrid chapter in addition only when your design has stages) were due on their own reading date, as an IYT Practice submission. The other route chapters are jigsaw material, not graded reading. Not collected again here: carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
 open it, and check that every section reads cleanly when the notebook is run.
@@ -76,11 +76,11 @@ advocates one route to the room:
 - Ch. 19 — [Hybrid and Complex Designs](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/16-hybrid-and-complex-designs.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch16_hybrid_and_complex_designs.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a
+draft piece of your own. You hand each section in on the date its own reading is due, under
+**IYT Practice** — the dated list is on the course page. They are not
+collected a second time here: carry the completed work forward into this
+milestone and your Research Project Dossier.
 
 ---
 

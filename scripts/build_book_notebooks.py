@@ -88,11 +88,13 @@ EDITIONS = [
         "work_cell_generic": ("✍️ **Your work.** Double-click this cell and complete "
                               "the section above here."),
         "scratch": "# Scratch space — use this cell for any code your steps need.",
-        "rubric_heading": "### How this section is graded",
-        "rubric_intro": ("Each row scores **0** (missing), **1** (attempted but "
-                         "incomplete, generic, or unverified), or **2** (complete, "
-                         "specific to your own project, and verified where a check "
-                         "applies). **{total} points total.**"),
+        "rubric_heading": "### The standard this section is held to",
+        "rubric_intro": ("Use this as a self-check while you work. It is also the bar "
+                         "the same work meets later, once your project carries it. "
+                         "Each row: **0** missing, **1** attempted but incomplete, "
+                         "generic, or unverified, **2** complete, specific to your own "
+                         "project, and verified where a check applies. **{total} "
+                         "points in all.**"),
         "rubric_header_row": "| # | Criterion | 0–2 |",
         "rubric_standing": ("Craft and verification record: AI use logged in your AI "
                             "Research Ledger, claims stated with their uncertainty, "
@@ -101,8 +103,9 @@ EDITIONS = [
         "appendix_title": '## Grading rubrics — the "It is your turn" sections',
         "appendix_intro": ("One rubric per chapter, derived from the chapter's "
                            "numbered steps. The same rubric appears in the chapter's "
-                           "companion notebook, so what you grade is exactly what the "
-                           "student saw. Scoring, for every rubric: **0** missing · "
+                           "companion notebook, so the standard the reader worked to "
+                           "is the standard you apply when the project carries that "
+                           "work. The scale, for every rubric: **0** missing · "
                            "**1** attempted · **2** complete, project-specific, and "
                            "verified."),
         "ch_word": "Ch.",

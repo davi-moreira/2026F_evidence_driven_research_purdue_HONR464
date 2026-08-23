@@ -272,14 +272,15 @@ def gradebook_spec(config: dict) -> str:
         "attendance": ("Attendance", "iClicker; 85% target"),
         "participation": (
             "Participation",
-            "Feedback surveys, lecture-notebook completion, and other "
-            "constructive contributions to the course",
+            "One undivided block (D57): 'It is your turn' submissions, "
+            "12 studio feedback surveys, the student profile survey, the "
+            "course reflection, and other constructive contributions",
         ),
         "quizzes": (
             "Quizzes",
             f"{n_quizzes()} weekly printed MC quizzes, entered by hand",
         ),
-        "srl_performance": (
+        "student_research_lead": (
             "Student Research Lead",
             "5 leads per student, scored on project/srl/srl_rubric.md",
         ),
@@ -487,9 +488,19 @@ def gradebook_spec(config: dict) -> str:
         "- **Student Research Lead** — 5 items per student is wrong; create "
         "**one** item per SRL slot the student holds, or a single item scored 5 "
         "times. One item, entered after each lead, is simpler for 5 students.",
-        "- **Participation** — create items for feedback surveys and lecture-"
-        "notebook completion, plus an item for other constructive contributions "
-        "to the course.",
+        "- **Participation** — ONE undivided 9% category (D57). Create the 21 "
+        "'It is your turn' assignments, one per due date "
+        "(planning/IYT_SUBMISSION_SCHEDULE.md lists them, with the "
+        "instruction paragraph to paste into every one); one item for the "
+        "studio feedback survey; one for the student profile survey "
+        "(Aug 30); one for the course reflection (Dec 11); and one for the "
+        "10 scored Synthetic Colleague audits. The survey and audit items "
+        "each carry SEVERAL ledger credits (12 and 10), so enter the running "
+        "credit total against them rather than a single pass/fail; the ledger "
+        "in surveys/participation_grading.md is the authority and Brightspace "
+        "is where its running total is posted. Every credit is equal and "
+        "graded for completion; the lowest ceil(0.10 x N) are dropped. "
+        "Lecture notebooks are NOT collected and get no gradebook item.",
         "",
         "## Milestone due dates",
         "",

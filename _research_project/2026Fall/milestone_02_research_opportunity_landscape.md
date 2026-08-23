@@ -44,7 +44,7 @@ studio and submit by Sunday night).
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m02_rules_question.pdf`** *or* a shared Colab notebook link | Both halves below, dated as version zero with the reason for the version. Half A, your working agreement: your responsibility statement, your working rules, your delegation map, your opened AI Research Ledger with its retrospective rows plus one verified factual hinge and one complete SDIIVDD run, and the red-flag screen of your chosen problem. Half B, your declared question: the lead question with its kind and its reach, the words in your own sentence that fix each, the field card with its stranger-test record (what your reader misunderstood, and what you revised because of it), and your provisional claim boundary with its uncertainty-and-limitations line. Close with the cross-read of the two halves. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 2, ch. 3, ch. 4, ch. 5, ch. 6, ch. 7** | The pieces Book Milestone 2's checklist names, from each chapter's "It is your turn": your opened AI Research Ledger with its first verified exchange (ch. 2), your delegation map (ch. 3), one complete SDIIVDD run (ch. 4), your ownership statement with its never-delegate list (ch. 5), your lead question placed by kind and reach (ch. 6), and your formal declaration with its field card and boundary pair (ch. 7) — worked in the companion Colab notebooks (share the links) or included in your artifact. Prompts marked *Optional depth* are not required. |
+| 2 | **EDR\|AI "It is your turn" — ch. 2, ch. 3, ch. 4, ch. 5, ch. 6, ch. 7** | The pieces Book Milestone 2's checklist names, from each chapter's "It is your turn": your opened AI Research Ledger with its first verified exchange (ch. 2), your delegation map (ch. 3), one complete SDIIVDD run (ch. 4), your ownership statement with its never-delegate list (ch. 5), your lead question placed by kind and reach (ch. 6), and your formal declaration with its field card and boundary pair (ch. 7) — already submitted on their own reading dates, as IYT Practice submissions. Prompts marked *Optional depth* are not required. Not collected again here: carry the work into this milestone and your Research Project Dossier. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 make sure any code cell you kept runs top to bottom without error.
@@ -61,7 +61,8 @@ yours, what gets verified, what gets recorded, and what your name signs.
 This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
 below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
+work inside your project notebook) **by the date that chapter's reading is
+due**:
 
 - Ch. 2 — [AI Is Your Arm, Not Your Brain](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch01_ai_is_your_arm_not_your_brain.ipynb)
 - Ch. 3 — [You as a Research Director](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part1-research-with-ai/02-the-student-as-research-director.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch02_the_student_as_research_director.ipynb)
@@ -71,11 +72,11 @@ work inside your project notebook):
 - Ch. 7 — [Declare Your Research Question](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/declare-your-question.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/declare_your_question.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a
+draft piece of your own. You hand each section in on the date its own reading is due, under
+**IYT Practice** — the dated list is on the course page. They are not
+collected a second time here: carry the completed work forward into this
+milestone and your Research Project Dossier.
 
 ---
 

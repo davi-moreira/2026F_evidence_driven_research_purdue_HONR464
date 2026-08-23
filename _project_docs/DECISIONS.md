@@ -2879,3 +2879,172 @@ chapters' *It is your turn* sections when only one is due.
 `code-copy` and `code-annotations` are off **site-wide** rather than on the schedule
 page alone, because a page-level override forked a second 498 KB bootstrap bundle
 into `docs/` for one page. No page on this site carries a code block.
+
+---
+
+## D57 — Participation becomes a completion contract: "It is your turn" is collected, feedback goes per studio, and the 9% stays undivided (2026-08-23)
+
+**Instruction.** Davi, 2026-08-23, seven points: collect every required chapter's
+"It is your turn" section, due on the date the chapter was to have been read, graded
+by completion; move the feedback survey from per chapter to per studio, submitted
+right before each new studio starts; add the student profile survey (Aug 30) and the
+course reflection (Dec 11) to participation; **do not** use the proposed internal
+split; **do not** require the lecture notebook; keep the syllabus Participation
+section generic on the web page and in the `.docx`; update everything necessary.
+
+**Decision.** Participation is **9%, undivided**, and it is a completion contract.
+Every required item is worth the same single credit; the block is their sum. Four
+item families, and nothing else:
+
+| # | Item | Count (typical student) | Due | Graded |
+|---|---|---:|---|---|
+| 1 | EDR\|AI **"It is your turn"** sections | 36 | 11:59 PM on the date that chapter's reading was due | completion |
+| 2 | **Studio feedback survey** — one Qualtrics link, 12 responses | 12 | 11:59 PM on the Sunday that ends the studio week | completion |
+| 3 | **Student profile survey** | 1 | Sun Aug 30, 2026 | completion |
+| 4 | **Course reflection** | 1 | Fri Dec 11, 2026 | completion |
+| | **Baseline N** | **50** | | |
+
+Credit is `1.0` on time, `0.5` within seven days, `0` otherwise. The lowest
+`d = ⌈0.10 × N⌉` credits are dropped automatically (**d = 5**), and
+
+```
+participation points = 9.0 × (sum of the highest N − d credits) / (N − d)
+```
+
+The syllabus clause "other constructive contributions to the course" is a
+**documented adjustment of at most ±0.9 points** on that result, never a bucket with
+its own weight.
+
+**Three things are retired.**
+
+1. **The proposed internal split.** `surveys/reading_feedback_grading.md` had carried
+   an unratified 5% reading feedback / 2% lecture-notebook completion / 2% class
+   contribution proposal, flagged in its own text as Davi's decision to make. He made
+   it: rejected. It must not be reinstated. The file is now
+   `surveys/participation_grading.md` and states the whole undivided contract.
+2. **Lecture-notebook completion.** Lecture notebooks are class instruments. Nothing
+   is collected from them and nothing is graded on them. The phrase leaves the
+   syllabus, the `.docx`, `course_config.yaml`, the Brightspace kit, the assessment
+   architecture and the master plan.
+3. **Per-chapter reading feedback.** Forty responses a semester was an instrument
+   competing with the work it was meant to improve. Twelve per-studio responses
+   replace them, closing the same Sunday night as that studio's milestone — one
+   deadline closes the whole week. The trade is resolution: a studio-level response
+   cannot be filed under one chapter, so every anchor prompt now asks the student to
+   name the chapter inside the answer, and the defect channel asks which chapter too.
+
+**Why "It is your turn" moved out of the milestone submission tables.** The book's
+closing sections were handed in bundled into the Friday milestone, days after the
+reading they belong to. Collecting them on the reading date does three things at
+once: it makes the reading deadline real, it puts the practice next to the chapter
+that teaches it, and it gives Studio 12 — which D54 left teaching but collecting
+nothing — something to collect. Each brief keeps its Book Anchor and still carries
+the work into the dossier; the submission row now says the sections were already
+handed in and are **not collected a second time**. No milestone rubric score changes,
+because the row was never separately scored.
+
+**The two schedules are generated, never hand-written.**
+`scripts/build_participation_schedules.py` now emits three files from
+`planning/MEETING_SCHEDULE.csv` plus the book manifest:
+
+- `planning/IYT_SUBMISSION_SCHEDULE.md` — the ONE instruction paragraph to
+  paste into every assignment, the **20** Brightspace assignments to create (one per
+  due date, each collecting the chapters that share it), and all 40 chapters with
+  their dates, links and companion notebooks. This is the file Davi builds from.
+- `planning/STUDIO_FEEDBACK_SCHEDULE.md` — the 12 studios and their close dates. It
+  replaces `planning/READING_FEEDBACK_SCHEDULE.md`, which is deleted.
+- `planning/SRL_ASSIGNMENT_SCHEDULE.md` — unchanged.
+
+`scripts/build_reading_feedback_survey.py` becomes
+`scripts/build_studio_feedback_survey.py`, emitting
+`surveys/studio_feedback_instrument.md` and `surveys/qualtrics_studio_feedback.txt`.
+The measurement core is untouched: the six-item spine, Paas's nine-point effort
+rating, the four-version rotating anchor, the unscored `coverage` item, the AI-use
+pair, the defect channel and every source citation survive the move. What changed is
+the unit of observation and the wording that follows from it.
+
+**Ten of the twelve feedback deadlines are the Sunday that ends the studio week**,
+which is also that studio's milestone deadline (D55). Studio 12 has no studio after
+it, so its response closes **Fri Dec 11**, with the course reflection.
+
+**The syllabus stays generic**, on the web page and in the `.docx`, as Davi asked:
+one paragraph, no sub-weights, no dates, no per-item machinery. It names the surveys,
+the "It is your turn" submissions, the reflection and the contribution clause, says
+the items are scored for completion and timeliness rather than for the opinions they
+express, notes that the lowest few are dropped, and points at the course page for the
+list and the dates. The operative detail lives in `surveys/participation_grading.md`,
+the way D53 moved the Final Project machinery out of the syllabus.
+
+**The two new instruments are slots, not drafts.** `surveys/student_profile_survey.md`
+and `surveys/course_reflection.md` record the deadline, the completion rule and the
+constraints any version must satisfy, and say plainly that Davi is supplying the
+content. Neither invents questions he has not written.
+
+**Files changed.** `course_config.yaml` (a new `participation:` block, the machine
+record of all of the above); `syllabus.qmd`; `scripts/build_syllabus_docx.py`;
+`scripts/build_brightspace_kit.py`; `scripts/build_participation_schedules.py`;
+`scripts/build_studio_feedback_survey.py` (renamed);
+`planning/ASSESSMENT_ARCHITECTURE.md` (a new Participation section);
+`planning/COURSE_MASTER_PLAN.md`; all sixteen milestone briefs in
+`_research_project/2026Fall/`; `surveys/` (three new files, three retired);
+`brightspace/gradebook_spec.md` (regenerated); `CLAUDE.md`.
+
+---
+
+## D58 — The graded component is "Student Research Lead", with no "Performance" (2026-08-23)
+
+**Instruction.** Davi, 2026-08-23: drop the word **Performance** from the component
+name. It becomes **Student Research Lead**, or **SRL** where the abbreviation is
+already in use.
+
+**Decision.** A naming change and nothing else. The component stays at **20%** of the
+course grade, still scored on `project/srl/srl_rubric.md` across the five slots each
+student is randomly assigned. No weight moved, no rubric row changed, no scoring
+formula and no instrument was touched. `course_config.yaml assessment.srl_performance`
+keeps its key, which is a machine identifier no student ever sees, and the Brightspace
+category it feeds was already labelled "Student Research Lead" — after this rename the
+gradebook and the syllabus read word for word alike for the first time.
+
+**Why the word goes.** The component grades the whole leading responsibility: the
+preparation submitted two days ahead, the live session, and the synthesis and defence
+that close it. "Performance" narrowed the name to the middle third, the fifty minutes
+in the room, and it read as a verdict on the person rather than on the work. What is
+graded is the leading, so that is what it is called.
+
+**Where it was applied.** `syllabus.qmd` — the weights table row, the section heading,
+now `### Student Research Lead (20%)`, and the body sentence, which reads "Your
+**leading** is assessed on preparation, disciplinary accuracy, …" so the section does
+not carry the retired word one line under its own heading.
+`project/srl/srl_rubric.md` — the title is now `# SRL Rubric (100 points)` and the
+opening paragraph says those scores "make up the SRL share of your course grade".
+`planning/ASSESSMENT_ARCHITECTURE.md`, `planning/COURSE_MASTER_PLAN.md` and
+`_project_docs/INSTRUCTOR_IMPLEMENTATION_GUIDE.md`, in their component tables and
+weight recitations. And two generators, because the string lives in them and never in
+their output: `scripts/build_syllabus_docx.py` (the weights row and the bold lead-in of
+the Student Research Lead paragraph, kept identical to `syllabus.qmd` so the `.docx`
+and the web page cannot diverge) and `scripts/build_participation_schedules.py` (the
+**Weight.** line of `planning/SRL_ASSIGNMENT_SCHEDULE.md`). nb01's assessment table
+changed at its cell source, `_production_kit/nb_sources/nb01_ai_arm_not_brain.py`, and
+the notebook was rebuilt. Every generated artifact — the slot schedule, the syllabus
+`.docx`, `project/srl/srl_rubric.pdf`, the student and instructor nb01, `docs/` — was
+regenerated afterwards. One artifact no generator reaches:
+`_syllabus/2026F/2026F_evidence_driven_research_purdue_HONR464.pdf` is a manual Word
+export of the `.docx`, so it shows the old name until Davi re-exports it by hand.
+
+**What was deliberately left alone.** Ordinary English uses of "performance" that
+describe the live act rather than the graded category: `project/srl/srl_rubric.md`'s
+"Revision does not apply to a live performance the way it applies to a written
+milestone", its counterpart in `planning/ASSESSMENT_ARCHITECTURE.md`, and
+`project/srl/absent_lead_protocol.md`'s make-up option to lead a milestone-studio
+segment "as a substitute performance". Those sentences are correct as written and the
+rename does not reach them. Nothing in this log was rewritten either: D22, D31, D52 and
+D53 recite the old name in their weight tables and they stay exactly as they are,
+because they record what was decided on the day it was decided. The archived reviews
+under `_adm/` and the pre-D33/D34 cell-source backups are untouched for the same
+reason.
+
+**One anchor moved.** The syllabus section id changes from
+`#student-research-lead-performance-20` to `#student-research-lead-20`. No page, brief
+or Brightspace unit in this repository links to it, so nothing breaks here; an off-repo
+bookmark or an old email pointing at the previous fragment now lands at the top of the
+syllabus page rather than at the section.

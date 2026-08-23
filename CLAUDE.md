@@ -69,6 +69,9 @@ research chapter, an AI-management portfolio, and an oral evidence defense.
 | `planning/SOURCE_AUDIT_V2.md` | The rebuild audit: rulings, reuse map, GenAI Studio verification |
 | `planning/MEETING_SCHEDULE.md` | Per-meeting detail (43 × 34; generated from `scripts/schedule_data/`) |
 | `planning/INQUIRY_MAP.md` | The compass (questions) + design-pathway (designs) layers |
+| `surveys/participation_grading.md` | Anything about the Participation 9% — the whole undivided completion contract (D57) |
+| `planning/IYT_SUBMISSION_SCHEDULE.md` | The 40 "It is your turn" submissions, their due dates, and the one Brightspace instruction (generated) |
+| `planning/STUDIO_FEEDBACK_SCHEDULE.md` | The 12 per-studio feedback deadlines (generated) |
 | `project/srl/` | Student Research Lead handbook, templates, rubric |
 | `genai_studio/` | GenAI Studio role specs, KB strategy, Colab PoC |
 | `CONVERSATION_LOG.md` | Project history and prior decisions |
@@ -261,6 +264,40 @@ syllabus).
 
 ---
 
+## 🚨 CRITICAL RULE — Participation Is One Undivided Completion Contract  *(D57)*
+
+Participation is **9%, undivided**. Never publish or apply an internal split of it.
+Every required item is worth the same single credit; the block is their sum. Four
+item families and nothing else:
+
+1. **EDR|AI "It is your turn" sections** — one submission per required chapter, due
+   **11:59 PM on the date that chapter's reading was due** (36 for a typical student).
+2. **Studio feedback survey** — **one response per Studio, never per chapter**, due
+   **11:59 PM on the Sunday that ends the studio week** (12; Studio 12 closes Dec 11).
+3. **Student profile survey** — Sun Aug 30, 2026.
+4. **Course reflection** — Fri Dec 11, 2026 (D54 put it here; it is not a milestone,
+   and it is not M15's conference reflection).
+
+Credit `1.0` on time / `0.5` within seven days / `0` otherwise; the lowest
+`⌈0.10 × N⌉` credits drop automatically; `points = 9 × (kept credits) / (N − d)`.
+"Other constructive contributions" is a documented **±0.9-point adjustment**, not a
+bucket with a weight.
+
+**Never reintroduce, in any surface:** lecture-notebook completion as a graded thing
+(lecture notebooks are **never collected**), per-chapter reading feedback, or the
+retired 5/2/2 split. **The syllabus stays generic** — one paragraph, no sub-weights,
+no dates, on the web page and in the `.docx` alike; the operative detail lives in
+`surveys/participation_grading.md`. Milestone briefs keep their Book Anchor but must
+say the "It is your turn" sections were **already submitted and are not collected a
+second time**.
+
+```bash
+.venv/bin/python scripts/build_participation_schedules.py   # IYT + studio + SRL tables
+.venv/bin/python scripts/build_studio_feedback_survey.py    # Qualtrics import + instrument
+```
+
+---
+
 ## 🚨 CRITICAL RULE — Dataset Distribution  *(D15; unchanged)*
 
 `notebooks/data/` is the single canonical dataset folder; everything ships in
@@ -328,9 +365,12 @@ no title). **Chapter review is FROZEN until Architecture v1 (D35;
 3. **Notebook content must reflect the book** — course notebooks derive from
    the chapters; every notebook's wrap-up names its chapters; never edit a
    chapter's design content without checking its notebook (and vice versa).
-   Every milestone brief M0–M15 carries a **Book Anchor**: students submit the
-   anchored chapters' "It is your turn" sections (milestone NN ↔ nb(NN+1)'s
-   chapters; the 16 anchors partition all 37 chapters).
+   Every milestone brief M1–M16 **names** its **Book Anchor** chapters but no
+   longer collects them (D57): each "It is your turn" section is handed in on
+   its own chapter's reading date, as participation. The anchors do not
+   partition the book's 40 active lessons — ch. 38–40 anchor to nb16, whose
+   crosswalk row carries no milestone (D54), so they are participation-only,
+   and M11–M15 anchor no chapters at all.
 4. **The instructor manually reviews and updates the book**; the assistant then
    articulates and incorporates those reviews across the course material
    (notebooks, guides, site).
@@ -458,7 +498,20 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 6.6 — the D53 QM474 syllabus-text adoption (2026-08-23, DECISIONS.md
+**Version:** 6.7 — the D57 participation contract (2026-08-23, DECISIONS.md D57):
+Participation stays **one undivided 9%** and becomes a completion contract over four
+item families — the book's **"It is your turn" sections, collected on the date each
+chapter's reading was due** (40 chapters, 20 Brightspace assignments,
+`planning/IYT_SUBMISSION_SCHEDULE.md`); a **per-studio** feedback survey replacing the
+per-chapter one, closing the Sunday that ends each studio week
+(`planning/STUDIO_FEEDBACK_SCHEDULE.md`); the **student profile survey** (Aug 30); and
+the **course reflection** (Dec 11). Retired: the proposed 5/2/2 internal split,
+lecture-notebook completion (notebooks are never collected), and per-chapter reading
+feedback. The syllabus Participation section is deliberately generic on the web page
+and in the `.docx`; `surveys/participation_grading.md` carries the operative rule. The
+"It is your turn" row leaves every milestone's submission table, which now records
+that the sections were already handed in.
+(6.6 — the D53 QM474 syllabus-text adoption (2026-08-23, DECISIONS.md
 D53): the public `### Final Project (50%)` syllabus section is now QM 47400's Final
 Project section copied **word for word**, with exactly six permitted deviations (the
 35%→50% header; "In groups … predictive analytics" → the individual-default
@@ -481,7 +534,7 @@ instructor-approved group of two or three when at least three active projects
 and a feasible Peer Evaluation assignment remain; solo researchers receive
 confidential ratings from two assigned project peers, while group members rate
 teammates; all student-facing grading, milestone, poster, Brightspace, and
-notebook sources synchronized.)
+notebook sources synchronized.))
 (6.4 — the D50 conference block (2026-08-22, DECISIONS.md D50):
 course milestones renumbered **M0–M15 → M1–M17** so M1–M10 present Book
 Milestones 1–10 one-to-one; Weeks 11–14 become the conference block (poster

@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-"""build_participation_schedules.py — the two instructor-facing assignment tables.
+"""build_participation_schedules.py — the participation assignment tables.
 
-Both are DERIVED, never hand-written, so they cannot drift from the calendar:
+All three are DERIVED, never hand-written, so they cannot drift from the calendar:
 
-  planning/READING_FEEDBACK_SCHEDULE.md
-      One row per EDR|AI chapter: when its reading-feedback survey opens and
-      closes. Reading feedback is graded inside Participation (9%), which the
-      syllabus already defines as "feedback surveys, lecture-notebook
-      completion, and other constructive contributions".
+  planning/IYT_SUBMISSION_SCHEDULE.md            (D57)
+      The book "It is your turn" (IYT) submissions. One row per EDR|AI chapter,
+      due on the date that chapter's reading was due, plus the grouped list of
+      Brightspace assignments to create and the ONE instruction paragraph that
+      serves every one of them. Graded by completion inside Participation (9%).
 
-      The partition is exact. Every active lesson has exactly one HOME ANCHOR
-      in planning/MEETING_SCHEDULE.csv: the session where it is first required.
-      Feedback rides that anchor, so each chapter is rated once and only once,
-      and the responses land BEFORE the session that teaches it.
+  planning/STUDIO_FEEDBACK_SCHEDULE.md           (D57; replaces the per-chapter
+      READING_FEEDBACK_SCHEDULE.md)
+      One row per Studio: which chapters it covers and when its feedback survey
+      closes. Feedback is now collected ONCE PER STUDIO, closing the Sunday that
+      ends the studio week — right before the next studio starts.
 
   planning/SRL_ASSIGNMENT_SCHEDULE.md
       One row per Student Research Lead slot: which lecture it is, which frame
@@ -43,7 +44,8 @@ from session_readings import lesson_index, parse  # noqa: E402
 SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.CSV"
 if not SCHEDULE.exists():
     SCHEDULE = REPO / "planning" / "MEETING_SCHEDULE.csv"
-READING_OUT = REPO / "planning" / "READING_FEEDBACK_SCHEDULE.md"
+IYT_OUT = REPO / "planning" / "IYT_SUBMISSION_SCHEDULE.md"
+STUDIO_OUT = REPO / "planning" / "STUDIO_FEEDBACK_SCHEDULE.md"
 SRL_OUT = REPO / "planning" / "SRL_ASSIGNMENT_SCHEDULE.md"
 
 sys.path.insert(0, str(REPO / "scripts"))
@@ -51,16 +53,32 @@ from validate_calendar import no_class_days  # noqa: E402
 
 CLOSED = set(no_class_days())
 
-#: How a lesson's anchoring mode maps onto who owes feedback on it.
+SITE = ("https://davi-moreira.github.io/"
+        "2026F_evidence_driven_research_purdue_HONR464")
+COLAB = ("https://colab.research.google.com/github/davi-moreira/"
+         "2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book")
+
+#: How a lesson's anchoring mode maps onto who owes the submission.
 #: `route` / `route-contrast` lessons are read by every student, but only two
 #: of the five apply to any one student: their own declared route plus the
 #: contrast the instructor assigns them.
 REQUIREMENT = {
     "first-read": "Everyone",
     "assigned": "Everyone",
-    "route": "Route only (your declared route or your assigned contrast)",
-    "route-contrast": "Route only (your declared route or your assigned contrast)",
+    "route": "Pathway — only if this is YOUR declared route",
+    "route-contrast": "Pathway — only if this is your ASSIGNED contrast",
     "optional": "Only if your design has stages",
+}
+
+#: The order roles are listed when one due date carries more than one.
+ROLE_RANK = {"Everyone": 0, "Pathway — only if this is YOUR declared route": 1,
+             "Pathway — only if this is your ASSIGNED contrast": 2,
+             "Only if your design has stages": 3}
+
+#: A due date's assignment title, when the whole group is one non-Everyone role.
+ROLE_TITLE = {
+    "Pathway — only if this is YOUR declared route": "your declared route",
+    "Pathway — only if this is your ASSIGNED contrast": "your assigned contrast route",
 }
 
 
@@ -73,97 +91,281 @@ def pretty(iso: str, day: str) -> str:
     return f"{day} {dt.date.fromisoformat(iso).strftime('%b %-d')}"
 
 
+def long_date(d: dt.date) -> str:
+    return d.strftime("%a %b %-d, %Y")
+
+
 def week_of(unit: str) -> tuple[str, str]:
     m = re.match(r"Week (\d+) — (.+)$", unit)
     return (f"{m.group(1)}", m.group(2)) if m else ("", unit)
 
 
-# ---------------------------------------------------------------------------
-# 1. reading feedback
+#: `assigned` means "handed out today, read it for the NEXT session", so it
+#: opens the window but never closes it. The closing session is the first one
+#: where the chapter is actually required to have been read.
+READ_MODES = ("first-read", "route", "route-contrast", "optional")
 
-def reading_table(meetings: list[dict]) -> str:
-    index = lesson_index()
-    anchor: dict[str, tuple[int, str]] = {}
+
+def submissions(meetings: list[dict]) -> list[tuple[int, str, str]]:
+    """Every "It is your turn" submission event: (meeting, lesson id, mode).
+
+    One per (lesson, ROLE), not one per lesson. A pathway chapter is read on
+    Monday by the students whose declared route it is and on Wednesday by the
+    students assigned it as their contrast, so it produces TWO events with two
+    different due dates — which is what the schedule page already says. Any one
+    student still owes exactly two of the five: one in each role.
+    """
+    events: list[tuple[int, str, str]] = []
+    taken: set[tuple[str, str]] = set()
     assigned_at: dict[str, int] = {}
-    #: `assigned` means "handed out today, read it for the NEXT session", so it
-    #: opens the feedback window but never closes it. The closing session is the
-    #: first one where the chapter is actually required to have been read.
-    READ_MODES = ("first-read", "route", "route-contrast", "optional")
     for r in meetings:
+        n = int(r["meeting"])
         for lid, mode in parse(r["book_reading"]):
-            n = int(r["meeting"])
             if mode == "assigned":
                 assigned_at.setdefault(lid, n)
-            if lid in anchor or mode not in READ_MODES:
                 continue
-            anchor[lid] = (n, mode)
-    #: a chapter handed out but never re-listed as required falls back to its
-    #: assignment session rather than dropping out of the schedule entirely
+            if mode not in READ_MODES or (lid, mode) in taken:
+                continue
+            taken.add((lid, mode))
+            events.append((n, lid, mode))
+    covered = {lid for _, lid, _ in events}
     for lid, n in assigned_at.items():
-        anchor.setdefault(lid, (n, "assigned"))
-
-    missing = [l for l in index if l not in anchor]
+        if lid not in covered:
+            events.append((n, lid, "assigned"))
+            covered.add(lid)
+    missing = [l for l in lesson_index() if l not in covered]
     if missing:
         raise SystemExit(f"✗ no anchor session for: {missing}")
+    return sorted(events, key=lambda e: (e[0], e[1]))
 
+
+def anchors(meetings: list[dict]) -> dict[str, int]:
+    """lesson id -> the FIRST meeting where it is required (studio grouping)."""
+    first: dict[str, int] = {}
+    for n, lid, _ in submissions(meetings):
+        first.setdefault(lid, n)
+    return first
+
+
+# ---------------------------------------------------------------------------
+# 1. the "It is your turn" submissions
+
+IYT_INSTRUCTION = """\
+**What this assignment collects.** Submit the completed **"It is your turn"** \
+section of every EDR|AI chapter named in this assignment's title. Open the \
+chapter from the course Material page, work its "It is your turn" section in \
+that chapter's companion Colab notebook (use the badge at the top of the \
+chapter, then **File → Save a copy in Drive** so the copy is yours), or work it \
+inside your own project notebook if you would rather keep everything in one \
+place.
+
+**What to hand in.** One submission per assignment, covering all of its \
+chapters. Either upload the notebook (**File → Download → Download .ipynb**) or \
+a PDF of it (**File → Print → Save as PDF**), or paste a Colab share link set so \
+that anyone with the link can view it. Name the file \
+`LASTNAME_iyt_ch<numbers>.ipynb`. Answer in your own words, keep every question \
+in order, and add an AI Research Ledger row for anything you delegated to an AI \
+tool.
+
+**How it is graded.** Completion only: submitted, complete, and on time, or not. \
+Your answers are never graded right or wrong here, and nothing you write in them \
+can lower another grade. The book prints a rubric for each section, at the end of \
+its companion notebook: use it as your self-check, not as your grade. It is the \
+bar the same work meets later, once your project carries it, which is why doing \
+this once and doing it properly is worth more than doing it twice.
+
+**When it is due.** The date shown on this assignment, at 11:59 PM. That is the \
+date the chapter's reading was due, so the section is written from the reading \
+rather than from class. A submission up to seven days late earns half credit; \
+after that it earns none. Your lowest few participation credits are dropped \
+automatically, so a bad week does not need an email."""
+
+
+def chapter_range(nums: list[int]) -> str:
+    """[2,3,4,5] -> '2-5'; [2,3,5] -> '2-3, 5'."""
+    nums = sorted(nums)
+    out, start, prev = [], nums[0], nums[0]
+    for n in nums[1:] + [None]:
+        if n == prev + 1:
+            prev = n
+            continue
+        out.append(f"{start}" if start == prev
+                   else (f"{start}, {prev}" if prev == start + 1
+                         else f"{start}-{prev}"))
+        if n is None:
+            break
+        start = prev = n
+    return ", ".join(out)
+
+
+def iyt_page(meetings: list[dict]) -> str:
+    index = lesson_index()
+    events = submissions(meetings)
     by_meeting = {int(r["meeting"]): r for r in meetings}
-    # calendar order: this is the order the instructor works through the term
-    ordered = sorted(index.values(),
-                     key=lambda l: (anchor[l["id"]][0], l["display"]))
 
     counts = {"Everyone": 0, "route": 0, "conditional": 0}
-    lines = [
-        "| # | Chapter | Title | Week | Studio | Feedback closes at the start of "
-        "| Who owes it |",
+    detail = [
+        "| # | Chapter | Title | Due (11:59 PM) | Week · Studio | Who owes it "
+        "| Companion notebook |",
         "|---|---|---|---|---|---|---|",
     ]
-    seq = 0
-    for lesson in ordered:
-        seq += 1
-        n, mode = anchor[lesson["id"]]
+    groups: dict[int, list] = {}
+    for seq, (n, lid, mode) in enumerate(events, start=1):
+        lesson = index[lid]
         r = by_meeting[n]
-        week, studio = week_of(r["unit"])
+        d = dt.date.fromisoformat(r["date"])
+        week, studio = week_of(r["unit"].replace('"', ""))
         req = REQUIREMENT[mode]
         if req == "Everyone":
             counts["Everyone"] += 1
-        elif req.startswith("Route"):
+        elif req.startswith("Pathway"):
             counts["route"] += 1
         else:
             counts["conditional"] += 1
-        opens = assigned_at.get(lesson["id"])
-        session = (f"Meeting {n}, {pretty(r['date'], r['day'])}"
-                   + (f" (assigned meeting {opens})" if opens and opens < n else ""))
-        lines.append(
-            f"| {seq} | Ch. {lesson['display']} | {lesson['title']} "
-            f"| {week} | {studio} | {session} | {req} |")
+        groups.setdefault(n, []).append((lesson, req))
+        detail.append(
+            f"| {seq} | Ch. {lesson['display']} "
+            f"| [{lesson['title']}]({SITE}/book/{lesson['url_path']}) "
+            f"| {long_date(d)} | {week} · {studio.split(':')[0]} | {req} "
+            f"| [open]({COLAB}/{lesson['companion']}) |")
+
+    build = [
+        "| Brightspace assignment name | Due (11:59 PM) | Chapters collected "
+        "| Who owes it |",
+        "|---|---|---|---|",
+    ]
+    for n in sorted(groups):
+        r = by_meeting[n]
+        d = dt.date.fromisoformat(r["date"])
+        nums = [l["display"] for l, _ in groups[n]]
+        reqs = sorted({req for _, req in groups[n]},
+                      key=lambda t: ROLE_RANK.get(t, 9))
+        who = " · ".join(reqs)
+        titles = {ROLE_TITLE[q] for q in reqs if q in ROLE_TITLE}
+        suffix = f" ({titles.pop()})" if len(titles) == 1 else ""
+        build.append(f"| It is your turn — Ch. {chapter_range(nums)}{suffix} "
+                     f"| {long_date(d)} | {chapter_range(nums)} | {who} |")
 
     per_student = counts["Everyone"] + 2
-    head = f"""# Reading Feedback Schedule — EDR\\|AI
+    head = f"""# "It is your turn" — the participation submissions
 
 *Generated by `scripts/build_participation_schedules.py`. Do not hand-edit.*
 
-Every chapter of **EDR\\|AI** carries one reading-feedback response, graded inside
-**Participation (9%)**. One Qualtrics survey serves all of them; the student picks
-the chapter on the first question. The instrument, its scoring rule and its
-Qualtrics import files live in [`surveys/`](../surveys/).
+Every chapter of **EDR\\|AI** that a student is required to read carries one
+submission: that chapter's closing **"It is your turn"** section. It is graded
+**by completion** inside **Participation (9%)** — submitted or not — and it is
+due on **the date the chapter's reading was due**, so the section is written
+from the reading rather than reconstructed from class.
 
-**When it is due.** Feedback closes at the **start of the session where the chapter
-is first required**, which is the same moment the reading itself is due. That is
-deliberate: the responses arrive before the session that teaches the chapter, so
-they can shape it, and a student cannot write the feedback from the class
-discussion instead of from the reading.
+The scoring rule, the drop allowance and the rest of the participation contract
+are in [`surveys/participation_grading.md`](../surveys/participation_grading.md).
 
-**How many responses each student owes**
+**How many submissions each student owes**
 
 | | Chapters | Note |
 |---|---|---|
 | Required of everyone | {counts['Everyone']} | one per chapter |
-| Pathway chapters | {counts['route']} | each student reads **2** of these: their own declared route plus the contrast the instructor assigns |
+| Pathway submissions | {counts['route']} | 5 chapters × 2 roles. Each student owes exactly **2**: their declared route (due Mon Sep 21) and the contrast the instructor assigns them (due Wed Sep 23) |
 | Conditional | {counts['conditional']} | binds only if the design has stages |
 | **Baseline per student** | **{per_student}** | {counts['Everyone']} + 2 pathway |
 
-**Grading.** Scored for completion and seriousness, not for praise. The rubric and
-the drop allowance are in [`surveys/reading_feedback_grading.md`](../surveys/reading_feedback_grading.md).
+---
+
+## 1. The instruction — one paragraph block, every assignment
+
+Paste this into every "It is your turn" assignment on the course page. It is
+written to be correct for all of them, so nothing has to be edited per
+assignment except the title and the due date.
+
+<!-- iyt-instruction:begin -->
+{IYT_INSTRUCTION}
+<!-- iyt-instruction:end -->
+
+**Studio 5 takes two assignments, not one.** A pathway chapter is read on Monday
+by the students whose declared route it is and on Wednesday by the students
+assigned it as their contrast, so the two roles carry different due dates. Add
+one line to each: *"Submit only the section for the route this assignment names
+— your own declared route on Monday's, your assigned contrast on Wednesday's.
+Hybrid and Complex Designs is required only if your design has stages."*
+
+---
+
+## 2. The assignments to create ({len(groups)})
+
+One assignment per due date, each collecting the chapters that share it. This is
+the shortest build that still keeps every deadline honest.
+
+"""
+    detail_head = f"""
+
+---
+
+## 3. Every submission, one row ({len(events)})
+
+"""
+    return (head + "\n".join(build) + detail_head + "\n".join(detail) + "\n")
+
+
+# ---------------------------------------------------------------------------
+# 2. studio feedback
+
+def studio_table(meetings: list[dict]) -> str:
+    index = lesson_index()
+    first = anchors(meetings)
+    chapters_at: dict[int, list] = {}
+    for lesson in index.values():
+        chapters_at.setdefault(first[lesson["id"]], []).append(lesson)
+
+    studios: dict[int, dict] = {}
+    for r in meetings:
+        m = re.match(r"Week (\d+) — (Studio (\d+): .+)$", r["unit"].replace('"', ""))
+        if not m:
+            continue
+        k = int(m.group(3))
+        s = studios.setdefault(k, {"title": m.group(2), "week": int(m.group(1)),
+                                   "dates": [], "meetings": []})
+        s["dates"].append(dt.date.fromisoformat(r["date"]))
+        s["meetings"].append(int(r["meeting"]))
+
+    last_class = max(dt.date.fromisoformat(r["date"]) for r in meetings)
+    order = sorted(studios)
+    lines = ["| Studio | Week | Studio meetings | Chapters it covers "
+             "| Survey closes (11:59 PM) |", "|---|---|---|---|---|"]
+    for k in order:
+        s = studios[k]
+        end = max(s["dates"])
+        close = end + dt.timedelta(days=(6 - end.weekday()) % 7 or 7)
+        note = ""
+        if close > last_class:
+            close = last_class
+            note = " *(the term ends first, so this one closes with the course "
+            note += "reflection on the last day of class)*"
+        nums = sorted(l["display"] for n in s["meetings"]
+                      for l in chapters_at.get(n, []))
+        covers = f"Ch. {chapter_range(nums)}" if nums else "—"
+        span = f"{s['dates'][0].strftime('%b %-d')}–{end.strftime('%b %-d')}"
+        lines.append(f"| **{k}** · {s['title'].split(': ',1)[1]} | {s['week']} "
+                     f"| {span} | {covers} | **{long_date(close)}**{note} |")
+
+    head = f"""# Studio Feedback Schedule — EDR\\|AI
+
+*Generated by `scripts/build_participation_schedules.py`. Do not hand-edit.*
+
+Feedback on the book is collected **once per Studio**, not once per chapter
+(D57). One Qualtrics survey serves all {len(order)} of them; the student picks
+the studio on the first question, so the course page carries **one link** all
+semester and the export is **one file** with a `studio` column. The instrument
+and its Qualtrics import file live in [`surveys/`](../surveys/).
+
+**When it closes.** The **Sunday that ends the studio week, 11:59 PM** — the
+night before the next studio starts. That is the same moment the studio's
+milestone is due (D55), so one deadline closes the whole week: submit the
+milestone, then say what the reading did for you while it is still fresh.
+
+**Grading.** Graded inside **Participation (9%)**, for completion and
+seriousness, never for praise. A careful complaint and a careful compliment earn
+exactly the same credit. The rule and the drop allowance are in
+[`surveys/participation_grading.md`](../surveys/participation_grading.md).
 
 ---
 
@@ -174,7 +376,7 @@ the drop allowance are in [`surveys/reading_feedback_grading.md`](../surveys/rea
 
 
 # ---------------------------------------------------------------------------
-# 2. SRL slots
+# 3. SRL slots
 
 FRAME = {
     "Mon": ("Monday · guided investigation",
@@ -238,11 +440,11 @@ survives into the next edition.
 
 **What each lead owes.** A preparation script or notebook **two days before** the
 lecture (the "Prep script due" column), prepared from one week ahead. The student
-instructions are the SRL handout PDFs in `_handouts/srl/`, built by
+instructions are the SRL handout PDFs in `project/srl/`, built by
 `scripts/build_handout_pdfs.py`; those carry no names and no dates, so they upload
 to Brightspace once and stay correct.
 
-**Weight.** Student Research Lead Performance is **20%** of the course grade.
+**Weight.** Student Research Lead is **20%** of the course grade.
 The rubric is `project/srl/srl_rubric.md`.
 
 ---
@@ -256,7 +458,8 @@ The rubric is `project/srl/srl_rubric.md`.
 def main() -> None:
     check = "--check" in sys.argv
     meetings = rows()
-    outputs = [(READING_OUT, reading_table(meetings)),
+    outputs = [(IYT_OUT, iyt_page(meetings)),
+               (STUDIO_OUT, studio_table(meetings)),
                (SRL_OUT, srl_table(meetings))]
     stale = []
     for path, content in outputs:

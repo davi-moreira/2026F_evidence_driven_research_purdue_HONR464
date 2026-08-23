@@ -46,7 +46,7 @@ submit by Sunday night.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m04_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: objective, target estimand, population, setting and time, data strategy, a **provisional operationalization marked for revision**, warrant, answer strategy, and uncertainty statement, with the model behind them drawn as a 3-node **DAG** image. With it comes your **diagnosis** (bias, wobble, and how often the design would detect what you are looking for), your **redesign record**, your **permission determination** (one declared status, with the authority and the date you asked if it is anything but cleared), your **claim boundary**, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 10, ch. 11, ch. 12, ch. 13** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 10, ch. 11, ch. 12, ch. 13** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 confirm that the DAG figure and any diagnosis output render when the notebook is
@@ -59,7 +59,8 @@ run.
 This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
 below as you develop the milestone, and complete each chapter's closing **"It
 is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
+work inside your project notebook) **by the date that chapter's reading is
+due**:
 
 - Ch. 10 — [Model, Inquiry, Data Strategy, and Answer Strategy](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch09_model_inquiry_data_strategy_and_answer_strategy.ipynb)
 - Ch. 11 — [Uncertainty Before You Need It](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/uncertainty-foundations.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/uncertainty_foundations.ipynb)
@@ -67,11 +68,11 @@ work inside your project notebook):
 - Ch. 13 — [Research Ethics and Data Governance](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/research-ethics-and-data-governance.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/research_ethics_and_data_governance.ipynb)
 
 These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a
+draft piece of your own. You hand each section in on the date its own reading is due, under
+**IYT Practice** — the dated list is on the course page. They are not
+collected a second time here: carry the completed work forward into this
+milestone and your Research Project Dossier.
 
 ---
 

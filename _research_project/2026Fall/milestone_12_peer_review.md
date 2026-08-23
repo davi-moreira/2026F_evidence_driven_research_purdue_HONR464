@@ -57,21 +57,14 @@ class, in a silent round, and finished in Friday's studio.
 |---|---|---|
 | 1 | **`lastname_m12_reviews.pdf`** | One completed review survey for **every other active project or poster**, on the course poster rubric. Each survey carries at least one item recorded as genuinely sound and at least two findings, and every finding names the block it lives in and the change that would fix it. This is individual work even if your own project is a group project. |
 | 2 | **`lastname_m12_response.pdf`** *or* the same as notebook sections | Your **individual response record** on the sheets your project received: each finding ranked blocking or optional, each blocking finding paired with the repair you made or endorsed, and at least one finding you rejected with the reason you rejected it. |
-| 3 | **EDR\|AI "It is your turn"** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 ---
 
 ## The Book Anchor — "It Is Your Turn"
 
-This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
-below as you develop the milestone, and complete each chapter's closing **"It
-is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
-
-These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by
-the twelve Book Milestones — chain into a complete research artifact, so what
-you complete here is a draft piece of your own.
+This milestone anchors no new book chapters: the reading behind it is already
+done, and you handed in each chapter's "It is your turn" section on the date
+that chapter's reading was due.
 
 ---
 

@@ -127,22 +127,24 @@ def main() -> int:
             errors.append(f"{mi}: revisit of {stray} is not a revisit "
                           f"assignment in the crosswalk")
 
-        # --- D. what is due today is what the week read -------------------
-        read = set().union(*(got.get(k, set()) for k in
-                             ("first-read", "route", "route-contrast",
-                              "optional", "revisit", "assigned",
-                              "continue")) or [set()])
-        undue = sorted(got.get("due", set()) - read)
-        if undue:
-            errors.append(f"{mi}: {undue} marked due but never assigned "
-                          f"this week")
+        # --- D. RETIRED with the `due` mode (D57) -------------------------
+        # The "It is your turn" submission is a PARTICIPATION assignment due at
+        # 11:59 PM on the chapter's own reading day, so it rides the read modes
+        # and no longer needs a token of its own. Its deadline is generated
+        # into planning/IYT_SUBMISSION_SCHEDULE.md from the same home anchors.
 
         # --- E. 'assigned' and 'continue' bracket a same-week first read ---
+        #: A pathway lesson's first read is 'route' / 'route-contrast', and a
+        #: conditional one's is 'optional', so a Friday 'continue' on the week's
+        #: route shelf is legitimate (round D57).
+        FIRST = ("first-read", "route", "route-contrast", "optional")
+        first = set().union(*(got.get(k, set()) for k in FIRST)) if any(
+            k in got for k in FIRST) else set()
         for mode in ("assigned", "continue"):
             for lid in got.get(mode, set()):
-                if lid not in got.get("first-read", set()):
+                if lid not in first:
                     errors.append(f"{mi}: {lid!r} is {mode!r} but never "
-                                  f"'first-read' in the same week")
+                                  f"first read in the same week")
 
     # --- F. studio wording is the book's ----------------------------------
     published = studio_titles()

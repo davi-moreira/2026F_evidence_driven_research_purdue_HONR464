@@ -115,8 +115,8 @@ immediately after the session (conceptual correctness, Socratic quality,
 assumption exposure, productive + interrogated AI use, inclusion, time
 management, connection to research decisions, handling uncertainty). Collect
 classmate feedback on `project/srl/srl_peer_feedback_form.md` and pass it to the
-lead quickly; it is the fastest way they improve before the next slot. SRL
-performance is **20%** of the course grade (syllabus).
+lead quickly; it is the fastest way they improve before the next slot. The
+Student Research Lead component is **20%** of the course grade (syllabus).
 
 **Intervention protocol.** How to step in without seizing the room is summarized
 in `project/srl/srl_handbook.md` ("How the instructor will step in"); the
@@ -158,7 +158,15 @@ reflection session, collected under participation.
   `course_config.yaml assessment:`.
 
 The course has five weighted categories totaling 100: Attendance 1 ·
-Participation 9 · Quizzes 20 · SRL performance 20 · Final Project 50. Final
+Participation 9 · Quizzes 20 · SRL 20 · Final Project 50.
+**Participation is one undivided block (D57)**: every required item is one equal
+credit, graded for completion — the book's "It is your turn" section for each
+required chapter (due 11:59 PM on that chapter's reading day), the 12 per-studio
+feedback surveys (each Sunday that ends a studio week), the student profile
+survey (Aug 30) and the course reflection (Dec 11). Lecture notebooks are never
+collected. The contract is `surveys/participation_grading.md`; the dated
+assignment lists are `planning/IYT_SUBMISSION_SCHEDULE.md` and
+`planning/STUDIO_FEEDBACK_SCHEDULE.md`. Final
 Project contains **Milestone Deliverables 30% · Peer Evaluation 20% · Peer
 Review 10% · Poster Presentation at the Purdue Undergraduate Research
 Conference 20% · Instructor/TA Evaluation 20%**, worth 15/10/5/10/10 course
@@ -294,8 +302,9 @@ exchange as follows:
   poster submission. Davi has not yet ruled whether the defense should stay
   ungraded, be folded into a component, or be retired.
 - **Fri Dec 11 — the course-closing reflection session.** No milestone is
-  collected. Students write the reflection in the room; it is scored under
-  **Participation**.
+  collected. The reflection is written in the room and submitted by 11:59 PM,
+  scored under **Participation** as one credit; Studio 12's feedback survey
+  closes the same night.
 - **End-of-term wrap:**
   1. Grade M16 and the reflection, and enter the Instructor/TA Evaluation score
      from the locked M13 poster.

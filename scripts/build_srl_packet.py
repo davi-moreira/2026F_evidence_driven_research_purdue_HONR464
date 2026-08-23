@@ -136,7 +136,6 @@ MODE_LEAD = {
     "route": "**Required — everyone reads their own declared route:**",
     "route-contrast": "**Required — everyone reads their assigned contrast route:**",
     "optional": "**Only for students whose design has stages:**",
-    "due": "**Due that week** (the class submits these chapters' *It is your turn* sections):",
 }
 
 

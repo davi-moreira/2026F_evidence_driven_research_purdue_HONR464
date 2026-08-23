@@ -16,15 +16,17 @@ what lets each travel on its own.
 - **The book** is the manual. Every chapter ends with an **It is your turn**
   section, and every chapter has its **own companion Colab notebook** (the
   badge at the top of the chapter) where a reader runs the chapter's code and
-  completes that section. Worked in order, the 37 sections chain into a
+  completes that section. Worked in order, the 40 sections chain into a
   complete research project; the book stands on its own as a self-study
   path.
 - **The course** wraps around the book. Its weekly **lab notebooks** are
   classroom artifacts derived from the book's chapters and shaped for live,
   50-minute flipped sessions; its **readings** are the book's chapters
-  (required) with matching RDSS chapters recommended; and its **milestones**
-  collect the chapters' It is your turn sections, so each graded step of the
-  student's semester project is a piece of the book's chain.
+  (required) with matching RDSS chapters recommended; and each chapter's It is
+  your turn section is collected on the day that chapter's reading is due,
+  graded for completion. Its **milestones** then name their book anchor and
+  carry that same work into the semester project, so each graded step of the
+  project is a piece of the book's chain.
 
 When the book changes, the course material is resynchronized from it: the
 English edition of the book is the source of truth for everything downstream.
@@ -73,9 +75,11 @@ means the course's.
 
 The project runs through sixteen milestones, **M1–M16**, one per week, from a
 first curiosity map to a reproducible package a stranger can rerun. Each milestone brief
-names its **book anchor**: the chapters whose It is your turn sections the
-student completes and submits that week. Grading the milestone is therefore
-grading a stretch of the book's chain, worked on the student's own project.
+names its **book anchor**: the chapters whose It is your turn sections that
+stretch of the project is built on. Those sections are handed in earlier, each
+on the day its own chapter's reading is due, and graded for completion. The
+milestone then grades what the student's own project made of them, so grading
+it is grading a stretch of the book's chain.
 The briefs are open in the repository:
 [`_research_project/2026Fall/`](https://github.com/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/tree/main/_research_project/2026Fall){target="_blank"}.
 

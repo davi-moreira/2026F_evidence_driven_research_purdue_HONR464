@@ -52,12 +52,9 @@ is no "I will fix it after submission," because after this is the Expo.
 
 ## What to Submit on Brightspace
 
-Due: **Sunday, November 8, 11:59 PM (terminal — no revision window).** Monday and
-Wednesday taught this week's two lessons, replication and reproduction and then
-open and reusable research packages, and you worked their "It is your turn"
-sections as you went. Friday's studio is this milestone. You assemble the
-package, run it cold, clear the two blocking gates, and lock the poster on the
-numbers that just came back.
+Due: **Sunday, November 8, 11:59 PM (terminal — no revision window).** Friday's
+studio is this milestone. You assemble the package, run it cold, clear the two
+blocking gates, and lock the poster on the numbers that just came back.
 
 **The order of the rows below is the order of the work.** The package and its
 cold run come first, because the poster's numbers are their output. Nothing goes
@@ -69,7 +66,6 @@ on the board that did not just reproduce.
 | 2 | **`lastname_m13_coldrun.pdf`** *or* the same as notebook sections | Your **cold-run record**: the clean-environment run made from your written instructions only, every question the run raised, every documentation line you added in response, and the honest label the run earns. Working alone, that label is **"solo proxy; external cold run pending"**. |
 | 3 | **`lastname_m13_gates.pdf`** *or* the same as notebook sections | The two **blocking gate records**: your **author self-reproduction log** (fresh runtime, Restart & Run All, dated, every poster number and every bound reproduced) and your **release preflight** (permissions, disclosure, reproducibility, claim boundary, each marked clear, pending, or blocking). **The poster does not lock without both.** |
 | 4 | **`lastname_m13_poster.pdf`** | The print-ready **locked poster**, carrying your **AI-use disclosure block** and your **signed final-lock checklist** (last page or companion). Every number on it came from the run recorded in rows 1 through 3, every citation resolves, and the uncertainty rides in the same eye-span as the claim. |
-| 5 | **EDR\|AI "It is your turn" — ch. 36, ch. 37** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 If you submit a folder or notebook link, set sharing so the instructor can open
 it, and confirm the package runs top to bottom in a clean session. Submit the
@@ -80,20 +76,9 @@ the Brightspace timestamp governs the deadline.
 
 ## The Book Anchor — "It Is Your Turn"
 
-This milestone is anchored in the course book, **EDR\|AI**. Read the chapters
-below as you develop the milestone, and complete each chapter's closing **"It
-is your turn"** section in its companion Colab notebook (or carry the same
-work inside your project notebook):
-
-- Ch. 36 — [Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch32_replication_and_reproduction.ipynb)
-- Ch. 37 — [Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch34_open_and_reusable_research_packages.ipynb)
-
-These sections are the point of the reading, not extra work: across the
-semester, the book's "It is your turn" sections — one per lesson, collected by the twelve Book Milestones — chain into your final
-research chapter, so what you complete here is a draft piece of your final
-artifact. Include the completed sections in this milestone's submission (see
-the submission table above) and carry them forward in your Research Project
-Dossier.
+This milestone anchors no new book chapters: the reading behind it is already
+done, and you handed in each chapter's "It is your turn" section on the date
+that chapter's reading was due.
 
 ---
 

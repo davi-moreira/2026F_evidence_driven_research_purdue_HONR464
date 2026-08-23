@@ -1,8 +1,12 @@
 # Colleague Audit Rubric — four rows, 0–2 each (8 points per audit)
 
-Scored live or from your submitted audit sheet. Your **best 8 of the 10
-scored Studio audits** count inside the participation grade. The rubric
-rewards verified findings and calibrated judgment — not suspicion volume.
+Scored live or from your submitted audit sheet. Each of the **10 scored
+Studio audits** is one participation credit, and this rubric decides whether
+you earned it: **5 or more of 8** earns the credit, **3 or 4** earns half,
+**2 or below** earns none (D57). Your lowest participation credits are dropped
+automatically, so a weak audit does not need an email. The rubric rewards
+verified findings and calibrated judgment, not suspicion volume, and its
+four-row total is never averaged into your grade.
 
 | Row | 0 | 1 | 2 |
 |---|---|---|---|

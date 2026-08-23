@@ -211,9 +211,9 @@ alignment, and responsible interpretation — never coding elegance.
 | Component | Weight |
 |---|---|
 | Attendance (iClicker) | 1 |
-| Participation (feedback surveys + lecture-notebook completion + other constructive contributions) | 9 |
+| Participation (studio feedback surveys + "It is your turn" submissions + profile survey + course reflection + other constructive contributions; one undivided block, D57) | 9 |
 | Quizzes (weekly Friday MC topic quizzes) | 20 |
-| Student Research Lead performance | 20 |
+| Student Research Lead | 20 |
 | Final Project | 50 |
 | **Total** | **100** |
 
