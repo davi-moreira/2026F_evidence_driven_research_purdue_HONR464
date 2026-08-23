@@ -289,8 +289,11 @@ def check_crosswalk(arch, cw) -> list[str]:
     cp_fired: dict[tuple, list[int]] = {}
     cp_revisited: dict[tuple, list[int]] = {}
     for r in cw.get("rows", []):
-        mi = r.get("milestone", "?")
-        milestones.append(mi)
+        # D54: a teaching-only row (Week 16) carries no milestone. It is still
+        # checked for readings and station events, but it is not a milestone.
+        mi = r.get("milestone") or f"[{r.get('nb', '?')} — no milestone]"
+        if r.get("milestone"):
+            milestones.append(mi)
         nbs.append(r.get("nb", "?"))
         for a in r.get("assignments", []):
             lid = a.get("lesson")
