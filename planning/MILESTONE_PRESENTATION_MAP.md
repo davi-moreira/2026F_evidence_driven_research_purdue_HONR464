@@ -1,13 +1,15 @@
 # MILESTONE_PRESENTATION_MAP — develop → present → submit → revise, per milestone
 
 Every milestone is presented or peer-reviewed — in class or on the course board —
-before (or at) submission. With 5 students, every student presents every time;
+before (or at) submission. With five enrolled students, every active project
+presents every time and every student has an individual speaking or review role;
 formats are deliberately varied so "presenting" never calcifies into one genre.
 Under the studio-Friday rhythm, most presentations happen inside the Friday work
 block (20–50 min); a few sit on Mon/Wed lecture days where hard dates force it
 (M13's gallery walk and oral defense, the M17 defenses), M6 and M16 run on the
 async board, and the URC Expo (Tue Nov 17) is a scheduled performance event and a
-Final Project **Poster and Expo Presentation** score. M15 separately grades the
+Final Project **Poster Presentation at the Purdue Undergraduate Research
+Conference** score. M15 separately grades the
 written reflection checkpoint. Kickoff venues live in `PROJECT_MILESTONES.md`.
 
 This map is a **planning companion** to `PROJECT_MILESTONES.md` (the chain table)
@@ -36,7 +38,7 @@ for up to half the lost points).
 | M8 | **Protocol cross-review** — partner swaps declared-analysis protocols and pre-registers one predicted attack on the other's plan | M20–M21 | M22 (studio) | Fri Oct 16 | eligible |
 | M9 | **First-evidence walkthrough** — 60-second redesign pitch: weakness, fix, before/after diagnosands on the first computed estimate | M22–M24 | M25 (studio) | Fri Oct 23 | eligible |
 | M10 | **Poster-draft red-team** — the five audits (claim boundary, figure honesty, read path, uncertainty, accessibility); two peers + the required Poster Critic and Robustness & Sensitivity Reviewer roles; author triages hits | M25–M27 | M28 (studio) | Fri Oct 30 | eligible |
-| M13 | **Poster Criticism I gallery walk** (M29) + **Criticism II oral defense** (M30) — three lenses (interdisciplinary / methods / skeptic), defend-or-concede on the record; production lock at the Friday studio | M28–M30 | M29 + M30 (Mon/Wed) + M31 (studio) | **Fri Nov 6, 5:00 PM** | none (terminal) |
+| M13 | **Poster Criticism I gallery walk** (M29) + **Criticism II oral defense** (M30) — three lenses (interdisciplinary / methods / skeptic), defend-or-concede on the record; pre-lock production at the Friday studio, then terminal Sunday submission | M28–M30 | M29 + M30 (Mon/Wed) + M31 (studio) | **Sun Nov 8, 11:59 PM** | none (terminal) |
 | M17 | **Mock poster symposium** — the three pitch layers (30-sec hook, 90-sec walk, full pitch) under live fire; partner + AI reviewer flag every spoken upgrade | M32–M33 | M34 (studio) | Fri Nov 13 | eligible |
 | M15 | **URC Expo** (Tue Nov 17: present your poster + evaluate ≥3 peer posters; live quality is graded only in Final Project) + **reflection story round** (M36) — 90-sec surprising moment, then read the pattern off your coded tally | M35–M36 | Expo (Tue Nov 17) + M36 (studio) | Fri Nov 20 | M15 written package eligible; Final Project live score terminal |
 | M16 | **Anonymized reproduction exchange** (async) — you rebuild a stranger's headline number cold, red-team it, and post the residual to the board | M36–M37 | async board (module week) | **Sun Nov 29** | eligible |
@@ -64,5 +66,5 @@ gallery walk + adversarial three-lens oral defense (M13) → the three-layer pit
 under fire (M17) → **public conference at the URC Expo (M15)** → async
 reproduction exchange (M16) → table read (M16) → **formal Evidence Defense (M17)**.
 Stakes and polish rise monotonically; format length does not — compression is
-trained as its own skill, and the two terminal performances (the Nov 6 poster lock
+trained as its own skill, and the two terminal performances (the Nov 8 poster lock
 and the Dec 11 Evidence Defense) carry no revision window.

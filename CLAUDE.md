@@ -32,7 +32,9 @@ task; neither agent is permanently primary or subordinate.
 
 **HONR 46400 — SP: Evidence-Driven Research** ("How to Design, Analyze, Verify,
 and Defend Empirical Research"), a semester-long Honors College seminar (Fall
-2026, **Mon/Wed/Fri, 50 minutes, in person**, ~5 students, individual projects)
+2026, **Mon/Wed/Fri, 50 minutes, in person**, ~5 students, individual projects
+by default with one instructor-approved group permitted when the peer-work
+topology remains viable)
 teaching honors students — **without assuming a quantitative or computing
 background** — to run an original evidence-driven research project from
 curiosity to a publicly defended claim. The course's defining message:
@@ -223,8 +225,9 @@ staging. Fixed section frames, enforced by the session-guide generator
 **D50 — the conference block.** Weeks 1–10 are Studios 1–10, so **course
 milestone M(n) presents Book Milestone (n) one-to-one for n = 1..10**. Weeks
 11–14 are the CONFERENCE BLOCK and anchor no new lesson: poster production and
-the in-class peer review (M11 draft due AT CLASS Wednesday, M12 the four review
-surveys), the **terminal poster lock Sun Nov 8, 11:59 PM (M13)**, presentation
+the in-class peer review (M11 draft due AT CLASS Wednesday, M12 one independent
+review of every other active project), the **terminal poster lock Sun Nov 8,
+11:59 PM (M13)**, presentation
 preparation (M14, three timed pitches + the invitation post), the Expo, and two
 ASYNCHRONOUS reflection sessions (Fri Nov 20 + Mon Nov 23) closing at M15.
 **Studios 11 and 12 run POST-conference on Weeks 15–16 in the standard frame**
@@ -443,7 +446,15 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 6.4 — the D50 conference block (2026-08-22, DECISIONS.md D50):
+**Version:** 6.5 — the D52 grading and project-mode contract (2026-08-23,
+DECISIONS.md D52): one top-level Final Project at 50%, using QM474's same five
+items at 30/20/10/20/20; individual work is the default, with at most one
+instructor-approved group of two or three when at least three active projects
+and a feasible Peer Evaluation assignment remain; solo researchers receive
+confidential ratings from two assigned project peers, while group members rate
+teammates; all student-facing grading, milestone, poster, Brightspace, and
+notebook sources synchronized.
+(6.4 — the D50 conference block (2026-08-22, DECISIONS.md D50):
 course milestones renumbered **M0–M15 → M1–M17** so M1–M10 present Book
 Milestones 1–10 one-to-one; Weeks 11–14 become the conference block (poster
 production, in-class peer review, the terminal **Sun Nov 8** lock shared with

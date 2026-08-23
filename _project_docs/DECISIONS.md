@@ -2474,3 +2474,97 @@ contribution rather than a separately promised syllabus subcategory.
 Brightspace generator and its ignored output, nb01's grading table, and the
 M13/M15/M16/M17 grading language must remain synchronized. D22/D31/D41 remain
 historical records; D51 supersedes their assessment-weight statements only.
+
+---
+
+## D52 — One Final Project with QM474's same five component items (2026-08-23)
+
+**Decision.** This decision explicitly supersedes **D51's grading design**.
+HONR 46400 no longer splits project grading between a 20% Final Project
+Milestones category and a 30% Final Project category. Those two categories merge
+into exactly one top-level **Final Project worth 50%**. The full course contract
+is Attendance 1% · Participation 9% · Quizzes 20% · Student Research Lead
+performance 20% · Final Project 50% = **100%**.
+
+**The five items are not translated or renamed.** The Fall 2026 QM474 public
+`../../../predictive_analytics/2026F_predictive_analytics_QM474/syllabus.qmd`
+supplies the exact labels; its canonical project reference
+(`_final_project/2026F/final_project_milestone_reference.md` in the QM474
+repository) confirms the internal shares while abbreviating the last two labels:
+
+| Final Project item | Share of Final Project | Course points |
+|---|---:|---:|
+| **Milestone Deliverables** | 30% | 15 |
+| **Peer Evaluation** | 20% | 10 |
+| **Peer Review** | 10% | 5 |
+| **Poster Presentation at the Purdue Undergraduate Research Conference** | 20% | 10 |
+| **Instructor/TA Evaluation** | 20% | 10 |
+| **Total** | **100%** | **50** |
+
+This supersedes D51's functional substitutions: Final Research Artifact and
+Milestone Synthesis is not a component name; Individual Research Process and
+AI-Management Portfolio does not replace Peer Evaluation; Poster and Expo
+Presentation does not replace the conference-presentation item; and Instructor
+Evaluation and Evidence Defense does not replace Instructor/TA Evaluation.
+The paper, portfolio, poster rubric, and defense remain graded evidence inside
+the five named items.
+
+**Project mode.** Individual work is the default. Students may complete a group
+project only with instructor approval before shared work begins. With the
+five-student enrollment, at most one group of two or three may be approved.
+Approval must
+preserve at least three active projects so every student can review at least two
+other live projects. It must also permit a Peer Evaluation plan with two
+observers per individual researcher and a nonempty submission set for every
+student. It does not change the five items or their weights. Shared artifacts
+receive common rubric-row scores; all explicitly individual performances and
+records remain individually scored, so milestone scores may differ only through
+those individual rows.
+
+**Peer Evaluation remains actual peer evaluation.** For an approved group, each
+member confidentially evaluates every teammate, with no self-rating, following
+QM474's mechanics. For an individual project, the instructor assigns two project
+peers early enough to observe scheduled studio work, milestone checks,
+reproduction work, and defenses; those classmates confidentially evaluate the
+researcher's observable preparation, research contribution, communication,
+dependability, and reciprocal support. Peer Evaluation is per student and is
+separate from Peer Review, which scores each student's structured criticism of
+other projects. Every student receives a nonempty set of evaluations to submit;
+the classmates a student rates need not be the classmates who rate that student.
+
+The HONR Peer Evaluation conversion is explicit because QM474 does not publish a
+1–5-to-percentage formula: `received_rating_score = min(100, 100 × mean received
+rating / 3)` and `item score = 0.80 × received_rating_score + submission points`.
+Complete required evaluations with usable comments earn 20 submission points;
+non-submission earns 0 submission points and therefore reduces only the
+non-submitter. A missing rating is omitted from the intended recipient's mean.
+If evaluator non-submission leaves no valid received rating after instructor
+follow-up, the intended recipient receives the neutral 80-point received-rating
+portion (equivalent to a mean rating of 3); no substitute evaluator is added
+after the observation period. Any moderation of strategic ratings is
+documented.
+
+**Deterministic scoring.** Milestone Deliverables is the equal-weight mean of
+the seventeen M1–M17 scores. Every student completes Peer Review. Poster
+Presentation at the Purdue Undergraduate Research Conference is `0.70 ×` M13
+poster quality + `0.30 ×` the student's M15 live presentation; a group shares
+only the poster-quality subscore. Instructor/TA Evaluation is `0.50 ×` M17 Final
+Research Artifact + `0.25 ×` M17 AI-management portfolio + `0.25 ×` individual
+Evidence Defense; a group shares only the final-artifact subscore. The
+instructor records the last item if no TA is assigned.
+
+**No duplicate raw scores.** M12, M13, M15, and M17 remain milestones inside
+Milestone Deliverables, but their milestone rubrics score process, timeliness,
+versioning, and response. Their distinct terminal rubrics feed Peer Review,
+Poster Presentation at the Purdue Undergraduate Research Conference, or
+Instructor/TA Evaluation. No raw rubric score is copied into two component
+calculations.
+
+**Participation wording remains locked.** The public syllabus paragraph is
+exactly: `Participation includes feedback surveys, lecture-notebook completion, and other constructive contributions to the course.`
+
+**Supersession boundary.** D52 supersedes D51's top-level weights, five renamed
+components, individual-only assumption, and scoring formulas. D51 remains in the
+record as the superseded decision. D22/D31 retain their historical force except
+where their assessment-weight statements conflict with D52; D50's calendar and
+milestone dates are unchanged.

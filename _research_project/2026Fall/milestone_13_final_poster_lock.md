@@ -8,8 +8,21 @@
 
 ## About the Research Project
 
-Your semester project is **individual**: one researcher, one question, carried
-from curiosity to a defended, reproducible claim. It runs through milestones
+Your semester project is **individual by default**: one researcher, one question,
+carried from curiosity to a defended, reproducible claim. With instructor
+approval, and only if at least three active projects remain and the required
+peer-evaluation assignments are feasible, you may instead complete the same
+chain as a group. The same five Final Project components apply
+in either mode. Unless this brief marks a requirement as individual, an approved
+group submits one shared artifact naming every member, and its shared rubric
+rows receive a common score. Each member's AI Research Ledger and any other
+requirement marked individual are scored per member, so recorded milestone
+scores can differ only on those rows. Every member remains responsible for the
+complete work and their own defense. Peer Evaluation remains a true peer
+rating: group members rate every teammate; an individual-project researcher
+is rated by two instructor-assigned project peers; nobody rates themselves. See
+[Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
+It runs through milestones
 **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
@@ -21,12 +34,13 @@ checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
 This milestone produces the locked poster later assessed inside the Final
-Project's **Poster and Expo Presentation** and **Instructor Evaluation and
-Evidence Defense** components. The M13 submission itself also counts in the
-separate **Final Project Milestones** category: that score records the on-time,
-gate-cleared lock and version record, while the Final Project items evaluate the
-poster, presentation, and defense at terminal quality. No rubric score is copied
-between categories. It is a **terminal artifact**:
+Project's **Poster Presentation at the Purdue Undergraduate Research
+Conference** component and used as evidence in **Instructor/TA Evaluation**.
+The M13 process score is one of the
+seventeen scores averaged inside **Milestone Deliverables**: it records the
+on-time, gate-cleared lock and version record. The separate poster-quality and
+live-presentation scores evaluate terminal quality, and no rubric score is
+copied between components. It is a **terminal artifact**:
 **the deadline governs and there is no revision window.**
 Sunday, November 8, 11:59 PM is the real production deadline, not a buffer. It is a print deadline: your file goes straight to the press on a run shared with QM 47400. The
 poster you submit is the poster strangers read at the Expo on November 17. There
@@ -271,9 +285,11 @@ on are all delegable tasks. An assistant can generate documentation; only a cold
 human run can validate it, so each row names the run or the check that tested the
 output against reality.
 
-**A missing ledger is not a minor lapse.** Per the course rule, a missing AI
-Research Ledger entry scores the Craft criterion **0** and the submission is
-**returned** for completion before it is graded.
+**A missing ledger is not a minor lapse.** This is an individual requirement in
+either project mode. A missing AI Research Ledger entry scores that student's
+20-point **Individual craft, ledger & closeout** row **0**, and their submission
+is **returned** for completion before it is graded. It does not change an
+approved group's common poster-quality score.
 
 ### 7. Dossier update line
 
@@ -303,7 +319,7 @@ pre-submission checklist.
 | **Final-lock checklist** | Signed, attesting to traceability, citations, uncertainty placement, both gates, and print spec |
 | **AI-use disclosure block** | On or with the poster: tool, task, verify step (or "No AI used") |
 | **Version and reason** | The package and the cold-run record are dated and numbered as a version, with one line saying what changed and why |
-| **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
+| **AI Research Ledger** | Each member supplies personally attributable rows for every AI-assisted step they performed; every verification method is named and non-vague |
 | **Dossier line** | Package, cold-run record, gate records, and poster located by file or section |
 | **Studio work** | Package assembled, cold run completed, and both gates cleared in the Friday production block |
 | **Filenames** | `lastname_m10_package.zip` (or a shared link), `lastname_m10_coldrun.pdf`, `lastname_m10_gates.pdf`, `lastname_m10_poster.pdf` |
@@ -313,23 +329,31 @@ pre-submission checklist.
 
 ## M13 milestone process score (100 points)
 
-This score is entered only in **Final Project Milestones**.
+This score is entered only as M13 within **Milestone Deliverables**.
+For an approved group, the first three rows (80 points) are common because they
+grade the shared lock and package. The final row (20 points) is scored per
+member, so M13 scores may differ only through that individually required
+evidence.
 
 | Process criterion | Points |
 |---|---:|
 | Required files submitted by the terminal deadline and open correctly | 30 |
 | Both blocking gates recorded and cleared before the lock | 30 |
 | Dated package, manifest, poster version, and reason for the version agree | 20 |
-| AI Research Ledger, signed lock checklist, and dossier update present | 20 |
+| **Individual craft, ledger & closeout:** each member's personally attributable AI Research Ledger, individual lock-checklist sign-off, and dossier contribution are present | 20 |
 | **Total** | **100** |
 
 ## Final Project poster-quality rubric (100 points)
 
 Four bands on the course's five shared virtues
 (`planning/ASSESSMENT_ARCHITECTURE.md`). This score supplies the poster-quality
-evidence for **Poster and Expo Presentation**. The Final Project item score is
+evidence for **Poster Presentation at the Purdue Undergraduate Research
+Conference**. That Final Project
+component is worth 20% of Final Project, or 10 course points, and its score is
 `0.70 × this poster-quality score + 0.30 × the M15 live Expo presentation
-score`. Do not enter either score as the M13 milestone score.
+score`. For an approved group, this poster-quality score is common to the group;
+each member still receives their own live-presentation score. Do not enter either
+score as the M13 milestone process score.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
@@ -337,7 +361,7 @@ score`. Do not enter either score as the M13 milestone score.
 | **Evidence integrity & provenance** (15) | The package carries data or a working access recipe with source, route, and retrieval date; every citation on the poster resolves to a real, retrievable work you opened (14–15) | Real and traceable; one access route or citation thin or under-documented (11–13) | A source or data route asserted without a locatable, retrievable origin (6–10) | A fabricated or unretrievable citation, or a data route that leads nowhere (0–5) |
 | **Verification & traceability** (25) | The cold run is complete and honestly labeled, with its question log and its fixes; both gates are recorded and clean; every poster number and every bound reproduced from the clean package; each AI-assisted step is verified against a real run (23–25) | Reproduction complete with one number needing a hunt, or one question log entry thin, or one AI step verified loosely (18–22) | Some numbers not readily traceable, the cold run run from memory rather than the README, or AI outputs used with verification not named (11–17) | A number with no cell behind it, a headline number or bound that does not rerun, an author rerun presented as independent verification, or a missing gate record (0–10) |
 | **Uncertainty & limitations** (20) | The headline's interval or caveat is visible in the same eye-span as the claim; the uncertainty reproduced along with the point estimate; the poster's preliminary status and its most threatening limitation are stated plainly (18–20) | Uncertainty present and reproduced, but one placement off the read path or one limitation stated loosely (14–17) | Uncertainty vague, off-path, or reproduced only as a point estimate (8–13) | No uncertainty on the poster, or the result presented as settled certainty (0–7) |
-| **Craft, ledger & communication** (20) | Package complete and runnable by a stranger, README included, licence stated, manifest dated as a numbered version with its reason; poster to URC spec and legible at print scale with redundant encoding where color carried meaning; complete AI Research Ledger and disclosure block; dossier line present (18–20) | Minor spec, README, or accessibility lapse; ledger and disclosure complete (14–17) | Package missing a part, off-spec or hard to read at size, or the version undated and unexplained (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–7) |
+| **Craft, package & communication** (20) | Shared package complete and runnable by a stranger, README included, licence stated, manifest dated as a numbered version with its reason; poster to URC spec and legible at print scale with redundant encoding where color carried meaning; project-level AI-use disclosure and dossier location present (18–20) | Minor spec, README, disclosure, or accessibility lapse (14–17) | Package missing a part, off-spec or hard to read at size, or the version undated and unexplained (8–13) | Package substantially incomplete, poster unusable at print scale, or project-level AI use undisclosed (0–7) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
@@ -350,8 +374,6 @@ score`. Do not enter either score as the M13 milestone score.
   Beginning.
 - An **author rerun labeled as independent reproduction**, or a solo proxy
   submitted without its label, caps *Verification & traceability* at Beginning.
-- A **missing AI Research Ledger entry** scores *Craft, ledger & communication*
-  **0** and the submission is **returned** unread until it is supplied.
 
 **Blocking gates are separate from the score.** A submission without both gate
 records, or with a gate row still marked blocking, is returned rather than
@@ -374,8 +396,9 @@ by 11:59 PM on November 8.
 - Any cited source that does not exist or does not say what you claim: *Evidence
   integrity & provenance* scores Beginning regardless of the rest, which is the
   course's evidence-integrity rule with teeth.
-- Missing AI Research Ledger entry: *Craft* scores 0 and the submission is
-  returned for completion before grading.
+- Missing AI Research Ledger entry: that member's 20-point **Individual craft,
+  ledger & closeout** row scores 0 and their submission is returned for
+  completion before grading; the common poster-quality score is unchanged.
 
 ## Common Pitfalls
 
@@ -397,6 +420,6 @@ by 11:59 PM on November 8.
 ---
 
 *Previous: [M12 — Peer Review Submission](milestone_12_peer_review.md) — the
-four readings that told you what to repair before the file locks · Next:
+independent readings that told you what to repair before the file locks · Next:
 [M14 — Go-Public Package](milestone_14_go_public_package.md) — the board is
 printed and terminal; from here the artifact is spoken.*

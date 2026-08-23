@@ -7,8 +7,21 @@
 
 ## About the Research Project
 
-Your semester project is **individual**: one researcher, one question, carried
-from curiosity to a defended, reproducible claim. It runs through milestones
+Your semester project is **individual by default**: one researcher, one question,
+carried from curiosity to a defended, reproducible claim. With instructor
+approval, and only if at least three active projects remain and the required
+peer-evaluation assignments are feasible, you may instead complete the same
+chain as a group. The same five Final Project components apply
+in either mode. Unless this brief marks a requirement as individual, an approved
+group submits one shared artifact naming every member, and its shared rubric
+rows receive a common score. Each member's AI Research Ledger and any other
+requirement marked individual are scored per member, so recorded milestone
+scores can differ only on those rows. Every member remains responsible for the
+complete work and their own defense. Peer Evaluation remains a true peer
+rating: group members rate every teammate; an individual-project researcher
+is rated by two instructor-assigned project peers; nobody rates themselves. See
+[Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
+It runs through milestones
 **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
@@ -97,8 +110,8 @@ leaves is detail, never the boundary. An adaptation that drops the limitations i
 not a shorter version of your work. It is a different claim.
 
 This milestone is not the lock. Your poster is a draft here, labeled preliminary,
-and it stays revisable. The terminal deadline is **M13** (Friday, November 6,
-5:00 PM), where the reproducible package and the printed poster lock together.
+and it stays revisable. The terminal deadline is **M13** (Sunday, November 8,
+11:59 PM), where the reproducible package and the printed poster lock together.
 The gap is deliberate. Everything the criticism gallery and the defense rehearsal
 surface this week is still cheap to fix next week.
 
@@ -123,8 +136,8 @@ the deadline and the file format. **Question channel**: live questions, written
 questions, or none at all.
 
 Several lines are fixed for you: a printed poster, presented in a hall with live
-questions on Tuesday, November 17, submitted for print by Friday, November 6 at
-5:00 PM. Write the rest yourself, then close the contract with one sentence
+questions on Tuesday, November 17, submitted for print by Sunday, November 8 at
+11:59 PM. Write the rest yourself, then close the contract with one sentence
 naming what your claim must lose to fit this format. That sentence is the one a
 reviewer will test.
 

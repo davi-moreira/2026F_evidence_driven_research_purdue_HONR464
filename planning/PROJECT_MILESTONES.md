@@ -46,7 +46,7 @@ are `M1…M17`.
 | M9 | Bounded research note and claim-evidence table | M22–M25 | note red-team + trace-or-cut drill (M25) | Fri Oct 23 | 9 — Your bounded claims (v1) |
 | M10 | Venue contract and the publication-ready artifact | M25–M28 | artifact criticism gallery + defense rehearsal (M28) | Fri Oct 30 | 10 — Your artifact, ready to publish or present (v1) |
 | M11 | Poster first draft | M29–M30 | storyboard + traceability sweep (M29); the draft is due AT CLASS (M30) | Wed Nov 4, at class | 10 (v2, the peer-reviewed draft) |
-| M12 | Peer review submission | M30–M31 | silent four-reviewer round (M30) + revision studio (M31) | Fri Nov 6, 5:00 PM | 10 — peer-criticism practice |
+| M12 | Peer review submission | M30–M31 | silent active-project review circuit (M30) + revision studio (M31) | Fri Nov 6, 5:00 PM | 10 — peer-criticism practice |
 | M13 | Final poster lock | M28–M31 | pre-lock gate sweep + print-scale check (M31) | Sun Nov 8, 11:59 PM — TERMINAL | 10 (v3, the locked print edition) |
 | M14 | Go-public package: presentation plan and invitation | M32–M34 | pitch drafting (M32) + typed-panel questioning (M33) + rehearsal at the printed board (M34) | Fri Nov 13, 5:00 PM | 10 — spoken-editions practice |
 | M15 | Conference reflection | M35–M37 | dress rehearsal (M35); the Expo (Tue Nov 17) supplies the separate Final Project live-presentation score; M15 grades async capture (M36), adjudication (M37), and the written reflection | Sun Nov 29, 11:59 PM | 10 (v4, the publicly presented edition) |
@@ -65,12 +65,13 @@ artifact (M10), reproducibility package + locked poster (M13), release audit +
 dossier v1 (M17), conference reflection + defense revision (M15), replication
 record (M16), research note v1 + repaired package (M16), final chapter +
 AI-management portfolio + final release (M17). The **AI Research
-Ledger** accumulates across all sixteen.
+Ledger** accumulates across all seventeen.
 
 ## Notes
 
 - The Expo presentation (Tue Nov 17) is graded only in Final Project's **Poster
-  and Expo Presentation** item (`70%` M13 poster quality + `30%` live delivery).
+  Presentation at the Purdue Undergraduate Research Conference** item (`70%`
+  M13 poster quality + `30%` live delivery).
   M15 grades the reflection checkpoint and records proof of participation; there
   is no separate milestone ID for the event itself.
 - M16's package exchange is anonymized: each student receives a peer's
@@ -78,4 +79,4 @@ Ledger** accumulates across all sixteen.
 - Revision policy (syllabus): all milestones except M13 and M17 are revisable
   within 7 days of feedback for up to half the lost points.
 - Hard external anchors: URC abstract internal gate Fri Oct 9 (external
-  deadline TBD); poster print submission Fri Nov 6 5:00 PM; Expo Tue Nov 17.
+  deadline TBD); poster print submission Sun Nov 8, 11:59 PM; Expo Tue Nov 17.

@@ -26,7 +26,7 @@ critiques the draft; you revise it.
 
 ## Milestone scope (M13 — required)
 
-**M13 — Final poster lock (due Fri Nov 6, 5:00 PM — terminal).** You submit your
+**M13 — Final poster lock (due Sun Nov 8, 11:59 PM — terminal).** You submit your
 **poster draft** (text plus a description or export of each figure) to this role.
 Its **"Untraceable-number flags"** and **"Claim-boundary review"** sections are the
 output you carry into your **AI Research Ledger** (as a critique task row), together

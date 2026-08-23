@@ -1,8 +1,8 @@
 # HONR 46400 — Course Master Plan (Fall 2026, v2)
 
 **Evidence-Driven Research: How to Design, Analyze, Verify, and Defend Empirical
-Research** · Purdue Honors College · Mon/Wed/Fri, 50 min · 5 students, 5
-individual projects, 5 posters.
+Research** · Purdue Honors College · Mon/Wed/Fri, 50 min · 5 students ·
+individual projects by default, with instructor-approved group projects allowed.
 
 This is the source-of-truth narrative for the v2 build. The machine-readable
 spine is `course_config.yaml`; the verified date backbone is
@@ -199,7 +199,7 @@ Ledger threads through every one. The full milestone chain — develop → prese
 submit → revise cadence, kickoff rules, dossier mapping, and the M13/M17 terminal
 locks — lives in `planning/PROJECT_MILESTONES.md`.
 
-## 7. Assessment architecture *(D51, 2026-08-22)*
+## 7. Assessment architecture *(D52, 2026-08-23)*
 
 From `course_config.yaml assessment:`; sums to 100 and matches `syllabus.qmd`.
 Grading rewards correctness, transparency, reproducibility, question-design
@@ -211,27 +211,31 @@ alignment, and responsible interpretation — never coding elegance.
 | Participation (feedback surveys + lecture-notebook completion + other constructive contributions) | 9 |
 | Quizzes (weekly Friday MC topic quizzes) | 20 |
 | Student Research Lead performance | 20 |
-| Final Project Milestones | 20 |
-| Final Project | 30 |
+| Final Project | 50 |
 | **Total** | **100** |
 
-Final Project uses QM474's operative 30/20/10/20/20 proportions, translated for
-individual projects: **Final Research Artifact and Milestone Synthesis 30%**,
-**Individual Research Process and AI-Management Portfolio 20%**, **Peer Review
-10%**, **Poster and Expo Presentation 20%**, and **Instructor Evaluation and
-Evidence Defense 20%**. These are shares of the 30% Final Project category,
-equivalent to 9/6/3/6/6 course points. The paper, chapter, or research note
-remains explicitly graded inside Final Project. The separate Final Project
-Milestones category grades checkpoint completion, timeliness, versioning, and
-response to feedback across M1–M17; the five Final Project items grade terminal
-quality. A rubric score is never copied between the two categories. Full mapping
-and rationale:
-`planning/ASSESSMENT_ARCHITECTURE.md`.
+Final Project is the course's single project-grading category. It uses QM474's
+five operative component items and 30/20/10/20/20 shares without renaming or
+replacing them: **Milestone Deliverables 30%**, **Peer Evaluation 20%**, **Peer
+Review 10%**, **Poster Presentation at the Purdue Undergraduate Research
+Conference 20%**, and **Instructor/TA Evaluation 20%**. Applied to the 50%
+category, these are 15/10/5/10/10 course points.
 
-The five independently computable Final Project scores come from the M17
-artifact rubric, M17 portfolio rubric, M12 peer-review rubric, the weighted
-poster/Expo formula (`70%` M13 poster quality + `30%` M15 live delivery), and the
-Evidence Defense Protocol rubric.
+Individual work is the default; a group project requires instructor approval
+before shared work begins. With five students, at most one group of two or
+three may be approved. Approvals must preserve at least three active
+projects for Peer Review and allow two observers per individual researcher plus
+at least one evaluation submission per student. Milestone Deliverables is the
+equal-weight mean of M1–M17. Group members receive common scores on shared rubric
+rows, while requirements marked individual are scored per member; recorded
+milestone scores may differ only on those rows. Peer Evaluation uses actual
+confidential ratings: every teammate for a group project, or two assigned project peers for
+an individual project. Peer Review remains each student's independent criticism
+of every other active project. The conference item combines `70%` M13 poster
+quality and `30%` individual M15 live delivery. Instructor/TA Evaluation
+combines `50%` M17 Final Research Artifact, `25%` M17 AI-management portfolio,
+and `25%` individual Evidence Defense. Full arithmetic and operational rules:
+`planning/ASSESSMENT_ARCHITECTURE.md`.
 
 ## 8. The course book — EDR|AI: 40 lessons, 12 Studios, 12 Milestone chapters
 

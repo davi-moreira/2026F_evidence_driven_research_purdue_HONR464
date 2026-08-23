@@ -2,13 +2,26 @@
 
 <!-- book-milestone-bridge:begin -->
 > **Book Milestone bridge** — course milestone **M12**.
-> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (peer criticism, applied to four colleagues' drafts): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
+> This submission presents **Book Milestone 10 — Your artifact, ready to publish or present** (peer criticism, applied to every other active project's draft): work from its [milestone page](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/studios/milestone10-adapt-and-defend.html#milestone).
 <!-- book-milestone-bridge:end -->
 
 ## About the Research Project
 
-Your semester project is **individual**: one researcher, one question, carried
-from curiosity to a defended, reproducible claim. It runs through milestones
+Your semester project is **individual by default**: one researcher, one question,
+carried from curiosity to a defended, reproducible claim. With instructor
+approval, and only if at least three active projects remain and the required
+peer-evaluation assignments are feasible, you may instead complete the same
+chain as a group. The same five Final Project components apply
+in either mode. Unless this brief marks a requirement as individual, an approved
+group submits one shared artifact naming every member, and its shared rubric
+rows receive a common score. Each member's AI Research Ledger and any other
+requirement marked individual are scored per member, so recorded milestone
+scores can differ only on those rows. Every member remains responsible for the
+complete work and their own defense. Peer Evaluation remains a true peer
+rating: group members rate every teammate; an individual-project researcher
+is rated by two instructor-assigned project peers; nobody rates themselves. See
+[Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
+It runs through milestones
 **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
@@ -20,11 +33,17 @@ checked it. Milestone weights live in the syllabus; instructions and
 rubrics live one page per milestone, like this one.
 
 This is the one milestone in the course whose artifact is about **someone else's
-research**. The **M12 milestone score** records completion of the four-review
-cycle, the response record, timeliness, and carry-forward into your poster. The
-separate **Final Project Peer Review item** (10% of Final Project, or 3 course
-points) scores the quality of your criticism using the rubric below. The same
-score is not entered twice, and neither score evaluates your own poster.
+research**. Every student independently reviews **every other active project or
+poster**. That means four reviews when all five students work individually and
+fewer when approved groups reduce the number of active projects. Group approval
+always preserves at least three active projects, so every student reviews at
+least two other live projects. Group members do not confer before submitting
+their own reviews, and each student is scored individually. The **M12 milestone
+score** is one of the seventeen scores averaged
+inside **Milestone Deliverables**. The separate **Peer Review** component (10%
+of Final Project, or 5 course points) scores the quality of your criticism using
+the rubric below. The same score is not entered twice, and neither score
+evaluates your own poster.
 
 ---
 
@@ -35,8 +54,8 @@ class, in a silent round, and finished in Friday's studio.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m12_reviews.pdf`** | Your **four completed review surveys**, one per colleague, on the course poster rubric. Each survey carries at least one item recorded as genuinely sound and at least two findings, and every finding names the block it lives in and the change that would fix it. |
-| 2 | **`lastname_m12_response.pdf`** *or* the same as notebook sections | Your **response record** on the four sheets you received: each finding ranked blocking or optional, each blocking finding paired with the repair you made, and at least one finding you rejected with the reason you rejected it. |
+| 1 | **`lastname_m12_reviews.pdf`** | One completed review survey for **every other active project or poster**, on the course poster rubric. Each survey carries at least one item recorded as genuinely sound and at least two findings, and every finding names the block it lives in and the change that would fix it. This is individual work even if your own project is a group project. |
+| 2 | **`lastname_m12_response.pdf`** *or* the same as notebook sections | Your **individual response record** on the sheets your project received: each finding ranked blocking or optional, each blocking finding paired with the repair you made or endorsed, and at least one finding you rejected with the reason you rejected it. |
 | 3 | **EDR\|AI "It is your turn"** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 ---
@@ -57,10 +76,11 @@ complete here is a draft piece of your final artifact.
 
 ## Purpose
 
-Four readers who did not confer are four checks. Four readers who talked first
-are one. That is why the review round is silent, on the clock, and written
-before anyone speaks — and it is the same independence rule you met when you
-learned what four agreeing AI reviewers are worth.
+Independent readers who did not confer provide independent checks. Readers who
+talked first provide one shared check wearing several names. That is why the
+review round is silent, on the clock, and written before anyone speaks — and it
+is the same independence rule you met when you learned what agreeing AI
+reviewers are worth.
 
 The instrument matters as much as the reading. A **finding** names the block, the
 defect, and the repair. A **preference** names none of those, and it cannot be
@@ -75,11 +95,11 @@ reviewer whose criticism cannot be trusted.
 
 ## Components
 
-### 1. The four review surveys
+### 1. The review surveys
 
-One per colleague, written in the silent round, on the rubric's four criteria:
-reading architecture, traceability, uncertainty placement, and craft. For each
-sheet:
+One for every other active project or poster, written independently in the
+silent round, on the rubric's four criteria: reading architecture,
+traceability, uncertainty placement, and craft. For each sheet:
 
 - at least **one item recorded as sound**, named specifically;
 - at least **two findings**, each naming a block, a defect, and a repair;
@@ -91,10 +111,12 @@ useful information for you and it changes nothing about what you write here.
 
 ### 2. The response record
 
-For the four sheets you receive: rank every finding blocking or optional, pair
-each blocking finding with the repair you made, and record **at least one
-rejection with its reason**. A response record with no rejections has not
-adjudicated anything; it has simply agreed.
+For the sheets your project receives: independently rank every finding blocking
+or optional, pair each blocking finding with the repair you made or endorsed,
+and record **at least one rejection with its reason**. A response record with no
+rejections has not adjudicated anything; it has simply agreed. Members of an
+approved group may coordinate the eventual shared repair only after each member
+has completed this individual adjudication.
 
 Where the same wrong inference appears on two independent sheets, say so. That
 recurrence is the strongest signal you will get before the Expo, because it is
@@ -106,7 +128,7 @@ two readers failing the same way without having discussed it.
 
 | Element | Standard |
 |---|---|
-| **Coverage** | All four colleagues reviewed; none skipped |
+| **Coverage** | Every other active project or poster reviewed; none skipped |
 | **Findings** | Every finding names a block, a defect, and a repair |
 | **Calibration** | At least one genuinely sound item named on every sheet |
 | **Wrong-inference test** | Answered explicitly on every sheet |
@@ -119,17 +141,17 @@ two readers failing the same way without having discussed it.
 
 ## M12 milestone process score (100 points)
 
-This score is entered only in **Final Project Milestones**.
+This score is entered only as M12 within **Milestone Deliverables**.
 
 | Process criterion | Points |
 |---|---:|
-| Four review surveys and the response record submitted by the deadline | 40 |
-| Complete cycle: every colleague covered and every received finding dispositioned | 30 |
+| All required review surveys and the response record submitted by the deadline | 40 |
+| Complete cycle: every other active project covered and every received finding dispositioned | 30 |
 | Repairs carried forward into the next poster version, with the version reason recorded | 15 |
 | Required notebook work, AI Research Ledger entry, and dossier update present | 15 |
 | **Total** | **100** |
 
-## Final Project Peer Review rubric (100 points)
+## Peer Review rubric (100 points)
 
 This score is entered only in the **Peer Review** item inside Final Project. It
 evaluates the quality of the criticism and adjudication, not whether the M12
@@ -147,18 +169,18 @@ checkpoint arrived on time.
 ## Three Traps
 
 1. **The conferring round.** You glance at a neighbour's sheet to check whether
-   you are being too harsh, and four independent checks collapse into one. Write
+   you are being too harsh, and independent checks collapse into one. Write
    first, talk after.
 2. **The preference in a finding's clothing.** "The colours are a bit much" names
    no block and no repair. "The three-colour result panel makes the non-significant
    bar read as a second finding; use one colour and label it" does.
-3. **The agreeable response record.** You accept all four sheets' findings
+3. **The agreeable response record.** You accept every sheet's findings
    wholesale, which feels generous and tells your reader nothing about which
    criticism was actually right. Reject something, on the merits, in writing.
 
 ---
 
 *Previous: [M11 — Poster First Draft](milestone_11_poster_first_draft.md) — the
-draft these four readers read · Next:
+draft the review round reads · Next:
 [M13 — Final Poster Lock](milestone_13_final_poster_lock.md) — the print file,
 terminal, due Sunday, November 8, at 11:59 PM.*

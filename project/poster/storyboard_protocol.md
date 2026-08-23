@@ -2,11 +2,11 @@
 
 *The method for building your poster's storyboard before you build the poster.
 The read-path decision it produces underlies your poster adaptation at M13
-([milestone_09 — Poster Draft 1 and Research Audit](../../_research_project/2026Fall/milestone_09_poster_draft_research_audit.md))
+([course milestone M11 — Poster First Draft](../../_research_project/2026Fall/milestone_11_poster_first_draft.md))
 and the poster you lock at
-[milestone_10 — Final Poster Lock](../../_research_project/2026Fall/milestone_10_final_poster_lock.md).
+[course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md).
 Re-derived and pressure-tested in the poster-criticism week (M29); the grid it
-produces feeds the M13 lock, due Fri Nov 6, 5:00 PM (terminal).*
+produces feeds the M13 lock, due Sunday, November 8, 11:59 PM (terminal).*
 
 ## Purpose
 
@@ -16,9 +16,15 @@ that read, the evidence that earns the reader's belief, and the path their eye
 takes. The storyboard is that decision made on paper — cheap to change now,
 expensive to change in production week.
 
+Individual work is the default. An approved group creates one shared storyboard
+and poster, names every member on the grid, and receives one common
+poster-quality score. Every member participates in the storyboard decisions and
+must be able to walk the complete read path; live presentation is scored later
+per student.
+
 ## Materials
 
-- The storyboard grid (one printed sheet per person — the template below).
+- The storyboard grid (one printed sheet per active project — the template below).
 - Your M10 research-note v0 evidence: every table, figure, and number your note and poster content brief carry.
 - Your inquiry declaration (`project/templates/INQUIRY_DECLARATION.md`),
   open to §4–5 (what your compass position can and cannot establish).
@@ -65,22 +71,24 @@ Uncertainty rule), not just a poster-day problem.
 
 | Time | Activity |
 |---|---|
-| 0–5 | Poster-phase kickoff: the Nov 6 print deadline is real production, not buffer. |
+| 0–5 | Poster-phase kickoff: the Nov 8 print deadline is real production, not buffer. |
 | 5–12 | Mini-lesson: the 90-second read path traced on two example posters — one that leads the eye, one that loses it. |
 | 12–30 | **Grid studio.** You fill your grid: headline, three ranked evidence blocks, uncertainty line, read-path arrows. |
-| 30–42 | **Storyboard pitches.** 90 seconds each — you walk a listener down your read path, box by box. Listeners mark where they got lost. |
+| 30–42 | **Storyboard pitches.** 90 seconds per active project — the researcher or group walks listeners down the read path, box by box. Every group member speaks. Listeners mark where they got lost. |
 | 42–48 | Revise your grid from the lost-point marks. |
-| 48–50 | Exit ticket (headline claim, ≤ 15 words); carry the grid into the week's poster-criticism and lock work — M13 locks Fri Nov 6, 5:00 PM. |
+| 48–50 | Exit ticket (headline claim, ≤ 15 words); carry the grid into the week's poster-criticism and lock work — M13 locks Sunday, November 8, 11:59 PM. |
 
 ## Roles
 
-- **Presenter:** walks the read path aloud in 90 seconds; does not defend, just narrates.
+- **Presenter or group:** walks the read path aloud in 90 seconds; does not
+  defend, just narrates. Every group member takes a speaking turn.
 - **Listeners:** track the eye path; the moment you lose the thread, write the box number where it broke. That mark is the gift.
 
 ### Session flow (for the record)
 
-Each presenter pitches once; each listener marks lost-points on at least three
-grids. Professor Moreira times the 90-second rounds and distributes example posters.
+Each active project pitches once; each student marks lost-points on every other
+active project's grid. Professor Moreira times the 90-second rounds and
+distributes example posters.
 
 ## Quality checklist (self-check before submitting)
 

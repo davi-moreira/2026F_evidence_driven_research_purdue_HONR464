@@ -7,8 +7,21 @@
 
 ## About the Research Project
 
-Your semester project is **individual**: one researcher, one question, carried
-from curiosity to a defended, reproducible claim. It runs through milestones
+Your semester project is **individual by default**: one researcher, one question,
+carried from curiosity to a defended, reproducible claim. With instructor
+approval, and only if at least three active projects remain and the required
+peer-evaluation assignments are feasible, you may instead complete the same
+chain as a group. The same five Final Project components apply
+in either mode. Unless this brief marks a requirement as individual, an approved
+group submits one shared artifact naming every member, and its shared rubric
+rows receive a common score. Each member's AI Research Ledger and any other
+requirement marked individual are scored per member, so recorded milestone
+scores can differ only on those rows. Every member remains responsible for the
+complete work and their own defense. Peer Evaluation remains a true peer
+rating: group members rate every teammate; an individual-project researcher
+is rated by two instructor-assigned project peers; nobody rates themselves. See
+[Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
+It runs through milestones
 **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes here, with an
 oral **Evidence Defense** and a final research chapter. Every milestone followed
@@ -17,28 +30,30 @@ submit → revise (where eligible)**. This one is the last, and it is different:
 **M17 is terminal.** There is no revision window and no resubmission. The
 deadline governs the grade.
 
-M17 supplies evidence for three separately recorded Final Project components:
+The course records one top-level Final Project worth 50% of the course:
 
 | Final Project component | Share of Final Project | Course points |
 |---|---:|---:|
-| **Final Research Artifact and Milestone Synthesis** — your final paper, chapter, or research note | 30% | 9 |
-| **Individual Research Process and AI-Management Portfolio** | 20% | 6 |
-| **Instructor Evaluation and Evidence Defense** | 20% | 6 |
+| **Milestone Deliverables** | 30% | 15 |
+| **Peer Evaluation** | 20% | 10 |
+| **Peer Review** | 10% | 5 |
+| **Poster Presentation at the Purdue Undergraduate Research Conference** | 20% | 10 |
+| **Instructor/TA Evaluation** | 20% | 10 |
+| **Total** | **100%** | **50** |
 
-Together these M17 components carry **21 of the Final Project's 30 course
-points**; Peer Review and the Poster and Expo Presentation supply the other 9.
-Each has its own 0–100 rule: the artifact and portfolio use the two rubrics
-below, while Instructor Evaluation and Evidence Defense uses the 100-point
-`project/final_dossier/evidence_defense_protocol.md` rubric. M17's **milestone
-score** records terminal
-completion, timeliness, version integrity, and release-gate closure; it is not
-copied into any of those three Final Project items. This milestone assembles everything you
-built and holds it to the course's three standards at once: **everything claimed
-is verified, everything verified is documented, and uncertainty and limitations
-are stated throughout.** Your full-semester **AI Research Ledger** is its spine,
-and this week it becomes the AI-management portfolio you defend. The final
-paper/chapter/note remains a graded deliverable inside Final Project; only its
-former standalone course category has been retired.
+M17's 100-point process score is the seventeenth and final score in **Milestone
+Deliverables**, which is the arithmetic mean of M1–M17. The final chapter,
+notebook, dossier, AI-management portfolio, and live Evidence Defense also form
+the evidence for **Instructor/TA Evaluation**. They do not create separate Final
+Project components, and no M17 rubric score is copied into another component.
+Peer Evaluation is submitted through its confidential instrument; Peer Review
+was completed through M12; and the poster-presentation component uses the M13
+locked poster and each student's live conference presentation. This milestone
+assembles everything you built and holds it to the course's three standards at
+once: **everything claimed is verified, everything verified is documented, and
+uncertainty and limitations are stated throughout.** Your full-semester **AI
+Research Ledger** is its spine, and this week it becomes the AI-management
+portfolio you defend.
 
 ---
 
@@ -51,14 +66,16 @@ it does not extend the deadline.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m15_chapter.pdf`** | Your **final research chapter**: the whole arc finalized, your headline claim stated at its boundary, uncertainty and limitations throughout, every claim traced and verified. It grows out of the M16 research note, and it closes with two marked sections: your **final release audit** (with its release decision, stopping rule, and next-study agenda) and your **dossier manifest**. |
-| 2 | **`lastname_m15_portfolio.pdf`** *(or a clearly-marked section of the chapter PDF)* | Your **AI-management portfolio**: the decomposition, the conflict-and-override log, the never-automate list, and the independence check, with your finalized full-semester **AI Research Ledger** inside it. |
-| 3 | **`lastname_m15_chapter.ipynb`** | The runnable notebook behind the chapter, finalized from the M16 package. It passes **restart-and-run-all**, and every headline number in the chapter reruns from it. |
-| 4 | **EDR\|AI "It is your turn" — ch. 38, ch. 39, ch. 40** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
+| 1 | **`lastname_m15_chapter.pdf`** | Your **final research chapter**: the whole arc finalized, your headline claim stated at its boundary, uncertainty and limitations throughout, every claim traced and verified. It grows out of the M16 research note, and it closes with two marked sections: your **final release audit** (with its release decision, stopping rule, and next-study agenda) and your **dossier manifest**. An approved group may share this artifact, with every member named. |
+| 2 | **`lastname_m15_portfolio.pdf`** *(or a clearly-marked section of the chapter PDF)* | Your **individual AI-management portfolio**: the decomposition, the conflict-and-override log, the never-automate list, and the independence check, with your personally attributable full-semester **AI Research Ledger** entries inside it. Every member of an approved group submits this item individually. |
+| 3 | **`lastname_m15_chapter.ipynb`** | The runnable notebook behind the chapter, finalized from the M16 package. It passes **restart-and-run-all**, and every headline number in the chapter reruns from it. An approved group may share this artifact, with every member named. |
+| 4 | **EDR\|AI "It is your turn" — ch. 38, ch. 39, ch. 40** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. These remain individual unless the instructor explicitly approves a shared response. See "The Book Anchor" below. |
 
-*Submit all three, or a single zip containing them. The **Evidence Defense** is
-performed live at your assigned meeting this week and is graded in the room, so
-it is never a Brightspace upload. Nothing in M17 has a revision window.*
+*Submit all three, or a single zip containing them. For an approved group, each
+member must be linked to the shared files and must submit their own portfolio.
+The **Evidence Defense** is performed individually in your assigned meeting this
+week and is graded in the room, so it is never a Brightspace upload. Nothing in
+M17 has a revision window.*
 
 ---
 
@@ -351,7 +368,7 @@ how well each is argued.
 
 ## M17 milestone process score (100 points)
 
-This score is entered only in **Final Project Milestones**.
+This score is entered only as M17 within **Milestone Deliverables**.
 
 | Process criterion | Points |
 |---|---:|
@@ -361,10 +378,11 @@ This score is entered only in **Final Project Milestones**.
 | Dossier closeout and full-semester AI Research Ledger present | 25 |
 | **Total** | **100** |
 
-## Final Research Artifact rubric (100 points)
+## Instructor/TA Evaluation — Final Research Artifact subrubric (100 points)
 
-This score is entered only in **Final Research Artifact and Milestone
-Synthesis**.
+This score is the **50% Final Research Artifact subscore** inside
+Instructor/TA Evaluation. It is not a sixth Final Project component. For an
+approved group, the shared final artifact receives one common subscore.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
@@ -372,12 +390,14 @@ Synthesis**.
 | **Evidence integrity and provenance** (20) | Every source, datum, number, and claim is real, retrievable, and traceable to its origin (18–20) | Traceable and real with one thin link (14–17) | A claim or source lacks a locatable origin (8–13) | A cited source does not exist or does not support the claim (0–7) |
 | **Reproducibility and verification** (25) | Notebook reruns cleanly; every headline number and figure traces to current output; verification and sensitivity checks are documented and interpreted correctly (23–25) | Results rerun; one trace or check requires a hunt (18–22) | Verification is uneven or one quantitative claim does not resolve to current output (11–17) | A headline result does not rerun, a figure is untraceable, or an output is accepted without verification (0–10) |
 | **Uncertainty and limitations** (15) | Uncertainty travels with each claim; the headline carries its bound; limitations are specific and calibrated (13–15) | Present and accurate with one loose placement or phrase (10–12) | Confined to a closing paragraph or stated generically (6–9) | Absent or contradicted by overclaiming (0–5) |
-| **Scholarly synthesis and craft** (20) | The paper/chapter/note integrates the milestone chain into one coherent argument for an outside reader; prose, figures, citations, and disclosure are precise and navigable (18–20) | Coherent and readable with minor integration or presentation lapses (14–17) | Reads like stitched milestone pieces, or a load-bearing transition/citation/disclosure is missing (8–13) | No coherent scholarly artifact or the central argument cannot be followed (0–7) |
+| **Scholarly synthesis and craft** (20) | The paper, chapter, or note integrates the milestone chain into one coherent argument for an outside reader; prose, figures, citations, and disclosure are precise and navigable (18–20) | Coherent and readable with minor integration or presentation lapses (14–17) | Reads like stitched milestone pieces, or a load-bearing transition, citation, or disclosure is missing (8–13) | No coherent scholarly artifact or the central argument cannot be followed (0–7) |
 
-## Individual Research Process and AI-Management Portfolio rubric (100 points)
+## Instructor/TA Evaluation — AI-management portfolio subrubric (100 points)
 
-This score is entered only in **Individual Research Process and AI-Management
-Portfolio**.
+This score is the **25% AI-management portfolio subscore** inside
+Instructor/TA Evaluation. It is not Peer Evaluation. Every student submits and
+receives this subscore individually, including every member of an approved
+group.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
@@ -387,19 +407,29 @@ Portfolio**.
 | **Conflict, escalation, and human override** (20) | Distinguishes real disagreement, correlated error, and false consensus; documents a consequential escalation and a reasoned human override backed by non-AI evidence; never-automate decisions are justified (18–20) | Conflict and override record is sound with one under-developed justification (14–17) | Conflict is listed without adjudication, or the override lacks independent support (8–13) | Decisions are delegated away, conflicts are settled by vote, or an override is invented after the fact (0–7) |
 | **Organization, disclosure, and reflective craft** (15) | Portfolio is versioned, concise, navigable, candid about tool capability and residual concern, and cross-linked to the dossier (13–15) | Clear and candid with minor navigation or disclosure lapses (10–12) | Hard to audit, overstates tool autonomy, or hides unresolved concerns (6–9) | Misrepresents how the work was produced or cannot be followed (0–5) |
 
-## Instructor Evaluation and Evidence Defense score
+## Instructor/TA Evaluation score
 
-The instructor enters the 100-point score from
-`project/final_dossier/evidence_defense_protocol.md` directly into **Instructor
-Evaluation and Evidence Defense**. The final dossier is the evidence base opened
-during that defense; there is no second blended dossier score and no copied M17
-rubric score.
+Let \(A\) be the Final Research Artifact subscore above, \(Q\) the
+AI-management portfolio subscore above, and \(D\) the 100-point Evidence Defense
+subscore from `project/final_dossier/evidence_defense_protocol.md`. The only
+score entered in **Instructor/TA Evaluation** is
+
+\[
+0.50A + 0.25Q + 0.25D.
+\]
+
+The three values are subscores inside one of the five Final Project components,
+not additional components. No M17 process score is copied into this formula.
+
+For an approved group, \(A\) is the shared artifact score. Each member \(j\)
+receives their own \(Q_j\) and \(D_j\), so their score is
+`0.50 × A + 0.25 × Q_j + 0.25 × D_j`. Group members may therefore receive
+different Instructor/TA Evaluation scores.
 
 **Hard caps (a single failure caps the row regardless of the rest):**
 
 - A **fabricated or unretrievable source** caps the artifact's *Evidence
-  integrity and provenance*
-  at Beginning.
+  integrity and provenance* at Beginning.
 - An **untraceable number**, a figure with no path back to your data, caps
   the artifact's *Reproducibility and verification* at Beginning.
 - A **non-reproducing result**, a headline number that does not rerun from your
@@ -407,8 +437,8 @@ rubric score.
 - A **released-anyway disposition**, meaning release claimed while the run is
   stale or an audit item is blocking, caps the portfolio's *Verification and
   independence* at Beginning.
-- A **missing AI Research Ledger** leaves the portfolio ungradable and the
-  submission is **returned** unread until it is supplied.
+- A **missing AI Research Ledger** leaves the portfolio subscore and therefore
+  Instructor/TA Evaluation ungraded until the ledger is supplied.
 
 **No revision.** M17 is **terminal**: there is no post-hoc revision or
 resubmission, announced from week 1. Assemble to the Definition of Done before
@@ -420,15 +450,16 @@ you submit.
   published late scale applies; documented emergencies are handled individually,
   talk to me first per the syllabus.
 - Any source you cite that turns out not to exist or not to say what you claim:
-  artifact *Evidence integrity and provenance* scores Beginning regardless of
-  the rest.
+  the artifact's *Evidence integrity and provenance* scores Beginning regardless
+  of the rest.
 - A headline number that does not rerun from your notebook, or a figure with no
-  path back to your data: artifact *Reproducibility and verification* scores
-  Beginning.
+  path back to your data: the artifact's *Reproducibility and verification*
+  scores Beginning.
 - A release claimed over a stale run or a blocking audit item: the same row
   in the portfolio scores Beginning. Withholding pending a repair you name
   honestly never triggers this; the cap is for the false clear.
-- Missing AI Research Ledger: the portfolio is returned ungraded.
+- Missing AI Research Ledger: the portfolio subscore and Instructor/TA
+  Evaluation remain ungraded until the ledger is supplied.
 - A **forbidden move** in the defense (inventing a claim under pressure,
   un-conceding by insistence, or blaming the AI) is scored under the Evidence
   Defense Protocol rubric.

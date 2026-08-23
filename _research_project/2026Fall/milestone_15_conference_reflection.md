@@ -8,8 +8,21 @@
 
 ## About the Research Project
 
-Your semester project is **individual**: one researcher, one question, carried
-from curiosity to a defended, reproducible claim. It runs through milestones
+Your semester project is **individual by default**: one researcher, one question,
+carried from curiosity to a defended, reproducible claim. With instructor
+approval, and only if at least three active projects remain and the required
+peer-evaluation assignments are feasible, you may instead complete the same
+chain as a group. The same five Final Project components apply
+in either mode. Unless this brief marks a requirement as individual, an approved
+group submits one shared artifact naming every member, and its shared rubric
+rows receive a common score. Each member's AI Research Ledger and any other
+requirement marked individual are scored per member, so recorded milestone
+scores can differ only on those rows. Every member remains responsible for the
+complete work and their own defense. Peer Evaluation remains a true peer
+rating: group members rate every teammate; an individual-project researcher
+is rated by two instructor-assigned project peers; nobody rates themselves. See
+[Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
+It runs through milestones
 **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
@@ -21,34 +34,42 @@ checked it.
 
 This milestone records the public test and what you learned from it. The locked
 poster from M13 and your live **Expo presentation** on Tuesday, November 17
-together supply the Final Project's **Poster and Expo Presentation** component
-(20% of Final Project, or 6 course points): `70%` is the M13 poster-quality
-score and `30%` is the live-presentation score defined below. At the Expo, you stand your poster
-for strangers and evaluate at least three peer posters. The written **reflection
-and poster-criticism portfolio** reads your afternoon at the Expo as data; it is
-graded through M15 in the separate Final Project Milestones category and feeds
-the final dossier. Milestone weights and the revision policy live in the
-syllabus; instructions and rubrics live one page per milestone, like this one.
+together supply the Final Project's **Poster Presentation at the Purdue
+Undergraduate Research Conference** component (20% of Final Project, or 10
+course points): `70%` is the M13
+poster-quality score and `30%` is the live-presentation score defined below. For
+an approved group, the poster-quality portion is shared, but every member must
+present and receives their own live-presentation score. At the Expo, you stand
+your poster for strangers and evaluate at least three peer posters. The written
+**reflection and poster-criticism portfolio** reads your afternoon at the Expo as
+data; its M15 score is one of the seventeen scores averaged inside **Milestone
+Deliverables** and it feeds the final dossier. Milestone weights and the revision
+policy live in the syllabus; instructions and rubrics live one page per
+milestone, like this one.
 
 ---
 
 ## What to Submit on Brightspace
 
 Due: **Sunday, November 29, 11:59 PM**, worked across the two asynchronous sessions (Friday, November 20 and Monday, November 23). You present at the **Expo on Tuesday,
-November 17** (graded in the separate Final Project item, below), then bring your coding sheet to the
+November 17** (graded through Poster Presentation at the Purdue Undergraduate
+Research Conference, below),
+then bring your coding sheet to the
 **Friday reflection studio (Nov 20)**, where you code your questions, find your
 pattern, and write the revision that pattern licenses.
 
 | # | File | Description |
 |---|---|---|
-| 1 | **`lastname_m12_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-evaluation, with your AI Research Ledger rows attached. This is the graded written artifact. |
+| 1 | **`lastname_m12_reflection.pdf`** *or* a shared Colab notebook link | The seven-part package below: your coded question tally, the pattern you found, your honest reflection paragraph, your **defense revision record**, your three-entry poster-criticism portfolio, your post-release note, and your self-reflection check, with your AI Research Ledger rows attached. This is the graded written artifact and remains individual in either project mode. |
 | 2 | **EDR\|AI "It is your turn" — ch. 29** | The completed "It is your turn" sections of this milestone's book chapters, worked in their companion Colab notebooks (share the links) or included in your artifact. See "The Book Anchor" below. |
 
 The **Expo presentation (Tuesday, November 17)** supplies the live 30% subscore
-of Final Project's **Poster and Expo Presentation** item; it is not part of the
-M15 milestone score and is not a Brightspace upload. It happens in the room, and
-so does your evaluation of at least three other posters. The live presentation
-has no revision window (see Penalties). If you submit the written package as a notebook link, set
+of Final Project's **Poster Presentation at the Purdue Undergraduate Research
+Conference** component; it is not
+the M15 milestone process score and is not a Brightspace upload. It happens in
+the room, and so does your evaluation of at least three other posters. The live
+presentation has no revision window (see Penalties). If you submit the written
+package as a notebook link, set
 sharing so the instructor can open it, and make sure your tally table renders
 when the notebook is run.
 
@@ -112,7 +133,7 @@ crowd can love a poster whose central claim is wrong.
 
 ## Components
 
-### 1. The Expo presentation and peer evaluation (Tuesday, November 17)
+### 1. The Expo presentation and public-conference poster criticism (Tuesday, November 17)
 
 The live half of this milestone, and the release itself. Your M17 audit already
 decided this work could go public, so the Expo is not a dress run. On the day you
@@ -123,9 +144,12 @@ do two things, both graded:
   (which kind, which reach). Answering a stranger's question in time, without
   notes, is the skill a printed poster cannot fake.
 - **Evaluate at least three other posters.** These are not idle walk-bys. Each one
-  is the raw material for a structured criticism in your portfolio (Component 6),
+  is the raw material for a structured criticism in your portfolio (section 6
+  below),
   so take notes at the poster itself: the presenter's central claim, the evidence
-  shown for it, and the one place the two do not line up.
+  shown for it, and the one place the two do not line up. These public-conference
+  poster evaluations are not the Final Project's confidential **Peer Evaluation**
+  component.
 
 While you present, **capture the questions you are asked in the moment.** After
 each visitor leaves, jot one line on your coding sheet: the question's gist plus a
@@ -263,7 +287,7 @@ This note is a record, not a second audit. You are not rerunning the checklist;
 you are saying what the release event itself taught you about a decision you had
 already made.
 
-### 8. The self-evaluation
+### 8. The self-reflection check
 
 Two honest lines, judged against the evidence and not the applause: **one thing
 your own presentation did well** and **one thing you would do differently.** This
@@ -304,7 +328,8 @@ public audience questioned it, so the reason names what the public test changed.
 Then end with one line recording what this milestone finalizes in your **Research
 Project Dossier**: your communication record now carries a coded audience tally, a
 stated pattern, an honest reflection with its limits, a defense revision record, a
-three-entry criticism portfolio, a post-release note, and a self-evaluation. Name
+three-entry criticism portfolio, a post-release note, and a self-reflection
+check. Name
 the file or section where each now lives. That line is your bridge into M16, where
 you cold-run and red-team a classmate's anonymized package over the break.
 
@@ -324,7 +349,7 @@ pre-submission checklist.
 | **Defense revision record** | Every exposure a row: what the questioning exposed, the revision written out in full, and its reason; each row names claim, boundary, or defense; any "nothing changed" defended with the hardest question and the boundary that already answered it |
 | **Criticism portfolio** | Three entries, each naming its axis and pointing at real evidence on the actual poster |
 | **Post-release note** | Half a page: what moved since the M17 audit, which audit rows the public test touched, and whether the release decision still stands |
-| **Self-evaluation** | Two lines measured against your counts rather than the mood of the room |
+| **Self-reflection check** | Two lines measured against your counts rather than the mood of the room; this is not the confidential Peer Evaluation component |
 | **Version line** | Book Milestone 10, version 2, dated, with its reason |
 | **Permission status** | Your permission determination is still authorized; blocked work does not proceed |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague; no revision decided by a tool |
@@ -338,9 +363,11 @@ pre-submission checklist.
 
 ## Final Project live Expo presentation rubric (100 points)
 
-This score is entered only through the **Poster and Expo Presentation** item.
+This score is entered only through **Poster Presentation at the Purdue
+Undergraduate Research Conference**.
 The item calculation is `0.70 × M13 poster-quality score + 0.30 × this live
-presentation score`.
+presentation score`. For an approved group, the first term is the shared poster
+score and the second term is each member's own live-presentation score.
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
@@ -348,12 +375,12 @@ presentation score`.
 | **Evidence and traceability under questions** (25) | Answers from the poster, notebook, or ledger; identifies where a number came from and distinguishes what was checked from what remains assumed (23–25) | Answers are evidence-grounded; one trace requires prompting (18–22) | Relies on memory or assertion for multiple questions (11–17) | Cannot trace a central number or invents support under pressure (0–10) |
 | **Uncertainty, limitations, and concession** (20) | States uncertainty with the claim, names the most threatening limitation, and concedes a smaller true claim precisely when warranted (18–20) | Limit and uncertainty are accurate but one is delayed or loosely phrased (14–17) | Treats uncertainty as a footnote or resists a warranted concession (8–13) | Presents certainty the evidence does not support or refuses an evidence-required correction (0–7) |
 | **Audience responsiveness** (15) | Adapts the explanation to the visitor, listens before answering, and handles difficult questions directly without hiding behind jargon or AI (14–15) | Clear and responsive with one rehearsed or indirect answer (11–13) | Mostly recites the pitch regardless of the question (6–10) | Dismisses questions, blames a tool, or cannot engage the visitor (0–5) |
-| **Professional readiness and research citizenship** (10) | Present for the required window, poster ready, presentation evidence recorded, and at least three classmates' posters reviewed constructively (9–10) | Required presentation completed; one documentation or peer-review detail thin (7–8) | Late/incomplete presentation record or fewer than three peer reviews (4–6) | Required presentation not completed without an approved emergency arrangement (0–3) |
+| **Professional readiness and research citizenship** (10) | Present for the required window, poster ready, presentation evidence recorded, and at least three other conference posters reviewed constructively (9–10) | Required presentation completed; one documentation or conference-review detail thin (7–8) | Late/incomplete presentation record or fewer than three conference-poster reviews (4–6) | Required presentation not completed without an approved emergency arrangement (0–3) |
 
 ## M15 milestone reflection rubric (100 points)
 
-This score is entered only in **Final Project Milestones** and evaluates the
-written reflection, criticism portfolio, and carry-forward record—not live
+This score is entered only as M15 within **Milestone Deliverables** and evaluates
+the written reflection, criticism portfolio, and carry-forward record—not live
 presentation quality.
 
 Four bands on the course's five shared virtues
@@ -366,7 +393,7 @@ criteria for this checkpoint (`planning/BOOK_ASSESSMENTS.yml`,
 | **Feedback coding & defense revision** (30) | Every question logged and coded consistently by type, target, and recurrence; the claims-vs-communication split is right; the pattern reads straight off the counts; every exposure carries a revision written out in full with its reason, each naming claim, boundary, or defense; any "nothing changed" is defended with the hardest question and the boundary that answered it; each portfolio entry names its axis and stays inside that poster's licensed reach (26–30) | Tally nearly complete and the split mostly right; one revision row thin, or one portfolio entry under-argued (21–25) | Partial tally, one code dimension missing throughout, a revision promised but never written out, or a criticism that names no axis (13–20) | A list of impressions rather than coded data; an undefended "nothing changed"; or reception treated as validation of the claims (0–12) |
 | **Evidence integrity** (20) | Every logged question was actually asked, every revision points back to the tally rows that prompted it, every portfolio gap points at a real element on the actual poster, and the post-release note describes the package you really released (18–20) | Real and traceable throughout; one row, one poster gap, or one post-release line lightly sourced (14–17) | A question, a revision, or a poster flaw asserted without a path back to what was asked, counted, or shown (8–13) | A fabricated question you were not asked, or a poster flaw the poster does not carry (0–7) |
 | **Verification of AI-assisted parts** (20) | The pattern and any shares are checked against the counts, recomputed or hand-counted rather than felt; every AI-assisted step has a ledger row with a named, non-vague verification method; every revision was decided by you, with any AI-drafted wording checked before acceptance (18–20) | Verification present; one method vague, or one AI step unlogged (14–17) | Counts used but the pattern not verified against them, or AI output accepted without a named check (8–13) | A reported count that does not rerun from the tally, or an AI-drafted reflection, revision, or critique reproduced with no verification (0–7) |
-| **Uncertainty & limitations** (20) | The reflection states what remains untested and names its limits (how few questions were logged, the recall gap); each revision reason says why the evidence licenses that much and no more; the post-release note names any staleness honestly; the self-evaluation names a real weakness (18–20) | Honest reflection, revision reasons, and self-evaluation; uncertainty or the warm-room caveat stated loosely (14–17) | Reflection general or performative; a revision reason that asserts rather than argues; limits gestured at but not named (8–13) | "It went great" with no substance, an overcorrection with no evidence behind it, or reception read as certainty about the claims (0–7) |
+| **Uncertainty & limitations** (20) | The reflection states what remains untested and names its limits (how few questions were logged, the recall gap); each revision reason says why the evidence licenses that much and no more; the post-release note names any staleness honestly; the self-reflection check names a real weakness (18–20) | Honest reflection, revision reasons, and self-reflection; uncertainty or the warm-room caveat stated loosely (14–17) | Reflection general or performative; a revision reason that asserts rather than argues; limits gestured at but not named (8–13) | "It went great" with no substance, an overcorrection with no evidence behind it, or reception read as certainty about the claims (0–7) |
 | **Craft, ledger & communication** (10) | Versioned with its reason, on-format, on-time; proof of presentation and at least three completed poster reviews attached; post-release note present; complete AI Research Ledger; dossier line present (9–10) | Minor format lapses; ledger complete (7–8) | Missing pieces, a thin portfolio, a decorative version reason, or fewer than three poster reviews documented (4–6) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–3) |
 
 **Hard caps (a single failure caps the row regardless of the rest):**

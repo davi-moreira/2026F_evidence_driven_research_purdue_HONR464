@@ -25,6 +25,7 @@ from __future__ import annotations
 import csv
 import datetime
 import html
+import json
 import re
 import sys
 from pathlib import Path
@@ -45,9 +46,28 @@ COLAB = f"https://colab.research.google.com/github/{REPO}/blob/main"
 DAYNAME = {"Mon": "Monday", "Wed": "Wednesday", "Fri": "Friday"}
 
 
+def quiz_handouts() -> dict[int, Path]:
+    """Return active course week -> generated printed quiz handout."""
+    result: dict[int, Path] = {}
+    for source in sorted(QUIZZES.glob("*.json")):
+        spec = json.loads(source.read_text())
+        if not spec.get("active", True):
+            continue
+        week = spec.get("week")
+        if isinstance(week, bool) or not isinstance(week, int):
+            raise ValueError(f"{source}: active quiz requires an integer week")
+        handout = source.with_name(f"{source.stem}_quiz.md")
+        if not handout.exists():
+            raise FileNotFoundError(f"active quiz handout missing: {handout}")
+        if week in result:
+            raise ValueError(f"multiple active quizzes declare course week {week}")
+        result[week] = handout
+    return result
+
+
 def n_quizzes() -> int:
-    """How many weeks actually carry a printed quiz (Week 14 is async)."""
-    return len(list(QUIZZES.glob("week*_quiz.md")))
+    """How many course weeks actually carry a printed quiz."""
+    return len(quiz_handouts())
 
 
 def esc(text: str) -> str:
@@ -165,7 +185,7 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
                 "unit. Read it before the studio.</p>"
             )
 
-    if (QUIZZES / f"week{week:02d}_quiz.md").exists():
+    if week in quiz_handouts():
         add("<h3>Friday quiz</h3>")
         add(
             "<p>The studio opens with a 10-minute printed multiple-choice quiz "
@@ -183,6 +203,7 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
 def gradebook_spec(config: dict) -> str:
     a = config["assessment"]
     fp = config["final_project_breakdown"]
+    mode = config["course"]["project_mode"]
     labels = {
         "attendance": ("Attendance", "iClicker; 85% target"),
         "participation": (
@@ -198,18 +219,59 @@ def gradebook_spec(config: dict) -> str:
             "Student Research Lead",
             "5 leads per student, scored on project/srl/srl_rubric.md",
         ),
-        "final_project_milestones": (
-            "Final Project Milestones",
-            "M1-M17; see the grading architecture in "
-            "planning/ASSESSMENT_ARCHITECTURE.md",
-        ),
         "final_project": (
             "Final Project",
-            "Five graded items (30/20/10/20/20), including the final "
-            "paper/chapter/note, AI-management portfolio, peer review, "
-            "poster/Expo presentation, and Evidence Defense",
+            "One category with five QM474 component items (30/20/10/20/20); "
+            "Milestone Deliverables contains M1-M17",
         ),
     }
+    expected_fp = [
+        ("milestone_deliverables", "Milestone Deliverables", 30, 15),
+        ("peer_evaluation", "Peer Evaluation", 20, 10),
+        ("peer_review", "Peer Review", 10, 5),
+        (
+            "poster_presentation_at_the_conference",
+            "Poster Presentation at the Purdue Undergraduate Research Conference",
+            20,
+            10,
+        ),
+        ("instructor_ta_evaluation", "Instructor/TA Evaluation", 20, 10),
+    ]
+    if mode != {
+        "default": "individual",
+        "groups_allowed": True,
+        "approval_required": True,
+        "maximum_approved_groups": 1,
+        "maximum_group_size": 3,
+        "individual_project_peer_evaluators": 2,
+        "minimum_active_projects_for_peer_review": 3,
+        "peer_assignment_plan_required": True,
+    }:
+        raise ValueError(
+            "D52 requires individual-default projects, at most one approved "
+            "group of no more than three students, three active projects, two "
+            "project-peer evaluators for each individual project, and a "
+            "feasible evaluation plan"
+        )
+    if "final_project_milestones" in a:
+        raise ValueError(
+            "D52 permits one top-level Final Project category; remove "
+            "assessment.final_project_milestones"
+        )
+    if a.get("final_project") != 50:
+        raise ValueError("D52 requires assessment.final_project to equal 50")
+    if list(fp) != [key for key, _, _, _ in expected_fp]:
+        raise ValueError("Final Project must use D52's five components in order")
+    for key, label, project_share, course_share in expected_fp:
+        if (
+            fp[key].get("label") != label
+            or fp[key].get("project_share") != project_share
+            or fp[key].get("course_share") != course_share
+        ):
+            raise ValueError(
+                f"{key} must be labelled {label!r}, carry {project_share}% of "
+                f"Final Project, and contribute {course_share}% of the course"
+            )
     fp_project_total = sum(item["project_share"] for item in fp.values())
     fp_course_total = sum(item["course_share"] for item in fp.values())
     if any(not item.get("scoring_rule") for item in fp.values()):
@@ -245,7 +307,7 @@ def gradebook_spec(config: dict) -> str:
         "",
         "Create these as five grade items inside the **Final Project** category. "
         "The project shares preserve QM474's 30/20/10/20/20 structure; the "
-        "course shares total 30%.",
+        f"course shares total {a['final_project']}%.",
         "",
         "| Item | Share of Final Project | Share of course | Contains | Scoring rule |",
         "|---|---:|---:|---|---|",
@@ -260,21 +322,53 @@ def gradebook_spec(config: dict) -> str:
         "| **Total** | **100%** | "
         f"**{fp_course_total}%** | | |",
         "",
-        "The former standalone Research artifact category is not a gradebook "
-        "category. The final paper, chapter, or research note is graded in the "
-        "first Final Project item.",
+        "Do not create a top-level Final Project Milestones category. M1-M17 "
+        "are the source scores for the Milestone Deliverables item inside the "
+        "single Final Project category. Enter that item as the equal-weight "
+        "mean of all seventeen 0-100 milestone scores. Keep the seventeen "
+        "numeric source items for feedback without giving them additional "
+        "weight; use a calculated item when available or enter the verified "
+        "mean manually.",
         "",
-        "Where a milestone supplies evidence to a Final Project item, keep two "
-        "distinct scores: the milestone process score (completion, timeliness, "
-        "versioning, and response to feedback) and the terminal-quality Final "
-        "Project score. Never copy a rubric score between categories.",
+        "A milestone may also supply evidence to Peer Review, Poster "
+        "Presentation at the Purdue Undergraduate Research Conference, or "
+        "Instructor/TA Evaluation. Keep the milestone rubric and terminal "
+        "rubric distinct; never copy one raw "
+        "score into two component calculations.",
+        "",
+        "**Project modes.** Individual work is the default; groups require "
+        "instructor approval before shared work begins. Approvals must "
+        "create at most one group of no more than three students, preserve at "
+        "least three active projects, and include a feasible peer-assignment "
+        "plan in which every individual researcher has two observers and every "
+        "student has at least one evaluation to submit. Group members share "
+        "rubric-row scores for shared milestone evidence, the poster-quality "
+        "subscore, and the final-artifact subscore. Requirements marked "
+        "individual are scored per member, so a milestone score may differ "
+        "only on those rows. Peer Evaluation, Peer Review, live "
+        "presentation, AI-management portfolio, and Evidence Defense remain "
+        "per student. Build the confidential Peer Evaluation form from "
+        "project/final_dossier/peer_evaluation_instrument.md.",
         "",
         "## Items inside each category",
         "",
-        f"- **Final Project Milestones** — {len(config['milestones'])} items, "
-        "M1 through M17, each with the "
-        "due date below. Set them all at once; sequential release controls what "
-        "students can see.",
+        f"- **Final Project → Milestone Deliverables** — {len(config['milestones'])} "
+        "source items, M1 through M17, each with the due date below; the "
+        "component score is their equal-weight mean.",
+        "- **Final Project → Peer Evaluation** — one confidential per-student "
+        "item; use every teammate for approved groups and two assigned project "
+        "peers for individual researchers. No self-rating. If evaluator "
+        "non-submission leaves no valid received rating after follow-up, use "
+        "the neutral 80-point received-rating portion; do not add a substitute "
+        "evaluator after observation ends.",
+        "- **Final Project → Peer Review** — one individually scored item from "
+        "the M12 Final Project Peer Review rubric.",
+        "- **Final Project → Poster Presentation at the Purdue Undergraduate "
+        "Research Conference** — one per-student item: 70% M13 poster quality "
+        "+ 30% M15 live presentation.",
+        "- **Final Project → Instructor/TA Evaluation** — one per-student "
+        "item: 50% M17 Final Research Artifact + 25% M17 AI-management "
+        "portfolio + 25% Evidence Defense.",
         f"- **Quizzes** — {n_quizzes()} items, one per teaching week that "
         "carries a quiz (Week 14 is asynchronous and has none). Quizzes are "
         "printed and graded on paper, so create them as **numeric grade "

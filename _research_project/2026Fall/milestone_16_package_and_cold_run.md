@@ -9,8 +9,21 @@
 
 ## About the Research Project
 
-Your semester project is **individual**: one researcher, one question, carried
-from curiosity to a defended, reproducible claim. It runs through milestones
+Your semester project is **individual by default**: one researcher, one question,
+carried from curiosity to a defended, reproducible claim. With instructor
+approval, and only if at least three active projects remain and the required
+peer-evaluation assignments are feasible, you may instead complete the same
+chain as a group. The same five Final Project components apply
+in either mode. Unless this brief marks a requirement as individual, an approved
+group submits one shared artifact naming every member, and its shared rubric
+rows receive a common score. Each member's AI Research Ledger and any other
+requirement marked individual are scored per member, so recorded milestone
+scores can differ only on those rows. Every member remains responsible for the
+complete work and their own defense. Peer Evaluation remains a true peer
+rating: group members rate every teammate; an individual-project researcher
+is rated by two instructor-assigned project peers; nobody rates themselves. See
+[Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
+It runs through milestones
 **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
@@ -21,14 +34,14 @@ cumulative **Research Project Dossier** and appends at least one row to your
 checked it. Milestone weights live in the syllabus;
 instructions and rubrics live one page per milestone, like this one.
 
-This milestone produces the graded precursor to the Final Project's **Final
-Research Artifact and Milestone Synthesis** and documents evidence used in the
-**Individual Research Process and AI-Management Portfolio**. Your research note
-is not a separate course category: it grows into the final paper, chapter, or
-note graded inside Final Project at M17. M16 itself remains graded in the
-separate Final Project Milestones category. It is where your claim ledger is
-graded a second time (after M10, before M17), because a note is where a claim
-either stays sized to its evidence or quietly grows past it. It is
+This milestone produces the reproducibility package and research note that M17
+finalizes. Its 100-point score is one of the seventeen scores averaged inside
+Final Project's **Milestone Deliverables** component. The final paper, chapter,
+or note, AI-management record, and reproducibility evidence also become part of
+the final submission examined under **Instructor/TA Evaluation**; they do not
+create extra Final Project components. This is where your claim ledger is graded
+a second time (after M10, before M17), because a note is where a claim either
+stays sized to its evidence or quietly grows past it. M16 is
 **revision-eligible** under the standing policy.
 
 ---

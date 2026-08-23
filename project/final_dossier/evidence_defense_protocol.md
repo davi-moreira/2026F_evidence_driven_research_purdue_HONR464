@@ -5,19 +5,30 @@ cross-examination. Governs
 [course milestone M17 — Release Audit, Final Research Chapter, and AI-Management Portfolio](../../_research_project/2026Fall/milestone_17_release_and_final_chapter.md).
 Performed across the Wednesday defense blocks in Weeks 15 and 16, with the final
 round during M43 on Friday, December 11. The final section governs the final
-dossier submitted with M17 that night. The instructor
-records the defense inside Final Project's **Instructor Evaluation and Evidence
-Defense** item (20% of Final Project, or 6 course points). The 100-point rubric
-below is the item's complete scoring rule: its raw score is entered directly,
-with the final dossier serving as the evidence base opened during the defense.*
+dossier submitted with M17 that night. The instructor records the final
+submission and defense inside Final Project's **Instructor/TA Evaluation** item
+(20% of Final Project, or 10 course points). The 100-point rubric below supplies
+only the **Evidence Defense subscore**, which is 25% of that item. The complete
+item score is `0.50 × Final Research Artifact + 0.25 × AI-management portfolio + 0.25 × Evidence Defense`;
+the first two 100-point subrubrics live in the M17 brief. Only the resulting
+weighted score is entered in the gradebook.*
+
+*Individual work is the default. For an approved group project, the shared
+Final Research Artifact subscore is common, but every member supplies a
+personally attributable AI-management portfolio and completes their own defense.
+For member \(j\), the score is therefore
+`0.50 × shared artifact + 0.25 × portfolio_j + 0.25 × defense_j`. The instructor records one score per student,
+so group members may receive different scores. A TA may co-score if one is
+assigned; no separate sixth component is created.*
 
 ## Purpose
 
-Under cross-examination, does your evidence hold? The defense is your claim
-ledger, performed: you defend not just WHAT you claim but WHY your compass
-position, data, and checks license it — and you concede gracefully where the ledger says
-concede. The room is rigorous, respectful, and ledger-grounded. The ledger is
-your shield; it is also the standard you are held to.
+Does your finished submission hold, and can you defend it under
+cross-examination? The defense is your claim ledger, performed: you defend not
+just WHAT you claim but WHY your compass position, data, and checks license it —
+and you concede gracefully where the ledger says concede. The room is rigorous,
+respectful, and ledger-grounded. The ledger is your shield; it is also the
+standard you are held to.
 
 ## Materials
 
@@ -54,13 +65,13 @@ relative emphasis.
 - **Blaming the AI tool.** "The AI gave me that" is not a defense. You verified,
   or you didn't; the researcher owns the process (Ask → Verify → Document).
 
-## The defense rubric (100 points)
+## Evidence Defense subrubric (100 points)
 
 | Criterion | Exemplary | Proficient | Developing | Beginning |
 |---|---|---|---|---|
 | **Ledger command** (25) | Every claim answered from its row instantly; the ledger is clearly lived-in (22–25) | Answers grounded, occasional hunting for the row (18–21) | Vague grounding; claims defended from memory not ledger (11–17) | No command of own ledger (0–10) |
 | **Boundary discipline under pressure** (25) | Never overclaims, even when pushed; the boundary holds under the hardest question (22–25) | Holds the boundary with one wobble, self-corrected (18–21) | Boundary drifts under pressure (association → cause) (11–17) | Overclaims freely when challenged (0–10) |
-| **Verification defense** (20) | Shows exactly how each number was checked; reproduction + sensitivity cited (18–20) | Verification described, lightly evidenced (14–17) | Verification asserted, not shown (8–13) | Cannot say how anything was checked (0–7) |
+| **Verification defense** (20) | Shows exactly how each number was checked; reproduction and sensitivity evidence cited (18–20) | Verification described, lightly evidenced (14–17) | Verification asserted, not shown (8–13) | Cannot say how anything was checked (0–7) |
 | **Concession quality** (15) | Concedes precisely where the ledger says, naming the smaller true claim (14–15) | Concedes, but imprecisely (11–13) | Concedes grudgingly or too late (6–10) | Digs in on an indefensible point (0–5) |
 | **Cross-examination citizenship** (15) | Asks sharp, fair, ledger-grounded questions of others (14–15) | Asks the required question, competently (11–13) | Asks a shallow or off-target question (6–10) | Does not participate as a cross-examiner (0–5) |
 

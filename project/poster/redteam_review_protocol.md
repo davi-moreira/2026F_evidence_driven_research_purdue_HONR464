@@ -2,24 +2,26 @@
 
 *The structured adversarial review of your draft poster, run in class M30.
 The four-plus-one audits it runs are the same audits graded on your poster draft
-([milestone_09 — Poster Draft 1 and Research Audit](../../_research_project/2026Fall/milestone_09_poster_draft_research_audit.md))
+([course milestone M11 — Poster First Draft](../../_research_project/2026Fall/milestone_11_poster_first_draft.md))
 and re-run as the gallery-walk audit record of your locked poster
-([milestone_10 — Final Poster Lock](../../_research_project/2026Fall/milestone_10_final_poster_lock.md)).
+([course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md)).
 Rule of the room: hard on the poster, warm on the person.*
 
 ## Purpose
 
 Peer review is the course's quality gate, not a courtesy. A hostile-but-fair eye
 finds the overclaim, the dishonest axis, the broken read path, and the missing
-bound before a stranger does on Nov 17. You will red-team two posters and be
-red-teamed by two — then triage your hits and fix the worst one before you leave.
+bound before a stranger does on Nov 17. Every student independently red-teams
+every other active project poster, then triages the readings their project
+receives and fixes the worst hit before leaving. Approved group members do not
+confer while reviewing or while first adjudicating the feedback.
 
 ## Materials
 
 - Your full draft poster, on screen (built from your M29 storyboard grid).
-- Two blank audit slips per reviewer (one per poster you review).
+- One blank audit slip for every other active project poster.
 - The nb11 honest-viz checklist (it rides again for the figure-honesty audit).
-- The rotation assignment (below) so everyone knows who reviews whom.
+- The active-project circuit (below) so everyone knows which posters to review.
 
 ## The five audits (what every reviewer runs)
 
@@ -56,7 +58,7 @@ red-teamed by two — then triage your hits and fix the worst one before you lea
 
 ```
 RED-TEAM AUDIT SLIP
-Poster author: __________________   Reviewer: __________________
+Poster author(s): _______________   Reviewer: __________________
 
 Compass position declared on poster: [ ] Description [ ] Generalization [ ] Prediction [ ] Causal
 
@@ -71,54 +73,56 @@ The one fix I'd make first if this were my poster:
 _____________________________________________________________
 ```
 
-## Rotation for five (each reviews 2, is reviewed by 2)
+## Review circuit for three to five active projects
 
-Label the posters A B C D E in seating order. Round 1 and Round 2 assignments:
-
-| Reviewer | Round 1 reviews | Round 2 reviews |
-|---|---|---|
-| A | B | C |
-| B | C | D |
-| C | D | E |
-| D | E | A |
-| E | A | B |
-
-Every author (A–E) is reviewed by exactly two people across the two rounds.
+Label the **active projects**, not the students, A through C, D, or E. Each
+student reviews every project other than their own. With five individual
+projects, that means four slips per student; approved groups reduce the number
+of active posters but never below three, so every student completes at least two
+reviews. Members of the same group work independently and never review their own
+shared poster.
 
 ## Procedure (50 minutes)
 
 | Time | Activity |
 |---|---|
-| 0–5 | Norms + roles: hard on the poster, warm on the person; rotation posted. |
+| 0–5 | Norms + roles: hard on the poster, warm on the person; active-project circuit posted. |
 | 5–10 | Protocol walkthrough: the five audits and the slip. |
-| 10–22 | **Round 1** (12 min): reviewer walks the poster aloud with the slip; **author is silent**; last 2 min, author asks clarifying questions only. |
-| 22–34 | **Round 2** (12 min): same format, new pairing. |
-| 34–46 | **Revision triage:** rank your received hits; fix the top one NOW; write the plan for the rest. |
+| 10–34 | **Silent review circuit:** divide the window evenly across every other active poster; write before anyone speaks and do not confer. |
+| 34–46 | **Individual adjudication and revision triage:** rank the hits your project received, reject at least one with a reason, fix the top valid hit now, and write the plan for the rest. Group members complete the adjudication independently before coordinating a shared repair. |
 | 46–50 | Exit ticket (the hit I'm fixing first + what the fixed version says); log the slips into your M13 lock record. |
 
 ## Roles
 
-- **Reviewer:** runs all five audits out loud, names the single strongest hit per audit, is specific enough to act on.
-- **Author (during review):** silent — you listen and take notes; you get 2 minutes of questions at the end, not rebuttal.
+- **Reviewer:** silently runs all five audits, names the single strongest hit per
+  audit, and writes specifically enough for the author to act.
+- **Author:** reviews other projects while classmates read the author's poster;
+  explanation and rebuttal wait until every independent slip is complete.
 
 ### Session flow (for the record)
 
-Professor Moreira keeps the two 12-minute rounds strict, enforces author silence,
-and holds a sample poster with six planted flaws ready for the walkthrough. Each
-reviewer produces two completed slips; each author leaves with two.
+Professor Moreira allocates the review window across the number of active
+projects, enforces the no-conferring rule, and holds a sample poster with six
+planted flaws ready for the walkthrough. Every student produces one completed
+slip for every other active project.
 
 ## What goes into your M13 lock record
 
-Your two given audit slips, the two slips you received, your ranked triage plan,
-and the first fix already applied to the draft. These become the gallery-walk
-audit record you submit with the locked poster at M13 (Fri Nov 6).
+All audit slips you gave, the slips your project received, your individual
+adjudication and ranked triage plan, and the first fix already applied to the
+draft. These become the gallery-walk audit record you submit with the locked
+poster at M13 (Sunday, November 8, 11:59 PM).
 
 ## Common failure modes
 
-1. **Author defends mid-review.** Silence is the rule — defending shrinks the honest feedback window. Save it for the 2-minute question slot.
+1. **Author defends mid-review.** Silence is the rule — defending shrinks the
+   honest feedback window. Save clarification until every independent slip is
+   complete.
 2. **Vague hits.** "Figures could be clearer" is unusable. Name the axis, the word, the box.
 3. **Politeness over rigor.** A review with no hits failed the poster, not spared it. Find the real one.
 4. **Triage paralysis.** You cannot fix everything tonight. Rank, fix the worst, schedule the rest.
-5. **No draft to review.** If your draft doesn't exist, you still review two posters (the obligation stands) and enter Friday's production day with your storyboard plus instructor triage.
+5. **No draft to review.** If your draft does not exist, you still review every
+   other active poster; the obligation stands, and you enter production day with
+   your storyboard plus instructor triage.
 
 *Next: [production_checklist.md](production_checklist.md) — M31 turns the triaged draft into the submitted, print-ready poster.*

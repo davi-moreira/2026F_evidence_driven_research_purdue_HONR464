@@ -90,7 +90,7 @@ both rounds and signs one audit.
 
 1. **Rehearsing soft.** A half-effort run trains nothing. Present as if the stranger's opinion counts — tomorrow it will.
 2. **Notes during the run.** Interrupting to fix a line breaks the simulation. Hold notes for after the round.
-3. **Same question every visit.** One easy question at five posters helps no one. Work the whole five-type card.
+3. **Same question every visit.** One easy question at every poster helps no one. Work the whole five-type card.
 4. **Signing a false box.** An audit that lies is worse than an honest gap. Sign only what's true; the unchecked box is tonight's task.
 5. **Print assumed, not confirmed.** If the print isn't in hand, present full-screen today and trigger the emergency print run — the backup plan resolves it before Tuesday.
 

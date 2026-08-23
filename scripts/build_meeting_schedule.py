@@ -67,7 +67,7 @@ def main() -> None:
 
     # --- write CSV ----------------------------------------------------------
     with open(OUT_CSV, "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=COLUMNS)
+        w = csv.DictWriter(f, fieldnames=COLUMNS, lineterminator="\n")
         w.writeheader()
         for m in MEETINGS:
             w.writerow({c: m[c] for c in COLUMNS})

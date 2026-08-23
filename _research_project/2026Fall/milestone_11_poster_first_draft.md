@@ -8,8 +8,21 @@
 
 ## About the Research Project
 
-Your semester project is **individual**: one researcher, one question, carried
-from curiosity to a defended, reproducible claim. It runs through milestones
+Your semester project is **individual by default**: one researcher, one question,
+carried from curiosity to a defended, reproducible claim. With instructor
+approval, and only if at least three active projects remain and the required
+peer-evaluation assignments are feasible, you may instead complete the same
+chain as a group. The same five Final Project components apply
+in either mode. Unless this brief marks a requirement as individual, an approved
+group submits one shared artifact naming every member, and its shared rubric
+rows receive a common score. Each member's AI Research Ledger and any other
+requirement marked individual are scored per member, so recorded milestone
+scores can differ only on those rows. Every member remains responsible for the
+complete work and their own defense. Peer Evaluation remains a true peer
+rating: group members rate every teammate; an individual-project researcher
+is rated by two instructor-assigned project peers; nobody rates themselves. See
+[Final Project — Grading and Project Modes](final_project_grading_and_project_modes.md).
+It runs through milestones
 **M1–M17**, peaks publicly at the **Purdue Fall Undergraduate Research Expo
 poster session (Tuesday, November 17 — required)**, and closes with an oral
 **Evidence Defense** and a final research chapter in December. Every milestone
@@ -67,9 +80,10 @@ someone standing up, who did not come for you, and who will leave if the first
 thing they see does not tell them why they should stay. Everything the artifact
 knows has to survive that compression without growing.
 
-The draft exists so that four readers can find, in a room where it is still
-cheap, the wrong inference your board invites. A defect found on Wednesday costs
-you an evening. The same defect found at the Expo costs you the claim.
+The draft exists so that readers from the other active projects can find, in a
+room where it is still cheap, the wrong inference your board invites. A defect
+found on Wednesday costs you an evening. The same defect found at the Expo costs
+you the claim.
 
 Two rules govern this milestone, and both are checked:
 
@@ -149,7 +163,7 @@ Both go in the ledger with the verification method named.
 | **Traceability** (25) | Every number on the draft is listed with its notebook and cell; untraceable numbers are named as blocking rather than quietly left (23–25) | Complete, with one number needing a hunt (18–22) | Several numbers not readily traceable (11–17) | A number on the board with no run behind it (0–10) |
 | **Uncertainty placement** (20) | The interval or caveat is inside the headline's eye-span; the boundary sentence is present and stops where the evidence stops (18–20) | Present, one placement off the read path (14–17) | Uncertainty present but off-path or vague (8–13) | No uncertainty on the board, or the result shown as settled (0–7) |
 | **Craft, ledger & disclosure** (20) | Template and print spec met, legible at print scale, redundant encoding where colour carries meaning; complete ledger; AI-use disclosure block present (18–20) | Minor spec or accessibility lapse; ledger complete (14–17) | Off-spec or hard to read at size (8–13) | Missing AI Research Ledger (Craft scored 0, submission returned) (0–7) |
-| **Readiness for review** (10) | Submitted at the start of class, complete enough that four readers can each produce an actionable finding (9–10) | On time, one block too thin to review (7–8) | Late to the review round (4–6) | Not submitted in time to be reviewed (0–3) |
+| **Readiness for review** (10) | Submitted at the start of class, complete enough that every reader from another active project can produce an actionable finding (9–10) | On time, one block too thin to review (7–8) | Late to the review round (4–6) | Not submitted in time to be reviewed (0–3) |
 
 ---
 
@@ -169,5 +183,6 @@ Both go in the ledger with the verification method named.
 
 *Previous: [M10 — Venue Contract and the Publication-Ready Artifact](milestone_10_poster_draft_research_audit.md) —
 the artifact you shaped for your venue is what this draft compresses ·
-Next: [M12 — Peer Review Submission](milestone_12_peer_review.md) — the four
-readings you write on your colleagues' drafts, and the four you receive.*
+Next: [M12 — Peer Review Submission](milestone_12_peer_review.md) — the
+readings you write on every other active project, and the independent readings
+your project receives.*

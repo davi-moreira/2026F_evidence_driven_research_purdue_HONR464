@@ -8,10 +8,11 @@ For the machine-readable spine (dates, weights, milestone IDs), read
 `planning/CALENDAR_BACKBONE.csv` and intent defers to the master plan.
 
 The course is a 5-student honors seminar meeting **Mon/Wed/Fri, 50 minutes**,
-across **43 meetings** (42 in person + 1 async). Five students run five
-individual projects to five posters. The instructor's job is not to lecture; it
-is to **monitor and formalize** student-led lectures, **run** the Friday
-studios, and **grade the chain** on a fast, predictable cadence.
+across **43 meetings** (42 in person + 1 async). Individual projects are the
+default; students may form a project group with instructor approval before
+shared work begins. The instructor's job is not to lecture; it is to **monitor
+and formalize** student-led lectures, **run** the Friday studios, and **grade the
+chain** on a fast, predictable cadence.
 
 ---
 
@@ -139,20 +140,48 @@ M15 Nov 29 (Sun, async) · M16 Dec 4 ·
 - **Return feedback within 3 days** of each milestone.
 - **Revision window: 7 days** from feedback, for up to half the lost points, on
   every milestone **except the terminal two** (M13, M17). The live Expo
-  presentation is separately terminal inside Final Project's Poster and Expo
-  Presentation item. For those terminal scores, the deadline governs.
+  presentation is separately terminal inside Final Project's Poster
+  Presentation at the Purdue Undergraduate Research Conference item. For those
+  terminal scores, the deadline governs.
 - Every submission must append an **AI Research Ledger** entry (8 fields) and
   update the cumulative **Research Project Dossier**. A missing ledger entry
-  scores the rubric's Craft criterion 0 and the submission is **returned**.
+  scores the affected student's individual Craft/ledger row specified in the
+  milestone brief 0 and that submission is **returned**. Do not change a
+  separate shared terminal-rubric score unless its rubric says to do so.
 - Rubrics share a fixed criteria menu (compass alignment, evidence integrity,
   verification, uncertainty + limitations, craft). Confirmed weights live in
   `course_config.yaml assessment:`.
 
-The course has six weighted categories totaling 100: Attendance 1 ·
-Participation 9 · Quizzes 20 · SRL performance 20 · Final Project Milestones
-20 · Final Project 30. Final Project uses five 30/20/10/20/20 items; the exact
-QM474-to-HONR mapping is authoritative in
+The course has five weighted categories totaling 100: Attendance 1 ·
+Participation 9 · Quizzes 20 · SRL performance 20 · Final Project 50. Final
+Project contains **Milestone Deliverables 30% · Peer Evaluation 20% · Peer
+Review 10% · Poster Presentation at the Purdue Undergraduate Research
+Conference 20% · Instructor/TA Evaluation 20%**, worth 15/10/5/10/10 course
+points. The exact arithmetic is authoritative in
 `planning/ASSESSMENT_ARCHITECTURE.md`.
+
+**Project-mode setup.** Record the approved group before shared work begins.
+With five students, approve at most one group of two or three, and do so only
+when at least three active projects remain and the roster
+supports two observers per individual researcher plus a nonempty evaluation
+submission set for every student.
+For every student, record a received-rating set and a nonempty submission set.
+An individual researcher's received-rating set is two assigned project peers
+who observe studios, milestone checks, reproduction work, and defenses; their
+submission set is the peer or peers they are assigned to observe, normally two.
+A group member is rated by every teammate and rates every teammate, and may also
+be assigned to observe an individual researcher. The two sets need not be
+reciprocal. Do not mix Peer Evaluation with M12 Peer Review. Use
+`project/final_dossier/peer_evaluation_instrument.md` for the confidential form,
+rating conversion, missing-rating rule, and moderation record.
+
+**Gradebook operation.** Milestone Deliverables is the equal-weight mean of the
+seventeen M1–M17 scores. An approved group submits one shared artifact naming
+every member. Enter shared rubric-row scores in common and score requirements
+marked individual per student; a milestone score may differ only on those
+individual rows. Every student still completes Peer Review and presents live. A
+group shares the poster-quality and final-artifact subscores; live delivery, the AI-management
+portfolio, Peer Evaluation, and the Evidence Defense remain individual.
 
 ---
 
@@ -212,10 +241,11 @@ miss the print deadline and there is no poster to present.
    poster is locked and submitted for printing. No changes after this time.
    Confirm the print vendor turnaround well before this date.
 3. **URC Expo — Tue Nov 17.** Required. Live presentation quality supplies 30%
-   of Final Project's Poster and Expo Presentation item; M13 poster quality
+   of Final Project's Poster Presentation at the Purdue Undergraduate Research
+   Conference item; M13 poster quality
    supplies the other 70%. M15 grades the written reflection, not live quality. Each student
-   presents their poster and **evaluates at least three colleagues' posters** on
-   the course criticism instrument. **No class Wed Nov 18.** Only a documented
+   presents their poster and **evaluates at least three other conference
+   posters** on the course criticism instrument. **No class Wed Nov 18.** Only a documented
    emergency qualifies for a make-up, handled individually per Honors College
    norms.
 
@@ -237,10 +267,10 @@ exchange as follows:
    capsule from the written instructions alone while the author remains silent.
 3. Each runner records whether the headline result and its uncertainty reproduce,
    every question the instructions forced them to ask, and every mismatch.
-4. Friday is the repair and submission block for M16. M16 counts in Final Project
-   Milestones and supplies evidence for the Final Project's Final Research
-   Artifact and Individual Research Process items; there is no separate 5%
-   replication category.
+4. Friday is the repair and submission block for M16. M16 is one of the seventeen
+   scores in Final Project's Milestone Deliverables item and supplies evidence
+   for the final artifact, portfolio, and defense evaluated in Instructor/TA
+   Evaluation; there is no separate replication category.
 
 ---
 
@@ -248,13 +278,15 @@ exchange as follows:
 
 - **Final defenses — across the Week 15–16 defense blocks, with the final round
   on Fri Dec 11.** Each student delivers a public **Evidence Defense** of the
-  whole project and their AI collaboration. Record it in the Final Project's
-  **Instructor Evaluation and Evidence Defense** item (20% of Final Project,
-  6 course points) and carry the evidence into M17.
+  whole project and their AI collaboration. The defense supplies 25% of Final
+  Project's **Instructor/TA Evaluation** item; record it per student and carry
+  the evidence into M17.
 - **M17 — Fri Dec 11 (terminal).** Final research chapter + AI-management
-  portfolio, submitted at the closing ceremony. The paper/chapter/note is the
-  Final Project's 30% internal item (9 course points), not a separate course
-  category. No revision window.
+  portfolio, submitted at the closing ceremony. M17 is one of the seventeen
+  Milestone Deliverables scores. Its Final Research Artifact rubric supplies
+  50% of Instructor/TA Evaluation, and its AI-management portfolio rubric
+  supplies 25%; the individual Evidence Defense supplies the other 25%. No
+  revision window.
 - **End-of-term wrap:**
   1. Grade M17 and the defenses against the shared rubric menu.
   2. **Archive the course:** confirm the site is rendered and pushed

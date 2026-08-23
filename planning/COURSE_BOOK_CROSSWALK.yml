@@ -258,15 +258,15 @@ rows:
 
   - milestone: M12
     nb: nb11
-    # Week 11, second submission (Fri Nov 6). The four review surveys you wrote
-    # on your colleagues' drafts. This is Studio 10 criticism PRACTISED on
-    # someone else's artifact, not a new version of your own.
+    # Week 11, second submission (Fri Nov 6). The independent review surveys you
+    # wrote on every other active project's draft. This is Studio 10 criticism
+    # PRACTISED on someone else's artifact, not a new version of your own.
     assignments:
       - {lesson: poster-criticism,          requirement: required,       purpose: revisit,     primary_lab: false,  home_anchor: false}
     station_events:
       - {station: adapt-and-defend, event: practice, at: studio}
     book_milestones:
-      - {station: adapt-and-defend, relationship: practice, version_label: "peer criticism, applied to four colleagues' drafts",
+      - {station: adapt-and-defend, relationship: practice, version_label: "peer criticism, applied to every other active project's draft",
          contribution_refs: [poster-criticism]}
 
   - milestone: M13

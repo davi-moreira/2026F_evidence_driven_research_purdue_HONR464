@@ -47,8 +47,10 @@ incomplete; if an artifact serves no clause, it needs a justification.
 
 ## Standing course promises the description implies
 
-- **Individual projects** (5 students, 5 projects) — `course_config.yaml`
-  `project_mode: individual`.
+- **Individual projects by default; approved group work allowed** —
+  `course_config.yaml project_mode:` permits at most one group of two or three
+  while preserving at least three active projects, two observers for every
+  individual researcher, and a feasible Peer Evaluation assignment plan.
 - **URC poster (Nov 17) is required** — clause 15's public instantiation (M16).
 - **No conventional midterm/final exam** — the Evidence Defense + dossier are the
   culminating assessments (`ASSESSMENT_ARCHITECTURE.md`).

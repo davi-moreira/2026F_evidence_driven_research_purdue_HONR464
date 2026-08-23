@@ -1,111 +1,145 @@
 # ASSESSMENT_ARCHITECTURE — what is graded, why, and how it adds up
 
 Authoritative reconciliation of the v2 grading system for `syllabus.qmd`.
-Philosophy: **no conventional midterm or final exam.** The course assesses the
-research chain itself — a semester-long individual project carried through
-seventeen milestones (M1–M17), presented at the Purdue Fall Undergraduate Research
-Expo, and closed with a public evidence defense and a reproducible final chapter.
+Philosophy: **no conventional midterm or final exam.** The course assesses one
+semester-long research project carried through seventeen milestones (M1–M17),
+presented at the Purdue Fall Undergraduate Research Expo, and closed with a
+public evidence defense and a reproducible final chapter. Individual work is
+the default; students may complete a group project with instructor approval.
 Grading rewards correctness, transparency, reproducibility, question-design
 (compass) alignment, and responsible interpretation — **never coding elegance**
 (no computing background is assumed; all machinery is provided).
 
 The v1 six-component / M01–M23 system is preserved at git tag `v1-compass-build`.
 Component weights were **CONFIRMED 2026-07-27 (D22)**, split attendance/
-participation **2026-07-29 (D31)**, then revised by **D51 (2026-08-22)** to
-adopt QM474's operative Final Project grading proportions. D51 removes the
-standalone Research artifact category, moves its 10 course points into Final
-Project, and preserves the paper/chapter/note as a named Final Project
-deliverable. This file, `course_config.yaml assessment:`, and the syllabus
-Assessments table must match exactly.
+participation **2026-07-29 (D31)**, revised by **D51 (2026-08-22)**, and then
+clarified by **D52 (2026-08-23)**. D52 supersedes D51's split between Final
+Project Milestones and Final Project. All project grading now lives in one 50%
+Final Project category, using QM474's exact five component items and shares.
+This file, `course_config.yaml assessment:`, and the syllabus Assessments table
+must match exactly.
 
-## The confirmed course components (100%) — D51
+## The confirmed course components (100%) — D52
 
 | Component | Weight | What it contains |
 |---|---:|---|
 | **Attendance** (iClicker) | **1%** | 85% attendance target |
-| **Participation** (rubric) | **9%** | Feedback surveys, lecture-notebook completion, and other constructive contributions to the course; colleague audits remain one form of constructive contribution |
+| **Participation** (rubric) | **9%** | Feedback surveys, lecture-notebook completion, and other constructive contributions to the course |
 | **Quizzes** | **20%** | Weekly Friday printed MC topic quizzes |
 | **Student Research Lead (SRL) performance** | **20%** | Flipped-lecture leads scored on the SRL rubric (`project/srl/srl_rubric.md`) |
-| **Final Project Milestones** | **20%** | M1–M17 submissions (each presenting a book Milestone version; kick off → develop → submit → revise) |
-| **Final Project** | **30%** | Final paper/chapter/note, individual research-process and AI-management portfolio, peer review, poster and Expo presentation, instructor evaluation, and Evidence Defense |
-| | **100%** | |
+| **Final Project** | **50%** | Milestone Deliverables, Peer Evaluation, Peer Review, Poster Presentation at the Purdue Undergraduate Research Conference, and Instructor/TA Evaluation |
+| **Total** | **100%** | |
 
-## QM474 → HONR 46400 Final Project mapping
+## QM474 authority and the five Final Project items
 
-The reference is QM474's Fall 2026 canonical project contract,
-`../../predictive_analytics/2026F_predictive_analytics_QM474/_final_project/2026F/final_project_milestone_reference.md`:
-Milestone Deliverables 30% · Peer Evaluation 20% · Peer Review 10% · Conference
-Poster Presentation 20% · Instructor/TA Evaluation 20%. HONR preserves those
-proportions, but its five projects are individual (`course.project_mode`), and
-its M1–M17 developmental chain already has a separate 20% course category.
+QM474's Fall 2026 public
+`../../../predictive_analytics/2026F_predictive_analytics_QM474/syllabus.qmd`
+supplies the exact component labels, and
+its canonical project contract,
+`../../../predictive_analytics/2026F_predictive_analytics_QM474/_final_project/2026F/final_project_milestone_reference.md`,
+confirms the 30/20/10/20/20 shares (while abbreviating the last two labels).
+The five items are **Milestone Deliverables 30% · Peer Evaluation 20% · Peer
+Review 10% · Poster Presentation at the Purdue Undergraduate Research Conference
+20% · Instructor/TA Evaluation 20%**. HONR uses those component names and shares
+without replacing any item:
 
-| QM474 component and function | HONR individual-project equivalent | Share of Final Project | Course points | Grading home |
-|---|---|---:|---:|---|
-| Milestone Deliverables — integrate the work produced across the project | **Final Research Artifact and Milestone Synthesis** — the final paper, chapter, or research note | 30% | 9 | M17 final research artifact; the separate M1–M17 category continues to grade development |
-| Peer Evaluation — establish accountability for the work | **Individual Research Process and AI-Management Portfolio** — the student's own ledger, decisions, checks, conflicts, and overrides | 20% | 6 | Full-semester AI Research Ledger and M17 portfolio; no teammate ratings |
-| Peer Review — improve another project's communication | **Peer Review** — each student reviews classmates' posters and records how criticism was used | 10% | 3 | M12 structured review submission and its carry-forward record |
-| Conference Poster Presentation | **Poster and Expo Presentation** — one individual poster and its required public presentation | 20% | 6 | M13 locked poster plus the live Expo presentation recorded through M15 |
-| Instructor/TA Evaluation — evaluate the finished submission | **Instructor Evaluation and Evidence Defense** — the instructor evaluates integrative command of the final dossier through the individual oral defense | 20% | 6 | Evidence Defense Protocol rubric; no TA is assumed |
-| | **Total** | **100%** | **30** | |
+| Final Project component | Share of Final Project | Course points | HONR grading home |
+|---|---:|---:|---|
+| **Milestone Deliverables** | 30% | 15 | Equal-weight mean of M1–M17's seventeen 0–100 milestone scores |
+| **Peer Evaluation** | 20% | 10 | Confidential per-student evaluation by every teammate (group project) or two assigned project peers (individual project) |
+| **Peer Review** | 10% | 5 | M12 Final Project Peer Review rubric; each student completes the required reviews |
+| **Poster Presentation at the Purdue Undergraduate Research Conference** | 20% | 10 | `0.70 ×` M13 poster-quality score + `0.30 ×` each student's M15 live-presentation score |
+| **Instructor/TA Evaluation** | 20% | 10 | `0.50 ×` M17 Final Research Artifact + `0.25 ×` M17 AI-management portfolio + `0.25 ×` individual Evidence Defense |
+| **Total** | **100%** | **50** | |
 
-The QM474 group contract, confidential intra-group peer evaluation, group-member
-score adjustments, group meeting cycle, and Poster-to-Product assessment do not
-transfer. HONR's structured review of classmates' posters is cross-project peer
-critique, not a group-project requirement.
+## Individual-default and group-allowed operation
+
+Students work individually unless the instructor approves a group before shared
+work begins. With five students, at most one group of two or three may be
+approved. Approval changes who owns shared evidence, not the five components or
+their weights. It must preserve at least three active projects so every
+student can review at least two other live projects and permit a Peer Evaluation
+plan in which each individual researcher has two observers and every student
+has a nonempty submission set.
+
+- **Milestone Deliverables.** An individual researcher receives their own M1–M17
+  scores. An approved group submits one shared artifact naming every member.
+  Shared rubric rows receive a common score; requirements marked individual,
+  including each member's AI Research Ledger evidence, are scored per member,
+  so recorded milestone scores may differ only on those rows.
+- **Peer Evaluation.** Every student has real peer evaluators and there is no
+  self-rating. Group members evaluate every teammate. Each individual researcher
+  is assigned two project peers who observe their preparation, substantive
+  research contribution, communication, dependability, and reciprocal support
+  during scheduled studios and checks. The instructor also gives every student
+  a nonempty set of required evaluations to submit; received and submission
+  sets need not be reciprocal. Ratings are confidential and scored per student.
+  This is not Peer Review.
+- **Peer Review.** Every student completes the M12 structured criticism, including
+  every member of a group. It evaluates criticism of other projects, not
+  contribution to one's own project.
+- **Poster Presentation at the Purdue Undergraduate Research Conference.** A group's M13 poster-quality score is
+  shared; every student is scored individually on live delivery and must present.
+- **Instructor/TA Evaluation.** A group's final research artifact subscore is
+  shared. The AI-management portfolio and Evidence Defense are individual. The
+  instructor records the item; a TA may co-score if one is assigned.
+
+The Peer Evaluation instrument lives at
+`project/final_dossier/peer_evaluation_instrument.md`. Its five 1–5 dimensions
+follow QM474's accountability instrument, adapted only so assigned project peers
+can evaluate observable solo-project practice. Missing evaluations are omitted
+from the recipient's mean and never penalize the intended recipient. If
+evaluator non-submission leaves no valid received rating after instructor
+follow-up, the received-rating portion is the neutral 80 points (equivalent to
+a mean of 3); no substitute evaluator is added after observation ends.
 
 ## Final Project gradebook arithmetic
 
-The five project shares are exact QM474 proportions and sum to 100. Applied to
-HONR's 30% Final Project category, they contribute **9 + 6 + 3 + 6 + 6 = 30**
-course points. The final paper/chapter/note therefore remains explicitly graded
-inside Final Project at 9 course points. Davi's instruction moves all 10 points
-from the former standalone category into the 30% Final Project umbrella; the
-QM474 proportions redistribute one of those points across the other terminal
-evidence rather than preserving a separate 10-point artifact line.
+The five project shares sum to 100. Applied to HONR's single 50% Final Project,
+they contribute **15 + 10 + 5 + 10 + 10 = 50** course points. Together with
+Attendance 1, Participation 9, Quizzes 20, and SRL Performance 20, the course
+total is **1 + 9 + 20 + 20 + 50 = 100**.
 
-Some milestones produce evidence later assessed in a Final Project item. The
-two scores answer different questions: **Final Project Milestones** grades the
-checkpoint's completion, timeliness, versioning, and response to feedback;
-**Final Project** grades the resulting review, artifact, portfolio,
-presentation, or defense at terminal quality. Never copy the same rubric score
-into both categories. For example, M12 records completion of the four-review
-cycle and response record while the Final Project Peer Review item scores the
-quality of the criticism; M13 records the on-time, gate-cleared poster lock
-while the Poster and Expo item scores the locked poster and live presentation.
+Several milestones produce evidence later evaluated in another Final Project
+component. Never copy one raw rubric score into two places. M12's milestone score
+records completion, timeliness, versioning, and response; its separate Peer
+Review rubric scores the quality of criticism. M13's milestone score records the
+on-time, gate-cleared lock; its poster-quality rubric feeds the conference item.
+M17's milestone score records the release package; its three terminal rubrics
+feed Instructor/TA Evaluation.
 
 ## Deterministic Final Project scoring rules
 
-Each Brightspace item receives one independently computable 0–100 score:
+Each component produces one 0–100 score:
 
 | Final Project item | Scoring rule |
 |---|---|
-| Final Research Artifact and Milestone Synthesis | M17 **Final Research Artifact rubric** (100 points) |
-| Individual Research Process and AI-Management Portfolio | M17 **Individual Research Process and AI-Management Portfolio rubric** (100 points) |
+| Milestone Deliverables | `mean(M1, M2, …, M17)`; all seventeen scores are equally weighted |
+| Peer Evaluation | `0.80 × min(100, 100 × mean received rating / 3) + submission points`, where complete required evaluations with usable comments earn 20 submission points and non-submission earns 0; documented instructor moderation may correct strategic ratings |
 | Peer Review | M12 **Final Project Peer Review rubric** (100 points) |
-| Poster and Expo Presentation | `0.70 ×` M13 **poster-quality rubric** + `0.30 ×` M15 **live Expo presentation rubric** |
-| Instructor Evaluation and Evidence Defense | **Evidence Defense Protocol rubric** (100 points), scored by the instructor using the final dossier as the evidence base |
+| Poster Presentation at the Purdue Undergraduate Research Conference | `0.70 ×` M13 **poster-quality rubric** + `0.30 ×` M15 **live Expo presentation rubric** |
+| Instructor/TA Evaluation | `0.50 ×` M17 **Final Research Artifact rubric** + `0.25 ×` M17 **AI-management portfolio rubric** + `0.25 ×` **Evidence Defense Protocol rubric** |
 
-The `70/30` poster/live split is an HONR operational ruling inside the imported
-20% Poster Presentation slot, not an additional QM474 weight: it gives the
-persistent, auditable poster most of the item while reserving a material share
-for public explanation and question handling. The item remains 20% of Final
-Project (6 course points).
-
-The M12/M13/M15/M17 milestone scores are separate process scores. None is an
-input to these formulas, and no Final Project score is copied into the milestone
-category.
+The `70/30` poster/live split and the `50/25/25` final-evaluation split are HONR
+operational rules inside the imported QM474 items; they do not create additional
+Final Project components. A normal Peer Evaluation mean of 3 (met expectations),
+plus a complete evaluation submission, yields 100. Ratings above 3 do not create
+bonus credit; ratings below 3 lower the received-rating portion. If evaluator
+non-submission leaves no valid rating after instructor follow-up, use a neutral
+mean of 3 for the intended recipient rather than zero or a substitute evaluator;
+the non-submitter still loses their own submission points.
 
 ## Why these weights
 
-- **Development and synthesis stay distinct.** The separate 20% milestone
-  category rewards the versioned research chain; the 30% Final Project rewards
-  what that chain produces and what the student can defend at the end.
-- **The final artifact remains load-bearing.** The paper/chapter/note is the
-  largest single Final Project component (9 course points), with another 6
-  points evaluating the individual process and AI-management record behind it.
-- **Public criticism matters twice without becoming group work.** Peer Review
-  grades the quality of criticism given; Poster and Expo Presentation grades the
-  individual artifact and public communication.
+- **There is one project, not a project plus a milestone category.** The 17-step
+  development chain is the Milestone Deliverables component of the single 50%
+  Final Project.
+- **The five QM474 items remain visible and functional.** HONR does not rename
+  Peer Evaluation into a portfolio or rename Instructor/TA Evaluation into a
+  defense; those artifacts are evidence used inside the named items.
+- **Individual accountability survives either project mode.** Actual peers rate
+  contribution and follow-through, while the portfolio and defense stay
+  individual even when the research artifact is shared.
 - **The flipped classroom remains 20%.** Leading research investigations is a
   repeated rehearsal of the same judgment and defense expected in the project.
 
@@ -140,8 +174,10 @@ teeth behind the course's discipline:
   capped at Beginning.
 - **Non-reproducing result** (headline number does not rerun from the package) →
   Verification capped at Beginning.
-- **Missing AI Research Ledger entry** → Craft scored **0** and the submission
-  **returned** unread (per the CLAUDE.md AI-Ledger rule).
+- **Missing AI Research Ledger entry** → the affected student's individual
+  Craft/ledger row identified by the milestone brief scores **0**, and that
+  submission is **returned** unread (per the CLAUDE.md AI-Ledger rule). A
+  separate shared terminal-rubric score changes only when that rubric says so.
 - **SRL live cap** — presenting an AI answer as settled without verifying it caps
   SRL rubric row 4 (Productive use of AI) at Beginning (`srl_rubric.md`).
 
@@ -169,8 +205,8 @@ board.
 
 - **AI Research Ledger** (what AI did and how it was checked) — appended to every
   deliverable and every notebook session; **audited at every milestone under the
-  Craft criterion**, with a missing entry triggering the hard cap above. This is
-  a graded habit, not a formality.
+  individual Craft/ledger row named by that brief**, with a missing entry
+  triggering the hard cap above. This is a graded habit, not a formality.
 - **Claim ledger** (what the research asserts: claim · evidence · verification ·
   boundary · sensitivity survival) — a separate instrument, graded at **M10**
   (research audit), **M16** (research note), and **M17** (final chapter).

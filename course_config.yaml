@@ -6,6 +6,10 @@
 # milestones M0–M15, Student Research Lead flipped classroom, SDIIVDD AI
 # discipline, GenAI Studio reviewer bench, course book. v1 preserved
 # at git tag v1-compass-build.
+# v6 (2026-08-23, D52): ONE FINAL PROJECT — individual work is the default and
+# instructor-approved group projects are allowed. The former 20% Final Project
+# Milestones category and 30% Final Project category merge into one 50% Final
+# Project with QM474's exact five 30/20/10/20/20 component items.
 # v5 (2026-08-22, D50): THE CONFERENCE BLOCK — Studios 1-10 on Weeks 1-10,
 # Weeks 11-14 are the conference block (poster production, peer review, the
 # lock, presentation prep, the Expo, async reflection), and Studios 11-12 run
@@ -45,7 +49,15 @@ course:
   repo: "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
   website: "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/"
   enrollment: 5
-  project_mode: "individual"   # 5 students, 5 individual projects, 5 posters
+  project_mode:
+    default: "individual"
+    groups_allowed: true
+    approval_required: true
+    maximum_approved_groups: 1
+    maximum_group_size: 3
+    individual_project_peer_evaluators: 2
+    minimum_active_projects_for_peer_review: 3
+    peer_assignment_plan_required: true
 
 calendar:
   first_class: "2026-08-24"
@@ -230,7 +242,7 @@ milestones:
   # Weeks 11-14: the conference block. These present no new book milestone;
   # they carry Milestone 10 forward as versions 2, 3, and 4.
   M11: {title: "Poster first draft",                               due: "2026-11-04", kind: "lecture",  note: "due at class Wednesday; the in-class peer review runs the same session"}
-  M12: {title: "Peer review submission",                           due: "2026-11-06", kind: "studio",   note: "your four completed review surveys; completion-graded"}
+  M12: {title: "Peer review submission",                           due: "2026-11-06", kind: "studio",   note: "independent structured reviews of every other active project; individually scored"}
   M13: {title: "Final poster lock",                                due: "2026-11-08", kind: "terminal", note: "Sunday 11:59 PM, one print-ready PDF; shared print run with QM 47400"}
   M14: {title: "Go-public package: presentation plan and invitation", due: "2026-11-13", kind: "studio", note: "three timed pitches, audience analysis, question strategy, and the invitation post"}
   M15: {title: "Conference reflection",                            due: "2026-11-29", kind: "async",    note: "Sunday; worked across the Nov 20 and Nov 23 asynchronous sessions"}
@@ -254,49 +266,48 @@ dossier_components:
   - research note / chapter
   - AI-agent management portfolio
 
-# Grading (D51, 2026-08-22; keep syllabus.qmd and the Brightspace generator in sync).
+# Grading (D52, 2026-08-23; keep syllabus.qmd and the Brightspace generator in sync).
 assessment:
   attendance: 1                    # iClicker; 85% attendance target
   participation: 9                 # feedback surveys + lecture-notebook completion + constructive contributions
   quizzes: 20                      # weekly Friday multiple-choice topic quizzes
   srl_performance: 20
-  final_project_milestones: 20
-  final_project: 30
+  final_project: 50
 
-# D51 adopts QM474's operative 30/20/10/20/20 Final Project proportions while
-# translating its group-only peer-evaluation slot to HONR's individual design.
-# Project shares sum to 100; course shares sum to assessment.final_project (30).
+# D52 supersedes D51. It adopts QM474's exact five Final Project component names
+# and operative 30/20/10/20/20 shares without replacing any component. Project
+# shares sum to 100; course shares sum to assessment.final_project (50).
 final_project_breakdown:
-  final_research_artifact_and_milestone_synthesis:
-    label: "Final Research Artifact and Milestone Synthesis"
+  milestone_deliverables:
+    label: "Milestone Deliverables"
     project_share: 30
-    course_share: 9
-    includes: "the final paper, chapter, or research note synthesized from the milestone chain"
-    scoring_rule: "M17 Final Research Artifact rubric (100 points)"
-  individual_research_process_and_ai_management_portfolio:
-    label: "Individual Research Process and AI-Management Portfolio"
+    course_share: 15
+    includes: "M1-M17 incremental project submissions, each scored on its 100-point milestone rubric"
+    scoring_rule: "equally weighted mean of the M1-M17 milestone scores"
+  peer_evaluation:
+    label: "Peer Evaluation"
     project_share: 20
-    course_share: 6
-    includes: "the individual process record, AI Research Ledger, and AI-management portfolio"
-    scoring_rule: "M17 Individual Research Process and AI-Management Portfolio rubric (100 points)"
+    course_share: 10
+    includes: "confidential ratings from every teammate for group projects or two assigned project peers for individual projects; no self-rating"
+    scoring_rule: "80% received-rating score plus 20% required-evaluation submission; see project/final_dossier/peer_evaluation_instrument.md"
   peer_review:
     label: "Peer Review"
     project_share: 10
-    course_share: 3
+    course_share: 5
     includes: "structured reviews of classmates' posters and documented use of criticism"
     scoring_rule: "M12 Final Project Peer Review rubric (100 points)"
-  poster_and_expo_presentation:
-    label: "Poster and Expo Presentation"
+  poster_presentation_at_the_conference:
+    label: "Poster Presentation at the Purdue Undergraduate Research Conference"
     project_share: 20
-    course_share: 6
-    includes: "the locked individual poster and required public presentation at the Expo"
+    course_share: 10
+    includes: "the locked poster and each student's required public presentation at the Expo"
     scoring_rule: "70% M13 poster-quality rubric + 30% M15 live Expo presentation rubric"
-  instructor_evaluation_and_evidence_defense:
-    label: "Instructor Evaluation and Evidence Defense"
+  instructor_ta_evaluation:
+    label: "Instructor/TA Evaluation"
     project_share: 20
-    course_share: 6
-    includes: "the instructor's evaluation of integrative command of the final dossier through the individual oral Evidence Defense"
-    scoring_rule: "Evidence Defense Protocol rubric (100 points), scored by the instructor"
+    course_share: 10
+    includes: "the final research artifact and dossier, individual AI-management portfolio, and individual oral Evidence Defense"
+    scoring_rule: "50% M17 Final Research Artifact rubric + 25% M17 AI-management portfolio rubric + 25% Evidence Defense Protocol rubric"
 
 # Source-of-truth materials (see planning/SOURCE_AUDIT_V2.md).
 sources:

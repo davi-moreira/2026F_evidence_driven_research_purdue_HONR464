@@ -1,9 +1,10 @@
-# Final Production Checklist — M31 (Fri Nov 6)
+# Final Production Checklist — M31 Friday Revision Studio
 
-*The last pass before your poster is locked. Run in class M31; the deadline is
-TODAY, Nov 6, 5:00 PM — there is no "after."
-Governs [milestone_10 — Final Poster Lock](../../_research_project/2026Fall/milestone_10_final_poster_lock.md).
-Quality bar: the milestone_10 grading rubric (the single poster rubric).*
+*The last supervised pass before your poster is locked. Run in class M31; the
+terminal deadline is Sunday, November 8, 11:59 PM — there is no revision window
+after the lock.
+Governs [course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md).
+Quality bar: the M13 grading rubric (the single poster rubric).*
 
 ## Purpose
 
@@ -12,6 +13,11 @@ production sprint converts your triaged draft into a print-ready file where ever
 number traces to a notebook cell and every claim sits inside your compass
 position's boundary. "I'll fix it after submission" is the one move this session exists to
 prevent.
+
+Individual work is the default. An approved group runs one checklist on its
+shared poster, names every member on the record, and receives one common
+poster-quality score. Each member still completes a personally attributable
+traceability check and later receives an individual live-presentation score.
 
 ## Materials
 
@@ -38,7 +44,8 @@ CLAUDE.md Evidence-Integrity rule, enforced on paper.
 1. Pick one number on your poster (your partner may pick a different one for you).
 2. Open your notebook and show the exact cell that produced it — value matches.
 3. Your partner initials the traceability line on your checklist.
-4. Swap. You verify one of your partner's numbers the same way.
+4. Swap. You verify one of your partner's numbers the same way. Every member of
+   an approved group completes this check with a classmate from another project.
 
 If a number does not trace, it does not ship. Recompute it or cut it.
 
@@ -60,27 +67,28 @@ If a number does not trace, it does not ship. Recompute it or cut it.
 | Time | Activity |
 |---|---|
 | 0–5 | Deadline briefing; checklist distributed. |
-| 5–35 | **Production sprint** — silent studio; instructor circulates on a fixed rotation (5 × \~5 min), running the checklist on each poster. |
+| 5–35 | **Production sprint** — silent studio; instructor circulates once through every active project, dividing the consult window evenly across the three to five posters. |
 | 35–45 | **Traceability spot-check** — pairs verify one number each against the notebook. |
-| 45–50 | **Submit** (Brightspace + URC channel); exit ticket (one claim I softened before submitting, and why the softer version is stronger). |
+| 45–50 | **Preflight and save** the print-ready candidate; submit M12; exit ticket (one claim I softened before the Sunday lock, and why the softer version is stronger). |
 
 ## Roles
 
-- **You (author):** run every checklist line yourself before the consult; the consult confirms, it does not replace your pass.
+- **You (author or group member):** run every checklist line before the consult;
+  the consult confirms, it does not replace your pass.
 - **Your partner:** verifies one number's traceability under your eyes and initials it.
 
 ### Session flow (for the record)
 
-Professor Moreira keeps the consult rotation to \~5 minutes each, confirms the
-submission mechanics (portal and print shop) at the top of class, and holds the
-backup printing plan ready.
+Professor Moreira divides the consult window across the active projects,
+confirms the submission mechanics (portal and print shop) at the top of class,
+and holds the backup printing plan ready.
 
 ## The print backup plan
 
-If printing or the portal fails: submit the **PDF to Brightspace** — that
-timestamp meets the Nov 6 deadline. Physical printing is then resolved in the
+If printing or the portal fails: submit the **PDF to Brightspace** by Sunday,
+November 8, 11:59 PM — that timestamp meets the lock deadline. Physical printing is then resolved in the
 following week, before Nov 17. A print failure never becomes a missed deadline;
-the file is what is due today, the paper is what is needed by the Expo.
+the file is what is due Sunday, the paper is what is needed by the Expo.
 
 ## Common failure modes
 
@@ -90,4 +98,4 @@ the file is what is due today, the paper is what is needed by the Expo.
 4. **Uncertainty lost in the final layout.** Re-confirm it survived the last design pass.
 5. **Submitting the wrong file.** Verify it's the final version, correctly named, before you close the laptop.
 
-*Previous: [redteam_review_protocol.md](redteam_review_protocol.md) · Rubric: [milestone_10 — Final Poster Lock](../../_research_project/2026Fall/milestone_10_final_poster_lock.md)*
+*Previous: [redteam_review_protocol.md](redteam_review_protocol.md) · Rubric: [course milestone M13 — Final Poster Lock](../../_research_project/2026Fall/milestone_13_final_poster_lock.md)*

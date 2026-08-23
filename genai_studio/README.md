@@ -113,7 +113,7 @@ are the v2 chain in `planning/PROJECT_MILESTONES.md` and
 | **M5** — Pathway declaration and mandated contrast | Fri Sep 25 | Causal Identification Skeptic | Your route declaration: the identification argument your route claims, or your defense that your language stays descriptive |
 | **M8** — Clean-restart verified analysis | Fri Oct 16 | Prediction & Leakage Auditor | Your verified analysis, focusing on any out-of-sample / prediction claim |
 | **M9** — Robustness audit | Fri Oct 23 | Robustness & Sensitivity Reviewer | Your claim-and-evidence table with the pre-listed robustness checks you ran |
-| **M13** — Final poster lock | Fri Nov 6, 5 PM | Poster Critic | Your poster before the lock: claim boundary, traceable numbers, uncertainty |
+| **M13** — Final poster lock | Sun Nov 8, 11:59 PM | Poster Critic | Your poster before the lock: claim boundary, traceable numbers, uncertainty |
 | **M16** — Replication and red-team report | Sun Nov 29 (async) | Reproducibility Auditor | The peer reproducibility package you are replicating |
 
 Each of these five role files carries a **"Milestone scope"** statement naming
