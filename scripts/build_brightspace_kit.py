@@ -57,8 +57,19 @@ COLAB = f"https://colab.research.google.com/github/{REPO}/blob/main"
 DAYNAME = {"Mon": "Monday", "Wed": "Wednesday", "Fri": "Friday"}
 
 
+# D58 (2026-08-23) retired the quiz GRADE CATEGORY and the Friday class-time
+# block, not the material. The banks under _quizzes/, every quiz builder and
+# scripts/audit_answer_length.py are KEPT for a future edition, and so are the
+# two helpers below: they are deliberately defined and deliberately UNCALLED,
+# so re-enabling quizzes is one call site away. Retiring the category is never
+# permission to delete a quiz file or a quiz script.
+# Side effect to know about: quiz_handouts() was also the only check that every
+# active quiz JSON has a rendered handout and that no two declare the same
+# course week. With nothing calling it, that validation no longer runs.
 def quiz_handouts() -> dict[int, Path]:
-    """Return active course week -> generated printed quiz handout."""
+    """Return active course week -> generated printed quiz handout.
+
+    Unused since D58; kept for the edition that brings quizzes back."""
     result: dict[int, Path] = {}
     for source in sorted(QUIZZES.glob("*.json")):
         spec = json.loads(source.read_text())
@@ -77,7 +88,9 @@ def quiz_handouts() -> dict[int, Path]:
 
 
 def n_quizzes() -> int:
-    """How many course weeks actually carry a printed quiz."""
+    """How many course weeks actually carry a printed quiz.
+
+    Unused since D58; kept alongside quiz_handouts()."""
     return len(quiz_handouts())
 
 
@@ -188,6 +201,12 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
     if reading:
         add("<h3>Read before Monday</h3>")
         add(f"<p>{esc(reading)}</p>")
+        add(
+            "<p>Each chapter closes with an <em>It is your turn</em> section. "
+            "Complete it in that chapter's companion Colab notebook and submit "
+            "it here by 11:59 PM on the date the chapter's reading is due. It "
+            "is graded for completion, not for the conclusions you reach.</p>"
+        )
 
     if nb_slug:
         url = f"{COLAB}/notebooks/student/{nb_slug}.ipynb"
@@ -249,13 +268,6 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
                 "unit. Read it before the studio.</p>"
             )
 
-    if week in quiz_handouts():
-        add("<h3>Friday quiz</h3>")
-        add(
-            "<p>The studio opens with a 10-minute printed multiple-choice quiz "
-            "on this week's material. It is closed-book and closed-device.</p>"
-        )
-
     prep = next((m["student_prep"] for m in mine if m["student_prep"].strip()), "")
     if prep:
         add("<h3>Come to Monday with</h3>")
@@ -272,15 +284,23 @@ def gradebook_spec(config: dict) -> str:
         "attendance": ("Attendance", "iClicker; 85% target"),
         "participation": (
             "Participation",
-            "One undivided block (D57): 'It is your turn' submissions, "
-            "12 studio feedback surveys, the student profile survey, the "
-            "course reflection, and other constructive contributions",
+            "One undivided block (D57, re-partitioned by D58): 12 studio "
+            "feedback surveys, the student profile survey, the course "
+            "reflection, and other constructive contributions",
         ),
-        "quizzes": (
-            "Quizzes",
-            f"{n_quizzes()} weekly printed MC quizzes, entered by hand",
+        "iyt_practice": (
+            "IYT Practice",
+            # the pipe is escaped: this string lands in a markdown table cell
+            "EDR\\|AI 'It is your turn' submissions, completion-graded; "
+            "lowest ceil(0.10 * N) credits dropped",
         ),
+        # Both spellings of the SRL key are registered on purpose, so a rename
+        # in course_config.yaml can never print a raw key in the spec table.
         "srl_performance": (
+            "Student Research Lead",
+            "5 leads per student, scored on project/srl/srl_rubric.md",
+        ),
+        "student_research_lead": (
             "Student Research Lead",
             "5 leads per student, scored on project/srl/srl_rubric.md",
         ),
@@ -325,6 +345,17 @@ def gradebook_spec(config: dict) -> str:
         )
     if a.get("final_project") != 50:
         raise ValueError("D52 requires assessment.final_project to equal 50")
+    if "quizzes" in a:
+        raise ValueError(
+            "D58 retired the quiz grade category; remove assessment.quizzes "
+            "(the banks and builders under _quizzes/ are kept, uncalled)"
+        )
+    if a.get("iyt_practice") != 10:
+        raise ValueError("D58 requires assessment.iyt_practice to equal 10")
+    if a.get("srl_performance", a.get("student_research_lead")) != 30:
+        raise ValueError(
+            "D58 requires the Student Research Lead category to equal 30"
+        )
     if list(fp) != [key for key, _, _, _ in expected_fp]:
         raise ValueError("Final Project must use D52's five components in order")
     for key, label, project_share, course_share in expected_fp:
@@ -359,7 +390,12 @@ def gradebook_spec(config: dict) -> str:
     ]
     total = 0
     for key, weight in a.items():
-        name, contains = labels.get(key, (key, ""))
+        if key not in labels:
+            raise ValueError(
+                f"assessment.{key} has no gradebook label; add one to labels "
+                "so the spec cannot ship a raw config key as a category name"
+            )
+        name, contains = labels[key]
         total += weight
         lines.append(f"| {name} | {weight}% | {contains} |")
     lines.append(f"| **Total** | **{total}%** | |")
@@ -481,26 +517,29 @@ def gradebook_spec(config: dict) -> str:
         "submission locked at M13 (D54). The final research chapter, the "
         "AI-management portfolio and the oral Evidence Defense no longer "
         "carry grade weight and get no gradebook item.",
-        f"- **Quizzes** — {n_quizzes()} items, one per teaching week that "
-        "carries a quiz (Week 14 is asynchronous and has none). Quizzes are "
-        "printed and graded on paper, so create them as **numeric grade "
-        "items**, not Brightspace quizzes.",
         "- **Student Research Lead** — 5 items per student is wrong; create "
         "**one** item per SRL slot the student holds, or a single item scored 5 "
         "times. One item, entered after each lead, is simpler for 5 students.",
-        "- **Participation** — ONE undivided 9% category (D57). Create the 21 "
-        "'It is your turn' assignments, one per due date "
-        "(planning/IYT_SUBMISSION_SCHEDULE.md lists them, with the "
-        "instruction paragraph to paste into every one); one item for the "
-        "studio feedback survey; one for the student profile survey "
-        "(Aug 30); one for the course reflection (Dec 11); and one for the "
-        "10 scored Synthetic Colleague audits. The survey and audit items "
-        "each carry SEVERAL ledger credits (12 and 10), so enter the running "
-        "credit total against them rather than a single pass/fail; the ledger "
-        "in surveys/participation_grading.md is the authority and Brightspace "
-        "is where its running total is posted. Every credit is equal and "
-        "graded for completion; the lowest ceil(0.10 x N) are dropped. "
-        "Lecture notebooks are NOT collected and get no gradebook item.",
+        "- **Participation** — ONE undivided 9% category (D57, re-partitioned "
+        "by D58). Create one item for the studio feedback survey, one for the "
+        "student profile survey (Aug 30), and one for the course reflection "
+        "(Dec 11). The survey item carries SEVERAL ledger credits (12, one per "
+        "studio), so enter its running credit total rather than a single "
+        "pass/fail. N = 14 baseline credits and the lowest "
+        "ceil(0.10 x 14) = 2 are dropped; every credit is equal and graded for "
+        "completion. Lecture notebooks are NOT collected and get no gradebook "
+        "item. surveys/participation_grading.md is the authority for the item "
+        "list and the counts; Brightspace is where the running total is "
+        "posted.",
+        "- **IYT Practice** — ONE 10% category, the EDR|AI 'It is your turn' "
+        "family D58 moved out of Participation. Create one assignment per due "
+        "date (planning/IYT_SUBMISSION_SCHEDULE.md lists them, with the "
+        "instruction paragraph to paste into every one). Every item is "
+        "completion-graded and equally weighted, and the lowest "
+        "ceil(0.10 x N) credits are dropped: 4 at the typical N = 36. N is "
+        "per student, so read it off the schedule rather than hard-coding it. "
+        "surveys/participation_grading.md carries the student-facing "
+        "contract.",
         "",
         "## Milestone due dates",
         "",
@@ -621,6 +660,8 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
       asks for dates on all assignments).
 - [ ] **Publish units 2-16** with sequential release, or publish weekly by hand.
       With five students, weekly by hand is defensible and less brittle.
+      D58 rewrote the reading section of *every* unit and removed the Friday
+      quiz block, so re-paste all of them, not only the weeks you changed.
 - [ ] **Post the SRL assignment** so each student sees their own five dates
       (`_adm/roster/2026F_HONR46400_srl_assignment.md`). FERPA: post each
       student's slots to that student, or post a slot table by date that names

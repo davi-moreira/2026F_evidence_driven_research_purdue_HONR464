@@ -83,16 +83,9 @@ FOOTER = '''
 ::: below-table
 
 **Milestone column.** Every milestone links to the Book Milestone it presents in
-[EDR|AI](book/index.html){target="_blank"}. A **{PLUS}** marks a milestone where
-this course asks for more than that book milestone does. Its brief on
-Brightspace explains exactly what, and everything is submitted as one file,
-`lastname_mNN.pdf`.
-
-**Reading column.** Each chapter's **"It is your turn"** section is a separate
-submission from the milestone, graded on whether you handed it in, with its own
-file: `LASTNAME_iyt_ch<numbers>.ipynb`. The studio feedback survey closes the
-Sunday that ends the studio week, and Studio 12's closes Fri Dec 11. Both count
-toward participation.
+[EDR|AI](book/index.html){target="_blank"}. A **{PLUS}** means this course
+requires something beyond that book milestone: see the additional requirements in
+the Brightspace assignment instructions.
 
 ## Core Course References
 

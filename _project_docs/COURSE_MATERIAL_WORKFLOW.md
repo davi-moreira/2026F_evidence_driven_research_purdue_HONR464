@@ -12,10 +12,18 @@ sequence used across the v2 build (DECISIONS.md D17–D21) and is run once per w
 
 This is an **in-person MWF research course**, not the MGMT474 online ML course this
 folder was seeded from. There are no recorded videos, no NotebookLM concept clips,
-no auto-graded MC banks in the default path, and no CV-first / test-set machinery.
-The unit of production is the **week**, and its downstream artifacts are the
-**session guide** (how the instructor runs the room) and the **milestone brief**
-(what the students build).
+and no CV-first / test-set machinery. The unit of production is the **week**, and
+its downstream artifacts are the **session guide** (how the instructor runs the
+room) and the **milestone brief** (what the students build).
+
+**The printed weekly quiz is retired for this edition (D58), not deleted.** No
+quiz is produced, printed, administered, or scored this term, so quiz production
+is not a step in the weekly pipeline below. The knowledge and the material are
+kept: the banks and keys live under the gitignored `_quizzes/2026Fall/weekly/`,
+the quiz builders stay in `scripts/`, and the option-length gate
+`scripts/audit_answer_length.py` still guards any bank that is ever imported (the
+dormant *MC Option-Length Parity* rule in `CLAUDE.md` states the thresholds).
+Never delete a quiz file or a quiz script; a future edition turns the step back on.
 
 ---
 
@@ -32,7 +40,7 @@ The unit of production is the **week**, and its downstream artifacts are the
 | Schedule data (per meeting, incl. SRL fields) | `scripts/schedule_data/partN.py` | tracked |
 | Meeting schedule (generated) | `planning/MEETING_SCHEDULE.{csv,md}` | tracked |
 | Public schedule page (generated) | `schedule.qmd` → `docs/` | tracked |
-| Instructor tab (private-repo badges, encrypted) | `instructor.qmd` → `docs/instructor.html` | tracked (ciphertext only) |
+| Instructor tab (private-repo badges) | `instructor.qmd` → `docs/instructor.html` | tracked (ships openly, D35) |
 
 Only the **student notebook**, the **datasets**, the **milestone briefs**, the
 **planning docs**, and the **rendered `docs/`** are public. The cell source,
@@ -231,7 +239,8 @@ the session guides (C) are regenerated, because the guides are parsed from
 - **Escape** `$`→`\$` and `~`→`\~` in all rendered markdown (notebooks, guides,
   briefs, `.qmd`) — `validate_notebooks.py` fails on unescaped `$<digit>`/`~<digit>`.
 - **Render + commit `docs/` + push** after any `.qmd` / notebook / schedule / dataset
-  change; the instructor page ships only as post-render ciphertext.
+  change; the instructor page ships openly (D35 retired the page encryption) and the
+  private instructor repo is what protects genuinely private material.
 - Keep instructor-only artifacts (cell sources, instructor notebooks, session guides)
   **out of the public repo** — they are gitignored and reach the instructor via the
   private repo sync.
@@ -239,4 +248,5 @@ the session guides (C) are regenerated, because the guides are parsed from
 ---
 
 *Rewritten 2026-07-23 for the v2 course (DECISIONS.md D17–D21); replaces the
-MGMT474-era video/NotebookLM/quiz pipeline.*
+MGMT474-era video/NotebookLM/quiz pipeline; the weekly-quiz production step was
+retired for this edition by D58, with the banks and builders kept.*

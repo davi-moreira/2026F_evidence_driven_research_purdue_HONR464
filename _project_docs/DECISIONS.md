@@ -3000,16 +3000,20 @@ record of all of the above); `syllabus.qmd`; `scripts/build_syllabus_docx.py`;
 
 ---
 
-## D58 — The graded component is "Student Research Lead", with no "Performance" (2026-08-23)
+## D59 — The graded component is "Student Research Lead", with no "Performance" (2026-08-23)
 
 **Instruction.** Davi, 2026-08-23: drop the word **Performance** from the component
 name. It becomes **Student Research Lead**, or **SRL** where the abbreviation is
 already in use.
 
-**Decision.** A naming change and nothing else. The component stays at **20%** of the
-course grade, still scored on `project/srl/srl_rubric.md` across the five slots each
-student is randomly assigned. No weight moved, no rubric row changed, no scoring
-formula and no instrument was touched. `course_config.yaml assessment.srl_performance`
+**Decision.** A naming change and nothing else. The component is scored exactly as
+before, on `project/srl/srl_rubric.md` across the five slots each student is randomly
+assigned. This ruling moved no weight, changed no rubric row, and touched no scoring
+formula or instrument. Its weight is **30%**, but that number is **D58's**, not this
+entry's: D58 retired the quiz category, created IYT Practice at 10%, and raised the
+Student Research Lead component from 20% to 30% on the same day. The two rulings are
+independent and landed in the same working tree; read D58 for the weight and this entry
+for the name. `course_config.yaml assessment.srl_performance`
 keeps its key, which is a machine identifier no student ever sees, and the Brightspace
 category it feeds was already labelled "Student Research Lead" — after this rename the
 gradebook and the syllabus read word for word alike for the first time.
@@ -3021,7 +3025,7 @@ in the room, and it read as a verdict on the person rather than on the work. Wha
 graded is the leading, so that is what it is called.
 
 **Where it was applied.** `syllabus.qmd` — the weights table row, the section heading,
-now `### Student Research Lead (20%)`, and the body sentence, which reads "Your
+now `### Student Research Lead (30%)` once D58's weight is applied, and the body sentence, which reads "Your
 **leading** is assessed on preparation, disciplinary accuracy, …" so the section does
 not carry the retired word one line under its own heading.
 `project/srl/srl_rubric.md` — the title is now `# SRL Rubric (100 points)` and the
@@ -3033,10 +3037,12 @@ their output: `scripts/build_syllabus_docx.py` (the weights row and the bold lea
 the Student Research Lead paragraph, kept identical to `syllabus.qmd` so the `.docx`
 and the web page cannot diverge) and `scripts/build_participation_schedules.py` (the
 **Weight.** line of `planning/SRL_ASSIGNMENT_SCHEDULE.md`). nb01's assessment table
-changed at its cell source, `_production_kit/nb_sources/nb01_ai_arm_not_brain.py`, and
-the notebook was rebuilt. Every generated artifact — the slot schedule, the syllabus
-`.docx`, `project/srl/srl_rubric.pdf`, the student and instructor nb01, `docs/` — was
-regenerated afterwards. One artifact no generator reaches:
+changed at its cell source, `_production_kit/nb_sources/nb01_ai_arm_not_brain.py`.
+Every generated artifact — the slot schedule, the syllabus `.docx`,
+`project/srl/srl_rubric.pdf`, the student and instructor nb01, `docs/` — is regenerated
+from those sources; nb01 and `docs/` were held back pending D58's weight table, so the
+committed student notebook still prints the retired name until it is rebuilt. One
+artifact no generator reaches:
 `_syllabus/2026F/2026F_evidence_driven_research_purdue_HONR464.pdf` is a manual Word
 export of the `.docx`, so it shows the old name until Davi re-exports it by hand.
 
@@ -3053,7 +3059,8 @@ under `_adm/` and the pre-D33/D34 cell-source backups are untouched for the same
 reason.
 
 **One anchor moved.** The syllabus section id changes from
-`#student-research-lead-performance-20` to `#student-research-lead-20`. No page, brief
+`#student-research-lead-performance-20` to `#student-research-lead-30` (the trailing
+number is D58's weight, not this ruling's). No page, brief
 or Brightspace unit in this repository links to it, so nothing breaks here; an off-repo
 bookmark or an old email pointing at the previous fragment now lands at the top of the
 syllabus page rather than at the section.

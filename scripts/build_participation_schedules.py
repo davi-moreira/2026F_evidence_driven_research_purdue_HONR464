@@ -370,9 +370,9 @@ milestone, then say what the reading did for you while it is still fresh.
 
 **Grading.** Graded inside **Participation (9%)**, for completion and
 seriousness, never for praise. A careful complaint and a careful compliment earn
-exactly the same credit. These {len(order)} responses are {len(order)} of
-Participation's {len(order) + 2} credits; the profile survey and the course
-reflection are the other two. The rule and the drop allowance are in
+exactly the same credit. They are {len(order)} of Participation's
+{len(order) + 2} credits; the student profile survey and the course reflection
+are the other two. The rule and the drop allowance are in
 [`surveys/participation_grading.md`](../surveys/participation_grading.md).
 
 ---

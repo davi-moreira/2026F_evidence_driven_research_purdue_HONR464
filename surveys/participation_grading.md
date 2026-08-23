@@ -21,8 +21,8 @@ a student can verify and an instructor can defend.
 > **Amended 2026-08-23 (D58).** The "It is your turn" submissions left
 > Participation for their own **10% IYT Practice** category, stated below.
 > Participation stayed at **9%**, kept its mechanics, and is still not split
-> internally. The weekly quiz category is retired for this edition, so nothing on
-> this page is scored against a quiz.
+> internally. The weekly quiz category is also retired for this edition, so
+> nothing on this page depends on one.
 
 ---
 
@@ -43,9 +43,9 @@ never earns extra credit.
 
 ---
 
-# Participation — 9%
+## Participation — 9%
 
-## The three things Participation collects
+### The three things Participation collects
 
 | # | Item | How many | When it is due | Where the schedule lives |
 |---|---|---|---|---|
@@ -61,7 +61,7 @@ submitted**, and no participation credit depends on them. The "It is your turn"
 sections *are* collected, but they are credited under IYT Practice below, not
 here.
 
-## What makes a response valid
+### What makes a response valid
 
 A **valid survey response** has all five of:
 
@@ -73,7 +73,7 @@ A **valid survey response** has all five of:
    rather than an answer that would fit any studio;
 5. a location for any problem it reports.
 
-## The formula
+### The formula
 
 Let **N** be the number of participation credits assigned to that student, and
 **d = ⌈0.10 × N⌉** the number of lowest credits dropped automatically.
@@ -109,9 +109,9 @@ above 9.0. They are not added to IYT Practice.
 
 ---
 
-# IYT Practice — 10%
+## IYT Practice — 10%
 
-## The one thing IYT Practice collects
+### The one thing IYT Practice collects
 
 | # | Item | How many | When it is due | Where the schedule lives |
 |---|---|---|---|---|
@@ -123,7 +123,7 @@ whose design has stages also owes ch. 19, which raises their N to 37 — and sin
 ⌈0.10 × 37⌉ is still 4, that student gets the same four drops with one more
 credit in the pool.
 
-## What makes a submission valid
+### What makes a submission valid
 
 A **valid "It is your turn" submission** has all four of:
 
@@ -132,7 +132,7 @@ A **valid "It is your turn" submission** has all four of:
 3. answers in the student's own words, not a restatement of the prompt;
 4. an AI Research Ledger row for anything delegated to an AI tool.
 
-## The formula
+### The formula
 
 Let **N** be the number of IYT credits assigned to that student, and
 **d = ⌈0.10 × N⌉** the number of lowest credits dropped automatically.

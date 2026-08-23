@@ -13,25 +13,34 @@ Grading rewards correctness, transparency, reproducibility, question-design
 The v1 six-component / M01–M23 system is preserved at git tag `v1-compass-build`.
 Component weights were **CONFIRMED 2026-07-27 (D22)**, split attendance/
 participation **2026-07-29 (D31)**, revised by **D51 (2026-08-22)**, clarified
-by **D52 (2026-08-23)**, and given their published syllabus wording by **D53
-(2026-08-23)**. D52 supersedes D51's split between Final Project Milestones and
-Final Project. All project grading now lives in one 50% Final Project category,
-using QM474's exact five component items and shares. D53 then replaced the
-syllabus prose for that category with QM474's own text and moved the
-operational machinery out of the syllabus (see "Syllabus prose" below).
+by **D52 (2026-08-23)**, given their published syllabus wording by **D53
+(2026-08-23)**, turned into a completion contract for Participation by **D57
+(2026-08-23)**, and last amended by **D58 (2026-08-23)**. D52 supersedes D51's
+split between Final Project Milestones and Final Project. All project grading now
+lives in one 50% Final Project category, using QM474's exact five component items
+and shares. D53 then replaced the syllabus prose for that category with QM474's
+own text and moved the operational machinery out of the syllabus (see "Syllabus
+prose" below). **D58 retired the quiz category for this edition**, created
+**IYT Practice at 10%** to carry the book's "It is your turn" sections, and raised
+**Student Research Lead from 20% to 30%**.
 This file, `course_config.yaml assessment:`, and the syllabus Assessments table
 must match exactly.
 
-## The confirmed course components (100%) — D52
+## The confirmed course components (100%) — D52, amended D58
 
 | Component | Weight | What it contains |
 |---|---:|---|
 | **Attendance** (iClicker) | **1%** | 85% attendance target |
-| **Participation** (one undivided block) | **9%** | Studio feedback surveys, the book's "It is your turn" submissions, the student profile survey, the course reflection, and other constructive contributions — every item one equal credit, graded for completion (D57) |
-| **Quizzes** | **20%** | Weekly Friday printed MC topic quizzes |
-| **Student Research Lead (SRL)** | **20%** | Flipped-lecture leads scored on the SRL rubric (`project/srl/srl_rubric.md`) |
+| **Participation** (one undivided block) | **9%** | Studio feedback surveys (12), the student profile survey, the course reflection, and other constructive contributions — every item one equal credit, graded for completion (D57, amended D58) |
+| **IYT Practice** | **10%** | The EDR\|AI "It is your turn" sections of the required chapters, each due 11:59 PM on the date that chapter's reading was due, graded for completion (D58) |
+| **Student Research Lead (SRL)** | **30%** | Flipped-lecture leads scored on the SRL rubric (`project/srl/srl_rubric.md`) |
 | **Final Project** | **50%** | Milestone Deliverables, Peer Evaluation, Peer Review, Poster Presentation at the Purdue Undergraduate Research Conference, and Instructor/TA Evaluation |
 | **Total** | **100%** | |
+
+**No quiz category.** D58 retired it for this edition: no quiz is administered and
+nothing is scored on one. The banks under `_quizzes/` (gitignored), their builders,
+and `scripts/audit_answer_length.py` are kept for a future edition and are never
+deleted — see "Quizzes — retired for this edition" below.
 
 ## QM474 authority and the five Final Project items
 
@@ -155,8 +164,8 @@ a mean of 3); no substitute evaluator is added after observation ends.
 
 The five project shares sum to 100. Applied to HONR's single 50% Final Project,
 they contribute **15 + 10 + 5 + 10 + 10 = 50** course points. Together with
-Attendance 1, Participation 9, Quizzes 20, and SRL 20, the course total is
-**1 + 9 + 20 + 20 + 50 = 100**.
+Attendance 1, Participation 9, IYT Practice 10, and SRL 30, the course total is
+**1 + 9 + 10 + 30 + 50 = 100**.
 
 Several milestones produce evidence later evaluated in another Final Project
 component. Never copy one raw rubric score into two places. M12's milestone score
@@ -188,28 +197,29 @@ non-submission leaves no valid rating after instructor follow-up, use a neutral
 mean of 3 for the intended recipient rather than zero or a substitute evaluator;
 the non-submitter still loses their own submission points.
 
-## Participation — one undivided block (D57, 2026-08-23)
+## Participation — one undivided block (D57, amended D58)
 
 Participation is **9%, undivided**. Every required item is worth the same single
 credit and the block is their sum. **No internal split is published, and none is
 applied.** An earlier draft proposed 5% reading feedback + 2% lecture-notebook
 completion + 2% class contribution; that split is rejected and must not be
-reinstated.
+reinstated. **D58 moved the "It is your turn" family out of this block** into its
+own 10% IYT Practice category, stated in the next section; the 9%, its mechanics,
+and its refusal to split internally are otherwise unchanged.
 
 | # | Item | Count (typical student) | Due | Graded |
 |---|---|---:|---|---|
-| 1 | EDR\|AI **"It is your turn"** submissions | 36 | 11:59 PM on the date that chapter's reading was due | completion |
-| 2 | **Studio feedback survey** (one Qualtrics link, 12 responses) | 12 | 11:59 PM on the Sunday that ends the studio week | completion |
-| 3 | **Student profile survey** | 1 | Sun Aug 30, 2026 | completion |
-| 4 | **Course reflection** | 1 | Fri Dec 11, 2026 | completion |
-| 5 | **Scored Synthetic Colleague audits** | 10 | at each audit's session | completion; the four-row rubric decides validity |
-| | **Baseline N** | **60** | | |
+| 1 | **Studio feedback survey** (one Qualtrics link, 12 responses) | 12 | 11:59 PM on the Sunday that ends the studio week | completion |
+| 2 | **Student profile survey** | 1 | Sun Aug 30, 2026 | completion |
+| 3 | **Course reflection** | 1 | Fri Dec 11, 2026 | completion |
+| | **Baseline N** | **14** | | |
 
 Credit is `1.0` on time, `0.5` within seven days, `0` otherwise; the lowest
-`d = ⌈0.10 × N⌉` credits are dropped automatically (**d = 6**), and
+`d = ⌈0.10 × N⌉` credits are dropped automatically (**d = 2**), and
 
 ```
 participation points = 9.0 × (sum of the highest N − d credits) / (N − d)
+                     = 9.0 × (sum of the highest 12 credits) / 12
 ```
 
 The syllabus clause "other constructive contributions to the course" is a
@@ -222,33 +232,82 @@ feedback is no longer per chapter: 40 responses competed with the work they were
 meant to improve, so 12 per-studio responses replace them, closing the same
 Sunday night as the studio's milestone.
 
-**Why "It is your turn" moved out of the milestones.** The book's closing
-sections were previously handed in bundled into the Friday milestone, days after
-the reading they belong to. Collecting them on the reading date does three
-things at once: it makes the reading deadline real, it puts the practice next to
-the chapter that teaches it, and it gives Studio 12 — which D54 left teaching
-but collecting nothing — something to collect. The milestone still names its
-chapters in its Book Anchor and still carries the work forward into the dossier;
-it just no longer re-collects it.
+The full contract is `surveys/participation_grading.md`. The dated schedule for
+this block is generated by `scripts/build_participation_schedules.py` into
+`planning/STUDIO_FEEDBACK_SCHEDULE.md`; the same script writes the IYT Practice
+schedule described below.
 
-The full contract is `surveys/participation_grading.md`. The two dated schedules
-are generated by `scripts/build_participation_schedules.py` into
-`planning/IYT_SUBMISSION_SCHEDULE.md` and
-`planning/STUDIO_FEEDBACK_SCHEDULE.md`.
+## IYT Practice — 10% (D58, 2026-08-23)
+
+IYT Practice is its own top-level category, holding the one item family that D58
+took out of Participation: the EDR|AI **"It is your turn"** sections of the
+required chapters. The mechanics are Participation's, with their own credit pool.
+
+| # | Item | Count (typical student) | Due | Graded |
+|---|---|---:|---|---|
+| 1 | EDR\|AI **"It is your turn"** submissions | 36 | 11:59 PM on the date that chapter's reading was due | completion |
+| | **Baseline N** | **36** | | |
+
+The 36 is 34 chapters everyone reads plus 2 pathway chapters; a declared design
+with stages owes one more (N = 37), and `⌈0.10 × 37⌉` is still 4, so the drop
+count does not grow with it. Credit is `1.0` on time, `0.5` within seven days,
+`0` otherwise; the lowest `d = ⌈0.10 × N⌉` credits are dropped automatically
+(**d = 4**), and
+
+```
+iyt points = 10.0 × (sum of the highest N − d credits) / (N − d)
+           = 10.0 × (sum of the highest 32 credits) / 32
+```
+
+The ±0.9-point contribution adjustment belongs to Participation alone and is never
+applied here. The dated schedule is `planning/IYT_SUBMISSION_SCHEDULE.md`,
+generated by `scripts/build_participation_schedules.py`; the student-facing
+contract is `surveys/participation_grading.md`.
+
+**Why "It is your turn" moved out of the milestones, and then out of
+Participation.** The book's closing sections were previously handed in bundled
+into the Friday milestone, days after the reading they belong to. Collecting them
+on the reading date does three things at once: it makes the reading deadline real,
+it puts the practice next to the chapter that teaches it, and it gives Studio 12 —
+which D54 left teaching but collecting nothing — something to collect. The
+milestone still names its chapters in its Book Anchor and still carries the work
+forward into the dossier; it just no longer re-collects it. D58 then gave the
+family its own 10% category, because it was by far the largest family in the
+participation block, and a body of required practice that size should be named for
+what it is rather than hidden inside participation.
+
+## Quizzes — retired for this edition (D58, 2026-08-23)
+
+There is **no quiz category**. No quiz is administered, no quiz is printed, and
+nothing in the gradebook is scored on one. The Friday studio lost its 0–10 quiz
+block with it, and the milestone sprint absorbed those ten minutes.
+
+The **material is kept**. The banks under `_quizzes/` (gitignored), every
+quiz-building script, and the `scripts/audit_answer_length.py` option-length gate
+stay in the repository for a future edition, and CLAUDE.md's dormant *MC
+Option-Length Parity* rule still governs them if quizzes ever return. Retiring the
+category is never permission to delete a quiz file or a quiz script.
 
 ## Why these weights
 
-- **There is one project, not a project plus a milestone category.** The 17-step
-  development chain is the Milestone Deliverables component of the single 50%
-  Final Project.
+- **There is one project, not a project plus a milestone category.** The 16-step
+  development chain (M1–M16) is the Milestone Deliverables component of the single
+  50% Final Project.
 - **The five QM474 items remain visible and functional.** HONR does not rename
   Peer Evaluation into a portfolio or rename Instructor/TA Evaluation into a
   defense; those artifacts are evidence used inside the named items.
 - **Individual accountability survives either project mode.** Actual peers rate
   contribution and follow-through, while the portfolio and defense stay
   individual even when the research artifact is shared.
-- **The flipped classroom remains 20%.** Leading research investigations is a
-  repeated rehearsal of the same judgment and defense expected in the project.
+- **The flipped classroom rises to 30%.** Leading research investigations is a
+  repeated rehearsal of the same judgment and defense expected in the project,
+  and it is now the second-largest thing the course grades.
+- **The retired quiz weight went where the work is.** D58 removed the 20% quiz
+  category, and its weight was redistributed to the two places that already carry
+  real, repeated practice: 10 points to **Student Research Lead** (20 → 30) and 10
+  points to the new **IYT Practice** category, which collects the book's "It is
+  your turn" sections on the date each chapter's reading was due. Nothing new was
+  added to the workload; what was already being done is now what is weighted.
 
 ## Rubric DNA — five virtues, one menu
 
@@ -324,7 +383,7 @@ board.
 
 ## SRL grading pipeline
 
-The Student Research Lead score (Component 2) is produced per slot:
+The Student Research Lead score is produced per slot:
 
 1. The lead receives their SRL page **five days ahead** and submits a
    **preparation template two days ahead** for instructor review; the template
@@ -336,5 +395,6 @@ The Student Research Lead score (Component 2) is produced per slot:
    is the improvement window, informed by peer feedback
    (`srl_peer_feedback_form.md`) and the instructor's notes.
 
-Each slot's 100-point score scales to its 4-point course share; the five slots
-sum to the 20% component.
+Each slot's 100-point score scales to its **6-point** course share; the five slots
+sum to the **30%** component (`srl.leads_per_student: 5` in `course_config.yaml` is
+what makes the per-slot figure 6).

@@ -30,14 +30,15 @@ formats.
 | `notebooks/data/` | Course datasets (from the MIT-licensed `rdss` package, with attribution) |
 | `_research_project/2026Fall/` | Milestone instructions + rubrics, one page per milestone (M1–M16) |
 | `project/` | Project-system protocols: poster, conference, final dossier, templates |
-| `planning/` | Course master plan, 44×32 meeting schedule, milestone maps, assessment architecture |
+| `planning/` | Course master plan, 43×34 meeting schedule, milestone maps, assessment architecture |
 | `translation/` | The rdss/DeclareDesign → Python parity roadmap (separate parallel project) |
 | `_project_docs/` | AI-assistant operating docs, notebook template, decisions, troubleshooting |
 | `scripts/` | Course-ops automation (schedule generator, notebook builder/validators, voice lint) |
 | `CLAUDE.md` | AI-assistant operating manual for this repo |
 
-Instructor-only materials (session guides, Brightspace pages, quizzes, worksheets,
-handouts, grading, and any `*_instructor*.ipynb`) are gitignored and kept local.
+Instructor-only materials (session guides, Brightspace pages, quiz banks — retired
+for this edition under D58, kept for a future one — worksheets, handouts, grading,
+and any `*_instructor*.ipynb`) are gitignored and kept local.
 
 ## Provenance
 

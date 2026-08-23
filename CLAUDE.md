@@ -69,8 +69,8 @@ research chapter, an AI-management portfolio, and an oral evidence defense.
 | `planning/SOURCE_AUDIT_V2.md` | The rebuild audit: rulings, reuse map, GenAI Studio verification |
 | `planning/MEETING_SCHEDULE.md` | Per-meeting detail (43 × 34; generated from `scripts/schedule_data/`) |
 | `planning/INQUIRY_MAP.md` | The compass (questions) + design-pathway (designs) layers |
-| `surveys/participation_grading.md` | Anything about the Participation 9% — the whole undivided completion contract (D57) |
-| `planning/IYT_SUBMISSION_SCHEDULE.md` | The "It is your turn" submissions (36 per student, over 40 chapters, in 21 assignments), their due dates, and the one Brightspace instruction (generated) |
+| `surveys/participation_grading.md` | Anything about the Participation 9% or the IYT Practice 10% — the two undivided completion contracts (D57, amended D58; it no longer owns "It is your turn" as participation) |
+| `planning/IYT_SUBMISSION_SCHEDULE.md` | The **IYT Practice (10%)** submissions (36 per student, over 40 chapters, in 21 assignments), their due dates, and the one Brightspace instruction (generated) |
 | `planning/STUDIO_FEEDBACK_SCHEDULE.md` | The 12 per-studio feedback deadlines (generated) |
 | `project/srl/` | Student Research Lead handbook, templates, rubric |
 | `genai_studio/` | GenAI Studio role specs, KB strategy, Colab PoC |
@@ -267,42 +267,65 @@ syllabus).
 
 ---
 
-## 🚨 CRITICAL RULE — Participation Is One Undivided Completion Contract  *(D57)*
+## 🚨 CRITICAL RULE — Participation Is One Undivided Completion Contract  *(D57, amended D58)*
 
 Participation is **9%, undivided**. Never publish or apply an internal split of it.
-Every required item is worth the same single credit; the block is their sum. Four
-item families and nothing else:
+Every required item is worth the same single credit; the block is their sum. **D58
+moved the "It is your turn" family OUT of Participation** into its own top-level
+**IYT Practice (10%)** category, so the two are separate instruments with separate
+credit pools. Three item families remain here and nothing else:
 
-1. **EDR|AI "It is your turn" sections** — one submission per required chapter, due
-   **11:59 PM on the date that chapter's reading was due** (36 for a typical student).
-2. **Studio feedback survey** — **one response per Studio, never per chapter**, due
+1. **Studio feedback survey** — **one response per Studio, never per chapter**, due
    **11:59 PM on the Sunday that ends the studio week** (12; Studio 12 closes Dec 11).
-3. **Student profile survey** — Sun Aug 30, 2026.
-4. **Course reflection** — Fri Dec 11, 2026 (D54 put it here; it is not a milestone,
+2. **Student profile survey** — Sun Aug 30, 2026.
+3. **Course reflection** — Fri Dec 11, 2026 (D54 put it here; it is not a milestone,
    and it is not M15's conference reflection).
-5. **The 10 scored Synthetic Colleague audits** — one credit each; the four-row
-   rubric in `project/colleague/audit_rubric.md` decides whether the credit was
-   earned (5-8 full, 3-4 half, 2 or below none), never a weight of its own. The
-   old "best 8 of 10" rule is retired.
 
-Baseline **N = 60**, **d = 6**. Credit `1.0` on time / `0.5` within seven days /
-`0` otherwise; the lowest `⌈0.10 × N⌉` credits drop automatically;
-`points = 9 × (kept credits) / (N − d)`.
+Baseline **N = 14** (12 + 1 + 1), so **d = ⌈0.10 × 14⌉ = 2**. Credit `1.0` on time /
+`0.5` within seven days / `0` otherwise; the lowest `⌈0.10 × N⌉` credits drop
+automatically, and
+
+```
+participation points = 9.0 × (sum of the highest 12 credits) / 12
+```
+
 "Other constructive contributions" is a documented **±0.9-point adjustment**, not a
-bucket with a weight.
+bucket with a weight — the block is still 9%.
 
 **Never reintroduce, in any surface:** lecture-notebook completion as a graded thing
-(lecture notebooks are **never collected**), per-chapter reading feedback, or the
-retired 5/2/2 split. **The syllabus stays generic** — one paragraph, no sub-weights,
-no dates, on the web page and in the `.docx` alike; the operative detail lives in
-`surveys/participation_grading.md`. Milestone briefs keep their Book Anchor but must
-say the "It is your turn" sections were **already submitted and are not collected a
-second time**.
+(lecture notebooks are **never collected**), per-chapter reading feedback, the retired
+5/2/2 split, or any other published internal split of the 9%. **The syllabus stays
+generic** — one paragraph, no sub-weights, no dates, on the web page and in the
+`.docx` alike; the operative detail lives in `surveys/participation_grading.md`.
+Milestone briefs keep their Book Anchor but must say the "It is your turn" sections
+were **already submitted and are not collected a second time**.
 
 ```bash
 .venv/bin/python scripts/build_participation_schedules.py   # IYT + studio + SRL tables
 .venv/bin/python scripts/build_studio_feedback_survey.py    # Qualtrics import + instrument
 ```
+
+---
+
+## 🚨 CRITICAL RULE — IYT Practice Is Its Own 10% Completion Contract  *(D58)*
+
+**IYT Practice is 10%**, a top-level assessment category, and it holds exactly one
+item family: the EDR|AI **"It is your turn"** sections of the required chapters. One
+submission per required chapter, due **11:59 PM on the date that chapter's reading
+was due**, graded by **completion** and never by content.
+
+- `count_typical` is **36** — 34 chapters everyone reads, 2 pathway chapters, and
+  one more if the declared design has stages (N = 37; ⌈0.10 × 37⌉ is still 4).
+- Credit `1.0` on time / `0.5` within seven days / `0` otherwise.
+- Drop `d = ⌈0.10 × 36⌉ = 4` lowest credits, automatically.
+- `iyt points = 10.0 × (sum of the highest 32 credits) / 32`.
+- Dated list: `planning/IYT_SUBMISSION_SCHEDULE.md` (generated by
+  `scripts/build_participation_schedules.py`; never hand-edited).
+
+This work is **not participation** and must never be called participation on any
+surface. The ±0.9-point contribution adjustment belongs to the 9% block alone and
+never touches this one. Milestone briefs still name their Book Anchor chapters and
+still record that the sections were already handed in, not collected a second time.
 
 ---
 
@@ -375,10 +398,10 @@ no title). **Chapter review is FROZEN until Architecture v1 (D35;
    chapter's design content without checking its notebook (and vice versa).
    Every milestone brief M1–M16 **names** its **Book Anchor** chapters but no
    longer collects them (D57): each "It is your turn" section is handed in on
-   its own chapter's reading date, as participation. The anchors do not
-   partition the book's 40 active lessons — ch. 38–40 anchor to nb16, whose
-   crosswalk row carries no milestone (D54), so they are participation-only,
-   and M11–M15 anchor no chapters at all.
+   its own chapter's reading date, under **IYT Practice** (10%, D58). The
+   anchors do not partition the book's 40 active lessons — ch. 38–40 anchor to
+   nb16, whose crosswalk row carries no milestone (D54), so they are
+   IYT-Practice-only, and M11–M15 anchor no chapters at all.
 4. **The instructor manually reviews and updates the book**; the assistant then
    articulates and incorporates those reviews across the course material
    (notebooks, guides, site).
@@ -479,6 +502,13 @@ If auto-graded MC quizzes are introduced: every option ≥ 60% of the longest
 option's length; correct option strictly longest in ≤ 40% of a bank;
 `python3 scripts/audit_answer_length.py --file <csv>` must PASS before import.
 
+**D58 — the quiz material is KEPT, the category is not.** No quiz is administered
+this edition and nothing is scored on one, but the banks under `_quizzes/` (already
+gitignored), `scripts/audit_answer_length.py`, and every quiz-building script stay in
+the repository for a future edition. **Never delete a quiz file or a quiz script.**
+What was retired is the grade category and the Friday class-time block, never the
+material.
+
 ---
 
 ## Style Guidelines
@@ -506,7 +536,20 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 
 ---
 
-**Version:** 6.7 — the D57 participation contract (2026-08-23, DECISIONS.md D57):
+**Version:** 6.8 — the D58 quiz retirement and IYT Practice split (2026-08-23,
+DECISIONS.md D58): the **quiz grade category and its Friday class-time block are
+RETIRED for this edition** — no quiz is administered and nothing is scored on one,
+while the banks (`_quizzes/`), their builders and `scripts/audit_answer_length.py` are
+KEPT for a future edition and must never be deleted. The EDR|AI **"It is your turn"**
+sections leave Participation and become a top-level **IYT Practice, 10%** (N = 36,
+d = 4, completion, due 11:59 PM on each chapter's reading date). **Student Research
+Lead rises from 20% to 30%.** Participation stays **9%** over **14** credits (12
+studio feedback + profile survey + course reflection, d = 2), undivided as before.
+The Friday studio becomes three sections summing to 50: **0–5 research stand-up ·
+5–45 milestone kickoff + AI-supported work · 45–50 revise, update ledger + dossier,
+submit** — the sprint absorbs the ten quiz minutes. Weights: attendance 1 ·
+participation 9 · IYT Practice 10 · SRL 30 · Final Project 50.
+(6.7 — the D57 participation contract (2026-08-23, DECISIONS.md D57):
 Participation stays **one undivided 9%** and becomes a completion contract over four
 item families — the book's **"It is your turn" sections, collected on the date each
 chapter's reading was due** (40 chapters, 21 Brightspace assignments,
@@ -684,5 +727,5 @@ appendix. (5.0 = v2 prompt-architecture rebuild 2026-07-22/23, D17–D21: 16
 weekly topics, milestones M0–M15, SRL flipped classroom, AI Research Ledger +
 SDIIVDD, GenAI Studio reviewer bench, 37-chapter course book, 43-meeting
 calendar; 4.0 = 2026-07-20 course redesign D13–D16; 3.0 = RDSS inquiry compass
-2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.))))))))))))
+2026-07-19; 2.0 = v1 build complete; 1.0 = seeded from MGMT474 infra.)))))))))))))
 **Maintained by:** Professor Davi Moreira + AI Assistants

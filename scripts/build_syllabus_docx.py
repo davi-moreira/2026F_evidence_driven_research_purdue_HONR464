@@ -521,14 +521,14 @@ def main():
     para(doc, "The course assesses the research chain itself: a semester-long "
               "research project carried through milestones, presented publicly "
               "at the Purdue Undergraduate Research Conference, and closed with "
-              "a public evidence defense and a reproducible final research "
-              "paper/chapter/note and AI-management portfolio.")
+              "a reproducible package, a bounded research note, and a written "
+              "reflection on the semester's work.")
     para(doc, "Final letter grades follow the fixed scale below. There is no "
               "curve.", bold_prefix="Grading: ")
 
     weights = [("Assessment", "Weight"), ("Attendance", "1%"),
-               ("Participation", "9%"), ("Quizzes", "20%"),
-               ("Student Research Lead", "20%"),
+               ("Participation", "9%"), ("IYT Practice", "10%"),
+               ("Student Research Lead", "30%"),
                ("Final Project", "50%"), ("Total", "100%")]
     tw = doc.add_table(rows=len(weights), cols=2)
     tw.style = doc.styles["Grid Table 1 Light"]
@@ -548,20 +548,23 @@ def main():
               "project work that cannot be fully reconstructed afterward.",
          bold_prefix="Attendance:")
     para(doc, " Participation is graded as one block. It covers the required "
-              "course surveys, the book's \u201cIt is your turn\u201d "
-              "submissions, the course-closing reflection, and other "
+              "course surveys, the course-closing reflection, and other "
               "constructive contributions to the course. These items are scored "
               "for completion and timeliness, never for the opinions they "
               "express, and the lowest few scores are dropped automatically. "
               "The full list, the due dates, and the submission instructions "
               "are posted on the course page.",
          bold_prefix="Participation:")
-    para(doc, " Short multiple-choice quizzes assess the topic studied that "
-              "week. They take place at the beginning of Friday's in-person "
-              "class, are completed individually with closed notes, and do not "
-              "permit AI use. The questions emphasize concepts and research "
-              "judgment rather than memorizing software commands.",
-         bold_prefix="Quizzes:")
+    para(doc, " Each required EDR|AI chapter closes with an \u201cIt is your "
+              "turn\u201d section that you complete in that chapter's companion "
+              "Colab notebook. Each section is due at 11:59 PM on the date that "
+              "chapter's reading was due. This work is graded for completion, not "
+              "for the conclusions you reach: full credit when it arrives on time, "
+              "half credit when it arrives within seven days of the deadline. The "
+              "lowest few credits are dropped automatically. The dated list lives "
+              "on the course schedule page, where each meeting row marks the "
+              "sections due that night, and on Brightspace, where you submit them.",
+         bold_prefix="IYT Practice:")
     para(doc, " From Week 2 onward, Student Research Leads run assigned Monday "
               "or Wednesday lectures as Socratic investigations. Slots are "
               "randomly assigned at the beginning of the semester. Prepare from "
@@ -707,9 +710,8 @@ def main():
               "ethical judgments, claims, uncertainty, and limitations remain "
               "your decisions. Undisclosed or unverified AI output may be "
               "treated as an academic-integrity violation.", style="Body Text")
-    para(doc, "AI use is not allowed during in-person quizzes. Those quizzes "
-              "are individual, closed-note assessments. Any other no-AI "
-              "activity will be clearly identified in its instructions.",
+    para(doc, "Some activities are done without AI. Any no-AI activity will be "
+              "clearly identified in its instructions.",
          style="Body Text")
 
     para(doc, " The Registrar's add, drop, and modify deadline dates for this "

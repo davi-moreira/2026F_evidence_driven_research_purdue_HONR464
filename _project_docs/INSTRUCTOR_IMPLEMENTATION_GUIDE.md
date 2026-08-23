@@ -55,20 +55,24 @@ the peer defense.
 
 ### Friday — project studio (you run it)
 
-**No new topic content, ever.** The studio is quiz-first (D22/D30):
+**No new topic content, ever.** The studio opens with the stand-up and is a working
+session for the week's milestone (D22/D30, amended D58):
 
-- **0–10 — weekly topic quiz.** Five printed multiple-choice questions on the
-  week's topic (`_quizzes/2026Fall/weekly/`), answered solo, closed notes,
-  handed in.
-- **10–15 — research stand-up.** Each student states last week's decision and
+- **0–5 — research stand-up.** Each student states last week's decision and
   this week's blocker.
-- **15–45 — milestone kickoff + AI-supported work.** Present the week's
+- **5–45 — milestone kickoff + AI-supported work.** Present the week's
   milestone from its Brightspace brief (about 3 minutes), then students WORK ON
   the milestone with their AI assistant while you run rotating consults. The
   old peer red-team block is retired (D30); at designated milestones an
   assigned GenAI Studio reviewer role is still required (see §5).
 - **45–50 — revise, update ledger + dossier, submit.** The milestone is
   submitted at close.
+
+**Nothing is printed and nothing is scored for Friday.** D58 retired the weekly
+quiz category and its 0–10 class-time block for this edition, and the sprint
+absorbed those ten minutes. The banks in `_quizzes/2026Fall/weekly/` and the
+`scripts/audit_answer_length.py` gate are kept for a future edition; never delete
+them, and do not print or grade anything from them this term.
 
 **Week 1 is instructor-led** (both lectures) to model the SRL format before
 students take over in Week 2.
@@ -81,7 +85,7 @@ One meeting is asynchronous online, a self-contained graded unit:
   (M16).
 
 Fri Oct 2 (meeting 17) is a **regular in-person studio** on the standard
-10/5/30/5 frame; M6 is submitted there like any other milestone.
+5/40/5 frame; M6 is submitted there like any other milestone.
 
 **No class Wed Nov 18**, the day after the Expo.
 
@@ -116,7 +120,7 @@ assumption exposure, productive + interrogated AI use, inclusion, time
 management, connection to research decisions, handling uncertainty). Collect
 classmate feedback on `project/srl/srl_peer_feedback_form.md` and pass it to the
 lead quickly; it is the fastest way they improve before the next slot. The
-Student Research Lead component is **20%** of the course grade (syllabus).
+Student Research Lead component is **30%** of the course grade (syllabus).
 
 **Intervention protocol.** How to step in without seizing the room is summarized
 in `project/srl/srl_handbook.md` ("How the instructor will step in"); the
@@ -158,15 +162,23 @@ reflection session, collected under participation.
   `course_config.yaml assessment:`.
 
 The course has five weighted categories totaling 100: Attendance 1 ·
-Participation 9 · Quizzes 20 · SRL 20 · Final Project 50.
-**Participation is one undivided block (D57)**: every required item is one equal
-credit, graded for completion — the book's "It is your turn" section for each
-required chapter (due 11:59 PM on that chapter's reading day), the 12 per-studio
-feedback surveys (each Sunday that ends a studio week), the student profile
-survey (Aug 30) and the course reflection (Dec 11). Lecture notebooks are never
+Participation 9 · IYT Practice 10 · SRL 30 · Final Project 50. D58 retired the
+quiz category for this edition, so nothing in the gradebook is scored on a quiz.
+
+**Participation is one undivided block (D57, amended D58)**: every required item
+is one equal credit, graded for completion — the 12 per-studio feedback surveys
+(each Sunday that ends a studio week), the student profile survey (Aug 30) and the
+course reflection (Dec 11). Baseline **N = 14**, drop **d = 2**, so the block is
+`9.0 × (sum of the highest 12 credits) / 12`. Lecture notebooks are never
 collected. The contract is `surveys/participation_grading.md`; the dated
-assignment lists are `planning/IYT_SUBMISSION_SCHEDULE.md` and
-`planning/STUDIO_FEEDBACK_SCHEDULE.md`. Final
+assignment list is `planning/STUDIO_FEEDBACK_SCHEDULE.md`.
+
+**IYT Practice is its own 10% block (D58)**: the book's "It is your turn" section
+for each required chapter, due 11:59 PM on that chapter's reading day, graded for
+completion on the same credit rule. Baseline **N ≈ 36**, drop **d = 4**, so the
+block is `10.0 × (sum of the highest 32 credits) / 32`. The dated assignment list
+is `planning/IYT_SUBMISSION_SCHEDULE.md`; the contract is the same
+`surveys/participation_grading.md`. Final
 Project contains **Milestone Deliverables 30% · Peer Evaluation 20% · Peer
 Review 10% · Poster Presentation at the Purdue Undergraduate Research
 Conference 20% · Instructor/TA Evaluation 20%**, worth 15/10/5/10/10 course
@@ -219,7 +231,7 @@ validated by `scripts/validate_milestones.py`.
 ## 5. GenAI Studio setup — DO THIS BEFORE THE SEMESTER
 
 Purdue GenAI Studio (<https://genai.rcac.purdue.edu>) is the course's reviewer
-bench. Students **must** consult an assigned reviewer role at four milestones:
+bench. Students **must** consult an assigned reviewer role at five milestones:
 
 | Milestone | Required reviewer role |
 |---|---|
@@ -286,7 +298,7 @@ exchange as follows:
    capsule from the written instructions alone while the author remains silent.
 3. Each runner records whether the headline result and its uncertainty reproduce,
    every question the instructions forced them to ask, and every mismatch.
-4. Friday is the repair and submission block for M16. M16 is one of the seventeen
+4. Friday is the repair and submission block for M16. M16 is one of the sixteen
    scores in Final Project's Milestone Deliverables item and supplies evidence
    for the final artifact, portfolio, and defense evaluated in Instructor/TA
    Evaluation; there is no separate replication category.

@@ -108,23 +108,24 @@ presentation** — posing the puzzle, steering the AI investigation, and
 prompting peer defense; the instructor formalizes and adjudicates. The brief is
 a floor, not a ceiling: creative staging within the fixed frame is expected.
 Each meeting type has a **fixed 50-minute architecture** (`srl:` in
-`course_config.yaml`; Mon/Wed 4 sections, Friday 5):
+`course_config.yaml`; Mon/Wed 4 sections, Friday 3):
 
 | Section | **Monday** | **Wednesday** | **Friday studio** |
 |---|---|---|---|
-| 1 | Student-led research puzzle · 9 | Student-led retrieval & challenge · 7 | Weekly topic quiz (MC) · 10 |
-| 2 | Guided AI research-partner investigation · 22 | Intensive applied AI laboratory · 23 | Research stand-up · 5 |
-| 3 | Human verification + instructor formalization · 12 | Peer defense & adversarial questioning · 12 (defense to 38, then SRL synthesis + instructor accuracy lock · D34) | Milestone kickoff + AI-supported work · 30 |
-| 4 | Decision and defense · 7 | Transfer to the final project · 8 | Revision, ledger, submission · 5 |
-| 5 | — | — | — |
+| 1 | Student-led research puzzle · 9 | Student-led retrieval & challenge · 7 | Research stand-up · 5 |
+| 2 | Guided AI research-partner investigation · 22 | Intensive applied AI laboratory · 23 | Milestone kickoff + AI-supported work · 40 |
+| 3 | Human verification + instructor formalization · 12 | Peer defense & adversarial questioning · 12 (defense to 38, then SRL synthesis + instructor accuracy lock · D34) | Revision, ledger, submission · 5 |
+| 4 | Decision and defense · 7 | Transfer to the final project · 8 | — |
 
 **No new topic content on Fridays.** Every Friday is an in-person studio: a
-10-minute multiple-choice quiz on the week's topic (printed; solo; graded),
-a stand-up, then the week's milestone is kicked off from its Brightspace brief
-and WORKED ON with the student's AI assistant (the weekly peer red-team block
-was retired, D30; GenAI Studio reviewer roles still apply at designated
-milestones), then revised, ledgered, and submitted at close. The async
-meeting is a self-contained module with its own assessable artifact.
+research stand-up, then the week's milestone is kicked off from its Brightspace
+brief and WORKED ON with the student's AI assistant (the weekly peer red-team
+block was retired, D30; GenAI Studio reviewer roles still apply at designated
+milestones), then revised, ledgered, and submitted at close. **D58 retired the
+opening 10-minute quiz block for this edition** — no quiz is administered and
+nothing is scored on one — and the milestone sprint absorbed those ten minutes,
+so the Friday frame is 5 / 40 / 5. The async meeting is a self-contained module
+with its own assessable artifact.
 
 ## 4. The two conceptual layers (critical — kept exactly)
 
@@ -202,7 +203,7 @@ full milestone chain — develop → present → submit → revise cadence, kick
 rules, dossier mapping, and the M13 terminal lock — lives in
 `planning/PROJECT_MILESTONES.md`.
 
-## 7. Assessment architecture *(D52, 2026-08-23)*
+## 7. Assessment architecture *(D52, amended D57/D58, 2026-08-23)*
 
 From `course_config.yaml assessment:`; sums to 100 and matches `syllabus.qmd`.
 Grading rewards correctness, transparency, reproducibility, question-design
@@ -211,9 +212,9 @@ alignment, and responsible interpretation — never coding elegance.
 | Component | Weight |
 |---|---|
 | Attendance (iClicker) | 1 |
-| Participation (studio feedback surveys + "It is your turn" submissions + profile survey + course reflection + other constructive contributions; one undivided block, D57) | 9 |
-| Quizzes (weekly Friday MC topic quizzes) | 20 |
-| Student Research Lead | 20 |
+| Participation (studio feedback surveys + profile survey + course reflection + other constructive contributions; one undivided block, D57, amended D58) | 9 |
+| IYT Practice (the book's "It is your turn" sections, due on each chapter's reading date; completion, D58) | 10 |
+| Student Research Lead | 30 |
 | Final Project | 50 |
 | **Total** | **100** |
 
