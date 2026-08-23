@@ -56,7 +56,8 @@ def crosswalk_sets() -> dict[str, dict[str, set[str]]]:
                 d["revisit"].add(a["lesson"])
             elif a.get("home_anchor"):
                 d.setdefault(a["requirement"], set()).add(a["lesson"])
-        out[r["milestone"]] = d
+        # D54: a teaching-only row (Week 16) is keyed by its notebook instead.
+        out[r.get("milestone") or f"nb:{r['nb']}"] = d
     return out
 
 
@@ -76,13 +77,20 @@ def main() -> int:
 
     # --- group meetings by milestone --------------------------------------
     weeks: dict[str, list[dict]] = {}
+    nb_of_unit = {}
     for r in rows:
         m = re.match(r"\s*(M\d+)", r["milestone_developed"])
-        if not m:
-            errors.append(f"meeting {r['meeting']}: no milestone id in "
-                          f"milestone_developed")
+        if m:
+            weeks.setdefault(m.group(1), []).append(r)
             continue
-        weeks.setdefault(m.group(1), []).append(r)
+        # D54: Week 16 teaches Studio 12 with no milestone. Such meetings are
+        # still reading-checked, keyed by the notebook their unit names.
+        nb = re.search(r"\bnb(\d{2})\b", r["other_material"])
+        if not nb:
+            errors.append(f"meeting {r['meeting']}: no milestone id in "
+                          f"milestone_developed and no nbNN in other_material")
+            continue
+        weeks.setdefault(f"nb:nb{nb.group(1)}", []).append(r)
 
     for mi, meetings in weeks.items():
         want = cw.get(mi)
@@ -163,6 +171,10 @@ def main() -> int:
                 rank = station_rank.get(bm["station"])
                 if rank is not None:
                     studio_week[rank] = int(str(r["nb"])[2:])
+        # D54: a station taught without a graded checkpoint declares its week.
+        taught = r.get("teaches_station")
+        if taught and station_rank.get(taught) is not None:
+            studio_week[station_rank[taught]] = int(str(r["nb"])[2:])
     for rank, title in sorted(published.items()):
         week = studio_week.get(rank, rank)
         unit = next((u for u in units if u.startswith(f"Week {week} —")), None)

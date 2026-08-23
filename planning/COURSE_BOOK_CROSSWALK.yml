@@ -366,6 +366,7 @@ rows:
 
   - milestone: null            # D54: Week 16 teaches, but carries no milestone
     nb: nb16
+    teaches_station: release-next-cycle   # D54: taught here, never checkpointed
     # Week 16 - Studio 12, the teaching close. Monday teaches Lessons 38-39
     # (managing multiple AI agents; conflicting agents and human escalation) and
     # Wednesday teaches Lesson 40. D54 retired the course milestone that used to

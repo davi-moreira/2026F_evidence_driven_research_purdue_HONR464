@@ -41,16 +41,16 @@ milestone category and no sixth Final Project component.
 
 | Component | Individual project (default) | Approved group project |
 |---|---|---|
-| **Milestone Deliverables** | Your score is the arithmetic mean of your seventeen M1–M17 scores. | Each member's score is the arithmetic mean of that member's own seventeen M1–M17 scores; there is no pooled group mean. The group submits one shared artifact naming every member. Shared rubric rows receive a common score; requirements marked individual, including each member's AI Research Ledger evidence, are scored per member, so milestone scores may differ only on those rows. |
+| **Milestone Deliverables** | Your score is the arithmetic mean of your sixteen M1–M16 scores. | Each member's score is the arithmetic mean of that member's own sixteen M1–M16 scores; there is no pooled group mean. The group submits one shared artifact naming every member. Shared rubric rows receive a common score; requirements marked individual, including each member's AI Research Ledger evidence, are scored per member, so milestone scores may differ only on those rows. |
 | **Peer Evaluation** | Two instructor-assigned project peers who have observed your work in scheduled studios and checks rate you confidentially. You complete every evaluation the instructor assigns; assignments need not be reciprocal. There is no self-rating. | Every member confidentially rates every other teammate and may also be assigned to observe and rate an individual-project researcher. There is no self-rating. The score is per member, so teammates can receive different scores. |
 | **Peer Review** | You independently review every other active project or poster and submit your own structured criticism, scored with the **M12** Final Project Peer Review rubric. | Every member independently reviews every other active project or poster and submits their own criticism without conferring. This is not a teammate rating and is scored per student. |
 | **Poster Presentation at the Purdue Undergraduate Research Conference** | The poster you lock at **M13** supplies 70% of this component score, and your **M15** live presentation supplies 30%. | The shared locked **M13** poster supplies the common 70% poster-quality portion. Every member must present; each member's **M15** live presentation supplies their own 30% portion. |
-| **Instructor/TA Evaluation** | The instructor evaluates your **M17** final submission and your live Evidence Defense with the published rubric. | The shared project artifact is common evidence, but every member must supply individually required process evidence and complete their own Evidence Defense. The component is scored per member. |
+| **Instructor/TA Evaluation** | The instructor evaluates the **final poster submission you lock at M13** with the published rubric. | The shared locked poster is common evidence and receives a common score. |
 
 The **Milestone Deliverables** score is
 
 \[
-M = \frac{M1 + M2 + \cdots + M17}{17}.
+M = \frac{M1 + M2 + \cdots + M16}{16}.
 \]
 
 All milestones use a 100-point rubric and therefore carry equal weight in this
@@ -72,24 +72,15 @@ with **M15**. For an approved group, \(P_{\text{poster}}\) is common to the
 shared locked poster; every member must present, and each member receives their
 own \(P_{\text{live}}\).
 
-The **Instructor/TA Evaluation** score uses three 0–100 subscores:
-
-\[
-I = 0.50A + 0.25Q + 0.25D,
-\]
-
-where \(A\) is the **M17** Final Research Artifact, \(Q\) is the **M17**
-AI-management portfolio, and \(D\) is your individual live Evidence Defense.
-These are subscores inside Instructor/TA Evaluation, not additional Final
-Project components. For an approved group, \(A\) is common; each member
-receives their own \(Q\) and \(D\).
-
-The **Final Research Artifact** is the polished paper, chapter, or research
-note grown from your milestone work. It must present a traceable argument,
-reproducible results, appropriate uncertainty and limitations, verified
-sources, and a transparent account of how AI contributed to it. It stays
-explicitly graded inside Instructor/TA Evaluation, next to your AI-management
-portfolio and your individual Evidence Defense. If no TA is assigned to the
+The **Instructor/TA Evaluation** score is a single 0–100 instructor
+assessment of the **final poster submission** you lock at **M13**, judged as a
+piece of research communication: whether the argument is traceable, the
+results reproducible, the uncertainty and limitations stated where the claim
+is made, the sources verified, and AI's contribution disclosed honestly. It is
+graded on the published rubric, and it is a different judgement from the
+**Poster Presentation** component, which scores poster quality against the M13
+rubric and your live delivery at the conference. For an approved group, the
+shared locked poster receives a common score. If no TA is assigned to the
 course, the instructor records this item.
 
 ## Peer Evaluation is not Peer Review
@@ -99,11 +90,11 @@ people who observed your work. **Peer Review** is the quality of the structured
 criticism you give other projects. They are separate Final Project components,
 submitted separately, and neither replaces the other.
 
-**No score is counted twice.** M12, M13, M15, and M17 are milestones, so their
+**No score is counted twice.** M12, M13, and M15 are milestones, so their
 milestone rubrics feed Milestone Deliverables. Those same weeks also produce
 separate terminal rubrics — your peer review, your poster quality, your live
-presentation, your final artifact, your portfolio, your defense — and those feed
-the other four components. The milestone rubric scores your process: whether the
+presentation, and the instructor's assessment of the locked poster — and those
+feed the other four components. The milestone rubric scores your process: whether the
 work arrived on time, in the right version, answering the feedback you were
 given. The terminal rubric scores the artifact itself. No single rubric score is
 ever entered into two components.

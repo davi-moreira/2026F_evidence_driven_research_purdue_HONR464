@@ -433,8 +433,8 @@ def check_crosswalk(arch, cw) -> list[str]:
                  f"missing {active - set(anchors)}, extra {set(anchors) - active}")
     if set(planned_anchors) != planned:
         p.append(f"cw: planned_home_anchor mismatch: {set(planned_anchors) ^ planned}")
-    if sorted(milestones, key=lambda m: int(m[1:])) != [f"M{i}" for i in range(1, 18)]:
-        p.append("cw: milestones are not exactly M2..M17")
+    if sorted(milestones, key=lambda m: int(m[1:])) != [f"M{i}" for i in range(1, 17)]:
+        p.append("cw: milestones are not exactly M1..M16")
     # D50: Week 11 carries three submissions off one notebook and Week 13 carries
     # none, so the nb column is no longer a partition. It must still name only
     # real notebooks, and every notebook that owns a milestone must be reachable.
@@ -508,6 +508,8 @@ def _crosswalk_chapter_map(arch, cw) -> dict[str, set[int]]:
     num = {l["id"]: l["display"] for l in active_lessons(arch)}
     out = {}
     for r in cw.get("rows", []):
+        if not r.get("milestone"):     # D54: teaching-only row (Week 16)
+            continue
         out[r["milestone"]] = {num[a["lesson"]] for a in r.get("assignments", [])
                                if a.get("home_anchor") and a["lesson"] in num}
     return out
