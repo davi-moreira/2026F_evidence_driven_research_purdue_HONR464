@@ -3000,6 +3000,108 @@ record of all of the above); `syllabus.qmd`; `scripts/build_syllabus_docx.py`;
 
 ---
 
+## D58 — The quiz category is retired, "It is your turn" becomes IYT Practice at 10%, and SRL rises to 30% (2026-08-23)
+
+**Instruction.** Davi, 2026-08-23: "drop the quizzes from the assessments (keep the
+files and what we have developed for future use) in this course edition. add more 10%
+to the participation and 10% to the SRL" — then, on the follow-up question about how
+the extra participation weight would be justified: "instead of adding 10% to the
+Participation part, lets create a 'IYT Practice' item where students must submit the
+IYT book chapters with 10%."
+
+**Decision.** Four moves, and the weights still sum to 100.
+
+| Component | Was | Now |
+|---|---:|---:|
+| Attendance | 1% | 1% |
+| Participation | 9% | **9%** |
+| **IYT Practice** | — | **10%** (new) |
+| Quizzes | 20% | **retired** |
+| Student Research Lead | 20% | **30%** |
+| Final Project | 50% | 50% |
+| **Total** | **100%** | **100%** |
+
+**1. The quiz is retired for this edition, and the material is kept.** No quiz is
+administered and nothing is scored on one. This is a retirement, never a deletion:
+`_quizzes/` (gitignored), every quiz builder, and `scripts/audit_answer_length.py`
+stay exactly where they are, and `NEW_COURSE_SETUP.md` still treats the
+quiz→D2L-CSV pipeline as reusable machinery for a future edition. A later edition
+turns the category back on by restoring one line in `course_config.yaml assessment:`
+and one section in the Friday frame.
+
+**2. The Friday studio gives the ten minutes to the work.** `srl.friday_sections`
+drops from four sections to three, still summing to 50:
+
+```
+0–5   research stand-up
+5–45  milestone kickoff + AI-supported sprint     (was 30 min)
+45–50 revision, ledger, submission
+```
+
+Monday and Wednesday are untouched. `scripts/build_session_guides.py` asserts the
+50-minute sum and bins each authored segment by its start minute, so it followed the
+config with no change; the fourteen Friday `minute_dynamic` records in
+`scripts/schedule_data/part1–4.py` were rewritten by hand, deleting the quiz clause
+and shifting the clock ranges. Where a retired quiz item named a misconception the
+week must correct, at most one such idea was folded into the sprint's opening as
+something the room settles aloud. No new activity block was invented.
+
+**3. "It is your turn" leaves Participation and becomes its own 10% category.** D57
+had made the book's closing sections item family #1 inside the undivided 9% — 36 of
+its 50 credits. Carrying 72% of a block's credits while being the only family with a
+per-chapter deadline made the block's name misleading: a student who did every survey
+and skipped the book still read as a participation problem. The two contracts are now
+separate instruments, each with D57's mechanics:
+
+| | IYT Practice | Participation |
+|---|---|---|
+| Weight | **10%** | **9%**, still undivided |
+| Items | the EDR\|AI "It is your turn" sections | studio feedback ×12 · profile survey ×1 · course reflection ×1 |
+| Baseline N | 36 (34 everyone + 2 pathway, +1 when the design has stages) | 14 |
+| Due | 11:59 PM on the date that chapter's reading was due | as D57 set them |
+| Graded | completion | completion |
+| Credit | 1.0 on time · 0.5 within seven days · 0 otherwise | same |
+| Drop `d = ⌈0.10 × N⌉` | 4 | 2 |
+| Formula | `10.0 × (highest 32 credits) / 32` | `9.0 × (highest 12 credits) / 12` |
+
+The "other constructive contributions" clause stays where it was, as a documented
+adjustment of at most **±0.9** course points on the participation result. It did not
+scale, because the participation block did not.
+
+**D57's three bans survive intact.** No internal split of the 9%; no lecture-notebook
+completion; no per-chapter reading feedback. Moving a family OUT of the block is not
+splitting the block.
+
+**4. Student Research Lead rises to 30%.** A weight change and nothing else — the
+rubric, the five randomly-assigned slots and the instrument are untouched. The
+component's *name* is [D59]'s ruling, not this one; the *number* is this one's.
+
+**What the milestone briefs now say.** Each brief's submission table already told
+students their "It is your turn" sections were "already submitted, not collected
+again here". That sentence stays true; only its category name changed, from "as a
+participation submission" to "under **IYT Practice**", across all sixteen briefs. No
+milestone rubric score changes, because the row was never separately scored.
+
+**Everything that had to move.** `course_config.yaml` (the assessment block, the
+re-partitioned `participation:`, the new `iyt_practice:`, the Friday frame);
+`surveys/participation_grading.md`; `scripts/build_participation_schedules.py`;
+`syllabus.qmd` and `scripts/build_syllabus_docx.py` (the weights table, the Quizzes
+section deleted, an IYT Practice section written);
+`scripts/build_schedule_docx.py`; `scripts/build_brightspace_kit.py` (the Quizzes
+category out, an IYT Practice category in, SRL at 30);
+`scripts/schedule_data/part1–4.py`; `planning/ASSESSMENT_ARCHITECTURE.md`;
+`planning/COURSE_MASTER_PLAN.md`; `_project_docs/INSTRUCTOR_IMPLEMENTATION_GUIDE.md`;
+`_project_docs/COURSE_MATERIAL_WORKFLOW.md`; `CLAUDE.md`; `README.md`;
+`book/for-instructors.qmd`; the sixteen milestone briefs; and nb01, whose
+orientation cell carried both the "Fridays open with a printed ten-minute quiz"
+bullet and the course's grading table.
+
+**The syllabus's Final Project section was not touched.** D53 adopted QM 47400's text
+word for word with exactly six permitted deviations, and this ruling changed no Final
+Project weight, component name or scoring rule.
+
+---
+
 ## D59 — The graded component is "Student Research Lead", with no "Performance" (2026-08-23)
 
 **Instruction.** Davi, 2026-08-23: drop the word **Performance** from the component
