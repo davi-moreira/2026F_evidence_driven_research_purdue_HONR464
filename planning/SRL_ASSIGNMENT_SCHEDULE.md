@@ -14,11 +14,11 @@ survives into the next edition.
 
 **What each lead owes.** A preparation script or notebook **two days before** the
 lecture (the "Prep script due" column), prepared from one week ahead. The student
-instructions are the SRL handout PDFs in `_handouts/srl/`, built by
+instructions are the SRL handout PDFs in `project/srl/`, built by
 `scripts/build_handout_pdfs.py`; those carry no names and no dates, so they upload
 to Brightspace once and stay correct.
 
-**Weight.** Student Research Lead Performance is **20%** of the course grade.
+**Weight.** Student Research Lead is **20%** of the course grade.
 The rubric is `project/srl/srl_rubric.md`.
 
 ---

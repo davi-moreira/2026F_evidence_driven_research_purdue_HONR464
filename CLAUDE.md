@@ -70,7 +70,7 @@ research chapter, an AI-management portfolio, and an oral evidence defense.
 | `planning/MEETING_SCHEDULE.md` | Per-meeting detail (43 × 34; generated from `scripts/schedule_data/`) |
 | `planning/INQUIRY_MAP.md` | The compass (questions) + design-pathway (designs) layers |
 | `surveys/participation_grading.md` | Anything about the Participation 9% — the whole undivided completion contract (D57) |
-| `planning/IYT_SUBMISSION_SCHEDULE.md` | The 40 "It is your turn" submissions, their due dates, and the one Brightspace instruction (generated) |
+| `planning/IYT_SUBMISSION_SCHEDULE.md` | The "It is your turn" submissions (36 per student, over 40 chapters, in 21 assignments), their due dates, and the one Brightspace instruction (generated) |
 | `planning/STUDIO_FEEDBACK_SCHEDULE.md` | The 12 per-studio feedback deadlines (generated) |
 | `project/srl/` | Student Research Lead handbook, templates, rubric |
 | `genai_studio/` | GenAI Studio role specs, KB strategy, Colab PoC |
@@ -217,13 +217,16 @@ staging. Fixed section frames, enforced by the session-guide generator
   laboratory · 30–42 peer defense + adversarial questioning (internal split,
   D34: defense to 38, then 38–42 SRL synthesis + instructor accuracy lock) ·
   42–50 project transfer (ledger + Claim Ticket).
-- **Friday studio (no new topic content):** 0–10 weekly multiple-choice topic
-  quiz (printed; `_quizzes/2026Fall/weekly/`) · 10–15 research stand-up ·
-  15–45 milestone kickoff (presented from the course Brightspace page) +
+- **Friday studio (no new topic content):** 0–5 research stand-up · 5–45
+  milestone kickoff (presented from the course Brightspace page) +
   AI-supported work with the student's AI assistant · 45–50 revise, update
   ledger + dossier, submit (Claim Ticket). The Friday red-team block was
   RETIRED (D30); students WORK ON milestones at the studio (no weekly
-  presentations).
+  presentations). **D58 retired the opening weekly quiz block for this
+  edition** — no quiz is administered and nothing is scored on one, and the
+  sprint absorbs the ten minutes (5 + 40 + 5 = 50). The banks and builders
+  (`_quizzes/`, `scripts/audit_answer_length.py`, and any quiz-building
+  script) are KEPT for a future edition and must never be deleted.
 
 **D50 — the conference block.** Weeks 1–10 are Studios 1–10, so **course
 milestone M(n) presents Book Milestone (n) one-to-one for n = 1..10**. Weeks
@@ -277,9 +280,14 @@ item families and nothing else:
 3. **Student profile survey** — Sun Aug 30, 2026.
 4. **Course reflection** — Fri Dec 11, 2026 (D54 put it here; it is not a milestone,
    and it is not M15's conference reflection).
+5. **The 10 scored Synthetic Colleague audits** — one credit each; the four-row
+   rubric in `project/colleague/audit_rubric.md` decides whether the credit was
+   earned (5-8 full, 3-4 half, 2 or below none), never a weight of its own. The
+   old "best 8 of 10" rule is retired.
 
-Credit `1.0` on time / `0.5` within seven days / `0` otherwise; the lowest
-`⌈0.10 × N⌉` credits drop automatically; `points = 9 × (kept credits) / (N − d)`.
+Baseline **N = 60**, **d = 6**. Credit `1.0` on time / `0.5` within seven days /
+`0` otherwise; the lowest `⌈0.10 × N⌉` credits drop automatically;
+`points = 9 × (kept credits) / (N − d)`.
 "Other constructive contributions" is a documented **±0.9-point adjustment**, not a
 bucket with a weight.
 
@@ -381,7 +389,7 @@ no title). **Chapter review is FROZEN until Architecture v1 (D35;
    REQUIRED, matching RDSS chapters RECOMMENDED (stated on the Material page
    and preface — the in-chapter Reading boxes were retired, D24).
    The book is a SELF-CONTAINED MANUAL: every chapter ends with an
-   **"It is your turn"** section, and the 37 sections chain into a complete
+   **"It is your turn"** section, and the 40 sections chain into a complete
    research project/paper by the end (no course-milestone language in chapter
    bodies). Domains for examples: econ, political science, business, biology.
    The "AI can review AI — but the last decision is human" rule lives in the
@@ -501,7 +509,7 @@ option's length; correct option strictly longest in ≤ 40% of a bank;
 **Version:** 6.7 — the D57 participation contract (2026-08-23, DECISIONS.md D57):
 Participation stays **one undivided 9%** and becomes a completion contract over four
 item families — the book's **"It is your turn" sections, collected on the date each
-chapter's reading was due** (40 chapters, 20 Brightspace assignments,
+chapter's reading was due** (40 chapters, 21 Brightspace assignments,
 `planning/IYT_SUBMISSION_SCHEDULE.md`); a **per-studio** feedback survey replacing the
 per-chapter one, closing the Sunday that ends each studio week
 (`planning/STUDIO_FEEDBACK_SCHEDULE.md`); the **student profile survey** (Aug 30); and
@@ -509,8 +517,11 @@ the **course reflection** (Dec 11). Retired: the proposed 5/2/2 internal split,
 lecture-notebook completion (notebooks are never collected), and per-chapter reading
 feedback. The syllabus Participation section is deliberately generic on the web page
 and in the `.docx`; `surveys/participation_grading.md` carries the operative rule. The
-"It is your turn" row leaves every milestone's submission table, which now records
-that the sections were already handed in.
+"It is your turn" row STAYS in every anchored milestone's submission table and now
+records that the sections were already handed in; the five conference-block briefs
+(M11-M15), which anchor no chapter, lose theirs. The 10 scored Synthetic Colleague
+audits join the participation ledger as equal credits, retiring their
+best-8-of-10 rule.
 (6.6 — the D53 QM474 syllabus-text adoption (2026-08-23, DECISIONS.md
 D53): the public `### Final Project (50%)` syllabus section is now QM 47400's Final
 Project section copied **word for word**, with exactly six permitted deviations (the

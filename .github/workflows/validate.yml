@@ -105,6 +105,9 @@ jobs:
       - name: Per-session required readings ↔ crosswalk ↔ book titles
         run: python3 scripts/validate_session_readings.py
 
+      - name: Participation schedules projection freshness
+        run: python3 scripts/build_participation_schedules.py --check
+
       - name: Schedule page freshness (readings + badges)
         run: python3 scripts/update_schedule_badges.py --check
 
