@@ -29,6 +29,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 
 from notebooks_map import (NOTEBOOKS, colab_url, student_filename,  # noqa: E402
                            nb_of, session_kind, lecture_labels)
+from validate_calendar import no_class_days  # noqa: E402
 from session_readings import (lesson_index, rdss_note,  # noqa: E402
                               render_cell, studio_pages)
 from milestone_map import (additions, live_milestones,  # noqa: E402
@@ -105,6 +106,10 @@ repository, so the download only matters when you work offline.
 #: 65,535-character ceiling (see the size note in the module docstring).
 def colab_text_link(n: int) -> str:
     return f"[Open in Colab]({colab_url(n)})"
+
+
+DAYNAMES = {0: "Mon", 1: "Tue", 2: "Wed", 3: "Thu", 4: "Fri",
+            5: "Sat", 6: "Sun"}
 
 
 def pretty_date(iso: str, day: str) -> str:
@@ -254,10 +259,32 @@ def build() -> str:
 
     seen_this_week: set[str] = set()
     current_unit = None
+    #: The five MWF days the term does NOT meet. They carry no meeting number, so
+    #: the CSV has no row for them; without a row a student cannot see that class
+    #: is off. Each is printed immediately before the next meeting, and takes its
+    #: Week and Studio from a meeting in the SAME calendar week — not from the next
+    #: meeting, which for the Thanksgiving days sits a week later and would file
+    #: them under the wrong studio.
+    breaks = dict(no_class_days())
+    unit_by_isoweek = {}
+    for r in rows:
+        unit_by_isoweek.setdefault(
+            date.fromisoformat(r["date"]).isocalendar()[:2], r["unit"])
+
     for r in rows:
         if r["unit"] != current_unit:
             current_unit, seen_this_week = r["unit"], set()
         week, studio = week_studio(r["unit"], studios)
+
+        for iso in [d for d in sorted(breaks) if d < r["date"]]:
+            label = breaks.pop(iso)
+            d = date.fromisoformat(iso)
+            unit = unit_by_isoweek.get(d.isocalendar()[:2], r["unit"])
+            bweek, bstudio = week_studio(unit, studios)
+            lines.append(
+                f"| – | {pretty_date(iso, DAYNAMES[d.weekday()])} | {bweek} "
+                f"| {bstudio} | **{label}** | | | |"
+            )
 
         n = nb_of(r["other_material"])
         badge = ""

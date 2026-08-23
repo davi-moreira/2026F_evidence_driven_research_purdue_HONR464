@@ -45,6 +45,9 @@ REPO_SLUG = "davi-moreira/2026F_evidence_driven_research_purdue_HONR464"
 # final section). Keyed by milestone id. These carry the reduced required set,
 # no schedule badge, and no per-lecture structure. Built ad hoc as each milestone
 # package ships; not every id is present until P4 completes.
+# D54 retired entries 11 and 15: both held the retired M17's release-audit /
+# final-chapter / portfolio material. M11, M12, and M14 have no studio notebook
+# (they never did — entry 11's "M14" label was wrong; its content was M17's).
 MS_NOTEBOOKS = {
     0:  ("ms00_research_ai_baseline", "M1 studio — curiosity committed and the research problem"),
     1:  ("ms01_research_opportunity_landscape", "M2 studio — your rules and your question"),
@@ -58,11 +61,9 @@ MS_NOTEBOOKS = {
     8:  ("ms08_minimum_viable_analysis", "M9 studio — bounded research note and claim-evidence table"),
     9:  ("ms09_poster_draft_research_audit", "M10 studio — venue contract and the publication-ready artifact"),
     10: ("ms10_final_poster_lock", "M13 studio — the final poster lock (terminal)"),
-    11: ("ms11_presentation_package", "M14 studio — the go-public package"),
     12: ("ms12_conference_reflection", "M15 studio — conference reflection"),
     13: ("ms13_replication_redteam", "M16 support — the peer cold run"),
     14: ("ms14_research_note_capsule", "M16 studio — reproducible package and the peer cold run"),
-    15: ("ms15_final_chapter_portfolio", "M17 studio — release, final chapter, and portfolio (terminal)"),
 }
 
 

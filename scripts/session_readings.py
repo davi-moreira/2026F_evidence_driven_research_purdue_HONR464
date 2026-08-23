@@ -124,9 +124,14 @@ def chapter_link(lesson: dict, prefix: str = SITE_REL) -> str:
             f"({prefix}/{lesson['url_path']}){{target=\"_blank\"}}")
 
 
-#: What a Friday "due" cell says instead of relisting links the same week
-#: already carries. Used only when `seen` is threaded through render_cell().
-DUE_BACKREF = "this week's chapters, linked in the rows above"
+#: What a cell says instead of relisting links the same week already carries.
+#: Used only when `seen` is threaded through render_cell().
+BACKREF = "linked in this week's rows above"
+
+#: Modes whose wording already points at what the week showed earlier, so a
+#: back-reference reads naturally and no link is lost (anything NOT shown
+#: earlier is still listed in full).
+BACKREF_MODES = {"due", "continue", "revisit"}
 
 
 def render_cell(field: str, index: dict[str, dict] | None = None,
@@ -135,10 +140,11 @@ def render_cell(field: str, index: dict[str, dict] | None = None,
     """One schedule cell: every mode present, book wording, linked.
 
     Pass `seen` (a per-WEEK set of lesson ids, mutated in place) to collapse the
-    Friday "Due today" list down to a back-reference for the chapters the same
-    week already links above. Chapters that appear nowhere earlier in the week
-    are still listed in full, so nothing loses its link. Callers that do not
-    pass `seen` (the Material page) are unaffected.
+    back-reference modes ("Due today", "Still in play from Monday", "Revisit")
+    down to a pointer for the chapters the same week already links above.
+    Chapters that appear nowhere earlier in the week are still listed in full,
+    so nothing loses its link. Callers that do not pass `seen` (the Material
+    page) are unaffected.
     """
     index = index or lesson_index()
     grouped = by_mode(field)
@@ -153,9 +159,9 @@ def render_cell(field: str, index: dict[str, dict] | None = None,
         if seen is not None:
             repeated = len(fresh) < len(ids)
             seen.update(ids)
-            if mode == "due" and repeated:
+            if mode in BACKREF_MODES and repeated:
                 links = " · ".join(chapter_link(index[i], prefix) for i in fresh)
-                tail = f"{links} · {DUE_BACKREF}" if links else DUE_BACKREF
+                tail = f"{links} · {BACKREF}" if links else BACKREF
                 blocks.append(MODE_LABEL[mode] + tail)
                 continue
         links = " · ".join(chapter_link(index[i], prefix) for i in ids)

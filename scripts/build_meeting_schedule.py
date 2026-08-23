@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""build_meeting_schedule.py — serialize the 43×35 meeting schedule.
+"""build_meeting_schedule.py — serialize the 43×34 meeting schedule.
 
 Reads the structured meeting data in scripts/schedule_data/ (authored from
 planning/COURSE_MASTER_PLAN.md), validates it against the verified calendar

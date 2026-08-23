@@ -45,6 +45,27 @@ HOLIDAYS: dict[date, str] = {
     date(2026, 11, 27): "Thanksgiving recess — no class",
 }
 
+#: Student-facing wording for the same days, used by every artifact that PRINTS
+#: the calendar (the Schedule page, the schedule .docx, the syllabus .docx).
+#: HOLIDAYS above is the machine truth; this is how a student reads it. Keeping
+#: both here stops the printed surfaces from disagreeing with the backbone — they
+#: did once, and nothing caught it because each surface owned its own copy.
+PUBLIC_NO_CLASS_LABEL: dict[date, str] = {
+    date(2026, 9, 7):  "No class — Labor Day",
+    date(2026, 10, 12): "No class — October Break (fall break)",
+    date(2026, 11, 18): "No class — the day after the Expo, to rest and catch up",
+    date(2026, 11, 25): "No class — Thanksgiving Break",
+    date(2026, 11, 27): "No class — Thanksgiving Break",
+}
+assert set(PUBLIC_NO_CLASS_LABEL) == set(HOLIDAYS), (
+    "PUBLIC_NO_CLASS_LABEL and HOLIDAYS must cover exactly the same days")
+
+
+def no_class_days() -> dict[str, str]:
+    """ISO date -> student-facing no-class label, for the printed calendars."""
+    return {d.isoformat(): text for d, text in sorted(PUBLIC_NO_CLASS_LABEL.items())}
+
+
 # MWF meetings that are held fully asynchronously online.
 #
 # The dates are OWNED by course_config.yaml `calendar.async_meetings`; the
