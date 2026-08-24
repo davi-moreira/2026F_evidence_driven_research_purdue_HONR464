@@ -3442,3 +3442,43 @@ with a contingency that already assumes the role may fail to open. Either the
 sign-in needs to be asked for somewhere else before Friday, or the M1 studio's
 GenAI Studio pass needs to stop being load-bearing in Week 1. Needs Davi's
 ruling.
+
+---
+
+## D64 — Davi's pass on the weekly-rhythm announcement (2026-08-23)
+
+The second Week-1 announcement (`_announcements/02_how_the_course_runs.md`,
+hand-written and gitignored) was edited and posted. Same rule as D62/D63: his
+posted text is the instruction, and the file was rewritten until it matches
+exactly (verified text-identical). Four cuts, all adopted:
+
+1. **"Now that we have started,"** dropped from the opening sentence, so the
+   announcement does not assume it is read after the first class.
+2. **"There is no weekly quiz in this course and there are no weekly
+   presentations"** cut from the Friday section. The paragraph now simply asserts
+   what Friday IS. Consistent with D58, which retired the quiz — nothing is
+   gained by announcing the absence of a thing students were never told about.
+3. **The whole "What is due, and when" section cut** — all three bullets
+   (milestone due the Sunday after its studio; each chapter's "It is your turn"
+   due on the reading date under IYT Practice at 15%; the per-Studio feedback
+   survey) and the "one deadline closes your whole week" paragraph. The
+   announcement now describes the weekly *rhythm* only; the deadline contract
+   lives elsewhere. See the open item below.
+4. **The "Most weeks look exactly like this…" closing paragraph cut**, taking
+   with it the conference-block and Expo pointers and the line saying milestone
+   briefs, rubrics and schedule changes live on Brightspace.
+
+**No rule changed.** D55's Sunday milestone deadlines, D61's IYT Practice at 15%
+and D57's participation contract all still govern; this announcement simply stops
+restating them.
+
+⚠ **Exposed and UNRESOLVED — where students learn the deadline contract.** Cut 3
+removes the only student-facing *announcement* that stated the three recurring
+deadlines together. They still exist in `surveys/participation_grading.md`,
+`planning/IYT_SUBMISSION_SCHEDULE.md`,
+`planning/STUDIO_FEEDBACK_SCHEDULE.md`, `course_config.yaml` and each milestone
+brief, and the syllabus carries the weights — but the syllabus is deliberately
+generic on participation (D57) and none of those are pushed to students. Cut 4
+also removes the only place this announcement told students that briefs and
+rubrics live on Brightspace. Whether that is covered by the Brightspace items
+themselves, or needs its own announcement, is Davi's call.
