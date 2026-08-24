@@ -550,9 +550,15 @@ def gradebook_spec(config: dict) -> str:
         "submission locked at M13 (D54). The final research chapter, the "
         "AI-management portfolio and the oral Evidence Defense no longer "
         "carry grade weight and get no gradebook item.",
-        "- **Student Research Lead** — 5 items per student is wrong; create "
-        "**one** item per SRL slot the student holds, or a single item scored 5 "
-        "times. One item, entered after each lead, is simpler for 5 students.",
+        "- **Student Research Lead** — two kinds of item, and they are not the "
+        "same thing. (a) **One submission item per SRL slot (25 in all)**, each a "
+        "dropbox that takes the lead's filled lecture notebook, due 11:59 PM two "
+        "days before that lecture; planning/SRL_ASSIGNMENT_SCHEDULE.md is the "
+        "dated list, and only the assigned lead submits to each. (b) **One scored "
+        "item per student**, entered after each of their five leads against "
+        "project/srl/srl_rubric.md; a single item scored five times is simpler "
+        "than five items for a class of five. The submission items carry the "
+        "deadline; the scored item carries the 25%.",
         "- **Participation** — ONE undivided 9% category (D57, re-partitioned "
         "by D58). Create one item for the studio feedback survey, one for the "
         "student profile survey (Aug 30), and one for the course reflection "
