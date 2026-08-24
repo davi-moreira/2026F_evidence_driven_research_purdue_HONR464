@@ -89,6 +89,7 @@ if not Path(QUARTO).exists():
 #: and a lead who reads it leads to the protocol instead of to the room.
 SRL_DOCS = [
     "srl_handbook.md",
+    "srl_submission_instructions.md",
     "srl_prep_template.md",
     "srl_rubric.md",
     "srl_ai_integration_guide.md",
