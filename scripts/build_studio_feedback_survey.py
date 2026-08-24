@@ -2,7 +2,7 @@
 """Build the one-link, per-studio EDR|AI reader-feedback survey.
 
 The unit of observation is the studio (D57). The instrument is deliberately a
-revision instrument, not a course evaluation or a psychometric scale: six
+revision instrument, not a course evaluation or a psychometric scale: seven
 single-click items route the author's attention, and one short located answer
 supplies the passage and proposed action.
 
@@ -85,6 +85,24 @@ SPINE = (
         "Read descriptively. It is not a satisfaction or usefulness score.",
     ),
     ClosedItem(
+        "ai_practice",
+        "AI-direction learning",
+        "How much did this studio's reading improve how you would direct an AI "
+        "tool in your own research?",
+        ("Not at all", "A little", "Somewhat", "Quite a bit", "A great deal",
+         "Not enough reading to judge"),
+        "This book's whole claim is that it teaches AI-directed research, so a "
+        "low answer where the reading was otherwise clear sends the author to "
+        "that studio's AI material: the prompts it hands the reader, the "
+        "verification move after them, the ledger step, or a worked example of "
+        "a researcher overruling a tool.",
+        "The scale floor and the final option separate \"the reading did not "
+        "teach me this\" from \"I did not read enough to say\".",
+        "Read it against the purpose item. A clear purpose with low "
+        "AI-direction means the studio explains the research idea but not the "
+        "AI practice around it, which is a different repair.",
+    ),
+    ClosedItem(
         "ready",
         "Instructional readiness",
         "In the \"It is your turn\" sections you reached, how often were the "
@@ -120,32 +138,50 @@ SPINE = (
         ("Clarify an idea or term", "Improve an example, figure, or table",
          "Shorten or reorder",
          "Clarify an \"It is your turn\" task",
+         "Strengthen the AI guidance",
          "Fix a notebook or link",
          "Check a fact, number, or citation",
          "Keep a place as it is", "Not enough reading to choose"),
         "Route the following located answer to the first revision pass: "
-        "explanation, illustration, structure, task, notebook, fact-check, "
-        "preserve, or insufficient exposure.",
+        "explanation, illustration, structure, task, AI guidance, notebook, "
+        "fact-check, preserve, or insufficient exposure.",
         "The last two options cover a genuine no-change judgment and insufficient "
         "exposure.",
         "This is one priority, not an exhaustive defect count.",
     ),
 )
 
+#: Counts the prose used to hardcode. Derived, so adding or cutting a closed
+#: item can never leave the documentation asserting a number that is no longer
+#: true — the generator's own parity check would not catch a stale English word.
+N_CLOSED = len(SPINE)
+#: username + studio + the closed items + the one open note.
+N_REQUIRED = N_CLOSED + 3
+
+_WORDS = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+          7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven",
+          12: "twelve"}
+
+
+def word(n: int) -> str:
+    """Small integers read better spelled out in prose."""
+    return _WORDS.get(n, str(n))
+
+
 INTRO = (
     "About three minutes. Report on one studio from its reading and companion "
     "notebooks, not from class."
     "<br><br>"
-    "Your Purdue username is attached because submission earns participation "
-    "credit. Credit depends only on submitting by the deadline, never on what "
-    "you say, and no answer affects another grade."
+    "Your username is attached because submission earns participation credit. "
+    "Credit depends only on submitting by the deadline, never on what you say, "
+    "and no answer affects another grade."
     "<br><br>"
-    "I record credit first. Later, I remove the username column and use "
-    "responses to revise the book. This is not anonymity in a five-person "
-    "seminar. I report changes without naming or quoting you."
+    "I record credit first, then drop the username column and use the answers "
+    "to revise the book. In a five-person seminar that is separation, not "
+    "anonymity, so I report changes without naming or quoting you."
     "<br><br>"
-    "Every question is required. The feedback items include honest none and "
-    "did-not-reach answers."
+    "Every question is required, and each one has an honest none or "
+    "did-not-reach answer."
 )
 
 STUDENT_PROMPT = (
@@ -303,8 +339,9 @@ which closes Friday, December 11. The generated dated schedule is
 
 ## Instrument architecture
 
-The response path has **nine answer fields**: username, studio, six
-single-answer triage items, and one short located revision note. It has three
+The response path has **{word(N_REQUIRED)} answer fields**: username, studio,
+{word(N_CLOSED)} single-answer triage items, and one short located revision
+note. It has three
 pages and no randomization, display logic, conditional follow-up, optional
 question, matrix, or composite score. The embedded field
 {TICK}prompt_version={PROMPT_VERSION}{TICK} records the wording version in
@@ -314,7 +351,7 @@ every export.
 bump {TICK}PROMPT_VERSION{TICK} before regenerating so unlike wordings are
 never treated as one instrument.
 
-The six closed items remain stable across all {n} administrations. The one
+The {word(N_CLOSED)} closed items remain stable across all {n} administrations. The one
 open item also remains fixed. Its required fallbacks let a reader report no
 change, partial reading, or no reading without inventing a defect.
 
@@ -327,7 +364,7 @@ change, partial reading, or no reading without inventing a defect.
 | {TICK}student{TICK} | {STUDENT_PROMPT} | Single line |
 | {TICK}studio{TICK} | {STUDIO_PROMPT} | The {n} generated choices above |
 
-### The six closed items, in order
+### The {word(N_CLOSED)} closed items, in order
 
 | Item | Construct | Exact prompt | Exact choices | Revision decision |
 |---|---|---|---|---|
@@ -337,7 +374,7 @@ The revision mappings in the last column are **UNVERIFIED design judgments**.
 They are explicit action rules for this book-revision workflow, not claims
 that these single items have established psychometric validity.
 
-Do not sum the six items. They were designed to route attention to different
+Do not sum the {word(N_CLOSED)} items. They were designed to route attention to different
 revision decisions and have not been tested as a scale (**UNVERIFIED for this
 instrument**).
 
@@ -380,7 +417,7 @@ would have changed a manuscript decision that the retained items missed.
 
 ## Force Response audit
 
-After import, Force Response applies to exactly these nine answer fields:
+After import, Force Response applies to exactly these {word(N_REQUIRED)} answer fields:
 {required_list}. Text/Graphic items {TICK}intro{TICK} and
 {TICK}anchor_note{TICK} display instructions and have no response field.
 
@@ -410,16 +447,19 @@ option, contains **{typical_words} words**.
   At that rate, the realistic-path text alone is about **{reading_seconds}
   seconds**.
 - **UNVERIFIED planning allowances:** 25 seconds for username, studio,
-  six clicks, and page movement; 50 seconds to compose one or two located
-  sentences.
+  {word(N_CLOSED)} clicks, and page movement; 50 seconds to compose one or two
+  located sentences.
 - **UNVERIFIED pre-pilot estimate:** about **{planning_seconds // 60}:{planning_seconds % 60:02d}**
-  for a typical response, with a target median at or below **3:00**. Repetition
-  should reduce studio-selection and instruction time, but that expectation has
-  not been measured.
+  for a typical response, against the "about three minutes" the first page
+  promises. The budget carries {TICK}ai_practice{TICK}, added because the book's
+  central claim is that it teaches AI-directed research and nothing else in the
+  instrument could tell the author whether a studio delivered it; that item is
+  worth its seconds. Repetition should reduce studio-selection and instruction
+  time, but that expectation has not been measured.
 
 Before launch, run two think-aloud pilots with readers at the course level,
 time them from link open to submission, and revise if either cannot answer
-honestly or the median exceeds 3:00. After Studio 1, inspect Qualtrics Duration
+honestly or the median runs past three and a half minutes. After Studio 1, inspect Qualtrics Duration
 as a workflow check, never as a validity score. CDC's CCQDER describes
 cognitive interviewing as a way to learn how respondents understand, think
 about, and answer questions (**VERIFIED**, retrievable at
@@ -436,7 +476,7 @@ set does not carry the response requirements or survey options below
 
 Do exactly these steps after import:
 
-1. Select the nine answer fields {required_list} and enable **Add requirements
+1. Select the {word(N_REQUIRED)} answer fields {required_list} and enable **Add requirements
    → Force response**. Do not use Request Response.
 2. In Survey Options, set **Ballot-box stuffing prevention OFF** so the same
    person can submit {n} times; **Anonymize responses OFF** because the survey
@@ -447,7 +487,7 @@ Do exactly these steps after import:
 4. Preview one honest path for each edge case: no reading, no clarity problem,
    no task reached, no notebook opened, technical notebook failure, and no
    revision requested. Confirm that every path reaches Submit with exactly the
-   nine required answers.
+   {word(N_REQUIRED)} required answers.
 5. Publish one anonymous-link distribution and keep it open for all {n}
    submissions. Do not add question randomization, display logic, skip logic,
    minimum-length validation, or per-studio survey copies.
@@ -465,7 +505,7 @@ Export CSV with choice text. Make two separate working views:
 1. **Credit view:** username, studio, timestamp, and submission status only.
    Content, direction, coverage, and ratings do not enter the grade.
 2. **Revision view:** remove the username column; retain studio,
-   {TICK}prompt_version{TICK}, the six closed items, and {TICK}anchor{TICK}.
+   {TICK}prompt_version{TICK}, the {word(N_CLOSED)} closed items, and {TICK}anchor{TICK}.
    Removing the column is procedural separation, not anonymity in a
    five-person seminar.
 
@@ -498,9 +538,9 @@ earns space in the instrument rationale.
 
 | Status | Source | Decision and bounded use |
 |---|---|---|
-| **VERIFIED · retained** | Saris, Revilla, Krosnick & Shaeffer (2010), [doi:10.18148/srm/2010.v4i1.2682](https://doi.org/10.18148/srm/2010.v4i1.2682) | Their randomized MTMM comparison supports item-specific response options over agree/disagree formats. It does not validate these six items. |
+| **VERIFIED · retained** | Saris, Revilla, Krosnick & Shaeffer (2010), [doi:10.18148/srm/2010.v4i1.2682](https://doi.org/10.18148/srm/2010.v4i1.2682) | Their randomized MTMM comparison supports item-specific response options over agree/disagree formats. It does not validate these {word(N_CLOSED)} items. |
 | **VERIFIED · retained** | Krosnick (1991), [doi:10.1002/acp.2350050305](https://doi.org/10.1002/acp.2350050305) | Defines survey satisficing and response strategies under cognitive demand; supports minimizing repeated burden. |
-| **VERIFIED · retained** | Galesic & Bosnjak (2009), [doi:10.1093/poq/nfp031](https://doi.org/10.1093/poq/nfp031) | In a web-survey experiment, longer stated length reduced starts/completions and later questions drew faster, shorter, more uniform answers; supports keeping only six clicks before the one open response. |
+| **VERIFIED · retained** | Galesic & Bosnjak (2009), [doi:10.1093/poq/nfp031](https://doi.org/10.1093/poq/nfp031) | In a web-survey experiment, longer stated length reduced starts/completions and later questions drew faster, shorter, more uniform answers; supports keeping only {word(N_CLOSED)} clicks before the one open response. |
 | **VERIFIED · retained, application bounded** | Tourangeau & Yan (2007), [doi:10.1037/0033-2909.133.5.859](https://doi.org/10.1037/0033-2909.133.5.859) | Reviews situational misreporting on sensitive questions. Treating criticism of an identified instructor-authored book as socially sensitive is an **UNVERIFIED contextual inference**. |
 | **VERIFIED · retained** | Brysbaert (2019), [doi:10.1016/j.jml.2019.104047](https://doi.org/10.1016/j.jml.2019.104047) | Supplies the 238-wpm adult nonfiction reading estimate used only in the burden budget. |
 | **VERIFIED · retained** | CDC/NCHS CCQDER, [official page](https://www.cdc.gov/nchs/ccqder/index.html) | Supports cognitive interviewing to examine how respondents understand and answer questions; it does not prove that a two-person pilot finds every problem. |
@@ -682,7 +722,7 @@ def main() -> None:
     print(
         "  ✓ surveys/qualtrics_studio_feedback.txt "
         f"({len(studios)} studios, {len(SPINE)} closed items, "
-        "1 open item, 9 required response questions)"
+        f"1 open item, {N_REQUIRED} required response questions)"
     )
     print("  ✓ surveys/studio_feedback_instrument.md")
     print("  ✓ internal Advanced Format and documentation-parity checks")

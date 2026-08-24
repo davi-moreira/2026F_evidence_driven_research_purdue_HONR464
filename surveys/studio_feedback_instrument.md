@@ -38,8 +38,9 @@ which closes Friday, December 11. The generated dated schedule is
 
 ## Instrument architecture
 
-The response path has **nine answer fields**: username, studio, six
-single-answer triage items, and one short located revision note. It has three
+The response path has **ten answer fields**: username, studio,
+seven single-answer triage items, and one short located revision
+note. It has three
 pages and no randomization, display logic, conditional follow-up, optional
 question, matrix, or composite score. The embedded field
 `prompt_version=fixed_revision_v1` records the wording version in
@@ -49,35 +50,36 @@ every export.
 bump `PROMPT_VERSION` before regenerating so unlike wordings are
 never treated as one instrument.
 
-The six closed items remain stable across all 12 administrations. The one
+The seven closed items remain stable across all 12 administrations. The one
 open item also remains fixed. Its required fallbacks let a reader report no
 change, partial reading, or no reading without inventing a defect.
 
 ### Exact first-page text
 
-About three minutes. Report on one studio from its reading and companion notebooks, not from class.<br><br>Your Purdue username is attached because submission earns participation credit. Credit depends only on submitting by the deadline, never on what you say, and no answer affects another grade.<br><br>I record credit first. Later, I remove the username column and use responses to revise the book. This is not anonymity in a five-person seminar. I report changes without naming or quoting you.<br><br>Every question is required. The feedback items include honest none and did-not-reach answers.
+About three minutes. Report on one studio from its reading and companion notebooks, not from class.<br><br>Your username is attached because submission earns participation credit. Credit depends only on submitting by the deadline, never on what you say, and no answer affects another grade.<br><br>I record credit first, then drop the username column and use the answers to revise the book. In a five-person seminar that is separation, not anonymity, so I report changes without naming or quoting you.<br><br>Every question is required, and each one has an honest none or did-not-reach answer.
 
 | Item | Exact prompt | Response |
 |---|---|---|
 | `student` | Your Purdue username (the part of your email before @purdue.edu). | Single line |
 | `studio` | Which studio are you reporting on? | The 12 generated choices above |
 
-### The six closed items, in order
+### The seven closed items, in order
 
 | Item | Construct | Exact prompt | Exact choices | Revision decision |
 |---|---|---|---|---|
 | `coverage` | Reading exposure | How much of this studio's assigned reading did you reach? Your answer does not affect credit. | All<br>Most<br>About half<br>A small part<br>None | Qualify every other answer by exposure. If the located note says the reading itself stopped progress, inspect length, order, and pacing; an outside barrier does not trigger a manuscript change. |
 | `clarity` | Explanation breakdown | How often did the reading leave an idea unclear? | Never<br>Once<br>A few times<br>Many times<br>Most of the reading<br>Not enough reading to judge | Repeated uncertainty sends the author to the named passage to clarify wording, define a term, or rebuild the explanation. |
 | `purpose` | Research-purpose connection | How clearly did the reading show why these ideas matter for research? | Not at all<br>A little<br>Somewhat<br>Mostly<br>Completely<br>Not enough reading to judge | A weak connection calls for a sharper research-purpose bridge or a better motivating example, not automatically a simpler explanation. |
+| `ai_practice` | AI-direction learning | How much did this studio's reading improve how you would direct an AI tool in your own research? | Not at all<br>A little<br>Somewhat<br>Quite a bit<br>A great deal<br>Not enough reading to judge | This book's whole claim is that it teaches AI-directed research, so a low answer where the reading was otherwise clear sends the author to that studio's AI material: the prompts it hands the reader, the verification move after them, the ledger step, or a worked example of a researcher overruling a tool. |
 | `ready` | Instructional readiness | In the "It is your turn" sections you reached, how often were the directions clear enough to act on? | Always<br>Usually<br>About half the time<br>Rarely<br>Never<br>Did not reach one | Low readiness with otherwise clear reading sends the author to the task directions, sequence, inputs, or worked model. |
 | `notebook` | Companion-notebook result | What best describes your overall notebook experience in this studio? | Did not open one<br>Opened one; did not run it<br>A technical problem stopped me<br>Used one; it made the reading clearer<br>Used one; it made no difference<br>Used one; it made the reading harder | Nonuse is not blamed on the notebook; access failure triggers repair; no effect or added difficulty triggers an integration/content check; clearer supports preserving the notebook move. |
-| `revision_focus` | First revision lane | Which kind of change would help the next reader most? | Clarify an idea or term<br>Improve an example, figure, or table<br>Shorten or reorder<br>Clarify an "It is your turn" task<br>Fix a notebook or link<br>Check a fact, number, or citation<br>Keep a place as it is<br>Not enough reading to choose | Route the following located answer to the first revision pass: explanation, illustration, structure, task, notebook, fact-check, preserve, or insufficient exposure. |
+| `revision_focus` | First revision lane | Which kind of change would help the next reader most? | Clarify an idea or term<br>Improve an example, figure, or table<br>Shorten or reorder<br>Clarify an "It is your turn" task<br>Strengthen the AI guidance<br>Fix a notebook or link<br>Check a fact, number, or citation<br>Keep a place as it is<br>Not enough reading to choose | Route the following located answer to the first revision pass: explanation, illustration, structure, task, AI guidance, notebook, fact-check, preserve, or insufficient exposure. |
 
 The revision mappings in the last column are **UNVERIFIED design judgments**.
 They are explicit action rules for this book-revision workflow, not claims
 that these single items have established psychometric validity.
 
-Do not sum the six items. They were designed to route attention to different
+Do not sum the seven items. They were designed to route attention to different
 revision decisions and have not been tested as a scale (**UNVERIFIED for this
 instrument**).
 
@@ -120,8 +122,8 @@ would have changed a manuscript decision that the retained items missed.
 
 ## Force Response audit
 
-After import, Force Response applies to exactly these nine answer fields:
-`student`, `studio`, `coverage`, `clarity`, `purpose`, `ready`, `notebook`, `revision_focus`, `anchor`. Text/Graphic items `intro` and
+After import, Force Response applies to exactly these ten answer fields:
+`student`, `studio`, `coverage`, `clarity`, `purpose`, `ai_practice`, `ready`, `notebook`, `revision_focus`, `anchor`. Text/Graphic items `intro` and
 `anchor_note` display instructions and have no response field.
 
 | Item | Why a forced answer stays honest |
@@ -131,6 +133,7 @@ After import, Force Response applies to exactly these nine answer fields:
 | `coverage` | The options run from all to none; reporting no reading is explicitly unscored. |
 | `clarity` | Never reports no clarity problem; the final option reports insufficient exposure without pretending the prose was clear or unclear. |
 | `purpose` | The final option separates insufficient exposure from a weak purpose connection. |
+| `ai_practice` | The scale floor and the final option separate "the reading did not teach me this" from "I did not read enough to say". |
 | `ready` | The final option reports that no task was reached instead of forcing a false readiness judgment. |
 | `notebook` | Nonuse, opening without running, technical failure, and three experienced effects are all represented. |
 | `revision_focus` | The last two options cover a genuine no-change judgment and insufficient exposure. |
@@ -144,27 +147,30 @@ intended.
 
 ## Burden budget
 
-The import contains **495 respondent-visible words** if someone
+The import contains **536 respondent-visible words** if someone
 reads every one of the 12 studio labels and every response option. A more
 realistic path, counting one studio label but every prompt and response
-option, contains **405 words**.
+option, contains **446 words**.
 
 - **VERIFIED source input:** Brysbaert's meta-analysis estimates average adult
   English silent reading of nonfiction at 238 words per minute
   ([doi:10.1016/j.jml.2019.104047](https://doi.org/10.1016/j.jml.2019.104047)).
-  At that rate, the realistic-path text alone is about **102
+  At that rate, the realistic-path text alone is about **112
   seconds**.
 - **UNVERIFIED planning allowances:** 25 seconds for username, studio,
-  six clicks, and page movement; 50 seconds to compose one or two located
-  sentences.
-- **UNVERIFIED pre-pilot estimate:** about **2:57**
-  for a typical response, with a target median at or below **3:00**. Repetition
-  should reduce studio-selection and instruction time, but that expectation has
-  not been measured.
+  seven clicks, and page movement; 50 seconds to compose one or two
+  located sentences.
+- **UNVERIFIED pre-pilot estimate:** about **3:07**
+  for a typical response, against the "about three minutes" the first page
+  promises. The budget carries `ai_practice`, added because the book's
+  central claim is that it teaches AI-directed research and nothing else in the
+  instrument could tell the author whether a studio delivered it; that item is
+  worth its seconds. Repetition should reduce studio-selection and instruction
+  time, but that expectation has not been measured.
 
 Before launch, run two think-aloud pilots with readers at the course level,
 time them from link open to submission, and revise if either cannot answer
-honestly or the median exceeds 3:00. After Studio 1, inspect Qualtrics Duration
+honestly or the median runs past three and a half minutes. After Studio 1, inspect Qualtrics Duration
 as a workflow check, never as a validity score. CDC's CCQDER describes
 cognitive interviewing as a way to learn how respondents understand, think
 about, and answer questions (**VERIFIED**, retrievable at
@@ -181,7 +187,7 @@ set does not carry the response requirements or survey options below
 
 Do exactly these steps after import:
 
-1. Select the nine answer fields `student`, `studio`, `coverage`, `clarity`, `purpose`, `ready`, `notebook`, `revision_focus`, `anchor` and enable **Add requirements
+1. Select the ten answer fields `student`, `studio`, `coverage`, `clarity`, `purpose`, `ai_practice`, `ready`, `notebook`, `revision_focus`, `anchor` and enable **Add requirements
    → Force response**. Do not use Request Response.
 2. In Survey Options, set **Ballot-box stuffing prevention OFF** so the same
    person can submit 12 times; **Anonymize responses OFF** because the survey
@@ -192,7 +198,7 @@ Do exactly these steps after import:
 4. Preview one honest path for each edge case: no reading, no clarity problem,
    no task reached, no notebook opened, technical notebook failure, and no
    revision requested. Confirm that every path reaches Submit with exactly the
-   nine required answers.
+   ten required answers.
 5. Publish one anonymous-link distribution and keep it open for all 12
    submissions. Do not add question randomization, display logic, skip logic,
    minimum-length validation, or per-studio survey copies.
@@ -210,7 +216,7 @@ Export CSV with choice text. Make two separate working views:
 1. **Credit view:** username, studio, timestamp, and submission status only.
    Content, direction, coverage, and ratings do not enter the grade.
 2. **Revision view:** remove the username column; retain studio,
-   `prompt_version`, the six closed items, and `anchor`.
+   `prompt_version`, the seven closed items, and `anchor`.
    Removing the column is procedural separation, not anonymity in a
    five-person seminar.
 
@@ -227,6 +233,7 @@ not proof of a defect.
 | `coverage` | Read as an exposure category, never as effort, diligence, or a grade. |
 | `clarity` | Keep the full categories. Do not turn the final option into a high or low clarity score. |
 | `purpose` | Read descriptively. It is not a satisfaction or usefulness score. |
+| `ai_practice` | Read it against the purpose item. A clear purpose with low AI-direction means the studio explains the research idea but not the AI practice around it, which is a different repair. |
 | `ready` | Do not code "I did not reach one" as low readiness. |
 | `notebook` | Treat exposure and result as categories. Do not order or average them. |
 | `revision_focus` | This is one priority, not an exhaustive defect count. |
@@ -248,9 +255,9 @@ earns space in the instrument rationale.
 
 | Status | Source | Decision and bounded use |
 |---|---|---|
-| **VERIFIED · retained** | Saris, Revilla, Krosnick & Shaeffer (2010), [doi:10.18148/srm/2010.v4i1.2682](https://doi.org/10.18148/srm/2010.v4i1.2682) | Their randomized MTMM comparison supports item-specific response options over agree/disagree formats. It does not validate these six items. |
+| **VERIFIED · retained** | Saris, Revilla, Krosnick & Shaeffer (2010), [doi:10.18148/srm/2010.v4i1.2682](https://doi.org/10.18148/srm/2010.v4i1.2682) | Their randomized MTMM comparison supports item-specific response options over agree/disagree formats. It does not validate these seven items. |
 | **VERIFIED · retained** | Krosnick (1991), [doi:10.1002/acp.2350050305](https://doi.org/10.1002/acp.2350050305) | Defines survey satisficing and response strategies under cognitive demand; supports minimizing repeated burden. |
-| **VERIFIED · retained** | Galesic & Bosnjak (2009), [doi:10.1093/poq/nfp031](https://doi.org/10.1093/poq/nfp031) | In a web-survey experiment, longer stated length reduced starts/completions and later questions drew faster, shorter, more uniform answers; supports keeping only six clicks before the one open response. |
+| **VERIFIED · retained** | Galesic & Bosnjak (2009), [doi:10.1093/poq/nfp031](https://doi.org/10.1093/poq/nfp031) | In a web-survey experiment, longer stated length reduced starts/completions and later questions drew faster, shorter, more uniform answers; supports keeping only seven clicks before the one open response. |
 | **VERIFIED · retained, application bounded** | Tourangeau & Yan (2007), [doi:10.1037/0033-2909.133.5.859](https://doi.org/10.1037/0033-2909.133.5.859) | Reviews situational misreporting on sensitive questions. Treating criticism of an identified instructor-authored book as socially sensitive is an **UNVERIFIED contextual inference**. |
 | **VERIFIED · retained** | Brysbaert (2019), [doi:10.1016/j.jml.2019.104047](https://doi.org/10.1016/j.jml.2019.104047) | Supplies the 238-wpm adult nonfiction reading estimate used only in the burden budget. |
 | **VERIFIED · retained** | CDC/NCHS CCQDER, [official page](https://www.cdc.gov/nchs/ccqder/index.html) | Supports cognitive interviewing to examine how respondents understand and answer questions; it does not prove that a two-person pilot finds every problem. |

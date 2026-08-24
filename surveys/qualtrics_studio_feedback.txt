@@ -6,7 +6,7 @@
 
 [[Question:DB]]
 [[ID:intro]]
-About three minutes. Report on one studio from its reading and companion notebooks, not from class.<br><br>Your Purdue username is attached because submission earns participation credit. Credit depends only on submitting by the deadline, never on what you say, and no answer affects another grade.<br><br>I record credit first. Later, I remove the username column and use responses to revise the book. This is not anonymity in a five-person seminar. I report changes without naming or quoting you.<br><br>Every question is required. The feedback items include honest none and did-not-reach answers.
+About three minutes. Report on one studio from its reading and companion notebooks, not from class.<br><br>Your username is attached because submission earns participation credit. Credit depends only on submitting by the deadline, never on what you say, and no answer affects another grade.<br><br>I record credit first, then drop the username column and use the answers to revise the book. In a five-person seminar that is separation, not anonymity, so I report changes without naming or quoting you.<br><br>Every question is required, and each one has an honest none or did-not-reach answer.
 
 [[Question:TE:SingleLine]]
 [[ID:student]]
@@ -66,6 +66,17 @@ Completely
 Not enough reading to judge
 
 [[Question:MC:SingleAnswer:Vertical]]
+[[ID:ai_practice]]
+How much did this studio's reading improve how you would direct an AI tool in your own research?
+[[Choices]]
+Not at all
+A little
+Somewhat
+Quite a bit
+A great deal
+Not enough reading to judge
+
+[[Question:MC:SingleAnswer:Vertical]]
 [[ID:ready]]
 In the "It is your turn" sections you reached, how often were the directions clear enough to act on?
 [[Choices]]
@@ -95,6 +106,7 @@ Clarify an idea or term
 Improve an example, figure, or table
 Shorten or reorder
 Clarify an "It is your turn" task
+Strengthen the AI guidance
 Fix a notebook or link
 Check a fact, number, or citation
 Keep a place as it is
