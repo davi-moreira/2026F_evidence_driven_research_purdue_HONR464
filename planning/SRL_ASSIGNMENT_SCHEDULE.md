@@ -18,7 +18,7 @@ instructions are the SRL handout PDFs in `project/srl/`, built by
 `scripts/build_handout_pdfs.py`; those carry no names and no dates, so they upload
 to Brightspace once and stay correct.
 
-**Weight.** Student Research Lead is **30%** of the course grade.
+**Weight.** Student Research Lead is **25%** of the course grade.
 The rubric is `project/srl/srl_rubric.md`.
 
 ---

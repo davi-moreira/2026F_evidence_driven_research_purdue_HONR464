@@ -263,7 +263,7 @@ it. Credit is `1.0` on time, `0.5` within seven days,
 
 ```
 iyt points = 15.0 × (sum of the highest N − d credits) / (N − d)
-           = 15.0 × (sum of the highest 32 credits) / 32
+           = 15.0 × (sum of the highest 31 credits) / 31
 ```
 
 The ±0.9-point contribution adjustment belongs to Participation alone and is never
@@ -306,9 +306,10 @@ category is never permission to delete a quiz file or a quiz script.
 - **Individual accountability survives either project mode.** Actual peers rate
   contribution and follow-through, while the portfolio and defense stay
   individual even when the research artifact is shared.
-- **The flipped classroom rises to 25%.** Leading research investigations is a
+- **The flipped classroom rises to 30%.** Leading research investigations is a
   repeated rehearsal of the same judgment and defense expected in the project,
-  and it is now the second-largest thing the course grades.
+  and it is the second-largest thing the course grades. (D61 later settled it at
+  25%; it is still second-largest.)
 - **The retired quiz weight went where the work is.** D58 removed the 20% quiz
   category, and its weight was redistributed to the two places that already carry
   real, repeated practice: 10 points to **Student Research Lead** (20 → 30) and 10

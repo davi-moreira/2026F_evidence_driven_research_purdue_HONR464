@@ -568,7 +568,8 @@ def gradebook_spec(config: dict) -> str:
         "date (planning/IYT_SUBMISSION_SCHEDULE.md lists them, with the "
         "instruction paragraph to paste into every one). Every item is "
         "completion-graded and equally weighted, and the lowest "
-        "ceil(0.10 x N) credits are dropped: 4 at the typical N = 36. N is "
+        "ceil(0.10 x N) credits are dropped: 4 at the typical N = 35 "
+        "(36 when the declared design has stages, which still drops 4). N is "
         "per student, so read it off the schedule rather than hard-coding it. "
         "surveys/participation_grading.md carries the student-facing "
         "contract.",

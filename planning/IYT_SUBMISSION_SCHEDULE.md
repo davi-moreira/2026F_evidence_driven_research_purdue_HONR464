@@ -4,13 +4,13 @@
 
 Every chapter of **EDR\|AI** that a student is required to read carries one
 submission: that chapter's closing **"It is your turn"** section. It is graded
-**by completion** inside **IYT Practice (10%)** — submitted or not — and it is
+**by completion** inside **IYT Practice (15%)** — submitted or not — and it is
 due on **the date the chapter's reading was due**, so the section is written
 from the reading rather than reconstructed from class.
 
 A typical student owes **35** of them, and the **4 lowest
 credits are dropped automatically** (⌈0.10 × N⌉), so 31 valid,
-on-time submissions earn the full 10 points. The scoring rule and the rest of the
+on-time submissions earn the full 15 points. The scoring rule and the rest of the
 IYT Practice contract are in
 [`surveys/participation_grading.md`](../surveys/participation_grading.md).
 

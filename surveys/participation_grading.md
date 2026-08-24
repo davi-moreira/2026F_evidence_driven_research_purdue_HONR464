@@ -19,7 +19,7 @@ a student can verify and an instructor can defend.
 > reading feedback is no longer collected per chapter.
 >
 > **Amended 2026-08-23 (D58).** The "It is your turn" submissions left
-> Participation for their own **IYT Practice** category, stated below.
+> Participation for their own **10% IYT Practice** category, stated below.
 > Participation stayed at **9%**, kept its mechanics, and is still not split
 > internally. The weekly quiz category is also retired for this edition, so
 > nothing on this page depends on one.

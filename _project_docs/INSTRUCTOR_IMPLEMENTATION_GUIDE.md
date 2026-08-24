@@ -175,8 +175,9 @@ assignment list is `planning/STUDIO_FEEDBACK_SCHEDULE.md`.
 
 **IYT Practice is its own 15% block (D58, amended D61)**: the book's "It is your turn" section
 for each required chapter, due 11:59 PM on that chapter's reading day, graded for
-completion on the same credit rule. Baseline **N ≈ 36**, drop **d = 4**, so the
-block is `15.0 × (sum of the highest 32 credits) / 32`. The dated assignment list
+completion on the same credit rule. Baseline **N = 35** (36 when the declared
+design has stages), drop **d = 4**, so the block is
+`15.0 × (sum of the highest 31 credits) / 31`. The dated assignment list
 is `planning/IYT_SUBMISSION_SCHEDULE.md`; the contract is the same
 `surveys/participation_grading.md`. Final
 Project contains **Milestone Deliverables 30% · Peer Evaluation 20% · Peer

@@ -3284,9 +3284,9 @@ not scale with IYT Practice and it never touches the IYT result.
 **Why the five points move.** The "It is your turn" chain is 35 graded submissions
 spread across the whole semester, one for nearly every chapter the course requires,
 and the sections chain into the student's actual research artifact — the book's
-project spine runs through them. At 10% that was two thirds of a course point per
-submission, less than a single studio feedback survey is worth per hour of work, while
-the Student Research Lead component paid 30% for five flipped-lecture leads. The
+project spine runs through them. At 10% each submission was worth less than a third of a
+course point, under half what a single studio feedback credit pays, while the Student
+Research Lead component paid 30% for five flipped-lecture leads. The
 imbalance was in effort against product, not in importance: leading a lecture is the
 harder single act, but five of them do not outweigh a semester of building the
 research project in writing. Fifteen and twenty-five put the two categories where the
@@ -3297,19 +3297,31 @@ numbers they were this morning.
 **Where it was applied.** `course_config.yaml assessment:` (the two weight values and
 the `iyt_practice:` block's points figure) is the machine spine, and the generators
 read from it: `scripts/build_participation_schedules.py` (the IYT and SRL schedule
-headers), `scripts/build_brightspace_kit.py` (the category weights and the assertion
-that guards them), `scripts/build_syllabus_docx.py` and `scripts/build_schedule_docx.py`.
-Hand-written student-facing surfaces: `syllabus.qmd` (the weights table row, the
-`### IYT Practice` and `### Student Research Lead` section headings and their bodies),
-`surveys/participation_grading.md`, `planning/ASSESSMENT_ARCHITECTURE.md`,
-`planning/COURSE_MASTER_PLAN.md`, `README.md`, `book/for-instructors.qmd`, the
-milestone briefs that name the category, and nb01's assessment table at its cell
-source `_production_kit/nb_sources/nb01_ai_arm_not_brain.py`. Repository rules:
-`CLAUDE.md` (the See Also rows, the IYT Practice rule heading and body, the milestone
-Book-Anchor paragraph, and a new Version 6.9 block) and
-`_project_docs/INSTRUCTOR_IMPLEMENTATION_GUIDE.md`. Every generated artifact — the
-schedules, the syllabus `.docx`, the Brightspace kit, the student and instructor
-notebooks, `docs/` — is rebuilt from those sources rather than edited.
+headers), `scripts/build_brightspace_kit.py` (the category weights and the assertions
+that guard them, now pinned to 15 and 25), `scripts/build_syllabus_docx.py` (the
+`.docx` weights table), `scripts/build_srl_packet.py` (the class announcement) and
+`scripts/validate_session_readings.py` (a comment naming the category). Hand-written
+student-facing surfaces: `syllabus.qmd` (the weights table rows and the
+`### IYT Practice` / `### Student Research Lead` section headings — those bodies state
+no numeral and were left alone), `surveys/participation_grading.md`,
+`planning/ASSESSMENT_ARCHITECTURE.md`, `planning/COURSE_MASTER_PLAN.md`, and nb01's
+assessment table at its cell source
+`_production_kit/nb_sources/nb01_ai_arm_not_brain.py`. Repository rules: `CLAUDE.md`
+(the See Also rows, the IYT Practice rule heading and body, the milestone Book-Anchor
+paragraph, and a new Version 6.9 block) and
+`_project_docs/INSTRUCTOR_IMPLEMENTATION_GUIDE.md`. Checked and deliberately not
+edited, because they name the category or the role without ever stating a weight:
+`README.md`, `book/for-instructors.qmd`, every milestone brief under
+`_research_project/2026Fall/`, and `project/srl/`. Every generated artifact — the
+schedules, the syllabus `.docx`, the Brightspace kit, the SRL packet, the student and
+instructor notebooks, `docs/` — is rebuilt from those sources rather than edited.
+
+**One side effect worth recording.** Because the weight lives inside the syllabus H3
+headings, the rendered anchors moved: `#iyt-practice-10` became `#iyt-practice-15` and
+`#student-research-lead-30` became `#student-research-lead-25`. Nothing inside the
+repository links to the old anchors, but D58 caused the same breakage when it renamed
+`#student-research-lead-performance-20`, so any Brightspace announcement or email that
+deep-links a syllabus assessment section needs re-checking.
 The syllabus PDF under `_syllabus/2026F/` is a manual Word export and shows the old numbers until Davi
 re-exports it by hand.
 
