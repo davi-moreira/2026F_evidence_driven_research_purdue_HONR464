@@ -4,7 +4,7 @@ Two categories are graded by completion, and this page is the whole contract for
 both of them. **Participation is 9%** and collects the studio feedback survey,
 the student profile survey and the course reflection: 14 credits. **IYT Practice
 is 10%** and collects the "It is your turn" section of every required EDR\|AI
-chapter: 36 credits for a typical student. Each block is undivided, each credit
+chapter: 35 credits for a typical student. Each block is undivided, each credit
 inside a block is worth exactly the same as every other, and each block has its
 own **N**, its own drop allowance and its own formula.
 
@@ -115,13 +115,13 @@ above 9.0. They are not added to IYT Practice.
 
 | # | Item | How many | When it is due | Where the schedule lives |
 |---|---|---|---|---|
-| 1 | **"It is your turn"** — the closing section of each required EDR\|AI chapter | 36 for a typical student | 11:59 PM on the date that chapter's reading was due | [`../planning/IYT_SUBMISSION_SCHEDULE.md`](../planning/IYT_SUBMISSION_SCHEDULE.md) |
+| 1 | **"It is your turn"** — the closing section of each required EDR\|AI chapter | 35 for a typical student | 11:59 PM on the date that chapter's reading was due | [`../planning/IYT_SUBMISSION_SCHEDULE.md`](../planning/IYT_SUBMISSION_SCHEDULE.md) |
 
-**Baseline N = 36 credits** for a typical student: 34 chapters everyone reads,
-plus 2 pathway chapters (the declared route and the assigned contrast). A student
-whose design has stages also owes ch. 19, which raises their N to 37 — and since
-⌈0.10 × 37⌉ is still 4, that student gets the same four drops with one more
-credit in the pool.
+**Baseline N = 35 credits** for a typical student: 34 chapters everyone reads,
+plus **one** pathway chapter, their own declared route. The contrast route the instructor assigns is still required reading, and it is still worked in Wednesday's jigsaw and in the milestone's mandated-contrast section, but its "It is your turn" section is not collected (D60). A
+student whose design has stages also owes ch. 19, which raises their N to 36 —
+and since ⌈0.10 × 36⌉ is still 4, that student gets the same four drops with one
+more credit in the pool.
 
 ### What makes a submission valid
 
@@ -142,7 +142,7 @@ Let **N** be the number of IYT credits assigned to that student, and
 IYT Practice points = 10.0 × (sum of the highest N − d credits) / (N − d)
 ```
 
-For this edition, **N = 36** for a typical student, so **d = 4**, and **32 valid,
+For this edition, **N = 35** for a typical student, so **d = 4**, and **31 valid,
 on-time submissions earn the full 10 points.** There is no credit beyond N.
 
 **Four free drops.** The four lowest credits are dropped automatically. No

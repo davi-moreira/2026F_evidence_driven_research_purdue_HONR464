@@ -52,7 +52,7 @@ writing. The written document is what is graded.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m05_pathway_declaration.pdf`** *or* a shared Colab notebook link | The six parts below: your route declaration with its hybrid-stage test and the required Causal Identification Skeptic critique answered, the mandated contrast, your jigsaw advocate summary, **Research Contract v1** with its delta and its updated claim boundary, your AI Research Ledger rows, and your dossier update line. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 14, ch. 15, ch. 16, ch. 17, ch. 18, ch. 19** | **Route-conditional, and already submitted.** YOUR declared route's chapter and the instructor-assigned contrast chapter only (the hybrid chapter in addition only when your design has stages) were due on their own reading date, as an IYT Practice submission. The other route chapters are jigsaw material, not graded reading. Not collected again here: carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
+| 2 | **EDR\|AI "It is your turn" — ch. 14, ch. 15, ch. 16, ch. 17, ch. 18, ch. 19** | **Route-conditional, and already submitted.** Only YOUR declared route's chapter was collected (plus the hybrid chapter when your design has stages), due on its own reading date as an IYT Practice submission. Your assigned contrast chapter is required reading you rule out in writing here, but its section is never handed in, and the remaining route chapters are jigsaw material. Not collected again here: carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, make sure sharing is set so the instructor can
 open it, and check that every section reads cleanly when the notebook is run.
@@ -62,11 +62,12 @@ open it, and check that every section reads cleanly when the notebook is run.
 ## The Book Anchor — "It Is Your Turn"
 
 This milestone is anchored in the course book, **EDR\|AI**. The list below is
-the full route shelf. **You complete the closing "It is your turn" section
-for YOUR declared route's chapter and for the instructor-assigned contrast
-chapter** (and the hybrid chapter only when your design has stages); you meet
-the remaining chapters through Wednesday's route jigsaw, where each of you
-advocates one route to the room:
+the full route shelf. **You hand in the closing "It is your turn" section for
+YOUR declared route's chapter only** (and the hybrid chapter when your design
+has stages). You read the instructor-assigned contrast chapter and rule it out
+in writing in this milestone, but its section is not collected; you meet the
+remaining chapters through Wednesday's route jigsaw, where each of you advocates
+one route to the room:
 
 - Ch. 14 — [Observational Descriptive Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/11-observational-descriptive-research.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch11_observational_descriptive_research.ipynb)
 - Ch. 15 — [Observational Causal Research](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part3-pathways/12-observational-causal-research.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch12_observational_causal_research.ipynb)

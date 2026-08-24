@@ -61,7 +61,7 @@ MODE_LABEL = {
     "continue": "**Still in play this week —** ",
     "revisit": "**Revisit —** ",
     "route": "**Required, your declared route** (*It is your turn* due tonight) **—** ",
-    "route-contrast": "**Required, your assigned contrast route** (*It is your turn* due tonight) **—** ",
+    "route-contrast": "**Required, your assigned contrast route** (read it; its *It is your turn* section is not collected) **—** ",
     "optional": "**Only if your design has stages** (if it binds, *It is your turn* due tonight) **—** ",
 }
 

@@ -3187,3 +3187,53 @@ number is D58's weight, not this ruling's). No page, brief
 or Brightspace unit in this repository links to it, so nothing breaks here; an off-repo
 bookmark or an old email pointing at the previous fragment now lands at the top of the
 syllabus page rather than at the section.
+
+---
+
+## D60 — Only the declared route's "It is your turn" section is collected (2026-08-23)
+
+**Instruction.** Davi, 2026-08-23, on the Studio 5 pathway assignments: "lets
+require only the declared route."
+
+**Decision.** Week 5's IYT Practice collects **one** pathway chapter per student:
+the one matching the route they declared for their own project. The
+instructor-assigned contrast chapter is **still required reading** — it is argued
+in Wednesday's jigsaw and ruled out in writing inside M5's graded artifact — but
+its "It is your turn" section is never handed in. Ch. 19, Hybrid and Complex
+Designs, is unchanged: it binds only when the design has stages, and it rides the
+Monday assignment.
+
+**Why it is the right cut.** Reading a second pathway in order to argue against it
+is a different act from building your project's pathway, and only the second one
+produces the artifact an "It is your turn" section asks for. D57 had collected
+both because both were required reading; requiring a submission for a chapter the
+student is deliberately not using turned a rule-out exercise into a second full
+build. The rule-out survives where it belongs, in the milestone.
+
+**What changed.**
+
+| | Was (D57) | Now |
+|---|---|---|
+| Studio 5 assignments | 2 (Mon Sep 21 route, Wed Sep 23 contrast) | **1** (Mon Sep 21, declared route + ch. 19 when it binds) |
+| Total IYT assignments | 21 | **20** |
+| Pathway submission events | 10 (5 chapters × 2 roles) | **5** (5 chapters × 1 role) |
+| Baseline per student | 36 | **35** (34 everyone + 1 declared route; 36 with stages) |
+| Drops | `⌈0.10 × 36⌉ = 4` | `⌈0.10 × 35⌉ = 4` — unchanged |
+| Full marks at | 32 on-time credits | **31** |
+
+**Where it landed.** `scripts/build_participation_schedules.py` gained
+`SUBMITTED_MODES`, which is `READ_MODES` minus `route-contrast`: the reading modes
+and the collected modes are now two different lists, and only the second one makes
+an assignment. Everything downstream regenerates from it, so
+`planning/IYT_SUBMISSION_SCHEDULE.md` drops to 20 assignments and 40 rows on its
+own. `scripts/session_readings.py` changes the schedule-page label for
+`route-contrast` to say the section is *not* collected, which is the one place a
+student could otherwise read a deadline that no longer exists. Hand-written
+surfaces: `surveys/participation_grading.md`, `planning/ASSESSMENT_ARCHITECTURE.md`,
+`course_config.yaml iyt_practice:`, `CLAUDE.md`, the M5 brief's submission row and
+Book Anchor prose, and nb05's Lecture 1 project-transfer cell and Lecture 2
+wrap-up, both rebuilt through `scripts/nbbuild.py nb05`.
+
+**What did NOT change.** The contrast assignment itself, the jigsaw, M5's mandated
+contrast section and its rubric, the route declaration, and the hybrid-stage test.
+This ruling moves one submission, not the pedagogy around it.

@@ -358,15 +358,17 @@ participation:
 iyt_practice:
   undivided: true                  # never split the 10% into sub-weights
   credit_rule: "1.0 on time; 0.5 within seven days; 0 otherwise"
-  drop_rule: "ceil(0.10 * N) lowest credits dropped automatically"   # N = 36 -> d = 4
-  baseline_credits: 36             # 34 everyone + 2 pathway. A design with stages also owes
-                                   # ch. 19 (N = 37), and ceil(0.10 * 37) is still 4, so the
-                                   # drop count does not grow with it.
+  drop_rule: "ceil(0.10 * N) lowest credits dropped automatically"   # N = 35 -> d = 4
+  baseline_credits: 35             # 34 everyone + 1 pathway (the DECLARED route only, D60:
+                                   # the assigned contrast stays required reading but is not
+                                   # collected). A design with stages also owes ch. 19
+                                   # (N = 36), and ceil(0.10 * 36) is still 4, so the drop
+                                   # count does not grow with it.
   formula: "points = 10.0 * (sum of the highest N-d credits) / (N-d)"
   items:
     it_is_your_turn:
       label: "EDR|AI 'It is your turn' submissions"
-      count_typical: 36            # 34 everyone + 2 pathway (+1 if the design has stages)
+      count_typical: 35            # 34 everyone + 1 declared route (+1 if the design has stages)
       due_rule: "11:59 PM on the date that chapter's reading was due"
       graded: "completion"
       schedule: "planning/IYT_SUBMISSION_SCHEDULE.md"

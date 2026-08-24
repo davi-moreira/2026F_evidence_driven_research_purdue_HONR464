@@ -68,19 +68,16 @@ REQUIREMENT = {
     "first-read": "Everyone",
     "assigned": "Everyone",
     "route": "Pathway — only if this is YOUR declared route",
-    "route-contrast": "Pathway — only if this is your ASSIGNED contrast",
     "optional": "Only if your design has stages",
 }
 
 #: The order roles are listed when one due date carries more than one.
 ROLE_RANK = {"Everyone": 0, "Pathway — only if this is YOUR declared route": 1,
-             "Pathway — only if this is your ASSIGNED contrast": 2,
-             "Only if your design has stages": 3}
+             "Only if your design has stages": 2}
 
 #: A due date's assignment title, when the whole group is one non-Everyone role.
 ROLE_TITLE = {
     "Pathway — only if this is YOUR declared route": "your declared route",
-    "Pathway — only if this is your ASSIGNED contrast": "your assigned contrast route",
 }
 
 
@@ -107,15 +104,23 @@ def week_of(unit: str) -> tuple[str, str]:
 #: where the chapter is actually required to have been read.
 READ_MODES = ("first-read", "route", "route-contrast", "optional")
 
+#: Modes that produce a COLLECTED "It is your turn" submission. `route-contrast`
+#: is deliberately absent (D60): the contrast route is still required reading and
+#: still drives Wednesday's jigsaw and the milestone's mandated-contrast section,
+#: but only the student's OWN declared route hands in an "It is your turn"
+#: section. Reading a second pathway to argue against it is not the same act as
+#: building your project's pathway, and only the second one is a submission.
+SUBMITTED_MODES = ("first-read", "route", "optional", "assigned")
+
 
 def submissions(meetings: list[dict]) -> list[tuple[int, str, str]]:
     """Every "It is your turn" submission event: (meeting, lesson id, mode).
 
-    One per (lesson, ROLE), not one per lesson. A pathway chapter is read on
-    Monday by the students whose declared route it is and on Wednesday by the
-    students assigned it as their contrast, so it produces TWO events with two
-    different due dates — which is what the schedule page already says. Any one
-    student still owes exactly two of the five: one in each role.
+    One per (lesson, ROLE), not one per lesson — but since D60 only ONE pathway
+    role is collected, every lesson now yields exactly one event. A pathway
+    chapter produces its event on the Monday its declared-route readers are due;
+    the Wednesday contrast reading is required but never handed in. Any one
+    student owes exactly one of the five pathway chapters.
     """
     events: list[tuple[int, str, str]] = []
     taken: set[tuple[str, str]] = set()
@@ -126,7 +131,7 @@ def submissions(meetings: list[dict]) -> list[tuple[int, str, str]]:
             if mode == "assigned":
                 assigned_at.setdefault(lid, n)
                 continue
-            if mode not in READ_MODES or (lid, mode) in taken:
+            if mode not in SUBMITTED_MODES or (lid, mode) in taken:
                 continue
             taken.add((lid, mode))
             events.append((n, lid, mode))
@@ -271,7 +276,7 @@ def iyt_page(meetings: list[dict]) -> str:
         build.append(f"| It is your turn — Ch. {chapter_range(nums)}{suffix} "
                      f"| {long_date(d)} | {chapter_range(nums)} | {who} |")
 
-    per_student = counts["Everyone"] + 2
+    per_student = counts["Everyone"] + 1
     drops = math.ceil(0.10 * per_student)
     head = f"""# "It is your turn" — the IYT Practice submissions
 
@@ -294,9 +299,9 @@ IYT Practice contract are in
 | | Chapters | Note |
 |---|---|---|
 | Required of everyone | {counts['Everyone']} | one per chapter |
-| Pathway submissions | {counts['route']} | 5 chapters × 2 roles. Each student owes exactly **2**: their declared route (due Mon Sep 21) and the contrast the instructor assigns them (due Wed Sep 23) |
+| Pathway submissions | {counts['route']} | one per pathway chapter, all due Mon Sep 21. Each student owes exactly **1**: their own declared route. The instructor-assigned contrast is still required reading, and it is still worked in Wednesday's jigsaw and in the milestone's mandated-contrast section, but its "It is your turn" section is not collected (D60) |
 | Conditional | {counts['conditional']} | binds only if the design has stages |
-| **Baseline per student** | **{per_student}** | {counts['Everyone']} + 2 pathway |
+| **Baseline per student** | **{per_student}** | {counts['Everyone']} + 1 pathway |
 
 ---
 
@@ -310,12 +315,11 @@ assignment except the title and the due date.
 {IYT_INSTRUCTION}
 <!-- iyt-instruction:end -->
 
-**Studio 5 takes two assignments, not one.** A pathway chapter is read on Monday
-by the students whose declared route it is and on Wednesday by the students
-assigned it as their contrast, so the two roles carry different due dates. Add
-one line to each: *"Submit only the section for the route this assignment names
-— your own declared route on Monday's, your assigned contrast on Wednesday's.
-Hybrid and Complex Designs is required only if your design has stages."*
+**Studio 5 collects one pathway chapter per student.** Add one line to its
+assignment: *"Submit only your own declared route's chapter. If your design has
+stages, also submit Ch. 19, Hybrid and Complex Designs. The other pathway
+chapters, including the contrast route assigned to you, are required reading and
+jigsaw material for Wednesday, and their sections are not collected."*
 
 ---
 

@@ -245,12 +245,13 @@ required chapters. The mechanics are Participation's, with their own credit pool
 
 | # | Item | Count (typical student) | Due | Graded |
 |---|---|---:|---|---|
-| 1 | EDR\|AI **"It is your turn"** submissions | 36 | 11:59 PM on the date that chapter's reading was due | completion |
-| | **Baseline N** | **36** | | |
+| 1 | EDR\|AI **"It is your turn"** submissions | 35 | 11:59 PM on the date that chapter's reading was due | completion |
+| | **Baseline N** | **35** | | |
 
-The 36 is 34 chapters everyone reads plus 2 pathway chapters; a declared design
-with stages owes one more (N = 37), and `⌈0.10 × 37⌉` is still 4, so the drop
-count does not grow with it. Credit is `1.0` on time, `0.5` within seven days,
+The 35 is 34 chapters everyone reads plus **one** pathway chapter, the student's
+own declared route. The contrast route the instructor assigns is still required reading, and it is still worked in Wednesday's jigsaw and in the milestone's mandated-contrast section, but its "It is your turn" section is not collected (D60). A declared design with stages owes one
+more (N = 36), and `⌈0.10 × 36⌉` is still 4, so the drop count does not grow with
+it. Credit is `1.0` on time, `0.5` within seven days,
 `0` otherwise; the lowest `d = ⌈0.10 × N⌉` credits are dropped automatically
 (**d = 4**), and
 
