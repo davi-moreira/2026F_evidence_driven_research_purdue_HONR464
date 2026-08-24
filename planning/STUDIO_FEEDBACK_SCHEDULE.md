@@ -22,6 +22,23 @@ are the other two. The rule and the drop allowance are in
 
 ---
 
+## The instruction — one block, every studio
+
+Paste this beside the survey link on the course page. It is written to be correct
+for all twelve, so nothing has to be edited per studio.
+
+<!-- studio-feedback-instruction:begin -->
+**What this is.** Once per studio you tell the author of EDR|AI what the reading actually did for you. It takes about three minutes, and the link is the same one all semester: **[PASTE THE QUALTRICS SURVEY LINK HERE]**. Pick this studio on the first page, and answer from the reading rather than from class.
+
+**What to do.** One response per studio. Sign it with your Purdue username: it carries participation credit, so it cannot be anonymous. Answer the six short questions, then the one open question, which asks you to name a chapter and a specific place inside it. Two exact sentences beat two vague paragraphs.
+
+**How it is graded.** On whether you submitted a real, specific response on time, never on what you said. A careful complaint and a careful compliment earn exactly the same credit, and the complaint is the more useful of the two. Your ratings and your comments never affect any other grade. The book is still being written, and what you flag here is what gets rewritten.
+
+**When it is due.** 11:59 PM on the Sunday that closes the studio week, which is the night before the next studio starts and the same night that studio's milestone is due. Studio 12 is the exception: it closes Friday, December 11, with the course reflection. A response up to seven days late earns half credit; after that it earns none. Your lowest few participation credits are dropped automatically, so a bad week does not need an email.
+<!-- studio-feedback-instruction:end -->
+
+---
+
 ## The schedule
 
 | Studio | Week | Studio meetings | Chapters it covers | Survey closes (11:59 PM) |
