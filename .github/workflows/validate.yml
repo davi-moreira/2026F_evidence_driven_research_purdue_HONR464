@@ -43,6 +43,17 @@ jobs:
         # dependency passes only while the runner image happens to supply it).
         run: pip install nbformat pyyaml "numpy==1.26.4" "matplotlib==3.8.4"
 
+      - name: Runtime syntax — every tracked script parses on this Python
+        # FIRST, because it explains every other step's failure when it fires.
+        # The .venv on the author's machine is newer than the 3.11 pinned
+        # above, and 3.12 relaxed f-strings (PEP 701); two generators started
+        # using a backslash inside an f-string expression, which is a hard
+        # SyntaxError here. Every push failed for days while every local gate
+        # stayed green. ci_gates_local.py cannot catch that on its own — it
+        # runs these steps with the local interpreter — so the gate resolves a
+        # real 3.11 interpreter itself.
+        run: python3 scripts/check_runtime_syntax.py
+
       - name: Calendar backbone (43 = 42 in-person + 1 async)
         run: python3 scripts/validate_calendar.py --emit-csv
 

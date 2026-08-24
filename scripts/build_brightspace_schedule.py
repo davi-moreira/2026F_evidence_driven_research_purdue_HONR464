@@ -145,8 +145,8 @@ def main() -> None:
     print(f"  {detail}")
     print(f"  worst count '{worst_name}' {worst:,} — {CEILING - worst:,} under "
           f"the {CEILING:,} Brightspace ceiling ({pct:.1f}% margin)")
-    print(f"  {len(re.findall(r'href=\"https?:', frag))} links, all absolute; "
-          f"layout inlined; no <script>")
+    n_links = len(re.findall(r'href="https?:', frag))
+    print(f"  {n_links} links, all absolute; layout inlined; no <script>")
     print("  Open it, select all, paste into the Brightspace HTML editor.")
 
 

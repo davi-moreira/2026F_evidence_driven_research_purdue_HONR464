@@ -490,8 +490,9 @@ def srl_table(meetings: list[dict]) -> str:
     puzzles = ["\n---\n\n## The seed puzzle for each slot\n"]
     for slot, r in slots:
         focus = re.sub(r"\s+", " ", (r.get("srl_focus") or "").strip())
+        title = re.sub(r"\s+", " ", r["title"]).strip()
         puzzles.append(f"**Slot {slot:02d}** · {pretty(r['date'], r['day'])} · "
-                       f"{re.sub(r'\\s+', ' ', r['title']).strip()}\n\n> {focus}\n")
+                       f"{title}\n\n> {focus}\n")
 
     head = f"""# Student Research Lead — Slot Schedule
 
