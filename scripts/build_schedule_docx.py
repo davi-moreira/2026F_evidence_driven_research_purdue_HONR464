@@ -358,7 +358,7 @@ def main():
         "The sixteen milestones are the Milestone Deliverables item of the "
         "Final Project. A milestone is worked at its Friday studio and due "
         "that Sunday at 11:59 PM. Three keep weekday deadlines: M11 is due at "
-        "class on a Wednesday, M12 at 5:00 PM on Friday Nov 6 so peer "
+        "class on a Wednesday, M12 at 2:30 PM on Friday Nov 6 so peer "
         "criticism reaches authors before the lock, and M13 is the terminal "
         "poster lock, pinned to Sun Nov 8, nine days before the conference and "
         "shared with QM 47400's print run. M13 is terminal: no revision "

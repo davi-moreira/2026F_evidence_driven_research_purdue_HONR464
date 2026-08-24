@@ -8,7 +8,7 @@ develop → submit → revise** cadence (D30 retired weekly milestone presentati
 **Every milestone is due on a Sunday (D54)**: students work the milestone at
 its Friday studio and submit by **Sunday, 11:59 PM**. Three exceptions keep
 their weekday deadlines because the conference block depends on them — M11
-(due at class Wednesday Nov 4), M12 (Friday Nov 6, 5:00 PM, so peer criticism
+(due at class Wednesday Nov 4), M12 (Friday Nov 6, 2:30 PM, so peer criticism
 reaches authors before the lock), and M13 (Sunday Nov 8, terminal). M13 is
 **terminal** — no revision window. Since **D49** the semester runs **one Studio per week**: Monday and Wednesday
 teach that Studio's lessons with their "It is your turn" work, and **Friday IS
@@ -55,7 +55,7 @@ are `M1…M16`.
 | M9 | Bounded research note and claim-evidence table | M22–M25 | note red-team + trace-or-cut drill (M25) | Sun Oct 25, 11:59 PM | 9 — Your bounded claims (v1) |
 | M10 | Venue contract and the publication-ready artifact | M25–M28 | artifact criticism gallery + defense rehearsal (M28) | Sun Nov 1, 11:59 PM | 10 — Your artifact, ready to publish or present (v1) |
 | M11 | Poster first draft | M29–M30 | storyboard + traceability sweep (M29); the draft is due AT CLASS (M30) | Wed Nov 4, at class | 10 (v2, the peer-reviewed draft) |
-| M12 | Peer review submission | M30–M31 | silent active-project review circuit (M30) + revision studio (M31) | Fri Nov 6, 5:00 PM | 10 — peer-criticism practice |
+| M12 | Peer review submission | M30–M31 | silent active-project review circuit (M30) + revision studio (M31) | Fri Nov 6, 2:30 PM | 10 — peer-criticism practice |
 | M13 | Final poster lock | M28–M31 | pre-lock gate sweep + print-scale check (M31) | Sun Nov 8, 11:59 PM — TERMINAL | 10 (v3, the locked print edition) |
 | M14 | Go-public package: presentation plan and invitation | M32–M34 | pitch drafting (M32) + typed-panel questioning (M33) + rehearsal at the printed board (M34) | Sun Nov 15, 11:59 PM | 10 — spoken-editions practice |
 | M15 | Conference reflection | M35–M37 | dress rehearsal (M35); the Expo (Tue Nov 17) supplies the separate Final Project live-presentation score; M15 grades async capture (M36), adjudication (M37), and the written reflection | Sun Nov 29, 11:59 PM | 10 (v4, the publicly presented edition) |

@@ -526,7 +526,7 @@ files:
 
         submitting your own review. You are scored individually either way.'
       why: Not a date, but the hard-coded enrollment ("four reviews when all five students work individually") pins the brief to this one offering, since a future section will not have five researchers. The rewrite states the same rule relationally, keeps the ≥3-active-projects floor and the ≥2-reviews guarantee, keeps the no-conferring and individual-scoring rules, and fixes the third-party "students" noun that the house voice rule forbids in student-facing prose. Flagged in notes for the instructor.
-    - find: 'Due: **Friday, November 6, 5:00 PM.** The reviews are written in Wednesday''s
+    - find: 'Due: **Friday, November 6, 2:30 PM.** The reviews are written in Wednesday''s
 
         class, in a silent round, and finished in Friday''s studio.'
       replace: 'Due: **on this milestone''s Friday, once the studio has ended.** This is not an
@@ -536,7 +536,7 @@ files:
         are written in Wednesday''s class, in a silent round, and finished in Friday''s
 
         studio.'
-      why: 'Removes the date and the clock time while preserving the instructional design: the deadline is NOT at the start of class, it falls after the Friday studio in which you finish the reviews. "Wednesday''s class" and "Friday''s studio" are the stable Mon/Wed/Fri rhythm and are kept verbatim. Deliberately does not say "by the end of the day", which would silently widen the real 5:00 PM window into invented policy.'
+      why: 'Removes the date and the clock time while preserving the instructional design: the deadline is NOT at the start of class, it falls after the Friday studio in which you finish the reviews. "Wednesday''s class" and "Friday''s studio" are the stable Mon/Wed/Fri rhythm and are kept verbatim. Deliberately does not say "by the end of the day", which would silently widen the real 2:30 PM window into invented policy.'
     - find: '[M13 — Final Poster Lock](milestone_13_final_poster_lock.md) — the print file,
 
         terminal, due Sunday, November 8, at 11:59 PM.*'
@@ -662,7 +662,7 @@ files:
     - find: The poster locked on Sunday. This week the artifact is no longer a file — it is
       replace: Your poster is locked. This week the artifact is no longer a file — it is
       why: '"on Sunday" pins the brief to the current edition''s terminal lock day, which sits outside the stable Mon/Wed/Fri rhythm and can move between offerings. The rewrite keeps the same hand-off from M13 (the footer still names M13 — Final Poster Lock as the previous step) in second person, and keeps the existing em dash untouched.'
-    - find: 'Due: **Friday, November 13, 5:00 PM.**'
+    - find: 'Due: **Friday, November 13, 2:30 PM.**'
       replace: 'Due: **on this milestone''s Friday, by the end of the working day.**
 
         Brightspace carries the exact date and time.'

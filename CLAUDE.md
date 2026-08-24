@@ -247,7 +247,7 @@ The peer cold run is IN CLASS on the Week-15 Wednesday. Course milestones are
 **D55 — every milestone is due the Sunday after its Friday studio, 11:59 PM.**
 The studio is still where the work happens; the deadline is the end of that
 weekend. Three exceptions keep their weekday slots: M11 (Wed Nov 4, at class),
-M12 (Fri Nov 6, 5:00 PM, so peer criticism reaches authors before the lock) and
+M12 (Fri Nov 6, 2:30 PM, so peer criticism reaches authors before the lock) and
 M13 (Sun Nov 8, terminal). `course_config.yaml milestones:` is the source of
 truth for every due date.
 

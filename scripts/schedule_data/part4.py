@@ -29,7 +29,7 @@ Evidence Defences run inside the Wednesday peer-defence blocks of Weeks 15 and
 16, so the standard frame is never broken to make room for them.
 
 Course milestone ids under D50, with the D54 Sunday deadlines: M11 poster first
-draft (Wed Nov 4, at class); M12 peer review submission (Fri Nov 6, 5:00 PM —
+draft (Wed Nov 4, at class); M12 peer review submission (Fri Nov 6, 2:30 PM —
 it must reach authors before the lock); M13 the terminal poster lock (Sun Nov 8,
 11:59 PM); M14 the go-public package (Sun Nov 15); M15 the conference reflection
 (Sun Nov 29); M16 Book Milestone 11 (Sun Dec 6) — the last milestone. There is
@@ -109,7 +109,7 @@ MEETINGS_P4 = [
         "student_prep": "All three timed versions drafted and counted; the hard-questions protocol read; your claim-evidence table on the table for every round.",
         "student_artifact": "The three counted pitches + the question-and-discussion strategy with three predicted and three audience-directed questions + the ledger row",
         "exit_ticket": "Claim Ticket #33: \"The question my board most invites is [x]; my honest answer stops at [y]; and the concession I must not make is [z].\"",
-        "homework_next_milestone": "Finish the go-public package — audience analysis, three counted pitches, poster-integration outline, question strategy, and the invitation post — due Friday at 5:00 PM. The printed posters come back Friday and the studio rehearses on the real thing.",
+        "homework_next_milestone": "Finish the go-public package — audience analysis, three counted pitches, poster-integration outline, question strategy, and the invitation post — due Friday at 2:30 PM. The printed posters come back Friday and the studio rehearses on the real thing.",
         "instructor_prep": "Print the five visitor role cards and the question-strategy sheets; set the three-minute questioning clock; hold the concession key for the accuracy lock; brief the SRL on the compression drill and the rotation; confirm the print vendor's Friday return.",
         "risks_contingency": "The rotation runs long → cut the second prepared answer to two presenters and protect the 38–42 accuracy lock, which is where untrue concessions get caught. A panel questions the person instead of the board → the one rule is restated and the round restarts; a question that is not grounded in the board is not a question, it is an opinion.",
     },

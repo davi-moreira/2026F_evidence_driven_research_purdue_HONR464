@@ -98,7 +98,7 @@ def main() -> None:
         6:  [date(2026, 10, 4)],    # URC draft abstract (Sunday, D54)
         7:  [date(2026, 10, 11)],   # URC conference application (Sunday, D54)
         11: [date(2026, 11, 4)],    # poster first draft, due at class (Wednesday)
-        12: [date(2026, 11, 6)],    # peer review, Friday 5 PM — feeds the Nov 8 lock
+        12: [date(2026, 11, 6)],    # peer review, Friday 2:30 PM — feeds the Nov 8 lock
         13: [date(2026, 11, 8)],    # final poster lock (terminal, Sunday 11:59 PM)
         14: [date(2026, 11, 15)],   # go-public package (Sunday, D54)
         15: [date(2026, 11, 29)],   # conference reflection (Sunday)

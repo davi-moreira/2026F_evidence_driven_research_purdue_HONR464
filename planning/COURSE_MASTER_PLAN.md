@@ -88,7 +88,7 @@ Sunday after, 11:59 PM.
 | 8 | S8 Stress-test and adjudicate (`nb08`) | 1 | M8 · Sun Oct 18 | Which checks did I pre-list, what survived them, and what remains unruled-out? |
 | 9 | S9 Write, bound, and disclose (`nb09`) | 2 | M9 · Sun Oct 25 | What bounded claim can I write down, with every sentence traced to evidence and disclosure? |
 | 10 | S10 Adapt and defend (`nb10`) | 2 | M10 · Sun Nov 1 | What does my venue require, and what artifact satisfies it without inflating the claim? |
-| 11 | Conference block: poster production + peer review (`nb11`) | 2 | M11 · Wed Nov 4 at class; M12 · Fri Nov 6, 5:00 PM; M13 · Sun Nov 8, 11:59 PM (terminal) | Is the poster traceable to my evidence, and does peer criticism reach me before the lock? |
+| 11 | Conference block: poster production + peer review (`nb11`) | 2 | M11 · Wed Nov 4 at class; M12 · Fri Nov 6, 2:30 PM; M13 · Sun Nov 8, 11:59 PM (terminal) | Is the poster traceable to my evidence, and does peer criticism reach me before the lock? |
 | 12 | Conference block: presentation preparation (`nb12`) | 2 | M14 · Sun Nov 15 | Can I say this work in thirty seconds, ninety, and two minutes — and take the hard question? |
 | 13 | The public test: dress rehearsal + the Expo (`nb13`) | 1 | — (Expo Tue Nov 17) | What does a room of strangers ask that I had not prepared for? |
 | 14 | Async reflection: what the public test returned (`nb14`) | 0 | M15 · Sun Nov 29 (async) | Does public questioning change the claim, its boundary, or only how I say it? |

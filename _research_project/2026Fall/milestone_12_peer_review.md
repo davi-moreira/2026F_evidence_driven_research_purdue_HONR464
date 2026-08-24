@@ -50,7 +50,7 @@ evaluates your own poster.
 
 ## What to Submit on Brightspace
 
-Due: **Friday, November 6, 5:00 PM.** The reviews are written in Wednesday's
+Due: **Friday, November 6, 2:30 PM.** The reviews are written in Wednesday's
 class, in a silent round, and finished in Friday's studio.
 
 | # | File | Description |

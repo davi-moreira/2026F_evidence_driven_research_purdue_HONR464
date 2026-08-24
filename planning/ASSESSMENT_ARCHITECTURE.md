@@ -371,7 +371,7 @@ points (revising is part of the graded craft). **Terminal artifacts have no
 revision window** — the deadline governs: **M13** final poster (Sun Nov 8,
 11:59 PM) and the live **Expo presentation** (Tue Nov 17, recorded through
 M15). Every other milestone is worked at its Friday studio and due the Sunday
-after, 11:59 PM (D55); M11 (Wed, at class) and M12 (Fri, 5:00 PM) keep weekday
+after, 11:59 PM (D55); M11 (Wed, at class) and M12 (Fri, 2:30 PM) keep weekday
 deadlines the conference block depends on.
 
 **Late.** −10% per day up to 3 days, then not accepted; documented emergencies
