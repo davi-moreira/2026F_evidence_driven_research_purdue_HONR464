@@ -18,7 +18,7 @@ All three are DERIVED, never hand-written, so they cannot drift from the calenda
 
   planning/SRL_ASSIGNMENT_SCHEDULE.md
       One row per Student Research Lead slot: which lecture it is, which frame
-      it runs, when the preparation script is due, and the seed puzzle.
+      it runs, when the filled notebook is due, and the seed puzzle.
 
       NO STUDENT NAMES. The draw itself is FERPA-protected student data and
       lives only in the gitignored `_adm/roster/` (scripts/assign_srl_slots.py,
@@ -446,7 +446,7 @@ def srl_table(meetings: list[dict]) -> str:
         slots.append((int(m.group(1)), r))
     slots.sort()
 
-    lines = ["| Slot | Meeting | Lecture date | Prep script due | Week | Studio "
+    lines = ["| Slot | Meeting | Lecture date | Notebook due | Week | Studio "
              "| Lecture | Frame |",
              "|---|---|---|---|---|---|---|---|"]
     for slot, r in slots:
@@ -484,8 +484,9 @@ made by `scripts/assign_srl_slots.py` and written only into the gitignored
 What is safe to keep here is the slot structure, which is also the part that
 survives into the next edition.
 
-**What each lead owes.** A preparation script or notebook **two days before** the
-lecture (the "Prep script due" column), prepared from one week ahead. The student
+**What each lead owes.** Their lecture's notebook, filled in and with its
+**🎤 My Lead Plan** cell complete, submitted **two days before** the lecture
+(the "Notebook due" column) and prepared from one week ahead. The student
 instructions are the SRL handout PDFs in `project/srl/`, built by
 `scripts/build_handout_pdfs.py`; those carry no names and no dates, so they upload
 to Brightspace once and stay correct.
