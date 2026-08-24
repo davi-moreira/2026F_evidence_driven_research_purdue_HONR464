@@ -168,7 +168,7 @@ honestly or the median exceeds 3:00. After Studio 1, inspect Qualtrics Duration
 as a workflow check, never as a validity score. CDC's CCQDER describes
 cognitive interviewing as a way to learn how respondents understand, think
 about, and answer questions (**VERIFIED**, retrievable at
-[CDC CCQDER](https://www.cdc.gov/nchs/CCQDER/index.html)).
+[CDC CCQDER](https://www.cdc.gov/nchs/ccqder/index.html)).
 
 ---
 
@@ -253,7 +253,7 @@ earns space in the instrument rationale.
 | **VERIFIED · retained** | Galesic & Bosnjak (2009), [doi:10.1093/poq/nfp031](https://doi.org/10.1093/poq/nfp031) | In a web-survey experiment, longer stated length reduced starts/completions and later questions drew faster, shorter, more uniform answers; supports keeping only six clicks before the one open response. |
 | **VERIFIED · retained, application bounded** | Tourangeau & Yan (2007), [doi:10.1037/0033-2909.133.5.859](https://doi.org/10.1037/0033-2909.133.5.859) | Reviews situational misreporting on sensitive questions. Treating criticism of an identified instructor-authored book as socially sensitive is an **UNVERIFIED contextual inference**. |
 | **VERIFIED · retained** | Brysbaert (2019), [doi:10.1016/j.jml.2019.104047](https://doi.org/10.1016/j.jml.2019.104047) | Supplies the 238-wpm adult nonfiction reading estimate used only in the burden budget. |
-| **VERIFIED · retained** | CDC/NCHS CCQDER, [official page](https://www.cdc.gov/nchs/CCQDER/index.html) | Supports cognitive interviewing to examine how respondents understand and answer questions; it does not prove that a two-person pilot finds every problem. |
+| **VERIFIED · retained** | CDC/NCHS CCQDER, [official page](https://www.cdc.gov/nchs/ccqder/index.html) | Supports cognitive interviewing to examine how respondents understand and answer questions; it does not prove that a two-person pilot finds every problem. |
 | **VERIFIED · technical** | Qualtrics, [Import & Export Surveys](https://www.qualtrics.com/support/survey-platform/survey-module/survey-tools/import-and-export-surveys/) and [Response Requirements & Validation](https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/validation/) | Defines supported Advanced TXT tags and the manual Force Response setting. |
 | **VERIFIED · cut with `effort`** | Paas (1992), [doi:10.1037/0022-0663.84.4.429](https://doi.org/10.1037/0022-0663.84.4.429) | The nine-point item measures perceived invested mental effort; the construct did not select a manuscript action here. |
 | **VERIFIED · cut with `effort`** | Paas, van Merriënboer & Adam (1994), [doi:10.2466/pms.1994.79.1.419](https://doi.org/10.2466/pms.1994.79.1.419) | Supports reliability/sensitivity of subjective mental-effort ratings in the studied instructional settings, not their actionability for this book. |

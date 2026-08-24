@@ -195,9 +195,10 @@ high effort on a hard studio is the design working.
 Concealing it is the violation, and that is the rule the AI Research Ledger
 already runs on.
 
-**Length** *(both)*. Two exact sentences beat two vague paragraphs, and the
-survey's anchor box caps at 600 characters for exactly that reason. Say it out
-loud once; students carry an assumption that longer is safer.
+**Length** *(both)*. Two exact sentences beat two vague paragraphs. The survey
+sets no length validation at all, in either direction, so a short exact answer
+is a complete answer. Say that out loud once; a reader carries an assumption
+that longer is safer.
 
 **Lecture notebooks** *(neither)*. They are class instruments, not deliverables.
 Nothing is collected from them and nothing is graded on them.
