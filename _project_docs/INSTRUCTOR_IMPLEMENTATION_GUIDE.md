@@ -120,7 +120,7 @@ assumption exposure, productive + interrogated AI use, inclusion, time
 management, connection to research decisions, handling uncertainty). Collect
 classmate feedback on `project/srl/srl_peer_feedback_form.md` and pass it to the
 lead quickly; it is the fastest way they improve before the next slot. The
-Student Research Lead component is **30%** of the course grade (syllabus).
+Student Research Lead component is **25%** of the course grade (syllabus, D61).
 
 **Intervention protocol.** How to step in without seizing the room is summarized
 in `project/srl/srl_handbook.md` ("How the instructor will step in"); the
@@ -162,7 +162,7 @@ reflection session, collected under participation.
   `course_config.yaml assessment:`.
 
 The course has five weighted categories totaling 100: Attendance 1 ·
-Participation 9 · IYT Practice 10 · SRL 30 · Final Project 50. D58 retired the
+Participation 9 · IYT Practice 15 · SRL 25 · Final Project 50 (D61). D58 retired the
 quiz category for this edition, so nothing in the gradebook is scored on a quiz.
 
 **Participation is one undivided block (D57, amended D58)**: every required item
@@ -173,10 +173,10 @@ course reflection (Dec 11). Baseline **N = 14**, drop **d = 2**, so the block is
 collected. The contract is `surveys/participation_grading.md`; the dated
 assignment list is `planning/STUDIO_FEEDBACK_SCHEDULE.md`.
 
-**IYT Practice is its own 10% block (D58)**: the book's "It is your turn" section
+**IYT Practice is its own 15% block (D58, amended D61)**: the book's "It is your turn" section
 for each required chapter, due 11:59 PM on that chapter's reading day, graded for
 completion on the same credit rule. Baseline **N ≈ 36**, drop **d = 4**, so the
-block is `10.0 × (sum of the highest 32 credits) / 32`. The dated assignment list
+block is `15.0 × (sum of the highest 32 credits) / 32`. The dated assignment list
 is `planning/IYT_SUBMISSION_SCHEDULE.md`; the contract is the same
 `surveys/participation_grading.md`. Final
 Project contains **Milestone Deliverables 30% · Peer Evaluation 20% · Peer

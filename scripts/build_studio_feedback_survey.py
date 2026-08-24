@@ -310,6 +310,10 @@ question, matrix, or composite score. The embedded field
 {TICK}prompt_version={PROMPT_VERSION}{TICK} records the wording version in
 every export.
 
+**Operational rule:** if any prompt or choice changes after collection begins,
+bump {TICK}PROMPT_VERSION{TICK} before regenerating so unlike wordings are
+never treated as one instrument.
+
 The six closed items remain stable across all {n} administrations. The one
 open item also remains fixed. Its required fallbacks let a reader report no
 change, partial reading, or no reading without inventing a defect.
@@ -586,6 +590,15 @@ def validate_artifacts(txt: str, md: str, studios: list[str]) -> None:
                 raise ValueError(
                     f"Documentation omits choice {choice!r} from {qid}"
                 )
+    for item in SPINE:
+        exact_row = (
+            f"| {TICK}{item.qid}{TICK} | {item.construct} | {item.prompt} | "
+            f"{'<br>'.join(item.choices)} | {item.revision_decision} |"
+        )
+        if exact_row not in md:
+            raise ValueError(
+                f"Documentation row differs from source data for {item.qid}"
+            )
     for studio in studios:
         if txt.count(studio) != 1 or md.count(studio) != 1:
             raise ValueError(f"Studio choice is missing or duplicated: {studio}")

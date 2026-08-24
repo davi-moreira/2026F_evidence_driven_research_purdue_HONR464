@@ -1,9 +1,9 @@
-# Participation (9%) and IYT Practice (10%) — the two completion contracts
+# Participation (9%) and IYT Practice (15%) — the two completion contracts
 
 Two categories are graded by completion, and this page is the whole contract for
 both of them. **Participation is 9%** and collects the studio feedback survey,
 the student profile survey and the course reflection: 14 credits. **IYT Practice
-is 10%** and collects the "It is your turn" section of every required EDR\|AI
+is 15%** and collects the "It is your turn" section of every required EDR\|AI
 chapter: 35 credits for a typical student. Each block is undivided, each credit
 inside a block is worth exactly the same as every other, and each block has its
 own **N**, its own drop allowance and its own formula.
@@ -19,10 +19,16 @@ a student can verify and an instructor can defend.
 > reading feedback is no longer collected per chapter.
 >
 > **Amended 2026-08-23 (D58).** The "It is your turn" submissions left
-> Participation for their own **10% IYT Practice** category, stated below.
+> Participation for their own **IYT Practice** category, stated below.
 > Participation stayed at **9%**, kept its mechanics, and is still not split
 > internally. The weekly quiz category is also retired for this edition, so
 > nothing on this page depends on one.
+>
+> **Amended 2026-08-23 (D61).** D58 set IYT Practice at 10% and Student Research
+> Lead at 30%. **IYT Practice is now 15% and Student Research Lead is now 25%.**
+> Nothing else moved: Participation is still 9%, both credit rules, both drop
+> allowances and both baselines are unchanged, and the only formula that changed
+> is the IYT Practice one, whose multiplier is now 15.0.
 
 ---
 
@@ -109,7 +115,7 @@ above 9.0. They are not added to IYT Practice.
 
 ---
 
-## IYT Practice — 10%
+## IYT Practice — 15%
 
 ### The one thing IYT Practice collects
 
@@ -139,11 +145,11 @@ Let **N** be the number of IYT credits assigned to that student, and
 **d = ⌈0.10 × N⌉** the number of lowest credits dropped automatically.
 
 ```
-IYT Practice points = 10.0 × (sum of the highest N − d credits) / (N − d)
+IYT Practice points = 15.0 × (sum of the highest N − d credits) / (N − d)
 ```
 
 For this edition, **N = 35** for a typical student, so **d = 4**, and **31 valid,
-on-time submissions earn the full 10 points.** There is no credit beyond N.
+on-time submissions earn the full 15 points.** There is no credit beyond N.
 
 **Four free drops.** The four lowest credits are dropped automatically. No
 excuse, no email, no negotiation. Illness, a bad week, a chapter that genuinely

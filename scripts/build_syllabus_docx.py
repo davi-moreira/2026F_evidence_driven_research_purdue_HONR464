@@ -527,8 +527,8 @@ def main():
               "curve.", bold_prefix="Grading: ")
 
     weights = [("Assessment", "Weight"), ("Attendance", "1%"),
-               ("Participation", "9%"), ("IYT Practice", "10%"),
-               ("Student Research Lead", "30%"),
+               ("Participation", "9%"), ("IYT Practice", "15%"),
+               ("Student Research Lead", "25%"),
                ("Final Project", "50%"), ("Total", "100%")]
     tw = doc.add_table(rows=len(weights), cols=2)
     tw.style = doc.styles["Grid Table 1 Light"]

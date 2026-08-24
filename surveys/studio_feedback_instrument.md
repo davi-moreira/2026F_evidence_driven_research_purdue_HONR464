@@ -45,6 +45,10 @@ question, matrix, or composite score. The embedded field
 `prompt_version=fixed_revision_v1` records the wording version in
 every export.
 
+**Operational rule:** if any prompt or choice changes after collection begins,
+bump `PROMPT_VERSION` before regenerating so unlike wordings are
+never treated as one instrument.
+
 The six closed items remain stable across all 12 administrations. The one
 open item also remains fixed. Its required fallbacks let a reader report no
 change, partial reading, or no reading without inventing a defect.

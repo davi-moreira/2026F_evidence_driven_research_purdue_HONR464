@@ -3237,3 +3237,92 @@ wrap-up, both rebuilt through `scripts/nbbuild.py nb05`.
 **What did NOT change.** The contrast assignment itself, the jigsaw, M5's mandated
 contrast section and its rubric, the route declaration, and the hybrid-stage test.
 This ruling moves one submission, not the pedagogy around it.
+
+---
+
+## D61 — IYT Practice rises to 15% and Student Research Lead settles at 25% (2026-08-23)
+
+**Instruction.** Davi, 2026-08-23, reading the weight table D58 had produced earlier
+the same day: move five points from the Student Research Lead component to IYT
+Practice. IYT Practice becomes **15%** and Student Research Lead becomes **25%**.
+
+**Decision.** Two numbers change and nothing else does.
+
+| Component | D58 | D61 |
+|---|---:|---:|
+| Attendance | 1% | 1% |
+| Participation | 9% | 9% |
+| **IYT Practice** | 10% | **15%** |
+| **Student Research Lead** | 30% | **25%** |
+| Final Project | 50% | 50% |
+| **Total** | **100%** | **100%** |
+
+**This amends D58's weights and only its weights.** Every other thing D58 settled
+stands exactly as written: the quiz category stays retired for this edition with its
+banks and builders kept; the Friday studio keeps its three sections summing to 50
+(5 · 40 · 5); participation stays one undivided 9% over N = 14 credits with d = 2;
+IYT Practice keeps D60's counts, N = 35 for the typical student and 36 when the
+declared design has stages, with d = ⌈0.10 × 35⌉ = 4; both blocks keep the same
+completion contract, the same credit rule (1.0 on time, 0.5 within seven days, 0
+otherwise), and the same automatic drop. The Final Project keeps 50% and its
+30/20/10/20/20 internal shares, so D52's and D53's rulings are untouched. The SRL
+rubric, the five randomly-assigned slots, the preparation deadline and the instrument
+are all unchanged; this ruling moves the component's weight, not its work. D59's name
+for it — Student Research Lead, no "Performance" — is unchanged too.
+
+One formula moves with the weight. IYT Practice is now
+
+```
+iyt points = 15.0 × (sum of the highest 31 credits) / 31
+```
+
+Participation's formula is still `9.0 × (sum of the highest 12 credits) / 12`, and its
+"other constructive contributions" clause is still an adjustment of at most **±0.9**
+course points. That ±0.9 is one tenth of the 9% block and belongs to it alone; it did
+not scale with IYT Practice and it never touches the IYT result.
+
+**Why the five points move.** The "It is your turn" chain is 35 graded submissions
+spread across the whole semester, one for nearly every chapter the course requires,
+and the sections chain into the student's actual research artifact — the book's
+project spine runs through them. At 10% that was two thirds of a course point per
+submission, less than a single studio feedback survey is worth per hour of work, while
+the Student Research Lead component paid 30% for five flipped-lecture leads. The
+imbalance was in effort against product, not in importance: leading a lecture is the
+harder single act, but five of them do not outweigh a semester of building the
+research project in writing. Fifteen and twenty-five put the two categories where the
+work actually lands. The pair still sums to 40%, which is why nothing else in the
+table had to move — attendance, participation and the Final Project are the same
+numbers they were this morning.
+
+**Where it was applied.** `course_config.yaml assessment:` (the two weight values and
+the `iyt_practice:` block's points figure) is the machine spine, and the generators
+read from it: `scripts/build_participation_schedules.py` (the IYT and SRL schedule
+headers), `scripts/build_brightspace_kit.py` (the category weights and the assertion
+that guards them), `scripts/build_syllabus_docx.py` and `scripts/build_schedule_docx.py`.
+Hand-written student-facing surfaces: `syllabus.qmd` (the weights table row, the
+`### IYT Practice` and `### Student Research Lead` section headings and their bodies),
+`surveys/participation_grading.md`, `planning/ASSESSMENT_ARCHITECTURE.md`,
+`planning/COURSE_MASTER_PLAN.md`, `README.md`, `book/for-instructors.qmd`, the
+milestone briefs that name the category, and nb01's assessment table at its cell
+source `_production_kit/nb_sources/nb01_ai_arm_not_brain.py`. Repository rules:
+`CLAUDE.md` (the See Also rows, the IYT Practice rule heading and body, the milestone
+Book-Anchor paragraph, and a new Version 6.9 block) and
+`_project_docs/INSTRUCTOR_IMPLEMENTATION_GUIDE.md`. Every generated artifact — the
+schedules, the syllabus `.docx`, the Brightspace kit, the student and instructor
+notebooks, `docs/` — is rebuilt from those sources rather than edited.
+The syllabus PDF under `_syllabus/2026F/` is a manual Word export and shows the old numbers until Davi
+re-exports it by hand.
+
+**The three authorities are unchanged.** `surveys/participation_grading.md` remains
+the operative contract for both completion blocks,
+`planning/ASSESSMENT_ARCHITECTURE.md` remains the reasoned account of the whole
+assessment design, and `course_config.yaml` remains the machine source of truth every
+generator reads. Anything that disagrees with those three is stale and follows them,
+not the other way round. Nothing earlier in this log was rewritten: D22, D31, D52,
+D53, D58 and D59 recite the weights that were correct on their own dates and stay as
+they are.
+
+⚠ **D58's inherited open item is still open.** The 10 scored Synthetic Colleague
+audits in `project/colleague/` still promise a participation credit that
+participation's N = 14 contract does not contain. D61 does not touch participation, so
+it neither creates nor resolves that contradiction; it still needs Davi's ruling.

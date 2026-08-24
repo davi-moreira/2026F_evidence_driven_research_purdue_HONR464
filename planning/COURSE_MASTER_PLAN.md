@@ -203,7 +203,7 @@ full milestone chain — develop → present → submit → revise cadence, kick
 rules, dossier mapping, and the M13 terminal lock — lives in
 `planning/PROJECT_MILESTONES.md`.
 
-## 7. Assessment architecture *(D52, amended D57/D58, 2026-08-23)*
+## 7. Assessment architecture *(D52, amended D57/D58/D61, 2026-08-23)*
 
 From `course_config.yaml assessment:`; sums to 100 and matches `syllabus.qmd`.
 Grading rewards correctness, transparency, reproducibility, question-design
@@ -213,8 +213,8 @@ alignment, and responsible interpretation — never coding elegance.
 |---|---|
 | Attendance (iClicker) | 1 |
 | Participation (studio feedback surveys + profile survey + course reflection + other constructive contributions; one undivided block, D57, amended D58) | 9 |
-| IYT Practice (the book's "It is your turn" sections, due on each chapter's reading date; completion, D58) | 10 |
-| Student Research Lead | 30 |
+| IYT Practice (the book's "It is your turn" sections, due on each chapter's reading date; completion, D58, amended D61) | 15 |
+| Student Research Lead | 25 |
 | Final Project | 50 |
 | **Total** | **100** |
 

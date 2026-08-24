@@ -129,7 +129,7 @@ def main() -> int:
 
         # --- D. RETIRED with the `due` mode (D57; recategorized D58) ------
         # The "It is your turn" submission is an IYT PRACTICE assignment (its own
-        # 10% category since D58, moved out of Participation) due at
+        # category since D58, moved out of Participation; 15% since D61) due at
         # 11:59 PM on the chapter's own reading day, so it rides the read modes
         # and no longer needs a token of its own. Its deadline is generated
         # into planning/IYT_SUBMISSION_SCHEDULE.md from the same home anchors.

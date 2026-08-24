@@ -7,7 +7,7 @@ All three are DERIVED, never hand-written, so they cannot drift from the calenda
       The book "It is your turn" (IYT) submissions. One row per EDR|AI chapter,
       due on the date that chapter's reading was due, plus the grouped list of
       Brightspace assignments to create and the ONE instruction paragraph that
-      serves every one of them. Graded by completion inside IYT Practice (10%),
+      serves every one of them. Graded by completion inside IYT Practice (15%),
       its own category since D58 took the family out of Participation.
 
   planning/STUDIO_FEEDBACK_SCHEDULE.md           (D57; replaces the per-chapter
@@ -284,13 +284,13 @@ def iyt_page(meetings: list[dict]) -> str:
 
 Every chapter of **EDR\\|AI** that a student is required to read carries one
 submission: that chapter's closing **"It is your turn"** section. It is graded
-**by completion** inside **IYT Practice (10%)** — submitted or not — and it is
+**by completion** inside **IYT Practice (15%)** — submitted or not — and it is
 due on **the date the chapter's reading was due**, so the section is written
 from the reading rather than reconstructed from class.
 
 A typical student owes **{per_student}** of them, and the **{drops} lowest
 credits are dropped automatically** (⌈0.10 × N⌉), so {per_student - drops} valid,
-on-time submissions earn the full 10 points. The scoring rule and the rest of the
+on-time submissions earn the full 15 points. The scoring rule and the rest of the
 IYT Practice contract are in
 [`surveys/participation_grading.md`](../surveys/participation_grading.md).
 
@@ -490,7 +490,7 @@ instructions are the SRL handout PDFs in `project/srl/`, built by
 `scripts/build_handout_pdfs.py`; those carry no names and no dates, so they upload
 to Brightspace once and stay correct.
 
-**Weight.** Student Research Lead is **30%** of the course grade.
+**Weight.** Student Research Lead is **25%** of the course grade.
 The rubric is `project/srl/srl_rubric.md`.
 
 ---

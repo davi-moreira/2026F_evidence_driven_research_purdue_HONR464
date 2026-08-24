@@ -378,11 +378,15 @@ def gradebook_spec(config: dict) -> str:
             "D58 retired the quiz grade category; remove assessment.quizzes "
             "(the banks and builders under _quizzes/ are kept, uncalled)"
         )
-    if a.get("iyt_practice") != 10:
-        raise ValueError("D58 requires assessment.iyt_practice to equal 10")
-    if a.get("srl_performance", a.get("student_research_lead")) != 30:
+    if a.get("iyt_practice") != 15:
         raise ValueError(
-            "D58 requires the Student Research Lead category to equal 30"
+            "D61 requires assessment.iyt_practice to equal 15 "
+            "(D58 created the category at 10)"
+        )
+    if a.get("srl_performance", a.get("student_research_lead")) != 25:
+        raise ValueError(
+            "D61 requires the Student Research Lead category to equal 25 "
+            "(D58 had it at 30)"
         )
     if list(fp) != [key for key, _, _, _ in expected_fp]:
         raise ValueError("Final Project must use D52's five components in order")
@@ -559,7 +563,7 @@ def gradebook_spec(config: dict) -> str:
         "item. surveys/participation_grading.md is the authority for the item "
         "list and the counts; Brightspace is where the running total is "
         "posted.",
-        "- **IYT Practice** — ONE 10% category, the EDR|AI 'It is your turn' "
+        "- **IYT Practice** — ONE 15% category, the EDR|AI 'It is your turn' "
         "family D58 moved out of Participation. Create one assignment per due "
         "date (planning/IYT_SUBMISSION_SCHEDULE.md lists them, with the "
         "instruction paragraph to paste into every one). Every item is "

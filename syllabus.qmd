@@ -75,7 +75,7 @@ By the conclusion of this course, you will be able to:
 
 ## Assessments
 
-<!-- Weights come from course_config.yaml assessment: (D58, sums to 100). Keep the
+<!-- Weights come from course_config.yaml assessment: (D58, amended by D61; sums to 100). Keep the
      two in sync on every edit. -->
 
 The course assesses the research chain itself: a semester-long research project carried through milestones, presented publicly at the Purdue Undergraduate Research Conference, and closed with a reproducible package, a bounded research note, and a written reflection on the semester's work.
@@ -84,8 +84,8 @@ The course assesses the research chain itself: a semester-long research project 
 |----------------------------------------------|-----------:|
 | Attendance (iClicker; 85% target)            |         1% |
 | Participation (rubric)                       |         9% |
-| IYT Practice ("It is your turn" submissions) |        10% |
-| Student Research Lead                        |        30% |
+| IYT Practice ("It is your turn" submissions) |        15% |
+| Student Research Lead                        |        25% |
 | Final Project                                |        50% |
 | **Total**                                    |   **100%** |
 
@@ -97,11 +97,11 @@ Attendance is checked with iClicker. The target is attendance at 85% or more of 
 
 Participation is graded as one block. It covers the required course surveys, the course-closing reflection, and other constructive contributions to the course. These items are scored for completion and timeliness, never for the opinions they express, and the lowest few scores are dropped automatically. The full list, the due dates, and the submission instructions are posted on the course page.
 
-### IYT Practice (10%)
+### IYT Practice (15%)
 
 Each required EDR|AI chapter closes with an **"It is your turn"** section that you complete in that chapter's companion Colab notebook. Each section is due at 11:59 PM on the date that chapter's reading was due. This work is graded for completion, not for the conclusions you reach: full credit when it arrives on time, half credit when it arrives within seven days of the deadline. The lowest few credits are dropped automatically. The dated list lives on the course schedule page, where each meeting row marks the sections due that night, and on Brightspace, where you submit them.
 
-### Student Research Lead (30%)
+### Student Research Lead (25%)
 
 From Week 2 onward, Student Research Leads run assigned Monday or Wednesday lectures as Socratic investigations. Slots are randomly assigned at the beginning of the semester. Prepare from the SRL Lead Brief in the lecture notebook, work about one week ahead, and submit your preparation script or notebook two days before you lead. Your leading is assessed on preparation, disciplinary accuracy, facilitation of the investigation, inclusion of the room, and your ability to synthesize and defend the session's research decision.
 
