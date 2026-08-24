@@ -349,12 +349,98 @@ your lectures for the term.</p>
 </tbody>
 </table>
 
+<h3>What leading actually looks like</h3>
+
+<p>You are <strong>not presenting</strong>. You are not summarizing a reading or
+walking us through slides. You are running a <strong>Socratic investigation</strong>:
+you lead by asking, and the room does the reasoning. The single most important
+move you make all day is holding everyone to a <em>written commitment before any
+AI tool opens</em> — without it, the AI's answer quietly becomes everyone's
+answer and nobody learns anything.</p>
+
+<p>Both formats run 50 minutes, and the minute frames are fixed. I post
+checkpoint signals at the section boundaries so you always know your pace.</p>
+
+<p><strong>If you drew a Monday — the guided investigation</strong></p>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Minutes</th><th>Section</th><th>Whose block</th></tr></thead>
+<tbody>
+<tr><td>0&ndash;9</td><td>Your research puzzle, committed in writing before any tool opens</td><td><strong>Yours</strong></td></tr>
+<tr><td>9&ndash;31</td><td>Guided AI research-partner investigation</td><td><strong>Yours</strong> (I watch accuracy)</td></tr>
+<tr><td>31&ndash;43</td><td>Human verification + formalization</td><td>Mine &mdash; hand off cleanly</td></tr>
+<tr><td>43&ndash;50</td><td>Decision &amp; defense, ledger row, Claim Ticket</td><td><strong>Yours</strong></td></tr>
+</tbody>
+</table>
+
+<p><strong>If you drew a Wednesday — the applied AI laboratory</strong></p>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead><tr><th>Minutes</th><th>Section</th><th>Whose block</th></tr></thead>
+<tbody>
+<tr><td>0&ndash;7</td><td>Your retrieval &amp; challenge</td><td><strong>Yours</strong></td></tr>
+<tr><td>7&ndash;30</td><td>Intensive applied AI laboratory &mdash; the longest block, so pacing is on you</td><td><strong>Yours</strong></td></tr>
+<tr><td>30&ndash;38</td><td>Peer defense &amp; adversarial questioning</td><td><strong>You referee</strong></td></tr>
+<tr><td>38&ndash;42</td><td>Synthesis, then my accuracy lock</td><td>You synthesize; I lock</td></tr>
+<tr><td>42&ndash;50</td><td>Project transfer, ledger row, Claim Ticket</td><td><strong>Yours</strong></td></tr>
+</tbody>
+</table>
+
+<p>I will step in during your session, and that is by design, not a rescue. If a
+conceptual error starts spreading I flag it without taking the room from you; if
+the room goes quiet I may seed a cold call; if the AI produces a failure you
+missed I will usually ask <em>you</em> to put it to the room rather than answer
+it myself.</p>
+
+<h3>How each lead is graded</h3>
+
+<p>You are graded <strong>live</strong>, during the session, on nine rows worth
+100 points: conceptual correctness (15), quality of your Socratic questions (15),
+exposing an assumption (10), productive use of AI (15), interrogating what the AI
+returns (15), including every classmate (10), time management (5), connection to
+real research decisions (10), and how you handle wrong or uncertain answers (5).
+Each of your five leads is scored on its own, and together they are the 25%.</p>
+
+<p>Two things worth knowing before you plan anything. First, the rubric does
+<strong>not</strong> measure whether you knew every answer &mdash; leading an
+investigation well while genuinely unsure can score Exemplary, and "I don't know
+either, how could we find out?" is a strong move. Second, there is one
+<strong>hard cap</strong>: presenting an AI answer as settled without verifying it
+in front of the room caps the AI row at Beginning regardless of everything else.
+AI may propose; the researcher must verify.</p>
+
+<p>Your classmates fill out a short peer feedback form after each session. Read
+it &mdash; it is the fastest way to be better on your next slot.</p>
+
+<h3>The logistics of your slot</h3>
+<ol>
+<li><strong>About a week ahead</strong> &mdash; read the 🎤 SRL Lead Brief at the
+top of that lecture in the notebook, then read the rest of the notebook and its
+required chapters as a learner. Decide the one thing <em>you</em> are adding that
+the brief does not have.</li>
+<li><strong>Two days ahead</strong> &mdash; submit your preparation script or
+notebook using the template: the puzzle, the commitment question, three Socratic
+questions with the answers you expect (right <em>and</em> wrong), the exact AI
+prompts the class will run with an honest prediction of what the AI will get
+wrong, your assumption-probe, the decision you will make the room defend, a
+timing plan, and a fallback if the tool is down. I review it and send you notes.
+That review is the cheapest place to fix a session, so send it on time even if it
+is rough.</li>
+<li><strong>The day of</strong> &mdash; arrive a few minutes early, open Colab,
+confirm your AI tool responds, paste your first prompt into a scratch cell, and
+have your fallback ready. A dead tool should never kill your session.</li>
+<li><strong>If you have to miss a slot</strong> &mdash; tell me as far ahead as
+you can. Swapping with a classmate's later slot, by agreement, is the first
+option, and it is much easier to arrange in advance than on the morning.</li>
+</ol>
+
 <h3>What to do now</h3>
 <ol>
 <li>Put your dates in your calendar, along with a <strong>prep deadline two days
 before each one</strong>.</li>
 <li>Read the <a href="{srl_file('srl_handbook.md')}">SRL Handbook</a> once this
-week. It is short, and it is the whole job.</li>
+week. It is short, and it is the whole job. Then skim the
+<a href="{srl_file('srl_rubric.md')}">rubric</a> and the
+<a href="{srl_file('srl_prep_template.md')}">preparation template</a>, so you know
+what you are aiming at.</li>
 <li>Look your dates up on the
 <a href="{SITE}/schedule.html">Schedule page</a> to see which notebook each one
 uses and what it covers.</li>

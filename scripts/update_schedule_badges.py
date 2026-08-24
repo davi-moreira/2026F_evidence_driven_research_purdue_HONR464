@@ -353,21 +353,47 @@ def build() -> str:
     return page.replace('{target="_blank"}', "")
 
 
+def rendered_sizes() -> dict[str, int]:
+    """Every way a 65,535 limit could count this page.
+
+    A field that caps "characters" rarely says which characters. So the gate
+    measures all of them and is judged on the LARGEST: utf-8 bytes (a MySQL TEXT
+    column), unicode code points, utf-16 code units (Word and JavaScript), and
+    the code-point count after CRLF line endings, which is what a paste into a
+    Windows editor costs. Whitespace and newlines are included: they are
+    characters too, and they are the "hidden formatting" that makes a page that
+    looks short fail a limit.
+    """
+    raw = RENDERED.read_bytes()
+    txt = raw.decode("utf-8")
+    return {
+        "utf-8 bytes": len(raw),
+        "characters": len(txt),
+        "utf-16 units": len(txt.encode("utf-16-le")) // 2,
+        "characters, CRLF": len(txt) + txt.count("\n"),
+    }
+
+
 def check_rendered_size() -> None:
-    """Fail if the last render of the schedule page breached the byte ceiling."""
+    """Fail if ANY way of counting the rendered page breaches the ceiling."""
     if not RENDERED.exists():
         print("  (docs/schedule.html not rendered yet — size unchecked)")
         return
-    size = RENDERED.stat().st_size
-    pct = 100 * (BYTE_CEILING - size) / BYTE_CEILING
-    if size > BYTE_CEILING:
+    sizes = rendered_sizes()
+    worst_name, worst = max(sizes.items(), key=lambda kv: kv[1])
+    if worst > BYTE_CEILING:
+        detail = "  ".join(f"{k} {v:,}" for k, v in sizes.items())
         raise SystemExit(
-            f"✗ docs/schedule.html is {size:,} bytes — over the {BYTE_CEILING:,} "
-            f"ceiling by {size - BYTE_CEILING:,}. Shrink the page (see the "
-            f"reductions already applied in HEADER and week_studio) before shipping.")
+            f"✗ docs/schedule.html breaches the {BYTE_CEILING:,} ceiling on "
+            f"'{worst_name}': {worst:,}, over by {worst - BYTE_CEILING:,}.\n"
+            f"  {detail}\n"
+            f"  Shrink the page in the GENERATORS (see HEADER, week_studio, "
+            f"notebook_cell, and render_cell's `seen`) before shipping.")
+    pct = 100 * (BYTE_CEILING - worst) / BYTE_CEILING
     flag = "⚠ " if pct < 2 else "✓ "
-    print(f"{flag}docs/schedule.html {size:,} bytes — {BYTE_CEILING - size:,} "
-          f"under the ceiling ({pct:.1f}% margin)")
+    print(f"{flag}docs/schedule.html {worst:,} ({worst_name}, the largest of "
+          f"{len(sizes)} counts) — {BYTE_CEILING - worst:,} under the "
+          f"{BYTE_CEILING:,} ceiling ({pct:.1f}% margin)")
 
 
 def main() -> None:
