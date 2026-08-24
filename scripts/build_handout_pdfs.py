@@ -22,8 +22,14 @@ Those additions are authored once in
 
     _research_project/milestone_course_additions.yml
 
-and the same file drives the marker the schedule shows, so the page and the PDF
-can never disagree about which milestones carry more than the book milestone.
+under `classification` / `additions_markdown`.
+
+That same file also carries `schedule_mark`, but it is a SEPARATE decision and a
+narrower one: the schedule marks a milestone only when its Book Milestone does
+not by itself get the student to the Undergraduate Research Expo. So a milestone
+can carry a full "What this course adds" section and NO schedule mark. Never read
+an unmarked row as "nothing extra owed here", and never delete a section to make
+the schedule quieter.
 
 WHAT IS ENFORCED
 ----------------
@@ -228,6 +234,10 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
         "",
         f"Submit it on Brightspace, under **Assignments** then **M{info['num']}**. "
         f"Brightspace carries the deadline.",
+        "",
+        "Where this document has a **What this course adds** section, that section "
+        "is part of the milestone and is graded, whether or not the course "
+        "schedule marks this milestone.",
         "",
         "This milestone presents "
         + " and ".join(f"**Book Milestone {b['n']}: {_short(b['title'])}** "

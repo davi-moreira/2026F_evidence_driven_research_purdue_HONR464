@@ -83,9 +83,12 @@ FOOTER = '''
 ::: below-table
 
 **Milestone column.** Every milestone links to the Book Milestone it presents in
-[EDR|AI](book/index.html){target="_blank"}. A **{PLUS}** means this course
-requires something beyond that book milestone: see the additional requirements in
-the Brightspace assignment instructions.
+[EDR|AI](book/index.html){target="_blank"}. A **{PLUS}** means that book
+milestone does not by itself get you to the Purdue Fall Undergraduate Research
+Expo, so this course adds something you need in order to apply, to prepare, to
+present, or to show that you presented. Every milestone's Brightspace
+instructions can add requirements of their own and all of them are graded; the
+{PLUS} flags only the ones the conference itself depends on.
 
 ## Core Course References
 
@@ -202,8 +205,8 @@ def no_em_dash(text: str) -> str:
 SEG = re.compile(r"\s*(M\d+)\s*—\s*(.*?)\s*$")
 STATE = re.compile(r"\(([^()]*(?:\([^()]*\)[^()]*)*)\)\s*$")
 
-#: Marks a milestone where the COURSE requires a deliverable or a performance
-#: the Book Milestone page does not ask for. Driven by the `schedule_mark` flag
+#: Marks a milestone whose Book Milestone does not by itself get the student to
+#: the Purdue Fall Undergraduate Research Expo. Driven by the `schedule_mark` flag
 #: in _research_project/milestone_course_additions.yml, which is a SEPARATE
 #: decision from the `classification` that governs the PDF's "What this course
 #: adds" section: turning a mark off must never delete a student instruction.

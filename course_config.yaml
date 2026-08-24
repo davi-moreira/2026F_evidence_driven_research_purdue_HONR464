@@ -255,7 +255,7 @@ milestones:
   M3:  {title: "Verified evidence and contribution map",           due: "2026-09-13", kind: "studio"}
   M4:  {title: "Research Contract v0 and permission determination", due: "2026-09-20", kind: "studio"}
   M5:  {title: "Pathway declaration and mandated contrast (Contract v1)", due: "2026-09-27", kind: "studio"}
-  M6:  {title: "Data and measurement governance",                  due: "2026-10-04", kind: "studio", note: "carries the URC draft abstract"}
+  M6:  {title: "Data and measurement governance",                  due: "2026-10-04", kind: "studio", note: "previews the URC abstract gate that M7 carries"}
   M7:  {title: "First reproducible analysis",                      due: "2026-10-11", kind: "studio", note: "carries the URC conference application and its proof of submission"}
   M8:  {title: "Robustness audit",                                 due: "2026-10-18", kind: "studio"}
   M9:  {title: "Bounded research note and claim-evidence table",   due: "2026-10-25", kind: "studio"}

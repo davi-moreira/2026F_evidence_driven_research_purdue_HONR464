@@ -48,7 +48,8 @@ and submit by Sunday night.
 | # | File | Description |
 |---|---|---|
 | 1 | **A shared Colab notebook link** *or* **`lastname_m07_first_analysis.ipynb`** | The nine-part deliverable below, carried in the notebook itself or in an optional companion **`lastname_m07_first_analysis.pdf`**: the seeded pipeline, your route-specific result with its uncertainty statement, the clean-restart record with your environment record, the claim-to-output trace, two independent re-derivations judged against a tolerance you declared first, the leakage audit with every flag settled, your gated URC abstract, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
+| 2 | **`lastname_m07_conference_application.pdf`** | Proof that you applied to present at the Fall Undergraduate Research Expo: the confirmation page or confirmation email, saved as a PDF. Applying is not optional and it is not something the course does for you. Without this confirmation there is no poster session for you to present at, however good the rest of your project is. |
+| 3 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. The rerun is
 part of the milestone: confirm the result in your write-up matches what the
@@ -252,7 +253,39 @@ without becoming false.
 > carrying its uncertainty, and worded so no later check can make it
 > retroactively false.
 
-### 8. AI Research Ledger rows
+### 8. Applying to the conference
+
+The gated abstract has somewhere to go. Once it clears the studio check, apply
+to present a poster at the **Fall Undergraduate Research Expo** through Purdue's
+Undergraduate Research site:
+<https://www.purdue.edu/undergrad-research/conferences/fall/index.php>.
+
+The form asks for a specific set of things, and it is worth having them written
+down before you open it:
+
+- **Title.** Your project title, informative rather than clever.
+- **Abstract.** The one you just gated. Do **not** put your name inside the
+  abstract box.
+- **Publication consent.** Yes, the abstract may appear in the booklet.
+- **Five keywords** that would let someone working on your question find you.
+- **Author.** You. Projects here are individual by default; an approved group
+  lists every member.
+- **Format.** In person.
+- **Availability** on the day: select every slot you can genuinely make.
+- **Presentation type.** Poster. You are not applying for a research talk.
+- **Research category** and **judging unit**: the ones that fit your question,
+  which for an Honors project is usually the discipline your evidence comes from
+  rather than the college you are enrolled in. Ask me if it is not obvious.
+- **Mentor.** Davi Cordeiro Moreira, `dcordeir@purdue.edu`. The Expo requires a
+  faculty mentor of record, and an application without one does not stand.
+
+When the confirmation arrives, save it as a PDF and submit it with this
+milestone. That confirmation is your evidence that the step was actually taken,
+not merely planned. **The external application deadline is set by the
+conference, not by this course, and it is posted on Brightspace. It does not
+move because your analysis is still settling.**
+
+### 9. AI Research Ledger rows
 
 Every use of AI in building this milestone gets a row in your **AI Research
 Ledger** (the eight-field table: task delegated · tool used · prompt · output
@@ -267,7 +300,7 @@ used" is a legitimate entry if it is true.
 Research Ledger entry scores the Craft criterion **0** and the submission is
 **returned** for completion before it is graded.
 
-### 9. The dossier update line and the version line
+### 10. The dossier update line and the version line
 
 Open the artifact with its version line: **Book Milestone 7, version 1 (first
 reproducible analysis)**, dated, with the reason a reader could use to
