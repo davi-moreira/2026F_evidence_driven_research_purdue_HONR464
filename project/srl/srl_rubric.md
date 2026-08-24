@@ -1,7 +1,7 @@
 # SRL Rubric (100 points)
 
 *How your leading is graded. Read this before your first slot so you know what
-strong leading looks like, then aim your preparation template at it. You are
+strong leading looks like, then aim your prepared notebook at it. You are
 graded live, during the session, on the nine rows below. Each lead is scored on
 its own, and together those scores make up the SRL share of your course grade.*
 
@@ -45,8 +45,9 @@ on a decision the room defends.
 ## How the score comes together
 
 - You are graded **live**, during your session, against these nine rows.
-- Your **preparation template** feeds the score before you even walk in. A strong
-  template shows up as strong Socratic questions (row 2), a real assumption-probe
+- The **notebook you submit two days ahead** feeds the score before you even walk
+  in. A strong **🎤 My Lead Plan**, on top of a notebook you actually worked
+  through, shows up as strong Socratic questions (row 2), a real assumption-probe
   (row 3), a specific AI plan (rows 4–5), a workable timing plan (row 7), and a
   named project connection (row 8).
 - **Revision does not apply** to a live performance the way it applies to a
@@ -57,5 +58,6 @@ on a decision the room defends.
 ---
 
 *Related files: `srl_handbook.md` (the role these rows measure),
-`srl_ai_integration_guide.md` (rows 4 and 5 in depth), `srl_prep_template.md`
-(the document that earns most of this score in advance).*
+`srl_ai_integration_guide.md` (rows 4 and 5 in depth), and the **🎤 My Lead
+Plan** cell in your lecture's notebook (the part that earns most of this score
+in advance).*

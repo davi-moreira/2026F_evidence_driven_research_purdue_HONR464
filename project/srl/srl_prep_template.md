@@ -1,10 +1,17 @@
-# SRL Preparation Template
+# SRL Preparation Template (optional)
 
-*Start from the **SRL Lead Brief** at the top of your lecture's notebook, then
-fill this in and submit it two days before your lead. This is your script. A
-strong prep template is most of a strong session, and the instructor's notes on
-it are the last chance to fix a session before it happens. Keep every section
-in the student voice you will actually use in the room.*
+> **You do not have to fill this in.** What you submit two days before your lead
+> is **your lecture's notebook**, with its **🎤 My Lead Plan** cell complete and
+> the rest worked through as a learner. That is the whole requirement.
+>
+> This worksheet is here for the leads who want to plan in more depth than the
+> five lines of My Lead Plan. Use whichever sections help, ignore the rest, and
+> keep your answers with your notebook rather than submitting a second document.
+
+*Start from the **SRL Lead Brief** at the top of your lecture's notebook. A
+strong plan is most of a strong session, and the instructor's notes on it are
+the last chance to fix a session before it happens. Keep every section in the
+student voice you will actually use in the room.*
 
 ---
 
@@ -147,8 +154,8 @@ clearly labeled as prepared earlier so no one mistakes it for live output):*
 
 ---
 
-*Submit two days before your lead. The instructor reviews and returns notes;
-revise before you walk in. Rubric alignment: this template feeds every row of
-`srl_rubric.md` — your Socratic questions (row 2), assumption-probe (row 3),
-AI plan (rows 4–5), timing (row 7), project connection (row 8), and your
-wrong-answer anticipation (row 9).*
+*What you submit two days before your lead is the notebook, not this sheet. The
+instructor reviews it and returns notes; revise before you walk in. Rubric
+alignment: the planning here feeds every row of `srl_rubric.md` — your Socratic
+questions (row 2), assumption-probe (row 3), AI plan (rows 4–5), timing (row 7),
+project connection (row 8), and your wrong-answer anticipation (row 9).*

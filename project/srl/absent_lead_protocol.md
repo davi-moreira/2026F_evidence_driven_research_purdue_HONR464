@@ -21,16 +21,16 @@ If the drawn student cannot step in, draw again. If no student can step in, the
 instructor leads the session from the lecture notebook's **SRL Lead Brief**,
 which is already public to the whole class.
 
-## The prep template is the substitute's script
+## The submitted notebook is the substitute's script
 
-This is why the two-days-out template matters beyond grading. **A submitted
-preparation template is a complete, runnable script**, so any standby can lead
-from it with minutes of notice.
+This is why the two-days-out submission matters beyond grading. **A submitted
+notebook is a complete, runnable script**, so any standby can lead from it with
+minutes of notice.
 
-- Hand the standby the absent lead's template: the puzzle, the commitment
-  question, the three Socratic questions with anticipated answers, the exact
-  AI prompts with predicted right and wrong outputs, the assumption-probe,
-  the counterexample request, the closing decision, and the timing plan.
+- Hand the standby the absent lead's notebook: the 🎤 SRL Lead Brief with its
+  run of show and its three questions, the 🎤 My Lead Plan cell with the staging
+  and the commitment question, and every prompt, code cell and checkpoint the
+  lecture already carries.
 - The standby runs it as written. They are not expected to improvise a new
   session; they are executing a colleague's plan. Grade the standby generously
   and separately — stepping in is a service, not their own graded slot.
@@ -85,7 +85,7 @@ above is for silence and non-preparation, not for students who communicate.
 
 ---
 
-*Related files: `srl_prep_template.md` (the document that doubles as the standby
-script), `instructor_intervention_protocol.md` (the two-days-out review that
-catches a missing template early), `srl_rubric.md` (the preparation-dependent
-rows affected when no template is submitted).*
+*Related files: the lecture notebook itself (the submission that doubles as the
+standby script), `instructor_intervention_protocol.md` (the two-days-out review
+that catches a missing notebook early), `srl_rubric.md` (the
+preparation-dependent rows affected when nothing is submitted).*

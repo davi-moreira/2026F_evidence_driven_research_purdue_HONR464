@@ -219,7 +219,7 @@ def _write_instructor(cells, out: Path, frames_nb: int | None = None) -> Path:
             if m and frames_nb is not None and frames_nb not in FRAME_EXEMPT:
                 nb.cells.append(nbformat.v4.new_markdown_cell(
                     _frame_for(int(m.group(1)), n_lectures, frames_nb)))
-            if (BRIEF_MARK.search(source) and "My Lead Plan" not in source
+            if (BRIEF_MARK.search(source) and "### 🎤 My Lead Plan" not in source
                     and frames_nb is not None and frames_nb not in FRAME_EXEMPT):
                 nb.cells.append(nbformat.v4.new_markdown_cell(LEAD_PLAN))
         elif kind == "code":

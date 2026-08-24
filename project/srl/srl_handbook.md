@@ -144,14 +144,20 @@ Good SRL sessions are built, not improvised. Here is the rhythm.
 
 ### Two days before your lead
 
-- Submit your **preparation template** (`srl_prep_template.md`). This is your
-  script: the puzzle, the commitment question, three Socratic questions with the
-  answers you expect (right and wrong), the exact AI prompt or prompts the
-  class will run, what you expect the AI to get right and wrong, your
-  assumption-probe, your counterexample request, the decision you will make the
-  room defend, a timing plan, and a fallback if the AI tool is down.
-- The instructor reviews it and sends notes. Treat those notes seriously; they
-  are the difference between a session that lands and one that stalls.
+- Submit **your lecture's notebook, filled in**. Open the notebook for the
+  lecture you lead, complete the **🎤 My Lead Plan** cell at the top of your
+  lecture, and work the rest of the notebook as a learner: the puzzle answer,
+  the predictions, the evidence readings, the practice, the closing moves. Hand
+  in the whole notebook on the course platform.
+- **🎤 My Lead Plan** is the part about leading rather than learning: how you
+  will stage the puzzle, the one thing you are adding, your commitment question,
+  the decision you will close on, and your fallback if the AI tool is down. Five
+  lines are enough.
+- The instructor reviews the notebook and sends notes on it. Treat those notes
+  seriously; they are the difference between a session that lands and one that
+  stalls.
+- `srl_prep_template.md` is optional. Reach for it only if you want a longer
+  planning worksheet than the five lines the notebook asks for.
 
 ### The day of your lead
 
@@ -245,8 +251,8 @@ it keeps your session accurate.
   on the **Schedule page** for the format and the notebook.
 - Your **SRL Lead Brief** is already in the lecture notebook, at the very start.
   Start reading it and the notebook **about a week ahead**.
-- You submit your **preparation template two days ahead**; the instructor sends
-  notes.
+- You submit **your lecture's notebook, filled in, two days ahead**, with its
+  **🎤 My Lead Plan** cell complete; the instructor sends notes on it.
 - Each session ends with the class recording an **AI Research Ledger** line and a
   **Claim Ticket**, the two records that travel with every session in this
   course.
