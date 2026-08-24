@@ -139,6 +139,70 @@ def number(p, num_id: int, ilvl: int = 0):
     return p
 
 
+# ── Davi's Word pass, folded back (D66) ─────────────────────────────────────
+# He edits the BUILT .docx in Word, and his 2026-08-23 pass added blank
+# paragraphs between the body blocks so the printed syllabus breathes. The
+# spacing is his instruction, so the generator now produces it. Each entry is
+# (paragraph-text prefix, how many empty paragraphs must sit immediately above
+# it). Applied as a post-pass so the content code below stays readable.
+BLANK_ABOVE = [
+    ("COURSE WEBSITE:", 1),
+    ("COURSE OBJECTIVES:", 1),
+    ("LEARNING OUTCOMES:", 1),
+    ("COURSE MATERIALS:", 1),
+    ("Course book (free, required):", 1),
+    ("Recommended: Blair", 1),
+    ("Computing (Required):", 1),
+    ("AI tools (Required):", 1),
+    ("ASSESSMENTS", 1),
+    ("The course assesses the research chain", 1),
+    ("Grading: Final letter grades", 1),
+    ("Grading scale:", 3),
+    ("Attendance:", 1),
+    ("Participation:", 1),
+    ("IYT Practice:", 1),
+    ("Student Research Lead:", 1),
+    ("EXTRA CREDIT OPPORTUNITIES:", 1),
+    ("Course Evaluations:", 1),
+    ("Issues in the Course Materials:", 1),
+    ("AI POLICY:", 3),
+    ("AI is a research assistant", 1),
+    ("Some activities may be done without AI", 1),
+    ("Deadlines: The Registrar", 1),
+    ("Academic Integrity:", 1),
+    ("Accessibility and Accommodations:", 1),
+    ("CAPS Information:", 1),
+    ("Non-Discrimination Statement:", 1),
+    ("Basic Needs Security:", 1),
+    ("Emergency Situation(s):", 1),
+    ("Subject to Change Policy:", 1),
+    ("Tentative Course Schedule", 1),
+]
+
+
+def apply_blank_spacing(doc):
+    """Make each BLANK_ABOVE block sit under exactly N empty paragraphs."""
+    from copy import deepcopy
+    for prefix, want in BLANK_ABOVE:
+        target = next((p for p in doc.paragraphs
+                       if p.text.strip().startswith(prefix)), None)
+        if target is None:
+            raise SystemExit(f"✗ blank-spacing anchor not found: {prefix!r}")
+        el = target._p
+        have = 0
+        probe = el.getprevious()
+        while probe is not None and probe.tag == el.tag and not "".join(
+                probe.itertext()).strip():
+            have += 1
+            probe = probe.getprevious()
+        for _ in range(want - have):
+            blank = deepcopy(el)
+            for child in list(blank):
+                if not child.tag.endswith("}pPr"):
+                    blank.remove(child)
+            el.addprevious(blank)
+
+
 def para(doc, text="", style="Normal", bold_prefix=None, space_after=None,
          align=None):
     """A paragraph, optionally opening with a bold run-in label (QM474's idiom)."""
@@ -579,7 +643,7 @@ def main():
               "or Wednesday lectures as Socratic investigations. Slots are "
               "randomly assigned at the beginning of the semester. Prepare from "
               "the SRL Lead Brief in the lecture notebook, work about one week "
-              "ahead, and submit your preparation script or notebook two days "
+              "ahead, and submit your preparation script or notebook the day "
               "before you lead. Your leading is assessed on preparation, "
               "disciplinary accuracy, facilitation of the investigation, "
               "inclusion of the room, and your ability to synthesize and defend "
@@ -765,8 +829,9 @@ def main():
     h.runs[0].bold = True
     h.runs[0].font.size = Pt(14)
     para(doc, "John Martinson Honors College, Purdue University   ·   "
-              "Professor Davi Moreira   ·   August 24 – December 11, 2026",
-         space_after=8)
+              "Professor Davi Moreira   ·   Section 002, Monday / Wednesday / "
+              "Friday, 1:30–2:20 p.m., HCRS-1054   ·   "
+              "August 24 – December 11, 2026", space_after=8)
 
     rows = build_schedule_rows()
     tbl = doc.add_table(rows=len(rows) + 1, cols=5)
@@ -791,13 +856,13 @@ def main():
         if r["topic"].startswith("PURDUE") or r["note"]:
             for run in c[4].paragraphs[0].runs:
                 run.bold = True
-    para(doc, "")
     para(doc, "Subject to change. While I will try to adhere to the course "
               "schedule as much as possible, I also want to adapt to your "
               "learning pace and style; the syllabus and course plan may change "
-              "during the term. Milestone briefs, rubrics, and exact submission "
-              "times are posted on Brightspace.")
+              "during the term. The official source of record is the course "
+              "Brightspace page.")
 
+    apply_blank_spacing(doc)
     dropped = prune_orphan_hyperlinks(doc)
     doc.save(OUT)
     patch_header_banner(OUT, BANNER, BANNER_CROP_W / 1423)

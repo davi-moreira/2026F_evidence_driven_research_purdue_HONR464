@@ -29,12 +29,12 @@ for up to half the lost points).
 | ID | Presentation format (audience action) | dev | pres | due | rev |
 |---|---|---|---|---|---|
 | M1 | **30-second curiosity pitch** + baseline share — class gives one strength + one question each | M2–M3 | M4 (studio) | Sun Aug 30 | folds into M2 |
-| M2 | **2-minute landscape pitch** — class votes the compass position + names one risk | M4–M6 | M7 (studio) | Sun Sep 6 | eligible; feedback feeds M4 |
+| M2 | **2-minute landscape pitch** — class votes the compass position + names one risk | M4–M6 | M7 (studio) | Mon Sep 7 | eligible; feedback feeds M4 |
 | M3 | **Contribution-map gallery walk** — claim/evidence maps on screens; sticky-note challenges; one challenge incorporated live | M7–M8 | M9 (studio) | Sun Sep 13 | eligible |
 | M4 | **3-minute charter declaration** — listeners each write one clarifying question; declaration revised from them | M9–M13 | M17 (studio) | Sun Sep 20 | eligible |
 | M5 | **Design-audit walkthrough** — listeners file two-line reviews (best rung / weakest rung of the measurement ladder) | M17–M16 | M16 (studio) | Sun Sep 27 | eligible |
 | M6 | **90-second causal/boundary statement + peer red-team** — classmates reply naming the identification move or the language boundary | M16–M16 | M17 (studio) | Sun Oct 4 | eligible |
-| M7 | **Protocol clinic + abstract workshop** — claim-anatomy checklist, rotating consults, partner proof-read, inside the studio block; URC abstract cleared the internal gate | M17–M19 | M20 (studio) | Sun Oct 11 | protocol eligible; abstract not revisable (gate) |
+| M7 | **Protocol clinic + abstract workshop** — claim-anatomy checklist, rotating consults, partner proof-read, inside the studio block; URC abstract cleared the internal gate | M17–M19 | M20 (studio) | Tue Oct 13 | protocol eligible; abstract not revisable (gate) |
 | M8 | **Protocol cross-review** — partner swaps declared-analysis protocols and pre-registers one predicted attack on the other's plan | M20–M21 | M22 (studio) | Sun Oct 18 | eligible |
 | M9 | **First-evidence walkthrough** — 60-second redesign pitch: weakness, fix, before/after diagnosands on the first computed estimate | M22–M24 | M25 (studio) | Sun Oct 25 | eligible |
 | M10 | **Poster-draft red-team** — the five audits (claim boundary, figure honesty, read path, uncertainty, accessibility); two peers + the required Poster Critic and Robustness & Sensitivity Reviewer roles; author triages hits | M25–M27 | M28 (studio) | Sun Nov 1 | eligible |

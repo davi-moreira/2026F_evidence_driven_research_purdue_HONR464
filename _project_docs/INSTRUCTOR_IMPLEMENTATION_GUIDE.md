@@ -134,12 +134,13 @@ are in the rest of the SRL suite (`project/srl/`).
 Sixteen milestones (**M1–M16**), one graded artifact each, on a **studio
 kickoff → develop → work it at the Friday studio → submit Sunday → revise where
 eligible** cadence. D55 put every deadline on a Sunday at 11:59 PM except the
-three the conference block pins to weekdays. Due dates are fixed in
-`course_config.yaml milestones:`:
+three the conference block pins to weekdays and the two D66 moved off a holiday
+weekend. Due dates are fixed in `course_config.yaml milestones:`:
 
-| M1 Sun Aug 30 · M2 Sun Sep 6 · M3 Sun Sep 13 · M4 Sun Sep 20 · M5 Sun Sep 27 ·
-M6 Sun Oct 4 · M7 Sun Oct 11 · M8 Sun Oct 18 · M9 Sun Oct 25 · M10 Sun Nov 1 ·
-**M11 Wed Nov 4 (at class)** · **M12 Fri Nov 6, 5:00 PM** ·
+| M1 Sun Aug 30 · **M2 Mon Sep 7 (Labor Day)** · M3 Sun Sep 13 · M4 Sun Sep 20 ·
+M5 Sun Sep 27 · M6 Sun Oct 4 · **M7 Tue Oct 13 (October Break)** ·
+M8 Sun Oct 18 · M9 Sun Oct 25 · M10 Sun Nov 1 ·
+**M11 Wed Nov 4 (at class)** · **M12 Fri Nov 6, 2:30 PM** ·
 **M13 Sun Nov 8, 11:59 PM (terminal)** · M14 Sun Nov 15 ·
 M15 Sun Nov 29 (async) · M16 Sun Dec 6 (the final milestone) |
 

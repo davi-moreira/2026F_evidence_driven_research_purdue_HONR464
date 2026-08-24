@@ -85,8 +85,8 @@ FRAME_SPECIAL = {13: FRAME_CONF}   # conference week: the path ends at the Expo
 
 LECTURE_HEAD = re.compile(r"(?m)^#\s*Lecture\s+(\d)\s*$")
 
-# The Student Research Lead fills the lecture notebook itself and submits it two
-# days before leading; the plan cell is the one thing the brief above does not
+# The Student Research Lead fills the lecture notebook itself and submits it the
+# day before leading (D66); the plan cell is the one thing the brief above does not
 # already give them. Injected at build time next to the frame, so all 25 brief
 # locations stay identical and the gitignored sources stay free of it. nb01's
 # briefs are the instructor-led Week-1 models and take no plan cell (FRAME_EXEMPT).
@@ -94,7 +94,7 @@ BRIEF_MARK = re.compile(r"(?m)^\s*###[^\n]*SRL Lead Brief")
 LEAD_PLAN = (
     "### 🎤 My Lead Plan\n\n"
     "*If this lecture is your slot, fill this in, fill the rest of the notebook "
-    "as a learner, and submit the whole notebook two days before you lead, by "
+    "as a learner, and submit the whole notebook the day before you lead, by "
     "11:59 PM on the course platform. Your classmates can read it, the same way "
     "they read the brief above. If it is not your slot, read it to see how the "
     "session will run.*\n\n"

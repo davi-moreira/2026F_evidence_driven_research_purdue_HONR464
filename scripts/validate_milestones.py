@@ -96,7 +96,7 @@ def main() -> None:
     # --- fixed anchors -----------------------------------------------------
     anchors = {
         6:  [date(2026, 10, 4)],    # URC draft abstract (Sunday, D54)
-        7:  [date(2026, 10, 11)],   # URC conference application (Sunday, D54)
+        7:  [date(2026, 10, 13)],   # URC conference application (D66: Tue, after October Break)
         11: [date(2026, 11, 4)],    # poster first draft, due at class (Wednesday)
         12: [date(2026, 11, 6)],    # peer review, Friday 2:30 PM — feeds the Nov 8 lock
         13: [date(2026, 11, 8)],    # final poster lock (terminal, Sunday 11:59 PM)
@@ -135,7 +135,7 @@ def main() -> None:
         sys.exit(1)
     print("✓ milestone system consistent — 16 milestones (M1–M16), "
           "dev→present→submit ordering holds, anchors fixed "
-          "(Oct 4, Oct 11, Nov 4, Nov 6, Nov 8, Nov 15, Nov 17, Nov 29, Dec 6)")
+          "(Oct 4, Oct 13, Nov 4, Nov 6, Nov 8, Nov 15, Nov 17, Nov 29, Dec 6)")
 
 
 if __name__ == "__main__":

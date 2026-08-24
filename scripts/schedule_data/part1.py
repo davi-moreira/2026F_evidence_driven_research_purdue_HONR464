@@ -212,7 +212,7 @@ MEETINGS_P1 = [
     {
         "meeting": 6, "date": "2026-09-04", "day": "Fri", "modality": "in-person",
         "unit": "Week 2 — Studio 2: Set your rules, shape your question",
-        "title": "Studio Friday — Milestone 2: your rules and your question (M2 due Sunday)",
+        "title": "Studio Friday — Milestone 2: your rules and your question (M2 due Monday, Labor Day)",
         "driving_question": "Do your working agreement and your declared question hold up against each other, and does either survive a stranger who knows nothing about your project?",
         "secondary_questions": "Does every never-delegate line cover a decision your declaration actually made? Which word fixes your kind, and which fixes your reach? What does your boundary pair refuse to claim?",
         "inquiry": "all four compass positions (studio)",

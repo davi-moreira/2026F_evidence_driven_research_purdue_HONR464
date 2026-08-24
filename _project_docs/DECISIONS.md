@@ -3522,3 +3522,71 @@ week before that slot. The announcement is now the *draw plus the shape of the
 job*; the working documents travel with the individual messages. That routing
 only holds if the per-student files are actually sent alongside the
 announcement — the checklist item covers it.
+
+---
+
+## D66 — The course platform is authoritative for due dates; M2, M7, Studio-2 feedback and the SRL lead time move (2026-08-24)
+
+**Ruling (Davi, 2026-08-24).** Where a due date on the course platform disagrees
+with the repository, **the platform is correct and the repository is corrected**.
+The repository stays the source of truth for the *rules*; the platform is the
+source of truth for the *dates students actually see*.
+
+Checking the platform's full 56-item due-date list against the repository turned
+up four disagreements. All four resolve toward the platform.
+
+| Item | Repository had | Platform has | Why |
+|---|---|---|---|
+| **M2** | Sun Sep 6 | **Mon Sep 7, 11:59 PM** | Labor Day: the deadline moves onto the holiday, so the long weekend is work time |
+| **M7** | Sun Oct 11 | **Tue Oct 13, 11:59 PM** | October Break: the deadline clears the break rather than landing inside it |
+| **Studio 2 feedback** | Sun Sep 6 | **Tue Sep 8, 11:59 PM** | the night before Studio 3 opens, which in that week is a Wednesday |
+| **M12 clock** | Fri Nov 6, 5:00 PM | **Fri Nov 6, 2:30 PM** | ten minutes after the Friday class ends (1:30–2:20 p.m., HCRS-1054) |
+
+**The SRL preparation deadline changes with them.** D18 set it at "two days
+ahead", which the generators read as *two class days* and which put slot 01 on a
+Friday for a Monday lecture. The platform has every SRL submission at **11:59 PM
+the calendar day before the lecture**, and that is now the rule: `lecture − 1
+day`, with **no class-day snapping** — a Sunday or a holiday is a perfectly good
+submission date, because a deadline is not a meeting. Slots 01–03 become Sun Aug
+30, Tue Sep 1 and Tue Sep 8, matching the platform exactly.
+
+> **Consequence to watch.** The instructor's review window shrinks from a full
+> working day to the morning of the lecture. `instructor_intervention_protocol.md`
+> still promises returned notes; that promise is now same-morning.
+
+**Two invariants are deliberately relaxed.** D55's "every milestone is due the
+Sunday after its Friday studio" now has two holiday exceptions on top of the
+three conference-block weekday pins, and the studio-feedback survey no longer
+always closes on the same night as its milestone. Both are stated on the
+student-facing surfaces rather than left implicit.
+
+**Mechanics.** `course_config.yaml` carries the M2 and M7 dates directly, each
+with the reason; a new `participation.items.studio_feedback.overrides` map
+carries Studio 2's date, so `build_participation_schedules.py` computes the
+Sunday rule and lets the config override it where the calendar moved. Nothing is
+hand-edited in a generated file.
+
+**Also folded here (D62 procedure).** The syllabus `.docx` was newer than its
+generator, so Davi's Word pass was diffed out before the builder was ever run
+again. Three instructions came back: blank paragraphs between the body blocks
+(three of them above *Grading scale* and above *AI POLICY*, one everywhere
+else); the embedded schedule header gains **"Section 002, Monday / Wednesday /
+Friday, 1:30–2:20 p.m., HCRS-1054"**, matching the standalone schedule; and the
+subject-to-change note ends **"The official source of record is the course
+Brightspace page."** instead of naming briefs, rubrics and submission times. All
+three now come out of `scripts/build_syllabus_docx.py`, verified by regenerating
+and diffing to his file: 172 paragraphs against 172, differing only in the four
+date/policy changes above. Trailing spaces Word left on a few runs were not
+reproduced.
+
+**Still open after this ruling** (reported, not fixed here):
+
+- Every Friday studio row's homework field says **"Submit M*n* tonight
+  (11:59 PM)"** while the same row's milestone field says the milestone is due
+  the Sunday after. D55 moved the deadline and these strings did not follow.
+  Corrected for M2 and M7 because their dates changed; **M5, M6, M8 and the rest
+  still say "tonight"** and need Davi's call on whether the Friday submission is
+  a real checkpoint or the wording is simply stale.
+- The platform carries **three Extra Credit items**; the syllabus describes two.
+  *Mid-term Course Evaluation* (Oct 2) has no counterpart in the syllabus text,
+  which promises the bonus only for the **final** course evaluation.

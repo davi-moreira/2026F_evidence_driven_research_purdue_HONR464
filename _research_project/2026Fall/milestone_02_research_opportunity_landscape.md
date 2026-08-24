@@ -26,8 +26,8 @@ It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with the
 reproducible package and cold run in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-work it at the Friday studio → submit Sunday, 11:59 PM → revise (where
-eligible)**. Every milestone also updates your
+work it at the Friday studio → submit by the deadline on the course platform,
+11:59 PM → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in
@@ -38,8 +38,8 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Sunday, September 6, 11:59 PM** (you work on it at that week's Friday
-studio and submit by Sunday night).
+Due: **Monday, September 7, 11:59 PM** (you work on it at that week's Friday
+studio, and the Labor Day weekend is yours to finish it).
 
 | # | File | Description |
 |---|---|---|

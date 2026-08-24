@@ -79,12 +79,12 @@ Sunday after, 11:59 PM.
 | Wk | Studio (notebook) | Lec | Milestone · due | The week's research decision |
 |---|---|---|---|---|
 | 1 | S1 Frame the inquiry (`nb01`) | 2 | M1 · Sun Aug 30 | What am I curious about, what do I already believe, and what evidence would change my mind? |
-| 2 | S2 Govern the work (`nb02`) | 2 | M2 · Sun Sep 6 | How will my tools and I work — and what exactly am I asking, in what kind and reach? |
+| 2 | S2 Govern the work (`nb02`) | 2 | M2 · Mon Sep 7 (Labor Day) | How will my tools and I work — and what exactly am I asking, in what kind and reach? |
 | 3 | S3 Ground it in verified evidence (`nb03`) | 1 | M3 · Sun Sep 13 | What is genuinely known, what is unresolved, and how must my question change? |
 | 4 | S4 Declare and diagnose provisionally (`nb04`) | 2 | M4 · Sun Sep 20 | What is my Contract v0 — MIDA, uncertainty, provisional measures, permission status? |
 | 5 | S5 Develop the pathway — route hub (`nb05`) | 2 | M5 · Sun Sep 27 | Which route do my question and licence support, and what can it never establish? |
 | 6 | S6 Govern data and measurement (`nb06`) | 2 | M6 · Sun Oct 4 | How did the data reach me, under what permission, and do my measures measure my concepts? |
-| 7 | S7 Produce a reproducible first analysis (`nb07`) | 2 | M7 · Sun Oct 11 | What does my declared analysis actually produce, with what uncertainty, traceable to which cell? |
+| 7 | S7 Produce a reproducible first analysis (`nb07`) | 2 | M7 · Tue Oct 13 (October Break) | What does my declared analysis actually produce, with what uncertainty, traceable to which cell? |
 | 8 | S8 Stress-test and adjudicate (`nb08`) | 1 | M8 · Sun Oct 18 | Which checks did I pre-list, what survived them, and what remains unruled-out? |
 | 9 | S9 Write, bound, and disclose (`nb09`) | 2 | M9 · Sun Oct 25 | What bounded claim can I write down, with every sentence traced to evidence and disclosure? |
 | 10 | S10 Adapt and defend (`nb10`) | 2 | M10 · Sun Nov 1 | What does my venue require, and what artifact satisfies it without inflating the claim? |

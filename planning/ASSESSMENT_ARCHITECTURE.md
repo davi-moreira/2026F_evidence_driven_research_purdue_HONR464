@@ -399,7 +399,7 @@ board.
 The Student Research Lead score is produced per slot:
 
 1. The lead receives their SRL page **five days ahead** and submits a
-   **preparation template two days ahead** for instructor review; the template
+   **filled notebook the day before, 11:59 PM** for instructor review; the template
    pre-loads rows 2 (Socratic questions), 3 (assumption-probe), 4–5 (AI plan),
    7 (timing), and 8 (project connection).
 2. The lead runs the room **live** and is scored on all nine rubric rows

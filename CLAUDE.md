@@ -205,7 +205,8 @@ running a Socratic investigation. Slots are **randomly assigned at the start of
 the semester** (no rotation, no seats). Each lecture's **SRL Lead Brief** is a
 STUDENT-VISIBLE `### 🎤 SRL Lead Brief` cell that opens that lecture in its
 notebook (right after `# Lecture N`, before the 🧩 Research Puzzle); leads prep
-from one week ahead and submit a preparation script/notebook two days ahead.
+from one week ahead and submit a preparation script/notebook the day before
+the lecture, 11:59 PM (D66).
 Briefs must stay simple to follow and explicitly leave room for the lead's own
 staging. Fixed section frames, enforced by the session-guide generator
 (sums = 50):
@@ -248,8 +249,18 @@ The peer cold run is IN CLASS on the Week-15 Wednesday. Course milestones are
 The studio is still where the work happens; the deadline is the end of that
 weekend. Three exceptions keep their weekday slots: M11 (Wed Nov 4, at class),
 M12 (Fri Nov 6, 2:30 PM, so peer criticism reaches authors before the lock) and
-M13 (Sun Nov 8, terminal). `course_config.yaml milestones:` is the source of
-truth for every due date.
+M13 (Sun Nov 8, terminal). **D66 adds two holiday exceptions: M2 is Mon Sep 7
+(Labor Day) and M7 is Tue Oct 13 (October Break).**
+`course_config.yaml milestones:` is the source of truth for every due date.
+
+**🚨 D66 — the course platform wins on dates.** Where a due date on Brightspace
+disagrees with this repository, **the platform is correct**: fix the repository,
+never the platform, and record the correction. The repository still owns the
+*rules*; the platform owns the *dates students see*. The studio-feedback survey
+takes the same treatment through
+`course_config.yaml participation.items.studio_feedback.overrides` (Studio 2 →
+Tue Sep 8). SRL preparation is due **11:59 PM the calendar day before the
+lecture**, with no class-day snapping.
 
 **All seven active-learning moves + the lecture's 📒 ledger row run INSIDE the
 50 minutes (D33)**, above each lecture's `### ⏸ Optional depth from here`

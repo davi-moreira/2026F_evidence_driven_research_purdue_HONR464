@@ -45,12 +45,12 @@ are `M1…M16`.
 | ID | Milestone | Develops (meetings) | Studio work / review | Due | Book Milestone (version) |
 |---|---|---|---|---|---|
 | M1 | Curiosity committed and the research problem | M1–M3 | curiosity share + 30-sec pitch at the Week-1 studio (M3) | Sun Aug 30, 11:59 PM | 1 — Your curiosity, committed (v1) |
-| M2 | Your rules and your question | M4–M6 | working-agreement swap + question declaration (M6) | Sun Sep 6, 11:59 PM | 2 — Your rules and your question (v1) |
+| M2 | Your rules and your question | M4–M6 | working-agreement swap + question declaration (M6) | Mon Sep 7, 11:59 PM | 2 — Your rules and your question (v1) |
 | M3 | Verified evidence and contribution map | M7–M8 | contribution-map gallery walk (M8) | Sun Sep 13, 11:59 PM | 3 — Your evidence base (v1) |
 | M4 | Research Contract v0 and permission determination | M9–M11 | 3-min contract declaration (M11) | Sun Sep 20, 11:59 PM | 4 — Your research contract, v0 (v1) |
 | M5 | Pathway declaration and mandated contrast (Contract v1) | M12–M14 | route jigsaw + pathway defense (M14) | Sun Sep 27, 11:59 PM | 5 — Your pathway, declared (v1) |
 | M6 | Data and measurement governance | M14–M17 | provenance clinic + measurement spec review (M17) | Sun Oct 4, 11:59 PM | 6 — Your data and measurement, governed (v1) |
-| M7 | First reproducible analysis | M17–M20 | pipeline clinic + conference-application gate (M20) | Sun Oct 11, 11:59 PM | 7 — Your first reproducible analysis (v1) |
+| M7 | First reproducible analysis | M17–M20 | pipeline clinic + conference-application gate (M20) | Tue Oct 13, 11:59 PM | 7 — Your first reproducible analysis (v1) |
 | M8 | Robustness audit | M20–M22 | audit walkthrough + adjudication round (M22) | Sun Oct 18, 11:59 PM | 8 — Your robustness audit (v1) |
 | M9 | Bounded research note and claim-evidence table | M22–M25 | note red-team + trace-or-cut drill (M25) | Sun Oct 25, 11:59 PM | 9 — Your bounded claims (v1) |
 | M10 | Venue contract and the publication-ready artifact | M25–M28 | artifact criticism gallery + defense rehearsal (M28) | Sun Nov 1, 11:59 PM | 10 — Your artifact, ready to publish or present (v1) |
@@ -96,7 +96,7 @@ dossier components and appear nowhere in student-facing material.
   the terminal Sun Nov 8 poster lock or the Tue Nov 17 Expo — so the omission
   may be deliberate. Davi rules whether they are revisable; until he does, do
   not assume either way.
-- Hard external anchors: URC abstract internal gate Sun Oct 11 (external
+- Hard external anchors: URC abstract internal gate Tue Oct 13 (external
   deadline TBD); poster print submission Sun Nov 8, 11:59 PM; Expo Tue Nov 17.
 - Fri Dec 11, the last class, is the course-closing **reflection session**
   (D54). It collects a light reflection deliverable scored under

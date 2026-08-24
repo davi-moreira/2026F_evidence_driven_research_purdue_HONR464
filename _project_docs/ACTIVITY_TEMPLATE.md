@@ -150,8 +150,8 @@ immediately after `# Lecture N` (D22):
 [Mission (one sentence) · run-of-show table with the day's fixed minute frame ·
 three Socratic questions with listen-for hints · one AI trap to watch for ·
 checkpoint minute marks · a "Make it yours" creative-room paragraph · the prep
-cadence (start one week ahead; preparation script/notebook due two days
-ahead).]
+cadence (start one week ahead; preparation script/notebook due 11:59 PM
+the day before the lecture).]
 ```
 
 Keep the brief simple and short (about 40 lines), with zero em dashes, second

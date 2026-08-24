@@ -157,7 +157,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Instructor prep:** Brief the SRL on the burnout split and its listen-fors; file the audit key (the kind fixed from the data, the double barrel, the 71-versus-53.5 number, and both planted sound elements); verify the midpoint-share cell; confirm the Research Question Diagnostician role opens from Workspace; print the synopsis form.
 - **Risks / contingency:** The 23-minute lab is the tightest block of the week, so if it runs long the 🔁 modification is the only movable piece and drops to a named modification with no run — Verify and Calibrate are never cut; five students leave one reader unpaired at peer defense, so the SRL takes the spare while the instructor stays uncommitted for the accuracy lock.
 
-### M6 — Fri 2026-09-04 (in-person) — Studio Friday — Milestone 2: your rules and your question (M2 due Sunday)
+### M6 — Fri 2026-09-04 (in-person) — Studio Friday — Milestone 2: your rules and your question (M2 due Monday, Labor Day)
 
 - **Driving question:** Do your working agreement and your declared question hold up against each other, and does either survive a stranger who knows nothing about your project?
 - **Secondary questions:** Does every never-delegate line cover a decision your declaration actually made? Which word fixes your kind, and which fixes your reach? What does your boundary pair refuse to claim?
@@ -176,13 +176,13 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 studio log: record the changed word you could not explain in one sentence and the candidate wording you rejected because of it.
 - **Discussion prompt:** Hand your question and your card to someone who does not know your project. Where did they stall, and what does that stall tell you to fix first?
 - **Project connection:** Milestone 2 closes today; the declared question is what Studio 3 grounds in verified evidence, and what the evidence map may force you to revise.
-- **Milestone developed:** M2 — Your rules and your question, Book Milestone 2 v1 (kickoff, worked; DUE Sunday, September 6, 11:59 PM)
+- **Milestone developed:** M2 — Your rules and your question, Book Milestone 2 v1 (kickoff, worked; DUE Monday, September 7, 11:59 PM — Labor Day)
 - **Milestone work time:** 40 min studio block
 - **Milestone presentation/review:** M2 worked at the studio and submitted (no class presentation); the stranger test with a classmate replaces it
 - **Student prep:** Your ledger rows, Monday's responsibility lines and buckets, Wednesday's lead question, and a working GenAI Studio sign-in.
 - **Student artifact:** Submitted Milestone 2: the working agreement (statement, three rules, opened ledger, delegation map, red-flag screen) and the declaration (lead question, field card, chosen wording, boundary pair, uncertainty line)
 - **Exit ticket:** Claim Ticket #6: my declared question in one sentence, and the stronger sentence I already know I cannot defend.
-- **Homework / next milestone:** Submit Milestone 2 tonight (11:59 PM). No class Monday for Labor Day, so Week 3 has a single lecture: read both evidence lessons before Wednesday and finish the candidate list from 'Research Builds on Research', because the lecture is spent verifying rather than gathering.
+- **Homework / next milestone:** Milestone 2 is due Monday, September 7, at 11:59 PM: finish it over the long weekend. No class that Monday for Labor Day, so Week 3 has a single lecture: read both evidence lessons before Wednesday and finish the candidate list from 'Research Builds on Research', because the lecture is spent verifying rather than gathering.
 - **Instructor prep:** Stage the M2 brief and rubric; confirm the Research Question Diagnostician role and its knowledge collection are live on a student account; collect the signed synopsis forms; queue the stand-up order.
 - **Risks / contingency:** A declaration reading 'descriptive because my data are observational' fails the kind gate and comes back for a version 1, so catch it at pass 5 rather than in grading; a missing ledger row scores the Craft criterion 0 and returns the submission unread, so the 45–50 close reads the three blocking checks before anything is submitted.
 
@@ -610,13 +610,13 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 abstract drill: find the one sentence a skimming reader would over-believe, and defuse it without weakening what you can actually defend.
 - **Discussion prompt:** Which verb in your abstract is licensed by the result as it exists today — and which one is still a promise?
 - **Project connection:** M7 closes and the abstract clears its internal gate; the exact submitted package is what Studio 8 attacks with its pre-listed checks next week.
-- **Milestone developed:** M7 — First reproducible analysis, Book Milestone 7 v1 (worked; DUE Sunday, October 11, 11:59 PM; URC abstract internal gate); M8 — Robustness audit, Book Milestone 8 v1 (kickoff)
+- **Milestone developed:** M7 — First reproducible analysis, Book Milestone 7 v1 (worked; DUE Tuesday, October 13, 11:59 PM — October Break; URC abstract internal gate); M8 — Robustness audit, Book Milestone 8 v1 (kickoff)
 - **Milestone work time:** 40 min studio block
 - **Milestone presentation/review:** M7 worked at the studio and submitted by 11:59 PM; the internal gate status recorded project by project; the Reproducibility Auditor's reproduction-gap and claim-to-output readings logged in the Ledger
 - **Student prep:** A runnable package with a result and its uncertainty; the URC abstract drafted at 150–250 words; the AI-code verification record beside the code it verifies.
 - **Student artifact:** Submitted M7 + restart record + environment record + claim-to-output table + the gated abstract with its status
 - **Exit ticket:** Claim Ticket #20: my gate status — pass, revise, or not yet evidenced — and the sentence that decided it.
-- **Homework / next milestone:** Submit M7 tonight (11:59 PM). No class Monday (October break). Read all four stress-test lessons before Wednesday — robustness and sensitivity, diagnostics and negative tests, AI as adversarial reviewer, recognizing false confidence — and draft the pre-list they ask for.
+- **Homework / next milestone:** M7 is due Tuesday, October 13, at 11:59 PM: the break weekend is yours to finish it. No class Monday (October break). Read all four stress-test lessons before Wednesday — robustness and sensitivity, diagnostics and negative tests, AI as adversarial reviewer, recognizing false confidence — and draft the pre-list they ask for.
 - **Instructor prep:** Print the internal-gate checklist; stage the M8 Brightspace brief; confirm the Reproducibility Auditor role is live and that the required-touchpoint registry names it here; state that the internal gate binds today regardless of the external portal; set the consult order from the stand-up blockers.
 - **Risks / contingency:** The external conference portal shifts → the internal gate still runs today and abstracts forward when the portal opens, because the gate is a course instrument and not a submission button; a package fails to execute at the deadline → it is submitted as the diagnosed finding it is, never converted into a claimed result; a restart eats the sprint → the environment record and the trace table are the two records that may not be dropped.
 
@@ -922,13 +922,13 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 nb11 practice: sort six sample review lines into findings and preferences, and rewrite each preference into a finding that names a block and a repair — or strike it.
 - **Discussion prompt:** Which finding on your sheet did you most want to argue with, and what would have to be true about your board for the reviewer to be right?
 - **Project connection:** M11 is due at the start of this session and M12 is the review survey you write for every other active project; both feed the revision you work on Friday and the file you lock on Sunday.
-- **Milestone developed:** M11 — Poster first draft, Book Milestone 10 v2 (DUE at class); M12 — Peer review submission, Book Milestone 10 peer-criticism practice (worked in class, due Friday 5:00 PM)
+- **Milestone developed:** M11 — Poster first draft, Book Milestone 10 v2 (DUE at class); M12 — Peer review submission, Book Milestone 10 peer-criticism practice (worked in class, due Friday 2:30 PM)
 - **Milestone work time:** 23 min (the active-project review circuit + the Poster Critic pass on your own board)
 - **Milestone presentation/review:** two-minute rejected-finding defense + cross-examination
 - **Student prep:** Your draft finished and brought as a single PDF — this is a hard at-class deadline. The poster-criticism lesson re-read; the rubric's four criteria known before you walk in.
 - **Student artifact:** One completed review survey for every other active project + your own returned sheets ranked blocking-first + the ledger row for the Poster Critic run
 - **Exit ticket:** Claim Ticket #30: "The defect that appeared on more than one sheet is [x]; I repair it by [how]; the finding I reject is [y], because [why]."
-- **Homework / next milestone:** Finish every assigned review survey — they are due Friday at 5:00 PM as M12 — and start the blocking repairs. Friday is a revision studio, not a first attempt.
+- **Homework / next milestone:** Finish every assigned review survey — they are due Friday at 2:30 PM as M12 — and start the blocking repairs. Friday is a revision studio, not a first attempt.
 - **Instructor prep:** Print one review survey per student per other active project; set the silent-round timer from the confirmed project-mode roster; hold the rubric key for the accuracy lock; brief the SRL on the eye-span drill and on running the silent round; confirm every draft arrived as a PDF before the round starts.
 - **Risks / contingency:** A draft does not arrive → that student still reviews every other active project (M12 is still earned) and their own board is reviewed in the Friday studio, with the lock date unchanged. The silent round turns into a conversation → the rule is restated once and the clock keeps running; conferring turns separate checks into one, which is the whole point of the session.
 
@@ -951,7 +951,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Practice:** 📝 nb11 practice: run the production checklist end to end on your own file and record, for each failed line, the repair and the minute you made it.
 - **Discussion prompt:** Which repair on your list changes what a visitor concludes, and which only changes how the board looks?
 - **Project connection:** M12 is due tonight and M13 — the terminal lock — is due Sunday at 11:59 PM. The file you leave the room with should need proofreading, not construction.
-- **Milestone developed:** M12 — Peer review submission, Book Milestone 10 peer-criticism practice (worked + DUE tonight 5:00 PM); M13 — Final poster lock, Book Milestone 10 v3 (worked; DUE Sun Nov 8, 11:59 PM — TERMINAL, no revision window, submitted for printing)
+- **Milestone developed:** M12 — Peer review submission, Book Milestone 10 peer-criticism practice (worked + DUE tonight 2:30 PM); M13 — Final poster lock, Book Milestone 10 v3 (worked; DUE Sun Nov 8, 11:59 PM — TERMINAL, no revision window, submitted for printing)
 - **Milestone work time:** 40 min (blocking repairs + the two gates + the print-scale check)
 - **Milestone presentation/review:** none (production studio)
 - **Student prep:** Returned review sheets read; blocking findings already sorted from optional ones; the file open and ready to edit, not ready to start.
@@ -1021,7 +1021,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Student prep:** All three timed versions drafted and counted; the hard-questions protocol read; your claim-evidence table on the table for every round.
 - **Student artifact:** The three counted pitches + the question-and-discussion strategy with three predicted and three audience-directed questions + the ledger row
 - **Exit ticket:** Claim Ticket #33: "The question my board most invites is [x]; my honest answer stops at [y]; and the concession I must not make is [z]."
-- **Homework / next milestone:** Finish the go-public package — audience analysis, three counted pitches, poster-integration outline, question strategy, and the invitation post — due Friday at 5:00 PM. The printed posters come back Friday and the studio rehearses on the real thing.
+- **Homework / next milestone:** Finish the go-public package — audience analysis, three counted pitches, poster-integration outline, question strategy, and the invitation post — due Friday at 2:30 PM. The printed posters come back Friday and the studio rehearses on the real thing.
 - **Instructor prep:** Print the five visitor role cards and the question-strategy sheets; set the three-minute questioning clock; hold the concession key for the accuracy lock; brief the SRL on the compression drill and the rotation; confirm the print vendor's Friday return.
 - **Risks / contingency:** The rotation runs long → cut the second prepared answer to two presenters and protect the 38–42 accuracy lock, which is where untrue concessions get caught. A panel questions the person instead of the board → the one rule is restated and the round restarts; a question that is not grounded in the board is not a question, it is an opinion.
 

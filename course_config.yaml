@@ -128,7 +128,7 @@ srl:
   leads_per_student: 5             # 25 slots / 5 students
   assignment: "random draw at the start of the semester — no sequential rotation, no seats"
   brief_home: "each lecture's SRL Lead Brief opens that lecture in its notebook"
-  prep_cadence: "start about one week ahead; preparation script/notebook due two days ahead"
+  prep_cadence: "start about one week ahead; filled notebook due 11:59 PM the day before the lecture (D66)"
   first_slot_meeting: 4            # Mon Aug 31 (first student-led lecture)
   model: "Socratic investigation, not summary presentation"
   monday_sections:                 # minutes must sum to 50

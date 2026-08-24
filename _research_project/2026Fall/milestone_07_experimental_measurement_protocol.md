@@ -26,8 +26,8 @@ It runs through milestones
 poster session (Tuesday, November 17 — required)**, and closes with the
 reproducible package and cold run in December. Every milestone
 follows the same cadence: **Friday-studio kickoff → develop across the week →
-work it at the Friday studio → submit Sunday, 11:59 PM → revise (where
-eligible)**. Every milestone also updates your
+work it at the Friday studio → submit by the deadline on the course platform,
+11:59 PM → revise (where eligible)**. Every milestone also updates your
 cumulative **Research Project Dossier** and appends at least one row to your
 **AI Research Ledger** — the running record of what you handed to AI and how you
 checked it. Milestone weights live in
@@ -38,12 +38,12 @@ instructions and rubrics live one page per milestone, like this one.
 
 ## What to Submit on Brightspace
 
-Due: **Sunday, October 11, 11:59 PM**. That week's Friday is Studio 7's milestone
+Due: **Tuesday, October 13, 11:59 PM**. That week's Friday is Studio 7's milestone
 session, run as a **pipeline clinic and abstract workshop**: you bring your
 running notebook, restart it from empty in front of your own eyes, walk the
 verification record past your AI assistant's review, and clear the internal gate
 on your URC abstract before it can go out. You repair what the clinic exposes
-and submit by Sunday night.
+and submit by Tuesday night, after the October Break weekend.
 
 | # | File | Description |
 |---|---|---|
@@ -332,7 +332,7 @@ pre-submission checklist.
 | **Permission status** | Your M4/M6 permission determination is still authorized; blocked work does not proceed |
 | **AI Research Ledger** | One row per AI-assisted step; every verification method named and non-vague |
 | **Dossier line** | The verified notebook, its trace, and the gated abstract located by file or section |
-| **Studio work** | Worked at the Friday studio (Oct 9) with your AI assistant; abstract gate cleared; submitted by Sunday, Oct 11 |
+| **Studio work** | Worked at the Friday studio (Oct 9) with your AI assistant; abstract gate cleared; submitted by Tuesday, Oct 13 |
 | **Filename** | A shared Colab link or `lastname_m07_first_analysis.ipynb`; optional `lastname_m07_first_analysis.pdf` companion |
 | **Location** | Brightspace → Assignments → M07 |
 
