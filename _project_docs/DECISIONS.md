@@ -3100,6 +3100,27 @@ bullet and the course's grading table.
 word for word with exactly six permitted deviations, and this ruling changed no Final
 Project weight, component name or scoring rule.
 
+⚠ **INHERITED OPEN ITEM — the Synthetic Colleague audits have no home.** An
+adversarial verification pass over this change surfaced a contradiction that D58 did
+not create and did not resolve. `project/colleague/README.md` and
+`project/colleague/audit_rubric.md` both tell students that each of the **10 scored
+Studio audits is one participation credit**, converted 8/8 → full, 3–4 → half, ≤2 →
+none, and they cite D57 for the rule. But D57's participation contract listed exactly
+four item families summing to N = 50, and the audits were not among them; D58 leaves
+participation at N = 14, and they are still not among them. Ten graded credits
+therefore point at a pool that has never contained them.
+
+The fix is a ruling, not an edit, because either answer moves real numbers:
+
+- **The audits ARE participation credits.** Then N = 24, `d = ⌈0.10 × 24⌉ = 3`, and
+  the divisor becomes 21 — in `course_config.yaml`, `surveys/participation_grading.md`,
+  `planning/ASSESSMENT_ARCHITECTURE.md`, the Brightspace spec and `CLAUDE.md`.
+- **The audits are NOT graded.** Then both colleague documents must stop promising a
+  credit, and the 0–2 rubric becomes formative feedback with no conversion.
+
+Nothing was changed on either file pending Davi's call. Until he rules, the course
+states a grading rule it cannot honour.
+
 ---
 
 ## D59 — The graded component is "Student Research Lead", with no "Performance" (2026-08-23)

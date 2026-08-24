@@ -3,6 +3,13 @@
 **RULED (Davi, 2026-08-03): Option 2 adopted — see the D40 revision section
 at the end and the D41 implementation record in `_project_docs/DECISIONS.md`.**
 
+> **Historical options record.** Later rulings moved past several structures
+> described below. In particular **D58 (2026-08-23)** retired the weekly quiz for
+> this edition, so every quiz-first Friday frame quoted here (`10/5/30/5` and its
+> variants) is superseded: the studio now runs `5 / 40 / 5` with no quiz block.
+> `course_config.yaml` is the live frame; this file is kept as the dated record
+> of how the options were weighed.
+
 Prepared 2026-08-03 by the two-track
 loop: an independent Codex partner run (mirror mode, gpt-5.6-sol, xhigh, no
 seeding) and an independent Claude analysis, verified against each other and

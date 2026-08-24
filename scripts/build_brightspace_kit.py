@@ -201,12 +201,21 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
     if reading:
         add("<h3>Read before Monday</h3>")
         add(f"<p>{esc(reading)}</p>")
-        add(
-            "<p>Each chapter closes with an <em>It is your turn</em> section. "
-            "Complete it in that chapter's companion Colab notebook and submit "
-            "it here by 11:59 PM on the date the chapter's reading is due. It "
-            "is graded for completion, not for the conclusions you reach.</p>"
-        )
+        # The IYT Practice sentence is emitted ONLY for a week that actually
+        # owes a submission. The conference block (Weeks 11-14) has non-empty
+        # reading rows that are all REVISITS, so it owes nothing; printing the
+        # sentence there would invent a deadline. `submissions()` is the same
+        # derivation planning/IYT_SUBMISSION_SCHEDULE.md is built from, so the
+        # unit page and the schedule can never disagree.
+        if any(int(m["meeting"]) in _iyt_meetings() for m in mine):
+            add(
+                "<p>Each chapter closes with an <em>It is your turn</em> "
+                "section. Complete it in that chapter's companion Colab "
+                "notebook and submit it here by 11:59 PM on the date the "
+                "chapter's reading is due. It is graded for completion, not "
+                "for the conclusions you reach, and it is your "
+                "<strong>IYT Practice</strong> credit.</p>"
+            )
 
     if nb_slug:
         url = f"{COLAB}/notebooks/student/{nb_slug}.ipynb"
@@ -274,6 +283,25 @@ def unit_html(week: int, meetings: list[dict], config: dict) -> str:
         add(f"<p>{esc(prep)}</p>")
 
     return "\n".join(out) + "\n"
+
+
+
+_IYT_MEETINGS: set[int] | None = None
+
+
+def _iyt_meetings() -> set[int]:
+    """Meetings that actually carry an "It is your turn" submission (D58).
+
+    Read through build_participation_schedules.submissions() so this page and
+    planning/IYT_SUBMISSION_SCHEDULE.md are derived from ONE rule.
+    """
+    global _IYT_MEETINGS
+    if _IYT_MEETINGS is None:
+        from build_participation_schedules import submissions
+        with open(SCHEDULE, newline="") as f:
+            rows = list(csv.DictReader(f))
+        _IYT_MEETINGS = {n for n, _lid, _mode in submissions(rows)}
+    return _IYT_MEETINGS
 
 
 def gradebook_spec(config: dict) -> str:
@@ -679,6 +707,32 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
       federally mandated, in myPurdue Faculty Tools.
 
 {poster_section}
+---
+
+## 5. The two completion contracts the syllabus points at
+
+The syllabus tells students that the full list of Participation items, their due
+dates and their submission instructions "are posted on the course page", and that
+the IYT Practice dated list lives on the schedule page and on Brightspace. Both
+promises need something published.
+
+- [ ] **Publish the IYT Practice assignments.** `planning/IYT_SUBMISSION_SCHEDULE.md`
+      lists every due date, the chapters that share it, and the ONE instruction
+      paragraph to paste into each assignment. Create one Brightspace assignment
+      per due date inside the **IYT Practice** category. Every item is
+      completion-graded and equally weighted.
+- [ ] **Publish the studio feedback survey.** One Qualtrics link, reused for all
+      twelve responses; the closes are in `planning/STUDIO_FEEDBACK_SCHEDULE.md`
+      (each is the Sunday that ends its studio week, the same night that studio's
+      milestone is due). Post the link where students will find it every week.
+- [ ] **Publish the student profile survey** (due Sun Aug 30) and the
+      **course reflection** (collected in the last class, Fri Dec 11). Both are
+      single Participation credits; the instruments live in `surveys/`.
+- [ ] **State the drop rule once, where students read it.** The lowest
+      `ceil(0.10 x N)` credits are dropped automatically in EACH contract
+      separately — they are two pools, not one. `surveys/participation_grading.md`
+      is the student-facing contract for both.
+
 ---
 
 ## The one thing that is easy to get wrong

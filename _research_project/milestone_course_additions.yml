@@ -7,11 +7,21 @@
 # where the COURSE adds something the book does not ask for does the PDF carry a
 # "What this course adds" section, and only then does the schedule mark the row.
 #
-# THIS FILE IS THE SINGLE SOURCE OF TRUTH for that distinction. Both
-# scripts/build_handout_pdfs.py and scripts/update_schedule_badges.py read it
-# through scripts/milestone_map.py, so the page and the PDF cannot disagree.
+# THIS FILE IS THE SINGLE SOURCE OF TRUTH for both distinctions.
+# scripts/build_handout_pdfs.py reads `classification` (the PDF section) and
+# scripts/update_schedule_badges.py reads `schedule_mark` (the schedule plus),
+# both through scripts/milestone_map.py.
 #
+# `schedule_mark`       does the Schedule page mark this row with the plus sign?
+#                       TRUE only where the course requires a DELIVERABLE or a
+#                       PERFORMANCE the book milestone does not ask for. This is
+#                       a SEPARATE decision from `classification`: turning the
+#                       mark off never removes anything from the student PDF.
 # `classification`      pure | additions ('retired' entries live under `retired:`)
+#                       This governs the PDF's "What this course adds" SECTION,
+#                       and nothing else. Never demote it to make the schedule
+#                       quieter: the body is required instruction that exists
+#                       nowhere else, and no CI gate would catch its deletion.
 # `reason`              why the call was made, against the classification test
 # `schedule_note`       <= 6 words for the narrow schedule column (additions only)
 # `additions_markdown`  the PDF section body, headings from ### down. No em
@@ -23,11 +33,21 @@
 # course brief against its book milestone page, with a six-agent adversarial
 # refutation pass over the marginal calls.
 #
-# TO CHANGE A CALL: edit `classification` here and rerun both scripts. Nothing
-# else needs touching.
+# TO CHANGE THE SCHEDULE PLUS: edit `schedule_mark` and rerun
+# scripts/update_schedule_badges.py.
+# TO CHANGE WHAT THE PDF SAYS: edit `classification` / `additions_markdown` and
+# rerun scripts/build_handout_pdfs.py.
+#
+# Audited 2026-08-23 by a 10-agent pass (eight readers, two adversarial) that
+# re-read every brief against its book milestone page. M04's mark came off: its
+# live declaration talk was retired by the course's own schedule source
+# (scripts/schedule_data/part1.py:407) and its 3-node DAG rule is a form spec on
+# a drawing the book already requires. M08 and M09 are CONTESTED and keep the
+# mark, because wrongly dropping it tells a student nothing extra is owed.
 schema: 1
 milestones:
   M01:
+    schedule_mark: true
     classification: additions
     reason: The Book Milestone page produces the curiosity artifact in full, but the course also requires a working-setup check with a three-checkmark readiness screenshot from the course notebook and a live 30-second pitch at the Friday studio that counts toward the grade. Neither appears anywhere on the book page or its studio page, so a student reading only the book page would hand in an incomplete, unpitched submission.
     schedule_note: readiness screenshot, 30-second studio pitch
@@ -59,6 +79,7 @@ milestones:
     - The late policy (-10 per day up to 3 days) and the 7-day revision window recovering up to half the lost points are standing policies. I assumed the standard header or syllabus carries them; if not, they need a home.
     - The brief says 'the week's course notebook' without naming it. If you want the PDF to be unambiguous, give the file name (nb01) in the readiness step. I did not add it, since the brief does not state it.
   M02:
+    schedule_mark: false
     classification: pure
     reason: Every one of the course brief's ten components maps onto Book Milestone 2's own practice steps and "What you bring" list (working agreement, opened ledger with hinge and SDIIVDD run, red-flag screen, declared question with field card and stranger-test result, claim boundary, cross-read, dated version), so a student reading the Book Milestone page and told the filename would hand in exactly the right artifact. The remaining differences are the AI ledger, the "It is your turn" sections, the dossier line, and a 100-point rubric in place of the book's 12-point one, all of which the test excludes as grounds for classification.
     instructor_notes:
@@ -70,6 +91,7 @@ milestones:
     - The brief's Book Anchor names chapters 2 through 7, while the book page names them as Lessons 2 through 7 with the same links. The numbering is consistent between the two documents, so no reconciliation is needed if the anchor list drops out with the brief.
     - 'Content that only exists in the brief but is teaching, not requirement: the worked examples (the price-measure responsibility statement, the burnout double-barrel, the "first-year athletes" silent scope change), the three named upgrades (silent upgrade, leakage, after-therefore-because), and the three Common Pitfalls. If you want any of it kept, it is elaboration of book material and could be folded into the chapters rather than into the PDF.'
   M03:
+    schedule_mark: true
     classification: additions
     reason: 'The Book Milestone page asks for a search log, verified sources, an evidence map and a revision, but the course wraps the milestone in an in-class evidence-map gallery walk on classmates'' maps with one received challenge worked into the artifact, and it also sets requirements the book page and its two lessons never state: a floor of at least six verified sources, an evidence-type field on every registry row, and a retrievability audit. A student working from the book page alone would hand in an artifact missing all of that.'
     schedule_note: evidence-map gallery walk, peer challenge
@@ -114,6 +136,7 @@ milestones:
     - 'Not carried into the section because the book page already collects them: the candidate list with its status column and lead source, the search log including empty searches, the three-zone map, the bounded gap sentence, the revision of the declaration, the licence line, the version line, the dossier line, and the AI Research Ledger rows.'
     - The brief's Week 3 note (a lost Monday, one Wednesday carrying both lessons) is calendar-specific and was dropped; if that compression recurs every year it belongs in the schedule, not the PDF.
   M04:
+    schedule_mark: false
     classification: additions
     reason: The Book Milestone page asks only for the written, diagnosed Contract v0 artifact, but the course also requires a live three-minute contract declaration at the Friday studio that takes one question per listener, and a submitted three-node DAG image with a confounder arrowed into both treatment and outcome. Neither the milestone page nor the lessons it collects asks for a live presentation or for that specified DAG figure, so a student working from the book page alone would hand in an incomplete milestone.
     schedule_note: live contract declaration; 3-node DAG
@@ -163,6 +186,7 @@ milestones:
     - The brief's provisional-marking wording is 'provisional, settled at M6' (a course milestone number); the book page says measurement is settled in Studio 6. Same thing, two vocabularies. The book page's wording is the one the student will read.
     - Standing policies in the old brief (late penalty, the 7-day revision window, group-mode rules, the not-authorized blocking gate) are either already on the book page (the gate) or are course-wide policy, so none of them entered the additions section.
   M05:
+    schedule_mark: true
     classification: additions
     reason: 'The Book Milestone page asks only for a declared pathway, its crossing licence, its limits, and a versioned Contract v1 built from one self-chosen contrast drill. The course adds three things the page never asks for: a live in-class route jigsaw advocating an assigned pathway plus a written five-sentence summary of it, a roughly one-page engagement with an instructor-assigned contrast (the book lets you choose any), and a required Causal Identification Skeptic reviewer run whose every ranked attack must be answered in writing.'
     schedule_note: route jigsaw, assigned contrast, Skeptic run
@@ -175,6 +199,7 @@ milestones:
     - The brief's submission table allowed a shared Colab notebook link as an ALTERNATIVE to the PDF and asked for companion notebook links. Under the one-file rule, the completed 'It is your turn' sections must be pasted into the PDF or their share links listed inside it. No extra artifact is needed, but the old alternative-submission wording should be dropped from any surviving copy of the brief.
     - 'Content already covered by the book page and deliberately omitted from my section: the anchor study (rail two), the counter-pathway AI argument (rail three), the permission recheck (rail one), route uncertainty sources (rail four), the claim-boundary rewrite, the dated numbered version with a reason, and the blocking gate on a not-authorized determination.'
   M06:
+    schedule_mark: false
     classification: pure
     reason: 'Every one of the course brief''s seven parts is already asked for by Book Milestone 6: the acquisition route, provenance record, data-management record, route-specific permission recheck, and measurement specification are its named product; the Contract version is its "A version, not a pass" and "What sends you back" sections; and the ledger and dossier lines are its AI rail and workbook. Nothing course-only survives the test: no extra artifact, no external gate, no poster or Expo work, no work on other projects, and no presentation or defense.'
     instructor_notes:
@@ -188,6 +213,7 @@ milestones:
     - 'Minor cross-reference mismatch, harmless but worth knowing: the book page''s blocking gate reads "no work at or after Studio 4" while the course brief reads "at or after M4". These refer to the same point under the one-to-one studio-to-milestone mapping, so no student-facing fix is needed.'
     - The course brief's filename is `milestone_06_causal_identification.md`, but its content is data and measurement governance. The filename slug is stale from an earlier sequencing and does not match the milestone; consider renaming, and check the previous/next navigation links at the foot of the neighboring briefs, which use the same stale slugs.
   M07:
+    schedule_mark: true
     classification: additions
     reason: 'The Book Milestone page asks only for the declared analysis, the result with uncertainty, a clean restart, an environment record, and a claim-to-output trace. The course adds two things the page never mentions: a required Prediction and Leakage Auditor pass whose flags must each be settled by a check in the student''s own pipeline, and a 150 to 250 word Undergraduate Research Conference abstract that must clear an internal instructor gate at the Friday studio because its clock is external to the course.'
     schedule_note: leakage audit, URC abstract gate
@@ -203,6 +229,7 @@ milestones:
     - The auditor briefing is cited as a repository path (genai_studio/roles/prediction_leakage_auditor.md). If that path is not reachable by a student from Brightspace or the public site, replace it with a student-facing link before publishing the PDF.
     - The brief pins the Friday studio as the moment the abstract gate is cleared in person. I kept that as weekly rhythm ('the Friday studio') with no date, per the no-dates rule, but the real conference submission deadline must be carried by Brightspace, since the PDF cannot name it.
   M08:
+    schedule_mark: true
     classification: additions
     reason: A student reading only the Book Milestone page would pre-list, run a grid, run a null check, commission an adversarial review and adjudicate, but would not know to freeze three checks as syntax-checked code with predictions at the week's lecture and run nothing until the Friday studio, to commission the course's specific required GenAI Studio reviewer role, to triage flags by damage and verify only the top one in the room while filing the rest on a pending register with the loudest wrong flag named, or to hand over a shareable notebook the instructor can rerun. The book page in fact asks for something different on adjudication (confirm or refute every flag), so the course's in-class procedure has to be stated.
     schedule_note: in-class freeze, studio flag adjudication
@@ -262,6 +289,7 @@ milestones:
     - 'No external gate at M8: the URC abstract gate appears only in the link back to M7, and nothing in this brief depends on a deadline outside the course.'
     - 'TRIMMED 2026-08-23 after an adversarial pass found overlap with the book milestone page. Cut: Finding 1, the pre-listing act. The old opener told you to come to the lecture with three checks, which reads as the instruction to pre-list. Book milestone ''The practice'' step 1 already imposes pre-listing before any run. Rewritten whole as a statement of the course''s tighter shape only: the list is exactly three, and each row names its reviewer attack.'
   M09:
+    schedule_mark: true
     classification: additions
     reason: The Book Milestone page asks only for the bounded claim, the claim-to-evidence table, uncertainty and limitations, and the AI disclosure, all written alone. The course additionally requires an in-class peer red-team of the note (reading and being read by another researcher), a trace-or-cut drill on every claim, a random-row spot-check, and same-day submission at the Friday studio, with "red-team feedback incorporated" graded; a student working from the book page alone would not do any of that.
     schedule_note: peer red-team, trace-or-cut drill
@@ -274,6 +302,7 @@ milestones:
     - The book page's blocking gate (no work proceeds past a not-authorized permission determination) duplicates the brief's Definition of Done row on permission status, so I left it entirely to the book page.
     - 'TRIMMED 2026-08-23 after an adversarial pass found overlap with the book milestone page. Cut: Step 2, the trace-or-cut drill on every claim (''Take each sentence of your note and find its row in your claim-to-evidence table. A claim with no row is either traced back to a real output or cut. Do this before you submit.''). The book milestone page imposes this twice: practice step 2 (''Build the claim-to-evidence table: every claim, the output that supports it, and the check that verified it'') and the four-rails section (''A claim with no row in the table does not appear in the draft''). The workbook''s faded task also drills it on a worked example. | The instruction to check every claim against the claim-to-evidence table, which was the substance of that step. Book milestone practice step 2 already requires it. | Step 3, the random-row spot-check (''Pick a row at random, reopen the output it names, and read the number again. Confirm it still matches what your note says.''). The book''s own companion workbook for this milestone ends with a ''Check yourself'' cell that says exactly this: pick one row at random, reopen its traced output, read the number again. | The sentence in the judging note reading ''A claim that appears in your note with no row in the table drops evidence integrity to the lowest band, because it was supposed to be traced or cut.'' Its requirement is the book page''s rail, and its closing clause restated the drill a third time. The course''s no-row penalty band therefore now lives only in the brief''s rubric and penalty list, not in the student PDF. If you want that specific cap visible to the student, the standard PDF header is the place for it, alongside the late penalty and the seven-day revision rule. | The numbered list shrank from four steps to two, so the surrounding lead-in was rewritten to introduce a pair of studio moves rather than a four-step procedure.'
   M10:
+    schedule_mark: true
     classification: additions
     reason: The book page leaves the venue open and makes the poster, the spoken spine, and the gallery-walk audit conditional, while the course fixes the venue as the research expo poster plus a live oral defense and requires all of those pieces. The course also adds a required AI reviewer role (Poster Critic) with adjudication, a strict "nothing new beyond the M9 note" traceability rule, five rehearsal questions instead of three, and an in-class artifact criticism gallery in which you critique other people's artifacts.
     schedule_note: poster draft, spoken spine, criticism gallery
@@ -286,6 +315,7 @@ milestones:
     - The brief's 'About the Research Project' block (individual default, at most one approved group, shared versus individual rubric rows, peer evaluation) is boilerplate repeated on every milestone. I left it out on the assumption the standard header or the Final Project grading page carries it. If it does not, it needs a home.
     - genai_studio/roles/poster_critic.md is referenced as a repository path. Confirm students can actually reach that briefing from a public page, or replace the pointer with a Brightspace link before this PDF ships.
   M11:
+    schedule_mark: true
     classification: additions
     reason: The Book Milestone page lets the researcher choose any venue format and asks for a venue contract, adaptation, content map, and rehearsal record; the course instead requires one specific artifact, a first full poster draft on the course template at conference print spec, plus a per-number traceability sweep, a reach check, a GenAI Studio Poster Critic run, and delivery at the start of Wednesday's class so the in-class peer review round can read it. A student working only from the book page would build the wrong artifact and miss the review gate.
     schedule_note: poster draft + traceability sweep
@@ -300,6 +330,7 @@ milestones:
     - The brief tells the student to build on 'the course template' sized to 'the URC print spec', but no poster template exists in the repo yet (a known D50 open item, needed by the Wednesday of poster-draft week). My section repeats the requirement as written; it is unusable until the template and the print spec sheet are distributed.
     - The brief allowed the trace and ledger to be submitted 'or the same as notebook sections'. Under the one-file rule I made them sections of lastname_m11.pdf; if you still want them accepted as notebook sections, the header should say so.
   M12:
+    schedule_mark: true
     classification: additions
     reason: The Book Milestone 10 page's practice builds and rehearses the student's OWN venue artifact, while course M12 requires an independent silent-round review survey of every OTHER active project plus an adjudicated response record on the sheets the student's own project receives. Work on other people's projects, the silent independence rule, and the response record are nowhere in the book page, so a student reading only that page would hand in the wrong artifact.
     schedule_note: review every other project + response record
@@ -312,6 +343,7 @@ milestones:
     - The brief's Definition of Done adds 'Recurrence' as a scored row; I carried it into the response-record list and the judging note. The 'no conferring' independence rule is also a Definition of Done row, so I stated it as a requirement rather than as advice.
     - The book page carries a Studio 4 'not-authorized' blocking gate. It rides along in the book content and is unrelated to the peer round; no course action needed, but be aware the student sees it on this page.
   M13:
+    schedule_mark: true
     classification: additions
     reason: 'Book Milestone 10 asks the researcher to pick any venue, adapt the artifact, map its content, and rehearse a defense; the course instead fixes the venue as a print-locked poster for an external conference and adds a whole second body of work the page never mentions: a six-part reusable research package, a cold-run record with an honest label, and two blocking pass-or-stop gates that must clear before the file goes to press. A student working only from the book page would hand in an unlocked, unreproduced artifact and miss both gates.'
     schedule_note: package, cold run, gates, poster lock
@@ -381,6 +413,7 @@ milestones:
     - The URC submission channel is specified only as 'as instructed in class', so my section repeats that phrasing. If a concrete channel exists, it belongs on the dated Brightspace header, not in this reusable section.
     - The brief's 'Purpose' prose contains a good deal of teaching (what reproduction is, why a cold run works, the judge-points-at-a-number scene) that the book page does not carry. I deliberately compressed it to the operative rules to honor the length limit. If Davi wants the pedagogy kept, the natural home is nb15/nb16 or the chapters, not this supplement.
   M14:
+    schedule_mark: true
     classification: additions
     reason: 'The Book Milestone page lets you pick any venue and build one artifact to a venue contract, while the course fixes the venue to the already locked Expo poster and requires a wholly different set of products: an audience-analysis paragraph, three word-capped timed pitches with counts shown, a poster-integration outline, a typed question-and-discussion strategy, and a public invitation post copied from the official programme. The public post is also an outward, Expo-directed act the book page explicitly excludes ("This is not yet public release"), so a student reading only the book page would hand in the wrong artifact.'
     schedule_note: three timed pitches, public invitation
@@ -423,6 +456,7 @@ milestones:
     - The book page carries the Studio 4 blocking gate (no work proceeds past a not-authorized determination). That gate is on the book page and needs no course restatement.
     - The brief's "Three Traps" (estimated word count, the generous yes, the remembered room number) were not carried over as prose to keep the supplement short. Their substance is enforced in items 2, 5, and 6.
   M15:
+    schedule_mark: true
     classification: additions
     reason: 'Book Milestone 10 asks you to build a venue contract, an artifact, a content map, and a private defense rehearsal, and states explicitly that it "is not yet public release." Course M15 is almost entirely outside that: a required live Expo presentation that is separately graded and terminal, structured evaluation of at least three OTHER students'' posters, a coded tally of real audience questions, a defense revision record, a three-entry criticism portfolio, and a post-release note. A student reading only the book page would hand in a rehearsal record, not a post-conference reflection.'
     schedule_note: Expo presentation, audience coding, peer critiques
@@ -436,6 +470,7 @@ milestones:
     - 'SUBMISSION SIMPLIFIED: the brief''s table offers ''a shared Colab notebook link'' as an alternative to the PDF, and names the file lastname_m15_reflection.pdf. Both are superseded by the single lastname_m15.pdf rule. Everything the brief lists (tally table, portfolio, proof of presentation) fits inside one PDF, so there are no extra artifacts.'
     - 'NOT TREATED AS ADDITIONS, per the test: the AI Research Ledger (covered by the book page''s AI rail), the ch. 29 ''It is your turn'' section (covered by ''What you bring''), the dossier update line (covered by the workbook), and the permission blocking gate (the book page carries it as a callout).'
   M16:
+    schedule_mark: true
     classification: additions
     reason: 'The submission folds two Book Milestones into one artifact (Book Milestone 11''s package plus Book Milestone 9 rewritten as version 2), and the course drives that revision from two sources no book page mentions: public criticism gathered at the Expo via the M15 tally, and a peer''s threat-ranked cold-run report. It also adds instruments the book pages never ask for: a numbered inbound list, a dated accept/rebut/bound adjudication record, a five-package-sins audit, a clean run dated after the last edit, and required Friday-studio work with a peer table read.'
     schedule_note: adjudication record, package repair, clean rerun

@@ -121,6 +121,18 @@ def additions() -> dict[str, dict]:
 
 
 def has_additions(key: str, adds: dict | None = None) -> bool:
-    """True when the COURSE asks for more than the Book Milestone page does."""
+    """True when the milestone PDF carries a "What this course adds" section."""
     adds = additions() if adds is None else adds
     return (adds.get(key, {}).get("classification") == "additions")
+
+
+def marked_on_schedule(key: str, adds: dict | None = None) -> bool:
+    """True when the Schedule page marks this milestone with the plus sign.
+
+    Deliberately NOT the same question as has_additions(): the mark is about
+    what a student still owes beyond the book, the section is about what the PDF
+    has to print. Demoting `classification` to quiet the schedule would delete
+    required instruction from the PDF, so they are separate flags.
+    """
+    adds = additions() if adds is None else adds
+    return bool(adds.get(key, {}).get("schedule_mark"))

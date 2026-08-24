@@ -202,9 +202,11 @@ def no_em_dash(text: str) -> str:
 SEG = re.compile(r"\s*(M\d+)\s*—\s*(.*?)\s*$")
 STATE = re.compile(r"\(([^()]*(?:\([^()]*\)[^()]*)*)\)\s*$")
 
-#: Marks a milestone whose COURSE asks for more than its Book Milestone page.
-#: Driven by _research_project/milestone_course_additions.yml, so this mark and
-#: the "What this course adds" section of the PDF can never disagree.
+#: Marks a milestone where the COURSE requires a deliverable or a performance
+#: the Book Milestone page does not ask for. Driven by the `schedule_mark` flag
+#: in _research_project/milestone_course_additions.yml, which is a SEPARATE
+#: decision from the `classification` that governs the PDF's "What this course
+#: adds" section: turning a mark off must never delete a student instruction.
 #: (defined above, next to FOOTER, which prints its legend)
 
 
@@ -243,7 +245,7 @@ def milestone_cell(raw: str, mmap: dict, adds: dict) -> str:
         if not info or not info["books"]:
             out.append(f"**{cid}**")
             continue
-        mark = f" {PLUS}" if adds.get(key, {}).get("classification") == "additions" else ""
+        mark = f" {PLUS}" if adds.get(key, {}).get("schedule_mark") else ""
         # The course id carries the link to the Book Milestone it presents;
         # naming both was saying the same thing twice in every row.
         first, rest = info["books"][0], info["books"][1:]

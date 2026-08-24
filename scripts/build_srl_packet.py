@@ -327,7 +327,7 @@ def build_announcement(rows: list[dict], meetings: dict) -> str:
 lecture</strong> as a Socratic investigation — you pose a puzzle, hold the room
 to a written commitment before any AI tool opens, direct the AI investigation,
 and close on a decision someone defends aloud. That is the Student Research
-Lead role, and it is <strong>20% of your grade</strong>.</p>
+Lead role, and it is <strong>30% of your grade</strong>.</p>
 
 <p>The {len(rows)} leadable lectures have been drawn <strong>at
 random</strong>, with a reproducible seed and four fairness constraints: everyone leads
