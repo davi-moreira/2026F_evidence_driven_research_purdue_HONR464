@@ -387,7 +387,9 @@ def main():
 
     entries = [(f"M{n}", MILESTONE_TITLE[n], fmt_date(MILESTONE_DUE[n]))
                for n in sorted(MILESTONE_TITLE)]
-    entries.insert(13, ("—", "Purdue Fall Undergraduate Research Expo "
+    # The Expo sits between M14 (Sun Nov 15) and M15 (Sun Nov 29) so the
+    # column of dates never runs backwards; M13 is the lock that feeds it.
+    entries.insert(14, ("—", "Purdue Fall Undergraduate Research Expo "
                              "(required poster presentation)", "Tue Nov 17"))
     for idx, (num, name, due) in enumerate(entries):
         row = m_tbl.add_row()
