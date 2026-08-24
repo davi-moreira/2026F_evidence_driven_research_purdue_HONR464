@@ -3338,3 +3338,58 @@ they are.
 audits in `project/colleague/` still promise a participation credit that
 participation's N = 14 contract does not contain. D61 does not touch participation, so
 it neither creates nor resolves that contradiction; it still needs Davi's ruling.
+
+---
+
+## D62 — Davi's Word pass on the syllabus .docx is folded back into the generator (2026-08-23)
+
+**Instruction.** Davi, 2026-08-23: "i have updated the
+2026F_evidence_driven_research_purdue_HONR464 format and content. make sure to record
+it and propagate for the course material accordingly."
+
+**Context.** `_syllabus/2026F/2026F_evidence_driven_research_purdue_HONR464.docx` is a
+GENERATED artifact — `scripts/build_syllabus_docx.py` rebuilds it from `syllabus.qmd`,
+`planning/MEETING_SCHEDULE.csv`, and `course_config.yaml`, cloning QM 47400's Word
+document for its styles. Davi edited the built file directly in Word. Left alone, the
+next `build_syllabus_docx.py` run would have silently destroyed those edits. The rule
+this establishes: **when Davi hand-edits a generated .docx, the edits are captured and
+pushed back into the generator before the generator is ever run again.**
+
+**Decision.** Five changes, all adopted, all now emitted by the generator.
+
+| # | Kind | Change |
+|---|---|---|
+| 1 | content | Course-materials label `Theory text (free, recommended):` → **`Recommended:`** |
+| 2 | content | `Grading:` lead-in drops its trailing "There is no curve." — the scale line already ends "(no curve)" |
+| 3 | format | The **Grading scale** paragraph moves from the end of the Final Project criteria to **directly beneath the weights table** |
+| 4 | format | The **AI Policy** body becomes **one bullet per principle** (7 bullets) instead of three runs of prose |
+| 5 | content | `Some activities **are** done without AI` → `Some activities **may be** done without AI` |
+
+**Why each stands.** (1) The RDSS text is recommended, not a "theory text", and the
+shorter label matches how the web page already introduced it. (2) Saying "no curve"
+twice in adjacent sentences is redundant. (3) A grading scale belongs with the weights
+it grades; QM 47400 keeps it at the end of the Final Project list, and that placement
+does not survive the HONR weight table sitting directly above. (4) Seven separate
+obligations buried in three paragraphs are hard to point at when a student disputes
+one; as bullets each rule can be cited on its own. (5) "are done" over-promised a
+no-AI activity in every unit; "may be done" states the reservation without committing
+to a cadence.
+
+**Bullet mechanics.** Word created a new list definition (`numId` 15) for change 4,
+a Symbol bullet indented 720 twips. The QM base already defines that exact list as
+`numId` 14, previously unused in this build, so `NUM["ai_policy"]` was repointed from
+2 (a Symbol bullet at 1440 twips — a visibly deeper indent) to 14. The regenerated
+document is text-identical to Davi's, with the same bullet structure and indent.
+
+**Propagation.** `syllabus.qmd` took changes 3, 4, and 5; it already read
+"Recommended (free):" (change 1) and never carried the duplicated no-curve sentence
+(change 2). Its AI Policy also gained the "AI is your arm and your research assistant,
+not your brain" line, which the .docx carried and the web page did not. No other
+surface in the repository contained the edited strings.
+
+⚠ **Open item this exposed, NOT resolved here.** `syllabus.qmd` names
+**Google Gemini** the "primary" research assistant, while the .docx says "Your own AI
+assistant is the primary in-notebook research partner." **D30 retired Gemini from
+student-facing material** in favor of AI-generic voice, so the web page is the stale
+side of a direct contradiction in the same policy section. Changing it is outside the
+five edits Davi made and needs his ruling.

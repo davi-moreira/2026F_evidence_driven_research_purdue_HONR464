@@ -113,7 +113,10 @@ NUM = {
     "outcomes": 3,       # LEARNING OUTCOMES
     "criteria": 6,       # Final Project criteria
     "netiquette": 8,
-    "ai_policy": 2,
+    # numId 2 is a Symbol bullet indented 1440 twips; the AI-policy list sits at
+    # 720, matching the list Word created when Davi bulleted this section by
+    # hand. numId 14 is that definition and is otherwise unused in this build.
+    "ai_policy": 14,
     "challenge": 4,      # ilvl 0 for the two steps, ilvl 1 for the fields
     "extra_credit": 5,
     "caps": 1,           # ilvl 3
@@ -496,7 +499,7 @@ def main():
               "and improving during the semester.")
 
     p = para(doc, "", style="Normal")
-    r = p.add_run("Theory text (free, recommended): ")
+    r = p.add_run("Recommended: ")
     r.bold = True
     p.add_run("Blair, G., Coppock, A., & Humphreys, M. (2023). Research Design "
               "in the Social Sciences: Declaration, Diagnosis, and Redesign. "
@@ -523,8 +526,10 @@ def main():
               "at the Purdue Undergraduate Research Conference, and closed with "
               "a reproducible package, a bounded research note, and a written "
               "reflection on the semester's work.")
-    para(doc, "Final letter grades follow the fixed scale below. There is no "
-              "curve.", bold_prefix="Grading: ")
+    # The scale line below the table already ends "(no curve)", so this lead-in
+    # does not repeat it (Davi, 2026-08-23 Word pass).
+    para(doc, "Final letter grades follow the fixed scale below.",
+         bold_prefix="Grading: ")
 
     weights = [("Assessment", "Weight"), ("Attendance", "1%"),
                ("Participation", "9%"), ("IYT Practice", "15%"),
@@ -541,6 +546,11 @@ def main():
                 for r in c.paragraphs[0].runs:
                     r.bold = True
     para(doc, "")
+    # The scale belongs with the weights it grades, not at the end of the Final
+    # Project criteria where QM474 keeps it (Davi, 2026-08-23 Word pass).
+    para(doc, "A ≥ 93, A− ≥ 90, B+ ≥ 87, B ≥ 83, B− ≥ 80, C+ ≥ 77, C ≥ 73, "
+              "C− ≥ 70, D ≥ 60, F < 60 (no curve).",
+         bold_prefix="Grading scale: ")
 
     para(doc, " Attendance is checked with iClicker. A minimum attendance rate "
               "of 85% is required to meet the expectations of this course, "
@@ -625,10 +635,6 @@ def main():
         number(para(doc, body, style="Normal (Web)", bold_prefix=label),
                NUM["criteria"])
 
-    para(doc, "A ≥ 93, A− ≥ 90, B+ ≥ 87, B ≥ 83, B− ≥ 80, C+ ≥ 77, C ≥ 73, "
-              "C− ≥ 70, D ≥ 60, F < 60 (no curve).",
-         bold_prefix="Grading scale: ")
-
     # ── grade challenges ────────────────────────────────────────────────────
     para(doc, " Students who wish to challenge a grade must do so within 3 "
               "calendar days of the grade's release. An exception applies for "
@@ -695,23 +701,30 @@ def main():
         number(para(doc, item, style="Normal (Web)"), NUM["netiquette"])
 
     caps_heading(doc, "AI POLICY:")
+    # Davi's 2026-08-23 Word pass broke the policy body out of running prose
+    # into one bullet per principle, so each rule can be pointed at on its own.
+    # The lead-in and the closing no-AI sentence stay plain paragraphs.
     para(doc, "AI is a research assistant in this course, not a substitute for "
               "your judgment. You may use approved AI tools for course work "
               "unless an activity explicitly says otherwise. This course "
-              "teaches responsible, documented AI use: AI is your arm and your "
-              "research assistant, not your brain.", style="Body Text")
-    para(doc, "Follow three rules: ask clearly, verify the output, and document "
-              "what you used and decided. Record required uses in your AI "
-              "Research Ledger. Check every factual claim, citation, source, "
-              "calculation, and result against real evidence. You remain "
-              "responsible for everything you submit and must be able to "
-              "explain and defend it.", style="Body Text")
-    para(doc, "Research questions, design choices, measurement decisions, "
-              "ethical judgments, claims, uncertainty, and limitations remain "
-              "your decisions. Undisclosed or unverified AI output may be "
-              "treated as an academic-integrity violation.", style="Body Text")
-    para(doc, "Some activities are done without AI. Any no-AI activity will be "
-              "clearly identified in its instructions.",
+              "teaches responsible, documented AI use:", style="Body Text")
+    for principle in [
+        "AI is your arm and your research assistant, not your brain.",
+        "Follow three rules: ask clearly, verify the output, and document "
+        "what you used and decided.",
+        "Record required uses in your AI Research Ledger.",
+        "Check every factual claim, citation, source, calculation, and result "
+        "against real evidence.",
+        "You remain responsible for everything you submit and must be able to "
+        "explain and defend it.",
+        "Research questions, design choices, measurement decisions, ethical "
+        "judgments, claims, uncertainty, and limitations remain your decisions.",
+        "Undisclosed or unverified AI output may be treated as an "
+        "academic-integrity violation.",
+    ]:
+        number(para(doc, principle, style="Body Text"), NUM["ai_policy"])
+    para(doc, "Some activities may be done without AI. Any no-AI activity will "
+              "be clearly identified in its instructions.",
          style="Body Text")
 
     para(doc, " The Registrar's add, drop, and modify deadline dates for this "

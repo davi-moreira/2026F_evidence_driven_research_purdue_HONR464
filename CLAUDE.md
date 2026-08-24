@@ -476,6 +476,34 @@ sequencing changes also update `planning/COURSE_MASTER_PLAN.md`.
 
 ---
 
+## 🚨 CRITICAL WORKFLOW — The Syllabus .docx Is Generated, and Davi Edits It  *(D62)*
+
+The two Word documents in `_syllabus/2026F/` are GENERATED (`_syllabus/` is
+gitignored, so git will not warn you):
+
+```bash
+.venv/bin/python scripts/build_syllabus_docx.py    # syllabus + embedded schedule
+.venv/bin/python scripts/build_schedule_docx.py    # standalone schedule
+```
+
+Davi also edits the BUILT file directly in Word. **Before running either builder,
+check the .docx mtime against the script's.** If the document is newer, it holds
+hand edits that the build would destroy:
+
+1. Copy the .docx aside FIRST.
+2. Generate to a temp path instead of `OUT` (import the module and reassign
+   `m.OUT`; do not run the script, which writes to `OUT`).
+3. Diff the two, treating **every** difference as an instruction from Davi.
+4. Fold the edits into the generator, regenerate, and confirm the output is
+   text-identical to his file.
+5. Record it in `DECISIONS.md` and propagate to `syllabus.qmd` and any other
+   surface carrying the same text.
+
+Never rebuild over his file to "restore consistency" — the generator is what
+gets corrected. A `~$…docx` sibling means Word still has it open.
+
+---
+
 ## 🚨 CRITICAL WORKFLOW — Commit AND Render Webpage  *(KEEP verbatim)*
 
 Every content change → `quarto render` → commit `docs/` → push. GitHub Pages serves
@@ -538,7 +566,21 @@ material.
 
 ---
 
-**Version:** 6.9 — the D61 weight rebalance (2026-08-23, DECISIONS.md D61):
+**Version:** 7.0 — D62, Davi's Word pass folded back into the generator
+(2026-08-23, DECISIONS.md D62): the syllabus `.docx` is a GENERATED artifact that Davi
+also edits by hand, so hand edits are now captured and pushed back into
+`scripts/build_syllabus_docx.py` before it is ever run again (see the new CRITICAL
+WORKFLOW above). Five adopted changes: the course-materials label becomes
+**`Recommended:`**; the `Grading:` lead-in drops its duplicated "There is no curve.";
+the **Grading scale moves directly beneath the weights table**; the **AI Policy body
+becomes one bullet per principle** (`NUM["ai_policy"]` repointed 2 → 14 to match the
+720-twip Symbol bullet Word used); and "Some activities **are** done without AI"
+becomes "**may be** done". Propagated to `syllabus.qmd`, which also gained the
+"AI is your arm…" line the `.docx` had and the web page lacked. **No weight, deadline,
+or contract changed** — D61's table still governs. ⚠ Exposed and UNRESOLVED:
+`syllabus.qmd` still names Gemini the "primary" assistant, contradicting the `.docx`
+and D30.
+(6.9 — the D61 weight rebalance (2026-08-23, DECISIONS.md D61):
 **IYT Practice rises from 10% to 15%** and **Student Research Lead settles from 30%
 to 25%**. D61 amends D58's two weights and nothing else: the completion-contract
 mechanics, the credit rule, the drop rule, participation's undivided 9% (N = 14,
@@ -546,7 +588,7 @@ d = 2), IYT's counts (N = 35 typical, 36 with stages, d = 4), the quiz retiremen
 the Friday 5/40/5 frame all stand. The IYT formula becomes `15.0 × (sum of the highest
 31 credits) / 31`; participation's stays `9.0 × …` and its ±0.9 contribution adjustment
 is untouched. Weights: attendance 1 · participation 9 · IYT Practice 15 · SRL 25 ·
-Final Project 50.
+Final Project 50.)
 (6.8 — the D58 quiz retirement and IYT Practice split (2026-08-23,
 DECISIONS.md D58): the **quiz grade category and its Friday class-time block are
 RETIRED for this edition** — no quiz is administered and nothing is scored on one,
