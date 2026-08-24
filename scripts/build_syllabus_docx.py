@@ -643,7 +643,7 @@ def main():
               "or Wednesday lectures as Socratic investigations. Slots are "
               "randomly assigned at the beginning of the semester. Prepare from "
               "the SRL Lead Brief in the lecture notebook, work about one week "
-              "ahead, and submit your preparation script or notebook the day "
+              "ahead, and submit your filled lecture notebook by 11:59 PM the day "
               "before you lead. Your leading is assessed on preparation, "
               "disciplinary accuracy, facilitation of the investigation, "
               "inclusion of the room, and your ability to synthesize and defend "

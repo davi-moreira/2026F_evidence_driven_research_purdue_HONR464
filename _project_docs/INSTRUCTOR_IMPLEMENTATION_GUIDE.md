@@ -108,8 +108,9 @@ students read their dates there.
    Lead Brief` cell that opens their lecture in that week's notebook (right
    after `# Lecture N`): the concept in play, the run of show, and explicit
    room for the lead's own staging.
-2. **2 days ahead** — the lead submits the preparation script
-   (`project/srl/srl_prep_template.md`). **Review it and send notes.** This
+2. **The day before, 11:59 PM** — the lead submits their filled lecture
+   notebook (`project/srl/srl_prep_template.md` is optional scaffolding, not
+   the submission). **Review it and send notes.** This
    review is the difference between a session that lands and one that stalls.
 3. **Day of** — the lead runs the room; you monitor, formalize (§1), and on
    Wednesdays run the 38–42 accuracy lock.

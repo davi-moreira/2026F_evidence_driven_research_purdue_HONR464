@@ -553,8 +553,8 @@ def gradebook_spec(config: dict) -> str:
         "carry grade weight and get no gradebook item.",
         "- **Student Research Lead** — two kinds of item, and they are not the "
         "same thing. (a) **One submission item per SRL slot (25 in all)**, each a "
-        "dropbox that takes the lead's filled lecture notebook, due 11:59 PM two "
-        "days before that lecture; planning/SRL_ASSIGNMENT_SCHEDULE.md is the "
+        "dropbox that takes the lead's filled lecture notebook, due 11:59 PM the "
+        "day before that lecture; planning/SRL_ASSIGNMENT_SCHEDULE.md is the "
         "dated list, and only the assigned lead submits to each. (b) **One scored "
         "item per student**, entered after each of their five leads against "
         "project/srl/srl_rubric.md; a single item scored five times is simpler "

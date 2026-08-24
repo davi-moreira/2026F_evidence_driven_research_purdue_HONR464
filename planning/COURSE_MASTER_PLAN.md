@@ -102,8 +102,8 @@ lectures (all Mon/Wed except Week 1's two launch meetings), **slots randomly
 assigned at the start of the semester** (no sequential rotation, no seats),
 first slot at meeting 4 (`nb02` Lecture 1). Each lecture's **SRL Lead Brief**
 is a student-visible section that opens that lecture in its notebook; leads
-prepare from about one week ahead and submit a preparation script/notebook two
-days ahead. The lead runs a **Socratic investigation, not a summary
+prepare from about one week ahead and submit their filled lecture notebook by
+11:59 PM the day before the lecture (D66). The lead runs a **Socratic investigation, not a summary
 presentation** — posing the puzzle, steering the AI investigation, and
 prompting peer defense; the instructor formalizes and adjudicates. The brief is
 a floor, not a ceiling: creative staging within the fixed frame is expected.
