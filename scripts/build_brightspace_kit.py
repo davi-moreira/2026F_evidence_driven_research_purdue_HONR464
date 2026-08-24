@@ -27,6 +27,7 @@ import datetime
 import html
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -759,6 +760,21 @@ promises need something published.
 Markdown pasted into Brightspace's HTML editor renders as literal text. The
 files in `units/` are **HTML**: open one, copy its contents, and paste into the
 editor's **source view** (the `</>` button), not the rich-text view.
+
+## The Schedule description
+
+Paste `schedule.html`, not the course page. Brightspace caps a description at
+**65,535 characters including hidden formatting**, and the rendered course page
+does not fit: it carries about 18 KB of Quarto navigation, its links are relative
+and would 404 from Brightspace, its table CSS lives in a stylesheet that does not
+travel with a paste, and its new-tab behaviour is a script Brightspace strips.
+
+`schedule.html` is the same table built for that field: absolute links, layout
+inline, no script, whitespace collapsed. Its builder refuses to write a file that
+would breach the ceiling, so if it wrote one, it fits. Paste it in **source
+view**, and rebuild it after any schedule change with
+
+    .venv/bin/python scripts/build_brightspace_schedule.py
 """
 
 
@@ -895,6 +911,15 @@ def main() -> int:
     (OUT / "00_pre_semester_checklist.md").write_text(checklist(config))
     (OUT / "simple_syllabus_ai_policy.md").write_text(ai_policy_component(config))
     (ANNOUNCEMENTS / "01_welcome.md").write_text(welcome_announcement(config))
+
+    # The Schedule description field is its own edition: it is derived from the
+    # RENDERED page, not from the CSV, so it cannot drift from what students see.
+    try:
+        subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "build_brightspace_schedule.py")],
+            check=True)
+    except subprocess.CalledProcessError:
+        print("⚠ the Schedule paste edition did not build — see the error above")
 
     print(f"✓ Brightspace kit written to {OUT.relative_to(ROOT)}/")
     print(f"  {len(weeks)} weekly units, gradebook spec, checklist, AI policy,")
