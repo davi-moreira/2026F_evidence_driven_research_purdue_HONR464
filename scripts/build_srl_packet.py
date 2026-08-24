@@ -384,29 +384,25 @@ having to watch the clock yourself.
 
 **If you drew a Monday: the guided investigation**
 
-| Minutes | Section | Whose block |
-|---|---|---|
-| 0–9 | Your research puzzle, committed in writing before any tool opens | **Yours** |
-| 9–31 | Guided AI research-partner investigation | **Yours** (I watch accuracy) |
-| 31–43 | Human verification and formalization | Mine, so just hand off cleanly |
-| 43–50 | Decision and defense, ledger row, Claim Ticket | **Yours** |
+| Minutes | Section |
+|---|---|
+| 0–9 | Your research puzzle, committed in writing before any tool opens |
+| 9–31 | Guided AI research-partner investigation |
+| 31–43 | Human verification and formalization |
+| 43–50 | Decision and defense, ledger row, Claim Ticket |
 
 **If you drew a Wednesday: the applied AI laboratory**
 
-| Minutes | Section | Whose block |
-|---|---|---|
-| 0–7 | Your retrieval and challenge | **Yours** |
-| 7–30 | Intensive applied AI laboratory, the longest block, so pacing is on you | **Yours** |
-| 30–38 | Peer defense and adversarial questioning | **You referee** |
-| 38–42 | Synthesis, then my accuracy lock | You synthesize, I lock |
-| 42–50 | Project transfer, ledger row, Claim Ticket | **Yours** |
+| Minutes | Section |
+|---|---|
+| 0–7 | Your retrieval and challenge |
+| 7–30 | Intensive applied AI laboratory, the longest block, so pacing is on you |
+| 30–38 | Peer defense and adversarial questioning |
+| 38–42 | Synthesis, then my accuracy lock |
+| 42–50 | Project transfer, ledger row, Claim Ticket |
 
 I will step in during your session, and I want you to expect it rather than read
-it as a rescue. If a conceptual error starts spreading I flag it without taking
-the room away from you. If the room goes quiet I may seed a cold call to restart
-the flow. If the AI produces a failure you missed, I will usually ask *you* to
-put it to the room rather than answer it myself. That is the design working, not
-you struggling.
+it as a rescue.
 
 ## How each lead is graded
 
@@ -440,19 +436,11 @@ It is the fastest way to be better on your next slot.
    as a learner. Then decide the one thing *you* are adding that the brief does
    not have. Your own example, your own staging, your own opening question. One
    thing is enough, and it is what separates a good session from a fine one.
-2. **Two days ahead**, send me your preparation script or notebook using the
-   [template]({srl_file('srl_prep_template.md')}). It asks for the puzzle, the
-   commitment question, three Socratic questions with the answers you expect
-   (both right and wrong), the exact AI prompts the class will run with an honest
-   prediction of what the AI will get wrong, your assumption-probe, the decision
-   you will make the room defend, a timing plan, and a fallback if the tool is
-   down. I read it and send notes. This review is the cheapest place in the whole
-   process to fix a session, so send it on time even if it still feels rough.
-3. **On the day**, arrive a few minutes early, open Colab, confirm your AI tool
+2. **On the day**, arrive a few minutes early, open Colab, confirm your AI tool
    responds, paste your first prompt into a scratch cell, and have your fallback
    ready. A dead tool should never kill your session. And breathe. You are not
    performing, you are hosting a good argument.
-4. **If you have to miss a slot**, tell me as far ahead as you can. Swapping with
+3. **If you have to miss a slot**, tell me as far ahead as you can. Swapping with
    a classmate's later slot, by agreement, is the first option, and it is far
    easier to arrange in advance than on the morning of.
 
@@ -460,12 +448,7 @@ It is the fastest way to be better on your next slot.
 
 1. Put your dates in your calendar, along with a **prep deadline two days before
    each one**.
-2. Read the [SRL Handbook]({srl_file('srl_handbook.md')}) once this week. It is
-   short, and it is the whole job. Then skim the
-   [rubric]({srl_file('srl_rubric.md')}) and the
-   [preparation template]({srl_file('srl_prep_template.md')}) so you know what you
-   are aiming at.
-3. Look your dates up on the [Schedule page]({SITE}/schedule.html) to see which
+2. Look your dates up on the [Schedule page]({SITE}/schedule.html) to see which
    notebook each one uses and what it covers.
 
 Every led lecture already contains its own **🎤 SRL Lead Brief** at the top of
@@ -475,9 +458,7 @@ lead. Treat it as a floor rather than a ceiling. It guarantees your session work
 even on a bad week, and the memorable sessions are the ones where the lead adds
 something of their own.
 
-**First up is {first['student']}, on {pretty(first['date'])}.** I am sending
-their brief separately today, and their preparation script is due
-{pretty(first['prep_due'])}.
+**First up is {first['student']}, on {pretty(first['date'])}.**
 
 Week 1's two lectures are mine. I run the format first so you can see it before
 you have to do it, and you should feel free to steal anything I do.
