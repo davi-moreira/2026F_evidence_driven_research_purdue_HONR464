@@ -127,7 +127,8 @@ credit in the pool.
 
 A **valid "It is your turn" submission** has all four of:
 
-1. an attributable file or link the instructor can actually open;
+1. one uploaded file per chapter, `.ipynb` or PDF, named
+   `LASTNAME_iyt_ch<nn>.ipynb`, that the instructor can actually open;
 2. every chapter the assignment names, each section worked in order;
 3. answers in the student's own words, not a restatement of the prompt;
 4. an AI Research Ledger row for anything delegated to an AI tool.
@@ -206,8 +207,9 @@ One ledger per category: one column per item, one row per student, one of
 every Friday, when the studio's milestone is collected, so the two numbers a
 student can see never lag the work by more than a week.
 
-**The IYT Practice ledger.** Open the submission, confirm every named chapter is
-there and worked in order, confirm the ledger row. At roughly a minute a
+**The IYT Practice ledger.** Open the submission, confirm there is one file per
+chapter the assignment names, that each section is worked in order, and that the
+ledger row is there. At roughly a minute a
 submission this is a few minutes a week for a seminar of five. Comment on the
 work when it deserves a comment; the score is still completion.
 

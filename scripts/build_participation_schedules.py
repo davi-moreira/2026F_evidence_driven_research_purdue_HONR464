@@ -152,35 +152,33 @@ def anchors(meetings: list[dict]) -> dict[str, int]:
 # ---------------------------------------------------------------------------
 # 1. the "It is your turn" submissions
 
+#: AUTHORED BY DAVI, 2026-08-23. This is his wording, recorded verbatim: it is
+#: what students read on every "It is your turn" assignment. Do not reword it,
+#: do not add paragraphs to it, and do not soften it to match a generated page.
+#: Three things about it are deliberate and were his call, not an omission:
+#:   * ONE SUBMISSION PER CHAPTER, not one per assignment. An assignment that
+#:     names four chapters collects four files, hence `ch<nn>` and not a range.
+#:   * Upload only. The Colab share link is not offered.
+#:   * No "when it is due" paragraph. Brightspace already shows the date on the
+#:     assignment, and the deadline rule lives in surveys/participation_grading.md.
 IYT_INSTRUCTION = """\
 **What this assignment collects.** Submit the completed **"It is your turn"** \
 section of every EDR|AI chapter named in this assignment's title. Open the \
-chapter from the course Material page, work its "It is your turn" section in \
-that chapter's companion Colab notebook (use the badge at the top of the \
-chapter, then **File → Save a copy in Drive** so the copy is yours), or work it \
-inside your own project notebook if you would rather keep everything in one \
-place.
+chapter from the EDR|AI book, work its "It is your turn" section in that \
+chapter's companion Colab notebook (use the badge at the top of the chapter, \
+then **File → Save a copy in Drive** so the copy is yours), or work it inside \
+your own project notebook if you would rather keep everything in one place.
 
-**What to hand in.** One submission per assignment, covering all of its \
+**What to hand in.** One submission per chapter, covering all required \
 chapters. Either upload the notebook (**File → Download → Download .ipynb**) or \
-a PDF of it (**File → Print → Save as PDF**), or paste a Colab share link set so \
-that anyone with the link can view it. Name the file \
-`LASTNAME_iyt_ch<numbers>.ipynb`. Answer in your own words, keep every question \
-in order, and add an AI Research Ledger row for anything you delegated to an AI \
+a PDF of it (**File → Print → Save as PDF**). Name the file \
+`LASTNAME_iyt_ch<nn>.ipynb`. Answer in your own words, keep every question in \
+order, and add an AI Research Ledger row for anything you delegated to an AI \
 tool.
 
-**How it is graded.** Completion only: submitted, complete, and on time, or not. \
-Your answers are never graded right or wrong here, and nothing you write in them \
-can lower another grade. The book prints a rubric for each section, at the end of \
-its companion notebook: use it as your self-check, not as your grade. It is the \
-bar the same work meets later, once your project carries it, which is why doing \
-this once and doing it properly is worth more than doing it twice.
-
-**When it is due.** The date shown on this assignment, at 11:59 PM. That is the \
-date the chapter's reading was due, so the section is written from the reading \
-rather than from class. A submission up to seven days late earns half credit; \
-after that it earns none. Your lowest few IYT Practice credits are dropped \
-automatically, so a bad week does not need an email."""
+**How it is graded.** Completion only: submitted, complete, and on time, or \
+not. Your answers are never graded right or wrong here, and nothing you write \
+in them can lower another grade."""
 
 
 STUDIO_FEEDBACK_INSTRUCTION = """\

@@ -32,13 +32,11 @@ written to be correct for all of them, so nothing has to be edited per
 assignment except the title and the due date.
 
 <!-- iyt-instruction:begin -->
-**What this assignment collects.** Submit the completed **"It is your turn"** section of every EDR|AI chapter named in this assignment's title. Open the chapter from the course Material page, work its "It is your turn" section in that chapter's companion Colab notebook (use the badge at the top of the chapter, then **File → Save a copy in Drive** so the copy is yours), or work it inside your own project notebook if you would rather keep everything in one place.
+**What this assignment collects.** Submit the completed **"It is your turn"** section of every EDR|AI chapter named in this assignment's title. Open the chapter from the EDR|AI book, work its "It is your turn" section in that chapter's companion Colab notebook (use the badge at the top of the chapter, then **File → Save a copy in Drive** so the copy is yours), or work it inside your own project notebook if you would rather keep everything in one place.
 
-**What to hand in.** One submission per assignment, covering all of its chapters. Either upload the notebook (**File → Download → Download .ipynb**) or a PDF of it (**File → Print → Save as PDF**), or paste a Colab share link set so that anyone with the link can view it. Name the file `LASTNAME_iyt_ch<numbers>.ipynb`. Answer in your own words, keep every question in order, and add an AI Research Ledger row for anything you delegated to an AI tool.
+**What to hand in.** One submission per chapter, covering all required chapters. Either upload the notebook (**File → Download → Download .ipynb**) or a PDF of it (**File → Print → Save as PDF**). Name the file `LASTNAME_iyt_ch<nn>.ipynb`. Answer in your own words, keep every question in order, and add an AI Research Ledger row for anything you delegated to an AI tool.
 
-**How it is graded.** Completion only: submitted, complete, and on time, or not. Your answers are never graded right or wrong here, and nothing you write in them can lower another grade. The book prints a rubric for each section, at the end of its companion notebook: use it as your self-check, not as your grade. It is the bar the same work meets later, once your project carries it, which is why doing this once and doing it properly is worth more than doing it twice.
-
-**When it is due.** The date shown on this assignment, at 11:59 PM. That is the date the chapter's reading was due, so the section is written from the reading rather than from class. A submission up to seven days late earns half credit; after that it earns none. Your lowest few IYT Practice credits are dropped automatically, so a bad week does not need an email.
+**How it is graded.** Completion only: submitted, complete, and on time, or not. Your answers are never graded right or wrong here, and nothing you write in them can lower another grade.
 <!-- iyt-instruction:end -->
 
 **Studio 5 takes two assignments, not one.** A pathway chapter is read on Monday
