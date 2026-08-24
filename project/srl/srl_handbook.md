@@ -142,7 +142,7 @@ Good SRL sessions are built, not improvised. Here is the rhythm.
 - Rough out your three Socratic questions and the moment you will have the room
   commit before touching AI.
 
-### Two days before your lead
+### The day before your lead
 
 - Submit **your lecture's notebook, filled in**. Open the notebook for the
   lecture you lead, complete the **🎤 My Lead Plan** cell at the top of your
@@ -251,7 +251,7 @@ it keeps your session accurate.
   on the **Schedule page** for the format and the notebook.
 - Your **SRL Lead Brief** is already in the lecture notebook, at the very start.
   Start reading it and the notebook **about a week ahead**.
-- You submit **your lecture's notebook, filled in, two days ahead**, with its
+- You submit **your lecture's notebook, filled in, the day before**, with its
   **🎤 My Lead Plan** cell complete; the instructor sends notes on it.
 - Each session ends with the class recording an **AI Research Ledger** line and a
   **Claim Ticket**, the two records that travel with every session in this

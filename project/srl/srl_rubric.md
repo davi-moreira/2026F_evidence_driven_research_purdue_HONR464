@@ -45,7 +45,7 @@ on a decision the room defends.
 ## How the score comes together
 
 - You are graded **live**, during your session, against these nine rows.
-- The **notebook you submit two days ahead** feeds the score before you even walk
+- The **notebook you submit the day before** feeds the score before you even walk
   in. A strong **🎤 My Lead Plan**, on top of a notebook you actually worked
   through, shows up as strong Socratic questions (row 2), a real assumption-probe
   (row 3), a specific AI plan (rows 4–5), a workable timing plan (row 7), and a

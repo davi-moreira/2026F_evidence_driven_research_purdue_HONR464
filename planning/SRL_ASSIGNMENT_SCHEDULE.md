@@ -13,8 +13,8 @@ What is safe to keep here is the slot structure, which is also the part that
 survives into the next edition.
 
 **What each lead owes.** Their lecture's notebook, filled in and with its
-**🎤 My Lead Plan** cell complete, submitted **two days before** the lecture
-(the "Notebook due" column) and prepared from one week ahead. The student
+**🎤 My Lead Plan** cell complete, submitted **the day before** the lecture
+(the "Notebook due" column), by 11:59 PM, and prepared from one week ahead. The student
 instructions are the SRL handout PDFs in `project/srl/`, built by
 `scripts/build_handout_pdfs.py`; those carry no names and no dates, so they upload
 to Brightspace once and stay correct.
@@ -28,31 +28,31 @@ The rubric is `project/srl/srl_rubric.md`.
 
 | Slot | Meeting | Lecture date | Notebook due | Week | Studio | Lecture | Frame |
 |---|---|---|---|---|---|---|---|
-| **01** | 4 | Mon Aug 31 | Fri Aug 28 | 2 | Studio 2: Set your rules, shape your question | The rules you set before you need them: your arm, your triage, your checklist, your name | Monday · guided investigation |
-| **02** | 5 | Wed Sep 2 | Mon Aug 31 | 2 | Studio 2: Set your rules, shape your question | The question you declare: kind, reach, and the words your name signs | Wednesday · applied AI laboratory |
-| **03** | 7 | Wed Sep 9 | Fri Sep 4 | 3 | Studio 3: Ground it in verified evidence | A lead is not a source: retrieve it, read it, and find out what it actually supports | Wednesday · applied AI laboratory |
-| **04** | 9 | Mon Sep 14 | Fri Sep 11 | 4 | Studio 4: Declare and diagnose provisionally | The four parts of a design, and the pile of answers behind every number | Monday · guided investigation |
-| **05** | 10 | Wed Sep 16 | Mon Sep 14 | 4 | Studio 4: Declare and diagnose provisionally | Diagnose it before it costs you anything, then find out whether you are allowed to run it | Wednesday · applied AI laboratory |
-| **06** | 12 | Mon Sep 21 | Fri Sep 18 | 5 | Studio 5: Develop the pathway | The route hub: three signals, five routes, and the licence each one buys | Monday · guided investigation |
-| **07** | 13 | Wed Sep 23 | Mon Sep 21 | 5 | Studio 5: Develop the pathway | The route jigsaw: advocate a road that is not yours, then rule out your mandated contrast | Wednesday · applied AI laboratory |
-| **08** | 15 | Mon Sep 28 | Fri Sep 25 | 6 | Studio 6: Govern data and measurement | How data reach you: acquisition routes, provenance, and the permission recheck | Monday · guided investigation |
-| **09** | 16 | Wed Sep 30 | Mon Sep 28 | 6 | Studio 6: Govern data and measurement | Do your measures measure your concepts? Concept, construct, indicator — reliability on items, validity as use | Wednesday · applied AI laboratory |
-| **10** | 18 | Mon Oct 5 | Fri Oct 2 | 7 | Studio 7: Produce a reproducible first analysis | AI as programmer: does the code run YOUR analysis? | Monday · guided investigation |
-| **11** | 19 | Wed Oct 7 | Mon Oct 5 | 7 | Studio 7: Produce a reproducible first analysis | AI as analytical assistant: the number, its uncertainty, and the record that proves it | Wednesday · applied AI laboratory |
-| **12** | 21 | Wed Oct 14 | Fri Oct 9 | 8 | Studio 8: Stress-test and adjudicate | Stress-test and adjudicate: four moves that decide whether your number survives | Wednesday · applied AI laboratory |
-| **13** | 23 | Mon Oct 19 | Fri Oct 16 | 9 | Studio 9: Write, bound, and disclose | Write and bound I: from a printed result to the claim your evidence can carry — the claim-license matrix and the claim-evidence table | Monday · guided investigation |
-| **14** | 24 | Wed Oct 21 | Mon Oct 19 | 9 | Studio 9: Write, bound, and disclose | Write and bound II: the disclosure your ledger writes, the note spine, and the scored audit of a note that leans on a source nobody retrieved | Wednesday · applied AI laboratory |
-| **15** | 26 | Mon Oct 26 | Fri Oct 23 | 10 | Studio 10: Prepare to publish or present | Adapt and audit I: the venue contract, the artifact that satisfies it, and the audit that catches a figure changing the finding | Monday · guided investigation |
-| **16** | 27 | Wed Oct 28 | Mon Oct 26 | 10 | Studio 10: Prepare to publish or present | Adapt and defend II: compress without inflating, then make the defend-or-concede call | Wednesday · applied AI laboratory |
-| **17** | 29 | Mon Nov 2 | Fri Oct 30 | 11 | Conference block: poster production and peer review | Poster production lab: the compass positions, and the number that has to trace | Monday · guided investigation |
-| **18** | 30 | Wed Nov 4 | Mon Nov 2 | 11 | Conference block: poster production and peer review | The draft on the wall: structured review across every active project | Wednesday · applied AI laboratory |
-| **19** | 32 | Mon Nov 9 | Fri Nov 6 | 12 | Conference block: presentation preparation | Three lengths of the same truth: the thirty-second, the ninety-second, and the two-minute pitch | Monday · guided investigation |
-| **20** | 33 | Wed Nov 11 | Mon Nov 9 | 12 | Conference block: presentation preparation | Questions you can predict, and the answer that concedes the smaller true claim | Wednesday · applied AI laboratory |
-| **21** | 35 | Mon Nov 16 | Fri Nov 13 | 13 | Conference block: the public test (dress rehearsal and the Expo) | Dress rehearsal: the questions you can predict, and the numbers that moved since you locked | Monday · guided investigation |
-| **22** | 38 | Mon Nov 30 | Mon Nov 23 | 15 | Studio 11: Reproduce and package | The cold run: does your number come back without you in the room? | Monday · guided investigation |
-| **23** | 39 | Wed Dec 2 | Mon Nov 30 | 15 | Studio 11: Reproduce and package | Package it for a stranger — then hand it to one: the capsule, its five sins, and the live cold run | Wednesday · applied AI laboratory |
-| **24** | 41 | Mon Dec 7 | Fri Dec 4 | 16 | Studio 12: Special topic: agentic AI, release, and the next cycle | Direct the closing review: wire the reviewer roles, then price their agreement | Monday · guided investigation |
-| **25** | 42 | Wed Dec 9 | Mon Dec 7 | 16 | Studio 12: Special topic: agentic AI, release, and the next cycle | Audit the release before you release: the stale-run test and the seven-row audit | Wednesday · applied AI laboratory |
+| **01** | 4 | Mon Aug 31 | Sun Aug 30 | 2 | Studio 2: Set your rules, shape your question | The rules you set before you need them: your arm, your triage, your checklist, your name | Monday · guided investigation |
+| **02** | 5 | Wed Sep 2 | Tue Sep 1 | 2 | Studio 2: Set your rules, shape your question | The question you declare: kind, reach, and the words your name signs | Wednesday · applied AI laboratory |
+| **03** | 7 | Wed Sep 9 | Tue Sep 8 | 3 | Studio 3: Ground it in verified evidence | A lead is not a source: retrieve it, read it, and find out what it actually supports | Wednesday · applied AI laboratory |
+| **04** | 9 | Mon Sep 14 | Sun Sep 13 | 4 | Studio 4: Declare and diagnose provisionally | The four parts of a design, and the pile of answers behind every number | Monday · guided investigation |
+| **05** | 10 | Wed Sep 16 | Tue Sep 15 | 4 | Studio 4: Declare and diagnose provisionally | Diagnose it before it costs you anything, then find out whether you are allowed to run it | Wednesday · applied AI laboratory |
+| **06** | 12 | Mon Sep 21 | Sun Sep 20 | 5 | Studio 5: Develop the pathway | The route hub: three signals, five routes, and the licence each one buys | Monday · guided investigation |
+| **07** | 13 | Wed Sep 23 | Tue Sep 22 | 5 | Studio 5: Develop the pathway | The route jigsaw: advocate a road that is not yours, then rule out your mandated contrast | Wednesday · applied AI laboratory |
+| **08** | 15 | Mon Sep 28 | Sun Sep 27 | 6 | Studio 6: Govern data and measurement | How data reach you: acquisition routes, provenance, and the permission recheck | Monday · guided investigation |
+| **09** | 16 | Wed Sep 30 | Tue Sep 29 | 6 | Studio 6: Govern data and measurement | Do your measures measure your concepts? Concept, construct, indicator — reliability on items, validity as use | Wednesday · applied AI laboratory |
+| **10** | 18 | Mon Oct 5 | Sun Oct 4 | 7 | Studio 7: Produce a reproducible first analysis | AI as programmer: does the code run YOUR analysis? | Monday · guided investigation |
+| **11** | 19 | Wed Oct 7 | Tue Oct 6 | 7 | Studio 7: Produce a reproducible first analysis | AI as analytical assistant: the number, its uncertainty, and the record that proves it | Wednesday · applied AI laboratory |
+| **12** | 21 | Wed Oct 14 | Tue Oct 13 | 8 | Studio 8: Stress-test and adjudicate | Stress-test and adjudicate: four moves that decide whether your number survives | Wednesday · applied AI laboratory |
+| **13** | 23 | Mon Oct 19 | Sun Oct 18 | 9 | Studio 9: Write, bound, and disclose | Write and bound I: from a printed result to the claim your evidence can carry — the claim-license matrix and the claim-evidence table | Monday · guided investigation |
+| **14** | 24 | Wed Oct 21 | Tue Oct 20 | 9 | Studio 9: Write, bound, and disclose | Write and bound II: the disclosure your ledger writes, the note spine, and the scored audit of a note that leans on a source nobody retrieved | Wednesday · applied AI laboratory |
+| **15** | 26 | Mon Oct 26 | Sun Oct 25 | 10 | Studio 10: Prepare to publish or present | Adapt and audit I: the venue contract, the artifact that satisfies it, and the audit that catches a figure changing the finding | Monday · guided investigation |
+| **16** | 27 | Wed Oct 28 | Tue Oct 27 | 10 | Studio 10: Prepare to publish or present | Adapt and defend II: compress without inflating, then make the defend-or-concede call | Wednesday · applied AI laboratory |
+| **17** | 29 | Mon Nov 2 | Sun Nov 1 | 11 | Conference block: poster production and peer review | Poster production lab: the compass positions, and the number that has to trace | Monday · guided investigation |
+| **18** | 30 | Wed Nov 4 | Tue Nov 3 | 11 | Conference block: poster production and peer review | The draft on the wall: structured review across every active project | Wednesday · applied AI laboratory |
+| **19** | 32 | Mon Nov 9 | Sun Nov 8 | 12 | Conference block: presentation preparation | Three lengths of the same truth: the thirty-second, the ninety-second, and the two-minute pitch | Monday · guided investigation |
+| **20** | 33 | Wed Nov 11 | Tue Nov 10 | 12 | Conference block: presentation preparation | Questions you can predict, and the answer that concedes the smaller true claim | Wednesday · applied AI laboratory |
+| **21** | 35 | Mon Nov 16 | Sun Nov 15 | 13 | Conference block: the public test (dress rehearsal and the Expo) | Dress rehearsal: the questions you can predict, and the numbers that moved since you locked | Monday · guided investigation |
+| **22** | 38 | Mon Nov 30 | Sun Nov 29 | 15 | Studio 11: Reproduce and package | The cold run: does your number come back without you in the room? | Monday · guided investigation |
+| **23** | 39 | Wed Dec 2 | Tue Dec 1 | 15 | Studio 11: Reproduce and package | Package it for a stranger — then hand it to one: the capsule, its five sins, and the live cold run | Wednesday · applied AI laboratory |
+| **24** | 41 | Mon Dec 7 | Sun Dec 6 | 16 | Studio 12: Special topic: agentic AI, release, and the next cycle | Direct the closing review: wire the reviewer roles, then price their agreement | Monday · guided investigation |
+| **25** | 42 | Wed Dec 9 | Tue Dec 8 | 16 | Studio 12: Special topic: agentic AI, release, and the next cycle | Audit the release before you release: the stale-run test and the seven-row audit | Wednesday · applied AI laboratory |
 
 ---
 

@@ -23,7 +23,7 @@ which is already public to the whole class.
 
 ## The submitted notebook is the substitute's script
 
-This is why the two-days-out submission matters beyond grading. **A submitted
+This is why the day-before submission matters beyond grading. **A submitted
 notebook is a complete, runnable script**, so any standby can lead from it with
 minutes of notice.
 
@@ -58,7 +58,7 @@ slot assignment posted on the course platform through the end of the semester.
 Distinct from absence: the lead is present but has not submitted a usable
 template. Handle it on a fixed ladder so it is predictable and fair.
 
-- **Two days out, no template:** send a reminder that the template is due and
+- **The day before, no template:** send a reminder that the template is due and
   that the slot cannot run on the fixed format without it. Note that a missing
   template affects the preparation portion of the SRL grade even if the session
   is later led.
@@ -86,6 +86,6 @@ above is for silence and non-preparation, not for students who communicate.
 ---
 
 *Related files: the lecture notebook itself (the submission that doubles as the
-standby script), `instructor_intervention_protocol.md` (the two-days-out review
+standby script), `instructor_intervention_protocol.md` (the day-before review
 that catches a missing notebook early), `srl_rubric.md` (the
 preparation-dependent rows affected when nothing is submitted).*

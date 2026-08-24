@@ -241,7 +241,7 @@ you have not sat with.
 ## Your deadline
 
 **Submit your lecture's notebook, filled in, by {pretty(a['prep_due'])}**
-(two days before you lead), on Brightspace.
+(the day before you lead), on Brightspace.
 
 Two things make it complete. Fill the **🎤 My Lead Plan** cell at the top of
 your lecture: how you will stage the puzzle, the one thing you are adding, your
@@ -294,7 +294,7 @@ lectures for the whole semester.
 1. About a week ahead, open that lecture's notebook and read the **🎤 SRL Lead
    Brief** at the top, then read the rest of the notebook and its required
    chapters as a learner.
-2. Two days ahead, submit **that notebook, filled in**, with its **🎤 My Lead
+2. The day before, submit **that notebook, filled in**, with its **🎤 My Lead
    Plan** cell complete. I send you notes on it.
 3. On the day, arrive a few minutes early, open Colab, confirm your AI tool
    responds, and have your fallback ready.
@@ -348,7 +348,7 @@ intimidating. Leading is the single best way to learn this material, which is wh
 it carries real weight. It is also the part of the course students tell me they
 were most nervous about and ended up enjoying most. You are not being thrown in
 cold: every session comes with a brief already written for you, you send me a
-plan two days ahead and I send notes back, and I am in the room the whole time.
+plan the day before and I send notes back, and I am in the room the whole time.
 
 The {len(rows)} leadable lectures were drawn **at random**, with a reproducible
 seed and four fairness constraints: everyone leads exactly {each} times, nobody
@@ -446,7 +446,7 @@ It is the fastest way to be better on your next slot.
 
 ## What to do now
 
-1. Put your dates in your calendar, along with a **prep deadline two days before
+1. Put your dates in your calendar, along with a **prep deadline the day before
    each one**.
 2. Look your dates up on the [Schedule page]({SITE}/schedule.html) to see which
    notebook each one uses and what it covers.

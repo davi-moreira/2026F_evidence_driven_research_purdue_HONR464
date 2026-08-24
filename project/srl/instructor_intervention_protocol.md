@@ -122,14 +122,14 @@ The score is shaped before the session, at two fixed touchpoints.
   understanding. Confirm the lead knows their format (Monday or Wednesday) from
   the Schedule page, and encourage them to add something of their own to the
   brief rather than run it verbatim.
-- **Two days out:** the lead submits their lecture notebook, filled in, with its
+- **The day before:** the lead submits their lecture notebook, filled in, with its
   **🎤 My Lead Plan** cell complete. Review it for the load-bearing pieces: a puzzle with
   a real answer and tempting wrong ones, a genuine commit-before-AI moment,
   specific AI prompts with honest predictions of what the AI will get wrong,
   a real assumption-probe, a closing decision, and a fallback if the tool is
   down. Return notes the lead can act on. A weak plan is the cheapest
   possible place to fix a session.
-- **No notebook two days out** triggers the escalation in
+- **No notebook the day before** triggers the escalation in
   `absent_lead_protocol.md`.
 
 ---

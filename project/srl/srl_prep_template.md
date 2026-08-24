@@ -1,6 +1,6 @@
 # SRL Preparation Template (optional)
 
-> **You do not have to fill this in.** What you submit two days before your lead
+> **You do not have to fill this in.** What you submit the day before your lead
 > is **your lecture's notebook**, with its **🎤 My Lead Plan** cell complete and
 > the rest worked through as a learner. That is the whole requirement.
 >
@@ -154,7 +154,7 @@ clearly labeled as prepared earlier so no one mistakes it for live output):*
 
 ---
 
-*What you submit two days before your lead is the notebook, not this sheet. The
+*What you submit the day before your lead is the notebook, not this sheet. The
 instructor reviews it and returns notes; revise before you walk in. Rubric
 alignment: the planning here feeds every row of `srl_rubric.md` — your Socratic
 questions (row 2), assumption-probe (row 3), AI plan (rows 4–5), timing (row 7),

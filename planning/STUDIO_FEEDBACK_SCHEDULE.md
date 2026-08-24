@@ -9,9 +9,11 @@ semester and the export is **one file** with a `studio` column. The instrument
 and its Qualtrics import file live in [`surveys/`](../surveys/).
 
 **When it closes.** The **Sunday that ends the studio week, 11:59 PM** — the
-night before the next studio starts. That is the same moment the studio's
-milestone is due (D55), so one deadline closes the whole week: submit the
-milestone, then say what the reading did for you while it is still fresh.
+night before the next studio starts. In most weeks that is also when the
+studio's milestone is due (D55), so one deadline closes the whole week: submit
+the milestone, then say what the reading did for you while it is still fresh.
+Two weeks break the pattern because the calendar does, the Labor Day and
+October Break weeks, and the table below carries the real dates.
 
 **Grading.** Graded inside **Participation (9%)**, for completion and
 seriousness, never for praise. A careful complaint and a careful compliment earn
@@ -34,7 +36,7 @@ for all twelve, so nothing has to be edited per studio.
 
 **How it is graded.** On whether you submitted a real, specific response on time, never on what you said. A careful complaint and a careful compliment earn exactly the same credit, and the complaint is the more useful of the two. Your ratings and your comments never affect any other grade. The book is still being written, and what you flag here is what gets rewritten.
 
-**When it is due.** 11:59 PM on the Sunday that closes the studio week, which is the night before the next studio starts and the same night that studio's milestone is due. Studio 12 is the exception: it closes Friday, December 11, with the course reflection. A response up to seven days late earns half credit; after that it earns none. Your lowest few participation credits are dropped automatically, so a bad week does not need an email.
+**When it is due.** 11:59 PM on the Sunday that closes the studio week, which is the night before the next studio starts and, in most weeks, the same night that studio's milestone is due. Three studios sit on a different date because the calendar moved: Studio 2 closes Tuesday, September 8, after the Labor Day weekend; Studio 7 keeps its Sunday while its milestone moves past October Break; and Studio 12 closes Friday, December 11, with the course reflection. The course platform carries the date for every one of them. A response up to seven days late earns half credit; after that it earns none. Your lowest few participation credits are dropped automatically, so a bad week does not need an email.
 <!-- studio-feedback-instruction:end -->
 
 ---
@@ -44,7 +46,7 @@ for all twelve, so nothing has to be edited per studio.
 | Studio | Week | Studio meetings | Chapters it covers | Survey closes (11:59 PM) |
 |---|---|---|---|---|
 | **1** · Begin with your curiosity | 1 | Aug 24–Aug 28 | Ch. 1 | **Sun Aug 30, 2026** |
-| **2** · Set your rules, shape your question | 2 | Aug 31–Sep 4 | Ch. 2-7 | **Sun Sep 6, 2026** |
+| **2** · Set your rules, shape your question | 2 | Aug 31–Sep 4 | Ch. 2-7 | **Tue Sep 8, 2026** *(Labor Day weekend, so this one runs to the night before Studio 3 opens)* |
 | **3** · Ground it in verified evidence | 3 | Sep 9–Sep 11 | Ch. 8, 9 | **Sun Sep 13, 2026** |
 | **4** · Declare and diagnose provisionally | 4 | Sep 14–Sep 18 | Ch. 10-13 | **Sun Sep 20, 2026** |
 | **5** · Develop the pathway | 5 | Sep 21–Sep 25 | Ch. 14-19 | **Sun Sep 27, 2026** |

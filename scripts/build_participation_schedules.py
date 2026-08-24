@@ -55,6 +55,20 @@ from validate_calendar import no_class_days  # noqa: E402
 
 CLOSED = set(no_class_days())
 
+def _studio_overrides() -> dict[int, dt.date]:
+    """Studio -> hand-set close date, from course_config.yaml (D66).
+
+    The course platform is authoritative for due dates. Where a studio's
+    computed Sunday is not the date students actually see there, the config
+    carries the real one and it wins.
+    """
+    import yaml
+    cfg = yaml.safe_load((REPO / "course_config.yaml").read_text())
+    raw = (cfg["participation"]["items"]["studio_feedback"].get("overrides")
+           or {})
+    return {int(k): dt.date.fromisoformat(v) for k, v in raw.items()}
+
+
 SITE = ("https://davi-moreira.github.io/"
         "2026F_evidence_driven_research_purdue_HONR464")
 COLAB = ("https://colab.research.google.com/github/davi-moreira/"
@@ -204,9 +218,12 @@ your comments never affect any other grade. The book is still being written, and
 what you flag here is what gets rewritten.
 
 **When it is due.** 11:59 PM on the Sunday that closes the studio week, which is \
-the night before the next studio starts and the same night that studio's milestone \
-is due. Studio 12 is the exception: it closes Friday, December 11, with the course \
-reflection. A response up to seven days late earns half credit; after that it earns \
+the night before the next studio starts and, in most weeks, the same night that \
+studio's milestone is due. Three studios sit on a different date because the calendar \
+moved: Studio 2 closes Tuesday, September 8, after the Labor Day weekend; Studio 7 \
+keeps its Sunday while its milestone moves past October Break; and Studio 12 closes \
+Friday, December 11, with the course reflection. The course platform carries the date \
+for every one of them. A response up to seven days late earns half credit; after that it earns \
 none. Your lowest few participation credits are dropped automatically, so a bad \
 week does not need an email."""
 
@@ -361,6 +378,7 @@ def studio_table(meetings: list[dict]) -> str:
         s["meetings"].append(int(r["meeting"]))
 
     last_class = max(dt.date.fromisoformat(r["date"]) for r in meetings)
+    overrides = _studio_overrides()
     order = sorted(studios)
     lines = ["| Studio | Week | Studio meetings | Chapters it covers "
              "| Survey closes (11:59 PM) |", "|---|---|---|---|---|"]
@@ -373,6 +391,10 @@ def studio_table(meetings: list[dict]) -> str:
             close = last_class
             note = " *(the term ends first, so this one closes with the course "
             note += "reflection on the last day of class)*"
+        if k in overrides:
+            close = overrides[k]
+            note = (" *(Labor Day weekend, so this one runs to the night "
+                    "before Studio 3 opens)*")
         nums = sorted(l["display"] for n in s["meetings"]
                       for l in chapters_at.get(n, []))
         covers = f"Ch. {chapter_range(nums)}" if nums else "—"
@@ -391,9 +413,11 @@ semester and the export is **one file** with a `studio` column. The instrument
 and its Qualtrics import file live in [`surveys/`](../surveys/).
 
 **When it closes.** The **Sunday that ends the studio week, 11:59 PM** — the
-night before the next studio starts. That is the same moment the studio's
-milestone is due (D55), so one deadline closes the whole week: submit the
-milestone, then say what the reading did for you while it is still fresh.
+night before the next studio starts. In most weeks that is also when the
+studio's milestone is due (D55), so one deadline closes the whole week: submit
+the milestone, then say what the reading did for you while it is still fresh.
+Two weeks break the pattern because the calendar does, the Labor Day and
+October Break weeks, and the table below carries the real dates.
 
 **Grading.** Graded inside **Participation (9%)**, for completion and
 seriousness, never for praise. A careful complaint and a careful compliment earn
@@ -452,12 +476,11 @@ def srl_table(meetings: list[dict]) -> str:
     for slot, r in slots:
         week, studio = week_of(r["unit"])
         d = dt.date.fromisoformat(r["date"])
-        # Two days ahead (D18), but never ON a day the course does not meet:
-        # two slots would otherwise fall due on Labor Day and October Break.
-        pd_ = d - dt.timedelta(days=2)
-        while pd_.weekday() not in (0, 2, 4) or pd_.isoformat() in CLOSED:
-            pd_ -= dt.timedelta(days=1)
-        prep = pd_.strftime("%a %b %-d")
+        # 11:59 PM the CALENDAR DAY BEFORE the lecture (D66, adopted from the
+        # course-platform dates and superseding D18's two days). No class-day
+        # snapping: this is a submission time, not a meeting, so a Sunday or a
+        # holiday is a perfectly good due date.
+        prep = (d - dt.timedelta(days=1)).strftime("%a %b %-d")
         name, _ = FRAME[r["day"]]
         title = re.sub(r"\s+", " ", r["title"]).strip()
         lines.append(
@@ -485,8 +508,8 @@ What is safe to keep here is the slot structure, which is also the part that
 survives into the next edition.
 
 **What each lead owes.** Their lecture's notebook, filled in and with its
-**🎤 My Lead Plan** cell complete, submitted **two days before** the lecture
-(the "Notebook due" column) and prepared from one week ahead. The student
+**🎤 My Lead Plan** cell complete, submitted **the day before** the lecture
+(the "Notebook due" column), by 11:59 PM, and prepared from one week ahead. The student
 instructions are the SRL handout PDFs in `project/srl/`, built by
 `scripts/build_handout_pdfs.py`; those carry no names and no dates, so they upload
 to Brightspace once and stay correct.
