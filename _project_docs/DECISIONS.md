@@ -3393,3 +3393,52 @@ assistant is the primary in-notebook research partner." **D30 retired Gemini fro
 student-facing material** in favor of AI-generic voice, so the web page is the stale
 side of a direct contradiction in the same policy section. Changing it is outside the
 five edits Davi made and needs his ruling.
+
+---
+
+## D63 — Davi's pass on the Week-1 welcome is folded back into its generator (2026-08-23)
+
+The three Week-1 announcements were rewritten as Markdown in `_announcements/`
+(Davi opens them in VS Code and pastes into Brightspace), warmed in tone, and
+given a standing opening (`Hello everyone,`) and close (`All the best, / Prof.
+Moreira`). Davi then edited the welcome and posted his own version. Following the
+D62 rule, his text is the instruction and
+`scripts/build_brightspace_kit.py::welcome_announcement()` was corrected until it
+regenerates his wording exactly. Five edits, all adopted:
+
+1. **The day-one prerequisite drops GenAI Studio.** "sign in to Google and to
+   genai.rcac.purdue.edu. If either of those gives you trouble, we will sort it
+   out together in class" becomes "sign in to Google." Nothing but Colab is asked
+   for before Monday.
+2. **The course's one idea is reframed for the welcome.** "AI is your arm and
+   your research assistant, not your brain" becomes "AI can be used for
+   scientific discovery and research. My goal is to prepare you to use it as your
+   best research assistant." The positive capability claim leads; the
+   *not your brain* half is not stated in the welcome.
+3. **The no-quantitative-background reassurance is cut** ("If you have never done
+   quantitative work before, you are in exactly the right place…").
+4. **The Expo line is trimmed** to "It is required and graded." The "not a class
+   day, so please look at your November schedule early" warning is cut.
+5. **Two small ones:** "syllabus before Monday" becomes "before the first class",
+   and the "See you Monday, August 24!" line before the sign-off is cut.
+
+Verified: the regenerated `_announcements/01_welcome.md` is text-identical to
+Davi's posted version, modulo Markdown emphasis markers that his editor's paste
+flattens.
+
+**Scope: the welcome announcement only.** Edit 2 changes how the course's
+defining message is phrased *in one announcement*. CLAUDE.md's Project Mission,
+the syllabus, the book and the notebooks still carry "AI is your arm and your
+research assistant, not your brain", and none of them were touched. Whether the
+new framing should propagate is Davi's call, not an inference from this edit.
+
+⚠ **Exposed and UNRESOLVED — the GenAI Studio prerequisite.** Edit 1 removes
+`genai.rcac.purdue.edu` from the only place students were told to have it working
+before Monday, but other surfaces still require it in Week 1:
+`planning/MEETING_SCHEDULE.csv` meeting 1 `student_prep` names it alongside Colab
+and the course platform, and meeting 3 (the Friday M1 studio) runs a required
+two-pass red team whose second pass is the GenAI Studio Socratic Research Tutor,
+with a contingency that already assumes the role may fail to open. Either the
+sign-in needs to be asked for somewhere else before Friday, or the M1 studio's
+GenAI Studio pass needs to stop being load-bearing in Week 1. Needs Davi's
+ruling.

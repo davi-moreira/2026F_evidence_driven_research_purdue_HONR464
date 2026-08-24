@@ -842,26 +842,22 @@ complaint.
 **2. Please bring a laptop on day one.** All of our computing runs in your
 browser through Google Colab, so there is nothing to install and nothing to set
 up in advance. On Monday you will open the first notebook, save your own copy,
-and run it. Just come able to sign in to Google and to
-<https://genai.rcac.purdue.edu>. If either of those gives you trouble, we will
-sort it out together in class.
+and run it. Just come able to sign in to Google.
 
 **3. Here is what you are walking into.** This is a {c['credit_hours']}-credit
 seminar built around one research project that is yours from the very first week.
 You choose the question. You defend the claim. Plan on about six hours a week
 outside class, and know that the work is real research rather than exercises.
 
-The whole course runs on one idea: **AI is your arm and your research assistant,
-not your brain.** You will use AI constantly here, and none of that is cheating.
-What you are graded on is how well you direct it and how carefully you check it,
-never on letting it decide for you. If you have never done quantitative work
-before, you are in exactly the right place. This course assumes no background of
-that kind, and it is built to bring you along.
+The whole course runs on one idea: **AI can be used for scientific discovery and
+research. My goal is to prepare you to use it as your best research assistant.**
+You will use AI constantly here, and none of that is cheating. What you are
+graded on is how well you direct it and how carefully you check it, never on
+letting it decide for you.
 
 One date belongs on your calendar right now: **Tuesday, November 17**, the Purdue
 Fall Undergraduate Research Expo, where you will present your poster. It is
-required and graded, and it is not a class day, so please look at your November
-schedule early.
+required and graded.
 
 **4. A few things are due at the end of Week 1, on Sunday, August 30, at 11:59
 PM:** Milestone 1 (your curiosity, committed), the student profile survey, and
@@ -870,14 +866,12 @@ build Milestone 1 together in class on Friday. Still, it is worth putting on you
 calendar today.
 
 The full schedule lives at <{SITE}/schedule.html>. Have a look at the syllabus
-before Monday, and please bring your questions with you. Curiosity is the whole
+before the first class, and please bring your questions with you. Curiosity is the whole
 point of this course, so come with some.
 
 If anything at all is unclear before we begin, or if there is something about
 your situation I should know, just email me. I would much rather hear from you
 early.
-
-See you {day1}!
 
 All the best,
 
