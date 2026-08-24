@@ -1,10 +1,12 @@
 [[AdvancedFormat]]
 
+[[ED:prompt_version:fixed_revision_v1]]
+
 [[Block:Intro and studio]]
 
 [[Question:DB]]
 [[ID:intro]]
-This takes about three minutes. You are reporting on ONE studio — the chapters you were assigned for it. Answer from the reading, not from class.<br><br><b>Three things worth knowing before you start.</b><br><br><b>One.</b> This is scored on whether you submitted a real, specific response on time. It is never scored on what you said. A careful complaint and a careful compliment earn exactly the same credit, and the complaint is more useful.<br><br><b>Two.</b> The book is still being written. What you flag here is what gets rewritten, and you will see the changes.<br><br><b>Three.</b> Your name is attached, because this carries participation credit. Your ratings and your comments never affect any other grade.
+About three minutes. Report on one studio from its reading and companion notebooks, not from class.<br><br>Your Purdue username is attached because submission earns participation credit. Credit depends only on submitting by the deadline, never on what you say, and no answer affects another grade.<br><br>I record credit first. Later, I remove the username column and use responses to revise the book. This is not anonymity in a five-person seminar. I report changes without naming or quoting you.<br><br>Every question is required. The feedback items include honest none and did-not-reach answers.
 
 [[Question:TE:SingleLine]]
 [[ID:student]]
@@ -29,171 +31,83 @@ Studio 12: Special topic: agentic AI, release, and the next cycle (Ch. 38-40)
 
 [[PageBreak]]
 
-[[Block:The reading]]
+[[Block:Fast revision triage]]
 
 [[Question:MC:SingleAnswer:Vertical]]
-[[ID:familiarity]]
-Before this studio's reading, how familiar were you with what these chapters cover?
+[[ID:coverage]]
+How much of this studio's assigned reading did you reach? Your answer does not affect credit.
 [[Choices]]
-Not at all familiar
-Slightly familiar
-Moderately familiar
-Very familiar
-Extremely familiar
+All
+Most
+About half
+A small part
+None
 
 [[Question:MC:SingleAnswer:Vertical]]
-[[ID:explain]]
-Right now, how well could you explain this studio's main idea to a classmate?
-[[Choices]]
-I could not explain it yet
-I could name some parts, but not connect them
-I could give a basic explanation, with some gaps
-I could explain the main idea accurately
-I could explain the main idea and why it matters
-
-[[Question:MC:SingleAnswer:Horizontal]]
-[[ID:effort]]
-How much mental effort did you invest in understanding this studio's chapters? Mental effort means how much thinking work you put in, not how many minutes it took.
-[[Choices]]
-1 - Very, very low mental effort
-2
-3
-4
-5
-6
-7
-8
-9 - Very, very high mental effort
-
-[[PageBreak]]
-
-[[Question:MC:SingleAnswer:Vertical]]
-[[ID:reread]]
-How often did the writing make you stop and reread because the idea was not yet clear?
+[[ID:clarity]]
+How often did the reading leave an idea unclear?
 [[Choices]]
 Never
 Once
 A few times
 Many times
-Through most of the reading
+Most of the reading
+Not enough reading to judge
 
 [[Question:MC:SingleAnswer:Vertical]]
-[[ID:useful]]
-How useful does this studio's reading seem for doing or judging research?
+[[ID:purpose]]
+How clearly did the reading show why these ideas matter for research?
 [[Choices]]
-Not useful yet
-Slightly useful
-Moderately useful
-Very useful
-Essential
-I cannot tell yet
+Not at all
+A little
+Somewhat
+Mostly
+Completely
+Not enough reading to judge
 
 [[Question:MC:SingleAnswer:Vertical]]
 [[ID:ready]]
-Without any more explanation, how ready are you to try these chapters' "It is your turn" tasks?
+In the "It is your turn" sections you reached, how often were the directions clear enough to act on?
 [[Choices]]
-Not at all ready
-Slightly ready
-Moderately ready
-Very ready
-Fully ready
-I did not reach those sections
-
-[[PageBreak]]
-
-[[Block:Your evidence anchor]]
-
-[[Question:DB]]
-[[ID:anchor_note]]
-Answer in one to three sentences. Name the chapter, and be specific enough that your instructor can find the passage. Longer answers earn no more credit than short exact ones.
-
-[[Question:TE:Essay]]
-[[ID:anchor_a]]
-Point to one specific place in this studio's reading that helped your understanding. Name the chapter, then the sentence, example, figure, or step, and say what it helped you see. If nothing helped, name where you first got stuck and say why.
-
-[[Question:TE:Essay]]
-[[ID:anchor_b]]
-Point to one specific place in this studio's reading that slowed you down or blocked you. Name the chapter, then the sentence, example, figure, or step, and say what needs to change. If nothing blocked you, name the hardest place and say what made it work.
-
-[[Question:TE:Essay]]
-[[ID:anchor_c]]
-Choose one place in this studio's reading you would revise. Name the chapter, say where it is, and say exactly what you would change. If you would change nothing, name one place that should stay exactly as it is, and say why.
-
-[[Question:TE:Essay]]
-[[ID:anchor_d]]
-Write one question this studio's reading left you with, and name the chapter and the passage that prompted it. If you have no open question, write a check-for-understanding question for a classmate, and give the answer.
-
-[[PageBreak]]
-
-[[Block:Housekeeping]]
-
-[[Question:MC:SingleAnswer:Vertical]]
-[[ID:coverage]]
-How much of this studio's assigned reading did you actually read? This answer is never scored. Answer it honestly, so the workload numbers mean something.
-[[Choices]]
-All of it, closely
-All of it, some parts quickly
-Most of it
-About half
-I skimmed it
-I did not read it this time
+Always
+Usually
+About half the time
+Rarely
+Never
+Did not reach one
 
 [[Question:MC:SingleAnswer:Vertical]]
 [[ID:notebook]]
-Did you use the companion Colab notebooks for these chapters?
+What best describes your overall notebook experience in this studio?
 [[Choices]]
-No, I did not open them
-I opened them but did not run them
-I ran them as written
-I ran them and changed things
+Did not open one
+Opened one; did not run it
+A technical problem stopped me
+Used one; it made the reading clearer
+Used one; it made no difference
+Used one; it made the reading harder
 
 [[Question:MC:SingleAnswer:Vertical]]
-[[ID:notebook_effect]]
-If you used them: what did the notebooks do for your understanding?
+[[ID:revision_focus]]
+Which kind of change would help the next reader most?
 [[Choices]]
-Made it much harder
-Made it a little harder
-No difference
-Helped a little
-Helped a lot
-
-[[Question:DB]]
-[[ID:ainote]]
-One course rule applies here too: AI is your arm, not your brain. You may use a tool while you read. Just say so, the way you would in your AI Research Ledger. Using one is fine. Hiding it is not.
-
-[[Question:MC:SingleAnswer:Vertical]]
-[[ID:ai_used]]
-Did you use an AI tool while reading for this studio?
-[[Choices]]
-No
-Yes, to summarise or explain part of it
-Yes, to help with an "It is your turn" task
-Yes, something else
-
-[[Question:TE:Essay]]
-[[ID:ai_what]]
-If you used one: what did you ask it, and what did you check for yourself afterwards?
+Clarify an idea or term
+Improve an example, figure, or table
+Shorten or reorder
+Clarify an "It is your turn" task
+Fix a notebook or link
+Check a fact, number, or citation
+Keep a place as it is
+Not enough reading to choose
 
 [[PageBreak]]
 
-[[Block:Anything broken]]
+[[Block:Your revision note]]
 
-[[Question:MC:MultipleAnswer:Vertical]]
-[[ID:defect]]
-Did you find anything broken? Tick everything that applies.
-[[Choices]]
-A typo or a wording error
-A number that looks wrong
-A link or a notebook that did not open
-A figure or table I could not read
-A term used before it was defined
-Something else
-Nothing
+[[Question:DB]]
+[[ID:anchor_note]]
+One or two sentences. Be short and exact.
 
 [[Question:TE:Essay]]
-[[ID:defect_where]]
-If you ticked anything: which chapter, where in it, and what is wrong?
-
-[[Question:TE:Essay]]
-[[ID:anything]]
-Anything else you want on the record? Optional.
+[[ID:anchor]]
+Name the one place the author should work on first. Give the chapter and a heading, sentence, example, figure, step, or notebook cell so it can be found. Say what to change and why. If you would change nothing, name one place to keep and say why. If you stopped or did not start, name the chapter and say whether the reading or something outside it stopped you. No personal detail is needed.
