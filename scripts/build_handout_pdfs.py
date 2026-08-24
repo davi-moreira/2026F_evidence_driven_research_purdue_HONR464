@@ -24,12 +24,18 @@ Those additions are authored once in
 
 under `classification` / `additions_markdown`.
 
-That same file also carries `schedule_mark`, but it is a SEPARATE decision and a
-narrower one: the schedule marks a milestone only when its Book Milestone does
-not by itself get the student to the Undergraduate Research Expo. So a milestone
-can carry a full "What this course adds" section and NO schedule mark. Never read
-an unmarked row as "nothing extra owed here", and never delete a section to make
-the schedule quieter.
+WHAT COUNTS AS AN ADDITION (instructor ruling, 2026-08-23, narrowed): ONLY what
+the Undergraduate Research Expo itself requires and the book milestone does not
+carry. Applying, the published abstract, the peer review of the boards, the
+printed poster and its lock, the spoken pitches, the invitation, presenting, and
+evidencing that you presented. Course logistics, classroom drills, reproducibility
+packaging, rubric wording and analysis-craft practice are NOT additions, however
+much the course values them: they belong in the milestone brief on the course
+platform, not in this PDF. Their authored text is preserved in the additions file
+under `retired_additions_markdown`.
+
+`schedule_mark` in that same file drives the schedule plus. Under the narrowed
+rule the two coincide: a milestone carries a section exactly when it is marked.
 
 WHAT IS ENFORCED
 ----------------
@@ -234,10 +240,7 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
         "",
         f"Submit it on Brightspace, under **Assignments** then **M{info['num']}**. "
         f"Brightspace carries the deadline.",
-        "",
-        "Where this document has a **What this course adds** section, that section "
-        "is part of the milestone and is graded, whether or not the course "
-        "schedule marks this milestone.",
+
         "",
         "This milestone presents "
         + " and ".join(f"**Book Milestone {b['n']}: {_short(b['title'])}** "

@@ -83,12 +83,8 @@ FOOTER = '''
 ::: below-table
 
 **Milestone column.** Every milestone links to the Book Milestone it presents in
-[EDR|AI](book/index.html){target="_blank"}. A **{PLUS}** means that book
-milestone does not by itself get you to the Purdue Fall Undergraduate Research
-Expo, so this course adds something you need in order to apply, to prepare, to
-present, or to show that you presented. Every milestone's Brightspace
-instructions can add requirements of their own and all of them are graded; the
-{PLUS} flags only the ones the conference itself depends on.
+[EDR|AI](book/index.html){target="_blank"}. A **{PLUS}** means that this
+course requests something in addition to the book milestone.
 
 ## Core Course References
 
