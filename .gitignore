@@ -123,3 +123,14 @@ scratch_*.ipynb
 book/.quarto/
 book/_freeze/
 _selftest/
+
+# Codex's LOCAL agent wiring (its mirror of .claude/hooks + hooks.json).
+# Machine-local: it points at $CLAUDE_PROJECT_DIR and this checkout's .venv.
+# Ignored rather than tracked so it does not block the commit hook every turn;
+# drop this rule if the peer-agent config should travel with the repo.
+.codex/
+
+# Written by validate_book_architecture.py, read by build_book_map.py. CI
+# regenerates it in the architecture gate before the map gate needs it, so it
+# is local build state, not a tracked manifest.
+planning/.crosswalk_lock.json
