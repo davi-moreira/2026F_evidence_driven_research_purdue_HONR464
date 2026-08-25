@@ -206,7 +206,7 @@ MEETINGS_P1 = [
         "exit_ticket": "Claim Ticket #5: my lead question, its kind and reach, and the single word in my sentence that fixes the kind.",
         "homework_next_milestone": "Bring what Friday's studio needs for Milestone 2: Monday's responsibility statement and buckets, your ledger with the retrospective Week-1 row, and your lead question. Confirm your Purdue Libraries login works before Week 3.",
         "instructor_prep": "Brief the SRL on the burnout split and its listen-fors; file the audit key (the kind fixed from the data, the double barrel, the 71-versus-53.5 number, and both planted sound elements); verify the midpoint-share cell; confirm the Research Question Diagnostician role opens from Workspace; print the synopsis form.",
-        "risks_contingency": "The 23-minute lab is the tightest block of the week, so if it runs long the 🔁 modification is the only movable piece and drops to a named modification with no run — Verify and Calibrate are never cut; five students leave one reader unpaired at peer defense, so the SRL takes the spare while the instructor stays uncommitted for the accuracy lock.",
+        "risks_contingency": "The 23-minute lab is the tightest block of the week, so if it runs long the 🔁 modification is the only movable piece and drops to a named modification with no run — Verify and Calibrate are never cut; with the lead out of the pool the six remaining students pair evenly at peer defense, so the instructor stays uncommitted for the accuracy lock.",
     },
     # ------------------------------------------------------------------ M7
     {

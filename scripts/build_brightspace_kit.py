@@ -328,11 +328,13 @@ def gradebook_spec(config: dict) -> str:
         # in course_config.yaml can never print a raw key in the spec table.
         "srl_performance": (
             "Student Research Lead",
-            "5 leads per student, scored on project/srl/srl_rubric.md",
+            "3 or 4 leads per student (25 slots, 7 students), averaged and "
+            "scored on project/srl/srl_rubric.md",
         ),
         "student_research_lead": (
             "Student Research Lead",
-            "5 leads per student, scored on project/srl/srl_rubric.md",
+            "3 or 4 leads per student (25 slots, 7 students), averaged and "
+            "scored on project/srl/srl_rubric.md",
         ),
         "final_project": (
             "Final Project",
@@ -556,10 +558,11 @@ def gradebook_spec(config: dict) -> str:
         "dropbox that takes the lead's filled lecture notebook, due 11:59 PM the "
         "day before that lecture; planning/SRL_ASSIGNMENT_SCHEDULE.md is the "
         "dated list, and only the assigned lead submits to each. (b) **One scored "
-        "item per student**, entered after each of their five leads against "
-        "project/srl/srl_rubric.md; a single item scored five times is simpler "
-        "than five items for a class of five. The submission items carry the "
-        "deadline; the scored item carries the 25%.",
+        "item per student**, entered after each of their leads against "
+        "project/srl/srl_rubric.md and averaged; a single item scored three or "
+        "four times is simpler than four items for a class of seven, and the "
+        "average is what makes an uneven lead count harmless. The submission "
+        "items carry the deadline; the scored item carries the 25%.",
         "- **Participation** — ONE undivided 9% category (D57, re-partitioned "
         "by D58). Create one item for the studio feedback survey, one for the "
         "student profile survey (Aug 30), and one for the course reflection "
@@ -673,7 +676,8 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
 - [ ] **Activate the course.** Course Admin → Course Offering Information →
       check **Course is active**. Until this is ticked, students see nothing.
       As of the 2026-08-22 classlist export, `LastAccessed` was empty for all
-      five students, which is consistent with the shell never having been open.
+      five students then enrolled, which is consistent with the shell never
+      having been open; two more students joined on 2026-08-25.
 - [ ] **Set the course start and end dates** to {cal['first_class']} and
       {cal['last_class']}, and make sure the start date is not *also* acting as
       a release gate that hides Week 1.
@@ -707,10 +711,10 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
       every date on the Brightspace **calendar** (Purdue's 2026-08-21 guidance
       asks for dates on all assignments).
 - [ ] **Publish units 2-16** with sequential release, or publish weekly by hand.
-      With five students, weekly by hand is defensible and less brittle.
+      With seven students, weekly by hand is defensible and less brittle.
       D58 rewrote the reading section of *every* unit and removed the Friday
       quiz block, so re-paste all of them, not only the weeks you changed.
-- [ ] **Post the SRL assignment** so each student sees their own five dates
+- [ ] **Post the SRL assignment** so each student sees their own dates
       (`_adm/roster/2026F_HONR46400_srl_assignment.md`). FERPA: post each
       student's slots to that student, or post a slot table by date that names
       only the lead for that date — never distribute the roster file itself.

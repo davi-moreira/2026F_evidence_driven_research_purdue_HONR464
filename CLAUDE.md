@@ -32,7 +32,7 @@ task; neither agent is permanently primary or subordinate.
 
 **HONR 46400 — SP: Evidence-Driven Research** ("How to Design, Analyze, Verify,
 and Defend Empirical Research"), a semester-long Honors College seminar (Fall
-2026, **Mon/Wed/Fri, 50 minutes, in person**, ~5 students, individual projects
+2026, **Mon/Wed/Fri, 50 minutes, in person**, 7 students, individual projects
 by default with one instructor-approved group permitted when the peer-work
 topology remains viable)
 teaching honors students — **without assuming a quantitative or computing

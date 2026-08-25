@@ -11,15 +11,24 @@ written back into `_adm/` so the assignment is never committed or published.
 Students learn their own slots through the course platform, not the site.
 
 Fairness constraints, all enforced by rejection sampling:
-  1. Every student leads exactly `len(slots) // n_students` lectures.
+  1. Lead counts are as even as the roster allows. When the slots do not
+     divide evenly, `len(slots) % n_students` students carry one extra lead
+     and WHICH students those are is itself drawn at random, so the remainder
+     is not handed out by name, by seniority, or by enrolment date.
   2. No student leads two consecutive leadable slots.
   3. No student leads both lectures of the same week.
   4. Each student's slots spread across the semester: at least one in the
      first half and one in the second.
 
+Locked slots (`LOCKED`): a slot already announced to the class is frozen and
+excluded from the redraw, so a late roster change never moves a date a student
+has already been told to prepare. Everything after the locked slots is redrawn
+from scratch.
+
 Usage:
     .venv/bin/python scripts/assign_srl_slots.py
     .venv/bin/python scripts/assign_srl_slots.py --seed 464 --dry-run
+    .venv/bin/python scripts/assign_srl_slots.py --ignore-locks   # clean draw
 """
 from __future__ import annotations
 
@@ -38,6 +47,16 @@ OUT_MD = ROOT / "_adm" / "roster" / "2026F_HONR46400_srl_assignment.md"
 
 SEED = 464
 MAX_TRIES = 200_000
+
+# Slots whose lead was ALREADY ANNOUNCED to the class and is therefore frozen.
+# The first draw (5 students, 2026-08-22) was posted before the roster grew to
+# 7 on 2026-08-25. Week 2's two lectures are days away and their leads are
+# already preparing, so they keep their dates; slots 3+ are redrawn across the
+# full roster. Keyed by slot number, valued by roster `display_name`.
+LOCKED = {
+    1: "Erika Chiommino",      # Mon Aug 31 - Week 2 Monday
+    2: "Aren Dominic Damayo",  # Wed Sep 2  - Week 2 Wednesday
+}
 
 
 def load_slots() -> list[dict]:
@@ -86,11 +105,12 @@ def load_roster() -> list[dict]:
     return sorted(students, key=lambda s: int(s["sort_key"]))
 
 
-def valid(assignment: list[int], slots: list[dict], n: int, per: int) -> bool:
+def valid(assignment: list[int], slots: list[dict], quota: list[int]) -> bool:
+    n = len(quota)
     counts = [0] * n
     for who in assignment:
         counts[who] += 1
-    if any(c != per for c in counts):
+    if counts != quota:
         return False
     for i in range(1, len(assignment)):
         if assignment[i] == assignment[i - 1]:
@@ -108,20 +128,61 @@ def valid(assignment: list[int], slots: list[dict], n: int, per: int) -> bool:
     return True
 
 
-def draw(slots: list[dict], n_students: int, seed: int) -> list[int]:
-    per = len(slots) // n_students
-    if per * n_students != len(slots):
+def locked_positions(
+    slots: list[dict], students: list[dict], honour: bool
+) -> dict[int, int]:
+    """Map slot POSITION -> student index for every frozen slot."""
+    if not honour:
+        return {}
+    by_name = {s["display_name"]: i for i, s in enumerate(students)}
+    fixed: dict[int, int] = {}
+    for pos, slot in enumerate(slots):
+        name = LOCKED.get(slot["slot"])
+        if name is None:
+            continue
+        if name not in by_name:
+            raise SystemExit(
+                f"slot {slot['slot']} is locked to {name!r}, who is not on the "
+                "roster; update LOCKED or the roster before drawing."
+            )
+        fixed[pos] = by_name[name]
+    return fixed
+
+
+def draw(
+    slots: list[dict], n_students: int, seed: int, fixed: dict[int, int]
+) -> tuple[list[int], list[int]]:
+    """Return the assignment and the per-student lead quota it satisfies."""
+    base, extra = divmod(len(slots), n_students)
+    if base == 0:
         raise SystemExit(
-            f"{len(slots)} slots do not divide evenly among {n_students} "
-            "students; decide the remainder policy before drawing."
+            f"{len(slots)} slots cannot give every one of {n_students} students "
+            "a lead; the SRL design needs at least one slot per student."
         )
     rng = random.Random(seed)
-    pool = [who for who in range(n_students) for _ in range(per)]
     for _ in range(MAX_TRIES):
-        candidate = pool[:]
-        rng.shuffle(candidate)
-        if valid(candidate, slots, n_students, per):
-            return candidate
+        # The remainder is drawn, not assigned: shuffle the roster and hand the
+        # `extra` additional leads to whoever comes out in front.
+        order = list(range(n_students))
+        rng.shuffle(order)
+        quota = [0] * n_students
+        for rank, who in enumerate(order):
+            quota[who] = base + (1 if rank < extra else 0)
+
+        pool = [who for who in range(n_students) for _ in range(quota[who])]
+        for who in fixed.values():
+            if who not in pool:            # this quota cannot honour the locks
+                break
+            pool.remove(who)
+        else:
+            rng.shuffle(pool)
+            free = iter(pool)
+            candidate = [
+                fixed[pos] if pos in fixed else next(free)
+                for pos in range(len(slots))
+            ]
+            if valid(candidate, slots, quota):
+                return candidate, quota
     raise SystemExit(
         f"no assignment satisfied the constraints in {MAX_TRIES} draws; "
         "relax a constraint or change the seed"
@@ -132,11 +193,17 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--seed", type=int, default=SEED)
     ap.add_argument("--dry-run", action="store_true", help="print, do not write")
+    ap.add_argument(
+        "--ignore-locks",
+        action="store_true",
+        help="redraw every slot, including the already-announced ones in LOCKED",
+    )
     args = ap.parse_args()
 
     slots = load_slots()
     students = load_roster()
-    assignment = draw(slots, len(students), args.seed)
+    fixed = locked_positions(slots, students, honour=not args.ignore_locks)
+    assignment, quota = draw(slots, len(students), args.seed, fixed)
 
     rows = []
     for slot, who in zip(slots, assignment):
@@ -152,6 +219,7 @@ def main() -> int:
                 "student": s["display_name"],
                 "email": s["email"],
                 "prep_due": "",
+                "locked": "yes" if slot["slot"] in LOCKED else "no",
                 "unit": slot["unit"],
                 "title": slot["title"],
             }
@@ -179,6 +247,21 @@ def main() -> int:
         w.writeheader()
         w.writerows(rows)
 
+    counts = sorted({quota[i] for i in range(len(students))})
+    spread = (
+        f"{counts[0]} each"
+        if len(counts) == 1
+        else f"{counts[0]} or {counts[-1]} each "
+        f"({quota.count(counts[-1])} students lead {counts[-1]} times)"
+    )
+    locked_note = (
+        "Every slot was drawn fresh."
+        if not fixed
+        else "🔒 marks a slot that was **already announced** and therefore frozen "
+        "through the redraw: slots "
+        + ", ".join(str(slots[pos]["slot"]) for pos in sorted(fixed))
+        + " keep the leads the class was given."
+    )
     lines = [
         "# SRL slot assignment — HONR 46400-002, Fall 2026",
         "",
@@ -186,23 +269,29 @@ def main() -> int:
         "student's own slots through the course platform, not the course site.",
         "",
         f"Drawn with `scripts/assign_srl_slots.py --seed {args.seed}` on the",
-        f"{len(slots)} leadable Mon/Wed lectures, {len(slots)//len(students)} per student.",
+        f"{len(slots)} leadable Mon/Wed lectures across {len(students)} students, "
+        f"{spread}.",
         "Constraints: no consecutive slots, never both lectures of one week, and",
-        "every student leads in both halves of the semester.",
+        "every student leads in both halves of the semester. Where the slots do",
+        "not divide evenly, the students carrying the extra lead were drawn at",
+        "random with the rest of the assignment.",
+        "",
+        locked_note,
         "",
         "| Slot | Date | Day | Week | Lead | Prep due | Lecture |",
         "|---:|---|---|---:|---|---|---|",
     ]
     for r in rows:
+        mark = " 🔒" if r["locked"] == "yes" else ""
         lines.append(
-            f"| {r['slot']} | {r['date']} | {r['day']} | {r['week']} | "
+            f"| {r['slot']}{mark} | {r['date']} | {r['day']} | {r['week']} | "
             f"{r['student']} | {r['prep_due']} | {r['title'][:70]} |"
         )
     lines += ["", "## Per student", ""]
     for s in students:
         mine = [r for r in rows if r["student_index"] == s["sort_key"]]
         dates = ", ".join(f"{r['date']} (slot {r['slot']})" for r in mine)
-        lines.append(f"- **{s['display_name']}** — {dates}")
+        lines.append(f"- **{s['display_name']}** ({len(mine)} leads) — {dates}")
     lines.append("")
     OUT_MD.write_text("\n".join(lines))
 

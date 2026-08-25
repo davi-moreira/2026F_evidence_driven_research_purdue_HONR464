@@ -35,7 +35,7 @@ instructions and rubrics live one page per milestone, like this one.
 
 This is the one milestone in the course whose artifact is about **someone else's
 research**. Every student independently reviews **every other active project or
-poster**. That means four reviews when all five students work individually and
+poster**. That means six reviews when all seven students work individually and
 fewer when approved groups reduce the number of active projects. Group approval
 always preserves at least three active projects, so every student reviews at
 least two other live projects. Group members do not confer before submitting

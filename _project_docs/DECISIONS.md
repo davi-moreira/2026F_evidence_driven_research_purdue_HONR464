@@ -3590,3 +3590,65 @@ reproduced.
 - The platform carries **three Extra Credit items**; the syllabus describes two.
   *Mid-term Course Evaluation* (Oct 2) has no counterpart in the syllabus text,
   which promises the bonus only for the **final** course evaluation.
+
+---
+
+## D67 — Enrolment rises to 7; the SRL draw gains a remainder policy and locked slots (2026-08-25)
+
+**Context.** Davi supplied a fresh myPurdue classlist on 2026-08-25 showing
+**7 students**, not 5: Andrew Jensen and Samantha Rose Yang McCabe joined after
+the 2026-08-22 consolidation and after the SRL draw had already been announced
+to the class. 25 leadable lectures no longer divide evenly, and
+`scripts/assign_srl_slots.py` refused to draw at all in that case.
+
+**Ruling — three rules, all in `assign_srl_slots.py`.**
+
+1. **Lead counts are as even as the roster allows, and the remainder is drawn.**
+   With 25 slots and 7 students, `divmod` gives 3 each with 4 left over, so
+   **four students lead 4 times and three lead 3 times**. *Which* four is not a
+   judgement call: the roster is shuffled with the same seeded RNG and the extra
+   leads go to whoever comes out in front, so the remainder is never handed out
+   by name, by seniority, or by enrolment date. The four original fairness
+   constraints are otherwise unchanged (no consecutive slots, never both
+   lectures of one week, a slot in each half of the semester).
+2. **An already-announced slot is frozen.** A new `LOCKED` map pins slot → lead
+   for any slot the class has already been told about, and the draw honours it.
+   Week 2 is days away and its two leads are preparing, so **slot 1 (Erika
+   Chiommino, Mon Aug 31) and slot 2 (Aren Dominic Damayo, Wed Sep 2) keep their
+   dates**; slots 3–25 were redrawn across the full roster. `--ignore-locks`
+   forces a clean draw when no announcement is outstanding.
+3. **Uneven lead counts must cost nothing.** Each lead is scored on its own and
+   the scores are **averaged** into the 25%, so three sessions and four sessions
+   come to the same grade. This is now said in the announcement, the
+   implementation guide and the gradebook spec, because an uneven count that
+   looks like unequal work is the obvious fairness objection.
+
+**Announcement.** `_announcements/03_srl_slots_and_logistics.md` is regenerated
+by `scripts/build_srl_packet.py`, which now detects locked slots and opens with
+a repost warning — *the dates have changed, Week 2 did not* — instead of
+announcing a first draw. It is a repost, not a new post.
+
+**Propagated.** `course_config.yaml` (`srl.leads_per_student: "3 or 4"`),
+`CLAUDE.md`, the GenAI Studio README / setup guide / KB strategy, the
+Brightspace kit generator (gradebook spec and checklist), the instructor
+implementation guide, `COURSE_MASTER_PLAN.md`, `ASSESSMENT_ARCHITECTURE.md`, the
+project-mode and peer-evaluation documents, and the Week-5 peer-defense
+contingency in `scripts/schedule_data/part1.py` — with the lead out of the pool,
+six students now pair evenly, so the old "one reader unpaired" note is wrong.
+Historical records (SOURCE_AUDIT_V2, FINAL_REPORT_V2, DECISIONS D22, the
+conversation log) keep "5 students": they document what was true then.
+
+**Consequences Davi still has to rule on.**
+
+- **M12 peer review goes from 4 reviews to 6** per student when everyone works
+  individually. The brief now says six. Whether that is the workload he wants
+  for one milestone is his call.
+- **The roster is incomplete.** The 2026-08-25 source was the registrar
+  classlist only, so both new students have no `username`, no `email`, and no
+  study-path fields. Their SRL slot briefs render the address as
+  `ADDRESS MISSING FROM THE ROSTER`. Re-export Brightspace once the shell is
+  active and re-run `build_srl_packet.py`.
+- **`sort_key` was renumbered** — the new students sort into positions 1 and 6,
+  shifting every earlier index. Nothing outside `_adm/roster/` referenced an
+  index, and the draw was regenerated, but an index recorded before 2026-08-25
+  is stale.

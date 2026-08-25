@@ -1,7 +1,7 @@
 # HONR 46400 — Course Master Plan (Fall 2026, v2)
 
 **Evidence-Driven Research: How to Design, Analyze, Verify, and Defend Empirical
-Research** · Purdue Honors College · Mon/Wed/Fri, 50 min · 5 students ·
+Research** · Purdue Honors College · Mon/Wed/Fri, 50 min · 7 students ·
 individual projects by default, with instructor-approved group projects allowed.
 
 This is the source-of-truth narrative for the v2 build. The machine-readable
@@ -226,7 +226,7 @@ Conference 20%**, and **Instructor/TA Evaluation 20%**. Applied to the 50%
 category, these are 15/10/5/10/10 course points.
 
 Individual work is the default; a group project requires instructor approval
-before shared work begins. With five students, at most one group of two or
+before shared work begins. With seven students, at most one group of two or
 three may be approved. Approvals must preserve at least three active
 projects for Peer Review and allow two observers per individual researcher plus
 at least one evaluation submission per student. Milestone Deliverables is the

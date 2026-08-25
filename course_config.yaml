@@ -125,7 +125,7 @@ ai_policy:
 # ---------------------------------------------------------------------------
 srl:
   leadable_lectures: 25            # all Mon/Wed lectures except Week 1 (M1, M2)
-  leads_per_student: 5             # 25 slots / 5 students
+  leads_per_student: "3 or 4"      # 25 slots / 7 students; the remainder is drawn
   assignment: "random draw at the start of the semester — no sequential rotation, no seats"
   brief_home: "each lecture's SRL Lead Brief opens that lecture in its notebook"
   prep_cadence: "start about one week ahead; filled notebook due 11:59 PM the day before the lecture (D66)"

@@ -35,7 +35,7 @@ beyond them.
   answers grounded in those documents. Collections are shareable across a
   **group**.
 - **Groups.** A group shares custom models and knowledge bases with a set of
-  Purdue users. The course runs one group for its five students.
+  Purdue users. The course runs one group for its seven students.
 - **Multi-model comparison.** One chat can send the same prompt to two or more
   models at once and show the answers side by side. This powers the
   model-disagreement laboratory (see `multi_model_comparison_lesson.md`).
