@@ -84,9 +84,13 @@ QUARTO = "/Applications/RStudio.app/Contents/Resources/app/quarto/bin/quarto"
 if not Path(QUARTO).exists():
     QUARTO = shutil.which("quarto") or "quarto"
 
-#: SRL documents that are STUDENT-facing. `instructor_intervention_protocol.md`
-#: is deliberately absent: it is how the instructor rescues a stalling lecture,
-#: and a lead who reads it leads to the protocol instead of to the room.
+#: SRL documents that are STUDENT-facing. Two of the suite's documents are
+#: deliberately absent, both because they are written to the instructor and both
+#: because a lead who reads them prepares for the wrong thing:
+#: `instructor_intervention_protocol.md` (how the instructor rescues a stalling
+#: lecture, so a lead who reads it leads to the protocol instead of to the room)
+#: and `absent_lead_protocol.md` (how a standby is drawn when a lead no-shows,
+#: which is an instructor decision and reads as a way out to the student).
 SRL_DOCS = [
     "srl_handbook.md",
     "srl_submission_instructions.md",
@@ -95,7 +99,6 @@ SRL_DOCS = [
     "srl_ai_integration_guide.md",
     "socratic_question_bank.md",
     "srl_peer_feedback_form.md",
-    "absent_lead_protocol.md",
 ]
 
 # ---------------------------------------------------------------------------
