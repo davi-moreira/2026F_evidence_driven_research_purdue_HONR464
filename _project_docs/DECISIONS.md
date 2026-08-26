@@ -3652,3 +3652,61 @@ conversation log) keep "5 students": they document what was true then.
   shifting every earlier index. Nothing outside `_adm/roster/` referenced an
   index, and the draw was regenerated, but an index recorded before 2026-08-25
   is stale.
+
+---
+
+## D68 — Enrolment settles at 6; the roster-change procedure is written down and every draw archived (2026-08-26)
+
+**Context.** A myPurdue classlist Davi supplied on 2026-08-26 shows **6
+students**: Grace Elisabeth Kuhlmann has dropped, one day after D67 took the
+roster from 5 to 7. Three draws in five days is enough to say the procedure,
+not just the outcome, needs to be a repository artifact.
+
+**Ruling.** D67's two rules are confirmed and reused unchanged, which is what
+"following the previous orientation" means for any future change:
+
+1. **Week 2 stays locked.** `LOCKED` in `scripts/assign_srl_slots.py` still pins
+   slot 1 (Erika Chiommino, Mon Aug 31) and slot 2 (Aren Dominic Damayo, Wed
+   Sep 2). Those two were announced in draw 1 and have survived two redraws.
+   Slots 3–25 were redrawn from scratch across the six enrolled students.
+2. **The remainder is drawn, and costs nothing.** 25 slots over 6 students is 4
+   each with 1 over, so **one student leads 5 times and five lead 4 times**, and
+   which one was drawn with the rest of the assignment. Leads are averaged into
+   the 25%, so 4 and 5 come to the same grade.
+
+**The draw (seed 464).** Sami Stutler carries the extra lead. Erika, Aren,
+Nediva, Samantha and Andrew lead four times each.
+
+**New: `_adm/roster/ROSTER_CHANGE_RUNBOOK.md`.** The full procedure — archive
+first, edit the roster and renumber `sort_key`, redraw, delete stale packet
+files before rebuilding, regenerate the four dependent builders, archive the new
+state, verify — plus the table of every file that carries the class size in
+prose and therefore needs a hand edit. Historical documents are listed as
+explicitly out of scope: they record what was true then.
+
+**New: `_adm/roster/archive/`.** One directory per generation of the roster,
+each holding the roster CSV, the SRL assignment, and the announcement that went
+with it. This exists because draw 1 was overwritten before anyone thought to
+keep it and had to be reconstructed from the announcement text; the recovered
+copy is filed as `2026-08-22_5-students/` and marked partial. The archive is the
+only record of what a student was told before a redraw.
+
+**Announcement.** Regenerated as a repost. Its redraw notice is now neutral
+about direction — "the class list moved", not "the class grew" — because a drop
+reads as badly as an addition when the wording assumes growth. Singular
+agreement fixed for the one-student case ("one of you leads five times").
+
+**Propagated 7 → 6** across the same surfaces D67 named, with two that are not
+simple substitutions:
+
+- **M12 peer review** is 5 reviews per student, not 6 (it was 4 at n=5).
+- **Week-5 peer defense** returns to an odd pool. D67 had recorded that six
+  students pair evenly with the lead out; at n=6 five remain, one reader is
+  unpaired, and the SRL takes the spare — the original note, restored.
+
+**Still open.** Andrew Jensen and Samantha Rose Yang McCabe remain unprofiled
+and have no `username` or `email`; their slot briefs still render
+`ADDRESS MISSING FROM THE ROSTER`. Grace was also the course's only
+clinical/behavioral student, so all four profiled students are now in
+quantitative or engineering degrees — the "no quantitative background assumed"
+floor now rests entirely on the two unprofiled students.

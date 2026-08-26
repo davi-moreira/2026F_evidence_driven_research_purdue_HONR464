@@ -134,7 +134,7 @@ relevant sections into GenAI Studio Knowledge uploads.
   collection.
 - **The instructor owns every model and collection.** Only the instructor creates,
   edits, or deletes the roles and the knowledge uploads. This keeps the reviewer
-  bench identical for all seven students and prevents drift.
+  bench identical for all six students and prevents drift.
 - **No cross-posting of student material into the group.** Students consult the
   shared roles with their *own* pasted artifacts in their *own* chats. Nothing a
   student pastes into a role chat is added to a shared collection.

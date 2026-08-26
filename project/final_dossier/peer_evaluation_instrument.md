@@ -27,7 +27,7 @@ rule always has a defined denominator.
 | **Individual project (default)** | **Two instructor-assigned project peers** who observe your preparation, contribution, communication, dependability, and reciprocal support during scheduled studios and checks. | The project peer or peers the instructor assigns you to observe and rate—normally two. This need not be reciprocal with the two peers who rate you. |
 | **Approved group project** | **Every other member of your project group.** | Every teammate, plus any individual-project researcher the instructor assigns you to observe. |
 
-With seven students, the instructor approves at most one group of two or three,
+With six students, the instructor approves at most one group of two or three,
 and only when at least three active projects or posters will remain. Every
 student submits every evaluation in their submission set. Receiving a rating
 and being assigned to rate someone need not

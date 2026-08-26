@@ -94,9 +94,9 @@ Fri Oct 2 (meeting 17) is a **regular in-person studio** on the standard
 ## 2. The Student Research Lead (SRL) pipeline
 
 **Assign the slots first — randomly (D22).** There are **25 leadable
-lectures** (all Mon/Wed except Week 1's two launch meetings) and 7 students,
-so **each student leads 3 or 4 times** — 25 does not divide by 7, and which
-four students carry the extra lead is drawn with the rest of the assignment.
+lectures** (all Mon/Wed except Week 1's two launch meetings) and 6 students,
+so **each student leads 4 or 5 times** — 25 does not divide by 6, and which
+student carries the extra lead is drawn with the rest of the assignment.
 Lead scores are **averaged**, so an uneven count does not affect a grade. Slots are **randomly assigned at the start
 of the semester** — no rotation, no seats. Slot 1 is **meeting 4 (Mon Aug
 31**, nb02 Lecture 1). The slot-to-meeting mapping and Monday/Wednesday format
@@ -197,7 +197,7 @@ it into Brightspace and grade from it. Its gradebook implementation is
 `planning/ASSESSMENT_ARCHITECTURE.md`.
 
 **Project-mode setup.** Record the approved group before shared work begins.
-With seven students, approve at most one group of two or three, and do so only
+With six students, approve at most one group of two or three, and do so only
 when at least three active projects remain and the roster
 supports two observers per individual researcher plus a nonempty evaluation
 submission set for every student.
@@ -248,7 +248,7 @@ bench. Students **must** consult an assigned reviewer role at five milestones:
 
 Before the first class:
 
-1. **Create the course group** in GenAI Studio and enroll the seven students.
+1. **Create the course group** in GenAI Studio and enroll the six students.
 2. **Build the reviewer-role custom models** — the 13 role definitions
    (base model + system prompt) ship in `genai_studio/roles/`.
 3. **Upload the course knowledge base** to the RAG-backed roles.

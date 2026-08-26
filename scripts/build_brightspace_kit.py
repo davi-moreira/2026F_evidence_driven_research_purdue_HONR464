@@ -328,12 +328,12 @@ def gradebook_spec(config: dict) -> str:
         # in course_config.yaml can never print a raw key in the spec table.
         "srl_performance": (
             "Student Research Lead",
-            "3 or 4 leads per student (25 slots, 7 students), averaged and "
+            "4 or 5 leads per student (25 slots, 6 students), averaged and "
             "scored on project/srl/srl_rubric.md",
         ),
         "student_research_lead": (
             "Student Research Lead",
-            "3 or 4 leads per student (25 slots, 7 students), averaged and "
+            "4 or 5 leads per student (25 slots, 6 students), averaged and "
             "scored on project/srl/srl_rubric.md",
         ),
         "final_project": (
@@ -559,8 +559,8 @@ def gradebook_spec(config: dict) -> str:
         "day before that lecture; planning/SRL_ASSIGNMENT_SCHEDULE.md is the "
         "dated list, and only the assigned lead submits to each. (b) **One scored "
         "item per student**, entered after each of their leads against "
-        "project/srl/srl_rubric.md and averaged; a single item scored three or "
-        "four times is simpler than four items for a class of seven, and the "
+        "project/srl/srl_rubric.md and averaged; a single item scored four or "
+        "five times is simpler than five items for a class of six, and the "
         "average is what makes an uneven lead count harmless. The submission "
         "items carry the deadline; the scored item carries the 25%.",
         "- **Participation** — ONE undivided 9% category (D57, re-partitioned "
@@ -711,7 +711,7 @@ Course: **{c['number']}-{c['section']}**, CRN {c['crn']}, {c['title']} —
       every date on the Brightspace **calendar** (Purdue's 2026-08-21 guidance
       asks for dates on all assignments).
 - [ ] **Publish units 2-16** with sequential release, or publish weekly by hand.
-      With seven students, weekly by hand is defensible and less brittle.
+      With six students, weekly by hand is defensible and less brittle.
       D58 rewrote the reading section of *every* unit and removed the Friday
       quiz block, so re-paste all of them, not only the weeks you changed.
 - [ ] **Post the SRL assignment** so each student sees their own dates

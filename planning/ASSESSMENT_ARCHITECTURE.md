@@ -127,7 +127,7 @@ the operational detail the syllabus no longer prints.
 ## Individual-default and group-allowed operation
 
 Students work individually unless the instructor approves a group before shared
-work begins. With seven students, at most one group of two or three may be
+work begins. With six students, at most one group of two or three may be
 approved. Approval changes who owns shared evidence, not the five components or
 their weights. It must preserve at least three active projects so every
 student can review at least two other live projects and permit a Peer Evaluation

@@ -155,7 +155,7 @@ Dates verified against `planning/CALENDAR_BACKBONE.csv` (scripts/validate_calend
 - **Exit ticket:** Claim Ticket #5: my lead question, its kind and reach, and the single word in my sentence that fixes the kind.
 - **Homework / next milestone:** Bring what Friday's studio needs for Milestone 2: Monday's responsibility statement and buckets, your ledger with the retrospective Week-1 row, and your lead question. Confirm your Purdue Libraries login works before Week 3.
 - **Instructor prep:** Brief the SRL on the burnout split and its listen-fors; file the audit key (the kind fixed from the data, the double barrel, the 71-versus-53.5 number, and both planted sound elements); verify the midpoint-share cell; confirm the Research Question Diagnostician role opens from Workspace; print the synopsis form.
-- **Risks / contingency:** The 23-minute lab is the tightest block of the week, so if it runs long the 🔁 modification is the only movable piece and drops to a named modification with no run — Verify and Calibrate are never cut; with the lead out of the pool the six remaining students pair evenly at peer defense, so the instructor stays uncommitted for the accuracy lock.
+- **Risks / contingency:** The 23-minute lab is the tightest block of the week, so if it runs long the 🔁 modification is the only movable piece and drops to a named modification with no run — Verify and Calibrate are never cut; with the lead out of the pool five students remain and one reader is unpaired at peer defense, so the SRL takes the spare while the instructor stays uncommitted for the accuracy lock.
 
 ### M6 — Fri 2026-09-04 (in-person) — Studio Friday — Milestone 2: your rules and your question (M2 due Monday, Labor Day)
 

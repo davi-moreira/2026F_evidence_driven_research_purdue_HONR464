@@ -325,7 +325,8 @@ def count_sentences(per_student: dict[str, list[str]]) -> tuple[str, str]:
         n = next(iter(tally))
         return f"everyone leads exactly {WORDS.get(n, n)} times", ""
     parts = [
-        f"{WORDS.get(people, people)} of you lead {WORDS.get(leads, leads)} times"
+        f"{'one of you leads' if people == 1 else WORDS.get(people, people) + ' of you lead'}"
+        f" {WORDS.get(leads, leads)} times"
         for leads, people in sorted(tally.items(), reverse=True)
     ]
     lo, hi = min(tally), max(tally)
@@ -365,12 +366,13 @@ def build_announcement(rows: list[dict], meetings: dict) -> str:
             f"**{a['student']}** on {short(a['date'])}" for a in frozen
         )
         redraw = wrap(
-            "**Please read this even if you saw the first draw — the dates "
-            "have changed.** The class grew after I posted that draw, so I ran "
-            f"it again across everybody. The one thing I would not move is Week 2: {held} "
-            "keep their lectures, because they are already preparing them. "
-            "**Every other slot is new**, so check your dates below rather "
-            "than trusting the ones you wrote down."
+            "**Please read this even if you saw an earlier draw — the dates "
+            "have changed.** The class list moved after I posted that draw, so "
+            "I ran the whole thing again across everybody who is enrolled now. "
+            f"The one thing I would not move is Week 2: {held} keep their "
+            "lectures, because they are already preparing them. **Every other "
+            "slot is new**, so check your dates below rather than trusting the "
+            "ones you wrote down."
         ) + "\n\n"
     else:
         redraw = ""
