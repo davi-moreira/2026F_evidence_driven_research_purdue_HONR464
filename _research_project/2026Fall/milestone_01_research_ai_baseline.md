@@ -69,7 +69,7 @@ not have to run every prompt: each lesson marks one core AI cycle, and the
 prompts labeled *Optional depth* are exactly that. The Studio 1 milestone
 checklist, not prompt count, defines completion:
 
-- Ch. 1 — [From Curiosity to a Research Problem](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch05_from_curiosity_to_a_research_problem.ipynb)
+- Ch. 1 — [From Curiosity to a Research Problem](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch01_from_curiosity_to_a_research_problem.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a

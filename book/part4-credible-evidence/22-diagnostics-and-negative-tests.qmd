@@ -8,7 +8,7 @@ been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch22_diagnostics_and_negative_tests.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch25_diagnostics_and_negative_tests.ipynb){target="_blank"}
 
 > **The research decision.** You decide **which negative test your design actually
 > needs**, a check aimed at a place where the answer must be zero, and you decide what
@@ -214,11 +214,11 @@ Two limits keep this honest. The pile is only as trustworthy as the assumptions 
 built it, and it is an illustration of ordinary variation, never a pass line. Do not
 turn "inside the middle 95 percent" into a rule: that band excludes one honest
 experiment in twenty by construction, and drawing a cutoff there is a statistical
-decision this book has not equipped you to make yet. Ask the three questions instead.
+decision this book does not equip you to make. Ask the three questions instead.
 Could my cause have reached this control? Could the artifact I fear have reached it?
-Could this check have detected an artifact big enough to matter? A later chapter
-gives uncertainty its proper machinery, and then "how far outside is too far"
-becomes a question you can answer rather than guess.
+Could this check have detected an artifact big enough to matter? The standard errors
+and intervals you already met give uncertainty its proper machinery, and with them
+"how far outside is too far" becomes a question you can answer rather than guess.
 
 ## An AI failure case
 

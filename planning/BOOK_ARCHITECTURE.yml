@@ -140,29 +140,29 @@ lessons:
   - {id: ai-arm-not-brain,          state: active, rank: 10,  part: part1,
      station: govern-the-work, role: core,
      source: part1-research-with-ai/01-ai-is-your-arm-not-your-brain.qmd,
-     companion: ch01_ai_is_your_arm_not_your_brain.ipynb,
+     companion: ch02_ai_is_your_arm_not_your_brain.ipynb,
      url_path: part1-research-with-ai/01-ai-is-your-arm-not-your-brain.html}
   - {id: research-director,         state: active, rank: 20,  part: part1,
      station: govern-the-work, role: core,
      source: part1-research-with-ai/02-the-student-as-research-director.qmd,
-     companion: ch02_the_student_as_research_director.ipynb,
+     companion: ch03_the_student_as_research_director.ipynb,
      url_path: part1-research-with-ai/02-the-student-as-research-director.html}
   - {id: sdiivdd,                   state: active, rank: 30,  part: part1,
      station: govern-the-work, role: core,
      source: part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.qmd,
-     companion: ch03_specify_delegate_interrogate_inspect_verify_document_defend.ipynb,
+     companion: ch04_specify_delegate_interrogate_inspect_verify_document_defend.ipynb,
      url_path: part1-research-with-ai/03-specify-delegate-interrogate-inspect-verify-document-defend.html}
   - {id: responsibility-ownership,  state: active, rank: 40,  part: part1,
      station: govern-the-work, role: core,
      source: part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.qmd,
-     companion: ch04_research_responsibility_and_intellectual_ownership.ipynb,
+     companion: ch05_research_responsibility_and_intellectual_ownership.ipynb,
      url_path: part1-research-with-ai/04-research-responsibility-and-intellectual-ownership.html}
 
   # ---- Part II · Stations frame-the-inquiry → declare-and-diagnose --------
   - {id: curiosity-to-problem,      state: active, rank: 5,  part: part2,
      station: frame-the-inquiry, role: core,
      source: part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.qmd,
-     companion: ch05_from_curiosity_to_a_research_problem.ipynb,
+     companion: ch01_from_curiosity_to_a_research_problem.ipynb,
      url_path: part2-curiosity-to-design/05-from-curiosity-to-a-research-problem.html}
   - {id: question-kinds,            state: active, rank: 60,  part: part2,
      station: govern-the-work, role: core,
@@ -173,41 +173,41 @@ lessons:
      station: govern-the-work, role: core,
      title_en: "Declare Your Research Question",
      source: part2-curiosity-to-design/declare-your-question.qmd,
-     companion: declare_your_question.ipynb,
+     companion: ch07_declare_your_question.ipynb,
      url_path: part2-curiosity-to-design/declare-your-question.html}
      # D46: the declaration lesson closes Studio 2 (insertion, D37 path)
   - {id: research-builds,           state: active, rank: 70,  part: part2,
      station: ground-in-evidence, role: core,
      source: part2-curiosity-to-design/07-research-builds-on-research.qmd,
-     companion: ch07_research_builds_on_research.ipynb,
+     companion: ch08_research_builds_on_research.ipynb,
      url_path: part2-curiosity-to-design/07-research-builds-on-research.html}
   - {id: verifying-prior-evidence,  state: active, rank: 80,  part: part2,
      station: ground-in-evidence, role: core,
      source: part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.qmd,
-     companion: ch08_finding_and_verifying_prior_evidence.ipynb,
+     companion: ch09_finding_and_verifying_prior_evidence.ipynb,
      url_path: part2-curiosity-to-design/08-finding-and-verifying-prior-evidence.html}
   - {id: mida,                      state: active, rank: 90,  part: part2,
      station: declare-and-diagnose, role: core,
      source: part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.qmd,
-     companion: ch09_model_inquiry_data_strategy_and_answer_strategy.ipynb,
+     companion: ch10_model_inquiry_data_strategy_and_answer_strategy.ipynb,
      url_path: part2-curiosity-to-design/09-model-inquiry-data-strategy-and-answer-strategy.html}
   - {id: uncertainty-foundations,   state: active, rank: 95,  part: part2,
      station: declare-and-diagnose, role: core,
      title_en: "Uncertainty before you need it: estimand, estimator, and the shape of chance",
      source: part2-curiosity-to-design/uncertainty-foundations.qmd,
-     companion: uncertainty_foundations.ipynb,
+     companion: ch11_uncertainty_foundations.ipynb,
      url_path: part2-curiosity-to-design/uncertainty-foundations.html}
      # D35 §2: BEFORE declare-diagnose — ch10 needs it
   - {id: declare-diagnose,          state: active, rank: 100, part: part2,
      station: declare-and-diagnose, role: core,
      source: part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.qmd,
-     companion: ch10_declaring_and_diagnosing_a_research_design.ipynb,
+     companion: ch12_declaring_and_diagnosing_a_research_design.ipynb,
      url_path: part2-curiosity-to-design/10-declaring-and-diagnosing-a-research-design.html}
   - {id: ethics-data-governance,    state: active, rank: 105, part: part2,
      station: declare-and-diagnose, role: core,
      title_en: "Research ethics and data governance: the permission status of your study",
      source: part2-curiosity-to-design/research-ethics-and-data-governance.qmd,
-     companion: research_ethics_and_data_governance.ipynb,
+     companion: ch13_research_ethics_and_data_governance.ipynb,
      url_path: part2-curiosity-to-design/research-ethics-and-data-governance.html}
      # D35 §2: the permission-status gate
 
@@ -215,32 +215,32 @@ lessons:
   - {id: observational-descriptive, state: active, rank: 110, part: part3,
      station: develop-the-pathway, role: branch, route: observational-descriptive,
      source: part3-pathways/11-observational-descriptive-research.qmd,
-     companion: ch11_observational_descriptive_research.ipynb,
+     companion: ch14_observational_descriptive_research.ipynb,
      url_path: part3-pathways/11-observational-descriptive-research.html}
   - {id: observational-causal,      state: active, rank: 120, part: part3,
      station: develop-the-pathway, role: branch, route: observational-causal,
      source: part3-pathways/12-observational-causal-research.qmd,
-     companion: ch12_observational_causal_research.ipynb,
+     companion: ch15_observational_causal_research.ipynb,
      url_path: part3-pathways/12-observational-causal-research.html}
   - {id: experimental-descriptive,  state: active, rank: 130, part: part3,
      station: develop-the-pathway, role: branch, route: experimental-descriptive,
      source: part3-pathways/13-experimental-descriptive-research.qmd,
-     companion: ch13_experimental_descriptive_research.ipynb,
+     companion: ch16_experimental_descriptive_research.ipynb,
      url_path: part3-pathways/13-experimental-descriptive-research.html}
   - {id: prediction-generalization, state: active, rank: 140, part: part3,
      station: develop-the-pathway, role: branch, route: prediction,
      source: part3-pathways/14-prediction-and-generalization.qmd,
-     companion: ch14_prediction_and_generalization.ipynb,
+     companion: ch17_prediction_and_generalization.ipynb,
      url_path: part3-pathways/14-prediction-and-generalization.html}
   - {id: experimental-causal,       state: active, rank: 150, part: part3,
      station: develop-the-pathway, role: branch, route: experimental-causal,
      source: part3-pathways/15-experimental-causal-research.qmd,
-     companion: ch15_experimental_causal_research.ipynb,
+     companion: ch18_experimental_causal_research.ipynb,
      url_path: part3-pathways/15-experimental-causal-research.html}
   - {id: hybrid-complex-designs,    state: active, rank: 160, part: part3,
      station: develop-the-pathway, role: optional,
      source: part3-pathways/16-hybrid-and-complex-designs.qmd,
-     companion: ch16_hybrid_and_complex_designs.ipynb,
+     companion: ch19_hybrid_and_complex_designs.ipynb,
      url_path: part3-pathways/16-hybrid-and-complex-designs.html}
      # overlay across routes, not a sixth pathway
 
@@ -248,79 +248,79 @@ lessons:
   - {id: data-provenance,           state: active, rank: 170, part: part4,
      station: govern-data-measurement, role: core,
      source: part4-credible-evidence/17-data-provenance-and-data-quality.qmd,
-     companion: ch17_data_provenance_and_data_quality.ipynb,
+     companion: ch20_data_provenance_and_data_quality.ipynb,
      url_path: part4-credible-evidence/17-data-provenance-and-data-quality.html}
   - {id: measurement,               state: active, rank: 180, part: part4,
      station: govern-data-measurement, role: core,
      source: part4-credible-evidence/18-measurement-and-operationalization.qmd,
-     companion: ch18_measurement_and_operationalization.ipynb,
+     companion: ch21_measurement_and_operationalization.ipynb,
      url_path: part4-credible-evidence/18-measurement-and-operationalization.html}
   - {id: ai-as-programmer,          state: active, rank: 190, part: part4,
      station: first-analysis, role: core,
      source: part4-credible-evidence/19-ai-as-programmer.qmd,
-     companion: ch19_ai_as_programmer.ipynb,
+     companion: ch22_ai_as_programmer.ipynb,
      url_path: part4-credible-evidence/19-ai-as-programmer.html}
   - {id: ai-analytical-assistant,   state: active, rank: 200, part: part4,
      station: first-analysis, role: core,
      source: part4-credible-evidence/20-ai-as-analytical-assistant.qmd,
-     companion: ch20_ai_as_analytical_assistant.ipynb,
+     companion: ch23_ai_as_analytical_assistant.ipynb,
      url_path: part4-credible-evidence/20-ai-as-analytical-assistant.html}
   - {id: robustness-sensitivity,    state: active, rank: 210, part: part4,
      station: stress-test, role: core,
      source: part4-credible-evidence/21-robustness-and-sensitivity.qmd,
-     companion: ch21_robustness_and_sensitivity.ipynb,
+     companion: ch24_robustness_and_sensitivity.ipynb,
      url_path: part4-credible-evidence/21-robustness-and-sensitivity.html}
   - {id: negative-tests,            state: active, rank: 220, part: part4,
      station: stress-test, role: core,
      source: part4-credible-evidence/22-diagnostics-and-negative-tests.qmd,
-     companion: ch22_diagnostics_and_negative_tests.ipynb,
+     companion: ch25_diagnostics_and_negative_tests.ipynb,
      url_path: part4-credible-evidence/22-diagnostics-and-negative-tests.html}
   - {id: ai-adversarial-reviewer,   state: active, rank: 230, part: part4,
      station: stress-test, role: core,
      source: part4-credible-evidence/23-ai-as-adversarial-reviewer.qmd,
-     companion: ch23_ai_as_adversarial_reviewer.ipynb,
+     companion: ch26_ai_as_adversarial_reviewer.ipynb,
      url_path: part4-credible-evidence/23-ai-as-adversarial-reviewer.html}
   - {id: false-confidence,          state: active, rank: 240, part: part4,
      station: stress-test, role: core,
      source: part4-credible-evidence/24-recognizing-false-confidence.qmd,
-     companion: ch24_recognizing_false_confidence.ipynb,
+     companion: ch27_recognizing_false_confidence.ipynb,
      url_path: part4-credible-evidence/24-recognizing-false-confidence.html}
 
   # ---- Part V · Stations write-bound-disclose + adapt-and-defend ----------
   - {id: results-to-claims,         state: active, rank: 250, part: part5,
      station: write-bound-disclose, role: core,
      source: part5-communicating/25-from-results-to-claims.qmd,
-     companion: ch25_from_results_to_claims.ipynb,
+     companion: ch28_from_results_to_claims.ipynb,
      url_path: part5-communicating/25-from-results-to-claims.html}
   - {id: claim-evidence-tables,     state: active, rank: 260, part: part5,
      station: write-bound-disclose, role: core,
      source: part5-communicating/26-claim-evidence-tables.qmd,
-     companion: ch26_claim_evidence_tables.ipynb,
+     companion: ch29_claim_evidence_tables.ipynb,
      url_path: part5-communicating/26-claim-evidence-tables.html}
   - {id: research-posters,          state: active, rank: 270, part: part5,
      station: adapt-and-defend, role: branch, genre: poster,
      source: part5-communicating/27-research-posters.qmd,
-     companion: ch27_research_posters.ipynb,
+     companion: ch32_research_posters.ipynb,
      url_path: part5-communicating/27-research-posters.html}
   - {id: poster-criticism,          state: active, rank: 280, part: part5,
      station: adapt-and-defend, role: branch, genre: poster,
      source: part5-communicating/28-poster-criticism.qmd,
-     companion: ch28_poster_criticism.ipynb,
+     companion: ch33_poster_criticism.ipynb,
      url_path: part5-communicating/28-poster-criticism.html}
   - {id: research-pitches,          state: active, rank: 290, part: part5,
      station: adapt-and-defend, role: branch, genre: talk,
      source: part5-communicating/29-research-pitches.qmd,
-     companion: ch29_research_pitches.ipynb,
+     companion: ch34_research_pitches.ipynb,
      url_path: part5-communicating/29-research-pitches.html}
   - {id: difficult-questions,       state: active, rank: 300, part: part5,
      station: adapt-and-defend, role: core,
      source: part5-communicating/30-difficult-questions-and-uncertainty.qmd,
-     companion: ch30_difficult_questions_and_uncertainty.ipynb,
+     companion: ch35_difficult_questions_and_uncertainty.ipynb,
      url_path: part5-communicating/30-difficult-questions-and-uncertainty.html}
   - {id: ai-disclosure,             state: active, rank: 262, part: part5,
      station: write-bound-disclose, role: core,
      source: part5-communicating/31-ai-disclosure-and-research-integrity.qmd,
-     companion: ch31_ai_disclosure_and_research_integrity.ipynb,
+     companion: ch30_ai_disclosure_and_research_integrity.ipynb,
      url_path: part5-communicating/31-ai-disclosure-and-research-integrity.html}
      # D38 re-rank (310 -> 262): disclosure is written WITH the claims, inside
      # studio write-bound-disclose, before the genre-adaptation studio
@@ -329,12 +329,12 @@ lessons:
   - {id: replication-reproduction,  state: active, rank: 320, part: part6,
      station: reproduce-and-package, role: core,
      source: part6-after-conference/32-replication-and-reproduction.qmd,
-     companion: ch32_replication_and_reproduction.ipynb,
+     companion: ch36_replication_and_reproduction.ipynb,
      url_path: part6-after-conference/32-replication-and-reproduction.html}
   - {id: poster-to-note,            state: active, rank: 264, part: part6,
      station: write-bound-disclose, role: core,
      source: part6-after-conference/33-from-poster-to-research-note.qmd,
-     companion: ch33_from_poster_to_research_note.ipynb,
+     companion: ch31_from_poster_to_research_note.ipynb,
      url_path: part6-after-conference/33-from-poster-to-research-note.html}
      # D38: the research NOTE is studio write-bound-disclose's CORE artifact
      # (D35 adjudication) — role core, re-ranked 330 -> 264 into its studio;
@@ -342,22 +342,22 @@ lessons:
   - {id: research-packages,         state: active, rank: 340, part: part6,
      station: reproduce-and-package, role: core,
      source: part6-after-conference/34-open-and-reusable-research-packages.qmd,
-     companion: ch34_open_and_reusable_research_packages.ipynb,
+     companion: ch37_open_and_reusable_research_packages.ipynb,
      url_path: part6-after-conference/34-open-and-reusable-research-packages.html}
   - {id: managing-ai-agents,        state: active, rank: 350, part: part6,
      station: release-next-cycle, role: core,
      source: part6-after-conference/35-managing-multiple-ai-agents.qmd,
-     companion: ch35_managing_multiple_ai_agents.ipynb,
+     companion: ch38_managing_multiple_ai_agents.ipynb,
      url_path: part6-after-conference/35-managing-multiple-ai-agents.html}
   - {id: conflicting-agents,        state: active, rank: 360, part: part6,
      station: release-next-cycle, role: core,
      source: part6-after-conference/36-conflicting-agents-and-human-escalation.qmd,
-     companion: ch36_conflicting_agents_and_human_escalation.ipynb,
+     companion: ch39_conflicting_agents_and_human_escalation.ipynb,
      url_path: part6-after-conference/36-conflicting-agents-and-human-escalation.html}
   - {id: final-portfolio,           state: active, rank: 370, part: part6,
      station: release-next-cycle, role: core,
      source: part6-after-conference/37-final-research-and-ai-management-portfolio.qmd,
-     companion: ch37_final_research_and_ai_management_portfolio.ipynb,
+     companion: ch40_final_research_and_ai_management_portfolio.ipynb,
      url_path: part6-after-conference/37-final-research-and-ai-management-portfolio.html}
      # Phase-4 rewrite: medium-neutral release audit (graded-portfolio spine retires)
 

@@ -214,6 +214,9 @@ def milestone_page(st: dict, spec: dict, lessons: list[dict], n: int,
                       if k in RAILS)
     slug = st["id"]
     rubric_block = rubric_md(rubric)
+    # The AI Research Ledger is opened in Studio 2's first lesson, so
+    # Milestone 1 can only name the exchange log its studio actually asked for.
+    ledger_name = "your exchange log" if n == 1 else "your AI Research Ledger"
     genre_block = (f"## Choosing your format\n\n{spec['genre_guide']}\n\n"
                    if spec.get("genre_guide") else "")
     legacy = "".join(f"\n  - /studios/milestone{r:02d}-{slug}.html"
@@ -260,7 +263,7 @@ Four concerns cross every studio in this book. At this milestone they take these
 
 Open the workbook with the badge above. It walks these steps with a cell for
 each one, ends by writing your milestone version with its reason, and adds
-the rows this studio contributes to your AI Research Ledger and your Research
+the rows this studio contributes to {ledger_name} and your Research
 Dossier.
 """
 

@@ -8,7 +8,7 @@ been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch33_from_poster_to_research_note.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch31_from_poster_to_research_note.ipynb){target="_blank"}
 
 > **The research decision.** When you turn your research dossier into a written
 > note, decide which finding has earned the headline and exactly how big each claim
@@ -26,9 +26,9 @@ claim is allowed to be once your voice is no longer in the room.**
 > do not want your most surprising result first. I want your most defensible one."*
 > — a **conference reviewer**, on the first page of a paper they actually weigh
 
-When you presented, you stood next to your work and filled the silences with your
-voice. The note has no you standing next to it. Every leap a presentation let you imply, the
-prose now has to earn, in order, for a reader who will never hear you explain it. The
+When you present, you stand next to your work and fill the silences with your
+voice. The note has no you standing next to it. Every leap a presentation would let you imply, the
+prose has to earn, in order, for a reader who will never hear you explain it. The
 reviewer above is not impressed by a big number. She is asking which finding you would
 still defend after the room empties, and whether she could rerun your work and watch
 the same number return. This chapter is how you answer both.
@@ -229,7 +229,7 @@ words you put your name on, their boundary, and their uncertainty.
    confirm the "cannot catch" problem is real by rereading your own lines. Counters
    *illusion of completeness* (a capsule can look complete and still omit the one input a
    stranger needs).
-6. Log the drafting round in your AI Research Ledger, and verify at least one output
+7. Log the drafting round in your AI Research Ledger, and verify at least one output
    with a named method from the [Verification Guide](../verification-guide.qmd). An AI
    reviewer may run the check with you; the decision to accept or reject stays yours.
 

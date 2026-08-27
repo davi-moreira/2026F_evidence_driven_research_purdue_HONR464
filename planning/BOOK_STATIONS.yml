@@ -141,16 +141,16 @@ stations:
       small, verify your first AI assistance, and close by declaring the
       question your evidence will answer.
     produces: >-
-      Your working agreement (a responsibility statement, your working
+      Your working agreement (an ownership statement, your working
       rules, your opened AI Research Ledger, your delegation map, and the
       red-flag screen of your chosen problem) and your question, formally
       declared: objective, units, outcomes and conditions, kind and
       reach, and a provisional claim boundary.
     steps:
-      - "Write your responsibility statement: the decisions that stay yours no matter how good the tool gets — the choice of question first among them."
+      - "Write your ownership statement: the decisions that stay yours no matter how good the tool gets — the choice of question first among them."
       - "Write your working rules: what you will delegate, what you will always verify, and how you will record both. Mark the declaration work on the map: candidate wordings are delegable; kind, reach, and the boundary never are."
       - Open your AI Research Ledger and give its first rows to the exchanges you have already run, the Studio 1 brainstorm included.
-      - "Run the red-flag screen on your chosen problem: is it answerable, is it yours to ask, and could you defend attempting it."
+      - "Build and run the red-flag screen on your chosen problem: is it answerable, is it yours to ask, and could you defend attempting it."
       - "Assemble your declaration from the last two lessons: the lead question classified by kind and reach, the field card (objective, unit, outcome, conditions), and the chosen wording with every change accounted for."
       - "Write your provisional claim boundary beside it: the sentence you hope to defend, the stronger sentence you will not be able to, and the uncertainty-and-limitations line any answer will have to carry."
       - "Read the two artifacts against each other: every never-delegate line in the agreement must cover a decision the declaration actually made. Where one names a rule the other ignored, fix the weaker document."
@@ -239,7 +239,7 @@ stations:
         cannot defend the group claim or any cause.
       faded_task: |
         The exercise-and-sleep reader's agreement is half done: the
-        responsibility statement and first ledger rows exist; the
+        ownership statement and first ledger rows exist; the
         never-delegate list, the red-flag screen, and the whole
         declaration are blank. Among the AI's candidate wordings sits
         this one: "do first-year athletes who exercise sleep better than
@@ -249,7 +249,7 @@ stations:
         honestly: kind and reach as the words fix them, and the boundary
         sentence the reach will not let you say.
       starter: |
-        Copy this skeleton top to bottom: responsibility statement (two
+        Copy this skeleton top to bottom: ownership statement (two
         to four sentences) · working rules (three lists) · ledger rows
         for every exchange so far (all eight fields) · red-flag screen
         (answerable? yours to ask? defensible?) · objective · units ·
@@ -483,7 +483,7 @@ stations:
       If your project combines pieces of several rows, read the complex-designs
       lesson as an overlay after you have declared your primary pathway.
     steps:
-      - Use the route guide above to choose your pathway, then read that lesson and at least one that does not fit, so you can say why yours does.
+      - Use the route guide on the studio opener to choose your pathway, then read that lesson and at least one that does not fit, so you can say why yours does.
       - "Declare your pathway and write the crossing that licenses it: what makes your comparison mean what you claim."
       - "Write the limits: what this pathway cannot establish no matter how clean the execution."
       - Update your claim boundary to match the pathway, and mark the change as a new Contract version.
@@ -581,8 +581,8 @@ stations:
       Provenance documentation, a data-management record, your measurement
       specification, and a route-specific permission recheck.
     acquisition_note: |
-      This studio assumes data have reached you, and the cold pilot found
-      that nothing before it made that happen. Settle acquisition first, in
+      This studio assumes data have reached you, and no earlier studio
+      arranged that arrival. Settle acquisition first, in
       writing, before the steps below.
 
       Your permission status from Studio 4 decides your route.
@@ -605,7 +605,7 @@ stations:
       before you touch them. That record is the first row of the provenance
       documentation this studio produces.
     steps:
-      - "Settle your acquisition route first, using the guidance above, and write down which route you took and why."
+      - "Settle your acquisition route first, using the guidance on the studio opener, and write down which route you took and why."
       - "Document provenance for every source: who produced it, how, when, and under what terms."
       - "Write your measurement specification: the construct, the operationalization, and the gap between them."
       - Assess reliability and validity for your own instrument, on the evidence you actually have.
@@ -945,8 +945,8 @@ stations:
 
       | If your venue asks for | build it with | then test and rehearse |
       |---|---|---|
-      | a paper or research note | your Studio 9 note, developed to the venue contract: sections, length, references, and the figure rules for any figure | the audit on the manuscript; Difficult Questions in writing |
-      | a seminar or conference talk | Research Pitches' spine, expanded section by section to the venue's length; slides follow the poster lesson's figure rules | the audit on the deck; Difficult Questions, spoken |
+      | a paper or research note | your Studio 9 note, developed to the venue contract: sections, length, references, and the figure rules for any figure | the gallery-walk audit from Poster Criticism, run on the manuscript; Difficult Questions in writing |
+      | a seminar or conference talk | Research Pitches' spine, expanded section by section to the venue's length; slides follow the poster lesson's figure rules | the gallery-walk audit from Poster Criticism, run on the deck; Difficult Questions, spoken |
       | a short pitch | Research Pitches | Difficult Questions, spoken |
       | a poster | Research Posters | Poster Criticism, then Difficult Questions |
       | another format | the venue contract plus the nearest row, naming what transfers | Difficult Questions, in the venue's own mode |
@@ -964,7 +964,7 @@ stations:
       - "Build a content map before you build the artifact: where the claim, the evidence, the boundary, the uncertainty, and the disclosure will each live."
       - Build the artifact to its venue contract, keeping every load-bearing number, figure, and citation traceable to the claim-evidence table.
       - "Test it in its actual mode: scan the poster at gallery distance, time the talk aloud, advance the deck without narrating, or hand the manuscript to a cold reader."
-      - Rehearse the defense against the three hardest questions you can construct, and record which you could not answer; those are your next studio's agenda.
+      - Rehearse the defense against the three hardest questions you can construct, and record which you could not answer; those are the agenda for the studio that owns them.
     rails:
       ethics: An adaptation that drops the limitations is not a shorter version, it is a different claim.
       evidence: Every figure that travels carries its verification with it.
@@ -1079,10 +1079,10 @@ stations:
         one undisclosed choice varied, and missingness classified before
         any filling
       research-packages: >-
-        your research capsule: notebook, data or its access recipe,
-        environment record, README, licence with its reuse boundary and
-        restrictions, the exact output locations, and a cold rerun in a
-        second environment
+        your research capsule: the runnable notebook, the data-provenance
+        note with its terms of use, the fixed seed, the decision log, your
+        AI-use ledger, the environment record, the README, and a cold rerun
+        in a second environment
 
     practice_kit:
       worked_example: |
@@ -1127,7 +1127,7 @@ stations:
       - "Run the closing review as a directed team: scoped loops (a writer, a skeptic, an auditor at minimum), wired so each role's input exists before it starts, escalation rules written first, one node kept human. Declare who chooses each next step — you, a fixed script, or an agent that plans and calls tools — and never call a manually sequenced chat autonomous. A single well-run assistant playing the roles in turn is a legal team; record what you actually ran, never invented activity."
       - "Run the release audit and mark each item clear, pending, or blocking: permissions, participant promises, disclosure, package-matches-cold-run, reproducibility, claim boundaries, and uncertainty."
       - "Make the release decision. A blocking item means withhold pending the named repair, written as this version's reason — not a euphemistic release."
-      - "Assemble the dossier with a manifest: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history — each marked present, absent with reason, or not applicable."
+      - "Assemble the dossier with a manifest: contract versions, evidence registry, permissions, measurement, your cycle log and claim-evidence table, AI ledger, artifacts, package, and revision history — each marked present, absent with reason, or not applicable."
       - "Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision."
       - "Write the next-study agenda: tie the next question to an unresolved limitation, a warrant gap, or something this cycle's evidence opened."
     rails:

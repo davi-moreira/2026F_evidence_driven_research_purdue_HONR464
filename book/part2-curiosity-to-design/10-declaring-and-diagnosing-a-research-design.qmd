@@ -8,7 +8,7 @@ been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch10_declaring_and_diagnosing_a_research_design.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch12_declaring_and_diagnosing_a_research_design.ipynb){target="_blank"}
 
 > **The research decision.** Whether the design you wrote down is strong enough to
 > run, decided before you collect a single data point: you simulate it, read how
@@ -31,7 +31,7 @@ answer your question.
 
 ## The concept
 
-In chapter 9 you built the four parts of a design. This chapter puts them to the test
+You have already built the four parts of a design. This chapter puts them to the test
 with a three-step loop this book borrows from RDSS (*Research Design in the Social
 Sciences: Declaration, Diagnosis, and Redesign*) [@blair2023rdss].
 
@@ -87,7 +87,7 @@ their share. **Coverage** is how often the range you report around your estimate
 actually contains the truth. *Example:* if you report a range meant to be right 95
 times out of 100, coverage checks whether it really is. A design can be unbiased and
 still miss badly every time, which is exactly why one number is never the whole
-diagnosis [@morris2019simulation]. A later chapter builds these ranges properly; here you only need to know
+diagnosis [@morris2019simulation]. The last lesson built these ranges properly; here you only need to know
 that a diagnosis can ask about them.
 
 **Redesign** means changing exactly one part in response to the diagnosis, then

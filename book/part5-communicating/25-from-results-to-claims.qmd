@@ -8,7 +8,7 @@ been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch25_from_results_to_claims.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch28_from_results_to_claims.ipynb){target="_blank"}
 
 > **The research decision.** Your analysis printed a number. Now you decide the
 > sentence that number lets you assert: the headline you will show in public and
@@ -73,7 +73,7 @@ Your **claim boundary** is what those three together license you to write, and i
 lives in the headline verb. Example: with no identification argument, you write "was
 associated with lower," never "lowered." Read the condition carefully: what earns a
 causal verb is a defended identification argument [@hernan2020whatif]. Randomizing is the cleanest way
-to get one, and a later chapter shows observational designs that carry causal
+to get one, and the observational-causal pathway earlier in the book shows designs that carry causal
 answers when their assumptions are argued and defended. What you may never do is
 use the verb without the argument.
 
@@ -81,7 +81,7 @@ One more idea makes the claim's honesty visible. **Uncertainty in the
 same eye-span** means the interval or caveat sits right beside the claim, not in a
 footnote [@wasserstein2016asa]. Example: "about 6 points lower (95% interval: 1 to 11)" printed under the
 headline, so a reader meets the doubt at the same moment as the number. The numbers
-in this chapter's examples are constructed to make the point; a later chapter builds
+in this chapter's examples are constructed to make the point; the uncertainty lesson you already worked through builds
 intervals properly. A bound a
 reader has to hunt for is a bound doing hidden work.
 

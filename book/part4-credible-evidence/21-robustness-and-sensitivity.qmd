@@ -8,7 +8,7 @@ been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch21_robustness_and_sensitivity.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch24_robustness_and_sensitivity.ipynb){target="_blank"}
 
 > **The research decision.** You decide **the full list of robustness and sensitivity
 > checks you will run, and you decide it before you look at a single result**, then
@@ -86,7 +86,7 @@ And the distance from the lowest dot to the highest answers only one question: h
 much did your analysis choices move the number? Call it the **specification
 spread**, the span your answer covered across the versions you ran. It says nothing
 about chance. Every single dot still carries sampling wobble of its own, the
-uncertainty a later chapter teaches you to state properly, and the spread is not a
+uncertainty you already learned to state with a standard error and an interval, and the spread is not a
 substitute for it. Report the spread as what your choices did, and keep the
 uncertainty of your lead estimate a separate, labeled thing.
 
@@ -143,9 +143,9 @@ twelve percent, and its own sampling uncertainty is stated with it. Excluding th
 wholesale account, the same versions ran ten to fifteen percent." A single
 eight-to-fifteen range stretched across all three panels would compare a net-of-tax
 number to a gross one, over different sets of shoppers, and mean nothing. The span
-says what your choices did. The uncertainty statement, built with tools a later
-chapter adds, says what chance could do. Collapsing them into "the honest range is
-eight to fifteen" quietly claims a precision nobody computed.
+says what your choices did. The uncertainty statement, built with the interval
+tools you already have, says what chance could do. Collapsing them into "the
+honest range is eight to fifteen" quietly claims a precision nobody computed.
 
 Then you run one more attack, and its name matters, because three different checks
 get muddled together in practice.

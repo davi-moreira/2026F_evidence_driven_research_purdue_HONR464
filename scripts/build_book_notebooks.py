@@ -113,6 +113,18 @@ EDITIONS = [
                     "Research Ledger, and verify your key claim with a named method "
                     "from the [Verification Guide]({vg}). AI can review AI — but the "
                     "last decision is human."),
+        # Chapter 1 comes before the lesson that opens the AI Research Ledger
+        # and before any named verification method, so it names neither.
+        "closing_pre_ledger": ("**Before you leave this notebook:** add today's "
+                    "exchanges to your log, and check your key claim yourself "
+                    "before you rely on it. AI can review AI — but the last "
+                    "decision is human."),
+        "howto_pre_ledger": ("5. Keep a simple log of every AI use: task · tool · "
+                    "prompt · what came back · what you decided · how you "
+                    "checked it · what still worries you.\n"),
+        "rubric_standing_pre_ledger": ("Craft and verification record: every AI use "
+                    "logged, claims stated with their uncertainty, and each key "
+                    "claim checked before you rely on it"),
         "next_line": "Next: [{chapter_word} {n} — {title}]({url}).",
         "branch_note": ("That chapter may not be on your route — [Studio {sn}: "
                         "{stitle}]({surl}) is the junction; follow the lesson "
@@ -425,12 +437,14 @@ def first_sentence(text: str, limit: int = 150) -> str:
     return sent.replace("|", "\\|")
 
 
-def rubric_table(ed: dict, steps: list[str]) -> str:
+def rubric_table(ed: dict, steps: list[str], n: int | None = None) -> str:
     """The chapter's It-is-your-turn rubric (D26): 0/1/2 per step + craft row."""
     rows = ([(f"{ed['step_word']} {i}", first_sentence(s))
              for i, s in enumerate(steps, 1)]
             if steps else [("1", ed["rubric_fallback"])])
-    rows.append(("+", ed["rubric_standing"]))
+    standing = (ed.get("rubric_standing_pre_ledger") if n == 1
+                else None) or ed["rubric_standing"]
+    rows.append(("+", standing))
     lines = [ed["rubric_header_row"], "|---|---|---|"]
     lines += [f"| {label} | {crit} | |" for label, crit in rows]
     return (ed["rubric_intro"].format(total=2 * len(rows))
@@ -498,7 +512,11 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
            f"# {ed['chapter_word']} {n} — {title}\n\n"
            + ed["header"].format(chapter_word=ed["chapter_word"], n=n, title=title,
                                  url=url, home=home, vg=vg, book=ed["book_name"]))
-    add_md(ed["howto"])
+    howto = ed["howto"]
+    if n == 1 and ed.get("howto_pre_ledger"):
+        howto = re.sub(r"5\. Log every AI use.*?\n(?=6\. )",
+                       ed["howto_pre_ledger"], howto, flags=re.S)
+    add_md(howto)
 
     quote = first_blockquote(body)
     if quote:
@@ -536,13 +554,14 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
                 add_md(ed["response_cell"])
     else:
         add_md(ed["work_cell_generic"])
-    rubric = rubric_table(ed, steps)
+    rubric = rubric_table(ed, steps, n)
     add_md(ed["rubric_heading"] + "\n\n" + rubric)
     if rubrics is not None:
         rubrics.append((n, title, rubric))
     add_code(ed["scratch"])
 
-    closing = ed["closing"].format(vg=vg)
+    closing = ((ed.get("closing_pre_ledger") if n == 1 else None)
+               or ed["closing"]).format(vg=vg)
     if nxt:
         nxt_url, nxt_title = nxt
         closing += "\n\n" + ed["next_line"].format(

@@ -75,8 +75,8 @@ is your turn"** section in its companion Colab notebook (or carry the same
 work inside your project notebook) **by the date that chapter's reading is
 due**:
 
-- Ch. 36 — [Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch32_replication_and_reproduction.ipynb)
-- Ch. 37 — [Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch34_open_and_reusable_research_packages.ipynb)
+- Ch. 36 — [Replication and Reproduction](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/32-replication-and-reproduction.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch36_replication_and_reproduction.ipynb)
+- Ch. 37 — [Open and Reusable Research Packages](https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464/book/part6-after-conference/34-open-and-reusable-research-packages.html) · [companion notebook](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch37_open_and_reusable_research_packages.ipynb)
 
 These sections are the point of the reading, not extra work: across the
 semester, the book's "It is your turn" sections — one per lesson, submitted on the date its reading is due — chain into a complete research artifact, so what you complete here is a

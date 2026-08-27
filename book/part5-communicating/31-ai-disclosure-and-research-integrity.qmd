@@ -8,7 +8,7 @@ been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch31_ai_disclosure_and_research_integrity.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch30_ai_disclosure_and_research_integrity.ipynb){target="_blank"}
 
 > **The research decision.** Decide exactly what you will say about every AI tool
 > you used: which tool, on which task, and how you checked what came back. Then
@@ -25,7 +25,7 @@ to check each one.**
 > cannot trace back to a source and a verification is a result I cannot trust."*
 > — a **conference reviewer**, standing at your poster and asking the AI-use question
 
-At your research conference, one of the five kinds of question a stranger can ask
+At your research conference, one question a stranger can ask
 you is the AI-use question. Many journals and conferences now ask authors to state
 where and how AI tools were used, so this is not a formality you can wave off. If
 your only answer is "yes, a bit, and it seemed fine," you have turned good work into
@@ -41,7 +41,7 @@ the practice of keeping your work honest and traceable, so a reader can see wher
 result came from and trust it [@allea2023code]. Example: a claim that names its source and its check
 has integrity; a claim that names neither does not.
 
-The tool that makes disclosure easy is the one you have kept since the first chapter:
+The tool that makes disclosure easy is the one you have kept since you opened it at the start of your project:
 the **AI Research Ledger**, a running table with one row per AI use, recording the
 task, the tool, your decision, and the verification method. A complete disclosure is
 not written from scratch at the end. It is read straight off your ledger [@munafo2017manifesto].

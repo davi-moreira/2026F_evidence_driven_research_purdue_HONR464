@@ -8,7 +8,7 @@ been through the author's review. Content may change as the review
 advances.
 :::
 
-[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch05_from_curiosity_to_a_research_problem.ipynb){target="_blank"}
+[![](https://colab.research.google.com/assets/colab-badge.svg){fig-alt="Open In Colab"}](https://colab.research.google.com/github/davi-moreira/2026F_evidence_driven_research_purdue_HONR464/blob/main/notebooks/book/ch01_from_curiosity_to_a_research_problem.ipynb){target="_blank"}
 
 > **The research decision.** Begin with an experience that will not leave you
 > alone. Decide which curiosity you are willing to own, let AI widen the
@@ -224,9 +224,10 @@ have to give when someone asks why this problem and not another.
    circle every NEW element, and reject any stretch that silently changes
    who, what, or why. The curiosity you carry forward must be one you would
    chase without the tool; this counters **sycophantic agreement**, where
-   the tool inflates whatever you brought. Keep a simple log of this
-   exchange (task, tool, what you kept, how you checked); the next studio
-   opens your AI Research Ledger, and this log becomes its first row.
+   the tool inflates whatever you brought. Keep a simple log of every AI
+   exchange in this section: task, tool, what you kept, how you checked. The
+   next studio opens your AI Research Ledger, and these lines become its
+   first rows.
 
 2. Take the strongest curiosity you now hold and walk it down the funnel in
    writing: experience, curiosity, topic, research problem. One line per stop,
@@ -288,14 +289,13 @@ have to give when someone asks why this problem and not another.
    *After running, verify:* keep only the objections that survive your own reasoning.
    This counters **sycophantic agreement**, where a tool praises your idea because you
    proposed it.
-8. Add it to the simple exchange log you started (the next studio's ledger inherits every line), and verify your chosen problem with a named method from
-   the [Verification Guide](../verification-guide.qmd). The fitting method here is peer
-   reasoning: hand the problem sentence to someone who knows nothing about
-   your project and ask them to say, from that sentence alone, what is
-   unknown, why an answer would matter, and roughly what evidence could
-   speak to it. If they stall, the missing piece is your next revision. An
-   AI reviewer may run the check with you; the decision to accept or
-   reject stays yours.
+8. Finish by handing your problem sentence to someone who knows nothing about
+   your project. Ask them, from that sentence alone, what is unknown, why it
+   matters, and what evidence could answer it. You cannot run this test on
+   yourself, because your head fills in what the sentence leaves out. Wherever
+   they hesitate is the gap your next revision has to close. That check is
+   called peer reasoning, and you will use it again. An AI can run it with you,
+   but the decision to accept or reject stays yours.
 
 You have chosen a problem worth pursuing. Before AI performs consequential
 work on it, give every exchange a record and every output a standard of

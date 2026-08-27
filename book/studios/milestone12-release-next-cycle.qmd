@@ -28,7 +28,7 @@ Check you are carrying each of these before you start. If one is missing, go bac
 2. Run the closing review as a directed team: scoped loops (a writer, a skeptic, an auditor at minimum), wired so each role's input exists before it starts, escalation rules written first, one node kept human. Declare who chooses each next step — you, a fixed script, or an agent that plans and calls tools — and never call a manually sequenced chat autonomous. A single well-run assistant playing the roles in turn is a legal team; record what you actually ran, never invented activity.
 3. Run the release audit and mark each item clear, pending, or blocking: permissions, participant promises, disclosure, package-matches-cold-run, reproducibility, claim boundaries, and uncertainty.
 4. Make the release decision. A blocking item means withhold pending the named repair, written as this version's reason — not a euphemistic release.
-5. Assemble the dossier with a manifest: contract versions, evidence registry, permissions, measurement, analysis and claim ledgers, AI ledger, artifacts, package, and revision history — each marked present, absent with reason, or not applicable.
+5. Assemble the dossier with a manifest: contract versions, evidence registry, permissions, measurement, your cycle log and claim-evidence table, AI ledger, artifacts, package, and revision history — each marked present, absent with reason, or not applicable.
 6. Write your stopping rule: why you are stopping here rather than running one more check, stated as a decision.
 7. Write the next-study agenda: tie the next question to an unresolved limitation, a warrant gap, or something this cycle's evidence opened.
 

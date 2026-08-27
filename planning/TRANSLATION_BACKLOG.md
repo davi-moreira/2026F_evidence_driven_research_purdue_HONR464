@@ -94,10 +94,12 @@ replace it.
     second-person voice rule and the CRC proposal's ToC. EN only; PT/ES
     still carry the third-person title. Identity is unchanged and must
     stay so: the file
-    `part1-research-with-ai/02-the-student-as-research-director.qmd`, the
-    companion `ch02_the_student_as_research_director.ipynb`, and the
+    `part1-research-with-ai/02-the-student-as-research-director.qmd` and the
     `url_path` keep the old slug (D35 P9 — a rename or URL move fails the
-    build). Translate the display title only.
+    build). Translate the display title only. (The companion notebook was
+    renumbered to `ch03_the_student_as_research_director.ipynb` by the
+    2026-08-27 display-order pass; `companion` is outside the A10 identity
+    gate, which covers `id` and `url_path` only.)
 
 20. **D48 attribution pass (2026-08-05).** The plagiarism-risk audit's
     corrections were applied to ENGLISH ONLY; PT/ES still carry the
@@ -194,3 +196,12 @@ updated when the D36 freeze lifts:
 
 - `book-pt/for-instructors.qmd:52`
 - `book-es/for-instructors.qmd:54`
+
+21. **Companion notebooks renumbered to display order (2026-08-27).** The
+    D45 flip and the D50 conference block left every companion carrying its
+    authoring-time number, so Chapter 1's badge opened `ch05_*.ipynb`. All
+    39 stale companions were renumbered to their current display position in
+    all three editions, and the PT/ES chapter badges were repointed to match.
+    This is an identity-only change: no PT/ES prose was touched, and the
+    freeze still holds. Nothing to translate; listed so the resync does not
+    treat the new filenames as drift.
