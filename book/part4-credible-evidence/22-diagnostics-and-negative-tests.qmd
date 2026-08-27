@@ -214,11 +214,11 @@ Two limits keep this honest. The pile is only as trustworthy as the assumptions 
 built it, and it is an illustration of ordinary variation, never a pass line. Do not
 turn "inside the middle 95 percent" into a rule: that band excludes one honest
 experiment in twenty by construction, and drawing a cutoff there is a statistical
-decision this book does not equip you to make. Ask the three questions instead.
+decision, and no single cutoff settles it. Ask the three questions first.
 Could my cause have reached this control? Could the artifact I fear have reached it?
-Could this check have detected an artifact big enough to matter? The standard errors
-and intervals you already met give uncertainty its proper machinery, and with them
-"how far outside is too far" becomes a question you can answer rather than guess.
+Could this check have detected an artifact big enough to matter? Then use the
+standard error and the interval you already met to say how unusual this control is,
+and report that evidence with its assumptions rather than a verdict.
 
 ## An AI failure case
 

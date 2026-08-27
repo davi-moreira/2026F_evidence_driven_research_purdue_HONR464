@@ -341,7 +341,7 @@ def workbook(st: dict, spec: dict, n: int, rubric: dict | None = None) -> dict:
     if rubric:
         cells.append(md(i, rubric_md(rubric))); i += 1
     cells.append(md(i, "## Before you leave\n\nAdd this milestone's rows to your "
-                      "**AI Research Ledger** — task, tool, prompt, output "
+                      f"**{'exchange log' if n == 1 else 'AI Research Ledger'}** — task, tool, prompt, output "
                       "summary, decision, verification method, remaining "
                       "concern, and you as the responsible researcher — and "
                       "file the artifact above in your **Research Dossier**.\n"))

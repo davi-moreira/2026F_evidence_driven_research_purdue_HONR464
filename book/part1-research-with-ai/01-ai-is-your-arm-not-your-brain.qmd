@@ -19,8 +19,8 @@ advances.
 **The decision on the table: what has to happen to an AI's output before you are
 willing to call it evidence.**
 
-You arrive with a curiosity commitment and, if you used AI to widen it, a
-receipt for that exchange. Now the stakes change: a brainstorm can produce a
+You arrive with a curiosity commitment and one logged line for every AI
+activity that shaped it. Now the stakes change: a brainstorm can produce a
 possibility, but it cannot make a factual statement reliable.
 
 Picture an audit review. A **certified public accountant (CPA)** is an accountant
@@ -72,9 +72,9 @@ worked the upstream side of inquiry, where a possible explanation begins.
 This lesson starts downstream. Once an idea exists, AI can help locate
 evidence, draft text, transform data, or inspect code, and those abilities
 are valuable precisely when their products are verified. That is why the
-ledger opens now: if you used AI in the curiosity studio, its receipt becomes
-the ledger's first row, marked retrospective, because the date a ledger opens
-does not erase an earlier delegation.
+ledger opens now: every line from the curiosity studio becomes a row of its
+own, marked retrospective, because the date a ledger opens does not erase an
+earlier delegation.
 
 ## A worked example
 
@@ -172,10 +172,12 @@ answering for the choice, is the researcher's job.
    eight columns: task delegated, tool used, prompt, output summary, decision,
    verification method, remaining concern, and responsible researcher. Put your own
    name in that last column now, and leave it there for the rest of the book.
-2. Open your ledger's first row backward: the Studio 1 brainstorm you already
-   ran. Task, tool, what you kept and rejected, and how you checked it. A
-   delegation that happened before the ledger existed still belongs to the
-   record; that is what the record is for.
+2. Open your ledger's first rows backward, one for each Studio 1 activity you
+   logged: the brainstorm, the source search, the candidate list, and the
+   red-team. Task, tool, what you kept and rejected, and how you checked it.
+   Where a field was never recorded, write "not recorded" rather than invent
+   it. A delegation that happened before the ledger existed still belongs to
+   the record; that is what the record is for.
 3. Under your chosen problem, write the single fact you would need to know
    before you could take it further.
 

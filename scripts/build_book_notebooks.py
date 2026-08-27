@@ -71,6 +71,9 @@ EDITIONS = [
         "response_cell": ("✍️ **Your run.** Double-click this cell and record: what "
                           "the AI returned (one or two lines), what you verified and "
                           "how, and your ledger row."),
+        "response_cell_pre_ledger": ("✍️ **Your run.** Double-click this cell and "
+                          "record: what the AI returned (one or two lines), what you "
+                          "checked and how, and the line you added to your log."),
         "code_heading": "## Code from the chapter",
         "code_note": ("The cells below come from the chapter. Run them, then change "
                       "something and run again — the numbers should move the way the "
@@ -122,9 +125,9 @@ EDITIONS = [
         "howto_pre_ledger": ("5. Keep a simple log of every AI use: task · tool · "
                     "prompt · what came back · what you decided · how you "
                     "checked it · what still worries you.\n"),
-        "rubric_standing_pre_ledger": ("Craft and verification record: every AI use "
-                    "logged, claims stated with their uncertainty, and each key "
-                    "claim checked before you rely on it"),
+        "rubric_standing_pre_ledger": ("Craft and verification record: every AI "
+                    "activity has one line in your log, and every fact you kept was "
+                    "checked before you relied on it"),
         "next_line": "Next: [{chapter_word} {n} — {title}]({url}).",
         "branch_note": ("That chapter may not be on your route — [Studio {sn}: "
                         "{stitle}]({surl}) is the junction; follow the lesson "
@@ -541,7 +544,8 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
             chunk = re.sub(r"^```python\s*$", "```", chunk, flags=re.M)
             add_md(prep(chunk))
             if has_fence:
-                add_md(ed["response_cell"])
+                add_md((ed.get("response_cell_pre_ledger") if n == 1
+                    else None) or ed["response_cell"])
 
     iyt = by_name.get(ed["iyt_heading"], "")
     intro, steps = iyt_pieces(iyt)
@@ -551,7 +555,8 @@ def build_notebook(ed: dict, path: Path, nxt: tuple[str, str] | None,
             add_md(f"**{ed['step_word']} {k}.** {prep(step)}")
             add_md(ed["work_cell"].format(i=k))
             if "```" in step or "💡" in step:   # the step carries an AI prompt
-                add_md(ed["response_cell"])
+                add_md((ed.get("response_cell_pre_ledger") if n == 1
+                    else None) or ed["response_cell"])
     else:
         add_md(ed["work_cell_generic"])
     rubric = rubric_table(ed, steps, n)
