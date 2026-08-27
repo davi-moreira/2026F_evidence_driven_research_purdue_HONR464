@@ -49,11 +49,31 @@ the room, and hand over your pending register for the flags you did not.
 | # | File | Description |
 |---|---|---|
 | 1 | **A shared Colab notebook link** *or* **`lastname_m08_audit.ipynb`** | The eight-part audit record below, carried in the notebook itself or in an optional companion **`lastname_m08_audit.pdf`**: your dated pre-list of three checks with the attack each one answers, the run and what survived, your licensed null check, your reworded claim with its range and compass boundary, the verified AI-review trail, the one limitation no check could fix, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 24, ch. 25, ch. 26, ch. 27** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
+| 2 | **`lastname_m08_meeting_request.pdf`** | A PDF copy of the email you sent Professor Moreira proposing dates and times for your **Round 02 mentor meeting** (to be held **Mon Nov 2 to Sat Nov 7**). Same three things as the first request, plus one line naming what has changed since Round 01. Send it early: that window sits inside the busiest stretch of the conference block. |
+| 3 | **EDR\|AI "It is your turn" — ch. 24, ch. 25, ch. 26, ch. 27** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. Every check
 you report has to run from it, so confirm the audit reproduces before you
 submit.
+
+---
+
+## The second mentor meeting, requested
+
+Your second required meeting with Professor Moreira is booked now, well ahead of
+the poster work it exists to serve. Email him again, from your Purdue address,
+proposing at least three concrete slots inside the **Mon Nov 2 to Sat Nov 7**
+window, your project in two sentences as it now stands, the one decision you
+most want pressure-tested, and one line naming what has changed since Round 01.
+Save the sent email as a PDF and submit it.
+
+By then your result exists and has been audited, and the poster is the next
+thing you owe the conference. So Round 02 works on the claim your evidence can
+carry, the board that will carry it, and the questions a visitor will ask you in
+front of it. It sits in the week the poster draft (M11) and the peer review
+(M12) are due and closes the day before the **terminal poster lock on Sun Nov 8**,
+so a request that arrives late gets you no meeting at all. **Round 02 is
+confirmed at M14.**
 
 ---
 

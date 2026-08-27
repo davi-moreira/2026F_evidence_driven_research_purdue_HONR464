@@ -46,11 +46,38 @@ submit by Sunday night.
 | # | File | Description |
 |---|---|---|
 | 1 | **`lastname_m04_contract.pdf`** *or* a shared Colab notebook link | Your **Research Contract v0**: objective, target estimand, population, setting and time, data strategy, a **provisional operationalization marked for revision**, warrant, answer strategy, and uncertainty statement, with the model behind them drawn as a 3-node **DAG** image. With it comes your **diagnosis** (bias, wobble, and how often the design would detect what you are looking for), your **redesign record**, your **permission determination** (one declared status, with the authority and the date you asked if it is anything but cleared), your **claim boundary**, your AI Research Ledger rows, and your version and dossier lines. This is the graded artifact. |
-| 2 | **EDR\|AI "It is your turn" — ch. 10, ch. 11, ch. 12, ch. 13** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
+| 2 | **`lastname_m04_meeting_request.pdf`** | A PDF copy of the email you sent Professor Moreira proposing dates and times for your **Round 01 mentor meeting** (to be held **Mon Oct 5 to Sun Oct 11**). Offer at least three concrete slots, give your project in two sentences, and name the one decision you most want pressure-tested. Requesting the meeting is what is collected here; holding it is confirmed at M7. |
+| 3 | **EDR\|AI "It is your turn" — ch. 10, ch. 11, ch. 12, ch. 13** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 If you submit a notebook link, set sharing so the instructor can open it, and
 confirm that the DAG figure and any diagnosis output render when the notebook is
 run.
+
+---
+
+## The two mentor meetings, and the first request
+
+Every project in this course has a **faculty mentor of record**, and that mentor
+is Professor Moreira. The Undergraduate Research Expo application you file at M7
+names that mentor, and a mentor who has never discussed the project cannot stand
+behind it. So the course requires **two meetings with the instructor**, one in
+each half of the semester:
+
+| Round | Meeting window | Requested at | Confirmed at | What it works on |
+|---|---|---|---|---|
+| **Round 01** | **Mon Oct 5 to Sun Oct 11** | **M4** (this milestone) | **M7** | your question, the evidence behind it, and Contract v0 |
+| **Round 02** | **Mon Nov 2 to Sat Nov 7** | **M8** | **M14** | the claim your evidence carries, the poster, and the questions it will draw |
+
+This milestone collects the **Round 01 request**, not the meeting. Email
+Professor Moreira from your Purdue address with at least three concrete slots
+inside the Round 01 window, your project in two sentences, and the one decision
+you most want pressure-tested. Save the sent email as a PDF and submit it.
+
+Round 01 falls early on purpose, while changing direction is still cheap. It is
+the meeting where a project that cannot be carried gets replaced before an
+analysis is built on top of it. If your project is an approved group, at least
+one member attends each meeting, and it need not be the same member at both
+rounds.
 
 ---
 

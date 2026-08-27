@@ -272,6 +272,33 @@ milestones:
   # ungraded-as-milestone final reflection, scored under participation.
   M16: {title: "Reproducible package and the peer cold run",       due: "2026-12-06", kind: "studio",   note: "also carries the research note revised after public criticism"}
 
+# Two required mentor meetings with the instructor (D69, 2026-08-27).
+# Calibrated one-to-one against QM 47400's INSTRUCTOR rounds, whose dates these
+# are; HONR 46400 has no TA, so the TA leg of that course's cycle is dropped and
+# only the instructor legs remain. Each round is REQUESTED in one milestone and
+# CONFIRMED in a later one, exactly as QM 47400 does it.
+#
+# THIS BLOCK IS THE SOURCE OF TRUTH FOR THE WINDOWS. The milestone PDFs may not
+# carry calendar dates (scripts/build_handout_pdfs.py rejects them), so they say
+# "the window your course platform posts" and the dates are published on
+# Brightspace, on the milestone briefs in _research_project/2026Fall/, and in
+# _research_project/2026Fall/final_project_grading_and_project_modes.md.
+mentor_meetings:
+  required: 2
+  with: "the instructor (the faculty mentor of record on the Expo application)"
+  attendance: "at least one member of an approved group; it need not be the same member at both rounds"
+  rounds:
+    R1:
+      window: {from: "2026-10-05", to: "2026-10-11"}
+      requested_at: "M4"      # due 2026-09-20, the same day as QM 47400's M00
+      confirmed_at: "M7"      # due 2026-10-13, QM 47400's M04 is 2026-10-11
+      focus: "the question, the evidence behind it, and Contract v0"
+    R2:
+      window: {from: "2026-11-02", to: "2026-11-07"}
+      requested_at: "M8"      # due 2026-10-18, the same day as QM 47400's M07
+      confirmed_at: "M14"     # due 2026-11-15, the same day as QM 47400's M13
+      focus: "the claim the evidence carries, the poster, and the questions it will draw"
+
 # The cumulative Research Project Dossier (every milestone updates it).
 dossier_components:
   - research charter

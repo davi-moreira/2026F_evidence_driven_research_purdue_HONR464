@@ -16,7 +16,17 @@
 #
 # Under the narrowed rule `classification` and `schedule_mark` coincide: a
 # milestone carries a "What this course adds" section exactly when the schedule
-# marks it. Only M07, M12, M13, M14 and M15 qualify.
+# marks it. M07, M12, M13, M14 and M15 qualified on the original pass.
+#
+# AMENDED 2026-08-27 (instructor ruling, D69). The course now requires TWO mentor
+# meetings with the instructor, on the same calendar as QM 47400's instructor
+# rounds: Round 01 requested at M04 and confirmed at M07, Round 02 requested at
+# M08 and confirmed at M14. This passes the narrowed test rather than widening
+# it: the Expo application names a FACULTY MENTOR OF RECORD, and an application
+# whose mentor has never discussed the project does not stand. M04 and M08
+# therefore regain the mark and gain their first additions sections. The dates
+# live in course_config.yaml `mentor_meetings:` and on the course platform, never
+# in these PDFs, which ban calendar dates.
 #
 # THIS FILE IS THE SINGLE SOURCE OF TRUTH for both distinctions.
 # scripts/build_handout_pdfs.py reads `classification` (the PDF section) and
@@ -260,15 +270,53 @@ milestones:
 
       '
   M04:
-    schedule_mark: false
-    classification: pure
-    reason: The Book Milestone page asks only for the written, diagnosed Contract v0 artifact, but the
+    schedule_mark: true
+    classification: additions
+    reason: |
+      The Book Milestone page asks only for the written, diagnosed Contract v0 artifact, but the
       course also requires a live three-minute contract declaration at the Friday studio that takes one
       question per listener, and a submitted three-node DAG image with a confounder arrowed into both
-      treatment and outcome. Neither the milestone page nor the lessons it collects asks for a live presentation
-      or for that specified DAG figure, so a student working from the book page alone would hand in an
-      incomplete milestone.
-    schedule_note: null
+      treatment and outcome. Neither the milestone page nor the lessons it collects asks for a live
+      presentation or for that specified DAG figure. The mark returns here on a separate ground
+      (instructor ruling, 2026-08-27, calibrated against QM 47400 M00): the Expo application names a
+      faculty mentor of record, and the course now requires two mentor meetings so that mentor knows the
+      project before signing for it. Requesting Round 01 is collected here, and the book milestone page
+      has nothing about it.
+    schedule_note: Round 01 mentor meeting requested
+    additions_markdown: |
+      ### Your first mentor meeting, requested
+
+      Every project in this course has a faculty mentor of record, and that mentor is
+      your instructor. The Undergraduate Research Expo application you file later names
+      that mentor, and a mentor who has never discussed the project cannot stand behind
+      it. So the course requires **two mentor meetings**, one in each half of the
+      semester, and this milestone opens the first of them.
+
+      **Request the Round 01 meeting.** Email your instructor from your Purdue address,
+      asking for a meeting inside the Round 01 window your course platform posts. The
+      email carries three things:
+
+      1. **At least three concrete slots**, each a specific weekday and starting hour
+         inside that window. Offering options is the request; asking when the
+         instructor is free is not.
+      2. **Your project in two sentences**: the question you have declared, and where
+         the work currently stands.
+      3. **The one decision you most want pressure-tested**, named outright. A meeting
+         with a stated agenda changes a project. A meeting without one only reports on
+         it.
+
+      Save the sent email as a PDF and carry it as a section of your milestone
+      document.
+
+      **What Round 01 is for.** It happens early on purpose, while changing direction
+      is still cheap. It works on your question, the evidence behind it, and the
+      contract you have just declared. It is the meeting where a project that cannot be
+      carried gets replaced before an analysis is built on top of it.
+
+      Requesting the meeting is what this milestone collects. Holding it, and reporting
+      that it happened, belong to a later milestone. If your project is an approved
+      group, at least one member attends each meeting, and it need not be the same
+      member at both rounds.
     instructor_notes:
     - 'GRADING KIND, not scale: the course rubric explicitly scores two things the book page''s 10-point
       rubric does not assess at all, the live 3-minute declaration (Craft row) and the DAG''s confounder
@@ -464,54 +512,49 @@ milestones:
       settled by a check in the student''s own pipeline, and a 150 to 250 word Undergraduate Research
       Conference abstract that must clear an internal instructor gate at the Friday studio because its
       clock is external to the course.'
-    schedule_note: URC abstract + conference application
-    additions_markdown: '### The conference submission
+    schedule_note: URC abstract, application, mentor meeting
+    additions_markdown: |
+      ### The conference submission
 
-
-      Two things leave your hands this week on the conference''s calendar rather than
-
+      Two things leave your hands this week on the conference's calendar rather than
       on your research schedule, and the book milestone has neither.
 
-
       **1. The abstract the conference publishes.** Write the abstract you would submit
-
       to the Undergraduate Research Conference, roughly 150 to 250 words: the question,
-
       what you measure, the analysis your pipeline executes, the verified result with
-
       its uncertainty, and the boundary around the claim. It clears an internal gate at
-
       the studio before it goes out. The gate has one rule: the abstract may use only
-
       the claims your current verified result licenses. Your result is verified this
-
-      week and not yet audited, so your wording has to survive next week''s robustness
-
+      week and not yet audited, so your wording has to survive next week's robustness
       work without becoming false.
 
-
       **2. The application that puts your name on the programme.** Apply to present a
-
-      poster through Purdue''s Undergraduate Research site. The form wants your title,
-
+      poster through Purdue's Undergraduate Research site. The form wants your title,
       your abstract with no author name inside the abstract box, five keywords, you as
-
       author, in-person poster presentation, your availability on the day, a research
-
       category and judging unit, and a faculty mentor of record: Davi Cordeiro Moreira,
-
       dcordeir@purdue.edu. An application without a mentor does not stand.
 
-
       Save the confirmation as a PDF and submit it as your proof of application. Without
-
       that confirmation there is no poster session for you to present at, however good
-
       the rest of your project is. The deadline belongs to the conference, not to this
-
       course, and it is posted on your course platform.
 
-      '
+      ### Your Round 01 mentor meeting, confirmed
+
+      The meeting you requested at Milestone 4 has to have happened by now, inside the
+      Round 01 window your course platform posts. This milestone collects the proof
+      that it did.
+
+      Write one short section into your milestone document naming the day and hour of
+      the meeting, who attended, and the two or three decisions that came out of it.
+      For each decision, say what you changed. Where you kept your course, say that
+      plainly and say why the meeting did not move you. A meeting that changed nothing
+      and cannot say why was a status report.
+
+      Record it the day it happens rather than reconstructing it later, and remember
+      that the conversation itself is human work: your AI Research Ledger gets a row
+      only for what you delegated afterwards.
     instructor_notes:
     - 'Rubric mismatch in KIND, not only scale: the course brief adds four hard caps (fabricated or unretrievable
       source, untraceable number, non-reproducing result, missing AI Research Ledger) plus an explicit
@@ -542,17 +585,42 @@ milestones:
         a fresh runtime. A live, executable notebook with rerun permissions cannot exist inside a PDF,
         so the link or the .ipynb must accompany lastname_m07.pdf.
   M08:
-    schedule_mark: false
-    classification: pure
-    reason: A student reading only the Book Milestone page would pre-list, run a grid, run a null check,
-      commission an adversarial review and adjudicate, but would not know to freeze three checks as syntax-checked
-      code with predictions at the week's lecture and run nothing until the Friday studio, to commission
-      the course's specific required GenAI Studio reviewer role, to triage flags by damage and verify
-      only the top one in the room while filing the rest on a pending register with the loudest wrong
-      flag named, or to hand over a shareable notebook the instructor can rerun. The book page in fact
-      asks for something different on adjudication (confirm or refute every flag), so the course's in-class
-      procedure has to be stated.
-    schedule_note: null
+    schedule_mark: true
+    classification: additions
+    reason: |
+      A student reading only the Book Milestone page would pre-list, run a grid, run a null check,
+      commission an adversarial review and adjudicate, but would not know to freeze three checks as
+      syntax-checked code with predictions at the week's lecture and run nothing until the Friday studio,
+      to commission the course's specific required GenAI Studio reviewer role, to triage flags by damage
+      and verify only the top one in the room while filing the rest on a pending register with the
+      loudest wrong flag named, or to hand over a shareable notebook the instructor can rerun. The book
+      page in fact asks for something different on adjudication (confirm or refute every flag), so the
+      course's in-class procedure has to be stated. The mark is carried on a further ground (instructor
+      ruling, 2026-08-27, calibrated against QM 47400 M07): this is where the second mentor meeting is
+      requested, and the mentor of record on the Expo application has to have seen the poster argument
+      before it is printed.
+    schedule_note: Round 02 mentor meeting requested
+    additions_markdown: |
+      ### Your second mentor meeting, requested
+
+      The second of the course's two mentor meetings is booked now, well ahead of the
+      poster work it exists to serve. Email your instructor again, from your Purdue
+      address, asking for a meeting inside the Round 02 window your course platform
+      posts.
+
+      The email carries the same three things the first request carried: at least three
+      concrete slots inside the window, your project in two sentences as it now stands,
+      and the one decision you most want pressure-tested. Add one line this time naming
+      what has changed since Round 01. Save the sent email as a PDF and carry it as a
+      section of your milestone document.
+
+      **What Round 02 is for.** By then your result exists and has been audited, and
+      the poster is the next thing you owe the conference. So the meeting works on the
+      claim your evidence can carry, the board that will carry it, and the questions a
+      visitor will ask you in front of it.
+
+      Send this request early. The Round 02 window sits inside the busiest stretch of
+      the conference block, and a request that arrives late gets you no meeting at all.
     instructor_notes:
     - 'Rubric difference in KIND, not only scale: the course brief adds hard caps that force a row to
       Beginning (fabricated or unretrievable source; a post-hoc check reported as pre-listed or a run-but-unreported
@@ -1006,34 +1074,63 @@ milestones:
       post copied from the official programme. The public post is also an outward, Expo-directed act the
       book page explicitly excludes ("This is not yet public release"), so a student reading only the
       book page would hand in the wrong artifact.'
-    schedule_note: timed Expo pitches + public invitation
-    additions_markdown: "### Preparing to present at the Expo\n\nYour poster print file is already locked,\
-      \ so nothing on the board changes now.\nWhat this milestone adds is the spoken edition of the same\
-      \ research, addressed to\nthe people who will actually stop at your session.\n\n1. **Audience analysis,\
-      \ one paragraph.** Who stops at an undergraduate research\n   expo, what they already believe about\
-      \ your question, and what they will do\n   with your answer. Write this first: the pitches are addressed\
-      \ to these people.\n2. **Three timed pitches, counted rather than estimated.** A thirty second\n\
-      \   version (at most 75 words), a ninety second version (at most 200 words), and a\n   two minute\
-      \ version (at most 300 words), each showing its word count. Each\n   length has its own job: earn\
-      \ the next ninety seconds, then deliver the finding\n   with its bound, then add the choice you\
-      \ would defend.\n3. **The same boundary sentence at all three lengths**, in the same words.\n  \
-      \ Compression drops blocks, never bounds: no verb, quantifier, or scope word\n   gets stronger in\
-      \ a shorter version than in a longer one.\n4. **A poster integration outline.** For each length,\
-      \ name the block your hand\n   points at, and when. A pitch that never touches the board leaves\
-      \ the board\n   doing nothing.\n5. **A question and discussion strategy.** Three questions you expect,\
-      \ each\n   derived from your own design, each with a one sentence answer, each marked a\n   bound\
-      \ request or an attack. At least three questions you will ask the visitor.\n   One prepared \"my\
-      \ design cannot settle that\", with the smaller true claim you\n   offer instead.\n6. **One public\
-      \ invitation post.** Post publicly and professionally, inviting\n   your network to your session.\
-      \ Carry the poster title, your name, and the date,\n   time, and location exactly as the official\
-      \ programme prints them. Copy those\n   details; never write them from memory. Put a screenshot\
-      \ inside your PDF.\n7. **Rehearse all three pitches aloud before you submit.** The word ceilings\n\
-      \   stand in for a clock, and the clock is set by your visitor rather than by you.\n\n### How the\
-      \ added parts are judged\n\nBound discipline under compression carries the most weight: the boundary\
-      \ sentence\nhas to survive the shortest version intact. Each pitch has to sit inside its\nceiling\
-      \ with a real count, and do its own job rather than truncate the next. Your\npredicted questions\
-      \ have to come from your design, your prepared concession has\nto be true, and every programme detail\
-      \ in the invitation has to match the\nofficial entry exactly.\n"
+    schedule_note: Expo pitches, invitation, mentor meeting
+    additions_markdown: |
+      ### Preparing to present at the Expo
+
+      Your poster print file is already locked, so nothing on the board changes now.
+      What this milestone adds is the spoken edition of the same research, addressed to
+      the people who will actually stop at your session.
+
+      1. **Audience analysis, one paragraph.** Who stops at an undergraduate research
+         expo, what they already believe about your question, and what they will do
+         with your answer. Write this first: the pitches are addressed to these people.
+      2. **Three timed pitches, counted rather than estimated.** A thirty second
+         version (at most 75 words), a ninety second version (at most 200 words), and a
+         two minute version (at most 300 words), each showing its word count. Each
+         length has its own job: earn the next ninety seconds, then deliver the finding
+         with its bound, then add the choice you would defend.
+      3. **The same boundary sentence at all three lengths**, in the same words.
+         Compression drops blocks, never bounds: no verb, quantifier, or scope word
+         gets stronger in a shorter version than in a longer one.
+      4. **A poster integration outline.** For each length, name the block your hand
+         points at, and when. A pitch that never touches the board leaves the board
+         doing nothing.
+      5. **A question and discussion strategy.** Three questions you expect, each
+         derived from your own design, each with a one sentence answer, each marked a
+         bound request or an attack. At least three questions you will ask the visitor.
+         One prepared "my design cannot settle that", with the smaller true claim you
+         offer instead.
+      6. **One public invitation post.** Post publicly and professionally, inviting
+         your network to your session. Carry the poster title, your name, and the date,
+         time, and location exactly as the official programme prints them. Copy those
+         details; never write them from memory. Put a screenshot inside your PDF.
+      7. **Rehearse all three pitches aloud before you submit.** The word ceilings
+         stand in for a clock, and the clock is set by your visitor rather than by you.
+
+      ### How the added parts are judged
+
+      Bound discipline under compression carries the most weight: the boundary sentence
+      has to survive the shortest version intact. Each pitch has to sit inside its
+      ceiling with a real count, and do its own job rather than truncate the next. Your
+      predicted questions have to come from your design, your prepared concession has
+      to be true, and every programme detail in the invitation has to match the
+      official entry exactly.
+
+      ### Your Round 02 mentor meeting, confirmed
+
+      This milestone closes the mentor cycle the course opened at Milestone 4. Your
+      Round 02 meeting has to have happened inside the window your course platform
+      posts, before the poster was locked.
+
+      Write one short section into your presentation plan naming the day and hour of
+      the meeting, who attended, and what the meeting changed. Then add the line that
+      matters most here: what you carried out of that conversation into the pitches and
+      the question strategy above. The mentor meetings exist so that the Expo is not
+      the first time anyone challenges your claim out loud.
+
+      Report both rounds. A round that did not happen is a missing requirement rather
+      than a detail, so name it as missing rather than leaving the section out.
     instructor_notes:
     - 'Direct conflict to resolve: the Book Milestone page states its product is "not yet public release",
       but course M14 requires a public invitation post. The added section instructs the post regardless;

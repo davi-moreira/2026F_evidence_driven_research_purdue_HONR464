@@ -3710,3 +3710,60 @@ and have no `username` or `email`; their slot briefs still render
 clinical/behavioral student, so all four profiled students are now in
 quantitative or engineering degrees — the "no quantitative background assumed"
 floor now rests entirely on the two unprofiled students.
+
+---
+
+## D69 — Two required mentor meetings, imported from QM 47400 and carried on the ✚ (2026-08-27)
+
+**Ruling.** Every student meets the instructor **at least twice**, on QM 47400's
+own instructor-meeting calendar. The requirement is folded into four existing
+milestones through the `✚` course-addition mechanism, so **no milestone ID is
+created** and the chain stays **M1–M16** (D54).
+
+**Why QM 47400's dates.** Davi teaches both courses this term and asked for the
+HONR requirement to sit on similar dates. QM 47400 runs a two-round cycle in
+which each round is **requested** in one milestone and **confirmed** in a later
+one, with a separate TA leg and instructor leg. HONR 46400 has no TA, so the TA
+leg is dropped and the instructor legs map one-to-one:
+
+| Round | Meeting window | Requested at | Confirmed at | QM 47400 counterparts |
+|---|---|---|---|---|
+| Round 01 | Mon Oct 5 – Sun Oct 11 | **M4** (due Sun Sep 20) | **M7** (due Tue Oct 13) | M00 (Sep 20) → M04 (Oct 11) |
+| Round 02 | Mon Nov 2 – Sat Nov 7 | **M8** (due Sun Oct 18) | **M14** (due Sun Nov 15) | M07 (Oct 18) → M13 (Nov 15) |
+
+Three of the four HONR due dates fall on the **same day** as their QM 47400
+counterpart; M7 differs only because D66 moved it off the Sunday for October
+Break. Both meeting windows land in ordinary in-person weeks, and Round 02
+closes the day before the terminal poster lock on Sun Nov 8.
+
+**Why the ✚ rule is not widened.** `milestone_course_additions.yml` reserves the
+schedule plus for what the Undergraduate Research Expo itself requires and the
+Book Milestone does not carry. The mentor meetings pass that test rather than
+bending it: the Expo application names a **faculty mentor of record**, and an
+application whose mentor has never discussed the project does not stand. **M4
+and M8 regain the mark** (M4's came off in the 2026-08-23 audit) and gain their
+first "What this course adds" sections; **M7 and M14** append a confirmation
+section to the ones they already had.
+
+**Where the dates live.** `course_config.yaml mentor_meetings:` is the source of
+truth. The milestone PDFs reject calendar dates by design, so they say "the
+window your course platform posts"; the dated windows are published in the four
+briefs, in `final_project_grading_and_project_modes.md`, and on Brightspace.
+
+**Grading.** Both the request and the confirmation are collected inside their
+milestone, so they score under **Milestone Deliverables**. No new grade
+category, no change to any weight. An approved group sends at least one member
+to each meeting, and it need not be the same member at both rounds.
+
+**Files changed.** `course_config.yaml` (new `mentor_meetings:`),
+`_research_project/milestone_course_additions.yml` (M04/M07/M08/M14 + the
+amended header rule), the four briefs `milestone_04`, `milestone_07`,
+`milestone_08`, `milestone_14` (submission row + dated section) and their PDFs,
+`final_project_grading_and_project_modes.md`, `planning/PROJECT_MILESTONES.md`,
+`schedule.qmd` (M4 and M8 now carry ✚), and the regenerated Brightspace kit.
+
+**Open.** Brightspace itself is not updated: the four assignment descriptions
+need the new PDFs uploaded, and there is no separate Brightspace item for a
+meeting, by design. Under D66 the platform wins on dates, so if Davi publishes a
+different window there, `course_config.yaml mentor_meetings:` is corrected to
+match rather than the reverse.

@@ -49,6 +49,22 @@ Due: **Sunday, November 15, 11:59 PM.**
 | 1 | **`lastname_m14_plan.pdf`** | Your **presentation plan**: the audience-analysis paragraph, the three timed pitches with their word counts shown, the poster-integration outline, and the question-and-discussion strategy. |
 | 2 | **`lastname_m14_invitation.pdf`** | A **screenshot of your public invitation post**, carrying the poster title, your name, and the date, time, and location exactly as the official Expo programme prints them. |
 | 3 | **`lastname_m14_ledger.pdf`** *or* the same as notebook sections | The **AI Research Ledger** rows for this milestone: the spoken-upgrade check, the question-generation prompt, and any AI-assisted wording of the invitation post. |
+| 4 | **`lastname_m14_meeting_round02.pdf`** | Confirmation that your **Round 02 mentor meeting** happened, inside the **Mon Nov 2 to Sat Nov 7** window you requested at M8: the date and time, who attended, what the meeting changed, and what you carried out of it into the pitches and the question strategy above. |
+
+---
+
+## Round 02 of your mentor meetings, confirmed
+
+This milestone closes the mentor cycle that opened at M4. Your Round 02 meeting
+has to have happened inside the **Mon Nov 2 to Sat Nov 7** window you requested
+at M8, before the poster locked on Sun Nov 8. Report the date and time, who
+attended, and what the meeting changed. Then add the line that matters most
+here: what you carried out of that conversation into the pitches and the
+question strategy above. The two mentor meetings exist so that the Expo is not
+the first time anyone challenges your claim out loud.
+
+Report both rounds. A round that did not happen is a missing requirement rather
+than a detail, so name it as missing rather than leaving the section out.
 
 ---
 

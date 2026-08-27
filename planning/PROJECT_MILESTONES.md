@@ -61,6 +61,29 @@ are `M1…M16`.
 | M15 | Conference reflection | M35–M37 | dress rehearsal (M35); the Expo (Tue Nov 17) supplies the separate Final Project live-presentation score; M15 grades async capture (M36), adjudication (M37), and the written reflection | Sun Nov 29, 11:59 PM | 10 (v4, the publicly presented edition) |
 | M16 | Reproducible package and the peer cold run | M38–M40 | cold-run clinic + the in-class package exchange (M39) + the repair block (M40) | Sun Dec 6, 11:59 PM | 11 — Your reproducible package (v1) + 9 (v2) |
 
+## The mentor-meeting cycle (D69)
+
+Two required meetings with the instructor, who is the **faculty mentor of
+record** named on every student's Expo application. Calibrated one-to-one
+against QM 47400's INSTRUCTOR rounds; HONR 46400 has no TA, so that course's TA
+leg is dropped and only the instructor legs remain. Each round is requested in
+one milestone and confirmed in a later one, and both are collected inside those
+milestones (no new milestone ID — the chain is still M1–M16).
+
+| Round | Meeting window | Requested at | Confirmed at | QM 47400 counterparts |
+|---|---|---|---|---|
+| Round 01 | Mon Oct 5 – Sun Oct 11 | **M4** (Sun Sep 20) | **M7** (Tue Oct 13) | M00 (Sep 20) → M04 (Oct 11) |
+| Round 02 | Mon Nov 2 – Sat Nov 7 | **M8** (Sun Oct 18) | **M14** (Sun Nov 15) | M07 (Oct 18) → M13 (Nov 15) |
+
+Windows and the request/confirm assignment live in `course_config.yaml`
+`mentor_meetings:`. The four milestones carry the ✚ schedule mark and a
+"What this course adds" section, driven by
+`_research_project/milestone_course_additions.yml`. The milestone PDFs may not
+print calendar dates, so they point at the course platform; the dated windows
+are published in the briefs, in
+`_research_project/2026Fall/final_project_grading_and_project_modes.md`, and on
+Brightspace.
+
 ## Dossier mapping
 
 Each milestone finalizes dossier components (D49, one studio per week):

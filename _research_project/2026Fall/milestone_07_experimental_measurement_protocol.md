@@ -49,11 +49,28 @@ and submit by Tuesday night, after the October Break weekend.
 |---|---|---|
 | 1 | **A shared Colab notebook link** *or* **`lastname_m07_first_analysis.ipynb`** | The nine-part deliverable below, carried in the notebook itself or in an optional companion **`lastname_m07_first_analysis.pdf`**: the seeded pipeline, your route-specific result with its uncertainty statement, the clean-restart record with your environment record, the claim-to-output trace, two independent re-derivations judged against a tolerance you declared first, the leakage audit with every flag settled, your gated URC abstract, your AI Research Ledger rows, and your dossier line. This is the graded artifact. |
 | 2 | **`lastname_m07_conference_application.pdf`** | Proof that you applied to present at the Fall Undergraduate Research Expo: the confirmation page or confirmation email, saved as a PDF. Applying is not optional and it is not something the course does for you. Without this confirmation there is no poster session for you to present at, however good the rest of your project is. |
-| 3 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
+| 3 | **`lastname_m07_meeting_round01.pdf`** | Confirmation that your **Round 01 mentor meeting** happened, inside the **Mon Oct 5 to Sun Oct 11** window you requested at M4: the date and time, who attended, and the two or three decisions that came out of it, each with what you changed or why you kept your course. |
+| 4 | **EDR\|AI "It is your turn" — ch. 22, ch. 23** | **Already submitted, not collected again here.** These sections were due on their own reading dates, as IYT Practice submissions; the dated list is on the course page. Confirm each one is complete and carry the work into this milestone and your Research Project Dossier. See "The Book Anchor" below. |
 
 Set sharing so the instructor can open **and rerun** the notebook. The rerun is
 part of the milestone: confirm the result in your write-up matches what the
 notebook prints from a fresh runtime, top to bottom, before you submit.
+
+---
+
+## Round 01 of your mentor meetings, confirmed
+
+The meeting you requested at M4 has to have happened by now, inside the
+**Mon Oct 5 to Sun Oct 11** window. This milestone collects the proof that it
+did: the date and time, who attended, and the two or three decisions that came
+out of it. For each decision, say what you changed. Where you kept your course,
+say so plainly and say why the meeting did not move you. A meeting that changed
+nothing and cannot say why was a status report.
+
+Record it the day it happens rather than reconstructing it in November. The
+conversation itself is human work, so your AI Research Ledger gets a row only
+for what you delegated afterwards. **Round 02 is requested at M8 and confirmed
+at M14.**
 
 ---
 

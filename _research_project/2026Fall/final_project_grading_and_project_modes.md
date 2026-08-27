@@ -83,6 +83,36 @@ rubric and your live delivery at the conference. For an approved group, the
 shared locked poster receives a common score. If no TA is assigned to the
 course, the instructor records this item.
 
+## The two required mentor meetings
+
+Professor Moreira is your **faculty mentor of record**: his name goes on the
+Undergraduate Research Expo application you file at M7, and a mentor who has
+never discussed your project cannot stand behind it. The course therefore
+requires **two meetings with him**, one in each half of the semester. They are
+not optional office hours, and they are not a substitute for office hours.
+
+| Round | Meeting window | Requested at | Confirmed at | What the meeting works on |
+|---|---|---|---|---|
+| **Round 01** | **Mon Oct 5 to Sun Oct 11, 2026** | **M4** (due Sun Sep 20) | **M7** (due Tue Oct 13) | your question, the evidence behind it, and Research Contract v0 |
+| **Round 02** | **Mon Nov 2 to Sat Nov 7, 2026** | **M8** (due Sun Oct 18) | **M14** (due Sun Nov 15) | the claim your evidence carries, the poster, and the questions it will draw |
+
+Each round is **requested** in one milestone and **confirmed** in a later one.
+The request is an email sent from your Purdue address offering at least three
+concrete slots inside that round's window, your project in two sentences, and
+the one decision you most want pressure-tested; you submit a PDF of the sent
+email. The confirmation is a short section reporting the date and time, who
+attended, and what the meeting changed. Both are collected under **Milestone
+Deliverables**, inside the milestone that carries them, so a missing meeting
+costs milestone credit rather than a separate grade.
+
+If your project is an approved group, **at least one member attends each
+meeting**, and it need not be the same member at both rounds. Every member
+remains responsible for what the meeting decided.
+
+Send each request early. Round 02's window sits inside the busiest stretch of
+the conference block and closes the day before the terminal poster lock on
+**Sun Nov 8**, so a request that arrives late gets you no meeting at all.
+
 ## Peer Evaluation is not Peer Review
 
 **Peer Evaluation** is the confidential, per-student accountability score from
