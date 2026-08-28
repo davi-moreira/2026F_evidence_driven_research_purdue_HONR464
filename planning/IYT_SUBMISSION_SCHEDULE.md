@@ -34,7 +34,7 @@ assignment except the title and the due date.
 <!-- iyt-instruction:begin -->
 **What this assignment collects.** Submit the completed **"It is your turn"** section of every EDR|AI chapter named in this assignment's title. Open the chapter from the EDR|AI book, work its "It is your turn" section in that chapter's companion Colab notebook (use the badge at the top of the chapter, then **File → Save a copy in Drive** so the copy is yours), or work it inside your own project notebook if you would rather keep everything in one place.
 
-**What to hand in.** One submission per chapter, covering all required chapters. Either upload the notebook (**File → Download → Download .ipynb**) or a PDF of it (**File → Print → Save as PDF**). Name the file `LASTNAME_iyt_ch<nn>.ipynb`. Answer in your own words, keep every question in order, and add an AI Research Ledger row for anything you delegated to an AI tool.
+**What to hand in.** One submission per chapter, covering all required chapters. Either upload the notebook (**File → Download → Download .ipynb**) or a PDF of it (**File → Print → Save as PDF**). If you hand in the PDF, run **Runtime → Run all** and expand every collapsed section first: printing captures what is on the screen, so an unrun or folded cell arrives empty. Name the file `LASTNAME_iyt_ch<nn>.ipynb`. Answer in your own words, keep every question in order, and add an AI Research Ledger row for anything you delegated to an AI tool.
 
 **How it is graded.** Completion only: submitted, complete, and on time, or not. Your answers are never graded right or wrong here, and nothing you write in them can lower another grade.
 <!-- iyt-instruction:end -->

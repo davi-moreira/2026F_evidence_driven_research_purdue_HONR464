@@ -44,6 +44,10 @@ WHAT IS ENFORCED
   * NO calendar dates, clock times or semester labels, so the PDFs are reusable
     in any future edition. Brightspace carries every real deadline. A document
     that still has one is a HARD FAILURE and does not render.
+  * EVERY milestone PDF closes with "Making the PDF you hand in", authored once
+    in scripts/submission_pdf_howto.py and shared with the briefs, because the
+    file every milestone asks for has to be produced from a Colab notebook and
+    Colab has no export button.
   * ONE submission file per milestone, `lastname_mNN.pdf`. Anything that used to
     be a separate PDF is a section inside it. Artifacts that genuinely cannot
     live inside a PDF are declared per milestone in the additions file.
@@ -72,6 +76,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 
 from milestone_map import additions, milestone_map  # noqa: E402
+from submission_pdf_howto import POINTER, markdown as howto_markdown  # noqa: E402
 
 STUDIOS = REPO / "book" / "studios"
 SRL = REPO / "project" / "srl"
@@ -244,7 +249,8 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
         "",
         f"Submit it on Brightspace, under **Assignments** then **M{info['num']}**. "
         f"Brightspace carries the deadline.",
-
+        "",
+        POINTER,
         "",
         "This milestone presents "
         + " and ".join(f"**Book Milestone {b['n']}: {_short(b['title'])}** "
@@ -271,6 +277,11 @@ def milestone_doc(key: str, info: dict, add: dict) -> tuple[str, str]:
             body.append(demote(pbody) + "\n")
         else:
             body.append(pbody + "\n")
+
+    # The one place the course says how a Colab notebook becomes the PDF this
+    # milestone collects. Last, because it is a routine you need once and then
+    # know; POINTER (above) sends the first-time reader here.
+    body.append(howto_markdown())
     return title, "\n".join(body)
 
 

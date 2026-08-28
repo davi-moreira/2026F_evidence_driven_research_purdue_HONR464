@@ -3770,7 +3770,14 @@ match rather than the reverse.
 
 ---
 
-## D69 — A same-size roster swap, and what it reveals about the draw (2026-08-28)
+## D71 — A same-size roster swap, and what it reveals about the draw (2026-08-28)
+
+> **Renumbered 2026-08-28.** This was filed as D69, a number already taken by the
+> mentor-meetings ruling above (2026-08-27, pushed in `1759284` before this
+> session began). Nothing outside this file referenced the roster-swap decision,
+> so it moves to the next free number rather than the mentor-meetings ruling,
+> which `course_config.yaml`, `PROJECT_MILESTONES.md` and
+> `milestone_course_additions.yml` already cite as D69.
 
 **Context.** A fourth myPurdue classlist, two days after D68: **Samantha Rose
 Yang McCabe is gone and Ishita Trivedi (036613336, Web Registered, Senior 105+)
@@ -3888,3 +3895,71 @@ on, so it is the instructor's call.
 ordinals did not. Prefer naming a lesson's topic over its number in running
 prose.
 
+
+---
+
+## D72 — The course says, once, how a Colab notebook becomes the PDF it collects (2026-08-28)
+
+**The gap.** Every milestone collects `lastname_mNN.pdf`. Every student's work
+lives in a Colab notebook. Colab has no export-to-PDF button, and until today
+**no surface in this repository told a student how to bridge the two.** The only
+mention anywhere was five words inside the IYT Brightspace paragraph
+(`File → Print → Save as PDF`), with none of the preparation that makes it work.
+
+**Why the preparation matters more than the menu path.** Printing captures what
+is rendered. An unrun cell, a collapsed section, and a scrolling or truncated
+output all print empty or clipped, so a student who did the analysis can hand in
+a document that looks half finished. That failure is silent at the student's end
+and indistinguishable, at the grader's end, from work not done.
+
+**Ruling.** The routine is authored **once**, in `scripts/submission_pdf_howto.py`,
+and projected onto two surfaces that can therefore never disagree:
+
+1. **Every milestone PDF** closes with `## Making the PDF you hand in`
+   (`scripts/build_handout_pdfs.py`), and the "What to submit" block opens with a
+   one-line pointer to it.
+2. **Every milestone brief** carries the same section inside a
+   `<!-- submission-pdf-howto:begin/end -->` marker pair, injected by
+   `scripts/build_milestone_anchors.py`, whose `--check` mode is already a CI
+   gate, so the two surfaces stay in step automatically.
+
+The IYT Brightspace paragraph (`scripts/build_participation_schedules.py`) gains
+the two load-bearing steps in one clause: run all, expand collapsed sections.
+
+**Content decisions.** Four preparation steps, the print dialog with **Background
+graphics** on, landscape or reduced scale for wide tables, and a
+verify-the-PDF-before-you-upload step that is deliberately framed as the same
+habit the course applies to every other artifact. It also names one route NOT to
+take: `jupyter nbconvert --to pdf`, which an AI assistant will confidently
+recommend, needs a large LaTeX install inside Colab and then drops the symbols
+and emoji these notebooks are full of. Warning about it is itself a worked
+instance of the course's rule, so it is stated rather than left out.
+
+**Constraints kept.** The text carries no em dashes, no calendar dates, no clock
+times and no semester labels, so it passes the handout scanner unchanged and is
+reusable in any future edition.
+
+---
+
+## D73 — Two defects found in commits that landed today, both fixed (2026-08-28)
+
+Found while rebuilding the milestone PDFs; neither was caused by D72.
+
+**1. Every milestone PDF announced the wrong Book Milestone title.** D70 put a
+`# GENERATED FILE - DO NOT EDIT.` comment inside the YAML front matter of all 24
+generated studio pages. `_title_of()` in `scripts/milestone_map.py` searched for
+the page's H1 with `^# (.+)$` over the whole file, and a YAML comment opens with
+the same two characters a markdown H1 does. Result: all sixteen PDFs read
+*"This milestone presents Book Milestone 1: GENERATED FILE - DO NOT EDIT."*
+Fixed by stripping leading front matter before the H1 search, which is what the
+neighbouring `book_page()` already did. The other three H1 extractors read files
+that have no front matter and are unaffected.
+
+**2. Duplicate D69.** The roster-swap decision (2026-08-28) reused the number the
+mentor-meetings ruling took on 2026-08-27. Nothing outside `DECISIONS.md`
+referenced the roster swap, while three files already cite the mentor meetings as
+D69, so the roster swap was renumbered **D71** with a note in place.
+
+**Standing lesson.** A generated banner is content to every regex that reads the
+file. Adding one to a generated page means checking every consumer that parses
+that page, not only the ones that render it.

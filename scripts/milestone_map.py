@@ -104,9 +104,18 @@ def milestone_map() -> dict[str, dict]:
     return out
 
 
+#: A leading YAML front matter block. It has to come off before the H1 search:
+#: D70 (2026-08-28) put a "# GENERATED FILE - DO NOT EDIT." comment inside the
+#: front matter of every generated studio page, and a YAML comment starts with
+#: the same "# " a markdown H1 does. Without this strip, every milestone PDF
+#: announced that it presents "Book Milestone 1: GENERATED FILE - DO NOT EDIT."
+FRONT_MATTER = re.compile(r"\A---\r?\n.*?\r?\n---\r?\n", re.S)
+
+
 def _title_of(path: Path) -> str:
     """The book milestone's title AS PUBLISHED, from its own H1."""
-    m = re.search(r"^# (.+?)(?:\s*\{[^}]*\})?\s*$", path.read_text(), re.M)
+    body = FRONT_MATTER.sub("", path.read_text(), count=1)
+    m = re.search(r"^# (.+?)(?:\s*\{[^}]*\})?\s*$", body, re.M)
     if not m:
         raise SystemExit(f"✗ no H1 in {path}")
     return m.group(1).strip()

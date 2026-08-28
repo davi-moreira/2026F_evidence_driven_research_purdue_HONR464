@@ -9,9 +9,12 @@ number in every brief.
 
 This script rewrites, in each `_research_project/2026Fall/milestone_NN_*.md`:
 
-  1. the EDR|AI submission-table row's chapter list, and
+  1. the EDR|AI submission-table row's chapter list,
   2. the `- Ch. N — [title](url) · [companion notebook](url)` bullet list
-     inside the "## The Book Anchor" section,
+     inside the "## The Book Anchor" section, and
+  3. the "Making the PDF you hand in" section, authored once in
+     scripts/submission_pdf_howto.py and shared with the milestone PDFs, so the
+     brief and the PDF can never give different instructions,
 
 from COURSE_BOOK_CROSSWALK.yml home anchors + BOOK_ARCHITECTURE.yml identity
 (display numbers derived from rank; links from url_path and companion).
@@ -30,6 +33,9 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 from book_manifest import (active_lessons, load_crosswalk,  # noqa: E402
                            require_lock)
+from submission_pdf_howto import BEGIN as HOWTO_BEGIN  # noqa: E402
+from submission_pdf_howto import END as HOWTO_END  # noqa: E402
+from submission_pdf_howto import brief_block  # noqa: E402
 
 BRIEFS = REPO / "_research_project" / "2026Fall"
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
@@ -116,6 +122,31 @@ def apply_bridge(text: str, block: str) -> str:
     return text + "\n\n" + block + "\n"
 
 
+HOWTO_RE = re.compile(re.escape(HOWTO_BEGIN) + r".*?" + re.escape(HOWTO_END),
+                      re.S)
+
+
+def apply_howto(text: str) -> str:
+    """Project "Making the PDF you hand in" into the brief.
+
+    Placed just above the Previous/Next footer every brief ends with, which is
+    where a reader who has finished the instructions and is about to hand the
+    work in actually is.
+    """
+    block = brief_block()
+    if HOWTO_RE.search(text):
+        return HOWTO_RE.sub(lambda _: block, text)
+    lines = text.split("\n")
+    nav = next((i for i, l in enumerate(lines) if l.startswith("*Previous:")), None)
+    if nav is None:
+        return text.rstrip("\n") + "\n\n---\n\n" + block + "\n"
+    cut = nav
+    while cut > 0 and lines[cut - 1].strip() in ("", "---"):
+        cut -= 1
+    return "\n".join(lines[:cut] + ["", block.rstrip("\n"), "", "---", ""]
+                      + lines[nav:])
+
+
 def render(text: str, picked: list[dict]) -> str:
     if not picked:
         return text
@@ -156,6 +187,7 @@ def main() -> int:
         new = render(src, picked)
         if mi in rows:
             new = apply_bridge(new, bridge_block(rows[mi], stations))
+        new = apply_howto(new)
         if new == src:
             continue
         if check:

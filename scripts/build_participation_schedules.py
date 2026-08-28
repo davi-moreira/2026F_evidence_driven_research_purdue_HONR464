@@ -190,10 +190,12 @@ your own project notebook if you would rather keep everything in one place.
 
 **What to hand in.** One submission per chapter, covering all required \
 chapters. Either upload the notebook (**File → Download → Download .ipynb**) or \
-a PDF of it (**File → Print → Save as PDF**). Name the file \
-`LASTNAME_iyt_ch<nn>.ipynb`. Answer in your own words, keep every question in \
-order, and add an AI Research Ledger row for anything you delegated to an AI \
-tool.
+a PDF of it (**File → Print → Save as PDF**). If you hand in the PDF, run \
+**Runtime → Run all** and expand every collapsed section first: printing \
+captures what is on the screen, so an unrun or folded cell arrives empty. Name \
+the file `LASTNAME_iyt_ch<nn>.ipynb`. Answer in your own words, keep every \
+question in order, and add an AI Research Ledger row for anything you delegated \
+to an AI tool.
 
 **How it is graded.** Completion only: submitted, complete, and on time, or \
 not. Your answers are never graded right or wrong here, and nothing you write \
