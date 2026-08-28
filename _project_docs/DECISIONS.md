@@ -3808,3 +3808,83 @@ unprofiled and have no `username` or `email`, so their slot briefs still render
 `ADDRESS MISSING FROM THE ROSTER`. The course's only clinical/behavioral student
 left with Kuhlmann; the "no quantitative background assumed" floor still rests
 on the two unprofiled students.
+
+---
+
+## D70
+
+**The reorder-staleness pass, the Studio 1 pre-ledger exception, and companion
+renumbering** (2026-08-27/28)
+
+**Context.** The book is WRITTEN in one order and READ in another. D45 ("the
+flip") moved the curiosity chapter from position 5 to position 1; D50 reshuffled
+the communicating chapters. Filenames kept their authoring-time numbers and
+hand-written cross-references were never re-checked. The trigger was a student
+report: Chapter 1's "It is your turn" step 8 told a week-one reader to log in an
+"AI Research Ledger" and verify with "a named method from the Verification
+Guide" — neither taught until Chapter 2 or later, in a chapter whose own body
+says twice that the ledger does not exist yet.
+
+**Ruling 1 — the Studio 1 pre-ledger exception (amends D21).** The AI Research
+Ledger is TAUGHT in the book's Chapter 2. Everything a reader meets before it
+may NOT name the ledger, "a named method", or the Verification Guide as
+instruments already in hand. Chapter 1 keeps a plain **exchange log** — one line
+per AI activity (task · tool · what you kept · how you checked) — and Chapter 2
+opens the ledger by backfilling every one of those lines as a retrospective row.
+An open forward-pointer is fine; a silent assumption is a defect. This is a
+BOOK-position rule only: the course notebooks' 📒 ledger row is untouched, and
+D21's "missing ledger entry scores Craft 0" still governs deliverables.
+
+The exception is enforced in three places, not just prose: `build_book_notebooks.py`
+carries `*_pre_ledger` variants of the how-to item, response cell, rubric standing
+row, and closing cell, selected when `n == 1`; `build_station_pages.py` carries
+`ledger_name`, applied in BOTH `milestone_page()` and `workbook()`.
+
+**Ruling 2 — companions are renumbered to DISPLAY order.** All 39 stale
+companions moved to their current reading position in all three editions, with
+PT/ES badge URLs repointed (identity only — no translated prose touched, D36
+freeze intact, logged as TRANSLATION_BACKLOG entry 21). This is permitted: the
+A10 identity gate covers `id` and `url_path`, never `companion`. Note the known
+cost — display-order names go stale again on the next reorder. Semantic
+(unnumbered) names were considered and rejected in favour of tab-number parity
+with the chapter heading.
+
+**Ruling 3 — generated station pages now say so.** `book/studios/*.qmd` (12
+openers + 12 milestone chapters) are generated from `planning/BOOK_STATIONS.yml`
+but carried no banner, so they read as hand-editable. Every one now opens with a
+GENERATED FILE — DO NOT EDIT block naming its sources. Edit the YAML, never the
+page.
+
+**What was fixed.** 14 hand-written cross-references across 9 chapters (five of
+them "a later chapter teaches you X" pointers that now aim backwards, because
+the uncertainty lesson sits at position 11); the Chapter 1 step-8 rewrite;
+Chapter 2's ledger import, which took a singular "receipt" and only the
+brainstorm, silently dropping three of four Studio 1 AI activities; milestone
+requests naming a "responsibility statement" the book only teaches as an
+OWNERSHIP statement, plus four instruments named as taught that no lesson
+teaches ("red-flag screen", "cold pilot", "the audit", "analysis and claim
+ledgers"); Studio 11's capsule parts, which contradicted Chapter 37 in both
+directions; and five COURSE_LAB_NOTES entries naming nb11/nb12 where D50 moved
+Studios 11-12 to nb15/nb16.
+
+**Reviewed by Codex** (gpt-5.6-sol, max effort): 12 of 14 cross-reference fixes
+sound, 1 FALSE, 1 imprecise. The false one is worth recording — a "fix" of mine
+asserted the book "does not equip you" to make a cutoff decision, when Chapter 12
+teaches Power and defines a statistical test. Codex also caught that an AI run
+was labelled peer reasoning, which the Verification Guide defines as
+pressure-testing by a second HUMAN. Verdict archived at
+`~/.claude/codex-reviews/2026F_evidence_driven_research_purdue_HONR464/2026-08-27_reorder-staleness-and-step8/`.
+
+**Deliberately NOT done, and still open for the author.** Four milestone titles
+narrower than their artifacts (M1, M5, M8, M9); the "Lesson N" vs "Chapter N"
+register (the studios use "Lesson N" consistently and correctly, since those
+labels are generated from the manifest and followed the reorder automatically —
+only hand-written prose rotted); and three milestones that never collect
+something a lesson produces (M3's gap sentence, M4's AI boundary and governance
+decisions, M9's note assembly). The last group changes what students are graded
+on, so it is the instructor's call.
+
+**Standing lesson.** Generated labels survived two reorders; hand-written
+ordinals did not. Prefer naming a lesson's topic over its number in running
+prose.
+

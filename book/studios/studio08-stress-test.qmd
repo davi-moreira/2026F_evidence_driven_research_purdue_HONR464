@@ -1,4 +1,10 @@
 ---
+# GENERATED FILE - DO NOT EDIT.
+# Written by scripts/build_station_pages.py from
+# planning/BOOK_STATIONS.yml (prose), planning/BOOK_ARCHITECTURE.yml
+# (lesson identity and numbering) and planning/BOOK_ASSESSMENTS.yml
+# (rubrics). Edit the YAML and rerun the script; edits made here are
+# silently reverted on the next build and fail `--check` in CI.
 title: "Studio 8: Stress-test and adjudicate"
 aliases:
   - /stations/station08-stress-test.html

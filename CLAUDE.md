@@ -149,6 +149,19 @@ wrap-ups bridging to the next week.
 Every deliverable and every notebook session appends to the student's **AI
 Research Ledger** (fields: task delegated · tool used · prompt · output summary
 · decision · verification method · remaining concern · responsible researcher).
+
+**The one exception — Studio 1 (D70).** The ledger is TAUGHT in the book's
+Chapter 2 (`part1-research-with-ai/01-ai-is-your-arm-not-your-brain.qmd`), so
+the book's **Chapter 1** — everything a reader meets before it — may not name
+the ledger, "a named method", or the Verification Guide as instruments they
+already hold. Chapter 1 keeps a plain **exchange log** instead (one line per AI
+activity: task · tool · what you kept · how you checked), and Chapter 2 opens
+the ledger by **backfilling every one of those lines as a retrospective row**.
+An open forward-pointer ("the next studio opens your AI Research Ledger") is
+fine; a silent assumption that the reader has one is a defect. This is a
+BOOK-position rule and changes nothing about the course notebooks, whose 📒
+ledger row stands as before.
+
 Embedded AI prompts carry an **"After running, verify:"** checklist ending with
 a ledger line. Every notebook also contains: an AI Research Partner briefing,
 an initial human commitment BEFORE consulting AI, at least one required prompt

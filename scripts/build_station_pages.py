@@ -43,6 +43,15 @@ from book_manifest import (active_lessons, load_architecture,  # noqa: E402
 STATIONS_YML = REPO / "planning" / "BOOK_STATIONS.yml"
 ASSESS_YML = REPO / "planning" / "BOOK_ASSESSMENTS.yml"
 OUT_DIR = REPO / "book" / "studios"
+
+GENERATED_MARK = (
+    "# GENERATED FILE - DO NOT EDIT.\n"
+    "# Written by scripts/build_station_pages.py from\n"
+    "# planning/BOOK_STATIONS.yml (prose), planning/BOOK_ARCHITECTURE.yml\n"
+    "# (lesson identity and numbering) and planning/BOOK_ASSESSMENTS.yml\n"
+    "# (rubrics). Edit the YAML and rerun the script; edits made here are\n"
+    "# silently reverted on the next build and fail `--check` in CI.\n"
+)
 NB_DIR = REPO / "notebooks" / "book" / "studios"
 SITE = "https://davi-moreira.github.io/2026F_evidence_driven_research_purdue_HONR464"
 COLAB = ("https://colab.research.google.com/github/davi-moreira/"
@@ -180,6 +189,7 @@ def opener_page(st: dict, spec: dict, lessons: list[dict], n: int) -> str:
                      f"\n  - /stations/station{r:02d}-{slug}.html"
                      for r in LEGACY_RANKS.get(slug, []))
     return f"""---
+{GENERATED_MARK.rstrip()}
 title: "Studio {n}: {st['title']}"
 aliases:
   - /stations/station{n:02d}-{slug}.html{legacy}
@@ -221,7 +231,9 @@ def milestone_page(st: dict, spec: dict, lessons: list[dict], n: int,
                    if spec.get("genre_guide") else "")
     legacy = "".join(f"\n  - /studios/milestone{r:02d}-{slug}.html"
                      for r in LEGACY_RANKS.get(slug, []))
-    front = (f"---\naliases:{legacy}\n---\n\n" if legacy else "")
+    front = (f"---\n{GENERATED_MARK.rstrip()}\n"
+             + (f"aliases:{legacy}\n" if legacy else "")
+             + "---\n\n")
     return f"""{front}# Milestone {n}: {spec['milestone_title']} {{.unnumbered}}
 
 {banner("milestone chapter")}
