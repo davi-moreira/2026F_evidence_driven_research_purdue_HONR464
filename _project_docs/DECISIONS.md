@@ -3767,3 +3767,44 @@ need the new PDFs uploaded, and there is no separate Brightspace item for a
 meeting, by design. Under D66 the platform wins on dates, so if Davi publishes a
 different window there, `course_config.yaml mentor_meetings:` is corrected to
 match rather than the reverse.
+
+---
+
+## D69 — A same-size roster swap, and what it reveals about the draw (2026-08-28)
+
+**Context.** A fourth myPurdue classlist, two days after D68: **Samantha Rose
+Yang McCabe is gone and Ishita Trivedi (036613336, Web Registered, Senior 105+)
+is new.** The class size is unchanged at **6**, so this is a swap rather than a
+resize — the first roster change that touches no count anywhere in the
+repository.
+
+**Ruling.** D67/D68's rules applied unchanged, exactly as
+`_adm/roster/ROSTER_CHANGE_RUNBOOK.md` specifies. Week 2 stays locked — slot 1
+(Erika Chiommino, Mon Aug 31) and slot 2 (Aren Dominic Damayo, Wed Sep 2) have
+now survived three redraws. Sami Stutler again carries the fifth lead; the other
+five lead four times each.
+
+**The finding worth recording: a same-size swap barely moves the draw.** The
+assignment is a deterministic function of (seed, n, constraints). When `n` does
+not change, the slot → roster-*position* mapping is byte-identical and only the
+students whose `sort_key` shifted get new dates. Trivedi sorts in at position 4,
+ahead of Akand and Stutler, so **only Nediva Akand's dates moved**; Jensen,
+Damayo, Chiommino and Stutler keep theirs exactly.
+
+This is a desirable property — the fewest students possible have to rewrite
+their calendars — but it has a failure mode. Four of six students will see an
+announcement headed "the dates have changed" and find their own dates unchanged,
+which reads as a redraw that never happened. Whenever a redraw leaves most of
+the class untouched, say so in the covering message rather than letting the
+generated announcement carry it alone. The runbook now records both halves.
+
+**Scope.** Roster CSV, the draw, the packet and the four dependent builders were
+regenerated; **no tracked file changed**, because no count moved. The archive
+gains `2026-08-28_6-students/` and the runbook's draw-history table gains a
+fourth row and a `Change` column.
+
+**Still open, unchanged from D68.** Andrew Jensen and Ishita Trivedi are
+unprofiled and have no `username` or `email`, so their slot briefs still render
+`ADDRESS MISSING FROM THE ROSTER`. The course's only clinical/behavioral student
+left with Kuhlmann; the "no quantitative background assumed" floor still rests
+on the two unprofiled students.
